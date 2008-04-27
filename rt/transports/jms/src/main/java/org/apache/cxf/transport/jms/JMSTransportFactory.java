@@ -228,6 +228,11 @@ name|bus
 decl_stmt|;
 annotation|@
 name|Resource
+argument_list|(
+name|name
+operator|=
+literal|"bus"
+argument_list|)
 specifier|public
 name|void
 name|setBus

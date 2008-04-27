@@ -132,7 +132,7 @@ argument_list|(
 name|servletConfig
 argument_list|)
 expr_stmt|;
-comment|//TODO do we need to privde the SUN's endpoint discription file supporting
+comment|// You could add the endpoint publish codes here
 block|}
 specifier|private
 name|void

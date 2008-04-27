@@ -373,6 +373,11 @@ name|activationNamespaces
 decl_stmt|;
 annotation|@
 name|Resource
+argument_list|(
+name|name
+operator|=
+literal|"bus"
+argument_list|)
 specifier|public
 name|void
 name|setBus
@@ -412,8 +417,6 @@ literal|"jbi"
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setActivationNamespaces
