@@ -1611,6 +1611,8 @@ name|ServiceJavascriptBuilder
 argument_list|(
 name|serviceInfo
 argument_list|,
+literal|null
+argument_list|,
 name|prefixManager
 argument_list|,
 name|nameManager

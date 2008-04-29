@@ -367,6 +367,22 @@ name|service
 operator|.
 name|model
 operator|.
+name|EndpointInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|model
+operator|.
 name|FaultInfo
 import|;
 end_import
@@ -657,6 +673,10 @@ name|XmlSchemaType
 import|;
 end_import
 
+begin_comment
+comment|/**  * Class to construct the JavaScript corresponding to a service.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -727,6 +747,11 @@ decl_stmt|;
 specifier|private
 name|SchemaCollection
 name|xmlSchemaCollection
+decl_stmt|;
+comment|// When generating from a tool or ?js, we know the endpoint addr and can build it into the javascript.
+specifier|private
+name|String
+name|endpointAddress
 decl_stmt|;
 specifier|private
 name|boolean
@@ -840,11 +865,15 @@ specifier|private
 name|boolean
 name|isRPC
 decl_stmt|;
+comment|/**      * Construct builder object.      * @param serviceInfo CXF service model description of the service.      * @param endpointAddress http:// URL for the service, or null if not known.      * @param prefixAccumulator object that keeps track of prefixes through an entire WSDL.      * @param nameManager object that generates names for JavaScript objects.      */
 specifier|public
 name|ServiceJavascriptBuilder
 parameter_list|(
 name|ServiceInfo
 name|serviceInfo
+parameter_list|,
+name|String
+name|endpointAddress
 parameter_list|,
 name|NamespacePrefixAccumulator
 name|prefixAccumulator
@@ -857,6 +886,12 @@ name|super
 argument_list|(
 name|serviceInfo
 argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|endpointAddress
+operator|=
+name|endpointAddress
 expr_stmt|;
 name|code
 operator|=
@@ -1042,6 +1077,27 @@ argument_list|(
 literal|"this.synchronous = false;"
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|endpointAddress
+operator|!=
+literal|null
+condition|)
+block|{
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"this.url = '"
+operator|+
+name|endpointAddress
+operator|+
+literal|"';"
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|utils
 operator|.
 name|appendLine
@@ -1049,6 +1105,7 @@ argument_list|(
 literal|"this.url = null;"
 argument_list|)
 expr_stmt|;
+block|}
 name|utils
 operator|.
 name|appendLine
@@ -4882,6 +4939,84 @@ name|getLocalPart
 argument_list|()
 argument_list|,
 name|msg
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|begin
+parameter_list|(
+name|EndpointInfo
+name|endpointInfo
+parameter_list|)
+block|{
+name|String
+name|address
+init|=
+name|endpointInfo
+operator|.
+name|getAddress
+argument_list|()
+decl_stmt|;
+name|String
+name|portClassName
+init|=
+name|currentInterfaceClassName
+operator|+
+literal|"_"
+operator|+
+name|nameManager
+operator|.
+name|getJavascriptName
+argument_list|(
+name|endpointInfo
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|code
+operator|.
+name|append
+argument_list|(
+literal|"function "
+operator|+
+name|portClassName
+operator|+
+literal|" () {\n"
+argument_list|)
+expr_stmt|;
+name|code
+operator|.
+name|append
+argument_list|(
+literal|"  this.url = '"
+operator|+
+name|address
+operator|+
+literal|"';\n"
+argument_list|)
+expr_stmt|;
+name|code
+operator|.
+name|append
+argument_list|(
+literal|"}\n"
+argument_list|)
+expr_stmt|;
+name|code
+operator|.
+name|append
+argument_list|(
+name|portClassName
+operator|+
+literal|".prototype = new "
+operator|+
+name|currentInterfaceClassName
+operator|+
+literal|";\n"
 argument_list|)
 expr_stmt|;
 block|}

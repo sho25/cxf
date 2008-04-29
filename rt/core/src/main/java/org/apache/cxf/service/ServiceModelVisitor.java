@@ -27,6 +27,38 @@ name|service
 operator|.
 name|model
 operator|.
+name|BindingInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|model
+operator|.
+name|EndpointInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|model
+operator|.
 name|FaultInfo
 import|;
 end_import
@@ -128,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Implements the Visitor pattern for the Service model.  * The visit order is as follows:  *<pre>  * 1) Begin the overall service info.  * 2) Begin the service's interface.  * 3) For each operation, begin the operation.  * 3.1) begin the input message.  * 3.1.1) begin and end each part of the input message.  * 3.2) end the input message.  * 3.3) begin the output message.  * 3.3.1) begin and end each part of the output message.  * 3.4) end the output message  * 3.5) begin each fault. (3.5-3.6 repeated for each fault)  * 3.5.1) begin and end each part of each fault  * 3.6) end each fault.  * 3.7) if a wrapped operation, begin the corresponding unwrapped operation.  * 3.8) process the entire unwrapped operation starting at (3).  * 3.9) end the unwrapped operation.  * 4) end the operation.  * 5) end the interface.  * 6) end the service info.  *</pre>  * Unwrapped operations<i>share messages</i> with their corresponding wrapped messages,  * so beware of processing the same messages twice as if unique.  */
+comment|/**  * Implements the Visitor pattern for the Service model.  * The visit order is as follows:  *<pre>  * 1) Begin the overall service info.  * 2) Begin the service's interface.  * 3) For each operation, begin the operation.  * 3.1) begin the input message.  * 3.1.1) begin and end each part of the input message.  * 3.2) end the input message.  * 3.3) begin the output message.  * 3.3.1) begin and end each part of the output message.  * 3.4) end the output message  * 3.5) begin each fault. (3.5-3.6 repeated for each fault)  * 3.5.1) begin and end each part of each fault  * 3.6) end each fault.  * 3.7) if a wrapped operation, begin the corresponding unwrapped operation.  * 3.8) process the entire unwrapped operation starting at (3).  * 3.9) end the unwrapped operation.  * 4) end the operation.  * 5) end the interface.  * 6) For each endpoint (= port) begin and end the EndpointInfo  * 7) For each binding (= BindingInfo) begin and end the BindingInfo.  * 8) end the service info.  *</pre>  * Unwrapped operations<i>share messages</i> with their corresponding wrapped messages,  * so beware of processing the same messages twice as if unique.  */
 end_comment
 
 begin_class
@@ -213,6 +245,50 @@ name|getInterface
 argument_list|()
 argument_list|)
 expr_stmt|;
+for|for
+control|(
+name|EndpointInfo
+name|endpointInfo
+range|:
+name|serviceInfo
+operator|.
+name|getEndpoints
+argument_list|()
+control|)
+block|{
+name|begin
+argument_list|(
+name|endpointInfo
+argument_list|)
+expr_stmt|;
+name|end
+argument_list|(
+name|endpointInfo
+argument_list|)
+expr_stmt|;
+block|}
+for|for
+control|(
+name|BindingInfo
+name|bindingInfo
+range|:
+name|serviceInfo
+operator|.
+name|getBindings
+argument_list|()
+control|)
+block|{
+name|begin
+argument_list|(
+name|bindingInfo
+argument_list|)
+expr_stmt|;
+name|end
+argument_list|(
+name|bindingInfo
+argument_list|)
+expr_stmt|;
+block|}
 name|end
 argument_list|(
 name|serviceInfo
@@ -513,6 +589,38 @@ name|end
 parameter_list|(
 name|FaultInfo
 name|fault
+parameter_list|)
+block|{     }
+specifier|public
+name|void
+name|begin
+parameter_list|(
+name|EndpointInfo
+name|endpointInfo
+parameter_list|)
+block|{     }
+specifier|public
+name|void
+name|end
+parameter_list|(
+name|EndpointInfo
+name|endpointInfo
+parameter_list|)
+block|{     }
+specifier|private
+name|void
+name|begin
+parameter_list|(
+name|BindingInfo
+name|bindingInfo
+parameter_list|)
+block|{     }
+specifier|private
+name|void
+name|end
+parameter_list|(
+name|BindingInfo
+name|bindingInfo
 parameter_list|)
 block|{     }
 block|}

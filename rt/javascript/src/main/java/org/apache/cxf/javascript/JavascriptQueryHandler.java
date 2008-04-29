@@ -934,6 +934,11 @@ name|ServiceJavascriptBuilder
 argument_list|(
 name|serviceInfo
 argument_list|,
+name|endpoint
+operator|.
+name|getAddress
+argument_list|()
+argument_list|,
 name|prefixManager
 argument_list|,
 name|nameManager
