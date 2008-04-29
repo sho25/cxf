@@ -452,6 +452,15 @@ name|nsasaxParserFactory
 operator|.
 name|setFeature
 argument_list|(
+literal|"http://xml.org/sax/features/namespaces"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+name|nsasaxParserFactory
+operator|.
+name|setFeature
+argument_list|(
 literal|"http://xml.org/sax/features/namespace-prefixes"
 argument_list|,
 literal|true

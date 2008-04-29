@@ -2785,6 +2785,16 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+else|else
+block|{
+name|objectFactories
+operator|.
+name|add
+argument_list|(
+name|ofactory
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 block|}
 for|for
