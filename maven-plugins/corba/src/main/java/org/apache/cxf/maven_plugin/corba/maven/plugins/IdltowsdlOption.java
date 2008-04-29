@@ -34,7 +34,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|IDLToWSDLOption
+name|IdltowsdlOption
 block|{
 name|String
 name|idl

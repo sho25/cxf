@@ -111,7 +111,7 @@ name|String
 name|outputDir
 decl_stmt|;
 comment|/**      * @parameter      */
-name|IDLToWSDLOption
+name|IdltowsdlOption
 name|idltowsdlOptions
 index|[]
 decl_stmt|;

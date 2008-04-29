@@ -227,7 +227,7 @@ name|File
 name|outputDir
 decl_stmt|;
 comment|/**      * @parameter      */
-name|WSDLToIDLOption
+name|WsdltoidlOption
 name|wsdltoidlOptions
 index|[]
 decl_stmt|;
