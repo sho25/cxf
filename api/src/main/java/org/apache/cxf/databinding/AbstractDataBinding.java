@@ -515,7 +515,14 @@ argument_list|)
 expr_stmt|;
 name|XmlSchema
 name|xmlSchema
-init|=
+decl_stmt|;
+synchronized|synchronized
+init|(
+name|d
+init|)
+block|{
+name|xmlSchema
+operator|=
 name|col
 operator|.
 name|read
@@ -526,7 +533,7 @@ name|systemId
 argument_list|,
 literal|null
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|schema
 operator|.
 name|setSchema
@@ -534,6 +541,7 @@ argument_list|(
 name|xmlSchema
 argument_list|)
 expr_stmt|;
+block|}
 name|serviceInfo
 operator|.
 name|addSchema

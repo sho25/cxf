@@ -611,6 +611,14 @@ operator|!=
 literal|null
 condition|)
 block|{
+synchronized|synchronized
+init|(
+name|schemaElem
+operator|.
+name|getOwnerDocument
+argument_list|()
+init|)
+block|{
 for|for
 control|(
 name|Object
@@ -783,6 +791,7 @@ expr_stmt|;
 name|schemaCount
 operator|++
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

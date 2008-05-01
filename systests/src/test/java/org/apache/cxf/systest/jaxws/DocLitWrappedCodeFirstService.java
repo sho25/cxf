@@ -33,6 +33,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Set
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Vector
 import|;
 end_import
@@ -598,6 +608,13 @@ name|name
 return|;
 block|}
 block|}
+name|Set
+argument_list|<
+name|Foo
+argument_list|>
+name|getFooSet
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 

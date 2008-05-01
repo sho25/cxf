@@ -220,6 +220,13 @@ name|attachments
 operator|=
 name|attachments
 expr_stmt|;
+name|put
+argument_list|(
+name|ATTACHMENTS
+argument_list|,
+name|attachments
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|String

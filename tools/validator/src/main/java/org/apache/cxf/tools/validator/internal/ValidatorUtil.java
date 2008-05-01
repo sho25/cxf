@@ -503,6 +503,11 @@ return|return
 name|schemaList
 return|;
 block|}
+synchronized|synchronized
+init|(
+name|document
+init|)
+block|{
 comment|// URL might need encoding for special characters.
 name|baseURI
 operator|=
@@ -707,6 +712,7 @@ name|baseURI
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|schemaList

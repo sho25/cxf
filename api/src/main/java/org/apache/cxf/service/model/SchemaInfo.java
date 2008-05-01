@@ -331,6 +331,7 @@ name|nsUri
 expr_stmt|;
 block|}
 specifier|public
+specifier|synchronized
 name|Element
 name|getElement
 parameter_list|()
@@ -354,6 +355,17 @@ operator|new
 name|CachedOutputStream
 argument_list|()
 decl_stmt|;
+name|XmlSchema
+name|sch
+init|=
+name|getSchema
+argument_list|()
+decl_stmt|;
+synchronized|synchronized
+init|(
+name|sch
+init|)
+block|{
 name|getSchema
 argument_list|()
 operator|.
@@ -362,6 +374,7 @@ argument_list|(
 name|cout
 argument_list|)
 expr_stmt|;
+block|}
 name|Document
 name|sdoc
 init|=

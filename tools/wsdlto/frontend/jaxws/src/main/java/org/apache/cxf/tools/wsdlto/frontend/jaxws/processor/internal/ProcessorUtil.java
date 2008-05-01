@@ -2219,6 +2219,14 @@ name|values
 argument_list|()
 control|)
 block|{
+synchronized|synchronized
+init|(
+name|ele
+operator|.
+name|getOwnerDocument
+argument_list|()
+init|)
+block|{
 name|schema
 operator|.
 name|read
@@ -2226,6 +2234,7 @@ argument_list|(
 name|ele
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|elementByName
 operator|=

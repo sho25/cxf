@@ -47,7 +47,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collection
+name|List
 import|;
 end_import
 
@@ -1380,7 +1380,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|Collection
+name|List
 operator|.
 name|class
 operator|.
