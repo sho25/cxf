@@ -31,16 +31,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
-operator|.
-name|StringReader
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|lang
 operator|.
 name|reflect
@@ -954,7 +944,7 @@ end_return
 
 begin_comment
 unit|}
-comment|/**      * This is a really ugly trick to get around a bug or oversight in XmlSchema, which is that      * there is no way to programmatically construct an XmlSchema instance that ends up cataloged      * in a collection. If there is a fix to WSCOMMONS-272, this can go away.      * @param namespaceURI TNS for new schema.      * @return new schema      */
+comment|/**      * Once upon a time, XmlSchema had a bug in the constructor used in this function. So this wrapper was      * created to hold a workaround.      * @param namespaceURI TNS for new schema.      * @return new schema      */
 end_comment
 
 begin_function
@@ -966,54 +956,13 @@ name|String
 name|namespaceURI
 parameter_list|)
 block|{
-name|StringBuffer
-name|tinyXmlSchemaDocument
-init|=
-operator|new
-name|StringBuffer
-argument_list|()
-decl_stmt|;
-name|tinyXmlSchemaDocument
-operator|.
-name|append
-argument_list|(
-literal|"<xsd:schema xmlns:xsd='http://www.w3.org/2001/XMLSchema' "
-argument_list|)
-expr_stmt|;
-name|tinyXmlSchemaDocument
-operator|.
-name|append
-argument_list|(
-literal|"targetNamespace='"
-operator|+
-name|namespaceURI
-operator|+
-literal|"'/>"
-argument_list|)
-expr_stmt|;
-name|StringReader
-name|reader
-init|=
-operator|new
-name|StringReader
-argument_list|(
-name|tinyXmlSchemaDocument
-operator|.
-name|toString
-argument_list|()
-argument_list|)
-decl_stmt|;
 return|return
-name|schemaCollection
-operator|.
-name|read
-argument_list|(
-name|reader
-argument_list|,
 operator|new
-name|ValidationEventHandler
-argument_list|()
-block|{ }
+name|XmlSchema
+argument_list|(
+name|namespaceURI
+argument_list|,
+name|schemaCollection
 argument_list|)
 return|;
 block|}
