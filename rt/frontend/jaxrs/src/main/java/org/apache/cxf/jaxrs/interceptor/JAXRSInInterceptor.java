@@ -798,7 +798,7 @@ throw|;
 block|}
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Found operation: "
 operator|+

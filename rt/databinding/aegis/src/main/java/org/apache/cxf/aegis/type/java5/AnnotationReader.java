@@ -1507,8 +1507,6 @@ return|return
 literal|null
 return|;
 block|}
-specifier|private
-specifier|static
 name|Object
 name|getAnnotationValue
 parameter_list|(
