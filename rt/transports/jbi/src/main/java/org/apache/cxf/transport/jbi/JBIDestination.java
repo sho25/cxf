@@ -465,6 +465,8 @@ name|JBIDestinationOutputStream
 argument_list|(
 name|inMessage
 argument_list|,
+name|message
+argument_list|,
 name|dc
 argument_list|)
 argument_list|)

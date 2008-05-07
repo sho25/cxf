@@ -316,6 +316,8 @@ name|JBIDestinationOutputStream
 argument_list|(
 name|message
 argument_list|,
+literal|null
+argument_list|,
 name|channel
 argument_list|)
 decl_stmt|;

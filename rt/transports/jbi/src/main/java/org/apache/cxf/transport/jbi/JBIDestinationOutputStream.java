@@ -244,6 +244,10 @@ name|Message
 name|inMessage
 decl_stmt|;
 specifier|private
+name|Message
+name|outMessage
+decl_stmt|;
+specifier|private
 name|DeliveryChannel
 name|channel
 decl_stmt|;
@@ -252,6 +256,9 @@ name|JBIDestinationOutputStream
 parameter_list|(
 name|Message
 name|m
+parameter_list|,
+name|Message
+name|outM
 parameter_list|,
 name|DeliveryChannel
 name|dc
@@ -263,6 +270,10 @@ expr_stmt|;
 name|inMessage
 operator|=
 name|m
+expr_stmt|;
+name|outMessage
+operator|=
+name|outM
 expr_stmt|;
 name|channel
 operator|=
@@ -534,7 +545,11 @@ decl_stmt|;
 comment|//copy attachments
 if|if
 condition|(
-name|inMessage
+name|outMessage
+operator|!=
+literal|null
+operator|&&
+name|outMessage
 operator|.
 name|getAttachments
 argument_list|()
@@ -547,7 +562,7 @@ control|(
 name|Attachment
 name|att
 range|:
-name|inMessage
+name|outMessage
 operator|.
 name|getAttachments
 argument_list|()
