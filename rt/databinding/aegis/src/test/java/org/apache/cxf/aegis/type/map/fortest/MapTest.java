@@ -102,6 +102,10 @@ name|getMapStringToLong
 parameter_list|()
 function_decl|;
 name|Map
+name|getRawMapStringToInteger
+parameter_list|()
+function_decl|;
+name|Map
 argument_list|<
 name|Long
 argument_list|,

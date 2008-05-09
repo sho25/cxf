@@ -227,16 +227,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -378,10 +368,7 @@ argument_list|()
 expr_stmt|;
 block|}
 annotation|@
-name|Ignore
-annotation|@
 name|Test
-comment|/**      * Until some issues in CXF-1051 are resolved, it's not clear what to test in here.       *       */
 specifier|public
 name|void
 name|testMapWsdl
