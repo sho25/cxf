@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Implements a useful caching map. It weakly references the keys,   * but strongly references the data. It works much like the WeakHashMap,  * in that when the keys are garbage collected, the data is removed from   * the map.  *   * The main difference is that keys used for lookups don't have to be "=="  * the same to maintain the data in the cache.  Basically, lookups in this   * map use a ".equals" compare, but the keys are then stored with a "=="   * compare so if the original key is garbage collected, the other keys that  * may reference the data keep the data in the cache.  *  *<b>  * Note that this implementation is not synchronized.  *</b>  */
+comment|/**  * Implements a useful caching map. It weakly references the keys,   * but strongly references the data. It works much like the WeakHashMap,  * in that when the keys are garbage collected, the data is removed from   * the map.  *   * The main difference is that keys used for lookups don't have to be "=="  * the same to maintain the data in the cache.  Basically, lookups in this   * map use a ".equals" compare, but the keys are then stored with a "=="   * compare so if the original key is garbage collected, the other keys that  * may reference the data keep the data in the cache.  *  *<b>  * Note that this implementation is not synchronized. Not even a little.   * 'Read-only' operations can trigger internal modifications. If you share this   * class between threads, you must protect every operation.  *</b>  */
 end_comment
 
 begin_class
