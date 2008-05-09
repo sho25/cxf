@@ -1162,9 +1162,9 @@ condition|)
 block|{
 name|x
 operator|=
-name|count
-operator|-
 name|limit
+operator|-
+name|count
 expr_stmt|;
 block|}
 name|out
