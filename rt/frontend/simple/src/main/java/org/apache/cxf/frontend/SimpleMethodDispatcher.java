@@ -33,16 +33,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Map
 import|;
 end_import
@@ -244,7 +234,7 @@ argument_list|>
 name|biToBop
 init|=
 operator|new
-name|HashMap
+name|ConcurrentHashMap
 argument_list|<
 name|BindingInfo
 argument_list|,
