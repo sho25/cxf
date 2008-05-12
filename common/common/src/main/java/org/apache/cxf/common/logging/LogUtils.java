@@ -170,7 +170,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A container for static utility methods related to logging.  * By default, CXF logs to java.util.logging. An application can change this. To log to another system, the  * application must provide an object that extends {@link AbstractDelegatingLogger}, and advertise that class  * via one of the following mechanisms:  *<ul>  *<li>Create a file, in the classpath, named META-INF/cxf/org.apache.cxf.logger.   * This file should contain the fully-qualified name  * of the class, with no comments, on a single line.</li>  *<li>Call {@link #setLoggerClass(Class)} with a Class<?> reference to the logger class.</li>  *</ul>  * CXF provides {@link Log4jLogger} to use log4j instead of java.util.logging.  */
+comment|/**  * A container for static utility methods related to logging.  * By default, CXF logs to java.util.logging. An application can change this. To log to another system, the  * application must provide an object that extends {@link AbstractDelegatingLogger}, and advertise that class  * via one of the following mechanisms:  *<ul>  *<li>Create a file, in the classpath, named META-INF/cxf/org.apache.cxf.Logger.   * This file should contain the fully-qualified name  * of the class, with no comments, on a single line.</li>  *<li>Call {@link #setLoggerClass(Class)} with a Class<?> reference to the logger class.</li>  *</ul>  * CXF provides {@link Log4jLogger} to use log4j instead of java.util.logging.  */
 end_comment
 
 begin_class
