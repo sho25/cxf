@@ -49,6 +49,10 @@ name|XmlJavaTypeAdapter
 import|;
 end_import
 
+begin_comment
+comment|// START SNIPPET: service
+end_comment
+
 begin_interface
 annotation|@
 name|WebService
