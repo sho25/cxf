@@ -483,7 +483,7 @@ argument_list|(
 operator|new
 name|ClassPathResource
 argument_list|(
-literal|"cxf.xml"
+literal|"/org/apache/cxf/systest/http_jetty/cxf.xml"
 argument_list|)
 argument_list|)
 expr_stmt|;
