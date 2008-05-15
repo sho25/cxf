@@ -689,7 +689,11 @@ throw|throw
 operator|new
 name|IOException
 argument_list|(
-literal|"Protocol mismatch: "
+literal|"Protocol mismatch for port "
+operator|+
+name|port
+operator|+
+literal|": "
 operator|+
 literal|"engine's protocol is "
 operator|+
