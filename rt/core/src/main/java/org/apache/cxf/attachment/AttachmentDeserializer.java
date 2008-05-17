@@ -534,11 +534,7 @@ name|IOException
 argument_list|(
 literal|"Couldn't find MIME boundary: "
 operator|+
-operator|new
-name|String
-argument_list|(
-name|boundary
-argument_list|)
+name|boundaryString
 argument_list|)
 throw|;
 block|}
@@ -686,8 +682,9 @@ decl_stmt|;
 name|String
 name|msg
 init|=
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|buf
 argument_list|,

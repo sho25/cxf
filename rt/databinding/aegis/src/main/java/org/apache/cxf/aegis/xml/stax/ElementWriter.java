@@ -184,7 +184,7 @@ specifier|private
 name|String
 name|prefix
 decl_stmt|;
-comment|/**      * Create a LiteralWriter but without writing an element name.      *       * @param writer      */
+comment|/**      * Create an ElementWriter but without writing an element name.      *       * @param writer      */
 specifier|public
 name|ElementWriter
 parameter_list|(
@@ -406,6 +406,7 @@ name|declare
 init|=
 literal|false
 decl_stmt|;
+comment|// Did the user declare a prefix?
 name|String
 name|decPrefix
 init|=

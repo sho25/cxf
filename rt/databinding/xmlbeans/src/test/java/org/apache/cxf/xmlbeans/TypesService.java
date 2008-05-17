@@ -57,6 +57,20 @@ name|Holder
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|IOUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|WebService
@@ -419,8 +433,9 @@ expr_stmt|;
 return|return
 literal|"In:"
 operator|+
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|i
 argument_list|)

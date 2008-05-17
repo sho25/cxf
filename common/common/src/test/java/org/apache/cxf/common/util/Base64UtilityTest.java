@@ -41,6 +41,20 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|IOUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|Assert
@@ -528,8 +542,9 @@ name|assertEquals
 argument_list|(
 literal|"Aladdin:open sesame"
 argument_list|,
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|bytes
 argument_list|)
@@ -632,8 +647,9 @@ expr_stmt|;
 name|String
 name|encodedString
 init|=
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|bout
 operator|.
@@ -705,8 +721,9 @@ name|assertEquals
 argument_list|(
 literal|"Aladdin:open sesame"
 argument_list|,
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|bytes
 argument_list|)

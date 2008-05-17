@@ -1086,8 +1086,9 @@ name|out
 operator|.
 name|append
 argument_list|(
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|bytes
 argument_list|,
@@ -1171,8 +1172,9 @@ name|out
 operator|.
 name|append
 argument_list|(
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|bytes
 argument_list|,
@@ -1315,8 +1317,9 @@ name|out
 operator|.
 name|append
 argument_list|(
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|bytes
 argument_list|,

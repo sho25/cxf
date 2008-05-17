@@ -61,6 +61,20 @@ name|javax
 operator|.
 name|xml
 operator|.
+name|bind
+operator|.
+name|annotation
+operator|.
+name|XmlNsForm
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
 name|namespace
 operator|.
 name|QName
@@ -304,7 +318,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The Aegis Databinding context object. This object coordinates the data binding process: reading  * and writing XML.  *   * By default, this object sets up a default set of type mappings.   * This consists of two DefaultTypeMapping objects. The first is empty  * and has the Default, Java5, and XML TypeCreator classes configured. The second contains the  * standard mappings of the stock types. If a type can't be mapped in either, then the creators   * create a mapping and store it in the first one.  *   * The application can control some parameters of the type creators by creating a TypeCreationOptions  * object and setting properties. The application can add custom mappings to the type mapping, or   * even use its own classes for the TypeMapping or TypeCreator objects.  *   * At the level of the data binding, the 'root elements' are defined by the WSDL message parts.  * Additional classes that participate are termed 'override' classes.  *   * Aegis, unlike JAXB, has no concept of a 'root element'. So, an application that   * uses Aegis without a web service has to either depend on xsi:type (at least for   * root elements) or have its own mapping from elements to classes, and pass the   * resulting Class objects to the readers.  *   * At this level, the application must specify the initial set of classes to make   * make use of untyped collections or .aegis.xml files.  *   * If the application leaves this list empty, and reads XML messages, then no .aegis.xml files   * are used unless the application has specified a Class&lt;T&gt; for the root of a   * particular item read. Specifically, if the application just leaves it to Aegis to  * map an element tagged with an xsi:type to a class, Aegis can't know that some arbitrary class in  * some arbitrary package is mapped to a particular schema type by QName in a  * mapping XML file.   *   */
+comment|/**  * The Aegis Databinding context object. This object coordinates the data binding process: reading  * and writing XML.  *   * By default, this object sets up a default set of type mappings.   * This consists of two DefaultTypeMapping objects. The first is empty  * and has the Default, Java5, and XML TypeCreator classes configured. The second contains the  * standard mappings of the stock types. If a type can't be mapped in either, then the creators   * create a mapping and store it in the first one.  *   * The application can control some parameters of the type creators by creating a TypeCreationOptions  * object and setting properties. The application can add custom mappings to the type mapping, or   * even use its own classes for the TypeMapping or TypeCreator objects.  *  * Aegis, unlike JAXB, has no concept of a 'root element'. So, an application that   * uses Aegis without a web service has to either depend on xsi:type (at least for   * root elements) or have its own mapping from elements to classes, and pass the   * resulting Class objects to the readers.  * At this level, the application must specify the initial set of classes to make   * make use of untyped collections or .aegis.xml files.  *   * If the application leaves this list empty, and reads XML messages, then no .aegis.xml files   * are used unless the application has specified a Class&lt;T&gt; for the root of a   * particular item read. Specifically, if the application just leaves it to Aegis to  * map an element tagged with an xsi:type to a class, Aegis can't know that some arbitrary class in  * some arbitrary package is mapped to a particular schema type by QName in a  * mapping XML file.  *   * At the level of the CXF data binding, the 'root elements' are defined by the WSDL message parts.  * Additional classes that participate are termed 'override' classes.  *   */
 end_comment
 
 begin_class
@@ -386,6 +400,22 @@ comment|// this URI goes into the type map.
 specifier|private
 name|String
 name|mappingNamespaceURI
+decl_stmt|;
+specifier|private
+name|XmlNsForm
+name|elementForm
+init|=
+name|XmlNsForm
+operator|.
+name|QUALIFIED
+decl_stmt|;
+specifier|private
+name|XmlNsForm
+name|attributeForm
+init|=
+name|XmlNsForm
+operator|.
+name|QUALIFIED
 decl_stmt|;
 comment|/**      * Construct a context.      */
 specifier|public
@@ -1283,6 +1313,58 @@ operator|.
 name|mappingNamespaceURI
 operator|=
 name|mappingNamespaceURI
+expr_stmt|;
+block|}
+comment|/**      * The form of elements.       * @return Returns the elementForm.      */
+specifier|public
+name|XmlNsForm
+name|getElementForm
+parameter_list|()
+block|{
+return|return
+name|elementForm
+return|;
+block|}
+comment|/**      * The form of elements.      * @param elementForm The elementForm to set.      */
+specifier|public
+name|void
+name|setElementForm
+parameter_list|(
+name|XmlNsForm
+name|elementForm
+parameter_list|)
+block|{
+name|this
+operator|.
+name|elementForm
+operator|=
+name|elementForm
+expr_stmt|;
+block|}
+comment|/**      * The form of attributes.       * @return Returns the attributeForm.      */
+specifier|public
+name|XmlNsForm
+name|getAttributeForm
+parameter_list|()
+block|{
+return|return
+name|attributeForm
+return|;
+block|}
+comment|/**      * The form for attributes.      * @param attributeForm The attributeForm to set.      */
+specifier|public
+name|void
+name|setAttributeForm
+parameter_list|(
+name|XmlNsForm
+name|attributeForm
+parameter_list|)
+block|{
+name|this
+operator|.
+name|attributeForm
+operator|=
+name|attributeForm
 expr_stmt|;
 block|}
 block|}

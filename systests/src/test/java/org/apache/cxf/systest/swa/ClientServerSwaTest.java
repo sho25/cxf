@@ -496,8 +496,9 @@ expr_stmt|;
 name|String
 name|string
 init|=
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|b
 argument_list|)
@@ -677,8 +678,9 @@ expr_stmt|;
 name|String
 name|string
 init|=
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|b
 argument_list|)
@@ -846,8 +848,9 @@ expr_stmt|;
 name|String
 name|string
 init|=
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|b
 argument_list|)

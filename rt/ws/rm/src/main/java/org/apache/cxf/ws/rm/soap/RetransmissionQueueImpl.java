@@ -1807,8 +1807,9 @@ name|fine
 argument_list|(
 literal|"Using saved output stream: "
 operator|+
-operator|new
-name|String
+name|IOUtils
+operator|.
+name|newStringFromBytes
 argument_list|(
 name|content
 argument_list|)
