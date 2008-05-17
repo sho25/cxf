@@ -59,6 +59,22 @@ name|WebServiceException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|aegis
+operator|.
+name|services
+operator|.
+name|AttributeBean
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -131,6 +147,17 @@ operator|+
 name|b
 operator|+
 name|c
+return|;
+block|}
+specifier|public
+name|AttributeBean
+name|getAttributeBean
+parameter_list|()
+block|{
+return|return
+operator|new
+name|AttributeBean
+argument_list|()
 return|;
 block|}
 block|}

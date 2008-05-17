@@ -49,6 +49,22 @@ name|WebServiceException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|aegis
+operator|.
+name|services
+operator|.
+name|AttributeBean
+import|;
+end_import
+
 begin_interface
 annotation|@
 name|WebService
@@ -82,6 +98,10 @@ parameter_list|,
 name|String
 name|c
 parameter_list|)
+function_decl|;
+name|AttributeBean
+name|getAttributeBean
+parameter_list|()
 function_decl|;
 block|}
 end_interface
