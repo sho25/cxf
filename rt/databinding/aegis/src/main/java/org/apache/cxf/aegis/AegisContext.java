@@ -61,20 +61,6 @@ name|javax
 operator|.
 name|xml
 operator|.
-name|bind
-operator|.
-name|annotation
-operator|.
-name|XmlNsForm
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
 name|namespace
 operator|.
 name|QName
@@ -401,22 +387,6 @@ specifier|private
 name|String
 name|mappingNamespaceURI
 decl_stmt|;
-specifier|private
-name|XmlNsForm
-name|elementForm
-init|=
-name|XmlNsForm
-operator|.
-name|QUALIFIED
-decl_stmt|;
-specifier|private
-name|XmlNsForm
-name|attributeForm
-init|=
-name|XmlNsForm
-operator|.
-name|QUALIFIED
-decl_stmt|;
 comment|/**      * Construct a context.      */
 specifier|public
 name|AegisContext
@@ -557,7 +527,6 @@ name|void
 name|initialize
 parameter_list|()
 block|{
-comment|// The use of the XSD URI in the mapping is, MAGIC.
 comment|// allow spring config of an alternative mapping.
 if|if
 condition|(
@@ -600,6 +569,7 @@ argument_list|,
 name|mtomUseXmime
 argument_list|)
 decl_stmt|;
+comment|// The use of the XSD URI in the mapping is, MAGIC.
 if|if
 condition|(
 name|mappingNamespaceURI
@@ -1313,58 +1283,6 @@ operator|.
 name|mappingNamespaceURI
 operator|=
 name|mappingNamespaceURI
-expr_stmt|;
-block|}
-comment|/**      * The form of elements.       * @return Returns the elementForm.      */
-specifier|public
-name|XmlNsForm
-name|getElementForm
-parameter_list|()
-block|{
-return|return
-name|elementForm
-return|;
-block|}
-comment|/**      * The form of elements.      * @param elementForm The elementForm to set.      */
-specifier|public
-name|void
-name|setElementForm
-parameter_list|(
-name|XmlNsForm
-name|elementForm
-parameter_list|)
-block|{
-name|this
-operator|.
-name|elementForm
-operator|=
-name|elementForm
-expr_stmt|;
-block|}
-comment|/**      * The form of attributes.       * @return Returns the attributeForm.      */
-specifier|public
-name|XmlNsForm
-name|getAttributeForm
-parameter_list|()
-block|{
-return|return
-name|attributeForm
-return|;
-block|}
-comment|/**      * The form for attributes.      * @param attributeForm The attributeForm to set.      */
-specifier|public
-name|void
-name|setAttributeForm
-parameter_list|(
-name|XmlNsForm
-name|attributeForm
-parameter_list|)
-block|{
-name|this
-operator|.
-name|attributeForm
-operator|=
-name|attributeForm
 expr_stmt|;
 block|}
 block|}

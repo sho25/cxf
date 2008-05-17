@@ -2791,6 +2791,14 @@ block|{
 if|if
 condition|(
 operator|!
+literal|""
+operator|.
+name|equals
+argument_list|(
+name|nameNS
+argument_list|)
+operator|&&
+operator|!
 name|nameNS
 operator|.
 name|equals

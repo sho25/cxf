@@ -1136,6 +1136,9 @@ name|typeName
 operator|.
 name|getNamespaceURI
 argument_list|()
+argument_list|,
+name|getConfiguration
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|typeInfo
