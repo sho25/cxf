@@ -162,7 +162,7 @@ operator|=
 name|defaultNillable
 expr_stmt|;
 block|}
-comment|/** * @return Returns the qualifyElements.      */
+comment|/**       * Whether or not elements are qualified absent any annotations      * or mapping files.       * True by default.      * @return       */
 specifier|public
 name|boolean
 name|isQualifyElements
@@ -172,7 +172,7 @@ return|return
 name|qualifyElements
 return|;
 block|}
-comment|/**      * @param qualifyElements The qualifyElements to set.      */
+comment|/**      * Turn on of off element qualification.      * @param qualifyElements       */
 specifier|public
 name|void
 name|setQualifyElements
@@ -188,7 +188,7 @@ operator|=
 name|qualifyElements
 expr_stmt|;
 block|}
-comment|/** * @return Returns the qualifyAttributes.      */
+comment|/**      * Whether or not attributes are qualified absent any annotations      * or mapping files.      * False by default.       * @return       */
 specifier|public
 name|boolean
 name|isQualifyAttributes
@@ -198,7 +198,7 @@ return|return
 name|qualifyAttributes
 return|;
 block|}
-comment|/**      * @param qualifyAttributes The qualifyAttributes to set.      */
+comment|/**      * Turn on or off attribute qualification.       * @param qualifyAttributes       */
 specifier|public
 name|void
 name|setQualifyAttributes
