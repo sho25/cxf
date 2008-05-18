@@ -1005,6 +1005,8 @@ index|[
 name|index
 index|]
 decl_stmt|;
+comment|// we really aren't prepared to deal with multiple upper bounds,
+comment|// so we just look at the first one.
 if|if
 condition|(
 name|wildcardType
@@ -1012,7 +1014,7 @@ operator|.
 name|getUpperBounds
 argument_list|()
 index|[
-name|index
+literal|0
 index|]
 operator|instanceof
 name|Class
@@ -1028,7 +1030,7 @@ operator|.
 name|getUpperBounds
 argument_list|()
 index|[
-name|index
+literal|0
 index|]
 expr_stmt|;
 block|}

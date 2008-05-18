@@ -114,6 +114,15 @@ argument_list|>
 name|getStudentsMap
 parameter_list|()
 function_decl|;
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|?
+argument_list|>
+name|getWildcardMap
+parameter_list|()
+function_decl|;
 name|List
 argument_list|<
 name|Student
