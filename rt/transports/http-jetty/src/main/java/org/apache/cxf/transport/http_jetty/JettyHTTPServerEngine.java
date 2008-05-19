@@ -1102,6 +1102,10 @@ parameter_list|)
 block|{
 comment|//ignore - probably wasn't fully started anyway
 block|}
+name|server
+operator|=
+literal|null
+expr_stmt|;
 throw|throw
 operator|new
 name|Fault

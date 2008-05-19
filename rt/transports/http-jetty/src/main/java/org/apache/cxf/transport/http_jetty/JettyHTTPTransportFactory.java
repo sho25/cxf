@@ -53,7 +53,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|Map
 import|;
 end_import
 
@@ -63,7 +63,9 @@ name|java
 operator|.
 name|util
 operator|.
-name|Map
+name|concurrent
+operator|.
+name|ConcurrentHashMap
 import|;
 end_import
 
@@ -202,7 +204,7 @@ argument_list|>
 name|destinations
 init|=
 operator|new
-name|HashMap
+name|ConcurrentHashMap
 argument_list|<
 name|String
 argument_list|,
@@ -416,6 +418,12 @@ decl_stmt|;
 name|JettyHTTPDestination
 name|destination
 init|=
+name|addr
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 name|destinations
 operator|.
 name|get
@@ -453,17 +461,28 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|JettyHTTPDestination
-name|destination
+name|String
+name|addr
 init|=
-name|destinations
-operator|.
-name|get
-argument_list|(
 name|endpointInfo
 operator|.
 name|getAddress
 argument_list|()
+decl_stmt|;
+name|JettyHTTPDestination
+name|destination
+init|=
+name|addr
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|destinations
+operator|.
+name|get
+argument_list|(
+name|addr
 argument_list|)
 decl_stmt|;
 if|if
