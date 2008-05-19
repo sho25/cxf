@@ -2451,6 +2451,13 @@ operator|.
 name|getWrapperStyleDrilldown
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|propList
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|Property
@@ -2503,6 +2510,7 @@ operator|.
 name|fullName
 argument_list|()
 return|;
+block|}
 block|}
 block|}
 block|}
