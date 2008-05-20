@@ -4449,6 +4449,15 @@ argument_list|(
 name|exClass
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|beanClass
+operator|==
+literal|null
+condition|)
+block|{
+continue|continue;
+block|}
 name|QName
 name|name
 init|=
