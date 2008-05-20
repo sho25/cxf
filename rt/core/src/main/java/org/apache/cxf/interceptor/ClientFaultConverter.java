@@ -1282,7 +1282,7 @@ name|xu
 operator|.
 name|getValue
 argument_list|(
-literal|"//"
+literal|"/"
 operator|+
 name|Fault
 operator|.
