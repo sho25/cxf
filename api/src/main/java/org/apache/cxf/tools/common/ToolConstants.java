@@ -161,6 +161,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_AUTORESOLVE
+init|=
+literal|"autoNameResolution"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_WEBSERVICE
 init|=
 literal|"webservice"

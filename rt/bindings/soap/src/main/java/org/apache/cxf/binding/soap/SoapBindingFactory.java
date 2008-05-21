@@ -3161,6 +3161,11 @@ argument_list|,
 name|schemas
 argument_list|,
 name|isInput
+argument_list|,
+name|header
+operator|.
+name|getPart
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|serviceInfo
@@ -3204,6 +3209,10 @@ name|schemas
 parameter_list|,
 name|boolean
 name|isInput
+parameter_list|,
+specifier|final
+name|String
+name|partName
 parameter_list|)
 block|{
 name|MessageInfo
@@ -3398,6 +3407,8 @@ argument_list|,
 name|schemas
 argument_list|,
 name|nextId
+argument_list|,
+name|partName
 argument_list|)
 expr_stmt|;
 comment|// for wrapped style
@@ -3590,6 +3601,8 @@ argument_list|,
 name|schemas
 argument_list|,
 name|nextId
+argument_list|,
+name|partName
 argument_list|)
 expr_stmt|;
 block|}
@@ -3612,6 +3625,9 @@ name|schemas
 parameter_list|,
 name|int
 name|nextId
+parameter_list|,
+name|String
+name|partNameFilter
 parameter_list|)
 block|{
 for|for
@@ -3634,6 +3650,26 @@ operator|.
 name|class
 argument_list|)
 control|)
+block|{
+if|if
+condition|(
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
+name|partNameFilter
+argument_list|)
+operator|||
+name|part
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|partNameFilter
+argument_list|)
+condition|)
 block|{
 name|MessagePartInfo
 name|pi
@@ -3770,6 +3806,7 @@ expr_stmt|;
 name|nextId
 operator|++
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public

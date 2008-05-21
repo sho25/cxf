@@ -1083,6 +1083,15 @@ operator|new
 name|ClassNameAllocatorImpl
 argument_list|(
 name|classCollector
+argument_list|,
+name|c
+operator|.
+name|optionSet
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_AUTORESOLVE
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|schemaCompiler
