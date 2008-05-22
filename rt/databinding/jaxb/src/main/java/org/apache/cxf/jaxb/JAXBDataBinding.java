@@ -2254,7 +2254,7 @@ return|return
 name|extraClass
 return|;
 block|}
-specifier|private
+comment|// default access for tests.
 name|List
 argument_list|<
 name|DOMResult

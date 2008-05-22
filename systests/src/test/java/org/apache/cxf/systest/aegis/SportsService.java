@@ -37,18 +37,6 @@ name|WebService
 import|;
 end_import
 
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|WebServiceException
-import|;
-end_import
-
 begin_interface
 annotation|@
 name|WebService
@@ -67,8 +55,6 @@ name|Team
 argument_list|>
 name|getTeams
 parameter_list|()
-throws|throws
-name|WebServiceException
 function_decl|;
 name|String
 name|testForMinOccurs0

@@ -47,18 +47,6 @@ name|List
 import|;
 end_import
 
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|WebServiceException
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -78,8 +66,6 @@ name|Team
 argument_list|>
 name|getTeams
 parameter_list|()
-throws|throws
-name|WebServiceException
 block|{
 name|List
 argument_list|<
