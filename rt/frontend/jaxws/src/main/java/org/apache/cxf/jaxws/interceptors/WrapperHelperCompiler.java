@@ -1831,7 +1831,7 @@ comment|// List aVal = obj.getA();
 comment|// List newA = (List)lst.get(99);
 comment|// if (aVal == null) {
 comment|// obj.setA(newA);
-comment|// } else {
+comment|// } else if (newA != null) {
 comment|// aVal.addAll(newA);
 comment|// }
 name|mv
@@ -2144,6 +2144,28 @@ operator|.
 name|visitLabel
 argument_list|(
 name|nonNullLabel
+argument_list|)
+expr_stmt|;
+name|mv
+operator|.
+name|visitVarInsn
+argument_list|(
+name|Opcodes
+operator|.
+name|ALOAD
+argument_list|,
+literal|4
+argument_list|)
+expr_stmt|;
+name|mv
+operator|.
+name|visitJumpInsn
+argument_list|(
+name|Opcodes
+operator|.
+name|IFNULL
+argument_list|,
+name|jumpOverLabel
 argument_list|)
 expr_stmt|;
 name|mv
