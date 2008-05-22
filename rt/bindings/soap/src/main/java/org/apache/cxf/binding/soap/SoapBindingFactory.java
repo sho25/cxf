@@ -4514,6 +4514,13 @@ name|sb
 operator|.
 name|getParts
 argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|sb
+operator|.
+name|getParts
+argument_list|()
 operator|.
 name|size
 argument_list|()
