@@ -667,11 +667,12 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ParserConfigurationException
-name|pce
+name|Exception
+name|e
 parameter_list|)
 block|{
-comment|// blank
+comment|// we can get all kinds of exceptions from this
+comment|// due to old copies of Xerces and whatnot.
 block|}
 return|return
 name|factory
