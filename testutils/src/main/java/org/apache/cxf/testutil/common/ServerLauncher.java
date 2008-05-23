@@ -1616,7 +1616,7 @@ name|cmd
 operator|.
 name|add
 argument_list|(
-literal|"-Djavax.xml.ws.spi.Provider=org.apache.cxf.bus.jaxws.spi.ProviderImpl"
+literal|"-Djavax.xml.ws.spi.Provider=org.apache.cxf.jaxws.spi.ProviderImpl"
 argument_list|)
 expr_stmt|;
 name|String
