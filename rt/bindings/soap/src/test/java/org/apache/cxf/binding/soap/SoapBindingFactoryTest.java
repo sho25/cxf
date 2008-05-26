@@ -604,7 +604,7 @@ argument_list|,
 operator|new
 name|QName
 argument_list|(
-literal|"urn:cxf:no_body_parts/wsdl"
+literal|"urn:org:apache:cxf:no_body_parts/wsdl"
 argument_list|,
 literal|"NoBodyParts"
 argument_list|)
@@ -689,9 +689,9 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-literal|"urn:cxf:no_body_parts/wsdl"
+literal|"urn:org:apache:cxf:no_body_parts/wsdl"
 argument_list|,
-literal|"convertMime"
+literal|"operation1"
 argument_list|)
 argument_list|)
 decl_stmt|;
