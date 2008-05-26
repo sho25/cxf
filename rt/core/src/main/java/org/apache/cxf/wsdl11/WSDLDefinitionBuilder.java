@@ -938,12 +938,9 @@ argument_list|)
 decl_stmt|;
 throw|throw
 operator|new
-name|RuntimeException
+name|WSDLRuntimeException
 argument_list|(
 name|msg
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|we
 argument_list|)

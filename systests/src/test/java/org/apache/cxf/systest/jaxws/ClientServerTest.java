@@ -950,7 +950,7 @@ name|endpoint
 operator|.
 name|dynamic
 operator|.
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 name|dynamicClientFactory
 init|=
 name|org
@@ -965,7 +965,7 @@ name|endpoint
 operator|.
 name|dynamic
 operator|.
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 operator|.
 name|newInstance
 argument_list|(

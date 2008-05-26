@@ -67,6 +67,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|endpoint
+operator|.
+name|dynamic
+operator|.
+name|DynamicClientFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxws
 operator|.
 name|support
@@ -76,28 +92,18 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class creates dynamic clients with JAX-WS endpoints.  */
+comment|/**  * This class reads a WSDL and creates a dynamic client from it with JAX-WS  * functionality.  * This provides support for attachments and other useful things that   * come with JAX-WS.  *   * Use {@link #newInstance} to obtain an instance, and then  * {@link #createClient(String)} (or other overloads) to create a client.  *   * This factory uses the JAXB data binding.   **/
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 extends|extends
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|endpoint
-operator|.
-name|dynamic
-operator|.
 name|DynamicClientFactory
 block|{
 specifier|protected
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 parameter_list|(
 name|Bus
 name|bus
@@ -126,7 +132,7 @@ block|}
 comment|/**      * Create a new instance using a specific<tt>Bus</tt>.      *       * @param b the<tt>Bus</tt> to use in subsequent operations with the      *            instance      * @return the new instance      */
 specifier|public
 specifier|static
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 name|newInstance
 parameter_list|(
 name|Bus
@@ -135,7 +141,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 argument_list|(
 name|b
 argument_list|)
@@ -144,7 +150,7 @@ block|}
 comment|/**      * Create a new instance using a default<tt>Bus</tt>.      *       * @return the new instance      * @see CXFBusFactory#getDefaultBus()      */
 specifier|public
 specifier|static
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 name|newInstance
 parameter_list|()
 block|{
@@ -158,7 +164,7 @@ argument_list|()
 decl_stmt|;
 return|return
 operator|new
-name|DynamicClientFactory
+name|JaxWsDynamicClientFactory
 argument_list|(
 name|bus
 argument_list|)
