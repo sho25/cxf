@@ -666,7 +666,7 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-literal|"Can not find the wsdl "
+literal|"Cannot find the wsdl "
 operator|+
 name|wsdl
 operator|+
