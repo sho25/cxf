@@ -665,7 +665,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-literal|"application/x-www-form-urlencoded."
+literal|"application/x-www-form-urlencoded"
 operator|.
 name|equals
 argument_list|(
