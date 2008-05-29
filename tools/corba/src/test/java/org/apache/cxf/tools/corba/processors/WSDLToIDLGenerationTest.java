@@ -3028,14 +3028,6 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|// The ws-addr import in this wsdl fails. Ignored until cataloged
-comment|// or otherwise dealt with --bimargulies.
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 annotation|@
 name|Test
 specifier|public
