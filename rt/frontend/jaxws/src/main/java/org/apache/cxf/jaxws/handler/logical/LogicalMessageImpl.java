@@ -674,6 +674,14 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+comment|//content must be an element thing, skip over any whitespace
+name|StaxUtils
+operator|.
+name|toNextTag
+argument_list|(
+name|reader
+argument_list|)
+expr_stmt|;
 name|StaxUtils
 operator|.
 name|copy
