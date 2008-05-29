@@ -1000,6 +1000,15 @@ argument_list|)
 expr_stmt|;
 name|reader
 operator|.
+name|setFeature
+argument_list|(
+literal|"javax.wsdl.importDocuments"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+name|reader
+operator|.
 name|setExtensionRegistry
 argument_list|(
 name|registry
