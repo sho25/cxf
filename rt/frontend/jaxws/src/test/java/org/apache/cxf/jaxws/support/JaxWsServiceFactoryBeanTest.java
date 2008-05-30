@@ -485,12 +485,6 @@ extends|extends
 name|AbstractJaxWsTest
 block|{
 annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-annotation|@
 name|Test
 specifier|public
 name|void
