@@ -1859,6 +1859,8 @@ name|MalformedURLException
 name|e
 parameter_list|)
 block|{
+if|if
+condition|(
 name|done
 operator|.
 name|put
@@ -1870,7 +1872,10 @@ operator|.
 name|getDefinition
 argument_list|()
 argument_list|)
-expr_stmt|;
+operator|==
+literal|null
+condition|)
+block|{
 name|updateDefinition
 argument_list|(
 name|imp
@@ -1889,8 +1894,11 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 else|else
 block|{
+if|if
+condition|(
 name|done
 operator|.
 name|put
@@ -1902,7 +1910,10 @@ operator|.
 name|getDefinition
 argument_list|()
 argument_list|)
-expr_stmt|;
+operator|==
+literal|null
+condition|)
+block|{
 name|done
 operator|.
 name|put
@@ -1931,6 +1942,7 @@ argument_list|,
 name|ei
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -2343,6 +2355,8 @@ name|MalformedURLException
 name|e
 parameter_list|)
 block|{
+if|if
+condition|(
 name|doneSchemas
 operator|.
 name|put
@@ -2351,7 +2365,10 @@ name|start
 argument_list|,
 name|imp
 argument_list|)
-expr_stmt|;
+operator|==
+literal|null
+condition|)
+block|{
 name|updateSchemaImports
 argument_list|(
 name|imp
@@ -2366,8 +2383,11 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 else|else
 block|{
+if|if
+condition|(
 name|doneSchemas
 operator|.
 name|put
@@ -2376,7 +2396,10 @@ name|start
 argument_list|,
 name|imp
 argument_list|)
-expr_stmt|;
+operator|==
+literal|null
+condition|)
+block|{
 name|doneSchemas
 operator|.
 name|put
@@ -2398,6 +2421,7 @@ argument_list|,
 name|base
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -2487,6 +2511,8 @@ name|MalformedURLException
 name|e
 parameter_list|)
 block|{
+if|if
+condition|(
 name|doneSchemas
 operator|.
 name|put
@@ -2495,7 +2521,10 @@ name|start
 argument_list|,
 name|included
 argument_list|)
-expr_stmt|;
+operator|==
+literal|null
+condition|)
+block|{
 name|updateSchemaImports
 argument_list|(
 name|included
@@ -2508,6 +2537,7 @@ argument_list|,
 name|base
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

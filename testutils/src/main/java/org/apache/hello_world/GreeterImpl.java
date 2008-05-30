@@ -68,6 +68,10 @@ implements|implements
 name|Greeter
 block|{
 specifier|public
+name|GreeterImpl
+parameter_list|()
+block|{     }
+specifier|public
 name|String
 name|greetMe
 parameter_list|(
