@@ -560,7 +560,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//if the wrapper has a type class, we don't need t do anything
+comment|//if the wrapper has a type class, we don't need to do anything
 comment|//as everything would have been discovered when walking the
 comment|//wrapper type (unless it's a header which wouldn't be in the wrapper)
 return|return;
