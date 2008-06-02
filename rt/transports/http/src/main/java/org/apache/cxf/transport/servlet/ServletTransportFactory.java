@@ -444,7 +444,7 @@ argument_list|(
 name|getBus
 argument_list|()
 argument_list|,
-literal|null
+name|this
 argument_list|,
 name|endpointInfo
 argument_list|,

@@ -79,7 +79,11 @@ name|WebService
 argument_list|(
 name|name
 operator|=
-literal|"Greeter"
+literal|"SoapPort"
+argument_list|,
+name|portName
+operator|=
+literal|"SoapPort"
 argument_list|,
 name|serviceName
 operator|=

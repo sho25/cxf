@@ -239,20 +239,6 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|ConduitInitiator
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
 name|http
 operator|.
 name|AbstractHTTPDestination
@@ -695,16 +681,6 @@ argument_list|(
 name|nurl
 argument_list|)
 expr_stmt|;
-block|}
-comment|/**      * @return the associated conduit initiator      */
-specifier|protected
-name|ConduitInitiator
-name|getConduitInitiator
-parameter_list|()
-block|{
-return|return
-name|conduitInitiator
-return|;
 block|}
 specifier|protected
 name|String

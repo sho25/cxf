@@ -1111,6 +1111,16 @@ name|isOneWay
 argument_list|()
 return|;
 block|}
+comment|/**      * @return the associated conduit initiator      */
+specifier|protected
+name|ConduitInitiator
+name|getConduitInitiator
+parameter_list|()
+block|{
+return|return
+name|conduitInitiator
+return|;
+block|}
 comment|/**      * Copy the request headers into the message.      *       * @param message the current message      * @param headers the current set of headers      */
 specifier|protected
 name|void
