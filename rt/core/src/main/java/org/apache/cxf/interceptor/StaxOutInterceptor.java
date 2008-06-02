@@ -324,8 +324,6 @@ condition|)
 block|{
 return|return;
 block|}
-comment|// assert os != null;
-comment|// TODO: where does encoding constant go?
 name|String
 name|encoding
 init|=
@@ -372,6 +370,8 @@ operator|.
 name|writeStartDocument
 argument_list|(
 name|encoding
+argument_list|,
+literal|"1.0"
 argument_list|)
 expr_stmt|;
 block|}
