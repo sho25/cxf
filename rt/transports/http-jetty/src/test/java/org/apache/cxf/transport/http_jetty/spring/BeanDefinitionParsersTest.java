@@ -166,6 +166,17 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
+argument_list|(
+literal|"Not valid as the parser shouldn't be generating the beans themselves, thats the"
+operator|+
+literal|"job of the factory later on.  Need to update this test to do that."
+argument_list|)
 specifier|public
 class|class
 name|BeanDefinitionParsersTest
