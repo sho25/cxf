@@ -17,11 +17,42 @@ name|services
 package|;
 end_package
 
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|WebMethod
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|WebService
+import|;
+end_import
+
 begin_comment
-comment|/**  * An array service for testing.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * An array service for testing.  * There are some JAX-WS annotations for tests with JAX-WS.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
 end_comment
 
 begin_class
+annotation|@
+name|WebService
+argument_list|(
+name|targetNamespace
+operator|=
+literal|"urn:org.apache.cxf.aegis"
+argument_list|,
+name|serviceName
+operator|=
+literal|"arrayService"
+argument_list|)
 specifier|public
 class|class
 name|ArrayService
@@ -54,6 +85,8 @@ specifier|private
 name|String
 name|afterValue
 decl_stmt|;
+annotation|@
+name|WebMethod
 specifier|public
 name|SimpleBean
 index|[]
@@ -90,6 +123,16 @@ name|bean
 block|}
 return|;
 block|}
+annotation|@
+name|WebMethod
+specifier|public
+name|void
+name|takeOneSimpleBean
+parameter_list|(
+name|SimpleBean
+name|sb
+parameter_list|)
+block|{     }
 specifier|public
 name|void
 name|resetValues
@@ -112,6 +155,8 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
+annotation|@
+name|WebMethod
 specifier|public
 name|String
 index|[]
@@ -129,6 +174,8 @@ literal|"bleh"
 block|}
 return|;
 block|}
+annotation|@
+name|WebMethod
 specifier|public
 name|boolean
 name|submitStringArray
@@ -142,6 +189,8 @@ return|return
 literal|true
 return|;
 block|}
+annotation|@
+name|WebMethod
 specifier|public
 name|boolean
 name|submitBeanArray
@@ -155,6 +204,8 @@ return|return
 literal|true
 return|;
 block|}
+annotation|@
+name|WebMethod
 specifier|public
 name|void
 name|submitJDOMArray
@@ -187,6 +238,8 @@ operator|=
 name|after
 expr_stmt|;
 block|}
+annotation|@
+name|WebMethod
 specifier|public
 name|void
 name|submitW3CArray
@@ -221,6 +274,8 @@ operator|=
 name|after
 expr_stmt|;
 block|}
+annotation|@
+name|WebMethod
 specifier|public
 name|org
 operator|.

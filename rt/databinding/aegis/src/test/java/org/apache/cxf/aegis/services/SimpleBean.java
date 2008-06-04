@@ -65,6 +65,34 @@ operator|=
 name|numbers
 expr_stmt|;
 block|}
+comment|// this property has no XML mapping,
+comment|// useful for testing defaults.
+specifier|public
+name|int
+index|[]
+name|getDefaultSchemaNumbers
+parameter_list|()
+block|{
+return|return
+name|numbers
+return|;
+block|}
+specifier|public
+name|void
+name|setDefaultSchemaNumbers
+parameter_list|(
+name|int
+index|[]
+name|n
+parameter_list|)
+block|{
+name|this
+operator|.
+name|numbers
+operator|=
+name|n
+expr_stmt|;
+block|}
 specifier|public
 name|String
 name|getBleh
