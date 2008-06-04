@@ -1506,6 +1506,37 @@ argument_list|(
 name|schemaLocations
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|serverFactory
+operator|.
+name|getProperties
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|serverFactory
+operator|.
+name|getProperties
+argument_list|()
+operator|.
+name|putAll
+argument_list|(
+name|properties
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|serverFactory
+operator|.
+name|setProperties
+argument_list|(
+name|properties
+argument_list|)
+expr_stmt|;
+block|}
 comment|// Be careful not to override any serverfactory settings as a user might
 comment|// have supplied their own.
 if|if
