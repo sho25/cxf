@@ -659,13 +659,6 @@ condition|(
 name|location
 operator|==
 literal|null
-operator|||
-literal|""
-operator|.
-name|equals
-argument_list|(
-name|location
-argument_list|)
 condition|)
 block|{
 name|location
