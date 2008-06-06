@@ -2116,6 +2116,13 @@ operator|.
 name|newInstance
 argument_list|(
 name|WS_RM_PACKAGE
+argument_list|,
+name|SequenceAcknowledgement
+operator|.
+name|class
+operator|.
+name|getClassLoader
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
