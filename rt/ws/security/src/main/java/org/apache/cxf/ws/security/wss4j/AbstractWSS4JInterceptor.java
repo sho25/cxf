@@ -591,6 +591,11 @@ return|;
 block|}
 specifier|public
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|getProperties
 parameter_list|()
 block|{

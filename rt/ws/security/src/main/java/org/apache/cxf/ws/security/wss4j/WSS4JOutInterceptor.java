@@ -609,7 +609,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"WSDoAllSender: enter invoke()"
+literal|"WSS4JOutInterceptor: enter handleMessage()"
 argument_list|)
 expr_stmt|;
 block|}
@@ -1024,7 +1024,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"WSDoAllSender: exit invoke()"
+literal|"WSS4JOutInterceptor: exit handleMessage()"
 argument_list|)
 expr_stmt|;
 block|}
