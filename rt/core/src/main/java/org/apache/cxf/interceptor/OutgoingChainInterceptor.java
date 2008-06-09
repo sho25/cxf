@@ -923,7 +923,7 @@ name|Interceptor
 argument_list|>
 name|i1
 init|=
-name|ep
+name|bus
 operator|.
 name|getOutInterceptors
 argument_list|()
@@ -944,7 +944,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Interceptors contributed by endpoint: "
+literal|"Interceptors contributed by bus: "
 operator|+
 name|i1
 argument_list|)
@@ -992,7 +992,7 @@ name|Interceptor
 argument_list|>
 name|i3
 init|=
-name|bus
+name|ep
 operator|.
 name|getOutInterceptors
 argument_list|()
@@ -1013,7 +1013,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Interceptors contributed by bus: "
+literal|"Interceptors contributed by endpoint: "
 operator|+
 name|i3
 argument_list|)

@@ -377,10 +377,7 @@ argument_list|()
 argument_list|,
 name|endpoint
 operator|.
-name|getInInterceptors
-argument_list|()
-argument_list|,
-name|getBinding
+name|getService
 argument_list|()
 operator|.
 name|getInInterceptors
@@ -388,7 +385,10 @@ argument_list|()
 argument_list|,
 name|endpoint
 operator|.
-name|getService
+name|getInInterceptors
+argument_list|()
+argument_list|,
+name|getBinding
 argument_list|()
 operator|.
 name|getInInterceptors
