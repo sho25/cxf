@@ -388,11 +388,6 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Create a new BusFactory      * @param className The class of the BusFactory to create.  If null, uses the      * default search algorithm.      * @return a new BusFactory to be used to create Bus objects      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|BusFactory

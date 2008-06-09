@@ -354,6 +354,12 @@ name|ClassNotFoundException
 block|{
 name|this
 argument_list|(
+operator|(
+name|Class
+argument_list|<
+name|T
+argument_list|>
+operator|)
 name|ClassLoaderUtils
 operator|.
 name|loadClass
