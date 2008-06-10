@@ -2794,6 +2794,13 @@ argument_list|(
 name|ei
 argument_list|)
 expr_stmt|;
+name|clientEndpointInfo
+operator|.
+name|remove
+argument_list|(
+name|ei
+argument_list|)
+expr_stmt|;
 comment|/**          * While cleaning up the entries of requestInfo's, responseInfo's and faultInfo's map, we create          * a temperory Set with all the keys. Later we iterate over the keys of this temp set,          * and if it's same as that of the endpoint being undeployed, we remove the corresponding          * entries from the client and server maps.          */
 name|cleanupBindingOperations
 argument_list|(
