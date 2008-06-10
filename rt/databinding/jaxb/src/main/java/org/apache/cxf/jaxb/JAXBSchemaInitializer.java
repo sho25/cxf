@@ -1701,8 +1701,6 @@ operator|=
 operator|new
 name|SchemaInfo
 argument_list|(
-name|serviceInfo
-argument_list|,
 name|qn
 operator|.
 name|getNamespaceURI
@@ -2729,8 +2727,6 @@ operator|=
 operator|new
 name|SchemaInfo
 argument_list|(
-name|serviceInfo
-argument_list|,
 name|part
 operator|.
 name|getElementQName

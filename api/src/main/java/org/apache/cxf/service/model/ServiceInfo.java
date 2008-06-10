@@ -671,8 +671,6 @@ init|=
 operator|new
 name|SchemaInfo
 argument_list|(
-name|this
-argument_list|,
 name|namespaceURI
 argument_list|)
 decl_stmt|;

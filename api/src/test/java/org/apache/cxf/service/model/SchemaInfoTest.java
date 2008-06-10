@@ -72,8 +72,6 @@ operator|=
 operator|new
 name|SchemaInfo
 argument_list|(
-literal|null
-argument_list|,
 literal|"http://apache.org/hello_world_soap_http/types"
 argument_list|)
 expr_stmt|;

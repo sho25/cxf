@@ -475,8 +475,6 @@ init|=
 operator|new
 name|SchemaInfo
 argument_list|(
-name|serviceInfo
-argument_list|,
 name|ns
 argument_list|)
 decl_stmt|;
