@@ -3477,11 +3477,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|values
+name|results
 operator|!=
 literal|null
 operator|&&
-name|values
+name|results
 operator|.
 name|size
 argument_list|()
