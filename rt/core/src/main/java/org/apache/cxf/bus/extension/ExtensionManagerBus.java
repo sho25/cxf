@@ -344,14 +344,6 @@ name|BUS_ID_PROPERTY_NAME
 init|=
 literal|"org.apache.cxf.bus.id"
 decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|BUS_EXTENSION_RESOURCE
-init|=
-literal|"META-INF/bus-extensions.xml"
-decl_stmt|;
 specifier|public
 name|ExtensionManagerBus
 parameter_list|(
@@ -531,8 +523,6 @@ init|=
 operator|new
 name|ExtensionManagerImpl
 argument_list|(
-name|BUS_EXTENSION_RESOURCE
-argument_list|,
 name|Thread
 operator|.
 name|currentThread
