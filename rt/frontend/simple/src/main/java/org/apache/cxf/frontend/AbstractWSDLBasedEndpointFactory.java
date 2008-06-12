@@ -1677,11 +1677,11 @@ try|try
 block|{
 if|if
 condition|(
-literal|"http://schemas.xmlsoap.org/soap/"
-operator|.
-name|equals
-argument_list|(
 name|binding
+operator|.
+name|contains
+argument_list|(
+literal|"/soap"
 argument_list|)
 condition|)
 block|{

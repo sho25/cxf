@@ -480,6 +480,13 @@ operator|new
 name|SoapBindingFactory
 argument_list|()
 decl_stmt|;
+name|bindingFactory
+operator|.
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
 name|bus
 operator|.
 name|getExtension
