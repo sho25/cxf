@@ -123,9 +123,9 @@ begin_import
 import|import
 name|org
 operator|.
-name|xmlsoap
+name|apache
 operator|.
-name|schemas
+name|cxf
 operator|.
 name|wsdl
 operator|.

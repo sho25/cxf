@@ -367,9 +367,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl11
+name|wsdl
 operator|.
-name|WSDLEndpointFactory
+name|http
+operator|.
+name|AddressType
 import|;
 end_import
 
@@ -377,15 +379,13 @@ begin_import
 import|import
 name|org
 operator|.
-name|xmlsoap
+name|apache
 operator|.
-name|schemas
+name|cxf
 operator|.
-name|wsdl
+name|wsdl11
 operator|.
-name|http
-operator|.
-name|AddressType
+name|WSDLEndpointFactory
 import|;
 end_import
 
