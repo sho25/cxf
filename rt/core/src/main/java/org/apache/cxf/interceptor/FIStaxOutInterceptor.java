@@ -458,7 +458,6 @@ argument_list|(
 literal|0
 argument_list|)
 expr_stmt|;
-block|}
 name|accepts
 operator|.
 name|set
@@ -468,6 +467,17 @@ argument_list|,
 name|a
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+name|accepts
+operator|.
+name|add
+argument_list|(
+name|a
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
