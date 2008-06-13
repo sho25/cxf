@@ -512,6 +512,7 @@ name|boolean
 name|configFinalized
 decl_stmt|;
 comment|/**      * This constructor is called by the JettyHTTPServerEngineFactory.      */
+specifier|public
 name|JettyHTTPServerEngine
 parameter_list|(
 name|JettyHTTPServerEngineFactory
@@ -593,6 +594,15 @@ name|bus
 operator|=
 name|b
 expr_stmt|;
+block|}
+specifier|public
+name|Bus
+name|getBus
+parameter_list|()
+block|{
+return|return
+name|bus
+return|;
 block|}
 comment|/**      * Returns the protocol "http" or "https" for which this engine      * was configured.      */
 specifier|public

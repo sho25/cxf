@@ -312,6 +312,15 @@ operator|=
 name|bus
 expr_stmt|;
 block|}
+specifier|public
+name|Bus
+name|getBus
+parameter_list|()
+block|{
+return|return
+name|bus
+return|;
+block|}
 annotation|@
 name|PostConstruct
 specifier|public
