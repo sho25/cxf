@@ -35,6 +35,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|net
+operator|.
+name|URI
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -283,7 +293,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -294,7 +304,7 @@ argument_list|(
 literal|"expected/stock_noanno_bare.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -386,7 +396,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -397,7 +407,7 @@ argument_list|(
 literal|"expected/stock_noanno_wrapped.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -493,7 +503,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -504,7 +514,7 @@ argument_list|(
 literal|"expected/stock_noanno_rpc.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals

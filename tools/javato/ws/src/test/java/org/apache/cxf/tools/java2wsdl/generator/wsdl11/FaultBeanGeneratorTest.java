@@ -47,6 +47,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|URI
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|HashSet
@@ -347,7 +357,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -358,7 +368,7 @@ argument_list|(
 literal|"expected/DBServiceFaultBean.java.source"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertFileEquals
@@ -464,7 +474,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -475,7 +485,7 @@ argument_list|(
 literal|"expected/FaultDetail.java.source"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertFileEquals

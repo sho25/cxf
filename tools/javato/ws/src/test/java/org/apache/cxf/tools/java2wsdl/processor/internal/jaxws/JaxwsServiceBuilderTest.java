@@ -47,6 +47,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|URI
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Collection
@@ -512,7 +522,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -525,7 +535,7 @@ argument_list|(
 literal|"expected/expected_doc_lit_wrapped_with_wrapperclass.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -615,7 +625,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -628,7 +638,7 @@ argument_list|(
 literal|"expected/expected_doc_lit_wrapped_no_wrapperclass.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -711,7 +721,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -724,7 +734,7 @@ argument_list|(
 literal|"expected/expected_hello_world_doc_lit.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -815,7 +825,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -828,7 +838,7 @@ argument_list|(
 literal|"expected/expected_doc_lit_wrapped_localName.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -918,7 +928,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -931,7 +941,7 @@ argument_list|(
 literal|"expected/expected_doc_lit_wrapped_no_webparam.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1019,7 +1029,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -1032,7 +1042,7 @@ argument_list|(
 literal|"expected/expected_holder.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1114,7 +1124,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -1127,7 +1137,7 @@ argument_list|(
 literal|"expected/expected_hello_world_async.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1210,7 +1220,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -1223,7 +1233,7 @@ argument_list|(
 literal|"expected/expected_rpc_lit.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1542,7 +1552,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -1555,7 +1565,7 @@ argument_list|(
 literal|"expected/soap_header.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1789,7 +1799,7 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|this
@@ -1802,7 +1812,7 @@ argument_list|(
 literal|"expected/expected_rpclist_no_sei.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals

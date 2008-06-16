@@ -23,6 +23,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|File
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|FileInputStream
 import|;
 end_import
@@ -662,6 +672,9 @@ comment|//System.setProperty("javax.net.debug", "all");
 name|String
 name|keystore
 init|=
+operator|new
+name|File
+argument_list|(
 name|Server
 operator|.
 name|class
@@ -671,7 +684,11 @@ argument_list|(
 literal|"resources/Morpit.jks"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
+argument_list|()
+argument_list|)
+operator|.
+name|getAbsolutePath
 argument_list|()
 decl_stmt|;
 comment|//System.out.println("Keystore: " + keystore);
@@ -696,6 +713,9 @@ decl_stmt|;
 name|String
 name|truststore
 init|=
+operator|new
+name|File
+argument_list|(
 name|Server
 operator|.
 name|class
@@ -705,7 +725,11 @@ argument_list|(
 literal|"resources/Truststore.jks"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
+argument_list|()
+argument_list|)
+operator|.
+name|getAbsolutePath
 argument_list|()
 decl_stmt|;
 comment|//System.out.println("Truststore: " + truststore);

@@ -888,7 +888,7 @@ argument_list|(
 literal|"/idl/sequence_octet.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -921,7 +921,7 @@ operator|+
 literal|"_sequence_octet.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1095,7 +1095,7 @@ argument_list|(
 literal|"/idl/HelloWorld.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1124,7 +1124,7 @@ argument_list|(
 literal|"/idl/expected_HelloWorld_schema_namespace.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1200,7 +1200,7 @@ argument_list|(
 literal|"/idl/HelloWorld.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1229,7 +1229,7 @@ argument_list|(
 literal|"/idl/expected_HelloWorld_corba_address_file.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1358,7 +1358,7 @@ argument_list|(
 literal|"/idl/sequence_octet.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1387,7 +1387,7 @@ argument_list|(
 literal|"/idl/expected_sequence_octet_corba_typemap_tns.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1463,7 +1463,7 @@ argument_list|(
 literal|"/idl/String.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1492,7 +1492,7 @@ argument_list|(
 literal|"/idl/expected_String_unbounded.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1566,7 +1566,7 @@ argument_list|(
 literal|"/idl/Anonstring.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1595,7 +1595,7 @@ argument_list|(
 literal|"/idl/expected_Anonstring_unbounded.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1668,7 +1668,7 @@ argument_list|(
 literal|"/idl/Exception.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1697,7 +1697,7 @@ argument_list|(
 literal|"/idl/expected_Exception_DiffNS.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1772,7 +1772,7 @@ argument_list|(
 literal|"/idl/HelloWorld.idl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1801,7 +1801,7 @@ argument_list|(
 literal|"/idl/expected_HelloWorld.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 argument_list|)
 decl_stmt|;

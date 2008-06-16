@@ -35,6 +35,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|URI
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Arrays
@@ -418,6 +428,8 @@ specifier|public
 name|void
 name|testGenerateEmbedStyle
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|gen
 operator|.
@@ -450,7 +462,7 @@ name|getDateType
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -461,7 +473,7 @@ argument_list|(
 literal|"expected/date_embed.xml"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertFileEquals
@@ -521,7 +533,7 @@ argument_list|(
 literal|"expected/calendar_embed.xml"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 expr_stmt|;
 name|assertFileEquals
@@ -547,6 +559,8 @@ specifier|public
 name|void
 name|testGenerateExternalStyle
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|gen
 operator|.
@@ -605,7 +619,7 @@ name|getDateType
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -616,7 +630,7 @@ argument_list|(
 literal|"expected/date.xjb"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertFileEquals
@@ -676,7 +690,7 @@ argument_list|(
 literal|"expected/calendar.xjb"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 expr_stmt|;
 name|assertFileEquals

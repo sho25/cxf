@@ -31,6 +31,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|net
+operator|.
+name|URI
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|wsdl
@@ -610,7 +620,7 @@ operator|.
 name|process
 argument_list|()
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -621,7 +631,7 @@ argument_list|(
 literal|"expected/calculator.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -776,7 +786,7 @@ operator|.
 name|process
 argument_list|()
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -787,7 +797,7 @@ argument_list|(
 literal|"expected/hello_soap12.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1199,7 +1209,7 @@ operator|.
 name|process
 argument_list|()
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -1210,7 +1220,7 @@ argument_list|(
 literal|"expected/db.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1354,7 +1364,7 @@ operator|.
 name|process
 argument_list|()
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -1365,7 +1375,7 @@ argument_list|(
 literal|"expected/my_hello_soap12.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -1986,7 +1996,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -1997,7 +2007,7 @@ argument_list|(
 literal|"expected/rpc-hello-expected.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2087,7 +2097,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -2098,7 +2108,7 @@ argument_list|(
 literal|"expected/xml-bare-expected.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2188,7 +2198,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -2199,7 +2209,7 @@ argument_list|(
 literal|"expected/hello_world_fault_expected.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2469,7 +2479,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -2480,7 +2490,7 @@ argument_list|(
 literal|"expected/echo_date.xjb"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2583,7 +2593,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -2594,7 +2604,7 @@ argument_list|(
 literal|"expected/echo_calendar.xjb"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2724,7 +2734,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -2735,7 +2745,7 @@ argument_list|(
 literal|"expected/list_expected.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2869,7 +2879,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -2880,7 +2890,7 @@ argument_list|(
 literal|"expected/expected_send_image.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -2992,7 +3002,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -3003,7 +3013,7 @@ argument_list|(
 literal|"expected/expected_send_image2.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
@@ -3115,7 +3125,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|String
+name|URI
 name|expectedFile
 init|=
 name|getClass
@@ -3126,7 +3136,7 @@ argument_list|(
 literal|"expected/add_numbers_expected.wsdl"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
 argument_list|()
 decl_stmt|;
 name|assertWsdlEquals
