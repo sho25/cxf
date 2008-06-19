@@ -524,6 +524,18 @@ name|WSDLQueryHandler
 parameter_list|()
 block|{     }
 specifier|public
+name|WSDLQueryHandler
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|bus
+operator|=
+name|b
+expr_stmt|;
+block|}
+specifier|public
 name|String
 name|getResponseContentType
 parameter_list|(

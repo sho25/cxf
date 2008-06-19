@@ -132,7 +132,7 @@ expr_stmt|;
 block|}
 annotation|@
 name|Override
-specifier|protected
+specifier|public
 name|String
 name|getStyle
 parameter_list|()
@@ -301,7 +301,7 @@ block|}
 return|return
 name|super
 operator|.
-name|getStyle
+name|getUse
 argument_list|()
 return|;
 block|}

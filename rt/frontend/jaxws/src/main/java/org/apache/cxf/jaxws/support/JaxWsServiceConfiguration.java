@@ -4039,7 +4039,10 @@ argument_list|()
 return|;
 block|}
 return|return
-literal|"document"
+name|super
+operator|.
+name|getStyle
+argument_list|()
 return|;
 block|}
 specifier|private
@@ -4203,9 +4206,12 @@ argument_list|)
 return|;
 block|}
 return|return
-name|Boolean
+name|super
 operator|.
-name|FALSE
+name|isRPC
+argument_list|(
+name|method
+argument_list|)
 return|;
 block|}
 annotation|@
