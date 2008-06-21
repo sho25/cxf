@@ -3180,7 +3180,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Header message not defined in service model."
+literal|"Problem with WSDL: soap:header element is referring to an undefined wsdl:message element."
 argument_list|)
 throw|;
 block|}
