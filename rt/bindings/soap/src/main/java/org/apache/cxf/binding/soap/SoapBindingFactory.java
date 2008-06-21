@@ -3180,7 +3180,9 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Problem with WSDL: soap:header element is referring to an undefined wsdl:message element."
+literal|"Problem with WSDL: soap:header element"
+operator|+
+literal|" is referring to an undefined wsdl:message element."
 argument_list|)
 throw|;
 block|}
