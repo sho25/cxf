@@ -382,7 +382,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class helps take a {@link org.apache.cxf.service.Service} and   * expose as a server side endpoint.  * If there is no Service, it can create one for you using a   * {@link ReflectionServiceFactoryBean}.  *<p>  * For most scenarios you'll want to just have the ServerFactoryBean handle everything  * for you. In such a case, usage might look like this:  *</p>  *<pre>  * ServerFactoryBean sf = new ServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://localhost:8080/MyService");  * sf.create();  *</pre>  *<p>  * You can also get more advanced and customize the service factory used:  *<pre>  * ReflectionServiceFactory serviceFactory = new ReflectionServiceFactory();  * serviceFactory.setServiceClass(MyService.class);  * ..  * \/\/ Customize service factory here...  * serviceFactory.setWrapped(false);  * ...  * ServerFactoryBean sf = new ServerFactoryBean();  * sf.setServiceFactory(serviceFactory);  * sf.setAddress("http://localhost:8080/MyService");  * sf.create();  *</pre>  */
+comment|/**  * This class helps take a {@link org.apache.cxf.service.Service} and  * expose as a server side endpoint.  * If there is no Service, it can create one for you using a  * {@link ReflectionServiceFactoryBean}.  *<p>  * For most scenarios you'll want to just have the ServerFactoryBean handle everything  * for you. In such a case, usage might look like this:  *</p>  *<pre>  * ServerFactoryBean sf = new ServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://localhost:8080/MyService");  * sf.create();  *</pre>  *<p>  * You can also get more advanced and customize the service factory used:  *<pre>  * ReflectionServiceFactory serviceFactory = new ReflectionServiceFactory();  * serviceFactory.setServiceClass(MyService.class);  * ..  * \/\/ Customize service factory here...  * serviceFactory.setWrapped(false);  * ...  * ServerFactoryBean sf = new ServerFactoryBean();  * sf.setServiceFactory(serviceFactory);  * sf.setAddress("http://localhost:8080/MyService");  * sf.create();  *</pre>  */
 end_comment
 
 begin_class
@@ -1155,7 +1155,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|/**      * Set the backing service bean. If this is set a BeanInvoker is created for      * the provided bean.      *       * @return      */
+comment|/**      * Set the backing service bean. If this is set a BeanInvoker is created for      * the provided bean.      *      * @return      */
 specifier|public
 name|void
 name|setServiceBean
@@ -1224,6 +1224,30 @@ name|invoker
 operator|=
 name|invoker
 expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setWsdlLocation
+parameter_list|(
+name|String
+name|location
+parameter_list|)
+block|{
+name|setWsdlURL
+argument_list|(
+name|location
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|String
+name|getWsdlLocation
+parameter_list|()
+block|{
+return|return
+name|getWsdlURL
+argument_list|()
+return|;
 block|}
 block|}
 end_class

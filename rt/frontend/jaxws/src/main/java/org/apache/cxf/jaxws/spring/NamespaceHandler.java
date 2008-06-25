@@ -221,7 +221,7 @@ name|parser
 operator|.
 name|setBeanClass
 argument_list|(
-name|JaxWsServerFactoryBean
+name|SpringServerFactoryBean
 operator|.
 name|class
 argument_list|)
