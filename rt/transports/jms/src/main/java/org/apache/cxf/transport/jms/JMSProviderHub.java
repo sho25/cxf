@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class acts as the hub of JMS provider usage, creating shared  * JMS Connections and providing access to a pool of JMS Sessions.  *<p>  * A new JMS connection is created for each each port based  *<jms:address> - however its likely that in practice the same JMS  * provider will be specified for each port, and hence the connection  * resources could be shared accross ports.  *<p>  * For the moment this class is realized as just a container for  * static methods, but the intention is to support in future sharing  * of JMS resources accross compatible ports.  *  * @author Eoghan Glynn  */
+comment|/**  * This class acts as the hub of JMS provider usage, creating shared  * JMS Connections and providing access to a pool of JMS Sessions.  *<p>  * A new JMS connection is created for each each port based  *<jms:address> - however its likely that in practice the same JMS  * provider will be specified for each port, and hence the connection  * resources could be shared accross ports.  *<p>  * For the moment this class is realized as just a container for  * static methods, but the intention is to support in future sharing  * of JMS resources accross compatible ports.  *  */
 end_comment
 
 begin_class

@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Encapsulates pooled session, unidentified producer, destination&  * associated consumer (certain elements may be null depending on the  * context).  *<p>  * Currently only the point-to-point domain is supported,  * though the intention is to genericize this to the pub-sub domain  * also.  *  * @author Eoghan Glynn  */
+comment|/**  * Encapsulates pooled session, unidentified producer, destination&  * associated consumer (certain elements may be null depending on the  * context).  *<p>  * Currently only the point-to-point domain is supported,  * though the intention is to genericize this to the pub-sub domain  * also.  *  */
 end_comment
 
 begin_class

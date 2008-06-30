@@ -244,7 +244,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class encapsulates the creation and pooling logic for JMS Sessions.  * The usage patterns for sessions, producers& consumers are as follows ...  *<p>  * client-side: an invoking thread requires relatively short-term exclusive  * use of a session, an unidentified producer to send the request message,  * and in the point-to-point domain a consumer for the temporary ReplyTo  * destination to synchronously receive the reply if the operation is twoway  * (in the pub-sub domain only oneway operations are supported, so a there  * is never a requirement for a reply destination)  *<p>  * server-side receive: each port based on<jms:address> requires relatively  * long-term exclusive use of a session, a consumer with a MessageListener for  * the JMS destination specified for the port, and an unidentified producer  * to send the request message  *<p>  * server-side send: each dispatch of a twoway request requires relatively  * short-term exclusive use of a session and an indentified producer (but  * not a consumer) - note that the session used for the recieve side cannot  * be re-used for the send, as MessageListener usage precludes any synchronous  * sends or receives on that session  *<p>  * So on the client-side, pooling of sessions is bound up with pooling  * of temporary reply destinations, whereas on the server receive side  * the benefit of pooling is marginal as the session is required from  * the point at which the port was activated until the Bus is shutdown  * The server send side resembles the client side,  * except that a consumer for the temporary destination is never required.  * Hence different pooling strategies make sense ...  *<p>  * client-side: a SoftReference-based cache of send/receive sessions is  * maintained containing an aggregate of a session, indentified producer,  * temporary reply destination& consumer for same  *<p>  * server-side receive: as sessions cannot be usefully recycled, they are  * simply created on demand and closed when no longer required  *<p>  * server-side send: a SoftReference-based cache of send-only sessions is  * maintained containing an aggregate of a session and an indentified producer  *<p>  * In a pure client or pure server, only a single cache is ever  * populated.  Where client and server logic is co-located, a client  * session retrieval for a twoway invocation checks the reply-capable  * cache first and then the send-only cache - if a session is  * available in the later then its used after a tempory destination is  * created before being recycled back into the reply-capable cache. A  * server send side retrieval or client retrieval for a oneway  * invocation checks the send-only cache first and then the  * reply-capable cache - if a session is available in the later then  * its used and the tempory destination is ignored. So in the  * co-located case, sessions migrate from the send-only cache to the  * reply-capable cache as necessary.  *<p>  *  * @author Eoghan Glynn  */
+comment|/**  * This class encapsulates the creation and pooling logic for JMS Sessions.  * The usage patterns for sessions, producers& consumers are as follows ...  *<p>  * client-side: an invoking thread requires relatively short-term exclusive  * use of a session, an unidentified producer to send the request message,  * and in the point-to-point domain a consumer for the temporary ReplyTo  * destination to synchronously receive the reply if the operation is twoway  * (in the pub-sub domain only oneway operations are supported, so a there  * is never a requirement for a reply destination)  *<p>  * server-side receive: each port based on<jms:address> requires relatively  * long-term exclusive use of a session, a consumer with a MessageListener for  * the JMS destination specified for the port, and an unidentified producer  * to send the request message  *<p>  * server-side send: each dispatch of a twoway request requires relatively  * short-term exclusive use of a session and an indentified producer (but  * not a consumer) - note that the session used for the recieve side cannot  * be re-used for the send, as MessageListener usage precludes any synchronous  * sends or receives on that session  *<p>  * So on the client-side, pooling of sessions is bound up with pooling  * of temporary reply destinations, whereas on the server receive side  * the benefit of pooling is marginal as the session is required from  * the point at which the port was activated until the Bus is shutdown  * The server send side resembles the client side,  * except that a consumer for the temporary destination is never required.  * Hence different pooling strategies make sense ...  *<p>  * client-side: a SoftReference-based cache of send/receive sessions is  * maintained containing an aggregate of a session, indentified producer,  * temporary reply destination& consumer for same  *<p>  * server-side receive: as sessions cannot be usefully recycled, they are  * simply created on demand and closed when no longer required  *<p>  * server-side send: a SoftReference-based cache of send-only sessions is  * maintained containing an aggregate of a session and an indentified producer  *<p>  * In a pure client or pure server, only a single cache is ever  * populated.  Where client and server logic is co-located, a client  * session retrieval for a twoway invocation checks the reply-capable  * cache first and then the send-only cache - if a session is  * available in the later then its used after a tempory destination is  * created before being recycled back into the reply-capable cache. A  * server send side retrieval or client retrieval for a oneway  * invocation checks the send-only cache first and then the  * reply-capable cache - if a session is available in the later then  * its used and the tempory destination is ignored. So in the  * co-located case, sessions migrate from the send-only cache to the  * reply-capable cache as necessary.  *<p>  *  */
 end_comment
 
 begin_class
@@ -754,6 +754,33 @@ operator|(
 name|Queue
 operator|)
 name|theReplyDestination
+expr_stmt|;
+name|selector
+operator|=
+literal|"JMSCorrelationID = '"
+operator|+
+name|generateUniqueSelector
+argument_list|(
+name|ret
+argument_list|)
+operator|+
+literal|"'"
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|destination
+operator|==
+literal|null
+condition|)
+block|{
+comment|//neither replyDestination not replyDest are present.
+name|destination
+operator|=
+name|session
+operator|.
+name|createTemporaryQueue
+argument_list|()
 expr_stmt|;
 name|selector
 operator|=

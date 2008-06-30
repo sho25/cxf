@@ -647,6 +647,13 @@ name|idx
 operator|++
 control|)
 block|{
+name|greeter
+operator|.
+name|greetMeOneWay
+argument_list|(
+literal|"test String"
+argument_list|)
+expr_stmt|;
 name|String
 name|greeting
 init|=

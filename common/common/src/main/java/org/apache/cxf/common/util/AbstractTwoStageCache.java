@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class pools objects, for efficiency accross a lightweight  * fixed-size primary cache and a variable-size secondary cache - the  * latter uses soft references to allow the polled object be GCed if  * necessary.  *<p>  * To use the cache, a subclass is defined which provides an implementation  * of the abstract get() method - this may be conveniently achieved via  * an anonymous subclass. The cache is then populated by calling the  * populate_cache() method - the reason a two-stage process is used is  * to avoid problems with the inner class create() method accessing outer  * class data members from the inner class ctor (before its reference to  * the outer class is initialized).  *<p>  *  * @author Eoghan Glynn  */
+comment|/**  * This class pools objects, for efficiency accross a lightweight  * fixed-size primary cache and a variable-size secondary cache - the  * latter uses soft references to allow the polled object be GCed if  * necessary.  *<p>  * To use the cache, a subclass is defined which provides an implementation  * of the abstract get() method - this may be conveniently achieved via  * an anonymous subclass. The cache is then populated by calling the  * populate_cache() method - the reason a two-stage process is used is  * to avoid problems with the inner class create() method accessing outer  * class data members from the inner class ctor (before its reference to  * the outer class is initialized).  *<p>  *  */
 end_comment
 
 begin_class
