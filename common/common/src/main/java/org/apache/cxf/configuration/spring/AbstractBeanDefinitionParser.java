@@ -1137,7 +1137,6 @@ literal|" property must have child elements!"
 argument_list|)
 throw|;
 block|}
-comment|// Seems odd that we have to do the registration, I wonder if there is a better way
 name|String
 name|id
 decl_stmt|;
