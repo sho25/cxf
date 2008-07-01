@@ -1758,6 +1758,8 @@ decl_stmt|;
 name|assertTrue
 argument_list|(
 name|xml
+argument_list|,
+name|xml
 operator|.
 name|contains
 argument_list|(
