@@ -241,9 +241,13 @@ begin_import
 import|import
 name|org
 operator|.
-name|junit
+name|codehaus
 operator|.
-name|BeforeClass
+name|jettison
+operator|.
+name|json
+operator|.
+name|JSONObject
 import|;
 end_import
 
@@ -253,7 +257,7 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
+name|BeforeClass
 import|;
 end_import
 
@@ -307,15 +311,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"this test fails on different JDK's due to the"
-operator|+
-literal|"maps abdera uses not being ordered so the"
-operator|+
-literal|"strict string compares fail"
-argument_list|)
 specifier|public
 name|void
 name|testGetBooks
@@ -340,7 +335,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|endpointAddress
+literal|"/bookstore/books/feed"
 argument_list|,
 name|feed
 operator|.
@@ -361,7 +356,7 @@ name|getTitle
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|getAndCompareAsStrings
+name|getAndCompareJson
 argument_list|(
 literal|"http://localhost:9080/bookstore/books/feed"
 argument_list|,
@@ -370,7 +365,6 @@ argument_list|,
 literal|"application/json"
 argument_list|)
 expr_stmt|;
-comment|// add new book
 name|Entry
 name|e
 init|=
@@ -503,7 +497,6 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
-comment|// Release current connection to the connection pool once you are done
 name|post
 operator|.
 name|releaseConnection
@@ -515,6 +508,8 @@ name|entry
 init|=
 name|getEntry
 argument_list|(
+literal|"http://localhost:9080"
+operator|+
 name|location
 argument_list|,
 literal|null
@@ -543,7 +538,6 @@ name|getTitle
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// get existing book
 name|endpointAddress
 operator|=
 literal|"http://localhost:9080/bookstore/books/subresources/123"
@@ -567,8 +561,7 @@ name|getTitle
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// now json
-name|getAndCompareAsStrings
+name|getAndCompareJson
 argument_list|(
 literal|"http://localhost:9080/bookstore/books/entries/123"
 argument_list|,
@@ -577,10 +570,9 @@ argument_list|,
 literal|"application/json"
 argument_list|)
 expr_stmt|;
-comment|// do the same using a system query
-name|getAndCompareAsStrings
+name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/entries/123?_contentType="
+literal|"http://localhost:9080/bookstore/books/entries/123?_type="
 operator|+
 literal|"application/json"
 argument_list|,
@@ -589,12 +581,21 @@ argument_list|,
 literal|"*/*"
 argument_list|)
 expr_stmt|;
-comment|//      do the same using a system query shortcut
-name|getAndCompareAsStrings
+name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/entries/123?_contentType="
+literal|"http://localhost:9080/bookstore/books/entries/123?_type="
 operator|+
 literal|"json"
+argument_list|,
+literal|"resources/expected_atom_book_json.txt"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
+comment|// do the same using extension mappings
+name|getAndCompareJson
+argument_list|(
+literal|"http://localhost:9080/bookstore/books/entries/123.json"
 argument_list|,
 literal|"resources/expected_atom_book_json.txt"
 argument_list|,
@@ -604,7 +605,7 @@ expr_stmt|;
 block|}
 specifier|private
 name|void
-name|getAndCompareAsStrings
+name|getAndCompareJson
 parameter_list|(
 name|String
 name|address
@@ -627,6 +628,15 @@ argument_list|(
 name|address
 argument_list|)
 decl_stmt|;
+name|get
+operator|.
+name|setRequestHeader
+argument_list|(
+literal|"Content-Type"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
 name|get
 operator|.
 name|setRequestHeader
@@ -677,13 +687,37 @@ name|resourcePath
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|JSONObject
+name|obj1
+init|=
+operator|new
+name|JSONObject
+argument_list|(
+name|jsonContent
+argument_list|)
+decl_stmt|;
+name|JSONObject
+name|obj2
+init|=
+operator|new
+name|JSONObject
+argument_list|(
+name|expected
+argument_list|)
+decl_stmt|;
 name|assertEquals
 argument_list|(
 literal|"Atom entry should've been formatted as json"
 argument_list|,
-name|expected
+name|obj1
+operator|.
+name|toString
+argument_list|()
 argument_list|,
-name|jsonContent
+name|obj2
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -868,6 +902,15 @@ argument_list|(
 name|endpointAddress
 argument_list|)
 decl_stmt|;
+name|get
+operator|.
+name|setRequestHeader
+argument_list|(
+literal|"Content-Type"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|acceptType
@@ -958,6 +1001,15 @@ argument_list|(
 name|endpointAddress
 argument_list|)
 decl_stmt|;
+name|get
+operator|.
+name|setRequestHeader
+argument_list|(
+literal|"Content-Type"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|acceptType

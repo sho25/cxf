@@ -297,7 +297,7 @@ name|fields
 init|=
 name|c
 operator|.
-name|getHttpContexts
+name|getContextFields
 argument_list|()
 decl_stmt|;
 name|assertEquals
@@ -328,7 +328,7 @@ name|fields
 operator|=
 name|c
 operator|.
-name|getHttpContexts
+name|getContextFields
 argument_list|()
 expr_stmt|;
 name|assertEquals
@@ -435,7 +435,7 @@ name|fields
 init|=
 name|c
 operator|.
-name|getResources
+name|getResourceFields
 argument_list|()
 decl_stmt|;
 name|assertEquals
@@ -466,7 +466,7 @@ name|fields
 operator|=
 name|c
 operator|.
-name|getResources
+name|getResourceFields
 argument_list|()
 expr_stmt|;
 name|Set

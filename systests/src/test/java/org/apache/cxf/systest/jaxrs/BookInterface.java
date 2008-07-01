@@ -49,23 +49,19 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|PathParam
 import|;
 end_import
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|apache
+name|ws
 operator|.
-name|cxf
+name|rs
 operator|.
-name|customer
-operator|.
-name|book
-operator|.
-name|BookNotFoundFault
+name|ProduceMime
 import|;
 end_import
 
@@ -89,6 +85,11 @@ argument_list|)
 name|Book
 name|getThatBook
 parameter_list|(
+annotation|@
+name|PathParam
+argument_list|(
+literal|"bookId"
+argument_list|)
 name|Long
 name|id
 parameter_list|)

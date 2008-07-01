@@ -158,6 +158,10 @@ literal|null
 argument_list|,
 literal|null
 argument_list|,
+literal|null
+argument_list|,
+literal|null
+argument_list|,
 name|is
 argument_list|)
 decl_stmt|;
@@ -225,6 +229,10 @@ argument_list|(
 name|Object
 operator|.
 name|class
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -334,6 +342,10 @@ argument_list|(
 name|MultivaluedMap
 operator|.
 name|class
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;

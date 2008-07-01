@@ -41,6 +41,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|impl
+operator|.
 name|MetadataMap
 import|;
 end_import

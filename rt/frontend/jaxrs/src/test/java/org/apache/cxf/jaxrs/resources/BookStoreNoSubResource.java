@@ -124,7 +124,7 @@ argument_list|)
 annotation|@
 name|Path
 argument_list|(
-literal|"/bookstore/"
+literal|"/bookstore/{id}"
 argument_list|)
 specifier|public
 class|class
