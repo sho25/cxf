@@ -520,6 +520,28 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
+comment|//make sure the principal was set
+name|assertNotNull
+argument_list|(
+name|GreeterImpl
+operator|.
+name|getUser
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"alice"
+argument_list|,
+name|GreeterImpl
+operator|.
+name|getUser
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|//
 comment|// Sending no security headers should result in a Fault
 comment|//
