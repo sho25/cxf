@@ -1080,11 +1080,6 @@ name|paramClass
 return|;
 block|}
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
-annotation|@
 name|Override
 specifier|public
 name|Type
@@ -1287,11 +1282,6 @@ return|return
 name|type
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 annotation|@
 name|Override
 specifier|public

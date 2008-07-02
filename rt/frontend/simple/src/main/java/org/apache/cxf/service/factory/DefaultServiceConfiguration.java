@@ -589,7 +589,7 @@ comment|// try to grab the implementation class so we can read the debug symbols
 if|if
 condition|(
 name|impl
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{

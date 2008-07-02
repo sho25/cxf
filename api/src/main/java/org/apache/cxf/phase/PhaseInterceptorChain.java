@@ -1227,11 +1227,6 @@ name|COMPLETE
 return|;
 block|}
 comment|/**      * Intercept a message, invoking each phase's handlers in turn,      * starting after the specified interceptor.      *       * @param message the message      * @param startingAfterInterceptorID the id of the interceptor       * @throws Exception      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|synchronized
 name|boolean
@@ -1296,11 +1291,6 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Intercept a message, invoking each phase's handlers in turn,      * starting at the specified interceptor.      *       * @param message the message      * @param startingAtInterceptorID the id of the interceptor       * @throws Exception      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|synchronized
 name|boolean

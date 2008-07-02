@@ -453,14 +453,7 @@ throw|throw
 operator|new
 name|DatabindingException
 argument_list|(
-literal|"Couldn't find type for "
-operator|+
-name|type
-operator|.
-name|getTypeClass
-argument_list|()
-operator|+
-literal|"."
+literal|"Couldn't find component type for Collection."
 argument_list|)
 throw|;
 block|}

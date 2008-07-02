@@ -819,7 +819,7 @@ condition|(
 name|parts
 operator|==
 literal|null
-operator|&&
+operator|||
 name|parts
 operator|.
 name|size

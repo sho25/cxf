@@ -463,11 +463,6 @@ name|JAXRS_BINDING_ID
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|Server
 name|create

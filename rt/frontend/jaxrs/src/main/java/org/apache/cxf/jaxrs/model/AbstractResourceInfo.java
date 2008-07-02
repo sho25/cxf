@@ -858,11 +858,6 @@ return|return
 name|ret
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|ThreadLocalProxy
 name|getContextFieldProxy
@@ -886,11 +881,6 @@ name|f
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|ThreadLocalProxy
 name|getResourceFieldProxy
@@ -914,11 +904,6 @@ name|f
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|ThreadLocalProxy
 name|getContextSetterProxy

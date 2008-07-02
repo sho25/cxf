@@ -462,11 +462,6 @@ specifier|private
 name|DataBindingProfile
 name|dataBinding
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|ParameterProcessor
 parameter_list|(

@@ -2386,7 +2386,12 @@ name|getXmlSchemaType
 argument_list|(
 name|serviceInfo
 argument_list|,
-name|el
+operator|(
+operator|(
+name|XmlSchemaElement
+operator|)
+name|schemaType
+operator|)
 operator|.
 name|getRefName
 argument_list|()

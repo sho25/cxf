@@ -388,12 +388,6 @@ parameter_list|()
 throws|throws
 name|WSDLException
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
-comment|//Document wsdl = getWSDLDocument("MapTestService");
 name|Definition
 name|wsdlDef
 init|=

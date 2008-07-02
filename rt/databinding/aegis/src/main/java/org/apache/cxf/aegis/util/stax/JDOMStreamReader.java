@@ -788,11 +788,6 @@ return|;
 block|}
 annotation|@
 name|Override
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|protected
 name|void
 name|endElement
@@ -810,14 +805,6 @@ condition|)
 block|{
 name|prefix2decNs
 operator|=
-operator|(
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Namespace
-argument_list|>
-operator|)
 name|namespaceStack
 operator|.
 name|pop

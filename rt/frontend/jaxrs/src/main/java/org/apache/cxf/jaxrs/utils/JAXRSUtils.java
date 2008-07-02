@@ -3278,11 +3278,6 @@ else|:
 name|defaultValue
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|Object
@@ -3771,11 +3766,6 @@ return|;
 block|}
 block|}
 comment|//TODO : multiple query string parsing, do it once
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 specifier|static
 name|Object
