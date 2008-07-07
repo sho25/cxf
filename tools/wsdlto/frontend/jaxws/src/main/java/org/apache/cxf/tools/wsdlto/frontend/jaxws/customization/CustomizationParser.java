@@ -2954,6 +2954,11 @@ argument_list|,
 name|LOG
 argument_list|,
 name|bindingFile
+argument_list|,
+name|reader
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 decl_stmt|;
 throw|throw

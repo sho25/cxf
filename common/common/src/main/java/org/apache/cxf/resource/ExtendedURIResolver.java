@@ -124,10 +124,6 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|lastestImportUri
-operator|=
-name|curUri
-expr_stmt|;
 name|currentResolver
 operator|.
 name|resolve
@@ -256,6 +252,15 @@ name|e
 parameter_list|)
 block|{
 comment|// move on...
+block|}
+finally|finally
+block|{
+name|lastestImportUri
+operator|=
+name|curUri
+expr_stmt|;
+comment|// the uri may have been updated since we were called
+comment|// so only store it away when everything else is done
 block|}
 return|return
 literal|null
