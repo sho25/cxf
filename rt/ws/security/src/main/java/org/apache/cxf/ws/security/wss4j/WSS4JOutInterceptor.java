@@ -383,6 +383,10 @@ operator|new
 name|SAAJOutInterceptor
 argument_list|()
 decl_stmt|;
+specifier|private
+name|boolean
+name|mtomEnabled
+decl_stmt|;
 specifier|public
 name|WSS4JOutInterceptor
 parameter_list|()
@@ -438,6 +442,31 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+name|boolean
+name|isAllowMTOM
+parameter_list|()
+block|{
+return|return
+name|mtomEnabled
+return|;
+block|}
+comment|/**      * Enable or disable mtom with WS-Security.   By default MTOM is disabled as      * attachments would not get encrypted or be part of the signature.      * @param mtomEnabled      */
+specifier|public
+name|void
+name|setAllowMTOM
+parameter_list|(
+name|boolean
+name|allowMTOM
+parameter_list|)
+block|{
+name|this
+operator|.
+name|mtomEnabled
+operator|=
+name|allowMTOM
+expr_stmt|;
+block|}
+specifier|public
 name|void
 name|handleMessage
 parameter_list|(
@@ -449,6 +478,12 @@ name|Fault
 block|{
 comment|//must turn off mtom when using WS-Sec so binary is inlined so it can
 comment|//be properly signed/encrypted/etc...
+if|if
+condition|(
+operator|!
+name|mtomEnabled
+condition|)
+block|{
 name|mc
 operator|.
 name|put
@@ -468,6 +503,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|mc
