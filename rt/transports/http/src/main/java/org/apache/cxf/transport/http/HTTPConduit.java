@@ -227,16 +227,6 @@ begin_import
 import|import
 name|javax
 operator|.
-name|annotation
-operator|.
-name|Resource
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
 name|xml
 operator|.
 name|namespace
@@ -4238,8 +4228,6 @@ name|authorizationPolicy
 return|;
 block|}
 comment|/**      * This method is used to set the Authorization Policy for this conduit.      * Using this method will override any Authorization Policy set in       * configuration.      */
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setAuthorization
@@ -4285,8 +4273,6 @@ name|clientSidePolicy
 return|;
 block|}
 comment|/**      * This method sets the Client Side Policy for this HTTPConduit. Using this      * method will override any HTTPClientPolicy set in configuration.      */
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setClient
@@ -4313,8 +4299,6 @@ name|proxyAuthorizationPolicy
 return|;
 block|}
 comment|/**      * This method sets the Proxy Authorization Policy for a specified proxy.       * Using this method overrides any Authorization Policy for the proxy       * that is set in the configuration.      */
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setProxyAuthorization
@@ -4341,8 +4325,6 @@ name|tlsClientParameters
 return|;
 block|}
 comment|/**      * This method sets the TLS Client Parameters for this HTTPConduit.      * Using this method overrides any TLS Client Parameters that is configured      * for this HTTPConduit.      */
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setTlsClientParameters
@@ -4474,8 +4456,6 @@ name|trustDecider
 return|;
 block|}
 comment|/**      * This method sets the Trust Decider for this HTTP Conduit.      * Using this method overrides any trust decider configured for this       * HTTPConduit.      */
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setTrustDecider
@@ -4504,8 +4484,6 @@ name|basicAuthSupplier
 return|;
 block|}
 comment|/**      * This method sets the Trust Decider for this HTTP Conduit.      * Using this method overrides any trust decider configured for this       * HTTPConduit.      */
-annotation|@
-name|Resource
 specifier|public
 name|void
 name|setBasicAuthSupplier

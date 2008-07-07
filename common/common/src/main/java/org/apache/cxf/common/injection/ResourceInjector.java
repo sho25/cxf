@@ -1015,15 +1015,6 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|resource
-operator|=
-name|resolveResource
-argument_list|(
-name|resourceName
-argument_list|,
-name|clz
-argument_list|)
-expr_stmt|;
 name|LOG
 operator|.
 name|log
