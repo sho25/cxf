@@ -748,9 +748,9 @@ name|URITemplate
 argument_list|(
 literal|"/bar"
 argument_list|,
-name|URITemplate
-operator|.
-name|UNLIMITED_REGEX_SUFFIX
+literal|false
+argument_list|,
+literal|false
 argument_list|)
 operator|.
 name|match
