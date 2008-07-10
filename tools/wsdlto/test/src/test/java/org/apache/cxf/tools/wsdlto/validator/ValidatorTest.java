@@ -314,7 +314,9 @@ name|expected
 init|=
 literal|"Binding(Greeter_XMLBinding):BindingOperation"
 operator|+
-literal|"({http://apache.org/xml_http_bare}sayHi)-input: missing xml format body element"
+literal|"({http://apache.org/xml_http_bare}sayHi)-input: empty value of rootNode attribute, "
+operator|+
+literal|"the value should be {http://apache.org/xml_http_bare}sayHi"
 decl_stmt|;
 name|assertEquals
 argument_list|(
