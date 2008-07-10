@@ -77,7 +77,7 @@ name|apache
 operator|.
 name|hello_world_soap_http
 operator|.
-name|PingMeFault
+name|JSDemoService
 import|;
 end_import
 
@@ -89,7 +89,7 @@ name|apache
 operator|.
 name|hello_world_soap_http
 operator|.
-name|JSDemoService
+name|PingMeFault
 import|;
 end_import
 
