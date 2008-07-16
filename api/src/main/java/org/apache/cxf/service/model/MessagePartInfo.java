@@ -129,6 +129,19 @@ operator|=
 name|n
 expr_stmt|;
 block|}
+specifier|public
+name|void
+name|setMessageContainer
+parameter_list|(
+name|AbstractMessageContainer
+name|info
+parameter_list|)
+block|{
+name|mInfo
+operator|=
+name|info
+expr_stmt|;
+block|}
 comment|/**      * @return Returns the name.      */
 specifier|public
 name|QName
