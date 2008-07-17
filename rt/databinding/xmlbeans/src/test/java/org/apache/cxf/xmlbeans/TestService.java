@@ -55,6 +55,18 @@ name|Assert
 import|;
 end_import
 
+begin_import
+import|import
+name|com
+operator|.
+name|sample
+operator|.
+name|procure
+operator|.
+name|PurchaseOrderDocument
+import|;
+end_import
+
 begin_class
 annotation|@
 name|WebService
@@ -219,6 +231,16 @@ return|return
 name|response
 return|;
 block|}
+annotation|@
+name|WebMethod
+specifier|public
+name|void
+name|submitPO
+parameter_list|(
+name|PurchaseOrderDocument
+name|doc
+parameter_list|)
+block|{              }
 block|}
 end_class
 
