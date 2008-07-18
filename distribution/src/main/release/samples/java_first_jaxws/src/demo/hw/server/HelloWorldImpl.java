@@ -90,6 +90,15 @@ name|String
 name|text
 parameter_list|)
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"sayHi called"
+argument_list|)
+expr_stmt|;
 return|return
 literal|"Hello "
 operator|+
@@ -104,6 +113,15 @@ name|User
 name|user
 parameter_list|)
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"sayHiToUser called"
+argument_list|)
+expr_stmt|;
 name|users
 operator|.
 name|put
@@ -137,6 +155,15 @@ argument_list|>
 name|getUsers
 parameter_list|()
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"getUsers called"
+argument_list|)
+expr_stmt|;
 return|return
 name|users
 return|;

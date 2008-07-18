@@ -28,6 +28,15 @@ name|String
 name|text
 parameter_list|)
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"sayHi called"
+argument_list|)
+expr_stmt|;
 return|return
 literal|"Hello "
 operator|+
