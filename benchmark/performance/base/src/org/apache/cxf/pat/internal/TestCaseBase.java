@@ -816,6 +816,24 @@ condition|)
 block|{
 return|return;
 block|}
+specifier|final
+name|int
+name|threadCount
+init|=
+literal|4
+decl_stmt|;
+specifier|final
+name|long
+name|timeLimit
+init|=
+literal|30
+decl_stmt|;
+specifier|final
+name|int
+name|countLimit
+init|=
+literal|1200
+decl_stmt|;
 name|System
 operator|.
 name|out
@@ -826,19 +844,41 @@ literal|"TestCase "
 operator|+
 name|name
 operator|+
-literal|" is warming up the jit. (20 sec/1200 iterations)"
+literal|" is warming up the jit. ("
+operator|+
+name|timeLimit
+operator|+
+literal|" sec/"
+operator|+
+name|countLimit
+operator|+
+literal|" iterations, "
+operator|+
+name|threadCount
+operator|+
+literal|" threads)"
 argument_list|)
 expr_stmt|;
 specifier|final
 name|long
-name|endTime
+name|startTime
 init|=
 name|System
 operator|.
 name|currentTimeMillis
 argument_list|()
+decl_stmt|;
+specifier|final
+name|long
+name|endTime
+init|=
+name|startTime
 operator|+
-literal|20000
+operator|(
+name|timeLimit
+operator|*
+literal|1000l
+operator|)
 decl_stmt|;
 specifier|final
 name|T
@@ -856,7 +896,11 @@ literal|0
 init|;
 name|x
 operator|<
-literal|12
+operator|(
+name|threadCount
+operator|-
+literal|1
+operator|)
 condition|;
 name|x
 operator|++
@@ -882,7 +926,7 @@ while|while
 condition|(
 name|count
 operator|<
-literal|1200
+name|countLimit
 operator|||
 name|System
 operator|.
@@ -901,6 +945,8 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
+comment|//System.out.println(count);
+comment|//System.out.println("" + (System.currentTimeMillis() - startTime));
 block|}
 catch|catch
 parameter_list|(
@@ -933,7 +979,7 @@ while|while
 condition|(
 name|count
 operator|<
-literal|1200
+name|countLimit
 operator|||
 name|System
 operator|.
@@ -952,11 +998,16 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
+comment|//System.out.println(count);
+comment|//System.out.println("" + (System.currentTimeMillis() - startTime));
+operator|++
+name|initDone
+expr_stmt|;
 while|while
 condition|(
 name|initDone
 operator|!=
-literal|12
+name|threadCount
 condition|)
 block|{
 name|Thread
