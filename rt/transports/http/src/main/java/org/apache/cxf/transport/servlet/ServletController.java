@@ -1147,14 +1147,7 @@ name|response
 operator|.
 name|setContentType
 argument_list|(
-literal|"text/html"
-argument_list|)
-expr_stmt|;
-name|response
-operator|.
-name|setCharacterEncoding
-argument_list|(
-literal|"UTF-8"
+literal|"text/html; charset=UTF-8"
 argument_list|)
 expr_stmt|;
 name|response
