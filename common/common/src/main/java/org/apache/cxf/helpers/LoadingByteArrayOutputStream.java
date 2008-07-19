@@ -113,6 +113,16 @@ return|return
 name|buf
 return|;
 block|}
+specifier|public
+name|byte
+index|[]
+name|getRawBytes
+parameter_list|()
+block|{
+return|return
+name|buf
+return|;
+block|}
 block|}
 end_class
 

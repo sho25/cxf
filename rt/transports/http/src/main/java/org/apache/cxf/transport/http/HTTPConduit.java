@@ -377,9 +377,23 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|helpers
+operator|.
+name|LoadingByteArrayOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|io
 operator|.
-name|AbstractWrappedOutputStream
+name|AbstractThresholdOutputStream
 import|;
 end_import
 
@@ -1660,6 +1674,11 @@ name|isChunking
 init|=
 literal|false
 decl_stmt|;
+name|int
+name|chunkThreshold
+init|=
+literal|0
+decl_stmt|;
 comment|// We must cache the request if we have basic auth supplier
 comment|// without preemptive basic auth.
 if|if
@@ -1712,9 +1731,6 @@ name|isAutoRedirect
 argument_list|()
 condition|)
 block|{
-comment|// If the AutoRedirect property is set then we cannot
-comment|// use chunked streaming mode. We ignore the "AllowChunking"
-comment|// property if AutoRedirect is turned on.
 name|needToCacheRequest
 operator|=
 literal|true
@@ -1731,8 +1747,6 @@ literal|"AutoRedirect is turned on."
 argument_list|)
 expr_stmt|;
 block|}
-else|else
-block|{
 if|if
 condition|(
 operator|!
@@ -1751,14 +1765,34 @@ argument_list|()
 operator|.
 name|isAllowChunking
 argument_list|()
-operator|&&
-operator|!
-name|needToCacheRequest
 condition|)
 block|{
 comment|//TODO: The chunking mode be configured or at least some
 comment|// documented client constant.
 comment|//use -1 and allow the URL connection to pick a default value
+name|isChunking
+operator|=
+literal|true
+expr_stmt|;
+name|chunkThreshold
+operator|=
+name|getClient
+argument_list|()
+operator|.
+name|getChunkingThreshold
+argument_list|()
+expr_stmt|;
+if|if
+condition|(
+name|chunkThreshold
+operator|<=
+literal|0
+condition|)
+block|{
+name|chunkThreshold
+operator|=
+literal|0
+expr_stmt|;
 name|connection
 operator|.
 name|setChunkedStreamingMode
@@ -1766,10 +1800,6 @@ argument_list|(
 operator|-
 literal|1
 argument_list|)
-expr_stmt|;
-name|isChunking
-operator|=
-literal|true
 expr_stmt|;
 block|}
 block|}
@@ -1877,6 +1907,8 @@ argument_list|,
 name|needToCacheRequest
 argument_list|,
 name|isChunking
+argument_list|,
+name|chunkThreshold
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4702,9 +4734,22 @@ literal|"'"
 argument_list|)
 expr_stmt|;
 block|}
-return|return
-name|connection
-return|;
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"Redirect loop detected on Conduit \""
+operator|+
+name|getConduitName
+argument_list|()
+operator|+
+literal|"\" on '"
+operator|+
+name|newURL
+operator|+
+literal|"'"
+argument_list|)
+throw|;
 block|}
 comment|// We are going to redirect.
 comment|// Remove any Server Authentication Information for the previous
@@ -5026,9 +5071,24 @@ literal|"\""
 argument_list|)
 expr_stmt|;
 block|}
-return|return
-name|connection
-return|;
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"Authorization loop detected on Conduit \""
+operator|+
+name|getConduitName
+argument_list|()
+operator|+
+literal|"\" on URL \""
+operator|+
+literal|"\" with realm \""
+operator|+
+name|realm
+operator|+
+literal|"\""
+argument_list|)
+throw|;
 block|}
 name|HttpBasicAuthSupplier
 operator|.
@@ -5258,6 +5318,16 @@ argument_list|,
 name|connection
 argument_list|)
 expr_stmt|;
+name|connection
+operator|.
+name|setFixedLengthStreamingMode
+argument_list|(
+name|stream
+operator|.
+name|size
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// Need to set the headers before the trust decision
 comment|// because they are set before the connect().
 name|setURLRequestHeaders
@@ -5296,7 +5366,7 @@ return|return
 name|connection
 return|;
 block|}
-comment|// Trust is okay, write the cached request.
+comment|// Trust is okay, write the cached request
 name|OutputStream
 name|out
 init|=
@@ -5640,7 +5710,7 @@ specifier|protected
 class|class
 name|WrappedOutputStream
 extends|extends
-name|AbstractWrappedOutputStream
+name|AbstractThresholdOutputStream
 block|{
 comment|/**          * This field contains the currently active connection.          */
 specifier|protected
@@ -5681,10 +5751,15 @@ name|possibleRetransmit
 parameter_list|,
 name|boolean
 name|isChunking
+parameter_list|,
+name|int
+name|chunkThreshold
 parameter_list|)
 block|{
 name|super
-argument_list|()
+argument_list|(
+name|chunkThreshold
+argument_list|)
 expr_stmt|;
 name|this
 operator|.
@@ -5704,6 +5779,52 @@ name|chunking
 operator|=
 name|isChunking
 expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|thresholdNotReached
+parameter_list|()
+block|{
+if|if
+condition|(
+name|chunking
+condition|)
+block|{
+name|connection
+operator|.
+name|setFixedLengthStreamingMode
+argument_list|(
+name|buffer
+operator|.
+name|size
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|thresholdReached
+parameter_list|()
+block|{
+if|if
+condition|(
+name|chunking
+condition|)
+block|{
+name|connection
+operator|.
+name|setChunkedStreamingMode
+argument_list|(
+operator|-
+literal|1
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 comment|/**          * Perform any actions required on stream flush (freeze headers,          * reset output stream ... etc.)          */
 annotation|@
@@ -5875,6 +5996,50 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|buffer
+operator|!=
+literal|null
+operator|&&
+name|buffer
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
+name|thresholdNotReached
+argument_list|()
+expr_stmt|;
+name|LoadingByteArrayOutputStream
+name|tmp
+init|=
+name|buffer
+decl_stmt|;
+name|buffer
+operator|=
+literal|null
+expr_stmt|;
+name|super
+operator|.
+name|write
+argument_list|(
+name|tmp
+operator|.
+name|getRawBytes
+argument_list|()
+argument_list|,
+literal|0
+argument_list|,
+name|tmp
+operator|.
+name|size
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 operator|!
