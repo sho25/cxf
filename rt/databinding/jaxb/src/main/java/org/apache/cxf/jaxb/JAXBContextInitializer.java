@@ -1313,6 +1313,27 @@ if|if
 condition|(
 name|cls
 operator|.
+name|getSuperclass
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//JAXB should do this, but it doesn't always.
+comment|//in particular, older versions of jaxb don't
+name|addClass
+argument_list|(
+name|cls
+operator|.
+name|getSuperclass
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|cls
+operator|.
 name|isInterface
 argument_list|()
 condition|)
