@@ -213,12 +213,15 @@ name|targetNamespace
 operator|=
 literal|"http://cxf.apache.org/systest/jaxws/DocLitWrappedCodeFirstService"
 argument_list|)
+comment|//@Features(features = { "org.apache.cxf.feature.FastInfosetFeature" })
 annotation|@
 name|Features
 argument_list|(
 name|features
 operator|=
 block|{
+literal|"org.apache.cxf.transport.http.gzip.GZIPFeature"
+block|,
 literal|"org.apache.cxf.feature.FastInfosetFeature"
 block|}
 argument_list|)

@@ -96,12 +96,16 @@ specifier|abstract
 name|void
 name|thresholdReached
 parameter_list|()
+throws|throws
+name|IOException
 function_decl|;
 specifier|public
 specifier|abstract
 name|void
 name|thresholdNotReached
 parameter_list|()
+throws|throws
+name|IOException
 function_decl|;
 annotation|@
 name|Override
