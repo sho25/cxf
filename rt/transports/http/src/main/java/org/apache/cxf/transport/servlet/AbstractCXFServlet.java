@@ -598,8 +598,6 @@ specifier|protected
 name|void
 name|replaceDestinationFactory
 parameter_list|()
-throws|throws
-name|ServletException
 block|{
 name|DestinationFactoryManager
 name|dfm
