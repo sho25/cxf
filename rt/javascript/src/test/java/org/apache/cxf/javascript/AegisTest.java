@@ -296,6 +296,11 @@ name|getAddress
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|implementor
+operator|.
+name|prepareToWaitForOneWay
+argument_list|()
+expr_stmt|;
 name|testUtilities
 operator|.
 name|rhinoCall
@@ -310,6 +315,11 @@ name|getAddress
 argument_list|()
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|implementor
+operator|.
+name|waitForOneWay
+argument_list|()
 expr_stmt|;
 name|assertEquals
 argument_list|(
@@ -404,6 +414,11 @@ name|getAddress
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|implementor
+operator|.
+name|prepareToWaitForOneWay
+argument_list|()
+expr_stmt|;
 name|testUtilities
 operator|.
 name|rhinoCall
@@ -418,6 +433,11 @@ name|getAddress
 argument_list|()
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|implementor
+operator|.
+name|waitForOneWay
+argument_list|()
 expr_stmt|;
 name|Collection
 argument_list|<

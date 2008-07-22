@@ -2272,6 +2272,13 @@ name|isOneWay
 argument_list|()
 condition|)
 block|{
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"this.jsutils.trace('oneway operation');"
+argument_list|)
+expr_stmt|;
 name|syncAsyncFlag
 operator|=
 literal|"false"
@@ -2279,6 +2286,13 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"this.jsutils.trace('synchronous = ' + this.synchronous);"
+argument_list|)
+expr_stmt|;
 name|syncAsyncFlag
 operator|=
 literal|"this.synchronous"
