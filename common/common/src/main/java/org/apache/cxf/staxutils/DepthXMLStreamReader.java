@@ -312,6 +312,26 @@ operator|.
 name|getElementText
 argument_list|()
 decl_stmt|;
+comment|//workaround bugs in some readers that aren't properly advancing to
+comment|//the END_ELEMNT (*cough*jettison*cough*)
+while|while
+condition|(
+name|reader
+operator|.
+name|getEventType
+argument_list|()
+operator|!=
+name|XMLStreamReader
+operator|.
+name|END_ELEMENT
+condition|)
+block|{
+name|reader
+operator|.
+name|next
+argument_list|()
+expr_stmt|;
+block|}
 name|depth
 operator|--
 expr_stmt|;
