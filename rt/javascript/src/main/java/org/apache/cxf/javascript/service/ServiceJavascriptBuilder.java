@@ -1120,22 +1120,6 @@ argument_list|(
 literal|"this.response = null;"
 argument_list|)
 expr_stmt|;
-comment|// the callback functions for a pending operation are stored in these.
-comment|// thus, only one pending operation at a time.
-name|utils
-operator|.
-name|appendLine
-argument_list|(
-literal|"this._onsuccess = null;"
-argument_list|)
-expr_stmt|;
-name|utils
-operator|.
-name|appendLine
-argument_list|(
-literal|"this._onerror = null;"
-argument_list|)
-expr_stmt|;
 name|generateGlobalElementDictionary
 argument_list|()
 expr_stmt|;
@@ -2183,14 +2167,14 @@ name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"this._onsuccess = successCallback;"
+literal|"this.client.user_onsuccess = successCallback;"
 argument_list|)
 expr_stmt|;
 name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"this._onerror = errorCallback;"
+literal|"this.client.user_onerror = errorCallback;"
 argument_list|)
 expr_stmt|;
 name|utils
@@ -2200,26 +2184,28 @@ argument_list|(
 literal|"var closureThis = this;"
 argument_list|)
 expr_stmt|;
+comment|// client will pass itself and the response XML.
 name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"this.client.onsuccess = function(that) { closureThis."
+literal|"this.client.onsuccess = function(client, responseXml) { closureThis."
 operator|+
 name|opFunctionPropertyName
 operator|+
-literal|"_onsuccess(that); };"
+literal|"_onsuccess(client, responseXml); };"
 argument_list|)
 expr_stmt|;
+comment|// client will pass itself.
 name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"this.client.onerror = function(that) { closureThis."
+literal|"this.client.onerror = function(client) { closureThis."
 operator|+
 name|opFunctionPropertyName
 operator|+
-literal|"_onerror(that); };"
+literal|"_onerror(client); };"
 argument_list|)
 expr_stmt|;
 block|}
@@ -2361,14 +2347,14 @@ literal|"function "
 operator|+
 name|errorFunctionGlobalName
 operator|+
-literal|"() {\n"
+literal|"(client) {\n"
 argument_list|)
 expr_stmt|;
 name|utils
 operator|.
 name|startIf
 argument_list|(
-literal|"this._onerror"
+literal|"client.user_onerror"
 argument_list|)
 expr_stmt|;
 comment|// Is this a good set of parameters for the error function?
@@ -2398,14 +2384,14 @@ name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|" httpStatus = this.client.req.status;"
+literal|" httpStatus = client.req.status;"
 argument_list|)
 expr_stmt|;
 name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|" httpStatusText = this.client.req.statusText;"
+literal|" httpStatusText = client.req.statusText;"
 argument_list|)
 expr_stmt|;
 name|utils
@@ -2440,7 +2426,7 @@ name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"this._onerror(httpStatus, httpStatusText);"
+literal|"client.user_onerror(httpStatus, httpStatusText);"
 argument_list|)
 expr_stmt|;
 name|utils
@@ -2503,7 +2489,7 @@ decl_stmt|;
 name|String
 name|arglist
 init|=
-literal|"()"
+literal|"(client)"
 decl_stmt|;
 if|if
 condition|(
@@ -2512,7 +2498,7 @@ condition|)
 block|{
 name|arglist
 operator|=
-literal|"(responseXml)"
+literal|"(client, responseXml)"
 expr_stmt|;
 block|}
 name|code
@@ -2530,22 +2516,9 @@ argument_list|)
 expr_stmt|;
 name|utils
 operator|.
-name|appendLine
-argument_list|(
-literal|"this.jsutils.trace('"
-operator|+
-name|successFunctionGlobalName
-operator|+
-literal|" _onsuccess: ' "
-operator|+
-literal|" + this._onsuccess);"
-argument_list|)
-expr_stmt|;
-name|utils
-operator|.
 name|startIf
 argument_list|(
-literal|"this._onsuccess"
+literal|"client.user_onsuccess"
 argument_list|)
 expr_stmt|;
 name|utils
@@ -2657,7 +2630,7 @@ name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"this._onsuccess(responseObject);"
+literal|"client.user_onsuccess(responseObject);"
 argument_list|)
 expr_stmt|;
 name|utils
