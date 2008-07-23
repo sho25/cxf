@@ -114,6 +114,10 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
+specifier|private
+name|int
+name|sayHiCounter
+decl_stmt|;
 comment|/* (non-Javadoc)      * @see org.apache.hello_world_soap_http.Greeter#greetMe(java.lang.String)      */
 specifier|public
 name|String
@@ -218,7 +222,12 @@ literal|"Executing operation sayHi\n"
 argument_list|)
 expr_stmt|;
 return|return
-literal|"Bonjour"
+literal|"Bonjour "
+operator|+
+operator|(
+operator|++
+name|sayHiCounter
+operator|)
 return|;
 block|}
 specifier|public
