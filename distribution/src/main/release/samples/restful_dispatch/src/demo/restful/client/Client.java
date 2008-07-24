@@ -555,7 +555,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Client Invoking is succeeded!"
+literal|"Client Invoking succeeded!"
 argument_list|)
 expr_stmt|;
 name|System

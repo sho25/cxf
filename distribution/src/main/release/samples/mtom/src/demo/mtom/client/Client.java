@@ -386,13 +386,9 @@ expr_stmt|;
 name|URL
 name|fileURL
 init|=
-name|client
+name|Client
 operator|.
-name|getClass
-argument_list|()
-operator|.
-name|getClassLoader
-argument_list|()
+name|class
 operator|.
 name|getResource
 argument_list|(

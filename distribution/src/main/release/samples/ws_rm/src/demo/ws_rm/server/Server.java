@@ -27,6 +27,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|net
+operator|.
+name|URL
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -117,6 +127,18 @@ operator|new
 name|SpringBusFactory
 argument_list|()
 decl_stmt|;
+name|URL
+name|busFile
+init|=
+name|Server
+operator|.
+name|class
+operator|.
+name|getResource
+argument_list|(
+literal|"ws_rm.xml"
+argument_list|)
+decl_stmt|;
 name|Bus
 name|bus
 init|=
@@ -124,7 +146,10 @@ name|bf
 operator|.
 name|createBus
 argument_list|(
-literal|"ws_rm.xml"
+name|busFile
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|bf
