@@ -29,6 +29,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|namespace
+operator|.
+name|QName
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -234,6 +246,19 @@ argument_list|)
 decl_stmt|;
 comment|// How the hell do I know what the name of the
 comment|// http-destination is from using this call?
+name|ep
+operator|.
+name|setEndpointName
+argument_list|(
+operator|new
+name|QName
+argument_list|(
+literal|"http://apache.org/hello_world"
+argument_list|,
+name|name
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|ep
 operator|.
 name|publish

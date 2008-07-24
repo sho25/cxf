@@ -1652,6 +1652,8 @@ block|}
 block|}
 else|else
 block|{
+try|try
+block|{
 name|soapFault
 operator|.
 name|setFaultCode
@@ -1665,6 +1667,15 @@ literal|"HandlerFault"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|SOAPException
+name|ex2
+parameter_list|)
+block|{
+comment|//ignore
+block|}
 name|String
 name|msg
 init|=

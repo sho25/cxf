@@ -4404,6 +4404,13 @@ block|}
 block|}
 else|else
 block|{
+name|bmsg
+operator|.
+name|addExtensor
+argument_list|(
+name|soapBody
+argument_list|)
+expr_stmt|;
 name|bodyInfo
 operator|.
 name|setUse
