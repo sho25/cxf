@@ -27,21 +27,35 @@ name|WebService
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|hello_world_jms
+operator|.
+name|HelloWorldPubSubPort
+import|;
+end_import
+
 begin_class
 annotation|@
 name|WebService
 argument_list|(
 name|serviceName
 operator|=
-literal|"HelloWorldService"
+literal|"JmsDestinationPubSubService"
 argument_list|,
 name|portName
 operator|=
-literal|"HelloWorldPort"
+literal|"JmsDestinationPubSubPort"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"org.apache.cxf.hello_world_jms.HelloWorldPortType"
+literal|"org.apache.cxf.hello_world_jms.HelloWorldPubSubPort"
 argument_list|,
 name|targetNamespace
 operator|=
@@ -53,10 +67,32 @@ literal|"testutils/jms_test.wsdl"
 argument_list|)
 specifier|public
 class|class
-name|GreeterImplTwoWayJMS
-extends|extends
-name|TwoWayJMSImplBase
-block|{          }
+name|JmsDestPubSubImpl
+implements|implements
+name|HelloWorldPubSubPort
+block|{
+specifier|public
+name|void
+name|greetMeOneWay
+parameter_list|(
+name|String
+name|stringParam0
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"*********  greetMeOneWay: "
+operator|+
+name|stringParam0
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 end_class
 
 end_unit

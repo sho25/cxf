@@ -33,30 +33,30 @@ name|WebService
 argument_list|(
 name|serviceName
 operator|=
-literal|"HelloWorldService"
+literal|"SOAPService6"
 argument_list|,
 name|portName
 operator|=
-literal|"HelloWorldPort"
+literal|"SoapPort6"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"org.apache.cxf.hello_world_jms.HelloWorldPortType"
+literal|"org.apache.hello_world_doc_lit.Greeter"
 argument_list|,
 name|targetNamespace
 operator|=
-literal|"http://cxf.apache.org/hello_world_jms"
+literal|"http://apache.org/hello_world_doc_lit"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"testutils/jms_test.wsdl"
+literal|"testutils/hello_world_doc_lit.wsdl"
 argument_list|)
 specifier|public
 class|class
-name|GreeterImplTwoWayJMS
+name|SoapService6SoapPort6Impl
 extends|extends
-name|TwoWayJMSImplBase
-block|{          }
+name|GreeterImplDocBase
+block|{  }
 end_class
 
 end_unit
