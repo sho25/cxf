@@ -2428,6 +2428,21 @@ argument_list|(
 name|rcx
 argument_list|)
 decl_stmt|;
+comment|// don't write PIs if we're not writing a prolog.
+if|if
+condition|(
+name|writeProlog
+operator|||
+name|rootChild
+operator|.
+name|getNodeType
+argument_list|()
+operator|==
+name|Node
+operator|.
+name|ELEMENT_NODE
+condition|)
+block|{
 name|writeNode
 argument_list|(
 name|rootChild
@@ -2437,6 +2452,7 @@ argument_list|,
 name|repairing
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
