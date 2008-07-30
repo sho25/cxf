@@ -185,24 +185,6 @@ operator|-
 literal|1
 return|;
 block|}
-if|if
-condition|(
-name|e1
-operator|.
-name|getHttpMethod
-argument_list|()
-operator|==
-literal|null
-operator|&&
-name|e2
-operator|.
-name|getHttpMethod
-argument_list|()
-operator|==
-literal|null
-condition|)
-block|{
-comment|// with two subresource locators, those with more capturing groups win
 name|int
 name|g1
 init|=
@@ -225,6 +207,13 @@ operator|.
 name|getNumberOfGroups
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|g1
+operator|!=
+name|g2
+condition|)
+block|{
 comment|// descending order
 return|return
 name|g1
@@ -233,14 +222,8 @@ name|g2
 condition|?
 literal|1
 else|:
-name|g1
-operator|>
-name|g2
-condition|?
 operator|-
 literal|1
-else|:
-literal|0
 return|;
 block|}
 name|List
@@ -265,7 +248,6 @@ operator|.
 name|getConsumeTypes
 argument_list|()
 decl_stmt|;
-comment|// TODO: we actually need to check all consume and produce types here ?
 name|int
 name|result
 init|=

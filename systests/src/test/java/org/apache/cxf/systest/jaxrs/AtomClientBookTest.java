@@ -335,7 +335,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/bookstore/books/feed"
+literal|"http://localhost:9080/bookstore/books/feed"
 argument_list|,
 name|feed
 operator|.
@@ -363,6 +363,19 @@ argument_list|,
 literal|"resources/expected_atom_books_json.txt"
 argument_list|,
 literal|"application/json"
+argument_list|)
+expr_stmt|;
+name|getAndCompareJson
+argument_list|(
+literal|"http://localhost:9080/bookstore/books/jsonfeed"
+argument_list|,
+literal|"resources/expected_atom_books_jsonfeed.txt"
+argument_list|,
+literal|"application/json, text/html, application/xml;q=0.9,"
+operator|+
+literal|" application/xhtml+xml, image/png, image/jpeg, image/gif,"
+operator|+
+literal|" image/x-xbitmap, */*;q=0.1"
 argument_list|)
 expr_stmt|;
 name|Entry
@@ -508,8 +521,6 @@ name|entry
 init|=
 name|getEntry
 argument_list|(
-literal|"http://localhost:9080"
-operator|+
 name|location
 argument_list|,
 literal|null

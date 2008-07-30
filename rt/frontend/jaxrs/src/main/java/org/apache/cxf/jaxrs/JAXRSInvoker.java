@@ -561,7 +561,7 @@ name|JAXRSUtils
 operator|.
 name|handleSetters
 argument_list|(
-name|cri
+name|ori
 argument_list|,
 name|resourceObject
 argument_list|,

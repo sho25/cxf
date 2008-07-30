@@ -111,8 +111,6 @@ argument_list|(
 literal|"/customers/{id}"
 argument_list|,
 literal|false
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|MultivaluedMap
@@ -183,8 +181,6 @@ operator|new
 name|URITemplate
 argument_list|(
 literal|"/customers/{name}/{department}"
-argument_list|,
-literal|false
 argument_list|,
 literal|false
 argument_list|)
@@ -274,8 +270,6 @@ operator|new
 name|URITemplate
 argument_list|(
 literal|"/customers/name/{name}/dep/{department}"
-argument_list|,
-literal|false
 argument_list|,
 literal|false
 argument_list|)
@@ -368,8 +362,6 @@ argument_list|(
 literal|"/customers"
 argument_list|,
 literal|true
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|MultivaluedMap
@@ -445,8 +437,6 @@ argument_list|(
 literal|"/customers"
 argument_list|,
 literal|true
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|MultivaluedMap
@@ -522,8 +512,6 @@ argument_list|(
 literal|"/books/{bookId}/"
 argument_list|,
 literal|true
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|MultivaluedMap
