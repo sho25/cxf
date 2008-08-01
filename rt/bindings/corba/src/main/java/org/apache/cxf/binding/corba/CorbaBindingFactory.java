@@ -959,6 +959,19 @@ return|return
 name|orbConfig
 return|;
 block|}
+specifier|public
+name|void
+name|setOrbConfig
+parameter_list|(
+name|OrbConfig
+name|config
+parameter_list|)
+block|{
+name|orbConfig
+operator|=
+name|config
+expr_stmt|;
+block|}
 block|}
 end_class
 
