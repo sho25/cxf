@@ -2146,6 +2146,10 @@ operator|+
 name|url
 argument_list|)
 expr_stmt|;
+name|populateFromClass
+operator|=
+literal|false
+expr_stmt|;
 name|WSDLServiceFactory
 name|factory
 init|=
@@ -2255,6 +2259,10 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|populateFromClass
+operator|=
+literal|true
 expr_stmt|;
 if|if
 condition|(
