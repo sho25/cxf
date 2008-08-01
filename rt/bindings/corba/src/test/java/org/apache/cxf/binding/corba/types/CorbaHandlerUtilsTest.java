@@ -408,20 +408,10 @@ argument_list|,
 name|props
 argument_list|)
 expr_stmt|;
-name|TestUtils
-name|testUtils
-init|=
-operator|new
-name|TestUtils
-argument_list|()
-decl_stmt|;
-comment|//CorbaDestination destination = (CorbaDestination)getDestination();
 name|CorbaDestination
 name|destination
 init|=
-name|testUtils
-operator|.
-name|getComplexTypesTestDestination
+name|getDestination
 argument_list|()
 decl_stmt|;
 name|service
@@ -461,6 +451,27 @@ argument_list|(
 name|corbaTypes
 argument_list|)
 expr_stmt|;
+block|}
+specifier|protected
+name|CorbaDestination
+name|getDestination
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|TestUtils
+name|testUtils
+init|=
+operator|new
+name|TestUtils
+argument_list|()
+decl_stmt|;
+return|return
+name|testUtils
+operator|.
+name|getComplexTypesTestDestination
+argument_list|()
+return|;
 block|}
 annotation|@
 name|After
@@ -503,7 +514,6 @@ comment|// Do nothing.  Throw an Exception?
 block|}
 block|}
 block|}
-comment|/*protected void setupServiceInfo(String ns, String wsdl, String serviceName, String portName) {                 URL wsdlUrl = getClass().getResource(wsdl);         assertNotNull(wsdlUrl);         WSDLServiceFactory factory = new WSDLServiceFactory(bus, wsdlUrl, new QName(ns, serviceName));          Service service = factory.create();                 endpointInfo = service.getEndpointInfo(new QName(ns, portName));         }          public Destination getDestination() throws Exception {             setupServiceInfo("http://cxf.apache.org/bindings/corba/ComplexTypes",                           "/wsdl/ComplexTypes.wsdl",                           "ComplexTypesCORBAService",                           "ComplexTypesCORBAPort");         CorbaBindingFactory corbaBF = (CorbaBindingFactory)factory;         Destination destination = corbaBF.getDestination(endpointInfo);         assertNotNull(destination);         return destination;     }*/
 annotation|@
 name|Test
 specifier|public
