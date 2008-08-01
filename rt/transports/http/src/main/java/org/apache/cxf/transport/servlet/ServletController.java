@@ -744,7 +744,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Can't find the the request for "
+literal|"Can't find the request for "
 operator|+
 name|request
 operator|.

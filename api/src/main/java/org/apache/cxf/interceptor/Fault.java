@@ -418,7 +418,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Returns the detail node. If no detail node has been set, an empty      *<code>&lt;detail&gt;</code> is created.      *       * @return the detail node.      */
+comment|/**      * Returns the detail node.      * @return the detail node.      */
 specifier|public
 name|Element
 name|getDetail
@@ -456,6 +456,7 @@ operator|!=
 literal|null
 return|;
 block|}
+comment|/**      * Returns the detail node. If no detail node has been set, an empty      *<code>&lt;detail&gt;</code> is created.      *       * @return the detail node.      */
 specifier|public
 name|Element
 name|getOrCreateDetail

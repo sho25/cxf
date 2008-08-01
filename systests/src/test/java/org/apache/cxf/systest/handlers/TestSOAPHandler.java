@@ -1114,8 +1114,8 @@ name|ctx
 argument_list|)
 control|)
 block|{
-comment|// copy the the previously invoked handler list into the response.
-comment|// Ignore this handlers information as it will be added again later.
+comment|// copy the previously invoked handler list into the response.
+comment|// Ignore this handler's information as it will be added again later.
 comment|//
 if|if
 condition|(
