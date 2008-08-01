@@ -345,6 +345,8 @@ literal|"COULD_NOT_INSTANTIATE"
 argument_list|,
 name|BUNDLE
 argument_list|)
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -365,6 +367,8 @@ literal|"ILLEGAL_ACCESS"
 argument_list|,
 name|BUNDLE
 argument_list|)
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
