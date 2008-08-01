@@ -90,6 +90,13 @@ argument_list|>
 name|textAgain
 parameter_list|)
 function_decl|;
+name|String
+name|simpleEcho
+parameter_list|(
+name|String
+name|text
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
