@@ -159,16 +159,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -281,7 +271,7 @@ name|svrFac
 operator|.
 name|setAddress
 argument_list|(
-literal|"Echo"
+literal|"local://Echo"
 argument_list|)
 expr_stmt|;
 name|setupAegis
@@ -322,6 +312,10 @@ block|}
 annotation|@
 name|Test
 annotation|@
+name|org
+operator|.
+name|junit
+operator|.
 name|Ignore
 specifier|public
 name|void
@@ -341,7 +335,7 @@ name|proxyFac
 operator|.
 name|setAddress
 argument_list|(
-literal|"Echo"
+literal|"local://Echo"
 argument_list|)
 expr_stmt|;
 name|proxyFac
