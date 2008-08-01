@@ -661,6 +661,15 @@ return|return
 name|uriPrefixes
 return|;
 block|}
+specifier|public
+name|OrbConfig
+name|getOrbConfig
+parameter_list|()
+block|{
+return|return
+name|orbConfig
+return|;
+block|}
 block|}
 end_class
 

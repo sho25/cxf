@@ -651,7 +651,7 @@ literal|"For binding with value \""
 operator|+
 name|INFER_FROM_TYPE_ID
 operator|+
-literal|"\" the type_id of the object reference IOR must be set to it's most"
+literal|"\" the type_id of the object reference IOR must be set to its most"
 operator|+
 literal|" derived type. It is currently null indicating CORBA:Object."
 operator|+

@@ -397,6 +397,13 @@ argument_list|,
 name|serviceInfo
 argument_list|)
 expr_stmt|;
+name|currentTypeListener
+operator|.
+name|setNamespaceContext
+argument_list|(
+name|ctx
+argument_list|)
+expr_stmt|;
 name|content
 operator|=
 name|currentTypeListener
@@ -612,6 +619,13 @@ argument_list|,
 name|serviceInfo
 argument_list|)
 decl_stmt|;
+name|typeListener
+operator|.
+name|setNamespaceContext
+argument_list|(
+name|ctx
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|CorbaUnionHandler

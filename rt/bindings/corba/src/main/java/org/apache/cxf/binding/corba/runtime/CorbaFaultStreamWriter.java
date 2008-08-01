@@ -225,6 +225,13 @@ argument_list|,
 name|serviceInfo
 argument_list|)
 expr_stmt|;
+name|currentTypeListener
+operator|.
+name|setNamespaceContext
+argument_list|(
+name|ctx
+argument_list|)
+expr_stmt|;
 name|listeners
 index|[
 literal|0

@@ -991,10 +991,13 @@ case|:
 name|obj
 operator|=
 operator|new
-name|Byte
+name|Short
 argument_list|(
 name|data
 argument_list|)
+operator|.
+name|byteValue
+argument_list|()
 expr_stmt|;
 break|break;
 case|case

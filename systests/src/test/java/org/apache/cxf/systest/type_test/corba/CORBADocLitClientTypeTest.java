@@ -202,8 +202,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"InheritanceEmptyAllDerivedEmpty"
-block|,
+comment|//"InheritanceEmptyAllDerivedEmpty",
 literal|"DerivedEmptyBaseEmptyAll"
 block|,
 literal|"DerivedEmptyBaseEmptyChoice"
@@ -248,7 +247,8 @@ literal|"UnsignedShort"
 block|,
 literal|"Int"
 block|,
-comment|//"UnsignedInt",
+literal|"UnsignedInt"
+block|,
 literal|"Long"
 block|,
 literal|"UnsignedLong"
@@ -389,7 +389,7 @@ name|AfterClass
 specifier|public
 specifier|static
 name|void
-name|printNotRun
+name|deleteRefFile
 parameter_list|()
 throws|throws
 name|Exception
@@ -409,7 +409,7 @@ name|delete
 argument_list|()
 expr_stmt|;
 comment|//for (String s : NOT_RUN_TESTS) {
-comment|//System.out.println(s);
+comment|//    System.out.println(s);
 comment|//}
 block|}
 specifier|public
@@ -441,6 +441,7 @@ expr_stmt|;
 return|return
 literal|false
 return|;
+comment|//return true;
 block|}
 return|return
 literal|true

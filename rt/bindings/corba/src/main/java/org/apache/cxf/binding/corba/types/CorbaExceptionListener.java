@@ -256,6 +256,13 @@ argument_list|,
 name|sInfo
 argument_list|)
 expr_stmt|;
+name|currentTypeListener
+operator|.
+name|setNamespaceContext
+argument_list|(
+name|ctx
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|CorbaExceptionHandler
