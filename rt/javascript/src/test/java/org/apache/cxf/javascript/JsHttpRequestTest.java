@@ -430,7 +430,7 @@ name|notifier
 operator|.
 name|waitForJavascript
 argument_list|(
-literal|10
+literal|100
 argument_list|)
 decl_stmt|;
 name|assertTrue

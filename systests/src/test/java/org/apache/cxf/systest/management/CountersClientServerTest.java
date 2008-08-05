@@ -455,7 +455,7 @@ argument_list|()
 operator|.
 name|shutdown
 argument_list|(
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -638,11 +638,13 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The Counters are not export to JMX "
+literal|"The Counters are not export to JMX: "
+operator|+
+name|counterNames
 argument_list|,
 literal|4
 operator|+
-literal|2
+literal|3
 argument_list|,
 name|counterNames
 operator|.
@@ -843,7 +845,7 @@ literal|"The Counters are not export to JMX "
 argument_list|,
 literal|6
 operator|+
-literal|2
+literal|3
 argument_list|,
 name|counterNames
 operator|.

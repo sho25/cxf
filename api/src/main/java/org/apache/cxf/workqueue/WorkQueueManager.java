@@ -20,30 +20,28 @@ specifier|public
 interface|interface
 name|WorkQueueManager
 block|{
-enum|enum
-name|ThreadingModel
-block|{
-name|SINGLE_THREADED
-block|,
-name|MULTI_THREADED
-block|}
-empty_stmt|;
-comment|/**      * Get the manager's work queue.      * @return AutomaticWorkQueue      */
+comment|/**      * Get the manager's default work queue.      * @return AutomaticWorkQueue      */
 name|AutomaticWorkQueue
 name|getAutomaticWorkQueue
 parameter_list|()
 function_decl|;
-comment|/**      * Get the threading model.      * @return ThreadingModel - either<code>SINGLE_THREADED</code>      * or<code>MULTI_THREADED</code>.      */
-name|ThreadingModel
-name|getThreadingModel
-parameter_list|()
-function_decl|;
-comment|/**      * Set the threading model.      * @param model either<code>SINGLE_THREADED</code>      * or<code>MULTI_THREADED</code>.      */
-name|void
-name|setThreadingModel
+comment|/**      * Get the named work queue.      * @return AutomaticWorkQueue      */
+name|AutomaticWorkQueue
+name|getNamedWorkQueue
 parameter_list|(
-name|ThreadingModel
-name|model
+name|String
+name|name
+parameter_list|)
+function_decl|;
+comment|/**      * Adds a named work queue      * @param name      * @param q      */
+name|void
+name|addNamedWorkQueue
+parameter_list|(
+name|String
+name|name
+parameter_list|,
+name|AutomaticWorkQueue
+name|q
 parameter_list|)
 function_decl|;
 comment|/**      * Shuts down the manager's work queue. If      *<code>processRemainingTasks</code> is true, waits for the work queue to      * shutdown before returning.      * @param processRemainingTasks - whether or not to wait for completion      */

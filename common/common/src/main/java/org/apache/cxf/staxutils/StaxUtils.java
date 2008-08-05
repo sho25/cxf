@@ -2466,7 +2466,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the doucment (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *       * @param e      * @param writer      * @throws XMLStreamException      */
+comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *       * @param e      * @param writer      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void
@@ -2496,7 +2496,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *       * @param e      * @param writer      * @param endElement true iff the element should be ended      * @throws XMLStreamException      */
+comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *       * @param e      * @param writer      * @param endElement true if the element should be ended      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void

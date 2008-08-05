@@ -524,14 +524,14 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|1
+argument_list|,
 name|s
 operator|.
 name|size
 argument_list|()
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
 name|name

@@ -2000,8 +2000,10 @@ name|autoWorkQueue
 init|=
 name|workQueueManager
 operator|.
-name|getAutomaticWorkQueue
-argument_list|()
+name|getNamedWorkQueue
+argument_list|(
+literal|"ws-addressing"
+argument_list|)
 decl_stmt|;
 name|executor
 operator|=
@@ -2011,9 +2013,9 @@ literal|null
 condition|?
 name|autoWorkQueue
 else|:
-name|OneShotAsyncExecutor
+name|workQueueManager
 operator|.
-name|getInstance
+name|getAutomaticWorkQueue
 argument_list|()
 expr_stmt|;
 block|}

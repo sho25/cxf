@@ -413,7 +413,7 @@ name|Long
 operator|.
 name|valueOf
 argument_list|(
-literal|250
+literal|256
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -946,6 +946,16 @@ name|void
 name|testJAXBCachedOnRepeatGetPort
 parameter_list|()
 block|{
+name|System
+operator|.
+name|gc
+argument_list|()
+expr_stmt|;
+name|System
+operator|.
+name|gc
+argument_list|()
+expr_stmt|;
 name|URL
 name|wsdl1
 init|=
