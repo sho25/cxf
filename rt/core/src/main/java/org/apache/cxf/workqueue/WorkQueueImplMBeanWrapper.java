@@ -101,11 +101,11 @@ name|ManagedResource
 argument_list|(
 name|componentName
 operator|=
-literal|"WorkQueueManager"
+literal|"WorkQueue"
 argument_list|,
 name|description
 operator|=
-literal|"The CXF manangement of work queues"
+literal|"The CXF work queue"
 argument_list|,
 name|currencyTimeLimit
 operator|=
@@ -131,7 +131,7 @@ specifier|final
 name|String
 name|TYPE_VALUE
 init|=
-literal|"WorkQueueMBean"
+literal|"WorkQueues"
 decl_stmt|;
 specifier|private
 name|AutomaticWorkQueueImpl

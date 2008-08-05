@@ -391,7 +391,7 @@ name|ManagementConstants
 operator|.
 name|DEFAULT_DOMAIN_NAME
 operator|+
-literal|":type=WorkQueueManagerMBean,*"
+literal|":type=WorkQueueManager,*"
 argument_list|)
 decl_stmt|;
 name|Set
@@ -489,7 +489,7 @@ name|ManagementConstants
 operator|.
 name|DEFAULT_DOMAIN_NAME
 operator|+
-literal|":type=WorkQueueMBean,*"
+literal|":type=WorkQueues,*"
 argument_list|)
 expr_stmt|;
 name|s
