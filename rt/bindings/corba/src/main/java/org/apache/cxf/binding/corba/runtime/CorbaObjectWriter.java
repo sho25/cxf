@@ -625,7 +625,7 @@ operator|.
 name|writeULong
 argument_list|(
 call|(
-name|BigInteger
+name|Long
 call|)
 argument_list|(
 operator|(
@@ -1201,11 +1201,7 @@ specifier|public
 name|void
 name|writeULong
 parameter_list|(
-name|java
-operator|.
-name|math
-operator|.
-name|BigInteger
+name|Long
 name|l
 parameter_list|)
 throws|throws

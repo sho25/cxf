@@ -1091,7 +1091,7 @@ argument_list|(
 name|iStream
 argument_list|)
 decl_stmt|;
-name|BigInteger
+name|long
 name|ulongValue
 init|=
 name|reader
@@ -1102,9 +1102,6 @@ decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ulongValue
-operator|.
-name|longValue
-argument_list|()
 operator|==
 literal|100000
 argument_list|)

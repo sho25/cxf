@@ -1393,7 +1393,7 @@ throw|;
 block|}
 block|}
 specifier|public
-name|BigInteger
+name|long
 name|readULong
 parameter_list|()
 throws|throws
@@ -1414,12 +1414,7 @@ operator|&=
 literal|0xffffffffL
 expr_stmt|;
 return|return
-name|BigInteger
-operator|.
-name|valueOf
-argument_list|(
 name|l
-argument_list|)
 return|;
 block|}
 catch|catch

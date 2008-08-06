@@ -940,14 +940,10 @@ argument_list|(
 name|oStream
 argument_list|)
 decl_stmt|;
-name|BigInteger
+name|long
 name|ulongValue
 init|=
-operator|new
-name|BigInteger
-argument_list|(
-literal|"1234567"
-argument_list|)
+literal|1234567L
 decl_stmt|;
 name|writer
 operator|.
@@ -977,9 +973,6 @@ argument_list|(
 name|ul
 operator|==
 name|ulongValue
-operator|.
-name|longValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
