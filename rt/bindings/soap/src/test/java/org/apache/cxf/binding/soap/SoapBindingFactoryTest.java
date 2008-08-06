@@ -1312,7 +1312,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|""
+literal|"sayHiAction"
 argument_list|,
 name|sboi
 operator|.
@@ -1414,6 +1414,16 @@ argument_list|,
 name|sboi
 operator|.
 name|getStyle
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|""
+argument_list|,
+name|sboi
+operator|.
+name|getAction
 argument_list|()
 argument_list|)
 expr_stmt|;

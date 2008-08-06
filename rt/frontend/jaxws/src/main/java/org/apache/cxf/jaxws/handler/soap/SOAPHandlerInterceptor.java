@@ -339,7 +339,7 @@ name|soap
 operator|.
 name|interceptor
 operator|.
-name|SoapActionOutInterceptor
+name|SoapInterceptor
 import|;
 end_import
 
@@ -357,7 +357,7 @@ name|soap
 operator|.
 name|interceptor
 operator|.
-name|SoapInterceptor
+name|SoapPreProtocolOutInterceptor
 import|;
 end_import
 
@@ -1449,7 +1449,7 @@ name|doInterceptStartingAfter
 argument_list|(
 name|responseMsg
 argument_list|,
-name|SoapActionOutInterceptor
+name|SoapPreProtocolOutInterceptor
 operator|.
 name|class
 operator|.

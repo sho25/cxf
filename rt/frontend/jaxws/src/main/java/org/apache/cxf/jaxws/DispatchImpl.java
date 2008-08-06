@@ -445,7 +445,7 @@ name|soap
 operator|.
 name|interceptor
 operator|.
-name|SoapActionOutInterceptor
+name|SoapPreProtocolOutInterceptor
 import|;
 end_import
 
@@ -1929,7 +1929,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|SoapActionOutInterceptor
+name|SoapPreProtocolOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
