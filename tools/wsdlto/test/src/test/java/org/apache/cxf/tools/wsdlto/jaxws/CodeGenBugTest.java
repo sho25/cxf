@@ -6213,7 +6213,7 @@ name|results1
 operator|.
 name|contains
 argument_list|(
-literal|"  * this is class javadoc"
+literal|" * this is class javadoc"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -6223,7 +6223,7 @@ name|results1
 operator|.
 name|contains
 argument_list|(
-literal|" * this is method javadoc"
+literal|"     * this is method javadoc"
 argument_list|)
 argument_list|)
 expr_stmt|;
