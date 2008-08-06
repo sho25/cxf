@@ -3182,6 +3182,14 @@ operator|.
 name|shutdown
 argument_list|()
 expr_stmt|;
+comment|//this way we can release the port of decoupled destination
+name|decoupledDestination
+operator|.
+name|setMessageObserver
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 comment|/**      * This predicate returns true iff the exchange indicates       * a oneway MEP.      *       * @param exchange The exchange in question      */
