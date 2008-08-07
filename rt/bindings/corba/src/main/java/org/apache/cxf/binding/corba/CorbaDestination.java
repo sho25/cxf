@@ -2450,6 +2450,7 @@ argument_list|(
 name|idBytes
 argument_list|)
 expr_stmt|;
+comment|//NOPMD
 block|}
 catch|catch
 parameter_list|(
