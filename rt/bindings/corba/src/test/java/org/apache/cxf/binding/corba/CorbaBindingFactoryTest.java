@@ -374,15 +374,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|System
-operator|.
-name|setProperty
-argument_list|(
-literal|"cxf.config.file"
-argument_list|,
-literal|"cxf-extension-corba.xml"
-argument_list|)
-expr_stmt|;
 name|bus
 operator|=
 name|BusFactory

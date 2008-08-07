@@ -728,7 +728,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|protected
+specifier|public
 name|MessageObserver
 name|getObserver
 parameter_list|()
@@ -737,7 +737,7 @@ return|return
 name|incomingObserver
 return|;
 block|}
-specifier|protected
+specifier|public
 name|void
 name|setObserver
 parameter_list|(
@@ -750,7 +750,7 @@ operator|=
 name|observer
 expr_stmt|;
 block|}
-specifier|protected
+specifier|public
 name|ORB
 name|getOrb
 parameter_list|()

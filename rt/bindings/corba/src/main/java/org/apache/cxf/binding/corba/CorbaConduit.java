@@ -1186,7 +1186,7 @@ name|getAddress
 argument_list|()
 return|;
 block|}
-specifier|protected
+specifier|public
 name|void
 name|buildRequest
 parameter_list|(
@@ -1500,7 +1500,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|protected
+specifier|public
 name|NVList
 name|getArguments
 parameter_list|(
@@ -1622,7 +1622,7 @@ return|return
 name|list
 return|;
 block|}
-specifier|protected
+specifier|public
 name|NamedValue
 name|getReturn
 parameter_list|(
@@ -1744,7 +1744,7 @@ return|return
 name|ret
 return|;
 block|}
-specifier|protected
+specifier|public
 name|ExceptionList
 name|getExceptionList
 parameter_list|(
@@ -1844,7 +1844,7 @@ return|return
 name|exList
 return|;
 block|}
-specifier|protected
+specifier|public
 name|Request
 name|getRequest
 parameter_list|(
@@ -1989,7 +1989,7 @@ return|return
 name|request
 return|;
 block|}
-specifier|protected
+specifier|public
 name|Map
 argument_list|<
 name|TypeCode

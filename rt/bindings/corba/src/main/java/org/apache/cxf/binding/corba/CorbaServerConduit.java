@@ -590,7 +590,7 @@ name|getAddress
 argument_list|()
 return|;
 block|}
-specifier|protected
+specifier|public
 name|void
 name|buildRequestResult
 parameter_list|(
