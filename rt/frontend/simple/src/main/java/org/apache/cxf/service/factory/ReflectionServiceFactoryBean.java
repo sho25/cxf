@@ -3962,6 +3962,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|o
+operator|.
+name|hasOutput
+argument_list|()
+operator|&&
 operator|!
 name|initializeParameter
 argument_list|(

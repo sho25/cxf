@@ -262,6 +262,18 @@ name|next
 argument_list|()
 expr_stmt|;
 block|}
+if|if
+condition|(
+operator|!
+name|xmlReader
+operator|.
+name|hasNext
+argument_list|()
+condition|)
+block|{
+comment|//end of document, just return
+return|return;
+block|}
 block|}
 catch|catch
 parameter_list|(
