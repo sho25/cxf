@@ -336,7 +336,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.bus.DestinationFactoryManager#registerDestinationFactory(java.lang.String,      *      org.apache.cxf.transports.DestinationFactory)      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.bus.DestinationFactoryManager#registerDestinationFactory(java.lang.String,      *      org.apache.cxf.transports.DestinationFactory)      */
 specifier|public
 name|void
 name|registerDestinationFactory
@@ -358,7 +358,7 @@ name|factory
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.bus.DestinationFactoryManager#deregisterDestinationFactory(java.lang.String)      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.bus.DestinationFactoryManager#deregisterDestinationFactory(java.lang.String)      */
 specifier|public
 name|void
 name|deregisterDestinationFactory
@@ -375,8 +375,8 @@ name|namespace
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.bus.DestinationFactoryManager#DestinationFactory(java.lang.String)      */
-comment|/**      * Returns the conduit initiator for the given namespace, constructing it      * (and storing in the cache for future reference) if necessary, using its      * list of factory classname to namespace mappings.      *       * @param namespace the namespace.      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.bus.DestinationFactoryManager#DestinationFactory(java.lang.String)      */
+comment|/**      * Returns the conduit initiator for the given namespace, constructing it      * (and storing in the cache for future reference) if necessary, using its      * list of factory classname to namespace mappings.      *      * @param namespace the namespace.      */
 specifier|public
 name|DestinationFactory
 name|getDestinationFactory
@@ -441,6 +441,33 @@ name|String
 name|uri
 parameter_list|)
 block|{
+comment|//If the uri is related path or has no protocol prefix , we will set it to be http
+if|if
+condition|(
+name|uri
+operator|.
+name|startsWith
+argument_list|(
+literal|"/"
+argument_list|)
+operator|||
+name|uri
+operator|.
+name|indexOf
+argument_list|(
+literal|":"
+argument_list|)
+operator|<
+literal|0
+condition|)
+block|{
+name|uri
+operator|=
+literal|"http://"
+operator|+
+name|uri
+expr_stmt|;
+block|}
 comment|//first attempt the ones already registered
 for|for
 control|(

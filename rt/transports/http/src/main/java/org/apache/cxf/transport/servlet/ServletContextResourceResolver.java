@@ -241,6 +241,13 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+if|if
+condition|(
+name|entryName
+operator|!=
+literal|null
+condition|)
+block|{
 name|InitialContext
 name|ic
 init|=
@@ -257,6 +264,7 @@ argument_list|(
 name|entryName
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
