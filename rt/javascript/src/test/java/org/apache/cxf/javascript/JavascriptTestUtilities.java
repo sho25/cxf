@@ -63,6 +63,30 @@ name|java
 operator|.
 name|util
 operator|.
+name|concurrent
+operator|.
+name|CountDownLatch
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|TimeUnit
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Logger
@@ -511,6 +535,103 @@ block|}
 comment|// CHECKSTYLE:ON
 block|}
 specifier|public
+specifier|static
+class|class
+name|CountDownNotifier
+extends|extends
+name|ScriptableObject
+block|{
+specifier|private
+name|CountDownLatch
+name|latch
+decl_stmt|;
+specifier|public
+name|CountDownNotifier
+parameter_list|()
+block|{         }
+annotation|@
+name|Override
+specifier|public
+name|String
+name|getClassName
+parameter_list|()
+block|{
+return|return
+literal|"org_apache_cxf_count_down_notifier"
+return|;
+block|}
+specifier|public
+specifier|synchronized
+name|boolean
+name|waitForJavascript
+parameter_list|(
+name|long
+name|timeout
+parameter_list|)
+block|{
+while|while
+condition|(
+literal|true
+condition|)
+block|{
+try|try
+block|{
+return|return
+name|latch
+operator|.
+name|await
+argument_list|(
+name|timeout
+argument_list|,
+name|TimeUnit
+operator|.
+name|MILLISECONDS
+argument_list|)
+return|;
+comment|// if it returns at all, we're done.
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|ie
+parameter_list|)
+block|{
+comment|// empty on purpose.
+block|}
+block|}
+block|}
+comment|// CHECKSTYLE:OFF
+specifier|public
+name|void
+name|jsConstructor
+parameter_list|(
+name|int
+name|count
+parameter_list|)
+block|{
+name|latch
+operator|=
+operator|new
+name|CountDownLatch
+argument_list|(
+name|count
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|jsFunction_count
+parameter_list|()
+block|{
+name|latch
+operator|.
+name|countDown
+argument_list|()
+expr_stmt|;
+block|}
+comment|// CHECKSTYLE:ON
+block|}
+specifier|public
 name|JavascriptTestUtilities
 parameter_list|(
 name|Class
@@ -613,6 +734,17 @@ argument_list|(
 name|rhinoScope
 argument_list|,
 name|Notifier
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|ScriptableObject
+operator|.
+name|defineClass
+argument_list|(
+name|rhinoScope
+argument_list|,
+name|CountDownNotifier
 operator|.
 name|class
 argument_list|)
@@ -1056,7 +1188,7 @@ name|args
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a method on a Javascript object and convert result to specified class. Convert to the      * requested class.      * @param<T> type      * @param clazz class object.      * @param that Javascript object.      * @param methodName method      * @param args arguments      * @return return value.      */
+comment|/**      * Call a method on a Javascript object and convert result to specified class. Convert to the requested      * class.      *       * @param<T> type      * @param clazz class object.      * @param that Javascript object.      * @param methodName method      * @param args arguments      * @return return value.      */
 specifier|public
 parameter_list|<
 name|T
@@ -1104,7 +1236,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a method on a Javascript object inside context brackets.      * @param<T> return type.      * @param clazz class for the return type.      * @param that object      * @param methodName method      * @param args arguments. Caller must run javaToJS as appropriate      * @return return value.      */
+comment|/**      * Call a method on a Javascript object inside context brackets.      *       * @param<T> return type.      * @param clazz class for the return type.      * @param that object      * @param methodName method      * @param args arguments. Caller must run javaToJS as appropriate      * @return return value.      */
 specifier|public
 parameter_list|<
 name|T
@@ -1171,7 +1303,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * Evaluate a Javascript expression, converting the return value to a      * convenient Java type.      *       * @param<T> The desired type      * @param jsExpression the javascript expression.      * @param clazz the Class object for the desired type.      * @return the result.      */
+comment|/**      * Evaluate a Javascript expression, converting the return value to a convenient Java type.      *       * @param<T> The desired type      * @param jsExpression the javascript expression.      * @param clazz the Class object for the desired type.      * @return the result.      */
 specifier|public
 parameter_list|<
 name|T
@@ -1208,7 +1340,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a JavaScript function within the Context. Optionally, require it to      * throw an exception equal to a supplied object. If the exception is called      * for, this function will either return null or Assert.      *       * @param expectingException Exception desired, or null.      * @param functionName Function to call.      * @param args args for the function. Be sure to Javascript-ify them as      *                appropriate.      * @return      */
+comment|/**      * Call a JavaScript function within the Context. Optionally, require it to throw an exception equal to a      * supplied object. If the exception is called for, this function will either return null or Assert.      *       * @param expectingException Exception desired, or null.      * @param functionName Function to call.      * @param args args for the function. Be sure to Javascript-ify them as appropriate.      * @return      */
 specifier|public
 name|Object
 name|rhinoCallExpectingExceptionInContext
@@ -1264,7 +1396,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a Javascript function, identified by name, on a set of arguments.      * Optionally, expect it to throw an exception.      *       * @param expectingException      * @param functionName      * @param args      * @return      */
+comment|/**      * Call a Javascript function, identified by name, on a set of arguments. Optionally, expect it to throw      * an exception.      *       * @param expectingException      * @param functionName      * @param args      * @return      */
 specifier|public
 name|Object
 name|rhinoCallExpectingException
