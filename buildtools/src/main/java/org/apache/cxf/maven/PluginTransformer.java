@@ -376,7 +376,9 @@ name|hasTransformedResource
 parameter_list|()
 block|{
 return|return
-literal|true
+name|doc
+operator|!=
+literal|null
 return|;
 block|}
 specifier|public
