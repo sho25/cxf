@@ -303,7 +303,7 @@ condition|(
 name|this
 operator|.
 name|bus
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
