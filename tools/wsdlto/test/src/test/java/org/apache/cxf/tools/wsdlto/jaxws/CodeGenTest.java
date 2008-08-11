@@ -5629,38 +5629,11 @@ name|class
 block|}
 argument_list|)
 decl_stmt|;
-name|soapBindingAnno
-operator|=
-name|AnnotationUtil
-operator|.
-name|getPrivMethodAnnotation
-argument_list|(
-name|method
-argument_list|,
-name|SOAPBinding
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
-name|assertNotNull
-argument_list|(
-name|soapBindingAnno
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
-name|SOAPBinding
-operator|.
-name|ParameterStyle
-operator|.
-name|BARE
-argument_list|,
-name|soapBindingAnno
-operator|.
-name|parameterStyle
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//the SOAPBinding annotation on the class sets it to bare, thus, this annotation may
+comment|//not be generated as it would be redundant
+comment|//soapBindingAnno = AnnotationUtil.getPrivMethodAnnotation(method, SOAPBinding.class);
+comment|//assertNotNull(soapBindingAnno);
+comment|//assertEquals(SOAPBinding.ParameterStyle.BARE, soapBindingAnno.parameterStyle());
 name|WebParam
 name|webParamAnno
 init|=

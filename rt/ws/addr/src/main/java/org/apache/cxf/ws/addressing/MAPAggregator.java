@@ -2516,7 +2516,7 @@ argument_list|)
 condition|)
 block|{
 return|return
-literal|"."
+literal|":"
 return|;
 block|}
 return|return

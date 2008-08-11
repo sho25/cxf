@@ -340,7 +340,7 @@ name|Resource
 argument_list|(
 name|name
 operator|=
-literal|"bus"
+literal|"cxf"
 argument_list|)
 specifier|public
 name|void

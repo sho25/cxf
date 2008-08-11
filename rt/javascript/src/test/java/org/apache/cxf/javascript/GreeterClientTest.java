@@ -176,13 +176,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|//something seems to be cached someplace that is screwing up the second test SOMETIMES
-comment|//make sure the garbage collector cleans up first.
-name|System
-operator|.
-name|gc
-argument_list|()
-expr_stmt|;
 name|setupRhino
 argument_list|(
 literal|"greeter-service-endpoint"

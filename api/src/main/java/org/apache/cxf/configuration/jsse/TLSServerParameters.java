@@ -19,16 +19,6 @@ end_package
 
 begin_import
 import|import
-name|javax
-operator|.
-name|annotation
-operator|.
-name|Resource
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -58,8 +48,6 @@ name|ClientAuthentication
 name|clientAuthentication
 decl_stmt|;
 comment|/**      * This parameter configures the server side to request and/or      * require client authentication.      */
-annotation|@
-name|Resource
 specifier|public
 specifier|final
 name|void
