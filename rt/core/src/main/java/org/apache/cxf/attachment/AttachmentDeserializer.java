@@ -1105,6 +1105,17 @@ operator|.
 name|getDataSource
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+operator|!
+operator|(
+name|s
+operator|instanceof
+name|AttachmentDataSource
+operator|)
+condition|)
+block|{
+comment|//AttachementDataSource objects are already cached
 name|cache
 argument_list|(
 operator|(
@@ -1118,6 +1129,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private
@@ -1157,6 +1169,14 @@ name|out
 init|=
 literal|null
 decl_stmt|;
+name|InputStream
+name|origIn
+init|=
+name|input
+operator|.
+name|getInputStream
+argument_list|()
+decl_stmt|;
 try|try
 block|{
 name|out
@@ -1188,6 +1208,11 @@ operator|.
 name|getInputStream
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|origIn
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 finally|finally

@@ -133,6 +133,11 @@ argument_list|,
 name|cache
 argument_list|)
 expr_stmt|;
+name|cache
+operator|.
+name|lockOutputStream
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|String

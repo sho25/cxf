@@ -328,6 +328,10 @@ expr_stmt|;
 block|}
 block|}
 specifier|protected
+name|boolean
+name|outputLocked
+decl_stmt|;
+specifier|protected
 name|OutputStream
 name|currentStream
 decl_stmt|;
@@ -585,6 +589,31 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{              }
+comment|/**      * Locks the output stream to prevent additional writes, but maintains      * a pointer to it so an InputStream can be obtained      * @throws IOException      */
+specifier|public
+name|void
+name|lockOutputStream
+parameter_list|()
+throws|throws
+name|IOException
+block|{
+name|currentStream
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
+name|outputLocked
+operator|=
+literal|true
+expr_stmt|;
+name|streamList
+operator|.
+name|remove
+argument_list|(
+name|currentStream
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|void
 name|close
@@ -836,6 +865,10 @@ block|}
 name|currentStream
 operator|=
 name|out
+expr_stmt|;
+name|outputLocked
+operator|=
+literal|false
 expr_stmt|;
 block|}
 specifier|public
@@ -1452,6 +1485,12 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+operator|!
+name|outputLocked
+condition|)
+block|{
 name|onWrite
 argument_list|()
 expr_stmt|;
@@ -1490,6 +1529,7 @@ name|len
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 specifier|public
 name|void
 name|write
@@ -1500,6 +1540,12 @@ name|b
 parameter_list|)
 throws|throws
 name|IOException
+block|{
+if|if
+condition|(
+operator|!
+name|outputLocked
+condition|)
 block|{
 name|onWrite
 argument_list|()
@@ -1537,6 +1583,7 @@ name|b
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 specifier|public
 name|void
 name|write
@@ -1546,6 +1593,12 @@ name|b
 parameter_list|)
 throws|throws
 name|IOException
+block|{
+if|if
+condition|(
+operator|!
+name|outputLocked
+condition|)
 block|{
 name|onWrite
 argument_list|()
@@ -1579,6 +1632,7 @@ argument_list|(
 name|b
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void
