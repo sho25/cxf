@@ -543,6 +543,11 @@ decl_stmt|;
 if|if
 condition|(
 name|ad
+operator|!=
+literal|null
+operator|&&
+operator|(
+name|ad
 operator|.
 name|equals
 argument_list|(
@@ -560,6 +565,7 @@ argument_list|()
 operator|+
 name|path
 argument_list|)
+operator|)
 condition|)
 block|{
 name|d
