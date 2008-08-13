@@ -2230,7 +2230,7 @@ name|XmlSchemaType
 argument_list|(
 name|schemaList
 index|[
-literal|0
+name|i
 index|]
 argument_list|)
 decl_stmt|;
