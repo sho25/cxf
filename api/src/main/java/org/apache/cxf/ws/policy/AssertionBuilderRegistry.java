@@ -71,6 +71,14 @@ argument_list|,
 name|AssertionBuilder
 argument_list|>
 block|{
+comment|/**      * Register the builder for all qnames from the builders      * getKnownElements call.      * @param builder the builder to register       */
+name|void
+name|register
+parameter_list|(
+name|AssertionBuilder
+name|builder
+parameter_list|)
+function_decl|;
 comment|/**      * Returns an assertion that is built using the specified xml element.      *       * @param element the element from which to build an Assertion.      * @return an Assertion that is built using the specified element.      */
 name|PolicyAssertion
 name|build
