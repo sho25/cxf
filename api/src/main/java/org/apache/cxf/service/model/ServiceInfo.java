@@ -768,12 +768,7 @@ name|getSchemas
 parameter_list|()
 block|{
 return|return
-name|Collections
-operator|.
-name|unmodifiableList
-argument_list|(
 name|schemas
-argument_list|)
 return|;
 block|}
 specifier|public

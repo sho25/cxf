@@ -21,16 +21,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -160,17 +150,6 @@ specifier|public
 specifier|abstract
 name|T
 name|getWSDLModel
-parameter_list|()
-function_decl|;
-specifier|public
-specifier|abstract
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-name|getCataLogResolvedMap
 parameter_list|()
 function_decl|;
 block|}

@@ -94,7 +94,6 @@ extends|extends
 name|AbstractValidator
 block|{
 specifier|protected
-specifier|final
 name|Definition
 name|def
 decl_stmt|;

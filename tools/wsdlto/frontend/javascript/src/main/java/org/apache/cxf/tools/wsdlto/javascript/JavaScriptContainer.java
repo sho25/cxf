@@ -856,16 +856,6 @@ name|getBus
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|serviceBuilder
-operator|.
-name|setCatalogResolvedMap
-argument_list|(
-name|builder
-operator|.
-name|getCataLogResolvedMap
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|String
 name|serviceName
 init|=
