@@ -324,9 +324,9 @@ decl_stmt|;
 if|if
 condition|(
 name|configurations
-operator|!=
+operator|==
 literal|null
-operator|&&
+operator|||
 name|configurations
 operator|.
 name|size

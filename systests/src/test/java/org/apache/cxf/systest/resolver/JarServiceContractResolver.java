@@ -303,7 +303,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/hello_world_resolver.jar"
+literal|"/wsdl_systest/hello_world_resolver.jar"
 argument_list|)
 decl_stmt|;
 name|JarFile

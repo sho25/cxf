@@ -43,7 +43,7 @@ specifier|final
 name|String
 name|P_NS
 init|=
-literal|"http://schemas.xmlsoap.org/ws/2004/09/policy"
+literal|"http://www.w3.org/ns/ws-policy"
 decl_stmt|;
 specifier|public
 specifier|static

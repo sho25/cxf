@@ -93,6 +93,14 @@ argument_list|,
 name|PolicyInterceptorProvider
 argument_list|>
 block|{
+comment|/**      * Register the builder for all qnames from the provider      * getAssertionTypes call.      * @param provider the provider to register       */
+name|void
+name|register
+parameter_list|(
+name|PolicyInterceptorProvider
+name|provider
+parameter_list|)
+function_decl|;
 name|List
 argument_list|<
 name|Interceptor

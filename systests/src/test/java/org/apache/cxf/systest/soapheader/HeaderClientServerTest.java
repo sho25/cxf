@@ -458,7 +458,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/pizza_service.wsdl"
+literal|"/wsdl_systest/pizza_service.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -506,7 +506,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/pizza_service.wsdl"
+literal|"/wsdl_systest/pizza_service.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull

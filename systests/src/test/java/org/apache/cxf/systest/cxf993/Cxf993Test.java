@@ -180,7 +180,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/cxf-993.wsdl"
+literal|"/wsdl_systest/cxf-993.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull

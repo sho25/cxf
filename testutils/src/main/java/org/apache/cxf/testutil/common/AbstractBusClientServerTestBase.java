@@ -246,7 +246,7 @@ expr_stmt|;
 block|}
 specifier|public
 specifier|static
-name|void
+name|Bus
 name|createStaticBus
 parameter_list|(
 name|String
@@ -259,13 +259,14 @@ name|defaultConfigFileName
 operator|=
 name|config
 expr_stmt|;
+return|return
 name|createStaticBus
 argument_list|()
-expr_stmt|;
+return|;
 block|}
 specifier|public
 specifier|static
-name|void
+name|Bus
 name|createStaticBus
 parameter_list|()
 throws|throws
@@ -310,6 +311,9 @@ argument_list|(
 name|staticBus
 argument_list|)
 expr_stmt|;
+return|return
+name|staticBus
+return|;
 block|}
 annotation|@
 name|After

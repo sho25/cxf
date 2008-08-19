@@ -130,7 +130,7 @@ specifier|final
 name|String
 name|WSDL_PATH
 init|=
-literal|"/wsdl/type_test_corba/type_test_corba-corba.wsdl"
+literal|"/wsdl_systest/type_test_corba/type_test_corba-corba.wsdl"
 decl_stmt|;
 specifier|protected
 specifier|static

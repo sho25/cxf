@@ -1034,6 +1034,17 @@ name|class
 argument_list|)
 control|)
 block|{
+if|if
+condition|(
+operator|!
+name|info
+operator|.
+name|containsExtensor
+argument_list|(
+name|ext
+argument_list|)
+condition|)
+block|{
 name|info
 operator|.
 name|addExtensor
@@ -1041,6 +1052,7 @@ argument_list|(
 name|ext
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

@@ -751,6 +751,13 @@ operator|.
 name|supportsAlternative
 argument_list|(
 name|alt1
+argument_list|,
+operator|new
+name|ArrayList
+argument_list|<
+name|QName
+argument_list|>
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -761,6 +768,13 @@ operator|.
 name|supportsAlternative
 argument_list|(
 name|alt2
+argument_list|,
+operator|new
+name|ArrayList
+argument_list|<
+name|QName
+argument_list|>
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;

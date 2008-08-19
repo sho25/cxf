@@ -719,7 +719,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/mtom.wsdl"
+literal|"/wsdl_systest/mtom.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
