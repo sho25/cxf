@@ -2287,16 +2287,6 @@ name|endpointInterface
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"GreeterRPCLit"
-argument_list|,
-name|ws
-operator|.
-name|name
-argument_list|()
-argument_list|)
-expr_stmt|;
 block|}
 annotation|@
 name|Test

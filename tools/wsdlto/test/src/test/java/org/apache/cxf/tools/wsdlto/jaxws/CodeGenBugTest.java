@@ -684,11 +684,11 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Greeter"
+literal|"org.apache.cxf.cxf1678.hello_world_soap_http.Greeter"
 argument_list|,
 name|webServiceAnn
 operator|.
-name|name
+name|endpointInterface
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -849,14 +849,19 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|"Greeter"
+literal|"Impl class should note generate name property value in webService annotation"
 argument_list|,
 name|webServiceAnn
 operator|.
 name|name
 argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|""
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertFalse
