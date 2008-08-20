@@ -431,9 +431,6 @@ name|processWsdl
 parameter_list|(
 name|File
 name|file
-parameter_list|,
-name|long
-name|cgtimestamp
 parameter_list|)
 throws|throws
 name|MojoExecutionException
@@ -474,12 +471,7 @@ decl_stmt|;
 name|boolean
 name|doWork
 init|=
-name|cgtimestamp
-operator|>
-name|doneFile
-operator|.
-name|lastModified
-argument_list|()
+literal|false
 decl_stmt|;
 if|if
 condition|(
@@ -812,14 +804,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-name|long
-name|timestamp
-init|=
-name|CodegenUtils
-operator|.
-name|getCodegenTimestamp
-argument_list|()
-decl_stmt|;
 for|for
 control|(
 name|File
@@ -831,8 +815,6 @@ block|{
 name|processWsdl
 argument_list|(
 name|wsdl
-argument_list|,
-name|timestamp
 argument_list|)
 expr_stmt|;
 block|}

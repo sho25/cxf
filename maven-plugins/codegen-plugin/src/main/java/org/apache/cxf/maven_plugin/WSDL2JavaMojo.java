@@ -920,14 +920,6 @@ argument_list|(
 literal|"java.class.path"
 argument_list|)
 decl_stmt|;
-name|long
-name|timestamp
-init|=
-name|CodegenUtils
-operator|.
-name|getCodegenTimestamp
-argument_list|()
-decl_stmt|;
 name|boolean
 name|result
 init|=
@@ -965,8 +957,6 @@ block|{
 name|processWsdl
 argument_list|(
 name|o
-argument_list|,
-name|timestamp
 argument_list|)
 expr_stmt|;
 name|File
@@ -1198,9 +1188,6 @@ name|processWsdl
 parameter_list|(
 name|WsdlOption
 name|wsdlOption
-parameter_list|,
-name|long
-name|cgtimestamp
 parameter_list|)
 throws|throws
 name|MojoExecutionException
@@ -1422,12 +1409,7 @@ block|}
 name|boolean
 name|doWork
 init|=
-name|cgtimestamp
-operator|>
-name|doneFile
-operator|.
-name|lastModified
-argument_list|()
+literal|false
 decl_stmt|;
 if|if
 condition|(
