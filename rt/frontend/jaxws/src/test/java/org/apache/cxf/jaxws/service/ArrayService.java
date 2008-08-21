@@ -174,6 +174,10 @@ argument_list|(
 name|name
 operator|=
 literal|"input"
+argument_list|,
+name|targetNamespace
+operator|=
+literal|"http://service.jaxws.cxf.apache.org/"
 argument_list|)
 name|List
 argument_list|<
