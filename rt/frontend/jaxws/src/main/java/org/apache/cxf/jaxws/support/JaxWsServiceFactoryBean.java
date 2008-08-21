@@ -3051,6 +3051,8 @@ init|=
 operator|new
 name|WrapperClassGenerator
 argument_list|(
+name|this
+argument_list|,
 name|serviceInfo
 operator|.
 name|getInterface

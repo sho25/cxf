@@ -12552,7 +12552,7 @@ literal|null
 return|;
 block|}
 specifier|public
-name|Boolean
+name|boolean
 name|isWrapperPartQualified
 parameter_list|(
 name|MessagePartInfo
