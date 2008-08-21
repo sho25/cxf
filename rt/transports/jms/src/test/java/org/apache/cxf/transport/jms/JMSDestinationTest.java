@@ -1760,15 +1760,42 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"property has been excluded"
+literal|"property has been excluded, only CONTENT_TYPE should be here"
 argument_list|,
 name|inHeader
 operator|.
 name|getProperty
 argument_list|()
 operator|.
-name|isEmpty
+name|size
 argument_list|()
+operator|==
+literal|1
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"property has been excluded, only CONTENT_TYPE should be here"
+argument_list|,
+name|inHeader
+operator|.
+name|getProperty
+argument_list|()
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|Message
+operator|.
+name|CONTENT_TYPE
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// wait for a while for the jms session recycling

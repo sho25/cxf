@@ -1582,6 +1582,14 @@ argument_list|,
 name|jmsMessage
 argument_list|)
 expr_stmt|;
+comment|//ensure that the contentType is set to the out jms message header
+name|base
+operator|.
+name|setContentToProtocalHeader
+argument_list|(
+name|outMessage
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String
