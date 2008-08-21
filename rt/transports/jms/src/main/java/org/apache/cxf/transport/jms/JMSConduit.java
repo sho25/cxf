@@ -751,7 +751,7 @@ return|return
 name|LOG
 return|;
 block|}
-comment|/**      * Receive mechanics.      *      * @param pooledSession the shared JMS resources      * @retrun the response buffer      */
+comment|/**      * Receive mechanics.      *      * @param pooledSession the shared JMS resources      * @param inMessage       * @retrun the response buffer      */
 specifier|private
 name|Object
 name|receive
@@ -761,6 +761,9 @@ name|pooledSession
 parameter_list|,
 name|Message
 name|outMessage
+parameter_list|,
+name|Message
+name|inMessage
 parameter_list|)
 throws|throws
 name|JMSException
@@ -853,7 +856,7 @@ name|populateIncomingContext
 argument_list|(
 name|jmsMessage
 argument_list|,
-name|outMessage
+name|inMessage
 argument_list|,
 name|JMSConstants
 operator|.
@@ -1839,6 +1842,8 @@ argument_list|(
 name|pooledSession
 argument_list|,
 name|outMessage
+argument_list|,
+name|inMessage
 argument_list|)
 expr_stmt|;
 block|}
@@ -1873,43 +1878,6 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-comment|//set the message header back to the incomeMessage
-name|inMessage
-operator|.
-name|put
-argument_list|(
-name|JMSConstants
-operator|.
-name|JMS_CLIENT_RESPONSE_HEADERS
-argument_list|,
-name|outMessage
-operator|.
-name|get
-argument_list|(
-name|JMSConstants
-operator|.
-name|JMS_CLIENT_RESPONSE_HEADERS
-argument_list|)
-argument_list|)
-expr_stmt|;
-name|inMessage
-operator|.
-name|put
-argument_list|(
-name|Message
-operator|.
-name|PROTOCOL_HEADERS
-argument_list|,
-name|outMessage
-operator|.
-name|get
-argument_list|(
-name|Message
-operator|.
-name|PROTOCOL_HEADERS
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|getLogger
 argument_list|()
 operator|.
