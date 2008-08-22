@@ -28,10 +28,6 @@ import|;
 end_import
 
 begin_comment
-comment|//import org.apache.cxf.feature.Features;
-end_comment
-
-begin_comment
 comment|/**  *   */
 end_comment
 
@@ -47,7 +43,6 @@ name|targetNamespace
 operator|=
 literal|"uri:org.apache.cxf.javascript.fortest"
 argument_list|)
-comment|//@org.apache.cxf.feature.Features(features = "org.apache.cxf.feature.LoggingFeature")
 specifier|public
 class|class
 name|SimpleDocLitWrappedImpl
@@ -82,6 +77,17 @@ specifier|private
 name|TestBean1
 index|[]
 name|lastBean1Array
+decl_stmt|;
+specifier|private
+name|SpecificGenericClass
+name|lastSpecificGeneric
+decl_stmt|;
+specifier|private
+name|GenericGenericClass
+argument_list|<
+name|Double
+argument_list|>
+name|lastGenericGeneric
 decl_stmt|;
 comment|/** {@inheritDoc}*/
 specifier|public
@@ -347,6 +353,50 @@ parameter_list|()
 block|{
 return|return
 name|lastBean1Array
+return|;
+block|}
+specifier|public
+name|void
+name|genericTestFunction
+parameter_list|(
+name|SpecificGenericClass
+name|sgc
+parameter_list|,
+name|GenericGenericClass
+argument_list|<
+name|Double
+argument_list|>
+name|ggc
+parameter_list|)
+block|{
+name|lastSpecificGeneric
+operator|=
+name|sgc
+expr_stmt|;
+name|lastGenericGeneric
+operator|=
+name|ggc
+expr_stmt|;
+block|}
+specifier|public
+name|SpecificGenericClass
+name|getLastSpecificGeneric
+parameter_list|()
+block|{
+return|return
+name|lastSpecificGeneric
+return|;
+block|}
+specifier|public
+name|GenericGenericClass
+argument_list|<
+name|Double
+argument_list|>
+name|getLastGenericGeneric
+parameter_list|()
+block|{
+return|return
+name|lastGenericGeneric
 return|;
 block|}
 block|}

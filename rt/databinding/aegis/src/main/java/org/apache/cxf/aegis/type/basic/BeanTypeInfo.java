@@ -1721,6 +1721,15 @@ name|minOccurs
 return|;
 block|}
 specifier|public
+name|long
+name|getMinOccurs
+parameter_list|()
+block|{
+return|return
+name|minOccurs
+return|;
+block|}
+specifier|public
 name|void
 name|setDefaultMinOccurs
 parameter_list|(
