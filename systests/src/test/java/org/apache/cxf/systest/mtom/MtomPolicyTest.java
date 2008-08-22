@@ -516,7 +516,7 @@ argument_list|)
 decl_stmt|;
 name|assertValid
 argument_list|(
-literal|"//faultstring[text()='These policy alternatives can be satisfied: "
+literal|"//faultstring[text()='These policy alternatives can not be satisfied: "
 operator|+
 literal|"[{http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization}"
 operator|+

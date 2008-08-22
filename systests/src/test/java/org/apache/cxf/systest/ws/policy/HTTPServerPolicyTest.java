@@ -578,7 +578,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"These policy alternatives can be satisfied: "
+literal|"These policy alternatives can not be satisfied: "
 operator|+
 literal|"[{http://cxf.apache.org/transports/http/configuration}server]"
 argument_list|,

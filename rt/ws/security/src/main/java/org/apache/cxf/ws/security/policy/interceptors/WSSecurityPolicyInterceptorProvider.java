@@ -142,15 +142,6 @@ name|add
 argument_list|(
 name|SP11Constants
 operator|.
-name|HTTPS_TOKEN
-argument_list|)
-expr_stmt|;
-name|ASSERTION_TYPES
-operator|.
-name|add
-argument_list|(
-name|SP11Constants
-operator|.
 name|LAYOUT
 argument_list|)
 expr_stmt|;

@@ -75,18 +75,6 @@ name|SPConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
-name|PolicyComponent
-import|;
-end_import
-
 begin_comment
 comment|/**  * @author Ruchith Fernando (ruchith.fernando@gmail.com)  */
 end_comment
@@ -210,17 +198,6 @@ operator|.
 name|getHttpsToken
 argument_list|()
 return|;
-block|}
-specifier|public
-name|PolicyComponent
-name|normalize
-parameter_list|()
-block|{
-throw|throw
-operator|new
-name|UnsupportedOperationException
-argument_list|()
-throw|;
 block|}
 specifier|public
 name|void

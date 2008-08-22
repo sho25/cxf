@@ -154,7 +154,7 @@ specifier|public
 class|class
 name|AlgorithmSuite
 extends|extends
-name|AbstractConfigurableSecurityAssertion
+name|AbstractSecurityAssertion
 block|{
 specifier|private
 specifier|static

@@ -145,6 +145,19 @@ argument_list|()
 return|;
 block|}
 specifier|public
+name|void
+name|setService
+parameter_list|(
+name|ServiceInfo
+name|s
+parameter_list|)
+block|{
+name|service
+operator|=
+name|s
+expr_stmt|;
+block|}
+specifier|public
 name|ServiceInfo
 name|getService
 parameter_list|()
@@ -452,6 +465,14 @@ block|{
 return|return
 literal|"BindingQName="
 operator|+
+operator|(
+name|binding
+operator|==
+literal|null
+condition|?
+literal|""
+else|:
+operator|(
 name|binding
 operator|.
 name|getName
@@ -459,6 +480,16 @@ argument_list|()
 operator|+
 literal|", ServiceQName="
 operator|+
+operator|(
+name|binding
+operator|.
+name|getService
+argument_list|()
+operator|==
+literal|null
+condition|?
+literal|""
+else|:
 name|binding
 operator|.
 name|getService
@@ -466,6 +497,9 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+operator|)
+operator|)
+operator|)
 operator|+
 literal|", QName="
 operator|+
