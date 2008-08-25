@@ -291,7 +291,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|//@org.junit.Ignore // until we sort out the wsdl4j problem.
 annotation|@
 name|Test
 specifier|public
