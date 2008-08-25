@@ -37,7 +37,31 @@ name|w3c
 operator|.
 name|dom
 operator|.
+name|Document
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
 name|Node
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|NodeList
 import|;
 end_import
 
@@ -230,6 +254,44 @@ argument_list|(
 literal|"//sb:getSimpleBeanResponse/sb:return/beanz:bleh[text()=\"bleh\"]"
 argument_list|,
 name|response
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testArrayWsdl
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|Document
+name|doc
+init|=
+name|getWSDLDocument
+argument_list|(
+literal|"Array"
+argument_list|)
+decl_stmt|;
+name|NodeList
+name|stuff
+init|=
+name|assertValid
+argument_list|(
+literal|"//xsd:complexType[@name='ArrayOfString-2-50']"
+argument_list|,
+name|doc
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|1
+argument_list|,
+name|stuff
+operator|.
+name|getLength
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -610,68 +672,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// public void testGetArray()
-comment|// throws Exception
-comment|// {
-comment|// Document response = invokeService("Array",
-comment|// "/org/codehaus/xfire/message/wrapped/GetStringArray11.xml");
-comment|//
-comment|// addNamespace("a", "urn:Array");
-comment|// addNamespace("sb", "http://test.java.xfire.codehaus.org");
-comment|// assertValid("//a:getStringArrayResponse", response);
-comment|// assertValid("//a:getStringArrayResponse/a:out/a:string", response);
-comment|// }
-comment|//
-comment|// public void testArrayService()
-comment|// throws Exception
-comment|// {
-comment|// Document response = invokeService("Array",
-comment|// "/org/codehaus/xfire/message/wrapped/SubmitStringArray11.xml");
-comment|//
-comment|// addNamespace("a", "urn:Array");
-comment|// addNamespace("sb", "http://test.java.xfire.codehaus.org");
-comment|// assertValid("//a:SubmitStringArrayResponse", response);
-comment|// assertValid("//a:SubmitStringArrayResponse/a:out[text()='true']",
-comment|// response);
-comment|// }
-comment|//
-comment|// public void testArrayServiceNoWhitespace()
-comment|// throws Exception
-comment|// {
-comment|// Document response = invokeService("Array",
-comment|// "/org/codehaus/xfire/message/wrapped/SubmitStringArray11NoWS.xml");
-comment|//
-comment|// addNamespace("a", "urn:Array");
-comment|// addNamespace("sb", "http://test.java.xfire.codehaus.org");
-comment|// assertValid("//a:SubmitStringArrayResponse", response);
-comment|// assertValid("//a:SubmitStringArrayResponse/a:out[text()='true']",
-comment|// response);
-comment|// }
-comment|//
-comment|// public void testArrayServiceWSDL()
-comment|// throws Exception
-comment|// {
-comment|// Document doc = getWSDLDocument("Array");
-comment|//
-comment|// addNamespace("wsdl", WSDLWriter.WSDL11_NS);
-comment|// addNamespace("wsdlsoap", WSDLWriter.WSDL11_SOAP_NS);
-comment|// addNamespace("xsd", SoapConstants.XSD);
-comment|//
-comment|// assertValid("/wsdl:definitions/wsdl:types", doc);
-comment|// assertValid("/wsdl:definitions/wsdl:types/xsd:schema", doc);
-comment|// assertValid("/wsdl:definitions/wsdl:types/xsd:schema[@targetNamespace='urn:Array']",
-comment|// doc);
-comment|// assertValid("//xsd:schema[@targetNamespace='urn:Array']/xsd:element[@name='SubmitBeanArray']",
-comment|// doc);
-comment|// assertValid(
-comment|// "//xsd:element[@name='SubmitStringArray']/xsd:complexType/xsd:sequence/xsd:element"
-comment|//    + "[@name='array'][@type='tns:ArrayOfString']",
-comment|// doc);
-comment|// assertValid(
-comment|// "//xsd:element[@name='SubmitBeanArray']/xsd:complexType/xsd:sequence/xsd:element"
-comment|//  + "[@name='array'][@type='ns1:ArrayOfSimpleBean']",
-comment|// doc);
-comment|// }
 block|}
 end_class
 

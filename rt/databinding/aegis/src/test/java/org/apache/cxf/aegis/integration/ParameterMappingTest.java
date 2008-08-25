@@ -306,7 +306,7 @@ literal|"/wsdl:definitions/wsdl:types/"
 operator|+
 literal|"xsd:schema[@targetNamespace= 'http://services.aegis.cxf.apache.org']"
 operator|+
-literal|"/xsd:complexType[@name='ArrayOfString-50-2']"
+literal|"/xsd:complexType[@name='ArrayOfString-2-50']"
 operator|+
 literal|"/xsd:sequence"
 operator|+
