@@ -1475,6 +1475,12 @@ function_decl|;
 specifier|public
 specifier|abstract
 name|QName
+name|getIncludeTimestamp
+parameter_list|()
+function_decl|;
+specifier|public
+specifier|abstract
+name|QName
 name|getSymmetricBinding
 parameter_list|()
 function_decl|;

@@ -71,7 +71,7 @@ name|security
 operator|.
 name|policy
 operator|.
-name|SPConstants
+name|SP12Constants
 import|;
 end_import
 
@@ -81,9 +81,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|neethi
+name|cxf
 operator|.
-name|PolicyComponent
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|SPConstants
 import|;
 end_import
 
@@ -229,7 +235,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|QName
-name|getName
+name|getRealName
 parameter_list|()
 block|{
 return|return
@@ -240,12 +246,17 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|PolicyComponent
-name|normalize
+name|QName
+name|getName
 parameter_list|()
 block|{
 return|return
-name|this
+name|SP12Constants
+operator|.
+name|INSTANCE
+operator|.
+name|getWSS10
+argument_list|()
 return|;
 block|}
 specifier|public
@@ -261,7 +272,7 @@ block|{
 name|String
 name|localname
 init|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getLocalPart
@@ -270,7 +281,7 @@ decl_stmt|;
 name|String
 name|namespaceURI
 init|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getNamespaceURI
@@ -295,7 +306,7 @@ condition|)
 block|{
 name|prefix
 operator|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getPrefix

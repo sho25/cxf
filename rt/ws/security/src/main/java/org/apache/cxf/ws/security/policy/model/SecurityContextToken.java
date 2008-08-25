@@ -71,7 +71,7 @@ name|security
 operator|.
 name|policy
 operator|.
-name|SPConstants
+name|SP12Constants
 import|;
 end_import
 
@@ -81,9 +81,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|neethi
+name|cxf
 operator|.
-name|PolicyComponent
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|SPConstants
 import|;
 end_import
 
@@ -169,10 +175,10 @@ operator|=
 name|sc10SecurityContextToken
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      * @see org.apache.neethi.Assertion#getName()      */
+comment|/*      * (non-Javadoc)      * @see org.apache.neethi.Assertion#getRealName()      */
 specifier|public
 name|QName
-name|getName
+name|getRealName
 parameter_list|()
 block|{
 return|return
@@ -182,20 +188,19 @@ name|getSecurityContextToken
 argument_list|()
 return|;
 block|}
-comment|/*      * (non-Javadoc)      * @see org.apache.neethi.Assertion#normalize()      */
 specifier|public
-name|PolicyComponent
-name|normalize
+name|QName
+name|getName
 parameter_list|()
 block|{
-comment|// TODO TODO Sanka
-throw|throw
-operator|new
-name|UnsupportedOperationException
-argument_list|(
-literal|"TODO Sanka"
-argument_list|)
-throw|;
+return|return
+name|SP12Constants
+operator|.
+name|INSTANCE
+operator|.
+name|getSecurityContextToken
+argument_list|()
+return|;
 block|}
 comment|/*      * (non-Javadoc)      * @see org.apache.neethi.PolicyComponent#serialize(javax.xml.stream.XMLStreamWriter)      */
 specifier|public

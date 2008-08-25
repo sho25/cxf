@@ -855,6 +855,13 @@ argument_list|(
 name|msg
 argument_list|)
 expr_stmt|;
+name|checkPolicies
+argument_list|(
+name|msg
+argument_list|,
+name|reqData
+argument_list|)
+expr_stmt|;
 name|Vector
 name|actions
 init|=

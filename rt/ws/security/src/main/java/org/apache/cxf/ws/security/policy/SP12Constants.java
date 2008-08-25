@@ -2612,6 +2612,15 @@ return|return
 name|REQUIRE_DERIVED_KEYS
 return|;
 block|}
+specifier|public
+name|QName
+name|getIncludeTimestamp
+parameter_list|()
+block|{
+return|return
+name|INCLUDE_TIMESTAMP
+return|;
+block|}
 block|}
 end_class
 

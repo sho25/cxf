@@ -93,18 +93,6 @@ name|SPConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
-name|PolicyComponent
-import|;
-end_import
-
 begin_comment
 comment|/**  * Model bean to capture Trust10 assertion info  */
 end_comment
@@ -339,7 +327,17 @@ operator|=
 name|requireAppliesTo
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      * @see org.apache.neethi.Assertion#getName()      */
+specifier|public
+name|QName
+name|getRealName
+parameter_list|()
+block|{
+return|return
+name|SP12Constants
+operator|.
+name|TRUST_13
+return|;
+block|}
 specifier|public
 name|QName
 name|getName
@@ -349,30 +347,6 @@ return|return
 name|SP12Constants
 operator|.
 name|TRUST_13
-return|;
-block|}
-comment|/*      * (non-Javadoc)      * @see org.apache.neethi.Assertion#isOptional()      */
-specifier|public
-name|boolean
-name|isOptional
-parameter_list|()
-block|{
-comment|// TODO TODO Sanka
-throw|throw
-operator|new
-name|UnsupportedOperationException
-argument_list|(
-literal|"TODO Sanka"
-argument_list|)
-throw|;
-block|}
-specifier|public
-name|PolicyComponent
-name|normalize
-parameter_list|()
-block|{
-return|return
-name|this
 return|;
 block|}
 specifier|public
@@ -388,7 +362,7 @@ block|{
 name|String
 name|localname
 init|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getLocalPart
@@ -397,7 +371,7 @@ decl_stmt|;
 name|String
 name|namespaceURI
 init|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getNamespaceURI
@@ -422,7 +396,7 @@ condition|)
 block|{
 name|prefix
 operator|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getPrefix

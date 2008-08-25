@@ -247,6 +247,16 @@ block|}
 specifier|public
 specifier|static
 name|Bus
+name|getStaticBus
+parameter_list|()
+block|{
+return|return
+name|staticBus
+return|;
+block|}
+specifier|public
+specifier|static
+name|Bus
 name|createStaticBus
 parameter_list|(
 name|String

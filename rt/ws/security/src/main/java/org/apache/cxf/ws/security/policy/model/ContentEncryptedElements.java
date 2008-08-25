@@ -314,7 +314,7 @@ block|{
 name|String
 name|localName
 init|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getLocalPart
@@ -323,7 +323,7 @@ decl_stmt|;
 name|String
 name|namespaceURI
 init|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getNamespaceURI
@@ -351,7 +351,7 @@ condition|)
 block|{
 name|prefix
 operator|=
-name|getName
+name|getRealName
 argument_list|()
 operator|.
 name|getPrefix
@@ -500,6 +500,17 @@ operator|.
 name|writeEndElement
 argument_list|()
 expr_stmt|;
+block|}
+specifier|public
+name|QName
+name|getRealName
+parameter_list|()
+block|{
+return|return
+name|SP12Constants
+operator|.
+name|CONTENT_ENCRYPTED_ELEMENTS
+return|;
 block|}
 specifier|public
 name|QName
