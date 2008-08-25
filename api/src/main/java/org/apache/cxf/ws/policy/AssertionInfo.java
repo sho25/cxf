@@ -78,6 +78,22 @@ return|return
 name|assertion
 return|;
 block|}
+specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|assertion
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|":"
+operator|+
+name|asserted
+return|;
+block|}
 block|}
 end_class
 

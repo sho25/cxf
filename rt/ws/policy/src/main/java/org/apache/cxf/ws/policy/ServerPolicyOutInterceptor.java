@@ -442,7 +442,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"Added interceptor of type {0}"
 argument_list|,
