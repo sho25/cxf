@@ -453,22 +453,6 @@ name|jaxws
 operator|.
 name|support
 operator|.
-name|ContextPropertiesMapping
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxws
-operator|.
-name|support
-operator|.
 name|JaxWsEndpointImpl
 import|;
 end_import
@@ -1087,14 +1071,6 @@ name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|// need to do context mapping from jax-ws to cxf message
-name|ContextPropertiesMapping
-operator|.
-name|mapRequestfromJaxws2Cxf
-argument_list|(
-name|reqContext
-argument_list|)
-expr_stmt|;
 name|context
 operator|.
 name|put
@@ -1363,14 +1339,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|// need to do context mapping from cxf message to jax-ws
-name|ContextPropertiesMapping
-operator|.
-name|mapResponsefromCxf2Jaxws
-argument_list|(
-name|respContext
-argument_list|)
-expr_stmt|;
 name|Map
 argument_list|<
 name|String
@@ -2026,6 +1994,8 @@ name|WrappedMessageContext
 argument_list|(
 name|realMap
 argument_list|,
+literal|null
+argument_list|,
 name|Scope
 operator|.
 name|APPLICATION
@@ -2145,6 +2115,9 @@ operator|.
 name|set
 argument_list|(
 operator|new
+name|WrappedMessageContext
+argument_list|(
+operator|new
 name|HashMap
 argument_list|<
 name|String
@@ -2152,6 +2125,13 @@ argument_list|,
 name|Object
 argument_list|>
 argument_list|()
+argument_list|,
+literal|null
+argument_list|,
+name|Scope
+operator|.
+name|APPLICATION
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

@@ -6532,34 +6532,6 @@ argument_list|,
 name|lmc
 argument_list|)
 expr_stmt|;
-name|assertNotNull
-argument_list|(
-name|message
-operator|.
-name|get
-argument_list|(
-name|MessageContext
-operator|.
-name|MESSAGE_OUTBOUND_PROPERTY
-argument_list|)
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
-name|outboundProperty
-argument_list|,
-name|message
-operator|.
-name|get
-argument_list|(
-name|MessageContext
-operator|.
-name|MESSAGE_OUTBOUND_PROPERTY
-argument_list|)
-argument_list|)
-expr_stmt|;
-comment|// assertNotNull(message.get(ObjectMessageContext.REQUESTOR_ROLE_PROPERTY));
-comment|// assertEquals(requestorProperty, message.get(ObjectMessageContext.REQUESTOR_ROLE_PROPERTY));
 name|assertTrue
 argument_list|(
 literal|"handler not invoked"
