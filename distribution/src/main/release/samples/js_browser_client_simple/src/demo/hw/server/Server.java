@@ -89,7 +89,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Server ready..."
+literal|"Server ready on http://localhost:9000/SoapContext/SoapPort ..."
 argument_list|)
 expr_stmt|;
 name|Thread
