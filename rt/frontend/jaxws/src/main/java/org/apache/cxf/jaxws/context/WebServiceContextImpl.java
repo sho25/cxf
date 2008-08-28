@@ -555,7 +555,6 @@ name|MessageContext
 name|ctx
 parameter_list|)
 block|{
-comment|//ContextPropertiesMapping.mapCxf2Jaxws(ctx);
 name|context
 operator|.
 name|set
