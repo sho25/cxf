@@ -596,11 +596,6 @@ operator|.
 name|getAssertion
 argument_list|()
 decl_stmt|;
-name|boolean
-name|asserted
-init|=
-literal|true
-decl_stmt|;
 name|HttpURLConnection
 name|connection
 init|=
@@ -614,6 +609,13 @@ argument_list|(
 literal|"http.connection"
 argument_list|)
 decl_stmt|;
+name|ai
+operator|.
+name|setAsserted
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String
@@ -662,9 +664,12 @@ operator|==
 literal|0
 condition|)
 block|{
-name|asserted
-operator|=
-literal|false
+name|ai
+operator|.
+name|setNotAsserted
+argument_list|(
+literal|"RequireClientCertificate is set, but no local certificates"
+argument_list|)
 expr_stmt|;
 block|}
 if|if
@@ -715,9 +720,12 @@ literal|"Basic"
 argument_list|)
 condition|)
 block|{
-name|asserted
-operator|=
-literal|false
+name|ai
+operator|.
+name|setNotAsserted
+argument_list|(
+literal|"HttpBasicAuthentication is set, but not being used"
+argument_list|)
 expr_stmt|;
 block|}
 block|}
@@ -769,27 +777,26 @@ literal|"Digest"
 argument_list|)
 condition|)
 block|{
-name|asserted
-operator|=
-literal|false
+name|ai
+operator|.
+name|setNotAsserted
+argument_list|(
+literal|"HttpDigestAuthentication is set, but not being used"
+argument_list|)
 expr_stmt|;
 block|}
 block|}
 block|}
 else|else
 block|{
-name|asserted
-operator|=
-literal|false
-expr_stmt|;
-block|}
 name|ai
 operator|.
-name|setAsserted
+name|setNotAsserted
 argument_list|(
-name|asserted
+literal|"HttpURLConnection is not a HttpsURLConnection"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

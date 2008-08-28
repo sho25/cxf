@@ -87,42 +87,19 @@ name|LAYOUT
 init|=
 literal|"Layout"
 decl_stmt|;
-comment|/**      * Security Header Layout : Strict      */
 specifier|public
-specifier|static
-specifier|final
-name|String
-name|LAYOUT_STRICT
-init|=
-literal|"Strict"
-decl_stmt|;
-comment|/**      * Security Header Layout : Lax      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|LAYOUT_LAX
-init|=
-literal|"Lax"
-decl_stmt|;
-comment|/**      * Security Header Layout : LaxTimestampFirst      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|LAYOUT_LAX_TIMESTAMP_FIRST
-init|=
-literal|"LaxTimestampFirst"
-decl_stmt|;
-comment|/**      * Security Header Layout : LaxTimestampLast      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|LAYOUT_LAX_TIMESTAMP_LAST
-init|=
-literal|"LaxTimestampLast"
-decl_stmt|;
+enum|enum
+name|Layout
+block|{
+name|Lax
+block|,
+name|Strict
+block|,
+name|LaxTimestampFirst
+block|,
+name|LaxTimestampLast
+block|}
+empty_stmt|;
 comment|////////////////////////////////////////////////////////////////////////////////////////////////
 comment|/**      * Protection Order : EncryptBeforeSigning      */
 specifier|public

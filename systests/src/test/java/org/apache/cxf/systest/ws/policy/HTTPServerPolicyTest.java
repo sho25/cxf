@@ -576,16 +576,22 @@ name|getLocalPart
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"These policy alternatives can not be satisfied: "
-operator|+
-literal|"[{http://cxf.apache.org/transports/http/configuration}server]"
-argument_list|,
+name|String
+name|text
+init|=
 name|sf
 operator|.
 name|getMessage
 argument_list|()
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|text
+operator|.
+name|contains
+argument_list|(
+literal|"{http://cxf.apache.org/transports/http/configuration}server"
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// assertEquals("INCOMPATIBLE_HTTPSERVERPOLICY_ASSERTIONS", ex.getCode());
