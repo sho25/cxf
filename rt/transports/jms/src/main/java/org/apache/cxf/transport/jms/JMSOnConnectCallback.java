@@ -34,7 +34,7 @@ end_comment
 begin_interface
 specifier|public
 interface|interface
-name|JMSTransport
+name|JMSOnConnectCallback
 block|{
 name|AddressType
 name|getJMSAddress
@@ -44,7 +44,7 @@ name|SessionPoolType
 name|getSessionPool
 parameter_list|()
 function_decl|;
-comment|/**      * Callback from the JMSProviderHub indicating the ClientTransport has      * been sucessfully connected.      *      * @param targetDestination the target destination      * @param sessionFactory used to get access to a pooled JMS resources      */
+comment|/**      * Callback from the JMSProviderHub indicating the ClientTransport has been sucessfully connected.      *      * @param targetDestination the target destination      * @param sessionFactory used to get access to a pooled JMS resources      */
 name|void
 name|connected
 parameter_list|(

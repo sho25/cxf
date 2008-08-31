@@ -181,6 +181,16 @@ name|javax
 operator|.
 name|jms
 operator|.
+name|Destination
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jms
+operator|.
 name|JMSException
 import|;
 end_import
@@ -514,7 +524,7 @@ name|AbstractMultiplexDestination
 implements|implements
 name|Configurable
 implements|,
-name|JMSTransport
+name|JMSOnConnectCallback
 block|{
 specifier|protected
 specifier|static
@@ -555,13 +565,33 @@ specifier|protected
 name|SessionPoolType
 name|sessionPool
 decl_stmt|;
+specifier|protected
+name|Destination
+name|targetDestination
+decl_stmt|;
+specifier|protected
+name|Destination
+name|replyDestination
+decl_stmt|;
+specifier|protected
+name|JMSSessionFactory
+name|sessionFactory
+decl_stmt|;
+specifier|protected
+name|Bus
+name|bus
+decl_stmt|;
+specifier|protected
+name|EndpointInfo
+name|endpointInfo
+decl_stmt|;
+specifier|protected
+name|String
+name|beanNameSuffix
+decl_stmt|;
 specifier|final
 name|ConduitInitiator
 name|conduitInitiator
-decl_stmt|;
-specifier|final
-name|JMSTransportBase
-name|base
 decl_stmt|;
 name|PooledSession
 name|listenerSession
@@ -598,21 +628,23 @@ argument_list|,
 name|info
 argument_list|)
 expr_stmt|;
-name|base
-operator|=
-operator|new
-name|JMSTransportBase
-argument_list|(
-name|b
-argument_list|,
-name|endpointInfo
-argument_list|,
-literal|true
-argument_list|,
-name|BASE_BEAN_NAME_SUFFIX
-argument_list|,
 name|this
-argument_list|)
+operator|.
+name|bus
+operator|=
+name|b
+expr_stmt|;
+name|this
+operator|.
+name|endpointInfo
+operator|=
+name|info
+expr_stmt|;
+name|this
+operator|.
+name|beanNameSuffix
+operator|=
+name|BASE_BEAN_NAME_SUFFIX
 expr_stmt|;
 name|conduitInitiator
 operator|=
@@ -690,22 +722,24 @@ name|connect
 argument_list|(
 name|this
 argument_list|,
+name|getJMSAddress
+argument_list|()
+argument_list|,
+name|getSessionPool
+argument_list|()
+argument_list|,
 name|serverConfig
 argument_list|,
 name|runtimePolicy
 argument_list|)
 expr_stmt|;
-comment|//Get a non-pooled session.
+comment|// Get a non-pooled session.
 name|listenerSession
 operator|=
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|get
 argument_list|(
-name|base
-operator|.
 name|targetDestination
 argument_list|)
 expr_stmt|;
@@ -807,8 +841,6 @@ name|join
 argument_list|()
 expr_stmt|;
 block|}
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|shutdown
@@ -821,7 +853,7 @@ name|InterruptedException
 name|e
 parameter_list|)
 block|{
-comment|//Do nothing here
+comment|// Do nothing here
 block|}
 catch|catch
 parameter_list|(
@@ -829,7 +861,7 @@ name|JMSException
 name|ex
 parameter_list|)
 block|{
-comment|//Do nothing here
+comment|// Do nothing here
 block|}
 block|}
 specifier|public
@@ -910,8 +942,6 @@ condition|)
 block|{
 name|replyTo
 operator|=
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|getQueueFromInitialContext
@@ -954,8 +984,6 @@ else|:
 operator|(
 name|Queue
 operator|)
-name|base
-operator|.
 name|replyDestination
 expr_stmt|;
 block|}
@@ -1077,7 +1105,7 @@ expr_stmt|;
 name|Object
 name|request
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|unmarshal
 argument_list|(
@@ -1145,7 +1173,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-comment|//Both ByteMessage and ObjectMessage would get unmarshalled to byte array.
+comment|// Both ByteMessage and ObjectMessage would get unmarshalled to byte array.
 name|bytes
 operator|=
 operator|(
@@ -1178,7 +1206,7 @@ name|bytes
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|base
+name|JMSUtils
 operator|.
 name|populateIncomingContext
 argument_list|(
@@ -1229,7 +1257,7 @@ argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
-comment|//handle the incoming message
+comment|// handle the incoming message
 name|incomingObserver
 operator|.
 name|onMessage
@@ -1244,7 +1272,7 @@ name|JMSException
 name|jmsex
 parameter_list|)
 block|{
-comment|//TODO: need to revisit for which exception should we throw.
+comment|// TODO: need to revisit for which exception should we throw.
 throw|throw
 operator|new
 name|IOException
@@ -1289,16 +1317,23 @@ name|JMSSessionFactory
 name|factory
 parameter_list|)
 block|{
-name|base
+name|this
 operator|.
-name|connected
-argument_list|(
+name|targetDestination
+operator|=
 name|target
-argument_list|,
+expr_stmt|;
+name|this
+operator|.
+name|replyDestination
+operator|=
 name|reply
-argument_list|,
+expr_stmt|;
+name|this
+operator|.
+name|sessionFactory
+operator|=
 name|factory
-argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -1394,8 +1429,6 @@ expr_stmt|;
 name|Configurer
 name|configurer
 init|=
-name|base
-operator|.
 name|bus
 operator|.
 name|getExtension
@@ -1574,8 +1607,6 @@ block|{
 name|WorkQueueManager
 name|wqm
 init|=
-name|base
-operator|.
 name|bus
 operator|.
 name|getExtension
@@ -1705,8 +1736,8 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//REVISIT  to get the thread pool
-comment|//Executor executor = jmsDestination.callback.getExecutor();
+comment|// REVISIT to get the thread pool
+comment|// Executor executor = jmsDestination.callback.getExecutor();
 if|if
 condition|(
 name|executor
@@ -1738,9 +1769,9 @@ name|RejectedExecutionException
 name|ree
 parameter_list|)
 block|{
-comment|//FIXME - no room left on workqueue, what to do
-comment|//for now, loop until it WILL fit on the queue,
-comment|//although we could just dispatch on this thread.
+comment|// FIXME - no room left on workqueue, what to do
+comment|// for now, loop until it WILL fit on the queue,
+comment|// although we could just dispatch on this thread.
 block|}
 block|}
 else|else
@@ -1913,7 +1944,7 @@ name|IOException
 name|ex
 parameter_list|)
 block|{
-comment|//TODO: Decide what to do if we receive the exception.
+comment|// TODO: Decide what to do if we receive the exception.
 name|getLogger
 argument_list|()
 operator|.
@@ -1972,7 +2003,7 @@ parameter_list|)
 block|{
 comment|// shouldn't be called for a back channel conduit
 block|}
-comment|/**          * Send an outbound message, assumed to contain all the name-value          * mappings of the corresponding input message (if any).           *           * @param message the message to be sent.          */
+comment|/**          * Send an outbound message, assumed to contain all the name-value mappings of the corresponding input          * message (if any).          *           * @param message the message to be sent.          */
 specifier|public
 name|void
 name|prepare
@@ -2124,7 +2155,7 @@ operator|=
 name|o
 expr_stmt|;
 block|}
-comment|//to prepear the message and get the send out message
+comment|// to prepear the message and get the send out message
 specifier|private
 name|void
 name|commitOutputMessage
@@ -2177,15 +2208,17 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|base
+name|JMSUtils
 operator|.
 name|isDestinationStyleQueue
-argument_list|()
+argument_list|(
+name|address
+argument_list|)
 condition|)
 block|{
 try|try
 block|{
-comment|//setup the reply message
+comment|// setup the reply message
 name|replyTo
 operator|=
 name|getReplyToDestination
@@ -2195,8 +2228,6 @@ argument_list|)
 expr_stmt|;
 name|replySession
 operator|=
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|get
@@ -2347,7 +2378,7 @@ expr_stmt|;
 block|}
 name|reply
 operator|=
-name|base
+name|JMSUtils
 operator|.
 name|marshal
 argument_list|(
@@ -2370,7 +2401,7 @@ argument_list|,
 name|reply
 argument_list|)
 expr_stmt|;
-name|base
+name|JMSUtils
 operator|.
 name|setMessageProperties
 argument_list|(
@@ -2379,8 +2410,8 @@ argument_list|,
 name|reply
 argument_list|)
 expr_stmt|;
-comment|//ensure that the contentType is set to the out jms message header
-name|base
+comment|// ensure that the contentType is set to the out jms message header
+name|JMSUtils
 operator|.
 name|setContentToProtocalHeader
 argument_list|(
@@ -2420,7 +2451,7 @@ name|PROTOCOL_HEADERS
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|base
+name|JMSUtils
 operator|.
 name|addProtocolHeaders
 argument_list|(
@@ -2505,8 +2536,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|recycle
@@ -2602,7 +2631,7 @@ decl_stmt|;
 name|int
 name|deliveryMode
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getJMSDeliveryMode
 argument_list|(
@@ -2612,7 +2641,7 @@ decl_stmt|;
 name|int
 name|priority
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getJMSPriority
 argument_list|(
@@ -2622,7 +2651,7 @@ decl_stmt|;
 name|long
 name|ttl
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getTimeToLive
 argument_list|(

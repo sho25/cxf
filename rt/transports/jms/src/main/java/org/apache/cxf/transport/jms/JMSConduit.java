@@ -107,6 +107,16 @@ name|javax
 operator|.
 name|jms
 operator|.
+name|Destination
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jms
+operator|.
 name|JMSException
 import|;
 end_import
@@ -341,20 +351,6 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|Destination
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
 name|MessageObserver
 import|;
 end_import
@@ -384,7 +380,7 @@ name|AbstractConduit
 implements|implements
 name|Configurable
 implements|,
-name|JMSTransport
+name|JMSOnConnectCallback
 block|{
 specifier|protected
 specifier|static
@@ -410,9 +406,28 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|protected
-specifier|final
-name|JMSTransportBase
-name|base
+name|Destination
+name|targetDestination
+decl_stmt|;
+specifier|protected
+name|Destination
+name|replyDestination
+decl_stmt|;
+specifier|protected
+name|JMSSessionFactory
+name|sessionFactory
+decl_stmt|;
+specifier|protected
+name|Bus
+name|bus
+decl_stmt|;
+specifier|protected
+name|EndpointInfo
+name|endpointInfo
+decl_stmt|;
+specifier|protected
+name|String
+name|beanNameSuffix
 decl_stmt|;
 specifier|protected
 name|ClientConfig
@@ -468,21 +483,23 @@ argument_list|(
 name|target
 argument_list|)
 expr_stmt|;
-name|base
-operator|=
-operator|new
-name|JMSTransportBase
-argument_list|(
-name|b
-argument_list|,
-name|endpointInfo
-argument_list|,
-literal|false
-argument_list|,
-name|BASE_BEAN_NAME_SUFFIX
-argument_list|,
 name|this
-argument_list|)
+operator|.
+name|bus
+operator|=
+name|b
+expr_stmt|;
+name|this
+operator|.
+name|endpointInfo
+operator|=
+name|endpointInfo
+expr_stmt|;
+name|this
+operator|.
+name|beanNameSuffix
+operator|=
+name|BASE_BEAN_NAME_SUFFIX
 expr_stmt|;
 name|initConfig
 argument_list|()
@@ -517,8 +534,6 @@ if|if
 condition|(
 literal|null
 operator|==
-name|base
-operator|.
 name|sessionFactory
 condition|)
 block|{
@@ -527,6 +542,12 @@ operator|.
 name|connect
 argument_list|(
 name|this
+argument_list|,
+name|getJMSAddress
+argument_list|()
+argument_list|,
+name|getSessionPool
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -595,8 +616,6 @@ throw|;
 block|}
 if|if
 condition|(
-name|base
-operator|.
 name|sessionFactory
 operator|==
 literal|null
@@ -621,7 +640,7 @@ name|isOneWay
 init|=
 literal|false
 decl_stmt|;
-comment|//test if the message is oneway message
+comment|// test if the message is oneway message
 name|Exchange
 name|ex
 init|=
@@ -645,12 +664,10 @@ name|isOneWay
 argument_list|()
 expr_stmt|;
 block|}
-comment|//get the pooledSession with response expected
+comment|// get the pooledSession with response expected
 name|PooledSession
 name|pooledSession
 init|=
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|get
@@ -726,15 +743,11 @@ comment|// ensure resources held by session factory are released
 comment|//
 if|if
 condition|(
-name|base
-operator|.
 name|sessionFactory
 operator|!=
 literal|null
 condition|)
 block|{
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|shutdown
@@ -751,7 +764,7 @@ return|return
 name|LOG
 return|;
 block|}
-comment|/**      * Receive mechanics.      *      * @param pooledSession the shared JMS resources      * @param inMessage       * @retrun the response buffer      */
+comment|/**      * Receive mechanics.      *       * @param pooledSession the shared JMS resources      * @param inMessage      * @retrun the response buffer      */
 specifier|private
 name|Object
 name|receive
@@ -850,7 +863,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|base
+name|JMSUtils
 operator|.
 name|populateIncomingContext
 argument_list|(
@@ -865,7 +878,7 @@ argument_list|)
 expr_stmt|;
 name|result
 operator|=
-name|base
+name|JMSUtils
 operator|.
 name|unmarshal
 argument_list|(
@@ -895,7 +908,7 @@ argument_list|,
 name|error
 argument_list|)
 expr_stmt|;
-comment|//TODO: Review what exception should we throw.
+comment|// TODO: Review what exception should we throw.
 throw|throw
 operator|new
 name|JMSException
@@ -909,17 +922,9 @@ specifier|public
 name|void
 name|connected
 parameter_list|(
-name|javax
-operator|.
-name|jms
-operator|.
 name|Destination
 name|target
 parameter_list|,
-name|javax
-operator|.
-name|jms
-operator|.
 name|Destination
 name|reply
 parameter_list|,
@@ -927,16 +932,23 @@ name|JMSSessionFactory
 name|factory
 parameter_list|)
 block|{
-name|base
+name|this
 operator|.
-name|connected
-argument_list|(
+name|targetDestination
+operator|=
 name|target
-argument_list|,
+expr_stmt|;
+name|this
+operator|.
+name|replyDestination
+operator|=
 name|reply
-argument_list|,
+expr_stmt|;
+name|this
+operator|.
+name|sessionFactory
+operator|=
 name|factory
-argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -945,8 +957,6 @@ name|getBeanName
 parameter_list|()
 block|{
 return|return
-name|base
-operator|.
 name|endpointInfo
 operator|.
 name|getName
@@ -967,8 +977,6 @@ name|this
 operator|.
 name|address
 operator|=
-name|base
-operator|.
 name|endpointInfo
 operator|.
 name|getTraversedExtensor
@@ -986,8 +994,6 @@ name|this
 operator|.
 name|sessionPool
 operator|=
-name|base
-operator|.
 name|endpointInfo
 operator|.
 name|getTraversedExtensor
@@ -1005,8 +1011,6 @@ name|this
 operator|.
 name|clientConfig
 operator|=
-name|base
-operator|.
 name|endpointInfo
 operator|.
 name|getTraversedExtensor
@@ -1024,8 +1028,6 @@ name|this
 operator|.
 name|runtimePolicy
 operator|=
-name|base
-operator|.
 name|endpointInfo
 operator|.
 name|getTraversedExtensor
@@ -1042,8 +1044,6 @@ expr_stmt|;
 name|Configurer
 name|configurer
 init|=
-name|base
-operator|.
 name|bus
 operator|.
 name|getExtension
@@ -1247,7 +1247,7 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
-comment|//do nothing here
+comment|// do nothing here
 block|}
 specifier|protected
 name|void
@@ -1315,8 +1315,6 @@ throw|;
 block|}
 finally|finally
 block|{
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|recycle
@@ -1332,7 +1330,7 @@ name|onWrite
 parameter_list|()
 throws|throws
 name|IOException
-block|{                      }
+block|{          }
 specifier|private
 name|void
 name|commitOutputMessage
@@ -1352,9 +1350,9 @@ operator|.
 name|destination
 argument_list|()
 decl_stmt|;
-comment|//TODO setting up the responseExpected
-comment|//We don't want to send temp queue in
-comment|//replyTo header for oneway calls
+comment|// TODO setting up the responseExpected
+comment|// We don't want to send temp queue in
+comment|// replyTo header for oneway calls
 if|if
 condition|(
 name|isOneWay
@@ -1479,7 +1477,7 @@ expr_stmt|;
 block|}
 name|jmsMessage
 operator|=
-name|base
+name|JMSUtils
 operator|.
 name|marshal
 argument_list|(
@@ -1520,7 +1518,7 @@ decl_stmt|;
 name|int
 name|deliveryMode
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getJMSDeliveryMode
 argument_list|(
@@ -1530,7 +1528,7 @@ decl_stmt|;
 name|int
 name|priority
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getJMSPriority
 argument_list|(
@@ -1540,7 +1538,7 @@ decl_stmt|;
 name|String
 name|correlationID
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getCorrelationId
 argument_list|(
@@ -1550,7 +1548,7 @@ decl_stmt|;
 name|long
 name|ttl
 init|=
-name|base
+name|JMSUtils
 operator|.
 name|getTimeToLive
 argument_list|(
@@ -1573,7 +1571,7 @@ name|getMessageTimeToLive
 argument_list|()
 expr_stmt|;
 block|}
-name|base
+name|JMSUtils
 operator|.
 name|setMessageProperties
 argument_list|(
@@ -1582,8 +1580,8 @@ argument_list|,
 name|jmsMessage
 argument_list|)
 expr_stmt|;
-comment|//ensure that the contentType is set to the out jms message header
-name|base
+comment|// ensure that the contentType is set to the out jms message header
+name|JMSUtils
 operator|.
 name|setContentToProtocalHeader
 argument_list|(
@@ -1623,7 +1621,7 @@ name|PROTOCOL_HEADERS
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|base
+name|JMSUtils
 operator|.
 name|addProtocolHeaders
 argument_list|(
@@ -1700,7 +1698,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-comment|//No message correlation id is set. Whatever comeback will be accepted as responses.
+comment|// No message correlation id is set. Whatever comeback will be accepted as responses.
 comment|// We assume that it will only happen in case of the temp. reply queue.
 block|}
 name|getLogger
@@ -1717,13 +1715,15 @@ argument_list|,
 name|jmsMessage
 argument_list|)
 expr_stmt|;
-comment|//getting  Destination Style
+comment|// getting Destination Style
 if|if
 condition|(
-name|base
+name|JMSUtils
 operator|.
 name|isDestinationStyleQueue
-argument_list|()
+argument_list|(
+name|address
+argument_list|)
 condition|)
 block|{
 name|QueueSender
@@ -1751,8 +1751,6 @@ argument_list|(
 operator|(
 name|Queue
 operator|)
-name|base
-operator|.
 name|targetDestination
 argument_list|,
 name|jmsMessage
@@ -1792,8 +1790,6 @@ argument_list|(
 operator|(
 name|Topic
 operator|)
-name|base
-operator|.
 name|targetDestination
 argument_list|,
 name|jmsMessage
@@ -1820,7 +1816,7 @@ name|response
 init|=
 literal|null
 decl_stmt|;
-comment|//TODO if outMessage need to get the response
+comment|// TODO if outMessage need to get the response
 name|Message
 name|inMessage
 init|=
@@ -1838,9 +1834,9 @@ argument_list|(
 name|inMessage
 argument_list|)
 expr_stmt|;
-comment|//set the message header back to the incomeMessage
-comment|//inMessage.put(JMSConstants.JMS_CLIENT_RESPONSE_HEADERS,
-comment|//              outMessage.get(JMSConstants.JMS_CLIENT_RESPONSE_HEADERS));
+comment|// set the message header back to the incomeMessage
+comment|// inMessage.put(JMSConstants.JMS_CLIENT_RESPONSE_HEADERS,
+comment|// outMessage.get(JMSConstants.JMS_CLIENT_RESPONSE_HEADERS));
 try|try
 block|{
 name|response

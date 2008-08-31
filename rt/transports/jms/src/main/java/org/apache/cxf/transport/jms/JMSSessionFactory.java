@@ -244,7 +244,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class encapsulates the creation and pooling logic for JMS Sessions.  * The usage patterns for sessions, producers& consumers are as follows ...  *<p>  * client-side: an invoking thread requires relatively short-term exclusive  * use of a session, an unidentified producer to send the request message,  * and in the point-to-point domain a consumer for the temporary ReplyTo  * destination to synchronously receive the reply if the operation is twoway  * (in the pub-sub domain only oneway operations are supported, so a there  * is never a requirement for a reply destination)  *<p>  * server-side receive: each port based on<jms:address> requires relatively  * long-term exclusive use of a session, a consumer with a MessageListener for  * the JMS destination specified for the port, and an unidentified producer  * to send the request message  *<p>  * server-side send: each dispatch of a twoway request requires relatively  * short-term exclusive use of a session and an indentified producer (but  * not a consumer) - note that the session used for the recieve side cannot  * be re-used for the send, as MessageListener usage precludes any synchronous  * sends or receives on that session  *<p>  * So on the client-side, pooling of sessions is bound up with pooling  * of temporary reply destinations, whereas on the server receive side  * the benefit of pooling is marginal as the session is required from  * the point at which the port was activated until the Bus is shutdown  * The server send side resembles the client side,  * except that a consumer for the temporary destination is never required.  * Hence different pooling strategies make sense ...  *<p>  * client-side: a SoftReference-based cache of send/receive sessions is  * maintained containing an aggregate of a session, indentified producer,  * temporary reply destination& consumer for same  *<p>  * server-side receive: as sessions cannot be usefully recycled, they are  * simply created on demand and closed when no longer required  *<p>  * server-side send: a SoftReference-based cache of send-only sessions is  * maintained containing an aggregate of a session and an indentified producer  *<p>  * In a pure client or pure server, only a single cache is ever  * populated.  Where client and server logic is co-located, a client  * session retrieval for a twoway invocation checks the reply-capable  * cache first and then the send-only cache - if a session is  * available in the later then its used after a tempory destination is  * created before being recycled back into the reply-capable cache. A  * server send side retrieval or client retrieval for a oneway  * invocation checks the send-only cache first and then the  * reply-capable cache - if a session is available in the later then  * its used and the tempory destination is ignored. So in the  * co-located case, sessions migrate from the send-only cache to the  * reply-capable cache as necessary.  *<p>  *  */
+comment|/**  * This class encapsulates the creation and pooling logic for JMS Sessions. The usage patterns for sessions,  * producers& consumers are as follows ...  *<p>  * client-side: an invoking thread requires relatively short-term exclusive use of a session, an unidentified  * producer to send the request message, and in the point-to-point domain a consumer for the temporary ReplyTo  * destination to synchronously receive the reply if the operation is twoway (in the pub-sub domain only  * oneway operations are supported, so a there is never a requirement for a reply destination)  *<p>  * server-side receive: each port based on<jms:address> requires relatively long-term exclusive use of a  * session, a consumer with a MessageListener for the JMS destination specified for the port, and an  * unidentified producer to send the request message  *<p>  * server-side send: each dispatch of a twoway request requires relatively short-term exclusive use of a  * session and an indentified producer (but not a consumer) - note that the session used for the recieve side  * cannot be re-used for the send, as MessageListener usage precludes any synchronous sends or receives on  * that session  *<p>  * So on the client-side, pooling of sessions is bound up with pooling of temporary reply destinations,  * whereas on the server receive side the benefit of pooling is marginal as the session is required from the  * point at which the port was activated until the Bus is shutdown The server send side resembles the client  * side, except that a consumer for the temporary destination is never required. Hence different pooling  * strategies make sense ...  *<p>  * client-side: a SoftReference-based cache of send/receive sessions is maintained containing an aggregate of  * a session, indentified producer, temporary reply destination& consumer for same  *<p>  * server-side receive: as sessions cannot be usefully recycled, they are simply created on demand and closed  * when no longer required  *<p>  * server-side send: a SoftReference-based cache of send-only sessions is maintained containing an aggregate  * of a session and an indentified producer  *<p>  * In a pure client or pure server, only a single cache is ever populated. Where client and server logic is  * co-located, a client session retrieval for a twoway invocation checks the reply-capable cache first and  * then the send-only cache - if a session is available in the later then its used after a tempory destination  * is created before being recycled back into the reply-capable cache. A server send side retrieval or client  * retrieval for a oneway invocation checks the send-only cache first and then the reply-capable cache - if a  * session is available in the later then its used and the tempory destination is ignored. So in the  * co-located case, sessions migrate from the send-only cache to the reply-capable cache as necessary.  *<p>  */
 end_comment
 
 begin_class
@@ -306,15 +306,14 @@ name|theReplyDestination
 decl_stmt|;
 specifier|private
 specifier|final
-name|JMSTransport
-name|jmsTransport
-decl_stmt|;
-specifier|private
-specifier|final
 name|ServerBehaviorPolicyType
 name|runtimePolicy
 decl_stmt|;
-comment|/**      * Constructor.      *      * @param connection the shared {Queue|Topic}Connection      */
+specifier|private
+name|boolean
+name|destinationIsQueue
+decl_stmt|;
+comment|/**      * Constructor.      *       * @param connection the shared {Queue|Topic}Connection      */
 specifier|public
 name|JMSSessionFactory
 parameter_list|(
@@ -327,8 +326,11 @@ parameter_list|,
 name|Context
 name|context
 parameter_list|,
-name|JMSTransport
-name|tbb
+name|boolean
+name|destinationIsQueue
+parameter_list|,
+name|SessionPoolType
+name|sessionPoolConfig
 parameter_list|,
 name|ServerBehaviorPolicyType
 name|runtimePolicy
@@ -346,24 +348,12 @@ name|initialContext
 operator|=
 name|context
 expr_stmt|;
-name|jmsTransport
-operator|=
-name|tbb
-expr_stmt|;
 name|this
 operator|.
 name|runtimePolicy
 operator|=
 name|runtimePolicy
 expr_stmt|;
-name|SessionPoolType
-name|sessionPoolConfig
-init|=
-name|jmsTransport
-operator|.
-name|getSessionPool
-argument_list|()
-decl_stmt|;
 name|lowWaterMark
 operator|=
 name|sessionPoolConfig
@@ -378,12 +368,17 @@ operator|.
 name|getHighWaterMark
 argument_list|()
 expr_stmt|;
+name|this
+operator|.
+name|destinationIsQueue
+operator|=
+name|destinationIsQueue
+expr_stmt|;
 comment|// create session caches (REVISIT sizes should be configurable)
 comment|//
 if|if
 condition|(
-name|isDestinationStyleQueue
-argument_list|()
+name|destinationIsQueue
 condition|)
 block|{
 comment|// the reply capable cache is only required in the point-to-point
@@ -584,7 +579,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|//--java.lang.Object Overrides----------------------------------------------
+comment|// --java.lang.Object Overrides----------------------------------------------
 specifier|public
 name|String
 name|toString
@@ -594,7 +589,7 @@ return|return
 literal|"JMSSessionFactory"
 return|;
 block|}
-comment|//--Methods-----------------------------------------------------------------
+comment|// --Methods-----------------------------------------------------------------
 specifier|protected
 name|Connection
 name|getConnection
@@ -645,7 +640,7 @@ name|replyCapable
 argument_list|)
 return|;
 block|}
-comment|/**      * Retrieve a new or cached Session.      * @param replyDest Destination name if coming from wsa:Header      * @param replyCapable true iff the session is to be used to receive replies      * (implies client side twoway invocation )      * @return a new or cached Session      */
+comment|/**      * Retrieve a new or cached Session.      *       * @param replyDest Destination name if coming from wsa:Header      * @param replyCapable true iff the session is to be used to receive replies (implies client side twoway      *                invocation )      * @return a new or cached Session      */
 specifier|public
 name|PooledSession
 name|get
@@ -774,7 +769,7 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|//neither replyDestination not replyDest are present.
+comment|// neither replyDestination not replyDest are present.
 name|destination
 operator|=
 name|session
@@ -934,7 +929,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Retrieve a new      *      * @param destination the target JMS queue or topic (non-null implies      * server receive side)      * @return a new or cached Session      */
+comment|/**      * Retrieve a new      *       * @param destination the target JMS queue or topic (non-null implies server receive side)      * @return a new or cached Session      */
 specifier|public
 name|PooledSession
 name|get
@@ -955,8 +950,7 @@ comment|// in which case a new session is always created
 comment|//
 if|if
 condition|(
-name|isDestinationStyleQueue
-argument_list|()
+name|destinationIsQueue
 condition|)
 block|{
 name|ret
@@ -985,7 +979,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Return a Session to the pool      *      * @param pooled_session the session to recycle      */
+comment|/**      * Return a Session to the pool      *       * @param pooled_session the session to recycle      */
 specifier|public
 name|void
 name|recycle
@@ -1197,7 +1191,7 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-comment|/**      * Helper method to create a point-to-point pooled session.      *      * @param producer true iff producing      * @param consumer true iff consuming      * @param destination the target destination      * @return an appropriate pooled session      */
+comment|/**      * Helper method to create a point-to-point pooled session.      *       * @param producer true iff producing      * @param consumer true iff consuming      * @param destination the target destination      * @return an appropriate pooled session      */
 name|PooledSession
 name|createPointToPointReplyCapableSession
 parameter_list|()
@@ -1300,7 +1294,7 @@ name|consumer
 argument_list|)
 return|;
 block|}
-comment|/**      * Helper method to create a point-to-point pooled session.      *      * @return an appropriate pooled session      */
+comment|/**      * Helper method to create a point-to-point pooled session.      *       * @return an appropriate pooled session      */
 name|PooledSession
 name|createPointToPointSendOnlySession
 parameter_list|()
@@ -1345,7 +1339,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Helper method to create a point-to-point pooled session for consumer only.      *      * @param destination the target destination      * @return an appropriate pooled session      */
+comment|/**      * Helper method to create a point-to-point pooled session for consumer only.      *       * @param destination the target destination      * @return an appropriate pooled session      */
 specifier|private
 name|PooledSession
 name|createPointToPointServerSession
@@ -1407,7 +1401,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Helper method to create a pub-sub pooled session.      *      * @param producer true iff producing      * @param consumer true iff consuming      * @param destination the target destination      * @return an appropriate pooled session      */
+comment|/**      * Helper method to create a pub-sub pooled session.      *       * @param producer true iff producing      * @param consumer true iff consuming      * @param destination the target destination      * @return an appropriate pooled session      */
 name|PooledSession
 name|createPubSubSession
 parameter_list|(
@@ -1574,7 +1568,7 @@ name|UnknownHostException
 name|ukex
 parameter_list|)
 block|{
-comment|//Default to localhost.
+comment|// Default to localhost.
 block|}
 name|long
 name|time
@@ -1604,31 +1598,6 @@ operator|+
 name|obj
 operator|+
 name|time
-return|;
-block|}
-specifier|private
-name|boolean
-name|isDestinationStyleQueue
-parameter_list|()
-block|{
-return|return
-name|JMSConstants
-operator|.
-name|JMS_QUEUE
-operator|.
-name|equals
-argument_list|(
-name|jmsTransport
-operator|.
-name|getJMSAddress
-argument_list|()
-operator|.
-name|getDestinationStyle
-argument_list|()
-operator|.
-name|value
-argument_list|()
-argument_list|)
 return|;
 block|}
 block|}

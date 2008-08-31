@@ -638,8 +638,6 @@ name|sess
 init|=
 name|conduit
 operator|.
-name|base
-operator|.
 name|sessionFactory
 operator|.
 name|get
@@ -663,9 +661,7 @@ operator|.
 name|Message
 name|message
 init|=
-name|conduit
-operator|.
-name|base
+name|JMSUtils
 operator|.
 name|marshal
 argument_list|(
