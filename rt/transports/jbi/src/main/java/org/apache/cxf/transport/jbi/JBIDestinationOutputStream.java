@@ -41,6 +41,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Set
@@ -635,6 +645,18 @@ range|:
 name|keys
 control|)
 block|{
+if|if
+condition|(
+name|inMessage
+operator|.
+name|get
+argument_list|(
+name|key
+argument_list|)
+operator|instanceof
+name|Serializable
+condition|)
+block|{
 name|msg
 operator|.
 name|setProperty
@@ -649,6 +671,7 @@ name|key
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|//copy contents
 name|msg
