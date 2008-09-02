@@ -6102,6 +6102,10 @@ block|{
 if|if
 condition|(
 name|cachingForRetransmission
+operator|&&
+name|cachedStream
+operator|!=
+literal|null
 condition|)
 block|{
 name|cachedStream
@@ -6513,6 +6517,35 @@ argument_list|()
 expr_stmt|;
 return|return;
 block|}
+block|}
+else|else
+block|{
+comment|//not going to be resending or anything, clear out the stuff in the out message
+comment|//to free memory
+name|outMessage
+operator|.
+name|removeContent
+argument_list|(
+name|OutputStream
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|cachingForRetransmission
+condition|)
+block|{
+name|cachedStream
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
+name|cachedStream
+operator|=
+literal|null
+expr_stmt|;
 block|}
 name|Message
 name|inMessage

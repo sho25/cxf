@@ -100,6 +100,15 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+specifier|public
+name|OutputStream
+name|getFlowThroughStream
+parameter_list|()
+block|{
+return|return
+name|flowThroughStream
+return|;
+block|}
 annotation|@
 name|Override
 specifier|protected

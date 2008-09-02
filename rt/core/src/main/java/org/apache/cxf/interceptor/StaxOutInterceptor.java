@@ -996,6 +996,15 @@ name|os
 argument_list|)
 expr_stmt|;
 block|}
+name|message
+operator|.
+name|removeContent
+argument_list|(
+name|XMLStreamWriter
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
