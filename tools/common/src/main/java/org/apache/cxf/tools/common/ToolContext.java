@@ -174,6 +174,10 @@ name|String
 name|packageName
 decl_stmt|;
 specifier|private
+name|boolean
+name|packageNameChanged
+decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -970,6 +974,10 @@ name|packageName
 operator|=
 name|pkgName
 expr_stmt|;
+name|packageNameChanged
+operator|=
+literal|true
+expr_stmt|;
 block|}
 specifier|public
 name|String
@@ -1256,6 +1264,15 @@ parameter_list|()
 block|{
 return|return
 name|namespacePackageMap
+return|;
+block|}
+specifier|public
+name|boolean
+name|isPackageNameChanged
+parameter_list|()
+block|{
+return|return
+name|packageNameChanged
 return|;
 block|}
 block|}
