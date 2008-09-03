@@ -1243,14 +1243,6 @@ argument_list|,
 name|parentType
 argument_list|,
 name|elementType
-argument_list|,
-name|Thread
-operator|.
-name|currentThread
-argument_list|()
-operator|.
-name|getContextClassLoader
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
