@@ -157,7 +157,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex
 parameter_list|)
 block|{
@@ -171,7 +171,7 @@ literal|"JavaToWS Error: "
 operator|+
 name|ex
 operator|.
-name|getMessage
+name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
