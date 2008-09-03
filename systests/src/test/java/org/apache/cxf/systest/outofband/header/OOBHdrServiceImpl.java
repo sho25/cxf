@@ -574,13 +574,6 @@ operator|.
 name|HEADER_LIST
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|oobHdr
-operator|instanceof
-name|List
-condition|)
-block|{
 name|Iterator
 name|iter
 init|=
@@ -696,7 +689,10 @@ operator|.
 name|getValue
 argument_list|()
 argument_list|)
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 literal|"testHdrAttribute"
 operator|.
 name|equals
@@ -712,6 +708,35 @@ name|success
 operator|=
 literal|true
 expr_stmt|;
+name|iter
+operator|.
+name|remove
+argument_list|()
+expr_stmt|;
+comment|//mark it processed
+block|}
+elseif|else
+if|if
+condition|(
+literal|"dontProcess"
+operator|.
+name|equals
+argument_list|(
+name|ob
+operator|.
+name|getHdrAttribute
+argument_list|()
+argument_list|)
+condition|)
+block|{
+comment|//we won't remove it so we won't let the runtime know
+comment|//it's processed.   It SHOULD throw an exception
+comment|//saying the mustunderstand wasn't processed
+name|success
+operator|=
+literal|true
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -738,19 +763,6 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-block|}
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-literal|"Header should not be null"
-operator|+
-literal|"and should be of type JAXBHeaderHolder"
-argument_list|)
-throw|;
 block|}
 block|}
 else|else
