@@ -167,9 +167,6 @@ argument_list|(
 name|elem
 argument_list|,
 name|builder
-argument_list|,
-name|getPolicyConstants
-argument_list|()
 argument_list|)
 return|;
 block|}

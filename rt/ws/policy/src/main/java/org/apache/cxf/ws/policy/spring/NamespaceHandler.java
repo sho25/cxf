@@ -67,15 +67,6 @@ argument_list|)
 expr_stmt|;
 name|registerBeanDefinitionParser
 argument_list|(
-literal|"constants"
-argument_list|,
-operator|new
-name|PolicyConstantsBeanDefinitionParser
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|registerBeanDefinitionParser
-argument_list|(
 literal|"externalAttachment"
 argument_list|,
 operator|new

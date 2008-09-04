@@ -135,9 +135,6 @@ operator|new
 name|XmlPrimitiveAssertion
 argument_list|(
 name|element
-argument_list|,
-name|getPolicyConstants
-argument_list|()
 argument_list|)
 return|;
 block|}
