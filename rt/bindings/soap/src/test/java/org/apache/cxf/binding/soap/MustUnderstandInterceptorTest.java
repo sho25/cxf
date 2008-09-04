@@ -581,12 +581,8 @@ name|getFaultCode
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|"Can not understand QNames: "
-operator|+
-name|PASSENGER
-argument_list|,
 name|ie
 operator|.
 name|getMessage
@@ -594,6 +590,14 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|PASSENGER
+operator|.
+name|toString
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

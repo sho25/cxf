@@ -1094,10 +1094,15 @@ name|ex
 operator|.
 name|getMessage
 argument_list|()
+argument_list|,
+name|ex
+operator|.
+name|getMessage
+argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"Can not understand"
+literal|"MustUnderstand"
 argument_list|)
 argument_list|)
 expr_stmt|;
