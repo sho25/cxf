@@ -195,6 +195,26 @@ name|RegistryImpl
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|policy
+operator|.
+name|builder
+operator|.
+name|xml
+operator|.
+name|XmlPrimitiveAssertion
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -256,6 +276,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|ignoreUnknownAssertions
+init|=
+literal|true
 decl_stmt|;
 specifier|private
 name|List
@@ -530,7 +552,11 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
-literal|null
+operator|new
+name|XmlPrimitiveAssertion
+argument_list|(
+name|element
+argument_list|)
 return|;
 block|}
 else|else

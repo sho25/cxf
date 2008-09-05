@@ -386,6 +386,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|ignoreUnknownAssertions
+init|=
+literal|true
 decl_stmt|;
 specifier|private
 name|boolean

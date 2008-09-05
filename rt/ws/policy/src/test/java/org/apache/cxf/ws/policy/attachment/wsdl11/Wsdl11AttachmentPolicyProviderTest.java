@@ -884,6 +884,13 @@ operator|new
 name|AssertionBuilderRegistryImpl
 argument_list|()
 decl_stmt|;
+name|abr
+operator|.
+name|setIgnoreUnknownAssertions
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|XMLPrimitiveAssertionBuilder
 name|ab
 init|=

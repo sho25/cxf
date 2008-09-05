@@ -324,6 +324,13 @@ operator|.
 name|getAttributes
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|atts
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|int
@@ -394,6 +401,7 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
