@@ -383,21 +383,6 @@ name|Message
 name|message
 parameter_list|)
 block|{
-name|PooledSession
-name|pooledSession
-init|=
-operator|(
-name|PooledSession
-operator|)
-name|message
-operator|.
-name|get
-argument_list|(
-name|JMSConstants
-operator|.
-name|JMS_POOLEDSESSION
-argument_list|)
-decl_stmt|;
 name|OutputStream
 name|os
 init|=
@@ -410,15 +395,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|assertTrue
-argument_list|(
-literal|"pooled Session should not be null "
-argument_list|,
-name|pooledSession
-operator|!=
-literal|null
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"OutputStream should not be null"
@@ -638,12 +614,11 @@ name|sess
 init|=
 name|conduit
 operator|.
-name|sessionFactory
+name|getOrCreateSessionFactory
+argument_list|()
 operator|.
 name|get
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|byte
 index|[]
@@ -663,7 +638,7 @@ name|message
 init|=
 name|JMSUtils
 operator|.
-name|marshal
+name|createAndSetPayload
 argument_list|(
 name|b
 argument_list|,
@@ -671,8 +646,6 @@ name|sess
 operator|.
 name|session
 argument_list|()
-argument_list|,
-literal|null
 argument_list|,
 name|JMSConstants
 operator|.

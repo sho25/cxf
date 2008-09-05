@@ -815,7 +815,11 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-comment|//destination.activate();
+name|destination
+operator|.
+name|activate
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -941,7 +945,11 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-comment|//destination.activate();
+name|destination
+operator|.
+name|activate
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -951,7 +959,7 @@ parameter_list|)
 block|{
 name|assertFalse
 argument_list|(
-literal|"The JMSDestination activate should not through exception "
+literal|"The JMSDestination activate should not throw exception "
 argument_list|,
 literal|false
 argument_list|)
@@ -1355,7 +1363,7 @@ argument_list|(
 literal|true
 argument_list|)
 decl_stmt|;
-comment|//set up MessageObserver for handlering the conduit message
+comment|//set up MessageObserver for handling the conduit message
 name|MessageObserver
 name|observer
 init|=
@@ -1475,7 +1483,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 comment|//wait for the message to be got from the destination,
-comment|// create the thread to handler the Destination incomming message
+comment|// create the thread to handler the Destination incoming message
 name|waitForReceiveInMessage
 argument_list|()
 expr_stmt|;
@@ -1485,6 +1493,25 @@ name|inMessage
 argument_list|)
 expr_stmt|;
 comment|// wait for a while for the jms session recycling
+comment|// Send a second message to check for an issue
+comment|// Where the session was closed the second time
+name|sendoutMessage
+argument_list|(
+name|conduit
+argument_list|,
+name|outMessage
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
+name|waitForReceiveInMessage
+argument_list|()
+expr_stmt|;
+name|verifyReceivedMessage
+argument_list|(
+name|inMessage
+argument_list|)
+expr_stmt|;
 name|Thread
 operator|.
 name|sleep
@@ -1607,7 +1634,7 @@ argument_list|(
 literal|true
 argument_list|)
 decl_stmt|;
-comment|//set up MessageObserver for handlering the conduit message
+comment|//set up MessageObserver for handling the conduit message
 name|MessageObserver
 name|observer
 init|=
@@ -1727,7 +1754,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 comment|//wait for the message to be got from the destination,
-comment|// create the thread to handler the Destination incomming message
+comment|// create the thread to handler the Destination incoming message
 name|waitForReceiveInMessage
 argument_list|()
 expr_stmt|;

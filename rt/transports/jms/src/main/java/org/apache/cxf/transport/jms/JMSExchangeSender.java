@@ -19,43 +19,30 @@ end_package
 
 begin_import
 import|import
-name|javax
+name|org
 operator|.
-name|jms
+name|apache
 operator|.
-name|Destination
+name|cxf
+operator|.
+name|message
+operator|.
+name|Exchange
 import|;
 end_import
 
-begin_comment
-comment|/**  * Common accessors between the conduit and destination which are needed for common code.  *  */
-end_comment
-
 begin_interface
-specifier|public
 interface|interface
-name|JMSOnConnectCallback
+name|JMSExchangeSender
 block|{
-name|AddressType
-name|getJMSAddress
-parameter_list|()
-function_decl|;
-name|SessionPoolType
-name|getSessionPool
-parameter_list|()
-function_decl|;
-comment|/**      * Callback from the JMSProviderHub indicating the ClientTransport has been sucessfully connected.      *      * @param targetDestination the target destination      * @param sessionFactory used to get access to a pooled JMS resources      */
 name|void
-name|connected
+name|sendExchange
 parameter_list|(
-name|Destination
-name|target
+name|Exchange
+name|exchange
 parameter_list|,
-name|Destination
-name|reply
-parameter_list|,
-name|JMSSessionFactory
-name|factory
+name|Object
+name|payload
 parameter_list|)
 function_decl|;
 block|}
