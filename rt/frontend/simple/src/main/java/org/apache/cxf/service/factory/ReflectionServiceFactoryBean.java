@@ -2148,9 +2148,21 @@ name|String
 name|url
 parameter_list|)
 block|{
+if|if
+condition|(
 name|LOG
 operator|.
-name|info
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
 argument_list|(
 literal|"Creating Service "
 operator|+
@@ -2162,6 +2174,7 @@ operator|+
 name|url
 argument_list|)
 expr_stmt|;
+block|}
 name|populateFromClass
 operator|=
 literal|false
@@ -2258,9 +2271,21 @@ name|void
 name|buildServiceFromClass
 parameter_list|()
 block|{
+if|if
+condition|(
 name|LOG
 operator|.
-name|info
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
 argument_list|(
 literal|"Creating Service "
 operator|+
@@ -2276,6 +2301,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|populateFromClass
 operator|=
 literal|true
