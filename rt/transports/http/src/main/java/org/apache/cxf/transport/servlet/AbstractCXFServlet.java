@@ -304,6 +304,11 @@ argument_list|(
 name|servletTransportFactory
 argument_list|,
 name|this
+operator|.
+name|getServletContext
+argument_list|()
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 if|if

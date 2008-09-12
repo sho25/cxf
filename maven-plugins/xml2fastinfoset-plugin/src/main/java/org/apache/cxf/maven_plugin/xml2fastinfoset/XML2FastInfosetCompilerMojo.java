@@ -423,7 +423,7 @@ block|{
 name|getLog
 argument_list|()
 operator|.
-name|info
+name|debug
 argument_list|(
 literal|"Resource directory does not exist: "
 operator|+
@@ -570,7 +570,7 @@ decl_stmt|;
 name|getLog
 argument_list|()
 operator|.
-name|info
+name|debug
 argument_list|(
 literal|"FastInfosetting "
 operator|+
