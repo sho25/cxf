@@ -141,6 +141,24 @@ argument_list|,
 literal|"1"
 argument_list|)
 expr_stmt|;
+name|ep1
+operator|.
+name|getServer
+argument_list|()
+operator|.
+name|getEndpoint
+argument_list|()
+operator|.
+name|put
+argument_list|(
+literal|"allow-multiplex-endpoint"
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
+comment|//Register a MediatorInInterceptor on this dummy service
 name|Object
 name|implementor2
 init|=
@@ -180,14 +198,13 @@ argument_list|,
 literal|"2"
 argument_list|)
 expr_stmt|;
-comment|//Register a MediatorInInterceptor on this dummy service
 name|MultipleEndpointObserver
 name|meo
 init|=
 operator|(
 name|MultipleEndpointObserver
 operator|)
-name|ep2
+name|ep1
 operator|.
 name|getServer
 argument_list|()
