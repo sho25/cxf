@@ -312,6 +312,15 @@ argument_list|,
 literal|"Authorization"
 argument_list|)
 expr_stmt|;
+name|internalHeaders
+operator|.
+name|put
+argument_list|(
+literal|"soapaction"
+argument_list|,
+literal|"SOAPAction"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|HttpHeaderHelper
