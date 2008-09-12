@@ -321,6 +321,15 @@ argument_list|,
 literal|"SOAPAction"
 argument_list|)
 expr_stmt|;
+name|internalHeaders
+operator|.
+name|put
+argument_list|(
+literal|"accept"
+argument_list|,
+literal|"Accept"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|HttpHeaderHelper
