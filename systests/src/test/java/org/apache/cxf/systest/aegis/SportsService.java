@@ -37,6 +37,22 @@ name|WebService
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|aegis
+operator|.
+name|services
+operator|.
+name|SimpleBean
+import|;
+end_import
+
 begin_interface
 annotation|@
 name|WebService
@@ -71,6 +87,11 @@ parameter_list|)
 function_decl|;
 name|AttributeBean
 name|getAttributeBean
+parameter_list|()
+function_decl|;
+comment|// SimpleBean has relevant properties
+name|SimpleBean
+name|getSimpleBean
 parameter_list|()
 function_decl|;
 block|}

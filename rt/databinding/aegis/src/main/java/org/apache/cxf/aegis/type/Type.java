@@ -519,6 +519,16 @@ return|return
 literal|false
 return|;
 block|}
+comment|/**      * True if this type requires the import of the aegisTypes schema.      * @return      */
+specifier|public
+name|boolean
+name|usesUtilityTypes
+parameter_list|()
+block|{
+return|return
+literal|false
+return|;
+block|}
 specifier|public
 name|boolean
 name|hasMinOccurs

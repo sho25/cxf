@@ -19,6 +19,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|HashMap
@@ -73,6 +83,18 @@ name|javax
 operator|.
 name|xml
 operator|.
+name|parsers
+operator|.
+name|ParserConfigurationException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
 name|stream
 operator|.
 name|XMLStreamReader
@@ -88,6 +110,30 @@ operator|.
 name|stream
 operator|.
 name|XMLStreamWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|Document
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|xml
+operator|.
+name|sax
+operator|.
+name|SAXException
 import|;
 end_import
 
@@ -303,8 +349,64 @@ name|SOAPConstants
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|DOMUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|jaxen
+operator|.
+name|JaxenException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|jaxen
+operator|.
+name|jdom
+operator|.
+name|JDOMXPath
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|jdom
+operator|.
+name|Element
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|jdom
+operator|.
+name|Namespace
+import|;
+end_import
+
 begin_comment
-comment|/**  * The Aegis Databinding context object. This object coordinates the data binding process: reading  * and writing XML.  *   * By default, this object sets up a default set of type mappings.   * This consists of two DefaultTypeMapping objects. The first is empty  * and has the Default, Java5, and XML TypeCreator classes configured. The second contains the  * standard mappings of the stock types. If a type can't be mapped in either, then the creators   * create a mapping and store it in the first one.  *   * The application can control some parameters of the type creators by creating a TypeCreationOptions  * object and setting properties. The application can add custom mappings to the type mapping, or   * even use its own classes for the TypeMapping or TypeCreator objects.  *  * Aegis, unlike JAXB, has no concept of a 'root element'. So, an application that   * uses Aegis without a web service has to either depend on xsi:type (at least for   * root elements) or have its own mapping from elements to classes, and pass the   * resulting Class objects to the readers.  * At this level, the application must specify the initial set of classes to make   * make use of untyped collections or .aegis.xml files.  *   * If the application leaves this list empty, and reads XML messages, then no .aegis.xml files   * are used unless the application has specified a Class&lt;T&gt; for the root of a   * particular item read. Specifically, if the application just leaves it to Aegis to  * map an element tagged with an xsi:type to a class, Aegis can't know that some arbitrary class in  * some arbitrary package is mapped to a particular schema type by QName in a  * mapping XML file.  *   * At the level of the CXF data binding, the 'root elements' are defined by the WSDL message parts.  * Additional classes that participate are termed 'override' classes.  *   */
+comment|/**  * The Aegis Databinding context object. This object coordinates the data binding process: reading and writing  * XML. By default, this object sets up a default set of type mappings. This consists of two  * DefaultTypeMapping objects. The first is empty and has the Default, Java5, and XML TypeCreator classes  * configured. The second contains the standard mappings of the stock types. If a type can't be mapped in  * either, then the creators create a mapping and store it in the first one. The application can control some  * parameters of the type creators by creating a TypeCreationOptions object and setting properties. The  * application can add custom mappings to the type mapping, or even use its own classes for the TypeMapping or  * TypeCreator objects. Aegis, unlike JAXB, has no concept of a 'root element'. So, an application that uses  * Aegis without a web service has to either depend on xsi:type (at least for root elements) or have its own  * mapping from elements to classes, and pass the resulting Class objects to the readers. At this level, the  * application must specify the initial set of classes to make make use of untyped collections or .aegis.xml  * files. If the application leaves this list empty, and reads XML messages, then no .aegis.xml files are used  * unless the application has specified a Class&lt;T&gt; for the root of a particular item read. Specifically,  * if the application just leaves it to Aegis to map an element tagged with an xsi:type to a class, Aegis  * can't know that some arbitrary class in some arbitrary package is mapped to a particular schema type by  * QName in a mapping XML file. At the level of the CXF data binding, the 'root elements' are defined by the  * WSDL message parts. Additional classes that participate are termed 'override' classes.  */
 end_comment
 
 begin_class
@@ -312,6 +414,65 @@ specifier|public
 class|class
 name|AegisContext
 block|{
+comment|/**      * Namespace used for miscellaneous Aegis types.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SCHEMA_NS
+init|=
+literal|"http://cxf.apache.org/aegisTypes"
+decl_stmt|;
+specifier|private
+specifier|static
+name|JDOMXPath
+name|importTypesXpath
+decl_stmt|;
+static|static
+block|{
+try|try
+block|{
+name|importTypesXpath
+operator|=
+operator|new
+name|JDOMXPath
+argument_list|(
+literal|"xsd:import[@namespace='"
+operator|+
+name|SCHEMA_NS
+operator|+
+literal|"']"
+argument_list|)
+expr_stmt|;
+name|importTypesXpath
+operator|.
+name|addNamespace
+argument_list|(
+name|SOAPConstants
+operator|.
+name|XSD_PREFIX
+argument_list|,
+name|SOAPConstants
+operator|.
+name|XSD
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|JaxenException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+name|e
+argument_list|)
+throw|;
+block|}
+block|}
 specifier|private
 name|boolean
 name|writeXsiTypes
@@ -386,6 +547,10 @@ comment|// this URI goes into the type map.
 specifier|private
 name|String
 name|mappingNamespaceURI
+decl_stmt|;
+specifier|private
+name|Document
+name|typesSchemaDocument
 decl_stmt|;
 comment|/**      * Construct a context.      */
 specifier|public
@@ -521,7 +686,7 @@ return|return
 name|creator
 return|;
 block|}
-comment|/**      * Initialize the context. The encodingStyleURI allows .aegis.xml files to have multiple mappings       * for, say, SOAP 1.1 versus SOAP 1.2. Passing null uses a default URI.       * @param mappingNamespaceURI URI to select mappings based on the encoding.      */
+comment|/**      * Initialize the context. The encodingStyleURI allows .aegis.xml files to have multiple mappings for,      * say, SOAP 1.1 versus SOAP 1.2. Passing null uses a default URI.      *       * @param mappingNamespaceURI URI to select mappings based on the encoding.      */
 specifier|public
 name|void
 name|initialize
@@ -688,7 +853,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * If a class was provided as part of the 'root' list, retrieve it's Type by      * Class.      * @param clazz      * @return      */
+comment|/**      * If a class was provided as part of the 'root' list, retrieve it's Type by Class.      *       * @param clazz      * @return      */
 specifier|public
 name|Type
 name|getRootType
@@ -723,7 +888,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * If a class was provided as part of the root list, retrieve it's Type by schema      * type QName.      * @param schemaTypeName      * @return      */
+comment|/**      * If a class was provided as part of the root list, retrieve it's Type by schema type QName.      *       * @param schemaTypeName      * @return      */
 specifier|public
 name|Type
 name|getRootType
@@ -758,7 +923,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Examine a list of override classes, and register all of them.      * @param tm      type manager for this binding      * @param classes list of class names      */
+comment|/**      * Examine a list of override classes, and register all of them.      *       * @param tm type manager for this binding      * @param classes list of class names      */
 specifier|private
 name|void
 name|processRootTypes
@@ -961,7 +1126,200 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Retrieve the set of root class names. Note that if the application      * specifies the root classes by Class instead of by name, this will      * return null.      * @return      */
+specifier|public
+specifier|static
+name|boolean
+name|schemaImportsUtilityTypes
+parameter_list|(
+name|Element
+name|schemaElement
+parameter_list|)
+block|{
+try|try
+block|{
+return|return
+name|importTypesXpath
+operator|.
+name|selectSingleNode
+argument_list|(
+name|schemaElement
+argument_list|)
+operator|!=
+literal|null
+return|;
+block|}
+catch|catch
+parameter_list|(
+name|JaxenException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+name|e
+argument_list|)
+throw|;
+block|}
+block|}
+specifier|public
+name|Document
+name|getTypesSchemaDocument
+parameter_list|()
+block|{
+name|ensureTypesSchemaDocument
+argument_list|()
+expr_stmt|;
+return|return
+name|typesSchemaDocument
+return|;
+block|}
+specifier|private
+name|void
+name|ensureTypesSchemaDocument
+parameter_list|()
+block|{
+if|if
+condition|(
+name|typesSchemaDocument
+operator|!=
+literal|null
+condition|)
+block|{
+return|return;
+block|}
+try|try
+block|{
+name|typesSchemaDocument
+operator|=
+name|DOMUtils
+operator|.
+name|readXml
+argument_list|(
+name|getClass
+argument_list|()
+operator|.
+name|getResourceAsStream
+argument_list|(
+literal|"/META-INF/cxf/aegisTypes.xsd"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|SAXException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+name|e
+argument_list|)
+throw|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+name|e
+argument_list|)
+throw|;
+block|}
+catch|catch
+parameter_list|(
+name|ParserConfigurationException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+name|e
+argument_list|)
+throw|;
+block|}
+block|}
+specifier|public
+specifier|static
+name|void
+name|addUtilityTypesToSchema
+parameter_list|(
+name|Element
+name|root
+parameter_list|)
+block|{
+if|if
+condition|(
+name|schemaImportsUtilityTypes
+argument_list|(
+name|root
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
+name|Element
+name|element
+init|=
+operator|new
+name|Element
+argument_list|(
+literal|"import"
+argument_list|,
+name|SOAPConstants
+operator|.
+name|XSD_PREFIX
+argument_list|,
+name|SOAPConstants
+operator|.
+name|XSD
+argument_list|)
+decl_stmt|;
+name|root
+operator|.
+name|addContent
+argument_list|(
+literal|0
+argument_list|,
+name|element
+argument_list|)
+expr_stmt|;
+name|element
+operator|.
+name|setAttribute
+argument_list|(
+literal|"namespace"
+argument_list|,
+name|SCHEMA_NS
+argument_list|)
+expr_stmt|;
+name|root
+operator|.
+name|addNamespaceDeclaration
+argument_list|(
+name|Namespace
+operator|.
+name|getNamespace
+argument_list|(
+literal|"aegisTypes"
+argument_list|,
+name|SCHEMA_NS
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Retrieve the set of root class names. Note that if the application specifies the root classes by Class      * instead of by name, this will return null.      *       * @return      */
 specifier|public
 name|Set
 argument_list|<
@@ -974,7 +1332,7 @@ return|return
 name|rootClassNames
 return|;
 block|}
-comment|/**      * Set the root class names. This function is a convenience for Spring      * configuration. It sets the same underlying       * collection as {@link #setRootClasses(Set)}.      *       * @param classNames      */
+comment|/**      * Set the root class names. This function is a convenience for Spring configuration. It sets the same      * underlying collection as {@link #setRootClasses(Set)}.      *       * @param classNames      */
 specifier|public
 name|void
 name|setRootClassNames
@@ -991,7 +1349,7 @@ operator|=
 name|classNames
 expr_stmt|;
 block|}
-comment|/**       * Return the type mapping configuration associated with this context.      * @return Returns the configuration.      * @deprecated 2.1      */
+comment|/**      * Return the type mapping configuration associated with this context.      *       * @return Returns the configuration.      * @deprecated 2.1      */
 specifier|public
 name|TypeCreationOptions
 name|getConfiguration
@@ -1001,7 +1359,7 @@ return|return
 name|configuration
 return|;
 block|}
-comment|/**       * Return the type mapping configuration associated with this context.      * @return Returns the configuration.      */
+comment|/**      * Return the type mapping configuration associated with this context.      *       * @return Returns the configuration.      */
 specifier|public
 name|TypeCreationOptions
 name|getTypeCreationOptions
@@ -1011,7 +1369,7 @@ return|return
 name|configuration
 return|;
 block|}
-comment|/**      * Set the configuration object. The configuration specifies default      * type mapping behaviors.       * @param configuration The configuration to set.      * @deprecated 2.1      */
+comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *       * @param configuration The configuration to set.      * @deprecated 2.1      */
 specifier|public
 name|void
 name|setConfiguration
@@ -1027,7 +1385,7 @@ operator|=
 name|newConfiguration
 expr_stmt|;
 block|}
-comment|/**      * Set the configuration object. The configuration specifies default      * type mapping behaviors.      * @param configuration The configuration to set.      */
+comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *       * @param configuration The configuration to set.      */
 specifier|public
 name|void
 name|setTypeCreationOptions
@@ -1061,7 +1419,7 @@ return|return
 name|readXsiTypes
 return|;
 block|}
-comment|/**      * Controls whether Aegis writes xsi:type attributes on all elements.      * False by default.      * @param flag      */
+comment|/**      * Controls whether Aegis writes xsi:type attributes on all elements. False by default.      *       * @param flag      */
 specifier|public
 name|void
 name|setWriteXsiTypes
@@ -1077,7 +1435,7 @@ operator|=
 name|flag
 expr_stmt|;
 block|}
-comment|/**      * Controls the use of xsi:type attributes when reading objects. By default,      * xsi:type reading is enabled. When disabled, Aegis will only map for objects      * that the application manually maps in the type mapping.       * @param flag      */
+comment|/**      * Controls the use of xsi:type attributes when reading objects. By default, xsi:type reading is enabled.      * When disabled, Aegis will only map for objects that the application manually maps in the type mapping.      *       * @param flag      */
 specifier|public
 name|void
 name|setReadXsiTypes
@@ -1093,7 +1451,7 @@ operator|=
 name|flag
 expr_stmt|;
 block|}
-comment|/**      * Return the type mapping object used by this context.      * @return      */
+comment|/**      * Return the type mapping object used by this context.      *       * @return      */
 specifier|public
 name|TypeMapping
 name|getTypeMapping
@@ -1103,7 +1461,7 @@ return|return
 name|typeMapping
 return|;
 block|}
-comment|/**      * Set the type mapping object used by this context.      * @param typeMapping      */
+comment|/**      * Set the type mapping object used by this context.      *       * @param typeMapping      */
 specifier|public
 name|void
 name|setTypeMapping
@@ -1119,7 +1477,7 @@ operator|=
 name|typeMapping
 expr_stmt|;
 block|}
-comment|/**      * Retrieve the Aegis type objects for the root classes.      * @return the set of type objects.      */
+comment|/**      * Retrieve the Aegis type objects for the root classes.      *       * @return the set of type objects.      */
 specifier|public
 name|Set
 argument_list|<
@@ -1132,7 +1490,7 @@ return|return
 name|rootTypes
 return|;
 block|}
-comment|/**       * This property provides support for interfaces. If there is a mapping from an interface's Class<T>      * to a string containing a class name, Aegis will create proxy objects of that class name.      * @see org.apache.cxf.aegis.type.basic.BeanType      * @return      */
+comment|/**      * This property provides support for interfaces. If there is a mapping from an interface's Class<T> to a      * string containing a class name, Aegis will create proxy objects of that class name.      *       * @see org.apache.cxf.aegis.type.basic.BeanType      * @return      */
 specifier|public
 name|Map
 argument_list|<
@@ -1188,7 +1546,7 @@ return|return
 name|rootClasses
 return|;
 block|}
-comment|/**      * The list of initial classes.      * @param rootClasses      */
+comment|/**      * The list of initial classes.      *       * @param rootClasses      */
 specifier|public
 name|void
 name|setRootClasses
@@ -1210,7 +1568,7 @@ operator|=
 name|rootClasses
 expr_stmt|;
 block|}
-comment|/**      * Is MTOM enabled in this context?      * @return      */
+comment|/**      * Is MTOM enabled in this context?      *       * @return      */
 specifier|public
 name|boolean
 name|isMtomEnabled
@@ -1235,7 +1593,7 @@ operator|=
 name|mtomEnabled
 expr_stmt|;
 block|}
-comment|/**      * Should this service use schema for MTOM types xmime:base64Binary instead of xsd:base64Binary?      * @return      */
+comment|/**      * Should this service use schema for MTOM types xmime:base64Binary instead of xsd:base64Binary?      *       * @return      */
 specifier|public
 name|boolean
 name|isMtomUseXmime
@@ -1260,7 +1618,7 @@ operator|=
 name|mtomUseXmime
 expr_stmt|;
 block|}
-comment|/**      * What URI identifies the type mapping for this context?       * When the XMLTypeCreator reads .aegis.xml file, it will only read mappings for      * this URI (or no URI). When the abstract type creator is otherwise at a loss      * for a namespace URI, it will use this URI.      * @return      */
+comment|/**      * What URI identifies the type mapping for this context? When the XMLTypeCreator reads .aegis.xml file,      * it will only read mappings for this URI (or no URI). When the abstract type creator is otherwise at a      * loss for a namespace URI, it will use this URI.      *       * @return      */
 specifier|public
 name|String
 name|getMappingNamespaceURI
