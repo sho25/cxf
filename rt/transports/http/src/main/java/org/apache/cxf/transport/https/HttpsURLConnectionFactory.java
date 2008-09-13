@@ -681,6 +681,11 @@ name|getSocketFactory
 argument_list|()
 argument_list|,
 name|cipherSuites
+argument_list|,
+name|tlsClientParameters
+operator|.
+name|getSecureSocketProtocol
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
