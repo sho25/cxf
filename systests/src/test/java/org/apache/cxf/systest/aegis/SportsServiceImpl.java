@@ -47,22 +47,6 @@ name|List
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|aegis
-operator|.
-name|services
-operator|.
-name|SimpleBean
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -147,13 +131,13 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|SimpleBean
-name|getSimpleBean
+name|BeanWithCharacter
+name|getCharBean
 parameter_list|()
 block|{
 return|return
 operator|new
-name|SimpleBean
+name|BeanWithCharacter
 argument_list|()
 return|;
 block|}

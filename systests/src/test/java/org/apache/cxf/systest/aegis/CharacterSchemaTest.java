@@ -284,7 +284,7 @@ name|testUtilities
 operator|.
 name|assertValid
 argument_list|(
-literal|"//xsd:complexType[@name='SimpleBean']/xsd:sequence"
+literal|"//xsd:complexType[@name='BeanWithCharacter']/xsd:sequence"
 operator|+
 literal|"/xsd:element[@name='character']"
 operator|+
