@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|TypeMapping
 block|{
-comment|/**      * Checks whether or not type mapping between specified XML type and Java      * type is registered.      *       * @param javaType Class of the Java type      * @param xmlType Qualified name of the XML data type      * @return boolean;<code>true</code> if type mapping between the      *         specified XML type and Java type is registered; otherwise      *<code>false</code>      */
+comment|/**      * Returns a flag indicating if this type mapping has a mapping for a particular Java class.      * @param javaType the class.      * @return<code>true</code> if there is a mapping for the type.      */
 name|boolean
 name|isRegistered
 parameter_list|(
@@ -46,6 +46,7 @@ name|Class
 name|javaType
 parameter_list|)
 function_decl|;
+comment|/**      * Returns a flag indicating if this type mapping has a mapping for a particular      * XML Schema QName.      * @param xmlType the QName.      * @return<code>true</code> if there is a mapping for the type.      */
 name|boolean
 name|isRegistered
 parameter_list|(
@@ -53,6 +54,7 @@ name|QName
 name|xmlType
 parameter_list|)
 function_decl|;
+comment|/**      * Register a type, manually specifying the java class, the schema type,      * and the Aegis type object that provides serialization, deserialization,      * and schema.      * @param javaType Java class.      * @param xmlType XML Schema type QName.      * @param type Aegis type object.      */
 name|void
 name|register
 parameter_list|(
@@ -66,6 +68,7 @@ name|Type
 name|type
 parameter_list|)
 function_decl|;
+comment|/**      * Register a type that self-describes the schema type and the Java class.      * @param type Aegis type object that       */
 name|void
 name|register
 parameter_list|(

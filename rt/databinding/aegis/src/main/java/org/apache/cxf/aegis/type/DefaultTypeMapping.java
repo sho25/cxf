@@ -1036,6 +1036,7 @@ name|type
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|void
 name|register
