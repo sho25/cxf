@@ -315,7 +315,7 @@ name|features
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**            * Creates a proxy object that can be used to make remote invocations.            *            * @return the proxy. You must cast the returned object to the appropriate class before using it.            */
+comment|/**      * Creates a proxy object that can be used to make remote invocations.      *      * @return the proxy. You must cast the returned object to the appropriate class before using it.      */
 specifier|public
 name|Object
 name|create
@@ -643,7 +643,7 @@ name|getServiceClass
 argument_list|()
 return|;
 block|}
-comment|/**            * Specifies the class representing the SEI the proxy implements.            *            * @param serviceClass the SEI's class            */
+comment|/**      * Specifies the class representing the SEI the proxy implements.      *      * @param serviceClass the SEI's class      */
 specifier|public
 name|void
 name|setServiceClass
@@ -694,7 +694,7 @@ name|getWsdlURL
 argument_list|()
 return|;
 block|}
-comment|/**           * Specifies the URL where the proxy can find the WSDL defining the            * service the proxy implements.           *           * @param wsdlURL a string containing the WSDL's URL           */
+comment|/**      * Specifies the URL where the proxy can find the WSDL defining the       * service the proxy implements.      *      * @param wsdlURL a string containing the WSDL's URL      */
 specifier|public
 name|void
 name|setWsdlLocation
@@ -724,7 +724,7 @@ name|getWsdlURL
 argument_list|()
 return|;
 block|}
-comment|/**           * Specifies the URL where the proxy can find the WSDL defining the            * service the proxy implements.           *           * @param wsdlURL a string containing the WSDL's URL           */
+comment|/**      * Specifies the URL where the proxy can find the WSDL defining the       * service the proxy implements.      *      * @param wsdlURL a string containing the WSDL's URL      */
 specifier|public
 name|void
 name|setWsdlURL
@@ -772,7 +772,7 @@ name|endpointName
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**            * Returns the QName of the WSDL service the proxy implements            *             * @return the WSDL service's QName            */
+comment|/**      * Returns the QName of the WSDL service the proxy implements      *       * @return the WSDL service's QName      */
 specifier|public
 name|QName
 name|getServiceName
@@ -786,7 +786,7 @@ name|getServiceQName
 argument_list|()
 return|;
 block|}
-comment|/**            * Specifies the QName of the WSDL service the proxy implements. The             * service must exist or an error will result.            *            * @param serviceName the QName of the service for the proxy            */
+comment|/**      * Specifies the QName of the WSDL service the proxy implements. The       * service must exist or an error will result.      *      * @param serviceName the QName of the service for the proxy      */
 specifier|public
 name|void
 name|setServiceName
@@ -947,7 +947,7 @@ name|bus
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**           * Returns the property map for the proxy factory.           *           * @return the property map           */
+comment|/**      * Returns the property map for the proxy factory.      *      * @return the property map      */
 specifier|public
 name|Map
 argument_list|<
@@ -962,7 +962,7 @@ return|return
 name|properties
 return|;
 block|}
-comment|/**            * Specifies a set of properties used to configure the proxies             * provided by the factory. These properties include things like             * adding a namespace map to the JAXB databinding.            *            * @param properties the property map            */
+comment|/**      * Specifies a set of properties used to configure the proxies       * provided by the factory. These properties include things like       * adding a namespace map to the JAXB databinding.      *      * @param properties the property map      */
 specifier|public
 name|void
 name|setProperties

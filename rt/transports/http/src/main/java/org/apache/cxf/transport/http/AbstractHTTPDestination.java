@@ -907,10 +907,20 @@ decl_stmt|;
 name|String
 name|username
 init|=
+operator|(
+name|authInfo
+operator|.
+name|length
+operator|>
+literal|0
+operator|)
+condition|?
 name|authInfo
 index|[
 literal|0
 index|]
+else|:
+literal|""
 decl_stmt|;
 comment|// Below line for systems that blank out password after authentication;
 comment|// see CXF-1495 for more info
