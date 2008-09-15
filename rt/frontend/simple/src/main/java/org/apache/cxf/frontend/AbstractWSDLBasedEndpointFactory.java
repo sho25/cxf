@@ -2269,6 +2269,7 @@ return|return
 name|serviceClass
 return|;
 block|}
+comment|/**           * Specifies the class implementing the service.           *           * @param serviceClass the service's implementaiton class           */
 specifier|public
 name|void
 name|setServiceClass

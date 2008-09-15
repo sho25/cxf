@@ -391,6 +391,10 @@ name|ServiceInfo
 import|;
 end_import
 
+begin_comment
+comment|/** * Factory for creating JAX-WS proxies, This class provides access to the  * internal properties used to set-up proxies. Using it provides more control  * than the standard JAX-WS APIs. */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -441,6 +445,7 @@ name|fact
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**           * Specifies a list of JAX-WS Handler implementations that are to be            * used by the proxy.           *            * @param h a<code>List</code> of<code>Handler</code> objects           */
 specifier|public
 name|void
 name|setHandlers
@@ -465,6 +470,7 @@ name|h
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**            * Returns the configured list of JAX-WS handlers for the proxy.            *            * @return a<code>List</code> of<code>Handler</code> objects            */
 specifier|public
 name|List
 argument_list|<
@@ -581,6 +587,7 @@ name|class
 block|}
 return|;
 block|}
+comment|/**           * Creates a JAX-WS proxy that can be used to make remote invocations.           *           * @return the proxy. You must cast the returned object to the approriate class before making remote calls           */
 annotation|@
 name|Override
 specifier|public
