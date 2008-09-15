@@ -293,10 +293,6 @@ name|Element
 import|;
 end_import
 
-begin_comment
-comment|//import org.w3c.dom.NodeList;
-end_comment
-
 begin_import
 import|import
 name|org
