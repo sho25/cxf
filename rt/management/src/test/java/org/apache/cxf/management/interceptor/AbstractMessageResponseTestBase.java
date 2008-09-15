@@ -280,6 +280,9 @@ operator|+
 literal|"\",port=\""
 operator|+
 name|PORT_NAME
+operator|.
+name|getLocalPart
+argument_list|()
 operator|+
 literal|"\""
 decl_stmt|;
@@ -299,6 +302,9 @@ operator|+
 literal|"\",port=\""
 operator|+
 name|PORT_NAME
+operator|.
+name|getLocalPart
+argument_list|()
 operator|+
 literal|"\""
 decl_stmt|;
@@ -414,7 +420,7 @@ literal|",operation=\""
 operator|+
 name|OPERATION_NAME
 operator|.
-name|toString
+name|getLocalPart
 argument_list|()
 operator|+
 literal|"\""
@@ -431,7 +437,7 @@ literal|",operation=\""
 operator|+
 name|OPERATION_NAME
 operator|.
-name|toString
+name|getLocalPart
 argument_list|()
 operator|+
 literal|"\""

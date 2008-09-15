@@ -662,7 +662,7 @@ name|ManagementConstants
 operator|.
 name|DEFAULT_DOMAIN_NAME
 operator|+
-literal|":operation=\"{http://apache.org/hello_world_soap_http}sayHi\",*"
+literal|":operation=\"sayHi\",*"
 argument_list|)
 decl_stmt|;
 name|Set
@@ -863,7 +863,7 @@ name|ManagementConstants
 operator|.
 name|DEFAULT_DOMAIN_NAME
 operator|+
-literal|":operation=\"{http://apache.org/hello_world_soap_http}greetMeOneWay\",*"
+literal|":operation=\"greetMeOneWay\",*"
 argument_list|)
 decl_stmt|;
 name|s

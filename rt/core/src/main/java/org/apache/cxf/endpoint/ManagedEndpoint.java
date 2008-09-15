@@ -445,7 +445,7 @@ operator|.
 name|getName
 argument_list|()
 operator|.
-name|toString
+name|getLocalPart
 argument_list|()
 argument_list|)
 decl_stmt|;
