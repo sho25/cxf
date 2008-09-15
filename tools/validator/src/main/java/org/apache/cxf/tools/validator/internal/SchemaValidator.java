@@ -822,7 +822,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|msg
 operator|.
@@ -2075,7 +2075,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|msg
 operator|.
@@ -2308,7 +2308,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|msg
 operator|.
@@ -2387,7 +2387,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|msg
 operator|.
