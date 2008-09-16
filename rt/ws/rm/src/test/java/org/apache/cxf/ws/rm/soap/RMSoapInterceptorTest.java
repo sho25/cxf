@@ -161,10 +161,6 @@ name|Element
 import|;
 end_import
 
-begin_comment
-comment|//import org.w3c.dom.NodeList;
-end_comment
-
 begin_import
 import|import
 name|org
@@ -2317,7 +2313,6 @@ name|found
 init|=
 literal|false
 decl_stmt|;
-comment|//            NodeList headerElements = header.getChildNodes();
 name|Iterator
 argument_list|<
 name|Header
@@ -2434,20 +2429,6 @@ break|break;
 block|}
 block|}
 block|}
-comment|//            for (int i = 0; i< headerElements.getLength(); i++) {
-comment|//                Element headerElement = (Element)headerElements.item(i);
-comment|//                String namespace = headerElement.getNamespaceURI();
-comment|//                String localName = headerElement.getLocalName();
-comment|//                if (RMConstants.getNamespace().equals(namespace)
-comment|//&& localName.equals(name)) {
-comment|//                    found = true;
-comment|//                    break;
-comment|//                } else if (RMConstants.getAddressingNamespace().equals(namespace)
-comment|//&& localName.equals(name)) {
-comment|//                    found = true;
-comment|//                    break;
-comment|//                }
-comment|//            }
 name|assertTrue
 argument_list|(
 literal|"Could not find header element "
@@ -2584,22 +2565,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//        NodeList headerElements = header.getChildNodes();
-comment|//        for (int i = 0; i< headerElements.getLength(); i++) {
-comment|//            Element headerElement = (Element)headerElements.item(i);
-comment|//            String namespace = headerElement.getNamespaceURI();
-comment|//            String localName = headerElement.getLocalName();
-comment|//            assertTrue(RMConstants.getNamespace().equals(namespace)
-comment|//                || RMConstants.getAddressingNamespace().equals(namespace));
-comment|//            boolean found = false;
-comment|//            for (String name : names) {
-comment|//                if (localName.equals(name)) {
-comment|//                    found = true;
-comment|//                    break;
-comment|//                }
-comment|//            }
-comment|//            assertTrue("Unexpected header element " + localName, found);
-comment|//        }
 block|}
 specifier|private
 name|SoapMessage

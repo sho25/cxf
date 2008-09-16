@@ -235,10 +235,6 @@ name|Node
 import|;
 end_import
 
-begin_comment
-comment|//import org.w3c.dom.NodeList;
-end_comment
-
 begin_import
 import|import
 name|org
@@ -1833,7 +1829,6 @@ operator|.
 name|createUnmarshaller
 argument_list|()
 decl_stmt|;
-comment|//                NodeList headerElements = header.getChildNodes();
 name|Iterator
 argument_list|<
 name|Header
@@ -2043,33 +2038,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//                for (int i = 0; i< headerElements.getLength(); i++) {
-comment|//                    Node node = headerElements.item(i);
-comment|//                    if (Node.ELEMENT_NODE != node.getNodeType()) {
-comment|//                        continue;
-comment|//                    }
-comment|//                    Element headerElement = (Element)headerElements.item(i);
-comment|//                    String headerURI = headerElement.getNamespaceURI();
-comment|//                    String localName = headerElement.getLocalName();
-comment|//                    if (RMConstants.getNamespace().equals(headerURI)) {
-comment|//                        LOG.log(Level.FINE, "decoding RM header {0}", localName);
-comment|//                        if (RMConstants.getSequenceName().equals(localName)) {
-comment|//                            SequenceType s = decodeProperty(SequenceType.class,
-comment|//                                                            headerElement,
-comment|//                                                            unmarshaller);
-comment|//
-comment|//                            rmps.setSequence(s);
-comment|//                        } else if (RMConstants.getSequenceAckName().equals(localName)) {
-comment|//                            SequenceAcknowledgement ack = decodeProperty(SequenceAcknowledgement.class,
-comment|//                                                            headerElement,
-comment|//                                                            unmarshaller);
-comment|//                            acks.add(ack);
-comment|//                        } else if (RMConstants.getAckRequestedName().equals(localName)) {
-comment|//                            AckRequestedType ar = decodeProperty(AckRequestedType.class,
-comment|//                                                            headerElement,
-comment|//                                                            unmarshaller);
-comment|//                            requested.add(ar);
-comment|//                        }
 block|}
 block|}
 if|if
@@ -2378,14 +2346,6 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|//        NodeList headerElements =
-comment|//            header.getElementsByTagNameNS(RMConstants.getNamespace(), "*");
-comment|//        for (int i = 0; i< headerElements.getLength(); i++) {
-comment|//            Node headerElement = headerElements.item(i);
-comment|//            if (RMConstants.getNamespace().equals(headerElement.getNamespaceURI())) {
-comment|//                header.removeChild(headerElement);
-comment|//            }
-comment|//        }
 block|}
 comment|/**      * When invoked inbound, check if the action indicates that this is one of the       * RM protocol messages (CreateSequence, CreateSequenceResponse, TerminateSequence)      * and if so, replace references to the application service model with references to      * the RM service model.      * The addressing protocol handler must have extracted the action beforehand.       * @see org.apache.cxf.transport.ChainInitiationObserver      *       * @param message the message      */
 specifier|private
