@@ -376,6 +376,8 @@ name|value
 operator|.
 name|getTickerPrice
 argument_list|()
+argument_list|,
+literal|0.01
 argument_list|)
 expr_stmt|;
 name|assertEquals
