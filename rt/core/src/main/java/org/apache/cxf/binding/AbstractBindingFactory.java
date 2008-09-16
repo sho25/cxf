@@ -311,12 +311,14 @@ name|DATABINDING_DISABLED
 init|=
 literal|"databinding.disabled"
 decl_stmt|;
+specifier|protected
 name|Collection
 argument_list|<
 name|String
 argument_list|>
 name|activationNamespaces
 decl_stmt|;
+specifier|protected
 name|Bus
 name|bus
 decl_stmt|;
