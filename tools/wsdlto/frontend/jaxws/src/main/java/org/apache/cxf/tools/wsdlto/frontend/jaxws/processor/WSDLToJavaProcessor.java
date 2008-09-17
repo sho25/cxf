@@ -702,19 +702,6 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|serviceInfo
-operator|.
-name|getBindings
-argument_list|()
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
 name|intf
 operator|.
 name|annotate
@@ -724,7 +711,6 @@ name|BindingAnnotator
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
