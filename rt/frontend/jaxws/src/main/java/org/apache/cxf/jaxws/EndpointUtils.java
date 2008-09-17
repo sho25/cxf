@@ -104,7 +104,7 @@ parameter_list|()
 block|{
 comment|// Utility class - never constructed
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|boolean
 name|hasWebServiceAnnotation
