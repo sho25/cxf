@@ -27,6 +27,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|JMS_CONTENT_TYPE
+init|=
+literal|"SOAPJMS_contentType"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|JMS_QUEUE
 init|=
 literal|"queue"

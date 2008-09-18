@@ -1802,7 +1802,13 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"property has been excluded, only CONTENT_TYPE should be here"
+literal|"property has been excluded, only "
+operator|+
+name|JMSConstants
+operator|.
+name|JMS_CONTENT_TYPE
+operator|+
+literal|"should be here"
 argument_list|,
 name|inHeader
 operator|.
@@ -1819,9 +1825,9 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-name|Message
+name|JMSConstants
 operator|.
-name|CONTENT_TYPE
+name|JMS_CONTENT_TYPE
 argument_list|)
 argument_list|)
 expr_stmt|;
