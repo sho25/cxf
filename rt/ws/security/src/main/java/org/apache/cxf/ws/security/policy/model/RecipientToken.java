@@ -104,7 +104,7 @@ name|TokenWrapper
 block|{
 specifier|private
 name|Token
-name|receipientToken
+name|recipientToken
 decl_stmt|;
 specifier|public
 name|RecipientToken
@@ -122,27 +122,36 @@ block|}
 comment|/**      * @return Returns the receipientToken.      */
 specifier|public
 name|Token
-name|getReceipientToken
+name|getRecipientToken
 parameter_list|()
 block|{
 return|return
-name|receipientToken
+name|recipientToken
+return|;
+block|}
+specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+name|recipientToken
 return|;
 block|}
 comment|/**      * @param receipientToken The receipientToken to set.      */
 specifier|public
 name|void
-name|setReceipientToken
+name|setRecipientToken
 parameter_list|(
 name|Token
-name|receipientToken
+name|recipientToken
 parameter_list|)
 block|{
 name|this
 operator|.
-name|receipientToken
+name|recipientToken
 operator|=
-name|receipientToken
+name|recipientToken
 expr_stmt|;
 block|}
 comment|/*      * (non-Javadoc)      * @see org.apache.ws.security.policy.TokenWrapper#setToken(org.apache.ws.security.policy.Token)      */
@@ -156,7 +165,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|setReceipientToken
+name|setRecipientToken
 argument_list|(
 name|tok
 argument_list|)
@@ -334,7 +343,7 @@ expr_stmt|;
 name|Token
 name|token
 init|=
-name|getReceipientToken
+name|getRecipientToken
 argument_list|()
 decl_stmt|;
 if|if

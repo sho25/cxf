@@ -459,6 +459,15 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
+specifier|public
 name|QName
 name|getRealName
 parameter_list|()

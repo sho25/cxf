@@ -101,6 +101,15 @@ name|LaxTimestampLast
 block|}
 empty_stmt|;
 comment|////////////////////////////////////////////////////////////////////////////////////////////////
+specifier|public
+enum|enum
+name|ProtectionOrder
+block|{
+name|EncryptBeforeSigning
+block|,
+name|SignBeforeEncrypting
+block|}
+empty_stmt|;
 comment|/**      * Protection Order : EncryptBeforeSigning      */
 specifier|public
 specifier|static

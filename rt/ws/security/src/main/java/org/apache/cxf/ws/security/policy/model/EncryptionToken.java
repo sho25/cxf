@@ -129,6 +129,15 @@ return|return
 name|encryptionToken
 return|;
 block|}
+specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+name|encryptionToken
+return|;
+block|}
 comment|/**      * @param encryptionToken The encryptionToken to set.      */
 specifier|public
 name|void

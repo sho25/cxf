@@ -292,11 +292,8 @@ name|ai
 operator|.
 name|getAssertion
 argument_list|()
-operator|.
-name|equal
-argument_list|(
+operator|==
 name|this
-argument_list|)
 condition|)
 block|{
 return|return

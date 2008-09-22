@@ -142,6 +142,15 @@ name|transportToken
 return|;
 block|}
 specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+name|transportToken
+return|;
+block|}
+specifier|public
 name|QName
 name|getRealName
 parameter_list|()

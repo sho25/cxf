@@ -48,12 +48,16 @@ extends|extends
 name|Binding
 block|{
 specifier|private
-name|String
+name|SPConstants
+operator|.
+name|ProtectionOrder
 name|protectionOrder
 init|=
 name|SPConstants
 operator|.
-name|SIGN_BEFORE_ENCRYPTING
+name|ProtectionOrder
+operator|.
+name|SignBeforeEncrypting
 decl_stmt|;
 specifier|private
 name|boolean
@@ -108,7 +112,9 @@ expr_stmt|;
 block|}
 comment|/**      * @return Returns the protectionOrder.      */
 specifier|public
-name|String
+name|SPConstants
+operator|.
+name|ProtectionOrder
 name|getProtectionOrder
 parameter_list|()
 block|{
@@ -121,30 +127,11 @@ specifier|public
 name|void
 name|setProtectionOrder
 parameter_list|(
-name|String
+name|SPConstants
+operator|.
+name|ProtectionOrder
 name|protectionOrder
 parameter_list|)
-block|{
-if|if
-condition|(
-name|SPConstants
-operator|.
-name|ENCRYPT_BEFORE_SIGNING
-operator|.
-name|equals
-argument_list|(
-name|protectionOrder
-argument_list|)
-operator|||
-name|SPConstants
-operator|.
-name|SIGN_BEFORE_ENCRYPTING
-operator|.
-name|equals
-argument_list|(
-name|protectionOrder
-argument_list|)
-condition|)
 block|{
 name|this
 operator|.
@@ -152,12 +139,6 @@ name|protectionOrder
 operator|=
 name|protectionOrder
 expr_stmt|;
-block|}
-else|else
-block|{
-comment|// throw new WSSPolicyException("Incorrect protection order value : "
-comment|// + protectionOrder);
-block|}
 block|}
 comment|/**      * @return Returns the signatureProtection.      */
 specifier|public

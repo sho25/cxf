@@ -110,6 +110,7 @@ specifier|public
 name|BindingOperationInfo
 parameter_list|()
 block|{     }
+specifier|public
 name|BindingOperationInfo
 parameter_list|(
 name|BindingInfo
@@ -202,6 +203,10 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|of
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|of
 operator|.
@@ -520,6 +525,13 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
+name|getName
+argument_list|()
+operator|==
+literal|null
+condition|?
+literal|""
+else|:
 name|getName
 argument_list|()
 argument_list|)

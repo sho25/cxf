@@ -658,7 +658,9 @@ name|setProtectionOrder
 argument_list|(
 name|SPConstants
 operator|.
-name|ENCRYPT_BEFORE_SIGNING
+name|ProtectionOrder
+operator|.
+name|EncryptBeforeSigning
 argument_list|)
 expr_stmt|;
 block|}
@@ -684,7 +686,9 @@ name|setProtectionOrder
 argument_list|(
 name|SPConstants
 operator|.
-name|SIGN_BEFORE_ENCRYPTING
+name|ProtectionOrder
+operator|.
+name|SignBeforeEncrypting
 argument_list|)
 expr_stmt|;
 block|}

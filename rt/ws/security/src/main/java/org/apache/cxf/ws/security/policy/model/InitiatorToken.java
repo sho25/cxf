@@ -129,6 +129,15 @@ return|return
 name|initiatorToken
 return|;
 block|}
+specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+name|initiatorToken
+return|;
+block|}
 comment|/**      * @param initiatorToken The initiatorToken to set.      */
 specifier|public
 name|void

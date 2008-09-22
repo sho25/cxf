@@ -141,6 +141,15 @@ return|return
 name|protectionToken
 return|;
 block|}
+specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+name|protectionToken
+return|;
+block|}
 comment|/**      * @param protectionToken The protectionToken to set.      */
 specifier|public
 name|void

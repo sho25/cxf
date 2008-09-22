@@ -793,13 +793,12 @@ if|if
 condition|(
 name|SPConstants
 operator|.
-name|ENCRYPT_BEFORE_SIGNING
+name|ProtectionOrder
 operator|.
-name|equals
-argument_list|(
+name|EncryptBeforeSigning
+operator|==
 name|getProtectionOrder
 argument_list|()
-argument_list|)
 condition|)
 block|{
 comment|//<sp:EncryptBeforeSigning />

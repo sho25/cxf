@@ -1273,8 +1273,10 @@ condition|(
 name|n
 operator|!=
 literal|null
-operator|&&
-operator|!
+condition|)
+block|{
+if|if
+condition|(
 name|ns
 operator|.
 name|equals
@@ -1285,7 +1287,6 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 operator|&&
-operator|!
 name|lp
 operator|.
 name|equals
@@ -1297,6 +1298,13 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+return|return
+operator|(
+name|Element
+operator|)
+name|n
+return|;
+block|}
 name|n
 operator|=
 name|n

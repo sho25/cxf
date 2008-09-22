@@ -129,6 +129,15 @@ return|return
 name|signatureToken
 return|;
 block|}
+specifier|public
+name|Token
+name|getToken
+parameter_list|()
+block|{
+return|return
+name|signatureToken
+return|;
+block|}
 comment|/**      * @param signatureToken The signatureToken to set.      */
 specifier|public
 name|void
