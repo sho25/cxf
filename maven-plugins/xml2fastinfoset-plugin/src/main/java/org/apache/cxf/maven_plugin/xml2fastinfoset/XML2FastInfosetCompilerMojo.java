@@ -432,34 +432,6 @@ argument_list|)
 expr_stmt|;
 continue|continue;
 block|}
-comment|// this part is required in case the user specified "../something"
-comment|// as destination
-comment|// see MNG-1345
-if|if
-condition|(
-operator|!
-name|outputDirectory
-operator|.
-name|exists
-argument_list|()
-operator|&&
-operator|!
-name|outputDirectory
-operator|.
-name|mkdirs
-argument_list|()
-condition|)
-block|{
-throw|throw
-operator|new
-name|MojoExecutionException
-argument_list|(
-literal|"Cannot create resource output directory: "
-operator|+
-name|outputDirectory
-argument_list|)
-throw|;
-block|}
 name|DirectoryScanner
 name|scanner
 init|=
@@ -607,6 +579,45 @@ name|targetPath
 operator|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|includedFiles
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
+comment|// this part is required in case the user specified "../something"
+comment|// as destination
+comment|// see MNG-1345
+if|if
+condition|(
+operator|!
+name|outputDirectory
+operator|.
+name|exists
+argument_list|()
+operator|&&
+operator|!
+name|outputDirectory
+operator|.
+name|mkdirs
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|MojoExecutionException
+argument_list|(
+literal|"Cannot create resource output directory: "
+operator|+
+name|outputDirectory
+argument_list|)
+throw|;
+block|}
+block|}
 for|for
 control|(
 name|Iterator
