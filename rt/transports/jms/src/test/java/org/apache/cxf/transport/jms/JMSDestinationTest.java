@@ -241,6 +241,14 @@ extends|extends
 name|AbstractJMSTester
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|int
+name|MAX_RECEIVE_TIME
+init|=
+literal|3
+decl_stmt|;
+specifier|private
 name|Message
 name|destMessage
 decl_stmt|;
@@ -282,7 +290,7 @@ literal|null
 operator|&&
 name|waitTime
 operator|<
-literal|3000
+name|MAX_RECEIVE_TIME
 condition|)
 block|{
 try|try
@@ -304,15 +312,16 @@ block|{
 comment|// do nothing here
 block|}
 name|waitTime
-operator|=
-name|waitTime
-operator|+
-literal|1000
+operator|++
 expr_stmt|;
 block|}
 name|assertTrue
 argument_list|(
-literal|"Can't receive the Conduit Message in 3 seconds"
+literal|"Can't receive the Conduit Message in "
+operator|+
+name|MAX_RECEIVE_TIME
+operator|+
+literal|" seconds"
 argument_list|,
 name|inMessage
 operator|!=
@@ -750,7 +759,7 @@ name|bf
 operator|.
 name|createBus
 argument_list|(
-literal|"/wsdl/jms_test_config.xml"
+literal|"jms_test_config.xml"
 argument_list|)
 expr_stmt|;
 name|BusFactory
@@ -804,42 +813,12 @@ expr_stmt|;
 name|JMSDestination
 name|destination
 init|=
-literal|null
-decl_stmt|;
-try|try
-block|{
-name|destination
-operator|=
 name|setupJMSDestination
 argument_list|(
 literal|true
 argument_list|)
-expr_stmt|;
-name|destination
-operator|.
-name|activate
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|e
-parameter_list|)
-block|{
-name|assertFalse
-argument_list|(
-literal|"The JMSDestination activate should not through exception "
-argument_list|,
-literal|false
-argument_list|)
-expr_stmt|;
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
+decl_stmt|;
+comment|// destination.activate();
 name|sendoutMessage
 argument_list|(
 name|conduit
@@ -1330,7 +1309,7 @@ argument_list|,
 literal|"HelloWorldPort"
 argument_list|)
 expr_stmt|;
-comment|//set up the conduit send to be true
+comment|// set up the conduit send to be true
 name|JMSConduit
 name|conduit
 init|=
@@ -1363,7 +1342,7 @@ argument_list|(
 literal|true
 argument_list|)
 decl_stmt|;
-comment|//set up MessageObserver for handling the conduit message
+comment|// set up MessageObserver for handling the conduit message
 name|MessageObserver
 name|observer
 init|=
@@ -1412,7 +1391,7 @@ argument_list|,
 name|outMessage
 argument_list|)
 expr_stmt|;
-comment|//setup the message for
+comment|// setup the message for
 name|Conduit
 name|backConduit
 decl_stmt|;
@@ -1431,7 +1410,7 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-comment|//wait for the message to be got from the conduit
+comment|// wait for the message to be got from the conduit
 name|Message
 name|replyMessage
 init|=
@@ -1455,12 +1434,13 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+argument_list|)
+throw|;
 block|}
 block|}
 block|}
@@ -1472,7 +1452,7 @@ argument_list|(
 name|observer
 argument_list|)
 expr_stmt|;
-comment|//set is oneway false for get response from destination
+comment|// set is oneway false for get response from destination
 name|sendoutMessage
 argument_list|(
 name|conduit
@@ -1482,7 +1462,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-comment|//wait for the message to be got from the destination,
+comment|// wait for the message to be got from the destination,
 comment|// create the thread to handler the Destination incoming message
 name|waitForReceiveInMessage
 argument_list|()
@@ -1555,7 +1535,7 @@ argument_list|,
 literal|"HelloWorldPort"
 argument_list|)
 expr_stmt|;
-comment|//set up the conduit send to be true
+comment|// set up the conduit send to be true
 name|JMSConduit
 name|conduit
 init|=
@@ -1634,7 +1614,7 @@ argument_list|(
 literal|true
 argument_list|)
 decl_stmt|;
-comment|//set up MessageObserver for handling the conduit message
+comment|// set up MessageObserver for handling the conduit message
 name|MessageObserver
 name|observer
 init|=
@@ -1683,7 +1663,7 @@ argument_list|,
 name|outMessage
 argument_list|)
 expr_stmt|;
-comment|//setup the message for
+comment|// setup the message for
 name|Conduit
 name|backConduit
 decl_stmt|;
@@ -1702,7 +1682,7 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-comment|//wait for the message to be got from the conduit
+comment|// wait for the message to be got from the conduit
 name|Message
 name|replyMessage
 init|=
@@ -1726,12 +1706,13 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+argument_list|)
+throw|;
 block|}
 block|}
 block|}
@@ -1743,7 +1724,7 @@ argument_list|(
 name|observer
 argument_list|)
 expr_stmt|;
-comment|//set is oneway false for get response from destination
+comment|// set is oneway false for get response from destination
 name|sendoutMessage
 argument_list|(
 name|conduit
@@ -1753,7 +1734,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-comment|//wait for the message to be got from the destination,
+comment|// wait for the message to be got from the destination,
 comment|// create the thread to handler the Destination incoming message
 name|waitForReceiveInMessage
 argument_list|()

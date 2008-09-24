@@ -589,6 +589,7 @@ name|getBytes
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// TODO encoding
 name|os
 operator|.
 name|close
@@ -640,6 +641,27 @@ argument_list|,
 name|target
 argument_list|)
 decl_stmt|;
+name|JMSConfiguration
+name|jmsConfig
+init|=
+operator|new
+name|JMSOldConfigHolder
+argument_list|()
+operator|.
+name|createJMSConfigurationFromEndpointInfo
+argument_list|(
+name|bus
+argument_list|,
+name|endpointInfo
+argument_list|)
+decl_stmt|;
+name|jmsConduit
+operator|.
+name|setJmsConfig
+argument_list|(
+name|jmsConfig
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|send

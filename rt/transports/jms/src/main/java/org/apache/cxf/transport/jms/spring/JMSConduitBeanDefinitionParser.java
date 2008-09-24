@@ -265,7 +265,7 @@ argument_list|,
 literal|"address"
 argument_list|)
 argument_list|,
-literal|"JMSAddress"
+literal|"address"
 argument_list|,
 name|AddressType
 operator|.
