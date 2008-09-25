@@ -187,6 +187,15 @@ name|add
 argument_list|(
 name|SP11Constants
 operator|.
+name|TRUST_10
+argument_list|)
+expr_stmt|;
+name|ASSERTION_TYPES
+operator|.
+name|add
+argument_list|(
+name|SP11Constants
+operator|.
 name|SIGNED_SUPPORTING_TOKENS
 argument_list|)
 expr_stmt|;
