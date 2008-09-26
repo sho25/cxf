@@ -2733,14 +2733,8 @@ argument_list|,
 name|utBuilder
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|suppTokens
-operator|.
-name|isEncryptedToken
-argument_list|()
-condition|)
-block|{
+comment|//WebLogic and WCF always encrypt these
+comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
 name|encryptedTokensIdList
 operator|.
 name|add
@@ -2751,7 +2745,6 @@ name|getId
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 elseif|else
