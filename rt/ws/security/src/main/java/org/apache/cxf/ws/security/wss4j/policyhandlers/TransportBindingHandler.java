@@ -251,6 +251,11 @@ init|=
 name|createTimestamp
 argument_list|()
 decl_stmt|;
+name|handleLayout
+argument_list|(
+name|timestamp
+argument_list|)
+expr_stmt|;
 name|ais
 operator|=
 name|aim
@@ -331,11 +336,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|handleLayout
-argument_list|(
-name|timestamp
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 end_class

@@ -2156,13 +2156,13 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|FINE
+name|INFO
 argument_list|)
 condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|info
 argument_list|(
 literal|"Creating Service "
 operator|+
@@ -2279,13 +2279,13 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|FINE
+name|INFO
 argument_list|)
 condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|info
 argument_list|(
 literal|"Creating Service "
 operator|+
