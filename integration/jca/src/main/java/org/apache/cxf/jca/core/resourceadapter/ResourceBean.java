@@ -160,6 +160,8 @@ name|LOG_LEVEL
 init|=
 literal|"log.level"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
@@ -168,6 +170,8 @@ name|CONFIG_DOMAIN
 init|=
 literal|"cxf"
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final

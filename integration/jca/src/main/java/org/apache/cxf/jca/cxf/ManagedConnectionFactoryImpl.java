@@ -331,6 +331,8 @@ name|logLevel
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setConfigurationDomain
@@ -347,6 +349,8 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setConfigurationScope
@@ -432,6 +436,8 @@ name|LOG_LEVEL
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|String
 name|getConfigurationDomain
@@ -449,6 +455,8 @@ name|CONFIG_DOMAIN
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|String
 name|getConfigurationScope
