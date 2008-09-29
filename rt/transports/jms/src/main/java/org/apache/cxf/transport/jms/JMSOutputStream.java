@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *  */
+comment|/**  * Outputstream that sends a message when the exchange is closed  */
 end_comment
 
 begin_class
@@ -135,6 +135,7 @@ comment|// do nothing here
 block|}
 annotation|@
 name|Override
+comment|/**      * Close the stream and send the message out      */
 specifier|protected
 name|void
 name|doClose

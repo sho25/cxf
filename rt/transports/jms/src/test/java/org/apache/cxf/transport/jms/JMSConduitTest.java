@@ -59,6 +59,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|Charset
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|jms
@@ -302,9 +314,6 @@ argument_list|,
 name|conduit
 operator|.
 name|getJmsConfig
-argument_list|()
-operator|.
-name|getJmsTemplate
 argument_list|()
 operator|.
 name|getReceiveTimeout
@@ -633,25 +642,44 @@ expr_stmt|;
 specifier|final
 name|byte
 index|[]
-name|b
+name|testBytes
 init|=
 name|testMsg
 operator|.
 name|getBytes
+argument_list|(
+name|Charset
+operator|.
+name|defaultCharset
 argument_list|()
+argument_list|)
 decl_stmt|;
 comment|// TODO encoding
-name|JmsTemplate
-name|jmsTemplate
+name|JMSConfiguration
+name|jmsConfig
 init|=
 name|conduit
 operator|.
 name|getJmsConfig
 argument_list|()
-operator|.
-name|getJmsTemplate
+decl_stmt|;
+name|JmsTemplate
+name|jmsTemplate
+init|=
+operator|new
+name|JmsTemplate
 argument_list|()
 decl_stmt|;
+name|jmsTemplate
+operator|.
+name|setConnectionFactory
+argument_list|(
+name|jmsConfig
+operator|.
+name|getConnectionFactory
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|javax
 operator|.
 name|jms
@@ -689,7 +717,7 @@ name|JMSUtils
 operator|.
 name|createAndSetPayload
 argument_list|(
-name|b
+name|testBytes
 argument_list|,
 name|session
 argument_list|,
@@ -711,10 +739,6 @@ operator|instanceof
 name|BytesMessage
 argument_list|)
 expr_stmt|;
-comment|// byte[] returnBytes = new byte[(int)((BytesMessage) message).getBodyLength()];
-comment|// ((BytesMessage) message).readBytes(returnBytes);
-comment|// assertTrue("Message marshalled was incorrect",
-comment|// testMsg.equals(new String(returnBytes)));
 block|}
 block|}
 end_class

@@ -244,7 +244,7 @@ argument_list|,
 literal|"runtimePolicy"
 argument_list|)
 argument_list|,
-literal|"runtimePolicy"
+literal|"serverBehavior"
 argument_list|,
 name|ServerBehaviorPolicyType
 operator|.
@@ -265,7 +265,7 @@ argument_list|,
 literal|"address"
 argument_list|)
 argument_list|,
-literal|"JMSAddress"
+literal|"address"
 argument_list|,
 name|AddressType
 operator|.

@@ -64,8 +64,6 @@ name|JMSUtilsTest
 extends|extends
 name|Assert
 block|{
-comment|// This is just a place holder for now it will be chaning in next task
-comment|// when the new JMS address policies and configurations are introdced.
 annotation|@
 name|Test
 specifier|public
@@ -115,7 +113,14 @@ argument_list|(
 name|prop
 argument_list|)
 expr_stmt|;
-name|prop
+name|JMSNamingPropertyType
+name|prop2
+init|=
+operator|new
+name|JMSNamingPropertyType
+argument_list|()
+decl_stmt|;
+name|prop2
 operator|.
 name|setName
 argument_list|(
@@ -124,7 +129,7 @@ operator|.
 name|BATCHSIZE
 argument_list|)
 expr_stmt|;
-name|prop
+name|prop2
 operator|.
 name|setValue
 argument_list|(
@@ -138,35 +143,19 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|prop
+name|prop2
 argument_list|)
 expr_stmt|;
 name|Properties
 name|env
 init|=
-operator|new
-name|Properties
-argument_list|()
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|env
-operator|.
-name|size
-argument_list|()
-operator|<=
-literal|0
-argument_list|)
-expr_stmt|;
 name|JMSUtils
 operator|.
-name|populateContextEnvironment
+name|getInitialContextEnv
 argument_list|(
 name|addrType
-argument_list|,
-name|env
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Environment should not be empty"

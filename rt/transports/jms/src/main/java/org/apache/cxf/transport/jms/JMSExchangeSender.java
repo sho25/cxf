@@ -31,10 +31,15 @@ name|Exchange
 import|;
 end_import
 
+begin_comment
+comment|/**  * Callback interface for JMSOutputStream  */
+end_comment
+
 begin_interface
 interface|interface
 name|JMSExchangeSender
 block|{
+comment|/**      * Is called from JMSOutputStream.doClose() when the stream is fully      * written. Sends the outMessage of the given exchange with the given payload      * from the JMSOutputStream. If the exchange is not oneway a reply should be recieved      * and set as inMessage      *       * @param exchange      * @param payload      */
 name|void
 name|sendExchange
 parameter_list|(
