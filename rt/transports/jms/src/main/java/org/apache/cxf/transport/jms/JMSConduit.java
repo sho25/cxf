@@ -1106,6 +1106,13 @@ name|correlationId
 argument_list|)
 expr_stmt|;
 block|}
+name|exchange
+operator|.
+name|setInMessage
+argument_list|(
+name|inMessage
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|incomingObserver
@@ -1121,13 +1128,6 @@ name|inMessage
 argument_list|)
 expr_stmt|;
 block|}
-name|exchange
-operator|.
-name|setInMessage
-argument_list|(
-name|inMessage
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 comment|/**      * When a message is received on the reply destination the correlation map is searched      * for the correlationId. If it is found the message is converted to a CXF message and the      * thread sending the request is notified      *       * {@inheritDoc}      */
