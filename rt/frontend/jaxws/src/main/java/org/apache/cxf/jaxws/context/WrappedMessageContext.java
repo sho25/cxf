@@ -758,6 +758,13 @@ name|SCOPES
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|scopes
+operator|!=
+literal|null
+condition|)
+block|{
 name|m
 operator|.
 name|put
@@ -772,6 +779,7 @@ argument_list|(
 name|reqMessage
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
