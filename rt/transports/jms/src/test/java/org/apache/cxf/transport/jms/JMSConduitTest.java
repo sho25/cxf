@@ -652,6 +652,9 @@ name|Charset
 operator|.
 name|defaultCharset
 argument_list|()
+operator|.
+name|name
+argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// TODO encoding
