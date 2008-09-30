@@ -29,6 +29,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -136,6 +146,18 @@ operator|.
 name|dom
 operator|.
 name|Document
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|Element
 import|;
 end_import
 
@@ -286,6 +308,84 @@ argument_list|(
 name|ert
 argument_list|,
 literal|null
+argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// VersionTransformer.convertToInternal produces metadata extensions of type
+comment|// DOM Element hence we're testing the relevant EndpointReferenceUtils.setPortName
+comment|// code path here
+name|List
+argument_list|<
+name|Object
+argument_list|>
+name|metadata
+init|=
+name|ert
+operator|.
+name|getMetadata
+argument_list|()
+operator|.
+name|getAny
+argument_list|()
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Single metadata extension expected"
+argument_list|,
+literal|1
+argument_list|,
+name|metadata
+operator|.
+name|size
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"Metadata extension of type DOM Element expected"
+argument_list|,
+name|metadata
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+operator|instanceof
+name|Element
+argument_list|)
+expr_stmt|;
+name|assertNull
+argument_list|(
+literal|"No portName has been set yet"
+argument_list|,
+name|EndpointReferenceUtils
+operator|.
+name|getPortName
+argument_list|(
+name|ert
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|EndpointReferenceUtils
+operator|.
+name|setPortName
+argument_list|(
+name|ert
+argument_list|,
+literal|"Greeter"
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"No portName has been set"
+argument_list|,
+literal|"Greeter"
+argument_list|,
+name|EndpointReferenceUtils
+operator|.
+name|getPortName
+argument_list|(
+name|ert
 argument_list|)
 argument_list|)
 expr_stmt|;
