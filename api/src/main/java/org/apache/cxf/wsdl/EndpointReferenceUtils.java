@@ -975,8 +975,13 @@ condition|(
 name|baseURI
 operator|!=
 literal|null
+operator|&&
+name|systemId
+operator|!=
+literal|null
 condition|)
 block|{
+comment|//add additional systemId null check
 try|try
 block|{
 name|URI
