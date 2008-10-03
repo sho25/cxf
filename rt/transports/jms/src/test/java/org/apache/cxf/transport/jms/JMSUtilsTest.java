@@ -149,7 +149,7 @@ expr_stmt|;
 name|Properties
 name|env
 init|=
-name|JMSUtils
+name|JMSOldConfigHolder
 operator|.
 name|getInitialContextEnv
 argument_list|(

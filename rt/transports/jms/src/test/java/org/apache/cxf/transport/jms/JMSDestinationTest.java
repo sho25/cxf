@@ -49,6 +49,16 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|jms
+operator|.
+name|DeliveryMode
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -941,7 +951,9 @@ name|header
 operator|.
 name|setJMSDeliveryMode
 argument_list|(
-literal|3
+name|DeliveryMode
+operator|.
+name|PERSISTENT
 argument_list|)
 expr_stmt|;
 name|header
@@ -1191,6 +1203,21 @@ argument_list|,
 name|inHeader
 operator|.
 name|getJMSPriority
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"The inMessage and outMessage JMS Header's JMSDeliveryMode should be equals"
+argument_list|,
+name|outHeader
+operator|.
+name|getJMSDeliveryMode
+argument_list|()
+argument_list|,
+name|inHeader
+operator|.
+name|getJMSDeliveryMode
 argument_list|()
 argument_list|)
 expr_stmt|;

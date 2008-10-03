@@ -298,9 +298,7 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
-name|JMSConduit
-name|jmsConduit
-init|=
+return|return
 operator|new
 name|JMSConduit
 argument_list|(
@@ -308,14 +306,6 @@ name|target
 argument_list|,
 name|jmsConf
 argument_list|)
-decl_stmt|;
-name|jmsConduit
-operator|.
-name|afterPropertiesSet
-argument_list|()
-expr_stmt|;
-return|return
-name|jmsConduit
 return|;
 block|}
 comment|/**      * {@inheritDoc}      */
