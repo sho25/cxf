@@ -39,6 +39,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Locale
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -450,6 +460,10 @@ operator|new
 name|SimpleDateFormat
 argument_list|(
 literal|"EEE, dd MMM yyyy HH:mm:ss zzz"
+argument_list|,
+name|Locale
+operator|.
+name|ENGLISH
 argument_list|)
 operator|.
 name|parse
@@ -506,6 +520,10 @@ operator|new
 name|SimpleDateFormat
 argument_list|(
 literal|"EEE, dd MMM yyyy HH:mm:ss zzz"
+argument_list|,
+name|Locale
+operator|.
+name|ENGLISH
 argument_list|)
 operator|.
 name|parse
