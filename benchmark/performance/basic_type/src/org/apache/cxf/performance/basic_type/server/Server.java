@@ -145,7 +145,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|" READY "
+literal|"READY"
 argument_list|)
 expr_stmt|;
 block|}
