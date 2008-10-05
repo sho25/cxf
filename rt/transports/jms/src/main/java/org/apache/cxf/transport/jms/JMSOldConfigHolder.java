@@ -804,57 +804,6 @@ argument_list|(
 name|cf
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|jmsConfig
-operator|.
-name|getTargetDestination
-argument_list|()
-operator|==
-literal|null
-operator|||
-name|jmsConfig
-operator|.
-name|getConnectionFactory
-argument_list|()
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-literal|"Insufficient configuration for "
-operator|+
-operator|(
-name|isConduit
-condition|?
-literal|"Conduit"
-else|:
-literal|"Destination"
-operator|)
-operator|+
-literal|". "
-operator|+
-literal|"Did you configure a<jms:"
-operator|+
-operator|(
-name|isConduit
-condition|?
-literal|"conduit"
-else|:
-literal|"destination"
-operator|)
-operator|+
-literal|" name=\""
-operator|+
-name|name
-operator|+
-literal|"\"> and set the jndiConnectionFactoryName ?"
-argument_list|)
-throw|;
-block|}
 return|return
 name|jmsConfig
 return|;

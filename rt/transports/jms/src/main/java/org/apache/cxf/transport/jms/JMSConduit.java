@@ -367,6 +367,42 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|jmsConfig
+operator|.
+name|getTargetDestination
+argument_list|()
+operator|==
+literal|null
+operator|||
+name|jmsConfig
+operator|.
+name|getConnectionFactory
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+name|String
+name|name
+init|=
+literal|".jms-conduit"
+decl_stmt|;
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Insufficient configuration for Conduit. "
+operator|+
+literal|"Did you configure a<jms:conduit name=\""
+operator|+
+name|name
+operator|+
+literal|"\"> and set the jndiConnectionFactoryName ?"
+argument_list|)
+throw|;
+block|}
 name|boolean
 name|isTextPayload
 init|=

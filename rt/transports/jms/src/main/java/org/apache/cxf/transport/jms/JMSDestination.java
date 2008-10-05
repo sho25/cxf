@@ -610,6 +610,50 @@ argument_list|,
 literal|"JMSDestination activate().... "
 argument_list|)
 expr_stmt|;
+name|String
+name|name
+init|=
+name|endpointInfo
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+operator|+
+literal|".jms-destination"
+decl_stmt|;
+if|if
+condition|(
+name|jmsConfig
+operator|.
+name|getTargetDestination
+argument_list|()
+operator|==
+literal|null
+operator|||
+name|jmsConfig
+operator|.
+name|getConnectionFactory
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Insufficient configuration for Destination. "
+operator|+
+literal|"Did you configure a<jms:destination name=\""
+operator|+
+name|name
+operator|+
+literal|"\"> and set the jndiConnectionFactoryName ?"
+argument_list|)
+throw|;
+block|}
 name|jmsListener
 operator|=
 name|JMSFactory
