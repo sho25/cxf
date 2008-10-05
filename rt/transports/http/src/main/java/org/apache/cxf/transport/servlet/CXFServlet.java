@@ -467,7 +467,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|// it should be the runtime exception
+comment|// it should be a runtime exception
 name|Exception
 name|ex
 init|=
@@ -524,8 +524,7 @@ name|ApplicationContext
 name|ctx
 parameter_list|)
 block|{
-comment|// This constructor works whether there is a context or not
-comment|// If the ctx is null, we just start up the default bus
+comment|/* If ctx is null, normally no ContextLoaderListener           * was defined in web.xml.  Default bus with all extensions          * will be created in this case.          *           * If ctx not null, was already created by ContextLoaderListener.          * Bus with only those extensions defined in the ctx will be created.           */
 if|if
 condition|(
 name|ctx
