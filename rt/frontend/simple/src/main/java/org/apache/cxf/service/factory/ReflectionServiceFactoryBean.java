@@ -6390,6 +6390,10 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+literal|null
+operator|!=
+name|oldEl
+operator|&&
 operator|!
 name|oldEl
 operator|.
