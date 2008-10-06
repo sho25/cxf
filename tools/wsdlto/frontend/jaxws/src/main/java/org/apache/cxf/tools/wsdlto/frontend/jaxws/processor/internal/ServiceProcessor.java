@@ -4211,15 +4211,11 @@ operator|.
 name|HTTPBinding
 return|;
 block|}
-comment|// TBD XMLBinding
+block|}
 return|return
 name|BindingType
 operator|.
 name|XMLBinding
-return|;
-block|}
-return|return
-literal|null
 return|;
 block|}
 specifier|private
