@@ -532,7 +532,7 @@ name|assertTrue
 argument_list|(
 name|custom
 operator|instanceof
-name|StringType
+name|CustomStringType
 argument_list|)
 expr_stmt|;
 block|}

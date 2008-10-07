@@ -799,7 +799,7 @@ literal|"JBIDestination for Endpoint "
 operator|+
 name|epName
 operator|+
-literal|" already be created"
+literal|" has already been created"
 argument_list|)
 throw|;
 block|}

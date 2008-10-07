@@ -237,6 +237,21 @@ argument_list|>
 name|attachments
 parameter_list|)
 block|{
+if|if
+condition|(
+name|id
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|DatabindingException
+argument_list|(
+literal|"Cannot get attachment: null id"
+argument_list|)
+throw|;
+block|}
 name|int
 name|i
 init|=

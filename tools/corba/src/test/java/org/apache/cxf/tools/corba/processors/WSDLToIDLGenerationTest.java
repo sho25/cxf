@@ -3428,7 +3428,39 @@ argument_list|)
 expr_stmt|;
 name|InputStream
 name|origstream
-init|=
+decl_stmt|;
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+comment|// The ibm jdk outputs the idl modules in a different order
+comment|// (still valid idl).
+name|origstream
+operator|=
+name|getClass
+argument_list|()
+operator|.
+name|getResourceAsStream
+argument_list|(
+literal|"/idlgen/expected_multiplebinding_ibmjdk.idl"
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|origstream
+operator|=
 name|getClass
 argument_list|()
 operator|.
@@ -3436,7 +3468,8 @@ name|getResourceAsStream
 argument_list|(
 literal|"/idlgen/expected_multiplebinding.idl"
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 name|byte
 name|orig
 index|[]
