@@ -222,7 +222,7 @@ name|baseURI
 operator|=
 name|uri
 operator|.
-name|getPath
+name|getRawPath
 argument_list|()
 expr_stmt|;
 name|int
@@ -256,7 +256,15 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
+name|URI
+operator|.
+name|create
+argument_list|(
 name|baseURI
+argument_list|)
+operator|.
+name|getPath
+argument_list|()
 return|;
 block|}
 block|}
