@@ -231,6 +231,23 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|void
+name|writeValueAsByte
+parameter_list|(
+name|Byte
+name|b
+parameter_list|)
+block|{
+name|writeValue
+argument_list|(
+name|b
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * @see org.apache.cxf.aegis.xml.MessageWriter#writeValueAsDouble(java.lang.Double)      */
 specifier|public
 name|void

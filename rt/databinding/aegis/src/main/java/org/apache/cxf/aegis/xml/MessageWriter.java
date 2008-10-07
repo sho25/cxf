@@ -88,6 +88,13 @@ name|short1
 parameter_list|)
 function_decl|;
 name|void
+name|writeValueAsByte
+parameter_list|(
+name|Byte
+name|b
+parameter_list|)
+function_decl|;
+name|void
 name|writeValueAsBoolean
 parameter_list|(
 name|boolean
