@@ -1369,7 +1369,6 @@ return|return
 literal|false
 return|;
 block|}
-specifier|private
 specifier|static
 name|Object
 name|getAnnotationValue

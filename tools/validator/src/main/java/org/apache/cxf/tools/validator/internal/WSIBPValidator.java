@@ -229,6 +229,20 @@ name|cxf
 operator|.
 name|helpers
 operator|.
+name|CastUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
 name|WSDLHelper
 import|;
 end_import
@@ -2221,11 +2235,6 @@ literal|true
 return|;
 block|}
 comment|// TODO: Should also check SoapHeader/SoapHeaderFault
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|boolean
 name|checkR2205
@@ -2334,6 +2343,10 @@ name|Fault
 argument_list|>
 name|faults
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|operation
 operator|.
 name|getFaults
@@ -2341,6 +2354,7 @@ argument_list|()
 operator|.
 name|values
 argument_list|()
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -2376,6 +2390,10 @@ name|Part
 argument_list|>
 name|parts
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|message
 operator|.
 name|getParts
@@ -2383,6 +2401,7 @@ argument_list|()
 operator|.
 name|values
 argument_list|()
+argument_list|)
 decl_stmt|;
 for|for
 control|(

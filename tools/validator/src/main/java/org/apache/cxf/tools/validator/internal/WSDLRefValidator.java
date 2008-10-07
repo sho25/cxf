@@ -2668,11 +2668,6 @@ name|warningMsg
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|void
 name|collectValidationPoints
@@ -2711,9 +2706,15 @@ literal|" does not define any services"
 argument_list|)
 expr_stmt|;
 comment|//addWarning("WSDL document does not define any services");
-name|portTypeRefNames
+name|Collection
+argument_list|<
+name|QName
+argument_list|>
+name|ports
+init|=
+name|CastUtils
 operator|.
-name|addAll
+name|cast
 argument_list|(
 name|this
 operator|.
@@ -2724,6 +2725,13 @@ argument_list|()
 operator|.
 name|keySet
 argument_list|()
+argument_list|)
+decl_stmt|;
+name|portTypeRefNames
+operator|.
+name|addAll
+argument_list|(
+name|ports
 argument_list|)
 expr_stmt|;
 block|}

@@ -57,7 +57,7 @@ specifier|final
 name|String
 name|DEFAULT_WSDL_LOCATION
 init|=
-literal|"@£$%^&*()DEFAULTWSDLLOCATION"
+literal|"DEFAULTWSDLLOCATION - WORKAROUND"
 decl_stmt|;
 specifier|protected
 name|List
