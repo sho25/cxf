@@ -249,6 +249,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|configuration
+operator|.
+name|ConfigurationException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|helpers
 operator|.
 name|CastUtils
@@ -642,15 +656,27 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|ConfigurationException
 argument_list|(
-literal|"Insufficient configuration for Destination. "
-operator|+
-literal|"Did you configure a<jms:destination name=\""
-operator|+
+operator|new
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|i18n
+operator|.
+name|Message
+argument_list|(
+literal|"INSUFFICIENT_CONFIGURATION_DESTINATION"
+argument_list|,
+name|LOG
+argument_list|,
 name|name
-operator|+
-literal|"\"> and set the jndiConnectionFactoryName ?"
+argument_list|)
 argument_list|)
 throw|;
 block|}
@@ -669,11 +695,6 @@ operator|.
 name|getTargetDestination
 argument_list|()
 argument_list|)
-expr_stmt|;
-name|jmsConfig
-operator|.
-name|getTargetDestination
-argument_list|()
 expr_stmt|;
 block|}
 specifier|public
