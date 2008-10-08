@@ -737,7 +737,7 @@ return|return
 name|orbConfig
 return|;
 block|}
-specifier|protected
+specifier|public
 specifier|synchronized
 name|void
 name|prepareOrb
