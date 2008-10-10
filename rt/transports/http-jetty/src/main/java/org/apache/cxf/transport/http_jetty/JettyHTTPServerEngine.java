@@ -1800,9 +1800,9 @@ name|SslSocketConnector
 operator|)
 condition|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
+name|LOG
+operator|.
+name|warning
 argument_list|(
 literal|"Connector "
 operator|+
@@ -1814,7 +1814,8 @@ name|port
 operator|+
 literal|" does not support SSL connections."
 argument_list|)
-throw|;
+expr_stmt|;
+return|return;
 block|}
 name|connectorFactory
 operator|=
