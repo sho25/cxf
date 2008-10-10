@@ -274,8 +274,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-try|try
-block|{
 return|return
 name|IOUtils
 operator|.
@@ -283,18 +281,6 @@ name|toString
 argument_list|(
 name|is
 argument_list|)
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|e
-parameter_list|)
-block|{
-comment|// TODO: better exception handling
-block|}
-return|return
-literal|null
 return|;
 block|}
 specifier|public
@@ -334,8 +320,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-try|try
-block|{
 name|os
 operator|.
 name|write
@@ -346,15 +330,6 @@ name|getBytes
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|e
-parameter_list|)
-block|{
-comment|//TODO: better exception handling
-block|}
 block|}
 block|}
 end_class
