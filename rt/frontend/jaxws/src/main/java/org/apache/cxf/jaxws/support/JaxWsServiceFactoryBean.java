@@ -1290,6 +1290,21 @@ annotation|@
 name|Override
 specifier|protected
 name|void
+name|checkServiceClassAnnotations
+parameter_list|(
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|sc
+parameter_list|)
+block|{
+comment|//no need to check
+block|}
+annotation|@
+name|Override
+specifier|protected
+name|void
 name|initializeDefaultInterceptors
 parameter_list|()
 block|{
