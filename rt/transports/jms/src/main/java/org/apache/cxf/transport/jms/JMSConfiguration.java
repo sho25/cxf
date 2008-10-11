@@ -149,8 +149,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|useJms11
-init|=
-literal|true
 decl_stmt|;
 specifier|private
 name|boolean
