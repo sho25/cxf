@@ -561,13 +561,17 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|invoker
+operator|=
+name|createInvoker
+argument_list|()
+expr_stmt|;
 name|getServiceFactory
 argument_list|()
 operator|.
 name|setInvoker
 argument_list|(
-name|createInvoker
-argument_list|()
+name|invoker
 argument_list|)
 expr_stmt|;
 block|}
@@ -1155,7 +1159,7 @@ return|return
 name|start
 return|;
 block|}
-comment|/**      * Specifies if the Server should be started upon creation. The       * default is for Servers to be started upon creation. Passing       *<code>false</code> tells the factory that the Server will be       * started manually using the start method.      *      * @param start<code>false</code> specifies that the Server will not be started upon creation      */
+comment|/**      * Specifies if the Server should be started upon creation. The      * default is for Servers to be started upon creation. Passing      *<code>false</code> tells the factory that the Server will be      * started manually using the start method.      *      * @param start<code>false</code> specifies that the Server will not be started upon creation      */
 specifier|public
 name|void
 name|setStart
@@ -1215,7 +1219,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|/**      * Sets the bean implementing the service. If this is set a       *<code>BeanInvoker</code> is created for the provided bean.      *      * @param serviceBean an instantiated implementaiton object      */
+comment|/**      * Sets the bean implementing the service. If this is set a      *<code>BeanInvoker</code> is created for the provided bean.      *      * @param serviceBean an instantiated implementaiton object      */
 specifier|public
 name|void
 name|setServiceBean
@@ -1285,7 +1289,7 @@ operator|=
 name|invoker
 expr_stmt|;
 block|}
-comment|/**      * Specifies the location of the WSDL defining the service interface       * used by the factory to create services. Typically, the WSDL       * location is specified as a URL.      *       * @param locaiton the URL of the WSDL defining the service interface      */
+comment|/**      * Specifies the location of the WSDL defining the service interface      * used by the factory to create services. Typically, the WSDL      * location is specified as a URL.      *      * @param locaiton the URL of the WSDL defining the service interface      */
 specifier|public
 name|void
 name|setWsdlLocation
