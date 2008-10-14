@@ -92,7 +92,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Registers an action to invoke when the instance is set.  If the instance, has already been set, the      * onSet method will immedately be invoked.      *      * @return the action to invoke when this refernce is resolved; not null      */
+comment|/**      * Registers an action to invoke when the instance is set.  If the instance, has already been set, the      * onSet method will immedately be invoked.      *      * @return the action to invoke when this reference is resolved; not null      */
 specifier|public
 name|void
 name|setAction

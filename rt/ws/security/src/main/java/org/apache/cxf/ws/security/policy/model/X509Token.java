@@ -487,7 +487,7 @@ name|prefix
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_KEY_IDENTIFIRE_REFERENCE
+name|REQUIRE_KEY_IDENTIFIER_REFERENCE
 argument_list|,
 name|namespaceURI
 argument_list|)

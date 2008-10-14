@@ -600,7 +600,7 @@ if|if
 condition|(
 name|SPConstants
 operator|.
-name|REQUIRE_KEY_IDENTIFIRE_REFERENCE
+name|REQUIRE_KEY_IDENTIFIER_REFERENCE
 operator|.
 name|equals
 argument_list|(

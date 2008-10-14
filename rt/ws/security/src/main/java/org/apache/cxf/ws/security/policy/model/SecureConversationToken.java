@@ -534,7 +534,7 @@ name|prefix
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_EXTERNAL_URI_REFERNCE
+name|REQUIRE_EXTERNAL_URI_REFERENCE
 argument_list|,
 name|namespaceURI
 argument_list|)

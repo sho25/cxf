@@ -125,7 +125,7 @@ name|SP_NS
 operator|+
 name|SPConstants
 operator|.
-name|INCLUDE_TOEKN_ALWAYS_TO_RECIPIENT_SUFFIX
+name|INCLUDE_TOKEN_ALWAYS_TO_RECIPIENT_SUFFIX
 decl_stmt|;
 specifier|public
 specifier|static
@@ -139,7 +139,7 @@ name|SP_NS
 operator|+
 name|SPConstants
 operator|.
-name|INCLUDE_TOEKN_ALWAYS_SUFFIX
+name|INCLUDE_TOKEN_ALWAYS_SUFFIX
 decl_stmt|;
 comment|// /////////////////////////////////////////////////////////////////////
 specifier|public
@@ -1014,7 +1014,7 @@ specifier|public
 specifier|static
 specifier|final
 name|QName
-name|REQUIRE_KEY_IDENTIFIRE_REFERENCE
+name|REQUIRE_KEY_IDENTIFIER_REFERENCE
 init|=
 operator|new
 name|QName
@@ -1025,7 +1025,7 @@ name|SP_NS
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_KEY_IDENTIFIRE_REFERENCE
+name|REQUIRE_KEY_IDENTIFIER_REFERENCE
 argument_list|,
 name|SP11Constants
 operator|.
@@ -1476,7 +1476,7 @@ specifier|public
 specifier|static
 specifier|final
 name|QName
-name|REQUIRE_EXTERNAL_URI_REFERNCE
+name|REQUIRE_EXTERNAL_URI_REFERENCE
 init|=
 operator|new
 name|QName
@@ -1487,7 +1487,7 @@ name|SP_NS
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_EXTERNAL_URI_REFERNCE
+name|REQUIRE_EXTERNAL_URI_REFERENCE
 argument_list|,
 name|SP11Constants
 operator|.
@@ -1498,7 +1498,7 @@ specifier|public
 specifier|static
 specifier|final
 name|QName
-name|REQUIRE_EXTERNAL_REFERNCE
+name|REQUIRE_EXTERNAL_REFERENCE
 init|=
 operator|new
 name|QName
@@ -1509,7 +1509,7 @@ name|SP_NS
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_EXTERNAL_REFERNCE
+name|REQUIRE_EXTERNAL_REFERENCE
 argument_list|,
 name|SP11Constants
 operator|.
@@ -1520,7 +1520,7 @@ specifier|public
 specifier|static
 specifier|final
 name|QName
-name|REQUIRE_INTERNAL_REFERNCE
+name|REQUIRE_INTERNAL_REFERENCE
 init|=
 operator|new
 name|QName
@@ -1531,7 +1531,7 @@ name|SP_NS
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_INTERNAL_REFERNCE
+name|REQUIRE_INTERNAL_REFERENCE
 argument_list|,
 name|SP11Constants
 operator|.

@@ -238,7 +238,7 @@ name|id
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Reads the SOAP 1.2 or SOAP 1.1 refernce attribute.      *      * @param reader the stream to read; must not be null      * @return the reference id or null of neither attribute was present      */
+comment|/**      * Reads the SOAP 1.2 or SOAP 1.1 reference attribute.      *      * @param reader the stream to read; must not be null      * @return the reference id or null of neither attribute was present      */
 specifier|public
 specifier|static
 name|String

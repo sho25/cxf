@@ -948,7 +948,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|INCLUDE_TOEKN_ALWAYS_TO_RECIPIENT_SUFFIX
+name|INCLUDE_TOKEN_ALWAYS_TO_RECIPIENT_SUFFIX
 init|=
 literal|"/IncludeToken/AlwaysToRecipient"
 decl_stmt|;
@@ -956,7 +956,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|INCLUDE_TOEKN_ALWAYS_TO_INITIATOR_SUFFIX
+name|INCLUDE_TOKEN_ALWAYS_TO_INITIATOR_SUFFIX
 init|=
 literal|"/IncludeToken/AlwaysToInitiator"
 decl_stmt|;
@@ -964,7 +964,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|INCLUDE_TOEKN_ALWAYS_SUFFIX
+name|INCLUDE_TOKEN_ALWAYS_SUFFIX
 init|=
 literal|"/IncludeToken/Always"
 decl_stmt|;
@@ -1013,9 +1013,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|REQUIRE_KEY_IDENTIFIRE_REFERENCE
+name|REQUIRE_KEY_IDENTIFIER_REFERENCE
 init|=
-literal|"RequireKeyIdentifireReference"
+literal|"RequireKeyIdentifierReference"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -1224,7 +1224,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|REQUIRE_EXTERNAL_URI_REFERNCE
+name|REQUIRE_EXTERNAL_URI_REFERENCE
 init|=
 literal|"RequireExternalUriReference"
 decl_stmt|;
@@ -1232,7 +1232,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|REQUIRE_EXTERNAL_REFERNCE
+name|REQUIRE_EXTERNAL_REFERENCE
 init|=
 literal|"RequireExternalReference"
 decl_stmt|;
@@ -1240,7 +1240,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|REQUIRE_INTERNAL_REFERNCE
+name|REQUIRE_INTERNAL_REFERENCE
 init|=
 literal|"RequireInternalReference"
 decl_stmt|;

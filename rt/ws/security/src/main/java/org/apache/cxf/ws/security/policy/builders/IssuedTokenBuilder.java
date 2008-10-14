@@ -712,7 +712,7 @@ if|if
 condition|(
 name|SP11Constants
 operator|.
-name|REQUIRE_EXTERNAL_REFERNCE
+name|REQUIRE_EXTERNAL_REFERENCE
 operator|.
 name|equals
 argument_list|(
@@ -733,7 +733,7 @@ if|if
 condition|(
 name|SP11Constants
 operator|.
-name|REQUIRE_INTERNAL_REFERNCE
+name|REQUIRE_INTERNAL_REFERENCE
 operator|.
 name|equals
 argument_list|(

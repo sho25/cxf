@@ -609,7 +609,7 @@ name|prefix
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_EXTERNAL_REFERNCE
+name|REQUIRE_EXTERNAL_REFERENCE
 argument_list|,
 name|namespaceURI
 argument_list|)
@@ -630,7 +630,7 @@ name|prefix
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_INTERNAL_REFERNCE
+name|REQUIRE_INTERNAL_REFERENCE
 argument_list|,
 name|namespaceURI
 argument_list|)

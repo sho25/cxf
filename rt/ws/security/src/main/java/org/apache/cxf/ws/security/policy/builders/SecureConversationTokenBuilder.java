@@ -516,7 +516,7 @@ argument_list|()
 argument_list|,
 name|SPConstants
 operator|.
-name|REQUIRE_EXTERNAL_URI_REFERNCE
+name|REQUIRE_EXTERNAL_URI_REFERENCE
 argument_list|)
 operator|!=
 literal|null
