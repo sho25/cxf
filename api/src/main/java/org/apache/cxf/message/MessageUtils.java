@@ -265,7 +265,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns true if a value is either the String "true" or Boolean.TRUE.      * @param value      * @return true iff value is either the String "true" or Boolean.TRUE      */
+comment|/**      * Returns true if a value is either the String "true" (regardless of case)  or Boolean.TRUE.      * @param value      * @return true iff value is either the String "true" or Boolean.TRUE      */
 specifier|public
 specifier|static
 name|boolean
@@ -275,6 +275,17 @@ name|Object
 name|value
 parameter_list|)
 block|{
+if|if
+condition|(
+name|value
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 if|if
 condition|(
 name|Boolean
@@ -288,9 +299,12 @@ argument_list|)
 operator|||
 literal|"true"
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|value
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 condition|)
 block|{
