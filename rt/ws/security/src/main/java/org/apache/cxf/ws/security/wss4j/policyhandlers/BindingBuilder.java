@@ -4166,6 +4166,12 @@ operator|.
 name|getSOAPBody
 argument_list|()
 argument_list|)
+argument_list|,
+literal|null
+argument_list|,
+name|WSConstants
+operator|.
+name|PART_TYPE_BODY
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4308,6 +4314,10 @@ name|getNamespace
 argument_list|()
 argument_list|,
 literal|"Content"
+argument_list|,
+name|WSConstants
+operator|.
+name|PART_TYPE_HEADER
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4652,6 +4662,10 @@ name|getNamespaceURI
 argument_list|()
 argument_list|,
 literal|"Content"
+argument_list|,
+name|WSConstants
+operator|.
+name|PART_TYPE_ELEMENT
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4675,6 +4689,10 @@ name|getNamespaceURI
 argument_list|()
 argument_list|,
 literal|"Element"
+argument_list|,
+name|WSConstants
+operator|.
+name|PART_TYPE_ELEMENT
 argument_list|)
 decl_stmt|;
 name|String
