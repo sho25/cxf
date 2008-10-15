@@ -114,11 +114,6 @@ name|RESPONSE_CONTEXT
 init|=
 literal|"ResponseContext"
 decl_stmt|;
-name|String
-name|REQUEST_METHOD
-init|=
-literal|"RequestMethod"
-decl_stmt|;
 comment|/**      * Invokes an operation syncronously      * @param operationName The name of the operation to be invoked. The service namespace will be used      * when looking up the BindingOperationInfo.      * @param params  The params that matches the parts of the input message of the operation.  If the       * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If       * params are in the wrapped form, use invokeWrapped      * @return The return values that matche the parts of the output message of the operation      */
 name|Object
 index|[]
@@ -216,6 +211,39 @@ name|context
 parameter_list|)
 throws|throws
 name|Exception
+function_decl|;
+comment|/**      * Gets the request context used for future invocations      * @return context The context      */
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|getRequestContext
+parameter_list|()
+function_decl|;
+comment|/**      * Gets the response context from the last invocation on this thread      * @return context The context      */
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|getResponseContext
+parameter_list|()
+function_decl|;
+comment|/**      * Sets whether the request context is thread local or global to this client.  By       * default, the request context is "global" in that any values set in the context      * are seen by all threads using this client.  If set to true, the context is changed       * to be a ThreadLocal and values set are not seen by other threads.      * @param b      */
+name|void
+name|setThreadLocalRequestContext
+parameter_list|(
+name|boolean
+name|b
+parameter_list|)
+function_decl|;
+comment|/**      * Checks if the Request context is thread local or global.      * @return      */
+name|boolean
+name|isThreadLocalRequestContext
+parameter_list|()
 function_decl|;
 name|Endpoint
 name|getEndpoint

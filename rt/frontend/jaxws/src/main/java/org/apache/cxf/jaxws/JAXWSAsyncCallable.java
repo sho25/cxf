@@ -178,6 +178,16 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|endPointInvocationHandler
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|putAll
+argument_list|(
+name|context
+argument_list|)
+expr_stmt|;
 return|return
 name|endPointInvocationHandler
 operator|.
@@ -188,8 +198,6 @@ argument_list|,
 name|oi
 argument_list|,
 name|params
-argument_list|,
-name|context
 argument_list|)
 return|;
 block|}
