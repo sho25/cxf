@@ -694,7 +694,7 @@ specifier|public
 class|class
 name|SymmetricBindingHandler
 extends|extends
-name|BindingBuilder
+name|AbstractBindingBuilder
 block|{
 name|SymmetricBinding
 name|sbinding

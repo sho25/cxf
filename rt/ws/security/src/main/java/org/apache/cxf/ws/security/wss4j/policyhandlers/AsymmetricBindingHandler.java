@@ -468,7 +468,7 @@ specifier|public
 class|class
 name|AsymmetricBindingHandler
 extends|extends
-name|BindingBuilder
+name|AbstractBindingBuilder
 block|{
 name|AsymmetricBinding
 name|abinding

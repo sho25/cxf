@@ -190,7 +190,7 @@ specifier|public
 class|class
 name|TransportBindingHandler
 extends|extends
-name|BindingBuilder
+name|AbstractBindingBuilder
 block|{
 name|TransportBinding
 name|tbinding
