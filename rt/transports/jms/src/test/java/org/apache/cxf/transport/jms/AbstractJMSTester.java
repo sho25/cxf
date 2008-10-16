@@ -515,6 +515,13 @@ argument_list|(
 name|isOneWay
 argument_list|)
 expr_stmt|;
+name|exchange
+operator|.
+name|setSynchronous
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|message
 operator|.
 name|setExchange

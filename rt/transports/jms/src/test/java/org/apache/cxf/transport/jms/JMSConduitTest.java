@@ -529,7 +529,7 @@ argument_list|()
 operator|.
 name|setReceiveTimeout
 argument_list|(
-literal|1000
+literal|10000
 argument_list|)
 expr_stmt|;
 try|try
@@ -543,7 +543,7 @@ literal|0
 init|;
 name|c
 operator|<
-literal|100
+literal|10
 condition|;
 name|c
 operator|++
@@ -557,6 +557,10 @@ literal|"Sending message "
 operator|+
 name|c
 argument_list|)
+expr_stmt|;
+name|inMessage
+operator|=
+literal|null
 expr_stmt|;
 name|Message
 name|message
@@ -693,7 +697,30 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
+throws|throws
+name|InterruptedException
 block|{
+while|while
+condition|(
+name|inMessage
+operator|==
+literal|null
+condition|)
+block|{
+comment|//the send has completed, but the response might not be back yet.
+comment|//wait for it.
+synchronized|synchronized
+init|(
+name|this
+init|)
+block|{
+name|wait
+argument_list|(
+literal|10
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 name|ByteArrayInputStream
 name|bis
 init|=
@@ -754,7 +781,7 @@ argument_list|()
 expr_stmt|;
 block|}
 name|String
-name|reponse
+name|response
 init|=
 name|IOUtils
 operator|.
@@ -765,11 +792,11 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The reponse date should be equals"
-argument_list|,
-name|reponse
+literal|"The response data should be equal"
 argument_list|,
 literal|"HelloWorld"
+argument_list|,
+name|response
 argument_list|)
 expr_stmt|;
 name|JMSMessageHeadersType

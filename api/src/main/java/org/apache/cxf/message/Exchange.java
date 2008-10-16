@@ -146,6 +146,18 @@ name|boolean
 name|isOneWay
 parameter_list|()
 function_decl|;
+comment|/**      * @return true if the frontend will be wait for the response.   Transports      * can then optimize themselves to process the response immediately instead       * of using a background thread or similar.      */
+name|boolean
+name|isSynchronous
+parameter_list|()
+function_decl|;
+name|void
+name|setSynchronous
+parameter_list|(
+name|boolean
+name|b
+parameter_list|)
+function_decl|;
 comment|/**      *       * @param b true if the exchange is known to be a one-way exchange      */
 name|void
 name|setOneWay
