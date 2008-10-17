@@ -269,7 +269,7 @@ operator|new
 name|PrimitiveTextProvider
 argument_list|()
 decl_stmt|;
-name|byte
+name|Byte
 name|valueRead
 init|=
 operator|(
@@ -279,9 +279,6 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|byte
 operator|.
 name|class
@@ -309,6 +306,9 @@ argument_list|(
 literal|1
 argument_list|,
 name|valueRead
+operator|.
+name|byteValue
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -343,9 +343,6 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|boolean
 operator|.
 name|class
