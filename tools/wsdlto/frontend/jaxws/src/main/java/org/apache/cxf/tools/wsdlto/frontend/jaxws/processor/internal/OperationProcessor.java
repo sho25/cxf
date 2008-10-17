@@ -1511,6 +1511,16 @@ operator|.
 name|getInterface
 argument_list|()
 operator|.
+name|addImport
+argument_list|(
+literal|"javax.jws.WebParam"
+argument_list|)
+expr_stmt|;
+name|method
+operator|.
+name|getInterface
+argument_list|()
+operator|.
 name|addMethod
 argument_list|(
 name|callbackMethod
