@@ -232,6 +232,15 @@ name|isAssignableFrom
 argument_list|(
 name|type
 argument_list|)
+operator|||
+name|Boolean
+operator|.
+name|class
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|type
+argument_list|)
 return|;
 block|}
 specifier|public
@@ -264,6 +273,9 @@ name|Object
 name|readFrom
 parameter_list|(
 name|Class
+argument_list|<
+name|Object
+argument_list|>
 name|type
 parameter_list|,
 name|Type
@@ -322,6 +334,9 @@ name|boolean
 name|isWriteable
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|,
 name|Type
@@ -347,6 +362,9 @@ name|Object
 name|obj
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|,
 name|Type
