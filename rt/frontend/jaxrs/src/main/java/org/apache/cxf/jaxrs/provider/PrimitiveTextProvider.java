@@ -289,6 +289,11 @@ name|MediaType
 name|mt
 parameter_list|,
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|headers
 parameter_list|,
 name|InputStream
@@ -378,6 +383,11 @@ name|MediaType
 name|mt
 parameter_list|,
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|headers
 parameter_list|,
 name|OutputStream
