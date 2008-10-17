@@ -1222,6 +1222,10 @@ name|State
 operator|.
 name|COMPLETE
 expr_stmt|;
+name|pausedMessage
+operator|=
+literal|null
+expr_stmt|;
 block|}
 return|return
 name|state
