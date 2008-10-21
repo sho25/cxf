@@ -1136,7 +1136,7 @@ name|get
 argument_list|(
 name|Message
 operator|.
-name|PATH_INFO
+name|REQUEST_URI
 argument_list|)
 expr_stmt|;
 name|EasyMock

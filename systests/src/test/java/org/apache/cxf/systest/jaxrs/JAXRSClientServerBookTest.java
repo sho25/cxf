@@ -211,16 +211,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -278,8 +268,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testGetBookByURL
@@ -290,6 +278,29 @@ block|{
 name|getAndCompareAsStrings
 argument_list|(
 literal|"http://localhost:9080/bookstore/bookurl/http%3A%2F%2Ftest.com%2Frss%2F123"
+argument_list|,
+literal|"resources/expected_get_book123.txt"
+argument_list|,
+literal|"application/xml"
+argument_list|,
+literal|200
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testGetBookByEncodedQuery
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|getAndCompareAsStrings
+argument_list|(
+literal|"http://localhost:9080/bookstore/bookquery?"
+operator|+
+literal|"urlid=http%3A%2F%2Ftest.com%2Frss%2F123"
 argument_list|,
 literal|"resources/expected_get_book123.txt"
 argument_list|,
@@ -337,7 +348,7 @@ literal|"<ns1:XMLFault xmlns:ns1=\"http://cxf.apache.org/bindings/xformat\"><ns1
 operator|+
 literal|" xmlns:ns1=\"http://cxf.apache.org/bindings/xformat\">.No operation matching request path "
 operator|+
-literal|"/bookstore/booknames/123/ is found, ContentType : */*, Accept : foo/bar.</ns1:faultstring>"
+literal|"/bookstore/booknames/123 is found, ContentType : */*, Accept : foo/bar.</ns1:faultstring>"
 operator|+
 literal|"</ns1:XMLFault>"
 decl_stmt|;
@@ -520,7 +531,7 @@ literal|"<ns1:XMLFault xmlns:ns1=\"http://cxf.apache.org/bindings/xformat\"><ns1
 operator|+
 literal|" xmlns:ns1=\"http://cxf.apache.org/bindings/xformat\">.No operation matching request path "
 operator|+
-literal|"/bookstore/books/ is found, ContentType : application/bar, Accept : text/xml."
+literal|"/bookstore/books is found, ContentType : application/bar, Accept : text/xml."
 operator|+
 literal|"</ns1:faultstring></ns1:XMLFault>"
 decl_stmt|;

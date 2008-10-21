@@ -4158,7 +4158,7 @@ name|put
 argument_list|(
 name|Message
 operator|.
-name|PATH_INFO
+name|REQUEST_URI
 argument_list|,
 literal|"/foo/bar;p1=1;p2"
 argument_list|)

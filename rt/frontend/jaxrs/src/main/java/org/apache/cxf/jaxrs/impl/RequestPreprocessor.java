@@ -545,7 +545,7 @@ name|put
 argument_list|(
 name|Message
 operator|.
-name|PATH_INFO
+name|REQUEST_URI
 argument_list|,
 name|newPath
 argument_list|)
