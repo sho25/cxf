@@ -191,11 +191,10 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 annotation|@
 name|Test
 specifier|public
@@ -233,7 +232,10 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-name|Object
+operator|(
+name|Class
+operator|)
+name|AegisTestBean
 operator|.
 name|class
 argument_list|,
