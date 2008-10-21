@@ -576,6 +576,21 @@ operator|new
 name|AegisContext
 argument_list|()
 expr_stmt|;
+name|context
+operator|.
+name|setWriteXsiTypes
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+comment|// needed, since we know no element/type maps.
+name|context
+operator|.
+name|setReadXsiTypes
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|Set
 argument_list|<
 name|Class
@@ -595,6 +610,13 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
+name|rootClasses
+operator|.
+name|add
+argument_list|(
+name|type
+argument_list|)
+expr_stmt|;
 name|context
 operator|.
 name|setRootClasses
