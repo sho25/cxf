@@ -137,8 +137,6 @@ argument_list|(
 name|BookServerSpring
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
