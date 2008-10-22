@@ -43,6 +43,20 @@ name|UriInfo
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|ext
+operator|.
+name|ContextResolver
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -56,6 +70,10 @@ name|Context
 name|UriInfo
 name|uriInfo
 parameter_list|)
+function_decl|;
+name|ContextResolver
+name|getContextResolver
+parameter_list|()
 function_decl|;
 block|}
 end_interface

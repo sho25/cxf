@@ -308,6 +308,13 @@ name|Method
 name|m
 parameter_list|)
 block|{
+if|if
+condition|(
+name|m
+operator|!=
+literal|null
+condition|)
+block|{
 name|annotatedMethod
 operator|=
 name|m
@@ -315,6 +322,7 @@ expr_stmt|;
 name|checkMediaTypes
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|Method
