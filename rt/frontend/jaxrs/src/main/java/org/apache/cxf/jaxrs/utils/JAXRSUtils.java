@@ -2409,14 +2409,15 @@ name|parameterAnns
 operator|==
 literal|null
 operator|||
-name|parameterAnns
+operator|!
+name|AnnotationUtils
 operator|.
-name|length
-operator|==
-literal|0
+name|isMethodParamAnnotations
+argument_list|(
+name|parameterAnns
+argument_list|)
 condition|)
 block|{
-comment|// we can't really limit it to just PUT and POST
 name|String
 name|contentType
 init|=

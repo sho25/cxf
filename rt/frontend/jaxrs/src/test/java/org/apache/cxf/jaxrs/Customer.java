@@ -287,6 +287,8 @@ begin_class
 specifier|public
 class|class
 name|Customer
+implements|implements
+name|CustomerInfo
 block|{
 annotation|@
 name|XmlRootElement
@@ -521,6 +523,14 @@ operator|=
 name|ui
 expr_stmt|;
 block|}
+specifier|public
+name|void
+name|setUriInfoContext
+parameter_list|(
+name|UriInfo
+name|ui
+parameter_list|)
+block|{     }
 annotation|@
 name|Context
 specifier|public
