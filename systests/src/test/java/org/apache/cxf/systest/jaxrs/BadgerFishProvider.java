@@ -67,6 +67,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Locale
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -89,7 +99,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -101,7 +111,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -343,12 +353,12 @@ end_import
 
 begin_class
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/json"
 argument_list|)
@@ -410,6 +420,9 @@ parameter_list|,
 name|Annotation
 index|[]
 name|annotations
+parameter_list|,
+name|MediaType
+name|m
 parameter_list|)
 block|{
 return|return
@@ -441,6 +454,9 @@ parameter_list|,
 name|Annotation
 index|[]
 name|annotations
+parameter_list|,
+name|MediaType
+name|m
 parameter_list|)
 block|{
 return|return
@@ -462,6 +478,22 @@ name|getSize
 parameter_list|(
 name|Object
 name|o
+parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|type
+parameter_list|,
+name|Type
+name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|annotations
+parameter_list|,
+name|MediaType
+name|m
 parameter_list|)
 block|{
 return|return
@@ -623,7 +655,11 @@ block|{
 if|if
 condition|(
 operator|!
+operator|new
+name|Locale
+argument_list|(
 literal|"badger-fish-language"
+argument_list|)
 operator|.
 name|equals
 argument_list|(

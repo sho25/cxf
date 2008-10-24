@@ -81,7 +81,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -104,7 +104,7 @@ argument_list|(
 literal|"/bookstore"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)

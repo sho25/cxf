@@ -79,7 +79,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -91,7 +91,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -221,7 +221,7 @@ end_import
 
 begin_class
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 block|{
 literal|"application/atom+xml"
@@ -232,7 +232,7 @@ literal|"application/json"
 block|}
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 block|{
 literal|"application/atom+xml"
@@ -280,6 +280,22 @@ name|getSize
 parameter_list|(
 name|Feed
 name|feed
+parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|type
+parameter_list|,
+name|Type
+name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|annotations
+parameter_list|,
+name|MediaType
+name|mt
 parameter_list|)
 block|{
 return|return
@@ -303,6 +319,9 @@ parameter_list|,
 name|Annotation
 index|[]
 name|annotations
+parameter_list|,
+name|MediaType
+name|mt
 parameter_list|)
 block|{
 return|return
@@ -416,6 +435,9 @@ parameter_list|,
 name|Annotation
 index|[]
 name|annotations
+parameter_list|,
+name|MediaType
+name|mt
 parameter_list|)
 block|{
 return|return

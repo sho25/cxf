@@ -97,7 +97,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -117,7 +117,7 @@ end_import
 
 begin_class
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
@@ -153,7 +153,7 @@ argument_list|(
 literal|"/books"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -174,7 +174,7 @@ argument_list|(
 literal|"/books/{bookId}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -203,7 +203,7 @@ argument_list|(
 literal|"/books/{bookId}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)
@@ -232,7 +232,7 @@ argument_list|(
 literal|"/books"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -256,7 +256,7 @@ argument_list|(
 literal|"/books/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/*"
 argument_list|)
@@ -280,7 +280,7 @@ argument_list|)
 annotation|@
 name|DELETE
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)

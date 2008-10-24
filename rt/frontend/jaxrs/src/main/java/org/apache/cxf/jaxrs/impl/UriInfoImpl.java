@@ -684,22 +684,9 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|String
-argument_list|>
-name|getAncestorResourceURIs
-parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
-block|}
-specifier|public
-name|List
-argument_list|<
 name|Object
 argument_list|>
-name|getAncestorResources
+name|getMatchedResources
 parameter_list|()
 block|{
 comment|// TODO Auto-generated method stub
@@ -712,31 +699,24 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|getAncestorResourceURIs
+name|getMatchedURIs
+parameter_list|()
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
+specifier|public
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getMatchedURIs
 parameter_list|(
 name|boolean
-name|arg0
+name|decode
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
-block|}
-specifier|public
-name|String
-name|getPathExtension
-parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
-block|}
-specifier|public
-name|UriBuilder
-name|getPlatonicRequestUriBuilder
-parameter_list|()
 block|{
 comment|// TODO Auto-generated method stub
 return|return

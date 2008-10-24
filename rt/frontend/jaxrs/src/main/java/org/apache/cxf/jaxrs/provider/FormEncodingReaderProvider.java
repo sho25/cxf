@@ -109,7 +109,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -215,7 +215,7 @@ end_import
 
 begin_class
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/x-www-form-urlencoded"
 argument_list|)
@@ -247,6 +247,9 @@ parameter_list|,
 name|Annotation
 index|[]
 name|annotations
+parameter_list|,
+name|MediaType
+name|mt
 parameter_list|)
 block|{
 return|return

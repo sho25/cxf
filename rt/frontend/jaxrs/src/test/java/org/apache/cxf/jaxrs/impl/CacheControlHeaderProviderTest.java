@@ -77,11 +77,6 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-name|c
-operator|.
-name|isPublic
-argument_list|()
-operator|&&
 operator|!
 name|c
 operator|.
@@ -163,12 +158,6 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-operator|!
-name|c
-operator|.
-name|isPublic
-argument_list|()
-operator|&&
 name|c
 operator|.
 name|isPrivate

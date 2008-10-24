@@ -225,7 +225,7 @@ name|rs
 operator|.
 name|ext
 operator|.
-name|MessageBodyWorkers
+name|Providers
 import|;
 end_import
 
@@ -3341,7 +3341,7 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"text/xml should be more preferred than than text/xml;q=0.2"
+literal|"text/xml should be more preferred than text/xml;q=0.2"
 argument_list|,
 name|JAXRSUtils
 operator|.
@@ -3367,7 +3367,7 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"text/xml;q=.3 should be more preferred than than text/xml;q=0.2"
+literal|"text/xml;q=.3 should be more preferred than text/xml;q=0.2"
 argument_list|,
 name|JAXRSUtils
 operator|.
@@ -3378,6 +3378,22 @@ argument_list|,
 name|m3
 argument_list|)
 operator|<
+literal|0
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"text/xml;q=.3 should be more preferred than than text/xml;q=0.2"
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|compareMediaTypes
+argument_list|(
+name|m3
+argument_list|,
+name|m4
+argument_list|)
+operator|>
 literal|0
 argument_list|)
 expr_stmt|;
@@ -4587,7 +4603,7 @@ name|SecurityContext
 operator|.
 name|class
 block|,
-name|MessageBodyWorkers
+name|Providers
 operator|.
 name|class
 block|,

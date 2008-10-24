@@ -37,7 +37,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -81,7 +81,7 @@ block|}
 annotation|@
 name|GET
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/atom+xml"
 argument_list|)

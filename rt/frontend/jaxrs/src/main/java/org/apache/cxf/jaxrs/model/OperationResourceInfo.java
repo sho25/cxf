@@ -47,7 +47,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -83,7 +83,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -377,11 +377,11 @@ name|void
 name|checkMediaTypes
 parameter_list|()
 block|{
-name|ConsumeMime
+name|Consumes
 name|cm
 init|=
 operator|(
-name|ConsumeMime
+name|Consumes
 operator|)
 name|AnnotationUtils
 operator|.
@@ -389,7 +389,7 @@ name|getMethodAnnotation
 argument_list|(
 name|annotatedMethod
 argument_list|,
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)
@@ -445,11 +445,11 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-name|ProduceMime
+name|Produces
 name|pm
 init|=
 operator|(
-name|ProduceMime
+name|Produces
 operator|)
 name|AnnotationUtils
 operator|.
@@ -457,7 +457,7 @@ name|getMethodAnnotation
 argument_list|(
 name|annotatedMethod
 argument_list|,
-name|ProduceMime
+name|Produces
 operator|.
 name|class
 argument_list|)

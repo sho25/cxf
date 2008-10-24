@@ -55,7 +55,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -67,7 +67,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -404,6 +404,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -420,6 +422,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -432,6 +436,8 @@ argument_list|(
 name|Feed
 operator|.
 name|class
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -460,6 +466,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -476,6 +484,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -488,6 +498,8 @@ argument_list|(
 name|Feed
 operator|.
 name|class
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -514,7 +526,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ProduceMime
+name|Produces
 operator|.
 name|class
 argument_list|)
@@ -575,7 +587,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)

@@ -35,7 +35,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -47,7 +47,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -93,12 +93,12 @@ extends|extends
 name|Assert
 block|{
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -107,7 +107,7 @@ class|class
 name|TestClass
 block|{
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
@@ -120,7 +120,7 @@ comment|// empty
 block|}
 empty_stmt|;
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/atom+xml"
 argument_list|)

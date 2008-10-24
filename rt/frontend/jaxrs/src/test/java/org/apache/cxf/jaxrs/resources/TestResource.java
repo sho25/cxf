@@ -49,7 +49,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -75,7 +75,7 @@ argument_list|(
 literal|"/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -96,7 +96,7 @@ argument_list|(
 literal|"/{e}"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -133,13 +133,9 @@ argument_list|(
 name|value
 operator|=
 literal|"/{e}"
-argument_list|,
-name|limited
-operator|=
-literal|false
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)
@@ -160,7 +156,7 @@ argument_list|(
 literal|"/{e}/bar/baz/baz"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)

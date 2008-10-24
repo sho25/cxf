@@ -109,7 +109,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -121,7 +121,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -317,12 +317,12 @@ end_import
 
 begin_class
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/json"
 argument_list|)

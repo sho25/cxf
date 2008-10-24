@@ -113,7 +113,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -125,7 +125,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -611,6 +611,43 @@ name|Message
 name|m
 parameter_list|)
 block|{
+comment|// TODO : get media type from message
+return|return
+name|createContextResolver
+argument_list|(
+name|contextType
+argument_list|,
+name|m
+argument_list|,
+literal|null
+argument_list|)
+return|;
+block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+specifier|public
+parameter_list|<
+name|T
+parameter_list|>
+name|ContextResolver
+argument_list|<
+name|T
+argument_list|>
+name|createContextResolver
+parameter_list|(
+name|Type
+name|contextType
+parameter_list|,
+name|Message
+name|m
+parameter_list|,
+name|MediaType
+name|type
+parameter_list|)
+block|{
 for|for
 control|(
 name|ProviderInfo
@@ -747,6 +784,8 @@ argument_list|)
 specifier|public
 parameter_list|<
 name|T
+extends|extends
+name|Throwable
 parameter_list|>
 name|ExceptionMapper
 argument_list|<
@@ -1666,6 +1705,8 @@ argument_list|,
 name|genericType
 argument_list|,
 name|annotations
+argument_list|,
+name|mediaType
 argument_list|)
 condition|)
 block|{
@@ -1690,7 +1731,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)
@@ -1886,6 +1927,8 @@ argument_list|,
 name|genericType
 argument_list|,
 name|annotations
+argument_list|,
+name|mediaType
 argument_list|)
 condition|)
 block|{
@@ -1910,7 +1953,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ProduceMime
+name|Produces
 operator|.
 name|class
 argument_list|)
@@ -2218,7 +2261,7 @@ operator|.
 name|getProvider
 argument_list|()
 decl_stmt|;
-name|ConsumeMime
+name|Consumes
 name|c
 init|=
 name|e1
@@ -2228,7 +2271,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)
@@ -2256,7 +2299,7 @@ name|value
 argument_list|()
 expr_stmt|;
 block|}
-name|ConsumeMime
+name|Consumes
 name|c2
 init|=
 name|e2
@@ -2266,7 +2309,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)
@@ -2422,7 +2465,7 @@ operator|.
 name|getProvider
 argument_list|()
 decl_stmt|;
-name|ProduceMime
+name|Produces
 name|c
 init|=
 name|e1
@@ -2432,7 +2475,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ProduceMime
+name|Produces
 operator|.
 name|class
 argument_list|)
@@ -2460,7 +2503,7 @@ name|value
 argument_list|()
 expr_stmt|;
 block|}
-name|ProduceMime
+name|Produces
 name|c2
 init|=
 name|e2
@@ -2470,7 +2513,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ProduceMime
+name|Produces
 operator|.
 name|class
 argument_list|)

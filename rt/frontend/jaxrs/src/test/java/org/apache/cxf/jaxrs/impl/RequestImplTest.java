@@ -169,16 +169,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -236,6 +226,17 @@ operator|.
 name|PROTOCOL_HEADERS
 argument_list|,
 name|metadata
+argument_list|)
+expr_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|HTTP_REQUEST_METHOD
+argument_list|,
+literal|"GET"
 argument_list|)
 expr_stmt|;
 block|}
@@ -348,6 +349,30 @@ annotation|@
 name|Test
 specifier|public
 name|void
+name|testGetMethod
+parameter_list|()
+block|{
+name|assertEquals
+argument_list|(
+literal|"Wrong method"
+argument_list|,
+literal|"GET"
+argument_list|,
+operator|new
+name|RequestImpl
+argument_list|(
+name|m
+argument_list|)
+operator|.
+name|getMethod
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
 name|testStrictEtags
 parameter_list|()
 block|{
@@ -450,7 +475,7 @@ name|putSingle
 argument_list|(
 literal|"If-Modified-Since"
 argument_list|,
-literal|"Sat, 29 Oct 1994 19:43:31 GMT"
+literal|"Tue, 21 Oct 2008 14:00:00 GMT"
 argument_list|)
 expr_stmt|;
 name|Date
@@ -468,7 +493,7 @@ argument_list|)
 operator|.
 name|parse
 argument_list|(
-literal|"Sun, 29 Oct 1994 19:43:31 GMT"
+literal|"Tue, 21 Oct 2008 17:00:00 GMT"
 argument_list|)
 decl_stmt|;
 name|ResponseBuilder
@@ -495,8 +520,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testAfterDate
@@ -510,11 +533,11 @@ name|putSingle
 argument_list|(
 literal|"If-Modified-Since"
 argument_list|,
-literal|"Sat, 29 Oct 1994 19:43:31 GMT"
+literal|"Tue, 21 Oct 2008 14:00:00 GMT"
 argument_list|)
 expr_stmt|;
 name|Date
-name|serverDate
+name|lastModified
 init|=
 operator|new
 name|SimpleDateFormat
@@ -528,7 +551,7 @@ argument_list|)
 operator|.
 name|parse
 argument_list|(
-literal|"Fri, 28 Oct 1994 19:43:31 GMT"
+literal|"Mon, 20 Oct 2008 14:00:00 GMT"
 argument_list|)
 decl_stmt|;
 name|ResponseBuilder
@@ -542,7 +565,7 @@ argument_list|)
 operator|.
 name|evaluatePreconditions
 argument_list|(
-name|serverDate
+name|lastModified
 argument_list|)
 decl_stmt|;
 name|assertNotNull

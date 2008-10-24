@@ -67,7 +67,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -127,7 +127,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -237,7 +237,7 @@ name|rs
 operator|.
 name|ext
 operator|.
-name|MessageBodyWorkers
+name|Providers
 import|;
 end_import
 
@@ -393,7 +393,7 @@ decl_stmt|;
 annotation|@
 name|Context
 specifier|private
-name|MessageBodyWorkers
+name|Providers
 name|bodyWorkers
 decl_stmt|;
 annotation|@
@@ -601,7 +601,7 @@ name|request
 return|;
 block|}
 specifier|public
-name|MessageBodyWorkers
+name|Providers
 name|getBodyWorkers
 parameter_list|()
 block|{
@@ -682,12 +682,12 @@ name|cr
 return|;
 block|}
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"text/xml"
 argument_list|)
@@ -699,7 +699,7 @@ block|{
 comment|// complete
 block|}
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
@@ -711,7 +711,7 @@ block|{
 comment|// complete
 block|}
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
@@ -723,7 +723,7 @@ block|{
 comment|// complete
 block|}
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
@@ -751,7 +751,7 @@ block|{
 comment|// complete
 block|}
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
@@ -803,7 +803,7 @@ block|{
 comment|// complete
 block|}
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
@@ -856,7 +856,7 @@ name|s
 parameter_list|,
 annotation|@
 name|Context
-name|MessageBodyWorkers
+name|Providers
 name|workers
 parameter_list|,
 annotation|@

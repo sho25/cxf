@@ -75,7 +75,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -171,7 +171,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -434,7 +434,7 @@ argument_list|(
 literal|"books/check/{id}"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
@@ -834,7 +834,7 @@ argument_list|(
 literal|"/books/{bookId}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)
@@ -1024,7 +1024,7 @@ argument_list|(
 literal|"/booknames/{bookId}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/*"
 argument_list|)
@@ -1115,12 +1115,12 @@ argument_list|(
 literal|"/books"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/xml"
 argument_list|)
@@ -1186,12 +1186,12 @@ argument_list|(
 literal|"/binarybooks"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/xml"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/octet-stream"
 argument_list|)
@@ -1354,7 +1354,7 @@ argument_list|(
 literal|"/bookswithjson/"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/json"
 argument_list|)
@@ -1535,12 +1535,12 @@ argument_list|(
 literal|"/booksplain"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"text/plain"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
@@ -1610,7 +1610,7 @@ argument_list|(
 literal|"/cdwithmultitypes/{CDId}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 block|{
 literal|"application/xml"

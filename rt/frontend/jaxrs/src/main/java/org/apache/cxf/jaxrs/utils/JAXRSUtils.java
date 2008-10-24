@@ -291,7 +291,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -351,7 +351,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -571,7 +571,7 @@ name|rs
 operator|.
 name|ext
 operator|.
-name|MessageBodyWorkers
+name|Providers
 import|;
 end_import
 
@@ -1907,7 +1907,7 @@ name|MediaType
 argument_list|>
 name|getConsumeTypes
 parameter_list|(
-name|ConsumeMime
+name|Consumes
 name|cm
 parameter_list|)
 block|{
@@ -1940,7 +1940,7 @@ name|MediaType
 argument_list|>
 name|getProduceTypes
 parameter_list|(
-name|ProduceMime
+name|Produces
 name|pm
 parameter_list|)
 block|{
@@ -1981,9 +1981,28 @@ if|if
 condition|(
 name|mt1
 operator|.
+name|getType
+argument_list|()
+operator|.
 name|equals
 argument_list|(
 name|mt2
+operator|.
+name|getType
+argument_list|()
+argument_list|)
+operator|&&
+name|mt1
+operator|.
+name|getSubtype
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|mt2
+operator|.
+name|getSubtype
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -2038,8 +2057,10 @@ literal|0
 condition|?
 name|result
 else|:
-operator|~
 name|result
+operator|*
+operator|-
+literal|1
 return|;
 block|}
 if|if
@@ -3421,7 +3442,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|MessageBodyWorkers
+name|Providers
 operator|.
 name|class
 operator|.

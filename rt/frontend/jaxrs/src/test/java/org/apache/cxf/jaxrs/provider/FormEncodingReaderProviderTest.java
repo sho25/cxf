@@ -45,7 +45,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -346,6 +346,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -368,7 +370,7 @@ argument_list|()
 operator|.
 name|getAnnotation
 argument_list|(
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)

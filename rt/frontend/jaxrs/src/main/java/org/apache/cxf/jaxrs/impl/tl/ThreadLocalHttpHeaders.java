@@ -35,6 +35,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Locale
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -142,7 +152,7 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|String
+name|Locale
 name|getLanguage
 parameter_list|()
 block|{
@@ -188,7 +198,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|String
+name|Locale
 argument_list|>
 name|getAcceptableLanguages
 parameter_list|()

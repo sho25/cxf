@@ -47,7 +47,7 @@ name|rs
 operator|.
 name|core
 operator|.
-name|ApplicationConfig
+name|Application
 import|;
 end_import
 
@@ -444,7 +444,7 @@ parameter_list|>
 name|T
 name|createEndpoint
 parameter_list|(
-name|ApplicationConfig
+name|Application
 name|applicationConfig
 parameter_list|,
 name|Class

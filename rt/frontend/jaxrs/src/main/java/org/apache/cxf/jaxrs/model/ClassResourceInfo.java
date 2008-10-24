@@ -91,7 +91,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -115,7 +115,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -596,13 +596,13 @@ name|rp
 expr_stmt|;
 block|}
 specifier|public
-name|ProduceMime
+name|Produces
 name|getProduceMime
 parameter_list|()
 block|{
 return|return
 operator|(
-name|ProduceMime
+name|Produces
 operator|)
 name|AnnotationUtils
 operator|.
@@ -611,20 +611,20 @@ argument_list|(
 name|getServiceClass
 argument_list|()
 argument_list|,
-name|ProduceMime
+name|Produces
 operator|.
 name|class
 argument_list|)
 return|;
 block|}
 specifier|public
-name|ConsumeMime
+name|Consumes
 name|getConsumeMime
 parameter_list|()
 block|{
 return|return
 operator|(
-name|ConsumeMime
+name|Consumes
 operator|)
 name|AnnotationUtils
 operator|.
@@ -633,7 +633,7 @@ argument_list|(
 name|getServiceClass
 argument_list|()
 argument_list|,
-name|ConsumeMime
+name|Consumes
 operator|.
 name|class
 argument_list|)

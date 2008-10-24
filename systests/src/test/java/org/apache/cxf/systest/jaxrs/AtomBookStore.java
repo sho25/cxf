@@ -65,7 +65,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -125,7 +125,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -422,7 +422,7 @@ argument_list|(
 literal|"/books/jsonfeed"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 block|{
 literal|"application/xml"
@@ -459,7 +459,7 @@ argument_list|(
 literal|"/books/feed"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 block|{
 literal|"application/json"
@@ -631,7 +631,7 @@ argument_list|(
 literal|"/books/feed"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"application/atom+xml"
 argument_list|)
@@ -717,11 +717,20 @@ operator|.
 name|path
 argument_list|(
 literal|"bookstore"
-argument_list|,
+argument_list|)
+operator|.
+name|path
+argument_list|(
 literal|"books"
-argument_list|,
+argument_list|)
+operator|.
+name|path
+argument_list|(
 literal|"entries"
-argument_list|,
+argument_list|)
+operator|.
+name|path
+argument_list|(
 name|Long
 operator|.
 name|toString
@@ -778,7 +787,7 @@ argument_list|(
 literal|"/books/entries/{bookId}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 block|{
 literal|"application/atom+xml"

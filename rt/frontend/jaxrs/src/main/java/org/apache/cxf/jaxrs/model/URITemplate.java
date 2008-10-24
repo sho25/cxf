@@ -758,11 +758,6 @@ operator|new
 name|URITemplate
 argument_list|(
 name|pathValue
-argument_list|,
-name|path
-operator|.
-name|limited
-argument_list|()
 argument_list|)
 return|;
 block|}

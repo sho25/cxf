@@ -339,7 +339,7 @@ name|rs
 operator|.
 name|ext
 operator|.
-name|MessageBodyWorkers
+name|Providers
 import|;
 end_import
 
@@ -1975,7 +1975,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|MessageBodyWorkers
+name|Providers
 operator|.
 name|class
 operator|.

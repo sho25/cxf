@@ -25,7 +25,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ConsumeMime
+name|Consumes
 import|;
 end_import
 
@@ -73,7 +73,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -91,12 +91,12 @@ argument_list|(
 literal|"/path"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"text/bar"
 argument_list|)
 annotation|@
-name|ConsumeMime
+name|Consumes
 argument_list|(
 literal|"text/foo"
 argument_list|)

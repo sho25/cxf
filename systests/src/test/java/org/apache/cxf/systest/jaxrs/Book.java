@@ -81,7 +81,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|ProduceMime
+name|Produces
 import|;
 end_import
 
@@ -234,7 +234,7 @@ argument_list|(
 literal|"chapters/{chapterid}/"
 argument_list|)
 annotation|@
-name|ProduceMime
+name|Produces
 argument_list|(
 literal|"application/xml;charset=ISO-8859-1"
 argument_list|)
