@@ -89,6 +89,10 @@ name|Double
 argument_list|>
 name|lastGenericGeneric
 decl_stmt|;
+specifier|private
+name|InheritanceTestDerived
+name|lastInheritanceTestDerived
+decl_stmt|;
 comment|/** {@inheritDoc}*/
 specifier|public
 name|int
@@ -379,6 +383,19 @@ name|ggc
 expr_stmt|;
 block|}
 specifier|public
+name|void
+name|inheritanceTestFunction
+parameter_list|(
+name|InheritanceTestDerived
+name|d
+parameter_list|)
+block|{
+name|lastInheritanceTestDerived
+operator|=
+name|d
+expr_stmt|;
+block|}
+specifier|public
 name|SpecificGenericClass
 name|getLastSpecificGeneric
 parameter_list|()
@@ -397,6 +414,15 @@ parameter_list|()
 block|{
 return|return
 name|lastGenericGeneric
+return|;
+block|}
+specifier|public
+name|InheritanceTestDerived
+name|getLastInheritanceTestDerived
+parameter_list|()
+block|{
+return|return
+name|lastInheritanceTestDerived
 return|;
 block|}
 block|}

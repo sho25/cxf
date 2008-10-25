@@ -1242,6 +1242,10 @@ decl_stmt|;
 if|if
 condition|(
 name|elementType
+operator|!=
+literal|null
+operator|&&
+name|elementType
 operator|.
 name|getQName
 argument_list|()

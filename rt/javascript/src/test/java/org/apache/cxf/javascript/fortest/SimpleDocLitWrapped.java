@@ -386,6 +386,22 @@ argument_list|>
 name|ggc
 parameter_list|)
 function_decl|;
+annotation|@
+name|WebMethod
+name|void
+name|inheritanceTestFunction
+parameter_list|(
+annotation|@
+name|WebParam
+argument_list|(
+name|name
+operator|=
+literal|"d"
+argument_list|)
+name|InheritanceTestDerived
+name|d
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

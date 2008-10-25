@@ -329,6 +329,27 @@ return|return
 name|studentMap
 return|;
 block|}
+comment|//CHECKSTYLE:OFF
+specifier|public
+name|void
+name|takeMapMap
+parameter_list|(
+name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|Student
+argument_list|>
+argument_list|>
+name|myComplexData
+parameter_list|)
+block|{
+comment|// original failure was explosion on this, no need to bother to fill it in.
+block|}
 block|}
 end_class
 
