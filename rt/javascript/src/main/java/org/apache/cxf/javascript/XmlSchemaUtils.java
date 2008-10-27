@@ -691,16 +691,11 @@ name|XmlSchemaComplexContentExtension
 operator|)
 name|content
 decl_stmt|;
-name|QName
-name|baseTypeName
-init|=
+return|return
 name|ext
 operator|.
 name|getBaseTypeName
 argument_list|()
-decl_stmt|;
-return|return
-name|baseTypeName
 return|;
 block|}
 specifier|public
