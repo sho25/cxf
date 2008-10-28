@@ -202,6 +202,7 @@ name|Context
 name|context
 parameter_list|)
 block|{
+comment|// match the reader.
 name|writer
 operator|.
 name|writeValue
@@ -213,7 +214,7 @@ operator|)
 name|object
 operator|)
 operator|.
-name|toString
+name|name
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -394,7 +395,7 @@ operator|)
 name|constant
 operator|)
 operator|.
-name|toString
+name|name
 argument_list|()
 argument_list|)
 argument_list|)
