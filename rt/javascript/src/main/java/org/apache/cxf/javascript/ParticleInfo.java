@@ -192,6 +192,8 @@ specifier|public
 specifier|final
 class|class
 name|ParticleInfo
+implements|implements
+name|ItemInfo
 block|{
 specifier|private
 specifier|static
