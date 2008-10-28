@@ -349,22 +349,6 @@ end_import
 
 begin_import
 import|import
-name|com
-operator|.
-name|sun
-operator|.
-name|xml
-operator|.
-name|bind
-operator|.
-name|api
-operator|.
-name|JAXBRIContext
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -5031,9 +5015,7 @@ name|jaxbContextProperties
 operator|.
 name|put
 argument_list|(
-name|JAXBRIContext
-operator|.
-name|DEFAULT_NAMESPACE_REMAP
+literal|"com.sun.xml.bind.defaultNamespaceRemap"
 argument_list|,
 literal|"uri:ultima:thule"
 argument_list|)
