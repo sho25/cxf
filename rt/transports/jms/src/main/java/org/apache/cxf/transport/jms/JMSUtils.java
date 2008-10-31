@@ -1198,7 +1198,12 @@ literal|"INVALID_ENCODING_MSG"
 argument_list|,
 name|LOG
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 name|enc
+block|}
 argument_list|)
 operator|.
 name|toString
