@@ -2101,7 +2101,9 @@ name|visit
 argument_list|(
 literal|"nillable"
 argument_list|,
-literal|"true"
+name|Boolean
+operator|.
+name|TRUE
 argument_list|)
 expr_stmt|;
 block|}
@@ -2123,7 +2125,9 @@ name|visit
 argument_list|(
 literal|"required"
 argument_list|,
-literal|"true"
+name|Boolean
+operator|.
+name|TRUE
 argument_list|)
 expr_stmt|;
 block|}
