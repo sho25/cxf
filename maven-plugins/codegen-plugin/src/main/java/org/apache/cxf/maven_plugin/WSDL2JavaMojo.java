@@ -1528,6 +1528,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+comment|// If URL to WSDL, replace ? and& since they're invalid chars for file names
+comment|// Not to mention slashes.
 name|doneFileName
 operator|=
 name|doneFileName
@@ -1559,8 +1561,14 @@ literal|'\\'
 argument_list|,
 literal|'_'
 argument_list|)
+operator|.
+name|replace
+argument_list|(
+literal|':'
+argument_list|,
+literal|'_'
+argument_list|)
 expr_stmt|;
-comment|// If URL to WSDL, replace ? and& since they're invalid chars for file names
 name|File
 name|doneFile
 init|=
