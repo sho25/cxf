@@ -86,6 +86,14 @@ specifier|private
 name|Bus
 name|bus
 decl_stmt|;
+specifier|private
+name|boolean
+name|preShutdownCalled
+decl_stmt|;
+specifier|private
+name|boolean
+name|postShutdownCalled
+decl_stmt|;
 specifier|public
 name|CXFBusLifeCycleManager
 parameter_list|()
@@ -181,6 +189,14 @@ name|void
 name|initComplete
 parameter_list|()
 block|{
+name|preShutdownCalled
+operator|=
+literal|false
+expr_stmt|;
+name|postShutdownCalled
+operator|=
+literal|false
+expr_stmt|;
 for|for
 control|(
 name|BusLifeCycleListener
@@ -202,6 +218,10 @@ name|preShutdown
 parameter_list|()
 block|{
 comment|// TODO inverse order of registration?
+name|preShutdownCalled
+operator|=
+literal|true
+expr_stmt|;
 for|for
 control|(
 name|BusLifeCycleListener
@@ -222,6 +242,26 @@ name|void
 name|postShutdown
 parameter_list|()
 block|{
+if|if
+condition|(
+operator|!
+name|preShutdownCalled
+condition|)
+block|{
+name|preShutdown
+argument_list|()
+expr_stmt|;
+block|}
+if|if
+condition|(
+operator|!
+name|postShutdownCalled
+condition|)
+block|{
+name|postShutdownCalled
+operator|=
+literal|true
+expr_stmt|;
 comment|// TODO inverse order of registration?
 for|for
 control|(
@@ -236,6 +276,7 @@ operator|.
 name|postShutdown
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

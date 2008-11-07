@@ -1455,6 +1455,12 @@ block|{
 name|boolean
 name|initialised
 decl_stmt|;
+specifier|public
+name|TestFeature
+parameter_list|()
+block|{
+comment|//nothing
+block|}
 annotation|@
 name|Override
 specifier|public
