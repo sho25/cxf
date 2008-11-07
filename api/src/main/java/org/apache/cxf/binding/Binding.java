@@ -83,7 +83,7 @@ name|Message
 name|m
 parameter_list|)
 function_decl|;
-comment|/**      * Get the BindingInfor      * @return the BingdingInfo Object           */
+comment|/**      * Get the BindingInfo for this binding.      *      * @return the BingdingInfo Object           */
 name|BindingInfo
 name|getBindingInfo
 parameter_list|()

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Strategy for retreival of a Conduit to mediate an outbound message.  * A specific instance implementing a particular strategy may be injected  * into the Client via config.  */
+comment|/**  * Strategy for retreiving a Conduit to mediate an outbound message.  * A specific instance implementing a particular strategy may be injected  * into the Client via config.  */
 end_comment
 
 begin_interface
@@ -95,7 +95,7 @@ name|Endpoint
 name|getEndpoint
 parameter_list|()
 function_decl|;
-comment|/**      * @param endpoint the endpoint to encapsulate      */
+comment|/**      * @param endpoint the Endpoint to encapsulate      */
 name|void
 name|setEndpoint
 parameter_list|(
