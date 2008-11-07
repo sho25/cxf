@@ -3186,6 +3186,22 @@ name|repairing
 argument_list|)
 expr_stmt|;
 break|break;
+default|default:
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"Found type: "
+operator|+
+name|n
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|public
