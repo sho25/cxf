@@ -130,6 +130,13 @@ name|JMSConfiguration
 implements|implements
 name|InitializingBean
 block|{
+specifier|static
+specifier|final
+name|boolean
+name|DEFAULT_USEJMS11
+init|=
+literal|true
+decl_stmt|;
 specifier|private
 name|ConnectionFactory
 name|connectionFactory
@@ -149,6 +156,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|useJms11
+init|=
+name|DEFAULT_USEJMS11
 decl_stmt|;
 specifier|private
 name|boolean
