@@ -1159,6 +1159,7 @@ operator|+
 literal|8
 argument_list|)
 expr_stmt|;
+break|break;
 block|}
 block|}
 name|String
