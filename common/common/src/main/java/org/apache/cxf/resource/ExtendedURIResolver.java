@@ -62,7 +62,7 @@ specifier|public
 class|class
 name|ExtendedURIResolver
 block|{
-specifier|private
+specifier|protected
 name|org
 operator|.
 name|apache
@@ -74,11 +74,11 @@ operator|.
 name|URIResolver
 name|currentResolver
 decl_stmt|;
-specifier|private
+specifier|protected
 name|String
 name|lastestImportUri
 decl_stmt|;
-specifier|private
+specifier|protected
 name|Stack
 argument_list|<
 name|InputStream
