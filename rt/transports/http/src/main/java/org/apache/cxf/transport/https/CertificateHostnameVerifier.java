@@ -1687,11 +1687,8 @@ operator|&&
 name|cnLen
 operator|<=
 literal|9
-condition|)
-block|{
 comment|// Look for the '.' in the 3rd-last position:
-if|if
-condition|(
+operator|&&
 name|cn
 operator|.
 name|charAt
@@ -1737,7 +1734,6 @@ name|x
 operator|<
 literal|0
 return|;
-block|}
 block|}
 return|return
 literal|true
