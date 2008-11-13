@@ -4781,6 +4781,29 @@ operator|.
 name|getSoapPort
 argument_list|()
 decl_stmt|;
+try|try
+block|{
+name|greeter
+operator|.
+name|greetMe
+argument_list|(
+literal|"test"
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Should fail"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|WebServiceException
+name|f
+parameter_list|)
+block|{
+comment|// expected
+block|}
 name|BindingProvider
 name|bp
 init|=

@@ -392,6 +392,24 @@ literal|"https://localhost:9004/SoapContext/HttpsPort"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+specifier|final
+name|void
+name|testResourceKeySpecEndpointURL
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|testSuccessfulCall
+argument_list|(
+literal|"resources/resource-key-spec-url.xml"
+argument_list|,
+literal|"https://localhost:9005/SoapContext/HttpsPort"
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
