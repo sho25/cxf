@@ -670,6 +670,10 @@ decl_stmt|;
 if|if
 condition|(
 name|address
+operator|!=
+literal|null
+operator|&&
+name|address
 operator|.
 name|indexOf
 argument_list|(
