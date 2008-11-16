@@ -1105,7 +1105,7 @@ name|Exception
 block|{
 name|createService
 argument_list|(
-name|CollectionService
+name|CollectionServiceInterface
 operator|.
 name|class
 argument_list|,
@@ -1121,7 +1121,7 @@ name|wsdl
 init|=
 name|getWSDLDocument
 argument_list|(
-literal|"CollectionService"
+literal|"CollectionServiceInterface"
 argument_list|)
 decl_stmt|;
 name|assertValid
@@ -1143,7 +1143,7 @@ name|Exception
 block|{
 name|createService
 argument_list|(
-name|CollectionService
+name|CollectionServiceInterface
 operator|.
 name|class
 argument_list|,
@@ -1159,7 +1159,7 @@ name|doc
 init|=
 name|getWSDLDocument
 argument_list|(
-literal|"CollectionService"
+literal|"CollectionServiceInterface"
 argument_list|)
 decl_stmt|;
 comment|// printNode(doc);
@@ -1184,7 +1184,7 @@ name|Exception
 block|{
 name|createService
 argument_list|(
-name|CollectionService
+name|CollectionServiceInterface
 operator|.
 name|class
 argument_list|,
@@ -1200,7 +1200,7 @@ name|doc
 init|=
 name|getWSDLDocument
 argument_list|(
-literal|"CollectionService"
+literal|"CollectionServiceInterface"
 argument_list|)
 decl_stmt|;
 name|assertValid
@@ -1266,7 +1266,7 @@ name|Exception
 block|{
 name|createService
 argument_list|(
-name|CollectionService
+name|CollectionServiceInterface
 operator|.
 name|class
 argument_list|,
@@ -1323,7 +1323,7 @@ name|proxyFac
 operator|.
 name|setAddress
 argument_list|(
-literal|"local://CollectionService"
+literal|"local://CollectionServiceInterface"
 argument_list|)
 expr_stmt|;
 name|proxyFac
