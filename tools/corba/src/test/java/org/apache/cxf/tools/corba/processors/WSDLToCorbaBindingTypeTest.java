@@ -688,10 +688,9 @@ name|getLength
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|2
-argument_list|,
+name|int
+name|objectCount
+init|=
 name|typemap
 operator|.
 name|getElementsByTagName
@@ -701,6 +700,17 @@ argument_list|)
 operator|.
 name|getLength
 argument_list|()
+decl_stmt|;
+comment|// With XmlSchema 1.4.3, this comes out as 1, and it seems correct by examination of the wsdl.
+name|assertTrue
+argument_list|(
+name|objectCount
+operator|==
+literal|1
+operator|||
+name|objectCount
+operator|==
+literal|2
 argument_list|)
 expr_stmt|;
 name|WSDLToIDLAction
