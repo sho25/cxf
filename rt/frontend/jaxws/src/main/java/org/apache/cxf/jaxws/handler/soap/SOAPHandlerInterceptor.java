@@ -879,6 +879,7 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+block|}
 name|message
 operator|.
 name|getInterceptorChain
@@ -889,7 +890,6 @@ argument_list|(
 name|ending
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{

@@ -520,15 +520,13 @@ operator|.
 name|getBinding
 argument_list|()
 decl_stmt|;
-name|Handler
+name|TestOutHandler
 name|handler
-decl_stmt|;
-name|handler
-operator|=
+init|=
 operator|new
 name|TestOutHandler
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|handlerChain
 operator|.
 name|add
@@ -547,6 +545,24 @@ name|greeter
 operator|.
 name|sayHi
 argument_list|()
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"expected Handler.handleMessage() to be called"
+argument_list|,
+name|handler
+operator|.
+name|handleMessageCalledOutbound
+argument_list|)
+expr_stmt|;
+name|assertFalse
+argument_list|(
+literal|"expected Handler.handleFault() not to be called"
+argument_list|,
+name|handler
+operator|.
+name|handleFaultCalledOutbound
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@
