@@ -22,7 +22,7 @@ end_comment
 begin_interface
 specifier|public
 interface|interface
-name|ContinuationWrapper
+name|Continuation
 block|{
 comment|/**       * This method will suspend the request for the timeout or until resume is      * called      *       * @param timeout. A timeout of< 0 will cause an immediate return.      * A timeout of 0 will wait indefinitely.      * @return True if resume called or false if timeout.      */
 name|boolean

@@ -175,7 +175,7 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|continuations
 decl_stmt|;
@@ -205,7 +205,7 @@ operator|=
 operator|new
 name|LinkedList
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -235,11 +235,11 @@ name|void
 name|testInitialStatus
 parameter_list|()
 block|{
-name|JMSContinuationWrapper
+name|JMSContinuation
 name|cw
 init|=
 operator|new
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|(
 name|b
 argument_list|,
@@ -481,11 +481,11 @@ name|void
 name|testUserObject
 parameter_list|()
 block|{
-name|JMSContinuationWrapper
+name|JMSContinuation
 name|cw
 init|=
 operator|new
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|(
 name|b
 argument_list|,
@@ -534,7 +534,7 @@ specifier|static
 class|class
 name|TestJMSContinuationWrapper
 extends|extends
-name|JMSContinuationWrapper
+name|JMSContinuation
 block|{
 specifier|private
 name|boolean
@@ -558,7 +558,7 @@ name|observer
 parameter_list|,
 name|List
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|cList
 parameter_list|)

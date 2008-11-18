@@ -61,7 +61,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationProvider
+name|Continuation
 import|;
 end_import
 
@@ -75,7 +75,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|ContinuationProvider
 import|;
 end_import
 
@@ -165,7 +165,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|ContinuationWrapper
+name|Continuation
 name|continuation
 init|=
 name|getContinuation
@@ -338,7 +338,7 @@ literal|null
 return|;
 block|}
 specifier|private
-name|ContinuationWrapper
+name|Continuation
 name|getContinuation
 parameter_list|(
 name|String

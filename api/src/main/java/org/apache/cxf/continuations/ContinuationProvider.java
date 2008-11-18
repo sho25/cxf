@@ -25,7 +25,7 @@ interface|interface
 name|ContinuationProvider
 block|{
 comment|/**      * Creates a new continuation or retrieves the existing one      * @return transport-neutral ContinuationWrapper      */
-name|ContinuationWrapper
+name|Continuation
 name|getContinuation
 parameter_list|()
 function_decl|;

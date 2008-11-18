@@ -29,7 +29,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|Continuation
 import|;
 end_import
 
@@ -213,7 +213,7 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-name|ContinuationWrapper
+name|Continuation
 name|cw
 init|=
 name|provider
@@ -237,7 +237,7 @@ name|m
 operator|.
 name|get
 argument_list|(
-name|JMSContinuationWrapper
+name|JMSContinuation
 operator|.
 name|class
 argument_list|)
@@ -267,11 +267,11 @@ name|ExchangeImpl
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|JMSContinuationWrapper
+name|JMSContinuation
 name|cw
 init|=
 operator|new
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|(
 literal|null
 argument_list|,
@@ -286,7 +286,7 @@ name|m
 operator|.
 name|put
 argument_list|(
-name|JMSContinuationWrapper
+name|JMSContinuation
 operator|.
 name|class
 argument_list|,
@@ -326,7 +326,7 @@ name|m
 operator|.
 name|get
 argument_list|(
-name|JMSContinuationWrapper
+name|JMSContinuation
 operator|.
 name|class
 argument_list|)

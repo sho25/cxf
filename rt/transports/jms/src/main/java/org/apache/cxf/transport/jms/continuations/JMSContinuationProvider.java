@@ -25,7 +25,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|Collection
 import|;
 end_import
 
@@ -51,7 +51,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationProvider
+name|Continuation
 import|;
 end_import
 
@@ -65,7 +65,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|ContinuationProvider
 import|;
 end_import
 
@@ -117,9 +117,9 @@ name|MessageObserver
 name|incomingObserver
 decl_stmt|;
 specifier|private
-name|List
+name|Collection
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|continuations
 decl_stmt|;
@@ -135,9 +135,9 @@ parameter_list|,
 name|MessageObserver
 name|observer
 parameter_list|,
-name|List
+name|Collection
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|cList
 parameter_list|)
@@ -160,7 +160,7 @@ name|cList
 expr_stmt|;
 block|}
 specifier|public
-name|ContinuationWrapper
+name|Continuation
 name|getContinuation
 parameter_list|()
 block|{
@@ -179,14 +179,14 @@ return|return
 literal|null
 return|;
 block|}
-name|JMSContinuationWrapper
+name|JMSContinuation
 name|cw
 init|=
 name|inMessage
 operator|.
 name|get
 argument_list|(
-name|JMSContinuationWrapper
+name|JMSContinuation
 operator|.
 name|class
 argument_list|)
@@ -201,7 +201,7 @@ block|{
 name|cw
 operator|=
 operator|new
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|(
 name|bus
 argument_list|,
@@ -216,7 +216,7 @@ name|inMessage
 operator|.
 name|put
 argument_list|(
-name|JMSContinuationWrapper
+name|JMSContinuation
 operator|.
 name|class
 argument_list|,

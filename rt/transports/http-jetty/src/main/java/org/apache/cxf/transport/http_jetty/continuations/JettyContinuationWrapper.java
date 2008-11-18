@@ -21,15 +21,13 @@ end_package
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|apache
+name|servlet
 operator|.
-name|cxf
+name|http
 operator|.
-name|continuations
-operator|.
-name|ContinuationInfo
+name|HttpServletRequest
 import|;
 end_import
 
@@ -43,7 +41,21 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|Continuation
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|continuations
+operator|.
+name|ContinuationInfo
 import|;
 end_import
 
@@ -97,7 +109,7 @@ name|util
 operator|.
 name|ajax
 operator|.
-name|Continuation
+name|ContinuationSupport
 import|;
 end_import
 
@@ -106,9 +118,17 @@ specifier|public
 class|class
 name|JettyContinuationWrapper
 implements|implements
-name|ContinuationWrapper
+name|Continuation
 block|{
 specifier|private
+name|org
+operator|.
+name|mortbay
+operator|.
+name|util
+operator|.
+name|ajax
+operator|.
 name|Continuation
 name|continuation
 decl_stmt|;
@@ -119,8 +139,8 @@ decl_stmt|;
 specifier|public
 name|JettyContinuationWrapper
 parameter_list|(
-name|Continuation
-name|c
+name|HttpServletRequest
+name|request
 parameter_list|,
 name|Message
 name|m
@@ -128,7 +148,14 @@ parameter_list|)
 block|{
 name|continuation
 operator|=
-name|c
+name|ContinuationSupport
+operator|.
+name|getContinuation
+argument_list|(
+name|request
+argument_list|,
+literal|null
+argument_list|)
 expr_stmt|;
 name|message
 operator|=
@@ -353,6 +380,14 @@ name|message
 return|;
 block|}
 specifier|protected
+name|org
+operator|.
+name|mortbay
+operator|.
+name|util
+operator|.
+name|ajax
+operator|.
 name|Continuation
 name|getContinuation
 parameter_list|()

@@ -25,7 +25,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|Collection
 import|;
 end_import
 
@@ -83,7 +83,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|Continuation
 import|;
 end_import
 
@@ -132,9 +132,9 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JMSContinuationWrapper
+name|JMSContinuation
 implements|implements
-name|ContinuationWrapper
+name|Continuation
 block|{
 specifier|private
 name|Bus
@@ -149,9 +149,9 @@ name|MessageObserver
 name|incomingObserver
 decl_stmt|;
 specifier|private
-name|List
+name|Collection
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|continuations
 decl_stmt|;
@@ -182,7 +182,7 @@ name|Timer
 argument_list|()
 decl_stmt|;
 specifier|public
-name|JMSContinuationWrapper
+name|JMSContinuation
 parameter_list|(
 name|Bus
 name|b
@@ -193,9 +193,9 @@ parameter_list|,
 name|MessageObserver
 name|observer
 parameter_list|,
-name|List
+name|Collection
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|cList
 parameter_list|)
@@ -298,11 +298,6 @@ condition|)
 block|{
 return|return;
 block|}
-synchronized|synchronized
-init|(
-name|continuations
-init|)
-block|{
 name|continuations
 operator|.
 name|remove
@@ -310,7 +305,6 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-block|}
 name|isResumed
 operator|=
 literal|true
@@ -381,11 +375,6 @@ return|return
 literal|false
 return|;
 block|}
-synchronized|synchronized
-init|(
-name|continuations
-init|)
-block|{
 name|continuations
 operator|.
 name|add
@@ -393,7 +382,6 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-block|}
 name|isNew
 operator|=
 literal|false

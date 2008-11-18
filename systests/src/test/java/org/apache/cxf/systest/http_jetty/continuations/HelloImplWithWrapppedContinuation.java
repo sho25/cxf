@@ -81,7 +81,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationProvider
+name|Continuation
 import|;
 end_import
 
@@ -95,7 +95,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|ContinuationProvider
 import|;
 end_import
 
@@ -134,7 +134,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|ContinuationWrapper
+name|Continuation
 argument_list|>
 name|suspended
 init|=
@@ -143,7 +143,7 @@ name|HashMap
 argument_list|<
 name|String
 argument_list|,
-name|ContinuationWrapper
+name|Continuation
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -164,7 +164,7 @@ name|String
 name|secondName
 parameter_list|)
 block|{
-name|ContinuationWrapper
+name|Continuation
 name|continuation
 init|=
 name|getContinuation
@@ -376,7 +376,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|ContinuationWrapper
+name|Continuation
 name|suspendedCont
 init|=
 literal|null
@@ -423,7 +423,7 @@ parameter_list|(
 name|String
 name|name
 parameter_list|,
-name|ContinuationWrapper
+name|Continuation
 name|cont
 parameter_list|)
 block|{
@@ -462,7 +462,7 @@ block|}
 block|}
 block|}
 specifier|private
-name|ContinuationWrapper
+name|Continuation
 name|getContinuation
 parameter_list|(
 name|String
@@ -474,7 +474,7 @@ init|(
 name|suspended
 init|)
 block|{
-name|ContinuationWrapper
+name|Continuation
 name|suspendedCont
 init|=
 name|suspended

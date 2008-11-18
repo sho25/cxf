@@ -41,7 +41,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationProvider
+name|Continuation
 import|;
 end_import
 
@@ -55,7 +55,7 @@ name|cxf
 operator|.
 name|continuations
 operator|.
-name|ContinuationWrapper
+name|ContinuationProvider
 import|;
 end_import
 
@@ -70,34 +70,6 @@ operator|.
 name|message
 operator|.
 name|Message
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|mortbay
-operator|.
-name|util
-operator|.
-name|ajax
-operator|.
-name|Continuation
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|mortbay
-operator|.
-name|util
-operator|.
-name|ajax
-operator|.
-name|ContinuationSupport
 import|;
 end_import
 
@@ -138,7 +110,7 @@ name|m
 expr_stmt|;
 block|}
 specifier|public
-name|ContinuationWrapper
+name|Continuation
 name|getContinuation
 parameter_list|()
 block|{
@@ -157,23 +129,11 @@ return|return
 literal|null
 return|;
 block|}
-name|Continuation
-name|cont
-init|=
-name|ContinuationSupport
-operator|.
-name|getContinuation
-argument_list|(
-name|request
-argument_list|,
-literal|null
-argument_list|)
-decl_stmt|;
 return|return
 operator|new
 name|JettyContinuationWrapper
 argument_list|(
-name|cont
+name|request
 argument_list|,
 name|inMessage
 argument_list|)

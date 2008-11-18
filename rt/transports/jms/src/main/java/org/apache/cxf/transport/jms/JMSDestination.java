@@ -83,7 +83,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|GregorianCalendar
+name|Collection
 import|;
 end_import
 
@@ -93,7 +93,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|LinkedList
+name|GregorianCalendar
 import|;
 end_import
 
@@ -134,6 +134,18 @@ operator|.
 name|util
 operator|.
 name|TimeZone
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|ConcurrentLinkedQueue
 import|;
 end_import
 
@@ -445,7 +457,7 @@ name|jms
 operator|.
 name|continuations
 operator|.
-name|JMSContinuationProvider
+name|JMSContinuation
 import|;
 end_import
 
@@ -463,7 +475,7 @@ name|jms
 operator|.
 name|continuations
 operator|.
-name|JMSContinuationWrapper
+name|JMSContinuationProvider
 import|;
 end_import
 
@@ -622,16 +634,16 @@ name|DefaultMessageListenerContainer
 name|jmsListener
 decl_stmt|;
 specifier|private
-name|List
+name|Collection
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 name|continuations
 init|=
 operator|new
-name|LinkedList
+name|ConcurrentLinkedQueue
 argument_list|<
-name|JMSContinuationWrapper
+name|JMSContinuation
 argument_list|>
 argument_list|()
 decl_stmt|;
