@@ -298,6 +298,12 @@ init|=
 literal|true
 decl_stmt|;
 specifier|private
+name|int
+name|pbAmount
+init|=
+literal|2048
+decl_stmt|;
+specifier|private
 name|PushbackInputStream
 name|stream
 decl_stmt|;
@@ -510,11 +516,7 @@ operator|.
 name|class
 argument_list|)
 argument_list|,
-name|boundary
-operator|.
-name|length
-operator|*
-literal|2
+name|pbAmount
 argument_list|)
 expr_stmt|;
 if|if
@@ -573,6 +575,8 @@ argument_list|(
 name|stream
 argument_list|,
 name|boundary
+argument_list|,
+name|pbAmount
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1410,6 +1414,8 @@ argument_list|(
 name|stream
 argument_list|,
 name|boundary
+argument_list|,
+name|pbAmount
 argument_list|)
 decl_stmt|;
 specifier|final
