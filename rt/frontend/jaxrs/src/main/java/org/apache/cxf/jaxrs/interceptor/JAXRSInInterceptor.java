@@ -579,6 +579,26 @@ name|Message
 name|message
 parameter_list|)
 block|{
+if|if
+condition|(
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|get
+argument_list|(
+name|OperationResourceInfo
+operator|.
+name|class
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// it's a suspended invocation;
+return|return;
+block|}
 name|RequestPreprocessor
 name|rp
 init|=
