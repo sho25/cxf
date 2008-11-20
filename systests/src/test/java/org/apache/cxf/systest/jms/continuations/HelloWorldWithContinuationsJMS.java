@@ -332,6 +332,23 @@ expr_stmt|;
 block|}
 else|else
 block|{
+if|if
+condition|(
+operator|!
+name|continuation
+operator|.
+name|isResumed
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"No timeout expected"
+argument_list|)
+throw|;
+block|}
 name|StringBuilder
 name|sb
 init|=

@@ -263,6 +263,22 @@ literal|"Was not suspended yet"
 argument_list|)
 throw|;
 block|}
+if|if
+condition|(
+name|continuation
+operator|.
+name|isResumed
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"It must be a timeout"
+argument_list|)
+throw|;
+block|}
 name|StringBuilder
 name|sb
 init|=
