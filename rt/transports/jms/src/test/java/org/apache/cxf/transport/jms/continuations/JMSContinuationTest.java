@@ -164,7 +164,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JMSContinuationWrapperTest
+name|JMSContinuationTest
 extends|extends
 name|Assert
 block|{
