@@ -2072,6 +2072,17 @@ name|hasAnnotation
 return|;
 block|}
 specifier|protected
+name|SoapBindingConfiguration
+name|createSoapBindingConfig
+parameter_list|()
+block|{
+return|return
+operator|new
+name|SoapBindingConfiguration
+argument_list|()
+return|;
+block|}
+specifier|protected
 name|BindingInfo
 name|createBindingInfo
 parameter_list|()
@@ -2146,8 +2157,7 @@ condition|)
 block|{
 name|bindingConfig
 operator|=
-operator|new
-name|SoapBindingConfiguration
+name|createSoapBindingConfig
 argument_list|()
 expr_stmt|;
 block|}
