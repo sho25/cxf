@@ -2487,7 +2487,7 @@ operator|=
 name|simpleBindingEnabled
 expr_stmt|;
 block|}
-specifier|static
+specifier|protected
 name|boolean
 name|compileJavaSrc
 parameter_list|(
