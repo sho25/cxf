@@ -1139,6 +1139,7 @@ name|contextClasses
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//NOPMD - specifically allow this
 block|}
 specifier|public
 name|JAXBDataBinding
@@ -1166,6 +1167,7 @@ name|context
 return|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setContext
 parameter_list|(
