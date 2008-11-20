@@ -301,6 +301,10 @@ condition|)
 block|{
 return|return;
 block|}
+name|isResumed
+operator|=
+literal|true
+expr_stmt|;
 name|continuations
 operator|.
 name|remove
@@ -327,10 +331,6 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
-name|isResumed
-operator|=
-literal|true
-expr_stmt|;
 name|isPending
 operator|=
 literal|false
