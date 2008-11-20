@@ -440,9 +440,15 @@ operator|.
 name|this
 init|)
 block|{
+if|if
+condition|(
+name|isPending
+condition|)
+block|{
 name|doResume
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
