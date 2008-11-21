@@ -900,7 +900,7 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"DispatchInInterceptor skipped in HTTP GET method"
 argument_list|)

@@ -402,7 +402,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"WrappedInInterceptor skipped in HTTP GET method"
 argument_list|)

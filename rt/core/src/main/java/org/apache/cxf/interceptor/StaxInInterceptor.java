@@ -308,7 +308,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"StaxInInterceptor skipped."
 argument_list|)
