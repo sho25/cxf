@@ -151,11 +151,12 @@ name|cid
 init|=
 literal|"http://cxf.apache.org/"
 decl_stmt|;
-comment|//String name = UUID.randomUUID().toString();
 name|String
 name|name
 init|=
 name|ATT_UUID
+operator|+
+literal|"-"
 operator|+
 name|String
 operator|.
@@ -214,14 +215,10 @@ name|URISyntaxException
 name|e
 parameter_list|)
 block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
+name|cid
+operator|=
+name|ns
 expr_stmt|;
-return|return
-literal|null
-return|;
 block|}
 catch|catch
 parameter_list|(

@@ -57,6 +57,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|net
+operator|.
+name|URLDecoder
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -580,7 +590,14 @@ name|writer
 operator|.
 name|write
 argument_list|(
+name|URLDecoder
+operator|.
+name|decode
+argument_list|(
 name|attachmentId
+argument_list|,
+literal|"UTF-8"
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|writer
