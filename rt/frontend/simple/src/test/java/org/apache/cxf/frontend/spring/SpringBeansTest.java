@@ -794,6 +794,18 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
+literal|"get the wrong transportId"
+argument_list|,
+name|clientProxyFactoryBean
+operator|.
+name|getTransportId
+argument_list|()
+argument_list|,
+literal|"http://cxf.apache.org/transports/local"
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
 literal|"get the wrong bindingId"
 argument_list|,
 name|clientProxyFactoryBean
