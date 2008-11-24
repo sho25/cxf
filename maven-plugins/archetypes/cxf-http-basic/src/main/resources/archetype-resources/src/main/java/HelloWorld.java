@@ -133,7 +133,7 @@ end_expr_stmt
 begin_for
 for|for the ##    specific language governing permissions and limitations ##    under the License. package $
 block|{
-name|groupId
+name|packageName
 block|}
 end_for
 
