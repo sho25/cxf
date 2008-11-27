@@ -688,7 +688,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"JAXBException"
+literal|"Cannot find the declaration of element"
 argument_list|)
 argument_list|)
 expr_stmt|;
