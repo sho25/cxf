@@ -560,7 +560,10 @@ block|{
 name|ProviderFactory
 operator|.
 name|getInstance
+argument_list|(
+name|getAddress
 argument_list|()
+argument_list|)
 operator|.
 name|setUserProviders
 argument_list|(
@@ -571,7 +574,10 @@ block|}
 name|ProviderFactory
 operator|.
 name|getInstance
+argument_list|(
+name|getAddress
 argument_list|()
+argument_list|)
 operator|.
 name|setRequestPreporcessor
 argument_list|(
@@ -594,7 +600,10 @@ block|{
 name|ProviderFactory
 operator|.
 name|getInstance
+argument_list|(
+name|getAddress
 argument_list|()
+argument_list|)
 operator|.
 name|setSchemaLocations
 argument_list|(

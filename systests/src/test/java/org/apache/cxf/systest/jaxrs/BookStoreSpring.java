@@ -167,7 +167,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/bookstore"
+literal|"/"
 argument_list|)
 annotation|@
 name|Produces
