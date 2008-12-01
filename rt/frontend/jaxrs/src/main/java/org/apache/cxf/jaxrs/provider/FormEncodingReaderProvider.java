@@ -210,7 +210,6 @@ argument_list|)
 annotation|@
 name|Provider
 specifier|public
-specifier|final
 class|class
 name|FormEncodingReaderProvider
 implements|implements

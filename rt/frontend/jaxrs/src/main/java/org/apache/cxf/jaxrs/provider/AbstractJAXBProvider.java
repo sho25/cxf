@@ -410,6 +410,8 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractJAXBProvider
+extends|extends
+name|AbstractConfigurableProvider
 implements|implements
 name|MessageBodyReader
 argument_list|<

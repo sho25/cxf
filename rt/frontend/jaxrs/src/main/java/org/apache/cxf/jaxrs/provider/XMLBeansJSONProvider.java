@@ -295,7 +295,6 @@ argument_list|)
 annotation|@
 name|Provider
 specifier|public
-specifier|final
 class|class
 name|XMLBeansJSONProvider
 extends|extends

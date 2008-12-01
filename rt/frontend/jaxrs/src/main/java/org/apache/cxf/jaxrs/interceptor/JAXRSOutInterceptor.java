@@ -1239,11 +1239,13 @@ condition|)
 block|{
 name|acceptContentTypes
 operator|=
-name|JAXRSUtils
+name|Collections
 operator|.
-name|sortMediaTypes
+name|singletonList
 argument_list|(
-literal|"*/*"
+name|MediaType
+operator|.
+name|WILDCARD_TYPE
 argument_list|)
 expr_stmt|;
 block|}

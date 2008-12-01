@@ -159,7 +159,6 @@ begin_class
 annotation|@
 name|Provider
 specifier|public
-specifier|final
 class|class
 name|StringProvider
 implements|implements

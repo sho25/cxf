@@ -183,6 +183,15 @@ else|:
 name|path
 return|;
 block|}
+specifier|public
+name|String
+name|getOriginalPath
+parameter_list|()
+block|{
+return|return
+name|path
+return|;
+block|}
 block|}
 end_class
 

@@ -270,6 +270,15 @@ name|Path
 argument_list|(
 literal|"/books/{id}"
 argument_list|)
+annotation|@
+name|Produces
+argument_list|(
+block|{
+literal|"application/jettison"
+block|,
+literal|"application/json"
+block|}
+argument_list|)
 specifier|public
 name|Book
 name|getBookById
@@ -526,6 +535,8 @@ block|{
 literal|"application/xml"
 block|,
 literal|"application/json"
+block|,
+literal|"application/jettison"
 block|}
 argument_list|)
 annotation|@
