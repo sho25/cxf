@@ -155,7 +155,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|2
+literal|3
 argument_list|,
 name|loader
 operator|.
@@ -339,7 +339,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|1
+literal|2
 argument_list|,
 name|databindings
 operator|.
