@@ -1009,6 +1009,17 @@ literal|"Foo"
 argument_list|)
 name|String
 name|h
+parameter_list|,
+annotation|@
+name|HeaderParam
+argument_list|(
+literal|"Foo"
+argument_list|)
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|l
 parameter_list|)
 block|{
 comment|// complete

@@ -5584,6 +5584,11 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -5646,6 +5651,10 @@ block|,
 name|String
 operator|.
 name|class
+block|,
+name|List
+operator|.
+name|class
 block|}
 argument_list|)
 argument_list|,
@@ -5682,16 +5691,7 @@ name|add
 argument_list|(
 literal|"Foo"
 argument_list|,
-literal|"bar"
-argument_list|)
-expr_stmt|;
-name|headers
-operator|.
-name|add
-argument_list|(
-literal|"Foo"
-argument_list|,
-literal|"baz"
+literal|"bar, baz"
 argument_list|)
 expr_stmt|;
 name|Message
@@ -5738,9 +5738,9 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"6 parameters expected"
+literal|"7 parameters expected"
 argument_list|,
-literal|6
+literal|7
 argument_list|,
 name|params
 operator|.
@@ -5854,13 +5854,72 @@ name|assertEquals
 argument_list|(
 literal|"Wrong header param"
 argument_list|,
-literal|"bar,baz"
+literal|"bar"
 argument_list|,
 name|params
 operator|.
 name|get
 argument_list|(
 literal|5
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|values
+init|=
+operator|(
+name|List
+argument_list|<
+name|String
+argument_list|>
+operator|)
+name|params
+operator|.
+name|get
+argument_list|(
+literal|6
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Wrong headers size"
+argument_list|,
+literal|2
+argument_list|,
+name|values
+operator|.
+name|size
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Wrong 1st header param"
+argument_list|,
+literal|"bar"
+argument_list|,
+name|values
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Wrong 2nd header param"
+argument_list|,
+literal|"baz"
+argument_list|,
+name|values
+operator|.
+name|get
+argument_list|(
+literal|1
 argument_list|)
 argument_list|)
 expr_stmt|;
