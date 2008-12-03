@@ -747,8 +747,6 @@ operator|new
 name|URITemplate
 argument_list|(
 literal|"/bar"
-argument_list|,
-literal|false
 argument_list|)
 operator|.
 name|match
