@@ -1198,13 +1198,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|()
-expr_stmt|;
+comment|// ignore
 block|}
 block|}
 return|return
