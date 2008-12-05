@@ -57,6 +57,16 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|String
+name|originaltmpdir
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.io.tmpdir"
+argument_list|)
+decl_stmt|;
 try|try
 block|{
 name|System
@@ -95,6 +105,18 @@ name|contains
 argument_list|(
 literal|"please set java.io.tempdir to an existing directory"
 argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+finally|finally
+block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"java.io.tmpdir"
+argument_list|,
+name|originaltmpdir
 argument_list|)
 expr_stmt|;
 block|}
