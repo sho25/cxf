@@ -517,7 +517,7 @@ name|setProperty
 argument_list|(
 name|SecurityConstants
 operator|.
-name|USERNAME
+name|SIGNATURE_USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -636,7 +636,7 @@ name|setProperty
 argument_list|(
 name|SecurityConstants
 operator|.
-name|USERNAME
+name|SIGNATURE_USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -748,7 +748,7 @@ name|put
 argument_list|(
 name|SecurityConstants
 operator|.
-name|USERNAME
+name|SIGNATURE_USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -876,7 +876,7 @@ name|put
 argument_list|(
 name|SecurityConstants
 operator|.
-name|USERNAME
+name|SIGNATURE_USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1049,7 +1049,7 @@ name|put
 argument_list|(
 name|SecurityConstants
 operator|.
-name|USERNAME
+name|SIGNATURE_USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)

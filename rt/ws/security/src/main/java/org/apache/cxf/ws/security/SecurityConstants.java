@@ -55,6 +55,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SIGNATURE_USERNAME
+init|=
+literal|"ws-security.signature.username"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|SIGNATURE_PROPERTIES
 init|=
 literal|"ws-security.signature.properties"
