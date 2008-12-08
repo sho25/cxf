@@ -2656,8 +2656,6 @@ name|bop
 operator|.
 name|getOperationInfo
 argument_list|()
-argument_list|,
-name|jaxwsBinding
 argument_list|)
 expr_stmt|;
 name|jm
@@ -2693,8 +2691,6 @@ name|bop
 operator|.
 name|getOperationInfo
 argument_list|()
-argument_list|,
-name|jaxwsBinding
 argument_list|)
 expr_stmt|;
 block|}
