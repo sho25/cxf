@@ -277,7 +277,9 @@ operator|.
 name|getAbsolutePath
 argument_list|()
 operator|+
-literal|" does not exist, please set java.io.tempdir to an existing directory"
+literal|" does not exist, please set java.io.tempdir"
+operator|+
+literal|"to an existing directory"
 argument_list|)
 throw|;
 block|}
