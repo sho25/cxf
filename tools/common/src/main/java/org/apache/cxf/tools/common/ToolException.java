@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -32,6 +44,10 @@ operator|.
 name|Message
 import|;
 end_import
+
+begin_comment
+comment|/**  * Exception used for unrecoverable error in a CXF tool.  */
+end_comment
 
 begin_class
 specifier|public
@@ -135,6 +151,29 @@ block|{
 name|super
 argument_list|(
 name|t
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Construct message from message property bundle and logger.      * @param messageId      * @param logger      */
+specifier|public
+name|ToolException
+parameter_list|(
+name|String
+name|messageId
+parameter_list|,
+name|Logger
+name|logger
+parameter_list|)
+block|{
+name|this
+argument_list|(
+operator|new
+name|Message
+argument_list|(
+name|messageId
+argument_list|,
+name|logger
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
