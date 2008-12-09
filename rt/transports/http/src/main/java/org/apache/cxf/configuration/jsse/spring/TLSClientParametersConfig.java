@@ -177,15 +177,20 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|TLSClientParametersConfig
 block|{
 specifier|static
 name|JAXBContext
 name|context
-init|=
-literal|null
 decl_stmt|;
+specifier|private
+name|TLSClientParametersConfig
+parameter_list|()
+block|{
+comment|//not constructed
+block|}
 specifier|private
 specifier|static
 specifier|synchronized
