@@ -2605,6 +2605,16 @@ name|containsKey
 argument_list|(
 literal|"com.sun.xml.bind.defaultNamespaceRemap"
 argument_list|)
+operator|&&
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"com.sun.xml.bind.defaultNamespaceRemap"
+argument_list|)
 condition|)
 block|{
 name|map
