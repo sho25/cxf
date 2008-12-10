@@ -547,15 +547,6 @@ argument_list|)
 expr_stmt|;
 name|System
 operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Client Invoking is succeeded!"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
 name|exit
 argument_list|(
 literal|0
@@ -599,7 +590,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-comment|//System.out.println(bos.getOut().toString());
 return|return
 name|bos
 operator|.
