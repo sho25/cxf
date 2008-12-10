@@ -896,9 +896,15 @@ name|NoClassDefFoundError
 name|error
 parameter_list|)
 block|{
-return|return
-literal|null
-return|;
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"No ASM ClassWriterFound"
+argument_list|,
+name|error
+argument_list|)
+throw|;
 block|}
 try|try
 block|{
