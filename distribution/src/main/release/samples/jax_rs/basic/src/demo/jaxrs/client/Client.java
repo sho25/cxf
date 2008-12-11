@@ -294,7 +294,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"update_customer.txt"
+literal|"update_customer.xml"
 argument_list|)
 operator|.
 name|getFile
@@ -426,7 +426,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"add_customer.txt"
+literal|"add_customer.xml"
 argument_list|)
 operator|.
 name|getFile
