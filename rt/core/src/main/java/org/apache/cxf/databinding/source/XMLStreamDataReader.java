@@ -359,6 +359,13 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|type
+operator|!=
+literal|null
+condition|)
+block|{
+if|if
+condition|(
 name|SAXSource
 operator|.
 name|class
@@ -584,6 +591,7 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 return|return
