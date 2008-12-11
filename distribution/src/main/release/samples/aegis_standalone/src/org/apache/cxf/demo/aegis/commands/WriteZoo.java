@@ -81,16 +81,6 @@ end_import
 
 begin_import
 import|import
-name|javanet
-operator|.
-name|staxutils
-operator|.
-name|XMLStreamEventWriter
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|xml
@@ -98,18 +88,6 @@ operator|.
 name|namespace
 operator|.
 name|QName
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|stream
-operator|.
-name|XMLEventWriter
 import|;
 end_import
 
