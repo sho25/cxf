@@ -153,6 +153,7 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|ReadZoo
 block|{
@@ -348,7 +349,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/** 	 * @param args 	 * @throws Exception 	 */
+comment|/**      * @param args      * @throws Exception      */
 specifier|public
 specifier|static
 name|void

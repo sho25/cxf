@@ -71,16 +71,6 @@ end_import
 
 begin_import
 import|import
-name|javanet
-operator|.
-name|staxutils
-operator|.
-name|IndentingXMLStreamWriter
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|xml
@@ -112,6 +102,16 @@ operator|.
 name|stream
 operator|.
 name|XMLStreamWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|javanet
+operator|.
+name|staxutils
+operator|.
+name|IndentingXMLStreamWriter
 import|;
 end_import
 
@@ -201,6 +201,7 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|WriteZoo
 block|{
@@ -501,7 +502,7 @@ return|return
 name|zoo
 return|;
 block|}
-comment|/**      * @param args      * @throws Exception       */
+comment|/**      * @param args      * @throws Exception      */
 specifier|public
 specifier|static
 name|void
