@@ -184,7 +184,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|SP11Constants
+name|SP12Constants
 operator|.
 name|SP_NS
 argument_list|,
@@ -192,7 +192,7 @@ name|SPConstants
 operator|.
 name|TRUST_13
 argument_list|,
-name|SP11Constants
+name|SP12Constants
 operator|.
 name|SP_PREFIX
 argument_list|)

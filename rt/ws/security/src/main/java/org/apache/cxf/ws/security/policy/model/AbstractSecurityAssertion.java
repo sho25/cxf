@@ -155,6 +155,16 @@ name|version
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
+name|SPConstants
+name|getSPConstants
+parameter_list|()
+block|{
+return|return
+name|constants
+return|;
+block|}
+specifier|public
 name|boolean
 name|isOptional
 parameter_list|()

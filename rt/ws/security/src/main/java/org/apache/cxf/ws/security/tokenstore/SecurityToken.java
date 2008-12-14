@@ -226,6 +226,10 @@ name|encrKeySha1Value
 decl_stmt|;
 specifier|public
 name|SecurityToken
+parameter_list|()
+block|{              }
+specifier|public
+name|SecurityToken
 parameter_list|(
 name|String
 name|id
