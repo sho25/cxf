@@ -189,6 +189,20 @@ name|springframework
 operator|.
 name|jms
 operator|.
+name|core
+operator|.
+name|JmsTemplate
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|springframework
+operator|.
+name|jms
+operator|.
 name|support
 operator|.
 name|destination
@@ -467,12 +481,6 @@ name|boolean
 name|isConduit
 parameter_list|)
 block|{
-name|jmsConfig
-operator|=
-operator|new
-name|JMSConfiguration
-argument_list|()
-expr_stmt|;
 comment|// Retrieve configuration information that was extracted from the WSDL
 name|address
 operator|=
@@ -615,6 +623,28 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|jmsConfig
+operator|==
+literal|null
+condition|)
+block|{
+name|jmsConfig
+operator|=
+operator|new
+name|JMSConfiguration
+argument_list|()
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|jmsConfig
+operator|.
+name|isUsingEndpointInfo
+argument_list|()
+condition|)
+block|{
 name|JndiTemplate
 name|jt
 init|=
@@ -693,7 +723,6 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-comment|// jmsConfig.setMessageIdEnabled(messageIdEnabled);
 name|jmsConfig
 operator|.
 name|setMessageSelector
@@ -704,9 +733,10 @@ name|getMessageSelector
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// jmsConfig.setMessageTimestampEnabled(messageTimestampEnabled);
 if|if
 condition|(
+name|isConduit
+operator|&&
 name|runtimePolicy
 operator|.
 name|isSetMessageType
@@ -727,8 +757,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// jmsConfig.setOneWay(oneWay);
-comment|// jmsConfig.setPriority(priority);
 name|jmsConfig
 operator|.
 name|setPubSubDomain
@@ -743,6 +771,18 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|jmsConfig
+operator|.
+name|getReceiveTimeout
+argument_list|()
+operator|==
+name|JmsTemplate
+operator|.
+name|RECEIVE_TIMEOUT_INDEFINITE_WAIT
+condition|)
+block|{
 name|jmsConfig
 operator|.
 name|setReceiveTimeout
@@ -753,6 +793,7 @@ name|getClientReceiveTimeout
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|jmsConfig
 operator|.
 name|setSubscriptionDurable
@@ -760,6 +801,16 @@ argument_list|(
 name|serverBehavior
 operator|.
 name|isSetDurableSubscriberName
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|jmsConfig
+operator|.
+name|setDurableSubscriptionName
+argument_list|(
+name|serverBehavior
+operator|.
+name|getDurableSubscriberName
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -902,13 +953,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|jmsConfig
-operator|.
-name|setConnectionFactory
-argument_list|(
-name|cf
-argument_list|)
-expr_stmt|;
+block|}
 return|return
 name|jmsConfig
 return|;
