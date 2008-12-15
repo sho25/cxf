@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Aegis type for {@link java.lang.Boolean}. These can be null.  */
 end_comment
 
 begin_class
@@ -105,6 +105,23 @@ name|Context
 name|context
 parameter_list|)
 block|{
+if|if
+condition|(
+name|reader
+operator|.
+name|isXsiNil
+argument_list|()
+condition|)
+block|{
+name|reader
+operator|.
+name|readToEnd
+argument_list|()
+expr_stmt|;
+return|return
+literal|null
+return|;
+block|}
 return|return
 name|Boolean
 operator|.
@@ -133,6 +150,21 @@ name|Context
 name|context
 parameter_list|)
 block|{
+if|if
+condition|(
+name|object
+operator|==
+literal|null
+condition|)
+block|{
+name|writer
+operator|.
+name|writeXsiNil
+argument_list|()
+expr_stmt|;
+block|}
+else|else
+block|{
 name|writer
 operator|.
 name|writeValueAsBoolean
@@ -148,6 +180,7 @@ name|booleanValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class
