@@ -130,7 +130,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ThreadLocalMessageBodyWorkers
+name|ThreadLocalProviders
 extends|extends
 name|AbstractThreadLocalProxy
 argument_list|<

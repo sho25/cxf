@@ -158,7 +158,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|MessageBodyWorkersImpl
+name|ProvidersImpl
 implements|implements
 name|Providers
 block|{
@@ -167,7 +167,7 @@ name|Message
 name|m
 decl_stmt|;
 specifier|public
-name|MessageBodyWorkersImpl
+name|ProvidersImpl
 parameter_list|(
 name|Message
 name|m

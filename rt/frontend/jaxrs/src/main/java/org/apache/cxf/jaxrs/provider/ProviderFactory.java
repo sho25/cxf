@@ -2603,7 +2603,7 @@ return|;
 block|}
 specifier|public
 name|void
-name|cleatThreadLocalProxies
+name|clearThreadLocalProxies
 parameter_list|()
 block|{
 name|clearProxies

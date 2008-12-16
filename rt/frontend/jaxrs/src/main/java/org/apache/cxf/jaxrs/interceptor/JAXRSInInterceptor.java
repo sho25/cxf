@@ -512,7 +512,7 @@ argument_list|(
 name|baseAddress
 argument_list|)
 operator|.
-name|cleatThreadLocalProxies
+name|clearThreadLocalProxies
 argument_list|()
 expr_stmt|;
 throw|throw

@@ -229,6 +229,16 @@ name|javax
 operator|.
 name|servlet
 operator|.
+name|ServletConfig
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|servlet
+operator|.
 name|ServletContext
 import|;
 end_import
@@ -535,7 +545,7 @@ name|impl
 operator|.
 name|tl
 operator|.
-name|ThreadLocalMessageBodyWorkers
+name|ThreadLocalMessageContext
 import|;
 end_import
 
@@ -553,7 +563,7 @@ name|impl
 operator|.
 name|tl
 operator|.
-name|ThreadLocalMessageContext
+name|ThreadLocalProviders
 import|;
 end_import
 
@@ -608,6 +618,24 @@ operator|.
 name|tl
 operator|.
 name|ThreadLocalSecurityContext
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|impl
+operator|.
+name|tl
+operator|.
+name|ThreadLocalServletConfig
 import|;
 end_import
 
@@ -2318,7 +2346,7 @@ block|{
 name|proxy
 operator|=
 operator|new
-name|ThreadLocalMessageBodyWorkers
+name|ThreadLocalProviders
 argument_list|()
 expr_stmt|;
 block|}
@@ -2399,6 +2427,26 @@ name|proxy
 operator|=
 operator|new
 name|ThreadLocalMessageContext
+argument_list|()
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|ServletConfig
+operator|.
+name|class
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|type
+argument_list|)
+condition|)
+block|{
+name|proxy
+operator|=
+operator|new
+name|ThreadLocalServletConfig
 argument_list|()
 expr_stmt|;
 block|}

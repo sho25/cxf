@@ -48,7 +48,7 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-literal|"/jaxrs_security"
+literal|"/jaxrs_security_cglib"
 argument_list|)
 expr_stmt|;
 block|}

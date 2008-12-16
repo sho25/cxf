@@ -41,6 +41,16 @@ name|javax
 operator|.
 name|servlet
 operator|.
+name|ServletConfig
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|servlet
+operator|.
 name|ServletContext
 import|;
 end_import
@@ -1042,6 +1052,11 @@ annotation|@
 name|Context
 name|ServletContext
 name|context
+parameter_list|,
+annotation|@
+name|Context
+name|ServletConfig
+name|config
 parameter_list|)
 block|{
 comment|// complete
