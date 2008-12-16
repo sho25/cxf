@@ -1148,7 +1148,10 @@ name|doX509TokenSignature
 argument_list|(
 name|token
 argument_list|,
-literal|null
+name|sgndSuppTokens
+operator|.
+name|getSignedParts
+argument_list|()
 argument_list|,
 name|sgndSuppTokens
 argument_list|)

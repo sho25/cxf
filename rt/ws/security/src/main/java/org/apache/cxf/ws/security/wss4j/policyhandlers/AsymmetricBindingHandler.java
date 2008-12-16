@@ -542,6 +542,13 @@ name|abinding
 operator|=
 name|binding
 expr_stmt|;
+name|protectionOrder
+operator|=
+name|binding
+operator|.
+name|getProtectionOrder
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|void
