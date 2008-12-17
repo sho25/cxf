@@ -37,11 +37,16 @@ name|QName
 import|;
 end_import
 
+begin_comment
+comment|/**  * A registry for maintaining a collection of contract resolvers.  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
 name|ServiceContractResolverRegistry
 block|{
+comment|/**      * Resolves a QName to a URI respresenting the location of a WSDL contract.      * The registry method is called by the bus and should use the       *<code>getContractLocation</code> methods of the registered contract       * resolvers to do the actual resolution.      *      * @param qname the qname to resolve into a URI      * @return URI representing the WSDL contract's location      */
 name|URI
 name|getContractLocation
 parameter_list|(
@@ -49,6 +54,7 @@ name|QName
 name|qname
 parameter_list|)
 function_decl|;
+comment|/**      * Registers a contract resolver.      *      * @param resolver the contract resolver being registered      */
 name|void
 name|register
 parameter_list|(
@@ -56,6 +62,7 @@ name|ServiceContractResolver
 name|resolver
 parameter_list|)
 function_decl|;
+comment|/**      * Removes a contract resolver from the registry.      *      * @param resolver the contract resolver being removed      */
 name|void
 name|unregister
 parameter_list|(
@@ -63,6 +70,7 @@ name|ServiceContractResolver
 name|resolver
 parameter_list|)
 function_decl|;
+comment|/**      * Determines if a contract resolver is already registered with a      * registry.      *      * @param resolver the contract resolver for which to search      * @return<code>true</code> if the contract resolver is already registered      */
 name|boolean
 name|isRegistered
 parameter_list|(

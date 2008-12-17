@@ -79,6 +79,10 @@ name|Bus
 import|;
 end_import
 
+begin_comment
+comment|/**  * A simple contract resolver registry. It maintains a list of contract resolvers in an  *<code>ArrayList</code>.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -134,6 +138,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Calls each of the registered<code>ServiceContractResolver</code> instances      * to resolve the location of the service's contract. It returns the location       * from the first resolver that matches the QName to a location.      *      * @param qname QName to be resolved into a contract location      * @return URI representing the location of the contract     */
 specifier|public
 name|URI
 name|getContractLocation
@@ -176,6 +181,7 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      * Tests if a resolver is alreadey registered with this registry.      *      * @param resolver the contract resolver for which to searche      * @return<code>true</code> if the resolver is registered      */
 specifier|public
 name|boolean
 name|isRegistered
@@ -193,6 +199,7 @@ name|resolver
 argument_list|)
 return|;
 block|}
+comment|/**      * Registers a contract resolver with this registry.      *      * @param resolver the contract resolver to register      */
 specifier|public
 specifier|synchronized
 name|void
@@ -210,6 +217,7 @@ name|resolver
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Removes a contract resolver from this registry.      *      * @param resolver the contract resolver to remove      */
 specifier|public
 specifier|synchronized
 name|void
@@ -227,6 +235,7 @@ name|resolver
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the bus with which the registry is associated.      *      * @param bus      */
 specifier|public
 name|void
 name|setBus
