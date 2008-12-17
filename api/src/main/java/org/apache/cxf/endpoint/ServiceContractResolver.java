@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A<code>ServiceContractResolver</code> resolves QNames into URIs for   * WSDL contracts. They provide a method for locating WSDL contracts at   * runtime.  */
+comment|/**  * A<code>ServiceContractResolver</code> resolves a service's QName to the URI  * of the service's WSDL contract.  */
 end_comment
 
 begin_interface
@@ -46,7 +46,7 @@ specifier|public
 interface|interface
 name|ServiceContractResolver
 block|{
-comment|/**      * Resolves a QName to a URI representing the location of a WSDL contract.       * This method is called by the<code>ServiceContractResolverRegistry</code>       * with which the contract resolver is registered.      *      * @param qname the QName being mapped to a URI      * @return URI representing the location of a WSDL contract      */
+comment|/**      * Resolves a service's QName to a URI representing the location of a WSDL       * contract. This method is called by the       *<code>ServiceContractResolverRegistry</code> with which the contract       * resolver is registered.      *      * @param qname the QName being mapped to a URI      * @return URI representing the location of a WSDL contract      */
 name|URI
 name|getContractLocation
 parameter_list|(
