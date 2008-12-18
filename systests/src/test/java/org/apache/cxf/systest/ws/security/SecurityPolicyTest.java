@@ -347,7 +347,7 @@ if|if
 condition|(
 name|pc
 operator|.
-name|getIdentifer
+name|getIdentifier
 argument_list|()
 operator|.
 name|equals
