@@ -51,6 +51,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|URLDecoder
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Collections
@@ -1720,6 +1730,32 @@ literal|"/"
 argument_list|)
 condition|)
 block|{
+comment|// needs to be done given that pathInfo is decoded
+comment|// TODO :
+comment|// it's unlikely servlet path will contain encoded values so we're most likely safe
+comment|// however we need to ensure if it happens then thsi code works propely too
+try|try
+block|{
+name|reqPrefix
+operator|=
+name|URLDecoder
+operator|.
+name|decode
+argument_list|(
+name|reqPrefix
+argument_list|,
+literal|"UTF-8"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|// unlikey to happen
+block|}
 name|reqPrefix
 operator|=
 name|reqPrefix

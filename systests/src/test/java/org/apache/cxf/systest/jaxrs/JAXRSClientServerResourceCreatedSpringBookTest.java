@@ -153,7 +153,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/bookstore/books/123"
+literal|"http://localhost:9080/webapp/bookstore/books/123"
 decl_stmt|;
 name|URL
 name|url
@@ -231,7 +231,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/petstore/pets/24"
+literal|"http://localhost:9080/webapp/petstore/pets/24"
 decl_stmt|;
 name|URL
 name|url

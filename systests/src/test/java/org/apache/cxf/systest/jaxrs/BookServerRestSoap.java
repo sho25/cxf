@@ -239,7 +239,7 @@ name|webappcontext
 operator|.
 name|setContextPath
 argument_list|(
-literal|"/"
+literal|"/test"
 argument_list|)
 expr_stmt|;
 name|webappcontext

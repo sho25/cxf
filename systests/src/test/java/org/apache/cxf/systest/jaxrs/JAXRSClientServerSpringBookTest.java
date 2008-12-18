@@ -225,7 +225,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/thebooks/bookstore/bookinfo?"
+literal|"http://localhost:9080/the/thebooks/bookstore/bookinfo?"
 operator|+
 literal|"param1=12&param2=3"
 decl_stmt|;
@@ -249,7 +249,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/bookstore/books/123"
+literal|"http://localhost:9080/the/bookstore/books/123"
 decl_stmt|;
 name|getBook
 argument_list|(
@@ -283,7 +283,7 @@ init|=
 operator|new
 name|URL
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/list/123"
+literal|"http://localhost:9080/the/bookstore/books/list/123"
 argument_list|)
 decl_stmt|;
 name|URLConnection
@@ -334,7 +334,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/bookstore/booksquery?id=12%2B3"
+literal|"http://localhost:9080/the/bookstore/booksquery?id=12%2B3"
 decl_stmt|;
 name|getBook
 argument_list|(
@@ -356,7 +356,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/bookstore/id=12%2B3"
+literal|"http://localhost:9080/the/bookstore/id=12%2B3"
 decl_stmt|;
 name|getBook
 argument_list|(
@@ -378,7 +378,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/bookstore"
+literal|"http://localhost:9080/the/bookstore"
 decl_stmt|;
 name|getBook
 argument_list|(
@@ -497,7 +497,7 @@ name|Exception
 block|{
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/convert"
+literal|"http://localhost:9080/the/bookstore/books/convert"
 argument_list|,
 literal|500
 argument_list|,
@@ -510,7 +510,7 @@ argument_list|)
 expr_stmt|;
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/thebooks/bookstore/books/convert"
+literal|"http://localhost:9080/the/thebooks/bookstore/books/convert"
 argument_list|,
 literal|500
 argument_list|,
@@ -533,7 +533,7 @@ name|Exception
 block|{
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/convert"
+literal|"http://localhost:9080/the/bookstore/books/convert"
 argument_list|,
 literal|500
 argument_list|,
@@ -546,7 +546,7 @@ argument_list|)
 expr_stmt|;
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/thebooks/bookstore/books/convert"
+literal|"http://localhost:9080/the/thebooks/bookstore/books/convert"
 argument_list|,
 literal|500
 argument_list|,
@@ -569,7 +569,7 @@ name|Exception
 block|{
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/convert"
+literal|"http://localhost:9080/the/bookstore/books/convert"
 argument_list|,
 literal|200
 argument_list|,
@@ -582,7 +582,7 @@ argument_list|)
 expr_stmt|;
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/thebooks/bookstore/books/convert"
+literal|"http://localhost:9080/the/thebooks/bookstore/books/convert"
 argument_list|,
 literal|200
 argument_list|,
@@ -605,7 +605,7 @@ name|Exception
 block|{
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/convert"
+literal|"http://localhost:9080/the/bookstore/books/convert"
 argument_list|,
 literal|200
 argument_list|,
@@ -618,7 +618,7 @@ argument_list|)
 expr_stmt|;
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/thebooks/bookstore/books/convert"
+literal|"http://localhost:9080/the/thebooks/bookstore/books/convert"
 argument_list|,
 literal|200
 argument_list|,
@@ -631,7 +631,7 @@ argument_list|)
 expr_stmt|;
 name|doPost
 argument_list|(
-literal|"http://localhost:9080/thebooks/bookstore/books/convert"
+literal|"http://localhost:9080/the/thebooks/bookstore/books/convert"
 argument_list|,
 literal|200
 argument_list|,

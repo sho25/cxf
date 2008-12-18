@@ -239,7 +239,7 @@ name|in
 init|=
 name|getRestInputStream
 argument_list|(
-literal|"http://localhost:9092/rest/bookstore/123"
+literal|"http://localhost:9092/test/services/rest/bookstore/123"
 argument_list|)
 decl_stmt|;
 name|InputStream
@@ -279,7 +279,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9092/rest/bookstore/books"
+literal|"http://localhost:9092/test/services/rest/bookstore/books"
 decl_stmt|;
 name|File
 name|input
@@ -408,7 +408,7 @@ block|{
 name|String
 name|wsdlAddress
 init|=
-literal|"http://localhost:9092/soap/bookservice?wsdl"
+literal|"http://localhost:9092/test/services/soap/bookservice?wsdl"
 decl_stmt|;
 name|URL
 name|wsdlUrl
