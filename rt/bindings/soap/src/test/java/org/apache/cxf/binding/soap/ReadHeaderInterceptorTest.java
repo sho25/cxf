@@ -576,12 +576,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//        for (int i = 0; i< eleHeaders.getChildNodes().getLength(); i++) {
-comment|//            if (eleHeaders.getChildNodes().item(i) instanceof Element) {
-comment|//                Element element = (Element)eleHeaders.getChildNodes().item(i);
-comment|//                headerChilds.add(element);
-comment|//            }
-comment|//        }
 name|assertEquals
 argument_list|(
 literal|2
