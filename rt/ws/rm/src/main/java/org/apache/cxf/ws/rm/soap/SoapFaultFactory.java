@@ -728,13 +728,8 @@ name|Element
 operator|)
 name|doc
 operator|.
-name|getChildNodes
+name|getFirstChild
 argument_list|()
-operator|.
-name|item
-argument_list|(
-literal|0
-argument_list|)
 expr_stmt|;
 name|fault
 operator|.

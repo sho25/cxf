@@ -1857,14 +1857,6 @@ argument_list|,
 name|elNode
 argument_list|)
 expr_stmt|;
-name|assertNotNull
-argument_list|(
-name|elNode
-operator|.
-name|getChildNodes
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"TestSOAPMessage"
