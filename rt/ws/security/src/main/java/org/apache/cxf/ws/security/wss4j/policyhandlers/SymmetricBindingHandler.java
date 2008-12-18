@@ -1111,7 +1111,7 @@ block|}
 if|if
 condition|(
 name|tok
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
@@ -1129,7 +1129,7 @@ operator|==
 literal|0
 condition|)
 block|{
-comment|//REVISIT - no tokenM
+comment|//REVISIT - no tokenId?   Exception?
 block|}
 if|if
 condition|(
