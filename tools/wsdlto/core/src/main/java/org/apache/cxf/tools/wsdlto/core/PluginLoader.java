@@ -135,6 +135,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|TreeMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Level
@@ -483,7 +493,7 @@ argument_list|>
 name|databindings
 init|=
 operator|new
-name|LinkedHashMap
+name|TreeMap
 argument_list|<
 name|String
 argument_list|,
