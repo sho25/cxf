@@ -663,6 +663,8 @@ operator|.
 name|getPathToMatch
 argument_list|(
 name|message
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 comment|//1. Matching target resource class

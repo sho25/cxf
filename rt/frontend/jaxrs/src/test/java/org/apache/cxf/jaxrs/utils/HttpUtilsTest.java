@@ -62,6 +62,8 @@ argument_list|(
 literal|"/"
 argument_list|,
 literal|"/"
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -76,6 +78,8 @@ argument_list|(
 literal|"/"
 argument_list|,
 literal|"/bar"
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -90,6 +94,8 @@ argument_list|(
 literal|"/bar"
 argument_list|,
 literal|"/"
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -104,6 +110,8 @@ argument_list|(
 literal|"/bar"
 argument_list|,
 literal|"/bar"
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -118,6 +126,8 @@ argument_list|(
 literal|"/baz/bar"
 argument_list|,
 literal|"/baz"
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -132,6 +142,8 @@ argument_list|(
 literal|"/baz/bar/foo/"
 argument_list|,
 literal|"/bar"
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
