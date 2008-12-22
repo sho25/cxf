@@ -431,7 +431,7 @@ name|waitForJavascript
 argument_list|(
 literal|1000
 operator|*
-literal|10
+literal|30
 argument_list|)
 decl_stmt|;
 name|assertTrue

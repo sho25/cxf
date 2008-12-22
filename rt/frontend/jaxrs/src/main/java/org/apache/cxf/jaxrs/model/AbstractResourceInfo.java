@@ -438,6 +438,16 @@ operator|==
 name|Resource
 operator|.
 name|class
+operator|&&
+name|AnnotationUtils
+operator|.
+name|isContextClass
+argument_list|(
+name|f
+operator|.
+name|getType
+argument_list|()
+argument_list|)
 condition|)
 block|{
 if|if
