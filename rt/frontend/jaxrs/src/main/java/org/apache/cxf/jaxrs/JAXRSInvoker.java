@@ -1335,6 +1335,7 @@ name|serviceObject
 operator|=
 name|resourceObject
 expr_stmt|;
+break|break;
 block|}
 block|}
 block|}

@@ -271,6 +271,27 @@ name|TestClass2
 extends|extends
 name|TestClass1
 block|{     }
+specifier|private
+specifier|static
+class|class
+name|TestClass3
+block|{
+annotation|@
+name|Resource
+name|HttpServletRequest
+name|req
+decl_stmt|;
+annotation|@
+name|Resource
+name|HttpServletResponse
+name|res
+decl_stmt|;
+annotation|@
+name|Resource
+name|ServletContext
+name|c
+decl_stmt|;
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -422,7 +443,7 @@ init|=
 operator|new
 name|ClassResourceInfo
 argument_list|(
-name|TestClass
+name|TestClass3
 operator|.
 name|class
 argument_list|)
@@ -455,7 +476,7 @@ operator|=
 operator|new
 name|ClassResourceInfo
 argument_list|(
-name|TestClass
+name|TestClass3
 operator|.
 name|class
 argument_list|,
