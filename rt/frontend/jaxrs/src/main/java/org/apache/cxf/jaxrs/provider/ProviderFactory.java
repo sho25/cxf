@@ -2579,7 +2579,7 @@ block|}
 block|}
 specifier|public
 name|void
-name|setRequestPreporcessor
+name|setRequestPreprocessor
 parameter_list|(
 name|RequestPreprocessor
 name|rp

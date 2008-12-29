@@ -612,7 +612,7 @@ name|sb
 operator|.
 name|append
 argument_list|(
-name|isReservedCharater
+name|isReservedCharacter
 argument_list|(
 name|ch
 argument_list|)
@@ -635,7 +635,7 @@ block|}
 specifier|private
 specifier|static
 name|boolean
-name|isReservedCharater
+name|isReservedCharacter
 parameter_list|(
 name|char
 name|ch
