@@ -1777,7 +1777,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|List
+name|Iterator
 argument_list|<
 name|QName
 argument_list|>
@@ -1786,10 +1786,13 @@ parameter_list|()
 block|{
 return|return
 name|attributes
+operator|.
+name|iterator
+argument_list|()
 return|;
 block|}
 specifier|public
-name|List
+name|Iterator
 argument_list|<
 name|QName
 argument_list|>
@@ -1798,6 +1801,9 @@ parameter_list|()
 block|{
 return|return
 name|elements
+operator|.
+name|iterator
+argument_list|()
 return|;
 block|}
 specifier|public

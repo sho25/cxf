@@ -123,15 +123,9 @@ begin_import
 import|import
 name|org
 operator|.
-name|apache
+name|jdom
 operator|.
-name|ws
-operator|.
-name|commons
-operator|.
-name|schema
-operator|.
-name|XmlSchema
+name|Element
 import|;
 end_import
 
@@ -226,21 +220,22 @@ argument_list|(
 name|beanType
 argument_list|)
 expr_stmt|;
-name|XmlSchema
-name|schema
+name|Element
+name|root
 init|=
 operator|new
-name|XmlSchema
-argument_list|()
+name|Element
+argument_list|(
+literal|"dummySchema"
+argument_list|)
 decl_stmt|;
 name|beanType
 operator|.
 name|writeSchema
 argument_list|(
-name|schema
+name|root
 argument_list|)
 expr_stmt|;
-comment|// well, test?
 block|}
 block|}
 end_class
