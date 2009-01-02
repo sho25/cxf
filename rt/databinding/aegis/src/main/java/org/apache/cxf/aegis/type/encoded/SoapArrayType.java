@@ -291,9 +291,15 @@ begin_import
 import|import
 name|org
 operator|.
-name|jdom
+name|apache
 operator|.
-name|Element
+name|ws
+operator|.
+name|commons
+operator|.
+name|schema
+operator|.
+name|XmlSchema
 import|;
 end_import
 
@@ -1970,7 +1976,7 @@ specifier|public
 name|void
 name|writeSchema
 parameter_list|(
-name|Element
+name|XmlSchema
 name|root
 parameter_list|)
 block|{

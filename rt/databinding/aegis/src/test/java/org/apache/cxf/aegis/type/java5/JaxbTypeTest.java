@@ -372,6 +372,9 @@ name|info
 operator|.
 name|getElements
 argument_list|()
+operator|.
+name|iterator
+argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -556,6 +559,9 @@ name|info
 operator|.
 name|getAttributes
 argument_list|()
+operator|.
+name|iterator
+argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -620,8 +626,10 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|assertFalse
+name|assertEquals
 argument_list|(
+literal|0
+argument_list|,
 name|type
 operator|.
 name|getTypeInfo
@@ -630,7 +638,7 @@ operator|.
 name|getAttributes
 argument_list|()
 operator|.
-name|hasNext
+name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -643,6 +651,9 @@ name|getTypeInfo
 argument_list|()
 operator|.
 name|getElements
+argument_list|()
+operator|.
+name|iterator
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -765,6 +776,9 @@ init|=
 name|info
 operator|.
 name|getElements
+argument_list|()
+operator|.
+name|iterator
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -1002,8 +1016,10 @@ literal|"BadBean"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertFalse
+name|assertEquals
 argument_list|(
+literal|0
+argument_list|,
 name|type
 operator|.
 name|getTypeInfo
@@ -1012,7 +1028,7 @@ operator|.
 name|getElements
 argument_list|()
 operator|.
-name|hasNext
+name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
