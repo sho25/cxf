@@ -1550,6 +1550,15 @@ name|exists
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+operator|!
+name|dir
+operator|.
+name|mkdirs
+argument_list|()
+condition|)
+block|{
 name|Message
 name|msg
 init|=
@@ -1570,6 +1579,7 @@ argument_list|(
 name|msg
 argument_list|)
 throw|;
+block|}
 block|}
 if|if
 condition|(
@@ -1654,6 +1664,15 @@ name|exists
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+operator|!
+name|dir
+operator|.
+name|mkdirs
+argument_list|()
+condition|)
+block|{
 name|Message
 name|msg
 init|=
@@ -1674,6 +1693,7 @@ argument_list|(
 name|msg
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}
