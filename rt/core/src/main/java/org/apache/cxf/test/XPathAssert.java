@@ -576,6 +576,13 @@ argument_list|(
 literal|"No nodes were found for expression: "
 operator|+
 name|xpath
+operator|+
+literal|" in document "
+operator|+
+name|writeNodeToString
+argument_list|(
+name|node
+argument_list|)
 argument_list|)
 throw|;
 block|}

@@ -99,22 +99,6 @@ name|XmlSchemaAttribute
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|commons
-operator|.
-name|schema
-operator|.
-name|XmlSchemaElement
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -355,13 +339,13 @@ return|return
 name|schemaPrefix
 return|;
 block|}
-comment|/**      * This function obtains a name, perhaps namespace-qualified, for an element.      * @param element the element.      * @param qualified whether to qualify.      * @return      */
+comment|/**      * This function obtains a name, perhaps namespace-qualified, for an element.      * @param elementQName the element.      * @param qualified whether to qualify.      * @return      */
 specifier|public
 name|String
 name|xmlElementString
 parameter_list|(
-name|XmlSchemaElement
-name|element
+name|QName
+name|elementQName
 parameter_list|,
 name|boolean
 name|qualified
@@ -379,10 +363,7 @@ name|prefix
 init|=
 name|getPrefix
 argument_list|(
-name|element
-operator|.
-name|getQName
-argument_list|()
+name|elementQName
 operator|.
 name|getNamespaceURI
 argument_list|()
@@ -392,10 +373,7 @@ name|collect
 argument_list|(
 name|prefix
 argument_list|,
-name|element
-operator|.
-name|getQName
-argument_list|()
+name|elementQName
 operator|.
 name|getNamespaceURI
 argument_list|()
@@ -406,16 +384,16 @@ name|prefix
 operator|+
 literal|":"
 operator|+
-name|element
+name|elementQName
 operator|.
-name|getName
+name|getLocalPart
 argument_list|()
 return|;
 block|}
 return|return
-name|element
+name|elementQName
 operator|.
-name|getName
+name|getLocalPart
 argument_list|()
 return|;
 comment|// use the non-qualified name.
