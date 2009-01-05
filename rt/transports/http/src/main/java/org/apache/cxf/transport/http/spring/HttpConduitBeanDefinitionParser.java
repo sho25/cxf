@@ -526,8 +526,14 @@ name|bean
 argument_list|)
 expr_stmt|;
 block|}
+name|n
+operator|=
+name|n
+operator|.
+name|getNextSibling
+argument_list|()
+expr_stmt|;
 block|}
-comment|/*         NodeList nl = parent.getChildNodes();         for (int i = 0; i< nl.getLength(); i++) {             Node n = nl.item(i);             if (Node.ELEMENT_NODE != n.getNodeType()                  || !HTTP_NS.equals(n.getNamespaceURI())) {                 continue;             }             String elementName = n.getLocalName();             // Schema should require that no more than one each of these exist.             if ("trustDecider".equals(elementName)) {                                 mapBeanOrClassElement((Element)n, bean, MessageTrustDecider.class);             } else if ("basicAuthSupplier".equals(elementName)) {                 mapBeanOrClassElement((Element)n, bean, HttpBasicAuthSupplier.class);             } else if ("tlsClientParameters".equals(elementName)) {                 mapTLSClientParameters((Element)n, bean);             }         }         */
 block|}
 comment|/**      * Inject the "setTlsClientParameters" method with      * a TLSClientParametersConfig object initialized with the JAXB      * generated type unmarshalled from the selected node.      */
 annotation|@
