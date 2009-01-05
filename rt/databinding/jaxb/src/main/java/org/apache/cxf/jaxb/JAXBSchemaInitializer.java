@@ -215,6 +215,20 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|WSDLConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|i18n
 operator|.
 name|Message
@@ -281,7 +295,7 @@ name|common
 operator|.
 name|xmlschema
 operator|.
-name|XmlSchemaTools
+name|XmlSchemaUtils
 import|;
 end_import
 
@@ -374,20 +388,6 @@ operator|.
 name|model
 operator|.
 name|ServiceInfo
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|wsdl
-operator|.
-name|WSDLConstants
 import|;
 end_import
 
@@ -2199,7 +2199,7 @@ operator|new
 name|XmlSchemaElement
 argument_list|()
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -2394,7 +2394,7 @@ operator|new
 name|XmlSchemaElement
 argument_list|()
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -2590,7 +2590,7 @@ operator|new
 name|XmlSchemaElement
 argument_list|()
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -2827,7 +2827,7 @@ operator|.
 name|getLocalPart
 argument_list|()
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -3143,7 +3143,7 @@ operator|new
 name|XmlSchemaElement
 argument_list|()
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -3598,7 +3598,7 @@ name|getLocalPart
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -3692,7 +3692,7 @@ argument_list|(
 name|ename
 argument_list|)
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementQName
 argument_list|(
@@ -3701,7 +3701,7 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|setElementRefName
 argument_list|(

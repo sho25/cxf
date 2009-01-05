@@ -137,7 +137,7 @@ name|common
 operator|.
 name|xmlschema
 operator|.
-name|XmlSchemaTools
+name|XmlSchemaUtils
 import|;
 end_import
 
@@ -236,20 +236,6 @@ operator|.
 name|javascript
 operator|.
 name|UnsupportedConstruct
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|javascript
-operator|.
-name|XmlSchemaUtils
 import|;
 end_import
 
@@ -777,7 +763,7 @@ name|xmlSchemaObject
 decl_stmt|;
 if|if
 condition|(
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|isEumeration
 argument_list|(
@@ -791,7 +777,7 @@ name|String
 argument_list|>
 name|values
 init|=
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|enumeratorValues
 argument_list|(

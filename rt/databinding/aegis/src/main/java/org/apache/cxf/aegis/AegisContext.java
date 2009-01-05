@@ -361,7 +361,7 @@ name|common
 operator|.
 name|xmlschema
 operator|.
-name|XmlSchemaTools
+name|XmlSchemaUtils
 import|;
 end_import
 
@@ -1096,7 +1096,7 @@ name|schema
 parameter_list|)
 block|{
 return|return
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|schemaImportsNamespace
 argument_list|(
@@ -1272,7 +1272,7 @@ name|XmlSchema
 name|root
 parameter_list|)
 block|{
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|addImportIfNeeded
 argument_list|(

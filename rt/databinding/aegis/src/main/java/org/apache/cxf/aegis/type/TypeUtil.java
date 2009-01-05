@@ -127,7 +127,7 @@ name|common
 operator|.
 name|xmlschema
 operator|.
-name|XmlSchemaTools
+name|XmlSchemaUtils
 import|;
 end_import
 
@@ -738,7 +738,7 @@ operator|.
 name|getNamespaceURI
 argument_list|()
 decl_stmt|;
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|addImportIfNeeded
 argument_list|(

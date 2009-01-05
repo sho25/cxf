@@ -27,15 +27,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
+name|common
 operator|.
-name|java2wsdl
-operator|.
-name|generator
-operator|.
-name|wsdl11
-operator|.
-name|WSDL11Generator
+name|WSDLConstants
 import|;
 end_import
 
@@ -47,9 +41,15 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|tools
 operator|.
-name|WSDLConstants
+name|java2wsdl
+operator|.
+name|generator
+operator|.
+name|wsdl11
+operator|.
+name|WSDL11Generator
 import|;
 end_import
 

@@ -117,6 +117,20 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|WSDLConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|xmlschema
 operator|.
 name|SchemaCollection
@@ -147,13 +161,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|databinding
+name|common
 operator|.
-name|source
+name|xmlschema
 operator|.
-name|mime
-operator|.
-name|MimeAttribute
+name|XmlSchemaUtils
 import|;
 end_import
 
@@ -165,9 +177,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|databinding
 operator|.
-name|WSDLConstants
+name|source
+operator|.
+name|mime
+operator|.
+name|MimeAttribute
 import|;
 end_import
 

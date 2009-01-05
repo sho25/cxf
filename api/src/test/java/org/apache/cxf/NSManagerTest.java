@@ -21,11 +21,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|common
 operator|.
-name|addressing
-operator|.
-name|JAXWSAConstants
+name|WSDLConstants
 import|;
 end_import
 
@@ -37,9 +35,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|ws
 operator|.
-name|WSDLConstants
+name|addressing
+operator|.
+name|JAXWSAConstants
 import|;
 end_import
 

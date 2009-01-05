@@ -285,6 +285,20 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|WSDLConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|classloader
 operator|.
 name|ClassLoaderUtils
@@ -367,7 +381,7 @@ name|common
 operator|.
 name|xmlschema
 operator|.
-name|XmlSchemaTools
+name|XmlSchemaUtils
 import|;
 end_import
 
@@ -562,20 +576,6 @@ operator|.
 name|model
 operator|.
 name|ServiceInfo
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|wsdl
-operator|.
-name|WSDLConstants
 import|;
 end_import
 
@@ -2961,7 +2961,7 @@ name|schema
 parameter_list|)
 block|{
 return|return
-name|XmlSchemaTools
+name|XmlSchemaUtils
 operator|.
 name|schemaImportsNamespace
 argument_list|(

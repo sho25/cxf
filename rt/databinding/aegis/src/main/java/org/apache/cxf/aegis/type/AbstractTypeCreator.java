@@ -223,9 +223,7 @@ name|cxf
 operator|.
 name|common
 operator|.
-name|util
-operator|.
-name|XMLSchemaQNames
+name|WSDLConstants
 import|;
 end_import
 
@@ -237,9 +235,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|common
 operator|.
-name|WSDLConstants
+name|util
+operator|.
+name|XMLSchemaQNames
 import|;
 end_import
 

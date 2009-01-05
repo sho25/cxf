@@ -103,9 +103,7 @@ name|cxf
 operator|.
 name|common
 operator|.
-name|util
-operator|.
-name|SOAPConstants
+name|WSDLConstants
 import|;
 end_import
 
@@ -117,9 +115,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|common
 operator|.
-name|WSDLConstants
+name|util
+operator|.
+name|SOAPConstants
 import|;
 end_import
 
