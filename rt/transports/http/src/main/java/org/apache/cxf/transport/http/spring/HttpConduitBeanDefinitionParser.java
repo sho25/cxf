@@ -442,6 +442,13 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|n
+operator|=
+name|n
+operator|.
+name|getNextSibling
+argument_list|()
+expr_stmt|;
 continue|continue;
 block|}
 name|String
