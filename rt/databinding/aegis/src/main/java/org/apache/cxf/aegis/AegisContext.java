@@ -507,6 +507,10 @@ specifier|private
 name|boolean
 name|mtomUseXmime
 decl_stmt|;
+specifier|private
+name|boolean
+name|enableJDOMMappings
+decl_stmt|;
 comment|// this URI goes into the type map.
 specifier|private
 name|String
@@ -692,6 +696,8 @@ argument_list|(
 name|defaultNillable
 argument_list|,
 name|mtomUseXmime
+argument_list|,
+name|enableJDOMMappings
 argument_list|)
 decl_stmt|;
 comment|// The use of the XSD URI in the mapping is, MAGIC.
@@ -1604,6 +1610,31 @@ operator|.
 name|mappingNamespaceURI
 operator|=
 name|mappingNamespaceURI
+expr_stmt|;
+block|}
+specifier|public
+name|boolean
+name|isEnableJDOMMappings
+parameter_list|()
+block|{
+return|return
+name|enableJDOMMappings
+return|;
+block|}
+comment|/**      * Whether to enable JDOM as a mapping for xsd:anyType if JDOM is in the classpath.       * @param enableJDOMMappings      */
+specifier|public
+name|void
+name|setEnableJDOMMappings
+parameter_list|(
+name|boolean
+name|enableJDOMMappings
+parameter_list|)
+block|{
+name|this
+operator|.
+name|enableJDOMMappings
+operator|=
+name|enableJDOMMappings
 expr_stmt|;
 block|}
 block|}

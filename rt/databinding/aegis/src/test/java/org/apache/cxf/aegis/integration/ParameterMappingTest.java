@@ -152,6 +152,12 @@ operator|.
 name|setUp
 argument_list|()
 expr_stmt|;
+name|setEnableJDOM
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+comment|// there are JDOM types in here.
 name|createService
 argument_list|(
 name|AddNumbers
