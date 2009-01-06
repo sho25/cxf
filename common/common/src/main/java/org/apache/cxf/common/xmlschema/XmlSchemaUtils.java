@@ -1190,6 +1190,16 @@ name|equals
 argument_list|(
 name|namespaceUri
 argument_list|)
+operator|||
+name|schema
+operator|.
+name|getTargetNamespace
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|namespaceUri
+argument_list|)
 condition|)
 block|{
 return|return;

@@ -255,6 +255,14 @@ name|AbstractTypeCreator
 implements|implements
 name|TypeCreator
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|HTTP_CXF_APACHE_ORG_ARRAYS
+init|=
+literal|"http://cxf.apache.org/arrays"
+decl_stmt|;
 specifier|protected
 name|TypeMapping
 name|tm
@@ -1576,7 +1584,7 @@ condition|)
 block|{
 name|ns
 operator|=
-literal|"http://cxf.apache.org/arrays"
+name|HTTP_CXF_APACHE_ORG_ARRAYS
 expr_stmt|;
 block|}
 name|String
