@@ -268,10 +268,10 @@ name|String
 name|getAttributeValue
 parameter_list|(
 name|String
-name|arg0
+name|namespace
 parameter_list|,
 name|String
-name|arg1
+name|localName
 parameter_list|)
 block|{
 return|return
@@ -279,9 +279,9 @@ name|reader
 operator|.
 name|getAttributeValue
 argument_list|(
-name|arg0
+name|namespace
 argument_list|,
-name|arg1
+name|localName
 argument_list|)
 return|;
 block|}

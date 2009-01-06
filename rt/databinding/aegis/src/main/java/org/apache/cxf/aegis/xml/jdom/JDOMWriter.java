@@ -350,7 +350,7 @@ throw|throw
 operator|new
 name|UnsupportedOperationException
 argument_list|(
-literal|"Stream writing not supported from a JDOMWriter."
+literal|"Stream writing not supported from a W3CDOMWriter."
 argument_list|)
 throw|;
 block|}

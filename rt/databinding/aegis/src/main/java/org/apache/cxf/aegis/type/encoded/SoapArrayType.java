@@ -823,7 +823,7 @@ operator|!=
 literal|null
 expr_stmt|;
 block|}
-comment|// nested element names can specifiy a type
+comment|// nested element names can specify a type
 name|Type
 name|compType
 init|=
@@ -1750,6 +1750,18 @@ name|getPrefix
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|prefix
+operator|==
+literal|null
+condition|)
+block|{
+name|prefix
+operator|=
+literal|""
+expr_stmt|;
+block|}
 name|rootType
 operator|=
 operator|new
@@ -1790,6 +1802,28 @@ name|values
 argument_list|)
 argument_list|)
 decl_stmt|;
+comment|// ensure that the writer writes out this prefix...
+name|writer
+operator|.
+name|getPrefixForNamespace
+argument_list|(
+name|arrayTypeInfo
+operator|.
+name|getTypeName
+argument_list|()
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|,
+name|arrayTypeInfo
+operator|.
+name|getTypeName
+argument_list|()
+operator|.
+name|getPrefix
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|arrayTypeInfo
 operator|.
 name|writeAttribute

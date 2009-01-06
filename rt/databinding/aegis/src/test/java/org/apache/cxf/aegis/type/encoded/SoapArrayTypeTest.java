@@ -826,6 +826,20 @@ argument_list|,
 name|objects
 argument_list|)
 expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testUrTypeArrayReadWriteRef1
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|Object
+index|[]
+name|objects
+decl_stmt|;
 comment|// round trip tests
 name|objects
 operator|=
@@ -859,6 +873,21 @@ argument_list|,
 name|objects
 argument_list|)
 expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testUrTypeArrayReadWriteRef2
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|Object
+index|[]
+name|objects
+decl_stmt|;
+comment|// round trip tests
 name|objects
 operator|=
 name|readWriteReadRef

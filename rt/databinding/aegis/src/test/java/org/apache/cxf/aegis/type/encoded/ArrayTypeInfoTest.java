@@ -599,6 +599,9 @@ init|=
 operator|new
 name|ArrayTypeInfo
 argument_list|(
+name|getNamespaceContext
+argument_list|()
+argument_list|,
 name|actualString
 argument_list|)
 decl_stmt|;
@@ -886,6 +889,9 @@ block|{
 operator|new
 name|ArrayTypeInfo
 argument_list|(
+name|getNamespaceContext
+argument_list|()
+argument_list|,
 name|actualString
 argument_list|)
 expr_stmt|;
