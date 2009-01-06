@@ -223,6 +223,10 @@ literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|content
+operator|=
+name|element
+expr_stmt|;
 name|newFrame
 argument_list|(
 name|getCurrentFrame
