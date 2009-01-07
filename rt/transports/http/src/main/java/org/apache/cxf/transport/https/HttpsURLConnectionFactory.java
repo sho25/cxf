@@ -728,6 +728,15 @@ name|connection
 argument_list|)
 return|;
 block|}
+specifier|public
+name|String
+name|getProtocol
+parameter_list|()
+block|{
+return|return
+literal|"https"
+return|;
+block|}
 block|}
 end_class
 

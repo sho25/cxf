@@ -86,7 +86,6 @@ operator|.
 name|newInstance
 argument_list|()
 decl_stmt|;
-specifier|final
 name|Bus
 name|bus
 init|=
@@ -95,6 +94,11 @@ operator|.
 name|createBus
 argument_list|()
 decl_stmt|;
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
 name|BusFactory
 operator|.
 name|setDefaultBus

@@ -122,6 +122,9 @@ name|ret
 init|=
 literal|true
 decl_stmt|;
+name|tearDown
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|verify
