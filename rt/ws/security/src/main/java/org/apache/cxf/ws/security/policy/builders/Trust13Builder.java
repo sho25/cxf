@@ -206,7 +206,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Trust10 assertion doesn't contain any Policy"
+literal|"Trust13 assertion doesn't contain any Policy"
 argument_list|)
 throw|;
 block|}

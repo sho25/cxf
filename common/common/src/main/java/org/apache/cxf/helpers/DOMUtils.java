@@ -1407,7 +1407,7 @@ name|equals
 argument_list|(
 name|e
 operator|.
-name|getNodeName
+name|getLocalName
 argument_list|()
 argument_list|)
 condition|)
