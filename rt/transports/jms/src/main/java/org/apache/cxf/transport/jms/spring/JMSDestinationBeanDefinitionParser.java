@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -59,11 +69,15 @@ begin_import
 import|import
 name|org
 operator|.
-name|w3c
+name|apache
 operator|.
-name|dom
+name|cxf
 operator|.
-name|NodeList
+name|configuration
+operator|.
+name|spring
+operator|.
+name|AbstractBeanDefinitionParser
 import|;
 end_import
 
@@ -75,11 +89,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|configuration
+name|helpers
 operator|.
-name|spring
-operator|.
-name|AbstractBeanDefinitionParser
+name|DOMUtils
 import|;
 end_import
 
@@ -317,13 +329,18 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|NodeList
-name|el
+name|List
+argument_list|<
+name|Element
+argument_list|>
+name|elemList
 init|=
-name|element
+name|DOMUtils
 operator|.
-name|getElementsByTagNameNS
+name|findAllElementsByTagNameNS
 argument_list|(
+name|element
+argument_list|,
 name|JMS_NS
 argument_list|,
 literal|"jmsConfig-ref"
@@ -331,9 +348,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|el
+name|elemList
 operator|.
-name|getLength
+name|size
 argument_list|()
 operator|==
 literal|1
@@ -342,9 +359,9 @@ block|{
 name|Node
 name|el1
 init|=
-name|el
+name|elemList
 operator|.
-name|item
+name|get
 argument_list|(
 literal|0
 argument_list|)

@@ -2804,7 +2804,7 @@ return|return
 name|ret
 return|;
 block|}
-specifier|public
+specifier|private
 specifier|static
 name|void
 name|findAllElementsByTagNameNS
@@ -2932,7 +2932,7 @@ return|return
 name|ret
 return|;
 block|}
-specifier|public
+specifier|private
 specifier|static
 name|void
 name|findAllElementsByTagName

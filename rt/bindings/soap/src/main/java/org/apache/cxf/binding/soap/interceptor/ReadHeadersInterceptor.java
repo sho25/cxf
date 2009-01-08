@@ -35,6 +35,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Logger
@@ -149,17 +159,9 @@ name|Node
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|w3c
-operator|.
-name|dom
-operator|.
-name|NodeList
-import|;
-end_import
+begin_comment
+comment|//import org.w3c.dom.NodeList;
+end_comment
 
 begin_import
 import|import
@@ -740,13 +742,18 @@ operator|.
 name|getHeader
 argument_list|()
 decl_stmt|;
-name|NodeList
-name|headerEls
+name|List
+argument_list|<
+name|Element
+argument_list|>
+name|elemList
 init|=
-name|element
+name|DOMUtils
 operator|.
-name|getElementsByTagNameNS
+name|findAllElementsByTagNameNS
 argument_list|(
+name|element
+argument_list|,
 name|header
 operator|.
 name|getNamespaceURI
@@ -760,32 +767,12 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
-name|int
-name|i
-init|=
-literal|0
-init|;
-name|i
-operator|<
-name|headerEls
-operator|.
-name|getLength
-argument_list|()
-condition|;
-name|i
-operator|++
+name|Element
+name|elem
+range|:
+name|elemList
 control|)
 block|{
-name|Node
-name|currentHead
-init|=
-name|headerEls
-operator|.
-name|item
-argument_list|(
-name|i
-argument_list|)
-decl_stmt|;
 name|Element
 name|hel
 init|=
@@ -793,7 +780,7 @@ name|DOMUtils
 operator|.
 name|getFirstElement
 argument_list|(
-name|currentHead
+name|elem
 argument_list|)
 decl_stmt|;
 while|while
@@ -807,7 +794,7 @@ comment|// Need to add any attributes that are present on the parent element
 comment|// which otherwise would be lost.
 if|if
 condition|(
-name|currentHead
+name|elem
 operator|.
 name|hasAttributes
 argument_list|()
@@ -816,7 +803,7 @@ block|{
 name|NamedNodeMap
 name|nnp
 init|=
-name|currentHead
+name|elem
 operator|.
 name|getAttributes
 argument_list|()
@@ -925,8 +912,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|//                            System.out.println("READHEADERSINTERCEPTOR : node name : "
-comment|//                            + node.getLocalName() +  " namespace URI" + node.getNamespaceURI());
 name|HeaderProcessor
 name|p
 init|=
