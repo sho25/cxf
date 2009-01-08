@@ -152,6 +152,11 @@ name|CustomProcessor
 implements|implements
 name|Processor
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 specifier|public
 specifier|final
 name|void
