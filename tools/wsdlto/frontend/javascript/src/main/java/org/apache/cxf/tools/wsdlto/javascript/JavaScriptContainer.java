@@ -1520,7 +1520,7 @@ init|=
 operator|new
 name|Message
 argument_list|(
-literal|"DIRECTORY_NOT_EXIST"
+literal|"DIRECTORY_COULD_NOT_BE_CREATED"
 argument_list|,
 name|LOG
 argument_list|,
@@ -1630,7 +1630,7 @@ init|=
 operator|new
 name|Message
 argument_list|(
-literal|"DIRECTORY_NOT_EXIST"
+literal|"DIRECTORY_COULD_NOT_BE_CREATED"
 argument_list|,
 name|LOG
 argument_list|,

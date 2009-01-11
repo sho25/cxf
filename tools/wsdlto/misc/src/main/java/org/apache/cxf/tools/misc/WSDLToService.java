@@ -561,6 +561,12 @@ name|dir
 operator|.
 name|exists
 argument_list|()
+operator|&&
+operator|!
+name|dir
+operator|.
+name|mkdirs
+argument_list|()
 condition|)
 block|{
 name|Message
@@ -569,7 +575,7 @@ init|=
 operator|new
 name|Message
 argument_list|(
-literal|"DIRECTORY_NOT_EXIST"
+literal|"DIRECTORY_COULD_NOT_BE_CREATED"
 argument_list|,
 name|LOG
 argument_list|,
