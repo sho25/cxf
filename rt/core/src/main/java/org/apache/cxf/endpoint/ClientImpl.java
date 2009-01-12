@@ -2718,6 +2718,13 @@ name|reqContext
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+literal|null
+operator|!=
+name|oi
+condition|)
+block|{
 name|exchange
 operator|.
 name|setOneWay
@@ -2730,6 +2737,7 @@ operator|==
 literal|null
 argument_list|)
 expr_stmt|;
+block|}
 name|exchange
 operator|.
 name|setOutMessage
@@ -2821,7 +2829,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|Object
 index|[]
 name|processResult
@@ -3147,7 +3155,7 @@ return|return
 literal|null
 return|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|setContext
 parameter_list|(
@@ -3201,7 +3209,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|waitResponse
 parameter_list|(
@@ -3330,7 +3338,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|setParameters
 parameter_list|(
@@ -4108,6 +4116,13 @@ operator|.
 name|FALSE
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|boi
+condition|)
+block|{
 name|message
 operator|.
 name|put
@@ -4139,6 +4154,7 @@ name|getInput
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|protected
 name|void
