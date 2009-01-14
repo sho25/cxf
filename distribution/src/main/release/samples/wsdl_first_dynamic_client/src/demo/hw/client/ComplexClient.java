@@ -19,16 +19,6 @@ name|java
 operator|.
 name|beans
 operator|.
-name|BeanDescriptor
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|beans
-operator|.
 name|PropertyDescriptor
 import|;
 end_import
@@ -40,18 +30,6 @@ operator|.
 name|io
 operator|.
 name|File
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
-name|Method
 import|;
 end_import
 
