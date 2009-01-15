@@ -877,6 +877,16 @@ name|getDetail
 argument_list|()
 operator|!=
 literal|null
+operator|&&
+name|fault
+operator|.
+name|getDetail
+argument_list|()
+operator|.
+name|getFirstChild
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 name|soapFault
