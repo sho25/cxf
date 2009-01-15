@@ -428,6 +428,9 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|ite
 init|=
 name|classCollector
@@ -449,9 +452,6 @@ block|{
 name|String
 name|fileName
 init|=
-operator|(
-name|String
-operator|)
 name|ite
 operator|.
 name|next

@@ -23,7 +23,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
+name|Collection
 import|;
 end_import
 
@@ -53,16 +53,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Map
 import|;
 end_import
@@ -74,6 +64,16 @@ operator|.
 name|util
 operator|.
 name|Set
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|TreeSet
 import|;
 end_import
 
@@ -565,21 +565,21 @@ name|typesPackages
 return|;
 block|}
 specifier|public
-name|List
+name|Collection
 argument_list|<
 name|String
 argument_list|>
 name|getGeneratedFileInfo
 parameter_list|()
 block|{
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
 name|generatedFileList
 init|=
 operator|new
-name|ArrayList
+name|TreeSet
 argument_list|<
 name|String
 argument_list|>
