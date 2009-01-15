@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * SystemHandler is capable of pre/post processing requests   * ex., they can handle query extensions starting from _type  *  */
+comment|/**  * RequestHandler is capable of preprocessing requests   * ex., they can handle query extensions starting from _type  *  */
 end_comment
 
 begin_interface

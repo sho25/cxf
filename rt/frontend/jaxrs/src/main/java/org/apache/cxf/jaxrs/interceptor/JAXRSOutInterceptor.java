@@ -875,7 +875,7 @@ name|Message
 operator|.
 name|RESPONSE_CODE
 argument_list|,
-literal|406
+literal|500
 argument_list|)
 expr_stmt|;
 name|writeResponseErrorMessage
@@ -1059,7 +1059,6 @@ parameter_list|)
 block|{
 try|try
 block|{
-comment|// TODO : make sure this message is picked up from a resource bundle
 name|out
 operator|.
 name|write

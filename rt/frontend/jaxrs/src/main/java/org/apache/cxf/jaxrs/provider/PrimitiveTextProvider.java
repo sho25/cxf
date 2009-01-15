@@ -91,18 +91,6 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|PathParam
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|Produces
 import|;
 end_import
@@ -189,7 +177,7 @@ name|jaxrs
 operator|.
 name|utils
 operator|.
-name|AnnotationUtils
+name|InjectionUtils
 import|;
 end_import
 
@@ -205,7 +193,7 @@ name|jaxrs
 operator|.
 name|utils
 operator|.
-name|InjectionUtils
+name|ParameterType
 import|;
 end_import
 
@@ -350,17 +338,10 @@ argument_list|()
 argument_list|,
 name|type
 argument_list|,
-name|AnnotationUtils
+name|ParameterType
 operator|.
-name|getAnnotation
-argument_list|(
-name|anns
+name|REQUEST_BODY
 argument_list|,
-name|PathParam
-operator|.
-name|class
-argument_list|)
-operator|!=
 literal|null
 argument_list|)
 return|;
