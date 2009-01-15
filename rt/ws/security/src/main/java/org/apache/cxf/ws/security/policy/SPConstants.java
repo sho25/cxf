@@ -323,6 +323,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|KEYVALUE_TOKEN
+init|=
+literal|"KeyValueToken"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|USERNAME_TOKEN10
 init|=
 literal|"WssUsernameToken10"
