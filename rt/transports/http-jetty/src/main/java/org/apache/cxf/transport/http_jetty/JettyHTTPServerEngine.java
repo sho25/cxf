@@ -436,12 +436,12 @@ name|class
 argument_list|)
 decl_stmt|;
 comment|/**      * The bus.      */
-specifier|private
+specifier|protected
 name|Bus
 name|bus
 decl_stmt|;
 comment|/**      * This is the Jetty HTTP Server Engine Factory. This factory caches some       * engines based on port numbers.      */
-specifier|private
+specifier|protected
 name|JettyHTTPServerEngineFactory
 name|factory
 decl_stmt|;
@@ -2001,7 +2001,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|retrieveEngineFactory
 parameter_list|()

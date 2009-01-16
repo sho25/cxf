@@ -2235,7 +2235,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This test should fail when we hit Poltim, since it redirects      * to Mortimer, which is an http url, and Poltim is an https server.      */
 annotation|@
 name|Test
 specifier|public
@@ -2363,32 +2362,11 @@ argument_list|(
 name|tlsClientParameters
 argument_list|)
 expr_stmt|;
-try|try
-block|{
-name|String
-name|answer
-init|=
 name|poltim
 operator|.
 name|sayHi
 argument_list|()
-decl_stmt|;
-name|fail
-argument_list|(
-literal|"Unexpected answer from Poltim: "
-operator|+
-name|answer
-argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-comment|//e.printStackTrace();
-block|}
 block|}
 class|class
 name|MyHttpsTrustDecider
