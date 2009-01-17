@@ -2979,6 +2979,32 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// leave the input stream open for the caller
+name|Boolean
+name|keepConduitAlive
+init|=
+operator|(
+name|Boolean
+operator|)
+name|exchange
+operator|.
+name|get
+argument_list|(
+name|Client
+operator|.
+name|KEEP_CONDUIT_ALIVE
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|keepConduitAlive
+operator|==
+literal|null
+operator|||
+operator|!
+name|keepConduitAlive
+condition|)
+block|{
 name|getConduitSelector
 argument_list|()
 operator|.
@@ -2987,6 +3013,7 @@ argument_list|(
 name|exchange
 argument_list|)
 expr_stmt|;
+block|}
 comment|// Grab the response objects if there are any
 name|List
 name|resList
