@@ -156,6 +156,22 @@ return|return
 name|this
 return|;
 block|}
+annotation|@
+name|GET
+annotation|@
+name|Produces
+argument_list|(
+literal|"application/xml;charset=ISO-8859-1"
+argument_list|)
+specifier|public
+name|Chapter
+name|get
+parameter_list|()
+block|{
+return|return
+name|this
+return|;
+block|}
 block|}
 end_class
 
