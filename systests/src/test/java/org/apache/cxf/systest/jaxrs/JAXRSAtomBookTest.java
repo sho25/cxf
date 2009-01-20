@@ -274,7 +274,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|AtomClientBookTest
+name|JAXRSAtomBookTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{

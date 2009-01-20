@@ -198,7 +198,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JaxRsJaxWsBookTest
+name|JAXRSSoapBookTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
