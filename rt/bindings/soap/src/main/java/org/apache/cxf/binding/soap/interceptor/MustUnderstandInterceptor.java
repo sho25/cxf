@@ -482,6 +482,12 @@ name|ultimateReceiverHeaders
 operator|.
 name|isEmpty
 argument_list|()
+operator|&&
+operator|!
+name|isRequestor
+argument_list|(
+name|soapMessage
+argument_list|)
 condition|)
 block|{
 name|soapMessage
