@@ -1037,6 +1037,9 @@ name|setupMessageHeader
 parameter_list|(
 name|Message
 name|outMessage
+parameter_list|,
+name|String
+name|correlationId
 parameter_list|)
 block|{
 name|JMSMessageHeadersType
@@ -1050,7 +1053,7 @@ name|header
 operator|.
 name|setJMSCorrelationID
 argument_list|(
-literal|"Destination test"
+name|correlationId
 argument_list|)
 expr_stmt|;
 name|header
@@ -1096,6 +1099,22 @@ operator|.
 name|ENCODING
 argument_list|,
 literal|"US-ASCII"
+argument_list|)
+expr_stmt|;
+block|}
+specifier|private
+name|void
+name|setupMessageHeader
+parameter_list|(
+name|Message
+name|outMessage
+parameter_list|)
+block|{
+name|setupMessageHeader
+argument_list|(
+name|outMessage
+argument_list|,
+literal|"Destination test"
 argument_list|)
 expr_stmt|;
 block|}
@@ -1165,7 +1184,7 @@ argument_list|()
 expr_stmt|;
 block|}
 name|String
-name|reponse
+name|response
 init|=
 name|IOUtils
 operator|.
@@ -1176,11 +1195,13 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The reponse date should be equal"
+literal|"The response content should be equal"
 argument_list|,
-name|reponse
+name|AbstractJMSTester
+operator|.
+name|MESSAGE_CONTENT
 argument_list|,
-literal|"HelloWorld"
+name|response
 argument_list|)
 expr_stmt|;
 block|}
@@ -1332,6 +1353,19 @@ name|JMSMessageHeadersType
 name|inHeader
 parameter_list|)
 block|{
+if|if
+condition|(
+name|outHeader
+operator|.
+name|getJMSCorrelationID
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// only check if the correlation id was explicitly set as
+comment|// otherwise the in header will contain an automatically
+comment|// generated correlation id
 name|assertEquals
 argument_list|(
 literal|"The inMessage and outMessage JMS Header's CorrelationID should be equals"
@@ -1347,6 +1381,7 @@ name|getJMSCorrelationID
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|assertEquals
 argument_list|(
 literal|"The inMessage and outMessage JMS Header's JMSPriority should be equals"
@@ -1439,6 +1474,8 @@ decl_stmt|;
 name|setupMessageHeader
 argument_list|(
 name|outMessage
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1670,6 +1707,8 @@ decl_stmt|;
 name|setupMessageHeader
 argument_list|(
 name|outMessage
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|JMSPropertyType

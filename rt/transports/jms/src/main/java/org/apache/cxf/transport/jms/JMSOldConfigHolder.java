@@ -782,6 +782,16 @@ expr_stmt|;
 comment|//}
 name|jmsConfig
 operator|.
+name|setUseConduitIdSelector
+argument_list|(
+name|clientConfig
+operator|.
+name|isUseConduitIdSelector
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|jmsConfig
+operator|.
 name|setSubscriptionDurable
 argument_list|(
 name|serverBehavior

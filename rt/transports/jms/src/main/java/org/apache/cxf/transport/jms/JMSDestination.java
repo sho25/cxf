@@ -804,6 +804,8 @@ name|jmsConfig
 operator|.
 name|getTargetDestination
 argument_list|()
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}

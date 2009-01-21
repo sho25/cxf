@@ -273,6 +273,14 @@ name|AbstractJMSTester
 extends|extends
 name|Assert
 block|{
+specifier|protected
+specifier|static
+specifier|final
+name|String
+name|MESSAGE_CONTENT
+init|=
+literal|"HelloWorld"
+decl_stmt|;
 specifier|private
 specifier|static
 name|JMSBrokerSetup
@@ -590,7 +598,7 @@ name|os
 operator|.
 name|write
 argument_list|(
-literal|"HelloWorld"
+name|MESSAGE_CONTENT
 operator|.
 name|getBytes
 argument_list|()

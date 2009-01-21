@@ -343,7 +343,7 @@ return|return
 name|jmsTemplate
 return|;
 block|}
-comment|/**      * Create and start listener using configuration information from jmsConfig. Uses      * resolveOrCreateDestination to determine the destination for the listener.      *       * @param jmsConfig configuration information      * @param listenerHandler object to be called when a message arrives      * @param destinationName null for temp dest or a destination name      * @return      */
+comment|/**      * Create and start listener using configuration information from jmsConfig. Uses      * resolveOrCreateDestination to determine the destination for the listener.      *       * @param jmsConfig configuration information      * @param listenerHandler object to be called when a message arrives      * @param destinationName null for temp dest or a destination name      * @param messageSelectorPrefix prefix for the messageselector      * @return      */
 specifier|public
 specifier|static
 name|DefaultMessageListenerContainer
@@ -357,6 +357,9 @@ name|listenerHandler
 parameter_list|,
 name|String
 name|destinationName
+parameter_list|,
+name|String
+name|messageSelectorPrefix
 parameter_list|)
 block|{
 name|DefaultMessageListenerContainer
@@ -469,6 +472,30 @@ argument_list|(
 name|listenerHandler
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|messageSelectorPrefix
+operator|!=
+literal|null
+operator|&&
+name|jmsConfig
+operator|.
+name|isUseConduitIdSelector
+argument_list|()
+condition|)
+block|{
+name|jmsListener
+operator|.
+name|setMessageSelector
+argument_list|(
+literal|"JMSCorrelationID LIKE '"
+operator|+
+name|messageSelectorPrefix
+operator|+
+literal|"%'"
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|jmsConfig
