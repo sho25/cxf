@@ -195,7 +195,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/stream"
+literal|"http://localhost:9080/bookstore/books/stream"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -215,7 +215,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/istream"
+literal|"http://localhost:9080/bookstore/books/istream"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -235,7 +235,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/mchandlers"
+literal|"http://localhost:9080/bookstore/books/mchandlers"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -255,7 +255,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/jaxb"
+literal|"http://localhost:9080/bookstore/books/jaxb"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -275,7 +275,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/dsource"
+literal|"http://localhost:9080/bookstore/books/dsource"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -295,7 +295,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/dsource2"
+literal|"http://localhost:9080/bookstore/books/dsource2"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -315,7 +315,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/jaxb2"
+literal|"http://localhost:9080/bookstore/books/jaxb2"
 decl_stmt|;
 name|doAddBook
 argument_list|(
@@ -335,7 +335,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost:9082/bookstore/books/dhandler"
+literal|"http://localhost:9080/bookstore/books/dhandler"
 decl_stmt|;
 name|doAddBook
 argument_list|(
