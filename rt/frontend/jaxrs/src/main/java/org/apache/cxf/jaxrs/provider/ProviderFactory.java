@@ -680,6 +680,10 @@ name|PrimitiveTextProvider
 argument_list|()
 argument_list|,
 operator|new
+name|ActivationProvider
+argument_list|()
+argument_list|,
+operator|new
 name|WebApplicationExceptionMapper
 argument_list|()
 argument_list|,

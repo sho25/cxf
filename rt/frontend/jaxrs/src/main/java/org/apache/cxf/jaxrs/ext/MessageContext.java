@@ -19,6 +19,26 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|activation
+operator|.
+name|DataHandler
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|servlet
@@ -132,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents an inbound internal message  *  */
+comment|/**  * Represents an invocation context  *  */
 end_comment
 
 begin_interface
@@ -140,12 +160,41 @@ specifier|public
 interface|interface
 name|MessageContext
 block|{
+name|String
+name|INBOUND_MESSAGE_ATTACHMENTS
+init|=
+literal|"org.apache.cxf.jaxrs.attachments.inbound"
+decl_stmt|;
+name|String
+name|OUTBOUND_MESSAGE_ATTACHMENTS
+init|=
+literal|"org.apache.cxf.jaxrs.attachments.outbound"
+decl_stmt|;
 name|Object
 name|get
 parameter_list|(
 name|Object
 name|key
 parameter_list|)
+function_decl|;
+name|void
+name|put
+parameter_list|(
+name|Object
+name|key
+parameter_list|,
+name|Object
+name|value
+parameter_list|)
+function_decl|;
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|DataHandler
+argument_list|>
+name|getAttachments
+parameter_list|()
 function_decl|;
 name|UriInfo
 name|getUriInfo
