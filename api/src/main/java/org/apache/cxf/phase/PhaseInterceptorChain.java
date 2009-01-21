@@ -1051,19 +1051,16 @@ name|FINE
 argument_list|)
 condition|)
 block|{
-name|LogUtils
-operator|.
-name|log
-argument_list|(
 name|LOG
-argument_list|,
-name|Level
 operator|.
-name|FINE
-argument_list|,
-literal|"Application has thrown exception, unwinding now"
-argument_list|,
+name|fine
+argument_list|(
+literal|"Application has thrown exception, unwinding now "
+operator|+
 name|ex
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1107,16 +1104,10 @@ name|getCause
 argument_list|()
 expr_stmt|;
 block|}
-name|LogUtils
-operator|.
-name|log
-argument_list|(
 name|LOG
-argument_list|,
-name|Level
 operator|.
-name|INFO
-argument_list|,
+name|info
+argument_list|(
 literal|"Application has thrown exception, unwinding now: "
 operator|+
 name|t
@@ -1159,37 +1150,31 @@ operator|.
 name|UNCHECKED_APPLICATION_FAULT
 condition|)
 block|{
-name|LogUtils
-operator|.
-name|log
-argument_list|(
 name|LOG
-argument_list|,
-name|Level
 operator|.
-name|INFO
-argument_list|,
-literal|"Application has thrown exception, unwinding now"
-argument_list|,
+name|info
+argument_list|(
+literal|"Application has thrown exception, unwinding now "
+operator|+
 name|ex
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
 else|else
 block|{
-name|LogUtils
-operator|.
-name|log
-argument_list|(
 name|LOG
-argument_list|,
-name|Level
 operator|.
-name|INFO
-argument_list|,
-literal|"Interceptor has thrown exception, unwinding now"
-argument_list|,
+name|info
+argument_list|(
+literal|"Interceptor has thrown exception, unwinding now "
+operator|+
 name|ex
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
