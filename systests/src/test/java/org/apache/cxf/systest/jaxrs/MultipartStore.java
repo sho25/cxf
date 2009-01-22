@@ -203,6 +203,22 @@ name|MultipartID
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|AttachmentUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Path
@@ -637,10 +653,12 @@ name|DataHandler
 argument_list|>
 name|handlers
 init|=
-name|context
+name|AttachmentUtils
 operator|.
 name|getAttachments
-argument_list|()
+argument_list|(
+name|context
+argument_list|)
 decl_stmt|;
 for|for
 control|(
