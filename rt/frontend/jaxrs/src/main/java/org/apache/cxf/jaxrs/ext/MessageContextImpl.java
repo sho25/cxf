@@ -388,11 +388,6 @@ name|clazz
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 parameter_list|<
 name|T

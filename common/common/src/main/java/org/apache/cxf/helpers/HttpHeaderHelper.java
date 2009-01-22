@@ -427,6 +427,38 @@ name|name
 argument_list|()
 return|;
 block|}
+comment|//older versions of tomcat don't properly parse ContentType headers with stuff
+comment|//after charset="UTF-8"
+name|int
+name|idx
+init|=
+name|enc
+operator|.
+name|indexOf
+argument_list|(
+literal|";"
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|idx
+operator|!=
+operator|-
+literal|1
+condition|)
+block|{
+name|enc
+operator|=
+name|enc
+operator|.
+name|substring
+argument_list|(
+literal|0
+argument_list|,
+name|idx
+argument_list|)
+expr_stmt|;
+block|}
 comment|// Charsets can be quoted. But it's quite certain that they can't have escaped quoted or
 comment|// anything like that.
 name|enc
@@ -439,6 +471,9 @@ literal|"\""
 argument_list|,
 literal|""
 argument_list|)
+operator|.
+name|trim
+argument_list|()
 expr_stmt|;
 name|enc
 operator|=
