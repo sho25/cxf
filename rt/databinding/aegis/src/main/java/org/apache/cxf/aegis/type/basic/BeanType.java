@@ -636,10 +636,7 @@ name|Proxy
 operator|.
 name|newProxyInstance
 argument_list|(
-name|this
-operator|.
-name|getClass
-argument_list|()
+name|clazz
 operator|.
 name|getClassLoader
 argument_list|()
