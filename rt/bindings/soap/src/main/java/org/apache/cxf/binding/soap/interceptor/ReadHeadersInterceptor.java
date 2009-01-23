@@ -961,12 +961,16 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|obj
+name|dataBinding
 operator|=
 name|p
 operator|.
 name|getDataBinding
 argument_list|()
+expr_stmt|;
+name|obj
+operator|=
+name|dataBinding
 operator|.
 name|createReader
 argument_list|(
