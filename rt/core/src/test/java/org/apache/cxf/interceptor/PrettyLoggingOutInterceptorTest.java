@@ -69,6 +69,16 @@ name|Ignore
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Test
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -78,7 +88,8 @@ name|Assert
 block|{
 annotation|@
 name|Ignore
-comment|//@Test
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testFormatting
