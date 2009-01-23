@@ -156,7 +156,7 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|internalLog
+name|doLog
 argument_list|(
 name|record
 argument_list|)
