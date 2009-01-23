@@ -59,14 +59,14 @@ name|transport
 operator|.
 name|http
 operator|.
-name|HttpBasicAuthSupplier
+name|HttpAuthSupplier
 import|;
 end_import
 
 begin_class
 specifier|public
 class|class
-name|HttpBasicAuthSupplierBeanDefinitionParser
+name|HttpAuthSupplierBeanDefinitionParser
 extends|extends
 name|AbstractBeanDefinitionParser
 block|{
@@ -92,7 +92,7 @@ name|arg0
 parameter_list|)
 block|{
 return|return
-name|HttpBasicAuthSupplier
+name|HttpAuthSupplier
 operator|.
 name|class
 return|;

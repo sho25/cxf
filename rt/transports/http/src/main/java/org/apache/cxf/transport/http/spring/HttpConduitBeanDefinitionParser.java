@@ -213,7 +213,7 @@ name|transport
 operator|.
 name|http
 operator|.
-name|HttpBasicAuthSupplier
+name|HttpAuthSupplier
 import|;
 end_import
 
@@ -505,7 +505,7 @@ name|n
 argument_list|,
 name|bean
 argument_list|,
-name|HttpBasicAuthSupplier
+name|HttpAuthSupplier
 operator|.
 name|class
 argument_list|)

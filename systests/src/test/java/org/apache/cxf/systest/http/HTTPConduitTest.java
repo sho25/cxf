@@ -241,6 +241,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|Base64Utility
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|configuration
 operator|.
 name|jsse
@@ -367,7 +383,7 @@ name|transport
 operator|.
 name|http
 operator|.
-name|HttpBasicAuthSupplier
+name|HttpAuthSupplier
 import|;
 end_import
 
@@ -3167,7 +3183,7 @@ specifier|public
 class|class
 name|MyBasicAuthSupplier
 extends|extends
-name|HttpBasicAuthSupplier
+name|HttpAuthSupplier
 block|{
 name|String
 name|realm
@@ -3210,11 +3226,11 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|UserPass
-name|getPreemptiveUserPass
-parameter_list|(
 name|String
-name|conduitName
+name|getPreemptiveAuthorization
+parameter_list|(
+name|HTTPConduit
+name|conduit
 parameter_list|,
 name|URL
 name|currentURL
@@ -3231,11 +3247,11 @@ comment|/**          * If we don't have the realm set, then we loop          * t
 annotation|@
 name|Override
 specifier|public
-name|UserPass
-name|getUserPassForRealm
-parameter_list|(
 name|String
-name|conduitName
+name|getAuthorizationForRealm
+parameter_list|(
+name|HTTPConduit
+name|conduit
 parameter_list|,
 name|URL
 name|currentURL
@@ -3245,6 +3261,9 @@ name|message
 parameter_list|,
 name|String
 name|reqestedRealm
+parameter_list|,
+name|String
+name|fullHeader
 parameter_list|)
 block|{
 if|if
@@ -3332,6 +3351,45 @@ return|;
 block|}
 return|return
 literal|null
+return|;
+block|}
+specifier|private
+name|String
+name|createUserPass
+parameter_list|(
+name|String
+name|usr
+parameter_list|,
+name|String
+name|pwd
+parameter_list|)
+block|{
+name|String
+name|userpass
+init|=
+name|usr
+operator|+
+literal|":"
+operator|+
+name|pwd
+decl_stmt|;
+name|String
+name|token
+init|=
+name|Base64Utility
+operator|.
+name|encode
+argument_list|(
+name|userpass
+operator|.
+name|getBytes
+argument_list|()
+argument_list|)
+decl_stmt|;
+return|return
+literal|"Basic "
+operator|+
+name|token
 return|;
 block|}
 block|}
@@ -3488,7 +3546,7 @@ comment|// than Edward, George, or Mary, with the pass of "password"
 comment|// we should succeed.
 name|http
 operator|.
-name|setBasicAuthSupplier
+name|setAuthSupplier
 argument_list|(
 operator|new
 name|MyBasicAuthSupplier
@@ -3525,11 +3583,11 @@ name|answer
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// Uhe loop auth supplier,
+comment|// The loop auth supplier,
 comment|// We should die with looping realms.
 name|http
 operator|.
-name|setBasicAuthSupplier
+name|setAuthSupplier
 argument_list|(
 operator|new
 name|MyBasicAuthSupplier
