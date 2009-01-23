@@ -586,7 +586,7 @@ name|BUNDLE
 argument_list|,
 name|cr
 operator|.
-name|getClass
+name|getServiceClass
 argument_list|()
 operator|.
 name|getName

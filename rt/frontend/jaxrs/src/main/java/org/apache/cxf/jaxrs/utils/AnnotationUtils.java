@@ -835,10 +835,15 @@ name|a
 operator|.
 name|annotationType
 argument_list|()
-operator|==
+operator|.
+name|getAnnotation
+argument_list|(
 name|HttpMethod
 operator|.
 name|class
+argument_list|)
+operator|!=
+literal|null
 return|;
 block|}
 specifier|public
