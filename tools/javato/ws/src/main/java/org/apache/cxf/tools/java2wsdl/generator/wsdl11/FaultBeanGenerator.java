@@ -360,6 +360,17 @@ range|:
 name|exceptionClasses
 control|)
 block|{
+if|if
+condition|(
+operator|!
+name|bean
+operator|.
+name|faultBeanExists
+argument_list|(
+name|clz
+argument_list|)
+condition|)
+block|{
 name|faultBeanClasses
 operator|.
 name|add
@@ -374,6 +385,7 @@ name|defaultPackage
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|faultBeanClasses
