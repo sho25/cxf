@@ -1470,6 +1470,11 @@ name|checkProperties
 argument_list|()
 expr_stmt|;
 comment|// Initialize the endpointName so we can do configureObject
+name|QName
+name|origEpn
+init|=
+name|endpointName
+decl_stmt|;
 if|if
 condition|(
 name|endpointName
@@ -1515,6 +1520,10 @@ name|configureObject
 argument_list|(
 name|this
 argument_list|)
+expr_stmt|;
+name|endpointName
+operator|=
+name|origEpn
 expr_stmt|;
 comment|// Set up the server factory
 name|serverFactory
