@@ -420,12 +420,6 @@ name|String
 name|importLocation
 parameter_list|)
 block|{
-name|this
-operator|.
-name|baseUri
-operator|=
-name|parent
-expr_stmt|;
 name|String
 name|resolvedImportLocation
 init|=
@@ -527,9 +521,7 @@ name|resolve
 argument_list|(
 name|importLocation
 argument_list|,
-name|this
-operator|.
-name|baseUri
+name|parent
 argument_list|)
 expr_stmt|;
 block|}

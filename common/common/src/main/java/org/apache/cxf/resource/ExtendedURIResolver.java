@@ -237,7 +237,7 @@ name|source
 operator|.
 name|setPublicId
 argument_list|(
-name|lastestImportUri
+name|curUri
 argument_list|)
 expr_stmt|;
 return|return
