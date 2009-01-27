@@ -310,17 +310,7 @@ argument_list|(
 literal|"handler.info"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|">> servant returning list: "
-operator|+
-name|handlerInfoList
-argument_list|)
-expr_stmt|;
+comment|//System.out.println(">> servant returning list: " + handlerInfoList);
 return|return
 name|handlerInfoList
 return|;

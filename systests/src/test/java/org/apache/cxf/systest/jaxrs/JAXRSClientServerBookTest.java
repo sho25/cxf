@@ -1639,29 +1639,14 @@ argument_list|,
 name|result
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
+name|String
+name|resp
+init|=
 name|put
 operator|.
 name|getResponseBodyAsString
 argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-finally|finally
-block|{
-comment|// Release current connection to the connection pool once you are
-comment|// done
-name|put
-operator|.
-name|releaseConnection
-argument_list|()
-expr_stmt|;
-block|}
+decl_stmt|;
 name|InputStream
 name|expected
 init|=
@@ -1675,10 +1660,7 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-name|put
-operator|.
-name|getResponseBodyAsString
-argument_list|()
+name|resp
 operator|.
 name|indexOf
 argument_list|(
@@ -1691,6 +1673,17 @@ operator|>=
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
+finally|finally
+block|{
+comment|// Release current connection to the connection pool once you are
+comment|// done
+name|put
+operator|.
+name|releaseConnection
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Test
@@ -2108,17 +2101,7 @@ argument_list|(
 name|in
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"---"
-operator|+
-name|result
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("---" + result);
 name|assertTrue
 argument_list|(
 name|result

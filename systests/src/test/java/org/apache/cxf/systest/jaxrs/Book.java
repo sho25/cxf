@@ -144,20 +144,7 @@ block|{
 name|init
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----chapters: "
-operator|+
-name|chapters
-operator|.
-name|size
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("----chapters: " + chapters.size());
 block|}
 specifier|public
 name|Book

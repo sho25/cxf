@@ -1065,6 +1065,15 @@ name|getAddress
 argument_list|()
 expr_stmt|;
 block|}
+block|}
+catch|catch
+parameter_list|(
+name|MalformedURLException
+name|e
+parameter_list|)
+block|{
+comment|//ignore, just use info based on Tls
+block|}
 if|if
 condition|(
 name|address
@@ -1088,14 +1097,22 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|MalformedURLException
-name|e
-parameter_list|)
+if|if
+condition|(
+name|address
+operator|==
+literal|null
+condition|)
 block|{
-comment|//ignore, just use info based on Tls
+name|useHttps
+operator|=
+name|configuredConduit
+operator|.
+name|getTlsClientParameters
+argument_list|()
+operator|!=
+literal|null
+expr_stmt|;
 block|}
 if|if
 condition|(
