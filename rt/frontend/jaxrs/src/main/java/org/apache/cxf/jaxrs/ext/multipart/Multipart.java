@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|ext
+operator|.
+name|multipart
 package|;
 end_package
 
@@ -88,7 +90,7 @@ name|RUNTIME
 argument_list|)
 specifier|public
 annotation_defn|@interface
-name|MultipartID
+name|Multipart
 block|{
 name|String
 name|value

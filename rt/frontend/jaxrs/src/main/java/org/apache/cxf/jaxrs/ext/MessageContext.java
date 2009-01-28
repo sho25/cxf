@@ -140,16 +140,6 @@ specifier|public
 interface|interface
 name|MessageContext
 block|{
-name|String
-name|INBOUND_MESSAGE_ATTACHMENTS
-init|=
-literal|"org.apache.cxf.jaxrs.attachments.inbound"
-decl_stmt|;
-name|String
-name|OUTBOUND_MESSAGE_ATTACHMENTS
-init|=
-literal|"org.apache.cxf.jaxrs.attachments.outbound"
-decl_stmt|;
 name|Object
 name|get
 parameter_list|(
