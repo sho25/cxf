@@ -108,11 +108,6 @@ name|Object
 argument_list|>
 name|extensionMappings
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|RequestPreprocessor
 parameter_list|(
@@ -143,7 +138,8 @@ literal|null
 condition|?
 name|Collections
 operator|.
-name|EMPTY_MAP
+name|emptyMap
+argument_list|()
 else|:
 name|languageMappings
 expr_stmt|;
@@ -157,7 +153,8 @@ literal|null
 condition|?
 name|Collections
 operator|.
-name|EMPTY_MAP
+name|emptyMap
+argument_list|()
 else|:
 name|extensionMappings
 expr_stmt|;

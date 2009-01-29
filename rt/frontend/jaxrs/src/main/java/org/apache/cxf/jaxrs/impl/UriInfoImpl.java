@@ -926,9 +926,6 @@ index|[]
 name|paths
 init|=
 block|{
-operator|(
-name|Path
-operator|)
 name|AnnotationUtils
 operator|.
 name|getClassAnnotation
@@ -946,9 +943,6 @@ operator|.
 name|class
 argument_list|)
 block|,
-operator|(
-name|Path
-operator|)
 name|AnnotationUtils
 operator|.
 name|getMethodAnnotation
