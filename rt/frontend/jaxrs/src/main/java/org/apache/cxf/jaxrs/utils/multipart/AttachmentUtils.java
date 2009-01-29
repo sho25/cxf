@@ -557,6 +557,9 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+return|return
+literal|null
+return|;
 block|}
 return|return
 name|infos

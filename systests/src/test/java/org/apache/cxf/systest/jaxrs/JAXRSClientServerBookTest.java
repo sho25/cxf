@@ -2868,6 +2868,33 @@ annotation|@
 name|Test
 specifier|public
 name|void
+name|testUriInfoMatchedResourcesWithObject
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|getAndCompare
+argument_list|(
+literal|"http://localhost:9080/bookstore/"
+operator|+
+literal|"booksubresource/123/chaptersobject/sub/1/matched-resources"
+argument_list|,
+literal|"[class org.apache.cxf.systest.jaxrs.BookStore, "
+operator|+
+literal|"class org.apache.cxf.systest.jaxrs.Book, "
+operator|+
+literal|"class org.apache.cxf.systest.jaxrs.Chapter]"
+argument_list|,
+literal|"text/plain"
+argument_list|,
+literal|200
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
 name|testUriInfoMatchedUrisDecode
 parameter_list|()
 throws|throws
