@@ -17,8 +17,28 @@ name|model
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
 begin_comment
-comment|/**  * A pair of {@link OperationResourceInfo} representing a resource method being invoked   * and actual {@link Class} of the object this method is invoked upon.  */
+comment|/**  * A triple of {@link OperationResourceInfo} representing a resource method being invoked,   * actual {@link Class} of the object this method is invoked upon, and a list of template variable values  * matched during the selection of this method  */
 end_comment
 
 begin_class
@@ -37,6 +57,13 @@ name|?
 argument_list|>
 name|realClass
 decl_stmt|;
+specifier|private
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|templateValues
+decl_stmt|;
 specifier|public
 name|MethodInvocationInfo
 parameter_list|(
@@ -48,6 +75,12 @@ argument_list|<
 name|?
 argument_list|>
 name|realClass
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|templateValues
 parameter_list|)
 block|{
 name|this
@@ -61,6 +94,17 @@ operator|.
 name|realClass
 operator|=
 name|realClass
+expr_stmt|;
+name|this
+operator|.
+name|templateValues
+operator|=
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
+name|templateValues
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -82,6 +126,18 @@ parameter_list|()
 block|{
 return|return
 name|realClass
+return|;
+block|}
+specifier|public
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getTemplateValues
+parameter_list|()
+block|{
+return|return
+name|templateValues
 return|;
 block|}
 block|}

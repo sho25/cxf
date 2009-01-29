@@ -43,7 +43,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|LinkedHashMap
 import|;
 end_import
 
@@ -127,7 +127,7 @@ block|{
 name|this
 argument_list|(
 operator|new
-name|HashMap
+name|LinkedHashMap
 argument_list|<
 name|K
 argument_list|,

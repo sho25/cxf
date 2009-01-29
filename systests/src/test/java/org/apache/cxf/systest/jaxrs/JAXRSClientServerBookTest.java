@@ -2903,11 +2903,11 @@ block|{
 name|String
 name|expected
 init|=
-literal|"[/bookstore/booksubresource/{bookId}/, "
+literal|"[/bookstore/booksubresource/123/, "
 operator|+
-literal|"/bookstore/booksubresource/{bookId}/chapters/sub/{chapterid}/, "
+literal|"/bookstore/booksubresource/123/chapters/sub/1/, "
 operator|+
-literal|"/bookstore/booksubresource/{bookId}/chapters/sub/{chapterid}/matched!uris]"
+literal|"/bookstore/booksubresource/123/chapters/sub/1/matched!uris]"
 decl_stmt|;
 name|getAndCompare
 argument_list|(
@@ -2936,11 +2936,11 @@ comment|//note '%21' instead of '!'
 name|String
 name|expected
 init|=
-literal|"[/bookstore/booksubresource/{bookId}/, "
+literal|"[/bookstore/booksubresource/123/, "
 operator|+
-literal|"/bookstore/booksubresource/{bookId}/chapters/sub/{chapterid}/, "
+literal|"/bookstore/booksubresource/123/chapters/sub/1/, "
 operator|+
-literal|"/bookstore/booksubresource/{bookId}/chapters/sub/{chapterid}/matched%21uris]"
+literal|"/bookstore/booksubresource/123/chapters/sub/1/matched%21uris]"
 decl_stmt|;
 name|getAndCompare
 argument_list|(
