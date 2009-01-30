@@ -88,6 +88,10 @@ block|{
 literal|"multipart/related"
 block|,
 literal|"multipart/mixed"
+block|,
+literal|"multipart/alternative"
+block|,
+literal|"multipart/form-data"
 block|}
 argument_list|)
 decl_stmt|;

@@ -155,6 +155,9 @@ name|key
 parameter_list|,
 name|Object
 name|value
+parameter_list|,
+name|boolean
+name|outbound
 parameter_list|)
 function_decl|;
 name|UriInfo

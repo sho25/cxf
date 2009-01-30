@@ -658,15 +658,36 @@ name|key
 parameter_list|,
 name|Object
 name|value
+parameter_list|,
+name|boolean
+name|outbound
 parameter_list|)
+block|{
+if|if
+condition|(
+name|outbound
+condition|)
 block|{
 throw|throw
 operator|new
 name|UnsupportedOperationException
 argument_list|(
-literal|"MessageContext.put() is not supported yet"
+literal|"MessageContext.put() is not supported for outbound properties"
 argument_list|)
 throw|;
+block|}
+name|m
+operator|.
+name|put
+argument_list|(
+name|key
+operator|.
+name|toString
+argument_list|()
+argument_list|,
+name|value
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|MultipartBody
