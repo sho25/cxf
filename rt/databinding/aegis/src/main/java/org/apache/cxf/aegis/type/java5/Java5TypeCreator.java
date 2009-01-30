@@ -77,6 +77,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -759,6 +769,16 @@ if|if
 condition|(
 operator|!
 name|Collection
+operator|.
+name|class
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|clazz
+argument_list|)
+operator|&&
+operator|!
+name|Map
 operator|.
 name|class
 operator|.
