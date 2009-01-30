@@ -820,11 +820,6 @@ return|return
 name|data
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|MultivaluedMap
