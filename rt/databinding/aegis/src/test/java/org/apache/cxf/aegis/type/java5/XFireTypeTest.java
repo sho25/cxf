@@ -601,6 +601,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Test if attributeProperty is correctly mapped to attProp by      * applying the xml mapping file<className>.aegis.xml      */
 annotation|@
 name|Test
 specifier|public
