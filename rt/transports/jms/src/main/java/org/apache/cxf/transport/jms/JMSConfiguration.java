@@ -1294,6 +1294,13 @@ block|}
 if|if
 condition|(
 name|wrapInSingleConnectionFactory
+operator|&&
+operator|!
+operator|(
+name|connectionFactory
+operator|instanceof
+name|SingleConnectionFactory
+operator|)
 condition|)
 block|{
 if|if
