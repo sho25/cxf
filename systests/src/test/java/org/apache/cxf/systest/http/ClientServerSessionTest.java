@@ -146,39 +146,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|// Jetty server only detects the the port of the same process in Windows box
-if|if
-condition|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"os.name"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"Windows"
-argument_list|)
-condition|)
-block|{
-name|assertTrue
-argument_list|(
-literal|"server did not launch correctly"
-argument_list|,
-name|launchServer
-argument_list|(
-name|SessionServer
-operator|.
-name|class
-argument_list|,
-literal|true
-argument_list|)
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -191,7 +158,6 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 annotation|@
 name|Test
