@@ -3315,6 +3315,11 @@ name|ex
 parameter_list|)
 block|{
 comment|// ignore
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 block|}
