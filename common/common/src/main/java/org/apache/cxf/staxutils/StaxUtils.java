@@ -3843,8 +3843,6 @@ name|getAttributeNodeNS
 argument_list|(
 name|XML_NS
 argument_list|,
-literal|"xmlns:"
-operator|+
 name|prefix
 argument_list|)
 expr_stmt|;
