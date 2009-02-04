@@ -504,6 +504,39 @@ name|NoSuchProviderException
 throws|,
 name|KeyManagementException
 block|{
+comment|// First see if an SSLSocketFactory was set.  This allows easy interop
+comment|// with not-yet-commons-ssl.jar, or even just people who like doing their
+comment|// own JSSE.
+if|if
+condition|(
+name|socketFactory
+operator|==
+literal|null
+condition|)
+block|{
+name|SSLSocketFactory
+name|preSetFactory
+init|=
+name|tlsClientParameters
+operator|.
+name|getSSLSocketFactory
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|preSetFactory
+operator|!=
+literal|null
+condition|)
+block|{
+name|socketFactory
+operator|=
+name|preSetFactory
+expr_stmt|;
+block|}
+block|}
+comment|// Okay, no SSLSocketFactory available in TLSClientParameters.  Maybe
+comment|// TrustManagers, KeyManagers, etc?
 if|if
 condition|(
 name|socketFactory

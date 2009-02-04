@@ -17,6 +17,18 @@ name|jsse
 package|;
 end_package
 
+begin_import
+import|import
+name|javax
+operator|.
+name|net
+operator|.
+name|ssl
+operator|.
+name|SSLSocketFactory
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class extends {@link TLSParameterBase} with client-specific  * SSL/TLS parameters.  *   */
 end_comment
@@ -31,6 +43,10 @@ block|{
 specifier|private
 name|boolean
 name|disableCNCheck
+decl_stmt|;
+specifier|private
+name|SSLSocketFactory
+name|sslSocketFactory
 decl_stmt|;
 comment|/**      * Set whether or not JSEE should omit checking if the host name      * specified in the URL matches that of the Common Name      * (CN) on the server's certificate. Default is false;        * this attribute should not be set to true during production use.      */
 specifier|public
@@ -56,6 +72,32 @@ parameter_list|()
 block|{
 return|return
 name|disableCNCheck
+return|;
+block|}
+comment|/**      * This sets the SSLSocketFactory to use, causing all other properties of      * this bean (and its superclass) to get ignored (this takes precendence).      */
+specifier|public
+specifier|final
+name|void
+name|setSSLSocketFactory
+parameter_list|(
+name|SSLSocketFactory
+name|factory
+parameter_list|)
+block|{
+name|sslSocketFactory
+operator|=
+name|factory
+expr_stmt|;
+block|}
+comment|/**      * Returns the SSLSocketFactory to be used, or null if none has been set.      */
+specifier|public
+specifier|final
+name|SSLSocketFactory
+name|getSSLSocketFactory
+parameter_list|()
+block|{
+return|return
+name|sslSocketFactory
 return|;
 block|}
 block|}
