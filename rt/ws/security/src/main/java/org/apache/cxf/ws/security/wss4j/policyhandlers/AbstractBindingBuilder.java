@@ -3284,7 +3284,7 @@ name|getContextualProperty
 argument_list|(
 name|SecurityConstants
 operator|.
-name|TRUST_TOKEN
+name|TOKEN
 argument_list|)
 decl_stmt|;
 if|if
@@ -3306,7 +3306,7 @@ name|getContextualProperty
 argument_list|(
 name|SecurityConstants
 operator|.
-name|TRUST_TOKEN_ID
+name|TOKEN_ID
 argument_list|)
 decl_stmt|;
 if|if

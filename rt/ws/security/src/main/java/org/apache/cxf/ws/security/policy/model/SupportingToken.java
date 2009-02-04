@@ -186,11 +186,9 @@ specifier|public
 class|class
 name|SupportingToken
 extends|extends
-name|AbstractSecurityAssertion
+name|TokenWrapper
 implements|implements
 name|AlgorithmWrapper
-implements|,
-name|TokenWrapper
 block|{
 comment|/**      * Type of SupportingToken      *       * @see SupportingToken#SUPPORTING      * @see SupportingToken#ENDORSING      * @see SupportingToken#SIGNED      * @see SupportingToken#SIGNED_ENDORSING      */
 specifier|private
@@ -752,15 +750,6 @@ operator|.
 name|SupportTokenType
 operator|.
 name|SUPPORTING_TOKEN_SIGNED_ENDORSING_ENCRYPTED
-return|;
-block|}
-specifier|public
-name|PolicyComponent
-name|normalize
-parameter_list|()
-block|{
-return|return
-name|this
 return|;
 block|}
 specifier|public
