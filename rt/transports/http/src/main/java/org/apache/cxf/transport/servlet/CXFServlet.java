@@ -384,6 +384,7 @@ name|e
 block|}
 argument_list|)
 expr_stmt|;
+throw|throw
 operator|new
 name|ServletException
 argument_list|(
@@ -391,7 +392,7 @@ literal|"Can't load bus with Spring context class"
 argument_list|,
 name|e
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 specifier|private
