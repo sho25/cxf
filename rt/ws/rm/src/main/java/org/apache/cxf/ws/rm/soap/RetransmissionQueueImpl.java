@@ -948,6 +948,9 @@ name|seq
 operator|.
 name|getIdentifier
 argument_list|()
+operator|.
+name|getValue
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
