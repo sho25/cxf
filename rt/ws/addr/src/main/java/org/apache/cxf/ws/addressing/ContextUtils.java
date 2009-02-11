@@ -999,7 +999,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"associating MAPs with context property {0}"
 argument_list|,
@@ -1095,7 +1095,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"retrieving MAPs from context property {0}"
 argument_list|,
@@ -1128,7 +1128,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"current MAPs {0}"
 argument_list|,
@@ -1157,7 +1157,7 @@ name|WARNING
 else|:
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"MAPS_RETRIEVAL_FAILURE_MSG"
 argument_list|)
