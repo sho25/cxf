@@ -53,6 +53,11 @@ name|name
 decl_stmt|;
 specifier|private
 specifier|static
+name|String
+name|fullVersion
+decl_stmt|;
+specifier|private
+specifier|static
 specifier|final
 name|String
 name|VERSION_BASE
@@ -203,6 +208,14 @@ argument_list|,
 literal|"Apache CXF"
 argument_list|)
 expr_stmt|;
+name|fullVersion
+operator|=
+name|name
+operator|+
+literal|" "
+operator|+
+name|version
+expr_stmt|;
 block|}
 block|}
 specifier|public
@@ -242,11 +255,7 @@ name|loadProperties
 argument_list|()
 expr_stmt|;
 return|return
-name|name
-operator|+
-literal|" "
-operator|+
-name|version
+name|fullVersion
 return|;
 block|}
 block|}
