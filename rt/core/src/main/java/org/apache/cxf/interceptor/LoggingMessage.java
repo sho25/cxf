@@ -244,6 +244,16 @@ argument_list|(
 name|header
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|message
+operator|.
+name|length
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
 name|buffer
 operator|.
 name|append
@@ -258,6 +268,7 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+block|}
 name|buffer
 operator|.
 name|append
