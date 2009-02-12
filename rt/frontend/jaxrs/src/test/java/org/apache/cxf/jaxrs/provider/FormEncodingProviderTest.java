@@ -188,12 +188,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|FormEncodingReaderProviderTest
+name|FormEncodingProviderTest
 extends|extends
 name|Assert
 block|{
 specifier|private
-name|FormEncodingReaderProvider
+name|FormEncodingProvider
 name|ferp
 decl_stmt|;
 annotation|@
@@ -206,7 +206,7 @@ block|{
 name|ferp
 operator|=
 operator|new
-name|FormEncodingReaderProvider
+name|FormEncodingProvider
 argument_list|()
 expr_stmt|;
 block|}

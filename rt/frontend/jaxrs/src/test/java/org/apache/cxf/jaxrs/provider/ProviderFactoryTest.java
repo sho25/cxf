@@ -917,7 +917,7 @@ operator|.
 name|registerUserProvider
 argument_list|(
 operator|new
-name|StringProvider
+name|PrimitiveTextProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -950,7 +950,7 @@ name|indexOf
 argument_list|(
 name|readers
 argument_list|,
-name|StringProvider
+name|PrimitiveTextProvider
 operator|.
 name|class
 argument_list|)
@@ -985,7 +985,7 @@ name|indexOf
 argument_list|(
 name|writers
 argument_list|,
-name|StringProvider
+name|PrimitiveTextProvider
 operator|.
 name|class
 argument_list|)
@@ -1192,11 +1192,11 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|StringProvider
+name|PrimitiveTextProvider
 operator|.
 name|class
 argument_list|,
-literal|"text/html"
+literal|"text/plain"
 argument_list|)
 expr_stmt|;
 block|}
@@ -1425,7 +1425,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|StringProvider
+name|PrimitiveTextProvider
 operator|.
 name|class
 argument_list|,
