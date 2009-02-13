@@ -1618,6 +1618,10 @@ name|inMessage
 argument_list|)
 expr_stmt|;
 comment|// wait for a while for the jms session recycling
+name|inMessage
+operator|=
+literal|null
+expr_stmt|;
 comment|// Send a second message to check for an issue
 comment|// Where the session was closed the second time
 name|sendoutMessage

@@ -257,7 +257,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"get the message headers JMSCorrelationID"
+literal|"get the message headers JMSCorrelationID: "
 operator|+
 name|headers
 operator|.

@@ -731,6 +731,14 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|String
+name|staticSelectorPrefix
+init|=
+name|jmsConfig
+operator|.
+name|getConduitSelectorPrefix
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|messageSelectorPrefix
@@ -749,7 +757,32 @@ name|setMessageSelector
 argument_list|(
 literal|"JMSCorrelationID LIKE '"
 operator|+
+name|staticSelectorPrefix
+operator|+
 name|messageSelectorPrefix
+operator|+
+literal|"%'"
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|staticSelectorPrefix
+operator|.
+name|length
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
+name|jmsListener
+operator|.
+name|setMessageSelector
+argument_list|(
+literal|"JMSCorrelationID LIKE '"
+operator|+
+name|staticSelectorPrefix
 operator|+
 literal|"%'"
 argument_list|)
