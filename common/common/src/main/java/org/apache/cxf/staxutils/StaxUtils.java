@@ -3595,6 +3595,11 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|e
+operator|=
+operator|(
+name|Element
+operator|)
 name|parent
 operator|.
 name|appendChild
