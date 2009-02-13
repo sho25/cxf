@@ -791,6 +791,11 @@ name|long
 name|getSize
 parameter_list|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|t
 parameter_list|,
 name|Class

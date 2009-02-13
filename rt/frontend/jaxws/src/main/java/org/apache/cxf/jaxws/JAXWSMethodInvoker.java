@@ -259,6 +259,12 @@ name|Object
 argument_list|>
 name|res
 init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+name|res
+operator|=
 name|CastUtils
 operator|.
 name|cast
@@ -279,7 +285,7 @@ argument_list|,
 name|params
 argument_list|)
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|addHandlerProperties
 argument_list|(
 name|ctx
@@ -295,12 +301,16 @@ argument_list|,
 name|ctx
 argument_list|)
 expr_stmt|;
+block|}
+finally|finally
+block|{
 comment|//clear the WebServiceContextImpl's ThreadLocal variable
 name|WebServiceContextImpl
 operator|.
 name|clear
 argument_list|()
 expr_stmt|;
+block|}
 return|return
 name|res
 return|;

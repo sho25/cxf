@@ -958,7 +958,7 @@ if|if
 condition|(
 name|Phase
 operator|.
-name|INVOKE
+name|PRE_LOGICAL
 operator|.
 name|equals
 argument_list|(
@@ -1195,6 +1195,9 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+comment|//faults from the PRE_LOGICAL and later phases won't make
+comment|//it back to the client, the 200/202 response has already
+comment|//been returned.  The server has accepted the message
 break|break;
 block|}
 name|testFail
@@ -1317,7 +1320,12 @@ condition|)
 block|{
 name|fail
 argument_list|(
-literal|"Oneway operation unexpectedly succeded."
+literal|"Oneway operation unexpectedly succeded for phase "
+operator|+
+name|location
+operator|.
+name|getPhase
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1336,7 +1344,7 @@ condition|)
 block|{
 name|fail
 argument_list|(
-literal|"Oeway operation unexpectedly failed."
+literal|"Oneway operation unexpectedly failed."
 argument_list|)
 expr_stmt|;
 block|}

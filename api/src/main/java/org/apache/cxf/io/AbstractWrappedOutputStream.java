@@ -96,6 +96,13 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|wrappedStream
+operator|!=
+literal|null
+condition|)
+block|{
 name|wrappedStream
 operator|.
 name|write
@@ -107,6 +114,7 @@ argument_list|,
 name|len
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|protected
 name|void
@@ -166,6 +174,13 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|wrappedStream
+operator|!=
+literal|null
+condition|)
+block|{
 name|wrappedStream
 operator|.
 name|write
@@ -173,6 +188,7 @@ argument_list|(
 name|b
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Override
@@ -209,6 +225,10 @@ block|{
 if|if
 condition|(
 name|written
+operator|&&
+name|wrappedStream
+operator|!=
+literal|null
 condition|)
 block|{
 name|wrappedStream

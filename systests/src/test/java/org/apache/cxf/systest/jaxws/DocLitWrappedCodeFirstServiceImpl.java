@@ -1078,6 +1078,35 @@ return|return
 literal|false
 return|;
 block|}
+specifier|public
+name|void
+name|doOneWay
+parameter_list|()
+block|{
+try|try
+block|{
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|2000
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e
+parameter_list|)
+block|{
+comment|// TODO Auto-generated catch block
+name|e
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+block|}
+block|}
 block|}
 end_class
 
