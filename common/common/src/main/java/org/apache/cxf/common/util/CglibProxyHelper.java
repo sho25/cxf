@@ -110,7 +110,7 @@ name|Class
 operator|.
 name|forName
 argument_list|(
-literal|"net.sf.cglib.proxy.Proxy"
+literal|"net.sf.cglib.proxy.Enhancer"
 argument_list|)
 expr_stmt|;
 name|Class
@@ -198,7 +198,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Only a single supreclass is supported"
+literal|"Only a single superclass is supported"
 argument_list|)
 throw|;
 block|}
