@@ -936,6 +936,13 @@ return|return
 literal|false
 return|;
 block|}
+name|contentType
+operator|=
+name|contentType
+operator|.
+name|toLowerCase
+argument_list|()
+expr_stmt|;
 for|for
 control|(
 name|String
