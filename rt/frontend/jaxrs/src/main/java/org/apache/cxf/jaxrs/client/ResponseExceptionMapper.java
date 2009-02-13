@@ -31,6 +31,10 @@ name|Response
 import|;
 end_import
 
+begin_comment
+comment|/**  * Converts Response to checked or runtime Exception  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
@@ -41,6 +45,7 @@ extends|extends
 name|Throwable
 parameter_list|>
 block|{
+comment|/**      * Converts Response to checked or runtime Exception      * @param r JAXRS Response       * @return mapped exception instance, can be null      */
 name|E
 name|fromResponse
 parameter_list|(

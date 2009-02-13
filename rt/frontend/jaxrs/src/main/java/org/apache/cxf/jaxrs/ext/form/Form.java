@@ -49,6 +49,10 @@ name|MetadataMap
 import|;
 end_import
 
+begin_comment
+comment|/**  * Simple MultivaluedMap wrapper   *  */
+end_comment
+
 begin_class
 specifier|public
 class|class

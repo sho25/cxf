@@ -397,6 +397,10 @@ name|MessageImpl
 import|;
 end_import
 
+begin_comment
+comment|/**  * Common proxy and http-centric client implementation  *  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -509,6 +513,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|header
@@ -583,6 +588,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|headers
@@ -607,6 +613,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|accept
@@ -643,6 +650,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|type
@@ -661,6 +669,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|type
@@ -684,6 +693,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|accept
@@ -717,6 +727,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|cookie
@@ -743,6 +754,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|modified
@@ -793,6 +805,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|language
@@ -816,6 +829,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|match
@@ -856,6 +870,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|acceptLanguage
@@ -889,6 +904,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|acceptEncoding
@@ -922,6 +938,7 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
 name|encoding
@@ -940,6 +957,125 @@ name|CONTENT_ENCODING
 argument_list|,
 name|enc
 argument_list|)
+expr_stmt|;
+return|return
+name|this
+return|;
+block|}
+comment|/**      * {@inheritDoc}      */
+specifier|public
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|getHeaders
+parameter_list|()
+block|{
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|map
+init|=
+operator|new
+name|MetadataMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+argument_list|()
+decl_stmt|;
+name|map
+operator|.
+name|putAll
+argument_list|(
+name|requestHeaders
+argument_list|)
+expr_stmt|;
+return|return
+name|map
+return|;
+block|}
+comment|/**      * {@inheritDoc}      */
+specifier|public
+name|URI
+name|getBaseURI
+parameter_list|()
+block|{
+return|return
+name|baseURI
+return|;
+block|}
+comment|/**      * {@inheritDoc}      */
+specifier|public
+name|URI
+name|getCurrentURI
+parameter_list|()
+block|{
+return|return
+name|getCurrentBuilder
+argument_list|()
+operator|.
+name|clone
+argument_list|()
+operator|.
+name|build
+argument_list|()
+return|;
+block|}
+comment|/**      * {@inheritDoc}      */
+specifier|public
+name|Response
+name|getResponse
+parameter_list|()
+block|{
+if|if
+condition|(
+name|responseBuilder
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|()
+throw|;
+block|}
+name|Response
+name|r
+init|=
+name|responseBuilder
+operator|.
+name|build
+argument_list|()
+decl_stmt|;
+name|responseBuilder
+operator|=
+literal|null
+expr_stmt|;
+return|return
+name|r
+return|;
+block|}
+comment|/**      * {@inheritDoc}      */
+specifier|public
+name|Client
+name|reset
+parameter_list|()
+block|{
+name|requestHeaders
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|resetResponse
+argument_list|()
 expr_stmt|;
 return|return
 name|this
@@ -1024,44 +1160,6 @@ return|return
 name|types
 return|;
 block|}
-specifier|public
-name|MultivaluedMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-name|getHeaders
-parameter_list|()
-block|{
-name|MultivaluedMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-name|map
-init|=
-operator|new
-name|MetadataMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-argument_list|()
-decl_stmt|;
-name|map
-operator|.
-name|putAll
-argument_list|(
-name|requestHeaders
-argument_list|)
-expr_stmt|;
-return|return
-name|map
-return|;
-block|}
 specifier|protected
 name|MediaType
 name|getType
@@ -1094,31 +1192,6 @@ name|type
 argument_list|)
 return|;
 block|}
-specifier|public
-name|URI
-name|getBaseURI
-parameter_list|()
-block|{
-return|return
-name|baseURI
-return|;
-block|}
-specifier|public
-name|URI
-name|getCurrentURI
-parameter_list|()
-block|{
-return|return
-name|getCurrentBuilder
-argument_list|()
-operator|.
-name|clone
-argument_list|()
-operator|.
-name|build
-argument_list|()
-return|;
-block|}
 specifier|protected
 name|UriBuilder
 name|getCurrentBuilder
@@ -1126,57 +1199,6 @@ parameter_list|()
 block|{
 return|return
 name|currentBuilder
-return|;
-block|}
-specifier|public
-name|Response
-name|getResponse
-parameter_list|()
-block|{
-if|if
-condition|(
-name|responseBuilder
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|()
-throw|;
-block|}
-name|Response
-name|r
-init|=
-name|responseBuilder
-operator|.
-name|build
-argument_list|()
-decl_stmt|;
-name|responseBuilder
-operator|=
-literal|null
-expr_stmt|;
-return|return
-name|r
-return|;
-block|}
-specifier|public
-name|Client
-name|reset
-parameter_list|()
-block|{
-name|requestHeaders
-operator|.
-name|clear
-argument_list|()
-expr_stmt|;
-name|resetResponse
-argument_list|()
-expr_stmt|;
-return|return
-name|this
 return|;
 block|}
 specifier|protected

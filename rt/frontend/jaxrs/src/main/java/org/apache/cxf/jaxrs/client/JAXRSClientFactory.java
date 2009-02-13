@@ -117,6 +117,10 @@ name|ResourceUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Factory for creating proxy clients.  *  */
+end_comment
+
 begin_class
 specifier|public
 specifier|final
@@ -127,6 +131,7 @@ specifier|private
 name|JAXRSClientFactory
 parameter_list|()
 block|{               }
+comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -159,6 +164,7 @@ name|cls
 argument_list|)
 return|;
 block|}
+comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -192,6 +198,7 @@ literal|false
 argument_list|)
 return|;
 block|}
+comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -228,6 +235,7 @@ name|inheritHeaders
 argument_list|)
 return|;
 block|}
+comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param contentType JAXRS MediaType representing HTTP Content-Type header, can be null      * @param acceptTypes JAXRS MediaTypes representing HTTP Accept header, can be null      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -284,6 +292,7 @@ return|return
 name|proxy
 return|;
 block|}
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -313,6 +322,7 @@ literal|false
 argument_list|)
 return|;
 block|}
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if existing Client headers can be inherited by new proxy       *        and subresource proxies if any       * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
