@@ -586,6 +586,16 @@ argument_list|)
 expr_stmt|;
 name|jmsListener
 operator|.
+name|setPubSubNoLocal
+argument_list|(
+name|jmsConfig
+operator|.
+name|isPubSubNoLocal
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|jmsListener
+operator|.
 name|setAutoStartup
 argument_list|(
 literal|true
@@ -611,6 +621,7 @@ name|getMessageSelector
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//jmsListener.setSubscriptionDurable(jmsConfig.isSubscriptionDurable());
 name|jmsListener
 operator|.
 name|setDurableSubscriptionName
