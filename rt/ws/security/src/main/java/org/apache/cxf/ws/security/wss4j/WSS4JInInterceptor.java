@@ -2195,6 +2195,16 @@ name|getSecret
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|pc
+operator|.
+name|setCustomToken
+argument_list|(
+name|tok
+operator|.
+name|getAttachedReference
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return;
 block|}
 block|}
