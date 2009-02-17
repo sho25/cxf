@@ -26,7 +26,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The InterceptorProvider interface is implemented by objects that have  * interceptor chains associated with them.  The methods in this interface  * provide an ability to add and remove interceptors within the chains  * of the InterceptorProvider.  */
+comment|/**  * The<code>InterceptorProvider</code> interface is implemented by objects   * that have interceptor chains associated with them. The methods in this   * interface provide the ability to add and remove interceptors to the chains  * of the InterceptorProvider.  */
 end_comment
 
 begin_interface
