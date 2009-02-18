@@ -275,7 +275,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9081/webapp/bookstore/books/12345"
+literal|"http://localhost:9080/webapp/bookstore/books/12345"
 decl_stmt|;
 name|URL
 name|url
