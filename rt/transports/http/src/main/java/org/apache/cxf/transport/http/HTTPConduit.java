@@ -2377,6 +2377,7 @@ name|connectionFactory
 operator|==
 literal|null
 operator|||
+operator|!
 name|result
 operator|.
 name|startsWith
