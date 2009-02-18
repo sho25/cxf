@@ -521,11 +521,6 @@ name|connection
 return|;
 block|}
 comment|/**      * This method assigns the various TLS parameters on the HttpsURLConnection      * from the TLS Client Parameters. Connection parameter is of supertype HttpURLConnection,       * which allows internal cast to potentially divergent subtype (https) implementations.      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|protected
 specifier|synchronized
 name|void
