@@ -1104,7 +1104,7 @@ specifier|final
 name|String
 name|MUST_SUPPORT_REF_ENCRYPTED_KEY
 init|=
-literal|"MustSupportRefEncryptedkey"
+literal|"MustSupportRefEncryptedKey"
 decl_stmt|;
 comment|////////////////////////////////////////////////////////////////////////////////////////////////
 specifier|public

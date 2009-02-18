@@ -121,11 +121,9 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|security
-operator|.
 name|policy
 operator|.
-name|SP12Constants
+name|PolicyConstants
 import|;
 end_import
 
@@ -143,7 +141,7 @@ name|security
 operator|.
 name|policy
 operator|.
-name|SPConstants
+name|SP12Constants
 import|;
 end_import
 
@@ -184,15 +182,11 @@ parameter_list|)
 block|{
 name|element
 operator|=
-name|DOMUtils
+name|PolicyConstants
 operator|.
-name|getFirstChildWithName
+name|findPolicyElement
 argument_list|(
 name|element
-argument_list|,
-name|SPConstants
-operator|.
-name|POLICY
 argument_list|)
 expr_stmt|;
 if|if
