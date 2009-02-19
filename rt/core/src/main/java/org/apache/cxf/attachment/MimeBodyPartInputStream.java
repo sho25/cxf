@@ -736,6 +736,12 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+name|initialI
+operator|-
+name|off
+operator|!=
+literal|0
+operator|&&
 operator|!
 name|hasData
 argument_list|(
