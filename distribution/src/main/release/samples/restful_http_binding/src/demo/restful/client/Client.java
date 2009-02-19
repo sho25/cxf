@@ -47,20 +47,6 @@ name|IOUtils
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|io
-operator|.
-name|CachedOutputStream
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final
