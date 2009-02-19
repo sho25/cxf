@@ -235,6 +235,15 @@ name|get
 argument_list|()
 return|;
 block|}
+specifier|public
+name|Number
+name|getTotalHandlingTime
+parameter_list|()
+block|{
+return|return
+name|totalHandlingTime
+return|;
+block|}
 block|}
 end_class
 
