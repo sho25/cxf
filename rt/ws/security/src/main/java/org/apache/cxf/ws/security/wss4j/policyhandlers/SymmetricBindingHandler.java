@@ -1087,7 +1087,11 @@ operator|instanceof
 name|SecureConversationToken
 condition|)
 block|{
-comment|//REVISIT - SecureConversation
+name|tok
+operator|=
+name|getSecurityToken
+argument_list|()
+expr_stmt|;
 block|}
 elseif|else
 if|if
