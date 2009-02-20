@@ -34,6 +34,10 @@ specifier|public
 interface|interface
 name|SoapVersion
 block|{
+name|String
+name|getBindingId
+parameter_list|()
+function_decl|;
 name|double
 name|getVersion
 parameter_list|()

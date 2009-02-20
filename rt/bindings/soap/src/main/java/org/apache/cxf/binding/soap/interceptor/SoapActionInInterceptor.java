@@ -593,6 +593,17 @@ condition|)
 block|{
 return|return;
 block|}
+name|message
+operator|.
+name|put
+argument_list|(
+name|SoapBindingConstants
+operator|.
+name|SOAP_ACTION
+argument_list|,
+name|action
+argument_list|)
+expr_stmt|;
 name|Exchange
 name|ex
 init|=

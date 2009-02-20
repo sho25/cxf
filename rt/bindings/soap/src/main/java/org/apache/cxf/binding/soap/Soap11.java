@@ -366,6 +366,17 @@ name|INSTANCE
 return|;
 block|}
 specifier|public
+name|String
+name|getBindingId
+parameter_list|()
+block|{
+return|return
+name|SoapBindingConstants
+operator|.
+name|SOAP11_BINDING_ID
+return|;
+block|}
+specifier|public
 name|double
 name|getVersion
 parameter_list|()
