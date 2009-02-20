@@ -693,7 +693,7 @@ argument_list|)
 expr_stmt|;
 name|assertValid
 argument_list|(
-literal|"//soap12env:Fault/soap12env:Code/soap12env:Subcode[text()='ns2:invalidsoap']"
+literal|"//soap12env:Fault/soap12env:Code/soap12env:Subcode/soap12env:Value[text()='ns2:invalidsoap']"
 argument_list|,
 name|faultDoc
 argument_list|)
