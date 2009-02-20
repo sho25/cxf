@@ -39,20 +39,6 @@ name|Test
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|support
-operator|.
-name|GenericApplicationContext
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -68,19 +54,6 @@ comment|/**      * @throws Exception      */
 specifier|public
 name|Cxf1332Test
 parameter_list|()
-throws|throws
-name|Exception
-block|{     }
-comment|/** {@inheritDoc}*/
-annotation|@
-name|Override
-specifier|protected
-name|void
-name|additionalSpringConfiguration
-parameter_list|(
-name|GenericApplicationContext
-name|context
-parameter_list|)
 throws|throws
 name|Exception
 block|{     }
