@@ -1000,7 +1000,7 @@ name|awaitMessages
 argument_list|(
 literal|4
 argument_list|,
-literal|7
+literal|6
 argument_list|,
 literal|20000
 argument_list|)
