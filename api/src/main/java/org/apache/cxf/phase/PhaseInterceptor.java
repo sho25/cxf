@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A phase interceptor participates in a PhaseInterceptorChain.  *<pre>  * The before and after properties contain a list of Ids that can control   * where in the chain the interceptor is placed relative to other interceptors  *</pre>   * @see org.apache.cxf.phase.PhaseInterceptorChain  * @author Dan Diephouse  */
+comment|/**  * A phase interceptor is an intercetor that participates in a   * PhaseInterceptorChain.  * The phase property controls the phase in which the interceptor is placed.  * The before and after properties allow for fine grained control over where   * the phase the interceptor is placed. They specify the IDs of the   * interceptors that must be placed before and after the interceptor.  *  * @see org.apache.cxf.phase.PhaseInterceptorChain  * @author Dan Diephouse  */
 end_comment
 
 begin_interface
@@ -72,7 +72,7 @@ argument_list|<
 name|T
 argument_list|>
 block|{
-comment|/**      * Returns a set of IDs specifying the interceptors that this interceptor should       * be placed after in the interceptor chain      * @return the ids of the interceptors      */
+comment|/**      * Returns a set containing the IDs of the interceptors that should be       * executed before this interceptor. This interceptor will be placed       * in the chain after the interceptors in the set.      * @return the IDs of the interceptors      */
 name|Set
 argument_list|<
 name|String
@@ -80,7 +80,7 @@ argument_list|>
 name|getAfter
 parameter_list|()
 function_decl|;
-comment|/**      * Returns a set of IDs specifying the interceptors that this interceptor needs       * to be before in the inteceptor chain.      * @return the ids of the interceptors       */
+comment|/**      * Returns a set containing the IDs of the interceptors that should be       * executed after this interceptor. This interceptor will be placed in       * the inteceptor chain before the interceptors in the set.      * @return the ids of the interceptors       */
 name|Set
 argument_list|<
 name|String
@@ -88,12 +88,12 @@ argument_list|>
 name|getBefore
 parameter_list|()
 function_decl|;
-comment|/**      * The ID of this interceptor.      * @return the id      */
+comment|/**      * Returns the ID of this interceptor.      * @return the ID      */
 name|String
 name|getId
 parameter_list|()
 function_decl|;
-comment|/**      * The phase of this interceptor.      * @return the phase      */
+comment|/**      * Returns the phase in which this interceptor is excecuted.      * @return the phase      */
 name|String
 name|getPhase
 parameter_list|()
