@@ -2964,7 +2964,8 @@ name|getMinOccurs
 parameter_list|()
 block|{
 return|return
-name|info
+name|getTypeInfo
+argument_list|()
 operator|.
 name|getMinOccurs
 argument_list|()
