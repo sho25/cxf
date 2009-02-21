@@ -480,7 +480,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Serializes JavaBeans.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  * @author<a href="mailto:jack.xu.hong@gmail.com">Jack Hong</a>  */
+comment|/**  * Serializes JavaBeans.  *   * There's a really dangerous coding convention in this class, maintainers beware.  * There are two constructor. The no-args constructor defers, until later,  * the construction of a BeanTypeInfo. The one-arg constructor gets the BeanTypeInfo passed as a parameter.  * Aegis doesn't have any uniform discipline of 'construct, set properties, initialize'. Instead,  * each piece of code that uses the type info needs to call getTypeInfo() instead of referencing the  * 'info' field.   */
 end_comment
 
 begin_class
@@ -502,10 +502,12 @@ specifier|private
 name|boolean
 name|isException
 decl_stmt|;
+comment|/**      * Construct a type info. Caller must pass in the type class via       * setTypeClass later.      */
 specifier|public
 name|BeanType
 parameter_list|()
 block|{     }
+comment|/**      * Construct a type info given a full BeanTypeInfo.      * @param info      */
 specifier|public
 name|BeanType
 parameter_list|(
@@ -558,7 +560,7 @@ name|typeClass
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      * @see org.codehaus.xfire.aegis.type.Type#readObject(org.codehaus.xfire.aegis.MessageReader,      * org.codehaus.xfire.MessageContext)      */
+comment|/**      * {@inheritDoc}      */
 annotation|@
 name|Override
 specifier|public
@@ -2327,6 +2329,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * {@inheritDoc}      */
 annotation|@
 name|Override
 specifier|public
@@ -2360,6 +2363,7 @@ return|return
 literal|true
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 annotation|@
 name|Override
 specifier|public
@@ -2611,6 +2615,7 @@ return|return
 name|elementTypeInfo
 return|;
 block|}
+comment|/**      * Return the Type for the superclass if this type's class, if any.      * @return      */
 specifier|public
 name|Type
 name|getSuperType
@@ -2757,6 +2762,7 @@ literal|null
 return|;
 block|}
 block|}
+comment|/**      * Return the type info.      * @return      */
 specifier|public
 name|BeanTypeInfo
 name|getTypeInfo
@@ -2784,6 +2790,7 @@ return|return
 name|info
 return|;
 block|}
+comment|/**      * Create type info based in the type class.      * @return      */
 specifier|public
 name|BeanTypeInfo
 name|createTypeInfo
@@ -2817,6 +2824,7 @@ return|return
 name|inf
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 annotation|@
 name|Override
 specifier|public
@@ -2956,6 +2964,7 @@ name|XML_MIME_NS
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 annotation|@
 name|Override
 specifier|public
@@ -3006,6 +3015,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|// this seems dangerous .. what if the type info is later created, it won't be passed the mapping.
 name|info
 operator|.
 name|setTypeMapping
