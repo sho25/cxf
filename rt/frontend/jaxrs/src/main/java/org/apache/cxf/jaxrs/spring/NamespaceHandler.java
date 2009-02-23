@@ -63,6 +63,15 @@ parameter_list|()
 block|{
 name|registerBeanDefinitionParser
 argument_list|(
+literal|"client"
+argument_list|,
+operator|new
+name|JAXRSClientFactoryBeanDefinitionParser
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|registerBeanDefinitionParser
+argument_list|(
 literal|"server"
 argument_list|,
 operator|new

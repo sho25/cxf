@@ -206,7 +206,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then subresource proxies will inherit the headers      *        set on parent proxies       * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -291,7 +291,7 @@ argument_list|)
 expr_stmt|;
 name|bean
 operator|.
-name|setResourceClass
+name|setServiceClass
 argument_list|(
 name|cls
 argument_list|)
@@ -444,7 +444,7 @@ return|return
 name|proxy
 return|;
 block|}
-comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      *         * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -496,7 +496,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if existing Client headers can be inherited by new proxy       *        and subresource proxies if any       * @return typed proxy      */
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing Client headers will be inherited by new proxy       *        and subresource proxies if any       * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -531,7 +531,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if existing Client headers can be inherited by new proxy       *        and subresource proxies if any       * @return typed proxy      */
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing Client headers will be inherited by new proxy       *        and subresource proxies if any       * @param direct if true then no bus and chains will be created             * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<

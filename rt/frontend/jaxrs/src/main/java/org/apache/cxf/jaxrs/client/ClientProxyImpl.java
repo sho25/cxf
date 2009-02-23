@@ -489,20 +489,6 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|MessageObserver
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
 name|http
 operator|.
 name|HTTPConduit
@@ -521,8 +507,6 @@ extends|extends
 name|AbstractClient
 implements|implements
 name|InvocationHandler
-implements|,
-name|MessageObserver
 block|{
 specifier|private
 name|ClassResourceInfo
@@ -880,6 +864,20 @@ operator|.
 name|setConduitSelector
 argument_list|(
 name|conduitSelector
+argument_list|)
+expr_stmt|;
+name|proxyImpl
+operator|.
+name|setInInterceptors
+argument_list|(
+name|inInterceptors
+argument_list|)
+expr_stmt|;
+name|proxyImpl
+operator|.
+name|setOutInterceptors
+argument_list|(
+name|outInterceptors
 argument_list|)
 expr_stmt|;
 name|Object
@@ -2779,8 +2777,6 @@ name|uri
 operator|.
 name|toString
 argument_list|()
-argument_list|,
-name|this
 argument_list|)
 decl_stmt|;
 if|if
@@ -3105,16 +3101,6 @@ return|return
 name|isEncoded
 return|;
 block|}
-block|}
-specifier|public
-name|void
-name|onMessage
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
-block|{
-comment|// just do nothing for now
 block|}
 comment|// TODO : what we really need to do is to refactor JAXRSOutInterceptor so that
 comment|// it can handle both client requests and server responses - it may need to be split into

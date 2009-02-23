@@ -365,20 +365,6 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|MessageObserver
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
 name|http
 operator|.
 name|HTTPConduit
@@ -395,8 +381,6 @@ class|class
 name|WebClient
 extends|extends
 name|AbstractClient
-implements|implements
-name|MessageObserver
 block|{
 comment|/**      * Creates WebClient      * @param baseAddress baseAddress      */
 specifier|public
@@ -1685,8 +1669,6 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
-argument_list|,
-name|this
 argument_list|)
 decl_stmt|;
 if|if
@@ -2042,16 +2024,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-block|}
-specifier|public
-name|void
-name|onMessage
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
-block|{
-comment|// do nothing for now
 block|}
 block|}
 end_class
