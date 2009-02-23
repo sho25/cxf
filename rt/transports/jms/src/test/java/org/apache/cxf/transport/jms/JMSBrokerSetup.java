@@ -259,6 +259,13 @@ argument_list|)
 expr_stmt|;
 name|broker
 operator|.
+name|setPopulateJMSXUserID
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|broker
+operator|.
 name|addConnector
 argument_list|(
 name|brokerUrl
