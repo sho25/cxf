@@ -150,6 +150,11 @@ name|Path
 argument_list|(
 literal|"/{id}"
 argument_list|)
+annotation|@
+name|Consumes
+argument_list|(
+literal|"*/*"
+argument_list|)
 name|Book
 name|getBook
 parameter_list|(
