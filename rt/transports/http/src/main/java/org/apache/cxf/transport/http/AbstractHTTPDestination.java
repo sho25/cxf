@@ -1384,6 +1384,17 @@ argument_list|)
 operator|==
 operator|-
 literal|1
+operator|&&
+operator|!
+name|ct
+operator|.
+name|toLowerCase
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"multipart/related"
+argument_list|)
 condition|)
 block|{
 name|ct
