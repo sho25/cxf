@@ -932,7 +932,7 @@ name|readers
 init|=
 name|pf
 operator|.
-name|getUserMessageReaders
+name|getMessageReaders
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -967,7 +967,7 @@ name|writers
 init|=
 name|pf
 operator|.
-name|getUserMessageWriters
+name|getMessageWriters
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -1125,7 +1125,7 @@ name|readers
 init|=
 name|pf
 operator|.
-name|getUserMessageReaders
+name|getMessageReaders
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -1156,7 +1156,7 @@ name|writers
 init|=
 name|pf
 operator|.
-name|getUserMessageWriters
+name|getMessageWriters
 argument_list|()
 decl_stmt|;
 name|assertTrue

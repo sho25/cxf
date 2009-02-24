@@ -387,6 +387,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Ignore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -417,6 +427,8 @@ argument_list|(
 name|BookServerRestSoap
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2201,6 +2213,8 @@ name|is
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Ignore
 specifier|public
 specifier|static
 class|class

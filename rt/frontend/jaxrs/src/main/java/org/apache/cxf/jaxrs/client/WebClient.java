@@ -1569,6 +1569,12 @@ argument_list|,
 name|conn
 argument_list|)
 expr_stmt|;
+name|Message
+name|message
+init|=
+name|createSimpleMessage
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|body
@@ -1581,6 +1587,8 @@ block|{
 name|writeBody
 argument_list|(
 name|body
+argument_list|,
+name|message
 argument_list|,
 name|body
 operator|.
@@ -1625,6 +1633,8 @@ return|return
 name|handleResponse
 argument_list|(
 name|conn
+argument_list|,
+name|message
 argument_list|,
 name|responseClass
 argument_list|)
@@ -1753,6 +1763,8 @@ name|handleResponse
 argument_list|(
 name|connect
 argument_list|,
+name|m
+argument_list|,
 name|responseClass
 argument_list|)
 return|;
@@ -1763,6 +1775,9 @@ name|handleResponse
 parameter_list|(
 name|HttpURLConnection
 name|conn
+parameter_list|,
+name|Message
+name|m
 parameter_list|,
 name|Class
 argument_list|<
@@ -1803,6 +1818,8 @@ argument_list|(
 name|currentResponse
 argument_list|,
 name|conn
+argument_list|,
+name|m
 argument_list|,
 name|responseClass
 argument_list|,
@@ -1982,6 +1999,8 @@ block|{
 name|writeBody
 argument_list|(
 name|body
+argument_list|,
+name|m
 argument_list|,
 name|body
 operator|.
