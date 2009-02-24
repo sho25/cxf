@@ -288,6 +288,15 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+name|Element
+name|getCurrentNode
+parameter_list|()
+block|{
+return|return
+name|currentNode
+return|;
+block|}
+specifier|public
 name|void
 name|setNsRepairing
 parameter_list|(
