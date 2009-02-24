@@ -1660,7 +1660,9 @@ name|JAXBContext
 operator|.
 name|class
 argument_list|,
-literal|null
+operator|new
+name|MessageImpl
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|assertTrue
