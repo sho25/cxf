@@ -377,7 +377,7 @@ name|assertEquals
 argument_list|(
 literal|"listMethod needs to be selected"
 argument_list|,
-literal|"unlimitedPath"
+literal|"readMethod"
 argument_list|,
 name|ori
 operator|.

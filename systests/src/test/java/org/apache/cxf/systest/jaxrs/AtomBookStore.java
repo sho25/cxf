@@ -462,9 +462,9 @@ annotation|@
 name|Produces
 argument_list|(
 block|{
-literal|"application/json"
-block|,
 literal|"application/atom+xml"
+block|,
+literal|"application/json"
 block|}
 argument_list|)
 specifier|public

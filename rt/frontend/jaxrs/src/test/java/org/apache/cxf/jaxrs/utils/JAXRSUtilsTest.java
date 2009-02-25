@@ -3290,7 +3290,7 @@ argument_list|()
 operator|==
 literal|4
 operator|&&
-literal|"text/bar"
+literal|"text/xml"
 operator|.
 name|equals
 argument_list|(
@@ -3305,7 +3305,7 @@ name|toString
 argument_list|()
 argument_list|)
 operator|&&
-literal|"text/plain;q=.2"
+literal|"text/bar"
 operator|.
 name|equals
 argument_list|(
@@ -3320,7 +3320,7 @@ name|toString
 argument_list|()
 argument_list|)
 operator|&&
-literal|"text/xml"
+literal|"text/plain;q=.2"
 operator|.
 name|equals
 argument_list|(
@@ -3459,7 +3459,7 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"text/plain is alphabetically earlier than text/xml"
+literal|"text/plain and text/xml are just two specific media types"
 argument_list|,
 name|JAXRSUtils
 operator|.
@@ -3474,13 +3474,13 @@ argument_list|)
 argument_list|,
 name|m1
 argument_list|)
-operator|<
+operator|==
 literal|0
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"text/xml is alphabetically later than text/plain"
+literal|"text/xml and text/plain are just two specific media types"
 argument_list|,
 name|JAXRSUtils
 operator|.
@@ -3495,7 +3495,7 @@ argument_list|(
 literal|"text/plain"
 argument_list|)
 argument_list|)
-operator|>
+operator|==
 literal|0
 argument_list|)
 expr_stmt|;

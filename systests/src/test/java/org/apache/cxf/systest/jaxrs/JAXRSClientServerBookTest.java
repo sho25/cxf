@@ -977,7 +977,7 @@ literal|"http://localhost:9080/bookstore/books/123"
 argument_list|,
 literal|"resources/expected_get_book123json.txt"
 argument_list|,
-literal|"application/xml,application/json"
+literal|"application/json, application/xml"
 argument_list|,
 literal|200
 argument_list|)
@@ -1087,7 +1087,7 @@ literal|"http://localhost:9080/bookstore/bookheaders"
 argument_list|,
 literal|"resources/expected_get_book123.txt"
 argument_list|,
-literal|"application/xml"
+literal|"application/xml;q=0.5,text/xml"
 argument_list|,
 literal|200
 argument_list|)
@@ -1161,7 +1161,7 @@ literal|"http://localhost:9080/bookstore/books/123"
 argument_list|,
 literal|"resources/expected_get_book123json.txt"
 argument_list|,
-literal|"application/xml,application/json"
+literal|"application/xml;q=0.1,application/json"
 argument_list|,
 literal|200
 argument_list|)
@@ -3139,7 +3139,7 @@ name|setRequestHeader
 argument_list|(
 literal|"Accept-Language"
 argument_list|,
-literal|"en,da;q=0.8"
+literal|"da;q=0.8,en"
 argument_list|)
 expr_stmt|;
 name|get

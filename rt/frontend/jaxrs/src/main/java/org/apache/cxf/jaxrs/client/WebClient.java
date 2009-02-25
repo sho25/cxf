@@ -1676,9 +1676,6 @@ name|headers
 argument_list|,
 name|getCurrentURI
 argument_list|()
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
