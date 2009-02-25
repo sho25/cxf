@@ -1260,6 +1260,10 @@ name|el
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|attached
+operator|=
+literal|true
+expr_stmt|;
 block|}
 name|WSSecBase
 name|encr
