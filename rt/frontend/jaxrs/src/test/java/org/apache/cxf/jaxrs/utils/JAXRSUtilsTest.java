@@ -1432,7 +1432,7 @@ name|contentTypes
 argument_list|,
 name|getTypes
 argument_list|(
-literal|"*/*"
+literal|"application/json,application/xml"
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -6238,9 +6238,14 @@ argument_list|()
 argument_list|,
 literal|"*/*"
 argument_list|,
+name|JAXRSUtils
+operator|.
+name|sortMediaTypes
+argument_list|(
 name|getTypes
 argument_list|(
 literal|"*,text/plain,text/xml"
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -6274,9 +6279,14 @@ argument_list|()
 argument_list|,
 literal|"*/*"
 argument_list|,
+name|JAXRSUtils
+operator|.
+name|sortMediaTypes
+argument_list|(
 name|getTypes
 argument_list|(
-literal|"*,x/y,text/xml,text/plain"
+literal|"*,text/plain, text/xml,x/y"
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

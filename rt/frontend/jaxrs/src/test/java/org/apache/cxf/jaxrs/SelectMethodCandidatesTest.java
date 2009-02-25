@@ -317,7 +317,7 @@ argument_list|)
 expr_stmt|;
 name|acceptContentTypes
 operator|=
-literal|"*/*"
+literal|"application/xml,application/json"
 expr_stmt|;
 name|resource
 operator|=
@@ -355,16 +355,11 @@ name|values
 argument_list|,
 name|contentTypes
 argument_list|,
-name|Collections
+name|JAXRSUtils
 operator|.
-name|singletonList
-argument_list|(
-name|MediaType
-operator|.
-name|valueOf
+name|parseMediaTypes
 argument_list|(
 name|acceptContentTypes
-argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -375,7 +370,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"listMethod needs to be selected"
+literal|"readMethod needs to be selected"
 argument_list|,
 literal|"readMethod"
 argument_list|,
@@ -452,7 +447,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"listMethod needs to be selected"
+literal|"readMethod needs to be selected"
 argument_list|,
 literal|"readMethod"
 argument_list|,
@@ -529,7 +524,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"listMethod needs to be selected"
+literal|"readMethod2 needs to be selected"
 argument_list|,
 literal|"readMethod2"
 argument_list|,
@@ -606,7 +601,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"listMethod needs to be selected"
+literal|"unlimitedPath needs to be selected"
 argument_list|,
 literal|"unlimitedPath"
 argument_list|,
@@ -675,7 +670,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"listMethod needs to be selected"
+literal|"limitedPath needs to be selected"
 argument_list|,
 literal|"limitedPath"
 argument_list|,
