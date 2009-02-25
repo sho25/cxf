@@ -485,6 +485,24 @@ operator|.
 name|getCause
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|mue
+operator|==
+literal|null
+operator|||
+name|mue
+operator|.
+name|getMessage
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+name|expected
+throw|;
+block|}
 name|assertTrue
 argument_list|(
 literal|"protocol contains thread id from context"
