@@ -174,7 +174,7 @@ name|factory
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/addressing/wsa_interceptors.xml"
+literal|"org/apache/cxf/systest/ws/addressing/server.xml"
 argument_list|)
 decl_stmt|;
 name|BusFactory
