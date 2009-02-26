@@ -158,6 +158,7 @@ specifier|public
 class|class
 name|SecurityToken
 block|{
+specifier|public
 enum|enum
 name|State
 block|{

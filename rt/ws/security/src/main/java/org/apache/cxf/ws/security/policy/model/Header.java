@@ -34,6 +34,29 @@ specifier|private
 name|String
 name|namespace
 decl_stmt|;
+specifier|public
+name|Header
+parameter_list|()
+block|{     }
+specifier|public
+name|Header
+parameter_list|(
+name|String
+name|nm
+parameter_list|,
+name|String
+name|ns
+parameter_list|)
+block|{
+name|name
+operator|=
+name|nm
+expr_stmt|;
+name|namespace
+operator|=
+name|ns
+expr_stmt|;
+block|}
 comment|/**      * @return Returns the name.      */
 specifier|public
 name|String
