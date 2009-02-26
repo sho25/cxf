@@ -549,6 +549,16 @@ parameter_list|()
 block|{
 comment|// do nothing. i.e do not change the connectionFactory field.
 block|}
+specifier|protected
+name|void
+name|retrieveConnectionFactory
+parameter_list|(
+name|String
+name|s
+parameter_list|)
+block|{
+comment|// do nothing. i.e do not change the connectionFactory field.
+block|}
 block|}
 comment|/**      * @throws java.lang.Exception      */
 annotation|@
