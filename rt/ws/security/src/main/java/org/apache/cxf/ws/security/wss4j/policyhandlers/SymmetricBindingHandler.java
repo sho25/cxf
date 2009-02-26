@@ -69,18 +69,6 @@ name|xml
 operator|.
 name|soap
 operator|.
-name|SOAPException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|soap
-operator|.
 name|SOAPMessage
 import|;
 end_import
@@ -884,25 +872,9 @@ operator|.
 name|EncryptBeforeSigning
 condition|)
 block|{
-try|try
-block|{
 name|doEncryptBeforeSign
 argument_list|()
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-comment|//REVISIT - exception
-block|}
 block|}
 else|else
 block|{
@@ -967,12 +939,8 @@ specifier|private
 name|void
 name|doEncryptBeforeSign
 parameter_list|()
-throws|throws
-name|SOAPException
-throws|,
-name|WSSecurityException
-throws|,
-name|ConversationException
+block|{
+try|try
 block|{
 name|TokenWrapper
 name|encryptionWrapper
@@ -1151,7 +1119,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*                  * Get hold of the token from the token storage                  */
+comment|/*                      * Get hold of the token from the token storage                      */
 name|tok
 operator|=
 name|tokenStore
@@ -1485,8 +1453,6 @@ name|isDerivedKeys
 argument_list|()
 condition|)
 block|{
-try|try
-block|{
 name|secondRefList
 operator|=
 operator|(
@@ -1511,18 +1477,7 @@ name|secondRefList
 argument_list|)
 expr_stmt|;
 block|}
-catch|catch
-parameter_list|(
-name|WSSecurityException
-name|e
-parameter_list|)
-block|{
-comment|//REVISIT - exception
-block|}
-block|}
 else|else
-block|{
-try|try
 block|{
 comment|//Encrypt, get hold of the ref list and add it
 name|secondRefList
@@ -1549,20 +1504,32 @@ name|secondRefList
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+block|}
+block|}
 catch|catch
 parameter_list|(
-name|WSSecurityException
-name|e
+name|RuntimeException
+name|ex
 parameter_list|)
 block|{
-comment|//REVISIT - exception
+throw|throw
+name|ex
+throw|;
 block|}
-block|}
-block|}
-block|}
-else|else
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
 block|{
-comment|//REVISIT - nothing to do?!?
+throw|throw
+operator|new
+name|Fault
+argument_list|(
+name|ex
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|private
@@ -2171,11 +2138,6 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 throw|throw
 operator|new
 name|Fault
