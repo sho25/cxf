@@ -257,8 +257,6 @@ throw|;
 block|}
 block|}
 block|}
-annotation|@
-name|Test
 specifier|public
 name|void
 name|testFallbackThreadPoolConfig
