@@ -49,6 +49,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Ignore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -257,6 +267,13 @@ throw|;
 block|}
 block|}
 block|}
+annotation|@
+name|Test
+annotation|@
+name|Ignore
+argument_list|(
+literal|"move to separate test"
+argument_list|)
 specifier|public
 name|void
 name|testFallbackThreadPoolConfig
