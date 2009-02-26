@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|aegis
 operator|.
-name|date
+name|xmlconfig
 package|;
 end_package
 
