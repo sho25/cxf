@@ -25,6 +25,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Date
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|concurrent
 operator|.
 name|Future
@@ -370,6 +380,15 @@ argument_list|(
 literal|"\n\n*** GreetMeLater called with: "
 operator|+
 name|delay
+operator|+
+literal|" at: "
+operator|+
+operator|new
+name|Date
+argument_list|()
+operator|.
+name|toString
+argument_list|()
 operator|+
 literal|"***\n\n"
 argument_list|)
