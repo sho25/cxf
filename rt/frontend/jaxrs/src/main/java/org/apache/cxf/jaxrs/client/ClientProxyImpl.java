@@ -675,6 +675,12 @@ operator|.
 name|class
 operator|==
 name|declaringClass
+operator|||
+name|Object
+operator|.
+name|class
+operator|==
+name|declaringClass
 condition|)
 block|{
 return|return

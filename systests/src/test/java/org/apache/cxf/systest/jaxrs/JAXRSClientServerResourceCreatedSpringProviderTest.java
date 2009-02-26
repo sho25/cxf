@@ -163,6 +163,8 @@ argument_list|(
 name|BookServerResourceCreatedSpringProviders
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -275,7 +277,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/webapp/bookstore/books/12345"
+literal|"http://localhost:9081/webapp/bookstore/books/12345"
 decl_stmt|;
 name|URL
 name|url
@@ -303,7 +305,7 @@ name|addRequestProperty
 argument_list|(
 literal|"Accept"
 argument_list|,
-literal|"text/plain"
+literal|"text/plain,application/xml"
 argument_list|)
 expr_stmt|;
 name|assertEquals
