@@ -3715,6 +3715,14 @@ name|Message
 name|message
 parameter_list|)
 block|{
+name|Exchange
+name|ex
+init|=
+name|message
+operator|.
+name|getExchange
+argument_list|()
+decl_stmt|;
 for|for
 control|(
 name|String
@@ -3744,7 +3752,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|message
+name|ex
 operator|.
 name|put
 argument_list|(
