@@ -789,6 +789,8 @@ name|getTargetDestination
 argument_list|()
 argument_list|,
 literal|null
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1279,6 +1281,17 @@ name|Object
 name|replyObj
 parameter_list|)
 block|{
+if|if
+condition|(
+name|exchange
+operator|.
+name|isOneWay
+argument_list|()
+condition|)
+block|{
+comment|//Don't need to send anything
+return|return;
+block|}
 name|Message
 name|inMessage
 init|=

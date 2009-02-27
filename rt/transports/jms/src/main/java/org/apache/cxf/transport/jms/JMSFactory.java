@@ -536,6 +536,9 @@ name|destinationName
 parameter_list|,
 name|String
 name|messageSelectorPrefix
+parameter_list|,
+name|boolean
+name|userCID
 parameter_list|)
 block|{
 name|DefaultMessageListenerContainer
@@ -752,6 +755,17 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+operator|!
+name|userCID
+operator|||
+name|jmsConfig
+operator|.
+name|isSetUseConduitIdSelector
+argument_list|()
+condition|)
+block|{
+if|if
+condition|(
 name|messageSelectorPrefix
 operator|!=
 literal|null
@@ -798,6 +812,7 @@ operator|+
 literal|"%'"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 if|if
 condition|(

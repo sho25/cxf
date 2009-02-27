@@ -564,6 +564,14 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//}
+if|if
+condition|(
+name|clientConfig
+operator|.
+name|isSetUseConduitIdSelector
+argument_list|()
+condition|)
+block|{
 name|jmsConfig
 operator|.
 name|setUseConduitIdSelector
@@ -574,6 +582,7 @@ name|isUseConduitIdSelector
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|clientConfig
