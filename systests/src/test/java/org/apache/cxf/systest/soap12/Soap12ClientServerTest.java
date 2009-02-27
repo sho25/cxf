@@ -996,11 +996,14 @@ operator|.
 name|STRING
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
+argument_list|(
+name|reason
+operator|.
+name|contains
 argument_list|(
 literal|"No such operation: greetMe"
-argument_list|,
-name|reason
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
