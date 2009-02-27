@@ -298,7 +298,7 @@ name|b
 init|=
 name|bs
 operator|.
-name|getBook
+name|getSecureBook
 argument_list|(
 literal|"123"
 argument_list|)
@@ -386,7 +386,7 @@ name|client
 operator|.
 name|path
 argument_list|(
-literal|"/bookstore/books/123"
+literal|"/bookstore/securebooks/123"
 argument_list|)
 operator|.
 name|accept
