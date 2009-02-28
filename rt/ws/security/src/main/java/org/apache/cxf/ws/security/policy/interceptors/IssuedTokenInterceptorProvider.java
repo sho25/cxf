@@ -1071,7 +1071,7 @@ name|aim
 operator|.
 name|get
 argument_list|(
-name|SP12Constants
+name|SP11Constants
 operator|.
 name|TRUST_10
 argument_list|)
