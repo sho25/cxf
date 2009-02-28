@@ -815,7 +815,10 @@ name|jmsConfig
 argument_list|,
 name|this
 argument_list|,
-literal|null
+name|jmsConfig
+operator|.
+name|getReplyDestination
+argument_list|()
 argument_list|,
 literal|null
 argument_list|,

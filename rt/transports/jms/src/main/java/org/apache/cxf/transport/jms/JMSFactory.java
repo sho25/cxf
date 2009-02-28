@@ -757,15 +757,7 @@ if|if
 condition|(
 operator|!
 name|userCID
-operator|||
-name|jmsConfig
-operator|.
-name|isSetUseConduitIdSelector
-argument_list|()
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 name|messageSelectorPrefix
 operator|!=
 literal|null
@@ -812,7 +804,6 @@ operator|+
 literal|"%'"
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
