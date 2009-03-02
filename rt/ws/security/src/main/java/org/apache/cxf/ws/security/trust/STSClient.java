@@ -1590,6 +1590,8 @@ argument_list|,
 name|soapVersion
 argument_list|,
 name|policy
+argument_list|,
+name|endpointName
 argument_list|)
 decl_stmt|;
 name|client

@@ -472,6 +472,9 @@ name|soapVersion
 parameter_list|,
 name|Policy
 name|policy
+parameter_list|,
+name|QName
+name|epName
 parameter_list|)
 throws|throws
 name|BusException
@@ -771,7 +774,13 @@ name|ei
 operator|.
 name|setName
 argument_list|(
+name|epName
+operator|==
+literal|null
+condition|?
 name|iName
+else|:
+name|epName
 argument_list|)
 expr_stmt|;
 name|ei
