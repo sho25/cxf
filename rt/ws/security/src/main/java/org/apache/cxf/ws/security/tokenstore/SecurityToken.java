@@ -382,6 +382,13 @@ operator|new
 name|W3CDOMStreamWriter
 argument_list|()
 decl_stmt|;
+name|writer
+operator|.
+name|setNsRepairing
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|StaxUtils
 operator|.
 name|copy
