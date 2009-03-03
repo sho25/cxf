@@ -1466,6 +1466,16 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+operator|&&
+literal|null
+operator|!=
+name|sd
+operator|.
+name|getEndpointInfo
+argument_list|()
+operator|.
+name|getInterface
+argument_list|()
 condition|)
 block|{
 name|response

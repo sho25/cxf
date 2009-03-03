@@ -313,7 +313,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/bookstore/"
+literal|"/"
 argument_list|)
 specifier|public
 class|class
@@ -321,7 +321,7 @@ name|AtomBookStore
 block|{
 annotation|@
 name|Context
-specifier|private
+specifier|protected
 name|UriInfo
 name|uField
 decl_stmt|;
@@ -730,11 +730,6 @@ name|uField
 operator|.
 name|getBaseUriBuilder
 argument_list|()
-operator|.
-name|path
-argument_list|(
-literal|"bookstore"
-argument_list|)
 operator|.
 name|path
 argument_list|(

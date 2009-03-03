@@ -321,7 +321,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/bookstore/books/feed"
+literal|"http://localhost:9080/bookstore/bookstore/books/feed"
 decl_stmt|;
 name|Feed
 name|feed
@@ -335,7 +335,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/feed"
+literal|"http://localhost:9080/bookstore/bookstore/books/feed"
 argument_list|,
 name|feed
 operator|.
@@ -358,7 +358,7 @@ argument_list|)
 expr_stmt|;
 name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/feed"
+literal|"http://localhost:9080/bookstore/bookstore/books/feed"
 argument_list|,
 literal|"resources/expected_atom_books_json.txt"
 argument_list|,
@@ -367,7 +367,7 @@ argument_list|)
 expr_stmt|;
 name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/jsonfeed"
+literal|"http://localhost:9080/bookstore/bookstore/books/jsonfeed"
 argument_list|,
 literal|"resources/expected_atom_books_jsonfeed.txt"
 argument_list|,
@@ -551,7 +551,7 @@ argument_list|)
 expr_stmt|;
 name|endpointAddress
 operator|=
-literal|"http://localhost:9080/bookstore/books/subresources/123"
+literal|"http://localhost:9080/bookstore/bookstore/books/subresources/123"
 expr_stmt|;
 name|entry
 operator|=
@@ -574,7 +574,7 @@ argument_list|)
 expr_stmt|;
 name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/entries/123"
+literal|"http://localhost:9080/bookstore/bookstore/books/entries/123"
 argument_list|,
 literal|"resources/expected_atom_book_json.txt"
 argument_list|,
@@ -583,7 +583,7 @@ argument_list|)
 expr_stmt|;
 name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/entries/123?_type="
+literal|"http://localhost:9080/bookstore/bookstore/books/entries/123?_type="
 operator|+
 literal|"application/json"
 argument_list|,
@@ -594,7 +594,7 @@ argument_list|)
 expr_stmt|;
 name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/entries/123?_type="
+literal|"http://localhost:9080/bookstore/bookstore/books/entries/123?_type="
 operator|+
 literal|"json"
 argument_list|,
@@ -606,7 +606,7 @@ expr_stmt|;
 comment|// do the same using extension mappings
 name|getAndCompareJson
 argument_list|(
-literal|"http://localhost:9080/bookstore/books/entries/123.json"
+literal|"http://localhost:9080/bookstore/bookstore/books/entries/123.json"
 argument_list|,
 literal|"resources/expected_atom_book_json.txt"
 argument_list|,
@@ -626,7 +626,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080"
+literal|"http://localhost:9080/bookstore/sub/"
 decl_stmt|;
 name|Feed
 name|feed
@@ -640,7 +640,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://localhost:9080/"
+literal|"http://localhost:9080/bookstore/sub/"
 argument_list|,
 name|feed
 operator|.
@@ -659,6 +659,34 @@ name|feed
 operator|.
 name|getTitle
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|getAndCompareJson
+argument_list|(
+literal|"http://localhost:9080/bookstore/sub/books/entries/123.json"
+argument_list|,
+literal|"resources/expected_atom_book_json2.txt"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testGetBooks3
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|getAndCompareJson
+argument_list|(
+literal|"http://localhost:9080/atom/atom/books/entries/123.json"
+argument_list|,
+literal|"resources/expected_atom_book_json3.txt"
+argument_list|,
+literal|"*/*"
 argument_list|)
 expr_stmt|;
 block|}

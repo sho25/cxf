@@ -831,7 +831,7 @@ argument_list|()
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"/org/apache/cxf/systest/jaxrs/"
+literal|"/org/apache/cxf/systest/jaxrs/resources/"
 operator|+
 name|resourceName
 argument_list|)
