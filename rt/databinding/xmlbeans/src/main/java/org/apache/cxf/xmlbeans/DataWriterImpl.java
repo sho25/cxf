@@ -686,14 +686,6 @@ operator|.
 name|getConcreteName
 argument_list|()
 operator|.
-name|getNamespaceURI
-argument_list|()
-argument_list|,
-name|part
-operator|.
-name|getConcreteName
-argument_list|()
-operator|.
 name|getLocalPart
 argument_list|()
 argument_list|)
