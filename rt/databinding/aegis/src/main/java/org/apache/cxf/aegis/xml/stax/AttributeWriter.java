@@ -165,6 +165,19 @@ name|name
 operator|=
 name|name
 expr_stmt|;
+if|if
+condition|(
+name|namespace
+operator|==
+literal|null
+condition|)
+block|{
+name|namespace
+operator|=
+literal|""
+expr_stmt|;
+comment|// otherwise, sjsxp is unhappy.
+block|}
 name|this
 operator|.
 name|namespace
