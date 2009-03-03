@@ -139,20 +139,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|transform
-operator|.
-name|dom
-operator|.
-name|DOMResult
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|w3c
@@ -535,7 +521,7 @@ name|cxf
 operator|.
 name|staxutils
 operator|.
-name|StaxUtils
+name|W3CDOMStreamWriter
 import|;
 end_import
 
@@ -2036,15 +2022,10 @@ block|{
 name|XMLStreamWriter
 name|writer
 init|=
-name|StaxUtils
-operator|.
-name|createXMLStreamWriter
-argument_list|(
 operator|new
-name|DOMResult
+name|W3CDOMStreamWriter
 argument_list|(
 name|element
-argument_list|)
 argument_list|)
 decl_stmt|;
 try|try
