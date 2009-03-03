@@ -245,7 +245,7 @@ name|tools
 operator|.
 name|util
 operator|.
-name|StAXUtil
+name|ToolsStaxUtils
 import|;
 end_import
 
@@ -1143,7 +1143,7 @@ name|Tag
 argument_list|>
 name|expectedTags
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTags
 argument_list|(
@@ -1156,7 +1156,7 @@ name|Tag
 argument_list|>
 name|sourceTags
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTags
 argument_list|(
@@ -1907,7 +1907,7 @@ block|{
 name|Tag
 name|expectedTag
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTagTree
 argument_list|(
@@ -1919,7 +1919,7 @@ decl_stmt|;
 name|Tag
 name|sourceTag
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTagTree
 argument_list|(
@@ -1997,7 +1997,7 @@ block|{
 name|Tag
 name|expectedTag
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTagTree
 argument_list|(
@@ -2009,7 +2009,7 @@ decl_stmt|;
 name|Tag
 name|sourceTag
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTagTree
 argument_list|(

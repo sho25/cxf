@@ -113,7 +113,7 @@ expr_stmt|;
 name|Tag
 name|tag1
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTagTree
 argument_list|(
@@ -208,7 +208,7 @@ expr_stmt|;
 name|Tag
 name|tag2
 init|=
-name|StAXUtil
+name|ToolsStaxUtils
 operator|.
 name|getTagTree
 argument_list|(
