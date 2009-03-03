@@ -1153,10 +1153,7 @@ name|doIssuedTokenSignature
 argument_list|(
 name|token
 argument_list|,
-name|sgndSuppTokens
-operator|.
-name|getSignedParts
-argument_list|()
+literal|null
 argument_list|,
 name|sgndSuppTokens
 argument_list|)
@@ -1788,7 +1785,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*         if (tbinding.isTokenProtection()&& tokenIncluded) {             sigParts.add(new WSEncryptionPart(secTok.getId()));         }         */
 if|if
 condition|(
 name|signdParts

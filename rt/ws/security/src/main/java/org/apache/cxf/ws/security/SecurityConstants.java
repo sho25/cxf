@@ -163,6 +163,23 @@ name|STS_CLIENT
 init|=
 literal|"ws-security.sts.client"
 decl_stmt|;
+comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STS_TOKEN_CRYPTO
+init|=
+literal|"ws-security.sts.token.crypto"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STS_TOKEN_PROPERTIES
+init|=
+literal|"ws-security.sts.token.properties"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -217,6 +234,10 @@ block|,
 name|TOKEN_ID
 block|,
 name|STS_CLIENT
+block|,
+name|STS_TOKEN_PROPERTIES
+block|,
+name|STS_TOKEN_CRYPTO
 block|}
 argument_list|)
 argument_list|)

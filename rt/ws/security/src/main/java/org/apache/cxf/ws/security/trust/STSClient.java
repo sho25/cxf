@@ -3101,7 +3101,7 @@ name|rar
 argument_list|,
 name|rur
 argument_list|,
-name|rst
+name|rstDec
 argument_list|)
 decl_stmt|;
 if|if
@@ -3806,7 +3806,7 @@ name|getProperty
 argument_list|(
 name|SecurityConstants
 operator|.
-name|ENCRYPT_CRYPTO
+name|STS_TOKEN_CRYPTO
 argument_list|)
 decl_stmt|;
 if|if
@@ -3827,7 +3827,7 @@ name|getProperty
 argument_list|(
 name|SecurityConstants
 operator|.
-name|ENCRYPT_PROPERTIES
+name|STS_TOKEN_PROPERTIES
 argument_list|)
 decl_stmt|;
 name|Properties
