@@ -404,6 +404,27 @@ annotation|@
 name|Test
 specifier|public
 name|void
+name|testWriteAndFailEarly
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|getAndCompare
+argument_list|(
+literal|"http://localhost:9080/bookstore/books/stream"
+argument_list|,
+literal|"This is supposed to go on the wire"
+argument_list|,
+literal|"application/xml, text/plain"
+argument_list|,
+literal|410
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
 name|testAcceptTypeMismatch
 parameter_list|()
 throws|throws
