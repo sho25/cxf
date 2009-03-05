@@ -31,14 +31,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|OUT_BUFFERING
-init|=
-literal|"org.apache.cxf.output.buffering"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|SPRING_VALIDATION_MODE
 init|=
 literal|"org.apache.cxf.spring.validation.mode"
@@ -47,47 +39,6 @@ specifier|private
 name|SystemUtils
 parameter_list|()
 block|{              }
-comment|/**      * Checks org.apache.cxf.output.buffering property value, defaults to false       * @return true if output buffering is enabled      */
-specifier|public
-specifier|static
-name|boolean
-name|isBufferingEnabled
-parameter_list|()
-block|{
-return|return
-name|Boolean
-operator|.
-name|getBoolean
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-name|OUT_BUFFERING
-argument_list|,
-literal|"false"
-argument_list|)
-argument_list|)
-return|;
-block|}
-comment|/**      * Checks if org.apache.cxf.output.buffering property was explicitly set       * @return true if it was set      */
-specifier|public
-specifier|static
-name|boolean
-name|isBufferingSet
-parameter_list|()
-block|{
-return|return
-name|System
-operator|.
-name|getProperty
-argument_list|(
-name|OUT_BUFFERING
-argument_list|)
-operator|!=
-literal|null
-return|;
-block|}
 comment|/**      * Gets org.apache.cxf.spring.validation.mode property value if available       * @return Spring validation mode      */
 specifier|public
 specifier|static
