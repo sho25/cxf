@@ -1384,7 +1384,9 @@ literal|null
 argument_list|,
 name|mType
 argument_list|,
-literal|null
+operator|new
+name|MessageImpl
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|assertSame
@@ -1417,7 +1419,9 @@ literal|null
 argument_list|,
 name|mType
 argument_list|,
-literal|null
+operator|new
+name|MessageImpl
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|assertTrue

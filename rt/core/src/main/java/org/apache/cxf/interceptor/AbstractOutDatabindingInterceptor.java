@@ -113,6 +113,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|databinding
 operator|.
 name|DataWriter
@@ -466,6 +482,7 @@ name|cache
 init|=
 literal|null
 decl_stmt|;
+comment|// need to cache the events in case validation fails or buffering is enabled
 if|if
 condition|(
 name|shouldValidate
@@ -478,9 +495,13 @@ name|isRequestor
 argument_list|(
 name|message
 argument_list|)
+operator|||
+name|SystemUtils
+operator|.
+name|isBufferingEnabled
+argument_list|()
 condition|)
 block|{
-comment|//need to cache the events in case validation fails
 name|cache
 operator|=
 operator|new

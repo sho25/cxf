@@ -810,7 +810,7 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|severe
+name|warning
 argument_list|(
 name|errorMsg
 operator|.

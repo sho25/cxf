@@ -229,6 +229,8 @@ begin_class
 specifier|public
 class|class
 name|BinaryDataProvider
+extends|extends
+name|AbstractConfigurableProvider
 implements|implements
 name|MessageBodyReader
 argument_list|<

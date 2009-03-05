@@ -517,8 +517,6 @@ operator|.
 name|ATTACHMENT_DIRECTORY
 argument_list|,
 name|attachmentDir
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -538,8 +536,6 @@ operator|.
 name|ATTACHMENT_MEMORY_THRESHOLD
 argument_list|,
 name|attachmentThreshold
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 block|}

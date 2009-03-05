@@ -406,9 +406,6 @@ name|key
 parameter_list|,
 name|Object
 name|value
-parameter_list|,
-name|boolean
-name|outbound
 parameter_list|)
 block|{
 if|if
@@ -427,8 +424,6 @@ argument_list|(
 name|key
 argument_list|,
 name|value
-argument_list|,
-name|outbound
 argument_list|)
 expr_stmt|;
 block|}

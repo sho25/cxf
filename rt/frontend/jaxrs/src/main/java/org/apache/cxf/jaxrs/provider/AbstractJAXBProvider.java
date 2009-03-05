@@ -1708,6 +1708,13 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 name|Response
 name|r
 init|=
