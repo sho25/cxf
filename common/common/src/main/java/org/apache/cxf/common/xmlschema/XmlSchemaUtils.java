@@ -1172,7 +1172,7 @@ name|String
 name|namespaceUri
 parameter_list|)
 block|{
-comment|// no need to import nothing or the XSD schema.
+comment|// no need to import nothing or the XSD schema, or the schema we are fixing.
 if|if
 condition|(
 literal|""
