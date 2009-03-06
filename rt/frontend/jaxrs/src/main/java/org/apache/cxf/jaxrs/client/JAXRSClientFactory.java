@@ -487,6 +487,8 @@ name|baseURI
 argument_list|,
 name|cri
 argument_list|,
+name|isRoot
+argument_list|,
 name|inheritHeaders
 argument_list|)
 argument_list|)

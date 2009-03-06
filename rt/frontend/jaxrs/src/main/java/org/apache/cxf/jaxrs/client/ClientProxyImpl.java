@@ -600,6 +600,10 @@ specifier|private
 name|boolean
 name|inheritHeaders
 decl_stmt|;
+specifier|private
+name|boolean
+name|isRoot
+decl_stmt|;
 specifier|public
 name|ClientProxyImpl
 parameter_list|(
@@ -611,6 +615,9 @@ name|currentURI
 parameter_list|,
 name|ClassResourceInfo
 name|cri
+parameter_list|,
+name|boolean
+name|isRoot
 parameter_list|,
 name|boolean
 name|inheritHeaders
@@ -628,6 +635,12 @@ operator|.
 name|cri
 operator|=
 name|cri
+expr_stmt|;
+name|this
+operator|.
+name|isRoot
+operator|=
+name|isRoot
 expr_stmt|;
 name|this
 operator|.
@@ -777,10 +790,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|cri
-operator|.
 name|isRoot
-argument_list|()
 condition|)
 block|{
 name|builder
@@ -937,6 +947,8 @@ argument_list|,
 name|uri
 argument_list|,
 name|subCri
+argument_list|,
+literal|false
 argument_list|,
 name|inheritHeaders
 argument_list|)

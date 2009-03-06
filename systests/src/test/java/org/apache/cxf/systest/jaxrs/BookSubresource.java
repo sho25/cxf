@@ -181,7 +181,7 @@ name|POST
 annotation|@
 name|Path
 argument_list|(
-literal|"/subresource2/{n1}"
+literal|"/subresource2/{n1:.*}"
 argument_list|)
 annotation|@
 name|Consumes

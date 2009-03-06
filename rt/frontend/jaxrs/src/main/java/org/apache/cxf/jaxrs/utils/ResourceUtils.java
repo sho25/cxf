@@ -432,6 +432,15 @@ condition|)
 block|{
 name|subCri
 operator|=
+name|subClass
+operator|==
+name|cri
+operator|.
+name|getServiceClass
+argument_list|()
+condition|?
+name|cri
+else|:
 name|createClassResourceInfo
 argument_list|(
 name|subClass
