@@ -1219,7 +1219,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|/**      * Sets the bean implementing the service. If this is set a      *<code>BeanInvoker</code> is created for the provided bean.      *      * @param serviceBean an instantiated implementaiton object      */
+comment|/**      * Sets the bean implementing the service. If this is set a      *<code>BeanInvoker</code> is created for the provided bean.      *      * @param serviceBean an instantiated implementation object      */
 specifier|public
 name|void
 name|setServiceBean
