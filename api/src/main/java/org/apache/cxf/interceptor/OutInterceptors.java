@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Specifies a list of classes that are added to the outbound   * interceptor chain.  */
+comment|/**  * Specifies a list of classes that are added to the outbound   * interceptor chain. This annotation effects SEI classes and service   * implementation classes.  */
 end_comment
 
 begin_annotation_defn
