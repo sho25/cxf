@@ -103,6 +103,18 @@ name|mozilla
 operator|.
 name|javascript
 operator|.
+name|ContextFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|mozilla
+operator|.
+name|javascript
+operator|.
 name|Scriptable
 import|;
 end_import
@@ -120,7 +132,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Rhino wrapper around org.w3c.dom.Node. Not comprehensive, but enough to test CXF JavaScript.   */
+comment|/**  * A Rhino wrapper around org.w3c.dom.Node. Not comprehensive, but enough to test CXF JavaScript.  */
 end_comment
 
 begin_class
@@ -252,7 +264,7 @@ return|return
 name|wrappedNode
 return|;
 block|}
-comment|//CHECKSTYLE:OFF
+comment|// CHECKSTYLE:OFF
 specifier|public
 name|String
 name|jsGet_localName
@@ -559,7 +571,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|//CHECKSTYLE:ON
+comment|// CHECKSTYLE:ON
 specifier|public
 specifier|static
 name|JsSimpleDomNode
@@ -586,11 +598,16 @@ block|}
 name|Context
 name|cx
 init|=
-name|Context
+name|ContextFactory
 operator|.
-name|enter
+name|getGlobal
+argument_list|()
+operator|.
+name|enterContext
 argument_list|()
 decl_stmt|;
+try|try
+block|{
 name|JsSimpleDomNode
 name|newObject
 init|=
@@ -619,6 +636,15 @@ return|return
 name|newObject
 return|;
 block|}
+finally|finally
+block|{
+name|Context
+operator|.
+name|exit
+argument_list|()
+expr_stmt|;
+block|}
+block|}
 specifier|private
 name|JsSimpleDomNode
 name|newObject
@@ -633,11 +659,16 @@ block|{
 name|Context
 name|cx
 init|=
-name|Context
+name|ContextFactory
 operator|.
-name|enter
+name|getGlobal
+argument_list|()
+operator|.
+name|enterContext
 argument_list|()
 decl_stmt|;
+try|try
+block|{
 name|JsSimpleDomNode
 name|newObject
 init|=
@@ -666,6 +697,15 @@ expr_stmt|;
 return|return
 name|newObject
 return|;
+block|}
+finally|finally
+block|{
+name|Context
+operator|.
+name|exit
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void
@@ -850,7 +890,7 @@ literal|true
 expr_stmt|;
 block|}
 block|}
-comment|//rhino won't let us use a constructor.
+comment|// rhino won't let us use a constructor.
 name|void
 name|initialize
 parameter_list|(

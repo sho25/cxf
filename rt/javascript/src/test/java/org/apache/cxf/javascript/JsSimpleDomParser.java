@@ -139,6 +139,18 @@ name|mozilla
 operator|.
 name|javascript
 operator|.
+name|ContextFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|mozilla
+operator|.
+name|javascript
+operator|.
 name|ScriptableObject
 import|;
 end_import
@@ -286,7 +298,7 @@ return|return
 literal|"DOMParser"
 return|;
 block|}
-comment|//CHECKSTYLE:OFF
+comment|// CHECKSTYLE:OFF
 specifier|public
 name|Object
 name|jsFunction_parseFromString
@@ -362,11 +374,16 @@ block|}
 name|Context
 name|context
 init|=
-name|Context
+name|ContextFactory
 operator|.
-name|enter
+name|getGlobal
+argument_list|()
+operator|.
+name|enterContext
 argument_list|()
 decl_stmt|;
+try|try
+block|{
 name|JsSimpleDomNode
 name|domNode
 init|=
@@ -396,7 +413,16 @@ return|return
 name|domNode
 return|;
 block|}
-comment|//CHECKSTYLE:ON
+finally|finally
+block|{
+name|Context
+operator|.
+name|exit
+argument_list|()
+expr_stmt|;
+block|}
+block|}
+comment|// CHECKSTYLE:ON
 block|}
 end_class
 

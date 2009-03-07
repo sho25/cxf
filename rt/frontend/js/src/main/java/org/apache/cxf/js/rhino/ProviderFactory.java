@@ -410,9 +410,12 @@ decl_stmt|;
 name|Context
 name|cx
 init|=
-name|Context
+name|ContextFactory
 operator|.
-name|enter
+name|getGlobal
+argument_list|()
+operator|.
+name|enterContext
 argument_list|()
 decl_stmt|;
 name|boolean

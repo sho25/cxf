@@ -1708,6 +1708,7 @@ return|return
 name|nillable
 return|;
 block|}
+comment|/**      * Return the minOccurs value. When there is no XML file or annotation (the situation      * if we are running from the base class here), there is no source for the       * minOccurs parameter except the default, which is supplied from the overall Aegis options.      * @param name Element QName      * @return      */
 specifier|public
 name|int
 name|getMinOccurs
@@ -1718,6 +1719,19 @@ parameter_list|)
 block|{
 return|return
 name|minOccurs
+return|;
+block|}
+comment|/**      * Return the maxOccurs value. When there is no XML file or annotation (the situation      * if we are in the base class here), there is no per-element source for this item,      * and the value is always 1.      * @param name Element QName      * @return 1      */
+specifier|public
+name|int
+name|getMaxOccurs
+parameter_list|(
+name|QName
+name|name
+parameter_list|)
+block|{
+return|return
+literal|1
 return|;
 block|}
 specifier|public
