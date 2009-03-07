@@ -1075,7 +1075,7 @@ argument_list|(
 name|msg
 argument_list|)
 expr_stmt|;
-name|checkPolicies
+name|computeAction
 argument_list|(
 name|msg
 argument_list|,
@@ -1658,7 +1658,19 @@ literal|null
 expr_stmt|;
 block|}
 block|}
-specifier|private
+comment|/**      * Do whatever is necessary to determine the action for the incoming message and       * do whatever other setup work is necessary.      *       * @param msg      * @param reqData      */
+specifier|protected
+name|void
+name|computeAction
+parameter_list|(
+name|SoapMessage
+name|msg
+parameter_list|,
+name|RequestData
+name|reqData
+parameter_list|)
+block|{              }
+specifier|protected
 name|void
 name|doResults
 parameter_list|(

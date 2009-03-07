@@ -679,13 +679,6 @@ argument_list|(
 name|mc
 argument_list|)
 expr_stmt|;
-name|checkPolicies
-argument_list|(
-name|mc
-argument_list|,
-name|reqData
-argument_list|)
-expr_stmt|;
 comment|/*              * The overall try, just to have a finally at the end to perform some              * housekeeping.              */
 try|try
 block|{

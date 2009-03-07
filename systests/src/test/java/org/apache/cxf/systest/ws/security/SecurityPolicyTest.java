@@ -906,7 +906,7 @@ name|msg
 operator|.
 name|contains
 argument_list|(
-literal|"UsernameToken: No user"
+literal|"UsernameToken"
 argument_list|)
 condition|)
 block|{
@@ -915,6 +915,25 @@ name|ex
 throw|;
 block|}
 block|}
+operator|(
+operator|(
+name|BindingProvider
+operator|)
+name|pt
+operator|)
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+name|SecurityConstants
+operator|.
+name|USERNAME
+argument_list|,
+literal|"bob"
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|BindingProvider

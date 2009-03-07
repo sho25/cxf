@@ -119,7 +119,7 @@ name|security
 operator|.
 name|wss4j
 operator|.
-name|PolicyBasedWSS4JOutInterceptor
+name|PolicyBasedWSS4JInInterceptor
 import|;
 end_import
 
@@ -137,7 +137,7 @@ name|security
 operator|.
 name|wss4j
 operator|.
-name|WSS4JInInterceptor
+name|PolicyBasedWSS4JOutInterceptor
 import|;
 end_import
 
@@ -268,10 +268,8 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|WSS4JInInterceptor
-argument_list|(
-literal|true
-argument_list|)
+name|PolicyBasedWSS4JInInterceptor
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|this
@@ -282,7 +280,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|WSS4JInInterceptor
+name|PolicyBasedWSS4JInInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
