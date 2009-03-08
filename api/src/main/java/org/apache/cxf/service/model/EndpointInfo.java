@@ -137,6 +137,17 @@ name|InterfaceInfo
 name|getInterface
 parameter_list|()
 block|{
+if|if
+condition|(
+name|service
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 return|return
 name|service
 operator|.

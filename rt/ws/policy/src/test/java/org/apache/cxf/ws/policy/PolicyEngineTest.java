@@ -545,7 +545,9 @@ name|engine
 operator|=
 operator|new
 name|PolicyEngineImpl
-argument_list|()
+argument_list|(
+literal|false
+argument_list|)
 expr_stmt|;
 name|assertNotNull
 argument_list|(

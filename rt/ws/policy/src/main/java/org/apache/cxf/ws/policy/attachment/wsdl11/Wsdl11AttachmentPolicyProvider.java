@@ -848,6 +848,17 @@ name|boolean
 name|includeAttributes
 parameter_list|)
 block|{
+if|if
+condition|(
+name|adh
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 return|return
 name|getElementPolicy
 argument_list|(
