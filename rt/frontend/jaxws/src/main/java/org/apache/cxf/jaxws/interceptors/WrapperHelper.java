@@ -177,11 +177,24 @@ specifier|private
 specifier|static
 specifier|final
 name|Class
-name|NO_PARAMS
+name|NO_CLASSES
 index|[]
 init|=
 operator|new
 name|Class
+index|[
+literal|0
+index|]
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|Object
+name|NO_PARAMS
+index|[]
+init|=
+operator|new
+name|Object
 index|[
 literal|0
 index|]
@@ -388,7 +401,7 @@ name|getMethod
 argument_list|(
 literal|"newInstance"
 argument_list|,
-name|NO_PARAMS
+name|NO_CLASSES
 argument_list|)
 decl_stmt|;
 comment|// create the instance of document type
@@ -797,7 +810,7 @@ name|getMethod
 argument_list|(
 name|getAccessor
 argument_list|,
-name|NO_PARAMS
+name|NO_CLASSES
 argument_list|)
 expr_stmt|;
 block|}
@@ -892,7 +905,7 @@ name|getMethod
 argument_list|(
 name|newAcc
 argument_list|,
-name|NO_PARAMS
+name|NO_CLASSES
 argument_list|)
 expr_stmt|;
 block|}
@@ -930,7 +943,7 @@ name|getMethod
 argument_list|(
 literal|"get_return"
 argument_list|,
-name|NO_PARAMS
+name|NO_CLASSES
 argument_list|)
 expr_stmt|;
 block|}
@@ -2067,7 +2080,7 @@ operator|.
 name|getSimpleName
 argument_list|()
 argument_list|,
-name|NO_PARAMS
+name|NO_CLASSES
 argument_list|)
 decl_stmt|;
 name|valueObject
