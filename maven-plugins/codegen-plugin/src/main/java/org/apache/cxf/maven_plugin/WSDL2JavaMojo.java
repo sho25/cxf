@@ -256,7 +256,7 @@ comment|/**      * @parameter expression="${cxf.testSourceRoot}"      */
 name|File
 name|testSourceRoot
 decl_stmt|;
-comment|/**      * @parameter expression="${cxf.sourceRoot}"       *             default-value="${project.build.directory}/generated/src/main/java"      * @required      */
+comment|/**      * @parameter expression="${cxf.sourceRoot}"       *             default-value="${project.build.directory}/generated-sources/cxf"      * @required      */
 name|File
 name|sourceRoot
 decl_stmt|;
