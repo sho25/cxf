@@ -191,6 +191,14 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|String
+name|STS_TOKEN_CONTEXT_TOKEN
+init|=
+literal|"ws-security.sts.token.context.token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|Set
 argument_list|<
 name|String

@@ -2328,6 +2328,15 @@ expr_stmt|;
 block|}
 block|}
 block|}
+if|if
+condition|(
+operator|!
+name|assertion
+operator|.
+name|isOptional
+argument_list|()
+condition|)
+block|{
 throw|throw
 operator|new
 name|PolicyException
@@ -2341,6 +2350,7 @@ name|LOG
 argument_list|)
 argument_list|)
 throw|;
+block|}
 block|}
 specifier|protected
 name|void
@@ -7296,6 +7306,9 @@ operator|+
 literal|" username found."
 argument_list|)
 expr_stmt|;
+return|return
+literal|null
+return|;
 block|}
 name|String
 name|password
