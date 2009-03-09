@@ -33,16 +33,6 @@ name|javax
 operator|.
 name|jws
 operator|.
-name|Oneway
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|jws
-operator|.
 name|WebMethod
 import|;
 end_import
@@ -103,8 +93,6 @@ name|AegisJaxWs
 block|{
 annotation|@
 name|WebMethod
-annotation|@
-name|Oneway
 name|void
 name|addItem
 parameter_list|(
