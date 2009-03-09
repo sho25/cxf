@@ -91,6 +91,10 @@ name|MessageUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Provides a starting point implementation for a interceptors that   * participate in phased message processing. Developers should extend from   * this class when implementing custom interceptors.  * Developers need to provide an implementation for handleMessage() and   * can overide the handleFault() implementation. They should not overide   * the other methods.  */
+end_comment
+
 begin_class
 specifier|public
 specifier|abstract
@@ -147,6 +151,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|/** 	 * Instantiates the interceptor to live in a specified phase. The  	 * interceptor's id will be set to the name of the implementing class. 	 * 	 * @param phase the interceptor's phase 	 */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -164,6 +169,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
+comment|/** 	 * Instantiates the interceptor with a specified id. 	 * 	 * @param i the interceptor's id 	 * @param p the interceptor's phase 	 */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -184,6 +190,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
+comment|/** 	 * Instantiates the interceptor and specifies if it gets a system  	 * determined unique id. If<code>uniqueId</code> is set to true the  	 * interceptor's id will be determined by the runtime. If  	 *<code>uniqueId</code> is set to false, the implementing class' name  	 * is used as the id. 	 * 	 * @param p the interceptor's phase 	 * @param uniqueId 	 */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -204,6 +211,7 @@ name|uniqueId
 argument_list|)
 expr_stmt|;
 block|}
+comment|/** 	 * Instantiates the interceptor with a specified id or with a system  	 * determined unique id. The specified id will be used unless  	 *<code>uniqueId</code> is set to true. 	 * 	 * @param i the interceptor's id 	 * @param p the interceptor's phase 	 * @param uniqueId 	 */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -472,6 +480,7 @@ operator|==
 literal|null
 return|;
 block|}
+comment|/**      * Determine if current messaging role is that of requestor.      *       * @param message the current Message      * @return true if the current messaging role is that of requestor      */
 specifier|protected
 name|boolean
 name|isRequestor

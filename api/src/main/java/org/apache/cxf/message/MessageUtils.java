@@ -42,7 +42,7 @@ specifier|private
 name|MessageUtils
 parameter_list|()
 block|{     }
-comment|/**      * Determine if message is outbound.      *       * @param message the current Message      * @return true iff the message direction is outbound      */
+comment|/**      * Determine if message is outbound.      *       * @param message the current Message      * @return true if the message direction is outbound      */
 specifier|public
 specifier|static
 name|boolean
@@ -86,7 +86,7 @@ argument_list|()
 operator|)
 return|;
 block|}
-comment|/**      * Determine if message is fault.      *       * @param message the current Message      * @return true iff the message is a fault      */
+comment|/**      * Determine if message is fault.      *       * @param message the current Message      * @return true if the message is a fault      */
 specifier|public
 specifier|static
 name|boolean
@@ -201,7 +201,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Determine if current messaging role is that of requestor.      *       * @param message the current Message      * @return true iff the current messaging role is that of requestor      */
+comment|/**      * Determine if current messaging role is that of requestor.      *       * @param message the current Message      * @return true if the current messaging role is that of requestor      */
 specifier|public
 specifier|static
 name|boolean
@@ -237,7 +237,7 @@ name|booleanValue
 argument_list|()
 return|;
 block|}
-comment|/**      * Determine if the current message is a partial response.      *       * @param message the current message      * @return true iff the current messags is a partial response      */
+comment|/**      * Determine if the current message is a partial response.      *       * @param message the current message      * @return true if the current messags is a partial response      */
 specifier|public
 specifier|static
 name|boolean
@@ -265,7 +265,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns true if a value is either the String "true" (regardless of case)  or Boolean.TRUE.      * @param value      * @return true iff value is either the String "true" or Boolean.TRUE      */
+comment|/**      * Returns true if a value is either the String "true" (regardless of case)  or Boolean.TRUE.      * @param value      * @return true if value is either the String "true" or Boolean.TRUE      */
 specifier|public
 specifier|static
 name|boolean
