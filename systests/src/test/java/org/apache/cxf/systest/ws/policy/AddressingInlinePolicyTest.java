@@ -227,7 +227,7 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|ServerPolicyInInterceptor
+name|PolicyInInterceptor
 import|;
 end_import
 
@@ -243,7 +243,7 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|ServerPolicyOutInterceptor
+name|PolicyOutInterceptor
 import|;
 end_import
 
@@ -646,7 +646,7 @@ if|if
 condition|(
 name|i
 operator|instanceof
-name|ServerPolicyInInterceptor
+name|PolicyInInterceptor
 condition|)
 block|{
 name|hasServerIn
@@ -675,7 +675,7 @@ if|if
 condition|(
 name|i
 operator|instanceof
-name|ServerPolicyOutInterceptor
+name|PolicyOutInterceptor
 condition|)
 block|{
 name|hasServerOut

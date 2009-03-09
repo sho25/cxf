@@ -98,6 +98,16 @@ name|PolicyVerificationOutInterceptor
 extends|extends
 name|AbstractPolicyInterceptor
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|PolicyVerificationOutInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|PolicyVerificationOutInterceptor
+argument_list|()
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
