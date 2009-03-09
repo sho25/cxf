@@ -246,6 +246,16 @@ name|ServerPolicyOutFaultInterceptor
 extends|extends
 name|AbstractPolicyInterceptor
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|ServerPolicyOutFaultInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|ServerPolicyOutFaultInterceptor
+argument_list|()
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final

@@ -244,6 +244,16 @@ name|PolicyInInterceptor
 extends|extends
 name|AbstractPolicyInterceptor
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|PolicyInInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|PolicyInInterceptor
+argument_list|()
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final

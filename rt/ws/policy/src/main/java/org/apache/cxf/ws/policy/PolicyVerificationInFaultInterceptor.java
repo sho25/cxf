@@ -186,6 +186,16 @@ name|PolicyVerificationInFaultInterceptor
 extends|extends
 name|AbstractPolicyInterceptor
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|PolicyVerificationInFaultInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|PolicyVerificationInFaultInterceptor
+argument_list|()
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final

@@ -214,6 +214,16 @@ name|ClientPolicyInFaultInterceptor
 extends|extends
 name|AbstractPolicyInterceptor
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|ClientPolicyInFaultInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|ClientPolicyInFaultInterceptor
+argument_list|()
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
