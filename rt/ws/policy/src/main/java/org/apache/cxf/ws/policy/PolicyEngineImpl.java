@@ -444,6 +444,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|enabled
+init|=
+literal|true
 decl_stmt|;
 specifier|private
 name|boolean
