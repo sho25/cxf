@@ -151,7 +151,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/** 	 * Instantiates the interceptor to live in a specified phase. The  	 * interceptor's id will be set to the name of the implementing class. 	 * 	 * @param phase the interceptor's phase 	 */
+comment|/**      * Instantiates the interceptor to live in a specified phase. The       * interceptor's id will be set to the name of the implementing class.      *      * @param phase the interceptor's phase      */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -169,7 +169,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Instantiates the interceptor with a specified id. 	 * 	 * @param i the interceptor's id 	 * @param p the interceptor's phase 	 */
+comment|/**      * Instantiates the interceptor with a specified id.      *      * @param i the interceptor's id      * @param p the interceptor's phase      */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -190,7 +190,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Instantiates the interceptor and specifies if it gets a system  	 * determined unique id. If<code>uniqueId</code> is set to true the  	 * interceptor's id will be determined by the runtime. If  	 *<code>uniqueId</code> is set to false, the implementing class' name  	 * is used as the id. 	 * 	 * @param p the interceptor's phase 	 * @param uniqueId 	 */
+comment|/**      * Instantiates the interceptor and specifies if it gets a system       * determined unique id. If<code>uniqueId</code> is set to true the       * interceptor's id will be determined by the runtime. If       *<code>uniqueId</code> is set to false, the implementing class' name       * is used as the id.      *      * @param p the interceptor's phase      * @param uniqueId      */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
@@ -211,7 +211,7 @@ name|uniqueId
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** 	 * Instantiates the interceptor with a specified id or with a system  	 * determined unique id. The specified id will be used unless  	 *<code>uniqueId</code> is set to true. 	 * 	 * @param i the interceptor's id 	 * @param p the interceptor's phase 	 * @param uniqueId 	 */
+comment|/**      * Instantiates the interceptor with a specified id or with a system       * determined unique id. The specified id will be used unless       *<code>uniqueId</code> is set to true.      *      * @param i the interceptor's id      * @param p the interceptor's phase      * @param uniqueId      */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(
