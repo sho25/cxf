@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class will help us to map the XMLBeansBuildinType into Natural Java Type  */
+comment|/**  * This class will help us to map the   *<a href="http://xmlbeans.apache.org/docs/2.0.0/guide/conXMLBeansSupportBuiltInSchemaTypes.html">  * XMLBeans Builtin Type</a> into Natural Java Type  *  *   */
 end_comment
 
 begin_class
@@ -68,11 +68,11 @@ name|String
 argument_list|,
 name|String
 argument_list|>
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 decl_stmt|;
 static|static
 block|{
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|=
 operator|new
 name|HashMap
@@ -83,7 +83,7 @@ name|String
 argument_list|>
 argument_list|()
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -92,7 +92,7 @@ argument_list|,
 literal|"org.apache.xmlbeans.XmlObject"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -101,7 +101,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -110,7 +110,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -119,7 +119,7 @@ argument_list|,
 literal|"byte[]"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -128,7 +128,7 @@ argument_list|,
 literal|"boolean"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -137,7 +137,7 @@ argument_list|,
 literal|"byte"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -146,7 +146,7 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -155,7 +155,7 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -164,7 +164,7 @@ argument_list|,
 literal|"java.math.BigDecimal"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -173,7 +173,7 @@ argument_list|,
 literal|"double"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -182,7 +182,7 @@ argument_list|,
 literal|"org.apache.xmlbeans.GDuration"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -191,7 +191,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -200,7 +200,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -209,7 +209,7 @@ argument_list|,
 literal|"float"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -218,7 +218,7 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -227,7 +227,7 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -236,7 +236,7 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -245,16 +245,16 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
-literal|"org.apache.xmlbeans.XmlHexBinary"
+literal|"org.apache.xmlbeans.XmlGYearMonth"
 argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -263,7 +263,7 @@ argument_list|,
 literal|"byte[]"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -272,7 +272,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -281,7 +281,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -290,7 +290,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -299,7 +299,7 @@ argument_list|,
 literal|"int"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -308,7 +308,7 @@ argument_list|,
 literal|"java.math.BigInteger"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -317,7 +317,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -326,7 +326,7 @@ argument_list|,
 literal|"long"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -335,7 +335,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -344,7 +344,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -353,7 +353,7 @@ argument_list|,
 literal|"java.math.BigInteger"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -362,7 +362,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -371,7 +371,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -380,7 +380,7 @@ argument_list|,
 literal|"java.math.BigInteger"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -389,7 +389,7 @@ argument_list|,
 literal|"java.math.BigInteger"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -398,7 +398,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -407,7 +407,7 @@ argument_list|,
 literal|"org.apache.xmlbeans.XmlNOTATION"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -416,7 +416,7 @@ argument_list|,
 literal|"java.math.BigInteger"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -425,7 +425,7 @@ argument_list|,
 literal|"javax.xml.namespace.QName"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -434,7 +434,7 @@ argument_list|,
 literal|"short"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -443,7 +443,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -452,7 +452,7 @@ argument_list|,
 literal|"java.util.Calendar"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -461,7 +461,7 @@ argument_list|,
 literal|"String"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -470,7 +470,7 @@ argument_list|,
 literal|"short"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -479,7 +479,7 @@ argument_list|,
 literal|"long"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -488,7 +488,7 @@ argument_list|,
 literal|"java.math.BigInteger"
 argument_list|)
 expr_stmt|;
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|put
 argument_list|(
@@ -576,7 +576,7 @@ condition|)
 block|{
 name|result
 operator|=
-name|BUILDIN_TYPES_MAP
+name|BUILTIN_TYPES_MAP
 operator|.
 name|get
 argument_list|(
