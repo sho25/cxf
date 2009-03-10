@@ -54,6 +54,14 @@ name|SecurityToken
 name|token
 parameter_list|)
 function_decl|;
+comment|/**      * Remove an existing token.      */
+name|void
+name|remove
+parameter_list|(
+name|SecurityToken
+name|token
+parameter_list|)
+function_decl|;
 comment|/**      * Return the list of all token identifiers.      * @return As array of token identifiers      */
 name|Collection
 argument_list|<
@@ -100,6 +108,24 @@ name|getToken
 parameter_list|(
 name|String
 name|id
+parameter_list|)
+function_decl|;
+comment|/**      * Removes all expired tokens.        */
+name|void
+name|removeExpiredTokens
+parameter_list|()
+function_decl|;
+comment|/**      * Removes all cancelled tokens.      */
+name|void
+name|removeCancelledTokens
+parameter_list|()
+function_decl|;
+comment|/**      * Controls whether the store will automatically remove cancelled and expired       * tokens.  If true, calls to getCancelledTokens() and getExpiredTokens()       * will never return value;      * @param auto      */
+name|void
+name|setAutoRemoveTokens
+parameter_list|(
+name|boolean
+name|auto
 parameter_list|)
 function_decl|;
 block|}
