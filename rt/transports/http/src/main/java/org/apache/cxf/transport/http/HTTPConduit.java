@@ -1848,6 +1848,11 @@ condition|(
 name|auth
 operator|==
 literal|null
+operator|||
+name|authSupplier
+operator|.
+name|requiresRequestCaching
+argument_list|()
 condition|)
 block|{
 name|needToCacheRequest
@@ -1864,9 +1869,9 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
-literal|"Auth Supplier, but no Premeptive User Pass."
+literal|"Auth Supplier, but no Premeptive User Pass or Digest auth (nonce may be stale)"
 operator|+
 literal|" We must cache request."
 argument_list|)
@@ -1901,7 +1906,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"AutoRedirect is turned on."
 argument_list|)
@@ -2273,7 +2278,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -2283,7 +2288,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"Trust Decider "
 operator|+
@@ -3474,7 +3479,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"shutting down decoupled destination"
 argument_list|)
@@ -3943,8 +3948,8 @@ name|authString
 argument_list|)
 argument_list|)
 expr_stmt|;
-return|return;
 block|}
+return|return;
 block|}
 name|String
 name|userName

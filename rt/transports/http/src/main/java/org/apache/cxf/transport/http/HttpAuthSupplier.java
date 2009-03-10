@@ -95,6 +95,16 @@ return|return
 name|logicalName
 return|;
 block|}
+comment|/**      * If the supplier requires the request to be cached to be resent, return true      */
+specifier|public
+name|boolean
+name|requiresRequestCaching
+parameter_list|()
+block|{
+return|return
+literal|false
+return|;
+block|}
 comment|/**      * The HTTPConduit makes a call to this method before connecting      * to the server behind a particular URL. If this implementation does not       * have a Authorization for this URL, it should return null.      *       * @param conduit     The HTTPConduit making the call.      * @param currentURL  The URL to which the request is to be made.      * @param message     The CXF Message.      *       * @return This method returns null if no Authorization is available.      */
 specifier|public
 specifier|abstract
