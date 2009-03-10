@@ -264,7 +264,7 @@ name|URI
 name|getCurrentURI
 parameter_list|()
 function_decl|;
-comment|/**      * Gets the response state if any      * @return JAXRS Response response      * @throws IllegalStateException if no request has been made or this method called more than once       */
+comment|/**      * Gets the response state if any      * @return JAXRS Response response      */
 name|Response
 name|getResponse
 parameter_list|()
