@@ -905,6 +905,7 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+comment|//WoodstoxValidationImpl wstxVal = new WoodstoxValidationImpl();
 name|addNamespace
 argument_list|(
 literal|"wsdl"
@@ -1516,6 +1517,17 @@ operator|=
 operator|new
 name|AegisDatabinding
 argument_list|()
+expr_stmt|;
+comment|// perhaps the data binding needs to do this for itself?
+name|binding
+operator|.
+name|setBus
+argument_list|(
+name|BusFactory
+operator|.
+name|getDefaultBus
+argument_list|()
+argument_list|)
 expr_stmt|;
 if|if
 condition|(
