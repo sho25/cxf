@@ -206,6 +206,27 @@ operator|=
 name|signedParts
 expr_stmt|;
 block|}
+specifier|public
+name|SignedEncryptedParts
+parameter_list|(
+name|boolean
+name|signedParts
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|SP12Constants
+operator|.
+name|INSTANCE
+argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|signedParts
+operator|=
+name|signedParts
+expr_stmt|;
+block|}
 comment|/**      * @return Returns the body.      */
 specifier|public
 name|boolean

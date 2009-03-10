@@ -229,6 +229,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|POLICY_OVERRIDE
+init|=
+literal|"org.apache.cxf.ws.policy.override"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|POLICY_IN_INTERCEPTOR_ID
 init|=
 literal|"org.apache.cxf.ws.policy.PolicyInInterceptor"

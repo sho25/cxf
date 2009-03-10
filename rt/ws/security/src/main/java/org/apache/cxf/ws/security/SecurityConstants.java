@@ -192,9 +192,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|STS_TOKEN_CONTEXT_TOKEN
+name|STS_TOKEN_DO_CANCEL
 init|=
-literal|"ws-security.sts.token.context.token"
+literal|"ws-security.sts.token.do.cancel"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -254,6 +254,8 @@ block|,
 name|STS_TOKEN_PROPERTIES
 block|,
 name|STS_TOKEN_CRYPTO
+block|,
+name|STS_TOKEN_DO_CANCEL
 block|}
 argument_list|)
 argument_list|)

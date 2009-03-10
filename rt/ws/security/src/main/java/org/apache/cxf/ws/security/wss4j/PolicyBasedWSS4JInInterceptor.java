@@ -3053,6 +3053,12 @@ operator|!=
 name|Protections
 operator|.
 name|SIGN_ENCRYPT
+operator|&&
+name|prots
+operator|!=
+name|Protections
+operator|.
+name|SIGN
 condition|)
 block|{
 name|ai

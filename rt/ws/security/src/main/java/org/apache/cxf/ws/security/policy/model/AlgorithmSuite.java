@@ -292,6 +292,18 @@ name|version
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|AlgorithmSuite
+parameter_list|()
+block|{
+name|super
+argument_list|(
+name|SP12Constants
+operator|.
+name|INSTANCE
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * @return Returns the asymmetricKeyWrap.      */
 specifier|public
 name|String
