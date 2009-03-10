@@ -1495,6 +1495,19 @@ block|{
 name|WrapperHelper
 name|wh
 init|=
+literal|null
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|wrapperType
+operator|.
+name|isInterface
+argument_list|()
+condition|)
+block|{
+name|wh
+operator|=
 name|compileWrapperHelper
 argument_list|(
 name|wrapperType
@@ -1509,7 +1522,8 @@ name|fields
 argument_list|,
 name|objectFactory
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|wh
@@ -1606,6 +1620,11 @@ name|e
 parameter_list|)
 block|{
 comment|//ASM not found, just use reflection based stuff
+name|e
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 block|}
 return|return
 literal|null
@@ -2022,6 +2041,9 @@ operator|new
 name|Fault
 argument_list|(
 name|ex
+operator|.
+name|getCause
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -2209,6 +2231,9 @@ operator|new
 name|Fault
 argument_list|(
 name|ex
+operator|.
+name|getCause
+argument_list|()
 argument_list|)
 throw|;
 block|}
