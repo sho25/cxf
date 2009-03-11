@@ -1281,8 +1281,8 @@ parameter_list|,
 name|ParameterType
 name|pType
 parameter_list|,
-name|String
-name|basePath
+name|Message
+name|message
 parameter_list|)
 block|{
 if|if
@@ -1543,7 +1543,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|basePath
+name|message
 operator|!=
 literal|null
 condition|)
@@ -1558,7 +1558,7 @@ name|ProviderFactory
 operator|.
 name|getInstance
 argument_list|(
-name|basePath
+name|message
 argument_list|)
 operator|.
 name|createParameterHandler
@@ -1901,8 +1901,8 @@ parameter_list|,
 name|ParameterType
 name|pType
 parameter_list|,
-name|String
-name|basePath
+name|Message
+name|message
 parameter_list|)
 block|{
 name|Object
@@ -2043,7 +2043,7 @@ index|]
 argument_list|,
 name|pType
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 decl_stmt|;
 if|if
@@ -2126,7 +2126,7 @@ argument_list|()
 argument_list|,
 name|pType
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 decl_stmt|;
 if|if
@@ -2182,8 +2182,8 @@ parameter_list|,
 name|ParameterType
 name|pathParam
 parameter_list|,
-name|String
-name|basePath
+name|Message
+name|message
 parameter_list|)
 block|{
 name|Class
@@ -2250,7 +2250,7 @@ name|realType
 argument_list|,
 name|pathParam
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 decl_stmt|;
 if|if
@@ -2304,8 +2304,8 @@ parameter_list|,
 name|ParameterType
 name|pathParam
 parameter_list|,
-name|String
-name|basePath
+name|Message
+name|message
 parameter_list|)
 block|{
 name|Class
@@ -2378,7 +2378,7 @@ name|realType
 argument_list|,
 name|pathParam
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 decl_stmt|;
 if|if
@@ -2565,8 +2565,8 @@ parameter_list|,
 name|ParameterType
 name|pathParam
 parameter_list|,
-name|String
-name|basePath
+name|Message
+name|message
 parameter_list|)
 block|{
 if|if
@@ -2654,7 +2654,7 @@ name|decoded
 argument_list|,
 name|pathParam
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 return|;
 block|}
@@ -2686,7 +2686,7 @@ name|decoded
 argument_list|,
 name|pathParam
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 return|;
 block|}
@@ -2718,7 +2718,7 @@ name|decoded
 argument_list|,
 name|pathParam
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 return|;
 block|}
@@ -2805,7 +2805,7 @@ name|paramType
 argument_list|,
 name|pathParam
 argument_list|,
-name|basePath
+name|message
 argument_list|)
 return|;
 block|}
