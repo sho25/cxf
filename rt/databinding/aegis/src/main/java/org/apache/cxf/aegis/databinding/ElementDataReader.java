@@ -103,6 +103,20 @@ name|cxf
 operator|.
 name|databinding
 operator|.
+name|DataBindingValidation2
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|databinding
+operator|.
 name|DataReader
 import|;
 end_import
@@ -151,6 +165,22 @@ name|MessagePartInfo
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|commons
+operator|.
+name|schema
+operator|.
+name|XmlSchemaCollection
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -164,6 +194,8 @@ name|DataReader
 argument_list|<
 name|Element
 argument_list|>
+implements|,
+name|DataBindingValidation2
 block|{
 specifier|private
 name|AegisElementDataReader
@@ -381,6 +413,16 @@ argument_list|(
 name|s
 argument_list|)
 expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setSchema
+parameter_list|(
+name|XmlSchemaCollection
+name|schema
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
 block|}
 block|}
 end_class

@@ -17,35 +17,89 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|validation
+operator|.
+name|Schema
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|cxf
 operator|.
-name|commons
+name|message
 operator|.
-name|schema
-operator|.
-name|XmlSchemaCollection
+name|Attachment
 import|;
 end_import
 
 begin_comment
-comment|/**  * If a DataReader<T> implements this interface, it prefers to be supplied with schema  * for validation via an XmlSchemaCollection instead of via a packaged Schema object.  */
+comment|/**  * The 'write' side of the data binding abstraction of CXF.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|DataReaderValidation2
+name|BaseDataWriter
 block|{
-comment|/**      *       * @param schema      */
+name|String
+name|ENDPOINT
+init|=
+name|DataWriter
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|"Endpoint"
+decl_stmt|;
+comment|/**      * Attach a schema to the writer. If the binding supports validation, it will      * validate the XML that it produces (assuming that it produces XML).       * @param s the schema.      */
 name|void
 name|setSchema
 parameter_list|(
-name|XmlSchemaCollection
-name|schema
+name|Schema
+name|s
+parameter_list|)
+function_decl|;
+comment|/**      * Attach a collection of attachments to this writer.      * @param attachments      */
+name|void
+name|setAttachments
+parameter_list|(
+name|Collection
+argument_list|<
+name|Attachment
+argument_list|>
+name|attachments
+parameter_list|)
+function_decl|;
+comment|/**      * Set a property for the writer.      * @param key property key       * @param value property value.      */
+name|void
+name|setProperty
+parameter_list|(
+name|String
+name|key
+parameter_list|,
+name|Object
+name|value
 parameter_list|)
 function_decl|;
 block|}

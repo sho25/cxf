@@ -139,7 +139,7 @@ name|cxf
 operator|.
 name|databinding
 operator|.
-name|DataReader
+name|DataBindingValidation2
 import|;
 end_import
 
@@ -153,7 +153,7 @@ name|cxf
 operator|.
 name|databinding
 operator|.
-name|DataReaderValidation2
+name|DataReader
 import|;
 end_import
 
@@ -275,7 +275,7 @@ argument_list|<
 name|XMLStreamReader
 argument_list|>
 implements|,
-name|DataReaderValidation2
+name|DataBindingValidation2
 block|{
 specifier|private
 specifier|static

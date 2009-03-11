@@ -119,7 +119,7 @@ name|cxf
 operator|.
 name|databinding
 operator|.
-name|DataReader
+name|DataBindingValidation2
 import|;
 end_import
 
@@ -133,7 +133,7 @@ name|cxf
 operator|.
 name|databinding
 operator|.
-name|DataReaderValidation2
+name|DataReader
 import|;
 end_import
 
@@ -754,12 +754,12 @@ if|if
 condition|(
 name|reader
 operator|instanceof
-name|DataReaderValidation2
+name|DataBindingValidation2
 condition|)
 block|{
 operator|(
 operator|(
-name|DataReaderValidation2
+name|DataBindingValidation2
 operator|)
 name|reader
 operator|)

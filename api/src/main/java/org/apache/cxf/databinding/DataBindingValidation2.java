@@ -21,65 +21,31 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|service
+name|commons
 operator|.
-name|model
+name|schema
 operator|.
-name|MessagePartInfo
+name|XmlSchemaCollection
 import|;
 end_import
 
 begin_comment
-comment|/**  * The 'write' side of the data binding abstraction of CXF. A DataWriter&lt;T&gt; serializes  * objects to a 'sink' of type T.  * @param<T> The type of sink. Each data binding defines the set of sink types that it supports.  */
+comment|/**  * If a DataReader<T> implements this interface, it prefers to be supplied with schema  * for validation via an XmlSchemaCollection instead of via a packaged Schema object.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|DataWriter
-parameter_list|<
-name|T
-parameter_list|>
-extends|extends
-name|BaseDataWriter
+name|DataBindingValidation2
 block|{
-name|String
-name|ENDPOINT
-init|=
-name|DataWriter
-operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
-operator|+
-literal|"Endpoint"
-decl_stmt|;
-comment|/**      * Write an object to an output sink.      * @param obj the object to write.      * @param output the output sink.      */
+comment|/**      *       * @param schema      */
 name|void
-name|write
+name|setSchema
 parameter_list|(
-name|Object
-name|obj
-parameter_list|,
-name|T
-name|output
-parameter_list|)
-function_decl|;
-comment|/**      * Write an object to an output sink, including extra processing based on the WSDL       * service model for a particular message part.      * @param obj The object to write.      * @param part the message part.       * @param output the output sink.      */
-name|void
-name|write
-parameter_list|(
-name|Object
-name|obj
-parameter_list|,
-name|MessagePartInfo
-name|part
-parameter_list|,
-name|T
-name|output
+name|XmlSchemaCollection
+name|schema
 parameter_list|)
 function_decl|;
 block|}
