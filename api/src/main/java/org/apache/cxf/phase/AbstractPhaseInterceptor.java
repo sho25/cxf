@@ -265,6 +265,7 @@ operator|=
 name|p
 expr_stmt|;
 block|}
+comment|/**      * Specifies that the current interceptor needs to be added to the       * interceptor chain before the specified collection of interceptors.       * This method replaces any existing list with the provided list.      *       * @param i a collection of interceptor ids      */
 specifier|public
 name|void
 name|setBefore
@@ -289,6 +290,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Specifies that the current interceptor needs to be added to the       * interceptor chain after the specified collection of interceptors.      * This method replaces any existing list with the provided list.      *       * @param i a collection of interceptor ids      */
 specifier|public
 name|void
 name|setAfter
@@ -313,6 +315,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Specifies that the current interceptor needs to be added to the       * interceptor chain before the specified collection of interceptors.      *       * @param i a collection of interceptor ids      */
 specifier|public
 name|void
 name|addBefore
@@ -332,6 +335,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Specifies that the current interceptor needs to be added to the       * interceptor chain after the specified collection of interceptors.      *       * @param i a collection of interceptor ids      */
 specifier|public
 name|void
 name|addAfter
@@ -351,6 +355,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Specifies that the current interceptor needs to be added to the       * interceptor chain before the specified interceptor.      *       * @param i an interceptor id      */
 specifier|public
 name|void
 name|addBefore
@@ -367,6 +372,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Specifies that the current interceptor needs to be added to the       * interceptor chain after the specified interceptor.      *       * @param i an interceptor id      */
 specifier|public
 name|void
 name|addAfter
