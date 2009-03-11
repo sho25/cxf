@@ -344,9 +344,9 @@ index|[
 literal|0
 index|]
 argument_list|,
-name|JAXRSUtils
+name|HttpUtils
 operator|.
-name|uriDecode
+name|urlDecode
 argument_list|(
 name|keyValue
 index|[
@@ -525,9 +525,9 @@ name|name
 argument_list|,
 name|decode
 condition|?
-name|JAXRSUtils
+name|HttpUtils
 operator|.
-name|uriDecode
+name|urlDecode
 argument_list|(
 name|value
 argument_list|)

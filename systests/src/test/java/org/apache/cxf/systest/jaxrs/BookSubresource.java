@@ -85,6 +85,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|MatrixParam
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|POST
 import|;
 end_import
@@ -213,7 +225,7 @@ name|String
 name|name2
 parameter_list|,
 annotation|@
-name|QueryParam
+name|MatrixParam
 argument_list|(
 literal|"n3"
 argument_list|)

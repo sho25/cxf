@@ -151,7 +151,7 @@ name|jaxrs
 operator|.
 name|utils
 operator|.
-name|JAXRSUtils
+name|HttpUtils
 import|;
 end_import
 
@@ -822,9 +822,9 @@ name|assertEquals
 argument_list|(
 literal|"Wrong entry line for bar"
 argument_list|,
-name|JAXRSUtils
+name|HttpUtils
 operator|.
-name|uriDecode
+name|urlDecode
 argument_list|(
 literal|"line1%0D%0Aline+2"
 argument_list|)

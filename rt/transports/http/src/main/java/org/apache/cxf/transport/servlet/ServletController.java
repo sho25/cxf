@@ -51,16 +51,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URLDecoder
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Collections
@@ -226,6 +216,22 @@ operator|.
 name|util
 operator|.
 name|StringUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|UrlUtils
 import|;
 end_import
 
@@ -1767,30 +1773,52 @@ argument_list|)
 condition|)
 block|{
 comment|// needs to be done given that pathInfo is decoded
-comment|// TODO :
-comment|// it's unlikely servlet path will contain encoded values so we're most likely safe
-comment|// however we need to ensure if it happens then thsi code works propely too
-try|try
-block|{
+comment|// TODO : it's unlikely servlet path will contain encoded values so we're most
+comment|// likely safe however we need to ensure if it happens then this code works properly too
 name|reqPrefix
 operator|=
-name|URLDecoder
+name|UrlUtils
 operator|.
-name|decode
+name|pathDecode
 argument_list|(
 name|reqPrefix
-argument_list|,
-literal|"UTF-8"
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
+comment|// pathInfo drops matrix parameters attached to a last path segment
+name|int
+name|offset
+init|=
+literal|0
+decl_stmt|;
+name|int
+name|index
+init|=
+name|reqPrefix
+operator|.
+name|lastIndexOf
+argument_list|(
+literal|';'
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|index
+operator|>=
+name|pathInfo
+operator|.
+name|length
+argument_list|()
+condition|)
 block|{
-comment|// unlikey to happen
+name|offset
+operator|=
+name|reqPrefix
+operator|.
+name|length
+argument_list|()
+operator|-
+name|index
+expr_stmt|;
 block|}
 name|reqPrefix
 operator|=
@@ -1809,6 +1837,8 @@ name|pathInfo
 operator|.
 name|length
 argument_list|()
+operator|-
+name|offset
 argument_list|)
 expr_stmt|;
 block|}

@@ -735,9 +735,9 @@ argument_list|()
 argument_list|,
 name|decode
 condition|?
-name|JAXRSUtils
+name|HttpUtils
 operator|.
-name|uriDecode
+name|pathDecode
 argument_list|(
 name|entry
 operator|.
@@ -988,9 +988,9 @@ operator|+
 operator|(
 name|decode
 condition|?
-name|JAXRSUtils
+name|HttpUtils
 operator|.
-name|uriDecode
+name|pathDecode
 argument_list|(
 name|v
 argument_list|)
@@ -1086,9 +1086,9 @@ decl_stmt|;
 return|return
 name|decode
 condition|?
-name|JAXRSUtils
+name|HttpUtils
 operator|.
-name|uriDecode
+name|pathDecode
 argument_list|(
 name|path
 argument_list|)
