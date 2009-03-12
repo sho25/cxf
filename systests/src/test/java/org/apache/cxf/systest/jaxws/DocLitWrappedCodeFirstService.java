@@ -281,6 +281,15 @@ parameter_list|()
 function_decl|;
 annotation|@
 name|WebMethod
+name|String
+name|echoStringNotReallyAsync
+parameter_list|(
+name|String
+name|s
+parameter_list|)
+function_decl|;
+annotation|@
+name|WebMethod
 name|int
 index|[]
 name|echoIntArray

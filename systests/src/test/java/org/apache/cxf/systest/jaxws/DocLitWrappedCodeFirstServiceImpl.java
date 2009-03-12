@@ -1107,6 +1107,18 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+specifier|public
+name|String
+name|echoStringNotReallyAsync
+parameter_list|(
+name|String
+name|s
+parameter_list|)
+block|{
+return|return
+name|s
+return|;
+block|}
 block|}
 end_class
 
