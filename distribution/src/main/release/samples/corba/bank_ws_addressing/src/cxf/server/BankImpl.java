@@ -348,22 +348,17 @@ return|;
 block|}
 comment|// TODO: What is the correct implementation for this operation?
 specifier|public
-name|void
+name|Object
 name|findAccount
 parameter_list|(
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|Holder
-argument_list|<
 name|Object
-argument_list|>
 name|accountDetails
 parameter_list|)
-block|{     }
+block|{
+return|return
+literal|null
+return|;
+block|}
 specifier|public
 name|void
 name|removeAccount
