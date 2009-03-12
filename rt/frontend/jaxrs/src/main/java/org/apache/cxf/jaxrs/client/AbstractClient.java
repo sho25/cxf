@@ -1278,7 +1278,7 @@ operator|.
 name|clone
 argument_list|()
 operator|.
-name|build
+name|buildFromEncoded
 argument_list|()
 return|;
 block|}

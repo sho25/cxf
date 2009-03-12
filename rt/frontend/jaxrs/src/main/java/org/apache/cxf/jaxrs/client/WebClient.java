@@ -1979,7 +1979,7 @@ operator|.
 name|clone
 argument_list|()
 operator|.
-name|build
+name|buildFromEncoded
 argument_list|()
 argument_list|,
 name|methodName

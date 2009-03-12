@@ -149,11 +149,31 @@ parameter_list|()
 block|{
 name|assertEquals
 argument_list|(
-literal|"%2B%20"
+literal|"+%20"
 argument_list|,
 name|HttpUtils
 operator|.
 name|pathEncode
+argument_list|(
+literal|"+ "
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testURLEncode
+parameter_list|()
+block|{
+name|assertEquals
+argument_list|(
+literal|"%2B+"
+argument_list|,
+name|HttpUtils
+operator|.
+name|urlEncode
 argument_list|(
 literal|"+ "
 argument_list|)
