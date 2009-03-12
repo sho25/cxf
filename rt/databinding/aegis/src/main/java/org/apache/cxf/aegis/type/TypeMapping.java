@@ -113,6 +113,14 @@ name|String
 name|getMappingIdentifierURI
 parameter_list|()
 function_decl|;
+comment|/**      * This exists only to deal with an initialization order problem.      * @param uri      */
+name|void
+name|setMappingIdentifierURI
+parameter_list|(
+name|String
+name|uri
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
