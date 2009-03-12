@@ -443,8 +443,17 @@ init|=
 operator|new
 name|ArrayVisitor
 argument_list|(
+operator|new
+name|Scope
+argument_list|(
 name|getScope
 argument_list|()
+argument_list|,
+name|identifierNode
+operator|.
+name|getText
+argument_list|()
+argument_list|)
 argument_list|,
 name|definition
 argument_list|,
