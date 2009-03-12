@@ -3239,6 +3239,16 @@ argument_list|(
 name|input
 argument_list|)
 expr_stmt|;
+name|operation
+operator|.
+name|setParameterOrdering
+argument_list|(
+name|operationInfo
+operator|.
+name|getParameterOrdering
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|operationInfo

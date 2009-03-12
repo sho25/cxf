@@ -277,6 +277,22 @@ expr_stmt|;
 comment|// End of honoring java.home for used javac
 comment|// This code doesn't honor java.home
 comment|// list.add("javac");
+comment|//fix for CXF-2081, set maximum heap of this VM to javac.
+name|list
+operator|.
+name|add
+argument_list|(
+literal|"-J-Xmx"
+operator|+
+name|Runtime
+operator|.
+name|getRuntime
+argument_list|()
+operator|.
+name|maxMemory
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|outputDir

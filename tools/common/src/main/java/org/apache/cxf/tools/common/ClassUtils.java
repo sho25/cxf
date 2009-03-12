@@ -230,6 +230,22 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|//fix for CXF-2081, set maximum heap of current VM to javac.
+name|argList
+operator|.
+name|add
+argument_list|(
+literal|"-J-Xmx"
+operator|+
+name|Runtime
+operator|.
+name|getRuntime
+argument_list|()
+operator|.
+name|maxMemory
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|String
 name|javaClasspath
 init|=

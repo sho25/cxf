@@ -265,6 +265,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+specifier|public
 name|AbstractMessageResponseTimeInterceptor
 parameter_list|(
 name|String
