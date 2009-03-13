@@ -87,7 +87,7 @@ specifier|protected
 name|File
 name|outputDir
 decl_stmt|;
-comment|/**      * Ignore the specified WSDL schema namespace when generating code.      * Also, optionally specifies the Java package name used by types described in the excluded namespace(s) using      * schema-namespace[=java-packagename]      */
+comment|/**      * Ignore the specified WSDL schema namespace when generating code.      * Also, optionally specifies the Java package name used by types described in the excluded       * namespace(s) using schema-namespace[=java-packagename]      */
 name|List
 argument_list|<
 name|String
@@ -98,11 +98,11 @@ comment|/**      * Enables or disables the loading of the default excludes names
 name|Boolean
 name|defaultExcludesNamespace
 decl_stmt|;
-comment|/**      * Enables or disables the loading of the default namespace package name mapping. Default is true and       *<a href=""http://www.w3.org/2005/08/addressing">http://www.w3.org/2005/08/addressing=org.apache.cxf.ws.addressingnamespace</a>       * package mapping will be enabled.	       */
+comment|/**      * Enables or disables the loading of the default namespace package name mapping. Default is true and       *<a href=""http://www.w3.org/2005/08/addressing">      * http://www.w3.org/2005/08/addressing=org.apache.cxf.ws.addressingnamespace</a>       * package mapping will be enabled.      */
 name|Boolean
 name|defaultNamespacePackageMapping
 decl_stmt|;
-comment|/**      * A set of dependent files used to detect the generator must process WSDL, even if generator marker files are up to date.      */
+comment|/**      * A set of dependent files used to detect the generator must process WSDL, even       * if generator marker files are up to date.      */
 name|File
 name|dependencies
 index|[]
