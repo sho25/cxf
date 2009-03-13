@@ -22,6 +22,7 @@ name|WsdlOption
 extends|extends
 name|Option
 block|{
+comment|/**      * The WSDL file to process.      */
 name|String
 name|wsdl
 decl_stmt|;
