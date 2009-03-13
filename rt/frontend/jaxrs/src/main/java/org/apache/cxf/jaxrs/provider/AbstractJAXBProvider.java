@@ -813,7 +813,8 @@ name|type
 argument_list|)
 return|;
 block|}
-specifier|private
+comment|// TODO : move this method to a dedicated JAXBContextRegistry class
+specifier|public
 name|JAXBContext
 name|getClassContext
 parameter_list|(
@@ -877,7 +878,8 @@ name|context
 return|;
 block|}
 block|}
-specifier|protected
+comment|//  TODO : move this method to a dedicated JAXBContextRegistry class
+specifier|public
 name|JAXBContext
 name|getPackageContext
 parameter_list|(

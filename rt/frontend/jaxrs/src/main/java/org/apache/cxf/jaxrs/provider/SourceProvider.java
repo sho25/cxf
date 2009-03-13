@@ -313,7 +313,7 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|client
+name|utils
 operator|.
 name|XMLSource
 import|;
