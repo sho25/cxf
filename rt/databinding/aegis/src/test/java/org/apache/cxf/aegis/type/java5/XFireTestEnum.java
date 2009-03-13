@@ -21,23 +21,6 @@ end_package
 
 begin_enum
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
-annotation|@
-name|org
-operator|.
-name|codehaus
-operator|.
-name|xfire
-operator|.
-name|aegis
-operator|.
-name|type
-operator|.
-name|java5
-operator|.
 name|XmlType
 argument_list|(
 name|namespace

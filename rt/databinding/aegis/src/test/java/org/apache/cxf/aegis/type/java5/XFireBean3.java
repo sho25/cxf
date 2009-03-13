@@ -20,11 +20,6 @@ package|;
 end_package
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 class|class
 name|XFireBean3
@@ -34,18 +29,6 @@ name|String
 name|attributeProperty
 decl_stmt|;
 annotation|@
-name|org
-operator|.
-name|codehaus
-operator|.
-name|xfire
-operator|.
-name|aegis
-operator|.
-name|type
-operator|.
-name|java5
-operator|.
 name|XmlAttribute
 argument_list|(
 name|name
