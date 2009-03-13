@@ -1334,6 +1334,17 @@ argument_list|,
 literal|200
 argument_list|)
 expr_stmt|;
+name|getAndCompareAsStrings
+argument_list|(
+literal|"http://localhost:9080/bookstore/booksubresource/123/chapters/sub/1/recurse2"
+argument_list|,
+literal|"resources/expected_get_chapter1.txt"
+argument_list|,
+literal|"application/xml"
+argument_list|,
+literal|200
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test

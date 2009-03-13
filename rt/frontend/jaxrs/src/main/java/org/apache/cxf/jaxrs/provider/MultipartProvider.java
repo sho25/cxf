@@ -297,7 +297,7 @@ block|}
 argument_list|)
 specifier|public
 class|class
-name|ActivationProvider
+name|MultipartProvider
 implements|implements
 name|MessageBodyReader
 argument_list|<

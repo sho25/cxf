@@ -51,20 +51,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|MediaType
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -93,7 +79,7 @@ specifier|private
 name|JAXRSClientFactory
 parameter_list|()
 block|{               }
-comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -126,7 +112,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -156,7 +142,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing proxy headers will be inherited by       *        subresource proxies if any      * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing proxy headers will be inherited by       *        subresource proxies if any      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -209,7 +195,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param config classpath location of Spring configuration resource      * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @param config classpath location of Spring configuration resource      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -249,6 +235,55 @@ operator|.
 name|create
 argument_list|(
 name|cls
+argument_list|)
+return|;
+block|}
+comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls resource class, if not interface then a CGLIB proxy will be created      *        This class is expected to have a root JAXRS Path annotation containing      *        template variables, for ex, "/path/{id1}/{id2}"        * @param config classpath location of Spring configuration resource      * @param varValues values to replace root Path template variables         * @return typed proxy      */
+specifier|public
+specifier|static
+parameter_list|<
+name|T
+parameter_list|>
+name|T
+name|create
+parameter_list|(
+name|String
+name|baseAddress
+parameter_list|,
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|cls
+parameter_list|,
+name|String
+name|configLocation
+parameter_list|,
+name|Object
+modifier|...
+name|varValues
+parameter_list|)
+block|{
+name|JAXRSClientFactoryBean
+name|bean
+init|=
+name|getBean
+argument_list|(
+name|baseAddress
+argument_list|,
+name|cls
+argument_list|,
+name|configLocation
+argument_list|)
+decl_stmt|;
+return|return
+name|bean
+operator|.
+name|create
+argument_list|(
+name|cls
+argument_list|,
+name|varValues
 argument_list|)
 return|;
 block|}
@@ -407,63 +442,6 @@ name|create
 argument_list|(
 name|cls
 argument_list|)
-return|;
-block|}
-comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param contentType JAXRS MediaType representing HTTP Content-Type header, can be null      * @param acceptTypes JAXRS MediaTypes representing HTTP Accept header, can be null      * @return typed proxy      */
-specifier|public
-specifier|static
-parameter_list|<
-name|T
-parameter_list|>
-name|T
-name|create
-parameter_list|(
-name|String
-name|baseAddress
-parameter_list|,
-name|Class
-argument_list|<
-name|T
-argument_list|>
-name|cls
-parameter_list|,
-name|MediaType
-name|contentType
-parameter_list|,
-name|MediaType
-modifier|...
-name|acceptTypes
-parameter_list|)
-block|{
-name|T
-name|proxy
-init|=
-name|create
-argument_list|(
-name|baseAddress
-argument_list|,
-name|cls
-argument_list|)
-decl_stmt|;
-name|WebClient
-operator|.
-name|client
-argument_list|(
-name|proxy
-argument_list|)
-operator|.
-name|type
-argument_list|(
-name|contentType
-argument_list|)
-operator|.
-name|accept
-argument_list|(
-name|acceptTypes
-argument_list|)
-expr_stmt|;
-return|return
-name|proxy
 return|;
 block|}
 comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      *         * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
