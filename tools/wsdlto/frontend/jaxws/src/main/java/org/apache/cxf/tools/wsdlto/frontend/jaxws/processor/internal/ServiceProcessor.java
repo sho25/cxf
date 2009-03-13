@@ -3110,6 +3110,16 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|jm
+operator|.
+name|getReturn
+argument_list|()
+operator|.
+name|getName
+argument_list|()
 operator|.
 name|equals
 argument_list|(
