@@ -13,18 +13,6 @@ end_package
 
 begin_import
 import|import
-name|org
-operator|.
-name|xmlsoap
-operator|.
-name|ping
-operator|.
-name|PingResponseBody
-import|;
-end_import
-
-begin_import
-import|import
 name|interopbaseaddress
 operator|.
 name|interop
@@ -86,6 +74,18 @@ operator|.
 name|interop
 operator|.
 name|PingResponse
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|xmlsoap
+operator|.
+name|ping
+operator|.
+name|PingResponseBody
 import|;
 end_import
 

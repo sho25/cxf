@@ -65,22 +65,6 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|bus
-operator|.
-name|spring
-operator|.
-name|SpringBusFactory
-import|;
-end_import
-
-begin_import
-import|import
 name|interopbaseaddress
 operator|.
 name|interop
@@ -96,6 +80,22 @@ operator|.
 name|interop
 operator|.
 name|PingService10
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|bus
+operator|.
+name|spring
+operator|.
+name|SpringBusFactory
 import|;
 end_import
 
