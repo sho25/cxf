@@ -118,6 +118,16 @@ operator|.
 name|length
 operator|<
 literal|1
+operator|||
+literal|"ALL"
+operator|.
+name|equalsIgnoreCase
+argument_list|(
+name|argv
+index|[
+literal|0
+index|]
+argument_list|)
 condition|)
 block|{
 name|argv
