@@ -65,6 +65,20 @@ name|SecurityConstants
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|WSSConfig
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -79,6 +93,11 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|WSSConfig
+operator|.
+name|getDefaultWSConfig
+argument_list|()
+expr_stmt|;
 operator|new
 name|SpringBusFactory
 argument_list|()
