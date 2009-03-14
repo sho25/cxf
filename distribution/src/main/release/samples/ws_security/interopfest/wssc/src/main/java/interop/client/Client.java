@@ -280,22 +280,6 @@ operator|=
 name|tmp
 expr_stmt|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|argv
-index|[
-literal|0
-index|]
-operator|+
-literal|"    "
-operator|+
-name|local
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|argv
