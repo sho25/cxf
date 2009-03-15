@@ -831,11 +831,19 @@ condition|)
 block|{
 return|return;
 block|}
+comment|// replace "$" with "." to correctly deal with member classes
 name|imports
 operator|.
 name|add
 argument_list|(
 name|i
+operator|.
+name|replaceAll
+argument_list|(
+literal|"\\$"
+argument_list|,
+literal|"\\."
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -858,11 +866,19 @@ range|:
 name|ii
 control|)
 block|{
+comment|// replace "$" with "." to correctly deal with member classes
 name|imports
 operator|.
 name|add
 argument_list|(
 name|i
+operator|.
+name|replaceAll
+argument_list|(
+literal|"\\$"
+argument_list|,
+literal|"\\."
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
