@@ -431,6 +431,11 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
+synchronized|synchronized
+init|(
+name|element
+init|)
+block|{
 name|PolicyReference
 name|reference
 init|=
@@ -453,6 +458,7 @@ expr_stmt|;
 return|return
 name|reference
 return|;
+block|}
 block|}
 comment|/**      * Creates a Policy object from an InputStream.      *       * @param inputStream the input stream      * @return the Policy object constructed from the input stream      */
 specifier|public
@@ -581,6 +587,11 @@ parameter_list|,
 name|PolicyOperator
 name|operator
 parameter_list|)
+block|{
+synchronized|synchronized
+init|(
+name|operationElement
+init|)
 block|{
 if|if
 condition|(
@@ -939,6 +950,7 @@ block|}
 return|return
 name|operator
 return|;
+block|}
 block|}
 block|}
 end_class
