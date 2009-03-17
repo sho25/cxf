@@ -11,9 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxws
-operator|.
-name|interceptors
+name|jaxb
 package|;
 end_package
 
@@ -76,6 +74,20 @@ operator|.
 name|util
 operator|.
 name|ASMHelper
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|databinding
+operator|.
+name|WrapperHelper
 import|;
 end_import
 

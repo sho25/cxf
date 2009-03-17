@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxws
+name|jaxb
 package|;
 end_package
 
@@ -123,9 +123,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxws
-operator|.
-name|interceptors
+name|databinding
 operator|.
 name|WrapperHelper
 import|;
@@ -154,7 +152,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|WrapperHelperTest
+name|JAXBWrapperHelperTest
 extends|extends
 name|Assert
 block|{
@@ -294,7 +292,9 @@ function|;
 name|WrapperHelper
 name|wh
 init|=
-name|WrapperHelper
+operator|new
+name|JAXBDataBinding
+argument_list|()
 operator|.
 name|createWrapperHelper
 argument_list|(
