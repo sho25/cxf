@@ -493,6 +493,20 @@ name|StaxUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|W3CDOMStreamWriter
+import|;
+end_import
+
 begin_comment
 comment|/**  * Builds a SAAJ tree from the Document fragment inside the message which contains  * the SOAP headers and from the XMLStreamReader.  */
 end_comment
@@ -635,20 +649,17 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|DOMSource
-name|source
-init|=
-operator|new
-name|DOMSource
+name|StaxUtils
+operator|.
+name|copy
 argument_list|(
 name|node
-argument_list|)
-decl_stmt|;
-name|part
-operator|.
-name|setContent
+argument_list|,
+operator|new
+name|W3CDOMStreamWriter
 argument_list|(
-name|source
+name|part
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// TODO: setup mime headers

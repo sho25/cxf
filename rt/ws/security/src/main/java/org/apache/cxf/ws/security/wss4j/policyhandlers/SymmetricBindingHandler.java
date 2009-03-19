@@ -1884,6 +1884,15 @@ argument_list|(
 name|sigs
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|sigs
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 name|signatures
 operator|.
 name|add
@@ -1902,6 +1911,7 @@ name|tokIncluded
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|doEndorse
 argument_list|()
 expr_stmt|;
@@ -1919,6 +1929,15 @@ argument_list|(
 name|sigs
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|sigs
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 name|doSignature
 argument_list|(
 name|sigs
@@ -1932,6 +1951,7 @@ argument_list|,
 name|tokIncluded
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|//Encryption
 name|TokenWrapper
