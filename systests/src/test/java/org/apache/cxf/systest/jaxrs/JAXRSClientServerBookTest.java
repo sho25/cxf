@@ -2943,7 +2943,7 @@ name|get
 operator|.
 name|setRequestHeader
 argument_list|(
-literal|"BOOK"
+literal|"Book"
 argument_list|,
 literal|"1,2,3"
 argument_list|)
