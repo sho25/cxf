@@ -649,6 +649,28 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|node
+operator|==
+literal|null
+condition|)
+block|{
+comment|// replicate 2.1 behavior.
+name|part
+operator|.
+name|setContent
+argument_list|(
+operator|new
+name|DOMSource
+argument_list|(
+literal|null
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|StaxUtils
 operator|.
 name|copy
@@ -662,6 +684,7 @@ name|part
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 comment|// TODO: setup mime headers
 name|Collection
 argument_list|<
