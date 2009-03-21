@@ -2953,6 +2953,15 @@ name|schemaInfo
 argument_list|)
 expr_stmt|;
 block|}
+comment|// it's quite likely that the code in Aegis missed at least one ...
+name|si
+operator|.
+name|getXmlSchemaCollection
+argument_list|()
+operator|.
+name|addCrossImports
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 specifier|private

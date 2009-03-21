@@ -279,7 +279,7 @@ argument_list|()
 expr_stmt|;
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 name|systemId
 operator|+

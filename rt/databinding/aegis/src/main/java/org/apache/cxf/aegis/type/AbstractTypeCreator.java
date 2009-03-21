@@ -813,6 +813,51 @@ operator|==
 literal|null
 condition|)
 block|{
+comment|// We do not want to use the java.lang.whatever schema type.
+comment|// If the @ annotation or XML file didn't specify a schema type,
+comment|// but the natural type has a schema type mapping, we use that rather
+comment|// than create nonsense.
+if|if
+condition|(
+name|info
+operator|.
+name|getTypeClass
+argument_list|()
+operator|.
+name|getPackage
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|startsWith
+argument_list|(
+literal|"java"
+argument_list|)
+condition|)
+block|{
+name|name
+operator|=
+name|tm
+operator|.
+name|getTypeQName
+argument_list|(
+name|info
+operator|.
+name|getTypeClass
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+comment|// if it's still null, we'll take our lumps, but probably end up wih
+comment|// an invalid schema.
+if|if
+condition|(
+name|name
+operator|==
+literal|null
+condition|)
+block|{
 name|name
 operator|=
 name|createQName
@@ -823,6 +868,7 @@ name|getTypeClass
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|type
 operator|.
