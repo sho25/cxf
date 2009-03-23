@@ -246,6 +246,48 @@ return|return
 literal|"This is a list method"
 return|;
 block|}
+annotation|@
+name|GET
+annotation|@
+name|Path
+argument_list|(
+literal|"{id:custom}"
+argument_list|)
+annotation|@
+name|Produces
+argument_list|(
+literal|"application/bar"
+argument_list|)
+specifier|public
+name|String
+name|readBar
+parameter_list|()
+block|{
+return|return
+literal|"This is a bar method"
+return|;
+block|}
+annotation|@
+name|GET
+annotation|@
+name|Path
+argument_list|(
+literal|"{id:custom}"
+argument_list|)
+annotation|@
+name|Produces
+argument_list|(
+literal|"application/foo"
+argument_list|)
+specifier|public
+name|String
+name|readFoo
+parameter_list|()
+block|{
+return|return
+literal|"This is a foo method"
+return|;
+block|}
 block|}
 end_class
 

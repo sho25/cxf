@@ -2490,6 +2490,8 @@ argument_list|(
 block|{
 literal|"application/xml"
 block|,
+literal|"application/bar+xml"
+block|,
 literal|"application/json"
 block|}
 argument_list|)
