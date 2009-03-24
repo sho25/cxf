@@ -391,6 +391,10 @@ decl_stmt|;
 if|if
 condition|(
 name|faultClass
+operator|!=
+literal|null
+operator|&&
+name|faultClass
 operator|.
 name|isAssignableFrom
 argument_list|(
@@ -474,6 +478,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|faultClass
+operator|!=
+literal|null
+operator|&&
 name|faultClass
 operator|.
 name|isAssignableFrom
