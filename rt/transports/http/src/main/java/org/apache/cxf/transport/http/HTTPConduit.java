@@ -1912,9 +1912,11 @@ literal|"AutoRedirect is turned on."
 argument_list|)
 expr_stmt|;
 block|}
+comment|// DELETE does not work and empty PUTs cause misleading exceptions
+comment|// if chunking is enabled
+comment|// TODO : ensure chunking can be enabled for non-empty PUTs - if requested
 if|if
 condition|(
-operator|!
 name|connection
 operator|.
 name|getRequestMethod
@@ -1922,7 +1924,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"GET"
+literal|"POST"
 argument_list|)
 operator|&&
 name|getClient
@@ -6424,10 +6426,22 @@ argument_list|)
 expr_stmt|;
 comment|// Trust is okay, set up for writing the request.
 comment|// If this is a GET method we must not touch the output
-comment|// stream as this automagically turns the request into a POST.
+comment|// stream as this automatically turns the request into a POST.
+comment|// Nor it should be done in case of DELETE - strangely, empty PUTs
+comment|// work ok
 if|if
 condition|(
 literal|"GET"
+operator|.
+name|equals
+argument_list|(
+name|connection
+operator|.
+name|getRequestMethod
+argument_list|()
+argument_list|)
+operator|||
+literal|"DELETE"
 operator|.
 name|equals
 argument_list|(
