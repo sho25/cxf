@@ -5225,11 +5225,18 @@ name|method2
 argument_list|)
 expr_stmt|;
 block|}
+comment|// See CXF-2135
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 annotation|@
 name|Test
 specifier|public
 name|void
-name|testReuseJabBindingFile1
+name|testReuseJaxbBindingFile1
 parameter_list|()
 throws|throws
 name|Exception

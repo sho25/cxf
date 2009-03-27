@@ -1454,6 +1454,9 @@ specifier|protected
 name|void
 name|assertAttributesEquals
 parameter_list|(
+name|QName
+name|element
+parameter_list|,
 name|Map
 argument_list|<
 name|QName
@@ -1544,7 +1547,9 @@ operator|.
 name|getKey
 argument_list|()
 operator|+
-literal|" is missing."
+literal|" is missing in "
+operator|+
+name|element
 argument_list|)
 throw|;
 block|}
@@ -1663,6 +1668,11 @@ name|assertAttributesEquals
 argument_list|(
 name|expected
 operator|.
+name|getName
+argument_list|()
+argument_list|,
+name|expected
+operator|.
 name|getAttributes
 argument_list|()
 argument_list|,
@@ -1676,6 +1686,11 @@ argument_list|)
 expr_stmt|;
 name|assertAttributesEquals
 argument_list|(
+name|expected
+operator|.
+name|getName
+argument_list|()
+argument_list|,
 name|source
 operator|.
 name|getAttributes

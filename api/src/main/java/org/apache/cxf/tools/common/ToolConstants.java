@@ -1105,9 +1105,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|SCHEMA_MAP
+name|XML_SCHEMA_COLLECTION
 init|=
-literal|"schemaMap"
+literal|"xmlSchemaCollection"
 decl_stmt|;
 specifier|public
 specifier|static
