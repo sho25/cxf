@@ -866,13 +866,6 @@ argument_list|)
 decl_stmt|;
 name|schemaInfo
 operator|.
-name|setElement
-argument_list|(
-name|schemaElem
-argument_list|)
-expr_stmt|;
-name|schemaInfo
-operator|.
 name|setSchema
 argument_list|(
 name|xmlSchema
