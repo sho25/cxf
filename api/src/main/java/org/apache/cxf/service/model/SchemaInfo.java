@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|ref
+operator|.
+name|SoftReference
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -207,6 +219,24 @@ specifier|private
 name|String
 name|systemId
 decl_stmt|;
+comment|// Avoid re-serializing all the time. Particularly as a cached WSDL will
+comment|// hold a reference to the element.
+specifier|private
+name|SoftReference
+argument_list|<
+name|Element
+argument_list|>
+name|cachedElement
+init|=
+operator|new
+name|SoftReference
+argument_list|<
+name|Element
+argument_list|>
+argument_list|(
+literal|null
+argument_list|)
+decl_stmt|;
 specifier|public
 name|SchemaInfo
 parameter_list|(
@@ -342,17 +372,33 @@ operator|=
 name|nsUri
 expr_stmt|;
 block|}
+comment|/**      * Build and return a DOM tree for this schema.      * @return      */
 specifier|public
 specifier|synchronized
 name|Element
 name|getElement
 parameter_list|()
 block|{
+comment|// if someone recently used this DOM tree, take advantage.
 name|Element
 name|element
 init|=
-literal|null
+name|cachedElement
+operator|.
+name|get
+argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|element
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|element
+return|;
+block|}
 if|if
 condition|(
 name|getSchema
@@ -471,6 +517,17 @@ name|serializedSchema
 operator|.
 name|getDocumentElement
 argument_list|()
+expr_stmt|;
+name|cachedElement
+operator|=
+operator|new
+name|SoftReference
+argument_list|<
+name|Element
+argument_list|>
+argument_list|(
+name|element
+argument_list|)
 expr_stmt|;
 block|}
 comment|// XXX A problem can occur with the ibm jdk when the XmlSchema
