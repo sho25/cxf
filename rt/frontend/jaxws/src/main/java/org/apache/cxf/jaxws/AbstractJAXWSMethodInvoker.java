@@ -892,6 +892,13 @@ argument_list|(
 name|exchange
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|sm
+operator|!=
+literal|null
+condition|)
+block|{
 name|Iterator
 name|iter
 init|=
@@ -924,6 +931,7 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
