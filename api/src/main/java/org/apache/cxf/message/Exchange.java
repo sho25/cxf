@@ -64,6 +64,7 @@ name|Exchange
 extends|extends
 name|StringMap
 block|{
+comment|/**      * Returns the inbound message for the exchange. On the client-side, this       * is the response. On the server-side, this is the request.      *       * @return the inboubnd message      */
 name|Message
 name|getInMessage
 parameter_list|()
@@ -75,6 +76,7 @@ name|Message
 name|m
 parameter_list|)
 function_decl|;
+comment|/**      * Returns the outbound message for the exchange. On the client-side, this       * is the request. On the server-side, this is the response. During the       * inbound message processing, the outbound message is null.      *       * @return the outbound message      */
 name|Message
 name|getOutMessage
 parameter_list|()
@@ -141,12 +143,12 @@ name|Conduit
 name|conduit
 parameter_list|)
 function_decl|;
-comment|/**      * @return true if the exchange is known to be a one-way exchange      */
+comment|/**      * Determines if the exchange is one-way.      *       * @return true if the exchange is known to be a one-way exchange      */
 name|boolean
 name|isOneWay
 parameter_list|()
 function_decl|;
-comment|/**      * @return true if the frontend will be wait for the response.   Transports      * can then optimize themselves to process the response immediately instead       * of using a background thread or similar.      */
+comment|/**      * Determines if the exchange requires the frontend to wait for a       * response. Transports can then optimize themselves to process the       * response immediately instead of using a background thread or similar.      *       * @return true if the frontend will wait for the response      */
 name|boolean
 name|isSynchronous
 parameter_list|()
@@ -166,6 +168,7 @@ name|boolean
 name|b
 parameter_list|)
 function_decl|;
+comment|/**      * {@inheritDoc}      */
 name|void
 name|clear
 parameter_list|()

@@ -352,6 +352,7 @@ name|Exchange
 name|exchange
 parameter_list|)
 function_decl|;
+comment|/**      * Retrieve any binary attachments associated with the message.      *        * @return a collection containing the attachments      */
 name|Collection
 argument_list|<
 name|Attachment

@@ -67,7 +67,7 @@ argument_list|>
 name|getHeaderNames
 parameter_list|()
 function_decl|;
-comment|/**      * Whether or not this is an XOP package. This will affect the       * serialization of the attachment. If true, it will be serialized      * as binary data, and not Base64Binary.      *       * @return true iff this attachment is an XOP package      */
+comment|/**      * Whether or not this is an XOP package. This will affect the       * serialization of the attachment. If true, it will be serialized      * as binary data, and not Base64Binary.      *       * @return true if this attachment is an XOP package      */
 name|boolean
 name|isXOP
 parameter_list|()
