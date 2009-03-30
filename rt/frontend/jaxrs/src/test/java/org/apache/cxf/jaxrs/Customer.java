@@ -1014,6 +1014,31 @@ literal|"p1"
 argument_list|)
 name|Customer
 name|c
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p2"
+argument_list|)
+name|Customer
+index|[]
+name|c2
+parameter_list|)
+block|{
+comment|// complete
+block|}
+specifier|public
+name|void
+name|testCustomerParam2
+parameter_list|(
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p1"
+argument_list|)
+name|String
+index|[]
+name|p
 parameter_list|)
 block|{
 comment|// complete
