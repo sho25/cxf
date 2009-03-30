@@ -107,10 +107,6 @@ name|MojoExecutionException
 import|;
 end_import
 
-begin_comment
-comment|/**    This class was ported from fAnt wsdl2java task    http://code.google.com/p/fant/  */
-end_comment
-
 begin_class
 specifier|public
 specifier|final
