@@ -907,6 +907,11 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|boolean
+name|notValid
+init|=
+literal|false
+decl_stmt|;
 for|for
 control|(
 name|AbstractValidator
@@ -924,6 +929,10 @@ name|isValid
 argument_list|()
 condition|)
 block|{
+name|notValid
+operator|=
+literal|true
+expr_stmt|;
 name|addErrorMessage
 argument_list|(
 name|validator
@@ -932,6 +941,13 @@ name|getErrorMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+if|if
+condition|(
+name|notValid
+condition|)
+block|{
 throw|throw
 operator|new
 name|ToolException
@@ -942,7 +958,6 @@ name|getErrorMessage
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 comment|// By default just use WsdlRefValidator
 if|if
