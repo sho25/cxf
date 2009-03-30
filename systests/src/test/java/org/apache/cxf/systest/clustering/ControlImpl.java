@@ -525,6 +525,44 @@ return|return
 literal|null
 return|;
 block|}
+specifier|public
+name|Response
+argument_list|<
+name|?
+argument_list|>
+name|setFaultLocationAsync
+parameter_list|(
+name|FaultLocation
+name|in
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
+specifier|public
+name|Future
+argument_list|<
+name|?
+argument_list|>
+name|setFaultLocationAsync
+parameter_list|(
+name|FaultLocation
+name|in
+parameter_list|,
+name|AsyncHandler
+argument_list|<
+name|?
+argument_list|>
+name|asyncHandler
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
 block|}
 end_class
 
