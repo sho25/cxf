@@ -165,20 +165,6 @@ name|URIResolver
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|resolver
-operator|.
-name|Catalog
-import|;
-end_import
-
 begin_comment
 comment|/**  * Resolves URIs using Apache Commons Resolver API.  */
 end_comment
@@ -195,7 +181,7 @@ name|ExtendedURIResolver
 name|resolver
 decl_stmt|;
 specifier|private
-name|Catalog
+name|OASISCatalogManager
 name|catalogResolver
 decl_stmt|;
 specifier|private
@@ -253,9 +239,6 @@ name|getCatalogManager
 argument_list|(
 name|bus
 argument_list|)
-operator|.
-name|getCatalog
-argument_list|()
 expr_stmt|;
 block|}
 specifier|public
@@ -278,9 +261,6 @@ operator|.
 name|catalogResolver
 operator|=
 name|catalogManager
-operator|.
-name|getCatalog
-argument_list|()
 expr_stmt|;
 block|}
 specifier|public
@@ -316,6 +296,15 @@ name|resolvedSchemaLocation
 init|=
 literal|null
 decl_stmt|;
+if|if
+condition|(
+name|this
+operator|.
+name|catalogResolver
+operator|!=
+literal|null
+condition|)
+block|{
 try|try
 block|{
 name|resolvedSchemaLocation
@@ -381,6 +370,7 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
+block|}
 block|}
 name|InputSource
 name|in

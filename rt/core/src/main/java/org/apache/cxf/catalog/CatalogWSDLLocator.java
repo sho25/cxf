@@ -99,20 +99,6 @@ name|TransportURIResolver
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|resolver
-operator|.
-name|Catalog
-import|;
-end_import
-
 begin_comment
 comment|/**  * Resolves WSDL URIs using Apache Commons Resolver API.  */
 end_comment
@@ -133,8 +119,8 @@ name|ExtendedURIResolver
 name|resolver
 decl_stmt|;
 specifier|private
-name|Catalog
-name|catalogResolver
+name|OASISCatalogManager
+name|manager
 decl_stmt|;
 specifier|private
 name|String
@@ -180,12 +166,9 @@ name|wsdlUrl
 expr_stmt|;
 name|this
 operator|.
-name|catalogResolver
+name|manager
 operator|=
 name|catalogManager
-operator|.
-name|getCatalog
-argument_list|()
 expr_stmt|;
 name|this
 operator|.
@@ -214,7 +197,7 @@ name|wsdlUrl
 expr_stmt|;
 name|this
 operator|.
-name|catalogResolver
+name|manager
 operator|=
 name|OASISCatalogManager
 operator|.
@@ -222,9 +205,6 @@ name|getCatalogManager
 argument_list|(
 name|b
 argument_list|)
-operator|.
-name|getCatalog
-argument_list|()
 expr_stmt|;
 name|this
 operator|.
@@ -249,7 +229,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|catalogResolver
+name|manager
 operator|!=
 literal|null
 condition|)
@@ -259,7 +239,7 @@ block|{
 name|String
 name|s
 init|=
-name|catalogResolver
+name|manager
 operator|.
 name|resolveSystem
 argument_list|(
@@ -435,7 +415,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|catalogResolver
+name|manager
 operator|!=
 literal|null
 condition|)
@@ -446,7 +426,7 @@ name|resolvedImportLocation
 operator|=
 name|this
 operator|.
-name|catalogResolver
+name|manager
 operator|.
 name|resolveSystem
 argument_list|(
@@ -462,7 +442,7 @@ condition|)
 block|{
 name|resolvedImportLocation
 operator|=
-name|catalogResolver
+name|manager
 operator|.
 name|resolveURI
 argument_list|(
@@ -479,7 +459,7 @@ condition|)
 block|{
 name|resolvedImportLocation
 operator|=
-name|catalogResolver
+name|manager
 operator|.
 name|resolvePublic
 argument_list|(

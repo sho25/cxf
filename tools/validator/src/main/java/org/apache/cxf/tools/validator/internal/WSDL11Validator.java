@@ -435,20 +435,6 @@ name|WSDLManager
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|resolver
-operator|.
-name|Catalog
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -585,7 +571,7 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-name|Catalog
+name|OASISCatalogManager
 name|catalogResolver
 init|=
 name|OASISCatalogManager
@@ -597,9 +583,6 @@ operator|.
 name|getBus
 argument_list|()
 argument_list|)
-operator|.
-name|getCatalog
-argument_list|()
 decl_stmt|;
 name|String
 name|nw

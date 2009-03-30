@@ -1717,6 +1717,17 @@ name|String
 name|base
 parameter_list|)
 block|{
+if|if
+condition|(
+name|catalogs
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|String
 name|resolvedSchemaLocation
 init|=
@@ -1727,9 +1738,6 @@ block|{
 name|resolvedSchemaLocation
 operator|=
 name|catalogs
-operator|.
-name|getCatalog
-argument_list|()
 operator|.
 name|resolveSystem
 argument_list|(
@@ -1747,9 +1755,6 @@ name|resolvedSchemaLocation
 operator|=
 name|catalogs
 operator|.
-name|getCatalog
-argument_list|()
-operator|.
 name|resolveURI
 argument_list|(
 name|start
@@ -1766,9 +1771,6 @@ block|{
 name|resolvedSchemaLocation
 operator|=
 name|catalogs
-operator|.
-name|getCatalog
-argument_list|()
 operator|.
 name|resolvePublic
 argument_list|(

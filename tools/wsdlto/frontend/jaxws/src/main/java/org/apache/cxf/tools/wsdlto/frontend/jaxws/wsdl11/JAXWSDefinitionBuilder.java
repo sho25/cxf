@@ -1235,9 +1235,6 @@ name|getCatalogManager
 argument_list|(
 name|bus
 argument_list|)
-operator|.
-name|getCatalog
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|WSDLManager

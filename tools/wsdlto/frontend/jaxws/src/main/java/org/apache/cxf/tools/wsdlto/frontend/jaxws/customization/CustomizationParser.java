@@ -489,20 +489,6 @@ name|ProcessorUtil
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|resolver
-operator|.
-name|Catalog
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final
@@ -3432,7 +3418,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|Catalog
+name|OASISCatalogManager
 name|catalogResolver
 init|=
 name|OASISCatalogManager
@@ -3441,9 +3427,6 @@ name|getCatalogManager
 argument_list|(
 name|bus
 argument_list|)
-operator|.
-name|getCatalog
-argument_list|()
 decl_stmt|;
 if|if
 condition|(
