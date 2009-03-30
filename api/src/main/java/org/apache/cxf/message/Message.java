@@ -370,7 +370,7 @@ argument_list|>
 name|attachments
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve the encapsulated content as a particular type (a result type      * if message is outbound, a source type if message is inbound)      *       * @param format the expected content format       * @return the encapsulated content      */
+comment|/**      * Retrieve the encapsulated content as a particular type. The content is       * available as a result type if the message is outbound. The content       * is available as a source type if message is inbound. If the content is       * not available as the specified type null is returned.      *       * @param format the expected content format       * @return the encapsulated content      */
 parameter_list|<
 name|T
 parameter_list|>
