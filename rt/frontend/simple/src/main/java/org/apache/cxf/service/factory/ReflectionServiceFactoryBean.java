@@ -9448,6 +9448,12 @@ name|isRPC
 argument_list|(
 name|method
 argument_list|)
+operator|||
+operator|!
+name|isWrapped
+argument_list|(
+name|method
+argument_list|)
 condition|)
 block|{
 name|List
