@@ -45,21 +45,6 @@ end_comment
 
 begin_class
 annotation|@
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|feature
-operator|.
-name|Features
-argument_list|(
-name|features
-operator|=
-literal|"org.apache.cxf.feature.LoggingFeature"
-argument_list|)
-annotation|@
 name|WebService
 argument_list|(
 name|endpointInterface
