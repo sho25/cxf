@@ -878,6 +878,13 @@ argument_list|(
 name|systemId
 argument_list|)
 expr_stmt|;
+name|schemaInfo
+operator|.
+name|setElement
+argument_list|(
+name|schemaElem
+argument_list|)
+expr_stmt|;
 name|schemaInfos
 operator|.
 name|add
