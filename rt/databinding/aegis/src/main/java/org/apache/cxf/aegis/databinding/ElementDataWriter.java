@@ -289,9 +289,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|staxutils
+name|service
 operator|.
-name|W3CDOMStreamWriter
+name|model
+operator|.
+name|ServiceInfo
 import|;
 end_import
 
@@ -301,13 +303,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|cxf
 operator|.
-name|commons
+name|staxutils
 operator|.
-name|schema
-operator|.
-name|XmlSchemaCollection
+name|W3CDOMStreamWriter
 import|;
 end_import
 
@@ -663,14 +663,12 @@ return|;
 block|}
 specifier|public
 name|void
-name|setSchema
+name|setValidationServiceModel
 parameter_list|(
-name|XmlSchemaCollection
-name|schema
+name|ServiceInfo
+name|serviceInfo
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 block|}
 end_class
 

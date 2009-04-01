@@ -207,13 +207,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|cxf
 operator|.
-name|commons
+name|service
 operator|.
-name|schema
+name|model
 operator|.
-name|XmlSchemaCollection
+name|ServiceInfo
 import|;
 end_import
 
@@ -293,8 +293,8 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
-name|XmlSchemaCollection
-name|schemas
+name|boolean
+name|validate
 decl_stmt|;
 specifier|public
 name|DataReaderImpl
@@ -484,9 +484,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|schemas
-operator|!=
-literal|null
+name|validate
 condition|)
 block|{
 name|options
@@ -558,11 +556,6 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 throw|throw
 operator|new
 name|Fault
@@ -837,12 +830,13 @@ name|XMLStreamException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+argument_list|)
+throw|;
 block|}
 block|}
 return|return
@@ -899,17 +893,15 @@ parameter_list|)
 block|{     }
 specifier|public
 name|void
-name|setSchema
+name|setValidationServiceModel
 parameter_list|(
-name|XmlSchemaCollection
-name|validationSchemas
+name|ServiceInfo
+name|serviceModel
 parameter_list|)
 block|{
-name|this
-operator|.
-name|schemas
+name|validate
 operator|=
-name|validationSchemas
+literal|true
 expr_stmt|;
 block|}
 block|}

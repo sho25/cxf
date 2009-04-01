@@ -764,7 +764,7 @@ operator|)
 name|reader
 operator|)
 operator|.
-name|setSchema
+name|setValidationServiceModel
 argument_list|(
 name|service
 operator|.
@@ -775,12 +775,6 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
-operator|.
-name|getXmlSchemaCollection
-argument_list|()
-operator|.
-name|getXmlSchemaCollection
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

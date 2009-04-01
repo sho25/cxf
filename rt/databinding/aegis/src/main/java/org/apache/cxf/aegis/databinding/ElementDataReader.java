@@ -171,13 +171,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|cxf
 operator|.
-name|commons
+name|service
 operator|.
-name|schema
+name|model
 operator|.
-name|XmlSchemaCollection
+name|ServiceInfo
 import|;
 end_import
 
@@ -416,14 +416,12 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setSchema
+name|setValidationServiceModel
 parameter_list|(
-name|XmlSchemaCollection
-name|schema
+name|ServiceInfo
+name|serviceInfo
 parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-block|}
+block|{     }
 block|}
 end_class
 

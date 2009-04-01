@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|databinding
+name|wstx_msv_validation
 package|;
 end_package
 
@@ -19,36 +19,75 @@ begin_import
 import|import
 name|org
 operator|.
-name|apache
+name|w3c
 operator|.
-name|cxf
+name|dom
 operator|.
-name|service
-operator|.
-name|model
-operator|.
-name|ServiceInfo
+name|Element
 import|;
 end_import
 
 begin_comment
-comment|/**  * If a DataReader<T> implements this interface, it prefers to be supplied with schema  * for validation via a service model instead of via a packaged Schema object.  */
+comment|/**  * A schema in a DOM Element. This is used in the WSDLSchemaReader to handle inter-schema cross-references. XS  */
 end_comment
 
-begin_interface
+begin_class
 specifier|public
-interface|interface
-name|DataBindingValidation2
+class|class
+name|EmbeddedSchema
 block|{
-name|void
-name|setValidationServiceModel
+specifier|private
+name|String
+name|systemId
+decl_stmt|;
+specifier|private
+name|Element
+name|schemaElement
+decl_stmt|;
+comment|/**      * Create object to represent one of the schemas in a WSDL      *       * @param systemId schema system Id.      * @param schemaElement Element for the schema.      */
+specifier|public
+name|EmbeddedSchema
 parameter_list|(
-name|ServiceInfo
-name|serviceInfo
+name|String
+name|systemId
+parameter_list|,
+name|Element
+name|schemaElement
 parameter_list|)
-function_decl|;
+block|{
+name|this
+operator|.
+name|systemId
+operator|=
+name|systemId
+expr_stmt|;
+name|this
+operator|.
+name|schemaElement
+operator|=
+name|schemaElement
+expr_stmt|;
 block|}
-end_interface
+specifier|public
+name|String
+name|getSystemId
+parameter_list|()
+block|{
+return|return
+name|systemId
+return|;
+block|}
+specifier|public
+name|Element
+name|getSchemaElement
+parameter_list|()
+block|{
+return|return
+name|schemaElement
+return|;
+block|}
+block|}
+end_class
 
 end_unit
 

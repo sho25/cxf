@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|staxutils
+name|io
 package|;
 end_package
 
@@ -41,17 +41,29 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
+name|XMLStreamWriter
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|cxf
 operator|.
-name|commons
+name|service
 operator|.
-name|schema
+name|model
 operator|.
-name|XmlSchemaCollection
+name|ServiceInfo
 import|;
 end_import
 
@@ -71,8 +83,20 @@ parameter_list|(
 name|XMLStreamReader
 name|reader
 parameter_list|,
-name|XmlSchemaCollection
-name|schemas
+name|ServiceInfo
+name|serviceInfo
+parameter_list|)
+throws|throws
+name|XMLStreamException
+function_decl|;
+name|void
+name|setupValidation
+parameter_list|(
+name|XMLStreamWriter
+name|writer
+parameter_list|,
+name|ServiceInfo
+name|serviceInfo
 parameter_list|)
 throws|throws
 name|XMLStreamException
