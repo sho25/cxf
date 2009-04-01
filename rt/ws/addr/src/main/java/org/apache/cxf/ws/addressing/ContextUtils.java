@@ -816,7 +816,7 @@ argument_list|()
 operator|)
 return|;
 block|}
-comment|/**     * Determine if current messaging role is that of requestor.     *     * @param message the current Message     * @return true iff the current messaging role is that of requestor     */
+comment|/**     * Determine if current messaging role is that of requestor.     *     * @param message the current Message     * @return true if the current messaging role is that of requestor     */
 specifier|public
 specifier|static
 name|boolean
@@ -850,7 +850,7 @@ name|booleanValue
 argument_list|()
 return|;
 block|}
-comment|/**      * Get appropriate property name for message addressing properties.      *      * @param isProviderContext true if the binding provider request context       * available to the client application as opposed to the message context       * visible to handlers      * @param isRequestor true iff the current messaging role is that of      * requestor      * @param isOutbound true iff the message is outbound      * @return the property name to use when caching the MAPs in the context      */
+comment|/**      * Get appropriate property name for message addressing properties.      *      * @param isProviderContext true if the binding provider request context       * available to the client application as opposed to the message context       * visible to handlers      * @param isRequestor true if the current messaging role is that of      * requestor      * @param isOutbound true if the message is outbound      * @return the property name to use when caching the MAPs in the context      */
 specifier|public
 specifier|static
 name|String
@@ -886,7 +886,7 @@ else|:
 name|SERVER_ADDRESSING_PROPERTIES_INBOUND
 return|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param message the current message      * @param isOutbound true iff the message is outbound      */
+comment|/**      * Store MAPs in the message.      *      * @param message the current message      * @param isOutbound true if the message is outbound      */
 specifier|public
 specifier|static
 name|void
@@ -919,7 +919,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true iff the message is outbound      * @param isRequestor true iff the current messaging role is that of      * requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      */
+comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      * requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      */
 specifier|public
 specifier|static
 name|void
@@ -952,7 +952,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true iff the message is outbound      * @param isRequestor true iff the current messaging role is that of      * requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      * @param isProviderContext true if the binding provider request context       */
+comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      * requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      * @param isProviderContext true if the binding provider request context       */
 specifier|public
 specifier|static
 name|void
@@ -1017,7 +1017,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param message the current message      * @param isProviderContext true if the binding provider request context      * available to the client application as opposed to the message context      * visible to handlers      * @param isOutbound true iff the message is outbound      * @return the current addressing properties      */
+comment|/**      * @param message the current message      * @param isProviderContext true if the binding provider request context      * available to the client application as opposed to the message context      * visible to handlers      * @param isOutbound true if the message is outbound      * @return the current addressing properties      */
 specifier|public
 specifier|static
 name|AddressingPropertiesImpl
@@ -1046,7 +1046,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * @param message the current message      * @param isProviderContext true if the binding provider request context      * available to the client application as opposed to the message context      * visible to handlers      * @param isOutbound true iff the message is outbound      * @param warnIfMissing log a warning  message if properties cannot be retrieved      * @return the current addressing properties      */
+comment|/**      * @param message the current message      * @param isProviderContext true if the binding provider request context      * available to the client application as opposed to the message context      * visible to handlers      * @param isOutbound true if the message is outbound      * @param warnIfMissing log a warning  message if properties cannot be retrieved      * @return the current addressing properties      */
 specifier|public
 specifier|static
 name|AddressingPropertiesImpl
@@ -1225,7 +1225,7 @@ return|return
 name|relatesTo
 return|;
 block|}
-comment|/**      * Helper method to determine if an EPR address is generic (either null,      * none or anonymous).      *      * @param ref the EPR under test      * @return true iff the address is generic      */
+comment|/**      * Helper method to determine if an EPR address is generic (either null,      * none or anonymous).      *      * @param ref the EPR under test      * @return true if the address is generic      */
 specifier|public
 specifier|static
 name|boolean
@@ -1278,7 +1278,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Helper method to determine if an MAPs Action is empty (a null action      * is considered empty, whereas a zero length action suppresses      * the propogation of the Action property).      *      * @param ref the MAPs Action under test      * @return true iff the Action is empty      */
+comment|/**      * Helper method to determine if an MAPs Action is empty (a null action      * is considered empty, whereas a zero length action suppresses      * the propagation of the Action property).      *      * @param ref the MAPs Action under test      * @return true if the Action is empty      */
 specifier|public
 specifier|static
 name|boolean

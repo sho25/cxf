@@ -79,31 +79,37 @@ name|TRANSPORT
 init|=
 literal|"org.apache.cxf.transport"
 decl_stmt|;
+comment|/**      * Boolean property specifying if the message is a request message.      */
 name|String
 name|REQUESTOR_ROLE
 init|=
 literal|"org.apache.cxf.client"
 decl_stmt|;
+comment|/**      * Boolean property specifying if the message is inbound.      */
 name|String
 name|INBOUND_MESSAGE
 init|=
 literal|"org.apache.cxf.message.inbound"
 decl_stmt|;
+comment|/**      * A Map keyed by a string that stores optional context information       * associated with the invocation that spawned the message.      */
 name|String
 name|INVOCATION_CONTEXT
 init|=
 literal|"org.apache.cxf.invocation.context"
 decl_stmt|;
+comment|/**      * A Map containing the MIME headers for a SOAP message.      */
 name|String
 name|MIME_HEADERS
 init|=
 literal|"org.apache.cxf.mime.headers"
 decl_stmt|;
+comment|/**      * Boolean property specifying if the server should send the response       * asynchronously.      */
 name|String
 name|ASYNC_POST_RESPONSE_DISPATCH
 init|=
 literal|"org.apache.cxf.async.post.response.dispatch"
 decl_stmt|;
+comment|/**      * Boolean property specifying if this message arrived via a       * decoupled endpoint.      */
 name|String
 name|DECOUPLED_CHANNEL_MESSAGE
 init|=
@@ -198,6 +204,7 @@ argument_list|()
 operator|+
 literal|".QUERY_STRING"
 decl_stmt|;
+comment|/**      * Boolean property specifying in the runtime is configured to process       * MTOM attachments.      */
 name|String
 name|MTOM_ENABLED
 init|=
