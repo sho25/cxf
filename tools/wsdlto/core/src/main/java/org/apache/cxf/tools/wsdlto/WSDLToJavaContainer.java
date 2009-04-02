@@ -1127,6 +1127,17 @@ block|{
 comment|// TODO: wsdl2.0 support
 block|}
 block|}
+name|context
+operator|.
+name|put
+argument_list|(
+name|ToolConstants
+operator|.
+name|SERVICE_LIST
+argument_list|,
+name|serviceList
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String
@@ -1330,6 +1341,15 @@ expr_stmt|;
 block|}
 block|}
 block|}
+name|context
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|SERVICE_LIST
+argument_list|)
+expr_stmt|;
 comment|// Build projects: compile classes and copy resources etc.
 if|if
 condition|(
