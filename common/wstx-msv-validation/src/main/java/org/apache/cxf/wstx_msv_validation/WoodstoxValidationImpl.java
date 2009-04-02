@@ -172,6 +172,15 @@ block|{
 comment|/* If the dependencies are missing ... */
 return|return;
 block|}
+catch|catch
+parameter_list|(
+name|NoSuchMethodError
+name|nsme
+parameter_list|)
+block|{
+comment|// these don't inherit from 'Exception'
+return|return;
+block|}
 if|if
 condition|(
 literal|null
