@@ -1616,6 +1616,17 @@ name|out
 argument_list|,
 name|a
 argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
+name|initializeInterceptors
+argument_list|(
+name|reg
+argument_list|,
+name|out
+argument_list|,
+name|a
+argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
