@@ -513,7 +513,6 @@ return|return
 name|message
 return|;
 block|}
-comment|// TODO: handle the boolean parameter
 specifier|public
 name|Object
 index|[]
@@ -669,7 +668,7 @@ operator|.
 name|toArray
 argument_list|(
 operator|new
-name|SOAPHeaderElement
+name|Object
 index|[
 name|ret
 operator|.
