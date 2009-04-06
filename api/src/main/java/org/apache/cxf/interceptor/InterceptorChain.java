@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base interface for all interceptor chains.  An interceptor chain is an  * ordered list of interceptors associated with one portion of the web service  * processing pipeline.  Interceptor chains are defined for either the SOAP   * client's request or response handling, the web service's, or error handling  * interceptor chains for SOAP faults.  */
+comment|/**  * Base interface for all interceptor chains.  An interceptor chain is an  * ordered list of interceptors associated with one portion of the message  * processing pipeline. Interceptor chains are defined for a client's request   * processing, response processing, and incoming SOAP fault processing. Interceptor   * chains are defined for a service's request processing, response processing, and   * outgoing SOAP fault processing.  */
 end_comment
 
 begin_interface
@@ -104,6 +104,7 @@ name|STARTING_AT_INTERCEPTOR_ID
 init|=
 literal|"starting_at_interceptor_id"
 decl_stmt|;
+comment|/**      * Adds a single interceptor to the interceptor chain.      *       * @param i the interceptor to add      */
 name|void
 name|add
 parameter_list|(
@@ -111,6 +112,7 @@ name|Interceptor
 name|i
 parameter_list|)
 function_decl|;
+comment|/**      * Adds multiple interceptors to the interceptor chain.       * @param i the interceptors to add to the chain      */
 name|void
 name|add
 parameter_list|(
