@@ -4356,21 +4356,21 @@ return|;
 block|}
 else|else
 block|{
-name|info
-operator|.
-name|setNotAsserted
+name|policyNotAsserted
 argument_list|(
-literal|"No password available"
+name|token
+argument_list|,
+literal|"No username available"
 argument_list|)
 expr_stmt|;
 block|}
 block|}
 else|else
 block|{
-name|info
-operator|.
-name|setNotAsserted
+name|policyNotAsserted
 argument_list|(
+name|token
+argument_list|,
 literal|"No username available"
 argument_list|)
 expr_stmt|;

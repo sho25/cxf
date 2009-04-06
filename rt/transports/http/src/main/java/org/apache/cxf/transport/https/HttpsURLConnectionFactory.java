@@ -183,6 +183,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|net
+operator|.
+name|ssl
+operator|.
+name|TrustManager
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -510,12 +522,6 @@ throw|;
 block|}
 block|}
 block|}
-else|else
-block|{
-assert|assert
-literal|false
-assert|;
-block|}
 return|return
 name|connection
 return|;
@@ -624,6 +630,16 @@ argument_list|,
 name|provider
 argument_list|)
 decl_stmt|;
+name|TrustManager
+index|[]
+name|trustAllCerts
+init|=
+name|tlsClientParameters
+operator|.
+name|getTrustManagers
+argument_list|()
+decl_stmt|;
+comment|/*             TrustManager[] trustAllCerts = new TrustManager[] {                 new javax.net.ssl.X509TrustManager() {                     public java.security.cert.X509Certificate[] getAcceptedIssuers() {                         return null;                     }                     public void checkClientTrusted(                         java.security.cert.X509Certificate[] certs, String authType) {                     }                     public void checkServerTrusted(                         java.security.cert.X509Certificate[] certs, String authType) {                     }                 }             };             */
 name|ctx
 operator|.
 name|init
@@ -633,10 +649,7 @@ operator|.
 name|getKeyManagers
 argument_list|()
 argument_list|,
-name|tlsClientParameters
-operator|.
-name|getTrustManagers
-argument_list|()
+name|trustAllCerts
 argument_list|,
 name|tlsClientParameters
 operator|.

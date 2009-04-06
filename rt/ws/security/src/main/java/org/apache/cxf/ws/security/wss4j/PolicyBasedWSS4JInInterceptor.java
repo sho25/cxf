@@ -3639,6 +3639,15 @@ operator|.
 name|ENCRYPTED_PARTS
 argument_list|)
 expr_stmt|;
+name|assertPolicy
+argument_list|(
+name|aim
+argument_list|,
+name|SP12Constants
+operator|.
+name|SIGNED_PARTS
+argument_list|)
+expr_stmt|;
 return|return
 operator|!
 name|assertPolicy
