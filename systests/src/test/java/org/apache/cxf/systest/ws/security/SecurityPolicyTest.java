@@ -906,7 +906,7 @@ name|msg
 operator|.
 name|contains
 argument_list|(
-literal|"UsernameToken"
+literal|"sername"
 argument_list|)
 condition|)
 block|{
