@@ -99,6 +99,20 @@ name|rs
 operator|.
 name|core
 operator|.
+name|MediaType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
 name|MultivaluedMap
 import|;
 end_import
@@ -138,17 +152,7 @@ decl_stmt|;
 specifier|public
 name|PetStore
 parameter_list|()
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Petstore constructed"
-argument_list|)
-expr_stmt|;
-block|}
+block|{     }
 annotation|@
 name|GET
 annotation|@
@@ -176,17 +180,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----invoking getStatus on the petStore for id: "
-operator|+
-name|petId
-argument_list|)
-expr_stmt|;
 return|return
 name|Response
 operator|.
@@ -209,7 +202,9 @@ argument_list|)
 annotation|@
 name|Consumes
 argument_list|(
-literal|"application/x-www-form-urlencoded"
+name|MediaType
+operator|.
+name|APPLICATION_FORM_URLENCODED
 argument_list|)
 annotation|@
 name|Produces
@@ -237,14 +232,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"----invoking updateStatus on the petStore with stauts post param value of: "
-operator|+
 name|params
-operator|.
-name|getFirst
-argument_list|(
-literal|"status"
-argument_list|)
 argument_list|)
 expr_stmt|;
 return|return

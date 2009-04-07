@@ -7640,7 +7640,9 @@ name|getResourceProvider
 argument_list|()
 operator|.
 name|getInstance
-argument_list|()
+argument_list|(
+literal|null
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|InjectionUtils
@@ -8019,7 +8021,9 @@ name|getResourceProvider
 argument_list|()
 operator|.
 name|getInstance
-argument_list|()
+argument_list|(
+literal|null
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|InjectionUtils
@@ -8140,7 +8144,9 @@ name|getResourceProvider
 argument_list|()
 operator|.
 name|getInstance
-argument_list|()
+argument_list|(
+literal|null
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|OperationResourceInfo

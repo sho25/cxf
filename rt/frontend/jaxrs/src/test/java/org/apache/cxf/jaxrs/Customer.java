@@ -526,6 +526,24 @@ name|String
 name|name
 decl_stmt|;
 specifier|public
+name|Customer
+parameter_list|()
+block|{              }
+specifier|public
+name|Customer
+parameter_list|(
+annotation|@
+name|Context
+name|UriInfo
+name|info
+parameter_list|)
+block|{
+name|uriInfo
+operator|=
+name|info
+expr_stmt|;
+block|}
+specifier|public
 name|String
 name|getName
 parameter_list|()

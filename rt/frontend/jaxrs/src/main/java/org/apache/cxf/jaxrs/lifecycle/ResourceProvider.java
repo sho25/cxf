@@ -17,6 +17,20 @@ name|lifecycle
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -26,7 +40,17 @@ name|Object
 name|getInstance
 parameter_list|()
 function_decl|;
-comment|//void setResourceClass(Class<?> clazz);
+name|Object
+name|getInstance
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
+function_decl|;
+name|boolean
+name|isSingleton
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 

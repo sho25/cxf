@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|utils
+name|ext
+operator|.
+name|xml
 package|;
 end_package
 

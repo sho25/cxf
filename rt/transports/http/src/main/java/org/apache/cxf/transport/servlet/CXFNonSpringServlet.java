@@ -132,7 +132,6 @@ argument_list|(
 name|servletConfig
 argument_list|)
 expr_stmt|;
-comment|// You could add the endpoint publish codes here
 block|}
 specifier|private
 name|void

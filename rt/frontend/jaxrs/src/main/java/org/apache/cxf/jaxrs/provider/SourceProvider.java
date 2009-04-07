@@ -313,7 +313,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|utils
+name|ext
+operator|.
+name|xml
 operator|.
 name|XMLSource
 import|;

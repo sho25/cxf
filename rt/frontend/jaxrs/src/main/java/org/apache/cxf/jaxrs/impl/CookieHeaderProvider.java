@@ -92,8 +92,9 @@ block|{
 name|int
 name|version
 init|=
-operator|-
-literal|1
+name|Cookie
+operator|.
+name|DEFAULT_VERSION
 decl_stmt|;
 name|String
 name|name
@@ -332,8 +333,9 @@ operator|.
 name|getVersion
 argument_list|()
 operator|!=
-operator|-
-literal|1
+name|Cookie
+operator|.
+name|DEFAULT_VERSION
 condition|)
 block|{
 name|sb

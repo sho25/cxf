@@ -149,6 +149,10 @@ argument_list|(
 name|BookStore
 operator|.
 name|class
+argument_list|,
+name|BookStorePerRequest
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 comment|//default lifecycle is per-request, change it to singleton

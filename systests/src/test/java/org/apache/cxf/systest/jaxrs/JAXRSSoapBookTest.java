@@ -343,9 +343,11 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|impl
+name|ext
 operator|.
-name|MetadataMap
+name|xml
+operator|.
+name|XMLSource
 import|;
 end_import
 
@@ -359,9 +361,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|utils
+name|impl
 operator|.
-name|XMLSource
+name|MetadataMap
 import|;
 end_import
 
