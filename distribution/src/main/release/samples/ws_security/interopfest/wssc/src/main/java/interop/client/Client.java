@@ -223,6 +223,7 @@ name|length
 operator|>
 literal|0
 operator|&&
+operator|(
 literal|"local"
 operator|.
 name|equalsIgnoreCase
@@ -242,6 +243,7 @@ index|[
 literal|0
 index|]
 argument_list|)
+operator|)
 condition|)
 block|{
 name|String
@@ -322,7 +324,8 @@ operator|new
 name|String
 index|[]
 block|{
-comment|//"SecureConversation_UserNameOverTransport_IPingService",
+literal|"SecureConversation_UserNameOverTransport_IPingService"
+block|,
 comment|//service not running on the https port
 literal|"SecureConversation_MutualCertificate10SignEncrypt_IPingService"
 block|,
@@ -383,7 +386,7 @@ comment|//"_KD-SEES_IPingService",
 block|}
 expr_stmt|;
 block|}
-comment|//argv = new String[] {argv[4]};
+comment|//argv = new String[] {argv[0]};
 comment|//argv = new String[] {"_X10_IPingService"};
 operator|new
 name|SpringBusFactory

@@ -124,7 +124,7 @@ block|{
 name|boolean
 name|local
 init|=
-literal|false
+literal|true
 decl_stmt|;
 if|if
 condition|(
@@ -158,6 +158,7 @@ name|length
 operator|>
 literal|0
 operator|&&
+operator|(
 literal|"local"
 operator|.
 name|equalsIgnoreCase
@@ -177,6 +178,7 @@ index|[
 literal|0
 index|]
 argument_list|)
+operator|)
 condition|)
 block|{
 name|String
@@ -275,15 +277,10 @@ block|,
 literal|"XD-ES"
 block|,
 literal|"XD-SEES"
-block|,
-comment|//"K",   //NOT YET WORKING [1]
-comment|//"K-NoTimestamp",     //NOT YET WORKING  [1]
-comment|//"KD",   //NOT YET WORKING  [1]
-comment|//"KD-ES"   //NOT YET WORKING  [1]
-block|}
+block|,             }
 expr_stmt|;
 block|}
-comment|//argv = new String[] {argv[2]};
+comment|//argv = new String[] {argv[7]};
 name|URL
 name|wsdlLocation
 init|=
@@ -391,7 +388,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|/*                 ((BindingProvider)port)                     .getRequestContext()                         .put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,                              "http://localhost:9001/" + portPrefix + "PingService");                 */
 specifier|final
 name|String
 name|output

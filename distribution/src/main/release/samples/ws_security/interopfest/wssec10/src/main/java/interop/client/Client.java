@@ -168,6 +168,7 @@ name|length
 operator|>
 literal|0
 operator|&&
+operator|(
 literal|"local"
 operator|.
 name|equalsIgnoreCase
@@ -187,6 +188,7 @@ index|[
 literal|0
 index|]
 argument_list|)
+operator|)
 condition|)
 block|{
 name|String
@@ -258,6 +260,7 @@ literal|"MutualCertificate10SignEncryptRsa15TripleDes"
 block|}
 expr_stmt|;
 block|}
+comment|//argv = new String[] {argv[1]};
 operator|new
 name|SpringBusFactory
 argument_list|()
