@@ -181,6 +181,13 @@ name|exception
 operator|.
 name|getLocalizedMessage
 argument_list|()
+operator|+
+literal|" of schema "
+operator|+
+name|exception
+operator|.
+name|getSystemId
+argument_list|()
 argument_list|,
 name|exception
 argument_list|)
@@ -219,6 +226,13 @@ name|exception
 operator|.
 name|toString
 argument_list|()
+operator|+
+literal|" in schema "
+operator|+
+name|exception
+operator|.
+name|getSystemId
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -255,6 +269,13 @@ operator|+
 name|exception
 operator|.
 name|toString
+argument_list|()
+operator|+
+literal|" in schema "
+operator|+
+name|exception
+operator|.
+name|getSystemId
 argument_list|()
 argument_list|)
 expr_stmt|;
