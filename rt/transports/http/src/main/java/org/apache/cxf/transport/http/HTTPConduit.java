@@ -6427,11 +6427,12 @@ expr_stmt|;
 comment|// Trust is okay, set up for writing the request.
 comment|// If this is a GET method we must not touch the output
 comment|// stream as this automatically turns the request into a POST.
-comment|// Nor it should be done in case of DELETE - strangely, empty PUTs
-comment|// work ok
+comment|// Nor it should be done in case of DELETE/HEAD/OPTIONS
+comment|// - strangely, empty PUTs work ok
 if|if
 condition|(
-literal|"GET"
+operator|!
+literal|"POST"
 operator|.
 name|equals
 argument_list|(
@@ -6441,7 +6442,8 @@ name|getRequestMethod
 argument_list|()
 argument_list|)
 operator|||
-literal|"DELETE"
+operator|!
+literal|"PUT"
 operator|.
 name|equals
 argument_list|(

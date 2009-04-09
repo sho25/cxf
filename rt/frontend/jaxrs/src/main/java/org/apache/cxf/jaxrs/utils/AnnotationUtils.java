@@ -747,7 +747,7 @@ block|}
 specifier|public
 specifier|static
 name|boolean
-name|isMethodParamAnnotationClass
+name|isValidParamAnnotationClass
 parameter_list|(
 name|Class
 argument_list|<
@@ -774,7 +774,7 @@ block|}
 specifier|public
 specifier|static
 name|boolean
-name|isMethodParamAnnotations
+name|isValidParamAnnotations
 parameter_list|(
 name|Annotation
 index|[]
@@ -793,7 +793,7 @@ if|if
 condition|(
 name|AnnotationUtils
 operator|.
-name|isMethodParamAnnotationClass
+name|isValidParamAnnotationClass
 argument_list|(
 name|a
 operator|.
@@ -1168,7 +1168,7 @@ control|)
 block|{
 if|if
 condition|(
-name|isMethodParamAnnotations
+name|isValidParamAnnotations
 argument_list|(
 name|paramAnnotations
 argument_list|)

@@ -161,8 +161,6 @@ argument_list|(
 name|BookNonSpringServer
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -190,12 +188,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testGetBook123ApplicationSingleton
@@ -217,12 +209,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testGetBook123ApplicationPerRequest

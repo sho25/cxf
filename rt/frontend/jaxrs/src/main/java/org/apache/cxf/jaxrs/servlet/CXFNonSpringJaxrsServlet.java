@@ -570,27 +570,15 @@ operator|!=
 literal|0
 condition|)
 block|{
-try|try
-block|{
 name|Class
 argument_list|<
 name|?
 argument_list|>
 name|cls
 init|=
-name|CXFNonSpringJaxrsServlet
-operator|.
-name|class
-operator|.
-name|getClassLoader
-argument_list|()
-operator|.
 name|loadClass
 argument_list|(
 name|cName
-operator|.
-name|trim
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|resourceClasses
@@ -600,33 +588,6 @@ argument_list|(
 name|cls
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|ex
-parameter_list|)
-block|{
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-throw|throw
-operator|new
-name|ServletException
-argument_list|(
-literal|"Resource class "
-operator|+
-name|cName
-operator|.
-name|trim
-argument_list|()
-operator|+
-literal|" can not be loaded"
-argument_list|)
-throw|;
-block|}
 block|}
 block|}
 if|if
@@ -908,6 +869,8 @@ operator|.
 name|findResourceConstructor
 argument_list|(
 name|cls
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 if|if
@@ -1466,14 +1429,14 @@ throw|throw
 operator|new
 name|ServletException
 argument_list|(
-literal|"Resource class "
+literal|"No resource class "
 operator|+
 name|cName
 operator|.
 name|trim
 argument_list|()
 operator|+
-literal|" can not be loaded"
+literal|" can be found"
 argument_list|,
 name|ex
 argument_list|)
