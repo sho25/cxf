@@ -776,7 +776,11 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-literal|"faultactor"
+name|defaultPrefix
+argument_list|,
+literal|"Role"
+argument_list|,
+name|ns
 argument_list|)
 expr_stmt|;
 name|writer
