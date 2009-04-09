@@ -171,6 +171,9 @@ argument_list|>
 name|t
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|,
 name|Type
@@ -194,6 +197,9 @@ name|boolean
 name|isWriteable
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|,
 name|Type
@@ -237,6 +243,9 @@ argument_list|>
 name|o
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|,
 name|Type
