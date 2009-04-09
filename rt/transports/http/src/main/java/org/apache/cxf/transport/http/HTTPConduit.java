@@ -6441,7 +6441,7 @@ operator|.
 name|getRequestMethod
 argument_list|()
 argument_list|)
-operator|||
+operator|&&
 operator|!
 literal|"PUT"
 operator|.
