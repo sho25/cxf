@@ -181,6 +181,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|helpers
+operator|.
+name|CastUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|management
 operator|.
 name|ManagementConstants
@@ -424,11 +438,6 @@ name|getMBeanServerConnection
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 name|void
 name|listAllManagedEndpoint
 parameter_list|()
@@ -454,6 +463,10 @@ name|ObjectName
 argument_list|>
 name|endpointNames
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|mbsc
 operator|.
 name|queryNames
@@ -461,6 +474,7 @@ argument_list|(
 name|queryEndpointName
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|System
@@ -589,11 +603,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|void
 name|invokeEndpoint
@@ -623,6 +632,10 @@ name|ObjectName
 argument_list|>
 name|endpointNames
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|mbsc
 operator|.
 name|queryNames
@@ -630,6 +643,7 @@ argument_list|(
 name|queryEndpointName
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 decl_stmt|;
 comment|// now get the ObjectName with the busId

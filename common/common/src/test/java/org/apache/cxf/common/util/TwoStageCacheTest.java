@@ -537,6 +537,25 @@ name|objs
 operator|=
 literal|null
 expr_stmt|;
+if|if
+condition|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+operator|.
+name|contains
+argument_list|(
+literal|"IBM"
+argument_list|)
+condition|)
+block|{
+comment|//The IBM VM will dump a core file and a heap dump
+comment|//at OOM which kind of pollutes the svn space
+return|return;
+block|}
 name|List
 argument_list|<
 name|byte
