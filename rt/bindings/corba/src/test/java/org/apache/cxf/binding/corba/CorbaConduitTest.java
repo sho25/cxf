@@ -764,6 +764,29 @@ argument_list|,
 name|orbConfig
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+operator|.
+name|contains
+argument_list|(
+literal|"IBM"
+argument_list|)
+condition|)
+block|{
+comment|//IBM requires it to activate to resolve it, but cannot
+comment|//activate on sun without more config
+name|destination
+operator|.
+name|activate
+argument_list|()
+expr_stmt|;
+block|}
 name|CorbaConduit
 name|conduit
 init|=

@@ -629,6 +629,25 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+operator|.
+name|contains
+argument_list|(
+literal|"IBM"
+argument_list|)
+condition|)
+block|{
+comment|//the version of xerces built into IBM jdk won't work
+comment|//and we cannot get a good version unless we endorse it
+return|return;
+block|}
 name|collection
 operator|=
 operator|new

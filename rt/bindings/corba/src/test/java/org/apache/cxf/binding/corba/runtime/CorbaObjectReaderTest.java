@@ -3210,6 +3210,25 @@ name|void
 name|testReadFixed
 parameter_list|()
 block|{
+if|if
+condition|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+operator|.
+name|contains
+argument_list|(
+literal|"IBM"
+argument_list|)
+condition|)
+block|{
+comment|//The ORB in the IBM jdk doesn't support writing fixed
+comment|//to the stream.
+return|return;
+block|}
 name|OutputStream
 name|oStream
 init|=
