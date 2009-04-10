@@ -3506,6 +3506,14 @@ name|getRelatesTo
 argument_list|()
 operator|!=
 literal|null
+operator|&&
+name|isRelationshipReply
+argument_list|(
+name|maps
+operator|.
+name|getRelatesTo
+argument_list|()
+argument_list|)
 condition|)
 block|{
 name|Exchange
@@ -3695,6 +3703,29 @@ expr_stmt|;
 block|}
 block|}
 block|}
+block|}
+comment|/**       * @param relatesTo the current RelatesTo      * @return true iff the relationship type is reply      */
+specifier|private
+name|boolean
+name|isRelationshipReply
+parameter_list|(
+name|RelatesToType
+name|relatesTo
+parameter_list|)
+block|{
+return|return
+name|Names
+operator|.
+name|WSA_RELATIONSHIP_REPLY
+operator|.
+name|equals
+argument_list|(
+name|relatesTo
+operator|.
+name|getRelationshipType
+argument_list|()
+argument_list|)
+return|;
 block|}
 comment|/**      * Marks a message as partial response      *       * @param message the current message      */
 specifier|private

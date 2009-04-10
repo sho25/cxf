@@ -2049,7 +2049,7 @@ name|Names
 operator|.
 name|WSA_REPLY_NAME
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|exposedRelationshipType
 operator|.
