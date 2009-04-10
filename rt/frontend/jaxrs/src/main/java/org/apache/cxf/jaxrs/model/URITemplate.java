@@ -1316,7 +1316,7 @@ parameter_list|()
 block|{
 specifier|final
 name|float
-name|ENCODED_RATIO
+name|encodedRatio
 init|=
 literal|1.5f
 decl_stmt|;
@@ -1330,7 +1330,7 @@ call|(
 name|int
 call|)
 argument_list|(
-name|ENCODED_RATIO
+name|encodedRatio
 operator|*
 name|template
 operator|.
