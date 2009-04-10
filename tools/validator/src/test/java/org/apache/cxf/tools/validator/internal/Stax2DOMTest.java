@@ -134,10 +134,12 @@ decl_stmt|;
 name|assertTrue
 argument_list|(
 name|content
+argument_list|,
+name|content
 operator|.
 name|indexOf
 argument_list|(
-literal|"xmlns:ns0=\"http://www.w3.org/2001/XMLSchema\""
+literal|"xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\""
 argument_list|)
 operator|!=
 operator|-
@@ -147,10 +149,12 @@ expr_stmt|;
 name|assertTrue
 argument_list|(
 name|content
+argument_list|,
+name|content
 operator|.
 name|indexOf
 argument_list|(
-literal|"ns0:x1=\"http://cxf.apache.org/hello_world_jms/types\""
+literal|"xmlns:x1=\"http://cxf.apache.org/hello_world_jms/types\""
 argument_list|)
 operator|!=
 operator|-
