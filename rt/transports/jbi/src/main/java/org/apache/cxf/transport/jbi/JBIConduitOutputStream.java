@@ -988,6 +988,17 @@ argument_list|,
 name|ins
 argument_list|)
 expr_stmt|;
+name|inMessage
+operator|.
+name|put
+argument_list|(
+name|MessageExchange
+operator|.
+name|class
+argument_list|,
+name|xchng
+argument_list|)
+expr_stmt|;
 name|conduit
 operator|.
 name|getMessageObserver
