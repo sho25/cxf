@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -38,34 +50,6 @@ operator|.
 name|stream
 operator|.
 name|XMLStreamReader
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|logging
-operator|.
-name|Log
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|logging
-operator|.
-name|LogFactory
 import|;
 end_import
 
@@ -96,6 +80,22 @@ operator|.
 name|util
 operator|.
 name|NamespaceHelper
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -160,12 +160,12 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|Log
+name|Logger
 name|LOG
 init|=
-name|LogFactory
+name|LogUtils
 operator|.
-name|getLog
+name|getL7dLogger
 argument_list|(
 name|TypeUtil
 operator|.
@@ -211,7 +211,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|warn
+name|warning
 argument_list|(
 literal|"xsi:type reading disabled, and no type available for "
 operator|+
@@ -350,7 +350,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"xsi:type=\""
 operator|+
@@ -372,7 +372,7 @@ else|else
 block|{
 name|LOG
 operator|.
-name|warn
+name|warning
 argument_list|(
 literal|"xsi:type=\""
 operator|+
@@ -397,7 +397,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|warn
+name|warning
 argument_list|(
 literal|"xsi:type absent, and no type available for "
 operator|+
@@ -458,7 +458,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|warn
+name|warning
 argument_list|(
 literal|"xsi:type reading disabled, and no type available for "
 operator|+
@@ -558,7 +558,7 @@ return|;
 block|}
 name|LOG
 operator|.
-name|warn
+name|warning
 argument_list|(
 literal|"xsi:type=\""
 operator|+
@@ -573,7 +573,7 @@ return|;
 block|}
 name|LOG
 operator|.
-name|warn
+name|warning
 argument_list|(
 literal|"xsi:type was not specified for top-level element "
 operator|+

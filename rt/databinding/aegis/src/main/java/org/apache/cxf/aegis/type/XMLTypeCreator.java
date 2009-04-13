@@ -121,6 +121,30 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -329,34 +353,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
-operator|.
-name|logging
-operator|.
-name|Log
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|logging
-operator|.
-name|LogFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
 name|cxf
 operator|.
 name|aegis
@@ -441,6 +437,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|helpers
 operator|.
 name|DOMUtils
@@ -475,12 +487,12 @@ block|{
 specifier|private
 specifier|static
 specifier|final
-name|Log
+name|Logger
 name|LOG
 init|=
-name|LogFactory
+name|LogUtils
 operator|.
-name|getLog
+name|getL7dLogger
 argument_list|(
 name|XMLTypeCreator
 operator|.
@@ -659,8 +671,12 @@ block|{
 comment|//Parsers that don't support schema validation
 name|LOG
 operator|.
-name|info
+name|log
 argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
 literal|"Parser doesn't support setSchema.  Not validating."
 argument_list|,
 name|e
@@ -675,8 +691,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 literal|"Error reading Aegis schema"
 argument_list|,
 name|ie
@@ -691,8 +711,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 literal|"Error reading Aegis schema"
 argument_list|,
 name|e
@@ -707,8 +731,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 literal|"Error reading Aegis schema"
 argument_list|,
 name|e
@@ -760,8 +788,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 literal|"Unable to create a document builder, e"
 argument_list|)
 expr_stmt|;
@@ -889,8 +921,12 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 name|message
 argument_list|,
 name|exception
@@ -922,8 +958,12 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 name|message
 argument_list|,
 name|exception
@@ -947,8 +987,12 @@ name|SAXException
 block|{
 name|LOG
 operator|.
-name|info
+name|log
 argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
 name|errorMessage
 argument_list|(
 name|exception
@@ -981,8 +1025,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 literal|"Error parsing Aegis file."
 argument_list|,
 name|e
@@ -1079,7 +1127,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"Mapping file : "
 operator|+
@@ -1094,7 +1142,7 @@ return|;
 block|}
 name|LOG
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"Found mapping file : "
 operator|+
@@ -1136,8 +1184,12 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|error
+name|log
 argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
 literal|"Error loading file "
 operator|+
 name|path
