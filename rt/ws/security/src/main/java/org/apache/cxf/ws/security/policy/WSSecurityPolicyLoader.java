@@ -817,9 +817,23 @@ block|{
 name|registerBuilders
 argument_list|()
 expr_stmt|;
+try|try
+block|{
 name|registerProviders
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|t
+parameter_list|)
+block|{
+comment|//probably wss4j isn't found or something. We'll ignore this
+comment|//as the policy framework will then not find the providers
+comment|//and error out at that point.  If nothing uses ws-securitypolicy
+comment|//no warnings/errors will display
+block|}
 block|}
 specifier|public
 name|void
