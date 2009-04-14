@@ -689,6 +689,14 @@ argument_list|()
 operator|+
 literal|".partial.response"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RESPONSE_COMMITED
+init|=
+literal|"http.response.done"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final

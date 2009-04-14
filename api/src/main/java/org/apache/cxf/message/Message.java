@@ -204,6 +204,18 @@ argument_list|()
 operator|+
 literal|".QUERY_STRING"
 decl_stmt|;
+name|String
+name|PROPOGATE_EXCEPTION
+init|=
+name|Message
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|".PROPOGATE_EXCEPTION"
+decl_stmt|;
 comment|/**      * Boolean property specifying in the runtime is configured to process       * MTOM attachments.      */
 name|String
 name|MTOM_ENABLED
