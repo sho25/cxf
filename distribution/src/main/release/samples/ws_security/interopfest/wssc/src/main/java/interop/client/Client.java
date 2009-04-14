@@ -324,9 +324,8 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"SecureConversation_UserNameOverTransport_IPingService"
-block|,
-comment|//service not running on the https port
+comment|//don't have the certs available to be able to connect
+comment|//"SecureConversation_UserNameOverTransport_IPingService",
 literal|"SecureConversation_MutualCertificate10SignEncrypt_IPingService"
 block|,
 literal|"AC_IPingService"
