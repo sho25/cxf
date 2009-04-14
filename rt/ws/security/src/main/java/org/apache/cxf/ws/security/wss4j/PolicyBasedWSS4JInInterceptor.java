@@ -3263,7 +3263,7 @@ elseif|else
 if|if
 condition|(
 name|prots
-operator|!=
+operator|==
 name|Protections
 operator|.
 name|SIGN_ENCRYPT
