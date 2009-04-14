@@ -124,7 +124,7 @@ block|{
 name|boolean
 name|local
 init|=
-literal|true
+literal|false
 decl_stmt|;
 if|if
 condition|(
