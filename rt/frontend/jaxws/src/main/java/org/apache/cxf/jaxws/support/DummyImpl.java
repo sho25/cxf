@@ -17,24 +17,51 @@ name|support
 package|;
 end_package
 
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|soap
+operator|.
+name|SOAPBinding
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|soap
+operator|.
+name|SOAPBinding
+operator|.
+name|ParameterStyle
+import|;
+end_import
+
 begin_comment
 comment|// this class do nothing here, just for a dispatch impl
 end_comment
 
-begin_class
+begin_interface
+annotation|@
+name|SOAPBinding
+argument_list|(
+name|parameterStyle
+operator|=
+name|ParameterStyle
+operator|.
+name|BARE
+argument_list|)
 specifier|public
-class|class
+interface|interface
 name|DummyImpl
-block|{
-comment|//    public void invokeOneWay(Object o) {
-comment|//
-comment|//    }
-comment|//
-comment|//    public Object invoke(Object o) {
-comment|//        return null;
-comment|//    }
-block|}
-end_class
+block|{  }
+end_interface
 
 end_unit
 

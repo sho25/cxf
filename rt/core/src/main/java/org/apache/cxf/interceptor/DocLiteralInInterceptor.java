@@ -867,6 +867,15 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+if|if
+condition|(
+name|msgInfo
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|setMessage
 argument_list|(
 name|message

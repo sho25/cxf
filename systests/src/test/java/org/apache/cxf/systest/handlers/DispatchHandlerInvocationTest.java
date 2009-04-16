@@ -1304,7 +1304,12 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
-literal|"Did not get expected exception message"
+literal|"Did not get expected exception message: "
+operator|+
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|,
 name|e
 operator|.
