@@ -334,7 +334,7 @@ name|input
 operator|.
 name|indexOf
 argument_list|(
-literal|"-----"
+literal|"--uuid"
 argument_list|)
 decl_stmt|;
 name|int
@@ -344,7 +344,7 @@ name|input
 operator|.
 name|indexOf
 argument_list|(
-literal|"-----"
+literal|"--uuid"
 argument_list|,
 name|idx
 operator|+

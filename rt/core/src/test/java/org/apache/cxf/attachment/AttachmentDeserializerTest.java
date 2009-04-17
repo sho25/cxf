@@ -1285,6 +1285,14 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
+name|assertFalse
+argument_list|(
+name|itr
+operator|.
+name|hasNext
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
