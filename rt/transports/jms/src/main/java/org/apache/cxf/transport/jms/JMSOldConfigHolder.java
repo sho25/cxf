@@ -504,6 +504,16 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|jmsConfig
+operator|.
+name|getMessageSelector
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
 name|jmsConfig
 operator|.
 name|setMessageSelector
@@ -514,6 +524,7 @@ name|getMessageSelector
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|isConduit

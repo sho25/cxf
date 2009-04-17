@@ -164,6 +164,10 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertNull
@@ -207,6 +211,10 @@ argument_list|(
 literal|null
 argument_list|,
 name|m
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|,
@@ -280,6 +288,10 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|m
@@ -302,6 +314,10 @@ argument_list|(
 literal|null
 argument_list|,
 name|m
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|,

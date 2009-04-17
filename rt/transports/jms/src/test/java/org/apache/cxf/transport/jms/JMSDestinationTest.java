@@ -626,6 +626,18 @@ argument_list|,
 literal|5
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"The maxSuspendedContinuations should be set"
+argument_list|,
+name|jmsConfig
+operator|.
+name|getMaxSuspendedContinuations
+argument_list|()
+argument_list|,
+literal|2
+argument_list|)
+expr_stmt|;
 name|assertNotNull
 argument_list|(
 literal|"The connectionFactory should not be null"
