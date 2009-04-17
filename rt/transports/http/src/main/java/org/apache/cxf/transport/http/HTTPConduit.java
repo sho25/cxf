@@ -2919,7 +2919,13 @@ argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|headers
+operator|instanceof
+name|HashMap
+condition|)
 block|{
 name|headers
 operator|=
