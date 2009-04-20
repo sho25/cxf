@@ -330,6 +330,19 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Transform the string before display. The implementation in this class       * does nothing. Override this method if you want to change the contents of the       * logged message before it is delivered to the output.       * For example, you can use this to mask out sensitive information.      * @param originalLogString the raw log message.      * @return transformed data      */
+specifier|protected
+name|String
+name|transform
+parameter_list|(
+name|String
+name|originalLogString
+parameter_list|)
+block|{
+return|return
+name|originalLogString
+return|;
+block|}
 specifier|private
 name|void
 name|logging
@@ -700,10 +713,13 @@ name|writer
 operator|.
 name|println
 argument_list|(
+name|transform
+argument_list|(
 name|buffer
 operator|.
 name|toString
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -724,10 +740,13 @@ name|LOG
 operator|.
 name|info
 argument_list|(
+name|transform
+argument_list|(
 name|buffer
 operator|.
 name|toString
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

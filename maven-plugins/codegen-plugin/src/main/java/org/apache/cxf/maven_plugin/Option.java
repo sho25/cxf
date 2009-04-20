@@ -129,6 +129,10 @@ name|wsdlLocation
 init|=
 name|DEFAULT_WSDL_LOCATION
 decl_stmt|;
+comment|/**      * Specifies that the wsdlurl contains a plain text, new line delimited,      * list of wsdlurls instead of the wsdl itself.      */
+name|boolean
+name|wsdlList
+decl_stmt|;
 comment|/**      * Specifies the frontend. Default is JAXWS. Currently supports only JAXWS frontend.      */
 name|String
 name|frontEnd
@@ -469,6 +473,30 @@ argument_list|(
 name|wsdlLocation
 argument_list|)
 return|;
+block|}
+specifier|public
+name|boolean
+name|isWsdlList
+parameter_list|()
+block|{
+return|return
+name|wsdlList
+return|;
+block|}
+specifier|public
+name|void
+name|setWsdlList
+parameter_list|(
+name|boolean
+name|wsdlList
+parameter_list|)
+block|{
+name|this
+operator|.
+name|wsdlList
+operator|=
+name|wsdlList
+expr_stmt|;
 block|}
 specifier|public
 name|String

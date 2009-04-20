@@ -129,6 +129,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_WSDLLIST
+init|=
+literal|"wsdlList"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_NAMESPACE
 init|=
 literal|"namespace"
