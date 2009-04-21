@@ -464,7 +464,7 @@ name|PRE_PROTOCOL
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|public
 specifier|synchronized
 name|MessageFactory
 name|getFactory
