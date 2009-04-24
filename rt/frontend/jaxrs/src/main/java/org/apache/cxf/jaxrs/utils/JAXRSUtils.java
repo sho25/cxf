@@ -4354,8 +4354,11 @@ name|String
 name|value
 init|=
 name|values
-operator|!=
-literal|null
+operator|.
+name|size
+argument_list|()
+operator|==
+literal|1
 operator|&&
 name|values
 operator|.
