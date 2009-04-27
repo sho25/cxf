@@ -73,6 +73,21 @@ name|String
 name|header
 parameter_list|)
 block|{
+if|if
+condition|(
+name|header
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"ETag value can not be null"
+argument_list|)
+throw|;
+block|}
 name|String
 name|tag
 init|=
