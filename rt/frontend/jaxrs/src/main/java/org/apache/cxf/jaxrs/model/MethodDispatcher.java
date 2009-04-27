@@ -35,6 +35,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|LinkedHashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -46,18 +56,6 @@ operator|.
 name|util
 operator|.
 name|Set
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|concurrent
-operator|.
-name|ConcurrentHashMap
 import|;
 end_import
 
@@ -76,7 +74,7 @@ argument_list|>
 name|oriToMethod
 init|=
 operator|new
-name|ConcurrentHashMap
+name|LinkedHashMap
 argument_list|<
 name|OperationResourceInfo
 argument_list|,
@@ -94,7 +92,7 @@ argument_list|>
 name|methodToOri
 init|=
 operator|new
-name|ConcurrentHashMap
+name|LinkedHashMap
 argument_list|<
 name|Method
 argument_list|,
