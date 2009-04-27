@@ -233,6 +233,14 @@ name|String
 name|name3
 parameter_list|,
 annotation|@
+name|MatrixParam
+argument_list|(
+literal|"n33"
+argument_list|)
+name|String
+name|name33
+parameter_list|,
+annotation|@
 name|HeaderParam
 argument_list|(
 literal|"N4"
