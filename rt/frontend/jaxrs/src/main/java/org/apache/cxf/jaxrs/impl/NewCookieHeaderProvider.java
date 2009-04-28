@@ -127,6 +127,21 @@ name|String
 name|c
 parameter_list|)
 block|{
+if|if
+condition|(
+name|c
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"SetCookie value can not be null"
+argument_list|)
+throw|;
+block|}
 name|String
 name|name
 init|=
@@ -182,9 +197,17 @@ range|:
 name|tokens
 control|)
 block|{
+name|String
+name|theToken
+init|=
+name|token
+operator|.
+name|trim
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
-name|token
+name|theToken
 operator|.
 name|startsWith
 argument_list|(
@@ -197,7 +220,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|token
+name|theToken
 operator|.
 name|startsWith
 argument_list|(
@@ -211,7 +234,7 @@ name|Integer
 operator|.
 name|parseInt
 argument_list|(
-name|token
+name|theToken
 operator|.
 name|substring
 argument_list|(
@@ -228,7 +251,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|token
+name|theToken
 operator|.
 name|startsWith
 argument_list|(
@@ -238,7 +261,7 @@ condition|)
 block|{
 name|path
 operator|=
-name|token
+name|theToken
 operator|.
 name|substring
 argument_list|(
@@ -254,7 +277,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|token
+name|theToken
 operator|.
 name|startsWith
 argument_list|(
@@ -264,7 +287,7 @@ condition|)
 block|{
 name|domain
 operator|=
-name|token
+name|theToken
 operator|.
 name|substring
 argument_list|(
@@ -280,7 +303,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|token
+name|theToken
 operator|.
 name|startsWith
 argument_list|(
@@ -290,7 +313,7 @@ condition|)
 block|{
 name|comment
 operator|=
-name|token
+name|theToken
 operator|.
 name|substring
 argument_list|(
@@ -306,7 +329,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|token
+name|theToken
 operator|.
 name|startsWith
 argument_list|(
@@ -324,7 +347,7 @@ block|{
 name|int
 name|i
 init|=
-name|token
+name|theToken
 operator|.
 name|indexOf
 argument_list|(
@@ -341,7 +364,7 @@ condition|)
 block|{
 name|name
 operator|=
-name|token
+name|theToken
 operator|.
 name|substring
 argument_list|(
@@ -354,7 +377,7 @@ name|value
 operator|=
 name|i
 operator|==
-name|token
+name|theToken
 operator|.
 name|length
 argument_list|()
@@ -363,7 +386,7 @@ literal|1
 condition|?
 literal|""
 else|:
-name|token
+name|theToken
 operator|.
 name|substring
 argument_list|(

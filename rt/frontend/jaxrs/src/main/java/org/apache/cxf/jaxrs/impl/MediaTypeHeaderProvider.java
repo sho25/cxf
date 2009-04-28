@@ -118,6 +118,21 @@ block|{
 if|if
 condition|(
 name|mType
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Media type value can not be null"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|mType
 operator|.
 name|equals
 argument_list|(
