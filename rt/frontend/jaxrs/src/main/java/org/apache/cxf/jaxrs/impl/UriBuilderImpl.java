@@ -1270,6 +1270,12 @@ argument_list|(
 name|matrix
 argument_list|)
 expr_stmt|;
+name|builder
+operator|.
+name|schemeSpecificPart
+operator|=
+name|schemeSpecificPart
+expr_stmt|;
 return|return
 name|builder
 return|;
