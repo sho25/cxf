@@ -4145,6 +4145,11 @@ name|andReturn
 argument_list|(
 literal|"text/xml charset=utf8"
 argument_list|)
+operator|.
+name|times
+argument_list|(
+literal|2
+argument_list|)
 expr_stmt|;
 name|EasyMock
 operator|.
