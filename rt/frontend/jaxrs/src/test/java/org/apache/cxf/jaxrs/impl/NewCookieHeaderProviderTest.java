@@ -323,7 +323,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=bar;Comment=comment;Domain=domain;Max-Age=2;Path=path;Secure"
+literal|"foo=bar;Comment=comment;Domain=domain;Max-Age=2;Path=path;Secure;Version=1"
 argument_list|,
 name|c
 operator|.
