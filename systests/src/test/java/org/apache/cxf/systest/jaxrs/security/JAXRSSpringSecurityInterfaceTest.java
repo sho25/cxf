@@ -246,6 +246,17 @@ argument_list|,
 literal|200
 argument_list|)
 expr_stmt|;
+name|getBook
+argument_list|(
+name|endpointAddress
+argument_list|,
+literal|"baddy"
+argument_list|,
+literal|"baddyspassword"
+argument_list|,
+literal|403
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
