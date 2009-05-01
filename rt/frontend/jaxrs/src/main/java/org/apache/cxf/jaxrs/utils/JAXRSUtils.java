@@ -3893,6 +3893,8 @@ operator|.
 name|MATRIX
 argument_list|,
 name|m
+argument_list|,
+literal|false
 argument_list|)
 return|;
 block|}
@@ -4128,6 +4130,8 @@ operator|.
 name|FORM
 argument_list|,
 name|m
+argument_list|,
+literal|false
 argument_list|)
 return|;
 block|}
@@ -5042,6 +5046,8 @@ operator|.
 name|PATH
 argument_list|,
 name|m
+argument_list|,
+name|decoded
 argument_list|)
 return|;
 block|}
@@ -5153,6 +5159,8 @@ operator|.
 name|QUERY
 argument_list|,
 name|m
+argument_list|,
+name|decode
 argument_list|)
 return|;
 block|}

@@ -49,6 +49,22 @@ name|MetadataMap
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|FormUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * Simple MultivaluedMap wrapper   *  */
 end_comment
@@ -87,10 +103,12 @@ name|Object
 name|value
 parameter_list|)
 block|{
-name|map
+name|FormUtils
 operator|.
-name|add
+name|addPropertyToForm
 argument_list|(
+name|map
+argument_list|,
 name|name
 argument_list|,
 name|value
