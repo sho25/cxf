@@ -4255,6 +4255,12 @@ operator|.
 name|toString
 argument_list|()
 block|}
+block|,
+block|{
+literal|"jon&marry"
+block|,
+literal|"marry&john"
+block|}
 block|}
 decl_stmt|;
 for|for
