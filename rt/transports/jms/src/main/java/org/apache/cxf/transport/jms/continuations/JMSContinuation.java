@@ -51,18 +51,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|logging
-operator|.
-name|Logger
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -82,22 +70,6 @@ operator|.
 name|cxf
 operator|.
 name|BusFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
-name|logging
-operator|.
-name|LogUtils
 import|;
 end_import
 
@@ -199,22 +171,7 @@ specifier|final
 name|String
 name|BOGUS_MESSAGE_SELECTOR
 init|=
-literal|"org.apache.cxf.transports.jms.continuations=too-many"
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|Logger
-name|LOG
-init|=
-name|LogUtils
-operator|.
-name|getL7dLogger
-argument_list|(
-name|JMSContinuation
-operator|.
-name|class
-argument_list|)
+literal|"orgApacheCxfTransportsJmsContinuations='too-many'"
 decl_stmt|;
 specifier|private
 name|Bus
@@ -584,11 +541,6 @@ name|boolean
 name|remove
 parameter_list|)
 block|{
-name|modifyList
-argument_list|(
-name|remove
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|jmsConfig
@@ -608,9 +560,24 @@ operator|.
 name|CACHE_CONSUMER
 condition|)
 block|{
+name|modifyList
+argument_list|(
+name|remove
+argument_list|)
+expr_stmt|;
 return|return;
 block|}
 comment|// throttle the flow if there're too many continuation instances in memory
+synchronized|synchronized
+init|(
+name|continuations
+init|)
+block|{
+name|modifyList
+argument_list|(
+name|remove
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|remove
@@ -624,22 +591,6 @@ name|currentMessageSelector
 argument_list|)
 condition|)
 block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"A number of continuations has dropped below the limit of "
-operator|+
-name|jmsConfig
-operator|.
-name|getMaxSuspendedContinuations
-argument_list|()
-operator|+
-literal|", resetting JMS MessageSelector to "
-operator|+
-name|currentMessageSelector
-argument_list|)
-expr_stmt|;
 name|jmsListener
 operator|.
 name|setMessageSelector
@@ -687,22 +638,6 @@ name|currentMessageSelector
 argument_list|)
 condition|)
 block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"A number of continuations has reached the limit of "
-operator|+
-name|jmsConfig
-operator|.
-name|getMaxSuspendedContinuations
-argument_list|()
-operator|+
-literal|", setting JMS MessageSelector to "
-operator|+
-name|BOGUS_MESSAGE_SELECTOR
-argument_list|)
-expr_stmt|;
 name|jmsListener
 operator|.
 name|setMessageSelector
@@ -710,6 +645,7 @@ argument_list|(
 name|BOGUS_MESSAGE_SELECTOR
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
