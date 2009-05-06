@@ -138,6 +138,9 @@ operator|.
 name|create
 argument_list|(
 name|value
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 return|;
 block|}

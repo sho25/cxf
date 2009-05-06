@@ -210,6 +210,9 @@ operator|.
 name|parseObject
 argument_list|(
 name|value
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 decl_stmt|;
 return|return

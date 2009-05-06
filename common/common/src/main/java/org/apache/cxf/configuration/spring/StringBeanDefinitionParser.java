@@ -106,7 +106,7 @@ name|addConstructorArg
 argument_list|(
 name|DOMUtils
 operator|.
-name|getContent
+name|getRawContent
 argument_list|(
 name|element
 argument_list|)

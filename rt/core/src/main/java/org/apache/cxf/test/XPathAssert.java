@@ -595,9 +595,6 @@ name|getContent
 argument_list|(
 name|result
 argument_list|)
-operator|.
-name|trim
-argument_list|()
 decl_stmt|;
 name|Assert
 operator|.

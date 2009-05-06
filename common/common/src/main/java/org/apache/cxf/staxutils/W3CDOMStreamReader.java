@@ -928,7 +928,7 @@ name|result
 init|=
 name|DOMUtils
 operator|.
-name|getContent
+name|getRawContent
 argument_list|(
 name|content
 argument_list|)
@@ -1130,12 +1130,10 @@ literal|null
 return|;
 block|}
 return|return
-name|DOMUtils
-operator|.
-name|getContent
-argument_list|(
 name|at
-argument_list|)
+operator|.
+name|getNodeValue
+argument_list|()
 return|;
 block|}
 specifier|public

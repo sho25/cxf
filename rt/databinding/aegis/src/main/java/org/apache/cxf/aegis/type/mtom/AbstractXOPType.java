@@ -488,6 +488,9 @@ name|mimeReader
 operator|.
 name|getValue
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 decl_stmt|;
 name|o
 operator|=
@@ -632,6 +635,9 @@ name|XOP_HREF
 argument_list|)
 operator|.
 name|getValue
+argument_list|()
+operator|.
+name|trim
 argument_list|()
 decl_stmt|;
 name|Attachment

@@ -607,16 +607,6 @@ operator|=
 literal|""
 expr_stmt|;
 block|}
-else|else
-block|{
-name|value
-operator|=
-name|value
-operator|.
-name|trim
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 return|return
 name|value

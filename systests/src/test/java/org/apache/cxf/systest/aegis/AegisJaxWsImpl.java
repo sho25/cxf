@@ -194,7 +194,11 @@ name|fake
 operator|.
 name|setData
 argument_list|(
-literal|"and a third"
+name|key1
+operator|+
+literal|":"
+operator|+
+name|key2
 argument_list|)
 expr_stmt|;
 return|return

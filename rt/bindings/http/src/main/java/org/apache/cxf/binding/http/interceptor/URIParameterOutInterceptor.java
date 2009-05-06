@@ -622,7 +622,7 @@ name|append
 argument_list|(
 name|DOMUtils
 operator|.
-name|getContent
+name|getRawContent
 argument_list|(
 name|node
 argument_list|)
