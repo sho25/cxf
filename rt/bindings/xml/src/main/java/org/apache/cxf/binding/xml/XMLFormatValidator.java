@@ -438,6 +438,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|findXMLFormatRootNode
 argument_list|(
 name|itIn
@@ -450,7 +451,21 @@ literal|"-input"
 argument_list|)
 condition|)
 block|{
+return|return
+literal|false
+return|;
+block|}
 comment|// Input check correct, continue to check output binding
+if|if
+condition|(
+name|op
+operator|.
+name|getOutput
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|needRootNode
 operator|=
 literal|false
@@ -558,12 +573,6 @@ literal|false
 return|;
 block|}
 block|}
-block|}
-else|else
-block|{
-return|return
-literal|false
-return|;
 block|}
 block|}
 block|}
