@@ -117,6 +117,22 @@ name|Element
 name|currentNode
 decl_stmt|;
 specifier|public
+name|W3CNamespaceContext
+parameter_list|()
+block|{     }
+specifier|public
+name|W3CNamespaceContext
+parameter_list|(
+name|Element
+name|el
+parameter_list|)
+block|{
+name|currentNode
+operator|=
+name|el
+expr_stmt|;
+block|}
+specifier|public
 name|String
 name|getNamespaceURI
 parameter_list|(
