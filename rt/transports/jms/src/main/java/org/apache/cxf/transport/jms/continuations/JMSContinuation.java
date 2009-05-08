@@ -542,9 +542,8 @@ name|cancel
 argument_list|()
 expr_stmt|;
 name|timer
-operator|.
-name|cancel
-argument_list|()
+operator|=
+literal|null
 expr_stmt|;
 block|}
 block|}
