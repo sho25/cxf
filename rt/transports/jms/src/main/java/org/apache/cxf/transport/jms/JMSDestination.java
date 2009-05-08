@@ -1242,12 +1242,15 @@ name|SuspendedInvocationException
 name|ex
 parameter_list|)
 block|{
-name|System
+name|getLogger
+argument_list|()
 operator|.
-name|out
-operator|.
-name|println
+name|log
 argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
 literal|"Request message has been suspended"
 argument_list|)
 expr_stmt|;
