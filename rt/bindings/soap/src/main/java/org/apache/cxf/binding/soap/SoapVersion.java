@@ -94,6 +94,13 @@ name|String
 name|getAttrNameMustUnderstand
 parameter_list|()
 function_decl|;
+name|String
+name|getAttrValueMustUnderstand
+parameter_list|(
+name|boolean
+name|value
+parameter_list|)
+function_decl|;
 comment|// Role related properties
 comment|//-------------------------------------------------------------------------
 name|String
