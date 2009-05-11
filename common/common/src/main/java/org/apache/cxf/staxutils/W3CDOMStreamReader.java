@@ -1034,6 +1034,13 @@ operator|.
 name|parent
 operator|==
 literal|null
+operator|&&
+name|frame
+operator|.
+name|getElement
+argument_list|()
+operator|instanceof
+name|Element
 condition|)
 block|{
 return|return
