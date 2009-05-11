@@ -570,6 +570,13 @@ argument_list|(
 literal|"Content-Transfer-Encoding: binary\r\n"
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|attachmentId
+operator|!=
+literal|null
+condition|)
+block|{
 name|writer
 operator|.
 name|write
@@ -638,7 +645,15 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|">\r\n\r\n"
+literal|">\r\n"
+argument_list|)
+expr_stmt|;
+block|}
+name|writer
+operator|.
+name|write
+argument_list|(
+literal|"\r\n"
 argument_list|)
 expr_stmt|;
 block|}
