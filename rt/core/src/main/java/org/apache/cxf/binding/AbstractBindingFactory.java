@@ -303,14 +303,6 @@ name|BindingFactory
 implements|,
 name|WSDLBindingFactory
 block|{
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DATABINDING_DISABLED
-init|=
-literal|"databinding.disabled"
-decl_stmt|;
 specifier|protected
 name|Collection
 argument_list|<

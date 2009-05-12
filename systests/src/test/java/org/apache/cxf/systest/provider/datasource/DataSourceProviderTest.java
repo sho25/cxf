@@ -519,10 +519,8 @@ name|readAttachmentParts
 argument_list|(
 name|conn
 operator|.
-name|getRequestProperty
-argument_list|(
-literal|"Content-Type"
-argument_list|)
+name|getContentType
+argument_list|()
 argument_list|,
 name|conn
 operator|.

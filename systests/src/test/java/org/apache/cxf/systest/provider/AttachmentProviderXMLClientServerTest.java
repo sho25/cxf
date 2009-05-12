@@ -301,7 +301,12 @@ argument_list|()
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"wrong content type"
+literal|"wrong content type: "
+operator|+
+name|connection
+operator|.
+name|getContentType
+argument_list|()
 argument_list|,
 name|connection
 operator|.

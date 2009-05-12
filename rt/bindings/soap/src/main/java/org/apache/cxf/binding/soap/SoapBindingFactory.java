@@ -2681,25 +2681,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|//Do not add any interceptors if it is Provider/Dispatch
-if|if
-condition|(
-operator|!
-name|Boolean
-operator|.
-name|TRUE
-operator|.
-name|equals
-argument_list|(
-name|binding
-operator|.
-name|getProperty
-argument_list|(
-name|DATABINDING_DISABLED
-argument_list|)
-argument_list|)
-condition|)
-block|{
 name|sb
 operator|.
 name|getInInterceptors
@@ -3023,7 +3004,6 @@ name|URIMappingInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|version

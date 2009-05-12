@@ -785,6 +785,8 @@ argument_list|,
 name|client
 argument_list|,
 name|paramNum
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 block|}
