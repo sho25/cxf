@@ -2375,6 +2375,10 @@ operator|&&
 operator|!
 name|isRequestor
 argument_list|()
+operator|&&
+name|exchange
+operator|!=
+literal|null
 condition|)
 block|{
 name|Message
