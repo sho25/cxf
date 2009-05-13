@@ -396,7 +396,7 @@ name|QName
 argument_list|(
 name|ns
 operator|+
-literal|"/jaxrs"
+literal|"jaxrs"
 argument_list|,
 name|primaryClass
 operator|.
