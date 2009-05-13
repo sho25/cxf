@@ -434,7 +434,10 @@ argument_list|()
 operator|==
 name|dw
 operator|.
-name|getDocument
+name|getCurrentNode
+argument_list|()
+operator|.
+name|getOwnerDocument
 argument_list|()
 condition|)
 block|{
