@@ -143,18 +143,6 @@ name|xml
 operator|.
 name|ws
 operator|.
-name|WebServiceContext
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
 name|Service
 operator|.
 name|Mode
@@ -170,6 +158,18 @@ operator|.
 name|ws
 operator|.
 name|ServiceMode
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|WebServiceContext
 import|;
 end_import
 
