@@ -2367,7 +2367,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|50
+literal|55
 argument_list|)
 expr_stmt|;
 block|}
@@ -2390,6 +2390,10 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
+literal|"unexpected MPM: "
+operator|+
+name|mpm1
+argument_list|,
 name|mpm1
 operator|>
 literal|0
@@ -2428,7 +2432,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|100
+literal|110
 argument_list|)
 expr_stmt|;
 block|}
