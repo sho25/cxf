@@ -505,7 +505,9 @@ name|impl
 init|=
 operator|new
 name|AutomaticWorkQueueImpl
-argument_list|()
+argument_list|(
+literal|"default"
+argument_list|)
 decl_stmt|;
 name|impl
 operator|.
