@@ -2681,6 +2681,24 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|Boolean
+operator|.
+name|TRUE
+operator|.
+name|equals
+argument_list|(
+name|binding
+operator|.
+name|getProperty
+argument_list|(
+name|SMX_DATABINDING_DISABLED
+argument_list|)
+argument_list|)
+condition|)
+block|{
 name|sb
 operator|.
 name|getInInterceptors
@@ -2990,8 +3008,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// REVISIT: The phase interceptor chain seems to freak out if this added
-comment|// first. Not sure what the deal is at the moment, I suspect the
-comment|// ordering algorithm needs to be improved
+comment|//first. Not sure what the deal is at the moment, I suspect the
+comment|//ordering algorithm needs to be improved
 name|sb
 operator|.
 name|getInInterceptors
@@ -3004,6 +3022,7 @@ name|URIMappingInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|version
