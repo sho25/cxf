@@ -437,8 +437,7 @@ literal|0
 condition|?
 literal|null
 else|:
-operator|new
-name|Locale
+name|createLocale
 argument_list|(
 name|values
 operator|.
