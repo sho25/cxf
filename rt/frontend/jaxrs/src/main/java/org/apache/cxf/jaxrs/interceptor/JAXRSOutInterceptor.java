@@ -1412,16 +1412,7 @@ name|entity
 argument_list|,
 name|targetType
 argument_list|,
-name|invoked
-operator|!=
-literal|null
-condition|?
-name|invoked
-operator|.
-name|getGenericReturnType
-argument_list|()
-else|:
-literal|null
+name|genericType
 argument_list|,
 name|invoked
 operator|!=
