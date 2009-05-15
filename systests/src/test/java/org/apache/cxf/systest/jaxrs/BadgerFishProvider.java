@@ -658,7 +658,7 @@ operator|!
 operator|new
 name|Locale
 argument_list|(
-literal|"badger-fish-language"
+literal|"badgerFishLanguage"
 argument_list|)
 operator|.
 name|equals

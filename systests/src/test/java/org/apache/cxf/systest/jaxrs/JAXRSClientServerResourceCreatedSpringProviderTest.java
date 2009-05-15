@@ -223,7 +223,7 @@ name|addRequestProperty
 argument_list|(
 literal|"Content-Language"
 argument_list|,
-literal|"badger-fish-language"
+literal|"badgerFishLanguage"
 argument_list|)
 expr_stmt|;
 name|InputStream
