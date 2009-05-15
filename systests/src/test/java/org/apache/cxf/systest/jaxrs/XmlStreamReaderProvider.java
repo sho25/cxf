@@ -148,7 +148,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-literal|"POST"
+literal|"PUT"
 operator|.
 name|equals
 argument_list|(
