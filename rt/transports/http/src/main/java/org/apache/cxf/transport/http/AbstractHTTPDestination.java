@@ -1808,16 +1808,41 @@ name|getPathInfo
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// work around a bug with Jetty which results in the character
-comment|// encoding not being trimmed correctly.
+name|String
+name|contentType
+init|=
+name|req
+operator|.
+name|getContentType
+argument_list|()
+decl_stmt|;
 name|String
 name|enc
 init|=
+name|HttpHeaderHelper
+operator|.
+name|findCharset
+argument_list|(
+name|contentType
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|enc
+operator|==
+literal|null
+condition|)
+block|{
+name|enc
+operator|=
 name|req
 operator|.
 name|getCharacterEncoding
 argument_list|()
-decl_stmt|;
+expr_stmt|;
+block|}
+comment|// work around a bug with Jetty which results in the character
+comment|// encoding not being trimmed correctly.
 if|if
 condition|(
 name|enc
@@ -1944,10 +1969,7 @@ name|Message
 operator|.
 name|CONTENT_TYPE
 argument_list|,
-name|req
-operator|.
-name|getContentType
-argument_list|()
+name|contentType
 argument_list|)
 expr_stmt|;
 name|inMessage
