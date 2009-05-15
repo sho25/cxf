@@ -377,6 +377,8 @@ begin_class
 specifier|public
 class|class
 name|Customer
+extends|extends
+name|AbstractCustomer
 implements|implements
 name|CustomerInfo
 block|{
