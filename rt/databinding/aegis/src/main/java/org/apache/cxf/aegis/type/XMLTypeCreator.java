@@ -1440,6 +1440,9 @@ argument_list|(
 literal|"property "
 operator|+
 name|pd
+operator|.
+name|getDisplayName
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|readMetadata

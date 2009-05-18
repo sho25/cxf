@@ -2486,7 +2486,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*          * Automagically add chain of superclassesif this is an an extension.          */
+comment|/*          * Automagically add chain of superclasses if this is an an extension.          */
 if|if
 condition|(
 name|inf
