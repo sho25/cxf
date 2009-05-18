@@ -3157,6 +3157,13 @@ decl_stmt|;
 name|String
 name|sub
 init|=
+name|dotIndex
+operator|==
+operator|-
+literal|1
+condition|?
+literal|""
+else|:
 name|file
 operator|.
 name|substring
