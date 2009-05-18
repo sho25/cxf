@@ -300,6 +300,8 @@ literal|"[MessageInfo "
 operator|+
 name|type
 operator|+
+literal|": "
+operator|+
 name|mName
 operator|.
 name|toString
