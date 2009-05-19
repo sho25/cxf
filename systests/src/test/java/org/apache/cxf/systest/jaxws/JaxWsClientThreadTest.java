@@ -481,9 +481,6 @@ name|expected
 operator|.
 name|getCause
 argument_list|()
-operator|.
-name|getCause
-argument_list|()
 decl_stmt|;
 if|if
 condition|(

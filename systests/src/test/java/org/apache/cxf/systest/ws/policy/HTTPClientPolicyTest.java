@@ -763,6 +763,11 @@ argument_list|(
 literal|"cxf"
 argument_list|)
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Didn't get the exception"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -772,6 +777,17 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
+name|ex
+operator|.
+name|getCause
+argument_list|()
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+argument_list|,
 name|ex
 operator|.
 name|getCause

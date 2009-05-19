@@ -439,6 +439,20 @@ throw|;
 block|}
 if|if
 condition|(
+operator|!
+name|done
+condition|)
+block|{
+throw|throw
+operator|new
+name|TimeoutException
+argument_list|(
+literal|"Timeout Exceeded"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
 name|exception
 operator|!=
 literal|null
