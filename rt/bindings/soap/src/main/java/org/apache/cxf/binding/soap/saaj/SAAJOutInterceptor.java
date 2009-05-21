@@ -761,8 +761,6 @@ condition|)
 block|{
 comment|//as the SOAPMessage already has everything in place, we do not need XMLStreamWriter to write
 comment|//anything for us, so we just set XMLStreamWriter's output to a dummy output stream.
-try|try
-block|{
 name|XMLStreamWriter
 name|origWriter
 init|=
@@ -789,9 +787,6 @@ name|dummyWriter
 init|=
 name|StaxUtils
 operator|.
-name|getXMLOutputFactory
-argument_list|()
-operator|.
 name|createXMLStreamWriter
 argument_list|(
 operator|new
@@ -807,7 +802,7 @@ name|b
 parameter_list|)
 throws|throws
 name|IOException
-block|{                         }
+block|{                     }
 specifier|public
 name|void
 name|write
@@ -824,7 +819,7 @@ name|len
 parameter_list|)
 throws|throws
 name|IOException
-block|{                         }
+block|{                     }
 block|}
 argument_list|)
 decl_stmt|;
@@ -839,15 +834,6 @@ argument_list|,
 name|dummyWriter
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|XMLStreamException
-name|e
-parameter_list|)
-block|{
-comment|// do nothing
-block|}
 block|}
 comment|// Add a final interceptor to write the message
 name|message

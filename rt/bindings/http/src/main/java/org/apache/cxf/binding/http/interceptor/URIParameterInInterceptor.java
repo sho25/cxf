@@ -863,7 +863,14 @@ try|try
 block|{
 name|XMLStreamReader
 name|reader
-init|=
+decl_stmt|;
+synchronized|synchronized
+init|(
+name|inputFactory
+init|)
+block|{
+name|reader
+operator|=
 name|inputFactory
 operator|.
 name|createXMLStreamReader
@@ -877,7 +884,8 @@ operator|.
 name|class
 argument_list|)
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 name|doc
 operator|=
 name|StaxUtils
