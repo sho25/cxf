@@ -151,9 +151,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|utils
+name|model
 operator|.
-name|InjectionUtils
+name|ParameterType
 import|;
 end_import
 
@@ -169,7 +169,7 @@ name|jaxrs
 operator|.
 name|utils
 operator|.
-name|ParameterType
+name|InjectionUtils
 import|;
 end_import
 

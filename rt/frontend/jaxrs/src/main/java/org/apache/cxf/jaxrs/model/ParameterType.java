@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|utils
+name|model
 package|;
 end_package
 
