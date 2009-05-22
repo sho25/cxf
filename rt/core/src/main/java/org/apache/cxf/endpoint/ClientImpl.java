@@ -51,6 +51,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashMap
 import|;
 end_import
@@ -703,6 +713,10 @@ name|EchoContext
 argument_list|>
 name|requestContext
 init|=
+name|Collections
+operator|.
+name|synchronizedMap
+argument_list|(
 operator|new
 name|WeakHashMap
 argument_list|<
@@ -711,6 +725,7 @@ argument_list|,
 name|EchoContext
 argument_list|>
 argument_list|()
+argument_list|)
 decl_stmt|;
 specifier|protected
 name|Map
@@ -726,6 +741,10 @@ argument_list|>
 argument_list|>
 name|responseContext
 init|=
+name|Collections
+operator|.
+name|synchronizedMap
+argument_list|(
 operator|new
 name|WeakHashMap
 argument_list|<
@@ -739,6 +758,7 @@ name|Object
 argument_list|>
 argument_list|>
 argument_list|()
+argument_list|)
 decl_stmt|;
 specifier|protected
 name|Executor
