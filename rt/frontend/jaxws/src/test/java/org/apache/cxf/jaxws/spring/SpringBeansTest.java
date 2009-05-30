@@ -800,6 +800,18 @@ argument_list|,
 literal|"http://cxf.apache.org/bindings/xformat"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"get a wrong transportId"
+argument_list|,
+literal|"http://cxf.apache.org/transports/local"
+argument_list|,
+name|ep
+operator|.
+name|getTransportId
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|ep
 operator|=
 name|getEndpointImplBean
