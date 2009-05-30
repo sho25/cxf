@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Utiliy interface which helps to retrieve   * the invoiation handler from a CGLIB proxy    *  */
+comment|/**  * Utility interface which helps to retrieve   * the invocation handler from a CGLIB proxy    *  */
 end_comment
 
 begin_interface
