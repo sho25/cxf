@@ -467,6 +467,15 @@ block|}
 block|}
 block|}
 specifier|public
+name|Map
+name|getHeaders
+parameter_list|()
+block|{
+return|return
+name|headers
+return|;
+block|}
+specifier|public
 name|WebClient
 name|createWebClient
 parameter_list|()
