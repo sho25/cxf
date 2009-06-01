@@ -216,6 +216,16 @@ annotation|@
 name|WebMethod
 specifier|public
 name|void
+name|verifyCustomParamName
+parameter_list|(
+name|String
+name|param
+parameter_list|)
+block|{     }
+annotation|@
+name|WebMethod
+specifier|public
+name|void
 name|submitJDOMArray
 parameter_list|(
 name|String
