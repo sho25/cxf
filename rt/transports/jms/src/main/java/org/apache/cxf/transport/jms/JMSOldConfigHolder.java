@@ -563,7 +563,14 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-comment|//if (clientConfig.isSetClientReceiveTimeout()) {
+if|if
+condition|(
+name|clientConfig
+operator|.
+name|isSetClientReceiveTimeout
+argument_list|()
+condition|)
+block|{
 name|jmsConfig
 operator|.
 name|setReceiveTimeout
@@ -574,7 +581,7 @@ name|getClientReceiveTimeout
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//}
+block|}
 if|if
 condition|(
 name|clientConfig

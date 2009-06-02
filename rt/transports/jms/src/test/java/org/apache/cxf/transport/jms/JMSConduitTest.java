@@ -370,6 +370,9 @@ argument_list|()
 operator|.
 name|getReceiveTimeout
 argument_list|()
+operator|.
+name|longValue
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|bus
@@ -529,7 +532,12 @@ argument_list|()
 operator|.
 name|setReceiveTimeout
 argument_list|(
+name|Long
+operator|.
+name|valueOf
+argument_list|(
 literal|10000
+argument_list|)
 argument_list|)
 expr_stmt|;
 try|try
@@ -633,7 +641,12 @@ argument_list|()
 operator|.
 name|setReceiveTimeout
 argument_list|(
+name|Long
+operator|.
+name|valueOf
+argument_list|(
 literal|1
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|Message

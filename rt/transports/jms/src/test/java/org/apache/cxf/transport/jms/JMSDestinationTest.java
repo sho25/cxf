@@ -604,6 +604,21 @@ expr_stmt|;
 comment|/*setupServiceInfo("http://cxf.apache.org/hello_world_jms", "/wsdl/jms_test.wsdl",                          "HelloWorldQueueBinMsgService", "HelloWorldQueueBinMsgPort");         destination = setupJMSDestination(false);         jmsConfig = destination.getJmsConfig();*/
 name|assertEquals
 argument_list|(
+literal|"The receiveTimeout should be set"
+argument_list|,
+name|jmsConfig
+operator|.
+name|getReceiveTimeout
+argument_list|()
+operator|.
+name|longValue
+argument_list|()
+argument_list|,
+literal|1500L
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
 literal|"The concurrentConsumer should be set"
 argument_list|,
 name|jmsConfig
