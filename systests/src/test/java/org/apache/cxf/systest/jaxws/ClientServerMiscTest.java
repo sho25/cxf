@@ -1833,6 +1833,25 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
+literal|"size: 2"
+argument_list|,
+name|port
+operator|.
+name|doFooList
+argument_list|(
+operator|new
+name|ArrayList
+argument_list|<
+name|Foo
+argument_list|>
+argument_list|(
+name|fooSet
+argument_list|)
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
 literal|24
 argument_list|,
 name|port

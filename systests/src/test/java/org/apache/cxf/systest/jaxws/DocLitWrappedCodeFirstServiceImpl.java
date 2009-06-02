@@ -1119,6 +1119,26 @@ return|return
 name|s
 return|;
 block|}
+specifier|public
+name|String
+name|doFooList
+parameter_list|(
+name|List
+argument_list|<
+name|Foo
+argument_list|>
+name|fooList
+parameter_list|)
+block|{
+return|return
+literal|"size: "
+operator|+
+name|fooList
+operator|.
+name|size
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 
