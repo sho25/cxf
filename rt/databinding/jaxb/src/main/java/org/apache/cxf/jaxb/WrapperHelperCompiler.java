@@ -687,11 +687,6 @@ name|e
 parameter_list|)
 block|{
 comment|// ignore, we'll just fall down to reflection based
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 block|}
 return|return
 literal|null
