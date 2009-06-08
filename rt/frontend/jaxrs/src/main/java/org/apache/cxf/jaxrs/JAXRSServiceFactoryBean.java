@@ -519,6 +519,16 @@ name|Class
 name|cls
 parameter_list|)
 block|{
+if|if
+condition|(
+name|getCreatedFromModel
+argument_list|(
+name|cls
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
 name|classResourceInfos
 operator|.
 name|clear
@@ -547,6 +557,7 @@ argument_list|,
 name|isRoot
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
