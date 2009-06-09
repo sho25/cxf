@@ -446,7 +446,7 @@ name|notifier
 operator|.
 name|waitForJavascript
 argument_list|(
-literal|100
+literal|10000
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -812,9 +812,9 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|nodeText
-argument_list|,
 literal|"Hello \u05e9\u05dc\u05d5\u05dd"
+argument_list|,
+name|nodeText
 argument_list|)
 expr_stmt|;
 block|}

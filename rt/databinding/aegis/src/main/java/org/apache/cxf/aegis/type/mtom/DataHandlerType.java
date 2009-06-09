@@ -355,6 +355,8 @@ operator|.
 name|mapCharset
 argument_list|(
 name|charset
+argument_list|,
+literal|"UTF-8"
 argument_list|)
 decl_stmt|;
 try|try

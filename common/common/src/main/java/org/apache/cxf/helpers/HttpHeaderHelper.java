@@ -190,15 +190,18 @@ decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
-name|Charset
-name|UTF8
+name|String
+name|ISO88591
 init|=
 name|Charset
 operator|.
 name|forName
 argument_list|(
-literal|"utf-8"
+literal|"ISO-8859-1"
 argument_list|)
+operator|.
+name|name
+argument_list|()
 decl_stmt|;
 specifier|private
 specifier|static
@@ -522,6 +525,24 @@ return|return
 literal|null
 return|;
 block|}
+specifier|public
+specifier|static
+name|String
+name|mapCharset
+parameter_list|(
+name|String
+name|enc
+parameter_list|)
+block|{
+return|return
+name|mapCharset
+argument_list|(
+name|enc
+argument_list|,
+name|ISO88591
+argument_list|)
+return|;
+block|}
 comment|//helper to map the charsets that various things send in the http Content-Type header
 comment|//into something that is actually supported by Java and the Stax parsers and such.
 specifier|public
@@ -531,6 +552,9 @@ name|mapCharset
 parameter_list|(
 name|String
 name|enc
+parameter_list|,
+name|String
+name|deflt
 parameter_list|)
 block|{
 if|if
@@ -541,10 +565,7 @@ literal|null
 condition|)
 block|{
 return|return
-name|UTF8
-operator|.
-name|name
-argument_list|()
+name|deflt
 return|;
 block|}
 comment|//older versions of tomcat don't properly parse ContentType headers with stuff
@@ -617,10 +638,7 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|UTF8
-operator|.
-name|name
-argument_list|()
+name|deflt
 return|;
 block|}
 name|String

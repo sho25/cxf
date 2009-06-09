@@ -101,7 +101,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"UTF-8"
+literal|"ISO-8859-1"
 argument_list|,
 name|cs
 argument_list|)
