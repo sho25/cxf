@@ -312,7 +312,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"DocLiteralInInterceptor skipped in HTTP GET method"
+literal|"StaxDataBindingInterceptor skipped in HTTP GET method"
 argument_list|)
 expr_stmt|;
 return|return;

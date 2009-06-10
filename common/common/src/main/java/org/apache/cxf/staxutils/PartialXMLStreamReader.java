@@ -51,6 +51,10 @@ name|XMLStreamReader
 import|;
 end_import
 
+begin_comment
+comment|/**  * Read from a StaX reader, stopping when the next element is a specified element.  * For example, this can be used to read all of the Header of a soap message into a DOM  * document stopping on contact with the body element.  */
+end_comment
+
 begin_class
 specifier|public
 class|class

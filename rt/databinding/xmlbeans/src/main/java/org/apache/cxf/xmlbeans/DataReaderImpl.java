@@ -139,20 +139,6 @@ name|cxf
 operator|.
 name|databinding
 operator|.
-name|DataBindingValidation2
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|databinding
-operator|.
 name|DataReader
 import|;
 end_import
@@ -198,22 +184,6 @@ operator|.
 name|model
 operator|.
 name|MessagePartInfo
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|service
-operator|.
-name|model
-operator|.
-name|ServiceInfo
 import|;
 end_import
 
@@ -274,8 +244,6 @@ name|DataReader
 argument_list|<
 name|XMLStreamReader
 argument_list|>
-implements|,
-name|DataBindingValidation2
 block|{
 specifier|private
 specifier|static
@@ -891,19 +859,6 @@ name|Schema
 name|s
 parameter_list|)
 block|{     }
-specifier|public
-name|void
-name|setValidationServiceModel
-parameter_list|(
-name|ServiceInfo
-name|serviceModel
-parameter_list|)
-block|{
-name|validate
-operator|=
-literal|true
-expr_stmt|;
-block|}
 block|}
 end_class
 

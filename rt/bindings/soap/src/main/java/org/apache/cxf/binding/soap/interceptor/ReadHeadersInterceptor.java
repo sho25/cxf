@@ -1119,40 +1119,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//advance to just outside the<soap:body> opening tag, but not
-comment|//to the nextTag as that may skip over white space that is
-comment|//important to keep for ws-security signature digests and stuff
-name|int
-name|i
-init|=
-name|xmlReader
-operator|.
-name|next
-argument_list|()
-decl_stmt|;
-while|while
-condition|(
-name|i
-operator|==
-name|XMLStreamReader
-operator|.
-name|NAMESPACE
-operator|||
-name|i
-operator|==
-name|XMLStreamReader
-operator|.
-name|ATTRIBUTE
-condition|)
-block|{
-name|i
-operator|=
-name|xmlReader
-operator|.
-name|next
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 block|}
 catch|catch

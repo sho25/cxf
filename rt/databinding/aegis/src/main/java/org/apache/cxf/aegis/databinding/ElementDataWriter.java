@@ -219,20 +219,6 @@ name|cxf
 operator|.
 name|databinding
 operator|.
-name|DataBindingValidation2
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|databinding
-operator|.
 name|DataWriter
 import|;
 end_import
@@ -289,22 +275,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|service
-operator|.
-name|model
-operator|.
-name|ServiceInfo
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|staxutils
 operator|.
 name|W3CDOMStreamWriter
@@ -320,8 +290,6 @@ name|DataWriter
 argument_list|<
 name|Element
 argument_list|>
-implements|,
-name|DataBindingValidation2
 block|{
 specifier|private
 specifier|static
@@ -661,14 +629,6 @@ name|key
 argument_list|)
 return|;
 block|}
-specifier|public
-name|void
-name|setValidationServiceModel
-parameter_list|(
-name|ServiceInfo
-name|serviceInfo
-parameter_list|)
-block|{     }
 block|}
 end_class
 
