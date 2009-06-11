@@ -858,7 +858,14 @@ parameter_list|(
 name|Schema
 name|s
 parameter_list|)
-block|{     }
+block|{
+name|validate
+operator|=
+name|s
+operator|!=
+literal|null
+expr_stmt|;
+block|}
 block|}
 end_class
 
