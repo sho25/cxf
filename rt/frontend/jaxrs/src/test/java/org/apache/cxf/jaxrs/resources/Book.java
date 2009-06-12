@@ -210,7 +210,7 @@ parameter_list|(
 annotation|@
 name|PathParam
 argument_list|(
-literal|"id"
+literal|"chapterid"
 argument_list|)
 name|int
 name|chapterid
