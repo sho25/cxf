@@ -1382,6 +1382,7 @@ operator|=
 name|a
 expr_stmt|;
 block|}
+specifier|public
 name|Collection
 argument_list|<
 name|PolicyAttachment
