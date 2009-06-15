@@ -15,22 +15,6 @@ end_package
 
 begin_import
 import|import
-name|demo
-operator|.
-name|hw
-operator|.
-name|server
-operator|.
-name|HelloWorld
-import|;
-end_import
-
-begin_comment
-comment|//import org.apache.cxf.aegis.databinding.AegisDatabinding;
-end_comment
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -40,6 +24,18 @@ operator|.
 name|frontend
 operator|.
 name|ClientProxyFactoryBean
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|hw
+operator|.
+name|server
+operator|.
+name|HelloWorld
 import|;
 end_import
 

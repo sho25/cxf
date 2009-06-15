@@ -47,18 +47,6 @@ end_import
 
 begin_import
 import|import
-name|demo
-operator|.
-name|colocated
-operator|.
-name|server
-operator|.
-name|Server
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -104,6 +92,18 @@ operator|.
 name|types
 operator|.
 name|FaultDetail
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|colocated
+operator|.
+name|server
+operator|.
+name|Server
 import|;
 end_import
 

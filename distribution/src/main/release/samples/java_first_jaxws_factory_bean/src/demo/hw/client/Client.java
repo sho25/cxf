@@ -15,18 +15,6 @@ end_package
 
 begin_import
 import|import
-name|demo
-operator|.
-name|hw
-operator|.
-name|server
-operator|.
-name|HelloWorld
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -64,6 +52,18 @@ operator|.
 name|jaxws
 operator|.
 name|JaxWsProxyFactoryBean
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|hw
+operator|.
+name|server
+operator|.
+name|HelloWorld
 import|;
 end_import
 

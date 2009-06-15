@@ -107,16 +107,6 @@ end_import
 
 begin_import
 import|import
-name|javanet
-operator|.
-name|staxutils
-operator|.
-name|IndentingXMLStreamWriter
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -192,6 +182,16 @@ operator|.
 name|types
 operator|.
 name|Zoo
+import|;
+end_import
+
+begin_import
+import|import
+name|javanet
+operator|.
+name|staxutils
+operator|.
+name|IndentingXMLStreamWriter
 import|;
 end_import
 

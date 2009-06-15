@@ -13,16 +13,6 @@ end_package
 
 begin_import
 import|import
-name|corba
-operator|.
-name|common
-operator|.
-name|AccountPOA
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|omg
@@ -30,6 +20,16 @@ operator|.
 name|PortableServer
 operator|.
 name|POA
+import|;
+end_import
+
+begin_import
+import|import
+name|corba
+operator|.
+name|common
+operator|.
+name|AccountPOA
 import|;
 end_import
 

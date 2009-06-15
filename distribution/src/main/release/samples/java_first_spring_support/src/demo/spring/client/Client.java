@@ -15,16 +15,6 @@ end_package
 
 begin_import
 import|import
-name|demo
-operator|.
-name|spring
-operator|.
-name|HelloWorld
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|springframework
@@ -34,6 +24,16 @@ operator|.
 name|support
 operator|.
 name|ClassPathXmlApplicationContext
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|spring
+operator|.
+name|HelloWorld
 import|;
 end_import
 

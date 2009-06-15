@@ -37,18 +37,6 @@ end_import
 
 begin_import
 import|import
-name|demo
-operator|.
-name|ws_rm
-operator|.
-name|common
-operator|.
-name|MessageLossSimulator
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -100,6 +88,18 @@ operator|.
 name|hello_world_soap_http
 operator|.
 name|GreeterService
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|ws_rm
+operator|.
+name|common
+operator|.
+name|MessageLossSimulator
 import|;
 end_import
 

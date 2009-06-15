@@ -83,18 +83,6 @@ end_import
 
 begin_import
 import|import
-name|demo
-operator|.
-name|handlers
-operator|.
-name|common
-operator|.
-name|SmallNumberHandler
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -126,6 +114,18 @@ operator|.
 name|handlers
 operator|.
 name|AddNumbersService
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|handlers
+operator|.
+name|common
+operator|.
+name|SmallNumberHandler
 import|;
 end_import
 
