@@ -350,6 +350,10 @@ name|boolean
 name|inmem
 decl_stmt|;
 specifier|private
+name|boolean
+name|tempFileFailed
+decl_stmt|;
+specifier|private
 name|File
 name|tempFile
 decl_stmt|;
@@ -1537,7 +1541,7 @@ name|onWrite
 parameter_list|()
 throws|throws
 name|IOException
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|write
@@ -1711,6 +1715,13 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|tempFileFailed
+condition|)
+block|{
+return|return;
+block|}
 name|ByteArrayOutputStream
 name|bout
 init|=
@@ -1719,6 +1730,8 @@ name|ByteArrayOutputStream
 operator|)
 name|currentStream
 decl_stmt|;
+try|try
+block|{
 if|if
 condition|(
 name|outputDir
@@ -1786,6 +1799,32 @@ argument_list|(
 name|currentStream
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//Could be IOException or SecurityException or other issues.
+comment|//Don't care what, just keep it in memory.
+name|tempFileFailed
+operator|=
+literal|true
+expr_stmt|;
+name|tempFile
+operator|=
+literal|null
+expr_stmt|;
+name|inmem
+operator|=
+literal|true
+expr_stmt|;
+name|currentStream
+operator|=
+name|bout
+expr_stmt|;
+block|}
 block|}
 specifier|public
 name|File
