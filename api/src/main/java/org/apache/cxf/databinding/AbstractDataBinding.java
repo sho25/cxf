@@ -661,7 +661,6 @@ argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|StringUtils
@@ -695,6 +694,7 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|n

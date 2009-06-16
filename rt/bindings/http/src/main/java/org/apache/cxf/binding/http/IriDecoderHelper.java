@@ -2078,6 +2078,14 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|Node
+name|next
+init|=
+name|node
+operator|.
+name|getNextSibling
+argument_list|()
+decl_stmt|;
 name|ec
 operator|.
 name|removeChild
@@ -2087,10 +2095,7 @@ argument_list|)
 expr_stmt|;
 name|node
 operator|=
-name|node
-operator|.
-name|getNextSibling
-argument_list|()
+name|next
 expr_stmt|;
 block|}
 block|}
