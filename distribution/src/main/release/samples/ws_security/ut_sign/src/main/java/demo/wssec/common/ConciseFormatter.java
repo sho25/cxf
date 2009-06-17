@@ -5,7 +5,7 @@ end_comment
 
 begin_package
 package|package
-name|demos
+name|demo
 operator|.
 name|wssec
 operator|.
