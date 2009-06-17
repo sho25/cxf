@@ -513,6 +513,17 @@ argument_list|,
 name|query
 argument_list|)
 expr_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|HTTP_REQUEST_METHOD
+argument_list|,
+literal|"GET"
+argument_list|)
+expr_stmt|;
 name|control
 operator|.
 name|replay

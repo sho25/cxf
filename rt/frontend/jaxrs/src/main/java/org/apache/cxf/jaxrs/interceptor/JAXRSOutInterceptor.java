@@ -936,6 +936,10 @@ argument_list|)
 operator|&&
 name|firstTry
 operator|&&
+name|ori
+operator|!=
+literal|null
+operator|&&
 name|JAXRSUtils
 operator|.
 name|headMethodPossible
