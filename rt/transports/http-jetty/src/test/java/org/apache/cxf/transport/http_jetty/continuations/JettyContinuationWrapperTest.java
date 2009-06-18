@@ -351,10 +351,8 @@ operator|.
 name|isResumed
 argument_list|()
 expr_stmt|;
-name|assertSame
+name|assertNull
 argument_list|(
-name|ci
-argument_list|,
 name|cw
 operator|.
 name|getObject
