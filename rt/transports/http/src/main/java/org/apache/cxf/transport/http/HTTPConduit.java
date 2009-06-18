@@ -1919,6 +1919,32 @@ literal|"AutoRedirect is turned on."
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|csPolicy
+operator|.
+name|getMaxRetransmits
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
+name|needToCacheRequest
+operator|=
+literal|true
+expr_stmt|;
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"MaxRetransmits is set> 0."
+argument_list|)
+expr_stmt|;
+block|}
 comment|// DELETE does not work and empty PUTs cause misleading exceptions
 comment|// if chunking is enabled
 comment|// TODO : ensure chunking can be enabled for non-empty PUTs - if requested
