@@ -39,6 +39,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|RejectedExecutionException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -403,6 +415,8 @@ operator|.
 name|pause
 argument_list|()
 expr_stmt|;
+try|try
+block|{
 name|message
 operator|.
 name|getExchange
@@ -445,6 +459,20 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|RejectedExecutionException
+name|e
+parameter_list|)
+block|{
+comment|//the executor queue is full, so run the task in the caller thread
+name|chain
+operator|.
+name|resume
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 block|}
