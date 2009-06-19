@@ -6080,6 +6080,14 @@ operator|.
 name|getSchema
 argument_list|()
 decl_stmt|;
+name|si
+operator|.
+name|setElement
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+comment|//cached element is now invalid
 name|XmlSchemaElement
 name|el
 init|=
@@ -6298,9 +6306,6 @@ argument_list|,
 name|unwrappedMessage
 argument_list|,
 name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
 argument_list|,
 name|wrapperBeanName
 argument_list|)
@@ -6701,6 +6706,14 @@ expr_stmt|;
 continue|continue;
 block|}
 block|}
+name|schemaInfo
+operator|.
+name|setElement
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+comment|//cached element is now invalid
 name|XmlSchemaElement
 name|el
 init|=
@@ -7270,13 +7283,29 @@ parameter_list|,
 name|AbstractMessageContainer
 name|unwrappedMessage
 parameter_list|,
-name|XmlSchema
-name|schema
+name|SchemaInfo
+name|info
 parameter_list|,
 name|QName
 name|wrapperName
 parameter_list|)
 block|{
+name|XmlSchema
+name|schema
+init|=
+name|info
+operator|.
+name|getSchema
+argument_list|()
+decl_stmt|;
+name|info
+operator|.
+name|setElement
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+comment|// the cached schema will be no good
 name|XmlSchemaElement
 name|el
 init|=

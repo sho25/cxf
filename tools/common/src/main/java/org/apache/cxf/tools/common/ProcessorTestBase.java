@@ -318,6 +318,8 @@ block|,
 literal|"elementFormDefault"
 block|,
 literal|"form"
+block|,
+literal|"version"
 block|}
 argument_list|)
 decl_stmt|;

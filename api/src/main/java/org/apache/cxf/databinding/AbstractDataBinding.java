@@ -749,6 +749,16 @@ argument_list|(
 name|xmlSchema
 argument_list|)
 expr_stmt|;
+name|schema
+operator|.
+name|setElement
+argument_list|(
+name|d
+operator|.
+name|getDocumentElement
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 name|serviceInfo
 operator|.

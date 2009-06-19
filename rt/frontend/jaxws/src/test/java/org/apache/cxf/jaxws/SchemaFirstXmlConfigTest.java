@@ -55,6 +55,20 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|XMLUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|Test
@@ -153,6 +167,13 @@ name|getServer
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|XMLUtils
+operator|.
+name|printDOM
+argument_list|(
+name|d
+argument_list|)
+expr_stmt|;
 comment|// XmlSchema still isn't preserving all the extra info...
 name|assertValid
 argument_list|(
