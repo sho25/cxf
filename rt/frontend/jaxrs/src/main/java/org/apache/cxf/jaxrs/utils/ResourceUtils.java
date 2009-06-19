@@ -634,6 +634,19 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|InjectionUtils
+operator|.
+name|isConcreteClass
+argument_list|(
+name|cri
+operator|.
+name|getServiceClass
+argument_list|()
+argument_list|)
+condition|)
+block|{
 try|try
 block|{
 name|cri
@@ -671,6 +684,7 @@ operator|+
 literal|" can not be created"
 argument_list|)
 throw|;
+block|}
 block|}
 name|URITemplate
 name|t

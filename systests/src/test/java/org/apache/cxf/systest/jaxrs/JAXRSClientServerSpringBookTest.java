@@ -317,8 +317,6 @@ argument_list|(
 name|BookServerSpring
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -600,6 +598,15 @@ operator|.
 name|openConnection
 argument_list|()
 decl_stmt|;
+name|connect
+operator|.
+name|addRequestProperty
+argument_list|(
+literal|"Content-Type"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
 name|connect
 operator|.
 name|addRequestProperty
