@@ -767,7 +767,7 @@ name|get
 argument_list|(
 name|ToolConstants
 operator|.
-name|CFG_WSDLLOCATION
+name|CFG_WSDLURL
 argument_list|)
 decl_stmt|;
 name|String
