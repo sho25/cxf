@@ -43,16 +43,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|InputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|Writer
 import|;
 end_import
@@ -216,20 +206,6 @@ operator|.
 name|helpers
 operator|.
 name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|staxutils
-operator|.
-name|StaxUtils
 import|;
 end_import
 
