@@ -745,7 +745,7 @@ operator|.
 name|getNode
 argument_list|()
 argument_list|,
-literal|"responseType"
+literal|"greetMeResponse"
 argument_list|)
 operator|.
 name|getTextContent
