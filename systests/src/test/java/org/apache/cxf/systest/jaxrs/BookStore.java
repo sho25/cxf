@@ -2219,8 +2219,9 @@ name|book
 operator|.
 name|setId
 argument_list|(
-operator|++
 name|bookId
+operator|+
+literal|1
 argument_list|)
 expr_stmt|;
 name|books
