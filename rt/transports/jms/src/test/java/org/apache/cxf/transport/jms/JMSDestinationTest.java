@@ -256,7 +256,7 @@ specifier|final
 name|int
 name|MAX_RECEIVE_TIME
 init|=
-literal|3
+literal|5
 decl_stmt|;
 specifier|private
 name|Message
