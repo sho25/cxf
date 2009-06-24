@@ -706,9 +706,9 @@ annotation|@
 name|Produces
 argument_list|(
 block|{
-literal|"application/html;q=1.0"
+literal|"application/html;q=0.5"
 block|,
-literal|"application/xml;q=0.5"
+literal|"application/xml;q=1.0"
 block|,
 literal|"application/json;q=0.5"
 block|}
