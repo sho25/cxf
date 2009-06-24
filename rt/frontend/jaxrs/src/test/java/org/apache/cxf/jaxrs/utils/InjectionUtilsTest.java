@@ -628,7 +628,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
 specifier|static
 class|class
 name|CustomerBean1
@@ -755,7 +754,6 @@ name|d
 return|;
 block|}
 block|}
-specifier|private
 specifier|static
 class|class
 name|CustomerBean2

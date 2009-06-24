@@ -758,9 +758,6 @@ name|String
 index|[]
 name|names
 decl_stmt|;
-name|int
-name|maxLocals
-decl_stmt|;
 specifier|public
 name|MethodInfo
 parameter_list|(
@@ -768,12 +765,6 @@ name|int
 name|maxLocals
 parameter_list|)
 block|{
-name|this
-operator|.
-name|maxLocals
-operator|=
-name|maxLocals
-expr_stmt|;
 name|names
 operator|=
 operator|new

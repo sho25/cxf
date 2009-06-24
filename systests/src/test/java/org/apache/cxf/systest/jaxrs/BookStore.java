@@ -3049,7 +3049,6 @@ name|cd1
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
 specifier|static
 class|class
 name|BookInfo
@@ -3214,7 +3213,6 @@ argument_list|)
 return|;
 block|}
 block|}
-specifier|private
 specifier|static
 class|class
 name|BadBook

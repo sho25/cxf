@@ -3476,7 +3476,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
 class|class
 name|InnerErrorListener
 block|{

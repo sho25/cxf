@@ -977,7 +977,6 @@ name|schemas
 expr_stmt|;
 block|}
 block|}
-specifier|private
 specifier|static
 specifier|final
 class|class

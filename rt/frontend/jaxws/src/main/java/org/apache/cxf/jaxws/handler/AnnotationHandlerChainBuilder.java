@@ -1970,7 +1970,6 @@ return|return
 name|hcAnn
 return|;
 block|}
-specifier|private
 specifier|static
 class|class
 name|HandlerChainAnnotation

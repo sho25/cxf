@@ -2500,7 +2500,6 @@ return|return
 name|ret
 return|;
 block|}
-specifier|private
 specifier|static
 class|class
 name|TestResender

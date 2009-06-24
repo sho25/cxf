@@ -263,7 +263,6 @@ name|Consumes
 argument_list|(
 literal|"test/foo"
 argument_list|)
-specifier|private
 specifier|static
 class|class
 name|TestClass
@@ -304,7 +303,6 @@ name|getIt
 parameter_list|()
 block|{                       }
 block|}
-specifier|private
 specifier|static
 class|class
 name|TestClass1
@@ -319,7 +317,6 @@ name|getIt
 parameter_list|()
 block|{                       }
 block|}
-specifier|private
 specifier|static
 class|class
 name|TestClass2
@@ -334,7 +331,6 @@ name|getIt
 parameter_list|()
 block|{                       }
 block|}
-specifier|private
 specifier|static
 class|class
 name|TestClass3
