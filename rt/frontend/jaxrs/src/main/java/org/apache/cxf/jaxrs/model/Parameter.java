@@ -52,6 +52,9 @@ parameter_list|(
 name|String
 name|type
 parameter_list|,
+name|int
+name|pos
+parameter_list|,
 name|String
 name|aValue
 parameter_list|)
@@ -65,7 +68,7 @@ argument_list|(
 name|type
 argument_list|)
 argument_list|,
-literal|0
+name|pos
 argument_list|,
 name|aValue
 argument_list|)
