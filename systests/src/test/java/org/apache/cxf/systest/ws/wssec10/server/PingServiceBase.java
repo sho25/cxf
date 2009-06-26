@@ -87,19 +87,7 @@ name|String
 name|request
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"echo("
-operator|+
-name|request
-operator|+
-literal|")"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("echo(" + request + ")");
 return|return
 name|request
 return|;
