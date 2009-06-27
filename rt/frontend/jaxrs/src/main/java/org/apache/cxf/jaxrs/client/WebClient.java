@@ -1979,7 +1979,7 @@ name|HttpURLConnection
 name|conn
 parameter_list|,
 name|Message
-name|m
+name|outMessage
 parameter_list|,
 name|Class
 argument_list|<
@@ -1996,6 +1996,14 @@ init|=
 name|setResponseBuilder
 argument_list|(
 name|conn
+argument_list|,
+name|outMessage
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getInMessage
+argument_list|()
 argument_list|)
 operator|.
 name|clone
@@ -2021,7 +2029,7 @@ name|currentResponse
 argument_list|,
 name|conn
 argument_list|,
-name|m
+name|outMessage
 argument_list|,
 name|responseClass
 argument_list|,

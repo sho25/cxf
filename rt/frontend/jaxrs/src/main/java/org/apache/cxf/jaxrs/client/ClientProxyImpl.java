@@ -2855,7 +2855,7 @@ name|HttpURLConnection
 name|connect
 parameter_list|,
 name|Message
-name|inMessage
+name|outMessage
 parameter_list|,
 name|OperationResourceInfo
 name|ori
@@ -2869,6 +2869,14 @@ init|=
 name|setResponseBuilder
 argument_list|(
 name|connect
+argument_list|,
+name|outMessage
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getInMessage
+argument_list|()
 argument_list|)
 operator|.
 name|clone
@@ -2891,7 +2899,7 @@ name|method
 argument_list|,
 name|r
 argument_list|,
-name|inMessage
+name|outMessage
 argument_list|)
 expr_stmt|;
 if|if
@@ -2972,7 +2980,7 @@ name|r
 argument_list|,
 name|connect
 argument_list|,
-name|inMessage
+name|outMessage
 argument_list|,
 name|method
 operator|.
