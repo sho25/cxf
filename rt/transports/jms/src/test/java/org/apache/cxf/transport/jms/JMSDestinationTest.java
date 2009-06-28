@@ -403,6 +403,8 @@ parameter_list|(
 name|boolean
 name|send
 parameter_list|)
+throws|throws
+name|IOException
 block|{
 name|JMSConfiguration
 name|jmsConfig
@@ -1704,7 +1706,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testPropertyExclusion
+name|testProperty
 parameter_list|()
 throws|throws
 name|Exception
@@ -1982,52 +1984,24 @@ operator|.
 name|JMS_CLIENT_RESPONSE_HEADERS
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
-literal|"property has been excluded, only CONTENT_TYPE should be here"
+literal|"The inHeader should not be null"
 argument_list|,
+name|inHeader
+argument_list|)
+expr_stmt|;
+name|assertNotNull
+argument_list|(
+literal|"The property should not be null "
+operator|+
 name|inHeader
 operator|.
 name|getProperty
 argument_list|()
-operator|.
-name|size
-argument_list|()
-operator|==
-literal|1
 argument_list|)
 expr_stmt|;
-name|assertTrue
-argument_list|(
-literal|"property has been excluded, only "
-operator|+
-name|JMSConstants
-operator|.
-name|JMS_CONTENT_TYPE
-operator|+
-literal|"should be here"
-argument_list|,
-name|inHeader
-operator|.
-name|getProperty
-argument_list|()
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-operator|.
-name|getName
-argument_list|()
-operator|.
-name|equals
-argument_list|(
-name|JMSConstants
-operator|.
-name|JMS_CONTENT_TYPE
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// TODO we need to check the SOAP JMS transport properties here
 comment|// wait for a while for the jms session recycling
 name|Thread
 operator|.

@@ -1070,6 +1070,8 @@ name|JMSUtils
 operator|.
 name|buildJMSMessageFromCXFMessage
 argument_list|(
+name|jmsConfig
+argument_list|,
 name|outMessage
 argument_list|,
 name|request

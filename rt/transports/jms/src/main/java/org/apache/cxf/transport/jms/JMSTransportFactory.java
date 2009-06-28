@@ -207,6 +207,13 @@ argument_list|(
 literal|"jms://"
 argument_list|)
 expr_stmt|;
+name|URI_PREFIXES
+operator|.
+name|add
+argument_list|(
+literal|"jms:"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|Bus
