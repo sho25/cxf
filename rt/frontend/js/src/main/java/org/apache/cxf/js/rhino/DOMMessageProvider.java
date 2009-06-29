@@ -69,18 +69,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|WebServiceProvider
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|mozilla
@@ -92,8 +80,6 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|WebServiceProvider
 annotation|@
 name|ServiceMode
 argument_list|(
