@@ -553,6 +553,15 @@ argument_list|(
 name|WSAW_ACTION_QNAME
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|faultAction
+operator|==
+literal|null
+condition|)
+block|{
+continue|continue;
+block|}
 name|JavaException
 name|exceptionClass
 init|=
