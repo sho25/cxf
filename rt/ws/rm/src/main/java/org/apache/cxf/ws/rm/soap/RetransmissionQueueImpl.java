@@ -931,7 +931,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-block|}
 if|if
 condition|(
 name|sequenceCandidates
@@ -953,6 +952,7 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|LOG
 operator|.
