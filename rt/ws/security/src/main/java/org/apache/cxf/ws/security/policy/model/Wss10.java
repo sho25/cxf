@@ -366,6 +366,15 @@ operator|==
 literal|null
 condition|)
 block|{
+name|pPrefix
+operator|=
+name|SPConstants
+operator|.
+name|POLICY
+operator|.
+name|getPrefix
+argument_list|()
+expr_stmt|;
 name|writer
 operator|.
 name|setPrefix
@@ -391,7 +400,7 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-name|prefix
+name|pPrefix
 argument_list|,
 name|SPConstants
 operator|.

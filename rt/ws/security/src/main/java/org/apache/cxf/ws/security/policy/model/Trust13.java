@@ -485,12 +485,7 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-name|SPConstants
-operator|.
-name|POLICY
-operator|.
-name|getPrefix
-argument_list|()
+name|wspPrefix
 argument_list|,
 name|SPConstants
 operator|.
