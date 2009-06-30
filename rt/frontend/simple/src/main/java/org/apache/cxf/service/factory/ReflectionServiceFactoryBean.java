@@ -8892,12 +8892,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-if|if
-condition|(
+name|boolean
+name|hasOut
+init|=
 name|hasOutMessage
 argument_list|(
 name|method
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|hasOut
 condition|)
 block|{
 comment|// Setup the output message
@@ -9476,6 +9481,12 @@ argument_list|,
 name|op
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|hasOut
+condition|)
+block|{
+comment|// Faults are only valid if not a one-way operation
 name|initializeFaults
 argument_list|(
 name|intf
@@ -9485,6 +9496,7 @@ argument_list|,
 name|method
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void
