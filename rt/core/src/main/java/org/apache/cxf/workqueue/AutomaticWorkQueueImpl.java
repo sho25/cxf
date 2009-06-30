@@ -724,6 +724,13 @@ literal|"-workqueue"
 argument_list|)
 expr_stmt|;
 block|}
+name|group
+operator|.
+name|setDaemon
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 return|return
 operator|new
 name|AWQThreadFactory
@@ -826,6 +833,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+operator|!
 name|t
 operator|.
 name|isDaemon
@@ -836,7 +844,7 @@ name|t
 operator|.
 name|setDaemon
 argument_list|(
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
