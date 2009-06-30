@@ -72,6 +72,7 @@ name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
+comment|/**      * Foo      */
 specifier|public
 name|int
 name|getNumberOfOrders

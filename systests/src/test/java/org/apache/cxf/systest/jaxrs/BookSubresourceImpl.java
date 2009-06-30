@@ -17,22 +17,6 @@ name|jaxrs
 package|;
 end_package
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|customer
-operator|.
-name|book
-operator|.
-name|BookNotFoundFault
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class

@@ -164,12 +164,20 @@ argument_list|)
 annotation|@
 name|Consumes
 argument_list|(
-literal|"application/xml, application/json"
+block|{
+literal|"application/xml"
+block|,
+literal|"application/json"
+block|}
 argument_list|)
 annotation|@
 name|Produces
 argument_list|(
-literal|"application/xml, application/json"
+block|{
+literal|"application/xml"
+block|,
+literal|"application/json"
+block|}
 argument_list|)
 specifier|public
 class|class
@@ -185,7 +193,15 @@ argument_list|)
 specifier|public
 name|String
 name|getName
-parameter_list|()
+parameter_list|(
+annotation|@
+name|PathParam
+argument_list|(
+literal|"id"
+argument_list|)
+name|Long
+name|id
+parameter_list|)
 block|{
 return|return
 literal|"store"
