@@ -664,6 +664,9 @@ operator|.
 name|createSchema
 argument_list|(
 name|locations
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

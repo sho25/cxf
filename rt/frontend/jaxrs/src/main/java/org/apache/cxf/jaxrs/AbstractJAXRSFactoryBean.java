@@ -1211,6 +1211,14 @@ name|entityProviders
 argument_list|)
 expr_stmt|;
 block|}
+name|factory
+operator|.
+name|setBus
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|schemaLocations
@@ -1329,6 +1337,9 @@ operator|.
 name|getUserResources
 argument_list|(
 name|modelRef
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -1372,6 +1383,9 @@ operator|.
 name|getUserResources
 argument_list|(
 name|modelRef
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if

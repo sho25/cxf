@@ -25,26 +25,6 @@ name|java
 operator|.
 name|io
 operator|.
-name|File
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
-name|FileOutputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
 name|StringReader
 import|;
 end_import
@@ -537,72 +517,14 @@ name|CONTENT_TYPE
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|File
-name|f
-init|=
-operator|new
-name|File
-argument_list|(
-literal|"test.xml"
-argument_list|)
-decl_stmt|;
-name|f
-operator|.
-name|delete
-argument_list|()
-expr_stmt|;
-name|f
-operator|.
-name|createNewFile
-argument_list|()
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|f
-operator|.
-name|getAbsolutePath
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|FileOutputStream
-name|fos
-init|=
-operator|new
-name|FileOutputStream
-argument_list|(
-name|f
-argument_list|)
-decl_stmt|;
-name|fos
-operator|.
-name|write
-argument_list|(
-name|r
-operator|.
-name|getEntity
-argument_list|()
-operator|.
-name|toString
-argument_list|()
-operator|.
-name|getBytes
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|fos
-operator|.
-name|flush
-argument_list|()
-expr_stmt|;
-name|fos
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+comment|//        File f = new File("test.xml");
+comment|//        f.delete();
+comment|//        f.createNewFile();
+comment|//        System.out.println(f.getAbsolutePath());
+comment|//        FileOutputStream fos = new FileOutputStream(f);
+comment|//        fos.write(r.getEntity().toString().getBytes());
+comment|//        fos.flush();
+comment|//        fos.close();
 block|}
 annotation|@
 name|Test
