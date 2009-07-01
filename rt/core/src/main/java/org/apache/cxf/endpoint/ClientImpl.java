@@ -3901,10 +3901,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|chain
-operator|.
-name|getFaultObserver
-argument_list|()
+name|outFaultObserver
 operator|.
 name|onMessage
 argument_list|(
