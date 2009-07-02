@@ -2175,7 +2175,11 @@ name|this
 operator|.
 name|wsdlLocation
 operator|=
+operator|new
+name|String
+argument_list|(
 name|wsdlLocation
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
