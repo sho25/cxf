@@ -436,10 +436,6 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
-name|ModelMBeanAssembler
-name|assembler
-decl_stmt|;
-specifier|private
 name|boolean
 name|connectFailed
 decl_stmt|;
@@ -467,12 +463,6 @@ name|InstrumentationManagerImpl
 parameter_list|()
 block|{
 name|super
-argument_list|()
-expr_stmt|;
-name|assembler
-operator|=
-operator|new
-name|ModelMBeanAssembler
 argument_list|()
 expr_stmt|;
 block|}
@@ -903,12 +893,13 @@ name|e
 parameter_list|)
 block|{
 comment|//If this is not a "normal" MBean, then try to deploy it using JMX annotations
+name|ModelMBeanAssembler
 name|assembler
-operator|=
+init|=
 operator|new
 name|ModelMBeanAssembler
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|ModelMBeanInfo
 name|mbi
 init|=
