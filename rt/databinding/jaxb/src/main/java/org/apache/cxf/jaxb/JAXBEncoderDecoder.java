@@ -2273,6 +2273,15 @@ name|JAXBException
 block|{
 comment|// Have to handle this ourselves.... which really
 comment|// sucks.... but what can we do?
+if|if
+condition|(
+name|mObj
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|Object
 name|objArray
 decl_stmt|;
