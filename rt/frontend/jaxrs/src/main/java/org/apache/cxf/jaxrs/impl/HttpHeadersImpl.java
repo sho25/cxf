@@ -835,6 +835,15 @@ name|values
 operator|.
 name|isEmpty
 argument_list|()
+operator|||
+name|values
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+operator|==
+literal|null
 condition|)
 block|{
 return|return

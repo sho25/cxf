@@ -514,6 +514,8 @@ name|ClientProxyImpl
 extends|extends
 name|AbstractClient
 implements|implements
+name|InvocationHandlerAware
+implements|,
 name|InvocationHandler
 block|{
 specifier|private
@@ -2977,6 +2979,15 @@ operator|.
 name|getDeclaredAnnotations
 argument_list|()
 argument_list|)
+return|;
+block|}
+specifier|public
+name|Object
+name|getInvocationHandler
+parameter_list|()
+block|{
+return|return
+name|this
 return|;
 block|}
 specifier|protected

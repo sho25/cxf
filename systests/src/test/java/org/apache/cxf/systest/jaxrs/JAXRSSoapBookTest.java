@@ -3029,7 +3029,7 @@ block|}
 block|}
 annotation|@
 name|Ignore
-specifier|private
+specifier|public
 class|class
 name|TestFeature
 extends|extends
@@ -3084,7 +3084,7 @@ block|}
 block|}
 annotation|@
 name|Ignore
-specifier|private
+specifier|public
 class|class
 name|TestInterceptor
 extends|extends
