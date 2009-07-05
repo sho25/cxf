@@ -2066,6 +2066,10 @@ argument_list|()
 argument_list|)
 operator|==
 literal|0
+operator|||
+name|status
+operator|>=
+literal|400
 condition|)
 block|{
 return|return
@@ -3269,7 +3273,7 @@ name|REQUESTOR_ROLE
 argument_list|,
 name|Boolean
 operator|.
-name|FALSE
+name|TRUE
 argument_list|)
 expr_stmt|;
 name|message
