@@ -282,7 +282,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Supply default implementations, as appropriate, for DataBinding.   */
+comment|/**  * Supply default implementations, as appropriate, for DataBinding.  */
 end_comment
 
 begin_class
@@ -375,7 +375,7 @@ return|return
 name|bus
 return|;
 block|}
-comment|/**      * This call is used to set the bus. It should only be called once.      * @param bus      */
+comment|/**      * This call is used to set the bus. It should only be called once.      *       * @param bus      */
 annotation|@
 name|Resource
 argument_list|(
@@ -471,6 +471,11 @@ argument_list|(
 literal|"targetNamespace"
 argument_list|)
 decl_stmt|;
+name|boolean
+name|copied
+init|=
+literal|false
+decl_stmt|;
 if|if
 condition|(
 name|StringUtils
@@ -504,14 +509,18 @@ return|return
 literal|null
 return|;
 block|}
-comment|//create a copy of the dom so we
-comment|//can modify it.
+comment|// create a copy of the dom so we
+comment|// can modify it.
 name|d
 operator|=
 name|copy
 argument_list|(
 name|d
 argument_list|)
+expr_stmt|;
+name|copied
+operator|=
+literal|true
 expr_stmt|;
 name|ns
 operator|=
@@ -600,6 +609,8 @@ operator|=
 name|doEmptyNamespaceHack
 argument_list|(
 name|d
+argument_list|,
+name|copied
 argument_list|)
 expr_stmt|;
 block|}
@@ -613,6 +624,11 @@ argument_list|()
 operator|.
 name|getFirstChild
 argument_list|()
+decl_stmt|;
+name|boolean
+name|patchRequired
+init|=
+literal|false
 decl_stmt|;
 while|while
 condition|(
@@ -649,6 +665,92 @@ literal|"import"
 argument_list|)
 condition|)
 block|{
+name|patchRequired
+operator|=
+literal|true
+expr_stmt|;
+break|break;
+block|}
+block|}
+name|n
+operator|=
+name|n
+operator|.
+name|getNextSibling
+argument_list|()
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|patchRequired
+condition|)
+block|{
+if|if
+condition|(
+operator|!
+name|copied
+condition|)
+block|{
+name|d
+operator|=
+name|copy
+argument_list|(
+name|d
+argument_list|)
+expr_stmt|;
+block|}
+name|n
+operator|=
+name|d
+operator|.
+name|getDocumentElement
+argument_list|()
+operator|.
+name|getFirstChild
+argument_list|()
+expr_stmt|;
+while|while
+condition|(
+name|n
+operator|!=
+literal|null
+condition|)
+block|{
+if|if
+condition|(
+name|n
+operator|instanceof
+name|Element
+condition|)
+block|{
+name|Element
+name|e
+init|=
+operator|(
+name|Element
+operator|)
+name|n
+decl_stmt|;
+if|if
+condition|(
+name|e
+operator|.
+name|getLocalName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"import"
+argument_list|)
+condition|)
+block|{
+name|e
+operator|=
+operator|(
+name|Element
+operator|)
+name|n
+expr_stmt|;
 name|e
 operator|.
 name|removeAttribute
@@ -704,6 +806,7 @@ operator|.
 name|getNextSibling
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 name|SchemaInfo
 name|schema
@@ -777,6 +880,9 @@ name|doEmptyNamespaceHack
 parameter_list|(
 name|Document
 name|d
+parameter_list|,
+name|boolean
+name|alreadyWritable
 parameter_list|)
 block|{
 name|boolean
@@ -850,8 +956,14 @@ condition|(
 name|hasStuffToRemove
 condition|)
 block|{
-comment|//create a copy of the dom so we
-comment|//can modify it.
+comment|// create a copy of the dom so we
+comment|// can modify it.
+if|if
+condition|(
+operator|!
+name|alreadyWritable
+condition|)
+block|{
 name|d
 operator|=
 name|copy
@@ -859,6 +971,7 @@ argument_list|(
 name|d
 argument_list|)
 expr_stmt|;
+block|}
 name|el
 operator|=
 name|DOMUtils
@@ -969,7 +1082,7 @@ name|XMLStreamException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|// ignore
 block|}
 catch|catch
 parameter_list|(
@@ -977,7 +1090,7 @@ name|ParserConfigurationException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|// ignore
 block|}
 return|return
 name|doc
@@ -1029,7 +1142,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**       * @return Returns the namespaceMap.      */
+comment|/**      * @return Returns the namespaceMap.      */
 specifier|public
 name|Map
 argument_list|<
@@ -1132,7 +1245,7 @@ operator|=
 name|namespaceMap
 expr_stmt|;
 block|}
-comment|/**       * Provide explicit mappings to ReflectionServiceFactory.      * {@inheritDoc}      * */
+comment|/**      * Provide explicit mappings to ReflectionServiceFactory. {@inheritDoc}      */
 specifier|public
 name|Map
 argument_list|<
