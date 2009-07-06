@@ -443,6 +443,13 @@ argument_list|,
 name|spec1
 argument_list|)
 expr_stmt|;
+name|Object
+name|spec2
+init|=
+operator|new
+name|GreeterSpecWithPortError
+argument_list|()
+decl_stmt|;
 name|String
 name|address2
 init|=
@@ -460,7 +467,7 @@ name|publish
 argument_list|(
 name|address2
 argument_list|,
-name|spec1
+name|spec2
 argument_list|)
 expr_stmt|;
 name|initNoWsdlServer

@@ -1420,6 +1420,14 @@ name|getAddress
 argument_list|()
 operator|!=
 literal|null
+operator|&&
+name|getAddress
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"://"
+argument_list|)
 condition|)
 block|{
 name|DestinationFactory
