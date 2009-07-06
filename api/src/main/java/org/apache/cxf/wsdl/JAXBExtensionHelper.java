@@ -439,7 +439,7 @@ name|Class
 argument_list|<
 name|?
 extends|extends
-name|TExtensibilityElementImpl
+name|ExtensibilityElement
 argument_list|>
 name|typeClass
 decl_stmt|;
@@ -457,7 +457,7 @@ name|Class
 argument_list|<
 name|?
 extends|extends
-name|TExtensibilityElementImpl
+name|ExtensibilityElement
 argument_list|>
 name|cls
 parameter_list|,
@@ -526,7 +526,7 @@ name|Class
 argument_list|<
 name|?
 extends|extends
-name|TExtensibilityElementImpl
+name|ExtensibilityElement
 argument_list|>
 name|elementTypeClass
 init|=
@@ -543,7 +543,7 @@ argument_list|)
 operator|.
 name|asSubclass
 argument_list|(
-name|TExtensibilityElementImpl
+name|ExtensibilityElement
 operator|.
 name|class
 argument_list|)
@@ -692,7 +692,7 @@ name|Class
 argument_list|<
 name|?
 extends|extends
-name|TExtensibilityElementImpl
+name|ExtensibilityElement
 argument_list|>
 name|cls
 parameter_list|,

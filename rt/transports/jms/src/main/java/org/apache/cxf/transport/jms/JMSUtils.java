@@ -2467,6 +2467,17 @@ operator|new
 name|JMSMessageHeadersType
 argument_list|()
 expr_stmt|;
+name|outMessage
+operator|.
+name|put
+argument_list|(
+name|JMSConstants
+operator|.
+name|JMS_CLIENT_REQUEST_HEADERS
+argument_list|,
+name|messageProperties
+argument_list|)
+expr_stmt|;
 block|}
 name|JMSUtils
 operator|.
