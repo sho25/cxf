@@ -1192,7 +1192,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|WARNING
 argument_list|)
 condition|)
 block|{
@@ -1213,7 +1213,7 @@ name|LOG
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|WARNING
 argument_list|,
 literal|"Application has thrown exception, unwinding now"
 argument_list|,
@@ -1231,7 +1231,7 @@ name|LOG
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|WARNING
 argument_list|,
 literal|"Interceptor has thrown exception, unwinding now"
 argument_list|,
