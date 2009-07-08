@@ -371,7 +371,7 @@ argument_list|)
 decl_stmt|;
 name|assertNotNull
 argument_list|(
-literal|"We should found the WSDL her. "
+literal|"We should have found the WSDL here. "
 argument_list|,
 name|wsdl
 argument_list|)
@@ -568,7 +568,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Wrong faultDetail minor:"
+literal|"Wrong faultDetail minor"
 argument_list|,
 name|detail
 operator|.
@@ -628,7 +628,7 @@ argument_list|)
 decl_stmt|;
 name|assertNotNull
 argument_list|(
-literal|"We should found the WSDL her. "
+literal|"We should have found the WSDL here. "
 argument_list|,
 name|wsdl
 argument_list|)
@@ -855,7 +855,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Wrong faultDetail minor:"
+literal|"Wrong faultDetail minor"
 argument_list|,
 name|detail
 operator|.
