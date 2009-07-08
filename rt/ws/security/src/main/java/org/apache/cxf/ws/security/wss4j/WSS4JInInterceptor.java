@@ -1524,14 +1524,14 @@ name|actionResult
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*              * now check the security actions: do they match, in right order?              */
+comment|/*              * now check the security actions: do they match, in any order?              */
 if|if
 condition|(
 operator|!
 name|ignoreActions
 operator|&&
 operator|!
-name|checkReceiverResults
+name|checkReceiverResultsAnyOrder
 argument_list|(
 name|wsResult
 argument_list|,
