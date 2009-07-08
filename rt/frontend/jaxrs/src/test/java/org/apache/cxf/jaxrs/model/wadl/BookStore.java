@@ -293,6 +293,26 @@ literal|1
 argument_list|)
 return|;
 block|}
+annotation|@
+name|GET
+annotation|@
+name|Path
+argument_list|(
+literal|"chapter"
+argument_list|)
+specifier|public
+name|Chapter
+name|getChaper
+parameter_list|()
+block|{
+return|return
+operator|new
+name|Chapter
+argument_list|(
+literal|1
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 

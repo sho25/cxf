@@ -1034,6 +1034,10 @@ name|getStatus
 argument_list|()
 operator|>=
 literal|400
+operator|&&
+name|responseClass
+operator|!=
+literal|null
 condition|)
 block|{
 throw|throw
