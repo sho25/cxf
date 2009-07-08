@@ -981,6 +981,16 @@ expr_stmt|;
 block|}
 name|jmsConfig
 operator|.
+name|setEnforceSpec
+argument_list|(
+name|clientConfig
+operator|.
+name|isEnforceSpec
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|jmsConfig
+operator|.
 name|setSubscriptionDurable
 argument_list|(
 name|serverBehavior

@@ -1023,7 +1023,7 @@ name|jmsListener
 return|;
 block|}
 comment|/**      * If the destinationName given is null then a temporary destination is created else the destination name      * is resolved using the resolver from the jmsConfig      *       * @param jmsTemplate template to use for session and resolver      * @param replyToDestinationName null for temporary destination or a destination name      * @param pubSubDomain true=pubSub, false=Queues      * @return resolved destination      */
-specifier|private
+specifier|protected
 specifier|static
 name|Destination
 name|resolveOrCreateDestination
