@@ -131,6 +131,18 @@ name|tag
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|List
+argument_list|<
+name|TagVO
+argument_list|>
+name|getTags
+parameter_list|()
+block|{
+return|return
+name|list
+return|;
+block|}
 block|}
 end_class
 
