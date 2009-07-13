@@ -427,6 +427,8 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
 throw|throw
 operator|new
 name|IllegalStateException
@@ -434,6 +436,7 @@ argument_list|(
 literal|"MessageContext is not set"
 argument_list|)
 throw|;
+block|}
 block|}
 specifier|public
 parameter_list|<
