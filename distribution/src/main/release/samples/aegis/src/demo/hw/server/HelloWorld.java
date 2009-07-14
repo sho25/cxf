@@ -13,6 +13,18 @@ name|server
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|Document
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -24,6 +36,11 @@ parameter_list|(
 name|String
 name|text
 parameter_list|)
+function_decl|;
+specifier|public
+name|Document
+name|getADocument
+parameter_list|()
 function_decl|;
 block|}
 end_interface
