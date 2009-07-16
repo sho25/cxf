@@ -726,7 +726,7 @@ index|]
 decl_stmt|;
 name|assertValid
 argument_list|(
-literal|"/a:anyType/iam:walrus"
+literal|"/iam:walrus"
 argument_list|,
 name|e
 argument_list|)
