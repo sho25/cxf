@@ -655,6 +655,16 @@ argument_list|,
 literal|2
 argument_list|)
 expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"The acceptMessagesWhileStopping should be set to true"
+argument_list|,
+name|jmsConfig
+operator|.
+name|isAcceptMessagesWhileStopping
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|assertNotNull
 argument_list|(
 literal|"The connectionFactory should not be null"

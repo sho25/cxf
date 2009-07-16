@@ -378,6 +378,10 @@ name|enforceSpec
 init|=
 literal|true
 decl_stmt|;
+specifier|private
+name|boolean
+name|acceptMessagesWhileStopping
+decl_stmt|;
 comment|//For jms spec.
 specifier|private
 name|String
@@ -1323,6 +1327,30 @@ operator|.
 name|reconnectOnException
 operator|=
 name|reconnectOnException
+expr_stmt|;
+block|}
+specifier|public
+name|boolean
+name|isAcceptMessagesWhileStopping
+parameter_list|()
+block|{
+return|return
+name|acceptMessagesWhileStopping
+return|;
+block|}
+specifier|public
+name|void
+name|setAcceptMessagesWhileStopping
+parameter_list|(
+name|boolean
+name|acceptMessagesWhileStopping
+parameter_list|)
+block|{
+name|this
+operator|.
+name|acceptMessagesWhileStopping
+operator|=
+name|acceptMessagesWhileStopping
 expr_stmt|;
 block|}
 comment|/**      * Tries to creates a ConnectionFactory from jndi if none was set as a property      * by using the jndConfig. Then it determiens if the connectionFactory should be wrapped      * into a SingleConnectionFactory and wraps it if necessary. After the first call the      * same connectionFactory will be returned for all subsequent calls      *       * @return usable connectionFactory      */
