@@ -561,6 +561,13 @@ condition|(
 name|input
 operator|!=
 literal|null
+operator|&&
+name|input
+operator|.
+name|getMessage
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 name|Iterator
@@ -642,6 +649,13 @@ decl_stmt|;
 if|if
 condition|(
 name|output
+operator|!=
+literal|null
+operator|&&
+name|output
+operator|.
+name|getMessage
+argument_list|()
 operator|!=
 literal|null
 condition|)

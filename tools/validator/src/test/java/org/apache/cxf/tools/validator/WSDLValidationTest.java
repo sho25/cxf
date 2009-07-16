@@ -429,6 +429,10 @@ block|{
 comment|// sjsxp doesn't report locations.
 name|assertTrue
 argument_list|(
+literal|"error message does not contain [147,3]. error message: "
+operator|+
+name|error
+argument_list|,
 name|error
 operator|.
 name|indexOf

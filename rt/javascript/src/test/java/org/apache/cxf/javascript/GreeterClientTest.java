@@ -225,7 +225,7 @@ name|waitForJavascript
 argument_list|(
 literal|1000
 operator|*
-literal|10
+literal|15
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -379,7 +379,7 @@ name|waitForJavascript
 argument_list|(
 literal|1000
 operator|*
-literal|10
+literal|15
 argument_list|)
 decl_stmt|;
 name|assertTrue
