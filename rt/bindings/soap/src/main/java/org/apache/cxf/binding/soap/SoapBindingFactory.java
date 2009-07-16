@@ -2985,6 +2985,8 @@ name|ReadHeadersInterceptor
 argument_list|(
 name|getBus
 argument_list|()
+argument_list|,
+name|version
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -5653,6 +5655,11 @@ name|ReadHeadersInterceptor
 argument_list|(
 name|getBus
 argument_list|()
+argument_list|,
+operator|(
+name|SoapVersion
+operator|)
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;

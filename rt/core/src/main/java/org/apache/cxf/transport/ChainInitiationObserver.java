@@ -396,6 +396,7 @@ operator|new
 name|ExchangeImpl
 argument_list|()
 expr_stmt|;
+block|}
 name|exchange
 operator|.
 name|setInMessage
@@ -403,7 +404,6 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-block|}
 name|setExchangeProperties
 argument_list|(
 name|exchange
