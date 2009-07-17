@@ -335,6 +335,28 @@ literal|123L
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Path
+argument_list|(
+literal|"/securebook"
+argument_list|)
+specifier|public
+name|SecureBook
+name|getSecureBook
+parameter_list|()
+throws|throws
+name|BookNotFoundFault
+block|{
+return|return
+operator|new
+name|SecureBook
+argument_list|(
+literal|"CXF in Action"
+argument_list|,
+literal|123L
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 
