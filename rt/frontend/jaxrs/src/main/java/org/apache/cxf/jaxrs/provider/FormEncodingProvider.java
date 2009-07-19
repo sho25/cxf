@@ -753,6 +753,17 @@ name|is
 argument_list|)
 argument_list|,
 name|decode
+argument_list|,
+name|mc
+operator|!=
+literal|null
+condition|?
+name|mc
+operator|.
+name|getHttpServletRequest
+argument_list|()
+else|:
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
