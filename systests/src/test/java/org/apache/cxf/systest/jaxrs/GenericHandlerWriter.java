@@ -290,7 +290,13 @@ operator|.
 name|getEntity
 argument_list|()
 argument_list|,
-name|c
+name|o
+operator|.
+name|getEntity
+argument_list|()
+operator|.
+name|getClass
+argument_list|()
 argument_list|,
 name|InjectionUtils
 operator|.

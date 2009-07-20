@@ -1324,10 +1324,16 @@ name|?
 argument_list|>
 name|actualClass
 init|=
+name|obj
+operator|!=
+name|actualObject
+condition|?
 name|actualObject
 operator|.
 name|getClass
 argument_list|()
+else|:
+name|cls
 decl_stmt|;
 if|if
 condition|(

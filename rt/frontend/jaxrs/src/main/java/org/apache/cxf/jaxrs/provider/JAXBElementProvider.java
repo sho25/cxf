@@ -964,9 +964,6 @@ argument_list|(
 name|theType
 argument_list|,
 name|type
-operator|.
-name|isArray
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1277,10 +1274,16 @@ name|?
 argument_list|>
 name|actualClass
 init|=
+name|obj
+operator|!=
+name|actualObject
+condition|?
 name|actualObject
 operator|.
 name|getClass
 argument_list|()
+else|:
+name|cls
 decl_stmt|;
 name|String
 name|encoding
