@@ -90,7 +90,7 @@ end_comment
 begin_class
 specifier|public
 class|class
-name|HelloWorldStaticTest
+name|HelloWorldDynamicTest
 extends|extends
 name|AbstractSDOTest
 block|{
@@ -141,7 +141,7 @@ literal|"TestService"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"helloworld.static_types.ws.Greeter"
+literal|"helloworld.dynamic_types.ws.Greeter"
 argument_list|)
 specifier|public
 specifier|static
@@ -241,7 +241,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl_sdo/HelloService_static.wsdl"
+literal|"/wsdl_sdo/HelloService_dynamic.wsdl"
 argument_list|)
 operator|.
 name|toString

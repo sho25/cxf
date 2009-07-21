@@ -302,6 +302,8 @@ name|SetIsOK
 operator|.
 name|class
 argument_list|,
+literal|null
+argument_list|,
 name|partNames
 argument_list|,
 name|elTypeNames

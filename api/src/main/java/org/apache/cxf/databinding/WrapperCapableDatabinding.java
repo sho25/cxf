@@ -25,6 +25,18 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|namespace
+operator|.
+name|QName
+import|;
+end_import
+
 begin_comment
 comment|/**  *  To create the WrapperHelper instance for the wrapper capable data binding  */
 end_comment
@@ -42,6 +54,9 @@ argument_list|<
 name|?
 argument_list|>
 name|wrapperType
+parameter_list|,
+name|QName
+name|typeName
 parameter_list|,
 name|List
 argument_list|<

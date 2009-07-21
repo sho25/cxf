@@ -479,6 +479,8 @@ name|createWrapperHelper
 argument_list|(
 name|requestClass
 argument_list|,
+literal|null
+argument_list|,
 name|partNames
 argument_list|,
 name|elTypeNames
@@ -641,6 +643,8 @@ operator|.
 name|createWrapperHelper
 argument_list|(
 name|responseClass
+argument_list|,
+literal|null
 argument_list|,
 name|partNames
 argument_list|,
