@@ -1576,7 +1576,6 @@ index|[
 name|pos
 index|]
 decl_stmt|;
-comment|// we don't recurse at this stage, otherwise GenericEntity won't be handled properly
 return|return
 name|t
 operator|instanceof
@@ -1590,7 +1589,12 @@ argument_list|>
 operator|)
 name|t
 else|:
-literal|null
+name|getActualType
+argument_list|(
+name|t
+argument_list|,
+name|pos
+argument_list|)
 return|;
 block|}
 specifier|public

@@ -891,9 +891,15 @@ name|Message
 operator|.
 name|PROPOGATE_EXCEPTION
 argument_list|,
-name|Boolean
+name|JAXRSUtils
 operator|.
-name|TRUE
+name|propogateException
+argument_list|(
+name|exchange
+operator|.
+name|getInMessage
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 throw|throw

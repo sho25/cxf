@@ -430,6 +430,38 @@ annotation|@
 name|Test
 specifier|public
 name|void
+name|testPropogateException2
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|String
+name|data
+init|=
+literal|"<ns1:XMLFault xmlns:ns1=\"http://cxf.apache.org/bindings/xformat\">"
+operator|+
+literal|"<ns1:faultstring xmlns:ns1=\"http://cxf.apache.org/bindings/xformat\">"
+operator|+
+literal|"org.apache.cxf.systest.jaxrs.BookNotFoundFault: Book Exception</ns1:faultstring>"
+operator|+
+literal|"</ns1:XMLFault>"
+decl_stmt|;
+name|getAndCompare
+argument_list|(
+literal|"http://localhost:9080/bookstore/propogateexception2"
+argument_list|,
+name|data
+argument_list|,
+literal|"application/xml"
+argument_list|,
+literal|500
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
 name|testWebApplicationException
 parameter_list|()
 throws|throws

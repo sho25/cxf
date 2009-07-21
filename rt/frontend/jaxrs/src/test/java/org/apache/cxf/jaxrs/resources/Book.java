@@ -87,6 +87,20 @@ name|XmlRootElement
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|annotation
+operator|.
+name|XmlSeeAlso
+import|;
+end_import
+
 begin_class
 annotation|@
 name|XmlRootElement
@@ -94,6 +108,15 @@ argument_list|(
 name|name
 operator|=
 literal|"Book"
+argument_list|)
+annotation|@
+name|XmlSeeAlso
+argument_list|(
+block|{
+name|SuperBook
+operator|.
+name|class
+block|}
 argument_list|)
 specifier|public
 class|class
