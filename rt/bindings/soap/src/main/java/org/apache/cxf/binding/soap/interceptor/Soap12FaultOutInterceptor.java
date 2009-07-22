@@ -647,7 +647,7 @@ literal|"xml"
 argument_list|,
 literal|"http://www.w3.org/XML/1998/namespace"
 argument_list|,
-literal|"lang "
+literal|"lang"
 argument_list|,
 name|getLangCode
 argument_list|()
