@@ -67,7 +67,7 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9090/jaxws-mtom/hello"
+literal|"http://localhost:9091/jaxws-mtom/hello"
 decl_stmt|;
 name|Endpoint
 operator|.

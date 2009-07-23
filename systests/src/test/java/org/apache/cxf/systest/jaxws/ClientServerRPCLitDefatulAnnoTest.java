@@ -122,7 +122,7 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9090/hello"
+literal|"http://localhost:9091/hello"
 decl_stmt|;
 name|Endpoint
 operator|.
