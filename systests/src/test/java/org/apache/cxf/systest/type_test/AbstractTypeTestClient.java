@@ -5606,10 +5606,13 @@ argument_list|(
 literal|15
 argument_list|)
 expr_stmt|;
-comment|// XXX - Setting the millisecond part here seems to cause
-comment|// a xerces validation error with the ibm jdk. That should
-comment|// be valid.
-comment|// yOrig.setMillisecond(250);
+name|yOrig
+operator|.
+name|setMillisecond
+argument_list|(
+literal|250
+argument_list|)
+expr_stmt|;
 name|Holder
 argument_list|<
 name|XMLGregorianCalendar
