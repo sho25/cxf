@@ -2086,6 +2086,11 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
+argument_list|(
+literal|"This is hitting http://jira.codehaus.org/browse/JETTISON-44"
+argument_list|)
 specifier|public
 name|void
 name|testWriteMixedContent
