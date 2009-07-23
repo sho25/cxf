@@ -37,7 +37,6 @@ name|String
 name|text
 parameter_list|)
 function_decl|;
-specifier|public
 name|Document
 name|getADocument
 parameter_list|()
