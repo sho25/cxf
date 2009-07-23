@@ -531,8 +531,6 @@ name|ToolException
 name|ex
 parameter_list|)
 block|{
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -569,8 +567,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -582,8 +578,6 @@ name|isVerboseOn
 argument_list|()
 condition|)
 block|{
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -591,8 +585,6 @@ argument_list|(
 literal|"[+] Verbose turned on"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -601,7 +593,9 @@ expr_stmt|;
 name|ex
 operator|.
 name|printStackTrace
-argument_list|()
+argument_list|(
+name|err
+argument_list|)
 expr_stmt|;
 block|}
 block|}
@@ -611,8 +605,6 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -625,8 +617,6 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -638,8 +628,6 @@ name|isVerboseOn
 argument_list|()
 condition|)
 block|{
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -647,8 +635,6 @@ argument_list|(
 literal|"[+] Verbose turned on"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -657,7 +643,9 @@ expr_stmt|;
 name|ex
 operator|.
 name|printStackTrace
-argument_list|()
+argument_list|(
+name|err
+argument_list|)
 expr_stmt|;
 block|}
 block|}
