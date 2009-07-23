@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|io
+operator|.
+name|OutputStream
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -78,6 +88,20 @@ parameter_list|(
 name|String
 index|[]
 name|args
+parameter_list|)
+function_decl|;
+name|void
+name|setOutOutputStream
+parameter_list|(
+name|OutputStream
+name|outOutputStream
+parameter_list|)
+function_decl|;
+name|void
+name|setErrOutputStream
+parameter_list|(
+name|OutputStream
+name|errOutputStream
 parameter_list|)
 function_decl|;
 block|}

@@ -576,7 +576,9 @@ block|{
 name|ex
 operator|.
 name|printStackTrace
-argument_list|()
+argument_list|(
+name|err
+argument_list|)
 expr_stmt|;
 block|}
 block|}
@@ -590,8 +592,6 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -604,8 +604,6 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -620,7 +618,9 @@ block|{
 name|ex
 operator|.
 name|printStackTrace
-argument_list|()
+argument_list|(
+name|err
+argument_list|)
 expr_stmt|;
 block|}
 throw|throw

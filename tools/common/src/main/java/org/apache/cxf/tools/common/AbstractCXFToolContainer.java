@@ -478,8 +478,6 @@ condition|)
 block|{
 try|try
 block|{
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -492,15 +490,11 @@ name|getUsage
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|out
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -508,15 +502,11 @@ argument_list|(
 literal|"Options: "
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|out
 operator|.
 name|println
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -542,8 +532,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -559,8 +547,6 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -568,8 +554,6 @@ argument_list|(
 literal|"Error: Could not output detailed usage"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -731,8 +715,6 @@ name|void
 name|outputVersion
 parameter_list|()
 block|{
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -747,8 +729,6 @@ name|getCompleteVersionString
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -760,8 +740,6 @@ name|void
 name|outputFullCommandLine
 parameter_list|()
 block|{
-name|System
-operator|.
 name|out
 operator|.
 name|print
@@ -787,8 +765,6 @@ name|i
 operator|++
 control|)
 block|{
-name|System
-operator|.
 name|out
 operator|.
 name|print
@@ -803,8 +779,6 @@ index|]
 argument_list|)
 expr_stmt|;
 block|}
-name|System
-operator|.
 name|out
 operator|.
 name|println
@@ -906,8 +880,6 @@ name|outputFullCommandLine
 argument_list|()
 expr_stmt|;
 block|}
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -918,8 +890,6 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
 name|err
 operator|.
 name|println
@@ -945,8 +915,6 @@ name|outputVersion
 argument_list|()
 expr_stmt|;
 block|}
-name|System
-operator|.
 name|err
 operator|.
 name|println
