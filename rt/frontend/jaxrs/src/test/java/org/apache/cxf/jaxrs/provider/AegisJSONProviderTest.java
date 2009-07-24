@@ -330,7 +330,7 @@ operator|new
 name|AegisJSONProvider
 argument_list|()
 decl_stmt|;
-name|p
+name|AbstractAegisProvider
 operator|.
 name|clearContexts
 argument_list|()
