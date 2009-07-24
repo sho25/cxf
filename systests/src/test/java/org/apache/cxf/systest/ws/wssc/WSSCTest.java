@@ -531,6 +531,8 @@ argument_list|(
 name|ping
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|PingResponse
 name|output
 init|=
@@ -554,6 +556,25 @@ name|getText
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|Exception
+argument_list|(
+literal|"Error doing "
+operator|+
+name|portPrefix
+argument_list|,
+name|ex
+argument_list|)
+throw|;
+block|}
 block|}
 block|}
 block|}

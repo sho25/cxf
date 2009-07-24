@@ -2040,6 +2040,10 @@ condition|(
 name|e
 operator|!=
 literal|null
+operator|&&
+name|s
+operator|==
+literal|null
 condition|)
 block|{
 name|s
@@ -2052,6 +2056,10 @@ if|if
 condition|(
 name|s
 operator|!=
+literal|null
+operator|&&
+name|e
+operator|==
 literal|null
 condition|)
 block|{
