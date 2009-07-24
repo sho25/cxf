@@ -745,6 +745,7 @@ return|return
 literal|true
 return|;
 block|}
+specifier|static
 name|void
 name|clearContexts
 parameter_list|()
