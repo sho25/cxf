@@ -4404,6 +4404,22 @@ argument_list|(
 literal|2000
 argument_list|)
 expr_stmt|;
+block|}
+for|for
+control|(
+name|Thread
+name|t
+range|:
+name|threads
+control|)
+block|{
+name|t
+operator|.
+name|join
+argument_list|(
+literal|1000
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Not terminated state: "
