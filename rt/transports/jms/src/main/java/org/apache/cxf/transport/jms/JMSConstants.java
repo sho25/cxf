@@ -199,6 +199,14 @@ name|JMS_REBASED_REPLY_TO
 init|=
 literal|"org.apache.cxf.jms.server.replyto"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_SET_REPLY_TO
+init|=
+literal|"org.apache.cxf.jms.client.set.replyto"
+decl_stmt|;
 specifier|private
 name|JMSConstants
 parameter_list|()
