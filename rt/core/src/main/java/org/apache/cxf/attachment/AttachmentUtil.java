@@ -938,6 +938,8 @@ name|QuotedPrintableDecoderStream
 argument_list|(
 name|stream
 argument_list|)
+argument_list|,
+name|stream
 argument_list|)
 decl_stmt|;
 name|att
