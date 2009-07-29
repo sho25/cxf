@@ -301,7 +301,12 @@ name|type
 parameter_list|)
 block|{
 return|return
+name|read
+argument_list|(
 literal|null
+argument_list|,
+name|input
+argument_list|)
 return|;
 block|}
 specifier|public

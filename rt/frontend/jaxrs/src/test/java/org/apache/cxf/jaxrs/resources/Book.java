@@ -269,6 +269,14 @@ literal|""
 return|;
 block|}
 specifier|public
+name|void
+name|setState
+parameter_list|(
+name|String
+name|s
+parameter_list|)
+block|{     }
+specifier|public
 name|int
 name|hashCode
 parameter_list|()

@@ -2395,7 +2395,7 @@ name|data
 init|=
 literal|"{\"books2\":{\"books\":{\"@xsins.type\":\"superBook\",\"id\":123,"
 operator|+
-literal|"\"name\":\"CXF Rocks\",\"superId\":124}}}"
+literal|"\"name\":\"CXF Rocks\",\"state\":\"\",\"superId\":124}}}"
 decl_stmt|;
 name|assertEquals
 argument_list|(
