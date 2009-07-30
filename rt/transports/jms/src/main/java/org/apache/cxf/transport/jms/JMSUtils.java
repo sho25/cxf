@@ -3315,10 +3315,7 @@ name|messageProperties
 operator|.
 name|setSOAPJMSBindingVersion
 argument_list|(
-name|inMessageProperties
-operator|.
-name|getSOAPJMSBindingVersion
-argument_list|()
+literal|"1.0"
 argument_list|)
 expr_stmt|;
 comment|// contenttype.

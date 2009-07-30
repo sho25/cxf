@@ -2084,35 +2084,7 @@ name|JMSMessageHeadersType
 name|inHeader
 parameter_list|)
 block|{
-if|if
-condition|(
-name|outHeader
-operator|.
-name|getJMSCorrelationID
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
-comment|// only check if the correlation id was explicitly set as
-comment|// otherwise the in header will contain an automatically
-comment|// generated correlation id
-name|assertEquals
-argument_list|(
-literal|"The inMessage and outMessage JMS Header's CorrelationID should be equals"
-argument_list|,
-name|outHeader
-operator|.
-name|getJMSCorrelationID
-argument_list|()
-argument_list|,
-name|inHeader
-operator|.
-name|getJMSCorrelationID
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
+comment|/*          * if (outHeader.getJMSCorrelationID() != null) { // only check if the correlation id was explicitly          * set as // otherwise the in header will contain an automatically // generated correlation id          * assertEquals("The inMessage and outMessage JMS Header's CorrelationID should be equals", outHeader          * .getJMSCorrelationID(), inHeader.getJMSCorrelationID()); }          */
 name|assertEquals
 argument_list|(
 literal|"The inMessage and outMessage JMS Header's JMSPriority should be equals"

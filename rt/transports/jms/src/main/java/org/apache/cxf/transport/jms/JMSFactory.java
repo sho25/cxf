@@ -580,7 +580,7 @@ return|return
 name|jmsTemplate
 return|;
 block|}
-comment|/**      * Create and start listener using configuration information from jmsConfig. Uses      * resolveOrCreateDestination to determine the destination for the listener.      *       * @param jmsConfig configuration information      * @param listenerHandler object to be called when a message arrives      * @param destinationName null for temp dest or a destination name      * @param messageSelectorPrefix prefix for the messageselector      * @return      */
+comment|/**      * Create and start listener using configuration information from jmsConfig. Uses      * resolveOrCreateDestination to determine the destination for the listener.      *       * @param jmsConfig configuration information      * @param listenerHandler object to be called when a message arrives      * @param destinationName null for temp dest or a destination name      * @param conduitId prefix for the messageselector      * @return      */
 specifier|public
 specifier|static
 name|DefaultMessageListenerContainer
@@ -596,10 +596,7 @@ name|String
 name|destinationName
 parameter_list|,
 name|String
-name|messageSelectorPrefix
-parameter_list|,
-name|boolean
-name|userCID
+name|conduitId
 parameter_list|)
 block|{
 name|DefaultMessageListenerContainer
@@ -656,13 +653,6 @@ name|jmsConfig
 operator|.
 name|isPubSubNoLocal
 argument_list|()
-argument_list|)
-expr_stmt|;
-name|jmsListener
-operator|.
-name|setAutoStartup
-argument_list|(
-literal|true
 argument_list|)
 expr_stmt|;
 name|jmsListener
@@ -877,66 +867,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|String
-name|staticSelectorPrefix
-init|=
-name|jmsConfig
-operator|.
-name|getConduitSelectorPrefix
-argument_list|()
-decl_stmt|;
-if|if
-condition|(
-operator|!
-name|userCID
-operator|&&
-name|messageSelectorPrefix
-operator|!=
-literal|null
-operator|&&
-name|jmsConfig
-operator|.
-name|isUseConduitIdSelector
-argument_list|()
-condition|)
-block|{
-name|jmsListener
-operator|.
-name|setMessageSelector
-argument_list|(
-literal|"JMSCorrelationID LIKE '"
-operator|+
-name|staticSelectorPrefix
-operator|+
-name|messageSelectorPrefix
-operator|+
-literal|"%'"
-argument_list|)
-expr_stmt|;
-block|}
-elseif|else
-if|if
-condition|(
-name|staticSelectorPrefix
-operator|.
-name|length
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
-name|jmsListener
-operator|.
-name|setMessageSelector
-argument_list|(
-literal|"JMSCorrelationID LIKE '"
-operator|+
-name|staticSelectorPrefix
-operator|+
-literal|"%'"
-argument_list|)
-expr_stmt|;
-block|}
+comment|/*String staticSelectorPrefix = jmsConfig.getConduitSelectorPrefix();         if (conduitId != null&& jmsConfig.isUseConduitIdSelector()) {             jmsListener.setMessageSelector("JMSCorrelationID LIKE '"                                          + staticSelectorPrefix                                          + conduitId + "%'");         } else if (staticSelectorPrefix.length()> 0) {             jmsListener.setMessageSelector("JMSCorrelationID LIKE '"                                          + staticSelectorPrefix +  "%'");         }*/
 if|if
 condition|(
 name|jmsConfig
@@ -1042,7 +973,7 @@ name|jmsListener
 return|;
 block|}
 comment|/**      * If the destinationName given is null then a temporary destination is created else the destination name      * is resolved using the resolver from the jmsConfig      *       * @param jmsTemplate template to use for session and resolver      * @param replyToDestinationName null for temporary destination or a destination name      * @param pubSubDomain true=pubSub, false=Queues      * @return resolved destination      */
-specifier|protected
+specifier|public
 specifier|static
 name|Destination
 name|resolveOrCreateDestination
