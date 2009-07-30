@@ -586,7 +586,7 @@ name|soapMessage
 operator|.
 name|getContextualProperty
 argument_list|(
-literal|"endpoint.handles.headers"
+literal|"endpoint-processes-headers"
 argument_list|)
 decl_stmt|;
 if|if

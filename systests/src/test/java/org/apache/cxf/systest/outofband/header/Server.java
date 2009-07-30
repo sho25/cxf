@@ -282,7 +282,7 @@ name|props
 operator|.
 name|put
 argument_list|(
-literal|"endpoint.handles.headers"
+literal|"endpoint-processes-headers"
 argument_list|,
 literal|""
 argument_list|)
@@ -361,7 +361,7 @@ name|props
 operator|.
 name|put
 argument_list|(
-literal|"endpoint.handles.headers"
+literal|"endpoint-processes-headers"
 argument_list|,
 literal|"{http://cxf.apache.org/outofband/Header}outofbandHeader"
 argument_list|)
