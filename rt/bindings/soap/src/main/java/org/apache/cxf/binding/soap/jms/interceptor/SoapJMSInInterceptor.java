@@ -359,16 +359,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|String
-name|soapAction
-init|=
-name|sa
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-decl_stmt|;
+comment|//String soapAction = sa.get(0);
 comment|// ToDO
 block|}
 block|}
@@ -426,16 +417,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|String
-name|requestURI
-init|=
-name|ru
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-decl_stmt|;
+comment|//String requestURI = ru.get(0);
 comment|// ToDO malformedRequestURI
 comment|// ToDO tagetServiceNotAllowedInRequestURI
 block|}
@@ -533,16 +515,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|String
-name|contentType
-init|=
-name|ct
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
-decl_stmt|;
+comment|//String contentType = ct.get(0);
 comment|// ToDO
 block|}
 else|else
