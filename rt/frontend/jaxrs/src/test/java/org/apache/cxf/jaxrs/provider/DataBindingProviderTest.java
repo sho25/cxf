@@ -1095,8 +1095,6 @@ literal|"unchecked"
 argument_list|)
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testSDORead
@@ -1227,6 +1225,8 @@ name|struct
 operator|.
 name|getDbl
 argument_list|()
+argument_list|,
+literal|0.01
 argument_list|)
 expr_stmt|;
 name|assertEquals
