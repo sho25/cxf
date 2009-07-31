@@ -2312,9 +2312,6 @@ name|outMessage
 operator|.
 name|getExchange
 argument_list|()
-operator|.
-name|getInMessage
-argument_list|()
 argument_list|)
 operator|.
 name|clone
