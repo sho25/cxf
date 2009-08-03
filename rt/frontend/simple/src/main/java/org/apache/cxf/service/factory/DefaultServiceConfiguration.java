@@ -1198,6 +1198,12 @@ name|isStatic
 argument_list|(
 name|modifiers
 argument_list|)
+operator|&&
+operator|!
+name|method
+operator|.
+name|isSynthetic
+argument_list|()
 condition|)
 block|{
 return|return

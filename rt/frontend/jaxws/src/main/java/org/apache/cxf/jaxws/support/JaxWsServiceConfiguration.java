@@ -938,6 +938,11 @@ name|Response
 operator|.
 name|class
 argument_list|)
+operator|||
+name|method
+operator|.
+name|isSynthetic
+argument_list|()
 condition|)
 block|{
 return|return
