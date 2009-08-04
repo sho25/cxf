@@ -1043,7 +1043,7 @@ argument_list|(
 literal|"CELTIX"
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 name|check
 argument_list|(
