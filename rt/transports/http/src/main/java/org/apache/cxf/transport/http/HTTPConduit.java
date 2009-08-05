@@ -834,20 +834,6 @@ name|SC_HTTP_CONDUIT_SUFFIX
 init|=
 literal|".http-conduit"
 decl_stmt|;
-comment|/**      * Buffer to use to pull unread bytes off of input streams      */
-specifier|private
-specifier|static
-specifier|final
-name|byte
-name|BUFFER
-index|[]
-init|=
-operator|new
-name|byte
-index|[
-literal|1024
-index|]
-decl_stmt|;
 comment|/**      * This field holds the connection factory, which primarily is used to       * factor out SSL specific code from this implementation.      *<p>      * This field is "protected" to facilitate some contrived UnitTesting so      * that an extended class may alter its value with an EasyMock URLConnection      * Factory.       */
 specifier|protected
 name|HttpURLConnectionFactory
@@ -2245,13 +2231,23 @@ name|count
 init|=
 literal|0
 decl_stmt|;
+name|byte
+name|buffer
+index|[]
+init|=
+operator|new
+name|byte
+index|[
+literal|1024
+index|]
+decl_stmt|;
 while|while
 condition|(
 name|in
 operator|.
 name|read
 argument_list|(
-name|BUFFER
+name|buffer
 argument_list|)
 operator|!=
 operator|-
