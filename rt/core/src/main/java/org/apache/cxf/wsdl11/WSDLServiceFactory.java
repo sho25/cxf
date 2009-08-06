@@ -549,6 +549,15 @@ name|qn
 expr_stmt|;
 block|}
 specifier|public
+name|Definition
+name|getDefinition
+parameter_list|()
+block|{
+return|return
+name|definition
+return|;
+block|}
+specifier|public
 name|Service
 name|create
 parameter_list|()

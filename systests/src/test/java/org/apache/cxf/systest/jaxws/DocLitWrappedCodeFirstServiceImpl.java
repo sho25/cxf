@@ -119,6 +119,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|annotations
+operator|.
+name|WSDLDocumentation
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|feature
 operator|.
 name|Features
@@ -224,6 +238,11 @@ literal|"org.apache.cxf.transport.http.gzip.GZIPFeature"
 block|,
 literal|"org.apache.cxf.feature.FastInfosetFeature"
 block|}
+argument_list|)
+annotation|@
+name|WSDLDocumentation
+argument_list|(
+literal|"DocLitWrappedCodeFirstService impl"
 argument_list|)
 specifier|public
 class|class

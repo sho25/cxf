@@ -107,6 +107,16 @@ name|targetNamespace
 operator|=
 literal|"http://apache.org/schema_validation"
 argument_list|)
+annotation|@
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
+name|SchemaValidation
 specifier|public
 class|class
 name|SchemaValidationImpl
