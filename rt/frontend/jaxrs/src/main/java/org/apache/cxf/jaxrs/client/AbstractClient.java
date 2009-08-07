@@ -1551,9 +1551,27 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|ex
+operator|!=
+literal|null
+condition|)
+block|{
 throw|throw
 name|ex
 throw|;
+block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Unknown client side exception"
+argument_list|)
+throw|;
+block|}
 block|}
 name|int
 name|status
@@ -1563,7 +1581,6 @@ operator|.
 name|intValue
 argument_list|()
 decl_stmt|;
-comment|//conn.getResponseCode();
 name|responseBuilder
 operator|=
 name|Response
