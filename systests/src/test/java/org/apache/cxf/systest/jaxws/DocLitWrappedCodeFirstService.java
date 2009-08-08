@@ -385,7 +385,6 @@ name|Placement
 operator|.
 name|SERVICE_PORT
 argument_list|)
-block|,
 block|}
 argument_list|)
 specifier|public
@@ -622,7 +621,6 @@ name|Placement
 operator|.
 name|BINDING_OPERATION_OUTPUT
 argument_list|)
-block|,
 block|}
 argument_list|)
 name|String
