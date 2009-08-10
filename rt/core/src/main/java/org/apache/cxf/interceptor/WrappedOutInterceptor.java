@@ -425,6 +425,11 @@ literal|1
 decl_stmt|;
 while|while
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|xmlWriter
 operator|.
 name|getNamespaceContext
@@ -436,8 +441,7 @@ literal|"ns"
 operator|+
 name|x
 argument_list|)
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|x

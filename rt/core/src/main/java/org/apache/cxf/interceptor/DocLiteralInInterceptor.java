@@ -1174,16 +1174,6 @@ argument_list|)
 condition|)
 do|;
 block|}
-if|if
-condition|(
-name|parameters
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
 name|message
 operator|.
 name|setContent
@@ -1195,7 +1185,6 @@ argument_list|,
 name|parameters
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
