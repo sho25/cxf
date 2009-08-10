@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Adds documentation nodes to the generated WSDL  */
 end_comment
 
 begin_annotation_defn
@@ -86,20 +86,18 @@ block|,
 name|ElementType
 operator|.
 name|METHOD
-block|,
-name|ElementType
-operator|.
-name|PARAMETER
 block|}
 argument_list|)
 specifier|public
 annotation_defn|@interface
 name|WSDLDocumentation
 block|{
+comment|/**      * The documentation to add      * @return documentation string      */
 name|String
 name|value
 parameter_list|()
 function_decl|;
+comment|/**      * The place to put the documentation.  The Default is depends on the       * location of the annotation.   On the method in the SEI, it would be      * the portType/operation, on the SEI, it would be the portType, on the       * service impl, the service element.      * @return location      */
 name|Placement
 name|placement
 parameter_list|()
