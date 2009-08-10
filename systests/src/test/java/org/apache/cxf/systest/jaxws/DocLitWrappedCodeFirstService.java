@@ -863,7 +863,6 @@ name|CustomException
 operator|.
 name|class
 argument_list|)
-block|,
 block|}
 argument_list|)
 name|int
