@@ -121,7 +121,7 @@ name|cxf
 operator|.
 name|annotations
 operator|.
-name|WSDLDocumentation
+name|FastInfoset
 import|;
 end_import
 
@@ -133,9 +133,23 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|feature
+name|annotations
 operator|.
-name|Features
+name|GZIP
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
+name|WSDLDocumentation
 import|;
 end_import
 
@@ -227,22 +241,24 @@ name|targetNamespace
 operator|=
 literal|"http://cxf.apache.org/systest/jaxws/DocLitWrappedCodeFirstService"
 argument_list|)
-comment|//@Features(features = { "org.apache.cxf.feature.FastInfosetFeature" })
-annotation|@
-name|Features
-argument_list|(
-name|features
-operator|=
-block|{
-literal|"org.apache.cxf.transport.http.gzip.GZIPFeature"
-block|,
-literal|"org.apache.cxf.feature.FastInfosetFeature"
-block|}
-argument_list|)
 annotation|@
 name|WSDLDocumentation
 argument_list|(
 literal|"DocLitWrappedCodeFirstService impl"
+argument_list|)
+annotation|@
+name|GZIP
+argument_list|(
+name|threshold
+operator|=
+literal|10
+argument_list|)
+annotation|@
+name|FastInfoset
+argument_list|(
+name|force
+operator|=
+literal|true
 argument_list|)
 specifier|public
 class|class
