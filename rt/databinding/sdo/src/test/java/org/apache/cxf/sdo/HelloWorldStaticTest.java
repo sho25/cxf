@@ -119,7 +119,7 @@ name|WebService
 argument_list|(
 name|targetNamespace
 operator|=
-literal|"http://apache.org/hello_world_soap_http"
+literal|"http://apache.org/cxf/databinding/sdo/hello_world_soap_http"
 argument_list|,
 name|name
 operator|=
@@ -265,7 +265,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-literal|"http://apache.org/hello_world_soap_http"
+literal|"http://apache.org/cxf/databinding/sdo/hello_world_soap_http"
 argument_list|,
 literal|"SOAPService"
 argument_list|)
@@ -278,7 +278,7 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-literal|"http://apache.org/hello_world_soap_http"
+literal|"http://apache.org/cxf/databinding/sdo/hello_world_soap_http"
 argument_list|,
 literal|"SoapPort"
 argument_list|)

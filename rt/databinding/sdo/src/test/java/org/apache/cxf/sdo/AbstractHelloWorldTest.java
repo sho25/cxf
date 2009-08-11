@@ -104,7 +104,7 @@ name|addNamespace
 argument_list|(
 literal|"ns1"
 argument_list|,
-literal|"http://apache.org/hello_world_soap_http/types"
+literal|"http://apache.org/cxf/databinding/sdo/hello_world_soap_http/types"
 argument_list|)
 expr_stmt|;
 name|assertValid
@@ -152,7 +152,7 @@ name|addNamespace
 argument_list|(
 literal|"ns1"
 argument_list|,
-literal|"http://apache.org/hello_world_soap_http/types"
+literal|"http://apache.org/cxf/databinding/sdo/hello_world_soap_http/types"
 argument_list|)
 expr_stmt|;
 name|assertValid
@@ -211,7 +211,9 @@ name|assertValid
 argument_list|(
 literal|"/wsdl:definitions/wsdl:types/xsd:schema"
 operator|+
-literal|"[@targetNamespace='http://apache.org/hello_world_soap_http/types']"
+literal|"[@targetNamespace='http://apache.org/cxf"
+operator|+
+literal|"/databinding/sdo/hello_world_soap_http/types']"
 argument_list|,
 name|doc
 argument_list|)
