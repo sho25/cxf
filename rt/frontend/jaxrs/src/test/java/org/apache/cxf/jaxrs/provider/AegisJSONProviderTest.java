@@ -259,7 +259,7 @@ operator|new
 name|AegisJSONProvider
 argument_list|()
 decl_stmt|;
-name|assertFalse
+name|assertTrue
 argument_list|(
 name|p
 operator|.
@@ -372,7 +372,7 @@ name|put
 argument_list|(
 literal|"http://www.w3.org/2001/XMLSchema-instance"
 argument_list|,
-literal|"xsins"
+literal|"xsi"
 argument_list|)
 expr_stmt|;
 name|p
@@ -386,7 +386,7 @@ block|}
 name|String
 name|data
 init|=
-literal|"{\"ns1.AegisTestBean\":{\"@xsins.type\":\"ns1:AegisTestBean\","
+literal|"{\"ns1.AegisTestBean\":{\"@xsi.type\":\"ns1:AegisTestBean\","
 operator|+
 literal|"\"ns1.boolValue\":true,\"ns1.strValue\":\"hovercraft\"}}"
 decl_stmt|;
@@ -473,7 +473,7 @@ block|{
 name|String
 name|data
 init|=
-literal|"{\"ns1.AegisTestBean\":{\"@ns2.type\":\"ns1:AegisTestBean\","
+literal|"{\"ns1.AegisTestBean\":{\"@xsi.type\":\"ns1:AegisTestBean\","
 operator|+
 literal|"\"ns1.boolValue\":true,\"ns1.strValue\":\"hovercraft\"}}"
 decl_stmt|;
@@ -499,7 +499,7 @@ block|{
 name|String
 name|data
 init|=
-literal|"{\"ns1.AegisTestBean\":{\"@xsins.type\":\"ns1:AegisTestBean\","
+literal|"{\"ns1.AegisTestBean\":{\"@xsi.type\":\"ns1:AegisTestBean\","
 operator|+
 literal|"\"ns1.boolValue\":true,\"ns1.strValue\":\"hovercraft\"}}"
 decl_stmt|;
@@ -611,7 +611,7 @@ name|put
 argument_list|(
 literal|"http://www.w3.org/2001/XMLSchema-instance"
 argument_list|,
-literal|"ns2"
+literal|"xsi"
 argument_list|)
 expr_stmt|;
 name|p
