@@ -1336,6 +1336,10 @@ name|Book
 argument_list|()
 return|;
 block|}
+comment|//        @Path("/books/{bookId}/{new}")
+comment|//        public List<Book> getNewBook3() {
+comment|//            return null;
+comment|//        }
 annotation|@
 name|POST
 specifier|public
