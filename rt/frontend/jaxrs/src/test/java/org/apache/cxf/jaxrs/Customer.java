@@ -1220,6 +1220,21 @@ parameter_list|)
 block|{
 comment|// complete
 block|}
+specifier|public
+name|void
+name|testFromValueParam
+parameter_list|(
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p1"
+argument_list|)
+name|Timezone
+name|tzone
+parameter_list|)
+block|{
+comment|// complete
+block|}
 comment|//  CHECKSTYLE:OFF
 specifier|public
 name|void
