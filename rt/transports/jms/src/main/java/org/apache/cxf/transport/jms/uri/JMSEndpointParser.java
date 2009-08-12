@@ -859,6 +859,16 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|Exception
+argument_list|(
+literal|"Unknow JMS Variant"
+argument_list|)
+throw|;
+block|}
 specifier|final
 name|String
 name|subject

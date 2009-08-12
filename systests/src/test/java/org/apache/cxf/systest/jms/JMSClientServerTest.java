@@ -4068,7 +4068,7 @@ name|t
 operator|.
 name|join
 argument_list|(
-literal|10000
+literal|1000
 argument_list|)
 expr_stmt|;
 block|}
@@ -4644,7 +4644,7 @@ name|t
 operator|.
 name|join
 argument_list|(
-literal|10000
+literal|1000
 argument_list|)
 expr_stmt|;
 block|}
@@ -4867,7 +4867,7 @@ name|t
 operator|.
 name|join
 argument_list|(
-literal|10000
+literal|1000
 argument_list|)
 expr_stmt|;
 block|}
