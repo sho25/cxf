@@ -55,9 +55,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|feature
+name|annotations
 operator|.
-name|Features
+name|Logging
 import|;
 end_import
 
@@ -81,12 +81,7 @@ end_import
 
 begin_class
 annotation|@
-name|Features
-argument_list|(
-name|features
-operator|=
-literal|"org.apache.cxf.feature.LoggingFeature"
-argument_list|)
+name|Logging
 annotation|@
 name|WebService
 argument_list|(
