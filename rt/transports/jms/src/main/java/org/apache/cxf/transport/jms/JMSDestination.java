@@ -537,7 +537,7 @@ name|jms
 operator|.
 name|listener
 operator|.
-name|DefaultMessageListenerContainer
+name|AbstractMessageListenerContainer
 import|;
 end_import
 
@@ -610,7 +610,7 @@ name|EndpointInfo
 name|ei
 decl_stmt|;
 specifier|private
-name|DefaultMessageListenerContainer
+name|AbstractMessageListenerContainer
 name|jmsListener
 decl_stmt|;
 specifier|private

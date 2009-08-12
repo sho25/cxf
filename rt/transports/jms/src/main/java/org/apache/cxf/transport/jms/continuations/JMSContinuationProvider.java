@@ -123,7 +123,7 @@ name|jms
 operator|.
 name|listener
 operator|.
-name|DefaultMessageListenerContainer
+name|AbstractMessageListenerContainer
 import|;
 end_import
 
@@ -154,7 +154,7 @@ argument_list|>
 name|continuations
 decl_stmt|;
 specifier|private
-name|DefaultMessageListenerContainer
+name|AbstractMessageListenerContainer
 name|jmsListener
 decl_stmt|;
 specifier|private
@@ -179,7 +179,7 @@ name|JMSContinuation
 argument_list|>
 name|cList
 parameter_list|,
-name|DefaultMessageListenerContainer
+name|AbstractMessageListenerContainer
 name|jmsListener
 parameter_list|,
 name|JMSConfiguration
