@@ -286,7 +286,7 @@ specifier|final
 name|int
 name|MAX_RECEIVE_TIME
 init|=
-literal|5
+literal|10
 decl_stmt|;
 specifier|private
 name|Message
@@ -964,9 +964,11 @@ literal|true
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be get from the destination
+comment|//long time = System.currentTimeMillis();
 name|waitForReceiveDestMessage
 argument_list|()
 expr_stmt|;
+comment|//System.out.println("time: " + (System.currentTimeMillis() - time));
 comment|// just verify the Destination inMessage
 name|assertTrue
 argument_list|(
