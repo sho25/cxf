@@ -634,6 +634,17 @@ parameter_list|)
 throws|throws
 name|ToolException
 block|{
+name|context
+operator|.
+name|put
+argument_list|(
+name|ToolConstants
+operator|.
+name|RUNTIME_DATABINDING_CLASS
+argument_list|,
+literal|"org.apache.cxf.sdo.SDODataBinding.class"
+argument_list|)
+expr_stmt|;
 name|String
 name|databinding
 init|=

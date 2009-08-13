@@ -606,15 +606,16 @@ operator|>
 literal|0
 condition|)
 block|{
+comment|//lastToken = lastToken.substring(0, idx);
 name|lastToken
 operator|=
 name|lastToken
 operator|.
-name|substring
+name|replace
 argument_list|(
-literal|0
+literal|'.'
 argument_list|,
-name|idx
+literal|'_'
 argument_list|)
 expr_stmt|;
 name|tokens
