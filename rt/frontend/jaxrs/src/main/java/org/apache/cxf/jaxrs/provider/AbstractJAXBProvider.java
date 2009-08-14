@@ -969,7 +969,7 @@ name|convertStringToQName
 argument_list|(
 name|cls
 operator|.
-name|getName
+name|getSimpleName
 argument_list|()
 argument_list|)
 expr_stmt|;
