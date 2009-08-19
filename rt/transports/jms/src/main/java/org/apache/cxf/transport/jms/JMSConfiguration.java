@@ -1419,6 +1419,7 @@ expr_stmt|;
 block|}
 comment|/**      * Tries to creates a ConnectionFactory from jndi if none was set as a property      * by using the jndConfig. Then it determiens if the connectionFactory should be wrapped      * into a SingleConnectionFactory and wraps it if necessary. After the first call the      * same connectionFactory will be returned for all subsequent calls      *       * @return usable connectionFactory      */
 specifier|public
+specifier|synchronized
 name|ConnectionFactory
 name|getOrCreateWrappedConnectionFactory
 parameter_list|()
@@ -1546,6 +1547,15 @@ name|connectionFactory
 expr_stmt|;
 block|}
 block|}
+return|return
+name|wrappedConnectionFactory
+return|;
+block|}
+specifier|public
+name|ConnectionFactory
+name|getWrappedConnectionFactory
+parameter_list|()
+block|{
 return|return
 name|wrappedConnectionFactory
 return|;

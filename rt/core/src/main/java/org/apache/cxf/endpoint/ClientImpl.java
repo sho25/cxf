@@ -1082,7 +1082,6 @@ name|void
 name|destroy
 parameter_list|()
 block|{
-comment|// TODO: also inform the conduit so it can shutdown any response listeners
 name|ClientLifeCycleManager
 name|mgr
 init|=
@@ -1108,6 +1107,20 @@ name|clientDestroyed
 argument_list|(
 name|this
 argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|conduitSelector
+operator|!=
+literal|null
+condition|)
+block|{
+name|getConduit
+argument_list|()
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 block|}
