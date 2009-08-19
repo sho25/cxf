@@ -19,15 +19,9 @@ name|tcp
 package|;
 end_package
 
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
-name|ByteArrayInputStream
-import|;
-end_import
+begin_comment
+comment|//import java.io.ByteArrayInputStream;
+end_comment
 
 begin_import
 import|import
@@ -99,29 +93,13 @@ name|Map
 import|;
 end_import
 
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|stream
-operator|.
-name|XMLStreamException
-import|;
-end_import
+begin_comment
+comment|//import javax.xml.stream.XMLStreamException;
+end_comment
 
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|stream
-operator|.
-name|XMLStreamReader
-import|;
-end_import
+begin_comment
+comment|//import javax.xml.stream.XMLStreamReader;
+end_comment
 
 begin_import
 import|import
@@ -167,19 +145,9 @@ name|MessageImpl
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|staxutils
-operator|.
-name|StaxUtils
-import|;
-end_import
+begin_comment
+comment|//import org.apache.cxf.staxutils.StaxUtils;
+end_comment
 
 begin_import
 import|import
@@ -257,6 +225,10 @@ name|Ignore
 import|;
 end_import
 
+begin_comment
+comment|//import org.junit.Ignore;
+end_comment
+
 begin_import
 import|import
 name|org
@@ -320,32 +292,31 @@ name|void
 name|testPrepare
 parameter_list|()
 block|{
-name|int
-name|num1
-init|=
-literal|2
-decl_stmt|;
-name|int
-name|num2
-init|=
-literal|3
-decl_stmt|;
+comment|//int num1 = 2;
+comment|//int num2 = 3;
 comment|/*         final String messageData = "<s:Envelope xmlns:s=\"http://www.w3.org/2003/05/soap-envelope\""             + " xmlns:a=\"http://www.w3.org/2005/08/addressing\"><s:Header><a:Action s:mustUnderstand=\"1\">"             + "http://tempuri.org/ICalculator/add</a:Action>"             + "<a:MessageID>urn:uuid:e2606099-5bef-4db2-b661-19a883bab4e7</a:MessageID><a:ReplyTo>"             + "<a:Address>http://www.w3.org/2005/08/addressing/anonymous</a:Address></a:ReplyTo>"             + "<a:To s:mustUnderstand=\"1\">soap.tcp://localhost:9999/calculator</a:To></s:Header><s:Body>"             + "<add xmlns=\"http://tempuri.org/\">"             + "<i>" + num1 + "</i>"             + "<j>" + num2 + "</j>"             + "</add></s:Body></s:Envelope>";             */
+comment|/*final String messageData = "<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">"             + "<S:Body><ns2:add xmlns:ns2=\"http://calculator.me.org/\"><i>"             + num1 + "</i><j>" + num2 + "</j></ns2:add></S:Body></S:Envelope>";*/
+name|String
+name|name
+init|=
+operator|new
+name|String
+argument_list|(
+literal|"CXF"
+argument_list|)
+decl_stmt|;
+comment|/*for (int i = 0; i< 6000; i++) {             name += "A";         }*/
 specifier|final
 name|String
 name|messageData
 init|=
 literal|"<S:Envelope xmlns:S=\"http://schemas.xmlsoap.org/soap/envelope/\">"
 operator|+
-literal|"<S:Body><ns2:add xmlns:ns2=\"http://calculator.me.org/\"><i>"
+literal|"<S:Body><sayHi><text>"
 operator|+
-name|num1
+name|name
 operator|+
-literal|"</i><j>"
-operator|+
-name|num2
-operator|+
-literal|"</j></ns2:add></S:Body></S:Envelope>"
+literal|"</text></sayHi></S:Body></S:Envelope>"
 decl_stmt|;
 specifier|final
 name|AttributedURIType
@@ -355,11 +326,12 @@ operator|new
 name|AttributedURIType
 argument_list|()
 decl_stmt|;
+comment|//a.setValue("soap.tcp://localhost:8080/CalculatorApp/CalculatorWSService");
 name|a
 operator|.
 name|setValue
 argument_list|(
-literal|"soap.tcp://localhost:8080/CalculatorApp/CalculatorWSService"
+literal|"soap.tcp://localhost:9999/HelloWorld"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -577,11 +549,7 @@ name|Message
 name|message
 parameter_list|)
 block|{
-name|int
-name|correctResult
-init|=
-literal|5
-decl_stmt|;
+comment|//int correctResult = 5;
 name|assertNotNull
 argument_list|(
 name|message
@@ -625,6 +593,26 @@ argument_list|(
 name|response
 argument_list|)
 expr_stmt|;
+name|String
+name|s
+init|=
+operator|new
+name|String
+argument_list|(
+name|response
+argument_list|,
+literal|"UTF-8"
+argument_list|)
+decl_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+name|s
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -638,94 +626,7 @@ name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
-try|try
-block|{
-name|ByteArrayInputStream
-name|bais
-init|=
-operator|new
-name|ByteArrayInputStream
-argument_list|(
-name|response
-argument_list|)
-decl_stmt|;
-name|XMLStreamReader
-name|xmlReader
-init|=
-name|StaxUtils
-operator|.
-name|createXMLStreamReader
-argument_list|(
-name|bais
-argument_list|,
-literal|"UTF-8"
-argument_list|)
-decl_stmt|;
-while|while
-condition|(
-name|xmlReader
-operator|.
-name|hasNext
-argument_list|()
-condition|)
-block|{
-name|xmlReader
-operator|.
-name|next
-argument_list|()
-expr_stmt|;
-if|if
-condition|(
-name|xmlReader
-operator|.
-name|getEventType
-argument_list|()
-operator|==
-name|XMLStreamReader
-operator|.
-name|START_ELEMENT
-operator|&&
-name|xmlReader
-operator|.
-name|getLocalName
-argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"addResult"
-argument_list|)
-condition|)
-block|{
-name|assertEquals
-argument_list|(
-name|correctResult
-argument_list|,
-name|Integer
-operator|.
-name|parseInt
-argument_list|(
-name|xmlReader
-operator|.
-name|getElementText
-argument_list|()
-argument_list|)
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|XMLStreamException
-name|e
-parameter_list|)
-block|{
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
+comment|/*try {                 ByteArrayInputStream bais = new ByteArrayInputStream(response);                  XMLStreamReader xmlReader = StaxUtils.createXMLStreamReader(bais, "UTF-8");                 while (xmlReader.hasNext()) {                     xmlReader.next();                     if (xmlReader.getEventType() == XMLStreamReader.START_ELEMENT&& xmlReader.getLocalName().equals("addResult")) {                         assertEquals(correctResult, Integer.parseInt(xmlReader.getElementText()));                     }                 }             } catch (XMLStreamException e) {                 e.printStackTrace();             }*/
 block|}
 block|}
 block|}
