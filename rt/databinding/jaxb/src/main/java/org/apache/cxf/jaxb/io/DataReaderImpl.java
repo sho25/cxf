@@ -408,6 +408,16 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
+name|um
+operator|.
+name|setEventHandler
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|databinding
