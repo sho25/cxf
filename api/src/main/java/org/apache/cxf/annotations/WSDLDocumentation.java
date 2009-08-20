@@ -23,6 +23,18 @@ name|lang
 operator|.
 name|annotation
 operator|.
+name|Documented
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|annotation
+operator|.
 name|ElementType
 import|;
 end_import
@@ -69,6 +81,8 @@ end_comment
 
 begin_annotation_defn
 annotation|@
+name|Documented
+annotation|@
 name|Retention
 argument_list|(
 name|RetentionPolicy
@@ -97,7 +111,7 @@ name|String
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * The place to put the documentation.  The Default is depends on the       * location of the annotation.   On the method in the SEI, it would be      * the portType/operation, on the SEI, it would be the portType, on the       * service impl, the service element.      * @return location      */
+comment|/**      * The place to put the documentation.  The Default depends on the       * location of the annotation.   On the method in the SEI, it would be      * the portType/operation, on the SEI, it would be the portType, on the       * service impl, the service element.      * @return location      */
 name|Placement
 name|placement
 parameter_list|()

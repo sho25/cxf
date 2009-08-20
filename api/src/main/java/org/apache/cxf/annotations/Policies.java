@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Enables SchemaValidation  */
+comment|/**  * Used to attache multiple Policy annotations   * to a method or type if policies need to be added  * to more than one place in the wsdl.   */
 end_comment
 
 begin_annotation_defn
@@ -96,17 +96,20 @@ block|{
 name|ElementType
 operator|.
 name|TYPE
+block|,
+name|ElementType
+operator|.
+name|METHOD
 block|}
 argument_list|)
 specifier|public
 annotation_defn|@interface
-name|SchemaValidation
+name|Policies
 block|{
-name|boolean
-name|enabled
+name|Policy
+index|[]
+name|value
 parameter_list|()
-default|default
-literal|true
 function_decl|;
 block|}
 end_annotation_defn

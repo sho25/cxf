@@ -23,6 +23,18 @@ name|lang
 operator|.
 name|annotation
 operator|.
+name|Documented
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|annotation
+operator|.
 name|ElementType
 import|;
 end_import
@@ -64,10 +76,12 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Used to attache multiple WSDLDocumentation annotations   * to a method or type if documentation needs to be added  * to more than one place in the wsdl.   */
 end_comment
 
 begin_annotation_defn
+annotation|@
+name|Documented
 annotation|@
 name|Retention
 argument_list|(

@@ -721,6 +721,13 @@ name|createOutPolicyInfo
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test

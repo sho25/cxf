@@ -23,6 +23,18 @@ name|lang
 operator|.
 name|annotation
 operator|.
+name|Documented
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|annotation
+operator|.
 name|ElementType
 import|;
 end_import
@@ -68,6 +80,8 @@ comment|/**  * Enables GZIP compression negotiation  */
 end_comment
 
 begin_annotation_defn
+annotation|@
+name|Documented
 annotation|@
 name|Retention
 argument_list|(

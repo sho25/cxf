@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Enables SchemaValidation  */
+comment|/**  * Enables message Logging  */
 end_comment
 
 begin_annotation_defn
@@ -96,18 +96,82 @@ block|{
 name|ElementType
 operator|.
 name|TYPE
+block|,
+name|ElementType
+operator|.
+name|METHOD
 block|}
 argument_list|)
 specifier|public
 annotation_defn|@interface
-name|SchemaValidation
+name|Policy
 block|{
+name|String
+name|uri
+parameter_list|()
+function_decl|;
 name|boolean
-name|enabled
+name|includeInWSDL
 parameter_list|()
 default|default
 literal|true
 function_decl|;
+comment|/**      * The place to put the PolicyReference.  The Default depends on the       * location of the annotation.   On the method in the SEI, it would be      * the binding/operation, on the SEI, it would be the binding, on the       * service impl, the service element.      * @return location      */
+name|Placement
+name|placement
+parameter_list|()
+default|default
+name|Placement
+operator|.
+name|DEFAULT
+function_decl|;
+comment|/**      * If Placement is PORT_TYPE_OPERATION_FAULT, or BINDING_OPERATION_FAULT,      * return the fault class associated with this documentation       * @return the fault class      */
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|faultClass
+parameter_list|()
+default|default
+name|DEFAULT
+operator|.
+name|class
+function_decl|;
+enum|enum
+name|Placement
+block|{
+name|DEFAULT
+block|,
+name|PORT_TYPE
+block|,
+name|PORT_TYPE_OPERATION
+block|,
+name|PORT_TYPE_OPERATION_INPUT
+block|,
+name|PORT_TYPE_OPERATION_OUTPUT
+block|,
+name|PORT_TYPE_OPERATION_FAULT
+block|,
+name|BINDING
+block|,
+name|BINDING_OPERATION
+block|,
+name|BINDING_OPERATION_INPUT
+block|,
+name|BINDING_OPERATION_OUTPUT
+block|,
+name|BINDING_OPERATION_FAULT
+block|,
+name|SERVICE
+block|,
+name|SERVICE_PORT
+block|,     }
+empty_stmt|;
+specifier|static
+specifier|final
+class|class
+name|DEFAULT
+block|{ }
 block|}
 end_annotation_defn
 
