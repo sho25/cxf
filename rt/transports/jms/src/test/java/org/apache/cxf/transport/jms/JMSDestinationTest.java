@@ -778,6 +778,11 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+name|destination
+operator|.
+name|shutdown
+argument_list|()
+expr_stmt|;
 name|BusFactory
 operator|.
 name|setDefaultBus
@@ -872,6 +877,11 @@ name|getTargetDestination
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|destination
+operator|.
+name|shutdown
+argument_list|()
+expr_stmt|;
 name|BusFactory
 operator|.
 name|setDefaultBus
@@ -882,11 +892,7 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"randomly fails.  Not sure why. Tried increased timeouts and such to no affect. - dkulp"
-argument_list|)
+comment|//@Ignore("randomly fails.  Not sure why. Tried increased timeouts and such to no affect. - dkulp")
 specifier|public
 name|void
 name|testDurableSubscriber
@@ -1015,6 +1021,13 @@ name|destination
 operator|.
 name|shutdown
 argument_list|()
+expr_stmt|;
+name|BusFactory
+operator|.
+name|setDefaultBus
+argument_list|(
+literal|null
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@
