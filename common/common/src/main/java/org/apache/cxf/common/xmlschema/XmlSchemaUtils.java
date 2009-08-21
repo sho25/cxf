@@ -3150,6 +3150,10 @@ block|{
 if|if
 condition|(
 name|subject
+operator|==
+literal|null
+operator|||
+name|subject
 operator|.
 name|getSourceURI
 argument_list|()
