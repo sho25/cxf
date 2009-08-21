@@ -57,6 +57,10 @@ name|AbstractMessageWriter
 implements|implements
 name|MessageWriter
 block|{
+specifier|private
+name|boolean
+name|xsiTypeWritten
+decl_stmt|;
 comment|/**      * Create a LiteralWriter but without writing an element name.      *       * @param writer      */
 specifier|public
 name|AbstractMessageWriter
@@ -70,6 +74,17 @@ name|QName
 name|type
 parameter_list|)
 block|{
+if|if
+condition|(
+name|xsiTypeWritten
+condition|)
+block|{
+return|return;
+block|}
+name|xsiTypeWritten
+operator|=
+literal|true
+expr_stmt|;
 comment|/*          * Do not assume that the prefix supplied with the QName should be used          * in this case.          */
 name|String
 name|prefix

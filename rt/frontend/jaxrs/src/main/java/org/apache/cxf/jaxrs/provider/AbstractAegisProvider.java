@@ -604,7 +604,7 @@ argument_list|>
 name|type
 parameter_list|,
 name|Type
-name|genericType
+name|reflectionType
 parameter_list|)
 block|{
 synchronized|synchronized
@@ -668,6 +668,18 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|/* we do not want raw collection types in here.                  * so we only add the 'type' to the root classes if the                   * un-erased (reflection) type is non-generic.                  * Now, perhaps we should tolerate non-collection                  * generic types.                    */
+if|if
+condition|(
+name|reflectionType
+operator|==
+literal|null
+operator|||
+name|reflectionType
+operator|instanceof
+name|Class
+condition|)
+block|{
 name|rootClasses
 operator|.
 name|add
@@ -675,21 +687,14 @@ argument_list|(
 name|type
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
-operator|(
-name|genericType
-operator|instanceof
-name|Class
-operator|)
-condition|)
+block|}
+else|else
 block|{
 name|addType
 argument_list|(
 name|rootClasses
 argument_list|,
-name|genericType
+name|reflectionType
 argument_list|,
 literal|true
 argument_list|)
@@ -710,7 +715,7 @@ expr_stmt|;
 comment|/* It's not enough, in the presence of generic types, to just add it as a root.                     a mapping is also needed */
 if|if
 condition|(
-name|genericType
+name|reflectionType
 operator|!=
 literal|null
 condition|)
@@ -740,7 +745,7 @@ argument_list|()
 operator|.
 name|createType
 argument_list|(
-name|genericType
+name|reflectionType
 argument_list|)
 expr_stmt|;
 name|context

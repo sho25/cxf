@@ -168,15 +168,15 @@ specifier|final
 name|String
 name|SIMPLE_BEAN_XML
 init|=
-literal|"<?xml version='1.0' encoding='UTF-8'?><ns1:AegisTestBean "
+literal|"<?xml version='1.0' encoding='UTF-8'?>"
 operator|+
-literal|"xmlns:ns1=\"http://fortest.jaxrs.cxf.apache.org\" "
+literal|"<ns1:AegisTestBean xmlns:ns1=\"http://fortest.jaxrs.cxf.apache.org\""
 operator|+
-literal|"xmlns:ns2=\"http://www.w3.org/2001/XMLSchema-instance\" ns2:type=\"ns1:AegisTestBean\">"
+literal|" xmlns:ns2=\"http://www.w3.org/2001/XMLSchema-instance\""
 operator|+
-literal|"<ns1:boolValue>true</ns1:boolValue><ns1:strValue>hovercraft</ns1:strValue>"
+literal|" ns2:type=\"ns1:AegisTestBean\">"
 operator|+
-literal|"</ns1:AegisTestBean>"
+literal|"<ns1:boolValue>true</ns1:boolValue><ns1:strValue>hovercraft</ns1:strValue></ns1:AegisTestBean>"
 decl_stmt|;
 annotation|@
 name|After

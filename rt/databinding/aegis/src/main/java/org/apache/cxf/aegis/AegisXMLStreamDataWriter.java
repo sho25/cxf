@@ -350,6 +350,12 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|getContext
+argument_list|()
+operator|.
+name|isWriteXsiTypes
+argument_list|()
+operator|&&
 name|aegisType
 operator|!=
 literal|null
