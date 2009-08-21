@@ -454,6 +454,7 @@ argument_list|,
 name|genericType
 argument_list|)
 decl_stmt|;
+comment|// we need special cases for collection types.
 name|org
 operator|.
 name|apache
@@ -475,7 +476,7 @@ name|context
 argument_list|,
 name|obj
 argument_list|,
-literal|null
+name|genericType
 argument_list|)
 decl_stmt|;
 name|AegisWriter

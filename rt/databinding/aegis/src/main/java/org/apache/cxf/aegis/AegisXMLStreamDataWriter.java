@@ -188,7 +188,7 @@ name|globalContext
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Write an object to the output.      * @param obj The object to write.      * @param elementName the QName of the XML Element.      * @param optional set this for minOccurs = 0. It omits null elements.      * @param output the output stream      * @param aegisType the aegis type.      * @throws Exception      */
+comment|/**      * Write an object to the output. This method always writes xsi:type attributes.      * @param obj The object to write.      * @param elementName the QName of the XML Element.      * @param optional set this for minOccurs = 0. It omits null elements.      * @param output the output stream      * @param aegisType the aegis type.      * @throws Exception      */
 specifier|public
 name|void
 name|write
@@ -248,6 +248,10 @@ if|if
 condition|(
 name|obj
 operator|!=
+literal|null
+operator|&&
+name|aegisType
+operator|==
 literal|null
 condition|)
 block|{
@@ -344,6 +348,32 @@ argument_list|(
 name|elementName
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|aegisType
+operator|!=
+literal|null
+operator|&&
+name|aegisType
+operator|.
+name|getSchemaType
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// if we know the type, write it. We are standalone, and the reader needs it.
+name|w2
+operator|.
+name|writeXsiType
+argument_list|(
+name|aegisType
+operator|.
+name|getSchemaType
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 name|aegisType
 operator|.
 name|writeObject
