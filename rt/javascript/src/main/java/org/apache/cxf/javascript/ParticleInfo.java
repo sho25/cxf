@@ -922,6 +922,11 @@ literal|"ELEMENT_WITH_NO_TYPE"
 argument_list|,
 name|LOG
 argument_list|,
+name|element
+operator|.
+name|getName
+argument_list|()
+argument_list|,
 name|XmlSchemaUtils
 operator|.
 name|cleanedUpSchemaSource
