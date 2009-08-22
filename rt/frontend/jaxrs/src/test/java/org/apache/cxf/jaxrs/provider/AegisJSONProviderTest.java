@@ -768,12 +768,7 @@ name|json
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
+comment|// @org.junit.Ignore
 annotation|@
 name|Test
 specifier|public
@@ -931,16 +926,15 @@ argument_list|,
 literal|"utf-8"
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
+name|assertEquals
 argument_list|(
+literal|"{\"ns1.ArrayOfAegisTestBean\":{\"ns1.AegisTestBean\":"
+operator|+
+literal|"{\"ns1.boolValue\":true,\"ns1.strValue\":\"hovercraft\"}}}"
+argument_list|,
 name|json
 argument_list|)
 expr_stmt|;
-comment|//assertEquals(data, json);
 block|}
 annotation|@
 name|Test
