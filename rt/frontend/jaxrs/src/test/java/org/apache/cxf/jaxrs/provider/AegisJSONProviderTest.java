@@ -768,7 +768,6 @@ name|json
 argument_list|)
 expr_stmt|;
 block|}
-comment|// @org.junit.Ignore
 annotation|@
 name|Test
 specifier|public
