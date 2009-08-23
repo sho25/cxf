@@ -189,7 +189,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|AbstractTypeCreator
+name|Type
 import|;
 end_import
 
@@ -205,7 +205,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|TypeClassInfo
 import|;
 end_import
 
@@ -2112,6 +2112,20 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// The concept of type.isNillable is questionable: how are types nillable?
+comment|// However, this if at least allow .aegis.xml files to get control.
+if|if
+condition|(
+name|part
+operator|.
+name|getProperty
+argument_list|(
+literal|"nillable"
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
 name|part
 operator|.
 name|setProperty
@@ -2129,6 +2143,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|type
@@ -3244,7 +3259,6 @@ name|getTypeQName
 argument_list|()
 argument_list|)
 decl_stmt|;
-comment|/*          * if (type == null&& tm.isRegistered(param.getTypeClass())) { type =          * tm.getType(param.getTypeClass()); part2type.put(param, type); }          */
 name|int
 name|offset
 init|=
@@ -3298,8 +3312,6 @@ argument_list|,
 name|op
 argument_list|)
 decl_stmt|;
-name|AbstractTypeCreator
-operator|.
 name|TypeClassInfo
 name|info
 decl_stmt|;
@@ -3346,6 +3358,15 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|Boolean
+name|nillable
+init|=
+name|info
+operator|.
+name|getNillable
+argument_list|()
+decl_stmt|;
+comment|/* Note that, for types from the mapping, the minOccurs, maxOccurs, and nillable              * from the 'info' will be ignored by createTypeForClass below. So we need              * to override.              */
 if|if
 condition|(
 name|param
@@ -3392,17 +3413,108 @@ argument_list|,
 literal|"1"
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|nillable
+operator|==
+literal|null
+condition|)
+block|{
+name|nillable
+operator|=
+name|Boolean
+operator|.
+name|TRUE
+expr_stmt|;
+block|}
 name|param
 operator|.
 name|setProperty
 argument_list|(
 literal|"nillable"
 argument_list|,
-name|Boolean
-operator|.
-name|TRUE
+name|nillable
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+if|if
+condition|(
+name|nillable
+operator|!=
+literal|null
+condition|)
+block|{
+name|param
+operator|.
+name|setProperty
+argument_list|(
+literal|"nillable"
+argument_list|,
+name|nillable
+argument_list|)
+expr_stmt|;
+block|}
+comment|/*                  * TypeClassInfo uses -1 to mean 'not specified'                  */
+if|if
+condition|(
+name|info
+operator|.
+name|getMinOccurs
+argument_list|()
+operator|!=
+operator|-
+literal|1
+condition|)
+block|{
+name|param
+operator|.
+name|setProperty
+argument_list|(
+literal|"minOccurs"
+argument_list|,
+name|Long
+operator|.
+name|toString
+argument_list|(
+name|info
+operator|.
+name|getMinOccurs
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|info
+operator|.
+name|getMaxOccurs
+argument_list|()
+operator|!=
+operator|-
+literal|1
+condition|)
+block|{
+name|param
+operator|.
+name|setProperty
+argument_list|(
+literal|"maxOccurs"
+argument_list|,
+name|Long
+operator|.
+name|toString
+argument_list|(
+name|info
+operator|.
+name|getMaxOccurs
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -3444,8 +3556,8 @@ argument_list|(
 name|info
 argument_list|)
 expr_stmt|;
-comment|// We have to register the type if we want minOccurs and such to
-comment|// work.
+comment|//We have to register the type if we want minOccurs and such to
+comment|// work. (for custom types)
 if|if
 condition|(
 name|info

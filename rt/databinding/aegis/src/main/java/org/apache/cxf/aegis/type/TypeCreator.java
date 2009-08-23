@@ -63,24 +63,6 @@ name|QName
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|aegis
-operator|.
-name|type
-operator|.
-name|AbstractTypeCreator
-operator|.
-name|TypeClassInfo
-import|;
-end_import
-
 begin_comment
 comment|/**  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
 end_comment
