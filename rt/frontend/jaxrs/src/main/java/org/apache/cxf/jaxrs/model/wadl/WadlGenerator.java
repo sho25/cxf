@@ -2816,15 +2816,6 @@ argument_list|(
 literal|"<representation"
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
-name|mt
-operator|.
-name|isWildcardType
-argument_list|()
-condition|)
-block|{
 name|sb
 operator|.
 name|append
@@ -2845,7 +2836,6 @@ argument_list|(
 literal|"\""
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|jaxbProxy
