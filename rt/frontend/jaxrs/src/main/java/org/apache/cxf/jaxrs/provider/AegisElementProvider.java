@@ -352,6 +352,8 @@ name|createStreamReader
 argument_list|(
 name|type
 argument_list|,
+name|genericType
+argument_list|,
 name|is
 argument_list|)
 decl_stmt|;
@@ -388,6 +390,9 @@ argument_list|<
 name|?
 argument_list|>
 name|type
+parameter_list|,
+name|Type
+name|genericType
 parameter_list|,
 name|InputStream
 name|is
