@@ -90,7 +90,7 @@ specifier|public
 annotation_defn|@interface
 name|NoJSR250Annotations
 block|{
-comment|/**      * If these fields are null, it will go ahead and do JSR250 processing      * as it assumes the values were not set via a constructor      */
+comment|/**      * If these fields are null, it will go ahead and do JSR250 processing      * as it assumes the values were not set via a constructor.      *       * Be careful with this.  If the field is injected with a value via @Resource,      * when the other annotations are processed (@PostConstruct), the field is then      * not-null so they won't be run.   The best bet is to make sure the @Resource      * setter methods handle any registration or similar      */
 name|String
 index|[]
 name|unlessNull

@@ -283,6 +283,17 @@ name|ResourceManager
 operator|)
 name|bean
 expr_stmt|;
+name|resourceManager
+operator|.
+name|addResourceResolver
+argument_list|(
+operator|new
+name|BusApplicationContextResourceResolver
+argument_list|(
+name|context
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -299,8 +310,9 @@ argument_list|(
 literal|"cxf"
 argument_list|)
 decl_stmt|;
-name|resourceManager
-operator|=
+name|ResourceManager
+name|m
+init|=
 name|b
 operator|.
 name|getExtension
@@ -309,7 +321,34 @@ name|ResourceManager
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|resourceManager
+operator|==
+literal|null
+operator|&&
+name|m
+operator|!=
+literal|null
+condition|)
+block|{
+name|resourceManager
+operator|=
+name|m
 expr_stmt|;
+name|resourceManager
+operator|.
+name|addResourceResolver
+argument_list|(
+operator|new
+name|BusApplicationContextResourceResolver
+argument_list|(
+name|context
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 block|}
 return|return
@@ -409,7 +448,6 @@ name|beanId
 argument_list|)
 condition|)
 block|{
-comment|//System.err.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);
 operator|new
 name|ResourceInjector
 argument_list|(
@@ -424,9 +462,7 @@ argument_list|(
 name|bean
 argument_list|)
 expr_stmt|;
-comment|//} else if (bean != null) {
-comment|//System.err.println("np: " + (++count2)
-comment|//                   + ": " + bean.getClass().getName() + " " + beanId);
+comment|/*             System.err.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);         } else if (bean != null) {             System.err.println("np: " + (++count2)                                 + ": " + bean.getClass().getName() + " " + beanId);             */
 block|}
 return|return
 name|bean

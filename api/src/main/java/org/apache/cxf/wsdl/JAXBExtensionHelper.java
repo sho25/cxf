@@ -1095,11 +1095,6 @@ argument_list|,
 name|cls
 argument_list|)
 expr_stmt|;
-name|helper
-operator|.
-name|getJAXBContext
-argument_list|()
-expr_stmt|;
 name|found
 operator|=
 literal|true

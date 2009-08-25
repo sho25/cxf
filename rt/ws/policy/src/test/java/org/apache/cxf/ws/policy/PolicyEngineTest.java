@@ -2800,13 +2800,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|engine
-operator|.
-name|setBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 name|List
 argument_list|<
 name|Interceptor
@@ -2947,8 +2940,10 @@ expr_stmt|;
 block|}
 name|engine
 operator|.
-name|addBusInterceptors
-argument_list|()
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
 expr_stmt|;
 if|if
 condition|(
@@ -3156,7 +3151,6 @@ operator|.
 name|verify
 argument_list|()
 expr_stmt|;
-block|}
 name|assertNotNull
 argument_list|(
 name|engine
@@ -3165,6 +3159,7 @@ name|getAlternativeSelector
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Test

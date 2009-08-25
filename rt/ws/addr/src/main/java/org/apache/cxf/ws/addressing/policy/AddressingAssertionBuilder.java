@@ -275,7 +275,7 @@ name|Collection
 argument_list|<
 name|QName
 argument_list|>
-name|KNOWN
+name|KNOWN_ELEMENTS
 init|=
 operator|new
 name|ArrayList
@@ -302,7 +302,7 @@ expr_stmt|;
 block|}
 static|static
 block|{
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -311,7 +311,7 @@ operator|.
 name|ADDRESSING_ASSERTION_QNAME
 argument_list|)
 expr_stmt|;
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -320,7 +320,7 @@ operator|.
 name|ANON_RESPONSES_ASSERTION_QNAME
 argument_list|)
 expr_stmt|;
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -329,7 +329,7 @@ operator|.
 name|NON_ANON_RESPONSES_ASSERTION_QNAME
 argument_list|)
 expr_stmt|;
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -338,7 +338,7 @@ operator|.
 name|ADDRESSING_ASSERTION_QNAME_0705
 argument_list|)
 expr_stmt|;
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -347,7 +347,7 @@ operator|.
 name|ANON_RESPONSES_ASSERTION_QNAME_0705
 argument_list|)
 expr_stmt|;
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -566,7 +566,7 @@ name|getKnownElements
 parameter_list|()
 block|{
 return|return
-name|KNOWN
+name|KNOWN_ELEMENTS
 return|;
 block|}
 specifier|public

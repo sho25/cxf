@@ -899,12 +899,15 @@ specifier|public
 name|void
 name|setManager
 parameter_list|(
-name|WorkQueueManagerImpl
+name|WorkQueueManager
 name|mgr
 parameter_list|)
 block|{
 name|manager
 operator|=
+operator|(
+name|WorkQueueManagerImpl
+operator|)
 name|mgr
 expr_stmt|;
 block|}

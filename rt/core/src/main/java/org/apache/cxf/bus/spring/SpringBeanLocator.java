@@ -144,6 +144,10 @@ operator|.
 name|getBeanNamesForType
 argument_list|(
 name|type
+argument_list|,
+literal|false
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 return|;
@@ -213,6 +217,10 @@ operator|.
 name|getBeansOfType
 argument_list|(
 name|type
+argument_list|,
+literal|false
+argument_list|,
+literal|true
 argument_list|)
 operator|.
 name|values
@@ -265,6 +273,10 @@ operator|.
 name|getBeanNamesForType
 argument_list|(
 name|type
+argument_list|,
+literal|false
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 argument_list|)

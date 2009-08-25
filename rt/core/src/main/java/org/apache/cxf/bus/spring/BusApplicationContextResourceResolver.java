@@ -160,6 +160,18 @@ name|BusApplicationContextResourceResolver
 parameter_list|()
 block|{     }
 specifier|public
+name|BusApplicationContextResourceResolver
+parameter_list|(
+name|ApplicationContext
+name|c
+parameter_list|)
+block|{
+name|context
+operator|=
+name|c
+expr_stmt|;
+block|}
+specifier|public
 name|InputStream
 name|getAsStream
 parameter_list|(

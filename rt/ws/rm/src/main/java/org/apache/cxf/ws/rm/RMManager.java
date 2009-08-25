@@ -932,14 +932,6 @@ name|bus
 operator|=
 name|b
 expr_stmt|;
-block|}
-annotation|@
-name|PostConstruct
-specifier|public
-name|void
-name|register
-parameter_list|()
-block|{
 if|if
 condition|(
 literal|null

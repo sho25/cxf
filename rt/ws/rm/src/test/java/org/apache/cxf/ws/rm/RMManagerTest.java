@@ -740,7 +740,7 @@ argument_list|()
 expr_stmt|;
 name|control
 operator|.
-name|verify
+name|reset
 argument_list|()
 expr_stmt|;
 block|}

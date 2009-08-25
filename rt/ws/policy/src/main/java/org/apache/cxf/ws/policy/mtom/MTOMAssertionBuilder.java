@@ -187,7 +187,7 @@ name|Collection
 argument_list|<
 name|QName
 argument_list|>
-name|KNOWN
+name|KNOWN_ELEMENTS
 init|=
 operator|new
 name|ArrayList
@@ -198,7 +198,7 @@ argument_list|()
 decl_stmt|;
 static|static
 block|{
-name|KNOWN
+name|KNOWN_ELEMENTS
 operator|.
 name|add
 argument_list|(
@@ -310,7 +310,7 @@ name|getKnownElements
 parameter_list|()
 block|{
 return|return
-name|KNOWN
+name|KNOWN_ELEMENTS
 return|;
 block|}
 specifier|public
