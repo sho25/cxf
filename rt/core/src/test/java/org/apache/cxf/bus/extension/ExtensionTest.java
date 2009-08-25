@@ -201,6 +201,8 @@ operator|.
 name|load
 argument_list|(
 name|cl
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -237,6 +239,8 @@ operator|.
 name|load
 argument_list|(
 name|cl
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -278,6 +282,8 @@ operator|.
 name|load
 argument_list|(
 name|cl
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -315,6 +321,8 @@ operator|.
 name|load
 argument_list|(
 name|cl
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertTrue

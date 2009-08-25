@@ -93,6 +93,9 @@ specifier|public
 class|class
 name|FactoryBeanListenerManager
 block|{
+name|Bus
+name|bus
+decl_stmt|;
 name|List
 argument_list|<
 name|FactoryBeanListener
@@ -147,6 +150,14 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
+name|this
+operator|.
+name|bus
+operator|=
+name|bus
+expr_stmt|;
+name|this
+operator|.
 name|bus
 operator|.
 name|setExtension

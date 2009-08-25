@@ -149,6 +149,7 @@ init|=
 literal|true
 decl_stmt|;
 comment|//private int count;
+comment|//private int count2;
 name|Jsr250BeanPostProcessor
 parameter_list|()
 block|{     }
@@ -408,7 +409,7 @@ name|beanId
 argument_list|)
 condition|)
 block|{
-comment|//System.err.println(++count + ": " + bean.getClass().getName() + " " + beanId);
+comment|//System.err.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);
 operator|new
 name|ResourceInjector
 argument_list|(
@@ -423,6 +424,9 @@ argument_list|(
 name|bean
 argument_list|)
 expr_stmt|;
+comment|//} else if (bean != null) {
+comment|//System.err.println("np: " + (++count2)
+comment|//                   + ": " + bean.getClass().getName() + " " + beanId);
 block|}
 return|return
 name|bean

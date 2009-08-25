@@ -355,6 +355,12 @@ argument_list|(
 name|resMgr
 argument_list|,
 name|resMgr
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|resMgr
 operator|.
 name|getResourceResolvers
 argument_list|()
