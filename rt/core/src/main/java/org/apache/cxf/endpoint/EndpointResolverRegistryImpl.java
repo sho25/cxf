@@ -21,7 +21,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
+name|List
 import|;
 end_import
 
@@ -31,17 +31,9 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
+name|concurrent
 operator|.
-name|annotation
-operator|.
-name|PostConstruct
+name|CopyOnWriteArrayList
 import|;
 end_import
 
@@ -106,23 +98,44 @@ argument_list|<
 name|EndpointResolver
 argument_list|>
 name|resolvers
-decl_stmt|;
-comment|/**      * Initialize registry, and expose as Bus extension.      */
-annotation|@
-name|PostConstruct
-specifier|public
-name|void
-name|init
-parameter_list|()
-block|{
-name|resolvers
-operator|=
+init|=
 operator|new
-name|ArrayList
+name|CopyOnWriteArrayList
 argument_list|<
 name|EndpointResolver
 argument_list|>
 argument_list|()
+decl_stmt|;
+specifier|public
+name|EndpointResolverRegistryImpl
+parameter_list|()
+block|{              }
+specifier|public
+name|EndpointResolverRegistryImpl
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|setBus
+argument_list|(
+name|b
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * @param b Bus to encapsulate      */
+specifier|public
+specifier|final
+name|void
+name|setBus
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|bus
+operator|=
+name|b
 expr_stmt|;
 if|if
 condition|(
@@ -378,20 +391,6 @@ block|{
 return|return
 name|resolvers
 return|;
-block|}
-comment|/**      * @param b Bus to encapsulate      */
-specifier|public
-name|void
-name|setBus
-parameter_list|(
-name|Bus
-name|b
-parameter_list|)
-block|{
-name|bus
-operator|=
-name|b
-expr_stmt|;
 block|}
 block|}
 end_class

@@ -248,11 +248,6 @@ argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
-name|registry
-operator|.
-name|init
-argument_list|()
-expr_stmt|;
 name|assertNotNull
 argument_list|(
 name|bus

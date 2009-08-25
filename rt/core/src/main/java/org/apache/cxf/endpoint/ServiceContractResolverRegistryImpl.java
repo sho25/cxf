@@ -31,7 +31,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
+name|List
 import|;
 end_import
 
@@ -41,17 +41,9 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
+name|concurrent
 operator|.
-name|annotation
-operator|.
-name|PostConstruct
+name|CopyOnWriteArrayList
 import|;
 end_import
 
@@ -79,11 +71,34 @@ name|Bus
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|injection
+operator|.
+name|NoJSR250Annotations
+import|;
+end_import
+
 begin_comment
 comment|/**  * A simple contract resolver registry. It maintains a list of contract resolvers in an  *<code>ArrayList</code>.  */
 end_comment
 
 begin_class
+annotation|@
+name|NoJSR250Annotations
+argument_list|(
+name|unlessNull
+operator|=
+literal|"bus"
+argument_list|)
 specifier|public
 class|class
 name|ServiceContractResolverRegistryImpl
@@ -100,23 +115,46 @@ argument_list|<
 name|ServiceContractResolver
 argument_list|>
 name|resolvers
-decl_stmt|;
-comment|/**      * Initialize registry, and register itself on Bus as an extension.      */
-annotation|@
-name|PostConstruct
-specifier|public
-name|void
-name|init
-parameter_list|()
-block|{
-name|resolvers
-operator|=
+init|=
 operator|new
-name|ArrayList
+name|CopyOnWriteArrayList
 argument_list|<
 name|ServiceContractResolver
 argument_list|>
 argument_list|()
+decl_stmt|;
+specifier|public
+name|ServiceContractResolverRegistryImpl
+parameter_list|()
+block|{              }
+specifier|public
+name|ServiceContractResolverRegistryImpl
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|setBus
+argument_list|(
+name|b
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Sets the bus with which the registry is associated.      *      * @param bus      */
+specifier|public
+specifier|final
+name|void
+name|setBus
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|this
+operator|.
+name|bus
+operator|=
+name|b
 expr_stmt|;
 if|if
 condition|(
@@ -233,22 +271,6 @@ name|remove
 argument_list|(
 name|resolver
 argument_list|)
-expr_stmt|;
-block|}
-comment|/**      * Sets the bus with which the registry is associated.      *      * @param bus      */
-specifier|public
-name|void
-name|setBus
-parameter_list|(
-name|Bus
-name|bus
-parameter_list|)
-block|{
-name|this
-operator|.
-name|bus
-operator|=
-name|bus
 expr_stmt|;
 block|}
 specifier|protected
