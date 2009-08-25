@@ -75,7 +75,7 @@ expr_stmt|;
 if|if
 condition|(
 name|threshold
-operator|>
+operator|>=
 literal|0
 condition|)
 block|{
