@@ -882,7 +882,17 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-comment|//@Ignore("randomly fails.  Not sure why. Tried increased timeouts and such to no affect. - dkulp")
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
+argument_list|(
+literal|"randomly fails.  Not sure why. Tried increased"
+operator|+
+literal|"timeouts and such to no affect. - dkulp"
+argument_list|)
 specifier|public
 name|void
 name|testDurableSubscriber
