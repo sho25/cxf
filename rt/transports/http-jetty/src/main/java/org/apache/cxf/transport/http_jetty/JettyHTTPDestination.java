@@ -521,8 +521,6 @@ name|super
 argument_list|(
 name|b
 argument_list|,
-name|ci
-argument_list|,
 name|endpointInfo
 argument_list|,
 literal|true

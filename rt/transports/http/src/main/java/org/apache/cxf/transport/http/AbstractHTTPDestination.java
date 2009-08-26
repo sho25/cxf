@@ -505,20 +505,6 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|ConduitInitiator
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
 name|http
 operator|.
 name|policy
@@ -735,11 +721,6 @@ specifier|final
 name|Bus
 name|bus
 decl_stmt|;
-specifier|protected
-specifier|final
-name|ConduitInitiator
-name|conduitInitiator
-decl_stmt|;
 comment|// Configuration values
 specifier|protected
 name|HTTPServerPolicy
@@ -765,9 +746,6 @@ name|AbstractHTTPDestination
 parameter_list|(
 name|Bus
 name|b
-parameter_list|,
-name|ConduitInitiator
-name|ci
 parameter_list|,
 name|EndpointInfo
 name|ei
@@ -800,10 +778,6 @@ expr_stmt|;
 name|bus
 operator|=
 name|b
-expr_stmt|;
-name|conduitInitiator
-operator|=
-name|ci
 expr_stmt|;
 name|initConfig
 argument_list|()
@@ -1170,16 +1144,6 @@ name|ex
 operator|.
 name|isOneWay
 argument_list|()
-return|;
-block|}
-comment|/**      * @return the associated conduit initiator      */
-specifier|protected
-name|ConduitInitiator
-name|getConduitInitiator
-parameter_list|()
-block|{
-return|return
-name|conduitInitiator
 return|;
 block|}
 comment|/**      * Copy the request headers into the message.      *       * @param message the current message      * @param headers the current set of headers      */

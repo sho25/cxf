@@ -462,7 +462,7 @@ argument_list|(
 name|bean
 argument_list|)
 expr_stmt|;
-comment|/*             System.err.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);         } else if (bean != null) {             System.err.println("np: " + (++count2)                                 + ": " + bean.getClass().getName() + " " + beanId);             */
+comment|/*             System.out.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);         } else if (bean != null) {             System.out.println("np: " + (++count2)                                 + ": " + bean.getClass().getName() + " " + beanId);             */
 block|}
 return|return
 name|bean
