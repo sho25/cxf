@@ -1179,8 +1179,6 @@ name|unlessNull
 operator|=
 block|{
 literal|"bus"
-block|,
-literal|"activationNamespaces"
 block|}
 argument_list|)
 specifier|public

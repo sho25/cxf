@@ -1012,6 +1012,15 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
+if|if
+condition|(
+name|this
+operator|.
+name|bus
+operator|!=
+name|bus
+condition|)
+block|{
 name|this
 operator|.
 name|bus
@@ -1021,6 +1030,7 @@ expr_stmt|;
 name|registerWithBindingManager
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|Collection
@@ -1034,13 +1044,6 @@ return|return
 name|activationNamespaces
 return|;
 block|}
-annotation|@
-name|Resource
-argument_list|(
-name|name
-operator|=
-literal|"activationNamespaces"
-argument_list|)
 specifier|public
 name|void
 name|setActivationNamespaces
