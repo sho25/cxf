@@ -149,11 +149,6 @@ argument_list|(
 name|ASSERTION_TYPES
 argument_list|)
 expr_stmt|;
-name|Thread
-operator|.
-name|dumpStack
-argument_list|()
-expr_stmt|;
 name|getInInterceptors
 argument_list|()
 operator|.
