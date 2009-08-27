@@ -615,7 +615,7 @@ condition|)
 block|{
 name|factory
 operator|=
-name|loadNoDefaultNamespace
+name|loadActivationNamespace
 argument_list|(
 name|namespace
 argument_list|)
@@ -1095,16 +1095,30 @@ return|;
 block|}
 specifier|private
 name|BindingFactory
-name|loadNoDefaultNamespace
+name|loadActivationNamespace
 parameter_list|(
 specifier|final
 name|String
 name|namespace
 parameter_list|)
 block|{
+specifier|final
+name|ConfiguredBeanLocator
+name|locator
+init|=
+name|bus
+operator|.
+name|getExtension
+argument_list|(
+name|ConfiguredBeanLocator
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 comment|//Second attempt will be to examine the factory class
 comment|//for a DEFAULT_NAMESPACES field and if it doesn't exist, try
-comment|//loading.  This will then load most of the "older" things
+comment|//using the older activation ns things.  This will then load most
+comment|//of the "older" things
 name|ConfiguredBeanLocator
 operator|.
 name|BeanLoaderListener
@@ -1201,19 +1215,21 @@ block|{
 comment|//ignore
 block|}
 return|return
-literal|true
+name|locator
+operator|.
+name|hasConfiguredPropertyValue
+argument_list|(
+name|name
+argument_list|,
+literal|"activationNamespaces"
+argument_list|,
+name|namespace
+argument_list|)
 return|;
 block|}
 block|}
 decl_stmt|;
-name|bus
-operator|.
-name|getExtension
-argument_list|(
-name|ConfiguredBeanLocator
-operator|.
-name|class
-argument_list|)
+name|locator
 operator|.
 name|loadBeansOfType
 argument_list|(

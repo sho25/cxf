@@ -232,7 +232,7 @@ condition|)
 block|{
 name|factory
 operator|=
-name|loadNoDefaultNamespace
+name|loadActivationNamespaces
 argument_list|(
 name|namespace
 argument_list|)
@@ -247,7 +247,7 @@ condition|)
 block|{
 name|factory
 operator|=
-name|loadActivationNamespaces
+name|loadNoDefaultNamespace
 argument_list|(
 name|namespace
 argument_list|)
@@ -797,8 +797,6 @@ name|namespace
 parameter_list|)
 block|{
 comment|//Try old method of having activationNamespaces configured in.
-comment|//It activates all the factories in the list until one matches, thus
-comment|//it activates stuff that really aren't needed.
 name|ConfiguredBeanLocator
 operator|.
 name|BeanLoaderListener
@@ -877,20 +875,15 @@ name|type
 parameter_list|)
 block|{
 return|return
-operator|!
-name|map
+name|locator
 operator|.
-name|containsKey
-argument_list|(
-name|namespace
-argument_list|)
-operator|&&
-operator|!
-name|loaded
-operator|.
-name|contains
+name|hasConfiguredPropertyValue
 argument_list|(
 name|name
+argument_list|,
+literal|"transportIds"
+argument_list|,
+name|namespace
 argument_list|)
 return|;
 block|}
@@ -924,7 +917,7 @@ name|uri
 parameter_list|)
 block|{
 comment|//First attempt will be to examine the factory class
-comment|//for a DEFAULT_NAMESPACES field and use it
+comment|//for a DEFAULT_URIS field and use it
 name|URIBeanLoaderListener
 name|listener
 init|=

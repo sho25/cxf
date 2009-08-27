@@ -282,11 +282,6 @@ name|getBus
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|serverEngineFactory
-operator|.
-name|finalizeConfig
-argument_list|()
-expr_stmt|;
 block|}
 return|return
 name|serverEngineFactory

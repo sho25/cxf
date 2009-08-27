@@ -67,6 +67,22 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|injection
+operator|.
+name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|logging
 operator|.
 name|LogUtils
@@ -178,6 +194,8 @@ comment|/**  * Allows to configure the JMSConfiguration directly at the Client o
 end_comment
 
 begin_class
+annotation|@
+name|NoJSR250Annotations
 specifier|public
 class|class
 name|JMSConfigFeature

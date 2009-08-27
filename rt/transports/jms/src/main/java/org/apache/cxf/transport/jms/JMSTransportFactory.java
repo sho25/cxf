@@ -219,6 +219,10 @@ specifier|private
 name|Bus
 name|bus
 decl_stmt|;
+specifier|public
+name|JMSTransportFactory
+parameter_list|()
+block|{              }
 annotation|@
 name|Resource
 argument_list|(

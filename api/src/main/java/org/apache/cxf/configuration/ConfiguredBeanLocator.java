@@ -44,6 +44,7 @@ specifier|public
 interface|interface
 name|ConfiguredBeanLocator
 block|{
+comment|/**      * Gets the names of all the configured beans of the specific type.  Does      * not cause them to be loaded.      * @param type      * @return      */
 name|List
 argument_list|<
 name|String
@@ -57,6 +58,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
+comment|/**      * Gets all the configured beans of the specific types.  Causes them      * all to be loaded.       * @param<T>      * @param type      * @return      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -75,6 +77,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
+comment|/**      * Returns the bean of the given type and name.  Causes it to be loaded.      * @param<T>      * @param name      * @param type      * @return      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -91,6 +94,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
+comment|/**      * Iterates through the beans of the given type, calling the listener      * to determine if it should be loaded or not.       * @param<T>      * @param type      * @param listener      * @return      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -108,6 +112,20 @@ argument_list|<
 name|T
 argument_list|>
 name|listener
+parameter_list|)
+function_decl|;
+comment|/**      * For supporting "legacy" config, checks the configured bean to see if      * it has a property configured with the given name/value.  Mostly used       * for supporting things configured with "activationNamespaces" set.       * @param<T>      * @param type      * @param property      * @param value      * @return      */
+name|boolean
+name|hasConfiguredPropertyValue
+parameter_list|(
+name|String
+name|beanName
+parameter_list|,
+name|String
+name|propertyName
+parameter_list|,
+name|String
+name|value
 parameter_list|)
 function_decl|;
 specifier|public
