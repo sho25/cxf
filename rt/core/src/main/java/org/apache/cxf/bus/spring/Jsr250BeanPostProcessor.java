@@ -148,8 +148,14 @@ name|isProcessing
 init|=
 literal|true
 decl_stmt|;
-comment|//private int count;
-comment|//private int count2;
+specifier|private
+name|int
+name|count
+decl_stmt|;
+specifier|private
+name|int
+name|count2
+decl_stmt|;
 name|Jsr250BeanPostProcessor
 parameter_list|()
 block|{     }
@@ -462,7 +468,71 @@ argument_list|(
 name|bean
 argument_list|)
 expr_stmt|;
-comment|/*             System.out.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);         } else if (bean != null) {             System.out.println("np: " + (++count2)                                 + ": " + bean.getClass().getName() + " " + beanId);             */
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"p :"
+operator|+
+operator|(
+operator|++
+name|count
+operator|)
+operator|+
+literal|": "
+operator|+
+name|bean
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" "
+operator|+
+name|beanId
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|bean
+operator|!=
+literal|null
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"np: "
+operator|+
+operator|(
+operator|++
+name|count2
+operator|)
+operator|+
+literal|": "
+operator|+
+name|bean
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" "
+operator|+
+name|beanId
+argument_list|)
+expr_stmt|;
 block|}
 return|return
 name|bean
