@@ -882,17 +882,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-argument_list|(
-literal|"randomly fails.  Not sure why. Tried increased"
-operator|+
-literal|"timeouts and such to no affect. - dkulp"
-argument_list|)
 specifier|public
 name|void
 name|testDurableSubscriber
@@ -975,6 +964,14 @@ argument_list|(
 literal|true
 argument_list|)
 decl_stmt|;
+comment|// The JMSBroker (ActiveMQ 5.x) need to take some time to setup the DurableSubscriber
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|2000
+argument_list|)
+expr_stmt|;
 name|sendoutMessage
 argument_list|(
 name|conduit
