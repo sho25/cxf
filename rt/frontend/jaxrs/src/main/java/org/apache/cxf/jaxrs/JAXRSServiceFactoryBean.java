@@ -745,7 +745,8 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|sClass
+modifier|...
+name|sClasses
 parameter_list|)
 block|{
 name|Map
@@ -761,6 +762,17 @@ argument_list|(
 name|resources
 argument_list|)
 decl_stmt|;
+for|for
+control|(
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|sClass
+range|:
+name|sClasses
+control|)
+block|{
 name|ClassResourceInfo
 name|cri
 init|=
@@ -801,6 +813,7 @@ argument_list|(
 name|cri
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private

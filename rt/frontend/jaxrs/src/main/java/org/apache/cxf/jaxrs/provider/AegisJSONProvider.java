@@ -249,6 +249,10 @@ name|boolean
 name|serializeAsArray
 decl_stmt|;
 specifier|private
+name|boolean
+name|dropRootElement
+decl_stmt|;
+specifier|private
 name|ConcurrentHashMap
 argument_list|<
 name|String
@@ -270,6 +274,21 @@ specifier|public
 name|AegisJSONProvider
 parameter_list|()
 block|{     }
+specifier|public
+name|void
+name|setDropRootElement
+parameter_list|(
+name|boolean
+name|dropRootElement
+parameter_list|)
+block|{
+name|this
+operator|.
+name|dropRootElement
+operator|=
+name|dropRootElement
+expr_stmt|;
+block|}
 specifier|public
 name|void
 name|setArrayKeys
@@ -404,6 +423,8 @@ argument_list|,
 name|serializeAsArray
 argument_list|,
 name|arrayKeys
+argument_list|,
+name|dropRootElement
 argument_list|)
 decl_stmt|;
 return|return

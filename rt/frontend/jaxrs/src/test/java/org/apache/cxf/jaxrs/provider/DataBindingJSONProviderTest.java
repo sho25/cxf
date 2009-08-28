@@ -456,6 +456,8 @@ name|singletonList
 argument_list|(
 name|c2
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|DataBinding
@@ -632,6 +634,8 @@ name|singletonList
 argument_list|(
 name|c2
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|DataBinding
@@ -785,6 +789,8 @@ name|singletonList
 argument_list|(
 name|c
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|DataBinding
@@ -916,6 +922,8 @@ name|singletonList
 argument_list|(
 name|c
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|DataBinding
@@ -1043,6 +1051,8 @@ name|singletonList
 argument_list|(
 name|c
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|s
@@ -1168,6 +1178,8 @@ name|singletonList
 argument_list|(
 name|c
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|s
@@ -1343,6 +1355,8 @@ name|singletonList
 argument_list|(
 name|c
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|s
