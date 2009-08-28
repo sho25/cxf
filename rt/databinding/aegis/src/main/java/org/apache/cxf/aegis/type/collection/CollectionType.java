@@ -273,6 +273,8 @@ name|readCollection
 argument_list|(
 name|reader
 argument_list|,
+literal|null
+argument_list|,
 name|context
 argument_list|)
 return|;
@@ -314,7 +316,7 @@ name|values
 init|=
 literal|null
 decl_stmt|;
-comment|/*          * getTypeClass returns the type of the object. These ifs asked if the proposed          * type can be assigned to the object, not the other way around. Thus List before          * Vector and Set before SortedSet.          */
+comment|/*          * getTypeClass returns the type of the object. These 'if's asked if the proposed          * type can be assigned to the object, not the other way around. Thus List before          * Vector and Set before SortedSet.          */
 name|Class
 name|userTypeClass
 init|=

@@ -825,7 +825,7 @@ return|;
 block|}
 comment|/**      * Assert that the following XPath query selects a boolean value.      *       * @param xpath      * @throws Exception      */
 specifier|public
-name|boolean
+name|void
 name|assertValidBoolean
 parameter_list|(
 name|String
@@ -837,7 +837,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-return|return
 name|XPathAssert
 operator|.
 name|assertValidBoolean
@@ -848,7 +847,7 @@ name|node
 argument_list|,
 name|namespaces
 argument_list|)
-return|;
+expr_stmt|;
 block|}
 comment|/**      * Assert that the following XPath query selects no nodes.      *       * @param xpath      */
 specifier|public

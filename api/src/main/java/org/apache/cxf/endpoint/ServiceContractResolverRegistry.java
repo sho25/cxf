@@ -46,7 +46,7 @@ specifier|public
 interface|interface
 name|ServiceContractResolverRegistry
 block|{
-comment|/**      * Resolves a service's QName to a URI respresenting the location of a       * WSDL contract. The registry method is called by the bus and should use       * the<code>getContractLocation</code> methods of the registered contract       * resolvers to do the actual resolution.      *      * @param qname the service qname to resolve into a URI      * @return URI representing the WSDL contract's location      */
+comment|/**      * Resolves a service's QName to a URI representing the location of a       * WSDL contract. The registry method is called by the bus and should use       * the<code>getContractLocation</code> methods of the registered contract       * resolvers to do the actual resolution.      *      * @param qname the service qname to resolve into a URI      * @return URI representing the WSDL contract's location      */
 name|URI
 name|getContractLocation
 parameter_list|(

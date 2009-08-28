@@ -313,7 +313,7 @@ name|getElementText
 argument_list|()
 decl_stmt|;
 comment|//workaround bugs in some readers that aren't properly advancing to
-comment|//the END_ELEMNT (*cough*jettison*cough*)
+comment|//the END_ELEMENT (*cough*jettison*cough*)
 while|while
 condition|(
 name|reader

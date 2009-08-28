@@ -269,6 +269,24 @@ name|aegis
 operator|.
 name|type
 operator|.
+name|basic
+operator|.
+name|ArrayType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|aegis
+operator|.
+name|type
+operator|.
 name|mtom
 operator|.
 name|AbstractXOPType
@@ -662,7 +680,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * CXF databinding object for Aegis. By default, this creates an AegisContext object. To customize  * the behavior of the binding, an application should create its own AegisContext object and  * pass it to {@link #setAegisContext(AegisContext)}<i>before</i> any call to {@link #initialize(Service)}.  * That does not require special arrangements; the service factories do not call {{@link #initialize(Service)}  * until after the application passes the data binding into the factory.  *   * This class adds root classes to the context based on the SEI and implementation.  *   * @see org.apache.cxf.aegis.AegisContext  */
+comment|/**  * CXF databinding object for Aegis. By default, this creates an AegisContext object. To customize the  * behavior of the binding, an application should create its own AegisContext object and pass it to  * {@link #setAegisContext(AegisContext)}<i>before</i> any call to {@link #initialize(Service)}. That does  * not require special arrangements; the service factories do not call {{@link #initialize(Service)} until  * after the application passes the data binding into the factory. This class adds root classes to the context  * based on the SEI and implementation.  *   * @see org.apache.cxf.aegis.AegisContext  */
 end_comment
 
 begin_class
@@ -798,7 +816,7 @@ argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * The Databinding API has initialize(Service). However, this object should      * be usable even if that API is never called.      */
+comment|/**      * The Databinding API has initialize(Service). However, this object should be usable even if that API is      * never called.      */
 specifier|private
 name|void
 name|ensureInitialized
@@ -1123,7 +1141,7 @@ name|class
 block|}
 return|;
 block|}
-comment|/**      * {@inheritDoc}      * Set up the data binding for a service.      */
+comment|/**      * {@inheritDoc} Set up the data binding for a service.      */
 specifier|public
 name|void
 name|initialize
@@ -3291,6 +3309,12 @@ operator|==
 literal|null
 condition|)
 block|{
+comment|// Current author doesn't know how type can be non-null here.
+name|boolean
+name|usingComponentType
+init|=
+literal|false
+decl_stmt|;
 name|OperationInfo
 name|op
 init|=
@@ -3366,7 +3390,17 @@ operator|.
 name|getNillable
 argument_list|()
 decl_stmt|;
-comment|/* Note that, for types from the mapping, the minOccurs, maxOccurs, and nillable              * from the 'info' will be ignored by createTypeForClass below. So we need              * to override.              */
+comment|/*              * Note that, for types from the mapping, the minOccurs, maxOccurs, and nillable from the 'info'              * will be ignored by createTypeForClass below. So we need to override.              */
+name|type
+operator|=
+name|typeCreator
+operator|.
+name|createTypeForClass
+argument_list|(
+name|info
+argument_list|)
+expr_stmt|;
+comment|// if not writing outer, we don't need anything special.
 if|if
 condition|(
 name|param
@@ -3387,14 +3421,14 @@ argument_list|()
 operator|.
 name|isArray
 argument_list|()
+operator|&&
+name|type
+operator|.
+name|isWriteOuter
+argument_list|()
 condition|)
 block|{
-comment|// The service factory expects arrays going into the wrapper to
-comment|// be
-comment|// mapped to the array component type and will then add
-comment|// min=0/max=unbounded. That doesn't work for Aegis where we
-comment|// already created a wrapper ArrayType so we'll let it know we
-comment|// want the default.
+comment|/*                  * The service factory expects arrays going into the wrapper to be mapped to the array                  * component type and will then add min=0/max=unbounded. That doesn't work for Aegis where we                  * already created a wrapper ArrayType so we'll let it know we want the default.                  */
 name|param
 operator|.
 name|setProperty
@@ -3515,6 +3549,50 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+operator|(
+name|type
+operator|instanceof
+name|ArrayType
+operator|)
+operator|&&
+operator|!
+name|type
+operator|.
+name|isWriteOuter
+argument_list|()
+condition|)
+block|{
+name|param
+operator|.
+name|setProperty
+argument_list|(
+literal|"org.apache.cxf.aegis.outerType"
+argument_list|,
+name|type
+argument_list|)
+expr_stmt|;
+name|ArrayType
+name|aType
+init|=
+operator|(
+name|ArrayType
+operator|)
+name|type
+decl_stmt|;
+name|type
+operator|=
+name|aType
+operator|.
+name|getComponentType
+argument_list|()
+expr_stmt|;
+name|usingComponentType
+operator|=
+literal|true
+expr_stmt|;
+block|}
 block|}
 if|if
 condition|(
@@ -3547,17 +3625,15 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|type
-operator|=
-name|typeCreator
-operator|.
-name|createTypeForClass
-argument_list|(
-name|info
-argument_list|)
-expr_stmt|;
-comment|//We have to register the type if we want minOccurs and such to
-comment|// work. (for custom types)
+if|if
+condition|(
+operator|!
+name|usingComponentType
+condition|)
+block|{
+comment|// We have to register the type if we want minOccurs and such to
+comment|// work. (for custom types). Is this really still true with all the
+comment|// param setting above?
 if|if
 condition|(
 name|info
@@ -3581,6 +3657,7 @@ argument_list|(
 name|tm
 argument_list|)
 expr_stmt|;
+block|}
 name|part2Type
 operator|.
 name|put

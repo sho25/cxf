@@ -521,7 +521,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * @see org.codehaus.xfire.aegis.MessageReader#getValue()      */
 specifier|public
 name|String
 name|getValue

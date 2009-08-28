@@ -61,7 +61,6 @@ specifier|private
 name|boolean
 name|xsiTypeWritten
 decl_stmt|;
-comment|/**      * Create a LiteralWriter but without writing an element name.      *       * @param writer      */
 specifier|public
 name|AbstractMessageWriter
 parameter_list|()

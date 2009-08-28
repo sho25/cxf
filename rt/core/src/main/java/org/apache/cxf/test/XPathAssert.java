@@ -281,7 +281,7 @@ block|}
 comment|/**      * Assert that the following XPath query selects one or more nodes.      *       * @param xpath      */
 specifier|public
 specifier|static
-name|boolean
+name|void
 name|assertValidBoolean
 parameter_list|(
 name|String
@@ -362,12 +362,32 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-return|return
+if|if
+condition|(
+operator|!
 name|b
 operator|.
 name|booleanValue
 argument_list|()
-return|;
+condition|)
+block|{
+throw|throw
+operator|new
+name|AssertionFailedError
+argument_list|(
+literal|"Boolean XPath assertion evaluated to false:\n"
+operator|+
+name|xpath
+operator|+
+literal|" from document:\n"
+operator|+
+name|writeNodeToString
+argument_list|(
+name|node
+argument_list|)
+argument_list|)
+throw|;
+block|}
 block|}
 specifier|private
 specifier|static
