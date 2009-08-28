@@ -617,8 +617,6 @@ operator|new
 name|QName
 argument_list|(
 name|ns
-operator|+
-literal|"jaxrs"
 argument_list|,
 name|primaryClass
 operator|.
@@ -635,7 +633,7 @@ name|QName
 argument_list|(
 name|address
 argument_list|,
-literal|"WebResource"
+literal|"WebClient"
 argument_list|)
 return|;
 block|}
