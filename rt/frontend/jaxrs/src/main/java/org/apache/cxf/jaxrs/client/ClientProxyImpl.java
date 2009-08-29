@@ -1922,7 +1922,7 @@ name|equals
 argument_list|(
 name|MediaType
 operator|.
-name|WILDCARD
+name|WILDCARD_TYPE
 argument_list|)
 condition|?
 name|MediaType
