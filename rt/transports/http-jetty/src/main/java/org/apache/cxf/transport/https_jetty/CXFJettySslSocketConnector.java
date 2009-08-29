@@ -310,6 +310,11 @@ name|ClientAuthentication
 name|clientAuth
 parameter_list|)
 block|{
+name|setWantClientAuth
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|clientAuth
