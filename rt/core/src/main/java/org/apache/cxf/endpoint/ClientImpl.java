@@ -984,6 +984,14 @@ name|bus
 operator|=
 name|bus
 expr_stmt|;
+name|outFaultObserver
+operator|=
+operator|new
+name|ClientOutFaultObserver
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
 name|WSDLServiceFactory
 name|sf
 init|=
