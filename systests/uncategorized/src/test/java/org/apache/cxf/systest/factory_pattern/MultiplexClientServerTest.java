@@ -327,7 +327,7 @@ block|{
 comment|// requires ws-a support to propagate reference parameters
 name|createStaticBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/addressing/cxf.xml"
+literal|"org/apache/cxf/systest/factory_pattern/cxf_multiplex.xml"
 argument_list|)
 expr_stmt|;
 name|Map
@@ -660,7 +660,12 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
-literal|"match on exception message"
+literal|"match on exception message "
+operator|+
+name|expected
+operator|.
+name|getMessage
+argument_list|()
 argument_list|,
 name|expected
 operator|.
