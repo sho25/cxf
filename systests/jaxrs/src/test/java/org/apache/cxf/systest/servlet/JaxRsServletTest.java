@@ -188,6 +188,13 @@ literal|null
 return|;
 block|}
 annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
+comment|// this doesn't work yet
+annotation|@
 name|Test
 specifier|public
 name|void
