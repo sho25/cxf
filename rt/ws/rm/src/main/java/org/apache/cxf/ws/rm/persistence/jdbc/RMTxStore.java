@@ -514,11 +514,11 @@ literal|"CREATE TABLE CXF_RM_SRC_SEQUENCES "
 operator|+
 literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
-literal|"CUR_MSG_NO DECIMAL(31, 0) NOT NULL DEFAULT 1, "
+literal|"CUR_MSG_NO DECIMAL(31, 0) DEFAULT 1 NOT NULL, "
 operator|+
 literal|"LAST_MSG CHAR(1), "
 operator|+
-literal|"EXPIRY BIGINT, "
+literal|"EXPIRY DECIMAL(31, 0), "
 operator|+
 literal|"OFFERING_SEQ_ID VARCHAR(256), "
 operator|+
@@ -651,6 +651,22 @@ name|String
 name|SELECT_MESSAGES_STMT_STR
 init|=
 literal|"SELECT MSG_NO, SEND_TO, CONTENT FROM {0} WHERE SEQ_ID = ?"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|DERBY_TABLE_EXISTS_STATE
+init|=
+literal|"X0Y32"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|int
+name|ORACLE_TABLE_EXISTS_CODE
+init|=
+literal|955
 decl_stmt|;
 specifier|private
 specifier|static
@@ -2887,14 +2903,9 @@ block|{
 if|if
 condition|(
 operator|!
-literal|"X0Y32"
-operator|.
-name|equals
+name|isTableExistsError
 argument_list|(
 name|ex
-operator|.
-name|getSQLState
-argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -2944,14 +2955,9 @@ block|{
 if|if
 condition|(
 operator|!
-literal|"X0Y32"
-operator|.
-name|equals
+name|isTableExistsError
 argument_list|(
 name|ex
-operator|.
-name|getSQLState
-argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -3023,14 +3029,9 @@ block|{
 if|if
 condition|(
 operator|!
-literal|"X0Y32"
-operator|.
-name|equals
+name|isTableExistsError
 argument_list|(
 name|ex
-operator|.
-name|getSQLState
-argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -3532,6 +3533,34 @@ name|deleteOnExit
 argument_list|()
 expr_stmt|;
 block|}
+block|}
+specifier|private
+specifier|static
+name|boolean
+name|isTableExistsError
+parameter_list|(
+name|SQLException
+name|ex
+parameter_list|)
+block|{
+return|return
+name|DERBY_TABLE_EXISTS_STATE
+operator|.
+name|equals
+argument_list|(
+name|ex
+operator|.
+name|getSQLState
+argument_list|()
+argument_list|)
+operator|||
+name|ORACLE_TABLE_EXISTS_CODE
+operator|==
+name|ex
+operator|.
+name|getErrorCode
+argument_list|()
+return|;
 block|}
 block|}
 end_class
