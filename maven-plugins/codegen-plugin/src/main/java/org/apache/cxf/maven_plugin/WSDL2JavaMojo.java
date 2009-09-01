@@ -1927,6 +1927,9 @@ literal|null
 condition|)
 block|{
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|it
 init|=
 name|wsdlOption
@@ -1960,9 +1963,6 @@ name|it
 operator|.
 name|next
 argument_list|()
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1978,6 +1978,9 @@ literal|null
 condition|)
 block|{
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|it
 init|=
 name|wsdlOption
@@ -2010,9 +2013,6 @@ argument_list|(
 name|it
 operator|.
 name|next
-argument_list|()
-operator|.
-name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -2405,6 +2405,9 @@ literal|null
 condition|)
 block|{
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|it
 init|=
 name|wsdlOption
@@ -2627,6 +2630,9 @@ name|wsdlOption
 parameter_list|)
 block|{
 name|List
+argument_list|<
+name|String
+argument_list|>
 name|args
 init|=
 name|wsdlOption
@@ -2668,9 +2674,6 @@ literal|"-sn"
 operator|.
 name|equalsIgnoreCase
 argument_list|(
-operator|(
-name|String
-operator|)
 name|args
 operator|.
 name|get
