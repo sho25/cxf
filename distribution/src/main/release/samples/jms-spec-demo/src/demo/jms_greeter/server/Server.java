@@ -55,7 +55,11 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"jms:jndi:dynamicQueues/test.cxf.jmstransport.queue?jndiInitialContextFactory=org.apache.activemq.jndi.ActiveMQInitialContextFactory&jndiConnectionFactoryName=ConnectionFactory&jndiURL=tcp://localhost:61616"
+literal|"jms:jndi:dynamicQueues/test.cxf.jmstransport.queue?jndiInitialContextFactory="
+operator|+
+literal|"org.apache.activemq.jndi.ActiveMQInitialContextFactory&jndiConnectionFactoryName="
+operator|+
+literal|"ConnectionFactory&jndiURL=tcp://localhost:61616"
 decl_stmt|;
 name|Endpoint
 operator|.
