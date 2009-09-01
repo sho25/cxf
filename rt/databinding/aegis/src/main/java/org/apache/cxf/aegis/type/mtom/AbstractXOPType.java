@@ -157,7 +157,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -283,7 +283,7 @@ specifier|abstract
 class|class
 name|AbstractXOPType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|public
 specifier|static

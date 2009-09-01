@@ -115,7 +115,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -228,7 +228,7 @@ specifier|public
 class|class
 name|Base64Type
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 name|AbstractXOPType

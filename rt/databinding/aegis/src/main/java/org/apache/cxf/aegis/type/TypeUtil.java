@@ -180,7 +180,7 @@ comment|//utility class
 block|}
 specifier|public
 specifier|static
-name|Type
+name|AegisType
 name|getReadType
 parameter_list|(
 name|XMLStreamReader
@@ -189,7 +189,7 @@ parameter_list|,
 name|AegisContext
 name|context
 parameter_list|,
-name|Type
+name|AegisType
 name|baseType
 parameter_list|)
 block|{
@@ -280,7 +280,7 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|Type
+name|AegisType
 name|improvedType
 init|=
 literal|null
@@ -356,7 +356,7 @@ literal|"xsi:type=\""
 operator|+
 name|overrideName
 operator|+
-literal|"\" was specified, but no corresponding Type was registered; defaulting to "
+literal|"\" was specified, but no corresponding AegisType was registered; defaulting to "
 operator|+
 name|baseType
 operator|.
@@ -378,7 +378,7 @@ literal|"xsi:type=\""
 operator|+
 name|overrideName
 operator|+
-literal|"\" was specified, but no corresponding Type was registered; no default."
+literal|"\" was specified, but no corresponding AegisType was registered; no default."
 argument_list|)
 expr_stmt|;
 return|return
@@ -416,7 +416,7 @@ block|}
 comment|/**      * getReadType cannot just look up the xsi:type in the mapping. This function must be      * called instead at the root where there is no initial mapping to start from, as from      * a part or an element of some containing item.      * @param xsr      * @param context      * @return      */
 specifier|public
 specifier|static
-name|Type
+name|AegisType
 name|getReadTypeStandalone
 parameter_list|(
 name|XMLStreamReader
@@ -425,7 +425,7 @@ parameter_list|,
 name|AegisContext
 name|context
 parameter_list|,
-name|Type
+name|AegisType
 name|baseType
 parameter_list|)
 block|{
@@ -518,7 +518,7 @@ operator|.
 name|getTypeMapping
 argument_list|()
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|tm
@@ -564,7 +564,7 @@ literal|"xsi:type=\""
 operator|+
 name|schemaTypeName
 operator|+
-literal|"\" was specified, but no corresponding Type was registered; no default."
+literal|"\" was specified, but no corresponding AegisType was registered; no default."
 argument_list|)
 expr_stmt|;
 return|return
@@ -589,7 +589,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|Type
+name|AegisType
 name|getWriteType
 parameter_list|(
 name|AegisContext
@@ -598,7 +598,7 @@ parameter_list|,
 name|Object
 name|value
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -623,7 +623,7 @@ name|getClass
 argument_list|()
 condition|)
 block|{
-name|Type
+name|AegisType
 name|overrideType
 init|=
 name|globalContext
@@ -654,7 +654,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|Type
+name|AegisType
 name|getWriteTypeStandalone
 parameter_list|(
 name|AegisContext
@@ -663,7 +663,7 @@ parameter_list|,
 name|Object
 name|value
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -715,7 +715,7 @@ block|}
 comment|/**      * Allow writing of collections when the type of the collection object is known via      * an {@link java.lang.reflect.Type} object.      * @param globalContext the context      * @param value the object to write.      * @param reflectType the type to use in writing the object.      * @return      */
 specifier|public
 specifier|static
-name|Type
+name|AegisType
 name|getWriteTypeStandalone
 parameter_list|(
 name|AegisContext
@@ -749,7 +749,7 @@ argument_list|,
 name|value
 argument_list|,
 operator|(
-name|Type
+name|AegisType
 operator|)
 literal|null
 argument_list|)
@@ -781,7 +781,7 @@ parameter_list|(
 name|QName
 name|name
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|XmlSchema

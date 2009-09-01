@@ -81,7 +81,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -158,17 +158,17 @@ specifier|public
 class|class
 name|SoapRefType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 specifier|final
-name|Type
+name|AegisType
 name|baseType
 decl_stmt|;
 specifier|public
 name|SoapRefType
 parameter_list|(
-name|Type
+name|AegisType
 name|baseType
 parameter_list|)
 block|{
@@ -467,7 +467,7 @@ block|}
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()

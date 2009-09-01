@@ -247,7 +247,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -2100,7 +2100,7 @@ specifier|protected
 name|Element
 name|writeObjectToElement
 parameter_list|(
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|Object
@@ -2123,7 +2123,7 @@ specifier|protected
 name|Element
 name|writeObjectToElement
 parameter_list|(
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|Object

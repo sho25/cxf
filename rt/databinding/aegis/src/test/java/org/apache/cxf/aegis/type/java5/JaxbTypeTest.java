@@ -95,7 +95,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -403,7 +403,7 @@ name|hasNext
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|custom
 init|=
 name|info

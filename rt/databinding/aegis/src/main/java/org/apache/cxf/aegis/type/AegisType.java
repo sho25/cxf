@@ -132,14 +132,14 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Type reads and writes XML fragments to create and write objects.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Aegis abstraction for a object. Types are responsible for reading and writing the contents   * of objects, but not, almost always, their own outermost XML element.  *   */
 end_comment
 
 begin_class
 specifier|public
 specifier|abstract
 class|class
-name|Type
+name|AegisType
 block|{
 specifier|protected
 name|Class
@@ -176,7 +176,7 @@ name|boolean
 name|flatArray
 decl_stmt|;
 specifier|public
-name|Type
+name|AegisType
 parameter_list|()
 block|{     }
 comment|/**      * Read in the XML fragment and create an object.      *       * @param reader      * @param context      * @return      * @throws DatabindingException      */
@@ -354,11 +354,11 @@ operator|=
 name|nillable
 expr_stmt|;
 block|}
-comment|/**      * Return a set of Type dependencies. Returns null if this type has no      * dependencies.      *       * @return Set of<code>Type</code> dependencies      */
+comment|/**      * Return a set of AegisType dependencies. Returns null if this type has no      * dependencies.      *       * @return Set of<code>AegisType</code> dependencies      */
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()
@@ -393,14 +393,14 @@ if|if
 condition|(
 name|obj
 operator|instanceof
-name|Type
+name|AegisType
 condition|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 operator|(
-name|Type
+name|AegisType
 operator|)
 name|obj
 decl_stmt|;

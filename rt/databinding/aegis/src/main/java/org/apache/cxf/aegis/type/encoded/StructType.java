@@ -71,7 +71,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -203,7 +203,7 @@ comment|/**      * Returns a SoapRefType wrapping the actual type.      */
 annotation|@
 name|Override
 specifier|protected
-name|Type
+name|AegisType
 name|getElementType
 parameter_list|(
 name|QName
@@ -227,7 +227,7 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|super
@@ -365,7 +365,7 @@ parameter_list|,
 name|Object
 name|value
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|MessageWriter
@@ -551,7 +551,7 @@ specifier|private
 name|BeanType
 name|superBeanType
 parameter_list|(
-name|Type
+name|AegisType
 name|t
 parameter_list|)
 block|{
@@ -570,7 +570,7 @@ name|BeanType
 operator|)
 name|t
 decl_stmt|;
-name|Type
+name|AegisType
 name|supertype
 init|=
 name|bt

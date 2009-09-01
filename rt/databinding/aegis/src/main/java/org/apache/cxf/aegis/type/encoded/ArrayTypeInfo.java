@@ -131,7 +131,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -313,7 +313,7 @@ literal|"offset"
 argument_list|)
 decl_stmt|;
 specifier|private
-name|Type
+name|AegisType
 name|type
 decl_stmt|;
 specifier|private
@@ -1259,7 +1259,7 @@ name|typeName
 return|;
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|getType
 parameter_list|()
 block|{

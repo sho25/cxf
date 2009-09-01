@@ -59,7 +59,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -196,7 +196,7 @@ specifier|public
 class|class
 name|EnumType
 extends|extends
-name|Type
+name|AegisType
 block|{
 annotation|@
 name|SuppressWarnings
@@ -295,7 +295,7 @@ throw|throw
 operator|new
 name|DatabindingException
 argument_list|(
-literal|"Type class must be an enum."
+literal|"AegisType class must be an enum."
 argument_list|)
 throw|;
 block|}

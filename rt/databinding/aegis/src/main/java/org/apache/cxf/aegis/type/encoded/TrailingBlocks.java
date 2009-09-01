@@ -79,7 +79,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -413,7 +413,7 @@ argument_list|)
 control|)
 block|{
 comment|// determine instance type
-name|Type
+name|AegisType
 name|type
 init|=
 name|objectType

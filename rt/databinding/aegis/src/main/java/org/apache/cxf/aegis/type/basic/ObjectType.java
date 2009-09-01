@@ -123,7 +123,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -272,7 +272,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Type for runtime inspection of types. Looks as the class to be written, and  * looks to see if there is a type for that class. If there is, it writes out  * the value and inserts a<em>xsi:type</em> attribute to signal what the type  * of the value is. Can specify an optional set of dependent<code>Type</code>'s  * in the constructor, in the case that the type is a custom type that may not  * have its schema in the WSDL. Can specify whether or not unknown objects  * should be serialized as a byte stream.  *   * @author<a href="mailto:peter.royal@pobox.com">peter royal</a>  */
+comment|/**  * AegisType for runtime inspection of types. Looks as the class to be written, and  * looks to see if there is a type for that class. If there is, it writes out  * the value and inserts a<em>xsi:type</em> attribute to signal what the type  * of the value is. Can specify an optional set of dependent<code>AegisType</code>'s  * in the constructor, in the case that the type is a custom type that may not  * have its schema in the WSDL. Can specify whether or not unknown objects  * should be serialized as a byte stream.  *   * @author<a href="mailto:peter.royal@pobox.com">peter royal</a>  */
 end_comment
 
 begin_class
@@ -280,7 +280,7 @@ specifier|public
 class|class
 name|ObjectType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 specifier|static
@@ -317,7 +317,7 @@ decl_stmt|;
 specifier|private
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|dependencies
 decl_stmt|;
@@ -355,7 +355,7 @@ name|ObjectType
 parameter_list|(
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|dependencies
 parameter_list|)
@@ -395,7 +395,7 @@ name|ObjectType
 parameter_list|(
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|dependencies
 parameter_list|,
@@ -523,7 +523,7 @@ operator|.
 name|trim
 argument_list|()
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 literal|null
@@ -918,7 +918,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|determineType
@@ -1040,7 +1040,7 @@ block|}
 block|}
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|determineType
 parameter_list|(
 name|Context
@@ -1071,7 +1071,7 @@ name|getTypeMapping
 argument_list|()
 expr_stmt|;
 block|}
-name|Type
+name|AegisType
 name|type
 init|=
 name|tm
@@ -1238,7 +1238,7 @@ name|setDependencies
 parameter_list|(
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|dependencies
 parameter_list|)
@@ -1255,7 +1255,7 @@ name|Override
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()

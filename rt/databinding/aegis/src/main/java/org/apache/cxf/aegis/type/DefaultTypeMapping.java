@@ -820,7 +820,7 @@ name|Map
 argument_list|<
 name|Class
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 name|class2Type
 decl_stmt|;
@@ -829,7 +829,7 @@ name|Map
 argument_list|<
 name|QName
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 name|xml2Type
 decl_stmt|;
@@ -910,7 +910,7 @@ name|HashMap
 argument_list|<
 name|Class
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 argument_list|)
@@ -942,7 +942,7 @@ name|HashMap
 argument_list|<
 name|QName
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 argument_list|)
@@ -1042,7 +1042,7 @@ parameter_list|,
 name|QName
 name|xmlType
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -1071,7 +1071,7 @@ specifier|public
 name|void
 name|register
 parameter_list|(
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -1186,7 +1186,7 @@ specifier|public
 name|void
 name|removeType
 parameter_list|(
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -1248,14 +1248,14 @@ block|}
 block|}
 comment|/**      * @see org.apache.cxf.aegis.type.TypeMapping#getType(java.lang.Class)      */
 specifier|public
-name|Type
+name|AegisType
 name|getType
 parameter_list|(
 name|Class
 name|javaType
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|class2Type
@@ -1292,14 +1292,14 @@ return|;
 block|}
 comment|/**      * @see org.apache.cxf.aegis.type.TypeMapping#getType(javax.xml.namespace.QName)      */
 specifier|public
-name|Type
+name|AegisType
 name|getType
 parameter_list|(
 name|QName
 name|xmlType
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|xml2Type
@@ -1435,7 +1435,7 @@ parameter_list|,
 name|QName
 name|name
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -2260,7 +2260,7 @@ name|boolean
 name|enableJDOM
 parameter_list|)
 block|{
-comment|// Create a Type Mapping for SOAP 1.1 Encoding
+comment|// Create a AegisType Mapping for SOAP 1.1 Encoding
 name|DefaultTypeMapping
 name|soapTM
 init|=

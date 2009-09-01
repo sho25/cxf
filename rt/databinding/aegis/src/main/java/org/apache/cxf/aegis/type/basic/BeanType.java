@@ -203,7 +203,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -488,7 +488,7 @@ specifier|public
 class|class
 name|BeanType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 name|BeanTypeInfo
@@ -768,7 +768,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|inf
@@ -846,8 +846,8 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
-comment|// Get the Type for the property
-name|Type
+comment|// Get the AegisType for the property
+name|AegisType
 name|type
 init|=
 name|getElementType
@@ -1091,7 +1091,7 @@ throw|;
 block|}
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getElementType
 parameter_list|(
 name|QName
@@ -1107,7 +1107,7 @@ name|Context
 name|context
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|beanTypeInfo
@@ -1117,7 +1117,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
-comment|// Type can be overriden with a xsi:type attribute
+comment|// AegisType can be overriden with a xsi:type attribute
 name|type
 operator|=
 name|TypeUtil
@@ -1763,7 +1763,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|getType
@@ -1833,7 +1833,7 @@ name|isExtension
 argument_list|()
 condition|)
 block|{
-name|Type
+name|AegisType
 name|t
 init|=
 name|getSuperType
@@ -1908,7 +1908,7 @@ argument_list|,
 name|name
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|defaultType
 init|=
 name|getType
@@ -1918,7 +1918,7 @@ argument_list|,
 name|name
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|TypeUtil
@@ -2028,7 +2028,7 @@ parameter_list|,
 name|Object
 name|value
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|MessageWriter
@@ -2115,7 +2115,7 @@ parameter_list|,
 name|QName
 name|name
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -2233,7 +2233,7 @@ throw|;
 block|}
 block|}
 specifier|private
-name|Type
+name|AegisType
 name|getType
 parameter_list|(
 name|BeanTypeInfo
@@ -2243,7 +2243,7 @@ name|QName
 name|name
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|inf
@@ -2292,7 +2292,7 @@ parameter_list|,
 name|XmlSchemaElement
 name|element
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|XmlSchema
@@ -2420,7 +2420,7 @@ name|initTypeClass
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * We need to write a complex type schema for Beans, so return true.      *       * @see org.apache.cxf.aegis.type.Type#isComplex()      */
+comment|/**      * We need to write a complex type schema for Beans, so return true.      *       * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
 annotation|@
 name|Override
 specifier|public
@@ -2438,21 +2438,21 @@ name|Override
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()
 block|{
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 init|=
 operator|new
 name|HashSet
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -2547,7 +2547,7 @@ name|isExtension
 argument_list|()
 condition|)
 block|{
-name|Type
+name|AegisType
 name|sooperType
 init|=
 name|getSuperType
@@ -2587,7 +2587,7 @@ name|beanType
 init|=
 name|this
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 literal|null
@@ -2622,7 +2622,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|Type
+name|AegisType
 name|superType
 init|=
 name|beanType
@@ -2684,9 +2684,9 @@ return|return
 name|elementTypeInfo
 return|;
 block|}
-comment|/**      * Return the Type for the superclass if this type's class, if any.      * @return      */
+comment|/**      * Return the AegisType for the superclass if this type's class, if any.      * @return      */
 specifier|public
-name|Type
+name|AegisType
 name|getSuperType
 parameter_list|()
 block|{
@@ -2741,7 +2741,7 @@ operator|.
 name|getTypeMapping
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|superType
 init|=
 name|tm
@@ -3147,7 +3147,7 @@ argument_list|(
 name|complex
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|sooperType
 init|=
 name|getSuperType
@@ -3358,7 +3358,7 @@ argument_list|(
 name|element
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|getType
@@ -3589,7 +3589,7 @@ name|getLocalPart
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|getType

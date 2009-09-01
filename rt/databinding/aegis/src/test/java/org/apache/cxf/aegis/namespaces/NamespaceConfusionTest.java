@@ -187,7 +187,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -668,7 +668,7 @@ argument_list|(
 name|uri
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|nameType
 init|=
 name|tm

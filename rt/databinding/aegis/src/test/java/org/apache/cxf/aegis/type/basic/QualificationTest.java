@@ -129,7 +129,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -270,7 +270,7 @@ operator|.
 name|getTypeMapping
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping
@@ -409,7 +409,7 @@ operator|.
 name|getTypeMapping
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping
@@ -527,7 +527,7 @@ operator|.
 name|getTypeMapping
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping
@@ -650,7 +650,7 @@ operator|.
 name|getTypeMapping
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping

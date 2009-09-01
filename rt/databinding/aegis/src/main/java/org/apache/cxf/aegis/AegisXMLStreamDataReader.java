@@ -75,7 +75,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -326,7 +326,7 @@ parameter_list|(
 name|XMLStreamReader
 name|reader
 parameter_list|,
-name|Type
+name|AegisType
 name|desiredType
 parameter_list|)
 throws|throws
@@ -363,7 +363,7 @@ return|return
 literal|null
 return|;
 block|}
-name|Type
+name|AegisType
 name|type
 init|=
 name|TypeUtil

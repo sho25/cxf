@@ -83,7 +83,7 @@ name|int
 name|index
 parameter_list|)
 function_decl|;
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|Method
@@ -93,14 +93,14 @@ name|int
 name|index
 parameter_list|)
 function_decl|;
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|PropertyDescriptor
 name|pd
 parameter_list|)
 function_decl|;
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|java
@@ -113,14 +113,14 @@ name|Type
 name|type
 parameter_list|)
 function_decl|;
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|Field
 name|f
 parameter_list|)
 function_decl|;
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|Class
@@ -168,7 +168,7 @@ name|itemClass
 parameter_list|)
 function_decl|;
 comment|/**      * Turn a TypeClassInfo into a type.      * @param info      * @return      */
-name|Type
+name|AegisType
 name|createTypeForClass
 parameter_list|(
 name|TypeClassInfo

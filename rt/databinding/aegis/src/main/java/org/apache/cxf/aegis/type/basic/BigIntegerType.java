@@ -55,7 +55,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<code>Type</code> for a<code>BigInteger</code>  *   * @author<a href="mailto:peter.royal@pobox.com">peter royal</a>  */
+comment|/**  *<code>AegisType</code> for a<code>BigInteger</code>  *   * @author<a href="mailto:peter.royal@pobox.com">peter royal</a>  */
 end_comment
 
 begin_class
@@ -100,7 +100,7 @@ specifier|public
 class|class
 name|BigIntegerType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|public
 name|BigIntegerType

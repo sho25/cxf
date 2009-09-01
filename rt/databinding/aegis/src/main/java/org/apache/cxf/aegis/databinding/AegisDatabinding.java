@@ -189,7 +189,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -766,7 +766,7 @@ name|Map
 argument_list|<
 name|MessagePartInfo
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 name|part2Type
 decl_stmt|;
@@ -811,7 +811,7 @@ name|HashMap
 argument_list|<
 name|MessagePartInfo
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -1607,14 +1607,14 @@ argument_list|)
 expr_stmt|;
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 init|=
 operator|new
 name|HashSet
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -1690,7 +1690,7 @@ block|}
 block|}
 name|Collection
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|additional
 init|=
@@ -1708,7 +1708,7 @@ condition|)
 block|{
 for|for
 control|(
-name|Type
+name|AegisType
 name|t
 range|:
 name|additional
@@ -1821,7 +1821,7 @@ name|opInfo
 parameter_list|,
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 parameter_list|)
@@ -2027,7 +2027,7 @@ name|partType
 parameter_list|,
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 parameter_list|)
@@ -2072,7 +2072,7 @@ operator|.
 name|next
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|getParameterType
@@ -2408,17 +2408,17 @@ name|addDependencies
 parameter_list|(
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|typeDeps
 init|=
@@ -2436,7 +2436,7 @@ condition|)
 block|{
 for|for
 control|(
-name|Type
+name|AegisType
 name|t
 range|:
 name|typeDeps
@@ -2480,7 +2480,7 @@ name|s
 parameter_list|,
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 parameter_list|)
@@ -2491,7 +2491,7 @@ name|String
 argument_list|,
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|>
 name|tns2Type
@@ -2503,14 +2503,14 @@ name|String
 argument_list|,
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|Type
+name|AegisType
 name|t
 range|:
 name|deps
@@ -2529,7 +2529,7 @@ argument_list|()
 decl_stmt|;
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|types
 init|=
@@ -2552,7 +2552,7 @@ operator|=
 operator|new
 name|HashSet
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -2652,7 +2652,7 @@ name|String
 argument_list|,
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|>
 name|entry
@@ -2906,7 +2906,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|Type
+name|AegisType
 name|t
 range|:
 name|entry
@@ -3205,7 +3205,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|tm
@@ -3248,7 +3248,7 @@ name|name
 return|;
 block|}
 specifier|private
-name|Type
+name|AegisType
 name|getParameterType
 parameter_list|(
 name|Service
@@ -3264,7 +3264,7 @@ name|int
 name|paramtype
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|tm
@@ -3725,7 +3725,7 @@ literal|null
 return|;
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|getType
 parameter_list|(
 name|MessagePartInfo
@@ -3760,7 +3760,7 @@ name|Entry
 argument_list|<
 name|MessagePartInfo
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 name|entry
 range|:
@@ -3796,7 +3796,7 @@ literal|null
 return|;
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|getTypeFromClass
 parameter_list|(
 name|Class
@@ -3808,7 +3808,7 @@ parameter_list|)
 block|{
 for|for
 control|(
-name|Type
+name|AegisType
 name|t
 range|:
 name|part2Type

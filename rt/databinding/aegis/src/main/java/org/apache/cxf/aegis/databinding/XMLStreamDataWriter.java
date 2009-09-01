@@ -135,7 +135,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -415,7 +415,7 @@ name|XMLStreamWriter
 name|output
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|databinding
@@ -504,7 +504,7 @@ name|type
 argument_list|)
 expr_stmt|;
 comment|/*           * We arrive here with a 'type' of the inner type if isWriteOuter is null.          * However, in that case, the original type is available.           */
-name|Type
+name|AegisType
 name|outerType
 init|=
 literal|null
@@ -524,7 +524,7 @@ name|getProperty
 argument_list|(
 literal|"org.apache.cxf.aegis.outerType"
 argument_list|,
-name|Type
+name|AegisType
 operator|.
 name|class
 argument_list|)

@@ -151,7 +151,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|DefaultTypeMapping
+name|AegisType
 import|;
 end_import
 
@@ -167,7 +167,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|DefaultTypeMapping
 import|;
 end_import
 
@@ -512,7 +512,7 @@ init|=
 name|getContext
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping
@@ -711,7 +711,7 @@ init|=
 name|getContext
 argument_list|()
 decl_stmt|;
-comment|// get Type based on the element qname
+comment|// get AegisType based on the element qname
 name|MessageReader
 name|reader
 init|=
@@ -720,7 +720,7 @@ operator|.
 name|getNextElementReader
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|this
@@ -818,7 +818,7 @@ name|Object
 name|instance
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping
@@ -915,7 +915,7 @@ init|=
 name|getContext
 argument_list|()
 decl_stmt|;
-comment|// get Type based on the object instance
+comment|// get AegisType based on the object instance
 name|assertNotNull
 argument_list|(
 literal|"type is null"
@@ -995,7 +995,7 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping

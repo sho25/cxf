@@ -125,7 +125,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -637,7 +637,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Type
+name|AegisType
 name|createCollectionType
 parameter_list|(
 name|TypeClassInfo
@@ -689,7 +689,7 @@ return|;
 block|}
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateGenericType
 parameter_list|(
 name|TypeClassInfo
@@ -709,7 +709,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateMapKeyType
 parameter_list|(
 name|TypeClassInfo
@@ -729,7 +729,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateMapValueType
 parameter_list|(
 name|TypeClassInfo
@@ -749,7 +749,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateParameterizedType
 parameter_list|(
 name|Object
@@ -849,7 +849,7 @@ argument_list|(
 name|component
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|createTypeForClass
@@ -1118,7 +1118,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Type
+name|AegisType
 name|createDefaultType
 parameter_list|(
 name|TypeClassInfo
@@ -1269,7 +1269,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Type
+name|AegisType
 name|createEnumType
 parameter_list|(
 name|TypeClassInfo

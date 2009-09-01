@@ -191,7 +191,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -3625,7 +3625,7 @@ argument_list|,
 literal|"data"
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|dataType
 init|=
 name|type

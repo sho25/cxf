@@ -147,7 +147,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -322,7 +322,7 @@ specifier|public
 class|class
 name|ArrayType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 specifier|static
@@ -518,7 +518,7 @@ name|flatElementName
 argument_list|)
 condition|)
 block|{
-name|Type
+name|AegisType
 name|compType
 init|=
 name|TypeUtil
@@ -580,7 +580,7 @@ operator|.
 name|getNextElementReader
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|compType
 init|=
 name|TypeUtil
@@ -660,7 +660,7 @@ parameter_list|,
 name|MessageReader
 name|creader
 parameter_list|,
-name|Type
+name|AegisType
 name|compType
 parameter_list|)
 block|{
@@ -1441,7 +1441,7 @@ condition|)
 block|{
 return|return;
 block|}
-name|Type
+name|AegisType
 name|type
 init|=
 name|getComponentType
@@ -2226,7 +2226,7 @@ parameter_list|,
 name|Context
 name|context
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|,
 name|String
@@ -2413,7 +2413,7 @@ argument_list|(
 name|seq
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|componentType
 init|=
 name|getComponentType
@@ -2516,7 +2516,7 @@ operator|!=
 literal|null
 return|;
 block|}
-comment|/**      * We need to write a complex type schema for Beans, so return true.      *       * @see org.apache.cxf.aegis.type.Type#isComplex()      */
+comment|/**      * We need to write a complex type schema for Beans, so return true.      *       * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
 annotation|@
 name|Override
 specifier|public
@@ -2552,27 +2552,27 @@ operator|=
 name|componentName
 expr_stmt|;
 block|}
-comment|/**      * @see org.apache.cxf.aegis.type.Type#getDependencies()      */
+comment|/**      * @see org.apache.cxf.aegis.type.AegisType#getDependencies()      */
 annotation|@
 name|Override
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()
 block|{
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 init|=
 operator|new
 name|HashSet
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -2588,9 +2588,9 @@ return|return
 name|deps
 return|;
 block|}
-comment|/**      * Get the<code>Type</code> of the elements in the array.      *       * @return      */
+comment|/**      * Get the<code>AegisType</code> of the elements in the array.      *       * @return      */
 specifier|public
-name|Type
+name|AegisType
 name|getComponentType
 parameter_list|()
 block|{
@@ -2603,7 +2603,7 @@ operator|.
 name|getComponentType
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 decl_stmt|;
 if|if

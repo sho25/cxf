@@ -67,7 +67,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -436,7 +436,7 @@ literal|"type"
 argument_list|,
 name|element
 argument_list|,
-name|Type
+name|AegisType
 operator|.
 name|class
 argument_list|,
@@ -522,7 +522,7 @@ name|method
 argument_list|,
 name|index
 argument_list|,
-name|Type
+name|AegisType
 operator|.
 name|class
 argument_list|,
@@ -557,7 +557,7 @@ literal|"type"
 argument_list|,
 name|element
 argument_list|,
-name|Type
+name|AegisType
 operator|.
 name|class
 argument_list|,
@@ -676,7 +676,7 @@ name|method
 argument_list|,
 name|index
 argument_list|,
-name|Type
+name|AegisType
 operator|.
 name|class
 argument_list|,

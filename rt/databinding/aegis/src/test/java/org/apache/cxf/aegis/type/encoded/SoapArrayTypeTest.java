@@ -77,7 +77,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -2376,7 +2376,7 @@ name|QName
 name|schemaType
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|mapping

@@ -69,7 +69,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -124,7 +124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Type for the Calendar class.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * AegisType for the Calendar class.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
 end_comment
 
 begin_class
@@ -132,7 +132,7 @@ specifier|public
 class|class
 name|CalendarType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 specifier|static

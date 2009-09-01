@@ -210,7 +210,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Type
+name|AegisType
 name|createCollectionType
 parameter_list|(
 name|TypeClassInfo
@@ -260,7 +260,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Type
+name|AegisType
 name|createDefaultType
 parameter_list|(
 name|TypeClassInfo
@@ -351,7 +351,7 @@ name|type
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateMapKeyType
 parameter_list|(
 name|TypeClassInfo
@@ -364,7 +364,7 @@ argument_list|()
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateMapValueType
 parameter_list|(
 name|TypeClassInfo

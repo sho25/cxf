@@ -101,7 +101,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -240,7 +240,7 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|part
@@ -249,7 +249,7 @@ name|getProperty
 argument_list|(
 literal|"org.apache.cxf.aegis.outerType"
 argument_list|,
-name|Type
+name|AegisType
 operator|.
 name|class
 argument_list|)

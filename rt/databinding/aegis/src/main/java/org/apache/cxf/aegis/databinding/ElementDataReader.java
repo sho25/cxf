@@ -89,7 +89,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -244,7 +244,7 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|databinding

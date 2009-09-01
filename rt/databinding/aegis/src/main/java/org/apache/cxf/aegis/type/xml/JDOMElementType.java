@@ -83,7 +83,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -228,7 +228,7 @@ specifier|public
 class|class
 name|JDOMElementType
 extends|extends
-name|Type
+name|AegisType
 block|{
 comment|// private static final StaxBuilder builder = new StaxBuilder();
 specifier|private

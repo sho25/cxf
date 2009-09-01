@@ -233,7 +233,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|DefaultTypeMapping
+name|AegisType
 import|;
 end_import
 
@@ -249,7 +249,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|DefaultTypeMapping
 import|;
 end_import
 
@@ -509,7 +509,7 @@ literal|0
 index|]
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|creator
@@ -632,7 +632,7 @@ literal|0
 index|]
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|creator
@@ -788,7 +788,7 @@ index|[
 literal|0
 index|]
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|creator
@@ -887,7 +887,7 @@ argument_list|(
 name|creator
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|dto
 init|=
 name|creator
@@ -907,11 +907,11 @@ operator|.
 name|getDependencies
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 operator|(
-name|Type
+name|AegisType
 operator|)
 name|deps
 operator|.
@@ -953,7 +953,7 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|comType
 init|=
 name|colType
@@ -1013,7 +1013,7 @@ argument_list|(
 name|creator
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|dto
 init|=
 name|creator
@@ -1041,11 +1041,11 @@ name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 operator|(
-name|Type
+name|AegisType
 operator|)
 name|deps
 operator|.
@@ -1087,7 +1087,7 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Type
+name|AegisType
 name|comType
 init|=
 name|colType
@@ -1497,7 +1497,7 @@ name|class
 block|}
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|creator
@@ -1531,7 +1531,7 @@ name|MapType
 operator|)
 name|type
 decl_stmt|;
-name|Type
+name|AegisType
 name|valueType
 init|=
 name|mapType

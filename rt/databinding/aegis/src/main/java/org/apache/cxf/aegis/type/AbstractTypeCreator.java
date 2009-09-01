@@ -484,7 +484,7 @@ name|info
 return|;
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|createTypeForClass
 parameter_list|(
 name|TypeClassInfo
@@ -499,7 +499,7 @@ operator|.
 name|getTypeClass
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|result
 init|=
 literal|null
@@ -614,7 +614,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|getTypeMapping
@@ -736,7 +736,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createHolderType
 parameter_list|(
 name|TypeClassInfo
@@ -815,7 +815,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createUserType
 parameter_list|(
 name|TypeClassInfo
@@ -824,11 +824,11 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 operator|(
-name|Type
+name|AegisType
 operator|)
 name|info
 operator|.
@@ -989,7 +989,7 @@ throw|;
 block|}
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createArrayType
 parameter_list|(
 name|TypeClassInfo
@@ -1175,14 +1175,14 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createCollectionTypeFromGeneric
 parameter_list|(
 name|TypeClassInfo
 name|info
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|component
 init|=
 name|getOrCreateGenericType
@@ -1308,7 +1308,7 @@ name|type
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateGenericType
 parameter_list|(
 name|TypeClassInfo
@@ -1321,7 +1321,7 @@ argument_list|()
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateMapKeyType
 parameter_list|(
 name|TypeClassInfo
@@ -1338,7 +1338,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createObjectType
 parameter_list|()
 block|{
@@ -1380,7 +1380,7 @@ name|type
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|getOrCreateMapValueType
 parameter_list|(
 name|TypeClassInfo
@@ -1397,16 +1397,16 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createMapType
 parameter_list|(
 name|TypeClassInfo
 name|info
 parameter_list|,
-name|Type
+name|AegisType
 name|keyType
 parameter_list|,
-name|Type
+name|AegisType
 name|valueType
 parameter_list|)
 block|{
@@ -1458,14 +1458,14 @@ name|type
 return|;
 block|}
 specifier|protected
-name|Type
+name|AegisType
 name|createMapType
 parameter_list|(
 name|TypeClassInfo
 name|info
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|keyType
 init|=
 name|getOrCreateMapKeyType
@@ -1473,7 +1473,7 @@ argument_list|(
 name|info
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|valueType
 init|=
 name|getOrCreateMapValueType
@@ -1499,10 +1499,10 @@ parameter_list|(
 name|TypeClassInfo
 name|info
 parameter_list|,
-name|Type
+name|AegisType
 name|keyType
 parameter_list|,
-name|Type
+name|AegisType
 name|valueType
 parameter_list|)
 block|{
@@ -1584,7 +1584,7 @@ literal|false
 return|;
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|createEnumType
 parameter_list|(
 name|TypeClassInfo
@@ -1597,7 +1597,7 @@ return|;
 block|}
 specifier|public
 specifier|abstract
-name|Type
+name|AegisType
 name|createCollectionType
 parameter_list|(
 name|TypeClassInfo
@@ -1606,7 +1606,7 @@ parameter_list|)
 function_decl|;
 specifier|public
 specifier|abstract
-name|Type
+name|AegisType
 name|createDefaultType
 parameter_list|(
 name|TypeClassInfo
@@ -1620,7 +1620,7 @@ parameter_list|(
 name|TypeClassInfo
 name|info
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -1807,9 +1807,9 @@ name|int
 name|index
 parameter_list|)
 function_decl|;
-comment|/**      * Create a Type for a Method parameter.      *       * @param m the method to create a type for      * @param index The parameter index. If the index is less than zero, the      *            return type is used.      */
+comment|/**      * Create a AegisType for a Method parameter.      *       * @param m the method to create a type for      * @param index The parameter index. If the index is less than zero, the      *            return type is used.      */
 specifier|public
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|Method
@@ -1898,7 +1898,7 @@ return|;
 block|}
 comment|/**      * Create type information for a PropertyDescriptor.      *       * @param pd the propertydescriptor      */
 specifier|public
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|PropertyDescriptor
@@ -1934,7 +1934,7 @@ return|;
 block|}
 comment|/**      * Create type information for a<code>Field</code>.      *       * @param f the field to create a type from      */
 specifier|public
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|Field
@@ -1977,7 +1977,7 @@ return|;
 block|}
 comment|/**      * Create an Aegis type from a reflected type description.      * This will only work for the restricted set of collection      * types supported by Aegis.       * @param t the reflected type.      * @return the type      */
 specifier|public
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|java
@@ -2091,7 +2091,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|Type
+name|AegisType
 name|createType
 parameter_list|(
 name|Class

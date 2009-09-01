@@ -79,7 +79,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -106,7 +106,7 @@ name|Class
 name|type
 parameter_list|()
 default|default
-name|Type
+name|AegisType
 operator|.
 name|class
 function_decl|;

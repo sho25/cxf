@@ -39,7 +39,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -138,7 +138,7 @@ parameter_list|(
 name|Element
 name|input
 parameter_list|,
-name|Type
+name|AegisType
 name|desiredType
 parameter_list|)
 throws|throws

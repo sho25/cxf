@@ -472,6 +472,7 @@ name|genericType
 argument_list|)
 decl_stmt|;
 comment|// we need special cases for collection types.
+comment|// until we clean up mapping management.
 name|org
 operator|.
 name|apache
@@ -482,7 +483,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 name|aegisType
 init|=
 name|TypeUtil

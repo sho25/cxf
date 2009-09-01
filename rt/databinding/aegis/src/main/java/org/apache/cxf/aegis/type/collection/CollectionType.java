@@ -169,7 +169,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -231,13 +231,13 @@ extends|extends
 name|ArrayType
 block|{
 specifier|private
-name|Type
+name|AegisType
 name|componentType
 decl_stmt|;
 specifier|public
 name|CollectionType
 parameter_list|(
-name|Type
+name|AegisType
 name|componentType
 parameter_list|)
 block|{
@@ -539,7 +539,7 @@ name|Collection
 operator|)
 name|object
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|getComponentType
@@ -658,7 +658,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|Type
+name|AegisType
 name|getComponentType
 parameter_list|()
 block|{

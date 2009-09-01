@@ -167,7 +167,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -249,7 +249,7 @@ name|Map
 argument_list|<
 name|QName
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 name|mappedName2type
 init|=
@@ -258,7 +258,7 @@ name|HashMap
 argument_list|<
 name|QName
 argument_list|,
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -339,14 +339,14 @@ name|qualifyElements
 init|=
 literal|true
 decl_stmt|;
-comment|/**      * extensibleElements means adding xs:any to WSDL Complex Type Definition      */
+comment|/**      * extensibleElements means adding xs:any to WSDL Complex AegisType Definition      */
 specifier|private
 name|boolean
 name|extensibleElements
 init|=
 literal|true
 decl_stmt|;
-comment|/**      * extensibleAttributes means adding xs:anyAttribute to WSDL Complex Type      * Definition      */
+comment|/**      * extensibleAttributes means adding xs:anyAttribute to WSDL Complex AegisType      * Definition      */
 specifier|private
 name|boolean
 name|extensibleAttributes
@@ -686,7 +686,7 @@ return|;
 block|}
 comment|/**      * Get the type class for the field with the specified QName.      */
 specifier|public
-name|Type
+name|AegisType
 name|getType
 parameter_list|(
 name|QName
@@ -694,7 +694,7 @@ name|name
 parameter_list|)
 block|{
 comment|// 1. Try a prexisting mapped type
-name|Type
+name|AegisType
 name|type
 init|=
 name|mappedName2type
@@ -935,7 +935,7 @@ parameter_list|(
 name|QName
 name|name
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 block|{
@@ -1683,7 +1683,7 @@ name|QName
 name|name
 parameter_list|)
 block|{
-name|Type
+name|AegisType
 name|type
 init|=
 name|getType

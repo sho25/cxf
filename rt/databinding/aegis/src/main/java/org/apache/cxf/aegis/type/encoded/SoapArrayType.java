@@ -155,7 +155,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -328,7 +328,7 @@ specifier|public
 class|class
 name|SoapArrayType
 extends|extends
-name|Type
+name|AegisType
 block|{
 specifier|private
 specifier|static
@@ -824,7 +824,7 @@ literal|null
 expr_stmt|;
 block|}
 comment|// nested element names can specify a type
-name|Type
+name|AegisType
 name|compType
 init|=
 name|getTypeMapping
@@ -1704,7 +1704,7 @@ block|{
 return|return;
 block|}
 comment|// ComponentType
-name|Type
+name|AegisType
 name|type
 init|=
 name|getComponentType
@@ -1885,7 +1885,7 @@ parameter_list|,
 name|Context
 name|context
 parameter_list|,
-name|Type
+name|AegisType
 name|type
 parameter_list|)
 throws|throws
@@ -2020,7 +2020,7 @@ name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
-comment|/**      * We need to write a complex type schema for Beans, so return true.      *      * @see org.apache.cxf.aegis.type.Type#isComplex()      */
+comment|/**      * We need to write a complex type schema for Beans, so return true.      *      * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
 annotation|@
 name|Override
 specifier|public
@@ -2063,21 +2063,21 @@ name|Override
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()
 block|{
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|deps
 init|=
 operator|new
 name|HashSet
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -2093,9 +2093,9 @@ return|return
 name|deps
 return|;
 block|}
-comment|/**      * Get the<code>Type</code> of the elements in the array.  This is only used for writing an array.      * When reading the type is solely determined by the required arrayType soap attribute.      */
+comment|/**      * Get the<code>AegisType</code> of the elements in the array.  This is only used for writing an array.      * When reading the type is solely determined by the required arrayType soap attribute.      */
 specifier|public
-name|Type
+name|AegisType
 name|getComponentType
 parameter_list|()
 block|{
@@ -2108,7 +2108,7 @@ operator|.
 name|getComponentType
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 decl_stmt|;
 if|if
@@ -2202,7 +2202,7 @@ name|QName
 name|getRootType
 parameter_list|()
 block|{
-name|Type
+name|AegisType
 name|componentType
 init|=
 name|getComponentType

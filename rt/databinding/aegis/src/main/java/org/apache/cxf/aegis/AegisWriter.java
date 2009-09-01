@@ -39,7 +39,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -73,8 +73,36 @@ parameter_list|,
 name|SinkT
 name|output
 parameter_list|,
-name|Type
+name|AegisType
 name|aegisType
+parameter_list|)
+throws|throws
+name|Exception
+function_decl|;
+comment|/**      * Write an object to the sink, providing a {@link java.lang.reflect.Type} to specify      * its type.      * @param obj the object      * @param elementName XML element name      * @param optional true if null maps to no output at all.      * @param output where to put it.      * @param objectType A description of the type of the object.      * @throws Exception      */
+name|void
+name|write
+parameter_list|(
+name|Object
+name|obj
+parameter_list|,
+name|QName
+name|elementName
+parameter_list|,
+name|boolean
+name|optional
+parameter_list|,
+name|SinkT
+name|output
+parameter_list|,
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+name|objectType
 parameter_list|)
 throws|throws
 name|Exception

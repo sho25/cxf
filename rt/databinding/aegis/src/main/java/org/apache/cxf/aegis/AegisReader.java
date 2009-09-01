@@ -27,7 +27,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -62,7 +62,7 @@ parameter_list|(
 name|ReaderT
 name|reader
 parameter_list|,
-name|Type
+name|AegisType
 name|desiredType
 parameter_list|)
 throws|throws

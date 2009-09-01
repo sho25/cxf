@@ -127,7 +127,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -338,7 +338,7 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|Type
+name|AegisType
 name|defaultType
 init|=
 name|inf
@@ -348,7 +348,7 @@ argument_list|(
 name|name
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|type
 init|=
 name|TypeUtil
@@ -453,13 +453,13 @@ name|Override
 specifier|public
 name|Set
 argument_list|<
-name|Type
+name|AegisType
 argument_list|>
 name|getDependencies
 parameter_list|()
 block|{
 comment|// The string type is provided by aegis, so it should always be there.
-name|Type
+name|AegisType
 name|stringType
 init|=
 name|getTypeMapping

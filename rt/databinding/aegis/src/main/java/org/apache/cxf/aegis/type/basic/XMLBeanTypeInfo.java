@@ -131,7 +131,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Type
+name|AegisType
 import|;
 end_import
 
@@ -599,11 +599,11 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|Type
+name|AegisType
 name|customTypeObject
 init|=
 operator|(
-name|Type
+name|AegisType
 operator|)
 name|typeClass
 operator|.
