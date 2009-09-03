@@ -143,6 +143,20 @@ name|MavenProject
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|maven
+operator|.
+name|project
+operator|.
+name|MavenProjectHelper
+import|;
+end_import
+
 begin_comment
 comment|/**  * @goal java2ws  * @description CXF Java To Webservice Tool  */
 end_comment
@@ -204,6 +218,11 @@ specifier|private
 name|MavenProject
 name|project
 decl_stmt|;
+comment|/**      * Maven ProjectHelper.      *       * @component      * @readonly      */
+specifier|private
+name|MavenProjectHelper
+name|projectHelper
+decl_stmt|;
 comment|/**      * @parameter      */
 specifier|private
 name|String
@@ -238,6 +257,11 @@ comment|/**      * @parameter default-value="false"      */
 specifier|private
 name|Boolean
 name|genWrapperbean
+decl_stmt|;
+comment|/**      * Attach the generated wsdl file to the list of files to be deployed      * on install. This means the wsdl file will be copied to the repository      * with groupId, artifactId and version of the project and type "wsdl".      *       * With this option you can use the maven repository as a Service Repository.      *       * @parameter default-value="false"      */
+specifier|private
+name|Boolean
+name|attachWsdl
 decl_stmt|;
 specifier|public
 name|void
@@ -808,6 +832,38 @@ argument_list|,
 name|e
 argument_list|)
 throw|;
+block|}
+comment|// Attach the generated wsdl file to the artifacts that get deployed
+comment|// with the enclosing project
+if|if
+condition|(
+name|attachWsdl
+operator|&&
+name|outputFile
+operator|!=
+literal|null
+condition|)
+block|{
+name|File
+name|wsdlFile
+init|=
+operator|new
+name|File
+argument_list|(
+name|outputFile
+argument_list|)
+decl_stmt|;
+name|projectHelper
+operator|.
+name|attachArtifact
+argument_list|(
+name|project
+argument_list|,
+literal|"wsdl"
+argument_list|,
+name|wsdlFile
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 block|}
