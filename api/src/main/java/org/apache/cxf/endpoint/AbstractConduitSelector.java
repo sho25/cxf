@@ -258,6 +258,7 @@ expr_stmt|;
 block|}
 comment|/**      * Mechanics to actually get the Conduit from the ConduitInitiator      * if necessary.      *       * @param message the current Message      */
 specifier|protected
+specifier|synchronized
 name|Conduit
 name|getSelectedConduit
 parameter_list|(
