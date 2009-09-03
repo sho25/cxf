@@ -4263,6 +4263,17 @@ argument_list|,
 name|method
 argument_list|)
 expr_stmt|;
+name|sendEvent
+argument_list|(
+name|Event
+operator|.
+name|INTERFACE_OPERATION_BOUND
+argument_list|,
+name|o
+argument_list|,
+name|method
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -4283,17 +4294,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|sendEvent
-argument_list|(
-name|Event
-operator|.
-name|INTERFACE_OPERATION_BOUND
-argument_list|,
-name|o
-argument_list|,
-name|method
-argument_list|)
-expr_stmt|;
 block|}
 comment|/**      * set the holder generic type info into message part info      *      * @param o      * @param method      */
 specifier|protected
