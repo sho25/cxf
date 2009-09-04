@@ -53,6 +53,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -62,10 +74,6 @@ operator|.
 name|QName
 import|;
 end_import
-
-begin_comment
-comment|/**  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
-end_comment
 
 begin_interface
 specifier|public
@@ -103,12 +111,6 @@ function_decl|;
 name|AegisType
 name|createType
 parameter_list|(
-name|java
-operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
 name|Type
 name|type
 parameter_list|)
@@ -118,13 +120,6 @@ name|createType
 parameter_list|(
 name|Field
 name|f
-parameter_list|)
-function_decl|;
-name|AegisType
-name|createType
-parameter_list|(
-name|Class
-name|clazz
 parameter_list|)
 function_decl|;
 name|TypeCreator
@@ -156,15 +151,12 @@ name|int
 name|index
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve the class info for a class. Needed to get parameters right.      * @param itemClass      * @return info      */
+comment|/**      * Create class info for a Type.      * @param itemType      * @return info      */
 name|TypeClassInfo
 name|createBasicClassInfo
 parameter_list|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-name|itemClass
+name|Type
+name|itemType
 parameter_list|)
 function_decl|;
 comment|/**      * Turn a TypeClassInfo into a type.      * @param info      * @return      */

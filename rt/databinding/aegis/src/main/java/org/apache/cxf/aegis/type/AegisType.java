@@ -268,32 +268,20 @@ operator|=
 name|typeMapping
 expr_stmt|;
 block|}
-comment|/**      * @return Returns the java type as a Class. If the type is not a       * plain class, return null.      */
+comment|/**      * @return Returns the java type as a Class.       * For a generic, return the raw type. For something      * truly exotic, return null.      */
 specifier|public
 name|Class
 name|getTypeClass
 parameter_list|()
 block|{
-if|if
-condition|(
-name|typeClass
-operator|instanceof
-name|Class
-condition|)
-block|{
 return|return
-operator|(
-name|Class
-operator|)
+name|TypeUtil
+operator|.
+name|getTypeRelatedClass
+argument_list|(
 name|typeClass
+argument_list|)
 return|;
-block|}
-else|else
-block|{
-return|return
-literal|null
-return|;
-block|}
 block|}
 comment|/**      * @return Return the Java type.      */
 specifier|public

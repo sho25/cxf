@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -30,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Object to carry information for a aegisTypeClass, such as that from an XML mapping file.  *   * Note that this class has a misleading name. It is used both for   * aegisTypeClass information that corresponds to a aegisTypeClass, and also for parameters   * of methods and elements of beans. When describing a top-level aegisTypeClass,  * minOccurs and maxOccurs are not meaningful. Nillable is only used for  * parameters. It might be that the code could be deconfused by  * using the nillable property in here for the non-parameters cases  * that look at minOccurs and maxOccurs.  *   * Historically, the code for dealing with nillable was very confused,  * and so the support here is a bit ginger, until someone figures out how  * to sort things out. Thus the three-valued support instead  * of a plain boolean.  */
+comment|/**  * Object to carry information for an Aegis type,   * such as that from an XML mapping file.  *   * Note that this class has a misleading name. It is used both for   * type information that corresponds to a type, and also for parameters   * of methods and elements of beans. When describing a top-level type,  * minOccurs and maxOccurs are not meaningful. Aegis does not have a  * very clear model of a 'type', in the sense of an AegisType object  * corresponding to some particular XML Schema type, in isolation  * from the mapping system.   *   * Historically, Aegis talked about Java types as Class. However,   * we want to be able to keep track, distinctly, of un-erased  * generics. That requires java.lang.reflect.Type.  *   *  Nillable is only used for parameters.  *   *  It might be that the code could be deconfused by  * using the nillable property in here for the non-parameters cases  * that look at minOccurs and maxOccurs.  *   * Historically, the code for dealing with nillable was very confused,  * and so the support here is a bit ginger, until someone figures out how  * to sort things out. Thus the three-valued support instead  * of a plain boolean.  */
 end_comment
 
 begin_class
@@ -38,35 +50,31 @@ specifier|public
 class|class
 name|TypeClassInfo
 block|{
+comment|// The general reflection Type.
 specifier|private
-name|Class
-name|typeClass
+name|Type
+name|type
 decl_stmt|;
 specifier|private
 name|Object
 index|[]
 name|annotations
 decl_stmt|;
-comment|// Object because it can be either a TypeClassInfo or a
-comment|// java.lang.reflect.Type
+comment|// for collection types we pull out the parameters for convenience.
 specifier|private
-name|Object
-name|genericType
-decl_stmt|;
-comment|// ditto
-specifier|private
-name|Object
+name|Type
 name|keyType
 decl_stmt|;
-comment|// ditto
 specifier|private
-name|Object
+name|Type
 name|valueType
 decl_stmt|;
+comment|// Preferred element name.
 specifier|private
 name|QName
 name|mappedName
 decl_stmt|;
+comment|// XML schema name for the type.
 specifier|private
 name|QName
 name|typeName
@@ -100,7 +108,7 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
-comment|// not yet implemented
+comment|// Flat array.
 specifier|private
 name|boolean
 name|flat
@@ -179,31 +187,7 @@ name|annotations
 expr_stmt|;
 block|}
 specifier|public
-name|Object
-name|getGenericType
-parameter_list|()
-block|{
-return|return
-name|genericType
-return|;
-block|}
-specifier|public
-name|void
-name|setGenericType
-parameter_list|(
-name|Object
-name|genericType
-parameter_list|)
-block|{
-name|this
-operator|.
-name|genericType
-operator|=
-name|genericType
-expr_stmt|;
-block|}
-specifier|public
-name|Object
+name|Type
 name|getKeyType
 parameter_list|()
 block|{
@@ -215,7 +199,7 @@ specifier|public
 name|void
 name|setKeyType
 parameter_list|(
-name|Object
+name|Type
 name|keyType
 parameter_list|)
 block|{
@@ -227,27 +211,27 @@ name|keyType
 expr_stmt|;
 block|}
 specifier|public
-name|Class
-name|getTypeClass
+name|Type
+name|getType
 parameter_list|()
 block|{
 return|return
-name|typeClass
+name|type
 return|;
 block|}
 specifier|public
 name|void
-name|setTypeClass
+name|setType
 parameter_list|(
-name|Class
-name|typeClass
+name|Type
+name|type
 parameter_list|)
 block|{
 name|this
 operator|.
-name|typeClass
+name|type
 operator|=
-name|typeClass
+name|type
 expr_stmt|;
 block|}
 specifier|public
@@ -419,7 +403,7 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|Object
+name|Type
 name|getValueType
 parameter_list|()
 block|{
@@ -431,7 +415,7 @@ specifier|public
 name|void
 name|setValueType
 parameter_list|(
-name|Object
+name|Type
 name|valueType
 parameter_list|)
 block|{
