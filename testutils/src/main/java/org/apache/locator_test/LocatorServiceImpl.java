@@ -384,10 +384,6 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|java
-operator|.
-name|util
-operator|.
 name|List
 argument_list|<
 name|Endpoint
