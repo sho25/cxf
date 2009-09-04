@@ -29,10 +29,6 @@ name|Map
 import|;
 end_import
 
-begin_comment
-comment|/**  *<br/>  *   * @author xfournet  */
-end_comment
-
 begin_interface
 specifier|public
 interface|interface
@@ -79,6 +75,13 @@ name|echoMap
 parameter_list|(
 name|Map
 name|beans
+parameter_list|)
+function_decl|;
+name|Map
+name|echoRawMap
+parameter_list|(
+name|Map
+name|rawMap
 parameter_list|)
 function_decl|;
 name|void

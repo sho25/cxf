@@ -593,6 +593,18 @@ argument_list|)
 throw|;
 block|}
 block|}
+specifier|public
+name|Map
+name|echoRawMap
+parameter_list|(
+name|Map
+name|rawMap
+parameter_list|)
+block|{
+return|return
+name|rawMap
+return|;
+block|}
 block|}
 end_class
 

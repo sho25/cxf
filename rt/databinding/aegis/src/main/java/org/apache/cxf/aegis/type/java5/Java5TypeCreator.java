@@ -1042,17 +1042,9 @@ block|}
 block|}
 else|else
 block|{
-throw|throw
-operator|new
-name|DatabindingException
-argument_list|(
-literal|"Type "
-operator|+
-name|genericType
-operator|+
-literal|" is not a generic."
-argument_list|)
-throw|;
+return|return
+literal|null
+return|;
 block|}
 block|}
 annotation|@
