@@ -258,7 +258,7 @@ specifier|private
 name|Boolean
 name|genWrapperbean
 decl_stmt|;
-comment|/**      * Attach the generated wsdl file to the list of files to be deployed      * on install. This means the wsdl file will be copied to the repository      * with groupId, artifactId and version of the project and type "wsdl".      *       * With this option you can use the maven repository as a Service Repository.      *       * @parameter default-value="false"      */
+comment|/**      * Attach the generated wsdl file to the list of files to be deployed      * on install. This means the wsdl file will be copied to the repository      * with groupId, artifactId and version of the project and type "wsdl".      *       * With this option you can use the maven repository as a Service Repository.      *       * @parameter default-value="true"      */
 specifier|private
 name|Boolean
 name|attachWsdl
