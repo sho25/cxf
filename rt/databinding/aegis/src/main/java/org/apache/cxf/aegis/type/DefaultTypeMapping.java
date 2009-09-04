@@ -21,6 +21,18 @@ begin_import
 import|import
 name|java
 operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|math
 operator|.
 name|BigDecimal
@@ -782,7 +794,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Contains type mappings for java/qname pairs.  */
+comment|/**  * The implementation of the Aegis type map. It maintains a map from  * Java types {@link java.lang.reflect.Type} and AegisType objects,  * also indexed by the XML Schema QName of each type.  */
 end_comment
 
 begin_class
@@ -818,7 +830,7 @@ decl_stmt|;
 specifier|private
 name|Map
 argument_list|<
-name|Class
+name|Type
 argument_list|,
 name|AegisType
 argument_list|>
@@ -836,7 +848,7 @@ decl_stmt|;
 specifier|private
 name|Map
 argument_list|<
-name|Class
+name|Type
 argument_list|,
 name|QName
 argument_list|>
@@ -908,7 +920,7 @@ argument_list|(
 operator|new
 name|HashMap
 argument_list|<
-name|Class
+name|Type
 argument_list|,
 name|AegisType
 argument_list|>
@@ -924,7 +936,7 @@ argument_list|(
 operator|new
 name|HashMap
 argument_list|<
-name|Class
+name|Type
 argument_list|,
 name|QName
 argument_list|>
@@ -952,7 +964,7 @@ specifier|public
 name|boolean
 name|isRegistered
 parameter_list|(
-name|Class
+name|Type
 name|javaType
 parameter_list|)
 block|{
@@ -1036,7 +1048,7 @@ specifier|public
 name|void
 name|register
 parameter_list|(
-name|Class
+name|Type
 name|javaType
 parameter_list|,
 name|QName
@@ -1246,12 +1258,11 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @see org.apache.cxf.aegis.type.TypeMapping#getType(java.lang.Class)      */
 specifier|public
 name|AegisType
 name|getType
 parameter_list|(
-name|Class
+name|Type
 name|javaType
 parameter_list|)
 block|{
@@ -1290,7 +1301,6 @@ return|return
 name|type
 return|;
 block|}
-comment|/**      * @see org.apache.cxf.aegis.type.TypeMapping#getType(javax.xml.namespace.QName)      */
 specifier|public
 name|AegisType
 name|getType
@@ -1334,12 +1344,11 @@ return|return
 name|type
 return|;
 block|}
-comment|/**      * @see org.apache.cxf.aegis.type.TypeMapping#getTypeQName(java.lang.Class)      */
 specifier|public
 name|QName
 name|getTypeQName
 parameter_list|(
-name|Class
+name|Type
 name|clazz
 parameter_list|)
 block|{

@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -30,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  * @since Feb 18, 2004  */
+comment|/**  * Abstraction for the map between Java types (represented as   * {@link java.lang.reflect.Type} and Aegis types.  */
 end_comment
 
 begin_interface
@@ -42,7 +54,7 @@ comment|/**      * Returns a flag indicating if this type mapping has a mapping 
 name|boolean
 name|isRegistered
 parameter_list|(
-name|Class
+name|Type
 name|javaType
 parameter_list|)
 function_decl|;
@@ -58,7 +70,7 @@ comment|/**      * Register a type, manually specifying the java class, the sche
 name|void
 name|register
 parameter_list|(
-name|Class
+name|Type
 name|javaType
 parameter_list|,
 name|QName
@@ -86,7 +98,7 @@ function_decl|;
 name|AegisType
 name|getType
 parameter_list|(
-name|Class
+name|Type
 name|javaType
 parameter_list|)
 function_decl|;
@@ -100,7 +112,7 @@ function_decl|;
 name|QName
 name|getTypeQName
 parameter_list|(
-name|Class
+name|Type
 name|clazz
 parameter_list|)
 function_decl|;

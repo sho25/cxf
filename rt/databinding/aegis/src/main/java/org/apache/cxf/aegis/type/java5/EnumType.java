@@ -21,6 +21,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -278,14 +290,46 @@ specifier|public
 name|void
 name|setTypeClass
 parameter_list|(
-name|Class
+name|Type
 name|typeClass
 parameter_list|)
 block|{
 if|if
 condition|(
 operator|!
+operator|(
 name|typeClass
+operator|instanceof
+name|Class
+operator|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|DatabindingException
+argument_list|(
+literal|"Aegis cannot map generic Enums."
+argument_list|)
+throw|;
+block|}
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|plainClass
+init|=
+operator|(
+name|Class
+argument_list|<
+name|?
+argument_list|>
+operator|)
+name|typeClass
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|plainClass
 operator|.
 name|isEnum
 argument_list|()
@@ -295,7 +339,7 @@ throw|throw
 operator|new
 name|DatabindingException
 argument_list|(
-literal|"AegisType class must be an enum."
+literal|"EnumType must map an enum."
 argument_list|)
 throw|;
 block|}
