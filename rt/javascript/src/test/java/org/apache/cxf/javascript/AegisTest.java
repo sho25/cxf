@@ -332,6 +332,12 @@ literal|null
 return|;
 block|}
 annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -435,6 +441,12 @@ return|return
 literal|null
 return|;
 block|}
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 annotation|@
 name|Test
 specifier|public
