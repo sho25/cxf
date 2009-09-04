@@ -513,7 +513,7 @@ if|if
 condition|(
 name|info
 operator|.
-name|getType
+name|getAegisTypeClass
 argument_list|()
 operator|!=
 literal|null
@@ -827,12 +827,9 @@ block|{
 name|AegisType
 name|type
 init|=
-operator|(
-name|AegisType
-operator|)
 name|info
 operator|.
-name|getType
+name|getAegisTypeClass
 argument_list|()
 operator|.
 name|newInstance
@@ -953,7 +950,7 @@ literal|"Couldn't instantiate type classs "
 operator|+
 name|info
 operator|.
-name|getType
+name|getAegisTypeClass
 argument_list|()
 operator|.
 name|getName
@@ -977,7 +974,7 @@ literal|"Couldn't access type classs "
 operator|+
 name|info
 operator|.
-name|getType
+name|getAegisTypeClass
 argument_list|()
 operator|.
 name|getName

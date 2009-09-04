@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Object to carry information for a type, such as that from an XML mapping file.  *   * Note that this class has a misleading name. It is used both for   * type information that corresponds to a type, and also for parameters   * of methods and elements of beans. When describing a top-level type,  * minOccurs and maxOccurs are not meaningful. Nillable is only used for  * parameters. It might be that the code could be deconfused by  * using the nillable property in here for the non-parameters cases  * that look at minOccurs and maxOccurs.  *   * Historically, the code for dealing with nillable was very confused,  * and so the support here is a bit ginger, until someone figures out how  * to sort things out. Thus the three-valued support instead  * of a plain boolean.  */
+comment|/**  * Object to carry information for a aegisTypeClass, such as that from an XML mapping file.  *   * Note that this class has a misleading name. It is used both for   * aegisTypeClass information that corresponds to a aegisTypeClass, and also for parameters   * of methods and elements of beans. When describing a top-level aegisTypeClass,  * minOccurs and maxOccurs are not meaningful. Nillable is only used for  * parameters. It might be that the code could be deconfused by  * using the nillable property in here for the non-parameters cases  * that look at minOccurs and maxOccurs.  *   * Historically, the code for dealing with nillable was very confused,  * and so the support here is a bit ginger, until someone figures out how  * to sort things out. Thus the three-valued support instead  * of a plain boolean.  */
 end_comment
 
 begin_class
@@ -71,9 +71,16 @@ specifier|private
 name|QName
 name|typeName
 decl_stmt|;
+comment|// a Class reference to the aegis aegisTypeClass, if the app has specified it
+comment|// via XML or via an annotation.
 specifier|private
 name|Class
-name|type
+argument_list|<
+name|?
+extends|extends
+name|AegisType
+argument_list|>
+name|aegisTypeClass
 decl_stmt|;
 specifier|private
 name|String
@@ -269,26 +276,36 @@ expr_stmt|;
 block|}
 specifier|public
 name|Class
-name|getType
+argument_list|<
+name|?
+extends|extends
+name|AegisType
+argument_list|>
+name|getAegisTypeClass
 parameter_list|()
 block|{
 return|return
-name|type
+name|aegisTypeClass
 return|;
 block|}
 specifier|public
 name|void
-name|setType
+name|setAegisTypeClass
 parameter_list|(
 name|Class
-name|type
+argument_list|<
+name|?
+extends|extends
+name|AegisType
+argument_list|>
+name|aegisTypeClass
 parameter_list|)
 block|{
 name|this
 operator|.
-name|type
+name|aegisTypeClass
 operator|=
-name|type
+name|aegisTypeClass
 expr_stmt|;
 block|}
 specifier|public
