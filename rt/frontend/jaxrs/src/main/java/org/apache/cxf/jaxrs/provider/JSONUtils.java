@@ -413,7 +413,7 @@ name|MappedNamespaceConvention
 name|convention
 init|=
 operator|new
-name|MappedNamespaceConvention
+name|PrefixRespectingMappedNamespaceConvention
 argument_list|(
 name|c
 argument_list|)

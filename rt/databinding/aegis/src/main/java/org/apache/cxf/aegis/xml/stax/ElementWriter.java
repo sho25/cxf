@@ -155,10 +155,6 @@ name|StringUtils
 import|;
 end_import
 
-begin_comment
-comment|/**  * LiteralWriter  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
-end_comment
-
 begin_class
 specifier|public
 class|class
@@ -671,6 +667,40 @@ name|QName
 name|qname
 parameter_list|)
 block|{
+comment|/*          * No one really wants xmlns= in their XML, prefixes are preferred.          * If the input qname has no prefix, go ahead and use the constructor that will          * generate one.          */
+if|if
+condition|(
+literal|""
+operator|.
+name|equals
+argument_list|(
+name|qname
+operator|.
+name|getPrefix
+argument_list|()
+argument_list|)
+condition|)
+block|{
+return|return
+operator|new
+name|ElementWriter
+argument_list|(
+name|writer
+argument_list|,
+name|qname
+operator|.
+name|getLocalPart
+argument_list|()
+argument_list|,
+name|qname
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|)
+return|;
+block|}
+else|else
+block|{
 return|return
 operator|new
 name|ElementWriter
@@ -693,6 +723,7 @@ name|getPrefix
 argument_list|()
 argument_list|)
 return|;
+block|}
 block|}
 specifier|public
 name|String

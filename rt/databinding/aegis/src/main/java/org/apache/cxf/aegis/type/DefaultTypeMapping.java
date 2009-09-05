@@ -1094,12 +1094,11 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-comment|/*          * -- prb@codehaus.org; changing this to only register the type for          * actions that it supports, and it could be none.          */
 if|if
 condition|(
 name|type
 operator|.
-name|getTypeClass
+name|getType
 argument_list|()
 operator|!=
 literal|null
@@ -1111,7 +1110,7 @@ name|put
 argument_list|(
 name|type
 operator|.
-name|getTypeClass
+name|getType
 argument_list|()
 argument_list|,
 name|type
@@ -1126,7 +1125,7 @@ name|put
 argument_list|(
 name|type
 operator|.
-name|getTypeClass
+name|getType
 argument_list|()
 argument_list|,
 name|type
@@ -1160,7 +1159,7 @@ if|if
 condition|(
 name|type
 operator|.
-name|getTypeClass
+name|getType
 argument_list|()
 operator|==
 literal|null
@@ -1242,7 +1241,7 @@ name|remove
 argument_list|(
 name|type
 operator|.
-name|getTypeClass
+name|getType
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1252,7 +1251,7 @@ name|remove
 argument_list|(
 name|type
 operator|.
-name|getTypeClass
+name|getType
 argument_list|()
 argument_list|)
 expr_stmt|;

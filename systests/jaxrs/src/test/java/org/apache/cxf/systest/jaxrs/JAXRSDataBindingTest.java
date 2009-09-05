@@ -265,6 +265,8 @@ argument_list|(
 name|BookDataBindingServer
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -326,6 +328,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+comment|//@org.junit.Ignore
 annotation|@
 name|Test
 specifier|public
@@ -350,6 +353,9 @@ name|singletonList
 argument_list|(
 operator|new
 name|AegisElementProvider
+argument_list|<
+name|Book
+argument_list|>
 argument_list|()
 argument_list|)
 argument_list|)
