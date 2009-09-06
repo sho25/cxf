@@ -283,11 +283,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
+name|testsuite
 operator|.
-name|jms
+name|testcase
 operator|.
-name|EmbeddedJMSBrokerLauncher
+name|TestCaseType
 import|;
 end_import
 
@@ -299,11 +299,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|testsuite
+name|testutil
 operator|.
-name|testcase
+name|common
 operator|.
-name|TestCaseType
+name|EmbeddedJMSBrokerLauncher
 import|;
 end_import
 

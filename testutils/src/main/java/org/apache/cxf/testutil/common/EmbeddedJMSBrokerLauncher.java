@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
+name|testutil
 operator|.
-name|jms
+name|common
 package|;
 end_package
 
@@ -54,22 +54,6 @@ operator|.
 name|memory
 operator|.
 name|MemoryPersistenceAdapter
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|testutil
-operator|.
-name|common
-operator|.
-name|AbstractBusTestServerBase
 import|;
 end_import
 
