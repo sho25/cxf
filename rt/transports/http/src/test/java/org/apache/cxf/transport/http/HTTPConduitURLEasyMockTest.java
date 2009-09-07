@@ -700,6 +700,15 @@ operator|new
 name|MessageImpl
 argument_list|()
 decl_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+literal|"Content-Type"
+argument_list|,
+literal|"text/xml;charset=utf8"
+argument_list|)
+expr_stmt|;
 name|setUpHeaders
 argument_list|(
 name|message
@@ -2767,7 +2776,7 @@ name|EasyMock
 operator|.
 name|eq
 argument_list|(
-literal|"content-type"
+literal|"Content-Type"
 argument_list|)
 argument_list|,
 name|EasyMock

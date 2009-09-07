@@ -241,6 +241,14 @@ specifier|final
 class|class
 name|AttachmentUtil
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|BODY_ATTACHMENT_ID
+init|=
+literal|"root.message@cxf.apache.org"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|volatile
@@ -479,7 +487,7 @@ block|}
 specifier|public
 specifier|static
 name|String
-name|getAttchmentPartHeader
+name|getAttachmentPartHeader
 parameter_list|(
 name|Attachment
 name|att

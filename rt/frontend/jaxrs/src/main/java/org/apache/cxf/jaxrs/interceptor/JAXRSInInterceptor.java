@@ -1225,6 +1225,17 @@ argument_list|,
 name|ori
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+name|URITemplate
+operator|.
+name|TEMPLATE_PARAMETERS
+argument_list|,
+name|values
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

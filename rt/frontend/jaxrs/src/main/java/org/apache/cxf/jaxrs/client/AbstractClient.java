@@ -1870,7 +1870,9 @@ block|{
 throw|throw
 operator|new
 name|WebApplicationException
-argument_list|()
+argument_list|(
+name|ex
+argument_list|)
 throw|;
 block|}
 block|}
@@ -2142,7 +2144,9 @@ block|{
 throw|throw
 operator|new
 name|WebApplicationException
-argument_list|()
+argument_list|(
+name|ex
+argument_list|)
 throw|;
 block|}
 block|}

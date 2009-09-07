@@ -1529,7 +1529,7 @@ operator|.
 name|getComponentType
 argument_list|()
 else|:
-literal|null
+name|cls
 return|;
 block|}
 name|ParameterizedType
