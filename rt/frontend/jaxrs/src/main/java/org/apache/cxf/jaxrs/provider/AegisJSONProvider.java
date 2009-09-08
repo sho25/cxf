@@ -347,6 +347,10 @@ name|boolean
 name|dropRootElement
 decl_stmt|;
 specifier|private
+name|boolean
+name|ignoreNamespaces
+decl_stmt|;
+specifier|private
 name|ConcurrentHashMap
 argument_list|<
 name|String
@@ -368,6 +372,21 @@ specifier|public
 name|AegisJSONProvider
 parameter_list|()
 block|{     }
+specifier|public
+name|void
+name|setIgnoreNamespaces
+parameter_list|(
+name|boolean
+name|ignoreNamespaces
+parameter_list|)
+block|{
+name|this
+operator|.
+name|ignoreNamespaces
+operator|=
+name|ignoreNamespaces
+expr_stmt|;
+block|}
 specifier|public
 name|void
 name|setDropRootElement
@@ -716,6 +735,9 @@ argument_list|,
 name|typeQName
 argument_list|,
 name|writeXsiType
+operator|&&
+operator|!
+name|ignoreNamespaces
 argument_list|,
 name|namespaceMap
 argument_list|,
@@ -727,7 +749,14 @@ name|dropRootElement
 argument_list|)
 decl_stmt|;
 return|return
+name|JSONUtils
+operator|.
+name|createIgnoreNsWriterIfNeeded
+argument_list|(
 name|writer
+argument_list|,
+name|ignoreNamespaces
+argument_list|)
 return|;
 block|}
 annotation|@

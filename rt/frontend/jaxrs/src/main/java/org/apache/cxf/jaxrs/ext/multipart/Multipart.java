@@ -100,7 +100,7 @@ name|String
 name|value
 parameter_list|()
 default|default
-literal|"root"
+literal|""
 function_decl|;
 name|String
 name|type

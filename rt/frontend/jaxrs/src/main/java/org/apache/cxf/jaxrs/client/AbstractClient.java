@@ -1725,7 +1725,7 @@ name|Object
 name|o
 parameter_list|,
 name|Message
-name|m
+name|outMessage
 parameter_list|,
 name|Class
 argument_list|<
@@ -1783,7 +1783,7 @@ name|ProviderFactory
 operator|.
 name|getInstance
 argument_list|(
-name|m
+name|outMessage
 argument_list|)
 operator|.
 name|createMessageBodyWriter
@@ -1796,7 +1796,7 @@ name|anns
 argument_list|,
 name|contentType
 argument_list|,
-name|m
+name|outMessage
 argument_list|)
 decl_stmt|;
 if|if
@@ -1823,7 +1823,7 @@ name|anns
 argument_list|,
 name|contentType
 argument_list|,
-name|m
+name|outMessage
 argument_list|)
 expr_stmt|;
 block|}
@@ -1903,7 +1903,7 @@ name|HttpURLConnection
 name|conn
 parameter_list|,
 name|Message
-name|inMessage
+name|outMessage
 parameter_list|,
 name|Class
 argument_list|<
@@ -2049,7 +2049,7 @@ name|ProviderFactory
 operator|.
 name|getInstance
 argument_list|(
-name|inMessage
+name|outMessage
 argument_list|)
 operator|.
 name|createMessageBodyReader
@@ -2062,7 +2062,7 @@ name|anns
 argument_list|,
 name|contentType
 argument_list|,
-name|inMessage
+name|outMessage
 argument_list|)
 decl_stmt|;
 if|if
@@ -2087,7 +2087,7 @@ name|anns
 argument_list|,
 name|contentType
 argument_list|,
-name|inMessage
+name|outMessage
 argument_list|)
 expr_stmt|;
 block|}

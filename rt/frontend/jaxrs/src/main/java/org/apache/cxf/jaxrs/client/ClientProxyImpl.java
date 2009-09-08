@@ -2958,7 +2958,7 @@ throws|throws
 name|Throwable
 block|{
 name|Message
-name|m
+name|outMessage
 init|=
 name|createMessage
 argument_list|(
@@ -3070,7 +3070,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|m
+name|outMessage
 operator|.
 name|put
 argument_list|(
@@ -3104,7 +3104,7 @@ operator|||
 name|isForm
 condition|)
 block|{
-name|m
+name|outMessage
 operator|.
 name|setContent
 argument_list|(
@@ -3115,7 +3115,7 @@ argument_list|,
 name|ori
 argument_list|)
 expr_stmt|;
-name|m
+name|outMessage
 operator|.
 name|put
 argument_list|(
@@ -3155,7 +3155,7 @@ name|body
 block|}
 argument_list|)
 decl_stmt|;
-name|m
+name|outMessage
 operator|.
 name|setContent
 argument_list|(
@@ -3166,7 +3166,7 @@ argument_list|,
 name|contents
 argument_list|)
 expr_stmt|;
-name|m
+name|outMessage
 operator|.
 name|getInterceptorChain
 argument_list|()
@@ -3182,14 +3182,14 @@ block|}
 comment|// execute chain
 try|try
 block|{
-name|m
+name|outMessage
 operator|.
 name|getInterceptorChain
 argument_list|()
 operator|.
 name|doIntercept
 argument_list|(
-name|m
+name|outMessage
 argument_list|)
 expr_stmt|;
 block|}
@@ -3208,7 +3208,7 @@ init|=
 operator|(
 name|HttpURLConnection
 operator|)
-name|m
+name|outMessage
 operator|.
 name|get
 argument_list|(
@@ -3222,7 +3222,7 @@ name|handleResponse
 argument_list|(
 name|connect
 argument_list|,
-name|m
+name|outMessage
 argument_list|,
 name|ori
 argument_list|)
@@ -3492,7 +3492,7 @@ name|void
 name|handleMessage
 parameter_list|(
 name|Message
-name|m
+name|outMessage
 parameter_list|)
 throws|throws
 name|Fault
@@ -3500,7 +3500,7 @@ block|{
 name|OperationResourceInfo
 name|ori
 init|=
-name|m
+name|outMessage
 operator|.
 name|getContent
 argument_list|(
@@ -3512,7 +3512,7 @@ decl_stmt|;
 name|OutputStream
 name|os
 init|=
-name|m
+name|outMessage
 operator|.
 name|getContent
 argument_list|(
@@ -3541,7 +3541,7 @@ name|MessageContentsList
 operator|.
 name|getContentsList
 argument_list|(
-name|m
+name|outMessage
 argument_list|)
 decl_stmt|;
 if|if
@@ -3571,7 +3571,7 @@ init|=
 operator|(
 name|MultivaluedMap
 operator|)
-name|m
+name|outMessage
 operator|.
 name|get
 argument_list|(
@@ -3594,7 +3594,7 @@ init|=
 operator|(
 name|Integer
 operator|)
-name|m
+name|outMessage
 operator|.
 name|get
 argument_list|(
@@ -3660,7 +3660,7 @@ name|writeBody
 argument_list|(
 name|body
 argument_list|,
-name|m
+name|outMessage
 argument_list|,
 name|body
 operator|.
@@ -3689,7 +3689,7 @@ name|writeBody
 argument_list|(
 name|body
 argument_list|,
-name|m
+name|outMessage
 argument_list|,
 name|body
 operator|.

@@ -2652,7 +2652,7 @@ name|void
 name|handleMessage
 parameter_list|(
 name|Message
-name|m
+name|outMessage
 parameter_list|)
 throws|throws
 name|Fault
@@ -2660,7 +2660,7 @@ block|{
 name|OutputStream
 name|os
 init|=
-name|m
+name|outMessage
 operator|.
 name|getContent
 argument_list|(
@@ -2685,7 +2685,7 @@ name|MessageContentsList
 operator|.
 name|getContentsList
 argument_list|(
-name|m
+name|outMessage
 argument_list|)
 decl_stmt|;
 if|if
@@ -2715,7 +2715,7 @@ init|=
 operator|(
 name|MultivaluedMap
 operator|)
-name|m
+name|outMessage
 operator|.
 name|get
 argument_list|(
@@ -2740,7 +2740,7 @@ name|writeBody
 argument_list|(
 name|body
 argument_list|,
-name|m
+name|outMessage
 argument_list|,
 name|body
 operator|.
