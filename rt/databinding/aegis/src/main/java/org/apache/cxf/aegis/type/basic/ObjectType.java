@@ -272,7 +272,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * AegisType for runtime inspection of types. Looks as the class to be written, and  * looks to see if there is a type for that class. If there is, it writes out  * the value and inserts a<em>xsi:type</em> attribute to signal what the type  * of the value is. Can specify an optional set of dependent<code>AegisType</code>'s  * in the constructor, in the case that the type is a custom type that may not  * have its schema in the WSDL. Can specify whether or not unknown objects  * should be serialized as a byte stream.  *   * @author<a href="mailto:peter.royal@pobox.com">peter royal</a>  */
+comment|/**  * AegisType for runtime inspection of types. Looks as the class to be written, and  * looks to see if there is a type for that class. If there is, it writes out  * the value and inserts a<em>xsi:type</em> attribute to signal what the type  * of the value is. Can specify an optional set of dependent<code>AegisType</code>'s  * in the constructor, in the case that the type is a custom type that may not  * have its schema in the WSDL. Can specify whether or not unknown objects  * should be serialized as a byte stream.  *   */
 end_comment
 
 begin_class
@@ -516,13 +516,6 @@ literal|"Missing 'xsi:type' attribute value"
 argument_list|)
 throw|;
 block|}
-name|typeName
-operator|=
-name|typeName
-operator|.
-name|trim
-argument_list|()
-expr_stmt|;
 name|AegisType
 name|type
 init|=
@@ -540,6 +533,13 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|typeName
+operator|=
+name|typeName
+operator|.
+name|trim
+argument_list|()
+expr_stmt|;
 name|typeQName
 operator|=
 name|extractQName
