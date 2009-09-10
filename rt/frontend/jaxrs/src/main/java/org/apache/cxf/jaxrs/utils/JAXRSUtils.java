@@ -5108,11 +5108,6 @@ name|templateParams
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 specifier|static
 name|HttpHeaders
