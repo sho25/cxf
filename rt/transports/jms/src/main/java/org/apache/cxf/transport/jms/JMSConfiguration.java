@@ -274,6 +274,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|reconnectOnException
+init|=
+literal|true
 decl_stmt|;
 specifier|private
 name|boolean
