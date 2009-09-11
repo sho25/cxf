@@ -377,6 +377,13 @@ operator|-
 literal|1
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|holder
+operator|!=
+literal|null
+condition|)
+block|{
 name|holder
 operator|.
 name|value
@@ -397,6 +404,7 @@ argument_list|,
 name|holder
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

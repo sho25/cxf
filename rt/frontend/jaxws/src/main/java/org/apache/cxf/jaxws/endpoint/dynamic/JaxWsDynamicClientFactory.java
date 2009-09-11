@@ -129,6 +129,15 @@ name|getSingleton
 argument_list|()
 return|;
 block|}
+specifier|protected
+name|boolean
+name|allowWrapperOps
+parameter_list|()
+block|{
+return|return
+literal|true
+return|;
+block|}
 comment|/**      * Create a new instance using a specific<tt>Bus</tt>.      *       * @param b the<tt>Bus</tt> to use in subsequent operations with the      *            instance      * @return the new instance      */
 specifier|public
 specifier|static

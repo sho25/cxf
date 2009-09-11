@@ -2138,6 +2138,9 @@ argument_list|(
 name|svcfo
 argument_list|,
 name|intermediateModel
+argument_list|,
+name|allowWrapperOps
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|visitor
@@ -2155,6 +2158,15 @@ argument_list|)
 expr_stmt|;
 return|return
 name|client
+return|;
+block|}
+specifier|protected
+name|boolean
+name|allowWrapperOps
+parameter_list|()
+block|{
+return|return
+literal|false
 return|;
 block|}
 specifier|private
