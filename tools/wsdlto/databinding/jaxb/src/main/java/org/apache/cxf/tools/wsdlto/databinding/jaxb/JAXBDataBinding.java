@@ -2593,6 +2593,14 @@ block|{
 name|validateSchema
 argument_list|(
 name|ele
+argument_list|,
+name|docs
+index|[
+literal|0
+index|]
+operator|.
+name|getDocumentURI
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -2878,6 +2886,11 @@ block|{
 name|validateSchema
 argument_list|(
 name|ele
+argument_list|,
+name|sci
+operator|.
+name|getSystemId
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -4000,6 +4013,9 @@ name|validateSchema
 parameter_list|(
 name|Element
 name|ele
+parameter_list|,
+name|String
+name|uri
 parameter_list|)
 throws|throws
 name|ToolException
@@ -4023,6 +4039,8 @@ operator|new
 name|DOMSource
 argument_list|(
 name|ele
+argument_list|,
+name|uri
 argument_list|)
 decl_stmt|;
 try|try
