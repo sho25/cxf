@@ -2094,6 +2094,12 @@ condition|(
 name|type
 operator|==
 literal|null
+operator|||
+name|type
+operator|==
+name|JAXBElement
+operator|.
+name|class
 condition|)
 block|{
 return|return
