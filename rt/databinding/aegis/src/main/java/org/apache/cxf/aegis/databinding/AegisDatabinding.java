@@ -3701,6 +3701,22 @@ name|getName
 argument_list|()
 argument_list|)
 decl_stmt|;
+comment|// The ibm jdk requires the simple frontend dependency to be
+comment|// present for the SimpleMethodDispatcher cast below even if
+comment|// md is null (sun jdk does not).  So, for the jaxrs frontend,
+comment|// we can exclude the simple frontend from the aegis databinding
+comment|// dependency as long as this null check is here.
+if|if
+condition|(
+name|md
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|SimpleMethodDispatcher
 name|smd
 init|=

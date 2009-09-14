@@ -874,6 +874,16 @@ block|}
 block|}
 argument_list|)
 decl_stmt|;
+comment|// The ibm jdk finalizes conduit (during most runs of this test) and
+comment|// causes it to fail unless we reference the conduit here after the
+comment|// jmsTemplate.execute() call.
+name|assertNotNull
+argument_list|(
+literal|"Conduit is null"
+argument_list|,
+name|conduit
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Message should have been of type BytesMessage "
