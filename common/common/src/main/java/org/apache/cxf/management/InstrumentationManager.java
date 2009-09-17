@@ -136,6 +136,17 @@ name|MBeanServer
 name|getMBeanServer
 parameter_list|()
 function_decl|;
+name|String
+name|getPersistentBusId
+parameter_list|()
+function_decl|;
+name|void
+name|setPersistentBusId
+parameter_list|(
+name|String
+name|id
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
