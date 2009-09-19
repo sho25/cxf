@@ -89,10 +89,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|isClosed
-operator|=
-literal|true
-expr_stmt|;
 if|if
 condition|(
 operator|!
@@ -107,6 +103,10 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+name|isClosed
+operator|=
+literal|true
+expr_stmt|;
 block|}
 specifier|public
 name|boolean

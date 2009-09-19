@@ -237,22 +237,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-comment|/**      * Key under which we store the original input stream on the message, for      * use by the ending interceptor.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ORIGINAL_INPUT_STREAM_KEY
-init|=
-name|GZIPInInterceptor
-operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
-operator|+
-literal|".originalInputStream"
-decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -282,15 +266,6 @@ name|GZIPInInterceptor
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
-comment|/**      * Ending interceptor that restores the original input stream on the message      * when we have finished unzipping it.      */
-specifier|private
-name|GZIPInEndingInterceptor
-name|ending
-init|=
-operator|new
-name|GZIPInEndingInterceptor
-argument_list|()
 decl_stmt|;
 specifier|public
 name|GZIPInInterceptor
@@ -420,9 +395,6 @@ argument_list|(
 literal|"Uncompressing response"
 argument_list|)
 expr_stmt|;
-comment|// remember the original input stream, the ending
-comment|// interceptor
-comment|// will use it later
 name|InputStream
 name|is
 init|=
@@ -435,15 +407,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|message
-operator|.
-name|put
-argument_list|(
-name|ORIGINAL_INPUT_STREAM_KEY
-argument_list|,
-name|is
-argument_list|)
-expr_stmt|;
 comment|// wrap an unzipping stream around the original one
 name|GZIPInputStream
 name|zipInput
@@ -497,17 +460,6 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-comment|// add the ending interceptor
-name|message
-operator|.
-name|getInterceptorChain
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|ending
-argument_list|)
-expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -542,65 +494,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-block|}
-block|}
-comment|/**      * Ending interceptor to restore the original input stream after processing,      * so as not to interfere with streaming HTTP.      */
-specifier|public
-class|class
-name|GZIPInEndingInterceptor
-extends|extends
-name|AbstractPhaseInterceptor
-argument_list|<
-name|Message
-argument_list|>
-block|{
-specifier|public
-name|GZIPInEndingInterceptor
-parameter_list|()
-block|{
-name|super
-argument_list|(
-name|Phase
-operator|.
-name|POST_INVOKE
-argument_list|)
-expr_stmt|;
-block|}
-comment|/**          * Restores the original input stream for the message.          */
-specifier|public
-name|void
-name|handleMessage
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
-throws|throws
-name|Fault
-block|{
-name|InputStream
-name|originalIn
-init|=
-operator|(
-name|InputStream
-operator|)
-name|message
-operator|.
-name|get
-argument_list|(
-name|ORIGINAL_INPUT_STREAM_KEY
-argument_list|)
-decl_stmt|;
-name|message
-operator|.
-name|setContent
-argument_list|(
-name|InputStream
-operator|.
-name|class
-argument_list|,
-name|originalIn
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 block|}
