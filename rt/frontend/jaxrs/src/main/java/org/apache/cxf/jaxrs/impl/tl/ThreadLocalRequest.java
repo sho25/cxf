@@ -204,6 +204,19 @@ name|getMethod
 argument_list|()
 return|;
 block|}
+specifier|public
+name|ResponseBuilder
+name|evaluatePreconditions
+parameter_list|()
+block|{
+return|return
+name|get
+argument_list|()
+operator|.
+name|evaluatePreconditions
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 
