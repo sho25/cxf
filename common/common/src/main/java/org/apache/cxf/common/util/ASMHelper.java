@@ -869,11 +869,6 @@ argument_list|(
 literal|'<'
 argument_list|)
 expr_stmt|;
-name|boolean
-name|first
-init|=
-literal|true
-decl_stmt|;
 for|for
 control|(
 name|Type
@@ -885,24 +880,6 @@ name|getActualTypeArguments
 argument_list|()
 control|)
 block|{
-if|if
-condition|(
-operator|!
-name|first
-condition|)
-block|{
-name|a
-operator|.
-name|append
-argument_list|(
-literal|" ,"
-argument_list|)
-expr_stmt|;
-block|}
-name|first
-operator|=
-literal|false
-expr_stmt|;
 name|a
 operator|.
 name|append
