@@ -777,6 +777,21 @@ name|void
 name|testPublishOnBusyPort
 parameter_list|()
 block|{
+name|boolean
+name|isWindows
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"os.name"
+argument_list|)
+operator|.
+name|startsWith
+argument_list|(
+literal|"Windows"
+argument_list|)
+decl_stmt|;
 name|GreeterSessionImpl
 name|implementor
 init|=
@@ -800,11 +815,32 @@ argument_list|,
 name|implementor
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|isWindows
+condition|)
+block|{
 name|fail
 argument_list|(
 literal|"Should have failed to publish as the port is busy"
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+name|System
+operator|.
+name|err
+operator|.
+name|println
+argument_list|(
+literal|"Should have failed to publish as the port is busy, but certains "
+operator|+
+literal|"of Windows allow this."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -826,11 +862,32 @@ argument_list|,
 name|implementor
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|isWindows
+condition|)
+block|{
 name|fail
 argument_list|(
 literal|"Should have failed to publish as the port is busy"
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+name|System
+operator|.
+name|err
+operator|.
+name|println
+argument_list|(
+literal|"Should have failed to publish as the port is busy, but certains "
+operator|+
+literal|"of Windows allow this."
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
