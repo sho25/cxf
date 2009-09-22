@@ -2898,6 +2898,16 @@ name|intf
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|addExtensibilityAttributes
+argument_list|(
+name|portType
+argument_list|,
+name|intf
+operator|.
+name|getExtensionAttributes
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|portType
 operator|.
 name|setUndefined
