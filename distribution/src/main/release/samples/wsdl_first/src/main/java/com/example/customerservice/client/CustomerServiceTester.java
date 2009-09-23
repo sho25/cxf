@@ -253,6 +253,30 @@ literal|"NoSuchCustomer exception was received as expected"
 argument_list|)
 expr_stmt|;
 block|}
+comment|// The implementation of updateCustomer is set to sleep for some seconds.
+comment|// Still this method should return instantly as the method is declared
+comment|// as a one way method in the WSDL
+name|Customer
+name|customer
+init|=
+operator|new
+name|Customer
+argument_list|()
+decl_stmt|;
+name|customer
+operator|.
+name|setName
+argument_list|(
+literal|"Smith"
+argument_list|)
+expr_stmt|;
+name|customerService
+operator|.
+name|updateCustomer
+argument_list|(
+name|customer
+argument_list|)
+expr_stmt|;
 name|System
 operator|.
 name|out

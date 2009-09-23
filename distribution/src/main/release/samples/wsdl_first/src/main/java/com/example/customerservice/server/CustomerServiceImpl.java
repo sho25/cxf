@@ -154,6 +154,7 @@ name|CustomerServiceImpl
 implements|implements
 name|CustomerService
 block|{
+comment|/**      * The WebServiceContext can be used to retrieve special attributes like the       * user principal. Normally it is not needed      */
 annotation|@
 name|Resource
 name|WebServiceContext
@@ -337,7 +338,42 @@ name|Customer
 name|customer
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"update request was received"
+argument_list|)
+expr_stmt|;
+try|try
+block|{
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|10000
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e
+parameter_list|)
+block|{
+comment|// Nothing to do here
+block|}
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Customer was updated"
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class
