@@ -271,11 +271,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|parentDir
-operator|.
-name|isDirectory
-argument_list|()
-operator|&&
 operator|!
 name|parentDir
 operator|.
