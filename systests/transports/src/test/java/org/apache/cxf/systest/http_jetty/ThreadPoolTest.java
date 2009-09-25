@@ -258,6 +258,8 @@ name|void
 name|run
 parameter_list|()
 block|{
+try|try
+block|{
 name|greeter
 operator|.
 name|greetMeLater
@@ -267,6 +269,15 @@ operator|*
 literal|1000
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|t
+parameter_list|)
+block|{
+comment|//ignore
+block|}
 block|}
 block|}
 decl_stmt|;
