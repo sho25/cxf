@@ -861,7 +861,7 @@ return|return
 name|LOG
 return|;
 block|}
-comment|/**      * Check if the exchange is suitable for a failover.      *       * @param exchange the current Exchange      * @return boolean true iff a failover should be attempted      */
+comment|/**      * Check if the exchange is suitable for a failover.      *       * @param exchange the current Exchange      * @return boolean true if a failover should be attempted      */
 specifier|private
 name|boolean
 name|requiresFailover
