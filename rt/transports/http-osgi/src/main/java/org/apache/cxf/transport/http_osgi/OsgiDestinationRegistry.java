@@ -9,8 +9,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|servicemix
-operator|.
 name|cxf
 operator|.
 name|transport

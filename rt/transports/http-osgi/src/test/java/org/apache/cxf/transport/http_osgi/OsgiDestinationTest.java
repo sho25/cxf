@@ -9,8 +9,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|servicemix
-operator|.
 name|cxf
 operator|.
 name|transport
@@ -93,7 +91,7 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|ConduitInitiator
+name|MessageObserver
 import|;
 end_import
 
@@ -101,13 +99,11 @@ begin_import
 import|import
 name|org
 operator|.
-name|apache
+name|easymock
 operator|.
-name|cxf
+name|classextension
 operator|.
-name|transport
-operator|.
-name|MessageObserver
+name|EasyMock
 import|;
 end_import
 
@@ -163,20 +159,6 @@ name|Test
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|easymock
-operator|.
-name|classextension
-operator|.
-name|EasyMock
-operator|.
-name|*
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -201,10 +183,6 @@ name|Bus
 name|bus
 decl_stmt|;
 specifier|private
-name|ConduitInitiator
-name|ci
-decl_stmt|;
-specifier|private
 name|OsgiDestinationRegistryIntf
 name|registry
 decl_stmt|;
@@ -225,6 +203,8 @@ parameter_list|()
 block|{
 name|control
 operator|=
+name|EasyMock
+operator|.
 name|createNiceControl
 argument_list|()
 expr_stmt|;
@@ -235,17 +215,6 @@ operator|.
 name|createMock
 argument_list|(
 name|Bus
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
-name|ci
-operator|=
-name|control
-operator|.
-name|createMock
-argument_list|(
-name|ConduitInitiator
 operator|.
 name|class
 argument_list|)
@@ -297,10 +266,6 @@ name|bus
 operator|=
 literal|null
 expr_stmt|;
-name|ci
-operator|=
-literal|null
-expr_stmt|;
 name|registry
 operator|=
 literal|null
@@ -326,8 +291,6 @@ operator|new
 name|OsgiDestination
 argument_list|(
 name|bus
-argument_list|,
-name|ci
 argument_list|,
 name|endpoint
 argument_list|,
@@ -408,8 +371,6 @@ name|OsgiDestination
 argument_list|(
 name|bus
 argument_list|,
-name|ci
-argument_list|,
 name|endpoint
 argument_list|,
 name|registry
@@ -453,6 +414,8 @@ argument_list|(
 literal|"snafu"
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
 name|expectLastCall
 argument_list|()
 expr_stmt|;
@@ -468,8 +431,6 @@ operator|new
 name|OsgiDestination
 argument_list|(
 name|bus
-argument_list|,
-name|ci
 argument_list|,
 name|endpoint
 argument_list|,
@@ -525,6 +486,8 @@ argument_list|(
 literal|"HTTP.REQUEST"
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
 name|expectLastCall
 argument_list|()
 operator|.
@@ -538,6 +501,8 @@ operator|.
 name|getHeaderNames
 argument_list|()
 expr_stmt|;
+name|EasyMock
+operator|.
 name|expectLastCall
 argument_list|()
 operator|.
@@ -557,6 +522,8 @@ argument_list|(
 literal|"content-type"
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
 name|expectLastCall
 argument_list|()
 operator|.
@@ -576,6 +543,8 @@ argument_list|(
 literal|"content-length"
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
 name|expectLastCall
 argument_list|()
 operator|.
@@ -595,6 +564,8 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
 name|expectLastCall
 argument_list|()
 expr_stmt|;
