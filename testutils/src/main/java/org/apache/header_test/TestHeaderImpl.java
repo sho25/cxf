@@ -664,6 +664,15 @@ return|return
 name|ss
 return|;
 block|}
+specifier|public
+name|String
+name|testHeader7
+parameter_list|()
+block|{
+return|return
+literal|"Hello"
+return|;
+block|}
 block|}
 end_class
 
