@@ -815,7 +815,7 @@ name|UntrustedURLConnectionIOException
 argument_list|(
 literal|"RequireClientCertificate is set, "
 operator|+
-literal|"but no local certificates we negotiated.  Is"
+literal|"but no local certificates were negotiated.  Is"
 operator|+
 literal|" the server set to ask for client authorization?"
 argument_list|)
