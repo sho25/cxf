@@ -664,7 +664,7 @@ name|limit
 operator|*
 name|jmsConfig
 operator|.
-name|getReconnectPercentOfMax
+name|getMaxSuspendedContinuations
 argument_list|()
 operator|)
 operator|/
