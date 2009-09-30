@@ -366,7 +366,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl_systest/xmlbeans/hello_world.wsdl"
+literal|"/wsdl_systest_databinding/xmlbeans/hello_world.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -623,7 +623,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl_systest/xmlbeans/hello_world.wsdl"
+literal|"/wsdl_systest_databinding/xmlbeans/hello_world.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
