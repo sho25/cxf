@@ -1160,6 +1160,8 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
+name|?
+extends|extends
 name|Attachment
 argument_list|>
 name|coll
@@ -1463,6 +1465,8 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
+name|?
+extends|extends
 name|Attachment
 argument_list|>
 name|coll
@@ -1751,6 +1755,8 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
+name|?
+extends|extends
 name|Book
 argument_list|>
 name|coll

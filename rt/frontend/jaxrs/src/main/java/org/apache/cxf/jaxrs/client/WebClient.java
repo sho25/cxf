@@ -1299,6 +1299,8 @@ name|T
 parameter_list|>
 name|Collection
 argument_list|<
+name|?
+extends|extends
 name|T
 argument_list|>
 name|postAndGetCollection
@@ -1331,6 +1333,8 @@ name|T
 parameter_list|>
 name|Collection
 argument_list|<
+name|?
+extends|extends
 name|T
 argument_list|>
 name|getCollection

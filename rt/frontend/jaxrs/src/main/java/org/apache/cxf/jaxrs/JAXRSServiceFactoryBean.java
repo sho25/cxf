@@ -457,6 +457,9 @@ specifier|public
 name|List
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|getResourceClasses
 parameter_list|()
@@ -464,6 +467,9 @@ block|{
 name|List
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|resourceClasses
 init|=
@@ -471,6 +477,9 @@ operator|new
 name|ArrayList
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;

@@ -703,15 +703,6 @@ argument_list|,
 literal|"utf-8"
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|xml
-argument_list|)
-expr_stmt|;
 name|MessageBodyReader
 argument_list|<
 name|Map

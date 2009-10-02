@@ -1567,7 +1567,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9080/the/thebooks5/bookstore/books/convert2"
+literal|"http://localhost:9080/the/thebooks5/bookstore/books/convert2/123"
 decl_stmt|;
 name|WebClient
 name|wc
