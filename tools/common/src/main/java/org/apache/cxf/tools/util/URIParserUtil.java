@@ -562,7 +562,7 @@ literal|0
 condition|)
 block|{
 return|return
-literal|null
+literal|"cxf"
 return|;
 block|}
 if|if

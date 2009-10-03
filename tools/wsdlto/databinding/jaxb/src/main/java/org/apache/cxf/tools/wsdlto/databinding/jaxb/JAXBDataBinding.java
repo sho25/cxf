@@ -3151,9 +3151,8 @@ name|String
 name|sub
 init|=
 name|dotIndex
-operator|==
-operator|-
-literal|1
+operator|<=
+literal|0
 condition|?
 literal|""
 else|:
