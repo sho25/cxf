@@ -324,15 +324,6 @@ operator|.
 name|incomingObserver
 return|;
 block|}
-specifier|public
-name|EndpointInfo
-name|getEndpointInfo
-parameter_list|()
-block|{
-return|return
-name|endpointInfo
-return|;
-block|}
 block|}
 end_class
 
