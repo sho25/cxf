@@ -142,6 +142,15 @@ argument_list|,
 literal|"myAliasPassword"
 argument_list|)
 expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"alice"
+argument_list|,
+literal|"alicePassword"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|void
