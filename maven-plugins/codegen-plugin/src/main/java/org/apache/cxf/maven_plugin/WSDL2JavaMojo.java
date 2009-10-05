@@ -987,7 +987,7 @@ literal|"wsdl"
 operator|.
 name|equals
 argument_list|(
-name|artifact
+name|pArtifact
 operator|.
 name|getType
 argument_list|()
