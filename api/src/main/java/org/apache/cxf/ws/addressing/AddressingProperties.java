@@ -46,6 +46,14 @@ name|EndpointReferenceType
 name|epr
 parameter_list|)
 function_decl|;
+comment|/**      * Mutator for the<b>To</b> property.      * @param epr new value for To property      */
+name|void
+name|setTo
+parameter_list|(
+name|AttributedURIType
+name|epr
+parameter_list|)
+function_decl|;
 comment|/**      * Accessor for the<b>From</b> property.      * @return current value of From property      */
 name|EndpointReferenceType
 name|getFrom

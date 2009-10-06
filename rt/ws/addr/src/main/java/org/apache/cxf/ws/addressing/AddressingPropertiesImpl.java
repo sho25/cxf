@@ -65,6 +65,10 @@ name|EndpointReferenceType
 name|to
 decl_stmt|;
 specifier|private
+name|AttributedURIType
+name|toURIType
+decl_stmt|;
+specifier|private
 name|EndpointReferenceType
 name|from
 decl_stmt|;
@@ -144,6 +148,13 @@ name|AttributedURIType
 name|getTo
 parameter_list|()
 block|{
+if|if
+condition|(
+name|toURIType
+operator|==
+literal|null
+condition|)
+block|{
 return|return
 literal|null
 operator|!=
@@ -157,6 +168,24 @@ else|:
 literal|null
 return|;
 block|}
+return|return
+name|toURIType
+return|;
+block|}
+comment|/**      * Mutator for the<b>To</b> property.      * @param iri new value for To property      */
+specifier|public
+name|void
+name|setTo
+parameter_list|(
+name|AttributedURIType
+name|t
+parameter_list|)
+block|{
+name|toURIType
+operator|=
+name|t
+expr_stmt|;
+block|}
 comment|/**      * Mutator for the<b>To</b> property.      * @param iri new value for To property      */
 specifier|public
 name|void
@@ -169,6 +198,10 @@ block|{
 name|to
 operator|=
 name|epr
+expr_stmt|;
+name|toURIType
+operator|=
+literal|null
 expr_stmt|;
 block|}
 comment|/**      * Accessor for the<b>From</b> property.      * @return current value of From property      */
