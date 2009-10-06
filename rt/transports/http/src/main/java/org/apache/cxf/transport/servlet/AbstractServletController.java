@@ -92,10 +92,6 @@ init|=
 name|DEFAULT_LISTINGS_CLASSIFIER
 decl_stmt|;
 specifier|protected
-name|ServletConfig
-name|servletConfig
-decl_stmt|;
-specifier|protected
 name|AbstractServletController
 parameter_list|()
 block|{              }
@@ -106,14 +102,10 @@ name|ServletConfig
 name|config
 parameter_list|)
 block|{
-name|this
-operator|.
-name|servletConfig
-operator|=
-name|config
-expr_stmt|;
 name|init
-argument_list|()
+argument_list|(
+name|config
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -186,7 +178,10 @@ block|}
 specifier|private
 name|void
 name|init
-parameter_list|()
+parameter_list|(
+name|ServletConfig
+name|servletConfig
+parameter_list|)
 block|{
 if|if
 condition|(

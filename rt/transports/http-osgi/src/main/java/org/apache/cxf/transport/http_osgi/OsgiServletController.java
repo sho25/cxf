@@ -1934,13 +1934,7 @@ name|AbstractHTTPDestination
 operator|.
 name|HTTP_CONTEXT
 argument_list|,
-name|servletConfig
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-name|servletConfig
+name|servlet
 operator|.
 name|getServletContext
 argument_list|()
@@ -1954,7 +1948,10 @@ name|AbstractHTTPDestination
 operator|.
 name|HTTP_CONFIG
 argument_list|,
-name|servletConfig
+name|servlet
+operator|.
+name|getServletConfig
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|inMessage
