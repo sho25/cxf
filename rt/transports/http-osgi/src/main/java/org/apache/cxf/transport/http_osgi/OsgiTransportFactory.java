@@ -223,6 +223,11 @@ return|return
 name|d
 return|;
 block|}
+specifier|public
+name|void
+name|init
+parameter_list|()
+block|{              }
 block|}
 end_class
 
