@@ -415,6 +415,8 @@ name|void
 name|shutdown
 parameter_list|()
 block|{
+try|try
+block|{
 name|factory
 operator|.
 name|removeDestination
@@ -422,6 +424,15 @@ argument_list|(
 name|path
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|ex
+parameter_list|)
+block|{
+comment|//ignore
+block|}
 name|super
 operator|.
 name|shutdown

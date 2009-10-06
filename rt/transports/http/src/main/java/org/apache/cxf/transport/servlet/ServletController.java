@@ -1122,6 +1122,8 @@ operator|.
 name|getDestinationForPath
 argument_list|(
 name|address
+argument_list|,
+literal|true
 argument_list|)
 return|;
 block|}
