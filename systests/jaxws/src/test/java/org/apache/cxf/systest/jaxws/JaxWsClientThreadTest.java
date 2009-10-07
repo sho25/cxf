@@ -103,9 +103,7 @@ name|xml
 operator|.
 name|ws
 operator|.
-name|soap
-operator|.
-name|SOAPFaultException
+name|WebServiceException
 import|;
 end_import
 
@@ -466,7 +464,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|SOAPFaultException
+name|WebServiceException
 name|expected
 parameter_list|)
 block|{
