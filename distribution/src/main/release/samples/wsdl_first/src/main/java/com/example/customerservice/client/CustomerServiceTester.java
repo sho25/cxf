@@ -283,7 +283,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"All calls were succesful"
+literal|"All calls were successful"
 argument_list|)
 expr_stmt|;
 block|}
