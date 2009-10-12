@@ -122,7 +122,7 @@ name|ep
 operator|.
 name|publish
 argument_list|(
-literal|"http://localhost:9000/Provider"
+literal|"local://localhost:9000/Provider"
 argument_list|)
 expr_stmt|;
 name|Node
@@ -130,7 +130,7 @@ name|response
 init|=
 name|invoke
 argument_list|(
-literal|"http://localhost:9000/Provider"
+literal|"local://localhost:9000/Provider"
 argument_list|,
 name|LocalTransportFactory
 operator|.
@@ -196,7 +196,7 @@ name|ep
 operator|.
 name|publish
 argument_list|(
-literal|"http://localhost:9001/Provider2"
+literal|"local://localhost:9001/Provider2"
 argument_list|)
 expr_stmt|;
 name|Node
@@ -204,7 +204,7 @@ name|response
 init|=
 name|invoke
 argument_list|(
-literal|"http://localhost:9001/Provider2"
+literal|"local://localhost:9001/Provider2"
 argument_list|,
 name|LocalTransportFactory
 operator|.

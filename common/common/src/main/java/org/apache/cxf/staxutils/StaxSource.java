@@ -736,6 +736,17 @@ block|}
 default|default:
 break|break;
 block|}
+if|if
+condition|(
+operator|!
+name|streamReader
+operator|.
+name|hasNext
+argument_list|()
+condition|)
+block|{
+return|return;
+block|}
 name|streamReader
 operator|.
 name|next

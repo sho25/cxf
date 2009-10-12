@@ -114,6 +114,14 @@ name|databinding
 operator|.
 name|AbstractDataBinding
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PREFERRED_FORMAT
+init|=
+literal|"source-preferred-format"
+decl_stmt|;
 specifier|private
 name|XMLStreamDataReader
 name|xsrReader

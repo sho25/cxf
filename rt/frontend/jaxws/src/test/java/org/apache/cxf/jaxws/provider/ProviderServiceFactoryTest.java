@@ -828,7 +828,7 @@ expr_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9000/test"
+literal|"local://localhost:9000/test"
 decl_stmt|;
 name|svrFactory
 operator|.
@@ -1095,7 +1095,7 @@ expr_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9000/test"
+literal|"local://localhost:9000/test"
 decl_stmt|;
 name|svrFactory
 operator|.
@@ -1356,7 +1356,7 @@ expr_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9000/test"
+literal|"local://localhost:9000/test"
 decl_stmt|;
 name|svrFactory
 operator|.
