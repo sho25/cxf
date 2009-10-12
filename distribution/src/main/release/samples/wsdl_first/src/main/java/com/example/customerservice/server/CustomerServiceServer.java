@@ -186,12 +186,16 @@ argument_list|(
 literal|"Server ready..."
 argument_list|)
 expr_stmt|;
-name|System
+name|Thread
 operator|.
-name|in
-operator|.
-name|read
-argument_list|()
+name|sleep
+argument_list|(
+literal|5
+operator|*
+literal|60
+operator|*
+literal|1000
+argument_list|)
 expr_stmt|;
 name|System
 operator|.
