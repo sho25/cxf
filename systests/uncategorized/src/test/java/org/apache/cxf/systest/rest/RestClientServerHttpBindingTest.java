@@ -23,7 +23,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|ByteArrayOutputStream
+name|InputStream
 import|;
 end_import
 
@@ -33,7 +33,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|InputStream
+name|StringWriter
 import|;
 end_import
 
@@ -454,7 +454,9 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Result should start with Customer"
+literal|"Result should start with Customer: "
+operator|+
+name|tempstring
 argument_list|,
 name|tempstring
 operator|.
@@ -466,7 +468,9 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Result should have CustomerID"
+literal|"Result should have CustomerID: "
+operator|+
+name|tempstring
 argument_list|,
 name|tempstring
 operator|.
@@ -489,12 +493,14 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|ByteArrayOutputStream
+name|StringWriter
 name|bos
 init|=
 operator|new
-name|ByteArrayOutputStream
-argument_list|()
+name|StringWriter
+argument_list|(
+literal|1000
+argument_list|)
 decl_stmt|;
 name|StreamResult
 name|sr

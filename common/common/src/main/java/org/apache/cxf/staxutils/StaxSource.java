@@ -612,9 +612,6 @@ argument_list|,
 name|qname
 argument_list|)
 expr_stmt|;
-comment|//for (int i = 0; i< streamReader.getNamespaceCount(); i++) {
-comment|//    contentHandler.endPrefixMapping(streamReader.getNamespaceURI(i));
-comment|//}
 break|break;
 block|}
 case|case
@@ -661,10 +658,6 @@ operator|.
 name|START_ELEMENT
 case|:
 block|{
-comment|//for (int i = 0; i< streamReader.getNamespaceCount(); i++) {
-comment|//    contentHandler.startPrefixMapping(streamReader.getNamespacePrefix(i),
-comment|//                                      streamReader.getNamespaceURI(i));
-comment|//}
 name|String
 name|uri
 init|=

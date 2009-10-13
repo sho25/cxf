@@ -562,9 +562,8 @@ condition|)
 block|{
 name|s
 operator|=
-literal|"dom"
+literal|"sax"
 expr_stmt|;
-comment|//for now, should probably be stax
 block|}
 if|if
 condition|(
@@ -1079,8 +1078,6 @@ operator|new
 name|FragmentStreamReader
 argument_list|(
 name|input
-argument_list|,
-literal|false
 argument_list|)
 block|{
 name|boolean
