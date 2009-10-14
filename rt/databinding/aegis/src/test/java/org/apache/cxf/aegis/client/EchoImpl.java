@@ -54,7 +54,7 @@ name|textAgain
 operator|.
 name|value
 operator|=
-literal|"header2"
+name|text
 expr_stmt|;
 return|return
 name|text
