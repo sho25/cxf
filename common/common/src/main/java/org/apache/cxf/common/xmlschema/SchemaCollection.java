@@ -31,18 +31,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
-name|Method
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|HashMap
@@ -534,7 +522,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wrapper class for XmlSchemaCollection that deals with various quirks and bugs. One bug is WSCOMMONS-272.  */
+comment|/**  * Wrapper class for XmlSchemaCollection that deals with various quirks and bugs.  */
 end_comment
 
 begin_class
@@ -542,55 +530,6 @@ specifier|public
 class|class
 name|SchemaCollection
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|Method
-name|GET_ELEMENT_BY_NAME_METHOD
-decl_stmt|;
-static|static
-block|{
-name|Method
-name|m
-init|=
-literal|null
-decl_stmt|;
-try|try
-block|{
-name|m
-operator|=
-name|XmlSchema
-operator|.
-name|class
-operator|.
-name|getMethod
-argument_list|(
-literal|"getElementByName"
-argument_list|,
-operator|new
-name|Class
-index|[]
-block|{
-name|String
-operator|.
-name|class
-block|}
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-comment|// ignore
-block|}
-name|GET_ELEMENT_BY_NAME_METHOD
-operator|=
-name|m
-expr_stmt|;
-block|}
 specifier|private
 name|XmlSchemaCollection
 name|schemaCollection
@@ -1343,44 +1282,24 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-comment|// for XmlSchema 1.4, we should use:
-comment|// schema.getElementByName(name.getLocalPart()) != null
-comment|// but that doesn't exist in 1.3 so for now, use reflection
-try|try
-block|{
 if|if
 condition|(
-name|GET_ELEMENT_BY_NAME_METHOD
-operator|!=
-literal|null
-condition|)
-block|{
-if|if
-condition|(
-name|GET_ELEMENT_BY_NAME_METHOD
-operator|.
-name|invoke
-argument_list|(
 name|schema
-argument_list|,
-operator|new
-name|Object
-index|[]
-block|{
+operator|.
+name|getElementByName
+argument_list|(
 name|name
 operator|.
 name|getLocalPart
 argument_list|()
-block|}
-block|)
+argument_list|)
 operator|!=
 literal|null
-block|)
+condition|)
 block|{
 return|return
 name|schema
 return|;
-block|}
 block|}
 elseif|else
 if|if
@@ -1400,45 +1319,13 @@ name|schema
 return|;
 block|}
 block|}
-catch|catch
-parameter_list|(
-name|java
-operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
-name|InvocationTargetException
-name|ex
-parameter_list|)
-block|{
-comment|// ignore
 block|}
-catch|catch
-parameter_list|(
-name|IllegalAccessException
-name|ex
-parameter_list|)
-block|{
-comment|// ignore
-block|}
-block|}
-block|}
-end_class
-
-begin_return
 return|return
 literal|null
 return|;
-end_return
-
-begin_comment
-unit|}
+block|}
 comment|/**      * Once upon a time, XmlSchema had a bug in the constructor used in this function. So this wrapper was      * created to hold a workaround.      *       * @param namespaceURI TNS for new schema.      * @return new schema      */
-end_comment
-
-begin_function
-unit|public
+specifier|public
 name|XmlSchema
 name|newXmlSchemaInCollection
 parameter_list|(
@@ -1456,13 +1343,7 @@ name|schemaCollection
 argument_list|)
 return|;
 block|}
-end_function
-
-begin_comment
 comment|/**      * Validate that a qualified name points to some namespace in the schema.      *       * @param qname      */
-end_comment
-
-begin_function
 specifier|public
 name|void
 name|validateQNameNamespace
@@ -1528,9 +1409,6 @@ literal|" refers to unknown namespace."
 argument_list|)
 throw|;
 block|}
-end_function
-
-begin_function
 specifier|public
 name|void
 name|validateElementName
@@ -1572,9 +1450,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|public
 name|void
 name|validateTypeName
@@ -1616,9 +1491,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|public
 name|void
 name|addGlobalElementToSchema
@@ -1695,9 +1567,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|public
 name|void
 name|addCrossImports
@@ -1722,9 +1591,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|addOneSchemaCrossImports
@@ -1876,9 +1742,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|addElementCrossImportsElement
@@ -1951,13 +1814,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
-
-begin_comment
 comment|/**      * Determines whether the schema has already received (cross) imports for      * the schemaType      * @param schema      * @param schemaType      * @return false if cross imports for schemaType must still be added to schema      */
-end_comment
-
-begin_function
 specifier|private
 name|boolean
 name|crossImportsAdded
@@ -2058,9 +1915,6 @@ return|return
 name|result
 return|;
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|addCrossImportsType
@@ -2148,9 +2002,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|addCrossImportsSequence
@@ -2215,9 +2066,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|addCrossImportsAttributeList
@@ -2274,9 +2122,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|private
 name|void
 name|addCrossImports
@@ -2496,9 +2341,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|public
 specifier|static
 name|void
@@ -2544,9 +2386,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
-
-begin_function
 specifier|public
 specifier|static
 name|void
@@ -2583,8 +2422,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-end_function
+block|}
+end_class
 
-unit|}
 end_unit
 
