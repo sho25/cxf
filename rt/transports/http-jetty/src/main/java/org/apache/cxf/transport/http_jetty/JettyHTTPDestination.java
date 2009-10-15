@@ -612,6 +612,11 @@ name|createJettyHTTPServerEngine
 argument_list|(
 name|nurl
 operator|.
+name|getHost
+argument_list|()
+argument_list|,
+name|nurl
+operator|.
 name|getPort
 argument_list|()
 argument_list|,

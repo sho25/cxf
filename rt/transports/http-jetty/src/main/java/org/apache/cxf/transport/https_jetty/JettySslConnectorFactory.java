@@ -96,11 +96,32 @@ operator|=
 name|params
 expr_stmt|;
 block|}
-comment|/**      * Create a TLS/SSL Connector.      *       * @param port The network port on which to listen.      */
+comment|/**      * Create a Listener.      *       * @param port the listen port      */
 specifier|public
 name|AbstractConnector
 name|createConnector
 parameter_list|(
+name|int
+name|port
+parameter_list|)
+block|{
+return|return
+name|createConnector
+argument_list|(
+literal|null
+argument_list|,
+name|port
+argument_list|)
+return|;
+block|}
+comment|/**      * Create a Listener.      *       * @param host the host to bind to.  IP address or hostname is allowed. null to bind to all hosts.      * @param port the listen port      */
+specifier|public
+name|AbstractConnector
+name|createConnector
+parameter_list|(
+name|String
+name|host
+parameter_list|,
 name|int
 name|port
 parameter_list|)
@@ -117,6 +138,21 @@ operator|new
 name|CXFJettySslSocketConnector
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|host
+operator|!=
+literal|null
+condition|)
+block|{
+name|secureConnector
+operator|.
+name|setHost
+argument_list|(
+name|host
+argument_list|)
+expr_stmt|;
+block|}
 name|secureConnector
 operator|.
 name|setPort

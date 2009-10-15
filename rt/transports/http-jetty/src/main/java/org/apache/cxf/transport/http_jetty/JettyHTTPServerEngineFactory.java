@@ -547,11 +547,14 @@ return|return
 name|threadingParametersMap
 return|;
 block|}
-comment|/**      * This call sets TLSServerParameters for a JettyHTTPServerEngine      * that will be subsequently created. It will not alter an engine      * that has already been created for that network port.      * @param port       The network port number to bind to the engine.      * @param tlsParams  The tls server parameters. Cannot be null.      * @throws IOException       * @throws GeneralSecurityException       */
+comment|/**      * This call sets TLSServerParameters for a JettyHTTPServerEngine      * that will be subsequently created. It will not alter an engine      * that has already been created for that network port.      * @param host       if not null, server will listen on this address/host,       *                   otherwise, server will listen on all local addresses.      * @param port       The network port number to bind to the engine.      * @param tlsParams  The tls server parameters. Cannot be null.      * @throws IOException       * @throws GeneralSecurityException       */
 specifier|public
 name|void
 name|setTLSServerParametersForPort
 parameter_list|(
+name|String
+name|host
+parameter_list|,
 name|int
 name|port
 parameter_list|,
@@ -601,6 +604,8 @@ argument_list|(
 name|this
 argument_list|,
 name|bus
+argument_list|,
+name|host
 argument_list|,
 name|port
 argument_list|)
@@ -664,6 +669,32 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * calls thru to {{@link #createJettyHTTPServerEngine(String, int, String)} with 'null' for host value      */
+specifier|public
+name|void
+name|setTLSServerParametersForPort
+parameter_list|(
+name|int
+name|port
+parameter_list|,
+name|TLSServerParameters
+name|tlsParams
+parameter_list|)
+throws|throws
+name|GeneralSecurityException
+throws|,
+name|IOException
+block|{
+name|setTLSServerParametersForPort
+argument_list|(
+literal|null
+argument_list|,
+name|port
+argument_list|,
+name|tlsParams
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * This call retrieves a previously configured JettyHTTPServerEngine for the      * given port. If none exists, this call returns null.      */
 specifier|public
 specifier|synchronized
@@ -683,12 +714,15 @@ name|port
 argument_list|)
 return|;
 block|}
-comment|/**      * This call creates a new JettyHTTPServerEngine initialized for "http"      * or "https" on the given port. The determination of "http" or "https"      * will depend on configuration of the engine's bean name.      *       * If an JettyHTTPEngine already exists, or the port      * is already in use, a BindIOException will be thrown. If the       * engine is being Spring configured for TLS a GeneralSecurityException      * may be thrown.      */
+comment|/**      * This call creates a new JettyHTTPServerEngine initialized for "http"      * or "https" on the given port. The determination of "http" or "https"      * will depend on configuration of the engine's bean name.      *       * If an JettyHTTPEngine already exists, or the port      * is already in use, a BindIOException will be thrown. If the       * engine is being Spring configured for TLS a GeneralSecurityException      * may be thrown.      *       * @param host if not null, server will listen on this host/address, otherwise      *        server will listen on all local addresses.      * @param port listen port for server      * @param protocol "http" or "https"      * @return      * @throws GeneralSecurityException      * @throws IOException      */
 specifier|public
 specifier|synchronized
 name|JettyHTTPServerEngine
 name|createJettyHTTPServerEngine
 parameter_list|(
+name|String
+name|host
+parameter_list|,
 name|int
 name|port
 parameter_list|,
@@ -734,6 +768,8 @@ argument_list|(
 name|this
 argument_list|,
 name|bus
+argument_list|,
+name|host
 argument_list|,
 name|port
 argument_list|)
@@ -869,6 +905,34 @@ expr_stmt|;
 block|}
 return|return
 name|ref
+return|;
+block|}
+comment|/**      * Calls thru to {{@link #createJettyHTTPServerEngine(String, int, String)} with a 'null' host value      */
+specifier|public
+specifier|synchronized
+name|JettyHTTPServerEngine
+name|createJettyHTTPServerEngine
+parameter_list|(
+name|int
+name|port
+parameter_list|,
+name|String
+name|protocol
+parameter_list|)
+throws|throws
+name|GeneralSecurityException
+throws|,
+name|IOException
+block|{
+return|return
+name|createJettyHTTPServerEngine
+argument_list|(
+literal|null
+argument_list|,
+name|port
+argument_list|,
+name|protocol
+argument_list|)
 return|;
 block|}
 comment|/**      * This method removes the Server Engine from the port map and stops it.      */
