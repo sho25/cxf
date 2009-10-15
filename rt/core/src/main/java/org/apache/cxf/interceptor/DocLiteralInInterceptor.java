@@ -1174,6 +1174,10 @@ name|class
 argument_list|)
 operator|==
 literal|null
+operator|||
+name|o
+operator|==
+name|xmlReader
 condition|)
 block|{
 name|xmlReader
