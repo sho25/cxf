@@ -243,7 +243,7 @@ name|fb
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://localhost"
+literal|"local://localhost"
 argument_list|)
 expr_stmt|;
 name|fb
@@ -264,7 +264,7 @@ name|jfb
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://localhost"
+literal|"local://localhost"
 argument_list|)
 expr_stmt|;
 name|jfb

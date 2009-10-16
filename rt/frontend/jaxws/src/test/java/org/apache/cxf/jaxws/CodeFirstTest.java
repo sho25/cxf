@@ -1270,7 +1270,7 @@ name|ep
 operator|.
 name|publish
 argument_list|(
-literal|"http://localhost:9090/hello"
+literal|"local://localhost:9090/hello"
 argument_list|)
 expr_stmt|;
 name|QName
@@ -1323,7 +1323,7 @@ name|portName
 argument_list|,
 literal|"http://schemas.xmlsoap.org/soap/"
 argument_list|,
-literal|"http://localhost:9090/hello"
+literal|"local://localhost:9090/hello"
 argument_list|)
 expr_stmt|;
 name|SayHi
@@ -1828,7 +1828,7 @@ name|sf
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://localhost/test"
+literal|"local://localhost/test"
 argument_list|)
 expr_stmt|;
 name|sf
@@ -1905,7 +1905,7 @@ name|sf
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://localhost/test"
+literal|"local://localhost/test"
 argument_list|)
 expr_stmt|;
 name|sf

@@ -145,6 +145,10 @@ specifier|abstract
 class|class
 name|AbstractServiceFactoryBean
 block|{
+specifier|protected
+name|boolean
+name|dataBindingSet
+decl_stmt|;
 specifier|private
 name|Bus
 name|bus
@@ -436,6 +440,14 @@ operator|.
 name|dataBinding
 operator|=
 name|dataBinding
+expr_stmt|;
+name|this
+operator|.
+name|dataBindingSet
+operator|=
+name|dataBinding
+operator|!=
+literal|null
 expr_stmt|;
 block|}
 specifier|public
