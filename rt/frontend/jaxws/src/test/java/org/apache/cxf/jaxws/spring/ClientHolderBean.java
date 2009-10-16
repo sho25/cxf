@@ -54,11 +54,6 @@ name|ClientHolderBean
 block|{
 annotation|@
 name|Autowired
-argument_list|(
-name|required
-operator|=
-literal|true
-argument_list|)
 name|Collection
 argument_list|<
 name|org
