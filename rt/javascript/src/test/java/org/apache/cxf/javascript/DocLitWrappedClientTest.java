@@ -307,7 +307,7 @@ literal|"dlw-service-endpoint"
 argument_list|,
 literal|"/org/apache/cxf/javascript/DocLitWrappedTests.js"
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
