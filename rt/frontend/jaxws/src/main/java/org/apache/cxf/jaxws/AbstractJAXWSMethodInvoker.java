@@ -510,6 +510,17 @@ name|getFaultActor
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|sfe
+operator|.
+name|getFault
+argument_list|()
+operator|.
+name|hasDetail
+argument_list|()
+condition|)
+block|{
 name|fault
 operator|.
 name|setDetail
@@ -523,6 +534,7 @@ name|getDetail
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|fault
 return|;

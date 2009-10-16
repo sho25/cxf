@@ -1454,6 +1454,19 @@ name|getRole
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|(
+operator|(
+name|SoapFault
+operator|)
+name|ex
+operator|)
+operator|.
+name|hasDetails
+argument_list|()
+condition|)
+block|{
 name|Node
 name|nd
 init|=
@@ -1471,7 +1484,7 @@ operator|)
 name|ex
 operator|)
 operator|.
-name|getOrCreateDetail
+name|getDetail
 argument_list|()
 argument_list|,
 literal|true
@@ -1518,6 +1531,7 @@ name|nd
 operator|=
 name|next
 expr_stmt|;
+block|}
 block|}
 block|}
 else|else
