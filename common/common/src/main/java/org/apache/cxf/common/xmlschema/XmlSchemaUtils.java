@@ -1819,6 +1819,13 @@ argument_list|(
 name|type
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|extSequence
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|int
@@ -1855,6 +1862,7 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|results
