@@ -245,22 +245,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|service
-operator|.
-name|model
-operator|.
-name|SchemaInfo
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
 name|ws
 operator|.
 name|commons
@@ -472,10 +456,7 @@ specifier|private
 name|NamespacePrefixAccumulator
 name|prefixAccumulator
 decl_stmt|;
-specifier|private
-name|SchemaInfo
-name|schemaInfo
-decl_stmt|;
+comment|//private SchemaInfo schemaInfo;
 comment|// In general, I (bimargulies) hate fields that are temporary communications
 comment|// between members of a class. However, given the style restrictions on the
 comment|// number of parameters, it's the least of the evils.
@@ -490,6 +471,10 @@ decl_stmt|;
 specifier|private
 name|JavascriptUtils
 name|utils
+decl_stmt|;
+specifier|private
+name|XmlSchema
+name|xmlSchema
 decl_stmt|;
 specifier|public
 name|SchemaJavascriptBuilder
@@ -527,11 +512,11 @@ specifier|public
 name|String
 name|generateCodeForSchema
 parameter_list|(
-name|SchemaInfo
+name|XmlSchema
 name|schema
 parameter_list|)
 block|{
-name|schemaInfo
+name|xmlSchema
 operator|=
 name|schema
 expr_stmt|;
@@ -556,7 +541,7 @@ literal|"// Definitions for schema: "
 operator|+
 name|schema
 operator|.
-name|getNamespaceURI
+name|getTargetNamespace
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -564,7 +549,7 @@ if|if
 condition|(
 name|schema
 operator|.
-name|getSystemId
+name|getSourceURI
 argument_list|()
 operator|!=
 literal|null
@@ -578,7 +563,7 @@ literal|"\n//  "
 operator|+
 name|schema
 operator|.
-name|getSystemId
+name|getSourceURI
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -594,9 +579,6 @@ name|XmlSchemaObjectTable
 name|schemaTypes
 init|=
 name|schema
-operator|.
-name|getSchema
-argument_list|()
 operator|.
 name|getSchemaTypes
 argument_list|()
@@ -824,9 +806,6 @@ name|schemaTypes
 operator|=
 name|schema
 operator|.
-name|getSchema
-argument_list|()
-operator|.
 name|getElements
 argument_list|()
 expr_stmt|;
@@ -930,7 +909,7 @@ argument_list|()
 argument_list|,
 name|schema
 operator|.
-name|getNamespaceURI
+name|getTargetNamespace
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -972,9 +951,6 @@ block|{
 name|type
 operator|=
 name|schema
-operator|.
-name|getSchema
-argument_list|()
 operator|.
 name|getTypeByName
 argument_list|(
@@ -1232,10 +1208,7 @@ name|forLocalItem
 argument_list|(
 name|thing
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|xmlSchemaCollection
 argument_list|,
@@ -1276,10 +1249,7 @@ name|forLocalItem
 argument_list|(
 name|thing
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|xmlSchemaCollection
 argument_list|,
@@ -2151,10 +2121,7 @@ name|forLocalItem
 argument_list|(
 name|sequenceItem
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|xmlSchemaCollection
 argument_list|,
@@ -2373,10 +2340,7 @@ name|forLocalItem
 argument_list|(
 name|contentElement
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|xmlSchemaCollection
 argument_list|,
@@ -2430,10 +2394,7 @@ name|forLocalItem
 argument_list|(
 name|nextThing
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|xmlSchemaCollection
 argument_list|,
@@ -2582,9 +2543,9 @@ name|nslist
 operator|.
 name|append
 argument_list|(
-name|schemaInfo
+name|xmlSchema
 operator|.
-name|getNamespaceURI
+name|getTargetNamespace
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -2870,9 +2831,9 @@ name|matchType
 operator|+
 literal|", '"
 operator|+
-name|schemaInfo
+name|xmlSchema
 operator|.
-name|getNamespaceURI
+name|getTargetNamespace
 argument_list|()
 operator|+
 literal|"'"
@@ -3221,10 +3182,7 @@ name|forLocalItem
 argument_list|(
 name|thing
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|xmlSchemaCollection
 argument_list|,
@@ -3317,10 +3275,7 @@ name|getElementQualifiedName
 argument_list|(
 name|element
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|)
 decl_stmt|;
 name|String
@@ -3379,10 +3334,7 @@ operator|.
 name|isGlobal
 argument_list|()
 argument_list|,
-name|schemaInfo
-operator|.
-name|getSchema
-argument_list|()
+name|xmlSchema
 argument_list|,
 name|elementSchema
 argument_list|)

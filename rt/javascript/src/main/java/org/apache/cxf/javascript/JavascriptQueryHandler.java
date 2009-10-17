@@ -965,6 +965,9 @@ operator|.
 name|generateCodeForSchema
 argument_list|(
 name|schema
+operator|.
+name|getSchema
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|writer
