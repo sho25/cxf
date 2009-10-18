@@ -143,7 +143,7 @@ name|AbstractCXFTest
 block|{
 comment|// subvert JUnit. We want to set up the application context ONCE, since it
 comment|// is likely to include a Jetty or something else that we can't get rid of.
-specifier|private
+specifier|protected
 specifier|static
 name|GenericApplicationContext
 name|applicationContext

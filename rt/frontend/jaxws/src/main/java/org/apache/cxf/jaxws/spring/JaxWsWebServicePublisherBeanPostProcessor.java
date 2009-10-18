@@ -442,6 +442,15 @@ specifier|private
 name|BeanFactory
 name|beanFactory
 decl_stmt|;
+comment|// for testing
+specifier|private
+name|boolean
+name|customizedServerFactory
+decl_stmt|;
+specifier|private
+name|boolean
+name|customizedDataBinding
+decl_stmt|;
 specifier|public
 name|JaxWsWebServicePublisherBeanPostProcessor
 parameter_list|()
@@ -809,6 +818,10 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+name|customizedServerFactory
+operator|=
+literal|true
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -876,6 +889,10 @@ literal|"prototypeDataBindingBeanName must indicate a scope='prototype' bean"
 argument_list|)
 throw|;
 block|}
+name|customizedDataBinding
+operator|=
+literal|true
+expr_stmt|;
 name|dataBinding
 operator|=
 operator|(
@@ -1120,6 +1137,26 @@ name|prototypeDataBindingBeanName
 operator|=
 name|prototypeDataBindingBeanName
 expr_stmt|;
+block|}
+comment|/**      * For Unit Test.      * @return      */
+specifier|public
+name|boolean
+name|isCustomizedServerFactory
+parameter_list|()
+block|{
+return|return
+name|customizedServerFactory
+return|;
+block|}
+comment|/**      * For Unit Test.      * @return      */
+specifier|public
+name|boolean
+name|isCustomizedDataBinding
+parameter_list|()
+block|{
+return|return
+name|customizedDataBinding
+return|;
 block|}
 block|}
 end_class
