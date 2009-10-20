@@ -159,6 +159,12 @@ name|ex
 operator|.
 name|isOneWay
 argument_list|()
+operator|&&
+operator|!
+name|isClient
+argument_list|(
+name|message
+argument_list|)
 condition|)
 block|{
 name|setOneWayMessage
@@ -210,6 +216,12 @@ name|ex
 operator|.
 name|isOneWay
 argument_list|()
+operator|&&
+operator|!
+name|isClient
+argument_list|(
+name|message
+argument_list|)
 condition|)
 block|{
 name|endHandlingMessage
