@@ -3567,7 +3567,7 @@ name|TOKEN_ID
 argument_list|,
 name|tok
 operator|.
-name|getID
+name|getIdentifier
 argument_list|()
 argument_list|)
 expr_stmt|;
