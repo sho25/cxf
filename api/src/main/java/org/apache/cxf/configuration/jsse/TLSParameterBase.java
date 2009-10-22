@@ -83,6 +83,22 @@ name|configuration
 operator|.
 name|security
 operator|.
+name|CertificateConstraintsType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|configuration
+operator|.
+name|security
+operator|.
 name|FiltersType
 import|;
 end_import
@@ -127,6 +143,10 @@ decl_stmt|;
 specifier|private
 name|FiltersType
 name|cipherSuiteFilters
+decl_stmt|;
+specifier|private
+name|CertificateConstraintsType
+name|certConstraints
 decl_stmt|;
 specifier|private
 name|SecureRandom
@@ -301,6 +321,31 @@ block|{
 name|secureRandom
 operator|=
 name|random
+expr_stmt|;
+block|}
+comment|/**      * Get the certificate constraints type      */
+specifier|public
+name|CertificateConstraintsType
+name|getCertConstraints
+parameter_list|()
+block|{
+return|return
+name|certConstraints
+return|;
+block|}
+comment|/**      * Set the certificate constraints type      */
+specifier|public
+specifier|final
+name|void
+name|setCertConstraints
+parameter_list|(
+name|CertificateConstraintsType
+name|constraints
+parameter_list|)
+block|{
+name|certConstraints
+operator|=
+name|constraints
 expr_stmt|;
 block|}
 comment|/**      * Returns the secure random alogorithm.      */
