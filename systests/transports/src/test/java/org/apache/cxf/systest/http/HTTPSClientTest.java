@@ -445,7 +445,7 @@ name|testSuccessfulCall
 argument_list|(
 literal|"resources/pkcs12.xml"
 argument_list|,
-literal|"https://localhost:9003/SoapContext/HttpsPort"
+literal|"https://localhost:9006/SoapContext/HttpsPort"
 argument_list|)
 expr_stmt|;
 block|}
