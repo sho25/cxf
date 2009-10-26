@@ -687,7 +687,12 @@ parameter_list|(
 name|boolean
 name|advisory
 parameter_list|)
-block|{     }
+block|{
+name|usingAddressingAdvisory
+operator|=
+name|advisory
+expr_stmt|;
+block|}
 comment|/**      * Whether the use of addressing is completely required for this endpoint      *      * @return true if addressing is required      */
 specifier|public
 name|boolean
