@@ -86,8 +86,10 @@ parameter_list|()
 block|{
 name|em
 operator|.
-name|activateAll
-argument_list|()
+name|activateAllByType
+argument_list|(
+name|type
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@
