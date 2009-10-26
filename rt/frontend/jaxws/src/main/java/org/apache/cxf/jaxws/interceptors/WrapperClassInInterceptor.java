@@ -926,6 +926,9 @@ name|mpi
 argument_list|)
 condition|)
 block|{
+name|count
+operator|++
+expr_stmt|;
 name|newParams
 operator|.
 name|put
