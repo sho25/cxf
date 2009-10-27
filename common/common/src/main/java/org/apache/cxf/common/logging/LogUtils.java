@@ -356,11 +356,16 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex
 parameter_list|)
 block|{
-comment|//ignore
+comment|//ignore - if we get here, some issue prevented the logger class from being loaded.
+comment|//maybe a ClassNotFound or NoClassDefFound or similar.   Just use j.u.l
+name|loggerClass
+operator|=
+literal|null
+expr_stmt|;
 block|}
 block|}
 comment|/**      * Specify a logger class that inherits from {@link AbstractDelegatingLogger}.      * Enable users to use their own logger implementation.      */
