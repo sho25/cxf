@@ -747,7 +747,22 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
-block|{     }
+block|{
+name|message
+operator|.
+name|put
+argument_list|(
+name|MAPAggregator
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+argument_list|,
+name|this
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Determine if addressing is being used      *      * @param message the current message      * @pre message is outbound      */
 specifier|private
 name|boolean
@@ -1470,7 +1485,7 @@ name|message
 argument_list|)
 condition|)
 block|{
-comment|// responder validates incoming MAPs
+comment|//responder validates incoming MAPs
 name|AddressingPropertiesImpl
 name|maps
 init|=
