@@ -842,6 +842,8 @@ argument_list|,
 name|conduit
 argument_list|,
 literal|true
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1083,6 +1085,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|destination
+argument_list|,
+literal|false
 argument_list|,
 literal|false
 argument_list|)
@@ -1555,6 +1559,8 @@ argument_list|,
 name|engine
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1773,6 +1779,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|engine
+argument_list|,
+literal|true
 argument_list|,
 literal|true
 argument_list|)

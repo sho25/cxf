@@ -662,6 +662,10 @@ name|boolean
 operator|.
 name|class
 block|,
+name|boolean
+operator|.
+name|class
+block|,
 name|Assertor
 operator|.
 name|class
@@ -797,6 +801,8 @@ name|pe
 argument_list|,
 name|requestor
 argument_list|,
+name|requestor
+argument_list|,
 name|a
 argument_list|)
 expr_stmt|;
@@ -854,6 +860,8 @@ argument_list|,
 name|pe
 argument_list|,
 name|a
+argument_list|,
+name|requestor
 argument_list|,
 name|requestor
 argument_list|)
@@ -1437,6 +1445,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|engine
+argument_list|,
+name|requestor
 argument_list|,
 name|requestor
 argument_list|,

@@ -462,6 +462,9 @@ name|assertor
 parameter_list|,
 name|boolean
 name|requestor
+parameter_list|,
+name|boolean
+name|request
 parameter_list|)
 block|{
 name|initialisePolicy
@@ -473,6 +476,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|requestor
+argument_list|,
+name|request
 argument_list|,
 name|assertor
 argument_list|)
@@ -506,6 +511,9 @@ name|engine
 parameter_list|,
 name|boolean
 name|requestor
+parameter_list|,
+name|boolean
+name|request
 parameter_list|)
 block|{
 name|Assertor
@@ -520,6 +528,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|requestor
+argument_list|,
+name|request
 argument_list|,
 literal|null
 argument_list|)
@@ -594,6 +604,9 @@ parameter_list|,
 name|boolean
 name|requestor
 parameter_list|,
+name|boolean
+name|request
+parameter_list|,
 name|Assertor
 name|assertor
 parameter_list|)
@@ -617,7 +630,7 @@ block|}
 name|BindingMessageInfo
 name|bmi
 init|=
-name|requestor
+name|request
 condition|?
 name|boi
 operator|.
