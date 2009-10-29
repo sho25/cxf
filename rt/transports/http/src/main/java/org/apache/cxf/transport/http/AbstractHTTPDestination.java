@@ -916,6 +916,24 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|credentials
+operator|!=
+literal|null
+operator|&&
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
+name|credentials
+operator|.
+name|trim
+argument_list|()
+argument_list|)
+condition|)
+block|{
 name|String
 name|authType
 init|=
@@ -1057,6 +1075,7 @@ name|ex
 parameter_list|)
 block|{
 comment|//ignore, we'll leave things alone.  They can try decoding it themselves
+block|}
 block|}
 block|}
 block|}
