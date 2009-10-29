@@ -779,6 +779,15 @@ operator|.
 name|CFG_NEXCLUDE
 argument_list|)
 expr_stmt|;
+name|set
+operator|.
+name|add
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_XJC_ARGS
+argument_list|)
+expr_stmt|;
 return|return
 name|set
 return|;

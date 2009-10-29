@@ -210,6 +210,23 @@ name|builder
 operator|.
 name|append
 argument_list|(
+literal|"XJCargs: "
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|xjcargs
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|'\n'
+argument_list|)
+expr_stmt|;
+name|builder
+operator|.
+name|append
+argument_list|(
 literal|"Packagenames: "
 argument_list|)
 operator|.

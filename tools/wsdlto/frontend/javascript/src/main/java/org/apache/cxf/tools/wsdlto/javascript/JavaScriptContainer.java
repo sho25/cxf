@@ -591,6 +591,15 @@ operator|.
 name|CFG_JSPACKAGEPREFIX
 argument_list|)
 expr_stmt|;
+name|set
+operator|.
+name|add
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_BEAN_CONFIG
+argument_list|)
+expr_stmt|;
 return|return
 name|set
 return|;
