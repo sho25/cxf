@@ -1167,6 +1167,10 @@ operator|==
 literal|null
 operator|&&
 name|baseUriStr
+operator|!=
+literal|null
+operator|&&
+name|baseUriStr
 operator|.
 name|startsWith
 argument_list|(
