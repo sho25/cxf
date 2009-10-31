@@ -126,7 +126,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @author Dan Diephouse  */
+comment|/**  * Byte arrays. Also handles MTOM.  */
 end_comment
 
 begin_class
@@ -220,16 +220,6 @@ operator|.
 name|toByteArray
 argument_list|()
 return|;
-comment|// }
-comment|// finally
-comment|// {
-comment|// DataSource dataSource = handler.getDataSource();
-comment|// if (dataSource instanceof AttachmentDataSource)
-comment|// {
-comment|// File attFile = ((AttachmentDataSource) dataSource).getFile();
-comment|// if (attFile != null) attFile.delete();
-comment|// }
-comment|// }
 block|}
 specifier|public
 specifier|static

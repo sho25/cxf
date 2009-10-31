@@ -290,7 +290,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base class for MtoM types.  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Base class for MtoM types.  */
 end_comment
 
 begin_class
