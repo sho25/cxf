@@ -67,6 +67,18 @@ return|return
 name|echo
 return|;
 block|}
+specifier|public
+name|String
+name|simpleEcho
+parameter_list|(
+name|String
+name|string
+parameter_list|)
+block|{
+return|return
+name|string
+return|;
+block|}
 block|}
 end_class
 
