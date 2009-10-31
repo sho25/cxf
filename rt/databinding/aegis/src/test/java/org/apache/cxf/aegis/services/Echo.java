@@ -17,8 +17,28 @@ name|services
 package|;
 end_package
 
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|WebMethod
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|WebParam
+import|;
+end_import
+
 begin_comment
-comment|/**  * Echo  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Simple echo service.  */
 end_comment
 
 begin_class
@@ -26,10 +46,19 @@ specifier|public
 class|class
 name|Echo
 block|{
+annotation|@
+name|WebMethod
 specifier|public
 name|String
 name|echo
 parameter_list|(
+annotation|@
+name|WebParam
+argument_list|(
+name|name
+operator|=
+literal|"echo"
+argument_list|)
 name|String
 name|echo
 parameter_list|)
