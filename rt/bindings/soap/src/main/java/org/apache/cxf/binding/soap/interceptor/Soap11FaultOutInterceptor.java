@@ -817,6 +817,16 @@ operator|.
 name|STACKTRACE
 argument_list|)
 decl_stmt|;
+name|stackTrace
+operator|.
+name|setTextContent
+argument_list|(
+name|sb
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|detail
 operator|.
 name|appendChild
