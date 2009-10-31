@@ -396,6 +396,11 @@ argument_list|(
 literal|"bean2"
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|useWrapper
+condition|)
+block|{
 name|beans
 index|[
 literal|1
@@ -403,6 +408,20 @@ index|]
 operator|=
 literal|null
 expr_stmt|;
+block|}
+else|else
+block|{
+comment|// without a wrapper, it can't be null, so put something in there.
+name|beans
+index|[
+literal|1
+index|]
+operator|=
+operator|new
+name|TestBean1
+argument_list|()
+expr_stmt|;
+block|}
 name|beans
 index|[
 literal|2
@@ -710,13 +729,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-comment|// problems with names on auto-generated wrappers!
 annotation|@
 name|Test
 specifier|public
@@ -1612,7 +1624,7 @@ name|LOG
 operator|.
 name|info
 argument_list|(
-literal|"About to call test2 with null string"
+literal|"About to call test2 with null string "
 operator|+
 name|getAddress
 argument_list|()
