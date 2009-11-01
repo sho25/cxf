@@ -2583,6 +2583,47 @@ operator|+
 literal|"+ this.jsutils.traceElementName(element));"
 argument_list|)
 expr_stmt|;
+comment|// loop to find the body.
+name|utils
+operator|.
+name|startWhile
+argument_list|(
+literal|"!this.jsutils.isNodeNamedNS(element, "
+operator|+
+literal|"'http://schemas.xmlsoap.org/soap/envelope/', 'Body')"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"element = this.jsutils.getNextElementSibling(element);"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|startIf
+argument_list|(
+literal|"element == null"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"throw 'No env:Body in message.'"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|endBlock
+argument_list|()
+expr_stmt|;
+name|utils
+operator|.
+name|endBlock
+argument_list|()
+expr_stmt|;
 comment|// Go down one more from the body to the response item.
 name|utils
 operator|.
