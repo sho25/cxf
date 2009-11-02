@@ -923,6 +923,7 @@ name|LOG
 argument_list|)
 throw|;
 block|}
+return|return;
 block|}
 name|XMLStreamReader
 name|reader
