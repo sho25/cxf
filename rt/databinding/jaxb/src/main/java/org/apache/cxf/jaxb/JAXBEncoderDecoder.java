@@ -4671,6 +4671,10 @@ condition|(
 name|source
 operator|instanceof
 name|XMLStreamReader
+operator|&&
+name|typeQName
+operator|!=
+literal|null
 condition|)
 block|{
 name|XMLStreamReader
