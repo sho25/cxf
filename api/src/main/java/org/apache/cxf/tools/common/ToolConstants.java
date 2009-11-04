@@ -447,6 +447,14 @@ name|CFG_ALLOW_ELEMENT_REFS
 init|=
 literal|"allowElementReferences"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_RESERVE_NAME
+init|=
+literal|"reserveClass"
+decl_stmt|;
 comment|//Internal Flag to generate
 specifier|public
 specifier|static

@@ -3534,7 +3534,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|7
+literal|9
 argument_list|,
 name|files
 operator|.
@@ -4249,7 +4249,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|7
+literal|9
 argument_list|,
 name|files
 operator|.
