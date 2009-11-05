@@ -80,10 +80,9 @@ name|msgName
 expr_stmt|;
 name|this
 operator|.
-name|setPart
-argument_list|(
 name|part
-argument_list|)
+operator|=
+name|part
 expr_stmt|;
 name|this
 operator|.
