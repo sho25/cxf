@@ -2610,6 +2610,17 @@ argument_list|(
 name|message
 argument_list|)
 decl_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|SCHEMA_VALIDATION_ENABLED
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
 name|InputStream
 name|is
 init|=

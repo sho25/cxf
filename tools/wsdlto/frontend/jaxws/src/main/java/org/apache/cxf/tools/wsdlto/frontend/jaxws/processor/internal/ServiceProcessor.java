@@ -2384,7 +2384,7 @@ if|if
 condition|(
 name|bopBinding
 operator|.
-name|getJaxwsPara
+name|getJaxwsParas
 argument_list|()
 operator|!=
 literal|null
@@ -2392,11 +2392,11 @@ condition|)
 block|{
 name|jaxwsBinding
 operator|.
-name|setJaxwsPara
+name|setJaxwsParas
 argument_list|(
 name|bopBinding
 operator|.
-name|getJaxwsPara
+name|getJaxwsParas
 argument_list|()
 argument_list|)
 expr_stmt|;

@@ -3895,7 +3895,7 @@ if|if
 condition|(
 name|binding2
 operator|.
-name|getJaxwsPara
+name|getJaxwsParas
 argument_list|()
 operator|!=
 literal|null
@@ -3903,11 +3903,11 @@ condition|)
 block|{
 name|binding1
 operator|.
-name|setJaxwsPara
+name|setJaxwsParas
 argument_list|(
 name|binding2
 operator|.
-name|getJaxwsPara
+name|getJaxwsParas
 argument_list|()
 argument_list|)
 expr_stmt|;
