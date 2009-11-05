@@ -344,6 +344,8 @@ block|,
 literal|"application/*+xml"
 block|,
 literal|"text/xml"
+block|,
+literal|"text/html"
 block|}
 argument_list|)
 specifier|public

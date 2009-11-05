@@ -923,6 +923,8 @@ argument_list|,
 literal|"/bookstore"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -958,6 +960,8 @@ argument_list|,
 literal|"/bookstore/"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -993,6 +997,8 @@ argument_list|,
 literal|"/bookstore/bar"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1120,6 +1126,8 @@ argument_list|,
 literal|"/1"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1155,6 +1163,8 @@ argument_list|,
 literal|"/1/"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1190,6 +1200,8 @@ argument_list|,
 literal|"/1/foo"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1225,6 +1237,8 @@ argument_list|,
 literal|"/1/foo/bar"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1352,6 +1366,8 @@ argument_list|,
 literal|"/"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1387,6 +1403,8 @@ argument_list|,
 literal|"/test"
 argument_list|,
 name|map
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -7473,7 +7491,7 @@ name|findTargetMethod
 argument_list|(
 name|cri
 argument_list|,
-literal|"/"
+literal|null
 argument_list|,
 literal|"GET"
 argument_list|,
@@ -7492,6 +7510,8 @@ name|getTypes
 argument_list|(
 literal|"text/plain"
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|assertSame
@@ -7509,7 +7529,7 @@ name|findTargetMethod
 argument_list|(
 name|cri
 argument_list|,
-literal|"/"
+literal|null
 argument_list|,
 literal|"GET"
 argument_list|,
@@ -7528,6 +7548,8 @@ name|getTypes
 argument_list|(
 literal|"text/xml"
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -7545,7 +7567,7 @@ name|findTargetMethod
 argument_list|(
 name|cri
 argument_list|,
-literal|"/"
+literal|null
 argument_list|,
 literal|"GET"
 argument_list|,
@@ -7569,6 +7591,8 @@ argument_list|(
 literal|"*,text/plain,text/xml"
 argument_list|)
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -7586,7 +7610,7 @@ name|findTargetMethod
 argument_list|(
 name|cri
 argument_list|,
-literal|"/"
+literal|null
 argument_list|,
 literal|"GET"
 argument_list|,
@@ -7610,6 +7634,8 @@ argument_list|(
 literal|"*,text/plain, text/xml,x/y"
 argument_list|)
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -10410,6 +10436,10 @@ argument_list|,
 name|path
 argument_list|,
 name|values
+argument_list|,
+operator|new
+name|MessageImpl
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -10419,18 +10449,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|String
-name|subResourcePath
-init|=
-name|values
-operator|.
-name|getFirst
-argument_list|(
-name|URITemplate
-operator|.
-name|FINAL_MATCH_GROUP
-argument_list|)
-decl_stmt|;
 name|OperationResourceInfo
 name|ori
 init|=
@@ -10440,7 +10458,7 @@ name|findTargetMethod
 argument_list|(
 name|resource
 argument_list|,
-name|subResourcePath
+literal|null
 argument_list|,
 name|httpMethod
 argument_list|,
@@ -10449,6 +10467,8 @@ argument_list|,
 name|requestContentType
 argument_list|,
 name|acceptContentTypes
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 if|if

@@ -1939,6 +1939,8 @@ argument_list|(
 literal|"NO_MSG_WRITER"
 argument_list|,
 name|cls
+argument_list|,
+name|contentType
 argument_list|)
 expr_stmt|;
 block|}
@@ -2227,6 +2229,8 @@ argument_list|(
 literal|"NO_MSG_READER"
 argument_list|,
 name|cls
+argument_list|,
+name|contentType
 argument_list|)
 expr_stmt|;
 block|}
@@ -2439,6 +2443,9 @@ argument_list|<
 name|?
 argument_list|>
 name|cls
+parameter_list|,
+name|MediaType
+name|ct
 parameter_list|)
 block|{
 name|org
@@ -2472,6 +2479,11 @@ argument_list|,
 name|BUNDLE
 argument_list|,
 name|cls
+argument_list|,
+name|ct
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|LOG

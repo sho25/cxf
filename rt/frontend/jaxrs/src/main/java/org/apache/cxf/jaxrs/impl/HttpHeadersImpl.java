@@ -250,7 +250,7 @@ name|HttpHeadersImpl
 implements|implements
 name|HttpHeaders
 block|{
-comment|// TODO : it can optimized, "Mastering Regular Expressions" has the asnwers
+comment|// TODO : it can be optimized, "Mastering Regular Expressions" has the answers
 specifier|private
 specifier|static
 specifier|final
