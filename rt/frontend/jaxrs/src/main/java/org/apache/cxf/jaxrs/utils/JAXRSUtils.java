@@ -2337,6 +2337,8 @@ operator|new
 name|OperationResourceInfoComparator
 argument_list|(
 name|message
+argument_list|,
+name|httpMethod
 argument_list|)
 argument_list|)
 decl_stmt|;
