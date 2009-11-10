@@ -2411,7 +2411,7 @@ name|setCustomToken
 argument_list|(
 name|tok
 operator|.
-name|getAttachedReference
+name|getToken
 argument_list|()
 argument_list|)
 expr_stmt|;
