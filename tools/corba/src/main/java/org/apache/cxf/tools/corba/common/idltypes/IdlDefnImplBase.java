@@ -61,11 +61,11 @@ name|IdlDefn
 block|{
 specifier|private
 specifier|static
-name|StringBuffer
+name|StringBuilder
 name|indent
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 specifier|private

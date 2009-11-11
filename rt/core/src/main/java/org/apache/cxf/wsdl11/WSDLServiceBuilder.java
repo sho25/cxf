@@ -3324,11 +3324,11 @@ name|bi
 init|=
 literal|null
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|ns
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|100
 argument_list|)

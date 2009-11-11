@@ -320,11 +320,11 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|buf
@@ -370,11 +370,11 @@ name|PolicyComponent
 name|pc
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|printPolicyComponent
@@ -407,7 +407,7 @@ parameter_list|(
 name|PolicyComponent
 name|pc
 parameter_list|,
-name|StringBuffer
+name|StringBuilder
 name|buf
 parameter_list|,
 name|int
@@ -625,7 +625,7 @@ specifier|static
 name|void
 name|indent
 parameter_list|(
-name|StringBuffer
+name|StringBuilder
 name|buf
 parameter_list|,
 name|int
@@ -661,7 +661,7 @@ specifier|static
 name|void
 name|nl
 parameter_list|(
-name|StringBuffer
+name|StringBuilder
 name|buf
 parameter_list|)
 block|{

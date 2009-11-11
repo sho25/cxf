@@ -797,7 +797,7 @@ block|{
 name|action
 operator|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 operator|.
 name|append

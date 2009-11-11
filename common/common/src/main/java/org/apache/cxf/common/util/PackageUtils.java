@@ -860,11 +860,11 @@ name|String
 name|token
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|newToken
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for
@@ -1159,11 +1159,11 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-name|StringBuffer
+name|StringBuilder
 name|namespace
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"http://"
 argument_list|)

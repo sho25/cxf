@@ -568,11 +568,11 @@ name|paramTypes
 parameter_list|)
 block|{
 comment|// compute the method descriptor
-name|StringBuffer
+name|StringBuilder
 name|b
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 operator|(
 name|method
@@ -683,7 +683,7 @@ specifier|static
 name|void
 name|addDescriptor
 parameter_list|(
-name|StringBuffer
+name|StringBuilder
 name|b
 parameter_list|,
 name|Class

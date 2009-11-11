@@ -332,11 +332,11 @@ argument_list|(
 literal|';'
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|st
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|bodyCt
 operator|.

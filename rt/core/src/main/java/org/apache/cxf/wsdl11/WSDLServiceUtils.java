@@ -110,7 +110,7 @@ parameter_list|,
 name|Bus
 name|bus
 parameter_list|,
-name|StringBuffer
+name|StringBuilder
 name|sb
 parameter_list|)
 block|{

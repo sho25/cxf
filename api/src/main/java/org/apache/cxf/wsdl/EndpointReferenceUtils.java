@@ -2918,11 +2918,11 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//wsdlLocation attribute is a list of anyURI.
-name|StringBuffer
+name|StringBuilder
 name|strBuf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for

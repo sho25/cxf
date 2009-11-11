@@ -164,11 +164,11 @@ name|fullName
 argument_list|()
 return|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|nm
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|fullName
 argument_list|)

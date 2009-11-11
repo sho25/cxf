@@ -989,11 +989,11 @@ argument_list|,
 literal|"-.!~*'();?:@&=+$,"
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|strBuf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 if|if

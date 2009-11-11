@@ -3758,11 +3758,11 @@ argument_list|(
 name|i
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|id
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|prefix
 argument_list|)

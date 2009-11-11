@@ -170,11 +170,11 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|str
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|str

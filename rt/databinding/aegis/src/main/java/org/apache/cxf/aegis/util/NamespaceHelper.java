@@ -587,11 +587,11 @@ name|nextToken
 argument_list|()
 expr_stmt|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|sb
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|80
 argument_list|)
@@ -917,11 +917,11 @@ name|nextToken
 argument_list|()
 expr_stmt|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|sb
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|namespace
 operator|.
@@ -1013,7 +1013,7 @@ specifier|static
 name|void
 name|addWordToPackageBuffer
 parameter_list|(
-name|StringBuffer
+name|StringBuilder
 name|sb
 parameter_list|,
 name|String

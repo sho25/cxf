@@ -318,11 +318,11 @@ block|{
 name|id
 operator|++
 expr_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|name
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|name

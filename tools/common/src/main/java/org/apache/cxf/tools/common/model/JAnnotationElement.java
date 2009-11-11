@@ -204,11 +204,11 @@ name|String
 name|toString
 parameter_list|()
 block|{
-name|StringBuffer
+name|StringBuilder
 name|sb
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 if|if
@@ -352,7 +352,7 @@ name|void
 name|appendValue
 parameter_list|(
 specifier|final
-name|StringBuffer
+name|StringBuilder
 name|sb
 parameter_list|,
 specifier|final
@@ -569,7 +569,7 @@ name|void
 name|appendEnumValue
 parameter_list|(
 specifier|final
-name|StringBuffer
+name|StringBuilder
 name|sb
 parameter_list|,
 specifier|final
@@ -697,7 +697,7 @@ name|void
 name|getStringValue
 parameter_list|(
 specifier|final
-name|StringBuffer
+name|StringBuilder
 name|sb
 parameter_list|,
 specifier|final

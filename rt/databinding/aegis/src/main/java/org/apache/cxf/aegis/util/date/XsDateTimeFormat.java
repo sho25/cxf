@@ -476,7 +476,7 @@ throw|throw
 operator|new
 name|NullPointerException
 argument_list|(
-literal|"The StringBuffer argument must not be null."
+literal|"The StringBuilder argument must not be null."
 argument_list|)
 throw|;
 block|}

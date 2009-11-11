@@ -1057,11 +1057,11 @@ throws|throws
 name|SSLException
 block|{
 comment|// Build up lists of allowed hosts For logging/debugging purposes.
-name|StringBuffer
+name|StringBuilder
 name|buf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|32
 argument_list|)
@@ -1316,11 +1316,11 @@ name|msg
 argument_list|)
 throw|;
 block|}
-comment|// StringBuffer for building the error message.
+comment|// StringBuilder for building the error message.
 name|buf
 operator|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 expr_stmt|;
 name|boolean
@@ -1366,7 +1366,7 @@ operator|.
 name|toLowerCase
 argument_list|()
 expr_stmt|;
-comment|// Store CN in StringBuffer in case we need to report an error.
+comment|// Store CN in StringBuilder in case we need to report an error.
 name|buf
 operator|.
 name|append

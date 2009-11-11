@@ -105,7 +105,7 @@ class|class
 name|NamespacePrefixAccumulator
 block|{
 specifier|private
-name|StringBuffer
+name|StringBuilder
 name|attributes
 decl_stmt|;
 specifier|private
@@ -142,7 +142,7 @@ block|{
 name|attributes
 operator|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 expr_stmt|;
 name|prefixes

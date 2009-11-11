@@ -460,11 +460,11 @@ name|FINE
 argument_list|)
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|debugMsg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"Parsing arguments: "
 argument_list|)
@@ -1252,11 +1252,11 @@ name|i
 operator|++
 expr_stmt|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|strbuffer
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for
@@ -1601,7 +1601,7 @@ specifier|private
 name|int
 name|splitAndAppendText
 parameter_list|(
-name|StringBuffer
+name|StringBuilder
 name|buffer
 parameter_list|,
 name|String
@@ -1696,7 +1696,7 @@ specifier|private
 name|void
 name|addWhiteNamespace
 parameter_list|(
-name|StringBuffer
+name|StringBuilder
 name|strbuffer
 parameter_list|,
 name|int

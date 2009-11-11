@@ -208,11 +208,11 @@ parameter_list|()
 throws|throws
 name|URISyntaxException
 block|{
-name|StringBuffer
+name|StringBuilder
 name|sb
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 if|if
@@ -1141,11 +1141,11 @@ operator|>
 literal|0
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|rc
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|boolean

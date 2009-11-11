@@ -357,11 +357,11 @@ name|line
 init|=
 literal|null
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|sb
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for
@@ -691,11 +691,11 @@ name|JSDOMProviderException
 name|ex
 parameter_list|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|f
 operator|.
@@ -834,11 +834,11 @@ literal|"base "
 else|:
 literal|""
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"creating a "
 argument_list|)
