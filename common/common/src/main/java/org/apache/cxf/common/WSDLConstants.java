@@ -628,15 +628,6 @@ name|ATTR_TYPE
 init|=
 literal|"type"
 decl_stmt|;
-comment|//For Stax2DOM getUserData(location)
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|NODE_LOCATION
-init|=
-literal|"location"
-decl_stmt|;
 specifier|public
 specifier|static
 specifier|final

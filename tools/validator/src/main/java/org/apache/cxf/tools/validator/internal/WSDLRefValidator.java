@@ -1675,9 +1675,7 @@ name|node
 operator|.
 name|getUserData
 argument_list|(
-name|WSDLConstants
-operator|.
-name|NODE_LOCATION
+literal|"location"
 argument_list|)
 argument_list|,
 name|doc
