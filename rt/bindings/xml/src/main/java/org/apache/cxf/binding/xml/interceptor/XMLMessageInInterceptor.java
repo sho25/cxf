@@ -442,6 +442,15 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|xsr
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|DepthXMLStreamReader
 name|reader
 init|=

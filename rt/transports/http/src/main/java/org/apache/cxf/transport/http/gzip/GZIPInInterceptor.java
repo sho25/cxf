@@ -347,10 +347,6 @@ name|String
 argument_list|>
 name|contentEncoding
 init|=
-name|CastUtils
-operator|.
-name|cast
-argument_list|(
 name|HttpHeaderHelper
 operator|.
 name|getHeader
@@ -360,7 +356,6 @@ argument_list|,
 name|HttpHeaderHelper
 operator|.
 name|CONTENT_ENCODING
-argument_list|)
 argument_list|)
 decl_stmt|;
 if|if

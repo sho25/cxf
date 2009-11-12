@@ -265,6 +265,13 @@ name|DOMSource
 name|request
 parameter_list|)
 block|{
+if|if
+condition|(
+name|request
+operator|!=
+literal|null
+condition|)
+block|{
 name|QName
 name|qn
 init|=
@@ -297,6 +304,7 @@ argument_list|(
 literal|"No Operation Name"
 argument_list|)
 throw|;
+block|}
 block|}
 name|DocumentBuilderFactory
 name|factory

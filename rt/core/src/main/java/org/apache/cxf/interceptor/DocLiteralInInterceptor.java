@@ -507,6 +507,10 @@ comment|//if body is empty and we have BindingOperationInfo, we do not need to m
 comment|//operation anymore, just return
 if|if
 condition|(
+name|bop
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|StaxUtils
 operator|.
@@ -514,10 +518,6 @@ name|toNextElement
 argument_list|(
 name|xmlReader
 argument_list|)
-operator|&&
-name|bop
-operator|!=
-literal|null
 condition|)
 block|{
 comment|// body may be empty for partial response to decoupled request
@@ -554,6 +554,18 @@ block|{
 name|QName
 name|startQName
 init|=
+name|xmlReader
+operator|==
+literal|null
+condition|?
+operator|new
+name|QName
+argument_list|(
+literal|"http://cxf.apache.org/jaxws/provider"
+argument_list|,
+literal|"invoke"
+argument_list|)
+else|:
 name|xmlReader
 operator|.
 name|getName
@@ -889,6 +901,10 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+name|xmlReader
+operator|==
+literal|null
+operator|||
 operator|!
 name|StaxUtils
 operator|.
