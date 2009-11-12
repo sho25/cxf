@@ -1185,10 +1185,14 @@ name|doc
 operator|.
 name|setDocumentURI
 argument_list|(
+operator|new
+name|String
+argument_list|(
 name|src
 operator|.
 name|getSystemId
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
