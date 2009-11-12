@@ -698,6 +698,13 @@ argument_list|(
 name|ei
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|policy
+operator|!=
+literal|null
+condition|)
+block|{
 name|ei
 operator|.
 name|addExtensor
@@ -705,6 +712,7 @@ argument_list|(
 name|policy
 argument_list|)
 expr_stmt|;
+block|}
 name|BindingOperationInfo
 name|boi
 init|=
