@@ -177,6 +177,22 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|ext
+operator|.
+name|Description
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
 name|fortest
 operator|.
 name|jaxb
@@ -210,6 +226,21 @@ literal|"application/xml"
 block|,
 literal|"application/json"
 block|}
+argument_list|)
+annotation|@
+name|Description
+argument_list|(
+name|lang
+operator|=
+literal|"en-us"
+argument_list|,
+name|title
+operator|=
+literal|"book store resource"
+argument_list|,
+name|value
+operator|=
+literal|"super resource"
 argument_list|)
 specifier|public
 class|class
