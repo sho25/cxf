@@ -6919,6 +6919,20 @@ condition|)
 block|{
 return|return;
 block|}
+if|if
+condition|(
+name|outMessage
+operator|.
+name|get
+argument_list|(
+literal|"org.apache.cxf.post.empty"
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 comment|// If we need to cache for retransmission, store data in a
 comment|// CacheAndWriteOutputStream. Otherwise write directly to the output stream.
 if|if
