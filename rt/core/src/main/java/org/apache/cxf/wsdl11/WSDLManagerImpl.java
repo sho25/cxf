@@ -1181,6 +1181,16 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|src
+operator|.
+name|getSystemId
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|doc
 operator|.
 name|setDocumentURI
@@ -1195,6 +1205,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
