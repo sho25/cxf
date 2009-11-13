@@ -2151,6 +2151,8 @@ operator|.
 name|getDocument
 argument_list|()
 decl_stmt|;
+try|try
+block|{
 name|d
 operator|.
 name|setDocumentURI
@@ -2161,6 +2163,15 @@ name|getDocumentURI
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - probably not DOM level 3
+block|}
 return|return
 name|d
 return|;
@@ -4004,6 +4015,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|doc
 operator|.
 name|setDocumentURI
@@ -4021,6 +4034,15 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+comment|//ignore - probably not DOM level 3
+block|}
 block|}
 name|readDocElements
 argument_list|(
@@ -4077,6 +4099,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|doc
 operator|.
 name|setDocumentURI
@@ -4094,6 +4118,15 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+comment|//ignore - probably not DOM level 3
+block|}
 block|}
 name|readDocElements
 argument_list|(
@@ -4211,6 +4244,8 @@ argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
+name|recordLocation
+operator|=
 name|addLocation
 argument_list|(
 name|doc
@@ -4677,6 +4712,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|recordLoc
+operator|=
 name|addLocation
 argument_list|(
 name|doc
@@ -4737,6 +4774,8 @@ name|XMLStreamConstants
 operator|.
 name|CDATA
 case|:
+name|recordLoc
+operator|=
 name|addLocation
 argument_list|(
 name|doc
@@ -4837,7 +4876,7 @@ block|}
 block|}
 specifier|private
 specifier|static
-name|void
+name|boolean
 name|addLocation
 parameter_list|(
 name|Document
@@ -4888,6 +4927,8 @@ operator|!=
 literal|0
 operator|)
 condition|)
+block|{
+try|try
 block|{
 specifier|final
 name|int
@@ -5068,7 +5109,22 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//possibly not DOM level 3, won't be able to record this then
+return|return
+literal|false
+return|;
 block|}
+block|}
+block|}
+return|return
+name|recordLoc
+return|;
 block|}
 specifier|private
 specifier|static

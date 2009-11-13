@@ -1145,6 +1145,8 @@ operator|instanceof
 name|Document
 condition|)
 block|{
+try|try
+block|{
 name|enc
 operator|=
 operator|(
@@ -1165,6 +1167,15 @@ operator|.
 name|getXmlEncoding
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - not DOM level 3
+block|}
 block|}
 name|writeTo
 argument_list|(

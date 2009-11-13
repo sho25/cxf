@@ -1855,6 +1855,8 @@ name|Location
 name|getLocation
 parameter_list|()
 block|{
+try|try
+block|{
 name|Object
 name|o
 init|=
@@ -1879,6 +1881,15 @@ name|Location
 operator|)
 name|o
 return|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore, probably not DOM level 3
 block|}
 return|return
 name|super

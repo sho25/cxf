@@ -1359,6 +1359,8 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
+try|try
+block|{
 name|document
 operator|.
 name|setXmlVersion
@@ -1366,6 +1368,15 @@ argument_list|(
 name|version
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - likely not DOM level 3
+block|}
 block|}
 specifier|public
 name|void
@@ -1380,6 +1391,8 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
+try|try
+block|{
 name|document
 operator|.
 name|setXmlVersion
@@ -1387,6 +1400,15 @@ argument_list|(
 name|version
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - likely not DOM level 3
+block|}
 block|}
 specifier|public
 name|void

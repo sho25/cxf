@@ -1191,6 +1191,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|doc
 operator|.
 name|setDocumentURI
@@ -1205,6 +1207,15 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+comment|// ignore - probably not DOM level 3
+block|}
 block|}
 block|}
 catch|catch

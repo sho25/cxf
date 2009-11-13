@@ -1458,11 +1458,26 @@ expr_stmt|;
 name|String
 name|enc
 init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+name|enc
+operator|=
 name|doc
 operator|.
 name|getXmlEncoding
 argument_list|()
-decl_stmt|;
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - not dom level 3
+block|}
 if|if
 condition|(
 name|enc
@@ -1917,6 +1932,8 @@ block|}
 block|}
 block|}
 block|}
+try|try
+block|{
 name|doc
 operator|.
 name|setXmlStandalone
@@ -1924,6 +1941,15 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//likely not DOM level 3
+block|}
 block|}
 specifier|static
 name|String

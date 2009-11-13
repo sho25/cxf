@@ -1664,6 +1664,8 @@ operator|!=
 name|node
 condition|)
 block|{
+try|try
+block|{
 return|return
 operator|new
 name|FailureLocation
@@ -1684,6 +1686,15 @@ name|getDocumentURI
 argument_list|()
 argument_list|)
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore, probably not DOM level 3
+block|}
 block|}
 block|}
 return|return

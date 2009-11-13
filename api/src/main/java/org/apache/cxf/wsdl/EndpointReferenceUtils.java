@@ -3239,6 +3239,8 @@ operator|instanceof
 name|Document
 condition|)
 block|{
+try|try
+block|{
 operator|(
 operator|(
 name|Document
@@ -3254,6 +3256,15 @@ name|getSystemId
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - not DOM level 3
+block|}
 name|node
 operator|=
 name|node
@@ -3550,11 +3561,26 @@ decl_stmt|;
 name|String
 name|baseURI
 init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+name|baseURI
+operator|=
 name|el
 operator|.
 name|getBaseURI
 argument_list|()
-decl_stmt|;
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|//ignore - not DOM level 3
+block|}
 if|if
 condition|(
 name|baseURI
