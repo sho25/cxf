@@ -5290,9 +5290,11 @@ if|if
 condition|(
 name|s
 operator|.
-name|startsWith
+name|contains
 argument_list|(
 name|cookieName
+operator|+
+literal|"="
 argument_list|)
 condition|)
 block|{
