@@ -321,10 +321,14 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|public
+specifier|static
 name|JavaInterface
 name|getInterface
 parameter_list|(
+name|ToolContext
+name|context
+parameter_list|,
 name|ServiceInfo
 name|serviceInfo
 parameter_list|,
@@ -756,6 +760,8 @@ return|return;
 block|}
 name|getInterface
 argument_list|(
+name|context
+argument_list|,
 name|serviceInfo
 argument_list|,
 name|interfaceInfo
@@ -811,6 +817,8 @@ name|intf
 init|=
 name|getInterface
 argument_list|(
+name|context
+argument_list|,
 name|serviceInfo
 argument_list|,
 name|interfaceInfo

@@ -6163,7 +6163,7 @@ name|str
 operator|.
 name|contains
 argument_list|(
-literal|"class javadoc"
+literal|"service class javadoc"
 argument_list|)
 condition|)
 block|{
@@ -6175,11 +6175,21 @@ block|}
 block|}
 name|assertTrue
 argument_list|(
+name|results1
+operator|.
+name|toString
+argument_list|()
+argument_list|,
 name|match1
 argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+name|results2
+operator|.
+name|toString
+argument_list|()
+argument_list|,
 name|match2
 argument_list|)
 expr_stmt|;
