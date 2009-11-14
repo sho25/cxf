@@ -6120,7 +6120,7 @@ operator|.
 name|getCanonicalPath
 argument_list|()
 argument_list|,
-literal|"org/mypkg/SOAPService.java"
+literal|"org/mypkg/SOAPServiceTest1.java"
 argument_list|)
 argument_list|)
 decl_stmt|;
