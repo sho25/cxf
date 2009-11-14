@@ -274,6 +274,11 @@ comment|/**  *   */
 end_comment
 
 begin_class
+annotation|@
+name|Ignore
+argument_list|(
+literal|"randomly fails on Hudson, but dkulp cannot reproduce yet"
+argument_list|)
 specifier|public
 class|class
 name|ClientServerXmlBeansTest
@@ -335,11 +340,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"randomly fails on Hudson, but dkulp cannot reproduce yet"
-argument_list|)
 specifier|public
 name|void
 name|testCallFromClient
