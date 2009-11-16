@@ -508,6 +508,11 @@ decl_stmt|;
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|il
 init|=
@@ -745,6 +750,11 @@ decl_stmt|;
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|il
 init|=
@@ -1094,6 +1104,11 @@ decl_stmt|;
 name|Collection
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|is
 init|=

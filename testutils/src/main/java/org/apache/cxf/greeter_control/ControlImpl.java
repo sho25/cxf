@@ -211,6 +211,20 @@ name|Interceptor
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
 begin_class
 annotation|@
 name|WebService
@@ -570,6 +584,11 @@ block|{
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|interceptors
 init|=

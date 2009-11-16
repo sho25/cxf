@@ -25,6 +25,20 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
 begin_comment
 comment|/**  * The<code>InterceptorProvider</code> interface is implemented by objects   * that have interceptor chains associated with them. The methods in this   * interface provide the ability to add and remove interceptors to the chains  * of the InterceptorProvider.  */
 end_comment
@@ -38,6 +52,11 @@ comment|/**      * Returns the list of interceptors attached to the incoming int
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|getInInterceptors
 parameter_list|()
@@ -46,6 +65,11 @@ comment|/**      * Returns the list of interceptors attached to the outgoing int
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|getOutInterceptors
 parameter_list|()
@@ -54,6 +78,11 @@ comment|/**      * Returns the list of interceptors attached to the incoming fau
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|getInFaultInterceptors
 parameter_list|()
@@ -62,6 +91,11 @@ comment|/**      * Returns the list of interceptors attached to the outgoing fau
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|getOutFaultInterceptors
 parameter_list|()

@@ -647,6 +647,11 @@ operator|new
 name|ArrayList
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 argument_list|()
 argument_list|)
@@ -665,6 +670,11 @@ operator|new
 name|ArrayList
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 argument_list|()
 argument_list|)

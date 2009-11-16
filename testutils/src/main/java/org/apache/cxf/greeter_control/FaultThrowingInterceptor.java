@@ -133,6 +133,9 @@ class|class
 name|FaultThrowingInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|public
 specifier|static

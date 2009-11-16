@@ -148,6 +148,9 @@ class|class
 name|AnnotationFeatureInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|public
 name|AnnotationFeatureInterceptor

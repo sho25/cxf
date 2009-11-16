@@ -494,6 +494,11 @@ decl_stmt|;
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|interceptors
 init|=
@@ -505,6 +510,11 @@ decl_stmt|;
 for|for
 control|(
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 name|oi
 range|:
 name|interceptors

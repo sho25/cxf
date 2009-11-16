@@ -243,6 +243,9 @@ class|class
 name|OutMessageRecorder
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|private
 specifier|static

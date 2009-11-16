@@ -109,6 +109,11 @@ name|void
 name|add
 parameter_list|(
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 name|i
 parameter_list|)
 function_decl|;
@@ -119,6 +124,11 @@ parameter_list|(
 name|Collection
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|i
 parameter_list|)
@@ -127,6 +137,11 @@ name|void
 name|remove
 parameter_list|(
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 name|i
 parameter_list|)
 function_decl|;

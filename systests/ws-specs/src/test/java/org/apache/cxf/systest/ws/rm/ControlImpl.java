@@ -265,20 +265,6 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|Interceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
 name|LoggingInInterceptor
 import|;
 end_import
@@ -296,10 +282,6 @@ operator|.
 name|LoggingOutInterceptor
 import|;
 end_import
-
-begin_comment
-comment|//import org.apache.cxf.jaxws.EndpointImpl;
-end_comment
 
 begin_class
 annotation|@
@@ -431,14 +413,14 @@ name|getInInterceptors
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Interceptor
+name|LoggingInInterceptor
 name|logIn
 init|=
 operator|new
 name|LoggingInInterceptor
 argument_list|()
 decl_stmt|;
-name|Interceptor
+name|LoggingOutInterceptor
 name|logOut
 init|=
 operator|new

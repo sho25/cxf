@@ -186,6 +186,11 @@ specifier|public
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|getFaultInInterceptors
 parameter_list|()
@@ -201,6 +206,11 @@ specifier|public
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|getFaultOutInterceptors
 parameter_list|()

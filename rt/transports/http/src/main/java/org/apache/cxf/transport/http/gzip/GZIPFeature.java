@@ -99,6 +99,20 @@ name|InterceptorProvider
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class is used to control GZIP compression of messages.  * Attaching this feature to an endpoint will allow the endpoint to handle  * compressed requests, and will cause outgoing responses to be compressed if  * the client indicates (via the Accept-Encoding header) that it can handle  * them.  *<pre>  *<![CDATA[  *<jaxws:endpoint ...>  *<jaxws:features>  *<bean class="org.apache.cxf.transport.http.gzip.GZIPFeature"/>  *</jaxws:features>  *</jaxws:endpoint>  * ]]>  *</pre>  * Attaching this feature to a client will cause outgoing request messages to  * be compressed and incoming compressed responses to be uncompressed.  If you  * want the service to know that your client can accept compressed responses,  * you will also need to set the "AcceptEncoding" value in the relevant HTTP  * conduit client configuration.  *<pre>  *<![CDATA[  *<http-conf:conduit name="{http://apache.org/hello_world_soap_http}SoapPort.http-conduit">  *<http-conf:client AcceptEncoding="gzip" />  *</http-conf:conduit>  * ]]>  *</pre>  */
 end_comment
@@ -262,6 +276,11 @@ parameter_list|(
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|outInterceptors
 parameter_list|)

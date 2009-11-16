@@ -135,6 +135,9 @@ class|class
 name|RetransmissionInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 name|RMManager
 name|manager

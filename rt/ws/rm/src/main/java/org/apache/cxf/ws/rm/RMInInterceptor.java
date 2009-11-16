@@ -139,6 +139,9 @@ class|class
 name|RMInInterceptor
 extends|extends
 name|AbstractRMInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|private
 specifier|static

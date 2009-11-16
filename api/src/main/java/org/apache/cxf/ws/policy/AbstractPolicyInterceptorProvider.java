@@ -171,6 +171,11 @@ specifier|public
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|provideInFaultInterceptors
 parameter_list|(
@@ -187,6 +192,11 @@ specifier|public
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|provideInInterceptors
 parameter_list|(
@@ -203,6 +213,11 @@ specifier|public
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|provideOutFaultInterceptors
 parameter_list|(
@@ -219,6 +234,11 @@ specifier|public
 name|List
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|provideOutInterceptors
 parameter_list|(

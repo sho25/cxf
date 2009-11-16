@@ -283,15 +283,10 @@ begin_class
 specifier|public
 class|class
 name|LogicalHandlerInInterceptor
-parameter_list|<
-name|T
-extends|extends
-name|Message
-parameter_list|>
 extends|extends
 name|AbstractJAXWSHandlerInterceptor
 argument_list|<
-name|T
+name|Message
 argument_list|>
 block|{
 specifier|public
@@ -345,7 +340,7 @@ specifier|public
 name|void
 name|handleMessage
 parameter_list|(
-name|T
+name|Message
 name|message
 parameter_list|)
 block|{
@@ -471,7 +466,7 @@ specifier|private
 name|void
 name|handleAbort
 parameter_list|(
-name|T
+name|Message
 name|message
 parameter_list|,
 name|W3CDOMStreamWriter
@@ -613,7 +608,7 @@ specifier|public
 name|void
 name|handleFault
 parameter_list|(
-name|T
+name|Message
 name|message
 parameter_list|)
 block|{

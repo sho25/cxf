@@ -697,6 +697,11 @@ parameter_list|(
 name|Collection
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|newhandlers
 parameter_list|)
@@ -716,6 +721,11 @@ parameter_list|(
 name|Collection
 argument_list|<
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 argument_list|>
 name|newhandlers
 parameter_list|,

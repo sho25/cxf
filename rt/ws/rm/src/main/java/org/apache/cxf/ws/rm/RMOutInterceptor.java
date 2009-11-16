@@ -237,6 +237,9 @@ class|class
 name|RMOutInterceptor
 extends|extends
 name|AbstractRMInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|private
 specifier|static
