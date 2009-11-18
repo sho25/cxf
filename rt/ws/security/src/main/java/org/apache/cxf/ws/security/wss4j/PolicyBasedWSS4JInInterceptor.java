@@ -3312,7 +3312,7 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
-comment|//stuff we can default to asserted an un-assert if a condition isn't met
+comment|//stuff we can default to asserted and un-assert if a condition isn't met
 name|assertPolicy
 argument_list|(
 name|aim
