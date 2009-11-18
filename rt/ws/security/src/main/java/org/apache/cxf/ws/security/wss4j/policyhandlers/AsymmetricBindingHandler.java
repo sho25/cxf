@@ -2030,6 +2030,16 @@ operator|.
 name|computeSignature
 argument_list|()
 expr_stmt|;
+name|signatures
+operator|.
+name|add
+argument_list|(
+name|dkSign
+operator|.
+name|getSignatureValue
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// Add elements to header
 name|addDerivedKeyElement
 argument_list|(
@@ -2136,6 +2146,16 @@ name|sig
 operator|.
 name|computeSignature
 argument_list|()
+expr_stmt|;
+name|signatures
+operator|.
+name|add
+argument_list|(
+name|sig
+operator|.
+name|getSignatureValue
+argument_list|()
+argument_list|)
 expr_stmt|;
 name|insertBeforeBottomUp
 argument_list|(
