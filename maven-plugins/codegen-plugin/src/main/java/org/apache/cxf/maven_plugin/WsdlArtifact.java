@@ -15,6 +15,10 @@ name|maven_plugin
 package|;
 end_package
 
+begin_comment
+comment|/**  * Represents a wsdl file that is stored in a maven repository  */
+end_comment
+
 begin_class
 specifier|public
 class|class
