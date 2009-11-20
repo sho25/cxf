@@ -25,18 +25,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
-name|Constructor
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|logging
@@ -90,10 +78,6 @@ block|{
 specifier|private
 name|AtomPushEngine
 name|engine
-init|=
-operator|new
-name|AtomPushEngine
-argument_list|()
 decl_stmt|;
 specifier|private
 name|boolean
@@ -126,6 +110,12 @@ name|deliverer
 parameter_list|)
 block|{
 name|engine
+operator|=
+operator|new
+name|AtomPushEngine
+argument_list|()
+expr_stmt|;
+name|engine
 operator|.
 name|setBatchSize
 argument_list|(
@@ -145,6 +135,20 @@ name|setDeliverer
 argument_list|(
 name|deliverer
 argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Creates handler using (package private).      *       * @param engine configured engine.      */
+name|AtomPushHandler
+parameter_list|(
+name|AtomPushEngine
+name|engine
+parameter_list|)
+block|{
+name|this
+operator|.
+name|engine
+operator|=
+name|engine
 expr_stmt|;
 block|}
 annotation|@
@@ -192,7 +196,7 @@ name|lazyConfig
 operator|=
 literal|false
 expr_stmt|;
-name|configure
+name|configure2
 argument_list|()
 expr_stmt|;
 block|}
@@ -252,9 +256,41 @@ block|{
 comment|// no-op
 block|}
 comment|/**      * Configuration from properties. Aligned to JUL strategy - properties file is only for simple      * configuration: it allows configure one root handler with its parameters. What is even more dummy, JUL      * does not allow to iterate over configuration properties to make interpretation automated (e.g. using      * commons-beanutils)      */
+comment|// private void configure() {
+comment|// LogManager manager = LogManager.getLogManager();
+comment|// String cname = getClass().getName();
+comment|// String url = manager.getProperty(cname + ".url");
+comment|// if (url == null) {
+comment|// // cannot proceed
+comment|// return;
+comment|// }
+comment|// String deliverer = manager.getProperty(cname + ".deliverer");
+comment|// if (deliverer != null) {
+comment|// engine.setDeliverer(createDeliverer(deliverer, url));
+comment|// } else {
+comment|// // default
+comment|// engine.setDeliverer(new WebClientDeliverer(url));
+comment|// }
+comment|// String converter = manager.getProperty(cname + ".converter");
+comment|// if (converter != null) {
+comment|// engine.setConverter(createConverter(converter));
+comment|// } else {
+comment|// // default
+comment|// engine.setConverter(new ContentSingleEntryConverter());
+comment|// }
+comment|// engine.setBatchSize(toInt(manager.getProperty(cname + ".batchSize"), 1, 1));
+comment|// String retryType = manager.getProperty(cname + ".retry.pause");
+comment|// if (retryType != null) {
+comment|// int timeout = toInt(manager.getProperty(cname + ".retry.timeout"), 0, 0);
+comment|// int pause = toInt(manager.getProperty(cname + ".retry.pause.time"), 1, 30);
+comment|// boolean linear = !retryType.equalsIgnoreCase("exponential");
+comment|// Deliverer wrapped = new RetryingDeliverer(engine.getDeliverer(), timeout, pause, linear);
+comment|// engine.setDeliverer(wrapped);
+comment|// }
+comment|// }
 specifier|private
 name|void
-name|configure
+name|configure2
 parameter_list|()
 block|{
 name|LogManager
@@ -274,9 +310,17 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|String
-name|url
+name|AtomPushEngineConfigurator
+name|conf
 init|=
+operator|new
+name|AtomPushEngineConfigurator
+argument_list|()
+decl_stmt|;
+name|conf
+operator|.
+name|setUrl
+argument_list|(
 name|manager
 operator|.
 name|getProperty
@@ -285,20 +329,12 @@ name|cname
 operator|+
 literal|".url"
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|url
-operator|==
-literal|null
-condition|)
-block|{
-comment|// cannot proceed
-return|return;
-block|}
-name|String
-name|deliverer
-init|=
+argument_list|)
+expr_stmt|;
+name|conf
+operator|.
+name|setDelivererClass
+argument_list|(
 name|manager
 operator|.
 name|getProperty
@@ -307,45 +343,12 @@ name|cname
 operator|+
 literal|".deliverer"
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|deliverer
-operator|!=
-literal|null
-condition|)
-block|{
-name|engine
-operator|.
-name|setDeliverer
-argument_list|(
-name|createDeliverer
-argument_list|(
-name|deliverer
-argument_list|,
-name|url
-argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-comment|// default
-name|engine
+name|conf
 operator|.
-name|setDeliverer
+name|setConverterClass
 argument_list|(
-operator|new
-name|WebClientDeliverer
-argument_list|(
-name|url
-argument_list|)
-argument_list|)
-expr_stmt|;
-block|}
-name|String
-name|converter
-init|=
 name|manager
 operator|.
 name|getProperty
@@ -354,43 +357,11 @@ name|cname
 operator|+
 literal|".converter"
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|converter
-operator|!=
-literal|null
-condition|)
-block|{
-name|engine
-operator|.
-name|setConverter
-argument_list|(
-name|createConverter
-argument_list|(
-name|converter
-argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-else|else
-block|{
-comment|// default
-name|engine
-operator|.
-name|setConverter
-argument_list|(
-operator|new
-name|ContentSingleEntryConverter
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-name|engine
+name|conf
 operator|.
 name|setBatchSize
-argument_list|(
-name|toInt
 argument_list|(
 name|manager
 operator|.
@@ -400,16 +371,12 @@ name|cname
 operator|+
 literal|".batchSize"
 argument_list|)
-argument_list|,
-literal|1
-argument_list|,
-literal|1
-argument_list|)
 argument_list|)
 expr_stmt|;
-name|String
-name|retryType
-init|=
+name|conf
+operator|.
+name|setRetryPauseType
+argument_list|(
 name|manager
 operator|.
 name|getProperty
@@ -418,37 +385,11 @@ name|cname
 operator|+
 literal|".retry.pause"
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|retryType
-operator|!=
-literal|null
-condition|)
-block|{
-name|int
-name|timeout
-init|=
-name|toInt
-argument_list|(
-name|manager
+argument_list|)
+expr_stmt|;
+name|conf
 operator|.
-name|getProperty
-argument_list|(
-name|cname
-operator|+
-literal|".retry.timeout"
-argument_list|)
-argument_list|,
-literal|0
-argument_list|,
-literal|0
-argument_list|)
-decl_stmt|;
-name|int
-name|pause
-init|=
-name|toInt
+name|setRetryPauseTime
 argument_list|(
 name|manager
 operator|.
@@ -458,322 +399,77 @@ name|cname
 operator|+
 literal|".retry.pause.time"
 argument_list|)
-argument_list|,
-literal|1
-argument_list|,
-literal|30
-argument_list|)
-decl_stmt|;
-name|boolean
-name|linear
-init|=
-operator|!
-name|retryType
-operator|.
-name|equalsIgnoreCase
-argument_list|(
-literal|"exponential"
-argument_list|)
-decl_stmt|;
-name|Deliverer
-name|wrapped
-init|=
-operator|new
-name|RetryingDeliverer
-argument_list|(
-name|engine
-operator|.
-name|getDeliverer
-argument_list|()
-argument_list|,
-name|timeout
-argument_list|,
-name|pause
-argument_list|,
-name|linear
-argument_list|)
-decl_stmt|;
-name|engine
-operator|.
-name|setDeliverer
-argument_list|(
-name|wrapped
 argument_list|)
 expr_stmt|;
-block|}
-block|}
-specifier|private
-name|int
-name|toInt
-parameter_list|(
-name|String
-name|property
-parameter_list|,
-name|int
-name|defaultValue
-parameter_list|)
-block|{
-try|try
-block|{
-return|return
-name|Integer
+name|conf
 operator|.
-name|parseInt
+name|setRetryTimeout
 argument_list|(
-name|property
-argument_list|)
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|NumberFormatException
-name|e
-parameter_list|)
-block|{
-return|return
-name|defaultValue
-return|;
-block|}
-block|}
-specifier|private
-name|int
-name|toInt
-parameter_list|(
-name|String
-name|property
-parameter_list|,
-name|int
-name|lessThan
-parameter_list|,
-name|int
-name|defaultValue
-parameter_list|)
-block|{
-name|int
-name|ret
-init|=
-name|toInt
+name|manager
+operator|.
+name|getProperty
 argument_list|(
-name|property
-argument_list|,
-name|defaultValue
+name|cname
+operator|+
+literal|".retry.timeout"
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|ret
-operator|<
-name|lessThan
-condition|)
-block|{
-name|ret
+argument_list|)
+expr_stmt|;
+name|engine
 operator|=
-name|defaultValue
+name|conf
+operator|.
+name|createEngine
+argument_list|()
 expr_stmt|;
 block|}
-return|return
-name|ret
-return|;
-block|}
-specifier|private
-name|Deliverer
-name|createDeliverer
-parameter_list|(
-name|String
-name|clazz
-parameter_list|,
-name|String
-name|url
-parameter_list|)
-block|{
-try|try
-block|{
-name|Constructor
-argument_list|<
-name|?
-argument_list|>
-name|ctor
-init|=
-name|loadClass
-argument_list|(
-name|clazz
-argument_list|)
-operator|.
-name|getConstructor
-argument_list|(
-name|String
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
-return|return
-operator|(
-name|Deliverer
-operator|)
-name|ctor
-operator|.
-name|newInstance
-argument_list|(
-name|url
-argument_list|)
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-name|e
-argument_list|)
-throw|;
-block|}
-block|}
-specifier|private
-name|Converter
-name|createConverter
-parameter_list|(
-name|String
-name|clazz
-parameter_list|)
-block|{
-try|try
-block|{
-name|Constructor
-argument_list|<
-name|?
-argument_list|>
-name|ctor
-init|=
-name|loadClass
-argument_list|(
-name|clazz
-argument_list|)
-operator|.
-name|getConstructor
-argument_list|()
-decl_stmt|;
-return|return
-operator|(
-name|Converter
-operator|)
-name|ctor
-operator|.
-name|newInstance
-argument_list|()
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-name|e
-argument_list|)
-throw|;
-block|}
-block|}
-specifier|private
-name|Class
-argument_list|<
-name|?
-argument_list|>
-name|loadClass
-parameter_list|(
-name|String
-name|clazz
-parameter_list|)
-throws|throws
-name|ClassNotFoundException
-block|{
-try|try
-block|{
-return|return
-name|getClass
-argument_list|()
-operator|.
-name|getClassLoader
-argument_list|()
-operator|.
-name|loadClass
-argument_list|(
-name|clazz
-argument_list|)
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-try|try
-block|{
-comment|// clazz could be shorted (stripped package name) retry
-name|String
-name|clazz2
-init|=
-name|getClass
-argument_list|()
-operator|.
-name|getPackage
-argument_list|()
-operator|.
-name|getName
-argument_list|()
-operator|+
-literal|"."
-operator|+
-name|clazz
-decl_stmt|;
-return|return
-name|getClass
-argument_list|()
-operator|.
-name|getClassLoader
-argument_list|()
-operator|.
-name|loadClass
-argument_list|(
-name|clazz2
-argument_list|)
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e1
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|ClassNotFoundException
-argument_list|(
-name|e
-operator|.
-name|getMessage
-argument_list|()
-operator|+
-literal|" or "
-operator|+
-name|e1
-operator|.
-name|getMessage
-argument_list|()
-argument_list|)
-throw|;
-block|}
-block|}
-block|}
+comment|//    private int toInt(String property, int defaultValue) {
+comment|//        try {
+comment|//            return Integer.parseInt(property);
+comment|//        } catch (NumberFormatException e) {
+comment|//            return defaultValue;
+comment|//        }
+comment|//    }
+comment|//
+comment|//    private int toInt(String property, int lessThan, int defaultValue) {
+comment|//        int ret = toInt(property, defaultValue);
+comment|//        if (ret< lessThan) {
+comment|//            ret = defaultValue;
+comment|//        }
+comment|//        return ret;
+comment|//    }
+comment|//
+comment|//    private Deliverer createDeliverer(String clazz, String url) {
+comment|//        try {
+comment|//            Constructor<?> ctor = loadClass(clazz).getConstructor(String.class);
+comment|//            return (Deliverer)ctor.newInstance(url);
+comment|//        } catch (Exception e) {
+comment|//            throw new IllegalArgumentException(e);
+comment|//        }
+comment|//    }
+comment|//
+comment|//    private Converter createConverter(String clazz) {
+comment|//        try {
+comment|//            Constructor<?> ctor = loadClass(clazz).getConstructor();
+comment|//            return (Converter)ctor.newInstance();
+comment|//        } catch (Exception e) {
+comment|//            throw new IllegalArgumentException(e);
+comment|//        }
+comment|//    }
+comment|//
+comment|//    private Class<?> loadClass(String clazz) throws ClassNotFoundException {
+comment|//        try {
+comment|//            return getClass().getClassLoader().loadClass(clazz);
+comment|//        } catch (ClassNotFoundException e) {
+comment|//            try {
+comment|//                // clazz could be shorted (stripped package name) retry
+comment|//                String clazz2 = getClass().getPackage().getName() + "." + clazz;
+comment|//                return getClass().getClassLoader().loadClass(clazz2);
+comment|//            } catch (Exception e1) {
+comment|//                throw new ClassNotFoundException(e.getMessage() + " or " + e1.getMessage());
+comment|//            }
+comment|//        }
+comment|//    }
 block|}
 end_class
 

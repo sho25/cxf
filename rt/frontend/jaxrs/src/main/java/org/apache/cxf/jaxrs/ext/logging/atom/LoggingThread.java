@@ -26,7 +26,6 @@ comment|/**  * Helps disable logging from calls of the same thread. Motivation: 
 end_comment
 
 begin_class
-specifier|public
 specifier|final
 class|class
 name|LoggingThread

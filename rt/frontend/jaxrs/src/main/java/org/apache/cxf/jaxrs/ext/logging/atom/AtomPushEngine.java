@@ -112,7 +112,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ATOM push-style realization class. Engine enqueues log records as they are {@link #publish(LogRecord)  * published}. After queue size exceeds {@link #getBatchSize() batch size} processing of collection of these  * records (in size of batch size) is triggered.  *<p>  * Processing is done in separate thread not to block publishing interface. Processing is two step: first list  * of log records is transformed by {@link Converter converter} to ATOM {@link Element element} and then it is  * pushed out by {@link Deliverer deliverer} to client. Next to transport deliverer is indirectly responsible  * for marshaling ATOM element to XML.  *<p>  * Processing is done by single threaded {@link java.util.concurrent.Executor executor}; next batch of records  * is taken from queue only when currently processed batch finishes and queue has enough elements to proceed.  *<p>  * First failure of any delivery shuts engine down. To avoid this situation engine must have registered  * reliable deliverer or use wrapping {@link RetryingDeliverer}.  */
+comment|/**  * Package private ATOM push-style engine. Engine enqueues log records as they are {@link #publish(LogRecord)  * published}. After queue size exceeds {@link #getBatchSize() batch size} processing of collection of these  * records (in size of batch size) is triggered.  *<p>  * Processing is done in separate thread not to block publishing interface. Processing is two step: first list  * of log records is transformed by {@link Converter converter} to ATOM {@link Element element} and then it is  * pushed out by {@link Deliverer deliverer} to client. Next to transport deliverer is indirectly responsible  * for marshaling ATOM element to XML.  *<p>  * Processing is done by single threaded {@link java.util.concurrent.Executor executor}; next batch of records  * is taken from queue only when currently processed batch finishes and queue has enough elements to proceed.  *<p>  * First failure of any delivery shuts engine down. To avoid this situation engine must have registered  * reliable deliverer or use wrapping {@link RetryingDeliverer}.  */
 end_comment
 
 begin_comment
@@ -120,7 +120,7 @@ comment|// TODO add internal diagnostics - log messages somewhere except for log
 end_comment
 
 begin_class
-specifier|public
+specifier|final
 class|class
 name|AtomPushEngine
 block|{

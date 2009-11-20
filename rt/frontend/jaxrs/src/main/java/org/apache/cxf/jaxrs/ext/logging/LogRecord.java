@@ -172,6 +172,11 @@ end_comment
 begin_class
 annotation|@
 name|XmlRootElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 class|class
 name|LogRecord
@@ -373,6 +378,11 @@ return|;
 block|}
 annotation|@
 name|XmlElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 name|Date
 name|getEventTimestamp
@@ -408,6 +418,11 @@ expr_stmt|;
 block|}
 annotation|@
 name|XmlElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 name|LogLevel
 name|getLevel
@@ -444,6 +459,11 @@ block|}
 comment|/**      * Formatted message with parameters filled in.      */
 annotation|@
 name|XmlElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 name|String
 name|getMessage
@@ -479,6 +499,11 @@ expr_stmt|;
 block|}
 annotation|@
 name|XmlElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 name|String
 name|getLoggerName
@@ -514,6 +539,11 @@ expr_stmt|;
 block|}
 annotation|@
 name|XmlElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 name|String
 name|getThreadName
@@ -550,6 +580,11 @@ block|}
 comment|/**      * Full stack trace of {@link Throwable} associated with log record.      */
 annotation|@
 name|XmlElement
+argument_list|(
+name|namespace
+operator|=
+literal|"http://cxf.apache.org/jaxrs/log"
+argument_list|)
 specifier|public
 name|String
 name|getThrowable

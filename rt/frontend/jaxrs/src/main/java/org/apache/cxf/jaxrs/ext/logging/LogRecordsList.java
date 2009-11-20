@@ -155,7 +155,7 @@ name|XmlRootElement
 argument_list|(
 name|namespace
 operator|=
-literal|"zzz"
+literal|"http://cxf.apache.org/jaxrs/log"
 argument_list|)
 specifier|public
 class|class
@@ -184,7 +184,7 @@ literal|"logRecord"
 argument_list|,
 name|namespace
 operator|=
-literal|"zzz"
+literal|"http://cxf.apache.org/jaxrs/log"
 argument_list|)
 specifier|public
 name|List
