@@ -76,7 +76,7 @@ name|retryTimeout
 decl_stmt|;
 specifier|private
 name|String
-name|retryPauseType
+name|retryPause
 decl_stmt|;
 specifier|private
 name|String
@@ -114,17 +114,17 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setRetryPauseType
+name|setRetryPause
 parameter_list|(
 name|String
-name|retryPauseType
+name|retryPause
 parameter_list|)
 block|{
 name|this
 operator|.
-name|retryPauseType
+name|retryPause
 operator|=
-name|retryPauseType
+name|retryPause
 expr_stmt|;
 block|}
 specifier|public
@@ -320,7 +320,7 @@ block|{
 name|c
 operator|=
 operator|new
-name|ContentSingleEntryConverter
+name|SingleEntryContentConverter
 argument_list|()
 expr_stmt|;
 block|}
@@ -338,7 +338,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|retryPauseType
+name|retryPause
 operator|!=
 literal|null
 condition|)
@@ -371,7 +371,7 @@ name|boolean
 name|linear
 init|=
 operator|!
-name|retryPauseType
+name|retryPause
 operator|.
 name|equalsIgnoreCase
 argument_list|(

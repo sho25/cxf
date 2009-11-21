@@ -202,7 +202,7 @@ end_comment
 begin_class
 specifier|public
 class|class
-name|ContentSingleEntryConverter
+name|SingleEntryContentConverter
 implements|implements
 name|Converter
 block|{
@@ -215,7 +215,7 @@ name|Marshaller
 name|marsh
 decl_stmt|;
 specifier|public
-name|ContentSingleEntryConverter
+name|SingleEntryContentConverter
 parameter_list|()
 block|{
 name|factory

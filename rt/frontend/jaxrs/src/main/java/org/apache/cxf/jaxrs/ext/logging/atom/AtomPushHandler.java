@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Handler pushing log records in batches as Atom Feeds to registered client. Handler responsibility is to  * adapt to JUL framework while most of job is delegated to {@link AtomPushEngine}.  *<p>  * For simple configuration using properties file (one global root-level handler of this class) following  * properties prefixed with full class name can be used:  *<ul>  *<li><b>url</b> - URL where feeds will be pushed (mandatory parameter)</li>  *<li><b>converter</b> - name of class implementing {@link Converter} class. For classes from this package  * only class name can be given e.g. instead of  * "org.apache.cxf.jaxrs.ext.logging.atom.ContentSingleEntryConverter" one can specify  * "ContentSingleEntryConverter". If parameter is not set {@link ContentSingleEntryConverter} is used.</li>  *<li><b>deliverer</b> - name of class implementing {@link Deliverer} class. For classes from this package  * only class name can be given e.g. instead of "org.apache.cxf.jaxrs.ext.logging.atom.WebClientDeliverer" one  * can specify "WebClientDeliverer". If parameter is not set {@link WebClientDeliverer} is used.</li>  *<li><b>batchSize</b> - integer number specifying minimal number of published log records that trigger  * processing and pushing ATOM document. If parameter is not set, is not greater than zero or is not a number,  * batch size is set to 1.</li>  *</ul>  * Family of<tt>retry</tt> parameters below; availability of any of this parameters enables delivery retrying  * (e.g. for default non-reliable deliverers) with {@link RetryingDeliverer} that can be combined with  * provided non-reliable deliverers. Detailed explanation of these parameter, see {@link RetryingDeliverer}  * class description.  *<ul>  *<li><b>retry.pause</b> - pausing strategy of delivery retries, either<b>linear</b> or<b>exponential</b>  * value (mandatory parameter). If mispelled linear is used.</li>  *<li><b>retry.pause.time</b> - pause time (in seconds) between retries. If parameter is not set, pause is  * set to 30 seconds.</li>  *<li><b>retry.timeout</b> - maximum time (in seconds) retrying will be continued. If not set timeout is not  * set (infinite loop of retries).</li>  *</ul>  * Example:  *   *<pre>  * handlers = org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler, java.util.logging.ConsoleHandler  * .level = INFO  * ...  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.url = http://localhost:9080  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.batchSize = 10  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.deliverer = WebClientDeliverer   * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.converter = foo.bar.MyConverter  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.retry.pause = linear  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.retry.pause.time = 10  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.retry.timeout = 360  * ...  *</pre>  */
+comment|/**  * Handler pushing log records in batches as Atom Feeds to registered client. Handler responsibility is to  * adapt to JUL framework while most of job is delegated to {@link AtomPushEngine}.  *<p>  * For simple configuration using properties file (one global root-level handler of this class) following  * properties prefixed with full class name can be used:  *<ul>  *<li><b>url</b> - URL where feeds will be pushed (mandatory parameter)</li>  *<li><b>converter</b> - name of class implementing {@link Converter} class. For classes from this package  * only class name can be given e.g. instead of  * "org.apache.cxf.jaxrs.ext.logging.atom.ContentSingleEntryConverter" one can specify  * "ContentSingleEntryConverter". If parameter is not set {@link SingleEntryContentConverter} is used.</li>  *<li><b>deliverer</b> - name of class implementing {@link Deliverer} class. For classes from this package  * only class name can be given e.g. instead of "org.apache.cxf.jaxrs.ext.logging.atom.WebClientDeliverer" one  * can specify "WebClientDeliverer". If parameter is not set {@link WebClientDeliverer} is used.</li>  *<li><b>batchSize</b> - integer number specifying minimal number of published log records that trigger  * processing and pushing ATOM document. If parameter is not set, is not greater than zero or is not a number,  * batch size is set to 1.</li>  *</ul>  * Family of<tt>retry</tt> parameters below; availability of any of this parameters enables delivery retrying  * (e.g. for default non-reliable deliverers) with {@link RetryingDeliverer} that can be combined with  * provided non-reliable deliverers. Detailed explanation of these parameter, see {@link RetryingDeliverer}  * class description.  *<ul>  *<li><b>retry.pause</b> - pausing strategy of delivery retries, either<b>linear</b> or<b>exponential</b>  * value (mandatory parameter). If mispelled linear is used.</li>  *<li><b>retry.pause.time</b> - pause time (in seconds) between retries. If parameter is not set, pause is  * set to 30 seconds.</li>  *<li><b>retry.timeout</b> - maximum time (in seconds) retrying will be continued. If not set timeout is not  * set (infinite loop of retries).</li>  *</ul>  * Example:  *   *<pre>  * handlers = org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler, java.util.logging.ConsoleHandler  * .level = INFO  * ...  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.url = http://localhost:9080  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.batchSize = 10  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.deliverer = WebClientDeliverer   * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.converter = foo.bar.MyConverter  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.retry.pause = linear  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.retry.pause.time = 10  * org.apache.cxf.jaxrs.ext.logging.atom.AtomPushHandler.retry.timeout = 360  * ...  *</pre>  */
 end_comment
 
 begin_class
@@ -196,7 +196,7 @@ name|lazyConfig
 operator|=
 literal|false
 expr_stmt|;
-name|configure2
+name|configure
 argument_list|()
 expr_stmt|;
 block|}
@@ -256,41 +256,9 @@ block|{
 comment|// no-op
 block|}
 comment|/**      * Configuration from properties. Aligned to JUL strategy - properties file is only for simple      * configuration: it allows configure one root handler with its parameters. What is even more dummy, JUL      * does not allow to iterate over configuration properties to make interpretation automated (e.g. using      * commons-beanutils)      */
-comment|// private void configure() {
-comment|// LogManager manager = LogManager.getLogManager();
-comment|// String cname = getClass().getName();
-comment|// String url = manager.getProperty(cname + ".url");
-comment|// if (url == null) {
-comment|// // cannot proceed
-comment|// return;
-comment|// }
-comment|// String deliverer = manager.getProperty(cname + ".deliverer");
-comment|// if (deliverer != null) {
-comment|// engine.setDeliverer(createDeliverer(deliverer, url));
-comment|// } else {
-comment|// // default
-comment|// engine.setDeliverer(new WebClientDeliverer(url));
-comment|// }
-comment|// String converter = manager.getProperty(cname + ".converter");
-comment|// if (converter != null) {
-comment|// engine.setConverter(createConverter(converter));
-comment|// } else {
-comment|// // default
-comment|// engine.setConverter(new ContentSingleEntryConverter());
-comment|// }
-comment|// engine.setBatchSize(toInt(manager.getProperty(cname + ".batchSize"), 1, 1));
-comment|// String retryType = manager.getProperty(cname + ".retry.pause");
-comment|// if (retryType != null) {
-comment|// int timeout = toInt(manager.getProperty(cname + ".retry.timeout"), 0, 0);
-comment|// int pause = toInt(manager.getProperty(cname + ".retry.pause.time"), 1, 30);
-comment|// boolean linear = !retryType.equalsIgnoreCase("exponential");
-comment|// Deliverer wrapped = new RetryingDeliverer(engine.getDeliverer(), timeout, pause, linear);
-comment|// engine.setDeliverer(wrapped);
-comment|// }
-comment|// }
 specifier|private
 name|void
-name|configure2
+name|configure
 parameter_list|()
 block|{
 name|LogManager
@@ -375,7 +343,7 @@ argument_list|)
 expr_stmt|;
 name|conf
 operator|.
-name|setRetryPauseType
+name|setRetryPause
 argument_list|(
 name|manager
 operator|.
@@ -423,53 +391,6 @@ name|createEngine
 argument_list|()
 expr_stmt|;
 block|}
-comment|//    private int toInt(String property, int defaultValue) {
-comment|//        try {
-comment|//            return Integer.parseInt(property);
-comment|//        } catch (NumberFormatException e) {
-comment|//            return defaultValue;
-comment|//        }
-comment|//    }
-comment|//
-comment|//    private int toInt(String property, int lessThan, int defaultValue) {
-comment|//        int ret = toInt(property, defaultValue);
-comment|//        if (ret< lessThan) {
-comment|//            ret = defaultValue;
-comment|//        }
-comment|//        return ret;
-comment|//    }
-comment|//
-comment|//    private Deliverer createDeliverer(String clazz, String url) {
-comment|//        try {
-comment|//            Constructor<?> ctor = loadClass(clazz).getConstructor(String.class);
-comment|//            return (Deliverer)ctor.newInstance(url);
-comment|//        } catch (Exception e) {
-comment|//            throw new IllegalArgumentException(e);
-comment|//        }
-comment|//    }
-comment|//
-comment|//    private Converter createConverter(String clazz) {
-comment|//        try {
-comment|//            Constructor<?> ctor = loadClass(clazz).getConstructor();
-comment|//            return (Converter)ctor.newInstance();
-comment|//        } catch (Exception e) {
-comment|//            throw new IllegalArgumentException(e);
-comment|//        }
-comment|//    }
-comment|//
-comment|//    private Class<?> loadClass(String clazz) throws ClassNotFoundException {
-comment|//        try {
-comment|//            return getClass().getClassLoader().loadClass(clazz);
-comment|//        } catch (ClassNotFoundException e) {
-comment|//            try {
-comment|//                // clazz could be shorted (stripped package name) retry
-comment|//                String clazz2 = getClass().getPackage().getName() + "." + clazz;
-comment|//                return getClass().getClassLoader().loadClass(clazz2);
-comment|//            } catch (Exception e1) {
-comment|//                throw new ClassNotFoundException(e.getMessage() + " or " + e1.getMessage());
-comment|//            }
-comment|//        }
-comment|//    }
 block|}
 end_class
 
