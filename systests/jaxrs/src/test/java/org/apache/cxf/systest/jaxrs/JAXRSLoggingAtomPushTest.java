@@ -249,7 +249,7 @@ name|logging
 operator|.
 name|atom
 operator|.
-name|ContentSingleEntryConverter
+name|SingleEntryContentConverter
 import|;
 end_import
 
@@ -854,7 +854,7 @@ argument_list|(
 literal|2
 argument_list|,
 operator|new
-name|ContentSingleEntryConverter
+name|SingleEntryContentConverter
 argument_list|()
 argument_list|,
 operator|new
