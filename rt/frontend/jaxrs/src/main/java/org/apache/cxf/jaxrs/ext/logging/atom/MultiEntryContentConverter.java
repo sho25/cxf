@@ -196,7 +196,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Multiple entries in feed, each entry content with one log record from list.  */
+comment|/**  * Multiple entries in feed, each entry with one log record from list embedded as XML content.  */
 end_comment
 
 begin_class
@@ -299,32 +299,6 @@ argument_list|(
 name|entry
 argument_list|)
 expr_stmt|;
-name|Content
-name|content
-init|=
-name|factory
-operator|.
-name|newContent
-argument_list|()
-decl_stmt|;
-name|content
-operator|.
-name|setContentType
-argument_list|(
-name|Content
-operator|.
-name|Type
-operator|.
-name|XML
-argument_list|)
-expr_stmt|;
-name|entry
-operator|.
-name|setContent
-argument_list|(
-name|content
-argument_list|)
-expr_stmt|;
 name|StringWriter
 name|writer
 init|=
@@ -358,14 +332,20 @@ name|e
 argument_list|)
 throw|;
 block|}
-name|content
+name|entry
 operator|.
-name|setValue
+name|setContent
 argument_list|(
 name|writer
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|Content
+operator|.
+name|Type
+operator|.
+name|XML
 argument_list|)
 expr_stmt|;
 block|}
