@@ -758,7 +758,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|1000
+literal|3000
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -798,7 +798,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|1000
+literal|3000
 argument_list|)
 expr_stmt|;
 comment|// 6 events / 3 element batch = 2 feeds expected
@@ -890,7 +890,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|1000
+literal|3000
 argument_list|)
 expr_stmt|;
 comment|// 6 events / 2 element batch = 3 feeds expected
