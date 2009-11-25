@@ -65,6 +65,10 @@ name|Target
 import|;
 end_import
 
+begin_comment
+comment|/**  * Can be used to document resource classes and methods  *   * See {@link<a href="http://www.w3.org/Submission/wadl/#x3-80002.3">WADL Documentation</a>}.  */
+end_comment
+
 begin_annotation_defn
 annotation|@
 name|Target
@@ -90,24 +94,28 @@ specifier|public
 annotation_defn|@interface
 name|Description
 block|{
+comment|/**      * This value, if set, will be set as WADL doc content      */
 name|String
 name|value
 parameter_list|()
 default|default
 literal|""
 function_decl|;
+comment|/**      * Maps to WADL doc/@xml:lang attribute       **/
 name|String
 name|lang
 parameter_list|()
 default|default
 literal|""
 function_decl|;
+comment|/**      * Maps to WADL doc/@title attribute       **/
 name|String
 name|title
 parameter_list|()
 default|default
 literal|""
 function_decl|;
+comment|/**      * This uri, if set, will be used to retrieve       * the content which will be set as WADL doc content      */
 name|String
 name|docuri
 parameter_list|()
