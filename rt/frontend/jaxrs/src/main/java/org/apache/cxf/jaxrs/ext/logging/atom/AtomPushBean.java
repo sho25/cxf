@@ -168,11 +168,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Bean used to configure {@link AtomPushHandler JUL handler} with Spring instead of properties file. Next to  * configuration of handler, Spring bean offers simple configuration of associated loggers that share ATOM  * push-style handler.  *<p>  * General rules:  *<ul>  *<li>When {@link #setDeliverer(Deliverer) deliverer} property is not set explicitly, URL must be set to  * create default deliverer.</li>  *<li>When {@link #setConverter(Converter) converter} property is not set explicitly, default converter is  * created.</li>  *<li>When {@link #setLoggers(String) loggers} property is used, it overrides pair of  * {@link #setLogger(String) logger} and {@link #setLevel(String) level} properties; and vice versa.</li>  *<li>When logger is not set, handler is attached to root logger (named ""); when level is not set for  * logger, default "INFO" level is used.</li>  *<li>When {@link #setBatchSize(String) batchSize} property is not set or set to wrong value, default batch  * size of "1" is used.</li>  *<li>When deliverer property is NOT set, use of "retryXxx" properties causes creation of retrying default  * deliverer.</li>  *</ul>  * Examples:  *<p>  * ATOM push handler with registered with root logger for all levels or log events, pushing one feed per event  * to specified URL, using default delivery and conversion methods:  *   *<pre>  *&lt;bean class=&quot;org.apache.cxf.jaxrs.ext.logging.atom.AtomPushBean&quot;   *     init-method=&quot;init&quot;&gt;  *&lt;property name=&quot;url&quot; value=&quot;http://localhost:9080/feed&quot;/&gt;  *&lt;property name=&quot;level&quot; value=&quot;ALL&quot; /&gt;  *&lt;/bean&gt;  *</pre>  *   * ATOM push handler registered with multiple loggers and listening for different levels (see  * {@link #setLoggers(String) loggers} property description for syntax details). Custom deliverer will take  * care of feeds, each of which carries batch of 10 log events:  *   *<pre>  *&lt;bean id=&quot;soapDeliverer&quot; ...  *   ...  *&lt;bean class=&quot;org.apache.cxf.jaxrs.ext.logging.atom.AtomPushBean&quot;   *     init-method=&quot;init&quot;&gt;  *&lt;property name=&quot;deliverer&quot;&gt;  *&lt;ref bean=&quot;soapDeliverer&quot;/&gt;  *&lt;/property&gt;  *&lt;property name=&quot;loggers&quot; value=&quot;  *           org.apache.cxf:DEBUG,  *           org.apache.cxf.jaxrs,  *           org.apache.cxf.bus:ERROR&quot; /&gt;  *&lt;property name=&quot;batchSize&quot; value=&quot;10&quot; /&gt;  *&lt;/bean&gt;  *</pre>  */
-end_comment
-
-begin_comment
-comment|// TODO add support for conversion setup (output, entries, logs, format)
+comment|/**  * Bean used to configure {@link AtomPushHandler JUL handler} with Spring instead of properties file. See  * {@link AtomPushHandler} class for detailed description of parameters. Next to configuration of handler,  * Spring bean offers simple configuration of associated loggers that share ATOM push-style handler.  *<p>  * General rules:  *<ul>  *<li>When {@link #setDeliverer(Deliverer) deliverer} property is not set explicitly, URL must be set to  * create default deliverer.</li>  *<li>When {@link #setConverter(Converter) converter} property is not set explicitly, default converter is  * created.</li>  *<li>When {@link #setLoggers(String) loggers} property is used, it overrides pair of  * {@link #setLogger(String) logger} and {@link #setLevel(String) level} properties; and vice versa.</li>  *<li>When logger is not set, handler is attached to root logger (named ""); when level is not set for  * logger, default "INFO" level is used.</li>  *<li>When {@link #setBatchSize(String) batchSize} property is not set or set to wrong value, default batch  * size of "1" is used.</li>  *<li>When deliverer property is NOT set, use of "retryXxx" properties causes creation of retrying default  * deliverer.</li>  *</ul>  * Examples:  *<p>  * ATOM push handler with registered with root logger for all levels or log events, pushing one feed per event  * to specified URL, using default delivery and conversion methods:  *   *<pre>  *&lt;bean class=&quot;org.apache.cxf.jaxrs.ext.logging.atom.AtomPushBean&quot;   *     init-method=&quot;init&quot;&gt;  *&lt;property name=&quot;url&quot; value=&quot;http://localhost:9080/feed&quot;/&gt;  *&lt;property name=&quot;level&quot; value=&quot;ALL&quot; /&gt;  *&lt;/bean&gt;  *</pre>  *   * ATOM push handler registered with multiple loggers and listening for different levels (see  * {@link #setLoggers(String) loggers} property description for syntax details). Custom deliverer will take  * care of feeds, each of which carries batch of 10 log events:  *   *<pre>  *&lt;bean id=&quot;soapDeliverer&quot; ...  *   ...  *&lt;bean class=&quot;org.apache.cxf.jaxrs.ext.logging.atom.AtomPushBean&quot;   *     init-method=&quot;init&quot;&gt;  *&lt;property name=&quot;deliverer&quot;&gt;  *&lt;ref bean=&quot;soapDeliverer&quot;/&gt;  *&lt;/property&gt;  *&lt;property name=&quot;loggers&quot; value=&quot;  *           org.apache.cxf:DEBUG,  *           org.apache.cxf.jaxrs,  *           org.apache.cxf.bus:ERROR&quot; /&gt;  *&lt;property name=&quot;batchSize&quot; value=&quot;10&quot; /&gt;  *&lt;/bean&gt;  *</pre>  */
 end_comment
 
 begin_class
@@ -567,6 +563,93 @@ operator|.
 name|setRetryTimeout
 argument_list|(
 name|timeout
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Conversion output type: "feed" or "entry".      */
+specifier|public
+name|void
+name|setOutput
+parameter_list|(
+name|String
+name|output
+parameter_list|)
+block|{
+name|checkInit
+argument_list|()
+expr_stmt|;
+name|Validate
+operator|.
+name|notNull
+argument_list|(
+name|output
+argument_list|,
+literal|"output is null"
+argument_list|)
+expr_stmt|;
+name|conf
+operator|.
+name|setOutput
+argument_list|(
+name|output
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Multiplicity of subelement of output: "one" or "many".      */
+specifier|public
+name|void
+name|setMultiplicity
+parameter_list|(
+name|String
+name|multiplicity
+parameter_list|)
+block|{
+name|checkInit
+argument_list|()
+expr_stmt|;
+name|Validate
+operator|.
+name|notNull
+argument_list|(
+name|multiplicity
+argument_list|,
+literal|"multiplicity is null"
+argument_list|)
+expr_stmt|;
+name|conf
+operator|.
+name|setMultiplicity
+argument_list|(
+name|multiplicity
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Entry data format: "content" or "extension".      */
+specifier|public
+name|void
+name|setFormat
+parameter_list|(
+name|String
+name|format
+parameter_list|)
+block|{
+name|checkInit
+argument_list|()
+expr_stmt|;
+name|Validate
+operator|.
+name|notNull
+argument_list|(
+name|format
+argument_list|,
+literal|"format is null"
+argument_list|)
+expr_stmt|;
+name|conf
+operator|.
+name|setFormat
+argument_list|(
+name|format
 argument_list|)
 expr_stmt|;
 block|}
