@@ -18,6 +18,8 @@ operator|.
 name|logging
 operator|.
 name|atom
+operator|.
+name|deliverer
 package|;
 end_package
 
@@ -75,6 +77,7 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|RetryingDeliverer
 implements|implements
@@ -330,11 +333,21 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|pauser
+operator|.
+name|reset
+argument_list|()
+expr_stmt|;
 return|return
 literal|false
 return|;
 block|}
 block|}
+name|pauser
+operator|.
+name|reset
+argument_list|()
+expr_stmt|;
 return|return
 literal|true
 return|;
@@ -347,6 +360,11 @@ block|{
 comment|/** Time of next pause (in seconds). */
 name|int
 name|nextPause
+parameter_list|()
+function_decl|;
+comment|/** Restarts calculation. */
+name|void
+name|reset
 parameter_list|()
 function_decl|;
 block|}
@@ -384,6 +402,11 @@ return|return
 name|pause
 return|;
 block|}
+specifier|public
+name|void
+name|reset
+parameter_list|()
+block|{         }
 block|}
 specifier|private
 specifier|static
@@ -395,6 +418,10 @@ block|{
 specifier|private
 name|int
 name|pause
+decl_stmt|;
+specifier|private
+name|int
+name|current
 decl_stmt|;
 specifier|public
 name|ExponentialPause
@@ -409,6 +436,10 @@ name|pause
 operator|=
 name|pause
 expr_stmt|;
+name|current
+operator|=
+name|pause
+expr_stmt|;
 block|}
 specifier|public
 name|int
@@ -416,17 +447,27 @@ name|nextPause
 parameter_list|()
 block|{
 name|int
-name|curr
+name|c
 init|=
-name|pause
+name|current
 decl_stmt|;
-name|pause
+name|current
 operator|*=
 literal|2
 expr_stmt|;
 return|return
-name|curr
+name|c
 return|;
+block|}
+specifier|public
+name|void
+name|reset
+parameter_list|()
+block|{
+name|current
+operator|=
+name|pause
+expr_stmt|;
 block|}
 block|}
 block|}

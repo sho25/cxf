@@ -111,8 +111,52 @@ name|LogRecord
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|atom
+operator|.
+name|converter
+operator|.
+name|Converter
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|atom
+operator|.
+name|deliverer
+operator|.
+name|Deliverer
+import|;
+end_import
+
 begin_comment
-comment|/**  * Package private ATOM push-style engine. Engine enqueues log records as they are {@link #publish(LogRecord)  * published}. After queue size exceeds {@link #getBatchSize() batch size} processing of collection of these  * records (in size of batch size) is triggered.  *<p>  * Processing is done in separate thread not to block publishing interface. Processing is two step: first list  * of log records is transformed by {@link Converter converter} to ATOM {@link Element element} and then it is  * pushed out by {@link Deliverer deliverer} to client. Next to transport deliverer is indirectly responsible  * for marshaling ATOM element to XML.  *<p>  * Processing is done by single threaded {@link java.util.concurrent.Executor executor}; next batch of records  * is taken from queue only when currently processed batch finishes and queue has enough elements to proceed.  *<p>  * First failure of any delivery shuts engine down. To avoid this situation engine must have registered  * reliable deliverer or use wrapping {@link RetryingDeliverer}.  */
+comment|/**  * Package private ATOM push-style engine. Engine enqueues log records as they are {@link #publish(LogRecord)  * published}. After queue size exceeds {@link #getBatchSize() batch size} processing of collection of these  * records (in size of batch size) is triggered.  *<p>  * Processing is done in separate thread not to block publishing interface. Processing is two step: first list  * of log records is transformed by {@link Converter converter} to ATOM {@link Element element} and then it is  * pushed out by {@link Deliverer deliverer} to client. Next to transport deliverer is indirectly responsible  * for marshaling ATOM element to XML.  *<p>  * Processing is done by single threaded {@link java.util.concurrent.Executor executor}; next batch of records  * is taken from queue only when currently processed batch finishes and queue has enough elements to proceed.  *<p>  * First failure of any delivery shuts engine down. To avoid this situation engine must have registered  * reliable deliverer or use wrapping  * {@link org.apache.cxf.jaxrs.ext.logging.atom.deliverer.RetryingDeliverer}.  */
 end_comment
 
 begin_comment
@@ -345,8 +389,13 @@ name|this
 init|)
 block|{
 comment|// TODO diagnostic output here: System.out.println(element.toString());
+name|List
+argument_list|<
+name|?
+extends|extends
 name|Element
-name|element
+argument_list|>
+name|elements
 init|=
 name|converter
 operator|.
@@ -355,6 +404,14 @@ argument_list|(
 name|batch
 argument_list|)
 decl_stmt|;
+for|for
+control|(
+name|Element
+name|element
+range|:
+name|elements
+control|)
+block|{
 if|if
 condition|(
 operator|!
@@ -380,6 +437,8 @@ operator|.
 name|shutdownNow
 argument_list|()
 expr_stmt|;
+break|break;
+block|}
 block|}
 block|}
 block|}

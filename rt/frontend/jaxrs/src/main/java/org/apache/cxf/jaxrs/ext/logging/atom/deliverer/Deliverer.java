@@ -18,18 +18,10 @@ operator|.
 name|logging
 operator|.
 name|atom
+operator|.
+name|deliverer
 package|;
 end_package
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|List
-import|;
-end_import
 
 begin_import
 import|import
@@ -45,43 +37,24 @@ name|Element
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|ext
-operator|.
-name|logging
-operator|.
-name|LogRecord
-import|;
-end_import
-
 begin_comment
-comment|/**  * Converts batch of log records into ATOM element to deliver. Represents strategies of conversion e.g. as  * ATOM format extensions, as Entry content etc.  */
+comment|/**  * ATOM element deliverer. Represents transport strategy e.g. using  * {@link org.apache.cxf.jaxrs.client.WebClient}, SOAP reliable messaging etc.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|Converter
+name|Deliverer
 block|{
-comment|/**      * Converts collection of log records into ATOM element.      *       * @param records not-null collection of records      * @return ATOM document representing records      */
-name|Element
-name|convert
+comment|/**      * Delivers ATOM element.      *       * @param element element to deliver.      * @return true if delivery successful, false otherwise.      */
+name|boolean
+name|deliver
 parameter_list|(
-name|List
-argument_list|<
-name|LogRecord
-argument_list|>
-name|records
+name|Element
+name|element
 parameter_list|)
+throws|throws
+name|InterruptedException
 function_decl|;
 block|}
 end_interface
