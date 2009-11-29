@@ -19,6 +19,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Date
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|jws
@@ -84,6 +94,16 @@ literal|"text"
 argument_list|)
 name|String
 name|text
+parameter_list|,
+annotation|@
+name|WebParam
+argument_list|(
+name|name
+operator|=
+literal|"date"
+argument_list|)
+name|Date
+name|date
 parameter_list|)
 function_decl|;
 block|}
