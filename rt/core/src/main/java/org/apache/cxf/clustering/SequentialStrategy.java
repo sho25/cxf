@@ -25,20 +25,6 @@ name|List
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|endpoint
-operator|.
-name|Endpoint
-import|;
-end_import
-
 begin_comment
 comment|/**  * Failover strategy based on a sequential walk through the  * static cluster represented by multiple endpoints associated   * with the same service instance.  */
 end_comment
@@ -52,12 +38,15 @@ name|AbstractStaticFailoverStrategy
 block|{
 comment|/**      * Get next alternate endpoint.      *       * @param alternates non-empty List of alternate endpoints       * @return      */
 specifier|protected
-name|Endpoint
+parameter_list|<
+name|T
+parameter_list|>
+name|T
 name|getNextAlternate
 parameter_list|(
 name|List
 argument_list|<
-name|Endpoint
+name|T
 argument_list|>
 name|alternates
 parameter_list|)
