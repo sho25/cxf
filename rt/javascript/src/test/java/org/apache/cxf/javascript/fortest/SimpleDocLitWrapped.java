@@ -418,6 +418,22 @@ name|InheritanceTestDerived
 name|d
 parameter_list|)
 function_decl|;
+annotation|@
+name|WebMethod
+name|AnEnum
+name|enumEcho
+parameter_list|(
+annotation|@
+name|WebParam
+argument_list|(
+name|name
+operator|=
+literal|"ev"
+argument_list|)
+name|AnEnum
+name|value
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

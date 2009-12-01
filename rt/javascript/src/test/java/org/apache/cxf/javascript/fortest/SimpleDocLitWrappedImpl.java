@@ -615,6 +615,18 @@ return|return
 name|lastInheritanceTestDerived
 return|;
 block|}
+specifier|public
+name|AnEnum
+name|enumEcho
+parameter_list|(
+name|AnEnum
+name|value
+parameter_list|)
+block|{
+return|return
+name|value
+return|;
+block|}
 block|}
 end_class
 

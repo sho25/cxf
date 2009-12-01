@@ -488,7 +488,7 @@ name|builder
 operator|.
 name|append
 argument_list|(
-literal|"TestBean1"
+literal|"TestBean3"
 argument_list|)
 expr_stmt|;
 name|builder
