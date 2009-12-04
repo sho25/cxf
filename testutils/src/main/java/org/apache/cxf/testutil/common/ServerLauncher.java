@@ -1685,7 +1685,7 @@ name|System
 operator|.
 name|getProperty
 argument_list|(
-literal|"surefire.fork.vmargs"
+literal|"server.launcher.vmargs"
 argument_list|)
 decl_stmt|;
 if|if
