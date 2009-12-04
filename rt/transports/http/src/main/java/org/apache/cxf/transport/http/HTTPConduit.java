@@ -545,6 +545,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -7823,6 +7837,19 @@ operator|==
 name|HttpURLConnection
 operator|.
 name|HTTP_NOT_FOUND
+operator|&&
+operator|!
+name|MessageUtils
+operator|.
+name|isTrue
+argument_list|(
+name|outMessage
+operator|.
+name|getContextualProperty
+argument_list|(
+literal|"org.apache.cxf.http.no_io_exceptions"
+argument_list|)
+argument_list|)
 condition|)
 block|{
 throw|throw
@@ -8163,6 +8190,15 @@ name|cookies
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|responseCode
+operator|!=
+name|HttpURLConnection
+operator|.
+name|HTTP_NOT_FOUND
+condition|)
+block|{
 name|in
 operator|=
 name|in
@@ -8188,6 +8224,7 @@ argument_list|()
 else|:
 name|in
 expr_stmt|;
+block|}
 comment|// if (in == null) : it's perfectly ok for non-soap http services
 comment|// have no response body : those interceptors which do need it will check anyway
 name|inMessage

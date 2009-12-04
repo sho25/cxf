@@ -2002,7 +2002,7 @@ name|Response
 operator|.
 name|class
 condition|?
-name|cls
+name|r
 else|:
 literal|null
 return|;
@@ -2077,7 +2077,15 @@ name|Response
 operator|.
 name|class
 condition|?
+name|r
+else|:
 name|cls
+operator|==
+name|InputStream
+operator|.
+name|class
+condition|?
+name|inputStream
 else|:
 literal|null
 return|;
