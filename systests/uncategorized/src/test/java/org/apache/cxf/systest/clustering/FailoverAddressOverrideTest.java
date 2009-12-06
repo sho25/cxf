@@ -571,7 +571,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//@Test
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testOverriddenSequentialStrategy
@@ -640,7 +641,8 @@ name|REPLICA_C
 argument_list|)
 expr_stmt|;
 block|}
-comment|//@Test
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testOverriddenRandomStrategy
