@@ -1316,6 +1316,30 @@ argument_list|(
 literal|"<meta http-equiv=content-type content=\"text/html; charset=UTF-8\">"
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|title
+operator|!=
+literal|null
+condition|)
+block|{
+name|response
+operator|.
+name|getWriter
+argument_list|()
+operator|.
+name|write
+argument_list|(
+literal|"<title>"
+operator|+
+name|title
+operator|+
+literal|"</title>"
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|response
 operator|.
 name|getWriter
@@ -1326,6 +1350,7 @@ argument_list|(
 literal|"<title>CXF - Service list</title>"
 argument_list|)
 expr_stmt|;
+block|}
 name|response
 operator|.
 name|getWriter
