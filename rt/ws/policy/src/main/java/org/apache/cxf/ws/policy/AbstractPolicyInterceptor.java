@@ -331,6 +331,10 @@ condition|(
 literal|null
 operator|==
 name|bfi
+operator|&&
+name|ex
+operator|!=
+literal|null
 condition|)
 block|{
 name|Throwable

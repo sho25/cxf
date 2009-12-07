@@ -414,11 +414,6 @@ name|class
 argument_list|)
 expr_stmt|;
 block|}
-assert|assert
-literal|null
-operator|!=
-name|ex
-assert|;
 name|BindingFaultInfo
 name|bfi
 init|=
