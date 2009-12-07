@@ -504,6 +504,8 @@ operator|new
 name|Object
 index|[]
 block|{
+name|on
+block|,
 name|e
 block|}
 argument_list|)
