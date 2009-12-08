@@ -741,7 +741,7 @@ block|{
 name|String
 name|endpointAddress
 init|=
-literal|"http://localhost:9081/bookstore/bookstore4/books/feed"
+literal|"http://localhost:9080/bookstore/bookstore4/books/feed"
 decl_stmt|;
 name|Feed
 name|feed
@@ -755,7 +755,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://localhost:9081/bookstore/bookstore4/books/feed"
+literal|"http://localhost:9080/bookstore/bookstore4/books/feed"
 argument_list|,
 name|feed
 operator|.
