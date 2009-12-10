@@ -4929,7 +4929,7 @@ name|add
 argument_list|(
 name|currentDepth
 operator|-
-literal|2
+literal|1
 argument_list|)
 expr_stmt|;
 block|}

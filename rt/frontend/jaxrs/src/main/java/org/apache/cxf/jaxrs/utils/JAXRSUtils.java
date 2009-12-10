@@ -6397,10 +6397,15 @@ name|queries
 operator|.
 name|add
 argument_list|(
+name|HttpUtils
+operator|.
+name|urlDecode
+argument_list|(
 name|values
 index|[
 literal|0
 index|]
+argument_list|)
 argument_list|,
 name|value
 argument_list|)

@@ -398,7 +398,7 @@ literal|"http://localhost:8080/baz"
 argument_list|,
 literal|"/bar"
 argument_list|,
-literal|"n=1%202&n=3&b=2"
+literal|"n=1%202&n=3&b=2&a%2Eb=ab"
 argument_list|)
 argument_list|,
 literal|null
@@ -415,7 +415,7 @@ name|assertEquals
 argument_list|(
 literal|"Number of queiries is wrong"
 argument_list|,
-literal|2
+literal|3
 argument_list|,
 name|qps
 operator|.
@@ -478,6 +478,25 @@ literal|0
 argument_list|)
 argument_list|,
 literal|"2"
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Wrong query value"
+argument_list|,
+name|qps
+operator|.
+name|get
+argument_list|(
+literal|"a.b"
+argument_list|)
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+argument_list|,
+literal|"ab"
 argument_list|)
 expr_stmt|;
 block|}

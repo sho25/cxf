@@ -667,6 +667,11 @@ argument_list|,
 name|os
 argument_list|)
 decl_stmt|;
+name|xmlStreamWriter
+operator|.
+name|writeStartDocument
+argument_list|()
+expr_stmt|;
 name|StaxUtils
 operator|.
 name|copy
