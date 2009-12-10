@@ -289,10 +289,15 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|def
+name|beanFactory
 operator|.
 name|isSingleton
-argument_list|()
+argument_list|(
+name|beanNames
+index|[
+name|i
+index|]
+argument_list|)
 operator|||
 name|def
 operator|.
