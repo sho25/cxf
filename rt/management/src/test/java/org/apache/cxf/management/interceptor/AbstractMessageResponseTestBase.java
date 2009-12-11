@@ -767,6 +767,15 @@ argument_list|(
 name|endpoint
 argument_list|)
 expr_stmt|;
+name|setupOperationForMessage
+argument_list|()
+expr_stmt|;
+block|}
+specifier|protected
+name|void
+name|setupOperationForMessage
+parameter_list|()
+block|{
 name|OperationInfo
 name|op
 init|=
