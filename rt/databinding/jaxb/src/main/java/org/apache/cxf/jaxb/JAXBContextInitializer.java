@@ -1080,6 +1080,9 @@ condition|)
 block|{
 if|if
 condition|(
+operator|!
+name|isFromWrapper
+operator|&&
 name|clazz
 operator|.
 name|getAnnotation
