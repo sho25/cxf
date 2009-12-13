@@ -59,6 +59,16 @@ name|URL
 import|;
 end_import
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Arrays
+import|;
+end_import
+
 begin_comment
 comment|/**  * @author lk  *   */
 end_comment
@@ -210,7 +220,12 @@ name|spec
 operator|+
 literal|"' in '"
 operator|+
+name|Arrays
+operator|.
+name|toString
+argument_list|(
 name|userIdlDirs
+argument_list|)
 operator|+
 literal|"'"
 argument_list|,
