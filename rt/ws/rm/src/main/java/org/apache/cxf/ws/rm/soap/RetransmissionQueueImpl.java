@@ -75,6 +75,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collection
 import|;
 end_import
@@ -1804,7 +1814,12 @@ name|fine
 argument_list|(
 literal|"Using saved byte array: "
 operator|+
+name|Arrays
+operator|.
+name|toString
+argument_list|(
 name|content
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
