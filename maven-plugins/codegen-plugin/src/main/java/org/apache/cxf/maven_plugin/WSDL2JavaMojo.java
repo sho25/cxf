@@ -51,6 +51,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|List
 import|;
 end_import
@@ -1543,7 +1553,12 @@ name|debug
 argument_list|(
 literal|"Calling wsdl2java with args: "
 operator|+
+name|Arrays
+operator|.
+name|toString
+argument_list|(
 name|args
+argument_list|)
 argument_list|)
 expr_stmt|;
 try|try
