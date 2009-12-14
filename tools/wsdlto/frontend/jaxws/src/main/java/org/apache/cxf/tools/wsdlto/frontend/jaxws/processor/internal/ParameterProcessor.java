@@ -2720,16 +2720,6 @@ name|sameWrapperChild
 init|=
 literal|false
 decl_stmt|;
-if|if
-condition|(
-name|outputWrapElement
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|1
-condition|)
-block|{
 for|for
 control|(
 name|QName
@@ -2875,7 +2865,6 @@ argument_list|)
 expr_stmt|;
 block|}
 break|break;
-block|}
 block|}
 block|}
 if|if
