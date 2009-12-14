@@ -1087,6 +1087,11 @@ block|}
 name|initializeConfig
 argument_list|()
 expr_stmt|;
+name|CXFAuthenticator
+operator|.
+name|addAuthenticator
+argument_list|()
+expr_stmt|;
 block|}
 comment|/**      * This method returns the registered Logger for this conduit.      */
 specifier|protected
