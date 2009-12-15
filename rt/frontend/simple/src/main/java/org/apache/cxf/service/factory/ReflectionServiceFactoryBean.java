@@ -14552,10 +14552,6 @@ block|{
 if|if
 condition|(
 name|tp
-operator|!=
-literal|null
-operator|&&
-name|tp
 operator|instanceof
 name|ParameterizedType
 condition|)
