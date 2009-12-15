@@ -585,15 +585,6 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|exchange
-operator|.
-name|isOneWay
-argument_list|()
-condition|)
-block|{
-if|if
-condition|(
-operator|!
 name|o
 operator|.
 name|isDone
@@ -677,7 +668,6 @@ name|getCause
 argument_list|()
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

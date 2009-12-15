@@ -1461,6 +1461,15 @@ condition|(
 name|faultObserver
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|isOneWay
+argument_list|()
 condition|)
 block|{
 name|faultObserver

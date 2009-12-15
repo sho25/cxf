@@ -35,6 +35,16 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|WebService
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -50,6 +60,13 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|WebService
+argument_list|(
+name|endpointInterface
+operator|=
+literal|"org.apache.hello_world_doc_lit.Greeter"
+argument_list|)
 specifier|public
 class|class
 name|GreeterImplWithTransaction
