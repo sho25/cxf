@@ -113,6 +113,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|WSA_NAMESPACE_WSDL_METADATA
+init|=
+literal|"http://www.w3.org/2007/05/addressing/metadata"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|WSA_NAMESPACE_PATTERN
 init|=
 literal|"/addressing"
