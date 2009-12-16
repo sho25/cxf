@@ -44,6 +44,13 @@ name|BeanWithFlatArray
 name|bwfa
 parameter_list|)
 function_decl|;
+name|BeanWithFlatCollection
+name|echoBeanWithFlatCollection
+parameter_list|(
+name|BeanWithFlatCollection
+name|c
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
