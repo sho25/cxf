@@ -245,6 +245,16 @@ operator|new
 name|LocalTransportFactory
 argument_list|()
 decl_stmt|;
+name|localTransport
+operator|.
+name|getUriPrefixes
+argument_list|()
+operator|.
+name|add
+argument_list|(
+literal|"http"
+argument_list|)
+expr_stmt|;
 name|dfm
 operator|.
 name|registerDestinationFactory
