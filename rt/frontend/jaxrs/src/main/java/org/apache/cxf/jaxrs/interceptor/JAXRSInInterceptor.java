@@ -1469,7 +1469,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"org.apache.cxf.management.operation.name"
+literal|"org.apache.cxf.resource.operation.name"
 argument_list|,
 name|ori
 operator|.

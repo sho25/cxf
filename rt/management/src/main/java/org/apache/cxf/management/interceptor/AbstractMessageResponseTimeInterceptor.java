@@ -696,7 +696,7 @@ name|ex
 operator|.
 name|get
 argument_list|(
-literal|"org.apache.cxf.management.operation.name"
+literal|"org.apache.cxf.resource.operation.name"
 argument_list|)
 decl_stmt|;
 if|if
