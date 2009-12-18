@@ -473,17 +473,6 @@ operator|==
 literal|null
 condition|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"targetDestination "
-operator|+
-name|targetDestination
-argument_list|)
-expr_stmt|;
 throw|throw
 operator|new
 name|ConfigurationException

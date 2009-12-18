@@ -1214,6 +1214,11 @@ operator|.
 name|initialize
 argument_list|()
 expr_stmt|;
+name|jmsListener
+operator|.
+name|start
+argument_list|()
+expr_stmt|;
 return|return
 name|jmsListener
 return|;
