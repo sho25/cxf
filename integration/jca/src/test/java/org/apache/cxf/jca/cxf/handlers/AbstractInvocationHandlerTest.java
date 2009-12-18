@@ -73,19 +73,6 @@ specifier|public
 name|AbstractInvocationHandlerTest
 parameter_list|()
 block|{           }
-specifier|public
-name|AbstractInvocationHandlerTest
-parameter_list|(
-name|String
-name|name
-parameter_list|)
-block|{
-name|super
-argument_list|(
-name|name
-argument_list|)
-expr_stmt|;
-block|}
 comment|// seach for the setNext method
 annotation|@
 name|Test

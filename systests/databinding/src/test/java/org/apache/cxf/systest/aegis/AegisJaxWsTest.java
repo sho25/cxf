@@ -121,6 +121,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -133,7 +143,25 @@ name|springframework
 operator|.
 name|test
 operator|.
-name|AbstractDependencyInjectionSpringContextTests
+name|context
+operator|.
+name|ContextConfiguration
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|springframework
+operator|.
+name|test
+operator|.
+name|context
+operator|.
+name|junit4
+operator|.
+name|AbstractJUnit4SpringContextTests
 import|;
 end_import
 
@@ -142,11 +170,20 @@ comment|/**  *   */
 end_comment
 
 begin_class
+annotation|@
+name|ContextConfiguration
+argument_list|(
+name|locations
+operator|=
+block|{
+literal|"classpath:aegisJaxWsBeans.xml"
+block|}
+argument_list|)
 specifier|public
 class|class
 name|AegisJaxWsTest
 extends|extends
-name|AbstractDependencyInjectionSpringContextTests
+name|AbstractJUnit4SpringContextTests
 block|{
 specifier|private
 name|AegisJaxWs
@@ -156,23 +193,6 @@ specifier|public
 name|AegisJaxWsTest
 parameter_list|()
 block|{     }
-annotation|@
-name|Override
-specifier|protected
-name|String
-index|[]
-name|getConfigLocations
-parameter_list|()
-block|{
-return|return
-operator|new
-name|String
-index|[]
-block|{
-literal|"classpath:aegisJaxWsBeans.xml"
-block|}
-return|;
-block|}
 specifier|private
 name|void
 name|setupForTest
@@ -341,6 +361,8 @@ argument_list|,
 literal|"b"
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|33
@@ -354,6 +376,8 @@ name|intValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"   jack&jill   :b"
@@ -391,6 +415,8 @@ argument_list|,
 literal|"b"
 argument_list|)
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|33
@@ -404,6 +430,8 @@ name|intValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|" a :b"
@@ -474,11 +502,15 @@ operator|.
 name|getItemsMapSpecified
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertNotNull
 argument_list|(
 name|items
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|1
@@ -510,6 +542,8 @@ operator|.
 name|next
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertNotNull
 argument_list|(
 name|entry
@@ -531,6 +565,8 @@ operator|.
 name|getKey
 argument_list|()
 decl_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|42
@@ -541,6 +577,8 @@ name|intValue
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
 name|assertEquals
 argument_list|(
 literal|"Godzilla"

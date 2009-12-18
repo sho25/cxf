@@ -237,13 +237,6 @@ specifier|public
 name|HandlerTestBase
 parameter_list|()
 block|{     }
-specifier|public
-name|HandlerTestBase
-parameter_list|(
-name|String
-name|aName
-parameter_list|)
-block|{              }
 annotation|@
 name|Before
 specifier|public
