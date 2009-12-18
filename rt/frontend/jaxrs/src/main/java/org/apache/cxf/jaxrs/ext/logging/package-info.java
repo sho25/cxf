@@ -4,7 +4,7 @@ comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or 
 end_comment
 
 begin_comment
-comment|/**  * JAX-RS specific logging support. Based on<tt>java.util.logging</tt> (JUL)  * with use of different logging frameworks factored out; assumes that client   * with source code logging to other systems, like Log4J, can bridge   * to this implementation applying<a href="www.slf4j.org">SLF4J</a>   * that JAXRS already depends on.  */
+comment|/**  * CXF specific logging support. Based on<tt>java.util.logging</tt> (JUL)  * with use of different logging frameworks factored out; assumes that client   * with source code logging to other systems, like Log4J, can bridge   * to this implementation applying<a href="www.slf4j.org">SLF4J</a>   * that JAXRS already depends on.  */
 end_comment
 
 begin_annotation
@@ -35,7 +35,7 @@ name|XmlNs
 argument_list|(
 name|namespaceURI
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|,
 name|prefix
 operator|=

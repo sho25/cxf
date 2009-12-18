@@ -470,6 +470,18 @@ name|pause
 expr_stmt|;
 block|}
 block|}
+specifier|public
+name|String
+name|getEndpointAddress
+parameter_list|()
+block|{
+return|return
+name|deliverer
+operator|.
+name|getEndpointAddress
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 

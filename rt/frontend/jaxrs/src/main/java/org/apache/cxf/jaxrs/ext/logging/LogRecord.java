@@ -175,7 +175,7 @@ name|XmlRootElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 class|class
@@ -381,7 +381,7 @@ name|XmlElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|Date
@@ -421,7 +421,7 @@ name|XmlElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|LogLevel
@@ -462,7 +462,7 @@ name|XmlElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|String
@@ -502,7 +502,7 @@ name|XmlElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|String
@@ -542,7 +542,7 @@ name|XmlElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|String
@@ -583,7 +583,7 @@ name|XmlElement
 argument_list|(
 name|namespace
 operator|=
-literal|"http://cxf.apache.org/jaxrs/log"
+literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|String

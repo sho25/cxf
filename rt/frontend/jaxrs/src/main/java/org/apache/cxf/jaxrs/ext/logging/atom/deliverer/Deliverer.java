@@ -56,6 +56,11 @@ parameter_list|)
 throws|throws
 name|InterruptedException
 function_decl|;
+comment|/**      * Returns the address of the remote endpoint this deliverer send elements to      * @return      */
+name|String
+name|getEndpointAddress
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 

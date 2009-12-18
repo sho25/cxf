@@ -479,6 +479,35 @@ name|batchSize
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Batch cleanup time in minutes      */
+specifier|public
+name|void
+name|setBatchCleanupTime
+parameter_list|(
+name|String
+name|batchCleanupTime
+parameter_list|)
+block|{
+name|checkInit
+argument_list|()
+expr_stmt|;
+name|Validate
+operator|.
+name|notNull
+argument_list|(
+name|batchCleanupTime
+argument_list|,
+literal|"batchCleanup is null"
+argument_list|)
+expr_stmt|;
+name|conf
+operator|.
+name|setBatchCleanupTime
+argument_list|(
+name|batchCleanupTime
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Retry pause calculation strategy, either "linear" or "exponential".      */
 specifier|public
 name|void
