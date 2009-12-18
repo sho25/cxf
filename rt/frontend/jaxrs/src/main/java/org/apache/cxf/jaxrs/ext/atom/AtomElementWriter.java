@@ -33,22 +33,6 @@ name|Element
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|ext
-operator|.
-name|MessageContext
-import|;
-end_import
-
 begin_comment
 comment|/**  * A callback-style interface which can be used to map an object to an Atom Feed or Entry  * without having to introduce direct dependencies on Abdera API in the 'main' service code    *   * @param<T> Type of Atom element, Feed or Entry  * @param<E> Type of objects which will be mapped to feed or entry  *    */
 end_comment
@@ -65,7 +49,7 @@ parameter_list|,
 name|E
 parameter_list|>
 block|{
-comment|/**      * @param element Feed or Entry instance       * @param pojoElement An object which needs to be mapped to the feed or entry      * @param context modifiable output headers      * @param context MessageContext which can be used for adding properties related to the current URI, etc      */
+comment|/**      * @param element Feed or Entry instance       * @param pojoElement An object which needs to be mapped to the feed or entry      */
 name|void
 name|writeTo
 parameter_list|(
@@ -74,9 +58,6 @@ name|element
 parameter_list|,
 name|E
 name|pojoElement
-parameter_list|,
-name|MessageContext
-name|mc
 parameter_list|)
 function_decl|;
 block|}

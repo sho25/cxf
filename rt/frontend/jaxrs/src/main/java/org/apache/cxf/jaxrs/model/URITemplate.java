@@ -219,7 +219,7 @@ specifier|final
 name|String
 name|CHARACTERS_TO_ESCAPE
 init|=
-literal|"."
+literal|".*"
 decl_stmt|;
 specifier|private
 specifier|final

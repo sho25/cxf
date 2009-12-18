@@ -33,22 +33,6 @@ name|Element
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|ext
-operator|.
-name|MessageContext
-import|;
-end_import
-
 begin_comment
 comment|/**  * A callback-style interface which can be used to deserialize an Atom Feed or Entry into a custom object  * without having to introduce direct dependencies on Abdera API in the 'main' service code    *   * @param<T> Type of Atom element, Feed or Entry  * @param<E> Type of objects which will be deseriaized from feed or entry  *    */
 end_comment
@@ -65,15 +49,12 @@ parameter_list|,
 name|E
 parameter_list|>
 block|{
-comment|/**      * @param element Feed or Entry instance       * @param context current MessageContext      * @return pojoElement       */
+comment|/**      * @param element Feed or Entry instance       * @return pojoElement       */
 name|E
 name|readFrom
 parameter_list|(
 name|T
 name|element
-parameter_list|,
-name|MessageContext
-name|mc
 parameter_list|)
 function_decl|;
 block|}
