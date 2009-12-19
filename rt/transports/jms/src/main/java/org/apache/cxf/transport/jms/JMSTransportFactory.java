@@ -318,6 +318,8 @@ argument_list|,
 name|target
 argument_list|,
 name|jmsConf
+argument_list|,
+name|bus
 argument_list|)
 return|;
 block|}

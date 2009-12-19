@@ -672,6 +672,8 @@ argument_list|,
 name|target
 argument_list|,
 name|jmsConfig
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 if|if
