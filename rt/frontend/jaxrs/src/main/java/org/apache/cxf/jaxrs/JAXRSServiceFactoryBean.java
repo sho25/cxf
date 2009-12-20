@@ -101,6 +101,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|namespace
+operator|.
+name|QName
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -303,10 +315,29 @@ specifier|private
 name|boolean
 name|enableStatic
 decl_stmt|;
+specifier|private
+name|QName
+name|serviceName
+decl_stmt|;
 specifier|public
 name|JAXRSServiceFactoryBean
 parameter_list|()
 block|{     }
+specifier|public
+name|void
+name|setServiceName
+parameter_list|(
+name|QName
+name|name
+parameter_list|)
+block|{
+name|this
+operator|.
+name|serviceName
+operator|=
+name|name
+expr_stmt|;
+block|}
 specifier|public
 name|void
 name|setEnableStaticResolution
@@ -1158,6 +1189,8 @@ operator|new
 name|JAXRSServiceImpl
 argument_list|(
 name|classResourceInfos
+argument_list|,
+name|serviceName
 argument_list|)
 decl_stmt|;
 name|setService

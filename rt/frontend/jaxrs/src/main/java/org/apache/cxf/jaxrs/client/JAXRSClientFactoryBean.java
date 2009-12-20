@@ -533,6 +533,9 @@ name|JAXRSServiceImpl
 argument_list|(
 name|getAddress
 argument_list|()
+argument_list|,
+name|getServiceName
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|getServiceFactory
