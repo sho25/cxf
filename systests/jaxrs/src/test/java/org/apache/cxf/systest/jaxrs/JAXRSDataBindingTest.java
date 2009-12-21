@@ -535,10 +535,16 @@ name|db
 argument_list|)
 expr_stmt|;
 name|DataBindingJSONProvider
+argument_list|<
+name|Structure
+argument_list|>
 name|provider
 init|=
 operator|new
 name|DataBindingJSONProvider
+argument_list|<
+name|Structure
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|provider

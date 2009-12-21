@@ -229,8 +229,14 @@ argument_list|)
 specifier|public
 class|class
 name|DataBindingJSONProvider
+parameter_list|<
+name|T
+parameter_list|>
 extends|extends
 name|DataBindingProvider
+argument_list|<
+name|T
+argument_list|>
 block|{
 specifier|private
 name|List
