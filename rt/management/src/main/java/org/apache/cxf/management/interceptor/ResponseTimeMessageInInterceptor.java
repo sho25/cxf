@@ -102,7 +102,7 @@ name|super
 argument_list|(
 name|Phase
 operator|.
-name|RECEIVE
+name|POST_LOGICAL
 argument_list|)
 expr_stmt|;
 block|}
