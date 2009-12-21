@@ -196,11 +196,14 @@ argument_list|)
 condition|)
 block|{
 return|return
+name|getRealClassFromClassInternal
+argument_list|(
 name|AopUtils
 operator|.
 name|getTargetClass
 argument_list|(
 name|o
+argument_list|)
 argument_list|)
 return|;
 block|}
