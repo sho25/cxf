@@ -3588,6 +3588,9 @@ parameter_list|)
 block|{
 name|outMessage
 operator|.
+name|getExchange
+argument_list|()
+operator|.
 name|put
 argument_list|(
 literal|"org.apache.cxf.resource.operation.name"
