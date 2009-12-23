@@ -255,6 +255,8 @@ operator|new
 name|InitialContext
 argument_list|()
 decl_stmt|;
+try|try
+block|{
 name|obj
 operator|=
 name|ic
@@ -264,6 +266,15 @@ argument_list|(
 name|entryName
 argument_list|)
 expr_stmt|;
+block|}
+finally|finally
+block|{
+name|ic
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
