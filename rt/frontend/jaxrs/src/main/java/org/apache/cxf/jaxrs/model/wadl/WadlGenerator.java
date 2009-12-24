@@ -1782,7 +1782,7 @@ argument_list|)
 expr_stmt|;
 name|handleDocs
 argument_list|(
-name|cri
+name|subcri
 operator|.
 name|getServiceClass
 argument_list|()
