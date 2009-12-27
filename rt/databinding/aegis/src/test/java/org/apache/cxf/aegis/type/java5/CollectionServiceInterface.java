@@ -89,6 +89,18 @@ name|Stack
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|DocumentFragment
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -210,6 +222,14 @@ name|double
 index|[]
 argument_list|>
 name|returnCollectionOfPrimitiveArrays
+parameter_list|()
+function_decl|;
+name|Collection
+argument_list|<
+name|DocumentFragment
+index|[]
+argument_list|>
+name|returnCollectionOfDOMFragments
 parameter_list|()
 function_decl|;
 block|}

@@ -1083,7 +1083,7 @@ argument_list|(
 name|compType
 argument_list|)
 decl_stmt|;
-comment|// belive it or not, this seems to be the only way to get the
+comment|// believe it or not, this seems to be the only way to get the
 comment|// Class object for an array of primitive type.
 name|Object
 name|instance
