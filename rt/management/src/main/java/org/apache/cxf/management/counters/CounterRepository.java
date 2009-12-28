@@ -412,6 +412,32 @@ argument_list|(
 name|mhtr
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Increase counter "
+operator|+
+name|on
+operator|+
+literal|" with "
+operator|+
+name|mhtr
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 comment|//find a counter
 specifier|public
