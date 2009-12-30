@@ -602,6 +602,10 @@ argument_list|,
 name|Output
 operator|.
 name|FEED
+argument_list|,
+name|Output
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|Multiplicity
@@ -637,6 +641,10 @@ argument_list|(
 name|multiplicity
 argument_list|,
 name|defaultMul
+argument_list|,
+name|Multiplicity
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 name|Format
@@ -649,6 +657,10 @@ argument_list|,
 name|Format
 operator|.
 name|CONTENT
+argument_list|,
+name|Format
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 if|if
@@ -1115,6 +1127,12 @@ name|value
 parameter_list|,
 name|T
 name|defaultValue
+parameter_list|,
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|enumClass
 parameter_list|)
 block|{
 if|if
@@ -1145,10 +1163,7 @@ name|Enum
 operator|.
 name|valueOf
 argument_list|(
-name|defaultValue
-operator|.
-name|getClass
-argument_list|()
+name|enumClass
 argument_list|,
 name|value
 operator|.
