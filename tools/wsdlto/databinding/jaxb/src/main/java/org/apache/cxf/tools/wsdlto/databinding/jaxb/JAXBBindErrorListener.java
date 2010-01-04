@@ -148,10 +148,13 @@ name|ToolException
 argument_list|(
 name|prefix
 operator|+
+name|mapMessage
+argument_list|(
 name|exception
 operator|.
 name|getLocalizedMessage
 argument_list|()
+argument_list|)
 argument_list|,
 name|exception
 argument_list|)
@@ -280,6 +283,71 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|private
+name|String
+name|mapMessage
+parameter_list|(
+name|String
+name|msg
+parameter_list|)
+block|{
+comment|//this is kind of a hack to map the JAXB error message into
+comment|//something more appropriate for CXF.  If JAXB changes their
+comment|//error messages, this will break
+if|if
+condition|(
+name|msg
+operator|.
+name|contains
+argument_list|(
+literal|"Use a class customization to resolve"
+argument_list|)
+operator|&&
+name|msg
+operator|.
+name|contains
+argument_list|(
+literal|"with the same name"
+argument_list|)
+condition|)
+block|{
+name|int
+name|idx
+init|=
+name|msg
+operator|.
+name|lastIndexOf
+argument_list|(
+literal|"class customization"
+argument_list|)
+operator|+
+literal|19
+decl_stmt|;
+name|msg
+operator|=
+name|msg
+operator|.
+name|substring
+argument_list|(
+literal|0
+argument_list|,
+name|idx
+argument_list|)
+operator|+
+literal|" or the -autoNameResolution option"
+operator|+
+name|msg
+operator|.
+name|substring
+argument_list|(
+name|idx
+argument_list|)
+expr_stmt|;
+block|}
+return|return
+name|msg
+return|;
 block|}
 block|}
 end_class
