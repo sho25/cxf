@@ -1105,11 +1105,6 @@ return|return
 name|ret
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 parameter_list|<
 name|T
@@ -1156,9 +1151,6 @@ block|}
 try|try
 block|{
 return|return
-operator|(
-name|T
-operator|)
 name|Enum
 operator|.
 name|valueOf
