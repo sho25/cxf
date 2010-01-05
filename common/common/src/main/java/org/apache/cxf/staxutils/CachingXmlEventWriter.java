@@ -706,7 +706,9 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
-name|writeNamespace
+name|curContext
+operator|.
+name|addNs
 argument_list|(
 literal|""
 argument_list|,

@@ -207,6 +207,20 @@ name|hello_world_soap_http
 operator|.
 name|xmlbeans
 operator|.
+name|GreetMeFault
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|hello_world_soap_http
+operator|.
+name|xmlbeans
+operator|.
 name|Greeter
 import|;
 end_import
@@ -255,16 +269,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -273,12 +277,11 @@ begin_comment
 comment|/**  *   */
 end_comment
 
+begin_comment
+comment|//@org.junit.Ignore("randomly fails on Hudson, but dkulp cannot reproduce yet")
+end_comment
+
 begin_class
-annotation|@
-name|Ignore
-argument_list|(
-literal|"randomly fails on Hudson, but dkulp cannot reproduce yet"
-argument_list|)
 specifier|public
 class|class
 name|ClientServerXmlBeansTest
@@ -458,9 +461,9 @@ name|assertEquals
 argument_list|(
 literal|"We should get the right response"
 argument_list|,
-name|resp
-argument_list|,
 literal|"Bonjour"
+argument_list|,
+name|resp
 argument_list|)
 expr_stmt|;
 name|resp
@@ -476,11 +479,46 @@ name|assertEquals
 argument_list|(
 literal|"We should get the right response"
 argument_list|,
-name|resp
-argument_list|,
 literal|"Hello Willem"
+argument_list|,
+name|resp
 argument_list|)
 expr_stmt|;
+try|try
+block|{
+name|port
+operator|.
+name|greetMe
+argument_list|(
+literal|"fault"
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Should have been a fault"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|GreetMeFault
+name|ex
+parameter_list|)
+block|{
+name|assertEquals
+argument_list|(
+literal|"Some fault detail"
+argument_list|,
+name|ex
+operator|.
+name|getFaultInfo
+argument_list|()
+operator|.
+name|getStringValue
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 try|try
 block|{
 name|resp
@@ -522,18 +560,6 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-name|port
-operator|.
-name|greetMeOneWay
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"user.name"
-argument_list|)
-argument_list|)
-expr_stmt|;
 try|try
 block|{
 name|port
@@ -809,18 +835,6 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-name|port
-operator|.
-name|greetMeOneWay
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"user.name"
-argument_list|)
-argument_list|)
-expr_stmt|;
 try|try
 block|{
 name|port
@@ -878,6 +892,41 @@ name|getMinor
 argument_list|()
 argument_list|,
 literal|1
+argument_list|)
+expr_stmt|;
+block|}
+try|try
+block|{
+name|port
+operator|.
+name|greetMe
+argument_list|(
+literal|"fault"
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Should have been a fault"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|GreetMeFault
+name|ex
+parameter_list|)
+block|{
+name|assertEquals
+argument_list|(
+literal|"Some fault detail"
+argument_list|,
+name|ex
+operator|.
+name|getFaultInfo
+argument_list|()
+operator|.
+name|getStringValue
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
