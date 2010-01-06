@@ -30,17 +30,17 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Implement this interface to customize logging behavior for Exceptions  * thrown by the application implementing the service call.  * Implementations of this class must be registered in configuration of CXF  * to be invoked.  *  * Implementing this interface can also be used for listening to exceptions  * that occur in the service, as long as they are not caught in the application.  */
+comment|/**  * Implement this interface to customize behavior for Exceptions  * thrown by the application implementing the service call.  * Implementations of this class must be registered in configuration of CXF  * to be invoked.  *  * Implementing this interface can be used for listening to exceptions  * that occur in the service, as long as they are not caught in the application.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|FaultLogger
+name|FaultListener
 block|{
-comment|/**      * Handle logging for the occured exception.      * @param exception The exception      * @param description A description of where in the service interfaces      * the exception occurred.      * @param message the message processed while the exception occured.      * @return<code>true</code> if CXF should use default logging for this      * exception,<code>false</code> if CXF not should do any logging.      */
+comment|/**      * Handle the occurred exception.      * @param exception The exception      * @param description A description of where in the service interfaces      * the exception occurred.      * @param message the message processed while the exception occurred.      * @return<code>true</code> if CXF should use default handling for this      * exception which normally is just logging the exception,<code>false</code>       * if CXF not should do any logging.      */
 name|boolean
-name|log
+name|faultOccurred
 parameter_list|(
 name|Exception
 name|exception

@@ -201,7 +201,7 @@ name|cxf
 operator|.
 name|logging
 operator|.
-name|FaultLogger
+name|FaultListener
 import|;
 end_import
 
@@ -1245,17 +1245,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|FaultLogger
+name|FaultListener
 name|flogger
 init|=
 operator|(
-name|FaultLogger
+name|FaultListener
 operator|)
 name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|FaultLogger
+name|FaultListener
 operator|.
 name|class
 operator|.
@@ -1279,7 +1279,7 @@ name|useDefaultLogging
 operator|=
 name|flogger
 operator|.
-name|log
+name|faultOccurred
 argument_list|(
 name|ex
 argument_list|,

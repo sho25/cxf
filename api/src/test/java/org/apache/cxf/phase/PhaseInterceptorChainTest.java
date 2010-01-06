@@ -145,7 +145,7 @@ name|cxf
 operator|.
 name|logging
 operator|.
-name|FaultLogger
+name|FaultListener
 import|;
 end_import
 
@@ -2701,14 +2701,14 @@ condition|(
 name|useCustomLogger
 condition|)
 block|{
-name|FaultLogger
+name|FaultListener
 name|customLogger
 init|=
 name|control
 operator|.
 name|createMock
 argument_list|(
-name|FaultLogger
+name|FaultListener
 operator|.
 name|class
 argument_list|)
@@ -2717,7 +2717,7 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|FaultLogger
+name|FaultListener
 operator|.
 name|class
 operator|.
@@ -2742,7 +2742,7 @@ condition|)
 block|{
 name|customLogger
 operator|.
-name|log
+name|faultOccurred
 argument_list|(
 name|EasyMock
 operator|.
@@ -2819,7 +2819,7 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|FaultLogger
+name|FaultListener
 operator|.
 name|class
 operator|.
