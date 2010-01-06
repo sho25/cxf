@@ -762,9 +762,14 @@ operator|+
 literal|"?page="
 operator|+
 operator|(
-name|page
+name|records
+operator|.
+name|size
+argument_list|()
+operator|/
+name|pageSize
 operator|+
-literal|2
+literal|1
 operator|)
 argument_list|,
 literal|"last"
@@ -923,9 +928,7 @@ specifier|public
 name|void
 name|close
 parameter_list|()
-block|{
-comment|// save records somehow
-block|}
+block|{              }
 specifier|public
 name|void
 name|setPageSize

@@ -459,6 +459,8 @@ argument_list|()
 argument_list|)
 argument_list|,
 literal|"Resource"
+argument_list|,
+literal|"namedLogger"
 argument_list|)
 expr_stmt|;
 block|}
@@ -468,11 +470,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"For some reasons two tests step on each other - fix it"
-argument_list|)
 specifier|public
 name|void
 name|testPagedFeed
@@ -509,7 +506,7 @@ argument_list|)
 expr_stmt|;
 name|verifyPages
 argument_list|(
-literal|"http://localhost:9080/atom/logs"
+literal|"http://localhost:9080/atom2/logs"
 argument_list|,
 literal|"next"
 argument_list|,
@@ -520,7 +517,7 @@ argument_list|)
 expr_stmt|;
 name|verifyPages
 argument_list|(
-literal|"http://localhost:9080/atom/logs?page=3"
+literal|"http://localhost:9080/atom2/logs?page=3"
 argument_list|,
 literal|"previous"
 argument_list|,
@@ -642,6 +639,8 @@ argument_list|()
 argument_list|)
 argument_list|,
 literal|"Resource2"
+argument_list|,
+literal|"theNamedLogger"
 argument_list|)
 expr_stmt|;
 block|}
@@ -853,8 +852,12 @@ parameter_list|()
 block|{
 name|doLog
 argument_list|(
+name|Resource
+operator|.
 name|LOG1
 argument_list|,
+name|Resource
+operator|.
 name|LOG2
 argument_list|)
 expr_stmt|;
@@ -903,7 +906,7 @@ name|class
 argument_list|,
 literal|null
 argument_list|,
-literal|"namedLogger"
+literal|"theNamedLogger"
 argument_list|)
 decl_stmt|;
 annotation|@
@@ -920,8 +923,12 @@ parameter_list|()
 block|{
 name|doLog
 argument_list|(
+name|Resource2
+operator|.
 name|LOG1
 argument_list|,
+name|Resource2
+operator|.
 name|LOG2
 argument_list|)
 expr_stmt|;
@@ -1142,6 +1149,9 @@ name|record
 parameter_list|,
 name|String
 name|clsName
+parameter_list|,
+name|String
+name|namedLoggerName
 parameter_list|)
 block|{
 name|String
@@ -1187,7 +1197,7 @@ block|}
 elseif|else
 if|if
 condition|(
-literal|"namedLogger"
+name|namedLoggerName
 operator|.
 name|equals
 argument_list|(
