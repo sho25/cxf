@@ -279,6 +279,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|io
+operator|.
+name|DelegatingInputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|message
 operator|.
 name|Exchange
@@ -1648,6 +1662,34 @@ name|inMessage
 argument_list|)
 condition|)
 block|{
+comment|//need to suck in all the data from the input stream as
+comment|//the transport might discard any data on the stream when this
+comment|//thread unwinds or when the empty response is sent back
+name|DelegatingInputStream
+name|in
+init|=
+name|inMessage
+operator|.
+name|get
+argument_list|(
+name|DelegatingInputStream
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|in
+operator|!=
+literal|null
+condition|)
+block|{
+name|in
+operator|.
+name|cacheInput
+argument_list|()
+expr_stmt|;
+block|}
 comment|// async service invocation required *after* a response
 comment|// has been sent (i.e. to a oneway, or a partial response
 comment|// to a decoupled twoway)
