@@ -577,9 +577,9 @@ name|message
 parameter_list|)
 block|{
 comment|// Yes this is ugly, but it avoids us from having to implement any kind of caching strategy
-if|if
-condition|(
-operator|!
+name|boolean
+name|wroteStart
+init|=
 name|MessageUtils
 operator|.
 name|isTrue
@@ -591,6 +591,11 @@ argument_list|(
 name|WROTE_ENVELOPE_START
 argument_list|)
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|wroteStart
 condition|)
 block|{
 name|writeSoapEnvelopeStart

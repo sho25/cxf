@@ -3227,6 +3227,25 @@ argument_list|,
 name|response
 argument_list|)
 expr_stmt|;
+name|OutputStream
+name|os
+init|=
+name|message
+operator|.
+name|getContent
+argument_list|(
+name|OutputStream
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|os
+operator|==
+literal|null
+condition|)
+block|{
 name|message
 operator|.
 name|setContent
@@ -3244,6 +3263,7 @@ name|response
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|/**      * Wrapper stream responsible for flushing headers and committing outgoing      * HTTP-level response.      */
