@@ -683,6 +683,20 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Exchange
+argument_list|>
+name|getUncorrelatedExchanges
+parameter_list|()
+block|{
+return|return
+name|uncorrelatedExchanges
+return|;
+block|}
 comment|/**      * @return the set of SOAP headers understood by this handler       */
 specifier|public
 name|Set
