@@ -306,6 +306,15 @@ name|add
 argument_list|(
 name|HttpHeaders
 operator|.
+name|CONTENT_TYPE
+argument_list|)
+expr_stmt|;
+name|HEADERS_WITH_POSSIBLE_QUOTES
+operator|.
+name|add
+argument_list|(
+name|HttpHeaders
+operator|.
 name|CACHE_CONTROL
 argument_list|)
 expr_stmt|;
