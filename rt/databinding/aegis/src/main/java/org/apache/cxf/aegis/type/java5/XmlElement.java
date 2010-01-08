@@ -94,9 +94,15 @@ argument_list|)
 annotation|@
 name|Target
 argument_list|(
+block|{
 name|ElementType
 operator|.
 name|METHOD
+block|,
+name|ElementType
+operator|.
+name|PARAMETER
+block|}
 argument_list|)
 specifier|public
 annotation_defn|@interface
