@@ -450,6 +450,9 @@ operator|.
 name|forName
 argument_list|(
 name|cname
+operator|.
+name|trim
+argument_list|()
 argument_list|,
 literal|true
 argument_list|,
