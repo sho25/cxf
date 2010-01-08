@@ -257,7 +257,7 @@ specifier|final
 name|String
 name|COMPLEX_HEADER_EXPRESSION
 init|=
-literal|"((\"(([^\"])|(?<=\\\\)\")*\")|([^\",]*))(;[\\w]+)?"
+literal|"(([\\w]+=\"[^\"]*\")|([\\w]+=[\\w]+)|([\\w]+))(;(([\\w]+=\"[^\"]*\")|([\\w]+=[\\w]+)|([\\w]+)))?"
 decl_stmt|;
 specifier|private
 specifier|static

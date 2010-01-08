@@ -2312,7 +2312,7 @@ return|return
 name|resourceTagOpened
 return|;
 block|}
-specifier|private
+specifier|protected
 name|boolean
 name|compareOperations
 parameter_list|(
@@ -2504,7 +2504,7 @@ return|return
 literal|true
 return|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handleDynamicSubresource
 parameter_list|(
@@ -3050,7 +3050,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|doWriteParam
 parameter_list|(
@@ -3523,7 +3523,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|List
 argument_list|<
 name|OperationResourceInfo
