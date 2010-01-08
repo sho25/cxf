@@ -592,6 +592,16 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
+literal|"Found "
+operator|+
+name|ex
+operator|.
+name|getCause
+argument_list|()
+operator|.
+name|getClass
+argument_list|()
+argument_list|,
 name|ex
 operator|.
 name|getCause
