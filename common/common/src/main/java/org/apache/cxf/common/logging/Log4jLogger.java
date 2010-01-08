@@ -233,6 +233,11 @@ name|log
 decl_stmt|;
 static|static
 block|{
+name|JDKBugHacks
+operator|.
+name|doHacks
+argument_list|()
+expr_stmt|;
 comment|//older versions of log4j don't have TRACE, use debug
 name|org
 operator|.
