@@ -1909,6 +1909,8 @@ argument_list|,
 name|JMSConstants
 operator|.
 name|JMS_CLIENT_RESPONSE_HEADERS
+argument_list|,
+name|jmsConfig
 argument_list|)
 expr_stmt|;
 name|JMSUtils

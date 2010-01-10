@@ -1228,6 +1228,8 @@ argument_list|,
 name|JMSConstants
 operator|.
 name|JMS_SERVER_REQUEST_HEADERS
+argument_list|,
+name|jmsConfig
 argument_list|)
 expr_stmt|;
 name|JMSUtils

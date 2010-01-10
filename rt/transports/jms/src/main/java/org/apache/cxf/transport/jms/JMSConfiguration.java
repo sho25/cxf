@@ -426,6 +426,10 @@ specifier|private
 name|boolean
 name|acceptMessagesWhileStopping
 decl_stmt|;
+specifier|private
+name|boolean
+name|jmsProviderTibcoEms
+decl_stmt|;
 comment|//For jms spec.
 specifier|private
 name|String
@@ -1792,6 +1796,32 @@ operator|.
 name|messageListenerContainer
 operator|=
 name|messageListenerContainer
+expr_stmt|;
+block|}
+comment|/** * @return Returns the jmsProviderTibcoEms.      */
+specifier|public
+name|boolean
+name|isJmsProviderTibcoEms
+parameter_list|()
+block|{
+return|return
+name|jmsProviderTibcoEms
+return|;
+block|}
+comment|/**      * @param jmsProviderTibcoEms The jmsProviderTibcoEms to set.      */
+specifier|public
+name|void
+name|setJmsProviderTibcoEms
+parameter_list|(
+name|boolean
+name|jmsProviderTibcoEms
+parameter_list|)
+block|{
+name|this
+operator|.
+name|jmsProviderTibcoEms
+operator|=
+name|jmsProviderTibcoEms
 expr_stmt|;
 block|}
 block|}
