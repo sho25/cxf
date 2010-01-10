@@ -336,14 +336,6 @@ name|WSDL2JavaMojo
 extends|extends
 name|AbstractMojo
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|TEMPBINDINGS_DIR
-init|=
-literal|"tempbindings"
-decl_stmt|;
 comment|/**      * @parameter expression="${cxf.testSourceRoot}"      */
 name|File
 name|testSourceRoot
@@ -767,54 +759,12 @@ argument_list|(
 name|effectiveWsdlOptions
 argument_list|)
 expr_stmt|;
-name|String
-name|buildDir
-init|=
-name|project
-operator|.
-name|getBuild
-argument_list|()
-operator|.
-name|getDirectory
-argument_list|()
-decl_stmt|;
-name|File
-name|tempBindingDir
-init|=
-operator|new
-name|File
-argument_list|(
-name|buildDir
-argument_list|,
-name|TEMPBINDINGS_DIR
-argument_list|)
-decl_stmt|;
-for|for
-control|(
-name|WsdlOption
-name|o
-range|:
-name|effectiveWsdlOptions
-control|)
-block|{
-name|BindingFileHelper
-operator|.
-name|setWsdlLocationInBindingsIfNotSet
-argument_list|(
-name|project
-operator|.
-name|getBasedir
-argument_list|()
-argument_list|,
-name|tempBindingDir
-argument_list|,
-name|o
-argument_list|,
-name|getLog
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
+comment|//        String buildDir = project.getBuild().getDirectory();
+comment|//        File tempBindingDir = new File(buildDir, TEMPBINDINGS_DIR);
+comment|//        for (WsdlOption o : effectiveWsdlOptions) {
+comment|//            BindingFileHelper.setWsdlLocationInBindingsIfNotSet(project.getBasedir(), tempBindingDir, o,
+comment|//                                                                getLog());
+comment|//        }
 return|return
 name|effectiveWsdlOptions
 return|;
