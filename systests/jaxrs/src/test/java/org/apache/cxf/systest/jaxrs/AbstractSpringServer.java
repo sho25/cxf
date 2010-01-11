@@ -209,7 +209,7 @@ name|path
 expr_stmt|;
 name|contextPath
 operator|=
-literal|"/"
+name|cPath
 expr_stmt|;
 name|port
 operator|=
