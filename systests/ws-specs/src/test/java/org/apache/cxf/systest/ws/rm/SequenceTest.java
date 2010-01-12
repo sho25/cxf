@@ -3776,7 +3776,14 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * A maximum sequence length of 2 is configured for the client only (server allows 10).      * However, as we use the defaults regarding the including and acceptance      * for inbound sequence offers and correlate offered sequences that are      * included in a CreateSequence request and accepted with those that are      * created on behalf of such a request, the server also tries terminate its      * sequences. Note that as part of the sequence termination exchange a      * standalone sequence acknowledgment needs to be sent regardless of whether      * or nor acknowledgments are delivered steadily with every response.      */
+comment|// A maximum sequence length of 2 is configured for the client only (server allows 10).
+comment|// However, as we use the defaults regarding the including and acceptance
+comment|// for inbound sequence offers and correlate offered sequences that are
+comment|// included in a CreateSequence request and accepted with those that are
+comment|// created on behalf of such a request, the server also tries terminate its
+comment|// sequences. Note that as part of the sequence termination exchange a
+comment|// standalone sequence acknowledgment needs to be sent regardless of whether
+comment|// or nor acknowledgments are delivered steadily with every response.
 annotation|@
 name|Test
 specifier|public

@@ -235,7 +235,7 @@ name|CachedOutputStream
 name|cos
 parameter_list|)
 block|{
-comment|//REVISIT - would be nice to keep the cache on disk intead of in-memory
+comment|//REVISIT - would be nice to keep the cache on disk instead of in-memory
 name|byte
 name|bytes
 index|[]

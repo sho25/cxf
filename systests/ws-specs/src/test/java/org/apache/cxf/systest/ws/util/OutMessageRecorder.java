@@ -35,7 +35,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
+name|List
 import|;
 end_import
 
@@ -45,7 +45,9 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|concurrent
+operator|.
+name|CopyOnWriteArrayList
 import|;
 end_import
 
@@ -284,7 +286,7 @@ expr_stmt|;
 name|outbound
 operator|=
 operator|new
-name|ArrayList
+name|CopyOnWriteArrayList
 argument_list|<
 name|byte
 index|[]
