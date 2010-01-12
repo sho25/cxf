@@ -55,6 +55,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|BusFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|bus
 operator|.
 name|spring
@@ -96,9 +108,6 @@ init|=
 literal|"http://localhost:9000/SoapContext/GreeterPort"
 decl_stmt|;
 name|Endpoint
-name|e
-init|=
-name|Endpoint
 operator|.
 name|publish
 argument_list|(
@@ -106,7 +115,7 @@ name|address
 argument_list|,
 name|implementor
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 block|}
 specifier|public
 specifier|static
@@ -152,7 +161,7 @@ name|toString
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|bf
+name|BusFactory
 operator|.
 name|setDefaultBus
 argument_list|(

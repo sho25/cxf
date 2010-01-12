@@ -432,7 +432,7 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|fine
+name|info
 argument_list|(
 literal|"Removed MessageSenderInterceptor from interceptor chain."
 argument_list|)

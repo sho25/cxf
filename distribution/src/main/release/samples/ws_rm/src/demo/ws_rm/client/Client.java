@@ -55,6 +55,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|BusFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|bus
 operator|.
 name|spring
@@ -110,19 +122,6 @@ class|class
 name|Client
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|String
-name|USER_NAME
-init|=
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"user.name"
-argument_list|)
-decl_stmt|;
-specifier|private
 name|Client
 parameter_list|()
 block|{     }
@@ -172,7 +171,7 @@ name|toString
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|bf
+name|BusFactory
 operator|.
 name|setDefaultBus
 argument_list|(
@@ -223,7 +222,7 @@ block|,
 literal|"Daisy"
 block|}
 decl_stmt|;
-comment|// make a sequence of 4 invocations
+comment|// make a sequence of invocations
 for|for
 control|(
 name|int
@@ -233,7 +232,9 @@ literal|0
 init|;
 name|i
 operator|<
-literal|4
+name|names
+operator|.
+name|length
 condition|;
 name|i
 operator|++
