@@ -97,7 +97,7 @@ name|w3c
 operator|.
 name|dom
 operator|.
-name|DocumentFragment
+name|Document
 import|;
 end_import
 
@@ -226,7 +226,7 @@ parameter_list|()
 function_decl|;
 name|Collection
 argument_list|<
-name|DocumentFragment
+name|Document
 index|[]
 argument_list|>
 name|returnCollectionOfDOMFragments
