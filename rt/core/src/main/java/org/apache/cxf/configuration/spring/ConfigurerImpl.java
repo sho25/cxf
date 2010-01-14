@@ -1248,7 +1248,7 @@ name|LOG
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"COULD_NOT_DETERMINE_BEAN_NAME_MSG"
 argument_list|,
