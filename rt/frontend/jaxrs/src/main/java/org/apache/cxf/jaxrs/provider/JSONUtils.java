@@ -563,7 +563,7 @@ control|)
 block|{
 name|xsw
 operator|.
-name|seriliazeAsArray
+name|serializeAsArray
 argument_list|(
 name|key
 argument_list|)
@@ -584,7 +584,7 @@ argument_list|)
 decl_stmt|;
 name|xsw
 operator|.
-name|seriliazeAsArray
+name|serializeAsArray
 argument_list|(
 name|key
 argument_list|)
