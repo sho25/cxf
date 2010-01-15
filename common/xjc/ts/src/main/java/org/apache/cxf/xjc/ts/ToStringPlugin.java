@@ -207,50 +207,6 @@ name|Outline
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
-name|logging
-operator|.
-name|LogUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxb
-operator|.
-name|JAXBToStringBuilder
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxb
-operator|.
-name|JAXBToStringStyle
-import|;
-end_import
-
 begin_comment
 comment|/**  * Modifies the JAXB code model to override the Object.toString() method with an   * implementation that provides a String representation of the xml content.  */
 end_comment
@@ -266,15 +222,19 @@ specifier|final
 name|Logger
 name|LOG
 init|=
-name|LogUtils
+name|Logger
 operator|.
-name|getL7dLogger
+name|getLogger
 argument_list|(
 name|ToStringPlugin
 operator|.
 name|class
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 decl_stmt|;
+comment|//NOPMD
 specifier|private
 name|String
 name|styleFieldName
@@ -300,7 +260,7 @@ literal|"  -Xts                 : Activate plugin to add a toString() method to 
 operator|+
 literal|"  -Xts:style:multiline : Have toString produce multi line output\n"
 operator|+
-literal|"  -Xts:style:simple    : Have toString produce single line terse output\n"
+literal|"  -Xts:style:simple    : Have toString produce single line terse output"
 return|;
 block|}
 specifier|public
@@ -442,9 +402,7 @@ argument_list|()
 operator|.
 name|ref
 argument_list|(
-name|JAXBToStringBuilder
-operator|.
-name|class
+literal|"org.apache.cxf.jaxb.JAXBToStringBuilder"
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -458,9 +416,7 @@ argument_list|()
 operator|.
 name|ref
 argument_list|(
-name|JAXBToStringStyle
-operator|.
-name|class
+literal|"org.apache.cxf.jaxb.JAXBToStringStyle"
 argument_list|)
 decl_stmt|;
 specifier|final

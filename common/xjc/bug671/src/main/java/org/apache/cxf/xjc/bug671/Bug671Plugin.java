@@ -117,7 +117,7 @@ name|getUsage
 parameter_list|()
 block|{
 return|return
-literal|"  -Xbug671             : Activate plugin to map package names that contain keywords\n"
+literal|"  -Xbug671             : Activate plugin to map package names that contain keywords"
 return|;
 block|}
 specifier|public

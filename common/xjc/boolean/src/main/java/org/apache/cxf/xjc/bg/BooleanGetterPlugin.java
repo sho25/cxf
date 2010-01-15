@@ -109,22 +109,6 @@ name|Outline
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
-name|logging
-operator|.
-name|LogUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * Generate getters named getXXX() for Booleans instead of isXXX(). Useful to use generated beans with tools  * that needs introspections, like dozer.  */
 end_comment
@@ -140,15 +124,19 @@ specifier|final
 name|Logger
 name|LOG
 init|=
-name|LogUtils
+name|Logger
 operator|.
-name|getL7dLogger
+name|getLogger
 argument_list|(
 name|BooleanGetterPlugin
 operator|.
 name|class
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 decl_stmt|;
+comment|//NOPMD
 specifier|public
 name|BooleanGetterPlugin
 parameter_list|()
