@@ -263,6 +263,20 @@ name|rs
 operator|.
 name|core
 operator|.
+name|Cookie
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
 name|HttpHeaders
 import|;
 end_import
@@ -1410,6 +1424,14 @@ literal|"c2"
 argument_list|)
 name|String
 name|c2
+parameter_list|,
+annotation|@
+name|CookieParam
+argument_list|(
+literal|"c3"
+argument_list|)
+name|Cookie
+name|c3
 parameter_list|)
 block|{
 comment|// complete
