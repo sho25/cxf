@@ -570,6 +570,12 @@ argument_list|(
 literal|"LOAD_BUS_WITH_APPLICATION_CONTEXT"
 argument_list|)
 expr_stmt|;
+name|inRefresh
+operator|=
+literal|true
+expr_stmt|;
+try|try
+block|{
 name|bus
 operator|=
 operator|new
@@ -581,6 +587,14 @@ operator|.
 name|createBus
 argument_list|()
 expr_stmt|;
+block|}
+finally|finally
+block|{
+name|inRefresh
+operator|=
+literal|false
+expr_stmt|;
+block|}
 block|}
 name|ResourceManager
 name|resourceManager
@@ -841,6 +855,11 @@ operator|&&
 name|event
 operator|instanceof
 name|ContextRefreshedEvent
+operator|&&
+name|getServletConfig
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 comment|//need to re-do the bus/controller stuff
