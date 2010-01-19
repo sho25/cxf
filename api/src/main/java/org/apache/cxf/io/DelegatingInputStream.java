@@ -141,6 +141,13 @@ name|void
 name|cacheInput
 parameter_list|()
 block|{
+if|if
+condition|(
+name|in
+operator|!=
+name|origIn
+condition|)
+block|{
 name|CachedOutputStream
 name|cache
 init|=
@@ -166,6 +173,11 @@ operator|.
 name|getInputStream
 argument_list|()
 expr_stmt|;
+name|cache
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -174,6 +186,7 @@ name|e
 parameter_list|)
 block|{
 comment|//ignore
+block|}
 block|}
 block|}
 block|}
