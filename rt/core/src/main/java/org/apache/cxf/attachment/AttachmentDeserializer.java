@@ -304,7 +304,11 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|"^--(\\S*)"
+literal|"^--(\\S*)$"
+argument_list|,
+name|Pattern
+operator|.
+name|MULTILINE
 argument_list|)
 decl_stmt|;
 specifier|private
