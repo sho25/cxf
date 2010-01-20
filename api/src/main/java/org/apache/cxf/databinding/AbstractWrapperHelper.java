@@ -373,6 +373,13 @@ condition|(
 name|o
 operator|instanceof
 name|List
+operator|&&
+name|getMethods
+index|[
+name|x
+index|]
+operator|!=
+literal|null
 condition|)
 block|{
 name|List
