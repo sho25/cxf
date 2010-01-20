@@ -5115,6 +5115,7 @@ name|el
 operator|!=
 literal|null
 operator|&&
+operator|(
 name|partName
 operator|.
 name|equals
@@ -5124,6 +5125,17 @@ operator|.
 name|name
 argument_list|()
 argument_list|)
+operator|||
+literal|"##default"
+operator|.
+name|equals
+argument_list|(
+name|el
+operator|.
+name|name
+argument_list|()
+argument_list|)
+operator|)
 condition|)
 block|{
 name|elField
@@ -5143,6 +5155,70 @@ expr_stmt|;
 block|}
 else|else
 block|{
+if|if
+condition|(
+name|getMethod
+operator|==
+literal|null
+operator|&&
+name|setMethod
+operator|==
+literal|null
+condition|)
+block|{
+if|if
+condition|(
+name|el
+operator|!=
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Could not create accessor for property "
+operator|+
+name|partName
+operator|+
+literal|" of type "
+operator|+
+name|wrapperType
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" as the @XmlElement "
+operator|+
+literal|"defines the name as "
+operator|+
+name|el
+operator|.
+name|name
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Could not create accessor for property "
+operator|+
+name|partName
+operator|+
+literal|" of type "
+operator|+
+name|wrapperType
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 name|fields
 operator|.
 name|add
