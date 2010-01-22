@@ -3094,7 +3094,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"Using derby.system.home: {0}"
 argument_list|,
@@ -3157,7 +3157,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"Using url: "
 operator|+
