@@ -307,7 +307,7 @@ name|level
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Initializes bean; creates ATOM push handler based on current properties state, and attaches handler to      * logger(s).      */
+comment|/**      * Initializes bean; creates ATOM handler based on current properties state, and attaches handler to      * logger(s).      */
 specifier|public
 name|void
 name|init
@@ -540,7 +540,19 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
+name|List
+argument_list|<
+name|LoggerLevel
+argument_list|>
+name|getLoggers
+parameter_list|()
+block|{
+return|return
+name|loggers
+return|;
+block|}
+specifier|protected
 specifier|static
 class|class
 name|LoggerLevel
