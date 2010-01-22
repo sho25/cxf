@@ -300,18 +300,14 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"http://schemas.xmlsoap.org/wsdl/soap/http"
-block|,
-literal|"http://schemas.xmlsoap.org/soap/http"
-block|,
-literal|"http://www.w3.org/2003/05/soap/bindings/HTTP/"
-block|,
-literal|"http://schemas.xmlsoap.org/wsdl/http/"
+literal|"http://cxf.apache.org/transports/http"
 block|,
 literal|"http://cxf.apache.org/transports/http/configuration"
 block|,
-literal|"http://cxf.apache.org/bindings/xformat"
-block|,                  }
+literal|"http://schemas.xmlsoap.org/wsdl/http"
+block|,
+literal|"http://schemas.xmlsoap.org/wsdl/http/"
+block|,         }
 argument_list|)
 decl_stmt|;
 name|this

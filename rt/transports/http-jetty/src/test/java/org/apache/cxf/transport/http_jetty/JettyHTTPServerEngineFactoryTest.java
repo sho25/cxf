@@ -282,7 +282,7 @@ name|destFM
 operator|.
 name|getDestinationFactory
 argument_list|(
-literal|"http://schemas.xmlsoap.org/soap/http"
+literal|"http://cxf.apache.org/transports/http"
 argument_list|)
 decl_stmt|;
 name|assertNotNull

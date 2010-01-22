@@ -3094,7 +3094,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|FINE
+name|INFO
 argument_list|,
 literal|"Using derby.system.home: {0}"
 argument_list|,
@@ -3151,6 +3151,19 @@ return|return;
 block|}
 try|try
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
+literal|"Using url: "
+operator|+
+name|url
+argument_list|)
+expr_stmt|;
 name|connection
 operator|=
 name|DriverManager

@@ -651,7 +651,7 @@ name|dfm
 operator|.
 name|getDestinationFactory
 argument_list|(
-literal|"http://schemas.xmlsoap.org/soap/http"
+literal|"http://cxf.apache.org/transports/http"
 argument_list|)
 decl_stmt|;
 name|Destination
@@ -748,7 +748,7 @@ name|cim
 operator|.
 name|getConduitInitiator
 argument_list|(
-literal|"http://schemas.xmlsoap.org/soap/http"
+literal|"http://cxf.apache.org/transports/http"
 argument_list|)
 decl_stmt|;
 name|HTTPConduit

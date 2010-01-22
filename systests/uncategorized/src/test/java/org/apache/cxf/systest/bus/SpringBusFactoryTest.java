@@ -737,7 +737,7 @@ name|cim
 operator|.
 name|getConduitInitiator
 argument_list|(
-literal|"http://cxf.apache.org/bindings/xformat"
+literal|"http://cxf.apache.org/transports/http"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -773,7 +773,7 @@ name|dfm
 operator|.
 name|getDestinationFactory
 argument_list|(
-literal|"http://cxf.apache.org/bindings/xformat"
+literal|"http://cxf.apache.org/transports/http"
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -57,6 +57,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|injection
+operator|.
+name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -110,6 +126,13 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|NoJSR250Annotations
+argument_list|(
+name|unlessNull
+operator|=
+literal|"bus"
+argument_list|)
 specifier|public
 class|class
 name|ClientOnlyHTTPTransportFactory

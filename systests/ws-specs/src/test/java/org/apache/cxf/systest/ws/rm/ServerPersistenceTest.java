@@ -505,11 +505,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|RMTxStore
-operator|.
-name|deleteDatabaseFiles
-argument_list|()
-expr_stmt|;
 name|String
 name|derbyHome
 init|=
@@ -520,6 +515,37 @@ argument_list|(
 literal|"derby.system.home"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|derbyHome
+operator|==
+literal|null
+condition|)
+block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"derby.system.home"
+argument_list|,
+literal|"target/derby"
+argument_list|)
+expr_stmt|;
+block|}
+name|RMTxStore
+operator|.
+name|deleteDatabaseFiles
+argument_list|()
+expr_stmt|;
+name|derbyHome
+operator|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"derby.system.home"
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|System
@@ -571,21 +597,6 @@ block|}
 block|}
 comment|// run server in process to avoid a problem with UUID generation
 comment|// during asynchronous invocations
-name|boolean
-name|inProcess
-init|=
-literal|"Windows 2000"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"os.name"
-argument_list|)
-argument_list|)
-decl_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -595,8 +606,6 @@ argument_list|(
 name|Server
 operator|.
 name|class
-argument_list|,
-name|inProcess
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1176,9 +1185,13 @@ while|while
 condition|(
 name|waited
 operator|<
-literal|5000
+literal|20
 condition|)
 block|{
+name|nDone
+operator|=
+literal|0
+expr_stmt|;
 for|for
 control|(
 name|int
@@ -1228,9 +1241,8 @@ argument_list|(
 literal|500
 argument_list|)
 expr_stmt|;
-name|nDone
-operator|=
-literal|0
+name|waited
+operator|++
 expr_stmt|;
 block|}
 name|assertEquals
