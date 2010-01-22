@@ -113,6 +113,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|injection
+operator|.
+name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|configuration
 operator|.
 name|security
@@ -228,6 +244,8 @@ comment|/**  * This class will create a client for you which implements the spec
 end_comment
 
 begin_class
+annotation|@
+name|NoJSR250Annotations
 specifier|public
 class|class
 name|ClientProxyFactoryBean

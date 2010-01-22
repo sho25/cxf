@@ -85,6 +85,22 @@ name|common
 operator|.
 name|injection
 operator|.
+name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|injection
+operator|.
 name|ResourceInjector
 import|;
 end_import
@@ -410,6 +426,8 @@ comment|/**  * Factory for creating JAX-WS proxies, This class provides access t
 end_comment
 
 begin_class
+annotation|@
+name|NoJSR250Annotations
 specifier|public
 class|class
 name|JaxWsProxyFactoryBean

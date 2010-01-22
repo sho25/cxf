@@ -267,6 +267,22 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|injection
+operator|.
+name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|logging
 operator|.
 name|LogUtils
@@ -864,6 +880,8 @@ comment|/**  * This Conduit handles the "http" and "https" transport protocols. 
 end_comment
 
 begin_class
+annotation|@
+name|NoJSR250Annotations
 specifier|public
 class|class
 name|HTTPConduit
