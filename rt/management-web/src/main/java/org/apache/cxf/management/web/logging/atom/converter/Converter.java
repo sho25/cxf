@@ -11,11 +11,15 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|management
 operator|.
-name|ext
+name|web
 operator|.
 name|logging
+operator|.
+name|atom
+operator|.
+name|converter
 package|;
 end_package
 
@@ -35,59 +39,56 @@ name|org
 operator|.
 name|apache
 operator|.
+name|abdera
+operator|.
+name|model
+operator|.
+name|Element
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|management
 operator|.
-name|ext
+name|web
 operator|.
-name|search
+name|logging
 operator|.
-name|SearchCondition
+name|LogRecord
 import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used by pull-style loggers to read the records from some external storage   *  */
+comment|/**  * Converts batch of log records into one or more ATOM Elements to deliver.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|ReadableLogStorage
+name|Converter
 block|{
-comment|/**      * Read the records and load them into a provided list      * @param list the list saved records should be added to      * @param condition the condition loaded records must meet, can be null       * @param loadFrom the initial index of the storage to have records loaded from      * @param int maxNumberOfRecords the max number of records to load from the storage      */
-name|void
-name|load
+comment|/**      * Converts given collection.      *       * @param records not-null collection of records      * @return non-empty collection of ATOM Elements that represent log records      */
+name|List
+argument_list|<
+name|?
+extends|extends
+name|Element
+argument_list|>
+name|convert
 parameter_list|(
 name|List
 argument_list|<
 name|LogRecord
 argument_list|>
-name|list
-parameter_list|,
-name|SearchCondition
-argument_list|<
-name|LogRecord
-argument_list|>
-name|condition
-parameter_list|,
-name|int
-name|loadFrom
-parameter_list|,
-name|int
-name|maxNumberOfRecords
+name|records
 parameter_list|)
-function_decl|;
-comment|/**      * Get the size of storage (in records)      * @param the size, -1 if not known, for ex, when reading from an open file containing log entries      */
-name|int
-name|getSize
-parameter_list|()
-function_decl|;
-comment|/**      * Close the storage      */
-name|void
-name|close
-parameter_list|()
 function_decl|;
 block|}
 end_interface

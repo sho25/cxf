@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|management
 operator|.
-name|ext
+name|web
 operator|.
 name|logging
 operator|.
@@ -313,9 +313,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|management
 operator|.
-name|ext
+name|web
 operator|.
 name|logging
 operator|.
@@ -331,9 +331,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|management
 operator|.
-name|ext
+name|web
 operator|.
 name|logging
 operator|.
