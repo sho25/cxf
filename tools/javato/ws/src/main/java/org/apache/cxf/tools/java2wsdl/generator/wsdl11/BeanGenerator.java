@@ -411,6 +411,13 @@ operator|new
 name|Compiler
 argument_list|()
 decl_stmt|;
+name|compiler
+operator|.
+name|setOutputDir
+argument_list|(
+name|compileToDir
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|String
@@ -468,8 +475,6 @@ name|size
 argument_list|()
 index|]
 argument_list|)
-argument_list|,
-name|compileToDir
 argument_list|)
 condition|)
 block|{
