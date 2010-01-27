@@ -615,15 +615,6 @@ block|{
 comment|// ignore
 block|}
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Hanging..."
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 specifier|private
