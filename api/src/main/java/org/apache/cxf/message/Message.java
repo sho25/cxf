@@ -121,9 +121,9 @@ init|=
 literal|"org.apache.cxf.partial.response"
 decl_stmt|;
 name|String
-name|ONE_WAY_MESSAGE
+name|ONE_WAY_REQUEST
 init|=
-literal|"OnewayMessage"
+literal|"OnewayRequest"
 decl_stmt|;
 name|String
 name|PROTOCOL_HEADERS
