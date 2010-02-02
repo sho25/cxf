@@ -385,7 +385,7 @@ comment|/**      * Disables the scanning of the wsdlRoot/testWsdlRoot directorie
 name|boolean
 name|disableDirectoryScan
 decl_stmt|;
-comment|/**      * By default all maven dependencies of type "wsdl" are added to the effective wsdlOptions. Setting this      * parameter to true disables this functionality      */
+comment|/**      * By default all maven dependencies of type "wsdl" are added to the effective wsdlOptions. Setting this      * parameter to true disables this functionality      *       * @parameter expression="${cxf.disableDependencyScan}" default-value="false"      */
 name|boolean
 name|disableDependencyScan
 decl_stmt|;
