@@ -2615,6 +2615,13 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
+name|isSuppressCodeGen
+argument_list|()
+condition|)
+block|{
+if|if
+condition|(
 name|outdir
 operator|!=
 literal|null
@@ -2774,6 +2781,7 @@ argument_list|(
 name|msg
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}
