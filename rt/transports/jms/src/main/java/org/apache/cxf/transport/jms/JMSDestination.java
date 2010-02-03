@@ -792,7 +792,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"JMSDestination activate().... "
 argument_list|)
