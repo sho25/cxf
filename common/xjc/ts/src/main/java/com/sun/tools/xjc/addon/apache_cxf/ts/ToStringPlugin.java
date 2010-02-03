@@ -213,6 +213,24 @@ name|errorHandler
 argument_list|)
 return|;
 block|}
+specifier|public
+name|void
+name|onActivated
+parameter_list|(
+name|Options
+name|opts
+parameter_list|)
+throws|throws
+name|BadCommandLineException
+block|{
+name|impl
+operator|.
+name|onActivated
+argument_list|(
+name|opts
+argument_list|)
+expr_stmt|;
+block|}
 comment|/* (non-Javadoc)      * @see com.sun.tools.xjc.Plugin#parseArgument(com.sun.tools.xjc.Options, java.lang.String[], int)      */
 annotation|@
 name|Override
