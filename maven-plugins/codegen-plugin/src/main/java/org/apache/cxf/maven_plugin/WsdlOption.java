@@ -55,6 +55,22 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|tools
+operator|.
+name|util
+operator|.
+name|URIParserUtil
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -262,7 +278,12 @@ name|baseURI
 operator|.
 name|resolve
 argument_list|(
+name|URIParserUtil
+operator|.
+name|escapeChars
+argument_list|(
 name|wsdlLocation
+argument_list|)
 argument_list|)
 return|;
 block|}
