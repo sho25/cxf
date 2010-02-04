@@ -317,7 +317,7 @@ name|Class
 operator|.
 name|forName
 argument_list|(
-literal|"org/slf4j/impl/StaticLoggerBinder"
+literal|"org.slf4j.impl.StaticLoggerBinder"
 argument_list|)
 expr_stmt|;
 name|Class
