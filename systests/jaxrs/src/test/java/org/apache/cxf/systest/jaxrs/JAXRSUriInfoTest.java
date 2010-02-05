@@ -242,7 +242,7 @@ literal|"http://localhost:9080/app/v1/test"
 argument_list|,
 literal|"\"test\""
 argument_list|,
-literal|"/test"
+literal|"test"
 argument_list|)
 expr_stmt|;
 name|checkUriInfo
@@ -269,7 +269,7 @@ literal|"http://localhost:9080/app/v1/bar"
 argument_list|,
 literal|"\"bar\""
 argument_list|,
-literal|"/bar"
+literal|"bar"
 argument_list|)
 expr_stmt|;
 name|checkUriInfo
@@ -278,7 +278,7 @@ literal|"http://localhost:9080/app/v1/bar"
 argument_list|,
 literal|"\"bar\""
 argument_list|,
-literal|"/bar"
+literal|"bar"
 argument_list|)
 expr_stmt|;
 name|checkUriInfo
@@ -287,7 +287,7 @@ literal|"http://localhost:9080/app/v1/bar/test"
 argument_list|,
 literal|"\"bar/test\""
 argument_list|,
-literal|"/bar/test"
+literal|"bar/test"
 argument_list|)
 expr_stmt|;
 name|checkUriInfo
@@ -296,7 +296,7 @@ literal|"http://localhost:9080/app/v1/bar"
 argument_list|,
 literal|"\"bar\""
 argument_list|,
-literal|"/bar"
+literal|"bar"
 argument_list|)
 expr_stmt|;
 name|checkUriInfo
@@ -305,7 +305,7 @@ literal|"http://localhost:9080/app/v1/bar"
 argument_list|,
 literal|"\"bar\""
 argument_list|,
-literal|"/bar"
+literal|"bar"
 argument_list|)
 expr_stmt|;
 block|}
