@@ -2346,10 +2346,17 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-block|}
+return|return;
 block|}
 else|else
 block|{
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+block|}
+block|}
 name|message
 operator|.
 name|put
@@ -2376,7 +2383,6 @@ name|getSimpleName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 specifier|private
 name|void

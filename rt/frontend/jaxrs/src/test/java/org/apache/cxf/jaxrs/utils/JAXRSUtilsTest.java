@@ -10858,6 +10858,15 @@ operator|new
 name|MessageImpl
 argument_list|()
 decl_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
+literal|"org.apache.cxf.http.case_insensitive_queries"
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
 name|Exchange
 name|e
 init|=

@@ -101,6 +101,24 @@ name|Description
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|xml
+operator|.
+name|XMLName
+import|;
+end_import
+
 begin_class
 annotation|@
 name|XmlRootElement
@@ -128,6 +146,17 @@ annotation|@
 name|Description
 argument_list|(
 literal|"Chapter subresource"
+argument_list|)
+annotation|@
+name|XMLName
+argument_list|(
+name|value
+operator|=
+literal|"{http://books}thesuperchapter"
+argument_list|,
+name|prefix
+operator|=
+literal|"p1"
 argument_list|)
 specifier|public
 class|class
