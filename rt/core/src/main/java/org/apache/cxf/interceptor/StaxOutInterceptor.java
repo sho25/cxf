@@ -990,6 +990,11 @@ argument_list|()
 expr_stmt|;
 name|xtw
 operator|.
+name|flush
+argument_list|()
+expr_stmt|;
+name|xtw
+operator|.
 name|close
 argument_list|()
 expr_stmt|;
