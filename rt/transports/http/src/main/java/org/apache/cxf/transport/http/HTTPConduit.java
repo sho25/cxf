@@ -7137,7 +7137,13 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|cachedStream
+operator|!=
+literal|null
+condition|)
 block|{
 name|cachedStream
 operator|.
@@ -8001,6 +8007,10 @@ expr_stmt|;
 if|if
 condition|(
 name|cachingForRetransmission
+operator|&&
+name|cachedStream
+operator|!=
+literal|null
 condition|)
 block|{
 name|cachedStream
