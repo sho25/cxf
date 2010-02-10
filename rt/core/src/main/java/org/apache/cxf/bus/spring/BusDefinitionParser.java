@@ -362,6 +362,13 @@ argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
+name|element
+operator|.
+name|removeAttribute
+argument_list|(
+literal|"bus"
+argument_list|)
+expr_stmt|;
 block|}
 name|super
 operator|.
