@@ -1412,6 +1412,9 @@ argument_list|(
 literal|0
 argument_list|)
 operator|.
+name|getInterface
+argument_list|()
+operator|.
 name|getName
 argument_list|()
 operator|.
