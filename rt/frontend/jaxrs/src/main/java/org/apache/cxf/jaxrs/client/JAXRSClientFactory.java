@@ -1027,6 +1027,8 @@ name|getCurrentURI
 argument_list|()
 argument_list|,
 name|headers
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;

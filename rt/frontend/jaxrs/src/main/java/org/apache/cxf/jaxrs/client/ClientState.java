@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents the client state :  *  - baseURI  *  - current uri builder  *  - current requestHeaders,  *  - current response  */
+comment|/**  * Represents the client state :  *  - baseURI  *  - current uri builder  *  - current requestHeaders  *  - current template parameters map  *  - last response  */
 end_comment
 
 begin_interface
@@ -142,12 +142,35 @@ argument_list|>
 name|getRequestHeaders
 parameter_list|()
 function_decl|;
+comment|/**      * Sets the map containing template name and value pairs      * @param templates      */
+name|void
+name|setTemplates
+parameter_list|(
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|map
+parameter_list|)
+function_decl|;
+comment|/**      * Gets the templates map      * @return templates      */
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|getTemplates
+parameter_list|()
+function_decl|;
 comment|/**      * Resets the current state to the baseURI      *      */
 name|void
 name|reset
 parameter_list|()
 function_decl|;
-comment|/**      * The factory method for creating a new state.       * Example, proxy and WebClient.fromClient will use this method when creating       * subresource proxies and new web clients respectively to ensure thet stay      * thread-local if needed      * @param baseURI baseURI      * @param headers request headers      * @return client state      */
+comment|/**      * The factory method for creating a new state.       * Example, proxy and WebClient.fromClient will use this method when creating       * subresource proxies and new web clients respectively to ensure thet stay      * thread-local if needed      * @param baseURI baseURI      * @param headers request headers, can be null      * @param templates initial templates map, can be null      * @return client state      */
 name|ClientState
 name|newState
 parameter_list|(
@@ -161,6 +184,14 @@ argument_list|,
 name|String
 argument_list|>
 name|headers
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|templates
 parameter_list|)
 function_decl|;
 block|}
