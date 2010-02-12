@@ -3601,6 +3601,15 @@ comment|//System.out.println(actInt);
 comment|//anything else to process?  Maybe check tokens for BKT requirements?
 block|}
 block|}
+name|CryptoCoverageUtil
+operator|.
+name|reconcileEncryptedSignedRefs
+argument_list|(
+name|signed
+argument_list|,
+name|encrypted
+argument_list|)
+expr_stmt|;
 name|assertTokens
 argument_list|(
 name|aim
