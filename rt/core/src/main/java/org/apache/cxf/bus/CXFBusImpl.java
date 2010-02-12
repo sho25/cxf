@@ -228,6 +228,15 @@ name|Boolean
 operator|.
 name|getBoolean
 argument_list|(
+literal|"com.sun.xml.ws.transport.http.client.HttpTransportPipe.dump"
+argument_list|)
+expr_stmt|;
+name|b
+operator||=
+name|Boolean
+operator|.
+name|getBoolean
+argument_list|(
 literal|"com.sun.xml.ws.transport.http.HttpAdapter.dump"
 argument_list|)
 expr_stmt|;
