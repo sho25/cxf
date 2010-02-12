@@ -3278,8 +3278,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|List
 argument_list|<
@@ -3292,8 +3290,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Binding
 name|getBinding
@@ -3303,8 +3299,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|EndpointInfo
 name|getEndpointInfo
@@ -3316,8 +3310,6 @@ operator|.
 name|epi
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Executor
 name|getExecutor
@@ -3327,8 +3319,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|MessageObserver
 name|getInFaultObserver
@@ -3338,8 +3328,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|MessageObserver
 name|getOutFaultObserver
@@ -3349,8 +3337,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Service
 name|getService
@@ -3360,8 +3346,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|setExecutor
@@ -3370,8 +3354,6 @@ name|Executor
 name|executor
 parameter_list|)
 block|{            }
-annotation|@
-name|Override
 specifier|public
 name|void
 name|setInFaultObserver
@@ -3380,8 +3362,6 @@ name|MessageObserver
 name|observer
 parameter_list|)
 block|{         }
-annotation|@
-name|Override
 specifier|public
 name|void
 name|setOutFaultObserver
