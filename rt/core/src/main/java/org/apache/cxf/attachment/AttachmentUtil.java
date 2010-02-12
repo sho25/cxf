@@ -299,7 +299,7 @@ comment|// tend to change
 name|String
 name|cid
 init|=
-literal|"http://cxf.apache.org/"
+literal|"cxf.apache.org"
 decl_stmt|;
 name|String
 name|name
