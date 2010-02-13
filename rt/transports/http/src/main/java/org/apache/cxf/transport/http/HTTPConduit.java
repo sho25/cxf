@@ -7395,12 +7395,19 @@ default|default:
 comment|// No other type of HttpRetryException should be thrown
 break|break;
 block|}
+comment|// pass cause with initCause() instead of constructor for jdk 1.5 compatibility
 throw|throw
+operator|(
+name|IOException
+operator|)
 operator|new
 name|IOException
 argument_list|(
 name|msg
-argument_list|,
+argument_list|)
+operator|.
+name|initCause
+argument_list|(
 name|e
 argument_list|)
 throw|;
