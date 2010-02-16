@@ -4530,7 +4530,7 @@ argument_list|)
 operator|||
 name|WSDLConstants
 operator|.
-name|NS_SOAP12_HTTP_TRANSPORT
+name|NS_SOAP12_HTTP_BINDING
 operator|.
 name|equals
 argument_list|(

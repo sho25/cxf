@@ -234,6 +234,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|NS_SOAP_HTTP_TRANSPORT
+init|=
+literal|"http://schemas.xmlsoap.org/soap/http"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|NS_SOAP11_HTTP_TRANSPORT
 init|=
 literal|"http://schemas.xmlsoap.org/soap/http"
@@ -312,7 +320,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|NS_SOAP12_HTTP_TRANSPORT
+name|NS_SOAP12_HTTP_BINDING
 init|=
 literal|"http://www.w3.org/2003/05/soap/bindings/HTTP/"
 decl_stmt|;

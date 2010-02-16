@@ -1524,7 +1524,7 @@ name|assertTrue
 argument_list|(
 name|WSDLConstants
 operator|.
-name|NS_SOAP12_HTTP_TRANSPORT
+name|NS_SOAP_HTTP_TRANSPORT
 operator|.
 name|equalsIgnoreCase
 argument_list|(

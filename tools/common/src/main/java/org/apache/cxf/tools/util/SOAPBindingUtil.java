@@ -2418,7 +2418,7 @@ name|setTransportURI
 argument_list|(
 name|WSDLConstants
 operator|.
-name|NS_SOAP12_HTTP_TRANSPORT
+name|NS_SOAP_HTTP_TRANSPORT
 argument_list|)
 expr_stmt|;
 block|}
@@ -2459,7 +2459,7 @@ name|setTransportURI
 argument_list|(
 name|WSDLConstants
 operator|.
-name|NS_SOAP11_HTTP_TRANSPORT
+name|NS_SOAP_HTTP_TRANSPORT
 argument_list|)
 expr_stmt|;
 block|}
