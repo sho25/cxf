@@ -1502,7 +1502,7 @@ name|visitIntInsn
 argument_list|(
 name|Opcodes
 operator|.
-name|BIPUSH
+name|SIPUSH
 argument_list|,
 name|x
 argument_list|)
@@ -1951,7 +1951,7 @@ name|visitIntInsn
 argument_list|(
 name|Opcodes
 operator|.
-name|BIPUSH
+name|SIPUSH
 argument_list|,
 name|x
 argument_list|)
