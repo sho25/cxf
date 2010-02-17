@@ -65,10 +65,6 @@ name|signatureProtection
 decl_stmt|;
 specifier|private
 name|boolean
-name|tokenProtection
-decl_stmt|;
-specifier|private
-name|boolean
 name|entireHeadersAndBodySignatures
 decl_stmt|;
 specifier|public
@@ -164,32 +160,6 @@ operator|.
 name|signatureProtection
 operator|=
 name|signatureProtection
-expr_stmt|;
-block|}
-comment|/**      * @return Returns the tokenProtection.      */
-specifier|public
-name|boolean
-name|isTokenProtection
-parameter_list|()
-block|{
-return|return
-name|tokenProtection
-return|;
-block|}
-comment|/**      * @param tokenProtection The tokenProtection to set.      */
-specifier|public
-name|void
-name|setTokenProtection
-parameter_list|(
-name|boolean
-name|tokenProtection
-parameter_list|)
-block|{
-name|this
-operator|.
-name|tokenProtection
-operator|=
-name|tokenProtection
 expr_stmt|;
 block|}
 block|}
