@@ -950,6 +950,14 @@ decl_stmt|;
 name|init
 argument_list|()
 expr_stmt|;
+name|checkPrivateEndpoint
+argument_list|(
+name|server
+operator|.
+name|getEndpoint
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|server
 return|;

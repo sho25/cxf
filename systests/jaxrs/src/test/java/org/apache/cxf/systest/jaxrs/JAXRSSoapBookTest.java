@@ -3269,7 +3269,7 @@ literal|"http://localhost:9092/test/services/soap/bookservice?wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 name|listings
 operator|.
