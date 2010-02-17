@@ -779,6 +779,15 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
+literal|"org.apache.cxf.endpoint.private"
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
 name|Exchange
 name|e
 init|=

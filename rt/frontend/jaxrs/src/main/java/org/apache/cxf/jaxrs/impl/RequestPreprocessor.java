@@ -299,6 +299,15 @@ argument_list|,
 literal|"application/xml"
 argument_list|)
 expr_stmt|;
+name|SHORTCUTS
+operator|.
+name|put
+argument_list|(
+literal|"atom"
+argument_list|,
+literal|"application/atom+xml"
+argument_list|)
+expr_stmt|;
 comment|// more to come
 block|}
 specifier|private
