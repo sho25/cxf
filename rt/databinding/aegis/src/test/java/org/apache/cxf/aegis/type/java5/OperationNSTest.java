@@ -450,7 +450,7 @@ name|WebResult
 argument_list|(
 name|name
 operator|=
-literal|"queryResponse"
+literal|"queryResponseDocs"
 argument_list|,
 name|targetNamespace
 operator|=

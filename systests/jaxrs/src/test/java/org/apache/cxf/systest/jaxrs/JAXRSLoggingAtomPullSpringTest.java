@@ -525,6 +525,8 @@ decl_stmt|;
 name|assertTrue
 argument_list|(
 name|listing
+argument_list|,
+name|listing
 operator|.
 name|contains
 argument_list|(
