@@ -2337,16 +2337,6 @@ argument_list|,
 name|backChannel
 argument_list|)
 expr_stmt|;
-name|assertNull
-argument_list|(
-literal|"unexpected backchannel-backchannel"
-argument_list|,
-name|backChannel
-operator|.
-name|getBackChannel
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"unexpected target"

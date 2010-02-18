@@ -112,6 +112,17 @@ name|ClientLifeCycleListener
 name|listener
 parameter_list|)
 block|{
+if|if
+condition|(
+operator|!
+name|listeners
+operator|.
+name|contains
+argument_list|(
+name|listener
+argument_list|)
+condition|)
+block|{
 name|listeners
 operator|.
 name|add
@@ -119,6 +130,7 @@ argument_list|(
 name|listener
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void

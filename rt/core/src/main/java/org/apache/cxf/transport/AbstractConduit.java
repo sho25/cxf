@@ -116,16 +116,6 @@ return|return
 name|target
 return|;
 block|}
-comment|/**      * Retrieve the back-channel Destination.      *       * @return the backchannel Destination (or null if the backchannel is      * built-in)      */
-specifier|public
-name|Destination
-name|getBackChannel
-parameter_list|()
-block|{
-return|return
-literal|null
-return|;
-block|}
 comment|/**      * @param message for which content should be closed.      */
 specifier|public
 name|void

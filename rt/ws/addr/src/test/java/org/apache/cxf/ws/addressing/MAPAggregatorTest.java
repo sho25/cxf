@@ -2663,6 +2663,9 @@ name|andReturn
 argument_list|(
 name|endpointInfo
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|List
 argument_list|<

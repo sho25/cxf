@@ -91,11 +91,6 @@ name|EndpointReferenceType
 name|getTarget
 parameter_list|()
 function_decl|;
-comment|/**      * Retreive the back-channel Destination.      *       * @return the backchannel Destination (or null if the backchannel is      * built-in)      */
-name|Destination
-name|getBackChannel
-parameter_list|()
-function_decl|;
 comment|/**      * Close the conduit      */
 name|void
 name|close
