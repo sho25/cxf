@@ -43,6 +43,18 @@ begin_import
 import|import
 name|javax
 operator|.
+name|annotation
+operator|.
+name|security
+operator|.
+name|RolesAllowed
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|ws
 operator|.
 name|rs
@@ -143,20 +155,6 @@ name|BookNotFoundFault
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|security
-operator|.
-name|annotation
-operator|.
-name|Secured
-import|;
-end_import
-
 begin_class
 annotation|@
 name|Path
@@ -231,7 +229,7 @@ argument_list|(
 literal|"/bookforms"
 argument_list|)
 annotation|@
-name|Secured
+name|RolesAllowed
 argument_list|(
 block|{
 literal|"ROLE_USER"
@@ -302,7 +300,7 @@ argument_list|(
 literal|"application/xml"
 argument_list|)
 annotation|@
-name|Secured
+name|RolesAllowed
 argument_list|(
 block|{
 literal|"ROLE_USER"
@@ -366,7 +364,7 @@ argument_list|(
 literal|"application/xml"
 argument_list|)
 annotation|@
-name|Secured
+name|RolesAllowed
 argument_list|(
 literal|"ROLE_USER"
 argument_list|)
@@ -405,7 +403,7 @@ argument_list|(
 literal|"application/xml"
 argument_list|)
 annotation|@
-name|Secured
+name|RolesAllowed
 argument_list|(
 literal|"ROLE_ADMIN"
 argument_list|)
