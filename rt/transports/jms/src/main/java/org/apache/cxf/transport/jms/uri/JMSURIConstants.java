@@ -68,6 +68,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|JNDI_TOPIC
+init|=
+literal|"jndi-topic"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|QUEUE_PREFIX
 init|=
 literal|"queue:"
