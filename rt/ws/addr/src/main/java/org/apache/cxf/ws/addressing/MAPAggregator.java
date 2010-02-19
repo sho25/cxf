@@ -807,8 +807,6 @@ operator|new
 name|ClientLifeCycleListener
 argument_list|()
 block|{
-annotation|@
-name|Override
 specifier|public
 name|void
 name|clientCreated
@@ -819,8 +817,6 @@ parameter_list|)
 block|{
 comment|//ignore
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|clientDestroyed
