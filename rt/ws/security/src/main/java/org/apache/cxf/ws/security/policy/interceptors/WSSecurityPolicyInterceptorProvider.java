@@ -241,15 +241,6 @@ name|add
 argument_list|(
 name|SP12Constants
 operator|.
-name|USERNAME_TOKEN
-argument_list|)
-expr_stmt|;
-name|ASSERTION_TYPES
-operator|.
-name|add
-argument_list|(
-name|SP12Constants
-operator|.
 name|TRANSPORT_TOKEN
 argument_list|)
 expr_stmt|;
