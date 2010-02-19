@@ -2125,6 +2125,11 @@ name|XmlSchemaType
 name|containingType
 parameter_list|)
 block|{
+assert|assert
+name|element
+operator|!=
+literal|null
+assert|;
 if|if
 condition|(
 name|element
@@ -2191,11 +2196,6 @@ return|return
 name|type
 return|;
 block|}
-assert|assert
-name|element
-operator|!=
-literal|null
-assert|;
 comment|// The referencing URI only helps if there is a schema that points to
 comment|// it.
 comment|// It might be the URI for the wsdl TNS, which might have no schema.

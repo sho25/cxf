@@ -19,6 +19,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|lang
 operator|.
 name|reflect
@@ -50,6 +60,8 @@ name|Comparator
 argument_list|<
 name|Method
 argument_list|>
+implements|,
+name|Serializable
 block|{
 specifier|public
 name|int

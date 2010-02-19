@@ -222,12 +222,6 @@ name|Object
 argument_list|>
 name|attributes
 decl_stmt|;
-name|List
-argument_list|<
-name|Object
-argument_list|>
-name|allAttributes
-decl_stmt|;
 specifier|final
 name|ElementFrame
 argument_list|<
@@ -341,13 +335,6 @@ name|emptyList
 argument_list|()
 expr_stmt|;
 name|uris
-operator|=
-name|Collections
-operator|.
-name|emptyList
-argument_list|()
-expr_stmt|;
-name|allAttributes
 operator|=
 name|Collections
 operator|.

@@ -1349,7 +1349,7 @@ argument_list|)
 decl_stmt|;
 name|errorStreamPrinter
 operator|.
-name|run
+name|start
 argument_list|()
 expr_stmt|;
 block|}
@@ -1383,7 +1383,7 @@ argument_list|)
 decl_stmt|;
 name|infoStreamPrinter
 operator|.
-name|run
+name|start
 argument_list|()
 expr_stmt|;
 block|}

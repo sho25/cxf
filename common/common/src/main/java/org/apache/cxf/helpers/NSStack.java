@@ -247,6 +247,7 @@ return|;
 block|}
 comment|/**      * Return the prefix associated with the given namespace name by      * looking thru all the namespace declarations that are in scope.      *      * @param URI the namespace name for whom a declared prefix is desired      * @return the prefix or null if namespace name not found      */
 specifier|public
+specifier|synchronized
 name|String
 name|getPrefix
 parameter_list|(
@@ -339,6 +340,7 @@ return|;
 block|}
 comment|/**      * Return the namespace name associated with the given prefix by      * looking thru all the namespace declarations that are in scope.      *      * @param prefix the prefix for whom a declared namespace name is desired      * @return the namespace name or null if prefix not found      */
 specifier|public
+specifier|synchronized
 name|String
 name|getURI
 parameter_list|(

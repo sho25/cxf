@@ -1038,7 +1038,10 @@ condition|(
 name|in
 operator|==
 literal|null
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 name|LOG
 operator|.
 name|isLoggable
@@ -1056,6 +1059,10 @@ argument_list|(
 literal|"XMLUtils trying to parse a null bytes"
 argument_list|)
 expr_stmt|;
+block|}
+return|return
+literal|null
+return|;
 block|}
 return|return
 name|getParser

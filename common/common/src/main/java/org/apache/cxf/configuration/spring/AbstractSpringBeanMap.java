@@ -31,6 +31,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|lang
 operator|.
 name|reflect
@@ -245,6 +255,8 @@ name|X
 argument_list|,
 name|V
 argument_list|>
+implements|,
+name|Serializable
 block|{
 specifier|protected
 name|ApplicationContext

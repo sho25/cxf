@@ -294,6 +294,8 @@ name|ins
 argument_list|)
 argument_list|)
 decl_stmt|;
+try|try
+block|{
 name|cname
 operator|=
 name|din
@@ -301,6 +303,15 @@ operator|.
 name|readLine
 argument_list|()
 expr_stmt|;
+block|}
+finally|finally
+block|{
+name|din
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 if|if

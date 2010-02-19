@@ -6215,9 +6215,13 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|prefix
-operator|!=
-literal|null
+argument_list|)
 operator|&&
 name|ns
 operator|==
