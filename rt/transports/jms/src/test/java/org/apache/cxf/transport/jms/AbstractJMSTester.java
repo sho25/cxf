@@ -658,6 +658,8 @@ name|bus
 argument_list|,
 name|endpointInfo
 argument_list|,
+literal|null
+argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
