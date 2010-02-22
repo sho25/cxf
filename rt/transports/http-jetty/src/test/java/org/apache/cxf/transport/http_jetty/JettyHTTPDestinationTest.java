@@ -2639,6 +2639,19 @@ init|=
 name|setUpOutMessage
 argument_list|()
 decl_stmt|;
+name|partialResponse
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|PARTIAL_RESPONSE_MESSAGE
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
 name|Conduit
 name|partialBackChannel
 init|=
@@ -2653,6 +2666,13 @@ argument_list|,
 name|replyTo
 argument_list|)
 decl_stmt|;
+name|partialBackChannel
+operator|.
+name|prepare
+argument_list|(
+name|partialResponse
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"unexpected response code"
@@ -2667,13 +2687,6 @@ name|Message
 operator|.
 name|RESPONSE_CODE
 argument_list|)
-argument_list|)
-expr_stmt|;
-name|partialBackChannel
-operator|.
-name|prepare
-argument_list|(
-name|partialResponse
 argument_list|)
 expr_stmt|;
 name|verifyBackChannelSend
@@ -2704,15 +2717,6 @@ argument_list|,
 name|replyTo
 argument_list|)
 decl_stmt|;
-name|assertSame
-argument_list|(
-literal|"unexpected back channel"
-argument_list|,
-name|decoupledBackChannel
-argument_list|,
-name|fullBackChannel
-argument_list|)
-expr_stmt|;
 name|fullBackChannel
 operator|.
 name|prepare
