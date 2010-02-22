@@ -615,6 +615,20 @@ name|cxf
 operator|.
 name|staxutils
 operator|.
+name|DepthXMLStreamReader
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
 name|StaxUtils
 import|;
 end_import
@@ -5371,6 +5385,54 @@ operator|(
 name|Node
 operator|)
 name|source
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|source
+operator|instanceof
+name|DepthXMLStreamReader
+condition|)
+block|{
+comment|// JAXB optimizes a ton of stuff depending on the StreamReader impl. Thus,
+comment|// we REALLY want to pass the original reader in.   This is OK with JAXB
+comment|// as it doesn't read beyond the end so the DepthXMLStreamReader state
+comment|// would be OK when it returns.   The main winner is FastInfoset where parsing
+comment|// a testcase I have goes from about 300/sec to well over 1000.
+name|DepthXMLStreamReader
+name|dr
+init|=
+operator|(
+name|DepthXMLStreamReader
+operator|)
+name|source
+decl_stmt|;
+name|obj
+operator|=
+name|unmarshalWithClass
+condition|?
+name|u
+operator|.
+name|unmarshal
+argument_list|(
+name|dr
+operator|.
+name|getReader
+argument_list|()
+argument_list|,
+name|clazz
+argument_list|)
+else|:
+name|u
+operator|.
+name|unmarshal
+argument_list|(
+name|dr
+operator|.
+name|getReader
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
