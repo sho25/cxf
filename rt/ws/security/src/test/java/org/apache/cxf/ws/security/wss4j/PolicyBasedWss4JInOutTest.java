@@ -822,15 +822,6 @@ return|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-argument_list|(
-literal|"missing file"
-argument_list|)
 specifier|public
 name|void
 name|testSignedElementsPolicyWithIncompleteCoverage
@@ -922,15 +913,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
-argument_list|(
-literal|"missing file"
-argument_list|)
 specifier|public
 name|void
 name|testSignedPartsPolicyWithIncompleteCoverage
