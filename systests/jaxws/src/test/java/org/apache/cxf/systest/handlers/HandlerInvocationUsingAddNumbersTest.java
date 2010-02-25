@@ -1073,6 +1073,16 @@ name|h
 argument_list|)
 expr_stmt|;
 block|}
+name|bp
+operator|.
+name|getBinding
+argument_list|()
+operator|.
+name|setHandlerChain
+argument_list|(
+name|handlerChain
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class

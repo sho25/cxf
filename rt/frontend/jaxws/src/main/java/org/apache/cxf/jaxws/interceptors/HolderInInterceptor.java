@@ -237,12 +237,11 @@ name|op
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|OperationInfo
+name|getBindingOperationInfo
+argument_list|()
 operator|.
-name|class
-argument_list|)
+name|getOperationInfo
+argument_list|()
 decl_stmt|;
 if|if
 condition|(

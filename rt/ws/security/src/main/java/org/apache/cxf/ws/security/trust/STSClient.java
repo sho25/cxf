@@ -3974,6 +3974,13 @@ argument_list|)
 decl_stmt|;
 name|parts
 operator|.
+name|setOptional
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|parts
+operator|.
 name|setBody
 argument_list|(
 literal|true

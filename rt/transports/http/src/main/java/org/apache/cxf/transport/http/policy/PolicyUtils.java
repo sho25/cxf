@@ -423,6 +423,11 @@ condition|(
 literal|null
 operator|==
 name|amap
+operator|||
+name|amap
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 return|return

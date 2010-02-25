@@ -3272,6 +3272,16 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|jaxwsEndpoint
+operator|.
+name|getJaxwsBinding
+argument_list|()
+operator|.
+name|setHandlerChain
+argument_list|(
+name|hc
+argument_list|)
+expr_stmt|;
 name|LOG
 operator|.
 name|log

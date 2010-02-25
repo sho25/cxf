@@ -97,7 +97,7 @@ name|cxf
 operator|.
 name|message
 operator|.
-name|AbstractWrappedMessage
+name|Message
 import|;
 end_import
 
@@ -111,7 +111,7 @@ name|cxf
 operator|.
 name|message
 operator|.
-name|Message
+name|MessageImpl
 import|;
 end_import
 
@@ -120,16 +120,11 @@ specifier|public
 class|class
 name|SoapMessage
 extends|extends
-name|AbstractWrappedMessage
+name|MessageImpl
 block|{
 specifier|private
 name|SoapVersion
 name|version
-init|=
-name|Soap11
-operator|.
-name|getInstance
-argument_list|()
 decl_stmt|;
 specifier|public
 name|SoapMessage
@@ -142,6 +137,28 @@ name|super
 argument_list|(
 name|message
 argument_list|)
+expr_stmt|;
+name|version
+operator|=
+name|Soap11
+operator|.
+name|getInstance
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|SoapMessage
+parameter_list|(
+name|SoapVersion
+name|ver
+parameter_list|)
+block|{
+name|super
+argument_list|()
+expr_stmt|;
+name|version
+operator|=
+name|ver
 expr_stmt|;
 block|}
 specifier|public

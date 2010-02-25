@@ -1535,7 +1535,7 @@ operator|.
 name|finalizeConfig
 argument_list|()
 expr_stmt|;
-name|MessageImpl
+name|Message
 name|mi
 init|=
 name|testDestination
@@ -1793,7 +1793,7 @@ operator|.
 name|finalizeConfig
 argument_list|()
 expr_stmt|;
-name|MessageImpl
+name|Message
 name|mi
 init|=
 name|testDestination
@@ -5839,7 +5839,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|MessageImpl
+name|Message
 name|retrieveFromContinuation
 parameter_list|(
 name|HttpServletRequest

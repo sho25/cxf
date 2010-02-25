@@ -922,6 +922,8 @@ name|ei
 operator|.
 name|getBinding
 argument_list|()
+argument_list|,
+name|jaxwsEndpoint
 argument_list|)
 decl_stmt|;
 name|jaxWsSoapBinding

@@ -1206,7 +1206,7 @@ name|message
 argument_list|)
 expr_stmt|;
 comment|// Build CXF message from JMS message
-name|MessageImpl
+name|Message
 name|inMessage
 init|=
 operator|new
@@ -1273,7 +1273,12 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
+operator|(
+operator|(
+name|MessageImpl
+operator|)
 name|inMessage
+operator|)
 operator|.
 name|setDestination
 argument_list|(
@@ -1403,6 +1408,16 @@ name|onMessage
 argument_list|(
 name|inMessage
 argument_list|)
+expr_stmt|;
+name|inMessage
+operator|=
+name|inMessage
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getInMessage
+argument_list|()
 expr_stmt|;
 comment|//need to propagate any exceptions back to Spring container
 comment|//so transactions can occur

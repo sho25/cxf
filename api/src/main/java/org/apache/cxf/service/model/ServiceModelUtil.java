@@ -221,12 +221,8 @@ block|{
 return|return
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Service
-operator|.
-name|class
-argument_list|)
+name|getService
+argument_list|()
 return|;
 block|}
 specifier|public

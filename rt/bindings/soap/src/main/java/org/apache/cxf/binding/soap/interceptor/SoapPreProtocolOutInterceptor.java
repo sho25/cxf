@@ -459,12 +459,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|BindingOperationInfo
-operator|.
-name|class
-argument_list|)
+name|getBindingOperationInfo
+argument_list|()
 decl_stmt|;
 comment|// The soap action is set on the wrapped operation.
 if|if

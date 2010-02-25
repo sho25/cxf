@@ -506,6 +506,20 @@ name|String
 name|key
 parameter_list|)
 function_decl|;
+name|void
+name|resetContextCache
+parameter_list|()
+function_decl|;
+name|void
+name|setContextualProperty
+parameter_list|(
+name|String
+name|key
+parameter_list|,
+name|Object
+name|v
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

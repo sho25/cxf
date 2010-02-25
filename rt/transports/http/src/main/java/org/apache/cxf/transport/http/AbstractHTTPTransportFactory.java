@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|MalformedURLException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -688,8 +678,6 @@ name|useHttps
 init|=
 literal|false
 decl_stmt|;
-try|try
-block|{
 if|if
 condition|(
 name|address
@@ -704,15 +692,6 @@ operator|.
 name|getAddress
 argument_list|()
 expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|MalformedURLException
-name|e
-parameter_list|)
-block|{
-comment|//ignore, just use info based on Tls
 block|}
 if|if
 condition|(

@@ -454,7 +454,7 @@ init|=
 operator|(
 name|String
 operator|)
-name|message
+name|soapMessage
 operator|.
 name|get
 argument_list|(
@@ -476,7 +476,7 @@ init|=
 name|createBindingOperation
 argument_list|()
 decl_stmt|;
-name|message
+name|soapMessage
 operator|.
 name|getExchange
 argument_list|()
@@ -523,7 +523,7 @@ operator|=
 operator|(
 name|String
 operator|)
-name|message
+name|soapMessage
 operator|.
 name|get
 argument_list|(

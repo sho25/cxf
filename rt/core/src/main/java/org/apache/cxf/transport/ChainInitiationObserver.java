@@ -448,6 +448,13 @@ operator|new
 name|ExchangeImpl
 argument_list|()
 expr_stmt|;
+name|m
+operator|.
+name|setExchange
+argument_list|(
+name|exchange
+argument_list|)
+expr_stmt|;
 block|}
 name|exchange
 operator|.

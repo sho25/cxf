@@ -411,12 +411,8 @@ name|boi
 init|=
 name|ex
 operator|.
-name|get
-argument_list|(
-name|BindingOperationInfo
-operator|.
-name|class
-argument_list|)
+name|getBindingOperationInfo
+argument_list|()
 decl_stmt|;
 if|if
 condition|(

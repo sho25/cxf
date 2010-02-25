@@ -1956,7 +1956,7 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected number of interceptors."
 argument_list|,
-literal|6
+literal|4
 argument_list|,
 name|interceptors
 operator|.
@@ -1990,7 +1990,7 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected number of interceptors."
 argument_list|,
-literal|7
+literal|5
 argument_list|,
 name|interceptors
 operator|.
@@ -2024,7 +2024,7 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected number of interceptors."
 argument_list|,
-literal|4
+literal|2
 argument_list|,
 name|interceptors
 operator|.
@@ -2058,7 +2058,7 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected number of interceptors."
 argument_list|,
-literal|4
+literal|2
 argument_list|,
 name|interceptors
 operator|.

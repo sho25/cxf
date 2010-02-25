@@ -147,7 +147,7 @@ argument_list|<
 name|T
 argument_list|>
 block|{
-specifier|private
+specifier|protected
 name|Binding
 name|binding
 decl_stmt|;

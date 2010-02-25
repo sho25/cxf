@@ -1747,7 +1747,23 @@ argument_list|()
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"unexpected conduit slector"
+literal|"unexpected conduit selector: "
+operator|+
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|greeter
+argument_list|)
+operator|.
+name|getConduitSelector
+argument_list|()
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
 argument_list|,
 name|ClientProxy
 operator|.
