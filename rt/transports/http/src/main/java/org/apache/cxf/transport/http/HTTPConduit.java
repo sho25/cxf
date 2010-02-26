@@ -6499,7 +6499,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Wrapper output stream responsible for flushing headers and handling      * the incoming HTTP-level response (not necessarily the MEP response).      */
-specifier|public
+specifier|protected
 class|class
 name|WrappedOutputStream
 extends|extends
@@ -6683,7 +6683,7 @@ throw|;
 block|}
 block|}
 block|}
-specifier|public
+specifier|protected
 name|void
 name|handleHeadersTrustCaching
 parameter_list|()
