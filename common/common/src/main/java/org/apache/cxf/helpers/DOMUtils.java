@@ -954,8 +954,10 @@ operator|.
 name|getOwnerDocument
 argument_list|()
 operator|.
-name|createAttribute
+name|createAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 name|attName
 argument_list|)
 decl_stmt|;
