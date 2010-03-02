@@ -48,6 +48,10 @@ specifier|private
 name|SSLSocketFactory
 name|sslSocketFactory
 decl_stmt|;
+specifier|private
+name|boolean
+name|trustAllCertificates
+decl_stmt|;
 comment|/**      * Set whether or not JSEE should omit checking if the host name      * specified in the URL matches that of the Common Name      * (CN) on the server's certificate. Default is false;        * this attribute should not be set to true during production use.      */
 specifier|public
 name|void
@@ -73,6 +77,32 @@ block|{
 return|return
 name|disableCNCheck
 return|;
+block|}
+comment|/**      * Returns whether or not JSSE omits checking X509 certificates       * validity (using an 'accept all' X509TrustManager).      */
+specifier|public
+name|boolean
+name|isTrustAllCertificates
+parameter_list|()
+block|{
+return|return
+name|trustAllCertificates
+return|;
+block|}
+comment|/**      * Set whether or not JSSE should omit checking X509 certificates       * validity (using an 'accept all' {@link javax.net.ssl.X509TrustManager}).      */
+specifier|public
+name|void
+name|setTrustAllCertificates
+parameter_list|(
+name|boolean
+name|trustAllCertificates
+parameter_list|)
+block|{
+name|this
+operator|.
+name|trustAllCertificates
+operator|=
+name|trustAllCertificates
+expr_stmt|;
 block|}
 comment|/**      * This sets the SSLSocketFactory to use, causing all other properties of      * this bean (and its superclass) to get ignored (this takes precendence).      */
 specifier|public
