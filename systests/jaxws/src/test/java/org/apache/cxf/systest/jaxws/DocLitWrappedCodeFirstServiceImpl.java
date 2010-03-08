@@ -1291,6 +1291,18 @@ return|return
 name|ret
 return|;
 block|}
+specifier|public
+name|String
+name|doBug2692
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+block|{
+return|return
+name|name
+return|;
+block|}
 block|}
 end_class
 
