@@ -975,13 +975,6 @@ condition|(
 name|params
 operator|==
 literal|null
-operator|||
-name|params
-operator|.
-name|size
-argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
