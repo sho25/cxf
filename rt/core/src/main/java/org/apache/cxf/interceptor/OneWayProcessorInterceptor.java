@@ -416,6 +416,15 @@ argument_list|)
 decl_stmt|;
 name|partial
 operator|.
+name|remove
+argument_list|(
+name|Message
+operator|.
+name|CONTENT_TYPE
+argument_list|)
+expr_stmt|;
+name|partial
+operator|.
 name|setExchange
 argument_list|(
 name|message
