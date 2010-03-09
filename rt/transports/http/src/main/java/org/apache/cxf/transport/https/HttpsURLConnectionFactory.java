@@ -99,27 +99,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|KeyManagementException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
-name|NoSuchAlgorithmException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
-name|NoSuchProviderException
+name|GeneralSecurityException
 import|;
 end_import
 
@@ -144,16 +124,6 @@ operator|.
 name|logging
 operator|.
 name|Logger
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|imageio
-operator|.
-name|IIOException
 import|;
 end_import
 
@@ -202,18 +172,6 @@ operator|.
 name|ssl
 operator|.
 name|SSLSocketFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|net
-operator|.
-name|ssl
-operator|.
-name|TrustManager
 import|;
 end_import
 
@@ -515,7 +473,7 @@ throw|;
 block|}
 throw|throw
 operator|new
-name|IIOException
+name|IOException
 argument_list|(
 literal|"Error while initializing secure socket"
 argument_list|,
@@ -539,45 +497,49 @@ name|HttpURLConnection
 name|connection
 parameter_list|)
 throws|throws
-name|NoSuchAlgorithmException
-throws|,
-name|NoSuchProviderException
-throws|,
-name|KeyManagementException
+name|GeneralSecurityException
 block|{
-comment|// First see if an SSLSocketFactory was set.  This allows easy interop
-comment|// with not-yet-commons-ssl.jar, or even just people who like doing their
-comment|// own JSSE.
+comment|// always reload socketFactory from HttpsURLConnection.defaultSSLSocketFactory and
+comment|// tlsClientParameters.sslSocketFactory to allow runtime configuration change
 if|if
 condition|(
-name|socketFactory
-operator|==
-literal|null
-condition|)
-block|{
-name|SSLSocketFactory
-name|preSetFactory
-init|=
 name|tlsClientParameters
 operator|.
-name|getSSLSocketFactory
+name|isUseHttpsURLConnectionDefaultSslSocketFactory
 argument_list|()
-decl_stmt|;
-if|if
-condition|(
-name|preSetFactory
-operator|!=
-literal|null
 condition|)
 block|{
 name|socketFactory
 operator|=
-name|preSetFactory
+name|HttpsURLConnection
+operator|.
+name|getDefaultSSLSocketFactory
+argument_list|()
 expr_stmt|;
 block|}
+elseif|else
+if|if
+condition|(
+name|tlsClientParameters
+operator|.
+name|getSSLSocketFactory
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// see if an SSLSocketFactory was set. This allows easy interop
+comment|// with not-yet-commons-ssl.jar, or even just people who like doing their
+comment|// own JSSE.
+name|socketFactory
+operator|=
+name|tlsClientParameters
+operator|.
+name|getSSLSocketFactory
+argument_list|()
+expr_stmt|;
 block|}
-comment|// Okay, no SSLSocketFactory available in TLSClientParameters.  Maybe
-comment|// TrustManagers, KeyManagers, etc?
+elseif|else
 if|if
 condition|(
 name|socketFactory
@@ -585,6 +547,8 @@ operator|==
 literal|null
 condition|)
 block|{
+comment|// ssl socket factory not yet instantiated, create a new one with tlsClientParameters's Trust
+comment|// Managers, Key Managers, etc
 name|String
 name|provider
 init|=
@@ -633,16 +597,6 @@ argument_list|,
 name|provider
 argument_list|)
 decl_stmt|;
-name|TrustManager
-index|[]
-name|trustAllCerts
-init|=
-name|tlsClientParameters
-operator|.
-name|getTrustManagers
-argument_list|()
-decl_stmt|;
-comment|/*             TrustManager[] trustAllCerts = new TrustManager[] {                 new javax.net.ssl.X509TrustManager() {                     public java.security.cert.X509Certificate[] getAcceptedIssuers() {                         return null;                     }                     public void checkClientTrusted(                         java.security.cert.X509Certificate[] certs, String authType) {                     }                     public void checkServerTrusted(                         java.security.cert.X509Certificate[] certs, String authType) {                     }                 }             };             */
 name|ctx
 operator|.
 name|init
@@ -652,7 +606,10 @@ operator|.
 name|getKeyManagers
 argument_list|()
 argument_list|,
-name|trustAllCerts
+name|tlsClientParameters
+operator|.
+name|getTrustManagers
+argument_list|()
 argument_list|,
 name|tlsClientParameters
 operator|.
@@ -712,22 +669,54 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
+comment|// ssl socket factory already initialized, reuse it to benefit of keep alive
+block|}
 name|HostnameVerifier
 name|verifier
-init|=
+decl_stmt|;
+if|if
+condition|(
+name|tlsClientParameters
+operator|.
+name|isUseHttpsURLConnectionDefaultHostnameVerifier
+argument_list|()
+condition|)
+block|{
+name|verifier
+operator|=
+name|HttpsURLConnection
+operator|.
+name|getDefaultHostnameVerifier
+argument_list|()
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
 name|tlsClientParameters
 operator|.
 name|isDisableCNCheck
 argument_list|()
-condition|?
+condition|)
+block|{
+name|verifier
+operator|=
 name|CertificateHostnameVerifier
 operator|.
 name|ALLOW_ALL
-else|:
+expr_stmt|;
+block|}
+else|else
+block|{
+name|verifier
+operator|=
 name|CertificateHostnameVerifier
 operator|.
 name|DEFAULT
-decl_stmt|;
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|connection

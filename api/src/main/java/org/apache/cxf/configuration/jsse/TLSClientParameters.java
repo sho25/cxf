@@ -48,6 +48,14 @@ specifier|private
 name|SSLSocketFactory
 name|sslSocketFactory
 decl_stmt|;
+specifier|private
+name|boolean
+name|useHttpsURLConnectionDefaultSslSocketFactory
+decl_stmt|;
+specifier|private
+name|boolean
+name|useHttpsURLConnectionDefaultHostnameVerifier
+decl_stmt|;
 comment|/**      * Set whether or not JSEE should omit checking if the host name      * specified in the URL matches that of the Common Name      * (CN) on the server's certificate. Default is false;        * this attribute should not be set to true during production use.      */
 specifier|public
 name|void
@@ -99,6 +107,58 @@ block|{
 return|return
 name|sslSocketFactory
 return|;
+block|}
+comment|/**      * Returns whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()}Êshould be      * used to create https connections. If<code>true</code> , {@link #getJsseProvider()} ,      * {@link #getSecureSocketProtocol()}, {@link #getTrustManagers()}, {@link #getKeyManagers()},      * {@link #getSecureRandom()}, {@link #getCipherSuites()} and {@link #getCipherSuitesFilter()} are      * ignored.      */
+specifier|public
+name|boolean
+name|isUseHttpsURLConnectionDefaultSslSocketFactory
+parameter_list|()
+block|{
+return|return
+name|useHttpsURLConnectionDefaultSslSocketFactory
+return|;
+block|}
+comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()}Êshould be      * used to create https connections.      *       * @see #isUseHttpsURLConnectionDefaultSslSocketFactory()      */
+specifier|public
+name|void
+name|setUseHttpsURLConnectionDefaultSslSocketFactory
+parameter_list|(
+name|boolean
+name|useHttpsURLConnectionDefaultSslSocketFactory
+parameter_list|)
+block|{
+name|this
+operator|.
+name|useHttpsURLConnectionDefaultSslSocketFactory
+operator|=
+name|useHttpsURLConnectionDefaultSslSocketFactory
+expr_stmt|;
+block|}
+comment|/**      * Returns whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultHostnameVerifier()} should be      * used to create https connections. If<code>true</code>, {@link #isDisableCNCheck()} is ignored.      */
+specifier|public
+name|boolean
+name|isUseHttpsURLConnectionDefaultHostnameVerifier
+parameter_list|()
+block|{
+return|return
+name|useHttpsURLConnectionDefaultHostnameVerifier
+return|;
+block|}
+comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultHostnameVerifier()} should be      * used to create https connections.      *       * @see #isUseHttpsURLConnectionDefaultHostnameVerifier()      */
+specifier|public
+name|void
+name|setUseHttpsURLConnectionDefaultHostnameVerifier
+parameter_list|(
+name|boolean
+name|useHttpsURLConnectionDefaultHostnameVerifier
+parameter_list|)
+block|{
+name|this
+operator|.
+name|useHttpsURLConnectionDefaultHostnameVerifier
+operator|=
+name|useHttpsURLConnectionDefaultHostnameVerifier
+expr_stmt|;
 block|}
 block|}
 end_class
