@@ -1273,7 +1273,7 @@ argument_list|)
 expr_stmt|;
 name|InjectionUtils
 operator|.
-name|injectContextFields
+name|injectContextMethods
 argument_list|(
 name|sh
 operator|.
