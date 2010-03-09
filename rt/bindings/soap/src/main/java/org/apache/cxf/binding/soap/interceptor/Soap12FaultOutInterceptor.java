@@ -879,7 +879,7 @@ operator|.
 name|getLocale
 argument_list|()
 operator|.
-name|getDisplayLanguage
+name|getLanguage
 argument_list|()
 decl_stmt|;
 if|if
