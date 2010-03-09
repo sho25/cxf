@@ -9559,7 +9559,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Processes the parts to be signed and reconfigures those parts that have      * already been encrypted.      *       * @param encryptedParts      *            the parts that have been encrypted      * @param signedParts      *            the parts that are to be signed      *       * @throws IllegalArgumentException      *             if an element in {@code signedParts} contains a {@code      *             WSEncryptionPart} with a {@code null} {@code id} value      */
+comment|/**      * Processes the parts to be signed and reconfigures those parts that have      * already been encrypted.      *       * @param encryptedParts      *            the parts that have been encrypted      * @param signedParts      *            the parts that are to be signed      *       * @throws IllegalArgumentException      *             if an element in {@code signedParts} contains a {@code      *             WSEncryptionPart} with a {@code null} {@code id} value      *             and the {@code WSEncryptionPart} {@code name} value is not      *             "Token"      */
 specifier|public
 name|void
 name|handleEncryptedSignedHeaders
@@ -9627,6 +9627,12 @@ operator|.
 name|next
 argument_list|()
 decl_stmt|;
+comment|// Everything has to be ID based except for the case of a part
+comment|// indicating "Token" as the element name.  This name is a flag
+comment|// for WSS4J to sign the initiator token used in the signature.
+comment|// Since the encryption happened before the signature creation,
+comment|// this element can't possibly be encrypted so we can safely ignore
+comment|// if it were ever to be set before this method is called.
 if|if
 condition|(
 name|signedPart
@@ -9635,6 +9641,17 @@ name|getId
 argument_list|()
 operator|==
 literal|null
+operator|&&
+operator|!
+literal|"Token"
+operator|.
+name|equals
+argument_list|(
+name|signedPart
+operator|.
+name|getName
+argument_list|()
+argument_list|)
 condition|)
 block|{
 throw|throw
