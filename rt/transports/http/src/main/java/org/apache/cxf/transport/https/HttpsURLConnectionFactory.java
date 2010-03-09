@@ -471,14 +471,25 @@ operator|)
 name|ex
 throw|;
 block|}
-throw|throw
+comment|// use exception.initCause(ex) to be java 5 compatible
+name|IOException
+name|ioException
+init|=
 operator|new
 name|IOException
 argument_list|(
 literal|"Error while initializing secure socket"
-argument_list|,
+argument_list|)
+decl_stmt|;
+name|ioException
+operator|.
+name|initCause
+argument_list|(
 name|ex
 argument_list|)
+expr_stmt|;
+throw|throw
+name|ioException
 throw|;
 block|}
 block|}
