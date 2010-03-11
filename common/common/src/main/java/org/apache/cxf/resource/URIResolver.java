@@ -1636,6 +1636,58 @@ name|URISyntaxException
 name|e
 parameter_list|)
 block|{
+comment|// yep, some versions of the JDK can't handle spaces when URL.toURI() is called, and lots of people
+comment|// on windows have their maven repositories at C:/Documents and Settings/<userid>/.m2/repository
+comment|// re: http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6506304
+if|if
+condition|(
+name|url
+operator|.
+name|toString
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|" "
+argument_list|)
+condition|)
+block|{
+name|url
+operator|=
+operator|new
+name|URL
+argument_list|(
+name|url
+operator|.
+name|toString
+argument_list|()
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+comment|//let's try this again
+try|try
+block|{
+name|uri
+operator|=
+name|url
+operator|.
+name|toURI
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|URISyntaxException
+name|e1
+parameter_list|)
+block|{
 comment|// processing the jar:file:/ type value
 name|String
 name|urlStr
@@ -1714,6 +1766,7 @@ name|ue
 parameter_list|)
 block|{
 comment|// ignore
+block|}
 block|}
 block|}
 block|}
