@@ -1636,8 +1636,9 @@ name|URISyntaxException
 name|e
 parameter_list|)
 block|{
-comment|// yep, some versions of the JDK can't handle spaces when URL.toURI() is called, and lots of people
-comment|// on windows have their maven repositories at C:/Documents and Settings/<userid>/.m2/repository
+comment|// yep, some versions of the JDK can't handle spaces when URL.toURI() is called,
+comment|// and lots of people on windows have their maven repositories at
+comment|// C:/Documents and Settings/<userid>/.m2/repository
 comment|// re: http://bugs.sun.com/bugdatabase/view_bug.do?bug_id=6506304
 if|if
 condition|(
