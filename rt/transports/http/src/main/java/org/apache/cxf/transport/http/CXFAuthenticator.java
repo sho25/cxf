@@ -328,7 +328,7 @@ name|Authenticator
 operator|.
 name|class
 operator|.
-name|getMethod
+name|getDeclaredMethod
 argument_list|(
 literal|"getPasswordAuthentication"
 argument_list|)
