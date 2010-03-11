@@ -50,13 +50,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Composite 'or' search condition     */
+comment|/**  * Composite 'and' search condition     */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|OrSearchCondition
+name|AndSearchCondition
 parameter_list|<
 name|T
 parameter_list|>
@@ -77,11 +77,11 @@ argument_list|>
 name|conditions
 decl_stmt|;
 specifier|public
-name|OrSearchCondition
+name|AndSearchCondition
 parameter_list|()
 block|{              }
 specifier|public
-name|OrSearchCondition
+name|AndSearchCondition
 parameter_list|(
 name|List
 argument_list|<
@@ -142,6 +142,7 @@ control|)
 block|{
 if|if
 condition|(
+operator|!
 name|sc
 operator|.
 name|isMet
@@ -151,12 +152,12 @@ argument_list|)
 condition|)
 block|{
 return|return
-literal|true
+literal|false
 return|;
 block|}
 block|}
 return|return
-literal|false
+literal|true
 return|;
 block|}
 specifier|public
@@ -176,7 +177,7 @@ block|{
 return|return
 name|ConditionType
 operator|.
-name|OR
+name|AND
 return|;
 block|}
 specifier|public
