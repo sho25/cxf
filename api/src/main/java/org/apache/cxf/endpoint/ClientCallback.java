@@ -121,6 +121,7 @@ name|Throwable
 name|exception
 decl_stmt|;
 specifier|protected
+specifier|volatile
 name|boolean
 name|done
 decl_stmt|;
