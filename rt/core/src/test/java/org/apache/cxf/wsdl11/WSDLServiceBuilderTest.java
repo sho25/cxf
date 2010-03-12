@@ -3584,6 +3584,8 @@ operator|.
 name|getSchema
 argument_list|(
 name|serviceInfo
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertNotNull

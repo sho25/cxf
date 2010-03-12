@@ -1135,6 +1135,14 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
+argument_list|,
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|writer
