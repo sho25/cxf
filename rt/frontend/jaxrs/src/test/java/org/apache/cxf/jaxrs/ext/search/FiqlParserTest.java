@@ -1333,7 +1333,7 @@ name|name
 expr_stmt|;
 block|}
 specifier|public
-name|Integer
+name|int
 name|getLevel
 parameter_list|()
 block|{
@@ -1345,7 +1345,7 @@ specifier|public
 name|void
 name|setLevel
 parameter_list|(
-name|Integer
+name|int
 name|level
 parameter_list|)
 block|{

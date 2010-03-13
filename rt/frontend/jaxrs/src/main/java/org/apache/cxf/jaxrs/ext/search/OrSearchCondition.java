@@ -35,6 +35,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collections
 import|;
 end_import
@@ -206,7 +216,7 @@ name|T
 argument_list|>
 name|findAll
 parameter_list|(
-name|List
+name|Collection
 argument_list|<
 name|T
 argument_list|>
