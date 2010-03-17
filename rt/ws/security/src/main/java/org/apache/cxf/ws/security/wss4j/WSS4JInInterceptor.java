@@ -752,7 +752,7 @@ name|PROCESSOR_MAP
 init|=
 literal|"wss4j.processor.map"
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|String
