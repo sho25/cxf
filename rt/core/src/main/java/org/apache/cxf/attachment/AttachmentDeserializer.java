@@ -1220,7 +1220,16 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|s
+operator|.
+name|getInputStream
+argument_list|()
+operator|instanceof
+name|DelegatingInputStream
+condition|)
 block|{
 name|cache
 argument_list|(
@@ -1235,6 +1244,10 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+comment|//assume a normal stream that is already cached
 block|}
 block|}
 block|}
