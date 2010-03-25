@@ -1004,7 +1004,7 @@ name|assertEquals
 argument_list|(
 name|cGt
 operator|.
-name|getConditions
+name|getSearchConditions
 argument_list|()
 argument_list|,
 literal|null
