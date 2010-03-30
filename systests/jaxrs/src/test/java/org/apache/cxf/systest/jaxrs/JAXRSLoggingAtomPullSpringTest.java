@@ -397,6 +397,7 @@ extends|extends
 name|AbstractClientServerTestBase
 block|{
 specifier|private
+specifier|static
 name|JAXBContext
 name|context
 decl_stmt|;
@@ -426,6 +427,21 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//make sure the Resource things have their static initializers called
+comment|//to make sure the Loggers are created.  Otherwise, the Loggers that the server
+comment|//sets the handler into could be garbage collected before the init is called
+operator|new
+name|Resource
+argument_list|()
+expr_stmt|;
+operator|new
+name|Resource2
+argument_list|()
+expr_stmt|;
+operator|new
+name|Resource3
+argument_list|()
+expr_stmt|;
 comment|// must be 'in-process' to communicate with inner class in single JVM
 comment|// and to spawn class SpringServer w/o using main() method
 name|launchServer
@@ -435,6 +451,29 @@ operator|.
 name|class
 argument_list|,
 literal|true
+argument_list|)
+expr_stmt|;
+name|context
+operator|=
+name|JAXBContext
+operator|.
+name|newInstance
+argument_list|(
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|management
+operator|.
+name|web
+operator|.
+name|logging
+operator|.
+name|LogRecord
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 block|}
@@ -467,29 +506,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|context
-operator|=
-name|JAXBContext
-operator|.
-name|newInstance
-argument_list|(
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|management
-operator|.
-name|web
-operator|.
-name|logging
-operator|.
-name|LogRecord
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
 name|Storage
 operator|.
 name|clearRecords
