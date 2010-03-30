@@ -645,6 +645,13 @@ expr_stmt|;
 block|}
 name|customTypeObject
 operator|.
+name|setTypeClass
+argument_list|(
+name|typeClass
+argument_list|)
+expr_stmt|;
+name|customTypeObject
+operator|.
 name|setSchemaType
 argument_list|(
 name|schemaType
