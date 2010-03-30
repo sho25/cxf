@@ -1354,6 +1354,21 @@ argument_list|(
 name|reader
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|reader
+operator|.
+name|hasNext
+argument_list|()
+condition|)
+block|{
+comment|//need to actually consume the END_ELEMENT
+name|reader
+operator|.
+name|next
+argument_list|()
+expr_stmt|;
+block|}
 return|return
 operator|new
 name|DOMSource
