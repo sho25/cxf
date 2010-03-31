@@ -345,6 +345,13 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|setExchange
+argument_list|(
+name|exchange
+argument_list|)
+expr_stmt|;
 block|}
 name|setExchangeProperties
 argument_list|(
