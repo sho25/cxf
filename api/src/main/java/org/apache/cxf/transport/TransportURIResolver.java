@@ -740,6 +740,18 @@ name|is
 operator|==
 literal|null
 operator|&&
+operator|(
+name|base
+operator|==
+literal|null
+operator|||
+name|base
+operator|.
+name|getScheme
+argument_list|()
+operator|==
+literal|null
+operator|||
 operator|!
 name|DEFAULT_URI_RESOLVER_HANDLES
 operator|.
@@ -750,6 +762,7 @@ operator|.
 name|getScheme
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 name|is
