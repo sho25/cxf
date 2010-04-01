@@ -461,8 +461,6 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Checks that the WSS4J results refer to the required signed/encrypted      * elements as defined by the XPath expressions in {@link #xPaths}.      *       * @param message      *            the SOAP message containing the signature      *       * @throws SoapFault      *             if there is an error evaluating an XPath or an element is not      *             covered by the required cryptographic operation      */
-annotation|@
-name|Override
 specifier|public
 name|void
 name|handleMessage
