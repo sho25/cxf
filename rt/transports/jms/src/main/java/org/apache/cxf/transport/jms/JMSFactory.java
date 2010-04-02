@@ -1389,16 +1389,6 @@ name|getTaskExecutor
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|jmsListener
-operator|.
-name|setTaskExecutor
-argument_list|(
-name|jmsConfig
-operator|.
-name|getTaskExecutor
-argument_list|()
-argument_list|)
-expr_stmt|;
 block|}
 if|if
 condition|(
