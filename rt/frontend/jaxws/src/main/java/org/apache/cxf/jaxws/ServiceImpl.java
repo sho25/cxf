@@ -2965,6 +2965,16 @@ name|wsdlURL
 argument_list|)
 expr_stmt|;
 block|}
+name|configureObject
+argument_list|(
+name|proxyFac
+argument_list|)
+expr_stmt|;
+name|configureObject
+argument_list|(
+name|clientFac
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|portName
