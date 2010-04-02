@@ -163,6 +163,14 @@ name|STS_CLIENT
 init|=
 literal|"ws-security.sts.client"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TIMESTAMP_TTL
+init|=
+literal|"ws-security.timestamp.timeToLive"
+decl_stmt|;
 comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static
