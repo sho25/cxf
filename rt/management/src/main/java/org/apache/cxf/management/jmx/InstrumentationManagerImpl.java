@@ -1133,22 +1133,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-block|}
-specifier|public
-name|void
-name|initComplete
-parameter_list|()
-block|{              }
-specifier|public
-name|void
-name|preShutdown
-parameter_list|()
-block|{                      }
-specifier|public
-name|void
-name|postShutdown
-parameter_list|()
-block|{
 comment|//Using the array to hold the busMBeans to avoid the CurrentModificationException
 name|Object
 index|[]
@@ -1216,6 +1200,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
+specifier|public
+name|void
+name|initComplete
+parameter_list|()
+block|{              }
+specifier|public
+name|void
+name|preShutdown
+parameter_list|()
+block|{                      }
+specifier|public
+name|void
+name|postShutdown
+parameter_list|()
+block|{
+name|this
+operator|.
+name|shutdown
+argument_list|()
+expr_stmt|;
 block|}
 specifier|private
 name|void
