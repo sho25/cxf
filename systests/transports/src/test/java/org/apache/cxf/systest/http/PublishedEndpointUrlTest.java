@@ -504,7 +504,7 @@ block|}
 block|}
 name|server
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 block|}

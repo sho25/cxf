@@ -956,7 +956,7 @@ block|{
 comment|//REVISIT: seems using server.stop() doesn't release resource properly.
 name|servant
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 name|LOG

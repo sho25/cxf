@@ -1009,7 +1009,7 @@ argument_list|)
 expr_stmt|;
 name|svr
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 block|}
@@ -1201,7 +1201,7 @@ argument_list|)
 expr_stmt|;
 name|svr
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 block|}
@@ -1380,7 +1380,7 @@ argument_list|)
 expr_stmt|;
 name|svr
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 block|}

@@ -42,6 +42,10 @@ name|void
 name|stop
 parameter_list|()
 function_decl|;
+name|void
+name|destroy
+parameter_list|()
+function_decl|;
 name|Destination
 name|getDestination
 parameter_list|()

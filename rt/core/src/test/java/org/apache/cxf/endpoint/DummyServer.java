@@ -113,6 +113,15 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+name|void
+name|destroy
+parameter_list|()
+block|{
+name|stop
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
 name|MessageObserver
 name|getMessageObserver
 parameter_list|()

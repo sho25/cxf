@@ -829,7 +829,7 @@ operator|.
 name|getServer
 argument_list|()
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 block|}

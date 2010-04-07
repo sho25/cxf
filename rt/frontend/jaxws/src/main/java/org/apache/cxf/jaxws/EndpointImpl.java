@@ -818,6 +818,13 @@ name|Handler
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|/**      * Flag indicating internal state of this instance.  If true,      * the instance can have {@link #publish(String, Object)} called      * and/or settings changed.      */
+specifier|private
+name|boolean
+name|publishable
+init|=
+literal|true
+decl_stmt|;
 specifier|public
 name|EndpointImpl
 parameter_list|(
@@ -1159,6 +1166,7 @@ operator|!=
 literal|null
 return|;
 block|}
+comment|/**      * {@inheritDoc}      *<p/>      * This implementation performs no action except to check the publish permission.      */
 annotation|@
 name|Override
 specifier|public
@@ -1214,6 +1222,9 @@ argument_list|>
 name|metadata
 parameter_list|)
 block|{
+name|checkPublishable
+argument_list|()
+expr_stmt|;
 name|this
 operator|.
 name|metadata
@@ -1277,7 +1288,7 @@ condition|)
 block|{
 name|server
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 name|server
@@ -1415,6 +1426,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+comment|/**      * Performs the publication action by setting up a {@link Server}      * instance based on this endpoint's configuration.      *      * @param addr the optional endpoint address.      *      * @throws IllegalStateException if the endpoint cannot be published/republished      * @throws SecurityException if permission checking is enabled and policy forbids publishing      * @throws WebServiceException if there is an error publishing the endpoint      *       * @see #checkPublishPermission()      * @see #checkPublishable()      * @see #getServer(String)      */
 specifier|protected
 name|void
 name|doPublish
@@ -1426,16 +1438,23 @@ block|{
 name|checkPublishPermission
 argument_list|()
 expr_stmt|;
-try|try
-block|{
+name|checkPublishable
+argument_list|()
+expr_stmt|;
 name|ServerImpl
 name|serv
 init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+name|serv
+operator|=
 name|getServer
 argument_list|(
 name|addr
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 if|if
 condition|(
 name|addr
@@ -1509,16 +1528,10 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|WebServiceException
-name|ex
-parameter_list|)
-block|{
-throw|throw
-name|ex
-throw|;
+name|publishable
+operator|=
+literal|false
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -1526,6 +1539,20 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+try|try
+block|{
+name|stop
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+comment|// Nothing we can do.
+block|}
 throw|throw
 operator|new
 name|WebServiceException
@@ -2103,6 +2130,31 @@ argument_list|(
 name|PUBLISH_PERMISSION
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+comment|/**      * Checks the value of {@link #publishable} and throws      * an {@link IllegalStateException} if the value is {@code false}.      *      * @throws IllegalStateException if {@link #publishable} is false      */
+specifier|protected
+name|void
+name|checkPublishable
+parameter_list|()
+block|{
+if|if
+condition|(
+operator|!
+name|this
+operator|.
+name|publishable
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"Cannot invoke method "
+operator|+
+literal|"after endpoint has been published."
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|public

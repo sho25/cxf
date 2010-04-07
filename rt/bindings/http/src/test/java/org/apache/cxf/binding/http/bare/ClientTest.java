@@ -528,7 +528,7 @@ comment|//        assertTrue(objects == null || objects.length == 0);
 comment|//
 name|svr
 operator|.
-name|stop
+name|destroy
 argument_list|()
 expr_stmt|;
 block|}
