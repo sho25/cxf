@@ -3509,6 +3509,28 @@ argument_list|)
 expr_stmt|;
 comment|//WebLogic and WCF always encrypt these
 comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
+comment|//encryptedTokensIdList.add(utBuilder.getId());
+if|if
+condition|(
+name|suppTokens
+operator|.
+name|isEncryptedToken
+argument_list|()
+operator|||
+name|MessageUtils
+operator|.
+name|getContextualBoolean
+argument_list|(
+name|message
+argument_list|,
+name|SecurityConstants
+operator|.
+name|ALWAYS_ENCRYPT_UT
+argument_list|,
+literal|true
+argument_list|)
+condition|)
+block|{
 name|encryptedTokensIdList
 operator|.
 name|add
@@ -3519,6 +3541,7 @@ name|getId
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 elseif|else

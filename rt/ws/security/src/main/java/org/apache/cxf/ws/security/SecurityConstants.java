@@ -171,6 +171,18 @@ name|TIMESTAMP_TTL
 init|=
 literal|"ws-security.timestamp.timeToLive"
 decl_stmt|;
+comment|//WebLogic and WCF always encrypt UsernameTokens whenever possible
+comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
+comment|//Be default, we will encrypt as well for interop reasons.  However, this
+comment|//setting can be set to false to turn that off.
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ALWAYS_ENCRYPT_UT
+init|=
+literal|"ws-security.username-token.always.encrypted"
+decl_stmt|;
 comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static
@@ -264,6 +276,10 @@ block|,
 name|STS_TOKEN_CRYPTO
 block|,
 name|STS_TOKEN_DO_CANCEL
+block|,
+name|TIMESTAMP_TTL
+block|,
+name|ALWAYS_ENCRYPT_UT
 block|}
 argument_list|)
 argument_list|)
