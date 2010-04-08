@@ -1022,6 +1022,10 @@ block|{
 if|if
 condition|(
 operator|!
+name|alwaysAllowNillables
+argument_list|()
+operator|&&
+operator|!
 name|propertyTypeInfo
 operator|.
 name|isNillable
@@ -1168,6 +1172,15 @@ name|e
 argument_list|)
 throw|;
 block|}
+block|}
+specifier|protected
+name|boolean
+name|alwaysAllowNillables
+parameter_list|()
+block|{
+return|return
+literal|false
+return|;
 block|}
 specifier|protected
 name|AegisType

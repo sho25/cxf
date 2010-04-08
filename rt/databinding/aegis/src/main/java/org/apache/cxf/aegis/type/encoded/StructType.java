@@ -171,6 +171,16 @@ name|info
 argument_list|)
 expr_stmt|;
 block|}
+comment|//soap-encoding always allow xsi:nil=true to be set
+specifier|protected
+name|boolean
+name|alwaysAllowNillables
+parameter_list|()
+block|{
+return|return
+literal|true
+return|;
+block|}
 comment|/**      * Gets the BeanTypeInfo using an unqualified name.      * @param name the unqualified name of the element      * @return the BeanTypeInfo containing a property with the specified unqualified name      */
 annotation|@
 name|Override
