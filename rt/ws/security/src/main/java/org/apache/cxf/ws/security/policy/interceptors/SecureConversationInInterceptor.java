@@ -1989,7 +1989,13 @@ name|bus
 argument_list|,
 name|namespace
 argument_list|,
-literal|null
+name|endpoint
+operator|.
+name|getEndpointInfo
+argument_list|()
+operator|.
+name|getTransportId
+argument_list|()
 argument_list|,
 name|destination
 operator|.
