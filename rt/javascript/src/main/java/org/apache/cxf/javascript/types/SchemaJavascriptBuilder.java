@@ -3719,6 +3719,13 @@ operator|+
 literal|"(item);"
 argument_list|)
 expr_stmt|;
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"var item = null;"
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 operator|!
