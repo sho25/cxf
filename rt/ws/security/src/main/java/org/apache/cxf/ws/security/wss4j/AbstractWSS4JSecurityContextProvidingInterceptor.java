@@ -633,13 +633,7 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
-name|WSSecurityException
-operator|.
-name|FAILED_AUTHENTICATION
-argument_list|,
-literal|"Subject has not been created"
-argument_list|,
-literal|null
+literal|"Failed Authentication : Subject has not been created"
 argument_list|,
 name|ex
 argument_list|)
@@ -686,13 +680,7 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
-name|WSSecurityException
-operator|.
-name|FAILED_AUTHENTICATION
-argument_list|,
-literal|null
-argument_list|,
-literal|null
+literal|"Failed Authentication : Invalid Subject"
 argument_list|)
 throw|;
 block|}
