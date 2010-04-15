@@ -747,6 +747,11 @@ specifier|static
 class|class
 name|TestService
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
 specifier|public
 name|void
 name|echo
