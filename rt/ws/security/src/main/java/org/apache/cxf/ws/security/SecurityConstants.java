@@ -167,6 +167,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|STS_APPLIES_TO
+init|=
+literal|"ws-security.sts.applies-to"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|TIMESTAMP_TTL
 init|=
 literal|"ws-security.timestamp.timeToLive"
