@@ -996,12 +996,23 @@ condition|)
 block|{
 try|try
 block|{
+comment|// decode space before create a file
 name|baseFile
 operator|=
 operator|new
 name|File
 argument_list|(
 name|base
+operator|.
+name|getPath
+argument_list|()
+operator|.
+name|replace
+argument_list|(
+literal|"%20"
+argument_list|,
+literal|" "
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if
@@ -1416,8 +1427,16 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// decode spaces before returning otherwise File.exists returns false
 return|return
 name|path
+operator|.
+name|replace
+argument_list|(
+literal|"%20"
+argument_list|,
+literal|" "
+argument_list|)
 return|;
 block|}
 specifier|private
