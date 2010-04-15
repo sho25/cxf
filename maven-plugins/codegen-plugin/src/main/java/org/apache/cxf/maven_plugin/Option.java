@@ -1135,13 +1135,16 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-name|void
+parameter_list|<
+name|T
+parameter_list|>
+name|T
 name|setIfNull
 parameter_list|(
-name|Object
+name|T
 name|dest
 parameter_list|,
-name|Object
+name|T
 name|source
 parameter_list|)
 block|{
@@ -1157,6 +1160,9 @@ operator|=
 name|source
 expr_stmt|;
 block|}
+return|return
+name|dest
+return|;
 block|}
 specifier|public
 name|void
@@ -1166,6 +1172,8 @@ name|Option
 name|defaultOptions
 parameter_list|)
 block|{
+name|wsdlList
+operator|=
 name|setIfNull
 argument_list|(
 name|wsdlList
@@ -1175,6 +1183,8 @@ operator|.
 name|wsdlList
 argument_list|)
 expr_stmt|;
+name|extendedSoapHeaders
+operator|=
 name|setIfNull
 argument_list|(
 name|extendedSoapHeaders
@@ -1184,6 +1194,8 @@ operator|.
 name|extendedSoapHeaders
 argument_list|)
 expr_stmt|;
+name|validateWsdl
+operator|=
 name|setIfNull
 argument_list|(
 name|validateWsdl
@@ -1193,6 +1205,8 @@ operator|.
 name|validateWsdl
 argument_list|)
 expr_stmt|;
+name|autoNameResolution
+operator|=
 name|setIfNull
 argument_list|(
 name|autoNameResolution
@@ -1202,6 +1216,8 @@ operator|.
 name|autoNameResolution
 argument_list|)
 expr_stmt|;
+name|noAddressBinding
+operator|=
 name|setIfNull
 argument_list|(
 name|noAddressBinding
@@ -1211,6 +1227,8 @@ operator|.
 name|noAddressBinding
 argument_list|)
 expr_stmt|;
+name|allowElementRefs
+operator|=
 name|setIfNull
 argument_list|(
 name|allowElementRefs
@@ -1220,6 +1238,8 @@ operator|.
 name|allowElementRefs
 argument_list|)
 expr_stmt|;
+name|defaultExcludesNamespace
+operator|=
 name|setIfNull
 argument_list|(
 name|defaultExcludesNamespace
@@ -1229,6 +1249,8 @@ operator|.
 name|defaultExcludesNamespace
 argument_list|)
 expr_stmt|;
+name|defaultNamespacePackageMapping
+operator|=
 name|setIfNull
 argument_list|(
 name|defaultNamespacePackageMapping
@@ -1238,6 +1260,8 @@ operator|.
 name|defaultNamespacePackageMapping
 argument_list|)
 expr_stmt|;
+name|frontEnd
+operator|=
 name|setIfNull
 argument_list|(
 name|frontEnd
@@ -1247,6 +1271,8 @@ operator|.
 name|frontEnd
 argument_list|)
 expr_stmt|;
+name|dataBinding
+operator|=
 name|setIfNull
 argument_list|(
 name|dataBinding
@@ -1256,6 +1282,8 @@ operator|.
 name|dataBinding
 argument_list|)
 expr_stmt|;
+name|wsdlVersion
+operator|=
 name|setIfNull
 argument_list|(
 name|wsdlVersion
@@ -1265,6 +1293,8 @@ operator|.
 name|wsdlVersion
 argument_list|)
 expr_stmt|;
+name|catalog
+operator|=
 name|setIfNull
 argument_list|(
 name|catalog
@@ -1274,6 +1304,8 @@ operator|.
 name|catalog
 argument_list|)
 expr_stmt|;
+name|serviceName
+operator|=
 name|setIfNull
 argument_list|(
 name|serviceName
@@ -1283,6 +1315,8 @@ operator|.
 name|serviceName
 argument_list|)
 expr_stmt|;
+name|outputDir
+operator|=
 name|setIfNull
 argument_list|(
 name|outputDir
