@@ -367,6 +367,12 @@ name|defaultTempDir
 operator|=
 name|f
 expr_stmt|;
+specifier|final
+name|File
+name|f2
+init|=
+name|f
+decl_stmt|;
 name|Thread
 name|hook
 init|=
@@ -383,7 +389,7 @@ parameter_list|()
 block|{
 name|removeDir
 argument_list|(
-name|defaultTempDir
+name|f2
 argument_list|,
 literal|true
 argument_list|)
