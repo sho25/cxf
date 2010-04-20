@@ -194,8 +194,7 @@ return|return
 literal|false
 return|;
 block|}
-specifier|private
-specifier|static
+specifier|protected
 name|boolean
 name|checkGroup
 parameter_list|(
@@ -245,7 +244,7 @@ argument_list|()
 condition|;
 control|)
 block|{
-comment|// this might be a plain role but could represent a group consisting of the pther groups/roles
+comment|// this might be a plain role but could represent a group consisting of other groups/roles
 name|Principal
 name|member
 init|=

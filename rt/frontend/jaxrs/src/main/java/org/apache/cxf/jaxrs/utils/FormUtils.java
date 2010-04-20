@@ -265,6 +265,9 @@ argument_list|(
 name|name
 argument_list|,
 name|value
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
