@@ -1470,7 +1470,9 @@ name|register
 argument_list|(
 operator|new
 name|UsernameTokenInterceptorProvider
-argument_list|()
+argument_list|(
+name|bus
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|reg

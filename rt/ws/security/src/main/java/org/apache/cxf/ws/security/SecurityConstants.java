@@ -87,6 +87,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|VALIDATE_PASSWORD
+init|=
+literal|"ws-security.validate.password"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CALLBACK_HANDLER
 init|=
 literal|"ws-security.callback-handler"
