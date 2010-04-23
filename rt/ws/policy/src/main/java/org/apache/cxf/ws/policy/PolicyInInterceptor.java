@@ -643,6 +643,13 @@ operator|.
 name|getInterceptors
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|interceptors
+condition|)
+block|{
 for|for
 control|(
 name|Interceptor
@@ -666,6 +673,7 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// insert assertions of endpoint's vocabulary into message
 name|Collection
@@ -753,6 +761,13 @@ operator|.
 name|getInterceptors
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|interceptors
+condition|)
+block|{
 for|for
 control|(
 name|Interceptor
@@ -776,6 +791,7 @@ argument_list|(
 name|i
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// insert assertions of endpoint's vocabulary into message
 if|if
@@ -861,6 +877,13 @@ operator|.
 name|getInterceptors
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|interceptors
+condition|)
+block|{
 for|for
 control|(
 name|Interceptor
@@ -903,6 +926,7 @@ name|getSimpleName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// insert assertions of endpoint's vocabulary into message
 name|Collection

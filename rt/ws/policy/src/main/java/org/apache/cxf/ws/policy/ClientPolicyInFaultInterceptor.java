@@ -432,6 +432,13 @@ operator|+
 name|faultInterceptors
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|faultInterceptors
+condition|)
+block|{
 for|for
 control|(
 name|Interceptor
@@ -474,6 +481,7 @@ name|getSimpleName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// insert assertions of endpoint's fault vocabulary into message
 name|Collection
