@@ -637,13 +637,11 @@ name|assertEquals
 argument_list|(
 literal|"Hello, my name is Félix Agnès"
 argument_list|,
-operator|new
-name|String
-argument_list|(
 name|os
 operator|.
-name|toByteArray
-argument_list|()
+name|toString
+argument_list|(
+literal|"ISO-8859-1"
 argument_list|)
 argument_list|)
 expr_stmt|;
