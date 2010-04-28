@@ -5714,6 +5714,15 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|value
+operator|==
+literal|null
+condition|)
+block|{
+continue|continue;
+block|}
+if|if
+condition|(
 name|isPrimitive
 argument_list|(
 name|value
