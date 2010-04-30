@@ -417,7 +417,7 @@ begin_class
 specifier|public
 specifier|abstract
 class|class
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 extends|extends
 name|WSS4JInInterceptor
 implements|implements
@@ -433,7 +433,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 operator|.
 name|class
 argument_list|)
@@ -443,7 +443,7 @@ name|boolean
 name|supportDigestPasswords
 decl_stmt|;
 specifier|public
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 parameter_list|()
 block|{
 name|super
@@ -451,7 +451,7 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|public
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 parameter_list|(
 name|Map
 argument_list|<
@@ -1035,7 +1035,7 @@ operator|.
 name|USERNAME_TOKEN_UNKNOWN
 condition|)
 block|{
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 operator|.
 name|this
 operator|.
@@ -1288,7 +1288,7 @@ name|password
 argument_list|)
 expr_stmt|;
 block|}
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 operator|.
 name|this
 operator|.

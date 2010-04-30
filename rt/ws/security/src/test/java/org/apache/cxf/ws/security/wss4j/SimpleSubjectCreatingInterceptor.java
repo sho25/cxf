@@ -68,7 +68,7 @@ specifier|public
 class|class
 name|SimpleSubjectCreatingInterceptor
 extends|extends
-name|AbstractWSS4JSecurityContextProvidingInterceptor
+name|AbstractUsernameTokenAuthenticatingInterceptor
 block|{
 annotation|@
 name|Override
