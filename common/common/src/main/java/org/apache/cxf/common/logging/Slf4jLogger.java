@@ -102,12 +102,12 @@ block|{
 name|Level
 name|level
 decl_stmt|;
-comment|/*          * As we can use a "switch ... case" block but only a "if ... else if ..." block, the order of the          * comparisons is important. We assume the the logging framework is most probably configured at WARN          * DEBUG, TRACE, INFO, ... levels          */
+comment|// Verify from the wider (trace) to the narrower (error)
 if|if
 condition|(
 name|logger
 operator|.
-name|isWarnEnabled
+name|isTraceEnabled
 argument_list|()
 condition|)
 block|{
@@ -115,8 +115,9 @@ name|level
 operator|=
 name|Level
 operator|.
-name|WARNING
+name|FINER
 expr_stmt|;
+comment|// FINEST
 block|}
 elseif|else
 if|if
@@ -140,22 +141,6 @@ if|if
 condition|(
 name|logger
 operator|.
-name|isTraceEnabled
-argument_list|()
-condition|)
-block|{
-name|level
-operator|=
-name|Level
-operator|.
-name|FINEST
-expr_stmt|;
-block|}
-elseif|else
-if|if
-condition|(
-name|logger
-operator|.
 name|isInfoEnabled
 argument_list|()
 condition|)
@@ -165,6 +150,22 @@ operator|=
 name|Level
 operator|.
 name|INFO
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|logger
+operator|.
+name|isWarnEnabled
+argument_list|()
+condition|)
+block|{
+name|level
+operator|=
+name|Level
+operator|.
+name|WARNING
 expr_stmt|;
 block|}
 elseif|else
