@@ -867,6 +867,25 @@ argument_list|(
 literal|"wsdl"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|wsdl
+operator|!=
+literal|null
+condition|)
+block|{
+name|wsdl
+operator|=
+name|wsdl
+operator|.
+name|replace
+argument_list|(
+literal|"%20"
+argument_list|,
+literal|" "
+argument_list|)
+expr_stmt|;
+block|}
 name|String
 name|xsd
 init|=
@@ -877,6 +896,25 @@ argument_list|(
 literal|"xsd"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|xsd
+operator|!=
+literal|null
+condition|)
+block|{
+name|xsd
+operator|=
+name|xsd
+operator|.
+name|replace
+argument_list|(
+literal|"%20"
+argument_list|,
+literal|" "
+argument_list|)
+expr_stmt|;
+block|}
 name|Map
 argument_list|<
 name|String
@@ -1643,6 +1681,13 @@ operator|+
 literal|"?xsd="
 operator|+
 name|sl
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1702,6 +1747,13 @@ operator|+
 literal|"?xsd="
 operator|+
 name|sl
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1761,6 +1813,13 @@ operator|+
 literal|"?xsd="
 operator|+
 name|sl
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1820,6 +1879,13 @@ operator|+
 literal|"?wsdl="
 operator|+
 name|sl
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

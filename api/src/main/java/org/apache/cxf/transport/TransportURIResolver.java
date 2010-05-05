@@ -311,6 +311,18 @@ name|String
 name|baseUri
 parameter_list|)
 block|{
+comment|// Spaces must be encoded or URI.resolve() will choke
+name|curUri
+operator|=
+name|curUri
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|"%20"
+argument_list|)
+expr_stmt|;
 name|InputSource
 name|is
 init|=
