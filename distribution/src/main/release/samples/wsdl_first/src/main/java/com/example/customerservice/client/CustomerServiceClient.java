@@ -59,18 +59,6 @@ name|CustomerServiceService
 import|;
 end_import
 
-begin_import
-import|import
-name|com
-operator|.
-name|example
-operator|.
-name|customerservice
-operator|.
-name|NoSuchCustomerException
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
