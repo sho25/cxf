@@ -162,7 +162,7 @@ specifier|private
 name|FileUtils
 parameter_list|()
 block|{              }
-specifier|private
+specifier|public
 specifier|static
 specifier|synchronized
 name|File
