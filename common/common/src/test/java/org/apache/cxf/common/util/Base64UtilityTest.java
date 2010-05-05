@@ -584,17 +584,13 @@ name|in
 init|=
 literal|"QWxhZGRpbjpcGVuIHNlc2FtZQ=="
 decl_stmt|;
-name|byte
-name|bytes
-index|[]
-init|=
 name|Base64Utility
 operator|.
 name|decode
 argument_list|(
 name|in
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|fail
 argument_list|(
 literal|"This test should be fail"

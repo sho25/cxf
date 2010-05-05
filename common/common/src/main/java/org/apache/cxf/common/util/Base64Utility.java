@@ -757,7 +757,11 @@ name|warning
 argument_list|(
 literal|"Invalid base64 encoded string : "
 operator|+
+operator|new
+name|String
+argument_list|(
 name|id
+argument_list|)
 argument_list|)
 expr_stmt|;
 throw|throw
