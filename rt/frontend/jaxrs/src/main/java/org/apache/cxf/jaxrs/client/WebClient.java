@@ -1762,6 +1762,27 @@ return|return
 name|this
 return|;
 block|}
+comment|/**      * Updates the current URI fragment      * @param name fragment name      * @return updated WebClient      */
+specifier|public
+name|WebClient
+name|fragment
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+block|{
+name|getCurrentBuilder
+argument_list|()
+operator|.
+name|fragment
+argument_list|(
+name|name
+argument_list|)
+expr_stmt|;
+return|return
+name|this
+return|;
+block|}
 comment|/**      * Moves WebClient to a new baseURI or forwards to new currentURI        * @param newAddress new URI      * @param forward if true then currentURI will be based on baseURI        * @return updated WebClient      */
 specifier|public
 name|WebClient
@@ -1959,6 +1980,24 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+return|return
+name|this
+return|;
+block|}
+comment|/**      * Resets the current query      * @return updated WebClient      */
+specifier|public
+name|WebClient
+name|resetQuery
+parameter_list|()
+block|{
+name|getCurrentBuilder
+argument_list|()
+operator|.
+name|replaceQuery
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 return|return
 name|this
 return|;
