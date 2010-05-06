@@ -505,6 +505,15 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|os
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|message
 operator|.
 name|put

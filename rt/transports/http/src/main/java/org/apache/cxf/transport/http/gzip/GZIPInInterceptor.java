@@ -402,6 +402,15 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|is
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 comment|// wrap an unzipping stream around the original one
 name|GZIPInputStream
 name|zipInput
