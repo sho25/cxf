@@ -108,7 +108,7 @@ return|return
 name|sslSocketFactory
 return|;
 block|}
-comment|/**      * Returns whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()}Êshould be      * used to create https connections. If<code>true</code> , {@link #getJsseProvider()} ,      * {@link #getSecureSocketProtocol()}, {@link #getTrustManagers()}, {@link #getKeyManagers()},      * {@link #getSecureRandom()}, {@link #getCipherSuites()} and {@link #getCipherSuitesFilter()} are      * ignored.      */
+comment|/**      * Returns whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()} should be      * used to create https connections. If<code>true</code> , {@link #getJsseProvider()} ,      * {@link #getSecureSocketProtocol()}, {@link #getTrustManagers()}, {@link #getKeyManagers()},      * {@link #getSecureRandom()}, {@link #getCipherSuites()} and {@link #getCipherSuitesFilter()} are      * ignored.      */
 specifier|public
 name|boolean
 name|isUseHttpsURLConnectionDefaultSslSocketFactory
@@ -118,7 +118,7 @@ return|return
 name|useHttpsURLConnectionDefaultSslSocketFactory
 return|;
 block|}
-comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()}Êshould be      * used to create https connections.      *       * @see #isUseHttpsURLConnectionDefaultSslSocketFactory()      */
+comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()} should be      * used to create https connections.      *       * @see #isUseHttpsURLConnectionDefaultSslSocketFactory()      */
 specifier|public
 name|void
 name|setUseHttpsURLConnectionDefaultSslSocketFactory
