@@ -455,6 +455,14 @@ name|CFG_RESERVE_NAME
 init|=
 literal|"reserveClass"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_USE_FQCN_FAULT_SERIAL_VERSION_UID
+init|=
+literal|"useFQCNForFaultSerialVersionUID"
+decl_stmt|;
 comment|//Internal Flag to generate
 specifier|public
 specifier|static

@@ -726,6 +726,16 @@ argument_list|,
 literal|"-validate"
 argument_list|)
 expr_stmt|;
+name|addIfTrue
+argument_list|(
+name|list
+argument_list|,
+name|isUseFQCNForFaultSerialVersionUID
+argument_list|()
+argument_list|,
+literal|"-useFQCNForFaultSerialVersionUID"
+argument_list|)
+expr_stmt|;
 name|addIfNotNull
 argument_list|(
 name|list
