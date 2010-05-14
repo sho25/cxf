@@ -271,6 +271,11 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
+name|boolean
+name|initialized
+decl_stmt|;
+specifier|private
 specifier|final
 name|Map
 argument_list|<
@@ -317,6 +322,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 name|String
 name|getVelocityLogFile
 parameter_list|(
@@ -369,6 +375,8 @@ name|logfile
 return|;
 block|}
 specifier|private
+specifier|static
+specifier|synchronized
 name|void
 name|initVelocity
 parameter_list|(
@@ -378,6 +386,17 @@ parameter_list|)
 throws|throws
 name|ToolException
 block|{
+if|if
+condition|(
+name|initialized
+condition|)
+block|{
+return|return;
+block|}
+name|initialized
+operator|=
+literal|true
+expr_stmt|;
 try|try
 block|{
 name|Properties
