@@ -957,6 +957,11 @@ operator|.
 name|setWrapperStyle
 argument_list|(
 name|enableWrapper
+operator|&&
+name|method
+operator|.
+name|isWrapperStyle
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|paramProcessor

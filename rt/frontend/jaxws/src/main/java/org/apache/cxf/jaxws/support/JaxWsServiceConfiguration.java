@@ -1748,22 +1748,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//if it's a "wrapped" thing, the WebParam namespace is irrelevant
-comment|//as the generated element has to be in the namespace of the wrapper type
-if|if
-condition|(
-name|param
-operator|.
-name|header
-argument_list|()
-operator|||
-operator|!
-name|op
-operator|.
-name|isUnwrapped
-argument_list|()
-condition|)
-block|{
 name|tns
 operator|=
 name|param
@@ -1771,7 +1755,6 @@ operator|.
 name|targetNamespace
 argument_list|()
 expr_stmt|;
-block|}
 name|local
 operator|=
 name|param

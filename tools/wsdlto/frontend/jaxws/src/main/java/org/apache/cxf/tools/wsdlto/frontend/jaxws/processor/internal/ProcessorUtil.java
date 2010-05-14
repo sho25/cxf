@@ -2157,6 +2157,17 @@ name|QName
 argument_list|>
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|partElement
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+name|qnames
+return|;
+block|}
 for|for
 control|(
 name|WrapperElement

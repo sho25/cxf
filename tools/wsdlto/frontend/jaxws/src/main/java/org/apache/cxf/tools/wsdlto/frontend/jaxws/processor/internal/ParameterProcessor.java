@@ -3839,6 +3839,11 @@ condition|(
 name|inputPart
 operator|!=
 literal|null
+operator|&&
+name|inputPart
+operator|.
+name|isElement
+argument_list|()
 condition|)
 block|{
 name|inputWrapElement
@@ -3956,6 +3961,11 @@ condition|(
 name|outputPart
 operator|!=
 literal|null
+operator|&&
+name|outputPart
+operator|.
+name|isElement
+argument_list|()
 condition|)
 block|{
 name|outputWrapElement
