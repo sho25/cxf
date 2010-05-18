@@ -544,7 +544,9 @@ name|annotate
 argument_list|(
 operator|new
 name|WrapperBeanAnnotator
-argument_list|()
+argument_list|(
+name|exceptionClass
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
