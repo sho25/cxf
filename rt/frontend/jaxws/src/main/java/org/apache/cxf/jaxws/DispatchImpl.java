@@ -1860,6 +1860,16 @@ decl_stmt|;
 if|if
 condition|(
 name|isOneWay
+operator|||
+name|ret
+operator|==
+literal|null
+operator|||
+name|ret
+operator|.
+name|length
+operator|==
+literal|0
 condition|)
 block|{
 return|return
