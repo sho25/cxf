@@ -1137,9 +1137,9 @@ name|writeStartElement
 argument_list|(
 literal|null
 argument_list|,
-literal|null
-argument_list|,
 name|localName
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -1168,9 +1168,9 @@ name|writeStartElement
 argument_list|(
 literal|null
 argument_list|,
-name|namespaceURI
-argument_list|,
 name|localName
+argument_list|,
+name|namespaceURI
 argument_list|)
 expr_stmt|;
 block|}
