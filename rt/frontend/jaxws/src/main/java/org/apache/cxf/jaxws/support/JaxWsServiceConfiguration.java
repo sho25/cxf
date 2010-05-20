@@ -2466,20 +2466,6 @@ literal|"messageName"
 argument_list|)
 return|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|exClass
-operator|.
-name|getName
-argument_list|()
-operator|+
-literal|" has no WebFault"
-argument_list|)
-expr_stmt|;
 return|return
 literal|null
 return|;
