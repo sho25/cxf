@@ -709,10 +709,10 @@ name|String
 name|prefix
 parameter_list|,
 name|String
-name|namespace
+name|local
 parameter_list|,
 name|String
-name|local
+name|namespace
 parameter_list|)
 throws|throws
 name|XMLStreamException
@@ -721,9 +721,9 @@ name|writeStartElement
 argument_list|(
 name|prefix
 argument_list|,
-name|namespace
-argument_list|,
 name|local
+argument_list|,
+name|namespace
 argument_list|)
 expr_stmt|;
 name|writeEndElement
