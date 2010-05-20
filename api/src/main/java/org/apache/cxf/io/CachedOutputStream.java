@@ -905,6 +905,11 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|copyOldContent
+condition|)
+block|{
 name|FileInputStream
 name|fin
 init|=
@@ -914,11 +919,6 @@ argument_list|(
 name|tempFile
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|copyOldContent
-condition|)
-block|{
 name|IOUtils
 operator|.
 name|copyAndCloseInput
