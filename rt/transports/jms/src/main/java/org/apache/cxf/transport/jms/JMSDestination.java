@@ -503,6 +503,20 @@ name|springframework
 operator|.
 name|jms
 operator|.
+name|connection
+operator|.
+name|SingleConnectionFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|springframework
+operator|.
+name|jms
+operator|.
 name|core
 operator|.
 name|JmsTemplate
@@ -886,6 +900,33 @@ operator|.
 name|shutdown
 argument_list|()
 expr_stmt|;
+comment|// CXF-2788: SingleConnectionFactory ignores the call to
+comment|// javax.jms.Connection#close(),
+comment|// use this to really close the target connection.
+if|if
+condition|(
+name|jmsListener
+operator|.
+name|getConnectionFactory
+argument_list|()
+operator|instanceof
+name|SingleConnectionFactory
+condition|)
+block|{
+operator|(
+operator|(
+name|SingleConnectionFactory
+operator|)
+name|jmsListener
+operator|.
+name|getConnectionFactory
+argument_list|()
+operator|)
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public
