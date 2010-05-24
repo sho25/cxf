@@ -170,6 +170,10 @@ name|serviceName
 operator|=
 literal|"AddNumbersService"
 argument_list|,
+name|portName
+operator|=
+literal|"AddNumbersPort"
+argument_list|,
 name|targetNamespace
 operator|=
 literal|"http://apache.org/cxf/systest/ws/addr_feature/"
