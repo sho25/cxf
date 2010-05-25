@@ -642,7 +642,7 @@ name|expectedIn
 init|=
 name|BASE_URI
 operator|+
-literal|"Fault/addNumbersFault"
+literal|"addNumbers/Fault/addNumbersFault"
 decl_stmt|;
 name|assertTrue
 argument_list|(

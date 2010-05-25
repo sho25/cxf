@@ -3331,7 +3331,7 @@ argument_list|)
 expr_stmt|;
 name|expectedAction
 operator|=
-literal|"http://foo/bar/SEI/Fault/Exception"
+literal|"http://foo/bar/SEI/op/Fault/Exception"
 expr_stmt|;
 block|}
 else|else

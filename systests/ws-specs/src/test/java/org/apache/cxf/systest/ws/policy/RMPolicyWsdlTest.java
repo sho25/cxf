@@ -465,7 +465,7 @@ specifier|final
 name|String
 name|GREETER_FAULT_ACTION
 init|=
-literal|"http://cxf.apache.org/greeter_control/Greeter/Fault/faultDetail"
+literal|"http://cxf.apache.org/greeter_control/Greeter/pingMe/Fault/faultDetail"
 decl_stmt|;
 specifier|public
 specifier|static
