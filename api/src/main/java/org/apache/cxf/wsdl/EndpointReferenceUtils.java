@@ -1290,6 +1290,10 @@ operator|&&
 name|bus
 operator|!=
 literal|null
+operator|&&
+name|systemId
+operator|!=
+literal|null
 condition|)
 block|{
 name|ResourceManager
