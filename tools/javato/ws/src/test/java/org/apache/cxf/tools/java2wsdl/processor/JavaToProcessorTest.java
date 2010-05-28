@@ -3367,7 +3367,7 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//To test there is wsam:action generated for the
+comment|// To test there is wsam:action generated for the
 name|String
 name|wsdlString
 init|=
@@ -3376,6 +3376,23 @@ argument_list|(
 name|wsdlFile
 argument_list|)
 decl_stmt|;
+name|assertTrue
+argument_list|(
+literal|"The wsam and wsaw action are not both generated"
+argument_list|,
+name|wsdlString
+operator|.
+name|indexOf
+argument_list|(
+literal|"wsam:Action=\"http://cxf.apache.org/fault3\""
+operator|+
+literal|"  wsaw:Action=\"http://cxf.apache.org/fault3\""
+argument_list|)
+operator|>
+operator|-
+literal|1
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"The wsaAction is not generated for NOActionAnotation method"
@@ -3400,6 +3417,23 @@ operator|.
 name|indexOf
 argument_list|(
 literal|"http://fortest.tools.cxf.apache.org/AddNumbersImpl/addNumbers2Response"
+argument_list|)
+operator|>
+operator|-
+literal|1
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"The wsaAction computed for empty FaultAction is not correct"
+argument_list|,
+name|wsdlString
+operator|.
+name|indexOf
+argument_list|(
+literal|"http://fortest.tools.cxf.apache.org/"
+operator|+
+literal|"AddNumbersImpl/addNumbers4/Fault/AddNumbersException"
 argument_list|)
 operator|>
 operator|-
