@@ -3413,7 +3413,7 @@ name|fine
 argument_list|(
 literal|"set responseContext to be"
 operator|+
-name|responseContext
+name|resContext
 argument_list|)
 expr_stmt|;
 block|}
