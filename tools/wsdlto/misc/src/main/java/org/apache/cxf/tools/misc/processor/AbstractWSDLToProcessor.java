@@ -751,7 +751,7 @@ name|bus
 operator|=
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|()
 expr_stmt|;
 name|env

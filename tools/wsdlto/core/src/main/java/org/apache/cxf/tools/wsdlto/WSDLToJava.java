@@ -277,7 +277,7 @@ name|pluginLoader
 init|=
 name|PluginLoader
 operator|.
-name|getInstance
+name|newInstance
 argument_list|()
 decl_stmt|;
 specifier|public

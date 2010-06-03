@@ -720,7 +720,7 @@ name|pluginLoader
 init|=
 name|PluginLoader
 operator|.
-name|getInstance
+name|newInstance
 argument_list|()
 decl_stmt|;
 comment|// for JavaScript generation, we always use JAX-WS.

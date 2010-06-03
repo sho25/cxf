@@ -289,7 +289,7 @@ name|bus
 init|=
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|()
 decl_stmt|;
 name|WSDLManager

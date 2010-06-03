@@ -420,7 +420,7 @@ name|SchemaUtil
 argument_list|(
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|()
 argument_list|,
 operator|new
