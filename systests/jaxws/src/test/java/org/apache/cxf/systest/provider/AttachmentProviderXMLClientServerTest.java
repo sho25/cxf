@@ -182,6 +182,16 @@ name|AttachmentProviderXMLClientServerTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|ADDRESS
+init|=
+name|AttachmentServer
+operator|.
+name|ADDRESS
+decl_stmt|;
 annotation|@
 name|BeforeClass
 specifier|public
@@ -225,7 +235,7 @@ operator|)
 operator|new
 name|URL
 argument_list|(
-literal|"http://localhost:9033/XMLServiceAttachment"
+name|ADDRESS
 argument_list|)
 operator|.
 name|openConnection

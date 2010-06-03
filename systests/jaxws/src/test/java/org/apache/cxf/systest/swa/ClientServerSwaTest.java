@@ -361,6 +361,22 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|testutil
+operator|.
+name|common
+operator|.
+name|TestUtil
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|BeforeClass
@@ -384,6 +400,19 @@ name|ClientServerSwaTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|static
+name|String
+name|serverPort
+init|=
+name|TestUtil
+operator|.
+name|getPortNumber
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 annotation|@
 name|BeforeClass
 specifier|public
@@ -457,8 +486,17 @@ operator|.
 name|getSwAServiceHttpPort
 argument_list|()
 decl_stmt|;
-comment|//        ((BindingProvider)port).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-comment|//                                                        "http://localhost:9037/swa");
+name|setAddress
+argument_list|(
+name|port
+argument_list|,
+literal|"http://localhost:"
+operator|+
+name|serverPort
+operator|+
+literal|"/swa-nomime"
+argument_list|)
+expr_stmt|;
 name|Holder
 argument_list|<
 name|String
@@ -814,8 +852,17 @@ operator|.
 name|getSwAServiceHttpPort
 argument_list|()
 decl_stmt|;
-comment|//        ((BindingProvider)port).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-comment|//                                                        "http://localhost:9037/swa");
+name|setAddress
+argument_list|(
+name|port
+argument_list|,
+literal|"http://localhost:"
+operator|+
+name|serverPort
+operator|+
+literal|"/swa"
+argument_list|)
+expr_stmt|;
 name|Holder
 argument_list|<
 name|String
@@ -975,8 +1022,17 @@ operator|.
 name|getSwAServiceHttpPort
 argument_list|()
 decl_stmt|;
-comment|//        ((BindingProvider)port).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-comment|//                                                        "http://localhost:9037/swa");
+name|setAddress
+argument_list|(
+name|port
+argument_list|,
+literal|"http://localhost:"
+operator|+
+name|serverPort
+operator|+
+literal|"/swa"
+argument_list|)
+expr_stmt|;
 name|Holder
 argument_list|<
 name|String
@@ -1166,8 +1222,17 @@ operator|.
 name|getSwAServiceHttpPort
 argument_list|()
 decl_stmt|;
-comment|//        ((BindingProvider)port).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-comment|//                                                        "http://localhost:9037/swa");
+name|setAddress
+argument_list|(
+name|port
+argument_list|,
+literal|"http://localhost:"
+operator|+
+name|serverPort
+operator|+
+literal|"/swa"
+argument_list|)
+expr_stmt|;
 name|Holder
 argument_list|<
 name|DataStruct
@@ -1339,6 +1404,17 @@ operator|.
 name|getSwAServiceHttpPort
 argument_list|()
 decl_stmt|;
+name|setAddress
+argument_list|(
+name|port
+argument_list|,
+literal|"http://localhost:"
+operator|+
+name|serverPort
+operator|+
+literal|"/swa"
+argument_list|)
+expr_stmt|;
 name|URL
 name|url1
 init|=
@@ -1874,6 +1950,17 @@ operator|.
 name|MESSAGE
 argument_list|)
 decl_stmt|;
+name|setAddress
+argument_list|(
+name|disp
+argument_list|,
+literal|"http://localhost:"
+operator|+
+name|serverPort
+operator|+
+literal|"/swa"
+argument_list|)
+expr_stmt|;
 name|SOAPMessage
 name|msg
 init|=
