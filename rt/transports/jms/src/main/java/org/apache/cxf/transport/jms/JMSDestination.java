@@ -1450,6 +1450,26 @@ argument_list|(
 name|inMessage
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|inMessage
+operator|.
+name|getExchange
+argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|inMessage
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getInMessage
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|inMessage
 operator|=
 name|inMessage
@@ -1460,6 +1480,7 @@ operator|.
 name|getInMessage
 argument_list|()
 expr_stmt|;
+block|}
 comment|//need to propagate any exceptions back to Spring container
 comment|//so transactions can occur
 if|if
