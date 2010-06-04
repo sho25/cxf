@@ -436,6 +436,27 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|PORT
+init|=
+name|Server
+operator|.
+name|PORT
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DECOUPLE_PORT
+init|=
+name|allocatePort
+argument_list|(
+literal|"decoupled.port"
+argument_list|)
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|GREETMEONEWAY_ACTION
 init|=
 literal|"http://cxf.apache.org/greeter_control/Greeter/greetMeOneWayRequest"
@@ -595,8 +616,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|// run server in process to avoid a problem with UUID generation
-comment|// during asynchronous invocations
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -666,6 +685,13 @@ operator|.
 name|getControlPort
 argument_list|()
 decl_stmt|;
+name|updateAddressPort
+argument_list|(
+name|control
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Failed to start greeter"
@@ -757,6 +783,13 @@ operator|.
 name|getGreeterPort
 argument_list|()
 decl_stmt|;
+name|updateAddressPort
+argument_list|(
+name|greeter
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
 name|LOG
 operator|.
 name|fine
@@ -808,7 +841,11 @@ name|cp
 operator|.
 name|setDecoupledEndpoint
 argument_list|(
-literal|"http://localhost:9994/decoupled_endpoint"
+literal|"http://localhost:"
+operator|+
+name|DECOUPLE_PORT
+operator|+
+literal|"/decoupled_endpoint"
 argument_list|)
 expr_stmt|;
 name|out

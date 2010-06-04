@@ -84,6 +84,18 @@ name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|allocatePort
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|protected
 name|void
 name|run
@@ -99,7 +111,11 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9091/jaxws/add"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add"
 decl_stmt|;
 comment|//Endpoint.publish(address, implementor);
 name|EndpointImpl

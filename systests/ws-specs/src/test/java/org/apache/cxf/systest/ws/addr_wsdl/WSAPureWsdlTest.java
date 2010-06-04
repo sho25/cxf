@@ -384,6 +384,18 @@ name|WSAPureWsdlTest
 extends|extends
 name|AbstractWSATestBase
 block|{
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|allocatePort
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|private
 specifier|final
 name|QName
@@ -484,7 +496,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/jaxws/add"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add"
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -592,7 +608,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/doesntexist"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/doesntexist"
 argument_list|)
 expr_stmt|;
 name|resp
@@ -755,7 +775,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/jaxws/add-provider"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add-provider"
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -830,7 +854,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/jaxws/add-providernows"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add-providernows"
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -990,7 +1018,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/jaxws/add"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add"
 argument_list|)
 expr_stmt|;
 comment|//manually set the action
@@ -1095,7 +1127,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/jaxws/add"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add"
 argument_list|)
 expr_stmt|;
 comment|//set the operation name so action can be pulled from the wsdl
@@ -1256,7 +1292,11 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-literal|"http://localhost:9094/jaxws/add"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/jaxws/add"
 argument_list|)
 expr_stmt|;
 comment|//manually set the action

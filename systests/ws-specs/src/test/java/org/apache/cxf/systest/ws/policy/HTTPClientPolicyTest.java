@@ -322,6 +322,19 @@ name|HTTPClientPolicyTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|allocatePort
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -462,7 +475,11 @@ expr_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9020/SoapContext/GreeterPort"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/SoapContext/GreeterPort"
 decl_stmt|;
 name|Endpoint
 operator|.
@@ -682,6 +699,13 @@ operator|.
 name|getGreeterPort
 argument_list|()
 decl_stmt|;
+name|updateAddressPort
+argument_list|(
+name|greeter
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
 name|LOG
 operator|.
 name|fine
@@ -927,6 +951,13 @@ argument_list|(
 literal|"Created greeter client."
 argument_list|)
 expr_stmt|;
+name|updateAddressPort
+argument_list|(
+name|greeter
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
 name|greeter
 operator|.
 name|greetMeOneWay
@@ -976,7 +1007,7 @@ name|assertEquals
 argument_list|(
 literal|"unexpected DecoupledEndpoint"
 argument_list|,
-literal|"http://localhost:9990/decoupled_endpoint"
+literal|"http://localhost:9909/decoupled_endpoint"
 argument_list|,
 name|c
 operator|.

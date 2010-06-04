@@ -65,7 +65,11 @@ specifier|final
 name|String
 name|ADDRESS
 init|=
-literal|"http://localhost:9008/SoapContext/SoapPort"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/SoapContext/SoapPort"
 decl_stmt|;
 specifier|private
 specifier|static

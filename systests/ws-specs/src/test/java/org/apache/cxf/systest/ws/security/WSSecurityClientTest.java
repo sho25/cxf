@@ -442,6 +442,32 @@ name|WSSecurityClientTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|allocatePort
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DEC_PORT
+init|=
+name|allocatePort
+argument_list|(
+name|WSSecurityClientTest
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -573,6 +599,8 @@ specifier|public
 name|void
 name|testUsernameToken
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 specifier|final
 name|javax
@@ -614,6 +642,13 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|updateAddressPort
+argument_list|(
+name|greeter
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
 name|Client
 name|client
 init|=
@@ -808,6 +843,8 @@ specifier|public
 name|void
 name|testTimestampSignEncrypt
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|BusFactory
 operator|.
@@ -863,6 +900,13 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|updateAddressPort
+argument_list|(
+name|greeter
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
 comment|// Add a No-Op JAX-WS SoapHandler to the dispatch chain to
 comment|// verify that the SoapHandlerInterceptor can peacefully co-exist
 comment|// with the explicitly configured SAAJOutInterceptor
@@ -1443,7 +1487,11 @@ name|HTTPBinding
 operator|.
 name|HTTP_BINDING
 argument_list|,
-literal|"http://localhost:9000/GreeterService/UsernameTokenPort"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/GreeterService/UsernameTokenPort"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -1538,7 +1586,11 @@ argument_list|()
 operator|.
 name|setDecoupledEndpoint
 argument_list|(
-literal|"http://localhost:9001/decoupled"
+literal|"http://localhost:"
+operator|+
+name|DEC_PORT
+operator|+
+literal|"/decoupled"
 argument_list|)
 expr_stmt|;
 block|}

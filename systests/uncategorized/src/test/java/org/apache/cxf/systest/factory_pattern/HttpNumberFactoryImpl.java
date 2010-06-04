@@ -269,7 +269,9 @@ expr_stmt|;
 name|ep
 operator|.
 name|publish
-argument_list|()
+argument_list|(
+name|NUMBER_SERVANT_ADDRESS_ROOT
+argument_list|)
 expr_stmt|;
 name|templateEpr
 operator|=

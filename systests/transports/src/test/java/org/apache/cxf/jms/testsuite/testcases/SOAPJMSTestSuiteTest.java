@@ -480,6 +480,15 @@ name|SOAPJMSTestSuiteTest
 extends|extends
 name|AbstractSOAPJMSTestSuite
 block|{
+specifier|static
+specifier|final
+name|String
+name|JMS_PORT
+init|=
+name|EmbeddedJMSBrokerLauncher
+operator|.
+name|PORT
+decl_stmt|;
 annotation|@
 name|BeforeClass
 specifier|public

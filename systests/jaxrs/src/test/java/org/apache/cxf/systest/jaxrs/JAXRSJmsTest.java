@@ -283,6 +283,15 @@ specifier|static
 name|boolean
 name|serversStarted
 decl_stmt|;
+specifier|static
+specifier|final
+name|String
+name|JMS_PORT
+init|=
+name|EmbeddedJMSBrokerLauncher
+operator|.
+name|PORT
+decl_stmt|;
 annotation|@
 name|BeforeClass
 specifier|public
@@ -945,7 +954,9 @@ name|Context
 operator|.
 name|PROVIDER_URL
 argument_list|,
-literal|"tcp://localhost:61500"
+literal|"tcp://localhost:"
+operator|+
+name|JMS_PORT
 argument_list|)
 expr_stmt|;
 return|return
