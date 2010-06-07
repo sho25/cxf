@@ -53,6 +53,19 @@ extends|extends
 name|AbstractBusTestServerBase
 block|{
 specifier|public
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|allocatePort
+argument_list|(
+name|ValidationServer
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+specifier|public
 name|ValidationServer
 parameter_list|()
 block|{     }
@@ -71,7 +84,11 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"http://localhost:9900/SoapContext/SoapPort"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/SoapContext/SoapPort"
 decl_stmt|;
 name|Endpoint
 operator|.
