@@ -135,6 +135,16 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|String
+name|ADDRESS
+init|=
+name|Server
+operator|.
+name|ADDRESS
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|QName
 name|SERVICE_NAME
 init|=
@@ -231,8 +241,6 @@ name|BindingProvider
 operator|.
 name|ENDPOINT_ADDRESS_PROPERTY
 argument_list|,
-name|Server
-operator|.
 name|ADDRESS
 argument_list|)
 expr_stmt|;

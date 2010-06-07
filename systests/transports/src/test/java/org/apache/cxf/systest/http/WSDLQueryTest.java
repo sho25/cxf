@@ -110,6 +110,16 @@ name|WSDLQueryTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|BareServer
+operator|.
+name|PORT
+decl_stmt|;
 annotation|@
 name|BeforeClass
 specifier|public
@@ -161,7 +171,9 @@ name|Exception
 block|{
 name|sendQuery
 argument_list|(
-literal|"localhost:9020"
+literal|"localhost:"
+operator|+
+name|PORT
 argument_list|,
 literal|"HTTP/1.1 200 OK"
 argument_list|)
@@ -195,7 +207,9 @@ name|Exception
 block|{
 name|sendQuery
 argument_list|(
-literal|"foobar:9020"
+literal|"foobar:"
+operator|+
+name|PORT
 argument_list|,
 literal|"HTTP/1.1 200 OK"
 argument_list|)
@@ -256,7 +270,12 @@ name|Socket
 argument_list|(
 literal|"localhost"
 argument_list|,
-literal|9020
+name|Integer
+operator|.
+name|parseInt
+argument_list|(
+name|PORT
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|OutputStream
