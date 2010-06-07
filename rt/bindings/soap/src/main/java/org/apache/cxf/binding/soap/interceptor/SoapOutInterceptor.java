@@ -1561,6 +1561,15 @@ argument_list|(
 name|part
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|arg
+operator|==
+literal|null
+condition|)
+block|{
+continue|continue;
+block|}
 name|objs
 operator|.
 name|remove
