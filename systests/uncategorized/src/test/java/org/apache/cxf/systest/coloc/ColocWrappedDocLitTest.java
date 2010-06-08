@@ -67,7 +67,11 @@ specifier|final
 name|String
 name|TRANSPORT_URI
 init|=
-literal|"http://localhost:9000/SoapContext/SoapPort"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/SoapContext/SoapPort"
 decl_stmt|;
 specifier|private
 name|Log

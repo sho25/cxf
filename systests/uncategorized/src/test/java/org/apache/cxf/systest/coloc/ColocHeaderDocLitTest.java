@@ -67,7 +67,11 @@ specifier|final
 name|String
 name|TRANSPORT_URI
 init|=
-literal|"http://localhost:9111/headers"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/headers"
 decl_stmt|;
 specifier|private
 name|Log
