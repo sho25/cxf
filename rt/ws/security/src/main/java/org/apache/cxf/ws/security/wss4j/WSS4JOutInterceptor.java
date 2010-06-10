@@ -745,14 +745,6 @@ operator|.
 name|FINE
 argument_list|)
 decl_stmt|;
-name|SoapVersion
-name|version
-init|=
-name|mc
-operator|.
-name|getVersion
-argument_list|()
-decl_stmt|;
 name|long
 name|t0
 init|=
@@ -794,6 +786,24 @@ literal|"WSS4JOutInterceptor: enter handleMessage()"
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**              * There is nothing to send...Usually happens when the provider              * needs to send a HTTP 202 message (with no content)              */
+if|if
+condition|(
+name|mc
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
+name|SoapVersion
+name|version
+init|=
+name|mc
+operator|.
+name|getVersion
+argument_list|()
+decl_stmt|;
 name|RequestData
 name|reqData
 init|=
@@ -1125,16 +1135,6 @@ operator|.
 name|getSOAPPart
 argument_list|()
 decl_stmt|;
-comment|/**                  * There is nothing to send...Usually happens when the provider                  * needs to send a HTTP 202 message (with no content)                  */
-if|if
-condition|(
-name|mc
-operator|==
-literal|null
-condition|)
-block|{
-return|return;
-block|}
 if|if
 condition|(
 name|doTimeDebug

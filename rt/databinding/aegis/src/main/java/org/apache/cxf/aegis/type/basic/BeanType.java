@@ -2815,35 +2815,11 @@ comment|// give up.
 block|}
 block|}
 block|}
-name|BeanTypeInfo
-name|elementTypeInfo
-decl_stmt|;
-if|if
-condition|(
-name|beanType
-operator|!=
-literal|null
-condition|)
-block|{
-name|elementTypeInfo
-operator|=
+return|return
 name|beanType
 operator|.
 name|getTypeInfo
 argument_list|()
-expr_stmt|;
-block|}
-else|else
-block|{
-comment|// didn't find a bean type so just use this bean's type info
-name|elementTypeInfo
-operator|=
-name|getTypeInfo
-argument_list|()
-expr_stmt|;
-block|}
-return|return
-name|elementTypeInfo
 return|;
 block|}
 comment|/**      * Return the AegisType for the superclass if this type's class, if any.      * @return      */
