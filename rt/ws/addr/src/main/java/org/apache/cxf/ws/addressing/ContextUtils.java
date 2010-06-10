@@ -3423,9 +3423,13 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|attr
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|action
