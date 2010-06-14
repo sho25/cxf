@@ -29,8 +29,6 @@ argument_list|<
 name|HWSourcePayloadProvider
 argument_list|>
 block|{
-annotation|@
-name|Override
 specifier|public
 name|int
 name|compareTo
