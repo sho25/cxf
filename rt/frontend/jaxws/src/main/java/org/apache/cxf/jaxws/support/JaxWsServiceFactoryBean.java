@@ -1892,15 +1892,13 @@ throw|throw
 operator|new
 name|ServiceConstructionException
 argument_list|(
-name|getServiceClass
-argument_list|()
-operator|.
-name|getName
-argument_list|()
-operator|+
-literal|"is not a valid Provider"
+operator|new
+name|Message
+argument_list|(
+literal|"INVALID_PROVIDER_EXC"
 argument_list|,
 name|LOG
+argument_list|)
 argument_list|)
 throw|;
 block|}
