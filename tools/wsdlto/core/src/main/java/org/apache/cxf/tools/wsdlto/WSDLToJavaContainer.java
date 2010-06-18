@@ -1969,11 +1969,6 @@ operator|.
 name|CFG_SERVICENAME
 argument_list|)
 decl_stmt|;
-name|QName
-name|qname
-init|=
-literal|null
-decl_stmt|;
 for|for
 control|(
 name|Definition
@@ -2046,13 +2041,6 @@ block|}
 block|}
 block|}
 block|}
-if|if
-condition|(
-name|qname
-operator|==
-literal|null
-condition|)
-block|{
 name|Message
 name|msg
 init|=
@@ -2078,10 +2066,6 @@ argument_list|(
 name|msg
 argument_list|)
 throw|;
-block|}
-return|return
-name|qname
-return|;
 block|}
 specifier|public
 name|void
