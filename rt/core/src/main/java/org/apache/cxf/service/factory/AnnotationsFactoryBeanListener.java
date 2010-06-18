@@ -714,6 +714,15 @@ index|[
 literal|2
 index|]
 decl_stmt|;
+if|if
+condition|(
+name|cls
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|Server
 name|server
 init|=

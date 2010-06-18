@@ -874,6 +874,15 @@ argument_list|,
 name|type
 argument_list|)
 expr_stmt|;
+name|connect
+operator|.
+name|addRequestProperty
+argument_list|(
+literal|"Accept-Encoding"
+argument_list|,
+literal|"gzip;q=1.0, identity; q=0.5, *;q=0"
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|mHeader

@@ -207,6 +207,20 @@ name|UriInfo
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
+name|Logging
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Path
@@ -218,6 +232,8 @@ name|Produces
 argument_list|(
 literal|"application/json"
 argument_list|)
+annotation|@
+name|Logging
 specifier|public
 class|class
 name|BookStoreSpring

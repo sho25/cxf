@@ -761,6 +761,14 @@ modifier|...
 name|varValues
 parameter_list|)
 block|{
+name|serviceFactory
+operator|.
+name|setBus
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|checkResources
 argument_list|(
 literal|false
