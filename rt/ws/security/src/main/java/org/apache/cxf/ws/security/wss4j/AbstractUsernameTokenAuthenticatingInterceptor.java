@@ -481,6 +481,15 @@ operator|=
 name|support
 expr_stmt|;
 block|}
+specifier|public
+name|boolean
+name|getSupportDigestPasswords
+parameter_list|()
+block|{
+return|return
+name|supportDigestPasswords
+return|;
+block|}
 annotation|@
 name|Override
 specifier|protected
@@ -736,6 +745,9 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
+comment|// Given that a custom UT processor is used for dealing with digests
+comment|// no callback handler is required when the request UT contains a digest;
+comment|// however a custom callback may still be needed for decrypting the encrypted UT
 if|if
 condition|(
 operator|(
@@ -747,9 +759,6 @@ name|UT
 operator|)
 operator|!=
 literal|0
-operator|&&
-operator|!
-name|supportDigestPasswords
 condition|)
 block|{
 name|CallbackHandler
@@ -846,25 +855,6 @@ name|QName
 argument_list|(
 name|WSConstants
 operator|.
-name|USERNAMETOKEN_NS
-argument_list|,
-name|WSConstants
-operator|.
-name|USERNAME_TOKEN_LN
-argument_list|)
-argument_list|,
-name|this
-argument_list|)
-expr_stmt|;
-name|profiles
-operator|.
-name|put
-argument_list|(
-operator|new
-name|QName
-argument_list|(
-name|WSConstants
-operator|.
 name|WSSE_NS
 argument_list|,
 name|WSConstants
@@ -951,7 +941,7 @@ name|config
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 class|class
 name|DelegatingCallbackHandler
 implements|implements

@@ -238,6 +238,8 @@ init|=
 name|getPort
 argument_list|(
 literal|"org/apache/cxf/systest/ws/wssec10/client/client_restricted.xml"
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -272,6 +274,8 @@ init|=
 name|getPort
 argument_list|(
 literal|"org/apache/cxf/systest/ws/wssec10/client/client_restricted_unauthorized.xml"
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 try|try
@@ -314,6 +318,9 @@ name|getPort
 parameter_list|(
 name|String
 name|configName
+parameter_list|,
+name|boolean
+name|hashed
 parameter_list|)
 block|{
 name|Bus
@@ -349,7 +356,9 @@ operator|new
 name|PingService
 argument_list|(
 name|getWsdlLocation
-argument_list|()
+argument_list|(
+name|hashed
+argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -365,6 +374,10 @@ name|QName
 argument_list|(
 literal|"http://WSSec/wssec10"
 argument_list|,
+name|hashed
+condition|?
+literal|"UserName_IPingService_hashed"
+else|:
 literal|"UserName_IPingService"
 argument_list|)
 argument_list|,
@@ -381,7 +394,10 @@ specifier|private
 specifier|static
 name|URL
 name|getWsdlLocation
-parameter_list|()
+parameter_list|(
+name|boolean
+name|hashed
+parameter_list|)
 block|{
 try|try
 block|{
@@ -395,7 +411,13 @@ name|PORT
 operator|+
 literal|"/"
 operator|+
+operator|(
+name|hashed
+condition|?
+literal|"HashedUserName"
+else|:
 literal|"UserName"
+operator|)
 operator|+
 literal|"?wsdl"
 argument_list|)

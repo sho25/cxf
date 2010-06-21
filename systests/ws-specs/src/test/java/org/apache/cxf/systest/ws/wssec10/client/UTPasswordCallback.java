@@ -155,7 +155,7 @@ name|put
 argument_list|(
 literal|"Frank"
 argument_list|,
-literal|"invalid-password"
+literal|"knarF"
 argument_list|)
 expr_stmt|;
 comment|//for MS clients
