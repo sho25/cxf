@@ -3824,7 +3824,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/*     //new in 2.2, but introduces a new class not found in 2.1     public void setEndpointContext(EndpointContext ctxt) {         //TODO - JAXWS 2.2     }     */
 block|}
 end_class
 
