@@ -187,6 +187,20 @@ name|cxf
 operator|.
 name|helpers
 operator|.
+name|CastUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
 name|IOUtils
 import|;
 end_import
@@ -1024,6 +1038,10 @@ name|ObjectName
 argument_list|>
 name|s
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|ManagementFactory
 operator|.
 name|getPlatformMBeanServer
@@ -1038,6 +1056,7 @@ literal|"org.mortbay.jetty:type=server,*"
 argument_list|)
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1180,6 +1199,10 @@ name|ObjectName
 argument_list|>
 name|s
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|ManagementFactory
 operator|.
 name|getPlatformMBeanServer
@@ -1194,6 +1217,7 @@ literal|"org.mortbay.jetty:type=server,*"
 argument_list|)
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1225,6 +1249,10 @@ argument_list|)
 expr_stmt|;
 name|s
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|ManagementFactory
 operator|.
 name|getPlatformMBeanServer
@@ -1239,6 +1267,7 @@ literal|"org.mortbay.jetty:type=server,*"
 argument_list|)
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1284,6 +1313,10 @@ argument_list|()
 expr_stmt|;
 name|s
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|ManagementFactory
 operator|.
 name|getPlatformMBeanServer
@@ -1298,6 +1331,7 @@ literal|"org.mortbay.jetty:type=server,*"
 argument_list|)
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1321,6 +1355,10 @@ argument_list|()
 expr_stmt|;
 name|s
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|ManagementFactory
 operator|.
 name|getPlatformMBeanServer
@@ -1335,6 +1373,7 @@ literal|"org.mortbay.jetty:type=server,*"
 argument_list|)
 argument_list|,
 literal|null
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
