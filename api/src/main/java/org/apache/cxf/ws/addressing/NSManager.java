@@ -10,6 +10,10 @@ operator|.
 name|apache
 operator|.
 name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
 package|;
 end_package
 
@@ -78,22 +82,6 @@ operator|.
 name|common
 operator|.
 name|WSDLConstants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|JAXWSAConstants
 import|;
 end_import
 
