@@ -1810,6 +1810,11 @@ block|}
 block|}
 if|if
 condition|(
+name|isRequestor
+argument_list|(
+name|message
+argument_list|)
+operator|&&
 name|msg
 operator|.
 name|getSOAPPart

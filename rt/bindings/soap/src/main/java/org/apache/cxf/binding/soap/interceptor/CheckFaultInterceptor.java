@@ -322,6 +322,11 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
+operator|&&
+name|isRequestor
+argument_list|(
+name|message
+argument_list|)
 condition|)
 block|{
 name|Endpoint
