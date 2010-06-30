@@ -2904,8 +2904,8 @@ argument_list|(
 name|jreturn
 argument_list|)
 expr_stmt|;
-return|return;
 block|}
+return|return;
 block|}
 for|for
 control|(
