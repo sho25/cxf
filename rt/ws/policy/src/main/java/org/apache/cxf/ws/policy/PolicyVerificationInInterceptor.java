@@ -31,6 +31,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|namespace
+operator|.
+name|QName
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -38,6 +50,22 @@ operator|.
 name|cxf
 operator|.
 name|Bus
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|binding
+operator|.
+name|soap
+operator|.
+name|SoapFault
 import|;
 end_import
 
@@ -422,6 +450,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+try|try
+block|{
 name|aim
 operator|.
 name|checkEffectivePolicy
@@ -432,6 +462,53 @@ name|getPolicy
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|PolicyException
+name|ex
+parameter_list|)
+block|{
+comment|//To check if there is ws addressing policy violation and throw WSA specific
+comment|//exception to pass jaxws2.2 tests
+if|if
+condition|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|indexOf
+argument_list|(
+literal|"Addressing"
+argument_list|)
+operator|>
+operator|-
+literal|1
+condition|)
+block|{
+throw|throw
+operator|new
+name|SoapFault
+argument_list|(
+literal|"A required header representing a Message Addressing Property "
+operator|+
+literal|"is not present"
+argument_list|,
+operator|new
+name|QName
+argument_list|(
+literal|"http://www.w3.org/2005/08/addressing"
+argument_list|,
+literal|"MessageAddressingHeaderRequired"
+argument_list|)
+argument_list|)
+throw|;
+block|}
+throw|throw
+name|ex
+throw|;
+block|}
 name|LOG
 operator|.
 name|fine
