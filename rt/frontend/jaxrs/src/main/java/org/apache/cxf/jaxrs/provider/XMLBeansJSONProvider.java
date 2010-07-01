@@ -504,6 +504,11 @@ argument_list|(
 name|os
 argument_list|)
 decl_stmt|;
+name|xsw
+operator|.
+name|writeStartDocument
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|obj

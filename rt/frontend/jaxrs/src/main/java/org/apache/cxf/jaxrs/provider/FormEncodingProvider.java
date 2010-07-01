@@ -841,6 +841,8 @@ operator|.
 name|readBody
 argument_list|(
 name|is
+argument_list|,
+name|mt
 argument_list|)
 argument_list|,
 name|decode
@@ -1237,6 +1239,20 @@ argument_list|)
 operator|!=
 literal|null
 decl_stmt|;
+name|String
+name|encoding
+init|=
+name|HttpUtils
+operator|.
+name|getSetEncoding
+argument_list|(
+name|mt
+argument_list|,
+name|headers
+argument_list|,
+literal|"UTF-8"
+argument_list|)
+decl_stmt|;
 for|for
 control|(
 name|Iterator
@@ -1330,7 +1346,7 @@ argument_list|()
 operator|.
 name|getBytes
 argument_list|(
-literal|"UTF-8"
+name|encoding
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1363,7 +1379,7 @@ name|data
 operator|.
 name|getBytes
 argument_list|(
-literal|"UTF-8"
+name|encoding
 argument_list|)
 argument_list|)
 expr_stmt|;

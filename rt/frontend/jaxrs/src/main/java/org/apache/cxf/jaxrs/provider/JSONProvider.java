@@ -1016,6 +1016,8 @@ name|checkAdapter
 argument_list|(
 name|response
 argument_list|,
+name|type
+argument_list|,
 name|anns
 argument_list|,
 literal|false
@@ -1466,6 +1468,8 @@ init|=
 name|checkAdapter
 argument_list|(
 name|obj
+argument_list|,
+name|cls
 argument_list|,
 name|anns
 argument_list|,

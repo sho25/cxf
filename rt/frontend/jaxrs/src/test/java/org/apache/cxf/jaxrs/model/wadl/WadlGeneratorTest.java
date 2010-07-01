@@ -2594,7 +2594,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|7
+literal|8
 argument_list|,
 name|resourceEls
 operator|.
@@ -2655,7 +2655,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/books/{bookid}"
+literal|"/chapter2"
 argument_list|,
 name|resourceEls
 operator|.
@@ -2672,7 +2672,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/booksubresource"
+literal|"/books/{bookid}"
 argument_list|,
 name|resourceEls
 operator|.
@@ -2689,7 +2689,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/form"
+literal|"/booksubresource"
 argument_list|,
 name|resourceEls
 operator|.
@@ -2706,13 +2706,30 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/itself"
+literal|"/form"
 argument_list|,
 name|resourceEls
 operator|.
 name|get
 argument_list|(
 literal|6
+argument_list|)
+operator|.
+name|getAttribute
+argument_list|(
+literal|"path"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"/itself"
+argument_list|,
+name|resourceEls
+operator|.
+name|get
+argument_list|(
+literal|7
 argument_list|)
 operator|.
 name|getAttribute
@@ -3385,6 +3402,19 @@ argument_list|,
 name|chapterEl
 argument_list|)
 expr_stmt|;
+comment|// verify resource starting with /chapter2
+name|verifyGetResourceMethod
+argument_list|(
+name|resourceEls
+operator|.
+name|get
+argument_list|(
+literal|3
+argument_list|)
+argument_list|,
+name|chapterEl
+argument_list|)
+expr_stmt|;
 comment|// verify resource starting from /booksubresource
 comment|// should have 2 parameters
 name|paramsEls
@@ -3397,7 +3427,7 @@ name|resourceEls
 operator|.
 name|get
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 argument_list|,
 name|WadlGenerator
@@ -3464,7 +3494,7 @@ name|resourceEls
 operator|.
 name|get
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 argument_list|,
 name|WadlGenerator

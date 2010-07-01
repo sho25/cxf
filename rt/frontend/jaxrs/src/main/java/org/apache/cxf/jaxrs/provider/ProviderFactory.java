@@ -2725,6 +2725,8 @@ name|mediaType
 argument_list|)
 argument_list|,
 name|supportedMediaTypes
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 if|if
@@ -2994,6 +2996,8 @@ name|mediaType
 argument_list|)
 argument_list|,
 name|supportedMediaTypes
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 if|if

@@ -2025,15 +2025,8 @@ return|;
 block|}
 block|}
 block|}
-block|}
-end_class
-
-begin_comment
-comment|/**  * Splits string into parts inside and outside curly braces. Nested curly braces are ignored and treated as  * part inside top-level curly braces. Example: string "foo{bar{baz}}blah" is split into three tokens, "foo",  * "{bar{baz}}" and "blah". When closed bracket is missing, whole unclosed part is returned as one token,  * e.g.: "foo{bar" is split into "foo" and "{bar". When opening bracket is missing, closing bracked is ignored  * and taken as part of current token e.g.: "foo{bar}baz}blah" is split into "foo", "{bar}" and "baz}blah".  *<p>  * This is helper class for {@link URITemplate} that enables recurring literals appearing next to regular  * expressions e.g. "/foo/{zipcode:[0-9]{5}}/". Nested expressions with closed sections, like open-closed  * brackets causes expression to be out of regular grammar (is context-free grammar) which are not supported  * by Java regexp version.  *   * @author amichalec  * @version $Rev$  */
-end_comment
-
-begin_class
-specifier|final
+comment|/**      * Splits string into parts inside and outside curly braces. Nested curly braces are ignored and treated      * as part inside top-level curly braces. Example: string "foo{bar{baz}}blah" is split into three tokens,      * "foo","{bar{baz}}" and "blah". When closed bracket is missing, whole unclosed part is returned as one      * token, e.g.: "foo{bar" is split into "foo" and "{bar". When opening bracket is missing, closing      * bracket is ignored and taken as part of current token e.g.: "foo{bar}baz}blah" is split into "foo",      * "{bar}" and "baz}blah".      *<p>      * This is helper class for {@link URITemplate} that enables recurring literals appearing next to regular      * expressions e.g. "/foo/{zipcode:[0-9]{5}}/". Nested expressions with closed sections, like open-closed      * brackets causes expression to be out of regular grammar (is context-free grammar) which are not      * supported by Java regexp version.      *       * @author amichalec      * @version $Rev$      */
+specifier|static
 class|class
 name|CurlyBraceTokenizer
 block|{
@@ -2241,7 +2234,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Token is enclosed by curly braces.      *       * @param token      *            text to verify      * @return true if enclosed, false otherwise.      */
+comment|/**          * Token is enclosed by curly braces.          *           * @param token          *            text to verify          * @return true if enclosed, false otherwise.          */
 specifier|public
 specifier|static
 name|boolean
@@ -2276,7 +2269,7 @@ operator|==
 literal|'}'
 return|;
 block|}
-comment|/**      * Strips token from enclosed curly braces. If token is not enclosed method      * has no side effect.      *       * @param token      *            text to verify      * @return text stripped from curly brace begin-end pair.      */
+comment|/**          * Strips token from enclosed curly braces. If token is not enclosed method          * has no side effect.          *           * @param token          *            text to verify          * @return text stripped from curly brace begin-end pair.          */
 specifier|public
 specifier|static
 name|String
@@ -2361,6 +2354,7 @@ argument_list|(
 literal|"no more elements"
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}

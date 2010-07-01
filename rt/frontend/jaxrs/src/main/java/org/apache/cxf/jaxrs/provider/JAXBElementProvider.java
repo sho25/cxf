@@ -1111,6 +1111,8 @@ name|checkAdapter
 argument_list|(
 name|response
 argument_list|,
+name|type
+argument_list|,
 name|anns
 argument_list|,
 literal|false
@@ -1469,6 +1471,8 @@ init|=
 name|checkAdapter
 argument_list|(
 name|obj
+argument_list|,
+name|cls
 argument_list|,
 name|anns
 argument_list|,
@@ -2196,7 +2200,9 @@ argument_list|>
 name|attachments
 init|=
 name|getAttachments
-argument_list|()
+argument_list|(
+literal|true
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -2267,7 +2273,9 @@ argument_list|>
 name|attachments
 init|=
 name|getAttachments
-argument_list|()
+argument_list|(
+literal|false
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -2295,7 +2303,10 @@ argument_list|<
 name|Attachment
 argument_list|>
 name|getAttachments
-parameter_list|()
+parameter_list|(
+name|boolean
+name|write
+parameter_list|)
 block|{
 name|MessageContext
 name|mc
@@ -2310,6 +2321,22 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|// TODO: there has to be a better fix
+name|String
+name|propertyName
+init|=
+name|write
+condition|?
+literal|"WRITE-"
+operator|+
+name|Message
+operator|.
+name|ATTACHMENTS
+else|:
+name|Message
+operator|.
+name|ATTACHMENTS
+decl_stmt|;
 return|return
 name|CastUtils
 operator|.
@@ -2325,9 +2352,7 @@ name|mc
 operator|.
 name|get
 argument_list|(
-name|Message
-operator|.
-name|ATTACHMENTS
+name|propertyName
 argument_list|)
 argument_list|)
 return|;
