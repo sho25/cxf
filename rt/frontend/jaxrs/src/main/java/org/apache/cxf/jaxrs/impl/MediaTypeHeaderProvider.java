@@ -466,7 +466,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Wrong media type  parameter, seperator is missing"
+literal|"Wrong media type parameter, separator is missing"
 argument_list|)
 throw|;
 block|}
