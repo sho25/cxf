@@ -4423,7 +4423,7 @@ name|buf
 operator|.
 name|append
 argument_list|(
-literal|"\navaliable plugin options:\n"
+literal|"\nAvailable plugin options:\n"
 argument_list|)
 expr_stmt|;
 for|for
