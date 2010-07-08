@@ -68,7 +68,7 @@ specifier|private
 name|String
 name|prefix
 init|=
-literal|"Thrown by JAXB : "
+literal|"Thrown by JAXB: "
 decl_stmt|;
 specifier|public
 name|JAXBBindErrorListener
