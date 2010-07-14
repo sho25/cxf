@@ -647,7 +647,15 @@ name|mimeBodyCt
 operator|.
 name|append
 argument_list|(
-literal|"application/xop+xml; charset="
+operator|(
+name|xop
+condition|?
+literal|"application/xop+xml"
+else|:
+literal|"text/xml"
+operator|)
+operator|+
+literal|"; charset="
 argument_list|)
 operator|.
 name|append
