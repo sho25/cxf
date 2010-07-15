@@ -1096,6 +1096,17 @@ operator|.
 name|net
 operator|.
 name|ConnectException
+operator|||
+name|ex
+operator|.
+name|getCause
+argument_list|()
+operator|instanceof
+name|java
+operator|.
+name|net
+operator|.
+name|SocketTimeoutException
 argument_list|)
 expr_stmt|;
 block|}
