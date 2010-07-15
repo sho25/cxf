@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_class
-specifier|final
+specifier|public
 class|class
 name|DelegatingInputStream
 extends|extends
