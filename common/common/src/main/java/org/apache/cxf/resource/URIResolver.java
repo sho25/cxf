@@ -683,6 +683,18 @@ block|{
 name|URI
 name|relative
 decl_stmt|;
+comment|// It is possible that spaces have been encoded.  We should decode them first.
+name|uriStr
+operator|=
+name|uriStr
+operator|.
+name|replaceAll
+argument_list|(
+literal|"%20"
+argument_list|,
+literal|" "
+argument_list|)
+expr_stmt|;
 name|File
 name|uriFile
 init|=
