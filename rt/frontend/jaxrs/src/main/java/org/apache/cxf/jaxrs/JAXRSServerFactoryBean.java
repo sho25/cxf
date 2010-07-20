@@ -617,6 +617,9 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+name|applyFeatures
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|start
@@ -685,9 +688,6 @@ name|e
 argument_list|)
 throw|;
 block|}
-name|applyFeatures
-argument_list|()
-expr_stmt|;
 return|return
 name|server
 return|;
