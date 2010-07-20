@@ -915,6 +915,21 @@ comment|// While decoding back given values and passing as non-decoded to regula
 comment|// is promising unfortunatley it causes the loss of encoded reserved values such as +,
 comment|// which might cause problems if consumers do rely on URLEncoder which would turn '+' into
 comment|// ' ' or would break the contract in when query parameters are expected to have %2B
+if|if
+condition|(
+name|values
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Template parameter values are set to null"
+argument_list|)
+throw|;
+block|}
 for|for
 control|(
 name|int
@@ -932,6 +947,24 @@ name|i
 operator|++
 control|)
 block|{
+if|if
+condition|(
+name|values
+index|[
+name|i
+index|]
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Template parameter value is set to null"
+argument_list|)
+throw|;
+block|}
 name|values
 index|[
 name|i
