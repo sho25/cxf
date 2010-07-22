@@ -235,6 +235,14 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|String
+name|STS_TOKEN_ACT_AS
+init|=
+literal|"ws-security.sts.token.act-as"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -296,6 +304,8 @@ block|,
 name|TIMESTAMP_TTL
 block|,
 name|ALWAYS_ENCRYPT_UT
+block|,
+name|STS_TOKEN_ACT_AS
 block|}
 argument_list|)
 argument_list|)

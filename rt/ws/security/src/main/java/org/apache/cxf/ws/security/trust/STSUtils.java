@@ -373,6 +373,7 @@ name|WST_NS_05_02
 init|=
 literal|"http://schemas.xmlsoap.org/ws/2005/02/trust"
 decl_stmt|;
+comment|/**      * WS-T 1.3 Namespace      */
 specifier|public
 specifier|static
 specifier|final
@@ -380,6 +381,15 @@ name|String
 name|WST_NS_05_12
 init|=
 literal|"http://docs.oasis-open.org/ws-sx/ws-trust/200512"
+decl_stmt|;
+comment|/**      * WS-T 1.4 Namespace.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|WST_NS_08_02
+init|=
+literal|"http://docs.oasis-open.org/ws-sx/ws-trust/200802"
 decl_stmt|;
 specifier|public
 specifier|static
