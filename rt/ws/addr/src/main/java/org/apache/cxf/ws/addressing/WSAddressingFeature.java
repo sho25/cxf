@@ -294,6 +294,36 @@ name|required
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Returns the cache used to enforce duplicate message IDs when      * {@link #isAllowDuplicates()} returns {@code false}.      *      * @return the cache used to enforce duplicate message IDs      */
+specifier|public
+name|MessageIdCache
+name|getMessageIdCache
+parameter_list|()
+block|{
+return|return
+name|mapAggregator
+operator|.
+name|getMessageIdCache
+argument_list|()
+return|;
+block|}
+comment|/**      * Sets the cache used to enforce duplicate message IDs when      * {@link #isAllowDuplicates()} returns {@code false}.      *      * @param messageIdCache the cache to use      *      * @throws NullPointerException if {@code messageIdCache} is {@code null}      */
+specifier|public
+name|void
+name|setMessageIdCache
+parameter_list|(
+name|MessageIdCache
+name|messageIdCache
+parameter_list|)
+block|{
+name|mapAggregator
+operator|.
+name|setMessageIdCache
+argument_list|(
+name|messageIdCache
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
