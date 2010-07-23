@@ -48,7 +48,7 @@ specifier|public
 class|class
 name|Server
 block|{
-specifier|protected
+specifier|public
 name|Server
 parameter_list|()
 throws|throws
