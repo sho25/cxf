@@ -3648,7 +3648,9 @@ name|sig
 operator|.
 name|setKeyIdentifierType
 argument_list|(
-name|type
+name|WSConstants
+operator|.
+name|CUSTOM_KEY_IDENTIFIER
 argument_list|)
 expr_stmt|;
 block|}
