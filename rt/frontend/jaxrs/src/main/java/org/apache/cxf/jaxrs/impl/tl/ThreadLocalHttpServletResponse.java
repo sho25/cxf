@@ -678,8 +678,6 @@ name|loc
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getHeader
@@ -698,8 +696,6 @@ name|name
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Collection
 argument_list|<
@@ -716,8 +712,6 @@ name|getHeaderNames
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Collection
 argument_list|<
@@ -739,8 +733,6 @@ name|headerName
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|int
 name|getStatus

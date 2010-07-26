@@ -669,8 +669,6 @@ name|object
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|boolean
 name|setInitParameter
@@ -694,8 +692,6 @@ name|value
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Dynamic
 name|addServlet
@@ -723,8 +719,6 @@ name|className
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Dynamic
 name|addServlet
@@ -752,8 +746,6 @@ name|servlet
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Dynamic
 name|addServlet
@@ -786,8 +778,6 @@ name|clazz
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 parameter_list|<
 name|T
@@ -816,8 +806,6 @@ name|clazz
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|ServletRegistration
 name|getServletRegistration
@@ -836,8 +824,6 @@ name|servletName
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Map
 argument_list|<
@@ -858,8 +844,6 @@ name|getServletRegistrations
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|javax
 operator|.
@@ -893,8 +877,6 @@ name|className
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|javax
 operator|.
@@ -928,8 +910,6 @@ name|filter
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|javax
 operator|.
@@ -968,8 +948,6 @@ name|filterClass
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 parameter_list|<
 name|T
@@ -998,8 +976,6 @@ name|clazz
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|FilterRegistration
 name|getFilterRegistration
@@ -1018,8 +994,6 @@ name|filterName
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Map
 argument_list|<
@@ -1040,8 +1014,6 @@ name|getFilterRegistrations
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|addListener
@@ -1064,8 +1036,6 @@ name|listenerClass
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|addListener
@@ -1083,8 +1053,6 @@ name|className
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 parameter_list|<
 name|T
@@ -1107,8 +1075,6 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 parameter_list|<
 name|T
@@ -1137,8 +1103,6 @@ name|clazz
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|declareRoles
@@ -1157,8 +1121,6 @@ name|roleNames
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|SessionCookieConfig
 name|getSessionCookieConfig
@@ -1172,8 +1134,6 @@ name|getSessionCookieConfig
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|setSessionTrackingModes
@@ -1194,8 +1154,6 @@ name|sessionTrackingModes
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Set
 argument_list|<
@@ -1212,8 +1170,6 @@ name|getDefaultSessionTrackingModes
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|int
 name|getEffectiveMajorVersion
@@ -1229,8 +1185,6 @@ name|getEffectiveMajorVersion
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|int
 name|getEffectiveMinorVersion
@@ -1246,8 +1200,6 @@ name|getEffectiveMinorVersion
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Set
 argument_list|<
@@ -1264,8 +1216,6 @@ name|getEffectiveSessionTrackingModes
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|ClassLoader
 name|getClassLoader
@@ -1279,8 +1229,6 @@ name|getClassLoader
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|JspConfigDescriptor
 name|getJspConfigDescriptor
