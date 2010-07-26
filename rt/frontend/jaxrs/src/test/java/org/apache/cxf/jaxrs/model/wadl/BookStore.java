@@ -798,6 +798,17 @@ return|return
 name|bean
 return|;
 block|}
+specifier|public
+name|TestEnum
+name|getE
+parameter_list|()
+block|{
+return|return
+name|TestEnum
+operator|.
+name|A
+return|;
+block|}
 block|}
 specifier|public
 specifier|static
@@ -878,6 +889,13 @@ name|b
 return|;
 block|}
 block|}
+specifier|public
+specifier|static
+enum|enum
+name|TestEnum
+block|{
+name|A
+block|;             }
 block|}
 end_class
 

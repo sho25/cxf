@@ -1529,6 +1529,17 @@ argument_list|(
 name|genericType
 argument_list|)
 expr_stmt|;
+name|actualClass
+operator|=
+name|getActualType
+argument_list|(
+name|actualClass
+argument_list|,
+name|genericType
+argument_list|,
+name|anns
+argument_list|)
+expr_stmt|;
 name|marshalCollection
 argument_list|(
 name|cls
