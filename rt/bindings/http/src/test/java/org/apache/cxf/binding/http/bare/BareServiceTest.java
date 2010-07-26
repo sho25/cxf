@@ -1151,11 +1151,14 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"text/xml; charset=utf-8"
+literal|"text/xml;charset=utf-8"
 argument_list|,
 name|c
 operator|.
 name|getContentType
+argument_list|()
+operator|.
+name|toLowerCase
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1343,11 +1346,14 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"text/xml; charset=utf-8"
+literal|"text/xml;charset=utf-8"
 argument_list|,
 name|c
 operator|.
 name|getContentType
+argument_list|()
+operator|.
+name|toLowerCase
 argument_list|()
 argument_list|)
 expr_stmt|;

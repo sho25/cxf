@@ -227,7 +227,11 @@ begin_import
 import|import
 name|org
 operator|.
-name|mortbay
+name|eclipse
+operator|.
+name|jetty
+operator|.
+name|util
 operator|.
 name|component
 operator|.
@@ -1128,7 +1132,7 @@ name|ClassLoaderUtils
 operator|.
 name|loadClass
 argument_list|(
-literal|"org.mortbay.management.MBeanContainer"
+literal|"org.eclipse.jetty.jmx.MBeanContainer"
 argument_list|,
 name|getClass
 argument_list|()
@@ -1195,7 +1199,7 @@ name|LOG
 operator|.
 name|info
 argument_list|(
-literal|"Could not load or start org.mortbay.management.MBeanContainer.  "
+literal|"Could not load or start org.eclipse.management.MBeanContainer.  "
 operator|+
 literal|"Jetty JMX support will not be enabled: "
 operator|+

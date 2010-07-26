@@ -33,6 +33,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|servlet
+operator|.
+name|http
+operator|.
+name|HttpServletResponse
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -85,6 +97,10 @@ name|HttpServletRequest
 name|request
 decl_stmt|;
 specifier|private
+name|HttpServletResponse
+name|response
+decl_stmt|;
+specifier|private
 name|Message
 name|inMessage
 decl_stmt|;
@@ -98,6 +114,9 @@ parameter_list|(
 name|HttpServletRequest
 name|req
 parameter_list|,
+name|HttpServletResponse
+name|resp
+parameter_list|,
 name|Message
 name|m
 parameter_list|)
@@ -105,6 +124,10 @@ block|{
 name|request
 operator|=
 name|req
+expr_stmt|;
+name|response
+operator|=
+name|resp
 expr_stmt|;
 name|this
 operator|.
@@ -163,6 +186,8 @@ operator|new
 name|JettyContinuationWrapper
 argument_list|(
 name|request
+argument_list|,
+name|response
 argument_list|,
 name|inMessage
 argument_list|)

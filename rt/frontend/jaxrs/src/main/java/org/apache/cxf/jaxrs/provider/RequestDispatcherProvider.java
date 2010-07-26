@@ -1376,11 +1376,6 @@ specifier|private
 name|String
 name|servletPath
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|HttpServletRequestFilter
 parameter_list|(
@@ -1569,6 +1564,12 @@ annotation|@
 name|Override
 specifier|public
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+index|[]
+argument_list|>
 name|getParameterMap
 parameter_list|()
 block|{

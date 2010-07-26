@@ -906,7 +906,7 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"The connector should be instance of org.mortbay.jetty.bio.SocketConnector"
+literal|"The connector should be instance of org.eclipse.jetty.server.bio.SocketConnector"
 argument_list|,
 name|engine
 operator|.
@@ -915,9 +915,11 @@ argument_list|()
 operator|instanceof
 name|org
 operator|.
-name|mortbay
+name|eclipse
 operator|.
 name|jetty
+operator|.
+name|server
 operator|.
 name|bio
 operator|.

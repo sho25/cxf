@@ -81,6 +81,9 @@ return|;
 block|}
 specifier|public
 name|Enumeration
+argument_list|<
+name|String
+argument_list|>
 name|getInitParameterNames
 parameter_list|()
 block|{

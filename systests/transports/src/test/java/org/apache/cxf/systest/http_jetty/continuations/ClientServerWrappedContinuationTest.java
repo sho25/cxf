@@ -697,7 +697,7 @@ name|controlDoneSignal
 operator|.
 name|await
 argument_list|(
-literal|10
+literal|100
 argument_list|,
 name|TimeUnit
 operator|.
@@ -708,7 +708,7 @@ name|helloDoneSignal
 operator|.
 name|await
 argument_list|(
-literal|10
+literal|100
 argument_list|,
 name|TimeUnit
 operator|.

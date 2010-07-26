@@ -871,11 +871,14 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"text/xml; charset=utf-8"
+literal|"text/xml;charset=utf-8"
 argument_list|,
 name|httpConnection
 operator|.
 name|getContentType
+argument_list|()
+operator|.
+name|toLowerCase
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1799,9 +1802,12 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"text/xml; charset=utf-8"
+literal|"text/xml;charset=utf-8"
 argument_list|,
 name|contentType
+operator|.
+name|toLowerCase
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|Integer

@@ -650,7 +650,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Internal Server Error"
+literal|"Server Error"
 argument_list|,
 name|httpConnection
 operator|.
@@ -901,7 +901,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Internal Server Error"
+literal|"Server Error"
 argument_list|,
 name|httpConnection
 operator|.
