@@ -365,6 +365,7 @@ specifier|final
 class|class
 name|STSUtils
 block|{
+comment|/**      * WS-T 1.0 Namespace.      */
 specifier|public
 specifier|static
 specifier|final
@@ -373,7 +374,7 @@ name|WST_NS_05_02
 init|=
 literal|"http://schemas.xmlsoap.org/ws/2005/02/trust"
 decl_stmt|;
-comment|/**      * WS-T 1.3 Namespace      */
+comment|/**      * WS-T 1.3 Namespace.      */
 specifier|public
 specifier|static
 specifier|final
