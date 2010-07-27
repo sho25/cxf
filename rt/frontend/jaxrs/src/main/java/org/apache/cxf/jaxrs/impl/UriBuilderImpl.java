@@ -740,11 +740,12 @@ operator|!=
 literal|null
 operator|)
 operator|&&
-operator|!
 name|thePath
 operator|.
-name|isEmpty
+name|length
 argument_list|()
+operator|!=
+literal|0
 operator|&&
 operator|!
 name|thePath
