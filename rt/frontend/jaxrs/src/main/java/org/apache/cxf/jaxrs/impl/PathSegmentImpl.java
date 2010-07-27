@@ -242,6 +242,15 @@ return|return
 name|path
 return|;
 block|}
+specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|path
+return|;
+block|}
 block|}
 end_class
 
