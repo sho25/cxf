@@ -45,11 +45,18 @@ end_import
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|Server
 block|{
-specifier|public
+specifier|private
 name|Server
+parameter_list|()
+block|{     }
+specifier|public
+specifier|static
+name|void
+name|startServer
 parameter_list|()
 throws|throws
 name|Exception
@@ -121,8 +128,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-operator|new
-name|Server
+name|startServer
 argument_list|()
 expr_stmt|;
 name|System
