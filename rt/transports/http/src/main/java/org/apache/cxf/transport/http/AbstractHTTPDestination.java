@@ -1862,6 +1862,7 @@ specifier|protected
 name|void
 name|setupMessage
 parameter_list|(
+specifier|final
 name|Message
 name|inMessage
 parameter_list|,
@@ -1904,6 +1905,42 @@ operator|.
 name|getInputStream
 argument_list|()
 argument_list|)
+block|{
+specifier|public
+name|void
+name|cacheInput
+parameter_list|()
+block|{
+if|if
+condition|(
+operator|!
+name|cached
+condition|)
+block|{
+comment|//we need to cache the values of the HttpServletRequest
+comment|//so they can be queried later for things like paths and schemes
+comment|//and such like that
+name|inMessage
+operator|.
+name|put
+argument_list|(
+name|HTTP_REQUEST
+argument_list|,
+operator|new
+name|HttpServletRequestSnapshot
+argument_list|(
+name|req
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+name|super
+operator|.
+name|cacheInput
+argument_list|()
+expr_stmt|;
+block|}
+block|}
 decl_stmt|;
 name|inMessage
 operator|.

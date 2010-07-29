@@ -145,11 +145,6 @@ specifier|private
 name|Locale
 name|local
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|Enumeration
 name|locals
@@ -280,11 +275,6 @@ specifier|private
 name|String
 name|requestedSessionId
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|HttpServletRequestSnapshot
 parameter_list|(
@@ -534,6 +524,14 @@ operator|.
 name|getServletPath
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|request
+operator|.
+name|isRequestedSessionIdValid
+argument_list|()
+condition|)
+block|{
 name|session
 operator|=
 name|request
@@ -541,6 +539,7 @@ operator|.
 name|getSession
 argument_list|()
 expr_stmt|;
+block|}
 name|principal
 operator|=
 name|request

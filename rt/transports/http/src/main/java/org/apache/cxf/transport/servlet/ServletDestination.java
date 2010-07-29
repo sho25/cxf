@@ -187,22 +187,6 @@ name|HTTPSession
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|http
-operator|.
-name|HttpServletRequestSnapshot
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -359,21 +343,6 @@ argument_list|,
 name|req
 argument_list|,
 name|resp
-argument_list|)
-expr_stmt|;
-comment|//the HttpServletRequest will be recycled in another thread when the operation
-comment|//is oneway and WSA enabled. This SNAPSHOT request will be used in tihs case.
-name|inMessage
-operator|.
-name|put
-argument_list|(
-literal|"HTTP.REQUEST.SNAPSHOT"
-argument_list|,
-operator|new
-name|HttpServletRequestSnapshot
-argument_list|(
-name|req
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|ExchangeImpl
