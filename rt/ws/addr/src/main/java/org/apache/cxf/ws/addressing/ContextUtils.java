@@ -1986,6 +1986,45 @@ block|}
 comment|// async service invocation required *after* a response
 comment|// has been sent (i.e. to a oneway, or a partial response
 comment|// to a decoupled twoway)
+comment|//In tomcat container, the httpServletRequest will be recycled/cleared in the
+comment|//servlet thread. The values in request can not be retrieved in the new created
+comment|//thread after that . Replace it with httpServletRequest snaphost.
+if|if
+condition|(
+name|inMessage
+operator|.
+name|get
+argument_list|(
+literal|"HTTP.REQUEST"
+argument_list|)
+operator|!=
+literal|null
+operator|&&
+name|inMessage
+operator|.
+name|get
+argument_list|(
+literal|"HTTP.REQUEST.SNAPSHOT"
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+name|inMessage
+operator|.
+name|put
+argument_list|(
+literal|"HTTP.REQUEST"
+argument_list|,
+name|inMessage
+operator|.
+name|get
+argument_list|(
+literal|"HTTP.REQUEST.SNAPSHOT"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 comment|// pause dispatch on current thread ...
 name|inMessage
 operator|.
