@@ -1379,71 +1379,11 @@ block|}
 if|if
 condition|(
 name|wsResult
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{
-comment|// no security header found
-if|if
-condition|(
-name|doAction
-operator|==
-name|WSConstants
-operator|.
-name|NO_SECURITY
-condition|)
-block|{
-return|return;
-block|}
-elseif|else
-if|if
-condition|(
-name|doc
-operator|.
-name|getSOAPPart
-argument_list|()
-operator|.
-name|getEnvelope
-argument_list|()
-operator|.
-name|getBody
-argument_list|()
-operator|.
-name|hasFault
-argument_list|()
-condition|)
-block|{
-name|LOG
-operator|.
-name|warning
-argument_list|(
-literal|"Request does not contain required Security header, "
-operator|+
-literal|"but it's a fault."
-argument_list|)
-expr_stmt|;
-return|return;
-block|}
-else|else
-block|{
-name|LOG
-operator|.
-name|warning
-argument_list|(
-literal|"Request does not contain required Security header"
-argument_list|)
-expr_stmt|;
-throw|throw
-operator|new
-name|WSSecurityException
-argument_list|(
-name|WSSecurityException
-operator|.
-name|INVALID_SECURITY
-argument_list|)
-throw|;
-block|}
-block|}
+comment|// security header found
 if|if
 condition|(
 name|reqData
@@ -1503,6 +1443,95 @@ argument_list|,
 name|wsResult
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+comment|// no security header found
+comment|// Create an empty result vector to pass into the required validation
+comment|// methods.
+name|wsResult
+operator|=
+operator|new
+name|Vector
+argument_list|<
+name|Object
+argument_list|>
+argument_list|()
+expr_stmt|;
+if|if
+condition|(
+name|doc
+operator|.
+name|getSOAPPart
+argument_list|()
+operator|.
+name|getEnvelope
+argument_list|()
+operator|.
+name|getBody
+argument_list|()
+operator|.
+name|hasFault
+argument_list|()
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Request does not contain Security header, "
+operator|+
+literal|"but it's a fault."
+argument_list|)
+expr_stmt|;
+comment|// We allow lax action matching here for backwards compatibility
+comment|// with manually configured WSS4JInInterceptors that previously
+comment|// allowed faults to pass through even if their actions aren't
+comment|// a strict match against those configured.  In the WS-SP case,
+comment|// we will want to still call doResults as it handles asserting
+comment|// certain assertions that do not require a WS-S header such as
+comment|// a sp:TransportBinding assertion.  In the case of WS-SP,
+comment|// the unasserted assertions will provide confirmation that
+comment|// security was not sufficient.
+comment|// checkActions(msg, reqData, wsResult, actions);
+name|doResults
+argument_list|(
+name|msg
+argument_list|,
+name|actor
+argument_list|,
+name|doc
+argument_list|,
+name|wsResult
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|checkActions
+argument_list|(
+name|msg
+argument_list|,
+name|reqData
+argument_list|,
+name|wsResult
+argument_list|,
+name|actions
+argument_list|)
+expr_stmt|;
+name|doResults
+argument_list|(
+name|msg
+argument_list|,
+name|actor
+argument_list|,
+name|doc
+argument_list|,
+name|wsResult
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 if|if
 condition|(
 name|doTimeLog
