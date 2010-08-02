@@ -140,7 +140,7 @@ specifier|private
 name|IOUtils
 parameter_list|()
 block|{      }
-comment|/**      * Use this function instead of new String(byte[]) to avoid surprises from non-standard default encodings.      * @param bytes      * @return      */
+comment|/**      * Use this function instead of new String(byte[], String) to avoid surprises from       * non-standard default encodings.      * @param bytes      * @param charsetName      * @return      */
 specifier|public
 specifier|static
 name|String
@@ -149,6 +149,9 @@ parameter_list|(
 name|byte
 index|[]
 name|bytes
+parameter_list|,
+name|String
+name|charsetName
 parameter_list|)
 block|{
 try|try
@@ -159,10 +162,7 @@ name|String
 argument_list|(
 name|bytes
 argument_list|,
-name|UTF8_CHARSET
-operator|.
-name|name
-argument_list|()
+name|charsetName
 argument_list|)
 return|;
 block|}
@@ -176,7 +176,89 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Impossible failure: Charset.forName(\"utf-8\") returns invalid name."
+literal|"Impossible failure: Charset.forName(\""
+operator|+
+name|charsetName
+operator|+
+literal|"\") returns invalid name."
+argument_list|)
+throw|;
+block|}
+block|}
+comment|/**      * Use this function instead of new String(byte[]) to avoid surprises from non-standard default encodings.      * @param bytes      * @return      */
+specifier|public
+specifier|static
+name|String
+name|newStringFromBytes
+parameter_list|(
+name|byte
+index|[]
+name|bytes
+parameter_list|)
+block|{
+return|return
+name|newStringFromBytes
+argument_list|(
+name|bytes
+argument_list|,
+name|UTF8_CHARSET
+operator|.
+name|name
+argument_list|()
+argument_list|)
+return|;
+block|}
+comment|/**      * Use this function instead of new String(byte[], int, int, String)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param charsetName      * @param start      * @param length      * @return      */
+specifier|public
+specifier|static
+name|String
+name|newStringFromBytes
+parameter_list|(
+name|byte
+index|[]
+name|bytes
+parameter_list|,
+name|String
+name|charsetName
+parameter_list|,
+name|int
+name|start
+parameter_list|,
+name|int
+name|length
+parameter_list|)
+block|{
+try|try
+block|{
+return|return
+operator|new
+name|String
+argument_list|(
+name|bytes
+argument_list|,
+name|start
+argument_list|,
+name|length
+argument_list|,
+name|charsetName
+argument_list|)
+return|;
+block|}
+catch|catch
+parameter_list|(
+name|UnsupportedEncodingException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Impossible failure: Charset.forName(\""
+operator|+
+name|charsetName
+operator|+
+literal|"\") returns invalid name."
 argument_list|)
 throw|;
 block|}
@@ -198,39 +280,21 @@ name|int
 name|length
 parameter_list|)
 block|{
-try|try
-block|{
 return|return
-operator|new
-name|String
+name|newStringFromBytes
 argument_list|(
 name|bytes
-argument_list|,
-name|start
-argument_list|,
-name|length
 argument_list|,
 name|UTF8_CHARSET
 operator|.
 name|name
 argument_list|()
+argument_list|,
+name|start
+argument_list|,
+name|length
 argument_list|)
 return|;
-block|}
-catch|catch
-parameter_list|(
-name|UnsupportedEncodingException
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-literal|"Impossible failure: Charset.forName(\"utf-8\") returns invalid name."
-argument_list|)
-throw|;
-block|}
 block|}
 specifier|public
 specifier|static
