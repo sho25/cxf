@@ -2870,7 +2870,7 @@ return|;
 block|}
 specifier|public
 name|void
-name|initialise
+name|init
 parameter_list|(
 name|Bus
 name|b
