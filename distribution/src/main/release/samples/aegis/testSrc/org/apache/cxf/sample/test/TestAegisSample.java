@@ -80,8 +80,9 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-operator|new
 name|Server
+operator|.
+name|startServer
 argument_list|()
 expr_stmt|;
 block|}
