@@ -725,6 +725,8 @@ argument_list|,
 name|cos
 argument_list|,
 name|encoding
+argument_list|,
+name|ct
 argument_list|)
 expr_stmt|;
 block|}

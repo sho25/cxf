@@ -616,6 +616,8 @@ argument_list|,
 name|bos
 argument_list|,
 name|encoding
+argument_list|,
+name|ct
 argument_list|)
 expr_stmt|;
 name|bos
