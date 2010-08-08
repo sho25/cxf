@@ -263,6 +263,9 @@ decl_stmt|;
 specifier|private
 name|int
 name|port
+init|=
+operator|-
+literal|1
 decl_stmt|;
 specifier|private
 name|String
@@ -1862,6 +1865,32 @@ literal|"path is null"
 argument_list|)
 throw|;
 block|}
+comment|// this is the cheapest way to figure out if a given path is a full-fledged
+comment|// URI with the http(s) scheme but a more formal approach may be needed
+if|if
+condition|(
+name|path
+operator|.
+name|startsWith
+argument_list|(
+literal|"http"
+argument_list|)
+condition|)
+block|{
+name|uri
+argument_list|(
+name|URI
+operator|.
+name|create
+argument_list|(
+name|path
+argument_list|)
+argument_list|)
+expr_stmt|;
+return|return
+name|this
+return|;
+block|}
 if|if
 condition|(
 name|paths
@@ -1998,6 +2027,11 @@ condition|(
 name|thePort
 operator|<
 literal|0
+operator|&&
+name|thePort
+operator|!=
+operator|-
+literal|1
 condition|)
 block|{
 throw|throw
@@ -2872,7 +2906,7 @@ name|queryValue
 argument_list|,
 literal|"&"
 argument_list|,
-literal|true
+literal|false
 argument_list|)
 expr_stmt|;
 return|return

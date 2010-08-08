@@ -2374,6 +2374,13 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+argument_list|(
+name|expected
+operator|=
+name|IllegalArgumentException
+operator|.
+name|class
+argument_list|)
 specifier|public
 name|void
 name|testSubstituteMapIncomplete
@@ -2416,18 +2423,11 @@ argument_list|,
 literal|"bar"
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"Wrong substitution"
-argument_list|,
-literal|"/foo/{a}/bar/{a:\\d}"
-argument_list|,
 name|ut
 operator|.
 name|substitute
 argument_list|(
 name|map
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

@@ -1281,13 +1281,20 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|sb
-operator|.
-name|append
+throw|throw
+operator|new
+name|IllegalArgumentException
 argument_list|(
+literal|"Template variable "
+operator|+
 name|var
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" has no matching value"
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 else|else

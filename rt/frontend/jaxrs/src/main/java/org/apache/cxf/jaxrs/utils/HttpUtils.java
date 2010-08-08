@@ -458,6 +458,15 @@ name|CHARSET_PARAMETER
 init|=
 literal|"charset"
 decl_stmt|;
+comment|// there are more of such characters, ex, '*' but '*' is not affected by UrlEncode
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|PATH_RESERVED_DELIMETERS
+init|=
+literal|"="
+decl_stmt|;
 specifier|private
 name|HttpUtils
 parameter_list|()
@@ -542,6 +551,18 @@ name|String
 name|value
 parameter_list|)
 block|{
+if|if
+condition|(
+name|isReservedPathSequence
+argument_list|(
+name|value
+argument_list|)
+condition|)
+block|{
+return|return
+name|value
+return|;
+block|}
 name|String
 name|result
 init|=
@@ -604,6 +625,25 @@ expr_stmt|;
 block|}
 return|return
 name|result
+return|;
+block|}
+specifier|private
+specifier|static
+name|boolean
+name|isReservedPathSequence
+parameter_list|(
+name|String
+name|sequence
+parameter_list|)
+block|{
+comment|// realistically, we'd probably need to check every character
+return|return
+name|PATH_RESERVED_DELIMETERS
+operator|.
+name|equals
+argument_list|(
+name|sequence
+argument_list|)
 return|;
 block|}
 comment|/**      * Encodes partially encoded string. Encode all values but those matching pattern       * "percent char followed by two hexadecimal digits".      *       * @param encoded fully or partially encoded string.      * @return fully encoded string      */
