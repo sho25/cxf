@@ -858,6 +858,11 @@ return|;
 block|}
 block|}
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|javax
 operator|.
 name|jms

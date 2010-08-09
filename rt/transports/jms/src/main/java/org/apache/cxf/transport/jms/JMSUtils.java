@@ -399,22 +399,6 @@ name|MessageConversionException
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|jms
-operator|.
-name|support
-operator|.
-name|converter
-operator|.
-name|SimpleMessageConverter102
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final
@@ -716,6 +700,11 @@ name|message
 return|;
 block|}
 comment|/**      * Extract the payload of an incoming message.      * @param inMessage       *       * @param message the incoming message      * @param encoding the message encoding      * @return the message payload as byte[]      * @throws UnsupportedEncodingException      */
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|public
 specifier|static
 name|void
@@ -758,6 +747,16 @@ block|{
 name|converted
 operator|=
 operator|new
+name|org
+operator|.
+name|springframework
+operator|.
+name|jms
+operator|.
+name|support
+operator|.
+name|converter
+operator|.
 name|SimpleMessageConverter102
 argument_list|()
 operator|.
