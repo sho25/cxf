@@ -5302,6 +5302,15 @@ argument_list|(
 name|el
 argument_list|)
 expr_stmt|;
+name|mpi
+operator|.
+name|setProperty
+argument_list|(
+literal|"isRefElement"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 comment|// element reference is not permitted for wrapper element
 if|if
 condition|(
