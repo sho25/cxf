@@ -1424,6 +1424,13 @@ operator|.
 name|RECV_RESULTS
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|results
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|int
@@ -1489,6 +1496,7 @@ name|found
 operator|=
 literal|true
 expr_stmt|;
+block|}
 block|}
 block|}
 for|for
