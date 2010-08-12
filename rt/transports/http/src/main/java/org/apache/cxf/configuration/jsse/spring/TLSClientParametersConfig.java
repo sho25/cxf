@@ -272,6 +272,14 @@ operator|new
 name|TLSClientParameters
 argument_list|()
 decl_stmt|;
+name|boolean
+name|usingDefaults
+init|=
+name|params
+operator|.
+name|isUseHttpsURLConnectionDefaultSslSocketFactory
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|params
@@ -405,6 +413,9 @@ name|params
 operator|.
 name|isSetSecureRandomParameters
 argument_list|()
+operator|&&
+operator|!
+name|usingDefaults
 condition|)
 block|{
 name|ret
@@ -429,6 +440,9 @@ name|params
 operator|.
 name|isSetKeyManagers
 argument_list|()
+operator|&&
+operator|!
+name|usingDefaults
 condition|)
 block|{
 name|ret
@@ -453,6 +467,9 @@ name|params
 operator|.
 name|isSetTrustManagers
 argument_list|()
+operator|&&
+operator|!
+name|usingDefaults
 condition|)
 block|{
 name|ret
