@@ -496,7 +496,9 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"namespace value in annoataion @XmlElement is not correct"
+literal|"namespace value in annoataion @XmlElement is not correct: "
+operator|+
+name|str
 argument_list|,
 name|str
 operator|.
