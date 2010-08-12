@@ -75,6 +75,16 @@ begin_import
 import|import
 name|javax
 operator|.
+name|wsdl
+operator|.
+name|Definition
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|xml
 operator|.
 name|namespace
@@ -301,6 +311,9 @@ name|MyServer
 extends|extends
 name|AbstractBusTestServerBase
 block|{
+name|Definition
+name|def
+decl_stmt|;
 specifier|protected
 name|void
 name|run
@@ -331,6 +344,8 @@ argument_list|,
 name|implementor
 argument_list|)
 expr_stmt|;
+name|def
+operator|=
 name|EmbeddedJMSBrokerLauncher
 operator|.
 name|updateWsdlExtensors
@@ -560,6 +575,9 @@ argument_list|(
 name|wsdl
 argument_list|)
 expr_stmt|;
+name|Definition
+name|def
+init|=
 name|EmbeddedJMSBrokerLauncher
 operator|.
 name|updateWsdlExtensors
@@ -571,6 +589,11 @@ name|wsdl
 operator|.
 name|toString
 argument_list|()
+argument_list|)
+decl_stmt|;
+name|assertNotNull
+argument_list|(
+name|def
 argument_list|)
 expr_stmt|;
 name|MultiTransportService

@@ -204,7 +204,7 @@ name|PORT
 decl_stmt|;
 specifier|public
 specifier|static
-name|void
+name|Definition
 name|updateWsdlExtensors
 parameter_list|(
 name|Bus
@@ -543,6 +543,9 @@ block|}
 block|}
 block|}
 block|}
+return|return
+name|def
+return|;
 block|}
 catch|catch
 parameter_list|(
@@ -556,6 +559,9 @@ name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
+return|return
+literal|null
+return|;
 block|}
 specifier|public
 name|void
