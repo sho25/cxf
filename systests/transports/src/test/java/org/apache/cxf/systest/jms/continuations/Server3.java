@@ -23,16 +23,6 @@ begin_import
 import|import
 name|javax
 operator|.
-name|wsdl
-operator|.
-name|Definition
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
 name|xml
 operator|.
 name|ws
@@ -141,9 +131,6 @@ name|CONFIG_FILE
 init|=
 literal|"org/apache/cxf/systest/jms/continuations/jms_test_config.xml"
 decl_stmt|;
-name|Definition
-name|def
-decl_stmt|;
 specifier|protected
 name|void
 name|run
@@ -173,8 +160,6 @@ argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
-name|def
-operator|=
 name|EmbeddedJMSBrokerLauncher
 operator|.
 name|updateWsdlExtensors
