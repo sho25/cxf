@@ -346,6 +346,12 @@ decl_stmt|;
 name|Method
 name|m
 init|=
+name|bop
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 name|md
 operator|.
 name|getMethod
