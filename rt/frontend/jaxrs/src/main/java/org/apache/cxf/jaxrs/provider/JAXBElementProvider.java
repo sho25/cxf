@@ -627,6 +627,10 @@ specifier|private
 name|ValidationEventHandler
 name|eventHandler
 decl_stmt|;
+specifier|public
+name|JAXBElementProvider
+parameter_list|()
+block|{              }
 annotation|@
 name|Override
 specifier|public

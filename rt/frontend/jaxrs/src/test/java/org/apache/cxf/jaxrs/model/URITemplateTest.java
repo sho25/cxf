@@ -3067,18 +3067,7 @@ argument_list|(
 literal|"a {digit:[0-9]} b"
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|ut
-operator|.
-name|encodeLiteralCharacters
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println(ut.encodeLiteralCharacters());
 name|assertEquals
 argument_list|(
 literal|"a%20{digit:[0-9]}%20b"

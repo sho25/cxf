@@ -209,16 +209,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|WeakHashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|logging
 operator|.
 name|Logger
@@ -844,7 +834,7 @@ argument_list|>
 name|packageContexts
 init|=
 operator|new
-name|WeakHashMap
+name|HashMap
 argument_list|<
 name|String
 argument_list|,
@@ -866,7 +856,7 @@ argument_list|>
 name|classContexts
 init|=
 operator|new
-name|WeakHashMap
+name|HashMap
 argument_list|<
 name|Class
 argument_list|<
@@ -877,8 +867,7 @@ name|JAXBContext
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|private
-specifier|static
+specifier|protected
 name|Set
 argument_list|<
 name|Class
@@ -898,8 +887,7 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|private
-specifier|static
+specifier|protected
 name|JAXBContext
 name|collectionContext
 decl_stmt|;

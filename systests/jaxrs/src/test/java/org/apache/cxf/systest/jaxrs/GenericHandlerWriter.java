@@ -160,6 +160,17 @@ name|Book
 argument_list|>
 argument_list|>
 block|{
+name|JAXBElementProvider
+name|jaxb
+init|=
+operator|new
+name|JAXBElementProvider
+argument_list|()
+decl_stmt|;
+specifier|public
+name|GenericHandlerWriter
+parameter_list|()
+block|{              }
 specifier|public
 name|long
 name|getSize
@@ -274,13 +285,6 @@ name|IOException
 throws|,
 name|WebApplicationException
 block|{
-name|JAXBElementProvider
-name|jaxb
-init|=
-operator|new
-name|JAXBElementProvider
-argument_list|()
-decl_stmt|;
 name|jaxb
 operator|.
 name|writeTo

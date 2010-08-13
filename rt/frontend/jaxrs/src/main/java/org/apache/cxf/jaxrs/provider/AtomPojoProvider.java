@@ -3438,9 +3438,7 @@ block|{
 name|Unmarshaller
 name|um
 init|=
-operator|new
-name|JAXBElementProvider
-argument_list|()
+name|jaxbProvider
 operator|.
 name|getJAXBContext
 argument_list|(
