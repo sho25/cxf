@@ -2911,6 +2911,16 @@ if|if
 condition|(
 operator|!
 name|qualified
+operator|&&
+operator|!
+name|this
+operator|.
+name|isRefElement
+argument_list|(
+name|outputPart
+argument_list|,
+name|outElement
+argument_list|)
 condition|)
 block|{
 name|jreturn
