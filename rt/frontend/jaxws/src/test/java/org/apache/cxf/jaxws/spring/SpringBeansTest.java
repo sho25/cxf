@@ -1215,6 +1215,25 @@ argument_list|,
 name|found
 argument_list|)
 expr_stmt|;
+name|ep
+operator|=
+name|getEndpointImplBean
+argument_list|(
+literal|"unpublishedEndpoint"
+argument_list|,
+name|ctx
+argument_list|)
+expr_stmt|;
+name|assertFalse
+argument_list|(
+literal|"Unpublished endpoint is published"
+argument_list|,
+name|ep
+operator|.
+name|isPublished
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|testInterceptors
 argument_list|(
 name|ctx
