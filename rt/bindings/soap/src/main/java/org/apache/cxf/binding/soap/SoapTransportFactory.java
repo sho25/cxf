@@ -590,7 +590,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-literal|"http://www.w3.org/2008/07/soap/bindings/JMS/"
+literal|"http://www.w3.org/2010/soapjms/"
 operator|.
 name|equals
 argument_list|(
@@ -1195,7 +1195,7 @@ name|info
 operator|.
 name|setTransportId
 argument_list|(
-literal|"http://www.w3.org/2008/07/soap/bindings/JMS/"
+literal|"http://www.w3.org/2010/soapjms/"
 argument_list|)
 expr_stmt|;
 block|}

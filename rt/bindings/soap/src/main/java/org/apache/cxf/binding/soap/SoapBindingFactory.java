@@ -1423,14 +1423,14 @@ name|info
 operator|.
 name|setTransportURI
 argument_list|(
-literal|"http://www.w3.org/2008/07/soap/bindings/JMS/"
+literal|"http://www.w3.org/2010/soapjms/"
 argument_list|)
 expr_stmt|;
 name|config
 operator|.
 name|setTransportURI
 argument_list|(
-literal|"http://www.w3.org/2008/07/soap/bindings/JMS/"
+literal|"http://www.w3.org/2010/soapjms/"
 argument_list|)
 expr_stmt|;
 block|}
@@ -2850,7 +2850,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"http://www.w3.org/2008/07/soap/bindings/JMS/"
+literal|"http://www.w3.org/2010/soapjms/"
 argument_list|)
 condition|)
 block|{

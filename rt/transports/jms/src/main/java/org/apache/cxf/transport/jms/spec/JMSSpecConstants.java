@@ -35,7 +35,7 @@ specifier|final
 name|String
 name|SOAP_JMS_SPECIFICIATION_TRANSPORTID
 init|=
-literal|"http://www.w3.org/2008/07/soap/bindings/JMS/"
+literal|"http://www.w3.org/2010/soapjms/"
 decl_stmt|;
 specifier|public
 specifier|static
