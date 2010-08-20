@@ -830,7 +830,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"LOADED_KEYSTORE"
 argument_list|,
@@ -1087,7 +1087,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"LOADED_TRUST_STORE"
 argument_list|,
@@ -1382,7 +1382,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|,
@@ -1441,7 +1441,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|,
@@ -1511,7 +1511,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|)
@@ -1579,7 +1579,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|)
@@ -1639,7 +1639,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|,
@@ -1701,7 +1701,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|,
@@ -1867,7 +1867,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"CIPHERSUITES_NOT_SET"
 argument_list|)
@@ -1887,7 +1887,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"CIPHERSUITE_FILTERS_NOT_SET"
 argument_list|)
@@ -2353,15 +2353,9 @@ name|log
 operator|.
 name|isLoggable
 argument_list|(
-name|exclude
-condition|?
 name|Level
 operator|.
 name|FINE
-else|:
-name|Level
-operator|.
-name|INFO
 argument_list|)
 condition|)
 block|{
@@ -2412,15 +2406,9 @@ name|log
 argument_list|(
 name|log
 argument_list|,
-name|exclude
-condition|?
 name|Level
 operator|.
 name|FINE
-else|:
-name|Level
-operator|.
-name|INFO
 argument_list|,
 name|exclude
 condition|?
@@ -2518,7 +2506,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|,
@@ -2578,7 +2566,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 name|logMsg
 argument_list|,
@@ -2616,7 +2604,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"SECURE_SOCKET_PROTOCOL_SET"
 argument_list|,
@@ -2634,7 +2622,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"SECURE_SOCKET_PROTOCOL_NOT_SET"
 argument_list|)
@@ -2688,7 +2676,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"REQUIRE_CLIENT_AUTHENTICATION_SET"
 argument_list|,
@@ -2756,7 +2744,7 @@ name|log
 argument_list|,
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"WANT_CLIENT_AUTHENTICATION_SET"
 argument_list|,
