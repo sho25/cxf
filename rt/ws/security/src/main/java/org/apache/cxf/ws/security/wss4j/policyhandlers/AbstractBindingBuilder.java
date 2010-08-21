@@ -3919,20 +3919,6 @@ name|e
 argument_list|)
 throw|;
 block|}
-name|addSupportingElement
-argument_list|(
-name|cloneElement
-argument_list|(
-name|sig
-operator|.
-name|getSecRef
-argument_list|()
-operator|.
-name|getElement
-argument_list|()
-argument_list|)
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|suppTokens
@@ -4281,6 +4267,20 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|addSupportingElement
+argument_list|(
+name|cloneElement
+argument_list|(
+name|tempSig
+operator|.
+name|getSecRef
+argument_list|()
+operator|.
+name|getElement
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|// NOTE: This usage of WSEncryptionPart is a workaroud that is
 comment|// coupled with WSSecSignatureHelper. This approach is used so that
 comment|// we can force WSS4J to sign the assertion through a STR that
