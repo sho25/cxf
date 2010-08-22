@@ -339,20 +339,6 @@ name|HttpExchange
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|commons
-operator|.
-name|lang
-operator|.
-name|NotImplementedException
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class provides a HttpServletRequest instance using information  * coming from the HttpExchange and HttpContext instances provided  * by the underlying container.  * Note: many methods' implementation still TODO.  *   */
 end_comment
@@ -413,7 +399,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -493,7 +479,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -593,7 +579,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -680,7 +666,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -697,7 +683,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -711,7 +697,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -726,7 +712,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -808,7 +794,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -942,7 +928,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -992,7 +978,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1003,7 +989,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1014,7 +1000,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1073,7 +1059,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1090,7 +1076,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1108,7 +1094,7 @@ name|ServletException
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1317,7 +1303,7 @@ name|ServletException
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1335,7 +1321,7 @@ name|ServletException
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1550,7 +1536,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1563,7 +1549,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1574,7 +1560,7 @@ parameter_list|()
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1619,7 +1605,7 @@ name|ServletException
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
@@ -1632,7 +1618,7 @@ name|ServletException
 block|{
 throw|throw
 operator|new
-name|NotImplementedException
+name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
