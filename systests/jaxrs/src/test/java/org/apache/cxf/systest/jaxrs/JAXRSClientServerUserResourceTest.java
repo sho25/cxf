@@ -538,7 +538,7 @@ argument_list|)
 expr_stmt|;
 name|sf
 operator|.
-name|setServiceBeans
+name|setServiceBean
 argument_list|(
 operator|new
 name|BookStoreNoAnnotationsImpl

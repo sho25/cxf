@@ -847,7 +847,7 @@ block|}
 comment|/**      * Set the backing service bean. If this is set, JAX-RS runtime will not be      * responsible for the lifecycle of resource classes.      *       * @return      */
 specifier|public
 name|void
-name|setServiceBeans
+name|setServiceBeanObjects
 parameter_list|(
 name|Object
 modifier|...
@@ -861,6 +861,25 @@ operator|.
 name|asList
 argument_list|(
 name|beans
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setServiceBean
+parameter_list|(
+name|Object
+name|bean
+parameter_list|)
+block|{
+name|setServiceBeans
+argument_list|(
+name|Arrays
+operator|.
+name|asList
+argument_list|(
+name|bean
 argument_list|)
 argument_list|)
 expr_stmt|;

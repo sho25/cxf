@@ -88,7 +88,7 @@ argument_list|()
 decl_stmt|;
 name|sf
 operator|.
-name|setServiceBeans
+name|setServiceBean
 argument_list|(
 name|bs
 argument_list|)
