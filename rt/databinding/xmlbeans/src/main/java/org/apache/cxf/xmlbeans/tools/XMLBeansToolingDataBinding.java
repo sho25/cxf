@@ -1033,13 +1033,10 @@ name|ret
 operator|=
 name|typeSystem
 operator|.
-name|findElement
+name|findDocumentType
 argument_list|(
 name|qn
 argument_list|)
-operator|.
-name|getType
-argument_list|()
 operator|.
 name|getFullJavaName
 argument_list|()

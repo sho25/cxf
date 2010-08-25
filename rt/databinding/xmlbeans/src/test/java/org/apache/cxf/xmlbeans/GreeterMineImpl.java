@@ -65,7 +65,7 @@ name|xmlbeans
 operator|.
 name|wsdltest
 operator|.
-name|StringListType
+name|SayHi2MessageDocument
 import|;
 end_import
 
@@ -79,7 +79,7 @@ literal|"org.apache.cxf.xmlbeans.wsdltest.GreeterMine"
 argument_list|,
 name|targetNamespace
 operator|=
-literal|"http://org.apache.cxf/xmlbeans"
+literal|"http://cxf.apache.org/xmlbeans/wsdltest"
 argument_list|,
 name|portName
 operator|=
@@ -121,8 +121,8 @@ specifier|public
 name|void
 name|sayHi2
 parameter_list|(
-name|StringListType
-name|stringList
+name|SayHi2MessageDocument
+name|in
 parameter_list|)
 block|{
 name|System
@@ -133,6 +133,11 @@ name|println
 argument_list|(
 literal|"****** Executing the operation sayHi2 *****"
 argument_list|)
+expr_stmt|;
+name|in
+operator|.
+name|dump
+argument_list|()
 expr_stmt|;
 block|}
 block|}
