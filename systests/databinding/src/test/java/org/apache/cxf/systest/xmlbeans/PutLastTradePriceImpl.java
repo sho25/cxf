@@ -264,33 +264,7 @@ name|InDocument
 name|body
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Get the last trade price "
-operator|+
-name|body
-operator|.
-name|getIn
-argument_list|()
-operator|.
-name|getTickerPrice
-argument_list|()
-operator|+
-literal|", "
-operator|+
-name|body
-operator|.
-name|getIn
-argument_list|()
-operator|.
-name|getTickerSymbol
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|/*System.out.println("Get the last trade price "                             + body.getIn().getTickerPrice() + ", " + body.getIn().getTickerSymbol());*/
 block|}
 block|}
 end_class

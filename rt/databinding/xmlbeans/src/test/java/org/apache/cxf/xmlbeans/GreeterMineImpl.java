@@ -125,20 +125,7 @@ name|SayHi2MessageDocument
 name|in
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"****** Executing the operation sayHi2 *****"
-argument_list|)
-expr_stmt|;
-name|in
-operator|.
-name|dump
-argument_list|()
-expr_stmt|;
+comment|/*System.out.println("****** Executing the operation sayHi2 *****");*/
 block|}
 block|}
 end_class
