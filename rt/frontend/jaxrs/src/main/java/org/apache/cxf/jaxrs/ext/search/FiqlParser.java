@@ -614,7 +614,6 @@ block|}
 name|boolean
 name|isEnd
 init|=
-operator|(
 name|idx
 operator|==
 name|expr
@@ -623,7 +622,6 @@ name|length
 argument_list|()
 operator|-
 literal|1
-operator|)
 decl_stmt|;
 if|if
 condition|(
