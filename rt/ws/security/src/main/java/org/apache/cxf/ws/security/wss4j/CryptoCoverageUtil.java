@@ -253,6 +253,20 @@ name|ws
 operator|.
 name|security
 operator|.
+name|WSConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|WSDataRef
 import|;
 end_import
@@ -286,7 +300,7 @@ specifier|private
 name|CryptoCoverageUtil
 parameter_list|()
 block|{     }
-comment|/**      * Inspects the signed and encrypted content in the message and accurately      * resolves encrypted and then signed elements in {@code signedRefs}.      * Entries in {@code signedRefs} that correspond to an encrypted element      * are resolved to the decrypted element and added to {@code signedRefs}.      * The original reference to the encrypted content remains unaltered in the      * list to allow for matching against a requirement that xenc:EncryptedData      * elements be signed.      *       * @param signedRefs references to the signed content in the message      * @param encryptedRefs refernces to the encrypted content in the message      */
+comment|/**      * Inspects the signed and encrypted content in the message and accurately      * resolves encrypted and then signed elements in {@code signedRefs}.      * Entries in {@code signedRefs} that correspond to an encrypted element      * are resolved to the decrypted element and added to {@code signedRefs}.      * The original reference to the encrypted content remains unaltered in the      * list to allow for matching against a requirement that xenc:EncryptedData      * and xenc:EncryptedKey elements be signed.      *       * @param signedRefs references to the signed content in the message      * @param encryptedRefs references to the encrypted content in the message      */
 specifier|public
 specifier|static
 name|void
@@ -330,15 +344,6 @@ name|encryptedRefs
 control|)
 block|{
 specifier|final
-name|String
-name|encryptedRefId
-init|=
-name|encryptedRef
-operator|.
-name|getWsuId
-argument_list|()
-decl_stmt|;
-specifier|final
 name|Iterator
 argument_list|<
 name|WSDataRef
@@ -369,26 +374,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|signedRef
-operator|.
-name|getWsuId
-argument_list|()
-operator|.
-name|equals
+name|isSignedEncryptionRef
 argument_list|(
-name|encryptedRefId
-argument_list|)
-operator|||
+name|encryptedRef
+argument_list|,
 name|signedRef
-operator|.
-name|getWsuId
-argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"#"
-operator|+
-name|encryptedRefId
 argument_list|)
 condition|)
 block|{
@@ -465,7 +455,7 @@ name|encryptedSignedRefs
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Checks that the references provided refer to the      * signed/encrypted SOAP body element.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or the body is not      *             covered by the signture/encryption.      */
+comment|/**      * Checks that the references provided refer to the      * signed/encrypted SOAP body element.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or the body is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
@@ -554,7 +544,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Checks that the references provided refer to the required      * signed/encrypted SOAP header element(s) matching the provided name and      * namespace.  If {@code name} is null, all headers from {@code namespace}      * are inspected for coverage.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the namespace of the header(s) to check for coverage      * @param name      *            the local part of the header name to check for coverage, may be null      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or a header is not      *             covered by the signture/encryption.      */
+comment|/**      * Checks that the references provided refer to the required      * signed/encrypted SOAP header element(s) matching the provided name and      * namespace.  If {@code name} is null, all headers from {@code namespace}      * are inspected for coverage.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the namespace of the header(s) to check for coverage      * @param name      *            the local part of the header name to check for coverage, may be null      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or a header is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
@@ -708,7 +698,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expression in {@code      * xPath}.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPath      *            the XPath expression      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signture/encryption.      */
+comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expression in {@code      * xPath}.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPath      *            the XPath expression      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
@@ -767,7 +757,7 @@ name|scope
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expressions in {@code      * xPaths}.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPaths      *            the collection of XPath expressions      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signture/encryption.      */
+comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expressions in {@code      * xPaths}.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPaths      *            the collection of XPath expressions      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
@@ -1010,6 +1000,132 @@ block|}
 block|}
 block|}
 block|}
+block|}
+comment|/**      * Determines if {@code signedRef} points to the encrypted content represented by      * {@code encryptedRef} using the following algorithm.      *      *<ol>      *<li>Check that the signed content is an XML Encryption element.</li>      *<li>Check that the reference Ids of the signed content and encrypted content      * (not the decrypted version of the encrypted content) match.  Check that the      * reference Id of the signed content matches the reference Id of the encrypted      * content prepended with a #.      *<li>Check for other Id attributes on the signed element that may match the      * referenced identifier for the encrypted content.  This is a workaround for      * WSS-242.</li>      *</ol>      *      * @param encryptedRef the ref representing the encrpted content      * @param signedRef the ref representing the signed content      */
+specifier|private
+specifier|static
+name|boolean
+name|isSignedEncryptionRef
+parameter_list|(
+name|WSDataRef
+name|encryptedRef
+parameter_list|,
+name|WSDataRef
+name|signedRef
+parameter_list|)
+block|{
+comment|// Don't even bother if the signed element wasn't an XML Enc element.
+if|if
+condition|(
+operator|!
+name|WSConstants
+operator|.
+name|ENC_NS
+operator|.
+name|equals
+argument_list|(
+name|signedRef
+operator|.
+name|getProtectedElement
+argument_list|()
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|)
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
+if|if
+condition|(
+name|signedRef
+operator|.
+name|getWsuId
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|encryptedRef
+operator|.
+name|getWsuId
+argument_list|()
+argument_list|)
+operator|||
+name|signedRef
+operator|.
+name|getWsuId
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"#"
+operator|+
+name|encryptedRef
+operator|.
+name|getWsuId
+argument_list|()
+argument_list|)
+condition|)
+block|{
+return|return
+literal|true
+return|;
+block|}
+comment|// There should be no other Ids on an EncryptedData or EncryptedKey element;
+comment|// however, WSS4J will happily add them on the outbound side.  See WSS-242.
+comment|// The following code looks for the specific behavior that exists in
+comment|// 1.5.8 and earlier version.
+name|String
+name|wsuId
+init|=
+name|signedRef
+operator|.
+name|getProtectedElement
+argument_list|()
+operator|.
+name|getAttributeNS
+argument_list|(
+name|WSConstants
+operator|.
+name|WSU_NS
+argument_list|,
+literal|"Id"
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|signedRef
+operator|.
+name|getWsuId
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|wsuId
+argument_list|)
+operator|||
+name|signedRef
+operator|.
+name|getWsuId
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"#"
+operator|+
+name|wsuId
+argument_list|)
+condition|)
+block|{
+return|return
+literal|true
+return|;
+block|}
+return|return
+literal|false
+return|;
 block|}
 specifier|private
 specifier|static

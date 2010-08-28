@@ -3767,7 +3767,7 @@ return|return
 name|inHandler
 return|;
 block|}
-comment|/**      * Gets a SoapMessage, but with the needed SecurityConstants in the context propreties      * so that it can be passed to PolicyBasedWSS4JOutInterceptor.      *      * @see #getSoapMessageForDom(Document, AssertionInfoMap)      */
+comment|/**      * Gets a SoapMessage, but with the needed SecurityConstants in the context properties      * so that it can be passed to PolicyBasedWSS4JOutInterceptor.      *      * @see #getSoapMessageForDom(Document, AssertionInfoMap)      */
 specifier|private
 name|SoapMessage
 name|getOutSoapMessageForDom

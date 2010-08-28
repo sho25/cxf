@@ -775,6 +775,15 @@ block|}
 block|}
 block|}
 block|}
+name|CryptoCoverageUtil
+operator|.
+name|reconcileEncryptedSignedRefs
+argument_list|(
+name|signed
+argument_list|,
+name|encrypted
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|XPathExpression
