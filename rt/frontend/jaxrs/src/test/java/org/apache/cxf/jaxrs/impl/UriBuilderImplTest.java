@@ -5067,6 +5067,8 @@ argument_list|,
 literal|"&"
 argument_list|,
 literal|false
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 name|MultivaluedMap
@@ -5087,6 +5089,8 @@ name|getRawQuery
 argument_list|()
 argument_list|,
 literal|"&"
+argument_list|,
+literal|false
 argument_list|,
 literal|false
 argument_list|)
@@ -5988,11 +5992,6 @@ block|}
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"This may need to be challenged, '23' overrides '=' for the 2nd occurence of x"
-argument_list|)
 specifier|public
 name|void
 name|testFromEncodedDuplicateVar
@@ -6046,11 +6045,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"name2=%20 is double encoded after the replacement -> name2=%2520"
-argument_list|)
 specifier|public
 name|void
 name|testReplaceQuery5
@@ -6107,9 +6101,6 @@ annotation|@
 name|Test
 annotation|@
 name|Ignore
-argument_list|(
-literal|"query parameters are not encoded due to build() being called"
-argument_list|)
 specifier|public
 name|void
 name|testQueryParam

@@ -958,6 +958,14 @@ expr_stmt|;
 block|}
 comment|// The right hand side value, might be used to further resolve
 comment|// sub-resources.
+name|int
+name|groupCount
+init|=
+name|m
+operator|.
+name|groupCount
+argument_list|()
+decl_stmt|;
 name|String
 name|finalGroup
 init|=
@@ -965,7 +973,7 @@ name|m
 operator|.
 name|group
 argument_list|(
-name|i
+name|groupCount
 argument_list|)
 decl_stmt|;
 name|templateVariableToValue

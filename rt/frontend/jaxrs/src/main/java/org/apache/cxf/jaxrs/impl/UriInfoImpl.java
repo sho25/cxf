@@ -662,6 +662,8 @@ argument_list|,
 literal|"&"
 argument_list|,
 name|decode
+argument_list|,
+name|decode
 argument_list|)
 return|;
 block|}
@@ -705,6 +707,8 @@ name|QUERY_STRING
 argument_list|)
 argument_list|,
 literal|"&"
+argument_list|,
+name|decode
 argument_list|,
 name|decode
 argument_list|)

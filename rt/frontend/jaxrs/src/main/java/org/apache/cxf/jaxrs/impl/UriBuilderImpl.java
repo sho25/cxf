@@ -390,8 +390,6 @@ modifier|...
 name|values
 parameter_list|)
 block|{
-try|try
-block|{
 name|String
 name|thePath
 init|=
@@ -483,6 +481,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+try|try
+block|{
 return|return
 name|buildURI
 argument_list|(
@@ -2285,6 +2285,8 @@ argument_list|,
 literal|"&"
 argument_list|,
 literal|false
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -2760,6 +2762,8 @@ argument_list|,
 literal|";"
 argument_list|,
 literal|true
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 return|return
@@ -2905,6 +2909,8 @@ argument_list|(
 name|queryValue
 argument_list|,
 literal|"&"
+argument_list|,
+literal|true
 argument_list|,
 literal|false
 argument_list|)

@@ -1450,7 +1450,7 @@ name|className
 argument_list|)
 return|;
 block|}
-specifier|private
+specifier|protected
 name|Templates
 name|createTemplates
 parameter_list|(

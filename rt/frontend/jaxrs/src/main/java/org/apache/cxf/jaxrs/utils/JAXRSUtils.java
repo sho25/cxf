@@ -2950,6 +2950,8 @@ block|}
 name|int
 name|status
 decl_stmt|;
+comment|// criteria matched the least number of times will determine the error code;
+comment|// priority : path, method, consumes, produces;
 if|if
 condition|(
 name|pathMatched
@@ -2979,8 +2981,8 @@ elseif|else
 if|if
 condition|(
 name|consumeMatched
-operator|==
-literal|0
+operator|<=
+name|produceMatched
 condition|)
 block|{
 name|status
@@ -2988,25 +2990,11 @@ operator|=
 literal|415
 expr_stmt|;
 block|}
-elseif|else
-if|if
-condition|(
-name|produceMatched
-operator|==
-literal|0
-condition|)
+else|else
 block|{
 name|status
 operator|=
 literal|406
-expr_stmt|;
-block|}
-else|else
-block|{
-comment|// this branch should not even be executed
-name|status
-operator|=
-literal|404
 expr_stmt|;
 block|}
 name|String
@@ -5249,6 +5237,8 @@ argument_list|,
 literal|";"
 argument_list|,
 name|decode
+argument_list|,
+literal|false
 argument_list|)
 return|;
 block|}
@@ -6354,6 +6344,9 @@ name|sep
 parameter_list|,
 name|boolean
 name|decode
+parameter_list|,
+name|boolean
+name|decodePlus
 parameter_list|)
 block|{
 name|MultivaluedMap
@@ -6394,6 +6387,8 @@ argument_list|,
 name|sep
 argument_list|,
 name|decode
+argument_list|,
+name|decodePlus
 argument_list|)
 expr_stmt|;
 return|return
@@ -6421,6 +6416,9 @@ name|sep
 parameter_list|,
 name|boolean
 name|decode
+parameter_list|,
+name|boolean
+name|decodePlus
 parameter_list|)
 block|{
 if|if
@@ -6498,16 +6496,21 @@ condition|)
 block|{
 name|value
 operator|=
-literal|"&"
+operator|(
+literal|";"
 operator|.
 name|equals
 argument_list|(
 name|sep
 argument_list|)
+operator|||
+operator|!
+name|decodePlus
+operator|)
 condition|?
 name|HttpUtils
 operator|.
-name|urlDecode
+name|pathDecode
 argument_list|(
 name|values
 index|[
@@ -6517,7 +6520,7 @@ argument_list|)
 else|:
 name|HttpUtils
 operator|.
-name|pathDecode
+name|urlDecode
 argument_list|(
 name|values
 index|[
