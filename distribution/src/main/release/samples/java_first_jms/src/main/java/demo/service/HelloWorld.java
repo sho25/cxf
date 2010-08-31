@@ -50,8 +50,6 @@ name|HelloWorld
 block|{
 annotation|@
 name|WebMethod
-specifier|public
-specifier|abstract
 name|String
 name|sayHi
 parameter_list|(

@@ -41,6 +41,12 @@ specifier|final
 class|class
 name|ClientJMS
 block|{
+specifier|private
+name|ClientJMS
+parameter_list|()
+block|{
+comment|//
+block|}
 specifier|public
 specifier|static
 name|void

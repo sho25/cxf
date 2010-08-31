@@ -61,9 +61,16 @@ end_import
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|ServerJMS
 block|{
+specifier|private
+name|ServerJMS
+parameter_list|()
+block|{
+comment|//
+block|}
 specifier|public
 specifier|static
 name|void
@@ -100,7 +107,7 @@ condition|(
 name|amqBroker
 condition|)
 block|{
-comment|/*     	     * The following make it easier to run this against something other than ActiveMQ.     	     * You will have to get a JMS broker onto the right port of localhost.     	     */
+comment|/*              * The following make it easier to run this against something other than ActiveMQ. You will have              * to get a JMS broker onto the right port of localhost.              */
 name|Class
 argument_list|<
 name|?

@@ -42,7 +42,7 @@ name|HelloWorldImpl
 implements|implements
 name|HelloWorld
 block|{
-comment|/* (non-Javadoc)  * @see test.IHello#sayHi(java.lang.String)  */
+comment|/*      * (non-Javadoc)      * @see test.IHello#sayHi(java.lang.String)      */
 specifier|public
 name|String
 name|sayHi
