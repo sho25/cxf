@@ -2498,6 +2498,11 @@ name|Type
 name|genericType
 parameter_list|)
 block|{
+name|Throwable
+name|primaryError
+init|=
+literal|null
+decl_stmt|;
 name|URI
 name|uri
 init|=
@@ -2607,6 +2612,20 @@ argument_list|(
 name|m
 argument_list|)
 expr_stmt|;
+name|primaryError
+operator|=
+name|m
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|get
+argument_list|(
+name|Exception
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -2614,7 +2633,10 @@ name|Throwable
 name|ex
 parameter_list|)
 block|{
-comment|// we'd like a user to get the whole Response anyway if needed
+name|primaryError
+operator|=
+name|ex
+expr_stmt|;
 block|}
 comment|// TODO : this needs to be done in an inbound chain instead
 name|HttpURLConnection
@@ -2632,6 +2654,26 @@ operator|.
 name|KEY_HTTP_CONNECTION
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|connect
+operator|==
+literal|null
+operator|&&
+name|primaryError
+operator|!=
+literal|null
+condition|)
+block|{
+comment|/** do we have a pre-connect error ? */
+throw|throw
+operator|new
+name|WebApplicationException
+argument_list|(
+name|primaryError
+argument_list|)
+throw|;
+block|}
 return|return
 name|handleResponse
 argument_list|(
