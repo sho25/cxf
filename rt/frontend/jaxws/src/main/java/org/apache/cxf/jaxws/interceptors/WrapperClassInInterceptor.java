@@ -723,6 +723,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|wrapperClass
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|wrapperClass
 operator|.
