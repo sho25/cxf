@@ -506,7 +506,7 @@ literal|false
 decl_stmt|;
 try|try
 block|{
-comment|//JAX-WS 2.2 would have the HttpCoPhaseInterceptorChainntext class in the classloader
+comment|//JAX-WS 2.2 would have the HttpContext class in the classloader
 name|Class
 argument_list|<
 name|?
