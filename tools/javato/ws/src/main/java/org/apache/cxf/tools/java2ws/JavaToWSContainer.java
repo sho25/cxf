@@ -597,9 +597,6 @@ name|Throwable
 name|e
 init|=
 name|ex
-operator|.
-name|getCause
-argument_list|()
 decl_stmt|;
 while|while
 condition|(
