@@ -82,7 +82,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ProverImplTest
+name|ProviderImplTest
 extends|extends
 name|org
 operator|.
@@ -204,6 +204,33 @@ argument_list|)
 operator|>
 operator|-
 literal|1
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"wsdlLocation attribute has the wrong value"
+argument_list|,
+name|sw
+operator|.
+name|toString
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"wsdli:wsdlLocation=\"http://cxf.apache.org wsdlLoc\""
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+name|sw
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
