@@ -4480,13 +4480,6 @@ argument_list|(
 name|context
 argument_list|)
 decl_stmt|;
-name|db
-operator|.
-name|setUnwrapJAXBElement
-argument_list|(
-literal|false
-argument_list|)
-expr_stmt|;
 name|sf
 operator|=
 name|createDispatchService
