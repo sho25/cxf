@@ -493,15 +493,6 @@ throw|;
 block|}
 comment|//WSI-BP R2737  -RPC/LIG part name space is empty
 comment|// part.setConcreteName(new QName("", part.getConcreteName().getLocalPart()));
-name|part
-operator|.
-name|setProperty
-argument_list|(
-literal|"honor.jaxb.annotations"
-argument_list|,
-literal|true
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 name|writeParts

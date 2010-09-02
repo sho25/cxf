@@ -1158,16 +1158,6 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-comment|//honor JAXBAnnotation
-name|part
-operator|.
-name|setProperty
-argument_list|(
-literal|"honor.jaxb.annotations"
-argument_list|,
-literal|true
-argument_list|)
-expr_stmt|;
 try|try
 block|{
 name|parameters
