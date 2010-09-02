@@ -386,13 +386,16 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Method getPrefix.      *      * @param qname      * @return Returns String.      */
+comment|/**      * Method getPrefix.      * @param namespaceURI       *      * @param qname      * @return Returns String.      */
 specifier|private
 name|String
 name|getPrefix
 parameter_list|(
 name|String
 name|ns
+parameter_list|,
+name|String
+name|namespaceURI
 parameter_list|)
 block|{
 name|int
@@ -424,9 +427,33 @@ name|idx
 argument_list|)
 return|;
 block|}
+elseif|else
+if|if
+condition|(
+name|namespaceURI
+operator|!=
+literal|null
+operator|&&
+name|namespaceURI
+operator|.
+name|length
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
+comment|//this is the case that have namespaceURI but use DEFAULT_NS_PREFIX
+return|return
+literal|""
+return|;
+block|}
+else|else
+block|{
+comment|//this is the case that namespaceURI is just empty, so NS_PREFIX is null
 return|return
 literal|null
 return|;
+block|}
 block|}
 comment|/**      * Method startElement.      *      * @param namespaceURI      * @param localName      * @param qName      * @param atts      * @throws SAXException      */
 specifier|public
@@ -456,6 +483,8 @@ init|=
 name|getPrefix
 argument_list|(
 name|qName
+argument_list|,
+name|namespaceURI
 argument_list|)
 decl_stmt|;
 comment|// it is only the prefix we want to learn from the QName! so we can get rid of the
