@@ -659,6 +659,16 @@ operator|.
 name|getBus
 argument_list|()
 decl_stmt|;
+comment|// To avoid the NPE
+if|if
+condition|(
+name|cls
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|addSchemaValidationSupport
 argument_list|(
 name|ep
