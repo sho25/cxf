@@ -81,6 +81,16 @@ name|javax
 operator|.
 name|xml
 operator|.
+name|XMLConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
 name|parsers
 operator|.
 name|ParserConfigurationException
@@ -375,7 +385,7 @@ return|return
 name|bus
 return|;
 block|}
-comment|/**      * This call is used to set the bus. It should only be called once.      *       * @param bus      */
+comment|/**      * This call is used to set the bus. It should only be called once.      *      * @param bus      */
 annotation|@
 name|Resource
 argument_list|(
@@ -458,6 +468,67 @@ name|String
 name|systemId
 parameter_list|)
 block|{
+comment|/*          * Sanity check. The document has to remotely resemble a schema.          */
+if|if
+condition|(
+operator|!
+name|XMLConstants
+operator|.
+name|W3C_XML_SCHEMA_NS_URI
+operator|.
+name|equals
+argument_list|(
+name|d
+operator|.
+name|getDocumentElement
+argument_list|()
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Invalid schema document passed to "
+operator|+
+literal|"AbstractDataBinding.addSchemaDocument, "
+operator|+
+literal|"not in W3C schema namespace"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+operator|!
+literal|"schema"
+operator|.
+name|equals
+argument_list|(
+name|d
+operator|.
+name|getDocumentElement
+argument_list|()
+operator|.
+name|getLocalName
+argument_list|()
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Invalid schema document passed to "
+operator|+
+literal|"AbstractDataBinding.addSchemaDocument, "
+operator|+
+literal|"document element isn't 'schema'"
+argument_list|)
+throw|;
+block|}
 name|String
 name|ns
 init|=
@@ -1142,7 +1213,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @return the namespaceMap (URI to prefix). This will be null       * if no particular namespace map has been set.      */
+comment|/**      * @return the namespaceMap (URI to prefix). This will be null      * if no particular namespace map has been set.      */
 specifier|public
 name|Map
 argument_list|<
@@ -1157,7 +1228,7 @@ return|return
 name|namespaceMap
 return|;
 block|}
-comment|/**      * Set a map of from URI to prefix. If possible, the data binding will use these       * prefixes on the wire.      *       * @param namespaceMap The namespaceMap to set.      */
+comment|/**      * Set a map of from URI to prefix. If possible, the data binding will use these      * prefixes on the wire.      *      * @param namespaceMap The namespaceMap to set.      */
 specifier|public
 name|void
 name|setNamespaceMap
