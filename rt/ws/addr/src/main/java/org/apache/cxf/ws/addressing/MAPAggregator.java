@@ -2675,6 +2675,28 @@ operator|!
 name|isOneway
 condition|)
 block|{
+comment|// if ReplyTo address is none then 202 response status is expected
+comment|// However returning a fault is more appropriate for request-response MEP
+if|if
+condition|(
+name|ContextUtils
+operator|.
+name|isNoneAddress
+argument_list|(
+name|maps
+operator|.
+name|getReplyTo
+argument_list|()
+argument_list|)
+condition|)
+block|{
+name|continueProcessing
+operator|=
+literal|false
+expr_stmt|;
+block|}
+else|else
+block|{
 comment|// ensure the inbound MAPs are available in both the full& fault
 comment|// response messages (used to determine relatesTo etc.)
 name|ContextUtils
@@ -2689,6 +2711,7 @@ name|getExchange
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 if|if
