@@ -394,6 +394,11 @@ operator|.
 name|getInterceptorChain
 argument_list|()
 expr_stmt|;
+synchronized|synchronized
+init|(
+name|phaseChain
+init|)
+block|{
 if|if
 condition|(
 name|phaseChain
@@ -414,6 +419,7 @@ name|resume
 argument_list|()
 expr_stmt|;
 return|return;
+block|}
 block|}
 block|}
 name|Message
