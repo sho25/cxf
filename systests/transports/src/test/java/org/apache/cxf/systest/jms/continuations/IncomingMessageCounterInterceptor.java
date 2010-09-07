@@ -90,16 +90,14 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 class|class
 name|IncomingMessageCounterInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|private
 specifier|static
