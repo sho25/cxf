@@ -272,7 +272,7 @@ name|ToolException
 argument_list|(
 literal|"Unsupported databinding: "
 operator|+
-name|s
+name|dbn
 argument_list|)
 throw|;
 block|}

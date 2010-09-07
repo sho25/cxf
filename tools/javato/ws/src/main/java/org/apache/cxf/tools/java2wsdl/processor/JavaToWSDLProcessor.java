@@ -1241,6 +1241,9 @@ operator|.
 name|getInstance
 argument_list|(
 name|beanDefinitions
+argument_list|,
+name|getDataBindingName
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|Class
