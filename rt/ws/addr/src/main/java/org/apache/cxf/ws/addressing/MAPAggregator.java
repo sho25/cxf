@@ -4328,6 +4328,8 @@ operator|=
 name|getReplyTo
 argument_list|(
 name|message
+argument_list|,
+name|replyTo
 argument_list|)
 expr_stmt|;
 if|if
@@ -4652,6 +4654,9 @@ name|getReplyTo
 parameter_list|(
 name|Message
 name|message
+parameter_list|,
+name|EndpointReferenceType
+name|originalReplyTo
 parameter_list|)
 block|{
 name|Exchange
@@ -4682,7 +4687,7 @@ literal|null
 condition|)
 block|{
 return|return
-literal|null
+name|originalReplyTo
 return|;
 block|}
 synchronized|synchronized
@@ -4763,7 +4768,7 @@ return|;
 block|}
 block|}
 return|return
-literal|null
+name|originalReplyTo
 return|;
 block|}
 specifier|private
