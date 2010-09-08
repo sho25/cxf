@@ -578,6 +578,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+comment|//START SNIPPET: broker
 specifier|public
 name|void
 name|run
@@ -637,6 +638,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+comment|//END SNIPPET: broker
 specifier|public
 specifier|static
 name|void
