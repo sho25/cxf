@@ -49,6 +49,12 @@ name|SSLSocketFactory
 name|sslSocketFactory
 decl_stmt|;
 specifier|private
+name|int
+name|sslCacheTimeout
+init|=
+literal|86400000
+decl_stmt|;
+specifier|private
 name|boolean
 name|useHttpsURLConnectionDefaultSslSocketFactory
 decl_stmt|;
@@ -107,6 +113,32 @@ block|{
 return|return
 name|sslSocketFactory
 return|;
+block|}
+comment|/**      * Returns the SSL cache timeout if it has been configured or the JDK default value      */
+specifier|public
+name|int
+name|getSslCacheTimeout
+parameter_list|()
+block|{
+return|return
+name|sslCacheTimeout
+return|;
+block|}
+comment|/**      * This sets the SSL Session Cache timeout value for client sessions handled by CXF      */
+specifier|public
+name|void
+name|setSslCacheTimeout
+parameter_list|(
+name|int
+name|sslCacheTimeout
+parameter_list|)
+block|{
+name|this
+operator|.
+name|sslCacheTimeout
+operator|=
+name|sslCacheTimeout
+expr_stmt|;
 block|}
 comment|/**      * Returns whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()} should be      * used to create https connections. If<code>true</code> , {@link #getJsseProvider()} ,      * {@link #getSecureSocketProtocol()}, {@link #getTrustManagers()}, {@link #getKeyManagers()},      * {@link #getSecureRandom()}, {@link #getCipherSuites()} and {@link #getCipherSuitesFilter()} are      * ignored.      */
 specifier|public
