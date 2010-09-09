@@ -742,6 +742,7 @@ return|;
 block|}
 comment|// this method should really be on the InterceptorChain interface
 specifier|public
+specifier|synchronized
 name|State
 name|getState
 parameter_list|()
@@ -1000,6 +1001,19 @@ block|}
 specifier|public
 specifier|synchronized
 name|void
+name|suspend
+parameter_list|()
+block|{
+name|state
+operator|=
+name|State
+operator|.
+name|SUSPENDED
+expr_stmt|;
+block|}
+specifier|public
+specifier|synchronized
+name|void
 name|resume
 parameter_list|()
 block|{
@@ -1010,6 +1024,12 @@ operator|==
 name|State
 operator|.
 name|PAUSED
+operator|||
+name|state
+operator|==
+name|State
+operator|.
+name|SUSPENDED
 condition|)
 block|{
 name|state
@@ -1111,6 +1131,22 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|state
+operator|==
+name|State
+operator|.
+name|SUSPENDED
+condition|)
+block|{
+comment|// throw the exception to make sure thread exit without interrupt
+throw|throw
+operator|new
+name|SuspendedInvocationException
+argument_list|()
+throw|;
+block|}
 block|}
 catch|catch
 parameter_list|(

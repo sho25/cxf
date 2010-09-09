@@ -225,6 +225,7 @@ name|m
 init|=
 name|inMessage
 decl_stmt|;
+comment|// Get the real message which is used in the interceptor chain
 if|if
 condition|(
 name|m

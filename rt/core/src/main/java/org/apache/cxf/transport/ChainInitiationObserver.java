@@ -394,6 +394,7 @@ operator|.
 name|getInterceptorChain
 argument_list|()
 expr_stmt|;
+comment|// To make sure the phase chain is run by one thread once
 synchronized|synchronized
 init|(
 name|phaseChain
@@ -411,6 +412,17 @@ operator|.
 name|State
 operator|.
 name|PAUSED
+operator|||
+name|phaseChain
+operator|.
+name|getState
+argument_list|()
+operator|==
+name|InterceptorChain
+operator|.
+name|State
+operator|.
+name|SUSPENDED
 condition|)
 block|{
 name|phaseChain

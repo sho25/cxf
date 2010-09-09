@@ -87,6 +87,8 @@ name|State
 block|{
 name|PAUSED
 block|,
+name|SUSPENDED
+block|,
 name|EXECUTING
 block|,
 name|COMPLETE
@@ -174,6 +176,10 @@ parameter_list|)
 function_decl|;
 name|void
 name|pause
+parameter_list|()
+function_decl|;
+name|void
+name|suspend
 parameter_list|()
 function_decl|;
 name|void
