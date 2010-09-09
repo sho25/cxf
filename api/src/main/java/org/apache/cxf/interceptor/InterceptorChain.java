@@ -190,6 +190,10 @@ name|void
 name|reset
 parameter_list|()
 function_decl|;
+name|State
+name|getState
+parameter_list|()
+function_decl|;
 name|ListIterator
 argument_list|<
 name|Interceptor

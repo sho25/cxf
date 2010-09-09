@@ -740,7 +740,6 @@ name|get
 argument_list|()
 return|;
 block|}
-comment|// this method should really be on the InterceptorChain interface
 specifier|public
 specifier|synchronized
 name|State
