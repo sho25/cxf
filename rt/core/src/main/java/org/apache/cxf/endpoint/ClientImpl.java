@@ -3352,10 +3352,34 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|// Check to see if there is a Fault from the outgoing chain
 name|Exception
 name|ex
 init|=
+literal|null
+decl_stmt|;
+comment|// Check to see if there is a Fault from the outgoing chain if it's an out Message
+if|if
+condition|(
+operator|!
+name|message
+operator|.
+name|get
+argument_list|(
+name|Message
+operator|.
+name|INBOUND_MESSAGE
+argument_list|)
+operator|.
+name|equals
+argument_list|(
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+condition|)
+block|{
+name|ex
+operator|=
 name|message
 operator|.
 name|getContent
@@ -3364,7 +3388,8 @@ name|Exception
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 name|boolean
 name|mepCompleteCalled
 init|=

@@ -5023,6 +5023,20 @@ parameter_list|)
 block|{
 try|try
 block|{
+comment|//response context shouldn't be empty even with fault response message
+name|assertTrue
+argument_list|(
+name|response
+operator|.
+name|getContext
+argument_list|()
+operator|.
+name|size
+argument_list|()
+operator|!=
+literal|0
+argument_list|)
+expr_stmt|;
 name|reply
 operator|=
 name|response
