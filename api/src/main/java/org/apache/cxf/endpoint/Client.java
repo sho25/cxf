@@ -145,16 +145,6 @@ name|KEEP_CONDUIT_ALIVE
 init|=
 literal|"KeepConduitAlive"
 decl_stmt|;
-name|String
-name|CONNECTION_TIMEOUT
-init|=
-literal|"javax.xml.ws.client.connectionTimeout"
-decl_stmt|;
-name|String
-name|RECEIVE_TIMEOUT
-init|=
-literal|"javax.xml.ws.client.receiveTimeout"
-decl_stmt|;
 comment|/**      * Invokes an operation synchronously      * @param operationName The name of the operation to be invoked. The service namespace will be used      * when looking up the BindingOperationInfo.      * @param params  The params that matches the parts of the input message of the operation.  If the       * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If       * params are in the wrapped form, use invokeWrapped      * @return The return values that matche the parts of the output message of the operation      */
 name|Object
 index|[]

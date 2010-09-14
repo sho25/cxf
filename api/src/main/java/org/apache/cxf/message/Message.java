@@ -385,6 +385,17 @@ argument_list|()
 operator|+
 literal|".INTERCEPTOR_PROVIDER"
 decl_stmt|;
+comment|/*      * The properties to allow configure the client timeout      */
+name|String
+name|CONNECTION_TIMEOUT
+init|=
+literal|"javax.xml.ws.client.connectionTimeout"
+decl_stmt|;
+name|String
+name|RECEIVE_TIMEOUT
+init|=
+literal|"javax.xml.ws.client.receiveTimeout"
+decl_stmt|;
 name|String
 name|getId
 parameter_list|()
