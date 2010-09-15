@@ -54,10 +54,6 @@ argument_list|,
 name|endpointInterface
 operator|=
 literal|"org.apache.cxf.jms_greeter.JMSGreeterPortType"
-argument_list|,
-name|wsdlLocation
-operator|=
-literal|"testutils/jms_spec_test.wsdl"
 argument_list|)
 specifier|public
 class|class
