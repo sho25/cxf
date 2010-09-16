@@ -1475,6 +1475,11 @@ name|isDocumentBare
 argument_list|(
 name|method
 argument_list|)
+operator|||
+name|param
+operator|.
+name|header
+argument_list|()
 condition|)
 block|{
 name|local
