@@ -395,6 +395,13 @@ literal|"bus"
 argument_list|)
 expr_stmt|;
 block|}
+name|bean
+operator|.
+name|setLazyInit
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|super
 operator|.
 name|doParse
