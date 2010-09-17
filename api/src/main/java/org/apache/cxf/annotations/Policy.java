@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Enables message Logging  */
+comment|/**  * Attaches a Policy to a service or method  */
 end_comment
 
 begin_annotation_defn

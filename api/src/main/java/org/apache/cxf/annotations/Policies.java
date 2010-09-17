@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Used to attache multiple Policy annotations   * to a method or type if policies need to be added  * to more than one place in the wsdl.   */
+comment|/**  * Used to attach multiple Policy annotations   * to a method or type if policies need to be added  * to more than one place in the wsdl.   */
 end_comment
 
 begin_annotation_defn
