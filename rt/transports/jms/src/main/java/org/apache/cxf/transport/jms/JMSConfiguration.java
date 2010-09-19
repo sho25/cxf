@@ -212,7 +212,7 @@ name|JMSConfiguration
 implements|implements
 name|InitializingBean
 block|{
-comment|/**      * The use of -1 is to make easier to determine       * if the setCacheLevel has been called.      */
+comment|/**      * The use of -1 is to make easier to determine      * if the setCacheLevel has been called.      */
 specifier|public
 specifier|static
 specifier|final
@@ -1444,7 +1444,7 @@ operator|=
 name|acceptMessagesWhileStopping
 expr_stmt|;
 block|}
-comment|/**      * Tries to creates a ConnectionFactory from jndi if none was set as a property      * by using the jndConfig. Then it determiens if the connectionFactory should be wrapped      * into a SingleConnectionFactory and wraps it if necessary. After the first call the      * same connectionFactory will be returned for all subsequent calls      *       * @return usable connectionFactory      */
+comment|/**      * Tries to creates a ConnectionFactory from jndi if none was set as a property      * by using the jndConfig. Then it determines if the connectionFactory should be wrapped      * into a SingleConnectionFactory and wraps it if necessary. After the first call the      * same connectionFactory will be returned for all subsequent calls      *      * @return usable connectionFactory      */
 specifier|public
 specifier|synchronized
 name|ConnectionFactory

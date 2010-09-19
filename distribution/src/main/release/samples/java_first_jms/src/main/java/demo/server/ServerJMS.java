@@ -248,6 +248,12 @@ operator|.
 name|setAddress
 argument_list|(
 literal|"jms:queue:test.cxf.jmstransport.queue?timeToLive=1000"
+operator|+
+literal|"&jndiConnectionFactoryName=ConnectionFactory"
+operator|+
+literal|"&jndiInitialContextFactory"
+operator|+
+literal|"=org.apache.activemq.jndi.ActiveMQInitialContextFactory"
 argument_list|)
 expr_stmt|;
 name|svrFactory
