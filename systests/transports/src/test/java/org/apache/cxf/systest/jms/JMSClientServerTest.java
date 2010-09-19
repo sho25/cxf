@@ -7038,7 +7038,7 @@ name|setTransportId
 argument_list|(
 name|JMSSpecConstants
 operator|.
-name|SOAP_JMS_SPECIFICIATION_TRANSPORTID
+name|SOAP_JMS_SPECIFICATION_TRANSPORTID
 argument_list|)
 expr_stmt|;
 name|factory

@@ -33,7 +33,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|SOAP_JMS_SPECIFICIATION_TRANSPORTID
+name|SOAP_JMS_SPECIFICATION_TRANSPORTID
 init|=
 literal|"http://www.w3.org/2010/soapjms/"
 decl_stmt|;
@@ -43,7 +43,7 @@ specifier|final
 name|String
 name|SOAP_JMS_NAMESPACE
 init|=
-name|SOAP_JMS_SPECIFICIATION_TRANSPORTID
+name|SOAP_JMS_SPECIFICATION_TRANSPORTID
 decl_stmt|;
 specifier|public
 specifier|static
