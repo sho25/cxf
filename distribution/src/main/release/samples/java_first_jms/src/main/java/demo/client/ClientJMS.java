@@ -134,9 +134,9 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://impl.service.demo/"
+literal|"http://service.demo/"
 argument_list|,
-literal|"HelloWorldImplPort"
+literal|"HelloWorldPort"
 argument_list|)
 decl_stmt|;
 specifier|private

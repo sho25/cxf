@@ -1253,6 +1253,8 @@ argument_list|,
 literal|"http://schemas.xmlsoap.org/wsdl/soap/http"
 argument_list|,
 literal|"http://www.w3.org/2003/05/soap/bindings/HTTP/"
+argument_list|,
+literal|"http://www.w3.org/2010/soapjms/"
 argument_list|)
 decl_stmt|;
 specifier|public
