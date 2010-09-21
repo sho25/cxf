@@ -29,6 +29,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -96,7 +106,6 @@ operator|=
 name|m
 expr_stmt|;
 block|}
-comment|// TODO
 specifier|public
 name|String
 name|getAuthenticationScheme
@@ -122,7 +131,38 @@ operator|.
 name|BASIC_AUTH
 return|;
 block|}
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|authorizationValues
+init|=
+operator|new
+name|HttpHeadersImpl
+argument_list|(
+name|m
+argument_list|)
+operator|.
+name|getRequestHeader
+argument_list|(
+literal|"Authorization"
+argument_list|)
+decl_stmt|;
 return|return
+name|authorizationValues
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
+condition|?
+name|authorizationValues
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+else|:
 literal|"Unknown scheme"
 return|;
 block|}
