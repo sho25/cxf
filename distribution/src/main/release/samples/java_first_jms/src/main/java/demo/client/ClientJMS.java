@@ -37,20 +37,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|soap
-operator|.
-name|SOAPBinding
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -112,8 +98,8 @@ operator|+
 literal|"=org.apache.activemq.jndi.ActiveMQInitialContextFactory"
 decl_stmt|;
 specifier|private
-specifier|final
 specifier|static
+specifier|final
 name|QName
 name|SERVICE_QNAME
 init|=
@@ -126,8 +112,8 @@ literal|"HelloWorldImplService"
 argument_list|)
 decl_stmt|;
 specifier|private
-specifier|final
 specifier|static
+specifier|final
 name|QName
 name|PORT_QNAME
 init|=
