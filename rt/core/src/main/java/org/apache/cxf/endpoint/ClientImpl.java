@@ -4158,7 +4158,7 @@ name|fine
 argument_list|(
 literal|"Interceptors contributed by endpoint: "
 operator|+
-name|i2
+name|i3
 argument_list|)
 expr_stmt|;
 block|}
