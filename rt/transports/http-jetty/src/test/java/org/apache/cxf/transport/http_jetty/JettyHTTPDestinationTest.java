@@ -2358,22 +2358,6 @@ argument_list|(
 name|partialResponse
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"unexpected response code"
-argument_list|,
-literal|202
-argument_list|,
-name|partialResponse
-operator|.
-name|get
-argument_list|(
-name|Message
-operator|.
-name|RESPONSE_CODE
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|verifyBackChannelSend
 argument_list|(
 name|partialBackChannel
