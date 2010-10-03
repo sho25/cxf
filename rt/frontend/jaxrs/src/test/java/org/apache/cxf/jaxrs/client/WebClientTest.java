@@ -127,7 +127,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://foo/bar+%20%2B;a=value+%20?b=bv%2B+"
+literal|"http://foo/bar+%20%2B;a=value+%20?b=bv++"
 argument_list|,
 name|u
 operator|.
