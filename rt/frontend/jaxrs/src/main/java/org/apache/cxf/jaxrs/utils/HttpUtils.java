@@ -489,7 +489,7 @@ specifier|final
 name|String
 name|QUERY_RESERVED_CHARACTERS
 init|=
-literal|"?/+"
+literal|"?/"
 decl_stmt|;
 specifier|private
 name|HttpUtils

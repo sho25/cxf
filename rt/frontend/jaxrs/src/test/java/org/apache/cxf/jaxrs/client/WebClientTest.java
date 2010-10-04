@@ -119,7 +119,7 @@ name|query
 argument_list|(
 literal|"b"
 argument_list|,
-literal|"bv+ "
+literal|"bv+ %2B"
 argument_list|)
 operator|.
 name|getCurrentURI
@@ -127,7 +127,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://foo/bar+%20%2B;a=value+%20?b=bv++"
+literal|"http://foo/bar+%20%2B;a=value+%20?b=bv%2B+%2B"
 argument_list|,
 name|u
 operator|.

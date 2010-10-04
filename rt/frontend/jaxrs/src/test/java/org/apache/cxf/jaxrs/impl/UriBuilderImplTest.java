@@ -1042,7 +1042,7 @@ name|assertEquals
 argument_list|(
 literal|"URI is not built correctly"
 argument_list|,
-literal|"http://bar/a+%20/b%2B%20%20;m=m1%20;m=m2+%20?q=q1+&q=q2+q3%20"
+literal|"http://bar/a+%20/b%2B%20%20;m=m1%20;m=m2+%20?q=q1+&q=q2%2Bq3%20"
 argument_list|,
 name|newUri
 operator|.
@@ -1085,7 +1085,7 @@ name|assertEquals
 argument_list|(
 literal|"URI is not built correctly"
 argument_list|,
-literal|"http://bar/foo+%20%2B?q=a+b%20%2B"
+literal|"http://bar/foo+%20%2B?q=a%2Bb%20%2B"
 argument_list|,
 name|newUri
 operator|.
@@ -1327,7 +1327,7 @@ name|assertEquals
 argument_list|(
 literal|"URI is not built correctly"
 argument_list|,
-literal|"http://bar?q=a+b%20%2B"
+literal|"http://bar?q=a%2Bb%20%2B"
 argument_list|,
 name|newUri
 operator|.
