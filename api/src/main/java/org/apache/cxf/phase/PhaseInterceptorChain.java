@@ -1369,6 +1369,11 @@ argument_list|,
 name|ex
 argument_list|)
 expr_stmt|;
+name|unwind
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 name|boolean
 name|isOneWay
 init|=
@@ -1409,11 +1414,6 @@ name|isOneWay
 argument_list|()
 expr_stmt|;
 block|}
-name|unwind
-argument_list|(
-name|message
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|faultObserver
