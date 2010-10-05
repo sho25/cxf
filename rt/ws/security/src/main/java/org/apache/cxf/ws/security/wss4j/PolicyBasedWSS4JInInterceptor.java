@@ -906,6 +906,16 @@ name|PROPERTIES_CACHE
 init|=
 literal|"ws-security.properties.cache"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|PolicyBasedWSS4JInInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|PolicyBasedWSS4JInInterceptor
+argument_list|()
+decl_stmt|;
 comment|/**      *       */
 specifier|public
 name|PolicyBasedWSS4JInInterceptor

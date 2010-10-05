@@ -3636,11 +3636,9 @@ name|getOutInterceptor
 parameter_list|()
 block|{
 return|return
-operator|(
-operator|new
 name|PolicyBasedWSS4JOutInterceptor
-argument_list|()
-operator|)
+operator|.
+name|INSTANCE
 operator|.
 name|createEndingInterceptor
 argument_list|()

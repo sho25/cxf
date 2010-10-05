@@ -198,9 +198,9 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-operator|new
 name|PolicyBasedWSS4JOutInterceptor
-argument_list|()
+operator|.
+name|INSTANCE
 argument_list|)
 expr_stmt|;
 name|this
@@ -210,9 +210,9 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-operator|new
 name|PolicyBasedWSS4JOutInterceptor
-argument_list|()
+operator|.
+name|INSTANCE
 argument_list|)
 expr_stmt|;
 name|this
@@ -222,9 +222,9 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-operator|new
 name|PolicyBasedWSS4JInInterceptor
-argument_list|()
+operator|.
+name|INSTANCE
 argument_list|)
 expr_stmt|;
 name|this
@@ -234,9 +234,9 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-operator|new
 name|PolicyBasedWSS4JInInterceptor
-argument_list|()
+operator|.
+name|INSTANCE
 argument_list|)
 expr_stmt|;
 block|}

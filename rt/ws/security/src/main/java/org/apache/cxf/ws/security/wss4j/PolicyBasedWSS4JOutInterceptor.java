@@ -406,6 +406,16 @@ argument_list|()
 operator|+
 literal|".DONE"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|PolicyBasedWSS4JOutInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|PolicyBasedWSS4JOutInterceptor
+argument_list|()
+decl_stmt|;
 specifier|private
 name|PolicyBasedWSS4JOutInterceptorInternal
 name|ending
