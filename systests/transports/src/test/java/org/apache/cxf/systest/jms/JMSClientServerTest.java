@@ -1105,7 +1105,7 @@ name|System
 operator|.
 name|getProperty
 argument_list|(
-literal|"activemq.store.dir"
+literal|"org.apache.activemq.default.directory.prefix"
 argument_list|)
 operator|!=
 literal|null
@@ -1115,13 +1115,13 @@ name|props
 operator|.
 name|put
 argument_list|(
-literal|"activemq.store.dir"
+literal|"org.apache.activemq.default.directory.prefix"
 argument_list|,
 name|System
 operator|.
 name|getProperty
 argument_list|(
-literal|"activemq.store.dir"
+literal|"org.apache.activemq.default.directory.prefix"
 argument_list|)
 argument_list|)
 expr_stmt|;
