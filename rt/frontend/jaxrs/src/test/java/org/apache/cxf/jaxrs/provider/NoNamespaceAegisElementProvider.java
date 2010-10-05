@@ -200,10 +200,13 @@ end_comment
 begin_class
 class|class
 name|NoNamespaceAegisElementProvider
+parameter_list|<
+name|T
+parameter_list|>
 extends|extends
 name|AegisElementProvider
 argument_list|<
-name|Object
+name|T
 argument_list|>
 block|{
 comment|/*      * This can't use the cache in AbstractAegisProvider. It could have its own cache.      */
