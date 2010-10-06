@@ -780,6 +780,11 @@ name|policy
 operator|.
 name|normalize
 argument_list|(
+name|engine
+operator|.
+name|getRegistry
+argument_list|()
+argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
@@ -862,6 +867,11 @@ name|policy
 operator|.
 name|normalize
 argument_list|(
+name|engine
+operator|.
+name|getRegistry
+argument_list|()
+argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
