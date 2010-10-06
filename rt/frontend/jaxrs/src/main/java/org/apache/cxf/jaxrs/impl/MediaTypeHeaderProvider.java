@@ -141,7 +141,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|"(([\\w-]+=\"[^\"]*\")|([\\w-]+=[\\w-]+))"
+literal|"(([\\w-]+=\"[^\"]*\")|([\\w-]+=[\\w-/]+))"
 argument_list|)
 decl_stmt|;
 specifier|public
