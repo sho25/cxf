@@ -95,6 +95,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|USERNAME_TOKEN_NO_CALLBACKS
+init|=
+literal|"ws-security.ut.no-callbacks"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CALLBACK_HANDLER
 init|=
 literal|"ws-security.callback-handler"

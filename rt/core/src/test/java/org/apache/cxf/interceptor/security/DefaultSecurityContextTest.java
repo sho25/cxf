@@ -11,11 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|interceptor
 operator|.
 name|security
-operator|.
-name|wss4j
 package|;
 end_package
 

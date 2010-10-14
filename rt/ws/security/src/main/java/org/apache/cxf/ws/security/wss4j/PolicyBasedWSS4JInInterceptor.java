@@ -3194,6 +3194,9 @@ name|doc
 parameter_list|,
 name|Vector
 name|results
+parameter_list|,
+name|boolean
+name|utWithCallbacks
 parameter_list|)
 throws|throws
 name|SOAPException
@@ -3522,6 +3525,11 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|utWithCallbacks
+condition|)
+block|{
 name|WSUsernameTokenPrincipal
 name|princ
 init|=
@@ -3576,6 +3584,7 @@ argument_list|(
 literal|"Password hashing policy not enforced"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -3876,6 +3885,8 @@ argument_list|,
 name|doc
 argument_list|,
 name|results
+argument_list|,
+name|utWithCallbacks
 argument_list|)
 expr_stmt|;
 block|}
