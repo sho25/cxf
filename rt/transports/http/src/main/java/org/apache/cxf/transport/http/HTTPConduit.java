@@ -6155,6 +6155,13 @@ argument_list|,
 name|connection
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|stream
+operator|!=
+literal|null
+condition|)
+block|{
 name|connection
 operator|.
 name|setFixedLengthStreamingMode
@@ -6165,6 +6172,7 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 comment|// Need to set the headers before the trust decision
 comment|// because they are set before the connect().
 name|setURLRequestHeaders
@@ -7528,6 +7536,24 @@ condition|(
 name|cachedStream
 operator|!=
 literal|null
+operator|||
+operator|(
+literal|"GET"
+operator|.
+name|equals
+argument_list|(
+name|connection
+operator|.
+name|getRequestMethod
+argument_list|()
+argument_list|)
+operator|&&
+name|getClient
+argument_list|()
+operator|.
+name|isAutoRedirect
+argument_list|()
+operator|)
 condition|)
 block|{
 if|if
@@ -7540,6 +7566,10 @@ name|Level
 operator|.
 name|FINE
 argument_list|)
+operator|&&
+name|cachedStream
+operator|!=
+literal|null
 condition|)
 block|{
 name|LOG
