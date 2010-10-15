@@ -491,6 +491,21 @@ operator|!=
 name|n
 condition|)
 block|{
+if|if
+condition|(
+name|n
+operator|==
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"0 bytes read in violation of InputStream.read(byte[])"
+argument_list|)
+throw|;
+block|}
 name|output
 operator|.
 name|write
@@ -573,6 +588,21 @@ operator|!=
 name|n
 condition|)
 block|{
+if|if
+condition|(
+name|n
+operator|==
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"0 bytes read in violation of InputStream.read(byte[])"
+argument_list|)
+throw|;
+block|}
 name|output
 operator|.
 name|write
@@ -691,6 +721,21 @@ operator|!=
 name|n
 condition|)
 block|{
+if|if
+condition|(
+name|n
+operator|==
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"0 bytes read in violation of InputStream.read(byte[])"
+argument_list|)
+throw|;
+block|}
 name|buf
 operator|.
 name|append
@@ -779,6 +824,21 @@ operator|!=
 name|n
 condition|)
 block|{
+if|if
+condition|(
+name|n
+operator|==
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"0 bytes read in violation of InputStream.read(byte[])"
+argument_list|)
+throw|;
+block|}
 name|buf
 operator|.
 name|append
