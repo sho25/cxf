@@ -102,10 +102,10 @@ argument_list|()
 operator|.
 name|getAttribute
 argument_list|(
-operator|(
-name|String
-operator|)
 name|key
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 return|;
 block|}
@@ -125,10 +125,10 @@ argument_list|()
 operator|.
 name|setAttribute
 argument_list|(
-operator|(
-name|String
-operator|)
 name|key
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 name|value
 argument_list|)

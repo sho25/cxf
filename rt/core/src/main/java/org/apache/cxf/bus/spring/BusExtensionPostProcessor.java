@@ -285,6 +285,17 @@ name|bus
 operator|.
 name|setExtension
 argument_list|(
+name|context
+argument_list|,
+name|ApplicationContext
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|setExtension
+argument_list|(
 operator|new
 name|SpringBeanLocator
 argument_list|(

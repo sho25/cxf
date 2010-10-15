@@ -114,7 +114,6 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
-specifier|final
 name|Factory
 name|factory
 decl_stmt|;
@@ -131,6 +130,25 @@ operator|.
 name|factory
 operator|=
 name|factory
+expr_stmt|;
+block|}
+specifier|public
+name|FactoryInvoker
+parameter_list|()
+block|{     }
+specifier|public
+name|void
+name|setFactory
+parameter_list|(
+name|Factory
+name|f
+parameter_list|)
+block|{
+name|this
+operator|.
+name|factory
+operator|=
+name|f
 expr_stmt|;
 block|}
 specifier|public
