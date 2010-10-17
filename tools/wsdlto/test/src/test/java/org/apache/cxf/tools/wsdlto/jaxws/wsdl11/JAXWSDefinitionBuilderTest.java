@@ -434,6 +434,8 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+operator|+
+literal|" is an HTTPAddress"
 argument_list|,
 name|port
 operator|.
