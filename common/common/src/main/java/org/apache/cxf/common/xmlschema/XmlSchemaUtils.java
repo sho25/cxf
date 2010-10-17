@@ -572,47 +572,6 @@ specifier|private
 name|XmlSchemaUtils
 parameter_list|()
 block|{     }
-specifier|private
-specifier|static
-name|void
-name|setNameFromQName
-parameter_list|(
-name|XmlSchemaElement
-name|element
-parameter_list|,
-name|QName
-name|name
-parameter_list|)
-block|{
-if|if
-condition|(
-name|name
-operator|==
-literal|null
-condition|)
-block|{
-name|element
-operator|.
-name|setName
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
-name|element
-operator|.
-name|setName
-argument_list|(
-name|name
-operator|.
-name|getLocalPart
-argument_list|()
-argument_list|)
-expr_stmt|;
-block|}
-block|}
 comment|/**      * Wrapper around XmlSchemaElement.setName that checks for inconsistency with      * refName.      * @param element      * @param name      */
 specifier|public
 specifier|static
@@ -795,13 +754,6 @@ name|name
 argument_list|)
 expr_stmt|;
 comment|// cxf conventionally keeps something in the name slot.
-name|setNameFromQName
-argument_list|(
-name|element
-argument_list|,
-name|name
-argument_list|)
-expr_stmt|;
 block|}
 comment|/**      * Return true if a simple type is a straightforward XML Schema representation of an enumeration.      * If we discover schemas that are 'enum-like' with more complex structures, we might      * make this deal with them.      * @param type Simple type, possible an enumeration.      * @return true for an enumeration.      */
 specifier|public
