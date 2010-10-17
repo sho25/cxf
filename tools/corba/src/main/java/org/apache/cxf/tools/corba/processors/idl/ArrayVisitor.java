@@ -1008,6 +1008,8 @@ operator|new
 name|XmlSchemaComplexType
 argument_list|(
 name|schema
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 name|complexType
@@ -1034,7 +1036,11 @@ name|element
 init|=
 operator|new
 name|XmlSchemaElement
-argument_list|()
+argument_list|(
+name|schema
+argument_list|,
+literal|false
+argument_list|)
 decl_stmt|;
 name|element
 operator|.

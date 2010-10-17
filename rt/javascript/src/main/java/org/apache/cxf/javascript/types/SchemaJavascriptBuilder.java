@@ -23,7 +23,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Iterator
+name|List
 import|;
 end_import
 
@@ -33,7 +33,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|Map
 import|;
 end_import
 
@@ -315,7 +315,7 @@ name|commons
 operator|.
 name|schema
 operator|.
-name|XmlSchemaAttribute
+name|XmlSchemaAttributeOrGroupRef
 import|;
 end_import
 
@@ -395,38 +395,6 @@ name|commons
 operator|.
 name|schema
 operator|.
-name|XmlSchemaObjectCollection
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|commons
-operator|.
-name|schema
-operator|.
-name|XmlSchemaObjectTable
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|commons
-operator|.
-name|schema
-operator|.
 name|XmlSchemaSimpleType
 import|;
 end_import
@@ -448,7 +416,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Generate Javascript for a schema, and provide information needed for the  * service builder. As of this pass, there is no support for non-sequence types  * or for attribute mappings.  */
+comment|/**  * Generate Javascript for a schema, and provide information needed for the service builder. As of this pass,  * there is no support for non-sequence types or for attribute mappings.  */
 end_comment
 
 begin_class
@@ -488,7 +456,7 @@ specifier|private
 name|NamespacePrefixAccumulator
 name|prefixAccumulator
 decl_stmt|;
-comment|//private SchemaInfo schemaInfo;
+comment|// private SchemaInfo schemaInfo;
 comment|// In general, I (bimargulies) hate fields that are temporary communications
 comment|// between members of a class. However, given the style restrictions on the
 comment|// number of parameters, it's the least of the evils.
@@ -668,7 +636,12 @@ argument_list|(
 literal|"\n//\n"
 argument_list|)
 expr_stmt|;
-name|XmlSchemaObjectTable
+name|Map
+argument_list|<
+name|QName
+argument_list|,
+name|XmlSchemaType
+argument_list|>
 name|schemaTypes
 init|=
 name|schema
@@ -676,49 +649,35 @@ operator|.
 name|getSchemaTypes
 argument_list|()
 decl_stmt|;
-name|Iterator
-name|namesIterator
-init|=
+for|for
+control|(
+name|Map
+operator|.
+name|Entry
+argument_list|<
+name|QName
+argument_list|,
+name|XmlSchemaType
+argument_list|>
+name|e
+range|:
 name|schemaTypes
 operator|.
-name|getNames
+name|entrySet
 argument_list|()
-decl_stmt|;
-while|while
-condition|(
-name|namesIterator
-operator|.
-name|hasNext
-argument_list|()
-condition|)
+control|)
 block|{
-name|QName
-name|name
+name|XmlSchemaType
+name|type
 init|=
-operator|(
-name|QName
-operator|)
-name|namesIterator
+name|e
 operator|.
-name|next
+name|getValue
 argument_list|()
-decl_stmt|;
-name|XmlSchemaObject
-name|xmlSchemaObject
-init|=
-operator|(
-name|XmlSchemaObject
-operator|)
-name|schemaTypes
-operator|.
-name|getItem
-argument_list|(
-name|name
-argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|xmlSchemaObject
+name|type
 operator|instanceof
 name|XmlSchemaComplexType
 condition|)
@@ -731,7 +690,7 @@ init|=
 operator|(
 name|XmlSchemaComplexType
 operator|)
-name|xmlSchemaObject
+name|type
 decl_stmt|;
 if|if
 condition|(
@@ -807,7 +766,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|xmlSchemaObject
+name|type
 operator|instanceof
 name|XmlSchemaSimpleType
 condition|)
@@ -818,7 +777,7 @@ init|=
 operator|(
 name|XmlSchemaSimpleType
 operator|)
-name|xmlSchemaObject
+name|type
 decl_stmt|;
 if|if
 condition|(
@@ -894,75 +853,37 @@ block|}
 block|}
 block|}
 block|}
-comment|// now add in global elements with anonymous types.
-name|schemaTypes
-operator|=
+for|for
+control|(
+name|Map
+operator|.
+name|Entry
+argument_list|<
+name|QName
+argument_list|,
+name|XmlSchemaElement
+argument_list|>
+name|e
+range|:
 name|schema
 operator|.
 name|getElements
 argument_list|()
-expr_stmt|;
-name|namesIterator
-operator|=
-name|schemaTypes
 operator|.
-name|getNames
+name|entrySet
 argument_list|()
-expr_stmt|;
-while|while
-condition|(
-name|namesIterator
-operator|.
-name|hasNext
-argument_list|()
-condition|)
-block|{
-name|QName
-name|name
-init|=
-operator|(
-name|QName
-operator|)
-name|namesIterator
-operator|.
-name|next
-argument_list|()
-decl_stmt|;
-name|XmlSchemaObject
-name|xmlSchemaObject
-init|=
-operator|(
-name|XmlSchemaObject
-operator|)
-name|schemaTypes
-operator|.
-name|getItem
-argument_list|(
-name|name
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|xmlSchemaObject
-operator|instanceof
-name|XmlSchemaElement
-condition|)
-block|{
-comment|// the
-comment|// alternative
-comment|// is too wierd
-comment|// to
-comment|// contemplate.
-try|try
+control|)
 block|{
 name|XmlSchemaElement
 name|element
 init|=
-operator|(
-name|XmlSchemaElement
-operator|)
-name|xmlSchemaObject
+name|e
+operator|.
+name|getValue
+argument_list|()
 decl_stmt|;
+try|try
+block|{
 if|if
 condition|(
 name|element
@@ -1136,7 +1057,6 @@ block|{
 continue|continue;
 comment|// it could be empty, but the style checker
 comment|// would complain.
-block|}
 block|}
 block|}
 name|String
@@ -1833,7 +1753,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Produce a serializer function for a type. These functions emit the      * surrounding element XML if the caller supplies an XML element name. It's      * not quite as simple as that, though. The element name may need namespace      * qualification, and this function will add more namespace prefixes as      * needed.      *       * @param type      * @return      */
+comment|/**      * Produce a serializer function for a type. These functions emit the surrounding element XML if the      * caller supplies an XML element name. It's not quite as simple as that, though. The element name may      * need namespace qualification, and this function will add more namespace prefixes as needed.      *      * @param type      * @return      */
 specifier|public
 name|void
 name|complexTypeSerializerFunction
@@ -2120,7 +2040,15 @@ name|String
 name|string
 parameter_list|)
 block|{
-name|XmlSchemaObjectCollection
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
+name|List
+argument_list|<
+name|XmlSchemaAttributeOrGroupRef
+argument_list|>
 name|attributes
 init|=
 name|type
@@ -2128,46 +2056,9 @@ operator|.
 name|getAttributes
 argument_list|()
 decl_stmt|;
-for|for
-control|(
-name|int
-name|ax
-init|=
-literal|0
-init|;
-name|ax
-operator|<
-name|attributes
-operator|.
-name|getCount
-argument_list|()
-condition|;
-name|ax
-operator|++
-control|)
-block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
 comment|// work in progress.
-name|XmlSchemaAttribute
-name|attribute
-init|=
-operator|(
-name|XmlSchemaAttribute
-operator|)
-name|attributes
-operator|.
-name|getItem
-argument_list|(
-name|ax
-argument_list|)
-decl_stmt|;
 block|}
-block|}
-comment|/**      * Build the serialization code for a complex type. At the top level, this      * operates on single items, so it does not pay attention to minOccurs and      * maxOccurs. However, as it works through the sequence, it manages optional      * elements and arrays.      *       * @param type      * @param elementPrefix      * @param bodyNamespaceURIs      * @return      */
+comment|/**      * Build the serialization code for a complex type. At the top level, this operates on single items, so it      * does not pay attention to minOccurs and maxOccurs. However, as it works through the sequence, it      * manages optional elements and arrays.      *      * @param type      * @param elementPrefix      * @param bodyNamespaceURIs      * @return      */
 specifier|protected
 name|void
 name|complexTypeSerializerBody
@@ -2292,7 +2183,7 @@ name|xmlSchemaCollection
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Generate a JavaScript function that takes an element for a complex type      * and walks through its children using them to fill in the values for a      * JavaScript object.      *       * @param type schema type for the process      * @return the string contents of the JavaScript.      */
+comment|/**      * Generate a JavaScript function that takes an element for a complex type and walks through its children      * using them to fill in the values for a JavaScript object.      *      * @param type schema type for the process      * @return the string contents of the JavaScript.      */
 specifier|public
 name|void
 name|domDeserializerFunction

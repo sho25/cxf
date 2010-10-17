@@ -261,7 +261,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getCount
+name|size
 argument_list|()
 argument_list|)
 expr_stmt|;

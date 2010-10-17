@@ -934,7 +934,7 @@ name|corbaOp
 argument_list|)
 expr_stmt|;
 block|}
-comment|/** Generate a wrapped doc style XmlSchemaElement containing one element.      *       * I.e.: generateWrappedDocElement(null, "foo", "bar");      *<xs:element name="foo">      *<xs:complexType>      *<xs:sequence>      *</xs:sequence>      *</xs:complexType>      *</xs:element>      *       * i.e.: generateWrappedDocElement(type, "foo", "bar");      *<xs:element name="foo">      *<xs:complexType>      *<xs:sequence>      *<xs:element name="bar" type="xs:short">      *</xs:element>      *</xs:sequence>      *</xs:complexType>      *</xs:element>       *       * @param typeNode is the type of the element wrapped in the sequence, no element is created if null.      * @param name is the name of the wrapping element.      * @param paramName is the name of the  wrapping element.      * @return the wrapping element.      */
+comment|/** Generate a wrapped doc style XmlSchemaElement containing one element.      *      * I.e.: generateWrappedDocElement(null, "foo", "bar");      *<xs:element name="foo">      *<xs:complexType>      *<xs:sequence>      *</xs:sequence>      *</xs:complexType>      *</xs:element>      *      * i.e.: generateWrappedDocElement(type, "foo", "bar");      *<xs:element name="foo">      *<xs:complexType>      *<xs:sequence>      *<xs:element name="bar" type="xs:short">      *</xs:element>      *</xs:sequence>      *</xs:complexType>      *</xs:element>       *      * @param typeNode is the type of the element wrapped in the sequence, no element is created if null.      * @param name is the name of the wrapping element.      * @param paramName is the name of the  wrapping element.      * @return the wrapping element.      */
 specifier|private
 name|XmlSchemaElement
 name|generateWrappedDocElement
@@ -954,7 +954,11 @@ name|element
 init|=
 operator|new
 name|XmlSchemaElement
-argument_list|()
+argument_list|(
+name|schema
+argument_list|,
+literal|false
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -1102,6 +1106,8 @@ operator|new
 name|XmlSchemaComplexType
 argument_list|(
 name|schema
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 name|complex
@@ -1116,29 +1122,17 @@ name|result
 init|=
 operator|new
 name|XmlSchemaElement
-argument_list|()
+argument_list|(
+name|schema
+argument_list|,
+literal|true
+argument_list|)
 decl_stmt|;
 name|result
 operator|.
 name|setName
 argument_list|(
 name|name
-argument_list|)
-expr_stmt|;
-name|result
-operator|.
-name|setQName
-argument_list|(
-operator|new
-name|QName
-argument_list|(
-name|definition
-operator|.
-name|getTargetNamespace
-argument_list|()
-argument_list|,
-name|name
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|result
@@ -1567,7 +1561,7 @@ return|return
 name|param
 return|;
 block|}
-comment|/** Generates a corba:operation in the corba:binding container within a wsdl:binding.      *       * Only one (or none) corba parameter and only one (or none) corba return parameter are supported.      *       * @param op is the wsdl operation to bind.      * @param param is the corba parameter, none if null.      * @param arg is the corba return parameter, none if null.      * @return the generated corba:operation.      */
+comment|/** Generates a corba:operation in the corba:binding container within a wsdl:binding.      *      * Only one (or none) corba parameter and only one (or none) corba return parameter are supported.      *      * @param op is the wsdl operation to bind.      * @param param is the corba parameter, none if null.      * @param arg is the corba return parameter, none if null.      * @return the generated corba:operation.      */
 specifier|private
 name|OperationType
 name|generateCorbaOperation

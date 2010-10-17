@@ -925,7 +925,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getCount
+name|size
 argument_list|()
 condition|;
 name|i
@@ -943,7 +943,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getItem
+name|get
 argument_list|(
 name|i
 argument_list|)

@@ -516,7 +516,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Serializes JavaBeans.  *   * There's a really dangerous coding convention in this class, maintainers beware.  * There are two constructor. The no-args constructor defers, until later,  * the construction of a BeanTypeInfo. The one-arg constructor gets the BeanTypeInfo passed as a parameter.  * Aegis doesn't have any uniform discipline of 'construct, set properties, initialize'. Instead,  * each piece of code that uses the type info needs to call getTypeInfo() instead of referencing the  * 'info' field.   */
+comment|/**  * Serializes JavaBeans.  *  * There's a really dangerous coding convention in this class, maintainers beware.  * There are two constructor. The no-args constructor defers, until later,  * the construction of a BeanTypeInfo. The one-arg constructor gets the BeanTypeInfo passed as a parameter.  * Aegis doesn't have any uniform discipline of 'construct, set properties, initialize'. Instead,  * each piece of code that uses the type info needs to call getTypeInfo() instead of referencing the  * 'info' field.  */
 end_comment
 
 begin_class
@@ -538,7 +538,7 @@ specifier|private
 name|boolean
 name|isException
 decl_stmt|;
-comment|/**      * Construct a type info. Caller must pass in the type class via       * setTypeClass later.      */
+comment|/**      * Construct a type info. Caller must pass in the type class via      * setTypeClass later.      */
 specifier|public
 name|BeanType
 parameter_list|()
@@ -1775,7 +1775,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * To avoid double-writing xsi:type attributes, ObjectType uses this special entrypoint.      *       * @param object      * @param writer      * @param context      * @param wroteXsiType      */
+comment|/**      * To avoid double-writing xsi:type attributes, ObjectType uses this special entrypoint.      *      * @param object      * @param writer      * @param context      * @param wroteXsiType      */
 name|void
 name|writeObjectFromObjectType
 parameter_list|(
@@ -2504,7 +2504,7 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/*              * Here we have a semi-giant mess. If a parameter has a minOccurs> 1, it ends              * up in the type info. However, it really got used in the array type.              * All we really want to do here is manage 'optional' elements. If we               * ever implement flat arrays, this will change. For now, we ignore              * maxOccurs and we only look for 0's in the minOccurs.               */
+comment|/*              * Here we have a semi-giant mess. If a parameter has a minOccurs> 1, it ends              * up in the type info. However, it really got used in the array type.              * All we really want to do here is manage 'optional' elements. If we              * ever implement flat arrays, this will change. For now, we ignore              * maxOccurs and we only look for 0's in the minOccurs.              */
 name|long
 name|minOccurs
 init|=
@@ -2550,7 +2550,10 @@ else|else
 block|{
 name|element
 operator|.
-name|setRefName
+name|getRef
+argument_list|()
+operator|.
+name|setTargetQName
 argument_list|(
 name|type
 operator|.
@@ -2582,7 +2585,7 @@ name|initTypeClass
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * We need to write a complex type schema for Beans, so return true.      *       * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
+comment|/**      * We need to write a complex type schema for Beans, so return true.      *      * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
 annotation|@
 name|Override
 specifier|public
@@ -3255,6 +3258,8 @@ operator|new
 name|XmlSchemaComplexType
 argument_list|(
 name|root
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|complex
@@ -3266,23 +3271,6 @@ argument_list|()
 operator|.
 name|getLocalPart
 argument_list|()
-argument_list|)
-expr_stmt|;
-name|root
-operator|.
-name|addType
-argument_list|(
-name|complex
-argument_list|)
-expr_stmt|;
-name|root
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|complex
 argument_list|)
 expr_stmt|;
 name|AegisType
@@ -3474,7 +3462,11 @@ name|element
 init|=
 operator|new
 name|XmlSchemaElement
-argument_list|()
+argument_list|(
+name|root
+argument_list|,
+literal|false
+argument_list|)
 decl_stmt|;
 name|element
 operator|.
@@ -3705,7 +3697,11 @@ name|attribute
 init|=
 operator|new
 name|XmlSchemaAttribute
-argument_list|()
+argument_list|(
+name|root
+argument_list|,
+literal|false
+argument_list|)
 decl_stmt|;
 name|complex
 operator|.
@@ -3789,12 +3785,9 @@ name|isExtensibleAttributes
 argument_list|()
 condition|)
 block|{
-name|sequence
+name|complex
 operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
+name|setAnyAttribute
 argument_list|(
 operator|new
 name|XmlSchemaAnyAttribute

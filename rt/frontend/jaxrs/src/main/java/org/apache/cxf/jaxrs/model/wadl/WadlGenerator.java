@@ -1210,7 +1210,7 @@ decl_stmt|;
 specifier|public
 name|WadlGenerator
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|WadlGenerator
 parameter_list|(
@@ -5319,8 +5319,6 @@ argument_list|(
 name|d
 argument_list|,
 name|systemId
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -6993,10 +6991,8 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getCount
+name|isEmpty
 argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 continue|continue;

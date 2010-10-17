@@ -734,11 +734,9 @@ block|{
 name|XmlSchemaForm
 name|form
 init|=
-operator|new
 name|XmlSchemaForm
-argument_list|(
-literal|"qualified"
-argument_list|)
+operator|.
+name|QUALIFIED
 decl_stmt|;
 name|schema
 operator|.
@@ -2249,7 +2247,10 @@ name|schemaList
 index|[
 name|i
 index|]
+argument_list|,
+literal|false
 argument_list|)
+block|{ }
 decl_stmt|;
 name|anyType
 operator|.

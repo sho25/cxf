@@ -273,6 +273,8 @@ operator|new
 name|XmlSchemaSimpleType
 argument_list|(
 name|schema
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|enumSchemaSimpleType
@@ -437,24 +439,6 @@ name|getNextSibling
 argument_list|()
 expr_stmt|;
 block|}
-comment|// add schemaType
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|enumSchemaSimpleType
-argument_list|)
-expr_stmt|;
-name|schema
-operator|.
-name|addType
-argument_list|(
-name|enumSchemaSimpleType
-argument_list|)
-expr_stmt|;
 comment|// add corbaType
 name|typeMap
 operator|.

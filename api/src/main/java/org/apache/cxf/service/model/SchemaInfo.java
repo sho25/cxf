@@ -671,9 +671,6 @@ operator|.
 name|getElementFormDefault
 argument_list|()
 operator|.
-name|getValue
-argument_list|()
-operator|.
 name|equals
 argument_list|(
 name|XmlSchemaForm
@@ -686,9 +683,6 @@ operator|=
 name|schema
 operator|.
 name|getAttributeFormDefault
-argument_list|()
-operator|.
-name|getValue
 argument_list|()
 operator|.
 name|equals

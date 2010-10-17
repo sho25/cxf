@@ -387,7 +387,7 @@ name|commons
 operator|.
 name|schema
 operator|.
-name|XmlSchemaGroupBase
+name|XmlSchemaObject
 import|;
 end_import
 
@@ -403,7 +403,23 @@ name|commons
 operator|.
 name|schema
 operator|.
-name|XmlSchemaObject
+name|XmlSchemaParticle
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|commons
+operator|.
+name|schema
+operator|.
+name|XmlSchemaSequence
 import|;
 end_import
 
@@ -2393,7 +2409,10 @@ operator|)
 name|schemaType
 operator|)
 operator|.
-name|getRefName
+name|getRef
+argument_list|()
+operator|.
+name|getTargetQName
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -2415,28 +2434,35 @@ name|XmlSchemaComplexType
 operator|)
 name|stype
 decl_stmt|;
-name|XmlSchemaGroupBase
+name|XmlSchemaParticle
 name|group
 init|=
-operator|(
-name|XmlSchemaGroupBase
-operator|)
 name|ctype
 operator|.
 name|getParticle
 argument_list|()
 decl_stmt|;
+comment|/* This code seems to think that we're guaranteed a sequence here */
+name|XmlSchemaSequence
+name|seq
+init|=
+operator|(
+name|XmlSchemaSequence
+operator|)
+name|group
+decl_stmt|;
+comment|/* and an element in it, too */
 name|el
 operator|=
 operator|(
 name|XmlSchemaElement
 operator|)
-name|group
+name|seq
 operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getItem
+name|get
 argument_list|(
 literal|0
 argument_list|)

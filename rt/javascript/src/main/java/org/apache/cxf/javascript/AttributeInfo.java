@@ -215,26 +215,6 @@ name|XmlSchemaUse
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|commons
-operator|.
-name|schema
-operator|.
-name|constants
-operator|.
-name|Constants
-operator|.
-name|BlockConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * All the information needed to create the JavaScript for an Xml Schema attribute  * or xs:anyAttribute.  */
 end_comment
@@ -310,7 +290,7 @@ specifier|private
 name|AttributeInfo
 parameter_list|()
 block|{     }
-comment|/**      * Create an elementInfo that stores information about a global, named,      * element.      *       * @param attribute the element      * @param currentSchema the schema it came from.      * @param schemaCollection the collection of all schemas.      * @param prefixAccumulator the accumulator that assigns prefixes.      * @return      */
+comment|/**      * Create an elementInfo that stores information about a global, named,      * element.      *      * @param attribute the element      * @param currentSchema the schema it came from.      * @param schemaCollection the collection of all schemas.      * @param prefixAccumulator the accumulator that assigns prefixes.      * @return      */
 specifier|public
 specifier|static
 name|AttributeInfo
@@ -365,7 +345,7 @@ return|return
 name|attributeInfo
 return|;
 block|}
-comment|/**      * Fill in an AttributeInfo for an attribute or anyAttribute from a sequence.      *       * @param sequenceElement      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @return      */
+comment|/**      * Fill in an AttributeInfo for an attribute or anyAttribute from a sequence.      *      * @param sequenceElement      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @return      */
 specifier|public
 specifier|static
 name|AttributeInfo
@@ -439,55 +419,24 @@ if|if
 condition|(
 name|attribute
 operator|.
-name|getRefName
+name|getRef
+argument_list|()
+operator|.
+name|getTarget
 argument_list|()
 operator|!=
 literal|null
 condition|)
 block|{
-name|XmlSchemaAttribute
-name|refAttribute
-init|=
-name|schemaCollection
-operator|.
-name|getAttributeByQName
-argument_list|(
-name|attribute
-operator|.
-name|getRefName
-argument_list|()
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|refAttribute
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|UnsupportedConstruct
-argument_list|(
-name|LOG
-argument_list|,
-literal|"ATTRIBUTE_DANGLING_REFERENCE"
-argument_list|,
-name|attribute
-operator|.
-name|getQName
-argument_list|()
-argument_list|,
-name|attribute
-operator|.
-name|getRefName
-argument_list|()
-argument_list|)
-throw|;
-block|}
 name|realAnnotated
 operator|=
-name|refAttribute
+name|attribute
+operator|.
+name|getRef
+argument_list|()
+operator|.
+name|getTarget
+argument_list|()
 expr_stmt|;
 name|attributeInfo
 operator|.
@@ -535,13 +484,9 @@ name|attributeInfo
 operator|.
 name|use
 operator|=
-operator|new
 name|XmlSchemaUse
-argument_list|(
-name|BlockConstants
 operator|.
 name|OPTIONAL
-argument_list|)
 expr_stmt|;
 block|}
 else|else
@@ -795,13 +740,9 @@ name|attributeInfo
 operator|.
 name|use
 operator|=
-operator|new
 name|XmlSchemaUse
-argument_list|(
-name|BlockConstants
 operator|.
 name|OPTIONAL
-argument_list|)
 expr_stmt|;
 block|}
 block|}
@@ -1083,7 +1024,7 @@ return|return
 name|anyType
 return|;
 block|}
-comment|/**      * *      *       * @return Returns the defaultValue.      */
+comment|/**      * *      *      * @return Returns the defaultValue.      */
 specifier|public
 name|String
 name|getDefaultValue
@@ -1108,7 +1049,7 @@ return|return
 name|defaultValue
 return|;
 block|}
-comment|/**      * True if this describes a global, named, attribute.      *       * @return      */
+comment|/**      * True if this describes a global, named, attribute.      *      * @return      */
 specifier|public
 name|boolean
 name|isGlobal
@@ -1171,13 +1112,9 @@ name|use
 operator|.
 name|equals
 argument_list|(
-operator|new
 name|XmlSchemaUse
-argument_list|(
-name|BlockConstants
 operator|.
 name|REQUIRED
-argument_list|)
 argument_list|)
 return|;
 block|}

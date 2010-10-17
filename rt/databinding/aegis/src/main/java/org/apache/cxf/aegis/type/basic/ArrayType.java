@@ -314,7 +314,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An ArrayType.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * An ArrayType.  *  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
 end_comment
 
 begin_class
@@ -431,7 +431,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/*      * This version is not called for the flat case.       */
+comment|/*      * This version is not called for the flat case.      */
 annotation|@
 name|Override
 specifier|public
@@ -1554,7 +1554,7 @@ name|getNamespaceURI
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*           * This is not the right name in the 'flat' case. In the flat case,          * we need the element name that would have been attached          * one level out.          */
+comment|/*          * This is not the right name in the 'flat' case. In the flat case,          * we need the element name that would have been attached          * one level out.          */
 name|String
 name|name
 decl_stmt|;
@@ -2406,6 +2406,8 @@ operator|new
 name|XmlSchemaComplexType
 argument_list|(
 name|root
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|complex
@@ -2417,23 +2419,6 @@ argument_list|()
 operator|.
 name|getLocalPart
 argument_list|()
-argument_list|)
-expr_stmt|;
-name|root
-operator|.
-name|addType
-argument_list|(
-name|complex
-argument_list|)
-expr_stmt|;
-name|root
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|complex
 argument_list|)
 expr_stmt|;
 name|XmlSchemaSequence
@@ -2461,7 +2446,11 @@ name|element
 init|=
 operator|new
 name|XmlSchemaElement
-argument_list|()
+argument_list|(
+name|root
+argument_list|,
+literal|false
+argument_list|)
 decl_stmt|;
 name|element
 operator|.
@@ -2529,7 +2518,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Since both an Array and a List can have the same type definition, double check that there isn't already      * a defined type already.      *       * @param root      * @return      */
+comment|/**      * Since both an Array and a List can have the same type definition, double check that there isn't already      * a defined type already.      *      * @param root      * @return      */
 specifier|private
 name|boolean
 name|hasDefinedArray
@@ -2553,7 +2542,7 @@ operator|!=
 literal|null
 return|;
 block|}
-comment|/**      * We need to write a complex type schema for Beans, so return true.      *       * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
+comment|/**      * We need to write a complex type schema for Beans, so return true.      *      * @see org.apache.cxf.aegis.type.AegisType#isComplex()      */
 annotation|@
 name|Override
 specifier|public
@@ -2625,7 +2614,7 @@ return|return
 name|deps
 return|;
 block|}
-comment|/**      * Get the<code>AegisType</code> of the elements in the array.      *       * @return      */
+comment|/**      * Get the<code>AegisType</code> of the elements in the array.      *      * @return      */
 specifier|public
 name|AegisType
 name|getComponentType

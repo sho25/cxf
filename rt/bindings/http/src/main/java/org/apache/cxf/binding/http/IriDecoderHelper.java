@@ -1223,16 +1223,10 @@ argument_list|()
 operator|.
 name|getElementFormDefault
 argument_list|()
-operator|.
-name|getValue
-argument_list|()
-operator|.
-name|equals
-argument_list|(
+operator|==
 name|XmlSchemaForm
 operator|.
 name|UNQUALIFIED
-argument_list|)
 return|;
 block|}
 block|}
@@ -1241,7 +1235,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Create a dom document conformant with the given schema element with the      * input parameters.      *       * @param element      * @param params      * @return      */
+comment|/**      * Create a dom document conformant with the given schema element with the      * input parameters.      *      * @param element      * @param params      * @return      */
 specifier|public
 specifier|static
 name|Document
@@ -1528,7 +1522,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getCount
+name|size
 argument_list|()
 condition|;
 name|i
@@ -1546,7 +1540,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getItem
+name|get
 argument_list|(
 name|i
 argument_list|)
@@ -1963,7 +1957,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getCount
+name|size
 argument_list|()
 condition|;
 name|i
@@ -1981,7 +1975,7 @@ operator|.
 name|getItems
 argument_list|()
 operator|.
-name|getItem
+name|get
 argument_list|(
 name|i
 argument_list|)

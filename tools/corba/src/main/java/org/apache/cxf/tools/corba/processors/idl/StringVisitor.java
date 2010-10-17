@@ -517,6 +517,8 @@ operator|new
 name|XmlSchemaSimpleType
 argument_list|(
 name|schema
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|simpleType
@@ -577,24 +579,6 @@ operator|.
 name|setContent
 argument_list|(
 name|restriction
-argument_list|)
-expr_stmt|;
-comment|// add schemaType
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|simpleType
-argument_list|)
-expr_stmt|;
-name|schema
-operator|.
-name|addType
-argument_list|(
-name|simpleType
 argument_list|)
 expr_stmt|;
 name|setSchemaType
@@ -785,6 +769,8 @@ operator|new
 name|XmlSchemaSimpleType
 argument_list|(
 name|schema
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 name|simpleType

@@ -382,6 +382,8 @@ operator|new
 name|XmlSchemaSimpleType
 argument_list|(
 name|schema
+argument_list|,
+literal|false
 argument_list|)
 decl_stmt|;
 name|XmlSchemaSimpleTypeRestriction

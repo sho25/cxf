@@ -33,6 +33,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -167,7 +177,7 @@ name|commons
 operator|.
 name|schema
 operator|.
-name|XmlSchemaObjectCollection
+name|XmlSchemaFacet
 import|;
 end_import
 
@@ -368,6 +378,8 @@ operator|new
 name|XmlSchemaSimpleType
 argument_list|(
 name|root
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|simple
@@ -379,23 +391,6 @@ argument_list|()
 operator|.
 name|getLocalPart
 argument_list|()
-argument_list|)
-expr_stmt|;
-name|root
-operator|.
-name|addType
-argument_list|(
-name|simple
-argument_list|)
-expr_stmt|;
-name|root
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|simple
 argument_list|)
 expr_stmt|;
 name|XmlSchemaSimpleTypeRestriction
@@ -431,7 +426,10 @@ operator|.
 name|getEnumConstants
 argument_list|()
 decl_stmt|;
-name|XmlSchemaObjectCollection
+name|List
+argument_list|<
+name|XmlSchemaFacet
+argument_list|>
 name|facets
 init|=
 name|restriction

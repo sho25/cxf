@@ -696,7 +696,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * CXF databinding object for Aegis. By default, this creates an AegisContext object. To customize the  * behavior of the binding, an application should create its own AegisContext object and pass it to  * {@link #setAegisContext(AegisContext)}<i>before</i> any call to {@link #initialize(Service)}. That does  * not require special arrangements; the service factories do not call {{@link #initialize(Service)} until  * after the application passes the data binding into the factory. This class adds root classes to the context  * based on the SEI and implementation.  *   * @see org.apache.cxf.aegis.AegisContext  */
+comment|/**  * CXF databinding object for Aegis. By default, this creates an AegisContext object. To customize the  * behavior of the binding, an application should create its own AegisContext object and pass it to  * {@link #setAegisContext(AegisContext)}<i>before</i> any call to {@link #initialize(Service)}. That does  * not require special arrangements; the service factories do not call {{@link #initialize(Service)} until  * after the application passes the data binding into the factory. This class adds root classes to the context  * based on the SEI and implementation.  *  * @see org.apache.cxf.aegis.AegisContext  */
 end_comment
 
 begin_class
@@ -2811,26 +2811,18 @@ name|schema
 operator|.
 name|setElementFormDefault
 argument_list|(
-operator|new
-name|XmlSchemaForm
-argument_list|(
 name|XmlSchemaForm
 operator|.
 name|QUALIFIED
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|schema
 operator|.
 name|setAttributeFormDefault
 argument_list|(
-operator|new
-name|XmlSchemaForm
-argument_list|(
 name|XmlSchemaForm
 operator|.
 name|QUALIFIED
-argument_list|)
 argument_list|)
 expr_stmt|;
 for|for

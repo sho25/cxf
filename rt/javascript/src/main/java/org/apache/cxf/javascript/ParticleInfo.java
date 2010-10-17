@@ -285,7 +285,7 @@ specifier|private
 name|ParticleInfo
 parameter_list|()
 block|{     }
-comment|/**      * Create an elementInfo that stores information about a global, named,      * element.      *       * @param element the element      * @param currentSchema the schema it came from.      * @param schemaCollection the collection of all schemas.      * @param prefixAccumulator the accumulator that assigns prefixes.      * @return      */
+comment|/**      * Create an elementInfo that stores information about a global, named,      * element.      *      * @param element the element      * @param currentSchema the schema it came from.      * @param schemaCollection the collection of all schemas.      * @param prefixAccumulator the accumulator that assigns prefixes.      * @return      */
 specifier|public
 specifier|static
 name|ParticleInfo
@@ -367,7 +367,7 @@ return|return
 name|elementInfo
 return|;
 block|}
-comment|/**      * Create element information for a part element. For a part, the JavaScript      * and Element names are calculated in advance, and the element itself might      * be null! In that case, the minOccurs and maxOccurs are conventional. Note      * that in some cases the code in ServiceJavascriptBuilder uses a local      * element (or xa:any) from inside the part element, instead of the part      * element itself.      *       * @param element the element, or null      * @param schemaCollection the schema collection, for resolving types.      * @param javascriptName javascript variable name      * @param xmlElementName xml element string      * @return      */
+comment|/**      * Create element information for a part element. For a part, the JavaScript      * and Element names are calculated in advance, and the element itself might      * be null! In that case, the minOccurs and maxOccurs are conventional. Note      * that in some cases the code in ServiceJavascriptBuilder uses a local      * element (or xa:any) from inside the part element, instead of the part      * element itself.      *      * @param element the element, or null      * @param schemaCollection the schema collection, for resolving types.      * @param javascriptName javascript variable name      * @param xmlElementName xml element string      * @return      */
 specifier|public
 specifier|static
 name|ParticleInfo
@@ -480,7 +480,7 @@ return|return
 name|elementInfo
 return|;
 block|}
-comment|/**      * Fill in an ElementInfo for an element or xs:any from a sequence.      *       * @param sequenceElement      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @return      */
+comment|/**      * Fill in an ElementInfo for an element or xs:any from a sequence.      *      * @param sequenceElement      * @param currentSchema      * @param schemaCollection      * @param prefixAccumulator      * @return      */
 specifier|public
 specifier|static
 name|ParticleInfo
@@ -509,6 +509,9 @@ name|XmlSchemaUtils
 operator|.
 name|getObjectParticle
 argument_list|(
+operator|(
+name|XmlSchemaObject
+operator|)
 name|sequenceObject
 argument_list|,
 name|contextName
@@ -545,7 +548,10 @@ if|if
 condition|(
 name|sequenceElement
 operator|.
-name|getRefName
+name|getRef
+argument_list|()
+operator|.
+name|getTargetQName
 argument_list|()
 operator|!=
 literal|null
@@ -554,15 +560,13 @@ block|{
 name|XmlSchemaElement
 name|refElement
 init|=
-name|schemaCollection
-operator|.
-name|getElementByQName
-argument_list|(
 name|sequenceElement
 operator|.
-name|getRefName
+name|getRef
 argument_list|()
-argument_list|)
+operator|.
+name|getTarget
+argument_list|()
 decl_stmt|;
 if|if
 condition|(
@@ -588,7 +592,10 @@ argument_list|()
 argument_list|,
 name|sequenceElement
 operator|.
-name|getRefName
+name|getRef
+argument_list|()
+operator|.
+name|getTargetQName
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -826,7 +833,7 @@ operator|.
 name|getDefaultValue
 argument_list|()
 decl_stmt|;
-comment|/*              * Schema default values are carried as strings.               * In javascript, for actual strings, we need quotes, but not for              * numbers. The following is a trick.              */
+comment|/*              * Schema default values are carried as strings.              * In javascript, for actual strings, we need quotes, but not for              * numbers. The following is a trick.              */
 name|schemaDefaultValue
 operator|=
 name|protectDefaultValue
@@ -1206,7 +1213,7 @@ literal|true
 expr_stmt|;
 block|}
 block|}
-comment|/**      * As a general rule, the JavaScript code is organized by types. The      * exception is global elements that have anonymous types. In those cases,      * the JavaScript code has its functions named according to the element.      * This method returns the QName for the type or element, accordingly. If a      * schema has a local element with an anonymous, complex, type, this will      * throw. This will need to be fixed.      *       * @return the qname.      */
+comment|/**      * As a general rule, the JavaScript code is organized by types. The      * exception is global elements that have anonymous types. In those cases,      * the JavaScript code has its functions named according to the element.      * This method returns the QName for the type or element, accordingly. If a      * schema has a local element with an anonymous, complex, type, this will      * throw. This will need to be fixed.      *      * @return the qname.      */
 specifier|public
 name|QName
 name|getControllingName
@@ -1502,7 +1509,7 @@ return|return
 name|anyType
 return|;
 block|}
-comment|/**      * *      *       * @return Returns the defaultValue.      */
+comment|/**      * *      *      * @return Returns the defaultValue.      */
 specifier|public
 name|String
 name|getDefaultValue
@@ -1541,7 +1548,7 @@ operator|=
 name|defaultValue
 expr_stmt|;
 block|}
-comment|/**      * True if this describes a global, named, element.      *       * @return      */
+comment|/**      * True if this describes a global, named, element.      *      * @return      */
 specifier|public
 name|boolean
 name|isGlobal

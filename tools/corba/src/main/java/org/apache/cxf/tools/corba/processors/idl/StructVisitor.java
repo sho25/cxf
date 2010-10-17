@@ -369,6 +369,8 @@ operator|new
 name|XmlSchemaComplexType
 argument_list|(
 name|schema
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|complexType
@@ -475,24 +477,6 @@ name|identifierNode
 argument_list|)
 expr_stmt|;
 block|}
-comment|// add schemaType
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|complexType
-argument_list|)
-expr_stmt|;
-name|schema
-operator|.
-name|addType
-argument_list|(
-name|complexType
-argument_list|)
-expr_stmt|;
 comment|// add corbaType
 name|typeMap
 operator|.
@@ -865,7 +849,11 @@ name|member
 init|=
 operator|new
 name|XmlSchemaElement
-argument_list|()
+argument_list|(
+name|schema
+argument_list|,
+literal|false
+argument_list|)
 decl_stmt|;
 name|String
 name|memberName

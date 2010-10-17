@@ -287,7 +287,7 @@ decl_stmt|;
 specifier|public
 name|WSDLGenerationTester
 parameter_list|()
-block|{         }
+block|{     }
 specifier|public
 name|void
 name|compare
@@ -980,8 +980,6 @@ operator|.
 name|read
 argument_list|(
 name|reader
-argument_list|,
-literal|null
 argument_list|)
 decl_stmt|;
 name|schema
