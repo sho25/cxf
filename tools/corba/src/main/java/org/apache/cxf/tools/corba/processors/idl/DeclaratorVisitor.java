@@ -837,7 +837,10 @@ name|XmlSchemaSimpleType
 argument_list|(
 name|schema
 argument_list|,
-literal|false
+name|oldSimpleType
+operator|.
+name|isTopLevel
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|simpleType

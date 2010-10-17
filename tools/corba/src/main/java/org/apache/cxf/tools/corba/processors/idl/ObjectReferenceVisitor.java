@@ -365,6 +365,22 @@ name|commons
 operator|.
 name|schema
 operator|.
+name|XmlSchemaSimpleType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|commons
+operator|.
+name|schema
+operator|.
 name|XmlSchemaType
 import|;
 end_import
@@ -692,18 +708,16 @@ name|schemas
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*          * TODO: This anonymous type is ridiculous, but I don't understand this code.          */
 name|XmlSchemaType
 name|objectType
 init|=
 operator|new
-name|XmlSchemaType
+name|XmlSchemaSimpleType
 argument_list|(
 name|wsaSchema
 argument_list|,
-literal|false
+literal|true
 argument_list|)
-block|{ }
 decl_stmt|;
 name|objectType
 operator|.
@@ -1273,13 +1287,12 @@ name|XmlSchemaType
 name|wsaType
 init|=
 operator|new
-name|XmlSchemaType
+name|XmlSchemaSimpleType
 argument_list|(
 name|wsaSchema
 argument_list|,
-literal|false
+literal|true
 argument_list|)
-block|{ }
 decl_stmt|;
 name|wsaType
 operator|.
