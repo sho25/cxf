@@ -1785,7 +1785,7 @@ name|XmlSchemaElement
 argument_list|(
 name|schema
 argument_list|,
-literal|true
+literal|false
 argument_list|)
 decl_stmt|;
 name|element
@@ -1855,6 +1855,16 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|schemaSequence
+operator|.
+name|getItems
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|element
+argument_list|)
+expr_stmt|;
 return|return
 name|element
 return|;

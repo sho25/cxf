@@ -2322,7 +2322,7 @@ name|WrapperElement
 argument_list|(
 name|subElement
 operator|.
-name|getQName
+name|getWireName
 argument_list|()
 argument_list|,
 name|subElement
