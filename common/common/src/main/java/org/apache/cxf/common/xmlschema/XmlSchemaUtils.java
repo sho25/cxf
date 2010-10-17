@@ -634,13 +634,8 @@ literal|null
 operator|&&
 name|element
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|.
-name|getTarget
-argument_list|()
-operator|!=
-literal|null
 operator|&&
 operator|!
 name|element
@@ -2043,13 +2038,8 @@ literal|null
 operator|&&
 name|element
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|.
-name|getTarget
-argument_list|()
-operator|!=
-literal|null
 condition|)
 block|{
 comment|/*              * This code assumes that all schemas are in the collection.              */
@@ -2291,10 +2281,8 @@ if|if
 condition|(
 name|element
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|!=
-literal|null
 condition|)
 block|{
 comment|/*              * Calling getTarget works if everything is in the collection already.              */
@@ -2411,10 +2399,8 @@ if|if
 condition|(
 name|attribute
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|!=
-literal|null
 condition|)
 block|{
 throw|throw
@@ -2518,10 +2504,8 @@ if|if
 condition|(
 name|attribute
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|!=
-literal|null
 condition|)
 block|{
 throw|throw
@@ -2614,10 +2598,8 @@ if|if
 condition|(
 name|element
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|!=
-literal|null
 condition|)
 block|{
 throw|throw
@@ -2728,10 +2710,8 @@ if|if
 condition|(
 name|element
 operator|.
-name|getRef
+name|isRef
 argument_list|()
-operator|!=
-literal|null
 condition|)
 block|{
 throw|throw
