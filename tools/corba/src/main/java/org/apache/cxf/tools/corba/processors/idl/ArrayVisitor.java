@@ -711,24 +711,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|// add schemaType
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|stype
-argument_list|)
-expr_stmt|;
-name|schema
-operator|.
-name|addType
-argument_list|(
-name|stype
-argument_list|)
-expr_stmt|;
 comment|// add corbaType
 name|typeMap
 operator|.
@@ -941,30 +923,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|// add schemaType
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|result
-operator|.
-name|getSchemaType
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|schema
-operator|.
-name|addType
-argument_list|(
-name|result
-operator|.
-name|getSchemaType
-argument_list|()
-argument_list|)
-expr_stmt|;
 comment|// add corbaType
 name|typeMap
 operator|.
@@ -1009,7 +967,7 @@ name|XmlSchemaComplexType
 argument_list|(
 name|schema
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 decl_stmt|;
 name|complexType
