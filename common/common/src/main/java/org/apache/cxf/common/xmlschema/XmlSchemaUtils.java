@@ -1104,16 +1104,6 @@ argument_list|(
 name|namespaceUri
 argument_list|)
 expr_stmt|;
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|imp
-argument_list|)
-expr_stmt|;
 block|}
 comment|/**      * For convenience, start from a qname, and add the import if it is non-null      * and has a namespace.      * @see #addImportIfNeeded(XmlSchema, String)      * @param schema      * @param qname      */
 specifier|public
