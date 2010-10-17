@@ -8054,7 +8054,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-comment|// We hope that we can't have parts that differe only in namespace.
+comment|// We hope that we can't have parts that different only in namespace.
 name|el
 operator|.
 name|setName
