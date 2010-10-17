@@ -1142,16 +1142,6 @@ argument_list|(
 name|complex
 argument_list|)
 expr_stmt|;
-name|schema
-operator|.
-name|getItems
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|result
-argument_list|)
-expr_stmt|;
 return|return
 name|result
 return|;

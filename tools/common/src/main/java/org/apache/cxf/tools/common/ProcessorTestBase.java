@@ -1857,7 +1857,14 @@ operator|.
 name|toString
 argument_list|()
 operator|+
-literal|" is missing in the source file"
+literal|" is missing in the source file:"
+operator|+
+literal|"\n"
+operator|+
+name|source
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 throw|;
 block|}

@@ -349,7 +349,7 @@ name|XmlSchemaElement
 argument_list|(
 name|schema
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 decl_stmt|;
 name|element
