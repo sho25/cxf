@@ -548,6 +548,10 @@ name|ImportRepairTest
 extends|extends
 name|Assert
 block|{
+specifier|static
+name|boolean
+name|dumpSchemas
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -1242,6 +1246,14 @@ name|Document
 name|document
 parameter_list|)
 block|{
+if|if
+condition|(
+operator|!
+name|dumpSchemas
+condition|)
+block|{
+return|return;
+block|}
 try|try
 block|{
 name|Transformer
