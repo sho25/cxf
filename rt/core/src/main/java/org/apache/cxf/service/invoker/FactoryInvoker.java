@@ -98,7 +98,6 @@ name|FactoryInvoker
 extends|extends
 name|AbstractInvoker
 block|{
-specifier|private
 specifier|static
 specifier|final
 name|ResourceBundle
