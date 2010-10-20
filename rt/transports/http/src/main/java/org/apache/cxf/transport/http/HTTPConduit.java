@@ -277,6 +277,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|regex
+operator|.
+name|Pattern
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -759,6 +771,24 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|transports
+operator|.
+name|http
+operator|.
+name|configuration
+operator|.
+name|ProxyServerType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|version
 operator|.
 name|Version
@@ -918,6 +948,33 @@ name|SC_HTTP_CONDUIT_SUFFIX
 init|=
 literal|".http-conduit"
 decl_stmt|;
+comment|/**      * JVM/System property name holding the hostname of the http proxy.      */
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|HTTP_PROXY_HOST
+init|=
+literal|"http.proxyHost"
+decl_stmt|;
+comment|/**      * JVM/System property name holding the port of the http proxy.      */
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|HTTP_PROXY_PORT
+init|=
+literal|"http.proxyPort"
+decl_stmt|;
+comment|/**      * JVM/System property name holding the list of hosts/patterns that      * should not use the proxy configuration.      */
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|HTTP_NON_PROXY_HOSTS
+init|=
+literal|"http.nonProxyHosts"
+decl_stmt|;
 comment|/**      * This field holds the connection factory, which primarily is used to       * factor out SSL specific code from this implementation.      *<p>      * This field is "protected" to facilitate some contrived UnitTesting so      * that an extended class may alter its value with an EasyMock URLConnection      * Factory.       */
 specifier|protected
 name|HttpURLConnectionFactory
@@ -949,10 +1006,15 @@ name|boolean
 name|fromEndpointReferenceType
 decl_stmt|;
 comment|// Configurable values
-comment|/**      * This field holds the QoS configuration settings for this conduit.      * This field is injected via spring configuration based on the conduit       * name.      */
+comment|/**      * This field holds the QoS configuration settings for this conduit.      * This field is injected via spring configuration based on the conduit      * name.      */
 specifier|private
 name|HTTPClientPolicy
 name|clientSidePolicy
+decl_stmt|;
+comment|/**      * This field holds ONLY the static System proxy configuration:      * + http.proxyHost      * + http.proxyPort (default 8080)      * + http.nonProxyHosts (default null)      * It is initialized at the instance creation (and may be null      * if there is no appropriate System properties)      */
+specifier|private
+name|HTTPClientPolicy
+name|systemProxyConfiguration
 decl_stmt|;
 comment|/**      * This field holds the password authorization configuration.      * This field is injected via spring configuration based on the conduit       * name.     */
 specifier|private
@@ -1604,6 +1666,113 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// Retrieve system properties (if any)
+name|String
+name|proxyHost
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+name|HTTP_PROXY_HOST
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|proxyHost
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// System is configured with a proxy, use it
+name|systemProxyConfiguration
+operator|=
+operator|new
+name|HTTPClientPolicy
+argument_list|()
+expr_stmt|;
+name|systemProxyConfiguration
+operator|.
+name|setProxyServer
+argument_list|(
+name|proxyHost
+argument_list|)
+expr_stmt|;
+name|systemProxyConfiguration
+operator|.
+name|setProxyServerType
+argument_list|(
+name|ProxyServerType
+operator|.
+name|HTTP
+argument_list|)
+expr_stmt|;
+comment|// 8080 is the default proxy port value as pert some documentation
+name|String
+name|proxyPort
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+name|HTTP_PROXY_PORT
+argument_list|,
+literal|"8080"
+argument_list|)
+decl_stmt|;
+name|systemProxyConfiguration
+operator|.
+name|setProxyServerPort
+argument_list|(
+name|Integer
+operator|.
+name|valueOf
+argument_list|(
+name|proxyPort
+argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// Load non proxy hosts
+name|String
+name|nonProxyHosts
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+name|HTTP_NON_PROXY_HOSTS
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
+name|nonProxyHosts
+argument_list|)
+condition|)
+block|{
+name|Pattern
+name|pattern
+init|=
+name|PatternBuilder
+operator|.
+name|build
+argument_list|(
+name|nonProxyHosts
+argument_list|)
+decl_stmt|;
+name|systemProxyConfiguration
+operator|.
+name|setNonProxyHosts
+argument_list|(
+name|pattern
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 comment|// Get the correct URLConnection factory based on the
 comment|// configuration.
 name|connectionFactory
@@ -1814,6 +1983,8 @@ argument_list|(
 name|getProxy
 argument_list|(
 name|csPolicy
+argument_list|,
+name|currentURL
 argument_list|)
 argument_list|,
 name|currentURL
@@ -4068,19 +4239,21 @@ name|getProxy
 parameter_list|(
 name|HTTPClientPolicy
 name|policy
+parameter_list|,
+name|URL
+name|currentUrl
 parameter_list|)
 block|{
-name|Proxy
-name|proxy
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|policy
 operator|!=
 literal|null
-operator|&&
+condition|)
+block|{
+comment|// Maybe the user has provided some proxy information
+if|if
+condition|(
 name|policy
 operator|.
 name|isSetProxyServer
@@ -4098,8 +4271,146 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|proxy
-operator|=
+return|return
+name|getProxy
+argument_list|(
+name|policy
+argument_list|,
+name|currentUrl
+operator|.
+name|getHost
+argument_list|()
+argument_list|)
+return|;
+block|}
+else|else
+block|{
+comment|// There is a policy but no Proxy configuration,
+comment|// fallback on the system proxy configuration
+return|return
+name|getSystemProxy
+argument_list|(
+name|currentUrl
+operator|.
+name|getHost
+argument_list|()
+argument_list|)
+return|;
+block|}
+block|}
+else|else
+block|{
+comment|// Use system proxy configuration
+return|return
+name|getSystemProxy
+argument_list|(
+name|currentUrl
+operator|.
+name|getHost
+argument_list|()
+argument_list|)
+return|;
+block|}
+block|}
+comment|/**      * Get the system proxy (if any) for the given URL's host.      */
+specifier|private
+name|Proxy
+name|getSystemProxy
+parameter_list|(
+name|String
+name|hostname
+parameter_list|)
+block|{
+if|if
+condition|(
+name|systemProxyConfiguration
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|getProxy
+argument_list|(
+name|systemProxyConfiguration
+argument_list|,
+name|hostname
+argument_list|)
+return|;
+block|}
+comment|// No proxy configured
+return|return
+literal|null
+return|;
+block|}
+comment|/**      * Honor the nonProxyHosts property value (if set).      */
+specifier|private
+name|Proxy
+name|getProxy
+parameter_list|(
+specifier|final
+name|HTTPClientPolicy
+name|policy
+parameter_list|,
+specifier|final
+name|String
+name|hostname
+parameter_list|)
+block|{
+if|if
+condition|(
+name|policy
+operator|.
+name|isSetNonProxyHosts
+argument_list|()
+condition|)
+block|{
+comment|// Try to match the URL hostname with the exclusion pattern
+name|Pattern
+name|pattern
+init|=
+name|policy
+operator|.
+name|getNonProxyHosts
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|pattern
+operator|.
+name|matcher
+argument_list|(
+name|hostname
+argument_list|)
+operator|.
+name|matches
+argument_list|()
+condition|)
+block|{
+comment|// Excluded hostname -> no proxy
+return|return
+literal|null
+return|;
+block|}
+block|}
+comment|// Either nonProxyHosts is not set or the pattern did not match
+return|return
+name|createProxy
+argument_list|(
+name|policy
+argument_list|)
+return|;
+block|}
+comment|/**      * Construct a new {@code Proxy} instance from the given policy.      */
+specifier|private
+name|Proxy
+name|createProxy
+parameter_list|(
+specifier|final
+name|HTTPClientPolicy
+name|policy
+parameter_list|)
+block|{
+return|return
 operator|new
 name|Proxy
 argument_list|(
@@ -4132,13 +4443,9 @@ name|getProxyServerPort
 argument_list|()
 argument_list|)
 argument_list|)
-expr_stmt|;
-block|}
-return|return
-name|proxy
 return|;
 block|}
-comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the Authorization policies that are set on this conduit by       * configuration.      *<p>       * An AuthorizationPolicy may also be set on the message. If so, those       * policies are merged. A user name or password set on the messsage       * overrides settings in the AuthorizationPolicy is retrieved from the      * configuration.      *<p>      * The precedence is as follows:      * 1. AuthorizationPolicy that is set on the Message, if exists.      * 2. Authorization from AuthSupplier, if exists.      * 3. AuthorizationPolicy set/configured for conduit.      *       * REVISIT: Since the AuthorizationPolicy is set on the message by class, then      * how does one override the ProxyAuthorizationPolicy which is the same       * type?      *       * @param message      * @param headers      */
+comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the Authorization policies that are set on this conduit by      * configuration.      *<p>       * An AuthorizationPolicy may also be set on the message. If so, those      * policies are merged. A user name or password set on the messsage       * overrides settings in the AuthorizationPolicy is retrieved from the      * configuration.      *<p>      * The precedence is as follows:      * 1. AuthorizationPolicy that is set on the Message, if exists.      * 2. Authorization from AuthSupplier, if exists.      * 3. AuthorizationPolicy set/configured for conduit.      *       * REVISIT: Since the AuthorizationPolicy is set on the message by class, then      * how does one override the ProxyAuthorizationPolicy which is the same       * type?      *       * @param message      * @param headers      */
 specifier|private
 name|void
 name|setHeadersByAuthorizationPolicy
@@ -5250,7 +5557,7 @@ operator|.
 name|trustDecider
 return|;
 block|}
-comment|/**      * This method sets the Trust Decider for this HTTP Conduit.      * Using this method overrides any trust decider configured for this       * HTTPConduit.      */
+comment|/**      * This method sets the Trust Decider for this HTTP Conduit.      * Using this method overrides any trust decider configured for this      * HTTPConduit.      */
 specifier|public
 name|void
 name|setTrustDecider
@@ -5403,7 +5710,7 @@ return|return
 name|connection
 return|;
 block|}
-comment|/**      * This method performs a redirection retransmit in response to      * a 302 or 305 response code.      *       * @param connection   The active URL connection      * @param message      The outbound message.      * @param cachedStream The cached request.      * @return This method returns the new HttpURLConnection if      *         redirected. If it cannot be redirected for some reason      *         the same connection is returned.      *               * @throws IOException      */
+comment|/**      * This method performs a redirection retransmit in response to      * a 302 or 305 response code.      *      * @param connection   The active URL connection      * @param message      The outbound message.      * @param cachedStream The cached request.      * @return This method returns the new HttpURLConnection if      *         redirected. If it cannot be redirected for some reason      *         the same connection is returned.      *               * @throws IOException      */
 specifier|private
 name|HttpURLConnection
 name|redirectRetransmit
@@ -6052,6 +6359,8 @@ argument_list|(
 name|getProxy
 argument_list|(
 name|cp
+argument_list|,
+name|newURL
 argument_list|)
 argument_list|,
 name|newURL
