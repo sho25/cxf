@@ -420,6 +420,17 @@ decl_stmt|;
 if|if
 condition|(
 name|address
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+name|contextPath
+return|;
+block|}
+if|if
+condition|(
+name|address
 operator|.
 name|startsWith
 argument_list|(
