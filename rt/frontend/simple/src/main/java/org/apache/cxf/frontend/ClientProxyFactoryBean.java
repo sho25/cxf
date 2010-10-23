@@ -349,6 +349,36 @@ name|features
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Create a proxy object that implements a specified Service Endpoint Interface. This      * method is a combination of {@link #setServiceClass(Class)} and {@link #create()}.      * @param<ProxyServiceType> The type for the SEI.      * @param serviceClass The Java class object representing the interface you want.      * @return the proxy.      */
+specifier|public
+parameter_list|<
+name|ProxyServiceType
+parameter_list|>
+name|ProxyServiceType
+name|create
+parameter_list|(
+name|Class
+argument_list|<
+name|ProxyServiceType
+argument_list|>
+name|serviceClass
+parameter_list|)
+block|{
+name|setServiceClass
+argument_list|(
+name|serviceClass
+argument_list|)
+expr_stmt|;
+return|return
+name|serviceClass
+operator|.
+name|cast
+argument_list|(
+name|create
+argument_list|()
+argument_list|)
+return|;
+block|}
 comment|/**      * Creates a proxy object that can be used to make remote invocations.      *      * @return the proxy. You must cast the returned object to the appropriate class before using it.      */
 specifier|public
 name|Object
@@ -754,7 +784,7 @@ name|getWsdlURL
 argument_list|()
 return|;
 block|}
-comment|/**      * Specifies the URL where the proxy can find the WSDL defining the       * service the proxy implements.      *      * @param wsdlURL a string containing the WSDL's URL      */
+comment|/**      * Specifies the URL where the proxy can find the WSDL defining the      * service the proxy implements.      *      * @param wsdlURL a string containing the WSDL's URL      */
 specifier|public
 name|void
 name|setWsdlLocation
@@ -784,7 +814,7 @@ name|getWsdlURL
 argument_list|()
 return|;
 block|}
-comment|/**      * Specifies the URL where the proxy can find the WSDL defining the       * service the proxy implements.      *      * @param wsdlURL a string containing the WSDL's URL      */
+comment|/**      * Specifies the URL where the proxy can find the WSDL defining the      * service the proxy implements.      *      * @param wsdlURL a string containing the WSDL's URL      */
 specifier|public
 name|void
 name|setWsdlURL
@@ -832,7 +862,7 @@ name|endpointName
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the QName of the WSDL service the proxy implements      *       * @return the WSDL service's QName      */
+comment|/**      * Returns the QName of the WSDL service the proxy implements      *      * @return the WSDL service's QName      */
 specifier|public
 name|QName
 name|getServiceName
@@ -846,7 +876,7 @@ name|getServiceQName
 argument_list|()
 return|;
 block|}
-comment|/**      * Specifies the QName of the WSDL service the proxy implements. The       * service must exist or an error will result.      *      * @param serviceName the QName of the service for the proxy      */
+comment|/**      * Specifies the QName of the WSDL service the proxy implements. The      * service must exist or an error will result.      *      * @param serviceName the QName of the service for the proxy      */
 specifier|public
 name|void
 name|setServiceName
@@ -1050,7 +1080,7 @@ return|return
 name|properties
 return|;
 block|}
-comment|/**      * Specifies a set of properties used to configure the proxies       * provided by the factory. These properties include things like       * adding a namespace map to the JAXB databinding.      *      * @param properties the property map      */
+comment|/**      * Specifies a set of properties used to configure the proxies      * provided by the factory. These properties include things like      * adding a namespace map to the JAXB databinding.      *      * @param properties the property map      */
 specifier|public
 name|void
 name|setProperties
