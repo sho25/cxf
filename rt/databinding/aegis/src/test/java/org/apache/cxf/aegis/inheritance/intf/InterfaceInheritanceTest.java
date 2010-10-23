@@ -124,7 +124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This test ensures that we're handling inheritance of interfaces correctly.  * Since we can't do multiple parent inheritance in XML schema, which interfaces  * require, we just don't allow interface inheritance period.  *   * @author Dan Diephouse  */
+comment|/**  * This test ensures that we're handling inheritance of interfaces correctly.  * Since we can't do multiple parent inheritance in XML schema, which interfaces  * require, we just don't allow interface inheritance period.  *  * @author Dan Diephouse  */
 end_comment
 
 begin_class
@@ -208,15 +208,6 @@ argument_list|)
 expr_stmt|;
 name|proxyFac
 operator|.
-name|setServiceClass
-argument_list|(
-name|IInterfaceService
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
-name|proxyFac
-operator|.
 name|setBus
 argument_list|(
 name|getBus
@@ -234,13 +225,14 @@ expr_stmt|;
 name|IInterfaceService
 name|client
 init|=
-operator|(
-name|IInterfaceService
-operator|)
 name|proxyFac
 operator|.
 name|create
-argument_list|()
+argument_list|(
+name|IInterfaceService
+operator|.
+name|class
+argument_list|)
 decl_stmt|;
 name|IChild
 name|child

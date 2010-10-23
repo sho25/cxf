@@ -172,7 +172,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -240,15 +240,6 @@ argument_list|)
 expr_stmt|;
 name|proxyFac
 operator|.
-name|setServiceClass
-argument_list|(
-name|CollectionServiceInterface
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
-name|proxyFac
-operator|.
 name|setDataBinding
 argument_list|(
 operator|new
@@ -273,13 +264,14 @@ argument_list|)
 expr_stmt|;
 name|csi
 operator|=
-operator|(
-name|CollectionServiceInterface
-operator|)
 name|proxyFac
 operator|.
 name|create
-argument_list|()
+argument_list|(
+name|CollectionServiceInterface
+operator|.
+name|class
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * CXF-2017      * @throws Exception      */
