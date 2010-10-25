@@ -453,6 +453,15 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|conduit
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//for a one-way, the back channel could be
+comment|//null if it knows it cannot send anything.
 name|conduit
 operator|.
 name|prepare
@@ -467,6 +476,7 @@ argument_list|(
 name|partial
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
