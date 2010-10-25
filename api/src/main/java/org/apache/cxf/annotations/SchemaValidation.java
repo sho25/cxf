@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Enables SchemaValidation  */
+comment|/**  * Enables schema validation  */
 end_comment
 
 begin_annotation_defn

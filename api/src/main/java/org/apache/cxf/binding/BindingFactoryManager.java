@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The manager interface represents a repository for accessing   *<code>BindingFactory</code>s.  *  * Provides methods necessary for registering, deregistering or retrieving of  * BindingFactorys.  */
+comment|/**  * The manager interface represents a repository for accessing   *<code>BindingFactory</code>s.  *  * Provides methods necessary for registering, unregistering or retrieving of  * BindingFactorys.  */
 end_comment
 
 begin_interface

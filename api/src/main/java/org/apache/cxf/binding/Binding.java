@@ -75,7 +75,7 @@ name|Message
 name|createMessage
 parameter_list|()
 function_decl|;
-comment|/**      * Create a Message form the messge.      *       * @param m the message used for creating a binding message      * @return the Binding message      */
+comment|/**      * Create a Message form the message.      *       * @param m the message used for creating a binding message      * @return the Binding message      */
 name|Message
 name|createMessage
 parameter_list|(
