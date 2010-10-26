@@ -5137,6 +5137,13 @@ operator|.
 name|PARAM_ANNOTATION
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|a
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|Annotation
@@ -5171,6 +5178,7 @@ block|{
 return|return
 literal|1L
 return|;
+block|}
 block|}
 block|}
 block|}
