@@ -1831,6 +1831,12 @@ name|schemeSpecificPart
 operator|=
 name|schemeSpecificPart
 expr_stmt|;
+name|builder
+operator|.
+name|leadingSlash
+operator|=
+name|leadingSlash
+expr_stmt|;
 return|return
 name|builder
 return|;
