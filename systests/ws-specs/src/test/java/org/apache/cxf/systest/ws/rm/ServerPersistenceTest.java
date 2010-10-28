@@ -1056,7 +1056,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|1000
+literal|4000
 argument_list|)
 expr_stmt|;
 name|int
@@ -1141,6 +1141,11 @@ block|,
 name|GREETME_ACTION
 block|,
 name|GREETME_ACTION
+block|,
+name|RMConstants
+operator|.
+name|getSequenceAckAction
+argument_list|()
 block|}
 decl_stmt|;
 name|mf
@@ -1158,7 +1163,7 @@ name|mf
 operator|.
 name|verifyPartialResponses
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 expr_stmt|;
 name|mf
