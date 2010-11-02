@@ -1351,7 +1351,7 @@ operator|=
 name|path
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 specifier|static
 class|class
 name|HttpServletRequestFilter
