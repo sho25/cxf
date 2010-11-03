@@ -324,6 +324,22 @@ name|messageIdCache
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|void
+name|setResponses
+parameter_list|(
+name|String
+name|responses
+parameter_list|)
+block|{
+name|mapAggregator
+operator|.
+name|setAddressingResponses
+argument_list|(
+name|responses
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
