@@ -41,14 +41,8 @@ name|WebService
 import|;
 end_import
 
-begin_comment
-comment|/**  *   */
-end_comment
-
-begin_class
-annotation|@
-name|WebService
-annotation|@
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -58,11 +52,23 @@ operator|.
 name|soap
 operator|.
 name|MTOM
+import|;
+end_import
+
+begin_comment
+comment|/**  *  */
+end_comment
+
+begin_class
+annotation|@
+name|WebService
+annotation|@
+name|MTOM
 specifier|public
 class|class
 name|MtomTestImpl
 implements|implements
-name|MtomTest
+name|MtomTestService
 block|{
 specifier|public
 specifier|static

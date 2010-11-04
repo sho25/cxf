@@ -92,7 +92,7 @@ index|[]
 name|getSupportedWriterFormats
 parameter_list|()
 function_decl|;
-comment|/**      * Initialize the service info (i.e. type& element names, Schemas) with       * information from the databinding.      * @param service      */
+comment|/**      * Initialize the service info (i.e. type& element names, Schemas) with      * information from the databinding.      * @param service      */
 name|void
 name|initialize
 parameter_list|(
@@ -108,6 +108,17 @@ argument_list|,
 name|String
 argument_list|>
 name|getDeclaredNamespaceMappings
+parameter_list|()
+function_decl|;
+name|void
+name|setMtomEnabled
+parameter_list|(
+name|boolean
+name|enabled
+parameter_list|)
+function_decl|;
+name|boolean
+name|isMtomEnabled
 parameter_list|()
 function_decl|;
 comment|/**      * If the binding supports MTOM, set the size threshold for its use.      * may be overridden by (e.g.) JAXWS configuration.      * @param threshold      */

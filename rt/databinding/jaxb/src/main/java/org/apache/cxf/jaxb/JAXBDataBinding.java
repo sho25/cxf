@@ -3994,7 +3994,7 @@ return|return
 name|added
 return|;
 block|}
-comment|/**      * Return a map of properties. These properties are passed to      * JAXBContext.newInstance when this object creates a context.      *       * @return the map of JAXB context properties.      */
+comment|/**      * Return a map of properties. These properties are passed to      * JAXBContext.newInstance when this object creates a context.      *      * @return the map of JAXB context properties.      */
 specifier|public
 name|Map
 argument_list|<
@@ -4009,7 +4009,7 @@ return|return
 name|contextProperties
 return|;
 block|}
-comment|/**      * Set a map of JAXB context properties. These properties are passed to      * JAXBContext.newInstance when this object creates a context. Note that if      * you create a JAXB context elsewhere, you will not respect these      * properties unless you handle it manually.      *       * @param contextProperties map of properties.      */
+comment|/**      * Set a map of JAXB context properties. These properties are passed to      * JAXBContext.newInstance when this object creates a context. Note that if      * you create a JAXB context elsewhere, you will not respect these      * properties unless you handle it manually.      *      * @param contextProperties map of properties.      */
 specifier|public
 name|void
 name|setContextProperties
@@ -4030,7 +4030,7 @@ operator|=
 name|contextProperties
 expr_stmt|;
 block|}
-comment|/**      * Return a map of properties. These properties are set into the JAXB      * Marshaller (via Marshaller.setProperty(...) when the marshaller is      * created.      *       * @return the map of JAXB marshaller properties.      */
+comment|/**      * Return a map of properties. These properties are set into the JAXB      * Marshaller (via Marshaller.setProperty(...) when the marshaller is      * created.      *      * @return the map of JAXB marshaller properties.      */
 specifier|public
 name|Map
 argument_list|<
@@ -4045,7 +4045,7 @@ return|return
 name|marshallerProperties
 return|;
 block|}
-comment|/**      * Set a map of JAXB marshaller properties. These properties are set into      * the JAXB Marshaller (via Marshaller.setProperty(...) when the marshaller      * is created.      *       * @param marshallerProperties map of properties.      */
+comment|/**      * Set a map of JAXB marshaller properties. These properties are set into      * the JAXB Marshaller (via Marshaller.setProperty(...) when the marshaller      * is created.      *      * @param marshallerProperties map of properties.      */
 specifier|public
 name|void
 name|setMarshallerProperties
@@ -4066,7 +4066,7 @@ operator|=
 name|marshallerProperties
 expr_stmt|;
 block|}
-comment|/**      * Return a map of properties. These properties are set into the JAXB      * Unmarshaller (via Unmarshaller.setProperty(...) when the unmarshaller is      * created.      *       * @return the map of JAXB unmarshaller properties.      */
+comment|/**      * Return a map of properties. These properties are set into the JAXB      * Unmarshaller (via Unmarshaller.setProperty(...) when the unmarshaller is      * created.      *      * @return the map of JAXB unmarshaller properties.      */
 specifier|public
 name|Map
 argument_list|<
@@ -4081,7 +4081,7 @@ return|return
 name|unmarshallerProperties
 return|;
 block|}
-comment|/**      * Set a map of JAXB unmarshaller properties. These properties are set into      * the JAXB Unmarshaller (via Unmarshaller.setProperty(...) when the unmarshaller      * is created.      *       * @param unmarshallerProperties map of properties.      */
+comment|/**      * Set a map of JAXB unmarshaller properties. These properties are set into      * the JAXB Unmarshaller (via Unmarshaller.setProperty(...) when the unmarshaller      * is created.      *      * @param unmarshallerProperties map of properties.      */
 specifier|public
 name|void
 name|setUnmarshallerProperties

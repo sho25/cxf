@@ -56,7 +56,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -75,7 +75,7 @@ annotation|@
 name|MTOM
 specifier|public
 interface|interface
-name|MtomTest
+name|MtomTestService
 block|{
 name|void
 name|acceptDataHandler
