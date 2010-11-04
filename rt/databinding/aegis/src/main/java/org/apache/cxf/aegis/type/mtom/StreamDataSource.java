@@ -102,8 +102,6 @@ name|stream
 expr_stmt|;
 block|}
 comment|/** {@inheritDoc}*/
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getContentType
@@ -114,8 +112,6 @@ name|contentType
 return|;
 block|}
 comment|/** {@inheritDoc}*/
-annotation|@
-name|Override
 specifier|public
 name|InputStream
 name|getInputStream
@@ -128,8 +124,6 @@ name|stream
 return|;
 block|}
 comment|/** {@inheritDoc}*/
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getName
@@ -140,8 +134,6 @@ literal|null
 return|;
 block|}
 comment|/** {@inheritDoc}*/
-annotation|@
-name|Override
 specifier|public
 name|OutputStream
 name|getOutputStream
