@@ -25,6 +25,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|ByteArrayInputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|ByteArrayOutputStream
 import|;
 end_import
@@ -124,6 +134,10 @@ operator|.
 name|Attachment
 import|;
 end_import
+
+begin_comment
+comment|/**  * Binding for {@link javax.activation.DataSource}.  */
+end_comment
 
 begin_class
 specifier|public
@@ -266,15 +280,16 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|DataHandler
+name|StreamDataSource
+argument_list|(
+name|contentType
+argument_list|,
+operator|new
+name|ByteArrayInputStream
 argument_list|(
 name|bareBytes
-argument_list|,
-name|contentType
 argument_list|)
-operator|.
-name|getDataSource
-argument_list|()
+argument_list|)
 return|;
 block|}
 annotation|@

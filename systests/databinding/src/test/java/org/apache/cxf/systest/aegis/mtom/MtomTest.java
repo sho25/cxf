@@ -23,6 +23,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|InputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|HashMap
@@ -320,7 +330,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -783,7 +793,7 @@ argument_list|(
 name|accepted
 argument_list|)
 expr_stmt|;
-name|Object
+name|InputStream
 name|data
 init|=
 name|accepted
@@ -791,7 +801,7 @@ operator|.
 name|getDataHandler
 argument_list|()
 operator|.
-name|getContent
+name|getInputStream
 argument_list|()
 decl_stmt|;
 name|Assert
@@ -801,13 +811,33 @@ argument_list|(
 name|data
 argument_list|)
 expr_stmt|;
+name|String
+name|dataString
+init|=
+name|org
+operator|.
+name|apache
+operator|.
+name|commons
+operator|.
+name|io
+operator|.
+name|IOUtils
+operator|.
+name|toString
+argument_list|(
+name|data
+argument_list|,
+literal|"utf-8"
+argument_list|)
+decl_stmt|;
 name|Assert
 operator|.
 name|assertEquals
 argument_list|(
 literal|"This is the cereal shot from guns."
 argument_list|,
-name|data
+name|dataString
 argument_list|)
 expr_stmt|;
 block|}
@@ -1094,7 +1124,7 @@ argument_list|,
 name|url
 argument_list|)
 expr_stmt|;
-comment|/* when I add a test for a custom mapping.         testUtilities.assertValid("//xsd:complexType[@name='inputDhBean']/xsd:sequence/"                                   + "xsd:element[@name='dataHandler']/"                                   + "@xmime:expectedContentType/text()",                                    wsdl);                                   */
+comment|/* when I add a test for a custom mapping.         testUtilities.assertValid("//xsd:complexType[@name='inputDhBean']/xsd:sequence/"                                   + "xsd:element[@name='dataHandler']/"                                   + "@xmime:expectedContentType/text()",                                   wsdl);                                   */
 block|}
 block|}
 end_class
