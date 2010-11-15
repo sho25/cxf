@@ -878,12 +878,12 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This test verifies the precidence of Authorization Information.      * Setting authorization information on the Message takes precidence      * over a Basic Auth Supplier with preemptive UserPass, and that      * followed by setting it directly on the Conduit.      */
+comment|/**      * This test verifies the precedence of Authorization Information.      * Setting authorization information on the Message takes precedence      * over a Basic Auth Supplier with preemptive UserPass, and that      * followed by setting it directly on the Conduit.      */
 annotation|@
 name|Test
 specifier|public
 name|void
-name|testAuthPolicyPrecidence
+name|testAuthPolicyPrecedence
 parameter_list|()
 throws|throws
 name|Exception
