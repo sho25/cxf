@@ -780,15 +780,6 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"the exception is :"
-argument_list|)
-expr_stmt|;
 name|e
 operator|.
 name|printStackTrace
