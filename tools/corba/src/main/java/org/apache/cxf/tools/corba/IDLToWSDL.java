@@ -279,7 +279,7 @@ specifier|final
 name|String
 name|TOOL_NAME
 init|=
-literal|"idltowsdl"
+literal|"idl2wsdl"
 decl_stmt|;
 specifier|private
 specifier|static

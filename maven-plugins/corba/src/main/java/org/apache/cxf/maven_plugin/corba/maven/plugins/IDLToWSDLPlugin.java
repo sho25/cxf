@@ -147,7 +147,7 @@ throw|throw
 operator|new
 name|MojoExecutionException
 argument_list|(
-literal|"Please specify the idltowsdl options"
+literal|"Please specify the idl2wsdl options"
 argument_list|)
 throw|;
 block|}
