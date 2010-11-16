@@ -318,6 +318,18 @@ argument_list|)
 block|,         }
 return|;
 block|}
+specifier|public
+name|GMonthTest
+name|echoGMonthTest
+parameter_list|(
+name|GMonthTest
+name|input
+parameter_list|)
+block|{
+return|return
+name|input
+return|;
+block|}
 block|}
 end_class
 
