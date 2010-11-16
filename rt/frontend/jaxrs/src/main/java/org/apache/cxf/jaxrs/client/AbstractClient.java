@@ -3740,6 +3740,17 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// no need for the underlying conduit to throw the IO exceptions in case of
+comment|// client requests returning error HTTP code, it can be overridden if really needed
+name|exchange
+operator|.
+name|put
+argument_list|(
+literal|"org.apache.cxf.http.no_io_exceptions"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 name|m
 operator|.
 name|setExchange
@@ -3855,6 +3866,16 @@ argument_list|(
 name|cfg
 operator|.
 name|getRequestContext
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|exchange
+operator|.
+name|putAll
+argument_list|(
+name|cfg
+operator|.
+name|getResponseContext
 argument_list|()
 argument_list|)
 expr_stmt|;

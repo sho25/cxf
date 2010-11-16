@@ -651,8 +651,6 @@ argument_list|(
 name|BookServerRestSoap
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3815,11 +3813,6 @@ throws|throws
 name|Exception
 block|{
 comment|//testing faults created by server handled correctly
-name|serverFaultInInterceptorTest
-argument_list|(
-literal|"321"
-argument_list|)
-expr_stmt|;
 comment|//999 causes error code of 404, 404 has a different code path so need to test too
 name|serverFaultInInterceptorTest
 argument_list|(
@@ -4094,6 +4087,23 @@ operator|.
 name|create
 argument_list|()
 decl_stmt|;
+name|WebClient
+operator|.
+name|getConfig
+argument_list|(
+name|proxy
+argument_list|)
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+literal|"org.apache.cxf.http.no_io_exceptions"
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 comment|//321 is special case - causes error code of 525
