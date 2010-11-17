@@ -1937,7 +1937,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|ClassNotFoundException
+name|Throwable
 name|e
 parameter_list|)
 block|{
@@ -1949,40 +1949,13 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-literal|"Class "
+literal|"Error loading annotation class "
 operator|+
 name|name
 operator|+
-literal|" not found."
+literal|"."
 argument_list|,
 name|e
-argument_list|)
-expr_stmt|;
-return|return
-literal|null
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|ExceptionInInitializerError
-name|e2
-parameter_list|)
-block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|WARNING
-argument_list|,
-literal|"Initialization error loading "
-operator|+
-name|name
-operator|+
-literal|" not found."
-argument_list|,
-name|e2
 argument_list|)
 expr_stmt|;
 return|return
