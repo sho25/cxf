@@ -17,11 +17,11 @@ end_package
 
 begin_import
 import|import
-name|javax
+name|java
 operator|.
-name|wsdl
+name|util
 operator|.
-name|Port
+name|List
 import|;
 end_import
 
@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A factory to create an internal {@link EndpointInfo} from a WSDL4J {@link Port}.  */
+comment|/**  * A factory to create an internal {@link EndpointInfo} from WSDL Port extensions.  */
 end_comment
 
 begin_interface
@@ -105,8 +105,11 @@ parameter_list|,
 name|BindingInfo
 name|b
 parameter_list|,
-name|Port
-name|port
+name|List
+argument_list|<
+name|?
+argument_list|>
+name|extensions
 parameter_list|)
 function_decl|;
 name|void
