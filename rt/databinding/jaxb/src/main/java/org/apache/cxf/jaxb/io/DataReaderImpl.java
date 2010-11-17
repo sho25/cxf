@@ -33,18 +33,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
-name|Field
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Map
@@ -120,18 +108,6 @@ operator|.
 name|bind
 operator|.
 name|ValidationEventHandler
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|datatype
-operator|.
-name|XMLGregorianCalendar
 import|;
 end_import
 
