@@ -71,8 +71,6 @@ operator|new
 name|HashMap
 argument_list|()
 decl_stmt|;
-annotation|@
-name|Override
 specifier|public
 name|T
 name|getById
@@ -96,8 +94,6 @@ name|id
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|PK
 name|postEntity
