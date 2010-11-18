@@ -1947,7 +1947,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|WARNING
+name|FINE
 argument_list|,
 literal|"Error loading annotation class "
 operator|+
