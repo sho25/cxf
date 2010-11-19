@@ -138,6 +138,7 @@ name|Principal
 name|peerPrincipal
 decl_stmt|;
 comment|/**      * This constructor is used to create the info object      * representing the this HttpsURLConnection. Connection parameter is       * of supertype HttpURLConnection, which allows internal cast to       * potentially divergent subtype (Https) implementations.      */
+specifier|public
 name|HttpsURLConnectionInfo
 parameter_list|(
 name|HttpURLConnection
