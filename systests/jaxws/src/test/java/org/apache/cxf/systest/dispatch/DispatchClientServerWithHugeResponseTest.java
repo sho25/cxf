@@ -654,7 +654,7 @@ name|response
 operator|.
 name|get
 argument_list|(
-literal|10
+literal|300
 argument_list|,
 name|TimeUnit
 operator|.
@@ -682,6 +682,11 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
+name|e
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 name|e
