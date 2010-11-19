@@ -406,6 +406,11 @@ argument_list|(
 name|resourceClass
 argument_list|)
 expr_stmt|;
+name|findContextSetterMethods
+argument_list|(
+name|resourceClass
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|public

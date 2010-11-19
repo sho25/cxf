@@ -470,6 +470,15 @@ argument_list|,
 literal|"application/xml"
 argument_list|)
 expr_stmt|;
+name|connect
+operator|.
+name|addRequestProperty
+argument_list|(
+literal|"SpringProxy"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 name|InputStream
 name|in
 init|=
