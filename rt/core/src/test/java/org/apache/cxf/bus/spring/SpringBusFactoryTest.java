@@ -1273,7 +1273,7 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"@PreDestroy annoated method has not been called."
+literal|"@PreDestroy annotated method has not been called."
 argument_list|,
 name|te
 operator|.
