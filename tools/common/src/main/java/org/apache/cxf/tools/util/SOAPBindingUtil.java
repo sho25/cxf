@@ -675,6 +675,7 @@ argument_list|(
 name|obj
 argument_list|)
 decl_stmt|;
+comment|/*          * If we put proxies into the loader of the proxied class, they'll just pile up.          */
 name|Object
 name|proxy
 init|=
@@ -682,9 +683,12 @@ name|Proxy
 operator|.
 name|newProxyInstance
 argument_list|(
-name|cls
+name|Thread
 operator|.
-name|getClassLoader
+name|currentThread
+argument_list|()
+operator|.
+name|getContextClassLoader
 argument_list|()
 argument_list|,
 operator|new
