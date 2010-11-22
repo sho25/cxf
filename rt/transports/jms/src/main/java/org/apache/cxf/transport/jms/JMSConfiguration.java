@@ -452,6 +452,10 @@ name|ConnectionFactory
 name|wrappedConnectionFactory
 decl_stmt|;
 specifier|private
+name|boolean
+name|autoWrappedConnectionFactory
+decl_stmt|;
+specifier|private
 name|JNDIConfiguration
 name|jndiConfig
 decl_stmt|;
@@ -1522,6 +1526,10 @@ name|connectionFactory
 argument_list|)
 expr_stmt|;
 block|}
+name|autoWrappedConnectionFactory
+operator|=
+literal|true
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -1613,6 +1621,8 @@ parameter_list|()
 block|{
 if|if
 condition|(
+name|autoWrappedConnectionFactory
+operator|&&
 name|wrappedConnectionFactory
 operator|instanceof
 name|SingleConnectionFactory
@@ -1643,6 +1653,10 @@ block|}
 name|wrappedConnectionFactory
 operator|=
 literal|null
+expr_stmt|;
+name|autoWrappedConnectionFactory
+operator|=
+literal|false
 expr_stmt|;
 block|}
 block|}
