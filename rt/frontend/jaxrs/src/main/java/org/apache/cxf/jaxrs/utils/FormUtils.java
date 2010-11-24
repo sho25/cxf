@@ -431,6 +431,12 @@ name|String
 name|charset
 init|=
 name|mt
+operator|==
+literal|null
+condition|?
+literal|"UTF-8"
+else|:
+name|mt
 operator|.
 name|getParameters
 argument_list|()
