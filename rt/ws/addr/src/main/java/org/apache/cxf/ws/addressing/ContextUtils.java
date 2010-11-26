@@ -1597,6 +1597,15 @@ argument_list|,
 name|partialResponse
 argument_list|,
 name|reference
+operator|==
+literal|null
+condition|?
+name|ContextUtils
+operator|.
+name|getNoneEndpointReference
+argument_list|()
+else|:
+name|reference
 argument_list|)
 decl_stmt|;
 if|if

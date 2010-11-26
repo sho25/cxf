@@ -1891,6 +1891,9 @@ name|partial
 parameter_list|,
 name|boolean
 name|requestLeg
+parameter_list|,
+name|boolean
+name|replyToRequired
 parameter_list|)
 block|{
 comment|//System.out.println("verifying headers: " + wsaHeaders);
@@ -1937,6 +1940,8 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+name|replyToRequired
+operator|&&
 operator|!
 operator|(
 name|wsaHeaders
