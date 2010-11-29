@@ -1512,6 +1512,13 @@ block|}
 comment|// handle case where given systemId is null (so that
 comment|// direct key lookup fails) by scanning through map
 comment|// searching for a namespace match
+if|if
+condition|(
+name|namespaceURI
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|Map
@@ -1606,6 +1613,7 @@ expr_stmt|;
 return|return
 name|impl
 return|;
+block|}
 block|}
 block|}
 comment|//REVIST - we need to get catalogs in here somehow  :-(
