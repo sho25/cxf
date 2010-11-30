@@ -4026,6 +4026,14 @@ argument_list|(
 name|up
 argument_list|)
 expr_stmt|;
+comment|// also adding cookie headers when retransmitting in case of a "401 Unauthorized" response
+name|cookies
+operator|.
+name|writeToMessageHeaders
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 return|return
 name|retransmit
 argument_list|(
@@ -5490,6 +5498,13 @@ operator|.
 name|getMaxRetransmits
 argument_list|()
 decl_stmt|;
+name|cookies
+operator|.
+name|readFromConnection
+argument_list|(
+name|oldcon
+argument_list|)
+expr_stmt|;
 comment|// MaxRetransmits of zero means zero.
 if|if
 condition|(
