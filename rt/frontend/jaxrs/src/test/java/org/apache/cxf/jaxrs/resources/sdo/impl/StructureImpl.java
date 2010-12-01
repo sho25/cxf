@@ -117,99 +117,99 @@ implements|implements
 name|Structure
 block|{
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|TEXT
 init|=
 literal|0
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|INT
 init|=
 literal|1
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|DBL
 init|=
 literal|2
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|TEXTS
 init|=
 literal|3
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|SDO_PROPERTY_COUNT
 init|=
 literal|4
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|EXTENDED_PROPERTY_COUNT
 init|=
 literal|0
 decl_stmt|;
-comment|/**      * The internal feature id for the '<em><b>Text</b></em>' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * The internal feature id for the '<em><b>Text</b></em>' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|_INTERNAL_TEXT
 init|=
 literal|0
 decl_stmt|;
-comment|/**      * The internal feature id for the '<em><b>Int</b></em>' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * The internal feature id for the '<em><b>Int</b></em>' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|_INTERNAL_INT
 init|=
 literal|1
 decl_stmt|;
-comment|/**      * The internal feature id for the '<em><b>Dbl</b></em>' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * The internal feature id for the '<em><b>Dbl</b></em>' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|_INTERNAL_DBL
 init|=
 literal|2
 decl_stmt|;
-comment|/**      * The internal feature id for the '<em><b>Texts</b></em>' attribute list.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * The internal feature id for the '<em><b>Texts</b></em>' attribute list.      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|_INTERNAL_TEXTS
 init|=
 literal|3
 decl_stmt|;
-comment|/**      * The number of properties for this type.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * The number of properties for this type.<!-- begin-user-doc --><!--      * end-user-doc -->      *       * @generated      * @ordered      */
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|int
 name|INTERNAL_PROPERTY_COUNT
 init|=
 literal|4
 decl_stmt|;
-comment|/**      * The default value of the '{@link #getText()<em>Text</em>}' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getText()      * @generated      * @ordered      */
+comment|/**      * The default value of the '{@link #getText()<em>Text</em>}' attribute.      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @see #getText()      * @generated      * @ordered      */
 specifier|protected
 specifier|static
 specifier|final
@@ -218,21 +218,21 @@ name|TEXT_DEFAULT_
 init|=
 literal|null
 decl_stmt|;
-comment|/**      * The cached value of the '{@link #getText()<em>Text</em>}' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getText()      * @generated      * @ordered      */
+comment|/**      * The cached value of the '{@link #getText()<em>Text</em>}' attribute.      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @see #getText()      * @generated      * @ordered      */
 specifier|protected
 name|String
 name|text
 init|=
 name|TEXT_DEFAULT_
 decl_stmt|;
-comment|/**      * This is true if the Text attribute has been set.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * This is true if the Text attribute has been set.<!-- begin-user-doc -->      *<!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|protected
 name|boolean
 name|text_set_
 init|=
 literal|false
 decl_stmt|;
-comment|/**      * The default value of the '{@link #getInt()<em>Int</em>}' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getInt()      * @generated      * @ordered      */
+comment|/**      * The default value of the '{@link #getInt()<em>Int</em>}' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @see #getInt()      * @generated      * @ordered      */
 specifier|protected
 specifier|static
 specifier|final
@@ -241,21 +241,21 @@ name|INT_DEFAULT_
 init|=
 literal|0
 decl_stmt|;
-comment|/**      * The cached value of the '{@link #getInt()<em>Int</em>}' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getInt()      * @generated      * @ordered      */
+comment|/**      * The cached value of the '{@link #getInt()<em>Int</em>}' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @see #getInt()      * @generated      * @ordered      */
 specifier|protected
 name|int
 name|int_
 init|=
 name|INT_DEFAULT_
 decl_stmt|;
-comment|/**      * This is true if the Int attribute has been set.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * This is true if the Int attribute has been set.<!-- begin-user-doc -->      *<!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|protected
 name|boolean
 name|int_set_
 init|=
 literal|false
 decl_stmt|;
-comment|/**      * The default value of the '{@link #getDbl()<em>Dbl</em>}' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getDbl()      * @generated      * @ordered      */
+comment|/**      * The default value of the '{@link #getDbl()<em>Dbl</em>}' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @see #getDbl()      * @generated      * @ordered      */
 specifier|protected
 specifier|static
 specifier|final
@@ -264,28 +264,28 @@ name|DBL_DEFAULT_
 init|=
 literal|0.0
 decl_stmt|;
-comment|/**      * The cached value of the '{@link #getDbl()<em>Dbl</em>}' attribute.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getDbl()      * @generated      * @ordered      */
+comment|/**      * The cached value of the '{@link #getDbl()<em>Dbl</em>}' attribute.<!--      * begin-user-doc --><!-- end-user-doc -->      *       * @see #getDbl()      * @generated      * @ordered      */
 specifier|protected
 name|double
 name|dbl
 init|=
 name|DBL_DEFAULT_
 decl_stmt|;
-comment|/**      * This is true if the Dbl attribute has been set.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      * @ordered      */
+comment|/**      * This is true if the Dbl attribute has been set.<!-- begin-user-doc -->      *<!-- end-user-doc -->      *       * @generated      * @ordered      */
 specifier|protected
 name|boolean
 name|dbl_set_
 init|=
 literal|false
 decl_stmt|;
-comment|/**      * The cached value of the '{@link #getTexts()<em>Texts</em>}' attribute list.      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @see #getTexts()      * @generated      * @ordered      */
+comment|/**      * The cached value of the '{@link #getTexts()<em>Texts</em>}' attribute      * list.<!-- begin-user-doc --><!-- end-user-doc -->      *       * @see #getTexts()      * @generated      * @ordered      */
 specifier|protected
 name|List
 name|texts
 init|=
 literal|null
 decl_stmt|;
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|StructureImpl
 parameter_list|()
@@ -341,7 +341,7 @@ name|internalIndex
 argument_list|)
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|Type
 name|getStaticType
@@ -361,7 +361,7 @@ name|getStructure
 argument_list|()
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|int
 name|getStaticPropertyCount
@@ -371,7 +371,7 @@ return|return
 name|INTERNAL_PROPERTY_COUNT
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|String
 name|getText
@@ -381,7 +381,7 @@ return|return
 name|text
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|setText
@@ -432,7 +432,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|unsetText
@@ -479,7 +479,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|boolean
 name|isSetText
@@ -489,7 +489,7 @@ return|return
 name|text_set_
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|int
 name|getInt
@@ -499,7 +499,7 @@ return|return
 name|int_
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|setInt
@@ -550,7 +550,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|unsetInt
@@ -597,7 +597,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|boolean
 name|isSetInt
@@ -607,7 +607,7 @@ return|return
 name|int_set_
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|double
 name|getDbl
@@ -617,7 +617,7 @@ return|return
 name|dbl
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|setDbl
@@ -668,7 +668,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|unsetDbl
@@ -715,7 +715,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|boolean
 name|isSetDbl
@@ -725,7 +725,7 @@ return|return
 name|dbl_set_
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|List
 name|getTexts
@@ -760,7 +760,7 @@ return|return
 name|texts
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|Object
 name|get
@@ -825,7 +825,7 @@ name|resolve
 argument_list|)
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -925,7 +925,7 @@ name|newValue
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|void
 name|unset
@@ -979,7 +979,7 @@ name|propertyIndex
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|boolean
 name|isSet
@@ -1038,7 +1038,7 @@ name|propertyIndex
 argument_list|)
 return|;
 block|}
-comment|/**      *<!-- begin-user-doc -->      *<!-- end-user-doc -->      * @generated      */
+comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|String
 name|toString
@@ -1082,6 +1082,7 @@ if|if
 condition|(
 name|text_set_
 condition|)
+block|{
 name|result
 operator|.
 name|append
@@ -1089,7 +1090,9 @@ argument_list|(
 name|text
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|result
 operator|.
 name|append
@@ -1097,6 +1100,7 @@ argument_list|(
 literal|"<unset>"
 argument_list|)
 expr_stmt|;
+block|}
 name|result
 operator|.
 name|append
@@ -1108,6 +1112,7 @@ if|if
 condition|(
 name|int_set_
 condition|)
+block|{
 name|result
 operator|.
 name|append
@@ -1115,7 +1120,9 @@ argument_list|(
 name|int_
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|result
 operator|.
 name|append
@@ -1123,6 +1130,7 @@ argument_list|(
 literal|"<unset>"
 argument_list|)
 expr_stmt|;
+block|}
 name|result
 operator|.
 name|append
@@ -1134,6 +1142,7 @@ if|if
 condition|(
 name|dbl_set_
 condition|)
+block|{
 name|result
 operator|.
 name|append
@@ -1141,7 +1150,9 @@ argument_list|(
 name|dbl
 argument_list|)
 expr_stmt|;
+block|}
 else|else
+block|{
 name|result
 operator|.
 name|append
@@ -1149,6 +1160,7 @@ argument_list|(
 literal|"<unset>"
 argument_list|)
 expr_stmt|;
+block|}
 name|result
 operator|.
 name|append

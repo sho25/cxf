@@ -165,10 +165,6 @@ name|HelperContext
 import|;
 end_import
 
-begin_comment
-comment|//CHECKSTYLE:OFF
-end_comment
-
 begin_class
 specifier|public
 class|class
@@ -214,26 +210,18 @@ specifier|private
 specifier|static
 name|SdoFactoryImpl
 name|instance
-init|=
-literal|null
 decl_stmt|;
 specifier|protected
 name|Type
 name|structureType
-init|=
-literal|null
 decl_stmt|;
 specifier|private
 name|boolean
 name|isCreated
-init|=
-literal|false
 decl_stmt|;
 specifier|private
 name|boolean
 name|isInitialized
-init|=
-literal|false
 decl_stmt|;
 specifier|public
 name|SdoFactoryImpl
@@ -312,7 +300,7 @@ argument_list|,
 name|this
 argument_list|)
 expr_stmt|;
-comment|//Register dependent packages with provided scope
+comment|// Register dependent packages with provided scope
 name|ModelFactory
 operator|.
 name|INSTANCE
@@ -346,7 +334,7 @@ operator|)
 name|createStructure
 argument_list|()
 return|;
-default|default :
+default|default:
 return|return
 name|super
 operator|.
@@ -829,11 +817,7 @@ block|}
 end_class
 
 begin_comment
-comment|//SdoFactoryImpl
-end_comment
-
-begin_comment
-comment|//CHECKSTYLE:ON
+comment|// SdoFactoryImpl
 end_comment
 
 end_unit

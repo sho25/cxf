@@ -832,9 +832,5 @@ begin_comment
 comment|//SdoFactoryImpl
 end_comment
 
-begin_comment
-comment|//CHECKSTYLE:ON
-end_comment
-
 end_unit
 

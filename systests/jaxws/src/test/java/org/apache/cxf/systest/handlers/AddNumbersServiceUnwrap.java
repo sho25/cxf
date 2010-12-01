@@ -97,10 +97,6 @@ name|WebServiceFeature
 import|;
 end_import
 
-begin_comment
-comment|//CHECKSTYLE:OFF
-end_comment
-
 begin_class
 annotation|@
 name|WebServiceClient
@@ -124,14 +120,14 @@ extends|extends
 name|Service
 block|{
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|URL
 name|WSDL_LOCATION
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|QName
 name|SERVICE
 init|=
@@ -144,10 +140,10 @@ literal|"AddNumbersService"
 argument_list|)
 decl_stmt|;
 specifier|public
-specifier|final
 specifier|static
+specifier|final
 name|QName
-name|AddNumbersPort
+name|ADD_NUMBERS_PORT
 init|=
 operator|new
 name|QName
@@ -187,7 +183,9 @@ name|err
 operator|.
 name|println
 argument_list|(
-literal|"Can not initialize the default wsdl from file:/home/sberyozkin/work/cxf/trunk/testutils/src/main/resources/wsdl/addNumbers.wsdl"
+literal|"Can not initialize the default wsdl "
+operator|+
+literal|"from file:testutils/src/main/resources/wsdl/addNumbers.wsdl"
 argument_list|)
 expr_stmt|;
 comment|// e.printStackTrace();
@@ -260,7 +258,7 @@ name|super
 operator|.
 name|getPort
 argument_list|(
-name|AddNumbersPort
+name|ADD_NUMBERS_PORT
 argument_list|,
 name|AddNumbersUnwrap
 operator|.
@@ -268,7 +266,7 @@ name|class
 argument_list|)
 return|;
 block|}
-comment|/**      *       * @param features      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the proxy.  Supported features not in the<code>features</code> parameter will have their default values.      * @return      *     returns AddNumbers      */
+comment|/**      *       * @param features      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the       *     proxy.  Supported features not in the<code>features</code> parameter       *     will have their default values.      * @return      *     returns AddNumbers      */
 annotation|@
 name|WebEndpoint
 argument_list|(
@@ -290,7 +288,7 @@ name|super
 operator|.
 name|getPort
 argument_list|(
-name|AddNumbersPort
+name|ADD_NUMBERS_PORT
 argument_list|,
 name|AddNumbersUnwrap
 operator|.
@@ -302,10 +300,6 @@ return|;
 block|}
 block|}
 end_class
-
-begin_comment
-comment|//CHECKSTYLE:ON
-end_comment
 
 end_unit
 
