@@ -1500,10 +1500,7 @@ literal|null
 condition|?
 literal|null
 else|:
-name|ori
-operator|.
-name|getAnnotatedMethod
-argument_list|()
+name|invoked
 argument_list|,
 name|responseObj
 argument_list|)

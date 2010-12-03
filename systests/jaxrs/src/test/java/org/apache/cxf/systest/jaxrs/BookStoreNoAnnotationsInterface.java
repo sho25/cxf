@@ -17,6 +17,16 @@ name|jaxrs
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -30,6 +40,19 @@ name|id
 parameter_list|)
 throws|throws
 name|BookNotFoundFault
+function_decl|;
+name|List
+argument_list|<
+name|Book
+argument_list|>
+name|getBooks
+parameter_list|(
+name|List
+argument_list|<
+name|Book
+argument_list|>
+name|thebooks
+parameter_list|)
 function_decl|;
 name|ChapterNoAnnotations
 name|getBookChapter
