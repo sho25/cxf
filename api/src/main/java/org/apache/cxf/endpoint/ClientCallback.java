@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Asynchronous callback object for calls to {@link Client#invoke(ClientCallback, String, Object...)}  * and related functions.  *  * The default behavior of this expects the following pattern:  *<ol>  *<li>ClientCallback cb = new ClientCallback();</li>  *<li>client.invoke(cb, "someMethod", ....);</li>  *<li>cb.wait();</li>  *<li>// CXF calls notify on the callback object when the operation is complete.</li>  *</ol>  */
 end_comment
 
 begin_class
@@ -137,7 +137,7 @@ specifier|public
 name|ClientCallback
 parameter_list|()
 block|{     }
-comment|/**      * Called when a message is first received prior to any actions       * being applied to the message.   The InterceptorChain is setup so       * modifications to that can be done.      */
+comment|/**      * Called when a message is first received prior to any actions      * being applied to the message.   The InterceptorChain is setup so      * modifications to that can be done.      */
 specifier|public
 name|void
 name|start
@@ -151,7 +151,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/**      * If the processing of the incoming message proceeds normally, this      * method is called with the response context values and the resulting objects.      *       * The default behavior just stores the objects and calls notifyAll to wake      * up threads waiting for the response.      *       * @param ctx      * @param res      */
+comment|/**      * If the processing of the incoming message proceeds normally, this      * method is called with the response context values and the resulting objects.      *      * The default behavior just stores the objects and calls notifyAll to wake      * up threads waiting for the response.      *      * @param ctx      * @param res      */
 specifier|public
 name|void
 name|handleResponse
@@ -191,7 +191,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * If processing of the incoming message results in an exception, this      * method is called with the resulting exception.      *       * The default behavior just stores the objects and calls notifyAll to wake      * up threads waiting for the response.      *       * @param ctx      * @param ex      */
+comment|/**      * If processing of the incoming message results in an exception, this      * method is called with the resulting exception.      *      * The default behavior just stores the objects and calls notifyAll to wake      * up threads waiting for the response.      *      * @param ctx      * @param ex      */
 specifier|public
 name|void
 name|handleException
@@ -265,6 +265,7 @@ return|return
 literal|false
 return|;
 block|}
+comment|/**      * return the map of items returned from an operation.      * @return      * @throws InterruptedException if the operation was cancelled.      * @throws ExecutionException if the operation resulted in a fault.      */
 specifier|public
 name|Map
 argument_list|<
@@ -327,6 +328,7 @@ return|return
 name|context
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Object
 index|[]
@@ -385,6 +387,7 @@ return|return
 name|result
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Object
 index|[]
@@ -487,6 +490,16 @@ parameter_list|()
 block|{
 return|return
 name|done
+return|;
+block|}
+comment|/*      * If the operation completes with a fault, the resulting exception object ends up here.      */
+specifier|public
+name|Throwable
+name|getException
+parameter_list|()
+block|{
+return|return
+name|exception
 return|;
 block|}
 block|}
