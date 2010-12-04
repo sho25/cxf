@@ -51,7 +51,19 @@ name|lang
 operator|.
 name|ref
 operator|.
-name|WeakReference
+name|Reference
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|ref
+operator|.
+name|SoftReference
 import|;
 end_import
 
@@ -142,7 +154,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Factory to create CXF Bus objects.   *<p>CXF includes a large number of components that provide services, such  * as WSDL parsing, and message processing. To avoid creating these objects over and over, and to   * allow them to be shared easily, they are associated with a data structure called a bus.  *</p>  *<p>  * You don't ever have to explicitly create or manipulate bus objects. If you simply use the CXF  * or JAX-WS APIs to create clients or servers, CXF will create an default bus for you. You would create a bus  * explicitly if you need to customize components on the bus or maintain several independent buses   * with independent configurations.  *</p>  *<p>  * This class maintains the default bus for the entire process and a set of thread-default buses. All CXF  * components that reference the bus, which is to say all CXF components, will obtain a default bus from this  * class if you do not set a specific bus.  *</p>  *<p>  * If you create a bus when there is no default bus in effect, that bus will become the default bus.  *</p>  *<p>  * This class holds<strong>weak</strong> references to the global default bus and the per-thread default  * busses. Thus, if you create and customize a bus, you must retain a reference to it if you want it to be  * protected from garbage collection. If you do not, you might experience the following unexpected chain of  * events, especially in a client:  *<ol>  *<li>Create a bus and customize it. Fail to hold a reference.</li>  *<li>Release all references to CXF objects.</li>  *<li>GC collects the Bus.</li>  *<li>Create a new CXF object.</li>  *<li>Implicitly create a new, default, bus.</li>  *</ol>  *</p>  */
+comment|/**  * Factory to create CXF Bus objects.  *<p>CXF includes a large number of components that provide services, such  * as WSDL parsing, and message processing. To avoid creating these objects over and over, and to  * allow them to be shared easily, they are associated with a data structure called a bus.  *</p>  *<p>  * You don't ever have to explicitly create or manipulate bus objects. If you simply use the CXF  * or JAX-WS APIs to create clients or servers, CXF will create a default bus for you. You can create a bus  * explicitly if you need to customize components on the bus or maintain several independent buses  * with independent configurations.  *</p>  *<p>  * This class maintains the default bus for the entire process and a set of thread-default buses. All CXF  * components that reference the bus, which is to say all CXF components, will obtain a default bus from this  * class if you do not set a specific bus.  *</p>  *<p>  * If you create a bus when there is no default bus in effect, that bus will become the default bus.  *</p>  *<p>  * This class holds<strong>soft</strong> references to the global default bus.  * Thus, if you create and customize a bus, you must retain a reference to it if you want it to be  * protected from garbage collection. If you do not, you might experience the following unexpected chain of  * events, especially in a client:  *<ol>  *<li>Create a bus and customize it. Fail to hold a reference.</li>  *<li>Release all references to CXF objects.</li>  *<li>GC collects the Bus.</li>  *<li>Create a new CXF object.</li>  *<li>Implicitly create a new, default, bus.</li>  *</ol>  * Note that the per-thread default busses are maintained in a WeakHashMap from threads to busses.  * Thus, so long as the thread remains alive  * there will be a strong reference to the bus, and it will not get garbage-collected.  * If you want to recover memory used CXF, you can set  * the per-thread default bus to null, explicitly.  *</p>  */
 end_comment
 
 begin_class
@@ -169,7 +181,7 @@ literal|"org.apache.cxf.bus.CXFBusFactory"
 decl_stmt|;
 specifier|protected
 specifier|static
-name|WeakReference
+name|Reference
 argument_list|<
 name|Bus
 argument_list|>
@@ -181,7 +193,10 @@ name|Map
 argument_list|<
 name|Thread
 argument_list|,
+name|Reference
+argument_list|<
 name|Bus
+argument_list|>
 argument_list|>
 name|threadBusses
 init|=
@@ -190,7 +205,10 @@ name|WeakHashMap
 argument_list|<
 name|Thread
 argument_list|,
+name|Reference
+argument_list|<
 name|Bus
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -211,14 +229,14 @@ argument_list|,
 literal|"APIMessages"
 argument_list|)
 decl_stmt|;
-comment|/**      * Creates a new bus. While concrete<code>BusFactory</code> may offer differently parameterized methods      * for creating a bus, all factories support this no-arg factory method.      *       * @return the newly created bus.      */
+comment|/**      * Creates a new bus. While concrete<code>BusFactory</code> may offer differently parameterized methods      * for creating a bus, all factories support this no-arg factory method.      *      * @return the newly created bus.      */
 specifier|public
 specifier|abstract
 name|Bus
 name|createBus
 parameter_list|()
 function_decl|;
-comment|/**      * Returns the default bus, creating it if necessary.      *       * @return the default bus.      */
+comment|/**      * Returns the default bus, creating it if necessary.      *      * @return the default bus.      */
 specifier|public
 specifier|static
 specifier|synchronized
@@ -233,7 +251,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns the default bus      *       * @param createIfNeeded Set to true to create a default bus if one doesn't exist      * @return the default bus.      */
+comment|/**      * Returns the default bus      *      * @param createIfNeeded Set to true to create a default bus if one doesn't exist      * @return the default bus.      */
 specifier|public
 specifier|static
 specifier|synchronized
@@ -265,7 +283,7 @@ block|{
 name|defaultBus
 operator|=
 operator|new
-name|WeakReference
+name|SoftReference
 argument_list|<
 name|Bus
 argument_list|>
@@ -300,7 +318,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|/**      * Sets the default bus.      *       * @param bus the default bus.      */
+comment|/**      * Sets the default bus.      *      * @param bus the default bus.      */
 specifier|public
 specifier|static
 specifier|synchronized
@@ -328,7 +346,7 @@ block|{
 name|defaultBus
 operator|=
 operator|new
-name|WeakReference
+name|SoftReference
 argument_list|<
 name|Bus
 argument_list|>
@@ -343,7 +361,7 @@ name|bus
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the default bus for the thread.      *       * @param bus the default bus.      */
+comment|/**      * Sets the default bus for the thread.      *      * @param bus the default bus.      */
 specifier|public
 specifier|static
 name|void
@@ -367,12 +385,19 @@ operator|.
 name|currentThread
 argument_list|()
 argument_list|,
+operator|new
+name|SoftReference
+argument_list|<
+name|Bus
+argument_list|>
+argument_list|(
 name|bus
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Gets the default bus for the thread.      *       * @return the default bus.      */
+comment|/**      * Gets the default bus for the thread.      *      * @return the default bus.      */
 specifier|public
 specifier|static
 name|Bus
@@ -386,7 +411,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Gets the default bus for the thread, creating if needed      *       * @param createIfNeeded Set to true to create a default bus if one doesn't exist      * @return the default bus.      */
+comment|/**      * Gets the default bus for the thread, creating if needed      *      * @param createIfNeeded Set to true to create a default bus if one doesn't exist      * @return the default bus.      */
 specifier|public
 specifier|static
 name|Bus
@@ -396,7 +421,10 @@ name|boolean
 name|createIfNeeded
 parameter_list|)
 block|{
+name|Reference
+argument_list|<
 name|Bus
+argument_list|>
 name|threadBus
 decl_stmt|;
 synchronized|synchronized
@@ -425,16 +453,32 @@ if|if
 condition|(
 name|createIfNeeded
 operator|&&
+operator|(
 name|threadBus
 operator|==
 literal|null
+operator|||
+name|threadBus
+operator|.
+name|get
+argument_list|()
+operator|==
+literal|null
+operator|)
 condition|)
 block|{
 name|threadBus
 operator|=
+operator|new
+name|SoftReference
+argument_list|<
+name|Bus
+argument_list|>
+argument_list|(
 name|getDefaultBus
 argument_list|(
-name|createIfNeeded
+literal|true
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|threadBusses
@@ -467,11 +511,28 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-return|return
+if|if
+condition|(
 name|threadBus
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
 return|;
 block|}
-comment|/**      * Removes a bus from being a thread default bus for any thread.      *<p>      * This is tipically done when a bus has ended its lifecycle (i.e.: a call to      * {@link Bus#shutdown(boolean)} was invoked) and it wants to remove any reference to itself for any      * thread.      *       * @param bus the bus to remove      */
+else|else
+block|{
+return|return
+name|threadBus
+operator|.
+name|get
+argument_list|()
+return|;
+block|}
+block|}
+comment|/**      * Removes a bus from being a thread default bus for any thread.      *<p>      * This is typically done when a bus has ended its lifecycle (i.e.: a call to      * {@link Bus#shutdown(boolean)} was invoked) and it wants to remove any reference to itself for any      * thread.      *      * @param bus the bus to remove      */
 specifier|public
 specifier|static
 name|void
@@ -492,7 +553,10 @@ control|(
 specifier|final
 name|Iterator
 argument_list|<
+name|Reference
+argument_list|<
 name|Bus
+argument_list|>
 argument_list|>
 name|iterator
 init|=
@@ -511,9 +575,24 @@ argument_list|()
 condition|;
 control|)
 block|{
+name|Bus
+name|itBus
+init|=
+name|iterator
+operator|.
+name|next
+argument_list|()
+operator|.
+name|get
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|bus
+operator|==
+literal|null
+operator|||
+name|itBus
 operator|==
 literal|null
 operator|||
@@ -521,10 +600,7 @@ name|bus
 operator|.
 name|equals
 argument_list|(
-name|iterator
-operator|.
-name|next
-argument_list|()
+name|itBus
 argument_list|)
 condition|)
 block|{
@@ -537,7 +613,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Sets the default bus if a default bus is not already set.      *       * @param bus the default bus.      * @return true if the bus was not set and is now set      */
+comment|/**      * Sets the default bus if a default bus is not already set.      *      * @param bus the default bus.      * @return true if the bus was not set and is now set      */
 specifier|public
 specifier|static
 specifier|synchronized
@@ -577,7 +653,14 @@ operator|.
 name|currentThread
 argument_list|()
 argument_list|,
+operator|new
+name|SoftReference
+argument_list|<
+name|Bus
+argument_list|>
+argument_list|(
 name|bus
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -601,7 +684,7 @@ block|{
 name|defaultBus
 operator|=
 operator|new
-name|WeakReference
+name|SoftReference
 argument_list|<
 name|Bus
 argument_list|>
@@ -617,7 +700,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Create a new BusFactory The class of the BusFactory is determined by looking for the system propery:      * org.apache.cxf.bus.factory or by searching the classpath for:      * META-INF/services/org.apache.cxf.bus.factory      *       * @return a new BusFactory to be used to create Bus objects      */
+comment|/**      * Create a new BusFactory The class of the BusFactory is determined by looking for the system propery:      * org.apache.cxf.bus.factory or by searching the classpath for:      * META-INF/services/org.apache.cxf.bus.factory      *      * @return a new BusFactory to be used to create Bus objects      */
 specifier|public
 specifier|static
 name|BusFactory
@@ -631,7 +714,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new BusFactory      *       * @param className The class of the BusFactory to create. If null, uses the default search algorithm.      * @return a new BusFactory to be used to create Bus objects      */
+comment|/**      * Create a new BusFactory      *      * @param className The class of the BusFactory to create. If null, uses the default search algorithm.      * @return a new BusFactory to be used to create Bus objects      */
 specifier|public
 specifier|static
 name|BusFactory
