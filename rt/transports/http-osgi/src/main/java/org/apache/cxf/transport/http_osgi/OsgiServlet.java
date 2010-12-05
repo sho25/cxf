@@ -157,6 +157,14 @@ operator|new
 name|OsgiServletController
 argument_list|(
 name|this
+operator|.
+name|getTransport
+argument_list|()
+argument_list|,
+name|this
+operator|.
+name|getServletConfig
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
