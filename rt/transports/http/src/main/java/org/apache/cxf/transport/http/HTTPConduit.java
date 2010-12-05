@@ -1984,7 +1984,7 @@ argument_list|(
 name|message
 argument_list|)
 operator|.
-name|setHeadersByClientPolicy
+name|setFromClientPolicy
 argument_list|(
 name|getClient
 argument_list|(
