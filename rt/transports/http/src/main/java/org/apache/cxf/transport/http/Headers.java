@@ -384,6 +384,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Write cookie header from given session cookies      *       * @param sessionCookies      */
 specifier|public
 name|void
 name|writeSessionCookies
