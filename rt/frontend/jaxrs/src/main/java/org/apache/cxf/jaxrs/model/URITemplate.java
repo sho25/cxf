@@ -973,6 +973,10 @@ name|length
 argument_list|()
 operator|==
 literal|0
+operator|&&
+name|i
+operator|<
+name|groupCount
 condition|)
 block|{
 continue|continue;
