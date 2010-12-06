@@ -1831,7 +1831,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|"(\\w[-\\w\\.]*)(\\:(.+))?"
+literal|"(\\w[-\\w\\.]*[ ]*)(\\:(.+))?"
 argument_list|)
 decl_stmt|;
 specifier|private
@@ -1894,6 +1894,9 @@ name|stripBraces
 argument_list|(
 name|uriChunk
 argument_list|)
+operator|.
+name|trim
+argument_list|()
 expr_stmt|;
 name|Matcher
 name|matcher
@@ -1946,12 +1949,9 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|pattern
-operator|=
-name|Pattern
-operator|.
-name|compile
-argument_list|(
+name|String
+name|patternExpression
+init|=
 name|matcher
 operator|.
 name|group
@@ -1961,6 +1961,14 @@ argument_list|)
 operator|.
 name|trim
 argument_list|()
+decl_stmt|;
+name|pattern
+operator|=
+name|Pattern
+operator|.
+name|compile
+argument_list|(
+name|patternExpression
 argument_list|)
 expr_stmt|;
 block|}
