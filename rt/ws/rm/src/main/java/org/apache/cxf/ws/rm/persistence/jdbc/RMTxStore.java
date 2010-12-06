@@ -792,6 +792,7 @@ operator|=
 name|dcn
 expr_stmt|;
 block|}
+specifier|public
 name|String
 name|getDriverClassName
 parameter_list|()
@@ -813,6 +814,7 @@ operator|=
 name|p
 expr_stmt|;
 block|}
+specifier|public
 name|String
 name|getPassword
 parameter_list|()
@@ -834,6 +836,7 @@ operator|=
 name|u
 expr_stmt|;
 block|}
+specifier|public
 name|String
 name|getUrl
 parameter_list|()
@@ -855,6 +858,7 @@ operator|=
 name|un
 expr_stmt|;
 block|}
+specifier|public
 name|String
 name|getUserName
 parameter_list|()
@@ -3076,6 +3080,7 @@ block|}
 block|}
 annotation|@
 name|PostConstruct
+specifier|public
 specifier|synchronized
 name|void
 name|init
