@@ -149,18 +149,6 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|core
 operator|.
 name|Cookie
@@ -1351,7 +1339,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|ServerWebApplicationException
 argument_list|(
 name|r
 argument_list|)
@@ -1430,7 +1418,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|ServerWebApplicationException
 argument_list|(
 name|r
 argument_list|)
@@ -2691,7 +2679,7 @@ block|{
 comment|/** do we have a pre-connect error ? */
 throw|throw
 operator|new
-name|WebApplicationException
+name|ClientWebApplicationException
 argument_list|(
 name|primaryError
 argument_list|)
@@ -2799,7 +2787,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|ClientWebApplicationException
 argument_list|(
 name|ex
 argument_list|)
