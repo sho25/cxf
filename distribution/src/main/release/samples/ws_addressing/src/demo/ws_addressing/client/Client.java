@@ -626,41 +626,12 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * A series of invocations with explicitly propogated      * Message Addressing Properties.      */
 specifier|private
 specifier|static
-name|void
-name|explicitPropagation
-parameter_list|(
-name|Greeter
-name|port
-parameter_list|)
+name|AddressingProperties
+name|createMaps
+parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|()
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Explicit MessageAddressingProperties propagation"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"------------------------------------------------"
-argument_list|)
-expr_stmt|;
 comment|// get Message Addressing Properties instance
 name|AddressingBuilder
 name|builder
@@ -706,6 +677,45 @@ argument_list|(
 name|messageID
 argument_list|)
 expr_stmt|;
+return|return
+name|maps
+return|;
+block|}
+comment|/**      * A series of invocations with explicitly propogated      * Message Addressing Properties.      */
+specifier|private
+specifier|static
+name|void
+name|explicitPropagation
+parameter_list|(
+name|Greeter
+name|port
+parameter_list|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|()
+expr_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Explicit MessageAddressingProperties propagation"
+argument_list|)
+expr_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"------------------------------------------------"
+argument_list|)
+expr_stmt|;
 comment|// associate MAPs with request context
 name|Map
 argument_list|<
@@ -731,7 +741,8 @@ name|put
 argument_list|(
 name|CLIENT_ADDRESSING_PROPERTIES
 argument_list|,
-name|maps
+name|createMaps
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|System
@@ -764,15 +775,6 @@ operator|+
 literal|"\n"
 argument_list|)
 expr_stmt|;
-comment|// clear the message ID to ensure a duplicate is not sent on the
-comment|// next invocation
-name|maps
-operator|.
-name|setMessageID
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
 comment|// set the RelatesTo property to the initial message ID, so that
 comment|// the series of invocations are explicitly related
 comment|//RelatesToType relatesTo = WSA_OBJECT_FACTORY.createRelatesToType();
@@ -785,6 +787,16 @@ operator|.
 name|println
 argument_list|(
 literal|"Invoking greetMe..."
+argument_list|)
+expr_stmt|;
+name|requestContext
+operator|.
+name|put
+argument_list|(
+name|CLIENT_ADDRESSING_PROPERTIES
+argument_list|,
+name|createMaps
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|resp
@@ -816,6 +828,16 @@ operator|.
 name|println
 argument_list|(
 literal|"Invoking greetMeOneWay..."
+argument_list|)
+expr_stmt|;
+name|requestContext
+operator|.
+name|put
+argument_list|(
+name|CLIENT_ADDRESSING_PROPERTIES
+argument_list|,
+name|createMaps
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|port
