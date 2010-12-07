@@ -414,6 +414,11 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
+name|configureServer
+argument_list|(
+name|server
+argument_list|)
+expr_stmt|;
 name|server
 operator|.
 name|start
@@ -433,6 +438,24 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+specifier|protected
+name|void
+name|configureServer
+parameter_list|(
+name|org
+operator|.
+name|eclipse
+operator|.
+name|jetty
+operator|.
+name|server
+operator|.
+name|Server
+name|theserver
+parameter_list|)
+throws|throws
+name|Exception
+block|{              }
 specifier|public
 name|void
 name|tearDown
