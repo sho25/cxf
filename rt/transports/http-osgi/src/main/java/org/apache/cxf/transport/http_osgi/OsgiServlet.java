@@ -99,6 +99,22 @@ name|cxf
 operator|.
 name|transport
 operator|.
+name|http
+operator|.
+name|DestinationRegistry
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
 name|servlet
 operator|.
 name|AbstractHTTPServlet
@@ -113,7 +129,7 @@ extends|extends
 name|AbstractHTTPServlet
 block|{
 specifier|private
-name|OsgiDestinationRegistryIntf
+name|DestinationRegistry
 name|transport
 decl_stmt|;
 specifier|private
@@ -123,7 +139,7 @@ decl_stmt|;
 specifier|public
 name|OsgiServlet
 parameter_list|(
-name|OsgiDestinationRegistryIntf
+name|DestinationRegistry
 name|transport
 parameter_list|)
 block|{
@@ -176,7 +192,7 @@ name|destroy
 parameter_list|()
 block|{     }
 specifier|public
-name|OsgiDestinationRegistryIntf
+name|DestinationRegistry
 name|getTransport
 parameter_list|()
 block|{
