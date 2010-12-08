@@ -184,6 +184,8 @@ argument_list|(
 name|getBus
 argument_list|()
 argument_list|,
+name|registry
+argument_list|,
 name|endpointInfo
 argument_list|)
 expr_stmt|;
