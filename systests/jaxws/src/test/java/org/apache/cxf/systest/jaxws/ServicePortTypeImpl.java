@@ -117,8 +117,6 @@ name|ServicePortTypeImpl
 implements|implements
 name|ServicePortType
 block|{
-annotation|@
-name|Override
 specifier|public
 name|CkReponseType
 name|ckR
