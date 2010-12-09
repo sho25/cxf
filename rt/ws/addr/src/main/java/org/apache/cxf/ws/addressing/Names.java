@@ -441,6 +441,16 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|WSA_UNSPECIFIED_RELATIONSHIP
+init|=
+name|WSA_NAMESPACE_NAME
+operator|+
+literal|"/unspecified"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|WSA_FAULT_DELIMITER
 init|=
 literal|"/fault"
