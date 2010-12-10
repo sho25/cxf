@@ -4586,11 +4586,7 @@ return|return
 literal|null
 return|;
 block|}
-synchronized|synchronized
-init|(
-name|marshallers
-init|)
-block|{
+comment|// don't need the synchronized statement, as this ojbect is used per thread
 name|Marshaller
 name|marshaller
 init|=
@@ -4629,7 +4625,6 @@ return|return
 name|marshaller
 return|;
 block|}
-block|}
 specifier|public
 name|Unmarshaller
 name|getUnmarshall
@@ -4651,11 +4646,7 @@ return|return
 literal|null
 return|;
 block|}
-synchronized|synchronized
-init|(
-name|unmarshallers
-init|)
-block|{
+comment|// don't need the synchronized statement, as this ojbect is used per thread
 name|Unmarshaller
 name|unmarshaller
 init|=
@@ -4693,7 +4684,6 @@ block|}
 return|return
 name|unmarshaller
 return|;
-block|}
 block|}
 block|}
 specifier|protected
