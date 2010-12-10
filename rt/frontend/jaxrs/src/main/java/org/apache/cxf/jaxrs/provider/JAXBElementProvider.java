@@ -383,20 +383,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|transform
-operator|.
-name|stream
-operator|.
-name|StreamSource
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -1041,8 +1027,9 @@ name|unmarshaller
 operator|.
 name|unmarshal
 argument_list|(
-operator|new
-name|StreamSource
+name|StaxUtils
+operator|.
+name|createXMLStreamReader
 argument_list|(
 name|is
 argument_list|)
@@ -1406,12 +1393,18 @@ parameter_list|)
 throws|throws
 name|JAXBException
 block|{
+comment|// Try to create the read before unmarshalling the stream
 return|return
 name|unmarshaller
 operator|.
 name|unmarshal
 argument_list|(
+name|StaxUtils
+operator|.
+name|createXMLStreamReader
+argument_list|(
 name|is
+argument_list|)
 argument_list|)
 return|;
 block|}
