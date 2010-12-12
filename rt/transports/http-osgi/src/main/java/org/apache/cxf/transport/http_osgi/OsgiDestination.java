@@ -187,15 +187,6 @@ return|return
 name|LOG
 return|;
 block|}
-specifier|protected
-name|Bus
-name|getBus
-parameter_list|()
-block|{
-return|return
-name|bus
-return|;
-block|}
 block|}
 end_class
 
