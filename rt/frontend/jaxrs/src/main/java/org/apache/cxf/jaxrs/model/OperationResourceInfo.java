@@ -398,6 +398,7 @@ name|checkOneway
 argument_list|()
 expr_stmt|;
 block|}
+comment|//CHECKSTYLE:OFF
 specifier|public
 name|OperationResourceInfo
 parameter_list|(
@@ -424,8 +425,12 @@ argument_list|<
 name|Parameter
 argument_list|>
 name|params
+parameter_list|,
+name|boolean
+name|oneway
 parameter_list|)
 block|{
+comment|//CHECKSTYLE:ON
 name|methodToInvoke
 operator|=
 name|m
@@ -456,6 +461,12 @@ expr_stmt|;
 name|parameters
 operator|=
 name|params
+expr_stmt|;
+name|this
+operator|.
+name|oneway
+operator|=
+name|oneway
 expr_stmt|;
 block|}
 specifier|private

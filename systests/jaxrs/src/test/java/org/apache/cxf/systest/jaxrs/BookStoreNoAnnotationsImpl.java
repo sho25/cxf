@@ -363,6 +363,13 @@ return|return
 name|thebooks
 return|;
 block|}
+specifier|public
+name|void
+name|pingBookStore
+parameter_list|()
+block|{
+comment|// complete
+block|}
 block|}
 end_class
 

@@ -54,6 +54,10 @@ argument_list|>
 name|thebooks
 parameter_list|)
 function_decl|;
+name|void
+name|pingBookStore
+parameter_list|()
+function_decl|;
 name|ChapterNoAnnotations
 name|getBookChapter
 parameter_list|(
