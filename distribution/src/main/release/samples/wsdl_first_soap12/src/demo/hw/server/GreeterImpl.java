@@ -100,6 +100,16 @@ name|value
 operator|=
 literal|"http://www.w3.org/2003/05/soap/bindings/HTTP/"
 argument_list|)
+annotation|@
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
+name|SchemaValidation
 specifier|public
 class|class
 name|GreeterImpl
