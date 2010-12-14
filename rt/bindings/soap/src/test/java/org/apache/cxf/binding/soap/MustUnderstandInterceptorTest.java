@@ -582,11 +582,11 @@ name|SoapFault
 operator|)
 name|soapMessage
 operator|.
-name|getContent
+name|get
 argument_list|(
-name|Exception
+name|MustUnderstandInterceptor
 operator|.
-name|class
+name|FAULT
 argument_list|)
 decl_stmt|;
 if|if
