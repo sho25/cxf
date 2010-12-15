@@ -3385,8 +3385,16 @@ operator|.
 name|indexOf
 argument_list|(
 literal|"wsam:Action=\"http://cxf.apache.org/fault3\""
-operator|+
-literal|"  wsaw:Action=\"http://cxf.apache.org/fault3\""
+argument_list|)
+operator|>
+operator|-
+literal|1
+operator|&&
+name|wsdlString
+operator|.
+name|indexOf
+argument_list|(
+literal|"wsaw:Action=\"http://cxf.apache.org/fault3\""
 argument_list|)
 operator|>
 operator|-

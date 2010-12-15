@@ -4809,7 +4809,24 @@ operator|.
 name|anyTimes
 argument_list|()
 expr_stmt|;
-comment|//Exchange exchange = new ExchangeImpl();
+name|EasyMock
+operator|.
+name|expect
+argument_list|(
+name|exchange
+operator|.
+name|isEmpty
+argument_list|()
+argument_list|)
+operator|.
+name|andReturn
+argument_list|(
+literal|true
+argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
+expr_stmt|;
 return|return
 name|exchange
 return|;
