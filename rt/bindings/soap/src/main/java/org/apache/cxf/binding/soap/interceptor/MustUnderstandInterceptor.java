@@ -636,6 +636,15 @@ name|soapMessage
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+operator|!
+name|isRequestor
+argument_list|(
+name|soapMessage
+argument_list|)
+condition|)
+block|{
 name|soapMessage
 operator|.
 name|getInterceptorChain
@@ -646,6 +655,7 @@ argument_list|(
 name|ending
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void
@@ -1555,8 +1565,6 @@ name|phase
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|handleMessage
