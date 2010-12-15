@@ -383,8 +383,6 @@ return|return
 name|continueProcessing
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getHandlerId
@@ -394,8 +392,6 @@ return|return
 literal|"TestMustUnderstandHandler"
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Set
 argument_list|<
@@ -408,8 +404,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|close
@@ -418,8 +412,6 @@ name|MessageContext
 name|messagecontext
 parameter_list|)
 block|{     }
-annotation|@
-name|Override
 specifier|public
 name|boolean
 name|handleFault
