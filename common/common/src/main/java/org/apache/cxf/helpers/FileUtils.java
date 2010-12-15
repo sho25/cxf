@@ -295,6 +295,12 @@ name|checkExists
 operator|.
 name|exists
 argument_list|()
+operator|||
+operator|!
+name|checkExists
+operator|.
+name|isDirectory
+argument_list|()
 condition|)
 block|{
 throw|throw
@@ -311,6 +317,32 @@ operator|+
 literal|" does not exist, please set java.io.tempdir"
 operator|+
 literal|" to an existing directory"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+operator|!
+name|checkExists
+operator|.
+name|canWrite
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"The directory "
+operator|+
+name|checkExists
+operator|.
+name|getAbsolutePath
+argument_list|()
+operator|+
+literal|" is now writable, please set java.io.tempdir"
+operator|+
+literal|" to an writable directory"
 argument_list|)
 throw|;
 block|}
