@@ -174,7 +174,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-specifier|private
+specifier|protected
 name|String
 name|base64Encode
 parameter_list|(

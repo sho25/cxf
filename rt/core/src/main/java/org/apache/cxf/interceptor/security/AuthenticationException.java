@@ -20,12 +20,12 @@ end_package
 begin_class
 specifier|public
 class|class
-name|AccessDeniedException
+name|AuthenticationException
 extends|extends
 name|SecurityException
 block|{
 specifier|public
-name|AccessDeniedException
+name|AuthenticationException
 parameter_list|(
 name|String
 name|reason
