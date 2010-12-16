@@ -253,7 +253,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|ServletController
+name|AbstractServletController
 operator|.
 name|class
 argument_list|)

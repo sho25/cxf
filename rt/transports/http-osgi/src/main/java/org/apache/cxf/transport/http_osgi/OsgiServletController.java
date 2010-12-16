@@ -292,7 +292,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|OsgiServlet
+name|OsgiServletController
 operator|.
 name|class
 argument_list|)
