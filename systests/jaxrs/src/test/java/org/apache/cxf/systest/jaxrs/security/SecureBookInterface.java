@@ -207,7 +207,11 @@ argument_list|)
 annotation|@
 name|Secured
 argument_list|(
+block|{
 literal|"ROLE_ADMIN"
+block|,
+literal|"ROLE_BOOK_OWNER"
+block|}
 argument_list|)
 name|Book
 name|getThatBook

@@ -180,7 +180,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaas/bookstorestorage/thosebooks/123"
+literal|"/service/jaas/bookstorestorage/thosebooks/123"
 decl_stmt|;
 name|getBook
 argument_list|(
@@ -210,7 +210,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaas/bookstorestorage/thosebooks/123"
+literal|"/service/jaas/bookstorestorage/thosebooks/123"
 decl_stmt|;
 name|getBook
 argument_list|(
@@ -251,7 +251,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaas2/bookstorestorage/thosebooks/123"
+literal|"/service/jaas2/bookstorestorage/thosebooks/123"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -355,7 +355,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaas2/bookstorestorage/thosebooks/123"
+literal|"/service/jaas2/bookstorestorage/thosebooks/123"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -438,7 +438,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaas2/login.jsp"
+literal|"/service/login.jsp"
 argument_list|,
 name|locationHeader
 operator|.
@@ -463,7 +463,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaas2/bookstorestorage/thosebooks/123"
+literal|"/service/jaas2/bookstorestorage/thosebooks/123"
 decl_stmt|;
 name|getBook
 argument_list|(
