@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|transport
 operator|.
-name|http
+name|common
 operator|.
 name|gzip
 package|;
