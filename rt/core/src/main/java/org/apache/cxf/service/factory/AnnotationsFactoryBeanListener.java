@@ -1882,7 +1882,7 @@ name|ClassLoaderUtils
 operator|.
 name|loadClass
 argument_list|(
-literal|"org.apache.cxf.transport.http.gzip.GZIPFeature"
+literal|"org.apache.cxf.transport.common.gzip.GZIPFeature"
 argument_list|,
 name|this
 operator|.
