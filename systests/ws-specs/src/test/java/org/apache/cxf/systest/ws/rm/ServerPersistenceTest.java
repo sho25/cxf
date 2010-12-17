@@ -1078,9 +1078,9 @@ name|Exception
 block|{
 name|awaitMessages
 argument_list|(
-literal|4
+literal|5
 argument_list|,
-literal|6
+literal|8
 argument_list|,
 literal|20000
 argument_list|)
