@@ -176,16 +176,6 @@ argument_list|(
 name|IN
 argument_list|)
 expr_stmt|;
-name|provider
-operator|.
-name|getInFaultInterceptors
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|IN
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|threshold
