@@ -1082,7 +1082,7 @@ literal|5
 argument_list|,
 literal|8
 argument_list|,
-literal|20000
+literal|60000
 argument_list|)
 expr_stmt|;
 comment|// wait another while to prove that response to second request is indeed lost
