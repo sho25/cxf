@@ -1447,7 +1447,7 @@ literal|3
 argument_list|,
 literal|5
 argument_list|,
-literal|40000
+literal|60000
 argument_list|)
 expr_stmt|;
 name|boolean
