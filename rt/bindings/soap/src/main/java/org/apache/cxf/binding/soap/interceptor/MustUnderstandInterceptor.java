@@ -938,6 +938,16 @@ argument_list|,
 name|soapFault
 argument_list|)
 expr_stmt|;
+name|soapMessage
+operator|.
+name|getInterceptorChain
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|ending
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 block|}
