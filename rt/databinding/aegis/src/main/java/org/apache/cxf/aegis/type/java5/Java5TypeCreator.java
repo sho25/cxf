@@ -1356,6 +1356,31 @@ name|typeClass
 argument_list|)
 expr_stmt|;
 block|}
+comment|//check from aegis type annotation
+if|if
+condition|(
+name|ns
+operator|==
+literal|null
+operator|||
+name|ns
+operator|.
+name|length
+argument_list|()
+operator|==
+literal|0
+condition|)
+block|{
+name|ns
+operator|=
+name|annotationReader
+operator|.
+name|getNamespace
+argument_list|(
+name|typeClass
+argument_list|)
+expr_stmt|;
+block|}
 comment|// check jaxb package annotation
 if|if
 condition|(
