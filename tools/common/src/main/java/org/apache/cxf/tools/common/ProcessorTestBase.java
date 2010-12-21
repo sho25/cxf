@@ -730,6 +730,9 @@ argument_list|(
 name|wsdlFile
 argument_list|)
 operator|.
+name|toURI
+argument_list|()
+operator|.
 name|toString
 argument_list|()
 return|;

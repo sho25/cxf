@@ -3166,7 +3166,10 @@ argument_list|(
 literal|"/org/apache/cxf/systest/jaxrs/resources/java.jpg"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
+argument_list|()
+operator|.
+name|getPath
 argument_list|()
 argument_list|)
 decl_stmt|;

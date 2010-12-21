@@ -6455,6 +6455,8 @@ specifier|public
 name|void
 name|testSetSchemasFromDisk
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|JAXBElementProvider
 name|provider
@@ -6490,7 +6492,10 @@ argument_list|(
 literal|"test.xsd"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
+argument_list|()
+operator|.
+name|getPath
 argument_list|()
 decl_stmt|;
 name|locations
