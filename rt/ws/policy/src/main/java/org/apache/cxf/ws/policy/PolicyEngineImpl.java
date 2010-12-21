@@ -565,6 +565,18 @@ name|Bus
 name|b
 parameter_list|)
 block|{
+if|if
+condition|(
+name|this
+operator|.
+name|bus
+operator|==
+name|b
+condition|)
+block|{
+comment|//avoid bus init twice through injection
+return|return;
+block|}
 name|bus
 operator|=
 name|b
