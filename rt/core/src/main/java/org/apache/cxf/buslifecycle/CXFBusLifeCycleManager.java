@@ -248,6 +248,12 @@ name|preShutdown
 parameter_list|()
 block|{
 comment|// TODO inverse order of registration?
+if|if
+condition|(
+operator|!
+name|preShutdownCalled
+condition|)
+block|{
 name|preShutdownCalled
 operator|=
 literal|true
@@ -265,6 +271,7 @@ operator|.
 name|preShutdown
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public
