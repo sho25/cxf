@@ -254,7 +254,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|LoggingInInterceptor
+name|AbstractLoggingInterceptor
 operator|.
 name|class
 argument_list|)
