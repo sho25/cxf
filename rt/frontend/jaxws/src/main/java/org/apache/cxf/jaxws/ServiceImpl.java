@@ -3148,6 +3148,14 @@ operator|.
 name|create
 argument_list|()
 expr_stmt|;
+comment|//Add this flag and not need to create service twice
+name|serviceFactory
+operator|.
+name|setNeedReset
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 block|}
 name|EndpointInfo
 name|ei

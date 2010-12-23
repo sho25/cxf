@@ -1988,6 +1988,14 @@ block|{
 if|if
 condition|(
 operator|!
+name|needReset
+condition|)
+block|{
+return|return;
+block|}
+if|if
+condition|(
+operator|!
 name|dataBindingSet
 condition|)
 block|{
