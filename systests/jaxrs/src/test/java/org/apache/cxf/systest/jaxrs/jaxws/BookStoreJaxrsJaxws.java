@@ -294,6 +294,8 @@ annotation|@
 name|Consumes
 argument_list|(
 block|{
+literal|"application/fastinfoset"
+block|,
 literal|"text/xml"
 block|}
 argument_list|)

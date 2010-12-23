@@ -2524,6 +2524,13 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|out
+operator|!=
+literal|null
+condition|)
+block|{
 name|out
 operator|.
 name|write
@@ -2539,6 +2546,7 @@ literal|"UTF-8"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
