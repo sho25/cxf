@@ -73,7 +73,11 @@ comment|/**      * The default constructor assigns the class name as the Logical
 specifier|protected
 name|HttpBasicAuthSupplier
 parameter_list|()
-block|{     }
+block|{
+name|super
+argument_list|()
+expr_stmt|;
+block|}
 comment|/**      * This constructor assigns the LogicalName of this HttpBasicAuthSupplier.      *       * @param name The Logical Name.      */
 specifier|protected
 name|HttpBasicAuthSupplier
