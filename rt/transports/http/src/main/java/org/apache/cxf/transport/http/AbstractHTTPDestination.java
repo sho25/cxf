@@ -767,7 +767,7 @@ specifier|final
 name|String
 name|RESPONSE_HEADERS_COPIED
 init|=
-literal|"http.response.done"
+literal|"http.headers.copied"
 decl_stmt|;
 specifier|public
 specifier|static
