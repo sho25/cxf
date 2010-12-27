@@ -491,11 +491,11 @@ name|ResourceUtils
 operator|.
 name|createClassResourceInfo
 argument_list|(
-name|TheSDOBooks
+name|TheXmlBeansBooks
 operator|.
 name|class
 argument_list|,
-name|TheSDOBooks
+name|TheXmlBeansBooks
 operator|.
 name|class
 argument_list|,
@@ -1766,7 +1766,7 @@ literal|"/books/{bookId}/{new}"
 argument_list|)
 specifier|public
 name|Address
-name|getStructure
+name|getAddress
 parameter_list|()
 block|{
 return|return
