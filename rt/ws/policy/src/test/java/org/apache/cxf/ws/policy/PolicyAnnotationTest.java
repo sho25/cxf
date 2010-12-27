@@ -299,6 +299,14 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Need to clean up the Default Bus instance frist
+name|BusFactory
+operator|.
+name|setDefaultBus
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 name|Bus
 name|bus
 init|=
