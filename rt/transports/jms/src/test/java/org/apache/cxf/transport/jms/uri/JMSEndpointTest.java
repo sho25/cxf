@@ -700,17 +700,6 @@ operator|.
 name|getRequestURI
 argument_list|()
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"request uri "
-operator|+
-name|requestUri
-argument_list|)
-expr_stmt|;
 comment|// Checking what's the request uri should have
 name|assertTrue
 argument_list|(
