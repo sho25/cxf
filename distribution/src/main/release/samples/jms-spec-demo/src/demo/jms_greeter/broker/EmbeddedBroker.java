@@ -83,6 +83,13 @@ argument_list|)
 expr_stmt|;
 name|broker
 operator|.
+name|setDataDirectory
+argument_list|(
+literal|"target/activemq-data"
+argument_list|)
+expr_stmt|;
+name|broker
+operator|.
 name|addConnector
 argument_list|(
 literal|"tcp://localhost:61616"
