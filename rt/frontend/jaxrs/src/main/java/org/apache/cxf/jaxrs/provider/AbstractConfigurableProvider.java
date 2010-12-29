@@ -51,6 +51,22 @@ name|BusFactory
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|model
+operator|.
+name|ClassResourceInfo
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -195,6 +211,19 @@ block|{
 return|return
 name|enableBuffering
 return|;
+block|}
+specifier|public
+name|void
+name|init
+parameter_list|(
+name|List
+argument_list|<
+name|ClassResourceInfo
+argument_list|>
+name|resources
+parameter_list|)
+block|{
+comment|// complete
 block|}
 block|}
 end_class

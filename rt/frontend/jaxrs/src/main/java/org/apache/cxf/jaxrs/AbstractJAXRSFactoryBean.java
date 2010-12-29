@@ -1571,6 +1571,16 @@ name|schemaLocations
 argument_list|)
 expr_stmt|;
 block|}
+name|factory
+operator|.
+name|initProviders
+argument_list|(
+name|serviceFactory
+operator|.
+name|getRealClassResourceInfo
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|ep
 operator|.
 name|put

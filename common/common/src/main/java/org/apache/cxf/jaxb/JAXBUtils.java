@@ -4917,6 +4917,10 @@ argument_list|>
 argument_list|>
 name|classes
 parameter_list|,
+name|Class
+index|[]
+name|extraClass
+parameter_list|,
 name|Map
 argument_list|<
 name|Package
@@ -4926,6 +4930,37 @@ argument_list|>
 name|objectFactoryCache
 parameter_list|)
 block|{
+comment|// add user extra class into jaxb context
+if|if
+condition|(
+name|extraClass
+operator|!=
+literal|null
+operator|&&
+name|extraClass
+operator|.
+name|length
+operator|>
+literal|0
+condition|)
+block|{
+for|for
+control|(
+name|Class
+name|clz
+range|:
+name|extraClass
+control|)
+block|{
+name|classes
+operator|.
+name|add
+argument_list|(
+name|clz
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 comment|// try and read any jaxb.index files that are with the other classes.
 comment|// This should
 comment|// allow loading of extra classes (such as subclasses for inheritance
