@@ -2384,7 +2384,7 @@ name|createMessageBodyReader
 argument_list|(
 name|type
 argument_list|,
-literal|null
+name|type
 argument_list|,
 literal|null
 argument_list|,
@@ -2416,7 +2416,7 @@ name|createMessageBodyWriter
 argument_list|(
 name|type
 argument_list|,
-literal|null
+name|type
 argument_list|,
 literal|null
 argument_list|,
