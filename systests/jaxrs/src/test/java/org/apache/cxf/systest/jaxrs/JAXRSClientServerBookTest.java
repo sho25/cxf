@@ -1051,7 +1051,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/propogateexception"
+literal|"/bookstore/propagate-exception"
 argument_list|,
 literal|""
 argument_list|,
@@ -1087,7 +1087,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/propogateexception2"
+literal|"/bookstore/propagate-exception2"
 argument_list|,
 name|data
 argument_list|,
@@ -1117,7 +1117,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/propogateexception3"
+literal|"/bookstore/propagate-exception3"
 argument_list|,
 name|data
 argument_list|,

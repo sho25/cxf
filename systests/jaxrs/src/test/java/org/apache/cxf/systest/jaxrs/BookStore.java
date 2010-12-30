@@ -1005,7 +1005,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"propogateexception"
+literal|"propagate-exception"
 argument_list|)
 specifier|public
 name|Book
@@ -1027,7 +1027,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"propogateexception2"
+literal|"propagate-exception2"
 argument_list|)
 specifier|public
 name|Book
@@ -1043,7 +1043,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"org.apache.cxf.propogate.exception"
+literal|"org.apache.cxf.propagate.exception"
 argument_list|,
 name|Boolean
 operator|.
@@ -1063,7 +1063,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"propogateexception3"
+literal|"propagate-exception3"
 argument_list|)
 specifier|public
 name|Book

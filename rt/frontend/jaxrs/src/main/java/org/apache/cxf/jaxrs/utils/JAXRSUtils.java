@@ -1157,7 +1157,7 @@ specifier|final
 name|String
 name|PROPOGATE_EXCEPTION
 init|=
-literal|"org.apache.cxf.propogate.exception"
+literal|"org.apache.cxf.propagate.exception"
 decl_stmt|;
 specifier|private
 specifier|static
