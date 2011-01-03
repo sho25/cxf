@@ -186,6 +186,18 @@ return|return
 name|us
 return|;
 block|}
+specifier|public
+name|User
+name|echoUser
+parameter_list|(
+name|User
+name|user
+parameter_list|)
+block|{
+return|return
+name|user
+return|;
+block|}
 block|}
 end_class
 
