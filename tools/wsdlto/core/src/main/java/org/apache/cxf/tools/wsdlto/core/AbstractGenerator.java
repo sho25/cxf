@@ -75,6 +75,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|DatatypeConverter
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -635,17 +647,21 @@ name|void
 name|setCommonAttributes
 parameter_list|()
 block|{
+comment|// Set generated date in ISO-8601 format, as is required for the date attribute for @Generated
+comment|// annotation.
 name|setAttributes
 argument_list|(
 literal|"currentdate"
 argument_list|,
+name|DatatypeConverter
+operator|.
+name|printDateTime
+argument_list|(
 name|Calendar
 operator|.
 name|getInstance
 argument_list|()
-operator|.
-name|getTime
-argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|setAttributes
@@ -676,6 +692,20 @@ name|Version
 operator|.
 name|getName
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|setAttributes
+argument_list|(
+literal|"mark-generated"
+argument_list|,
+name|env
+operator|.
+name|optionSet
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_MARK_GENERATED
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
