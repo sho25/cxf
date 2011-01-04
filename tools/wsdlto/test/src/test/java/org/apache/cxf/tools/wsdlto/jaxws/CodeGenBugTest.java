@@ -7255,7 +7255,7 @@ name|contents
 operator|.
 name|contains
 argument_list|(
-literal|"Loginrequest loginRequest"
+literal|"Loginrequesttype loginRequest"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -7265,7 +7265,7 @@ name|contents
 operator|.
 name|contains
 argument_list|(
-literal|"<Loginresponse> loginResponse"
+literal|"<Loginresponsetype> loginResponse"
 argument_list|)
 argument_list|)
 expr_stmt|;
