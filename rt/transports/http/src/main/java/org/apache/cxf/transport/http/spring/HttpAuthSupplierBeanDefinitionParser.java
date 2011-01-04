@@ -59,6 +59,8 @@ name|transport
 operator|.
 name|http
 operator|.
+name|auth
+operator|.
 name|HttpAuthSupplier
 import|;
 end_import

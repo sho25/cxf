@@ -76,15 +76,6 @@ argument_list|)
 expr_stmt|;
 name|registerBeanDefinitionParser
 argument_list|(
-literal|"basicAuthSupplier"
-argument_list|,
-operator|new
-name|HttpBasicAuthSupplierBeanDefinitionParser
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|registerBeanDefinitionParser
-argument_list|(
 literal|"destination"
 argument_list|,
 operator|new

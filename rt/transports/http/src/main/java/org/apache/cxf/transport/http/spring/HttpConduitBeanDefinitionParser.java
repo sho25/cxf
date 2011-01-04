@@ -213,7 +213,7 @@ name|transport
 operator|.
 name|http
 operator|.
-name|HttpAuthSupplier
+name|MessageTrustDecider
 import|;
 end_import
 
@@ -229,7 +229,9 @@ name|transport
 operator|.
 name|http
 operator|.
-name|MessageTrustDecider
+name|auth
+operator|.
+name|HttpAuthSupplier
 import|;
 end_import
 

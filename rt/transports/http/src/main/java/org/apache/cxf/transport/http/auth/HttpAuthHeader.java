@@ -14,6 +14,8 @@ operator|.
 name|transport
 operator|.
 name|http
+operator|.
+name|auth
 package|;
 end_package
 
