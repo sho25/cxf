@@ -1027,24 +1027,10 @@ condition|(
 name|params
 operator|==
 literal|null
-condition|)
-block|{
-return|return
-name|params
-return|;
-block|}
-if|if
-condition|(
+operator|||
 name|order
 operator|==
 literal|null
-operator|||
-name|order
-operator|.
-name|size
-argument_list|()
-operator|==
-literal|0
 condition|)
 block|{
 return|return
@@ -1106,7 +1092,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 name|order
 operator|.
@@ -1154,7 +1140,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Set the following parameters to null: "
 operator|+
