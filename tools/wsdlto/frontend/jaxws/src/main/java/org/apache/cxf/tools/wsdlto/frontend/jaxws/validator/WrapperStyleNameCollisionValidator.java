@@ -377,13 +377,13 @@ name|isValid
 parameter_list|()
 block|{
 return|return
-name|checkNameColllision
+name|checkNameCollision
 argument_list|()
 return|;
 block|}
 specifier|private
 name|boolean
-name|checkNameColllision
+name|checkNameCollision
 parameter_list|()
 block|{
 name|InterfaceInfo
