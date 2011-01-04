@@ -505,6 +505,11 @@ argument_list|()
 expr_stmt|;
 try|try
 block|{
+synchronized|synchronized
+init|(
+name|chain
+init|)
+block|{
 name|message
 operator|.
 name|getExchange
@@ -538,6 +543,17 @@ name|void
 name|run
 parameter_list|()
 block|{
+synchronized|synchronized
+init|(
+name|chain
+init|)
+block|{
+name|chain
+operator|.
+name|notifyAll
+argument_list|()
+expr_stmt|;
+block|}
 name|chain
 operator|.
 name|resume
@@ -547,6 +563,17 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+comment|//wait a few milliseconds for the background thread to start processing
+comment|//Mostly just to make an attempt at keeping the ordering of the
+comment|//messages coming in from a client.  Not guaranteed though.
+name|chain
+operator|.
+name|wait
+argument_list|(
+literal|20
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -560,6 +587,14 @@ operator|.
 name|resume
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e
+parameter_list|)
+block|{
+comment|//ignore - likely a busy work queue so we'll just let the one-way go
 block|}
 block|}
 block|}
