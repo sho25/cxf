@@ -4327,11 +4327,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"all"
-argument_list|)
 specifier|public
 name|void
 name|testNullQueryParamValues
@@ -4350,6 +4345,10 @@ name|queryParam
 argument_list|(
 literal|"hello"
 argument_list|,
+operator|(
+name|Object
+index|[]
+operator|)
 literal|null
 argument_list|)
 expr_stmt|;
