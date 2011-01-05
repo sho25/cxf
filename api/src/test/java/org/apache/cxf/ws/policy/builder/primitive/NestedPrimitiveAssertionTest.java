@@ -394,6 +394,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|AssertionInfoMap
@@ -438,6 +440,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -477,6 +481,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|AssertionInfoMap
@@ -545,6 +551,8 @@ argument_list|,
 name|p
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertFalse
@@ -583,6 +591,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -602,6 +612,8 @@ argument_list|,
 name|p
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -699,6 +711,8 @@ argument_list|,
 name|nested
 argument_list|,
 literal|true
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|List
@@ -1208,6 +1222,8 @@ argument_list|(
 name|TEST_NAME1
 argument_list|,
 literal|true
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|Policy
@@ -1252,6 +1268,8 @@ argument_list|(
 name|TEST_NAME1
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|nested
@@ -1295,6 +1313,8 @@ argument_list|(
 name|TEST_NAME1
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|nested
@@ -1364,6 +1384,8 @@ argument_list|(
 name|TEST_NAME1
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|nested
@@ -1443,6 +1465,8 @@ argument_list|(
 name|TEST_NAME1
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|nested

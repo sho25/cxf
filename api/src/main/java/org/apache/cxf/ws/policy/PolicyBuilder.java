@@ -97,6 +97,18 @@ name|PolicyReference
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|PolicyRegistry
+import|;
+end_import
+
 begin_comment
 comment|/**  * PolicyBuilder provides methods to create Policy and PolicyReferenceObjects  * from DOM elements.  */
 end_comment
@@ -135,6 +147,11 @@ throws|,
 name|ParserConfigurationException
 throws|,
 name|SAXException
+function_decl|;
+comment|/**      * Return the PolicyRegistry associated with the builder      * @return      */
+name|PolicyRegistry
+name|getPolicyRegistry
+parameter_list|()
 function_decl|;
 block|}
 end_interface

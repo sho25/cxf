@@ -31,6 +31,22 @@ name|cxf
 operator|.
 name|ws
 operator|.
+name|policy
+operator|.
+name|PolicyBuilder
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
 name|security
 operator|.
 name|policy
@@ -49,6 +65,10 @@ name|AbstractSecurityAssertion
 implements|implements
 name|AlgorithmWrapper
 block|{
+specifier|protected
+name|PolicyBuilder
+name|builder
+decl_stmt|;
 specifier|private
 name|AlgorithmSuite
 name|algorithmSuite
@@ -78,6 +98,9 @@ name|Binding
 parameter_list|(
 name|SPConstants
 name|version
+parameter_list|,
+name|PolicyBuilder
+name|b
 parameter_list|)
 block|{
 name|super
@@ -92,6 +115,10 @@ name|Layout
 argument_list|(
 name|version
 argument_list|)
+expr_stmt|;
+name|builder
+operator|=
+name|b
 expr_stmt|;
 block|}
 comment|/**      * @return Returns the algorithmSuite.      */

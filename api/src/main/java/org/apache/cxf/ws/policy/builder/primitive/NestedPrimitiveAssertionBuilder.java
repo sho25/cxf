@@ -302,6 +302,12 @@ name|b
 operator|.
 name|isOptional
 argument_list|()
+argument_list|,
+literal|null
+argument_list|,
+literal|true
+argument_list|,
+name|builder
 argument_list|)
 decl_stmt|;
 name|compatible

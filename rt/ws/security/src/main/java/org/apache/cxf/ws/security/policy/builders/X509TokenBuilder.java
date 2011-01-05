@@ -508,6 +508,11 @@ name|policy
 operator|.
 name|normalize
 argument_list|(
+name|builder
+operator|.
+name|getPolicyRegistry
+argument_list|()
+argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;

@@ -327,6 +327,8 @@ operator|new
 name|TransportToken
 argument_list|(
 name|consts
+argument_list|,
+name|builder
 argument_list|)
 decl_stmt|;
 name|Policy
@@ -353,6 +355,11 @@ name|policy
 operator|.
 name|normalize
 argument_list|(
+name|builder
+operator|.
+name|getPolicyRegistry
+argument_list|()
+argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
