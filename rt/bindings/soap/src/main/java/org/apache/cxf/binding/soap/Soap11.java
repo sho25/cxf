@@ -566,15 +566,6 @@ return|return
 literal|"text/xml"
 return|;
 block|}
-specifier|public
-name|String
-name|getPrefix
-parameter_list|()
-block|{
-return|return
-literal|"soap"
-return|;
-block|}
 block|}
 end_class
 

@@ -46,12 +46,6 @@ name|String
 name|getNamespace
 parameter_list|()
 function_decl|;
-annotation|@
-name|Deprecated
-name|String
-name|getPrefix
-parameter_list|()
-function_decl|;
 name|QName
 name|getEnvelope
 parameter_list|()

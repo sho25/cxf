@@ -395,15 +395,6 @@ return|return
 literal|"application/soap+xml"
 return|;
 block|}
-specifier|public
-name|String
-name|getPrefix
-parameter_list|()
-block|{
-return|return
-literal|"soap"
-return|;
-block|}
 block|}
 end_class
 
