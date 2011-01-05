@@ -132,7 +132,10 @@ argument_list|(
 literal|"/org/apache/cxf/systest/jaxrs/security/jaas.cfg"
 argument_list|)
 operator|.
-name|getFile
+name|toURI
+argument_list|()
+operator|.
+name|getPath
 argument_list|()
 decl_stmt|;
 name|assertTrue
