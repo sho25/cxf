@@ -131,7 +131,10 @@ literal|"BookStoreRealm"
 argument_list|,
 name|resource
 operator|.
-name|toString
+name|toURI
+argument_list|()
+operator|.
+name|getPath
 argument_list|()
 argument_list|)
 decl_stmt|;
