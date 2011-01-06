@@ -1330,6 +1330,14 @@ argument_list|)
 name|Customer
 index|[]
 name|c2
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p3"
+argument_list|)
+name|Customer2
+name|c3
 parameter_list|)
 block|{
 comment|// complete

@@ -869,7 +869,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates WebClient, baseURI will be set to Client currentURI      * @param client existing client      * @param inheritHeaders  if existing Client headers can be inherited by new proxy       *        and subresource proxies if any       */
+comment|/**      * Creates WebClient, baseURI will be set to Client currentURI      * @param client existing client      * @param inheritHeaders  if existing Client headers can be inherited by new client       */
 specifier|public
 specifier|static
 name|WebClient
