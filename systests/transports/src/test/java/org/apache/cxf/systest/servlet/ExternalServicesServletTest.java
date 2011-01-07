@@ -257,7 +257,7 @@ name|assertEquals
 argument_list|(
 literal|"There should get two links for the services"
 argument_list|,
-literal|2
+literal|3
 argument_list|,
 name|links
 operator|.
