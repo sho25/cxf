@@ -1752,7 +1752,7 @@ name|assertEquals
 argument_list|(
 literal|"Exception is not mapped correctly"
 argument_list|,
-literal|"Nonexistent method"
+literal|"StringTextWriter - Nonexistent method"
 argument_list|,
 name|getStringFromInputStream
 argument_list|(
