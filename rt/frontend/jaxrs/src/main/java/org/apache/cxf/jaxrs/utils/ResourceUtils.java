@@ -1643,9 +1643,6 @@ decl_stmt|;
 name|Path
 name|path
 init|=
-operator|(
-name|Path
-operator|)
 name|AnnotationUtils
 operator|.
 name|getMethodAnnotation

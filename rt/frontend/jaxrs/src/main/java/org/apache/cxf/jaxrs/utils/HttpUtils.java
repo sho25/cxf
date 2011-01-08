@@ -481,7 +481,7 @@ specifier|final
 name|String
 name|PATH_RESERVED_CHARACTERS
 init|=
-literal|"=@"
+literal|"=@/"
 decl_stmt|;
 specifier|private
 specifier|static
