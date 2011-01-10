@@ -1945,6 +1945,10 @@ name|Message
 operator|.
 name|CONTENT_TYPE
 argument_list|)
+operator|&&
+name|contentType
+operator|!=
+literal|null
 condition|)
 block|{
 name|response
