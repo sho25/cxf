@@ -342,7 +342,7 @@ name|map
 parameter_list|)
 block|{     }
 specifier|public
-name|void
+name|String
 name|form2
 parameter_list|(
 name|String
@@ -351,7 +351,11 @@ parameter_list|,
 name|String
 name|f2
 parameter_list|)
-block|{     }
+block|{
+return|return
+literal|""
+return|;
+block|}
 block|}
 end_class
 
