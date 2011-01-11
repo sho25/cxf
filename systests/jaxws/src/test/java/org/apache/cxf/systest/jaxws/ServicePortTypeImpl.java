@@ -45,7 +45,7 @@ name|jaxws
 operator|.
 name|schemavalidation
 operator|.
-name|CkReponseType
+name|CkRequestType
 import|;
 end_import
 
@@ -61,7 +61,7 @@ name|jaxws
 operator|.
 name|schemavalidation
 operator|.
-name|CkRequeteType
+name|CkResponseType
 import|;
 end_import
 
@@ -77,7 +77,7 @@ name|jaxws
 operator|.
 name|schemavalidation
 operator|.
-name|ProduitPosteActionType
+name|ProductPostActionType
 import|;
 end_import
 
@@ -118,18 +118,18 @@ implements|implements
 name|ServicePortType
 block|{
 specifier|public
-name|CkReponseType
+name|CkResponseType
 name|ckR
 parameter_list|(
-name|CkRequeteType
+name|CkRequestType
 name|ckRIn
 parameter_list|)
 block|{
-name|CkReponseType
+name|CkResponseType
 name|result
 init|=
 operator|new
-name|CkReponseType
+name|CkResponseType
 argument_list|()
 decl_stmt|;
 name|ActionCheckMajType
@@ -146,11 +146,11 @@ argument_list|(
 literal|4
 argument_list|)
 expr_stmt|;
-name|ProduitPosteActionType
+name|ProductPostActionType
 name|pdt
 init|=
 operator|new
-name|ProduitPosteActionType
+name|ProductPostActionType
 argument_list|()
 decl_stmt|;
 name|pdt
@@ -162,7 +162,7 @@ argument_list|)
 expr_stmt|;
 name|result
 operator|.
-name|getProduit
+name|getProduct
 argument_list|()
 operator|.
 name|add

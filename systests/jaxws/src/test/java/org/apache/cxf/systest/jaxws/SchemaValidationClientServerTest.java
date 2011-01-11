@@ -141,7 +141,7 @@ name|jaxws
 operator|.
 name|schemavalidation
 operator|.
-name|CkReponseType
+name|CkRequestType
 import|;
 end_import
 
@@ -157,7 +157,7 @@ name|jaxws
 operator|.
 name|schemavalidation
 operator|.
-name|CkRequeteType
+name|CkResponseType
 import|;
 end_import
 
@@ -173,7 +173,7 @@ name|jaxws
 operator|.
 name|schemavalidation
 operator|.
-name|RequeteIdType
+name|RequestIdType
 import|;
 end_import
 
@@ -568,11 +568,11 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|RequeteIdType
+name|RequestIdType
 name|requestId
 init|=
 operator|new
-name|RequeteIdType
+name|RequestIdType
 argument_list|()
 decl_stmt|;
 name|requestId
@@ -582,16 +582,16 @@ argument_list|(
 literal|"ffang"
 argument_list|)
 expr_stmt|;
-name|CkRequeteType
+name|CkRequestType
 name|request
 init|=
 operator|new
-name|CkRequeteType
+name|CkRequestType
 argument_list|()
 decl_stmt|;
 name|request
 operator|.
-name|setRequete
+name|setRequest
 argument_list|(
 name|requestId
 argument_list|)
@@ -615,7 +615,7 @@ operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
-name|CkReponseType
+name|CkResponseType
 name|response
 init|=
 name|greeter
@@ -629,7 +629,7 @@ name|assertEquals
 argument_list|(
 name|response
 operator|.
-name|getProduit
+name|getProduct
 argument_list|()
 operator|.
 name|get
