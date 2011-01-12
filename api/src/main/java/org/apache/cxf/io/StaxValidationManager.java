@@ -76,7 +76,7 @@ specifier|public
 interface|interface
 name|StaxValidationManager
 block|{
-comment|/**      * Install the schemas onto the reader for validation.      * @param reader      * @param schemas      * @throws XMLStreamException       */
+comment|/**      * Install the schemas onto the reader for validation.      * @param reader - the reader to enable validation      * @param serviceInfo - the Service to pull the schema from      * @throws XMLStreamException       */
 name|void
 name|setupValidation
 parameter_list|(
@@ -89,6 +89,7 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 function_decl|;
+comment|/**      * Install the schemas onto the writer for validation.      * @param writer - the writer to enable validation      * @param serviceInfo - the Service to pull the schema from      * @throws XMLStreamException       */
 name|void
 name|setupValidation
 parameter_list|(

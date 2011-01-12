@@ -102,7 +102,7 @@ specifier|public
 annotation_defn|@interface
 name|EndpointProperties
 block|{
-comment|/**      * The properties      * @return      */
+comment|/**      * The properties      * @return the list of properties to set      */
 name|EndpointProperty
 index|[]
 name|value

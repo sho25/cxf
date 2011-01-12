@@ -119,7 +119,7 @@ argument_list|>
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * Bean reference to lookup in configuration.  Bean must be castable       * to the Class set above      * @return      */
+comment|/**      * Bean reference to lookup in configuration.  Bean must be castable       * to the Class set above      * @return The id of the bean reference      */
 name|String
 name|ref
 parameter_list|()

@@ -384,7 +384,7 @@ name|el
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Build and return a DOM tree for this schema.      * @return      */
+comment|/**      * Build and return a DOM tree for this schema.      * @return a DOM Element representation of the schema      */
 specifier|public
 specifier|synchronized
 name|Element

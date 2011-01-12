@@ -32,7 +32,7 @@ name|MessageObserver
 name|observer
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieves the message observer for incoming messages      * @return      */
+comment|/**      * Retrieves the message observer for incoming messages      * @return the MessageObserver for incoming messages      */
 name|MessageObserver
 name|getMessageObserver
 parameter_list|()

@@ -95,7 +95,7 @@ name|Exchange
 name|exchange
 parameter_list|)
 function_decl|;
-comment|/**      * Select one of the alternate addresses for a retried invocation.      *       * @param alternates List of alternate addresses if available      * @return the selected address      */
+comment|/**      * Select one of the alternate addresses for a retried invocation.      *       * @param addresses List of alternate addresses if available      * @return the selected address      */
 name|String
 name|selectAlternateAddress
 parameter_list|(

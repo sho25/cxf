@@ -44,7 +44,7 @@ specifier|public
 interface|interface
 name|ConfiguredBeanLocator
 block|{
-comment|/**      * Gets the names of all the configured beans of the specific type.  Does      * not cause them to be loaded.      * @param type      * @return      */
+comment|/**      * Gets the names of all the configured beans of the specific type.  Does      * not cause them to be loaded.      * @param type      * @return List of all the bean names for the given type      */
 name|List
 argument_list|<
 name|String
@@ -58,7 +58,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Gets all the configured beans of the specific types.  Causes them      * all to be loaded.       * @param<T>      * @param type      * @return      */
+comment|/**      * Gets all the configured beans of the specific types.  Causes them      * all to be loaded.       * @param type      * @return The collection of all the configured beans of the given type      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -77,7 +77,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Returns the bean of the given type and name.  Causes it to be loaded.      * @param<T>      * @param name      * @param type      * @return      */
+comment|/**      * Returns the bean of the given type and name.  Causes it to be loaded.      * @param name      * @param type      * @return the bean of the given name and type      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -94,7 +94,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Iterates through the beans of the given type, calling the listener      * to determine if it should be loaded or not.       * @param<T>      * @param type      * @param listener      * @return      */
+comment|/**      * Iterates through the beans of the given type, calling the listener      * to determine if it should be loaded or not.       * @param type      * @param listener      * @return true if beans of the type were loaded      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -114,7 +114,7 @@ argument_list|>
 name|listener
 parameter_list|)
 function_decl|;
-comment|/**      * For supporting "legacy" config, checks the configured bean to see if      * it has a property configured with the given name/value.  Mostly used       * for supporting things configured with "activationNamespaces" set.       * @param<T>      * @param type      * @param property      * @param value      * @return      */
+comment|/**      * For supporting "legacy" config, checks the configured bean to see if      * it has a property configured with the given name/value.  Mostly used       * for supporting things configured with "activationNamespaces" set.       * @param beanName      * @param propertyName      * @param value      * @return true if the bean has the given property/value      */
 name|boolean
 name|hasConfiguredPropertyValue
 parameter_list|(
@@ -135,7 +135,7 @@ parameter_list|<
 name|T
 parameter_list|>
 block|{
-comment|/**          * Return true to have the loader go ahead and load the bean.  If false,           * the loader will just skip to the next bean          * @param name          * @param type          * @return          */
+comment|/**          * Return true to have the loader go ahead and load the bean.  If false,           * the loader will just skip to the next bean          * @param name          * @param type          * @return true if the bean should be loaded           */
 name|boolean
 name|loadBean
 parameter_list|(
@@ -151,7 +151,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**          * Return true if the bean that was loaded meets the requirements at          * which point, the loader will stop loading additional beans of the          * given type          * @param bean          * @return          */
+comment|/**          * Return true if the bean that was loaded meets the requirements at          * which point, the loader will stop loading additional beans of the          * given type          * @param name          * @param bean          * @return true if the bean meets the requirements of the listener          */
 name|boolean
 name|beanLoaded
 parameter_list|(

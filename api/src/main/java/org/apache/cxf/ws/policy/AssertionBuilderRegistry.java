@@ -87,7 +87,7 @@ name|Element
 name|element
 parameter_list|)
 function_decl|;
-comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.      * @return      */
+comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.      * @return false if unknown assertions will result in an exception       */
 name|boolean
 name|isIgnoreUnknownAssertions
 parameter_list|()

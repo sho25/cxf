@@ -102,13 +102,13 @@ specifier|public
 annotation_defn|@interface
 name|EndpointProperty
 block|{
-comment|/**      * The value(s) of the property      * @return      */
+comment|/**      * The value(s) of the property      * @return the value of the property      */
 name|String
 index|[]
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * The key to record the property      * @return      */
+comment|/**      * The key to record the property      * @return the key for the property      */
 name|String
 name|key
 parameter_list|()

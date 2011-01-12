@@ -265,7 +265,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * return the map of items returned from an operation.      * @return      * @throws InterruptedException if the operation was cancelled.      * @throws ExecutionException if the operation resulted in a fault.      */
+comment|/**      * return the map of items returned from an operation.      * @return the response context      * @throws InterruptedException if the operation was cancelled.      * @throws ExecutionException if the operation resulted in a fault.      */
 specifier|public
 name|Map
 argument_list|<

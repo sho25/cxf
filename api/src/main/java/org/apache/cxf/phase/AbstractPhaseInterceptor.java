@@ -190,7 +190,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Instantiates the interceptor and specifies if it gets a system       * determined unique id. If<code>uniqueId</code> is set to true the       * interceptor's id will be determined by the runtime. If       *<code>uniqueId</code> is set to false, the implementing class' name       * is used as the id.      *      * @param p the interceptor's phase      * @param uniqueId      */
+comment|/**      * Instantiates the interceptor and specifies if it gets a system       * determined unique id. If<code>uniqueId</code> is set to true the       * interceptor's id will be determined by the runtime. If       *<code>uniqueId</code> is set to false, the implementing class' name       * is used as the id.      *      * @param phase the interceptor's phase      * @param uniqueId true to have a unique ID generated      */
 specifier|public
 name|AbstractPhaseInterceptor
 parameter_list|(

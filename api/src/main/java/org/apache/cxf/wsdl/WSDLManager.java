@@ -177,7 +177,7 @@ argument_list|>
 name|getDefinitions
 parameter_list|()
 function_decl|;
-comment|/**      * This object will cache the schemas for a WSDL.      * @param wsdl      * @return      */
+comment|/**      * This object will cache the schemas for a WSDL.      * @param wsdl      * @return the cache of all the schemas in the wsdl      */
 name|ServiceSchemaInfo
 name|getSchemasForDefinition
 parameter_list|(

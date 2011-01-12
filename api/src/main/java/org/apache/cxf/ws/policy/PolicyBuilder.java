@@ -148,7 +148,7 @@ name|ParserConfigurationException
 throws|,
 name|SAXException
 function_decl|;
-comment|/**      * Return the PolicyRegistry associated with the builder      * @return      */
+comment|/**      * Return the PolicyRegistry associated with the builder      * @return the PolicyRegistry      */
 name|PolicyRegistry
 name|getPolicyRegistry
 parameter_list|()

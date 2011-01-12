@@ -455,7 +455,7 @@ name|boolean
 name|b
 parameter_list|)
 function_decl|;
-comment|/**      * Checks if the Request context is thread local or global.      * @return      */
+comment|/**      * Checks if the Request context is thread local or global.      * @return true if the request context is a thread local      */
 name|boolean
 name|isThreadLocalRequestContext
 parameter_list|()
