@@ -79,7 +79,7 @@ block|,
 comment|/**          * Endpoint, Client          */
 name|CLIENT_CREATED
 block|,
-comment|/**          * EndpointInfo, Endpoint, Class          */
+comment|/**          * EndpointInfo, Endpoint, SEI Class, Class           */
 name|ENDPOINT_SELECTED
 block|,
 comment|/**          * EndpointInfo          */
