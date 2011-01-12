@@ -543,9 +543,6 @@ name|policy
 operator|.
 name|getCacheControl
 argument_list|()
-operator|.
-name|value
-argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -820,9 +817,6 @@ argument_list|(
 name|policy
 operator|.
 name|getCacheControl
-argument_list|()
-operator|.
-name|value
 argument_list|()
 argument_list|)
 argument_list|)
