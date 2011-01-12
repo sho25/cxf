@@ -570,7 +570,7 @@ if|if
 condition|(
 name|name
 operator|.
-name|equals
+name|endsWith
 argument_list|(
 name|node
 operator|.
