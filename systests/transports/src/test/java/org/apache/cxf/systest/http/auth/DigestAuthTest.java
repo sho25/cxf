@@ -43,20 +43,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|soap
-operator|.
-name|SOAPFaultException
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -128,6 +114,22 @@ operator|.
 name|http
 operator|.
 name|HTTPConduit
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|http
+operator|.
+name|HTTPException
 import|;
 end_import
 
@@ -486,12 +488,10 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|SOAPFaultException
+name|Exception
 name|e
 parameter_list|)
 block|{
-comment|// TODO do we really expect Can't find input stream here. I rather would expect
-comment|// authorization failed with some infos
 name|Throwable
 name|cause
 init|=
@@ -504,7 +504,7 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
-name|RuntimeException
+name|HTTPException
 operator|.
 name|class
 argument_list|,
@@ -514,27 +514,24 @@ name|getClass
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|RuntimeException
-name|rte
+name|HTTPException
+name|he
 init|=
 operator|(
-name|RuntimeException
+name|HTTPException
 operator|)
 name|cause
 decl_stmt|;
 name|Assert
 operator|.
-name|assertTrue
+name|assertEquals
 argument_list|(
-name|rte
+literal|401
+argument_list|,
+name|he
 operator|.
-name|getMessage
+name|getResponseCode
 argument_list|()
-operator|.
-name|startsWith
-argument_list|(
-literal|"Can't find input stream"
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

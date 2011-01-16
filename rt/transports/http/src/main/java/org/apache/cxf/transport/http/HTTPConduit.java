@@ -43,6 +43,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|ByteArrayInputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|IOException
 import|;
 end_import
@@ -5592,15 +5602,11 @@ argument_list|(
 name|responseCode
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|responseCode
-operator|==
-name|HttpURLConnection
-operator|.
-name|HTTP_NOT_FOUND
-operator|&&
-operator|!
+comment|// This property should be set in case the exceptions should not be handled here
+comment|// For example jax rs uses this
+name|boolean
+name|noExceptions
+init|=
 name|MessageUtils
 operator|.
 name|isTrue
@@ -5612,24 +5618,36 @@ argument_list|(
 literal|"org.apache.cxf.http.no_io_exceptions"
 argument_list|)
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|responseCode
+operator|>=
+literal|400
+operator|&&
+name|responseCode
+operator|!=
+literal|500
+operator|&&
+operator|!
+name|noExceptions
 condition|)
 block|{
 throw|throw
 operator|new
-name|IOException
+name|HTTPException
 argument_list|(
-literal|"HTTP response '"
-operator|+
 name|responseCode
-operator|+
-literal|": "
-operator|+
+argument_list|,
 name|connection
 operator|.
 name|getResponseMessage
 argument_list|()
-operator|+
-literal|"'"
+argument_list|,
+name|connection
+operator|.
+name|getURL
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -5917,8 +5935,26 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|// if (in == null) : it's perfectly ok for non-soap http services
-comment|// have no response body : those interceptors which do need it will check anyway
+if|if
+condition|(
+name|in
+operator|==
+literal|null
+condition|)
+block|{
+comment|// Create an empty stream to avoid NullPointerExceptions
+name|in
+operator|=
+operator|new
+name|ByteArrayInputStream
+argument_list|(
+operator|new
+name|byte
+index|[]
+block|{}
+argument_list|)
+expr_stmt|;
+block|}
 name|inMessage
 operator|.
 name|setContent
