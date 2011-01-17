@@ -999,8 +999,6 @@ literal|null
 return|;
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|accept
