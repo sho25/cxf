@@ -4058,8 +4058,8 @@ name|ResourceProvider
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|// at the moment we don't support per-request providers, only resource classes
 comment|// Note, app.getClasse() returns a list of per-resource classes
+comment|// or singleton provider classes
 for|for
 control|(
 name|Class
@@ -4076,13 +4076,66 @@ control|)
 block|{
 if|if
 condition|(
-name|isValidPerRequestResourceClass
+name|isValidApplicationClass
 argument_list|(
 name|c
 argument_list|,
 name|singletons
 argument_list|)
 condition|)
+block|{
+if|if
+condition|(
+name|c
+operator|.
+name|getAnnotation
+argument_list|(
+name|Provider
+operator|.
+name|class
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+try|try
+block|{
+name|providers
+operator|.
+name|add
+argument_list|(
+name|c
+operator|.
+name|newInstance
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Provider "
+operator|+
+name|c
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" can not be created"
+argument_list|,
+name|ex
+argument_list|)
+throw|;
+block|}
+block|}
+else|else
 block|{
 name|resourceClasses
 operator|.
@@ -4104,6 +4157,7 @@ name|c
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|// we can get either a provider or resource class here
@@ -4443,7 +4497,7 @@ block|}
 specifier|private
 specifier|static
 name|boolean
-name|isValidPerRequestResourceClass
+name|isValidApplicationClass
 parameter_list|(
 name|Class
 argument_list|<
