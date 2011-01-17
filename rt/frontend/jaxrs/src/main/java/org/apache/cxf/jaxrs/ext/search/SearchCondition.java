@@ -86,12 +86,12 @@ name|T
 name|getCondition
 parameter_list|()
 function_decl|;
-comment|/**      * Primitive statement such a> b, i< 5, etc      * this condition may represent        *        * @return primitive search statement, can be null       */
+comment|/**      * Primitive statement such a> b, i< 5, etc      * this condition may represent. Complex conditions will return null.        *        * @return primitive search statement, can be null       */
 name|PrimitiveStatement
 name|getStatement
 parameter_list|()
 function_decl|;
-comment|/**      * List of conditions this SearchCondition may represent        * @return list of conditions, can be null      */
+comment|/**      * List of conditions this SearchCondition may represent.      * Composite SearchConditions will return a list of conditions they are      * composed from, primitive ones will return null        * @return list of conditions, can be null      */
 name|List
 argument_list|<
 name|SearchCondition
@@ -102,12 +102,25 @@ argument_list|>
 name|getSearchConditions
 parameter_list|()
 function_decl|;
-comment|/**      * Type of condition this SearchCondition represents      * @return condition type      */
+comment|/**      * Returns the type of the condition this SearchCondition represents      * @return condition type      */
 name|ConditionType
 name|getConditionType
 parameter_list|()
 function_decl|;
-comment|/**      * Utility method for converting this condition into an SQL expression      * @param table table name      * @param columns column names, a wildcard as in 'SELECT * from table' will be used      *                if names are not provided       * @return SQL expression      */
+comment|/**      * Provides a visitor which will convert this SearchCondition into      * a custom expression, for example, into the SQL statement, etc       * @param visitor      */
+name|void
+name|accept
+parameter_list|(
+name|SearchConditionVisitor
+argument_list|<
+name|T
+argument_list|>
+name|visitor
+parameter_list|)
+function_decl|;
+comment|/**      *       * This method is now deprecated and will be removed soon.      *       * Utility method for converting this condition into an SQL expression      * @param table table name      * @param columns column names, a wildcard as in 'SELECT * from table' will be used      *                if names are not provided       * @return SQL expression      */
+annotation|@
+name|Deprecated
 name|String
 name|toSQL
 parameter_list|(

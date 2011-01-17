@@ -1025,6 +1025,11 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -1058,14 +1063,14 @@ argument_list|)
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"SELECT * FROM table WHERE name LIKE 'ami%' AND level> '10'"
+literal|"SELECT * FROM table WHERE (name LIKE 'ami%') AND (level> '10')"
 operator|.
 name|equals
 argument_list|(
 name|sql
 argument_list|)
 operator|||
-literal|"SELECT * FROM table WHERE level> '10' AND name LIKE 'ami%'"
+literal|"SELECT * FROM table WHERE (level> '10') AND (name LIKE 'ami%')"
 operator|.
 name|equals
 argument_list|(
@@ -1153,6 +1158,11 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 annotation|@
 name|Test
 specifier|public
@@ -1299,6 +1309,11 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -1357,6 +1372,11 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -1406,6 +1426,54 @@ literal|"SELECT * FROM table WHERE ((name = 'test1') OR (level<> '19'))"
 operator|+
 literal|" AND ((name = 'test') OR (level = '18'))"
 operator|)
+operator|.
+name|equals
+argument_list|(
+name|sql
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testSQL5
+parameter_list|()
+throws|throws
+name|FiqlParseException
+block|{
+name|SearchCondition
+argument_list|<
+name|Condition
+argument_list|>
+name|filter
+init|=
+name|parser
+operator|.
+name|parse
+argument_list|(
+literal|"name==test"
+argument_list|)
+decl_stmt|;
+name|String
+name|sql
+init|=
+name|filter
+operator|.
+name|toSQL
+argument_list|(
+literal|"table"
+argument_list|)
+decl_stmt|;
+name|assertTrue
+argument_list|(
+literal|"SELECT * FROM table WHERE name = 'test'"
 operator|.
 name|equals
 argument_list|(
