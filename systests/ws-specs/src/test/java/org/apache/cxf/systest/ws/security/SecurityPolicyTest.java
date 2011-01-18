@@ -2445,15 +2445,7 @@ literal|"I don't like that."
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|s
-argument_list|)
-expr_stmt|;
+comment|//System.out.println(s);
 name|Document
 name|d
 init|=
