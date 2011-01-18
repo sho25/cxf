@@ -2512,15 +2512,7 @@ throw|throw
 name|ex
 throw|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|s
-argument_list|)
-expr_stmt|;
+comment|//System.out.println(s);
 name|Attr
 name|val
 init|=
