@@ -166,7 +166,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class extends the Jetty SslSocketConnector, which allows  * us to configure it more in tune with the JSSE, using KeyManagers  * and TrustManagers. Also, Jetty version 6.1.3 has a bug where  * the Trust store needs a password.  */
+comment|/**  * This class extends the Jetty SslSelectChannelConnector, which allows  * us to configure it more in tune with the JSSE, using KeyManagers  * and TrustManagers.   */
 end_comment
 
 begin_class
