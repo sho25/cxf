@@ -19,6 +19,26 @@ name|search
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|search
+operator|.
+name|sql
+operator|.
+name|SQLPrinterVisitor
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|final
@@ -58,7 +78,7 @@ argument_list|>
 name|visitor
 init|=
 operator|new
-name|SQLPrinterConditionVisitor
+name|SQLPrinterVisitor
 argument_list|<
 name|T
 argument_list|>
