@@ -611,6 +611,7 @@ name|JAXRS_BINDING_ID
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Bus
 name|getBus
@@ -689,6 +690,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|void
 name|setBus
@@ -1035,6 +1037,7 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      * Returns the service factory      * @return the factory      */
 specifier|public
 name|JAXRSServiceFactoryBean
 name|getServiceFactory
@@ -1044,6 +1047,7 @@ return|return
 name|serviceFactory
 return|;
 block|}
+comment|/**      * Sets the custom service factory which processes       * the registered classes and providers       * @param serviceFactory the factory      */
 specifier|public
 name|void
 name|setServiceFactory
@@ -1264,6 +1268,7 @@ return|return
 name|ep
 return|;
 block|}
+comment|/**      * Sets the location of the schema which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations       * will be injected with this value.      *       * @param schema the schema location      */
 specifier|public
 name|void
 name|setSchemaLocation
@@ -1283,6 +1288,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the locations of the schemas which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations       * will be injected with this value.      *       * For example, if A.xsd imports B.xsd then both A.xsd and B.xsd need to be referenced.      *       * @param schema the schema locations      */
 specifier|public
 name|void
 name|setSchemaLocations
@@ -1301,7 +1307,7 @@ operator|=
 name|schemas
 expr_stmt|;
 block|}
-comment|/**      * @return the entityProviders      */
+comment|/**      * @return the list of custom JAX-RS providers      */
 specifier|public
 name|List
 argument_list|<
@@ -1314,7 +1320,7 @@ return|return
 name|entityProviders
 return|;
 block|}
-comment|/**      * @param entityProviders the entityProviders to set      */
+comment|/**      * Sets custom JAX-RS providers.      *       * @param entityProviders the entityProviders      */
 specifier|public
 name|void
 name|setProviders
@@ -1335,6 +1341,7 @@ operator|=
 name|providers
 expr_stmt|;
 block|}
+comment|/**      * Sets a custom JAX-RS provider.      *       * @param provider the custom provider.      */
 specifier|public
 name|void
 name|setProvider

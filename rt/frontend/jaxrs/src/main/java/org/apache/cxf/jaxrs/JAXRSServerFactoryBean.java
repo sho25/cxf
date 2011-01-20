@@ -417,6 +417,7 @@ name|sf
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Resource comparator which may be used to customize the way       * a root resource or resource method is selected       * @param rcomp comparator      */
 specifier|public
 name|void
 name|setResourceComparator
@@ -430,6 +431,7 @@ operator|=
 name|rcomp
 expr_stmt|;
 block|}
+comment|/**      * By default the subresources are resolved dynamically, mainly due to      * the JAX-RS specification allowing Objects being returned from the subresource      * locators. Setting this property to true enables the runtime to do the       * earky resolution.      *       * @param enableStatic enabling the static resolution if set to true      */
 specifier|public
 name|void
 name|setStaticSubresourceResolution
@@ -446,6 +448,7 @@ name|enableStatic
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Creates the JAX-RS Server instance      * @return the server      */
 specifier|public
 name|Server
 name|create
@@ -738,6 +741,7 @@ name|JAXRSInvoker
 argument_list|()
 return|;
 block|}
+comment|/**      * Sets the language mappings,       * example, 'en' is the key and 'en-gb' is the value.      *       * @param lMaps the language mappings      */
 specifier|public
 name|void
 name|setLanguageMappings
@@ -756,6 +760,7 @@ operator|=
 name|lMaps
 expr_stmt|;
 block|}
+comment|/**      * Sets the extension mappings,       * example, 'xml' is the key and 'text/xml' is the value.      *       * @param lMaps the extension mappings      */
 specifier|public
 name|void
 name|setExtensionMappings
@@ -792,6 +797,7 @@ name|getResourceClasses
 argument_list|()
 return|;
 block|}
+comment|/**      * This method is used primarily by Spring handler processing      * the jaxrs:server/@serviceClass attribute. It delegates to      * setResourceClasses method accepting the array of Class parameters.      * @param clazz the service/resource class      */
 specifier|public
 name|void
 name|setServiceClass
@@ -808,6 +814,7 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets one or more root resource classes       * @param classes the list of resource classes      */
 specifier|public
 name|void
 name|setResourceClasses
@@ -827,6 +834,7 @@ name|classes
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets one or more root resource classes       * @param classes the array of resource classes      */
 specifier|public
 name|void
 name|setResourceClasses
@@ -844,7 +852,7 @@ name|classes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set the backing service bean. If this is set, JAX-RS runtime will not be      * responsible for the lifecycle of resource classes.      *       * @return      */
+comment|/**      * Sets the resource beans. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      *       * @param beans the array of resource instances      */
 specifier|public
 name|void
 name|setServiceBeanObjects
@@ -865,6 +873,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the single resource bean. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      *       * @param bean resource instance      */
 specifier|public
 name|void
 name|setServiceBean
@@ -884,6 +893,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the resource beans. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      *       * @param beans the list of resource instances      */
 specifier|public
 name|void
 name|setServiceBeans
@@ -903,6 +913,7 @@ name|beans
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the provider managing the life-cycle of the given resource class      *<pre>      * Example:      *  setResourceProvider(BookStoreInterface.class, new SingletonResourceProvider(new BookStore()));      *</pre>      * @param c resource class      * @param rp resource provider      */
 specifier|public
 name|void
 name|setResourceProvider
@@ -924,6 +935,7 @@ name|rp
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the provider managing the life-cycle of the resource class      *<pre>      * Example:      *  setResourceProvider(new SingletonResourceProvider(new BookStore()));      *</pre>      * @param rp resource provider      */
 specifier|public
 name|void
 name|setResourceProvider
@@ -952,6 +964,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the list of providers managing the life-cycle of the resource classes      *       * @param rps resource providers      */
 specifier|public
 name|void
 name|setResourceProviders
@@ -998,6 +1011,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Sets the custom Invoker which can be used to customize the way       * the default JAX-RS invoker calls on the service bean      * @param invoker      */
 specifier|public
 name|void
 name|setInvoker
@@ -1014,6 +1028,7 @@ name|invoker
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Can be used to postpone starting the Server instance during the create() call.      * @param start Server instance will not be started during the create() call if set to false      *        default is true.        */
 specifier|public
 name|void
 name|setStart

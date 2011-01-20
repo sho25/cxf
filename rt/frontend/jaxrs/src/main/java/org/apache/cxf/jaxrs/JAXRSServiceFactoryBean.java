@@ -288,7 +288,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Build a JAX-RS service model from resource classes.  */
+comment|/**  * Builds a JAX-RS service model from resource classes.  */
 end_comment
 
 begin_class
