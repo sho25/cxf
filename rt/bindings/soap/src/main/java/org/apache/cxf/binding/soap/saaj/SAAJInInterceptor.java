@@ -703,6 +703,16 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
+if|if
+condition|(
+name|isGET
+argument_list|(
+name|message
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 try|try
 block|{
 name|MessageFactory
