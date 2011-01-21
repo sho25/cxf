@@ -2128,7 +2128,7 @@ name|i18n
 operator|.
 name|Message
 argument_list|(
-literal|"NO_CRI_MATCH"
+literal|"CRI_NO_MATCH"
 argument_list|,
 name|BUNDLE
 argument_list|,
