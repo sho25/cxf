@@ -3745,7 +3745,9 @@ name|setCustomTokenValueType
 argument_list|(
 name|WSConstants
 operator|.
-name|WSS_SAML_NS
+name|SOAPMESSAGE_NS11
+operator|+
+literal|"#"
 operator|+
 name|WSConstants
 operator|.
