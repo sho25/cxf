@@ -938,6 +938,11 @@ argument_list|,
 name|schemans
 argument_list|,
 name|corbatypemaptns
+argument_list|,
+name|preprocessor
+operator|.
+name|getPragmaPrefix
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|visitor

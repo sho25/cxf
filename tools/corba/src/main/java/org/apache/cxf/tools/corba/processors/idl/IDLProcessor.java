@@ -214,6 +214,10 @@ specifier|protected
 name|ProcessorEnvironment
 name|env
 decl_stmt|;
+specifier|protected
+name|IdlPreprocessorReader
+name|preprocessor
+decl_stmt|;
 specifier|private
 name|IDLParser
 name|parser
@@ -329,9 +333,8 @@ argument_list|>
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|IdlPreprocessorReader
 name|preprocessor
-init|=
+operator|=
 operator|new
 name|IdlPreprocessorReader
 argument_list|(
@@ -343,7 +346,7 @@ name|includeResolver
 argument_list|,
 name|defineState
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|IDLLexer
 name|lexer
 init|=

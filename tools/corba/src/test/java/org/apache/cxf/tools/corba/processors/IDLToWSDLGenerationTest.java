@@ -1200,6 +1200,24 @@ literal|"/idl/expected_RecursiveUnion.wsdl"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testPragmaPrefix
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+comment|// This tests for how pragma prefix directive affect the corba binding repositoryID
+name|testWSDLGeneration
+argument_list|(
+literal|"/idl/PragmaPrefix.idl"
+argument_list|,
+literal|"/idl/expected_PragmaPrefix.wsdl"
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|void
 name|testLogicalPhysicalSchemaGeneration
