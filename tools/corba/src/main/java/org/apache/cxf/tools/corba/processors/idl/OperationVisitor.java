@@ -540,6 +540,17 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+literal|null
+operator|==
+name|node2
+condition|)
+block|{
+comment|// throw whatever appropriate error
+comment|// or do nothing and return false
+block|}
+elseif|else
+if|if
+condition|(
 name|node2
 operator|.
 name|getType
