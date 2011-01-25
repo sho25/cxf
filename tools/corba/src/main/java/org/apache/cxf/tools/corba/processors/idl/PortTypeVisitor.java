@@ -382,6 +382,27 @@ operator|.
 name|getFirstChild
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|identifierNode
+operator|.
+name|getText
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"local"
+argument_list|)
+condition|)
+block|{
+name|identifierNode
+operator|=
+name|identifierNode
+operator|.
+name|getNextSibling
+argument_list|()
+expr_stmt|;
+block|}
 comment|// Check if its a forward declaration
 if|if
 condition|(
