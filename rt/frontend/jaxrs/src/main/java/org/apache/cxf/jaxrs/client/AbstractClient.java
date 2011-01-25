@@ -1399,6 +1399,9 @@ operator|.
 name|getResponseBuilder
 argument_list|()
 operator|.
+name|clone
+argument_list|()
+operator|.
 name|build
 argument_list|()
 return|;
