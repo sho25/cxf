@@ -252,6 +252,16 @@ name|scope
 operator|=
 name|scopeRef
 expr_stmt|;
+name|scope
+operator|.
+name|setPrefix
+argument_list|(
+name|wsdlASTVisitor
+operator|.
+name|getPragmaPrefix
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|fullyQualifiedName
 operator|=
 literal|null
