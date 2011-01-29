@@ -1155,7 +1155,7 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|PROPOGATE_EXCEPTION
+name|PROPAGATE_EXCEPTION
 init|=
 literal|"org.apache.cxf.propagate.exception"
 decl_stmt|;
@@ -7891,7 +7891,7 @@ name|m
 operator|.
 name|getContextualProperty
 argument_list|(
-name|PROPOGATE_EXCEPTION
+name|PROPAGATE_EXCEPTION
 argument_list|)
 decl_stmt|;
 if|if
