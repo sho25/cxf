@@ -1929,6 +1929,16 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|op
+operator|.
+name|getOutput
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|String
 name|outputNS
 init|=
@@ -2023,6 +2033,7 @@ name|outputNS
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 for|for
 control|(
