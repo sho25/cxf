@@ -707,18 +707,10 @@ comment|//The comments need to be end with */, so if the line has ****/,
 comment|//we need to insert space to make it *** */
 if|if
 condition|(
-operator|(
 name|pos
 operator|!=
 operator|-
 literal|1
-operator|)
-operator|&&
-operator|(
-name|pos
-operator|!=
-literal|0
-operator|)
 condition|)
 block|{
 name|line
@@ -730,6 +722,8 @@ argument_list|(
 literal|0
 argument_list|,
 name|pos
+operator|+
+literal|1
 argument_list|)
 operator|+
 literal|" "
