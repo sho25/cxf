@@ -1440,15 +1440,25 @@ name|JMSException
 name|e
 parameter_list|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
+comment|// Only log the exception as the exchange should be able to proceed
+name|LOG
+operator|.
+name|log
 argument_list|(
-literal|"Unable to remove temporary queue"
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+literal|"Unable to remove temporary queue: "
+operator|+
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|,
 name|e
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
 block|}
 block|}
