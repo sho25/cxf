@@ -52,7 +52,7 @@ specifier|final
 name|String
 name|PORT
 init|=
-name|BookServerSecuritySpringInterface
+name|BookServerSecuritySpringNoAnnotations
 operator|.
 name|PORT
 decl_stmt|;
