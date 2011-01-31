@@ -290,6 +290,30 @@ literal|"[TypeDclVisitor: native type not supported!]"
 argument_list|)
 throw|;
 block|}
+elseif|else
+if|if
+condition|(
+name|node
+operator|.
+name|getType
+argument_list|()
+operator|==
+name|IDLTokenTypes
+operator|.
+name|LITERAL_typeprefix
+condition|)
+block|{
+comment|// typeprefix<scoped_name><string_literal>
+comment|// typeprefix not supported
+comment|// keyword since CORBA 3.0
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"[TypeDclVisitor: typeprefix not supported!]"
+argument_list|)
+throw|;
+block|}
 comment|// TODO forward declaration<constr_forward_declaration>
 name|visitor
 operator|.
