@@ -1159,6 +1159,8 @@ operator|new
 name|FragmentStreamReader
 argument_list|(
 name|input
+argument_list|,
+literal|true
 argument_list|)
 block|{
 name|boolean
