@@ -3230,18 +3230,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|configureObject
-argument_list|(
-name|portName
-operator|.
-name|toString
-argument_list|()
-operator|+
-literal|".jaxws-client.proxyFactory"
-argument_list|,
-name|proxyFac
-argument_list|)
-expr_stmt|;
+comment|//configureObject(portName.toString() + ".jaxws-client.proxyFactory", proxyFac);
 if|if
 condition|(
 name|clazz
