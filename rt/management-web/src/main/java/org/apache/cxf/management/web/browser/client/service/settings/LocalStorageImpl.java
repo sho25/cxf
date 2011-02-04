@@ -777,11 +777,6 @@ parameter_list|()
 comment|/*-{             if (this.subscriptions != null) {                 return this.subscriptions;             } else {                 return [];             }         }-*/
 function_decl|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
 specifier|private
 specifier|static
 class|class
@@ -842,11 +837,6 @@ parameter_list|()
 comment|/*-{              return this.password;         }-*/
 function_decl|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
 specifier|private
 specifier|static
 class|class

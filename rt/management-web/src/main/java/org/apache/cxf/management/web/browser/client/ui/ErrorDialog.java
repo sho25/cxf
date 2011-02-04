@@ -207,13 +207,15 @@ name|com
 operator|.
 name|google
 operator|.
-name|gwtexpui
+name|gwt
 operator|.
 name|user
 operator|.
 name|client
 operator|.
-name|PluginSafePopupPanel
+name|ui
+operator|.
+name|PopupPanel
 import|;
 end_import
 
@@ -286,7 +288,7 @@ specifier|public
 class|class
 name|ErrorDialog
 extends|extends
-name|PluginSafePopupPanel
+name|PopupPanel
 block|{
 annotation|@
 name|Nonnull

@@ -914,8 +914,10 @@ literal|null
 operator|||
 name|nameValue
 operator|.
-name|isEmpty
+name|length
 argument_list|()
+operator|==
+literal|0
 condition|)
 block|{
 name|errors
@@ -947,8 +949,10 @@ literal|null
 operator|||
 name|urlValue
 operator|.
-name|isEmpty
+name|length
 argument_list|()
+operator|==
+literal|0
 condition|)
 block|{
 name|errors
