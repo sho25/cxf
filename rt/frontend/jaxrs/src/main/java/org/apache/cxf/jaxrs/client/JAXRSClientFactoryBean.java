@@ -338,6 +338,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Indicates if a single proxy or WebClient instance can be reused       * by multiple threads.      *         * @param threadSafe if true then multiple threads can invoke on      *        the same proxy or WebClient instance.      */
 specifier|public
 name|void
 name|setThreadSafe
@@ -353,6 +354,7 @@ operator|=
 name|threadSafe
 expr_stmt|;
 block|}
+comment|/**      * Gets the user name      * @return the name      */
 specifier|public
 name|String
 name|getUsername
@@ -362,6 +364,7 @@ return|return
 name|username
 return|;
 block|}
+comment|/**      * Sets the username.       * Setting the username and password is a simple way to       * create a Basic Authentication token.      *       * @param username the user name      */
 specifier|public
 name|void
 name|setUsername
@@ -377,6 +380,7 @@ operator|=
 name|username
 expr_stmt|;
 block|}
+comment|/**      * Gets the password      * @return the password      */
 specifier|public
 name|String
 name|getPassword
@@ -386,6 +390,7 @@ return|return
 name|password
 return|;
 block|}
+comment|/**      * Sets the password.       * Setting the username and password is a simple way to       * create a Basic Authentication token.      *       * @param password the password      */
 specifier|public
 name|void
 name|setPassword
@@ -401,6 +406,7 @@ operator|=
 name|password
 expr_stmt|;
 block|}
+comment|/**      * Indicates if the headers set by a current proxy will be inherited      * when a subresource proxy is created      * vice versa.      *       * @param ih if set to true then the current headers will be inherited      */
 specifier|public
 name|void
 name|setInheritHeaders
@@ -414,6 +420,7 @@ operator|=
 name|ih
 expr_stmt|;
 block|}
+comment|/**      * Sets the resource class      * @param cls the resource class      */
 specifier|public
 name|void
 name|setResourceClass
@@ -428,6 +435,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the resource class, may be called from a Spring handler       * @param cls the resource class      */
 specifier|public
 name|void
 name|setServiceClass
@@ -444,6 +452,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the headers new proxy or WebClient instances will be      * initialized with.      *       * @param map the headers      */
 specifier|public
 name|void
 name|setHeaders
@@ -534,6 +543,7 @@ block|}
 block|}
 block|}
 block|}
+comment|/**      * Gets the initial headers      * @return the headers      */
 specifier|public
 name|Map
 name|getHeaders
@@ -543,6 +553,7 @@ return|return
 name|headers
 return|;
 block|}
+comment|/**      * Creates a WebClient instance      * @return WebClient instance      */
 specifier|public
 name|WebClient
 name|createWebClient
@@ -712,6 +723,7 @@ literal|null
 return|;
 block|}
 block|}
+comment|/**      * Creates a proxy      * @param cls the proxy class      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      * @return the proxy      */
 specifier|public
 parameter_list|<
 name|T
@@ -742,6 +754,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+comment|/**      * Create a Client instance. Proxies and WebClients are Clients.      * @return the client      */
 specifier|public
 name|Client
 name|create
@@ -752,6 +765,7 @@ name|createWithValues
 argument_list|()
 return|;
 block|}
+comment|/**      * Create a Client instance. Proxies and WebClients are Clients.      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      *              * @return the client      */
 specifier|public
 name|Client
 name|createWithValues
@@ -1316,6 +1330,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+comment|/**      * Sets the initial client state, can be a thread-safe state.      * @param initialState the state      */
 specifier|public
 name|void
 name|setInitialState

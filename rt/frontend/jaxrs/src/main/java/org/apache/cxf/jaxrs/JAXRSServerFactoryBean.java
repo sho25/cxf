@@ -873,7 +873,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the single resource bean. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      *       * @param bean resource instance      */
+comment|/**      * Sets the single resource bean. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      * Please avoid setting the resource class of this bean explicitly,      * the runtime will determine it itself.        *       * @param bean resource instance      */
 specifier|public
 name|void
 name|setServiceBean

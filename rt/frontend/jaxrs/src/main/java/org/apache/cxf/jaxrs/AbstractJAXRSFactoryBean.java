@@ -1853,6 +1853,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the description of root resources.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations.      *         * @param resources root resource descriptions       */
 specifier|public
 name|void
 name|setModelBeans
@@ -1873,6 +1874,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the description of root resources.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations.      *         * @param resources root resource descriptions       */
 specifier|public
 name|void
 name|setModelBeans
@@ -1892,6 +1894,7 @@ name|resources
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the description of root resources with the list of concrete classes.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations. Some models may only reference      * interfaces, thus providing a list of concrete classes that will be      * instantiated is required in such cases.      *         * @param resources root resource descriptions.      * @param sClasses concrete root resource classes      */
 specifier|public
 name|void
 name|setModelBeansWithServiceClass
@@ -1920,6 +1923,7 @@ name|sClasses
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets a reference to the external user model,       * Example: "classpath:/model/resources.xml"      *       * @param modelRef the reference to the external model resource.      */
 specifier|public
 name|void
 name|setModelRef
@@ -1960,6 +1964,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Sets a reference to the external user model,       * Example: "classpath:/model/resources.xml".      * Some models may only reference interfaces, thus providing a list of       * concrete classes that will be instantiated is required in such cases.      *       * @param modelRef the reference to the external model resource.      * @param sClasses concrete root resource classes      */
 specifier|public
 name|void
 name|setModelRefWithServiceClass

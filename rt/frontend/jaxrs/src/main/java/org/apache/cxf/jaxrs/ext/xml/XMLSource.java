@@ -478,6 +478,7 @@ operator|=
 name|is
 expr_stmt|;
 block|}
+comment|/**      * Allows for multiple queries against the same stream      * @param enable if set to true then multiple queries will be supported.       */
 specifier|public
 name|void
 name|setBuffering
@@ -546,6 +547,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *       * @param expression XPath expression      * @param cls class of the node      * @return the instance representing the matching node      */
 specifier|public
 parameter_list|<
 name|T
@@ -590,6 +592,7 @@ name|cls
 argument_list|)
 return|;
 block|}
+comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *       * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the instance representing the matching node      */
 specifier|public
 parameter_list|<
 name|T
@@ -682,6 +685,7 @@ argument_list|)
 return|;
 block|}
 block|}
+comment|/**      * Find the list of matching XML nodes and convert them into      * an array of instances of the provided class.      * The default JAXB MessageBodyReader is currently used  in case of non-primitive types.      *       * @param expression XPath expression      * @param cls class of the node      * @return the array of instances representing the matching nodes      */
 specifier|public
 parameter_list|<
 name|T
@@ -727,6 +731,7 @@ name|cls
 argument_list|)
 return|;
 block|}
+comment|/**      * Find the list of matching XML nodes and convert them into      * an array of instances of the provided class.      * The default JAXB MessageBodyReader is currently used  in case of non-primitive types.      *       * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the array of instances representing the matching nodes      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -888,6 +893,7 @@ return|return
 name|values
 return|;
 block|}
+comment|/**      * Find an attribute or text node representing      * an absolute or relative link and convert it to URI      * @param expression the XPath expression      * @return the link      */
 specifier|public
 name|URI
 name|getLink
@@ -921,6 +927,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+comment|/**      * Find an attribute or text node representing      * an absolute or relative link and convert it to URI      * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @return the link      */
 specifier|public
 name|URI
 name|getLink
@@ -962,6 +969,7 @@ name|value
 argument_list|)
 return|;
 block|}
+comment|/**      * Find attributes or text nodes representing      * absolute or relative links and convert them to URIs      * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @return the links      */
 specifier|public
 name|URI
 index|[]
@@ -1050,6 +1058,7 @@ return|return
 name|uris
 return|;
 block|}
+comment|/**      * Returns the value of the xml:base attribute, if any.      * This can be used to calculate an absolute URI provided       * the links in the actual XML instance are relative.       *       * @return the xml:base value      */
 specifier|public
 name|URI
 name|getBaseURI
@@ -1090,6 +1099,7 @@ name|map
 argument_list|)
 return|;
 block|}
+comment|/**      * Find the attribute or simple/text node      * @param expression the XPath expression      * @return the value of the matching node      */
 specifier|public
 name|String
 name|getValue
@@ -1123,6 +1133,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+comment|/**      * Find the attribute or simple/text node      * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @return the value of the matching node      */
 specifier|public
 name|String
 name|getValue
@@ -1152,6 +1163,73 @@ name|class
 argument_list|)
 return|;
 block|}
+comment|/**      * Find the attributes or simple/text nodes      * @param expression the XPath expression      * @return the values of the matching nodes      */
+specifier|public
+name|String
+index|[]
+name|getValues
+parameter_list|(
+name|String
+name|expression
+parameter_list|)
+block|{
+return|return
+name|getValues
+argument_list|(
+name|expression
+argument_list|,
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
+name|Collections
+operator|.
+name|emptyMap
+argument_list|()
+argument_list|,
+name|String
+operator|.
+name|class
+argument_list|,
+name|String
+operator|.
+name|class
+argument_list|)
+argument_list|)
+return|;
+block|}
+comment|/**      * Find the attributes or simple/text nodes      * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @return the values of the matching nodes      */
+specifier|public
+name|String
+index|[]
+name|getValues
+parameter_list|(
+name|String
+name|expression
+parameter_list|,
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|namespaces
+parameter_list|)
+block|{
+return|return
+name|getNodes
+argument_list|(
+name|expression
+argument_list|,
+name|namespaces
+argument_list|,
+name|String
+operator|.
+name|class
+argument_list|)
+return|;
+block|}
+comment|/**      * Find the attribute or simple/text node and convert the string value to the      * instance of the provided class, example, Integer.class.       * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls the class of the response      * @return the value      */
 specifier|public
 parameter_list|<
 name|T
@@ -1288,70 +1366,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-block|}
-specifier|public
-name|String
-index|[]
-name|getValues
-parameter_list|(
-name|String
-name|expression
-parameter_list|)
-block|{
-return|return
-name|getValues
-argument_list|(
-name|expression
-argument_list|,
-name|CastUtils
-operator|.
-name|cast
-argument_list|(
-name|Collections
-operator|.
-name|emptyMap
-argument_list|()
-argument_list|,
-name|String
-operator|.
-name|class
-argument_list|,
-name|String
-operator|.
-name|class
-argument_list|)
-argument_list|)
-return|;
-block|}
-specifier|public
-name|String
-index|[]
-name|getValues
-parameter_list|(
-name|String
-name|expression
-parameter_list|,
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-name|namespaces
-parameter_list|)
-block|{
-return|return
-name|getNodes
-argument_list|(
-name|expression
-argument_list|,
-name|namespaces
-argument_list|,
-name|String
-operator|.
-name|class
-argument_list|)
-return|;
 block|}
 specifier|private
 specifier|static

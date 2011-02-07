@@ -134,7 +134,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility Exception class which makes it easier to get to the status,  * headers and error message if any  */
+comment|/**  * Utility Exception class which makes it easier to get the response status,  * headers and error message if any  */
 end_comment
 
 begin_class
