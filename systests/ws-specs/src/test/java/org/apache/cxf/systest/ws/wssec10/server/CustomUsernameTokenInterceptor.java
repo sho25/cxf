@@ -297,11 +297,11 @@ name|put
 argument_list|(
 name|SecurityConstants
 operator|.
-name|VALIDATE_PASSWORD
+name|USERNAME_TOKEN_NO_CALLBACKS
 argument_list|,
 name|Boolean
 operator|.
-name|FALSE
+name|TRUE
 argument_list|)
 expr_stmt|;
 name|super

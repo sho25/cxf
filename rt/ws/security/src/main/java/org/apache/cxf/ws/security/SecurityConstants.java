@@ -87,14 +87,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|VALIDATE_PASSWORD
-init|=
-literal|"ws-security.validate.password"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|USERNAME_TOKEN_NO_CALLBACKS
 init|=
 literal|"ws-security.ut.no-callbacks"
