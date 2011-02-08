@@ -668,7 +668,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|BusException
+name|Throwable
 name|b
 parameter_list|)
 block|{
