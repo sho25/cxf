@@ -87,9 +87,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|USERNAME_TOKEN_NO_CALLBACKS
+name|VALIDATE_TOKEN
 init|=
-literal|"ws-security.ut.no-callbacks"
+literal|"ws-security.validate.token"
 decl_stmt|;
 specifier|public
 specifier|static

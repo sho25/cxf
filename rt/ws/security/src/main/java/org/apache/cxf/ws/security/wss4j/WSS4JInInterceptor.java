@@ -1175,7 +1175,6 @@ expr_stmt|;
 name|boolean
 name|utWithCallbacks
 init|=
-operator|!
 name|MessageUtils
 operator|.
 name|getContextualBoolean
@@ -1184,9 +1183,9 @@ name|msg
 argument_list|,
 name|SecurityConstants
 operator|.
-name|USERNAME_TOKEN_NO_CALLBACKS
+name|VALIDATE_TOKEN
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 decl_stmt|;
 name|WSSConfig
