@@ -37,7 +37,7 @@ name|cxf
 operator|.
 name|binding
 operator|.
-name|AbstractBindingFactory
+name|AbstractBaseBindingFactory
 import|;
 end_import
 
@@ -181,6 +181,10 @@ name|BindingInfo
 import|;
 end_import
 
+begin_comment
+comment|/**  * The CXF BindingFactory implementation which is used to register   * CXF JAX-RS interceptors with the runtime.  */
+end_comment
+
 begin_class
 annotation|@
 name|NoJSR250Annotations
@@ -195,7 +199,7 @@ specifier|public
 class|class
 name|JAXRSBindingFactory
 extends|extends
-name|AbstractBindingFactory
+name|AbstractBaseBindingFactory
 block|{
 specifier|public
 specifier|static

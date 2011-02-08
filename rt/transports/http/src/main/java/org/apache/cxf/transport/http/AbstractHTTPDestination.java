@@ -713,6 +713,20 @@ name|EndpointReferenceUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|wsdl
+operator|.
+name|WSDLLibrary
+import|;
+end_import
+
 begin_comment
 comment|/**  * Common base for HTTP Destination implementations.  */
 end_comment
@@ -2269,6 +2283,11 @@ condition|(
 literal|null
 operator|==
 name|server
+operator|&&
+name|WSDLLibrary
+operator|.
+name|isAvailable
+argument_list|()
 condition|)
 block|{
 name|server
@@ -2479,6 +2498,13 @@ argument_list|(
 name|outMessage
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|server
+operator|!=
+literal|null
+condition|)
+block|{
 operator|new
 name|Headers
 argument_list|(
@@ -2490,6 +2516,7 @@ argument_list|(
 name|server
 argument_list|)
 expr_stmt|;
+block|}
 name|OutputStream
 name|responseStream
 init|=

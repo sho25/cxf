@@ -105,7 +105,7 @@ name|cxf
 operator|.
 name|wsdl
 operator|.
-name|EndpointReferenceUtils
+name|WSAEndpointReferenceUtils
 import|;
 end_import
 
@@ -252,7 +252,7 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-name|EndpointReferenceUtils
+name|WSAEndpointReferenceUtils
 operator|.
 name|getAnonymousEndpointReference
 argument_list|()
