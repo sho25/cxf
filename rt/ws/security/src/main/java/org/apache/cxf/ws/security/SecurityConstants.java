@@ -228,6 +228,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|STS_TOKEN_USE_CERT_FOR_KEYINFO
+init|=
+literal|"ws-security.sts.token.usecert"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|STS_TOKEN_DO_CANCEL
 init|=
 literal|"ws-security.sts.token.do.cancel"
@@ -306,6 +314,10 @@ block|,
 name|ALWAYS_ENCRYPT_UT
 block|,
 name|STS_TOKEN_ACT_AS
+block|,
+name|STS_TOKEN_USERNAME
+block|,
+name|STS_TOKEN_USE_CERT_FOR_KEYINFO
 block|}
 argument_list|)
 argument_list|)
