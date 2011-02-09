@@ -364,8 +364,6 @@ return|return
 literal|false
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Subject
 name|getSubject
@@ -375,8 +373,6 @@ return|return
 name|subject
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Set
 argument_list|<
