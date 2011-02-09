@@ -3225,10 +3225,7 @@ try|try
 block|{
 name|cfg
 operator|.
-name|getConduitSelector
-argument_list|()
-operator|.
-name|prepare
+name|prepareConduitSelector
 argument_list|(
 name|message
 argument_list|)
@@ -3338,10 +3335,7 @@ argument_list|)
 expr_stmt|;
 name|cfg
 operator|.
-name|getConduitSelector
-argument_list|()
-operator|.
-name|prepare
+name|prepareConduitSelector
 argument_list|(
 name|message
 argument_list|)
