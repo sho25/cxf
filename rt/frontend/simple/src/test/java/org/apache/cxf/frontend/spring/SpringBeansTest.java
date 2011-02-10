@@ -29,16 +29,6 @@ end_import
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -354,7 +344,7 @@ specifier|public
 class|class
 name|SpringBeansTest
 extends|extends
-name|Assert
+name|AbstractSimpleFrontendSpringTest
 block|{
 annotation|@
 name|Test
@@ -365,9 +355,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|ClassPathXmlApplicationContext
 name|ctx
-init|=
+operator|=
 operator|new
 name|ClassPathXmlApplicationContext
 argument_list|(
@@ -378,7 +367,7 @@ block|{
 literal|"/org/apache/cxf/frontend/spring/servers.xml"
 block|}
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|ServerFactoryBean
 name|bean
 init|=
@@ -582,9 +571,8 @@ argument_list|(
 literal|false
 argument_list|)
 expr_stmt|;
-name|ClassPathXmlApplicationContext
 name|ctx
-init|=
+operator|=
 operator|new
 name|ClassPathXmlApplicationContext
 argument_list|(
@@ -595,7 +583,7 @@ block|{
 literal|"/org/apache/cxf/frontend/spring/clients.xml"
 block|}
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|Object
 name|bean
 init|=
