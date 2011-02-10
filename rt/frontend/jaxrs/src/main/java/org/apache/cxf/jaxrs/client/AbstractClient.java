@@ -1935,11 +1935,17 @@ argument_list|)
 operator|&&
 name|val
 operator|.
+name|toUpperCase
+argument_list|()
+operator|.
 name|contains
 argument_list|(
 name|HttpHeaders
 operator|.
 name|EXPIRES
+operator|.
+name|toUpperCase
+argument_list|()
 argument_list|)
 operator|)
 decl_stmt|;

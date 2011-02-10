@@ -1023,7 +1023,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"settwocookies"
+literal|"setmanycookies"
 argument_list|)
 specifier|public
 name|Response
@@ -1048,6 +1048,13 @@ argument_list|(
 literal|"Set-Cookie"
 argument_list|,
 literal|"COOKIETWO=dummy; Expires=Sat, 20-Nov-2010 19:11:32 GMT; Path=/"
+argument_list|)
+operator|.
+name|header
+argument_list|(
+literal|"Set-Cookie"
+argument_list|,
+literal|"COOKIETWO=dummy2; expires=Sat, 20-Nov-2010 19:11:32 GMT; Path=/"
 argument_list|)
 operator|.
 name|build

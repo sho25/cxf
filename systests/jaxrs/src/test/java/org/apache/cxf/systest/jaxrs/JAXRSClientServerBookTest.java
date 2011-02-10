@@ -1125,7 +1125,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testSetTwoCookieWebClient
+name|testSetManyCookiesWebClient
 parameter_list|()
 throws|throws
 name|Exception
@@ -1141,7 +1141,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/settwocookies"
+literal|"/bookstore/setmanycookies"
 argument_list|)
 decl_stmt|;
 name|Response
@@ -1190,7 +1190,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|2
+literal|3
 argument_list|,
 name|cookies
 operator|.
