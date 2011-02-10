@@ -172,7 +172,7 @@ return|;
 block|}
 annotation|@
 name|Override
-comment|/**      * If the nested policies in both assertions are empty, the compatible policy      * .       * The compatible policy is optional iff both assertions are optional.      */
+comment|/**      * If the nested policies in both assertions are empty, the compatible policy      * .       * The compatible policy is optional if both assertions are optional.      */
 specifier|public
 name|PolicyAssertion
 name|buildCompatible

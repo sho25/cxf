@@ -220,7 +220,7 @@ operator|=
 name|k
 expr_stmt|;
 block|}
-comment|/**      * If the two assertions are equal, they are also compatible.       * The compatible policy is optional iff both assertions are optional.      */
+comment|/**      * If the two assertions are equal, they are also compatible.       * The compatible policy is optional if both assertions are optional.      */
 specifier|public
 name|PolicyAssertion
 name|buildCompatible
