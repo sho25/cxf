@@ -47,26 +47,6 @@ name|StringUtils
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|policy
-operator|.
-name|SPConstants
-operator|.
-name|IncludeTokenType
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final

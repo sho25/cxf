@@ -35,9 +35,29 @@ begin_import
 import|import
 name|java
 operator|.
+name|text
+operator|.
+name|DateFormat
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|text
+operator|.
+name|ParseException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
-name|Calendar
+name|Date
 import|;
 end_import
 
@@ -48,30 +68,6 @@ operator|.
 name|util
 operator|.
 name|Properties
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|datatype
-operator|.
-name|DatatypeConfigurationException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|datatype
-operator|.
-name|DatatypeFactory
 import|;
 end_import
 
@@ -179,6 +175,22 @@ name|Reference
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|util
+operator|.
+name|XmlSchemaDateFormat
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -255,12 +267,12 @@ name|secret
 decl_stmt|;
 comment|/**      * Created time      */
 specifier|private
-name|Calendar
+name|Date
 name|created
 decl_stmt|;
 comment|/**      * Expiration time      */
 specifier|private
-name|Calendar
+name|Date
 name|expires
 decl_stmt|;
 comment|/**      * Issuer end point address      */
@@ -296,10 +308,10 @@ parameter_list|(
 name|String
 name|id
 parameter_list|,
-name|Calendar
+name|Date
 name|created
 parameter_list|,
-name|Calendar
+name|Date
 name|expires
 parameter_list|)
 block|{
@@ -331,10 +343,10 @@ parameter_list|,
 name|Element
 name|tokenElem
 parameter_list|,
-name|Calendar
+name|Date
 name|created
 parameter_list|,
-name|Calendar
+name|Date
 name|expires
 parameter_list|)
 block|{
@@ -475,14 +487,6 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|DatatypeFactory
-name|factory
-init|=
-name|DatatypeFactory
-operator|.
-name|newInstance
-argument_list|()
-decl_stmt|;
 name|Element
 name|createdElem
 init|=
@@ -501,13 +505,20 @@ operator|.
 name|CREATED_LN
 argument_list|)
 decl_stmt|;
+name|DateFormat
+name|zulu
+init|=
+operator|new
+name|XmlSchemaDateFormat
+argument_list|()
+decl_stmt|;
 name|this
 operator|.
 name|created
 operator|=
-name|factory
+name|zulu
 operator|.
-name|newXMLGregorianCalendar
+name|parse
 argument_list|(
 name|DOMUtils
 operator|.
@@ -516,9 +527,6 @@ argument_list|(
 name|createdElem
 argument_list|)
 argument_list|)
-operator|.
-name|toGregorianCalendar
-argument_list|()
 expr_stmt|;
 name|Element
 name|expiresElem
@@ -542,9 +550,9 @@ name|this
 operator|.
 name|expires
 operator|=
-name|factory
+name|zulu
 operator|.
-name|newXMLGregorianCalendar
+name|parse
 argument_list|(
 name|DOMUtils
 operator|.
@@ -553,14 +561,11 @@ argument_list|(
 name|expiresElem
 argument_list|)
 argument_list|)
-operator|.
-name|toGregorianCalendar
-argument_list|()
 expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|DatatypeConfigurationException
+name|ParseException
 name|e
 parameter_list|)
 block|{
@@ -814,7 +819,7 @@ block|}
 block|}
 comment|/**      * @return Returns the created.      */
 specifier|public
-name|Calendar
+name|Date
 name|getCreated
 parameter_list|()
 block|{
@@ -824,7 +829,7 @@ return|;
 block|}
 comment|/**      * @return Returns the expires.      */
 specifier|public
-name|Calendar
+name|Date
 name|getExpires
 parameter_list|()
 block|{
@@ -837,7 +842,7 @@ specifier|public
 name|void
 name|setExpires
 parameter_list|(
-name|Calendar
+name|Date
 name|expires
 parameter_list|)
 block|{

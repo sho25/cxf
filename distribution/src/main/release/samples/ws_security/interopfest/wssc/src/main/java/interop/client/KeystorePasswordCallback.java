@@ -252,7 +252,6 @@ argument_list|(
 literal|"password"
 argument_list|)
 expr_stmt|;
-return|return;
 block|}
 catch|catch
 parameter_list|(
@@ -260,8 +259,6 @@ name|NumberFormatException
 name|nfe
 parameter_list|)
 block|{
-comment|//not a pfx alias, carry on to next
-block|}
 name|String
 name|pass
 init|=
@@ -289,17 +286,7 @@ argument_list|(
 name|pass
 argument_list|)
 expr_stmt|;
-return|return;
 block|}
-else|else
-block|{
-name|pc
-operator|.
-name|setPassword
-argument_list|(
-literal|"password"
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 block|}

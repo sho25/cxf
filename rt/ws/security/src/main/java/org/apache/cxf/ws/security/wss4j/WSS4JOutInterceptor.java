@@ -35,6 +35,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -374,7 +384,7 @@ name|WSS4JOutInterceptor
 extends|extends
 name|AbstractWSS4JInterceptor
 block|{
-comment|/**      * Property name for a map of action IDs ({@link Integer}) to action      * class names.  Values can be either {@link String}) or Objects      * implementing {@link Action}.        */
+comment|/**      * Property name for a map of action IDs ({@link Integer}) to action      * class names. Values can be either {@link Class}) or Objects -    * implementing {@link Action}.      */
 specifier|public
 specifier|static
 specifier|final
@@ -851,11 +861,17 @@ name|config
 argument_list|)
 expr_stmt|;
 comment|/*                  * Get the action first.                  */
-name|Vector
+name|List
+argument_list|<
+name|Integer
+argument_list|>
 name|actions
 init|=
 operator|new
 name|Vector
+argument_list|<
+name|Integer
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|String
@@ -1417,7 +1433,10 @@ name|entrySet
 argument_list|()
 control|)
 block|{
-name|String
+name|Class
+argument_list|<
+name|?
+argument_list|>
 name|removedAction
 init|=
 literal|null
@@ -1433,7 +1452,10 @@ operator|.
 name|getValue
 argument_list|()
 operator|instanceof
-name|String
+name|Class
+argument_list|<
+name|?
+argument_list|>
 condition|)
 block|{
 name|removedAction
@@ -1451,7 +1473,10 @@ name|intValue
 argument_list|()
 argument_list|,
 operator|(
-name|String
+name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|entry
 operator|.
@@ -1561,6 +1586,9 @@ argument_list|(
 literal|"Replaced Action: "
 operator|+
 name|removedAction
+operator|.
+name|getName
+argument_list|()
 operator|+
 literal|" with Action: "
 operator|+

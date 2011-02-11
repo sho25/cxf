@@ -443,6 +443,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|iterator
 init|=
 name|xPathExpressions
@@ -459,9 +462,6 @@ control|)
 block|{
 name|xpathExpression
 operator|=
-operator|(
-name|String
-operator|)
 name|iterator
 operator|.
 name|next

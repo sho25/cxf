@@ -1348,7 +1348,9 @@ operator|new
 name|Object
 argument_list|()
 argument_list|,
-name|action
+name|CountingUsernameTokenAction
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 name|handler

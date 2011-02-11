@@ -341,6 +341,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|Header
+argument_list|>
 name|iterator
 init|=
 name|headers
@@ -357,9 +360,6 @@ control|)
 block|{
 name|header
 operator|=
-operator|(
-name|Header
-operator|)
 name|iterator
 operator|.
 name|next

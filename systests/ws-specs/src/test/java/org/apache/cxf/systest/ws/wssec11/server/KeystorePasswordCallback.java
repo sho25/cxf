@@ -176,6 +176,15 @@ argument_list|,
 literal|"password"
 argument_list|)
 expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"abcd"
+argument_list|,
+literal|"dcba"
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * It attempts to get the password from the private       * alias/passwords map.      */
 specifier|public
@@ -247,16 +256,6 @@ name|pass
 argument_list|)
 expr_stmt|;
 return|return;
-block|}
-else|else
-block|{
-name|pc
-operator|.
-name|setPassword
-argument_list|(
-literal|"password"
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 block|}
