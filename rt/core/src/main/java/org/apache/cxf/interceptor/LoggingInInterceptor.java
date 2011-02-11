@@ -202,11 +202,11 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
+name|id
+argument_list|,
 name|Phase
 operator|.
 name|RECEIVE
-argument_list|,
-name|id
 argument_list|)
 expr_stmt|;
 name|limit
@@ -243,11 +243,11 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
+name|id
+argument_list|,
 name|Phase
 operator|.
 name|RECEIVE
-argument_list|,
-name|id
 argument_list|)
 expr_stmt|;
 name|this
