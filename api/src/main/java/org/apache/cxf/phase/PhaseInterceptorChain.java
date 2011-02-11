@@ -949,7 +949,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|warning
 argument_list|(
 literal|"Skipping interceptor "
 operator|+
