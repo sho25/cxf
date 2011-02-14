@@ -23,16 +23,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Collection
@@ -191,7 +181,7 @@ name|sid
 parameter_list|,
 name|Collection
 argument_list|<
-name|BigInteger
+name|Long
 argument_list|>
 name|messageNrs
 parameter_list|,

@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Collection
@@ -425,9 +415,6 @@ argument_list|()
 operator|.
 name|getImmediaAcksTimeout
 argument_list|()
-operator|.
-name|longValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -657,7 +644,7 @@ name|sid
 parameter_list|,
 name|Collection
 argument_list|<
-name|BigInteger
+name|Long
 argument_list|>
 name|messageNrs
 parameter_list|,

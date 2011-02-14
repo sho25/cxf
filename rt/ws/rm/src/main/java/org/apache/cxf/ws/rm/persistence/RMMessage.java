@@ -19,16 +19,6 @@ name|persistence
 package|;
 end_package
 
-begin_import
-import|import
-name|java
-operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -40,7 +30,7 @@ index|[]
 name|content
 decl_stmt|;
 specifier|private
-name|BigInteger
+name|long
 name|messageNumber
 decl_stmt|;
 specifier|private
@@ -49,7 +39,7 @@ name|to
 decl_stmt|;
 comment|/**      * Returns the message number of the message within its sequence.      * @return the message number      */
 specifier|public
-name|BigInteger
+name|long
 name|getMessageNumber
 parameter_list|()
 block|{
@@ -62,7 +52,7 @@ specifier|public
 name|void
 name|setMessageNumber
 parameter_list|(
-name|BigInteger
+name|long
 name|mn
 parameter_list|)
 block|{

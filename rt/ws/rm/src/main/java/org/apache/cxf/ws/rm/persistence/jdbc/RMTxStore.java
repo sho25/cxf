@@ -75,16 +75,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|sql
 operator|.
 name|Blob
@@ -496,7 +486,7 @@ literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
 literal|"ACKS_TO VARCHAR(1024) NOT NULL, "
 operator|+
-literal|"LAST_MSG_NO DECIMAL(31, 0), "
+literal|"LAST_MSG_NO BIGINT, "
 operator|+
 literal|"ENDPOINT_ID VARCHAR(1024), "
 operator|+
@@ -514,11 +504,11 @@ literal|"CREATE TABLE CXF_RM_SRC_SEQUENCES "
 operator|+
 literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
-literal|"CUR_MSG_NO DECIMAL(31, 0) DEFAULT 1 NOT NULL, "
+literal|"CUR_MSG_NO BIGINT DEFAULT 1 NOT NULL, "
 operator|+
 literal|"LAST_MSG CHAR(1), "
 operator|+
-literal|"EXPIRY DECIMAL(31, 0), "
+literal|"EXPIRY BIGINT, "
 operator|+
 literal|"OFFERING_SEQ_ID VARCHAR(256), "
 operator|+
@@ -536,7 +526,7 @@ literal|"CREATE TABLE {0} "
 operator|+
 literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
-literal|"MSG_NO DECIMAL(31, 0) NOT NULL, "
+literal|"MSG_NO BIGINT NOT NULL, "
 operator|+
 literal|"SEND_TO VARCHAR(256), "
 operator|+
@@ -1471,12 +1461,12 @@ literal|2
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|BigDecimal
+name|long
 name|lm
 init|=
 name|res
 operator|.
-name|getBigDecimal
+name|getLong
 argument_list|(
 literal|3
 argument_list|)
@@ -1527,15 +1517,6 @@ argument_list|,
 name|acksTo
 argument_list|,
 name|lm
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-name|lm
-operator|.
-name|toBigInteger
-argument_list|()
 argument_list|,
 name|ack
 argument_list|)
@@ -1695,18 +1676,15 @@ literal|1
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|BigInteger
+name|long
 name|cmn
 init|=
 name|res
 operator|.
-name|getBigDecimal
+name|getLong
 argument_list|(
 literal|2
 argument_list|)
-operator|.
-name|toBigInteger
-argument_list|()
 decl_stmt|;
 name|boolean
 name|lm
@@ -1954,18 +1932,15 @@ name|next
 argument_list|()
 condition|)
 block|{
-name|BigInteger
+name|long
 name|mn
 init|=
 name|res
 operator|.
-name|getBigDecimal
+name|getLong
 argument_list|(
 literal|1
 argument_list|)
-operator|.
-name|toBigInteger
-argument_list|()
 decl_stmt|;
 name|String
 name|to
@@ -2233,7 +2208,7 @@ name|sid
 parameter_list|,
 name|Collection
 argument_list|<
-name|BigInteger
+name|Long
 argument_list|>
 name|messageNrs
 parameter_list|,
@@ -2314,7 +2289,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|BigInteger
+name|Long
 name|messageNr
 range|:
 name|messageNrs
@@ -2322,15 +2297,11 @@ control|)
 block|{
 name|stmt
 operator|.
-name|setBigDecimal
+name|setLong
 argument_list|(
 literal|2
 argument_list|,
-operator|new
-name|BigDecimal
-argument_list|(
 name|messageNr
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|stmt
@@ -2470,7 +2441,7 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
-name|BigInteger
+name|long
 name|nr
 init|=
 name|msg
@@ -2791,7 +2762,7 @@ name|UPDATE_DEST_SEQUENCE_STMT_STR
 argument_list|)
 expr_stmt|;
 block|}
-name|BigInteger
+name|long
 name|lastMessageNr
 init|=
 name|seq
@@ -2801,21 +2772,11 @@ argument_list|()
 decl_stmt|;
 name|updateDestSequenceStmt
 operator|.
-name|setBigDecimal
+name|setLong
 argument_list|(
 literal|1
 argument_list|,
 name|lastMessageNr
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-operator|new
-name|BigDecimal
-argument_list|(
-name|lastMessageNr
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|InputStream

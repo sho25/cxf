@@ -23,16 +23,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Collection
@@ -339,7 +329,7 @@ name|RMAssertion
 argument_list|()
 decl_stmt|;
 comment|// use maximum of inactivity timeout
-name|BigInteger
+name|Long
 name|aval
 init|=
 literal|null
@@ -365,7 +355,7 @@ name|getMilliseconds
 argument_list|()
 expr_stmt|;
 block|}
-name|BigInteger
+name|Long
 name|bval
 init|=
 literal|null
@@ -739,7 +729,7 @@ return|return
 literal|true
 return|;
 block|}
-name|BigInteger
+name|Long
 name|aval
 init|=
 literal|null
@@ -765,7 +755,7 @@ name|getMilliseconds
 argument_list|()
 expr_stmt|;
 block|}
-name|BigInteger
+name|Long
 name|bval
 init|=
 literal|null
@@ -964,10 +954,10 @@ specifier|static
 name|boolean
 name|equals
 parameter_list|(
-name|BigInteger
+name|Long
 name|aval
 parameter_list|,
-name|BigInteger
+name|Long
 name|bval
 parameter_list|)
 block|{

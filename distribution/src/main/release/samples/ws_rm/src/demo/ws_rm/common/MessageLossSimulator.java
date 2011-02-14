@@ -37,16 +37,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ListIterator
@@ -562,7 +552,7 @@ name|FINE
 argument_list|)
 condition|)
 block|{
-name|BigInteger
+name|Long
 name|nr
 init|=
 name|RMContextUtils

@@ -31,16 +31,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|math
-operator|.
-name|BigInteger
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -1033,12 +1023,10 @@ argument_list|(
 name|ds
 argument_list|)
 expr_stmt|;
-name|BigInteger
+name|long
 name|nr
 init|=
-name|BigInteger
-operator|.
-name|TEN
+literal|10
 decl_stmt|;
 name|EasyMock
 operator|.
@@ -1280,12 +1268,10 @@ argument_list|(
 name|id
 argument_list|)
 expr_stmt|;
-name|BigInteger
+name|long
 name|nr
 init|=
-name|BigInteger
-operator|.
-name|TEN
+literal|10
 decl_stmt|;
 name|EasyMock
 operator|.
