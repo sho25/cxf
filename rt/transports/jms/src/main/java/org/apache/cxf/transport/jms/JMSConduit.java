@@ -1066,7 +1066,7 @@ name|replyTo
 argument_list|,
 name|jmsConfig
 operator|.
-name|isPubSubDomain
+name|isReplyPubSubDomain
 argument_list|()
 argument_list|)
 expr_stmt|;
