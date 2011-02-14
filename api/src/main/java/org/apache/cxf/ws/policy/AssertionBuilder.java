@@ -76,17 +76,6 @@ argument_list|>
 name|getKnownElements
 parameter_list|()
 function_decl|;
-comment|/**      * Returns a new assertion that is compatible with the two specified      * assertions or null if no compatible assertion can be built.      */
-name|PolicyAssertion
-name|buildCompatible
-parameter_list|(
-name|PolicyAssertion
-name|a
-parameter_list|,
-name|PolicyAssertion
-name|b
-parameter_list|)
-function_decl|;
 block|}
 end_interface
 

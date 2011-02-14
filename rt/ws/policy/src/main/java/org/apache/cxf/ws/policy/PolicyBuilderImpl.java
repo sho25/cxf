@@ -227,6 +227,18 @@ name|apache
 operator|.
 name|neethi
 operator|.
+name|Assertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
 name|Constants
 import|;
 end_import
@@ -950,7 +962,7 @@ operator|!=
 name|assertionBuilderRegistry
 condition|)
 block|{
-name|PolicyAssertion
+name|Assertion
 name|a
 init|=
 name|assertionBuilderRegistry

@@ -29,17 +29,9 @@ name|Assertion
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
-name|Policy
-import|;
-end_import
+begin_comment
+comment|/**  * Interface to mark Assertions that can participate in CXF's   * assertion mechanism to make sure the policies have been  * applied.   */
+end_comment
 
 begin_interface
 specifier|public
@@ -54,10 +46,6 @@ parameter_list|(
 name|AssertionInfoMap
 name|aim
 parameter_list|)
-function_decl|;
-name|Policy
-name|getPolicy
-parameter_list|()
 function_decl|;
 block|}
 end_interface

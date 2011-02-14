@@ -321,9 +321,9 @@ name|policy
 operator|.
 name|builder
 operator|.
-name|xml
+name|primitive
 operator|.
-name|XMLPrimitiveAssertionBuilder
+name|PrimitiveAssertionBuilder
 import|;
 end_import
 
@@ -959,20 +959,13 @@ argument_list|(
 literal|false
 argument_list|)
 expr_stmt|;
-name|XMLPrimitiveAssertionBuilder
+name|PrimitiveAssertionBuilder
 name|ab
 init|=
 operator|new
-name|XMLPrimitiveAssertionBuilder
+name|PrimitiveAssertionBuilder
 argument_list|()
 decl_stmt|;
-name|ab
-operator|.
-name|setBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 name|abr
 operator|.
 name|register

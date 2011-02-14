@@ -99,9 +99,9 @@ name|policy
 operator|.
 name|builder
 operator|.
-name|xml
+name|primitive
 operator|.
-name|XmlPrimitiveAssertion
+name|PrimitiveAssertion
 import|;
 end_import
 
@@ -503,14 +503,14 @@ operator|.
 name|createNiceControl
 argument_list|()
 decl_stmt|;
-name|XmlPrimitiveAssertion
+name|PrimitiveAssertion
 name|xpa
 init|=
 name|ctrl
 operator|.
 name|createMock
 argument_list|(
-name|XmlPrimitiveAssertion
+name|PrimitiveAssertion
 operator|.
 name|class
 argument_list|)

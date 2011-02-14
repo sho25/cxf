@@ -303,6 +303,18 @@ name|Policy
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|PolicyContainingAssertion
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -1261,10 +1273,22 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|a
+operator|instanceof
+name|PolicyContainingAssertion
+condition|)
+block|{
 name|Policy
 name|p
 init|=
+operator|(
+operator|(
+name|PolicyContainingAssertion
+operator|)
 name|a
+operator|)
 operator|.
 name|getPolicy
 argument_list|()
@@ -1302,6 +1326,7 @@ argument_list|,
 name|usIn
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

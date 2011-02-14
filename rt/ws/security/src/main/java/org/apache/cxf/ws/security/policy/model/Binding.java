@@ -55,6 +55,18 @@ name|SPConstants
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|PolicyContainingAssertion
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -64,6 +76,8 @@ extends|extends
 name|AbstractSecurityAssertion
 implements|implements
 name|AlgorithmWrapper
+implements|,
+name|PolicyContainingAssertion
 block|{
 specifier|protected
 name|PolicyBuilder

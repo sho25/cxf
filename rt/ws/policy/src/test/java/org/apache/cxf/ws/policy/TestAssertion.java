@@ -73,18 +73,6 @@ name|apache
 operator|.
 name|neethi
 operator|.
-name|Policy
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
 name|PolicyComponent
 import|;
 end_import
@@ -190,16 +178,6 @@ return|return
 name|Constants
 operator|.
 name|TYPE_ASSERTION
-return|;
-block|}
-specifier|public
-name|Policy
-name|getPolicy
-parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
 return|;
 block|}
 specifier|public

@@ -55,6 +55,18 @@ name|Registry
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Assertion
+import|;
+end_import
+
 begin_comment
 comment|/**  * AssertionBuilderRegistry is used to manage AssertionBuilders and  * create Assertion objects from given xml elements.  */
 end_comment
@@ -80,7 +92,7 @@ name|builder
 parameter_list|)
 function_decl|;
 comment|/**      * Returns an assertion that is built using the specified xml element.      *       * @param element the element from which to build an Assertion.      * @return an Assertion that is built using the specified element.      */
-name|PolicyAssertion
+name|Assertion
 name|build
 parameter_list|(
 name|Element

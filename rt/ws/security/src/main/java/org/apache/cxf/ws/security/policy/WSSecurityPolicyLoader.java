@@ -173,9 +173,9 @@ name|policy
 operator|.
 name|builder
 operator|.
-name|xml
+name|primitive
 operator|.
-name|XMLPrimitiveAssertionBuilder
+name|PrimitiveAssertionBuilder
 import|;
 end_import
 
@@ -1394,7 +1394,7 @@ operator|.
 name|register
 argument_list|(
 operator|new
-name|XMLPrimitiveAssertionBuilder
+name|PrimitiveAssertionBuilder
 argument_list|(
 name|others
 argument_list|)
