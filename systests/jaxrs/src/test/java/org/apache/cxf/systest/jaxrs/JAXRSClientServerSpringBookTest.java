@@ -1789,7 +1789,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/the/thebooks5/bookstore/books/convert2/123"
+literal|"/the/thebooksWithStax/bookstore/books/convert2/123"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -1894,7 +1894,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/the/thebooks5/bookstore/books/convert"
+literal|"/the/thebooksWithStax/bookstore/books/convert"
 decl_stmt|;
 name|WebClient
 name|wc
