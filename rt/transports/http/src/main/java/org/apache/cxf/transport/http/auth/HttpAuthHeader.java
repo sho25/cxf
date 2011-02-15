@@ -491,7 +491,7 @@ name|IOException
 name|ex
 parameter_list|)
 block|{
-comment|// ignore can´t happen for StringReader
+comment|//ignore can't happen for StringReader
 block|}
 return|return
 name|map
