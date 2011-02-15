@@ -105,13 +105,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|neethi
 operator|.
-name|ws
-operator|.
-name|policy
-operator|.
-name|PolicyAssertion
+name|Assertion
 import|;
 end_import
 
@@ -285,8 +281,7 @@ operator|.
 name|getKnownElements
 argument_list|()
 operator|.
-name|size
-argument_list|()
+name|length
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -297,12 +292,9 @@ name|ab
 operator|.
 name|getKnownElements
 argument_list|()
-operator|.
-name|iterator
-argument_list|()
-operator|.
-name|next
-argument_list|()
+index|[
+literal|0
+index|]
 argument_list|)
 expr_stmt|;
 block|}
@@ -397,7 +389,7 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-name|PolicyAssertion
+name|Assertion
 name|a
 init|=
 name|ab
@@ -405,6 +397,8 @@ operator|.
 name|build
 argument_list|(
 name|elem
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|JaxbAssertion

@@ -57,7 +57,7 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|PolicyAssertion
+name|PolicyBuilder
 import|;
 end_import
 
@@ -67,13 +67,21 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|neethi
 operator|.
-name|ws
+name|Assertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
 operator|.
-name|policy
+name|apache
 operator|.
-name|PolicyBuilder
+name|neethi
+operator|.
+name|AssertionBuilderFactory
 import|;
 end_import
 
@@ -132,11 +140,14 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|PolicyAssertion
+name|Assertion
 name|build
 parameter_list|(
 name|Element
 name|element
+parameter_list|,
+name|AssertionBuilderFactory
+name|factory
 parameter_list|)
 block|{
 name|Node
