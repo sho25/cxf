@@ -187,7 +187,7 @@ argument_list|()
 operator|.
 name|indexOf
 argument_list|(
-literal|"common"
+literal|"api"
 argument_list|)
 operator|!=
 operator|-
