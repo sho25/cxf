@@ -722,8 +722,6 @@ name|builder
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|boolean
 name|equal
@@ -768,8 +766,6 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|boolean
 name|isAsserted
