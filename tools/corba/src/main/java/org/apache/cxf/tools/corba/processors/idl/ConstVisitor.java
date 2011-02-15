@@ -472,6 +472,26 @@ name|wsdlVisitor
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|visitor
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"can't resolve type for const "
+operator|+
+name|constNameNode
+operator|.
+name|getText
+argument_list|()
+argument_list|)
+throw|;
+block|}
 name|visitor
 operator|.
 name|visit
