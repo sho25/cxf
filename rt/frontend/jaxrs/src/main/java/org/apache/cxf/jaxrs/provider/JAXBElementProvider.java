@@ -531,6 +531,22 @@ name|StaxUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|transform
+operator|.
+name|TransformUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Produces
@@ -1356,6 +1372,8 @@ return|return
 operator|new
 name|JAXBCollectionWrapperReader
 argument_list|(
+name|TransformUtils
+operator|.
 name|createNewReaderIfNeeded
 argument_list|(
 name|reader
