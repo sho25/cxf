@@ -265,6 +265,18 @@ name|apache
 operator|.
 name|neethi
 operator|.
+name|Assertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
 name|Policy
 import|;
 end_import
@@ -625,7 +637,7 @@ argument_list|()
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -637,7 +649,7 @@ name|Collections
 operator|.
 name|EMPTY_LIST
 argument_list|,
-name|PolicyAssertion
+name|Assertion
 operator|.
 name|class
 argument_list|)
@@ -1084,7 +1096,7 @@ argument_list|()
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -1096,7 +1108,7 @@ name|Collections
 operator|.
 name|EMPTY_LIST
 argument_list|,
-name|PolicyAssertion
+name|Assertion
 operator|.
 name|class
 argument_list|)
@@ -1283,7 +1295,7 @@ argument_list|()
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -1295,7 +1307,7 @@ name|Collections
 operator|.
 name|EMPTY_LIST
 argument_list|,
-name|PolicyAssertion
+name|Assertion
 operator|.
 name|class
 argument_list|)
@@ -1484,7 +1496,7 @@ argument_list|()
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -1496,7 +1508,7 @@ name|Collections
 operator|.
 name|EMPTY_LIST
 argument_list|,
-name|PolicyAssertion
+name|Assertion
 operator|.
 name|class
 argument_list|)
@@ -1870,7 +1882,7 @@ argument_list|()
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -1882,7 +1894,7 @@ name|Collections
 operator|.
 name|EMPTY_LIST
 argument_list|,
-name|PolicyAssertion
+name|Assertion
 operator|.
 name|class
 argument_list|)

@@ -483,6 +483,22 @@ name|ws
 operator|.
 name|policy
 operator|.
+name|PolicyAssertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|policy
+operator|.
 name|PolicyBuilder
 import|;
 end_import
@@ -2836,10 +2852,15 @@ name|assertionType
 operator|+
 literal|" policy erroneously failed."
 argument_list|,
+operator|(
+operator|(
+name|PolicyAssertion
+operator|)
 name|ai
 operator|.
 name|getAssertion
 argument_list|()
+operator|)
 operator|.
 name|isAsserted
 argument_list|(
@@ -2897,10 +2918,15 @@ name|assertionType
 operator|+
 literal|" policy erroneously asserted."
 argument_list|,
+operator|(
+operator|(
+name|PolicyAssertion
+operator|)
 name|ai
 operator|.
 name|getAssertion
 argument_list|()
+operator|)
 operator|.
 name|isAsserted
 argument_list|(
@@ -3174,10 +3200,15 @@ name|assertionType
 operator|+
 literal|" policy erroneously failed."
 argument_list|,
+operator|(
+operator|(
+name|PolicyAssertion
+operator|)
 name|ai
 operator|.
 name|getAssertion
 argument_list|()
+operator|)
 operator|.
 name|isAsserted
 argument_list|(
@@ -3235,10 +3266,15 @@ name|assertionType
 operator|+
 literal|" policy erroneously asserted."
 argument_list|,
+operator|(
+operator|(
+name|PolicyAssertion
+operator|)
 name|ai
 operator|.
 name|getAssertion
 argument_list|()
+operator|)
 operator|.
 name|isAsserted
 argument_list|(

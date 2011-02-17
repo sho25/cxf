@@ -645,22 +645,6 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|PolicyAssertion
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|policy
-operator|.
 name|PolicyConstants
 import|;
 end_import
@@ -1144,6 +1128,18 @@ operator|.
 name|tokenstore
 operator|.
 name|TokenStore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Assertion
 import|;
 end_import
 
@@ -2229,7 +2225,7 @@ specifier|protected
 name|void
 name|policyNotAsserted
 parameter_list|(
-name|PolicyAssertion
+name|Assertion
 name|assertion
 parameter_list|,
 name|Exception
@@ -2333,7 +2329,7 @@ specifier|protected
 name|void
 name|policyNotAsserted
 parameter_list|(
-name|PolicyAssertion
+name|Assertion
 name|assertion
 parameter_list|,
 name|String
@@ -2450,7 +2446,7 @@ specifier|protected
 name|void
 name|policyAsserted
 parameter_list|(
-name|PolicyAssertion
+name|Assertion
 name|assertion
 parameter_list|)
 block|{
@@ -2588,7 +2584,7 @@ block|}
 specifier|protected
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|findAndAssertPolicy
 parameter_list|(
@@ -2624,14 +2620,14 @@ condition|)
 block|{
 name|List
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|p
 init|=
 operator|new
 name|ArrayList
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 argument_list|(
 name|ais
@@ -3246,7 +3242,7 @@ name|assertSupportingTokens
 parameter_list|(
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|suppTokens
 parameter_list|)
@@ -3262,7 +3258,7 @@ return|return;
 block|}
 for|for
 control|(
-name|PolicyAssertion
+name|Assertion
 name|pa
 range|:
 name|suppTokens
@@ -3313,7 +3309,7 @@ name|handleSupportingTokens
 parameter_list|(
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|tokens
 parameter_list|,
@@ -3347,7 +3343,7 @@ condition|)
 block|{
 for|for
 control|(
-name|PolicyAssertion
+name|Assertion
 name|pa
 range|:
 name|tokens
@@ -4638,7 +4634,7 @@ parameter_list|(
 name|String
 name|userName
 parameter_list|,
-name|PolicyAssertion
+name|Assertion
 name|info
 parameter_list|,
 name|int
@@ -9057,7 +9053,7 @@ parameter_list|)
 block|{
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|sgndSuppTokens
 init|=
@@ -9087,7 +9083,7 @@ argument_list|)
 decl_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|endSuppTokens
 init|=
@@ -9111,7 +9107,7 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|sgndEndSuppTokens
 init|=
@@ -9135,7 +9131,7 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|sgndEncryptedSuppTokens
 init|=
@@ -9165,7 +9161,7 @@ argument_list|)
 decl_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|endorsingEncryptedSuppTokens
 init|=
@@ -9189,7 +9185,7 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|sgndEndEncSuppTokens
 init|=
@@ -9213,7 +9209,7 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|supportingToks
 init|=
@@ -9235,7 +9231,7 @@ argument_list|)
 expr_stmt|;
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|encryptedSupportingToks
 init|=

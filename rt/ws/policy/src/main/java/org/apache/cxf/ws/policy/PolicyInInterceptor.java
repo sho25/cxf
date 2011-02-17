@@ -241,6 +241,18 @@ name|apache
 operator|.
 name|neethi
 operator|.
+name|Assertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
 name|Policy
 import|;
 end_import
@@ -546,7 +558,7 @@ expr_stmt|;
 block|}
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -678,7 +690,7 @@ block|}
 comment|// insert assertions of endpoint's vocabulary into message
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -931,7 +943,7 @@ block|}
 comment|// insert assertions of endpoint's vocabulary into message
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=

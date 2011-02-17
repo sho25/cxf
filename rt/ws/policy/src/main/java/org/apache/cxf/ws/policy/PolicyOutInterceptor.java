@@ -241,6 +241,18 @@ name|apache
 operator|.
 name|neethi
 operator|.
+name|Assertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
 name|Policy
 import|;
 end_import
@@ -553,7 +565,7 @@ block|}
 comment|// insert assertions of the chosen alternative into the message
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -620,7 +632,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|PolicyAssertion
+name|Assertion
 name|a
 range|:
 name|assertions
@@ -805,7 +817,7 @@ block|}
 comment|// insert assertions of the chosen alternative into the message
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
@@ -872,7 +884,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|PolicyAssertion
+name|Assertion
 name|a
 range|:
 name|assertions
@@ -1027,7 +1039,7 @@ block|}
 comment|// insert assertions of the chosen alternative into the message
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=

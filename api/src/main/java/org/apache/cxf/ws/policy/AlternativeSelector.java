@@ -35,6 +35,18 @@ name|apache
 operator|.
 name|neethi
 operator|.
+name|Assertion
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
 name|Policy
 import|;
 end_import
@@ -50,7 +62,7 @@ name|AlternativeSelector
 block|{
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|selectAlternative
 parameter_list|(

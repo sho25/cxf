@@ -91,6 +91,18 @@ name|Message
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Assertion
+import|;
+end_import
+
 begin_comment
 comment|/**  * InterceptorProviderRegistry is used to manage InterceptorProviders that provide  * assertion domain specific interceptors.  */
 end_comment
@@ -128,7 +140,9 @@ name|getInterceptors
 parameter_list|(
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|?
+extends|extends
+name|Assertion
 argument_list|>
 name|alterative
 parameter_list|,

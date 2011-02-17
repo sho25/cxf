@@ -17,6 +17,18 @@ name|policy
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Assertion
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -32,7 +44,7 @@ name|asserted
 decl_stmt|;
 specifier|private
 specifier|final
-name|PolicyAssertion
+name|Assertion
 name|assertion
 decl_stmt|;
 specifier|private
@@ -42,7 +54,7 @@ decl_stmt|;
 specifier|public
 name|AssertionInfo
 parameter_list|(
-name|PolicyAssertion
+name|Assertion
 name|a
 parameter_list|)
 block|{
@@ -100,7 +112,7 @@ name|errorMessage
 return|;
 block|}
 specifier|public
-name|PolicyAssertion
+name|Assertion
 name|getAssertion
 parameter_list|()
 block|{

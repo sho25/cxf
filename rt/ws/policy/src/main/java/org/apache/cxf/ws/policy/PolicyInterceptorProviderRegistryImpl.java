@@ -193,6 +193,18 @@ name|Message
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Assertion
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -489,7 +501,9 @@ name|getInterceptors
 parameter_list|(
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|?
+extends|extends
+name|Assertion
 argument_list|>
 name|alternative
 parameter_list|,
@@ -528,7 +542,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|PolicyAssertion
+name|Assertion
 name|a
 range|:
 name|alternative

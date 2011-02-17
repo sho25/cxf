@@ -235,6 +235,18 @@ name|Destination
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Assertion
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -553,7 +565,7 @@ block|}
 comment|// insert assertions of the chosen alternative into the message
 name|Collection
 argument_list|<
-name|PolicyAssertion
+name|Assertion
 argument_list|>
 name|assertions
 init|=
