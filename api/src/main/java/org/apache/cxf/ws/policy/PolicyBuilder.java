@@ -53,18 +53,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|w3c
-operator|.
-name|dom
-operator|.
-name|Element
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|xml
 operator|.
 name|sax
@@ -122,7 +110,7 @@ comment|/**      * Creates a PolicyReference object from a DOM element.      *  
 name|PolicyReference
 name|getPolicyReference
 parameter_list|(
-name|Element
+name|Object
 name|element
 parameter_list|)
 function_decl|;
@@ -130,7 +118,7 @@ comment|/**      * Creates a Policy object from an DOM element.      *       * @
 name|Policy
 name|getPolicy
 parameter_list|(
-name|Element
+name|Object
 name|element
 parameter_list|)
 function_decl|;

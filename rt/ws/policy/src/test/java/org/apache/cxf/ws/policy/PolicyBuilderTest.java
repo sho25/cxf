@@ -135,6 +135,20 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|builders
+operator|.
+name|AssertionBuilder
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|Assert
@@ -208,7 +222,7 @@ argument_list|()
 decl_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -223,7 +237,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -238,7 +252,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName

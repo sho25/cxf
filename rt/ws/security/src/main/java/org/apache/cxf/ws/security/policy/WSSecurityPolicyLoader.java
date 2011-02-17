@@ -966,7 +966,7 @@ argument_list|)
 decl_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|AlgorithmSuiteBuilder
@@ -975,7 +975,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|AsymmetricBindingBuilder
@@ -986,7 +986,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|ContentEncryptedElementsBuilder
@@ -995,7 +995,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|EncryptedElementsBuilder
@@ -1004,7 +1004,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|EncryptedPartsBuilder
@@ -1013,7 +1013,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|HttpsTokenBuilder
@@ -1024,7 +1024,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|InitiatorTokenBuilder
@@ -1035,7 +1035,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|IssuedTokenBuilder
@@ -1046,7 +1046,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|LayoutBuilder
@@ -1055,7 +1055,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|ProtectionTokenBuilder
@@ -1066,7 +1066,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|RecipientTokenBuilder
@@ -1077,7 +1077,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|RequiredElementsBuilder
@@ -1086,7 +1086,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|RequiredPartsBuilder
@@ -1095,7 +1095,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SecureConversationTokenBuilder
@@ -1106,7 +1106,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SecurityContextTokenBuilder
@@ -1115,7 +1115,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SignedElementsBuilder
@@ -1124,7 +1124,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SignedPartsBuilder
@@ -1133,7 +1133,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SupportingTokens12Builder
@@ -1144,7 +1144,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SupportingTokensBuilder
@@ -1155,7 +1155,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|SymmetricBindingBuilder
@@ -1166,7 +1166,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|TransportBindingBuilder
@@ -1177,7 +1177,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|TransportTokenBuilder
@@ -1188,7 +1188,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|Trust10Builder
@@ -1197,7 +1197,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|Trust13Builder
@@ -1206,7 +1206,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|UsernameTokenBuilder
@@ -1217,7 +1217,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|KeyValueTokenBuilder
@@ -1226,7 +1226,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|WSS10Builder
@@ -1235,7 +1235,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|WSS11Builder
@@ -1244,7 +1244,7 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|X509TokenBuilder
@@ -1392,7 +1392,7 @@ argument_list|)
 decl_stmt|;
 name|reg
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|PrimitiveAssertionBuilder

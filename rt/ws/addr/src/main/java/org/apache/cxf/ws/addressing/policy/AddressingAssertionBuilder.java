@@ -79,22 +79,6 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|AssertionBuilder
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|policy
-operator|.
 name|PolicyBuilder
 import|;
 end_import
@@ -179,6 +163,20 @@ name|AssertionBuilderFactory
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|builders
+operator|.
+name|AssertionBuilder
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -189,6 +187,9 @@ class|class
 name|AddressingAssertionBuilder
 implements|implements
 name|AssertionBuilder
+argument_list|<
+name|Element
+argument_list|>
 block|{
 specifier|private
 specifier|static

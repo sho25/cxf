@@ -71,22 +71,6 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|AssertionBuilder
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|policy
-operator|.
 name|PolicyBuilder
 import|;
 end_import
@@ -205,6 +189,20 @@ name|AssertionBuilderFactory
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|builders
+operator|.
+name|AssertionBuilder
+import|;
+end_import
+
 begin_comment
 comment|/**  * This is a standard assertion builder implementation for the https token   * as specified by the ws security policy 1.2 specification. In order for this builder to be used  * it is required that the security policy namespace uri is {@link SP12Constants#SP_NS}   * The builder will handle  *<ul>  *<li><code>HttpBasicAuthentication</code></li>  *<li><code>HttpDigestAuthentication</code></li>  *<li><code>RequireClientCertificate</code></li>  *</ul>   * alternatives in the HttpsToken considering both cases whether the policy is normalized or not.  *   */
 end_comment
@@ -215,6 +213,9 @@ class|class
 name|HttpsTokenBuilder
 implements|implements
 name|AssertionBuilder
+argument_list|<
+name|Element
+argument_list|>
 block|{
 specifier|private
 specifier|static

@@ -375,7 +375,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -390,7 +390,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -405,7 +405,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -420,7 +420,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -435,7 +435,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName
@@ -450,7 +450,7 @@ argument_list|)
 expr_stmt|;
 name|abr
 operator|.
-name|register
+name|registerBuilder
 argument_list|(
 operator|new
 name|QName

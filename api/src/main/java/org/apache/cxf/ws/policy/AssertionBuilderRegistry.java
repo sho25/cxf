@@ -19,51 +19,13 @@ end_package
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|namespace
-operator|.
-name|QName
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|w3c
-operator|.
-name|dom
-operator|.
-name|Element
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|extension
-operator|.
-name|Registry
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
 operator|.
 name|neethi
 operator|.
-name|Assertion
+name|AssertionBuilderFactory
 import|;
 end_import
 
@@ -76,35 +38,14 @@ specifier|public
 interface|interface
 name|AssertionBuilderRegistry
 extends|extends
-name|Registry
-argument_list|<
-name|QName
-argument_list|,
-name|AssertionBuilder
-argument_list|>
+name|AssertionBuilderFactory
 block|{
-comment|/**      * Register the builder for all qnames from the builders      * getKnownElements call.      * @param builder the builder to register       */
-name|void
-name|register
-parameter_list|(
-name|AssertionBuilder
-name|builder
-parameter_list|)
-function_decl|;
-comment|/**      * Returns an assertion that is built using the specified xml element.      *       * @param element the element from which to build an Assertion.      * @return an Assertion that is built using the specified element.      */
-name|Assertion
-name|build
-parameter_list|(
-name|Element
-name|element
-parameter_list|)
-function_decl|;
 comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.      * @return false if unknown assertions will result in an exception       */
 name|boolean
 name|isIgnoreUnknownAssertions
 parameter_list|()
 function_decl|;
-comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.       * @param ignoreUnknownAssertions iff unknown assertions should be ignored      */
+comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.       * @param ignoreUnknownAssertions if unknown assertions should be ignored      */
 name|void
 name|setIgnoreUnknownAssertions
 parameter_list|(
