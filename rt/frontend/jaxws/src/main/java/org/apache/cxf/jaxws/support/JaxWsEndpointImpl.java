@@ -943,6 +943,18 @@ name|WSDLManager
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Constants
+import|;
+end_import
+
 begin_comment
 comment|/**  * A JAX-WS specific implementation of the CXF {@link org.apache.cxf.endpoint.Endpoint} interface.  * Extends the interceptor provider functionality of its base class by adding   * interceptors in which to execute the JAX-WS handlers.  * Creates and owns an implementation of {@link Binding} in addition to the  * CXF {@link org.apache.cxf.binding.Binding}.   *  */
 end_comment
@@ -2120,9 +2132,9 @@ literal|"wsp"
 argument_list|,
 literal|"PolicyReference"
 argument_list|,
-name|PolicyConstants
+name|Constants
 operator|.
-name|NAMESPACE_WS_POLICY
+name|URI_POLICY_NS
 argument_list|)
 expr_stmt|;
 name|writer
@@ -2195,9 +2207,9 @@ literal|"wsp"
 argument_list|,
 literal|"Policy"
 argument_list|,
-name|PolicyConstants
+name|Constants
 operator|.
-name|NAMESPACE_WS_POLICY
+name|URI_POLICY_NS
 argument_list|)
 expr_stmt|;
 name|writer
@@ -2248,9 +2260,9 @@ name|writeAttribute
 argument_list|(
 literal|"wsp"
 argument_list|,
-name|PolicyConstants
+name|Constants
 operator|.
-name|NAMESPACE_WS_POLICY
+name|URI_POLICY_NS
 argument_list|,
 literal|"Optional"
 argument_list|,
@@ -2266,9 +2278,9 @@ literal|"wsp"
 argument_list|,
 literal|"Policy"
 argument_list|,
-name|PolicyConstants
+name|Constants
 operator|.
-name|NAMESPACE_WS_POLICY
+name|URI_POLICY_NS
 argument_list|)
 expr_stmt|;
 name|String

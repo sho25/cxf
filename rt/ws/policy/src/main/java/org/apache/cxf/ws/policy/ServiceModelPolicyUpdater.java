@@ -471,7 +471,7 @@ name|createElementNS
 argument_list|(
 name|Constants
 operator|.
-name|URI_POLICY_NS
+name|URI_POLICY_13_NS
 argument_list|,
 name|Constants
 operator|.
@@ -516,7 +516,7 @@ name|QName
 argument_list|(
 name|Constants
 operator|.
-name|URI_POLICY_NS
+name|URI_POLICY_13_NS
 argument_list|,
 name|Constants
 operator|.
@@ -605,7 +605,7 @@ name|QName
 argument_list|(
 name|Constants
 operator|.
-name|URI_POLICY_NS
+name|URI_POLICY_13_NS
 argument_list|,
 name|Constants
 operator|.

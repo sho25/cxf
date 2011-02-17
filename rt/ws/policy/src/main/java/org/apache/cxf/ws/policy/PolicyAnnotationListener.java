@@ -445,6 +445,18 @@ name|StaxUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|Constants
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -2280,9 +2292,9 @@ decl_stmt|;
 name|String
 name|ns
 init|=
-name|PolicyConstants
+name|Constants
 operator|.
-name|NAMESPACE_WS_POLICY
+name|URI_POLICY_NS
 decl_stmt|;
 if|if
 condition|(
@@ -2536,9 +2548,9 @@ name|ns
 argument_list|,
 literal|"wsp:"
 operator|+
-name|PolicyConstants
+name|Constants
 operator|.
-name|POLICYREFERENCE_ELEM_NAME
+name|ELEM_POLICY_REF
 argument_list|)
 decl_stmt|;
 name|Attr
