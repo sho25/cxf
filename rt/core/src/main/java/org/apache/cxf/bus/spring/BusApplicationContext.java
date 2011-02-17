@@ -1226,7 +1226,8 @@ return|return
 name|res
 return|;
 block|}
-specifier|protected
+specifier|public
+specifier|static
 name|Resource
 name|findResource
 parameter_list|(
@@ -1306,10 +1307,9 @@ name|getResource
 argument_list|(
 name|cfgFile
 argument_list|,
-name|this
+name|BusApplicationContext
 operator|.
-name|getClass
-argument_list|()
+name|class
 argument_list|)
 decl_stmt|;
 if|if

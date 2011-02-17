@@ -44,6 +44,12 @@ name|activateViaNS
 parameter_list|(
 name|String
 name|namespace
+parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|type
 parameter_list|)
 function_decl|;
 parameter_list|<

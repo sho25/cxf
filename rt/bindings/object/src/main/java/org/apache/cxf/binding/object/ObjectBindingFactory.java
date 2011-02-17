@@ -194,6 +194,23 @@ specifier|private
 name|LocalServerListener
 name|listener
 decl_stmt|;
+specifier|public
+name|ObjectBindingFactory
+parameter_list|()
+block|{              }
+specifier|public
+name|ObjectBindingFactory
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|b
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|PostConstruct
 specifier|public

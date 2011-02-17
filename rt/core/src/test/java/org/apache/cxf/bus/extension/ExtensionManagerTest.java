@@ -468,7 +468,7 @@ argument_list|)
 expr_stmt|;
 name|manager
 operator|.
-name|processExtension
+name|addDeferred
 argument_list|(
 name|e
 argument_list|)
@@ -483,6 +483,8 @@ operator|.
 name|activateViaNS
 argument_list|(
 name|ns
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertNotNull
@@ -530,6 +532,8 @@ operator|.
 name|activateViaNS
 argument_list|(
 name|ns
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertSame

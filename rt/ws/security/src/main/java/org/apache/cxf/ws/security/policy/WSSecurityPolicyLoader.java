@@ -894,6 +894,7 @@ block|{
 name|Bus
 name|bus
 decl_stmt|;
+specifier|public
 name|WSSecurityPolicyLoader
 parameter_list|(
 name|Bus

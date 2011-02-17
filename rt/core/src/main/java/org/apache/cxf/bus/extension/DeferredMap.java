@@ -133,6 +133,8 @@ operator|.
 name|activateViaNS
 argument_list|(
 name|k
+argument_list|,
+name|type
 argument_list|)
 expr_stmt|;
 name|v

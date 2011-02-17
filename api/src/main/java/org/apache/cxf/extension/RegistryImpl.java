@@ -139,6 +139,11 @@ operator|=
 name|e
 expr_stmt|;
 block|}
+specifier|protected
+name|void
+name|loadDynamic
+parameter_list|()
+block|{     }
 specifier|public
 name|void
 name|register
@@ -184,6 +189,9 @@ name|K
 name|k
 parameter_list|)
 block|{
+name|loadDynamic
+argument_list|()
+expr_stmt|;
 return|return
 name|entries
 operator|.

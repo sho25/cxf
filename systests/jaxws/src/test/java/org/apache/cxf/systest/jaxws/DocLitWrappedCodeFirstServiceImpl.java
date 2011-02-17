@@ -290,6 +290,10 @@ name|WebServiceContext
 name|context
 decl_stmt|;
 specifier|public
+name|DocLitWrappedCodeFirstServiceImpl
+parameter_list|()
+block|{              }
+specifier|public
 name|int
 name|thisShouldNotBeInTheWSDL
 parameter_list|(
