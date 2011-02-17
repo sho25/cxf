@@ -108,10 +108,6 @@ name|browserTabSelectedRow
 parameter_list|()
 function_decl|;
 name|String
-name|browserTabSignOutButton
-parameter_list|()
-function_decl|;
-name|String
 name|browserTabManageSubscriptionsButton
 parameter_list|()
 function_decl|;
@@ -150,10 +146,6 @@ function_decl|;
 comment|/* Settings tab styles */
 name|String
 name|settingsTabHeader
-parameter_list|()
-function_decl|;
-name|String
-name|settingsTabSignOutButton
 parameter_list|()
 function_decl|;
 name|String
