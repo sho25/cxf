@@ -667,6 +667,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|wsdl
+operator|.
+name|WSDLManager
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|wsdl11
 operator|.
 name|WSDLServiceBuilder
@@ -1447,6 +1461,23 @@ name|definition
 argument_list|)
 expr_stmt|;
 block|}
+comment|//remove definition from cache so that won't fail when encounter same wsdl file
+comment|//name but different wsdl content(CXF-3340)
+name|getBus
+argument_list|()
+operator|.
+name|getExtension
+argument_list|(
+name|WSDLManager
+operator|.
+name|class
+argument_list|)
+operator|.
+name|removeDefinition
+argument_list|(
+name|definition
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
