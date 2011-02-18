@@ -143,6 +143,14 @@ name|String
 name|browserTabNavigationLink
 parameter_list|()
 function_decl|;
+name|String
+name|sidebarItem
+parameter_list|()
+function_decl|;
+name|String
+name|sidebarHeader
+parameter_list|()
+function_decl|;
 comment|/* Settings tab styles */
 name|String
 name|settingsTabHeader
