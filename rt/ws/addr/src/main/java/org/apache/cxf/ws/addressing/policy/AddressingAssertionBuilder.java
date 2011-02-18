@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -324,6 +334,14 @@ name|newPrimitiveAssertion
 parameter_list|(
 name|Element
 name|element
+parameter_list|,
+name|Map
+argument_list|<
+name|QName
+argument_list|,
+name|String
+argument_list|>
+name|mp
 parameter_list|)
 block|{
 return|return
@@ -343,6 +361,8 @@ name|isIgnorable
 argument_list|(
 name|element
 argument_list|)
+argument_list|,
+name|mp
 argument_list|)
 return|;
 block|}
@@ -352,6 +372,14 @@ name|newPolicyContainingAssertion
 parameter_list|(
 name|Element
 name|element
+parameter_list|,
+name|Map
+argument_list|<
+name|QName
+argument_list|,
+name|String
+argument_list|>
+name|mp
 parameter_list|,
 name|Policy
 name|policy
@@ -374,6 +402,8 @@ name|isIgnorable
 argument_list|(
 name|element
 argument_list|)
+argument_list|,
+name|mp
 argument_list|,
 name|policy
 argument_list|)
