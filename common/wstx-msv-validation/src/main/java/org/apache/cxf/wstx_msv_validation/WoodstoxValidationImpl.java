@@ -207,7 +207,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|e
 parameter_list|)
 block|{
@@ -217,35 +217,13 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"Problem initializing MSV validation"
 argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-return|return;
-block|}
-catch|catch
-parameter_list|(
-name|NoSuchMethodError
-name|nsme
-parameter_list|)
-block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|INFO
-argument_list|,
-literal|"Problem initializing MSV validation"
-argument_list|,
-name|nsme
-argument_list|)
-expr_stmt|;
-comment|// these don't inherit from 'Exception'
 return|return;
 block|}
 if|if
