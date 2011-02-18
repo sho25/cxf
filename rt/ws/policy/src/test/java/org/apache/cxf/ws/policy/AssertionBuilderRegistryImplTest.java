@@ -59,17 +59,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|neethi
 operator|.
-name|ws
-operator|.
-name|policy
-operator|.
-name|builder
-operator|.
-name|primitive
-operator|.
-name|PrimitiveAssertion
+name|Assertion
 import|;
 end_import
 
@@ -81,7 +73,9 @@ name|apache
 operator|.
 name|neethi
 operator|.
-name|Assertion
+name|builders
+operator|.
+name|PrimitiveAssertion
 import|;
 end_import
 

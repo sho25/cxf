@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This no-op PolicyInterceptorProvider prevents the policy enforcement  * logic making it impossible to assert the HTTPClientPolicy upfront  * before the HTTPConduit becomes invoved (e.g. via a WSPolicyFeature  * applied to the<jawx:client> bean).  */
+comment|/**  * This no-op PolicyInterceptorProvider prevents the policy enforcement  * logic making it impossible to assert the HTTPClientPolicy upfront  * before the HTTPConduit becomes involved (e.g. via a WSPolicyFeature  * applied to the<jaxws:client> bean).  */
 end_comment
 
 begin_class

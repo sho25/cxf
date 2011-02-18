@@ -4831,14 +4831,14 @@ name|Assertion
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|PolicyAssertion
+name|Assertion
 name|a
 init|=
 name|control
 operator|.
 name|createMock
 argument_list|(
-name|PolicyAssertion
+name|Assertion
 operator|.
 name|class
 argument_list|)

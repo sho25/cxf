@@ -378,13 +378,6 @@ operator|new
 name|PrimitiveAssertionBuilder
 argument_list|()
 decl_stmt|;
-name|ab
-operator|.
-name|setBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 name|abr
 operator|.
 name|registerBuilder

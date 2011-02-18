@@ -59,18 +59,6 @@ name|BusExtension
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
-name|PolicyEngine
-import|;
-end_import
-
 begin_comment
 comment|/**  * PolicyBuilderImpl is an implementation of the PolicyBuilder interface,  * provides methods to create Policy and PolicyReferenceObjects  * from DOM elements, but also from an input stream etc.  */
 end_comment
@@ -82,7 +70,13 @@ specifier|public
 class|class
 name|PolicyBuilderImpl
 extends|extends
-name|PolicyEngine
+name|org
+operator|.
+name|apache
+operator|.
+name|neethi
+operator|.
+name|PolicyBuilder
 implements|implements
 name|PolicyBuilder
 implements|,
@@ -161,6 +155,17 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|theBus
+operator|.
+name|setExtension
+argument_list|(
+name|this
+argument_list|,
+name|PolicyBuilder
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 name|AssertionBuilderRegistry
 name|reg
 init|=
