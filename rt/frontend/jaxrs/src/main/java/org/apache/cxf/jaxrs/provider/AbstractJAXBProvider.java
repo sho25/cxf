@@ -4051,6 +4051,8 @@ argument_list|,
 name|inElementsMap
 argument_list|,
 name|inAppendMap
+argument_list|,
+literal|true
 argument_list|)
 return|;
 block|}

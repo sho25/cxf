@@ -4716,46 +4716,6 @@ operator|.
 name|getBookPort
 argument_list|()
 decl_stmt|;
-name|TransformInInterceptor
-name|in
-init|=
-operator|new
-name|TransformInInterceptor
-argument_list|()
-decl_stmt|;
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-name|mapIn
-init|=
-operator|new
-name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-argument_list|()
-decl_stmt|;
-name|mapIn
-operator|.
-name|put
-argument_list|(
-literal|"*"
-argument_list|,
-literal|"{http://jaxws.jaxrs.systest.cxf.apache.org/}*"
-argument_list|)
-expr_stmt|;
-name|in
-operator|.
-name|setInTransformElements
-argument_list|(
-name|mapIn
-argument_list|)
-expr_stmt|;
 name|TransformOutInterceptor
 name|out
 init|=
@@ -4780,13 +4740,20 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|// Book content (id, name) is unqualified, thus the following works
+comment|// because JAXB will report
+comment|// - {http://jaxws.jaxrs.systest.cxf.apache.org/}Book
+comment|// - id
+comment|// - name
+comment|// and only the qualified top-level Book tag gets matched by the following
+comment|// mapping
 name|mapOut
 operator|.
 name|put
 argument_list|(
 literal|"{http://jaxws.jaxrs.systest.cxf.apache.org/}*"
 argument_list|,
-literal|"getBookRequest"
+literal|"*"
 argument_list|)
 expr_stmt|;
 name|out
@@ -4794,6 +4761,53 @@ operator|.
 name|setOutTransformElements
 argument_list|(
 name|mapOut
+argument_list|)
+expr_stmt|;
+name|TransformInInterceptor
+name|in
+init|=
+operator|new
+name|TransformInInterceptor
+argument_list|()
+decl_stmt|;
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|mapIn
+init|=
+operator|new
+name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+argument_list|()
+decl_stmt|;
+comment|// mapIn.put("*", "{http://jaxws.jaxrs.systest.cxf.apache.org/}*");
+comment|// won't work for a case where a totally unqualified getBookResponse needs to be
+comment|// qualified such that only the top-level getBookResponse is processed because of '*'.
+comment|// Such a mapping would work nicely if we had say a package-info making both
+comment|// Book id& name qualified; otherwise we need to choose what tag we need to qualify
+comment|// mapIn.put("*", "{http://jaxws.jaxrs.systest.cxf.apache.org/}*");
+comment|// works too if the schema validation is disabled
+name|mapIn
+operator|.
+name|put
+argument_list|(
+literal|"getBookResponse"
+argument_list|,
+literal|"{http://jaxws.jaxrs.systest.cxf.apache.org/}getBookResponse"
+argument_list|)
+expr_stmt|;
+name|in
+operator|.
+name|setInTransformElements
+argument_list|(
+name|mapIn
 argument_list|)
 expr_stmt|;
 name|Client
@@ -4806,6 +4820,24 @@ argument_list|(
 name|store
 argument_list|)
 decl_stmt|;
+operator|(
+operator|(
+name|HTTPConduit
+operator|)
+name|cl
+operator|.
+name|getConduit
+argument_list|()
+operator|)
+operator|.
+name|getClient
+argument_list|()
+operator|.
+name|setReceiveTimeout
+argument_list|(
+literal|10000000
+argument_list|)
+expr_stmt|;
 name|cl
 operator|.
 name|getInInterceptors

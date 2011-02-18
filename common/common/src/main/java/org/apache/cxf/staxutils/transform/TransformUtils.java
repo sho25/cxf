@@ -325,6 +325,9 @@ argument_list|,
 name|String
 argument_list|>
 name|inAppendMap
+parameter_list|,
+name|boolean
+name|blockOriginalReader
 parameter_list|)
 block|{
 if|if
@@ -402,6 +405,8 @@ argument_list|,
 name|inElementsMap
 argument_list|,
 name|inAppendMap
+argument_list|,
+name|blockOriginalReader
 argument_list|)
 expr_stmt|;
 block|}

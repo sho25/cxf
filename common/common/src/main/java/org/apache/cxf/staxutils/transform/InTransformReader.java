@@ -193,6 +193,12 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
+specifier|private
+name|boolean
+name|blockOriginalReader
+init|=
+literal|true
+decl_stmt|;
 specifier|public
 name|InTransformReader
 parameter_list|(
@@ -214,6 +220,9 @@ argument_list|,
 name|String
 argument_list|>
 name|appendMap
+parameter_list|,
+name|boolean
+name|blockOriginalReader
 parameter_list|)
 block|{
 name|super
@@ -238,6 +247,12 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|this
+operator|.
+name|blockOriginalReader
+operator|=
+name|blockOriginalReader
+expr_stmt|;
 name|TransformUtils
 operator|.
 name|convertToQNamesMap
@@ -258,6 +273,26 @@ argument_list|,
 name|inAppendMap
 argument_list|)
 expr_stmt|;
+block|}
+annotation|@
+name|Override
+comment|// If JAXB schema validation is disabled then returning
+comment|// the native reader and thus bypassing this reader may work
+specifier|public
+name|XMLStreamReader
+name|getReader
+parameter_list|()
+block|{
+return|return
+name|blockOriginalReader
+condition|?
+name|this
+else|:
+name|super
+operator|.
+name|getReader
+argument_list|()
+return|;
 block|}
 specifier|public
 name|int

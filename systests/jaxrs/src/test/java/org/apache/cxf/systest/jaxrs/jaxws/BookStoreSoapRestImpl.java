@@ -177,6 +177,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|annotations
+operator|.
+name|SchemaValidation
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxrs
 operator|.
 name|client
@@ -282,6 +296,8 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|SchemaValidation
 specifier|public
 class|class
 name|BookStoreSoapRestImpl
