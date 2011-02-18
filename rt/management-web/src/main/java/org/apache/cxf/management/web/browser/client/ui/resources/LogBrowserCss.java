@@ -151,6 +151,14 @@ name|String
 name|sidebarHeader
 parameter_list|()
 function_decl|;
+name|String
+name|topbarLink
+parameter_list|()
+function_decl|;
+name|String
+name|selectableTableRow
+parameter_list|()
+function_decl|;
 comment|/* Settings tab styles */
 name|String
 name|settingsTabHeader
