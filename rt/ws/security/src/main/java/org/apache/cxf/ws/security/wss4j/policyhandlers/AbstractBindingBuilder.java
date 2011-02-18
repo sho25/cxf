@@ -6175,10 +6175,6 @@ name|el
 argument_list|)
 condition|)
 block|{
-comment|// Generate an ID for the element and use this ID or else
-comment|// WSS4J will only ever sign/encrypt the first matching
-comment|// element with the same name and namespace as that in the
-comment|// WSEncryptionPart
 specifier|final
 name|String
 name|id
@@ -6215,7 +6211,6 @@ argument_list|(
 name|expression
 argument_list|)
 expr_stmt|;
-comment|/**                         String wsuId = el.getAttributeNS(WSConstants.WSU_NS, "Id");                                                  if (!StringUtils.isEmpty(wsuId)) {                             encryptedElem.setEncId(wsuId);                         }                         **/
 name|result
 operator|.
 name|add
