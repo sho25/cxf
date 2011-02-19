@@ -14,6 +14,8 @@ operator|.
 name|transport
 operator|.
 name|http
+operator|.
+name|auth
 package|;
 end_package
 
@@ -34,24 +36,6 @@ operator|.
 name|util
 operator|.
 name|Map
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|http
-operator|.
-name|auth
-operator|.
-name|HttpAuthHeader
 import|;
 end_import
 
