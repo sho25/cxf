@@ -861,6 +861,17 @@ argument_list|(
 name|getServiceClass
 argument_list|()
 argument_list|)
+operator|||
+name|getServiceClass
+argument_list|()
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|info
+operator|.
+name|getServiceClass
+argument_list|()
+argument_list|)
 condition|)
 block|{
 name|cri
