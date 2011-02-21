@@ -1343,11 +1343,21 @@ if|if
 condition|(
 operator|!
 name|cached
+operator|&&
+name|inMessage
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getOutMessage
+argument_list|()
+operator|==
+literal|null
 condition|)
 block|{
-comment|//we need to cache the values of the HttpServletRequest
+comment|//For one-ways, we need to cache the values of the HttpServletRequest
 comment|//so they can be queried later for things like paths and schemes
-comment|//and such like that
+comment|//and such like that.
 name|inMessage
 operator|.
 name|put
