@@ -238,9 +238,9 @@ name|assertEquals
 argument_list|(
 literal|"We get the wrong sayHello result"
 argument_list|,
-name|result
-argument_list|,
 literal|"hello"
+argument_list|,
+name|result
 argument_list|)
 expr_stmt|;
 name|Client
