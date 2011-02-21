@@ -1294,6 +1294,11 @@ operator|!=
 name|acks
 condition|)
 block|{
+synchronized|synchronized
+init|(
+name|acks
+init|)
+block|{
 for|for
 control|(
 name|SequenceAcknowledgement
@@ -1322,6 +1327,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 name|Collection
 argument_list|<
 name|AckRequestedType
@@ -1339,6 +1345,11 @@ literal|null
 operator|!=
 name|requested
 condition|)
+block|{
+synchronized|synchronized
+init|(
+name|requested
+init|)
 block|{
 for|for
 control|(
@@ -1366,6 +1377,7 @@ argument_list|,
 name|marshaller
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|Node
