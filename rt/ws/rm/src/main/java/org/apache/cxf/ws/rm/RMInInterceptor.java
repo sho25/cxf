@@ -642,11 +642,6 @@ operator|!=
 name|acks
 condition|)
 block|{
-synchronized|synchronized
-init|(
-name|acks
-init|)
-block|{
 for|for
 control|(
 name|SequenceAcknowledgement
@@ -702,7 +697,6 @@ argument_list|(
 name|id
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}

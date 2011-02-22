@@ -728,11 +728,6 @@ condition|)
 block|{
 return|return;
 block|}
-synchronized|synchronized
-init|(
-name|ars
-init|)
-block|{
 for|for
 control|(
 name|AckRequestedType
@@ -760,10 +755,12 @@ decl_stmt|;
 if|if
 condition|(
 literal|null
-operator|!=
+operator|==
 name|seq
 condition|)
 block|{
+continue|continue;
+block|}
 name|ackImmediately
 argument_list|(
 name|seq
@@ -771,8 +768,6 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
-block|}
-block|}
 block|}
 block|}
 name|void
