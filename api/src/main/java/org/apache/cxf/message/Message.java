@@ -136,6 +136,11 @@ init|=
 literal|"org.apache.cxf.request.uri"
 decl_stmt|;
 name|String
+name|REQUEST_URL
+init|=
+literal|"org.apache.cxf.request.url"
+decl_stmt|;
+name|String
 name|PROTOCOL_HEADERS
 init|=
 name|Message

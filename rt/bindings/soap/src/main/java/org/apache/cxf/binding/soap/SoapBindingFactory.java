@@ -6051,7 +6051,7 @@ name|StaxInInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// This will not work if we one of the endpoints disables message
+comment|// This will not work if one of the endpoints disables message
 comment|// processing. But, if you've disabled message processing, you
 comment|// probably aren't going to use this feature.
 name|newMO
