@@ -327,13 +327,6 @@ argument_list|,
 name|serviceListGeneratorServlet
 argument_list|)
 decl_stmt|;
-name|servletTransportFactory
-operator|.
-name|setServletController
-argument_list|(
-name|newController
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|servletConfig

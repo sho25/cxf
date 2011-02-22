@@ -315,6 +315,8 @@ argument_list|(
 name|AtomBookServer
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -783,7 +785,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/atom/atom/books/entries/123.json"
+literal|"/atom/atomservice3/atom/books/entries/123.json"
 argument_list|,
 literal|"resources/expected_atom_book_json3.txt"
 argument_list|,
