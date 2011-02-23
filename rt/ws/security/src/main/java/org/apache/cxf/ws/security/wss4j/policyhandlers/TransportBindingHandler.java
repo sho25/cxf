@@ -2444,10 +2444,7 @@ name|uname
 init|=
 name|crypto
 operator|.
-name|getKeyStore
-argument_list|()
-operator|.
-name|getCertificateAlias
+name|getX509Identifier
 argument_list|(
 name|secTok
 operator|.
