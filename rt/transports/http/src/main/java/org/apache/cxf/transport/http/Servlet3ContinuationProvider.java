@@ -229,13 +229,20 @@ specifier|public
 name|Servlet3Continuation
 parameter_list|()
 block|{
+comment|// It looks current Servlet3 implementation request doesn't pass the isAsyncStart
+comment|// status to the redispatched request, so we use the attribute to check the statues
 name|isNew
 operator|=
-operator|!
 name|req
 operator|.
-name|isAsyncStarted
-argument_list|()
+name|getAttribute
+argument_list|(
+name|AbstractHTTPDestination
+operator|.
+name|CXF_CONTINUATION_MESSAGE
+argument_list|)
+operator|==
+literal|null
 expr_stmt|;
 if|if
 condition|(
