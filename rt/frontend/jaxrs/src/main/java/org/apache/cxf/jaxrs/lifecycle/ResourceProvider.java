@@ -31,6 +31,10 @@ name|Message
 import|;
 end_import
 
+begin_comment
+comment|/**  * ResourceProviders are used to specify the lifecycle   * (per-request or singleton primarily) of root resources.  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
