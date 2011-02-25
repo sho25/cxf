@@ -12777,15 +12777,6 @@ decl_stmt|;
 comment|// Ignore XFireFaults because they don't need to be declared
 if|if
 condition|(
-name|exClazz
-operator|.
-name|equals
-argument_list|(
-name|Exception
-operator|.
-name|class
-argument_list|)
-operator|||
 name|Fault
 operator|.
 name|class
