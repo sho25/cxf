@@ -833,6 +833,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CXF_ASYNC_CONTEXT
+init|=
+literal|"cxf.async.context"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|SERVICE_REDIRECTION
 init|=
 literal|"http.service.redirection"
@@ -2122,14 +2130,6 @@ parameter_list|)
 block|{
 try|try
 block|{
-if|if
-condition|(
-name|req
-operator|.
-name|isAsyncStarted
-argument_list|()
-condition|)
-block|{
 return|return
 operator|(
 name|Message
@@ -2141,7 +2141,6 @@ argument_list|(
 name|CXF_CONTINUATION_MESSAGE
 argument_list|)
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
