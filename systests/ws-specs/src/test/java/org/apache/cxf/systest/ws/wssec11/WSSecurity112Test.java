@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class runs the second half of the tests, as having all in   * the one class causes an out of meemory problem in eclipse  */
+comment|/**  * This class runs the second half of the tests, as having all in   * the one class causes an out of memory problem in eclipse  */
 end_comment
 
 begin_class
@@ -231,7 +231,7 @@ literal|"X-NoTimestamp"
 block|,
 literal|"X-AES128"
 block|,
-literal|"X-AES192"
+literal|"X-AES256"
 block|,
 literal|"X-TripleDES"
 block|,

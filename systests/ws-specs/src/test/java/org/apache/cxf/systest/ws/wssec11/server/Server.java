@@ -304,10 +304,10 @@ name|doPublish
 argument_list|(
 name|baseUrl
 operator|+
-literal|"/X-AES192PingService"
+literal|"/X-AES256PingService"
 argument_list|,
 operator|new
-name|XAES192PingService
+name|XAES256PingService
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1027,7 +1027,7 @@ literal|"PingService11"
 argument_list|,
 name|portName
 operator|=
-literal|"X-AES192_IPingService"
+literal|"X-AES256_IPingService"
 argument_list|,
 name|endpointInterface
 operator|=
@@ -1040,7 +1040,7 @@ argument_list|)
 specifier|public
 specifier|static
 class|class
-name|XAES192PingService
+name|XAES256PingService
 extends|extends
 name|PingService
 block|{     }

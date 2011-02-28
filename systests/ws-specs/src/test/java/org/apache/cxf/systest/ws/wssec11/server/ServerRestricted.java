@@ -290,7 +290,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//        doPublish(baseUrl + "/X-AES128PingService", new XAES128PingService());
-comment|//        doPublish(baseUrl + "/X-AES192PingService", new XAES192PingService());
+comment|//        doPublish(baseUrl + "/X-AES256PingService", new XAES256PingService());
 comment|//        doPublish(baseUrl + "/X-TripleDESPingService", new XTripleDESPingService());
 name|doPublish
 argument_list|(
@@ -997,7 +997,7 @@ literal|"PingService11"
 argument_list|,
 name|portName
 operator|=
-literal|"X-AES192_IPingService"
+literal|"X-AES256_IPingService"
 argument_list|,
 name|endpointInterface
 operator|=
@@ -1010,7 +1010,7 @@ argument_list|)
 specifier|public
 specifier|static
 class|class
-name|XAES192PingService
+name|XAES256PingService
 extends|extends
 name|PingService
 block|{     }
