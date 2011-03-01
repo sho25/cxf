@@ -897,13 +897,7 @@ name|URL
 argument_list|>
 name|urls
 init|=
-name|Thread
-operator|.
-name|currentThread
-argument_list|()
-operator|.
-name|getContextClassLoader
-argument_list|()
+name|loader
 operator|.
 name|getResources
 argument_list|(
