@@ -1485,7 +1485,7 @@ control|(
 name|String
 name|s
 range|:
-name|blocks
+name|records
 control|)
 block|{
 if|if
