@@ -215,6 +215,11 @@ parameter_list|()
 block|{     }
 static|static
 block|{
+name|JDKBugHacks
+operator|.
+name|doHacks
+argument_list|()
+expr_stmt|;
 try|try
 block|{
 name|String

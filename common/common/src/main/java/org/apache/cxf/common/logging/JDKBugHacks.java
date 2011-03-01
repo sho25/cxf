@@ -92,6 +92,8 @@ name|void
 name|doHacks
 parameter_list|()
 block|{
+try|try
+block|{
 name|ClassLoader
 name|orig
 init|=
@@ -105,31 +107,8 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-comment|//set to the topmost non-null so things that grab the context classloader
-comment|//won't get our classloader.
-name|ClassLoader
-name|ncl
-init|=
-name|orig
-decl_stmt|;
-while|while
-condition|(
-name|ncl
-operator|.
-name|getParent
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
-name|ncl
-operator|=
-name|ncl
-operator|.
-name|getParent
-argument_list|()
-expr_stmt|;
-block|}
+comment|// Use the system classloader as the victim for all this
+comment|// ClassLoader pinning we're about to do.
 name|Thread
 operator|.
 name|currentThread
@@ -137,7 +116,10 @@ argument_list|()
 operator|.
 name|setContextClassLoader
 argument_list|(
-name|ncl
+name|ClassLoader
+operator|.
+name|getSystemClassLoader
+argument_list|()
 argument_list|)
 expr_stmt|;
 try|try
@@ -285,6 +267,90 @@ parameter_list|)
 block|{
 comment|//ignore
 block|}
+comment|// Calling getPolicy retains a static reference to the context
+comment|// class loader.
+try|try
+block|{
+comment|// Policy.getPolicy();
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|policyClass
+init|=
+name|Class
+operator|.
+name|forName
+argument_list|(
+literal|"javax.security.auth.Policy"
+argument_list|)
+decl_stmt|;
+name|Method
+name|method
+init|=
+name|policyClass
+operator|.
+name|getMethod
+argument_list|(
+literal|"getPolicy"
+argument_list|)
+decl_stmt|;
+name|method
+operator|.
+name|invoke
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|e
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+try|try
+block|{
+comment|// Initializing javax.security.auth.login.Configuration retains a static reference
+comment|// to the context class loader.
+name|Class
+operator|.
+name|forName
+argument_list|(
+literal|"javax.security.auth.login.Configuration"
+argument_list|,
+literal|true
+argument_list|,
+name|ClassLoader
+operator|.
+name|getSystemClassLoader
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|e
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
+comment|// Creating a MessageDigest during web application startup
+comment|// initializes the Java Cryptography Architecture. Under certain
+comment|// conditions this starts a Token poller thread with TCCL equal
+comment|// to the web application class loader.
+name|java
+operator|.
+name|security
+operator|.
+name|Security
+operator|.
+name|getProviders
+argument_list|()
+expr_stmt|;
 block|}
 finally|finally
 block|{
@@ -298,6 +364,15 @@ argument_list|(
 name|orig
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|t
+parameter_list|)
+block|{
+comment|//ignore
 block|}
 block|}
 block|}
