@@ -90,6 +90,19 @@ name|cls
 argument_list|)
 return|;
 block|}
+specifier|public
+name|String
+name|getSearchExpression
+parameter_list|()
+block|{
+return|return
+name|get
+argument_list|()
+operator|.
+name|getSearchExpression
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 

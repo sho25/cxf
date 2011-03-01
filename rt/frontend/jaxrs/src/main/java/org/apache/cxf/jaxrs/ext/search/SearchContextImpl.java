@@ -135,7 +135,7 @@ decl_stmt|;
 name|String
 name|expression
 init|=
-name|getExpression
+name|getSearchExpression
 argument_list|()
 decl_stmt|;
 if|if
@@ -174,9 +174,9 @@ literal|null
 return|;
 block|}
 block|}
-specifier|private
+specifier|public
 name|String
-name|getExpression
+name|getSearchExpression
 parameter_list|()
 block|{
 name|String

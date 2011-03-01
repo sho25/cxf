@@ -19,11 +19,16 @@ name|search
 package|;
 end_package
 
+begin_comment
+comment|/**  * Represents the current search expression  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
 name|SearchContext
 block|{
+comment|/**      * Returns the typed search condition representing the search expression      *       * @param cls the type of the bean(s) the new search condition will       *        attempt to match      * @return the search condition      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -39,6 +44,11 @@ name|T
 argument_list|>
 name|cls
 parameter_list|)
+function_decl|;
+comment|/**      * Returns the actual query expression      * @return the expression      */
+name|String
+name|getSearchExpression
+parameter_list|()
 function_decl|;
 block|}
 end_interface

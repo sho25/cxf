@@ -55,7 +55,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|HashSet
 import|;
 end_import
 
@@ -65,7 +65,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashSet
+name|LinkedHashMap
 import|;
 end_import
 
@@ -746,7 +746,7 @@ argument_list|>
 name|getters2values
 init|=
 operator|new
-name|HashMap
+name|LinkedHashMap
 argument_list|<
 name|String
 argument_list|,
