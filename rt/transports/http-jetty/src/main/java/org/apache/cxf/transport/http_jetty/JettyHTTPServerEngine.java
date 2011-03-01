@@ -223,6 +223,20 @@ name|eclipse
 operator|.
 name|jetty
 operator|.
+name|security
+operator|.
+name|SecurityHandler
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|eclipse
+operator|.
+name|jetty
+operator|.
 name|server
 operator|.
 name|AbstractConnector
@@ -1268,6 +1282,44 @@ expr_stmt|;
 block|}
 else|else
 block|{
+if|if
+condition|(
+operator|(
+name|h
+operator|instanceof
+name|SecurityHandler
+operator|)
+operator|&&
+operator|(
+operator|(
+name|SecurityHandler
+operator|)
+name|h
+operator|)
+operator|.
+name|getHandler
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+comment|//if h is SecurityHandler(such as ConstraintSecurityHandler)
+comment|//then it need be on top of JettyHTTPHandler
+comment|//set JettyHTTPHandler as inner handler if
+comment|//inner handler is null
+operator|(
+operator|(
+name|SecurityHandler
+operator|)
+name|h
+operator|)
+operator|.
+name|setHandler
+argument_list|(
+name|handler
+argument_list|)
+expr_stmt|;
+block|}
 name|handlerCollection
 operator|.
 name|addHandler

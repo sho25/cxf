@@ -246,7 +246,9 @@ name|me
 parameter_list|)
 block|{
 return|return
-literal|null
+literal|"Hello "
+operator|+
+name|me
 return|;
 block|}
 specifier|public
