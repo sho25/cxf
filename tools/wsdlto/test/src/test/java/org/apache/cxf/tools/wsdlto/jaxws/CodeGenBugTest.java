@@ -604,14 +604,17 @@ name|WSDLRuntimeException
 name|wrex
 parameter_list|)
 block|{
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|"BINDING_MISSING_TYPE"
-argument_list|,
 name|wrex
 operator|.
 name|getMessage
 argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"Could not find portType for binding"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

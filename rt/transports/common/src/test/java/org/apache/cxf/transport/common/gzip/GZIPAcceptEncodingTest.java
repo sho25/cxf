@@ -75,16 +75,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|List
 import|;
 end_import
@@ -96,6 +86,16 @@ operator|.
 name|util
 operator|.
 name|Map
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|TreeMap
 import|;
 end_import
 
@@ -684,7 +684,7 @@ argument_list|>
 name|protocolHeaders
 init|=
 operator|new
-name|HashMap
+name|TreeMap
 argument_list|<
 name|String
 argument_list|,
@@ -693,7 +693,11 @@ argument_list|<
 name|String
 argument_list|>
 argument_list|>
-argument_list|()
+argument_list|(
+name|String
+operator|.
+name|CASE_INSENSITIVE_ORDER
+argument_list|)
 decl_stmt|;
 name|protocolHeaders
 operator|.

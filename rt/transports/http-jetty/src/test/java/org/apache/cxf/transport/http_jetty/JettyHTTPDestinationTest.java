@@ -119,6 +119,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|TreeMap
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|servlet
@@ -4550,7 +4560,7 @@ operator|.
 name|PROTOCOL_HEADERS
 argument_list|,
 operator|new
-name|HashMap
+name|TreeMap
 argument_list|<
 name|String
 argument_list|,
@@ -4559,7 +4569,11 @@ argument_list|<
 name|String
 argument_list|>
 argument_list|>
-argument_list|()
+argument_list|(
+name|String
+operator|.
+name|CASE_INSENSITIVE_ORDER
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
