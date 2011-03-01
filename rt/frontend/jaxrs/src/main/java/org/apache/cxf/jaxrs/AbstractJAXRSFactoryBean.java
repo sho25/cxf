@@ -806,7 +806,7 @@ condition|)
 block|{
 name|transportId
 operator|=
-literal|"http://schemas.xmlsoap.org/wsdl/soap/http"
+literal|"http://cxf.apache.org/transports/http"
 expr_stmt|;
 block|}
 name|setTransportId
