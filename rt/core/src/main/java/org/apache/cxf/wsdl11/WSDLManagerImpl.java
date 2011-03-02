@@ -1352,12 +1352,12 @@ name|loadAllProperties
 argument_list|(
 name|resource
 argument_list|,
-name|Thread
+name|this
 operator|.
-name|currentThread
+name|getClass
 argument_list|()
 operator|.
-name|getContextClassLoader
+name|getClassLoader
 argument_list|()
 argument_list|)
 expr_stmt|;
