@@ -857,21 +857,6 @@ literal|".sts-client"
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Transpose ActAs info from original request to the STS client.
-name|client
-operator|.
-name|setActAs
-argument_list|(
-name|message
-operator|.
-name|getContextualProperty
-argument_list|(
-name|SecurityConstants
-operator|.
-name|STS_TOKEN_ACT_AS
-argument_list|)
-argument_list|)
-expr_stmt|;
 return|return
 name|client
 return|;
@@ -1094,6 +1079,21 @@ init|)
 block|{
 try|try
 block|{
+comment|// Transpose ActAs info from original request to the STS client.
+name|client
+operator|.
+name|setActAs
+argument_list|(
+name|message
+operator|.
+name|getContextualProperty
+argument_list|(
+name|SecurityConstants
+operator|.
+name|STS_TOKEN_ACT_AS
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|client
 operator|.
 name|setTrust
