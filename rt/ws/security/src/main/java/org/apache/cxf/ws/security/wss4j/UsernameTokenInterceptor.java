@@ -1418,8 +1418,6 @@ operator|.
 name|UsernameToken
 argument_list|(
 name|tokenElement
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|WSUsernameTokenPrincipal
