@@ -561,14 +561,14 @@ name|TRANSPORT_ID
 init|=
 literal|"http://schemas.xmlsoap.org/soap/"
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|List
 argument_list|<
 name|String
 argument_list|>
-name|TRANSPORT_IDS
+name|DEFAULT_NAMESPACES
 init|=
 name|Arrays
 operator|.
@@ -597,7 +597,7 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-name|TRANSPORT_IDS
+name|DEFAULT_NAMESPACES
 argument_list|,
 literal|null
 argument_list|)

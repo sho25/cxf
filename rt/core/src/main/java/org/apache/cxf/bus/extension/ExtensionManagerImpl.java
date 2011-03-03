@@ -1289,6 +1289,25 @@ expr_stmt|;
 block|}
 comment|// Since we need to support spring2.5 by removing @Resource("activationNamespaces")
 comment|// Now we call the setActivationNamespaces method directly here
+if|if
+condition|(
+name|e
+operator|.
+name|getNamespaces
+argument_list|()
+operator|!=
+literal|null
+operator|&&
+operator|!
+name|e
+operator|.
+name|getNamespaces
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 name|invokeSetterActivationNSMethod
 argument_list|(
 name|obj
@@ -1299,6 +1318,7 @@ name|getNamespaces
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|ResourceInjector
 name|injector
 init|=

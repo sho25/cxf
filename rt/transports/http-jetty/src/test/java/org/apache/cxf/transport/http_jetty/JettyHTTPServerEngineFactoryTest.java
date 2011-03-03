@@ -57,18 +57,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|BusException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|BusFactory
 import|;
 end_import
@@ -236,6 +224,8 @@ specifier|public
 name|void
 name|testMakeSureTransportFactoryHasEngineFactory
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|bus
 operator|=
@@ -253,8 +243,6 @@ argument_list|,
 name|bus
 argument_list|)
 expr_stmt|;
-try|try
-block|{
 comment|// Make sure we got the Transport Factory.
 name|DestinationFactoryManager
 name|destFM
@@ -304,21 +292,6 @@ name|destF
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|BusException
-name|e
-parameter_list|)
-block|{
-name|fail
-argument_list|(
-literal|"Asserting Transport Factory"
-operator|+
-name|e
-argument_list|)
-expr_stmt|;
-block|}
 comment|// And the JettyHTTPServerEngineFactory should be there.
 name|JettyHTTPServerEngineFactory
 name|factory

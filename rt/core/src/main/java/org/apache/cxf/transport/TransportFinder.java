@@ -218,7 +218,7 @@ block|}
 name|T
 name|factory
 init|=
-name|loadDefaultNamespace
+name|loadActivationNamespaces
 argument_list|(
 name|namespace
 argument_list|)
@@ -232,7 +232,7 @@ condition|)
 block|{
 name|factory
 operator|=
-name|loadActivationNamespaces
+name|loadDefaultNamespace
 argument_list|(
 name|namespace
 argument_list|)

@@ -418,6 +418,18 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.util.logging.config.file"
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
 name|props
 operator|.
 name|put
@@ -432,6 +444,7 @@ literal|"java.util.logging.config.file"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
