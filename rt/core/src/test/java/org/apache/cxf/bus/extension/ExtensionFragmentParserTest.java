@@ -103,7 +103,7 @@ operator|new
 name|ExtensionFragmentParser
 argument_list|()
 operator|.
-name|getExtensions
+name|getExtensionsFromXML
 argument_list|(
 name|is
 argument_list|)

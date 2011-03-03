@@ -781,7 +781,7 @@ name|BUS_EXTENSION_RESOURCE
 block|,
 name|ExtensionManagerImpl
 operator|.
-name|BUS_EXTENSION_RESOURCE_COMPAT
+name|BUS_EXTENSION_RESOURCE_XML
 block|}
 argument_list|)
 expr_stmt|;
