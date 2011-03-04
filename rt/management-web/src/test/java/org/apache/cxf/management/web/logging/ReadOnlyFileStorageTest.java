@@ -127,7 +127,7 @@ argument_list|()
 expr_stmt|;
 name|storage
 operator|.
-name|setNumberOfColums
+name|setNumberOfColumns
 argument_list|(
 literal|"7"
 argument_list|)

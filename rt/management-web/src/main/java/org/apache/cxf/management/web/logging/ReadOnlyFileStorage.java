@@ -373,8 +373,7 @@ name|PageInfo
 argument_list|>
 argument_list|()
 decl_stmt|;
-annotation|@
-name|Override
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|int
 name|getSize
@@ -385,8 +384,7 @@ operator|-
 literal|1
 return|;
 block|}
-annotation|@
-name|Override
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|void
 name|load
@@ -416,8 +414,6 @@ init|=
 name|getLogFileInfo
 argument_list|(
 name|pageNumber
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 if|if
@@ -518,6 +514,7 @@ name|logFileInfo
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * If no more records is available in the current file then try to get       * the next one with an optional scanning       **/
 specifier|private
 name|FileInfo
 name|getNextLogFileInfo
@@ -606,15 +603,13 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      * Gets the file corresponding to the current page      */
 specifier|private
 name|FileInfo
 name|getLogFileInfo
 parameter_list|(
 name|int
 name|pageNumber
-parameter_list|,
-name|boolean
-name|firstTry
 parameter_list|)
 block|{
 name|PageInfo
@@ -699,8 +694,6 @@ name|logDirectory
 operator|!=
 literal|null
 operator|&&
-name|firstTry
-operator|&&
 name|logFiles
 operator|.
 name|size
@@ -737,6 +730,7 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      * Save the position of the next page       */
 specifier|private
 name|void
 name|savePagePosition
@@ -1398,6 +1392,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Log column separator such as '|'      * @param columnSep the separator      */
 specifier|public
 name|void
 name|setColumnSep
@@ -1413,9 +1408,10 @@ operator|=
 name|columnSep
 expr_stmt|;
 block|}
+comment|/**      * Sets the number of columns per record       * @param number the number of columns per record      */
 specifier|public
 name|void
-name|setNumberOfColums
+name|setNumberOfColumns
 parameter_list|(
 name|String
 name|number
@@ -1433,6 +1429,7 @@ name|number
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Identifies the columns which this reader should use      * when creating a LogRecord. Example, given a 7-columns      * record a user may only need the information from 1, 2,       * and the last column. Regular expressions are not suitable.      *       * @param columnsMap the map, the key is the column number (starting from 1)      *        and the value is the name of the property such as 'message'.      *        The following properties are supported at the moment:       *        'date', 'level' 'category', 'thread', 'message'.      */
 specifier|public
 name|void
 name|setColumnsMap
@@ -1453,6 +1450,7 @@ operator|=
 name|columnsMap
 expr_stmt|;
 block|}
+comment|/**      * A list of log files, the oldest files are expected to be in the top      * of the list      * @param locations the locations      */
 specifier|public
 name|void
 name|setLogLocations
@@ -1767,6 +1765,7 @@ return|return
 name|realPath
 return|;
 block|}
+comment|/**      * Sets the log location.       * @param location the location, if it is a directory then       *        the on-demand scanning will be enabled      */
 specifier|public
 name|void
 name|setLogLocation
@@ -1819,6 +1818,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Skip the records at the top of the file which have no column separators       */
 specifier|private
 name|void
 name|skipIgnorableRecords
@@ -1907,6 +1907,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|//CHECKSTYLE:OFF
+comment|/**      * The format for parsing the log date      *<p>      * Please see<a href="http://download.oracle.com/javase/1.5.0/docs/api/java/text/SimpleDateFormat.html">SimpleDateFormat</a>      *</p>      */
+comment|//CHECKSTYLE:ON
 specifier|public
 name|void
 name|setRecordDateFormat
@@ -1924,6 +1927,7 @@ name|format
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Optional map for converting the levels.      * This map is not required if the log records have levels      * with one of the following values:       * 'WARN', 'ERROR', 'DEBUG', 'TRACE', 'INFO', 'FATAL'.        * @param map the map of levels      */
 specifier|public
 name|void
 name|setLevelsMap
@@ -1944,6 +1948,7 @@ operator|=
 name|map
 expr_stmt|;
 block|}
+comment|/**      * Optional comparator which can be used for sorting the       * new log files found after the latest scan iteration.      *       * If scanning is enabled then by default the file names are compared      * using either the embedded date (provided the fileNameDatePattern is set)      * or the last segment in the file name which is expected to be a number.      * The files with the oldest dates or bigger indexes will be positioned first.       *        * @param comp the comparator      */
 specifier|public
 name|void
 name|setFileNameComparator
@@ -1996,6 +2001,7 @@ comment|// ignore
 block|}
 block|}
 block|}
+comment|/**      * Indicates if the file modified date needs to be used for      * creating a LogRecord date - in case the actual log record      * contains no year/month/hour information.      */
 specifier|public
 name|void
 name|setUseFileModifiedDate
@@ -2152,6 +2158,7 @@ literal|false
 return|;
 block|}
 block|}
+comment|/**      * Sets the regular expression for capturing the date from the file name      * If set then it must contain a single capturing group only.      * @param fileNameDatePattern      */
 specifier|public
 name|void
 name|setFileNameDatePattern
@@ -2172,6 +2179,7 @@ name|fileNameDatePattern
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Optional pattern for parsing the file date      * @param fileNameDateFormat      */
 specifier|public
 name|void
 name|setFileNameDateFormat
