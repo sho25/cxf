@@ -56,7 +56,7 @@ specifier|public
 interface|interface
 name|ReadableLogStorage
 block|{
-comment|/**      * Read the records and load them into a provided list      * @param list the list saved records should be added to      * @param condition the condition loaded records must meet, can be null       * @param loadFrom the initial index of the storage to have records loaded from      * @param int maxNumberOfRecords the max number of records to load from the storage      */
+comment|/**      * Read the records and load them into a provided list      * @param list the list saved records should be added to      * @param condition the condition loaded records must meet, can be null       * @param pageNumber the initial page to have records loaded from      * @param int pageSize the max number of records to load from the storage      */
 name|void
 name|load
 parameter_list|(
@@ -73,10 +73,10 @@ argument_list|>
 name|condition
 parameter_list|,
 name|int
-name|loadFrom
+name|pageNumber
 parameter_list|,
 name|int
-name|maxNumberOfRecords
+name|pageSize
 parameter_list|)
 function_decl|;
 comment|/**      * Get the size of storage (in records)      * @param the size, -1 if not known, for ex, when reading from an open file containing log entries      */
