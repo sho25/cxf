@@ -24,6 +24,8 @@ name|INITIAL
 block|,
 name|RUNNING
 block|,
+name|SHUTTING_DOWN
+block|,
 name|SHUTDOWN
 block|; }
 end_enum

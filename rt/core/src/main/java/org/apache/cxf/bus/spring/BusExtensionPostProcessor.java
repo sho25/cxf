@@ -300,6 +300,8 @@ operator|new
 name|SpringBeanLocator
 argument_list|(
 name|context
+argument_list|,
+name|bus
 argument_list|)
 argument_list|,
 name|ConfiguredBeanLocator

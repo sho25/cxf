@@ -77,23 +77,6 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Returns the bean of the given type and name.  Causes it to be loaded.      * @param name      * @param type      * @return the bean of the given name and type      */
-parameter_list|<
-name|T
-parameter_list|>
-name|T
-name|getBeanOfType
-parameter_list|(
-name|String
-name|name
-parameter_list|,
-name|Class
-argument_list|<
-name|T
-argument_list|>
-name|type
-parameter_list|)
-function_decl|;
 comment|/**      * Iterates through the beans of the given type, calling the listener      * to determine if it should be loaded or not.       * @param type      * @param listener      * @return true if beans of the type were loaded      */
 parameter_list|<
 name|T

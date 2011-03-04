@@ -299,8 +299,6 @@ decl_stmt|;
 specifier|public
 name|BindingFactoryManagerImpl
 parameter_list|()
-throws|throws
-name|BusException
 block|{
 name|bindingFactories
 operator|=
@@ -320,8 +318,6 @@ parameter_list|(
 name|Bus
 name|b
 parameter_list|)
-throws|throws
-name|BusException
 block|{
 name|bindingFactories
 operator|=
@@ -601,7 +597,7 @@ condition|)
 block|{
 name|factory
 operator|=
-name|loadDefaultNamespace
+name|loadActivationNamespace
 argument_list|(
 name|namespace
 argument_list|)
@@ -615,7 +611,7 @@ condition|)
 block|{
 name|factory
 operator|=
-name|loadActivationNamespace
+name|loadDefaultNamespace
 argument_list|(
 name|namespace
 argument_list|)

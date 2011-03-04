@@ -255,6 +255,7 @@ specifier|private
 name|Unmarshaller
 name|unmarshaller
 decl_stmt|;
+specifier|public
 name|EndpointReferenceDomainExpressionBuilder
 parameter_list|()
 block|{      }

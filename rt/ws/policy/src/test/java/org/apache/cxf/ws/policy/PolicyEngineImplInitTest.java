@@ -149,11 +149,6 @@ name|PolicyEngineImplInitTest
 block|{
 annotation|@
 name|Resource
-name|PolicyEngineImpl
-name|pe
-decl_stmt|;
-annotation|@
-name|Resource
 name|Bus
 name|bus
 decl_stmt|;
@@ -168,7 +163,7 @@ name|Exception
 block|{
 name|assertNotNull
 argument_list|(
-name|pe
+name|bus
 argument_list|)
 expr_stmt|;
 block|}
