@@ -492,7 +492,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|JAXRSServiceFactoryBean
+name|JAXRSInvoker
 operator|.
 name|class
 argument_list|)
@@ -1425,10 +1425,10 @@ argument_list|,
 name|values
 argument_list|)
 expr_stmt|;
-comment|// work out request parameters for the sub-resouce class. Here we
-comment|// presume Inputstream has not been consumed yet by the root resource class.
-comment|//I.e., only one place either in the root resource or sub-resouce class can
-comment|//have a parameter that read from entitybody.
+comment|// work out request parameters for the sub-resource class. Here we
+comment|// presume InputStream has not been consumed yet by the root resource class.
+comment|//I.e., only one place either in the root resource or sub-resource class can
+comment|//have a parameter that read from entity body.
 name|List
 argument_list|<
 name|Object

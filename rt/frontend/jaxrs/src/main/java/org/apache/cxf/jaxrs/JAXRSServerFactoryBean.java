@@ -332,7 +332,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Bean to help easily create Server endpoints for JAX-RS. Example:  *<pre>  * JAXRSServerFactoryBean sf = JAXRSServerFactoryBean();  * sf.setResourceClasses(Book.class);  * sf.setBindingId(JAXRSBindingFactory.JAXRS_BINDING_ID);  * sf.setAddress("http://localhost:9080/");  * sf.create();  *</pre>  * This will start a server for you and register it with the ServerManager.  */
+comment|/**  * Bean to help easily create Server endpoints for JAX-RS. Example:  *<pre>  * JAXRSServerFactoryBean sf = JAXRSServerFactoryBean();  * sf.setResourceClasses(Book.class);  * sf.setBindingId(JAXRSBindingFactory.JAXRS_BINDING_ID);  * sf.setAddress("http://localhost:9080/");  * Server myServer = sf.create();  *</pre>  * This will start a server for you and register it with the ServerManager.  Note   * you should explicitly close the {@link org.apache.cxf.endpoint.Server} created  * when finished with it:  *<pre>  * myServer.close();  * myServer.destroy(); // closes first if close() not previously called  *</pre>   */
 end_comment
 
 begin_class
@@ -730,14 +730,17 @@ expr_stmt|;
 block|}
 block|}
 block|}
+comment|// TODO: deprecate?  default invoker can be changed by subclassing
+comment|// JAXRSServiceFactoryBean
 specifier|protected
 name|Invoker
 name|createInvoker
 parameter_list|()
 block|{
 return|return
-operator|new
-name|JAXRSInvoker
+name|serviceFactory
+operator|.
+name|createInvoker
 argument_list|()
 return|;
 block|}
@@ -1028,7 +1031,7 @@ name|invoker
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Can be used to postpone starting the Server instance during the create() call.      * @param start Server instance will not be started during the create() call if set to false      *        default is true.        */
+comment|/**      * Determines whether Services are automatically started during the create() call.  Default is true.      * If false will need to call start() method on Server to activate it.      * @param start Whether (true) or not (false) to start the Server during Server creation.      */
 specifier|public
 name|void
 name|setStart
