@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Builds client-side search condition that passed to backend can be consumed by {@link FiqlParser}.  *<p>  * Examples:  *   *<pre>  * FiqlSearchConditionBuilder b = new FiqlSearchConditionBuilder();  * b.query().is(&quot;price&quot;).equalTo(123.5).build();  * // gives&quot;price==123.5&quot;  * b.query().is(&quot;price&quot;).greaterThan(30).and().is(&quot;price&quot;).lessThan(50).build();  * // gives&quot;price=gt=30.0;price=lt=50.0&quot;  *</pre>  *   * For very complex junctions nested "and"/"or" are allowed (breaking a bit fluency of interface) and looks  * like the following example:  *   *<pre>  * PartialCondition c = b.query();  * c.is("price").lessThan(100).and().or(  *      c.is("title").equalTo("The lord*"),   *      c.is("author").equalTo("R.R.Tolkien").build();  * // gives "price=lt=100.0;(title==The lord*,author==R.R.Tolkien)"  *</pre>  */
+comment|/**  * Builds client-side search condition that passed to backend can be consumed by {@link FiqlParser}.  *<p>  * Examples:  *   *<pre>  * FiqlSearchConditionBuilder b = new FiqlSearchConditionBuilder();  * b.query().is(&quot;price&quot;).equalTo(123.5).build();  * // gives&quot;price==123.5&quot;  * b.query().is(&quot;price&quot;).greaterThan(30).and().is(&quot;price&quot;).lessThan(50).build();  * // gives&quot;price=gt=30.0;price=lt=50.0&quot;  *</pre>  *   * For very complex junctions nested "and"/"or" are allowed (breaking a bit fluency of interface) and looks  * like the following example:  *   *<pre>  * PartialCondition c = b.query();  * c.is("price").lessThan(100).and().or(  *      c.is("title").equalTo("The lord*"),   *      c.is("author").equalTo("R.R.Tolkien")).build();  * // gives "price=lt=100.0;(title==The lord*,author==R.R.Tolkien)"  *</pre>  */
 end_comment
 
 begin_class
@@ -92,8 +92,6 @@ name|FiqlSearchConditionBuilder
 implements|implements
 name|SearchConditionBuilder
 block|{
-annotation|@
-name|Override
 specifier|public
 name|String
 name|build
@@ -103,8 +101,6 @@ return|return
 literal|""
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|PartialCondition
 name|query
@@ -176,8 +172,6 @@ operator|=
 name|parent
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|String
 name|build
@@ -237,8 +231,6 @@ name|result
 return|;
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|after
@@ -262,8 +254,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|before
@@ -287,8 +277,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|equalTo
@@ -309,8 +297,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|equalTo
@@ -331,8 +317,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|equalTo
@@ -356,8 +340,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|greaterOrEqualTo
@@ -378,8 +360,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|greaterThan
@@ -400,8 +380,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|lessOrEqualTo
@@ -422,8 +400,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|lessThan
@@ -444,8 +420,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|lexicalAfter
@@ -466,8 +440,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|lexicalBefore
@@ -488,8 +460,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|lexicalNotAfter
@@ -510,8 +480,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|lexicalNotBefore
@@ -532,8 +500,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notAfter
@@ -557,8 +523,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notBefore
@@ -582,8 +546,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notEqualTo
@@ -604,8 +566,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notEqualTo
@@ -626,8 +586,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notEqualTo
@@ -651,8 +609,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|after
@@ -673,8 +629,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|before
@@ -695,8 +649,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|equalTo
@@ -717,8 +669,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notAfter
@@ -739,8 +689,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notBefore
@@ -761,8 +709,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|notEqualTo
@@ -783,8 +729,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|PartialCondition
 name|and
@@ -800,8 +744,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|PartialCondition
 name|or
@@ -817,8 +759,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|and
@@ -901,8 +841,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|or
@@ -985,8 +923,6 @@ return|return
 name|this
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Property
 name|is
