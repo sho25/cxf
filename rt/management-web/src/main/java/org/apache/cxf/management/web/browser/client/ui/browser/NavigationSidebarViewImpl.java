@@ -331,7 +331,7 @@ argument_list|()
 expr_stmt|;
 name|presenter
 operator|.
-name|onSubcriptionItemClicked
+name|onExploreSubcriptionItemClicked
 argument_list|(
 name|row
 argument_list|)
@@ -371,7 +371,7 @@ argument_list|()
 expr_stmt|;
 name|presenter
 operator|.
-name|onSubcriptionItemClicked
+name|onFilterSubcriptionItemClicked
 argument_list|(
 name|row
 argument_list|)

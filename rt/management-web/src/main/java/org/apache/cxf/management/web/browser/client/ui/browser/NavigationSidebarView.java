@@ -93,7 +93,14 @@ interface|interface
 name|Presenter
 block|{
 name|void
-name|onSubcriptionItemClicked
+name|onExploreSubcriptionItemClicked
+parameter_list|(
+name|int
+name|row
+parameter_list|)
+function_decl|;
+name|void
+name|onFilterSubcriptionItemClicked
 parameter_list|(
 name|int
 name|row
