@@ -63,6 +63,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|TimeZone
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -137,6 +147,26 @@ name|org
 operator|.
 name|junit
 operator|.
+name|AfterClass
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|BeforeClass
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -156,6 +186,11 @@ name|FiqlSearchConditionBuilder
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|static
+name|TimeZone
+name|tz
+decl_stmt|;
+specifier|private
 name|DateFormat
 name|df
 init|=
@@ -165,6 +200,51 @@ argument_list|(
 literal|"yyyy-MM-dd HH:mm Z"
 argument_list|)
 decl_stmt|;
+annotation|@
+name|BeforeClass
+specifier|public
+specifier|static
+name|void
+name|beforeClass
+parameter_list|()
+block|{
+name|tz
+operator|=
+name|TimeZone
+operator|.
+name|getDefault
+argument_list|()
+expr_stmt|;
+name|TimeZone
+operator|.
+name|setDefault
+argument_list|(
+name|TimeZone
+operator|.
+name|getTimeZone
+argument_list|(
+literal|"GMT"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|AfterClass
+specifier|public
+specifier|static
+name|void
+name|afterClass
+parameter_list|()
+block|{
+comment|// restoring defaults
+name|TimeZone
+operator|.
+name|setDefault
+argument_list|(
+name|tz
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -271,7 +351,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-01 12:34 +0100"
+literal|"2011-03-01 12:34 +0000"
 argument_list|)
 decl_stmt|;
 name|String
@@ -297,7 +377,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo==2011-03-01T12:34:00.000+01:00"
+literal|"foo==2011-03-01T12:34:00.000+00:00"
 argument_list|,
 name|ret
 argument_list|)
@@ -456,7 +536,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-01 12:34 +0100"
+literal|"2011-03-01 12:34 +0000"
 argument_list|)
 decl_stmt|;
 name|String
@@ -482,7 +562,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo!=2011-03-01T12:34:00.000+01:00"
+literal|"foo!=2011-03-01T12:34:00.000+00:00"
 argument_list|,
 name|ret
 argument_list|)
@@ -858,7 +938,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33 +0100"
+literal|"2011-03-02 22:33 +0000"
 argument_list|)
 decl_stmt|;
 name|String
@@ -884,7 +964,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=gt=2011-03-02T22:33:00.000+01:00"
+literal|"foo=gt=2011-03-02T22:33:00.000+00:00"
 argument_list|,
 name|ret
 argument_list|)
@@ -906,7 +986,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33 +0100"
+literal|"2011-03-02 22:33 +0000"
 argument_list|)
 decl_stmt|;
 name|String
@@ -932,7 +1012,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=lt=2011-03-02T22:33:00.000+01:00"
+literal|"foo=lt=2011-03-02T22:33:00.000+00:00"
 argument_list|,
 name|ret
 argument_list|)
@@ -954,7 +1034,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33 +0100"
+literal|"2011-03-02 22:33 +0000"
 argument_list|)
 decl_stmt|;
 name|String
@@ -980,7 +1060,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=le=2011-03-02T22:33:00.000+01:00"
+literal|"foo=le=2011-03-02T22:33:00.000+00:00"
 argument_list|,
 name|ret
 argument_list|)
@@ -1002,7 +1082,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33 +0100"
+literal|"2011-03-02 22:33 +0000"
 argument_list|)
 decl_stmt|;
 name|String
@@ -1028,7 +1108,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=ge=2011-03-02T22:33:00.000+01:00"
+literal|"foo=ge=2011-03-02T22:33:00.000+00:00"
 argument_list|,
 name|ret
 argument_list|)
