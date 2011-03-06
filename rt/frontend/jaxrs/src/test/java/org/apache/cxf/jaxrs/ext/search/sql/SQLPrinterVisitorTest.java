@@ -728,7 +728,7 @@ name|name
 expr_stmt|;
 block|}
 specifier|public
-name|int
+name|Integer
 name|getLevel
 parameter_list|()
 block|{
@@ -740,7 +740,7 @@ specifier|public
 name|void
 name|setLevel
 parameter_list|(
-name|int
+name|Integer
 name|level
 parameter_list|)
 block|{

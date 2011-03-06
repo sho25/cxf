@@ -27,6 +27,16 @@ name|java
 operator|.
 name|text
 operator|.
+name|DateFormat
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|text
+operator|.
 name|ParseException
 import|;
 end_import
@@ -145,6 +155,16 @@ operator|new
 name|FiqlSearchConditionBuilder
 argument_list|()
 decl_stmt|;
+specifier|private
+name|DateFormat
+name|df
+init|=
+operator|new
+name|SimpleDateFormat
+argument_list|(
+literal|"yyyy-MM-dd HH:mm"
+argument_list|)
+decl_stmt|;
 annotation|@
 name|Test
 specifier|public
@@ -247,14 +267,11 @@ block|{
 name|Date
 name|d
 init|=
-name|SimpleDateFormat
-operator|.
-name|getInstance
-argument_list|()
+name|df
 operator|.
 name|parse
 argument_list|(
-literal|"01.03.11 12:34"
+literal|"2011-03-01 12:34"
 argument_list|)
 decl_stmt|;
 name|String
@@ -435,14 +452,11 @@ block|{
 name|Date
 name|d
 init|=
-name|SimpleDateFormat
-operator|.
-name|getInstance
-argument_list|()
+name|df
 operator|.
 name|parse
 argument_list|(
-literal|"01.03.11 12:34"
+literal|"2011-03-01 12:34"
 argument_list|)
 decl_stmt|;
 name|String
@@ -840,14 +854,11 @@ block|{
 name|Date
 name|d
 init|=
-name|SimpleDateFormat
-operator|.
-name|getInstance
-argument_list|()
+name|df
 operator|.
 name|parse
 argument_list|(
-literal|"02.03.11 22:33"
+literal|"2011-03-02 22:33"
 argument_list|)
 decl_stmt|;
 name|String
@@ -891,14 +902,11 @@ block|{
 name|Date
 name|d
 init|=
-name|SimpleDateFormat
-operator|.
-name|getInstance
-argument_list|()
+name|df
 operator|.
 name|parse
 argument_list|(
-literal|"02.03.11 22:33"
+literal|"2011-03-02 22:33"
 argument_list|)
 decl_stmt|;
 name|String
@@ -942,14 +950,11 @@ block|{
 name|Date
 name|d
 init|=
-name|SimpleDateFormat
-operator|.
-name|getInstance
-argument_list|()
+name|df
 operator|.
 name|parse
 argument_list|(
-literal|"02.03.11 22:33"
+literal|"2011-03-02 22:33"
 argument_list|)
 decl_stmt|;
 name|String
@@ -993,14 +998,11 @@ block|{
 name|Date
 name|d
 init|=
-name|SimpleDateFormat
-operator|.
-name|getInstance
-argument_list|()
+name|df
 operator|.
 name|parse
 argument_list|(
-literal|"02.03.11 22:33"
+literal|"2011-03-02 22:33"
 argument_list|)
 decl_stmt|;
 name|String
