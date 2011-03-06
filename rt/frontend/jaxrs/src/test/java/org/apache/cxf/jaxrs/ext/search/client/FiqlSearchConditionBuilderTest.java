@@ -162,7 +162,7 @@ init|=
 operator|new
 name|SimpleDateFormat
 argument_list|(
-literal|"yyyy-MM-dd HH:mm"
+literal|"yyyy-MM-dd HH:mm Z"
 argument_list|)
 decl_stmt|;
 annotation|@
@@ -271,7 +271,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-01 12:34"
+literal|"2011-03-01 12:34 +0100"
 argument_list|)
 decl_stmt|;
 name|String
@@ -456,7 +456,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-01 12:34"
+literal|"2011-03-01 12:34 +0100"
 argument_list|)
 decl_stmt|;
 name|String
@@ -858,7 +858,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33"
+literal|"2011-03-02 22:33 +0100"
 argument_list|)
 decl_stmt|;
 name|String
@@ -906,7 +906,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33"
+literal|"2011-03-02 22:33 +0100"
 argument_list|)
 decl_stmt|;
 name|String
@@ -954,7 +954,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33"
+literal|"2011-03-02 22:33 +0100"
 argument_list|)
 decl_stmt|;
 name|String
@@ -1002,7 +1002,7 @@ name|df
 operator|.
 name|parse
 argument_list|(
-literal|"2011-03-02 22:33"
+literal|"2011-03-02 22:33 +0100"
 argument_list|)
 decl_stmt|;
 name|String
