@@ -1172,6 +1172,15 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|public
+name|Bus
+name|getBus
+parameter_list|()
+block|{
+return|return
+name|bus
+return|;
+block|}
+specifier|public
 name|void
 name|destroy
 parameter_list|()

@@ -57,6 +57,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|Bus
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|interceptor
 operator|.
 name|InterceptorProvider
@@ -494,6 +506,11 @@ parameter_list|(
 name|Executor
 name|executor
 parameter_list|)
+function_decl|;
+comment|/**      * Retrieves the Bus that was used to create the Client      * @return the Bus      */
+name|Bus
+name|getBus
+parameter_list|()
 function_decl|;
 block|}
 end_interface
