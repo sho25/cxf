@@ -3849,6 +3849,17 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|inHandler
+operator|.
+name|setProperty
+argument_list|(
+name|WSHandlerConstants
+operator|.
+name|IS_BSP_COMPLIANT
+argument_list|,
+literal|"false"
+argument_list|)
+expr_stmt|;
 return|return
 name|inHandler
 return|;

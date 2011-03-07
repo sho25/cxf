@@ -8402,6 +8402,15 @@ name|getSHA1
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|tokenRef
+operator|.
+name|addTokenType
+argument_list|(
+name|WSConstants
+operator|.
+name|WSS_ENC_KEY_VALUE_TYPE
+argument_list|)
+expr_stmt|;
 block|}
 name|dkSign
 operator|.
