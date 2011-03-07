@@ -1599,7 +1599,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * It make make sense to map logFile.getChannel() to memory for large files      *>= 1MB      */
+comment|/**      * It may make sense to map logFile.getChannel() to memory for large files      *>= 1MB      */
 specifier|private
 name|void
 name|processNewLogFile
