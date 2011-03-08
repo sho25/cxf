@@ -222,6 +222,9 @@ argument_list|)
 expr_stmt|;
 name|con
 operator|.
+name|getSslContextFactory
+argument_list|()
+operator|.
 name|setProtocol
 argument_list|(
 name|tlsServerParameters
@@ -231,6 +234,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|con
+operator|.
+name|getSslContextFactory
+argument_list|()
 operator|.
 name|setProvider
 argument_list|(
