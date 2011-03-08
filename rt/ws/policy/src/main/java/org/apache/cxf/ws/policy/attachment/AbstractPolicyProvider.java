@@ -360,10 +360,7 @@ operator|)
 name|pe
 operator|)
 operator|.
-name|getPolicyProviders
-argument_list|()
-operator|.
-name|add
+name|addPolicyProvider
 argument_list|(
 name|this
 argument_list|)

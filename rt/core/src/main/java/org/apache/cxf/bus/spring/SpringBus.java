@@ -197,6 +197,10 @@ block|{
 name|AbstractApplicationContext
 name|ctx
 decl_stmt|;
+specifier|public
+name|SpringBus
+parameter_list|()
+block|{     }
 comment|/** {@inheritDoc}*/
 specifier|public
 name|void
