@@ -428,10 +428,12 @@ name|interfaceName
 operator|!=
 literal|null
 operator|&&
-name|interfaceName
+literal|""
 operator|.
-name|isEmpty
-argument_list|()
+name|equals
+argument_list|(
+name|interfaceName
+argument_list|)
 condition|)
 block|{
 name|interfaceName
