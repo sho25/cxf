@@ -141,6 +141,19 @@ decl_stmt|;
 specifier|public
 name|OldSpringSupport
 parameter_list|(
+name|String
+name|imp
+parameter_list|)
+block|{
+name|logWarning
+argument_list|(
+name|imp
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|OldSpringSupport
+parameter_list|(
 name|Bus
 name|b
 parameter_list|,
@@ -151,7 +164,6 @@ argument_list|>
 name|c
 parameter_list|)
 block|{
-comment|//utility class
 name|cls
 operator|=
 name|c
@@ -177,7 +189,6 @@ name|String
 name|imp
 parameter_list|)
 block|{
-comment|//utility class
 name|cls
 operator|=
 name|c
