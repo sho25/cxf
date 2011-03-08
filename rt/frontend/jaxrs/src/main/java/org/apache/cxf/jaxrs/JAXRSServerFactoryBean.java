@@ -730,8 +730,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|// TODO: deprecate?  default invoker can be changed by subclassing
-comment|// JAXRSServiceFactoryBean
 specifier|protected
 name|Invoker
 name|createInvoker

@@ -1771,7 +1771,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-specifier|public
+specifier|protected
 name|Object
 name|getActualServiceObject
 parameter_list|(
