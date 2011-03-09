@@ -21,6 +21,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Set
 import|;
 end_import
@@ -96,6 +106,19 @@ function_decl|;
 comment|/**      * Returns the phase in which this interceptor is excecuted.      * @return the phase      */
 name|String
 name|getPhase
+parameter_list|()
+function_decl|;
+comment|/**      * Returns a collection of Interceptors that should be added to the chain       * whenever this interceptor is added.   May return null.      * @return the collection of interceptors      */
+name|Collection
+argument_list|<
+name|PhaseInterceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
+argument_list|>
+name|getAdditionalInterceptors
 parameter_list|()
 function_decl|;
 block|}
