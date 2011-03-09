@@ -313,6 +313,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CXF_GENERATE_TYPES
+init|=
+literal|"generatetypes"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_XJC_ARGS
 init|=
 literal|"xjc"
