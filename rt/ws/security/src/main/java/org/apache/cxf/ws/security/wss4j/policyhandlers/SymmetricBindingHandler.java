@@ -3566,13 +3566,7 @@ name|setCustomValueType
 argument_list|(
 name|WSConstants
 operator|.
-name|SOAPMESSAGE_NS11
-operator|+
-literal|"#"
-operator|+
-name|WSConstants
-operator|.
-name|ENC_KEY_VALUE_TYPE
+name|WSS_ENC_KEY_VALUE_TYPE
 argument_list|)
 expr_stmt|;
 block|}
