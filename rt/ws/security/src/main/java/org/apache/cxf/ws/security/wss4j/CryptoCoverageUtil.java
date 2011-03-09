@@ -97,30 +97,6 @@ name|javax
 operator|.
 name|xml
 operator|.
-name|soap
-operator|.
-name|SOAPException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|soap
-operator|.
-name|SOAPMessage
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
 name|xpath
 operator|.
 name|XPath
@@ -460,14 +436,14 @@ name|encryptedSignedRefs
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Checks that the references provided refer to the      * signed/encrypted SOAP body element.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or the body is not      *             covered by the signature/encryption.      */
+comment|/**      * Checks that the references provided refer to the      * signed/encrypted SOAP body element.      *       * @param soapBody      *            the SOAP body element      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or the body is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
 name|checkBodyCoverage
 parameter_list|(
-name|SOAPMessage
-name|message
+name|Element
+name|soapBody
 parameter_list|,
 specifier|final
 name|Collection
@@ -485,37 +461,6 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
-specifier|final
-name|Element
-name|body
-decl_stmt|;
-try|try
-block|{
-name|body
-operator|=
-name|message
-operator|.
-name|getSOAPBody
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|SOAPException
-name|e1
-parameter_list|)
-block|{
-comment|// Can't get the SAAJ parts out of the document.
-throw|throw
-operator|new
-name|WSSecurityException
-argument_list|(
-name|WSSecurityException
-operator|.
-name|FAILURE
-argument_list|)
-throw|;
-block|}
 if|if
 condition|(
 operator|!
@@ -529,7 +474,7 @@ name|type
 argument_list|,
 name|scope
 argument_list|,
-name|body
+name|soapBody
 argument_list|)
 condition|)
 block|{
@@ -549,14 +494,14 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Checks that the references provided refer to the required      * signed/encrypted SOAP header element(s) matching the provided name and      * namespace.  If {@code name} is null, all headers from {@code namespace}      * are inspected for coverage.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the namespace of the header(s) to check for coverage      * @param name      *            the local part of the header name to check for coverage, may be null      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or a header is not      *             covered by the signature/encryption.      */
+comment|/**      * Checks that the references provided refer to the required      * signed/encrypted SOAP header element(s) matching the provided name and      * namespace.  If {@code name} is null, all headers from {@code namespace}      * are inspected for coverage.      *       * @param soapHeader      *            the SOAP header element      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the namespace of the header(s) to check for coverage      * @param name      *            the local part of the header name to check for coverage, may be null      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating the coverage or a header is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
 name|checkHeaderCoverage
 parameter_list|(
-name|SOAPMessage
-name|message
+name|Element
+name|soapHeader
 parameter_list|,
 specifier|final
 name|Collection
@@ -587,37 +532,6 @@ name|Element
 argument_list|>
 name|elements
 decl_stmt|;
-specifier|final
-name|Element
-name|parent
-decl_stmt|;
-try|try
-block|{
-name|parent
-operator|=
-name|message
-operator|.
-name|getSOAPHeader
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|SOAPException
-name|e1
-parameter_list|)
-block|{
-comment|// Can't get the SAAJ parts out of the document.
-throw|throw
-operator|new
-name|WSSecurityException
-argument_list|(
-name|WSSecurityException
-operator|.
-name|FAILURE
-argument_list|)
-throw|;
-block|}
 if|if
 condition|(
 name|name
@@ -631,7 +545,7 @@ name|DOMUtils
 operator|.
 name|getChildrenWithNamespace
 argument_list|(
-name|parent
+name|soapHeader
 argument_list|,
 name|namespace
 argument_list|)
@@ -645,7 +559,7 @@ name|DOMUtils
 operator|.
 name|getChildrenWithName
 argument_list|(
-name|parent
+name|soapHeader
 argument_list|,
 name|namespace
 argument_list|,
@@ -703,14 +617,14 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expression in {@code      * xPath}.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPath      *            the XPath expression      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signature/encryption.      */
+comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expression in {@code      * xPath}.      *       * @param soapEnvelope      *            the SOAP Envelope element      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPath      *            the XPath expression      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
 name|checkCoverage
 parameter_list|(
-name|SOAPMessage
-name|message
+name|Element
+name|soapEnvelope
 parameter_list|,
 specifier|final
 name|Collection
@@ -743,7 +657,7 @@ name|CryptoCoverageUtil
 operator|.
 name|checkCoverage
 argument_list|(
-name|message
+name|soapEnvelope
 argument_list|,
 name|refs
 argument_list|,
@@ -762,14 +676,14 @@ name|scope
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expressions in {@code      * xPaths}.      *       * @param message      *            the soap message containing the signature/encryption and content      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPaths      *            the collection of XPath expressions      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signature/encryption.      */
+comment|/**      * Checks that the references provided refer to the required      * signed/encrypted elements as defined by the XPath expressions in {@code      * xPaths}.      *       * @param soapEnvelope      *            the SOAP Envelope element      * @param refs      *            the refs to the data extracted from the signature/encryption      * @param namespaces      *            the prefix to namespace mapping, may be {@code null}      * @param xPaths      *            the collection of XPath expressions      * @param type      *            the type of cryptographic coverage to check for      * @param scope      *            the scope of the cryptographic coverage to check for, defaults      *            to element      *       * @throws WSSecurityException      *             if there is an error evaluating an XPath or an element is not      *             covered by the signature/encryption.      */
 specifier|public
 specifier|static
 name|void
 name|checkCoverage
 parameter_list|(
-name|SOAPMessage
-name|message
+name|Element
+name|soapEnvelope
 parameter_list|,
 specifier|final
 name|Collection
@@ -866,13 +780,7 @@ name|evaluate
 argument_list|(
 name|xpathString
 argument_list|,
-name|message
-operator|.
-name|getSOAPPart
-argument_list|()
-operator|.
-name|getEnvelope
-argument_list|()
+name|soapEnvelope
 argument_list|,
 name|XPathConstants
 operator|.
@@ -887,23 +795,6 @@ name|e
 parameter_list|)
 block|{
 comment|// The xpath's are not valid in the config.
-throw|throw
-operator|new
-name|WSSecurityException
-argument_list|(
-name|WSSecurityException
-operator|.
-name|FAILURE
-argument_list|)
-throw|;
-block|}
-catch|catch
-parameter_list|(
-name|SOAPException
-name|e
-parameter_list|)
-block|{
-comment|// Can't get the SAAJ parts out of the document.
 throw|throw
 operator|new
 name|WSSecurityException
