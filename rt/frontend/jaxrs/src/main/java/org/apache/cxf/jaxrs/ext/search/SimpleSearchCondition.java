@@ -55,7 +55,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashSet
+name|HashMap
 import|;
 end_import
 
@@ -65,7 +65,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|LinkedHashMap
+name|HashSet
 import|;
 end_import
 
@@ -100,7 +100,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Simple search condition comparing primitive objects or complex object by its getters. For details see  * {@link #isMet(Object)} description.  *   * @param<T> type of search condition.  */
+comment|/**  * Simple search condition comparing primitive objects or complex object by its getters. For details see  * {@link #isMet(Object)} description.  *   * @param<T> type of search condition.  *   */
 end_comment
 
 begin_class
@@ -339,7 +339,7 @@ throw|;
 block|}
 if|if
 condition|(
-name|isPrimitive
+name|isBuiltIn
 argument_list|(
 name|condition
 argument_list|)
@@ -523,7 +523,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|isPrimitive
+name|isBuiltIn
 argument_list|(
 name|condition
 argument_list|)
@@ -686,7 +686,7 @@ name|list
 return|;
 block|}
 block|}
-comment|/**      * Compares given object against template condition object.      *<p>      * For built-in type T like String, Number (precisely, from type T located in subpackage of "java.lang.*")      * given object is directly compared with template object. Comparison for {@link ConditionType#EQUALS}      * requires correct implementation of {@link Object#equals(Object)}, using inequalities requires type T      * implementing {@link Comparable}.      *<p>      * For other types the comparison of given object against template object is done using its      *<b>getters</b>; Value returned by {@linkplain #isMet(Object)} operation is<b>conjunction ('and'      * operator)</b> of comparisons of each getter accessible in object of type T. Getters of template object      * that return null or throw exception are not used in comparison. If type T contains getters that return      * primitive not-nullable types (as int, float etc) exception will be thrown. Finally, if all getters      * return nulls (are excluded) it is interpreted as no filter (match every pojo).      *<p>      * If {@link #SimpleSearchCondition(ConditionType, Object) constructor with shared operator} was used,      * then getters are compared using the same operator. If {@link #SimpleSearchCondition(Map, Object)      * constructor with map of operators} was used then for every getter specified operator is used (getters      * for missing mapping are ignored). The way that comparison per-getter is done depending on operator type      * per getter - comparison for {@link ConditionType#EQUALS} requires correct implementation of      * {@link Object#equals(Object)}, using inequalities requires that getter type implements      * {@link Comparable}.      *<p>      * For equality comparison and String type in template object (either being built-in or getter from client      * provided type) it is allowed to used asterisk at the beginning or at the end of text as wild card (zero      * or more of any characters) e.g. "foo*", "*foo" or "*foo*". Inner asterisks are not interpreted as wild      * cards.      *<p>      *<b>Example:</b>      *       *<pre>      * SimpleSearchCondition&lt;Integer&gt; ssc = new SimpleSearchCondition&lt;Integer&gt;(      *   ConditionType.GREATER_THAN, 10);          * ssc.isMet(20);      * // true since 20&gt;10       *       * class Entity {      *   public String getName() {...      *   public Integer getLevel() {...      *   public String getMessage() {...      * }      *       * Entity template = new Entity("bbb", 10, null);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);          *       * ssc.isMet(new Entity("aaa", 20, "some mesage"));       * // false: is not met, expression '"aaa"&gt;"bbb" and 20&gt;10' is not true        * // since "aaa" is not greater than "bbb"; not that message is null in template hence ingored      *       * ssc.isMet(new Entity("ccc", 30, "other message"));      * // true: is met, expression '"ccc"&gt;"bbb" and 30&gt;10' is true      *       * Map&lt;String,ConditionType&gt; map;      * map.put("name", ConditionType.EQUALS);      * map.put("level", ConditionType.GREATER_THAN);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);      *         * ssc.isMet(new Entity("ccc", 30, "other message"));      * // false due to expression '"aaa"=="ccc" and 30&gt;10"' (note different operators)      *       *</pre>      *       * @throws IllegalAccessException when security manager disallows reflective call of getters.      */
+comment|/**      * Compares given object against template condition object.      *<p>      * For built-in type T like String, Number (precisely, from type T located in subpackage of "java.lang.*")      * given object is directly compared with template object. Comparison for {@link ConditionType#EQUALS}      * requires correct implementation of {@link Object#equals(Object)}, using inequalities requires type T      * implementing {@link Comparable}.      *<p>      * For other types the comparison of given object against template object is done using its      *<b>getters</b>; Value returned by {@linkplain #isMet(Object)} operation is<b>conjunction ('and'      * operator)</b> of comparisons of each getter accessible in object of type T. Getters of template object      * that return null or throw exception are not used in comparison. Finally, if all getters      * return nulls (are excluded) it is interpreted as no filter (match every pojo).      *<p>      * If {@link #SimpleSearchCondition(ConditionType, Object) constructor with shared operator} was used,      * then getters are compared using the same operator. If {@link #SimpleSearchCondition(Map, Object)      * constructor with map of operators} was used then for every getter specified operator is used (getters      * for missing mapping are ignored). The way that comparison per-getter is done depending on operator type      * per getter - comparison for {@link ConditionType#EQUALS} requires correct implementation of      * {@link Object#equals(Object)}, using inequalities requires that getter type implements      * {@link Comparable}.      *<p>      * For equality comparison and String type in template object (either being built-in or getter from client      * provided type) it is allowed to used asterisk at the beginning or at the end of text as wild card (zero      * or more of any characters) e.g. "foo*", "*foo" or "*foo*". Inner asterisks are not interpreted as wild      * cards.      *<p>      *<b>Example:</b>      *       *<pre>      * SimpleSearchCondition&lt;Integer&gt; ssc = new SimpleSearchCondition&lt;Integer&gt;(      *   ConditionType.GREATER_THAN, 10);          * ssc.isMet(20);      * // true since 20&gt;10       *       * class Entity {      *   public String getName() {...      *   public int getLevel() {...      *   public String getMessage() {...      * }      *       * Entity template = new Entity("bbb", 10, null);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);          *       * ssc.isMet(new Entity("aaa", 20, "some mesage"));       * // false: is not met, expression '"aaa"&gt;"bbb" and 20&gt;10' is not true        * // since "aaa" is not greater than "bbb"; not that message is null in template hence ingored      *       * ssc.isMet(new Entity("ccc", 30, "other message"));      * // true: is met, expression '"ccc"&gt;"bbb" and 30&gt;10' is true      *       * Map&lt;String,ConditionType&gt; map;      * map.put("name", ConditionType.EQUALS);      * map.put("level", ConditionType.GREATER_THAN);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);      *         * ssc.isMet(new Entity("ccc", 30, "other message"));      * // false due to expression '"aaa"=="ccc" and 30&gt;10"' (note different operators)      *       *</pre>      *       * @throws IllegalAccessException when security manager disallows reflective call of getters.      */
 specifier|public
 name|boolean
 name|isMet
@@ -746,7 +746,7 @@ argument_list|>
 name|getters2values
 init|=
 operator|new
-name|LinkedHashMap
+name|HashMap
 argument_list|<
 name|String
 argument_list|,
@@ -780,78 +780,6 @@ name|getGettersNames
 argument_list|()
 control|)
 block|{
-try|try
-block|{
-if|if
-condition|(
-name|beanspector
-operator|.
-name|getAccessorType
-argument_list|(
-name|getter
-argument_list|)
-operator|.
-name|isPrimitive
-argument_list|()
-condition|)
-block|{
-name|String
-name|beanType
-init|=
-name|beanspector
-operator|.
-name|getBean
-argument_list|()
-operator|.
-name|getClass
-argument_list|()
-operator|.
-name|getCanonicalName
-argument_list|()
-decl_stmt|;
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"Type '"
-operator|+
-name|beanType
-operator|+
-literal|"' has property '"
-operator|+
-name|getter
-operator|+
-literal|"' of primitive type and "
-operator|+
-literal|"cannot be used as a condition"
-argument_list|)
-throw|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|IllegalArgumentException
-name|e
-parameter_list|)
-block|{
-throw|throw
-name|e
-throw|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-name|e
-argument_list|)
-throw|;
-block|}
 name|Object
 name|value
 init|=
@@ -874,7 +802,7 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
-comment|// we do not need compare class objects
+comment|//we do not need compare class objects
 name|getters2values
 operator|.
 name|keySet
@@ -935,7 +863,7 @@ block|}
 block|}
 specifier|private
 name|boolean
-name|isPrimitive
+name|isBuiltIn
 parameter_list|(
 name|T
 name|pojo

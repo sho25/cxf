@@ -4015,25 +4015,91 @@ literal|200
 argument_list|)
 expr_stmt|;
 block|}
-comment|// Enable these tests when SimpleSearchCondition flaw (
-comment|// regarding primitive type of properties of type T) is sloved
-comment|//    @Test
-comment|//    public void testSearchBook123() throws Exception {
-comment|//        getAndCompareAsStrings("http://localhost:" + PORT + "/bookstore/books/search"
-comment|//                               + "?_s=name==CXF*;id=ge=123;id=lt=124",
-comment|//                               "resources/expected_get_book123.txt",
-comment|//                               "application/xml", 200);
-comment|//    }
-comment|//
-comment|//    @Test
-comment|//    public void testSearchBook123WithWebClient() throws Exception {
-comment|//        String address = "http://localhost:" + PORT + "/bookstore/books/search";
-comment|//
-comment|//        WebClient client = WebClient.create(address);
-comment|//        Book b = client.query("_s", "name==CXF*;id=ge=123;id=lt=124").get(Book.class);
-comment|//        assertEquals(b.getId(), 123L);
-comment|//
-comment|//    }
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testSearchBook123
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|getAndCompareAsStrings
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/bookstore/books/search"
+operator|+
+literal|"?_s=name==CXF*;id=ge=123;id=lt=124"
+argument_list|,
+literal|"resources/expected_get_book123.txt"
+argument_list|,
+literal|"application/xml"
+argument_list|,
+literal|200
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testSearchBook123WithWebClient
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|String
+name|address
+init|=
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/bookstore/books/search"
+decl_stmt|;
+name|WebClient
+name|client
+init|=
+name|WebClient
+operator|.
+name|create
+argument_list|(
+name|address
+argument_list|)
+decl_stmt|;
+name|Book
+name|b
+init|=
+name|client
+operator|.
+name|query
+argument_list|(
+literal|"_s"
+argument_list|,
+literal|"name==CXF*;id=ge=123;id=lt=124"
+argument_list|)
+operator|.
+name|get
+argument_list|(
+name|Book
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+name|b
+operator|.
+name|getId
+argument_list|()
+argument_list|,
+literal|123L
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|Test
 specifier|public
