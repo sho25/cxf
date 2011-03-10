@@ -313,9 +313,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|CXF_GENERATE_TYPES
+name|CFG_NO_TYPES
 init|=
-literal|"generatetypes"
+literal|"notypes"
 decl_stmt|;
 specifier|public
 specifier|static
