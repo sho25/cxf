@@ -956,7 +956,7 @@ name|message
 operator|.
 name|setContent
 argument_list|(
-name|Document
+name|Node
 operator|.
 name|class
 argument_list|,

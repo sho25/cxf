@@ -3905,6 +3905,16 @@ argument_list|)
 expr_stmt|;
 name|message
 operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|setInMessage
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
+name|message
+operator|.
 name|put
 argument_list|(
 name|Message
