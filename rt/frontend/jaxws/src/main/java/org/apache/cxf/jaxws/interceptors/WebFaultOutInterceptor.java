@@ -93,21 +93,21 @@ name|javax
 operator|.
 name|xml
 operator|.
-name|ws
+name|stream
 operator|.
-name|WebFault
+name|XMLStreamWriter
 import|;
 end_import
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|w3c
+name|xml
 operator|.
-name|dom
+name|ws
 operator|.
-name|Node
+name|WebFault
 import|;
 end_import
 
@@ -320,6 +320,20 @@ operator|.
 name|model
 operator|.
 name|OperationInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|W3CDOMStreamWriter
 import|;
 end_import
 
@@ -762,7 +776,7 @@ try|try
 block|{
 name|DataWriter
 argument_list|<
-name|Node
+name|XMLStreamWriter
 argument_list|>
 name|writer
 init|=
@@ -773,7 +787,7 @@ argument_list|()
 operator|.
 name|createWriter
 argument_list|(
-name|Node
+name|XMLStreamWriter
 operator|.
 name|class
 argument_list|)
@@ -837,10 +851,14 @@ name|faultInfo
 argument_list|,
 name|part
 argument_list|,
+operator|new
+name|W3CDOMStreamWriter
+argument_list|(
 name|f
 operator|.
 name|getDetail
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -854,10 +872,14 @@ name|faultInfo
 argument_list|,
 name|part
 argument_list|,
+operator|new
+name|W3CDOMStreamWriter
+argument_list|(
 name|f
 operator|.
 name|getOrCreateDetail
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if
