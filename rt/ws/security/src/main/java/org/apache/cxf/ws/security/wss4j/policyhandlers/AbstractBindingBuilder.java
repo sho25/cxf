@@ -1175,6 +1175,20 @@ name|ws
 operator|.
 name|security
 operator|.
+name|WSSConfig
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|WSSecurityEngineResult
 import|;
 end_import
@@ -1515,6 +1529,11 @@ operator|.
 name|SignBeforeEncrypting
 decl_stmt|;
 specifier|protected
+specifier|final
+name|WSSConfig
+name|wssConfig
+decl_stmt|;
+specifier|protected
 name|SOAPMessage
 name|saaj
 decl_stmt|;
@@ -1626,6 +1645,9 @@ decl_stmt|;
 specifier|public
 name|AbstractBindingBuilder
 parameter_list|(
+name|WSSConfig
+name|config
+parameter_list|,
 name|Binding
 name|binding
 parameter_list|,
@@ -1642,6 +1664,12 @@ name|SoapMessage
 name|message
 parameter_list|)
 block|{
+name|this
+operator|.
+name|wssConfig
+operator|=
+name|config
+expr_stmt|;
 name|this
 operator|.
 name|binding
@@ -2954,7 +2982,16 @@ name|timestampEl
 operator|=
 operator|new
 name|WSSecTimestamp
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
+expr_stmt|;
+name|timestampEl
+operator|.
+name|setWsConfig
+argument_list|(
+name|wssConfig
+argument_list|)
 expr_stmt|;
 name|timestampEl
 operator|.
@@ -3615,6 +3652,8 @@ argument_list|,
 operator|new
 name|WSSecurityTokenHolder
 argument_list|(
+name|wssConfig
+argument_list|,
 name|secToken
 argument_list|)
 argument_list|)
@@ -3627,7 +3666,9 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 name|sig
 operator|.
@@ -4442,7 +4483,9 @@ name|utBuilder
 init|=
 operator|new
 name|WSSecUsernameToken
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 name|utBuilder
 operator|.
@@ -4527,7 +4570,9 @@ name|utBuilder
 init|=
 operator|new
 name|WSSecUsernameToken
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -6221,7 +6266,9 @@ name|encrKey
 init|=
 operator|new
 name|WSSecEncryptedKey
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 name|Crypto
 name|crypto
@@ -7590,7 +7637,9 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 name|checkForX509PkiPath
 argument_list|(
@@ -8066,6 +8115,13 @@ name|getInclusiveC14n
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|sig
+operator|.
+name|setWsConfig
+argument_list|(
+name|wssConfig
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|sig
@@ -8452,7 +8508,9 @@ name|dkSign
 init|=
 operator|new
 name|WSSecDKSign
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 comment|//Check whether it is security policy 1.2 and use the secure conversation accordingly
 if|if
@@ -8875,7 +8933,9 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 comment|// If a EncryptedKeyToken is used, set the correct value type to
 comment|// be used in the wsse:Reference in ds:KeyInfo
@@ -9735,7 +9795,9 @@ name|wsc
 init|=
 operator|new
 name|WSSecSignatureConfirmation
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 if|if
 condition|(

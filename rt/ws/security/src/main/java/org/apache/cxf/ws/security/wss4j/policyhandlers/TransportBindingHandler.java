@@ -549,6 +549,20 @@ name|ws
 operator|.
 name|security
 operator|.
+name|WSSConfig
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|components
 operator|.
 name|crypto
@@ -686,6 +700,9 @@ decl_stmt|;
 specifier|public
 name|TransportBindingHandler
 parameter_list|(
+name|WSSConfig
+name|config
+parameter_list|,
 name|TransportBinding
 name|binding
 parameter_list|,
@@ -704,6 +721,8 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
+name|config
+argument_list|,
 name|binding
 argument_list|,
 name|saaj
@@ -1748,7 +1767,9 @@ name|dkSig
 init|=
 operator|new
 name|WSSecDKSign
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 name|dkSig
 operator|.
@@ -2252,7 +2273,9 @@ name|dkSign
 init|=
 operator|new
 name|WSSecDKSign
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 comment|//Setting the AttachedReference or the UnattachedReference according to the flag
 name|Element
@@ -2432,7 +2455,9 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 if|if
 condition|(

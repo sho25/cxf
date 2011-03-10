@@ -461,6 +461,20 @@ name|ws
 operator|.
 name|security
 operator|.
+name|WSSConfig
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|WSSecurityEngineResult
 import|;
 end_import
@@ -759,6 +773,9 @@ decl_stmt|;
 specifier|public
 name|SymmetricBindingHandler
 parameter_list|(
+name|WSSConfig
+name|config
+parameter_list|,
 name|SymmetricBinding
 name|binding
 parameter_list|,
@@ -777,6 +794,8 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
+name|config
+argument_list|,
 name|binding
 argument_list|,
 name|saaj
@@ -2255,7 +2274,9 @@ name|dkEncr
 init|=
 operator|new
 name|WSSecDKEncrypt
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -2810,7 +2831,9 @@ name|encr
 init|=
 operator|new
 name|WSSecEncrypt
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 name|String
 name|encrTokId
@@ -3277,7 +3300,9 @@ name|dkSign
 init|=
 operator|new
 name|WSSecDKSign
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -3839,8 +3864,17 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|wssConfig
+argument_list|)
 decl_stmt|;
+name|sig
+operator|.
+name|setWsConfig
+argument_list|(
+name|wssConfig
+argument_list|)
+expr_stmt|;
 comment|// If a EncryptedKeyToken is used, set the correct value type to
 comment|// be used in the wsse:Reference in ds:KeyInfo
 name|int

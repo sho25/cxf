@@ -3994,7 +3994,7 @@ block|}
 name|STSClient
 name|client
 init|=
-name|SecureConversationTokenInterceptorProvider
+name|STSUtils
 operator|.
 name|getClient
 argument_list|(
