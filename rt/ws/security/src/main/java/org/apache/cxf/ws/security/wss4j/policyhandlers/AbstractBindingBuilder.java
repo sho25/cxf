@@ -3333,6 +3333,8 @@ parameter_list|,
 name|boolean
 name|endorse
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 name|Map
 argument_list|<
@@ -3407,6 +3409,8 @@ parameter_list|,
 name|boolean
 name|endorse
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 return|return
 name|handleSupportingTokens
@@ -3449,6 +3453,8 @@ name|WSSecBase
 argument_list|>
 name|ret
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 if|if
 condition|(
@@ -6361,6 +6367,8 @@ parameter_list|(
 name|TokenWrapper
 name|wrapper
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 return|return
 name|getCrypto
@@ -6384,6 +6392,8 @@ parameter_list|(
 name|TokenWrapper
 name|wrapper
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 return|return
 name|getCrypto
@@ -6413,6 +6423,8 @@ parameter_list|,
 name|String
 name|propKey
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 name|Crypto
 name|crypto
@@ -7601,6 +7613,8 @@ parameter_list|,
 name|boolean
 name|endorse
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 return|return
 name|getSignatureBuilder
@@ -7631,6 +7645,8 @@ parameter_list|,
 name|boolean
 name|endorse
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 name|WSSecSignature
 name|sig
@@ -9297,6 +9313,8 @@ name|WSEncryptionPart
 argument_list|>
 name|sigs
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 name|Collection
 argument_list|<
