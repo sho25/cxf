@@ -107,6 +107,31 @@ name|t
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * @param msg      * @param t      */
+specifier|public
+name|TrustException
+parameter_list|(
+name|Logger
+name|log
+parameter_list|,
+name|String
+name|msg
+parameter_list|,
+name|Object
+modifier|...
+name|params
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|log
+argument_list|,
+name|msg
+argument_list|,
+name|params
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * @param cause      */
 specifier|public
 name|TrustException
