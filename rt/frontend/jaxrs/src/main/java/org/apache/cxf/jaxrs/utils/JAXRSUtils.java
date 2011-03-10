@@ -1715,6 +1715,42 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|cri
+operator|.
+name|isSingleton
+argument_list|()
+operator|&&
+operator|(
+operator|!
+name|cri
+operator|.
+name|getParameterMethods
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
+operator|||
+operator|!
+name|cri
+operator|.
+name|getParameterFields
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
+operator|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Injecting request parameters into singleton resource is not thread-safe"
+argument_list|)
+expr_stmt|;
+block|}
 comment|// Param methods
 name|MultivaluedMap
 argument_list|<
@@ -1797,13 +1833,6 @@ argument_list|,
 name|ori
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|o
-operator|!=
-literal|null
-condition|)
-block|{
 name|InjectionUtils
 operator|.
 name|injectThroughMethod
@@ -1815,7 +1844,6 @@ argument_list|,
 name|o
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|// Param fields
 for|for
@@ -1868,13 +1896,6 @@ argument_list|,
 name|ori
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|o
-operator|!=
-literal|null
-condition|)
-block|{
 name|InjectionUtils
 operator|.
 name|injectFieldValue
@@ -1886,7 +1907,6 @@ argument_list|,
 name|o
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 specifier|public
