@@ -299,7 +299,7 @@ name|assertEquals
 argument_list|(
 literal|"Get a wrong address"
 argument_list|,
-literal|"http://localhost:8080/rs"
+literal|"http://localhost:9090/rs"
 argument_list|,
 name|sfb
 operator|.
