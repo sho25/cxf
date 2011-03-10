@@ -2950,7 +2950,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -2980,7 +2980,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3010,7 +3010,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3040,7 +3040,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3070,7 +3070,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3100,7 +3100,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3130,7 +3130,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3156,7 +3156,7 @@ literal|"DoubleItService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 annotation|@
 name|ServiceMode
@@ -3351,7 +3351,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -3381,7 +3381,7 @@ literal|"org.apache.cxf.policytest.doubleit.DoubleItPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"classpath:/wsdl_systest_wsspec/DoubleIt.wsdl"
+literal|"classpath:/wsdl_systest_wssec/DoubleIt.wsdl"
 argument_list|)
 specifier|public
 specifier|static

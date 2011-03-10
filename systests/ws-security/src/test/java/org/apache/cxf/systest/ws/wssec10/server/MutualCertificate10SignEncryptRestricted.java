@@ -39,7 +39,7 @@ literal|"PingService"
 argument_list|,
 name|portName
 operator|=
-literal|"UserNameOverTransportLocal_IPingService"
+literal|"MutualCertificate10SignEncrypt_IPingService"
 argument_list|,
 name|endpointInterface
 operator|=
@@ -47,11 +47,11 @@ literal|"wssec.wssec10.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec10/WsSecurity10_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec10/WsSecurity10_restricted.wsdl"
 argument_list|)
 specifier|public
 class|class
-name|UserNameOverTransportRestricted
+name|MutualCertificate10SignEncryptRestricted
 extends|extends
 name|PingServiceBase
 block|{

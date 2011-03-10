@@ -118,7 +118,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ServerRestricted
+name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
@@ -135,7 +135,7 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|public
-name|ServerRestricted
+name|Server
 parameter_list|()
 throws|throws
 name|Exception
@@ -149,7 +149,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-name|ServerRestricted
+name|Server
 parameter_list|(
 name|String
 name|baseUrl
@@ -289,9 +289,39 @@ name|XNoTimestampPingService
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//        doPublish(baseUrl + "/X-AES128PingService", new XAES128PingService());
-comment|//        doPublish(baseUrl + "/X-AES256PingService", new XAES256PingService());
-comment|//        doPublish(baseUrl + "/X-TripleDESPingService", new XTripleDESPingService());
+name|doPublish
+argument_list|(
+name|baseUrl
+operator|+
+literal|"/X-AES128PingService"
+argument_list|,
+operator|new
+name|XAES128PingService
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|doPublish
+argument_list|(
+name|baseUrl
+operator|+
+literal|"/X-AES256PingService"
+argument_list|,
+operator|new
+name|XAES256PingService
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|doPublish
+argument_list|(
+name|baseUrl
+operator|+
+literal|"/X-TripleDESPingService"
+argument_list|,
+operator|new
+name|XTripleDESPingService
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|doPublish
 argument_list|(
 name|baseUrl
@@ -374,7 +404,7 @@ name|SecurityConstants
 operator|.
 name|ENCRYPT_PROPERTIES
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/restricted/bob.properties"
+literal|"org/apache/cxf/systest/ws/wssec11/server/bob.properties"
 argument_list|)
 expr_stmt|;
 name|ep
@@ -417,7 +447,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|ServerRestricted
+name|Server
 argument_list|(
 literal|"http://localhost:"
 operator|+
@@ -460,7 +490,7 @@ literal|"org/apache/cxf/systest/ws/wssec11/server/server.xml"
 argument_list|)
 expr_stmt|;
 operator|new
-name|ServerRestricted
+name|Server
 argument_list|(
 literal|"http://localhost:"
 operator|+
@@ -525,7 +555,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -555,7 +585,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -585,7 +615,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -615,7 +645,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -645,7 +675,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -675,7 +705,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -705,7 +735,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -735,7 +765,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -765,7 +795,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -795,7 +825,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -825,7 +855,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -855,7 +885,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -885,7 +915,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -915,7 +945,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -945,7 +975,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -975,7 +1005,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -1005,7 +1035,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static
@@ -1035,7 +1065,7 @@ literal|"wssec.wssec11.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec11/WsSecurity11_restricted.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec11/WsSecurity11.wsdl"
 argument_list|)
 specifier|public
 specifier|static

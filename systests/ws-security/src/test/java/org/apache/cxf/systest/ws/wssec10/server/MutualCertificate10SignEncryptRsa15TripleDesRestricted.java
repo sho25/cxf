@@ -39,7 +39,7 @@ literal|"PingService"
 argument_list|,
 name|portName
 operator|=
-literal|"MutualCertificate10SignEncrypt_IPingService"
+literal|"MutualCertificate10SignEncryptRsa15TripleDes_IPingService"
 argument_list|,
 name|endpointInterface
 operator|=
@@ -47,11 +47,11 @@ literal|"wssec.wssec10.IPingService"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"target/test-classes/wsdl_systest_wsspec/wssec10/WsSecurity10.wsdl"
+literal|"target/test-classes/wsdl_systest_wssec/wssec10/WsSecurity10_restricted.wsdl"
 argument_list|)
 specifier|public
 class|class
-name|MutualCertificate10SignEncrypt
+name|MutualCertificate10SignEncryptRsa15TripleDesRestricted
 extends|extends
 name|PingServiceBase
 block|{
