@@ -199,7 +199,7 @@ expr_stmt|;
 block|}
 comment|/**      * Create and set the classloader that is needed for creating the java sources from wsdl      *       * @param project      * @param useCompileClasspath      * @param classesDir      */
 specifier|public
-name|void
+name|String
 name|switchClassLoader
 parameter_list|(
 name|MavenProject
@@ -537,6 +537,9 @@ argument_list|,
 name|newCp
 argument_list|)
 expr_stmt|;
+return|return
+name|newCp
+return|;
 block|}
 comment|/**      * Restore the old classloader      */
 specifier|public

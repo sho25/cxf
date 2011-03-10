@@ -620,6 +620,11 @@ argument_list|(
 name|origProps
 argument_list|)
 expr_stmt|;
+name|origContextClassloader
+operator|=
+literal|null
+expr_stmt|;
+comment|// don't hold a reference.
 block|}
 block|}
 end_class
