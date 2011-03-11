@@ -2442,7 +2442,7 @@ name|format
 argument_list|(
 name|lr
 operator|.
-name|getEventTimestamp
+name|getDate
 argument_list|()
 argument_list|)
 operator|+
@@ -2909,14 +2909,14 @@ block|{
 return|return
 name|r1
 operator|.
-name|getEventTimestamp
+name|getDate
 argument_list|()
 operator|.
 name|compareTo
 argument_list|(
 name|r2
 operator|.
-name|getEventTimestamp
+name|getDate
 argument_list|()
 argument_list|)
 operator|*

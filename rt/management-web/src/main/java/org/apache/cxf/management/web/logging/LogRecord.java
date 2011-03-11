@@ -292,7 +292,7 @@ name|eventTimestamp
 operator|=
 name|copy
 operator|.
-name|getEventTimestamp
+name|getDate
 argument_list|()
 expr_stmt|;
 name|this
@@ -375,7 +375,7 @@ argument_list|()
 decl_stmt|;
 name|record
 operator|.
-name|setEventTimestamp
+name|setDate
 argument_list|(
 operator|new
 name|Date
@@ -538,7 +538,7 @@ literal|"http://cxf.apache.org/log"
 argument_list|)
 specifier|public
 name|Date
-name|getEventTimestamp
+name|getDate
 parameter_list|()
 block|{
 return|return
@@ -547,17 +547,17 @@ return|;
 block|}
 specifier|public
 name|void
-name|setEventTimestamp
+name|setDate
 parameter_list|(
 name|Date
-name|eventTimestamp
+name|date
 parameter_list|)
 block|{
 name|Validate
 operator|.
 name|notNull
 argument_list|(
-name|eventTimestamp
+name|date
 argument_list|,
 literal|"eventTimestamp is null"
 argument_list|)
@@ -566,7 +566,7 @@ name|this
 operator|.
 name|eventTimestamp
 operator|=
-name|eventTimestamp
+name|date
 expr_stmt|;
 block|}
 annotation|@

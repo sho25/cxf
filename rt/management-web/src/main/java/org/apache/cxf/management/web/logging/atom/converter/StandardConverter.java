@@ -1198,7 +1198,7 @@ name|toAtomDateFormat
 argument_list|(
 name|record
 operator|.
-name|getEventTimestamp
+name|getDate
 argument_list|()
 argument_list|)
 argument_list|)
@@ -2205,7 +2205,7 @@ argument_list|(
 literal|0
 argument_list|)
 operator|.
-name|getEventTimestamp
+name|getDate
 argument_list|()
 argument_list|)
 argument_list|)

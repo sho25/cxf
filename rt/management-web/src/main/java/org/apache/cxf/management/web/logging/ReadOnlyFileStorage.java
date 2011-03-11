@@ -1248,7 +1248,7 @@ argument_list|)
 decl_stmt|;
 name|record
 operator|.
-name|setEventTimestamp
+name|setDate
 argument_list|(
 name|date
 argument_list|)
