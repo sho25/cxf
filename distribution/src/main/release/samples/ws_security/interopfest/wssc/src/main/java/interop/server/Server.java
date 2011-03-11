@@ -93,11 +93,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|WSSConfig
-operator|.
-name|getDefaultWSConfig
-argument_list|()
-expr_stmt|;
 operator|new
 name|SpringBusFactory
 argument_list|()
