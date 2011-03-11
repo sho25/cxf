@@ -485,7 +485,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-specifier|synchronized
 name|void
 name|updateDests
 parameter_list|(
