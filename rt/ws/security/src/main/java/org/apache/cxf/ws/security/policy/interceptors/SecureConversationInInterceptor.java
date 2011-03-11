@@ -3999,6 +3999,8 @@ operator|.
 name|getClient
 argument_list|(
 name|m2
+argument_list|,
+literal|"sct"
 argument_list|)
 decl_stmt|;
 name|AddressingProperties

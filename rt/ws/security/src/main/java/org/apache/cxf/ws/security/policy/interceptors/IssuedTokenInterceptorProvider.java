@@ -941,6 +941,8 @@ operator|.
 name|getClient
 argument_list|(
 name|message
+argument_list|,
+literal|"sts"
 argument_list|)
 decl_stmt|;
 name|AddressingProperties

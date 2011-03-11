@@ -676,6 +676,8 @@ operator|.
 name|getClient
 argument_list|(
 name|message
+argument_list|,
+literal|"sct"
 argument_list|)
 decl_stmt|;
 name|AddressingProperties
@@ -916,6 +918,8 @@ operator|.
 name|getClient
 argument_list|(
 name|message
+argument_list|,
+literal|"sct"
 argument_list|)
 decl_stmt|;
 name|AddressingProperties

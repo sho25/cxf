@@ -220,6 +220,8 @@ operator|.
 name|getClient
 argument_list|(
 name|m
+argument_list|,
+literal|"sts"
 argument_list|)
 decl_stmt|;
 synchronized|synchronized
