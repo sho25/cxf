@@ -675,6 +675,11 @@ expr_stmt|;
 block|}
 else|else
 block|{
+synchronized|synchronized
+init|(
+name|d2
+init|)
+block|{
 name|d2
 operator|.
 name|getEndpointInfo
@@ -728,6 +733,7 @@ operator|+
 name|path
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
