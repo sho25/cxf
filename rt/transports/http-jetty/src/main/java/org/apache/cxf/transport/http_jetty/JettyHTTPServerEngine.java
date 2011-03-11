@@ -1016,6 +1016,11 @@ name|JettyHTTPHandler
 name|handler
 parameter_list|)
 block|{
+name|SecurityHandler
+name|securityHandler
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|server
@@ -1319,7 +1324,16 @@ argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
+name|securityHandler
+operator|=
+operator|(
+name|SecurityHandler
+operator|)
+name|h
+expr_stmt|;
 block|}
+else|else
+block|{
 name|handlerCollection
 operator|.
 name|addHandler
@@ -1327,6 +1341,7 @@ argument_list|(
 name|h
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
@@ -1543,6 +1558,24 @@ argument_list|(
 name|sessionManager
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|securityHandler
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//use the securityHander which already wrap the jetty http handler
+name|sessionHandler
+operator|.
+name|setHandler
+argument_list|(
+name|securityHandler
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|sessionHandler
 operator|.
 name|setHandler
@@ -1550,6 +1583,7 @@ argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
+block|}
 name|context
 operator|.
 name|setHandler
@@ -1561,6 +1595,24 @@ block|}
 else|else
 block|{
 comment|// otherwise, just the one.
+if|if
+condition|(
+name|securityHandler
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//use the securityHander which already wrap the jetty http handler
+name|context
+operator|.
+name|setHandler
+argument_list|(
+name|securityHandler
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|context
 operator|.
 name|setHandler
@@ -1568,6 +1620,7 @@ argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|contexts
 operator|.
