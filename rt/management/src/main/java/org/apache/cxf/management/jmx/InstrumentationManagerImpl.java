@@ -1548,7 +1548,7 @@ literal|0
 init|;
 name|x
 operator|<
-name|str
+name|in
 operator|.
 name|length
 argument_list|()
@@ -1560,7 +1560,7 @@ block|{
 name|char
 name|ch
 init|=
-name|str
+name|in
 operator|.
 name|charAt
 argument_list|(
