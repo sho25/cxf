@@ -3538,7 +3538,7 @@ name|ClassLoader
 operator|.
 name|getSystemResource
 argument_list|(
-literal|"META-INF/cxf/outsecurity.properties"
+literal|"outsecurity.properties"
 argument_list|)
 decl_stmt|;
 name|cryptoProps
@@ -3819,7 +3819,7 @@ name|WSHandlerConstants
 operator|.
 name|SIG_PROP_FILE
 argument_list|,
-literal|"META-INF/cxf/insecurity.properties"
+literal|"insecurity.properties"
 argument_list|)
 expr_stmt|;
 name|inHandler
@@ -3830,7 +3830,7 @@ name|WSHandlerConstants
 operator|.
 name|DEC_PROP_FILE
 argument_list|,
-literal|"META-INF/cxf/insecurity.properties"
+literal|"insecurity.properties"
 argument_list|)
 expr_stmt|;
 name|inHandler
@@ -3898,7 +3898,7 @@ name|SecurityConstants
 operator|.
 name|SIGNATURE_PROPERTIES
 argument_list|,
-literal|"META-INF/cxf/outsecurity.properties"
+literal|"outsecurity.properties"
 argument_list|)
 expr_stmt|;
 name|msg
@@ -3909,7 +3909,7 @@ name|SecurityConstants
 operator|.
 name|ENCRYPT_PROPERTIES
 argument_list|,
-literal|"META-INF/cxf/outsecurity.properties"
+literal|"outsecurity.properties"
 argument_list|)
 expr_stmt|;
 name|msg

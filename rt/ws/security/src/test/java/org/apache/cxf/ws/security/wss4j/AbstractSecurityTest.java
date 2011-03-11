@@ -358,6 +358,24 @@ operator|.
 name|WSU_NS
 argument_list|)
 expr_stmt|;
+name|addNamespace
+argument_list|(
+literal|"saml1"
+argument_list|,
+name|WSConstants
+operator|.
+name|SAML_NS
+argument_list|)
+expr_stmt|;
+name|addNamespace
+argument_list|(
+literal|"saml2"
+argument_list|,
+name|WSConstants
+operator|.
+name|SAML2_NS
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Reads a classpath resource into a Document.      * @param name the name of the classpath resource      */
 specifier|protected

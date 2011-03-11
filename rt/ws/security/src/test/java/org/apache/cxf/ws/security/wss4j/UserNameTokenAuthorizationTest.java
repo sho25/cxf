@@ -436,7 +436,7 @@ name|WSHandlerConstants
 operator|.
 name|SIG_PROP_FILE
 argument_list|,
-literal|"META-INF/cxf/insecurity.properties"
+literal|"insecurity.properties"
 argument_list|)
 expr_stmt|;
 name|wsIn
@@ -447,7 +447,7 @@ name|WSHandlerConstants
 operator|.
 name|DEC_PROP_FILE
 argument_list|,
-literal|"META-INF/cxf/insecurity.properties"
+literal|"insecurity.properties"
 argument_list|)
 expr_stmt|;
 name|wsIn
@@ -521,7 +521,7 @@ name|WSHandlerConstants
 operator|.
 name|SIG_PROP_FILE
 argument_list|,
-literal|"META-INF/cxf/outsecurity.properties"
+literal|"outsecurity.properties"
 argument_list|)
 expr_stmt|;
 name|wsOut
@@ -532,7 +532,7 @@ name|WSHandlerConstants
 operator|.
 name|ENC_PROP_FILE
 argument_list|,
-literal|"META-INF/cxf/outsecurity.properties"
+literal|"outsecurity.properties"
 argument_list|)
 expr_stmt|;
 name|wsOut
