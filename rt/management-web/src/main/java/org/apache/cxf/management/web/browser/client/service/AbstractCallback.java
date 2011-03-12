@@ -81,6 +81,10 @@ name|Response
 import|;
 end_import
 
+begin_comment
+comment|//TODO Remove - this class is useless
+end_comment
+
 begin_class
 specifier|public
 specifier|abstract
@@ -99,14 +103,6 @@ name|int
 name|OK
 init|=
 literal|200
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|int
-name|UNAUTHORIZED
-init|=
-literal|401
 decl_stmt|;
 specifier|public
 name|void
@@ -142,21 +138,6 @@ argument_list|(
 name|response
 argument_list|)
 argument_list|)
-expr_stmt|;
-block|}
-elseif|else
-if|if
-condition|(
-name|UNAUTHORIZED
-operator|==
-name|response
-operator|.
-name|getStatusCode
-argument_list|()
-condition|)
-block|{
-name|onAccessDenied
-argument_list|()
 expr_stmt|;
 block|}
 else|else
@@ -197,12 +178,6 @@ name|ex
 argument_list|)
 throw|;
 block|}
-specifier|public
-specifier|abstract
-name|void
-name|onAccessDenied
-parameter_list|()
-function_decl|;
 specifier|public
 specifier|abstract
 name|void

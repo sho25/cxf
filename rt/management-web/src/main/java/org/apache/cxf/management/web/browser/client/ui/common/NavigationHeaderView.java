@@ -59,7 +59,7 @@ interface|interface
 name|Presenter
 block|{
 name|void
-name|onSignOutButtonClicked
+name|onSettingsButtonClicked
 parameter_list|()
 function_decl|;
 block|}

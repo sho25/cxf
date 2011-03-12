@@ -216,7 +216,7 @@ block|}
 annotation|@
 name|UiHandler
 argument_list|(
-literal|"signOutHyperlink"
+literal|"settingsHyperlink"
 argument_list|)
 name|void
 name|onSignOutHyperlinkClicked
@@ -235,7 +235,7 @@ literal|null
 assert|;
 name|presenter
 operator|.
-name|onSignOutButtonClicked
+name|onSettingsButtonClicked
 argument_list|()
 expr_stmt|;
 block|}

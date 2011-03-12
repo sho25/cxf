@@ -132,10 +132,6 @@ name|void
 name|onBackHyperlinkClicked
 parameter_list|()
 function_decl|;
-name|void
-name|onSingOutHyperlinkClicked
-parameter_list|()
-function_decl|;
 block|}
 name|HasWidgets
 name|getNaviagationHeaderSlot

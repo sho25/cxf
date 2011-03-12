@@ -99,7 +99,7 @@ name|client
 operator|.
 name|event
 operator|.
-name|SignOutEvent
+name|GoToSettingsEvent
 import|;
 end_import
 
@@ -220,7 +220,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|onSignOutButtonClicked
+name|onSettingsButtonClicked
 parameter_list|()
 block|{
 name|eventBus
@@ -228,7 +228,7 @@ operator|.
 name|fireEvent
 argument_list|(
 operator|new
-name|SignOutEvent
+name|GoToSettingsEvent
 argument_list|()
 argument_list|)
 expr_stmt|;

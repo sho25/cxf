@@ -77,23 +77,6 @@ name|String
 name|errorDialogErrorType
 parameter_list|()
 function_decl|;
-comment|/* Access control tab styles */
-name|String
-name|accessControlTab
-parameter_list|()
-function_decl|;
-name|String
-name|accessControlTabErrorMessage
-parameter_list|()
-function_decl|;
-name|String
-name|accessControlTabRememberMeCheckbox
-parameter_list|()
-function_decl|;
-name|String
-name|accessControlTabSignInButton
-parameter_list|()
-function_decl|;
 comment|/* Browser tab styles*/
 name|String
 name|browserTabLoadingMessage

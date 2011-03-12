@@ -49,9 +49,6 @@ block|{
 name|void
 name|saveSettings
 parameter_list|(
-name|Credentials
-name|credentials
-parameter_list|,
 name|RequestCallback
 name|callback
 parameter_list|)
@@ -59,9 +56,6 @@ function_decl|;
 name|void
 name|retrieveSettings
 parameter_list|(
-name|Credentials
-name|credentials
-parameter_list|,
 name|Settings
 name|settings
 parameter_list|,
