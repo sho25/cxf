@@ -79,6 +79,10 @@ name|Message
 import|;
 end_import
 
+begin_comment
+comment|/**  * The default singleton resource provider which returns   * the same resource instance per every request  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -145,6 +149,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|boolean
 name|isSingleton
@@ -154,6 +159,7 @@ return|return
 literal|true
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Object
 name|getInstance
@@ -166,6 +172,7 @@ return|return
 name|resourceInstance
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|void
 name|releaseInstance
@@ -177,8 +184,9 @@ name|Object
 name|o
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
+comment|// complete
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Class
 argument_list|<

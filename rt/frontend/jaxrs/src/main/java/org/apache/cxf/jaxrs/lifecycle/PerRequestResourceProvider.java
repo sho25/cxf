@@ -125,6 +125,10 @@ name|Message
 import|;
 end_import
 
+begin_comment
+comment|/**  * The default per-request resource provider which creates   * a new resource instance per every request  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -206,6 +210,7 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|boolean
 name|isSingleton
@@ -215,6 +220,7 @@ return|return
 literal|false
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Object
 name|getInstance
@@ -417,6 +423,7 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|void
 name|releaseInstance
@@ -438,6 +445,7 @@ name|preDestroyMethod
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Class
 argument_list|<

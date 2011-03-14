@@ -167,6 +167,10 @@ name|ApplicationContextAware
 import|;
 end_import
 
+begin_comment
+comment|/**  * The ResourceProvider implementation which delegates to   * ApplicationContext to manage the life-cycle of the resource  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -327,6 +331,7 @@ name|beanId
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Object
 name|getInstance
@@ -397,6 +402,7 @@ return|return
 name|instance
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|boolean
 name|isSingleton
@@ -406,6 +412,7 @@ return|return
 name|isSingleton
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|void
 name|releaseInstance
@@ -484,6 +491,7 @@ return|return
 name|c
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Class
 argument_list|<

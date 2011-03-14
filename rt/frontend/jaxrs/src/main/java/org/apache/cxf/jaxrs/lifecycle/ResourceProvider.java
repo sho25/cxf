@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ResourceProviders are used to specify the lifecycle   * (per-request or singleton primarily) of root resources.  */
+comment|/**  * ResourceProvider controls the life-cycle of the JAX-RS root resources.  */
 end_comment
 
 begin_interface
@@ -40,6 +40,7 @@ specifier|public
 interface|interface
 name|ResourceProvider
 block|{
+comment|/**      * Returns the resource instance which will handle the current request       * @param m the current request message      * @return resource instance      */
 name|Object
 name|getInstance
 parameter_list|(
@@ -47,6 +48,7 @@ name|Message
 name|m
 parameter_list|)
 function_decl|;
+comment|/**      * Releases the resource instance if needed      * @param m the current request message      * @param o resource instance      */
 name|void
 name|releaseInstance
 parameter_list|(
@@ -57,6 +59,7 @@ name|Object
 name|o
 parameter_list|)
 function_decl|;
+comment|/**      * Returns the Class of the resource      * @return      */
 name|Class
 argument_list|<
 name|?
@@ -64,6 +67,7 @@ argument_list|>
 name|getResourceClass
 parameter_list|()
 function_decl|;
+comment|/**      * Indicates if the managed resource is a singleton      * @return      */
 name|boolean
 name|isSingleton
 parameter_list|()
