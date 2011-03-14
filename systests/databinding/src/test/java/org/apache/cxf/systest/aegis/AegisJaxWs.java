@@ -250,6 +250,27 @@ argument_list|>
 name|l
 parameter_list|)
 function_decl|;
+annotation|@
+name|WebMethod
+name|byte
+index|[]
+name|export
+parameter_list|(
+name|java
+operator|.
+name|util
+operator|.
+name|List
+argument_list|<
+name|java
+operator|.
+name|lang
+operator|.
+name|Integer
+argument_list|>
+name|integers
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
