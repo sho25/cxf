@@ -370,7 +370,7 @@ argument_list|,
 name|?
 argument_list|>
 operator|)
-name|get
+name|getContextualProperty
 argument_list|(
 literal|"soap.env.ns.map"
 argument_list|)
