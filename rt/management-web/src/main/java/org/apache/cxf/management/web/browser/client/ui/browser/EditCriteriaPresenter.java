@@ -318,6 +318,17 @@ name|void
 name|onSaveButtonClicked
 parameter_list|()
 block|{
+name|String
+name|phrase
+init|=
+name|view
+operator|.
+name|getPhraseValue
+argument_list|()
+operator|.
+name|getValue
+argument_list|()
+decl_stmt|;
 name|Date
 name|from
 init|=
@@ -472,6 +483,8 @@ operator|=
 operator|new
 name|FilterOptions
 argument_list|(
+name|phrase
+argument_list|,
 name|from
 argument_list|,
 name|to

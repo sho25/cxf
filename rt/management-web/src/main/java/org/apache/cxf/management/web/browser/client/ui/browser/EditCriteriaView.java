@@ -93,6 +93,13 @@ function_decl|;
 block|}
 name|HasValue
 argument_list|<
+name|String
+argument_list|>
+name|getPhraseValue
+parameter_list|()
+function_decl|;
+name|HasValue
+argument_list|<
 name|Date
 argument_list|>
 name|getFromValue
