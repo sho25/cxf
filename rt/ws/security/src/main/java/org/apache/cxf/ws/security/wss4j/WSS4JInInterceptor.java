@@ -3149,7 +3149,7 @@ try|try
 block|{
 name|cbHandler
 operator|=
-name|getPasswordCB
+name|getPasswordCallbackHandler
 argument_list|(
 name|reqData
 argument_list|)

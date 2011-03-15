@@ -25,6 +25,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|ArrayList
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collection
 import|;
 end_import
@@ -66,16 +76,6 @@ operator|.
 name|util
 operator|.
 name|Set
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Vector
 import|;
 end_import
 
@@ -878,7 +878,7 @@ argument_list|>
 name|actions
 init|=
 operator|new
-name|Vector
+name|ArrayList
 argument_list|<
 name|Integer
 argument_list|>
