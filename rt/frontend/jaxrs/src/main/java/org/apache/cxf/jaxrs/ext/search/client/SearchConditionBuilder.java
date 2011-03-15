@@ -27,304 +27,152 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
+name|HashMap
 import|;
 end_import
 
 begin_import
 import|import
-name|javax
+name|java
 operator|.
-name|xml
+name|util
 operator|.
-name|datatype
-operator|.
-name|Duration
+name|Map
 import|;
 end_import
 
 begin_comment
-comment|/**  * Builds client-side search condition string using `fluent interface' style. It helps build create part of  * URL that will be parsed by server-side counterpart e.g. FiqlSearchConditionBuilder has FiqlParser.  */
+comment|/**  * Builder of client-side search condition string using `fluent interface' style. It helps build create part  * of URL that will be parsed by server-side counterpart. It is factory of different implementations e.g. for  * {@link FiqlSearchConditionBuilder}, that has {@link org.apache.cxf.jaxrs.ext.search.FiqlParser FiqlParser}  * on server-side, one can use<tt>SearchConditionBuilder.instance("FIQL")</tt>.  *<p>  * See {@link FiqlSearchConditionBuilder} for examples of usage.  */
 end_comment
 
-begin_interface
+begin_class
 specifier|public
-interface|interface
+specifier|abstract
+class|class
 name|SearchConditionBuilder
-block|{
-comment|/** Creates unconstrained query (no conditions) */
+implements|implements
 name|PartialCondition
+block|{
+specifier|private
+specifier|static
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|SearchConditionBuilder
+argument_list|>
+name|lang2impl
+decl_stmt|;
+specifier|private
+specifier|static
+name|SearchConditionBuilder
+name|defaultImpl
+decl_stmt|;
+static|static
+block|{
+name|defaultImpl
+operator|=
+operator|new
+name|FiqlSearchConditionBuilder
+argument_list|()
+expr_stmt|;
+name|lang2impl
+operator|=
+operator|new
+name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|SearchConditionBuilder
+argument_list|>
+argument_list|()
+expr_stmt|;
+name|lang2impl
+operator|.
+name|put
+argument_list|(
+literal|"fiql"
+argument_list|,
+name|defaultImpl
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Creates instance of builder.      *       * @return default implementation of builder.      */
+specifier|public
+specifier|static
+name|SearchConditionBuilder
+name|instance
+parameter_list|()
+block|{
+return|return
+name|instance
+argument_list|(
+literal|"FIQL"
+argument_list|)
+return|;
+block|}
+comment|/**      * Creates instance of builder for specific language.      *       * @param language alias of language, case insensitive. If alias is unknown, default FIQL implementation      *            is returned.      * @return implementation of expected or default builder.      */
+specifier|public
+specifier|static
+name|SearchConditionBuilder
+name|instance
+parameter_list|(
+name|String
+name|language
+parameter_list|)
+block|{
+name|SearchConditionBuilder
+name|impl
+init|=
+literal|null
+decl_stmt|;
+if|if
+condition|(
+name|language
+operator|!=
+literal|null
+condition|)
+block|{
+name|impl
+operator|=
+name|lang2impl
+operator|.
+name|get
+argument_list|(
+name|language
+operator|.
+name|toLowerCase
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|impl
+operator|==
+literal|null
+condition|)
+block|{
+name|impl
+operator|=
+operator|new
+name|FiqlSearchConditionBuilder
+argument_list|()
+expr_stmt|;
+block|}
+return|return
+name|impl
+return|;
+block|}
+comment|/** Finalize condition construction and build search condition query. */
+specifier|public
+specifier|abstract
+name|String
 name|query
 parameter_list|()
 function_decl|;
-comment|/** Finalize condition construction and build search condition. */
-name|String
-name|build
-parameter_list|()
-function_decl|;
-specifier|public
-interface|interface
-name|Property
-block|{
-comment|/** Is textual property equal to given literal or matching given pattern? */
-name|CompleteCondition
-name|equalTo
-parameter_list|(
-name|String
-name|literalOrPattern
-parameter_list|)
-function_decl|;
-comment|/** Is numeric property equal to given number? */
-name|CompleteCondition
-name|equalTo
-parameter_list|(
-name|double
-name|number
-parameter_list|)
-function_decl|;
-comment|/** Is date property same as given date? */
-name|CompleteCondition
-name|equalTo
-parameter_list|(
-name|Date
-name|date
-parameter_list|)
-function_decl|;
-comment|/** Is date property same as date distant from now by given period of time? */
-name|CompleteCondition
-name|equalTo
-parameter_list|(
-name|Duration
-name|distanceFromNow
-parameter_list|)
-function_decl|;
-comment|/** Is textual property different than given literal or not matching given pattern? */
-name|CompleteCondition
-name|notEqualTo
-parameter_list|(
-name|String
-name|literalOrPattern
-parameter_list|)
-function_decl|;
-comment|/** Is numeric property different than given number? */
-name|CompleteCondition
-name|notEqualTo
-parameter_list|(
-name|double
-name|number
-parameter_list|)
-function_decl|;
-comment|/** Is date property different than given date? */
-name|CompleteCondition
-name|notEqualTo
-parameter_list|(
-name|Date
-name|date
-parameter_list|)
-function_decl|;
-comment|/** Is date property different than date distant from now by given period of time? */
-name|CompleteCondition
-name|notEqualTo
-parameter_list|(
-name|Duration
-name|distanceFromNow
-parameter_list|)
-function_decl|;
-comment|/** Is numeric property greater than given number? */
-name|CompleteCondition
-name|greaterThan
-parameter_list|(
-name|double
-name|number
-parameter_list|)
-function_decl|;
-comment|/** Is numeric property less than given number? */
-name|CompleteCondition
-name|lessThan
-parameter_list|(
-name|double
-name|number
-parameter_list|)
-function_decl|;
-comment|/** Is numeric property greater or equal to given number? */
-name|CompleteCondition
-name|greaterOrEqualTo
-parameter_list|(
-name|double
-name|number
-parameter_list|)
-function_decl|;
-comment|/** Is numeric property less or equal to given number? */
-name|CompleteCondition
-name|lessOrEqualTo
-parameter_list|(
-name|double
-name|number
-parameter_list|)
-function_decl|;
-comment|/** Is date property after (greater than) given date? */
-name|CompleteCondition
-name|after
-parameter_list|(
-name|Date
-name|date
-parameter_list|)
-function_decl|;
-comment|/** Is date property before (less than) given date? */
-name|CompleteCondition
-name|before
-parameter_list|(
-name|Date
-name|date
-parameter_list|)
-function_decl|;
-comment|/** Is date property not before (greater or equal to) given date? */
-name|CompleteCondition
-name|notBefore
-parameter_list|(
-name|Date
-name|date
-parameter_list|)
-function_decl|;
-comment|/** Is date property not after (less or equal to) given date? */
-name|CompleteCondition
-name|notAfter
-parameter_list|(
-name|Date
-name|date
-parameter_list|)
-function_decl|;
-comment|/** Is date property after (greater than) date distant from now by given period of time? */
-name|CompleteCondition
-name|after
-parameter_list|(
-name|Duration
-name|distanceFromNow
-parameter_list|)
-function_decl|;
-comment|/** Is date property before (less than) date distant from now by given period of time? */
-name|CompleteCondition
-name|before
-parameter_list|(
-name|Duration
-name|distanceFromNow
-parameter_list|)
-function_decl|;
-comment|/** Is date property not after (less or equal to) date distant from now by given period of time? */
-name|CompleteCondition
-name|notAfter
-parameter_list|(
-name|Duration
-name|distanceFromNow
-parameter_list|)
-function_decl|;
-comment|/** Is date property not before (greater or equal to) date distant from now by given           * period of time? */
-name|CompleteCondition
-name|notBefore
-parameter_list|(
-name|Duration
-name|distanceFromNow
-parameter_list|)
-function_decl|;
-comment|/** Is textual property lexically after (greater than) given literal? */
-name|CompleteCondition
-name|lexicalAfter
-parameter_list|(
-name|String
-name|literal
-parameter_list|)
-function_decl|;
-comment|/** Is textual property lexically before (less than) given literal? */
-name|CompleteCondition
-name|lexicalBefore
-parameter_list|(
-name|String
-name|literal
-parameter_list|)
-function_decl|;
-comment|/** Is textual property lexically not before (greater or equal to) given literal? */
-name|CompleteCondition
-name|lexicalNotBefore
-parameter_list|(
-name|String
-name|literal
-parameter_list|)
-function_decl|;
-comment|/** Is textual property lexically not after (less or equal to) given literal? */
-name|CompleteCondition
-name|lexicalNotAfter
-parameter_list|(
-name|String
-name|literal
-parameter_list|)
-function_decl|;
 block|}
-specifier|public
-interface|interface
-name|PartialCondition
-block|{
-comment|/** Get property of inspected entity type */
-name|Property
-name|is
-parameter_list|(
-name|String
-name|property
-parameter_list|)
-function_decl|;
-comment|/** Conjunct multiple expressions */
-name|CompleteCondition
-name|and
-parameter_list|(
-name|CompleteCondition
-name|c1
-parameter_list|,
-name|CompleteCondition
-name|c2
-parameter_list|,
-name|CompleteCondition
-modifier|...
-name|cn
-parameter_list|)
-function_decl|;
-comment|/** Disjunct multiple expressions */
-name|CompleteCondition
-name|or
-parameter_list|(
-name|CompleteCondition
-name|c1
-parameter_list|,
-name|CompleteCondition
-name|c2
-parameter_list|,
-name|CompleteCondition
-modifier|...
-name|cn
-parameter_list|)
-function_decl|;
-block|}
-specifier|public
-interface|interface
-name|CompleteCondition
-comment|/*extends PartialCondition*/
-block|{
-comment|/** Conjunct current expression with another */
-name|PartialCondition
-name|and
-parameter_list|()
-function_decl|;
-comment|/** Disjunct current expression with another */
-name|PartialCondition
-name|or
-parameter_list|()
-function_decl|;
-comment|/** Finalize condition construction and build search condition. */
-name|String
-name|build
-parameter_list|()
-function_decl|;
-block|}
-block|}
-end_interface
+end_class
 
 end_unit
 
