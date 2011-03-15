@@ -732,7 +732,7 @@ name|url
 operator|.
 name|append
 argument_list|(
-literal|"phrase==*"
+literal|"message==*"
 argument_list|)
 expr_stmt|;
 name|url
