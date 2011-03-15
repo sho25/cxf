@@ -55,6 +55,24 @@ name|MTOM
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|aegis
+operator|.
+name|type
+operator|.
+name|java5
+operator|.
+name|XmlParamType
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -82,6 +100,13 @@ name|acceptDataHandler
 parameter_list|(
 annotation|@
 name|WebParam
+argument_list|(
+name|name
+operator|=
+literal|"inputDhBean"
+argument_list|)
+annotation|@
+name|XmlParamType
 argument_list|(
 name|name
 operator|=

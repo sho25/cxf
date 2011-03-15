@@ -239,6 +239,13 @@ name|String
 argument_list|>
 name|echoBigList
 parameter_list|(
+annotation|@
+name|WebParam
+argument_list|(
+name|name
+operator|=
+literal|"foo"
+argument_list|)
 name|java
 operator|.
 name|util

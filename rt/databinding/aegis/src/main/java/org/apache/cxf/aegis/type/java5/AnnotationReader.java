@@ -637,7 +637,7 @@ literal|"unchecked"
 argument_list|)
 specifier|public
 name|String
-name|getParamName
+name|getParamTypeName
 parameter_list|(
 name|Method
 name|method
@@ -665,8 +665,6 @@ argument_list|,
 name|XmlParamType
 operator|.
 name|class
-argument_list|,
-name|WEB_PARAM
 argument_list|)
 return|;
 block|}
@@ -677,7 +675,7 @@ literal|"unchecked"
 argument_list|)
 specifier|public
 name|String
-name|getReturnName
+name|getReturnTypeName
 parameter_list|(
 name|AnnotatedElement
 name|element
@@ -698,8 +696,6 @@ argument_list|,
 name|XmlReturnType
 operator|.
 name|class
-argument_list|,
-name|WEB_RESULT
 argument_list|)
 return|;
 block|}

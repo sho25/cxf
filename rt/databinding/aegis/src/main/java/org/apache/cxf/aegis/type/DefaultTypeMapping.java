@@ -910,6 +910,12 @@ operator|.
 name|identifierURI
 operator|=
 name|identifierURI
+operator|==
+literal|null
+condition|?
+name|DEFAULT_MAPPING_URI
+else|:
+name|identifierURI
 expr_stmt|;
 name|class2Type
 operator|=
