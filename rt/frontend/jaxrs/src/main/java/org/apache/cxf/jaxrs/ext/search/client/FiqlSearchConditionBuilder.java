@@ -175,8 +175,6 @@ return|return
 literal|""
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Property
 name|is
@@ -198,8 +196,6 @@ name|property
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|and
@@ -232,8 +228,6 @@ name|cn
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|CompleteCondition
 name|or
