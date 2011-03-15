@@ -5477,6 +5477,8 @@ operator|.
 name|getValue
 argument_list|()
 argument_list|,
+literal|false
+argument_list|,
 name|pClass
 argument_list|,
 name|ParameterType

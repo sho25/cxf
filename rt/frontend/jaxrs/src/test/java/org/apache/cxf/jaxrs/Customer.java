@@ -1334,6 +1334,14 @@ argument_list|<
 name|String
 argument_list|>
 name|mp4List
+parameter_list|,
+annotation|@
+name|MatrixParam
+argument_list|(
+literal|"p5"
+argument_list|)
+name|String
+name|mp5
 parameter_list|)
 block|{
 comment|// complete

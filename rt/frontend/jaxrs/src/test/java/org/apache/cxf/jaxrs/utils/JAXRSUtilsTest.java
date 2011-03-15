@@ -7721,6 +7721,10 @@ block|,
 name|List
 operator|.
 name|class
+block|,
+name|String
+operator|.
+name|class
 block|}
 decl_stmt|;
 name|Method
@@ -7752,7 +7756,7 @@ name|Message
 operator|.
 name|REQUEST_URI
 argument_list|,
-literal|"/foo;p4=0;p3=3/bar;p1=1;p2/baz;p4=4;p4=5"
+literal|"/foo;p4=0;p3=3/bar;p1=1;p2/baz;p4=4;p4=5;p5"
 argument_list|)
 expr_stmt|;
 name|List
@@ -7782,7 +7786,7 @@ name|assertEquals
 argument_list|(
 literal|"5 Matrix params should've been identified"
 argument_list|,
-literal|5
+literal|6
 argument_list|,
 name|params
 operator|.
@@ -7908,6 +7912,20 @@ operator|.
 name|get
 argument_list|(
 literal|2
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Sixth Matrix Parameter was not matched correctly"
+argument_list|,
+literal|""
+argument_list|,
+name|params
+operator|.
+name|get
+argument_list|(
+literal|5
 argument_list|)
 argument_list|)
 expr_stmt|;
