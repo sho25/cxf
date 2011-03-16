@@ -4345,6 +4345,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|bean
+operator|.
+name|setApplication
+argument_list|(
+name|app
+argument_list|)
+expr_stmt|;
 return|return
 name|bean
 return|;

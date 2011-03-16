@@ -77,6 +77,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|Application
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -392,6 +406,10 @@ specifier|private
 name|ResourceComparator
 name|rc
 decl_stmt|;
+specifier|private
+name|Application
+name|application
+decl_stmt|;
 specifier|public
 name|JAXRSServerFactoryBean
 parameter_list|()
@@ -415,6 +433,20 @@ name|super
 argument_list|(
 name|sf
 argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Saves the reference to the JAX-RS {@link Application}      * @param app      */
+specifier|public
+name|void
+name|setApplication
+parameter_list|(
+name|Application
+name|app
+parameter_list|)
+block|{
+name|application
+operator|=
+name|app
 expr_stmt|;
 block|}
 comment|/**      * Resource comparator which may be used to customize the way       * a root resource or resource method is selected       * @param rcomp comparator      */
@@ -559,6 +591,20 @@ name|invoker
 argument_list|)
 expr_stmt|;
 block|}
+name|ep
+operator|.
+name|put
+argument_list|(
+name|Application
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+argument_list|,
+name|application
+argument_list|)
+expr_stmt|;
 name|ProviderFactory
 name|factory
 init|=
@@ -1071,7 +1117,7 @@ condition|)
 block|{
 name|InjectionUtils
 operator|.
-name|injectContextProxies
+name|injectContextProxiesAndApplication
 argument_list|(
 name|cri
 argument_list|,
@@ -1084,6 +1130,8 @@ name|getInstance
 argument_list|(
 literal|null
 argument_list|)
+argument_list|,
+name|application
 argument_list|)
 expr_stmt|;
 block|}
