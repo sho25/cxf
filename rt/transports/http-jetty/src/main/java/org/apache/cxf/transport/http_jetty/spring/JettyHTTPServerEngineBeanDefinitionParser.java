@@ -61,6 +61,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|JAXBContext
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|w3c
@@ -582,6 +594,10 @@ name|bean
 argument_list|,
 literal|"tlsServerParameters"
 argument_list|,
+name|TLSServerParametersType
+operator|.
+name|class
+argument_list|,
 name|JettyHTTPServerEngineBeanDefinitionParser
 operator|.
 name|class
@@ -608,6 +624,10 @@ argument_list|,
 name|bean
 argument_list|,
 literal|"threadingParameters"
+argument_list|,
+name|ThreadingParametersType
+operator|.
+name|class
 argument_list|,
 name|JettyHTTPServerEngineBeanDefinitionParser
 operator|.
@@ -636,6 +656,10 @@ name|bean
 argument_list|,
 literal|"tlsServerParametersRef"
 argument_list|,
+name|TLSServerParametersIdentifiedType
+operator|.
+name|class
+argument_list|,
 name|JettyHTTPServerEngineBeanDefinitionParser
 operator|.
 name|class
@@ -662,6 +686,10 @@ argument_list|,
 name|bean
 argument_list|,
 literal|"threadingParametersRef"
+argument_list|,
+name|ThreadingParametersIdentifiedType
+operator|.
+name|class
 argument_list|,
 name|JettyHTTPServerEngineBeanDefinitionParser
 operator|.
@@ -1118,6 +1146,9 @@ name|createTLSServerParametersConfig
 parameter_list|(
 name|String
 name|s
+parameter_list|,
+name|JAXBContext
+name|context
 parameter_list|)
 throws|throws
 name|GeneralSecurityException
@@ -1130,6 +1161,8 @@ init|=
 name|unmarshalFactoryString
 argument_list|(
 name|s
+argument_list|,
+name|context
 argument_list|,
 name|TLSServerParametersType
 operator|.
@@ -1151,6 +1184,9 @@ name|createTLSServerParametersConfigRef
 parameter_list|(
 name|String
 name|s
+parameter_list|,
+name|JAXBContext
+name|context
 parameter_list|)
 throws|throws
 name|GeneralSecurityException
@@ -1163,6 +1199,8 @@ init|=
 name|unmarshalFactoryString
 argument_list|(
 name|s
+argument_list|,
+name|context
 argument_list|,
 name|TLSServerParametersIdentifiedType
 operator|.
@@ -1183,6 +1221,9 @@ name|createThreadingParameters
 parameter_list|(
 name|String
 name|s
+parameter_list|,
+name|JAXBContext
+name|context
 parameter_list|)
 block|{
 name|ThreadingParametersType
@@ -1191,6 +1232,8 @@ init|=
 name|unmarshalFactoryString
 argument_list|(
 name|s
+argument_list|,
+name|context
 argument_list|,
 name|ThreadingParametersType
 operator|.
@@ -1211,6 +1254,9 @@ name|createThreadingParametersRef
 parameter_list|(
 name|String
 name|s
+parameter_list|,
+name|JAXBContext
+name|context
 parameter_list|)
 block|{
 name|ThreadingParametersIdentifiedType
@@ -1219,6 +1265,8 @@ init|=
 name|unmarshalFactoryString
 argument_list|(
 name|s
+argument_list|,
+name|context
 argument_list|,
 name|ThreadingParametersIdentifiedType
 operator|.

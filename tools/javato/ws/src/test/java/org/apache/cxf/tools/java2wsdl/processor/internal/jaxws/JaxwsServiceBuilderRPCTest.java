@@ -55,7 +55,7 @@ name|cxf
 operator|.
 name|jaxb
 operator|.
-name|JAXBDataBinding
+name|JAXBContextCache
 import|;
 end_import
 
@@ -175,7 +175,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|JAXBDataBinding
+name|JAXBContextCache
 operator|.
 name|clearCaches
 argument_list|()
