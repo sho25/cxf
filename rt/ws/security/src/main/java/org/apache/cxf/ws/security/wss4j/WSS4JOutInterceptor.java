@@ -831,6 +831,11 @@ operator|new
 name|RequestData
 argument_list|()
 decl_stmt|;
+name|translateProperties
+argument_list|(
+name|mc
+argument_list|)
+expr_stmt|;
 name|reqData
 operator|.
 name|setMsgContext

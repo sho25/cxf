@@ -239,6 +239,24 @@ name|ALWAYS_ENCRYPT_UT
 init|=
 literal|"ws-security.username-token.always.encrypted"
 decl_stmt|;
+comment|/**      * Whether to ensure compliance with the Basic Security Profile (BSP) 1.1 or not. The      * default value is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|IS_BSP_COMPLIANT
+init|=
+literal|"ws-security.is-bsp-compliant"
+decl_stmt|;
+comment|/**      * This configuration tag specifies the time in seconds in the future within which      * the Created time of an incoming Timestamp is valid. WSS4J rejects by default any      * timestamp which is "Created" in the future, and so there could potentially be      * problems in a scenario where a client's clock is slightly askew. The default      * value for this parameter is "0", meaning that no future-created Timestamps are      * allowed.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TIMESTAMP_FUTURE_TTL
+init|=
+literal|"ws-security.timestamp.futureTimeToLive"
+decl_stmt|;
 comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static
@@ -366,6 +384,10 @@ block|,
 name|TIMESTAMP_TOKEN_VALIDATOR
 block|,
 name|SIGNATURE_TOKEN_VALIDATOR
+block|,
+name|IS_BSP_COMPLIANT
+block|,
+name|TIMESTAMP_FUTURE_TTL
 block|}
 argument_list|)
 argument_list|)

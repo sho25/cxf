@@ -1334,6 +1334,11 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
+name|translateProperties
+argument_list|(
+name|msg
+argument_list|)
+expr_stmt|;
 name|RequestData
 name|reqData
 init|=
