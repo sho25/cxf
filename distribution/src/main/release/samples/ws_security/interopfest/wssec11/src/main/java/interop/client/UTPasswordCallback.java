@@ -230,14 +230,6 @@ expr_stmt|;
 return|return;
 block|}
 block|}
-comment|//
-comment|// Password not found
-comment|//
-throw|throw
-operator|new
-name|IOException
-argument_list|()
-throw|;
 block|}
 comment|/**      * Add an alias/password pair to the callback mechanism.      */
 specifier|public
