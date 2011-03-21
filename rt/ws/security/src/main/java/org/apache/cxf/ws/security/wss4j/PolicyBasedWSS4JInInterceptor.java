@@ -1959,7 +1959,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"decryptionPropRefId"
+name|WSHandlerConstants
+operator|.
+name|DEC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2012,7 +2014,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"SignaturePropRefId"
+name|WSHandlerConstants
+operator|.
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2215,7 +2219,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"decryptionPropRefId"
+name|WSHandlerConstants
+operator|.
+name|DEC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2268,7 +2274,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"SignaturePropRefId"
+name|WSHandlerConstants
+operator|.
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2509,7 +2517,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"SignaturePropRefId"
+name|WSHandlerConstants
+operator|.
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2550,7 +2560,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"decryptionPropRefId"
+name|WSHandlerConstants
+operator|.
+name|DEC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2594,7 +2606,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"SignaturePropRefId"
+name|WSHandlerConstants
+operator|.
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -2635,7 +2649,9 @@ name|message
 operator|.
 name|put
 argument_list|(
-literal|"decryptionPropRefId"
+name|WSHandlerConstants
+operator|.
+name|DEC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
