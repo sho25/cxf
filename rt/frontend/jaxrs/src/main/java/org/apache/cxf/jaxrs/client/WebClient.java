@@ -2751,8 +2751,6 @@ name|readBody
 argument_list|(
 name|currentResponse
 argument_list|,
-name|conn
-argument_list|,
 name|outMessage
 argument_list|,
 name|responseClass

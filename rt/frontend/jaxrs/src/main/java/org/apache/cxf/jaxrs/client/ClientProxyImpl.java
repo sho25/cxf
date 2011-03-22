@@ -3379,8 +3379,6 @@ name|readBody
 argument_list|(
 name|r
 argument_list|,
-name|connect
-argument_list|,
 name|outMessage
 argument_list|,
 name|method
