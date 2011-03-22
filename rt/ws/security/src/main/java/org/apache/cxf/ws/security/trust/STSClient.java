@@ -1511,6 +1511,11 @@ decl_stmt|;
 name|String
 name|tokenType
 decl_stmt|;
+name|boolean
+name|sendKeyType
+init|=
+literal|true
+decl_stmt|;
 name|Map
 argument_list|<
 name|String
@@ -2117,6 +2122,21 @@ operator|.
 name|tokenType
 operator|=
 name|tokenType
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setSendKeyType
+parameter_list|(
+name|boolean
+name|sendKeyType
+parameter_list|)
+block|{
+name|this
+operator|.
+name|sendKeyType
+operator|=
+name|sendKeyType
 expr_stmt|;
 block|}
 comment|/**      * Indicate whether to use the signer's public X509 certificate for the subject confirmation key info       * when creating a RequestsSecurityToken message. If the property is set to 'false', only the public key       * value will be provided in the request. If the property is set to 'true' the complete certificate will       * be sent in the request.      *       * Note: this setting is only applicable for assertions that use an asymmetric proof key      */
@@ -3103,6 +3123,10 @@ block|}
 if|if
 condition|(
 name|keyType
+operator|!=
+literal|null
+operator|&&
+name|keyType
 operator|.
 name|endsWith
 argument_list|(
@@ -3123,6 +3147,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|keyType
+operator|!=
+literal|null
+operator|&&
 name|keyType
 operator|.
 name|endsWith
@@ -5149,6 +5177,8 @@ condition|(
 name|keyType
 operator|==
 literal|null
+operator|&&
+name|sendKeyType
 condition|)
 block|{
 name|writer
