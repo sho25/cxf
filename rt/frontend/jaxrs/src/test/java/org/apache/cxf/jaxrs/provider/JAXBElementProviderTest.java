@@ -7891,7 +7891,7 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
-name|JAXBElementProvider
+name|p
 operator|.
 name|clearContexts
 argument_list|()

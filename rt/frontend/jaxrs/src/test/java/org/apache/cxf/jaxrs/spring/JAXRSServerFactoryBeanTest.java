@@ -597,7 +597,7 @@ argument_list|,
 name|c2
 argument_list|)
 expr_stmt|;
-name|JAXBElementProvider
+name|provider
 operator|.
 name|clearContexts
 argument_list|()
