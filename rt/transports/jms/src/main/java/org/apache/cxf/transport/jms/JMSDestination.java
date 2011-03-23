@@ -2016,13 +2016,14 @@ name|JMSException
 name|ex
 parameter_list|)
 block|{
+throw|throw
 name|JmsUtils
 operator|.
 name|convertJmsAccessException
 argument_list|(
 name|ex
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 specifier|protected
