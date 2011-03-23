@@ -1214,24 +1214,6 @@ argument_list|(
 name|PATH
 argument_list|)
 expr_stmt|;
-comment|// TODO How can the registry first return null then destination for the same path?
-name|EasyMock
-operator|.
-name|expect
-argument_list|(
-name|registry
-operator|.
-name|getDestinationForPath
-argument_list|(
-name|PATH
-argument_list|)
-argument_list|)
-operator|.
-name|andReturn
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
 name|EasyMock
 operator|.
 name|expect
@@ -1248,6 +1230,9 @@ name|andReturn
 argument_list|(
 name|destination
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|EasyMock
 operator|.
@@ -1507,6 +1492,8 @@ operator|.
 name|getDestinationForPath
 argument_list|(
 name|path
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 operator|.
