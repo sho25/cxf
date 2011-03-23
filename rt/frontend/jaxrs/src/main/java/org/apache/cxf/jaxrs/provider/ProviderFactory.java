@@ -2084,6 +2084,13 @@ operator|.
 name|newInstance
 argument_list|()
 decl_stmt|;
+name|clonedProviders
+operator|.
+name|add
+argument_list|(
+name|provider
+argument_list|)
+expr_stmt|;
 name|setProviders
 argument_list|(
 literal|false
