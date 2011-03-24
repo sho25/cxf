@@ -357,7 +357,7 @@ operator|.
 name|getEndpointInfo
 argument_list|()
 operator|.
-name|getAddress
+name|getTransportId
 argument_list|()
 return|;
 block|}
