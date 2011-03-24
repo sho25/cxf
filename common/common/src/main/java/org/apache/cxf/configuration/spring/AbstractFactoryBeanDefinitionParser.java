@@ -433,6 +433,25 @@ name|setBus
 operator|=
 literal|true
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|val
+operator|.
+name|startsWith
+argument_list|(
+literal|"#"
+argument_list|)
+condition|)
+block|{
+comment|//bus attributes always need to be a reference
+name|val
+operator|=
+literal|"#"
+operator|+
+name|val
+expr_stmt|;
+block|}
 block|}
 name|mapAttribute
 argument_list|(

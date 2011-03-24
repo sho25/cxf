@@ -685,7 +685,13 @@ name|SpringBusFactory
 argument_list|()
 operator|.
 name|createBus
-argument_list|()
+argument_list|(
+operator|new
+name|String
+index|[
+literal|0
+index|]
+argument_list|)
 expr_stmt|;
 name|ctx
 operator|=

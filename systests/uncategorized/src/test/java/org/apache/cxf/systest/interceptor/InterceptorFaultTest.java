@@ -906,8 +906,6 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-comment|// all interceptors pass
-comment|/*         greeter.greetMeOneWay("one");         assertEquals("TWO", greeter.greetMe("two"));         try {             greeter.pingMe();             fail("Expected PingMeFault not thrown.");         } catch (PingMeFault f) {             assertEquals(20, (int)f.getFaultInfo().getMajor());             assertEquals(10, (int)f.getFaultInfo().getMinor());         }         */
 comment|// behaviour is identicial for all phases
 name|Iterator
 argument_list|<
@@ -1285,17 +1283,6 @@ argument_list|(
 name|location
 argument_list|)
 expr_stmt|;
-name|String
-name|expectedMsg
-init|=
-name|getExpectedInterceptorFaultMessage
-argument_list|(
-name|location
-operator|.
-name|getPhase
-argument_list|()
-argument_list|)
-decl_stmt|;
 comment|// oneway reports a plain fault (although server sends a soap fault)
 name|boolean
 name|expectOnewayFault
@@ -1375,6 +1362,17 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|String
+name|expectedMsg
+init|=
+name|getExpectedInterceptorFaultMessage
+argument_list|(
+name|location
+operator|.
+name|getPhase
+argument_list|()
+argument_list|)
+decl_stmt|;
 try|try
 block|{
 name|greeter
