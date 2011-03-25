@@ -3002,6 +3002,22 @@ literal|null
 argument_list|)
 expr_stmt|;
 comment|//verify resource starting with /books/{bookid}
+name|checkDocs
+argument_list|(
+name|resourceEls
+operator|.
+name|get
+argument_list|(
+literal|1
+argument_list|)
+argument_list|,
+literal|""
+argument_list|,
+literal|"Resource books/{bookid}"
+argument_list|,
+literal|""
+argument_list|)
+expr_stmt|;
 name|verifyParameters
 argument_list|(
 name|resourceEls
