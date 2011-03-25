@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
+name|model
+operator|.
+name|wadl
 package|;
 end_package
 
@@ -66,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to document resource classes and methods  *   * See {@link<a href="http://www.w3.org/Submission/wadl/#x3-80002.3">WADL Documentation</a>}.  */
+comment|/**  * Can be used to assign qualified XML names to arbitrary classes  * for the purpose of matching them with external schema definitions   *   */
 end_comment
 
 begin_annotation_defn
@@ -81,6 +83,10 @@ block|,
 name|ElementType
 operator|.
 name|METHOD
+block|,
+name|ElementType
+operator|.
+name|PARAMETER
 block|}
 argument_list|)
 annotation|@
@@ -92,32 +98,18 @@ name|RUNTIME
 argument_list|)
 specifier|public
 annotation_defn|@interface
-name|Description
+name|XMLName
 block|{
-comment|/**      * This value, if set, will be set as WADL doc content      */
+comment|/**      * Qualified name, example {http://books}book      */
 name|String
 name|value
 parameter_list|()
 default|default
 literal|""
 function_decl|;
-comment|/**      * Maps to WADL doc/@xml:lang attribute       **/
+comment|/**      * Optional prefix       **/
 name|String
-name|lang
-parameter_list|()
-default|default
-literal|""
-function_decl|;
-comment|/**      * Maps to WADL doc/@title attribute       **/
-name|String
-name|title
-parameter_list|()
-default|default
-literal|""
-function_decl|;
-comment|/**      * This uri, if set, will be used to retrieve       * the content which will be set as WADL doc content      */
-name|String
-name|docuri
+name|prefix
 parameter_list|()
 default|default
 literal|""

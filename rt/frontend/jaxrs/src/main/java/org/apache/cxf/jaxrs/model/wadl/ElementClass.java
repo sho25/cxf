@@ -13,9 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
+name|model
 operator|.
-name|xml
+name|wadl
 package|;
 end_package
 
@@ -68,27 +68,10 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to assign qualified XML names to arbitrary classes  * for the purpose of matching them with external schema definitions   *   */
+comment|/**  * References the concrete response or request class for   * WADL generator be able to generate representations and link  * them to schema elements. For example, it can be applied to   * methods returning a JAX-RS {@link Response}.   *   */
 end_comment
 
 begin_annotation_defn
-annotation|@
-name|Target
-argument_list|(
-block|{
-name|ElementType
-operator|.
-name|TYPE
-block|,
-name|ElementType
-operator|.
-name|METHOD
-block|,
-name|ElementType
-operator|.
-name|PARAMETER
-block|}
-argument_list|)
 annotation|@
 name|Retention
 argument_list|(
@@ -96,23 +79,40 @@ name|RetentionPolicy
 operator|.
 name|RUNTIME
 argument_list|)
+annotation|@
+name|Target
+argument_list|(
+block|{
+name|ElementType
+operator|.
+name|METHOD
+block|}
+argument_list|)
 specifier|public
 annotation_defn|@interface
-name|XMLName
+name|ElementClass
 block|{
-comment|/**      * Qualified name, example {http://books}book      */
-name|String
-name|value
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|request
 parameter_list|()
 default|default
-literal|""
+name|Object
+operator|.
+name|class
 function_decl|;
-comment|/**      * Optional prefix       **/
-name|String
-name|prefix
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|response
 parameter_list|()
 default|default
-literal|""
+name|Object
+operator|.
+name|class
 function_decl|;
 block|}
 end_annotation_defn

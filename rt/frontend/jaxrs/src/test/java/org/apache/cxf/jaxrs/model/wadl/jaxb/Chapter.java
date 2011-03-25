@@ -95,7 +95,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
+name|model
+operator|.
+name|wadl
 operator|.
 name|Description
 import|;
@@ -111,9 +113,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
+name|model
 operator|.
-name|xml
+name|wadl
 operator|.
 name|XMLName
 import|;
@@ -153,10 +155,6 @@ argument_list|(
 name|value
 operator|=
 literal|"{http://books}thesuperchapter"
-argument_list|,
-name|prefix
-operator|=
-literal|"p1"
 argument_list|)
 specifier|public
 class|class
