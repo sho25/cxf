@@ -3431,6 +3431,11 @@ argument_list|)
 return|;
 block|}
 specifier|public
+name|void
+name|finalizeConfig
+parameter_list|()
+block|{     }
+specifier|public
 name|String
 name|getBeanName
 parameter_list|()

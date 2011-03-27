@@ -311,7 +311,7 @@ name|transport
 operator|.
 name|servlet
 operator|.
-name|CXFNonSpringServlet
+name|CXFServlet
 import|;
 end_import
 
@@ -320,7 +320,7 @@ specifier|public
 class|class
 name|CXFNonSpringJaxrsServlet
 extends|extends
-name|CXFNonSpringServlet
+name|CXFServlet
 block|{
 specifier|private
 specifier|static
@@ -437,7 +437,7 @@ annotation|@
 name|Override
 specifier|public
 name|void
-name|loadBus
+name|init
 parameter_list|(
 name|ServletConfig
 name|servletConfig
@@ -447,7 +447,7 @@ name|ServletException
 block|{
 name|super
 operator|.
-name|loadBus
+name|init
 argument_list|(
 name|servletConfig
 argument_list|)
@@ -485,6 +485,14 @@ operator|new
 name|JAXRSServerFactoryBean
 argument_list|()
 decl_stmt|;
+name|bean
+operator|.
+name|setBus
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|String
 name|address
 init|=
