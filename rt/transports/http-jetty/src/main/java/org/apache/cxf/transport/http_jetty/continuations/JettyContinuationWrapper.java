@@ -138,15 +138,19 @@ name|Continuation
 implements|,
 name|ContinuationListener
 block|{
+specifier|volatile
 name|boolean
 name|isNew
 decl_stmt|;
+specifier|volatile
 name|boolean
 name|isResumed
 decl_stmt|;
+specifier|volatile
 name|boolean
 name|isPending
 decl_stmt|;
+specifier|volatile
 name|Object
 name|obj
 decl_stmt|;
@@ -155,6 +159,7 @@ name|Message
 name|message
 decl_stmt|;
 specifier|private
+specifier|final
 name|AsyncContext
 name|context
 decl_stmt|;
