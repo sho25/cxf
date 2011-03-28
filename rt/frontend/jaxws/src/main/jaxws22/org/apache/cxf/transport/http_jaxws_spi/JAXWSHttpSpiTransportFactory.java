@@ -111,7 +111,7 @@ name|transport
 operator|.
 name|http
 operator|.
-name|AbstractHTTPTransportFactory
+name|HTTPTransportFactory
 import|;
 end_import
 
@@ -120,7 +120,7 @@ specifier|public
 class|class
 name|JAXWSHttpSpiTransportFactory
 extends|extends
-name|AbstractHTTPTransportFactory
+name|HTTPTransportFactory
 implements|implements
 name|DestinationFactory
 block|{
