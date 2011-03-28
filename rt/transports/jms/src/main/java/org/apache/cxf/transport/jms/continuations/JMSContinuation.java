@@ -516,6 +516,9 @@ condition|(
 name|isPending
 condition|)
 block|{
+name|cancelTimerTask
+argument_list|()
+expr_stmt|;
 name|doResume
 argument_list|()
 expr_stmt|;
