@@ -1793,6 +1793,14 @@ argument_list|)
 decl_stmt|;
 name|bean
 operator|.
+name|setBus
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|bean
+operator|.
 name|create
 argument_list|()
 expr_stmt|;
