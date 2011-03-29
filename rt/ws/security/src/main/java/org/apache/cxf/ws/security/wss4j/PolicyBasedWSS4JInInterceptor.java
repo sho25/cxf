@@ -2184,6 +2184,17 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+name|action
+operator|=
+name|addToAction
+argument_list|(
+name|action
+argument_list|,
+literal|"Encrypt"
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 name|Object
 name|s
 init|=
