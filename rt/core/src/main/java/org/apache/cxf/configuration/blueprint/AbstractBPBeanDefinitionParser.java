@@ -1478,7 +1478,6 @@ argument_list|)
 condition|)
 block|{
 comment|//Create a bus
-comment|//FIXME - mgmt stuff, configuration stuff, etc...
 name|MutableBeanMetadata
 name|bus
 init|=
@@ -1518,6 +1517,20 @@ argument_list|(
 name|context
 argument_list|,
 literal|"blueprintBundleContext"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|addProperty
+argument_list|(
+literal|"blueprintContainer"
+argument_list|,
+name|createRef
+argument_list|(
+name|context
+argument_list|,
+literal|"blueprintContainer"
 argument_list|)
 argument_list|)
 expr_stmt|;
