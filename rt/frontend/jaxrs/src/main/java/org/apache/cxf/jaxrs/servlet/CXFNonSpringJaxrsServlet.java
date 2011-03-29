@@ -311,7 +311,7 @@ name|transport
 operator|.
 name|servlet
 operator|.
-name|CXFServlet
+name|CXFNonSpringServlet
 import|;
 end_import
 
@@ -320,7 +320,7 @@ specifier|public
 class|class
 name|CXFNonSpringJaxrsServlet
 extends|extends
-name|CXFServlet
+name|CXFNonSpringServlet
 block|{
 specifier|private
 specifier|static
