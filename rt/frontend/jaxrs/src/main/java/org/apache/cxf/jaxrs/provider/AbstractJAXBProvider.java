@@ -2179,7 +2179,15 @@ name|mt
 parameter_list|)
 block|{
 return|return
+operator|(
 name|marshalAsJaxbElement
+operator|&&
+name|type
+operator|!=
+name|Response
+operator|.
+name|class
+operator|)
 operator|||
 name|isSupported
 argument_list|(
