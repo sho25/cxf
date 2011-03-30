@@ -135,6 +135,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|BST_TOKEN_VALIDATOR
+init|=
+literal|"ws-security.bst.validator"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CALLBACK_HANDLER
 init|=
 literal|"ws-security.callback-handler"
@@ -388,6 +396,8 @@ block|,
 name|IS_BSP_COMPLIANT
 block|,
 name|TIMESTAMP_FUTURE_TTL
+block|,
+name|BST_TOKEN_VALIDATOR
 block|}
 argument_list|)
 argument_list|)
