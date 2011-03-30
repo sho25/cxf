@@ -16,6 +16,8 @@ operator|.
 name|security
 operator|.
 name|wss4j
+operator|.
+name|saml
 package|;
 end_package
 
