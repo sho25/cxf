@@ -414,9 +414,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|//Add a blueprintContainer ref
-comment|//cxfBean.addProperty("blueprintContainer", NSUtils.createRef(context, "blueprintContainer"));
-comment|//cxfBean.addProperty("bundleContext", NSUtils.createRef(context, "blueprintBundleContext"));
 if|if
 condition|(
 operator|!

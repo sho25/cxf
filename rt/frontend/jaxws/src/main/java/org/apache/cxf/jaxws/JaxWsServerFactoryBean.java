@@ -993,7 +993,7 @@ operator|.
 name|create
 argument_list|()
 decl_stmt|;
-name|init
+name|initializeResourcesAndHandlerChain
 argument_list|()
 expr_stmt|;
 name|checkPrivateEndpoint
@@ -1011,7 +1011,7 @@ block|}
 specifier|private
 specifier|synchronized
 name|void
-name|init
+name|initializeResourcesAndHandlerChain
 parameter_list|()
 block|{
 if|if
