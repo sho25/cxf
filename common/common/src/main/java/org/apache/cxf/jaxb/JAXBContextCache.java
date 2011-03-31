@@ -1025,6 +1025,17 @@ name|ex
 throw|;
 block|}
 block|}
+if|if
+condition|(
+name|context
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+name|ex
+throw|;
+block|}
 block|}
 name|cachedContextAndSchemas
 operator|=
