@@ -151,6 +151,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SAML_CALLBACK_HANDLER
+init|=
+literal|"ws-security.saml-callback-handler"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|SIGNATURE_USERNAME
 init|=
 literal|"ws-security.signature.username"
@@ -398,6 +406,8 @@ block|,
 name|TIMESTAMP_FUTURE_TTL
 block|,
 name|BST_TOKEN_VALIDATOR
+block|,
+name|SAML_CALLBACK_HANDLER
 block|}
 argument_list|)
 argument_list|)
