@@ -380,7 +380,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Bean to help easily create Server endpoints for JAX-WS. Example:  *<pre>  * JaxWsServerFactoryBean sf = JaxWsServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://acme.com/myService");  * sf.create();  *</pre>  * This will start a server for you and register it with the ServerManager.   */
+comment|/**  * Bean to help easily create Server endpoints for JAX-WS.  *<pre>  * JaxWsServerFactoryBean sf = new JaxWsServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://acme.com/myService");  * sf.create();  *</pre>  * This will start a server and register it with the ServerManager.   */
 end_comment
 
 begin_class
