@@ -203,6 +203,8 @@ name|class
 argument_list|)
 argument_list|,
 name|container
+argument_list|,
+name|context
 argument_list|)
 argument_list|,
 name|ConfiguredBeanLocator
