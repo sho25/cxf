@@ -310,6 +310,7 @@ name|isResumed
 return|;
 block|}
 specifier|public
+specifier|synchronized
 name|void
 name|reset
 parameter_list|()
@@ -335,6 +336,7 @@ literal|null
 expr_stmt|;
 block|}
 specifier|public
+specifier|synchronized
 name|void
 name|resume
 parameter_list|()
@@ -361,7 +363,6 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|protected
-specifier|synchronized
 name|void
 name|doResume
 parameter_list|()
@@ -468,6 +469,7 @@ name|o
 expr_stmt|;
 block|}
 specifier|public
+specifier|synchronized
 name|boolean
 name|suspend
 parameter_list|(
