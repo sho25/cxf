@@ -181,7 +181,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/coloc-feature.xsd"
+literal|"/schemas/coloc-feature.xsd"
 argument_list|)
 return|;
 block|}
