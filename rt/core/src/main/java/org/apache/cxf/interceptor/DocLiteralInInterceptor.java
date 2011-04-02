@@ -1134,7 +1134,8 @@ operator|>
 literal|0
 condition|)
 block|{
-assert|assert
+if|if
+condition|(
 name|msgInfo
 operator|.
 name|getMessageParts
@@ -1144,7 +1145,8 @@ name|size
 argument_list|()
 operator|>
 name|paramNum
-assert|;
+condition|)
+block|{
 name|p
 operator|=
 name|msgInfo
@@ -1157,6 +1159,14 @@ argument_list|(
 name|paramNum
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+name|p
+operator|=
+literal|null
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
