@@ -216,7 +216,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Implements a target selection strategy based on failover to an   * alternate target endpoint when a transport level failure is   * encountered.  */
+comment|/**  * Implements a target selection strategy based on failover to an   * alternate target endpoint when a transport level failure is   * encountered.  * Note that this feature changes the conduit on the fly and thus makes  * the Client not thread safe.  */
 end_comment
 
 begin_class
@@ -241,7 +241,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|protected
 name|Map
 argument_list|<
 name|InvocationKey
@@ -250,7 +250,7 @@ name|InvocationContext
 argument_list|>
 name|inProgress
 decl_stmt|;
-specifier|private
+specifier|protected
 name|FailoverStrategy
 name|failoverStrategy
 decl_stmt|;
@@ -431,7 +431,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Called on completion of the MEP for which the Condit was required.      *       * @param exchange represents the completed MEP      */
+comment|/**      * Called on completion of the MEP for which the Conduit was required.      *       * @param exchange represents the completed MEP      */
 specifier|public
 name|void
 name|complete
@@ -823,7 +823,7 @@ name|LOG
 return|;
 block|}
 comment|/**      * Check if the exchange is suitable for a failover.      *       * @param exchange the current Exchange      * @return boolean true if a failover should be attempted      */
-specifier|private
+specifier|protected
 name|boolean
 name|requiresFailover
 parameter_list|(
@@ -953,7 +953,7 @@ name|failover
 return|;
 block|}
 comment|/**      * Get the failover target endpoint, if a suitable one is available.      *       * @param exchange the current Exchange      * @param invocation the current InvocationContext      * @return a failover endpoint if one is available      */
-specifier|private
+specifier|protected
 name|Endpoint
 name|getFailoverTarget
 parameter_list|(
@@ -1105,7 +1105,7 @@ name|failoverTarget
 return|;
 block|}
 comment|/**      * Override the ENDPOINT_ADDRESS property in the request context      *       * @param context the request context      */
-specifier|private
+specifier|protected
 name|void
 name|overrideAddressProperty
 parameter_list|(
@@ -1186,8 +1186,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Used to wrap an Exchange for usage as a Map key. The raw Exchange      * is not a suitable key type, as the hashCode is computed from its      * current contents, which may obvioulsy change over the lifetime of      * an invocation.      */
-specifier|private
+comment|/**      * Used to wrap an Exchange for usage as a Map key. The raw Exchange      * is not a suitable key type, as the hashCode is computed from its      * current contents, which may obviously change over the lifetime of      * an invocation.      */
+specifier|protected
 specifier|static
 class|class
 name|InvocationKey
@@ -1252,7 +1252,7 @@ return|;
 block|}
 block|}
 comment|/**      * Records the context of an invocation.      */
-specifier|private
+specifier|protected
 class|class
 name|InvocationContext
 block|{
