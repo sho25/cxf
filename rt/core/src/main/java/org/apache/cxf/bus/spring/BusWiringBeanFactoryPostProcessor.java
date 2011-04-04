@@ -863,6 +863,9 @@ name|valueToInsert
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * This is deprecated and is there to support 2.3.x compatibility.      * Code should be updated to call addDefaultBus(ctx) instead to get the bus      * associated with the context.      * @param bus      * @param ctx      */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 name|void
