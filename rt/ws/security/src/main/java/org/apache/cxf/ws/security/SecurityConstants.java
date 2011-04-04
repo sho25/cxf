@@ -273,6 +273,15 @@ name|TIMESTAMP_FUTURE_TTL
 init|=
 literal|"ws-security.timestamp.futureTimeToLive"
 decl_stmt|;
+comment|/**      * This configuration tag specifies whether to self-sign a SAML Assertion or not. If this      * is set to true, then an enveloped signature will be generated when the SAML Assertion is      * constructed. The default is false.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SELF_SIGN_SAML_ASSERTION
+init|=
+literal|"ws-security.self-sign-saml-assertion"
+decl_stmt|;
 comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static

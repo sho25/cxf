@@ -252,6 +252,7 @@ argument_list|(
 literal|"Wrong SAML Version"
 argument_list|)
 expr_stmt|;
+return|return;
 block|}
 comment|/*                 if (!checkIssuerName(samlToken, assertionWrapper)) {                     ai.setNotAsserted("Wrong IssuerName");                 }                 */
 block|}
