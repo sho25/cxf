@@ -1239,7 +1239,7 @@ argument_list|()
 decl_stmt|;
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 name|cloneElement
 argument_list|(
@@ -1273,7 +1273,7 @@ argument_list|()
 decl_stmt|;
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 name|cloneElement
 argument_list|(
@@ -1833,7 +1833,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 operator|(
 name|Element
@@ -1883,7 +1883,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 operator|(
 name|Element

@@ -896,7 +896,7 @@ argument_list|()
 decl_stmt|;
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 name|cloneElement
 argument_list|(
@@ -1312,7 +1312,7 @@ argument_list|()
 decl_stmt|;
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 name|cloneElement
 argument_list|(
@@ -2186,7 +2186,7 @@ expr_stmt|;
 block|}
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 name|encryptedKeyElement
 argument_list|)
@@ -3172,7 +3172,7 @@ block|}
 comment|// Add the EncryptedKey
 name|this
 operator|.
-name|addEncyptedKeyElement
+name|addEncryptedKeyElement
 argument_list|(
 name|encrKey
 operator|.
