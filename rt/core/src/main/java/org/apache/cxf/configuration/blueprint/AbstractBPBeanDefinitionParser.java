@@ -666,67 +666,51 @@ expr_stmt|;
 block|}
 else|else
 block|{
-if|if
-condition|(
-literal|"bean"
+comment|//Rely on BP to handle these ones.
+name|bean
 operator|.
-name|equals
+name|addProperty
 argument_list|(
-name|name
-argument_list|)
-condition|)
-block|{
-comment|//TODO FIX beans and refs
-comment|// /       BeanDefinitionHolder bdh = ctx.getDelegate().parseBeanDefinitionElement(first);
-comment|//   child = bdh.getBeanDefinition();
-comment|//     bean.addPropertyValue(propertyName, child);
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|UnsupportedOperationException
-argument_list|(
-literal|"Elements with the name "
-operator|+
-name|name
-operator|+
-literal|" are not currently "
-operator|+
-literal|"supported as sub elements of "
-operator|+
-name|element
+name|propertyName
+argument_list|,
+name|ctx
 operator|.
-name|getLocalName
-argument_list|()
-argument_list|)
-throw|;
-block|}
-block|}
-block|}
-else|else
-block|{
-throw|throw
-operator|new
-name|UnsupportedOperationException
+name|parseElement
 argument_list|(
-literal|"Elements with the name "
-operator|+
+name|Metadata
+operator|.
+name|class
+argument_list|,
+name|bean
+argument_list|,
 name|first
-operator|.
-name|getLocalName
-argument_list|()
-operator|+
-literal|" are not currently "
-operator|+
-literal|"supported as sub elements of "
-operator|+
-name|element
-operator|.
-name|getLocalName
-argument_list|()
 argument_list|)
-throw|;
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+name|bean
+operator|.
+name|addProperty
+argument_list|(
+name|propertyName
+argument_list|,
+name|ctx
+operator|.
+name|parseElement
+argument_list|(
+name|Metadata
+operator|.
+name|class
+argument_list|,
+name|bean
+argument_list|,
+name|first
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|public
@@ -1035,7 +1019,8 @@ name|SCOPE_PROTOTYPE
 argument_list|)
 expr_stmt|;
 block|}
-elseif|else
+else|else
+block|{
 if|if
 condition|(
 literal|"depends-on"
@@ -1149,6 +1134,7 @@ argument_list|,
 name|ctx
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
