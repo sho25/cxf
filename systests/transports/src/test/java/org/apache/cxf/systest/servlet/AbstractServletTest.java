@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|testsupport
+name|systest
+operator|.
+name|servlet
 package|;
 end_package
 
