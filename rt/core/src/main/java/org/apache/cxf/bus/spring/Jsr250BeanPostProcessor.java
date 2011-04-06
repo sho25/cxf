@@ -325,6 +325,11 @@ name|m
 init|=
 literal|null
 decl_stmt|;
+name|Bus
+name|b
+init|=
+literal|null
+decl_stmt|;
 try|try
 block|{
 name|m
@@ -364,9 +369,8 @@ operator|==
 literal|null
 condition|)
 block|{
-name|Bus
 name|b
-init|=
+operator|=
 operator|(
 name|Bus
 operator|)
@@ -376,7 +380,7 @@ name|getBean
 argument_list|(
 literal|"cxf"
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|m
 operator|=
 name|b
@@ -404,6 +408,16 @@ name|resourceManager
 operator|=
 name|m
 expr_stmt|;
+if|if
+condition|(
+operator|!
+operator|(
+name|b
+operator|instanceof
+name|SpringBus
+operator|)
+condition|)
+block|{
 name|resourceManager
 operator|.
 name|addResourceResolver
@@ -415,6 +429,7 @@ name|context
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|isProcessing
@@ -534,6 +549,19 @@ block|{
 return|return
 name|bean
 return|;
+block|}
+if|if
+condition|(
+name|bean
+operator|instanceof
+name|Bus
+condition|)
+block|{
+name|getResourceManager
+argument_list|(
+name|bean
+argument_list|)
+expr_stmt|;
 block|}
 comment|/*         if (bean.getClass().getName().contains("Corb")) {             Thread.dumpStack();         }         */
 if|if
