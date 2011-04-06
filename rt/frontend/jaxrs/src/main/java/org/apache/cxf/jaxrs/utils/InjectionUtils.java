@@ -1943,6 +1943,10 @@ name|?
 argument_list|>
 name|pClass
 parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
+parameter_list|,
 name|ParameterType
 name|pType
 parameter_list|,
@@ -2306,6 +2310,37 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
+block|}
+if|if
+condition|(
+name|result
+operator|==
+literal|null
+condition|)
+block|{
+comment|// as the last resort, try XmlJavaTypeAdapters
+try|try
+block|{
+name|result
+operator|=
+name|JAXBUtils
+operator|.
+name|convertWithAdapter
+argument_list|(
+name|value
+argument_list|,
+name|paramAnns
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+comment|// ignore - may be to do with JAXB classes not being available
+block|}
 block|}
 if|if
 condition|(
@@ -2682,6 +2717,10 @@ argument_list|<
 name|?
 argument_list|>
 name|paramType
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|MultivaluedMap
 argument_list|<
@@ -3311,6 +3350,8 @@ name|type
 argument_list|,
 name|genericType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|processedValues
 argument_list|,
 name|isbean
@@ -3350,6 +3391,8 @@ name|handleBean
 argument_list|(
 name|type
 argument_list|,
+name|paramAnns
+argument_list|,
 name|processedValues
 argument_list|,
 name|pType
@@ -3387,6 +3430,8 @@ argument_list|,
 name|decoded
 argument_list|,
 name|type
+argument_list|,
+name|paramAnns
 argument_list|,
 name|pType
 argument_list|,
@@ -4046,6 +4091,10 @@ return|;
 block|}
 end_function
 
+begin_comment
+comment|//CHECKSTYLE:OFF
+end_comment
+
 begin_function
 specifier|private
 specifier|static
@@ -4060,6 +4109,10 @@ name|rawType
 parameter_list|,
 name|Type
 name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|MultivaluedMap
 argument_list|<
@@ -4082,6 +4135,7 @@ name|Message
 name|message
 parameter_list|)
 block|{
+comment|//CHECKSTYLE:ON
 name|Class
 argument_list|<
 name|?
@@ -4207,6 +4261,8 @@ name|handleBean
 argument_list|(
 name|realType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|values
 argument_list|,
 name|pathParam
@@ -4291,6 +4347,8 @@ argument_list|,
 name|decoded
 argument_list|,
 name|realType
+argument_list|,
+name|paramAnns
 argument_list|,
 name|pathParam
 argument_list|,
@@ -4516,6 +4574,14 @@ return|;
 block|}
 end_function
 
+begin_comment
+comment|//
+end_comment
+
+begin_comment
+comment|//CHECKSTYLE:OFF
+end_comment
+
 begin_function
 specifier|public
 specifier|static
@@ -4537,6 +4603,10 @@ parameter_list|,
 name|Type
 name|genericType
 parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
+parameter_list|,
 name|String
 name|defaultValue
 parameter_list|,
@@ -4550,6 +4620,7 @@ name|Message
 name|message
 parameter_list|)
 block|{
+comment|//CHECKSTYLE:ON
 if|if
 condition|(
 name|paramValues
@@ -4680,6 +4751,8 @@ name|paramType
 argument_list|,
 name|genericType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|paramValuesMap
 argument_list|,
 literal|false
@@ -4764,6 +4837,8 @@ argument_list|,
 name|decoded
 argument_list|,
 name|paramType
+argument_list|,
+name|paramAnns
 argument_list|,
 name|pathParam
 argument_list|,

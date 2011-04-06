@@ -1845,6 +1845,14 @@ index|[
 literal|0
 index|]
 argument_list|,
+name|m
+operator|.
+name|getParameterAnnotations
+argument_list|()
+index|[
+literal|0
+index|]
+argument_list|,
 name|message
 argument_list|,
 name|values
@@ -1906,6 +1914,11 @@ argument_list|,
 name|f
 operator|.
 name|getGenericType
+argument_list|()
+argument_list|,
+name|f
+operator|.
+name|getAnnotations
 argument_list|()
 argument_list|,
 name|message
@@ -4381,6 +4394,8 @@ name|parameterClass
 argument_list|,
 name|parameterType
 argument_list|,
+name|parameterAnns
+argument_list|,
 name|message
 argument_list|,
 name|values
@@ -4406,6 +4421,10 @@ name|parameterClass
 parameter_list|,
 name|Type
 name|genericParam
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|Message
 name|message
@@ -4498,6 +4517,8 @@ name|parameterClass
 argument_list|,
 name|genericParam
 argument_list|,
+name|paramAnns
+argument_list|,
 name|values
 argument_list|,
 name|defaultValue
@@ -4531,6 +4552,8 @@ argument_list|,
 name|parameterClass
 argument_list|,
 name|genericParam
+argument_list|,
+name|paramAnns
 argument_list|,
 name|message
 argument_list|,
@@ -4568,6 +4591,8 @@ name|parameterClass
 argument_list|,
 name|genericParam
 argument_list|,
+name|paramAnns
+argument_list|,
 name|defaultValue
 argument_list|,
 operator|!
@@ -4601,6 +4626,8 @@ argument_list|,
 name|parameterClass
 argument_list|,
 name|genericParam
+argument_list|,
+name|paramAnns
 argument_list|,
 name|defaultValue
 argument_list|,
@@ -4636,6 +4663,8 @@ name|parameterClass
 argument_list|,
 name|genericParam
 argument_list|,
+name|paramAnns
+argument_list|,
 name|defaultValue
 argument_list|)
 expr_stmt|;
@@ -4667,6 +4696,8 @@ name|parameterClass
 argument_list|,
 name|genericParam
 argument_list|,
+name|paramAnns
+argument_list|,
 name|defaultValue
 argument_list|)
 expr_stmt|;
@@ -4694,6 +4725,10 @@ name|pClass
 parameter_list|,
 name|Type
 name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|String
 name|defaultValue
@@ -4839,6 +4874,8 @@ name|handleBean
 argument_list|(
 name|pClass
 argument_list|,
+name|paramAnns
+argument_list|,
 name|params
 argument_list|,
 name|ParameterType
@@ -4877,6 +4914,8 @@ name|pClass
 argument_list|,
 name|genericType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|defaultValue
 argument_list|,
 literal|false
@@ -4913,6 +4952,10 @@ name|pClass
 parameter_list|,
 name|Type
 name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|String
 name|defaultValue
@@ -5198,6 +5241,8 @@ name|handleBean
 argument_list|(
 name|pClass
 argument_list|,
+name|paramAnns
+argument_list|,
 name|params
 argument_list|,
 name|ParameterType
@@ -5235,6 +5280,8 @@ argument_list|,
 name|pClass
 argument_list|,
 name|genericType
+argument_list|,
+name|paramAnns
 argument_list|,
 name|defaultValue
 argument_list|,
@@ -5332,6 +5379,10 @@ parameter_list|,
 name|Type
 name|genericType
 parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
+parameter_list|,
 name|String
 name|defaultValue
 parameter_list|)
@@ -5381,6 +5432,8 @@ name|pClass
 argument_list|,
 name|genericType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|defaultValue
 argument_list|,
 literal|false
@@ -5412,6 +5465,10 @@ name|pClass
 parameter_list|,
 name|Type
 name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|String
 name|defaultValue
@@ -5499,6 +5556,8 @@ argument_list|,
 literal|false
 argument_list|,
 name|pClass
+argument_list|,
+name|paramAnns
 argument_list|,
 name|ParameterType
 operator|.
@@ -6282,6 +6341,7 @@ name|value
 argument_list|)
 return|;
 block|}
+comment|//CHECKSTYLE:OFF
 specifier|private
 specifier|static
 name|Object
@@ -6302,6 +6362,10 @@ parameter_list|,
 name|Type
 name|genericType
 parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
+parameter_list|,
 name|MultivaluedMap
 argument_list|<
 name|String
@@ -6317,6 +6381,7 @@ name|boolean
 name|decoded
 parameter_list|)
 block|{
+comment|//CHECKSTYLE:ON
 if|if
 condition|(
 literal|""
@@ -6333,6 +6398,8 @@ operator|.
 name|handleBean
 argument_list|(
 name|paramType
+argument_list|,
+name|paramAnns
 argument_list|,
 name|values
 argument_list|,
@@ -6372,6 +6439,8 @@ name|paramType
 argument_list|,
 name|genericType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|defaultValue
 argument_list|,
 name|decoded
@@ -6402,6 +6471,10 @@ name|paramType
 parameter_list|,
 name|Type
 name|genericType
+parameter_list|,
+name|Annotation
+index|[]
+name|paramAnns
 parameter_list|,
 name|Message
 name|m
@@ -6451,6 +6524,8 @@ name|handleBean
 argument_list|(
 name|paramType
 argument_list|,
+name|paramAnns
+argument_list|,
 name|queryMap
 argument_list|,
 name|ParameterType
@@ -6480,6 +6555,8 @@ argument_list|,
 name|paramType
 argument_list|,
 name|genericType
+argument_list|,
+name|paramAnns
 argument_list|,
 name|defaultValue
 argument_list|,

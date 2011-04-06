@@ -303,6 +303,8 @@ literal|false
 argument_list|,
 name|type
 argument_list|,
+name|anns
+argument_list|,
 name|ParameterType
 operator|.
 name|REQUEST_BODY
