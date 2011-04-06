@@ -2821,9 +2821,25 @@ name|ProviderInfo
 operator|)
 name|p
 decl_stmt|;
-comment|//if (ProviderFactory.SHARED_FACTORY == this&& isJaxbBasedProvider(pi.getProvider())) {
-comment|//    continue;
-comment|//}
+if|if
+condition|(
+name|ProviderFactory
+operator|.
+name|SHARED_FACTORY
+operator|==
+name|this
+operator|&&
+name|isJaxbBasedProvider
+argument_list|(
+name|pi
+operator|.
+name|getProvider
+argument_list|()
+argument_list|)
+condition|)
+block|{
+continue|continue;
+block|}
 name|InjectionUtils
 operator|.
 name|injectContextProxies
