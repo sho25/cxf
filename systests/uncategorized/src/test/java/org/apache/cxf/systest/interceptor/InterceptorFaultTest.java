@@ -1351,19 +1351,14 @@ literal|"Oneway operation unexpectedly failed."
 argument_list|)
 expr_stmt|;
 block|}
-name|assertTrue
+name|assertEquals
 argument_list|(
-literal|"Get the wrong fault message."
+name|FAULT_MESSAGE
 argument_list|,
 name|ex
 operator|.
 name|getMessage
 argument_list|()
-operator|.
-name|startsWith
-argument_list|(
-name|FAULT_MESSAGE
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
