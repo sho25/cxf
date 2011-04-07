@@ -1375,7 +1375,10 @@ name|response
 init|=
 name|wrapAssertionToResponse
 argument_list|(
-name|tokenType
+name|tokenProvider
+operator|.
+name|getResponseTokentype
+argument_list|()
 argument_list|,
 name|elementToken
 argument_list|,

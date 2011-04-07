@@ -69,6 +69,10 @@ name|Element
 name|token
 parameter_list|)
 function_decl|;
+name|String
+name|getResponseTokentype
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
