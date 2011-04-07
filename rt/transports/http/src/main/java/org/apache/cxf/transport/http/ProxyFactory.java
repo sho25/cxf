@@ -433,7 +433,9 @@ condition|)
 block|{
 comment|// Excluded hostname -> no proxy
 return|return
-literal|null
+name|Proxy
+operator|.
+name|NO_PROXY
 return|;
 block|}
 block|}
