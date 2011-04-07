@@ -270,6 +270,9 @@ argument_list|,
 literal|"text/xml"
 argument_list|)
 expr_stmt|;
+comment|// If Basic Authentication required (not needed in this sample) could
+comment|// do so via the following:
+comment|/*         String authorizationHeader = "Basic "             + org.apache.cxf.common.util.Base64Utility.encode("username:password".getBytes());         httpget.addRequestHeader("Authorization", authorizationHeader);         */
 try|try
 block|{
 name|httpclient
@@ -329,9 +332,11 @@ decl_stmt|;
 name|String
 name|inputFile
 init|=
-name|client
+name|Client
 operator|.
-name|getClass
+name|class
+operator|.
+name|getClassLoader
 argument_list|()
 operator|.
 name|getResource
@@ -452,9 +457,11 @@ argument_list|)
 expr_stmt|;
 name|inputFile
 operator|=
-name|client
+name|Client
 operator|.
-name|getClass
+name|class
+operator|.
+name|getClassLoader
 argument_list|()
 operator|.
 name|getResource
