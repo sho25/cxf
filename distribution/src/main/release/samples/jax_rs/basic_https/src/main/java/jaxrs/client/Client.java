@@ -158,6 +158,14 @@ class|class
 name|Client
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|CLIENT_CONFIG_FILE
+init|=
+literal|"ClientConfig.xml"
+decl_stmt|;
+specifier|private
 name|Client
 parameter_list|()
 block|{     }
@@ -174,15 +182,12 @@ throws|throws
 name|Exception
 block|{
 name|File
-name|wibble
+name|clientKeystore
 init|=
 operator|new
 name|File
 argument_list|(
-name|args
-index|[
-literal|0
-index|]
+literal|"certs/clientKeystore.jks"
 argument_list|)
 decl_stmt|;
 name|File
@@ -191,12 +196,10 @@ init|=
 operator|new
 name|File
 argument_list|(
-name|args
-index|[
-literal|1
-index|]
+literal|"certs/commonTruststore.jks"
 argument_list|)
 decl_stmt|;
+comment|// Send HTTP GET request to query customer info - using portable HttpClient method
 name|Protocol
 name|authhttps
 init|=
@@ -208,7 +211,10 @@ argument_list|,
 operator|new
 name|AuthSSLProtocolSocketFactory
 argument_list|(
-name|wibble
+name|clientKeystore
+operator|.
+name|toURI
+argument_list|()
 operator|.
 name|toURL
 argument_list|()
@@ -216,6 +222,9 @@ argument_list|,
 literal|"password"
 argument_list|,
 name|truststore
+operator|.
+name|toURI
+argument_list|()
 operator|.
 name|toURL
 argument_list|()
@@ -235,7 +244,6 @@ argument_list|,
 name|authhttps
 argument_list|)
 expr_stmt|;
-comment|// Sent HTTP GET request to query customer info
 name|System
 operator|.
 name|out
@@ -270,8 +278,7 @@ argument_list|,
 literal|"text/xml"
 argument_list|)
 expr_stmt|;
-comment|// If Basic Authentication required (not needed in this sample) could
-comment|// do so via the following:
+comment|// If Basic Authentication required (not needed in this sample) could use:
 comment|/*         String authorizationHeader = "Basic "             + org.apache.cxf.common.util.Base64Utility.encode("username:password".getBytes());         httpget.addRequestHeader("Authorization", authorizationHeader);         */
 try|try
 block|{
@@ -303,7 +310,7 @@ name|releaseConnection
 argument_list|()
 expr_stmt|;
 block|}
-comment|// Sent HTTP PUT request to update customer info
+comment|// Send HTTP PUT request to update customer info
 name|System
 operator|.
 name|out
@@ -322,13 +329,6 @@ argument_list|(
 literal|"Sent HTTPS PUT request to update customer info"
 argument_list|)
 expr_stmt|;
-name|Client
-name|client
-init|=
-operator|new
-name|Client
-argument_list|()
-decl_stmt|;
 name|String
 name|inputFile
 init|=
@@ -436,7 +436,7 @@ name|releaseConnection
 argument_list|()
 expr_stmt|;
 block|}
-comment|// Sent HTTP POST request to add customer
+comment|// Send HTTP POST request to add customer
 name|System
 operator|.
 name|out
