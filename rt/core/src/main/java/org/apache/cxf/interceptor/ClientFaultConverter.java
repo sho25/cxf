@@ -1526,6 +1526,17 @@ argument_list|(
 name|ns
 argument_list|)
 decl_stmt|;
+name|ns
+operator|.
+name|put
+argument_list|(
+literal|"s"
+argument_list|,
+name|Fault
+operator|.
+name|STACKTRACE_NAMESPACE
+argument_list|)
+expr_stmt|;
 name|String
 name|ss
 init|=
@@ -1536,7 +1547,7 @@ name|xu
 operator|.
 name|getValue
 argument_list|(
-literal|"/"
+literal|"//s:"
 operator|+
 name|Fault
 operator|.

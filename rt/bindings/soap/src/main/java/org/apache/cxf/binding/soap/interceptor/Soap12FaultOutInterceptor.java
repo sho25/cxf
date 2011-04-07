@@ -767,6 +767,13 @@ operator|.
 name|writeEndElement
 argument_list|()
 expr_stmt|;
+name|prepareStackTrace
+argument_list|(
+name|message
+argument_list|,
+name|fault
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|fault

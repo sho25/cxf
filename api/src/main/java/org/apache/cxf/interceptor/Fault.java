@@ -150,6 +150,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|STACKTRACE_NAMESPACE
+init|=
+literal|"http://cxf.apache.org/fault"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|STACKTRACE
 init|=
 literal|"stackTrace"
