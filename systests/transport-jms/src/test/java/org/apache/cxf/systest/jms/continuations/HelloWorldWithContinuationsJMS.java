@@ -147,24 +147,6 @@ name|ContinuationProvider
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|systest
-operator|.
-name|http_jetty
-operator|.
-name|continuations
-operator|.
-name|HelloContinuation
-import|;
-end_import
-
 begin_class
 annotation|@
 name|WebService
@@ -187,7 +169,7 @@ literal|"http://cxf.apache.org/systest/jaxws"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"org.apache.cxf.systest.http_jetty.continuations.HelloContinuation"
+literal|"org.apache.cxf.systest.jms.continuations.HelloContinuation"
 argument_list|,
 name|wsdlLocation
 operator|=
