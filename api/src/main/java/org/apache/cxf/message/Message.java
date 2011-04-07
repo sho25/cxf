@@ -234,6 +234,11 @@ init|=
 literal|"faultStackTraceEnabled"
 decl_stmt|;
 name|String
+name|EXCEPTION_MESSAGE_CAUSE_ENABLED
+init|=
+literal|"exceptionMessageCauseEnabled"
+decl_stmt|;
+name|String
 name|CONTENT_TYPE
 init|=
 literal|"Content-Type"
