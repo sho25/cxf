@@ -3612,11 +3612,6 @@ literal|"unchecked"
 argument_list|)
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Enable once http://jira.codehaus.org/browse/JETTISON-89 gets resolved"
-argument_list|)
 specifier|public
 name|void
 name|testReadListOfDerivedTypesWithNullField
