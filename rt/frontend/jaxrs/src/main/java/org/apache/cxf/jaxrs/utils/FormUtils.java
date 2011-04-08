@@ -258,7 +258,7 @@ name|MultivaluedMap
 argument_list|<
 name|String
 argument_list|,
-name|Object
+name|String
 argument_list|>
 name|map
 parameter_list|,

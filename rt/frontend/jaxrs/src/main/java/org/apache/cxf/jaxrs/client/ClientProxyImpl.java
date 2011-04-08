@@ -2692,7 +2692,7 @@ name|MultivaluedMap
 argument_list|<
 name|String
 argument_list|,
-name|Object
+name|String
 argument_list|>
 name|handleForm
 parameter_list|(
@@ -2713,7 +2713,7 @@ name|MultivaluedMap
 argument_list|<
 name|String
 argument_list|,
-name|Object
+name|String
 argument_list|>
 name|form
 init|=
@@ -2722,7 +2722,7 @@ name|MetadataMap
 argument_list|<
 name|String
 argument_list|,
-name|Object
+name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
