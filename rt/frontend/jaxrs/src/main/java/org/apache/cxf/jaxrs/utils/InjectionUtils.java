@@ -6058,6 +6058,13 @@ name|equals
 argument_list|(
 name|propertyName
 argument_list|)
+operator|||
+literal|"declaringClass"
+operator|.
+name|equals
+argument_list|(
+name|propertyName
+argument_list|)
 condition|)
 block|{
 continue|continue;
