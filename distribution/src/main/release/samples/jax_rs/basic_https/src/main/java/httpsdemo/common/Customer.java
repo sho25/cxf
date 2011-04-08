@@ -5,11 +5,9 @@ end_comment
 
 begin_package
 package|package
-name|demo
+name|httpsdemo
 operator|.
-name|jaxrs
-operator|.
-name|server
+name|common
 package|;
 end_package
 

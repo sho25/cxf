@@ -5,9 +5,7 @@ end_comment
 
 begin_package
 package|package
-name|demo
-operator|.
-name|jaxrs
+name|httpsdemo
 operator|.
 name|server
 package|;
@@ -133,7 +131,7 @@ name|sf
 operator|.
 name|setResourceClasses
 argument_list|(
-name|CustomerService
+name|CustomerServiceImpl
 operator|.
 name|class
 argument_list|)
@@ -142,7 +140,7 @@ name|sf
 operator|.
 name|setResourceProvider
 argument_list|(
-name|CustomerService
+name|CustomerServiceImpl
 operator|.
 name|class
 argument_list|,
@@ -150,7 +148,7 @@ operator|new
 name|SingletonResourceProvider
 argument_list|(
 operator|new
-name|CustomerService
+name|CustomerServiceImpl
 argument_list|()
 argument_list|)
 argument_list|)
