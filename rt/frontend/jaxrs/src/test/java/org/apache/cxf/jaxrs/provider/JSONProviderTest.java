@@ -2255,11 +2255,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Enable once http://jira.codehaus.org/browse/JETTISON-104 gets resolved"
-argument_list|)
 specifier|public
 name|void
 name|testReadUnqualifiedCollection
@@ -2601,11 +2596,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Enable once http://jira.codehaus.org/browse/JETTISON-104 gets resolved"
-argument_list|)
 specifier|public
 name|void
 name|testReadQualifiedCollection
