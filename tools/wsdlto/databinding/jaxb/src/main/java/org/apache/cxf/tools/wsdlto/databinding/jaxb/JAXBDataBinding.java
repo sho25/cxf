@@ -379,6 +379,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|xpath
+operator|.
+name|XPathFactory
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|w3c
@@ -1008,20 +1020,6 @@ operator|.
 name|helpers
 operator|.
 name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|helpers
-operator|.
-name|XPathUtils
 import|;
 end_import
 
@@ -3345,9 +3343,9 @@ decl_stmt|;
 name|XPath
 name|p
 init|=
-name|XPathUtils
+name|XPathFactory
 operator|.
-name|getFactory
+name|newInstance
 argument_list|()
 operator|.
 name|newXPath
