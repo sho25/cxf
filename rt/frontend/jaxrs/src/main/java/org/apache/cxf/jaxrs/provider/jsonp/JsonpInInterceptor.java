@@ -213,7 +213,7 @@ name|put
 argument_list|(
 name|Message
 operator|.
-name|CONTENT_TYPE
+name|ACCEPT_CONTENT_TYPE
 argument_list|,
 name|getAcceptType
 argument_list|()
