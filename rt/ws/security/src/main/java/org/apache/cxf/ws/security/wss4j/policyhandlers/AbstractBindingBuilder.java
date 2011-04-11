@@ -4537,27 +4537,6 @@ name|AssertionWrapper
 operator|)
 name|tempTok
 decl_stmt|;
-name|part
-operator|=
-operator|new
-name|WSEncryptionPart
-argument_list|(
-name|assertionWrapper
-operator|.
-name|getId
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|part
-operator|.
-name|setElement
-argument_list|(
-name|assertionWrapper
-operator|.
-name|getElement
-argument_list|()
-argument_list|)
-expr_stmt|;
 comment|// TODO We only support using a KeyIdentifier for the moment
 name|SecurityTokenReference
 name|secRef
