@@ -1897,6 +1897,15 @@ name|getSOAPBody
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|SAAJInInterceptor
+operator|.
+name|replaceHeaders
+argument_list|(
+name|doc
+argument_list|,
+name|msg
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|doTimeLog
