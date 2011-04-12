@@ -396,12 +396,21 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+operator|(
 name|msg
 operator|.
 name|startsWith
 argument_list|(
 literal|"cvc-type.3.1.1: "
 argument_list|)
+operator|||
+name|msg
+operator|.
+name|startsWith
+argument_list|(
+literal|"cvc-type.3.2.2: "
+argument_list|)
+operator|)
 operator|&&
 name|msg
 operator|.
