@@ -60,11 +60,19 @@ name|String
 name|literalOrPattern
 parameter_list|)
 function_decl|;
-comment|/** Is numeric property equal to given number? */
+comment|/** Is numeric property equal to given double number? */
 name|CompleteCondition
 name|equalTo
 parameter_list|(
 name|double
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property equal to given long number? */
+name|CompleteCondition
+name|equalTo
+parameter_list|(
+name|long
 name|number
 parameter_list|)
 function_decl|;
@@ -92,11 +100,19 @@ name|String
 name|literalOrPattern
 parameter_list|)
 function_decl|;
-comment|/** Is numeric property different than given number? */
+comment|/** Is numeric property different than given double number? */
 name|CompleteCondition
 name|notEqualTo
 parameter_list|(
 name|double
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property different than given long number? */
+name|CompleteCondition
+name|notEqualTo
+parameter_list|(
+name|long
 name|number
 parameter_list|)
 function_decl|;
@@ -124,11 +140,27 @@ name|double
 name|number
 parameter_list|)
 function_decl|;
+comment|/** Is numeric property greater than given number? */
+name|CompleteCondition
+name|greaterThan
+parameter_list|(
+name|long
+name|number
+parameter_list|)
+function_decl|;
 comment|/** Is numeric property less than given number? */
 name|CompleteCondition
 name|lessThan
 parameter_list|(
 name|double
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property less than given number? */
+name|CompleteCondition
+name|lessThan
+parameter_list|(
+name|long
 name|number
 parameter_list|)
 function_decl|;
@@ -140,11 +172,27 @@ name|double
 name|number
 parameter_list|)
 function_decl|;
+comment|/** Is numeric property greater or equal to given number? */
+name|CompleteCondition
+name|greaterOrEqualTo
+parameter_list|(
+name|long
+name|number
+parameter_list|)
+function_decl|;
 comment|/** Is numeric property less or equal to given number? */
 name|CompleteCondition
 name|lessOrEqualTo
 parameter_list|(
 name|double
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property less or equal to given number? */
+name|CompleteCondition
+name|lessOrEqualTo
+parameter_list|(
+name|long
 name|number
 parameter_list|)
 function_decl|;
