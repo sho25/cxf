@@ -4653,13 +4653,6 @@ literal|" Conduit :"
 operator|+
 name|conduitName
 operator|+
-literal|"\nContent-Type: "
-operator|+
-name|connection
-operator|.
-name|getContentType
-argument_list|()
-operator|+
 literal|"\n"
 argument_list|)
 expr_stmt|;
