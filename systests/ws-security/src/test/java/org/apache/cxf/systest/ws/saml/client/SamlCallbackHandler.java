@@ -417,13 +417,6 @@ operator|new
 name|AttributeStatementBean
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|subjectBean
-operator|!=
-literal|null
-condition|)
-block|{
 name|attrBean
 operator|.
 name|setSubject
@@ -431,7 +424,6 @@ argument_list|(
 name|subjectBean
 argument_list|)
 expr_stmt|;
-block|}
 name|AttributeBean
 name|attributeBean
 init|=
