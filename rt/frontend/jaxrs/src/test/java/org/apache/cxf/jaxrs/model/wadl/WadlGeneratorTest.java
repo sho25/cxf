@@ -1513,6 +1513,20 @@ operator|new
 name|WadlGenerator
 argument_list|()
 decl_stmt|;
+name|wg
+operator|.
+name|setApplicationTitle
+argument_list|(
+literal|"My Application"
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setNamespacePrefix
+argument_list|(
+literal|"ns"
+argument_list|)
+expr_stmt|;
 name|ClassResourceInfo
 name|cri
 init|=
@@ -1586,6 +1600,20 @@ argument_list|()
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|checkDocs
+argument_list|(
+name|doc
+operator|.
+name|getDocumentElement
+argument_list|()
+argument_list|,
+literal|"My Application"
+argument_list|,
+literal|""
+argument_list|,
+literal|""
+argument_list|)
+expr_stmt|;
 name|checkGrammars
 argument_list|(
 name|doc
@@ -1624,11 +1652,11 @@ argument_list|(
 literal|0
 argument_list|)
 argument_list|,
-literal|"prefix1:thebook"
+literal|"ns1:thebook"
 argument_list|,
-literal|"prefix1:thebook2"
+literal|"ns1:thebook2"
 argument_list|,
-literal|"prefix1:thechapter"
+literal|"ns1:thechapter"
 argument_list|)
 expr_stmt|;
 block|}
