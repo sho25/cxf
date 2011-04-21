@@ -422,7 +422,7 @@ specifier|final
 name|String
 name|EVENT_TIMESTAMP_TAG
 init|=
-literal|"eventTimestamp"
+literal|"date"
 decl_stmt|;
 specifier|private
 specifier|static
