@@ -831,7 +831,10 @@ condition|(
 name|id
 operator|!=
 literal|null
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 name|id
 operator|.
 name|startsWith
@@ -840,6 +843,7 @@ literal|"<"
 argument_list|)
 condition|)
 block|{
+comment|// strip<>
 name|id
 operator|=
 name|id
@@ -857,14 +861,28 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+comment|// strip cid:
+if|if
+condition|(
+name|id
+operator|.
+name|startsWith
+argument_list|(
+literal|"cid:"
+argument_list|)
+condition|)
 block|{
-comment|//no Content-ID, set cxf default ID
 name|id
 operator|=
-literal|"Content-ID:<root.message@cxf.apache.org"
+name|id
+operator|.
+name|substring
+argument_list|(
+literal|4
+argument_list|)
 expr_stmt|;
 block|}
+comment|// urldecode. Is this bad even without cid:? What does decode do with malformed %-signs, anyhow?
 name|id
 operator|=
 name|URLDecoder
@@ -872,24 +890,24 @@ operator|.
 name|decode
 argument_list|(
 name|id
-operator|.
-name|startsWith
-argument_list|(
-literal|"cid:"
-argument_list|)
-condition|?
-name|id
-operator|.
-name|substring
-argument_list|(
-literal|4
-argument_list|)
-else|:
-name|id
 argument_list|,
 literal|"UTF-8"
 argument_list|)
 expr_stmt|;
+block|}
+if|if
+condition|(
+name|id
+operator|==
+literal|null
+condition|)
+block|{
+comment|//no Content-ID, set cxf default ID
+name|id
+operator|=
+literal|"root.message@cxf.apache.org"
+expr_stmt|;
+block|}
 name|AttachmentImpl
 name|att
 init|=
