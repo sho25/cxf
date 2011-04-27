@@ -1000,6 +1000,10 @@ block|}
 name|Method
 name|methodToInvoke
 init|=
+name|InjectionUtils
+operator|.
+name|checkProxy
+argument_list|(
 name|cri
 operator|.
 name|getMethodDispatcher
@@ -1009,9 +1013,10 @@ name|getMethod
 argument_list|(
 name|ori
 argument_list|)
+argument_list|,
+name|resourceObject
+argument_list|)
 decl_stmt|;
-comment|//InjectionUtils.checkProxy(
-comment|//    cri.getMethodDispatcher().getMethod(ori), resourceObject);
 name|List
 argument_list|<
 name|Object
