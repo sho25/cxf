@@ -133,7 +133,25 @@ name|client
 operator|.
 name|Node
 operator|.
-name|*
+name|ELEMENT_NODE
+import|;
+end_import
+
+begin_import
+import|import static
+name|com
+operator|.
+name|google
+operator|.
+name|gwt
+operator|.
+name|xml
+operator|.
+name|client
+operator|.
+name|Node
+operator|.
+name|TEXT_NODE
 import|;
 end_import
 

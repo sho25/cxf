@@ -93,14 +93,6 @@ name|TreeMap
 import|;
 end_import
 
-begin_comment
-comment|//import javax.xml.stream.XMLStreamException;
-end_comment
-
-begin_comment
-comment|//import javax.xml.stream.XMLStreamReader;
-end_comment
-
 begin_import
 import|import
 name|org
@@ -144,10 +136,6 @@ operator|.
 name|MessageImpl
 import|;
 end_import
-
-begin_comment
-comment|//import org.apache.cxf.staxutils.StaxUtils;
-end_comment
 
 begin_import
 import|import
@@ -225,10 +213,6 @@ name|Ignore
 import|;
 end_import
 
-begin_comment
-comment|//import org.junit.Ignore;
-end_comment
-
 begin_import
 import|import
 name|org
@@ -247,7 +231,7 @@ name|junit
 operator|.
 name|Assert
 operator|.
-name|*
+name|assertNotNull
 import|;
 end_import
 

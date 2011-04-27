@@ -255,7 +255,29 @@ name|GZIPOutInterceptor
 operator|.
 name|UseGzip
 operator|.
-name|*
+name|FORCE
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|common
+operator|.
+name|gzip
+operator|.
+name|GZIPOutInterceptor
+operator|.
+name|UseGzip
+operator|.
+name|YES
 import|;
 end_import
 
