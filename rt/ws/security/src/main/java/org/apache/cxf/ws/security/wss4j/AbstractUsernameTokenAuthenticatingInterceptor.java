@@ -1014,7 +1014,7 @@ name|isHashed
 init|=
 name|usernameToken
 operator|.
-name|isDerivedKey
+name|isHashed
 argument_list|()
 decl_stmt|;
 name|String
