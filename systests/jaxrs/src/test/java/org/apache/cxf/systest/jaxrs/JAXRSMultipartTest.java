@@ -3592,7 +3592,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"attachment;filename=java.jpg"
+literal|"form-data;name=file;filename=java.jpg"
 argument_list|,
 name|cd2
 operator|.

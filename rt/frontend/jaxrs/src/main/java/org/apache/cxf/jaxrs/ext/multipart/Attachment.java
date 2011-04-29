@@ -498,6 +498,13 @@ literal|"application/octet-stream"
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|cd
+operator|!=
+literal|null
+condition|)
+block|{
 name|headers
 operator|.
 name|putSingle
@@ -510,6 +517,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|headers
 operator|.
 name|putSingle
