@@ -2345,7 +2345,9 @@ name|localTransport
 init|=
 operator|new
 name|LocalTransportFactory
-argument_list|()
+argument_list|(
+name|bus
+argument_list|)
 decl_stmt|;
 name|dfm
 operator|.

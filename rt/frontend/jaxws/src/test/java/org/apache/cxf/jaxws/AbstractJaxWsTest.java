@@ -364,7 +364,9 @@ name|localTransport
 operator|=
 operator|new
 name|LocalTransportFactory
-argument_list|()
+argument_list|(
+name|bus
+argument_list|)
 expr_stmt|;
 name|localTransport
 operator|.
