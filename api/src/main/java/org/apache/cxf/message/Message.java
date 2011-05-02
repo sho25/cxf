@@ -228,11 +228,13 @@ name|SCHEMA_VALIDATION_ENABLED
 init|=
 literal|"schema-validation-enabled"
 decl_stmt|;
+comment|/**      * Boolean property specifying if the Java stack trace is returned as a        * SOAP fault message.      */
 name|String
 name|FAULT_STACKTRACE_ENABLED
 init|=
 literal|"faultStackTraceEnabled"
 decl_stmt|;
+comment|/**      * Boolean property specifying if the name of the exception that caused       * the Java stack trace is returned.      */
 name|String
 name|EXCEPTION_MESSAGE_CAUSE_ENABLED
 init|=
