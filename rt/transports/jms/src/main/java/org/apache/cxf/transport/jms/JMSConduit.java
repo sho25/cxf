@@ -436,7 +436,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JMSConduit is instantiated by the JMSTransportfactory which is selected by a client if the transport  * protocol starts with jms:// JMSConduit converts CXF Messages to JMS Messages and sends the request by using  * a JMS destination. If the Exchange is not oneway it then recevies the response and converts it to a CXF  * Message. This is then provided in the Exchange and also sent to the incomingObserver  */
+comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with jms://. JMSConduit converts CXF Messages to JMS Messages and sends the request by   * using a JMS destination. If the Exchange is not oneway it then recevies the response and converts it to   * a CXF Message. This is then provided in the Exchange and also sent to the incomingObserver.  */
 end_comment
 
 begin_class
@@ -596,7 +596,7 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Prepare the message for send out. The message will be sent after the caller has written the payload to      * the OutputStream of the message and calls the close method of the stream. In the JMS case the      * JMSOutputStream will then call back the sendExchange method of this class. {@inheritDoc}      */
+comment|/**      * Prepare the message to be sent. The message will be sent after the caller has written the payload to      * the OutputStream of the message and called the stream's close method. In the JMS case the      * JMSOutputStream will then call back the sendExchange method of this class. {@inheritDoc}      */
 specifier|public
 name|void
 name|prepare
@@ -791,7 +791,7 @@ return|return
 name|allListener
 return|;
 block|}
-comment|/**      * Send the JMS Request out and if not oneWay receive the response      *       * @param outMessage      * @param request      * @return inMessage      */
+comment|/**      * Send the JMS message and if the MEP is not oneway receive the response.      *       * @param exchange the Exchange containing the outgoing message      * @param request  the payload of the outgoing JMS message      */
 specifier|public
 name|void
 name|sendExchange
@@ -1995,7 +1995,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Here we just deal with the reply message      */
+comment|/**      * Process the reply message      */
 specifier|public
 name|void
 name|doReplyMessage
