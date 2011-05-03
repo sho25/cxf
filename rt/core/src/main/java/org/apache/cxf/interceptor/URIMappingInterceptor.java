@@ -2348,6 +2348,16 @@ range|:
 name|parts
 control|)
 block|{
+if|if
+condition|(
+name|part
+operator|.
+name|contains
+argument_list|(
+literal|"="
+argument_list|)
+condition|)
+block|{
 name|String
 index|[]
 name|keyValue
@@ -2377,6 +2387,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|queries
