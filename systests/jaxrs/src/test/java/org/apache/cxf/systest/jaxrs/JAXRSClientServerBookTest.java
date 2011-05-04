@@ -5433,7 +5433,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"{\"Books\":[{\"id\":123,\"name\":\"CXF\"}]}"
+literal|"{\"Book\":[{\"id\":123,\"name\":\"CXF\"}]}"
 argument_list|,
 name|IOUtils
 operator|.
