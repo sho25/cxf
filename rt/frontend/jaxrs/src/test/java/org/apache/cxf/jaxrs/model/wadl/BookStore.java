@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -571,6 +581,17 @@ name|int
 name|queryParam
 parameter_list|,
 annotation|@
+name|QueryParam
+argument_list|(
+literal|"a"
+argument_list|)
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|queryList
+parameter_list|,
+annotation|@
 name|Context
 name|HttpHeaders
 name|headers
@@ -687,7 +708,7 @@ literal|"chapter"
 argument_list|)
 specifier|public
 name|Chapter
-name|getChaper
+name|getChapter
 parameter_list|()
 block|{
 return|return
@@ -716,7 +737,7 @@ name|class
 argument_list|)
 specifier|public
 name|Response
-name|getChaper2
+name|getChapter2
 parameter_list|()
 block|{
 return|return
