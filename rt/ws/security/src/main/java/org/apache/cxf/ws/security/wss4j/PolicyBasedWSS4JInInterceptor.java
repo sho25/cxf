@@ -3801,6 +3801,7 @@ name|hasEndorsement
 operator|=
 literal|true
 expr_stmt|;
+break|break;
 block|}
 for|for
 control|(
