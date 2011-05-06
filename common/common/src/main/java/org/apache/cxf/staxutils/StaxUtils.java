@@ -3078,16 +3078,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|nsURI
-operator|.
-name|length
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
-if|if
-condition|(
 name|nsPrefix
 operator|.
 name|length
@@ -3131,7 +3121,6 @@ argument_list|,
 name|nsURI
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
