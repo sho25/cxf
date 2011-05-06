@@ -206,6 +206,12 @@ name|isAopProxy
 argument_list|(
 name|o
 argument_list|)
+operator|&&
+operator|(
+name|o
+operator|instanceof
+name|Advised
+operator|)
 condition|)
 block|{
 name|Advised

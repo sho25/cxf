@@ -950,7 +950,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Add annotationed Interceptors and Features to the Endpoint      * @param ep      */
+comment|/**      * Add annotated Interceptors and Features to the Endpoint      * @param ep      */
 specifier|protected
 name|void
 name|initializeAnnotationInterceptors
@@ -962,6 +962,44 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
+name|cls
+parameter_list|)
+block|{
+name|initializeAnnotationInterceptors
+argument_list|(
+name|ep
+argument_list|,
+operator|new
+name|Class
+argument_list|<
+name|?
+argument_list|>
+index|[]
+block|{
+name|cls
+block|}
+block|)
+function|;
+block|}
+end_class
+
+begin_comment
+comment|/**      * Add annotationed Interceptors and Features to the Endpoint      * @param ep      */
+end_comment
+
+begin_function
+specifier|protected
+name|void
+name|initializeAnnotationInterceptors
+parameter_list|(
+name|Endpoint
+name|ep
+parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+modifier|...
 name|cls
 parameter_list|)
 block|{
@@ -993,6 +1031,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_function
 specifier|protected
 name|boolean
 name|initializeAnnotationInterceptors
@@ -1151,8 +1192,8 @@ return|return
 name|hasAnnotation
 return|;
 block|}
-block|}
-end_class
+end_function
 
+unit|}
 end_unit
 
