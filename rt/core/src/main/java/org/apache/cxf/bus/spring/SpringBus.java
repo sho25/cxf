@@ -297,6 +297,19 @@ name|getParent
 argument_list|()
 expr_stmt|;
 block|}
+comment|// set the classLoader extension with the application context classLoader
+name|setExtension
+argument_list|(
+name|applicationContext
+operator|.
+name|getClassLoader
+argument_list|()
+argument_list|,
+name|ClassLoader
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 name|setExtension
 argument_list|(
 operator|new
