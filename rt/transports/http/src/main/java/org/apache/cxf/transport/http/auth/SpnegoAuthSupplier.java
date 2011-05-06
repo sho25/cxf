@@ -306,7 +306,14 @@ name|KERBEROS_OID
 init|=
 literal|"1.2.840.113554.1.2.2"
 decl_stmt|;
-comment|//private static final String SPNEGO_OID = "1.3.6.1.5.5.2";
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|SPNEGO_OID
+init|=
+literal|"1.3.6.1.5.5.2"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -669,14 +676,14 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
-comment|// TODO Is it correct to use kerberos oid instead of spnego here?
+comment|// need to use SPNEGO_OID
 name|Oid
 name|oid
 init|=
 operator|new
 name|Oid
 argument_list|(
-name|KERBEROS_OID
+name|SPNEGO_OID
 argument_list|)
 decl_stmt|;
 name|GSSContext
