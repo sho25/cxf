@@ -2369,6 +2369,15 @@ argument_list|(
 literal|"="
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|keyValue
+operator|.
+name|length
+operator|>=
+literal|2
+condition|)
+block|{
 name|queries
 operator|.
 name|put
@@ -2387,6 +2396,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 return|return
