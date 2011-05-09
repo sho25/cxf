@@ -201,7 +201,7 @@ decl_stmt|;
 comment|/**      * Just a flag to identify whether this holds sign element info or encr elements info      */
 specifier|private
 name|boolean
-name|signedElemets
+name|signedElements
 decl_stmt|;
 specifier|public
 name|SignedEncryptedElements
@@ -220,7 +220,7 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|signedElemets
+name|signedElements
 operator|=
 name|signedElements
 expr_stmt|;
@@ -280,14 +280,14 @@ operator|=
 name|pathVersion
 expr_stmt|;
 block|}
-comment|/**      * @return Returns the signedElemets.      */
+comment|/**      * @return Returns the signedElements.      */
 specifier|public
 name|boolean
 name|isSignedElemets
 parameter_list|()
 block|{
 return|return
-name|signedElemets
+name|signedElements
 return|;
 block|}
 specifier|public
@@ -504,7 +504,7 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|signedElemets
+name|signedElements
 condition|)
 block|{
 return|return
@@ -528,7 +528,7 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|signedElemets
+name|signedElements
 condition|)
 block|{
 return|return
