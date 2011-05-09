@@ -1803,9 +1803,9 @@ name|proxy
 operator|.
 name|testHeader1
 argument_list|(
-literal|"part"
-argument_list|,
 name|header
+argument_list|,
+literal|"part"
 argument_list|)
 decl_stmt|;
 name|assertNotNull

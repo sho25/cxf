@@ -166,7 +166,7 @@ literal|1
 argument_list|,
 name|annotations
 index|[
-literal|1
+literal|0
 index|]
 operator|.
 name|length
@@ -176,7 +176,7 @@ name|assertTrue
 argument_list|(
 name|annotations
 index|[
-literal|1
+literal|0
 index|]
 index|[
 literal|0
@@ -193,7 +193,7 @@ name|WebParam
 operator|)
 name|annotations
 index|[
-literal|1
+literal|0
 index|]
 index|[
 literal|0
