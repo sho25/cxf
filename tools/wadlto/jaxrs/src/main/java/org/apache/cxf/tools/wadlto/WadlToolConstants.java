@@ -114,9 +114,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|CFG_INTERFACENAME
+name|CFG_RESOURCENAME
 init|=
-literal|"interfacename"
+literal|"resourcename"
 decl_stmt|;
 specifier|public
 specifier|static
