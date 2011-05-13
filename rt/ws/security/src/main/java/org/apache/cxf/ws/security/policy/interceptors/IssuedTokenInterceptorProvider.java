@@ -1941,6 +1941,16 @@ name|WSS_SAML2_TOKEN_TYPE
 argument_list|)
 expr_stmt|;
 block|}
+name|token
+operator|.
+name|setToken
+argument_list|(
+name|assertionWrapper
+operator|.
+name|getElement
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|token
 return|;

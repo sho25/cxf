@@ -150,6 +150,8 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractSamlPolicyValidator
+extends|extends
+name|AbstractTokenPolicyValidator
 block|{
 comment|/**      * Check the holder-of-key requirements against the received assertion. The subject      * credential of the SAML Assertion must have been used to sign some portion of      * the message, thus showing proof-of-possession of the private/secret key. Alternatively,      * the subject credential of the SAML Assertion must match a client certificate credential      * when 2-way TLS is used.      * @param assertionWrapper the SAML Assertion wrapper object      * @param signedResults a list of all of the signed results      */
 specifier|public
