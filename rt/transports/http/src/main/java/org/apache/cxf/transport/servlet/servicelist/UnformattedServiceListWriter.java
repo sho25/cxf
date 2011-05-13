@@ -83,7 +83,7 @@ name|getContentType
 parameter_list|()
 block|{
 return|return
-literal|"text/plain; charset=UTF-8"
+literal|"text/html; charset=UTF-8"
 return|;
 block|}
 specifier|public
@@ -111,7 +111,7 @@ operator|.
 name|length
 operator|>
 literal|0
-operator|&&
+operator|||
 name|restDestinations
 operator|.
 name|length

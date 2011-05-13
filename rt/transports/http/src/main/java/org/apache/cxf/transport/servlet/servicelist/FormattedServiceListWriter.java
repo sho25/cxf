@@ -310,7 +310,22 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"<table>"
+literal|"<table "
+operator|+
+operator|(
+name|styleSheetPath
+operator|.
+name|endsWith
+argument_list|(
+literal|"stylesheet=1"
+argument_list|)
+condition|?
+literal|"cellpadding=\"1\" cellspacing=\"1\" border=\"1\" width=\"100%\""
+else|:
+literal|""
+operator|)
+operator|+
+literal|">"
 argument_list|)
 expr_stmt|;
 for|for
@@ -563,7 +578,22 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"<table>"
+literal|"<table "
+operator|+
+operator|(
+name|styleSheetPath
+operator|.
+name|endsWith
+argument_list|(
+literal|"stylesheet=1"
+argument_list|)
+condition|?
+literal|"cellpadding=\"1\" cellspacing=\"1\" border=\"1\" width=\"100%\""
+else|:
+literal|""
+operator|)
+operator|+
+literal|">"
 argument_list|)
 expr_stmt|;
 for|for
