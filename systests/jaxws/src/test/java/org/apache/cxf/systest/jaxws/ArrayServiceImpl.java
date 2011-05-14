@@ -55,8 +55,6 @@ name|ArrayServiceImpl
 implements|implements
 name|ArrayService
 block|{
-annotation|@
-name|Override
 specifier|public
 name|void
 name|initValueNotNull
