@@ -132,16 +132,20 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_BINDING
+init|=
+name|ToolConstants
+operator|.
+name|CFG_BINDING
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_WADLURL
 init|=
 literal|"wadl"
 decl_stmt|;
-comment|//public static final String CFG_NO_TYPES = ToolConstants.CFG_NO_TYPES;
-comment|//public static final String CFG_XJC_ARGS = ToolConstants.CFG_XJC_ARGS;
-comment|//public static final String CFG_BINDING = ToolConstants.CFG_BINDING;
-comment|//public static final String CFG_CMD_ARG = ToolConstants.CFG_CMD_ARG;
-comment|//public static final String CFG_INSTALL_DIR = ToolConstants.CFG_INSTALL_DIR;
-comment|//public static final String CFG_PLATFORM_VERSION = ToolConstants.CFG_PLATFORM_VERSION;
 specifier|private
 name|WadlToolConstants
 parameter_list|()
