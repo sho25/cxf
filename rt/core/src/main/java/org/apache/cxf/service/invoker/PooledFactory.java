@@ -120,7 +120,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Pool of instances contructed from the given factory      * @param factory      * @param max the absolute maximum number to create and pool      */
+comment|/**      * Pool of instances constructed from the given factory      * @param factory      * @param max the absolute maximum number to create and pool      */
 specifier|public
 name|PooledFactory
 parameter_list|(
@@ -142,7 +142,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Pool of instances contructed from the given factory      * @param factory      * @param max the absolute maximum number to create and pool      * @param createMore If the pool is empty, but max objects have already       * been constructed, should more be constructed on a per-request basis (and       * then discarded when done) or should requests block until instances are       * released back into the pool.       */
+comment|/**      * Pool of instances constructed from the given factory      * @param factory      * @param max the absolute maximum number to create and pool      * @param createMore If the pool is empty, but max objects have already       * been constructed, should more be constructed on a per-request basis (and       * then discarded when done) or should requests block until instances are       * released back into the pool.       */
 specifier|public
 name|PooledFactory
 parameter_list|(
@@ -207,7 +207,7 @@ operator|=
 name|createMore
 expr_stmt|;
 block|}
-comment|/**      * Pool constructed from the give Collection of objects.       * @param objs The collection of objects to pre-polulate the pool      */
+comment|/**      * Pool constructed from the give Collection of objects.       * @param objs The collection of objects to pre-populate the pool      */
 specifier|public
 name|PooledFactory
 parameter_list|(
