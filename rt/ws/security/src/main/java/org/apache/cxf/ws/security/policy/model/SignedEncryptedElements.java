@@ -281,9 +281,21 @@ name|pathVersion
 expr_stmt|;
 block|}
 comment|/**      * @return Returns the signedElements.      */
+annotation|@
+name|Deprecated
 specifier|public
 name|boolean
 name|isSignedElemets
+parameter_list|()
+block|{
+return|return
+name|signedElements
+return|;
+block|}
+comment|/**      * @return Returns the signedElements.      */
+specifier|public
+name|boolean
+name|isSignedElements
 parameter_list|()
 block|{
 return|return
