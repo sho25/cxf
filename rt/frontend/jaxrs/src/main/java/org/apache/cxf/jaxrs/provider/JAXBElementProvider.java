@@ -967,6 +967,10 @@ argument_list|(
 name|type
 argument_list|)
 operator|||
+operator|!
+name|isCollection
+operator|&&
+operator|(
 name|unmarshalAsJaxbElement
 operator|||
 name|jaxbElementClassMap
@@ -982,6 +986,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 name|XMLStreamReader
