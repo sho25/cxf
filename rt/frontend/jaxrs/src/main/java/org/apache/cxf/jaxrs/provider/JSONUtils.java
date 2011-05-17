@@ -636,6 +636,9 @@ parameter_list|,
 name|boolean
 name|writeXsiType
 parameter_list|,
+name|boolean
+name|attributesAsElements
+parameter_list|,
 name|TypeConverter
 name|converter
 parameter_list|)
@@ -664,6 +667,13 @@ argument_list|(
 name|namespaceMap
 argument_list|)
 decl_stmt|;
+name|c
+operator|.
+name|setSupressAtAttributes
+argument_list|(
+name|attributesAsElements
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|converter
