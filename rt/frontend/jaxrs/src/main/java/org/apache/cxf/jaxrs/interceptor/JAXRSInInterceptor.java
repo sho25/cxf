@@ -1015,6 +1015,15 @@ literal|"NO_ROOT_EXC"
 argument_list|,
 name|BUNDLE
 argument_list|,
+name|message
+operator|.
+name|get
+argument_list|(
+name|Message
+operator|.
+name|REQUEST_URI
+argument_list|)
+argument_list|,
 name|rawPath
 argument_list|)
 decl_stmt|;
