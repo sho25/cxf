@@ -114,6 +114,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_TYPES_PACKAGENAME
+init|=
+literal|"typesPackagename"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_RESOURCENAME
 init|=
 literal|"resourcename"
