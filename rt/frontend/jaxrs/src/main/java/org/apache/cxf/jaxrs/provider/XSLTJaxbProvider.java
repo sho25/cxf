@@ -1892,6 +1892,8 @@ operator|new
 name|TemplatesImpl
 argument_list|(
 name|templates
+argument_list|,
+name|uriResolver
 argument_list|)
 decl_stmt|;
 name|MessageContext
@@ -2356,6 +2358,10 @@ name|Templates
 name|templates
 decl_stmt|;
 specifier|private
+name|URIResolver
+name|resolver
+decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -2396,6 +2402,9 @@ name|TemplatesImpl
 parameter_list|(
 name|Templates
 name|templates
+parameter_list|,
+name|URIResolver
+name|resolver
 parameter_list|)
 block|{
 name|this
@@ -2403,6 +2412,12 @@ operator|.
 name|templates
 operator|=
 name|templates
+expr_stmt|;
+name|this
+operator|.
+name|resolver
+operator|=
+name|resolver
 expr_stmt|;
 block|}
 specifier|public
@@ -2473,6 +2488,13 @@ operator|.
 name|newTransformer
 argument_list|()
 decl_stmt|;
+name|tr
+operator|.
+name|setURIResolver
+argument_list|(
+name|resolver
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|Map
