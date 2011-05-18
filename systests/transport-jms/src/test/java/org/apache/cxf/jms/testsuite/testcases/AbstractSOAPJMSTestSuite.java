@@ -471,6 +471,16 @@ name|qServiceName
 block|}
 argument_list|)
 decl_stmt|;
+name|EmbeddedJMSBrokerLauncher
+operator|.
+name|updateWsdlExtensors
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|,
+name|wsdlString
+argument_list|)
+expr_stmt|;
 return|return
 name|service
 operator|.
