@@ -6493,7 +6493,7 @@ decl_stmt|;
 name|boolean
 name|javax2
 init|=
-name|s1
+name|s2
 operator|.
 name|startsWith
 argument_list|(
