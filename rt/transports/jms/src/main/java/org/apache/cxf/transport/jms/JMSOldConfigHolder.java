@@ -700,7 +700,7 @@ name|serverBehavior
 expr_stmt|;
 block|}
 comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object       * @param target       */
-specifier|private
+specifier|protected
 name|JMSEndpoint
 name|getExtensorsAndConfig
 parameter_list|(
@@ -1039,6 +1039,26 @@ argument_list|,
 name|isConduit
 argument_list|)
 decl_stmt|;
+return|return
+name|configureEndpoint
+argument_list|(
+name|isConduit
+argument_list|,
+name|endpoint
+argument_list|)
+return|;
+block|}
+specifier|protected
+name|JMSConfiguration
+name|configureEndpoint
+parameter_list|(
+name|boolean
+name|isConduit
+parameter_list|,
+name|JMSEndpoint
+name|endpoint
+parameter_list|)
+block|{
 if|if
 condition|(
 name|address
@@ -1877,7 +1897,7 @@ name|setPassword
 argument_list|(
 name|address
 operator|.
-name|getConnectionUserName
+name|getConnectionPassword
 argument_list|()
 argument_list|)
 expr_stmt|;
