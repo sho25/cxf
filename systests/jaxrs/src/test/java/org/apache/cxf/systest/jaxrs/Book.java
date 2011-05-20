@@ -254,7 +254,7 @@ annotation|@
 name|GET
 specifier|public
 name|Book
-name|getState
+name|retrieveState
 parameter_list|()
 block|{
 return|return
