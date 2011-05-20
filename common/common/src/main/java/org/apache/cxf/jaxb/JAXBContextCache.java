@@ -1512,6 +1512,13 @@ name|ex
 operator|.
 name|getMessage
 argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|ex
+operator|.
+name|getMessage
+argument_list|()
 operator|.
 name|contains
 argument_list|(
