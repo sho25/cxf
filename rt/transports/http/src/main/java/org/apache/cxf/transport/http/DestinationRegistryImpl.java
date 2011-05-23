@@ -414,6 +414,13 @@ argument_list|(
 name|path
 argument_list|)
 operator|||
+literal|"/"
+operator|.
+name|equals
+argument_list|(
+name|path
+argument_list|)
+operator|||
 operator|(
 name|address
 operator|.
