@@ -1203,7 +1203,7 @@ name|put
 argument_list|(
 name|WadlToolConstants
 operator|.
-name|CFG_TYPES_PACKAGENAME
+name|CFG_SCHEMA_PACKAGENAME
 argument_list|,
 literal|"http://superbooks=custom.books.schema"
 argument_list|)
@@ -1341,7 +1341,7 @@ name|put
 argument_list|(
 name|WadlToolConstants
 operator|.
-name|CFG_SERVER
+name|CFG_IMPL
 argument_list|,
 literal|"true"
 argument_list|)
@@ -1490,7 +1490,7 @@ name|put
 argument_list|(
 name|WadlToolConstants
 operator|.
-name|CFG_SERVER
+name|CFG_IMPL
 argument_list|,
 literal|"true"
 argument_list|)

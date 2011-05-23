@@ -84,11 +84,11 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|CFG_SERVER
+name|CFG_IMPL
 init|=
 name|ToolConstants
 operator|.
-name|CFG_SERVER
+name|CFG_IMPL
 decl_stmt|;
 specifier|public
 specifier|static
@@ -114,9 +114,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|CFG_TYPES_PACKAGENAME
+name|CFG_SCHEMA_PACKAGENAME
 init|=
-literal|"typesPackagename"
+literal|"schemaPackagename"
 decl_stmt|;
 specifier|public
 specifier|static
