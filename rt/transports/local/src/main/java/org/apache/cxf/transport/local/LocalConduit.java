@@ -577,6 +577,11 @@ operator|.
 name|flush
 argument_list|()
 expr_stmt|;
+name|out
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|CachedOutputStream
 name|stream
 init|=
@@ -601,6 +606,15 @@ name|stream
 operator|.
 name|getInputStream
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|copy
+operator|.
+name|removeContent
+argument_list|(
+name|CachedOutputStream
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 comment|// Create a new incoming exchange and store the original exchange for the response
