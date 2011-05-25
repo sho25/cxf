@@ -679,7 +679,11 @@ expr_stmt|;
 operator|new
 name|Server
 argument_list|(
-literal|"http://localhost:9001/"
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/"
 argument_list|)
 expr_stmt|;
 name|System

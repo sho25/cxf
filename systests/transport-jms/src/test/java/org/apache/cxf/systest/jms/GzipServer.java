@@ -114,9 +114,13 @@ specifier|final
 name|String
 name|PORT
 init|=
-literal|"9000"
+name|allocatePort
+argument_list|(
+name|GzipServer
+operator|.
+name|class
+argument_list|)
 decl_stmt|;
-comment|//allocatePort(GzipServer.class);
 specifier|protected
 name|void
 name|run

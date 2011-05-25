@@ -3490,7 +3490,11 @@ decl_stmt|;
 name|String
 name|endpointUrl
 init|=
-literal|"http://localhost:9006/SOAPDispatchService/SoapDispatchPort"
+literal|"http://localhost:"
+operator|+
+name|greeterPort
+operator|+
+literal|"/SOAPDispatchService/SoapDispatchPort"
 decl_stmt|;
 name|Service
 name|service
