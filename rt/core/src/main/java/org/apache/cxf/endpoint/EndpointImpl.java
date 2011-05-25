@@ -867,6 +867,21 @@ operator|=
 name|features
 expr_stmt|;
 block|}
+comment|/**      * Returns the hashCode bsed on the EndpointInfo so that this object      * can be used as a map key.      */
+annotation|@
+name|Override
+specifier|public
+name|int
+name|hashCode
+parameter_list|()
+block|{
+return|return
+name|endpointInfo
+operator|.
+name|hashCode
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 
