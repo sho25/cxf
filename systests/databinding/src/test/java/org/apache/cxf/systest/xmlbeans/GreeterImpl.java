@@ -51,7 +51,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -67,7 +67,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -85,7 +85,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -99,7 +99,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -113,7 +113,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -139,11 +139,11 @@ literal|"SOAPService"
 argument_list|,
 name|targetNamespace
 operator|=
-literal|"http://apache.org/hello_world_soap_http/xmlbeans"
+literal|"http://apache.org/hello_world_soap_http_xmlbeans/xmlbeans"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"org.apache.hello_world_soap_http.xmlbeans.Greeter"
+literal|"org.apache.hello_world_soap_http_xmlbeans.xmlbeans.Greeter"
 argument_list|)
 specifier|public
 class|class
@@ -191,7 +191,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -204,7 +204,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -296,7 +296,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.

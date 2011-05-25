@@ -51,7 +51,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -65,7 +65,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -79,7 +79,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -93,7 +93,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloworldsoaphttp
+name|helloworldsoaphttpjibx
 operator|.
 name|jibx
 operator|.
@@ -121,11 +121,11 @@ literal|"SOAPService"
 argument_list|,
 name|targetNamespace
 operator|=
-literal|"http://apache.org/hello_world_soap_http/jibx"
+literal|"http://apache.org/hello_world_soap_http_jibx/jibx"
 argument_list|,
 name|endpointInterface
 operator|=
-literal|"org.apache.hello_world_soap_http.jibx.Greeter"
+literal|"org.apache.hello_world_soap_http_jibx.jibx.Greeter"
 argument_list|)
 specifier|public
 class|class
@@ -173,7 +173,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloworldsoaphttp
+name|helloworldsoaphttpjibx
 operator|.
 name|jibx
 operator|.
@@ -187,7 +187,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloworldsoaphttp
+name|helloworldsoaphttpjibx
 operator|.
 name|jibx
 operator|.

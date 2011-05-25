@@ -411,7 +411,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -427,7 +427,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -445,7 +445,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -459,7 +459,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -473,7 +473,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -487,7 +487,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_xmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -563,7 +563,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://apache.org/hello_world_soap_http/xmlbeans"
+literal|"http://apache.org/hello_world_soap_http_xmlbeans/xmlbeans"
 argument_list|,
 literal|"SOAPService"
 argument_list|)
@@ -1320,7 +1320,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://apache.org/hello_world_soap_http/xmlbeans"
+literal|"http://apache.org/hello_world_soap_http_xmlbeans/xmlbeans"
 argument_list|,
 literal|"SoapPort"
 argument_list|)
@@ -1635,7 +1635,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://apache.org/hello_world_soap_http/xmlbeans"
+literal|"http://apache.org/hello_world_soap_http_xmlbeans/xmlbeans"
 argument_list|,
 literal|"SoapPort"
 argument_list|)
@@ -1698,7 +1698,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -1711,7 +1711,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -1773,7 +1773,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.
@@ -1788,7 +1788,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloWorldSoapHttp
+name|helloWorldSoapHttpXmlbeans
 operator|.
 name|xmlbeans
 operator|.

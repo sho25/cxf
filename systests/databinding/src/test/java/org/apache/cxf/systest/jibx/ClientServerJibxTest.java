@@ -287,7 +287,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -301,7 +301,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -315,7 +315,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -329,7 +329,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world_soap_http
+name|hello_world_soap_http_jibx
 operator|.
 name|jibx
 operator|.
@@ -343,7 +343,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|helloworldsoaphttp
+name|helloworldsoaphttpjibx
 operator|.
 name|jibx
 operator|.
@@ -407,7 +407,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://apache.org/hello_world_soap_http/jibx"
+literal|"http://apache.org/hello_world_soap_http_jibx/jibx"
 argument_list|,
 literal|"SOAPService"
 argument_list|)
