@@ -308,6 +308,11 @@ operator|.
 name|toByteArray
 argument_list|()
 decl_stmt|;
+synchronized|synchronized
+init|(
+name|inbound
+init|)
+block|{
 name|inbound
 operator|.
 name|add
@@ -315,6 +320,7 @@ argument_list|(
 name|bytes
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|LOG

@@ -435,6 +435,11 @@ name|bytes
 argument_list|)
 expr_stmt|;
 block|}
+synchronized|synchronized
+init|(
+name|outbound
+init|)
+block|{
 name|outbound
 operator|.
 name|add
@@ -442,6 +447,7 @@ argument_list|(
 name|bytes
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
