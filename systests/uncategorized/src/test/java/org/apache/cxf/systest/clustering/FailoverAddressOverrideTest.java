@@ -982,17 +982,6 @@ operator|+
 name|address
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"starting replicated target: "
-operator|+
-name|address
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Failed to start greeter"

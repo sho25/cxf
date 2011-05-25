@@ -89,15 +89,7 @@ name|void
 name|preDestroy
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"PreDestroy called"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("PreDestroy called");
 block|}
 specifier|public
 name|Book
@@ -190,17 +182,7 @@ parameter_list|)
 throws|throws
 name|BookNotFoundFault
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----invoking getBook with id: "
-operator|+
-name|id
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("----invoking getBook with id: " + id);
 name|Book
 name|book
 init|=

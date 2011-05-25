@@ -482,17 +482,7 @@ name|Continuation
 name|cont
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Suspending invocation for "
-operator|+
-name|name
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Suspending invocation for " + name);
 try|try
 block|{
 name|cont
@@ -570,17 +560,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Getting continuation for "
-operator|+
-name|name
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Getting continuation for " + name);
 synchronized|synchronized
 init|(
 name|suspended

@@ -392,20 +392,7 @@ name|surname
 argument_list|)
 expr_stmt|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Saying hi to "
-operator|+
-name|sb
-operator|.
-name|toString
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Saying hi to " + sb.toString());
 return|return
 literal|"Hi "
 operator|+
@@ -467,19 +454,7 @@ return|;
 block|}
 block|}
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Invocation for "
-operator|+
-name|name
-operator|+
-literal|" has been suspended"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Invocation for " + name + " has been suspended");
 return|return
 literal|true
 return|;
@@ -545,17 +520,7 @@ name|Continuation
 name|cont
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Suspending invocation for "
-operator|+
-name|name
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Suspending invocation for " + name);
 try|try
 block|{
 name|long
@@ -659,17 +624,7 @@ name|String
 name|name
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Getting continuation for "
-operator|+
-name|name
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Getting continuation for " + name);
 synchronized|synchronized
 init|(
 name|suspended

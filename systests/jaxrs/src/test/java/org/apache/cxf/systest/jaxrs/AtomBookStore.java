@@ -384,20 +384,7 @@ block|{
 name|init
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----books: "
-operator|+
-name|books
-operator|.
-name|size
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("----books: " + books.size());
 block|}
 annotation|@
 name|Context
@@ -959,17 +946,7 @@ parameter_list|)
 throws|throws
 name|BookNotFoundFault
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----invoking getBook with id: "
-operator|+
-name|id
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("----invoking getBook with id: " + id);
 name|Book
 name|book
 init|=
@@ -1073,17 +1050,7 @@ parameter_list|)
 throws|throws
 name|BookNotFoundFault
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----invoking getBook with id: "
-operator|+
-name|id
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("----invoking getBook with id: " + id);
 name|Book
 name|book
 init|=
