@@ -970,11 +970,9 @@ name|attrs
 operator|.
 name|addAttribute
 argument_list|(
-name|XMLConstants
-operator|.
-name|DEFAULT_NS_PREFIX
+literal|""
 argument_list|,
-literal|null
+literal|""
 argument_list|,
 name|XMLConstants
 operator|.
