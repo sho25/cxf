@@ -147,6 +147,19 @@ argument_list|>
 name|testComplexMapResult
 parameter_list|()
 function_decl|;
+parameter_list|<
+name|T
+parameter_list|>
+name|T
+name|getGeneric
+parameter_list|(
+name|Collection
+argument_list|<
+name|T
+argument_list|>
+name|collection
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
