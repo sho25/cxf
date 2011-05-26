@@ -1246,6 +1246,10 @@ elseif|else
 if|if
 condition|(
 name|originalRequestURI
+operator|!=
+literal|null
+operator|&&
+name|originalRequestURI
 operator|.
 name|endsWith
 argument_list|(
