@@ -132,7 +132,7 @@ name|binding
 argument_list|,
 name|Phase
 operator|.
-name|PRE_PROTOCOL
+name|PRE_PROTOCOL_FRONTEND
 argument_list|)
 expr_stmt|;
 name|addAfter

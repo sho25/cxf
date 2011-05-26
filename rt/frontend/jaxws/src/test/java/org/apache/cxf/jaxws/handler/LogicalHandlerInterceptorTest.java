@@ -683,7 +683,7 @@ name|assertEquals
 argument_list|(
 literal|"unexpected phase"
 argument_list|,
-literal|"pre-protocol"
+literal|"pre-protocol-frontend"
 argument_list|,
 name|li
 operator|.

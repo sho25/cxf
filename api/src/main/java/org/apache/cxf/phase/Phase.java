@@ -131,6 +131,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|PRE_PROTOCOL_FRONTEND
+init|=
+literal|"pre-protocol-frontend"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|PRE_PROTOCOL_ENDING
 init|=
 literal|"pre-protocol-ending"

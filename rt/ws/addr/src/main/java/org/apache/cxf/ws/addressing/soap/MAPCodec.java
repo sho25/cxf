@@ -730,11 +730,6 @@ operator|.
 name|PRE_PROTOCOL
 argument_list|)
 expr_stmt|;
-name|addBefore
-argument_list|(
-literal|"org.apache.cxf.jaxws.handler.soap.SOAPHandlerInterceptor"
-argument_list|)
-expr_stmt|;
 name|transformer
 operator|=
 operator|new
