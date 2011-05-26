@@ -967,6 +967,16 @@ argument_list|,
 name|expClass
 argument_list|)
 expr_stmt|;
+name|expClass
+operator|.
+name|setClassJavaDoc
+argument_list|(
+name|faultMessage
+operator|.
+name|getDocumentation
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class
