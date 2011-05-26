@@ -1165,6 +1165,14 @@ name|ROOT_PROVIDER
 init|=
 literal|"service.root.provider"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DOC_LOCATION
+init|=
+literal|"wadl.location"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final

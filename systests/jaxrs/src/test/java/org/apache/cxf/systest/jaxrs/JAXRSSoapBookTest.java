@@ -5206,9 +5206,6 @@ name|features
 operator|.
 name|add
 argument_list|(
-operator|(
-name|AbstractFeature
-operator|)
 name|testFeature
 argument_list|)
 expr_stmt|;
