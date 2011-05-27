@@ -608,7 +608,7 @@ name|CFG_RESOURCENAME
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// find the base path
+comment|// set the base path
 name|sg
 operator|.
 name|setWadlPath
