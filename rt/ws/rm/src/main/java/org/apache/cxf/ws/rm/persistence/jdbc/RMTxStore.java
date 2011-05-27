@@ -55,16 +55,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|math
-operator|.
-name|BigDecimal
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|sql
 operator|.
 name|Blob
@@ -462,7 +452,7 @@ literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
 literal|"ACKS_TO VARCHAR(1024) NOT NULL, "
 operator|+
-literal|"LAST_MSG_NO BIGINT, "
+literal|"LAST_MSG_NO DECIMAL(19, 0), "
 operator|+
 literal|"ENDPOINT_ID VARCHAR(1024), "
 operator|+
@@ -480,11 +470,11 @@ literal|"CREATE TABLE CXF_RM_SRC_SEQUENCES "
 operator|+
 literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
-literal|"CUR_MSG_NO BIGINT DEFAULT 1 NOT NULL, "
+literal|"CUR_MSG_NO DECIMAL(19, 0) DEFAULT 1 NOT NULL, "
 operator|+
 literal|"LAST_MSG CHAR(1), "
 operator|+
-literal|"EXPIRY BIGINT, "
+literal|"EXPIRY DECIMAL(19, 0), "
 operator|+
 literal|"OFFERING_SEQ_ID VARCHAR(256), "
 operator|+
@@ -502,7 +492,7 @@ literal|"CREATE TABLE {0} "
 operator|+
 literal|"(SEQ_ID VARCHAR(256) NOT NULL, "
 operator|+
-literal|"MSG_NO BIGINT NOT NULL, "
+literal|"MSG_NO DECIMAL(19, 0) NOT NULL, "
 operator|+
 literal|"SEND_TO VARCHAR(256), "
 operator|+
@@ -2942,16 +2932,12 @@ argument_list|)
 expr_stmt|;
 name|stmt
 operator|.
-name|setBigDecimal
+name|setLong
 argument_list|(
 name|i
 operator|++
 argument_list|,
-operator|new
-name|BigDecimal
-argument_list|(
 name|nr
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|stmt
@@ -3043,18 +3029,14 @@ expr_stmt|;
 block|}
 name|updateSrcSequenceStmt
 operator|.
-name|setBigDecimal
+name|setLong
 argument_list|(
 literal|1
 argument_list|,
-operator|new
-name|BigDecimal
-argument_list|(
 name|seq
 operator|.
 name|getCurrentMessageNr
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|updateSrcSequenceStmt
