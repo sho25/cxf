@@ -2002,7 +2002,14 @@ parameter_list|)
 block|{
 name|javaDoc
 operator|=
+name|JavaInterface
+operator|.
+name|formatJavaDoc
+argument_list|(
 name|doc
+argument_list|,
+literal|"     "
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public

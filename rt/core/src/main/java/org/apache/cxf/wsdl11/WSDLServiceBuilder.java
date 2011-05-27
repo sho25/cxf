@@ -1250,7 +1250,7 @@ name|doc
 init|=
 name|DOMUtils
 operator|.
-name|getContent
+name|getRawContent
 argument_list|(
 name|el
 operator|.
