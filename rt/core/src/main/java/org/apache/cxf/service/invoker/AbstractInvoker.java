@@ -1339,7 +1339,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Given a method, which may come from an interface, and a targetClass used      * in the current AOP invocation, find the most specific method if there is      * one. E.g. the method may be IFoo.bar() and the target class may be      * DefaultFoo. In this case, the method may be DefaultFoo.bar(). This      * enables attributes on that method to be found.      *       * @param method method to be invoked, which may come from an interface      * @param targetClass target class for the curren invocation. May be      *<code>null</code> or may not even implement the method.      * @return the more specific method, or the original method if the      *         targetClass doesn't specialize it or implement it or is null      */
+comment|/**      * Given a method, which may come from an interface, and a targetClass used      * in the current AOP invocation, find the most specific method if there is      * one. E.g. the method may be IFoo.bar() and the target class may be      * DefaultFoo. In this case, the method may be DefaultFoo.bar(). This      * enables attributes on that method to be found.      *       * @param method method to be invoked, which may come from an interface      * @param targetClass target class for the current invocation. May be      *<code>null</code> or may not even implement the method.      * @return the more specific method, or the original method if the      *         targetClass doesn't specialize it or implement it or is null      */
 specifier|public
 specifier|static
 name|Method
