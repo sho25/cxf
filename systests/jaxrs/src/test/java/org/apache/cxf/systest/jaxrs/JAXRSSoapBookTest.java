@@ -5129,7 +5129,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|401
+literal|404
 argument_list|,
 name|webClient
 operator|.
