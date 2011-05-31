@@ -513,6 +513,7 @@ return|;
 block|}
 comment|/**      * Creates a proxy object that can be used to make remote invocations.      *      * @return the proxy. You must cast the returned object to the appropriate class before using it.      */
 specifier|public
+specifier|synchronized
 name|Object
 name|create
 parameter_list|()
