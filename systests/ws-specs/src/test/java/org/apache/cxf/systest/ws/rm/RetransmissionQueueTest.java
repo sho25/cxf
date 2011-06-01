@@ -25,7 +25,7 @@ name|java
 operator|.
 name|io
 operator|.
-name|IOException
+name|OutputStream
 import|;
 end_import
 
@@ -176,6 +176,20 @@ operator|.
 name|interceptor
 operator|.
 name|LoggingOutInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|interceptor
+operator|.
+name|MessageSenderInterceptor
 import|;
 end_import
 
@@ -726,6 +740,30 @@ argument_list|(
 name|out
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|getExtension
+argument_list|(
+name|RMManager
+operator|.
+name|class
+argument_list|)
+operator|.
+name|getRMAssertion
+argument_list|()
+operator|.
+name|getBaseRetransmissionInterval
+argument_list|()
+operator|.
+name|setMilliseconds
+argument_list|(
+operator|new
+name|Long
+argument_list|(
+literal|5000
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|GreeterService
 name|gs
 init|=
@@ -767,6 +805,18 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+name|RMManager
+name|manager
+init|=
+name|bus
+operator|.
+name|getExtension
+argument_list|(
+name|RMManager
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 try|try
 block|{
 name|greeter
@@ -783,12 +833,29 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+comment|// no exception shall be thrown when the message is queued for retransmission
 name|fail
 argument_list|(
-literal|"fault thrown after queued for retransmission"
+literal|"fault thrown after queued for retransmission: "
+operator|+
+name|e
 argument_list|)
 expr_stmt|;
 block|}
+comment|// the message shall be in the queue
+name|assertFalse
+argument_list|(
+literal|"RetransmissionQueue empty"
+argument_list|,
+name|manager
+operator|.
+name|getRetransmissionQueue
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|tes
 operator|.
 name|setWorking
@@ -799,7 +866,7 @@ expr_stmt|;
 name|long
 name|wait
 init|=
-literal|3000
+literal|10000
 decl_stmt|;
 while|while
 condition|(
@@ -844,21 +911,11 @@ operator|-
 name|start
 expr_stmt|;
 block|}
-name|RMManager
-name|manager
-init|=
-name|bus
-operator|.
-name|getExtension
+comment|// the message shall no longer be in the queue
+name|assertTrue
 argument_list|(
-name|RMManager
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
-name|boolean
-name|empty
-init|=
+literal|"RetransmissionQueue not empty"
+argument_list|,
 name|manager
 operator|.
 name|getRetransmissionQueue
@@ -866,15 +923,10 @@ argument_list|()
 operator|.
 name|isEmpty
 argument_list|()
-decl_stmt|;
-name|assertTrue
-argument_list|(
-literal|"RetransmissionQueue not cleared"
-argument_list|,
-name|empty
 argument_list|)
 expr_stmt|;
 block|}
+comment|/*      * an interceptor to trigger an error occuring at the sending phase.      */
 specifier|static
 class|class
 name|TransmissionErrorSimulator
@@ -897,7 +949,17 @@ name|super
 argument_list|(
 name|Phase
 operator|.
-name|WRITE
+name|PREPARE_SEND
+argument_list|)
+expr_stmt|;
+name|addAfter
+argument_list|(
+name|MessageSenderInterceptor
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -967,17 +1029,29 @@ name|working
 condition|)
 block|{
 comment|// triggers a simulated error
-throw|throw
-operator|new
-name|Fault
+try|try
+block|{
+name|message
+operator|.
+name|getContent
 argument_list|(
-operator|new
-name|IOException
-argument_list|(
-literal|"simulated transmission error"
+name|OutputStream
+operator|.
+name|class
 argument_list|)
-argument_list|)
-throw|;
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+comment|//
+block|}
 block|}
 block|}
 comment|/**          * @return the working          */
