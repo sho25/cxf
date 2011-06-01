@@ -334,6 +334,14 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|String
+name|STS_TOKEN_ON_BEHALF_OF
+init|=
+literal|"ws-security.sts.token.on-behalf-of"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|Set
 argument_list|<
 name|String
@@ -417,6 +425,8 @@ block|,
 name|BST_TOKEN_VALIDATOR
 block|,
 name|SAML_CALLBACK_HANDLER
+block|,
+name|STS_TOKEN_ON_BEHALF_OF
 block|}
 argument_list|)
 argument_list|)
