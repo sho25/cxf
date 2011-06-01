@@ -553,6 +553,20 @@ name|ws
 operator|.
 name|security
 operator|.
+name|CustomTokenPrincipal
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|WSConstants
 import|;
 end_import
@@ -2584,12 +2598,16 @@ decl_stmt|;
 if|if
 condition|(
 name|derivedKeyPrincipal
+operator|||
+name|p
+operator|instanceof
+name|CustomTokenPrincipal
 condition|)
 block|{
-comment|// If it is a derived key principal then let it be a SecurityContext
-comment|// principal only if no other principals are available.
-comment|// The derived key principal will still be visible to
-comment|// custom interceptors as part of the WSHandlerConstants.RECV_RESULTS value
+comment|// If it is a derived key principal or a Custom Token Principal then let it
+comment|// be a SecurityContext principal only if no other principals are available.
+comment|// The principal will still be visible to custom interceptors as part of the
+comment|// WSHandlerConstants.RECV_RESULTS value
 return|return
 name|wsResult
 operator|.
