@@ -670,7 +670,7 @@ name|list
 init|=
 name|extensions
 operator|.
-name|get
+name|remove
 argument_list|(
 name|bundleId
 argument_list|)
