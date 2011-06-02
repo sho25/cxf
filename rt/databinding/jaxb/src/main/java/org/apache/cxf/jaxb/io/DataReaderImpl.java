@@ -396,6 +396,13 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|msg
+operator|.
+name|contains
+argument_list|(
+literal|":Id"
+argument_list|)
+operator|&&
 operator|(
 name|msg
 operator|.
@@ -410,14 +417,21 @@ name|startsWith
 argument_list|(
 literal|"cvc-type.3.2.2: "
 argument_list|)
-operator|)
-operator|&&
+operator|||
 name|msg
 operator|.
-name|contains
+name|startsWith
 argument_list|(
-literal|":Id"
+literal|"cvc-complex-type.3.1.1: "
 argument_list|)
+operator|||
+name|msg
+operator|.
+name|startsWith
+argument_list|(
+literal|"cvc-complex-type.3.2.2: "
+argument_list|)
+operator|)
 condition|)
 block|{
 return|return
