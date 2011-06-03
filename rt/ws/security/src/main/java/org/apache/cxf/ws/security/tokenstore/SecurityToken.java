@@ -285,6 +285,11 @@ specifier|private
 name|String
 name|encrKeySha1Value
 decl_stmt|;
+comment|/**      * A hash code associated with this token. Note that it is not the hashcode of this       * token, but a hash corresponding to an association with this token. It could refer      * to the hash of another SecurityToken which maps to this token.       */
+specifier|private
+name|int
+name|associatedHash
+decl_stmt|;
 comment|/**      * The tokenType      */
 specifier|private
 name|String
@@ -1165,6 +1170,30 @@ parameter_list|()
 block|{
 return|return
 name|crypto
+return|;
+block|}
+comment|/**      * Set a hash code associated with this token. Note that it is not the hashcode of this       * token, but a hash corresponding to an association with this token.      * @param hash a hash code associated with this token      */
+specifier|public
+name|void
+name|setAssociatedHash
+parameter_list|(
+name|int
+name|hash
+parameter_list|)
+block|{
+name|associatedHash
+operator|=
+name|hash
+expr_stmt|;
+block|}
+comment|/**      * Get a hash code associated with this token.      * @return a hash code associated with this token.      */
+specifier|public
+name|int
+name|getAssociatedHash
+parameter_list|()
+block|{
+return|return
+name|associatedHash
 return|;
 block|}
 block|}

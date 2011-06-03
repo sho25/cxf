@@ -110,6 +110,14 @@ name|String
 name|id
 parameter_list|)
 function_decl|;
+comment|/**      * Returns the<code>Token</code> by the associated hash.       * @param hashCode      * @return the<code>Token</code> by the associated hash.       */
+name|SecurityToken
+name|getTokenByAssociatedHash
+parameter_list|(
+name|int
+name|hashCode
+parameter_list|)
+function_decl|;
 comment|/**      * Removes all expired tokens.        */
 name|void
 name|removeExpiredTokens
