@@ -115,6 +115,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -223,6 +237,14 @@ name|AbstractConduitSelector
 implements|implements
 name|ConduitSelector
 block|{
+specifier|protected
+specifier|static
+specifier|final
+name|String
+name|KEEP_CONDUIT_ALIVE
+init|=
+literal|"KeepConduitAlive"
+decl_stmt|;
 specifier|protected
 name|Conduit
 name|selectedConduit
@@ -547,6 +569,26 @@ name|Exchange
 name|exchange
 parameter_list|)
 block|{
+comment|// Clients expecting explicit InputStream responses
+comment|// will need to keep low level conduits operating on InputStreams open
+comment|// and will be responsible for closing the streams
+if|if
+condition|(
+name|MessageUtils
+operator|.
+name|isTrue
+argument_list|(
+name|exchange
+operator|.
+name|get
+argument_list|(
+name|KEEP_CONDUIT_ALIVE
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 try|try
 block|{
 if|if

@@ -927,6 +927,13 @@ name|getCause
 argument_list|()
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|ex
+operator|!=
+literal|null
+condition|)
+block|{
 name|getLogger
 argument_list|()
 operator|.
@@ -948,6 +955,7 @@ name|failover
 block|}
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|failover
 return|;

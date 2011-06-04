@@ -893,8 +893,6 @@ argument_list|(
 name|BookServerRestSoap
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2134,7 +2132,7 @@ argument_list|(
 name|client
 argument_list|)
 operator|.
-name|getResponseContext
+name|getRequestContext
 argument_list|()
 decl_stmt|;
 name|props
@@ -5459,6 +5457,9 @@ operator|.
 name|equals
 argument_list|(
 name|e
+operator|.
+name|getCause
+argument_list|()
 operator|.
 name|getMessage
 argument_list|()
