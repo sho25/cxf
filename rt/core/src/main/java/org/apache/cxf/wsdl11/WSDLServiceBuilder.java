@@ -1466,6 +1466,8 @@ argument_list|,
 name|name
 argument_list|,
 name|endpointName
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
