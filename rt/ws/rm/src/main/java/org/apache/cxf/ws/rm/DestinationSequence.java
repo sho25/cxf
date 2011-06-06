@@ -821,11 +821,6 @@ name|wakeupAll
 argument_list|()
 expr_stmt|;
 block|}
-name|purgeAcknowledged
-argument_list|(
-name|messageNumber
-argument_list|)
-expr_stmt|;
 name|RMAssertion
 name|rma
 init|=
