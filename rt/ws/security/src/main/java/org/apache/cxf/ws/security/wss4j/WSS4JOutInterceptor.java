@@ -572,11 +572,14 @@ name|result
 operator|==
 literal|null
 operator|&&
-name|key
-operator|==
 name|WSHandlerConstants
 operator|.
 name|RECV_RESULTS
+operator|.
+name|equals
+argument_list|(
+name|key
+argument_list|)
 operator|&&
 operator|!
 name|this

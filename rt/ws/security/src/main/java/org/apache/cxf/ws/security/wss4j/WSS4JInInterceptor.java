@@ -1222,11 +1222,14 @@ name|result
 operator|==
 literal|null
 operator|&&
-name|key
-operator|==
 name|WSHandlerConstants
 operator|.
 name|SEND_SIGV
+operator|.
+name|equals
+argument_list|(
+name|key
+argument_list|)
 operator|&&
 name|this
 operator|.
