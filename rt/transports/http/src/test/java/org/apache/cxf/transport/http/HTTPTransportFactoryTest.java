@@ -135,6 +135,13 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|factory
+operator|!=
+literal|null
+condition|)
+block|{
 try|try
 block|{
 name|factory
@@ -173,6 +180,7 @@ operator|>
 literal|0
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
