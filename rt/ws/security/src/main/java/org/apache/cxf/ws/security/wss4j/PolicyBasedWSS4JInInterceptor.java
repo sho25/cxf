@@ -1258,8 +1258,6 @@ operator|==
 literal|null
 condition|)
 block|{
-try|try
-block|{
 name|url
 operator|=
 operator|new
@@ -1271,15 +1269,6 @@ operator|)
 name|o
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|ex
-parameter_list|)
-block|{
-comment|//ignore
-block|}
 block|}
 if|if
 condition|(

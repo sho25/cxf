@@ -1258,9 +1258,9 @@ name|setTime
 argument_list|(
 name|currentTime
 operator|+
-literal|300
+literal|300L
 operator|*
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 block|}

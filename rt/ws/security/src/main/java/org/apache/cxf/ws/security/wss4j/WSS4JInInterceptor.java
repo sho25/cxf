@@ -3334,7 +3334,7 @@ return|return
 operator|new
 name|TokenStoreCallbackHandler
 argument_list|(
-name|cbHandler
+literal|null
 argument_list|,
 name|store
 argument_list|)
@@ -3654,7 +3654,7 @@ argument_list|<
 name|?
 argument_list|>
 operator|)
-name|val
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
