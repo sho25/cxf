@@ -639,20 +639,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
-operator|.
-name|MessageImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|phase
 operator|.
 name|PhaseChainCache
@@ -4092,6 +4078,11 @@ operator|=
 name|config
 expr_stmt|;
 block|}
+comment|// Note that some conduit selectors may update Message.ENDPOINT_ADDRESS
+comment|// after the conduit selector has been prepared but before the actual
+comment|// invocation thus it is also important to have baseURI and currentURI
+comment|// synched up with the latest endpoint address, after a successful proxy
+comment|// or web client invocation has returned
 specifier|protected
 name|void
 name|prepareConduitSelector
@@ -4240,6 +4231,21 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|message
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|BASE_PATH
+argument_list|,
+name|getBaseURI
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 specifier|protected
 specifier|static
@@ -4441,34 +4447,6 @@ name|i2
 argument_list|,
 name|i3
 argument_list|)
-return|;
-block|}
-specifier|protected
-name|Message
-name|createSimpleMessage
-parameter_list|()
-block|{
-name|Message
-name|m
-init|=
-operator|new
-name|MessageImpl
-argument_list|()
-decl_stmt|;
-name|m
-operator|.
-name|put
-argument_list|(
-name|Message
-operator|.
-name|PROTOCOL_HEADERS
-argument_list|,
-name|getHeaders
-argument_list|()
-argument_list|)
-expr_stmt|;
-return|return
-name|m
 return|;
 block|}
 specifier|protected
