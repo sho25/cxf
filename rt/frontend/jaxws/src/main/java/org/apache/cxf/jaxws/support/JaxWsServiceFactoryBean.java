@@ -3757,6 +3757,16 @@ argument_list|,
 name|inputAction
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|operation
+operator|.
+name|getOutput
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|operation
 operator|.
 name|getOutput
@@ -3795,6 +3805,7 @@ literal|"Response"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
