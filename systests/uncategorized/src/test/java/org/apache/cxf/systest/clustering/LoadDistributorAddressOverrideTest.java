@@ -690,6 +690,18 @@ argument_list|(
 literal|"fred"
 argument_list|)
 decl_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+name|getCurrentEndpoint
+argument_list|(
+name|greeter
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|assertNotNull
 argument_list|(
 literal|"expected non-null response"
