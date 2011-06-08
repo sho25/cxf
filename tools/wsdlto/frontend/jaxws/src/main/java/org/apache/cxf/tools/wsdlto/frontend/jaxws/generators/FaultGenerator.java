@@ -516,12 +516,9 @@ name|CFG_FAULT_SERIAL_VERSION_UID
 argument_list|)
 condition|)
 block|{
-name|FaultSerialVersionUID
+name|Object
 name|faultSerialVersionUID
 init|=
-operator|(
-name|FaultSerialVersionUID
-operator|)
 name|penv
 operator|.
 name|get
