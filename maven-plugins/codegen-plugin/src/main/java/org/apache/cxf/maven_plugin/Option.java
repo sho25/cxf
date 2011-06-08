@@ -45,28 +45,6 @@ name|List
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|tools
-operator|.
-name|wsdlto
-operator|.
-name|frontend
-operator|.
-name|jaxws
-operator|.
-name|generators
-operator|.
-name|FaultSerialVersionUID
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -238,7 +216,7 @@ name|Boolean
 name|noTypes
 decl_stmt|;
 comment|/**      * specify how to generate fault Exception's SUID, default is NONE      */
-name|FaultSerialVersionUID
+name|String
 name|faultSerialVersionUID
 decl_stmt|;
 comment|/**      * Uses @Generated annotation in all generated java classes if the flag is set to true.      */
@@ -854,7 +832,7 @@ name|noTypes
 expr_stmt|;
 block|}
 specifier|public
-name|FaultSerialVersionUID
+name|String
 name|getFaultSerialVersionUID
 parameter_list|()
 block|{
@@ -863,9 +841,7 @@ name|faultSerialVersionUID
 operator|==
 literal|null
 condition|?
-name|FaultSerialVersionUID
-operator|.
-name|NONE
+literal|"none"
 else|:
 name|faultSerialVersionUID
 return|;
@@ -874,7 +850,7 @@ specifier|public
 name|void
 name|setFaultSerialVersionUID
 parameter_list|(
-name|FaultSerialVersionUID
+name|String
 name|faultSerialVersionUID
 parameter_list|)
 block|{
