@@ -545,6 +545,13 @@ name|FaultSerialVersionUID
 operator|.
 name|FQCN
 argument_list|)
+operator|||
+literal|"FQCN"
+operator|.
+name|equals
+argument_list|(
+name|faultSerialVersionUID
+argument_list|)
 condition|)
 block|{
 name|setAttributes
@@ -571,6 +578,13 @@ argument_list|(
 name|FaultSerialVersionUID
 operator|.
 name|TIMESTAMP
+argument_list|)
+operator|||
+literal|"TIMESTAMP"
+operator|.
+name|equals
+argument_list|(
+name|faultSerialVersionUID
 argument_list|)
 condition|)
 block|{
