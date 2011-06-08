@@ -5790,7 +5790,7 @@ operator|+
 operator|(
 name|ttl
 operator|*
-literal|1000
+literal|1000L
 operator|)
 argument_list|)
 expr_stmt|;
@@ -7318,7 +7318,10 @@ name|Fault
 argument_list|(
 literal|"Could not find properties file "
 operator|+
-name|url
+operator|(
+name|String
+operator|)
+name|o
 argument_list|,
 name|LOG
 argument_list|)
