@@ -467,9 +467,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|CFG_USE_FQCN_FAULT_SERIAL_VERSION_UID
+name|CFG_FAULT_SERIAL_VERSION_UID
 init|=
-literal|"useFQCNForFaultSerialVersionUID"
+literal|"faultSerialVersionUID"
 decl_stmt|;
 specifier|public
 specifier|static
