@@ -68,6 +68,9 @@ parameter_list|(
 name|PrintWriter
 name|writer
 parameter_list|,
+name|String
+name|baseAddress
+parameter_list|,
 name|AbstractDestination
 index|[]
 name|soapDestinations
