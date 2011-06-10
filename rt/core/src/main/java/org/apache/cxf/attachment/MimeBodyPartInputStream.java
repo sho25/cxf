@@ -941,7 +941,11 @@ operator|(
 name|len
 operator|-
 operator|(
+operator|(
 name|i
+operator|-
+name|off
+operator|)
 operator|+
 literal|2
 operator|)
