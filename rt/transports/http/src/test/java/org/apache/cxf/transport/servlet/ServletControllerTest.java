@@ -1069,6 +1069,9 @@ name|updateDests
 parameter_list|(
 name|HttpServletRequest
 name|request
+parameter_list|,
+name|AbstractHTTPDestination
+name|d
 parameter_list|)
 block|{          }
 annotation|@

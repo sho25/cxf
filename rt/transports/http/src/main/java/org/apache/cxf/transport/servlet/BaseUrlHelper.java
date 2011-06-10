@@ -320,11 +320,6 @@ name|String
 name|absAddress
 parameter_list|)
 block|{
-synchronized|synchronized
-init|(
-name|dest
-init|)
-block|{
 name|dest
 operator|.
 name|getEndpointInfo
@@ -374,7 +369,6 @@ argument_list|(
 name|absAddress
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}
