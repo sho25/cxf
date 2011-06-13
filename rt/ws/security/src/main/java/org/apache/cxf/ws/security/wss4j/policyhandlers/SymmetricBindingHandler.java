@@ -957,36 +957,7 @@ name|initializeTokens
 parameter_list|()
 block|{
 comment|//Setting up encryption token and signature token
-name|Token
-name|sigTok
-init|=
-name|getSignatureToken
-argument_list|()
-operator|.
-name|getToken
-argument_list|()
-decl_stmt|;
-comment|//Token encrTok = getEncryptionToken().getToken();
-if|if
-condition|(
-name|sigTok
-operator|instanceof
-name|IssuedToken
-condition|)
-block|{
-comment|//IssuedToken issuedToken = (IssuedToken)sigTok;
-comment|//REVISIT - WS-Trust STS token retrieval
-block|}
-elseif|else
-if|if
-condition|(
-name|sigTok
-operator|instanceof
-name|SecureConversationToken
-condition|)
-block|{
-comment|//REVISIT - SecureConversation token retrieval
-block|}
+comment|/*         Token sigTok = getSignatureToken().getToken();         //Token encrTok = getEncryptionToken().getToken();                  if (sigTok instanceof IssuedToken) {             //IssuedToken issuedToken = (IssuedToken)sigTok;                          //REVISIT - WS-Trust STS token retrieval         } else if (sigTok instanceof SecureConversationToken) {             //REVISIT - SecureConversation token retrieval         }         */
 block|}
 specifier|private
 name|void
@@ -1027,22 +998,9 @@ init|=
 name|getSignedParts
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|encryptionToken
-operator|==
-literal|null
-operator|&&
-name|encrParts
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
+comment|//if (encryptionToken == null&& encrParts.size()> 0) {
 comment|//REVISIT - nothing to encrypt?
-block|}
+comment|//}
 if|if
 condition|(
 name|encryptionToken
@@ -1136,24 +1094,15 @@ operator|==
 literal|null
 condition|)
 block|{
-if|if
-condition|(
-name|tokenId
-operator|==
-literal|null
-operator|||
-name|tokenId
-operator|.
-name|length
-argument_list|()
-operator|==
-literal|0
-condition|)
-block|{
+comment|//if (tokenId == null || tokenId.length() == 0) {
 comment|//REVISIT - no tokenId?   Exception?
-block|}
+comment|//}
 if|if
 condition|(
+name|tokenId
+operator|!=
+literal|null
+operator|&&
 name|tokenId
 operator|.
 name|startsWith
@@ -1731,15 +1680,9 @@ name|sigTokId
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|sigTok
-operator|==
-literal|null
-condition|)
-block|{
+comment|//if (sigTok == null) {
 comment|//REVISIT - no token?
-block|}
+comment|//}
 name|boolean
 name|tokIncluded
 init|=

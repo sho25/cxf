@@ -409,6 +409,13 @@ argument_list|(
 name|previousSoapMessage
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|token
+operator|!=
+literal|null
+condition|)
+block|{
 name|callback
 operator|.
 name|setToken
@@ -416,6 +423,7 @@ argument_list|(
 name|token
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 else|else

@@ -2060,17 +2060,11 @@ name|getToken
 argument_list|()
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|securityTok
-operator|!=
-literal|null
-condition|)
-block|{
+comment|//if (securityTok != null) {
 comment|//do we need to sign this as well?
 comment|//String id = addWsuIdToElement(el);
 comment|//sigParts.add(new WSEncryptionPart(id));
-block|}
+comment|//}
 name|addEncryptedKeyElement
 argument_list|(
 name|el

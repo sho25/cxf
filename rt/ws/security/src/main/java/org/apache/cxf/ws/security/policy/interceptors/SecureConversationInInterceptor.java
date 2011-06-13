@@ -2829,19 +2829,9 @@ name|cancelToken
 argument_list|)
 expr_stmt|;
 block|}
-elseif|else
-if|if
-condition|(
-name|requestType
-operator|.
-name|endsWith
-argument_list|(
-literal|"/Renew"
-argument_list|)
-condition|)
-block|{
+comment|//else if (requestType.endsWith("/Renew")) {
 comment|//REVISIT - implement
-block|}
+comment|//}
 name|writer
 operator|.
 name|writeEndElement

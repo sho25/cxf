@@ -1295,22 +1295,9 @@ name|ex
 argument_list|)
 throw|;
 block|}
-if|if
-condition|(
-name|encryptionToken
-operator|==
-literal|null
-operator|&&
-name|encrParts
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
+comment|//if (encryptionToken == null&& encrParts.size()> 0) {
 comment|//REVISIT - no token to encrypt with
-block|}
+comment|//}
 if|if
 condition|(
 name|encryptionToken

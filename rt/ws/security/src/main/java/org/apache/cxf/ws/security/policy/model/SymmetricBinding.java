@@ -250,18 +250,10 @@ name|EncryptionToken
 name|encryptionToken
 parameter_list|)
 block|{
-if|if
-condition|(
-name|this
-operator|.
-name|protectionToken
-operator|!=
-literal|null
-condition|)
-block|{
+comment|//if (this.protectionToken != null) {
 comment|// throw new WSSPolicyException("Cannot use an EncryptionToken in a " +
 comment|// "SymmetricBinding when there is a ProtectionToken");
-block|}
+comment|//}
 name|this
 operator|.
 name|encryptionToken
@@ -288,25 +280,11 @@ name|ProtectionToken
 name|protectionToken
 parameter_list|)
 block|{
-if|if
-condition|(
-name|this
-operator|.
-name|encryptionToken
-operator|!=
-literal|null
-operator|||
-name|this
-operator|.
-name|signatureToken
-operator|!=
-literal|null
-condition|)
-block|{
+comment|//if (this.encryptionToken != null || this.signatureToken != null) {
 comment|// throw new WSSPolicyException("Cannot use a ProtectionToken in a " +
 comment|// "SymmetricBinding when there is a SignatureToken or an" +
 comment|// "EncryptionToken");
-block|}
+comment|//}
 name|this
 operator|.
 name|protectionToken
@@ -333,18 +311,10 @@ name|SignatureToken
 name|signatureToken
 parameter_list|)
 block|{
-if|if
-condition|(
-name|this
-operator|.
-name|protectionToken
-operator|!=
-literal|null
-condition|)
-block|{
+comment|//if (this.protectionToken != null) {
 comment|// throw new WSSPolicyException("Cannot use a SignatureToken in a " +
 comment|// "SymmetricBinding when there is a ProtectionToken");
-block|}
+comment|//}
 name|this
 operator|.
 name|signatureToken
