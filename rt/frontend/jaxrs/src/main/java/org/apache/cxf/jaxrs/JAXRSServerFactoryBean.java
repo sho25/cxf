@@ -635,14 +635,6 @@ condition|)
 block|{
 name|serviceFactory
 operator|.
-name|setServiceName
-argument_list|(
-name|getServiceName
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|serviceFactory
-operator|.
 name|create
 argument_list|()
 expr_stmt|;

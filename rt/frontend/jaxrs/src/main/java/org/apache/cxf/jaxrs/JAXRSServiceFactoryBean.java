@@ -357,6 +357,15 @@ name|name
 expr_stmt|;
 block|}
 specifier|public
+name|QName
+name|getServiceName
+parameter_list|()
+block|{
+return|return
+name|serviceName
+return|;
+block|}
+specifier|public
 name|void
 name|setEnableStaticResolution
 parameter_list|(
