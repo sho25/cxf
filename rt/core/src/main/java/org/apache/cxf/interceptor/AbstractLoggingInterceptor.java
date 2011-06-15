@@ -505,7 +505,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|// Just transform the XML message
+comment|// Just transform the XML message when the cos has content
 if|if
 condition|(
 name|isPrettyLogging
@@ -525,6 +525,13 @@ argument_list|)
 operator|>=
 literal|0
 operator|)
+operator|&&
+name|cos
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 name|Transformer
