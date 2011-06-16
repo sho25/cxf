@@ -727,6 +727,12 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+comment|// Flush the writer to make sure the message is wrote
+name|writer
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
 block|}
 elseif|else
 if|if
