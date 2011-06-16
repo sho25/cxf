@@ -727,7 +727,7 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-comment|// Flush the writer to make sure the message is wrote
+comment|// Flushing the writer to make sure the message is written
 name|writer
 operator|.
 name|flush
