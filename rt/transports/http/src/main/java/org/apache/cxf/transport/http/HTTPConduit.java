@@ -3519,8 +3519,7 @@ operator|.
 name|HTTP_MOVED_TEMP
 case|:
 case|case
-name|HttpURLConnection
-literal|.307
+literal|307
 case|:
 name|connection
 operator|=
