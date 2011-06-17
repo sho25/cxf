@@ -4945,6 +4945,8 @@ operator|new
 name|ToolException
 argument_list|(
 name|msg
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
