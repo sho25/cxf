@@ -1777,6 +1777,11 @@ condition|(
 literal|null
 operator|==
 name|seq
+operator|||
+name|seq
+operator|.
+name|isExpired
+argument_list|()
 condition|)
 block|{
 comment|// TODO: better error handling
