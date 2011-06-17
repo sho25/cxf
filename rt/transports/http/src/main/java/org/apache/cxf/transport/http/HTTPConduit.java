@@ -6512,6 +6512,9 @@ operator|.
 name|HTTP_MOVED_TEMP
 case|:
 comment|// 302
+case|case
+literal|307
+case|:
 name|msg
 operator|+=
 literal|" that returned location header '"
