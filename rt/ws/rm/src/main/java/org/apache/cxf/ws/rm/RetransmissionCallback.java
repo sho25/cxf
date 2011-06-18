@@ -135,6 +135,24 @@ name|RMStore
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|rm
+operator|.
+name|v200702
+operator|.
+name|Identifier
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment

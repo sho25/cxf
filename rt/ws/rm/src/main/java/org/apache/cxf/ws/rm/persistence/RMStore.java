@@ -57,7 +57,7 @@ name|ws
 operator|.
 name|rm
 operator|.
-name|Identifier
+name|SourceSequence
 import|;
 end_import
 
@@ -73,7 +73,9 @@ name|ws
 operator|.
 name|rm
 operator|.
-name|SourceSequence
+name|v200702
+operator|.
+name|Identifier
 import|;
 end_import
 

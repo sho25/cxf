@@ -39,16 +39,6 @@ name|BeforeClass
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Test
-import|;
-end_import
-
 begin_comment
 comment|/**  * A simulated-large message version of ClientPersistenceTest.  */
 end_comment
@@ -133,21 +123,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testRecovery
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-name|super
-operator|.
-name|testRecovery
-argument_list|()
-expr_stmt|;
-block|}
+comment|/*    @Test      public void testRecovery() throws Exception {         super.testRecovery();     }   */
 block|}
 end_class
 

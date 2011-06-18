@@ -29,6 +29,24 @@ name|QName
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|rm
+operator|.
+name|v200702
+operator|.
+name|SequenceFaultType
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -135,7 +153,8 @@ block|{
 return|return
 name|sequenceFault
 operator|.
-name|faultCode
+name|getFaultCode
+argument_list|()
 return|;
 block|}
 specifier|public

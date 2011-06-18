@@ -379,10 +379,9 @@ argument_list|)
 expr_stmt|;
 name|action
 operator|=
-name|RMConstants
+name|RM10Constants
 operator|.
-name|getCreateSequenceAction
-argument_list|()
+name|CREATE_SEQUENCE_ACTION
 expr_stmt|;
 name|assertTrue
 argument_list|(

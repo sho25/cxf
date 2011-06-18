@@ -782,6 +782,8 @@ operator|.
 name|createFault
 argument_list|(
 name|sf
+argument_list|,
+name|message
 argument_list|)
 argument_list|)
 operator|.
@@ -1070,10 +1072,9 @@ name|aim
 operator|.
 name|put
 argument_list|(
-name|RMConstants
+name|RM10Constants
 operator|.
-name|getRMAssertionQName
-argument_list|()
+name|RMASSERTION_QNAME
 argument_list|,
 name|ais
 argument_list|)

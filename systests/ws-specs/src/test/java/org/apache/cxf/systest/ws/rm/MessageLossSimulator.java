@@ -340,13 +340,6 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
-name|RMContextUtils
-operator|.
-name|ensureExposedVersion
-argument_list|(
-name|maps
-argument_list|)
-expr_stmt|;
 name|String
 name|action
 init|=
@@ -401,11 +394,6 @@ condition|)
 block|{
 return|return;
 block|}
-synchronized|synchronized
-init|(
-name|this
-init|)
-block|{
 name|appMessageCount
 operator|++
 expr_stmt|;
@@ -421,7 +409,6 @@ operator|)
 condition|)
 block|{
 return|return;
-block|}
 block|}
 name|InterceptorChain
 name|chain

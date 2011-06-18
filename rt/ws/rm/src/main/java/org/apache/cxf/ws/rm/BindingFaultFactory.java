@@ -31,6 +31,20 @@ name|Fault
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -45,6 +59,9 @@ name|createFault
 parameter_list|(
 name|SequenceFault
 name|sf
+parameter_list|,
+name|Message
+name|msg
 parameter_list|)
 function_decl|;
 name|String
