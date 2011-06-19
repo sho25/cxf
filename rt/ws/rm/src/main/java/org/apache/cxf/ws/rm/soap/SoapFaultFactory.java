@@ -489,7 +489,7 @@ name|setSubCode
 argument_list|(
 name|sf
 operator|.
-name|getSubCode
+name|getFaultCode
 argument_list|()
 argument_list|)
 expr_stmt|;

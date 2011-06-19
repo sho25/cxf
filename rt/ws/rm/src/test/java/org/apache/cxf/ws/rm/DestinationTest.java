@@ -812,9 +812,6 @@ name|UNKNOWN_SEQUENCE_FAULT_QNAME
 argument_list|,
 name|ex
 operator|.
-name|getSequenceFault
-argument_list|()
-operator|.
 name|getFaultCode
 argument_list|()
 argument_list|)
