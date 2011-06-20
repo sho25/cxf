@@ -2915,6 +2915,21 @@ argument_list|(
 literal|"Running wsdl2java in fork mode..."
 argument_list|)
 expr_stmt|;
+name|getLog
+argument_list|()
+operator|.
+name|debug
+argument_list|(
+literal|"Running wsdl2java in fork mode with args "
+operator|+
+name|Arrays
+operator|.
+name|asList
+argument_list|(
+name|args
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|Commandline
 name|cmd
 init|=
