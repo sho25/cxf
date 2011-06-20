@@ -177,26 +177,12 @@ name|PolicyComponent
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
-name|PolicyContainingAssertion
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
 name|AsymmetricBinding
 extends|extends
 name|SymmetricAsymmetricBindingBase
-implements|implements
-name|PolicyContainingAssertion
 block|{
 specifier|private
 name|InitiatorToken

@@ -2946,7 +2946,7 @@ name|keySize
 init|=
 literal|256
 decl_stmt|;
-name|int
+name|long
 name|ttl
 init|=
 literal|300000
@@ -3142,11 +3142,7 @@ operator|.
 name|getTime
 argument_list|()
 operator|+
-operator|(
 name|ttl
-operator|*
-literal|1000
-operator|)
 argument_list|)
 expr_stmt|;
 name|SecurityToken
