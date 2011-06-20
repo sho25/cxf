@@ -747,7 +747,7 @@ argument_list|)
 expr_stmt|;
 name|m
 operator|=
-name|IssueOperation
+name|CancelOperation
 operator|.
 name|class
 operator|.
@@ -775,7 +775,7 @@ argument_list|)
 expr_stmt|;
 name|m
 operator|=
-name|IssueOperation
+name|RenewOperation
 operator|.
 name|class
 operator|.
@@ -803,7 +803,7 @@ argument_list|)
 expr_stmt|;
 name|m
 operator|=
-name|IssueOperation
+name|ValidateOperation
 operator|.
 name|class
 operator|.
@@ -831,7 +831,7 @@ argument_list|)
 expr_stmt|;
 name|m
 operator|=
-name|IssueOperation
+name|KeyExchangeTokenOperation
 operator|.
 name|class
 operator|.
@@ -859,7 +859,7 @@ argument_list|)
 expr_stmt|;
 name|m
 operator|=
-name|IssueOperation
+name|RequestCollectionOperation
 operator|.
 name|class
 operator|.
@@ -892,8 +892,11 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-comment|//Should not happen as nothing will work.  All operations will
-comment|//end up throwing UnsupportedOpertation
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 specifier|protected
