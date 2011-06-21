@@ -403,7 +403,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -413,7 +414,8 @@ name|contains
 argument_list|(
 literal|"No SAML CallbackHandler available"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -468,7 +470,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -478,7 +481,8 @@ name|contains
 argument_list|(
 literal|"Wrong SAML Version"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -653,7 +657,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -663,7 +668,8 @@ name|contains
 argument_list|(
 literal|"No SAML CallbackHandler available"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -720,7 +726,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -730,7 +737,8 @@ name|contains
 argument_list|(
 literal|"Wrong SAML Version"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -766,7 +774,8 @@ literal|25
 argument_list|)
 argument_list|)
 decl_stmt|;
-assert|assert
+name|assertTrue
+argument_list|(
 name|result
 operator|.
 name|equals
@@ -778,7 +787,8 @@ argument_list|(
 literal|50
 argument_list|)
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|SamlCallbackHandler
@@ -846,7 +856,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -856,7 +867,8 @@ name|contains
 argument_list|(
 literal|"SAML token security failure"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 comment|/**      * Some negative tests. Send a sender-vouches assertion as a SupportingToken...this will      * fail as the provider will demand that there is a signature covering both the assertion      * and the message body.      */
@@ -1002,7 +1014,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -1012,7 +1025,8 @@ name|contains
 argument_list|(
 literal|"Assertion fails sender-vouches requirements"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 annotation|@
@@ -1138,7 +1152,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -1148,7 +1163,8 @@ name|contains
 argument_list|(
 literal|"No SAML CallbackHandler available"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -1205,7 +1221,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-assert|assert
+name|assertTrue
+argument_list|(
 name|ex
 operator|.
 name|getMessage
@@ -1215,7 +1232,8 @@ name|contains
 argument_list|(
 literal|"Wrong SAML Version"
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -1251,7 +1269,8 @@ literal|25
 argument_list|)
 argument_list|)
 decl_stmt|;
-assert|assert
+name|assertTrue
+argument_list|(
 name|result
 operator|.
 name|equals
@@ -1263,7 +1282,8 @@ argument_list|(
 literal|50
 argument_list|)
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -1382,7 +1402,8 @@ literal|25
 argument_list|)
 argument_list|)
 decl_stmt|;
-assert|assert
+name|assertTrue
+argument_list|(
 name|result
 operator|.
 name|equals
@@ -1394,7 +1415,8 @@ argument_list|(
 literal|50
 argument_list|)
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -1525,7 +1547,8 @@ literal|25
 argument_list|)
 argument_list|)
 decl_stmt|;
-assert|assert
+name|assertTrue
+argument_list|(
 name|result
 operator|.
 name|equals
@@ -1537,7 +1560,8 @@ argument_list|(
 literal|50
 argument_list|)
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -1662,7 +1686,8 @@ literal|25
 argument_list|)
 argument_list|)
 decl_stmt|;
-assert|assert
+name|assertTrue
+argument_list|(
 name|result
 operator|.
 name|equals
@@ -1674,7 +1699,8 @@ argument_list|(
 literal|50
 argument_list|)
 argument_list|)
-assert|;
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|boolean
