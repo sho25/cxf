@@ -75,14 +75,6 @@ name|JettySslConnectorFactory
 implements|implements
 name|JettyConnectorFactory
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1L
-decl_stmt|;
 name|TLSServerParameters
 name|tlsServerParameters
 decl_stmt|;

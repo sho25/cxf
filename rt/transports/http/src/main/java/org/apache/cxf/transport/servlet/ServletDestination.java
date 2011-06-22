@@ -146,14 +146,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1L
-decl_stmt|;
 comment|/**      * Constructor, allowing subsititution of configuration.      *       * @param b the associated Bus      * @param ci the associated conduit initiator      * @param ei the endpoint info of the destination       * @param cfg the configuration      * @throws IOException      */
 specifier|public
 name|ServletDestination

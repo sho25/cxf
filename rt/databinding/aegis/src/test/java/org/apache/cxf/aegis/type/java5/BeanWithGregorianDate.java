@@ -37,14 +37,6 @@ class|class
 name|BeanWithGregorianDate
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1481418882118674796L
-decl_stmt|;
-specifier|private
 name|int
 name|id
 decl_stmt|;
