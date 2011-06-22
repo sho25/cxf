@@ -3213,14 +3213,6 @@ condition|(
 name|m
 operator|==
 literal|null
-operator|||
-name|msg
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|isOneWay
-argument_list|()
 condition|)
 block|{
 return|return;
