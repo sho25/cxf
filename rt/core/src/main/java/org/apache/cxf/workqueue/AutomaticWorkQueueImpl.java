@@ -999,6 +999,10 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+comment|// to exit the waiting thread
+name|interrupt
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|void
