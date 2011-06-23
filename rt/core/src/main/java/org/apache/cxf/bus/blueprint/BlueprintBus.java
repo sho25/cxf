@@ -125,7 +125,23 @@ decl_stmt|;
 specifier|public
 name|BlueprintBus
 parameter_list|()
-block|{     }
+block|{
+comment|// Using the BlueprintBus Classloader to load the extensions
+name|super
+argument_list|(
+literal|null
+argument_list|,
+literal|null
+argument_list|,
+name|BlueprintBus
+operator|.
+name|class
+operator|.
+name|getClassLoader
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|void
 name|setBundleContext
