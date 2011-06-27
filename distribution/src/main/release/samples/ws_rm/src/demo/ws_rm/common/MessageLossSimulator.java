@@ -293,13 +293,8 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
-name|RMContextUtils
-operator|.
-name|ensureExposedVersion
-argument_list|(
-name|maps
-argument_list|)
-expr_stmt|;
+comment|//Fixed the build error of ws_rm, now there is no ensureExposedVersion anymore
+comment|//RMContextUtils.ensureExposedVersion(maps);
 name|String
 name|action
 init|=
