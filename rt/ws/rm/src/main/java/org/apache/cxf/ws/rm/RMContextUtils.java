@@ -116,7 +116,7 @@ name|generateUUID
 argument_list|()
 return|;
 block|}
-comment|/**      * Determine if message is currently being processed on server side.      *       * @param message the current Message      * @return true iff message is currently being processed on server side      */
+comment|/**      * Determine if message is currently being processed on server side.      *       * @param message the current Message      * @return true if message is currently being processed on server side      */
 specifier|public
 specifier|static
 name|boolean
@@ -138,7 +138,7 @@ operator|!=
 literal|null
 return|;
 block|}
-comment|/**      * Checks if the action String belongs to an RM protocol message.      *       * @param action the action      * @return true iff the action is not one of the RM protocol actions.      */
+comment|/**      * Checks if the action String belongs to an RM protocol message.      *       * @param action the action      * @return true if the action is not one of the RM protocol actions.      */
 specifier|public
 specifier|static
 name|boolean
@@ -168,7 +168,7 @@ name|action
 argument_list|)
 return|;
 block|}
-comment|/**      * Retrieve the RM properties from the current message.      *       * @param message the current message      * @param outbound true iff the message direction is outbound      * @return the RM properties      */
+comment|/**      * Retrieve the RM properties from the current message.      *       * @param message the current message      * @param outbound true if the message direction is outbound      * @return the RM properties      */
 specifier|public
 specifier|static
 name|RMProperties
@@ -282,7 +282,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Store the RM properties in the current message.      *       * @param message the current message      * @param rmps the RM properties      * @param outbound iff the message direction is outbound      */
+comment|/**      * Store the RM properties in the current message.      *       * @param message the current message      * @param rmps the RM properties      * @param outbound if the message direction is outbound      */
 specifier|public
 specifier|static
 name|void
@@ -316,7 +316,7 @@ name|rmps
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Retrieves the addressing properties from the current message.      *       * @param message the current message      * @param isProviderContext true if the binding provider request context      *            available to the client application as opposed to the message      *            context visible to handlers      * @param isOutbound true iff the message is outbound      * @return the current addressing properties      */
+comment|/**      * Retrieves the addressing properties from the current message.      *       * @param message the current message      * @param isProviderContext true if the binding provider request context      *            available to the client application as opposed to the message      *            context visible to handlers      * @param isOutbound true if the message is outbound      * @return the current addressing properties      */
 specifier|public
 specifier|static
 name|AddressingPropertiesImpl
@@ -355,7 +355,7 @@ name|isOutbound
 argument_list|)
 return|;
 block|}
-comment|/**      * Store MAPs in the message.      *       * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true iff the message is outbound      * @param isRequestor true iff the current messaging role is that of      *            requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      */
+comment|/**      * Store MAPs in the message.      *       * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      *            requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      */
 specifier|public
 specifier|static
 name|void
