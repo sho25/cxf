@@ -51,6 +51,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -58,6 +70,22 @@ operator|.
 name|cxf
 operator|.
 name|Bus
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -215,6 +243,21 @@ name|getName
 argument_list|()
 operator|+
 literal|".USE_ORIGINAL_THREAD"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|OneWayProcessorInterceptor
+operator|.
+name|class
+argument_list|)
 decl_stmt|;
 specifier|public
 name|OneWayProcessorInterceptor
@@ -582,6 +625,15 @@ name|e
 parameter_list|)
 block|{
 comment|//the executor queue is full, so run the task in the caller thread
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"the executor queue is full, run the oneway invocation task in caller thread."
+operator|+
+literal|"Users can specify a larger executor queue to avoid this."
+argument_list|)
+expr_stmt|;
 name|chain
 operator|.
 name|resume
