@@ -2688,6 +2688,18 @@ name|id
 block|}
 argument_list|)
 expr_stmt|;
+name|EncoderDecoder
+name|codec
+init|=
+name|VersionTransformer
+operator|.
+name|getEncoderDecoder
+argument_list|(
+name|rmNamespace
+argument_list|,
+name|rmAddressingNamespace
+argument_list|)
+decl_stmt|;
 name|RMEndpoint
 name|rme
 init|=
@@ -2695,7 +2707,7 @@ name|createReliableEndpoint
 argument_list|(
 name|endpoint
 argument_list|,
-literal|null
+name|codec
 argument_list|)
 decl_stmt|;
 name|rme

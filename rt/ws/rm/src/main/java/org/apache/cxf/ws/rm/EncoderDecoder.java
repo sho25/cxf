@@ -85,6 +85,24 @@ name|rm
 operator|.
 name|v200702
 operator|.
+name|CloseSequenceType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|rm
+operator|.
+name|v200702
+operator|.
 name|CreateSequenceResponseType
 import|;
 end_import
@@ -267,6 +285,16 @@ function_decl|;
 comment|/**      * Unmarshals a SequenceType, converting it if necessary to the internal form.      *       * @param elem      * @return      * @throws JAXBException      */
 name|SequenceType
 name|decodeSequenceType
+parameter_list|(
+name|Element
+name|elem
+parameter_list|)
+throws|throws
+name|JAXBException
+function_decl|;
+comment|/**      * Generates a CloseSequenceType if a SequenceType represents a last message state.      *       * @param elem      * @return CloseSequenceType if last message state, else<code>null</code>      * @throws JAXBException      */
+name|CloseSequenceType
+name|decodeSequenceTypeCloseSequence
 parameter_list|(
 name|Element
 name|elem

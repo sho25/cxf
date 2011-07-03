@@ -667,12 +667,8 @@ decl_stmt|;
 name|TerminateSequenceType
 name|ts
 init|=
-name|RMUtils
-operator|.
-name|getWSRMFactory
-argument_list|()
-operator|.
-name|createTerminateSequenceType
+operator|new
+name|TerminateSequenceType
 argument_list|()
 decl_stmt|;
 name|ts
