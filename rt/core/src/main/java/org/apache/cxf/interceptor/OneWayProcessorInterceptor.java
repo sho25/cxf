@@ -629,9 +629,9 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"the executor queue is full, run the oneway invocation task in caller thread."
+literal|"Executor queue is full, run the oneway invocation task in caller thread."
 operator|+
-literal|"Users can specify a larger executor queue to avoid this."
+literal|"  Users can specify a larger executor queue to avoid this."
 argument_list|)
 expr_stmt|;
 name|chain
