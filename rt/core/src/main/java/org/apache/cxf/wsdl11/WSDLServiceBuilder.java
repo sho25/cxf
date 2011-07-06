@@ -3144,29 +3144,6 @@ break|break;
 comment|// TODO: this is really ugly, but how to link between
 comment|// this binding and this transport ?
 block|}
-elseif|else
-if|if
-condition|(
-literal|"http://cxf.apache.org/bindings/jbi"
-operator|.
-name|equals
-argument_list|(
-name|el
-operator|.
-name|getElementType
-argument_list|()
-operator|.
-name|getNamespaceURI
-argument_list|()
-argument_list|)
-condition|)
-block|{
-name|ns
-operator|=
-literal|"http://cxf.apache.org/transports/jbi"
-expr_stmt|;
-break|break;
-block|}
 block|}
 block|}
 if|if
