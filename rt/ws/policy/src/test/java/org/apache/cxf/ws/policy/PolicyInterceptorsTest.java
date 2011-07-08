@@ -1796,6 +1796,8 @@ name|getEffectiveServerFaultPolicy
 argument_list|(
 name|ei
 argument_list|,
+name|boi
+argument_list|,
 name|bfi
 argument_list|,
 name|destination

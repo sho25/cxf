@@ -1356,6 +1356,8 @@ name|initialise
 argument_list|(
 name|ei
 argument_list|,
+literal|null
+argument_list|,
 name|bfi
 argument_list|,
 name|engine
@@ -1383,6 +1385,8 @@ name|getEffectiveServerFaultPolicy
 argument_list|(
 name|ei
 argument_list|,
+literal|null
+argument_list|,
 name|bfi
 argument_list|,
 name|destination
@@ -1398,6 +1402,8 @@ operator|.
 name|getEffectiveServerFaultPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|,
 name|bfi
 argument_list|,
@@ -1475,6 +1481,8 @@ operator|.
 name|getEffectiveServerFaultPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|,
 name|bfi
 argument_list|,
@@ -2029,6 +2037,8 @@ name|initialisePolicy
 argument_list|(
 name|ei
 argument_list|,
+literal|null
+argument_list|,
 name|bfi
 argument_list|,
 name|engine
@@ -2054,6 +2064,8 @@ name|getEffectiveClientFaultPolicy
 argument_list|(
 name|ei
 argument_list|,
+literal|null
+argument_list|,
 name|bfi
 argument_list|)
 argument_list|)
@@ -2067,6 +2079,8 @@ operator|.
 name|getEffectiveClientFaultPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|,
 name|bfi
 argument_list|)
@@ -2142,6 +2156,8 @@ operator|.
 name|getEffectiveClientFaultPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|,
 name|bfi
 argument_list|)

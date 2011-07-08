@@ -428,18 +428,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-literal|null
-operator|==
 name|bfi
+operator|==
+literal|null
 condition|)
 block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"No binding fault info."
-argument_list|)
-expr_stmt|;
 return|return;
 block|}
 name|getTransportAssertions
@@ -456,9 +449,18 @@ name|getEffectiveClientFaultPolicy
 argument_list|(
 name|ei
 argument_list|,
+name|boi
+argument_list|,
 name|bfi
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|effectivePolicy
+operator|!=
+literal|null
+condition|)
+block|{
 name|aim
 operator|.
 name|checkEffectivePolicy
@@ -476,6 +478,7 @@ argument_list|(
 literal|"Verified policies for inbound message."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

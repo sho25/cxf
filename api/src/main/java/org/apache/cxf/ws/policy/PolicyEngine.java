@@ -245,6 +245,9 @@ parameter_list|(
 name|EndpointInfo
 name|ei
 parameter_list|,
+name|BindingOperationInfo
+name|boi
+parameter_list|,
 name|BindingFaultInfo
 name|bfi
 parameter_list|,
@@ -358,6 +361,9 @@ name|getEffectiveClientFaultPolicy
 parameter_list|(
 name|EndpointInfo
 name|ei
+parameter_list|,
+name|BindingOperationInfo
+name|boi
 parameter_list|,
 name|BindingFaultInfo
 name|bfi

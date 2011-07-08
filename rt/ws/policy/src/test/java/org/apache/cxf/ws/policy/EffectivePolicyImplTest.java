@@ -989,6 +989,10 @@ name|EndpointInfo
 operator|.
 name|class
 block|,
+name|BindingOperationInfo
+operator|.
+name|class
+block|,
 name|BindingFaultInfo
 operator|.
 name|class
@@ -1117,6 +1121,8 @@ name|initialisePolicy
 argument_list|(
 name|ei
 argument_list|,
+literal|null
+argument_list|,
 name|bfi
 argument_list|,
 name|pe
@@ -1165,6 +1171,8 @@ operator|.
 name|initialise
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|,
 name|bfi
 argument_list|,
@@ -1629,6 +1637,9 @@ name|andReturn
 argument_list|(
 name|boi
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|EndpointPolicy
 name|endpointPolicy
@@ -1831,6 +1842,8 @@ operator|.
 name|initialisePolicy
 argument_list|(
 name|ei
+argument_list|,
+name|boi
 argument_list|,
 name|bfi
 argument_list|,

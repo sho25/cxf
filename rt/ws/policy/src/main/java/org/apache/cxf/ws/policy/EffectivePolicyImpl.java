@@ -591,6 +591,9 @@ parameter_list|(
 name|EndpointInfo
 name|ei
 parameter_list|,
+name|BindingOperationInfo
+name|boi
+parameter_list|,
 name|BindingFaultInfo
 name|bfi
 parameter_list|,
@@ -604,6 +607,8 @@ block|{
 name|initialisePolicy
 argument_list|(
 name|ei
+argument_list|,
+name|boi
 argument_list|,
 name|bfi
 argument_list|,
@@ -808,6 +813,9 @@ parameter_list|(
 name|EndpointInfo
 name|ei
 parameter_list|,
+name|BindingOperationInfo
+name|boi
+parameter_list|,
 name|BindingFaultInfo
 name|bfi
 parameter_list|,
@@ -815,14 +823,6 @@ name|PolicyEngineImpl
 name|engine
 parameter_list|)
 block|{
-name|BindingOperationInfo
-name|boi
-init|=
-name|bfi
-operator|.
-name|getBindingOperation
-argument_list|()
-decl_stmt|;
 name|policy
 operator|=
 name|engine
@@ -854,6 +854,13 @@ name|boi
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|bfi
+operator|!=
+literal|null
+condition|)
+block|{
 name|policy
 operator|=
 name|policy
@@ -868,6 +875,7 @@ name|bfi
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|policy
 operator|=
 operator|(
