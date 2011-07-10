@@ -808,7 +808,7 @@ specifier|private
 name|long
 name|lastControlMessage
 decl_stmt|;
-comment|/**      * Constructor when WS-ReliableMessaging version to be used is already known.      *       * @param m      * @param ae      * @param codec      */
+comment|/**      * Constructor.      *       * @param m      * @param ae      * @param codec      */
 specifier|public
 name|RMEndpoint
 parameter_list|(
@@ -820,29 +820,6 @@ name|ae
 parameter_list|,
 name|EncoderDecoder
 name|codec
-parameter_list|)
-block|{
-name|this
-argument_list|(
-name|m
-argument_list|,
-name|ae
-argument_list|)
-expr_stmt|;
-name|encoderDecoder
-operator|=
-name|codec
-expr_stmt|;
-block|}
-comment|/**      * Constructor when WS-ReliableMessaging version to be used is not yet known.      *       * @param m      * @param ae      */
-specifier|public
-name|RMEndpoint
-parameter_list|(
-name|RMManager
-name|m
-parameter_list|,
-name|Endpoint
-name|ae
 parameter_list|)
 block|{
 name|manager
@@ -884,6 +861,10 @@ name|Servant
 argument_list|(
 name|this
 argument_list|)
+expr_stmt|;
+name|encoderDecoder
+operator|=
+name|codec
 expr_stmt|;
 block|}
 comment|/**      * @return Returns the bus.      */
