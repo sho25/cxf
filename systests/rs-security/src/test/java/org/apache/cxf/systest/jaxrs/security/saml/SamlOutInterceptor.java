@@ -493,8 +493,6 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-try|try
-block|{
 name|SAMLParms
 name|samlParms
 init|=
@@ -511,6 +509,8 @@ name|SamlCallbackHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|AssertionWrapper
 name|assertion
 init|=
@@ -859,7 +859,13 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-comment|// ignore
+throw|throw
+operator|new
+name|Fault
+argument_list|(
+name|ex
+argument_list|)
+throw|;
 block|}
 block|}
 specifier|private
