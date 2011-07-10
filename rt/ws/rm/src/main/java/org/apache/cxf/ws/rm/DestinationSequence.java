@@ -855,12 +855,8 @@ comment|// need new acknowledgement range
 name|AcknowledgementRange
 name|range
 init|=
-name|RMUtils
-operator|.
-name|getWSRMFactory
-argument_list|()
-operator|.
-name|createSequenceAcknowledgementAcknowledgementRange
+operator|new
+name|AcknowledgementRange
 argument_list|()
 decl_stmt|;
 name|range

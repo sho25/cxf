@@ -353,12 +353,8 @@ name|lm
 expr_stmt|;
 name|acknowledgement
 operator|=
-name|RMUtils
-operator|.
-name|getWSRMFactory
-argument_list|()
-operator|.
-name|createSequenceAcknowledgement
+operator|new
+name|SequenceAcknowledgement
 argument_list|()
 expr_stmt|;
 name|acknowledgement

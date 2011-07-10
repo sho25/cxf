@@ -665,12 +665,8 @@ expr_stmt|;
 name|SequenceAcknowledgement
 name|ack
 init|=
-name|RMUtils
-operator|.
-name|getWSRMFactory
-argument_list|()
-operator|.
-name|createSequenceAcknowledgement
+operator|new
+name|SequenceAcknowledgement
 argument_list|()
 decl_stmt|;
 name|seq
