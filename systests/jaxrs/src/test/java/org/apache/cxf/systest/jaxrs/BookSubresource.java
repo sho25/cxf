@@ -19,6 +19,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -296,16 +306,11 @@ name|FormParam
 argument_list|(
 literal|"name"
 argument_list|)
+name|List
+argument_list|<
 name|String
-name|name
-parameter_list|,
-annotation|@
-name|FormParam
-argument_list|(
-literal|"nameid"
-argument_list|)
-name|Integer
-name|nameid
+argument_list|>
+name|nameParts
 parameter_list|)
 throws|throws
 name|BookNotFoundFault
