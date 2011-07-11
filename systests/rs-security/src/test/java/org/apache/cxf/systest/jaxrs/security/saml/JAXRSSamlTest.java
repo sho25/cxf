@@ -378,7 +378,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|SamlOutInterceptor
+name|SamlHeaderOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;

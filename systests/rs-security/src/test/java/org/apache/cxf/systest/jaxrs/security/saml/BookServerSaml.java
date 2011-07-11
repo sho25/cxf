@@ -239,7 +239,7 @@ operator|.
 name|setProvider
 argument_list|(
 operator|new
-name|SamlInRequestHandler
+name|SamlHeaderInHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
