@@ -544,6 +544,13 @@ name|BADGER_FISH_CONVENTION
 init|=
 literal|"badgerfish"
 decl_stmt|;
+static|static
+block|{
+operator|new
+name|SimpleConverter
+argument_list|()
+expr_stmt|;
+block|}
 specifier|private
 name|ConcurrentHashMap
 argument_list|<
