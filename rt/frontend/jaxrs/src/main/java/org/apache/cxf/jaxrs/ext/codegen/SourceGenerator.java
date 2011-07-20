@@ -5270,6 +5270,9 @@ operator|+
 literal|"."
 operator|+
 name|localName
+operator|.
+name|toLowerCase
+argument_list|()
 decl_stmt|;
 for|for
 control|(

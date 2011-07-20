@@ -2235,7 +2235,7 @@ name|files
 argument_list|,
 name|schemaPackage
 operator|+
-literal|".Book2."
+literal|".TheBook2."
 operator|+
 name|ext
 argument_list|)
