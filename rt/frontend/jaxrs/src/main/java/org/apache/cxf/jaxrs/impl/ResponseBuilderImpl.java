@@ -640,8 +640,12 @@ name|tag
 parameter_list|)
 block|{
 return|return
-name|tag
+name|setHeader
 argument_list|(
+name|HttpHeaders
+operator|.
+name|ETAG
+argument_list|,
 name|tag
 operator|==
 literal|null
@@ -663,14 +667,23 @@ name|String
 name|tag
 parameter_list|)
 block|{
+comment|// String tag value needs to be parsed as it may
+comment|// contain parameters indicating it's a weak tag, etc
 return|return
-name|setHeader
-argument_list|(
-name|HttpHeaders
-operator|.
-name|ETAG
-argument_list|,
 name|tag
+argument_list|(
+name|tag
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|EntityTag
+operator|.
+name|valueOf
+argument_list|(
+name|tag
+argument_list|)
 argument_list|)
 return|;
 block|}
