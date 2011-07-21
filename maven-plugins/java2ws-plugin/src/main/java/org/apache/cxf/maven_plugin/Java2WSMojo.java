@@ -258,7 +258,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @goal java2ws  * @description CXF Java To Webservice Tool  * @requiresDependencyResolution test */
+comment|/**  * @goal java2ws  * @description CXF Java To Webservice Tool  * @requiresDependencyResolution test  * @threadSafe */
 end_comment
 
 begin_class

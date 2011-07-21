@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @goal wsdlvalidator  * @description CXF WSDL Validation  */
+comment|/**  * @goal wsdlvalidator  * @description CXF WSDL Validation  * @threadSafe  */
 end_comment
 
 begin_class

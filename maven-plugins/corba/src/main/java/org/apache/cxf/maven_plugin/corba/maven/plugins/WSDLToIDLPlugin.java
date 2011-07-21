@@ -212,7 +212,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @goal wsdl2idl  * @requiresDependencyResolution test  * @description CXF WSDL To IDL Tool  */
+comment|/**  * @goal wsdl2idl  * @requiresDependencyResolution test  * @description CXF WSDL To IDL Tool  * @threadSafe  */
 end_comment
 
 begin_class

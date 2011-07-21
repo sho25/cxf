@@ -96,7 +96,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @goal idl2wsdl  * @description CXF IDL To WSDL Tool  */
+comment|/**  * @goal idl2wsdl  * @description CXF IDL To WSDL Tool  * @threadSafe  */
 end_comment
 
 begin_class

@@ -540,7 +540,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @goal wsdl2java  * @phase generate-sources  * @description CXF WSDL To Java Tool  * @requiresDependencyResolution test  */
+comment|/**  * @goal wsdl2java  * @phase generate-sources  * @description CXF WSDL To Java Tool  * @requiresDependencyResolution test  * @threadSafe  */
 end_comment
 
 begin_class

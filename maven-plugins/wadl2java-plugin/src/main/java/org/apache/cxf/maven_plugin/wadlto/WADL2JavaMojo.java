@@ -110,7 +110,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * @goal wadl2java  * @phase generate-sources  * @description CXF WADL To Java Tool  * @requiresDependencyResolution test  */
+comment|/**  * @goal wadl2java  * @phase generate-sources  * @description CXF WADL To Java Tool  * @requiresDependencyResolution test  * @threadSafe  */
 end_comment
 
 begin_class
