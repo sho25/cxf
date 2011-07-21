@@ -558,6 +558,14 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+static|static
+block|{
+name|WSSConfig
+operator|.
+name|init
+argument_list|()
+expr_stmt|;
+block|}
 specifier|private
 name|Validator
 name|samlValidator
@@ -659,8 +667,9 @@ decl_stmt|;
 name|WSSConfig
 name|cfg
 init|=
-operator|new
 name|WSSConfig
+operator|.
+name|getNewInstance
 argument_list|()
 decl_stmt|;
 name|data
