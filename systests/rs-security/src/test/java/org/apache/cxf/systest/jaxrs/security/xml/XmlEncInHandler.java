@@ -787,13 +787,13 @@ expr_stmt|;
 block|}
 name|byte
 index|[]
-name|decrypedPayload
+name|decryptedPayload
 init|=
 literal|null
 decl_stmt|;
 try|try
 block|{
-name|decrypedPayload
+name|decryptedPayload
 operator|=
 name|decryptPayload
 argument_list|(
@@ -844,7 +844,7 @@ argument_list|(
 operator|new
 name|ByteArrayInputStream
 argument_list|(
-name|decrypedPayload
+name|decryptedPayload
 argument_list|)
 argument_list|,
 literal|"UTF-8"
