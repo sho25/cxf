@@ -224,9 +224,9 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://complex.demo.cxf.apache.org/"
+literal|"http://Company.com/Application"
 argument_list|,
-literal|"ComplexImplService"
+literal|"Company_ESB_Application_Biztalk_AgentDetails_4405_AgentDetails_Prt"
 argument_list|)
 decl_stmt|;
 specifier|private
@@ -387,9 +387,9 @@ init|=
 operator|new
 name|QName
 argument_list|(
-literal|"http://complex.demo.cxf.apache.org/"
+literal|"http://Company.com/Application"
 argument_list|,
-literal|"ComplexImplServiceSoapBinding"
+literal|"Company_ESB_Application_Biztalk_AgentDetails_4405_AgentDetails_PrtSoap"
 argument_list|)
 decl_stmt|;
 name|BindingInfo
