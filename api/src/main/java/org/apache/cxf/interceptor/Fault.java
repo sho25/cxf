@@ -163,6 +163,14 @@ init|=
 literal|"stackTrace"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|int
+name|DEFAULT_HTTP_RESPONSE_CODE
+init|=
+literal|500
+decl_stmt|;
+specifier|private
 name|Element
 name|detail
 decl_stmt|;
@@ -173,6 +181,13 @@ decl_stmt|;
 specifier|private
 name|QName
 name|code
+decl_stmt|;
+comment|/**      * response http header status code      */
+specifier|private
+name|int
+name|statusCode
+init|=
+name|DEFAULT_HTTP_RESPONSE_CODE
 decl_stmt|;
 specifier|public
 name|Fault
@@ -679,6 +694,34 @@ block|}
 return|return
 name|detail
 return|;
+block|}
+comment|/**      * Returns  http header status code.      * @return status code.      */
+specifier|public
+name|int
+name|getStatusCode
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|statusCode
+return|;
+block|}
+comment|/**      * Set http header status code on this fault.      *       * @param status code.      */
+specifier|public
+name|void
+name|setStatusCode
+parameter_list|(
+name|int
+name|statusCode
+parameter_list|)
+block|{
+name|this
+operator|.
+name|statusCode
+operator|=
+name|statusCode
+expr_stmt|;
 block|}
 block|}
 end_class
