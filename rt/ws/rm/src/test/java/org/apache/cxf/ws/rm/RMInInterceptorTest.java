@@ -1517,15 +1517,15 @@ name|expect
 argument_list|(
 name|rme
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 argument_list|)
 operator|.
 name|andReturn
 argument_list|(
-name|EncoderDecoder10Impl
+name|ProtocolVariation
 operator|.
-name|INSTANCE
+name|RM10WSA200408
 argument_list|)
 operator|.
 name|anyTimes
@@ -1864,6 +1864,8 @@ parameter_list|,
 name|boolean
 name|serverSide
 parameter_list|)
+throws|throws
+name|RMException
 block|{
 name|Message
 name|message

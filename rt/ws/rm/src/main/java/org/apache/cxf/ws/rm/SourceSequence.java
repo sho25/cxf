@@ -272,6 +272,9 @@ name|SourceSequence
 parameter_list|(
 name|Identifier
 name|i
+parameter_list|,
+name|ProtocolVariation
+name|pv
 parameter_list|)
 block|{
 name|this
@@ -281,6 +284,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+name|pv
 argument_list|)
 expr_stmt|;
 block|}
@@ -295,6 +300,9 @@ name|e
 parameter_list|,
 name|Identifier
 name|oi
+parameter_list|,
+name|ProtocolVariation
+name|pv
 parameter_list|)
 block|{
 name|this
@@ -308,6 +316,8 @@ argument_list|,
 literal|0
 argument_list|,
 literal|false
+argument_list|,
+name|pv
 argument_list|)
 expr_stmt|;
 block|}
@@ -328,11 +338,16 @@ name|cmn
 parameter_list|,
 name|boolean
 name|lm
+parameter_list|,
+name|ProtocolVariation
+name|pv
 parameter_list|)
 block|{
 name|super
 argument_list|(
 name|i
+argument_list|,
+name|pv
 argument_list|)
 expr_stmt|;
 name|expires

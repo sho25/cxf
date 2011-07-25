@@ -39,7 +39,6 @@ specifier|abstract
 class|class
 name|RMConstants
 block|{
-comment|// namespaces
 specifier|public
 specifier|static
 specifier|final

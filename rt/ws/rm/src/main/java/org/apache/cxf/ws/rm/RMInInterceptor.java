@@ -754,7 +754,7 @@ name|consts
 init|=
 name|rme
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 operator|.
 name|getConstants

@@ -263,6 +263,8 @@ operator|!=
 name|store
 condition|)
 block|{
+try|try
+block|{
 name|Source
 name|s
 init|=
@@ -396,6 +398,15 @@ argument_list|,
 name|msg
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|RMException
+name|e
+parameter_list|)
+block|{
+comment|// ignore
+block|}
 block|}
 block|}
 specifier|public

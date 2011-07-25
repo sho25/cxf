@@ -573,7 +573,7 @@ name|constants
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 operator|.
 name|getConstants
@@ -633,7 +633,7 @@ name|constants
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 operator|.
 name|getConstants
@@ -686,7 +686,10 @@ name|codec
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
+argument_list|()
+operator|.
+name|getCodec
 argument_list|()
 decl_stmt|;
 name|invoke
@@ -731,7 +734,7 @@ name|constants
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 operator|.
 name|getConstants
@@ -993,7 +996,10 @@ name|codec
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
+argument_list|()
+operator|.
+name|getCodec
 argument_list|()
 decl_stmt|;
 name|RMConstants
@@ -1248,7 +1254,7 @@ name|constants
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 operator|.
 name|getConstants
@@ -1438,7 +1444,7 @@ name|constants
 init|=
 name|reliableEndpoint
 operator|.
-name|getEncoderDecoder
+name|getProtocol
 argument_list|()
 operator|.
 name|getConstants

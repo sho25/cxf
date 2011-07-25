@@ -261,7 +261,7 @@ name|QName
 argument_list|(
 name|NAMESPACE_URI
 argument_list|,
-literal|"LastMessage"
+literal|"CloseSequence"
 argument_list|)
 decl_stmt|;
 specifier|public

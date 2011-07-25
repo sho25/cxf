@@ -481,6 +481,22 @@ name|ws
 operator|.
 name|rm
 operator|.
+name|RMException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|rm
+operator|.
 name|RMManager
 import|;
 end_import
@@ -1416,6 +1432,8 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
+throws|throws
+name|RMException
 block|{
 comment|// get the message's to address
 name|AddressingProperties

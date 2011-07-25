@@ -84,6 +84,11 @@ specifier|final
 name|Identifier
 name|id
 decl_stmt|;
+specifier|private
+specifier|final
+name|ProtocolVariation
+name|protocol
+decl_stmt|;
 specifier|protected
 name|SequenceAcknowledgement
 name|acknowledgement
@@ -93,11 +98,18 @@ name|AbstractSequence
 parameter_list|(
 name|Identifier
 name|i
+parameter_list|,
+name|ProtocolVariation
+name|p
 parameter_list|)
 block|{
 name|id
 operator|=
 name|i
+expr_stmt|;
+name|protocol
+operator|=
+name|p
 expr_stmt|;
 block|}
 comment|/**      * @return the sequence identifier      */
@@ -108,6 +120,15 @@ parameter_list|()
 block|{
 return|return
 name|id
+return|;
+block|}
+specifier|public
+name|ProtocolVariation
+name|getProtocol
+parameter_list|()
+block|{
+return|return
+name|protocol
 return|;
 block|}
 specifier|public
