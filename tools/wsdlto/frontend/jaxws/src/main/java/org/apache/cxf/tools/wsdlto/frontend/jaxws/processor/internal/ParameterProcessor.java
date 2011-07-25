@@ -736,6 +736,8 @@ block|{
 return|return
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart
@@ -784,6 +786,9 @@ specifier|protected
 name|JavaParameter
 name|addParameter
 parameter_list|(
+name|MessagePartInfo
+name|mpart
+parameter_list|,
 name|JavaMethod
 name|method
 parameter_list|,
@@ -878,7 +883,12 @@ name|annotate
 argument_list|(
 operator|new
 name|WebParamAnnotator
-argument_list|()
+argument_list|(
+name|isOutOfBandHeader
+argument_list|(
+name|mpart
+argument_list|)
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|method
@@ -1251,6 +1261,17 @@ name|MessagePartInfo
 name|part
 parameter_list|)
 block|{
+if|if
+condition|(
+name|part
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 return|return
 name|Boolean
 operator|.
@@ -1557,6 +1578,8 @@ block|}
 block|}
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|param
@@ -1734,6 +1757,8 @@ expr_stmt|;
 block|}
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|jp
@@ -1778,6 +1803,8 @@ continue|continue;
 block|}
 name|addParameter
 argument_list|(
+name|hpart
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart
@@ -2099,7 +2126,12 @@ name|annotate
 argument_list|(
 operator|new
 name|WebParamAnnotator
-argument_list|()
+argument_list|(
+name|isOutOfBandHeader
+argument_list|(
+name|outpart
+argument_list|)
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|found
@@ -2116,6 +2148,8 @@ condition|)
 block|{
 name|addParameter
 argument_list|(
+name|outpart
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart
@@ -2326,6 +2360,8 @@ block|}
 block|}
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|param
@@ -2408,6 +2444,8 @@ continue|continue;
 block|}
 name|addParameter
 argument_list|(
+name|hpart
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart
@@ -2806,6 +2844,8 @@ expr_stmt|;
 block|}
 name|addParameter
 argument_list|(
+name|outputPart
+argument_list|,
 name|method
 argument_list|,
 name|jp
@@ -3135,6 +3175,8 @@ expr_stmt|;
 block|}
 name|addParameter
 argument_list|(
+name|outputPart
+argument_list|,
 name|method
 argument_list|,
 name|jp
@@ -3208,6 +3250,8 @@ argument_list|)
 expr_stmt|;
 name|addParameter
 argument_list|(
+name|outputPart
+argument_list|,
 name|method
 argument_list|,
 name|jp
@@ -4624,6 +4668,8 @@ condition|)
 block|{
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart
@@ -4652,6 +4698,8 @@ control|)
 block|{
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart
@@ -4680,6 +4728,8 @@ control|)
 block|{
 name|addParameter
 argument_list|(
+name|part
+argument_list|,
 name|method
 argument_list|,
 name|getParameterFromPart

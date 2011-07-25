@@ -182,6 +182,8 @@ name|processor
 operator|.
 name|addParameter
 argument_list|(
+literal|null
+argument_list|,
 name|method
 argument_list|,
 name|p1
@@ -220,6 +222,8 @@ name|processor
 operator|.
 name|addParameter
 argument_list|(
+literal|null
+argument_list|,
 name|method
 argument_list|,
 name|p2
