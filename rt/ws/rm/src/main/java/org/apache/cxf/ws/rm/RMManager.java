@@ -3833,6 +3833,7 @@ return|return
 name|endpointMaps
 return|;
 block|}
+specifier|final
 name|void
 name|setEndpointMaps
 parameter_list|(
