@@ -166,7 +166,7 @@ name|valueType
 init|=
 name|WSConstants
 operator|.
-name|WSS_KRB_V5_AP_REQ
+name|WSS_GSS_KRB_V5_AP_REQ
 decl_stmt|;
 specifier|private
 name|String

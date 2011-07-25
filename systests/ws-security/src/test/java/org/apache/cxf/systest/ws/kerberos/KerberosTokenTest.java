@@ -426,7 +426,7 @@ name|setValueType
 argument_list|(
 name|WSConstants
 operator|.
-name|WSS_GSS_KRB_V5_AP_REQ
+name|WSS_KRB_V5_AP_REQ
 argument_list|)
 expr_stmt|;
 operator|(
@@ -1267,7 +1267,7 @@ name|setValueType
 argument_list|(
 name|WSConstants
 operator|.
-name|WSS_GSS_KRB_V5_AP_REQ
+name|WSS_KRB_V5_AP_REQ
 argument_list|)
 expr_stmt|;
 operator|(
