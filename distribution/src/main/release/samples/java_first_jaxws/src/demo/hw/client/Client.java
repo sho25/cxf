@@ -25,18 +25,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-operator|.
-name|Entry
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|xml
