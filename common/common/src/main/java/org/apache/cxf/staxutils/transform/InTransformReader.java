@@ -203,6 +203,10 @@ specifier|private
 name|DelegatingNamespaceContext
 name|namespaceContext
 decl_stmt|;
+specifier|private
+name|boolean
+name|appendInProgress
+decl_stmt|;
 specifier|public
 name|InTransformReader
 parameter_list|(
@@ -323,8 +327,14 @@ condition|(
 name|currentQName
 operator|!=
 literal|null
+operator|&&
+name|appendInProgress
 condition|)
 block|{
+name|appendInProgress
+operator|=
+literal|false
+expr_stmt|;
 return|return
 name|XMLStreamConstants
 operator|.
@@ -670,6 +680,10 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|appendInProgress
+operator|=
+literal|true
+expr_stmt|;
 name|previousDepth
 operator|=
 name|getDepth
