@@ -441,7 +441,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/service/login.jsp"
+literal|"/login.jsp"
 argument_list|,
 name|locationHeader
 operator|.
