@@ -1418,6 +1418,15 @@ name|responseObj
 argument_list|)
 condition|)
 block|{
+name|responseHeaders
+operator|.
+name|putSingle
+argument_list|(
+literal|"Content-Length"
+argument_list|,
+literal|"0"
+argument_list|)
+expr_stmt|;
 return|return;
 block|}
 name|Object
