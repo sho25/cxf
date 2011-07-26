@@ -4256,8 +4256,9 @@ operator|)
 name|token
 argument_list|)
 decl_stmt|;
-name|addSupportingElement
-argument_list|(
+name|Element
+name|clone
+init|=
 name|cloneElement
 argument_list|(
 name|binarySecurity
@@ -4265,6 +4266,10 @@ operator|.
 name|getElement
 argument_list|()
 argument_list|)
+decl_stmt|;
+name|addSupportingElement
+argument_list|(
+name|clone
 argument_list|)
 expr_stmt|;
 name|ret
@@ -4273,7 +4278,11 @@ name|put
 argument_list|(
 name|token
 argument_list|,
-name|binarySecurity
+operator|new
+name|BinarySecurity
+argument_list|(
+name|clone
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
