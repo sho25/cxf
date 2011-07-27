@@ -529,7 +529,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|SP12Constants
+name|SP11Constants
 operator|.
 name|SP_NS
 argument_list|,
