@@ -87,6 +87,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|ServerSocket
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Arrays
@@ -3180,15 +3190,37 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|ServerSocket
+name|sock
+init|=
+operator|new
+name|ServerSocket
+argument_list|(
+literal|0
+argument_list|)
+decl_stmt|;
+name|int
+name|port
+init|=
+name|sock
+operator|.
+name|getLocalPort
+argument_list|()
+decl_stmt|;
 name|Server
 name|server
 init|=
 operator|new
 name|Server
 argument_list|(
-literal|8585
+name|port
 argument_list|)
 decl_stmt|;
+name|sock
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|ResourceHandler
 name|reshandler
 init|=
@@ -3206,7 +3238,8 @@ literal|"/wsdl2java_wsdl/"
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// this is the only handler we're supposed to need, so we don't need to 'add' it.
+comment|// this is the only handler we're supposed to need, so we don't need to
+comment|// 'add' it.
 name|server
 operator|.
 name|setHandler
@@ -3227,7 +3260,11 @@ name|ToolConstants
 operator|.
 name|CFG_WSDLURL
 argument_list|,
-literal|"http://localhost:8585/hello_world.wsdl"
+literal|"http://localhost:"
+operator|+
+name|port
+operator|+
+literal|"/hello_world.wsdl"
 argument_list|)
 expr_stmt|;
 name|env
@@ -3238,7 +3275,11 @@ name|ToolConstants
 operator|.
 name|CFG_BINDING
 argument_list|,
-literal|"http://localhost:8585/remote-hello_world_binding.xsd"
+literal|"http://localhost:"
+operator|+
+name|port
+operator|+
+literal|"/remote-hello_world_binding.xsd"
 argument_list|)
 expr_stmt|;
 name|processor
@@ -3747,7 +3788,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-comment|//ignore
+comment|// ignore
 block|}
 name|Class
 name|clz
