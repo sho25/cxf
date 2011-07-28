@@ -719,6 +719,7 @@ comment|/**      * Creates a JAX-WS proxy that can be used to make remote invoca
 annotation|@
 name|Override
 specifier|public
+specifier|synchronized
 name|Object
 name|create
 parameter_list|()
