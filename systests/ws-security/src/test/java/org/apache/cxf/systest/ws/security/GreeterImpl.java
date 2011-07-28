@@ -132,19 +132,7 @@ operator|=
 name|p
 expr_stmt|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"\n\n*** GreetMe called with: "
-operator|+
-name|me
-operator|+
-literal|"***\n\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("\n\n*** GreetMe called with: " + me + "***\n\n");
 return|return
 literal|"Hello "
 operator|+
