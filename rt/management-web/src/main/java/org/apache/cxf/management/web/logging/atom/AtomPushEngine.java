@@ -411,15 +411,7 @@ literal|null
 condition|)
 block|{
 comment|// TODO report cause
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-literal|"deliverer is not set"
-argument_list|)
-expr_stmt|;
+comment|///System.err.println("deliverer is not set");
 return|return
 literal|false
 return|;
@@ -431,15 +423,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-literal|"converter is not set"
-argument_list|)
-expr_stmt|;
+comment|//System.err.println("converter is not set");
 return|return
 literal|false
 return|;
@@ -452,15 +436,7 @@ name|isShutdown
 argument_list|()
 condition|)
 block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-literal|"engine shutdown"
-argument_list|)
-expr_stmt|;
+comment|//System.err.println("engine shutdown");
 return|return
 literal|false
 return|;

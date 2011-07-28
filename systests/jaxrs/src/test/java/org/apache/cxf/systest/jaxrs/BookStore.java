@@ -846,15 +846,7 @@ name|void
 name|postConstruct
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"PostConstruct called"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("PostConstruct called");
 block|}
 annotation|@
 name|PreDestroy
@@ -863,15 +855,7 @@ name|void
 name|preDestroy
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"PreDestroy called"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("PreDestroy called");
 block|}
 annotation|@
 name|GET
@@ -950,15 +934,7 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|uri
-argument_list|)
-expr_stmt|;
+comment|//System.out.println(uri);
 if|if
 condition|(
 name|uri
