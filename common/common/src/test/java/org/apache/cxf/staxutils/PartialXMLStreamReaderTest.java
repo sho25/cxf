@@ -248,17 +248,6 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"value: "
-operator|+
-name|value
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 operator|(
