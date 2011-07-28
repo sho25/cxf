@@ -232,6 +232,15 @@ return|return
 literal|null
 return|;
 block|}
+specifier|public
+name|int
+name|size
+parameter_list|()
+block|{
+return|return
+name|index
+return|;
+block|}
 block|}
 end_class
 
