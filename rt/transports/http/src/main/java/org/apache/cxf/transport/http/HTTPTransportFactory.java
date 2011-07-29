@@ -1233,6 +1233,21 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|endpointInfo
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"EndpointInfo cannot be null"
+argument_list|)
+throw|;
+block|}
 name|AbstractHTTPDestination
 name|d
 init|=
