@@ -680,6 +680,15 @@ specifier|private
 name|RM11Constants
 parameter_list|()
 block|{     }
+specifier|public
+name|String
+name|getWSRMNamespace
+parameter_list|()
+block|{
+return|return
+name|NAMESPACE_URI
+return|;
+block|}
 comment|// actions access methods
 specifier|public
 name|String

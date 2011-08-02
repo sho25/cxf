@@ -171,6 +171,12 @@ name|WSRM_REQUIRED_FAULT_CODE
 init|=
 literal|"WSRMRequired"
 decl_stmt|;
+specifier|public
+specifier|abstract
+name|String
+name|getWSRMNamespace
+parameter_list|()
+function_decl|;
 comment|// actions access methods
 specifier|public
 specifier|abstract
