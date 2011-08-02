@@ -272,6 +272,8 @@ literal|"getLocalizedMessage"
 block|,
 literal|"getStackTrace"
 block|,
+literal|"getSuppressed"
+block|,
 literal|"getClass"
 block|}
 decl_stmt|;
