@@ -183,6 +183,8 @@ block|,
 literal|"/soap/test"
 block|,
 literal|"/test/tst"
+block|,
+literal|"/test2/"
 block|}
 decl_stmt|;
 specifier|private
@@ -210,6 +212,12 @@ block|,
 literal|"/test/tst/2"
 block|,
 literal|"/test/2"
+block|,
+literal|"/test2"
+block|,
+literal|"/test2/"
+block|,
+literal|"/test2/3"
 block|}
 decl_stmt|;
 specifier|private
@@ -239,6 +247,12 @@ literal|4
 block|,
 operator|-
 literal|1
+block|,
+literal|5
+block|,
+literal|5
+block|,
+literal|5
 block|}
 decl_stmt|;
 specifier|private
