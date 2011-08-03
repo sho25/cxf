@@ -731,15 +731,6 @@ argument_list|(
 name|bookStore
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|address
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|Server
@@ -826,6 +817,9 @@ name|Object
 name|proxy
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 block|{
