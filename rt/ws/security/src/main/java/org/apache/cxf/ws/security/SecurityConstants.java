@@ -207,6 +207,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CRYPTO_CACHE
+init|=
+literal|"ws-security.crypto.cache"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|TOKEN
 init|=
 literal|"ws-security.token"
