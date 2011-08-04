@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Strategy for retreiving a Conduit to mediate an outbound message.  * A specific instance implementing a particular strategy may be injected  * into the Client via config.  */
+comment|/**  * Strategy for retrieving a Conduit to mediate an outbound message.  * A specific instance implementing a particular strategy may be injected  * into the Client via config.  */
 end_comment
 
 begin_interface
