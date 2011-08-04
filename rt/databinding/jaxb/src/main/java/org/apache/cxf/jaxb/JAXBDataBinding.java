@@ -2164,6 +2164,13 @@ condition|(
 name|schemas
 operator|==
 literal|null
+operator|||
+name|schemas
+operator|.
+name|size
+argument_list|()
+operator|==
+literal|0
 condition|)
 block|{
 name|schemas
