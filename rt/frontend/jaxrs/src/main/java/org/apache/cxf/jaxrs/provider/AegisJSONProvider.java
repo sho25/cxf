@@ -823,7 +823,7 @@ condition|)
 block|{
 name|namespaceMap
 operator|.
-name|put
+name|putIfAbsent
 argument_list|(
 name|typeToRead
 operator|.
