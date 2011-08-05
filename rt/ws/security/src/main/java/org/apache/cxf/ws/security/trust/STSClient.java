@@ -7259,6 +7259,8 @@ name|decrypt
 parameter_list|)
 throws|throws
 name|IOException
+throws|,
+name|WSSecurityException
 block|{
 name|Crypto
 name|crypto
