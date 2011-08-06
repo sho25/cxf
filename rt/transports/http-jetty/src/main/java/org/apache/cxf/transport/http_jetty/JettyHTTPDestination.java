@@ -497,6 +497,10 @@ specifier|protected
 name|URL
 name|nurl
 decl_stmt|;
+specifier|protected
+name|ClassLoader
+name|loader
+decl_stmt|;
 comment|/**      * This variable signifies that finalizeConfig() has been called.      * It gets called after this object has been spring configured.      * It is used to automatically reinitialize things when resources      * are reset, such as setTlsServerParameters().      */
 specifier|private
 name|boolean
@@ -558,6 +562,17 @@ name|endpointInfo
 operator|.
 name|getAddress
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|loader
+operator|=
+name|bus
+operator|.
+name|getExtension
+argument_list|(
+name|ClassLoader
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 block|}
@@ -1438,18 +1453,6 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-name|ClassLoader
-name|loader
-init|=
-name|bus
-operator|.
-name|getExtension
-argument_list|(
-name|ClassLoader
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
 if|if
 condition|(
 name|loader
