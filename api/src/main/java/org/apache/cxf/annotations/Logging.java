@@ -122,6 +122,13 @@ parameter_list|()
 default|default
 literal|"<logger>"
 function_decl|;
+comment|/**      * For XML content, turn on pretty printing in the logs      * @return      */
+name|boolean
+name|pretty
+parameter_list|()
+default|default
+literal|false
+function_decl|;
 block|}
 end_annotation_defn
 

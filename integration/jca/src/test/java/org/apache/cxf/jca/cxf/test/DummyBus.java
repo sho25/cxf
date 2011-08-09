@@ -25,6 +25,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collections
 import|;
 end_import
@@ -86,6 +96,20 @@ operator|.
 name|i18n
 operator|.
 name|Message
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|feature
+operator|.
+name|AbstractFeature
 import|;
 end_import
 
@@ -445,6 +469,19 @@ name|Object
 name|o
 parameter_list|)
 block|{     }
+specifier|public
+name|Collection
+argument_list|<
+name|AbstractFeature
+argument_list|>
+name|getFeatures
+parameter_list|()
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
 block|}
 end_class
 
