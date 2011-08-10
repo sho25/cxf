@@ -330,7 +330,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class provides some functionality to convert the JAXB   * generated types in the security.xsd to the items needed  * to programatically configure the HTTPConduit and HTTPDestination  * with TLSClientParameters and TLSServerParameters respectively.  */
+comment|/**  * This class provides some functionality to convert the JAXB  * generated types in the security.xsd to the items needed  * to programatically configure the HTTPConduit and HTTPDestination  * with TLSClientParameters and TLSServerParameters respectively.  */
 end_comment
 
 begin_class
@@ -540,17 +540,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|!
-literal|"PKCS11"
-operator|.
-name|equals
-argument_list|(
-name|type
-argument_list|)
-condition|)
-block|{
-if|if
-condition|(
 name|kst
 operator|.
 name|isSetFile
@@ -574,6 +563,7 @@ name|password
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|kst
@@ -652,6 +642,7 @@ name|password
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|kst
@@ -679,7 +670,6 @@ argument_list|,
 name|password
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 else|else
 block|{
@@ -995,7 +985,7 @@ name|is
 argument_list|)
 return|;
 block|}
-comment|/**      * This method converts the JAXB KeyManagersType into a list of       * JSSE KeyManagers.      */
+comment|/**      * This method converts the JAXB KeyManagersType into a list of      * JSSE KeyManagers.      */
 specifier|public
 specifier|static
 name|KeyManager
@@ -1112,7 +1102,7 @@ name|getKeyManagers
 argument_list|()
 return|;
 block|}
-comment|/**      * This method converts the JAXB KeyManagersType into a list of       * JSSE TrustManagers.      */
+comment|/**      * This method converts the JAXB KeyManagersType into a list of      * JSSE TrustManagers.      */
 specifier|public
 specifier|static
 name|TrustManager
