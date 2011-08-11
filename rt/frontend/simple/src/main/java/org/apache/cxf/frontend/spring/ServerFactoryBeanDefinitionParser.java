@@ -726,8 +726,7 @@ name|BeansException
 block|{
 if|if
 condition|(
-name|getBus
-argument_list|()
+name|bus
 operator|==
 literal|null
 condition|)
