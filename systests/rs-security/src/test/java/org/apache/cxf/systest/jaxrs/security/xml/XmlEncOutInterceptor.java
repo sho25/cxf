@@ -261,9 +261,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
-name|jaxrs
+name|rs
 operator|.
 name|security
 operator|.
@@ -281,9 +279,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
-name|jaxrs
+name|rs
 operator|.
 name|security
 operator|.

@@ -151,13 +151,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
-name|jaxrs
+name|rs
 operator|.
 name|security
 operator|.
-name|Book
+name|common
+operator|.
+name|SecurityUtils
 import|;
 end_import
 
@@ -175,9 +175,7 @@ name|jaxrs
 operator|.
 name|security
 operator|.
-name|common
-operator|.
-name|SecurityUtils
+name|Book
 import|;
 end_import
 
