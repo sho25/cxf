@@ -243,7 +243,7 @@ name|String
 name|sayHi
 parameter_list|()
 block|{
-comment|// throw the exception out
+comment|// throw the exception out with some cause
 name|Exception
 name|cause
 init|=
@@ -251,8 +251,19 @@ operator|new
 name|IllegalArgumentException
 argument_list|(
 literal|"Get a wrong name<sayHi>"
+argument_list|,
+operator|new
+name|NullPointerException
+argument_list|(
+literal|"Test cause."
+argument_list|)
 argument_list|)
 decl_stmt|;
+name|cause
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 throw|throw
 operator|new
 name|Fault
