@@ -7554,14 +7554,14 @@ argument_list|)
 expr_stmt|;
 name|encrKey
 operator|.
-name|setKeySize
+name|setSymmetricEncAlgorithm
 argument_list|(
 name|binding
 operator|.
 name|getAlgorithmSuite
 argument_list|()
 operator|.
-name|getMaximumSymmetricKeyLength
+name|getEncryption
 argument_list|()
 argument_list|)
 expr_stmt|;
