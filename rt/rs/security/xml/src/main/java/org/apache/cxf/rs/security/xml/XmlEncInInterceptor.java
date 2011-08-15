@@ -186,8 +186,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-annotation|@
-name|Override
 specifier|public
 name|void
 name|handleFault
@@ -196,8 +194,6 @@ name|Message
 name|message
 parameter_list|)
 block|{     }
-annotation|@
-name|Override
 specifier|public
 name|void
 name|handleMessage
@@ -270,8 +266,6 @@ name|response
 argument_list|)
 throw|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Collection
 argument_list|<
@@ -289,8 +283,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Set
 argument_list|<
@@ -306,8 +298,6 @@ name|emptySet
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Set
 argument_list|<
@@ -323,8 +313,6 @@ name|emptySet
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getId
@@ -338,8 +326,6 @@ name|getName
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getPhase
