@@ -176,7 +176,7 @@ name|Server11
 operator|.
 name|class
 argument_list|,
-literal|true
+literal|false
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -250,11 +250,7 @@ name|getClassName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+comment|//ex.printStackTrace();
 name|boolean
 name|findNPE
 init|=
