@@ -2256,7 +2256,7 @@ name|this
 operator|.
 name|maximumSymmetricKeyLength
 operator|=
-literal|192
+literal|128
 expr_stmt|;
 block|}
 elseif|else
