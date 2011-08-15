@@ -275,10 +275,12 @@ operator|.
 name|getClassName
 argument_list|()
 operator|.
-name|startsWith
+name|indexOf
 argument_list|(
-literal|"Caused by:class java.lang.NullPointerException: "
+literal|"java.lang.NullPointerException"
 argument_list|)
+operator|>
+literal|0
 condition|)
 block|{
 name|findNPE
