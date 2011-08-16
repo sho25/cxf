@@ -955,6 +955,18 @@ throw|;
 block|}
 block|}
 annotation|@
+name|PUT
+annotation|@
+name|Path
+argument_list|(
+literal|"emptyput"
+argument_list|)
+specifier|public
+name|void
+name|emptyput
+parameter_list|()
+block|{     }
+annotation|@
 name|POST
 specifier|public
 name|void
