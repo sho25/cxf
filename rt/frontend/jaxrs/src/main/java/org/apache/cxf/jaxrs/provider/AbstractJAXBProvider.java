@@ -3778,6 +3778,8 @@ argument_list|,
 name|outAppendMap
 argument_list|,
 name|attributesToElements
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}

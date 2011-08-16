@@ -230,6 +230,9 @@ name|outAppendMap
 parameter_list|,
 name|boolean
 name|attributesToElements
+parameter_list|,
+name|String
+name|defaultNamespace
 parameter_list|)
 block|{
 if|if
@@ -272,6 +275,8 @@ argument_list|,
 name|outDropElements
 argument_list|,
 name|attributesToElements
+argument_list|,
+name|defaultNamespace
 argument_list|)
 expr_stmt|;
 block|}
