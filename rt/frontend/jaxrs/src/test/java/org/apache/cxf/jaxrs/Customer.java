@@ -513,7 +513,6 @@ implements|implements
 name|CustomerInfo
 block|{
 specifier|public
-specifier|static
 interface|interface
 name|CustomerBeanInterface
 block|{              }

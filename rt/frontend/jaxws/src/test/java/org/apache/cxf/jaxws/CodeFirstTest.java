@@ -2563,7 +2563,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|GenericsService2Typed
 extends|extends
@@ -2793,7 +2792,6 @@ operator|.
 name|BARE
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|NoRootBare
 block|{
@@ -3156,7 +3154,6 @@ operator|.
 name|BARE
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|CXF2766
 block|{

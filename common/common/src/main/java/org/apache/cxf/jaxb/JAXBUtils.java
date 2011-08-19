@@ -4069,7 +4069,6 @@ throw|;
 block|}
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|BridgeWrapper
 block|{
@@ -5757,7 +5756,6 @@ return|;
 block|}
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|SchemaCompiler
 block|{
@@ -5816,7 +5814,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|S2JJAXBModel
 block|{
@@ -5867,7 +5864,6 @@ parameter_list|)
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|Mapping
 block|{
@@ -5884,7 +5880,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|TypeAndAnnotation
 block|{
@@ -5901,7 +5896,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|JType
 block|{
@@ -5958,7 +5952,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|Options
 block|{
@@ -5982,7 +5975,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|JCodeModel
 block|{
@@ -6017,7 +6009,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|JPackage
 block|{
@@ -6047,7 +6038,6 @@ parameter_list|()
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|JDefinedClass
 block|{

@@ -399,7 +399,6 @@ operator|=
 literal|"http://www.sics.se/NotificationLog"
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|NotificationLog
 block|{

@@ -5290,7 +5290,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|private
-specifier|static
 interface|interface
 name|SEI
 block|{

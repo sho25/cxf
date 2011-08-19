@@ -1067,7 +1067,6 @@ name|rhinoContextFactory
 return|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|JSRunnable
 parameter_list|<

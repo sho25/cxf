@@ -370,7 +370,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|TestService
 parameter_list|<

@@ -2141,7 +2141,6 @@ extends|extends
 name|AegisTestBean
 block|{     }
 specifier|private
-specifier|static
 interface|interface
 name|InterfaceWithMap
 block|{

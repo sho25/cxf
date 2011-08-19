@@ -1116,7 +1116,6 @@ argument_list|)
 block|}
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|CXF3093PortType
 block|{
@@ -1391,7 +1390,6 @@ operator|=
 literal|"http://www.example.org/contract/DoubleIt"
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|CXF3092PortType
 block|{

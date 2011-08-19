@@ -8347,7 +8347,6 @@ block|}
 block|}
 block|}
 specifier|private
-specifier|static
 interface|interface
 name|SchemaWriter
 block|{
