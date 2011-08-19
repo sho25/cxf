@@ -1231,7 +1231,7 @@ name|workqueue
 operator|.
 name|getPoolSize
 argument_list|()
-operator|!=
+operator|>
 literal|10
 operator|&&
 name|i
@@ -1287,6 +1287,8 @@ specifier|public
 name|void
 name|testThreadPoolShrinkUnbounded
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|workqueue
 operator|=
@@ -1342,7 +1344,7 @@ name|workqueue
 operator|.
 name|getPoolSize
 argument_list|()
-operator|!=
+operator|>
 name|DEFAULT_LOW_WATER_MARK
 operator|&&
 name|i
@@ -1373,8 +1375,6 @@ operator|=
 literal|0
 expr_stmt|;
 block|}
-try|try
-block|{
 name|Thread
 operator|.
 name|sleep
@@ -1383,18 +1383,19 @@ literal|100
 argument_list|)
 expr_stmt|;
 block|}
-catch|catch
-parameter_list|(
-name|InterruptedException
-name|ie
-parameter_list|)
-block|{
-comment|// ignore
-block|}
-block|}
+name|int
+name|sz
+init|=
+name|workqueue
+operator|.
+name|getPoolSize
+argument_list|()
+decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"threads_total()"
+literal|"threads_total(): "
+operator|+
+name|sz
 argument_list|,
 name|workqueue
 operator|.

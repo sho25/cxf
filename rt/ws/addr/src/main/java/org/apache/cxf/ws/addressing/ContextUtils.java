@@ -1885,7 +1885,7 @@ name|in
 init|=
 name|inMessage
 operator|.
-name|get
+name|getContent
 argument_list|(
 name|DelegatingInputStream
 operator|.

@@ -423,7 +423,7 @@ name|in
 init|=
 name|message
 operator|.
-name|get
+name|getContent
 argument_list|(
 name|DelegatingInputStream
 operator|.
@@ -548,9 +548,17 @@ argument_list|()
 expr_stmt|;
 try|try
 block|{
+specifier|final
+name|Object
+name|lock
+init|=
+operator|new
+name|Object
+argument_list|()
+decl_stmt|;
 synchronized|synchronized
 init|(
-name|chain
+name|lock
 init|)
 block|{
 name|message
@@ -588,10 +596,10 @@ parameter_list|()
 block|{
 synchronized|synchronized
 init|(
-name|chain
+name|lock
 init|)
 block|{
-name|chain
+name|lock
 operator|.
 name|notifyAll
 argument_list|()
@@ -609,7 +617,7 @@ expr_stmt|;
 comment|//wait a few milliseconds for the background thread to start processing
 comment|//Mostly just to make an attempt at keeping the ordering of the
 comment|//messages coming in from a client.  Not guaranteed though.
-name|chain
+name|lock
 operator|.
 name|wait
 argument_list|(
