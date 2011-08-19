@@ -159,6 +159,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|WebServiceException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -3070,10 +3082,10 @@ argument_list|)
 decl_stmt|;
 throw|throw
 operator|new
-name|SoapFault
+name|WebServiceException
 argument_list|(
 name|reason
-argument_list|,
+operator|+
 operator|new
 name|QName
 argument_list|(

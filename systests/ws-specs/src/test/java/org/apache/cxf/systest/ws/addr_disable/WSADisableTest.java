@@ -117,6 +117,18 @@ name|xml
 operator|.
 name|ws
 operator|.
+name|WebServiceException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
 name|soap
 operator|.
 name|AddressingFeature
@@ -723,6 +735,15 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+name|assertTrue
+argument_list|(
+literal|"expected WebServiceException"
+argument_list|,
+name|e
+operator|instanceof
+name|WebServiceException
+argument_list|)
+expr_stmt|;
 name|String
 name|expected
 init|=
