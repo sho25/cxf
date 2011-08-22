@@ -339,6 +339,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SPNEGO_CONTEXT_TOKEN
+init|=
+literal|"SpnegoContextToken"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|KEYVALUE_TOKEN
 init|=
 literal|"KeyValueToken"
@@ -1570,6 +1578,12 @@ specifier|public
 specifier|abstract
 name|QName
 name|getKerberosToken
+parameter_list|()
+function_decl|;
+specifier|public
+specifier|abstract
+name|QName
+name|getSpnegoContextToken
 parameter_list|()
 function_decl|;
 specifier|public
