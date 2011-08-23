@@ -58,6 +58,10 @@ name|Number
 name|getTotalHandlingTime
 parameter_list|()
 function_decl|;
+name|void
+name|reset
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
