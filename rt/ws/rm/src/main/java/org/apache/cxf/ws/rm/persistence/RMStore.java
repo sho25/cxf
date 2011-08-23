@@ -116,6 +116,28 @@ name|DestinationSequence
 name|seq
 parameter_list|)
 function_decl|;
+comment|/**      * Retrieve the source sequence with the specified identifier from persistent store.       * @param seq the sequence      * @return the sequence if present; otherwise null      */
+name|SourceSequence
+name|getSourceSequence
+parameter_list|(
+name|Identifier
+name|seq
+parameter_list|,
+name|ProtocolVariation
+name|protocol
+parameter_list|)
+function_decl|;
+comment|/**      * Retrieve the destination sequence with the specified identifier from persistent store.       * @param seq the sequence      * @return the sequence if present; otherwise null      */
+name|DestinationSequence
+name|getDestinationSequence
+parameter_list|(
+name|Identifier
+name|seq
+parameter_list|,
+name|ProtocolVariation
+name|protocol
+parameter_list|)
+function_decl|;
 comment|/**      * Remove the source sequence with the specified identifier from persistent store.       * @param seq the sequence      */
 name|void
 name|removeSourceSequence

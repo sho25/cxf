@@ -19,6 +19,26 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -59,7 +79,7 @@ name|boolean
 name|isEmpty
 parameter_list|()
 function_decl|;
-comment|/**      * Accepts a new context for posible future retransmission.       * @param ctx the message context.      */
+comment|/**      * Accepts a new message for possible future retransmission.       * @param message the message context.      */
 name|void
 name|addUnacknowledged
 parameter_list|(
@@ -75,14 +95,65 @@ name|SourceSequence
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Initiate resends.      *      */
+comment|/**      *       * @param seq      * @return      */
+name|List
+argument_list|<
+name|Long
+argument_list|>
+name|getUnacknowledgedMessageNumbers
+parameter_list|(
+name|SourceSequence
+name|seq
+parameter_list|)
+function_decl|;
+comment|/**      * Returns the retransmission status for the specified message.      * @param seq      * @param num      * @return      */
+name|RetransmissionStatus
+name|getRetransmissionStatus
+parameter_list|(
+name|SourceSequence
+name|seq
+parameter_list|,
+name|long
+name|num
+parameter_list|)
+function_decl|;
+comment|/**      * Return the retransmission status of all the messages assigned to the sequence.      * @param seq      * @return      */
+name|Map
+argument_list|<
+name|Long
+argument_list|,
+name|RetransmissionStatus
+argument_list|>
+name|getRetransmissionStatuses
+parameter_list|(
+name|SourceSequence
+name|seq
+parameter_list|)
+function_decl|;
+comment|/**      * Initiate resends.      */
 name|void
 name|start
 parameter_list|()
 function_decl|;
-comment|/**      * Stops retransmission queue.      */
+comment|/**      * Stops retransmission queue.      * @param seq      */
 name|void
 name|stop
+parameter_list|(
+name|SourceSequence
+name|seq
+parameter_list|)
+function_decl|;
+comment|/**      * Suspends the retransmission attempts for the specified sequence      * @param seq      */
+name|void
+name|suspend
+parameter_list|(
+name|SourceSequence
+name|seq
+parameter_list|)
+function_decl|;
+comment|/**      * Resumes the retransmission attempts for the specified sequence      * @param seq      */
+name|void
+name|resume
 parameter_list|(
 name|SourceSequence
 name|seq

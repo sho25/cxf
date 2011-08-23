@@ -1719,11 +1719,7 @@ name|Collections
 operator|.
 name|singleton
 argument_list|(
-operator|new
-name|Long
-argument_list|(
 name|messageNr
-argument_list|)
 argument_list|)
 argument_list|,
 literal|false
@@ -1747,6 +1743,17 @@ parameter_list|()
 block|{
 return|return
 name|acknowledgeOnNextOccasion
+return|;
+block|}
+name|List
+argument_list|<
+name|DeferredAcknowledgment
+argument_list|>
+name|getDeferredAcknowledgements
+parameter_list|()
+block|{
+return|return
+name|deferredAcknowledgments
 return|;
 block|}
 comment|/**      * The correlation of the incoming CreateSequence call used to create this      * sequence is recorded so that in the absence of an offer, the corresponding      * outgoing CreateSeqeunce can be correlated.      */
