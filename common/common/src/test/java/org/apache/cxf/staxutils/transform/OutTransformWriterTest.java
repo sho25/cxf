@@ -426,22 +426,62 @@ name|transformWriter
 argument_list|)
 expr_stmt|;
 name|String
-name|expected
+name|xmlPI
 init|=
 literal|"<?xml version='1.0' encoding='UTF-8'?>"
-operator|+
+decl_stmt|;
+name|String
+name|start
+init|=
 literal|"<ps1:testBean xmlns:ps1=\"http://testbeans.com/v2\""
+decl_stmt|;
+name|String
+name|expected1
+init|=
+name|xmlPI
+operator|+
+name|start
 operator|+
 literal|" xmlns:ps2=\"http://testbeans.com/v3\"><ps2:bean/></ps1:testBean>"
 decl_stmt|;
-name|assertEquals
-argument_list|(
-name|expected
-argument_list|,
+name|String
+name|expected2
+init|=
+name|xmlPI
+operator|+
+name|start
+operator|+
+literal|"><ps2:bean xmlns:ps2=\"http://testbeans.com/v3\"/></ps1:testBean>"
+decl_stmt|;
+name|String
+name|out
+init|=
 name|os
 operator|.
 name|toString
 argument_list|()
+decl_stmt|;
+name|assertTrue
+argument_list|(
+literal|"Output \""
+operator|+
+name|out
+operator|+
+literal|"\" does not match expected values"
+argument_list|,
+name|expected1
+operator|.
+name|equals
+argument_list|(
+name|out
+argument_list|)
+operator|||
+name|expected2
+operator|.
+name|equals
+argument_list|(
+name|out
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -573,22 +613,62 @@ name|transformWriter
 argument_list|)
 expr_stmt|;
 name|String
-name|expected
+name|xmlPI
 init|=
 literal|"<?xml version='1.0' encoding='UTF-8'?>"
-operator|+
+decl_stmt|;
+name|String
+name|start
+init|=
 literal|"<testBean xmlns=\"http://testbeans.com/v2\""
+decl_stmt|;
+name|String
+name|expected1
+init|=
+name|xmlPI
+operator|+
+name|start
 operator|+
 literal|" xmlns:ps2=\"http://testbeans.com/v3\"><ps2:bean/></testBean>"
 decl_stmt|;
-name|assertEquals
-argument_list|(
-name|expected
-argument_list|,
+name|String
+name|expected2
+init|=
+name|xmlPI
+operator|+
+name|start
+operator|+
+literal|"><ps2:bean xmlns:ps2=\"http://testbeans.com/v3\"/></testBean>"
+decl_stmt|;
+name|String
+name|out
+init|=
 name|os
 operator|.
 name|toString
 argument_list|()
+decl_stmt|;
+name|assertTrue
+argument_list|(
+literal|"Output \""
+operator|+
+name|out
+operator|+
+literal|"\" does not match expected values"
+argument_list|,
+name|expected1
+operator|.
+name|equals
+argument_list|(
+name|out
+argument_list|)
+operator|||
+name|expected2
+operator|.
+name|equals
+argument_list|(
+name|out
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
