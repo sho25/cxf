@@ -557,6 +557,14 @@ name|getOutputDir
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|destination
+operator|.
+name|setExtraargs
+argument_list|(
+name|getExtraargs
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 parameter_list|<
