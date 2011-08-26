@@ -791,6 +791,16 @@ argument_list|,
 literal|"-faultSerialVersionUID"
 argument_list|)
 expr_stmt|;
+name|addIfNotNull
+argument_list|(
+name|list
+argument_list|,
+name|getExceptionSuper
+argument_list|()
+argument_list|,
+literal|"-exceptionSuper"
+argument_list|)
+expr_stmt|;
 name|addIfTrue
 argument_list|(
 name|list

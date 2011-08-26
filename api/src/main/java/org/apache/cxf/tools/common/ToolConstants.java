@@ -499,6 +499,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_EXCEPTION_SUPER
+init|=
+literal|"exceptionSuper"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_MARK_GENERATED
 init|=
 literal|"mark-generated"
