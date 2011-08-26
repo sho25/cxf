@@ -479,6 +479,9 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
+name|isFault
+operator|&&
+operator|!
 name|allowWrapperOperations
 operator|&&
 name|op
