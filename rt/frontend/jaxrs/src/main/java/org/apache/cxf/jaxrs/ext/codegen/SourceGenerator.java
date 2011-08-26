@@ -4161,7 +4161,7 @@ name|responseEls
 operator|.
 name|get
 argument_list|(
-literal|0
+name|i
 argument_list|)
 operator|.
 name|getAttribute
