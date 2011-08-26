@@ -650,6 +650,16 @@ argument_list|(
 name|bindingFiles
 argument_list|)
 expr_stmt|;
+name|sg
+operator|.
+name|setCompilerArgs
+argument_list|(
+name|parser
+operator|.
+name|getCompilerArgs
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|InputSource

@@ -150,6 +150,16 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_NO_ADDRESS_BINDING
+init|=
+name|ToolConstants
+operator|.
+name|CFG_NO_ADDRESS_BINDING
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_WADLURL
 init|=
 literal|"wadl"
