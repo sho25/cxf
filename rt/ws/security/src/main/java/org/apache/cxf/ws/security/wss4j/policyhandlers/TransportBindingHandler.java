@@ -1251,6 +1251,10 @@ operator|||
 name|token
 operator|instanceof
 name|KeyValueToken
+operator|||
+name|token
+operator|instanceof
+name|KerberosToken
 condition|)
 block|{
 name|addSig
@@ -1435,6 +1439,10 @@ operator|||
 name|token
 operator|instanceof
 name|SecureConversationToken
+operator|||
+name|token
+operator|instanceof
+name|KerberosToken
 condition|)
 block|{
 name|addSig
