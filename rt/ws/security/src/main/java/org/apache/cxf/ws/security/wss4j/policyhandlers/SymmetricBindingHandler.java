@@ -3495,6 +3495,9 @@ else|else
 block|{
 if|if
 condition|(
+operator|!
+name|attached
+operator|||
 name|policyToken
 operator|instanceof
 name|SecureConversationToken
