@@ -2189,7 +2189,7 @@ block|{             }
 block|}
 return|;
 block|}
-comment|/**      * Propogate inbound MAPs onto full reponse& fault messages.      *       * @param inMAPs the inbound MAPs      * @param exchange the current Exchange      */
+comment|/**      * Propagate inbound MAPs onto full reponse& fault messages.      *       * @param inMAPs the inbound MAPs      * @param exchange the current Exchange      */
 specifier|public
 specifier|static
 name|void

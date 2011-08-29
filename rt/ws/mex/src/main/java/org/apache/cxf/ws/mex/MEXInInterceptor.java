@@ -437,6 +437,13 @@ name|equals
 argument_list|(
 name|action
 argument_list|)
+operator|||
+literal|"http://schemas.xmlsoap.org/ws/2004/09/mex/GetMetadata/Request"
+operator|.
+name|equals
+argument_list|(
+name|action
+argument_list|)
 condition|)
 block|{
 name|message
