@@ -143,6 +143,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SCT_TOKEN_VALIDATOR
+init|=
+literal|"ws-security.sct.validator"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CALLBACK_HANDLER
 init|=
 literal|"ws-security.callback-handler"
@@ -445,6 +453,8 @@ block|,
 name|STS_TOKEN_ON_BEHALF_OF
 block|,
 name|KERBEROS_CLIENT
+block|,
+name|SCT_TOKEN_VALIDATOR
 block|}
 argument_list|)
 argument_list|)
