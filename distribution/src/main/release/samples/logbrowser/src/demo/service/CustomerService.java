@@ -39,21 +39,19 @@ name|util
 operator|.
 name|logging
 operator|.
-name|Logger
+name|Level
 import|;
 end_import
 
 begin_import
-import|import static
+import|import
 name|java
 operator|.
 name|util
 operator|.
 name|logging
 operator|.
-name|Level
-operator|.
-name|*
+name|Logger
 import|;
 end_import
 
@@ -285,6 +283,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|FINE
 argument_list|,
 literal|"Invoking getCustomer, id={0}"
@@ -318,6 +318,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|SEVERE
 argument_list|,
 literal|"Specified customer does not exist, id={0}"
@@ -357,6 +359,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|FINE
 argument_list|,
 literal|"Invoking updateCustomer, customer={0}"
@@ -376,6 +380,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|FINE
 argument_list|,
 literal|"Specified customer exists, update data, customer={0}"
@@ -390,6 +396,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|WARNING
 argument_list|,
 literal|"Specified customer does not exist, add data, customer={0}"
@@ -414,6 +422,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|INFO
 argument_list|,
 literal|"Customer was updated successful, customer={0}"
@@ -469,6 +479,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|FINE
 argument_list|,
 literal|"Invoking deleteCustomer, id={0}"
@@ -501,6 +513,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|FINE
 argument_list|,
 literal|"Specified customer exists, remove data, id={0}"
@@ -519,6 +533,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|INFO
 argument_list|,
 literal|"Customer was removed successful, id={0}"
@@ -543,6 +559,8 @@ name|LOGGER
 operator|.
 name|log
 argument_list|(
+name|Level
+operator|.
 name|SEVERE
 argument_list|,
 literal|"Specified customer does not exist, remove fail, id={0}"
