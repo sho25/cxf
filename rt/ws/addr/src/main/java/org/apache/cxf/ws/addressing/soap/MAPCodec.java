@@ -2699,7 +2699,7 @@ comment|// would get wrong unmarshaller and fail to process required
 comment|// headers.
 if|if
 condition|(
-name|transformer
+name|VersionTransformer
 operator|.
 name|isSupported
 argument_list|(
