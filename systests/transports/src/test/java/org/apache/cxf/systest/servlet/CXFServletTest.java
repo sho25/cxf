@@ -458,9 +458,9 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"There should get two links for the service"
+literal|"Wrong number of service links"
 argument_list|,
-literal|3
+literal|4
 argument_list|,
 name|links
 operator|.
@@ -523,6 +523,16 @@ literal|"/services/greeter2?wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|assertTrue
+argument_list|(
+name|links2
+operator|.
+name|contains
+argument_list|(
+literal|"http://cxf.apache.org/MyGreeter?wsdl"
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"text/html"
@@ -577,9 +587,9 @@ expr_stmt|;
 block|}
 name|assertEquals
 argument_list|(
-literal|"There should get two links for the service"
+literal|"Wrong number of service links"
 argument_list|,
-literal|3
+literal|4
 argument_list|,
 name|links
 operator|.
@@ -607,6 +617,16 @@ argument_list|(
 name|CONTEXT_URL
 operator|+
 literal|"/services/greeter2?wsdl"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|links2
+operator|.
+name|contains
+argument_list|(
+literal|"http://cxf.apache.org/MyGreeter?wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
