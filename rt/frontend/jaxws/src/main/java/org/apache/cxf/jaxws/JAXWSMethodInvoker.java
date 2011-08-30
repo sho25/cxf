@@ -387,18 +387,18 @@ throw|;
 block|}
 finally|finally
 block|{
+comment|//clear the WebServiceContextImpl's ThreadLocal variable
+name|WebServiceContextImpl
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 name|addHandlerProperties
 argument_list|(
 name|ctx
 argument_list|,
 name|handlerScopedStuff
 argument_list|)
-expr_stmt|;
-comment|//clear the WebServiceContextImpl's ThreadLocal variable
-name|WebServiceContextImpl
-operator|.
-name|clear
-argument_list|()
 expr_stmt|;
 block|}
 return|return

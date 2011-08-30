@@ -250,19 +250,6 @@ specifier|public
 name|WebServiceContextImpl
 parameter_list|()
 block|{      }
-specifier|public
-name|WebServiceContextImpl
-parameter_list|(
-name|MessageContext
-name|ctx
-parameter_list|)
-block|{
-name|setMessageContext
-argument_list|(
-name|ctx
-argument_list|)
-expr_stmt|;
-block|}
 comment|// Implementation of javax.xml.ws.WebServiceContext
 specifier|public
 specifier|final
@@ -669,10 +656,8 @@ parameter_list|()
 block|{
 name|context
 operator|.
-name|set
-argument_list|(
-literal|null
-argument_list|)
+name|remove
+argument_list|()
 expr_stmt|;
 block|}
 block|}
