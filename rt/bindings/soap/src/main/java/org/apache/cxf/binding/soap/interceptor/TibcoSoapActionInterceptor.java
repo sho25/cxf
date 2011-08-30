@@ -31,6 +31,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|TreeMap
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -207,6 +217,33 @@ name|SOAP_ACTION
 argument_list|)
 condition|)
 block|{
+comment|//need to flip to a case sensitive map.  The default
+comment|//is a case insensitive map, but in this case, we need
+comment|//to use a case sensitive map to make sure both versions go out
+name|headers
+operator|=
+operator|new
+name|TreeMap
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+argument_list|(
+name|headers
+argument_list|)
+expr_stmt|;
+name|soapMessage
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|PROTOCOL_HEADERS
+argument_list|,
+name|headers
+argument_list|)
+expr_stmt|;
 name|headers
 operator|.
 name|put
