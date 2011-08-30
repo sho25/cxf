@@ -870,6 +870,10 @@ name|jmex
 argument_list|)
 expr_stmt|;
 block|}
+name|iMgr
+operator|=
+literal|null
+expr_stmt|;
 block|}
 block|}
 specifier|public
