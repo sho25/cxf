@@ -1491,14 +1491,6 @@ name|getContextClassLoader
 argument_list|()
 expr_stmt|;
 block|}
-name|URL
-name|u
-init|=
-name|composeUrl
-argument_list|(
-name|wsdlUrl
-argument_list|)
-decl_stmt|;
 name|LOG
 operator|.
 name|log
@@ -1507,12 +1499,9 @@ name|Level
 operator|.
 name|FINE
 argument_list|,
-literal|"Creating client from URL "
+literal|"Creating client from WSDL "
 operator|+
-name|u
-operator|.
-name|toString
-argument_list|()
+name|wsdlUrl
 argument_list|)
 expr_stmt|;
 name|WSDLServiceFactory
@@ -1568,8 +1557,6 @@ operator|new
 name|ClientImpl
 argument_list|(
 name|bus
-argument_list|,
-name|u
 argument_list|,
 name|svc
 argument_list|,

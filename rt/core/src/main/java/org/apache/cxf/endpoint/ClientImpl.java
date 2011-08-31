@@ -1187,15 +1187,12 @@ name|notifyLifecycleManager
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Create a Client that uses a specific EndpointImpl.      * @param bus      * @param wsdlUrl      * @param service      * @param port      * @param endpointImplFactory      */
+comment|/**      * Create a Client that uses a specific EndpointImpl.      * @param bus      * @param service      * @param port      * @param endpointImplFactory      */
 specifier|public
 name|ClientImpl
 parameter_list|(
 name|Bus
 name|bus
-parameter_list|,
-name|URL
-name|wsdlUrl
 parameter_list|,
 name|Service
 name|svc
