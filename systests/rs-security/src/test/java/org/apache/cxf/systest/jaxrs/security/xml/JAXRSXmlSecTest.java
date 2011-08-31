@@ -495,9 +495,11 @@ argument_list|()
 decl_stmt|;
 name|sigInterceptor
 operator|.
-name|setEnveloping
+name|setStyle
 argument_list|(
-name|enveloping
+name|XmlSigOutInterceptor
+operator|.
+name|ENVELOPING_SIG
 argument_list|)
 expr_stmt|;
 name|bean
@@ -802,9 +804,11 @@ argument_list|()
 decl_stmt|;
 name|sigInterceptor
 operator|.
-name|setEnveloping
+name|setStyle
 argument_list|(
-name|enveloping
+name|XmlSigOutInterceptor
+operator|.
+name|ENVELOPING_SIG
 argument_list|)
 expr_stmt|;
 name|bean
