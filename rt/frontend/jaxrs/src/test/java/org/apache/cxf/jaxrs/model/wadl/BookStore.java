@@ -583,6 +583,14 @@ parameter_list|,
 annotation|@
 name|QueryParam
 argument_list|(
+literal|"bookstate"
+argument_list|)
+name|BookEnum
+name|state
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
 literal|"a"
 argument_list|)
 name|List
