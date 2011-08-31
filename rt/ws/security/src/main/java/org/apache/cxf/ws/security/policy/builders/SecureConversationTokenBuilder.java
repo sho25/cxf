@@ -368,7 +368,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"SecurityContextToken doesn't contain "
+literal|"SecureConversationToken doesn't contain "
 operator|+
 literal|"any sp:IncludeToken attribute"
 argument_list|)
@@ -563,6 +563,35 @@ block|{
 name|conversationToken
 operator|.
 name|setSc10SecurityContextToken
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|DOMUtils
+operator|.
+name|getFirstChildWithName
+argument_list|(
+name|elem
+argument_list|,
+name|consts
+operator|.
+name|getNamespace
+argument_list|()
+argument_list|,
+name|SPConstants
+operator|.
+name|SC13_SECURITY_CONTEXT_TOKEN
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+name|conversationToken
+operator|.
+name|setSc13SecurityContextToken
 argument_list|(
 literal|true
 argument_list|)

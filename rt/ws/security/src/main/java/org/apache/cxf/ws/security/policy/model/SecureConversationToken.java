@@ -414,6 +414,9 @@ operator|||
 name|isSc10SecurityContextToken
 argument_list|()
 operator|||
+name|isSc13SecurityContextToken
+argument_list|()
+operator|||
 name|bootstrapPolicy
 operator|!=
 literal|null
@@ -568,6 +571,27 @@ argument_list|,
 name|SPConstants
 operator|.
 name|SC10_SECURITY_CONTEXT_TOKEN
+argument_list|,
+name|namespaceURI
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|isSc13SecurityContextToken
+argument_list|()
+condition|)
+block|{
+comment|//<sp:SC13SecurityContextToken />
+name|writer
+operator|.
+name|writeEmptyElement
+argument_list|(
+name|prefix
+argument_list|,
+name|SPConstants
+operator|.
+name|SC13_SECURITY_CONTEXT_TOKEN
 argument_list|,
 name|namespaceURI
 argument_list|)

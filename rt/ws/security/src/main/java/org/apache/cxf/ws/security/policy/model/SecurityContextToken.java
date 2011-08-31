@@ -110,6 +110,9 @@ decl_stmt|;
 name|boolean
 name|sc10SecurityContextToken
 decl_stmt|;
+name|boolean
+name|sc13SecurityContextToken
+decl_stmt|;
 specifier|public
 name|SecurityContextToken
 parameter_list|(
@@ -173,6 +176,32 @@ operator|.
 name|sc10SecurityContextToken
 operator|=
 name|sc10SecurityContextToken
+expr_stmt|;
+block|}
+comment|/**      * @return Returns the sc13SecurityContextToken.      */
+specifier|public
+name|boolean
+name|isSc13SecurityContextToken
+parameter_list|()
+block|{
+return|return
+name|sc13SecurityContextToken
+return|;
+block|}
+comment|/**      * @param sc13SecurityContextToken The sc13SecurityContextToken to set.      */
+specifier|public
+name|void
+name|setSc13SecurityContextToken
+parameter_list|(
+name|boolean
+name|sc13SecurityContextToken
+parameter_list|)
+block|{
+name|this
+operator|.
+name|sc13SecurityContextToken
+operator|=
+name|sc13SecurityContextToken
 expr_stmt|;
 block|}
 comment|/*      * (non-Javadoc)      * @see org.apache.neethi.Assertion#getRealName()      */

@@ -1344,6 +1344,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SC13_SECURITY_CONTEXT_TOKEN
+init|=
+literal|"SC13SecurityContextToken"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|BOOTSTRAP_POLICY
 init|=
 literal|"BootstrapPolicy"
