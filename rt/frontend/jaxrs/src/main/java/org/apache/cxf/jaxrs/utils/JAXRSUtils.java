@@ -5185,6 +5185,18 @@ argument_list|)
 condition|)
 block|{
 name|String
+name|enc
+init|=
+name|HttpUtils
+operator|.
+name|getEncoding
+argument_list|(
+name|mt
+argument_list|,
+literal|"UTF-8"
+argument_list|)
+decl_stmt|;
+name|String
 name|body
 init|=
 name|FormUtils
@@ -5200,7 +5212,7 @@ operator|.
 name|class
 argument_list|)
 argument_list|,
-name|mt
+name|enc
 argument_list|)
 decl_stmt|;
 name|HttpServletRequest
@@ -5228,6 +5240,8 @@ operator|(
 name|String
 operator|)
 name|body
+argument_list|,
+name|enc
 argument_list|,
 name|decode
 argument_list|,

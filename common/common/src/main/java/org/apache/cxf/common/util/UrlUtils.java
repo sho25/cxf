@@ -116,7 +116,7 @@ specifier|private
 name|UrlUtils
 parameter_list|()
 block|{              }
-comment|/**      * Decodes using URLDecoder - use when queries or form post values are decoded      * @param value value to decode      * @return      */
+comment|/**      * Decodes using URLDecoder - use when queries or form post values are decoded      * @param value value to decode      * @param enc encoding      * @return      */
 specifier|public
 specifier|static
 name|String
@@ -124,6 +124,9 @@ name|urlDecode
 parameter_list|(
 name|String
 name|value
+parameter_list|,
+name|String
+name|enc
 parameter_list|)
 block|{
 try|try
@@ -136,7 +139,7 @@ name|decode
 argument_list|(
 name|value
 argument_list|,
-literal|"UTF-8"
+name|enc
 argument_list|)
 expr_stmt|;
 block|}
@@ -158,6 +161,24 @@ expr_stmt|;
 block|}
 return|return
 name|value
+return|;
+block|}
+specifier|public
+specifier|static
+name|String
+name|urlDecode
+parameter_list|(
+name|String
+name|value
+parameter_list|)
+block|{
+return|return
+name|urlDecode
+argument_list|(
+name|value
+argument_list|,
+literal|"UTF-8"
+argument_list|)
 return|;
 block|}
 comment|/**      * URL path segments may contain '+' symbols which should not be decoded into ' '      * This method replaces '+' with %2B and delegates to URLDecoder      * @param value value to decode      * @return      */
