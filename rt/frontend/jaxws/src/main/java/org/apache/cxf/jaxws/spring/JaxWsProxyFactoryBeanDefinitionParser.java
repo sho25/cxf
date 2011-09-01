@@ -434,6 +434,10 @@ name|destroy
 argument_list|()
 expr_stmt|;
 block|}
+name|obj
+operator|=
+literal|null
+expr_stmt|;
 block|}
 block|}
 block|}
