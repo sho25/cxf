@@ -760,6 +760,11 @@ operator|new
 name|XmlSigOutInterceptor
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|signed
+condition|)
+block|{
 name|xmlSig
 operator|.
 name|setStyle
@@ -769,6 +774,7 @@ operator|.
 name|DETACHED_SIG
 argument_list|)
 expr_stmt|;
+block|}
 name|WebClient
 operator|.
 name|getConfig

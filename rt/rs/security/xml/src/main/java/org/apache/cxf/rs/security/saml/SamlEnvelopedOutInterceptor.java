@@ -91,6 +91,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|io
+operator|.
+name|CachedOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|message
 operator|.
 name|Message
@@ -206,6 +220,10 @@ name|envelopeQName
 init|=
 name|DEFAULT_ENV_QNAME
 decl_stmt|;
+specifier|private
+name|boolean
+name|signLater
+decl_stmt|;
 specifier|public
 name|SamlEnvelopedOutInterceptor
 parameter_list|()
@@ -251,7 +269,7 @@ condition|)
 block|{
 name|super
 operator|.
-name|addAfter
+name|addBefore
 argument_list|(
 name|XmlSigOutInterceptor
 operator|.
@@ -277,6 +295,12 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|this
+operator|.
+name|signLater
+operator|=
+name|signLater
+expr_stmt|;
 name|super
 operator|.
 name|addBefore
@@ -461,9 +485,51 @@ argument_list|(
 name|docEl
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|signLater
+condition|)
+block|{
+comment|// it appears all the above manipulation with
+comment|// adopting and removing nodes
+comment|// leaves some stale refs/state and thus the digest ends uo being wrong
+comment|// on the server side if XML sig is applied later in the enveloped mode
+comment|// TODO: this is not critical now - but figure iut if we can avoid copying
+comment|// DOMs
+name|CachedOutputStream
+name|bos
+init|=
+operator|new
+name|CachedOutputStream
+argument_list|()
+decl_stmt|;
+name|DOMUtils
+operator|.
+name|writeXml
+argument_list|(
+name|newDoc
+argument_list|,
+name|bos
+argument_list|)
+expr_stmt|;
+return|return
+name|DOMUtils
+operator|.
+name|readXml
+argument_list|(
+name|bos
+operator|.
+name|getInputStream
+argument_list|()
+argument_list|)
+return|;
+block|}
+else|else
+block|{
 return|return
 name|newDoc
 return|;
+block|}
 block|}
 specifier|public
 name|void

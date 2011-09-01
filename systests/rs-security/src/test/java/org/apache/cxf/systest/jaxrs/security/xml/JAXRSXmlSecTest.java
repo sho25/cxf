@@ -493,6 +493,11 @@ operator|new
 name|XmlSigOutInterceptor
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|enveloping
+condition|)
+block|{
 name|sigInterceptor
 operator|.
 name|setStyle
@@ -502,6 +507,7 @@ operator|.
 name|ENVELOPING_SIG
 argument_list|)
 expr_stmt|;
+block|}
 name|bean
 operator|.
 name|getOutInterceptors
@@ -802,6 +808,11 @@ operator|new
 name|XmlSigOutInterceptor
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|enveloping
+condition|)
+block|{
 name|sigInterceptor
 operator|.
 name|setStyle
@@ -811,6 +822,7 @@ operator|.
 name|ENVELOPING_SIG
 argument_list|)
 expr_stmt|;
+block|}
 name|bean
 operator|.
 name|getOutInterceptors
