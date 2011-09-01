@@ -274,6 +274,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|stopped
+init|=
+literal|true
 decl_stmt|;
 specifier|public
 name|ServerImpl
@@ -613,6 +615,14 @@ name|void
 name|start
 parameter_list|()
 block|{
+if|if
+condition|(
+operator|!
+name|stopped
+condition|)
+block|{
+return|return;
+block|}
 name|LOG
 operator|.
 name|fine
