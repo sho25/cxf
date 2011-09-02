@@ -3571,6 +3571,8 @@ name|set
 argument_list|(
 name|obj
 argument_list|,
+name|getElementValue
+argument_list|(
 name|u
 operator|.
 name|unmarshal
@@ -3583,8 +3585,24 @@ name|getType
 argument_list|()
 argument_list|)
 argument_list|)
+argument_list|)
 expr_stmt|;
 block|}
+block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|NoSuchFieldException
+argument_list|(
+literal|"No accessible field "
+operator|+
+name|q
+operator|.
+name|getLocalPart
+argument_list|()
+argument_list|)
+throw|;
 block|}
 block|}
 catch|catch
