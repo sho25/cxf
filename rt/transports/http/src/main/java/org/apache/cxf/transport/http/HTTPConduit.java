@@ -5887,12 +5887,19 @@ name|in
 init|=
 literal|null
 decl_stmt|;
+comment|// oneway or decoupled twoway calls may expect HTTP 202 with no content
 if|if
 condition|(
 name|isOneway
 argument_list|(
 name|exchange
 argument_list|)
+operator|||
+name|HttpURLConnection
+operator|.
+name|HTTP_ACCEPTED
+operator|==
+name|responseCode
 condition|)
 block|{
 name|in
