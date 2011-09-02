@@ -2212,11 +2212,6 @@ name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|resp
-operator|.
-name|clear
-argument_list|()
-expr_stmt|;
 name|Map
 argument_list|<
 name|String

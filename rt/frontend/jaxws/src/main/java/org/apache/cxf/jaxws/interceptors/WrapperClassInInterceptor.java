@@ -618,13 +618,6 @@ condition|)
 block|{
 return|return;
 block|}
-if|if
-condition|(
-name|lst
-operator|!=
-literal|null
-condition|)
-block|{
 name|message
 operator|.
 name|put
@@ -669,7 +662,6 @@ argument_list|,
 name|op
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|isGET
