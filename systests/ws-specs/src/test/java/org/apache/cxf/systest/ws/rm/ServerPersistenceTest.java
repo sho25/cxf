@@ -1108,11 +1108,12 @@ name|awaitMessages
 argument_list|(
 literal|5
 argument_list|,
-literal|8
+literal|3
 argument_list|,
-literal|10000
+literal|20000
 argument_list|)
 expr_stmt|;
+comment|//        awaitMessages(5, 8, 10000);
 name|int
 name|nDone
 init|=
@@ -1217,18 +1218,8 @@ argument_list|)
 expr_stmt|;
 comment|// mf.verifyMessageNumbers(new String[] {null, "1", "2", "3"}, true);
 comment|// mf.verifyAcknowledgements(new boolean[] {false, false, true, false}, true);
-name|mf
-operator|.
-name|verifyPartialResponses
-argument_list|(
-literal|5
-argument_list|)
-expr_stmt|;
-name|mf
-operator|.
-name|purgePartialResponses
-argument_list|()
-expr_stmt|;
+comment|//        mf.verifyPartialResponses(5);
+comment|//        mf.purgePartialResponses();
 name|expectedActions
 operator|=
 operator|new
@@ -1478,7 +1469,7 @@ name|awaitMessages
 argument_list|(
 literal|2
 argument_list|,
-literal|5
+literal|3
 argument_list|,
 literal|60000
 argument_list|)

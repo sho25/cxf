@@ -1058,11 +1058,12 @@ name|awaitMessages
 argument_list|(
 literal|5
 argument_list|,
-literal|9
+literal|4
 argument_list|,
 literal|5000
 argument_list|)
 expr_stmt|;
+comment|//        mr.awaitMessages(5, 9, 5000);
 name|MessageFlow
 name|mf
 init|=
@@ -1196,23 +1197,14 @@ name|mf
 operator|.
 name|verifyMessages
 argument_list|(
-literal|9
+literal|4
 argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-name|mf
-operator|.
-name|verifyPartialResponses
-argument_list|(
-literal|5
-argument_list|)
-expr_stmt|;
-name|mf
-operator|.
-name|purgePartialResponses
-argument_list|()
-expr_stmt|;
+comment|//        mf.verifyMessages(9, false);
+comment|//        mf.verifyPartialResponses(5);
+comment|//        mf.purgePartialResponses();
 name|expectedActions
 operator|=
 operator|new

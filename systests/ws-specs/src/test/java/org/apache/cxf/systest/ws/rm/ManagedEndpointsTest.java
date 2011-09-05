@@ -1478,19 +1478,19 @@ literal|3L
 block|}
 argument_list|)
 expr_stmt|;
-comment|// 7 sec retry interval + 3 sec
+comment|// 7 sec retry interval + 5 sec
 name|LOG
 operator|.
 name|info
 argument_list|(
-literal|"waiting for 10 secs for the retry to complete ..."
+literal|"waiting for 12 secs for the retry to complete ..."
 argument_list|)
 expr_stmt|;
 name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|10000
+literal|12000
 argument_list|)
 expr_stmt|;
 name|o

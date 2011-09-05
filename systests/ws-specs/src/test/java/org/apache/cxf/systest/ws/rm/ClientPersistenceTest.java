@@ -1599,7 +1599,7 @@ name|awaitMessages
 argument_list|(
 literal|1
 argument_list|,
-literal|3
+literal|2
 argument_list|)
 expr_stmt|;
 name|MessageFlow
@@ -1688,7 +1688,7 @@ name|mf
 operator|.
 name|verifyMessages
 argument_list|(
-literal|3
+literal|2
 argument_list|,
 literal|false
 argument_list|)

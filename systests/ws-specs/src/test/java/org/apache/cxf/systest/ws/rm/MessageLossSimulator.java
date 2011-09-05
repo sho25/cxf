@@ -394,6 +394,11 @@ condition|)
 block|{
 return|return;
 block|}
+synchronized|synchronized
+init|(
+name|this
+init|)
+block|{
 name|appMessageCount
 operator|++
 expr_stmt|;
@@ -409,6 +414,7 @@ operator|)
 condition|)
 block|{
 return|return;
+block|}
 block|}
 name|InterceptorChain
 name|chain

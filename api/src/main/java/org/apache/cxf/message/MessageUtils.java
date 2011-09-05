@@ -265,6 +265,34 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+comment|/**      * Determines if the current message is an empty partial response, which      * is a partial response with an empty content.      *       * @param message the current message      * @return true if the current messags is a partial empty response      */
+specifier|public
+specifier|static
+name|boolean
+name|isEmptyPartialResponse
+parameter_list|(
+name|Message
+name|message
+parameter_list|)
+block|{
+return|return
+name|Boolean
+operator|.
+name|TRUE
+operator|.
+name|equals
+argument_list|(
+name|message
+operator|.
+name|get
+argument_list|(
+name|Message
+operator|.
+name|EMPTY_PARTIAL_RESPONSE_MESSAGE
+argument_list|)
+argument_list|)
+return|;
+block|}
 comment|/**      * Returns true if a value is either the String "true" (regardless of case)  or Boolean.TRUE.      * @param value      * @return true if value is either the String "true" or Boolean.TRUE      */
 specifier|public
 specifier|static
