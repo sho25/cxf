@@ -259,8 +259,6 @@ operator|=
 name|cs
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Principal
 name|getUserPrincipal
@@ -270,8 +268,6 @@ return|return
 name|p
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|boolean
 name|isUserInRole
