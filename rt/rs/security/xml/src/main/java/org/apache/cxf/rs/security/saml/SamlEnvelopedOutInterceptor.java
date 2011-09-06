@@ -490,11 +490,10 @@ condition|(
 name|signLater
 condition|)
 block|{
-comment|// it appears all the above manipulation with
-comment|// adopting and removing nodes
-comment|// leaves some stale refs/state and thus the digest ends uo being wrong
-comment|// on the server side if XML sig is applied later in the enveloped mode
-comment|// TODO: this is not critical now - but figure iut if we can avoid copying
+comment|// It appears adopting and removing nodes
+comment|// leaves some stale refs/state with adopted nodes and thus the digest ends up
+comment|// being wrong on the server side if XML sig is applied later in the enveloped mode
+comment|// TODO: this is not critical now - but figure out if we can avoid copying
 comment|// DOMs
 name|CachedOutputStream
 name|bos
