@@ -8522,7 +8522,7 @@ break|break;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 interface|interface
 name|SchemaWriter
 block|{
