@@ -2325,6 +2325,24 @@ operator|.
 name|WSDL_OPERATION
 argument_list|)
 decl_stmt|;
+name|boolean
+name|findDispatchOp
+init|=
+name|Boolean
+operator|.
+name|TRUE
+operator|.
+name|equals
+argument_list|(
+name|getRequestContext
+argument_list|()
+operator|.
+name|get
+argument_list|(
+literal|"find.dispatch.operation"
+argument_list|)
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
 name|opName
@@ -2379,11 +2397,14 @@ expr_stmt|;
 block|}
 block|}
 comment|//CXF-2836 : find the operation for the dispatched object
-name|boolean
-name|wsaEnabled
-init|=
-literal|false
-decl_stmt|;
+comment|// if findDispatchOp is already true, skip the addressing feature lookup.
+comment|// if the addressing feature is enabled, set findDispatchOp to true
+if|if
+condition|(
+operator|!
+name|findDispatchOp
+condition|)
+block|{
 comment|// the feature list to be searched is the endpoint and the bus's lists
 name|List
 argument_list|<
@@ -2491,10 +2512,11 @@ operator|instanceof
 name|WSAddressingFeature
 condition|)
 block|{
-name|wsaEnabled
+name|findDispatchOp
 operator|=
 literal|true
 expr_stmt|;
+block|}
 block|}
 block|}
 name|Map
@@ -2521,7 +2543,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|wsaEnabled
+name|findDispatchOp
 operator|&&
 operator|!
 name|payloadOPMap
@@ -2664,6 +2686,13 @@ argument_list|(
 name|payloadElementName
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|dispatchedOpName
+condition|)
+block|{
 name|BindingOperationInfo
 name|bop
 init|=
@@ -2683,6 +2712,25 @@ argument_list|(
 name|opName
 argument_list|)
 decl_stmt|;
+name|BindingOperationInfo
+name|dbop
+init|=
+name|client
+operator|.
+name|getEndpoint
+argument_list|()
+operator|.
+name|getBinding
+argument_list|()
+operator|.
+name|getBindingInfo
+argument_list|()
+operator|.
+name|getOperation
+argument_list|(
+name|dispatchedOpName
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
 name|bop
@@ -2690,15 +2738,17 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|// set the actual binding operation object to this dispatch operation
 name|bop
 operator|.
 name|setProperty
 argument_list|(
 literal|"dispatchToOperation"
 argument_list|,
-name|dispatchedOpName
+name|dbop
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
