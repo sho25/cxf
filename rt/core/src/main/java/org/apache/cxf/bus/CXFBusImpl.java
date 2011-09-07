@@ -274,7 +274,7 @@ name|Object
 argument_list|>
 name|extensions
 decl_stmt|;
-specifier|private
+specifier|protected
 name|String
 name|id
 decl_stmt|;

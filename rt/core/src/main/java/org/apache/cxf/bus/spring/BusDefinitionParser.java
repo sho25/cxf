@@ -445,9 +445,6 @@ name|id
 argument_list|)
 expr_stmt|;
 block|}
-comment|//element.removeAttribute("bus");
-comment|//element.removeAttribute("name");
-comment|//element.removeAttribute("id");
 name|bean
 operator|.
 name|addConstructorArgValue
