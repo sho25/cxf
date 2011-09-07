@@ -263,6 +263,16 @@ argument_list|(
 literal|"managed-spring.xml"
 argument_list|)
 expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"CXF-Test-Bus"
+argument_list|,
+name|serverBus
+operator|.
+name|getId
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|serverIM
 operator|=
 name|serverBus
