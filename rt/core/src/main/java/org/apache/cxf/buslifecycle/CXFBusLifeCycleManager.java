@@ -21,16 +21,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|concurrent
 operator|.
 name|CopyOnWriteArrayList
@@ -91,7 +81,7 @@ name|BusLifeCycleManager
 block|{
 specifier|private
 specifier|final
-name|List
+name|CopyOnWriteArrayList
 argument_list|<
 name|BusLifeCycleListener
 argument_list|>
@@ -191,7 +181,7 @@ parameter_list|)
 block|{
 name|listeners
 operator|.
-name|add
+name|addIfAbsent
 argument_list|(
 name|listener
 argument_list|)
@@ -247,7 +237,6 @@ name|void
 name|preShutdown
 parameter_list|()
 block|{
-comment|// TODO inverse order of registration?
 if|if
 condition|(
 operator|!
@@ -299,7 +288,6 @@ name|postShutdownCalled
 operator|=
 literal|true
 expr_stmt|;
-comment|// TODO inverse order of registration?
 for|for
 control|(
 name|BusLifeCycleListener

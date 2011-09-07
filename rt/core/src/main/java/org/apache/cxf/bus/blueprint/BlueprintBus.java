@@ -180,6 +180,17 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+name|super
+operator|.
+name|setExtension
+argument_list|(
+name|c
+argument_list|,
+name|BundleContext
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|void
