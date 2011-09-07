@@ -955,9 +955,6 @@ decl_stmt|;
 name|Bus
 name|bus
 decl_stmt|;
-name|BundleContext
-name|context
-decl_stmt|;
 name|ServiceRegistration
 name|service
 decl_stmt|;
@@ -1042,8 +1039,9 @@ name|void
 name|initComplete
 parameter_list|()
 block|{
+name|BundleContext
 name|context
-operator|=
+init|=
 name|bus
 operator|.
 name|getExtension
@@ -1052,7 +1050,14 @@ name|BundleContext
 operator|.
 name|class
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+if|if
+condition|(
+name|context
+operator|!=
+literal|null
+condition|)
+block|{
 name|Properties
 name|props
 init|=
@@ -1121,6 +1126,7 @@ name|props
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 specifier|public
 name|void
 name|preShutdown
@@ -1131,6 +1137,13 @@ name|void
 name|postShutdown
 parameter_list|()
 block|{
+if|if
+condition|(
+name|service
+operator|!=
+literal|null
+condition|)
+block|{
 name|service
 operator|.
 name|unregister
@@ -1140,6 +1153,7 @@ name|service
 operator|=
 literal|null
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public
