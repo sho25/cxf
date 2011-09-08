@@ -331,7 +331,7 @@ parameter_list|)
 block|{
 comment|// parse/decipher subject name id, or check attributes like
 comment|// givenName, email, firstName, etc
-comment|// this can be overidden, but consider also introducing dedicated handlers
+comment|// this can be overridden, but consider also introducing dedicated handlers
 block|}
 block|}
 end_class
