@@ -126,6 +126,11 @@ init|=
 literal|"org.apache.cxf.partial.response.empty"
 decl_stmt|;
 name|String
+name|HANDLING_PARTIAL_RESPONSE_MESSAGE
+init|=
+literal|"org.apache.cxf.partial.response.handling"
+decl_stmt|;
+name|String
 name|ONE_WAY_REQUEST
 init|=
 literal|"OnewayRequest"
