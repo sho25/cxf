@@ -398,6 +398,8 @@ argument_list|,
 name|bus
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 name|element
 operator|.
 name|removeAttribute
@@ -405,8 +407,6 @@ argument_list|(
 literal|"name"
 argument_list|)
 expr_stmt|;
-block|}
-block|}
 if|if
 condition|(
 name|StringUtils
