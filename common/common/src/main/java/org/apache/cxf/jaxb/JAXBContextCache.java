@@ -924,6 +924,11 @@ operator|==
 literal|null
 condition|)
 block|{
+synchronized|synchronized
+init|(
+name|JAXBCONTEXT_CACHE
+init|)
+block|{
 name|JAXBCONTEXT_CACHE
 operator|.
 name|remove
@@ -934,6 +939,7 @@ name|getClasses
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|cachedContextAndSchemas
 operator|=
 literal|null
