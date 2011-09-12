@@ -830,6 +830,24 @@ name|WSRM_WSA_VERSION_PROPERTY
 init|=
 literal|"org.apache.cxf.ws.rm.wsa-namespace"
 decl_stmt|;
+comment|/**      * Message contextual property giving the last message.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|WSRM_LAST_MESSAGE_PROPERTY
+init|=
+literal|"org.apache.cxf.ws.rm.last-message"
+decl_stmt|;
+comment|/**      * Message contextual property for setting the replyTo header      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|WSRM_REPLY_TO_PROPERTY
+init|=
+literal|"org.apache.cxf.ws.rm.reply-to"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
