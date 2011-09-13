@@ -53,18 +53,6 @@ name|lang
 operator|.
 name|ref
 operator|.
-name|SoftReference
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|lang
-operator|.
-name|ref
-operator|.
 name|WeakReference
 import|;
 end_import
@@ -276,7 +264,7 @@ class|class
 name|CachedContextAndSchemas
 block|{
 specifier|private
-name|SoftReference
+name|WeakReference
 argument_list|<
 name|JAXBContext
 argument_list|>
@@ -322,7 +310,7 @@ operator|.
 name|context
 operator|=
 operator|new
-name|SoftReference
+name|WeakReference
 argument_list|<
 name|JAXBContext
 argument_list|>

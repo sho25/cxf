@@ -113,6 +113,10 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
+name|CacheMap
+parameter_list|()
+block|{              }
+specifier|public
 name|void
 name|clear
 parameter_list|()
