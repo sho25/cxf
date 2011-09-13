@@ -115,6 +115,22 @@ name|SoapVersion
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -164,7 +180,7 @@ decl_stmt|;
 name|String
 name|messageFactoryClassName
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -295,7 +311,7 @@ decl_stmt|;
 name|String
 name|soapFactoryClassName
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(

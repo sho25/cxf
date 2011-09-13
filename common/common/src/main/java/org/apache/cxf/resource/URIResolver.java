@@ -241,6 +241,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|helpers
 operator|.
 name|IOUtils
@@ -784,7 +800,7 @@ decl_stmt|;
 name|String
 name|host
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -799,11 +815,11 @@ literal|null
 condition|)
 block|{
 comment|//comment out unused port to pass pmd check
-comment|/*String ports = System.getProperty("http.proxyPort");                         int port = 80;                         if (ports != null) {                             port = Integer.parseInt(ports);                         }*/
+comment|/*String ports = SystemPropertyAction.getProperty("http.proxyPort");                         int port = 80;                         if (ports != null) {                             port = Integer.parseInt(ports);                         }*/
 name|String
 name|username
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -813,7 +829,7 @@ decl_stmt|;
 name|String
 name|password
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(

@@ -200,11 +200,11 @@ name|getParameterTypes
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|m
+name|ReflectionUtil
 operator|.
 name|setAccessible
 argument_list|(
-literal|true
+name|m
 argument_list|)
 expr_stmt|;
 return|return
@@ -336,11 +336,11 @@ condition|(
 name|found
 condition|)
 block|{
-name|m2
+name|ReflectionUtil
 operator|.
 name|setAccessible
 argument_list|(
-literal|true
+name|m2
 argument_list|)
 expr_stmt|;
 return|return

@@ -414,7 +414,7 @@ block|{
 name|String
 name|javaClasspath
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -679,7 +679,7 @@ block|{
 name|String
 name|endorsed
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -734,7 +734,7 @@ comment|// Start of honoring java.home for used javac
 name|String
 name|fsep
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -753,7 +753,7 @@ literal|"javac"
 decl_stmt|;
 if|if
 condition|(
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -782,7 +782,7 @@ condition|(
 operator|new
 name|File
 argument_list|(
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -801,7 +801,7 @@ block|{
 comment|// check if java.home is jdk home
 name|javacstr
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -819,7 +819,7 @@ condition|(
 operator|new
 name|File
 argument_list|(
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -846,7 +846,7 @@ block|{
 comment|// check if java.home is jre home
 name|javacstr
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -1315,7 +1315,7 @@ operator|>
 operator|-
 literal|1
 operator|&&
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -1465,7 +1465,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(

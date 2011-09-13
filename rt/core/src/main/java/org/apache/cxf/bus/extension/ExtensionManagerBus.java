@@ -31,6 +31,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|security
+operator|.
+name|AccessController
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|HashMap
@@ -114,6 +124,22 @@ operator|.
 name|buslifecycle
 operator|.
 name|BusLifeCycleManager
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
 import|;
 end_import
 
@@ -988,11 +1014,15 @@ block|}
 comment|// next check system properties
 name|busId
 operator|=
-name|System
+name|AccessController
 operator|.
-name|getProperty
+name|doPrivileged
+argument_list|(
+operator|new
+name|SystemPropertyAction
 argument_list|(
 name|BUS_ID_PROPERTY_NAME
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if

@@ -107,6 +107,22 @@ name|LogUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|ReflectionUtil
+import|;
+end_import
+
 begin_comment
 comment|/** Process instance of an annotated class.  This is a visitable  * object that allows an caller to visit that annotated elements in  * this class definition.  If a class level annotation is overridden  * by a member level annotation, only the visit method for the member  * level annotation  */
 end_comment
@@ -310,10 +326,12 @@ control|(
 name|Method
 name|element
 range|:
-name|targetClass
+name|ReflectionUtil
 operator|.
 name|getDeclaredMethods
-argument_list|()
+argument_list|(
+name|targetClass
+argument_list|)
 control|)
 block|{
 for|for
@@ -401,10 +419,12 @@ control|(
 name|Field
 name|element
 range|:
-name|targetClass
+name|ReflectionUtil
 operator|.
 name|getDeclaredFields
-argument_list|()
+argument_list|(
+name|targetClass
+argument_list|)
 control|)
 block|{
 for|for

@@ -319,6 +319,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|configuration
 operator|.
 name|security
@@ -1336,7 +1352,7 @@ else|else
 block|{
 name|keyStoreLocation
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -1359,7 +1375,7 @@ else|else
 block|{
 name|keyStoreLocation
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -1485,7 +1501,7 @@ else|else
 block|{
 name|keyStorePassword
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -1553,7 +1569,7 @@ else|else
 block|{
 name|keyPassword
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -2460,7 +2476,7 @@ else|else
 block|{
 name|trustStoreLocation
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -2483,7 +2499,7 @@ else|else
 block|{
 name|trustStoreLocation
 operator|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(

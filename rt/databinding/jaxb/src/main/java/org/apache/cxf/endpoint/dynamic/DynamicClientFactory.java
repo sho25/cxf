@@ -383,6 +383,22 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|classloader
+operator|.
+name|ClassLoaderUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|i18n
 operator|.
 name|Message
@@ -434,6 +450,22 @@ operator|.
 name|util
 operator|.
 name|StringUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
 import|;
 end_import
 
@@ -751,7 +783,7 @@ specifier|private
 name|String
 name|tmpdir
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -2164,12 +2196,9 @@ name|getService
 argument_list|()
 decl_stmt|;
 comment|// Setup the new classloader!
-name|Thread
+name|ClassLoaderUtils
 operator|.
-name|currentThread
-argument_list|()
-operator|.
-name|setContextClassLoader
+name|setThreadContextClassloader
 argument_list|(
 name|cl
 argument_list|)
@@ -2906,7 +2935,7 @@ name|classPath
 operator|.
 name|append
 argument_list|(
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -3193,7 +3222,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(

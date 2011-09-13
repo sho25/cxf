@@ -263,6 +263,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|ws
 operator|.
 name|addressing
@@ -3429,7 +3445,7 @@ name|FINE
 argument_list|,
 literal|"Using derby.system.home: {0}"
 argument_list|,
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
@@ -3693,7 +3709,7 @@ block|{
 name|String
 name|dsh
 init|=
-name|System
+name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
