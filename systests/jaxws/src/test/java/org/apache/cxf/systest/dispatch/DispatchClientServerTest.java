@@ -667,16 +667,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -1476,8 +1466,6 @@ block|}
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testSOAPMessageInvokeToOneWay
@@ -1577,7 +1565,13 @@ argument_list|)
 expr_stmt|;
 comment|//Version 1:
 comment|//we'll just call invoke
-comment|//disp.invoke(soapReqMsg1);
+name|disp
+operator|.
+name|invoke
+argument_list|(
+name|soapReqMsg1
+argument_list|)
+expr_stmt|;
 comment|//Version 2:
 comment|//We want to handle things asynchronously
 name|AsyncHandler
