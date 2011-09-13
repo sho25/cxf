@@ -31,17 +31,9 @@ name|PublicKey
 import|;
 end_import
 
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
-name|cert
-operator|.
-name|X509Certificate
-import|;
-end_import
+begin_comment
+comment|//import java.security.cert.X509Certificate;
+end_comment
 
 begin_import
 import|import
