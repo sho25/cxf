@@ -243,7 +243,7 @@ name|cname
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|KEY
 argument_list|)

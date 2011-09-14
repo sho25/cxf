@@ -204,15 +204,9 @@ block|}
 name|String
 name|s
 init|=
-literal|null
-decl_stmt|;
-try|try
-block|{
-name|s
-operator|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|FileUtils
 operator|.
@@ -223,16 +217,7 @@ argument_list|()
 operator|+
 literal|".TempDirectory"
 argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|SecurityException
-name|e
-parameter_list|)
-block|{
-comment|//Ignorable, we'll use the default
-block|}
+decl_stmt|;
 if|if
 condition|(
 name|s

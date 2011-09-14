@@ -802,7 +802,7 @@ name|host
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"http.proxyHost"
 argument_list|)
@@ -821,7 +821,7 @@ name|username
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"http.proxy.user"
 argument_list|)
@@ -831,7 +831,7 @@ name|password
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"http.proxy.password"
 argument_list|)

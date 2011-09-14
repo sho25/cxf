@@ -734,12 +734,9 @@ comment|// Start of honoring java.home for used javac
 name|String
 name|fsep
 init|=
-name|SystemPropertyAction
+name|File
 operator|.
-name|getProperty
-argument_list|(
-literal|"file.separator"
-argument_list|)
+name|separator
 decl_stmt|;
 name|String
 name|javacstr

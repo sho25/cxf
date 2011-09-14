@@ -88,7 +88,7 @@ name|mode
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|SPRING_VALIDATION_MODE
 argument_list|)
@@ -104,7 +104,7 @@ name|mode
 operator|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"spring.validation.mode"
 argument_list|)

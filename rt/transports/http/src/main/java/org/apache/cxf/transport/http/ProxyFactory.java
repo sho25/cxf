@@ -193,7 +193,7 @@ name|proxyHost
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|HTTP_PROXY_HOST
 argument_list|)
@@ -259,7 +259,7 @@ name|nonProxyHosts
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|HTTP_NON_PROXY_HOSTS
 argument_list|)

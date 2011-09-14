@@ -182,7 +182,7 @@ name|messageFactoryClassName
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|MESSAGE_FACTORY_KEY
 argument_list|)
@@ -313,7 +313,7 @@ name|soapFactoryClassName
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 name|SOAP_FACTORY_KEY
 argument_list|)

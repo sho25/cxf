@@ -31,16 +31,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|security
-operator|.
-name|AccessController
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|HashMap
@@ -1014,15 +1004,11 @@ block|}
 comment|// next check system properties
 name|busId
 operator|=
-name|AccessController
-operator|.
-name|doPrivileged
-argument_list|(
-operator|new
 name|SystemPropertyAction
+operator|.
+name|getPropertyOrNull
 argument_list|(
 name|BUS_ID_PROPERTY_NAME
-argument_list|)
 argument_list|)
 expr_stmt|;
 if|if

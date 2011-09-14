@@ -3711,7 +3711,7 @@ name|dsh
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"derby.system.home"
 argument_list|)

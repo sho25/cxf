@@ -296,15 +296,11 @@ argument_list|)
 expr_stmt|;
 name|noFastinfoset
 operator|=
-name|AccessController
-operator|.
-name|doPrivileged
-argument_list|(
-operator|new
 name|SystemPropertyAction
+operator|.
+name|getPropertyOrNull
 argument_list|(
 literal|"org.apache.cxf.nofastinfoset"
-argument_list|)
 argument_list|)
 operator|!=
 literal|null

@@ -856,7 +856,7 @@ name|s
 init|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"org.apache.cxf.transports.http_jetty.DontClosePort."
 operator|+
@@ -874,7 +874,7 @@ name|s
 operator|=
 name|SystemPropertyAction
 operator|.
-name|getProperty
+name|getPropertyOrNull
 argument_list|(
 literal|"org.apache.cxf.transports.http_jetty.DontClosePort"
 argument_list|)
