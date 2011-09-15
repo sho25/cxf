@@ -1030,7 +1030,9 @@ name|registerBuilder
 argument_list|(
 operator|new
 name|AlgorithmSuiteBuilder
-argument_list|()
+argument_list|(
+name|bus
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|reg
@@ -1254,6 +1256,8 @@ operator|new
 name|TransportBindingBuilder
 argument_list|(
 name|pbuild
+argument_list|,
+name|bus
 argument_list|)
 argument_list|)
 expr_stmt|;

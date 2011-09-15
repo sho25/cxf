@@ -41,9 +41,17 @@ name|PublicKey
 import|;
 end_import
 
-begin_comment
-comment|// import java.security.cert.X509Certificate;
-end_comment
+begin_import
+import|import
+name|java
+operator|.
+name|security
+operator|.
+name|cert
+operator|.
+name|X509Certificate
+import|;
+end_import
 
 begin_import
 import|import
@@ -726,7 +734,45 @@ return|return
 literal|false
 return|;
 block|}
-comment|/*         X509Certificate x509Cert =              (X509Certificate)result.get(WSSecurityEngineResult.TAG_X509_CERTIFICATE);         if (x509Cert != null&& !checkPublicKeyLength(x509Cert.getPublicKey(), algorithmPolicy, ai)) {             return false;         }         */
+name|X509Certificate
+name|x509Cert
+init|=
+operator|(
+name|X509Certificate
+operator|)
+name|result
+operator|.
+name|get
+argument_list|(
+name|WSSecurityEngineResult
+operator|.
+name|TAG_X509_CERTIFICATE
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|x509Cert
+operator|!=
+literal|null
+operator|&&
+operator|!
+name|checkPublicKeyLength
+argument_list|(
+name|x509Cert
+operator|.
+name|getPublicKey
+argument_list|()
+argument_list|,
+name|algorithmPolicy
+argument_list|,
+name|ai
+argument_list|)
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 name|byte
 index|[]
 name|secret
