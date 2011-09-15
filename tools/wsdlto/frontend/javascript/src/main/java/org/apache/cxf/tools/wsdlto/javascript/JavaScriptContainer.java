@@ -647,6 +647,14 @@ parameter_list|()
 throws|throws
 name|ToolException
 block|{
+if|if
+condition|(
+name|hasInfoOption
+argument_list|()
+condition|)
+block|{
+return|return;
+block|}
 name|buildToolContext
 argument_list|()
 expr_stmt|;
