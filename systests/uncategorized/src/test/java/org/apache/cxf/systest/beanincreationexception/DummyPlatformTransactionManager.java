@@ -72,8 +72,6 @@ name|DummyPlatformTransactionManager
 implements|implements
 name|PlatformTransactionManager
 block|{
-annotation|@
-name|Override
 specifier|public
 name|void
 name|commit
@@ -86,8 +84,6 @@ name|TransactionException
 block|{
 comment|// TODO Auto-generated method stub
 block|}
-annotation|@
-name|Override
 specifier|public
 name|TransactionStatus
 name|getTransaction
@@ -103,8 +99,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|rollback
