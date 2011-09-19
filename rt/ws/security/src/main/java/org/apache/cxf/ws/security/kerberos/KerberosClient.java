@@ -249,7 +249,7 @@ name|callbackHandler
 decl_stmt|;
 specifier|private
 name|String
-name|jaasLoginModuleName
+name|contextName
 decl_stmt|;
 specifier|private
 name|WSSConfig
@@ -281,17 +281,43 @@ return|return
 name|name
 return|;
 block|}
-comment|/**      * Get the JAAS Login module name to use.      * @return the JAAS Login module name to use      */
+comment|/**      * Get the JAAS Login context name to use.      * @return the JAAS Login context name to use      */
+specifier|public
+name|String
+name|getContextName
+parameter_list|()
+block|{
+return|return
+name|contextName
+return|;
+block|}
+comment|/**      * Set the JAAS Login context name to use.      * @param contextName the JAAS Login context name to use      */
+specifier|public
+name|void
+name|setContextName
+parameter_list|(
+name|String
+name|contextName
+parameter_list|)
+block|{
+name|this
+operator|.
+name|contextName
+operator|=
+name|contextName
+expr_stmt|;
+block|}
+comment|/**      * @deprecated      * Get the JAAS Login module name to use.      * @return the JAAS Login module name to use      */
 specifier|public
 name|String
 name|getJaasLoginModuleName
 parameter_list|()
 block|{
 return|return
-name|jaasLoginModuleName
+name|contextName
 return|;
 block|}
-comment|/**      * Set the JAAS Login module name to use.      * @param jaasLoginModuleName the JAAS Login module name to use      */
+comment|/**      * @deprecated      * Set the JAAS Login module name to use.      * @param jaasLoginModuleName the JAAS Login module name to use      */
 specifier|public
 name|void
 name|setJaasLoginModuleName
@@ -302,7 +328,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|jaasLoginModuleName
+name|contextName
 operator|=
 name|jaasLoginModuleName
 expr_stmt|;
@@ -388,7 +414,8 @@ name|serviceName
 operator|+
 literal|" using JAAS Login Module: "
 operator|+
-name|jaasLoginModuleName
+name|getContextName
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -408,7 +435,8 @@ name|bst
 operator|.
 name|retrieveServiceTicket
 argument_list|(
-name|jaasLoginModuleName
+name|getContextName
+argument_list|()
 argument_list|,
 name|callbackHandler
 argument_list|,
