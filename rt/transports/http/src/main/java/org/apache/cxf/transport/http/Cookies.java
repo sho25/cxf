@@ -73,6 +73,20 @@ name|Message
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|MessageUtils
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -189,23 +203,17 @@ block|{
 comment|//Do we need to maintain a session?
 name|maintainSession
 operator|=
-name|Boolean
+name|MessageUtils
 operator|.
-name|TRUE
-operator|.
-name|equals
+name|getContextualBoolean
 argument_list|(
-operator|(
-name|Boolean
-operator|)
 name|message
-operator|.
-name|get
-argument_list|(
+argument_list|,
 name|Message
 operator|.
 name|MAINTAIN_SESSION
-argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 comment|//If we have any cookies and we are maintaining sessions, then use them
