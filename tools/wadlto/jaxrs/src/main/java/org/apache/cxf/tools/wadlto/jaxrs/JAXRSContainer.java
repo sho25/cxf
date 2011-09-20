@@ -55,6 +55,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashSet
 import|;
 end_import
@@ -66,6 +76,16 @@ operator|.
 name|util
 operator|.
 name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
 import|;
 end_import
 
@@ -285,11 +305,37 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|DEFAULT_TYPES_MAP
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|String
 name|TOOL_NAME
 init|=
 literal|"wadl2java"
 decl_stmt|;
+static|static
+block|{
+comment|// Should we have a common code which checks W3C EPR bindings in tools-common ?
+name|DEFAULT_TYPES_MAP
+operator|=
+name|Collections
+operator|.
+name|singletonMap
+argument_list|(
+literal|"org.w3._2005._08.addressing.EndpointReference"
+argument_list|,
+literal|"javax.xml.ws.wsaddressing.W3CEndpointReference"
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|JAXRSContainer
 parameter_list|(
@@ -689,6 +735,15 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// sg.setSchemaPackageName((String)context.get(WadlToolConstants.CFG_TOOLS_PACKAGENAME)));
+comment|// TODO: consider introducing an option too for users be able to
+comment|//       supply custom type mappings
+name|sg
+operator|.
+name|setSchemaTypesMap
+argument_list|(
+name|DEFAULT_TYPES_MAP
+argument_list|)
+expr_stmt|;
 comment|// generate
 name|String
 name|codeType
