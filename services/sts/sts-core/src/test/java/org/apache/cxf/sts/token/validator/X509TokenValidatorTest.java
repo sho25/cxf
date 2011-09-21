@@ -557,8 +557,6 @@ name|validatorResponse
 init|=
 literal|null
 decl_stmt|;
-try|try
-block|{
 name|validatorResponse
 operator|=
 name|x509TokenValidator
@@ -583,15 +581,6 @@ name|isValid
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|RuntimeException
-name|ex
-parameter_list|)
-block|{
-comment|// needed due to a bug in WSS4J 1.6.2
-block|}
 name|binarySecurityToken
 operator|.
 name|setEncodingType
