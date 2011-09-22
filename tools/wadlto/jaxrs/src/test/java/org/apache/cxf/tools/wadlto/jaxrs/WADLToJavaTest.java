@@ -277,9 +277,9 @@ name|size
 init|=
 name|interfacesAndImpl
 condition|?
-literal|9
+literal|10
 else|:
-literal|7
+literal|8
 decl_stmt|;
 if|if
 condition|(

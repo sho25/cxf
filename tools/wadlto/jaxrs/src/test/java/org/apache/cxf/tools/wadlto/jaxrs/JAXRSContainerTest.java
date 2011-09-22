@@ -223,6 +223,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -236,6 +238,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 block|}
@@ -364,6 +368,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -377,6 +383,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 block|}
@@ -491,6 +499,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -504,6 +514,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 block|}
@@ -1037,6 +1049,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -1050,6 +1064,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 block|}
@@ -1178,6 +1194,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -1191,6 +1209,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 block|}
@@ -1319,6 +1339,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -1332,6 +1354,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|9
 argument_list|)
 expr_stmt|;
 block|}
@@ -1837,6 +1861,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"custom.books"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -1850,6 +1876,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"custom.books"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 block|}
@@ -1986,6 +2014,8 @@ argument_list|,
 literal|"custom.books.schema"
 argument_list|,
 literal|"custom.books.service"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -1999,6 +2029,8 @@ argument_list|,
 literal|"custom.books.schema"
 argument_list|,
 literal|"custom.books.service"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 block|}
@@ -2124,6 +2156,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -2137,6 +2171,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|10
 argument_list|)
 expr_stmt|;
 block|}
@@ -2273,6 +2309,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|11
 argument_list|)
 expr_stmt|;
 name|verifyFiles
@@ -2286,6 +2324,8 @@ argument_list|,
 literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
+argument_list|,
+literal|11
 argument_list|)
 expr_stmt|;
 block|}
@@ -2431,6 +2471,9 @@ name|schemaPackage
 parameter_list|,
 name|String
 name|resourcePackage
+parameter_list|,
+name|int
+name|expectedCount
 parameter_list|)
 block|{
 name|List
@@ -2457,9 +2500,11 @@ name|size
 init|=
 name|interfacesAndImpl
 condition|?
-literal|9
+name|expectedCount
 else|:
-literal|7
+name|expectedCount
+operator|-
+literal|2
 decl_stmt|;
 if|if
 condition|(
@@ -2509,6 +2554,20 @@ name|ext
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|assertTrue
+argument_list|(
+name|checkContains
+argument_list|(
+name|files
+argument_list|,
+name|resourcePackage
+operator|+
+literal|".FormInterface2."
+operator|+
+name|ext
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 name|assertTrue
 argument_list|(
@@ -2543,6 +2602,20 @@ argument_list|,
 name|resourcePackage
 operator|+
 literal|".FormInterfaceImpl."
+operator|+
+name|ext
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|checkContains
+argument_list|(
+name|files
+argument_list|,
+name|resourcePackage
+operator|+
+literal|".FormInterface2Impl."
 operator|+
 name|ext
 argument_list|)
