@@ -53,6 +53,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -760,7 +772,27 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|getInterceptorChain
+argument_list|()
+operator|.
+name|abort
+argument_list|()
+expr_stmt|;
+try|try
+block|{
 name|writer
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
+name|writer
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+name|os
 operator|.
 name|flush
 argument_list|()
@@ -770,14 +802,33 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|message
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|ex
+parameter_list|)
+block|{
+name|LOG
 operator|.
-name|getInterceptorChain
-argument_list|()
+name|log
+argument_list|(
+name|Level
 operator|.
-name|abort
-argument_list|()
+name|FINE
+argument_list|,
+literal|"Failure writing full wsdl to the stream"
+argument_list|,
+name|ex
+argument_list|)
 expr_stmt|;
+comment|//we can ignore this.   Likely, whatever has requested the WSDL
+comment|//has closed the connection before reading the entire wsdl.
+comment|//WSDL4J has a tendency to not read the closing tags and such
+comment|//and thus can sometimes hit this.   In anycase, it's
+comment|//pretty much ignorable and nothing we can do about it (cannot
+comment|//send a fault or anything anyway
+block|}
 block|}
 catch|catch
 parameter_list|(
