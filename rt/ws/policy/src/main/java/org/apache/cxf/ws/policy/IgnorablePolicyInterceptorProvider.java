@@ -250,15 +250,10 @@ block|}
 specifier|private
 class|class
 name|IgnorableAssertionsInterceptor
-parameter_list|<
-name|T
-extends|extends
-name|Message
-parameter_list|>
 extends|extends
 name|AbstractPhaseInterceptor
 argument_list|<
-name|T
+name|Message
 argument_list|>
 block|{
 specifier|public
