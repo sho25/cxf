@@ -299,7 +299,7 @@ specifier|private
 name|SubjectBean
 name|subjectBean
 decl_stmt|;
-comment|/**      * Set the list of AttributeBeans.      */
+comment|/**      * Set the list of AttributeStatementBeans.      */
 specifier|public
 name|void
 name|setAttributeBeans
@@ -318,7 +318,7 @@ operator|=
 name|attributeBeanList
 expr_stmt|;
 block|}
-comment|/**      * Set the list of AuthenticationBeans.      */
+comment|/**      * Set the list of AuthenticationStatementBeans.      */
 specifier|public
 name|void
 name|setAuthenticationBeans
@@ -337,7 +337,7 @@ operator|=
 name|authBeanList
 expr_stmt|;
 block|}
-comment|/**      * Set the list of AuthDecisionBeans.      */
+comment|/**      * Set the list of AuthDecisionStatementBeans.      */
 specifier|public
 name|void
 name|setAuthDecisionStatementBeans
