@@ -22,6 +22,8 @@ name|BusState
 block|{
 name|INITIAL
 block|,
+name|INITIALIZING
+block|,
 name|RUNNING
 block|,
 name|SHUTTING_DOWN

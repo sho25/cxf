@@ -21,7 +21,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
+name|List
 import|;
 end_import
 
@@ -31,7 +31,9 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|concurrent
+operator|.
+name|CopyOnWriteArrayList
 import|;
 end_import
 
@@ -127,7 +129,7 @@ name|ServerRegistry
 implements|,
 name|BusLifeCycleListener
 block|{
-name|List
+name|CopyOnWriteArrayList
 argument_list|<
 name|Server
 argument_list|>
@@ -146,7 +148,7 @@ block|{
 name|serversList
 operator|=
 operator|new
-name|ArrayList
+name|CopyOnWriteArrayList
 argument_list|<
 name|Server
 argument_list|>
@@ -163,7 +165,7 @@ block|{
 name|serversList
 operator|=
 operator|new
-name|ArrayList
+name|CopyOnWriteArrayList
 argument_list|<
 name|Server
 argument_list|>
@@ -257,7 +259,7 @@ parameter_list|)
 block|{
 name|serversList
 operator|.
-name|add
+name|addIfAbsent
 argument_list|(
 name|server
 argument_list|)
