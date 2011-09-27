@@ -141,7 +141,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 import|;
 end_import
 
@@ -157,7 +157,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|STSCache
+name|STSTokenStore
 import|;
 end_import
 
@@ -430,11 +430,11 @@ name|Assert
 block|{
 specifier|private
 specifier|static
-name|STSCache
-name|cache
+name|STSTokenStore
+name|tokenStore
 init|=
 operator|new
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 argument_list|()
 decl_stmt|;
 comment|/**      * Test a valid SecurityContextToken      */
@@ -551,11 +551,26 @@ literal|null
 argument_list|)
 expr_stmt|;
 comment|// Now remove the SCT from the cache
-name|assertTrue
-argument_list|(
-name|cache
+name|tokenStore
 operator|.
 name|remove
+argument_list|(
+name|tokenStore
+operator|.
+name|getToken
+argument_list|(
+name|providerResponse
+operator|.
+name|getTokenId
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNull
+argument_list|(
+name|tokenStore
+operator|.
+name|getToken
 argument_list|(
 name|providerResponse
 operator|.
@@ -783,9 +798,9 @@ argument_list|)
 expr_stmt|;
 name|parameters
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|parameters
@@ -960,9 +975,9 @@ argument_list|)
 expr_stmt|;
 name|parameters
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|parameters

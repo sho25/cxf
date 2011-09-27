@@ -257,7 +257,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 import|;
 end_import
 
@@ -273,7 +273,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|STSCache
+name|STSTokenStore
 import|;
 end_import
 
@@ -650,11 +650,11 @@ argument_list|()
 decl_stmt|;
 specifier|private
 specifier|static
-name|STSCache
-name|cache
+name|STSTokenStore
+name|tokenStore
 init|=
 operator|new
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -696,9 +696,9 @@ argument_list|()
 decl_stmt|;
 name|issueOperation
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 comment|// Add Token Provider
@@ -1110,9 +1110,9 @@ argument_list|()
 decl_stmt|;
 name|issueOperation
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|issueOperation
@@ -1571,9 +1571,9 @@ argument_list|()
 decl_stmt|;
 name|issueOperation
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|issueOperation

@@ -141,7 +141,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 import|;
 end_import
 
@@ -157,7 +157,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|STSCache
+name|STSTokenStore
 import|;
 end_import
 
@@ -430,11 +430,11 @@ name|Assert
 block|{
 specifier|private
 specifier|static
-name|STSCache
-name|cache
+name|STSTokenStore
+name|tokenStore
 init|=
 operator|new
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 argument_list|()
 decl_stmt|;
 comment|/**      * Get a (valid) SecurityContextToken and successfully cancel it.      */
@@ -753,9 +753,9 @@ argument_list|)
 expr_stmt|;
 name|parameters
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|parameters
@@ -930,9 +930,9 @@ argument_list|)
 expr_stmt|;
 name|parameters
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|parameters

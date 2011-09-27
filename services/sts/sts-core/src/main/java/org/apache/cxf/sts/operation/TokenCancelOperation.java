@@ -576,9 +576,9 @@ argument_list|)
 expr_stmt|;
 name|cancellerParameters
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|getCache
+name|getTokenStore
 argument_list|()
 argument_list|)
 expr_stmt|;

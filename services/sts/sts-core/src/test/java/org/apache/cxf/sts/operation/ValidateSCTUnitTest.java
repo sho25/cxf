@@ -233,7 +233,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 import|;
 end_import
 
@@ -249,7 +249,7 @@ name|sts
 operator|.
 name|cache
 operator|.
-name|STSCache
+name|STSTokenStore
 import|;
 end_import
 
@@ -648,11 +648,11 @@ argument_list|()
 decl_stmt|;
 specifier|private
 specifier|static
-name|STSCache
-name|cache
+name|STSTokenStore
+name|tokenStore
 init|=
 operator|new
-name|DefaultInMemoryCache
+name|DefaultInMemoryTokenStore
 argument_list|()
 decl_stmt|;
 comment|/**      * Test to successfully validate a SecurityContextToken      */
@@ -678,9 +678,9 @@ argument_list|()
 decl_stmt|;
 name|validateOperation
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 comment|// Add Token Validator
@@ -977,11 +977,26 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Now remove the token from the cache before validating again
-name|assertTrue
-argument_list|(
-name|cache
+name|tokenStore
 operator|.
 name|remove
+argument_list|(
+name|tokenStore
+operator|.
+name|getToken
+argument_list|(
+name|providerResponse
+operator|.
+name|getTokenId
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNull
+argument_list|(
+name|tokenStore
+operator|.
+name|getToken
 argument_list|(
 name|providerResponse
 operator|.
@@ -1346,9 +1361,9 @@ argument_list|)
 expr_stmt|;
 name|parameters
 operator|.
-name|setCache
+name|setTokenStore
 argument_list|(
-name|cache
+name|tokenStore
 argument_list|)
 expr_stmt|;
 name|parameters
