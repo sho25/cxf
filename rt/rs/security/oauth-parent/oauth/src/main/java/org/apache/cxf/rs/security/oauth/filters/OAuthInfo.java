@@ -212,12 +212,12 @@ literal|null
 condition|?
 name|token
 operator|.
-name|getPermissions
+name|getScopes
 argument_list|()
 else|:
 name|client
 operator|.
-name|getPermissions
+name|getScopes
 argument_list|()
 argument_list|)
 decl_stmt|;
