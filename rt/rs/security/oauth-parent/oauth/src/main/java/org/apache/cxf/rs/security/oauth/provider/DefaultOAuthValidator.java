@@ -124,7 +124,7 @@ parameter_list|()
 block|{     }
 specifier|public
 name|void
-name|checkParameters
+name|checkSingleParameter
 parameter_list|(
 name|OAuthMessage
 name|message
