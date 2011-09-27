@@ -458,6 +458,13 @@ operator|new
 name|SCTCanceller
 argument_list|()
 decl_stmt|;
+name|sctCanceller
+operator|.
+name|setVerifyProofOfPossession
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|TokenCancellerParameters
 name|cancellerParameters
 init|=
@@ -580,6 +587,13 @@ operator|new
 name|SCTCanceller
 argument_list|()
 decl_stmt|;
+name|sctCanceller
+operator|.
+name|setVerifyProofOfPossession
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|TokenCancellerParameters
 name|cancellerParameters
 init|=

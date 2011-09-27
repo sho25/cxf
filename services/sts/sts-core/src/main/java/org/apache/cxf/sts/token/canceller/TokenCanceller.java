@@ -44,6 +44,14 @@ specifier|public
 interface|interface
 name|TokenCanceller
 block|{
+comment|/**      * boolean for enabling/disabling verification of proof of possession.      */
+name|void
+name|setVerifyProofOfPossession
+parameter_list|(
+name|boolean
+name|verifyProofOfPossession
+parameter_list|)
+function_decl|;
 comment|/**      * Return true if this TokenCanceller implementation is able to cancel a token      * that corresponds to the given token.      */
 name|boolean
 name|canHandleToken
