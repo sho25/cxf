@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This MBean represents the properties associated with the STS. It contains a single operation  * "loadProperties()" which allows subclasses to perform any custom loading/processing of the   * properties.  */
+comment|/**  * This MBean represents the properties associated with the STS. It contains a single operation  * "configureProperties()" which allows subclasses to perform any custom loading/processing of the   * properties.  */
 end_comment
 
 begin_interface
@@ -172,6 +172,32 @@ function_decl|;
 comment|/**      * Get the SignatureProperties to use.      * @return the SignatureProperties to use.      */
 name|SignatureProperties
 name|getSignatureProperties
+parameter_list|()
+function_decl|;
+comment|/**      * Set the RealmParser object to use.      * @param realmParser the RealmParser object to use.      */
+name|void
+name|setRealmParser
+parameter_list|(
+name|RealmParser
+name|realmParser
+parameter_list|)
+function_decl|;
+comment|/**      * Get the RealmParser object to use.      * @return the RealmParser object to use.      */
+name|RealmParser
+name|getRealmParser
+parameter_list|()
+function_decl|;
+comment|/**      * Set the IdentityMapper object to use.      * @param identityMapper the IdentityMapper object to use.      */
+name|void
+name|setIdentityMapper
+parameter_list|(
+name|IdentityMapper
+name|identityMapper
+parameter_list|)
+function_decl|;
+comment|/**      * Get the IdentityMapper object to use.      * @return the IdentityMapper object to use.      */
+name|IdentityMapper
+name|getIdentityMapper
 parameter_list|()
 function_decl|;
 block|}

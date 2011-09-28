@@ -951,6 +951,14 @@ name|additionalProperties
 argument_list|)
 expr_stmt|;
 block|}
+name|String
+name|realm
+init|=
+name|providerParameters
+operator|.
+name|getRealm
+argument_list|()
+decl_stmt|;
 for|for
 control|(
 name|TokenProvider
@@ -966,6 +974,8 @@ operator|.
 name|canHandleToken
 argument_list|(
 name|tokenType
+argument_list|,
+name|realm
 argument_list|)
 condition|)
 block|{

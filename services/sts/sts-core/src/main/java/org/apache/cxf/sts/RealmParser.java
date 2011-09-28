@@ -12,48 +12,59 @@ operator|.
 name|cxf
 operator|.
 name|sts
-operator|.
-name|token
-operator|.
-name|provider
 package|;
 end_package
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|WebServiceContext
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|sts
+operator|.
+name|provider
+operator|.
+name|STSException
+import|;
+end_import
+
 begin_comment
-comment|/**  * An interface that can provide a security token.  */
+comment|/**  * This interface defines a pluggable way of defining a realm for the current request.    */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|TokenProvider
+name|RealmParser
 block|{
-comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType      */
-name|boolean
-name|canHandleToken
-parameter_list|(
+comment|/**      * Return the realm of the current request given a WebServiceContext object      */
 name|String
-name|tokenType
-parameter_list|)
-function_decl|;
-comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType in a given realm      */
-name|boolean
-name|canHandleToken
+name|parseRealm
 parameter_list|(
-name|String
-name|tokenType
-parameter_list|,
-name|String
-name|realm
+name|WebServiceContext
+name|context
 parameter_list|)
-function_decl|;
-comment|/**      * Create a token given a TokenProviderParameters      */
-name|TokenProviderResponse
-name|createToken
-parameter_list|(
-name|TokenProviderParameters
-name|tokenParameters
-parameter_list|)
+throws|throws
+name|STSException
 function_decl|;
 block|}
 end_interface

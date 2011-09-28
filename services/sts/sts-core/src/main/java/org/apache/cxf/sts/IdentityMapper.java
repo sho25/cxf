@@ -12,47 +12,40 @@ operator|.
 name|cxf
 operator|.
 name|sts
-operator|.
-name|token
-operator|.
-name|provider
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|security
+operator|.
+name|Principal
+import|;
+end_import
+
 begin_comment
-comment|/**  * An interface that can provide a security token.  */
+comment|/**  * This interface defines a pluggable way of mapping an identity from a source realm to a target  * realm.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|TokenProvider
+name|IdentityMapper
 block|{
-comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType      */
-name|boolean
-name|canHandleToken
+comment|/**      * Map a principal in the source realm to the target realm      * @param sourceRealm the source realm of the Principal      * @param sourcePrincipal the principal in the source realm      * @param targetRealm the target realm of the Principal      * @return the principal in the target realm      */
+name|Principal
+name|mapPrincipal
 parameter_list|(
 name|String
-name|tokenType
-parameter_list|)
-function_decl|;
-comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType in a given realm      */
-name|boolean
-name|canHandleToken
-parameter_list|(
-name|String
-name|tokenType
+name|sourceRealm
+parameter_list|,
+name|Principal
+name|sourcePrincipal
 parameter_list|,
 name|String
-name|realm
-parameter_list|)
-function_decl|;
-comment|/**      * Create a token given a TokenProviderParameters      */
-name|TokenProviderResponse
-name|createToken
-parameter_list|(
-name|TokenProviderParameters
-name|tokenParameters
+name|targetRealm
 parameter_list|)
 function_decl|;
 block|}

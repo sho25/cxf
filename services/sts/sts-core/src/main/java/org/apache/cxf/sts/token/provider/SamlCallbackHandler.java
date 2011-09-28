@@ -299,6 +299,10 @@ specifier|private
 name|SubjectBean
 name|subjectBean
 decl_stmt|;
+specifier|private
+name|String
+name|issuer
+decl_stmt|;
 comment|/**      * Set the list of AttributeStatementBeans.      */
 specifier|public
 name|void
@@ -402,6 +406,22 @@ operator|.
 name|tokenParameters
 operator|=
 name|tokenProviderParameters
+expr_stmt|;
+block|}
+comment|/**      * Set the issuer name      */
+specifier|public
+name|void
+name|setIssuer
+parameter_list|(
+name|String
+name|issuerName
+parameter_list|)
+block|{
+name|this
+operator|.
+name|issuer
+operator|=
+name|issuerName
 expr_stmt|;
 block|}
 specifier|public
@@ -535,6 +555,13 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Set the issuer
+if|if
+condition|(
+name|issuer
+operator|==
+literal|null
+condition|)
+block|{
 name|STSPropertiesMBean
 name|stsProperties
 init|=
@@ -553,6 +580,17 @@ name|getIssuer
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+name|callback
+operator|.
+name|setIssuer
+argument_list|(
+name|issuer
+argument_list|)
+expr_stmt|;
+block|}
 comment|// Set the statements
 if|if
 condition|(

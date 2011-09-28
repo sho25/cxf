@@ -307,6 +307,14 @@ operator|new
 name|SignatureProperties
 argument_list|()
 decl_stmt|;
+specifier|private
+name|RealmParser
+name|realmParser
+decl_stmt|;
+specifier|private
+name|IdentityMapper
+name|identityMapper
+decl_stmt|;
 comment|/**      * Load the CallbackHandler, Crypto objects, if necessary.      */
 specifier|public
 name|void
@@ -825,6 +833,58 @@ parameter_list|()
 block|{
 return|return
 name|signatureProperties
+return|;
+block|}
+comment|/**      * Set the RealmParser object to use.      * @param realmParser the RealmParser object to use.      */
+specifier|public
+name|void
+name|setRealmParser
+parameter_list|(
+name|RealmParser
+name|realmParser
+parameter_list|)
+block|{
+name|this
+operator|.
+name|realmParser
+operator|=
+name|realmParser
+expr_stmt|;
+block|}
+comment|/**      * Get the RealmParser object to use.      * @return the RealmParser object to use.      */
+specifier|public
+name|RealmParser
+name|getRealmParser
+parameter_list|()
+block|{
+return|return
+name|realmParser
+return|;
+block|}
+comment|/**      * Set the IdentityMapper object to use.      * @param identityMapper the IdentityMapper object to use.      */
+specifier|public
+name|void
+name|setIdentityMapper
+parameter_list|(
+name|IdentityMapper
+name|identityMapper
+parameter_list|)
+block|{
+name|this
+operator|.
+name|identityMapper
+operator|=
+name|identityMapper
+expr_stmt|;
+block|}
+comment|/**      * Get the IdentityMapper object to use.      * @return the IdentityMapper object to use.      */
+specifier|public
+name|IdentityMapper
+name|getIdentityMapper
+parameter_list|()
+block|{
+return|return
+name|identityMapper
 return|;
 block|}
 specifier|private

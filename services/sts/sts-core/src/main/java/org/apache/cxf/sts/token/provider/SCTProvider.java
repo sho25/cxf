@@ -280,6 +280,27 @@ name|String
 name|tokenType
 parameter_list|)
 block|{
+return|return
+name|canHandleToken
+argument_list|(
+name|tokenType
+argument_list|,
+literal|null
+argument_list|)
+return|;
+block|}
+comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType in a given realm. The realm is ignored in this       * token provider.      */
+specifier|public
+name|boolean
+name|canHandleToken
+parameter_list|(
+name|String
+name|tokenType
+parameter_list|,
+name|String
+name|realm
+parameter_list|)
+block|{
 if|if
 condition|(
 name|STSUtils
