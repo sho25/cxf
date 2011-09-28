@@ -122,7 +122,7 @@ parameter_list|()
 default|default
 literal|"<logger>"
 function_decl|;
-comment|/**      * For XML content, turn on pretty printing in the logs      * @return      */
+comment|/**      * For XML content, turn on pretty printing in the logs      */
 name|boolean
 name|pretty
 parameter_list|()

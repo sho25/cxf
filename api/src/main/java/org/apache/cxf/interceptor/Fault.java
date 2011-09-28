@@ -707,7 +707,7 @@ operator|.
 name|statusCode
 return|;
 block|}
-comment|/**      * Set http header status code on this fault.      *       * @param status code.      */
+comment|/**      * Set http header status code on this fault.      *       * @param statusCode      */
 specifier|public
 name|void
 name|setStatusCode
