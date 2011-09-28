@@ -462,6 +462,27 @@ name|ReceivedToken
 name|validateTarget
 parameter_list|)
 block|{
+return|return
+name|canHandleToken
+argument_list|(
+name|validateTarget
+argument_list|,
+literal|null
+argument_list|)
+return|;
+block|}
+comment|/**      * Return true if this TokenValidator implementation is capable of validating the      * ReceivedToken argument. The realm is ignored in this token Validator.      */
+specifier|public
+name|boolean
+name|canHandleToken
+parameter_list|(
+name|ReceivedToken
+name|validateTarget
+parameter_list|,
+name|String
+name|realm
+parameter_list|)
+block|{
 if|if
 condition|(
 name|validateTarget

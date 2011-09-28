@@ -52,6 +52,17 @@ name|ReceivedToken
 name|validateTarget
 parameter_list|)
 function_decl|;
+comment|/**      * Return true if this TokenValidator implementation is capable of validating the      * ReceivedToken argument in the given realm.      */
+name|boolean
+name|canHandleToken
+parameter_list|(
+name|ReceivedToken
+name|validateTarget
+parameter_list|,
+name|String
+name|realm
+parameter_list|)
+function_decl|;
 comment|/**      * Validate a Token using the given TokenValidatorParameters.      */
 name|TokenValidatorResponse
 name|validateToken
