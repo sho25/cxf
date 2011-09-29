@@ -35,6 +35,16 @@ name|java
 operator|.
 name|security
 operator|.
+name|Principal
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|security
+operator|.
 name|cert
 operator|.
 name|X509Certificate
@@ -329,6 +339,11 @@ specifier|private
 specifier|transient
 name|Crypto
 name|crypto
+decl_stmt|;
+comment|/**      * The principal of this SecurityToken      */
+specifier|private
+name|Principal
+name|principal
 decl_stmt|;
 specifier|public
 name|SecurityToken
@@ -1283,6 +1298,32 @@ parameter_list|()
 block|{
 return|return
 name|associatedHash
+return|;
+block|}
+comment|/**      * Set the principal associated with this SecurityToken      * @param principal the principal associated with this SecurityToken      */
+specifier|public
+name|void
+name|setPrincipal
+parameter_list|(
+name|Principal
+name|principal
+parameter_list|)
+block|{
+name|this
+operator|.
+name|principal
+operator|=
+name|principal
+expr_stmt|;
+block|}
+comment|/**      * Get the principal associated with this SecurityToken      * @return the principal associated with this SecurityToken      */
+specifier|public
+name|Principal
+name|getPrincipal
+parameter_list|()
+block|{
+return|return
+name|principal
 return|;
 block|}
 comment|/**      * Create a default Expires date 5 minutes in the future      */
