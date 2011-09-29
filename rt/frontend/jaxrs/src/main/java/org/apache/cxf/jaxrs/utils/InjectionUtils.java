@@ -4783,6 +4783,16 @@ name|?
 argument_list|>
 name|realType
 init|=
+name|rawType
+operator|.
+name|isArray
+argument_list|()
+condition|?
+name|rawType
+operator|.
+name|getComponentType
+argument_list|()
+else|:
 name|InjectionUtils
 operator|.
 name|getActualType

@@ -1436,9 +1436,18 @@ literal|"query3"
 argument_list|)
 name|List
 argument_list|<
-name|String
+name|Integer
 argument_list|>
 name|queryString3
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"query3"
+argument_list|)
+name|Integer
+index|[]
+name|queryString3Array
 parameter_list|,
 annotation|@
 name|QueryParam
@@ -1450,6 +1459,17 @@ argument_list|<
 name|String
 argument_list|>
 name|queryString4
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"query5"
+argument_list|)
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|queryString5
 parameter_list|)
 block|{
 comment|// complete
