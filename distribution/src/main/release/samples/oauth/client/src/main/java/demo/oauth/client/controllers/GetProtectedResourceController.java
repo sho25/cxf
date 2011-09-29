@@ -99,20 +99,6 @@ end_import
 
 begin_import
 import|import
-name|demo
-operator|.
-name|oauth
-operator|.
-name|client
-operator|.
-name|model
-operator|.
-name|OAuthParams
-import|;
-end_import
-
-begin_import
-import|import
 name|net
 operator|.
 name|oauth
@@ -262,6 +248,20 @@ operator|.
 name|servlet
 operator|.
 name|ModelAndView
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|oauth
+operator|.
+name|client
+operator|.
+name|model
+operator|.
+name|OAuthParams
 import|;
 end_import
 

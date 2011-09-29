@@ -69,18 +69,6 @@ end_import
 
 begin_import
 import|import
-name|demo
-operator|.
-name|oauth
-operator|.
-name|server
-operator|.
-name|ClientApp
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -131,7 +119,7 @@ name|oauth
 operator|.
 name|provider
 operator|.
-name|OAuthDataProvider
+name|MD5TokenGenerator
 import|;
 end_import
 
@@ -151,7 +139,7 @@ name|oauth
 operator|.
 name|provider
 operator|.
-name|MD5TokenGenerator
+name|OAuthDataProvider
 import|;
 end_import
 
@@ -276,6 +264,18 @@ operator|.
 name|view
 operator|.
 name|RedirectView
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|oauth
+operator|.
+name|server
+operator|.
+name|ClientApp
 import|;
 end_import
 
