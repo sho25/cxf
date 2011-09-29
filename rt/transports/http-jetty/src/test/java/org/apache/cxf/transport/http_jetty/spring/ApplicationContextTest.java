@@ -799,6 +799,16 @@ argument_list|()
 expr_stmt|;
 name|assertEquals
 argument_list|(
+literal|40000
+argument_list|,
+name|engine
+operator|.
+name|getMaxIdleTime
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
 literal|99
 argument_list|,
 name|engine
