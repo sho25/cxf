@@ -73,7 +73,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|MalformedURLException
+name|URI
 import|;
 end_import
 
@@ -2902,7 +2902,7 @@ name|CFG_WSDLURL
 argument_list|,
 name|URIParserUtil
 operator|.
-name|normalize
+name|getAbsoluteURI
 argument_list|(
 name|wsdl
 argument_list|)
@@ -2925,18 +2925,18 @@ comment|//make sure the "raw" form is used for the wsdlLocation
 comment|//instead of the absolute URI that normalize may return
 try|try
 block|{
-name|URL
-name|url
+name|URI
+name|uri
 init|=
 operator|new
-name|URL
+name|URI
 argument_list|(
 name|wsdl
 argument_list|)
 decl_stmt|;
 name|wsdl
 operator|=
-name|url
+name|uri
 operator|.
 name|toString
 argument_list|()
@@ -2944,7 +2944,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|MalformedURLException
+name|Exception
 name|e
 parameter_list|)
 block|{
@@ -2988,18 +2988,18 @@ expr_stmt|;
 block|}
 try|try
 block|{
-name|URL
-name|url
+name|URI
+name|uri
 init|=
 operator|new
-name|URL
+name|URI
 argument_list|(
 name|wsdl
 argument_list|)
 decl_stmt|;
 name|wsdl
 operator|=
-name|url
+name|uri
 operator|.
 name|toString
 argument_list|()
@@ -3007,7 +3007,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|MalformedURLException
+name|Exception
 name|e1
 parameter_list|)
 block|{
