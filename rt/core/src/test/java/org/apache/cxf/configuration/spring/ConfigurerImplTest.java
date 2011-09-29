@@ -685,13 +685,34 @@ name|void
 name|testConfigureSimple
 parameter_list|()
 block|{
+comment|// Try to configure the bean with id
+name|verifyConfigureSimple
+argument_list|(
+literal|"simple"
+argument_list|)
+expr_stmt|;
+comment|// Try to configure the bean with an alias name
+name|verifyConfigureSimple
+argument_list|(
+literal|"simpleValueBean"
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|verifyConfigureSimple
+parameter_list|(
+name|String
+name|beanName
+parameter_list|)
+block|{
 name|SimpleBean
 name|sb
 init|=
 operator|new
 name|SimpleBean
 argument_list|(
-literal|"simple"
+name|beanName
 argument_list|)
 decl_stmt|;
 name|BusApplicationContext
@@ -881,8 +902,6 @@ name|getByteAttr
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/*         QName qn = sb.getQnameAttr();         assertEquals("Unexpected value for attribute qnameAttrNoDefault",                       "string", qn.getLocalPart());         assertEquals("Unexpected value for attribute qnameAttrNoDefault",                      "http://www.w3.org/2001/XMLSchema", qn.getNamespaceURI());         */
-comment|/*         byte[] expected = DatatypeConverter.parseBase64Binary("wxyz");         byte[] val = sb.getBase64BinaryAttr();          assertEquals("Unexpected value for attribute base64BinaryAttrNoDefault", expected.length, val.length);         for (int i = 0; i< expected.length; i++) {             assertEquals("Unexpected value for attribute base64BinaryAttrNoDefault", expected[i], val[i]);         }          expected = new HexBinaryAdapter().unmarshal("bbbb");         val = sb.getHexBinaryAttr();         assertEquals("Unexpected value for attribute hexBinaryAttrNoDefault", expected.length, val.length);         for (int i = 0; i< expected.length; i++) {             assertEquals("Unexpected value for attribute hexBinaryAttrNoDefault", expected[i], val[i]);         }         */
 name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedIntAttrNoDefault"
