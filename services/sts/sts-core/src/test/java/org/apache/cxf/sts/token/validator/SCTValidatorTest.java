@@ -550,6 +550,22 @@ operator|!=
 literal|null
 argument_list|)
 expr_stmt|;
+name|assertTrue
+argument_list|(
+name|validatorResponse
+operator|.
+name|getPrincipal
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"alice"
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|// Now remove the SCT from the cache
 name|tokenStore
 operator|.

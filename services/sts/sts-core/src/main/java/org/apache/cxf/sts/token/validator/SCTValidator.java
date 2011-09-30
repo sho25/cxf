@@ -549,6 +549,16 @@ argument_list|(
 name|properties
 argument_list|)
 expr_stmt|;
+name|response
+operator|.
+name|setPrincipal
+argument_list|(
+name|token
+operator|.
+name|getPrincipal
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

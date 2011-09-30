@@ -812,6 +812,16 @@ argument_list|(
 name|token
 argument_list|)
 expr_stmt|;
+name|securityToken
+operator|.
+name|setPrincipal
+argument_list|(
+name|tokenParameters
+operator|.
+name|getPrincipal
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|int
 name|hash
 init|=

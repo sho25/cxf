@@ -550,6 +550,16 @@ name|getSecret
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|token
+operator|.
+name|setPrincipal
+argument_list|(
+name|tokenParameters
+operator|.
+name|getPrincipal
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|lifetime
