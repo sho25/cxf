@@ -199,6 +199,38 @@ name|cxf
 operator|.
 name|sts
 operator|.
+name|cache
+operator|.
+name|DefaultInMemoryTokenStore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|cache
+operator|.
+name|STSTokenStore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
 name|common
 operator|.
 name|PasswordCallbackHandler
@@ -433,6 +465,16 @@ name|CryptoFactory
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|BeforeClass
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some unit tests for validating a SAML token via the SAMLTokenValidator.  */
 end_comment
@@ -448,6 +490,26 @@ name|junit
 operator|.
 name|Assert
 block|{
+specifier|private
+specifier|static
+name|STSTokenStore
+name|tokenStore
+decl_stmt|;
+annotation|@
+name|BeforeClass
+specifier|public
+specifier|static
+name|void
+name|init
+parameter_list|()
+block|{
+name|tokenStore
+operator|=
+operator|new
+name|DefaultInMemoryTokenStore
+argument_list|()
+expr_stmt|;
+block|}
 comment|/**      * Test a valid SAML 1.1 Assertion      */
 annotation|@
 name|org
@@ -892,6 +954,14 @@ name|validateTarget
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// Set tokenstore to null so that issued token is not found in the cache
+name|validatorParameters
+operator|.
+name|setTokenStore
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 comment|// Change the issuer and so validation should fail
 name|validatorParameters
 operator|.
@@ -1043,6 +1113,14 @@ name|canHandleToken
 argument_list|(
 name|validateTarget
 argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// Set tokenstore to null so that issued token is not found in the cache
+name|validatorParameters
+operator|.
+name|setTokenStore
+argument_list|(
+literal|null
 argument_list|)
 expr_stmt|;
 comment|// Change the issuer and so validation should fail
@@ -1198,6 +1276,14 @@ name|validateTarget
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// Set tokenstore to null so that issued token is not found in the cache
+name|validatorParameters
+operator|.
+name|setTokenStore
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 name|TokenValidatorResponse
 name|validatorResponse
 init|=
@@ -1338,6 +1424,14 @@ name|canHandleToken
 argument_list|(
 name|validateTarget
 argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// Set tokenstore to null so that issued token is not found in the cache
+name|validatorParameters
+operator|.
+name|setTokenStore
+argument_list|(
+literal|null
 argument_list|)
 expr_stmt|;
 name|TokenValidatorResponse
@@ -1529,6 +1623,13 @@ operator|.
 name|setStsProperties
 argument_list|(
 name|stsProperties
+argument_list|)
+expr_stmt|;
+name|parameters
+operator|.
+name|setTokenStore
+argument_list|(
+name|tokenStore
 argument_list|)
 expr_stmt|;
 return|return
@@ -1792,6 +1893,13 @@ argument_list|(
 operator|new
 name|EncryptionProperties
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|parameters
+operator|.
+name|setTokenStore
+argument_list|(
+name|tokenStore
 argument_list|)
 expr_stmt|;
 return|return
