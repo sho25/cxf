@@ -528,8 +528,6 @@ operator|new
 name|MessageCreator
 argument_list|()
 block|{
-annotation|@
-name|Override
 specifier|public
 name|javax
 operator|.
