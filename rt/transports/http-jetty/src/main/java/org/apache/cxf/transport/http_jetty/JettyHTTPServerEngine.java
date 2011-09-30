@@ -1044,12 +1044,12 @@ name|void
 name|setMaxIdleTime
 parameter_list|(
 name|int
-name|maxIdel
+name|maxIdle
 parameter_list|)
 block|{
 name|maxIdleTime
 operator|=
-name|maxIdel
+name|maxIdle
 expr_stmt|;
 block|}
 comment|/**      * Register a servant.      *       * @param url the URL associated with the servant      * @param handler notified on incoming HTTP requests      */
