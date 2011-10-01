@@ -1859,7 +1859,7 @@ name|i18n
 operator|.
 name|Message
 argument_list|(
-literal|"UNKONW_REQUIRED_WSDL_BINDING"
+literal|"UNKONWN_REQUIRED_WSDL_BINDING"
 argument_list|,
 name|LOG
 argument_list|)
