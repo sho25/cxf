@@ -234,7 +234,7 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"RespectBindingFeature message is expceted: "
+literal|"RespectBindingFeature message is expected: "
 operator|+
 name|ex
 operator|.
