@@ -648,7 +648,7 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|boolean
-name|replaced
+name|replaceContent
 init|=
 name|appendProp
 operator|!=
@@ -682,7 +682,7 @@ operator|!=
 literal|null
 operator|&&
 operator|!
-name|replaced
+name|replaceContent
 condition|)
 block|{
 if|if
@@ -841,6 +841,9 @@ name|appendProp
 operator|.
 name|isChild
 argument_list|()
+operator|&&
+operator|!
+name|replaceContent
 condition|)
 block|{
 comment|// append-post-*
@@ -863,7 +866,7 @@ name|isChild
 argument_list|()
 operator|&&
 operator|!
-name|replaced
+name|replaceContent
 condition|)
 block|{
 comment|// append-pre-*
@@ -881,7 +884,7 @@ name|expected
 expr_stmt|;
 if|if
 condition|(
-name|replaced
+name|replaceContent
 condition|)
 block|{
 name|replaceText

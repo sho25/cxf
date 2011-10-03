@@ -718,7 +718,7 @@ name|value
 operator|.
 name|indexOf
 argument_list|(
-literal|':'
+literal|'='
 argument_list|,
 name|d
 operator|<

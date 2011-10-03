@@ -337,7 +337,7 @@ name|singletonMap
 argument_list|(
 literal|"{http://bar}a"
 argument_list|,
-literal|"{http://bar}a:1 2 3"
+literal|"{http://bar}a=1 2 3"
 argument_list|)
 argument_list|,
 literal|null
@@ -432,7 +432,7 @@ name|singletonMap
 argument_list|(
 literal|"{http://bar}a"
 argument_list|,
-literal|"{http://bar}a:1 2 3"
+literal|"{http://bar}a=1 2 3"
 argument_list|)
 argument_list|,
 literal|null
@@ -1626,7 +1626,7 @@ name|put
 argument_list|(
 literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}ItemId"
 argument_list|,
-literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType:ASIN"
+literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType=ASIN"
 argument_list|)
 expr_stmt|;
 name|transformStreamAndCompare
@@ -1679,7 +1679,7 @@ name|put
 argument_list|(
 literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}ItemId"
 argument_list|,
-literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType:ASIN"
+literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType=ASIN"
 argument_list|)
 expr_stmt|;
 name|transformStreamAndCompare
@@ -1890,7 +1890,7 @@ name|put
 argument_list|(
 literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}Request/"
 argument_list|,
-literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType:ASIN"
+literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType=ASIN"
 argument_list|)
 expr_stmt|;
 name|transformStreamAndCompare
@@ -1943,7 +1943,7 @@ name|put
 argument_list|(
 literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}Request/"
 argument_list|,
-literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType:ASIN"
+literal|"{http://xml.amazon.com/AWSECommerceService/2004-08-01}IdType=ASIN"
 argument_list|)
 expr_stmt|;
 name|transformStreamAndCompare
