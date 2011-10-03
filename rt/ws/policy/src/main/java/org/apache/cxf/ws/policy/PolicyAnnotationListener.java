@@ -2675,8 +2675,10 @@ name|att
 init|=
 name|doc
 operator|.
-name|createAttribute
+name|createAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"URI"
 argument_list|)
 decl_stmt|;
