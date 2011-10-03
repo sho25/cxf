@@ -685,7 +685,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Transform the string before display. The implementation in this class       * does nothing. Override this method if you want to change the contents of the       * logged message before it is delivered to the output.       * For example, you can use this to mask out sensitive information.      * @param originalLogString the raw log message.      * @return transformed data      */
+comment|/**      * Transform the string before display. The implementation in this class       * does nothing. Override this method if you wish to change the contents of the       * logged message before it is delivered to the output.       * For example, you can use this to mask out sensitive information.      * @param originalLogString the raw log message.      * @return transformed data      */
 specifier|protected
 name|String
 name|transform
