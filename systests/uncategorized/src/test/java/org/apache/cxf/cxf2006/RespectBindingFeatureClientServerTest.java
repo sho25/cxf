@@ -234,7 +234,12 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"RespectBindingFeature message is expceted"
+literal|"RespectBindingFeature message is expceted: "
+operator|+
+name|ex
+operator|.
+name|getMessage
+argument_list|()
 argument_list|,
 name|ex
 operator|.
@@ -243,7 +248,7 @@ argument_list|()
 operator|.
 name|indexOf
 argument_list|(
-literal|"extensions that have the required=true attribute"
+literal|"extension with required=true attribute"
 argument_list|)
 operator|>
 operator|-
