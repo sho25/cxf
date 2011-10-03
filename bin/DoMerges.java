@@ -1724,14 +1724,14 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
 name|jiras
 init|=
 operator|new
-name|ArrayList
+name|TreeSet
 argument_list|<
 name|String
 argument_list|>
