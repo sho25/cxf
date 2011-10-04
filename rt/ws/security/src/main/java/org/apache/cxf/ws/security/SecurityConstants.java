@@ -363,6 +363,15 @@ name|KERBEROS_CLIENT
 init|=
 literal|"ws-security.kerberos.client"
 decl_stmt|;
+comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
+init|=
+literal|"ws-security.cache.issued.token.in.endpoint"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -455,6 +464,8 @@ block|,
 name|KERBEROS_CLIENT
 block|,
 name|SCT_TOKEN_VALIDATOR
+block|,
+name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 block|}
 argument_list|)
 argument_list|)
