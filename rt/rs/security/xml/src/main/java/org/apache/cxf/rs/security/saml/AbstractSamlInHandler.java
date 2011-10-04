@@ -978,7 +978,7 @@ argument_list|)
 decl_stmt|;
 name|message
 operator|.
-name|setContent
+name|put
 argument_list|(
 name|SecurityContext
 operator|.

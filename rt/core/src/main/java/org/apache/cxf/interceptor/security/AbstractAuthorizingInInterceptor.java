@@ -500,7 +500,7 @@ return|return
 literal|false
 return|;
 block|}
-specifier|private
+specifier|protected
 name|boolean
 name|isUserInRole
 parameter_list|(

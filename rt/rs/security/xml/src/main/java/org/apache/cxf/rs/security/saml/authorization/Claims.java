@@ -94,6 +94,12 @@ specifier|public
 annotation_defn|@interface
 name|Claims
 block|{
+name|String
+name|realm
+parameter_list|()
+default|default
+literal|""
+function_decl|;
 name|Claim
 index|[]
 name|value
