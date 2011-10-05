@@ -745,6 +745,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}

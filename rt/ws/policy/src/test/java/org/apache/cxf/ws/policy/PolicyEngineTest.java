@@ -1115,6 +1115,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1140,6 +1142,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|destination
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1156,6 +1160,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|destination
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1235,6 +1241,8 @@ argument_list|,
 operator|(
 name|Destination
 operator|)
+literal|null
+argument_list|,
 literal|null
 argument_list|)
 argument_list|)

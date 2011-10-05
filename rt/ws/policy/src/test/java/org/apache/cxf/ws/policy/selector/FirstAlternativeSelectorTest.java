@@ -397,6 +397,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -449,6 +451,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertSame
@@ -598,6 +602,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertSame

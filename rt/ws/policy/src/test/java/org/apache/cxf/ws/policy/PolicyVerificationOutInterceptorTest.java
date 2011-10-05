@@ -410,6 +410,11 @@ name|EasyMock
 operator|.
 name|expectLastCall
 argument_list|()
+operator|.
+name|andReturn
+argument_list|(
+literal|null
+argument_list|)
 expr_stmt|;
 name|control
 operator|.

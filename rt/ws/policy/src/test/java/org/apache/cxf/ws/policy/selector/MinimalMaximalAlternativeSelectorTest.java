@@ -453,6 +453,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -669,6 +671,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals

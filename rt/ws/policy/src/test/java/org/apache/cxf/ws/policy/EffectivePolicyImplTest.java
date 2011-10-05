@@ -1958,6 +1958,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -2047,6 +2049,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
