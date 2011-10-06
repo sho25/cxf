@@ -1841,7 +1841,7 @@ argument_list|)
 operator|.
 name|invoke
 argument_list|(
-name|this
+name|executor
 argument_list|,
 operator|new
 name|Object
