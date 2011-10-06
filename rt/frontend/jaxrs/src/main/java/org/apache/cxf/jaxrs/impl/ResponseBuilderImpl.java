@@ -385,11 +385,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|status
+name|s
 argument_list|<
 literal|100
 operator|||
-name|status
+name|s
 argument_list|>
 literal|599
 condition|)
