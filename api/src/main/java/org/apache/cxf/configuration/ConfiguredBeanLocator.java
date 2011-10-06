@@ -58,6 +58,23 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
+comment|/**      * Gets the bean of the given name and type      * @param name      * @param type      * @return the bean      */
+parameter_list|<
+name|T
+parameter_list|>
+name|T
+name|getBeanOfType
+parameter_list|(
+name|String
+name|name
+parameter_list|,
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|type
+parameter_list|)
+function_decl|;
 comment|/**      * Gets all the configured beans of the specific types.  Causes them      * all to be loaded.       * @param type      * @return The collection of all the configured beans of the given type      */
 parameter_list|<
 name|T

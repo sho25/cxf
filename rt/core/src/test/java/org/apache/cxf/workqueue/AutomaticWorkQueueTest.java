@@ -391,7 +391,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|INITIAL_SIZE
+literal|0
 argument_list|,
 name|workqueue
 operator|.
@@ -420,6 +420,16 @@ name|TestWorkItem
 argument_list|()
 argument_list|,
 name|TIMEOUT
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+name|INITIAL_SIZE
+argument_list|,
+name|workqueue
+operator|.
+name|getPoolSize
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Give threads a chance to dequeue (5sec max)
@@ -530,7 +540,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|INITIAL_SIZE
+literal|0
 argument_list|,
 name|workqueue
 operator|.

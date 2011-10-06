@@ -22,6 +22,11 @@ name|AutomaticWorkQueue
 extends|extends
 name|WorkQueue
 block|{
+comment|/**      * Get's the name of the workqueue      * @return the name      */
+name|String
+name|getName
+parameter_list|()
+function_decl|;
 comment|/**      * Initiates an orderly shutdown.       * If<code>processRemainingWorkItems</code>      * is true, waits for all active items to finish execution before returning, otherwise returns       * immediately after removing all non active items from the queue.      *       * @param processRemainingWorkItems      */
 name|void
 name|shutdown
