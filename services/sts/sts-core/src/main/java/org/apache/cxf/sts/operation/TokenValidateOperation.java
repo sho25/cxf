@@ -931,7 +931,7 @@ literal|null
 condition|)
 block|{
 name|String
-name|realm
+name|targetRealm
 init|=
 name|providerParameters
 operator|.
@@ -939,7 +939,7 @@ name|getRealm
 argument_list|()
 decl_stmt|;
 name|String
-name|targetRealm
+name|sourceRealm
 init|=
 name|tokenResponse
 operator|.
@@ -956,12 +956,12 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|realm
+name|sourceRealm
 operator|!=
 literal|null
 operator|&&
 operator|!
-name|realm
+name|sourceRealm
 operator|.
 name|equals
 argument_list|(
@@ -980,7 +980,7 @@ name|identityMapper
 operator|.
 name|mapPrincipal
 argument_list|(
-name|realm
+name|sourceRealm
 argument_list|,
 name|responsePrincipal
 argument_list|,

@@ -1136,7 +1136,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully validate a UsernameToken in Realm "B" and transform it into a       * SAML Assertion in Realm "A".      */
+comment|/**      * Test to successfully validate a UsernameToken (which was issued in realm "A") and       * transform it into a SAML Assertion in Realm "B".      */
 annotation|@
 name|org
 operator|.
@@ -1171,13 +1171,27 @@ name|TokenValidator
 argument_list|>
 argument_list|()
 decl_stmt|;
+name|UsernameTokenValidator
+name|validator
+init|=
+operator|new
+name|UsernameTokenValidator
+argument_list|()
+decl_stmt|;
+name|validator
+operator|.
+name|setUsernameTokenRealmCodec
+argument_list|(
+operator|new
+name|CustomUsernameTokenRealmCodec
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|validatorList
 operator|.
 name|add
 argument_list|(
-operator|new
-name|UsernameTokenValidator
-argument_list|()
+name|validator
 argument_list|)
 expr_stmt|;
 name|validateOperation
