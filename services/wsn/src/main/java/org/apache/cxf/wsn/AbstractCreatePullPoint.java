@@ -249,9 +249,10 @@ implements|implements
 name|CreatePullPoint
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -384,7 +385,7 @@ parameter_list|)
 throws|throws
 name|UnableToCreatePullPointFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -522,7 +523,7 @@ name|EndpointRegistrationException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -586,7 +587,7 @@ name|UnableToDestroyPullPointFault
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(

@@ -456,9 +456,10 @@ implements|implements
 name|ConsumerListener
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -480,10 +481,6 @@ decl_stmt|;
 specifier|private
 name|JAXBContext
 name|jaxbContext
-decl_stmt|;
-specifier|private
-name|Topic
-name|jmsTopic
 decl_stmt|;
 specifier|private
 name|List
@@ -690,7 +687,7 @@ name|JMSException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -706,7 +703,7 @@ name|JAXBException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -722,7 +719,7 @@ name|InvalidTopicException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -755,7 +752,7 @@ name|JMSException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -797,8 +794,6 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-name|jmsTopic
-operator|=
 name|topicConverter
 operator|.
 name|toActiveMQTopic

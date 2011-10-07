@@ -662,9 +662,10 @@ implements|implements
 name|MessageListener
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -1375,7 +1376,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -1497,7 +1498,7 @@ name|XPathExpressionException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(

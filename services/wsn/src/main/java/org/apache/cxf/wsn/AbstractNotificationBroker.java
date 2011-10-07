@@ -819,9 +819,10 @@ name|PREFIX
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -994,7 +995,7 @@ name|Notify
 name|notify
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -1183,7 +1184,7 @@ name|UnsupportedPolicyRequestFault
 throws|,
 name|UnrecognizedPolicyRequestFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -1329,7 +1330,7 @@ name|EndpointRegistrationException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -1390,7 +1391,7 @@ name|UnableToDestroySubscriptionFault
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(
@@ -1498,7 +1499,7 @@ name|TopicExpressionDialectUnknownFault
 throws|,
 name|TopicNotSupportedFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -1578,7 +1579,7 @@ name|ResourceUnknownFault
 throws|,
 name|TopicNotSupportedFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -1692,7 +1693,7 @@ name|EndpointRegistrationException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -1746,7 +1747,7 @@ name|ResourceNotDestroyedFault
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(
@@ -1834,7 +1835,7 @@ name|ResourceUnknownFault
 throws|,
 name|InvalidResourcePropertyQNameFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(

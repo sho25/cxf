@@ -248,9 +248,10 @@ extends|extends
 name|JmsPublisher
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -423,7 +424,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(
@@ -470,7 +471,7 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(

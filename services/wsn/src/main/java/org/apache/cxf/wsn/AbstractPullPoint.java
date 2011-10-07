@@ -349,9 +349,10 @@ implements|,
 name|NotificationConsumer
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -412,7 +413,7 @@ name|Notify
 name|notify
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -487,7 +488,7 @@ name|ResourceUnknownFault
 throws|,
 name|UnableToGetMessagesFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -593,7 +594,7 @@ name|ResourceUnknownFault
 throws|,
 name|UnableToDestroyPullPointFault
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(

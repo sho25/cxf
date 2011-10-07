@@ -283,9 +283,10 @@ extends|extends
 name|AbstractPullPoint
 block|{
 specifier|private
+specifier|static
 specifier|final
 name|Logger
-name|logger
+name|LOGGER
 init|=
 name|LoggerFactory
 operator|.
@@ -499,7 +500,7 @@ name|JMSException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -529,7 +530,7 @@ name|JMSException
 name|inner
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -554,7 +555,7 @@ name|JAXBException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|warn
 argument_list|(
@@ -702,7 +703,7 @@ name|JMSException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(
@@ -732,7 +733,7 @@ name|JMSException
 name|inner
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|debug
 argument_list|(
@@ -775,7 +776,7 @@ name|JAXBException
 name|e
 parameter_list|)
 block|{
-name|logger
+name|LOGGER
 operator|.
 name|info
 argument_list|(
