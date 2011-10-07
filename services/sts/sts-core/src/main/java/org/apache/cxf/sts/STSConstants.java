@@ -221,6 +221,15 @@ name|INVALID_REASON
 init|=
 literal|"The Trust service did not successfully validate the input"
 decl_stmt|;
+comment|/**      * Constant to store the realms in cached Security Token properties.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TOKEN_REALM
+init|=
+literal|"org.apache.cxf.sts.token.realm"
+decl_stmt|;
 specifier|private
 name|STSConstants
 parameter_list|()
