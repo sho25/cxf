@@ -45,6 +45,15 @@ argument_list|<
 name|RequestClaim
 argument_list|>
 block|{
+comment|/**      *       */
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6013920740410651546L
+decl_stmt|;
 specifier|private
 name|URI
 name|dialect

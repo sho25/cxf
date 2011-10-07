@@ -34,7 +34,18 @@ name|ArrayList
 argument_list|<
 name|Claim
 argument_list|>
-block|{  }
+block|{
+comment|/**      *       */
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4630183900697336428L
+decl_stmt|;
+block|}
 end_class
 
 end_unit

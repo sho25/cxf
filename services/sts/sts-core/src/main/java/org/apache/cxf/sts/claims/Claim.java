@@ -21,6 +21,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|net
 operator|.
 name|URI
@@ -45,7 +55,18 @@ begin_class
 specifier|public
 class|class
 name|Claim
+implements|implements
+name|Serializable
 block|{
+comment|/**      *       */
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1856135937386473416L
+decl_stmt|;
 specifier|private
 name|URI
 name|claimType
