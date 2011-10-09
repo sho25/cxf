@@ -1191,10 +1191,27 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Exception has occurred: "
+operator|+
 name|e
 operator|.
-name|printStackTrace
+name|getClass
 argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|", message: "
+operator|+
+name|e
+operator|.
+name|getMessage
+argument_list|()
+argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
