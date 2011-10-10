@@ -464,10 +464,7 @@ init|=
 operator|new
 name|OAuthConsumer
 argument_list|(
-name|client
-operator|.
-name|getCallbackURL
-argument_list|()
+literal|null
 argument_list|,
 name|client
 operator|.
