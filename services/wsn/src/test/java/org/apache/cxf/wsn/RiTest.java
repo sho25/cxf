@@ -41,7 +41,7 @@ argument_list|(
 operator|new
 name|FakeClassLoader
 argument_list|(
-literal|null
+literal|"com.sun.xml.ws.spi.ProviderImpl"
 argument_list|)
 argument_list|)
 expr_stmt|;
