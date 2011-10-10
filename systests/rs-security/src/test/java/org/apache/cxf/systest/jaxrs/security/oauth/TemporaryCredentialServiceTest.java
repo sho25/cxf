@@ -359,7 +359,7 @@ operator|.
 name|CALLBACK
 argument_list|)
 expr_stmt|;
-comment|//check all parameter transimssions
+comment|//check all parameter transmissions
 for|for
 control|(
 name|ParameterStyle
