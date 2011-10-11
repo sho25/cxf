@@ -37,6 +37,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|jws
@@ -82,6 +94,22 @@ operator|.
 name|jws
 operator|.
 name|WebService
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -309,26 +337,6 @@ name|ResourceUnknownFault
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|Logger
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|LoggerFactory
-import|;
-end_import
-
 begin_class
 annotation|@
 name|WebService
@@ -354,9 +362,9 @@ specifier|final
 name|Logger
 name|LOGGER
 init|=
-name|LoggerFactory
+name|LogUtils
 operator|.
-name|getLogger
+name|getL7dLogger
 argument_list|(
 name|AbstractPullPoint
 operator|.
@@ -415,7 +423,7 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"Notify"
 argument_list|)
@@ -490,7 +498,7 @@ name|UnableToGetMessagesFault
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"GetMessages"
 argument_list|)
@@ -596,7 +604,7 @@ name|UnableToDestroyPullPointFault
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"Destroy"
 argument_list|)

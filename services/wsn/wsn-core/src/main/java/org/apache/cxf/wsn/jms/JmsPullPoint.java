@@ -59,6 +59,30 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|jms
@@ -169,6 +193,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|wsn
 operator|.
 name|AbstractPullPoint
@@ -255,26 +295,6 @@ name|ResourceUnknownFault
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|Logger
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|LoggerFactory
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -288,9 +308,9 @@ specifier|final
 name|Logger
 name|LOGGER
 init|=
-name|LoggerFactory
+name|LogUtils
 operator|.
-name|getLogger
+name|getL7dLogger
 argument_list|(
 name|JmsPullPoint
 operator|.
@@ -502,8 +522,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|warn
+name|log
 argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
 literal|"Error storing message"
 argument_list|,
 name|e
@@ -532,8 +556,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|log
 argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
 literal|"Error closing session"
 argument_list|,
 name|inner
@@ -557,8 +585,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|warn
+name|log
 argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
 literal|"Error storing message"
 argument_list|,
 name|e
@@ -705,8 +737,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|info
+name|log
 argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
 literal|"Error retrieving messages"
 argument_list|,
 name|e
@@ -735,8 +771,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|log
 argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
 literal|"Error closing session"
 argument_list|,
 name|inner
@@ -778,8 +818,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|info
+name|log
 argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
 literal|"Error retrieving messages"
 argument_list|,
 name|e

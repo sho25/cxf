@@ -49,6 +49,30 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|jws
@@ -120,6 +144,22 @@ operator|.
 name|wsaddressing
 operator|.
 name|W3CEndpointReference
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -699,26 +739,6 @@ name|ResourceUnknownFault
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|Logger
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|LoggerFactory
-import|;
-end_import
-
 begin_class
 annotation|@
 name|WebService
@@ -824,9 +844,9 @@ specifier|final
 name|Logger
 name|LOGGER
 init|=
-name|LoggerFactory
+name|LogUtils
 operator|.
-name|getLogger
+name|getL7dLogger
 argument_list|(
 name|AbstractNotificationBroker
 operator|.
@@ -997,7 +1017,7 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"Notify"
 argument_list|)
@@ -1188,7 +1208,7 @@ block|{
 comment|//CHECKSTYLE:ON
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"Subscribe"
 argument_list|)
@@ -1336,8 +1356,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|warn
+name|log
 argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
 literal|"Unable to register new endpoint"
 argument_list|,
 name|e
@@ -1397,8 +1421,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|info
+name|log
 argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
 literal|"Error destroying subscription"
 argument_list|,
 name|e
@@ -1507,7 +1535,7 @@ block|{
 comment|//CHECKSTYLE:ON
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"GetCurrentMessage"
 argument_list|)
@@ -1587,7 +1615,7 @@ name|TopicNotSupportedFault
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"RegisterPublisher"
 argument_list|)
@@ -1701,8 +1729,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|warn
+name|log
 argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
 literal|"Unable to register new endpoint"
 argument_list|,
 name|e
@@ -1755,8 +1787,12 @@ parameter_list|)
 block|{
 name|LOGGER
 operator|.
-name|info
+name|log
 argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
 literal|"Error destroying publisher"
 argument_list|,
 name|e
@@ -1843,7 +1879,7 @@ name|InvalidResourcePropertyQNameFault
 block|{
 name|LOGGER
 operator|.
-name|debug
+name|finest
 argument_list|(
 literal|"GetResourceProperty"
 argument_list|)
