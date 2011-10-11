@@ -19,26 +19,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|jws
@@ -668,25 +648,6 @@ operator|new
 name|IdGenerator
 argument_list|()
 decl_stmt|;
-specifier|private
-specifier|final
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|PublisherSubscription
-argument_list|>
-name|subscriptions
-init|=
-operator|new
-name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|PublisherSubscription
-argument_list|>
-argument_list|()
-decl_stmt|;
 specifier|public
 name|Publisher
 parameter_list|(
@@ -783,6 +744,7 @@ argument_list|)
 name|Subscribe
 name|subscribeRequest
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|InvalidTopicExpressionFault
 throws|,
@@ -808,6 +770,7 @@ name|TopicNotSupportedFault
 throws|,
 name|UnacceptableInitialTerminationTimeFault
 block|{
+comment|//CHECKSYTLE:ON
 name|TopicExpressionType
 name|topic
 init|=
@@ -1015,6 +978,7 @@ argument_list|)
 name|GetCurrentMessage
 name|getCurrentMessageRequest
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|InvalidTopicExpressionFault
 throws|,
@@ -1028,6 +992,7 @@ name|NoCurrentMessageOnTopicFault
 throws|,
 name|TopicNotSupportedFault
 block|{
+comment|//CHECKSTYLE:ON
 name|NoCurrentMessageOnTopicFaultType
 name|fault
 init|=

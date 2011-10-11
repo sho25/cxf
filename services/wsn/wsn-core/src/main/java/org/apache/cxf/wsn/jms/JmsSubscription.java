@@ -820,6 +820,7 @@ parameter_list|(
 name|Subscribe
 name|subscribeRequest
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|InvalidFilterFault
 throws|,
@@ -841,6 +842,7 @@ name|UnsupportedPolicyRequestFault
 throws|,
 name|UnrecognizedPolicyRequestFault
 block|{
+comment|//CHECKSTYLE:ON
 name|super
 operator|.
 name|validateSubscription

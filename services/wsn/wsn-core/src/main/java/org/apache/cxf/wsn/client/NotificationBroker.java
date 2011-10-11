@@ -801,6 +801,7 @@ parameter_list|,
 name|String
 name|topic
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicExpressionDialectUnknownFault
 throws|,
@@ -826,6 +827,7 @@ name|NotifyMessageNotSupportedFault
 throws|,
 name|InvalidProducerPropertiesExpressionFault
 block|{
+comment|//CHECKSTYLE:ON
 return|return
 name|subscribe
 argument_list|(
@@ -852,6 +854,7 @@ parameter_list|,
 name|String
 name|xpath
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicExpressionDialectUnknownFault
 throws|,
@@ -877,6 +880,7 @@ name|NotifyMessageNotSupportedFault
 throws|,
 name|InvalidProducerPropertiesExpressionFault
 block|{
+comment|//CHECKSTYLE:ON
 return|return
 name|subscribe
 argument_list|(
@@ -906,6 +910,7 @@ parameter_list|,
 name|boolean
 name|raw
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicNotSupportedFault
 throws|,
@@ -931,6 +936,7 @@ name|NotifyMessageNotSupportedFault
 throws|,
 name|InvalidProducerPropertiesExpressionFault
 block|{
+comment|//CHECKSTYLE:ON
 name|Subscribe
 name|subscribeRequest
 init|=
@@ -1135,6 +1141,7 @@ parameter_list|(
 name|String
 name|topic
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicNotSupportedFault
 throws|,
@@ -1148,6 +1155,7 @@ name|ResourceUnknownFault
 throws|,
 name|NoCurrentMessageOnTopicFault
 block|{
+comment|//CHECKSTYLE:ON
 name|GetCurrentMessage
 name|getCurrentMessageRequest
 init|=
@@ -1214,6 +1222,7 @@ parameter_list|,
 name|String
 name|topic
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicNotSupportedFault
 throws|,
@@ -1227,6 +1236,7 @@ name|ResourceUnknownFault
 throws|,
 name|PublisherRegistrationRejectedFault
 block|{
+comment|//CHECKSTYLE:ON
 return|return
 name|registerPublisher
 argument_list|(
@@ -1251,6 +1261,7 @@ parameter_list|,
 name|boolean
 name|demand
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicNotSupportedFault
 throws|,
@@ -1264,6 +1275,7 @@ name|ResourceUnknownFault
 throws|,
 name|PublisherRegistrationRejectedFault
 block|{
+comment|//CHECKSTYLE:ON
 return|return
 name|registerPublisher
 argument_list|(
@@ -1296,6 +1308,7 @@ parameter_list|,
 name|boolean
 name|demand
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|TopicNotSupportedFault
 throws|,
@@ -1309,6 +1322,7 @@ name|ResourceUnknownFault
 throws|,
 name|PublisherRegistrationRejectedFault
 block|{
+comment|//CHECKSTYLE:ON
 name|RegisterPublisher
 name|registerPublisherRequest
 init|=

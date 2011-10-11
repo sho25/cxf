@@ -1314,7 +1314,6 @@ name|Consumer
 operator|.
 name|Callback
 block|{
-specifier|public
 specifier|final
 name|List
 argument_list|<
@@ -1366,7 +1365,6 @@ name|Publisher
 operator|.
 name|Callback
 block|{
-specifier|public
 specifier|final
 name|CountDownLatch
 name|subscribed
@@ -1377,7 +1375,6 @@ argument_list|(
 literal|1
 argument_list|)
 decl_stmt|;
-specifier|public
 specifier|final
 name|CountDownLatch
 name|unsubscribed

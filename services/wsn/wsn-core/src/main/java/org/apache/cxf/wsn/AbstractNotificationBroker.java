@@ -1161,6 +1161,7 @@ argument_list|)
 name|Subscribe
 name|subscribeRequest
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|InvalidFilterFault
 throws|,
@@ -1184,6 +1185,7 @@ name|UnsupportedPolicyRequestFault
 throws|,
 name|UnrecognizedPolicyRequestFault
 block|{
+comment|//CHECKSTYLE:ON
 name|LOGGER
 operator|.
 name|debug
@@ -1210,6 +1212,7 @@ parameter_list|,
 name|EndpointManager
 name|manager
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|InvalidFilterFault
 throws|,
@@ -1231,6 +1234,7 @@ name|UnsupportedPolicyRequestFault
 throws|,
 name|UnrecognizedPolicyRequestFault
 block|{
+comment|//CHECKSTYLE:ON
 name|AbstractSubscription
 name|subscription
 init|=
@@ -1486,6 +1490,7 @@ argument_list|)
 name|GetCurrentMessage
 name|getCurrentMessageRequest
 parameter_list|)
+comment|//CHECKSTYLE:OFF - WS-Notification spec throws a lot of faults
 throws|throws
 name|InvalidTopicExpressionFault
 throws|,
@@ -1499,6 +1504,7 @@ name|TopicExpressionDialectUnknownFault
 throws|,
 name|TopicNotSupportedFault
 block|{
+comment|//CHECKSTYLE:ON
 name|LOGGER
 operator|.
 name|debug
