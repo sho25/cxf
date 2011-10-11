@@ -463,6 +463,9 @@ operator|new
 name|JettyHTTPServerEngine
 argument_list|(
 name|factory
+operator|.
+name|getMBeanContainer
+argument_list|()
 argument_list|,
 name|host
 argument_list|,
@@ -1049,6 +1052,7 @@ return|;
 block|}
 comment|/**      * This method removes the Server Engine from the port map and stops it.      */
 specifier|public
+specifier|static
 specifier|synchronized
 name|void
 name|destroyForPort
