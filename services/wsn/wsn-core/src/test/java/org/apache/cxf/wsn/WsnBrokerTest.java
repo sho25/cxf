@@ -1,6 +1,6 @@
 begin_unit|revision:0.9.5;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Licensed to the Apache Software Foundation (ASF) under one or more  * contributor license agreements.  See the NOTICE file distributed with  * this work for additional information regarding copyright ownership.  * The ASF licenses this file to You under the Apache License, Version 2.0  * (the "License"); you may not use this file except in compliance with  * the License.  You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing, software  * distributed under the License is distributed on an "AS IS" BASIS,  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  * See the License for the specific language governing permissions and  * limitations under the License.  */
+comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or more contributor license agreements. See the NOTICE file  * distributed with this work for additional information  * regarding copyright ownership. The ASF licenses this file  * to you under the Apache License, Version 2.0 (the  * "License"); you may not use this file except in compliance  * with the License. You may obtain a copy of the License at  *  * http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing,  * software distributed under the License is distributed on an  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY  * KIND, either express or implied. See the License for the  * specific language governing permissions and limitations  * under the License.  */
 end_comment
 
 begin_package
@@ -403,6 +403,12 @@ specifier|private
 name|int
 name|port2
 decl_stmt|;
+specifier|protected
+specifier|abstract
+name|String
+name|getProviderImpl
+parameter_list|()
+function_decl|;
 annotation|@
 name|Override
 specifier|public
@@ -412,6 +418,35 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|String
+name|impl
+init|=
+name|getProviderImpl
+argument_list|()
+decl_stmt|;
+name|Thread
+operator|.
+name|currentThread
+argument_list|()
+operator|.
+name|setContextClassLoader
+argument_list|(
+operator|new
+name|FakeClassLoader
+argument_list|(
+name|impl
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"javax.xml.ws.spi.Provider"
+argument_list|,
+name|impl
+argument_list|)
+expr_stmt|;
 name|port1
 operator|=
 name|getFreePort
@@ -479,7 +514,7 @@ name|notificationBrokerServer
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port1
 operator|+
@@ -505,7 +540,7 @@ name|createPullPointServer
 operator|.
 name|setAddress
 argument_list|(
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port1
 operator|+
@@ -522,7 +557,7 @@ operator|=
 operator|new
 name|NotificationBroker
 argument_list|(
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port1
 operator|+
@@ -534,7 +569,7 @@ operator|=
 operator|new
 name|CreatePullPoint
 argument_list|(
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port1
 operator|+
@@ -594,6 +629,13 @@ operator|.
 name|destroy
 argument_list|()
 expr_stmt|;
+name|System
+operator|.
+name|clearProperty
+argument_list|(
+literal|"javax.xml.ws.spi.Provider"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -617,7 +659,7 @@ name|Consumer
 argument_list|(
 name|callback
 argument_list|,
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port2
 operator|+
@@ -651,6 +693,9 @@ literal|"myTopic"
 argument_list|,
 operator|new
 name|JAXBElement
+argument_list|<
+name|String
+argument_list|>
 argument_list|(
 operator|new
 name|QName
@@ -771,6 +816,9 @@ literal|"myTopic"
 argument_list|,
 operator|new
 name|JAXBElement
+argument_list|<
+name|String
+argument_list|>
 argument_list|(
 operator|new
 name|QName
@@ -882,7 +930,7 @@ name|Consumer
 argument_list|(
 name|consumerCallback
 argument_list|,
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port2
 operator|+
@@ -916,7 +964,7 @@ name|Publisher
 argument_list|(
 name|publisherCallback
 argument_list|,
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port2
 operator|+
@@ -952,6 +1000,9 @@ literal|"myTopic"
 argument_list|,
 operator|new
 name|JAXBElement
+argument_list|<
+name|String
+argument_list|>
 argument_list|(
 operator|new
 name|QName
@@ -1092,7 +1143,7 @@ name|Consumer
 argument_list|(
 name|consumerCallback
 argument_list|,
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port2
 operator|+
@@ -1114,7 +1165,7 @@ name|Publisher
 argument_list|(
 name|publisherCallback
 argument_list|,
-literal|"http://0.0.0.0:"
+literal|"http://localhost:"
 operator|+
 name|port2
 operator|+
@@ -1187,6 +1238,9 @@ literal|"myTopic1"
 argument_list|,
 operator|new
 name|JAXBElement
+argument_list|<
+name|String
+argument_list|>
 argument_list|(
 operator|new
 name|QName
