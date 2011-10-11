@@ -147,11 +147,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsn
+name|helpers
 operator|.
-name|util
-operator|.
-name|DOMUtil
+name|DOMUtils
 import|;
 end_import
 
@@ -708,9 +706,9 @@ condition|)
 block|{
 name|name
 operator|=
-name|DOMUtil
+name|DOMUtils
 operator|.
-name|getElementText
+name|getContent
 argument_list|(
 name|el
 argument_list|)
