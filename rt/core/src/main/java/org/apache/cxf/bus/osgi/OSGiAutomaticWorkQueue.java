@@ -55,20 +55,6 @@ name|ConfigurationException
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|osgi
-operator|.
-name|service
-operator|.
-name|cm
-operator|.
-name|ManagedService
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -79,8 +65,6 @@ class|class
 name|OSGiAutomaticWorkQueue
 extends|extends
 name|AutomaticWorkQueueImpl
-implements|implements
-name|ManagedService
 block|{
 specifier|public
 name|OSGiAutomaticWorkQueue
