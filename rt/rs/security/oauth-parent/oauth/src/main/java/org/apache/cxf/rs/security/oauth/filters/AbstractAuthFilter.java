@@ -626,6 +626,13 @@ if|if
 condition|(
 operator|!
 name|matched
+operator|&&
+name|permissions
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 throw|throw
@@ -665,6 +672,11 @@ condition|(
 name|uris
 operator|==
 literal|null
+operator|||
+name|uris
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 return|return

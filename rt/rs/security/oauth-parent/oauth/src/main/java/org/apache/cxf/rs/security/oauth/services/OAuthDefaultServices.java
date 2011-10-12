@@ -335,7 +335,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"/authorizeDecision"
+literal|"/authorize/decision"
 argument_list|)
 specifier|public
 name|Response
@@ -354,7 +354,7 @@ name|POST
 annotation|@
 name|Path
 argument_list|(
-literal|"/authorizeDecision"
+literal|"/authorize/decision"
 argument_list|)
 annotation|@
 name|Consumes

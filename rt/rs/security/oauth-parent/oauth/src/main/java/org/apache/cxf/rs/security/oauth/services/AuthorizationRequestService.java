@@ -120,6 +120,11 @@ comment|/**  * This resource handles the End User authorising  * or denying the 
 end_comment
 
 begin_class
+annotation|@
+name|Path
+argument_list|(
+literal|"/authorize"
+argument_list|)
 specifier|public
 class|class
 name|AuthorizationRequestService
@@ -151,11 +156,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|GET
-annotation|@
-name|Path
-argument_list|(
-literal|"/authorize"
-argument_list|)
 annotation|@
 name|Produces
 argument_list|(
@@ -204,12 +204,12 @@ init|=
 name|getUriInfo
 argument_list|()
 operator|.
-name|getBaseUriBuilder
+name|getAbsolutePathBuilder
 argument_list|()
 operator|.
 name|path
 argument_list|(
-literal|"authorizeDecision"
+literal|"decision"
 argument_list|)
 operator|.
 name|build
@@ -243,7 +243,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"/authorizeDecision"
+literal|"/decision"
 argument_list|)
 specifier|public
 name|Response
@@ -260,7 +260,7 @@ name|POST
 annotation|@
 name|Path
 argument_list|(
-literal|"/authorizeDecision"
+literal|"/decision"
 argument_list|)
 annotation|@
 name|Consumes

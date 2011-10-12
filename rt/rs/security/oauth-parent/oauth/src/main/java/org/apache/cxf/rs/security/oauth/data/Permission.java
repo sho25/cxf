@@ -36,6 +36,10 @@ name|description
 decl_stmt|;
 specifier|public
 name|Permission
+parameter_list|()
+block|{              }
+specifier|public
+name|Permission
 parameter_list|(
 name|String
 name|permission
