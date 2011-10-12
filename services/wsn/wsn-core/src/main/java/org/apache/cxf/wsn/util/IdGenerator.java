@@ -39,15 +39,25 @@ end_import
 
 begin_import
 import|import
-name|org
+name|java
 operator|.
-name|apache
-operator|.
-name|commons
+name|util
 operator|.
 name|logging
 operator|.
-name|Log
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
 import|;
 end_import
 
@@ -57,11 +67,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
+name|cxf
+operator|.
+name|common
 operator|.
 name|logging
 operator|.
-name|LogFactory
+name|LogUtils
 import|;
 end_import
 
@@ -77,12 +89,12 @@ block|{
 specifier|private
 specifier|static
 specifier|final
-name|Log
-name|LOG
+name|Logger
+name|LOGGER
 init|=
-name|LogFactory
+name|LogUtils
 operator|.
-name|getLog
+name|getL7dLogger
 argument_list|(
 name|IdGenerator
 operator|.
@@ -268,10 +280,14 @@ name|Exception
 name|ioe
 parameter_list|)
 block|{
-name|LOG
+name|LOGGER
 operator|.
-name|warn
+name|log
 argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
 literal|"Could not generate unique stub"
 argument_list|,
 name|ioe
