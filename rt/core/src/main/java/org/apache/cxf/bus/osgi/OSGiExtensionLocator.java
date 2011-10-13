@@ -544,6 +544,15 @@ parameter_list|)
 throws|throws
 name|ConfigurationException
 block|{
+if|if
+condition|(
+name|d
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|String
 name|s
 init|=
