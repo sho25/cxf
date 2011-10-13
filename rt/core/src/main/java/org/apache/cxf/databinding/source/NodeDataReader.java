@@ -481,6 +481,14 @@ name|e
 argument_list|,
 name|e
 operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getCanonicalName
+argument_list|()
+argument_list|,
+name|e
+operator|.
 name|getMessage
 argument_list|()
 argument_list|)
