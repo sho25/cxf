@@ -213,6 +213,10 @@ name|BookStore
 operator|.
 name|class
 argument_list|,
+name|SimpleBookStore
+operator|.
+name|class
+argument_list|,
 name|BookStorePerRequest
 operator|.
 name|class
