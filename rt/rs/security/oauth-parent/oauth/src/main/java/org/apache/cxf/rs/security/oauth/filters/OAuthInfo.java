@@ -195,13 +195,6 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|permissions
-operator|!=
-literal|null
-condition|)
-block|{
 for|for
 control|(
 name|OAuthPermission
@@ -220,7 +213,6 @@ name|getRoles
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|authorities

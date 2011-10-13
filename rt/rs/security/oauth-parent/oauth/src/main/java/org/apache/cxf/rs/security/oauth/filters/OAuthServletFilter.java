@@ -226,7 +226,7 @@ argument_list|()
 decl_stmt|;
 name|super
 operator|.
-name|setOAuthDataProvider
+name|setDataProvider
 argument_list|(
 name|OAuthUtils
 operator|.
