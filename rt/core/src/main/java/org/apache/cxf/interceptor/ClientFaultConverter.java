@@ -1616,6 +1616,20 @@ operator|.
 name|nextToken
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|oneLine
+operator|.
+name|startsWith
+argument_list|(
+literal|"Caused by:"
+argument_list|)
+condition|)
+block|{
+comment|// need to skip this part of message,
+comment|// as we can't create the cause exception instance directly.
+break|break;
+block|}
 name|StringTokenizer
 name|stInner
 init|=

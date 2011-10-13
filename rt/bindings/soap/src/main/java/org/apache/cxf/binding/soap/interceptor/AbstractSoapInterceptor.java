@@ -423,10 +423,7 @@ control|(
 name|StackTraceElement
 name|ste
 range|:
-name|fault
-operator|.
-name|getCause
-argument_list|()
+name|throwable
 operator|.
 name|getStackTrace
 argument_list|()
@@ -484,21 +481,21 @@ name|sb
 operator|.
 name|append
 argument_list|(
-literal|"Caused by:"
+literal|"Caused by: "
 operator|+
 name|throwable
 operator|.
 name|getClass
 argument_list|()
 operator|+
-literal|":"
+literal|" : "
 operator|+
 name|throwable
 operator|.
 name|getMessage
 argument_list|()
 operator|+
-literal|" "
+literal|"\n"
 argument_list|)
 expr_stmt|;
 block|}
