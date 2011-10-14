@@ -261,6 +261,22 @@ name|WSSecurityException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|processor
+operator|.
+name|ReferenceListProcessor
+import|;
+end_import
+
 begin_comment
 comment|/**  * Utility to enable the checking of WS-Security signature / WS-Security  * encryption coverage based on the results of the WSS4J signature/encryption  * processor.  */
 end_comment
@@ -461,6 +477,16 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
+name|String
+name|xpath
+init|=
+name|ReferenceListProcessor
+operator|.
+name|getXPath
+argument_list|(
+name|soapBody
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
 operator|!
@@ -475,6 +501,8 @@ argument_list|,
 name|scope
 argument_list|,
 name|soapBody
+argument_list|,
+name|xpath
 argument_list|)
 condition|)
 block|{
@@ -575,6 +603,16 @@ range|:
 name|elements
 control|)
 block|{
+name|String
+name|xpath
+init|=
+name|ReferenceListProcessor
+operator|.
+name|getXPath
+argument_list|(
+name|el
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
 operator|!
@@ -589,6 +627,8 @@ argument_list|,
 name|scope
 argument_list|,
 name|el
+argument_list|,
+name|xpath
 argument_list|)
 condition|)
 block|{
@@ -864,6 +904,8 @@ argument_list|,
 name|scope
 argument_list|,
 name|el
+argument_list|,
+name|xpathString
 argument_list|)
 decl_stmt|;
 comment|// We looked through all of the refs, but the element was
@@ -1042,6 +1084,9 @@ name|scope
 parameter_list|,
 name|Element
 name|el
+parameter_list|,
+name|String
+name|elXPath
 parameter_list|)
 block|{
 specifier|final
@@ -1070,67 +1115,7 @@ operator|=
 literal|false
 expr_stmt|;
 block|}
-name|boolean
-name|instanceMatched
-init|=
-literal|false
-decl_stmt|;
-for|for
-control|(
-name|WSDataRef
-name|r
-range|:
-name|refs
-control|)
-block|{
-comment|// If the element is the same object instance
-comment|// as that in the ref, we found it and can
-comment|// stop looking at this element.
-if|if
-condition|(
-name|r
-operator|.
-name|getProtectedElement
-argument_list|()
-operator|==
-name|el
-operator|&&
-name|r
-operator|.
-name|isContent
-argument_list|()
-operator|==
-name|content
-condition|)
-block|{
-name|instanceMatched
-operator|=
-literal|true
-expr_stmt|;
-break|break;
-block|}
-comment|// Only if checking signature coverage do we attempt to
-comment|// do matches based on ID and element names and not object
-comment|// equality.
-if|if
-condition|(
-operator|!
-name|instanceMatched
-operator|&&
-name|CoverageType
-operator|.
-name|SIGNED
-operator|.
-name|equals
-argument_list|(
-name|type
-argument_list|)
-condition|)
-block|{
-comment|// If we get here, we haven't found it yet
-comment|// so we will look based on the element's
-comment|// wsu:Id and see if the ref references the
-comment|// ID specified in the attr.
+comment|// Get the Element Id
 name|Attr
 name|idAttr
 init|=
@@ -1178,18 +1163,82 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
-comment|// If the ref's qualified name equals the name of the
-comment|// element and the ref has a wsu:Id and it matches the
-comment|// element's wsu:Id attribute value, we found it.
+if|if
+condition|(
+name|id
+operator|!=
+literal|null
+operator|&&
+name|id
+operator|.
+name|charAt
+argument_list|(
+literal|0
+argument_list|)
+operator|==
+literal|'#'
+condition|)
+block|{
+name|id
+operator|=
+name|id
+operator|.
+name|substring
+argument_list|(
+literal|1
+argument_list|)
+expr_stmt|;
+block|}
+for|for
+control|(
+name|WSDataRef
+name|r
+range|:
+name|refs
+control|)
+block|{
+comment|// If the element is the same object instance
+comment|// as that in the ref, we found it and can
+comment|// stop looking at this element.
 if|if
 condition|(
 name|r
 operator|.
-name|getName
+name|getProtectedElement
 argument_list|()
+operator|==
+name|el
+operator|&&
+name|r
+operator|.
+name|isContent
+argument_list|()
+operator|==
+name|content
+condition|)
+block|{
+return|return
+literal|true
+return|;
+block|}
+comment|// Only if checking signature coverage do we attempt to
+comment|// do matches based on ID and element names (and XPath expressions) and not object
+comment|// equality.
+if|if
+condition|(
+name|CoverageType
+operator|.
+name|SIGNED
 operator|.
 name|equals
 argument_list|(
+name|type
+argument_list|)
+condition|)
+block|{
+name|QName
+name|elQName
+init|=
 operator|new
 name|QName
 argument_list|(
@@ -1203,6 +1252,17 @@ operator|.
 name|getLocalName
 argument_list|()
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|r
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|elQName
 argument_list|)
 operator|&&
 name|r
@@ -1222,31 +1282,34 @@ name|equals
 argument_list|(
 name|id
 argument_list|)
-operator|||
+operator|&&
 name|r
 operator|.
-name|getWsuId
+name|getXpath
+argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|r
+operator|.
+name|getXpath
 argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"#"
-operator|+
-name|id
+name|elXPath
 argument_list|)
 operator|)
 condition|)
 block|{
-name|instanceMatched
-operator|=
+return|return
 literal|true
-expr_stmt|;
-break|break;
+return|;
 block|}
 block|}
 block|}
 return|return
-name|instanceMatched
+literal|false
 return|;
 block|}
 specifier|private
