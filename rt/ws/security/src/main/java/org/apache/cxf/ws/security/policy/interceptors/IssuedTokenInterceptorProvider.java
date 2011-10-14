@@ -1021,6 +1021,14 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
+name|ctx
+operator|.
+name|containsKey
+argument_list|(
+name|s
+argument_list|)
+operator|&&
 name|v
 operator|!=
 literal|null
