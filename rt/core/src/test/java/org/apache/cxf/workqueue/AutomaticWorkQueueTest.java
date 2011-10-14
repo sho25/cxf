@@ -646,8 +646,6 @@ name|getActiveCount
 argument_list|()
 operator|<
 name|DEFAULT_HIGH_WATER_MARK
-operator|-
-literal|1
 condition|)
 block|{
 try|try
