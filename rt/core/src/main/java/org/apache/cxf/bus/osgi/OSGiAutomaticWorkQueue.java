@@ -219,6 +219,7 @@ name|Properties
 argument_list|()
 decl_stmt|;
 specifier|public
+specifier|synchronized
 name|void
 name|register
 parameter_list|(
@@ -273,6 +274,7 @@ name|c
 expr_stmt|;
 block|}
 specifier|public
+specifier|synchronized
 name|void
 name|updateProperty
 parameter_list|(
@@ -330,6 +332,7 @@ comment|//ignore
 block|}
 block|}
 specifier|public
+specifier|synchronized
 name|void
 name|updated
 parameter_list|(
@@ -503,6 +506,13 @@ expr_stmt|;
 block|}
 block|}
 block|}
+if|if
+condition|(
+name|registration
+operator|!=
+literal|null
+condition|)
+block|{
 name|registration
 operator|.
 name|setProperties
@@ -510,6 +520,7 @@ argument_list|(
 name|d
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 empty_stmt|;
