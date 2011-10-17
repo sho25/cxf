@@ -391,7 +391,7 @@ name|equals
 argument_list|(
 name|requestToken
 operator|.
-name|getOauthVerifier
+name|getVerifier
 argument_list|()
 argument_list|)
 condition|)
@@ -458,7 +458,7 @@ name|OAUTH_TOKEN
 argument_list|,
 name|accessToken
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;

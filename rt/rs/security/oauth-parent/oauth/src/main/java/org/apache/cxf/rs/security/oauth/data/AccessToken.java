@@ -21,6 +21,10 @@ name|data
 package|;
 end_package
 
+begin_comment
+comment|/**  * Access Token representation  */
+end_comment
+
 begin_class
 specifier|public
 class|class

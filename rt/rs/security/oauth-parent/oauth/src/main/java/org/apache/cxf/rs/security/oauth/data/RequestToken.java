@@ -21,6 +21,10 @@ name|data
 package|;
 end_package
 
+begin_comment
+comment|/**  * Request Token representation  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -94,30 +98,33 @@ name|lifetime
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the token verifier      * @param oauthVerifier      */
 specifier|public
 name|void
-name|setOauthVerifier
+name|setVerifier
 parameter_list|(
 name|String
-name|oauthVerifier
+name|verifier
 parameter_list|)
 block|{
 name|this
 operator|.
 name|oauthVerifier
 operator|=
-name|oauthVerifier
+name|verifier
 expr_stmt|;
 block|}
+comment|/**      * Gets the token verifier      * @return the verifier      */
 specifier|public
 name|String
-name|getOauthVerifier
+name|getVerifier
 parameter_list|()
 block|{
 return|return
 name|oauthVerifier
 return|;
 block|}
+comment|/**      * Sets the callback URI       * @param callback the callback      */
 specifier|public
 name|void
 name|setCallback
@@ -133,6 +140,7 @@ operator|=
 name|callback
 expr_stmt|;
 block|}
+comment|/**      * Gets the callback URI      * @return the callback      */
 specifier|public
 name|String
 name|getCallback
@@ -142,6 +150,7 @@ return|return
 name|callback
 return|;
 block|}
+comment|/**      * Sets the state - it will be reported back to the consumer      * after the authorization decision on this token has been made.       * @param state      */
 specifier|public
 name|void
 name|setState
@@ -157,6 +166,7 @@ operator|=
 name|state
 expr_stmt|;
 block|}
+comment|/**      * Gets the state      * @return the state      */
 specifier|public
 name|String
 name|getState

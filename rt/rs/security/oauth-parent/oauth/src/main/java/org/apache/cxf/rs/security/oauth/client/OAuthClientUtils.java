@@ -161,26 +161,31 @@ name|Form
 import|;
 end_import
 
+begin_comment
+comment|/**  * The utility class for simplifying making OAuth request and access token  * requests as well as for creating Authorization OAuth headers  */
+end_comment
+
 begin_class
 specifier|public
 specifier|final
 class|class
-name|OAuthClientSupport
+name|OAuthClientUtils
 block|{
 specifier|private
-name|OAuthClientSupport
+name|OAuthClientUtils
 parameter_list|()
 block|{              }
+comment|/**      * Returns URI of the authorization service with the query parameter containing       * the request token key       * @param authorizationServiceURI the service URI      * @param requestToken the request token key      * @return      */
 specifier|public
 specifier|static
 name|URI
-name|getAuthorizationServiceURI
+name|getAuthorizationURI
 parameter_list|(
 name|String
 name|authorizationServiceURI
 parameter_list|,
 name|String
-name|token
+name|requestToken
 parameter_list|)
 block|{
 return|return
@@ -195,13 +200,14 @@ name|queryParam
 argument_list|(
 literal|"oauth_token"
 argument_list|,
-name|token
+name|requestToken
 argument_list|)
 operator|.
 name|build
 argument_list|()
 return|;
 block|}
+comment|/**      * Returns a simple representation of the Request token      * @param requestTokenService initialized RequestToken service client      * @param consumer Consumer bean containing the consumer key and secret      * @param callback the callback URI where the request token verifier will      *        be returned       * @param extraParams additional parameters such as state, scope, etc      * @return the token      */
 specifier|public
 specifier|static
 name|Token
@@ -375,6 +381,7 @@ name|parameters
 argument_list|)
 return|;
 block|}
+comment|/**      * Returns a simple representation of the Access token      * @param accessTokenService initialized AccessToken service client      * @param consumer Consumer bean containing the consumer key and secret      * @param verifier the verifier/authorization key      * @return the token      */
 specifier|public
 specifier|static
 name|Token
@@ -519,6 +526,7 @@ name|parameters
 argument_list|)
 return|;
 block|}
+comment|/**      * Creates OAuth Authorization header      * @param consumer Consumer bean containing the consumer key and secret      * @param token Access token representation      * @param method HTTP method      * @param requestURI request URI      * @return the header value      */
 specifier|public
 specifier|static
 name|String
@@ -528,7 +536,7 @@ name|Consumer
 name|consumer
 parameter_list|,
 name|Token
-name|token
+name|accessToken
 parameter_list|,
 name|String
 name|method
@@ -570,7 +578,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|token
+name|accessToken
 operator|!=
 literal|null
 condition|)
@@ -583,7 +591,7 @@ name|OAuth
 operator|.
 name|OAUTH_TOKEN
 argument_list|,
-name|token
+name|accessToken
 operator|.
 name|getToken
 argument_list|()
@@ -671,7 +679,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|token
+name|accessToken
 operator|!=
 literal|null
 condition|)
@@ -680,7 +688,7 @@ name|accessor
 operator|.
 name|accessToken
 operator|=
-name|token
+name|accessToken
 operator|.
 name|getToken
 argument_list|()
@@ -689,7 +697,7 @@ name|accessor
 operator|.
 name|tokenSecret
 operator|=
-name|token
+name|accessToken
 operator|.
 name|getSecret
 argument_list|()
@@ -880,6 +888,7 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|/**      * Simple token representation      */
 specifier|public
 specifier|static
 class|class
@@ -935,6 +944,7 @@ name|secret
 return|;
 block|}
 block|}
+comment|/**      * Simple consumer representation      */
 specifier|public
 specifier|static
 class|class

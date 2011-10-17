@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This resource will replace a request token with a new access token  */
+comment|/**  * This resource will replace a request token with a new access token which  * will complete the OAuth flow. The third-party consumer will use the access  * token to access end user resources.  */
 end_comment
 
 begin_class

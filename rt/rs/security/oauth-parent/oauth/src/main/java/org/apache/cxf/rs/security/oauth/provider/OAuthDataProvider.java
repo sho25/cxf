@@ -131,11 +131,16 @@ name|RequestTokenRegistration
 import|;
 end_import
 
+begin_comment
+comment|/**  * OAuth provider responsible for persisting the information about   * OAuth consumers, request and access tokens.  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
 name|OAuthDataProvider
 block|{
+comment|/**      * Returns the previously registered third-party {@link Client}       * @param clientId the client id      * @return Client      * @throws OAuthServiceException      */
 name|Client
 name|getClient
 parameter_list|(
@@ -145,6 +150,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
+comment|/**      * Creates a temporarily request token which will capture the      * information about the {@link Client} attempting to access or      * modify the resource owner's resource       * @param reg RequestTokenRegistration      * @return new request token      * @see RequestTokenRegistration      * @throws OAuthServiceException      */
 name|RequestToken
 name|createRequestToken
 parameter_list|(
@@ -154,6 +160,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
+comment|/**      * Returns the previously registered {@link RequestToken}      * @param requestToken the token key      * @return RequestToken      * @throws OAuthServiceException      */
 name|RequestToken
 name|getRequestToken
 parameter_list|(
@@ -163,8 +170,9 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
+comment|/**      * Sets the verifier confirming the resource owner's agreement for      * the {@link Client} to perform the action as represented by      * the provided {@link RequestToken}. The runtime will report      * this verifier to the client who will exchange it for       * a new {@link AccessToken}      *          * @param requestToken the request token      * @return the generated verifier      * @throws OAuthServiceException      */
 name|String
-name|createRequestTokenVerifier
+name|setRequestTokenVerifier
 parameter_list|(
 name|RequestToken
 name|requestToken
@@ -172,6 +180,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
+comment|/**      * Creates a new {@link AccessToken}      * @param requestToken the request token approved by the resource owner      * @return new AccessToken      * @throws OAuthServiceException      */
 name|AccessToken
 name|createAccessToken
 parameter_list|(
@@ -181,6 +190,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
+comment|/**      * Returns the {@link AccessToken}      * @param accessToken the token key       * @return AccessToken      * @throws OAuthServiceException      */
 name|AccessToken
 name|getAccessToken
 parameter_list|(
@@ -190,6 +200,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
+comment|/**      * Removes the tokens associated with a given client id      * @param clientId the client id      * @throws OAuthServiceException      */
 name|void
 name|removeTokens
 parameter_list|(
@@ -200,6 +211,7 @@ throws|throws
 name|OAuthServiceException
 function_decl|;
 empty_stmt|;
+comment|/**      * Returns the list of {@link OAuthPermission} beans describing opaque      * permissions (aka scopes) such as "read_data", etc      * @param requestPermissions the list of opaque scopes/permissions       * @see OAuthPermission       * @return permissions      */
 name|List
 argument_list|<
 name|OAuthPermission

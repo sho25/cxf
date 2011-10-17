@@ -427,7 +427,7 @@ name|remove
 argument_list|(
 name|token
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;

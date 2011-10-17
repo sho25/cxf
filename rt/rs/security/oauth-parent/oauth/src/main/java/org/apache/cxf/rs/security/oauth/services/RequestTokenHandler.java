@@ -635,7 +635,7 @@ name|OAUTH_TOKEN
 argument_list|,
 name|requestToken
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;

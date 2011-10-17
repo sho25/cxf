@@ -41,6 +41,10 @@ name|List
 import|;
 end_import
 
+begin_comment
+comment|/**  * Represents a registered third-party consumer  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -94,7 +98,7 @@ specifier|public
 name|Client
 parameter_list|(
 name|String
-name|consumerKey
+name|consumerId
 parameter_list|,
 name|String
 name|secretKey
@@ -110,7 +114,7 @@ name|this
 operator|.
 name|consumerKey
 operator|=
-name|consumerKey
+name|consumerId
 expr_stmt|;
 name|this
 operator|.
@@ -135,7 +139,7 @@ specifier|public
 name|Client
 parameter_list|(
 name|String
-name|consumerKey
+name|consumerId
 parameter_list|,
 name|String
 name|secretKey
@@ -143,7 +147,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|consumerKey
+name|consumerId
 argument_list|,
 name|secretKey
 argument_list|,
@@ -153,6 +157,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Gets the consumer registration id      * @return the consumer key      */
 specifier|public
 name|String
 name|getConsumerKey
@@ -162,6 +167,7 @@ return|return
 name|consumerKey
 return|;
 block|}
+comment|/**      * Gets the secret key      * @return the secret key      */
 specifier|public
 name|String
 name|getSecretKey
@@ -171,6 +177,7 @@ return|return
 name|secretKey
 return|;
 block|}
+comment|/**      * Gets the name of the third-party application      * this client represents      * @return the application name      */
 specifier|public
 name|String
 name|getApplicationName
@@ -180,6 +187,7 @@ return|return
 name|applicationName
 return|;
 block|}
+comment|/**      * Sets the name of the third-party application      * this client represents      * @param applicationName the name      */
 specifier|public
 name|void
 name|setApplicationName
@@ -195,6 +203,7 @@ operator|=
 name|applicationName
 expr_stmt|;
 block|}
+comment|/**      * Gets the public URI of the third-party application.      * For example, this property can be used to validate       * request token callbacks      * @return the application URI      */
 specifier|public
 name|String
 name|getApplicationURI
@@ -204,6 +213,7 @@ return|return
 name|applicationURI
 return|;
 block|}
+comment|/**      * Sets the public URI of the third-party application.      */
 specifier|public
 name|void
 name|setApplicationURI
@@ -219,6 +229,7 @@ operator|=
 name|applicationURI
 expr_stmt|;
 block|}
+comment|/**      * Gets the optional login name; can be used       * for enforcing the RBAC rules       * @return the login name      */
 specifier|public
 name|String
 name|getLoginName
@@ -234,6 +245,7 @@ else|:
 name|loginName
 return|;
 block|}
+comment|/**      * Sets the optional login name      * @param name the login name      */
 specifier|public
 name|void
 name|setLoginName
@@ -249,36 +261,7 @@ operator|=
 name|name
 expr_stmt|;
 block|}
-specifier|public
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getUris
-parameter_list|()
-block|{
-return|return
-name|uris
-return|;
-block|}
-specifier|public
-name|void
-name|setUris
-parameter_list|(
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|uris
-parameter_list|)
-block|{
-name|this
-operator|.
-name|uris
-operator|=
-name|uris
-expr_stmt|;
-block|}
+comment|/**      * Returns a list of opaque permissions/scopes      * @return the scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -291,6 +274,7 @@ return|return
 name|scopes
 return|;
 block|}
+comment|/**      * Sets a list of opaque permissions/scopes      * @param scopes the scopes      */
 specifier|public
 name|void
 name|setScopes
@@ -307,6 +291,38 @@ operator|.
 name|scopes
 operator|=
 name|scopes
+expr_stmt|;
+block|}
+comment|/**      * Returns a list of relative URIs the consumer wishes to access      * @return the uris      */
+specifier|public
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getUris
+parameter_list|()
+block|{
+return|return
+name|uris
+return|;
+block|}
+comment|/**      * Sets a list of relative URIs the consumer wishes to access      * @param uris the uris      */
+specifier|public
+name|void
+name|setUris
+parameter_list|(
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|uris
+parameter_list|)
+block|{
+name|this
+operator|.
+name|uris
+operator|=
+name|uris
 expr_stmt|;
 block|}
 annotation|@

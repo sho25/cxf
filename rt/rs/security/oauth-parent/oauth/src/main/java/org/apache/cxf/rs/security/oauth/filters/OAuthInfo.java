@@ -101,6 +101,10 @@ name|OAuthPermission
 import|;
 end_import
 
+begin_comment
+comment|/**  * Captures the information about the current request  */
+end_comment
+
 begin_class
 specifier|public
 class|class

@@ -285,6 +285,10 @@ name|SecurityContext
 import|;
 end_import
 
+begin_comment
+comment|/**  * Base OAuth filter which can be used to protect end-user endpoints  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -349,6 +353,7 @@ specifier|protected
 name|AbstractAuthFilter
 parameter_list|()
 block|{              }
+comment|/**      * Sets {@link OAuthDataProvider} provider.      * @param provider the provider      */
 specifier|public
 name|void
 name|setDataProvider
@@ -362,6 +367,7 @@ operator|=
 name|provider
 expr_stmt|;
 block|}
+comment|/**      * Authenticates the third-party consumer and returns      * {@link OAuthInfo} bean capturing the information about the request.       * @param req http request      * @return OAuth info      * @see OAuthInfo      * @throws Exception      * @throws OAuthProblemException      */
 specifier|public
 name|OAuthInfo
 name|handleOAuthRequest
@@ -472,10 +478,23 @@ operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Access token is unavailable"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthProblemException
-argument_list|()
+argument_list|(
+name|OAuth
+operator|.
+name|Problems
+operator|.
+name|TOKEN_REJECTED
+argument_list|)
 throw|;
 block|}
 name|client
@@ -541,10 +560,23 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Client is invalid"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthProblemException
-argument_list|()
+argument_list|(
+name|OAuth
+operator|.
+name|Problems
+operator|.
+name|CONSUMER_KEY_UNKNOWN
+argument_list|)
 throw|;
 block|}
 block|}
@@ -560,9 +592,6 @@ name|accessToken
 argument_list|)
 expr_stmt|;
 comment|//check valid URI
-if|if
-condition|(
-operator|!
 name|checkRequestURI
 argument_list|(
 name|req
@@ -574,14 +603,7 @@ argument_list|,
 name|accessToken
 argument_list|)
 argument_list|)
-condition|)
-block|{
-throw|throw
-operator|new
-name|OAuthProblemException
-argument_list|()
-throw|;
-block|}
+expr_stmt|;
 name|List
 argument_list|<
 name|OAuthPermission
@@ -616,8 +638,8 @@ name|getUri
 argument_list|()
 operator|!=
 literal|null
-operator|&&
-operator|!
+condition|)
+block|{
 name|checkRequestURI
 argument_list|(
 name|req
@@ -632,13 +654,7 @@ name|getUri
 argument_list|()
 argument_list|)
 argument_list|)
-condition|)
-block|{
-throw|throw
-operator|new
-name|OAuthProblemException
-argument_list|()
-throw|;
+expr_stmt|;
 block|}
 if|if
 condition|(
@@ -666,10 +682,24 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|String
+name|message
+init|=
+literal|"Invalid http verb"
+decl_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthProblemException
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 throw|;
 block|}
 name|checkNoAccessTokenIsAllowed
@@ -848,7 +878,7 @@ name|uris
 return|;
 block|}
 specifier|protected
-name|boolean
+name|void
 name|checkRequestURI
 parameter_list|(
 name|HttpServletRequest
@@ -860,6 +890,8 @@ name|String
 argument_list|>
 name|uris
 parameter_list|)
+throws|throws
+name|OAuthProblemException
 block|{
 if|if
 condition|(
@@ -869,9 +901,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-return|return
-literal|true
-return|;
+return|return;
 block|}
 name|String
 name|servletPath
@@ -958,9 +988,32 @@ break|break;
 block|}
 block|}
 block|}
-return|return
+if|if
+condition|(
+operator|!
 name|foundValidScope
-return|;
+condition|)
+block|{
+name|String
+name|message
+init|=
+literal|"Invalid request URI"
+decl_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|OAuthProblemException
+argument_list|(
+name|message
+argument_list|)
+throw|;
+block|}
 block|}
 specifier|protected
 name|SecurityContext

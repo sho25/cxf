@@ -41,6 +41,10 @@ name|List
 import|;
 end_import
 
+begin_comment
+comment|/**  * Base Token representation  */
+end_comment
+
 begin_class
 specifier|public
 specifier|abstract
@@ -104,7 +108,7 @@ name|Client
 name|client
 parameter_list|,
 name|String
-name|tokenString
+name|tokenKey
 parameter_list|,
 name|String
 name|tokenSecret
@@ -123,7 +127,7 @@ name|this
 operator|.
 name|tokenString
 operator|=
-name|tokenString
+name|tokenKey
 expr_stmt|;
 name|this
 operator|.
@@ -144,7 +148,7 @@ name|Client
 name|client
 parameter_list|,
 name|String
-name|tokenString
+name|tokenKey
 parameter_list|,
 name|String
 name|tokenSecret
@@ -154,7 +158,7 @@ name|this
 argument_list|(
 name|client
 argument_list|,
-name|tokenString
+name|tokenKey
 argument_list|,
 name|tokenSecret
 argument_list|,
@@ -187,6 +191,7 @@ operator|/
 literal|1000
 expr_stmt|;
 block|}
+comment|/**      * Returns the Client associated with this token      * @return the client      */
 specifier|public
 name|Client
 name|getClient
@@ -196,15 +201,17 @@ return|return
 name|client
 return|;
 block|}
+comment|/**      * Returns the token key      * @return the key      */
 specifier|public
 name|String
-name|getTokenString
+name|getTokenKey
 parameter_list|()
 block|{
 return|return
 name|tokenString
 return|;
 block|}
+comment|/**      * Returns the token secret      * @return the secret      */
 specifier|public
 name|String
 name|getTokenSecret
@@ -214,6 +221,7 @@ return|return
 name|tokenSecret
 return|;
 block|}
+comment|/**      * Returns the time (in seconds) when this token was issued at      * @return the seconds      */
 specifier|public
 name|long
 name|getIssuedAt
@@ -223,6 +231,7 @@ return|return
 name|issuedAt
 return|;
 block|}
+comment|/**      * Returns the number of seconds this token can be valid after it was issued      * @return the seconds      */
 specifier|public
 name|long
 name|getLifetime
@@ -232,6 +241,7 @@ return|return
 name|lifetime
 return|;
 block|}
+comment|/**      * Returns a list of opaque permissions/scopes      * @return the scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -244,6 +254,7 @@ return|return
 name|scopes
 return|;
 block|}
+comment|/**      * Sets a list of opaque permissions/scopes      * @param scopes the scopes      */
 specifier|public
 name|void
 name|setScopes
@@ -262,6 +273,7 @@ operator|=
 name|scopes
 expr_stmt|;
 block|}
+comment|/**      * Returns a list of relative URIs the consumer wishes to access      * @return the uris      */
 specifier|public
 name|List
 argument_list|<
@@ -274,6 +286,7 @@ return|return
 name|uris
 return|;
 block|}
+comment|/**      * Sets a list of relative URIs the consumer wishes to access      * @param uris the uris      */
 specifier|public
 name|void
 name|setUris

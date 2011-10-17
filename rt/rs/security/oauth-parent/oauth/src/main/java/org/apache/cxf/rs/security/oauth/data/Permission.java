@@ -21,6 +21,10 @@ name|data
 package|;
 end_package
 
+begin_comment
+comment|/**  * Base permission description which is visible to   * authorization handlers  * @see OAuthAuthorizationData  */
+end_comment
+
 begin_class
 specifier|public
 class|class

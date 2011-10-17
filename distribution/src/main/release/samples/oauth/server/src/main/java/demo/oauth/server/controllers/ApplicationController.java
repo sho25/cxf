@@ -119,7 +119,7 @@ name|oauth
 operator|.
 name|provider
 operator|.
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 import|;
 end_import
 
@@ -369,11 +369,11 @@ name|clientApp
 argument_list|)
 return|;
 block|}
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 name|tokenGen
 init|=
 operator|new
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 argument_list|()
 decl_stmt|;
 name|Principal
@@ -409,7 +409,7 @@ name|consumerKey
 operator|=
 name|tokenGen
 operator|.
-name|generateToken
+name|generate
 argument_list|(
 operator|(
 name|principal
@@ -435,7 +435,7 @@ name|secretKey
 init|=
 name|tokenGen
 operator|.
-name|generateToken
+name|generate
 argument_list|(
 operator|new
 name|SecureRandom

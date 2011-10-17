@@ -149,6 +149,10 @@ name|SecurityContext
 import|;
 end_import
 
+begin_comment
+comment|/**  * JAX-RS OAuth filter which can be used to protect end user endpoints  */
+end_comment
+
 begin_class
 annotation|@
 name|Provider

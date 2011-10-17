@@ -21,6 +21,10 @@ name|provider
 package|;
 end_package
 
+begin_comment
+comment|/**  * Encapsulates OAuth-related problems  */
+end_comment
+
 begin_class
 specifier|public
 class|class

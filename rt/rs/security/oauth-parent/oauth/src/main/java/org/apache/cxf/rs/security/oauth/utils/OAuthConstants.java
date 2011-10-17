@@ -21,6 +21,10 @@ name|utils
 package|;
 end_package
 
+begin_comment
+comment|/**  * Miscellaneous constants   */
+end_comment
+
 begin_class
 specifier|public
 specifier|final

@@ -55,6 +55,10 @@ name|XmlRootElement
 import|;
 end_import
 
+begin_comment
+comment|/**  * This bean represents a resource owner authorization challenge.  * Typically, an HTML view will be returned to a resource owner who  * will authorize or deny the third-party consumer  */
+end_comment
+
 begin_class
 annotation|@
 name|XmlRootElement

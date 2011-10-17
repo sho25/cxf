@@ -51,14 +51,18 @@ name|OAuthException
 import|;
 end_import
 
+begin_comment
+comment|/**  * The utility MD5 sequence generator which can be used for generating  * request or access token keys and secrets as well as request token  * verifiers  */
+end_comment
+
 begin_class
 specifier|public
 class|class
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 block|{
 specifier|public
 name|String
-name|generateToken
+name|generate
 parameter_list|(
 name|byte
 index|[]

@@ -117,6 +117,10 @@ name|OAuthUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Abstract utility class which OAuth services extend  */
+end_comment
+
 begin_class
 specifier|public
 specifier|abstract

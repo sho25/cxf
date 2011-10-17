@@ -41,6 +41,10 @@ name|List
 import|;
 end_import
 
+begin_comment
+comment|/**  * Provides the complete information about a given opaque permission.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -140,6 +144,7 @@ operator|=
 name|roles
 expr_stmt|;
 block|}
+comment|/**      * Returns an optional list of role names      * @return the roles      */
 specifier|public
 name|List
 argument_list|<
@@ -152,6 +157,7 @@ return|return
 name|roles
 return|;
 block|}
+comment|/**      * Sets an optional list of HTTP verbs       * @param httpVerbs the verbs      */
 specifier|public
 name|void
 name|setHttpVerbs
@@ -170,6 +176,7 @@ operator|=
 name|httpVerbs
 expr_stmt|;
 block|}
+comment|/**      * Returns an optional list of HTTP verbs      * @return the list of verbs      */
 specifier|public
 name|List
 argument_list|<
@@ -182,6 +189,7 @@ return|return
 name|httpVerbs
 return|;
 block|}
+comment|/**      * Sets an optional URI      * @param uri the uri      */
 specifier|public
 name|void
 name|setUri
@@ -197,6 +205,7 @@ operator|=
 name|uri
 expr_stmt|;
 block|}
+comment|/**      * Returns an optional URI          * @return the uri      */
 specifier|public
 name|String
 name|getUri
@@ -206,6 +215,7 @@ return|return
 name|uri
 return|;
 block|}
+comment|/**      * Can be used to disable the default requirement for all      * consumer requests to contain an access token      * @param authorizationKeyRequired the boolean value      */
 specifier|public
 name|void
 name|setAuthorizationKeyRequired
@@ -221,6 +231,7 @@ operator|=
 name|authorizationKeyRequired
 expr_stmt|;
 block|}
+comment|/**      * Indicates if the access token must be present or not      * @return the boolean value      */
 specifier|public
 name|boolean
 name|isAuthorizationKeyRequired

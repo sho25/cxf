@@ -281,7 +281,7 @@ name|oauth
 operator|.
 name|provider
 operator|.
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 import|;
 end_import
 
@@ -462,11 +462,11 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|protected
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 name|tokenGenerator
 init|=
 operator|new
-name|MD5TokenGenerator
+name|MD5SequenceGenerator
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -793,7 +793,7 @@ return|;
 block|}
 specifier|public
 name|String
-name|createRequestTokenVerifier
+name|setRequestTokenVerifier
 parameter_list|(
 name|RequestToken
 name|requestToken
@@ -803,7 +803,7 @@ name|OAuthServiceException
 block|{
 name|requestToken
 operator|.
-name|setOauthVerifier
+name|setVerifier
 argument_list|(
 name|generateToken
 argument_list|()
@@ -812,7 +812,7 @@ expr_stmt|;
 return|return
 name|requestToken
 operator|.
-name|getOauthVerifier
+name|getVerifier
 argument_list|()
 return|;
 block|}
@@ -840,7 +840,7 @@ name|getRequestToken
 argument_list|(
 name|requestToken
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -902,7 +902,7 @@ name|remove
 argument_list|(
 name|requestToken
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1115,7 +1115,7 @@ name|remove
 argument_list|(
 name|token
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1139,7 +1139,7 @@ name|token
 operator|=
 name|tokenGenerator
 operator|.
-name|generateToken
+name|generate
 argument_list|(
 name|UUID
 operator|.

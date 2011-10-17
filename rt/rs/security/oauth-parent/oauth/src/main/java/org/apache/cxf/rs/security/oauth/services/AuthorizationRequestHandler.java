@@ -538,7 +538,7 @@ name|verifier
 init|=
 name|dataProvider
 operator|.
-name|createRequestTokenVerifier
+name|setRequestTokenVerifier
 argument_list|(
 name|token
 argument_list|)
@@ -565,7 +565,7 @@ name|OAUTH_TOKEN
 argument_list|,
 name|token
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -887,7 +887,7 @@ name|setOauthToken
 argument_list|(
 name|token
 operator|.
-name|getTokenString
+name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;
