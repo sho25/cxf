@@ -131,6 +131,26 @@ name|RequestTokenRegistration
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth
+operator|.
+name|data
+operator|.
+name|Token
+import|;
+end_import
+
 begin_comment
 comment|/**  * OAuth provider responsible for persisting the information about   * OAuth consumers, request and access tokens.  */
 end_comment
@@ -200,17 +220,16 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Removes the tokens associated with a given client id      * @param clientId the client id      * @throws OAuthServiceException      */
+comment|/**      * Removes the token      * @param token the token      * @throws OAuthServiceException      */
 name|void
-name|removeTokens
+name|removeToken
 parameter_list|(
-name|String
-name|clientId
+name|Token
+name|token
 parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-empty_stmt|;
 comment|/**      * Returns the list of {@link OAuthPermission} beans describing opaque      * permissions (aka scopes) such as "read_data", etc      * @param requestPermissions the list of opaque scopes/permissions       * @see OAuthPermission       * @return permissions      */
 name|List
 argument_list|<

@@ -418,6 +418,8 @@ name|getClient
 argument_list|()
 argument_list|,
 name|requestToken
+argument_list|,
+name|dataProvider
 argument_list|)
 expr_stmt|;
 name|AccessToken

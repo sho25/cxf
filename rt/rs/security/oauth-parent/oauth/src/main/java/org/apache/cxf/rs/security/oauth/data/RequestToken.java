@@ -67,6 +67,13 @@ name|tokenSecret
 argument_list|,
 operator|-
 literal|1L
+argument_list|,
+name|System
+operator|.
+name|currentTimeMillis
+argument_list|()
+operator|/
+literal|1000
 argument_list|)
 expr_stmt|;
 block|}
@@ -82,8 +89,11 @@ parameter_list|,
 name|String
 name|tokenSecret
 parameter_list|,
-name|Long
+name|long
 name|lifetime
+parameter_list|,
+name|long
+name|issuedAt
 parameter_list|)
 block|{
 name|super
@@ -95,6 +105,8 @@ argument_list|,
 name|tokenSecret
 argument_list|,
 name|lifetime
+argument_list|,
+name|issuedAt
 argument_list|)
 expr_stmt|;
 block|}

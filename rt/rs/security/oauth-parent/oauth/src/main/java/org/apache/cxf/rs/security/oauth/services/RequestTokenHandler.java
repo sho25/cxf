@@ -454,6 +454,8 @@ argument_list|,
 name|client
 argument_list|,
 literal|null
+argument_list|,
+name|dataProvider
 argument_list|)
 expr_stmt|;
 name|String
@@ -571,6 +573,18 @@ operator|.
 name|setLifetime
 argument_list|(
 name|tokenLifetime
+argument_list|)
+expr_stmt|;
+name|reg
+operator|.
+name|setIssuedAt
+argument_list|(
+name|System
+operator|.
+name|currentTimeMillis
+argument_list|()
+operator|/
+literal|1000
 argument_list|)
 expr_stmt|;
 name|RequestToken

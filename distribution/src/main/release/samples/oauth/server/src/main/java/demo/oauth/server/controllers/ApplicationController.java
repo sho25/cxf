@@ -698,9 +698,9 @@ argument_list|(
 literal|"consumerKey"
 argument_list|)
 decl_stmt|;
-name|oauthDataProvider
+name|clientManager
 operator|.
-name|removeTokens
+name|removeAllTokens
 argument_list|(
 name|consumerKey
 argument_list|)

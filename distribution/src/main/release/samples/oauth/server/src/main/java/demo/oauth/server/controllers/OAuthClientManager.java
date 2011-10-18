@@ -81,6 +81,13 @@ name|String
 name|consumerKey
 parameter_list|)
 function_decl|;
+name|void
+name|removeAllTokens
+parameter_list|(
+name|String
+name|consumerKey
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

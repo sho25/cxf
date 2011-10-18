@@ -589,6 +589,8 @@ argument_list|,
 name|client
 argument_list|,
 name|accessToken
+argument_list|,
+name|dataProvider
 argument_list|)
 expr_stmt|;
 comment|//check valid URI

@@ -402,6 +402,9 @@ name|client
 parameter_list|,
 name|Token
 name|token
+parameter_list|,
+name|OAuthDataProvider
+name|provider
 parameter_list|)
 throws|throws
 name|Exception
@@ -510,6 +513,8 @@ operator|.
 name|validateToken
 argument_list|(
 name|token
+argument_list|,
+name|provider
 argument_list|)
 expr_stmt|;
 block|}

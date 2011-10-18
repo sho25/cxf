@@ -154,6 +154,9 @@ name|validateToken
 parameter_list|(
 name|Token
 name|token
+parameter_list|,
+name|OAuthDataProvider
+name|provider
 parameter_list|)
 throws|throws
 name|OAuthProblemException
@@ -218,6 +221,13 @@ operator|)
 operator|)
 condition|)
 block|{
+name|provider
+operator|.
+name|removeToken
+argument_list|(
+name|token
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthProblemException
