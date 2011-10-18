@@ -71,6 +71,18 @@ begin_import
 import|import
 name|org
 operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|Element
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|xml
 operator|.
 name|sax
@@ -165,6 +177,10 @@ name|XmlSchema
 name|schema
 decl_stmt|;
 specifier|private
+name|Element
+name|element
+decl_stmt|;
+specifier|private
 name|SchemaCollection
 name|collection
 decl_stmt|;
@@ -179,6 +195,9 @@ name|schema
 parameter_list|,
 name|SchemaCollection
 name|collection
+parameter_list|,
+name|Element
+name|element
 parameter_list|)
 block|{
 name|this
@@ -203,6 +222,12 @@ operator|.
 name|collection
 operator|=
 name|collection
+expr_stmt|;
+name|this
+operator|.
+name|element
+operator|=
+name|element
 expr_stmt|;
 block|}
 specifier|public
@@ -246,6 +271,15 @@ return|return
 name|id
 return|;
 block|}
+specifier|public
+name|Element
+name|getElement
+parameter_list|()
+block|{
+return|return
+name|element
+return|;
+block|}
 specifier|private
 name|void
 name|setName
@@ -259,19 +293,8 @@ operator|.
 name|name
 operator|=
 name|uri
-operator|.
-name|substring
-argument_list|(
-name|uri
-operator|.
-name|lastIndexOf
-argument_list|(
-literal|'/'
-argument_list|)
-operator|+
-literal|1
-argument_list|)
 expr_stmt|;
+comment|//this.name = uri.substring(uri.lastIndexOf('/') + 1);
 block|}
 specifier|public
 name|String
@@ -281,7 +304,6 @@ block|{
 return|return
 name|name
 return|;
-comment|// Fot the time being
 block|}
 specifier|public
 name|ISchemaResolver
@@ -398,6 +420,8 @@ argument_list|,
 name|read
 argument_list|,
 name|schemaCol
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
