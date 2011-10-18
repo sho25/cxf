@@ -473,7 +473,7 @@ throw|throw
 operator|new
 name|Fault
 argument_list|(
-literal|"COULD_NOT_REDA_XML_STREAM_CAUSED_BY"
+literal|"COULD_NOT_READ_XML_STREAM_CAUSED_BY"
 argument_list|,
 name|LOG
 argument_list|,
