@@ -438,6 +438,17 @@ name|getScheme
 argument_list|()
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|DEFAULT_URI_RESOLVER_HANDLES
+operator|.
+name|contains
+argument_list|(
+name|base
+operator|.
+name|getScheme
+argument_list|()
+argument_list|)
 condition|)
 block|{
 try|try
