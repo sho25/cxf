@@ -1178,8 +1178,6 @@ block|}
 block|}
 annotation|@
 name|Test
-comment|//@org.junit.Ignore("randomly fails quite often, but not in the "
-comment|//                    + " debugger so not sure what is going on yet")
 specifier|public
 name|void
 name|testExplicitMAPs
@@ -1359,7 +1357,6 @@ argument_list|()
 throw|;
 block|}
 block|}
-comment|/*    @Test     public void testFaultTo() throws Exception {         try {             String greeting = greeter.greetMe("warmup");             assertEquals("unexpected response received from service",                           "Hello warmup",                          greeting);             checkVerification();             try {                 greeter.testDocLitFault("BadRecordLitFault");                 fail("expected fault from service");             } catch (BadRecordLitFault brlf) {                 checkVerification();             }         } catch (UndeclaredThrowableException ex) {             throw (Exception)ex.getCause();         }     }   */
 annotation|@
 name|Test
 specifier|public
@@ -1401,7 +1398,6 @@ block|}
 block|}
 annotation|@
 name|Test
-comment|//@org.junit.Ignore("Random failure on Linux")
 specifier|public
 name|void
 name|testApplicationFault
