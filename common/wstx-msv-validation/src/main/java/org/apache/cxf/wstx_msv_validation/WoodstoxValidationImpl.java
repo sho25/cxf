@@ -265,6 +265,10 @@ condition|(
 name|utils
 operator|!=
 literal|null
+operator|&&
+name|reader
+operator|!=
+literal|null
 condition|)
 block|{
 name|utils
@@ -294,6 +298,10 @@ block|{
 if|if
 condition|(
 name|utils
+operator|!=
+literal|null
+operator|&&
+name|writer
 operator|!=
 literal|null
 condition|)
