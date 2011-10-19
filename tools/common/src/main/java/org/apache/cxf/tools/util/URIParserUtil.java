@@ -1890,6 +1890,9 @@ block|{
 return|return
 name|uri
 operator|.
+name|normalize
+argument_list|()
+operator|.
 name|toString
 argument_list|()
 return|;
