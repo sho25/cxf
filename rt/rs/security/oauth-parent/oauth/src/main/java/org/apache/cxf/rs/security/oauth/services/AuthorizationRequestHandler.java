@@ -555,6 +555,16 @@ name|verifier
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
+name|dataProvider
+operator|.
+name|removeToken
+argument_list|(
+name|token
+argument_list|)
+expr_stmt|;
+block|}
 name|queryParams
 operator|.
 name|put
