@@ -1115,11 +1115,19 @@ block|}
 block|}
 catch|catch
 parameter_list|(
+name|IllegalArgumentException
+name|e
+parameter_list|)
+block|{
+comment|//ignore - systemId not a valid URI
+block|}
+catch|catch
+parameter_list|(
 name|URISyntaxException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|//ignore - baseURI not a valid URI
 block|}
 catch|catch
 parameter_list|(
@@ -1127,7 +1135,7 @@ name|MalformedURLException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|//ignore - baseURI or systemId not a URL either
 block|}
 block|}
 if|if
