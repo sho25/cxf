@@ -33,7 +33,7 @@ name|event
 operator|.
 name|shared
 operator|.
-name|HandlerManager
+name|SimpleEventBus
 import|;
 end_import
 
@@ -68,9 +68,7 @@ specifier|public
 class|class
 name|DefaultEventBus
 extends|extends
-name|HandlerManager
-implements|implements
-name|EventBus
+name|SimpleEventBus
 block|{
 annotation|@
 name|Inject
@@ -79,9 +77,7 @@ name|DefaultEventBus
 parameter_list|()
 block|{
 name|super
-argument_list|(
-literal|null
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 block|}

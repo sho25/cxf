@@ -419,6 +419,11 @@ specifier|private
 name|Presenter
 name|presenter
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|public
 name|SettingsViewImpl
 parameter_list|()
