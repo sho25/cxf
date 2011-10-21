@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|wsn
 operator|.
-name|jaxws
+name|services
 package|;
 end_package
 

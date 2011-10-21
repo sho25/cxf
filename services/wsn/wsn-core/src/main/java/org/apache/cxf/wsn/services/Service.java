@@ -12,6 +12,8 @@ operator|.
 name|cxf
 operator|.
 name|wsn
+operator|.
+name|services
 package|;
 end_package
 
@@ -37,9 +39,7 @@ name|cxf
 operator|.
 name|wsn
 operator|.
-name|jaxws
-operator|.
-name|JaxwsCreatePullPoint
+name|AbstractCreatePullPoint
 import|;
 end_import
 
@@ -53,9 +53,7 @@ name|cxf
 operator|.
 name|wsn
 operator|.
-name|jaxws
-operator|.
-name|JaxwsNotificationBroker
+name|AbstractNotificationBroker
 import|;
 end_import
 
