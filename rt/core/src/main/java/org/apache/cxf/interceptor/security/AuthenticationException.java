@@ -26,6 +26,10 @@ name|SecurityException
 block|{
 specifier|public
 name|AuthenticationException
+parameter_list|()
+block|{     }
+specifier|public
+name|AuthenticationException
 parameter_list|(
 name|String
 name|reason
