@@ -378,8 +378,6 @@ block|{
 specifier|private
 name|boolean
 name|useExternal
-init|=
-literal|true
 decl_stmt|;
 specifier|private
 name|ActiveMQConnectionFactory
