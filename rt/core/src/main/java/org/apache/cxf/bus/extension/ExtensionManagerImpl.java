@@ -843,13 +843,6 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|load
-argument_list|(
-name|resource
-argument_list|,
-name|loader
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|loader
@@ -873,6 +866,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|load
+argument_list|(
+name|resource
+argument_list|,
+name|loader
+argument_list|)
+expr_stmt|;
 block|}
 specifier|final
 name|void
