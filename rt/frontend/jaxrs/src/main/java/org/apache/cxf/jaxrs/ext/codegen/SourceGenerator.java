@@ -2867,13 +2867,10 @@ expr_stmt|;
 block|}
 block|}
 block|}
-else|else
-block|{
 name|resourceId
-operator|=
+operator|+=
 name|DEFAULT_RESOURCE_NAME
 expr_stmt|;
-block|}
 block|}
 name|boolean
 name|expandedQName

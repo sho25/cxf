@@ -1049,7 +1049,7 @@ name|files
 argument_list|,
 literal|"application"
 operator|+
-literal|".Bookstore.class"
+literal|".BookstoreResource.class"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1841,7 +1841,7 @@ name|checkContains
 argument_list|(
 name|javaFiles
 argument_list|,
-literal|"application.Bookstore.java"
+literal|"application.BookstoreResource.java"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1851,7 +1851,7 @@ name|checkContains
 argument_list|(
 name|javaFiles
 argument_list|,
-literal|"application.Books.java"
+literal|"application.BooksResource.java"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1890,7 +1890,7 @@ name|checkContains
 argument_list|(
 name|classFiles
 argument_list|,
-literal|"application.Bookstore.class"
+literal|"application.BookstoreResource.class"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1900,7 +1900,7 @@ name|checkContains
 argument_list|(
 name|classFiles
 argument_list|,
-literal|"application.Books.class"
+literal|"application.BooksResource.class"
 argument_list|)
 argument_list|)
 expr_stmt|;
