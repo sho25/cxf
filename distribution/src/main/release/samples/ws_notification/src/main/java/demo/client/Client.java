@@ -117,9 +117,16 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|Client
 block|{
+specifier|private
+name|Client
+parameter_list|()
+block|{
+comment|//not constructed
+block|}
 comment|/**      * @param args      */
 specifier|public
 specifier|static
