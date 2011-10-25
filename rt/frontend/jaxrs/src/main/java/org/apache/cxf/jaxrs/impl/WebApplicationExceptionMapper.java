@@ -435,6 +435,11 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|boolean
+name|doDefault
+init|=
+literal|true
+decl_stmt|;
 if|if
 condition|(
 name|flogger
@@ -442,6 +447,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|doDefault
+operator|=
 name|flogger
 operator|.
 name|faultOccurred
@@ -454,7 +461,6 @@ name|msg
 argument_list|)
 expr_stmt|;
 block|}
-elseif|else
 if|if
 condition|(
 name|LOG
@@ -465,6 +471,8 @@ name|Level
 operator|.
 name|FINE
 argument_list|)
+operator|&&
+name|doDefault
 condition|)
 block|{
 name|LOG
