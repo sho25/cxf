@@ -383,6 +383,8 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setRolePrefix
