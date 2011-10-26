@@ -1184,7 +1184,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|authenticationDecisionStatementProviders
+name|authDecisionStatementProviders
 operator|=
 name|authDecisionStatementProviders
 expr_stmt|;
@@ -1199,7 +1199,7 @@ name|getAuthDecisionStatementProviders
 parameter_list|()
 block|{
 return|return
-name|authenticationDecisionStatementProviders
+name|authDecisionStatementProviders
 return|;
 block|}
 comment|/**      * Set the SubjectProvider.      */
