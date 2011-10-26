@@ -3966,8 +3966,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-specifier|private
-specifier|static
+specifier|protected
 name|boolean
 name|isTableExistsError
 parameter_list|(
