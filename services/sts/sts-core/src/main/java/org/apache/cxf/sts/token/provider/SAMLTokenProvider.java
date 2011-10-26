@@ -500,7 +500,7 @@ name|List
 argument_list|<
 name|AuthDecisionStatementProvider
 argument_list|>
-name|authenticationDecisionStatementProviders
+name|authDecisionStatementProviders
 decl_stmt|;
 specifier|private
 name|SubjectProvider
@@ -1802,11 +1802,11 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|authenticationDecisionStatementProviders
+name|authDecisionStatementProviders
 operator|!=
 literal|null
 operator|&&
-name|authenticationDecisionStatementProviders
+name|authDecisionStatementProviders
 operator|.
 name|size
 argument_list|()
@@ -1828,7 +1828,7 @@ control|(
 name|AuthDecisionStatementProvider
 name|statementProvider
 range|:
-name|authenticationDecisionStatementProviders
+name|authDecisionStatementProviders
 control|)
 block|{
 name|AuthDecisionStatementBean

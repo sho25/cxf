@@ -1374,17 +1374,9 @@ name|SP12Constants
 operator|.
 name|ONLY_SIGN_ENTIRE_HEADERS_AND_BODY
 block|,
-operator|new
-name|QName
-argument_list|(
-name|SP11Constants
-operator|.
-name|SP_NS
-argument_list|,
 name|SP11Constants
 operator|.
 name|ONLY_SIGN_ENTIRE_HEADERS_AND_BODY
-argument_list|)
 block|,
 name|SP12Constants
 operator|.
