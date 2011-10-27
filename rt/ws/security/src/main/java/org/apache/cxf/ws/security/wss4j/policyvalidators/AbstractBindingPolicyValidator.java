@@ -1671,9 +1671,17 @@ operator|==
 name|WSConstants
 operator|.
 name|SIGN
+operator|||
+name|actInt
+operator|.
+name|intValue
+argument_list|()
+operator|==
+name|WSConstants
+operator|.
+name|SC
 condition|)
 block|{
-comment|// TODO || actInt.intValue() == WSConstants.SC) {
 name|String
 name|sigId
 init|=
