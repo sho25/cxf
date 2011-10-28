@@ -280,7 +280,7 @@ return|;
 block|}
 comment|/**      * Returns the length of the message content in bytes.      *       * @return      */
 specifier|public
-name|int
+name|long
 name|getSize
 parameter_list|()
 block|{

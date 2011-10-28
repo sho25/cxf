@@ -390,7 +390,7 @@ init|=
 name|DEFAULT_MAX_SIZE
 decl_stmt|;
 specifier|private
-name|int
+name|long
 name|totalLength
 decl_stmt|;
 specifier|private
@@ -1072,7 +1072,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|int
+name|long
 name|size
 parameter_list|()
 block|{
@@ -1227,7 +1227,7 @@ parameter_list|(
 name|StringBuilder
 name|out
 parameter_list|,
-name|int
+name|long
 name|limit
 parameter_list|)
 throws|throws
@@ -1253,7 +1253,7 @@ parameter_list|,
 name|String
 name|charsetName
 parameter_list|,
-name|int
+name|long
 name|limit
 parameter_list|)
 throws|throws
@@ -1281,7 +1281,7 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-name|int
+name|long
 name|count
 init|=
 literal|0
@@ -1326,6 +1326,9 @@ name|charsetName
 argument_list|,
 literal|0
 argument_list|,
+operator|(
+name|int
+operator|)
 name|limit
 argument_list|)
 argument_list|)
@@ -1364,7 +1367,7 @@ index|[
 literal|1024
 index|]
 decl_stmt|;
-name|int
+name|long
 name|x
 init|=
 name|fin
@@ -1414,6 +1417,9 @@ name|charsetName
 argument_list|,
 literal|0
 argument_list|,
+operator|(
+name|int
+operator|)
 name|x
 argument_list|)
 argument_list|)

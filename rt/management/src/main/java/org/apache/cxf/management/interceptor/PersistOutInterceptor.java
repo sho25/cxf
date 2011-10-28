@@ -472,6 +472,9 @@ name|exchange
 operator|.
 name|setResponseSize
 argument_list|(
+operator|(
+name|int
+operator|)
 name|cos
 operator|.
 name|size

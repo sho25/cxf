@@ -280,6 +280,9 @@ name|exchange
 operator|.
 name|setRequestSize
 argument_list|(
+operator|(
+name|int
+operator|)
 name|bos
 operator|.
 name|size

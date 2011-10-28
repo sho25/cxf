@@ -1451,6 +1451,9 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
+operator|(
+name|long
+operator|)
 name|bytes
 operator|.
 name|length
@@ -1487,6 +1490,9 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
+operator|(
+name|long
+operator|)
 name|bytes
 operator|.
 name|length
@@ -1585,6 +1591,9 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
+operator|(
+name|long
+operator|)
 name|bytes
 operator|.
 name|length
@@ -1707,6 +1716,9 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
+operator|(
+name|long
+operator|)
 name|bytes
 operator|.
 name|length
@@ -1743,6 +1755,9 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
+operator|(
+name|long
+operator|)
 name|bytes
 operator|.
 name|length
@@ -4201,6 +4216,9 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
+operator|(
+name|long
+operator|)
 name|value
 operator|.
 name|length
