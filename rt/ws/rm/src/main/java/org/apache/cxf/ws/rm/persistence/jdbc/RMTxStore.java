@@ -3017,6 +3017,9 @@ operator|.
 name|getInputStream
 argument_list|()
 argument_list|,
+operator|(
+name|int
+operator|)
 name|msg
 operator|.
 name|getSize
