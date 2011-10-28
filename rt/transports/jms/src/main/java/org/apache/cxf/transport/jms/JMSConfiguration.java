@@ -378,10 +378,12 @@ specifier|private
 name|String
 name|targetDestination
 decl_stmt|;
+comment|/**      * Destination name to listen on for reply messages      */
 specifier|private
 name|String
 name|replyDestination
 decl_stmt|;
+comment|/**      * Destination name to send out as replyTo address in the message       */
 specifier|private
 name|String
 name|replyToDestination
