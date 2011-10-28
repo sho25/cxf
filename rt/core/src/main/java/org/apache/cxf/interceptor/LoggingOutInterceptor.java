@@ -409,16 +409,12 @@ specifier|final
 name|OutputStream
 name|origStream
 decl_stmt|;
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"PMD"
-argument_list|)
 specifier|private
 specifier|final
 name|Logger
 name|logger
 decl_stmt|;
+comment|//NOPMD
 specifier|public
 name|LoggingCallback
 parameter_list|(
