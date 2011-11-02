@@ -1886,7 +1886,6 @@ argument_list|,
 name|secHeader
 argument_list|)
 expr_stmt|;
-comment|/*             if(binding.isTokenProtection()) {                 sigParts.add(new WSEncryptionPart(encrKey.getBSTTokenId()));             }             */
 name|dkSig
 operator|.
 name|setParts
