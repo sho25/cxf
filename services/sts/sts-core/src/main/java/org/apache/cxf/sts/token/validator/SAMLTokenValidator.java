@@ -1054,13 +1054,6 @@ block|}
 block|}
 block|}
 block|}
-name|response
-operator|.
-name|setValid
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
 name|SAMLTokenPrincipal
 name|samlPrincipal
 init|=
@@ -1082,6 +1075,13 @@ operator|.
 name|setTokenRealm
 argument_list|(
 name|tokenRealm
+argument_list|)
+expr_stmt|;
+name|response
+operator|.
+name|setValid
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
