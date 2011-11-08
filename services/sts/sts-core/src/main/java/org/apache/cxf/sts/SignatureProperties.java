@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This class contains various configuration properties that can be used to sign an issued token.  */
+comment|/**  * This class contains various configuration properties that can be used to sign an issued token,  * or generate a symmetric key in the STS.  */
 end_comment
 
 begin_class
@@ -72,7 +72,7 @@ operator|=
 name|useKeyValue
 expr_stmt|;
 block|}
-comment|/**      * Get the key size to use when generating a symmetric key to sign an issued token. The default is      * 256 bits.      */
+comment|/**      * Get the key size to use when generating a symmetric key. The default is 256 bits.      */
 specifier|public
 name|long
 name|getKeySize
@@ -82,7 +82,7 @@ return|return
 name|keySize
 return|;
 block|}
-comment|/**      * Set the key size to use when generating a symmetric key to sign an issued token. The default is      * 256 bits.      */
+comment|/**      * Set the key size to use when generating a symmetric key. The default is      * 256 bits.      */
 specifier|public
 name|void
 name|setKeySize
@@ -98,7 +98,7 @@ operator|=
 name|keySize
 expr_stmt|;
 block|}
-comment|/**      * Get the minimum key size to use when generating a symmetric key to sign an issued token. The      * requestor can specify a KeySize value to use. The default is 128 bits.      */
+comment|/**      * Get the minimum key size to use when generating a symmetric key. The requestor can       * specify a KeySize value to use. The default is 128 bits.      */
 specifier|public
 name|long
 name|getMinimumKeySize
@@ -108,7 +108,7 @@ return|return
 name|minimumKeySize
 return|;
 block|}
-comment|/**      * Set the minimum key size to use when generating a symmetric key to sign an issued token. The      * requestor can specify a KeySize value to use. The default is 128 bits.      */
+comment|/**      * Set the minimum key size to use when generating a symmetric key. The requestor can      * specify a KeySize value to use. The default is 128 bits.      */
 specifier|public
 name|void
 name|setMinimumKeySize
