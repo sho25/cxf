@@ -258,18 +258,18 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Validate an EndorsingSupportingToken policy.   */
+comment|/**  * Validate a SignedEndorsingSupportingToken policy.   */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|EndorsingTokenPolicyValidator
+name|SignedEndorsingTokenPolicyValidator
 extends|extends
 name|AbstractSupportingTokenPolicyValidator
 block|{
 specifier|public
-name|EndorsingTokenPolicyValidator
+name|SignedEndorsingTokenPolicyValidator
 parameter_list|(
 name|Message
 name|message
@@ -317,7 +317,7 @@ name|get
 argument_list|(
 name|SP12Constants
 operator|.
-name|ENDORSING_SUPPORTING_TOKENS
+name|SIGNED_ENDORSING_SUPPORTING_TOKENS
 argument_list|)
 decl_stmt|;
 if|if
@@ -361,7 +361,7 @@ name|SPConstants
 operator|.
 name|SupportTokenType
 operator|.
-name|SUPPORTING_TOKEN_ENDORSING
+name|SUPPORTING_TOKEN_SIGNED_ENDORSING
 operator|!=
 name|binding
 operator|.
@@ -435,7 +435,7 @@ condition|(
 operator|!
 name|processKerberosTokens
 argument_list|(
-literal|false
+literal|true
 argument_list|,
 literal|true
 argument_list|,
@@ -462,7 +462,7 @@ condition|(
 operator|!
 name|processX509Tokens
 argument_list|(
-literal|false
+literal|true
 argument_list|,
 literal|true
 argument_list|,
@@ -489,7 +489,7 @@ condition|(
 operator|!
 name|processSCTokens
 argument_list|(
-literal|false
+literal|true
 argument_list|,
 literal|true
 argument_list|,
@@ -528,7 +528,7 @@ name|ai
 operator|.
 name|setNotAsserted
 argument_list|(
-literal|"The received token does not match the endorsing supporting token requirement"
+literal|"The received token does not match the signed endorsing supporting token requirement"
 argument_list|)
 expr_stmt|;
 return|return
