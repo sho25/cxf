@@ -77,8 +77,16 @@ name|emptyList
 argument_list|()
 decl_stmt|;
 specifier|private
+name|List
+argument_list|<
 name|String
+argument_list|>
 name|uri
+init|=
+name|Collections
+operator|.
+name|emptyList
+argument_list|()
 decl_stmt|;
 specifier|private
 name|boolean
@@ -189,26 +197,32 @@ return|return
 name|httpVerbs
 return|;
 block|}
-comment|/**      * Sets an optional URI      * @param uri the uri      */
+comment|/**      * Sets an optional list of URIs      * @param uri the uris      */
 specifier|public
 name|void
-name|setUri
+name|setUris
 parameter_list|(
+name|List
+argument_list|<
 name|String
-name|uri
+argument_list|>
+name|uris
 parameter_list|)
 block|{
 name|this
 operator|.
 name|uri
 operator|=
-name|uri
+name|uris
 expr_stmt|;
 block|}
-comment|/**      * Returns an optional URI          * @return the uri      */
+comment|/**      * Returns an optional list of URI          * @return the uri      */
 specifier|public
+name|List
+argument_list|<
 name|String
-name|getUri
+argument_list|>
+name|getUris
 parameter_list|()
 block|{
 return|return
