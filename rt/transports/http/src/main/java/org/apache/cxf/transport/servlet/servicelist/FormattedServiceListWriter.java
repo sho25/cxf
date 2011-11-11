@@ -874,11 +874,11 @@ literal|"<a href=\""
 operator|+
 name|absoluteURL
 operator|+
-literal|"?_wadl&_type=xml\">"
+literal|"?_wadl\">"
 operator|+
 name|absoluteURL
 operator|+
-literal|"?_wadl&type=xml"
+literal|"?_wadl"
 operator|+
 literal|"</a>"
 argument_list|)

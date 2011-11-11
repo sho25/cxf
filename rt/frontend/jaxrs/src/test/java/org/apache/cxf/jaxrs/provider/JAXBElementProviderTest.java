@@ -2906,6 +2906,8 @@ expr_stmt|;
 name|String
 name|expected
 init|=
+literal|"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+operator|+
 literal|"<ns1:SuperBooks xmlns:ns1=\"http://superbooks\">"
 operator|+
 literal|"<ns1:SuperBook xmlns:ns2=\"http://books\" xmlns:ns1=\"http://superbooks\"><id>123</id>"
@@ -6126,6 +6128,8 @@ expr_stmt|;
 name|String
 name|expected
 init|=
+literal|"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+operator|+
 literal|"<tagholders><tagholder><attr>attribute</attr>"
 operator|+
 literal|"<thetag><group>B</group><name>A</name></thetag></tagholder></tagholders>"

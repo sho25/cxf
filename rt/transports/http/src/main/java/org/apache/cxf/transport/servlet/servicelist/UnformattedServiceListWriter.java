@@ -280,7 +280,7 @@ name|write
 argument_list|(
 name|address
 operator|+
-literal|"?_wadl&_type=xml\n"
+literal|"?_wadl\n"
 argument_list|)
 expr_stmt|;
 block|}
