@@ -4593,6 +4593,11 @@ name|isPrimitive
 argument_list|(
 name|paramCls
 argument_list|)
+operator|||
+name|paramCls
+operator|.
+name|isEnum
+argument_list|()
 decl_stmt|;
 if|if
 condition|(
