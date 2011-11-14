@@ -4097,6 +4097,10 @@ parameter_list|,
 name|Message
 name|message
 parameter_list|)
+throws|throws
+name|IOException
+throws|,
+name|WebApplicationException
 block|{
 name|Method
 name|method
@@ -4370,6 +4374,10 @@ parameter_list|,
 name|OperationResourceInfo
 name|ori
 parameter_list|)
+throws|throws
+name|IOException
+throws|,
+name|WebApplicationException
 block|{
 name|InputStream
 name|is
@@ -7027,6 +7035,10 @@ parameter_list|,
 name|Message
 name|m
 parameter_list|)
+throws|throws
+name|IOException
+throws|,
+name|WebApplicationException
 block|{
 name|List
 argument_list|<
@@ -7124,33 +7136,8 @@ name|IOException
 name|e
 parameter_list|)
 block|{
-name|String
-name|errorMessage
-init|=
-literal|"Error deserializing input stream into target class "
-operator|+
-name|targetTypeClass
-operator|.
-name|getSimpleName
-argument_list|()
-operator|+
-literal|", content type : "
-operator|+
-name|contentType
-decl_stmt|;
-name|LOG
-operator|.
-name|severe
-argument_list|(
-name|errorMessage
-argument_list|)
-expr_stmt|;
 throw|throw
-operator|new
-name|WebApplicationException
-argument_list|(
 name|e
-argument_list|)
 throw|;
 block|}
 catch|catch
