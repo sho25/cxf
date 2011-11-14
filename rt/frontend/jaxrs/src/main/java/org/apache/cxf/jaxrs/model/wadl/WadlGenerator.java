@@ -2610,6 +2610,14 @@ name|m
 operator|.
 name|getAnnotations
 argument_list|()
+argument_list|,
+name|m
+operator|.
+name|getParameterTypes
+argument_list|()
+index|[
+literal|0
+index|]
 argument_list|)
 argument_list|,
 name|m
@@ -2648,6 +2656,11 @@ argument_list|,
 name|f
 operator|.
 name|getAnnotations
+argument_list|()
+argument_list|,
+name|f
+operator|.
+name|getType
 argument_list|()
 argument_list|)
 argument_list|,

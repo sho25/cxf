@@ -372,6 +372,24 @@ return|return
 literal|""
 return|;
 block|}
+specifier|public
+name|String
+name|form4
+parameter_list|(
+name|String
+name|theid
+parameter_list|,
+name|String
+name|f1
+parameter_list|,
+name|String
+name|f2
+parameter_list|)
+block|{
+return|return
+literal|""
+return|;
+block|}
 block|}
 end_class
 
