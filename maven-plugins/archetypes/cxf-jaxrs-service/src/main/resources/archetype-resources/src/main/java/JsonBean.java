@@ -1,31 +1,11 @@
 begin_unit|revision:0.9.5;language:Java;cregit-version:0.0.1
-begin_expr_stmt
-unit|#
-name|set
-argument_list|(
-name|$symbol_pound
-operator|=
-literal|'#'
-argument_list|)
-expr|#
-name|set
-argument_list|(
-name|$symbol_dollar
-operator|=
-literal|'$'
-argument_list|)
-expr|#
-name|set
-argument_list|(
-name|$symbol_escape
-operator|=
-literal|'\' )
+begin_package
 package|package
 name|$
 block|{
-package|package
+name|packageName
 block|}
-end_expr_stmt
+end_package
 
 begin_empty_stmt
 empty_stmt|;
