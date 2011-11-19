@@ -187,7 +187,6 @@ argument_list|(
 literal|"/"
 argument_list|)
 expr_stmt|;
-comment|//        webappcontext.setWar("src/main/webapp");
 name|webappcontext
 operator|.
 name|setWar
