@@ -187,11 +187,12 @@ argument_list|(
 literal|"/"
 argument_list|)
 expr_stmt|;
+comment|//        webappcontext.setWar("src/main/webapp");
 name|webappcontext
 operator|.
 name|setWar
 argument_list|(
-literal|"webapp"
+literal|"target/GroovySpringSupport.war"
 argument_list|)
 expr_stmt|;
 name|HandlerCollection

@@ -70,7 +70,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"demo/spring/client/client-beans.xml"
+literal|"client-beans.xml"
 block|}
 argument_list|)
 decl_stmt|;
