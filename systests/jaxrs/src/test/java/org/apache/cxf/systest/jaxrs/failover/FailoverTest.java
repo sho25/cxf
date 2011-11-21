@@ -996,7 +996,7 @@ literal|false
 argument_list|,
 literal|false
 argument_list|,
-literal|"http://localhost:8080/non-existent"
+literal|"http://localhost:8182/non-existent"
 argument_list|)
 decl_stmt|;
 name|strategyTest
