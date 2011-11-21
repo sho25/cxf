@@ -281,8 +281,6 @@ argument_list|,
 literal|"I6000"
 argument_list|,
 literal|288
-argument_list|,
-literal|null
 argument_list|)
 argument_list|)
 argument_list|)
@@ -302,8 +300,6 @@ literal|"00000"
 argument_list|,
 operator|-
 literal|1
-argument_list|,
-literal|null
 argument_list|)
 argument_list|)
 argument_list|)
