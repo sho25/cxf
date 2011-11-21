@@ -2354,7 +2354,7 @@ name|action
 return|;
 block|}
 specifier|private
-name|void
+name|boolean
 name|assertXPathTokens
 parameter_list|(
 name|AssertionInfoMap
@@ -2557,14 +2557,20 @@ operator|+
 name|xPath
 argument_list|)
 expr_stmt|;
+return|return
+literal|false
+return|;
 block|}
 block|}
 block|}
 block|}
 block|}
+return|return
+literal|true
+return|;
 block|}
 specifier|private
-name|void
+name|boolean
 name|assertTokens
 parameter_list|(
 name|AssertionInfoMap
@@ -2720,6 +2726,9 @@ operator|+
 name|type
 argument_list|)
 expr_stmt|;
+return|return
+literal|false
+return|;
 block|}
 block|}
 for|for
@@ -2781,10 +2790,16 @@ operator|+
 name|type
 argument_list|)
 expr_stmt|;
+return|return
+literal|false
+return|;
 block|}
 block|}
 block|}
 block|}
+return|return
+literal|true
+return|;
 block|}
 specifier|protected
 name|void
@@ -3156,6 +3171,9 @@ comment|/*         WSSecurityEngineResult tsResult = WSSecurityUtil.fetchActionR
 comment|//
 comment|// Check policies
 comment|//
+name|boolean
+name|check
+init|=
 name|checkSignedEncryptedCoverage
 argument_list|(
 name|aim
@@ -3170,7 +3188,14 @@ name|signed
 argument_list|,
 name|encrypted
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+if|if
+condition|(
+name|check
+condition|)
+block|{
+name|check
+operator|=
 name|checkTokenCoverage
 argument_list|(
 name|aim
@@ -3186,6 +3211,14 @@ argument_list|,
 name|utWithCallbacks
 argument_list|)
 expr_stmt|;
+block|}
+if|if
+condition|(
+name|check
+condition|)
+block|{
+name|check
+operator|=
 name|checkBindingCoverage
 argument_list|(
 name|aim
@@ -3197,6 +3230,14 @@ argument_list|,
 name|signedResults
 argument_list|)
 expr_stmt|;
+block|}
+if|if
+condition|(
+name|check
+condition|)
+block|{
+name|check
+operator|=
 name|checkSupportingTokenCoverage
 argument_list|(
 name|aim
@@ -3210,6 +3251,7 @@ argument_list|,
 name|utWithCallbacks
 argument_list|)
 expr_stmt|;
+block|}
 comment|// The supporting tokens are already validated
 name|assertPolicy
 argument_list|(
@@ -3277,7 +3319,7 @@ expr_stmt|;
 block|}
 comment|/**      * Check SignedParts, EncryptedParts, SignedElements, EncryptedElements, RequiredParts, etc.      */
 specifier|private
-name|void
+name|boolean
 name|checkSignedEncryptedCoverage
 parameter_list|(
 name|AssertionInfoMap
@@ -3319,6 +3361,11 @@ expr_stmt|;
 comment|//
 comment|// SIGNED_PARTS and ENCRYPTED_PARTS only apply to non-Transport bindings
 comment|//
+name|boolean
+name|check
+init|=
+literal|true
+decl_stmt|;
 if|if
 condition|(
 operator|!
@@ -3328,6 +3375,8 @@ name|aim
 argument_list|)
 condition|)
 block|{
+name|check
+operator|&=
 name|assertTokens
 argument_list|(
 name|aim
@@ -3349,6 +3398,8 @@ operator|.
 name|SIGNED
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|assertTokens
 argument_list|(
 name|aim
@@ -3382,6 +3433,8 @@ operator|.
 name|getDocumentElement
 argument_list|()
 decl_stmt|;
+name|check
+operator|&=
 name|assertXPathTokens
 argument_list|(
 name|aim
@@ -3405,6 +3458,8 @@ operator|.
 name|ELEMENT
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|assertXPathTokens
 argument_list|(
 name|aim
@@ -3428,6 +3483,8 @@ operator|.
 name|ELEMENT
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|assertXPathTokens
 argument_list|(
 name|aim
@@ -3451,6 +3508,8 @@ operator|.
 name|CONTENT
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|assertHeadersExists
 argument_list|(
 name|aim
@@ -3460,10 +3519,13 @@ argument_list|,
 name|soapHeader
 argument_list|)
 expr_stmt|;
+return|return
+name|check
+return|;
 block|}
 comment|/**      * Check the token coverage      */
 specifier|private
-name|void
+name|boolean
 name|checkTokenCoverage
 parameter_list|(
 name|AssertionInfoMap
@@ -3569,6 +3631,11 @@ argument_list|,
 name|samlResults
 argument_list|)
 expr_stmt|;
+name|boolean
+name|check
+init|=
+literal|true
+decl_stmt|;
 name|X509TokenPolicyValidator
 name|x509Validator
 init|=
@@ -3580,6 +3647,8 @@ argument_list|,
 name|results
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|x509Validator
 operator|.
 name|validatePolicy
@@ -3603,6 +3672,8 @@ argument_list|,
 name|results
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|utValidator
 operator|.
 name|validatePolicy
@@ -3668,6 +3739,8 @@ argument_list|,
 name|results
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|samlValidator
 operator|.
 name|validatePolicy
@@ -3686,6 +3759,8 @@ argument_list|,
 name|results
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|sctValidator
 operator|.
 name|validatePolicy
@@ -3704,6 +3779,8 @@ argument_list|,
 name|results
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|wss11Validator
 operator|.
 name|validatePolicy
@@ -3711,10 +3788,13 @@ argument_list|(
 name|aim
 argument_list|)
 expr_stmt|;
+return|return
+name|check
+return|;
 block|}
 comment|/**      * Check the binding coverage      */
 specifier|private
-name|void
+name|boolean
 name|checkBindingCoverage
 parameter_list|(
 name|AssertionInfoMap
@@ -3736,6 +3816,11 @@ argument_list|>
 name|signedResults
 parameter_list|)
 block|{
+name|boolean
+name|check
+init|=
+literal|true
+decl_stmt|;
 name|TransportBindingPolicyValidator
 name|transportValidator
 init|=
@@ -3749,6 +3834,8 @@ argument_list|,
 name|signedResults
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|transportValidator
 operator|.
 name|validatePolicy
@@ -3769,6 +3856,8 @@ argument_list|,
 name|signedResults
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|symmetricValidator
 operator|.
 name|validatePolicy
@@ -3789,6 +3878,8 @@ argument_list|,
 name|signedResults
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|asymmetricValidator
 operator|.
 name|validatePolicy
@@ -3796,10 +3887,13 @@ argument_list|(
 name|aim
 argument_list|)
 expr_stmt|;
+return|return
+name|check
+return|;
 block|}
 comment|/**      * Check the supporting token coverage      */
 specifier|private
-name|void
+name|boolean
 name|checkSupportingTokenCoverage
 parameter_list|(
 name|AssertionInfoMap
@@ -3824,6 +3918,11 @@ name|boolean
 name|utWithCallbacks
 parameter_list|)
 block|{
+name|boolean
+name|check
+init|=
+literal|true
+decl_stmt|;
 name|SignedTokenPolicyValidator
 name|suppValidator
 init|=
@@ -3844,6 +3943,8 @@ argument_list|(
 name|utWithCallbacks
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|suppValidator
 operator|.
 name|validatePolicy
@@ -3864,6 +3965,8 @@ argument_list|,
 name|signedResults
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|endorsingValidator
 operator|.
 name|validatePolicy
@@ -3884,6 +3987,8 @@ argument_list|,
 name|signedResults
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|signedEdorsingValidator
 operator|.
 name|validatePolicy
@@ -3911,6 +4016,8 @@ argument_list|(
 name|utWithCallbacks
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|signedEncryptedValidator
 operator|.
 name|validatePolicy
@@ -3938,6 +4045,8 @@ argument_list|(
 name|utWithCallbacks
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|encryptedValidator
 operator|.
 name|validatePolicy
@@ -3965,6 +4074,8 @@ argument_list|(
 name|utWithCallbacks
 argument_list|)
 expr_stmt|;
+name|check
+operator|&=
 name|endorsingEncryptedValidator
 operator|.
 name|validatePolicy
@@ -3985,6 +4096,8 @@ argument_list|,
 name|signedResults
 argument_list|)
 decl_stmt|;
+name|check
+operator|&=
 name|signedEndorsingEncryptedValidator
 operator|.
 name|validatePolicy
@@ -3992,9 +4105,12 @@ argument_list|(
 name|aim
 argument_list|)
 expr_stmt|;
+return|return
+name|check
+return|;
 block|}
 specifier|private
-name|void
+name|boolean
 name|assertHeadersExists
 parameter_list|(
 name|AssertionInfoMap
@@ -4106,6 +4222,9 @@ operator|+
 literal|" found."
 argument_list|)
 expr_stmt|;
+return|return
+literal|false
+return|;
 block|}
 block|}
 block|}
@@ -4257,6 +4376,9 @@ operator|+
 literal|" found."
 argument_list|)
 expr_stmt|;
+return|return
+literal|false
+return|;
 block|}
 block|}
 catch|catch
@@ -4281,10 +4403,16 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
+return|return
+literal|false
+return|;
 block|}
 block|}
 block|}
 block|}
+return|return
+literal|true
+return|;
 block|}
 specifier|private
 name|boolean
