@@ -205,8 +205,6 @@ begin_class
 specifier|public
 class|class
 name|AlgorithmSuitePolicyValidator
-extends|extends
-name|AbstractTokenPolicyValidator
 block|{
 specifier|private
 name|List
