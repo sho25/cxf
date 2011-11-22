@@ -33,6 +33,8 @@ name|demo
 operator|.
 name|spring
 operator|.
+name|service
+operator|.
 name|HelloWorld
 import|;
 end_import
@@ -70,7 +72,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"demo/spring/client/client-beans.xml"
+literal|"client-beans.xml"
 block|}
 argument_list|)
 decl_stmt|;
