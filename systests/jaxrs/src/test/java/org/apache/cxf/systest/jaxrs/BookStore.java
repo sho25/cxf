@@ -5462,7 +5462,6 @@ name|BookInfoAdapter2
 operator|.
 name|class
 argument_list|)
-specifier|static
 interface|interface
 name|BookInfoInterface
 block|{

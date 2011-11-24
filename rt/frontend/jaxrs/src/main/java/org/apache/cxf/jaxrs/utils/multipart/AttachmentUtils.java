@@ -741,6 +741,20 @@ name|a
 return|;
 block|}
 block|}
+if|if
+condition|(
+operator|!
+name|id
+operator|.
+name|errorIfMissing
+argument_list|()
+condition|)
+block|{
+comment|/*                  * If user asked for a null, give them a null.                   */
+return|return
+literal|null
+return|;
+block|}
 name|org
 operator|.
 name|apache
