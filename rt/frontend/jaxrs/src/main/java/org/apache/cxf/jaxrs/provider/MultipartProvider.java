@@ -1345,7 +1345,7 @@ throw|throw
 operator|new
 name|WebApplicationException
 argument_list|(
-literal|404
+literal|400
 argument_list|)
 throw|;
 block|}
