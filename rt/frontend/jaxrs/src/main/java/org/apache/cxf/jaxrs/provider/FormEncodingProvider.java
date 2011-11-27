@@ -668,6 +668,8 @@ name|populateMap
 argument_list|(
 name|params
 argument_list|,
+name|annotations
+argument_list|,
 name|is
 argument_list|,
 name|mt
@@ -913,6 +915,10 @@ name|String
 argument_list|>
 name|params
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|InputStream
 name|is
 parameter_list|,
@@ -956,6 +962,8 @@ operator|.
 name|populateMapFromMultipart
 argument_list|(
 name|params
+argument_list|,
+name|anns
 argument_list|,
 name|body
 argument_list|,
