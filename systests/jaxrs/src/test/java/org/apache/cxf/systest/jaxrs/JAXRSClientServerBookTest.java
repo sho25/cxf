@@ -9140,11 +9140,11 @@ literal|"/bookstore/"
 operator|+
 literal|"booksubresource/123/chapters/sub/1/matched-resources"
 argument_list|,
-literal|"[class org.apache.cxf.systest.jaxrs.BookStore, "
+literal|"[class org.apache.cxf.systest.jaxrs.Chapter, "
 operator|+
 literal|"class org.apache.cxf.systest.jaxrs.Book, "
 operator|+
-literal|"class org.apache.cxf.systest.jaxrs.Chapter]"
+literal|"class org.apache.cxf.systest.jaxrs.BookStore]"
 argument_list|,
 literal|"text/plain"
 argument_list|,
@@ -9173,11 +9173,11 @@ literal|"/bookstore/"
 operator|+
 literal|"booksubresource/123/chaptersobject/sub/1/matched-resources"
 argument_list|,
-literal|"[class org.apache.cxf.systest.jaxrs.BookStore, "
+literal|"[class org.apache.cxf.systest.jaxrs.Chapter, "
 operator|+
 literal|"class org.apache.cxf.systest.jaxrs.Book, "
 operator|+
-literal|"class org.apache.cxf.systest.jaxrs.Chapter]"
+literal|"class org.apache.cxf.systest.jaxrs.BookStore]"
 argument_list|,
 literal|"text/plain"
 argument_list|,
@@ -9199,11 +9199,11 @@ block|{
 name|String
 name|expected
 init|=
-literal|"[/bookstore/booksubresource/123/, "
+literal|"[/bookstore/booksubresource/123/chapters/sub/1/matched!uris, "
 operator|+
 literal|"/bookstore/booksubresource/123/chapters/sub/1/, "
 operator|+
-literal|"/bookstore/booksubresource/123/chapters/sub/1/matched!uris]"
+literal|"/bookstore/booksubresource/123/]"
 decl_stmt|;
 name|getAndCompare
 argument_list|(
@@ -9238,11 +9238,11 @@ comment|//note '%21' instead of '!'
 name|String
 name|expected
 init|=
-literal|"[/bookstore/booksubresource/123/, "
+literal|"[/bookstore/booksubresource/123/chapters/sub/1/matched%21uris, "
 operator|+
 literal|"/bookstore/booksubresource/123/chapters/sub/1/, "
 operator|+
-literal|"/bookstore/booksubresource/123/chapters/sub/1/matched%21uris]"
+literal|"/bookstore/booksubresource/123/]"
 decl_stmt|;
 name|getAndCompare
 argument_list|(
