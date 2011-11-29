@@ -12,6 +12,8 @@ package|package
 name|demo
 operator|.
 name|spring
+operator|.
+name|service
 package|;
 end_package
 

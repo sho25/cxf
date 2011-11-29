@@ -12,6 +12,8 @@ package|package
 name|demo
 operator|.
 name|spring
+operator|.
+name|service
 package|;
 end_package
 
@@ -31,7 +33,7 @@ name|WebService
 argument_list|(
 name|endpointInterface
 operator|=
-literal|"demo.spring.HelloWorld"
+literal|"demo.spring.service.HelloWorld"
 argument_list|)
 specifier|public
 class|class

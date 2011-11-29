@@ -9,7 +9,7 @@ name|demo
 operator|.
 name|spring
 operator|.
-name|servlet
+name|service
 package|;
 end_package
 
@@ -191,7 +191,7 @@ name|webappcontext
 operator|.
 name|setWar
 argument_list|(
-literal|"webapp"
+literal|"target/JavaFirstSpringSupport.war"
 argument_list|)
 expr_stmt|;
 name|HandlerCollection
