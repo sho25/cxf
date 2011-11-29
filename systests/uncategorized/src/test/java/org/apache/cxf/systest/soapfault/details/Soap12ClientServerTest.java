@@ -375,10 +375,9 @@ operator|.
 name|getStackTrace
 argument_list|()
 decl_stmt|;
-comment|// The stack trace will be reset as it's a declare exception
 name|assertEquals
 argument_list|(
-literal|"org.apache.cxf.jaxws.JaxWsClientProxy"
+literal|"org.apache.cxf.systest.soapfault.details.GreeterImpl12"
 argument_list|,
 name|element
 index|[
