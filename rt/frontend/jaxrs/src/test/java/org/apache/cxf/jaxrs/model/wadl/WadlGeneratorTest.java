@@ -3235,7 +3235,7 @@ literal|"xs:long"
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// must have 2 methods, GET and PUT
+comment|// must have 3 methods, GET, POST and PUT
 name|List
 argument_list|<
 name|Element
@@ -3248,7 +3248,7 @@ name|resource
 argument_list|,
 literal|"method"
 argument_list|,
-literal|2
+literal|3
 argument_list|)
 decl_stmt|;
 comment|// verify GET
@@ -3429,10 +3429,10 @@ argument_list|,
 literal|""
 argument_list|)
 expr_stmt|;
-comment|// verify PUT
+comment|// verify POST
 name|assertEquals
 argument_list|(
-literal|"PUT"
+literal|"POST"
 argument_list|,
 name|methodEls
 operator|.
@@ -3447,6 +3447,9 @@ literal|"name"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|Element
+name|formRep
+init|=
 name|verifyRepresentation
 argument_list|(
 name|methodEls
@@ -3454,6 +3457,51 @@ operator|.
 name|get
 argument_list|(
 literal|1
+argument_list|)
+argument_list|,
+literal|"request"
+argument_list|,
+literal|"multipart/form-data"
+argument_list|,
+literal|""
+argument_list|)
+decl_stmt|;
+name|checkDocs
+argument_list|(
+name|formRep
+argument_list|,
+literal|""
+argument_list|,
+literal|"Attachments"
+argument_list|,
+literal|""
+argument_list|)
+expr_stmt|;
+comment|// verify PUT
+name|assertEquals
+argument_list|(
+literal|"PUT"
+argument_list|,
+name|methodEls
+operator|.
+name|get
+argument_list|(
+literal|2
+argument_list|)
+operator|.
+name|getAttribute
+argument_list|(
+literal|"name"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|verifyRepresentation
+argument_list|(
+name|methodEls
+operator|.
+name|get
+argument_list|(
+literal|2
 argument_list|)
 argument_list|,
 literal|"request"
@@ -3469,7 +3517,7 @@ name|methodEls
 operator|.
 name|get
 argument_list|(
-literal|1
+literal|2
 argument_list|)
 argument_list|,
 literal|"204"
@@ -4858,7 +4906,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-name|void
+name|Element
 name|verifyRepresentation
 parameter_list|(
 name|Element
@@ -5000,6 +5048,14 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+return|return
+name|representationEls
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+return|;
 block|}
 specifier|private
 name|void
