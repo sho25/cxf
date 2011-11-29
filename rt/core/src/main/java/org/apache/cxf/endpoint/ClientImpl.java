@@ -5102,7 +5102,7 @@ name|isPartialResponse
 argument_list|(
 name|message
 argument_list|)
-operator|&&
+operator|||
 name|callback
 operator|==
 literal|null
