@@ -553,6 +553,15 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|f
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|Throwable
 name|cause
 init|=
