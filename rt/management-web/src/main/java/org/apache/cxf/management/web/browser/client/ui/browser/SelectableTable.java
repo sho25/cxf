@@ -1325,7 +1325,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|SelectRowHandler
 block|{
@@ -1338,7 +1337,6 @@ parameter_list|)
 function_decl|;
 block|}
 specifier|public
-specifier|static
 interface|interface
 name|ColumnDefinition
 parameter_list|<

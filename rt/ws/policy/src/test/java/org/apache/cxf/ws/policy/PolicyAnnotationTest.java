@@ -1200,7 +1200,6 @@ argument_list|)
 annotation|@
 name|WebService
 specifier|public
-specifier|static
 interface|interface
 name|TestInterface
 block|{
