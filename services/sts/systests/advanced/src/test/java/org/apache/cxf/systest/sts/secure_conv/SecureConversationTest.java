@@ -505,21 +505,6 @@ argument_list|(
 name|numToDouble
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"The number "
-operator|+
-name|numToDouble
-operator|+
-literal|" doubled is "
-operator|+
-name|resp
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 name|resp

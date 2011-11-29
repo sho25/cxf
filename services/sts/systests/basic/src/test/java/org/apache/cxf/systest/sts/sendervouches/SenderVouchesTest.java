@@ -369,28 +369,13 @@ argument_list|(
 name|numToDouble
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
+name|assertEquals
 argument_list|(
-literal|"The number "
-operator|+
 name|numToDouble
-operator|+
-literal|" doubled is "
-operator|+
-name|resp
-argument_list|)
-expr_stmt|;
-name|assertTrue
-argument_list|(
-name|resp
-operator|==
-literal|2
 operator|*
-name|numToDouble
+literal|2
+argument_list|,
+name|resp
 argument_list|)
 expr_stmt|;
 block|}

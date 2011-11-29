@@ -625,18 +625,12 @@ argument_list|(
 name|numToDouble
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
+name|assertEquals
 argument_list|(
-literal|"The number "
-operator|+
 name|numToDouble
-operator|+
-literal|" doubled is "
-operator|+
+operator|*
+literal|2
+argument_list|,
 name|resp
 argument_list|)
 expr_stmt|;
