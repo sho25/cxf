@@ -858,9 +858,6 @@ block|{
 throw|throw
 name|e
 operator|.
-name|fillInStackTrace
-argument_list|()
-operator|.
 name|getCause
 argument_list|()
 throw|;
@@ -965,9 +962,6 @@ parameter_list|)
 block|{
 throw|throw
 name|wex
-operator|.
-name|fillInStackTrace
-argument_list|()
 throw|;
 block|}
 catch|catch
@@ -1002,9 +996,6 @@ condition|)
 block|{
 throw|throw
 name|ex
-operator|.
-name|fillInStackTrace
-argument_list|()
 throw|;
 block|}
 block|}

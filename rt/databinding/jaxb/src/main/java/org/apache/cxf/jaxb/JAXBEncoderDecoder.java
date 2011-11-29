@@ -1798,13 +1798,7 @@ name|ex
 parameter_list|)
 block|{
 throw|throw
-operator|(
-name|Fault
-operator|)
 name|ex
-operator|.
-name|fillInStackTrace
-argument_list|()
 throw|;
 block|}
 catch|catch
@@ -5917,11 +5911,6 @@ operator|instanceof
 name|Fault
 condition|)
 block|{
-name|ex
-operator|.
-name|fillInStackTrace
-argument_list|()
-expr_stmt|;
 throw|throw
 operator|(
 name|Fault
@@ -7065,11 +7054,6 @@ name|Fault
 name|ex
 parameter_list|)
 block|{
-name|ex
-operator|.
-name|fillInStackTrace
-argument_list|()
-expr_stmt|;
 throw|throw
 name|ex
 throw|;
