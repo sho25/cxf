@@ -830,11 +830,6 @@ comment|/**  * This abstract class contains some common functionality for differ
 end_comment
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|""
-argument_list|)
 specifier|public
 specifier|abstract
 class|class
