@@ -33,7 +33,7 @@ specifier|final
 name|String
 name|HEADER_ORIGIN
 init|=
-literal|"origin"
+literal|"Origin"
 decl_stmt|;
 specifier|public
 specifier|static
