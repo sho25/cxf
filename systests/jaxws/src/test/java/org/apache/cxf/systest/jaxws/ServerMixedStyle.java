@@ -240,7 +240,6 @@ operator|=
 literal|"http://example.com"
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|MixedTest
 block|{
