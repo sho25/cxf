@@ -338,7 +338,6 @@ operator|=
 literal|1
 argument_list|)
 specifier|public
-specifier|static
 interface|interface
 name|MTOMService
 block|{
