@@ -1560,6 +1560,32 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"registering MBean "
+operator|+
+name|name
+operator|+
+literal|": "
+operator|+
+name|obj
+argument_list|)
+expr_stmt|;
+block|}
 name|instance
 operator|=
 name|mbs
