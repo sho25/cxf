@@ -209,8 +209,6 @@ specifier|private
 name|boolean
 name|allowAllOrigins
 decl_stmt|;
-annotation|@
-name|Override
 specifier|public
 name|Response
 name|handleRequest
