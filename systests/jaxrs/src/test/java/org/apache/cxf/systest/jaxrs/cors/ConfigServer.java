@@ -164,7 +164,7 @@ argument_list|)
 expr_stmt|;
 name|inputFilter
 operator|.
-name|setAllowedOrigins
+name|setAllowOrigins
 argument_list|(
 name|Arrays
 operator|.

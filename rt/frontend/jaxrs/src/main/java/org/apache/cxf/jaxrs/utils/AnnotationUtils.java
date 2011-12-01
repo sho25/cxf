@@ -503,7 +503,7 @@ block|}
 specifier|private
 name|AnnotationUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 name|Set

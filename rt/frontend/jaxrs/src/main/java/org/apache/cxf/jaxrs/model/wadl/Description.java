@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to document resource classes and methods  *   * See {@link<a href="http://www.w3.org/Submission/wadl/#x3-80002.3">WADL Documentation</a>}.  */
+comment|/**  * Can be used to document resource classes and methods  *   * See<a href="http://www.w3.org/Submission/wadl/#x3-80002.3">WADL Documentation</a>.  */
 end_comment
 
 begin_annotation_defn
