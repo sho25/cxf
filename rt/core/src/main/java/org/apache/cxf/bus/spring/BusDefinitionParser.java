@@ -424,6 +424,10 @@ argument_list|,
 name|BusWiringType
 operator|.
 name|PROPERTY
+argument_list|,
+literal|null
+argument_list|,
+name|ctx
 argument_list|)
 expr_stmt|;
 block|}
@@ -438,6 +442,8 @@ operator|.
 name|PROPERTY
 argument_list|,
 name|bus
+argument_list|,
+name|ctx
 argument_list|)
 expr_stmt|;
 block|}
