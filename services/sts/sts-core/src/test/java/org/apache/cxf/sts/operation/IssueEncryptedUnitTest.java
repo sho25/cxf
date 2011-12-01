@@ -1790,6 +1790,27 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//
+comment|// This test fails (sometimes) with the IBM JDK
+comment|// See https://www-304.ibm.com/support/docview.wss?uid=swg1IZ76737
+comment|//
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|TokenIssueOperation
 name|issueOperation
 init|=
@@ -2118,6 +2139,27 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//
+comment|// This test fails (sometimes) with the IBM JDK
+comment|// See https://www-304.ibm.com/support/docview.wss?uid=swg1IZ76737
+comment|//
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|TokenIssueOperation
 name|issueOperation
 init|=
