@@ -191,7 +191,7 @@ name|webappcontext
 operator|.
 name|setWar
 argument_list|(
-literal|"webapp"
+literal|"target/JAXRSSpringSecurity.war"
 argument_list|)
 expr_stmt|;
 name|HandlerCollection

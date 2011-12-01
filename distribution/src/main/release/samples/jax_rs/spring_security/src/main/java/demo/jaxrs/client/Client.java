@@ -419,6 +419,9 @@ operator|.
 name|getClass
 argument_list|()
 operator|.
+name|getClassLoader
+argument_list|()
+operator|.
 name|getResourceAsStream
 argument_list|(
 literal|"add_customer.xml"
@@ -493,6 +496,9 @@ argument_list|(
 name|this
 operator|.
 name|getClass
+argument_list|()
+operator|.
+name|getClassLoader
 argument_list|()
 operator|.
 name|getResourceAsStream
