@@ -206,6 +206,42 @@ return|return
 literal|null
 return|;
 block|}
+specifier|private
+name|void
+name|addHeaders
+parameter_list|(
+name|ResponseBuilder
+name|rb
+parameter_list|,
+name|String
+name|key
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|vals
+parameter_list|)
+block|{
+for|for
+control|(
+name|String
+name|v
+range|:
+name|vals
+control|)
+block|{
+name|rb
+operator|.
+name|header
+argument_list|(
+name|key
+argument_list|,
+name|v
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 specifier|public
 name|Response
 name|handleResponse
@@ -289,10 +325,10 @@ argument_list|)
 condition|)
 block|{
 comment|// 5.1.3: add Allow-Origin supplied from the input side, plus allow-credentials as requested
-name|rbuilder
-operator|.
-name|header
+name|addHeaders
 argument_list|(
+name|rbuilder
+argument_list|,
 name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_ALLOW_ORIGIN
@@ -339,10 +375,10 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|rbuilder
-operator|.
-name|header
+name|addHeaders
 argument_list|(
+name|rbuilder
+argument_list|,
 name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_ALLOW_METHODS
@@ -361,10 +397,10 @@ operator|>
 literal|0
 condition|)
 block|{
-name|rbuilder
-operator|.
-name|header
+name|addHeaders
 argument_list|(
+name|rbuilder
+argument_list|,
 name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_EXPOSE_HEADERS
@@ -385,10 +421,10 @@ else|else
 block|{
 comment|// preflight
 comment|// 5.2.7 add Allow-Origin supplied from the input side, plus allow-credentials as requested
-name|rbuilder
-operator|.
-name|header
+name|addHeaders
 argument_list|(
+name|rbuilder
+argument_list|,
 name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_ALLOW_ORIGIN
@@ -437,10 +473,10 @@ expr_stmt|;
 block|}
 comment|// 5.2.9 add allowed methods
 comment|/*              * Currently, input side just lists the one requested method, and spec endorses that.              */
-name|rbuilder
-operator|.
-name|header
+name|addHeaders
 argument_list|(
+name|rbuilder
+argument_list|,
 name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_ALLOW_METHODS
@@ -485,10 +521,10 @@ operator|>
 literal|0
 condition|)
 block|{
-name|rbuilder
-operator|.
-name|header
+name|addHeaders
 argument_list|(
+name|rbuilder
+argument_list|,
 name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_ALLOW_HEADERS
