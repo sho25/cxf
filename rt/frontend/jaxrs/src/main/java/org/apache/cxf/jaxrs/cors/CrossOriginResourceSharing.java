@@ -119,20 +119,26 @@ comment|/**      * A list of permitted origins. This is ignored       * if {@lin
 name|String
 index|[]
 name|allowOrigins
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 comment|/**      * A list of HTTP methods. This is used only for preflight,      * and is only valid on a class.      */
 name|String
 index|[]
 name|allowMethods
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 comment|/**      * A list of headers that the client may include      * in an actual request.      */
 name|String
 index|[]
 name|allowHeaders
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 comment|/**      * If true, this resource will return       *<pre>Access-Control-Allow-Credentials: true</pre>      */
 name|boolean
 name|allowCredentials
@@ -144,8 +150,10 @@ comment|/**      * A list of headers to return in<tt>      * Access-Control-Expo
 name|String
 index|[]
 name|exposeHeaders
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 comment|/**      * The value to return in<tt>Access-Control-Max-Age</tt>.      * If this is negative, then no header is returned. The default      * value is -1.      */
 name|int
 name|maxAge
@@ -160,6 +168,13 @@ name|localPreflight
 parameter_list|()
 default|default
 literal|false
+function_decl|;
+comment|/**      * For use inside @{@link CrossOriginResourceSharingPaths}. The path to apply the      * policies to.      */
+name|String
+name|path
+parameter_list|()
+default|default
+literal|""
 function_decl|;
 block|}
 end_annotation_defn
