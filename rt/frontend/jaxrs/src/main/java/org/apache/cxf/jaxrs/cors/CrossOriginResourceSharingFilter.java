@@ -600,7 +600,7 @@ name|put
 argument_list|(
 name|CorsHeaderConstants
 operator|.
-name|HEADER_AC_ALLOW_HEADERS
+name|HEADER_AC_EXPOSE_HEADERS
 argument_list|,
 name|effectiveExposeHeaders
 argument_list|)

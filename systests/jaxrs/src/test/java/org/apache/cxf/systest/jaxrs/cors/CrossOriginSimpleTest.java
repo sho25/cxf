@@ -55,6 +55,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|List
 import|;
 end_import
@@ -1833,22 +1843,13 @@ name|HEADER_AC_EXPOSE_HEADERS
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|// depend on knowing the order.
+comment|// preflight never returns Expose-Headers
 name|assertEquals
 argument_list|(
-name|Arrays
+name|Collections
 operator|.
-name|asList
-argument_list|(
-operator|new
-name|String
-index|[]
-block|{
-literal|"X-custom-3"
-block|,
-literal|"X-custom-4"
-block|}
-argument_list|)
+name|emptyList
+argument_list|()
 argument_list|,
 name|exposeHeadersValues
 argument_list|)
