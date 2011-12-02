@@ -1749,6 +1749,16 @@ name|String
 name|name
 parameter_list|)
 block|{
+if|if
+condition|(
+literal|"cxf"
+operator|.
+name|equals
+argument_list|(
+name|name
+argument_list|)
+condition|)
+block|{
 name|getBus
 argument_list|(
 name|context
@@ -1756,6 +1766,7 @@ argument_list|,
 name|name
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|createRef
 argument_list|(
