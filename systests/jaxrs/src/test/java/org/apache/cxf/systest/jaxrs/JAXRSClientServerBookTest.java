@@ -980,11 +980,16 @@ throws|throws
 name|Exception
 block|{
 name|String
-name|endpointAddress
+name|base
 init|=
 literal|"http://localhost:"
 operator|+
 name|PORT
+decl_stmt|;
+name|String
+name|endpointAddress
+init|=
+name|base
 operator|+
 literal|"/bookstore/name-in-query"
 decl_stmt|;
@@ -1040,7 +1045,11 @@ name|content
 operator|.
 name|contains
 argument_list|(
-literal|"<?xmlstylesheet href='common.css'?>"
+literal|"<?xmlstylesheet href='"
+operator|+
+name|base
+operator|+
+literal|"/common.css'?>"
 argument_list|)
 argument_list|)
 expr_stmt|;
