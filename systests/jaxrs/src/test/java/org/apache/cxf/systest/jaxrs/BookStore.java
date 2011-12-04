@@ -735,6 +735,24 @@ name|ext
 operator|.
 name|xml
 operator|.
+name|SchemaLocation
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|xml
+operator|.
 name|XMLInstruction
 import|;
 end_import
@@ -1279,6 +1297,11 @@ annotation|@
 name|XMLInstruction
 argument_list|(
 literal|"<!DOCTYPE Something SYSTEM 'my.dtd'><?xmlstylesheet href='common.css'?>"
+argument_list|)
+annotation|@
+name|SchemaLocation
+argument_list|(
+literal|"book.xsd"
 argument_list|)
 specifier|public
 name|Book
