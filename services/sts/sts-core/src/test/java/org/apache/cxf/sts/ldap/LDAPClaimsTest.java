@@ -570,6 +570,10 @@ name|user
 argument_list|)
 argument_list|,
 name|requestedClaims
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|Assert
@@ -762,6 +766,10 @@ name|user
 argument_list|)
 argument_list|,
 name|requestedClaims
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -908,6 +916,10 @@ name|user
 argument_list|)
 argument_list|,
 name|requestedClaims
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|Assert

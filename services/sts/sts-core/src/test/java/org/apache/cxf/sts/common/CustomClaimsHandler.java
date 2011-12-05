@@ -59,6 +59,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|WebServiceContext
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -230,6 +242,12 @@ name|principal
 parameter_list|,
 name|RequestClaimCollection
 name|claims
+parameter_list|,
+name|WebServiceContext
+name|context
+parameter_list|,
+name|String
+name|realm
 parameter_list|)
 block|{
 if|if

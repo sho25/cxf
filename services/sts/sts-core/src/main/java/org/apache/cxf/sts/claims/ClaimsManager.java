@@ -57,6 +57,18 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|WebServiceContext
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class holds various ClaimsHandler implementations.  */
 end_comment
@@ -173,6 +185,12 @@ name|principal
 parameter_list|,
 name|RequestClaimCollection
 name|claims
+parameter_list|,
+name|WebServiceContext
+name|context
+parameter_list|,
+name|String
+name|realm
 parameter_list|)
 block|{
 if|if
@@ -214,6 +232,10 @@ argument_list|(
 name|principal
 argument_list|,
 name|claims
+argument_list|,
+name|context
+argument_list|,
+name|realm
 argument_list|)
 decl_stmt|;
 if|if

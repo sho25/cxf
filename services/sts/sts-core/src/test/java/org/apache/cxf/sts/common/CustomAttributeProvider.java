@@ -416,6 +416,16 @@ name|providerParameters
 operator|.
 name|getRequestedClaims
 argument_list|()
+argument_list|,
+name|providerParameters
+operator|.
+name|getWebServiceContext
+argument_list|()
+argument_list|,
+name|providerParameters
+operator|.
+name|getRealm
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
