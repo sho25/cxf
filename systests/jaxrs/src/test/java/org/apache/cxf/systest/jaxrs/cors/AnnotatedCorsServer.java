@@ -211,12 +211,6 @@ name|maxAge
 operator|=
 literal|1
 argument_list|,
-name|allowMethods
-operator|=
-block|{
-literal|"PUT"
-block|}
-argument_list|,
 name|allowHeaders
 operator|=
 block|{

@@ -123,14 +123,6 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
-comment|/**      * A list of HTTP methods. This is used only for preflight,      * and is only valid on a class.      */
-name|String
-index|[]
-name|allowMethods
-argument_list|()
-expr|default
-block|{ }
-expr_stmt|;
 comment|/**      * A list of headers that the client may include      * in an actual request.      */
 name|String
 index|[]
@@ -168,13 +160,6 @@ name|localPreflight
 parameter_list|()
 default|default
 literal|false
-function_decl|;
-comment|/**      * For use inside @{@link CrossOriginResourceSharingPaths}. The path to apply the      * policies to.      */
-name|String
-name|path
-parameter_list|()
-default|default
-literal|""
 function_decl|;
 block|}
 end_annotation_defn
