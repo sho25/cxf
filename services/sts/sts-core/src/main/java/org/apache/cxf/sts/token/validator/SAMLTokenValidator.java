@@ -1127,6 +1127,24 @@ argument_list|,
 literal|"SAML Token condition not met"
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|secToken
+operator|!=
+literal|null
+condition|)
+block|{
+name|tokenParameters
+operator|.
+name|getTokenStore
+argument_list|()
+operator|.
+name|remove
+argument_list|(
+name|secToken
+argument_list|)
+expr_stmt|;
+block|}
 return|return
 name|response
 return|;
