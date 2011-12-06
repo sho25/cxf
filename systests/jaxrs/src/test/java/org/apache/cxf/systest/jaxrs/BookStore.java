@@ -735,7 +735,7 @@ name|ext
 operator|.
 name|xml
 operator|.
-name|SchemaLocation
+name|XMLInstruction
 import|;
 end_import
 
@@ -753,7 +753,7 @@ name|ext
 operator|.
 name|xml
 operator|.
-name|XMLInstruction
+name|XSISchemaLocation
 import|;
 end_import
 
@@ -1299,7 +1299,7 @@ argument_list|(
 literal|"<!DOCTYPE Something SYSTEM 'my.dtd'><?xmlstylesheet href='common.css'?>"
 argument_list|)
 annotation|@
-name|SchemaLocation
+name|XSISchemaLocation
 argument_list|(
 literal|"book.xsd"
 argument_list|)

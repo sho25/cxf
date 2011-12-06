@@ -90,7 +90,7 @@ name|RUNTIME
 argument_list|)
 specifier|public
 annotation_defn|@interface
-name|SchemaLocation
+name|XSISchemaLocation
 block|{
 comment|/**      * schema location relative to a base URI of the web application      */
 name|String

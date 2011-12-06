@@ -377,6 +377,15 @@ argument_list|,
 literal|"application/pdf"
 argument_list|)
 expr_stmt|;
+name|STATIC_CONTENT_TYPES
+operator|.
+name|put
+argument_list|(
+literal|"xsd"
+argument_list|,
+literal|"application/xml"
+argument_list|)
+expr_stmt|;
 comment|// TODO : add more types if needed
 block|}
 specifier|private

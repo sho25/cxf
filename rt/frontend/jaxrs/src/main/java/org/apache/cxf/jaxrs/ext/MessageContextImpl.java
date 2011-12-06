@@ -631,8 +631,12 @@ name|value
 operator|==
 literal|null
 operator|&&
-name|isRequestor
+name|m
+operator|.
+name|getExchange
 argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 name|Message
@@ -651,6 +655,10 @@ condition|(
 name|inMessage
 operator|!=
 literal|null
+operator|&&
+name|inMessage
+operator|!=
+name|m
 condition|)
 block|{
 name|value
