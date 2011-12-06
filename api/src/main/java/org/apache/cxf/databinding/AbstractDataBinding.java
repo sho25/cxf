@@ -91,6 +91,18 @@ name|javax
 operator|.
 name|xml
 operator|.
+name|namespace
+operator|.
+name|QName
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
 name|parsers
 operator|.
 name|ParserConfigurationException
@@ -492,6 +504,19 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|QName
+name|qn
+init|=
+name|DOMUtils
+operator|.
+name|getElementQName
+argument_list|(
+name|d
+operator|.
+name|getDocumentElement
+argument_list|()
+argument_list|)
+decl_stmt|;
 throw|throw
 operator|new
 name|RuntimeException
@@ -500,7 +525,9 @@ literal|"Invalid schema document passed to "
 operator|+
 literal|"AbstractDataBinding.addSchemaDocument, "
 operator|+
-literal|"not in W3C schema namespace"
+literal|"not in W3C schema namespace: "
+operator|+
+name|qn
 argument_list|)
 throw|;
 block|}
@@ -521,6 +548,19 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|QName
+name|qn
+init|=
+name|DOMUtils
+operator|.
+name|getElementQName
+argument_list|(
+name|d
+operator|.
+name|getDocumentElement
+argument_list|()
+argument_list|)
+decl_stmt|;
 throw|throw
 operator|new
 name|RuntimeException
@@ -529,7 +569,9 @@ literal|"Invalid schema document passed to "
 operator|+
 literal|"AbstractDataBinding.addSchemaDocument, "
 operator|+
-literal|"document element isn't 'schema'"
+literal|"document element isn't 'schema': "
+operator|+
+name|qn
 argument_list|)
 throw|;
 block|}
