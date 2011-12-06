@@ -99,6 +99,16 @@ name|javax
 operator|.
 name|wsdl
 operator|.
+name|Import
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|wsdl
+operator|.
 name|Port
 import|;
 end_import
@@ -134,18 +144,6 @@ operator|.
 name|namespace
 operator|.
 name|QName
-import|;
-end_import
-
-begin_import
-import|import
-name|com
-operator|.
-name|ibm
-operator|.
-name|wsdl
-operator|.
-name|ImportImpl
 import|;
 end_import
 
@@ -881,7 +879,7 @@ if|if
 condition|(
 name|imp
 operator|instanceof
-name|ImportImpl
+name|Import
 condition|)
 block|{
 name|Definition
@@ -889,7 +887,7 @@ name|importDef
 init|=
 operator|(
 operator|(
-name|ImportImpl
+name|Import
 operator|)
 name|imp
 operator|)
@@ -1511,7 +1509,7 @@ if|if
 condition|(
 name|imp
 operator|instanceof
-name|ImportImpl
+name|Import
 condition|)
 block|{
 name|Definition
@@ -1519,7 +1517,7 @@ name|importDef
 init|=
 operator|(
 operator|(
-name|ImportImpl
+name|Import
 operator|)
 name|imp
 operator|)

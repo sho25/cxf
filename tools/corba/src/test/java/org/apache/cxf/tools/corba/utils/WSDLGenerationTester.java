@@ -311,6 +311,11 @@ name|actualEnd
 init|=
 literal|false
 decl_stmt|;
+name|QName
+name|elName
+init|=
+literal|null
+decl_stmt|;
 while|while
 condition|(
 name|orig
@@ -460,6 +465,13 @@ name|isStartElement
 argument_list|()
 condition|)
 block|{
+name|elName
+operator|=
+name|orig
+operator|.
+name|getName
+argument_list|()
+expr_stmt|;
 name|compareStartElement
 argument_list|(
 name|orig
@@ -496,6 +508,8 @@ condition|)
 block|{
 name|compareCharacters
 argument_list|(
+name|elName
+argument_list|,
 name|orig
 argument_list|,
 name|actual
@@ -767,6 +781,9 @@ specifier|private
 name|void
 name|compareCharacters
 parameter_list|(
+name|QName
+name|elName
+parameter_list|,
 name|XMLStreamReader
 name|orig
 parameter_list|,
@@ -780,7 +797,9 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
-literal|"Element Characters not matched"
+literal|"Element Characters not matched "
+operator|+
+name|elName
 argument_list|,
 name|orig
 operator|.

@@ -33,22 +33,6 @@ end_import
 
 begin_import
 import|import
-name|com
-operator|.
-name|ibm
-operator|.
-name|wsdl
-operator|.
-name|extensions
-operator|.
-name|soap
-operator|.
-name|SOAPAddressImpl
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -209,11 +193,7 @@ name|transportURI
 init|=
 literal|"http://foo/transport"
 decl_stmt|;
-name|String
-name|location
-init|=
-literal|"http://localhost/service"
-decl_stmt|;
+comment|// String location = "http://localhost/service";
 name|ServiceInfo
 name|si
 init|=
@@ -232,20 +212,16 @@ argument_list|,
 name|wsdlSoapNs
 argument_list|)
 decl_stmt|;
+comment|// this code used to call "new SOAPAddressImpl()", but the test
+comment|// is currently not testing anything, and needlessly ties the
+comment|// code to a specific implementation of wsdl4j. When the SOAPAddress
+comment|// is really needed, it should be mocked.
 name|SOAPAddress
 name|add
 init|=
-operator|new
-name|SOAPAddressImpl
-argument_list|()
+literal|null
 decl_stmt|;
-name|add
-operator|.
-name|setLocationURI
-argument_list|(
-name|location
-argument_list|)
-expr_stmt|;
+comment|// add.setLocationURI(location);
 name|ei
 operator|.
 name|addExtensor

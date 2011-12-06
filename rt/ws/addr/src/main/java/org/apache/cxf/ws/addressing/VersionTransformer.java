@@ -161,22 +161,6 @@ name|Element
 import|;
 end_import
 
-begin_import
-import|import
-name|com
-operator|.
-name|ibm
-operator|.
-name|wsdl
-operator|.
-name|util
-operator|.
-name|xml
-operator|.
-name|DOMUtils
-import|;
-end_import
-
 begin_comment
 comment|// importation convention: if the same class name is used for
 end_comment
@@ -202,6 +186,20 @@ operator|.
 name|util
 operator|.
 name|PackageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|DOMUtils
 import|;
 end_import
 
@@ -2268,7 +2266,7 @@ name|child
 init|=
 name|DOMUtils
 operator|.
-name|getFirstChildElement
+name|getFirstElement
 argument_list|(
 name|ref
 argument_list|)
@@ -2312,7 +2310,7 @@ name|child
 operator|=
 name|DOMUtils
 operator|.
-name|getNextSiblingElement
+name|getNextElement
 argument_list|(
 name|child
 argument_list|)
