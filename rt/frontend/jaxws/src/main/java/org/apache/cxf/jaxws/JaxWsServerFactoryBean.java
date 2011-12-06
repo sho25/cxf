@@ -446,6 +446,10 @@ specifier|private
 name|boolean
 name|blockPostConstruct
 decl_stmt|;
+specifier|private
+name|boolean
+name|blockInjection
+decl_stmt|;
 specifier|public
 name|JaxWsServerFactoryBean
 parameter_list|()
@@ -1354,6 +1358,9 @@ condition|(
 name|instance
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|blockInjection
 condition|)
 block|{
 name|ResourceManager
@@ -1478,7 +1485,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      *       * @param blockPostConstruct @PostConstruct method will not be called       *  if this property is set to true - this may be necessary in cases      *  when the @PostConstruct method needs to be called at a later stage,      *  for example, when a higher level container does its own injection.        */
+comment|/**      * @param blockPostConstruct @PostConstruct method will not be called       *  if this property is set to true - this may be necessary in cases      *  when the @PostConstruct method needs to be called at a later stage,      *  for example, when a higher level container does its own injection.        */
 specifier|public
 name|void
 name|setBlockPostConstruct
@@ -1492,6 +1499,22 @@ operator|.
 name|blockPostConstruct
 operator|=
 name|blockPostConstruct
+expr_stmt|;
+block|}
+comment|/**      * No injection or PostContstuct will be called if this is set to true.      * If the container has already handled the injection, this should       * be set to true.      * @param b      */
+specifier|public
+name|void
+name|setBlockInjection
+parameter_list|(
+name|boolean
+name|b
+parameter_list|)
+block|{
+name|this
+operator|.
+name|blockInjection
+operator|=
+name|b
 expr_stmt|;
 block|}
 block|}
