@@ -3,7 +3,7 @@ begin_package
 package|package
 name|$
 block|{
-name|packageName
+package|package
 block|}
 end_package
 
