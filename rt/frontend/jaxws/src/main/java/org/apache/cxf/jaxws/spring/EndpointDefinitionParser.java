@@ -1078,7 +1078,7 @@ name|bean
 operator|.
 name|addPropertyValue
 argument_list|(
-literal|"checkBlockConstuct"
+literal|"checkBlockConstruct"
 argument_list|,
 name|Boolean
 operator|.
@@ -1262,7 +1262,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setCheckBlockConstuct
+name|setCheckBlockConstruct
 parameter_list|(
 name|Boolean
 name|b
