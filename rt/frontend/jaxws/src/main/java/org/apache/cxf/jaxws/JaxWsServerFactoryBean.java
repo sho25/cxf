@@ -1501,7 +1501,7 @@ operator|=
 name|blockPostConstruct
 expr_stmt|;
 block|}
-comment|/**      * No injection or PostContstuct will be called if this is set to true.      * If the container has already handled the injection, this should       * be set to true.      * @param b      */
+comment|/**      * No injection or PostConstruct will be called if this is set to true.      * If the container has already handled the injection, this should       * be set to true.      * @param b      */
 specifier|public
 name|void
 name|setBlockInjection
