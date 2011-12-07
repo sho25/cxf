@@ -1469,6 +1469,23 @@ name|address
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|conduitInit
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Could not find conduit initiator for transport "
+operator|+
+name|transId
+argument_list|)
+throw|;
+block|}
 return|return
 name|conduitInit
 operator|.
