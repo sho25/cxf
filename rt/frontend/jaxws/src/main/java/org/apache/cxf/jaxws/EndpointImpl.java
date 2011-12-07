@@ -1475,7 +1475,7 @@ operator|+
 literal|".jaxws-endpoint"
 return|;
 block|}
-specifier|protected
+specifier|public
 name|JaxWsServerFactoryBean
 name|getServerFactory
 parameter_list|()
