@@ -259,6 +259,15 @@ name|add
 argument_list|(
 name|SP12Constants
 operator|.
+name|INITIATOR_SIGNATURE_TOKEN
+argument_list|)
+expr_stmt|;
+name|ASSERTION_TYPES
+operator|.
+name|add
+argument_list|(
+name|SP12Constants
+operator|.
 name|RECIPIENT_TOKEN
 argument_list|)
 expr_stmt|;

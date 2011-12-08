@@ -519,6 +519,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|INITIATOR_SIGNATURE_TOKEN
+init|=
+literal|"InitiatorSignatureToken"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|RECIPIENT_TOKEN
 init|=
 literal|"RecipientToken"
@@ -1466,6 +1474,12 @@ specifier|public
 specifier|abstract
 name|QName
 name|getInitiatorToken
+parameter_list|()
+function_decl|;
+specifier|public
+specifier|abstract
+name|QName
+name|getInitiatorSignatureToken
 parameter_list|()
 function_decl|;
 specifier|public
