@@ -1015,6 +1015,16 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
+literal|".*_WITH_AES_.*"
+argument_list|)
+expr_stmt|;
+name|filters
+operator|.
+name|getInclude
+argument_list|()
+operator|.
+name|add
+argument_list|(
 literal|".*_WITH_NULL_.*"
 argument_list|)
 expr_stmt|;
