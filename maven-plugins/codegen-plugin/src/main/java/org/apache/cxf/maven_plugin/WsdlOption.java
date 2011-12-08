@@ -87,6 +87,20 @@ name|URIParserUtil
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|maven
+operator|.
+name|plugin
+operator|.
+name|MojoExecutionException
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -263,6 +277,8 @@ parameter_list|(
 name|URI
 name|baseURI
 parameter_list|)
+throws|throws
+name|MojoExecutionException
 block|{
 name|String
 name|wsdlLocation
@@ -270,6 +286,23 @@ init|=
 name|getWsdl
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|wsdlLocation
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|MojoExecutionException
+argument_list|(
+literal|"No wsdl available for base URI "
+operator|+
+name|baseURI
+argument_list|)
+throw|;
+block|}
 name|File
 name|wsdlFile
 init|=
