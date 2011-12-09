@@ -13,11 +13,11 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|ws
+name|wssec
 operator|.
-name|wssec10
+name|examples
 operator|.
-name|client
+name|ut
 package|;
 end_package
 
@@ -158,7 +158,6 @@ argument_list|,
 literal|"knarF"
 argument_list|)
 expr_stmt|;
-comment|//for MS clients
 name|passwords
 operator|.
 name|put
@@ -173,6 +172,15 @@ operator|.
 name|put
 argument_list|(
 literal|"alice"
+argument_list|,
+literal|"password"
+argument_list|)
+expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"bob"
 argument_list|,
 literal|"password"
 argument_list|)
