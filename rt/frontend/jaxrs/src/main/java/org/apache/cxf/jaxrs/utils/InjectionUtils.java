@@ -2116,8 +2116,8 @@ name|nfe
 parameter_list|)
 block|{
 comment|//
-comment|//  For a path parameter this is probably a 404,
-comment|//  for others a 400...
+comment|//  For path, query& matrix parameters this is 404,
+comment|//  for others 400...
 comment|//
 if|if
 condition|(
@@ -2126,6 +2126,18 @@ operator|==
 name|ParameterType
 operator|.
 name|PATH
+operator|||
+name|pType
+operator|==
+name|ParameterType
+operator|.
+name|QUERY
+operator|||
+name|pType
+operator|==
+name|ParameterType
+operator|.
+name|MATRIX
 condition|)
 block|{
 throw|throw

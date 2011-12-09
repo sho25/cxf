@@ -1389,6 +1389,8 @@ block|{
 name|handleJAXBException
 argument_list|(
 name|e
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -2121,6 +2123,8 @@ block|{
 name|handleJAXBException
 argument_list|(
 name|e
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
