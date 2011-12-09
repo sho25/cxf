@@ -349,6 +349,13 @@ argument_list|)
 expr_stmt|;
 name|jmsConfig
 operator|.
+name|setReplyDestination
+argument_list|(
+literal|"queue:reply"
+argument_list|)
+expr_stmt|;
+name|jmsConfig
+operator|.
 name|setConnectionFactory
 argument_list|(
 name|connectionFactory
