@@ -297,6 +297,24 @@ parameter_list|()
 block|{     }
 specifier|public
 name|void
+name|setBusConfig
+parameter_list|(
+name|BusDefinitionParser
+operator|.
+name|BusConfig
+name|bc
+parameter_list|)
+block|{
+name|bc
+operator|.
+name|setBus
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
 name|loadAdditionalFeatures
 parameter_list|()
 block|{

@@ -1053,6 +1053,13 @@ argument_list|(
 name|bl
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
+name|reset
+argument_list|(
+name|bl
+argument_list|)
+expr_stmt|;
 name|bl
 operator|.
 name|preShutdown
