@@ -2286,7 +2286,7 @@ name|PORT
 operator|+
 literal|"/the/bookstore/books/convert"
 argument_list|,
-literal|500
+literal|400
 argument_list|,
 literal|"application/xml"
 argument_list|,
@@ -2303,7 +2303,7 @@ name|PORT
 operator|+
 literal|"/the/thebooks/bookstore/books/convert"
 argument_list|,
-literal|500
+literal|400
 argument_list|,
 literal|"application/xml"
 argument_list|,
@@ -2330,7 +2330,7 @@ name|PORT
 operator|+
 literal|"/the/bookstore/books/convert"
 argument_list|,
-literal|500
+literal|400
 argument_list|,
 literal|"application/json"
 argument_list|,
@@ -2347,7 +2347,7 @@ name|PORT
 operator|+
 literal|"/the/thebooks/bookstore/books/convert"
 argument_list|,
-literal|500
+literal|400
 argument_list|,
 literal|"application/json"
 argument_list|,
@@ -3265,7 +3265,7 @@ if|if
 condition|(
 name|expectedStatus
 operator|!=
-literal|500
+literal|400
 condition|)
 block|{
 name|InputStream
