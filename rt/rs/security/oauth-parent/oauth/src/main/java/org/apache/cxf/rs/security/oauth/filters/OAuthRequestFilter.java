@@ -339,14 +339,11 @@ argument_list|)
 expr_stmt|;
 name|m
 operator|.
-name|put
+name|setContent
 argument_list|(
 name|OAuthContext
 operator|.
 name|class
-operator|.
-name|getName
-argument_list|()
 argument_list|,
 name|createOAuthContext
 argument_list|(
