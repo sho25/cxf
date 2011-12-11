@@ -82,6 +82,10 @@ specifier|static
 name|int
 name|initCount
 decl_stmt|;
+specifier|static
+name|int
+name|shutdownCount
+decl_stmt|;
 specifier|public
 name|LifeCycleListenerTester
 parameter_list|()
@@ -126,6 +130,16 @@ return|return
 name|initCount
 return|;
 block|}
+specifier|public
+specifier|static
+name|int
+name|getShutdownCount
+parameter_list|()
+block|{
+return|return
+name|shutdownCount
+return|;
+block|}
 comment|/** {@inheritDoc}*/
 specifier|public
 name|void
@@ -141,7 +155,11 @@ specifier|public
 name|void
 name|postShutdown
 parameter_list|()
-block|{      }
+block|{
+name|shutdownCount
+operator|++
+expr_stmt|;
+block|}
 comment|/** {@inheritDoc}*/
 specifier|public
 name|void

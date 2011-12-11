@@ -607,6 +607,13 @@ argument_list|(
 literal|"bus"
 argument_list|)
 expr_stmt|;
+name|bean
+operator|.
+name|setDestroyMethodName
+argument_list|(
+literal|"shutdown"
+argument_list|)
+expr_stmt|;
 name|element
 operator|.
 name|setUserData
