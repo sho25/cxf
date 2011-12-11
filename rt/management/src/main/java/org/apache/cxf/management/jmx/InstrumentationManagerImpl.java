@@ -540,11 +540,6 @@ return|;
 block|}
 annotation|@
 name|Resource
-argument_list|(
-name|name
-operator|=
-literal|"cxf"
-argument_list|)
 specifier|public
 name|void
 name|setBus
