@@ -133,7 +133,7 @@ end_expr_stmt
 begin_for
 for|for the ##    specific language governing permissions and limitations ##    under the License.  package $
 block|{
-name|packageName
+package|package
 block|}
 end_for
 
@@ -157,7 +157,7 @@ name|WebService
 argument_list|(
 name|endpointInterface
 operator|=
-literal|"${packageName}.HelloWorld"
+literal|"${package}.HelloWorld"
 argument_list|)
 specifier|public
 class|class
