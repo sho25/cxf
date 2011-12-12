@@ -851,19 +851,13 @@ literal|25
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.1.3.1 (WSS 1.0) Encrypted UsernameToken with X.509v3      * TODO Implement when InitiatorEncryption and RecipientSignature policies      * are supported      */
+comment|/**      * 2.1.3.1 (WSS 1.0) Encrypted UsernameToken with X.509v3      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricEncrSupporting

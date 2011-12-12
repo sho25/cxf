@@ -8598,6 +8598,10 @@ expr_stmt|;
 if|if
 condition|(
 name|wss
+operator|==
+literal|null
+operator|||
+name|wss
 operator|.
 name|isMustSupportRefKeyIdentifier
 argument_list|()
