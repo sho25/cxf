@@ -227,7 +227,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/blueprint/wsrm-manager.xsd"
+literal|"/schemas/configuration/wsrm-manager.xsd"
 argument_list|)
 return|;
 block|}
