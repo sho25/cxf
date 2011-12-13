@@ -12,6 +12,8 @@ operator|.
 name|cxf
 operator|.
 name|maven_plugin
+operator|.
+name|wsdl2java
 package|;
 end_package
 
