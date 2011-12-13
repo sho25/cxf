@@ -479,22 +479,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|local
-operator|.
-name|LocalTransportFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
 name|ws
 operator|.
 name|commons
@@ -4564,10 +4548,9 @@ name|getTransportURI
 argument_list|()
 argument_list|)
 comment|// we may want this for testing.
+comment|// we do NOT want a dependency on the local transport.
 operator|||
-name|LocalTransportFactory
-operator|.
-name|TRANSPORT_ID
+literal|"http://cxf.apache.org/transports/local"
 operator|.
 name|equals
 argument_list|(
