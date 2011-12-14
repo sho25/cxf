@@ -3623,8 +3623,14 @@ else|else
 block|{
 if|if
 condition|(
+operator|(
 operator|!
 name|attached
+operator|&&
+operator|!
+name|isRequestor
+argument_list|()
+operator|)
 operator|||
 name|policyToken
 operator|instanceof
