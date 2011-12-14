@@ -259,8 +259,6 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
 name|IMocksControl
 import|;
 end_import
@@ -313,6 +311,18 @@ name|easymock
 operator|.
 name|EasyMock
 operator|.
+name|createNiceControl
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|easymock
+operator|.
+name|EasyMock
+operator|.
 name|eq
 import|;
 end_import
@@ -338,20 +348,6 @@ operator|.
 name|EasyMock
 operator|.
 name|isA
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|easymock
-operator|.
-name|classextension
-operator|.
-name|EasyMock
-operator|.
-name|createNiceControl
 import|;
 end_import
 

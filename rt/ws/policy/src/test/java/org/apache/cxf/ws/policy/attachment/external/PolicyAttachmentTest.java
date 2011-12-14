@@ -153,8 +153,6 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
 name|EasyMock
 import|;
 end_import
@@ -164,8 +162,6 @@ import|import
 name|org
 operator|.
 name|easymock
-operator|.
-name|classextension
 operator|.
 name|IMocksControl
 import|;

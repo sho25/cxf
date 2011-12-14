@@ -87,7 +87,7 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|IArgumentMatcher
+name|EasyMock
 import|;
 end_import
 
@@ -97,9 +97,7 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
-name|EasyMock
+name|IArgumentMatcher
 import|;
 end_import
 

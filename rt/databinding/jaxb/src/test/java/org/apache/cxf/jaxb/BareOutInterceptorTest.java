@@ -211,7 +211,7 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|IMocksControl
+name|EasyMock
 import|;
 end_import
 
@@ -221,9 +221,7 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
-name|EasyMock
+name|IMocksControl
 import|;
 end_import
 

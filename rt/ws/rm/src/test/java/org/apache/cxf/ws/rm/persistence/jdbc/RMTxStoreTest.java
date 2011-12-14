@@ -289,8 +289,6 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
 name|EasyMock
 import|;
 end_import
@@ -300,8 +298,6 @@ import|import
 name|org
 operator|.
 name|easymock
-operator|.
-name|classextension
 operator|.
 name|IMocksControl
 import|;
@@ -2018,7 +2014,12 @@ argument_list|)
 operator|.
 name|andReturn
 argument_list|(
-literal|null
+name|Long
+operator|.
+name|valueOf
+argument_list|(
+literal|0
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|EasyMock

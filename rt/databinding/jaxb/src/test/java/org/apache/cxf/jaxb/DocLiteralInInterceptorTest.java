@@ -445,8 +445,6 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
 name|IMocksControl
 import|;
 end_import
@@ -489,7 +487,7 @@ name|easymock
 operator|.
 name|EasyMock
 operator|.
-name|expect
+name|createNiceControl
 import|;
 end_import
 
@@ -499,11 +497,9 @@ name|org
 operator|.
 name|easymock
 operator|.
-name|classextension
-operator|.
 name|EasyMock
 operator|.
-name|createNiceControl
+name|expect
 import|;
 end_import
 
