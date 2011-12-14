@@ -187,22 +187,6 @@ name|MessageImpl
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|mime
-operator|.
-name|types
-operator|.
-name|XopType
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final

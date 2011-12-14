@@ -463,7 +463,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|hello_world
+name|hello_world_soap_http
 operator|.
 name|types
 operator|.
@@ -577,7 +577,7 @@ specifier|final
 name|String
 name|WSDL_PATH
 init|=
-literal|"/wsdl/hello_world.wsdl"
+literal|"/wsdl/jaxb/hello_world.wsdl"
 decl_stmt|;
 specifier|private
 name|Definition

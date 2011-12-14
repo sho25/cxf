@@ -1252,7 +1252,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/hello_world.wsdl"
+literal|"/wsdl/jaxb/hello_world.wsdl"
 argument_list|)
 argument_list|,
 operator|new
@@ -1483,7 +1483,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/wsdl/doc_lit_bare.wsdl"
+literal|"/wsdl/jaxb/doc_lit_bare.wsdl"
 argument_list|)
 argument_list|,
 operator|new

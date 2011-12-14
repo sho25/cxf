@@ -508,7 +508,7 @@ name|d
 init|=
 name|createDefinition
 argument_list|(
-literal|"/wsdl/no_body_parts.wsdl"
+literal|"/wsdl_soap/no_body_parts.wsdl"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -804,7 +804,7 @@ name|d
 init|=
 name|createDefinition
 argument_list|(
-literal|"/wsdl/hello_world.wsdl"
+literal|"/wsdl_soap/hello_world.wsdl"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1099,7 +1099,7 @@ name|d
 init|=
 name|createDefinition
 argument_list|(
-literal|"/wsdl/hello_world_soap12.wsdl"
+literal|"/wsdl_soap/hello_world_soap12.wsdl"
 argument_list|)
 decl_stmt|;
 name|Bus
