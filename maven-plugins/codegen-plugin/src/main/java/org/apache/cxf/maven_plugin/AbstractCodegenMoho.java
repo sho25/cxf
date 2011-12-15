@@ -1631,7 +1631,8 @@ name|basedir
 argument_list|,
 name|wsdlURI
 argument_list|,
-literal|"java"
+name|getMarkerSuffix
+argument_list|()
 argument_list|)
 decl_stmt|;
 try|try
