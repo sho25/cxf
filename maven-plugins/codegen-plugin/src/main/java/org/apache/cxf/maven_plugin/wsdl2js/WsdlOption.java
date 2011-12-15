@@ -419,6 +419,31 @@ return|return
 name|options
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"WsdlOption [wsdl=%s, artifact=%s, %s]"
+argument_list|,
+name|wsdl
+argument_list|,
+name|artifact
+argument_list|,
+name|super
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 

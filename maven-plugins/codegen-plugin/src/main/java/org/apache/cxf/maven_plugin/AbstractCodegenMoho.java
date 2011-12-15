@@ -530,7 +530,7 @@ specifier|protected
 name|File
 name|wsdlRoot
 decl_stmt|;
-comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      *       * @parameter      * @since 2.4      */
+comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      *       * @parameter expression="${cxf.codegen.jvmArgs}"      * @since 2.4      */
 specifier|private
 name|String
 name|additionalJvmArgs
@@ -1368,7 +1368,7 @@ name|basedir
 argument_list|,
 name|wsdlURI
 argument_list|,
-literal|"java"
+literal|"js"
 argument_list|)
 decl_stmt|;
 if|if
@@ -1822,7 +1822,7 @@ argument_list|()
 operator|.
 name|info
 argument_list|(
-literal|"Running wsdl2java in fork mode..."
+literal|"Running code generation in fork mode..."
 argument_list|)
 expr_stmt|;
 name|getLog
@@ -1830,7 +1830,7 @@ argument_list|()
 operator|.
 name|debug
 argument_list|(
-literal|"Running wsdl2java in fork mode with args "
+literal|"Running code generation in fork mode with args "
 operator|+
 name|Arrays
 operator|.

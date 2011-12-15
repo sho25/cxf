@@ -218,7 +218,7 @@ comment|/**      * Path where the generated sources should be placed      *     
 name|File
 name|sourceRoot
 decl_stmt|;
-comment|/**      * @parameter      */
+comment|/**      * Options that specify WSDLs to process and/or control the processing of wsdls.       * If you have enabled wsdl scanning, these elements attach options to particular wsdls.      * If you have not enabled wsdl scanning, these options call out the wsdls to process.       * @parameter      */
 name|WsdlOption
 name|wsdlOptions
 index|[]

@@ -27,6 +27,16 @@ name|File
 import|;
 end_import
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Arrays
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -280,7 +290,7 @@ expr_stmt|;
 block|}
 comment|/**      * @return Validating the WSDL?      */
 specifier|public
-name|boolean
+name|Boolean
 name|isValidate
 parameter_list|()
 block|{
@@ -293,7 +303,7 @@ specifier|public
 name|void
 name|setValidate
 parameter_list|(
-name|boolean
+name|Boolean
 name|validate
 parameter_list|)
 block|{
@@ -375,6 +385,46 @@ name|dependencies
 operator|=
 name|dependencies
 expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|String
+name|toString
+parameter_list|()
+block|{
+return|return
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"Option [packagePrefixes=%s, catalog=%s, output=%s, "
+operator|+
+literal|" validate=%s, wsdlVersion=%s, dependencies=%s]"
+argument_list|,
+name|Arrays
+operator|.
+name|toString
+argument_list|(
+name|packagePrefixes
+argument_list|)
+argument_list|,
+name|catalog
+argument_list|,
+name|output
+argument_list|,
+name|validate
+argument_list|,
+name|wsdlVersion
+argument_list|,
+name|Arrays
+operator|.
+name|toString
+argument_list|(
+name|dependencies
+argument_list|)
+argument_list|)
+return|;
 block|}
 block|}
 end_class
