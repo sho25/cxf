@@ -1267,6 +1267,12 @@ literal|true
 return|;
 block|}
 specifier|protected
+specifier|abstract
+name|String
+name|getMarkerSuffix
+parameter_list|()
+function_decl|;
+specifier|protected
 name|void
 name|forkOnce
 parameter_list|(
@@ -1368,7 +1374,8 @@ name|basedir
 argument_list|,
 name|wsdlURI
 argument_list|,
-literal|"js"
+name|getMarkerSuffix
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if

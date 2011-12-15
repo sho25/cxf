@@ -1348,6 +1348,17 @@ name|execute
 argument_list|()
 expr_stmt|;
 block|}
+annotation|@
+name|Override
+specifier|protected
+name|String
+name|getMarkerSuffix
+parameter_list|()
+block|{
+return|return
+literal|"java"
+return|;
+block|}
 block|}
 end_class
 

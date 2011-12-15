@@ -1455,6 +1455,17 @@ operator|.
 name|class
 return|;
 block|}
+annotation|@
+name|Override
+specifier|protected
+name|String
+name|getMarkerSuffix
+parameter_list|()
+block|{
+return|return
+literal|"js"
+return|;
+block|}
 block|}
 end_class
 
