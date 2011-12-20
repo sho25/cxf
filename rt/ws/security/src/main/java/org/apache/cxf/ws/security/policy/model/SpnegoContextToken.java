@@ -157,7 +157,7 @@ name|SP12Constants
 operator|.
 name|INSTANCE
 operator|.
-name|getKerberosToken
+name|getSpnegoContextToken
 argument_list|()
 return|;
 block|}

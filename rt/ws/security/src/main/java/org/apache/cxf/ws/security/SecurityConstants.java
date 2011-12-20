@@ -363,6 +363,24 @@ name|KERBEROS_CLIENT
 init|=
 literal|"ws-security.kerberos.client"
 decl_stmt|;
+comment|/**      * The JAAS Context name to use for Kerberos. This is currently only supported for SPNEGO.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_JAAS_CONTEXT_NAME
+init|=
+literal|"ws-security.kerberos.jaas.context"
+decl_stmt|;
+comment|/**      * The Kerberos Service Provider Name (spn) to use. This is currently only supported for SPNEGO.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_SPN
+init|=
+literal|"ws-security.kerberos.spn"
+decl_stmt|;
 comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
 specifier|public
 specifier|static
@@ -466,6 +484,10 @@ block|,
 name|SCT_TOKEN_VALIDATOR
 block|,
 name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
+block|,
+name|KERBEROS_JAAS_CONTEXT_NAME
+block|,
+name|KERBEROS_SPN
 block|}
 argument_list|)
 argument_list|)

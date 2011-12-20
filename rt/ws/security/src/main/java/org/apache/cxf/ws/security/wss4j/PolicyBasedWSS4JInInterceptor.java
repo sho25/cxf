@@ -3245,7 +3245,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/*         WSSecurityEngineResult tsResult = WSSecurityUtil.fetchActionResult(results, WSConstants.TS);         Element timestamp = null;         if (tsResult != null) {             Timestamp ts = (Timestamp)tsResult.get(WSSecurityEngineResult.TAG_TIMESTAMP);             timestamp = ts.getElement();         }         */
 comment|//
 comment|// Check policies
 comment|//
