@@ -985,7 +985,7 @@ name|List
 argument_list|<
 name|XPathExpression
 argument_list|>
-name|xPaths
+name|xpaths
 parameter_list|)
 block|{
 name|this
@@ -997,7 +997,7 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
-name|xPaths
+name|xpaths
 operator|!=
 literal|null
 condition|)
@@ -1008,7 +1008,7 @@ name|xPaths
 operator|.
 name|addAll
 argument_list|(
-name|xPaths
+name|xpaths
 argument_list|)
 expr_stmt|;
 block|}
