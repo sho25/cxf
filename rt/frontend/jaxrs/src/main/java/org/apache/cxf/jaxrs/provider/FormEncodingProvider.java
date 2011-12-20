@@ -963,8 +963,6 @@ name|populateMapFromMultipart
 argument_list|(
 name|params
 argument_list|,
-name|anns
-argument_list|,
 name|body
 argument_list|,
 name|decode

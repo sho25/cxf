@@ -5314,8 +5314,6 @@ name|populateMapFromMultipart
 argument_list|(
 name|params
 argument_list|,
-name|paramAnns
-argument_list|,
 name|body
 argument_list|,
 name|decode
