@@ -2339,11 +2339,23 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-comment|//        doPost("http://localhost:" + PORT + "/the/thebooks/bookstore/books/convert",
-comment|//               400,
-comment|//               "application/json",
-comment|//               "resources/add_book2json_invalid.txt",
-comment|//               null);
+name|doPost
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/the/thebooks/bookstore/books/convert"
+argument_list|,
+literal|400
+argument_list|,
+literal|"application/json"
+argument_list|,
+literal|"resources/add_book2json_invalid.txt"
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
