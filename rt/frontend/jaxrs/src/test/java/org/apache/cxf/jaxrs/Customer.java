@@ -41,6 +41,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Locale
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -965,6 +975,19 @@ literal|""
 argument_list|)
 name|CustomerBean
 name|cb
+parameter_list|)
+block|{              }
+specifier|public
+name|void
+name|testLocaleParam
+parameter_list|(
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"p1"
+argument_list|)
+name|Locale
+name|l
 parameter_list|)
 block|{              }
 specifier|public
