@@ -1105,9 +1105,9 @@ decl_stmt|;
 if|if
 condition|(
 name|cd
-operator|==
+operator|!=
 literal|null
-operator|||
+operator|&&
 operator|!
 name|MULTIPART_FORM_DATA_TYPE
 operator|.
@@ -1125,6 +1125,12 @@ block|}
 name|String
 name|cdName
 init|=
+name|cd
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 name|cd
 operator|.
 name|getParameter
