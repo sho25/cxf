@@ -495,6 +495,8 @@ argument_list|(
 name|BookServerSpring
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1625,7 +1627,7 @@ name|endpointAddress
 argument_list|,
 literal|"resources/expected_get_book123json.txt"
 argument_list|,
-literal|"application/jettison"
+literal|"application/vnd.example-com.foo+json"
 argument_list|)
 expr_stmt|;
 block|}
