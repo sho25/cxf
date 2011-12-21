@@ -628,6 +628,7 @@ return|return
 name|faultInterceptors
 return|;
 block|}
+specifier|public
 name|void
 name|initialize
 parameter_list|()

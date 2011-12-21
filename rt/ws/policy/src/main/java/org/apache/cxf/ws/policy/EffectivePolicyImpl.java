@@ -431,6 +431,7 @@ return|return
 name|chosenAlternative
 return|;
 block|}
+specifier|public
 name|void
 name|initialise
 parameter_list|(
@@ -481,6 +482,7 @@ name|inbound
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
 name|void
 name|initialise
 parameter_list|(
@@ -533,6 +535,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
 name|void
 name|initialise
 parameter_list|(
@@ -596,6 +599,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
 name|void
 name|initialise
 parameter_list|(
@@ -648,6 +652,7 @@ name|requestor
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
 name|void
 name|initialise
 parameter_list|(
