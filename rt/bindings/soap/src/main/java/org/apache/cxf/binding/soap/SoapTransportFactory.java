@@ -541,6 +541,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CANNOT_GET_CONDUIT_ERROR
+init|=
+literal|"Could not find conduit initiator for address: %s and transport: %s"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|SOAP_11_HTTP_BINDING
 init|=
 literal|"http://schemas.xmlsoap.org/soap/http"
@@ -1466,9 +1474,16 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Could not find conduit initiator for transport "
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+name|CANNOT_GET_CONDUIT_ERROR
+argument_list|,
+name|address
+argument_list|,
 name|transId
+argument_list|)
 argument_list|)
 throw|;
 block|}
@@ -1493,9 +1508,16 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"Could not find conduit initiator for transport "
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+name|CANNOT_GET_CONDUIT_ERROR
+argument_list|,
+name|address
+argument_list|,
 name|transId
+argument_list|)
 argument_list|)
 throw|;
 block|}
