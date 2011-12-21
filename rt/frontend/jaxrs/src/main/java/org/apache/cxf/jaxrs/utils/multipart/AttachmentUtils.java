@@ -782,6 +782,12 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
+else|else
+block|{
+return|return
+literal|null
+return|;
+block|}
 block|}
 return|return
 name|infos
