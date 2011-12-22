@@ -542,6 +542,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|/*          * If there is an actual method annotated with @OPTIONS, this is the annotation (if any) from it.          * The lookup falls back to it.          */
 name|CrossOriginResourceSharing
 name|annotation
 init|=
@@ -550,6 +551,29 @@ argument_list|(
 name|opResInfo
 argument_list|)
 decl_stmt|;
+comment|/*          * If we don't have an annotation on the target method or an @OPTION method, perhaps          * we've got one on the class?          */
+if|if
+condition|(
+name|annotation
+operator|==
+literal|null
+condition|)
+block|{
+name|annotation
+operator|=
+name|resourceClass
+operator|.
+name|getServiceClass
+argument_list|()
+operator|.
+name|getAnnotation
+argument_list|(
+name|CrossOriginResourceSharing
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 literal|"OPTIONS"
