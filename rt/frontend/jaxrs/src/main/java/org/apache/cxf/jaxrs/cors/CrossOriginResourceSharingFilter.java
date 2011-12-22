@@ -482,6 +482,10 @@ name|boolean
 name|defaultOptionsMethodsHandlePreflight
 decl_stmt|;
 specifier|private
+name|boolean
+name|allowAnyHeaders
+decl_stmt|;
+specifier|private
 name|CrossOriginResourceSharing
 name|getAnnotation
 parameter_list|(
@@ -979,22 +983,7 @@ name|optionAnn
 else|:
 name|ann
 expr_stmt|;
-if|if
-condition|(
-name|ann
-operator|==
-literal|null
-condition|)
-block|{
-return|return
-name|createPreflightResponse
-argument_list|(
-name|m
-argument_list|,
-literal|false
-argument_list|)
-return|;
-block|}
+comment|/* We aren't required to have any annotation at all. If no annotation,          * the properties of this filter make all the decisions.          */
 comment|// 5.2.2 must be on the list or we must be matching *.
 name|boolean
 name|effectiveAllowAllOrigins
@@ -1051,6 +1040,12 @@ comment|// This was indirectly enforced by getCorsMethod()
 comment|// 5.2.6 reject if the header is not listed.
 if|if
 condition|(
+operator|!
+name|effectiveAllowAnyHeaders
+argument_list|(
+name|ann
+argument_list|)
+operator|&&
 operator|!
 name|effectiveAllowHeaders
 argument_list|(
@@ -1965,6 +1960,35 @@ return|;
 block|}
 block|}
 specifier|private
+name|boolean
+name|effectiveAllowAnyHeaders
+parameter_list|(
+name|CrossOriginResourceSharing
+name|ann
+parameter_list|)
+block|{
+if|if
+condition|(
+name|ann
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|ann
+operator|.
+name|allowAnyHeaders
+argument_list|()
+return|;
+block|}
+else|else
+block|{
+return|return
+name|allowAnyHeaders
+return|;
+block|}
+block|}
+specifier|private
 name|List
 argument_list|<
 name|String
@@ -2577,7 +2601,7 @@ operator|=
 name|maxAge
 expr_stmt|;
 block|}
-comment|/**      * Preflight error response status, default is 200.      *       * @param status      */
+comment|/**      * Preflight error response status, default is 200.      *       * @param status HTTP status code.      */
 specifier|public
 name|void
 name|setPreflightErrorStatus
@@ -2616,6 +2640,31 @@ operator|.
 name|defaultOptionsMethodsHandlePreflight
 operator|=
 name|defaultOptionsMethodsHandlePreflight
+expr_stmt|;
+block|}
+specifier|public
+name|boolean
+name|isAllowAnyHeaders
+parameter_list|()
+block|{
+return|return
+name|allowAnyHeaders
+return|;
+block|}
+comment|/**      * Completely relax the Access-Control-Request-Headers check.       * Any headers in this header will be permitted. Handy for       * dealing with Chrome / Firefox / Safari incompatibilities.      * @param allowAnyHeader whether to allow any header. If<tt>false</tt>,      * respect the allowHeaders property.      */
+specifier|public
+name|void
+name|setAllowAnyHeaders
+parameter_list|(
+name|boolean
+name|allowAnyHeader
+parameter_list|)
+block|{
+name|this
+operator|.
+name|allowAnyHeaders
+operator|=
+name|allowAnyHeader
 expr_stmt|;
 block|}
 block|}

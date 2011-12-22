@@ -131,6 +131,13 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
+comment|/**      * Act as if whatever headers are listed in the Access-Control-Request-Headers are       * listed in allowHeaders. Convenient for dealing with Browser bugs.       */
+name|boolean
+name|allowAnyHeaders
+parameter_list|()
+default|default
+literal|false
+function_decl|;
 comment|/**      * If true, this resource will return       *<pre>Access-Control-Allow-Credentials: true</pre>      */
 name|boolean
 name|allowCredentials
