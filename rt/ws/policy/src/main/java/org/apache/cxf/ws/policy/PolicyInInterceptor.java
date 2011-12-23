@@ -394,28 +394,7 @@ condition|)
 block|{
 return|return;
 block|}
-if|if
-condition|(
-name|MessageUtils
-operator|.
-name|isRequestor
-argument_list|(
-name|msg
-argument_list|)
-condition|)
-block|{
-name|BindingOperationInfo
-name|boi
-init|=
-name|exchange
-operator|.
-name|get
-argument_list|(
-name|BindingOperationInfo
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
+comment|// 1. Check overridden policy
 name|Policy
 name|p
 init|=
@@ -609,7 +588,29 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-elseif|else
+comment|// 2. Process client policy
+if|if
+condition|(
+name|MessageUtils
+operator|.
+name|isRequestor
+argument_list|(
+name|msg
+argument_list|)
+condition|)
+block|{
+name|BindingOperationInfo
+name|boi
+init|=
+name|exchange
+operator|.
+name|get
+argument_list|(
+name|BindingOperationInfo
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
 name|boi
@@ -687,7 +688,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|// insert assertions of endpoint's vocabulary into message
+comment|// Insert assertions of endpoint's vocabulary into message
 name|Collection
 argument_list|<
 name|Assertion
@@ -851,6 +852,7 @@ block|}
 block|}
 else|else
 block|{
+comment|// 3. Process server policy
 name|Destination
 name|destination
 init|=
