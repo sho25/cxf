@@ -3490,11 +3490,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Enable once http://jira.codehaus.org/browse/JETTISON-104 gets resolved"
-argument_list|)
 specifier|public
 name|void
 name|testReadQualifiedArray
@@ -3985,7 +3980,7 @@ name|Test
 annotation|@
 name|Ignore
 argument_list|(
-literal|"This is hitting http://jira.codehaus.org/browse/JETTISON-44"
+literal|"Enable once http://jira.codehaus.org/browse/JETTISON-75 gets fixed"
 argument_list|)
 specifier|public
 name|void
@@ -3996,7 +3991,7 @@ name|Exception
 block|{
 name|doTestMixedContent
 argument_list|(
-literal|"{\"Book\":{\"name\":\"CXF\",\"id\":125,\"$\":\"\\n     \\n\"}}"
+literal|"{\"Book\":{\"name\":\"CXF\",\"id\":125}}"
 argument_list|,
 literal|false
 argument_list|,
