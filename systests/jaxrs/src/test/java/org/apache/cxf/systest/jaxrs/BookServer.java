@@ -326,6 +326,15 @@ operator|.
 name|add
 argument_list|(
 operator|new
+name|FormatResponseHandler
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|providers
+operator|.
+name|add
+argument_list|(
+operator|new
 name|GenericHandlerWriter
 argument_list|()
 argument_list|)
