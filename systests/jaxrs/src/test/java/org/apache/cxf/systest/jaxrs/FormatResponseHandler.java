@@ -132,8 +132,6 @@ specifier|private
 name|MessageContext
 name|mc
 decl_stmt|;
-annotation|@
-name|Override
 specifier|public
 name|Response
 name|handleResponse
