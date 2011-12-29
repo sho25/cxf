@@ -3977,11 +3977,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Enable once http://jira.codehaus.org/browse/JETTISON-75 gets fixed"
-argument_list|)
 specifier|public
 name|void
 name|testWriteMixedContent
