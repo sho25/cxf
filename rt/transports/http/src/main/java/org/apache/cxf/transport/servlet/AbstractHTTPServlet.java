@@ -1218,13 +1218,32 @@ operator|==
 literal|null
 condition|)
 block|{
+name|String
+name|errorMessage
+init|=
+literal|"No RequestDispatcher can be created for path "
+operator|+
+name|pathInfo
+decl_stmt|;
+if|if
+condition|(
+name|dispatcherServletName
+operator|!=
+literal|null
+condition|)
+block|{
+name|errorMessage
+operator|+=
+literal|", dispatcher name: "
+operator|+
+name|dispatcherServletName
+expr_stmt|;
+block|}
 throw|throw
 operator|new
 name|ServletException
 argument_list|(
-literal|"No RequestDispatcher can be created for path "
-operator|+
-name|pathInfo
+name|errorMessage
 argument_list|)
 throw|;
 block|}
