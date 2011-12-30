@@ -135,16 +135,8 @@ name|getRequestTokenWithGET
 parameter_list|()
 block|{
 return|return
-name|handler
-operator|.
-name|handle
-argument_list|(
-name|getHttpRequest
+name|getRequestToken
 argument_list|()
-argument_list|,
-name|getDataProvider
-argument_list|()
-argument_list|)
 return|;
 block|}
 annotation|@
@@ -164,7 +156,7 @@ name|handler
 operator|.
 name|handle
 argument_list|(
-name|getHttpRequest
+name|getMessageContext
 argument_list|()
 argument_list|,
 name|getDataProvider
