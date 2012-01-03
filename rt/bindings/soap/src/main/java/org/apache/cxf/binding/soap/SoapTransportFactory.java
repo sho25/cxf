@@ -1310,6 +1310,15 @@ name|String
 name|address
 init|=
 name|target
+operator|==
+literal|null
+condition|?
+name|ei
+operator|.
+name|getAddress
+argument_list|()
+else|:
+name|target
 operator|.
 name|getAddress
 argument_list|()
