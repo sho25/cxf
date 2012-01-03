@@ -1188,8 +1188,6 @@ name|includes
 argument_list|,
 name|excludes
 argument_list|,
-name|defaultOptions
-argument_list|,
 name|getGeneratedSourceRoot
 argument_list|()
 argument_list|)
@@ -1229,8 +1227,6 @@ name|includes
 argument_list|,
 name|excludes
 argument_list|,
-name|defaultOptions
-argument_list|,
 name|getGeneratedTestRoot
 argument_list|()
 argument_list|)
@@ -1257,8 +1253,6 @@ name|loadWsdlOptionsFromDependencies
 argument_list|(
 name|project
 argument_list|,
-name|defaultOptions
-argument_list|,
 name|getGeneratedSourceRoot
 argument_list|()
 argument_list|)
@@ -1271,12 +1265,12 @@ name|temp
 argument_list|)
 expr_stmt|;
 block|}
-name|downloadRemoteWsdls
+name|mergeOptions
 argument_list|(
 name|effectiveWsdlOptions
 argument_list|)
 expr_stmt|;
-name|mergeOptions
+name|downloadRemoteWsdls
 argument_list|(
 name|effectiveWsdlOptions
 argument_list|)
