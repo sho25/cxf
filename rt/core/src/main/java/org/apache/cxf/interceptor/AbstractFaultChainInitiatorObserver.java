@@ -512,6 +512,15 @@ name|message
 operator|.
 name|get
 argument_list|(
+literal|"org.apache.cxf.ws.rm.inbound"
+argument_list|)
+operator|==
+literal|null
+operator|&&
+name|message
+operator|.
+name|get
+argument_list|(
 literal|"javax.xml.ws.addressing.context.inbound"
 argument_list|)
 operator|!=
