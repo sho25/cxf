@@ -3105,6 +3105,14 @@ name|containsKey
 argument_list|(
 name|key
 argument_list|)
+operator|&&
+operator|!
+name|scopes
+operator|.
+name|containsKey
+argument_list|(
+name|key
+argument_list|)
 condition|)
 block|{
 throw|throw
