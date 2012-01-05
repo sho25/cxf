@@ -479,7 +479,16 @@ argument_list|(
 operator|new
 name|Component
 argument_list|()
-block|{ }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|977142547536262901L
+decl_stmt|;
+block|}
 argument_list|)
 decl_stmt|;
 name|tracker

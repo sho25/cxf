@@ -1065,6 +1065,14 @@ name|HTTPAddress
 implements|,
 name|SOAPAddress
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7048265985129995746L
+decl_stmt|;
 specifier|public
 name|HttpAddressType
 parameter_list|()

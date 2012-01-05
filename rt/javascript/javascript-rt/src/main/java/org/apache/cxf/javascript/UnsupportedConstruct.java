@@ -54,6 +54,15 @@ name|UnsupportedConstruct
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5854990568839716895L
+decl_stmt|;
 specifier|public
 name|UnsupportedConstruct
 parameter_list|()

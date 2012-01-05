@@ -53,6 +53,15 @@ argument_list|>
 implements|implements
 name|StringMap
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4590903451121887L
+decl_stmt|;
 specifier|public
 name|StringMapImpl
 parameter_list|()

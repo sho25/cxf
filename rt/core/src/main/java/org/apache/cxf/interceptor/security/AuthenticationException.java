@@ -24,6 +24,15 @@ name|AuthenticationException
 extends|extends
 name|SecurityException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|823479120896894071L
+decl_stmt|;
 specifier|public
 name|AuthenticationException
 parameter_list|()

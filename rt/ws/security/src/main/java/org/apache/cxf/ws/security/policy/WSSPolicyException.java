@@ -58,6 +58,15 @@ name|WSSPolicyException
 extends|extends
 name|UncheckedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1820931045955310166L
+decl_stmt|;
 specifier|public
 name|WSSPolicyException
 parameter_list|(

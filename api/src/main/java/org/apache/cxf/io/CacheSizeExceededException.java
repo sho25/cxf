@@ -22,6 +22,15 @@ name|CacheSizeExceededException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8976580055837650080L
+decl_stmt|;
 specifier|public
 name|CacheSizeExceededException
 parameter_list|()

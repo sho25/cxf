@@ -122,6 +122,15 @@ name|ExtensionDeserializer
 implements|,
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4016144719848135088L
+decl_stmt|;
 specifier|public
 name|JAXWSBindingDeserializer
 parameter_list|()

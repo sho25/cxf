@@ -131,6 +131,15 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1507727324874727254L
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|Collection
 argument_list|<
 name|QName

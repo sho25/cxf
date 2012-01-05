@@ -32,6 +32,14 @@ name|OAuthServiceException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|343738539234766320L
+decl_stmt|;
 specifier|public
 name|OAuthServiceException
 parameter_list|(

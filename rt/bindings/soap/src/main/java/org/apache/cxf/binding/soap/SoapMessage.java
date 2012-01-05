@@ -123,6 +123,14 @@ extends|extends
 name|MessageImpl
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6310906412722265578L
+decl_stmt|;
+specifier|private
 name|SoapVersion
 name|version
 decl_stmt|;

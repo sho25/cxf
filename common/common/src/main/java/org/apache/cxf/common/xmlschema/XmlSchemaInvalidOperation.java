@@ -28,6 +28,14 @@ name|XmlSchemaInvalidOperation
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7007258111909011558L
+decl_stmt|;
 specifier|public
 name|XmlSchemaInvalidOperation
 parameter_list|(

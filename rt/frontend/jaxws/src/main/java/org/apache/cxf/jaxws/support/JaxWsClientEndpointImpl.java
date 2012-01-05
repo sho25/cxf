@@ -133,6 +133,14 @@ extends|extends
 name|JaxWsEndpointImpl
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3059035442836604053L
+decl_stmt|;
+specifier|private
 name|ServiceImpl
 name|executorProvider
 decl_stmt|;

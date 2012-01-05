@@ -227,6 +227,15 @@ implements|,
 name|Configurable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3920605127948701230L
+decl_stmt|;
+specifier|private
 name|List
 argument_list|<
 name|ServiceInfo

@@ -68,6 +68,15 @@ name|ServiceConstructionException
 extends|extends
 name|UncheckedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4242545895784708313L
+decl_stmt|;
 specifier|public
 name|ServiceConstructionException
 parameter_list|(

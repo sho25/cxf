@@ -69,24 +69,6 @@ name|Holder
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|systest
-operator|.
-name|jaxws
-operator|.
-name|DocLitWrappedCodeFirstService
-operator|.
-name|Foo
-import|;
-end_import
-
 begin_class
 annotation|@
 name|WebService

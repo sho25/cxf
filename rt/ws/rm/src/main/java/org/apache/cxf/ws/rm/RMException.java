@@ -60,6 +60,14 @@ name|RMException
 extends|extends
 name|Exception
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7216414721524238682L
+decl_stmt|;
 specifier|public
 name|RMException
 parameter_list|(

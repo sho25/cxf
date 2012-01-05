@@ -132,6 +132,15 @@ name|JAXBToStringStyleImpl
 extends|extends
 name|ToStringStyle
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|584903238590491314L
+decl_stmt|;
 name|JAXBToStringStyleImpl
 parameter_list|()
 block|{

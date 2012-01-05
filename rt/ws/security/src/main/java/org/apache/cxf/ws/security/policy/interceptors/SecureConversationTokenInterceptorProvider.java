@@ -374,6 +374,14 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8739057200687855383L
+decl_stmt|;
 specifier|public
 name|SecureConversationTokenInterceptorProvider
 parameter_list|()

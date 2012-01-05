@@ -78,6 +78,15 @@ implements|implements
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7755998413495017637L
+decl_stmt|;
+specifier|private
 name|String
 name|oauthToken
 decl_stmt|;

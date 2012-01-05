@@ -74,6 +74,15 @@ name|TrustException
 extends|extends
 name|UncheckedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2957463932630164766L
+decl_stmt|;
 comment|/**      * @param msg      */
 specifier|public
 name|TrustException

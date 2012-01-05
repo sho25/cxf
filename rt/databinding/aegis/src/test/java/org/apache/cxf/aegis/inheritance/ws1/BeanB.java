@@ -31,6 +31,14 @@ extends|extends
 name|BeanA
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8140920723297559985L
+decl_stmt|;
+specifier|private
 name|String
 name|propB
 decl_stmt|;

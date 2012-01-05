@@ -30,6 +30,15 @@ name|TimezoneLessXsDateFormat
 extends|extends
 name|XsDateTimeFormat
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2584986778843863501L
+decl_stmt|;
 comment|/**      * Creates a new instance.      */
 specifier|public
 name|TimezoneLessXsDateFormat

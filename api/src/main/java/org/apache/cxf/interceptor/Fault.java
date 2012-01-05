@@ -171,6 +171,15 @@ init|=
 literal|500
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1583932965031558864L
+decl_stmt|;
+specifier|private
 name|Element
 name|detail
 decl_stmt|;

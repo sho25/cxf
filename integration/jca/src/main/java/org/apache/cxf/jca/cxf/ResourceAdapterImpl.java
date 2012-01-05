@@ -317,6 +317,14 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5318740621610762307L
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|Logger
 name|LOG
 init|=

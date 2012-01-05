@@ -26,6 +26,15 @@ name|AddNumbersException
 extends|extends
 name|Exception
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3505090501603896872L
+decl_stmt|;
 name|String
 name|detail
 decl_stmt|;

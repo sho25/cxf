@@ -206,6 +206,15 @@ name|JSDOMProviderException
 extends|extends
 name|Exception
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6082342781592829823L
+decl_stmt|;
 specifier|public
 name|JSDOMProviderException
 parameter_list|(

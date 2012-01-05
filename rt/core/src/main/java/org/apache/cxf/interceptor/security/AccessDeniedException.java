@@ -24,6 +24,14 @@ name|AccessDeniedException
 extends|extends
 name|SecurityException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|9169091575394965388L
+decl_stmt|;
 specifier|public
 name|AccessDeniedException
 parameter_list|(

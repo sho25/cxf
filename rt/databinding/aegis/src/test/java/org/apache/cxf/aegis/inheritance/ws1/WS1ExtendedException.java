@@ -31,6 +31,14 @@ extends|extends
 name|WS1Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|346325404400568680L
+decl_stmt|;
+specifier|private
 name|int
 name|extendedCode
 decl_stmt|;

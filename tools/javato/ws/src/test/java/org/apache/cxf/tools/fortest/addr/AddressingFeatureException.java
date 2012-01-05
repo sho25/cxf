@@ -38,6 +38,15 @@ name|AddressingFeatureException
 extends|extends
 name|WebServiceException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1114499217515864968L
+decl_stmt|;
 name|String
 name|detail
 decl_stmt|;

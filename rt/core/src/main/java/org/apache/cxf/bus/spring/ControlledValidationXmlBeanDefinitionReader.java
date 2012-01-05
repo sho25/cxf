@@ -249,7 +249,17 @@ class|class
 name|StaleFastinfosetException
 extends|extends
 name|Exception
-block|{      }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3594973504794187383L
+decl_stmt|;
+block|}
 comment|// the following flag allows performance comparisons with and
 comment|// without fast infoset processing.
 specifier|private

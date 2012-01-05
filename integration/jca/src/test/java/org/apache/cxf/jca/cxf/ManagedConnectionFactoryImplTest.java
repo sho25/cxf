@@ -1270,6 +1270,15 @@ name|ManagedConnectionFactoryImplTester
 extends|extends
 name|ManagedConnectionFactoryImpl
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8395934187036842099L
+decl_stmt|;
 name|int
 name|initCalledCount
 decl_stmt|;

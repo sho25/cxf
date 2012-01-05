@@ -137,6 +137,15 @@ extends|extends
 name|CXFNonSpringServlet
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5922443981969455305L
+decl_stmt|;
+specifier|private
 name|boolean
 name|busCreated
 decl_stmt|;

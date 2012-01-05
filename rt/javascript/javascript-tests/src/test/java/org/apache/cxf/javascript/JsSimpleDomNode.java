@@ -143,6 +143,15 @@ extends|extends
 name|ScriptableObject
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|299162863985870752L
+decl_stmt|;
+specifier|private
 name|Node
 name|wrappedNode
 decl_stmt|;

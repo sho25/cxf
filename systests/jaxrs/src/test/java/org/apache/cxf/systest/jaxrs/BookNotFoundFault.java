@@ -39,6 +39,14 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4833573020359208072L
+decl_stmt|;
+specifier|private
 name|BookNotFoundDetails
 name|details
 decl_stmt|;

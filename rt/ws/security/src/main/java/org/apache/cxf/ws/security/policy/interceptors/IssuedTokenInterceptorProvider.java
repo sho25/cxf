@@ -701,6 +701,15 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6936475570762840527L
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|String
 name|ASSOCIATED_TOKEN
 init|=

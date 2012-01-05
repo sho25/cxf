@@ -83,6 +83,15 @@ extends|extends
 name|RuntimeException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2595633596348811788L
+decl_stmt|;
+specifier|private
 specifier|final
 name|List
 argument_list|<

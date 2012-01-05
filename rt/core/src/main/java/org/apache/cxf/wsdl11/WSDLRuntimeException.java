@@ -70,6 +70,14 @@ name|WSDLRuntimeException
 extends|extends
 name|UncheckedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|969542255108690960L
+decl_stmt|;
 specifier|public
 name|WSDLRuntimeException
 parameter_list|(

@@ -38,6 +38,15 @@ extends|extends
 name|RuntimeException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3241939562830460198L
+decl_stmt|;
+specifier|private
 specifier|final
 name|int
 name|line

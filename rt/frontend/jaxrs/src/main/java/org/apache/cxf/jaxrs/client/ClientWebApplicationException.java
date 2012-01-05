@@ -43,6 +43,14 @@ extends|extends
 name|RuntimeException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1045799648347063772L
+decl_stmt|;
+specifier|private
 name|Response
 name|response
 decl_stmt|;

@@ -43,6 +43,15 @@ implements|,
 name|AnInterface
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|247285407387540770L
+decl_stmt|;
+specifier|private
 name|Integer
 name|key
 decl_stmt|;

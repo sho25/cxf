@@ -128,6 +128,14 @@ argument_list|,
 literal|"AttachmentIOError"
 argument_list|)
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5775857720028582429L
+decl_stmt|;
 comment|/**      * "The message was incorrectly formed or did not contain the appropriate      * information in order to succeed." -- SOAP 1.2 Spec      */
 comment|/**      * A SOAP 1.2 only fault code.<p/> "The message could not be processed for      * reasons attributable to the processing of the message rather than to the      * contents of the message itself." -- SOAP 1.2 Spec<p/> If this message is      * used in a SOAP 1.1 Fault it will most likely (depending on the      * FaultHandler) be mapped to "Sender" instead.      */
 specifier|private

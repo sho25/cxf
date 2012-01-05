@@ -54,6 +54,14 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5264515601561673284L
+decl_stmt|;
+specifier|private
 name|ServiceTestDetails
 name|details
 decl_stmt|;

@@ -439,6 +439,14 @@ implements|,
 name|Configurable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6765400202555126993L
+decl_stmt|;
+specifier|private
 name|List
 argument_list|<
 name|ClassResourceInfo

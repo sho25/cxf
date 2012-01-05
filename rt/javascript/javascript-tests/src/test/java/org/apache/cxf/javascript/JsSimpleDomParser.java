@@ -167,6 +167,14 @@ extends|extends
 name|ScriptableObject
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|664129507418929844L
+decl_stmt|;
+specifier|private
 name|DocumentBuilder
 name|documentBuilder
 decl_stmt|;

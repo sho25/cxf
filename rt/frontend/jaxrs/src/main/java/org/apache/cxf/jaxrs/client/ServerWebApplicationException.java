@@ -307,6 +307,15 @@ extends|extends
 name|WebApplicationException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|97862759448606951L
+decl_stmt|;
+specifier|private
 name|String
 name|errorMessage
 decl_stmt|;

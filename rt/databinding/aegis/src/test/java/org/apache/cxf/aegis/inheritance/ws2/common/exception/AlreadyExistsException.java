@@ -35,6 +35,15 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7588174560778480484L
+decl_stmt|;
+specifier|private
 specifier|final
 name|String
 name|id

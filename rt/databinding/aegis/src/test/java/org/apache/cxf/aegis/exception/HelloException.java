@@ -38,6 +38,14 @@ name|HelloException
 extends|extends
 name|FaultInfoException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6037321444071981393L
+decl_stmt|;
 name|String
 name|faultInfo
 decl_stmt|;

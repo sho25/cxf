@@ -45,6 +45,15 @@ extends|extends
 name|IOException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6186825695409511895L
+decl_stmt|;
+specifier|private
 name|int
 name|responseCode
 decl_stmt|;

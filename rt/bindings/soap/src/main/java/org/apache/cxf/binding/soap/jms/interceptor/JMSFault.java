@@ -45,6 +45,14 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8567771013189842711L
+decl_stmt|;
+specifier|private
 name|JMSFaultType
 name|jmsFaultType
 decl_stmt|;

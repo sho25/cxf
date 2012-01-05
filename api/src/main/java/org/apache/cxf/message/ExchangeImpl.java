@@ -165,6 +165,15 @@ implements|implements
 name|Exchange
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3112077559217623594L
+decl_stmt|;
+specifier|private
 name|Destination
 name|destination
 decl_stmt|;

@@ -66,6 +66,15 @@ operator|.
 name|UserException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1502387219802227292L
+decl_stmt|;
+specifier|private
 name|String
 name|reason
 decl_stmt|;

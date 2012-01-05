@@ -259,6 +259,15 @@ extends|extends
 name|AbstractHTTPServlet
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2437897227486327166L
+decl_stmt|;
+specifier|private
 name|DestinationRegistry
 name|destinationRegistry
 decl_stmt|;

@@ -6373,6 +6373,14 @@ argument_list|,
 name|Object
 argument_list|>
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5199023273052841289L
+decl_stmt|;
 specifier|final
 name|Map
 argument_list|<

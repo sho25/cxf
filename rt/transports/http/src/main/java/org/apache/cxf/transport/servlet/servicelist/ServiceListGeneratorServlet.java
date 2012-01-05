@@ -255,6 +255,15 @@ extends|extends
 name|HttpServlet
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|113918058557537996L
+decl_stmt|;
+specifier|private
 name|DestinationRegistry
 name|destinationRegistry
 decl_stmt|;

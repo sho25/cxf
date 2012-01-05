@@ -37,6 +37,15 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2104569359859457879L
+decl_stmt|;
+specifier|private
 name|CustomerNotFoundDetails
 name|details
 decl_stmt|;

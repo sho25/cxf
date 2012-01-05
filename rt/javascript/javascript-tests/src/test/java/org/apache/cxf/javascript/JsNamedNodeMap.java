@@ -99,6 +99,15 @@ extends|extends
 name|ScriptableObject
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3714155882606691342L
+decl_stmt|;
+specifier|private
 name|NamedNodeMap
 name|wrappedMap
 decl_stmt|;

@@ -62,6 +62,15 @@ name|RMStoreException
 extends|extends
 name|UncheckedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3463443325216082887L
+decl_stmt|;
 specifier|public
 name|RMStoreException
 parameter_list|(

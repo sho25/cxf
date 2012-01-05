@@ -67,6 +67,14 @@ argument_list|<
 name|T
 argument_list|>
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1783937035760941219L
+decl_stmt|;
 name|AtomicInteger
 name|modCount
 init|=

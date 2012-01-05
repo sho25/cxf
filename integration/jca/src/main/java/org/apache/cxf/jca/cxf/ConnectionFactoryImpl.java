@@ -205,6 +205,14 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3664687493256918163L
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|ResourceBundle
 name|BUNDLE
 init|=

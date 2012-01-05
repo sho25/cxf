@@ -81,6 +81,15 @@ implements|implements
 name|InterceptorProvider
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1915876045710441978L
+decl_stmt|;
+specifier|private
 name|List
 argument_list|<
 name|Interceptor

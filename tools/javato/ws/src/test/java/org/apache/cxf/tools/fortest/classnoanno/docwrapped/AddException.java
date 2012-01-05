@@ -28,6 +28,14 @@ name|AddException
 extends|extends
 name|Exception
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6540833952002339750L
+decl_stmt|;
 specifier|public
 name|AddException
 parameter_list|(

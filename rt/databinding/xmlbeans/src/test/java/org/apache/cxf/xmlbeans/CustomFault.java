@@ -37,6 +37,14 @@ extends|extends
 name|Exception
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7752898855112831690L
+decl_stmt|;
+specifier|private
 name|String
 name|extraInfo
 decl_stmt|;

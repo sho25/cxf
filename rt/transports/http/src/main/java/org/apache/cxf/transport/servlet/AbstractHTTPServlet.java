@@ -243,6 +243,15 @@ name|AbstractHTTPServlet
 extends|extends
 name|HttpServlet
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8357252743467075117L
+decl_stmt|;
 comment|/**      * List of well-known HTTP 1.1 verbs, with POST and GET being the most used verbs at the top       */
 specifier|private
 specifier|static

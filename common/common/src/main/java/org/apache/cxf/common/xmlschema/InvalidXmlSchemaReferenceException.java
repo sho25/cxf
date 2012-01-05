@@ -28,6 +28,15 @@ name|InvalidXmlSchemaReferenceException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2053958361555768873L
+decl_stmt|;
 comment|/**      *       */
 specifier|public
 name|InvalidXmlSchemaReferenceException

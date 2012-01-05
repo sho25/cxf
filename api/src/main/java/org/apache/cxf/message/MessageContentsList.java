@@ -95,6 +95,15 @@ operator|new
 name|Object
 argument_list|()
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5780720048950696258L
+decl_stmt|;
 specifier|public
 name|MessageContentsList
 parameter_list|()

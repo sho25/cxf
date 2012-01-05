@@ -200,6 +200,15 @@ name|EJB_SERVANT_BASE_URL
 init|=
 literal|"ejb.servant.base.url"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2373577203597864072L
+decl_stmt|;
 static|static
 block|{
 comment|// first use of log, default init if necessary

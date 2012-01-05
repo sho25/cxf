@@ -39,26 +39,6 @@ name|WebService
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|tools
-operator|.
-name|fortest
-operator|.
-name|xmllist
-operator|.
-name|AddNumbersPortType
-operator|.
-name|UserObject
-import|;
-end_import
-
 begin_class
 annotation|@
 name|WebService

@@ -433,6 +433,14 @@ name|DummyResourceAdapterImpl
 extends|extends
 name|ResourceAdapterImpl
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2416067861013682575L
+decl_stmt|;
 name|int
 name|registeredCount
 decl_stmt|;
@@ -463,7 +471,17 @@ class|class
 name|TestableAssociatedManagedConnectionFactoryImpl
 extends|extends
 name|AssociatedManagedConnectionFactoryImpl
-block|{     }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1077391534536084071L
+decl_stmt|;
+block|}
 end_class
 
 end_unit

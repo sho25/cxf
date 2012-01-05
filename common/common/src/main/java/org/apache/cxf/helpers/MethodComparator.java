@@ -63,6 +63,14 @@ argument_list|>
 implements|,
 name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6723063699608000703L
+decl_stmt|;
 specifier|public
 name|int
 name|compare

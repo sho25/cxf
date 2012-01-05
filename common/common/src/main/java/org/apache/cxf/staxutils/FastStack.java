@@ -48,6 +48,15 @@ argument_list|<
 name|T
 argument_list|>
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6459503295618120689L
+decl_stmt|;
 specifier|public
 name|void
 name|push

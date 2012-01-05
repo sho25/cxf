@@ -532,6 +532,14 @@ name|KerberosTokenInterceptorProvider
 extends|extends
 name|AbstractPolicyInterceptorProvider
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5922028830873137490L
+decl_stmt|;
 specifier|public
 name|KerberosTokenInterceptorProvider
 parameter_list|()

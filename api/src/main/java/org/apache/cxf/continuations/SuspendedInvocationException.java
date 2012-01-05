@@ -26,6 +26,14 @@ name|SuspendedInvocationException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6889545463301144757L
+decl_stmt|;
 specifier|public
 name|SuspendedInvocationException
 parameter_list|(

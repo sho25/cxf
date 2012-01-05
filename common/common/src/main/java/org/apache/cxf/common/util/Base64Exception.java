@@ -56,6 +56,15 @@ name|Base64Exception
 extends|extends
 name|Exception
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4692237798562339250L
+decl_stmt|;
 specifier|public
 name|Base64Exception
 parameter_list|(

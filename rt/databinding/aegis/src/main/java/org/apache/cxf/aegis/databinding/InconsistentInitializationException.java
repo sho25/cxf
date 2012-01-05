@@ -28,6 +28,14 @@ name|InconsistentInitializationException
 extends|extends
 name|RuntimeException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8530755453175164789L
+decl_stmt|;
 specifier|public
 name|InconsistentInitializationException
 parameter_list|()

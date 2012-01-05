@@ -41,6 +41,15 @@ extends|extends
 name|RuntimeException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4350285749042450625L
+decl_stmt|;
+specifier|private
 name|DOMError
 name|error
 decl_stmt|;

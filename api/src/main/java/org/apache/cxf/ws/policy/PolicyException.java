@@ -89,6 +89,15 @@ block|{
 specifier|private
 specifier|static
 specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6384955089085130084L
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|ResourceBundle
 name|BUNDLE
 init|=

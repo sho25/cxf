@@ -35,6 +35,14 @@ operator|.
 name|Serializable
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5809923229162815069L
+decl_stmt|;
+specifier|private
 name|String
 name|propA
 decl_stmt|;

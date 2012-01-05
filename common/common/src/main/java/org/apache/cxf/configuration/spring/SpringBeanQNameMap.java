@@ -268,6 +268,15 @@ argument_list|,
 name|V
 argument_list|>
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3351437036057367923L
+decl_stmt|;
 specifier|protected
 name|void
 name|processBeans

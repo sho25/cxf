@@ -243,7 +243,17 @@ name|String
 argument_list|,
 name|Integer
 argument_list|>
-block|{     }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|5599483363035948690L
+decl_stmt|;
+block|}
 name|Map
 argument_list|<
 name|String

@@ -37,6 +37,14 @@ extends|extends
 name|IOException
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4147731360800379534L
+decl_stmt|;
+specifier|private
 name|String
 name|expectedContentId
 decl_stmt|;

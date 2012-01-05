@@ -703,6 +703,15 @@ name|TestPolicyInterceptorProvider
 extends|extends
 name|AbstractPolicyInterceptorProvider
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4588883556748035959L
+decl_stmt|;
 specifier|public
 name|TestPolicyInterceptorProvider
 parameter_list|()

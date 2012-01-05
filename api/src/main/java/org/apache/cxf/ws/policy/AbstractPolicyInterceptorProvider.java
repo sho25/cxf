@@ -116,6 +116,14 @@ implements|implements
 name|PolicyInterceptorProvider
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7076292509741199877L
+decl_stmt|;
+specifier|private
 name|Collection
 argument_list|<
 name|QName

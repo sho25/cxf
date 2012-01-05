@@ -54,6 +54,15 @@ name|WSDLQueryException
 extends|extends
 name|UncheckedException
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3254386739668987981L
+decl_stmt|;
 specifier|public
 name|WSDLQueryException
 parameter_list|(
