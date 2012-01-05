@@ -1149,12 +1149,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1232,12 +1226,6 @@ expr_stmt|;
 name|this
 operator|.
 name|minimumSymmetricKeyLength
-operator|=
-literal|128
-expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
 operator|=
 literal|128
 expr_stmt|;
@@ -1321,13 +1309,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
-comment|// due to use of 3des
 block|}
 elseif|else
 if|if
@@ -1488,12 +1469,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1571,12 +1546,6 @@ expr_stmt|;
 name|this
 operator|.
 name|minimumSymmetricKeyLength
-operator|=
-literal|128
-expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
 operator|=
 literal|128
 expr_stmt|;
@@ -1660,13 +1629,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
-comment|// due to use of 3des
 block|}
 elseif|else
 if|if
@@ -1827,12 +1789,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1910,12 +1866,6 @@ expr_stmt|;
 name|this
 operator|.
 name|minimumSymmetricKeyLength
-operator|=
-literal|128
-expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
 operator|=
 literal|128
 expr_stmt|;
@@ -1999,13 +1949,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
-comment|// due to use of 3des
 block|}
 elseif|else
 if|if
@@ -2166,12 +2109,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2249,12 +2186,6 @@ expr_stmt|;
 name|this
 operator|.
 name|minimumSymmetricKeyLength
-operator|=
-literal|128
-expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
 operator|=
 literal|128
 expr_stmt|;
@@ -2338,13 +2269,6 @@ name|minimumSymmetricKeyLength
 operator|=
 literal|192
 expr_stmt|;
-name|this
-operator|.
-name|maximumSymmetricKeyLength
-operator|=
-literal|192
-expr_stmt|;
-comment|// due to use of 3des
 block|}
 else|else
 block|{
