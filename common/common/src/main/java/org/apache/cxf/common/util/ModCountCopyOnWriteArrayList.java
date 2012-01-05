@@ -113,6 +113,9 @@ argument_list|(
 operator|(
 operator|(
 name|ModCountCopyOnWriteArrayList
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|c
 operator|)
@@ -463,6 +466,9 @@ name|boolean
 name|removeAll
 parameter_list|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|)
 block|{
@@ -496,6 +502,9 @@ name|boolean
 name|retainAll
 parameter_list|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|)
 block|{
@@ -570,6 +579,9 @@ operator|==
 operator|(
 operator|(
 name|ModCountCopyOnWriteArrayList
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)

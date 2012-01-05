@@ -967,6 +967,9 @@ name|String
 name|combine
 parameter_list|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|r
 parameter_list|,
 name|char

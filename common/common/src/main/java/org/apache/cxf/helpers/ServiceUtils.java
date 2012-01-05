@@ -261,6 +261,9 @@ literal|'('
 argument_list|)
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|params
 init|=

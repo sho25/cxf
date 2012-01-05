@@ -228,6 +228,11 @@ decl_stmt|;
 for|for
 control|(
 name|Enumeration
+argument_list|<
+name|?
+extends|extends
+name|ZipEntry
+argument_list|>
 name|e
 init|=
 name|zf
@@ -245,9 +250,6 @@ block|{
 name|ZipEntry
 name|ze
 init|=
-operator|(
-name|ZipEntry
-operator|)
 name|e
 operator|.
 name|nextElement

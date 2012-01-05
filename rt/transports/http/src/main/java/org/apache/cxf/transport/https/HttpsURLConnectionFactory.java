@@ -895,6 +895,9 @@ comment|//need to see if we can create one - mostly the weblogic case.   The
 comment|//weblogic SSLSocketFactory has a protected constructor that can take
 comment|//a JSSE SSLSocketFactory so we'll try and use that
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|getSSLSocketFactory

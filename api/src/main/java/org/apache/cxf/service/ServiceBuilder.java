@@ -94,6 +94,9 @@ name|void
 name|setServiceClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 function_decl|;

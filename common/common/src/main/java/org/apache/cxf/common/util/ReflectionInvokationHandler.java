@@ -412,6 +412,9 @@ argument_list|()
 argument_list|,
 operator|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|t
 argument_list|)
@@ -522,6 +525,9 @@ class|class
 name|WrapperIterator
 implements|implements
 name|Iterator
+argument_list|<
+name|Object
+argument_list|>
 block|{
 name|Class
 argument_list|<
@@ -530,6 +536,9 @@ argument_list|>
 name|cls
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|internal
 decl_stmt|;
 specifier|public
@@ -542,6 +551,9 @@ argument_list|>
 name|c
 parameter_list|,
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 parameter_list|)
 block|{

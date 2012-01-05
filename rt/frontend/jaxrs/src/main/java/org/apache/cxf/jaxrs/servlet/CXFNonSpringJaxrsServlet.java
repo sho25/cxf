@@ -1997,6 +1997,9 @@ throws|throws
 name|ServletException
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|ResourceUtils

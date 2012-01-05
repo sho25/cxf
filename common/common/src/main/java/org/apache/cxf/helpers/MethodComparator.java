@@ -121,6 +121,9 @@ literal|0
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|types1
 init|=
@@ -130,6 +133,9 @@ name|getParameterTypes
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|types2
 init|=

@@ -1080,6 +1080,9 @@ literal|null
 condition|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|constructor
 init|=
 name|exClass
@@ -1119,6 +1122,9 @@ block|{
 try|try
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|constructor
 init|=
 name|getConstructor
@@ -1286,6 +1292,9 @@ block|}
 block|}
 specifier|private
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|getConstructor
 parameter_list|(
 name|Class
@@ -1312,6 +1321,9 @@ name|getClass
 argument_list|()
 decl_stmt|;
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|cons
 index|[]
 init|=
@@ -1323,6 +1335,9 @@ decl_stmt|;
 for|for
 control|(
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 range|:
 name|cons
@@ -1459,6 +1474,9 @@ decl_stmt|;
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 range|:
 name|db
@@ -1797,6 +1815,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 return|;
@@ -1834,6 +1855,9 @@ throws|throws
 name|Exception
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|constructor
 init|=
 name|exClass

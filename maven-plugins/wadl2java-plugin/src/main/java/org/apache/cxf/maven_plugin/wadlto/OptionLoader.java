@@ -709,6 +709,9 @@ decl_stmt|;
 try|try
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|newfiles
 init|=
 name|org

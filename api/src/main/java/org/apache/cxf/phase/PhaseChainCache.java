@@ -745,6 +745,9 @@ condition|(
 operator|(
 operator|(
 name|ModCountCopyOnWriteArrayList
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|providers
 index|[

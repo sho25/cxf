@@ -3602,6 +3602,9 @@ name|template
 parameter_list|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|templateConstructor
 init|=
 name|template

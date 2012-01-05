@@ -115,6 +115,9 @@ specifier|public
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|NO_CLASSES
 index|[]
 init|=
@@ -224,6 +227,9 @@ name|Object
 name|createWrapperObject
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|)
 throws|throws
@@ -394,6 +400,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|getMethods
 index|[
@@ -472,6 +481,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 argument_list|)

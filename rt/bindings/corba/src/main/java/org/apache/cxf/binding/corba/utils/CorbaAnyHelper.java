@@ -316,6 +316,9 @@ decl_stmt|;
 specifier|private
 specifier|static
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|fixedAnyConstructor
 decl_stmt|;
 specifier|private

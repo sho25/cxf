@@ -1353,6 +1353,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Dispatch
+argument_list|<
+name|Source
+argument_list|>
 name|dispatch
 init|=
 name|service

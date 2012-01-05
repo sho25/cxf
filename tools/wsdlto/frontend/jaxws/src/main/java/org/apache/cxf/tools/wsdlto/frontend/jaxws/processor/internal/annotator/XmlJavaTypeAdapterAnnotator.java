@@ -202,6 +202,11 @@ argument_list|<
 name|?
 extends|extends
 name|XmlAdapter
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 argument_list|>
 name|adapter
 decl_stmt|;
@@ -216,6 +221,11 @@ argument_list|<
 name|?
 extends|extends
 name|XmlAdapter
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 argument_list|>
 name|adapter
 parameter_list|)

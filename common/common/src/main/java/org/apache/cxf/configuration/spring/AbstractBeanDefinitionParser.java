@@ -511,6 +511,9 @@ argument_list|)
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|beanClass
 decl_stmt|;
 specifier|private
@@ -1025,6 +1028,9 @@ block|}
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getBeanClass
 parameter_list|()
 block|{
@@ -1037,6 +1043,9 @@ name|void
 name|setBeanClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|beanClass
 parameter_list|)
 block|{
@@ -1051,6 +1060,9 @@ annotation|@
 name|Override
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getBeanClass
 parameter_list|(
 name|Element

@@ -3243,6 +3243,9 @@ decl_stmt|;
 try|try
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|cons
 init|=
 name|cls
@@ -3265,6 +3268,9 @@ name|nse
 parameter_list|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|cons
 init|=
 name|cls

@@ -318,6 +318,9 @@ name|getWSDLModel
 argument_list|()
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|defExtensionList
 init|=
 name|customizedDef
@@ -326,6 +329,9 @@ name|getExtensibilityElements
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|ite
 init|=
 name|defExtensionList
@@ -402,6 +408,9 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|portTypeList
 init|=
 name|portType
@@ -435,6 +444,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|opList
 init|=
 name|portType
@@ -456,6 +468,9 @@ literal|0
 argument_list|)
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|extList
 init|=
 name|operation
@@ -641,6 +656,9 @@ name|getWSDLModel
 argument_list|()
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|defExtensionList
 init|=
 name|customizedDef
@@ -649,6 +667,9 @@ name|getExtensibilityElements
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|ite
 init|=
 name|defExtensionList
@@ -725,6 +746,9 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|portTypeList
 init|=
 name|portType
@@ -758,6 +782,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|opList
 init|=
 name|portType
@@ -779,6 +806,9 @@ literal|0
 argument_list|)
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|extList
 init|=
 name|operation

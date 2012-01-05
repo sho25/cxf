@@ -1124,6 +1124,9 @@ init|=
 operator|(
 operator|(
 name|DispatchImpl
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|disp
 operator|)
@@ -1271,6 +1274,9 @@ decl_stmt|;
 operator|(
 operator|(
 name|DispatchImpl
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|disp
 operator|)

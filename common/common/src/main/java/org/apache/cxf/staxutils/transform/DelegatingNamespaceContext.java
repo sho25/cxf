@@ -59,6 +59,20 @@ name|NamespaceContext
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|CastUtils
+import|;
+end_import
+
 begin_class
 class|class
 name|DelegatingNamespaceContext
@@ -403,6 +417,9 @@ return|;
 block|}
 specifier|public
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|getPrefixes
 parameter_list|(
 name|String
@@ -410,11 +427,16 @@ name|ns
 parameter_list|)
 block|{
 return|return
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|nc
 operator|.
 name|getPrefixes
 argument_list|(
 name|ns
+argument_list|)
 argument_list|)
 return|;
 block|}

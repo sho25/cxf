@@ -304,6 +304,9 @@ index|[]
 name|getBytes
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|)
 throws|throws
@@ -452,6 +455,9 @@ argument_list|>
 name|findAttributeReaders
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|)
 block|{
@@ -563,6 +569,9 @@ name|Member
 name|method
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|paramTypes
 parameter_list|)
@@ -687,6 +696,9 @@ name|StringBuilder
 name|b
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|)
 block|{
@@ -1066,6 +1078,9 @@ name|index
 index|]
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|owner
 init|=
 name|resolveClass
@@ -1107,6 +1122,9 @@ argument_list|)
 condition|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|ctors
 init|=
@@ -1332,6 +1350,9 @@ name|i
 index|]
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|owner
 init|=
 name|resolveClass
@@ -1487,6 +1508,9 @@ block|}
 specifier|protected
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resolveClass
 parameter_list|(
 name|int
@@ -1505,10 +1529,16 @@ decl_stmt|;
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|cpool
 index|[

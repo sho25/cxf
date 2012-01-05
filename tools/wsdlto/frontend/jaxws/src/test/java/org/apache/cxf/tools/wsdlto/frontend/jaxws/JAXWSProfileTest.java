@@ -504,6 +504,9 @@ name|WSDLToJavaProcessor
 argument_list|)
 expr_stmt|;
 name|AbstractWSDLBuilder
+argument_list|<
+name|?
+argument_list|>
 name|builder
 init|=
 name|profile
@@ -524,6 +527,9 @@ name|JAXWSDefinitionBuilder
 argument_list|)
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|container
 init|=
 name|profile

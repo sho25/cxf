@@ -484,6 +484,9 @@ name|ac
 return|;
 block|}
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|getBeanConstructor
 parameter_list|()
 block|{

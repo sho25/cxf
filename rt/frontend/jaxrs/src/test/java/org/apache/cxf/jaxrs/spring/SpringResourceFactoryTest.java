@@ -405,6 +405,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|sf
@@ -413,6 +416,9 @@ name|getBeanConstructor
 argument_list|()
 decl_stmt|;
 name|Constructor
+argument_list|<
+name|BookStore
+argument_list|>
 name|c2
 init|=
 name|BookStore

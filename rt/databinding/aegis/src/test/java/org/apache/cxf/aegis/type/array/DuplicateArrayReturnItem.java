@@ -25,6 +25,9 @@ class|class
 name|DuplicateArrayReturnItem
 implements|implements
 name|Comparable
+argument_list|<
+name|Object
+argument_list|>
 block|{
 name|String
 name|name

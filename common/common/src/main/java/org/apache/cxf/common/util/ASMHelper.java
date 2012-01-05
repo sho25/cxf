@@ -755,6 +755,9 @@ name|getClassCode
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 argument_list|)
@@ -797,10 +800,16 @@ name|TypeVariable
 condition|)
 block|{
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 name|tv
 init|=
 operator|(
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 decl_stmt|;
@@ -1281,6 +1290,9 @@ name|String
 name|className
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|,
 name|byte
@@ -1351,6 +1363,9 @@ name|String
 name|className
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 block|{

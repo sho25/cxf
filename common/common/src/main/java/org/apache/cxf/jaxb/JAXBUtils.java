@@ -3254,6 +3254,9 @@ name|cls
 return|;
 block|}
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|cons
 init|=
 name|ReflectionUtil
@@ -5077,6 +5080,9 @@ argument_list|>
 name|classes
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|extraClass
 parameter_list|,
@@ -5106,6 +5112,9 @@ block|{
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 range|:
 name|extraClass

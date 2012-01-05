@@ -355,6 +355,9 @@ specifier|private
 specifier|static
 specifier|final
 name|OpenType
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|SOURCE_SEQUENCE_TYPES
 init|=
@@ -414,6 +417,9 @@ specifier|private
 specifier|static
 specifier|final
 name|OpenType
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|DESTINATION_SEQUENCE_TYPES
 init|=
@@ -473,6 +479,9 @@ specifier|private
 specifier|static
 specifier|final
 name|OpenType
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|RETRANSMISSION_STATUS_TYPES
 init|=

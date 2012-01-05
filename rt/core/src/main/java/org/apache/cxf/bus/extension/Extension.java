@@ -698,6 +698,9 @@ literal|null
 condition|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|con
 init|=
 name|cls
@@ -735,6 +738,9 @@ literal|null
 condition|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|con
 decl_stmt|;
 name|boolean
@@ -826,6 +832,9 @@ literal|null
 condition|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|con
 init|=
 name|cls
@@ -902,6 +911,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|loadInterface
 parameter_list|(
 name|ClassLoader

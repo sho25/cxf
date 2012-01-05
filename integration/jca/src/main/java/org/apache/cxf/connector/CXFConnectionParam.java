@@ -60,6 +60,9 @@ name|CXFConnectionParam
 block|{
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|iface
 decl_stmt|;
 specifier|private
@@ -86,6 +89,9 @@ specifier|public
 name|CXFConnectionParam
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|aIface
 parameter_list|,
 name|URL

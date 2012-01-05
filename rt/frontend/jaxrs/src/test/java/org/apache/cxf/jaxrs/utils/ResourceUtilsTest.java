@@ -300,6 +300,9 @@ name|testFindResourceConstructor
 parameter_list|()
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|ResourceUtils

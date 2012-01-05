@@ -706,6 +706,9 @@ name|ExtensionRegistry
 name|registry
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 block|{
@@ -959,6 +962,9 @@ name|def
 parameter_list|)
 block|{
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|ite1
 init|=
 name|def
@@ -1002,6 +1008,9 @@ name|binding
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|ite2
 init|=
 name|binding

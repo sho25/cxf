@@ -648,6 +648,9 @@ argument_list|)
 decl_stmt|;
 comment|// now get the ObjectName with the busId
 name|Iterator
+argument_list|<
+name|ObjectName
+argument_list|>
 name|it
 init|=
 name|endpointNames

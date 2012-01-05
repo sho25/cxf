@@ -384,6 +384,9 @@ literal|":type=WorkQueues,*"
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|ObjectName
+argument_list|>
 name|s
 init|=
 name|mbs
@@ -406,6 +409,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|ObjectName
+argument_list|>
 name|it
 init|=
 name|s

@@ -297,6 +297,9 @@ annotation|@
 name|Override
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getFactoryClass
 parameter_list|()
 block|{
@@ -308,6 +311,9 @@ return|;
 block|}
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRawFactoryClass
 parameter_list|()
 block|{
@@ -438,6 +444,11 @@ argument_list|)
 condition|)
 block|{
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|map
 init|=
 name|ctx
@@ -535,6 +546,9 @@ argument_list|)
 condition|)
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|list
 init|=
 name|ctx
@@ -589,6 +603,9 @@ implements|implements
 name|ApplicationContextAware
 implements|,
 name|FactoryBean
+argument_list|<
+name|Object
+argument_list|>
 implements|,
 name|DisposableBean
 block|{
@@ -690,6 +707,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getObjectType
 parameter_list|()
 block|{

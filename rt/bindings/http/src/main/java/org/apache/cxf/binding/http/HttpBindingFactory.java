@@ -872,6 +872,9 @@ name|c
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|service
 operator|.

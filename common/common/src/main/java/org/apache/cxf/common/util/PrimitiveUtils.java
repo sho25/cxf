@@ -30,6 +30,9 @@ block|{              }
 specifier|public
 specifier|static
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getClass
 parameter_list|(
 name|String
@@ -37,6 +40,9 @@ name|value
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 literal|null
@@ -190,6 +196,9 @@ name|String
 name|value
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|)
 block|{

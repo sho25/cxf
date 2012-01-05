@@ -195,22 +195,6 @@ name|DOMUtils
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|staxutils
-operator|.
-name|AbstractDOMStreamReader
-operator|.
-name|ElementFrame
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class

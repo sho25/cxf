@@ -290,6 +290,9 @@ name|Object
 name|property
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|impl
 parameter_list|,
 name|BeanTypeInfo
@@ -630,6 +633,9 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|targetClass
 decl_stmt|;
 specifier|private
@@ -647,6 +653,9 @@ name|Object
 name|targetObject
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|targetClass
 parameter_list|,
 name|BeanTypeInfo

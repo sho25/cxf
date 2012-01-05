@@ -223,16 +223,25 @@ parameter_list|()
 function_decl|;
 comment|/**      * Get the class used for the CreateSequenceType.      *       * @return class      */
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getCreateSequenceType
 parameter_list|()
 function_decl|;
 comment|/**      * Get the class used for the CreateSequenceResponseType.      *       * @return class      */
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getCreateSequenceResponseType
 parameter_list|()
 function_decl|;
 comment|/**      * Get the class used for the TerminateSequenceType.      *       * @return class      */
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getTerminateSequenceType
 parameter_list|()
 function_decl|;

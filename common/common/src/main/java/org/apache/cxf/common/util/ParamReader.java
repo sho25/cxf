@@ -146,6 +146,9 @@ argument_list|()
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|paramTypes
 decl_stmt|;
@@ -154,6 +157,9 @@ specifier|public
 name|ParamReader
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|)
 throws|throws
@@ -395,6 +401,9 @@ return|;
 block|}
 comment|// get declaring class
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|method
@@ -529,6 +538,9 @@ index|[]
 name|getParameterNames
 parameter_list|(
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|ctor
 parameter_list|)
 block|{
@@ -583,6 +595,9 @@ name|Member
 name|member
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|pTypes
 parameter_list|)

@@ -337,6 +337,11 @@ literal|2
 argument_list|)
 decl_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|jarMap
 init|=
 name|JarLoader

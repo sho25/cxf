@@ -773,6 +773,17 @@ name|String
 name|faultType
 parameter_list|,
 name|AsyncHandler
+argument_list|<
+name|org
+operator|.
+name|apache
+operator|.
+name|hello_world_soap_http
+operator|.
+name|types
+operator|.
+name|TestDocLitFaultResponse
+argument_list|>
 name|ah
 parameter_list|)
 block|{
@@ -792,28 +803,6 @@ return|return
 literal|null
 return|;
 comment|/*not called */
-block|}
-specifier|public
-name|Future
-argument_list|<
-name|?
-argument_list|>
-name|testDocLitBareAsync
-parameter_list|(
-name|String
-name|bare
-parameter_list|,
-name|AsyncHandler
-name|ah
-parameter_list|)
-block|{
-name|invocationCount
-operator|++
-expr_stmt|;
-return|return
-literal|null
-return|;
-comment|/* not called */
 block|}
 specifier|public
 name|Response

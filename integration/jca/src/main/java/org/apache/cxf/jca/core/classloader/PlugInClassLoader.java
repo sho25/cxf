@@ -622,6 +622,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Enumeration
+argument_list|<
+name|Object
+argument_list|>
 name|keys
 init|=
 name|props

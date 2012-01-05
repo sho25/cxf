@@ -32,6 +32,9 @@ specifier|public
 name|SimpleBeanDefinitionParser
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|beanClass
 parameter_list|)
 block|{

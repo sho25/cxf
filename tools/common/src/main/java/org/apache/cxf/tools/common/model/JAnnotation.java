@@ -67,6 +67,9 @@ name|JAnnotation
 block|{
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 decl_stmt|;
 specifier|private
@@ -107,6 +110,9 @@ specifier|public
 name|JAnnotation
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|t
 parameter_list|)
 block|{
@@ -273,6 +279,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getType
 parameter_list|()
 block|{
@@ -286,6 +295,9 @@ name|setType
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|newType
 parameter_list|)
 block|{

@@ -1813,6 +1813,9 @@ block|}
 specifier|public
 specifier|static
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|findResourceConstructor
 parameter_list|(
 name|Class
@@ -1828,6 +1831,9 @@ block|{
 name|List
 argument_list|<
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|cs
 init|=
@@ -1835,12 +1841,18 @@ operator|new
 name|LinkedList
 argument_list|<
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
 for|for
 control|(
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 range|:
 name|resourceClass
@@ -1982,6 +1994,9 @@ operator|new
 name|Comparator
 argument_list|<
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 block|{
@@ -1990,9 +2005,15 @@ name|int
 name|compare
 parameter_list|(
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c1
 parameter_list|,
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c2
 parameter_list|)
 block|{
@@ -2034,8 +2055,8 @@ literal|0
 return|;
 block|}
 block|}
-argument_list|)
-expr_stmt|;
+block|)
+function|;
 return|return
 name|cs
 operator|.
@@ -2054,6 +2075,9 @@ literal|0
 argument_list|)
 return|;
 block|}
+end_class
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -2177,6 +2201,9 @@ return|return
 name|params
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Parameter
@@ -2561,6 +2588,9 @@ return|return
 name|p
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|OperationResourceInfo
@@ -2623,6 +2653,9 @@ return|return
 name|ori
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|boolean
@@ -2688,6 +2721,9 @@ return|return
 literal|true
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|Class
@@ -2742,6 +2778,9 @@ argument_list|)
 throw|;
 block|}
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -2809,6 +2848,9 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|InputStream
@@ -2846,6 +2888,9 @@ name|openStream
 argument_list|()
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|URL
@@ -2995,6 +3040,9 @@ return|return
 name|url
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|InputStream
@@ -3044,6 +3092,9 @@ else|:
 name|is
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|URL
@@ -3093,6 +3144,9 @@ else|:
 name|url
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 parameter_list|<
@@ -3156,6 +3210,9 @@ return|return
 literal|null
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -3180,6 +3237,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -3220,6 +3280,9 @@ argument_list|()
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|List
@@ -3285,6 +3348,9 @@ return|return
 name|resources
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Map
@@ -3353,6 +3419,9 @@ return|return
 name|types
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|Class
@@ -3429,6 +3498,9 @@ return|return
 name|type
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -3658,6 +3730,9 @@ expr_stmt|;
 block|}
 block|}
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -3739,6 +3814,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|UserResource
@@ -3868,6 +3946,9 @@ return|return
 name|resource
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|UserOperation
@@ -4095,6 +4176,9 @@ return|return
 name|op
 return|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -4107,6 +4191,9 @@ index|[]
 name|createConstructorArguments
 parameter_list|(
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|,
 name|Message
@@ -4296,6 +4383,9 @@ return|return
 name|values
 return|;
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|JAXRSServerFactoryBean
@@ -4353,6 +4443,9 @@ decl_stmt|;
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -4362,6 +4455,9 @@ operator|new
 name|HashMap
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -4627,6 +4723,9 @@ operator|.
 name|Entry
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -4665,6 +4764,9 @@ return|return
 name|bean
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|void
@@ -4760,6 +4862,9 @@ expr_stmt|;
 block|}
 block|}
 block|}
+end_function
+
+begin_function
 specifier|public
 specifier|static
 name|boolean
@@ -4810,6 +4915,9 @@ return|return
 literal|true
 return|;
 block|}
+end_function
+
+begin_function
 specifier|private
 specifier|static
 name|boolean
@@ -4882,7 +4990,13 @@ return|return
 literal|true
 return|;
 block|}
+end_function
+
+begin_comment
 comment|//TODO : consider moving JAXBDataBinding.createContext to JAXBUtils
+end_comment
+
+begin_function
 specifier|public
 specifier|static
 name|JAXBContext
@@ -4898,6 +5012,9 @@ argument_list|>
 name|classes
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|extraClass
 parameter_list|,
@@ -4987,8 +5104,8 @@ return|return
 literal|null
 return|;
 block|}
-block|}
-end_class
+end_function
 
+unit|}
 end_unit
 

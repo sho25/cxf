@@ -473,6 +473,9 @@ argument_list|)
 expr_stmt|;
 comment|// check both server and client bus can be found from this server
 name|Set
+argument_list|<
+name|ObjectName
+argument_list|>
 name|s
 decl_stmt|;
 name|ObjectName

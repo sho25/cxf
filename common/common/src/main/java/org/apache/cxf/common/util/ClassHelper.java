@@ -71,6 +71,9 @@ parameter_list|()
 block|{     }
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRealClassInternal
 parameter_list|(
 name|Object
@@ -86,9 +89,15 @@ return|;
 block|}
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRealClassFromClassInternal
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|)
 block|{
@@ -111,6 +120,9 @@ block|}
 specifier|public
 specifier|static
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRealClass
 parameter_list|(
 name|Object
@@ -129,9 +141,15 @@ block|}
 specifier|public
 specifier|static
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRealClassFromClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|)
 block|{

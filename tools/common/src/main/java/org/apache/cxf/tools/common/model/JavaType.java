@@ -701,10 +701,16 @@ name|boolean
 name|hasDefaultConstructor
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|cons
 init|=

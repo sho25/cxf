@@ -464,6 +464,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getCreateSequenceType
 parameter_list|()
 block|{
@@ -487,6 +490,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getCreateSequenceResponseType
 parameter_list|()
 block|{
@@ -510,6 +516,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getTerminateSequenceType
 parameter_list|()
 block|{
@@ -554,6 +563,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clas
 init|=
 name|RMUtils
@@ -711,6 +723,9 @@ literal|"encoding sequence into RM header"
 argument_list|)
 expr_stmt|;
 name|JAXBElement
+argument_list|<
+name|SequenceType
+argument_list|>
 name|element
 init|=
 name|RMUtils

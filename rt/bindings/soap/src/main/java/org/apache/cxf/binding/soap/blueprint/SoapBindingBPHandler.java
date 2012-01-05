@@ -151,6 +151,11 @@ literal|"/schemas/configuration/blueprint/soap.xsd"
 argument_list|)
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 name|Set
 argument_list|<

@@ -311,6 +311,9 @@ decl_stmt|;
 comment|/**      * @parameter  expression="${project.compileClasspathElements}"      * @required      */
 specifier|private
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|classpathElements
 decl_stmt|;
 comment|/**      * @parameter expression="${project}"      * @required      */

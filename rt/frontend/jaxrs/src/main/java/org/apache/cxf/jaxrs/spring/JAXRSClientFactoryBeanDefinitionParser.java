@@ -235,6 +235,9 @@ annotation|@
 name|Override
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getFactoryClass
 parameter_list|()
 block|{

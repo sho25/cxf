@@ -624,6 +624,9 @@ decl_stmt|;
 comment|/**      * The remote repositories used as specified in your POM.      *       * @parameter expression="${project.repositories}"      * @readonly      * @required      */
 specifier|private
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|repositories
 decl_stmt|;
 comment|/**      * Artifact repository factory component.      *       * @component      * @readonly      * @required      */
@@ -670,6 +673,9 @@ name|Artifact
 name|resolveRemoteWsdlArtifact
 parameter_list|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|remoteRepos
 parameter_list|,
 name|Artifact
@@ -844,6 +850,9 @@ throws|throws
 name|MojoExecutionException
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|remoteRepos
 decl_stmt|;
 try|try
@@ -2154,6 +2163,9 @@ argument_list|>
 name|classPath
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|,
 name|String

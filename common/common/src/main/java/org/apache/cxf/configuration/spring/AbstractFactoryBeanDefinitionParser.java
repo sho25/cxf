@@ -239,6 +239,9 @@ name|bean
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|factoryClass
 init|=
 name|getFactoryClass
@@ -823,11 +826,17 @@ block|}
 specifier|protected
 specifier|abstract
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getFactoryClass
 parameter_list|()
 function_decl|;
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRawFactoryClass
 parameter_list|()
 block|{

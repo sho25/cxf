@@ -411,6 +411,9 @@ decl_stmt|;
 try|try
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|newHandlerConstructor
 init|=
 name|handlerChainTypes
@@ -593,6 +596,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|handlers
 init|=

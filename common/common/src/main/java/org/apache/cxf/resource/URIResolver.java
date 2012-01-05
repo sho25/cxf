@@ -347,6 +347,9 @@ name|is
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|calling
 decl_stmt|;
 specifier|public
@@ -402,6 +405,9 @@ name|String
 name|uriStr
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|calling
 parameter_list|)
 throws|throws
@@ -554,6 +560,9 @@ name|String
 name|uriStr
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|callingCls
 parameter_list|)
 throws|throws

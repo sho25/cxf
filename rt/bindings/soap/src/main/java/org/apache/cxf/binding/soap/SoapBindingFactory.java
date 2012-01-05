@@ -4988,6 +4988,9 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|parts
 init|=
 literal|null
@@ -5086,6 +5089,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|parts

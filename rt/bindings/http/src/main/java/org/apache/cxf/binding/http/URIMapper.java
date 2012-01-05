@@ -692,6 +692,9 @@ block|}
 block|}
 specifier|public
 name|List
+argument_list|<
+name|Object
+argument_list|>
 name|getParameters
 parameter_list|(
 name|MessageInfo

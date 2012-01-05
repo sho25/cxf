@@ -1025,6 +1025,9 @@ literal|0
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|method
@@ -1453,6 +1456,9 @@ block|}
 specifier|private
 specifier|static
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getHolderClass
 parameter_list|(
 name|ParameterizedType
@@ -1471,6 +1477,9 @@ literal|0
 index|]
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|rawClass
 decl_stmt|;
 if|if
@@ -1484,6 +1493,9 @@ name|rawClass
 operator|=
 call|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 call|)
 argument_list|(
 operator|(
@@ -1523,6 +1535,9 @@ name|rawType
 operator|=
 call|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 call|)
 argument_list|(
 operator|(
@@ -1539,6 +1554,9 @@ name|rawClass
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|rawType
 expr_stmt|;

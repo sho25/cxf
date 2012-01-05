@@ -1383,6 +1383,9 @@ return|;
 block|}
 specifier|public
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|getPrefixes
 parameter_list|(
 name|String
@@ -1468,11 +1471,15 @@ operator|==
 literal|null
 condition|)
 block|{
-return|return
+name|l
+operator|=
 name|Collections
 operator|.
 name|emptyList
 argument_list|()
+expr_stmt|;
+return|return
+name|l
 operator|.
 name|iterator
 argument_list|()

@@ -1262,6 +1262,9 @@ name|getTypeClass
 argument_list|()
 decl_stmt|;
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|ctr
 decl_stmt|;
 name|Object
@@ -1441,6 +1444,9 @@ name|Object
 name|property
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|impl
 parameter_list|,
 name|BeanTypeInfo

@@ -21,6 +21,9 @@ class|class
 name|Phase
 implements|implements
 name|Comparable
+argument_list|<
+name|Object
+argument_list|>
 block|{
 comment|// can be removed from once defined as default value in configuration metadata for bus
 specifier|public
@@ -460,6 +463,13 @@ name|Object
 name|o
 parameter_list|)
 block|{
+if|if
+condition|(
+name|o
+operator|instanceof
+name|Phase
+condition|)
+block|{
 name|Phase
 name|p
 init|=
@@ -494,6 +504,10 @@ operator|-
 name|p
 operator|.
 name|priority
+return|;
+block|}
+return|return
+literal|1
 return|;
 block|}
 specifier|public

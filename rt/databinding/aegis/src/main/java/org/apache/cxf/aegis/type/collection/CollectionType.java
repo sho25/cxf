@@ -312,12 +312,18 @@ name|createCollection
 parameter_list|()
 block|{
 name|Collection
+argument_list|<
+name|Object
+argument_list|>
 name|values
 init|=
 literal|null
 decl_stmt|;
 comment|/*          * getTypeClass returns the type of the object. These 'if's asked if the proposed          * type can be assigned to the object, not the other way around. Thus List before          * Vector and Set before SortedSet.          */
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|userTypeClass
 init|=
 name|getTypeClass
@@ -339,6 +345,9 @@ name|values
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -359,6 +368,9 @@ name|values
 operator|=
 operator|new
 name|LinkedList
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -379,6 +391,9 @@ name|values
 operator|=
 operator|new
 name|HashSet
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -399,6 +414,9 @@ name|values
 operator|=
 operator|new
 name|TreeSet
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -419,6 +437,9 @@ name|values
 operator|=
 operator|new
 name|Vector
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -439,6 +460,9 @@ name|values
 operator|=
 operator|new
 name|Stack
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -455,6 +479,9 @@ name|values
 operator|=
 operator|new
 name|ArrayList
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 expr_stmt|;
 block|}
@@ -532,10 +559,16 @@ block|}
 try|try
 block|{
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 name|list
 init|=
 operator|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|object
 decl_stmt|;
@@ -563,6 +596,9 @@ block|}
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|list

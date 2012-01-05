@@ -2010,6 +2010,9 @@ block|{
 operator|(
 operator|(
 name|DispatchImpl
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|dispatch
 operator|)

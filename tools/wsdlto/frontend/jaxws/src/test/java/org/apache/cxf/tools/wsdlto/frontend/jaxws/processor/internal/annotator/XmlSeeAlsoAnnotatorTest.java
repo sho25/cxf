@@ -190,6 +190,9 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|iter
 init|=
 name|intf

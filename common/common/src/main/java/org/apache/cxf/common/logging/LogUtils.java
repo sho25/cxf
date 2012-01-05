@@ -818,6 +818,9 @@ block|{
 try|try
 block|{
 name|Constructor
+argument_list|<
+name|?
+argument_list|>
 name|cns
 init|=
 name|loggerClass

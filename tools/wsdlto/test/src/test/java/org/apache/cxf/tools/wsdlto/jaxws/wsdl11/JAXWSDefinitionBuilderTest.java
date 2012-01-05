@@ -320,6 +320,11 @@ name|def
 argument_list|)
 expr_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|services
 init|=
 name|def
@@ -367,6 +372,11 @@ name|service
 argument_list|)
 expr_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|ports
 init|=
 name|service
@@ -606,6 +616,11 @@ name|def
 argument_list|)
 expr_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|services
 init|=
 name|def
@@ -653,6 +668,11 @@ name|service
 argument_list|)
 expr_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|ports
 init|=
 name|service

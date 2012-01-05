@@ -974,6 +974,9 @@ name|void
 name|waitForFuture
 parameter_list|(
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 parameter_list|)
 throws|throws
@@ -1131,10 +1134,16 @@ literal|"/SOAPDispatchService/SoapDispatchPort"
 argument_list|)
 expr_stmt|;
 name|DispatchImpl
+argument_list|<
+name|?
+argument_list|>
 name|dispImpl
 init|=
 operator|(
 name|DispatchImpl
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|disp
 decl_stmt|;
@@ -1855,6 +1864,9 @@ name|soapReqMsg2
 argument_list|)
 expr_stmt|;
 name|Response
+argument_list|<
+name|?
+argument_list|>
 name|response
 init|=
 name|disp
@@ -1943,6 +1955,9 @@ name|TestSOAPMessageHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|f
 init|=
 name|disp

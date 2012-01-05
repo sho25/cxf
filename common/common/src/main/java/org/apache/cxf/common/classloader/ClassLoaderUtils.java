@@ -214,6 +214,9 @@ name|String
 name|resourceName
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|callingClass
 parameter_list|)
 block|{
@@ -445,6 +448,9 @@ name|String
 name|resourceName
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|callingClass
 parameter_list|)
 block|{
@@ -817,6 +823,9 @@ name|String
 name|resourceName
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|callingClass
 parameter_list|)
 block|{

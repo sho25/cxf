@@ -101,6 +101,9 @@ name|ClassLoader
 name|loader
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|interfaces
 parameter_list|,
@@ -130,6 +133,9 @@ name|ClassLoader
 name|loader
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|interfaces
 parameter_list|,

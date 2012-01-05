@@ -103,9 +103,15 @@ expr_stmt|;
 block|}
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRealClassFromClassInternal
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|)
 block|{
@@ -192,6 +198,9 @@ return|;
 block|}
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRealClassInternal
 parameter_list|(
 name|Object
@@ -273,6 +282,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|targetClass
 init|=
 name|AopUtils
