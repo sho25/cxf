@@ -315,7 +315,7 @@ argument_list|(
 name|rmSoap
 argument_list|)
 expr_stmt|;
-name|getInInterceptors
+name|getInFaultInterceptors
 argument_list|()
 operator|.
 name|add
