@@ -37,6 +37,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|sts
+operator|.
+name|service
+operator|.
+name|EncryptionProperties
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|ws
 operator|.
 name|security
@@ -146,6 +162,19 @@ function_decl|;
 comment|/**      * Get the username/alias to use to encrypt any issued tokens. This is a default value - it      * can be configured per Service in the ServiceMBean      * @return the username/alias to use to encrypt any issued tokens      */
 name|String
 name|getEncryptionUsername
+parameter_list|()
+function_decl|;
+comment|/**      * Set the EncryptionProperties to use.      * @param encryptionProperties the EncryptionProperties to use.      */
+name|void
+name|setEncryptionProperties
+parameter_list|(
+name|EncryptionProperties
+name|encryptionProperties
+parameter_list|)
+function_decl|;
+comment|/**      * Get the EncryptionProperties to use.      * @return the EncryptionProperties to use.      */
+name|EncryptionProperties
+name|getEncryptionProperties
 parameter_list|()
 function_decl|;
 comment|/**      * Set the STS issuer name      * @param issuer the STS issuer name      */

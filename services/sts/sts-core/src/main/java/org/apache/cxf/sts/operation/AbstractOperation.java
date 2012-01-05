@@ -2547,8 +2547,9 @@ expr_stmt|;
 name|EncryptionProperties
 name|encryptionProperties
 init|=
-operator|new
-name|EncryptionProperties
+name|stsProperties
+operator|.
+name|getEncryptionProperties
 argument_list|()
 decl_stmt|;
 if|if
