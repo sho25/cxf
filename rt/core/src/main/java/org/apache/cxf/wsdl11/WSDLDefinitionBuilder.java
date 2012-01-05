@@ -616,6 +616,11 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|imports
 init|=
 name|wsdlDef
@@ -626,6 +631,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|iter
 init|=
 name|imports
@@ -666,6 +674,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|imports
 operator|.
@@ -817,6 +828,9 @@ block|}
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|initialExtensions

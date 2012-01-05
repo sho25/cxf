@@ -498,6 +498,9 @@ throws|throws
 name|ClassNotFoundException
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 decl_stmt|;
 try|try

@@ -2693,6 +2693,11 @@ name|void
 name|update
 parameter_list|(
 name|Dictionary
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|config
 parameter_list|)
 block|{
@@ -2855,6 +2860,11 @@ block|}
 block|}
 specifier|public
 name|Dictionary
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|getProperties
 parameter_list|()
 block|{

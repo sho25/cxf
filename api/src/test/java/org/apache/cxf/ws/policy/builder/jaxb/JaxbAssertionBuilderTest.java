@@ -166,6 +166,9 @@ try|try
 block|{
 operator|new
 name|JaxbAssertionBuilder
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 literal|"org.apache.cxf.test.assertions.foo.UnknownType"
 argument_list|,
@@ -190,6 +193,9 @@ name|assertNotNull
 argument_list|(
 operator|new
 name|JaxbAssertionBuilder
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 name|qn
 argument_list|)
@@ -199,6 +205,9 @@ name|assertNotNull
 argument_list|(
 operator|new
 name|JaxbAssertionBuilder
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 name|FooType
 operator|.

@@ -262,6 +262,11 @@ decl_stmt|;
 for|for
 control|(
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 name|i
 range|:
 name|in
@@ -713,6 +718,11 @@ decl_stmt|;
 for|for
 control|(
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 name|i
 range|:
 name|in

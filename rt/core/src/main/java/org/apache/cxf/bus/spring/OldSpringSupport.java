@@ -108,6 +108,9 @@ class|class
 name|OldSpringSupport
 implements|implements
 name|FactoryBean
+argument_list|<
+name|Object
+argument_list|>
 implements|,
 name|BeanNameAware
 block|{
@@ -260,6 +263,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getObjectType
 parameter_list|()
 block|{

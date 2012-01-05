@@ -475,6 +475,9 @@ name|cls
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|ReflectionUtil
 operator|.

@@ -2402,6 +2402,9 @@ init|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -2595,6 +2598,9 @@ init|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -2815,6 +2821,9 @@ init|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -3183,6 +3192,9 @@ init|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -4712,6 +4724,9 @@ init|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -5742,6 +5757,11 @@ name|String
 name|getEndpointReferenceId
 parameter_list|(
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|messageContext
 parameter_list|)
 block|{

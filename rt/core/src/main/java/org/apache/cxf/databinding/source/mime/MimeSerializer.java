@@ -113,6 +113,11 @@ parameter_list|(
 name|XmlSchemaObject
 name|schemaObject
 parameter_list|,
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|classOfType
 parameter_list|,
@@ -121,6 +126,11 @@ name|domNode
 parameter_list|)
 block|{
 name|Map
+argument_list|<
+name|Object
+argument_list|,
+name|Object
+argument_list|>
 name|metaInfoMap
 init|=
 name|schemaObject

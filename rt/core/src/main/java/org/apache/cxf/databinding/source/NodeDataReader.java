@@ -357,6 +357,9 @@ name|Node
 name|input
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|)
 block|{

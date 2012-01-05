@@ -1110,6 +1110,9 @@ literal|" in request!"
 argument_list|)
 expr_stmt|;
 name|Collection
+argument_list|<
+name|String
+argument_list|>
 name|rest
 init|=
 name|CollectionUtils
@@ -1150,6 +1153,9 @@ expr_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|iter
 init|=
 name|rest
@@ -1352,6 +1358,9 @@ name|operation
 argument_list|)
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|types
 init|=

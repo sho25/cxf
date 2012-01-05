@@ -220,6 +220,9 @@ name|cast
 argument_list|(
 operator|(
 name|Set
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|ex
 operator|.

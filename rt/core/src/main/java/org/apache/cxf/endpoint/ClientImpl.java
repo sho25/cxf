@@ -3069,6 +3069,11 @@ name|cast
 argument_list|(
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|context
 operator|.
@@ -3086,6 +3091,11 @@ name|cast
 argument_list|(
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|context
 operator|.
@@ -3776,6 +3786,9 @@ expr_stmt|;
 block|}
 comment|// Grab the response objects if there are any
 name|List
+argument_list|<
+name|Object
+argument_list|>
 name|resList
 init|=
 literal|null
@@ -3846,6 +3859,10 @@ expr_stmt|;
 block|}
 name|resList
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|inMsg
 operator|.
 name|getContent
@@ -3853,6 +3870,7 @@ argument_list|(
 name|List
 operator|.
 name|class
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

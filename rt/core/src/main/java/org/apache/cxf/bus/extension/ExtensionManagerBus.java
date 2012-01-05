@@ -339,6 +339,9 @@ parameter_list|(
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Object
 argument_list|>
@@ -779,6 +782,9 @@ parameter_list|(
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Object
 argument_list|>

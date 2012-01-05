@@ -597,11 +597,6 @@ return|return
 name|theAnnotationObjects
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|List
 argument_list|<
@@ -623,6 +618,11 @@ argument_list|>
 name|t
 parameter_list|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Interceptor
@@ -675,6 +675,9 @@ decl_stmt|;
 for|for
 control|(
 name|Interceptor
+argument_list|<
+name|?
+argument_list|>
 name|i2
 range|:
 name|i

@@ -756,6 +756,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 decl_stmt|;
 if|if
@@ -769,6 +772,9 @@ name|cls
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 expr_stmt|;

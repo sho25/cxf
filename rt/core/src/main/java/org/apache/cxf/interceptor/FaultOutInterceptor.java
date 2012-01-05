@@ -811,6 +811,9 @@ decl_stmt|;
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 range|:
 name|db
@@ -1016,6 +1019,9 @@ name|BindingOperationInfo
 name|op
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|class1
 parameter_list|)
 block|{
@@ -1046,6 +1052,9 @@ name|c
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|faultInfo
 operator|.

@@ -170,6 +170,9 @@ decl_stmt|;
 specifier|private
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|svcClass
 decl_stmt|;
 specifier|public
@@ -177,6 +180,9 @@ name|PerRequestFactory
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|svcClass
 parameter_list|)
 block|{

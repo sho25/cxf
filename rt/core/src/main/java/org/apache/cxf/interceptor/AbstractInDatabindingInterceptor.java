@@ -1036,6 +1036,9 @@ expr_stmt|;
 continue|continue;
 block|}
 name|Collection
+argument_list|<
+name|MessagePartInfo
+argument_list|>
 name|bodyParts
 init|=
 name|msgInfo

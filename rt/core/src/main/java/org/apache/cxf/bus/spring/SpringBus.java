@@ -287,6 +287,9 @@ implements|implements
 name|ApplicationContextAware
 implements|,
 name|ApplicationListener
+argument_list|<
+name|ApplicationEvent
+argument_list|>
 block|{
 name|AbstractApplicationContext
 name|ctx

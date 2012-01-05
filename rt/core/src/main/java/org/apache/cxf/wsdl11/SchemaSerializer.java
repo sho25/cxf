@@ -212,6 +212,11 @@ specifier|public
 name|void
 name|marshall
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|parentType
 parameter_list|,

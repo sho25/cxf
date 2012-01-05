@@ -1087,6 +1087,9 @@ literal|null
 condition|)
 block|{
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|ite
 init|=
 name|typesElement
@@ -1259,6 +1262,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|imports
 init|=

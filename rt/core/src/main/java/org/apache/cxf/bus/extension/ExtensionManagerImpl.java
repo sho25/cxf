@@ -375,6 +375,9 @@ specifier|final
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Object
 argument_list|>
@@ -394,6 +397,9 @@ parameter_list|,
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Object
 argument_list|>
@@ -441,6 +447,9 @@ parameter_list|,
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Object
 argument_list|>
@@ -485,6 +494,9 @@ parameter_list|,
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Object
 argument_list|>
@@ -1397,6 +1409,9 @@ name|value
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 init|=
 name|target
@@ -1453,6 +1468,9 @@ name|i
 index|]
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|params
 index|[]
 init|=
@@ -1481,6 +1499,9 @@ literal|1
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|paramType
 init|=
 name|params

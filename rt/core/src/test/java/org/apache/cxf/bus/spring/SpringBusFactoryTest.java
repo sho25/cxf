@@ -1344,6 +1344,9 @@ class|class
 name|TestInterceptor
 implements|implements
 name|Interceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|private
 name|String

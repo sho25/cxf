@@ -212,6 +212,9 @@ specifier|private
 specifier|static
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|PASSWORD_CALLBACK_TYPES
 init|=
