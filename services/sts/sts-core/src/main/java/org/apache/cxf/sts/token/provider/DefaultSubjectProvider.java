@@ -1041,6 +1041,16 @@ argument_list|)
 expr_stmt|;
 name|encrKey
 operator|.
+name|setSymmetricEncAlgorithm
+argument_list|(
+name|encryptionProperties
+operator|.
+name|getEncryptionAlgorithm
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|encrKey
+operator|.
 name|setUseThisCert
 argument_list|(
 name|certificate
