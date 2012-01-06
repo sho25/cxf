@@ -107,6 +107,11 @@ name|boolean
 name|isSetDbl
 parameter_list|()
 function_decl|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 name|getTexts
 parameter_list|()

@@ -387,6 +387,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|service
@@ -661,6 +664,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|service
@@ -905,6 +911,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|service
@@ -1201,6 +1210,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|service
@@ -1550,6 +1562,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|service

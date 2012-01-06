@@ -941,6 +941,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|m
 operator|.
@@ -1038,6 +1041,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|m
 operator|.

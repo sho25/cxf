@@ -555,6 +555,9 @@ literal|":type=Bus.Service.Endpoint,*"
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|?
+argument_list|>
 name|s
 init|=
 name|mbs

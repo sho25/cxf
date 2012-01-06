@@ -466,6 +466,9 @@ specifier|final
 name|List
 argument_list|<
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|generators
 init|=
@@ -473,6 +476,9 @@ operator|new
 name|ArrayList
 argument_list|<
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -954,6 +960,9 @@ expr_stmt|;
 block|}
 specifier|private
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|getWrapperBeanGenerator
 parameter_list|()
 block|{
@@ -986,6 +995,9 @@ return|;
 block|}
 specifier|private
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|getFaultBeanGenerator
 parameter_list|()
 block|{
@@ -1018,6 +1030,9 @@ return|;
 block|}
 specifier|private
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|getWSDLGenerator
 parameter_list|(
 specifier|final
@@ -1041,6 +1056,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|generator
 init|=
 name|factory
@@ -1089,6 +1107,9 @@ block|{
 for|for
 control|(
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|generator
 range|:
 name|generators

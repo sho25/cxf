@@ -140,6 +140,9 @@ name|newGenerator
 parameter_list|()
 block|{
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|generator
 init|=
 literal|null
@@ -156,6 +159,9 @@ name|generator
 operator|=
 operator|(
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|Class
 operator|.

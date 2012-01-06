@@ -106,6 +106,9 @@ name|WSDL11
 argument_list|)
 expr_stmt|;
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|generator
 init|=
 name|factory

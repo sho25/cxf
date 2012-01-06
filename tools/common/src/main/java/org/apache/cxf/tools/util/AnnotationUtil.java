@@ -398,6 +398,9 @@ name|parent
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 init|=
 literal|null

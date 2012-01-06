@@ -312,6 +312,9 @@ expr_stmt|;
 block|}
 specifier|private
 name|Set
+argument_list|<
+name|String
+argument_list|>
 name|getArrayKeys
 parameter_list|()
 block|{

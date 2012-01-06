@@ -563,10 +563,16 @@ name|createUnmarshaller
 argument_list|()
 decl_stmt|;
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 name|e
 init|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|unmarshaller
 operator|.

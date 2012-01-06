@@ -683,10 +683,16 @@ name|obj
 parameter_list|)
 block|{
 name|Enum
+argument_list|<
+name|?
+argument_list|>
 name|e
 init|=
 operator|(
 name|Enum
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 decl_stmt|;

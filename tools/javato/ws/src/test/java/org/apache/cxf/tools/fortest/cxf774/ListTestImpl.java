@@ -67,6 +67,9 @@ name|ListTest
 block|{
 specifier|public
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|sayHi
 parameter_list|(
 name|String

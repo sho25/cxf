@@ -281,6 +281,9 @@ decl_stmt|;
 comment|/**      * The cached value of the '{@link #getTexts()<em>Texts</em>}' attribute      * list.<!-- begin-user-doc --><!-- end-user-doc -->      *       * @see #getTexts()      * @generated      * @ordered      */
 specifier|protected
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|texts
 init|=
 literal|null
@@ -728,6 +731,9 @@ block|}
 comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @generated      */
 specifier|public
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|getTexts
 parameter_list|()
 block|{
@@ -829,7 +835,11 @@ comment|/**      *<!-- begin-user-doc --><!-- end-user-doc -->      *       * @g
 annotation|@
 name|SuppressWarnings
 argument_list|(
+block|{
 literal|"unchecked"
+block|,
+literal|"rawtypes"
+block|}
 argument_list|)
 specifier|public
 name|void

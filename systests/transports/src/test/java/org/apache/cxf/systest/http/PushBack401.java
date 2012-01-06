@@ -245,6 +245,9 @@ class|class
 name|PushBack401
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 name|PushBack401
 parameter_list|()

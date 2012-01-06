@@ -131,6 +131,9 @@ operator|=
 literal|"http://cxf.apache/"
 argument_list|)
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|sayHi
 parameter_list|(
 name|String

@@ -792,6 +792,9 @@ init|=
 operator|(
 operator|(
 name|ArrayList
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|parameters
 operator|)

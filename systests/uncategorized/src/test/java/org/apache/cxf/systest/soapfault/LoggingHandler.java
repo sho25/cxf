@@ -33,16 +33,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Set
 import|;
 end_import
@@ -161,14 +151,6 @@ operator|=
 name|ps
 expr_stmt|;
 block|}
-specifier|public
-name|void
-name|init
-parameter_list|(
-name|Map
-name|c
-parameter_list|)
-block|{     }
 specifier|public
 name|Set
 argument_list|<

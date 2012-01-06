@@ -6946,6 +6946,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itExp
 init|=
 name|soapA
@@ -6954,6 +6957,9 @@ name|getChildElements
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itGen
 init|=
 name|soapB

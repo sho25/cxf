@@ -1259,6 +1259,9 @@ name|String
 name|combine
 parameter_list|(
 name|List
+argument_list|<
+name|String
+argument_list|>
 name|r
 parameter_list|,
 name|char
@@ -1277,9 +1280,6 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 decl_stmt|;
 for|for

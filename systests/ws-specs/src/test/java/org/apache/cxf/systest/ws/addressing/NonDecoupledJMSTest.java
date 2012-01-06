@@ -349,7 +349,7 @@ operator|.
 name|addressing
 operator|.
 name|AbstractGreeterImpl
-block|{              }
+block|{               }
 block|}
 end_class
 

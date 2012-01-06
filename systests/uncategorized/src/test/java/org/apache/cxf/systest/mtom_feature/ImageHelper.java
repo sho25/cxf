@@ -169,6 +169,9 @@ init|=
 literal|null
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|ImageWriter
+argument_list|>
 name|i
 init|=
 name|ImageIO
@@ -188,9 +191,6 @@ condition|)
 block|{
 name|writer
 operator|=
-operator|(
-name|ImageWriter
-operator|)
 name|i
 operator|.
 name|next

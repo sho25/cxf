@@ -1478,6 +1478,9 @@ return|;
 block|}
 specifier|public
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|getPrefixes
 parameter_list|(
 name|String

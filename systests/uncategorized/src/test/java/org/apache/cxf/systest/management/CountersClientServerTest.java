@@ -687,6 +687,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Set
+argument_list|<
+name|?
+argument_list|>
 name|counterNames
 init|=
 name|mbs
@@ -728,6 +731,9 @@ literal|":operation=\"sayHi\",*"
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|?
+argument_list|>
 name|s
 init|=
 name|mbs
@@ -740,6 +746,9 @@ literal|null
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|s

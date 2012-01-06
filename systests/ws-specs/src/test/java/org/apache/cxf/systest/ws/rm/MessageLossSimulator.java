@@ -456,6 +456,11 @@ name|pi
 init|=
 operator|(
 name|PhaseInterceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 operator|)
 name|it
 operator|.

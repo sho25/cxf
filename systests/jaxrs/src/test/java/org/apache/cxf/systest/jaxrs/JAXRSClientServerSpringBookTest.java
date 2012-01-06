@@ -2208,6 +2208,9 @@ name|singletonList
 argument_list|(
 operator|new
 name|AegisElementProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 argument_list|)
 argument_list|)

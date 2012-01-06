@@ -493,6 +493,9 @@ literal|":type=Bus.Service.Endpoint,*"
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|?
+argument_list|>
 name|s
 init|=
 name|mbs
@@ -828,6 +831,9 @@ literal|":type=WorkQueueManager,*"
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|?
+argument_list|>
 name|s
 init|=
 name|mbs
@@ -1107,6 +1113,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|s

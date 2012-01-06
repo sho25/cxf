@@ -362,6 +362,9 @@ name|outputdir
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|dateType
 init|=
 name|getDateType
@@ -652,6 +655,9 @@ decl_stmt|;
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 range|:
 name|m
