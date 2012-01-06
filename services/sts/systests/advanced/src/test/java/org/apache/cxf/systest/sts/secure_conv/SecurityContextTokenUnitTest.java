@@ -726,7 +726,7 @@ name|stsClient
 operator|.
 name|setKeySize
 argument_list|(
-literal|192
+literal|128
 argument_list|)
 expr_stmt|;
 name|stsClient
