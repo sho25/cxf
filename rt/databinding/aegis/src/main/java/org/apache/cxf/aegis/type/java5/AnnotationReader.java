@@ -414,6 +414,9 @@ literal|"unchecked"
 argument_list|)
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getType
 parameter_list|(
 name|AnnotatedElement
@@ -421,10 +424,16 @@ name|element
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|value
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|getAnnotationValue
 argument_list|(
@@ -457,6 +466,9 @@ name|value
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|getAnnotationValue
 argument_list|(
@@ -493,6 +505,9 @@ literal|"unchecked"
 argument_list|)
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getParamType
 parameter_list|(
 name|Method
@@ -505,6 +520,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|getAnnotationValue
 argument_list|(
@@ -531,6 +549,9 @@ literal|"unchecked"
 argument_list|)
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getReturnType
 parameter_list|(
 name|AnnotatedElement
@@ -540,6 +561,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|getAnnotationValue
 argument_list|(

@@ -612,6 +612,11 @@ specifier|public
 name|ManagedConnection
 name|matchManagedConnections
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Set
 name|mcs
 parameter_list|,
@@ -655,6 +660,11 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// find the first managed connection that matches the bus and request info
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Iterator
 name|iter
 init|=

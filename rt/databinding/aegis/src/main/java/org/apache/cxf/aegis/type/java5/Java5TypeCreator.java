@@ -434,6 +434,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|paramTypeClass
 init|=
 name|annotationReader
@@ -908,6 +911,9 @@ return|;
 block|}
 comment|/* null arises when the index-th parameter to generic is something list List<T> */
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 init|=
 name|TypeUtil
@@ -1298,6 +1304,9 @@ name|QName
 name|createQName
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|)
 block|{
@@ -1339,6 +1348,9 @@ name|QName
 name|createQName
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|,
 name|Type
@@ -1409,6 +1421,9 @@ name|typeClass
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 expr_stmt|;
@@ -1537,6 +1552,9 @@ name|boolean
 name|isEnum
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{

@@ -449,6 +449,9 @@ name|bundle
 parameter_list|)
 block|{
 name|Enumeration
+argument_list|<
+name|?
+argument_list|>
 name|e
 init|=
 name|bundle

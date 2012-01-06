@@ -2108,6 +2108,9 @@ block|}
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getServiceClass
 parameter_list|()
 block|{
@@ -2121,6 +2124,9 @@ name|void
 name|setServiceClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|serviceClass
 parameter_list|)
 block|{

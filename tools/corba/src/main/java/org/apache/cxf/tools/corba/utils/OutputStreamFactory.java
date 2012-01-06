@@ -106,6 +106,9 @@ throws|throws
 name|IOException
 function_decl|;
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|getStreamNames
 parameter_list|()
 throws|throws

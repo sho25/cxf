@@ -356,6 +356,9 @@ name|XMLStreamReader
 name|input
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|)
 block|{
@@ -406,6 +409,9 @@ name|XMLStreamReader
 name|reader
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|jtype
 parameter_list|)
 throws|throws

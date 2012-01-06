@@ -123,14 +123,14 @@ specifier|private
 specifier|final
 name|Set
 argument_list|<
-name|Object
+name|CommandLineError
 argument_list|>
 name|errors
 init|=
 operator|new
 name|HashSet
 argument_list|<
-name|Object
+name|CommandLineError
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -525,6 +525,9 @@ block|}
 block|}
 specifier|public
 name|Collection
+argument_list|<
+name|CommandLineError
+argument_list|>
 name|getErrors
 parameter_list|()
 block|{

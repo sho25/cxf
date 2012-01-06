@@ -542,6 +542,9 @@ block|}
 block|}
 specifier|protected
 name|AssertionBuilder
+argument_list|<
+name|?
+argument_list|>
 name|handleNoRegisteredBuilder
 parameter_list|(
 name|QName

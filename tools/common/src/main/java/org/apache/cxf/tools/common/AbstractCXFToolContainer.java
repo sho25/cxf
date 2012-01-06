@@ -1325,6 +1325,9 @@ argument_list|>
 name|getParametersMap
 parameter_list|(
 name|Set
+argument_list|<
+name|String
+argument_list|>
 name|stringArrayKeys
 parameter_list|)
 block|{

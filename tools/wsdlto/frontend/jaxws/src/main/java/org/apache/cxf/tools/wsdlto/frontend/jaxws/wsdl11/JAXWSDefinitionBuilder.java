@@ -475,9 +475,6 @@ class|class
 name|JAXWSDefinitionBuilder
 extends|extends
 name|AbstractWSDLBuilder
-argument_list|<
-name|Definition
-argument_list|>
 block|{
 specifier|protected
 specifier|static

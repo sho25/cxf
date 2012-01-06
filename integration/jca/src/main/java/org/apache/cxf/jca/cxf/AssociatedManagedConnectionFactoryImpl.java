@@ -295,6 +295,9 @@ name|getPluginProps
 argument_list|()
 decl_stmt|;
 name|Enumeration
+argument_list|<
+name|?
+argument_list|>
 name|raPropsEnum
 init|=
 name|raProps

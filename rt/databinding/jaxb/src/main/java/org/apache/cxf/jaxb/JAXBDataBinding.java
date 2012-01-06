@@ -2608,6 +2608,9 @@ name|void
 name|setExtraClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|userExtraClass
 parameter_list|)
@@ -2619,6 +2622,9 @@ expr_stmt|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|getExtraClass
 parameter_list|()

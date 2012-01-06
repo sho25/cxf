@@ -579,6 +579,9 @@ name|getAdapterMethod
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|,
 specifier|final
@@ -609,6 +612,9 @@ return|;
 block|}
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getDateType
 parameter_list|()
 block|{

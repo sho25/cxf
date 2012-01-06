@@ -917,6 +917,9 @@ init|=
 literal|null
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|bindIter
 init|=
 name|binding
@@ -1627,6 +1630,9 @@ name|Union
 name|corbaUnion
 parameter_list|,
 name|List
+argument_list|<
+name|MemberType
+argument_list|>
 name|fields
 parameter_list|,
 name|List

@@ -115,6 +115,9 @@ expr_stmt|;
 block|}
 specifier|public
 name|Collection
+argument_list|<
+name|CommandLineError
+argument_list|>
 name|getErrors
 parameter_list|()
 block|{

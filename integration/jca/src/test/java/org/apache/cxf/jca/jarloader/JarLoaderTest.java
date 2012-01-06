@@ -224,6 +224,11 @@ name|urlPath
 argument_list|)
 expr_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|map
 init|=
 name|JarLoader

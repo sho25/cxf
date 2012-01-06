@@ -122,11 +122,6 @@ name|String
 name|toolspec
 decl_stmt|;
 name|AbstractWSDLBuilder
-argument_list|<
-name|?
-extends|extends
-name|Object
-argument_list|>
 name|builder
 decl_stmt|;
 specifier|public
@@ -250,11 +245,6 @@ name|void
 name|setWSDLBuilder
 parameter_list|(
 name|AbstractWSDLBuilder
-argument_list|<
-name|?
-extends|extends
-name|Object
-argument_list|>
 name|b
 parameter_list|)
 block|{

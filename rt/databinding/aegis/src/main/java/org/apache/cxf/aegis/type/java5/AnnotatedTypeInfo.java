@@ -138,6 +138,9 @@ name|TypeMapping
 name|tm
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|,
 name|String
@@ -170,6 +173,9 @@ name|TypeMapping
 name|tm
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|,
 name|String
@@ -350,6 +356,9 @@ name|getReadMethod
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 init|=
 name|annotationReader

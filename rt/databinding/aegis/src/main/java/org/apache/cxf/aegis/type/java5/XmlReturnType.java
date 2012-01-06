@@ -107,6 +107,9 @@ annotation_defn|@interface
 name|XmlReturnType
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|()
 default|default

@@ -339,6 +339,9 @@ block|{
 name|List
 argument_list|<
 name|Holder
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|outHolders
 init|=
@@ -348,6 +351,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|message
 operator|.
@@ -389,10 +395,16 @@ literal|null
 condition|)
 block|{
 name|Holder
+argument_list|<
+name|Object
+argument_list|>
 name|holder
 init|=
 operator|(
 name|Holder
+argument_list|<
+name|Object
+argument_list|>
 operator|)
 name|outHolders
 operator|.

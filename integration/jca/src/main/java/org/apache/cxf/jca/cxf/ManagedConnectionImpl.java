@@ -986,6 +986,9 @@ throws|throws
 name|ResourceException
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|classes
 index|[]
 init|=

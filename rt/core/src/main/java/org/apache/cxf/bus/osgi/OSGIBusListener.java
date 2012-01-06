@@ -899,6 +899,11 @@ name|bundle
 parameter_list|)
 block|{
 name|Dictionary
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|headers
 init|=
 name|bundle

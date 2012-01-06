@@ -1939,6 +1939,11 @@ operator|!=
 literal|null
 condition|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 argument_list|<
 name|?
@@ -1994,6 +1999,11 @@ specifier|private
 name|void
 name|inspectTypeAdapter
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 argument_list|<
 name|?

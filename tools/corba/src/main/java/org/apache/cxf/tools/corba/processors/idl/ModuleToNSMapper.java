@@ -97,6 +97,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 name|exModules
 decl_stmt|;
@@ -128,6 +131,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -195,6 +201,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 name|map
 parameter_list|)
@@ -210,6 +219,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 name|getExcludedModuleMap
 parameter_list|()
@@ -238,6 +250,9 @@ return|;
 block|}
 specifier|public
 name|List
+argument_list|<
+name|String
+argument_list|>
 name|getExcludedImports
 parameter_list|(
 name|String

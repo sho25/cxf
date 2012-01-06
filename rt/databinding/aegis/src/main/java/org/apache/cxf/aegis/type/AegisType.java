@@ -271,6 +271,9 @@ block|}
 comment|/**      * @return Returns the java type as a Class.       * For a generic, return the raw type. For something      * truly exotic, return null.      */
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getTypeClass
 parameter_list|()
 block|{

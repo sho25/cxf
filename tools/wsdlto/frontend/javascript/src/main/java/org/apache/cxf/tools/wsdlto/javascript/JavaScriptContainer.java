@@ -755,9 +755,6 @@ name|WSDL11
 condition|)
 block|{
 name|AbstractWSDLBuilder
-argument_list|<
-name|Definition
-argument_list|>
 name|builder
 init|=
 name|frontend

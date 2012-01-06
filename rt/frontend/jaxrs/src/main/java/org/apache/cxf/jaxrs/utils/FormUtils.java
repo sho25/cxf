@@ -716,6 +716,9 @@ block|{
 for|for
 control|(
 name|Enumeration
+argument_list|<
+name|String
+argument_list|>
 name|en
 init|=
 name|request
@@ -736,9 +739,6 @@ init|=
 name|en
 operator|.
 name|nextElement
-argument_list|()
-operator|.
-name|toString
 argument_list|()
 decl_stmt|;
 name|String

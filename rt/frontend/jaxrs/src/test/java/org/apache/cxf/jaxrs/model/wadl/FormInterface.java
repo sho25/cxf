@@ -153,6 +153,11 @@ name|void
 name|form1
 parameter_list|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|map
 parameter_list|)
 function_decl|;

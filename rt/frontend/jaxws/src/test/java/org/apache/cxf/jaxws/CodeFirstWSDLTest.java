@@ -348,6 +348,9 @@ name|Definition
 name|createService
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 throws|throws

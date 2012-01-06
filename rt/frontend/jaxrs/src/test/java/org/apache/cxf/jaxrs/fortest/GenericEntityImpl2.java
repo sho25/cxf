@@ -73,6 +73,9 @@ name|Book
 parameter_list|>
 implements|implements
 name|GenericEntity2
+argument_list|<
+name|T
+argument_list|>
 block|{
 specifier|private
 name|T

@@ -1322,6 +1322,9 @@ return|;
 block|}
 specifier|public
 name|ContextResolver
+argument_list|<
+name|JAXBContext
+argument_list|>
 name|getContextResolver
 parameter_list|()
 block|{
@@ -1745,6 +1748,11 @@ argument_list|(
 literal|"p1"
 argument_list|)
 name|HashMap
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|map
 parameter_list|)
 block|{

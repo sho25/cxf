@@ -586,6 +586,9 @@ argument_list|<
 name|Object
 argument_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|responseMethodClassCache
 decl_stmt|;
@@ -595,6 +598,9 @@ argument_list|<
 name|Object
 argument_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|requestMethodClassCache
 decl_stmt|;
@@ -621,6 +627,9 @@ argument_list|<
 name|Object
 argument_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -632,6 +641,9 @@ argument_list|<
 name|Object
 argument_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -1196,6 +1208,9 @@ throw|;
 block|}
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|implClz
 init|=
 name|implInfo
@@ -3672,6 +3687,9 @@ annotation|@
 name|Override
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getResponseWrapper
 parameter_list|(
 name|Method
@@ -3679,6 +3697,9 @@ name|selected
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cachedClass
 init|=
 name|responseMethodClassCache
@@ -3805,6 +3826,9 @@ block|}
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|r
 init|=
 name|ClassLoaderUtils
@@ -4032,6 +4056,9 @@ annotation|@
 name|Override
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRequestWrapper
 parameter_list|(
 name|Method
@@ -4039,6 +4066,9 @@ name|selected
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cachedClass
 init|=
 name|requestMethodClassCache
@@ -4163,6 +4193,9 @@ block|}
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|r
 init|=
 name|ClassLoaderUtils

@@ -823,9 +823,6 @@ name|writeTo
 argument_list|(
 name|bean
 argument_list|,
-operator|(
-name|Class
-operator|)
 name|AegisTestBean
 operator|.
 name|class

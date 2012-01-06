@@ -381,6 +381,9 @@ block|{
 try|try
 block|{
 name|Collection
+argument_list|<
+name|Object
+argument_list|>
 name|values
 init|=
 name|readCollection
@@ -480,6 +483,9 @@ block|}
 comment|/**      * Read the elements of an array or array-like item.      * @param reader reader to read from.      * @param flatElementName if flat, the elements we are looking for. When we see      * something else. we stop.      * @param context context.      * @return a collection of the objects.      * @throws DatabindingException      */
 specifier|protected
 name|Collection
+argument_list|<
+name|Object
+argument_list|>
 name|readCollection
 parameter_list|(
 name|MessageReader
@@ -748,19 +754,20 @@ argument_list|)
 throw|;
 block|}
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|protected
 name|Object
 name|makeArray
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|arrayType
 parameter_list|,
 name|Collection
+argument_list|<
+name|Object
+argument_list|>
 name|values
 parameter_list|)
 block|{

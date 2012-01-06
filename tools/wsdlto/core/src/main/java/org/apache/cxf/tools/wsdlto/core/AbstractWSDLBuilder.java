@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|wsdl
+operator|.
+name|Definition
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -82,13 +92,10 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractWSDLBuilder
-parameter_list|<
-name|T
-parameter_list|>
 implements|implements
 name|WSDLBuilder
 argument_list|<
-name|T
+name|Definition
 argument_list|>
 block|{
 specifier|protected
@@ -140,7 +147,7 @@ specifier|abstract
 name|boolean
 name|validate
 parameter_list|(
-name|T
+name|Definition
 name|t
 parameter_list|)
 throws|throws
@@ -148,7 +155,7 @@ name|ToolException
 function_decl|;
 specifier|public
 specifier|abstract
-name|T
+name|Definition
 name|getWSDLModel
 parameter_list|()
 function_decl|;

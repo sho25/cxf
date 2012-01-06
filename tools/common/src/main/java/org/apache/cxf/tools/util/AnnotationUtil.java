@@ -388,6 +388,9 @@ specifier|public
 specifier|static
 specifier|synchronized
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|loadClass
 parameter_list|(
 name|String

@@ -954,6 +954,9 @@ name|singleJaxbContext
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|extraClass
 decl_stmt|;
@@ -1000,6 +1003,9 @@ name|void
 name|setExtraClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|userExtraClass
 parameter_list|)
@@ -1827,6 +1833,9 @@ condition|?
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|object
 operator|)
@@ -2481,6 +2490,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|classes
 init|=
@@ -3033,6 +3045,9 @@ condition|?
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -4073,6 +4088,9 @@ argument_list|(
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)
@@ -4260,6 +4278,9 @@ block|{
 return|return
 operator|new
 name|HashSet
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 name|theList
 argument_list|)

@@ -270,6 +270,9 @@ implements|implements
 name|ApplicationContextAware
 implements|,
 name|FactoryBean
+argument_list|<
+name|Object
+argument_list|>
 implements|,
 name|DisposableBean
 block|{
@@ -371,6 +374,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getObjectType
 parameter_list|()
 block|{

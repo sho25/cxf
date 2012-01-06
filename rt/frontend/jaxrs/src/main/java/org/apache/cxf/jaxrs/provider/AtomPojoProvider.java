@@ -1673,6 +1673,9 @@ else|:
 operator|(
 operator|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|collection
 operator|)
@@ -2278,6 +2281,11 @@ block|{
 operator|(
 operator|(
 name|AtomElementWriter
+argument_list|<
+name|Entry
+argument_list|,
+name|Object
+argument_list|>
 operator|)
 name|builder
 operator|)

@@ -381,6 +381,9 @@ name|el2
 init|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 decl_stmt|;

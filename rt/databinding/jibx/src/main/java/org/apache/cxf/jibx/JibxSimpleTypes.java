@@ -1311,6 +1311,9 @@ name|isSimpleType
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|)
 block|{
@@ -1352,6 +1355,9 @@ name|schemaType
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 parameter_list|)
 block|{

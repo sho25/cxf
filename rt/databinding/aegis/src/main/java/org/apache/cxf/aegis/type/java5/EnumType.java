@@ -308,6 +308,9 @@ argument_list|(
 operator|(
 operator|(
 name|Enum
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|object
 operator|)
@@ -482,6 +485,9 @@ argument_list|(
 operator|(
 operator|(
 name|Enum
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|constant
 operator|)

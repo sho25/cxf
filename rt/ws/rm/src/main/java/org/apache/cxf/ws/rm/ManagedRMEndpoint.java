@@ -351,6 +351,12 @@ name|SOURCE_SEQUENCE_DESCRIPTIONS
 init|=
 name|SOURCE_SEQUENCE_NAMES
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+comment|// needed as OpenType isn't generic on Java5
 specifier|private
 specifier|static
 specifier|final
@@ -410,6 +416,12 @@ name|DESTINATION_SEQUENCE_DESCRIPTIONS
 init|=
 name|DESTINATION_SEQUENCE_NAMES
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+comment|// needed as OpenType isn't generic on Java5
 specifier|private
 specifier|static
 specifier|final
@@ -469,6 +481,12 @@ name|RETRANSMISSION_STATUS_DESCRIPTIONS
 init|=
 name|RETRANSMISSION_STATUS_NAMES
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+comment|// needed as OpenType isn't generic on Java5
 specifier|private
 specifier|static
 specifier|final

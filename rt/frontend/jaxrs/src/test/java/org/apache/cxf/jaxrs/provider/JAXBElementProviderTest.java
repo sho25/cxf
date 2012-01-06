@@ -529,6 +529,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|helpers
+operator|.
+name|CastUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxrs
 operator|.
 name|ext
@@ -8181,10 +8195,18 @@ name|Book
 argument_list|>
 name|set
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 operator|(
 name|Set
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
+argument_list|)
 decl_stmt|;
 name|List
 argument_list|<
@@ -8524,6 +8546,9 @@ argument_list|,
 operator|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)
@@ -8540,6 +8565,9 @@ call|)
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 argument_list|)
@@ -8557,6 +8585,9 @@ call|)
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 argument_list|)
@@ -9608,6 +9639,11 @@ parameter_list|()
 block|{                      }
 specifier|public
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|getProperties
 parameter_list|()
 block|{
@@ -9615,6 +9651,11 @@ return|return
 name|props
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 parameter_list|<
 name|A
@@ -9826,6 +9867,11 @@ name|JAXBException
 block|{
 comment|// TODO Auto-generated method stub
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 name|void
 name|setAdapter
@@ -9836,6 +9882,11 @@ parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 parameter_list|<
 name|A

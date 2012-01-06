@@ -844,6 +844,9 @@ name|boolean
 name|isHolder
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -921,6 +924,9 @@ name|boolean
 name|isArray
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -1244,6 +1250,9 @@ name|QName
 name|createQName
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -1292,6 +1301,9 @@ name|boolean
 name|isCollection
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -1680,6 +1692,9 @@ name|boolean
 name|isMap
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -1708,6 +1723,9 @@ name|boolean
 name|isEnum
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -2154,6 +2172,9 @@ name|AegisType
 name|createType
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 block|{

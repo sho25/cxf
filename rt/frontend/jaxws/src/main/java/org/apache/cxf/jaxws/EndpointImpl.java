@@ -760,6 +760,9 @@ name|serviceName
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|implementorClass
 decl_stmt|;
 specifier|private
@@ -1238,6 +1241,9 @@ block|}
 comment|/**      * Gets the class of the implementor.      * @return the class of the implementor object      */
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getImplementorClass
 parameter_list|()
 block|{
@@ -3734,6 +3740,9 @@ name|void
 name|setImplementorClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|implementorClass
 parameter_list|)
 block|{

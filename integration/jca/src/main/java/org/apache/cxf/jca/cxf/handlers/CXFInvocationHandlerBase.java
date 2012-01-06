@@ -147,9 +147,6 @@ begin_class
 specifier|abstract
 class|class
 name|CXFInvocationHandlerBase
-parameter_list|<
-name|T
-parameter_list|>
 implements|implements
 name|CXFInvocationHandler
 block|{

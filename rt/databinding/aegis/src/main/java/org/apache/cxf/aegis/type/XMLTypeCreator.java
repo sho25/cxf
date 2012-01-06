@@ -544,6 +544,9 @@ specifier|static
 name|List
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|stopClasses
 init|=
@@ -551,6 +554,9 @@ operator|new
 name|ArrayList
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -1041,6 +1047,9 @@ name|Document
 name|getDocument
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 block|{
@@ -1199,6 +1208,9 @@ name|boolean
 name|isEnum
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{
@@ -1552,6 +1564,9 @@ name|type
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 init|=
 name|TypeUtil
@@ -1611,6 +1626,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|parent
 init|=
 name|clazz
@@ -1622,6 +1640,9 @@ condition|)
 block|{
 comment|// Read mappings for interfaces as well
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|interfaces
 init|=
@@ -1648,6 +1669,9 @@ operator|++
 control|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|interfaze
 init|=
 name|interfaces
@@ -1675,6 +1699,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|sup
 init|=
 name|parent
@@ -3001,6 +3028,9 @@ name|createType
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|cType
 argument_list|)
@@ -3370,6 +3400,9 @@ block|}
 block|}
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|loadComponentClass
 parameter_list|(
 name|String
@@ -3442,6 +3475,9 @@ block|{
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|aegisTypeClass
 init|=
 name|ClassLoaderUtils
@@ -3559,6 +3595,9 @@ return|;
 block|}
 comment|// if the method has no params, then more than one mapping is pointless
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|parameterTypes
 init|=
@@ -3605,6 +3644,9 @@ operator|++
 control|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|parameterType
 init|=
 name|parameterTypes
@@ -3615,6 +3657,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|Element
+argument_list|>
 name|iterator
 init|=
 name|nodes
@@ -3632,9 +3677,6 @@ block|{
 name|Element
 name|element
 init|=
-operator|(
-name|Element
-operator|)
 name|iterator
 operator|.
 name|next
@@ -3738,6 +3780,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|Element
+argument_list|>
 name|iterator
 init|=
 name|nodes
@@ -3755,9 +3800,6 @@ block|{
 name|Element
 name|element
 init|=
-operator|(
-name|Element
-operator|)
 name|iterator
 operator|.
 name|next

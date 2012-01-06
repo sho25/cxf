@@ -316,6 +316,11 @@ specifier|public
 name|ManagedConnection
 name|matchManagedConnections
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Set
 name|aMCSet
 parameter_list|,
@@ -359,6 +364,11 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Iterator
 name|iterator
 init|=

@@ -334,6 +334,9 @@ name|XMLStreamReader
 name|input
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|)
 block|{

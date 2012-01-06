@@ -62,6 +62,9 @@ name|String
 name|makeServiceNameFromClassName
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 block|{
@@ -143,6 +146,9 @@ name|QName
 name|makeQualifiedNameFromClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 block|{

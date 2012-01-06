@@ -504,9 +504,6 @@ name|WSDLToJavaProcessor
 argument_list|)
 expr_stmt|;
 name|AbstractWSDLBuilder
-argument_list|<
-name|?
-argument_list|>
 name|builder
 init|=
 name|profile

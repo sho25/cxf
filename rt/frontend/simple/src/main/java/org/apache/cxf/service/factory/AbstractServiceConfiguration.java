@@ -559,6 +559,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getResponseWrapper
 parameter_list|(
 name|Method
@@ -571,6 +574,9 @@ return|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getRequestWrapper
 parameter_list|(
 name|Method

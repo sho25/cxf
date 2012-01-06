@@ -334,6 +334,9 @@ expr_stmt|;
 block|}
 specifier|public
 name|List
+argument_list|<
+name|JavaMethod
+argument_list|>
 name|getOperations
 parameter_list|()
 block|{

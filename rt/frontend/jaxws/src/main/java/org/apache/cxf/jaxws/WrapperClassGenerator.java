@@ -1732,6 +1732,9 @@ name|String
 name|ns
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 block|{
@@ -2197,6 +2200,9 @@ name|getLocalPart
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 name|mpi
@@ -2227,6 +2233,9 @@ name|clz
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 expr_stmt|;
@@ -2278,6 +2287,9 @@ name|isAssignableFrom
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|tp
 operator|.

@@ -536,6 +536,11 @@ name|factory
 decl_stmt|;
 specifier|private
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|additionalNamespaces
 decl_stmt|;
 comment|// This is set to 'true' when we are reading the middle of a stream,
@@ -553,6 +558,11 @@ specifier|public
 name|StaxBuilder
 parameter_list|(
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|namespaces
 parameter_list|)
 block|{
@@ -565,6 +575,11 @@ expr_stmt|;
 block|}
 specifier|public
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|getAdditionalNamespaces
 parameter_list|()
 block|{
@@ -577,6 +592,11 @@ name|void
 name|setAdditionalNamespaces
 parameter_list|(
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|additionalNamespaces
 parameter_list|)
 block|{
@@ -1144,6 +1164,9 @@ block|{
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|iter
 init|=
 name|additionalNamespaces
@@ -1164,9 +1187,6 @@ block|{
 name|String
 name|prefix
 init|=
-operator|(
-name|String
-operator|)
 name|iter
 operator|.
 name|next
@@ -1175,9 +1195,6 @@ decl_stmt|;
 name|String
 name|uri
 init|=
-operator|(
-name|String
-operator|)
 name|additionalNamespaces
 operator|.
 name|get

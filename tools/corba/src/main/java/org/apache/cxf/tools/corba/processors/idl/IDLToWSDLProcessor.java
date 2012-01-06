@@ -3417,8 +3417,15 @@ name|getManager
 argument_list|()
 decl_stmt|;
 name|Collection
+argument_list|<
+name|String
+argument_list|>
 name|namespaces
 init|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|def
 operator|.
 name|getNamespaces
@@ -3426,6 +3433,7 @@ argument_list|()
 operator|.
 name|values
 argument_list|()
+argument_list|)
 decl_stmt|;
 name|Set
 argument_list|<
@@ -4233,6 +4241,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 name|getExcludedModules
 parameter_list|(
@@ -4245,6 +4256,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 name|exModules
 init|=
@@ -4254,6 +4268,9 @@ argument_list|<
 name|String
 argument_list|,
 name|List
+argument_list|<
+name|String
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -4348,6 +4365,9 @@ name|token
 argument_list|,
 operator|new
 name|ArrayList
+argument_list|<
+name|String
+argument_list|>
 argument_list|()
 argument_list|)
 expr_stmt|;

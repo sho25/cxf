@@ -136,6 +136,9 @@ return|;
 block|}
 specifier|public
 name|AbstractGenerator
+argument_list|<
+name|?
+argument_list|>
 name|newGenerator
 parameter_list|()
 block|{

@@ -370,6 +370,9 @@ expr_stmt|;
 block|}
 specifier|public
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getTypeClass
 parameter_list|()
 block|{
@@ -385,6 +388,9 @@ name|void
 name|setTypeClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|typeClass
 parameter_list|)
 block|{

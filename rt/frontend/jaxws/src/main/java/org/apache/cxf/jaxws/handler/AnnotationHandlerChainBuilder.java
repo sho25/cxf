@@ -1711,6 +1711,9 @@ name|URL
 name|resolveHandlerChainAnnotationFile
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|,
 name|String
@@ -1848,6 +1851,9 @@ name|trim
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|seiClass
 init|=
 literal|null

@@ -1450,6 +1450,9 @@ name|cast
 argument_list|(
 operator|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|r
 operator|.
@@ -1643,6 +1646,9 @@ name|cast
 argument_list|(
 operator|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|r
 operator|.
@@ -2883,6 +2889,11 @@ name|cast
 argument_list|(
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|invContext
 operator|.
@@ -2928,6 +2939,9 @@ name|respClass
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|reqContext
 operator|.
@@ -3510,6 +3524,11 @@ name|headers
 init|=
 operator|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 operator|)
 name|outMessage
 operator|.

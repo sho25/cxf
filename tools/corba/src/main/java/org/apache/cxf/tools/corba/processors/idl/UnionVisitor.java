@@ -1297,6 +1297,9 @@ name|getDeferredActions
 argument_list|()
 decl_stmt|;
 name|List
+argument_list|<
+name|DeferredAction
+argument_list|>
 name|list
 init|=
 name|deferredActions
@@ -1334,6 +1337,9 @@ name|getCorbaType
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|DeferredAction
+argument_list|>
 name|iterator
 init|=
 name|list

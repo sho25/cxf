@@ -855,6 +855,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|QName
+argument_list|>
 name|iter
 init|=
 name|service

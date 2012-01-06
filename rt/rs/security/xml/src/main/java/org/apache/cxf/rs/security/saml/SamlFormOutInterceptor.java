@@ -429,6 +429,11 @@ name|Form
 argument_list|(
 operator|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 operator|)
 name|obj
 argument_list|)

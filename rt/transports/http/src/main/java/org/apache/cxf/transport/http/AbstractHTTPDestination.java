@@ -3766,11 +3766,6 @@ return|;
 block|}
 comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.transport.AbstractMultiplexDestination#getId(java.util.Map)      */
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"rawtypes"
-argument_list|)
-annotation|@
 name|Override
 specifier|public
 name|String

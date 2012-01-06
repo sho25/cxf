@@ -310,6 +310,9 @@ name|JAXWSBinding
 name|parse
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|parentType
 parameter_list|,
 name|Element

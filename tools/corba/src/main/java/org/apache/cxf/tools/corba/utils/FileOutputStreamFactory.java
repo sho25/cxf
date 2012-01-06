@@ -113,7 +113,7 @@ literal|""
 decl_stmt|;
 name|List
 argument_list|<
-name|Object
+name|String
 argument_list|>
 name|fileNames
 decl_stmt|;
@@ -129,7 +129,7 @@ operator|=
 operator|new
 name|LinkedList
 argument_list|<
-name|Object
+name|String
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -153,7 +153,7 @@ operator|=
 operator|new
 name|LinkedList
 argument_list|<
-name|Object
+name|String
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -719,6 +719,9 @@ return|;
 block|}
 specifier|public
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|getStreamNames
 parameter_list|()
 throws|throws

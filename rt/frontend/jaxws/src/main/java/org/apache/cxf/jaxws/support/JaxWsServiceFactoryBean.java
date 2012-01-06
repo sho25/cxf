@@ -2078,6 +2078,9 @@ name|initializeWSDLOperationsForProvider
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|getProviderParameterType
@@ -2878,6 +2881,9 @@ name|isAssignableFrom
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 argument_list|)
@@ -2888,6 +2894,9 @@ name|getProviderParameterType
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 argument_list|)
@@ -2918,6 +2927,9 @@ name|selected
 parameter_list|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|responseWrapper
 init|=
 name|getResponseWrapper
@@ -3526,6 +3538,9 @@ name|operation
 parameter_list|,
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|expClass
 parameter_list|)
 block|{
@@ -4730,6 +4745,9 @@ name|MessagePartInfo
 name|part
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|rawClass
 parameter_list|,
 name|Type

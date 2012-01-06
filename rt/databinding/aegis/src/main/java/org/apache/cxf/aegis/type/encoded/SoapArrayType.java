@@ -1438,6 +1438,9 @@ name|Object
 name|makeArray
 parameter_list|(
 name|List
+argument_list|<
+name|Object
+argument_list|>
 name|values
 parameter_list|,
 name|List
@@ -1447,6 +1450,9 @@ argument_list|>
 name|dimensions
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|componentType
 parameter_list|)
 block|{
@@ -1537,7 +1543,7 @@ control|)
 block|{
 name|List
 argument_list|<
-name|?
+name|Object
 argument_list|>
 name|chunk
 init|=

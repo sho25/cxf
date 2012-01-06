@@ -694,8 +694,13 @@ return|return
 name|cp
 return|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|getImplementingClasses
 parameter_list|()
@@ -713,6 +718,9 @@ name|getServiceClass
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|ret
 index|[]
 init|=

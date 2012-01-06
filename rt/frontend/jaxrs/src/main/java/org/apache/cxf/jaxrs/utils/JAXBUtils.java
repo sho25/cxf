@@ -505,6 +505,11 @@ return|;
 block|}
 try|try
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|XmlAdapter
 name|xmlAdapter
 init|=

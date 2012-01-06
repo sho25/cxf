@@ -142,6 +142,9 @@ name|indentMore
 argument_list|()
 expr_stmt|;
 name|Collection
+argument_list|<
+name|IdlDefn
+argument_list|>
 name|enums
 init|=
 name|definitions
@@ -158,6 +161,9 @@ operator|-
 literal|1
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|IdlDefn
+argument_list|>
 name|it
 init|=
 name|enums

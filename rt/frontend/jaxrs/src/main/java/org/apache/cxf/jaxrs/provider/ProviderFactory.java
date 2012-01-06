@@ -1670,6 +1670,9 @@ return|;
 block|}
 specifier|private
 specifier|static
+parameter_list|<
+name|T
+parameter_list|>
 name|void
 name|handleMapper
 parameter_list|(
@@ -1791,10 +1794,16 @@ name|TypeVariable
 condition|)
 block|{
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 name|var
 init|=
 operator|(
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|arg
 decl_stmt|;

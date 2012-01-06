@@ -1826,6 +1826,11 @@ specifier|private
 name|JAXBBeanInfo
 name|findFromTypeAdapter
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 argument_list|<
 name|?

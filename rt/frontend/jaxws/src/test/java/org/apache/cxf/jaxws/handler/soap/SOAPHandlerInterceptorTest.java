@@ -1217,6 +1217,9 @@ name|getSOAPBody
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itNew
 init|=
 name|bodyNew
@@ -1244,6 +1247,9 @@ name|next
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|outIt
 init|=
 name|bodyElementNew
@@ -1997,6 +2003,9 @@ name|getSOAPHeader
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|soapHeader
@@ -2462,6 +2471,9 @@ name|getSOAPHeader
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itNew
 init|=
 name|soapHeader
@@ -2795,6 +2807,9 @@ name|getSOAPBody
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itNew
 init|=
 name|bodyNew

@@ -1330,9 +1330,6 @@ name|theHeaders
 operator|.
 name|putAll
 argument_list|(
-operator|(
-name|Map
-operator|)
 name|response
 operator|.
 name|getMetadata
@@ -1388,6 +1385,11 @@ name|responseHeaders
 operator|=
 operator|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 operator|)
 name|theHeaders
 expr_stmt|;
@@ -1585,6 +1587,9 @@ argument_list|()
 argument_list|,
 operator|(
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|genericType
 argument_list|)
@@ -2064,6 +2069,9 @@ operator|&&
 operator|(
 operator|(
 name|GenericEntity
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)
@@ -2098,6 +2106,9 @@ condition|?
 operator|(
 operator|(
 name|GenericEntity
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)
@@ -2832,6 +2843,9 @@ return|return
 operator|(
 operator|(
 name|GenericEntity
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|targetObject
 operator|)
@@ -2891,6 +2905,9 @@ return|return
 operator|(
 operator|(
 name|GenericEntity
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|targetObject
 operator|)
