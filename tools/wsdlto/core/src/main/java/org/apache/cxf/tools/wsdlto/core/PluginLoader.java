@@ -1835,6 +1835,9 @@ name|generator
 argument_list|)
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 name|ClassLoaderUtils
@@ -1927,6 +1930,9 @@ decl_stmt|;
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 name|ClassLoaderUtils

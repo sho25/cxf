@@ -292,6 +292,9 @@ name|ServiceInfo
 name|getServiceInfo
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|)
 block|{

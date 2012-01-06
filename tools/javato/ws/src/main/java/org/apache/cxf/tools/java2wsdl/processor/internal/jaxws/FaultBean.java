@@ -389,6 +389,9 @@ name|isWebFaultAbsent
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|exceptionClass
 parameter_list|)
 block|{
@@ -410,6 +413,9 @@ name|transform
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|exceptionClass
 parameter_list|,
 specifier|final
@@ -652,6 +658,9 @@ name|buildBeanFields
 parameter_list|(
 specifier|final
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|exceptionClass
 parameter_list|,
 specifier|final

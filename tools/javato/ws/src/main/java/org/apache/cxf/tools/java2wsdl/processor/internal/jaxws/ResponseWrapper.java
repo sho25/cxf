@@ -836,10 +836,16 @@ operator|)
 name|t
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|pt
 operator|.

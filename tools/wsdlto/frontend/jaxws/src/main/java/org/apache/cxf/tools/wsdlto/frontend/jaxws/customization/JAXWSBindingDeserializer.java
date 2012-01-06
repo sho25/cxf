@@ -139,6 +139,11 @@ specifier|public
 name|ExtensibilityElement
 name|unmarshall
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|parentType
 parameter_list|,

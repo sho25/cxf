@@ -82,6 +82,9 @@ throws|throws
 name|Throwable
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|clzs
 init|=

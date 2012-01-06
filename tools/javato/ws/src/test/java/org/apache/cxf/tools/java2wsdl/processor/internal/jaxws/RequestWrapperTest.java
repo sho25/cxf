@@ -238,6 +238,9 @@ name|OperationInfo
 name|getOperation
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 parameter_list|,
 name|String
@@ -319,6 +322,9 @@ parameter_list|()
 block|{
 comment|// Test String[]
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|testingClass
 init|=
 name|GreeterArray
@@ -616,6 +622,9 @@ init|=
 literal|"org.apache.cxf.tools.fortest.classnoanno.docwrapped"
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|testingClass
 init|=
 name|Class
@@ -882,6 +891,9 @@ init|=
 literal|"org.apache.cxf.tools.fortest.withannotation.doc"
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|testingClass
 init|=
 name|Class
@@ -985,6 +997,9 @@ init|=
 literal|"org.apache.cxf.tools.fortest.withannotation.doc"
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|testingClass
 init|=
 name|Class

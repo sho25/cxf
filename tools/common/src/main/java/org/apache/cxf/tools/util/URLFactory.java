@@ -289,6 +289,9 @@ operator|+
 literal|".Handler"
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 init|=
 literal|null

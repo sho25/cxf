@@ -6522,6 +6522,9 @@ name|cls
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|f
 operator|.
@@ -6608,6 +6611,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|f
 operator|.

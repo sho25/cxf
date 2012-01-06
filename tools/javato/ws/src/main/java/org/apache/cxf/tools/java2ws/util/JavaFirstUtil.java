@@ -572,10 +572,16 @@ name|Class
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 decl_stmt|;
