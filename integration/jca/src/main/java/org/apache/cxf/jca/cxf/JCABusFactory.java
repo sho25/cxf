@@ -610,6 +610,9 @@ expr_stmt|;
 try|try
 block|{
 name|Enumeration
+argument_list|<
+name|?
+argument_list|>
 name|keys
 init|=
 name|ejbServants
@@ -1097,6 +1100,9 @@ return|;
 block|}
 specifier|protected
 name|List
+argument_list|<
+name|Server
+argument_list|>
 name|getRegisteredServants
 parameter_list|()
 block|{

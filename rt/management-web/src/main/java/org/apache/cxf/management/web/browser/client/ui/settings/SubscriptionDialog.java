@@ -128,6 +128,9 @@ parameter_list|(
 name|Map
 argument_list|<
 name|HasValue
+argument_list|<
+name|String
+argument_list|>
 argument_list|,
 name|String
 argument_list|>

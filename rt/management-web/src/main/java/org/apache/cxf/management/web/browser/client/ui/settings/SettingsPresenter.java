@@ -621,6 +621,9 @@ block|{
 name|Map
 argument_list|<
 name|HasValue
+argument_list|<
+name|String
+argument_list|>
 argument_list|,
 name|String
 argument_list|>
@@ -816,6 +819,9 @@ specifier|private
 name|Map
 argument_list|<
 name|HasValue
+argument_list|<
+name|String
+argument_list|>
 argument_list|,
 name|String
 argument_list|>
@@ -843,6 +849,9 @@ block|{
 name|Map
 argument_list|<
 name|HasValue
+argument_list|<
+name|String
+argument_list|>
 argument_list|,
 name|String
 argument_list|>
@@ -852,6 +861,9 @@ operator|new
 name|HashMap
 argument_list|<
 name|HasValue
+argument_list|<
+name|String
+argument_list|>
 argument_list|,
 name|String
 argument_list|>

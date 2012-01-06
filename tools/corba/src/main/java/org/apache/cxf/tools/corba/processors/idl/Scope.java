@@ -86,6 +86,9 @@ class|class
 name|Scope
 implements|implements
 name|Comparable
+argument_list|<
+name|Object
+argument_list|>
 block|{
 specifier|private
 specifier|static
