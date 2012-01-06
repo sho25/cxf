@@ -469,9 +469,6 @@ name|ServerFactoryBean
 name|createServiceFactory
 parameter_list|(
 name|Class
-argument_list|<
-name|?
-argument_list|>
 name|serviceClass
 parameter_list|,
 name|Object
