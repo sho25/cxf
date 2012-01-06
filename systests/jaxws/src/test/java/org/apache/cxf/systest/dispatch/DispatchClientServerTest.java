@@ -2469,6 +2469,9 @@ name|domReqMsg2
 argument_list|)
 expr_stmt|;
 name|Response
+argument_list|<
+name|DOMSource
+argument_list|>
 name|response
 init|=
 name|disp
@@ -2481,9 +2484,6 @@ decl_stmt|;
 name|DOMSource
 name|domRespMsg2
 init|=
-operator|(
-name|DOMSource
-operator|)
 name|response
 operator|.
 name|get
@@ -2572,6 +2572,9 @@ name|TestDOMSourceHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
@@ -2904,6 +2907,9 @@ argument_list|)
 expr_stmt|;
 comment|// invokeAsync
 name|Response
+argument_list|<
+name|DOMSource
+argument_list|>
 name|response
 init|=
 name|disp
@@ -2916,9 +2922,6 @@ decl_stmt|;
 name|DOMSource
 name|domRespMsg2
 init|=
-operator|(
-name|DOMSource
-operator|)
 name|response
 operator|.
 name|get
@@ -3045,6 +3048,9 @@ name|TestDOMSourceHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
@@ -3248,6 +3254,9 @@ argument_list|)
 expr_stmt|;
 comment|// Test async polling
 name|Response
+argument_list|<
+name|Object
+argument_list|>
 name|response2
 init|=
 name|disp
@@ -3304,6 +3313,9 @@ name|TestJAXBHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
@@ -4098,6 +4110,9 @@ name|saxSourceReq2
 argument_list|)
 expr_stmt|;
 name|Response
+argument_list|<
+name|SAXSource
+argument_list|>
 name|response
 init|=
 name|disp
@@ -4110,9 +4125,6 @@ decl_stmt|;
 name|SAXSource
 name|saxSourceResp2
 init|=
-operator|(
-name|SAXSource
-operator|)
 name|response
 operator|.
 name|get
@@ -4190,6 +4202,9 @@ name|TestSAXSourceHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
@@ -4561,6 +4576,9 @@ name|saxSourceReq2
 argument_list|)
 expr_stmt|;
 name|Response
+argument_list|<
+name|SAXSource
+argument_list|>
 name|response
 init|=
 name|disp
@@ -4573,9 +4591,6 @@ decl_stmt|;
 name|SAXSource
 name|saxSourceResp2
 init|=
-operator|(
-name|SAXSource
-operator|)
 name|response
 operator|.
 name|get
@@ -4679,6 +4694,9 @@ name|TestSAXSourceHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
@@ -4942,6 +4960,9 @@ name|streamSourceReq2
 argument_list|)
 expr_stmt|;
 name|Response
+argument_list|<
+name|StreamSource
+argument_list|>
 name|response
 init|=
 name|disp
@@ -4954,9 +4975,6 @@ decl_stmt|;
 name|StreamSource
 name|streamSourceResp2
 init|=
-operator|(
-name|StreamSource
-operator|)
 name|response
 operator|.
 name|get
@@ -5024,6 +5042,9 @@ name|TestStreamSourceHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
@@ -5288,6 +5309,9 @@ name|streamSourceReq2
 argument_list|)
 expr_stmt|;
 name|Response
+argument_list|<
+name|StreamSource
+argument_list|>
 name|response
 init|=
 name|disp
@@ -5300,9 +5324,6 @@ decl_stmt|;
 name|StreamSource
 name|streamSourceResp2
 init|=
-operator|(
-name|StreamSource
-operator|)
 name|response
 operator|.
 name|get
@@ -5371,6 +5392,9 @@ name|TestStreamSourceHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 init|=
 name|disp
