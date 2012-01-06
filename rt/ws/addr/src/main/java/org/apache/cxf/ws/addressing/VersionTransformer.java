@@ -2365,6 +2365,9 @@ operator|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)
@@ -2781,6 +2784,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 name|org
@@ -2988,6 +2994,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 init|=
 name|org

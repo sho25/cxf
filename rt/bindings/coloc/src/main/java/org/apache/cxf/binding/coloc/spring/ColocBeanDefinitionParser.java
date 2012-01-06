@@ -76,6 +76,9 @@ annotation|@
 name|Override
 specifier|protected
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getBeanClass
 parameter_list|(
 name|Element

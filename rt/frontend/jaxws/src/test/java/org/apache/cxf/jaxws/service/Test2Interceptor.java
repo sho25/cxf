@@ -65,6 +65,9 @@ class|class
 name|Test2Interceptor
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|public
 name|Test2Interceptor

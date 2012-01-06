@@ -422,6 +422,9 @@ name|getEndpointClass
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|endpointInterface
 init|=
 name|getSEIClass
@@ -1185,6 +1188,9 @@ name|String
 name|getDefaultNamespace
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 parameter_list|)
 block|{

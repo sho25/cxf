@@ -1535,6 +1535,9 @@ expr_stmt|;
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|interfaces
 init|=

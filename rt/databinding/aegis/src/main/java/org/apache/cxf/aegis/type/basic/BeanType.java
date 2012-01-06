@@ -636,6 +636,9 @@ decl_stmt|;
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clazz
 init|=
 name|getTypeClass
@@ -1626,6 +1629,9 @@ throw|;
 block|}
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|propertyType
 init|=
 name|desc
@@ -2835,6 +2841,9 @@ name|getTypeInfo
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|inf
@@ -3092,6 +3101,9 @@ literal|": [class="
 argument_list|)
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|getTypeClass

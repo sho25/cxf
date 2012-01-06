@@ -222,6 +222,9 @@ throws|throws
 name|Exception
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resultClass
 init|=
 name|plugInClassLoader
@@ -266,6 +269,9 @@ throws|throws
 name|Exception
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resultClass
 init|=
 name|plugInClassLoader
@@ -332,6 +338,9 @@ throws|throws
 name|Exception
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resultClass
 init|=
 name|plugInClassLoader
@@ -473,6 +482,9 @@ expr_stmt|;
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|claz
 init|=
 name|plugInClassLoader
@@ -522,6 +534,9 @@ throws|throws
 name|Exception
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resultClass
 init|=
 name|plugInClassLoader
@@ -662,6 +677,9 @@ throws|throws
 name|Exception
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resultClass
 init|=
 name|plugInClassLoader
@@ -810,6 +828,9 @@ throws|throws
 name|Exception
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resultClass
 init|=
 name|plugInClassLoader

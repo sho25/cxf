@@ -745,6 +745,9 @@ name|QName
 name|portName
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 modifier|...
 name|jaxbClasses
 parameter_list|)

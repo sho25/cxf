@@ -760,11 +760,11 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|wrapper
 init|=
-operator|(
-name|Class
-operator|)
 name|op
 operator|.
 name|getInput
@@ -788,9 +788,6 @@ argument_list|)
 expr_stmt|;
 name|wrapper
 operator|=
-operator|(
-name|Class
-operator|)
 name|op
 operator|.
 name|getOutput
@@ -880,6 +877,9 @@ name|f
 argument_list|)
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 name|f

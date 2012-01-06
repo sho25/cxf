@@ -309,11 +309,6 @@ block|}
 comment|// CXF-3989
 annotation|@
 name|Test
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|void
 name|testSetHttpRequestHeadersScope
@@ -336,6 +331,14 @@ name|msg
 argument_list|)
 decl_stmt|;
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+argument_list|>
 name|headers
 init|=
 operator|new

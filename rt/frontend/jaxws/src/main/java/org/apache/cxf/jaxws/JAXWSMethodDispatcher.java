@@ -374,6 +374,9 @@ expr_stmt|;
 continue|continue;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|endpointClass
 init|=
 name|implInfo
@@ -537,6 +540,9 @@ condition|)
 block|{
 comment|//bridge method, need to map the generics
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|params
 index|[]
 init|=
@@ -564,10 +570,16 @@ name|TypeVariable
 condition|)
 block|{
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 name|tv
 init|=
 operator|(
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|t
 decl_stmt|;
@@ -595,6 +607,9 @@ operator|++
 control|)
 block|{
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 name|t2
 init|=
 name|implInfo
@@ -631,6 +646,9 @@ index|]
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|implInfo
 operator|.

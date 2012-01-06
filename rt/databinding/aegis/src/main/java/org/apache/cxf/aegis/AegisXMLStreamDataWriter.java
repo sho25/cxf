@@ -551,6 +551,9 @@ name|getType
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|objectType
 argument_list|)

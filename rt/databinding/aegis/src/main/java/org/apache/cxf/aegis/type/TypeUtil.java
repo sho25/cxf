@@ -883,6 +883,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|type
 return|;

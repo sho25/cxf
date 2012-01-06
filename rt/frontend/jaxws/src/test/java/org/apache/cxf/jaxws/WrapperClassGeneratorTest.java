@@ -348,6 +348,9 @@ name|next
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|requestClass
 init|=
 name|inf
@@ -364,6 +367,9 @@ name|getTypeClass
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|responseClass
 init|=
 name|inf

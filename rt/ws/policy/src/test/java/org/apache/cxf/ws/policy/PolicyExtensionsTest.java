@@ -345,6 +345,9 @@ name|abr
 argument_list|)
 expr_stmt|;
 name|AssertionBuilder
+argument_list|<
+name|?
+argument_list|>
 name|ab
 init|=
 name|abr

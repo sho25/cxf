@@ -1444,6 +1444,9 @@ call|)
 argument_list|(
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 argument_list|)

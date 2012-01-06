@@ -810,6 +810,9 @@ argument_list|)
 throw|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 decl_stmt|;
 try|try
@@ -1022,6 +1025,9 @@ argument_list|>
 name|createFaultClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|)
 block|{
@@ -1038,6 +1044,9 @@ return|;
 block|}
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|getClassByName
 parameter_list|(
 name|JType
@@ -1047,6 +1056,9 @@ throws|throws
 name|ClassNotFoundException
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 decl_stmt|;
 if|if

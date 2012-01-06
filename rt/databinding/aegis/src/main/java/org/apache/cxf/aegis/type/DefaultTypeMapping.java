@@ -1444,6 +1444,9 @@ name|boolean
 name|defaultNillable
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|class1
 parameter_list|,
 name|QName

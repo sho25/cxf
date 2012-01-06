@@ -996,6 +996,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|BindingOperationInfo
+argument_list|>
 name|iter
 init|=
 name|bInfo
@@ -1026,9 +1029,6 @@ condition|)
 block|{
 name|bopInfo
 operator|=
-operator|(
-name|BindingOperationInfo
-operator|)
 name|iter
 operator|.
 name|next
@@ -1621,6 +1621,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|faultClass
 init|=
 name|faultMethod

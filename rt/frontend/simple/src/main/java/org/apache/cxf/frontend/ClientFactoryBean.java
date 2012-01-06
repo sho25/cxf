@@ -635,6 +635,11 @@ parameter_list|)
 block|{
 comment|//Apply the AuthorizationPolicy to the endpointInfo
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|props
 init|=
 name|this

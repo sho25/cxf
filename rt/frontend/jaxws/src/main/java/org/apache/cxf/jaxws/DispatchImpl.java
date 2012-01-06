@@ -2990,6 +2990,9 @@ block|{
 return|return
 operator|(
 name|Response
+argument_list|<
+name|T
+argument_list|>
 operator|)
 name|invokeAsync
 argument_list|(

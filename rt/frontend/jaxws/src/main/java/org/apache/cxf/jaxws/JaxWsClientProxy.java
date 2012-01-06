@@ -1749,6 +1749,9 @@ name|handler
 operator|=
 operator|(
 name|AsyncHandler
+argument_list|<
+name|Object
+argument_list|>
 operator|)
 name|params
 index|[
@@ -1772,6 +1775,9 @@ name|callback
 init|=
 operator|new
 name|JaxwsClientCallback
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 name|handler
 argument_list|)
@@ -1784,6 +1790,9 @@ name|ret
 init|=
 operator|new
 name|JaxwsResponseCallback
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 name|callback
 argument_list|)

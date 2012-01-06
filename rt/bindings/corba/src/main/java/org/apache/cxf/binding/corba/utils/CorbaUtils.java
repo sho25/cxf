@@ -1561,6 +1561,9 @@ name|getName
 argument_list|()
 decl_stmt|;
 name|List
+argument_list|<
+name|Enumerator
+argument_list|>
 name|enums
 init|=
 name|enumType
@@ -1661,6 +1664,9 @@ name|obj
 decl_stmt|;
 comment|// TODO: check to see if this is a recursive type.
 name|List
+argument_list|<
+name|MemberType
+argument_list|>
 name|list
 init|=
 name|exceptType
@@ -2024,6 +2030,9 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|List
+argument_list|<
+name|MemberType
+argument_list|>
 name|list
 init|=
 name|structType

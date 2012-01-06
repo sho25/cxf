@@ -571,10 +571,16 @@ literal|null
 condition|)
 block|{
 name|Holder
+argument_list|<
+name|?
+argument_list|>
 name|holder
 init|=
 operator|(
 name|Holder
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|outObjects
 operator|.
@@ -658,6 +664,9 @@ argument_list|,
 operator|(
 operator|(
 name|Holder
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 operator|)

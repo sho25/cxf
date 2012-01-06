@@ -2959,6 +2959,9 @@ name|Object
 name|objArray
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 init|=
 literal|null
@@ -2978,6 +2981,9 @@ name|l
 init|=
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|mObj
 decl_stmt|;
@@ -4217,6 +4223,9 @@ literal|null
 condition|?
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|part
 operator|.
@@ -4311,6 +4320,9 @@ literal|null
 condition|?
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|part
 operator|.
@@ -4476,6 +4488,9 @@ return|return
 operator|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -4498,6 +4513,9 @@ argument_list|,
 operator|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)
@@ -4977,10 +4995,16 @@ literal|"generic.type"
 argument_list|)
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|tp2
 init|=
 call|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 call|)
 argument_list|(
 operator|(
@@ -5242,6 +5266,9 @@ name|cls
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|tp2
 decl_stmt|;
@@ -5278,6 +5305,9 @@ name|cast
 argument_list|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|cls
 operator|.
@@ -6795,6 +6825,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|t
 return|;

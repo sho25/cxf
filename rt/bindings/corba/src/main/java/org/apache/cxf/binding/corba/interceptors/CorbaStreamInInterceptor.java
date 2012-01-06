@@ -1148,6 +1148,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|BindingOperationInfo
+argument_list|>
 name|i
 init|=
 name|bInfo
@@ -1183,9 +1186,6 @@ condition|)
 block|{
 name|bopInfo
 operator|=
-operator|(
-name|BindingOperationInfo
-operator|)
 name|i
 operator|.
 name|next

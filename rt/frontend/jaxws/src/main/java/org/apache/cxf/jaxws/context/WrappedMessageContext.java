@@ -1427,6 +1427,11 @@ argument_list|)
 condition|)
 block|{
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|mp
 init|=
 literal|null
@@ -1441,6 +1446,11 @@ name|mp
 operator|=
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|message
 operator|.
@@ -1478,6 +1488,11 @@ name|ret
 operator|=
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|tmp
 operator|.

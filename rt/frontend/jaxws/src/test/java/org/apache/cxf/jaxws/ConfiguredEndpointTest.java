@@ -2387,6 +2387,11 @@ block|{
 for|for
 control|(
 name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 name|i
 range|:
 name|interceptors
@@ -2440,6 +2445,9 @@ class|class
 name|TestInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|public
 name|TestInterceptor

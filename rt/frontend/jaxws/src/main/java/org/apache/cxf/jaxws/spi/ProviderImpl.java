@@ -587,6 +587,11 @@ parameter_list|,
 name|QName
 name|qname
 parameter_list|,
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|cls
 parameter_list|)
@@ -624,6 +629,11 @@ parameter_list|,
 name|QName
 name|serviceName
 parameter_list|,
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|serviceClass
 parameter_list|,

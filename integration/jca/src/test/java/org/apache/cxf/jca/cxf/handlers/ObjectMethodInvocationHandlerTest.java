@@ -432,6 +432,9 @@ name|testEqualsThroughProxies
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|interfaces
 init|=

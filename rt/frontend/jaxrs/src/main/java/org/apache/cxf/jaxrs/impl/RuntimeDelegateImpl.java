@@ -236,6 +236,9 @@ specifier|protected
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|HeaderDelegate
 argument_list|>
@@ -245,6 +248,9 @@ operator|new
 name|HashMap
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|HeaderDelegate
 argument_list|>

@@ -417,6 +417,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|ExtensibilityElement
+argument_list|>
 name|itIn
 init|=
 literal|null
@@ -528,6 +531,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|ExtensibilityElement
+argument_list|>
 name|itOut
 init|=
 literal|null
@@ -585,6 +591,9 @@ name|boolean
 name|findXMLFormatRootNode
 parameter_list|(
 name|Iterator
+argument_list|<
+name|ExtensibilityElement
+argument_list|>
 name|it
 parameter_list|,
 name|BindingOperationInfo
@@ -606,7 +615,7 @@ name|hasNext
 argument_list|()
 condition|)
 block|{
-name|Object
+name|ExtensibilityElement
 name|ext
 init|=
 name|it

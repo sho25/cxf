@@ -643,6 +643,9 @@ name|getBindingInfo
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|BindingOperationInfo
+argument_list|>
 name|i
 init|=
 name|bInfo

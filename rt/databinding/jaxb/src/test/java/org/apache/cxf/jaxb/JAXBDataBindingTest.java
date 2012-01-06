@@ -831,6 +831,9 @@ name|testCreateReader
 parameter_list|()
 block|{
 name|DataReader
+argument_list|<
+name|?
+argument_list|>
 name|reader
 init|=
 name|jaxbDataBinding
@@ -1061,6 +1064,9 @@ name|testCreateWriter
 parameter_list|()
 block|{
 name|DataWriter
+argument_list|<
+name|?
+argument_list|>
 name|writer
 init|=
 name|jaxbDataBinding
@@ -1138,6 +1144,9 @@ name|testExtraClass
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|extraClass
 init|=

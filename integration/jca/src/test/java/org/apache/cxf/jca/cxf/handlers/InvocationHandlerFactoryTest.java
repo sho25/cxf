@@ -238,6 +238,9 @@ decl_stmt|;
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|allHandlerTypes
 init|=
@@ -245,6 +248,9 @@ operator|new
 name|HashSet
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -373,6 +379,9 @@ name|InvokingInvocationHandler
 argument_list|)
 expr_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|types
 init|=

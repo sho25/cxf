@@ -787,6 +787,9 @@ name|JAXBDataBinding
 name|getDataBinding
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 modifier|...
 name|clz
 parameter_list|)

@@ -876,6 +876,9 @@ block|{
 try|try
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|fact
 init|=
 name|Class
@@ -1077,6 +1080,9 @@ name|boolean
 name|register
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{

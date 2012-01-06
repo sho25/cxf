@@ -369,6 +369,9 @@ name|URL
 name|wsdl
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|implClz
 parameter_list|,
 name|QName

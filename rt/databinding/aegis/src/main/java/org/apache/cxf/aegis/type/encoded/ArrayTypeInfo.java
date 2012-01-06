@@ -528,6 +528,9 @@ literal|0
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|componentType
 init|=
 name|type
