@@ -481,6 +481,11 @@ name|cast
 argument_list|(
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|message
 operator|.

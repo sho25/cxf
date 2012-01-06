@@ -165,6 +165,11 @@ expr_stmt|;
 block|}
 specifier|public
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|getItemsMap
 parameter_list|()
 block|{

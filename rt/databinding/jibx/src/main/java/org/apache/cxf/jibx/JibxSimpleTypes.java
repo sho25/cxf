@@ -1211,6 +1211,9 @@ name|getTypeName
 argument_list|()
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|paraTypes
 init|=

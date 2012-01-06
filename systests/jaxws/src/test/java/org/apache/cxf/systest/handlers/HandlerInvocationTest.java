@@ -1568,6 +1568,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|iter
 init|=
 name|resp
@@ -2382,9 +2385,6 @@ name|soapHandler2
 init|=
 operator|new
 name|TestSOAPHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
 argument_list|(
 literal|false
 argument_list|)
@@ -2654,9 +2654,6 @@ name|soapHandler2
 init|=
 operator|new
 name|TestSOAPHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
 argument_list|(
 literal|false
 argument_list|)
@@ -4150,9 +4147,6 @@ name|soapHandler1
 init|=
 operator|new
 name|TestSOAPHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
 argument_list|(
 literal|false
 argument_list|)
@@ -4445,9 +4439,6 @@ name|soapHandler1
 init|=
 operator|new
 name|TestSOAPHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
 argument_list|(
 literal|false
 argument_list|)
@@ -4737,9 +4728,6 @@ name|soapHandler1
 init|=
 operator|new
 name|TestSOAPHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
 argument_list|(
 literal|false
 argument_list|)
@@ -6424,9 +6412,6 @@ name|soapHandler
 init|=
 operator|new
 name|TestSOAPHandler
-argument_list|<
-name|SOAPMessageContext
-argument_list|>
 argument_list|(
 literal|false
 argument_list|)
@@ -6841,6 +6826,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|String
+argument_list|>
 name|iter
 init|=
 name|resp

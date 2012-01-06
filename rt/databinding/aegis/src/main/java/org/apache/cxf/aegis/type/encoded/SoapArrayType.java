@@ -1536,6 +1536,9 @@ operator|++
 control|)
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|chunk
 init|=
 name|values
@@ -2100,6 +2103,9 @@ name|getComponentType
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|compType
 init|=
 name|getTypeClass
@@ -2251,6 +2257,9 @@ decl_stmt|;
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|type
 init|=
 name|getTypeClass

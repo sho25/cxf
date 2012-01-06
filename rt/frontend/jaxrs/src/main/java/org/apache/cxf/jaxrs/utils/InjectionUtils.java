@@ -1057,6 +1057,9 @@ init|=
 literal|0
 decl_stmt|;
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|vars
 init|=
@@ -1310,11 +1313,6 @@ return|return
 name|methodToInvoke
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|void
@@ -1339,6 +1337,9 @@ name|doPrivileged
 argument_list|(
 operator|new
 name|PrivilegedAction
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 block|{
 specifier|public
@@ -1393,11 +1394,6 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|Object
@@ -1419,6 +1415,9 @@ name|doPrivileged
 argument_list|(
 operator|new
 name|PrivilegedAction
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 block|{
 specifier|public
@@ -1549,6 +1548,9 @@ argument_list|(
 operator|(
 operator|(
 name|TypeVariable
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|genericType
 operator|)
@@ -1755,6 +1757,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|genericType
 return|;
@@ -1793,6 +1798,9 @@ block|{
 return|return
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|t
 return|;
@@ -3829,6 +3837,11 @@ name|putAll
 argument_list|(
 operator|(
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 operator|)
 name|second
 argument_list|)
@@ -4638,6 +4651,9 @@ name|addAll
 argument_list|(
 operator|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|second
 argument_list|)
@@ -5842,6 +5858,9 @@ begin_function
 specifier|private
 specifier|static
 name|ThreadLocalProxy
+argument_list|<
+name|?
+argument_list|>
 name|createThreadLocalServletApiContext
 parameter_list|(
 name|String
@@ -5921,6 +5940,9 @@ block|{
 return|return
 operator|(
 name|ThreadLocalProxy
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|ClassLoaderUtils
 operator|.
@@ -6105,6 +6127,9 @@ argument_list|()
 control|)
 block|{
 name|ThreadLocalProxy
+argument_list|<
+name|?
+argument_list|>
 name|proxy
 init|=
 name|cri

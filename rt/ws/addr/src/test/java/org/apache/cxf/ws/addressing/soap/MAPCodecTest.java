@@ -4153,10 +4153,16 @@ name|JAXBElement
 condition|)
 block|{
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 name|other
 init|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 decl_stmt|;

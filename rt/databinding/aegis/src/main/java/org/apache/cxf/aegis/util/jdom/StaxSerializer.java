@@ -181,6 +181,9 @@ expr_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|doc
@@ -315,6 +318,9 @@ name|elUri
 argument_list|)
 expr_stmt|;
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|namespaces
 init|=
 name|e
@@ -325,6 +331,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|namespaces
@@ -410,6 +419,9 @@ block|}
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|e
@@ -631,6 +643,9 @@ block|}
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|e
@@ -777,6 +792,9 @@ block|{
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|pxs
 init|=
 name|writer

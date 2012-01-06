@@ -49,6 +49,9 @@ class|class
 name|ClassArrayFactoryBean
 implements|implements
 name|FactoryBean
+argument_list|<
+name|Object
+argument_list|>
 block|{
 specifier|private
 name|List

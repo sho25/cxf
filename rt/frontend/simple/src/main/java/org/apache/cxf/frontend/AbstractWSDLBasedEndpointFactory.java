@@ -460,6 +460,9 @@ argument_list|)
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|serviceClass
 decl_stmt|;
 specifier|private
@@ -1424,6 +1427,9 @@ name|initializeServiceFactory
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 init|=
 name|getServiceClass

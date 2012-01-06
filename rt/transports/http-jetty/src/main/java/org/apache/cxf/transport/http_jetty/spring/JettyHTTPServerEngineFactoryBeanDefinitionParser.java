@@ -618,6 +618,9 @@ argument_list|)
 expr_stmt|;
 comment|// parser the engine list
 name|List
+argument_list|<
+name|Object
+argument_list|>
 name|list
 init|=
 name|getRequiredElementsList
@@ -675,13 +678,11 @@ argument_list|)
 throw|;
 block|}
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|List
+argument_list|<
+name|Object
+argument_list|>
 name|getRequiredElementsList
 parameter_list|(
 name|Element
@@ -721,10 +722,16 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|ManagedList
+argument_list|<
+name|Object
+argument_list|>
 name|list
 init|=
 operator|new
 name|ManagedList
+argument_list|<
+name|Object
+argument_list|>
 argument_list|(
 name|elemList
 operator|.

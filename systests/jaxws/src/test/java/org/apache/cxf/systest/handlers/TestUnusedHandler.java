@@ -19,16 +19,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|xml
@@ -160,20 +150,6 @@ block|{
 name|methodCalled
 argument_list|(
 literal|"close"
-argument_list|)
-expr_stmt|;
-block|}
-specifier|public
-name|void
-name|init
-parameter_list|(
-name|Map
-name|arg0
-parameter_list|)
-block|{
-name|methodCalled
-argument_list|(
-literal|"init"
 argument_list|)
 expr_stmt|;
 block|}

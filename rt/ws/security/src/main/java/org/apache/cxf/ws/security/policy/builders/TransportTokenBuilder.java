@@ -346,6 +346,12 @@ expr_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|List
+argument_list|<
+name|Assertion
+argument_list|>
+argument_list|>
 name|iterator
 init|=
 name|policy
@@ -369,9 +375,6 @@ name|Token
 call|)
 argument_list|(
 operator|(
-operator|(
-name|List
-operator|)
 name|iterator
 operator|.
 name|next

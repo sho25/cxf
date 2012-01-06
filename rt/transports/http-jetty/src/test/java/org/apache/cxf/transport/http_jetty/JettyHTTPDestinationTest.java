@@ -2672,10 +2672,16 @@ name|JAXBElement
 argument_list|)
 expr_stmt|;
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 name|el
 init|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|refWithId
 operator|.

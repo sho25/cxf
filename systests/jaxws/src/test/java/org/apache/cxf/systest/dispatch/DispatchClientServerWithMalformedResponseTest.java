@@ -531,6 +531,9 @@ name|void
 name|waitForFuture
 parameter_list|(
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|fd
 parameter_list|)
 throws|throws
@@ -697,6 +700,9 @@ name|TestSOAPMessageHandler
 argument_list|()
 decl_stmt|;
 name|Future
+argument_list|<
+name|?
+argument_list|>
 name|f
 init|=
 name|disp

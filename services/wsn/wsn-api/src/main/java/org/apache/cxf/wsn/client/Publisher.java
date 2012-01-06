@@ -821,6 +821,9 @@ argument_list|()
 control|)
 block|{
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 name|e
 init|=
 literal|null
@@ -836,6 +839,9 @@ name|e
 operator|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|f
 expr_stmt|;

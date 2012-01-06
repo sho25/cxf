@@ -119,6 +119,11 @@ operator|=
 literal|"getItemsAsMap"
 argument_list|)
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|getItemsMap
 parameter_list|()
 function_decl|;

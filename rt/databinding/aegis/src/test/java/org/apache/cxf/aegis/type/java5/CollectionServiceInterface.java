@@ -124,6 +124,9 @@ name|longs
 parameter_list|)
 function_decl|;
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 name|getUnannotatedStrings
 parameter_list|()
 function_decl|;

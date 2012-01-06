@@ -2089,6 +2089,12 @@ literal|null
 condition|)
 block|{
 name|Iterator
+argument_list|<
+name|List
+argument_list|<
+name|?
+argument_list|>
+argument_list|>
 name|it
 init|=
 name|c
@@ -2105,11 +2111,11 @@ argument_list|()
 condition|)
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|list
 init|=
-operator|(
-name|List
-operator|)
 name|it
 operator|.
 name|next

@@ -5168,6 +5168,11 @@ argument_list|(
 operator|(
 operator|(
 name|PhaseInterceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
 operator|)
 name|i
 operator|)

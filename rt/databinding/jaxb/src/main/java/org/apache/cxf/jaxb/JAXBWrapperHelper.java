@@ -215,10 +215,16 @@ argument_list|)
 condition|)
 block|{
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 name|je
 init|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|method
 operator|.

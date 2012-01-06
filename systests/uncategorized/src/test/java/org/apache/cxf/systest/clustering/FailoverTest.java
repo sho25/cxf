@@ -2445,6 +2445,11 @@ name|wsdlLocation
 argument_list|)
 decl_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|map
 init|=
 name|def
@@ -2472,6 +2477,11 @@ operator|)
 name|o
 decl_stmt|;
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|ports
 init|=
 name|service

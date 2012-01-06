@@ -1097,10 +1097,16 @@ operator|)
 name|jtype
 decl_stmt|;
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|ct
 init|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|gt
 operator|.
@@ -1197,6 +1203,9 @@ name|rootClassNames
 control|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 literal|null

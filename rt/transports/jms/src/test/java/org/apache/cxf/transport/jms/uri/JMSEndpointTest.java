@@ -616,6 +616,11 @@ literal|"tcp://localhost:61616"
 argument_list|)
 expr_stmt|;
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|addParas
 init|=
 name|endpoint

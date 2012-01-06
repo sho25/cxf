@@ -1260,6 +1260,9 @@ comment|//IGNORE
 block|}
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|extraClass
 decl_stmt|;
@@ -2737,6 +2740,9 @@ block|{
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|clz
 range|:
 name|extraClass
@@ -3865,6 +3871,9 @@ name|pcls
 operator|=
 operator|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|t
 expr_stmt|;

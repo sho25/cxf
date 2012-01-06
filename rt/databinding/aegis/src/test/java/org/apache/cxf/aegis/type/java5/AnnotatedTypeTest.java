@@ -366,6 +366,9 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|QName
+argument_list|>
 name|elements
 init|=
 name|info
@@ -387,9 +390,6 @@ expr_stmt|;
 name|QName
 name|element
 init|=
-operator|(
-name|QName
-operator|)
 name|elements
 operator|.
 name|next
@@ -553,6 +553,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|Iterator
+argument_list|<
+name|QName
+argument_list|>
 name|atts
 init|=
 name|info
@@ -644,6 +647,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|Iterator
+argument_list|<
+name|QName
+argument_list|>
 name|itr
 init|=
 name|type
@@ -668,9 +674,6 @@ expr_stmt|;
 name|QName
 name|q
 init|=
-operator|(
-name|QName
-operator|)
 name|itr
 operator|.
 name|next
@@ -772,6 +775,9 @@ name|getTypeInfo
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|QName
+argument_list|>
 name|elements
 init|=
 name|info
@@ -794,9 +800,6 @@ comment|// nillable first
 name|QName
 name|element
 init|=
-operator|(
-name|QName
-operator|)
 name|elements
 operator|.
 name|next

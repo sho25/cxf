@@ -1463,10 +1463,16 @@ name|Collection
 condition|)
 block|{
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 name|c
 init|=
 operator|(
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|values
 decl_stmt|;
@@ -1594,6 +1600,9 @@ argument_list|()
 expr_stmt|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|arrayType
 init|=
 name|type
@@ -2621,6 +2630,9 @@ name|getComponentType
 parameter_list|()
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|compType
 init|=
 name|getTypeClass

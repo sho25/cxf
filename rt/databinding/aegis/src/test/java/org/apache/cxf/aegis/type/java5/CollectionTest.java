@@ -774,6 +774,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|AegisType
+argument_list|>
 name|deps
 init|=
 name|dto
@@ -784,9 +787,6 @@ decl_stmt|;
 name|AegisType
 name|type
 init|=
-operator|(
-name|AegisType
-operator|)
 name|deps
 operator|.
 name|iterator
@@ -900,6 +900,9 @@ name|class
 argument_list|)
 decl_stmt|;
 name|Set
+argument_list|<
+name|AegisType
+argument_list|>
 name|deps
 init|=
 name|dto
@@ -918,9 +921,6 @@ expr_stmt|;
 name|AegisType
 name|type
 init|=
-operator|(
-name|AegisType
-operator|)
 name|deps
 operator|.
 name|iterator

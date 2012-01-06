@@ -3633,6 +3633,11 @@ argument_list|)
 argument_list|,
 operator|(
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 operator|)
 name|EasyMock
 operator|.

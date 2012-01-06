@@ -19,16 +19,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Map
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|annotation
@@ -352,6 +342,9 @@ operator|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|payload
 operator|)
@@ -481,6 +474,9 @@ operator|=
 operator|(
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|payload
 operator|)
@@ -564,16 +560,6 @@ name|ctx
 parameter_list|)
 block|{
 comment|//System.out.println("LogicalHandler close called");
-block|}
-specifier|public
-name|void
-name|init
-parameter_list|(
-name|Map
-name|config
-parameter_list|)
-block|{
-comment|//System.out.println("LogicalHandler init called");
 block|}
 specifier|public
 name|void

@@ -1958,6 +1958,9 @@ name|JAXBElement
 condition|)
 block|{
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 name|jaxbEl
 init|=
 literal|null
@@ -2006,6 +2009,9 @@ name|jaxbEl
 operator|=
 operator|(
 name|JAXBElement
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 expr_stmt|;

@@ -242,6 +242,9 @@ argument_list|()
 return|;
 block|}
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|namespaces
 init|=
 name|element
@@ -252,6 +255,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|namespaces
@@ -369,6 +375,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|namespaces
 init|=
 name|element
@@ -379,6 +388,9 @@ decl_stmt|;
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|itr
 init|=
 name|namespaces

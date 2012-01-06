@@ -461,6 +461,9 @@ specifier|final
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|CONTEXT_CLASSES
 decl_stmt|;
@@ -470,6 +473,9 @@ specifier|final
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|PARAM_ANNOTATION_CLASSES
 decl_stmt|;
@@ -479,6 +485,9 @@ specifier|final
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|METHOD_ANNOTATION_CLASSES
 decl_stmt|;
@@ -509,6 +518,9 @@ specifier|static
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|initContextClasses
 parameter_list|()
@@ -516,6 +528,9 @@ block|{
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|classes
 init|=
@@ -523,6 +538,9 @@ operator|new
 name|HashSet
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -684,6 +702,9 @@ specifier|static
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|initParamAnnotationClasses
 parameter_list|()
@@ -691,6 +712,9 @@ block|{
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|classes
 init|=
@@ -698,6 +722,9 @@ operator|new
 name|HashSet
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -764,6 +791,9 @@ specifier|static
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|initMethodAnnotationClasses
 parameter_list|()
@@ -771,6 +801,9 @@ block|{
 name|Set
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|classes
 init|=
@@ -778,6 +811,9 @@ operator|new
 name|HashSet
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;

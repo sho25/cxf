@@ -192,6 +192,9 @@ name|getBody
 argument_list|()
 decl_stmt|;
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it
 init|=
 name|body
@@ -223,6 +226,9 @@ name|SOAPElement
 condition|)
 block|{
 name|Iterator
+argument_list|<
+name|?
+argument_list|>
 name|it2
 init|=
 operator|(

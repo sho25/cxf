@@ -307,6 +307,9 @@ block|{
 for|for
 control|(
 name|Iterator
+argument_list|<
+name|Object
+argument_list|>
 name|iter
 init|=
 name|topic

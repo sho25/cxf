@@ -198,6 +198,9 @@ block|{     }
 comment|/** {@inheritDoc}*/
 specifier|public
 name|Collection
+argument_list|<
+name|?
+argument_list|>
 name|getUnannotatedStrings
 parameter_list|()
 block|{

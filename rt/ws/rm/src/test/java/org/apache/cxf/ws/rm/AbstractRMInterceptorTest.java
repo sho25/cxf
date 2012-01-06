@@ -1110,6 +1110,9 @@ class|class
 name|RMInterceptor
 extends|extends
 name|AbstractRMInterceptor
+argument_list|<
+name|Message
+argument_list|>
 block|{
 specifier|private
 name|SequenceFault

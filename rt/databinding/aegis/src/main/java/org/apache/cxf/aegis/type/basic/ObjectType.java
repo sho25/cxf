@@ -1093,6 +1093,9 @@ name|type
 return|;
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|interfaces
 init|=
@@ -1119,6 +1122,9 @@ operator|++
 control|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|anInterface
 init|=
 name|interfaces
@@ -1148,6 +1154,9 @@ return|;
 block|}
 block|}
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|superclass
 init|=
 name|clazz
