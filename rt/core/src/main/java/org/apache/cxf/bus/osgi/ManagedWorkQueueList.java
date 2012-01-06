@@ -224,7 +224,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * List of work queues that cane be managed using the OSGi config admin service  */
+comment|/**  * List of work queues that can be managed using the OSGi configuration admin service  */
 end_comment
 
 begin_class

@@ -979,10 +979,10 @@ expr_stmt|;
 name|exts
 operator|=
 operator|new
-name|ExtensionFragmentParser
+name|XmlExtensionFragmentParser
 argument_list|()
 operator|.
-name|getExtensionsFromXML
+name|getExtensions
 argument_list|(
 name|is
 argument_list|)
@@ -993,10 +993,10 @@ block|{
 name|exts
 operator|=
 operator|new
-name|ExtensionFragmentParser
+name|TextExtensionFragmentParser
 argument_list|()
 operator|.
-name|getExtensionsFromText
+name|getExtensions
 argument_list|(
 name|is
 argument_list|)
