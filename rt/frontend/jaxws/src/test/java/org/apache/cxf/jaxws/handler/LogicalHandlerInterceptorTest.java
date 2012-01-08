@@ -452,6 +452,9 @@ block|{
 name|List
 argument_list|<
 name|LogicalHandler
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|list
 init|=
@@ -459,6 +462,9 @@ operator|new
 name|ArrayList
 argument_list|<
 name|LogicalHandler
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -468,6 +474,9 @@ name|add
 argument_list|(
 operator|new
 name|LogicalHandler
+argument_list|<
+name|LogicalMessageContext
+argument_list|>
 argument_list|()
 block|{
 specifier|public
@@ -482,7 +491,7 @@ specifier|public
 name|boolean
 name|handleFault
 parameter_list|(
-name|MessageContext
+name|LogicalMessageContext
 name|arg0
 parameter_list|)
 block|{
@@ -494,7 +503,7 @@ specifier|public
 name|boolean
 name|handleMessage
 parameter_list|(
-name|MessageContext
+name|LogicalMessageContext
 name|arg0
 parameter_list|)
 block|{
@@ -505,6 +514,11 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -711,6 +725,11 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -828,6 +847,11 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler

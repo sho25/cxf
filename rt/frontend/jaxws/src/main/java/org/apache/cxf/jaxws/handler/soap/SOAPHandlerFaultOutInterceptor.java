@@ -502,6 +502,9 @@ decl_stmt|;
 for|for
 control|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|h
 range|:
 name|getBinding
@@ -531,6 +534,9 @@ argument_list|(
 operator|(
 operator|(
 name|SOAPHandler
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|h
 operator|)

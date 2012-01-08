@@ -462,6 +462,11 @@ operator|.
 name|clear
 argument_list|()
 expr_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -596,6 +601,11 @@ expr_stmt|;
 comment|/*                 payload = new DOMSource();         message.setContent(Source.class, payload);*/
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -663,6 +673,9 @@ expr_stmt|;
 for|for
 control|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|h
 range|:
 name|invoker
@@ -695,6 +708,9 @@ expr_stmt|;
 for|for
 control|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|h
 range|:
 name|invoker

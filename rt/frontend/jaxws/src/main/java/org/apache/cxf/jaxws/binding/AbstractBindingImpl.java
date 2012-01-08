@@ -87,6 +87,11 @@ name|AbstractBindingImpl
 implements|implements
 name|Binding
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|private
 name|List
 argument_list|<
@@ -118,6 +123,11 @@ operator|=
 name|imp
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 name|List
 argument_list|<
@@ -142,6 +152,11 @@ specifier|public
 name|void
 name|setHandlerChain
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler

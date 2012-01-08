@@ -180,6 +180,11 @@ operator|new
 name|AnnotationHandlerChainBuilder
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -419,6 +424,11 @@ name|bindingID
 init|=
 literal|"http://schemas.xmlsoap.org/wsdl/soap/http"
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -505,6 +515,11 @@ name|bindingID
 init|=
 literal|"BindingUnknow"
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -591,6 +606,11 @@ name|bindingID
 init|=
 literal|"BindingUnknow"
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler

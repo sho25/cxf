@@ -182,6 +182,11 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 class|class
 name|HandlerResolverImpl
@@ -380,6 +385,9 @@ block|}
 for|for
 control|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|h
 range|:
 name|chain
@@ -476,6 +484,9 @@ name|void
 name|configHandler
 parameter_list|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|handler
 parameter_list|)
 block|{

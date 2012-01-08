@@ -490,6 +490,11 @@ name|JaxWsProxyFactoryBean
 extends|extends
 name|ClientProxyFactoryBean
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -585,6 +590,11 @@ specifier|public
 name|void
 name|setHandlers
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -606,6 +616,11 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Returns the configured list of JAX-WS handlers for the proxy.      *      * @return a<code>List</code> of<code>Handler</code> objects      */
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 name|List
 argument_list|<
@@ -1069,6 +1084,11 @@ operator|)
 name|getServiceFactory
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler
@@ -1185,6 +1205,9 @@ decl_stmt|;
 for|for
 control|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|h
 range|:
 name|chain

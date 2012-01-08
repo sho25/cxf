@@ -167,6 +167,11 @@ literal|"http://cxf.apache.org/bindings/xformat"
 return|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+annotation|@
 name|Override
 specifier|public
 name|void
@@ -198,6 +203,9 @@ block|{
 for|for
 control|(
 name|Handler
+argument_list|<
+name|?
+argument_list|>
 name|handler
 range|:
 name|this

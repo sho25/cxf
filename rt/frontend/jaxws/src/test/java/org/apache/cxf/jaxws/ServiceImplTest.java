@@ -1616,6 +1616,11 @@ return|return
 name|info
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 name|List
 argument_list|<
