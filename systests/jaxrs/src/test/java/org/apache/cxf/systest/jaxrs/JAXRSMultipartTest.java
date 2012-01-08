@@ -2470,9 +2470,6 @@ expr_stmt|;
 name|InputStream
 name|is2
 init|=
-operator|(
-name|InputStream
-operator|)
 name|result
 operator|.
 name|get
@@ -3025,9 +3022,6 @@ expr_stmt|;
 name|InputStream
 name|is2
 init|=
-operator|(
-name|InputStream
-operator|)
 name|result
 operator|.
 name|get

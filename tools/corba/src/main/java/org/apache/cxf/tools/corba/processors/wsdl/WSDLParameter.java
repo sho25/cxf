@@ -1692,9 +1692,6 @@ expr_stmt|;
 name|ParamType
 name|d2
 init|=
-operator|(
-name|ParamType
-operator|)
 name|inputs
 operator|.
 name|get
@@ -2148,9 +2145,6 @@ block|{
 name|ParamType
 name|d2
 init|=
-operator|(
-name|ParamType
-operator|)
 name|outputs
 operator|.
 name|get
@@ -2260,9 +2254,6 @@ block|{
 name|ParamType
 name|d2
 init|=
-operator|(
-name|ParamType
-operator|)
 name|inputit
 operator|.
 name|next

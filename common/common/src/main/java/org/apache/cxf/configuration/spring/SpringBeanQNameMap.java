@@ -728,11 +728,6 @@ operator|.
 name|ValueHolder
 name|v
 init|=
-operator|(
-name|ConstructorArgumentValues
-operator|.
-name|ValueHolder
-operator|)
 name|l
 operator|.
 name|get
@@ -753,11 +748,6 @@ argument_list|()
 decl_stmt|;
 name|v
 operator|=
-operator|(
-name|ConstructorArgumentValues
-operator|.
-name|ValueHolder
-operator|)
 name|l
 operator|.
 name|get

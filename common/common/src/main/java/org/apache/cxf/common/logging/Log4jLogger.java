@@ -905,13 +905,6 @@ operator|.
 name|FINEST
 expr_stmt|;
 block|}
-else|else
-block|{
-name|l2
-operator|=
-literal|null
-expr_stmt|;
-block|}
 block|}
 return|return
 name|l2

@@ -430,9 +430,6 @@ block|{
 name|ObjectName
 name|n
 init|=
-operator|(
-name|ObjectName
-operator|)
 name|it
 operator|.
 name|next

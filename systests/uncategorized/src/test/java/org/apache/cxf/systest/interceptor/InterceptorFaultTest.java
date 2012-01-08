@@ -1051,9 +1051,6 @@ name|assertEquals
 argument_list|(
 literal|20
 argument_list|,
-operator|(
-name|int
-operator|)
 name|f
 operator|.
 name|getFaultInfo
@@ -1067,9 +1064,6 @@ name|assertEquals
 argument_list|(
 literal|10
 argument_list|,
-operator|(
-name|int
-operator|)
 name|f
 operator|.
 name|getFaultInfo

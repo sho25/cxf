@@ -214,9 +214,6 @@ condition|)
 block|{
 name|annotation
 operator|=
-operator|(
-name|Element
-operator|)
 name|annoList
 operator|.
 name|get
@@ -276,9 +273,6 @@ condition|)
 block|{
 name|appInfo
 operator|=
-operator|(
-name|Element
-operator|)
 name|appList
 operator|.
 name|get
@@ -347,9 +341,6 @@ condition|)
 block|{
 name|jaxbBindings
 operator|=
-operator|(
-name|Element
-operator|)
 name|jaxbList
 operator|.
 name|get
@@ -499,9 +490,6 @@ condition|)
 block|{
 name|packagename
 operator|=
-operator|(
-name|Element
-operator|)
 name|pkgList
 operator|.
 name|get

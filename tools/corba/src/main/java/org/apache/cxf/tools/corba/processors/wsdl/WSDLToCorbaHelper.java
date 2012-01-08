@@ -6495,9 +6495,6 @@ block|{
 name|MemberType
 name|member
 init|=
-operator|(
-name|MemberType
-operator|)
 name|attlist2
 operator|.
 name|get
@@ -6989,9 +6986,6 @@ block|{
 name|MemberType
 name|member
 init|=
-operator|(
-name|MemberType
-operator|)
 name|attrMembers
 operator|.
 name|get
@@ -7310,9 +7304,6 @@ block|{
 name|MemberType
 name|member
 init|=
-operator|(
-name|MemberType
-operator|)
 name|attlist1
 operator|.
 name|get
@@ -8876,9 +8867,6 @@ block|{
 name|Enumerator
 name|enumerator
 init|=
-operator|(
-name|Enumerator
-operator|)
 name|iterator
 operator|.
 name|next

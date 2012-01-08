@@ -659,9 +659,6 @@ argument_list|()
 operator|.
 name|writeTo
 argument_list|(
-operator|(
-name|Document
-operator|)
 name|r
 operator|.
 name|getEntity

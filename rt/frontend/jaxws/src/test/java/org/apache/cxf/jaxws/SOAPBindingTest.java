@@ -216,9 +216,6 @@ decl_stmt|;
 name|CalculatorPortType
 name|cal
 init|=
-operator|(
-name|CalculatorPortType
-operator|)
 name|service
 operator|.
 name|getPort
@@ -505,9 +502,6 @@ decl_stmt|;
 name|CalculatorPortType
 name|cal
 init|=
-operator|(
-name|CalculatorPortType
-operator|)
 name|service
 operator|.
 name|getPort

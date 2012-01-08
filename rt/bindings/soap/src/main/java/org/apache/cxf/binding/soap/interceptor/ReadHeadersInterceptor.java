@@ -830,9 +830,6 @@ block|{
 name|InputStream
 name|in
 init|=
-operator|(
-name|InputStream
-operator|)
 name|message
 operator|.
 name|getContent

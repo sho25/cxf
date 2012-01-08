@@ -2410,15 +2410,10 @@ name|getEndpoint
 parameter_list|()
 block|{
 return|return
-operator|(
-operator|(
-name|ServerImpl
-operator|)
 name|getServer
 argument_list|(
 literal|null
 argument_list|)
-operator|)
 operator|.
 name|getEndpoint
 argument_list|()

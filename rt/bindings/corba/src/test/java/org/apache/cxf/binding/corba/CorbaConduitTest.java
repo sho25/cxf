@@ -1904,9 +1904,6 @@ expr_stmt|;
 name|NVList
 name|listArgs
 init|=
-operator|(
-name|NVList
-operator|)
 name|conduit
 operator|.
 name|getArguments
@@ -2090,9 +2087,6 @@ decl_stmt|;
 name|NamedValue
 name|ret
 init|=
-operator|(
-name|NamedValue
-operator|)
 name|conduit
 operator|.
 name|getReturn
@@ -2131,9 +2125,6 @@ expr_stmt|;
 name|NamedValue
 name|ret2
 init|=
-operator|(
-name|NamedValue
-operator|)
 name|conduit
 operator|.
 name|getReturn
@@ -2614,9 +2605,6 @@ decl_stmt|;
 name|NVList
 name|nvList
 init|=
-operator|(
-name|NVList
-operator|)
 name|orb
 operator|.
 name|create_list

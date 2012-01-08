@@ -6071,9 +6071,6 @@ decl_stmt|;
 name|ServerRegistry
 name|serverRegistry
 init|=
-operator|(
-name|ServerRegistry
-operator|)
 name|bus
 operator|.
 name|getExtension

@@ -471,9 +471,6 @@ expr_stmt|;
 block|}
 name|element
 operator|=
-operator|(
-name|QName
-operator|)
 name|elements
 operator|.
 name|next
@@ -855,9 +852,6 @@ expr_stmt|;
 comment|// minOccurs = 1 second
 name|element
 operator|=
-operator|(
-name|QName
-operator|)
 name|elements
 operator|.
 name|next

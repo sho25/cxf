@@ -748,10 +748,6 @@ name|WSDLToIDL
 operator|.
 name|run
 argument_list|(
-operator|(
-name|String
-index|[]
-operator|)
 name|list
 operator|.
 name|toArray

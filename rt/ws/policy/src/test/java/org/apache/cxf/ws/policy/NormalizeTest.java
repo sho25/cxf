@@ -588,9 +588,6 @@ expr_stmt|;
 name|Policy
 name|normalisedSamplePolicy
 init|=
-operator|(
-name|Policy
-operator|)
 name|samplePolicy
 operator|.
 name|normalize

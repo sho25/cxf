@@ -146,9 +146,6 @@ block|{
 name|EndpointImpl
 name|endpoint
 init|=
-operator|(
-name|EndpointImpl
-operator|)
 name|getBean
 argument_list|(
 name|EndpointImpl

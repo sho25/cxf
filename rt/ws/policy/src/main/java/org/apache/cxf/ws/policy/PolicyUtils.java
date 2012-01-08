@@ -605,9 +605,6 @@ name|buf
 operator|.
 name|append
 argument_list|(
-operator|(
-name|Assertion
-operator|)
 name|pc
 argument_list|)
 expr_stmt|;

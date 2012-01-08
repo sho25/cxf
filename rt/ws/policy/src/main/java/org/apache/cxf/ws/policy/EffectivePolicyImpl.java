@@ -856,9 +856,6 @@ expr_stmt|;
 block|}
 name|policy
 operator|=
-operator|(
-name|Policy
-operator|)
 name|policy
 operator|.
 name|normalize
@@ -946,9 +943,6 @@ expr_stmt|;
 block|}
 name|policy
 operator|=
-operator|(
-name|Policy
-operator|)
 name|policy
 operator|.
 name|normalize

@@ -1734,9 +1734,6 @@ literal|"minor value"
 argument_list|,
 literal|1
 argument_list|,
-operator|(
-name|int
-operator|)
 name|ex
 operator|.
 name|getFaultInfo
@@ -1752,9 +1749,6 @@ literal|"major value"
 argument_list|,
 literal|2
 argument_list|,
-operator|(
-name|int
-operator|)
 name|ex
 operator|.
 name|getFaultInfo

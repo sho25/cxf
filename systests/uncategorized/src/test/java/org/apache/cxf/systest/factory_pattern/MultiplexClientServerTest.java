@@ -559,9 +559,6 @@ expr_stmt|;
 name|Number
 name|num
 init|=
-operator|(
-name|Number
-operator|)
 name|serviceImpl
 operator|.
 name|getPort
@@ -611,9 +608,6 @@ argument_list|)
 decl_stmt|;
 name|num
 operator|=
-operator|(
-name|Number
-operator|)
 name|serviceImpl
 operator|.
 name|getPort
@@ -758,9 +752,6 @@ decl_stmt|;
 name|Number
 name|num
 init|=
-operator|(
-name|Number
-operator|)
 name|serviceImpl
 operator|.
 name|getPort
@@ -849,9 +840,6 @@ argument_list|)
 expr_stmt|;
 name|num
 operator|=
-operator|(
-name|Number
-operator|)
 name|serviceImpl
 operator|.
 name|getPort

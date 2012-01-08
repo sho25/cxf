@@ -444,9 +444,6 @@ condition|)
 block|{
 name|service
 operator|=
-operator|(
-name|Service
-operator|)
 name|services
 operator|.
 name|get

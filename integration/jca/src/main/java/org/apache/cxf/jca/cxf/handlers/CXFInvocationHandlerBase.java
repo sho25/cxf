@@ -393,13 +393,6 @@ argument_list|>
 name|checkExceptionTypes
 index|[]
 init|=
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-index|[]
-operator|)
 name|method
 operator|.
 name|getExceptionTypes

@@ -1653,9 +1653,6 @@ name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_ALLOW_ORIGIN
 argument_list|,
-operator|(
-name|String
-operator|)
 name|m
 operator|.
 name|getExchange

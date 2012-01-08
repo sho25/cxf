@@ -176,10 +176,6 @@ name|b
 operator|.
 name|setBooks
 argument_list|(
-operator|(
-name|Book
-index|[]
-operator|)
 name|books
 operator|.
 name|values
@@ -245,30 +241,20 @@ argument_list|()
 operator|+
 literal|" : "
 operator|+
-operator|(
-operator|(
-name|Book
-operator|)
 name|me
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|getName
 argument_list|()
 operator|+
 literal|", "
 operator|+
-operator|(
-operator|(
-name|Book
-operator|)
 name|me
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|getId
 argument_list|()
@@ -292,9 +278,6 @@ expr_stmt|;
 name|Book
 name|b
 init|=
-operator|(
-name|Book
-operator|)
 name|books
 operator|.
 name|get
@@ -392,30 +375,20 @@ argument_list|()
 operator|+
 literal|" : "
 operator|+
-operator|(
-operator|(
-name|Book
-operator|)
 name|me
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|getName
 argument_list|()
 operator|+
 literal|", "
 operator|+
-operator|(
-operator|(
-name|Book
-operator|)
 name|me
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|getId
 argument_list|()
@@ -439,9 +412,6 @@ expr_stmt|;
 name|Book
 name|b
 init|=
-operator|(
-name|Book
-operator|)
 name|books
 operator|.
 name|get
@@ -634,30 +604,20 @@ argument_list|()
 operator|+
 literal|" : "
 operator|+
-operator|(
-operator|(
-name|Book
-operator|)
 name|me
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|getName
 argument_list|()
 operator|+
 literal|", "
 operator|+
-operator|(
-operator|(
-name|Book
-operator|)
 name|me
 operator|.
 name|getValue
 argument_list|()
-operator|)
 operator|.
 name|getId
 argument_list|()

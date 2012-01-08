@@ -1312,9 +1312,6 @@ decl_stmt|;
 name|WebService
 name|webServiceAnno
 init|=
-operator|(
-name|WebService
-operator|)
 name|clz
 operator|.
 name|getAnnotation

@@ -606,9 +606,6 @@ comment|// look up the names for this method
 name|MethodInfo
 name|info
 init|=
-operator|(
-name|MethodInfo
-operator|)
 name|methods
 operator|.
 name|get
@@ -813,9 +810,6 @@ condition|)
 block|{
 name|info
 operator|=
-operator|(
-name|MethodInfo
-operator|)
 name|methods
 operator|.
 name|get

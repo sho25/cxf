@@ -2125,9 +2125,6 @@ condition|)
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAP12Address
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2146,9 +2143,6 @@ else|else
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAPAddress
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2202,9 +2196,6 @@ condition|)
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAP12Body
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2227,9 +2218,6 @@ else|else
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAPBody
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2281,9 +2269,6 @@ condition|)
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAP12Binding
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2322,9 +2307,6 @@ else|else
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAPBinding
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2392,9 +2374,6 @@ condition|)
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAP12Operation
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2419,9 +2398,6 @@ else|else
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAPOperation
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2475,9 +2451,6 @@ condition|)
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAP12Fault
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2502,9 +2475,6 @@ else|else
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAPFault
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2564,9 +2534,6 @@ condition|)
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAP12Header
-operator|)
 name|extReg
 operator|.
 name|createExtension
@@ -2589,9 +2556,6 @@ else|else
 block|{
 name|extElement
 operator|=
-operator|(
-name|SOAPHeader
-operator|)
 name|extReg
 operator|.
 name|createExtension

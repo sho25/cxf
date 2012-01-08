@@ -9565,9 +9565,6 @@ name|String
 operator|.
 name|class
 argument_list|,
-operator|(
-name|Type
-operator|)
 name|String
 operator|.
 name|class

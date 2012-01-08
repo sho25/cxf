@@ -311,9 +311,6 @@ block|{
 name|AuthorizationPolicy
 name|policy
 init|=
-operator|(
-name|AuthorizationPolicy
-operator|)
 name|message
 operator|.
 name|get

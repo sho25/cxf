@@ -939,9 +939,6 @@ else|else
 block|{
 name|mbs
 operator|=
-operator|(
-name|MBeanServer
-operator|)
 name|servers
 operator|.
 name|get
@@ -1521,9 +1518,6 @@ name|busMBeans
 operator|.
 name|remove
 argument_list|(
-operator|(
-name|ObjectName
-operator|)
 name|name
 argument_list|)
 expr_stmt|;

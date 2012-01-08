@@ -174,9 +174,6 @@ decl_stmt|;
 name|ConnectionFactory
 name|connectionFactory
 init|=
-operator|(
-name|ConnectionFactory
-operator|)
 name|context
 operator|.
 name|getBean

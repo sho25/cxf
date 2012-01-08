@@ -809,9 +809,6 @@ call|)
 argument_list|(
 name|x
 operator|+
-operator|(
-name|int
-operator|)
 literal|'0'
 argument_list|)
 expr_stmt|;

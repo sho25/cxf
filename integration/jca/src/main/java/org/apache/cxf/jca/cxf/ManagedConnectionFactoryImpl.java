@@ -676,9 +676,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 return|return
-operator|(
-name|ManagedConnection
-operator|)
 operator|new
 name|ManagedConnectionImpl
 argument_list|(

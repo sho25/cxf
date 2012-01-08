@@ -2414,9 +2414,6 @@ name|incomingObserver
 operator|.
 name|onMessage
 argument_list|(
-operator|(
-name|Message
-operator|)
 name|inCorbaMsg
 argument_list|)
 expr_stmt|;

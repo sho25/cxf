@@ -793,9 +793,6 @@ block|{
 name|XMLInputFactory
 name|xif
 init|=
-operator|(
-name|XMLInputFactory
-operator|)
 name|factories
 operator|.
 name|get

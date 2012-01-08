@@ -213,18 +213,12 @@ argument_list|)
 condition|)
 block|{
 return|return
-operator|(
-name|byte
-index|[]
-operator|)
-operator|(
 name|nonClassesMap
 operator|.
 name|get
 argument_list|(
 name|name
 argument_list|)
-operator|)
 return|;
 block|}
 comment|// first check file path directorys, then check jars

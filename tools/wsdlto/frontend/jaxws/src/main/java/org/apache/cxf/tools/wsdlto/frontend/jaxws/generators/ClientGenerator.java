@@ -489,9 +489,6 @@ block|{
 name|ServiceInfo
 name|serviceInfo
 init|=
-operator|(
-name|ServiceInfo
-operator|)
 name|env
 operator|.
 name|get

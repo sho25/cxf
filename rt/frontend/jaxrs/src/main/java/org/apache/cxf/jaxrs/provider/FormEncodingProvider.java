@@ -856,11 +856,6 @@ name|newInstance
 argument_list|()
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|Object
 name|getFormObject
@@ -893,9 +888,6 @@ condition|?
 operator|new
 name|Form
 argument_list|(
-operator|(
-name|MultivaluedMap
-operator|)
 name|params
 argument_list|)
 else|:

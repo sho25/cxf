@@ -444,9 +444,6 @@ block|{
 name|BindingOperationInfo
 name|b
 init|=
-operator|(
-name|BindingOperationInfo
-operator|)
 name|getOperation
 argument_list|(
 name|operation

@@ -524,10 +524,6 @@ name|byte
 index|[]
 name|secret
 init|=
-operator|(
-name|byte
-index|[]
-operator|)
 name|token
 operator|.
 name|getSecret

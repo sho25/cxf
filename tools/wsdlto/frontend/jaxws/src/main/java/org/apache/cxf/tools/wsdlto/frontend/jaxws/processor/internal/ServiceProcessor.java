@@ -2758,9 +2758,6 @@ decl_stmt|;
 name|JAXWSBinding
 name|opBinding
 init|=
-operator|(
-name|JAXWSBinding
-operator|)
 name|opinfo
 operator|.
 name|getExtensor
@@ -2773,9 +2770,6 @@ decl_stmt|;
 name|JAXWSBinding
 name|infBinding
 init|=
-operator|(
-name|JAXWSBinding
-operator|)
 name|opinfo
 operator|.
 name|getInterface
@@ -4609,9 +4603,6 @@ condition|)
 block|{
 name|bindingObj
 operator|=
-operator|(
-name|HTTPBinding
-operator|)
 name|ext
 expr_stmt|;
 return|return

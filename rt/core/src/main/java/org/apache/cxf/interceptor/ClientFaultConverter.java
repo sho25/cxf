@@ -1214,13 +1214,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-elseif|else
-if|if
-condition|(
-name|e
-operator|!=
-literal|null
-condition|)
+else|else
 block|{
 if|if
 condition|(
@@ -1790,9 +1784,6 @@ decl_stmt|;
 name|Object
 name|obj
 init|=
-operator|(
-name|Object
-operator|)
 name|cls
 decl_stmt|;
 name|Object

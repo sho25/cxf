@@ -11121,12 +11121,7 @@ block|{
 name|Type
 name|tp
 init|=
-operator|(
-operator|(
-name|GenericArrayType
-operator|)
 name|atp
-operator|)
 operator|.
 name|getGenericComponentType
 argument_list|()
@@ -11218,9 +11213,6 @@ name|rawClass
 operator|=
 name|getClass
 argument_list|(
-operator|(
-name|ParameterizedType
-operator|)
 name|tp
 argument_list|)
 expr_stmt|;
@@ -14346,12 +14338,6 @@ decl_stmt|;
 name|Type
 name|c
 init|=
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|ptp
 operator|.
 name|getRawType

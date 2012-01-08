@@ -165,9 +165,6 @@ expr_stmt|;
 name|Object
 name|value
 init|=
-operator|(
-name|CorbaTypeImpl
-operator|)
 name|map
 operator|.
 name|get

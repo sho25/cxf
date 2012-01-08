@@ -1261,9 +1261,6 @@ name|JAXRSUtils
 operator|.
 name|getProduceTypes
 argument_list|(
-operator|(
-name|Produces
-operator|)
 name|AnnotationUtils
 operator|.
 name|getClassAnnotation
@@ -1307,9 +1304,6 @@ name|JAXRSUtils
 operator|.
 name|getConsumeTypes
 argument_list|(
-operator|(
-name|Consumes
-operator|)
 name|AnnotationUtils
 operator|.
 name|getClassAnnotation
@@ -1330,9 +1324,6 @@ name|getPath
 parameter_list|()
 block|{
 return|return
-operator|(
-name|Path
-operator|)
 name|AnnotationUtils
 operator|.
 name|getClassAnnotation

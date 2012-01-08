@@ -1449,9 +1449,6 @@ block|{
 name|AbstractSubscription
 name|subscription
 init|=
-operator|(
-name|AbstractSubscription
-operator|)
 name|subscriptions
 operator|.
 name|remove

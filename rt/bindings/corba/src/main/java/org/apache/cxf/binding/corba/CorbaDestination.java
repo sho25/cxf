@@ -2208,10 +2208,6 @@ name|Policy
 index|[]
 name|policyList
 init|=
-operator|(
-name|Policy
-index|[]
-operator|)
 name|policies
 operator|.
 name|toArray

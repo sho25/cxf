@@ -1247,12 +1247,6 @@ name|JavaPort
 argument_list|>
 name|ports
 init|=
-operator|(
-name|List
-argument_list|<
-name|JavaPort
-argument_list|>
-operator|)
 name|service
 operator|.
 name|getPorts

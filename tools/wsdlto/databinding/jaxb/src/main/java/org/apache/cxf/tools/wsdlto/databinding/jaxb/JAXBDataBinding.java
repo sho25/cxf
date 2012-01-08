@@ -4765,9 +4765,6 @@ block|{
 name|S2JJAXBModel
 name|schem2JavaJaxbModel
 init|=
-operator|(
-name|S2JJAXBModel
-operator|)
 name|rawJaxbModelGenCode
 decl_stmt|;
 name|ClassCollector

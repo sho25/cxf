@@ -1674,9 +1674,6 @@ comment|// complex type
 name|GenClass
 name|genEClass
 init|=
-operator|(
-name|GenClass
-operator|)
 name|genClasses
 operator|.
 name|get

@@ -160,9 +160,6 @@ name|getHelloContinuationPort
 parameter_list|()
 block|{
 return|return
-operator|(
-name|HelloContinuation
-operator|)
 name|super
 operator|.
 name|getPort

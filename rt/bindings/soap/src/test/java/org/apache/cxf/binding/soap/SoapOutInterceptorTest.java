@@ -379,9 +379,6 @@ expr_stmt|;
 name|Exception
 name|oe
 init|=
-operator|(
-name|Exception
-operator|)
 name|soapMessage
 operator|.
 name|getContent
@@ -504,9 +501,6 @@ expr_stmt|;
 name|Exception
 name|oe
 init|=
-operator|(
-name|Exception
-operator|)
 name|soapMessage
 operator|.
 name|getContent

@@ -5266,9 +5266,6 @@ name|populateMapFromString
 argument_list|(
 name|params
 argument_list|,
-operator|(
-name|String
-operator|)
 name|body
 argument_list|,
 name|enc

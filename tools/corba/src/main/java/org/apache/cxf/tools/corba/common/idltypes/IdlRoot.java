@@ -255,9 +255,6 @@ condition|)
 block|{
 name|result
 operator|=
-operator|(
-name|IdlDefn
-operator|)
 name|primitiveTypes
 operator|.
 name|get

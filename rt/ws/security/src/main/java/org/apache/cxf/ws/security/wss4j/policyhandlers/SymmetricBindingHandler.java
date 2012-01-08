@@ -2180,9 +2180,6 @@ block|{
 name|Element
 name|encrTokElem
 init|=
-operator|(
-name|Element
-operator|)
 name|encrTok
 operator|.
 name|getToken

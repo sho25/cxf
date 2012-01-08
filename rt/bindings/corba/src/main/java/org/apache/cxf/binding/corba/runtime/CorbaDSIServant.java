@@ -686,9 +686,6 @@ block|{
 name|BindingOperationInfo
 name|bopInfo
 init|=
-operator|(
-name|BindingOperationInfo
-operator|)
 name|i
 operator|.
 name|next

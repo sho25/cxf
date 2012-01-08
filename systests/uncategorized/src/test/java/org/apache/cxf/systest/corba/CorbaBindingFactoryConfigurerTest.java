@@ -255,9 +255,6 @@ decl_stmt|;
 name|OrbConfig
 name|orbConfig
 init|=
-operator|(
-name|OrbConfig
-operator|)
 name|factory
 operator|.
 name|getOrbConfig

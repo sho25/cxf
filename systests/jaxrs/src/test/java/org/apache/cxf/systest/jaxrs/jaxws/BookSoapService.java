@@ -156,9 +156,6 @@ name|getBookPort
 parameter_list|()
 block|{
 return|return
-operator|(
-name|BookStoreJaxrsJaxws
-operator|)
 name|super
 operator|.
 name|getPort

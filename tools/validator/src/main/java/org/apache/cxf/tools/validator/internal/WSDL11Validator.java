@@ -1326,9 +1326,6 @@ block|{
 name|JarEntry
 name|ele
 init|=
-operator|(
-name|JarEntry
-operator|)
 name|entry
 operator|.
 name|nextElement

@@ -257,9 +257,6 @@ name|getAddNumbersPort
 parameter_list|()
 block|{
 return|return
-operator|(
-name|AddNumbers
-operator|)
 name|super
 operator|.
 name|getPort

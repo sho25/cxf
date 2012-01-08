@@ -1198,9 +1198,6 @@ name|stream
 operator|.
 name|write_long
 argument_list|(
-operator|(
-name|int
-operator|)
 literal|0
 argument_list|)
 expr_stmt|;
@@ -1240,9 +1237,6 @@ name|stream
 operator|.
 name|write_ulong
 argument_list|(
-operator|(
-name|int
-operator|)
 literal|0
 argument_list|)
 expr_stmt|;
@@ -1282,9 +1276,6 @@ name|stream
 operator|.
 name|write_longlong
 argument_list|(
-operator|(
-name|long
-operator|)
 literal|0
 argument_list|)
 expr_stmt|;
@@ -1328,9 +1319,6 @@ name|stream
 operator|.
 name|write_ulonglong
 argument_list|(
-operator|(
-name|long
-operator|)
 literal|0
 argument_list|)
 expr_stmt|;
@@ -1412,9 +1400,6 @@ name|stream
 operator|.
 name|write_double
 argument_list|(
-operator|(
-name|double
-operator|)
 literal|0.0
 argument_list|)
 expr_stmt|;

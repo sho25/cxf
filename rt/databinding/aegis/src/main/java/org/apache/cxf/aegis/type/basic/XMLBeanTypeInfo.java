@@ -954,9 +954,6 @@ block|{
 name|Element
 name|e
 init|=
-operator|(
-name|Element
-operator|)
 name|elements
 operator|.
 name|get

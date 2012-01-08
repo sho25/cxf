@@ -523,9 +523,6 @@ block|{
 name|ServiceInfo
 name|serviceInfo
 init|=
-operator|(
-name|ServiceInfo
-operator|)
 name|env
 operator|.
 name|get
@@ -734,9 +731,6 @@ name|setAttributes
 argument_list|(
 literal|"impl"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|penv
 operator|.
 name|get

@@ -251,9 +251,6 @@ name|getNextHandler
 parameter_list|()
 block|{
 return|return
-operator|(
-name|CXFInvocationHandler
-operator|)
 name|mockHandler
 return|;
 block|}
@@ -269,9 +266,6 @@ name|getTestManagedConnectionFactory
 parameter_list|()
 block|{
 return|return
-operator|(
-name|CXFManagedConnectionFactory
-operator|)
 name|mcf
 return|;
 block|}

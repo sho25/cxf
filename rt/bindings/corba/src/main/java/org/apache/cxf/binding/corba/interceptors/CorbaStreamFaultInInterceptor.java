@@ -676,15 +676,6 @@ condition|)
 block|{
 name|orb
 operator|=
-operator|(
-name|org
-operator|.
-name|omg
-operator|.
-name|CORBA
-operator|.
-name|ORB
-operator|)
 name|message
 operator|.
 name|getExchange
@@ -946,9 +937,6 @@ name|Exception
 operator|.
 name|class
 argument_list|,
-operator|(
-name|Exception
-operator|)
 name|e
 argument_list|)
 expr_stmt|;

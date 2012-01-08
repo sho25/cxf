@@ -1831,10 +1831,6 @@ name|String
 index|[]
 name|args
 init|=
-operator|(
-name|String
-index|[]
-operator|)
 name|list
 operator|.
 name|toArray

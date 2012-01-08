@@ -433,9 +433,6 @@ block|{
 name|Policy
 name|normalizedPolicy
 init|=
-operator|(
-name|Policy
-operator|)
 name|p
 operator|.
 name|normalize
@@ -692,9 +689,6 @@ condition|)
 block|{
 name|policy
 operator|=
-operator|(
-name|Policy
-operator|)
 name|policy
 operator|.
 name|normalize

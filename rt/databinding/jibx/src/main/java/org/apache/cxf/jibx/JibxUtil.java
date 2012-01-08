@@ -1358,9 +1358,6 @@ block|{
 name|QName
 name|stype
 init|=
-operator|(
-name|QName
-operator|)
 name|simplePrimitiveTypeMap
 operator|.
 name|get
@@ -1377,9 +1374,6 @@ condition|)
 block|{
 name|stype
 operator|=
-operator|(
-name|QName
-operator|)
 name|simpleObjectTypeMap
 operator|.
 name|get

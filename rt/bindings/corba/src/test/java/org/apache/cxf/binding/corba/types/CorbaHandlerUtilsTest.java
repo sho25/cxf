@@ -351,9 +351,6 @@ argument_list|)
 decl_stmt|;
 name|factory
 operator|=
-operator|(
-name|BindingFactory
-operator|)
 name|bfm
 operator|.
 name|getBindingFactory

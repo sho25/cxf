@@ -896,15 +896,10 @@ control|)
 block|{
 name|enumLabel
 operator|=
-operator|(
-operator|(
-name|Enumerator
-operator|)
 name|enumIter
 operator|.
 name|next
 argument_list|()
-operator|)
 operator|.
 name|getValue
 argument_list|()

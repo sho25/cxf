@@ -409,12 +409,7 @@ operator|new
 name|Object
 index|[]
 block|{
-operator|(
-operator|(
-name|AbstractManagedConnectionImpl
-operator|)
 name|conn
-operator|)
 operator|.
 name|getConnectionRequestInfo
 argument_list|()
@@ -426,12 +421,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-operator|(
-operator|(
-name|AbstractManagedConnectionImpl
-operator|)
 name|conn
-operator|)
 operator|.
 name|isBound
 argument_list|()

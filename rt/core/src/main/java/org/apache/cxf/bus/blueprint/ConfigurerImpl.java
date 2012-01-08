@@ -748,9 +748,6 @@ name|invoke
 argument_list|(
 name|container
 argument_list|,
-operator|(
-name|BeanMetadata
-operator|)
 name|cm
 argument_list|,
 name|beanInstance

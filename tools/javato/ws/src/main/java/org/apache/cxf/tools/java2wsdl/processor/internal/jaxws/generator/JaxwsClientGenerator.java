@@ -291,9 +291,6 @@ name|setAttributes
 argument_list|(
 literal|"address"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|penv
 operator|.
 name|get
@@ -308,9 +305,6 @@ name|setAttributes
 argument_list|(
 literal|"seiClass"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|env
 operator|.
 name|get

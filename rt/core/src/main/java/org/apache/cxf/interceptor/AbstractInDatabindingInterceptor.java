@@ -1073,9 +1073,6 @@ block|}
 name|MessagePartInfo
 name|p
 init|=
-operator|(
-name|MessagePartInfo
-operator|)
 name|msgInfo
 operator|.
 name|getMessageParts

@@ -669,9 +669,6 @@ block|{
 comment|// only deal with the first endpoint object which retrun from the list.
 name|endpointName
 operator|=
-operator|(
-name|ObjectName
-operator|)
 name|it
 operator|.
 name|next

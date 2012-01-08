@@ -492,9 +492,6 @@ decl_stmt|;
 name|AuthorizationPolicy
 name|policy
 init|=
-operator|(
-name|AuthorizationPolicy
-operator|)
 name|message
 operator|.
 name|get

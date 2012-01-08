@@ -1485,9 +1485,6 @@ if|if
 condition|(
 name|isSchemaElement
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|schemaNode
 argument_list|)
 condition|)
@@ -1552,9 +1549,6 @@ if|if
 condition|(
 name|isSchemaElement
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|schemaNode
 argument_list|)
 condition|)
@@ -2880,10 +2874,6 @@ expr_stmt|;
 block|}
 block|}
 return|return
-operator|(
-name|Element
-index|[]
-operator|)
 name|a
 operator|.
 name|toArray
@@ -3450,9 +3440,6 @@ block|}
 name|Bus
 name|bus
 init|=
-operator|(
-name|Bus
-operator|)
 name|env
 operator|.
 name|get

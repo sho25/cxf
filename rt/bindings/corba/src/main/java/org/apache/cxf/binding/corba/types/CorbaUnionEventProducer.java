@@ -418,12 +418,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-operator|(
-operator|(
-name|Boolean
-operator|)
 name|descValue
-operator|)
 operator|.
 name|booleanValue
 argument_list|()

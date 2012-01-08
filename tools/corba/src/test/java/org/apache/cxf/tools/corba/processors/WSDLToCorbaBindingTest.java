@@ -3944,9 +3944,6 @@ decl_stmt|;
 name|ExtensibilityElement
 name|extElement
 init|=
-operator|(
-name|ExtensibilityElement
-operator|)
 name|extElements
 operator|.
 name|get

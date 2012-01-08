@@ -7580,9 +7580,6 @@ condition|)
 block|{
 name|writeEvent
 argument_list|(
-operator|(
-name|XMLEvent
-operator|)
 name|it
 operator|.
 name|next
@@ -7618,9 +7615,6 @@ condition|)
 block|{
 name|writeAttributeEvent
 argument_list|(
-operator|(
-name|Attribute
-operator|)
 name|it
 operator|.
 name|next

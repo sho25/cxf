@@ -509,9 +509,6 @@ name|XmlSchemaUtils
 operator|.
 name|getObjectParticle
 argument_list|(
-operator|(
-name|XmlSchemaObject
-operator|)
 name|sequenceObject
 argument_list|,
 name|contextName

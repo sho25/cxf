@@ -247,9 +247,6 @@ name|fixedType
 operator|.
 name|setDigits
 argument_list|(
-operator|(
-name|long
-operator|)
 literal|3
 argument_list|)
 expr_stmt|;
@@ -257,9 +254,6 @@ name|fixedType
 operator|.
 name|setScale
 argument_list|(
-operator|(
-name|long
-operator|)
 literal|2
 argument_list|)
 expr_stmt|;

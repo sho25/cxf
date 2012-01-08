@@ -344,9 +344,6 @@ expr_stmt|;
 name|Echo
 name|client
 init|=
-operator|(
-name|Echo
-operator|)
 name|factory
 operator|.
 name|create

@@ -977,9 +977,6 @@ expr_stmt|;
 name|MessageObserver
 name|observer
 init|=
-operator|(
-name|MessageObserver
-operator|)
 name|message
 operator|.
 name|getExchange

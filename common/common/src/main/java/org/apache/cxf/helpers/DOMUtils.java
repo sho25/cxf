@@ -3111,9 +3111,6 @@ block|{
 return|return
 name|getNamespace
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|parent
 argument_list|,
 name|searchPrefix

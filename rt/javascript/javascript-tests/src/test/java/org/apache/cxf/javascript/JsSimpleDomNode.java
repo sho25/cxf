@@ -778,9 +778,6 @@ condition|)
 block|{
 name|prev
 operator|=
-operator|(
-name|JsSimpleDomNode
-operator|)
 name|children
 operator|.
 name|get

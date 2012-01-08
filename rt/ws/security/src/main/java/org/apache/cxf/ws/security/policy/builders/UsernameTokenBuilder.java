@@ -429,9 +429,6 @@ condition|)
 block|{
 name|child
 operator|=
-operator|(
-name|Element
-operator|)
 name|child
 expr_stmt|;
 name|QName

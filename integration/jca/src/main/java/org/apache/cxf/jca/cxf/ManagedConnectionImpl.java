@@ -390,9 +390,6 @@ name|Proxy
 operator|.
 name|getInvocationHandler
 argument_list|(
-operator|(
-name|Proxy
-operator|)
 name|connection
 argument_list|)
 decl_stmt|;

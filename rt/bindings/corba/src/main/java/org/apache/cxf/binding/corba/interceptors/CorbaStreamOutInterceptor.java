@@ -575,9 +575,6 @@ name|params
 operator|.
 name|add
 argument_list|(
-operator|(
-name|ArgType
-operator|)
 name|param
 argument_list|)
 expr_stmt|;
@@ -748,9 +745,6 @@ name|params
 operator|.
 name|add
 argument_list|(
-operator|(
-name|ArgType
-operator|)
 name|param
 argument_list|)
 expr_stmt|;

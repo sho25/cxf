@@ -142,9 +142,6 @@ block|{
 name|Header
 name|hdr
 init|=
-operator|(
-name|Header
-operator|)
 name|iter
 operator|.
 name|next

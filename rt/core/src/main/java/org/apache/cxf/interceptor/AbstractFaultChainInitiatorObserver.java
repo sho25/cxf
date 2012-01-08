@@ -416,9 +416,6 @@ block|}
 name|FaultMode
 name|mode
 init|=
-operator|(
-name|FaultMode
-operator|)
 name|message
 operator|.
 name|get

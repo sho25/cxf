@@ -2268,9 +2268,6 @@ decl_stmt|;
 name|ServiceInfo
 name|serviceInfo
 init|=
-operator|(
-name|ServiceInfo
-operator|)
 name|context
 operator|.
 name|get
@@ -2615,9 +2612,6 @@ block|{
 name|ServiceInfo
 name|serviceInfo
 init|=
-operator|(
-name|ServiceInfo
-operator|)
 name|context
 operator|.
 name|get

@@ -4272,9 +4272,6 @@ name|SoapFault
 argument_list|(
 literal|"blah"
 argument_list|,
-operator|(
-name|Throwable
-operator|)
 operator|new
 name|Exception
 argument_list|()

@@ -456,9 +456,6 @@ try|try
 block|{
 name|builder
 operator|=
-operator|(
-name|ServiceBuilder
-operator|)
 name|applicationContext
 operator|.
 name|getBean

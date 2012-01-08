@@ -734,9 +734,6 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|String
 operator|.
 name|class

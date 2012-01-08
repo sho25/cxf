@@ -1616,9 +1616,6 @@ name|searchValue
 operator|.
 name|equals
 argument_list|(
-operator|(
-name|String
-operator|)
 name|o
 argument_list|)
 condition|)

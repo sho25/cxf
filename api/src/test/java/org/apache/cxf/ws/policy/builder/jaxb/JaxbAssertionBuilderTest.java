@@ -380,9 +380,6 @@ name|DOMUtils
 operator|.
 name|findAllElementsByTagNameNS
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|doc
 operator|.
 name|getDocumentElement

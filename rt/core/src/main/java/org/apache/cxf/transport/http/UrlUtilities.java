@@ -125,9 +125,6 @@ block|{
 name|String
 name|pair
 init|=
-operator|(
-name|String
-operator|)
 name|st
 operator|.
 name|nextToken

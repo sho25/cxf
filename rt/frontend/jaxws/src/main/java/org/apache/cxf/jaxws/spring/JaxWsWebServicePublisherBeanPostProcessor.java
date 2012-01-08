@@ -645,9 +645,6 @@ block|{
 name|WebService
 name|ws
 init|=
-operator|(
-name|WebService
-operator|)
 name|clazz
 operator|.
 name|getAnnotation
@@ -804,9 +801,6 @@ throw|;
 block|}
 name|serverFactory
 operator|=
-operator|(
-name|ServerFactoryBean
-operator|)
 name|beanFactory
 operator|.
 name|getBean
@@ -895,9 +889,6 @@ literal|true
 expr_stmt|;
 name|dataBinding
 operator|=
-operator|(
-name|DataBinding
-operator|)
 name|beanFactory
 operator|.
 name|getBean

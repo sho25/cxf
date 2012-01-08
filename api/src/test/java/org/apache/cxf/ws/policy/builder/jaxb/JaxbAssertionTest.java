@@ -451,9 +451,6 @@ argument_list|)
 expr_stmt|;
 name|pc
 operator|=
-operator|(
-name|PolicyComponent
-operator|)
 operator|new
 name|All
 argument_list|()
@@ -471,9 +468,6 @@ argument_list|)
 expr_stmt|;
 name|pc
 operator|=
-operator|(
-name|PolicyComponent
-operator|)
 operator|new
 name|ExactlyOne
 argument_list|()

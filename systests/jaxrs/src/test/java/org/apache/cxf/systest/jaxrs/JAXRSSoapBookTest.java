@@ -4086,17 +4086,6 @@ argument_list|)
 operator|.
 name|form
 argument_list|(
-operator|(
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|List
-argument_list|<
-name|Object
-argument_list|>
-argument_list|>
-operator|)
 name|map
 argument_list|)
 operator|.
@@ -5385,9 +5374,6 @@ name|features
 operator|.
 name|add
 argument_list|(
-operator|(
-name|AbstractFeature
-operator|)
 name|testFeature
 argument_list|)
 expr_stmt|;
@@ -5551,9 +5537,6 @@ name|features
 operator|.
 name|add
 argument_list|(
-operator|(
-name|AbstractFeature
-operator|)
 name|testFeature
 argument_list|)
 expr_stmt|;

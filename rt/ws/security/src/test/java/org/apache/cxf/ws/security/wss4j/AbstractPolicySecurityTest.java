@@ -2614,14 +2614,6 @@ name|Object
 argument_list|>
 name|result
 init|=
-operator|(
-name|Map
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-operator|)
 name|protectionResults
 operator|.
 name|get

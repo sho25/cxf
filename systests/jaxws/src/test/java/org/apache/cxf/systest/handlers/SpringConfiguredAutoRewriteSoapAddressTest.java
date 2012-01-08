@@ -148,9 +148,6 @@ expr_stmt|;
 name|AddNumbers
 name|addNumbers
 init|=
-operator|(
-name|AddNumbers
-operator|)
 name|getApplicationContext
 argument_list|()
 operator|.

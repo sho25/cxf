@@ -479,9 +479,6 @@ operator|.
 name|getIndex
 argument_list|()
 operator|==
-operator|(
-name|long
-operator|)
 literal|1
 argument_list|)
 expr_stmt|;

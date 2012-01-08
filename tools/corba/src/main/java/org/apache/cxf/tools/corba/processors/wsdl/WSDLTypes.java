@@ -1668,9 +1668,6 @@ block|{
 name|MemberType
 name|field
 init|=
-operator|(
-name|MemberType
-operator|)
 name|fields
 operator|.
 name|get
@@ -1744,9 +1741,6 @@ name|c
 operator|.
 name|setLabel
 argument_list|(
-operator|(
-name|String
-operator|)
 name|caselist
 operator|.
 name|get
@@ -2444,9 +2438,6 @@ condition|)
 block|{
 name|corbaTypeImpl
 operator|=
-operator|(
-name|CorbaTypeImpl
-operator|)
 name|getAnonFixedCorbaType
 argument_list|(
 name|name
@@ -2465,9 +2456,6 @@ else|else
 block|{
 name|corbaTypeImpl
 operator|=
-operator|(
-name|CorbaTypeImpl
-operator|)
 name|getFixedCorbaType
 argument_list|(
 name|name

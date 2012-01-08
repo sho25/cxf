@@ -519,9 +519,6 @@ block|{
 name|XmlObject
 name|xObj
 init|=
-operator|(
-name|XmlObject
-operator|)
 name|obj
 decl_stmt|;
 name|XMLBeanStreamSerializer

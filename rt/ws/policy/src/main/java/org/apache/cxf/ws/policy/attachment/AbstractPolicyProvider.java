@@ -326,9 +326,6 @@ expr_stmt|;
 name|PolicyEngine
 name|pe
 init|=
-operator|(
-name|PolicyEngine
-operator|)
 name|bus
 operator|.
 name|getExtension

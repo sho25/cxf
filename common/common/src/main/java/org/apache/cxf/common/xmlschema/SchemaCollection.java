@@ -1264,9 +1264,6 @@ block|{
 name|XmlSchemaElement
 name|element
 init|=
-operator|(
-name|XmlSchemaElement
-operator|)
 name|item
 decl_stmt|;
 name|XmlSchemaUtils

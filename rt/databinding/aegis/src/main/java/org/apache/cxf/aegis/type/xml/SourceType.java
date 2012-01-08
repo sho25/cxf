@@ -525,9 +525,6 @@ name|StaxUtils
 operator|.
 name|copy
 argument_list|(
-operator|(
-name|Source
-operator|)
 name|object
 argument_list|,
 name|writer

@@ -396,12 +396,6 @@ throws|throws
 name|IOException
 block|{
 return|return
-operator|(
-name|Enumeration
-argument_list|<
-name|URL
-argument_list|>
-operator|)
 name|bundle
 operator|.
 name|getResources

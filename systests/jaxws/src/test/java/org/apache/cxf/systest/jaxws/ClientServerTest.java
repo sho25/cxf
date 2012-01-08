@@ -2858,9 +2858,6 @@ block|}
 name|Greeter
 name|greeter
 init|=
-operator|(
-name|Greeter
-operator|)
 name|service
 operator|.
 name|getPort
@@ -3389,9 +3386,6 @@ block|{
 name|Greeter
 name|greeter
 init|=
-operator|(
-name|Greeter
-operator|)
 name|service
 operator|.
 name|getPort

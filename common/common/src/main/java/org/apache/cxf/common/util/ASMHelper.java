@@ -1147,10 +1147,6 @@ empty_stmt|;
 comment|// newConstInt was removed in 2.x, if we get this far, we're
 comment|// using 1.5.x,
 comment|// set to null so we don't attempt to use it.
-name|newCw
-operator|=
-literal|null
-expr_stmt|;
 name|oldASM
 operator|=
 literal|true

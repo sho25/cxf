@@ -525,9 +525,6 @@ operator|.
 name|getId
 argument_list|()
 argument_list|,
-operator|(
-name|long
-operator|)
 literal|123
 argument_list|)
 expr_stmt|;
@@ -644,9 +641,6 @@ operator|.
 name|getId
 argument_list|()
 argument_list|,
-operator|(
-name|long
-operator|)
 literal|123
 argument_list|)
 expr_stmt|;
@@ -748,9 +742,6 @@ operator|.
 name|getId
 argument_list|()
 argument_list|,
-operator|(
-name|long
-operator|)
 literal|123
 argument_list|)
 expr_stmt|;

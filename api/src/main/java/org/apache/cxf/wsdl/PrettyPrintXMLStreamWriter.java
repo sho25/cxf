@@ -895,9 +895,6 @@ block|{
 name|CurrentElement
 name|elem
 init|=
-operator|(
-name|CurrentElement
-operator|)
 name|elems
 operator|.
 name|pop
@@ -1247,9 +1244,6 @@ expr_stmt|;
 name|CurrentElement
 name|elem
 init|=
-operator|(
-name|CurrentElement
-operator|)
 name|elems
 operator|.
 name|peek
@@ -1340,9 +1334,6 @@ block|{
 name|Integer
 name|result
 init|=
-operator|(
-name|Integer
-operator|)
 name|WSDL_INDENT_MAP
 operator|.
 name|get

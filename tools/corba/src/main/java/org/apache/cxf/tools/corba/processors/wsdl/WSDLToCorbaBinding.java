@@ -1181,9 +1181,6 @@ name|generateCORBABinding
 argument_list|(
 name|def
 argument_list|,
-operator|(
-name|PortType
-operator|)
 name|intfs
 operator|.
 name|get
@@ -1196,9 +1193,6 @@ name|generateCORBAServiceForBinding
 argument_list|(
 name|def
 argument_list|,
-operator|(
-name|PortType
-operator|)
 name|intfs
 operator|.
 name|get
@@ -1330,9 +1324,6 @@ condition|)
 block|{
 name|portType
 operator|=
-operator|(
-name|PortType
-operator|)
 name|portTypes
 operator|.
 name|values
@@ -4373,9 +4364,6 @@ expr_stmt|;
 name|CorbaTypeImpl
 name|corbaTypeImpl
 init|=
-operator|(
-name|CorbaTypeImpl
-operator|)
 name|corbaex
 decl_stmt|;
 if|if

@@ -1230,10 +1230,6 @@ block|}
 block|}
 block|}
 return|return
-operator|(
-name|Binding
-index|[]
-operator|)
 name|result
 operator|.
 name|toArray

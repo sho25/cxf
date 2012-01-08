@@ -324,9 +324,6 @@ name|testClient
 operator|.
 name|getWidgetById
 argument_list|(
-operator|(
-name|long
-operator|)
 literal|42
 argument_list|)
 decl_stmt|;
@@ -402,9 +399,6 @@ name|testClient
 operator|.
 name|getWidgetById
 argument_list|(
-operator|(
-name|long
-operator|)
 literal|42
 argument_list|)
 decl_stmt|;
@@ -573,9 +567,6 @@ name|getTestClient
 parameter_list|()
 block|{
 return|return
-operator|(
-name|TestService
-operator|)
 name|applicationContext
 operator|.
 name|getBean

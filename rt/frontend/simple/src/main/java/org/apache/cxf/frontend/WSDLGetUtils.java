@@ -2711,12 +2711,6 @@ name|CastUtils
 operator|.
 name|cast
 argument_list|(
-operator|(
-name|List
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|types
 operator|.
 name|getExtensibilityElements

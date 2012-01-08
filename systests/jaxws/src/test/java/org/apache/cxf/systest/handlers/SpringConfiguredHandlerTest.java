@@ -120,9 +120,6 @@ block|{
 name|AddNumbers
 name|addNumbers
 init|=
-operator|(
-name|AddNumbers
-operator|)
 name|getApplicationContext
 argument_list|()
 operator|.
@@ -156,9 +153,6 @@ argument_list|)
 expr_stmt|;
 name|addNumbers
 operator|=
-operator|(
-name|AddNumbers
-operator|)
 name|getApplicationContext
 argument_list|()
 operator|.
@@ -191,9 +185,6 @@ argument_list|)
 expr_stmt|;
 name|addNumbers
 operator|=
-operator|(
-name|AddNumbers
-operator|)
 name|getApplicationContext
 argument_list|()
 operator|.

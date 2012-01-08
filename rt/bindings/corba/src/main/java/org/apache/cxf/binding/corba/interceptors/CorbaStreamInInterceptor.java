@@ -885,9 +885,6 @@ argument_list|()
 decl_stmt|;
 name|orb
 operator|=
-operator|(
-name|ORB
-operator|)
 name|message
 operator|.
 name|getExchange
@@ -1247,9 +1244,6 @@ throw|;
 block|}
 name|orb
 operator|=
-operator|(
-name|ORB
-operator|)
 name|exchange
 operator|.
 name|get

@@ -255,12 +255,6 @@ name|visitor
 operator|.
 name|visitClass
 argument_list|(
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|EasyMock
 operator|.
 name|eq
@@ -270,9 +264,6 @@ operator|.
 name|class
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -335,9 +326,6 @@ argument_list|(
 name|expectedField
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -506,9 +494,6 @@ argument_list|(
 name|expectedField
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -530,9 +515,6 @@ argument_list|(
 name|expectedMethod1
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -554,9 +536,6 @@ argument_list|(
 name|expectedMethod2
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -578,9 +557,6 @@ argument_list|(
 name|expectedMethod3
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -602,9 +578,6 @@ argument_list|(
 name|expectedMethod4
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA
@@ -626,9 +599,6 @@ argument_list|(
 name|expectedMethod5
 argument_list|)
 argument_list|,
-operator|(
-name|Annotation
-operator|)
 name|EasyMock
 operator|.
 name|isA

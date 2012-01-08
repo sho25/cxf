@@ -1372,10 +1372,6 @@ operator|.
 name|getName
 argument_list|()
 argument_list|,
-operator|(
-name|Class
-index|[]
-operator|)
 name|method
 operator|.
 name|getParameterTypes

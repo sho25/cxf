@@ -759,9 +759,6 @@ condition|)
 block|{
 name|orb
 operator|=
-operator|(
-name|ORB
-operator|)
 name|exchange
 operator|.
 name|get

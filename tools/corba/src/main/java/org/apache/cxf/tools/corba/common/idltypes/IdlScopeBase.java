@@ -229,9 +229,6 @@ block|{
 name|IdlDefn
 name|result
 init|=
-operator|(
-name|IdlDefn
-operator|)
 name|hold
 operator|.
 name|pop
@@ -256,9 +253,6 @@ block|{
 name|IdlDefn
 name|result
 init|=
-operator|(
-name|IdlDefn
-operator|)
 name|hold
 operator|.
 name|pop

@@ -3182,13 +3182,6 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-literal|null
-operator|!=
-name|reqContext
-condition|)
-block|{
 name|exchange
 operator|.
 name|putAll
@@ -3196,7 +3189,6 @@ argument_list|(
 name|reqContext
 argument_list|)
 expr_stmt|;
-block|}
 name|setParameters
 argument_list|(
 name|params

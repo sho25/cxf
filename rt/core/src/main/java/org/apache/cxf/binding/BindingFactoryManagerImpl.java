@@ -753,9 +753,6 @@ name|registerBindingFactory
 argument_list|(
 name|ns
 argument_list|,
-operator|(
-name|BindingFactory
-operator|)
 name|bean
 argument_list|)
 expr_stmt|;

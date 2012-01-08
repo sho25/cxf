@@ -4260,9 +4260,6 @@ block|{
 name|ProviderFactory
 name|pf
 init|=
-operator|(
-name|ProviderFactory
-operator|)
 name|ProviderFactory
 operator|.
 name|getInstance

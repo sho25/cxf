@@ -1173,9 +1173,6 @@ block|{
 name|String
 name|key
 init|=
-operator|(
-name|String
-operator|)
 name|iter
 operator|.
 name|next
@@ -1566,10 +1563,6 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|type
-operator|!=
-literal|null
-operator|&&
 name|type
 operator|.
 name|isPrimitive

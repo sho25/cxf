@@ -992,9 +992,6 @@ name|builder
 operator|.
 name|getPolicy
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|nd
 argument_list|)
 decl_stmt|;
@@ -1047,9 +1044,6 @@ name|builder
 operator|.
 name|getPolicyReference
 argument_list|(
-operator|(
-name|Element
-operator|)
 name|nd
 argument_list|)
 decl_stmt|;

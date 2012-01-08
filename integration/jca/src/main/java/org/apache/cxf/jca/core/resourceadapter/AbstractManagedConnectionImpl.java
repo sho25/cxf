@@ -274,9 +274,6 @@ name|this
 operator|.
 name|crinfo
 operator|=
-operator|(
-name|ConnectionRequestInfo
-operator|)
 name|crInfo
 expr_stmt|;
 block|}

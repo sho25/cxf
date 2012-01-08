@@ -1328,9 +1328,6 @@ name|epi
 operator|.
 name|setPolicy
 argument_list|(
-operator|(
-name|Policy
-operator|)
 name|p1
 operator|.
 name|normalize
@@ -1736,9 +1733,6 @@ name|epi
 operator|.
 name|setPolicy
 argument_list|(
-operator|(
-name|Policy
-operator|)
 name|p1
 operator|.
 name|normalize

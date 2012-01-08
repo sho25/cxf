@@ -1013,9 +1013,6 @@ condition|)
 block|{
 name|source
 operator|=
-operator|(
-name|Source
-operator|)
 name|obj
 expr_stmt|;
 block|}
@@ -1060,12 +1057,7 @@ operator|=
 operator|new
 name|DOMSource
 argument_list|(
-operator|(
-operator|(
-name|SOAPMessage
-operator|)
 name|msg
-operator|)
 operator|.
 name|getSOAPBody
 argument_list|()
@@ -1118,9 +1110,6 @@ condition|)
 block|{
 name|source
 operator|=
-operator|(
-name|Source
-operator|)
 name|obj
 expr_stmt|;
 block|}
@@ -1263,12 +1252,7 @@ operator|=
 operator|new
 name|DOMSource
 argument_list|(
-operator|(
-operator|(
-name|SOAPMessage
-operator|)
 name|msg
-operator|)
 operator|.
 name|getSOAPPart
 argument_list|()

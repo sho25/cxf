@@ -3255,9 +3255,6 @@ argument_list|)
 operator|.
 name|movePointRight
 argument_list|(
-operator|(
-name|int
-operator|)
 literal|2
 argument_list|)
 argument_list|)

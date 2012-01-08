@@ -1142,9 +1142,6 @@ name|Integer
 operator|.
 name|valueOf
 argument_list|(
-operator|(
-name|int
-operator|)
 name|a
 operator|.
 name|extract_ushort
@@ -1187,9 +1184,6 @@ name|BigInteger
 operator|.
 name|valueOf
 argument_list|(
-operator|(
-name|long
-operator|)
 name|a
 operator|.
 name|extract_ulong
@@ -1232,9 +1226,6 @@ name|BigInteger
 operator|.
 name|valueOf
 argument_list|(
-operator|(
-name|long
-operator|)
 name|a
 operator|.
 name|extract_ulonglong

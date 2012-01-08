@@ -133,9 +133,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Book
 operator|.
 name|class
@@ -154,9 +151,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|BookStore
 operator|.
 name|class
@@ -187,9 +181,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|BookStore
 operator|.
 name|class
@@ -208,9 +199,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Book
 operator|.
 name|class
@@ -236,9 +224,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Book
 operator|.
 name|class
@@ -257,9 +242,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|BookStore
 operator|.
 name|class
@@ -293,9 +275,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Book
 operator|.
 name|class
@@ -314,9 +293,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|BookStore
 operator|.
 name|class
@@ -373,9 +349,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|BookStore
 operator|.
 name|class
@@ -394,9 +367,6 @@ name|provider
 operator|.
 name|isReadable
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Book
 operator|.
 name|class

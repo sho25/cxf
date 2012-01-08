@@ -331,10 +331,6 @@ condition|)
 block|{
 if|if
 condition|(
-name|value
-operator|==
-literal|null
-operator|&&
 name|binding
 operator|!=
 literal|null

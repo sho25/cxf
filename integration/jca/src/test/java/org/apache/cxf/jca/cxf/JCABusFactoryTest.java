@@ -415,9 +415,6 @@ name|jcaBusFactory
 operator|.
 name|setBus
 argument_list|(
-operator|(
-name|Bus
-operator|)
 name|mockBus
 argument_list|)
 expr_stmt|;

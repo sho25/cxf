@@ -61,10 +61,6 @@ name|getExchange
 argument_list|()
 decl_stmt|;
 return|return
-name|message
-operator|!=
-literal|null
-operator|&&
 name|exchange
 operator|!=
 literal|null

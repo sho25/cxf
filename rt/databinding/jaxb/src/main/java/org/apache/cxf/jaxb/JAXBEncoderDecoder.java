@@ -5294,12 +5294,6 @@ name|class
 operator|.
 name|isAssignableFrom
 argument_list|(
-operator|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|cls
 argument_list|)
 condition|)

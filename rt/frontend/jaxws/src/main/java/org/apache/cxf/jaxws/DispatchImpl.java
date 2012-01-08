@@ -3447,9 +3447,6 @@ block|{
 name|SoapOperationInfo
 name|soi
 init|=
-operator|(
-name|SoapOperationInfo
-operator|)
 name|bop
 operator|.
 name|getExtensor

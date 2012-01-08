@@ -657,13 +657,7 @@ block|}
 block|}
 block|}
 block|}
-elseif|else
-if|if
-condition|(
-name|msgInfo
-operator|==
-literal|null
-condition|)
+else|else
 block|{
 comment|// XXX - Is the call to
 comment|// AbstractInDatabindingInterceptor.getMessageInfo()

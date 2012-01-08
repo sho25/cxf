@@ -913,12 +913,7 @@ name|Fault
 operator|)
 name|exception
 argument_list|,
-operator|(
-operator|(
-name|SoapMessage
-operator|)
 name|message
-operator|)
 operator|.
 name|getVersion
 argument_list|()

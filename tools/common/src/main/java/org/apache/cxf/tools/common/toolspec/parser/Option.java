@@ -224,9 +224,6 @@ condition|)
 block|{
 name|argument
 operator|=
-operator|(
-name|Element
-operator|)
 name|elemList
 operator|.
 name|get
@@ -266,9 +263,6 @@ condition|)
 block|{
 name|annotation
 operator|=
-operator|(
-name|Element
-operator|)
 name|elemList
 operator|.
 name|get
@@ -319,9 +313,6 @@ condition|)
 block|{
 name|annotation
 operator|=
-operator|(
-name|Element
-operator|)
 name|elemList
 operator|.
 name|get
@@ -845,9 +836,6 @@ condition|)
 block|{
 name|valueType
 operator|=
-operator|(
-name|Element
-operator|)
 name|list
 operator|.
 name|get

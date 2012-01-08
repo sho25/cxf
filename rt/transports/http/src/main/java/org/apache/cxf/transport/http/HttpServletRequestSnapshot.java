@@ -347,12 +347,6 @@ name|String
 argument_list|>
 name|tmp
 init|=
-operator|(
-name|Enumeration
-argument_list|<
-name|String
-argument_list|>
-operator|)
 name|request
 operator|.
 name|getHeaderNames

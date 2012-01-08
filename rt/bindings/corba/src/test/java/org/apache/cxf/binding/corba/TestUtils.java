@@ -326,9 +326,6 @@ expr_stmt|;
 name|CorbaBindingFactory
 name|corbaBF
 init|=
-operator|(
-name|CorbaBindingFactory
-operator|)
 name|factory
 decl_stmt|;
 return|return
@@ -366,9 +363,6 @@ expr_stmt|;
 name|CorbaBindingFactory
 name|corbaBF
 init|=
-operator|(
-name|CorbaBindingFactory
-operator|)
 name|factory
 decl_stmt|;
 return|return
@@ -406,9 +400,6 @@ expr_stmt|;
 name|CorbaBindingFactory
 name|corbaBF
 init|=
-operator|(
-name|CorbaBindingFactory
-operator|)
 name|factory
 decl_stmt|;
 return|return

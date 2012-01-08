@@ -5336,12 +5336,6 @@ name|?
 argument_list|>
 name|soapAction
 init|=
-operator|(
-name|List
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|mimeHeaders
 operator|.
 name|get

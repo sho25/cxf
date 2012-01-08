@@ -2943,9 +2943,6 @@ block|{
 comment|// if we call createType, we know that we'll get a BeanType. */
 name|superType
 operator|=
-operator|(
-name|BeanType
-operator|)
 name|getTypeMapping
 argument_list|()
 operator|.

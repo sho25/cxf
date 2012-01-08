@@ -1738,9 +1738,6 @@ block|{
 name|String
 name|fname
 init|=
-operator|(
-name|String
-operator|)
 name|e
 operator|.
 name|nextElement
@@ -1828,9 +1825,6 @@ block|{
 name|String
 name|val
 init|=
-operator|(
-name|String
-operator|)
 name|e2
 operator|.
 name|nextElement
@@ -2164,12 +2158,6 @@ name|?
 argument_list|>
 name|headerList
 init|=
-operator|(
-name|List
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|headers
 operator|.
 name|get

@@ -466,9 +466,6 @@ parameter_list|)
 block|{
 name|bus
 operator|=
-operator|(
-name|Bus
-operator|)
 name|env
 operator|.
 name|get

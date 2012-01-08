@@ -967,9 +967,6 @@ literal|null
 condition|)
 block|{
 return|return
-operator|(
-name|XMLStreamReader
-operator|)
 name|mc
 operator|.
 name|getContent

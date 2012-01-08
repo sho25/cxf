@@ -615,9 +615,6 @@ expr_stmt|;
 name|JAXWSBinding
 name|binding
 init|=
-operator|(
-name|JAXWSBinding
-operator|)
 name|operation
 operator|.
 name|getExtensor

@@ -370,9 +370,6 @@ name|setAttributes
 argument_list|(
 literal|"srcdir"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|penv
 operator|.
 name|get
@@ -387,9 +384,6 @@ name|setAttributes
 argument_list|(
 literal|"clsdir"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|penv
 operator|.
 name|get
@@ -404,9 +398,6 @@ name|setAttributes
 argument_list|(
 literal|"classpath"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|penv
 operator|.
 name|get
@@ -421,9 +412,6 @@ name|setAttributes
 argument_list|(
 literal|"classpath"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|penv
 operator|.
 name|get

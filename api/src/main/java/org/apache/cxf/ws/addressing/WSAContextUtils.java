@@ -140,16 +140,10 @@ name|override
 operator|==
 literal|null
 operator|||
-operator|(
-name|override
-operator|!=
-literal|null
-operator|&&
 name|override
 operator|.
 name|booleanValue
 argument_list|()
-operator|)
 return|;
 block|}
 comment|/**      * Store To EPR in the context      *      * @param to the To EPR      * @param message the current message      */

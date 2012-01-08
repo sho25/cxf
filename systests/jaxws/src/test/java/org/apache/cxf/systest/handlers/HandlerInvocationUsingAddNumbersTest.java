@@ -414,9 +414,6 @@ decl_stmt|;
 name|AddNumbers
 name|port
 init|=
-operator|(
-name|AddNumbers
-operator|)
 name|service
 operator|.
 name|getPort
@@ -525,9 +522,6 @@ decl_stmt|;
 name|AddNumbers
 name|port
 init|=
-operator|(
-name|AddNumbers
-operator|)
 name|service
 operator|.
 name|getPort
@@ -914,9 +908,6 @@ decl_stmt|;
 name|AddNumbers
 name|port
 init|=
-operator|(
-name|AddNumbers
-operator|)
 name|service
 operator|.
 name|getPort
@@ -1051,9 +1042,6 @@ decl_stmt|;
 name|AddNumbers
 name|port
 init|=
-operator|(
-name|AddNumbers
-operator|)
 name|service
 operator|.
 name|getPort

@@ -2036,12 +2036,6 @@ name|Scope
 argument_list|>
 name|baseScopes
 init|=
-operator|(
-name|List
-argument_list|<
-name|Scope
-argument_list|>
-operator|)
 name|wsdlVisitor
 operator|.
 name|getInheritedScopeMap

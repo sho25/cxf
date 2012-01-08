@@ -765,10 +765,6 @@ literal|null
 return|;
 block|}
 return|return
-operator|(
-name|String
-index|[]
-operator|)
 name|filters
 operator|.
 name|clone
@@ -794,10 +790,6 @@ literal|null
 return|;
 block|}
 return|return
-operator|(
-name|String
-index|[]
-operator|)
 name|negativeFilters
 operator|.
 name|clone

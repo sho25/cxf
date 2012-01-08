@@ -650,9 +650,6 @@ block|{
 name|String
 name|value
 init|=
-operator|(
-name|String
-operator|)
 name|parameters
 operator|.
 name|get

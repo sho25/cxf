@@ -7656,9 +7656,6 @@ expr_stmt|;
 name|SOAPBinding
 name|soapBindingAnn
 init|=
-operator|(
-name|SOAPBinding
-operator|)
 name|clz
 operator|.
 name|getAnnotation

@@ -310,9 +310,6 @@ name|getSoapPort
 parameter_list|()
 block|{
 return|return
-operator|(
-name|HandlerTest
-operator|)
 name|super
 operator|.
 name|getPort
@@ -343,9 +340,6 @@ name|features
 parameter_list|)
 block|{
 return|return
-operator|(
-name|HandlerTest
-operator|)
 name|super
 operator|.
 name|getPort
@@ -374,9 +368,6 @@ name|getSoapPort1
 parameter_list|()
 block|{
 return|return
-operator|(
-name|HandlerTest1
-operator|)
 name|super
 operator|.
 name|getPort
@@ -407,9 +398,6 @@ name|features
 parameter_list|)
 block|{
 return|return
-operator|(
-name|HandlerTest1
-operator|)
 name|super
 operator|.
 name|getPort

@@ -450,10 +450,6 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
-operator|(
-name|String
-index|[]
-operator|)
 name|filtersProps
 operator|.
 name|keySet
@@ -691,10 +687,6 @@ expr_stmt|;
 block|}
 block|}
 return|return
-operator|(
-name|String
-index|[]
-operator|)
 name|urlList
 operator|.
 name|toArray

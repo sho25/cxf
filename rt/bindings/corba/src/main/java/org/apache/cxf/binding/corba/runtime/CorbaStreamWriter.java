@@ -1628,9 +1628,6 @@ block|{
 name|String
 name|answer
 init|=
-operator|(
-name|String
-operator|)
 name|map
 operator|.
 name|get
@@ -1702,9 +1699,6 @@ argument_list|)
 condition|)
 block|{
 return|return
-operator|(
-name|String
-operator|)
 name|entry
 operator|.
 name|getKey

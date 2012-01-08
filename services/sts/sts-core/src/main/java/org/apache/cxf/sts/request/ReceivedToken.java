@@ -362,9 +362,6 @@ name|this
 operator|.
 name|token
 operator|=
-operator|(
-name|Element
-operator|)
 name|receivedToken
 expr_stmt|;
 name|isDOMElement

@@ -1016,9 +1016,6 @@ expr_stmt|;
 name|XMLStreamReader
 name|reader
 init|=
-operator|(
-name|XMLStreamReader
-operator|)
 name|message
 operator|.
 name|getContent

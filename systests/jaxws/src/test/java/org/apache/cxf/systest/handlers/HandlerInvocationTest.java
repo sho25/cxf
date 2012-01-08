@@ -6625,9 +6625,6 @@ argument_list|)
 decl_stmt|;
 name|addHandlersToChain
 argument_list|(
-operator|(
-name|BindingProvider
-operator|)
 name|disp
 argument_list|,
 name|handler1

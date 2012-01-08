@@ -181,9 +181,6 @@ expr_stmt|;
 name|Person
 name|p
 init|=
-operator|(
-name|Person
-operator|)
 name|beans
 operator|.
 name|get
@@ -209,9 +206,6 @@ expr_stmt|;
 name|Person
 name|jane
 init|=
-operator|(
-name|Person
-operator|)
 name|beans
 operator|.
 name|get

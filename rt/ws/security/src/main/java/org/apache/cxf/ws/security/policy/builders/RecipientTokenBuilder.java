@@ -349,9 +349,6 @@ argument_list|)
 decl_stmt|;
 name|policy
 operator|=
-operator|(
-name|Policy
-operator|)
 name|policy
 operator|.
 name|normalize

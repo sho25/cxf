@@ -2452,9 +2452,6 @@ block|{
 name|ExtensibilityElement
 name|ext
 init|=
-operator|(
-name|ExtensibilityElement
-operator|)
 name|extensionElements
 operator|.
 name|next

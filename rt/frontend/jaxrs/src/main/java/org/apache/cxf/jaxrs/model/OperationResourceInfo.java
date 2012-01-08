@@ -678,9 +678,6 @@ block|{
 name|Consumes
 name|cm
 init|=
-operator|(
-name|Consumes
-operator|)
 name|AnnotationUtils
 operator|.
 name|getMethodAnnotation
@@ -761,9 +758,6 @@ block|{
 name|Produces
 name|pm
 init|=
-operator|(
-name|Produces
-operator|)
 name|AnnotationUtils
 operator|.
 name|getMethodAnnotation
@@ -899,9 +893,6 @@ block|{
 name|DefaultValue
 name|dv
 init|=
-operator|(
-name|DefaultValue
-operator|)
 name|AnnotationUtils
 operator|.
 name|getMethodAnnotation
@@ -926,9 +917,6 @@ condition|)
 block|{
 name|dv
 operator|=
-operator|(
-name|DefaultValue
-operator|)
 name|AnnotationUtils
 operator|.
 name|getClassAnnotation

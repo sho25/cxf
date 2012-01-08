@@ -196,9 +196,6 @@ decl_stmt|;
 name|String
 name|pass
 init|=
-operator|(
-name|String
-operator|)
 name|passwords
 operator|.
 name|get

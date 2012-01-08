@@ -179,9 +179,6 @@ name|handler
 operator|.
 name|setNext
 argument_list|(
-operator|(
-name|CXFInvocationHandler
-operator|)
 name|dummyHandler
 argument_list|)
 expr_stmt|;
@@ -374,9 +371,6 @@ name|handler
 operator|.
 name|setNext
 argument_list|(
-operator|(
-name|CXFInvocationHandler
-operator|)
 name|dummyHandler1
 argument_list|)
 expr_stmt|;
@@ -489,9 +483,6 @@ name|handler1
 operator|.
 name|setNext
 argument_list|(
-operator|(
-name|CXFInvocationHandler
-operator|)
 name|mockHandler
 argument_list|)
 expr_stmt|;
@@ -508,9 +499,6 @@ name|handler2
 operator|.
 name|setNext
 argument_list|(
-operator|(
-name|CXFInvocationHandler
-operator|)
 name|mockHandler
 argument_list|)
 expr_stmt|;

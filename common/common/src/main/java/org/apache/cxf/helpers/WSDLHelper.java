@@ -241,9 +241,6 @@ block|{
 name|Binding
 name|binding
 init|=
-operator|(
-name|Binding
-operator|)
 name|ite
 operator|.
 name|next
@@ -279,9 +276,6 @@ block|{
 name|BindingOperation
 name|bop
 init|=
-operator|(
-name|BindingOperation
-operator|)
 name|ite1
 operator|.
 name|next

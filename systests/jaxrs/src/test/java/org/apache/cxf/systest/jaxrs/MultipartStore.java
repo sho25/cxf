@@ -604,9 +604,6 @@ name|Message
 operator|.
 name|MTOM_ENABLED
 argument_list|,
-operator|(
-name|Object
-operator|)
 literal|"true"
 argument_list|)
 expr_stmt|;

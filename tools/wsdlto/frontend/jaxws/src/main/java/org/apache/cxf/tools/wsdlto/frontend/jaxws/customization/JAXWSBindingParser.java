@@ -1506,9 +1506,6 @@ literal|null
 return|;
 block|}
 return|return
-operator|(
-name|Element
-operator|)
 name|rnode
 return|;
 block|}

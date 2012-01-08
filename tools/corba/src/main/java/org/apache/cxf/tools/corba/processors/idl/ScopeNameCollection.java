@@ -113,9 +113,6 @@ name|scope
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Scope
-operator|)
 name|scopedNames
 operator|.
 name|get
@@ -136,9 +133,6 @@ name|scopename
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Scope
-operator|)
 name|scopedNames
 operator|.
 name|get

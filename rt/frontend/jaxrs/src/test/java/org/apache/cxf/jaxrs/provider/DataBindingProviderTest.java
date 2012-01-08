@@ -759,9 +759,6 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Book
 operator|.
 name|class
@@ -1312,9 +1309,6 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Structure
 operator|.
 name|class
@@ -1591,9 +1585,6 @@ name|p
 operator|.
 name|readFrom
 argument_list|(
-operator|(
-name|Class
-operator|)
 name|Address
 operator|.
 name|class

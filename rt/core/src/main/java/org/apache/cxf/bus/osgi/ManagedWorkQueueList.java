@@ -334,9 +334,6 @@ decl_stmt|;
 name|String
 name|queueName
 init|=
-operator|(
-name|String
-operator|)
 name|properties
 operator|.
 name|get

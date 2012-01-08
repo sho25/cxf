@@ -1486,14 +1486,6 @@ condition|)
 block|{
 name|ret
 operator|=
-operator|(
-name|Map
-argument_list|<
-name|?
-argument_list|,
-name|?
-argument_list|>
-operator|)
 name|tmp
 operator|.
 name|get

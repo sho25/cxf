@@ -1691,12 +1691,7 @@ name|getNextSibling
 argument_list|()
 expr_stmt|;
 block|}
-operator|(
-operator|(
-name|AddressingPropertiesImpl
-operator|)
 name|maps
-operator|)
 operator|.
 name|setDuplicate
 argument_list|(

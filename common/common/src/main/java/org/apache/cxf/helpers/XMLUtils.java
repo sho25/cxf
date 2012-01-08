@@ -2262,9 +2262,6 @@ condition|)
 block|{
 name|namespceURI
 operator|=
-operator|(
-name|String
-operator|)
 name|namespaces
 operator|.
 name|get

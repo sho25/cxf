@@ -1728,9 +1728,6 @@ name|StaxUtils
 operator|.
 name|copy
 argument_list|(
-operator|(
-name|Source
-operator|)
 name|o
 argument_list|,
 name|writer

@@ -2704,9 +2704,6 @@ block|{
 name|String
 name|s
 init|=
-operator|(
-name|String
-operator|)
 name|config
 operator|.
 name|get
@@ -2735,9 +2732,6 @@ expr_stmt|;
 block|}
 name|s
 operator|=
-operator|(
-name|String
-operator|)
 name|config
 operator|.
 name|get
@@ -2766,9 +2760,6 @@ expr_stmt|;
 block|}
 name|s
 operator|=
-operator|(
-name|String
-operator|)
 name|config
 operator|.
 name|get
@@ -2797,9 +2788,6 @@ expr_stmt|;
 block|}
 name|s
 operator|=
-operator|(
-name|String
-operator|)
 name|config
 operator|.
 name|get
@@ -2828,9 +2816,6 @@ expr_stmt|;
 block|}
 name|s
 operator|=
-operator|(
-name|String
-operator|)
 name|config
 operator|.
 name|get

@@ -421,13 +421,9 @@ argument_list|(
 name|cl
 argument_list|)
 decl_stmt|;
-name|assertTrue
+name|assertNotNull
 argument_list|(
-literal|"Object is not type Class"
-argument_list|,
 name|cls
-operator|instanceof
-name|Class
 argument_list|)
 expr_stmt|;
 block|}

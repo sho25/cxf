@@ -2574,9 +2574,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -5327,9 +5324,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -5874,9 +5868,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -5956,9 +5947,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -6216,9 +6204,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -6824,9 +6809,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -6885,9 +6867,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -7071,9 +7050,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -7351,9 +7327,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -7412,9 +7385,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -7473,9 +7443,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -7549,9 +7516,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -8277,9 +8241,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -8737,9 +8698,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -8807,9 +8765,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9093,9 +9048,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9184,9 +9136,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9261,9 +9210,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9342,9 +9288,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9424,9 +9367,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9515,9 +9455,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9592,9 +9529,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9672,9 +9606,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9893,9 +9824,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -9984,9 +9912,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -10170,9 +10095,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -10253,9 +10175,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -10344,9 +10263,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -10421,9 +10337,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -10497,9 +10410,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -10808,9 +10718,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1
@@ -11375,9 +11282,6 @@ throw|throw
 operator|new
 name|NoViableAltForCharException
 argument_list|(
-operator|(
-name|char
-operator|)
 name|LA
 argument_list|(
 literal|1

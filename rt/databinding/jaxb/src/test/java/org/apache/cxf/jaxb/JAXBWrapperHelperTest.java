@@ -413,9 +413,6 @@ name|assertEquals
 argument_list|(
 literal|"hello"
 argument_list|,
-operator|(
-name|String
-operator|)
 name|lst
 operator|.
 name|get

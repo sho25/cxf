@@ -1091,9 +1091,6 @@ block|{
 name|NVList
 name|list
 init|=
-operator|(
-name|NVList
-operator|)
 name|orb
 operator|.
 name|create_list
@@ -1324,9 +1321,6 @@ block|{
 name|NVList
 name|list
 init|=
-operator|(
-name|NVList
-operator|)
 name|orb
 operator|.
 name|create_list
@@ -1705,9 +1699,6 @@ expr_stmt|;
 name|NVList
 name|nvlist
 init|=
-operator|(
-name|NVList
-operator|)
 name|orb
 operator|.
 name|create_list

@@ -606,12 +606,6 @@ name|?
 argument_list|>
 name|parameters
 init|=
-operator|(
-name|List
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|soapMessage
 operator|.
 name|getContent
@@ -741,12 +735,6 @@ name|?
 argument_list|>
 name|parameters
 init|=
-operator|(
-name|List
-argument_list|<
-name|?
-argument_list|>
-operator|)
 name|soapMessage
 operator|.
 name|getContent

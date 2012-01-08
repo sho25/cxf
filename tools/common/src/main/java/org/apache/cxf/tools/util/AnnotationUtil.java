@@ -316,11 +316,6 @@ name|method
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Annotation
-index|[]
-index|[]
-operator|)
 name|AccessController
 operator|.
 name|doPrivileged

@@ -605,10 +605,6 @@ name|ModelMBeanOperationInfo
 index|[]
 name|ops
 init|=
-operator|(
-name|ModelMBeanOperationInfo
-index|[]
-operator|)
 name|operations
 operator|.
 name|values
@@ -627,10 +623,6 @@ name|ModelMBeanAttributeInfo
 index|[]
 name|atts
 init|=
-operator|(
-name|ModelMBeanAttributeInfo
-index|[]
-operator|)
 name|attributes
 operator|.
 name|values
@@ -649,10 +641,6 @@ name|ModelMBeanConstructorInfo
 index|[]
 name|cons
 init|=
-operator|(
-name|ModelMBeanConstructorInfo
-index|[]
-operator|)
 name|constructors
 operator|.
 name|values
@@ -671,10 +659,6 @@ name|ModelMBeanNotificationInfo
 index|[]
 name|notifs
 init|=
-operator|(
-name|ModelMBeanNotificationInfo
-index|[]
-operator|)
 name|notifications
 operator|.
 name|values

@@ -503,9 +503,6 @@ expr_stmt|;
 name|ModelFactoryImpl
 name|theModelPackageImpl
 init|=
-operator|(
-name|ModelFactoryImpl
-operator|)
 name|ModelFactoryImpl
 operator|.
 name|init
