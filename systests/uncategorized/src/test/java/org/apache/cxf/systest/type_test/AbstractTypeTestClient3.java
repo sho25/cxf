@@ -13859,6 +13859,11 @@ expr_stmt|;
 block|}
 block|}
 comment|//org.apache.type_test.types3.OccuringChoice1;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|protected
 name|boolean
 name|equals
@@ -14089,6 +14094,11 @@ operator|new
 name|OccuringChoice1
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Comparable

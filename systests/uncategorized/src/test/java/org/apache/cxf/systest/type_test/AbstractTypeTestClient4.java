@@ -5261,6 +5261,11 @@ expr_stmt|;
 block|}
 block|}
 comment|//org.apache.type_test.types3.StructWithOccuringStruct;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|protected
 name|boolean
 name|equals
