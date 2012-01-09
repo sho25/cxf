@@ -418,7 +418,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|,
-name|workQueues
+name|service
 argument_list|,
 name|props
 argument_list|)
