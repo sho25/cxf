@@ -490,10 +490,14 @@ argument_list|>
 name|getHeaders
 parameter_list|()
 block|{
-return|return
-operator|(
 name|MultivaluedMap
-operator|)
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
+name|mp
+init|=
 name|super
 operator|.
 name|getResponse
@@ -501,6 +505,18 @@ argument_list|()
 operator|.
 name|getMetadata
 argument_list|()
+decl_stmt|;
+comment|//need to bounce through the temp so the cast will work
+return|return
+operator|(
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+operator|)
+name|mp
 return|;
 block|}
 annotation|@
@@ -780,11 +796,6 @@ argument_list|()
 return|;
 block|}
 comment|/**      * Returns the typed error message       * @param client the client      * @param cls the entity class      * @return the typed entity      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 parameter_list|<
 name|T
@@ -811,11 +822,14 @@ decl_stmt|;
 try|try
 block|{
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|headers
 init|=
-name|response
-operator|.
-name|getMetadata
+name|getHeaders
 argument_list|()
 decl_stmt|;
 name|Object
@@ -983,6 +997,9 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|MessageBodyReader
+argument_list|<
+name|T
+argument_list|>
 name|reader
 init|=
 name|pf

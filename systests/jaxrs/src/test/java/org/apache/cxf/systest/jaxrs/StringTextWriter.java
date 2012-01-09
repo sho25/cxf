@@ -165,6 +165,9 @@ class|class
 name|StringTextWriter
 extends|extends
 name|PrimitiveTextProvider
+argument_list|<
+name|String
+argument_list|>
 block|{
 annotation|@
 name|Context
@@ -269,7 +272,7 @@ specifier|public
 name|void
 name|writeTo
 parameter_list|(
-name|Object
+name|String
 name|obj
 parameter_list|,
 name|Class
@@ -304,10 +307,6 @@ name|IOException
 block|{
 if|if
 condition|(
-name|obj
-operator|instanceof
-name|String
-operator|&&
 name|type
 operator|==
 name|String

@@ -241,6 +241,9 @@ name|?
 argument_list|>
 argument_list|,
 name|HeaderDelegate
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|headerProviders
 init|=
@@ -253,6 +256,9 @@ name|?
 argument_list|>
 argument_list|,
 name|HeaderDelegate
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -438,6 +444,12 @@ name|type
 parameter_list|)
 block|{
 return|return
+operator|(
+name|HeaderDelegate
+argument_list|<
+name|T
+argument_list|>
+operator|)
 name|headerProviders
 operator|.
 name|get

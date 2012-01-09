@@ -546,6 +546,9 @@ throws|throws
 name|Exception
 block|{
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|provider
 init|=
 literal|null
@@ -569,6 +572,9 @@ name|provider
 operator|=
 operator|(
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|o
 expr_stmt|;

@@ -3757,10 +3757,16 @@ name|types
 parameter_list|)
 block|{
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|provider
 init|=
 operator|new
 name|JAXBElementProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 if|if
@@ -4179,11 +4185,6 @@ block|}
 end_function
 
 begin_function
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|Object
@@ -4231,6 +4232,11 @@ operator|.
 name|getGenericParameterTypes
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|MultivaluedMap
 argument_list|<
 name|String
@@ -4247,6 +4253,11 @@ literal|null
 else|:
 operator|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 operator|)
 name|m
 operator|.
@@ -4417,6 +4428,9 @@ expr_stmt|;
 name|List
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|resourceClasses
 init|=
@@ -4424,6 +4438,9 @@ operator|new
 name|ArrayList
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;

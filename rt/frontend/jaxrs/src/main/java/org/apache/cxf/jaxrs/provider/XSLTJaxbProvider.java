@@ -609,8 +609,14 @@ name|Provider
 specifier|public
 class|class
 name|XSLTJaxbProvider
+parameter_list|<
+name|T
+parameter_list|>
 extends|extends
 name|JAXBElementProvider
+argument_list|<
+name|T
+argument_list|>
 block|{
 specifier|private
 specifier|static

@@ -618,6 +618,9 @@ name|void
 name|setResourceClass
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|)
 block|{
@@ -668,6 +671,9 @@ parameter_list|(
 name|List
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|classes
 parameter_list|)
@@ -675,6 +681,9 @@ block|{
 for|for
 control|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|resourceClass
 range|:
 name|classes
@@ -967,6 +976,9 @@ name|ClassResourceInfo
 name|createResourceInfo
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|cls
 parameter_list|,
 name|boolean
@@ -1013,6 +1025,9 @@ name|void
 name|setResourceClasses
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 modifier|...
 name|classes
 parameter_list|)

@@ -658,6 +658,9 @@ expr_stmt|;
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Map
 argument_list|<
@@ -680,6 +683,9 @@ decl_stmt|;
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -711,6 +717,9 @@ operator|new
 name|ArrayList
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 argument_list|(
 name|resourceClasses
@@ -734,6 +743,9 @@ operator|.
 name|Entry
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -1391,6 +1403,9 @@ specifier|protected
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Map
 argument_list|<
@@ -1461,6 +1476,9 @@ decl_stmt|;
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Map
 argument_list|<
@@ -1475,6 +1493,9 @@ operator|new
 name|HashMap
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Map
 argument_list|<
@@ -1817,6 +1838,9 @@ specifier|protected
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -1828,6 +1852,9 @@ parameter_list|,
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Map
 argument_list|<
@@ -1895,6 +1922,9 @@ decl_stmt|;
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -1904,6 +1934,9 @@ operator|new
 name|HashMap
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -1916,6 +1949,9 @@ operator|.
 name|Entry
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|Map
 argument_list|<

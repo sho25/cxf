@@ -911,6 +911,11 @@ comment|// Add a No-Op JAX-WS SoapHandler to the dispatch chain to
 comment|// verify that the SoapHandlerInterceptor can peacefully co-exist
 comment|// with the explicitly configured SAAJOutInterceptor
 comment|//
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|List
 argument_list|<
 name|Handler

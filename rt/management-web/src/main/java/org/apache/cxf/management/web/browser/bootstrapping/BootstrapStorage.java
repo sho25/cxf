@@ -1260,6 +1260,9 @@ class|class
 name|SettingsProvider
 extends|extends
 name|JSONProvider
+argument_list|<
+name|String
+argument_list|>
 block|{
 specifier|private
 specifier|static

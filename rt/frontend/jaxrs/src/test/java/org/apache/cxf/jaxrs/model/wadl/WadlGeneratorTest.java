@@ -655,10 +655,16 @@ argument_list|()
 decl_stmt|;
 operator|new
 name|JSONProvider
+argument_list|<
+name|Document
+argument_list|>
 argument_list|()
 operator|.
 name|writeTo
 argument_list|(
+operator|(
+name|Document
+operator|)
 name|r
 operator|.
 name|getEntity

@@ -33,6 +33,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -324,6 +334,9 @@ name|threadSafe
 decl_stmt|;
 specifier|private
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|serviceClass
 decl_stmt|;
 specifier|public
@@ -591,6 +604,14 @@ block|}
 comment|/**      * Gets the initial headers      * @return the headers      */
 specifier|public
 name|Map
+argument_list|<
+name|String
+argument_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+argument_list|>
 name|getHeaders
 parameter_list|()
 block|{

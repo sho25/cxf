@@ -509,6 +509,11 @@ argument_list|)
 condition|)
 block|{
 name|Map
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|map
 init|=
 name|ctx
@@ -638,6 +643,9 @@ argument_list|)
 condition|)
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|list
 init|=
 name|ctx
@@ -705,6 +713,9 @@ argument_list|)
 condition|)
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|list
 init|=
 name|ctx
@@ -744,6 +755,9 @@ argument_list|)
 condition|)
 block|{
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|list
 init|=
 name|ctx

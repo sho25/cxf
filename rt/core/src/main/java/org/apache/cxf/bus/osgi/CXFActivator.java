@@ -226,6 +226,11 @@ name|ServiceRegistration
 name|wqSingleConfigRegistratin
 decl_stmt|;
 comment|/** {@inheritDoc}*/
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|public
 name|void
 name|start
@@ -381,6 +386,9 @@ name|BundleContext
 name|context
 parameter_list|,
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|serviceClass
 parameter_list|,
 name|Object

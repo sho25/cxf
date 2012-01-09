@@ -28,6 +28,11 @@ name|E
 parameter_list|>
 extends|extends
 name|AbstractEntity
+argument_list|<
+name|T
+argument_list|,
+name|E
+argument_list|>
 block|{ }
 end_class
 

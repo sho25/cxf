@@ -644,6 +644,9 @@ literal|null
 condition|)
 block|{
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|primaryClass
 init|=
 name|classResourceInfos

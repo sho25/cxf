@@ -237,10 +237,16 @@ argument_list|()
 decl_stmt|;
 comment|//default lifecycle is per-request, change it to singleton
 name|BinaryDataProvider
+argument_list|<
+name|Object
+argument_list|>
 name|p
 init|=
 operator|new
 name|BinaryDataProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|p
@@ -270,10 +276,16 @@ name|p
 argument_list|)
 expr_stmt|;
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|jaxbProvider
 init|=
 operator|new
 name|JAXBElementProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|Map

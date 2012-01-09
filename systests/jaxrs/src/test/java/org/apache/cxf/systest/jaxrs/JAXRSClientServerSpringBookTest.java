@@ -622,10 +622,16 @@ operator|+
 literal|"/the/generated/bookstore/books/1"
 decl_stmt|;
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|provider
 init|=
 operator|new
 name|JAXBElementProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|provider

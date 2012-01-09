@@ -1910,6 +1910,11 @@ specifier|public
 name|UriBuilder
 name|path
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|resource
 parameter_list|)
@@ -1990,6 +1995,11 @@ specifier|public
 name|UriBuilder
 name|path
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
 name|resource
 parameter_list|,

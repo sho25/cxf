@@ -357,10 +357,16 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|p1
 init|=
 operator|new
 name|JAXBElementProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|p1
@@ -378,6 +384,9 @@ literal|true
 argument_list|)
 expr_stmt|;
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|p2
 init|=
 operator|new
@@ -764,6 +773,9 @@ class|class
 name|CustomJaxbProvider
 extends|extends
 name|JAXBElementProvider
+argument_list|<
+name|Object
+argument_list|>
 block|{
 annotation|@
 name|Override

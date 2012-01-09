@@ -84,6 +84,9 @@ name|uriInfo
 parameter_list|)
 function_decl|;
 name|ContextResolver
+argument_list|<
+name|?
+argument_list|>
 name|getContextResolver
 parameter_list|()
 function_decl|;

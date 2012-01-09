@@ -607,6 +607,11 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *       * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the instance representing the matching node      */
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 specifier|public
 parameter_list|<
 name|T
@@ -675,6 +680,9 @@ name|class
 condition|)
 block|{
 return|return
+operator|(
+name|T
+operator|)
 name|readPrimitiveValue
 argument_list|(
 name|node
@@ -871,6 +879,9 @@ index|[
 name|i
 index|]
 operator|=
+operator|(
+name|T
+operator|)
 name|readPrimitiveValue
 argument_list|(
 name|node
@@ -1236,6 +1247,11 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Find the attribute or simple/text node and convert the string value to the      * instance of the provided class, example, Integer.class.       * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls the class of the response      * @return the value      */
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 specifier|public
 parameter_list|<
 name|T
@@ -1282,6 +1298,9 @@ literal|null
 condition|?
 literal|null
 else|:
+operator|(
+name|T
+operator|)
 name|InjectionUtils
 operator|.
 name|convertStringToPrimitive
@@ -1525,7 +1544,7 @@ specifier|private
 parameter_list|<
 name|T
 parameter_list|>
-name|T
+name|Object
 name|readPrimitiveValue
 parameter_list|(
 name|Node
@@ -1713,10 +1732,16 @@ block|}
 try|try
 block|{
 name|JAXBElementProvider
+argument_list|<
+name|?
+argument_list|>
 name|provider
 init|=
 operator|new
 name|JAXBElementProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|JAXBContext

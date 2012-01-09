@@ -110,6 +110,9 @@ argument_list|(
 operator|(
 operator|(
 name|ProviderInfo
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|obj
 operator|)

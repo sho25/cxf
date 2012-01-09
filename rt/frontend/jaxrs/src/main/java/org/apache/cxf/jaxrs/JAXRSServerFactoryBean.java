@@ -438,6 +438,9 @@ specifier|protected
 name|Map
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -447,6 +450,9 @@ operator|new
 name|HashMap
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|,
 name|ResourceProvider
 argument_list|>
@@ -1070,6 +1076,9 @@ parameter_list|(
 name|List
 argument_list|<
 name|Class
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|classes
 parameter_list|)
@@ -1088,6 +1097,9 @@ name|void
 name|setResourceClasses
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 modifier|...
 name|classes
 parameter_list|)
@@ -1167,6 +1179,9 @@ name|void
 name|setResourceProvider
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|c
 parameter_list|,
 name|ResourceProvider

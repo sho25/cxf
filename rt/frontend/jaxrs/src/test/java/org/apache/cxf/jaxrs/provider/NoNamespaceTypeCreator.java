@@ -63,6 +63,9 @@ name|QName
 name|createQName
 parameter_list|(
 name|Class
+argument_list|<
+name|?
+argument_list|>
 name|javaType
 parameter_list|)
 block|{

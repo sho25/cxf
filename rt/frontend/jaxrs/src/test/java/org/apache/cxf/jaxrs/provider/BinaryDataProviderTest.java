@@ -219,6 +219,9 @@ name|p
 init|=
 operator|new
 name|BinaryDataProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -303,6 +306,9 @@ name|p
 init|=
 operator|new
 name|BinaryDataProvider
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -376,7 +382,11 @@ block|}
 annotation|@
 name|SuppressWarnings
 argument_list|(
+block|{
 literal|"unchecked"
+block|,
+literal|"rawtypes"
+block|}
 argument_list|)
 annotation|@
 name|Test
@@ -561,7 +571,11 @@ block|}
 annotation|@
 name|SuppressWarnings
 argument_list|(
+block|{
 literal|"unchecked"
+block|,
+literal|"rawtypes"
+block|}
 argument_list|)
 annotation|@
 name|Test

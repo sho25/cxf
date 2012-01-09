@@ -998,6 +998,9 @@ name|appProvider
 init|=
 operator|(
 name|ProviderInfo
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|exchange
 operator|.
@@ -1804,6 +1807,11 @@ literal|"unchecked"
 argument_list|)
 specifier|protected
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|getTemplateValues
 parameter_list|(
 name|Message
@@ -2150,6 +2158,9 @@ operator|=
 operator|(
 operator|(
 name|List
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|result
 operator|)
@@ -2249,11 +2260,6 @@ return|return
 name|result
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 name|void
 name|pushOntoStack
@@ -2308,6 +2314,11 @@ name|stack
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|MultivaluedMap
 argument_list|<
 name|String
@@ -2318,6 +2329,11 @@ name|params
 init|=
 operator|(
 name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 operator|)
 name|msg
 operator|.

@@ -531,10 +531,16 @@ operator|+
 literal|"/samlform/bookstore/books"
 decl_stmt|;
 name|FormEncodingProvider
+argument_list|<
+name|Form
+argument_list|>
 name|formProvider
 init|=
 operator|new
 name|FormEncodingProvider
+argument_list|<
+name|Form
+argument_list|>
 argument_list|()
 decl_stmt|;
 name|formProvider
