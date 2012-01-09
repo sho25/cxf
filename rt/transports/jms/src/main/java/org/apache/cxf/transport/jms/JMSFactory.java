@@ -1638,11 +1638,6 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * If the destinationName given is null then a temporary destination is created else the destination name      * is resolved using the resolver from the jmsConfig      *       * @param jmsTemplate template to use for session and resolver      * @param replyToDestinationName null for temporary destination or a destination name      * @param pubSubDomain true=pubSub, false=Queues      * @return resolved destination      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 specifier|static
 name|Destination
@@ -1662,19 +1657,19 @@ name|pubSubDomain
 parameter_list|)
 block|{
 return|return
-operator|(
-name|Destination
-operator|)
 name|jmsTemplate
 operator|.
 name|execute
 argument_list|(
 operator|new
 name|SessionCallback
+argument_list|<
+name|Destination
+argument_list|>
 argument_list|()
 block|{
 specifier|public
-name|Object
+name|Destination
 name|doInJms
 parameter_list|(
 name|Session
