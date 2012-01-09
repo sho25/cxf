@@ -619,6 +619,10 @@ block|}
 try|try
 block|{
 return|return
+operator|(
+name|byte
+index|[]
+operator|)
 name|Subject
 operator|.
 name|doAs
