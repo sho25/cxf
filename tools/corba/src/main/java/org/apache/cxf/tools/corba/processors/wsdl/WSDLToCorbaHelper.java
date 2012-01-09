@@ -2482,10 +2482,6 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|memtype
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|isDuplicate
 argument_list|(

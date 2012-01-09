@@ -2765,10 +2765,6 @@ condition|(
 name|type
 operator|==
 literal|null
-operator|&&
-name|beanType
-operator|!=
-literal|null
 condition|)
 block|{
 name|type

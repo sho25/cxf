@@ -5798,13 +5798,6 @@ argument_list|(
 literal|"http-conduit"
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|ex
-operator|==
-literal|null
-condition|)
-block|{
 name|qu
 operator|=
 name|mgr
@@ -5812,7 +5805,6 @@ operator|.
 name|getAutomaticWorkQueue
 argument_list|()
 expr_stmt|;
-block|}
 name|qu
 operator|.
 name|execute

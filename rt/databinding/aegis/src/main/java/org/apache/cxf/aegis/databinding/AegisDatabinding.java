@@ -3676,17 +3676,11 @@ name|md
 decl_stmt|;
 return|return
 name|smd
-operator|!=
-literal|null
-condition|?
-name|smd
 operator|.
 name|getPrimaryMethod
 argument_list|(
 name|op
 argument_list|)
-else|:
-literal|null
 return|;
 block|}
 specifier|public

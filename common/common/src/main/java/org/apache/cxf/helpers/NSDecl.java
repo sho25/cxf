@@ -160,10 +160,6 @@ literal|false
 return|;
 block|}
 return|return
-name|obj
-operator|!=
-literal|null
-operator|&&
 name|uri
 operator|==
 operator|(

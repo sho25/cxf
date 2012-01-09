@@ -199,10 +199,6 @@ block|{
 if|if
 condition|(
 name|namespace
-operator|!=
-literal|null
-operator|&&
-name|namespace
 operator|.
 name|length
 argument_list|()

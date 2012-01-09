@@ -508,10 +508,6 @@ block|}
 if|if
 condition|(
 name|boi
-operator|!=
-literal|null
-operator|&&
-name|boi
 operator|.
 name|isUnwrappedCapable
 argument_list|()

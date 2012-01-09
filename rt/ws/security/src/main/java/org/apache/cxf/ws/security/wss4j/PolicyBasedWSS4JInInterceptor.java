@@ -1402,13 +1402,6 @@ name|o
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|url
-operator|!=
-literal|null
-condition|)
-block|{
 name|properties
 operator|=
 operator|new
@@ -1435,7 +1428,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(

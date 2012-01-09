@@ -458,10 +458,6 @@ name|isWriteXsiTypes
 argument_list|()
 operator|&&
 name|aegisType
-operator|!=
-literal|null
-operator|&&
-name|aegisType
 operator|.
 name|getSchemaType
 argument_list|()

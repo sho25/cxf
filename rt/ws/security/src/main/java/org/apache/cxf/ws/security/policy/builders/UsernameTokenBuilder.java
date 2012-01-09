@@ -427,10 +427,6 @@ operator|instanceof
 name|Element
 condition|)
 block|{
-name|child
-operator|=
-name|child
-expr_stmt|;
 name|QName
 name|qname
 init|=

@@ -2168,13 +2168,6 @@ name|next
 expr_stmt|;
 block|}
 block|}
-if|if
-condition|(
-name|param
-operator|!=
-literal|null
-condition|)
-block|{
 name|params
 operator|.
 name|remove
@@ -2197,7 +2190,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|doc

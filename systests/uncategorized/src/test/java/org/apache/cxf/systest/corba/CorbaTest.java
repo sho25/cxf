@@ -416,15 +416,6 @@ name|PingMeFault
 name|pe
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-literal|"Caught right exception "
-argument_list|,
-name|pe
-operator|!=
-literal|null
-argument_list|)
-expr_stmt|;
 return|return;
 block|}
 name|fail

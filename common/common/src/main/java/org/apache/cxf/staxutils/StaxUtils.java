@@ -3309,10 +3309,6 @@ block|{
 if|if
 condition|(
 name|prefix
-operator|==
-literal|null
-operator|||
-name|prefix
 operator|.
 name|length
 argument_list|()
@@ -4191,10 +4187,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|attrPrefix
-operator|==
-literal|null
-operator|||
 name|attrPrefix
 operator|.
 name|length

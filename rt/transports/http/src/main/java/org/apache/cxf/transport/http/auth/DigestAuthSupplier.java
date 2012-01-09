@@ -221,10 +221,7 @@ name|NoSuchAlgorithmException
 name|e
 parameter_list|)
 block|{
-name|md
-operator|=
-literal|null
-expr_stmt|;
+comment|//ignore - set to null
 block|}
 name|md5Helper
 operator|=

@@ -1806,13 +1806,6 @@ name|URISyntaxException
 name|e
 parameter_list|)
 block|{
-if|if
-condition|(
-name|url
-operator|!=
-literal|null
-condition|)
-block|{
 name|result
 operator|=
 name|escapeChars
@@ -1830,7 +1823,6 @@ literal|"/"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|result

@@ -1499,10 +1499,6 @@ throw|;
 block|}
 if|if
 condition|(
-name|jNS
-operator|==
-literal|null
-operator|||
 name|localName
 operator|==
 literal|null

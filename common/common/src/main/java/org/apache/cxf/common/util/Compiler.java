@@ -1614,13 +1614,6 @@ name|start
 argument_list|()
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|p
-operator|!=
-literal|null
-condition|)
-block|{
 return|return
 name|p
 operator|.
@@ -1633,7 +1626,6 @@ literal|true
 else|:
 literal|false
 return|;
-block|}
 block|}
 catch|catch
 parameter_list|(
