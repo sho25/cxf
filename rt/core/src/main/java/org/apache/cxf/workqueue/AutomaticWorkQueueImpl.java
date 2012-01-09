@@ -2391,6 +2391,17 @@ name|lwm
 return|;
 block|}
 specifier|public
+name|int
+name|getInitialSize
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|initialThreads
+return|;
+block|}
+specifier|public
 name|void
 name|setHighWaterMark
 parameter_list|(
