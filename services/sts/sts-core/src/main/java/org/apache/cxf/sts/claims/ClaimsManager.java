@@ -205,6 +205,17 @@ name|size
 argument_list|()
 operator|>
 literal|0
+operator|&&
+name|claims
+operator|!=
+literal|null
+operator|&&
+name|claims
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 name|ClaimCollection
