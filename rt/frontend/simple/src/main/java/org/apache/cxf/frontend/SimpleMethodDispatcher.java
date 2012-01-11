@@ -112,10 +112,27 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|public
 class|class
 name|SimpleMethodDispatcher
 implements|implements
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|invoker
+operator|.
+name|MethodDispatcher
+implements|,
 name|MethodDispatcher
 block|{
 specifier|private
