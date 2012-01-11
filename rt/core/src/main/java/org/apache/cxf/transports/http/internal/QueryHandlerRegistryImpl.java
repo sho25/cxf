@@ -11,9 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|transport
+name|transports
 operator|.
 name|http
+operator|.
+name|internal
 package|;
 end_package
 
