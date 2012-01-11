@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|frontend
+name|service
+operator|.
+name|factory
 package|;
 end_package
 
@@ -112,11 +114,6 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 class|class
 name|SimpleMethodDispatcher
@@ -131,8 +128,6 @@ name|service
 operator|.
 name|invoker
 operator|.
-name|MethodDispatcher
-implements|,
 name|MethodDispatcher
 block|{
 specifier|private

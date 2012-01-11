@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|frontend
+name|service
+operator|.
+name|factory
 package|;
 end_package
 
@@ -20,17 +22,7 @@ specifier|public
 class|class
 name|FaultInfoException
 extends|extends
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|service
-operator|.
-name|factory
-operator|.
-name|FaultInfoException
+name|Exception
 block|{
 specifier|private
 specifier|static

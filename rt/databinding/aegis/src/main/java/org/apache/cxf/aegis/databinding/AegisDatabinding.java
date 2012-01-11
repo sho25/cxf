@@ -473,9 +473,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|frontend
+name|service
 operator|.
-name|SimpleMethodDispatcher
+name|Service
 import|;
 end_import
 
@@ -489,7 +489,9 @@ name|cxf
 operator|.
 name|service
 operator|.
-name|Service
+name|factory
+operator|.
+name|SimpleMethodDispatcher
 import|;
 end_import
 
