@@ -304,8 +304,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|quiet
-init|=
-literal|false
 decl_stmt|;
 specifier|public
 name|AbstractGreeterImpl
