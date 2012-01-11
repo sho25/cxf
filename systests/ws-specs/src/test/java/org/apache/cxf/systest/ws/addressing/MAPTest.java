@@ -136,24 +136,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|// special case handling for WS-Addressing system test to avoid
-comment|// UUID related issue when server is run as separate process
-comment|// via maven on Win2k
-name|boolean
-name|inProcess
-init|=
-literal|"Windows 2000"
-operator|.
-name|equals
-argument_list|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"os.name"
-argument_list|)
-argument_list|)
-decl_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -180,7 +162,7 @@ name|getName
 argument_list|()
 block|}
 argument_list|,
-name|inProcess
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -226,7 +208,18 @@ operator|.
 name|addressing
 operator|.
 name|AbstractGreeterImpl
-block|{              }
+block|{
+specifier|public
+name|GreeterImpl
+parameter_list|()
+block|{
+name|super
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+block|}
+block|}
 block|}
 end_class
 
