@@ -71,22 +71,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|binding
-operator|.
-name|soap
-operator|.
-name|SoapFault
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|common
 operator|.
 name|logging
@@ -106,6 +90,20 @@ operator|.
 name|endpoint
 operator|.
 name|Endpoint
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|interceptor
+operator|.
+name|Fault
 import|;
 end_import
 
@@ -553,12 +551,17 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SoapFault
+name|Fault
 argument_list|(
 literal|"A required header representing a Message Addressing Property "
 operator|+
 literal|"is not present"
 argument_list|,
+name|LOG
+argument_list|)
+operator|.
+name|setFaultCode
+argument_list|(
 operator|new
 name|QName
 argument_list|(

@@ -255,11 +255,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|transport
 operator|.
-name|addressing
-operator|.
-name|EndpointReferenceType
+name|Assertor
 import|;
 end_import
 
@@ -273,9 +271,9 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|policy
+name|addressing
 operator|.
-name|Assertor
+name|EndpointReferenceType
 import|;
 end_import
 

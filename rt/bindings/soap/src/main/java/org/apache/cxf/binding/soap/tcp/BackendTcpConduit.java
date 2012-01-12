@@ -173,9 +173,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
-operator|.
-name|policy
+name|transport
 operator|.
 name|Assertor
 import|;

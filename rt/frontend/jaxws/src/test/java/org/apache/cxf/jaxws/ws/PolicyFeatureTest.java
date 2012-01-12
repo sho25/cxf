@@ -11,11 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|jaxws
+operator|.
 name|ws
-operator|.
-name|policy
-operator|.
-name|spring
 package|;
 end_package
 
@@ -478,7 +476,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"/org/apache/cxf/ws/policy/spring/server.xml"
+literal|"/org/apache/cxf/jaxws/ws/server.xml"
 argument_list|)
 expr_stmt|;
 name|JaxWsServerFactoryBean
@@ -645,7 +643,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"/org/apache/cxf/ws/policy/spring/server.xml"
+literal|"/org/apache/cxf/jaxws/ws/server.xml"
 argument_list|)
 expr_stmt|;
 name|JaxWsServerFactoryBean
@@ -812,7 +810,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"/org/apache/cxf/ws/policy/spring/server.xml"
+literal|"/org/apache/cxf/jaxws/ws/server.xml"
 argument_list|)
 expr_stmt|;
 name|JaxWsServerFactoryBean

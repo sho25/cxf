@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|jaxws
 operator|.
-name|policy
+name|ws
 package|;
 end_package
 
@@ -1322,7 +1322,7 @@ name|WebService
 argument_list|(
 name|endpointInterface
 operator|=
-literal|"org.apache.cxf.ws.policy.PolicyAnnotationTest$TestInterface"
+literal|"org.apache.cxf.jaxws.ws.PolicyAnnotationTest$TestInterface"
 argument_list|)
 specifier|public
 specifier|static
