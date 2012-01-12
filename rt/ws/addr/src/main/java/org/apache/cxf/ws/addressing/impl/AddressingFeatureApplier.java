@@ -110,8 +110,6 @@ name|WSAddressingFeature
 operator|.
 name|WSAddressingFeatureApplier
 block|{
-annotation|@
-name|Override
 specifier|public
 name|void
 name|initializeProvider

@@ -65,8 +65,6 @@ implements|implements
 name|MAPAggregatorLoader
 block|{
 comment|/** {@inheritDoc}*/
-annotation|@
-name|Override
 specifier|public
 name|MAPAggregator
 name|createImplementation
