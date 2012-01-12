@@ -108,8 +108,6 @@ argument_list|(
 name|DatatypeFactory
 operator|.
 name|class
-argument_list|,
-literal|"CommonUtilityMessages"
 argument_list|)
 decl_stmt|;
 static|static

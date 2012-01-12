@@ -107,9 +107,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|common
 operator|.
-name|IOUtils
+name|jaxb
+operator|.
+name|JAXBContextCache
 import|;
 end_import
 
@@ -121,9 +123,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxb
+name|helpers
 operator|.
-name|JAXBContextCache
+name|IOUtils
 import|;
 end_import
 

@@ -151,9 +151,9 @@ name|cxf
 operator|.
 name|common
 operator|.
-name|util
+name|jaxb
 operator|.
-name|StringUtils
+name|JAXBUtils
 import|;
 end_import
 
@@ -165,9 +165,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxb
+name|common
 operator|.
-name|JAXBUtils
+name|util
+operator|.
+name|StringUtils
 import|;
 end_import
 

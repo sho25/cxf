@@ -51,6 +51,8 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
 name|jaxb
 operator|.
 name|JAXBUtils

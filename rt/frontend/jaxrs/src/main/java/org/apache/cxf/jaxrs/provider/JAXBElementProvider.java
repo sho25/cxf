@@ -429,9 +429,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|common
 operator|.
-name|CastUtils
+name|jaxb
+operator|.
+name|NamespaceMapper
 import|;
 end_import
 
@@ -443,9 +445,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxb
+name|helpers
 operator|.
-name|NamespaceMapper
+name|CastUtils
 import|;
 end_import
 
