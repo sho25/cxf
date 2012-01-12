@@ -14,6 +14,8 @@ operator|.
 name|ws
 operator|.
 name|addressing
+operator|.
+name|impl
 package|;
 end_package
 

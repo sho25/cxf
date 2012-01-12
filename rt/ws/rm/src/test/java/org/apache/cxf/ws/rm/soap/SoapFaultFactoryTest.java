@@ -163,6 +163,8 @@ name|ws
 operator|.
 name|addressing
 operator|.
+name|impl
+operator|.
 name|AddressingPropertiesImpl
 import|;
 end_import

@@ -239,7 +239,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|DefaultMessageIdCache
+name|MAPAggregator
 import|;
 end_import
 
@@ -255,7 +255,9 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|MAPAggregator
+name|impl
+operator|.
+name|DefaultMessageIdCache
 import|;
 end_import
 

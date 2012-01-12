@@ -266,7 +266,7 @@ specifier|final
 name|String
 name|DEFAULT_ADDRESSING_BUILDER
 init|=
-literal|"org.apache.cxf.ws.addressing.AddressingBuilderImpl"
+literal|"org.apache.cxf.ws.addressing.impl.AddressingBuilderImpl"
 decl_stmt|;
 comment|/**      * Prevents instantiation.       */
 specifier|private

@@ -343,7 +343,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingPropertiesImpl
+name|Names
 import|;
 end_import
 
@@ -359,7 +359,9 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|Names
+name|impl
+operator|.
+name|AddressingPropertiesImpl
 import|;
 end_import
 

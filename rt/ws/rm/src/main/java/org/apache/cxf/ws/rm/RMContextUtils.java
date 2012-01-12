@@ -61,22 +61,6 @@ name|AddressingProperties
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|AddressingPropertiesImpl
-import|;
-end_import
-
 begin_comment
 comment|/**  * Holder for utility methods relating to contexts.  */
 end_comment
@@ -319,7 +303,7 @@ block|}
 comment|/**      * Retrieves the addressing properties from the current message.      *       * @param message the current message      * @param isProviderContext true if the binding provider request context      *            available to the client application as opposed to the message      *            context visible to handlers      * @param isOutbound true if the message is outbound      * @return the current addressing properties      */
 specifier|public
 specifier|static
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|retrieveMAPs
 parameter_list|(
 name|Message

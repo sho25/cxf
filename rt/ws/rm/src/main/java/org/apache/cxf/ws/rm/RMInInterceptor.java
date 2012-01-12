@@ -93,7 +93,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingPropertiesImpl
+name|AddressingProperties
 import|;
 end_import
 
@@ -274,7 +274,7 @@ decl_stmt|;
 comment|// message addressing properties may be null, e.g. in case of a runtime fault
 comment|// on the server side
 specifier|final
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 init|=
 name|RMContextUtils

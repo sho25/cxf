@@ -123,11 +123,6 @@ name|QName
 name|getAddressQName
 parameter_list|()
 function_decl|;
-comment|/**      * @return package name of the implementation      */
-name|String
-name|getPackageName
-parameter_list|()
-function_decl|;
 comment|/**      * @return QName of the reference parameter marker      */
 name|QName
 name|getIsReferenceParameterQName

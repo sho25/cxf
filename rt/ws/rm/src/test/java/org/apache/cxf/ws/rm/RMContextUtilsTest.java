@@ -73,7 +73,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingPropertiesImpl
+name|JAXWSAConstants
 import|;
 end_import
 
@@ -89,7 +89,9 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|JAXWSAConstants
+name|impl
+operator|.
+name|AddressingPropertiesImpl
 import|;
 end_import
 

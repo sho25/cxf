@@ -207,7 +207,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingPropertiesImpl
+name|AddressingProperties
 import|;
 end_import
 
@@ -993,7 +993,7 @@ comment|// if we cannot expect an outgoing message to which the
 comment|// acknowledgement
 comment|// can be added we need to send an out-of-band
 comment|// SequenceAcknowledgement message
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 init|=
 name|RMContextUtils

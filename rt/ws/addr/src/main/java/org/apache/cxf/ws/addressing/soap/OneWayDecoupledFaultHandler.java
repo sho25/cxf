@@ -145,7 +145,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingPropertiesImpl
+name|AddressingProperties
 import|;
 end_import
 
@@ -295,7 +295,7 @@ name|getInMessage
 argument_list|()
 decl_stmt|;
 specifier|final
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 init|=
 name|ContextUtils

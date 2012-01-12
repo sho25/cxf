@@ -131,7 +131,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingPropertiesImpl
+name|AddressingProperties
 import|;
 end_import
 
@@ -301,7 +301,7 @@ comment|// to http://schemas.xmlsoap.org/ws/2004/a08/addressing/fault
 comment|// but: need to defer propagation of received MAPS to outbound chain first
 return|return;
 block|}
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 init|=
 name|RMContextUtils

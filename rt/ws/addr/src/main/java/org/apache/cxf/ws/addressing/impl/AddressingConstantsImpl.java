@@ -14,6 +14,8 @@ operator|.
 name|ws
 operator|.
 name|addressing
+operator|.
+name|impl
 package|;
 end_package
 
@@ -68,6 +70,38 @@ operator|.
 name|util
 operator|.
 name|PackageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
+operator|.
+name|AddressingConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
+operator|.
+name|Names
 import|;
 end_import
 

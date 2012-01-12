@@ -14,6 +14,8 @@ operator|.
 name|ws
 operator|.
 name|addressing
+operator|.
+name|impl
 package|;
 end_package
 
@@ -72,6 +74,38 @@ operator|.
 name|model
 operator|.
 name|Extensible
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
+operator|.
+name|JAXWSAConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
+operator|.
+name|Names
 import|;
 end_import
 
@@ -271,7 +305,7 @@ expr_stmt|;
 name|String
 name|action
 init|=
-name|ContextUtils
+name|InternalContextUtils
 operator|.
 name|getAction
 argument_list|(
@@ -348,7 +382,7 @@ argument_list|()
 expr_stmt|;
 name|action
 operator|=
-name|ContextUtils
+name|InternalContextUtils
 operator|.
 name|getAction
 argument_list|(
@@ -425,7 +459,7 @@ argument_list|()
 expr_stmt|;
 name|action
 operator|=
-name|ContextUtils
+name|InternalContextUtils
 operator|.
 name|getAction
 argument_list|(
@@ -493,7 +527,7 @@ argument_list|()
 expr_stmt|;
 name|action
 operator|=
-name|ContextUtils
+name|InternalContextUtils
 operator|.
 name|getAction
 argument_list|(

@@ -59,22 +59,6 @@ name|QName
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|binding
-operator|.
-name|soap
-operator|.
-name|SoapBindingConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * Holder for WS-Addressing names (of headers, namespaces etc.).  */
 end_comment
@@ -790,9 +774,7 @@ specifier|final
 name|String
 name|SOAP_ACTION_HEADER
 init|=
-name|SoapBindingConstants
-operator|.
-name|SOAP_ACTION
+literal|"SOAPAction"
 decl_stmt|;
 comment|/**      * The set of headers understood by the protocol binding.      */
 specifier|public
