@@ -237,8 +237,6 @@ operator|=
 name|o
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|assertMessage
@@ -255,8 +253,6 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|boolean
 name|canAssert
