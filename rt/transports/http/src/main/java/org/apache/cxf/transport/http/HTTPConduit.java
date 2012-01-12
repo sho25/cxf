@@ -888,22 +888,6 @@ import|;
 end_import
 
 begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|policy
-operator|.
-name|PolicyEngine
-import|;
-end_import
-
-begin_import
 import|import static
 name|org
 operator|.
@@ -1179,28 +1163,14 @@ argument_list|()
 expr_stmt|;
 comment|// wsdl extensors are superseded by policies which in
 comment|// turn are superseded by injection
-name|PolicyEngine
-name|pe
-init|=
-name|bus
-operator|.
-name|getExtension
-argument_list|(
-name|PolicyEngine
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
 if|if
 condition|(
-literal|null
-operator|!=
-name|pe
-operator|&&
-name|pe
+name|bus
 operator|.
-name|isEnabled
-argument_list|()
+name|hasExtensionByName
+argument_list|(
+literal|"org.apache.cxf.ws.policy.PolicyEngine"
+argument_list|)
 operator|&&
 name|endpointInfo
 operator|.
@@ -1216,7 +1186,7 @@ name|PolicyUtils
 operator|.
 name|getClient
 argument_list|(
-name|pe
+name|bus
 argument_list|,
 name|endpointInfo
 argument_list|,

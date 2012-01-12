@@ -239,7 +239,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Reads extension definitions from a Text file and instantiates them      * The text file has the following syntax      * classname:interfacename:deferred(true|false)      *       * @param is stream to read the extension from      * @return list of Extensions      * @throws IOException      */
+comment|/**      * Reads extension definitions from a Text file and instantiates them      * The text file has the following syntax      * classname:interfacename:deferred(true|false):optional(true|false)      *       * @param is stream to read the extension from      * @return list of Extensions      * @throws IOException      */
 specifier|public
 name|List
 argument_list|<
@@ -477,6 +477,31 @@ argument_list|(
 name|parts
 index|[
 literal|2
+index|]
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|parts
+operator|.
+name|length
+operator|>=
+literal|4
+condition|)
+block|{
+name|ext
+operator|.
+name|setOptional
+argument_list|(
+name|Boolean
+operator|.
+name|parseBoolean
+argument_list|(
+name|parts
+index|[
+literal|3
 index|]
 argument_list|)
 argument_list|)

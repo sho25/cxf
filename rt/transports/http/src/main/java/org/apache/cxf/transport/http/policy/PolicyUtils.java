@@ -83,6 +83,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|Bus
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|common
 operator|.
 name|logging
@@ -748,14 +760,14 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Returns a HTTPClientPolicy that is compatible with the assertions included in the      * service and endpoint policy subjects, or null if there are no such assertions.      * @param pe the policy engine      * @param ei the endpoint info      * @param c the conduit      * @return the compatible policy      * @throws PolicyException if no compatible HTTPClientPolicy can be determined      */
+comment|/**      * Returns a HTTPClientPolicy that is compatible with the assertions included in the      * service and endpoint policy subjects, or null if there are no such assertions.      * @param bus the bus      * @param ei the endpoint info      * @param c the conduit      * @return the compatible policy      * @throws PolicyException if no compatible HTTPClientPolicy can be determined      */
 specifier|public
 specifier|static
 name|HTTPClientPolicy
 name|getClient
 parameter_list|(
-name|PolicyEngine
-name|pe
+name|Bus
+name|bus
 parameter_list|,
 name|EndpointInfo
 name|ei
@@ -764,6 +776,18 @@ name|Conduit
 name|c
 parameter_list|)
 block|{
+name|PolicyEngine
+name|pe
+init|=
+name|bus
+operator|.
+name|getExtension
+argument_list|(
+name|PolicyEngine
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 name|Collection
 argument_list|<
 name|Assertion
@@ -899,14 +923,14 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Returns a HTTPServerPolicy that is compatible with the assertions included in the      * service and endpoint policy subjects, or null if there are no such assertions.      * @param pe the policy engine      * @param ei the endpoint info      * @param d the destination      * @return the compatible policy      * @throws PolicyException if no compatible HTTPServerPolicy can be determined      */
+comment|/**      * Returns a HTTPServerPolicy that is compatible with the assertions included in the      * service and endpoint policy subjects, or null if there are no such assertions.      * @param bus the bus      * @param ei the endpoint info      * @param d the destination      * @return the compatible policy      * @throws PolicyException if no compatible HTTPServerPolicy can be determined      */
 specifier|public
 specifier|static
 name|HTTPServerPolicy
 name|getServer
 parameter_list|(
-name|PolicyEngine
-name|pe
+name|Bus
+name|b
 parameter_list|,
 name|EndpointInfo
 name|ei
@@ -915,6 +939,18 @@ name|Destination
 name|d
 parameter_list|)
 block|{
+name|PolicyEngine
+name|pe
+init|=
+name|b
+operator|.
+name|getExtension
+argument_list|(
+name|PolicyEngine
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 name|Collection
 argument_list|<
 name|Assertion

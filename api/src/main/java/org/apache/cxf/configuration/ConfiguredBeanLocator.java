@@ -163,6 +163,13 @@ name|bean
 parameter_list|)
 function_decl|;
 block|}
+name|boolean
+name|hasBeanOfName
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 

@@ -439,6 +439,25 @@ name|type
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|boolean
+name|hasBeanOfName
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+block|{
+return|return
+name|cbl
+operator|.
+name|hasBeanOfName
+argument_list|(
+name|name
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 

@@ -106,6 +106,13 @@ argument_list|>
 name|extensionType
 parameter_list|)
 function_decl|;
+name|boolean
+name|hasExtensionByName
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+function_decl|;
 name|String
 name|getId
 parameter_list|()
