@@ -75,6 +75,8 @@ argument_list|>
 name|getSupportedClaimTypes
 parameter_list|()
 function_decl|;
+annotation|@
+name|Deprecated
 name|ClaimCollection
 name|retrieveClaimValues
 parameter_list|(
@@ -89,6 +91,16 @@ name|context
 parameter_list|,
 name|String
 name|realm
+parameter_list|)
+function_decl|;
+name|ClaimCollection
+name|retrieveClaimValues
+parameter_list|(
+name|RequestClaimCollection
+name|claims
+parameter_list|,
+name|ClaimsParameters
+name|parameters
 parameter_list|)
 function_decl|;
 block|}
