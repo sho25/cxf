@@ -164,6 +164,15 @@ parameter_list|)
 throws|throws
 name|ConfigurationException
 block|{
+if|if
+condition|(
+name|properties
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|Dictionary
 argument_list|<
 name|String
