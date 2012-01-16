@@ -63,6 +63,20 @@ name|Target
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
 begin_comment
 comment|/**  * Specifies a list of classes that are added to the inbound interceptor   * chain. This annotation effects SEI classes and service implementation   * classes.  */
 end_comment
@@ -89,8 +103,27 @@ block|{
 name|String
 index|[]
 name|interceptors
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
+name|Class
+argument_list|<
+name|?
+extends|extends
+name|Interceptor
+argument_list|<
+name|?
+extends|extends
+name|Message
+argument_list|>
+argument_list|>
+index|[]
+name|classes
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 block|}
 end_annotation_defn
 

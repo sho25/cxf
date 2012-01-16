@@ -85,8 +85,22 @@ block|{
 name|String
 index|[]
 name|features
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
+name|Class
+argument_list|<
+name|?
+extends|extends
+name|Feature
+argument_list|>
+index|[]
+name|classes
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 block|}
 end_annotation_defn
 
