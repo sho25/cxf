@@ -1188,6 +1188,17 @@ elseif|else
 if|if
 condition|(
 name|beanClass
+operator|.
+name|isEnum
+argument_list|()
+condition|)
+block|{
+comment|// do nothing
+block|}
+elseif|else
+if|if
+condition|(
+name|beanClass
 operator|==
 name|Object
 operator|.
