@@ -363,6 +363,18 @@ name|SignatureConstants
 import|;
 end_import
 
+begin_comment
+comment|//TODO: Make sure that enveloped signatures can be applied to individual
+end_comment
+
+begin_comment
+comment|//      child nodes of an envelope root element, a new property such as
+end_comment
+
+begin_comment
+comment|//      targetElementQName will be needed
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -463,6 +475,8 @@ decl_stmt|;
 specifier|private
 name|QName
 name|envelopeQName
+init|=
+name|DEFAULT_ENV_QNAME
 decl_stmt|;
 specifier|private
 name|String
@@ -516,21 +530,6 @@ argument_list|(
 literal|"Unsupported XML Signature style"
 argument_list|)
 throw|;
-block|}
-if|if
-condition|(
-name|DETACHED_SIG
-operator|.
-name|equals
-argument_list|(
-name|style
-argument_list|)
-condition|)
-block|{
-name|envelopeQName
-operator|=
-name|DEFAULT_ENV_QNAME
-expr_stmt|;
 block|}
 name|sigStyle
 operator|=
@@ -599,33 +598,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|boolean
-name|enveloping
-init|=
-name|ENVELOPING_SIG
-operator|.
-name|equals
-argument_list|(
-name|sigStyle
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|enveloping
-operator|&&
-name|envelopeQName
-operator|!=
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Enveloping XMLSignature can not have custom envelope names"
-argument_list|)
-throw|;
-block|}
 name|String
 name|userNameKey
 init|=
@@ -861,7 +833,12 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|enveloping
+name|ENVELOPING_SIG
+operator|.
+name|equals
+argument_list|(
+name|sigStyle
+argument_list|)
 condition|)
 block|{
 name|sig
@@ -881,9 +858,12 @@ block|}
 elseif|else
 if|if
 condition|(
-name|envelopeQName
-operator|!=
-literal|null
+name|DETACHED_SIG
+operator|.
+name|equals
+argument_list|(
+name|sigStyle
+argument_list|)
 condition|)
 block|{
 name|sig
