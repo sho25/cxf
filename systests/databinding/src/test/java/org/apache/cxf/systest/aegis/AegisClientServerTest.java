@@ -1979,7 +1979,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/jaxwsAndAegisSports?wsdl"
+literal|"/jaxwsAndAegisSports?wsdl&dynamic"
 argument_list|)
 decl_stmt|;
 name|Object

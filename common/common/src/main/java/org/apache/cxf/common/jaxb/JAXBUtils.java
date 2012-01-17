@@ -5803,6 +5803,16 @@ name|Element
 name|el
 parameter_list|)
 function_decl|;
+name|void
+name|parseSchema
+parameter_list|(
+name|String
+name|key
+parameter_list|,
+name|XMLStreamReader
+name|el
+parameter_list|)
+function_decl|;
 annotation|@
 name|WrapReturn
 argument_list|(
