@@ -215,11 +215,6 @@ name|PRE_INVOKE
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|void
 name|handleMessage
@@ -394,6 +389,11 @@ operator|!=
 literal|null
 condition|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|Holder
 argument_list|<
 name|Object
@@ -483,6 +483,34 @@ operator|!=
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|inObjects
+operator|==
+literal|null
+condition|)
+block|{
+comment|//if soap:body is empty, the contents may not exist
+comment|//so we need to create a contents list to store
+comment|//the holders for the outgoing parts (CXF-4031)
+name|inObjects
+operator|=
+operator|new
+name|MessageContentsList
+argument_list|()
+expr_stmt|;
+name|message
+operator|.
+name|setContent
+argument_list|(
+name|List
+operator|.
+name|class
+argument_list|,
+name|inObjects
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|idx
