@@ -445,6 +445,16 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+else|else
+block|{
+name|newList
+operator|.
+name|add
+argument_list|(
+name|o
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 name|effectiveWsdlOptions
 operator|.
