@@ -333,6 +333,10 @@ name|boolean
 name|threadSafe
 decl_stmt|;
 specifier|private
+name|long
+name|timeToKeepState
+decl_stmt|;
+specifier|private
 name|Class
 argument_list|<
 name|?
@@ -385,6 +389,22 @@ operator|.
 name|threadSafe
 operator|=
 name|threadSafe
+expr_stmt|;
+block|}
+comment|/**      * Sets the time a thread-local client state will be kept.      * This property is ignored for thread-unsafe clients      * @param secondsToKeepState      */
+specifier|public
+name|void
+name|setSecondsToKeepState
+parameter_list|(
+name|long
+name|time
+parameter_list|)
+block|{
+name|this
+operator|.
+name|timeToKeepState
+operator|=
+name|time
 expr_stmt|;
 block|}
 comment|/**      * Gets the user name      * @return the name      */
@@ -765,6 +785,8 @@ name|ThreadLocalClientState
 argument_list|(
 name|getAddress
 argument_list|()
+argument_list|,
+name|timeToKeepState
 argument_list|)
 expr_stmt|;
 block|}
