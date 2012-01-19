@@ -205,7 +205,9 @@ name|http
 operator|.
 name|policy
 operator|.
-name|PolicyUtils
+name|impl
+operator|.
+name|ServerPolicyCalculator
 import|;
 end_import
 
@@ -527,7 +529,9 @@ name|fine
 argument_list|(
 literal|"server policy: "
 operator|+
-name|PolicyUtils
+operator|new
+name|ServerPolicyCalculator
+argument_list|()
 operator|.
 name|toString
 argument_list|(
