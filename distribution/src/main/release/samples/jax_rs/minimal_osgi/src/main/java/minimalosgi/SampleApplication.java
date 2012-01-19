@@ -11,20 +11,6 @@ end_package
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|Application
-import|;
-end_import
-
-begin_import
-import|import
 name|java
 operator|.
 name|util
@@ -40,6 +26,20 @@ operator|.
 name|util
 operator|.
 name|Set
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|Application
 import|;
 end_import
 
@@ -63,7 +63,7 @@ argument_list|>
 name|getClasses
 parameter_list|()
 block|{
-name|HashSet
+name|Set
 argument_list|<
 name|Class
 argument_list|<

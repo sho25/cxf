@@ -11,6 +11,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Hashtable
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|osgi
@@ -84,16 +94,6 @@ operator|.
 name|tracker
 operator|.
 name|ServiceTrackerCustomizer
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|Hashtable
 import|;
 end_import
 
@@ -180,7 +180,7 @@ argument_list|(
 name|serviceReference
 argument_list|)
 decl_stmt|;
-name|Hashtable
+name|Map
 argument_list|<
 name|String
 argument_list|,
@@ -293,6 +293,7 @@ name|service
 operator|!=
 literal|null
 condition|)
+block|{
 name|service
 operator|.
 name|unregister
@@ -300,6 +301,7 @@ argument_list|(
 name|_path
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 argument_list|)
