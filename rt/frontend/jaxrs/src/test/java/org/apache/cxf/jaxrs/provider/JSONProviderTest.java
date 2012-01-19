@@ -2787,6 +2787,13 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|p
+operator|.
+name|setIgnoreNamespaces
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String

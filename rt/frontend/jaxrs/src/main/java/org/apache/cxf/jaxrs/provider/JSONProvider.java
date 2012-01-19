@@ -3042,7 +3042,11 @@ if|if
 condition|(
 name|ignoreNamespaces
 operator|&&
+operator|(
 name|isCollection
+operator|||
+name|dropRootElement
+operator|)
 condition|)
 block|{
 name|qname
