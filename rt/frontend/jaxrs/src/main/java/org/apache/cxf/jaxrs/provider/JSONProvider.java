@@ -2518,11 +2518,12 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-operator|!
 name|prefix
 operator|.
-name|isEmpty
+name|length
 argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 name|prefix
