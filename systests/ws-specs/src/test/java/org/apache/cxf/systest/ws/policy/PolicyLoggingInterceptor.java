@@ -529,9 +529,7 @@ name|fine
 argument_list|(
 literal|"server policy: "
 operator|+
-operator|new
 name|ServerPolicyCalculator
-argument_list|()
 operator|.
 name|toString
 argument_list|(
