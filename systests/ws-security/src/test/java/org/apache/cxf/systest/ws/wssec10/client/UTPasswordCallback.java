@@ -177,6 +177,15 @@ argument_list|,
 literal|"password"
 argument_list|)
 expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"bob"
+argument_list|,
+literal|"password"
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Here, we attempt to get the password from the private       * alias/passwords map.      */
 specifier|public
