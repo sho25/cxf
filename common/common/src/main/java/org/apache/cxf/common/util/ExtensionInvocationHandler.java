@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
-operator|.
 name|common
+operator|.
+name|util
 package|;
 end_package
 

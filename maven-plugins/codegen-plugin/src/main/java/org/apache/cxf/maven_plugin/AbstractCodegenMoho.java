@@ -179,9 +179,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|common
 operator|.
-name|FileUtils
+name|util
+operator|.
+name|URIParserUtil
 import|;
 end_import
 
@@ -193,11 +195,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
+name|helpers
 operator|.
-name|util
-operator|.
-name|URIParserUtil
+name|FileUtils
 import|;
 end_import
 

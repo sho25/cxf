@@ -63,17 +63,13 @@ end_import
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|apache
+name|xml
 operator|.
-name|cxf
+name|namespace
 operator|.
-name|tools
-operator|.
-name|common
-operator|.
-name|ToolConstants
+name|QName
 import|;
 end_import
 
@@ -147,6 +143,92 @@ extends|extends
 name|AbstractWSDLPlugin
 block|{
 specifier|public
+specifier|static
+specifier|final
+name|String
+name|NS_JMS_ADDRESS
+init|=
+literal|"http://cxf.apache.org/transports/jms"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|QName
+name|JMS_ADDRESS
+init|=
+operator|new
+name|QName
+argument_list|(
+name|NS_JMS_ADDRESS
+argument_list|,
+literal|"address"
+argument_list|)
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_DEST_STYLE
+init|=
+literal|"destinationStyle"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_JNDI_URL
+init|=
+literal|"jndiProviderURL"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_JNDI_FAC
+init|=
+literal|"jndiConnectionFactoryName"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_JNDI_DEST
+init|=
+literal|"jndiDestinationName"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_MSG_TYPE
+init|=
+literal|"messageType"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_INIT_CTX
+init|=
+literal|"initialContextFactory"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_SUBSCRIBER_NAME
+init|=
+literal|"durableSubscriberName"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JMS_ADDR_MSGID_TO_CORRID
+init|=
+literal|"useMessageIDAsCorrelationID"
+decl_stmt|;
+specifier|public
 name|ExtensibilityElement
 name|createExtension
 parameter_list|(
@@ -179,8 +261,6 @@ name|Port
 operator|.
 name|class
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDRESS
 argument_list|)
 expr_stmt|;
@@ -195,8 +275,6 @@ name|optionSet
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_DEST_STYLE
 argument_list|)
 condition|)
@@ -207,8 +285,6 @@ name|getOption
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_DEST_STYLE
 argument_list|)
 expr_stmt|;
@@ -250,8 +326,6 @@ name|optionSet
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_INIT_CTX
 argument_list|)
 condition|)
@@ -262,8 +336,6 @@ name|getOption
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_INIT_CTX
 argument_list|)
 expr_stmt|;
@@ -300,8 +372,6 @@ name|optionSet
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_JNDI_URL
 argument_list|)
 condition|)
@@ -312,8 +382,6 @@ name|getOption
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_JNDI_URL
 argument_list|)
 expr_stmt|;
@@ -336,8 +404,6 @@ name|optionSet
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_JNDI_DEST
 argument_list|)
 condition|)
@@ -348,8 +414,6 @@ name|getOption
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_JNDI_DEST
 argument_list|)
 expr_stmt|;
@@ -372,8 +436,6 @@ name|optionSet
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_JNDI_FAC
 argument_list|)
 condition|)
@@ -384,8 +446,6 @@ name|getOption
 argument_list|(
 name|args
 argument_list|,
-name|ToolConstants
-operator|.
 name|JMS_ADDR_JNDI_FAC
 argument_list|)
 expr_stmt|;
@@ -397,9 +457,9 @@ argument_list|(
 name|factory
 argument_list|)
 expr_stmt|;
-comment|//         if (optionSet(args, ToolConstants.JMS_ADDR_MSGID_TO_CORRID)) {
+comment|//         if (optionSet(args, JMS_ADDR_MSGID_TO_CORRID)) {
 comment|//             jmsAddress.setUseMessageIDAsCorrelationID(getOption(args,
-comment|//                                                             ToolConstants.JMS_ADDR_MSGID_TO_CORRID,
+comment|//                                                             JMS_ADDR_MSGID_TO_CORRID,
 comment|//                                                                 Boolean.class));
 comment|//         }
 name|jmsAddress
@@ -422,8 +482,8 @@ argument_list|(
 name|provider
 argument_list|)
 expr_stmt|;
-comment|//         if (optionSet(args, ToolConstants.JMS_ADDR_SUBSCRIBER_NAME)) {
-comment|//       jmsAddress.setDurableSubscriberName(getOption(args, ToolConstants.JMS_ADDR_SUBSCRIBER_NAME));
+comment|//         if (optionSet(args, JMS_ADDR_SUBSCRIBER_NAME)) {
+comment|//       jmsAddress.setDurableSubscriberName(getOption(args, JMS_ADDR_SUBSCRIBER_NAME));
 comment|//         }
 return|return
 name|jmsAddress

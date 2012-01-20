@@ -65,11 +65,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|maven_plugin
-operator|.
 name|common
 operator|.
-name|DocumentArtifact
+name|util
+operator|.
+name|URIParserUtil
 import|;
 end_import
 
@@ -81,11 +81,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
+name|maven_plugin
 operator|.
-name|util
+name|common
 operator|.
-name|URIParserUtil
+name|DocumentArtifact
 import|;
 end_import
 

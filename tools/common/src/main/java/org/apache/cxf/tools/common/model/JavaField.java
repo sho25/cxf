@@ -59,7 +59,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
+name|common
 operator|.
 name|util
 operator|.

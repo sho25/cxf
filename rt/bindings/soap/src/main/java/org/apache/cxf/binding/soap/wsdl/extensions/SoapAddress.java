@@ -11,13 +11,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
-operator|.
-name|common
-operator|.
-name|extensions
+name|binding
 operator|.
 name|soap
+operator|.
+name|wsdl
+operator|.
+name|extensions
 package|;
 end_package
 
@@ -31,7 +31,7 @@ name|extensions
 operator|.
 name|soap
 operator|.
-name|SOAPFault
+name|SOAPAddress
 import|;
 end_import
 
@@ -45,18 +45,18 @@ name|extensions
 operator|.
 name|soap12
 operator|.
-name|SOAP12Fault
+name|SOAP12Address
 import|;
 end_import
 
 begin_interface
 specifier|public
 interface|interface
-name|SoapFault
+name|SoapAddress
 extends|extends
-name|SOAPFault
+name|SOAPAddress
 extends|,
-name|SOAP12Fault
+name|SOAP12Address
 block|{  }
 end_interface
 

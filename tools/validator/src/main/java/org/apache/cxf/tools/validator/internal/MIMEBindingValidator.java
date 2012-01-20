@@ -141,9 +141,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|binding
 operator|.
-name|CastUtils
+name|soap
+operator|.
+name|SOAPBindingUtil
 import|;
 end_import
 
@@ -155,11 +157,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
+name|helpers
 operator|.
-name|util
-operator|.
-name|SOAPBindingUtil
+name|CastUtils
 import|;
 end_import
 
