@@ -758,7 +758,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClassNotFoundException
+name|Throwable
 name|e
 parameter_list|)
 block|{
@@ -798,7 +798,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|ClassNotFoundException
+name|Throwable
 name|e
 parameter_list|)
 block|{
