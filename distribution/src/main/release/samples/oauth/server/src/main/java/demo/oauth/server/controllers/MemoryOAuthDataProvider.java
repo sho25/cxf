@@ -31,6 +31,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|List
 import|;
 end_import
@@ -357,7 +367,12 @@ literal|"read_info"
 argument_list|,
 literal|"Read your personal information"
 argument_list|,
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
 literal|"ROLE_USER"
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -374,7 +389,12 @@ literal|"modify_info"
 argument_list|,
 literal|"Modify your personal information"
 argument_list|,
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
 literal|"ROLE_ADMIN"
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

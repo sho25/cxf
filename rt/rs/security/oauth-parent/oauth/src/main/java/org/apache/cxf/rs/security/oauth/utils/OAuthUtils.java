@@ -1426,6 +1426,14 @@ condition|(
 name|defaultValue
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|scopeList
+operator|.
+name|contains
+argument_list|(
+name|defaultValue
+argument_list|)
 condition|)
 block|{
 name|scopeList
