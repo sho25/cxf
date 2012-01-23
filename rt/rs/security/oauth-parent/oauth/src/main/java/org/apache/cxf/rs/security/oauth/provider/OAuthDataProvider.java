@@ -57,6 +57,26 @@ name|oauth
 operator|.
 name|data
 operator|.
+name|AccessTokenRegistration
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth
+operator|.
+name|data
+operator|.
 name|Client
 import|;
 end_import
@@ -170,12 +190,12 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Creates a new {@link AccessToken}      * @param requestToken the request token approved by the resource owner      * @return new AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Creates a new {@link AccessToken}      * @param reg {@link AccessTokenRegistration} instance which captures       *        a request token approved by the resource owner      * @return new AccessToken      * @throws OAuthServiceException      */
 name|AccessToken
 name|createAccessToken
 parameter_list|(
-name|RequestToken
-name|requestToken
+name|AccessTokenRegistration
+name|reg
 parameter_list|)
 throws|throws
 name|OAuthServiceException
