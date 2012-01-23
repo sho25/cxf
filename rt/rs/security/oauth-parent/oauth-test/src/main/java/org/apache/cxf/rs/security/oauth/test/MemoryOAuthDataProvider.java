@@ -472,7 +472,7 @@ name|client
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
+specifier|private
 name|List
 argument_list|<
 name|OAuthPermission
@@ -598,10 +598,13 @@ name|reqToken
 operator|.
 name|setScopes
 argument_list|(
+name|getPermissionsInfo
+argument_list|(
 name|reg
 operator|.
 name|getScopes
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|reqToken

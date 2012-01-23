@@ -1164,10 +1164,6 @@ name|secData
 operator|.
 name|setPermissions
 argument_list|(
-name|dataProvider
-operator|.
-name|getPermissionsInfo
-argument_list|(
 name|OAuthUtils
 operator|.
 name|getAllScopes
@@ -1178,7 +1174,6 @@ name|getClient
 argument_list|()
 argument_list|,
 name|token
-argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

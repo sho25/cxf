@@ -80,7 +80,7 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|String
+name|OAuthPermission
 argument_list|>
 name|scopes
 init|=
@@ -209,7 +209,7 @@ comment|/**      * Returns a list of opaque permissions/scopes      * @return th
 specifier|public
 name|List
 argument_list|<
-name|String
+name|OAuthPermission
 argument_list|>
 name|getScopes
 parameter_list|()
@@ -225,7 +225,7 @@ name|setScopes
 parameter_list|(
 name|List
 argument_list|<
-name|String
+name|OAuthPermission
 argument_list|>
 name|scopes
 parameter_list|)

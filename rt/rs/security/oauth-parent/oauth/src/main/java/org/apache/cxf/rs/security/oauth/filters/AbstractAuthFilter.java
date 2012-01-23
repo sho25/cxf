@@ -784,10 +784,6 @@ name|OAuthPermission
 argument_list|>
 name|permissions
 init|=
-name|dataProvider
-operator|.
-name|getPermissionsInfo
-argument_list|(
 name|OAuthUtils
 operator|.
 name|getAllScopes
@@ -795,7 +791,6 @@ argument_list|(
 name|client
 argument_list|,
 name|accessToken
-argument_list|)
 argument_list|)
 decl_stmt|;
 for|for

@@ -23,16 +23,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -68,26 +58,6 @@ operator|.
 name|data
 operator|.
 name|Client
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth
-operator|.
-name|data
-operator|.
-name|OAuthPermission
 import|;
 end_import
 
@@ -229,20 +199,6 @@ name|token
 parameter_list|)
 throws|throws
 name|OAuthServiceException
-function_decl|;
-comment|/**      * Returns the list of {@link OAuthPermission} beans describing opaque      * permissions (aka scopes) such as "read_data", etc      * @param requestPermissions the list of opaque scopes/permissions       * @see OAuthPermission       * @return permissions      */
-name|List
-argument_list|<
-name|OAuthPermission
-argument_list|>
-name|getPermissionsInfo
-parameter_list|(
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|requestPermissions
-parameter_list|)
 function_decl|;
 block|}
 end_interface
