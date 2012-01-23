@@ -5117,6 +5117,17 @@ name|isPartialResponse
 argument_list|(
 name|message
 argument_list|)
+operator|||
+name|message
+operator|.
+name|getContent
+argument_list|(
+name|Exception
+operator|.
+name|class
+argument_list|)
+operator|!=
+literal|null
 condition|)
 block|{
 name|message

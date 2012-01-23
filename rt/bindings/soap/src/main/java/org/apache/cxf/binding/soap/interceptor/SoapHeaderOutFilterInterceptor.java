@@ -95,6 +95,16 @@ extends|extends
 name|AbstractSoapInterceptor
 block|{
 specifier|public
+specifier|static
+specifier|final
+name|SoapHeaderOutFilterInterceptor
+name|INSTANCE
+init|=
+operator|new
+name|SoapHeaderOutFilterInterceptor
+argument_list|()
+decl_stmt|;
+specifier|public
 name|SoapHeaderOutFilterInterceptor
 parameter_list|()
 block|{

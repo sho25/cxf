@@ -2949,9 +2949,9 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-operator|new
 name|SoapHeaderOutFilterInterceptor
-argument_list|()
+operator|.
+name|INSTANCE
 argument_list|)
 expr_stmt|;
 if|if
@@ -3202,6 +3202,18 @@ argument_list|(
 name|getBus
 argument_list|()
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|sb
+operator|.
+name|getOutFaultInterceptors
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|SoapHeaderOutFilterInterceptor
+operator|.
+name|INSTANCE
 argument_list|)
 expr_stmt|;
 comment|// REVISIT: The phase interceptor chain seems to freak out if this added
