@@ -90,18 +90,6 @@ name|emptyList
 argument_list|()
 decl_stmt|;
 specifier|private
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|uris
-init|=
-name|Collections
-operator|.
-name|emptyList
-argument_list|()
-decl_stmt|;
-specifier|private
 name|UserSubject
 name|subject
 decl_stmt|;
@@ -235,38 +223,6 @@ operator|.
 name|scopes
 operator|=
 name|scopes
-expr_stmt|;
-block|}
-comment|/**      * Returns a list of relative URIs the consumer wishes to access      * @return the uris      */
-specifier|public
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getUris
-parameter_list|()
-block|{
-return|return
-name|uris
-return|;
-block|}
-comment|/**      * Sets a list of relative URIs the consumer wishes to access      * @param uris the uris      */
-specifier|public
-name|void
-name|setUris
-parameter_list|(
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|uris
-parameter_list|)
-block|{
-name|this
-operator|.
-name|uris
-operator|=
-name|uris
 expr_stmt|;
 block|}
 comment|/**      * Sets a subject capturing the login name       * the end user used to login to the resource server      * when authorizing a given client request      * @param subject      */

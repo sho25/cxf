@@ -244,10 +244,6 @@ name|servlet
 operator|.
 name|Filter
 block|{
-specifier|private
-name|boolean
-name|useUserSubject
-decl_stmt|;
 specifier|public
 name|void
 name|init
@@ -278,8 +274,10 @@ name|servletContext
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|useUserSubject
-operator|=
+name|super
+operator|.
+name|setUseUserSubject
+argument_list|(
 name|MessageUtils
 operator|.
 name|isTrue
@@ -289,6 +287,7 @@ operator|.
 name|getInitParameter
 argument_list|(
 name|USE_USER_SUBJECT
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -335,8 +334,6 @@ init|=
 name|handleOAuthRequest
 argument_list|(
 name|req
-argument_list|,
-name|useUserSubject
 argument_list|)
 decl_stmt|;
 name|req
