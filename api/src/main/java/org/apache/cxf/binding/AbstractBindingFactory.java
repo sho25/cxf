@@ -188,20 +188,6 @@ import|;
 end_import
 
 begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|wsdl11
-operator|.
-name|WSDLBindingFactory
-import|;
-end_import
-
-begin_import
 import|import static
 name|org
 operator|.

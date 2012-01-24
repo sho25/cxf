@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl11
+name|binding
 package|;
 end_package
 
@@ -22,20 +22,6 @@ operator|.
 name|wsdl
 operator|.
 name|Binding
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|binding
-operator|.
-name|BindingFactory
 import|;
 end_import
 
