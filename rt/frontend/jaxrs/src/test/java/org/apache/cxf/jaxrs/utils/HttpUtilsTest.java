@@ -333,6 +333,42 @@ name|void
 name|testPathEncode
 parameter_list|()
 block|{
+comment|// rfc3986.txt 3.3
+comment|//segment-nz    = 1*pchar
+comment|//pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
+comment|// sub-delims  = "!" / "$" / "&" / "'" / "(" / ")" / "*" / "+" / "," / ";" / "="
+comment|// unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
+comment|// '&' has to be represented as&amp; in WADL
+name|String
+name|pathChars
+init|=
+literal|":@!$&'()*+,;=-._~"
+decl_stmt|;
+name|String
+name|str
+init|=
+name|HttpUtils
+operator|.
+name|pathEncode
+argument_list|(
+name|pathChars
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+name|str
+argument_list|,
+name|pathChars
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testPathEncodeWithPlusAndSpace
+parameter_list|()
+block|{
 name|assertEquals
 argument_list|(
 literal|"+%20"
