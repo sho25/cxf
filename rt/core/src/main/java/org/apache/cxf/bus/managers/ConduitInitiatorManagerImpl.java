@@ -246,7 +246,7 @@ name|BundleUtils
 operator|.
 name|getBundle
 argument_list|(
-name|ConduitInitiatorManager
+name|ConduitInitiatorManagerImpl
 operator|.
 name|class
 argument_list|)

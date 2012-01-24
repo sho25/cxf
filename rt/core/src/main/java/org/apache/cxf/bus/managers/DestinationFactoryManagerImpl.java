@@ -246,7 +246,7 @@ name|BundleUtils
 operator|.
 name|getBundle
 argument_list|(
-name|DestinationFactoryManager
+name|DestinationFactoryManagerImpl
 operator|.
 name|class
 argument_list|)
