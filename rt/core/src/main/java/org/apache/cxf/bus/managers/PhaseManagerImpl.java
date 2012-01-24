@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|phase
+name|bus
+operator|.
+name|managers
 package|;
 end_package
 
@@ -68,6 +70,34 @@ operator|.
 name|extension
 operator|.
 name|BusExtension
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|phase
+operator|.
+name|Phase
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|phase
+operator|.
+name|PhaseManager
 import|;
 end_import
 
