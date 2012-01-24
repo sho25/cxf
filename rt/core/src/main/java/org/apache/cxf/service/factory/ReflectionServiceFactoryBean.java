@@ -13336,6 +13336,8 @@ return|;
 block|}
 if|if
 condition|(
+name|FaultOutInterceptor
+operator|.
 name|FaultInfoException
 operator|.
 name|class
