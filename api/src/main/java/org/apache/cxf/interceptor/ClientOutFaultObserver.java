@@ -57,7 +57,7 @@ name|cxf
 operator|.
 name|endpoint
 operator|.
-name|ClientCallback
+name|Client
 import|;
 end_import
 
@@ -71,7 +71,7 @@ name|cxf
 operator|.
 name|endpoint
 operator|.
-name|ClientImpl
+name|ClientCallback
 import|;
 end_import
 
@@ -295,7 +295,7 @@ name|resCtx
 operator|.
 name|get
 argument_list|(
-name|ClientImpl
+name|Client
 operator|.
 name|RESPONSE_CONTEXT
 argument_list|)
