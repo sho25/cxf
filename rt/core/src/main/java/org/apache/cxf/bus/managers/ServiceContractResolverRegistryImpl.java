@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|endpoint
+name|bus
+operator|.
+name|managers
 package|;
 end_package
 
@@ -84,6 +86,34 @@ operator|.
 name|injection
 operator|.
 name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|endpoint
+operator|.
+name|ServiceContractResolver
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|endpoint
+operator|.
+name|ServiceContractResolverRegistry
 import|;
 end_import
 

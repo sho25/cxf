@@ -59,9 +59,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|endpoint
+name|bus
 operator|.
-name|ServiceContractResolverRegistry
+name|managers
+operator|.
+name|ServiceContractResolverRegistryImpl
 import|;
 end_import
 
@@ -75,7 +77,7 @@ name|cxf
 operator|.
 name|endpoint
 operator|.
-name|ServiceContractResolverRegistryImpl
+name|ServiceContractResolverRegistry
 import|;
 end_import
 
