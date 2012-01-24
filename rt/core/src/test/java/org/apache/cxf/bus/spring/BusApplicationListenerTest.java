@@ -37,9 +37,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|buslifecycle
+name|bus
 operator|.
-name|BusLifeCycleListener
+name|managers
+operator|.
+name|CXFBusLifeCycleManager
 import|;
 end_import
 
@@ -53,7 +55,7 @@ name|cxf
 operator|.
 name|buslifecycle
 operator|.
-name|CXFBusLifeCycleManager
+name|BusLifeCycleListener
 import|;
 end_import
 
