@@ -332,7 +332,7 @@ argument_list|()
 decl_stmt|;
 name|attributeBean
 operator|.
-name|setSimpleName
+name|setQualifiedName
 argument_list|(
 literal|"role"
 argument_list|)
