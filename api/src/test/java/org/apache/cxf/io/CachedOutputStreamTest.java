@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|transport
+name|io
 package|;
 end_package
 
@@ -42,20 +42,6 @@ operator|.
 name|io
 operator|.
 name|IOException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|io
-operator|.
-name|CachedOutputStream
 import|;
 end_import
 
