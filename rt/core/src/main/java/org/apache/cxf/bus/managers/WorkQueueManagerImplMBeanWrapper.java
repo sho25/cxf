@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|workqueue
+name|bus
+operator|.
+name|managers
 package|;
 end_package
 

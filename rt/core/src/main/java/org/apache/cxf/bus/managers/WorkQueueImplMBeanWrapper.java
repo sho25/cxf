@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|workqueue
+name|bus
+operator|.
+name|managers
 package|;
 end_package
 
@@ -104,6 +106,34 @@ operator|.
 name|annotation
 operator|.
 name|ManagedResource
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|workqueue
+operator|.
+name|AutomaticWorkQueueImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|workqueue
+operator|.
+name|WorkQueueManager
 import|;
 end_import
 

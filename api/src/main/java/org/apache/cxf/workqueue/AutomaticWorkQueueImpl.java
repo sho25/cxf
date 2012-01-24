@@ -2304,6 +2304,7 @@ operator|==
 literal|0
 return|;
 block|}
+specifier|public
 name|boolean
 name|isFull
 parameter_list|()
