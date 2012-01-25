@@ -4118,6 +4118,10 @@ name|messageReaders
 argument_list|,
 name|messageWriters
 argument_list|,
+name|jaxbReaders
+argument_list|,
+name|jaxbWriters
+argument_list|,
 name|contextResolvers
 argument_list|,
 name|requestHandlers
