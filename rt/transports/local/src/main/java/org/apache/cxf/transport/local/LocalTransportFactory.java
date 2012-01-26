@@ -559,7 +559,7 @@ name|super
 argument_list|(
 name|DEFAULT_NAMESPACES
 argument_list|,
-name|b
+literal|null
 argument_list|)
 expr_stmt|;
 name|messageFilterProperties
@@ -633,6 +633,13 @@ name|Message
 operator|.
 name|RESPONSE_CODE
 argument_list|)
+expr_stmt|;
+name|bus
+operator|=
+name|b
+expr_stmt|;
+name|register
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@

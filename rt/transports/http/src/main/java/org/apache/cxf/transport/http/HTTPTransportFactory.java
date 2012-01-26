@@ -564,7 +564,7 @@ name|super
 argument_list|(
 name|DEFAULT_NAMESPACES
 argument_list|,
-name|b
+literal|null
 argument_list|)
 expr_stmt|;
 if|if
@@ -609,6 +609,13 @@ operator|.
 name|registry
 operator|=
 name|registry
+expr_stmt|;
+name|bus
+operator|=
+name|b
+expr_stmt|;
+name|register
+argument_list|()
 expr_stmt|;
 block|}
 specifier|public
