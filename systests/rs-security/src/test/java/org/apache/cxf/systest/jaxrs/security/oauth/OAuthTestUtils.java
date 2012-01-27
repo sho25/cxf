@@ -11,13 +11,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|systest
+operator|.
+name|jaxrs
 operator|.
 name|security
 operator|.
 name|oauth
-operator|.
-name|test
 package|;
 end_package
 
