@@ -107,7 +107,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|rs
+operator|.
+name|security
 operator|.
 name|cors
 operator|.
