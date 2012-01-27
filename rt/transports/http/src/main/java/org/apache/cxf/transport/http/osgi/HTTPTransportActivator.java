@@ -549,8 +549,6 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|String
 name|getName
@@ -565,8 +563,6 @@ name|SuppressWarnings
 argument_list|(
 literal|"unchecked"
 argument_list|)
-annotation|@
-name|Override
 specifier|public
 name|void
 name|updated
@@ -694,8 +690,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|deleted
@@ -834,8 +828,6 @@ block|}
 block|}
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|configure
