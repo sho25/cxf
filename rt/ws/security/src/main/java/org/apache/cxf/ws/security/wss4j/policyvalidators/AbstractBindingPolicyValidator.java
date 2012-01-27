@@ -509,8 +509,10 @@ name|includeTimestamp
 operator|&&
 name|timestampResults
 operator|.
-name|isEmpty
+name|size
 argument_list|()
+operator|!=
+literal|1
 condition|)
 block|{
 return|return
@@ -522,8 +524,10 @@ if|if
 condition|(
 operator|!
 name|includeTimestamp
-operator|&&
-operator|!
+condition|)
+block|{
+if|if
+condition|(
 name|timestampResults
 operator|.
 name|isEmpty
@@ -531,18 +535,11 @@ argument_list|()
 condition|)
 block|{
 return|return
-literal|false
+literal|true
 return|;
 block|}
-elseif|else
-if|if
-condition|(
-operator|!
-name|includeTimestamp
-condition|)
-block|{
 return|return
-literal|true
+literal|false
 return|;
 block|}
 comment|// At this point we received a (required) Timestamp. Now check that it is integrity protected.
