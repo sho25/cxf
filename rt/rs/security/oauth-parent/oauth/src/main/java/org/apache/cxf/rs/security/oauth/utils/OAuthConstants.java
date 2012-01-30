@@ -99,14 +99,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|X_OAUTH_URI
-init|=
-literal|"x_oauth_uri"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|X_OAUTH_SCOPE
 init|=
 literal|"x_oauth_scope"

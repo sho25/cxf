@@ -244,6 +244,14 @@ name|servlet
 operator|.
 name|Filter
 block|{
+specifier|protected
+specifier|static
+specifier|final
+name|String
+name|USE_USER_SUBJECT
+init|=
+literal|"org.apache.cxf.rs.security.oauth.use_user_subject"
+decl_stmt|;
 specifier|public
 name|void
 name|init
