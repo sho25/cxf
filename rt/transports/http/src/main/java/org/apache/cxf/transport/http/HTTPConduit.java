@@ -5976,10 +5976,22 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|outMessage
-operator|!=
-literal|null
-operator|&&
+name|responseCode
+operator|==
+operator|-
+literal|1
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"HTTP Response code appears to be corrupted"
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
 name|exchange
 operator|!=
 literal|null
