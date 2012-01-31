@@ -74,10 +74,12 @@ import|;
 end_import
 
 begin_comment
-comment|/*  * Override default styles to recognise JAXBElement as needing introspection  */
+comment|/**  * Override default styles to recognise JAXBElement as needing introspection  *   * Class was moved to project org.apache.cxf.xjc-utils:cxf-xjc-runtime  * so generated code does not have to depend on cxf  */
 end_comment
 
 begin_class
+annotation|@
+name|Deprecated
 specifier|public
 specifier|final
 class|class
