@@ -4107,9 +4107,6 @@ operator|.
 name|WARNING
 argument_list|,
 name|msg
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -5921,9 +5918,6 @@ operator|.
 name|WARNING
 argument_list|,
 name|msg
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 return|return
@@ -9135,9 +9129,6 @@ operator|.
 name|WARNING
 argument_list|,
 name|msg
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

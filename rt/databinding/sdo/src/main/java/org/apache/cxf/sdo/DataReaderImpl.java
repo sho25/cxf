@@ -308,12 +308,13 @@ name|Exception
 name|e
 parameter_list|)
 block|{
+throw|throw
 operator|new
 name|Fault
 argument_list|(
 name|e
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 return|return

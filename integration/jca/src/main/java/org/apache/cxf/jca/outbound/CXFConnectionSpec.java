@@ -452,6 +452,7 @@ operator|.
 name|hashCode
 argument_list|()
 expr_stmt|;
+comment|//NOSONAR
 block|}
 if|if
 condition|(
@@ -467,6 +468,7 @@ operator|.
 name|hashCode
 argument_list|()
 expr_stmt|;
+comment|//NOSONAR
 block|}
 if|if
 condition|(

@@ -1594,6 +1594,8 @@ literal|0
 argument_list|)
 decl_stmt|;
 name|i2
+operator|=
+name|i2
 operator|.
 name|setBit
 argument_list|(

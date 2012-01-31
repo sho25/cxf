@@ -327,6 +327,8 @@ literal|null
 condition|)
 block|{
 name|cname
+operator|=
+name|cname
 operator|.
 name|trim
 argument_list|()

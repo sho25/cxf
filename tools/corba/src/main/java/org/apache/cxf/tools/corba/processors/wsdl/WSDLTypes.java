@@ -735,6 +735,8 @@ name|getNodeValue
 argument_list|()
 decl_stmt|;
 name|info
+operator|=
+name|info
 operator|.
 name|trim
 argument_list|()
