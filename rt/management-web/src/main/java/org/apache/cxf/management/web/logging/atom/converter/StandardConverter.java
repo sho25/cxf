@@ -281,6 +281,8 @@ name|jaxrs
 operator|.
 name|ext
 operator|.
+name|provider
+operator|.
 name|atom
 operator|.
 name|AbstractEntryBuilder
@@ -298,6 +300,8 @@ operator|.
 name|jaxrs
 operator|.
 name|ext
+operator|.
+name|provider
 operator|.
 name|atom
 operator|.

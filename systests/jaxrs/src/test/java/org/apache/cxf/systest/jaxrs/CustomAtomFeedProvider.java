@@ -151,6 +151,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|ext
+operator|.
 name|provider
 operator|.
 name|AtomFeedProvider

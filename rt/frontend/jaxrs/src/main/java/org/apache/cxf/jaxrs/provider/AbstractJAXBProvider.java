@@ -2446,7 +2446,7 @@ name|SuppressWarnings
 argument_list|(
 literal|"unchecked"
 argument_list|)
-specifier|protected
+specifier|public
 name|JAXBContext
 name|getJAXBContext
 parameter_list|(
