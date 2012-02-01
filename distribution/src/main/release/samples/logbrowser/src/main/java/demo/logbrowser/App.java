@@ -55,6 +55,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|ext
+operator|.
 name|provider
 operator|.
 name|AtomEntryProvider
@@ -70,6 +72,8 @@ operator|.
 name|cxf
 operator|.
 name|jaxrs
+operator|.
+name|ext
 operator|.
 name|provider
 operator|.
