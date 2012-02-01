@@ -16,6 +16,8 @@ operator|.
 name|ext
 operator|.
 name|provider
+operator|.
+name|xmlbeans
 package|;
 end_package
 

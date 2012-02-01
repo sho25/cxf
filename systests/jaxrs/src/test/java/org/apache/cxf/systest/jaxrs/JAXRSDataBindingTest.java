@@ -135,7 +135,7 @@ name|ext
 operator|.
 name|provider
 operator|.
-name|AegisElementProvider
+name|DataBindingJSONProvider
 import|;
 end_import
 
@@ -153,7 +153,9 @@ name|ext
 operator|.
 name|provider
 operator|.
-name|DataBindingJSONProvider
+name|aegis
+operator|.
+name|AegisElementProvider
 import|;
 end_import
 

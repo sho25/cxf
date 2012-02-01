@@ -16,6 +16,8 @@ operator|.
 name|ext
 operator|.
 name|provider
+operator|.
+name|atom
 package|;
 end_package
 

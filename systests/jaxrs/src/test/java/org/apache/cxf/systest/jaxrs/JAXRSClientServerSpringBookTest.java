@@ -359,6 +359,8 @@ name|ext
 operator|.
 name|provider
 operator|.
+name|aegis
+operator|.
 name|AegisElementProvider
 import|;
 end_import

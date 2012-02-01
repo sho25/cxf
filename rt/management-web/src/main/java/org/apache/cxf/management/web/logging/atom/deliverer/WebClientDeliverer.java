@@ -129,6 +129,8 @@ name|ext
 operator|.
 name|provider
 operator|.
+name|atom
+operator|.
 name|AtomEntryProvider
 import|;
 end_import
@@ -146,6 +148,8 @@ operator|.
 name|ext
 operator|.
 name|provider
+operator|.
+name|atom
 operator|.
 name|AtomFeedProvider
 import|;

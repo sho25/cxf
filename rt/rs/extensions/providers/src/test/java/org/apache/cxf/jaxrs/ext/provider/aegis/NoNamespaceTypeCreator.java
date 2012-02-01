@@ -16,6 +16,8 @@ operator|.
 name|ext
 operator|.
 name|provider
+operator|.
+name|aegis
 package|;
 end_package
 
@@ -43,9 +45,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|java5
-operator|.
-name|Java5TypeCreator
+name|DefaultTypeCreator
 import|;
 end_import
 
@@ -56,13 +56,13 @@ end_comment
 begin_class
 specifier|public
 class|class
-name|NoNamespaceJava5TypeCreator
+name|NoNamespaceTypeCreator
 extends|extends
-name|Java5TypeCreator
+name|DefaultTypeCreator
 block|{
 annotation|@
 name|Override
-specifier|public
+specifier|protected
 name|QName
 name|createQName
 parameter_list|(
@@ -70,24 +70,25 @@ name|Class
 argument_list|<
 name|?
 argument_list|>
-name|typeClass
+name|javaType
 parameter_list|)
 block|{
+comment|// no namespace.
 name|QName
-name|defName
+name|defQname
 init|=
 name|super
 operator|.
 name|createQName
 argument_list|(
-name|typeClass
+name|javaType
 argument_list|)
 decl_stmt|;
 return|return
 operator|new
 name|QName
 argument_list|(
-name|defName
+name|defQname
 operator|.
 name|getLocalPart
 argument_list|()

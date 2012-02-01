@@ -155,6 +155,8 @@ name|ext
 operator|.
 name|provider
 operator|.
+name|atom
+operator|.
 name|AtomFeedProvider
 import|;
 end_import
