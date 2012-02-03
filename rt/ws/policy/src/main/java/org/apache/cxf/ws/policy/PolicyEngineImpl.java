@@ -3027,9 +3027,7 @@ operator|.
 name|isOptional
 argument_list|()
 operator|||
-operator|(
-literal|null
-operator|!=
+operator|!
 name|pipr
 operator|.
 name|get
@@ -3039,7 +3037,9 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-operator|)
+operator|.
+name|isEmpty
+argument_list|()
 operator|||
 operator|(
 literal|null

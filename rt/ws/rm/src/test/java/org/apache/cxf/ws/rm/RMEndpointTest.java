@@ -2940,7 +2940,7 @@ name|expect
 argument_list|(
 name|reg
 operator|.
-name|getInterceptors
+name|getInterceptorsForAlternative
 argument_list|(
 name|alt
 argument_list|,

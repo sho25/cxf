@@ -3569,7 +3569,7 @@ name|interceptors
 operator|=
 name|reg
 operator|.
-name|getInterceptors
+name|getInterceptorsForAlternative
 argument_list|(
 name|endpointPolicy
 operator|.
