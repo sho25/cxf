@@ -1499,16 +1499,8 @@ operator|.
 name|CONTEXT
 condition|)
 block|{
-name|reportInvalidResourceMethod
-argument_list|(
-name|ori
-operator|.
-name|getMethodToInvoke
-argument_list|()
-argument_list|,
-literal|"NO_CONTEXT_PARAMETERS"
-argument_list|)
-expr_stmt|;
+comment|// ignore
+continue|continue;
 block|}
 name|map
 operator|.
