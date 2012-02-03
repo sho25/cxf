@@ -141,6 +141,8 @@ extends|extends
 name|InterceptorProvider
 extends|,
 name|MessageObserver
+extends|,
+name|ConduitSelectorHolder
 block|{
 name|String
 name|REQUEST_CONTEXT
