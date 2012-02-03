@@ -11,11 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|tools
+operator|.
+name|wadlto
+operator|.
 name|jaxrs
-operator|.
-name|ext
-operator|.
-name|codegen
 package|;
 end_package
 
