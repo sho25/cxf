@@ -4549,6 +4549,9 @@ operator|(
 name|ProviderFactory
 operator|.
 name|ContextResolverProxy
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|cr
 operator|)
@@ -4571,6 +4574,9 @@ operator|(
 name|ProviderFactory
 operator|.
 name|ContextResolverProxy
+argument_list|<
+name|?
+argument_list|>
 operator|)
 name|cr
 operator|)
