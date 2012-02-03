@@ -57,11 +57,11 @@ begin_class
 annotation|@
 name|Produces
 argument_list|(
-literal|"text/xml+a"
+literal|"text/xml+b"
 argument_list|)
 specifier|public
 class|class
-name|JAXBContextProvider
+name|JAXBContextProvider2
 implements|implements
 name|ContextResolver
 argument_list|<
