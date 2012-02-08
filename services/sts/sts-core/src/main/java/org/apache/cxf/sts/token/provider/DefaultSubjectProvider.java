@@ -449,6 +449,10 @@ name|subjectNameQualifier
 init|=
 literal|"http://cxf.apache.org/sts"
 decl_stmt|;
+specifier|private
+name|String
+name|subjectNameIDFormat
+decl_stmt|;
 comment|/**      * Set the SubjectNameQualifier.      */
 specifier|public
 name|void
@@ -471,6 +475,31 @@ argument_list|(
 literal|"Setting Subject Name Qualifier: "
 operator|+
 name|subjectNameQualifier
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Set the SubjectNameIDFormat.      */
+specifier|public
+name|void
+name|setSubjectNameIDFormat
+parameter_list|(
+name|String
+name|subjectNameIDFormat
+parameter_list|)
+block|{
+name|this
+operator|.
+name|subjectNameIDFormat
+operator|=
+name|subjectNameIDFormat
+expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Setting Subject Name format: "
+operator|+
+name|subjectNameIDFormat
 argument_list|)
 expr_stmt|;
 block|}
@@ -631,6 +660,28 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|subjectNameIDFormat
+operator|!=
+literal|null
+operator|&&
+name|subjectNameIDFormat
+operator|.
+name|length
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
+name|subjectBean
+operator|.
+name|setSubjectNameIDFormat
+argument_list|(
+name|subjectNameIDFormat
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|STSConstants
