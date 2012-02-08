@@ -518,18 +518,9 @@ name|parameters
 operator|.
 name|put
 argument_list|(
-literal|"x_oauth_scope"
+literal|"scope"
 argument_list|,
-literal|"read_info,modify_info"
-argument_list|)
-expr_stmt|;
-name|parameters
-operator|.
-name|put
-argument_list|(
-literal|"x_oauth_uri"
-argument_list|,
-literal|"/resources/person/*"
+literal|"read_info modify_info"
 argument_list|)
 expr_stmt|;
 try|try

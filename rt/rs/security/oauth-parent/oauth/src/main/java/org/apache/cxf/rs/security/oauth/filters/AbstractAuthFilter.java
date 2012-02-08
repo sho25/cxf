@@ -548,15 +548,6 @@ name|add
 argument_list|(
 name|OAuthConstants
 operator|.
-name|X_OAUTH_SCOPE
-argument_list|)
-expr_stmt|;
-name|ALLOWED_OAUTH_PARAMETERS
-operator|.
-name|add
-argument_list|(
-name|OAuthConstants
-operator|.
 name|OAUTH_CONSUMER_SECRET
 argument_list|)
 expr_stmt|;

@@ -101,7 +101,7 @@ specifier|final
 name|String
 name|X_OAUTH_SCOPE
 init|=
-literal|"x_oauth_scope"
+literal|"scope"
 decl_stmt|;
 specifier|public
 specifier|static
