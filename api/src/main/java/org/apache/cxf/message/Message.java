@@ -131,6 +131,11 @@ init|=
 literal|"OnewayRequest"
 decl_stmt|;
 name|String
+name|ROBUST_ONEWAY
+init|=
+literal|"org.apache.cxf.oneway.robust"
+decl_stmt|;
+name|String
 name|HTTP_REQUEST_METHOD
 init|=
 literal|"org.apache.cxf.request.method"
