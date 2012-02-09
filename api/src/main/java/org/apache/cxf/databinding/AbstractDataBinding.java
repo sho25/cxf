@@ -345,6 +345,15 @@ argument_list|,
 literal|"http://www.w3.org/2006/03/addressing/ws-addr.xsd"
 argument_list|)
 expr_stmt|;
+name|BUILTIN_SCHEMA_LOCS
+operator|.
+name|put
+argument_list|(
+literal|"http://ws-i.org/profiles/basic/1.1/xsd"
+argument_list|,
+literal|"http://ws-i.org/profiles/basic/1.1/swaref.xsd"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|protected
 name|boolean

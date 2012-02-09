@@ -2247,6 +2247,11 @@ name|swaImport
 init|=
 literal|"http://ws-i.org/profiles/basic/1.1/xsd"
 decl_stmt|;
+name|String
+name|schemaLoc
+init|=
+literal|"http://ws-i.org/profiles/basic/1.1/swaref.xsd"
+decl_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Java2wsdl did not generate swaRef type element"
@@ -2266,6 +2271,16 @@ operator|.
 name|indexOf
 argument_list|(
 name|swaImport
+argument_list|)
+operator|>
+operator|-
+literal|1
+operator|&&
+name|str
+operator|.
+name|indexOf
+argument_list|(
+name|schemaLoc
 argument_list|)
 operator|>
 operator|-
