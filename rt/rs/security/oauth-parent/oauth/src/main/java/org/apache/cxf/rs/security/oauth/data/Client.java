@@ -52,7 +52,7 @@ name|applicationDescription
 decl_stmt|;
 specifier|private
 name|String
-name|relativeLogoPath
+name|logoUri
 decl_stmt|;
 specifier|private
 name|String
@@ -223,28 +223,29 @@ return|return
 name|applicationDescription
 return|;
 block|}
+comment|/**      * Sets the uri pointing to a client logo image.      * At the moment it must be a relative URI      * @param logoPath      */
 specifier|public
 name|void
-name|setRelativeLogoPath
+name|setLogoUri
 parameter_list|(
 name|String
-name|relativeLogoPath
+name|logoPath
 parameter_list|)
 block|{
 name|this
 operator|.
-name|relativeLogoPath
+name|logoUri
 operator|=
-name|relativeLogoPath
+name|logoPath
 expr_stmt|;
 block|}
 specifier|public
 name|String
-name|getRelativeLogoPath
+name|getLogoUri
 parameter_list|()
 block|{
 return|return
-name|relativeLogoPath
+name|logoUri
 return|;
 block|}
 comment|/**      * Gets the optional login name; can be used       * for enforcing the RBAC rules       * @return the login name      */

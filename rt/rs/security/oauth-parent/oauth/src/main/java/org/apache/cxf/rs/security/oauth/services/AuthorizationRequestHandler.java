@@ -1184,14 +1184,14 @@ argument_list|)
 expr_stmt|;
 name|secData
 operator|.
-name|setRelativeLogoPath
+name|setLogoUri
 argument_list|(
 name|token
 operator|.
 name|getClient
 argument_list|()
 operator|.
-name|getRelativeLogoPath
+name|getLogoUri
 argument_list|()
 argument_list|)
 expr_stmt|;
