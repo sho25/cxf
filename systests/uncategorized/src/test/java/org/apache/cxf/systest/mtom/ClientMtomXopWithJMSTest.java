@@ -419,6 +419,16 @@ block|{
 specifier|public
 specifier|static
 specifier|final
+name|String
+name|JMS_PORT
+init|=
+name|EmbeddedJMSBrokerLauncher
+operator|.
+name|PORT
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|QName
 name|MTOM_PORT
 init|=
@@ -544,8 +554,6 @@ argument_list|(
 name|ServerWithJMS
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -326,6 +326,8 @@ name|launchers
 operator|.
 name|add
 argument_list|(
+literal|0
+argument_list|,
 name|sl
 argument_list|)
 expr_stmt|;
@@ -407,6 +409,8 @@ name|launchers
 operator|.
 name|add
 argument_list|(
+literal|0
+argument_list|,
 name|sl
 argument_list|)
 expr_stmt|;
@@ -541,6 +545,8 @@ name|launchers
 operator|.
 name|add
 argument_list|(
+literal|0
+argument_list|,
 name|sl
 argument_list|)
 expr_stmt|;

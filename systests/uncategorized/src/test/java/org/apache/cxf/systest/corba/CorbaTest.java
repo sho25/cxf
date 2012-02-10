@@ -164,6 +164,16 @@ name|CorbaTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|Server
+operator|.
+name|PERSIST_PORT
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final

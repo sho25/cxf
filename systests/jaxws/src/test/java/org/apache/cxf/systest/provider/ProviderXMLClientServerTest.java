@@ -534,6 +534,13 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
+name|setAddress
+argument_list|(
+name|disp
+argument_list|,
+name|ADDRESS
+argument_list|)
+expr_stmt|;
 name|result
 operator|=
 name|disp
