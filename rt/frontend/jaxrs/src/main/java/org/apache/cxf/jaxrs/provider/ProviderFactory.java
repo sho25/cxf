@@ -1130,7 +1130,7 @@ block|{
 name|String
 name|message
 init|=
-literal|"Problem with setting the default provider "
+literal|"Problem with creating the default provider "
 operator|+
 name|className
 decl_stmt|;
@@ -1146,6 +1146,8 @@ condition|)
 block|{
 name|message
 operator|+=
+literal|": "
+operator|+
 name|ex
 operator|.
 name|getMessage
@@ -1169,7 +1171,7 @@ expr_stmt|;
 block|}
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 name|message
 argument_list|)
