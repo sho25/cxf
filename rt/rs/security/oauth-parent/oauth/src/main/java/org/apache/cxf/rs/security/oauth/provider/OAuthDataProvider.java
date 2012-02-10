@@ -77,6 +77,26 @@ name|oauth
 operator|.
 name|data
 operator|.
+name|AuthorizationInput
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth
+operator|.
+name|data
+operator|.
 name|Client
 import|;
 end_import
@@ -180,12 +200,12 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Sets the verifier confirming the resource owner's agreement for      * the {@link Client} to perform the action as represented by      * the provided {@link RequestToken}. The runtime will report      * this verifier to the client who will exchange it for       * a new {@link AccessToken}      *          * @param requestToken the request token      * @return the generated verifier      * @throws OAuthServiceException      */
+comment|/**      * Sets the verifier confirming the resource owner's agreement for      * the {@link Client} to perform the action as represented by      * the provided {@link RequestToken}. The runtime will report      * this verifier to the client who will exchange it for       * a new {@link AccessToken}      *          * @param data AuthorizationInput      * @return the generated verifier      * @throws OAuthServiceException      */
 name|String
-name|setRequestTokenVerifier
+name|finalizeAuthorization
 parameter_list|(
-name|RequestToken
-name|requestToken
+name|AuthorizationInput
+name|data
 parameter_list|)
 throws|throws
 name|OAuthServiceException
