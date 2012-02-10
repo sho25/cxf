@@ -847,7 +847,7 @@ name|policyNotAsserted
 argument_list|(
 name|initiatorToken
 argument_list|,
-literal|"No intiator token id"
+literal|"Security token is not found or expired"
 argument_list|)
 expr_stmt|;
 return|return;
@@ -1407,7 +1407,7 @@ name|policyNotAsserted
 argument_list|(
 name|initiatorToken
 argument_list|,
-literal|"No intiator token id"
+literal|"Security token is not found or expired"
 argument_list|)
 expr_stmt|;
 return|return;
