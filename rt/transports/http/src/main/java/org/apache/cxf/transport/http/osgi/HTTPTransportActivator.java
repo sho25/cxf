@@ -1813,6 +1813,12 @@ operator|==
 literal|null
 condition|)
 block|{
+name|ft
+operator|=
+operator|new
+name|FiltersType
+argument_list|()
+expr_stmt|;
 name|p
 operator|.
 name|setCipherSuitesFilter
