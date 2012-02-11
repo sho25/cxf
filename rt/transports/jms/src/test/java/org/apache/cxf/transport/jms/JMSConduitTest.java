@@ -291,7 +291,9 @@ argument_list|(
 operator|new
 name|JMSBrokerSetup
 argument_list|(
-literal|"tcp://localhost:61500"
+literal|"tcp://localhost:"
+operator|+
+name|JMS_PORT
 argument_list|)
 argument_list|)
 expr_stmt|;
