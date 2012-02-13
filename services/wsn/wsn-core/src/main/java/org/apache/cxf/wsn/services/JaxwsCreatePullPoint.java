@@ -129,6 +129,8 @@ class|class
 name|JaxwsCreatePullPoint
 extends|extends
 name|JmsCreatePullPoint
+implements|implements
+name|JaxwsCreatePullPointMBean
 block|{
 specifier|public
 name|JaxwsCreatePullPoint

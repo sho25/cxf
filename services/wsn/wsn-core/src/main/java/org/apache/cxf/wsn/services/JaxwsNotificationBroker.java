@@ -137,6 +137,8 @@ class|class
 name|JaxwsNotificationBroker
 extends|extends
 name|JmsNotificationBroker
+implements|implements
+name|JaxwsNotificationBrokerMBean
 block|{
 specifier|public
 name|JaxwsNotificationBroker

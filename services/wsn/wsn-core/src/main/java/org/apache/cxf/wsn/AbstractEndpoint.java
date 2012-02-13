@@ -34,6 +34,8 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractEndpoint
+implements|implements
+name|EndpointMBean
 block|{
 specifier|protected
 specifier|final
