@@ -129,6 +129,13 @@ parameter_list|()
 default|default
 literal|false
 function_decl|;
+comment|/**      * Ignore binary payloads by default       */
+name|boolean
+name|showBinary
+parameter_list|()
+default|default
+literal|false
+function_decl|;
 block|}
 end_annotation_defn
 
