@@ -3717,6 +3717,16 @@ name|SchemaReference
 name|imp
 parameter_list|)
 block|{
+if|if
+condition|(
+name|imp
+operator|.
+name|getReferencedSchema
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|Map
@@ -3785,6 +3795,7 @@ operator|.
 name|getKey
 argument_list|()
 return|;
+block|}
 block|}
 block|}
 return|return
