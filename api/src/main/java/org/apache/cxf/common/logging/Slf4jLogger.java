@@ -159,9 +159,8 @@ name|level
 operator|=
 name|Level
 operator|.
-name|FINER
+name|FINEST
 expr_stmt|;
-comment|// FINEST
 block|}
 elseif|else
 if|if
@@ -471,7 +470,7 @@ name|FQCN
 argument_list|,
 name|LocationAwareLogger
 operator|.
-name|TRACE_INT
+name|DEBUG_INT
 argument_list|,
 name|msg
 argument_list|,
