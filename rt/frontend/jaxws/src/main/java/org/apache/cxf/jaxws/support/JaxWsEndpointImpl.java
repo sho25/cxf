@@ -2579,13 +2579,6 @@ argument_list|(
 name|description
 argument_list|)
 expr_stmt|;
-name|bindingInfo
-operator|.
-name|setDescription
-argument_list|(
-name|description
-argument_list|)
-expr_stmt|;
 block|}
 name|bindingInfo
 operator|.
