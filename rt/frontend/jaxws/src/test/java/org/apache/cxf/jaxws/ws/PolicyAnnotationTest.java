@@ -1390,7 +1390,6 @@ name|uri
 operator|=
 literal|"annotationpolicies/TestImplPolicy.xml"
 argument_list|)
-block|,
 block|}
 argument_list|)
 annotation|@
