@@ -761,6 +761,12 @@ if|if
 condition|(
 operator|!
 name|foundAlgorithmSuite
+operator|&&
+name|consts
+operator|!=
+name|SP11Constants
+operator|.
+name|INSTANCE
 condition|)
 block|{
 throw|throw
