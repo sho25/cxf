@@ -863,6 +863,18 @@ condition|(
 name|robust
 condition|)
 block|{
+name|BindingOperationInfo
+name|boi
+init|=
+name|exchange
+operator|.
+name|get
+argument_list|(
+name|BindingOperationInfo
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 comment|// insert the executor in the exchange to fool the OneWayProcessorInterceptor
 name|exchange
 operator|.
@@ -944,6 +956,18 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
+comment|// restore the BOI for the partial response handling
+name|exchange
+operator|.
+name|put
+argument_list|(
+name|BindingOperationInfo
+operator|.
+name|class
+argument_list|,
+name|boi
+argument_list|)
+expr_stmt|;
 block|}
 comment|// set up interceptor chains and send message
 name|InterceptorChain
