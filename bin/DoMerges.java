@@ -4028,11 +4028,7 @@ name|ver
 operator|+
 literal|" ("
 operator|+
-operator|(
 name|cur
-operator|+
-literal|1
-operator|)
 operator|+
 literal|"/"
 operator|+
