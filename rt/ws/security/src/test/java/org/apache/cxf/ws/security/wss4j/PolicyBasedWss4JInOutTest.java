@@ -277,9 +277,6 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO this test does not follow the traditional pattern as no server-side enforcement
-comment|// of algorithm suites yet exists.  This support is blocked on WSS4J patches.  In the interim
-comment|// the outbound side is tested ONLY.
 annotation|@
 name|Test
 specifier|public

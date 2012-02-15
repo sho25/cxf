@@ -400,10 +400,18 @@ decl_stmt|;
 if|if
 condition|(
 name|polEl
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"sp:KeyValueToken/wsp:Policy must have a value"
+argument_list|)
+throw|;
+block|}
 name|Element
 name|child
 init|=
@@ -458,7 +466,6 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return

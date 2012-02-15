@@ -406,6 +406,24 @@ operator|.
 name|NAMESPACE
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+literal|""
+operator|.
+name|equals
+argument_list|(
+name|namespaceAttribute
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"sp:EncryptedParts/sp:Header@Namespace must have a value"
+argument_list|)
+throw|;
+block|}
 name|parent
 operator|.
 name|addHeader

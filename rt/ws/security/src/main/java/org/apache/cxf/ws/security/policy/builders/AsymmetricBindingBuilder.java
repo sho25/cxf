@@ -501,8 +501,6 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-for|for
-control|(
 name|Iterator
 argument_list|<
 name|List
@@ -516,14 +514,24 @@ name|policy
 operator|.
 name|getAlternatives
 argument_list|()
-init|;
+decl_stmt|;
+if|if
+condition|(
+operator|!
 name|iterator
 operator|.
 name|hasNext
 argument_list|()
-condition|;
-control|)
+condition|)
 block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"sp:AsymmetricBinding must specify at least one alternative"
+argument_list|)
+throw|;
+block|}
 name|processAlternative
 argument_list|(
 name|iterator
@@ -536,9 +544,6 @@ argument_list|,
 name|consts
 argument_list|)
 expr_stmt|;
-comment|/*              * since there should be only one alternative              */
-break|break;
-block|}
 return|return
 name|asymmetricBinding
 return|;
@@ -562,6 +567,11 @@ parameter_list|)
 block|{
 name|QName
 name|name
+decl_stmt|;
+name|boolean
+name|foundAlgorithmSuite
+init|=
+literal|false
 decl_stmt|;
 for|for
 control|(
@@ -790,6 +800,10 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|foundAlgorithmSuite
+operator|=
+literal|true
+expr_stmt|;
 name|asymmetricBinding
 operator|.
 name|setAlgorithmSuite
@@ -980,6 +994,26 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+if|if
+condition|(
+operator|!
+name|foundAlgorithmSuite
+operator|&&
+name|consts
+operator|!=
+name|SP11Constants
+operator|.
+name|INSTANCE
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"sp:AsymmetricBinding/wsp:Policy/sp:AlgorithmSuite must have a value"
+argument_list|)
+throw|;
 block|}
 block|}
 block|}

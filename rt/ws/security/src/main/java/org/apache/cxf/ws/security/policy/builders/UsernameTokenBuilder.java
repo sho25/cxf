@@ -373,6 +373,27 @@ decl_stmt|;
 if|if
 condition|(
 name|polEl
+operator|==
+literal|null
+operator|&&
+name|consts
+operator|!=
+name|SP11Constants
+operator|.
+name|INSTANCE
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"sp:UsernameToken/wsp:Policy must have a value"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|polEl
 operator|!=
 literal|null
 condition|)

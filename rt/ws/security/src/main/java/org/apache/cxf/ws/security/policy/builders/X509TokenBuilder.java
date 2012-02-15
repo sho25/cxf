@@ -339,6 +339,27 @@ argument_list|(
 name|element
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|policyElement
+operator|==
+literal|null
+operator|&&
+name|consts
+operator|!=
+name|SP11Constants
+operator|.
+name|INSTANCE
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"sp:X509Token/wsp:Policy must have a value"
+argument_list|)
+throw|;
+block|}
 comment|// Process token inclusion
 name|String
 name|includeAttr
@@ -464,6 +485,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 name|Policy
 name|policy
 init|=
@@ -528,9 +550,8 @@ argument_list|,
 name|consts
 argument_list|)
 expr_stmt|;
-comment|/*                  * since there should be only one alternative                  */
+comment|/*              * since there should be only one alternative              */
 break|break;
-block|}
 block|}
 return|return
 name|x509Token
