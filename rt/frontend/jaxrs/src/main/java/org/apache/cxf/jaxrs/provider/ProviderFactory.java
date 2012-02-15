@@ -647,6 +647,13 @@ argument_list|>
 argument_list|()
 argument_list|,
 operator|new
+name|DataSourceProvider
+argument_list|<
+name|Object
+argument_list|>
+argument_list|()
+argument_list|,
+operator|new
 name|FormEncodingProvider
 argument_list|<
 name|Object
