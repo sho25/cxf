@@ -463,6 +463,16 @@ argument_list|(
 name|ASSERTION_TYPES
 argument_list|)
 expr_stmt|;
+name|getOutInterceptors
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|SecurityVerificationOutInterceptor
+operator|.
+name|INSTANCE
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class
