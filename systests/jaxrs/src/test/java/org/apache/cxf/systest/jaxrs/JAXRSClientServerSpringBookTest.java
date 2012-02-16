@@ -1711,7 +1711,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"application/x+javascript"
+literal|"application/x-javascript"
 argument_list|,
 name|r
 operator|.
