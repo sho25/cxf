@@ -1622,6 +1622,17 @@ condition|(
 name|boi
 operator|!=
 literal|null
+operator|&&
+name|boi
+operator|.
+name|getProperty
+argument_list|(
+literal|"operation.is.synthetic"
+argument_list|)
+operator|!=
+name|Boolean
+operator|.
+name|TRUE
 condition|)
 block|{
 name|ret
