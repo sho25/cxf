@@ -654,6 +654,13 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|greeterImplementor
+operator|.
+name|useLastOnewayArg
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|implementor
 operator|.
 name|setImplementor
@@ -936,7 +943,9 @@ argument_list|)
 expr_stmt|;
 comment|// all interceptors pass
 name|testInterceptorsPass
-argument_list|()
+argument_list|(
+name|robust
+argument_list|)
 expr_stmt|;
 comment|// behaviour is identicial for all phases
 name|FaultLocation
@@ -1027,7 +1036,9 @@ argument_list|)
 expr_stmt|;
 comment|// all interceptors pass
 name|testInterceptorsPass
-argument_list|()
+argument_list|(
+name|robust
+argument_list|)
 expr_stmt|;
 comment|// test failure in phases before Phase.PRE_LOGICAL
 name|FaultLocation
@@ -1160,7 +1171,10 @@ block|}
 specifier|private
 name|void
 name|testInterceptorsPass
-parameter_list|()
+parameter_list|(
+name|boolean
+name|robust
+parameter_list|)
 block|{
 name|greeter
 operator|.
@@ -1169,9 +1183,36 @@ argument_list|(
 literal|"one"
 argument_list|)
 expr_stmt|;
+comment|// wait 5 seconds for the non-robust case
+if|if
+condition|(
+operator|!
+name|robust
+condition|)
+block|{
+try|try
+block|{
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|5000
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e
+parameter_list|)
+block|{
+comment|// ignore
+block|}
+block|}
+comment|// verify both the previous greetMeOneWay call and this greetMe call
 name|assertEquals
 argument_list|(
-literal|"TWO"
+literal|"one"
 argument_list|,
 name|greeter
 operator|.
