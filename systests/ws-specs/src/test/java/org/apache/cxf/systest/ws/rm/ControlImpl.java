@@ -470,6 +470,8 @@ operator|-
 literal|1
 condition|)
 block|{
+name|endpoint
+operator|=
 name|Endpoint
 operator|.
 name|publish
@@ -489,6 +491,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|endpoint
+operator|=
 name|Endpoint
 operator|.
 name|publish
