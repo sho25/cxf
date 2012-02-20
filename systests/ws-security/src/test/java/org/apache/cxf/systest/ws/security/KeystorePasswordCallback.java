@@ -156,6 +156,15 @@ argument_list|,
 literal|"password"
 argument_list|)
 expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"wss40rev"
+argument_list|,
+literal|"security"
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * It attempts to get the password from the private       * alias/passwords map.      */
 specifier|public
