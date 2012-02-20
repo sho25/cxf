@@ -8374,6 +8374,17 @@ init|=
 name|getWss10
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|wss10
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+name|crypto
+return|;
+block|}
 name|boolean
 name|enableRevocation
 init|=
