@@ -294,6 +294,13 @@ argument_list|)
 decl_stmt|;
 name|cipher
 operator|.
+name|setSecureValidation
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|cipher
+operator|.
 name|init
 argument_list|(
 name|mode

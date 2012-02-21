@@ -534,10 +534,10 @@ argument_list|(
 name|signatureElement
 argument_list|,
 literal|""
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
-comment|// TODO re-enable this line once we pick up xmlsec 1.5.0
-comment|// XMLSignature signature = new XMLSignature(signatureElement, "", true);
 name|ref
 operator|=
 name|getReference
