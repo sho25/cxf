@@ -259,6 +259,14 @@ name|TIMESTAMP_TTL
 init|=
 literal|"ws-security.timestamp.timeToLive"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_REVOCATION
+init|=
+literal|"ws-security.enableRevocation"
+decl_stmt|;
 comment|//WebLogic and WCF always encrypt UsernameTokens whenever possible
 comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
 comment|//Be default, we will encrypt as well for interop reasons.  However, this

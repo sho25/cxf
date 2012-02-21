@@ -1280,14 +1280,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|ENABLE_REVOCATION
-init|=
-literal|"EnableRevocation"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|REQUIRE_REQUEST_SECURITY_TOKEN_COLLECTION
 init|=
 literal|"RequireRequestSecurityTokenCollection"
