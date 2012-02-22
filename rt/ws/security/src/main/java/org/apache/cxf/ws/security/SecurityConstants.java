@@ -389,6 +389,15 @@ name|KERBEROS_SPN
 init|=
 literal|"ws-security.kerberos.spn"
 decl_stmt|;
+comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SPNEGO_CLIENT_ACTION
+init|=
+literal|"ws-security.spnego.client.action"
+decl_stmt|;
 comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
 specifier|public
 specifier|static
@@ -496,6 +505,8 @@ block|,
 name|KERBEROS_JAAS_CONTEXT_NAME
 block|,
 name|KERBEROS_SPN
+block|,
+name|SPNEGO_CLIENT_ACTION
 block|}
 argument_list|)
 argument_list|)
