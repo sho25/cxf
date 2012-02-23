@@ -982,6 +982,15 @@ return|return
 name|bean
 return|;
 block|}
+specifier|public
+name|QueryBean2
+name|getIt
+parameter_list|()
+block|{
+return|return
+name|this
+return|;
+block|}
 block|}
 specifier|public
 specifier|static
