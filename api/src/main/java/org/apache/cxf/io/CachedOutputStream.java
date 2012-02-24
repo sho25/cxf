@@ -1277,6 +1277,8 @@ block|{
 name|writeCacheTo
 argument_list|(
 name|out
+argument_list|,
+name|charsetName
 argument_list|)
 expr_stmt|;
 return|return;
