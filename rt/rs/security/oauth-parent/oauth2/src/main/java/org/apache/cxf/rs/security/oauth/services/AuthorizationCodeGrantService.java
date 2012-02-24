@@ -1236,6 +1236,21 @@ name|INVALID_SCOPE
 argument_list|)
 return|;
 block|}
+comment|// the decision was allow but the approved scopes end up being empty
+comment|// in this case we default to the requestedScope
+if|if
+condition|(
+name|approvedScope
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+name|approvedScope
+operator|=
+name|requestedScope
+expr_stmt|;
+block|}
 name|codeReg
 operator|.
 name|setApprovedScope

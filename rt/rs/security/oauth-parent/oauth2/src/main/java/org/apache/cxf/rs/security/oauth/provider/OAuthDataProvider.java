@@ -37,26 +37,6 @@ name|oauth
 operator|.
 name|common
 operator|.
-name|AccessToken
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth
-operator|.
-name|common
-operator|.
 name|Client
 import|;
 end_import
@@ -121,7 +101,7 @@ throws|throws
 name|OAuthServiceException
 function_decl|;
 comment|/**      * Refresh access token       * @param clientId the client id      * @param refreshToken the token key       * @return AccessToken      * @throws OAuthServiceException      */
-name|AccessToken
+name|ServerAccessToken
 name|refreshAccessToken
 parameter_list|(
 name|String
@@ -137,7 +117,7 @@ comment|/**      * Removes the token      * @param token the token      * @throw
 name|void
 name|removeAccessToken
 parameter_list|(
-name|String
+name|ServerAccessToken
 name|accessToken
 parameter_list|)
 throws|throws
