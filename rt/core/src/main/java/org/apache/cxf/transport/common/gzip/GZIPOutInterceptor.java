@@ -333,6 +333,20 @@ name|YES
 block|,
 name|FORCE
 block|}
+comment|/**      * regular expression that matches any encoding with a      * q-value of 0 (or 0.0, 0.00, etc.).      */
+specifier|public
+specifier|static
+specifier|final
+name|Pattern
+name|ZERO_Q
+init|=
+name|Pattern
+operator|.
+name|compile
+argument_list|(
+literal|";\\s*q=0(?:\\.0+)?$"
+argument_list|)
+decl_stmt|;
 comment|/**      * Key under which we store the original output stream on the message, for      * use by the ending interceptor.      */
 specifier|public
 specifier|static
@@ -871,18 +885,6 @@ argument_list|(
 literal|3
 argument_list|)
 decl_stmt|;
-comment|// regular expression that matches any encoding with a
-comment|// q-value of 0 (or 0.0, 0.00, etc.).
-name|Pattern
-name|zeroQ
-init|=
-name|Pattern
-operator|.
-name|compile
-argument_list|(
-literal|";\\s*q=0(?:\\.0+)?$"
-argument_list|)
-decl_stmt|;
 for|for
 control|(
 name|String
@@ -916,7 +918,7 @@ block|{
 name|Matcher
 name|m
 init|=
-name|zeroQ
+name|ZERO_Q
 operator|.
 name|matcher
 argument_list|(
