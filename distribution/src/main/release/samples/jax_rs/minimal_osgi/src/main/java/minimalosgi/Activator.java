@@ -180,7 +180,7 @@ argument_list|(
 name|serviceReference
 argument_list|)
 decl_stmt|;
-name|Map
+name|Hashtable
 argument_list|<
 name|String
 argument_list|,
