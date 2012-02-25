@@ -15,6 +15,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Dictionary
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Hashtable
 import|;
 end_import
@@ -180,7 +190,7 @@ argument_list|(
 name|serviceReference
 argument_list|)
 decl_stmt|;
-name|Hashtable
+name|Dictionary
 argument_list|<
 name|String
 argument_list|,
