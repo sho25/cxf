@@ -31,20 +31,6 @@ name|Map
 import|;
 end_import
 
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|bind
-operator|.
-name|annotation
-operator|.
-name|XmlElement
-import|;
-end_import
-
 begin_comment
 comment|/**  * Base Token representation  */
 end_comment
@@ -55,24 +41,10 @@ specifier|abstract
 class|class
 name|AccessToken
 block|{
-annotation|@
-name|XmlElement
-argument_list|(
-name|name
-operator|=
-literal|"access_token"
-argument_list|)
 specifier|private
 name|String
 name|tokenKey
 decl_stmt|;
-annotation|@
-name|XmlElement
-argument_list|(
-name|name
-operator|=
-literal|"token_type"
-argument_list|)
 specifier|private
 name|AccessTokenType
 name|tokenType

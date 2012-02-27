@@ -185,6 +185,26 @@ name|OAuthServiceException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth
+operator|.
+name|utils
+operator|.
+name|OAuthConstants
+import|;
+end_import
+
 begin_comment
 comment|/**  * Abstract utility class which OAuth services extend  */
 end_comment
@@ -195,14 +215,6 @@ specifier|abstract
 class|class
 name|AbstractOAuthService
 block|{
-specifier|protected
-specifier|static
-specifier|final
-name|String
-name|CLIENT_ID
-init|=
-literal|"client_id"
-decl_stmt|;
 specifier|private
 name|MessageContext
 name|mc
@@ -302,6 +314,8 @@ name|params
 operator|.
 name|getFirst
 argument_list|(
+name|OAuthConstants
+operator|.
 name|CLIENT_ID
 argument_list|)
 argument_list|)
@@ -379,7 +393,7 @@ init|=
 operator|new
 name|OAuthError
 argument_list|(
-name|OAuthError
+name|OAuthConstants
 operator|.
 name|INVALID_REQUEST
 argument_list|,
