@@ -347,6 +347,20 @@ argument_list|(
 literal|";\\s*q=0(?:\\.0+)?$"
 argument_list|)
 decl_stmt|;
+comment|/**      * regular expression which can split encodings      */
+specifier|public
+specifier|static
+specifier|final
+name|Pattern
+name|ENCODINGS
+init|=
+name|Pattern
+operator|.
+name|compile
+argument_list|(
+literal|"[,\\s]*,\\s*"
+argument_list|)
+decl_stmt|;
 comment|/**      * Key under which we store the original output stream on the message, for      * use by the ending interceptor.      */
 specifier|public
 specifier|static
@@ -897,14 +911,14 @@ name|String
 index|[]
 name|encodings
 init|=
+name|ENCODINGS
+operator|.
+name|split
+argument_list|(
 name|headerLine
 operator|.
 name|trim
 argument_list|()
-operator|.
-name|split
-argument_list|(
-literal|"[,\\s]*,\\s*"
 argument_list|)
 decl_stmt|;
 for|for
