@@ -26,6 +26,7 @@ specifier|public
 enum|enum
 name|ProtocolVariation
 block|{
+comment|// these must be ordered so the default WS-A namespace is first for a particular WS-RM namespace
 name|RM10WSA200408
 parameter_list|(
 name|EncoderDecoder10Impl
@@ -148,7 +149,7 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Get the information for a supported version of WS-ReliableMessaging and WS-Addressing.      *       * @param wsrm WS-RM namespace URI      * @param wsa WS-A namespace URI      * @return variant (<code>null</code> if not a supported version)      */
+comment|/**      * Get the information for a supported version of WS-ReliableMessaging and WS-Addressing. If the WS-A      * namespace is not specified this just returns the first match on the WS-RM namespace, which should      * always be the default.      *       * @param wsrm WS-RM namespace URI      * @param wsa WS-A namespace URI (<code>null</code> if not specified)      * @return variant (<code>null</code> if not a supported version)      */
 end_comment
 
 begin_function
@@ -187,6 +188,11 @@ argument_list|(
 name|wsrm
 argument_list|)
 operator|&&
+operator|(
+name|wsa
+operator|==
+literal|null
+operator|||
 name|variant
 operator|.
 name|getWSANamespace
@@ -196,6 +202,7 @@ name|equals
 argument_list|(
 name|wsa
 argument_list|)
+operator|)
 condition|)
 block|{
 return|return

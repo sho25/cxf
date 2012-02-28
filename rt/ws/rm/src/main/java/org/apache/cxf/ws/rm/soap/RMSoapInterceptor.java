@@ -1795,8 +1795,10 @@ argument_list|(
 name|message
 argument_list|)
 operator|.
-name|getRMAddressingNamespace
-argument_list|()
+name|getAddressingNamespace
+argument_list|(
+name|message
+argument_list|)
 expr_stmt|;
 block|}
 else|else
