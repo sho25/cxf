@@ -3055,6 +3055,16 @@ name|isPartialResponse
 argument_list|(
 name|message
 argument_list|)
+operator|&&
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getOutMessage
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 comment|// marked as a partial response, let's see if it really is
