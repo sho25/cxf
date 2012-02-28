@@ -22,6 +22,7 @@ comment|/**  * Container for HTTP cookies used to track  * session state.  *  */
 end_comment
 
 begin_class
+specifier|public
 class|class
 name|Cookie
 block|{
