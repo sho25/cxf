@@ -40,7 +40,7 @@ specifier|public
 interface|interface
 name|AccessTokenGrant
 block|{
-name|AccessTokenGrantType
+name|String
 name|getType
 parameter_list|()
 function_decl|;

@@ -112,7 +112,7 @@ name|TOKEN_RESPONSE_TYPE
 init|=
 literal|"token"
 decl_stmt|;
-comment|// Authorization Code Grant
+comment|// Well-known grant types
 specifier|public
 specifier|static
 specifier|final
@@ -121,6 +121,42 @@ name|AUTHORIZATION_CODE_GRANT
 init|=
 literal|"authorization_code"
 decl_stmt|;
+comment|// etc
+comment|// Well-known token types
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|BEARER_TOKEN_TYPE
+init|=
+literal|"bearer"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MAC_TOKEN_TYPE
+init|=
+literal|"mac"
+decl_stmt|;
+comment|// Token Authorization schemes
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|BEARER_AUTHORIZATION_SCHEME
+init|=
+literal|"Bearer"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MAC_AUTHORIZATION_SCHEME
+init|=
+literal|"Mac"
+decl_stmt|;
+comment|// Authorization Code grant constants
 specifier|public
 specifier|static
 specifier|final

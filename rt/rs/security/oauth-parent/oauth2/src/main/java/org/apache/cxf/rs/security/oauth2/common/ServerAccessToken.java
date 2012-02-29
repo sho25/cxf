@@ -87,8 +87,8 @@ parameter_list|(
 name|Client
 name|client
 parameter_list|,
-name|AccessTokenType
-name|type
+name|String
+name|tokenType
 parameter_list|,
 name|String
 name|tokenKey
@@ -102,7 +102,7 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|type
+name|tokenType
 argument_list|,
 name|tokenKey
 argument_list|)

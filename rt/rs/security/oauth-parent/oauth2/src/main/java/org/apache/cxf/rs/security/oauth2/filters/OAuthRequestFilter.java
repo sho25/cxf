@@ -429,6 +429,26 @@ name|oauth2
 operator|.
 name|utils
 operator|.
+name|OAuthConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
 name|OAuthUtils
 import|;
 end_import
@@ -481,7 +501,9 @@ specifier|final
 name|String
 name|DEFAULT_AUTH_SCHEME
 init|=
-literal|"Bearer"
+name|OAuthConstants
+operator|.
+name|BEARER_AUTHORIZATION_SCHEME
 decl_stmt|;
 specifier|private
 name|MessageContext
@@ -1182,21 +1204,6 @@ name|OAuthInfo
 name|info
 parameter_list|)
 block|{
-comment|// TODO:
-comment|// This custom parameter is only needed by the "oauth"
-comment|// demo shipped in the distribution; needs to be removed.
-name|request
-operator|.
-name|setAttribute
-argument_list|(
-literal|"oauth_authorities"
-argument_list|,
-name|info
-operator|.
-name|getRoles
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|UserSubject
 name|subject
 init|=

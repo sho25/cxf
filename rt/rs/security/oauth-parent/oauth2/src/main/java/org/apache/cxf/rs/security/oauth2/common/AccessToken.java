@@ -46,7 +46,7 @@ name|String
 name|tokenKey
 decl_stmt|;
 specifier|private
-name|AccessTokenType
+name|String
 name|tokenType
 decl_stmt|;
 specifier|private
@@ -61,8 +61,8 @@ decl_stmt|;
 specifier|protected
 name|AccessToken
 parameter_list|(
-name|AccessTokenType
-name|type
+name|String
+name|tokenType
 parameter_list|,
 name|String
 name|tokenKey
@@ -72,7 +72,7 @@ name|this
 operator|.
 name|tokenType
 operator|=
-name|type
+name|tokenType
 expr_stmt|;
 name|this
 operator|.
@@ -82,7 +82,7 @@ name|tokenKey
 expr_stmt|;
 block|}
 specifier|public
-name|AccessTokenType
+name|String
 name|getTokenType
 parameter_list|()
 block|{

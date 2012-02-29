@@ -97,9 +97,9 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|common
+name|utils
 operator|.
-name|AccessTokenGrantType
+name|OAuthConstants
 import|;
 end_import
 
@@ -194,14 +194,14 @@ name|code
 return|;
 block|}
 specifier|public
-name|AccessTokenGrantType
+name|String
 name|getType
 parameter_list|()
 block|{
 return|return
-name|AccessTokenGrantType
+name|OAuthConstants
 operator|.
-name|AUTHORIZATION_CODE
+name|AUTHORIZATION_CODE_GRANT
 return|;
 block|}
 specifier|public
@@ -237,12 +237,9 @@ name|putSingle
 argument_list|(
 literal|"grant_type"
 argument_list|,
-name|AccessTokenGrantType
+name|OAuthConstants
 operator|.
-name|AUTHORIZATION_CODE
-operator|.
-name|getGrantType
-argument_list|()
+name|AUTHORIZATION_CODE_GRANT
 argument_list|)
 expr_stmt|;
 name|map

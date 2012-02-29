@@ -23,6 +23,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -38,6 +48,26 @@ operator|.
 name|common
 operator|.
 name|Client
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|common
+operator|.
+name|OAuthPermission
 import|;
 end_import
 
@@ -122,6 +152,23 @@ name|accessToken
 parameter_list|)
 throws|throws
 name|OAuthServiceException
+function_decl|;
+comment|/**      * Converts the requested scope to the list of permissions        * @param requestedScope      * @return list of permissions      */
+name|List
+argument_list|<
+name|OAuthPermission
+argument_list|>
+name|convertScopeToPermissions
+parameter_list|(
+name|Client
+name|client
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|requestedScope
+parameter_list|)
 function_decl|;
 block|}
 end_interface
