@@ -813,13 +813,6 @@ name|getNoneEndpointReference
 argument_list|()
 expr_stmt|;
 block|}
-name|exchange
-operator|.
-name|setOutMessage
-argument_list|(
-name|partialResponse
-argument_list|)
-expr_stmt|;
 name|Conduit
 name|backChannel
 init|=
@@ -989,6 +982,13 @@ argument_list|(
 name|exchange
 argument_list|)
 decl_stmt|;
+name|exchange
+operator|.
+name|setOutMessage
+argument_list|(
+name|partialResponse
+argument_list|)
+expr_stmt|;
 name|partialResponse
 operator|.
 name|setInterceptorChain
