@@ -729,6 +729,8 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//TODO:
+comment|// consider matching client.getLoginName() against principal.getName() ?
 block|}
 block|}
 block|}
@@ -959,7 +961,7 @@ condition|)
 block|{
 name|handler
 operator|.
-name|setCodeProvider
+name|setDataProvider
 argument_list|(
 operator|(
 name|AuthorizationCodeDataProvider
