@@ -115,6 +115,10 @@ name|T
 argument_list|>
 name|handler
 decl_stmt|;
+specifier|final
+name|Object
+name|proxy
+decl_stmt|;
 specifier|public
 name|JaxwsClientCallback
 parameter_list|(
@@ -124,6 +128,9 @@ argument_list|<
 name|T
 argument_list|>
 name|handler
+parameter_list|,
+name|Object
+name|p
 parameter_list|)
 block|{
 name|this
@@ -131,6 +138,12 @@ operator|.
 name|handler
 operator|=
 name|handler
+expr_stmt|;
+name|this
+operator|.
+name|proxy
+operator|=
+name|p
 expr_stmt|;
 block|}
 specifier|public
