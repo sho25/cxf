@@ -675,6 +675,7 @@ name|PolicyBasedWSS4JOutInterceptorInternal
 argument_list|()
 return|;
 block|}
+specifier|public
 specifier|final
 class|class
 name|PolicyBasedWSS4JOutInterceptorInternal
