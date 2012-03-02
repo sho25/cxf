@@ -151,8 +151,6 @@ name|valueOf
 argument_list|(
 literal|1024
 operator|*
-literal|1024
-operator|*
 literal|10
 argument_list|)
 argument_list|)

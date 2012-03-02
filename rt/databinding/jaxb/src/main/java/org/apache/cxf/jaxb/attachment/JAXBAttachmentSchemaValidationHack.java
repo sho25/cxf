@@ -313,7 +313,9 @@ block|{
 name|ds
 operator|.
 name|hold
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 expr_stmt|;
 block|}
 catch|catch
