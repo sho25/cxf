@@ -157,6 +157,33 @@ operator|.
 name|AES_256
 argument_list|)
 expr_stmt|;
+name|acceptedEncryptionAlgorithms
+operator|.
+name|add
+argument_list|(
+name|WSConstants
+operator|.
+name|AES_128_GCM
+argument_list|)
+expr_stmt|;
+name|acceptedEncryptionAlgorithms
+operator|.
+name|add
+argument_list|(
+name|WSConstants
+operator|.
+name|AES_192_GCM
+argument_list|)
+expr_stmt|;
+name|acceptedEncryptionAlgorithms
+operator|.
+name|add
+argument_list|(
+name|WSConstants
+operator|.
+name|AES_256_GCM
+argument_list|)
+expr_stmt|;
 comment|// Default key wrap algorithms
 name|acceptedKeyWrapAlgorithms
 operator|.
@@ -281,7 +308,7 @@ operator|=
 name|encryptionName
 expr_stmt|;
 block|}
-comment|/**      * Set the list of accepted encryption algorithms. A request can contain a wst:EncryptionAlgorithm      * uri to use to encrypt an issued token. The algorithm specified must be contained in this list.      * The default algorithms are 3-DES, AES-128, AES-192 and AES-256.      */
+comment|/**      * Set the list of accepted encryption algorithms. A request can contain a wst:EncryptionAlgorithm      * uri to use to encrypt an issued token. The algorithm specified must be contained in this list.      * The default algorithms are 3-DES, AES-128, AES-128 GCM, AES-192, AES-192 GCM, AES-256 and AES-256 GCM.      */
 specifier|public
 name|void
 name|setAcceptedEncryptionAlgorithms
@@ -300,7 +327,7 @@ operator|=
 name|acceptedEncryptionAlgorithms
 expr_stmt|;
 block|}
-comment|/**      * Get the list of accepted encryption algorithms. A request can contain a wst:EncryptionAlgorithm      * uri to use to encrypt an issued token. The algorithm specified must be contained in this list.      * The default algorithms are 3-DES, AES-128, AES-192 and AES-256.      */
+comment|/**      * Get the list of accepted encryption algorithms. A request can contain a wst:EncryptionAlgorithm      * uri to use to encrypt an issued token. The algorithm specified must be contained in this list.      * The default algorithms are 3-DES, AES-128, AES-128 GCM, AES-192, AES-192 GCM, AES-256 and AES-256 GCM.      */
 specifier|public
 name|List
 argument_list|<
