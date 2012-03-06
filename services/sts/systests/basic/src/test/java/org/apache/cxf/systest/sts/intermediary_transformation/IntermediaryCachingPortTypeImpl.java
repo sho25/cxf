@@ -530,6 +530,20 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|Assert
+operator|.
+name|assertEquals
+argument_list|(
+literal|"Princiapl must be alice"
+argument_list|,
+literal|"alice"
+argument_list|,
+name|pr
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// Disable the STSClient after the first invocation
 if|if
 condition|(

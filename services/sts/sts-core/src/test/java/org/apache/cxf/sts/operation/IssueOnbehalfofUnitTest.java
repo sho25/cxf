@@ -2140,7 +2140,7 @@ name|SAMLRealm
 argument_list|>
 name|realms
 init|=
-name|getSamlRealms
+name|createSamlRealms
 argument_list|()
 decl_stmt|;
 comment|// Mock up a request
@@ -2965,7 +2965,7 @@ name|String
 argument_list|,
 name|SAMLRealm
 argument_list|>
-name|getSamlRealms
+name|createSamlRealms
 parameter_list|()
 block|{
 comment|// Create Realms

@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|security
@@ -42,6 +52,42 @@ operator|.
 name|service
 operator|.
 name|EncryptionProperties
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|token
+operator|.
+name|realm
+operator|.
+name|Relationship
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|token
+operator|.
+name|realm
+operator|.
+name|RelationshipResolver
 import|;
 end_import
 
@@ -227,6 +273,30 @@ function_decl|;
 comment|/**      * Get the IdentityMapper object to use.      * @return the IdentityMapper object to use.      */
 name|IdentityMapper
 name|getIdentityMapper
+parameter_list|()
+function_decl|;
+comment|/**      * Set the list of Relationship objects to use.      * @param relationships the List<Relationship> object to use.      */
+name|void
+name|setRelationships
+parameter_list|(
+name|List
+argument_list|<
+name|Relationship
+argument_list|>
+name|relationships
+parameter_list|)
+function_decl|;
+comment|/**      * Get the list of Relationship objects to use.      * @return the List<Relationship> object to use.      */
+name|List
+argument_list|<
+name|Relationship
+argument_list|>
+name|getRelationships
+parameter_list|()
+function_decl|;
+comment|/**      * Get the RelationshipResolver objects to use.      * @return the RelationshipResolver object to use.      */
+name|RelationshipResolver
+name|getRelationshipResolver
 parameter_list|()
 function_decl|;
 block|}
