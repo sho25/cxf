@@ -515,14 +515,6 @@ name|INVALID_GRANT
 argument_list|)
 return|;
 block|}
-name|getDataProvider
-argument_list|()
-operator|.
-name|persistAccessToken
-argument_list|(
-name|serverToken
-argument_list|)
-expr_stmt|;
 name|ClientAccessToken
 name|clientToken
 init|=

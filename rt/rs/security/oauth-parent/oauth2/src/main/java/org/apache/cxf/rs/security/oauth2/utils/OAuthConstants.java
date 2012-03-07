@@ -129,6 +129,14 @@ name|CLIENT_CREDENTIALS_GRANT
 init|=
 literal|"client_credentials"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|IMPLICIT_GRANT
+init|=
+literal|"implicit"
+decl_stmt|;
 comment|// etc
 comment|// Well-known token types
 specifier|public

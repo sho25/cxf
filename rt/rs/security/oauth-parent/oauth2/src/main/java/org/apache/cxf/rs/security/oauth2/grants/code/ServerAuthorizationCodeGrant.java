@@ -79,7 +79,7 @@ name|oauth2
 operator|.
 name|common
 operator|.
-name|OAuthPermission
+name|UserSubject
 import|;
 end_import
 
@@ -97,9 +97,9 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|common
+name|utils
 operator|.
-name|UserSubject
+name|OAuthUtils
 import|;
 end_import
 
@@ -129,7 +129,7 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|OAuthPermission
+name|String
 argument_list|>
 name|approvedScopes
 init|=
@@ -142,6 +142,36 @@ specifier|private
 name|UserSubject
 name|subject
 decl_stmt|;
+specifier|public
+name|ServerAuthorizationCodeGrant
+parameter_list|(
+name|Client
+name|client
+parameter_list|,
+name|long
+name|lifetime
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|client
+argument_list|,
+name|OAuthUtils
+operator|.
+name|generateRandomTokenKey
+argument_list|()
+argument_list|,
+name|lifetime
+argument_list|,
+name|System
+operator|.
+name|currentTimeMillis
+argument_list|()
+operator|/
+literal|1000
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|ServerAuthorizationCodeGrant
 parameter_list|(
@@ -215,7 +245,7 @@ name|setApprovedScopes
 parameter_list|(
 name|List
 argument_list|<
-name|OAuthPermission
+name|String
 argument_list|>
 name|scopes
 parameter_list|)
@@ -230,7 +260,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|OAuthPermission
+name|String
 argument_list|>
 name|getApprovedScopes
 parameter_list|()
