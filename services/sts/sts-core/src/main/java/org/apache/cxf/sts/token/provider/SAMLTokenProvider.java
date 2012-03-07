@@ -2442,6 +2442,7 @@ argument_list|()
 operator|==
 literal|null
 operator|||
+operator|(
 name|keyRequirements
 operator|.
 name|getReceivedKey
@@ -2451,6 +2452,17 @@ name|getX509Cert
 argument_list|()
 operator|==
 literal|null
+operator|&&
+name|keyRequirements
+operator|.
+name|getReceivedKey
+argument_list|()
+operator|.
+name|getPublicKey
+argument_list|()
+operator|==
+literal|null
+operator|)
 condition|)
 block|{
 name|LOG
