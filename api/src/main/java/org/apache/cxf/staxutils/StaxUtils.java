@@ -729,6 +729,22 @@ specifier|final
 class|class
 name|StaxUtils
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|INNER_ELEMENT_COUNT
+init|=
+literal|"org.apache.cxf.staxutils.innerElementCountThreshold"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|INNER_ELEMENT_LEVEL
+init|=
+literal|"org.apache.cxf.staxutils.innerElementLevelThreshold"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -929,7 +945,7 @@ name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
-literal|"org.apache.cxf.staxutils.innerElementLevelThreshold"
+name|INNER_ELEMENT_LEVEL
 argument_list|,
 literal|"-1"
 argument_list|)
@@ -978,7 +994,7 @@ name|SystemPropertyAction
 operator|.
 name|getProperty
 argument_list|(
-literal|"org.apache.cxf.staxutils.innerElementCountThreshold"
+name|INNER_ELEMENT_COUNT
 argument_list|,
 literal|"-1"
 argument_list|)
@@ -5610,7 +5626,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|DepthExceededStaxException
 argument_list|(
 literal|"reach the innerElementLevelThreshold:"
 operator|+
@@ -5634,7 +5650,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|DepthExceededStaxException
 argument_list|(
 literal|"reach the innerElementCountThreshold:"
 operator|+

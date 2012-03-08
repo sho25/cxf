@@ -975,6 +975,11 @@ name|params
 argument_list|,
 name|body
 argument_list|,
+name|PhaseInterceptorChain
+operator|.
+name|getCurrentMessage
+argument_list|()
+argument_list|,
 name|decode
 argument_list|)
 expr_stmt|;
@@ -998,6 +1003,11 @@ operator|.
 name|populateMapFromString
 argument_list|(
 name|params
+argument_list|,
+name|PhaseInterceptorChain
+operator|.
+name|getCurrentMessage
+argument_list|()
 argument_list|,
 name|FormUtils
 operator|.

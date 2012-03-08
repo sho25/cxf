@@ -303,6 +303,20 @@ name|JAXRSUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|phase
+operator|.
+name|PhaseInterceptorChain
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|final
@@ -926,6 +940,11 @@ name|getMultipartBody
 argument_list|(
 name|mc
 argument_list|)
+argument_list|,
+name|PhaseInterceptorChain
+operator|.
+name|getCurrentMessage
+argument_list|()
 argument_list|,
 literal|true
 argument_list|)
