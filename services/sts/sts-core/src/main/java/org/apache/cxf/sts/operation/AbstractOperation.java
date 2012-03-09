@@ -1279,6 +1279,8 @@ argument_list|(
 name|request
 argument_list|,
 name|context
+argument_list|,
+name|stsProperties
 argument_list|)
 expr_stmt|;
 return|return

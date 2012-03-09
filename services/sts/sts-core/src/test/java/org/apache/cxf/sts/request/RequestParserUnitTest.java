@@ -728,6 +728,8 @@ argument_list|(
 name|request
 argument_list|,
 name|wsContext
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|SCTCanceller
@@ -906,6 +908,8 @@ argument_list|(
 name|request
 argument_list|,
 name|wsContext
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|SCTValidator
@@ -1092,6 +1096,8 @@ argument_list|(
 name|request
 argument_list|,
 name|wsContext
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertNotNull
