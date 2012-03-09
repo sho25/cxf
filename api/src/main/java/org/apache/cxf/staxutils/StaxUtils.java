@@ -733,6 +733,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|TOTAL_ELEMENT_COUNT
+init|=
+literal|"org.apache.cxf.staxutils.totalElementCountThreshold"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|INNER_ELEMENT_COUNT
 init|=
 literal|"org.apache.cxf.staxutils.innerElementCountThreshold"
