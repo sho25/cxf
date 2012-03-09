@@ -407,6 +407,51 @@ name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 init|=
 literal|"ws-security.cache.issued.token.in.endpoint"
 decl_stmt|;
+comment|/**      * Set this to "false" to not cache UsernameToken nonces. The default value is "true" for      * message recipients, and "false" for message initiators. Set it to true to cache for      * both cases.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_NONCE_CACHE
+init|=
+literal|"ws-security.enable.nonce.cache"
+decl_stmt|;
+comment|/**      * This holds a reference to a ReplayCache instance used to cache UsernameToken nonces. The      * default instance that is used is the EHCacheReplayCache.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|NONCE_CACHE_INSTANCE
+init|=
+literal|"ws-security.nonce.cache.instance"
+decl_stmt|;
+comment|/**      * Set this to "false" to not cache Timestamp Created Strings (these are only cached in       * conjunction with a message Signature). The default value is "true" for message recipients,       * and "false" for message initiators. Set it to true to cache for both cases.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_TIMESTAMP_CACHE
+init|=
+literal|"ws-security.enable.timestamp.cache"
+decl_stmt|;
+comment|/**      * This holds a reference to a ReplayCache instance used to cache Timestamp Created Strings. The      * default instance that is used is the EHCacheReplayCache.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TIMESTAMP_CACHE_INSTANCE
+init|=
+literal|"ws-security.timestamp.cache.instance"
+decl_stmt|;
+comment|/**      * Set this property to point to a configuration file for the underlying caching implementation.      * The default configuration file that is used is cxf-ehcache.xml in this module.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CACHE_CONFIG_FILE
+init|=
+literal|"ws-security.cache.config.file"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -507,6 +552,16 @@ block|,
 name|KERBEROS_SPN
 block|,
 name|SPNEGO_CLIENT_ACTION
+block|,
+name|ENABLE_NONCE_CACHE
+block|,
+name|NONCE_CACHE_INSTANCE
+block|,
+name|ENABLE_TIMESTAMP_CACHE
+block|,
+name|TIMESTAMP_CACHE_INSTANCE
+block|,
+name|CACHE_CONFIG_FILE
 block|}
 argument_list|)
 argument_list|)
