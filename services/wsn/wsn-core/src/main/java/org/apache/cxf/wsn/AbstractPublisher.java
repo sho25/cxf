@@ -567,6 +567,8 @@ condition|(
 name|publisherReference
 operator|==
 literal|null
+operator|&&
+name|demand
 condition|)
 block|{
 name|PublisherRegistrationFailedFaultType
