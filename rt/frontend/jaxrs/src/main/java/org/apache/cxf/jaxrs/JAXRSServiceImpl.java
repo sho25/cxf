@@ -117,6 +117,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|transform
+operator|.
+name|Source
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -970,6 +982,15 @@ operator|==
 name|void
 operator|.
 name|class
+operator|||
+name|Source
+operator|.
+name|class
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|type
+argument_list|)
 condition|)
 block|{
 return|return;

@@ -577,7 +577,7 @@ argument_list|)
 expr_stmt|;
 name|assertSame
 argument_list|(
-name|StreamSource
+name|StaxSource
 operator|.
 name|class
 argument_list|,
