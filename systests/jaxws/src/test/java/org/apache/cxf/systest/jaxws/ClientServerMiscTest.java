@@ -1665,14 +1665,14 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|assertFalse
+name|assertNull
 argument_list|(
 name|ex
 operator|.
 name|getFault
 argument_list|()
 operator|.
-name|hasDetail
+name|getDetail
 argument_list|()
 argument_list|)
 expr_stmt|;
