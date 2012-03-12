@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An in-memory EHCache implementation of the ReplayCache interface.  */
+comment|/**  * An in-memory EHCache implementation of the ReplayCache interface. The default TTL is 60 minutes and the  * max TTL is 12 hours.  */
 end_comment
 
 begin_class
@@ -100,6 +100,16 @@ name|DEFAULT_TTL
 init|=
 literal|3600L
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|long
+name|MAX_TTL
+init|=
+name|DEFAULT_TTL
+operator|*
+literal|12L
+decl_stmt|;
 specifier|private
 name|Cache
 name|cache
@@ -107,6 +117,12 @@ decl_stmt|;
 specifier|private
 name|CacheManager
 name|cacheManager
+decl_stmt|;
+specifier|private
+name|long
+name|ttl
+init|=
+name|DEFAULT_TTL
 decl_stmt|;
 specifier|public
 name|EHCacheReplayCache
@@ -203,6 +219,30 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|/**      * Set a new (default) TTL value in seconds      * @param newTtl a new (default) TTL value in seconds      */
+specifier|public
+name|void
+name|setTTL
+parameter_list|(
+name|long
+name|newTtl
+parameter_list|)
+block|{
+name|ttl
+operator|=
+name|newTtl
+expr_stmt|;
+block|}
+comment|/**      * Get the (default) TTL value in seconds      * @return the (default) TTL value in seconds      */
+specifier|public
+name|long
+name|getTTL
+parameter_list|()
+block|{
+return|return
+name|ttl
+return|;
+block|}
 comment|/**      * Add the given identifier to the cache. It will be cached for a default amount of time.      * @param identifier The identifier to be added      */
 specifier|public
 name|void
@@ -216,7 +256,7 @@ name|add
 argument_list|(
 name|identifier
 argument_list|,
-name|DEFAULT_TTL
+name|ttl
 argument_list|)
 expr_stmt|;
 block|}
@@ -249,7 +289,7 @@ block|{
 return|return;
 block|}
 name|int
-name|ttl
+name|parsedTTL
 init|=
 operator|(
 name|int
@@ -263,14 +303,41 @@ operator|!=
 operator|(
 name|long
 operator|)
-name|ttl
+name|parsedTTL
+operator|||
+name|parsedTTL
+argument_list|<
+literal|0
+operator|||
+name|parsedTTL
+argument_list|>
+name|MAX_TTL
 condition|)
 block|{
-comment|// Default to 60 minutes
+comment|// Default to configured value
+name|parsedTTL
+operator|=
+operator|(
+name|int
+operator|)
 name|ttl
+expr_stmt|;
+if|if
+condition|(
+name|ttl
+operator|!=
+operator|(
+name|long
+operator|)
+name|parsedTTL
+condition|)
+block|{
+comment|// Fall back to 60 minutes if the default TTL is set incorrectly
+name|parsedTTL
 operator|=
 literal|3600
 expr_stmt|;
+block|}
 block|}
 name|cache
 operator|.
@@ -285,9 +352,9 @@ name|identifier
 argument_list|,
 literal|false
 argument_list|,
-name|ttl
+name|parsedTTL
 argument_list|,
-name|ttl
+name|parsedTTL
 argument_list|)
 argument_list|)
 expr_stmt|;
