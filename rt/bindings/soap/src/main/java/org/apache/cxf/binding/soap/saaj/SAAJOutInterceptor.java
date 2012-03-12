@@ -777,7 +777,7 @@ name|W3CDOMStreamWriter
 name|writer
 init|=
 operator|new
-name|W3CDOMStreamWriter
+name|SAAJStreamWriter
 argument_list|(
 name|soapPart
 argument_list|)

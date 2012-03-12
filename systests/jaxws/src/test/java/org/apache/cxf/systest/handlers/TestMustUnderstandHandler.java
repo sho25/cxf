@@ -319,7 +319,19 @@ name|header
 operator|.
 name|addHeaderElement
 argument_list|(
+name|envelope
+operator|.
+name|createName
+argument_list|(
+literal|"MU"
+argument_list|,
+literal|"ns1"
+argument_list|,
 name|qname
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|)
 argument_list|)
 decl_stmt|;
 comment|// QName soapMustUnderstand = new QName("http://schemas.xmlsoap.org/soap/envelope/",

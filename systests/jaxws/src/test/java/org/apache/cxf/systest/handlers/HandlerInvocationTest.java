@@ -706,6 +706,10 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//System.setProperty(SAAJFactoryResolver.MESSAGE_FACTORY_KEY,
+comment|//                     "com.ibm.ws.webservices.engine.soap.MessageFactoryImpl");
+comment|//System.setProperty(SAAJFactoryResolver.SOAP_FACTORY_KEY,
+comment|//    "com.ibm.ws.webservices.engine.xmlsoap.SOAPFactory");
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -6811,7 +6815,13 @@ name|getHandlerNames
 argument_list|(
 name|inMsg
 operator|.
-name|getSOAPBody
+name|getSOAPPart
+argument_list|()
+operator|.
+name|getEnvelope
+argument_list|()
+operator|.
+name|getBody
 argument_list|()
 argument_list|)
 decl_stmt|;
