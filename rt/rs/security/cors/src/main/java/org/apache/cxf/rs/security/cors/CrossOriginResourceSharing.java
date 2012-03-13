@@ -110,14 +110,7 @@ specifier|public
 annotation_defn|@interface
 name|CrossOriginResourceSharing
 block|{
-comment|/**      * If true, this resource will return      *<pre>Access-Control-Allow-Origin: *</pre>      * for a valid request.      */
-name|boolean
-name|allowAllOrigins
-parameter_list|()
-default|default
-literal|false
-function_decl|;
-comment|/**      * A list of permitted origins. This is ignored       * if {@link #allowAllOrigins()} is true.      */
+comment|/**      * A list of permitted origins. This resource will       * return *<pre>Access-Control-Allow-Origin: *</pre>      * for a valid request if the list is empty.      */
 name|String
 index|[]
 name|allowOrigins
@@ -125,7 +118,7 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
-comment|/**      * A list of headers that the client may include      * in an actual request.      */
+comment|/**      * A list of headers that the client may include      * in an actual request. All the headers listed in       * the Access-Control-Request-Headers will be allowed if      * the list is empty      */
 name|String
 index|[]
 name|allowHeaders
@@ -133,13 +126,6 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
-comment|/**      * Act as if whatever headers are listed in the Access-Control-Request-Headers are       * listed in allowHeaders. Convenient for dealing with Browser bugs.       */
-name|boolean
-name|allowAnyHeaders
-parameter_list|()
-default|default
-literal|false
-function_decl|;
 comment|/**      * If true, this resource will return       *<pre>Access-Control-Allow-Credentials: true</pre>      */
 name|boolean
 name|allowCredentials
