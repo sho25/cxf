@@ -1061,7 +1061,7 @@ argument_list|)
 operator|.
 name|times
 argument_list|(
-literal|2
+literal|3
 argument_list|)
 expr_stmt|;
 name|e
@@ -1446,7 +1446,7 @@ argument_list|)
 operator|.
 name|times
 argument_list|(
-literal|2
+literal|3
 argument_list|)
 expr_stmt|;
 name|e

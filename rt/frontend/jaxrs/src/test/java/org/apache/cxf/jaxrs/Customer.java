@@ -524,6 +524,15 @@ name|CustomerInfo
 block|{
 specifier|public
 interface|interface
+name|CustomerContext
+block|{
+name|String
+name|get
+parameter_list|()
+function_decl|;
+block|}
+specifier|public
+interface|interface
 name|CustomerBeanInterface
 block|{              }
 annotation|@
@@ -735,6 +744,12 @@ decl_stmt|;
 specifier|private
 name|UriInfo
 name|uriInfo
+decl_stmt|;
+annotation|@
+name|Context
+specifier|private
+name|CustomerContext
+name|customerContext
 decl_stmt|;
 annotation|@
 name|Context
@@ -2020,6 +2035,15 @@ name|resolver
 parameter_list|)
 block|{
 comment|// complete
+block|}
+specifier|public
+name|CustomerContext
+name|getCustomerContext
+parameter_list|()
+block|{
+return|return
+name|customerContext
+return|;
 block|}
 specifier|public
 specifier|static
