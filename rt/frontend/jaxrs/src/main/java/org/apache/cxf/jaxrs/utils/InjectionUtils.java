@@ -5926,6 +5926,9 @@ block|{
 return|return
 operator|(
 name|ThreadLocalProxy
+argument_list|<
+name|T
+argument_list|>
 operator|)
 name|Proxy
 operator|.
@@ -5949,6 +5952,9 @@ block|}
 argument_list|,
 operator|new
 name|ThreadLocalInvocationHandler
+argument_list|<
+name|T
+argument_list|>
 argument_list|()
 argument_list|)
 return|;
