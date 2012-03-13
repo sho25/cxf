@@ -254,7 +254,7 @@ argument_list|)
 expr_stmt|;
 name|con
 operator|.
-name|getSslContextFactory
+name|getCxfSslContextFactory
 argument_list|()
 operator|.
 name|setProtocol
@@ -267,7 +267,7 @@ argument_list|)
 expr_stmt|;
 name|con
 operator|.
-name|getSslContextFactory
+name|getCxfSslContextFactory
 argument_list|()
 operator|.
 name|setProvider
