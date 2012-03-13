@@ -15,49 +15,61 @@ name|sts
 operator|.
 name|token
 operator|.
-name|canceller
+name|renewer
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|request
+operator|.
+name|ReceivedToken
+import|;
+end_import
+
 begin_comment
-comment|/**  * This class encapsulates the response from a TokenCanceller instance after cancelling a token.  */
+comment|/**  * An interface that can renew a security token.  */
 end_comment
 
-begin_class
+begin_interface
 specifier|public
-class|class
-name|TokenCancellerResponse
+interface|interface
+name|TokenRenewer
 block|{
-specifier|private
-name|boolean
-name|tokenCancelled
-decl_stmt|;
-specifier|public
+comment|/**      * boolean for enabling/disabling verification of proof of possession.      */
 name|void
-name|setTokenCancelled
+name|setVerifyProofOfPossession
 parameter_list|(
 name|boolean
-name|tokenCancelled
+name|verifyProofOfPossession
 parameter_list|)
-block|{
-name|this
-operator|.
-name|tokenCancelled
-operator|=
-name|tokenCancelled
-expr_stmt|;
-block|}
-specifier|public
+function_decl|;
+comment|/**      * Return true if this TokenRenewer implementation is able to renew a token      * that corresponds to the given token.      */
 name|boolean
-name|isTokenCancelled
-parameter_list|()
-block|{
-return|return
-name|tokenCancelled
-return|;
+name|canHandleToken
+parameter_list|(
+name|ReceivedToken
+name|cancelTarget
+parameter_list|)
+function_decl|;
+comment|/**      * Renew a token given a TokenRenewerParameters      */
+name|TokenRenewerResponse
+name|renewToken
+parameter_list|(
+name|TokenRenewerParameters
+name|tokenParameters
+parameter_list|)
+function_decl|;
 block|}
-block|}
-end_class
+end_interface
 
 end_unit
 
