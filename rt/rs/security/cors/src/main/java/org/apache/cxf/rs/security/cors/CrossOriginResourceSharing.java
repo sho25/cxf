@@ -110,7 +110,14 @@ specifier|public
 annotation_defn|@interface
 name|CrossOriginResourceSharing
 block|{
-comment|/**      * A list of permitted origins. This resource will       * return *<pre>Access-Control-Allow-Origin: *</pre>      * for a valid request if the list is empty.      */
+comment|/**      * If true, this resource will return       *<pre>Access-Control-Allow-Origin: *</pre>      * for a valid request       */
+name|boolean
+name|allowAllOrigins
+parameter_list|()
+default|default
+literal|false
+function_decl|;
+comment|/**      * A list of permitted origins. It is ignored if      * {@link #allowAllOrigins()} returns true      */
 name|String
 index|[]
 name|allowOrigins
