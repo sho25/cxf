@@ -342,7 +342,7 @@ specifier|final
 name|String
 name|MAX_FORM_PARAM_COUNT
 init|=
-literal|"org.apache.cxf.form.maxParameterCount"
+literal|"maxFormParameterCount"
 decl_stmt|;
 specifier|private
 name|FormUtils

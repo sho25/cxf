@@ -739,20 +739,6 @@ name|cxf
 operator|.
 name|staxutils
 operator|.
-name|StaxUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|staxutils
-operator|.
 name|transform
 operator|.
 name|TransformUtils
@@ -4109,7 +4095,7 @@ argument_list|()
 operator|.
 name|getContextualProperty
 argument_list|(
-name|StaxUtils
+name|DocumentDepthProperties
 operator|.
 name|TOTAL_ELEMENT_COUNT
 argument_list|)
@@ -4125,7 +4111,7 @@ argument_list|()
 operator|.
 name|getContextualProperty
 argument_list|(
-name|StaxUtils
+name|DocumentDepthProperties
 operator|.
 name|INNER_ELEMENT_COUNT
 argument_list|)
@@ -4141,7 +4127,7 @@ argument_list|()
 operator|.
 name|getContextualProperty
 argument_list|(
-name|StaxUtils
+name|DocumentDepthProperties
 operator|.
 name|INNER_ELEMENT_LEVEL
 argument_list|)
