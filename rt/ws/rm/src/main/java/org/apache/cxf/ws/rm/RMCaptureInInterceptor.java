@@ -119,6 +119,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|phase
 operator|.
 name|Phase
@@ -191,6 +205,27 @@ argument_list|,
 literal|"handleMessage"
 argument_list|)
 expr_stmt|;
+comment|// This message capturing mechanism will need to be changed at some point.
+comment|// Until then, we keep this interceptor here and utilize the robust
+comment|// option to avoid the unnecessary message capturing/caching.
+if|if
+condition|(
+operator|!
+name|MessageUtils
+operator|.
+name|isTrue
+argument_list|(
+name|message
+operator|.
+name|getContextualProperty
+argument_list|(
+name|Message
+operator|.
+name|ROBUST_ONEWAY
+argument_list|)
+argument_list|)
+condition|)
+block|{
 name|InputStream
 name|is
 init|=
@@ -284,6 +319,7 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}
