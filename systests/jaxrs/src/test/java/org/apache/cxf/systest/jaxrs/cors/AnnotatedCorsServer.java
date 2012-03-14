@@ -205,6 +205,24 @@ name|CrossOriginResourceSharing
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|cors
+operator|.
+name|LocalPreflight
+import|;
+end_import
+
 begin_comment
 comment|/**  * Service bean with no class-level annotation for cross-script control.  */
 end_comment
@@ -344,12 +362,7 @@ argument_list|(
 literal|"/delete"
 argument_list|)
 annotation|@
-name|CrossOriginResourceSharing
-argument_list|(
-name|localPreflight
-operator|=
-literal|true
-argument_list|)
+name|LocalPreflight
 specifier|public
 name|Response
 name|deleteOptions

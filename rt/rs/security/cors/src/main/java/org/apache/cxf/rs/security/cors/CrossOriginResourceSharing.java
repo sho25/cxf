@@ -156,13 +156,6 @@ default|default
 operator|-
 literal|1
 function_decl|;
-comment|/**      * Controls the implementation of preflight processing       * on an OPTIONS method.      * If the current method is OPTIONS, and this method wants to       * handle the preflight process for itself, set this value to       *<tt>true</tt>. In the default, false, case, the filter      * performs preflight processing.      */
-name|boolean
-name|localPreflight
-parameter_list|()
-default|default
-literal|false
-function_decl|;
 block|}
 end_annotation_defn
 
