@@ -520,6 +520,29 @@ return|return
 name|response
 return|;
 block|}
+if|if
+condition|(
+name|token
+operator|.
+name|isExpired
+argument_list|()
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Token: "
+operator|+
+name|identifier
+operator|+
+literal|" is in the cache but expired"
+argument_list|)
+expr_stmt|;
+return|return
+name|response
+return|;
+block|}
 name|byte
 index|[]
 name|secret

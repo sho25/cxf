@@ -898,6 +898,37 @@ block|}
 if|if
 condition|(
 name|secToken
+operator|!=
+literal|null
+operator|&&
+name|secToken
+operator|.
+name|isExpired
+argument_list|()
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Token: "
+operator|+
+name|secToken
+operator|.
+name|getId
+argument_list|()
+operator|+
+literal|" is in the cache but expired - revalidating"
+argument_list|)
+expr_stmt|;
+name|secToken
+operator|=
+literal|null
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|secToken
 operator|==
 literal|null
 condition|)
