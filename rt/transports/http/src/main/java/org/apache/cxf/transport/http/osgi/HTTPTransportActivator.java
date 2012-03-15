@@ -631,8 +631,6 @@ return|return
 name|matcher
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|int
 name|compareTo
