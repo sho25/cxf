@@ -6361,7 +6361,7 @@ name|nsMap
 operator|.
 name|put
 argument_list|(
-literal|null
+literal|""
 argument_list|,
 name|ns
 index|[
