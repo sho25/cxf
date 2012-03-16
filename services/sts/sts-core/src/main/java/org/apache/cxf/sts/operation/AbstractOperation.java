@@ -1030,6 +1030,10 @@ decl_stmt|;
 specifier|protected
 name|ClaimsManager
 name|claimsManager
+init|=
+operator|new
+name|ClaimsManager
+argument_list|()
 decl_stmt|;
 specifier|public
 name|boolean
@@ -1281,6 +1285,11 @@ argument_list|,
 name|context
 argument_list|,
 name|stsProperties
+argument_list|,
+name|claimsManager
+operator|.
+name|getClaimParsers
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return

@@ -730,6 +730,8 @@ argument_list|,
 name|wsContext
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|SCTCanceller
@@ -908,6 +910,8 @@ argument_list|(
 name|request
 argument_list|,
 name|wsContext
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|)
@@ -1096,6 +1100,8 @@ argument_list|(
 name|request
 argument_list|,
 name|wsContext
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|)
