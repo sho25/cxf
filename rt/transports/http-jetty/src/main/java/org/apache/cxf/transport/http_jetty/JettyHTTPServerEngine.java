@@ -2795,8 +2795,6 @@ parameter_list|(
 name|TLSServerParameters
 name|params
 parameter_list|)
-throws|throws
-name|IOException
 block|{
 name|tlsServerParameters
 operator|=
