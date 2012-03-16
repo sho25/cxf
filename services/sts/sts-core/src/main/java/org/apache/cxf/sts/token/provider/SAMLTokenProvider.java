@@ -1027,17 +1027,6 @@ name|props
 argument_list|)
 expr_stmt|;
 block|}
-name|int
-name|ttl
-init|=
-operator|(
-name|int
-operator|)
-name|conditionsProvider
-operator|.
-name|getLifetime
-argument_list|()
-decl_stmt|;
 name|tokenParameters
 operator|.
 name|getTokenStore
@@ -1046,8 +1035,6 @@ operator|.
 name|add
 argument_list|(
 name|securityToken
-argument_list|,
-name|ttl
 argument_list|)
 expr_stmt|;
 block|}

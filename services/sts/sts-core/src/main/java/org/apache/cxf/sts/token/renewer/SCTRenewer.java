@@ -364,7 +364,9 @@ specifier|private
 name|long
 name|lifetime
 init|=
-literal|300L
+literal|60L
+operator|*
+literal|30L
 decl_stmt|;
 comment|/**      * Return the lifetime of the generated SCT      * @return the lifetime of the generated SCT      */
 specifier|public

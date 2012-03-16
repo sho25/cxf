@@ -171,6 +171,8 @@ init|=
 literal|60L
 operator|*
 literal|60L
+operator|*
+literal|12L
 decl_stmt|;
 specifier|private
 specifier|static
@@ -191,7 +193,9 @@ specifier|private
 name|long
 name|lifetime
 init|=
-literal|300L
+literal|60L
+operator|*
+literal|30L
 decl_stmt|;
 specifier|private
 name|long

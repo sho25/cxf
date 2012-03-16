@@ -75,22 +75,6 @@ name|cxf
 operator|.
 name|sts
 operator|.
-name|cache
-operator|.
-name|STSTokenStore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|sts
-operator|.
 name|claims
 operator|.
 name|ClaimsManager
@@ -161,6 +145,24 @@ name|EncryptionProperties
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|tokenstore
+operator|.
+name|TokenStore
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class encapsulates the parameters that will be passed to a TokenProvider instance to  * create a token. It consists of both parameters that have been extracted from the request,  * as well as configuration specific to the STS itself.  */
 end_comment
@@ -216,7 +218,7 @@ argument_list|>
 name|additionalProperties
 decl_stmt|;
 specifier|private
-name|STSTokenStore
+name|TokenStore
 name|tokenStore
 decl_stmt|;
 specifier|private
@@ -224,7 +226,7 @@ name|String
 name|realm
 decl_stmt|;
 specifier|public
-name|STSTokenStore
+name|TokenStore
 name|getTokenStore
 parameter_list|()
 block|{
@@ -236,7 +238,7 @@ specifier|public
 name|void
 name|setTokenStore
 parameter_list|(
-name|STSTokenStore
+name|TokenStore
 name|tokenStore
 parameter_list|)
 block|{
