@@ -528,7 +528,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class registers a HTTPConduitConfigurer that will pull information from the   * config:admin service to configure conduits.   With the Felix file based impl, the  * format for that would be in files named org.apache.cxf.http.conduits-XYZ.cfg  * that has a list of properties like:  *   * url: Regex url to match the configuration  * client.*  * tlsClientParameters.*  * proxyAuthorization.*  * authorization.*  *   * Where each of those is a prefix for the attributes that would be on the elements   * of the http:conduit configuration defined at:  *   * http://cxf.apache.org/schemas/configuration/http-conf.xsd  *   * For example:  * client.ReceiveTimeout: 1000  * authorization.Username: Foo  * tlsClientParameters.keyManagers.keyStore.file: mykeys.jks  * etc....  *   */
+comment|/**  * This class registers a HTTPConduitConfigurer that will pull information from the   * config:admin service to configure conduits.   With the Felix file based impl, the  * format for that would be in files named org.apache.cxf.http.conduits-XYZ.cfg  * that has a list of properties like:  *   * url: Regex url to match the configuration  * order: Integer order in which to apply the regex's when multiple regex's match.  * client.*  * tlsClientParameters.*  * proxyAuthorization.*  * authorization.*  *   * Where each of those is a prefix for the attributes that would be on the elements   * of the http:conduit configuration defined at:  *   * http://cxf.apache.org/schemas/configuration/http-conf.xsd  *   * For example:  * client.ReceiveTimeout: 1000  * authorization.Username: Foo  * tlsClientParameters.keyManagers.keyStore.file: mykeys.jks  * etc....  *   */
 end_comment
 
 begin_class
@@ -575,7 +575,7 @@ name|matcher
 decl_stmt|;
 specifier|final
 name|int
-name|priority
+name|order
 decl_stmt|;
 specifier|public
 name|PidInfo
@@ -592,7 +592,7 @@ name|Matcher
 name|m
 parameter_list|,
 name|int
-name|i
+name|o
 parameter_list|)
 block|{
 name|matcher
@@ -603,9 +603,9 @@ name|props
 operator|=
 name|p
 expr_stmt|;
-name|priority
+name|order
 operator|=
-name|i
+name|o
 expr_stmt|;
 block|}
 specifier|public
@@ -641,11 +641,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|priority
+name|order
 operator|<
 name|o
 operator|.
-name|priority
+name|order
 condition|)
 block|{
 return|return
@@ -656,11 +656,11 @@ block|}
 elseif|else
 if|if
 condition|(
-name|priority
+name|order
 operator|>
 name|o
 operator|.
-name|priority
+name|order
 condition|)
 block|{
 return|return
@@ -984,11 +984,11 @@ name|properties
 operator|.
 name|get
 argument_list|(
-literal|"priority"
+literal|"order"
 argument_list|)
 decl_stmt|;
 name|int
-name|priority
+name|order
 init|=
 literal|50
 decl_stmt|;
@@ -999,7 +999,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|priority
+name|order
 operator|=
 name|Integer
 operator|.
@@ -1019,7 +1019,7 @@ name|properties
 argument_list|,
 name|matcher
 argument_list|,
-name|priority
+name|order
 argument_list|)
 decl_stmt|;
 name|props
