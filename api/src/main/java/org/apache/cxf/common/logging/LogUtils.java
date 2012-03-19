@@ -386,6 +386,12 @@ name|cname
 argument_list|)
 condition|)
 block|{
+try|try
+block|{
+comment|// This Class.forName likely will barf in OSGi, but it's OK
+comment|// as we'll just use j.u.l and pax-logging will pick it up fine
+comment|// If we don't call this and there isn't a slf4j impl avail,
+comment|// you get warnings printed to stderr about NOPLoggers and such
 name|Class
 operator|.
 name|forName
@@ -427,12 +433,34 @@ operator|.
 name|getClass
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
+name|String
+name|clsName
+init|=
 name|fcls
 operator|.
 name|getName
 argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|clsName
+operator|.
+name|contains
+argument_list|(
+literal|"NOPLogger"
+argument_list|)
+condition|)
+block|{
+comment|//no real slf4j implementation, use j.u.l
+name|cname
+operator|=
+literal|null
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|clsName
 operator|.
 name|contains
 argument_list|(
@@ -448,10 +476,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|fcls
-operator|.
-name|getName
-argument_list|()
+name|clsName
 operator|.
 name|contains
 argument_list|(
@@ -503,6 +528,49 @@ operator|=
 literal|"org.apache.cxf.common.logging.Log4jLogger"
 expr_stmt|;
 block|}
+block|}
+elseif|else
+if|if
+condition|(
+name|clsName
+operator|.
+name|contains
+argument_list|(
+literal|"JDK14"
+argument_list|)
+operator|||
+name|clsName
+operator|.
+name|contains
+argument_list|(
+literal|"pax.logging"
+argument_list|)
+condition|)
+block|{
+comment|//both of these we can use the appropriate j.u.l API's
+comment|//directly and have it work properly
+name|cname
+operator|=
+literal|null
+expr_stmt|;
+block|}
+else|else
+block|{
+comment|// Cannot really detect where it's logging so we'll
+comment|// go ahead and use the Slf4jLogger directly
+name|cname
+operator|=
+literal|"org.apache.cxf.common.logging.Slf4jLogger"
+expr_stmt|;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|t
+parameter_list|)
+block|{
+comment|//ignore - Slf4j not available
 block|}
 block|}
 if|if
