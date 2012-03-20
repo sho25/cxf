@@ -23,6 +23,16 @@ name|POA
 import|;
 end_import
 
+begin_import
+import|import
+name|corba
+operator|.
+name|common
+operator|.
+name|HelloWorldPOA
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class

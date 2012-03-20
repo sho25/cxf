@@ -43,7 +43,7 @@ literal|"http://cxf.apache.org/schemas/cxf/idl/HelloWorld"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./build/HelloWorld-corba.wsdl"
+literal|"classpath:/wsdl/HelloWorld-corba.wsdl"
 argument_list|,
 name|endpointInterface
 operator|=
