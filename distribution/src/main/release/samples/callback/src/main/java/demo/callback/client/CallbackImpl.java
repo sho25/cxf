@@ -79,7 +79,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Message recieved: "
+literal|"Message received: "
 operator|+
 name|message
 argument_list|)

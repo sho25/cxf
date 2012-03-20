@@ -163,6 +163,8 @@ name|endpointAddress
 init|=
 literal|"http://localhost:9000/helloWorld"
 decl_stmt|;
+comment|// If doing Tomcat deployment, endpoint will be similar to:
+comment|// String endpointAddress = "http://localhost:8080/java_first_jaxws-2.6-0-SNAPSHOT/services/hello_world";
 comment|// Add a port to the Service
 name|service
 operator|.

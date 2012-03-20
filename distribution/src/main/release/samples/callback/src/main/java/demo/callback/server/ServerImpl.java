@@ -135,7 +135,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Invoking on callback object"
+literal|"Invoking callback object"
 argument_list|)
 expr_stmt|;
 name|String
