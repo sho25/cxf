@@ -43,7 +43,7 @@ literal|"http://cxf.apache.org/schemas/cxf/idl/Bank"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./BankWS-corba.wsdl"
+literal|"classpath:/wsdl/BankWS-corba.wsdl"
 argument_list|,
 name|endpointInterface
 operator|=

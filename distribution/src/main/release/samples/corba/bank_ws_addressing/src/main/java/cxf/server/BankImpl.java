@@ -89,7 +89,7 @@ literal|"http://cxf.apache.org/schemas/cxf/idl/Bank"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./BankWS-corba.wsdl"
+literal|"classpath:/wsdl/BankWS-corba.wsdl"
 argument_list|,
 name|endpointInterface
 operator|=
@@ -348,17 +348,26 @@ return|;
 block|}
 comment|// TODO: What is the correct implementation for this operation?
 specifier|public
-name|Object
+name|void
 name|findAccount
 parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|Holder
+argument_list|<
+name|java
+operator|.
+name|lang
+operator|.
 name|Object
+argument_list|>
 name|accountDetails
 parameter_list|)
-block|{
-return|return
-literal|null
-return|;
-block|}
+block|{     }
 specifier|public
 name|void
 name|removeAccount
