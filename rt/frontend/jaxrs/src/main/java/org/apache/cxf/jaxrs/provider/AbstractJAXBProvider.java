@@ -1380,7 +1380,7 @@ parameter_list|<
 name|X
 parameter_list|>
 name|X
-name|getStaxHandlerFromCurrentMessage
+name|getStreamHandlerFromCurrentMessage
 parameter_list|(
 name|Class
 argument_list|<
