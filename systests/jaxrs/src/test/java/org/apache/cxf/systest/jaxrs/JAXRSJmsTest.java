@@ -1111,7 +1111,7 @@ argument_list|)
 argument_list|,
 name|session
 argument_list|,
-literal|"text"
+literal|"byte"
 argument_list|)
 decl_stmt|;
 name|message
@@ -1220,7 +1220,7 @@ argument_list|)
 argument_list|,
 name|session
 argument_list|,
-literal|"text"
+literal|"byte"
 argument_list|)
 decl_stmt|;
 name|message
@@ -1368,7 +1368,8 @@ argument_list|)
 return|;
 block|}
 specifier|private
-name|String
+name|byte
+index|[]
 name|writeBook
 parameter_list|(
 name|Book
@@ -1421,7 +1422,7 @@ expr_stmt|;
 return|return
 name|bos
 operator|.
-name|toString
+name|toByteArray
 argument_list|()
 return|;
 block|}

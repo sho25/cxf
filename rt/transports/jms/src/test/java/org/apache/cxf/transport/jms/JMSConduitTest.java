@@ -61,6 +61,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Writer
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|nio
 operator|.
 name|charset
@@ -487,11 +497,27 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|Writer
+name|writer
+init|=
+name|message
+operator|.
+name|getContent
+argument_list|(
+name|Writer
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"OutputStream should not be null"
+literal|"The OutputStream and Writer should not both be null "
 argument_list|,
 name|os
+operator|!=
+literal|null
+operator|||
+name|writer
 operator|!=
 literal|null
 argument_list|)
