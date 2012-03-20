@@ -113,7 +113,7 @@ literal|"http://cxf.apache.org/schemas/cxf/idl/bank"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:../resources/bank.wsdl"
+literal|"classpath:/wsdl/bank.wsdl"
 argument_list|,
 name|endpointInterface
 operator|=

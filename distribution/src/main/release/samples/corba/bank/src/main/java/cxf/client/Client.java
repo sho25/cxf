@@ -122,10 +122,13 @@ block|{
 name|URL
 name|wsdlUrl
 init|=
-operator|new
-name|URL
+name|Client
+operator|.
+name|class
+operator|.
+name|getResource
 argument_list|(
-literal|"file:./../resources/bank.wsdl"
+literal|"/wsdl/bank.wsdl"
 argument_list|)
 decl_stmt|;
 name|BankCORBAService

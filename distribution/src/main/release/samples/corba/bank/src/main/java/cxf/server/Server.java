@@ -53,7 +53,7 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"file:./build/bank.ref"
+literal|"file:target/bank.ref"
 decl_stmt|;
 name|Endpoint
 name|endpoint
