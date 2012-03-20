@@ -272,6 +272,10 @@ name|DestinationRegistry
 name|destinationRegistry
 decl_stmt|;
 specifier|private
+name|boolean
+name|globalRegistry
+decl_stmt|;
+specifier|private
 name|Bus
 name|bus
 decl_stmt|;
@@ -323,6 +327,14 @@ operator|.
 name|destinationRegistry
 operator|=
 name|destinationRegistry
+expr_stmt|;
+name|this
+operator|.
+name|globalRegistry
+operator|=
+name|destinationRegistry
+operator|!=
+literal|null
 expr_stmt|;
 name|this
 operator|.
@@ -685,6 +697,12 @@ name|void
 name|destroy
 parameter_list|()
 block|{
+if|if
+condition|(
+operator|!
+name|globalRegistry
+condition|)
+block|{
 for|for
 control|(
 name|String
@@ -696,7 +714,8 @@ name|getDestinationsPaths
 argument_list|()
 control|)
 block|{
-comment|// clean up the destination in case the destination itself can no longer access the registry later
+comment|// clean up the destination in case the destination itself can
+comment|// no longer access the registry later
 name|AbstractHTTPDestination
 name|dest
 init|=
@@ -730,6 +749,7 @@ name|destinationRegistry
 operator|=
 literal|null
 expr_stmt|;
+block|}
 name|destroyBus
 argument_list|()
 expr_stmt|;
