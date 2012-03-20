@@ -951,6 +951,11 @@ operator|==
 name|WSConstants
 operator|.
 name|NO_SECURITY
+operator|&&
+name|actions
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 return|return;
