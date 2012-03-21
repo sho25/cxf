@@ -1357,9 +1357,7 @@ name|robustDelivering
 condition|)
 block|{
 comment|// no check performed if in robust and not in delivering
-name|deliveringMessageNumbers
-operator|.
-name|remove
+name|removeDeliveringMessageNumber
 argument_list|(
 name|mn
 argument_list|)
@@ -1534,6 +1532,21 @@ block|}
 return|return
 literal|true
 return|;
+block|}
+name|void
+name|removeDeliveringMessageNumber
+parameter_list|(
+name|long
+name|mn
+parameter_list|)
+block|{
+name|deliveringMessageNumbers
+operator|.
+name|remove
+argument_list|(
+name|mn
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|Continuation
