@@ -248,7 +248,6 @@ name|releaseConnection
 argument_list|()
 expr_stmt|;
 block|}
-comment|// Sent HTTP GET request to query customer info, expect JSON.
 name|System
 operator|.
 name|out
@@ -264,12 +263,12 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Sent HTTP GET request to query customer info, expect JSON"
+literal|"Sent HTTP GET request to query customer info, expect XML"
 argument_list|)
 expr_stmt|;
 comment|//The default behavior without setting Accept header explicitly is depending on your client.
 comment|//In the case of  HTTP Client, the Accept header will be absent. The CXF server will treat this
-comment|//as "*/*", JSON format is returned
+comment|//as "*/*", XML format is returned
 name|get
 operator|=
 operator|new
