@@ -188,6 +188,15 @@ condition|(
 name|robust
 condition|)
 block|{
+name|message
+operator|.
+name|remove
+argument_list|(
+name|RMMessageConstants
+operator|.
+name|DELIVERING_ROBUST_ONEWAY
+argument_list|)
+expr_stmt|;
 name|dest
 operator|.
 name|acknowledge

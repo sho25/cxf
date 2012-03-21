@@ -61,6 +61,14 @@ name|SAVED_CONTENT
 init|=
 literal|"org.apache.cxf.ws.rm.content"
 decl_stmt|;
+comment|// keep this constant in the ws-rm package until it finds a general use outside of ws-rm
+specifier|static
+specifier|final
+name|String
+name|DELIVERING_ROBUST_ONEWAY
+init|=
+literal|"org.apache.cxf.oneway.robust.delivering"
+decl_stmt|;
 comment|/**      * Prevents instantiation.       */
 specifier|private
 name|RMMessageConstants

@@ -851,10 +851,24 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|!
 name|robust
 condition|)
 block|{
+comment|// set this property to change the acknlowledging behavior
+name|message
+operator|.
+name|put
+argument_list|(
+name|RMMessageConstants
+operator|.
+name|DELIVERING_ROBUST_ONEWAY
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
+block|}
 name|destination
 operator|.
 name|acknowledge
@@ -862,7 +876,6 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 name|void
 name|processDeliveryAssurance
