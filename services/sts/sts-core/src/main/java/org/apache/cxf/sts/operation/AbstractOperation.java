@@ -3105,6 +3105,13 @@ argument_list|(
 name|validateRequirements
 argument_list|)
 expr_stmt|;
+name|validatorParameters
+operator|.
+name|setToken
+argument_list|(
+name|token
+argument_list|)
+expr_stmt|;
 name|TokenValidatorResponse
 name|tokenResponse
 init|=
@@ -3171,22 +3178,11 @@ name|validatorParameters
 argument_list|)
 expr_stmt|;
 name|token
-operator|.
-name|setValidationState
-argument_list|(
+operator|=
 name|tokenResponse
 operator|.
-name|isValid
+name|getToken
 argument_list|()
-condition|?
-name|STATE
-operator|.
-name|VALID
-else|:
-name|STATE
-operator|.
-name|INVALID
-argument_list|)
 expr_stmt|;
 comment|// The parsed principal is set if available. It's up to other components to
 comment|// deal with the STATE of the validation

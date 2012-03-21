@@ -47,7 +47,9 @@ name|sts
 operator|.
 name|request
 operator|.
-name|TokenRequirements
+name|ReceivedToken
+operator|.
+name|STATE
 import|;
 end_import
 
@@ -207,22 +209,37 @@ name|TokenValidatorParameters
 name|tokenParameters
 parameter_list|)
 block|{
-name|TokenRequirements
-name|tokenRequirements
+name|TokenValidatorResponse
+name|response
 init|=
-name|tokenParameters
-operator|.
-name|getTokenRequirements
+operator|new
+name|TokenValidatorResponse
 argument_list|()
 decl_stmt|;
 name|ReceivedToken
 name|validateTarget
 init|=
-name|tokenRequirements
+name|tokenParameters
 operator|.
-name|getValidateTarget
+name|getToken
 argument_list|()
 decl_stmt|;
+name|validateTarget
+operator|.
+name|setValidationState
+argument_list|(
+name|STATE
+operator|.
+name|INVALID
+argument_list|)
+expr_stmt|;
+name|response
+operator|.
+name|setToken
+argument_list|(
+name|validateTarget
+argument_list|)
+expr_stmt|;
 name|UsernameTokenType
 name|usernameTokenType
 init|=
@@ -236,19 +253,14 @@ argument_list|()
 decl_stmt|;
 comment|// Ignore the fact that no password is provided
 comment|// Some other requirements must be met to issue a token onbehalfof a subject
-comment|// whose authentication is not proofen
-name|TokenValidatorResponse
-name|response
-init|=
-operator|new
-name|TokenValidatorResponse
-argument_list|()
-decl_stmt|;
-name|response
+comment|// whose authentication is not proved
+name|validateTarget
 operator|.
-name|setValid
+name|setValidationState
 argument_list|(
-literal|true
+name|STATE
+operator|.
+name|VALID
 argument_list|)
 expr_stmt|;
 name|response
