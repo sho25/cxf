@@ -263,7 +263,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"WibbleClient.xml"
+literal|"SecureClient.xml"
 argument_list|)
 expr_stmt|;
 block|}
