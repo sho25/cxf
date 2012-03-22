@@ -20,7 +20,7 @@ specifier|public
 enum|enum
 name|Category
 block|{
-name|Animal
+name|Fruit
 block|,
 name|Vegetable
 block|,

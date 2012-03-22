@@ -120,20 +120,43 @@ argument_list|>
 argument_list|()
 expr_stmt|;
 name|Ingredient
-name|chalk
+name|calcium
 init|=
 operator|new
 name|Ingredient
 argument_list|()
 decl_stmt|;
-name|chalk
+name|calcium
 operator|.
 name|setName
 argument_list|(
-literal|"chalk"
+literal|"calcium"
 argument_list|)
 expr_stmt|;
-name|chalk
+name|calcium
+operator|.
+name|setCategory
+argument_list|(
+name|Category
+operator|.
+name|Mineral
+argument_list|)
+expr_stmt|;
+name|Ingredient
+name|zinc
+init|=
+operator|new
+name|Ingredient
+argument_list|()
+decl_stmt|;
+name|zinc
+operator|.
+name|setName
+argument_list|(
+literal|"zinc"
+argument_list|)
+expr_stmt|;
+name|zinc
 operator|.
 name|setCategory
 argument_list|(
@@ -166,26 +189,26 @@ name|Vegetable
 argument_list|)
 expr_stmt|;
 name|Ingredient
-name|locust
+name|apple
 init|=
 operator|new
 name|Ingredient
 argument_list|()
 decl_stmt|;
-name|locust
+name|apple
 operator|.
 name|setName
 argument_list|(
-literal|"locust"
+literal|"apple"
 argument_list|)
 expr_stmt|;
-name|locust
+name|apple
 operator|.
 name|setCategory
 argument_list|(
 name|Category
 operator|.
-name|Animal
+name|Fruit
 argument_list|)
 expr_stmt|;
 name|Beverage
@@ -199,7 +222,7 @@ name|b
 operator|.
 name|setName
 argument_list|(
-literal|"broccoli shake"
+literal|"zinc-fortified broccoli shake"
 argument_list|)
 expr_stmt|;
 name|b
@@ -226,7 +249,7 @@ index|[
 literal|0
 index|]
 operator|=
-name|chalk
+name|zinc
 expr_stmt|;
 name|ingredients
 index|[
@@ -259,7 +282,7 @@ name|b
 operator|.
 name|setName
 argument_list|(
-literal|"green locust"
+literal|"apple broccoli shake"
 argument_list|)
 expr_stmt|;
 name|b
@@ -282,7 +305,7 @@ index|[
 literal|0
 index|]
 operator|=
-name|locust
+name|apple
 expr_stmt|;
 name|ingredients
 index|[
@@ -315,7 +338,7 @@ name|b
 operator|.
 name|setName
 argument_list|(
-literal|"bug shake"
+literal|"calcium-fortified apple juice"
 argument_list|)
 expr_stmt|;
 name|b
@@ -338,14 +361,14 @@ index|[
 literal|0
 index|]
 operator|=
-name|locust
+name|apple
 expr_stmt|;
 name|ingredients
 index|[
 literal|1
 index|]
 operator|=
-name|chalk
+name|calcium
 expr_stmt|;
 name|b
 operator|.
