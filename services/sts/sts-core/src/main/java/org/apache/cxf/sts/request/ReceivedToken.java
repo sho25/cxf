@@ -172,7 +172,11 @@ decl_stmt|;
 comment|// WS-Security, OnBehalfOf, ActAs
 specifier|private
 name|STATE
-name|validationState
+name|state
+init|=
+name|STATE
+operator|.
+name|NONE
 decl_stmt|;
 specifier|private
 name|Principal
@@ -185,6 +189,8 @@ block|{
 name|VALID
 block|,
 name|INVALID
+block|,
+name|CANCELLED
 block|,
 name|NONE
 block|}
@@ -546,11 +552,11 @@ end_function
 begin_function
 specifier|public
 name|STATE
-name|getValidationState
+name|getState
 parameter_list|()
 block|{
 return|return
-name|validationState
+name|state
 return|;
 block|}
 end_function
@@ -558,17 +564,17 @@ end_function
 begin_function
 specifier|public
 name|void
-name|setValidationState
+name|setState
 parameter_list|(
 name|STATE
-name|validationState
+name|state
 parameter_list|)
 block|{
 name|this
 operator|.
-name|validationState
+name|state
 operator|=
-name|validationState
+name|state
 expr_stmt|;
 block|}
 end_function

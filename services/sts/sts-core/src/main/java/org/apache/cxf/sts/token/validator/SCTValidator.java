@@ -393,7 +393,7 @@ argument_list|()
 decl_stmt|;
 name|validateTarget
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.
@@ -617,7 +617,7 @@ expr_stmt|;
 block|}
 name|validateTarget
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.

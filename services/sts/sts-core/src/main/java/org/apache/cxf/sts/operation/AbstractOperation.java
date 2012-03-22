@@ -3031,7 +3031,7 @@ parameter_list|)
 block|{
 name|token
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.
@@ -3218,7 +3218,7 @@ argument_list|)
 expr_stmt|;
 name|token
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.

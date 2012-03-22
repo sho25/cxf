@@ -786,7 +786,7 @@ argument_list|()
 expr_stmt|;
 name|validateTarget
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.
@@ -824,7 +824,7 @@ operator|.
 name|getToken
 argument_list|()
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|==
 name|STATE
@@ -1179,7 +1179,7 @@ operator|.
 name|getToken
 argument_list|()
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|==
 name|STATE

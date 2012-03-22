@@ -615,7 +615,7 @@ operator|.
 name|getToken
 argument_list|()
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|==
 name|STATE
@@ -660,7 +660,7 @@ operator|.
 name|getToken
 argument_list|()
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|==
 name|STATE
@@ -917,7 +917,7 @@ operator|.
 name|getToken
 argument_list|()
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|==
 name|STATE

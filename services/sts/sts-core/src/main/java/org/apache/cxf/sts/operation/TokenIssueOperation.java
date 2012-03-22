@@ -873,7 +873,7 @@ if|if
 condition|(
 name|validateTarget
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|.
 name|equals

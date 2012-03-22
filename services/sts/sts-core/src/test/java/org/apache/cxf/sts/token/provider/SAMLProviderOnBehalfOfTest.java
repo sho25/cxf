@@ -1303,7 +1303,7 @@ argument_list|)
 decl_stmt|;
 name|onBehalfOfToken
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.

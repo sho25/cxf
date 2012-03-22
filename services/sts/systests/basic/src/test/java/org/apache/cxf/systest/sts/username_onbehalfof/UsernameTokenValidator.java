@@ -226,7 +226,7 @@ argument_list|()
 decl_stmt|;
 name|validateTarget
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.
@@ -256,7 +256,7 @@ comment|// Some other requirements must be met to issue a token onbehalfof a sub
 comment|// whose authentication is not proved
 name|validateTarget
 operator|.
-name|setValidationState
+name|setState
 argument_list|(
 name|STATE
 operator|.

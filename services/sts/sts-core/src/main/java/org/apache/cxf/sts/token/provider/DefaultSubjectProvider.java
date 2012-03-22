@@ -635,7 +635,7 @@ if|if
 condition|(
 name|receivedToken
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|.
 name|equals
@@ -683,7 +683,7 @@ if|if
 condition|(
 name|receivedToken
 operator|.
-name|getValidationState
+name|getState
 argument_list|()
 operator|.
 name|equals
