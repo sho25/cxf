@@ -397,6 +397,10 @@ decl_stmt|;
 if|if
 condition|(
 name|msg
+operator|!=
+literal|null
+operator|&&
+name|msg
 operator|.
 name|contains
 argument_list|(
