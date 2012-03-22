@@ -23,16 +23,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|concurrent
 operator|.
 name|Future
@@ -259,28 +249,9 @@ name|long
 name|delay
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"\n\n*** GreetMeLater called with: "
-operator|+
-name|delay
-operator|+
-literal|" at: "
-operator|+
-operator|new
-name|Date
-argument_list|()
-operator|.
-name|toString
-argument_list|()
-operator|+
-literal|"***\n\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("\n\n*** GreetMeLater called with: " + delay
+comment|//                   + " at: " + new java.util.Date().toString()
+comment|//                   + "***\n\n");
 if|if
 condition|(
 name|delay

@@ -229,6 +229,8 @@ argument_list|(
 name|SessionServer
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

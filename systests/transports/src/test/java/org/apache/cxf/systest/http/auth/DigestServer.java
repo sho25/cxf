@@ -254,15 +254,7 @@ name|void
 name|run
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Starting Server"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Starting Server");
 name|server
 operator|=
 operator|new

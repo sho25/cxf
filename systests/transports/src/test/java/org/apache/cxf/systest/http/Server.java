@@ -117,6 +117,10 @@ specifier|private
 name|URL
 name|configFileURL
 decl_stmt|;
+specifier|private
+name|EndpointImpl
+name|ep
+decl_stmt|;
 specifier|public
 name|Server
 parameter_list|(
@@ -181,6 +185,31 @@ comment|//System.out.println("Starting " + name
 comment|//                     + " Server at " + address
 comment|//                     + " with config " + configFileURL);
 block|}
+specifier|public
+name|void
+name|tearDown
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+if|if
+condition|(
+name|ep
+operator|!=
+literal|null
+condition|)
+block|{
+name|ep
+operator|.
+name|stop
+argument_list|()
+expr_stmt|;
+name|ep
+operator|=
+literal|null
+expr_stmt|;
+block|}
+block|}
 specifier|protected
 name|void
 name|run
@@ -230,9 +259,8 @@ name|name
 argument_list|)
 decl_stmt|;
 comment|// I don't know why this works.
-name|EndpointImpl
 name|ep
-init|=
+operator|=
 operator|new
 name|EndpointImpl
 argument_list|(
@@ -256,7 +284,7 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 comment|// How the hell do I know what the name of the
 comment|// http-destination is from using this call?
 name|ep
