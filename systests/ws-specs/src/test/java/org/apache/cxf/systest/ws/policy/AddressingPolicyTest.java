@@ -348,6 +348,22 @@ operator|=
 name|dir
 expr_stmt|;
 block|}
+specifier|public
+name|Server
+parameter_list|(
+name|String
+index|[]
+name|args
+parameter_list|)
+block|{
+name|tmpDir
+operator|=
+name|args
+index|[
+literal|0
+index|]
+expr_stmt|;
+block|}
 specifier|protected
 name|void
 name|run
@@ -587,6 +603,8 @@ index|[]
 block|{
 name|TEMPDIR
 block|}
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -717,13 +735,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 comment|// oneway
-name|greeter
-operator|.
-name|greetMeOneWay
-argument_list|(
-literal|"CXF"
-argument_list|)
-expr_stmt|;
+comment|//greeter.greetMeOneWay("CXF");
 comment|// two-way
 name|assertEquals
 argument_list|(

@@ -2556,6 +2556,13 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+argument_list|(
+name|expected
+operator|=
+name|SoapFault
+operator|.
+name|class
+argument_list|)
 specifier|public
 name|void
 name|testTwoWayRequestWithReplyToNone
@@ -2577,6 +2584,13 @@ operator|new
 name|ExchangeImpl
 argument_list|()
 decl_stmt|;
+name|exchange
+operator|.
+name|setOutMessage
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 name|message
 operator|.
 name|setExchange
@@ -2663,7 +2677,7 @@ name|setUpMessageProperty
 argument_list|(
 name|message
 argument_list|,
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|,
 name|maps
 argument_list|)
@@ -2677,8 +2691,6 @@ argument_list|,
 literal|"NoneAddress"
 argument_list|)
 expr_stmt|;
-try|try
-block|{
 name|aggregator
 operator|.
 name|mediate
@@ -2688,20 +2700,6 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-name|fail
-argument_list|(
-literal|"Two way request with ReplyTo address set to none must fail"
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|SoapFault
-name|ex
-parameter_list|)
-block|{
-comment|// expected
-block|}
 block|}
 annotation|@
 name|Test
