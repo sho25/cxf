@@ -131,11 +131,11 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
-operator|.
 name|provider
 operator|.
-name|DataBindingJSONProvider
+name|aegis
+operator|.
+name|AegisElementProvider
 import|;
 end_import
 
@@ -149,13 +149,11 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
-operator|.
 name|provider
 operator|.
-name|aegis
+name|json
 operator|.
-name|AegisElementProvider
+name|DataBindingJSONProvider
 import|;
 end_import
 

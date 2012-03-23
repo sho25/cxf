@@ -259,8 +259,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
-operator|.
 name|provider
 operator|.
 name|atom
@@ -278,8 +276,6 @@ operator|.
 name|cxf
 operator|.
 name|jaxrs
-operator|.
-name|ext
 operator|.
 name|provider
 operator|.
@@ -299,8 +295,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|ext
-operator|.
 name|provider
 operator|.
 name|atom
@@ -318,8 +312,6 @@ operator|.
 name|cxf
 operator|.
 name|jaxrs
-operator|.
-name|ext
 operator|.
 name|provider
 operator|.
