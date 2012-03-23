@@ -740,7 +740,7 @@ literal|"-verbose"
 block|,
 name|getLocation
 argument_list|(
-literal|"/validator_wsdl/jms_test.wsdl"
+literal|"/validator_wsdl/jms_test_R2726.wsdl"
 argument_list|)
 block|}
 decl_stmt|;
