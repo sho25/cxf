@@ -291,7 +291,7 @@ name|ext
 operator|.
 name|provider
 operator|.
-name|PrefixCollectingXMLStreamWriter
+name|JSONUtils
 import|;
 end_import
 
@@ -305,9 +305,11 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|ext
+operator|.
 name|provider
 operator|.
-name|JSONUtils
+name|PrefixCollectingXMLStreamWriter
 import|;
 end_import
 

@@ -13,6 +13,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|ext
+operator|.
 name|provider
 package|;
 end_package

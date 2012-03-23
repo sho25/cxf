@@ -511,9 +511,13 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|impl
+name|ext
 operator|.
-name|MetadataMap
+name|provider
+operator|.
+name|json
+operator|.
+name|JSONProvider
 import|;
 end_import
 
@@ -527,9 +531,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
+name|impl
 operator|.
-name|JSONProvider
+name|MetadataMap
 import|;
 end_import
 

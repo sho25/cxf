@@ -640,7 +640,7 @@ specifier|final
 name|String
 name|JSON_PROVIDER_NAME
 init|=
-literal|"org.apache.cxf.jaxrs.provider.JSONProvider"
+literal|"org.apache.cxf.jaxrs.ext.provider.json.JSONProvider"
 decl_stmt|;
 static|static
 block|{
@@ -4962,6 +4962,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+specifier|public
 name|void
 name|clearProviders
 parameter_list|()
