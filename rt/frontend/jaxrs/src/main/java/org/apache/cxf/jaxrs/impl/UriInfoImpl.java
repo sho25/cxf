@@ -610,7 +610,9 @@ operator|.
 name|getPathSegments
 argument_list|(
 name|getPath
-argument_list|()
+argument_list|(
+literal|false
+argument_list|)
 argument_list|,
 name|decode
 argument_list|)
