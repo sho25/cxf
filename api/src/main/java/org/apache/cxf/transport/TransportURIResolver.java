@@ -77,6 +77,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|namespace
+operator|.
+name|QName
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|xml
@@ -538,6 +550,20 @@ operator|new
 name|EndpointInfo
 argument_list|()
 decl_stmt|;
+comment|// set the endpointInfo name which could be used for configuration
+name|info
+operator|.
+name|setName
+argument_list|(
+operator|new
+name|QName
+argument_list|(
+literal|"http://cxf.apache.org"
+argument_list|,
+literal|"TransportURIResolver"
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|info
 operator|.
 name|setAddress
