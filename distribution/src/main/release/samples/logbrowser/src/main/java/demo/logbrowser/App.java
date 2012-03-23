@@ -211,6 +211,28 @@ name|SettingsProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// this provider will have to be discovered via the class-scanning
+name|classes
+operator|.
+name|add
+argument_list|(
+operator|new
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|search
+operator|.
+name|SearchContextProvider
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// The pull server
 name|AtomPullServer
 name|aps

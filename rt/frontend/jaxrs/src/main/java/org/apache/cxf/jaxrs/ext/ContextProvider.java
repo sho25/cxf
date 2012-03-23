@@ -31,6 +31,10 @@ name|Message
 import|;
 end_import
 
+begin_comment
+comment|/**  * Provider of custom contexts representing the current request  * @param<T> Context class  */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
@@ -39,6 +43,7 @@ parameter_list|<
 name|T
 parameter_list|>
 block|{
+comment|/**      * Creates the context instance      * @param message the current message      * @return the context      */
 name|T
 name|createContext
 parameter_list|(

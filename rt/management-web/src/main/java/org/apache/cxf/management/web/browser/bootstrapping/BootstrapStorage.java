@@ -1265,7 +1265,7 @@ name|SettingsProvider
 extends|extends
 name|JSONProvider
 argument_list|<
-name|String
+name|Object
 argument_list|>
 block|{
 specifier|private
