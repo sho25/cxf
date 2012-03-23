@@ -746,8 +746,6 @@ name|updateAddressPort
 argument_list|(
 name|greeter
 argument_list|,
-name|DecoupledClientServerTest
-operator|.
 name|PORT
 argument_list|)
 expr_stmt|;

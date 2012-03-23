@@ -538,6 +538,8 @@ argument_list|(
 name|Server
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -733,8 +735,6 @@ name|updateAddressPort
 argument_list|(
 name|greeter
 argument_list|,
-name|DecoupledClientServerTest
-operator|.
 name|PORT
 argument_list|)
 expr_stmt|;
