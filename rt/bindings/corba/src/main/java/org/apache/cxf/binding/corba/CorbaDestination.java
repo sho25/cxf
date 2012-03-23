@@ -826,6 +826,9 @@ name|void
 name|shutdown
 parameter_list|()
 block|{
+name|deactivate
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|orb
