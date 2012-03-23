@@ -173,20 +173,6 @@ name|Document
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|helpers
-operator|.
-name|DOMUtils
-import|;
-end_import
-
 begin_comment
 comment|//The following wsdl file is used.
 end_comment
@@ -363,17 +349,6 @@ operator|.
 name|parse
 argument_list|(
 name|greetMeResponse
-argument_list|)
-expr_stmt|;
-name|DOMUtils
-operator|.
-name|writeXml
-argument_list|(
-name|document
-argument_list|,
-name|System
-operator|.
-name|out
 argument_list|)
 expr_stmt|;
 name|response

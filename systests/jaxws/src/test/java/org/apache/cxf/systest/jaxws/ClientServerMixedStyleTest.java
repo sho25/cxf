@@ -232,6 +232,8 @@ argument_list|(
 name|ServerMixedStyle
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

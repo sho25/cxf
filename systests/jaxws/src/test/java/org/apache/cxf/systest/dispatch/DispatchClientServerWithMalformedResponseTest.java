@@ -349,6 +349,9 @@ name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
+name|Endpoint
+name|ep
+decl_stmt|;
 specifier|protected
 name|void
 name|run
@@ -377,6 +380,8 @@ argument_list|)
 operator|+
 literal|"/SOAPDispatchService/SoapDispatchPort"
 decl_stmt|;
+name|ep
+operator|=
 name|Endpoint
 operator|.
 name|publish
@@ -385,6 +390,19 @@ name|address
 argument_list|,
 name|implementor
 argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|tearDown
+parameter_list|()
+block|{
+name|ep
+operator|.
+name|stop
+argument_list|()
 expr_stmt|;
 block|}
 specifier|public
@@ -465,6 +483,8 @@ argument_list|(
 name|Server
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

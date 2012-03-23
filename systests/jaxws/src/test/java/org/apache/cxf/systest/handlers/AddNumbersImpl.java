@@ -120,21 +120,7 @@ parameter_list|)
 throws|throws
 name|AddNumbersFault
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"addNumbers called....., number1: "
-operator|+
-name|number1
-operator|+
-literal|" number2: "
-operator|+
-name|number2
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("addNumbers called....., number1: " + number1 + " number2: " + number2);
 return|return
 name|number1
 operator|*

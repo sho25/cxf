@@ -612,6 +612,8 @@ argument_list|(
 name|HandlerServer
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

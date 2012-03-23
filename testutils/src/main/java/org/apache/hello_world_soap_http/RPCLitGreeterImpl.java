@@ -91,28 +91,8 @@ name|String
 name|me
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation greetMe"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Message received: "
-operator|+
-name|me
-operator|+
-literal|"\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation greetMe");
+comment|//System.out.println("Message received: " + me + "\n");
 return|return
 literal|"Hello "
 operator|+
@@ -124,17 +104,7 @@ name|String
 name|sayHi
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation sayHi"
-operator|+
-literal|"\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation sayHi" + "\n");
 return|return
 literal|"Bonjour"
 return|;
@@ -147,45 +117,9 @@ name|MyComplexStruct
 name|in
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation sendReceiveData"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Received struct with values :\nElement-1 : "
-operator|+
-name|in
-operator|.
-name|getElem1
-argument_list|()
-operator|+
-literal|"\nElement-2 : "
-operator|+
-name|in
-operator|.
-name|getElem2
-argument_list|()
-operator|+
-literal|"\nElement-3 : "
-operator|+
-name|in
-operator|.
-name|getElem3
-argument_list|()
-operator|+
-literal|"\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation sendReceiveData");
+comment|//System.out.println("Received struct with values :\nElement-1 : " + in.getElem1() + "\nElement-2 : "
+comment|//                   + in.getElem2() + "\nElement-3 : " + in.getElem3() + "\n");
 if|if
 condition|(
 literal|"invalid"
@@ -222,32 +156,8 @@ name|String
 name|me
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation greetUs"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Message received: you are "
-operator|+
-name|you
-operator|+
-literal|" I'm "
-operator|+
-name|me
-operator|+
-literal|"\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation greetUs");
+comment|//System.out.println("Message received: you are " + you + " I'm " + me + "\n");
 return|return
 literal|"Hello "
 operator|+

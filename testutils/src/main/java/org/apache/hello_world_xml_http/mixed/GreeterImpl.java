@@ -118,15 +118,6 @@ name|String
 name|me
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation greetMe\n"
-argument_list|)
-expr_stmt|;
 return|return
 literal|"Hello "
 operator|+
@@ -140,28 +131,7 @@ parameter_list|(
 name|String
 name|me
 parameter_list|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation greetMeOneWay\n"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Hello there "
-operator|+
-name|me
-argument_list|)
-expr_stmt|;
-block|}
+block|{     }
 specifier|public
 name|SayHiResponse
 name|sayHi1
@@ -170,15 +140,6 @@ name|SayHi
 name|in
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation sayHi1\n"
-argument_list|)
-expr_stmt|;
 name|SayHiResponse
 name|response
 init|=
