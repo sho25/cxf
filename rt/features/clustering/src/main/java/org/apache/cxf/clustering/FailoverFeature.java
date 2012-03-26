@@ -288,7 +288,7 @@ return|return
 name|selector
 return|;
 block|}
-specifier|protected
+specifier|public
 name|FailoverTargetSelector
 name|getTargetSelector
 parameter_list|()

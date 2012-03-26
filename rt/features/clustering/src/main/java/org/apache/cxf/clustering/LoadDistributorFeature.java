@@ -46,7 +46,7 @@ name|FailoverFeature
 block|{
 annotation|@
 name|Override
-specifier|protected
+specifier|public
 name|FailoverTargetSelector
 name|getTargetSelector
 parameter_list|()
