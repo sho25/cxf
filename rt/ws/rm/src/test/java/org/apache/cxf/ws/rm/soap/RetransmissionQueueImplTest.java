@@ -658,7 +658,7 @@ literal|0
 argument_list|,
 name|candidate
 operator|.
-name|getResends
+name|getRetries
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -779,7 +779,7 @@ literal|1
 argument_list|,
 name|candidate
 operator|.
-name|getResends
+name|getRetries
 argument_list|()
 argument_list|)
 expr_stmt|;

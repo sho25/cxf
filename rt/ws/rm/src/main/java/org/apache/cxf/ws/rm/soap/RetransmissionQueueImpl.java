@@ -593,7 +593,7 @@ name|ws
 operator|.
 name|rm
 operator|.
-name|RetransmissionStatus
+name|RetryStatus
 import|;
 end_import
 
@@ -1213,7 +1213,7 @@ name|unacknowledged
 return|;
 block|}
 specifier|public
-name|RetransmissionStatus
+name|RetryStatus
 name|getRetransmissionStatus
 parameter_list|(
 name|SourceSequence
@@ -1317,7 +1317,7 @@ name|Map
 argument_list|<
 name|Long
 argument_list|,
-name|RetransmissionStatus
+name|RetryStatus
 argument_list|>
 name|getRetransmissionStatuses
 parameter_list|(
@@ -1329,7 +1329,7 @@ name|Map
 argument_list|<
 name|Long
 argument_list|,
-name|RetransmissionStatus
+name|RetryStatus
 argument_list|>
 name|cp
 init|=
@@ -1338,7 +1338,7 @@ name|HashMap
 argument_list|<
 name|Long
 argument_list|,
-name|RetransmissionStatus
+name|RetryStatus
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -2668,7 +2668,7 @@ name|ResendCandidate
 implements|implements
 name|Runnable
 implements|,
-name|RetransmissionStatus
+name|RetryStatus
 block|{
 specifier|private
 name|Message
@@ -2688,7 +2688,7 @@ name|nextTask
 decl_stmt|;
 specifier|private
 name|int
-name|resends
+name|retries
 decl_stmt|;
 specifier|private
 name|long
@@ -2722,7 +2722,7 @@ name|message
 operator|=
 name|m
 expr_stmt|;
-name|resends
+name|retries
 operator|=
 literal|0
 expr_stmt|;
@@ -3078,11 +3078,21 @@ block|}
 comment|/**          * @return number of resend attempts          */
 specifier|public
 name|int
-name|getResends
+name|getRetries
 parameter_list|()
 block|{
 return|return
-name|resends
+name|retries
+return|;
+block|}
+comment|/**          * @return number of max resend attempts          */
+specifier|public
+name|int
+name|getMaxRetries
+parameter_list|()
+block|{
+return|return
+literal|0
 return|;
 block|}
 comment|/**          * @return date of next resend          */
@@ -3103,7 +3113,7 @@ parameter_list|()
 block|{
 if|if
 condition|(
-name|resends
+name|retries
 operator|>
 literal|0
 condition|)
@@ -3328,7 +3338,7 @@ name|pending
 operator|=
 literal|false
 expr_stmt|;
-name|resends
+name|retries
 operator|++
 expr_stmt|;
 if|if

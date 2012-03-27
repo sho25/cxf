@@ -28,27 +28,32 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * A generic interface to represent the retrying status of a repeating activity  * at some WS-RM component.  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|RetransmissionStatus
+name|RetryStatus
 block|{
-comment|/**      * @return the next transmission time      */
+comment|/**      * @return the next retry time      */
 name|Date
 name|getNext
 parameter_list|()
 function_decl|;
-comment|/**      * @return the previous transmission time      */
+comment|/**      * @return the previous retry time      */
 name|Date
 name|getPrevious
 parameter_list|()
 function_decl|;
-comment|/**      * @return the resends      */
+comment|/**      * @return the number of retries      */
 name|int
-name|getResends
+name|getRetries
+parameter_list|()
+function_decl|;
+comment|/**      * @return the max number of retries permitted      */
+name|int
+name|getMaxRetries
 parameter_list|()
 function_decl|;
 comment|/**      * @return the nextInterval      */

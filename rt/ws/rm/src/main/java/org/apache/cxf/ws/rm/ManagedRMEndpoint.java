@@ -468,12 +468,12 @@ specifier|static
 specifier|final
 name|String
 index|[]
-name|RETRANSMISSION_STATUS_NAMES
+name|RETRY_STATUS_NAMES
 init|=
 block|{
 literal|"messageNumber"
 block|,
-literal|"resends"
+literal|"retries"
 block|,
 literal|"previous"
 block|,
@@ -493,9 +493,9 @@ specifier|static
 specifier|final
 name|String
 index|[]
-name|RETRANSMISSION_STATUS_DESCRIPTIONS
+name|RETRY_STATUS_DESCRIPTIONS
 init|=
-name|RETRANSMISSION_STATUS_NAMES
+name|RETRY_STATUS_NAMES
 decl_stmt|;
 annotation|@
 name|SuppressWarnings
@@ -508,7 +508,7 @@ specifier|static
 specifier|final
 name|OpenType
 index|[]
-name|RETRANSMISSION_STATUS_TYPES
+name|RETRY_STATUS_TYPES
 init|=
 block|{
 name|SimpleType
@@ -557,7 +557,7 @@ decl_stmt|;
 specifier|private
 specifier|static
 name|CompositeType
-name|retransmissionStatusType
+name|retryStatusType
 decl_stmt|;
 specifier|private
 name|RMEndpoint
@@ -599,20 +599,20 @@ argument_list|,
 name|DESTINATION_SEQUENCE_TYPES
 argument_list|)
 expr_stmt|;
-name|retransmissionStatusType
+name|retryStatusType
 operator|=
 operator|new
 name|CompositeType
 argument_list|(
-literal|"retransmissionStatus"
+literal|"retryStatus"
 argument_list|,
-literal|"retransmissionStatus"
+literal|"retryStatus"
 argument_list|,
-name|RETRANSMISSION_STATUS_NAMES
+name|RETRY_STATUS_NAMES
 argument_list|,
-name|RETRANSMISSION_STATUS_DESCRIPTIONS
+name|RETRY_STATUS_DESCRIPTIONS
 argument_list|,
-name|RETRANSMISSION_STATUS_TYPES
+name|RETRY_STATUS_TYPES
 argument_list|)
 expr_stmt|;
 block|}
@@ -663,10 +663,40 @@ name|description
 operator|=
 literal|"Total Number of Queued Messages"
 argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"outbound"
+argument_list|,
+name|description
+operator|=
+literal|"The outbound direction"
+argument_list|)
+block|}
+argument_list|)
 specifier|public
 name|int
 name|getQueuedMessageTotalCount
-parameter_list|()
+parameter_list|(
+name|boolean
+name|outbound
+parameter_list|)
+block|{
+name|int
+name|count
+init|=
+literal|0
+decl_stmt|;
+if|if
+condition|(
+name|outbound
+condition|)
 block|{
 name|Source
 name|source
@@ -686,11 +716,6 @@ argument_list|()
 operator|.
 name|getRetransmissionQueue
 argument_list|()
-decl_stmt|;
-name|int
-name|count
-init|=
-literal|0
 decl_stmt|;
 for|for
 control|(
@@ -712,6 +737,15 @@ argument_list|(
 name|ss
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+comment|//            Destination destination = endpoint.getDestination();
+comment|//            RedeliveryQueue queue = endpoint.getManager().getRedeliveryQueue();
+comment|//            for (DestinationSequence ds : destination.getAllSequences()) {
+comment|//                count += queue.countUndelivered(ds);
+comment|//            }
 block|}
 return|return
 name|count
@@ -739,6 +773,18 @@ name|description
 operator|=
 literal|"The sequence identifier"
 argument_list|)
+block|,
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"outbound"
+argument_list|,
+name|description
+operator|=
+literal|"The outbound direction"
+argument_list|)
 block|}
 argument_list|)
 specifier|public
@@ -747,6 +793,9 @@ name|getQueuedMessageCount
 parameter_list|(
 name|String
 name|sid
+parameter_list|,
+name|boolean
+name|outbound
 parameter_list|)
 block|{
 name|RMManager
@@ -757,6 +806,16 @@ operator|.
 name|getManager
 argument_list|()
 decl_stmt|;
+name|int
+name|count
+init|=
+literal|0
+decl_stmt|;
+if|if
+condition|(
+name|outbound
+condition|)
+block|{
 name|SourceSequence
 name|ss
 init|=
@@ -780,7 +839,8 @@ literal|"no sequence"
 argument_list|)
 throw|;
 block|}
-return|return
+name|count
+operator|=
 name|manager
 operator|.
 name|getRetransmissionQueue
@@ -790,6 +850,18 @@ name|countUnacknowledged
 argument_list|(
 name|ss
 argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+comment|//            DestinationSequence ds = getDestinationSeq(sid);
+comment|//            if (null == ds) {
+comment|//                throw new IllegalArgumentException("no sequence");
+comment|//            }
+comment|//            count = manager.getRedeliveryQueue().countUndelivered(ds);
+block|}
+return|return
+name|count
 return|;
 block|}
 annotation|@
@@ -1343,7 +1415,7 @@ operator|.
 name|getRetransmissionQueue
 argument_list|()
 decl_stmt|;
-name|RetransmissionStatus
+name|RetryStatus
 name|rs
 init|=
 name|rq
@@ -1356,7 +1428,7 @@ name|num
 argument_list|)
 decl_stmt|;
 return|return
-name|getRetransmissionStatusProperties
+name|getRetryStatusProperties
 argument_list|(
 name|num
 argument_list|,
@@ -1437,7 +1509,7 @@ name|Map
 argument_list|<
 name|Long
 argument_list|,
-name|RetransmissionStatus
+name|RetryStatus
 argument_list|>
 name|rsmap
 init|=
@@ -1474,7 +1546,7 @@ name|Entry
 argument_list|<
 name|Long
 argument_list|,
-name|RetransmissionStatus
+name|RetryStatus
 argument_list|>
 name|rs
 range|:
@@ -1490,7 +1562,7 @@ name|i
 operator|++
 index|]
 operator|=
-name|getRetransmissionStatusProperties
+name|getRetryStatusProperties
 argument_list|(
 name|rs
 operator|.
@@ -1508,6 +1580,53 @@ return|return
 name|rsps
 return|;
 block|}
+comment|//     @ManagedOperation(description = "Redelivery Status")
+comment|//     @ManagedOperationParameters({
+comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier"),
+comment|//         @ManagedOperationParameter(name = "messageNumber", description = "The message number")
+comment|//     })
+comment|//     public CompositeData getRedeliveryStatus(String sid, long num) throws JMException {
+comment|//         DestinationSequence ds = getDestinationSeq(sid);
+comment|//         if (null == ds) {
+comment|//             throw new IllegalArgumentException("no sequence");
+comment|//         }
+comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
+comment|//         RetryStatus rs = rq.getRedeliveryStatus(ds, num);
+comment|//         return getRetryStatusProperties(num, rs);
+comment|//     }
+comment|//    @ManagedOperation(description = "Redelivery Statuses")
+comment|//     @ManagedOperationParameters({
+comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
+comment|//     })
+comment|//     public CompositeData[] getRedeliveryStatuses(String sid) throws JMException {
+comment|//         DestinationSequence ds = getDestinationSeq(sid);
+comment|//         if (null == ds) {
+comment|//             throw new IllegalArgumentException("no sequence");
+comment|//         }
+comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
+comment|//         Map<Long, RetryStatus> rsmap = rq.getRedeliveryStatuses(ds);
+comment|//
+comment|//         CompositeData[] rsps = new CompositeData[rsmap.size()];
+comment|//         int i = 0;
+comment|//         for (Map.Entry<Long, RetryStatus> rs : rsmap.entrySet()) {
+comment|//             rsps[i++] = getRetryStatusProperties(rs.getKey(), rs.getValue());
+comment|//         }
+comment|//         return rsps;
+comment|//     }
+comment|//     @ManagedOperation(description = "List of UnDelivered Message Numbers")
+comment|//     @ManagedOperationParameters({
+comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
+comment|//     })
+comment|//     public Long[] getUnDeliveredMessageIdentifiers(String sid) {
+comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
+comment|//         DestinationSequence ds = getDestinationSeq(sid);
+comment|//         if (null == ds) {
+comment|//             throw new IllegalArgumentException("no sequence");
+comment|//         }
+comment|//
+comment|//         List<Long> numbers = rq.getUndeliveredMessageNumbers(ds);
+comment|//         return numbers.toArray(new Long[numbers.size()]);
+comment|//     }
 annotation|@
 name|ManagedOperation
 argument_list|(
@@ -1842,6 +1961,30 @@ name|ss
 argument_list|)
 expr_stmt|;
 block|}
+comment|//     @ManagedOperation(description = "Suspend Redelivery Queue")
+comment|//     @ManagedOperationParameters({
+comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
+comment|//     })
+comment|//     public void suspendDestinationQueue(String sid) throws JMException {
+comment|//         DestinationSequence ds = getDestinationSeq(sid);
+comment|//         if (null == ds) {
+comment|//             throw new IllegalArgumentException("no sequence");
+comment|//         }
+comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
+comment|//         rq.suspend(ds);
+comment|//     }
+comment|//     @ManagedOperation(description = "Resume Redelivery Queue")
+comment|//     @ManagedOperationParameters({
+comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
+comment|//     })
+comment|//     public void resumeDestinationQueue(String sid) throws JMException {
+comment|//         DestinationSequence ds = getDestinationSeq(sid);
+comment|//         if (null == ds) {
+comment|//             throw new JMException("no source sequence");
+comment|//         }
+comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
+comment|//         rq.resume(ds);
+comment|//     }
 annotation|@
 name|ManagedOperation
 argument_list|(
@@ -2298,6 +2441,164 @@ name|identifier
 argument_list|)
 return|;
 block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Remove Source Sequence"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The destination identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|void
+name|removeSourceSequence
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+throws|throws
+name|JMException
+block|{
+name|SourceSequence
+name|ss
+init|=
+name|getSourceSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ss
+condition|)
+block|{
+throw|throw
+operator|new
+name|JMException
+argument_list|(
+literal|"no source sequence"
+argument_list|)
+throw|;
+block|}
+comment|//TODO use cancel insted of suspend
+name|RetransmissionQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRetransmissionQueue
+argument_list|()
+decl_stmt|;
+name|rq
+operator|.
+name|suspend
+argument_list|(
+name|ss
+argument_list|)
+expr_stmt|;
+name|ss
+operator|.
+name|getSource
+argument_list|()
+operator|.
+name|removeSequence
+argument_list|(
+name|ss
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Remove Destination Sequence"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The destination identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|void
+name|removeDestinationSequence
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+throws|throws
+name|JMException
+block|{
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|JMException
+argument_list|(
+literal|"no source sequence"
+argument_list|)
+throw|;
+block|}
+comment|//TODO use cancel insted of suspend
+comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
+comment|//         rq.suspend(ds);
+name|ds
+operator|.
+name|getDestination
+argument_list|()
+operator|.
+name|removeSequence
+argument_list|(
+name|ds
+argument_list|)
+expr_stmt|;
+block|}
 specifier|private
 specifier|static
 name|String
@@ -2514,12 +2815,12 @@ return|;
 block|}
 specifier|private
 name|CompositeData
-name|getRetransmissionStatusProperties
+name|getRetryStatusProperties
 parameter_list|(
 name|long
 name|num
 parameter_list|,
-name|RetransmissionStatus
+name|RetryStatus
 name|rs
 parameter_list|)
 throws|throws
@@ -2549,7 +2850,7 @@ name|num
 block|,
 name|rs
 operator|.
-name|getResends
+name|getRetries
 argument_list|()
 block|,
 name|rs
@@ -2588,9 +2889,9 @@ operator|=
 operator|new
 name|CompositeDataSupport
 argument_list|(
-name|retransmissionStatusType
+name|retryStatusType
 argument_list|,
-name|RETRANSMISSION_STATUS_NAMES
+name|RETRY_STATUS_NAMES
 argument_list|,
 name|rsv
 argument_list|)

@@ -107,7 +107,7 @@ name|seq
 parameter_list|)
 function_decl|;
 comment|/**      * Returns the retransmission status for the specified message.      * @param seq      * @param num      * @return      */
-name|RetransmissionStatus
+name|RetryStatus
 name|getRetransmissionStatus
 parameter_list|(
 name|SourceSequence
@@ -122,7 +122,7 @@ name|Map
 argument_list|<
 name|Long
 argument_list|,
-name|RetransmissionStatus
+name|RetryStatus
 argument_list|>
 name|getRetransmissionStatuses
 parameter_list|(
