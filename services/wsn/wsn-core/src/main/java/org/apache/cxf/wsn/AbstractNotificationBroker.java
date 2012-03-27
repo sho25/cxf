@@ -1280,6 +1280,9 @@ name|address
 init|=
 name|WSNHelper
 operator|.
+name|getInstance
+argument_list|()
+operator|.
 name|getWSAAddress
 argument_list|(
 name|producerReference
@@ -1883,6 +1886,9 @@ operator|.
 name|put
 argument_list|(
 name|WSNHelper
+operator|.
+name|getInstance
+argument_list|()
 operator|.
 name|getWSAAddress
 argument_list|(

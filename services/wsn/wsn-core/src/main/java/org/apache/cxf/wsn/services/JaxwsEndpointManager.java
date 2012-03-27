@@ -203,6 +203,9 @@ if|if
 condition|(
 name|WSNHelper
 operator|.
+name|getInstance
+argument_list|()
+operator|.
 name|setClassLoader
 argument_list|()
 condition|)

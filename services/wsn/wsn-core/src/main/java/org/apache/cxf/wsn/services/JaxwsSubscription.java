@@ -382,6 +382,9 @@ name|consumer
 operator|=
 name|WSNHelper
 operator|.
+name|getInstance
+argument_list|()
+operator|.
 name|getPort
 argument_list|(
 name|subscribeRequest

@@ -235,6 +235,9 @@ name|this
 argument_list|(
 name|WSNHelper
 operator|.
+name|getInstance
+argument_list|()
+operator|.
 name|createWSA
 argument_list|(
 name|address
@@ -254,6 +257,9 @@ operator|.
 name|subscription
 operator|=
 name|WSNHelper
+operator|.
+name|getInstance
+argument_list|()
 operator|.
 name|getPort
 argument_list|(

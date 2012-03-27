@@ -374,6 +374,9 @@ name|notificationProducer
 operator|=
 name|WSNHelper
 operator|.
+name|getInstance
+argument_list|()
+operator|.
 name|getPort
 argument_list|(
 name|publisherReference
@@ -463,6 +466,9 @@ argument_list|)
 decl_stmt|;
 return|return
 name|WSNHelper
+operator|.
+name|getInstance
+argument_list|()
 operator|.
 name|getPort
 argument_list|(
