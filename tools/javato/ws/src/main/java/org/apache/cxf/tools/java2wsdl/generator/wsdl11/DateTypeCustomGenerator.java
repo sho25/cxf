@@ -220,7 +220,7 @@ specifier|final
 name|String
 name|DATE_ADAPTER
 init|=
-literal|"org.apache.cxf.tools.common.DataTypeAdapter"
+literal|"org.apache.cxf.xjc.runtime.DataTypeAdapter"
 decl_stmt|;
 specifier|private
 specifier|static
