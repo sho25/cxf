@@ -156,6 +156,10 @@ specifier|private
 name|String
 name|protocol
 decl_stmt|;
+specifier|private
+name|String
+name|certAlias
+decl_stmt|;
 comment|/**      * Set the JSSE provider. If not set,      * it uses system default.      */
 specifier|public
 specifier|final
@@ -381,6 +385,31 @@ parameter_list|()
 block|{
 return|return
 name|protocol
+return|;
+block|}
+comment|/**      * This parameter configures the cert alias used on server side      * this is useful when keystore has multiple certs      */
+specifier|public
+specifier|final
+name|void
+name|setCertAlias
+parameter_list|(
+name|String
+name|ctAlias
+parameter_list|)
+block|{
+name|certAlias
+operator|=
+name|ctAlias
+expr_stmt|;
+block|}
+comment|/**      * This parameter retrieves the cert alias specified on server side      */
+specifier|public
+name|String
+name|getCertAlias
+parameter_list|()
+block|{
+return|return
+name|certAlias
 return|;
 block|}
 block|}
