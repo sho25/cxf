@@ -77,11 +77,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
-operator|.
 name|security
 operator|.
-name|saml
+name|claims
 operator|.
 name|authorization
 operator|.
@@ -97,11 +95,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
-operator|.
 name|security
 operator|.
-name|saml
+name|claims
 operator|.
 name|authorization
 operator|.

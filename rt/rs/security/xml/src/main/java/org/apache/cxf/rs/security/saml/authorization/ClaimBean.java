@@ -21,6 +21,24 @@ name|authorization
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|security
+operator|.
+name|claims
+operator|.
+name|authorization
+operator|.
+name|ClaimMode
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
