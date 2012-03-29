@@ -85,16 +85,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URISyntaxException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|text
 operator|.
 name|SimpleDateFormat
@@ -2796,6 +2786,9 @@ name|response
 parameter_list|,
 name|Exchange
 name|exchange
+parameter_list|,
+name|boolean
+name|proxy
 parameter_list|)
 block|{
 comment|// higher level conduits such as FailoverTargetSelector need to
@@ -2822,8 +2815,6 @@ argument_list|(
 name|exchange
 argument_list|)
 expr_stmt|;
-try|try
-block|{
 name|String
 name|s
 init|=
@@ -2847,28 +2838,41 @@ condition|(
 name|s
 operator|!=
 literal|null
-condition|)
-block|{
+operator|&&
+operator|!
 name|state
 operator|.
-name|setBaseURI
-argument_list|(
-operator|new
-name|URI
+name|getBaseURI
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+operator|.
+name|equals
 argument_list|(
 name|s
 argument_list|)
+condition|)
+block|{
+comment|// usually the (failover) conduit change will result in a retry call
+comment|// which in turn will reset the base and current request URI.
+comment|// In some cases, such as the "upfront" load-balancing, etc, the retries
+comment|// won't be executed so it is necessary to reset the base address
+name|calculateNewRequestURI
+argument_list|(
+name|URI
+operator|.
+name|create
+argument_list|(
+name|s
+argument_list|)
+argument_list|,
+name|getCurrentURI
+argument_list|()
+argument_list|,
+name|proxy
 argument_list|)
 expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|URISyntaxException
-name|e
-parameter_list|)
-block|{
-comment|//ignore
 block|}
 block|}
 specifier|protected
