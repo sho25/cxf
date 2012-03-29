@@ -1280,6 +1280,12 @@ name|HeaderProcessor
 name|p
 init|=
 name|bus
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|bus
 operator|.
 name|getExtension
 argument_list|(

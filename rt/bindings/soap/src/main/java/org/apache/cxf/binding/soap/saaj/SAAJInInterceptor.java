@@ -1990,6 +1990,15 @@ name|message
 operator|.
 name|getExchange
 argument_list|()
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|message
+operator|.
+name|getExchange
+argument_list|()
 operator|.
 name|get
 argument_list|(
