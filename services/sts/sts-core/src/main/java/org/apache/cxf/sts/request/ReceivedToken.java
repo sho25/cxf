@@ -192,6 +192,8 @@ name|INVALID
 block|,
 name|CANCELLED
 block|,
+name|EXPIRED
+block|,
 name|NONE
 block|}
 empty_stmt|;

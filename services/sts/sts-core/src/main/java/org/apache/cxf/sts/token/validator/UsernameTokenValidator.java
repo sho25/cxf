@@ -941,6 +941,11 @@ name|secToken
 operator|==
 literal|null
 operator|||
+name|secToken
+operator|.
+name|isExpired
+argument_list|()
+operator|||
 operator|(
 name|secToken
 operator|.

@@ -1505,7 +1505,7 @@ argument_list|()
 operator|==
 name|STATE
 operator|.
-name|INVALID
+name|EXPIRED
 argument_list|)
 expr_stmt|;
 block|}
@@ -1680,7 +1680,7 @@ argument_list|()
 operator|==
 name|STATE
 operator|.
-name|INVALID
+name|EXPIRED
 argument_list|)
 expr_stmt|;
 block|}

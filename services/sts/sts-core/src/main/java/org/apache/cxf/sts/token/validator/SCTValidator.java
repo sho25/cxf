@@ -513,6 +513,15 @@ name|isExpired
 argument_list|()
 condition|)
 block|{
+name|validateTarget
+operator|.
+name|setState
+argument_list|(
+name|STATE
+operator|.
+name|EXPIRED
+argument_list|)
+expr_stmt|;
 name|LOG
 operator|.
 name|fine
