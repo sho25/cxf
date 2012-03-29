@@ -5151,16 +5151,7 @@ name|addRequestProperty
 argument_list|(
 literal|"Content-Type"
 argument_list|,
-literal|"xxx/xxx"
-argument_list|)
-expr_stmt|;
-name|urlConnection
-operator|.
-name|addRequestProperty
-argument_list|(
-literal|"Accept"
-argument_list|,
-literal|"*/*"
+literal|"MissingSeparator"
 argument_list|)
 expr_stmt|;
 name|urlConnection
