@@ -910,6 +910,13 @@ argument_list|(
 name|hash
 argument_list|)
 expr_stmt|;
+name|response
+operator|.
+name|setSecurityToken
+argument_list|(
+name|secToken
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 if|if

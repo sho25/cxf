@@ -761,6 +761,13 @@ name|getId
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|response
+operator|.
+name|setSecurityToken
+argument_list|(
+name|secToken
+argument_list|)
+expr_stmt|;
 block|}
 comment|// Marshall the received JAXB object into a DOM Element
 name|Element
