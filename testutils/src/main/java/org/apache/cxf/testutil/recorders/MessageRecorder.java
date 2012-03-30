@@ -11,11 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
+name|testutil
 operator|.
-name|ws
-operator|.
-name|util
+name|recorders
 package|;
 end_package
 
