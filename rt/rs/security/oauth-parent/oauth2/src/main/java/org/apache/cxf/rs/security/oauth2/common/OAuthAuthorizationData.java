@@ -56,7 +56,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This bean represents a resource owner authorization challenge.  * Typically, an HTML view will be returned to a resource owner who  * will authorize or deny the third-party consumer  */
+comment|/**  * This bean represents a resource owner authorization challenge.  * Typically, an HTML view will be returned to a resource owner who  * will authorize or deny the third-party client  */
 end_comment
 
 begin_class
@@ -139,6 +139,7 @@ specifier|public
 name|OAuthAuthorizationData
 parameter_list|()
 block|{     }
+comment|/**      * Sets the client application name      * @return application name      */
 specifier|public
 name|String
 name|getApplicationName
@@ -148,6 +149,7 @@ return|return
 name|applicationName
 return|;
 block|}
+comment|/**      * Sets the client application name      * @param applicationName application name      */
 specifier|public
 name|void
 name|setApplicationName
@@ -163,6 +165,7 @@ operator|=
 name|applicationName
 expr_stmt|;
 block|}
+comment|/**      * Gets the list of scopes translated to {@link Permission} instances      * requested by the client application      * @return the list of scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -177,6 +180,7 @@ return|return
 name|permissions
 return|;
 block|}
+comment|/**      * Gets the list of scopes translated to {@link Permission} instances      * @return the list of scopses      **/
 specifier|public
 name|void
 name|setPermissions
@@ -197,6 +201,7 @@ operator|=
 name|permissions
 expr_stmt|;
 block|}
+comment|/**      * Sets the authenticity token linking the authorization       * challenge to the current end user session      *       * @param authenticityToken the session authenticity token       */
 specifier|public
 name|void
 name|setAuthenticityToken
@@ -212,6 +217,7 @@ operator|=
 name|authenticityToken
 expr_stmt|;
 block|}
+comment|/**      * Gets the authenticity token linking the authorization       * challenge to the current end user session      * @return the session authenticity token      */
 specifier|public
 name|String
 name|getAuthenticityToken
@@ -221,6 +227,7 @@ return|return
 name|authenticityToken
 return|;
 block|}
+comment|/**      * Sets the application description      * @param applicationDescription the description      */
 specifier|public
 name|void
 name|setApplicationDescription
@@ -236,6 +243,7 @@ operator|=
 name|applicationDescription
 expr_stmt|;
 block|}
+comment|/**      * Gets the application description      * @return the description      */
 specifier|public
 name|String
 name|getApplicationDescription
@@ -245,6 +253,7 @@ return|return
 name|applicationDescription
 return|;
 block|}
+comment|/**      * Sets the client id which needs to be retained in a hidden form field      * @param clientId the client id      */
 specifier|public
 name|void
 name|setClientId
@@ -260,6 +269,7 @@ operator|=
 name|clientId
 expr_stmt|;
 block|}
+comment|/**      * Gets the client id which needs to be retained in a hidden form field      * @return the client id      */
 specifier|public
 name|String
 name|getClientId
@@ -269,6 +279,7 @@ return|return
 name|clientId
 return|;
 block|}
+comment|/**      * Sets the redirect uri which needs to be retained in a hidden form field      * @param redirectUri the redirect uri      */
 specifier|public
 name|void
 name|setRedirectUri
@@ -284,6 +295,7 @@ operator|=
 name|redirectUri
 expr_stmt|;
 block|}
+comment|/**      * Gets the redirect uri which needs to be retained in a hidden form field      * @return the redirect uri      */
 specifier|public
 name|String
 name|getRedirectUri
@@ -293,6 +305,7 @@ return|return
 name|redirectUri
 return|;
 block|}
+comment|/**      * Sets the client state token which needs to be retained in a hidden form field      * @param state the state      */
 specifier|public
 name|void
 name|setState
@@ -308,6 +321,7 @@ operator|=
 name|state
 expr_stmt|;
 block|}
+comment|/**      * Gets the client state token which needs to be retained in a hidden form field      * @return      */
 specifier|public
 name|String
 name|getState
@@ -317,6 +331,7 @@ return|return
 name|state
 return|;
 block|}
+comment|/**      * Sets the application web URI      * @param applicationWebUri the application URI      */
 specifier|public
 name|void
 name|setApplicationWebUri
@@ -332,6 +347,7 @@ operator|=
 name|applicationWebUri
 expr_stmt|;
 block|}
+comment|/**      * Gets the application web URI      * @return the application URI      */
 specifier|public
 name|String
 name|getApplicationWebUri
@@ -341,6 +357,7 @@ return|return
 name|applicationWebUri
 return|;
 block|}
+comment|/**      * Sets the application logo URI      * @param applicationLogoUri the logo URI      */
 specifier|public
 name|void
 name|setApplicationLogoUri
@@ -356,6 +373,7 @@ operator|=
 name|applicationLogoUri
 expr_stmt|;
 block|}
+comment|/**      * Gets the application logo URI      * @return the logo URI      */
 specifier|public
 name|String
 name|getApplicationLogoUri
@@ -365,6 +383,7 @@ return|return
 name|applicationLogoUri
 return|;
 block|}
+comment|/**      * Sets the requested scope which needs to be retained in a hidden form field      * @param proposedScope the scope      */
 specifier|public
 name|void
 name|setProposedScope
@@ -380,6 +399,7 @@ operator|=
 name|proposedScope
 expr_stmt|;
 block|}
+comment|/**      * Gets the requested scope which needs to be retained in a hidden form field      * @return the scope      */
 specifier|public
 name|String
 name|getProposedScope
@@ -389,6 +409,7 @@ return|return
 name|proposedScope
 return|;
 block|}
+comment|/**      * Sets the absolute URI where the authorization decision data       * will need to be sent to      * @param replyTo authorization decision handler URI      */
 specifier|public
 name|void
 name|setReplyTo
@@ -404,6 +425,7 @@ operator|=
 name|replyTo
 expr_stmt|;
 block|}
+comment|/**      * Gets the absolute URI where the authorization decision data       * will need to be sent to      * @return authorization decision handler URI      */
 specifier|public
 name|String
 name|getReplyTo

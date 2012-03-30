@@ -22,7 +22,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Base Token representation  */
+comment|/**  * Represents the extended client view of {@link AccessToken}.  * It may contain the actual scope value assigned to the access token,  * the refresh token key, and other properties such as when this token   * will expire, etc.  */
 end_comment
 
 begin_class
@@ -58,6 +58,7 @@ name|tokenKey
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the actual scope assigned to the access token.      * For example, it can be down-scoped in which case the client      * may need to adjust the way it works with the end user.       * @param approvedScope the actual scope      */
 specifier|public
 name|void
 name|setApprovedScope
@@ -73,6 +74,7 @@ operator|=
 name|approvedScope
 expr_stmt|;
 block|}
+comment|/**      * Gets the actual scope assigned to the access token.      * @return the scope      */
 specifier|public
 name|String
 name|getApprovedScope
@@ -82,6 +84,7 @@ return|return
 name|scope
 return|;
 block|}
+comment|/**      * Sets the refresh token key the client can use to obtain a new      * access token      * @param refreshToken the refresh token      */
 specifier|public
 name|void
 name|setRefreshToken
@@ -97,6 +100,7 @@ operator|=
 name|refreshToken
 expr_stmt|;
 block|}
+comment|/**      * Gets the refresh token key the client can use to obtain a new      * access token      * @return the refresh token      */
 specifier|public
 name|String
 name|getRefreshToken

@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Captures the information associated with the code grant registration request.  */
+comment|/**  * Captures the information associated with the access token request.  */
 end_comment
 
 begin_class
@@ -86,6 +86,7 @@ specifier|private
 name|UserSubject
 name|subject
 decl_stmt|;
+comment|/**      * Sets the {@link Client} instance      * @param client the client      */
 specifier|public
 name|void
 name|setClient
@@ -101,6 +102,7 @@ operator|=
 name|client
 expr_stmt|;
 block|}
+comment|/**      * Returns the {@link Client} instance      * @return the client.      */
 specifier|public
 name|Client
 name|getClient
@@ -110,6 +112,7 @@ return|return
 name|client
 return|;
 block|}
+comment|/**      * Sets the requested scope      * @param requestedScope the scope      */
 specifier|public
 name|void
 name|setRequestedScope
@@ -128,6 +131,7 @@ operator|=
 name|requestedScope
 expr_stmt|;
 block|}
+comment|/**      * Gets the requested scope      * @return the scope      */
 specifier|public
 name|List
 argument_list|<
@@ -140,54 +144,7 @@ return|return
 name|requestedScope
 return|;
 block|}
-specifier|public
-name|void
-name|setSubject
-parameter_list|(
-name|UserSubject
-name|subject
-parameter_list|)
-block|{
-name|this
-operator|.
-name|subject
-operator|=
-name|subject
-expr_stmt|;
-block|}
-specifier|public
-name|UserSubject
-name|getSubject
-parameter_list|()
-block|{
-return|return
-name|subject
-return|;
-block|}
-specifier|public
-name|void
-name|setGrantType
-parameter_list|(
-name|String
-name|grantType
-parameter_list|)
-block|{
-name|this
-operator|.
-name|grantType
-operator|=
-name|grantType
-expr_stmt|;
-block|}
-specifier|public
-name|String
-name|getGrantType
-parameter_list|()
-block|{
-return|return
-name|grantType
-return|;
-block|}
+comment|/**      * Sets the scope explicitly approved by the end user      * @param approvedScope the approved scope      */
 specifier|public
 name|void
 name|setApprovedScope
@@ -206,6 +163,7 @@ operator|=
 name|approvedScope
 expr_stmt|;
 block|}
+comment|/**      * Gets the scope explicitly approved by the end user      * @return the scope      */
 specifier|public
 name|List
 argument_list|<
@@ -216,6 +174,58 @@ parameter_list|()
 block|{
 return|return
 name|approvedScope
+return|;
+block|}
+comment|/**      * Sets the {@link UserSubject) instance capturing       * the information about the end user       * @param subject the end user subject      */
+specifier|public
+name|void
+name|setSubject
+parameter_list|(
+name|UserSubject
+name|subject
+parameter_list|)
+block|{
+name|this
+operator|.
+name|subject
+operator|=
+name|subject
+expr_stmt|;
+block|}
+comment|/**      * Gets the {@link UserSubject) instance capturing       * the information about the end user      * @return the subject      */
+specifier|public
+name|UserSubject
+name|getSubject
+parameter_list|()
+block|{
+return|return
+name|subject
+return|;
+block|}
+comment|/**      * Sets the type of grant which is exchanged for this token      * @param grantType the grant type      */
+specifier|public
+name|void
+name|setGrantType
+parameter_list|(
+name|String
+name|grantType
+parameter_list|)
+block|{
+name|this
+operator|.
+name|grantType
+operator|=
+name|grantType
+expr_stmt|;
+block|}
+comment|/**      * Gets the type of grant which is exchanged for this token      * @return the grant type      */
+specifier|public
+name|String
+name|getGrantType
+parameter_list|()
+block|{
+return|return
+name|grantType
 return|;
 block|}
 block|}

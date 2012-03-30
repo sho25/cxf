@@ -286,7 +286,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The utility class for simplifying making OAuth request and access token  * requests as well as for creating Authorization OAuth headers  */
+comment|/**  * The utility class for simplifying working with OAuth servers  */
 end_comment
 
 begin_class
@@ -299,7 +299,7 @@ specifier|private
 name|OAuthClientUtils
 parameter_list|()
 block|{              }
-comment|/**      * Returns URI of the authorization service with the query parameter containing       * the request token key       * @param authorizationServiceURI the service URI      * @param requestToken the request token key      * @return      */
+comment|/**      * Builds a complete URI for redirecting to OAuth Authorization Service      * @param authorizationServiceURI the service endpoint address      * @param clientId client registration id      * @param redirectUri the uri the authorization code will be posted to      * @param state the client state, example the key or the encrypted token       *              representing the info about the current end user's request      * @scope scope the optional scope; if not specified then the authorization      *              service will allocate the default scope                     * @return authorization service URI      */
 specifier|public
 specifier|static
 name|URI
@@ -378,6 +378,7 @@ name|build
 argument_list|()
 return|;
 block|}
+comment|/**      * Creates the builder for building OAuth AuthorizationService URIs      * @param authorizationServiceURI the service endpoint address       * @param clientId client registration id      * @param scope the optional scope; if not specified then the authorization      *              service will allocate the default scope      * @return the builder      */
 specifier|public
 specifier|static
 name|UriBuilder
@@ -458,6 +459,7 @@ return|return
 name|ub
 return|;
 block|}
+comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client       * @param grant {@link AccessTokenGrant} grant      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -488,6 +490,7 @@ literal|true
 argument_list|)
 return|;
 block|}
+comment|/**      * Obtains the access token from OAuth AccessToken Service       * @param accessTokenServiceUri the AccessToken endpoint address      * @param consumer {@link Consumer} representing the registered client       * @param grant {@link AccessTokenGrant} grant      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -552,6 +555,7 @@ literal|true
 argument_list|)
 return|;
 block|}
+comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload        * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -584,6 +588,13 @@ name|toMap
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|consumer
+operator|!=
+literal|null
+condition|)
+block|{
 if|if
 condition|(
 name|setAuthorizationHeader
@@ -695,6 +706,12 @@ name|getSecret
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+comment|// in this case the AccessToken service is expected to find a mapping between
+comment|// the authenticated credentials and the client registration id
 block|}
 name|Response
 name|response
@@ -891,7 +908,7 @@ name|SERVER_ERROR
 argument_list|)
 throw|;
 block|}
-comment|/**      * Creates OAuth Authorization header      * @return the header value      */
+comment|/**      * Creates OAuth Authorization header for accessing the end user's resources      * @param consumer represents the registered client      * @param accessToken the access token        * @return the header value      */
 specifier|public
 specifier|static
 name|String

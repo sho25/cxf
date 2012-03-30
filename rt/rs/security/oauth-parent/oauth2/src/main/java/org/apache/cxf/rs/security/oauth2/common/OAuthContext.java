@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Captures the information which custom filters may use to further protect the endpoints  */
+comment|/**  * Captures the information about the current client request  * which custom filters may use to further protect the endpoints  */
 end_comment
 
 begin_class
@@ -100,6 +100,7 @@ operator|=
 name|tokenGrantType
 expr_stmt|;
 block|}
+comment|/**      * Gets the {@link UserSubject} representing the end user authorizing the client       * at the authorization grant creation time       * @return the subject      */
 specifier|public
 name|UserSubject
 name|getSubject
@@ -109,6 +110,7 @@ return|return
 name|subject
 return|;
 block|}
+comment|/**      * Gets the list of the permissions assigned to the current access token      * @return the permissions      */
 specifier|public
 name|List
 argument_list|<
@@ -126,6 +128,7 @@ name|permissions
 argument_list|)
 return|;
 block|}
+comment|/**      * Returns the grant type which was used to obtain the access token      * the client is using now during the current request      * @return the grant type      */
 specifier|public
 name|String
 name|getTokenGrantType

@@ -181,7 +181,7 @@ operator|=
 name|applicationWebUri
 expr_stmt|;
 block|}
-comment|/**      * Gets the consumer registration id      * @return the consumer key      */
+comment|/**      * Gets the client registration id      * @return the consumer key      */
 specifier|public
 name|String
 name|getClientId
@@ -191,7 +191,7 @@ return|return
 name|clientId
 return|;
 block|}
-comment|/**      * Gets the secret key      * @return the secret key      */
+comment|/**      * Gets the client secret      * @return the secret      */
 specifier|public
 name|String
 name|getClientSecret
@@ -227,7 +227,7 @@ operator|=
 name|applicationName
 expr_stmt|;
 block|}
-comment|/**      * Gets the public URI of the third-party application.      * For example, this property can be used to validate       * request token callbacks      * @return the application URI      */
+comment|/**      * Gets the public URI of the third-party application.      * @return the application URI      */
 specifier|public
 name|String
 name|getApplicationWebUri
@@ -237,7 +237,7 @@ return|return
 name|applicationWebUri
 return|;
 block|}
-comment|/**      * Sets the public URI of the third-party application.      */
+comment|/**      * Sets the public URI of the third-party application.      * @param applicationWebUri the application URI      */
 specifier|public
 name|void
 name|setApplicationWebUri
@@ -253,7 +253,7 @@ operator|=
 name|applicationWebUri
 expr_stmt|;
 block|}
-comment|/**      * Sets the description of the third-party application.      */
+comment|/**      * Sets the description of the third-party application.      * @param applicationDescription the description      */
 specifier|public
 name|void
 name|setApplicationDescription
@@ -279,7 +279,7 @@ return|return
 name|applicationDescription
 return|;
 block|}
-comment|/**      * Sets the uri pointing to a client logo image.      * At the moment it must be a relative URI      * @param logoPath      */
+comment|/**      * Sets the URI pointing to a logo image of the client application      * @param logoPath the logo URI      */
 specifier|public
 name|void
 name|setApplicationLogoUri
@@ -295,6 +295,7 @@ operator|=
 name|logoPath
 expr_stmt|;
 block|}
+comment|/**      * Get the URI pointing to a logo image of the client application      * @return the logo URI      */
 specifier|public
 name|String
 name|getApplicationLogoUri
@@ -304,6 +305,7 @@ return|return
 name|applicationLogoUri
 return|;
 block|}
+comment|/**      * Sets the confidentiality status of this client application.      * This can be used to restrict which OAuth2 flows this client      * can participate in.      *       * @param isConf true if the client is confidential      */
 specifier|public
 name|void
 name|setConfidential
@@ -319,6 +321,7 @@ operator|=
 name|isConf
 expr_stmt|;
 block|}
+comment|/**      * Gets the confidentiality status of this client application.      * @return the confidentiality status      */
 specifier|public
 name|boolean
 name|isConfidential
@@ -328,6 +331,7 @@ return|return
 name|isConfidential
 return|;
 block|}
+comment|/**      * Sets a list of URIs the AuthorizationService      * may return the authorization code to.      * @param redirectUris the redirect uris      */
 specifier|public
 name|void
 name|setRedirectUris
@@ -346,6 +350,7 @@ operator|=
 name|redirectUris
 expr_stmt|;
 block|}
+comment|/**      * Gets a list of URIs the AuthorizationService      * may return the authorization code to      * @return the redirect uris      */
 specifier|public
 name|List
 argument_list|<
@@ -358,6 +363,7 @@ return|return
 name|redirectUris
 return|;
 block|}
+comment|/**      * Sets the list of access token grant types this client      * can use to obtain the access tokens.      * @param allowedGrantTypes the list of grant types      */
 specifier|public
 name|void
 name|setAllowedGrantTypes
@@ -376,6 +382,7 @@ operator|=
 name|allowedGrantTypes
 expr_stmt|;
 block|}
+comment|/**      * Gets the list of access token grant types this client      * can use to obtain the access tokens.      * @return the list of grant types      */
 specifier|public
 name|List
 argument_list|<
@@ -388,6 +395,7 @@ return|return
 name|allowedGrantTypes
 return|;
 block|}
+comment|/**      * Sets the {@link UserSubject} representing this Client       * authentication, may be setup during the registration.       *      * @param subject the user subject      */
 specifier|public
 name|void
 name|setSubject
@@ -403,6 +411,7 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
+comment|/**      * Gets the {@link UserSubject} representing this Client       * authentication      * @return the user subject      */
 specifier|public
 name|UserSubject
 name|getSubject

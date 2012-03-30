@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base Token representation  */
+comment|/**  * Base Access Token representation  */
 end_comment
 
 begin_class
@@ -96,6 +96,7 @@ operator|=
 name|tokenKey
 expr_stmt|;
 block|}
+comment|/**      * Returns the token type such as bearer, mac, etc      * @return the type      */
 specifier|public
 name|String
 name|getTokenType
@@ -115,6 +116,7 @@ return|return
 name|tokenKey
 return|;
 block|}
+comment|/**      * Sets token parameters      * @param parameters the token parameters      */
 specifier|public
 name|void
 name|setParameters
@@ -135,6 +137,7 @@ operator|=
 name|parameters
 expr_stmt|;
 block|}
+comment|/**      * Gets token parameters       * @return      */
 specifier|public
 name|Map
 argument_list|<
