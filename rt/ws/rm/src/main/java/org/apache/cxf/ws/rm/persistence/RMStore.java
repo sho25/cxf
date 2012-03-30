@@ -57,22 +57,6 @@ name|ws
 operator|.
 name|rm
 operator|.
-name|ProtocolVariation
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|rm
-operator|.
 name|SourceSequence
 import|;
 end_import
@@ -122,9 +106,6 @@ name|getSourceSequence
 parameter_list|(
 name|Identifier
 name|seq
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 function_decl|;
 comment|/**      * Retrieve the destination sequence with the specified identifier from persistent store.       * @param seq the sequence      * @return the sequence if present; otherwise null      */
@@ -133,9 +114,6 @@ name|getDestinationSequence
 parameter_list|(
 name|Identifier
 name|seq
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 function_decl|;
 comment|/**      * Remove the source sequence with the specified identifier from persistent store.       * @param seq the sequence      */
@@ -163,9 +141,6 @@ name|getSourceSequences
 parameter_list|(
 name|String
 name|endpointIdentifier
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 function_decl|;
 comment|/**      * Retrieves all sequences managed by the identified RM destination endpoint       * from persistent store.      *       * @param endpointIdentifier the identifier for the destination      * @return the collection of sequences      */
@@ -177,9 +152,6 @@ name|getDestinationSequences
 parameter_list|(
 name|String
 name|endpointIdentifier
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 function_decl|;
 comment|/**      * Retrieves the outbound/inbound messages stored for the source/destination sequence with       * the given identifier.      * @param sid the source sequence identifier      * @param outbound true if the message is outbound      * @return the collection of messages      * *       */

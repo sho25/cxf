@@ -492,6 +492,8 @@ literal|"ENDPOINT_ID VARCHAR(1024), "
 operator|+
 literal|"ACKNOWLEDGED BLOB, "
 operator|+
+literal|"PROTOCOL_VERSION VARCHAR(256), "
+operator|+
 literal|"PRIMARY KEY (SEQ_ID))"
 decl_stmt|;
 specifier|private
@@ -513,6 +515,8 @@ operator|+
 literal|"OFFERING_SEQ_ID VARCHAR(256), "
 operator|+
 literal|"ENDPOINT_ID VARCHAR(1024), "
+operator|+
+literal|"PROTOCOL_VERSION VARCHAR(256), "
 operator|+
 literal|"PRIMARY KEY (SEQ_ID))"
 decl_stmt|;
@@ -556,7 +560,9 @@ specifier|final
 name|String
 name|CREATE_DEST_SEQUENCE_STMT_STR
 init|=
-literal|"INSERT INTO CXF_RM_DEST_SEQUENCES (SEQ_ID, ACKS_TO, ENDPOINT_ID) VALUES(?, ?, ?)"
+literal|"INSERT INTO CXF_RM_DEST_SEQUENCES (SEQ_ID, ACKS_TO, ENDPOINT_ID, PROTOCOL_VERSION) "
+operator|+
+literal|"VALUES(?, ?, ?, ?)"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -564,7 +570,7 @@ specifier|final
 name|String
 name|CREATE_SRC_SEQUENCE_STMT_STR
 init|=
-literal|"INSERT INTO CXF_RM_SRC_SEQUENCES VALUES(?, 1, '0', ?, ?, ?)"
+literal|"INSERT INTO CXF_RM_SRC_SEQUENCES VALUES(?, 1, '0', ?, ?, ?, ?)"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -620,7 +626,7 @@ specifier|final
 name|String
 name|SELECT_DEST_SEQUENCE_STMT_STR
 init|=
-literal|"SELECT ACKS_TO, LAST_MSG_NO, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
+literal|"SELECT ACKS_TO, LAST_MSG_NO, PROTOCOL_VERSION, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
 operator|+
 literal|"WHERE SEQ_ID = ?"
 decl_stmt|;
@@ -630,7 +636,7 @@ specifier|final
 name|String
 name|SELECT_SRC_SEQUENCE_STMT_STR
 init|=
-literal|"SELECT CUR_MSG_NO, LAST_MSG, EXPIRY, OFFERING_SEQ_ID FROM CXF_RM_SRC_SEQUENCES "
+literal|"SELECT CUR_MSG_NO, LAST_MSG, EXPIRY, OFFERING_SEQ_ID, PROTOCOL_VERSION FROM CXF_RM_SRC_SEQUENCES "
 operator|+
 literal|"WHERE SEQ_ID = ?"
 decl_stmt|;
@@ -640,7 +646,7 @@ specifier|final
 name|String
 name|SELECT_DEST_SEQUENCES_STMT_STR
 init|=
-literal|"SELECT SEQ_ID, ACKS_TO, LAST_MSG_NO, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
+literal|"SELECT SEQ_ID, ACKS_TO, LAST_MSG_NO, PROTOCOL_VERSION, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
 operator|+
 literal|"WHERE ENDPOINT_ID = ?"
 decl_stmt|;
@@ -650,9 +656,9 @@ specifier|final
 name|String
 name|SELECT_SRC_SEQUENCES_STMT_STR
 init|=
-literal|"SELECT SEQ_ID, CUR_MSG_NO, LAST_MSG, EXPIRY, OFFERING_SEQ_ID FROM CXF_RM_SRC_SEQUENCES "
+literal|"SELECT SEQ_ID, CUR_MSG_NO, LAST_MSG, EXPIRY, OFFERING_SEQ_ID, PROTOCOL_VERSION "
 operator|+
-literal|"WHERE ENDPOINT_ID = ?"
+literal|"FROM CXF_RM_SRC_SEQUENCES WHERE ENDPOINT_ID = ?"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -986,6 +992,17 @@ operator|.
 name|getEndpointIdentifier
 argument_list|()
 decl_stmt|;
+name|String
+name|protocolVersion
+init|=
+name|encodeProtocolVersion
+argument_list|(
+name|seq
+operator|.
+name|getProtocol
+argument_list|()
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
 name|LOG
@@ -1079,6 +1096,15 @@ argument_list|)
 expr_stmt|;
 name|createDestSequenceStmt
 operator|.
+name|setString
+argument_list|(
+literal|4
+argument_list|,
+name|protocolVersion
+argument_list|)
+expr_stmt|;
+name|createDestSequenceStmt
+operator|.
 name|execute
 argument_list|()
 expr_stmt|;
@@ -1130,6 +1156,17 @@ name|seq
 operator|.
 name|getEndpointIdentifier
 argument_list|()
+decl_stmt|;
+name|String
+name|protocolVersion
+init|=
+name|encodeProtocolVersion
+argument_list|(
+name|seq
+operator|.
+name|getProtocol
+argument_list|()
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -1258,6 +1295,15 @@ argument_list|)
 expr_stmt|;
 name|createSrcSequenceStmt
 operator|.
+name|setString
+argument_list|(
+literal|5
+argument_list|,
+name|protocolVersion
+argument_list|)
+expr_stmt|;
+name|createSrcSequenceStmt
+operator|.
 name|execute
 argument_list|()
 expr_stmt|;
@@ -1289,9 +1335,6 @@ name|getDestinationSequence
 parameter_list|(
 name|Identifier
 name|sid
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 if|if
@@ -1388,6 +1431,19 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+name|ProtocolVariation
+name|pv
+init|=
+name|decodeProtocolVersion
+argument_list|(
+name|res
+operator|.
+name|getString
+argument_list|(
+literal|3
+argument_list|)
+argument_list|)
+decl_stmt|;
 name|InputStream
 name|is
 init|=
@@ -1395,7 +1451,7 @@ name|res
 operator|.
 name|getBinaryStream
 argument_list|(
-literal|3
+literal|4
 argument_list|)
 decl_stmt|;
 name|SequenceAcknowledgement
@@ -1435,7 +1491,7 @@ name|lm
 argument_list|,
 name|ack
 argument_list|,
-name|protocol
+name|pv
 argument_list|)
 return|;
 block|}
@@ -1479,9 +1535,6 @@ name|getSourceSequence
 parameter_list|(
 name|Identifier
 name|sid
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 if|if
@@ -1638,6 +1691,19 @@ name|oidValue
 argument_list|)
 expr_stmt|;
 block|}
+name|ProtocolVariation
+name|pv
+init|=
+name|decodeProtocolVersion
+argument_list|(
+name|res
+operator|.
+name|getString
+argument_list|(
+literal|5
+argument_list|)
+argument_list|)
+decl_stmt|;
 return|return
 operator|new
 name|SourceSequence
@@ -1652,7 +1718,7 @@ name|cmn
 argument_list|,
 name|lm
 argument_list|,
-name|protocol
+name|pv
 argument_list|)
 return|;
 block|}
@@ -1838,9 +1904,6 @@ name|getDestinationSequences
 parameter_list|(
 name|String
 name|endpointIdentifier
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 if|if
@@ -1966,6 +2029,19 @@ argument_list|(
 literal|3
 argument_list|)
 decl_stmt|;
+name|ProtocolVariation
+name|pv
+init|=
+name|decodeProtocolVersion
+argument_list|(
+name|res
+operator|.
+name|getString
+argument_list|(
+literal|4
+argument_list|)
+argument_list|)
+decl_stmt|;
 name|InputStream
 name|is
 init|=
@@ -1973,7 +2049,7 @@ name|res
 operator|.
 name|getBinaryStream
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 decl_stmt|;
 name|SequenceAcknowledgement
@@ -2015,7 +2091,7 @@ name|lm
 argument_list|,
 name|ack
 argument_list|,
-name|protocol
+name|pv
 argument_list|)
 decl_stmt|;
 name|seqs
@@ -2069,9 +2145,6 @@ name|getSourceSequences
 parameter_list|(
 name|String
 name|endpointIdentifier
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 if|if
@@ -2253,6 +2326,19 @@ name|oidValue
 argument_list|)
 expr_stmt|;
 block|}
+name|ProtocolVariation
+name|pv
+init|=
+name|decodeProtocolVersion
+argument_list|(
+name|res
+operator|.
+name|getString
+argument_list|(
+literal|6
+argument_list|)
+argument_list|)
+decl_stmt|;
 name|SourceSequence
 name|seq
 init|=
@@ -2269,7 +2355,7 @@ name|cmn
 argument_list|,
 name|lm
 argument_list|,
-name|protocol
+name|pv
 argument_list|)
 decl_stmt|;
 name|seqs
@@ -3968,6 +4054,100 @@ name|now
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|protected
+specifier|static
+name|String
+name|encodeProtocolVersion
+parameter_list|(
+name|ProtocolVariation
+name|pv
+parameter_list|)
+block|{
+return|return
+name|pv
+operator|.
+name|getCodec
+argument_list|()
+operator|.
+name|getWSRMNamespace
+argument_list|()
+operator|+
+literal|' '
+operator|+
+name|pv
+operator|.
+name|getCodec
+argument_list|()
+operator|.
+name|getWSANamespace
+argument_list|()
+return|;
+block|}
+specifier|protected
+specifier|static
+name|ProtocolVariation
+name|decodeProtocolVersion
+parameter_list|(
+name|String
+name|pv
+parameter_list|)
+block|{
+if|if
+condition|(
+literal|null
+operator|!=
+name|pv
+condition|)
+block|{
+name|int
+name|d
+init|=
+name|pv
+operator|.
+name|indexOf
+argument_list|(
+literal|' '
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|d
+operator|>
+literal|0
+condition|)
+block|{
+return|return
+name|ProtocolVariation
+operator|.
+name|findVariant
+argument_list|(
+name|pv
+operator|.
+name|substring
+argument_list|(
+literal|0
+argument_list|,
+name|d
+argument_list|)
+argument_list|,
+name|pv
+operator|.
+name|substring
+argument_list|(
+name|d
+operator|+
+literal|1
+argument_list|)
+argument_list|)
+return|;
+block|}
+block|}
+return|return
+name|ProtocolVariation
+operator|.
+name|RM10WSA200408
+return|;
 block|}
 specifier|private
 specifier|static

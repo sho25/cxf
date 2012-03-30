@@ -588,9 +588,6 @@ name|getDestinationSequences
 parameter_list|(
 name|String
 name|endpointIdentifier
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub
@@ -626,9 +623,6 @@ name|getSourceSequences
 parameter_list|(
 name|String
 name|endpointIdentifier
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub
@@ -707,9 +701,6 @@ name|getSourceSequence
 parameter_list|(
 name|Identifier
 name|seq
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub
@@ -723,9 +714,6 @@ name|getDestinationSequence
 parameter_list|(
 name|Identifier
 name|seq
-parameter_list|,
-name|ProtocolVariation
-name|protocol
 parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub

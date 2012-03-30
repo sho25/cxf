@@ -61,6 +61,13 @@ name|SAVED_CONTENT
 init|=
 literal|"org.apache.cxf.ws.rm.content"
 decl_stmt|;
+specifier|static
+specifier|final
+name|String
+name|RM_PROTOCOL_VARIATION
+init|=
+literal|"org.apache.cxf.ws.rm.protocol"
+decl_stmt|;
 comment|// keep this constant in the ws-rm package until it finds a general use outside of ws-rm
 specifier|static
 specifier|final
