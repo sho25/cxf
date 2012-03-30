@@ -429,7 +429,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-literal|"No XmlSchma in SchemaInfo"
+literal|"No XmlSchema in SchemaInfo"
 argument_list|)
 throw|;
 block|}
