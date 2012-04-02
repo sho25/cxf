@@ -157,6 +157,10 @@ name|OAuthUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * The "client_credentials" grant handler  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -201,9 +205,8 @@ argument_list|(
 name|client
 argument_list|)
 expr_stmt|;
-comment|// the OAuth filter will use Client.getLoginName() to initialize
-comment|// the Principal when setting up the security context
-comment|// TODO: consider setting the UserSubject representing the authenticated Client instead
+comment|// the OAuth filter will use Client.getUserSubject()
+comment|// to initialize the request security context
 return|return
 name|doCreateAccessToken
 argument_list|(

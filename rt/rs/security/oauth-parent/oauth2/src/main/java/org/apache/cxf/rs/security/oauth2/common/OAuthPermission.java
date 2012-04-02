@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Provides the complete information about a given opaque permission.  */
+comment|/**  * Provides the complete information about a given opaque permission.  * For example, a scope parameter such as "read_calendar" will be  * translated into the instance of this class in order to provide  * the human readable description and optionally restrict it to  * a limited set of HTTP verbs and request URIs  */
 end_comment
 
 begin_class
@@ -94,6 +94,7 @@ name|description
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Sets the optional list of HTTP verbs, example,      * "GET" and "POST", etc      * @param httpVerbs the list of HTTP verbs      */
 specifier|public
 name|void
 name|setHttpVerbs
@@ -112,6 +113,7 @@ operator|=
 name|httpVerbs
 expr_stmt|;
 block|}
+comment|/**      * Gets the optional list of HTTP verbs      * @return the list of HTTP verbs      */
 specifier|public
 name|List
 argument_list|<
@@ -124,6 +126,7 @@ return|return
 name|httpVerbs
 return|;
 block|}
+comment|/**      * Sets the optional list of relative request URIs      * @param uri the list of URIs      */
 specifier|public
 name|void
 name|setUris
@@ -142,6 +145,7 @@ operator|=
 name|uri
 expr_stmt|;
 block|}
+comment|/**      * Gets the optional list of relative request URIs      * @return the list of URIs      */
 specifier|public
 name|List
 argument_list|<

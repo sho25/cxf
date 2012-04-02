@@ -104,7 +104,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Authorization Code Token representation  */
+comment|/**  * Base Authorization Code Grant representation, captures the code   * and the redirect URI this code has been returned to, visible to the client  */
 end_comment
 
 begin_class
@@ -160,6 +160,7 @@ name|toString
 argument_list|()
 expr_stmt|;
 block|}
+comment|/**      * Sets the redirect URI, if set then the client is expected to       * include the same URI during the access token request      * @param redirectUri redirect URI      */
 specifier|public
 name|void
 name|setRedirectUri
@@ -175,6 +176,7 @@ operator|=
 name|redirectUri
 expr_stmt|;
 block|}
+comment|/**      * Gets the redirect URI      * @return the redirect URI      */
 specifier|public
 name|String
 name|getRedirectUri
@@ -184,6 +186,7 @@ return|return
 name|redirectUri
 return|;
 block|}
+comment|/**      * Gets the authorization code      * @return the code      */
 specifier|public
 name|String
 name|getCode
@@ -193,6 +196,7 @@ return|return
 name|code
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|String
 name|getType
@@ -204,6 +208,7 @@ operator|.
 name|AUTHORIZATION_CODE_GRANT
 return|;
 block|}
+comment|/**      * {@inheritDoc}      */
 specifier|public
 name|MultivaluedMap
 argument_list|<

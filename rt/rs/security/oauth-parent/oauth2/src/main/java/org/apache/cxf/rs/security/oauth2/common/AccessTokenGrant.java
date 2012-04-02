@@ -44,7 +44,7 @@ specifier|public
 interface|interface
 name|AccessTokenGrant
 block|{
-comment|/**      * Returns the token grant type, example, "authorization_code"      * @return      */
+comment|/**      * Returns the token grant type, example, "authorization_code"      * @return the grant type      */
 name|String
 name|getType
 parameter_list|()

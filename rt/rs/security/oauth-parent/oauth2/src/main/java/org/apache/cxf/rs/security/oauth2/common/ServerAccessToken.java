@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base Token representation  */
+comment|/**  * Server Access Token representation  */
 end_comment
 
 begin_class
@@ -218,6 +218,7 @@ return|return
 name|subject
 return|;
 block|}
+comment|/**      * Sets the grant type which was used to obtain the access token      * @param grantType the grant type      */
 specifier|public
 name|void
 name|setGrantType
@@ -233,6 +234,7 @@ operator|=
 name|grantType
 expr_stmt|;
 block|}
+comment|/**      * Returns the grant type which was used to obtain the access token      * @return the grant type      */
 specifier|public
 name|String
 name|getGrantType

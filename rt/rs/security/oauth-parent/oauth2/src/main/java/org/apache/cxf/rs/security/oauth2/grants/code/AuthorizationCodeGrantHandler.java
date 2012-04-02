@@ -157,6 +157,10 @@ name|OAuthUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Authorization Code Grant Handler  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -196,11 +200,13 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
+comment|// Only confidential clients can use it
 name|checkIfGrantSupported
 argument_list|(
 name|client
 argument_list|)
 expr_stmt|;
+comment|// Get the grant representation from the provider
 name|String
 name|codeValue
 init|=
@@ -240,6 +246,7 @@ return|return
 literal|null
 return|;
 block|}
+comment|// check it has not expired, the client ids are the same
 if|if
 condition|(
 name|OAuthUtils
@@ -298,6 +305,7 @@ name|INVALID_GRANT
 argument_list|)
 throw|;
 block|}
+comment|// redirect URIs must match too
 name|String
 name|expectedRedirectUri
 init|=

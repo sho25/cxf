@@ -468,7 +468,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JAX-RS OAuth filter which can be used to protect end user endpoints  */
+comment|/**  * JAX-RS OAuth2 filter which can be used to protect the end-user endpoints  */
 end_comment
 
 begin_class
@@ -589,12 +589,14 @@ name|ClassResourceInfo
 name|resourceClass
 parameter_list|)
 block|{
+comment|// Get the access token
 name|ServerAccessToken
 name|accessToken
 init|=
 name|getAccessToken
 argument_list|()
 decl_stmt|;
+comment|// Find the scopes which match the current request
 name|List
 argument_list|<
 name|OAuthPermission
@@ -712,6 +714,7 @@ literal|403
 argument_list|)
 throw|;
 block|}
+comment|// Create the security context and make it available on the message
 name|SecurityContext
 name|sc
 init|=
@@ -733,6 +736,7 @@ argument_list|,
 name|sc
 argument_list|)
 expr_stmt|;
+comment|// Also set the OAuthContext
 name|m
 operator|.
 name|setContent
@@ -988,6 +992,7 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      * Get the access token      */
 specifier|protected
 name|ServerAccessToken
 name|getAccessToken
@@ -1018,6 +1023,9 @@ literal|500
 argument_list|)
 throw|;
 block|}
+comment|// Get the scheme and its data, Bearer only is supported by default
+comment|// WWW-Authenticate with the list of supported schemes will be sent back
+comment|// if the scheme is not accepted
 name|String
 index|[]
 name|authParts
@@ -1047,6 +1055,7 @@ index|[
 literal|1
 index|]
 decl_stmt|;
+comment|// Get the registered handler capable of processing the token
 name|AccessTokenValidator
 name|handler
 init|=
@@ -1064,6 +1073,7 @@ condition|)
 block|{
 try|try
 block|{
+comment|// Convert the HTTP Authorization scheme data into a token
 name|accessToken
 operator|=
 name|handler
@@ -1094,6 +1104,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// Default processing if no registered providers available
 if|if
 condition|(
 name|accessToken
@@ -1155,6 +1166,7 @@ name|supportedSchemes
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Check if token is still valid
 if|if
 condition|(
 name|OAuthUtils

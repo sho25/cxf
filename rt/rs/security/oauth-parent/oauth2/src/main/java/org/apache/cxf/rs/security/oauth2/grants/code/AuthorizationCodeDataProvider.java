@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * OAuth provider responsible for persisting the information about   * OAuth consumers, request and access tokens.  */
+comment|/**  * AuthorizationCodeDataProvider is the {@link OAuthDataProvider} which  * can additionally persist the authorization code grant information   */
 end_comment
 
 begin_interface
@@ -74,7 +74,7 @@ name|AuthorizationCodeDataProvider
 extends|extends
 name|OAuthDataProvider
 block|{
-comment|/**      * Creates a temporarily code grant which will capture the      * information about the {@link Client} attempting to access or      * modify the resource owner's resource       * @param reg AuthorizationCodeRegistration      * @return new code grant      * @see AuthorizationCodeRegistration      * @throws OAuthServiceException      */
+comment|/**      * Creates a temporarily code grant which will capture the      * information about the {@link Client} requesting the access to      * the resource owner's resources       * @param reg information about the client code grant request      * @return new code grant      * @see AuthorizationCodeRegistration      * @see ServerAuthorizationCodeGrant      * @throws OAuthServiceException      */
 name|ServerAuthorizationCodeGrant
 name|createCodeGrant
 parameter_list|(
@@ -84,7 +84,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Returns the previously registered {@link ServerAuthorizationCodeGrant}      * @param code the code grant      * @return AuthorizationCodeGrant      * @throws OAuthServiceException      */
+comment|/**      * Returns the previously registered {@link ServerAuthorizationCodeGrant}      * @param code the code grant      * @return the grant      * @throws OAuthServiceException if no grant with this code is available      * @see ServerAuthorizationCodeGrant      */
 name|ServerAuthorizationCodeGrant
 name|removeCodeGrant
 parameter_list|(

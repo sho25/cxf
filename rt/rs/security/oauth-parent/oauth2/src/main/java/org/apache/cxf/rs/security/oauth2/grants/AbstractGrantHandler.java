@@ -221,6 +221,10 @@ name|OAuthUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Abstract access token grant handler  */
+end_comment
+
 begin_class
 specifier|public
 specifier|abstract
@@ -354,6 +358,7 @@ argument_list|>
 name|requestedScope
 parameter_list|)
 block|{
+comment|// Check if a pre-authorized  token available
 name|ServerAccessToken
 name|token
 init|=
@@ -379,6 +384,7 @@ return|return
 name|token
 return|;
 block|}
+comment|// Delegate to the data provider to create the one
 name|AccessTokenRegistration
 name|reg
 init|=

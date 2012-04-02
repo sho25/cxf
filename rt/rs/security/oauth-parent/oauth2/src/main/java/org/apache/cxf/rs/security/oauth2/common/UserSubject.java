@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents a user alias or login name which AuthorizationService  * may capture after the end user approved a given third party request  */
+comment|/**  * Represents a login name which AuthorizationService  * may capture after the end user approved a given third party request  */
 end_comment
 
 begin_class
@@ -106,6 +106,7 @@ operator|=
 name|roles
 expr_stmt|;
 block|}
+comment|/**      * Returns the user login name      * @return the login name      */
 specifier|public
 name|String
 name|getLogin
@@ -115,6 +116,7 @@ return|return
 name|login
 return|;
 block|}
+comment|/**      * Returns the optional list of user roles which may have       * been captured during the authentication process       * @return the list of roles      */
 specifier|public
 name|List
 argument_list|<

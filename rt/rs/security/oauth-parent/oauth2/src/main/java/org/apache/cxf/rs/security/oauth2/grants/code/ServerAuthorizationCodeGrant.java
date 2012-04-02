@@ -104,7 +104,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Authorization Code Token representation  */
+comment|/**  * The Authorization Code Grant representation visible to the server  */
 end_comment
 
 begin_class
@@ -212,6 +212,7 @@ operator|=
 name|issuedAt
 expr_stmt|;
 block|}
+comment|/**      * Returns the time (in seconds) this grant was issued at      * @return the seconds      */
 specifier|public
 name|long
 name|getIssuedAt
@@ -221,6 +222,7 @@ return|return
 name|issuedAt
 return|;
 block|}
+comment|/**      * Returns the number of seconds this grant can be valid after it was issued      * @return the seconds this grant will be valid for      */
 specifier|public
 name|long
 name|getLifetime
@@ -230,6 +232,7 @@ return|return
 name|lifetime
 return|;
 block|}
+comment|/**      * Returns the reference to {@link Client}      * @return the client      */
 specifier|public
 name|Client
 name|getClient
@@ -239,6 +242,7 @@ return|return
 name|client
 return|;
 block|}
+comment|/**      * Sets the scopes explicitly approved by the end user.      * If this list is empty then the end user had no way to down-scope.       * @param approvedScope the approved scopes      */
 specifier|public
 name|void
 name|setApprovedScopes
@@ -257,6 +261,7 @@ operator|=
 name|scopes
 expr_stmt|;
 block|}
+comment|/**      * Gets the scopes explicitly approved by the end user      * @return the approved scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -269,6 +274,7 @@ return|return
 name|approvedScopes
 return|;
 block|}
+comment|/**      * Sets the user subject representing the end user      * @param subject the subject      */
 specifier|public
 name|void
 name|setSubject
@@ -284,6 +290,7 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
+comment|/**      * Gets the user subject representing the end user      * @return the subject      */
 specifier|public
 name|UserSubject
 name|getSubject

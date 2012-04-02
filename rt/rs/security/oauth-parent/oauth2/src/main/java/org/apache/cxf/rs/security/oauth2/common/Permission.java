@@ -22,7 +22,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Base permission description which is visible to   * authorization handlers  * @see OAuthAuthorizationData  */
+comment|/**  * Base permission description  * @see OAuthAuthorizationData  */
 end_comment
 
 begin_class
@@ -69,6 +69,7 @@ operator|=
 name|permission
 expr_stmt|;
 block|}
+comment|/**      * Gets the permission description      * @return the description      */
 specifier|public
 name|String
 name|getDescription
@@ -78,6 +79,7 @@ return|return
 name|description
 return|;
 block|}
+comment|/**      * Sets the permission description      * @param description      */
 specifier|public
 name|void
 name|setDescription
@@ -93,6 +95,7 @@ operator|=
 name|description
 expr_stmt|;
 block|}
+comment|/**      * Get the permission value such as "read_calendar"      * @return the value      */
 specifier|public
 name|String
 name|getPermission
@@ -102,6 +105,7 @@ return|return
 name|permission
 return|;
 block|}
+comment|/**      * Sets the permission value such as "read_calendar"      * @param permission the permission value      */
 specifier|public
 name|void
 name|setPermission
@@ -117,7 +121,7 @@ operator|=
 name|permission
 expr_stmt|;
 block|}
-comment|/**      * Indicates that this permission has been allocated by default.      * Authorization View handlers may use this property in order to restrict      * the list of scopes which may be refused to non-default scopes only      * @param isDefault      */
+comment|/**      * Indicates if this permission has been allocated by default or not.      * Authorization View handlers may use this property in order to restrict      * the list of scopes which may be refused to non-default scopes only.      * For example, the read-only check-box controls can be used to represent      * the default scopes       * @param isDefault true if the permission has been allocated by default      */
 specifier|public
 name|void
 name|setDefault

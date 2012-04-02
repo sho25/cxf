@@ -21,6 +21,10 @@ name|common
 package|;
 end_package
 
+begin_comment
+comment|/**  * Captures OAuth2 error properties  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -83,6 +87,7 @@ operator|=
 name|descr
 expr_stmt|;
 block|}
+comment|/**      * Sets the error such as "invalid_grant", etc      * @param error the error      */
 specifier|public
 name|void
 name|setError
@@ -98,6 +103,7 @@ operator|=
 name|error
 expr_stmt|;
 block|}
+comment|/**      * Gets the error       * @return error      */
 specifier|public
 name|String
 name|getError
@@ -107,6 +113,7 @@ return|return
 name|error
 return|;
 block|}
+comment|/**      * Sets the error description      * @param errorDescription error description      */
 specifier|public
 name|void
 name|setErrorDescription
@@ -122,6 +129,7 @@ operator|=
 name|errorDescription
 expr_stmt|;
 block|}
+comment|/**      * Gets the error description      * @return error description      */
 specifier|public
 name|String
 name|getErrorDescription
@@ -131,6 +139,7 @@ return|return
 name|errorDescription
 return|;
 block|}
+comment|/**      * Sets the optional link to the page       * describing the error in detail      * @param errorUri error page URI      */
 specifier|public
 name|void
 name|setErrorUri
@@ -146,6 +155,7 @@ operator|=
 name|errorUri
 expr_stmt|;
 block|}
+comment|/**      * Gets the optional link to the page       * describing the error in detail      * @param errorUri error page URI      */
 specifier|public
 name|String
 name|getErrorUri
@@ -155,6 +165,7 @@ return|return
 name|errorUri
 return|;
 block|}
+comment|/**      * Sets the client state token which needs to be returned      * to the client alongside the error information       * if it was provided during the client request      * @param state the client state token      */
 specifier|public
 name|void
 name|setState
@@ -170,6 +181,7 @@ operator|=
 name|state
 expr_stmt|;
 block|}
+comment|/**      * Gets the client state token      * @return the state      */
 specifier|public
 name|String
 name|getState

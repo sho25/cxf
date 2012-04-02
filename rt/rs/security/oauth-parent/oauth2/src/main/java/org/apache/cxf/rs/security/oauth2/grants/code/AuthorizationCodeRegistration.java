@@ -128,6 +128,7 @@ specifier|private
 name|UserSubject
 name|subject
 decl_stmt|;
+comment|/**      * Sets the {@link Client} reference      * @param client the client      */
 specifier|public
 name|void
 name|setClient
@@ -143,6 +144,7 @@ operator|=
 name|client
 expr_stmt|;
 block|}
+comment|/**      * Gets {@link Client} reference      * @return the client      */
 specifier|public
 name|Client
 name|getClient
@@ -152,6 +154,7 @@ return|return
 name|client
 return|;
 block|}
+comment|/**      * Sets the redirect URI      * @param redirectUri the redirect URI      */
 specifier|public
 name|void
 name|setRedirectUri
@@ -167,6 +170,7 @@ operator|=
 name|redirectUri
 expr_stmt|;
 block|}
+comment|/**      * Gets the redirect URI      * @return the redirect URI      */
 specifier|public
 name|String
 name|getRedirectUri
@@ -176,6 +180,7 @@ return|return
 name|redirectUri
 return|;
 block|}
+comment|/**      * Sets the scopes request by the client      * @param requestedScope the requested scopes      */
 specifier|public
 name|void
 name|setRequestedScope
@@ -194,6 +199,7 @@ operator|=
 name|requestedScope
 expr_stmt|;
 block|}
+comment|/**      * Gets the scopes request by the client      * @return the requested scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -206,6 +212,7 @@ return|return
 name|requestedScope
 return|;
 block|}
+comment|/**      * Sets the scopes explicitly approved by the end user.      * If this list is empty then the end user had no way to down-scope.       * @param approvedScope the approved scopes      */
 specifier|public
 name|void
 name|setApprovedScope
@@ -224,6 +231,7 @@ operator|=
 name|approvedScope
 expr_stmt|;
 block|}
+comment|/**      * Gets the scopes explicitly approved by the end user      * @return the approved scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -236,6 +244,7 @@ return|return
 name|approvedScope
 return|;
 block|}
+comment|/**      * Sets the user subject representing the end user      * @param subject the subject      */
 specifier|public
 name|void
 name|setSubject
@@ -251,6 +260,7 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
+comment|/**      * Gets the user subject representing the end user      * @return the subject      */
 specifier|public
 name|UserSubject
 name|getSubject
