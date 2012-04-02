@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * This interface defines a caching mechanism for security tokens. It is up to the underlying implementation  * to handle token expiration (e.g. by querying the SecurityToken's expires date).  */
 end_comment
 
 begin_interface
@@ -38,17 +38,9 @@ specifier|public
 interface|interface
 name|TokenStore
 block|{
-comment|/**      * Add the given token to the list.      * @param token The token to be added      * @throws TokenStoreException      */
+comment|/**      * Add the given token to the cache.      * @param token The token to be added      */
 name|void
 name|add
-parameter_list|(
-name|SecurityToken
-name|token
-parameter_list|)
-function_decl|;
-comment|/**      * Update an existing token.      * @param token      */
-name|void
-name|update
 parameter_list|(
 name|SecurityToken
 name|token
@@ -62,7 +54,7 @@ name|SecurityToken
 name|token
 parameter_list|)
 function_decl|;
-comment|/**      * Return the list of all token identifiers.      * @return As array of token identifiers      */
+comment|/**      * Return the list of all valid token identifiers.      * @return As array of (valid) token identifiers      */
 name|Collection
 argument_list|<
 name|String
@@ -70,7 +62,7 @@ argument_list|>
 name|getTokenIdentifiers
 parameter_list|()
 function_decl|;
-comment|/**      * Return the list of<code>EXPIRED</code> tokens.      * If there are no<code>EXPIRED</code> tokens<code>null</code> will be       * returned      * @return An array of expired<code>Tokens</code>      */
+comment|/**      * Return the list of expired tokens.      * @return An array of expired<code>Tokens</code>      */
 name|Collection
 argument_list|<
 name|SecurityToken
@@ -78,31 +70,7 @@ argument_list|>
 name|getExpiredTokens
 parameter_list|()
 function_decl|;
-comment|/**      * Return the list of ISSUED and RENEWED tokens.      * @return An array of ISSUED and RENEWED<code>Tokens</code>.      */
-name|Collection
-argument_list|<
-name|SecurityToken
-argument_list|>
-name|getValidTokens
-parameter_list|()
-function_decl|;
-comment|/**      * Return the list of RENEWED tokens.      * @return An array of RENEWED<code>Tokens</code>      */
-name|Collection
-argument_list|<
-name|SecurityToken
-argument_list|>
-name|getRenewedTokens
-parameter_list|()
-function_decl|;
-comment|/**      * Return the list of CANCELLED tokens      * @return An array of CANCELLED<code>Tokens</code>      */
-name|Collection
-argument_list|<
-name|SecurityToken
-argument_list|>
-name|getCancelledTokens
-parameter_list|()
-function_decl|;
-comment|/**      * Returns the<code>Token</code> of the given id      * @param id      * @return The requested<code>Token</code> identified by the give id      */
+comment|/**      * Returns the<code>Token</code> of the given id      * @param id      * @return The requested<code>Token</code> identified by the given id      */
 name|SecurityToken
 name|getToken
 parameter_list|(
@@ -116,24 +84,6 @@ name|getTokenByAssociatedHash
 parameter_list|(
 name|int
 name|hashCode
-parameter_list|)
-function_decl|;
-comment|/**      * Removes all expired tokens.        */
-name|void
-name|removeExpiredTokens
-parameter_list|()
-function_decl|;
-comment|/**      * Removes all cancelled tokens.      */
-name|void
-name|removeCancelledTokens
-parameter_list|()
-function_decl|;
-comment|/**      * Controls whether the store will automatically remove cancelled and expired       * tokens.  If true, calls to getCancelledTokens() and getExpiredTokens()       * will never return value;      * @param auto      */
-name|void
-name|setAutoRemoveTokens
-parameter_list|(
-name|boolean
-name|auto
 parameter_list|)
 function_decl|;
 block|}

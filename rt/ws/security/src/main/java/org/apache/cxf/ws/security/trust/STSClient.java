@@ -6640,17 +6640,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|token
-operator|.
-name|setState
-argument_list|(
-name|SecurityToken
-operator|.
-name|State
-operator|.
-name|CANCELLED
-argument_list|)
-expr_stmt|;
 return|return
 literal|true
 return|;

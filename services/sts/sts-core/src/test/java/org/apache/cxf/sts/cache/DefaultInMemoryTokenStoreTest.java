@@ -223,7 +223,7 @@ name|assertTrue
 argument_list|(
 name|store
 operator|.
-name|getValidTokens
+name|getTokenIdentifiers
 argument_list|()
 operator|.
 name|size
@@ -267,7 +267,7 @@ name|assertTrue
 argument_list|(
 name|store
 operator|.
-name|getValidTokens
+name|getTokenIdentifiers
 argument_list|()
 operator|.
 name|size

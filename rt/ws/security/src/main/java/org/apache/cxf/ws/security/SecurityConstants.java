@@ -452,6 +452,15 @@ name|CACHE_CONFIG_FILE
 init|=
 literal|"ws-security.cache.config.file"
 decl_stmt|;
+comment|/**      * The TokenStore instance to use to cache security tokens. By default this uses the      * EHCacheTokenStore if EhCache is available. Otherwise it uses the MemoryTokenStore.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TOKEN_STORE_CACHE_INSTANCE
+init|=
+literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -562,6 +571,8 @@ block|,
 name|TIMESTAMP_CACHE_INSTANCE
 block|,
 name|CACHE_CONFIG_FILE
+block|,
+name|TOKEN_STORE_CACHE_INSTANCE
 block|}
 argument_list|)
 argument_list|)
