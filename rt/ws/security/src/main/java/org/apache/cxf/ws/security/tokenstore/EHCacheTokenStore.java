@@ -160,6 +160,14 @@ name|DEFAULT_TTL
 operator|*
 literal|12L
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|int
+name|MAX_ELEMENTS
+init|=
+literal|1000000
+decl_stmt|;
 specifier|private
 name|Cache
 name|cache
@@ -238,7 +246,7 @@ name|Cache
 argument_list|(
 name|key
 argument_list|,
-literal|0
+name|MAX_ELEMENTS
 argument_list|,
 literal|false
 argument_list|,

@@ -228,8 +228,7 @@ specifier|final
 name|long
 name|serialVersionUID
 init|=
-operator|-
-literal|8023092932997444513L
+literal|3820740387121650613L
 decl_stmt|;
 comment|/**      * Token identifier      */
 specifier|private
@@ -265,11 +264,6 @@ comment|/**      * A bag to hold any other properties      */
 specifier|private
 name|Properties
 name|properties
-decl_stmt|;
-comment|/**      * A flag to assist the TokenStorage      */
-specifier|private
-name|boolean
-name|changed
 decl_stmt|;
 comment|/**      * The secret associated with the Token      */
 specifier|private
@@ -608,32 +602,6 @@ parameter_list|)
 block|{
 comment|//shouldn't happen
 block|}
-block|}
-comment|/**      * @return Returns the changed.      */
-specifier|public
-name|boolean
-name|isChanged
-parameter_list|()
-block|{
-return|return
-name|changed
-return|;
-block|}
-comment|/**      * @param chnaged The changed to set.      */
-specifier|public
-name|void
-name|setChanged
-parameter_list|(
-name|boolean
-name|chnaged
-parameter_list|)
-block|{
-name|this
-operator|.
-name|changed
-operator|=
-name|chnaged
-expr_stmt|;
 block|}
 comment|/**      * @return Returns the properties.      */
 specifier|public
