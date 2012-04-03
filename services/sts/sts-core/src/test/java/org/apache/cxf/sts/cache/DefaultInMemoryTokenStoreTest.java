@@ -146,6 +146,9 @@ operator|.
 name|remove
 argument_list|(
 name|token
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertNull
@@ -237,6 +240,9 @@ operator|.
 name|remove
 argument_list|(
 name|token3
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertNull
@@ -254,6 +260,9 @@ operator|.
 name|remove
 argument_list|(
 name|token1
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|store
@@ -261,6 +270,9 @@ operator|.
 name|remove
 argument_list|(
 name|token2
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue

@@ -624,6 +624,9 @@ operator|.
 name|getTokenId
 argument_list|()
 argument_list|)
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertNull

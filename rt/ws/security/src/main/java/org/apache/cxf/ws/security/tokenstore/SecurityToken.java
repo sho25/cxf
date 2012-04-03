@@ -245,11 +245,6 @@ specifier|private
 name|Element
 name|token
 decl_stmt|;
-comment|/**      * The token in its previous state      */
-specifier|private
-name|Element
-name|previousToken
-decl_stmt|;
 comment|/**      * The RequestedAttachedReference element      * NOTE : The oasis-200401-wss-soap-message-security-1.0 spec allows       * an extensibility mechanism for wsse:SecurityTokenReference and       * wsse:Reference. Hence we cannot limit to the       * wsse:SecurityTokenReference\wsse:Reference case and only hold the URI and       * the ValueType values.      */
 specifier|private
 name|Element
@@ -291,10 +286,15 @@ specifier|private
 name|String
 name|encrKeySha1Value
 decl_stmt|;
-comment|/**      * A hash code associated with this token. Note that it is not the hashcode of this       * token, but a hash corresponding to an association with this token. It could refer      * to the hash of another SecurityToken which maps to this token.       */
+comment|/**      * A hash code associated with this token.      */
 specifier|private
 name|int
-name|associatedHash
+name|tokenHash
+decl_stmt|;
+comment|/**      * This holds the identifier of another SecurityToken which represents a transformed      * version of this token.       */
+specifier|private
+name|String
+name|transformedTokenIdentifier
 decl_stmt|;
 comment|/**      * The tokenType      */
 specifier|private
@@ -655,6 +655,32 @@ operator|=
 name|token
 expr_stmt|;
 block|}
+comment|/**      * Get the identifier corresponding to a transformed version of this token      */
+specifier|public
+name|String
+name|getTransformedTokenIdentifier
+parameter_list|()
+block|{
+return|return
+name|transformedTokenIdentifier
+return|;
+block|}
+comment|/**      * Set the identifier corresponding to a transformed version of this token      */
+specifier|public
+name|void
+name|setTransformedTokenIdentifier
+parameter_list|(
+name|String
+name|transformedTokenIdentifier
+parameter_list|)
+block|{
+name|this
+operator|.
+name|transformedTokenIdentifier
+operator|=
+name|transformedTokenIdentifier
+expr_stmt|;
+block|}
 comment|/**      * @return Returns the id.      */
 specifier|public
 name|String
@@ -664,35 +690,6 @@ block|{
 return|return
 name|id
 return|;
-block|}
-comment|/**      * @return Returns the presivousToken.      */
-specifier|public
-name|Element
-name|getPreviousToken
-parameter_list|()
-block|{
-return|return
-name|previousToken
-return|;
-block|}
-comment|/**      * @param presivousToken The presivousToken to set.      */
-specifier|public
-name|void
-name|setPreviousToken
-parameter_list|(
-name|Element
-name|previousToken
-parameter_list|)
-block|{
-name|this
-operator|.
-name|previousToken
-operator|=
-name|cloneElement
-argument_list|(
-name|previousToken
-argument_list|)
-expr_stmt|;
 block|}
 comment|/**      * @return Returns the secret.      */
 specifier|public
@@ -1197,16 +1194,16 @@ return|return
 name|crypto
 return|;
 block|}
-comment|/**      * Set a hash code associated with this token. Note that it is not the hashcode of this       * token, but a hash corresponding to an association with this token.      * @param hash a hash code associated with this token      */
+comment|/**      * Set a hash code associated with this token.      * @param hash a hash code associated with this token      */
 specifier|public
 name|void
-name|setAssociatedHash
+name|setTokenHash
 parameter_list|(
 name|int
 name|hash
 parameter_list|)
 block|{
-name|associatedHash
+name|tokenHash
 operator|=
 name|hash
 expr_stmt|;
@@ -1214,11 +1211,11 @@ block|}
 comment|/**      * Get a hash code associated with this token.      * @return a hash code associated with this token.      */
 specifier|public
 name|int
-name|getAssociatedHash
+name|getTokenHash
 parameter_list|()
 block|{
 return|return
-name|associatedHash
+name|tokenHash
 return|;
 block|}
 comment|/**      * Set the principal associated with this SecurityToken      * @param principal the principal associated with this SecurityToken      */

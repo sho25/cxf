@@ -1140,6 +1140,9 @@ operator|.
 name|remove
 argument_list|(
 name|cancelToken
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|writer

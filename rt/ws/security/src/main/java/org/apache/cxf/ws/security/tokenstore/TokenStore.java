@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|TokenStore
 block|{
-comment|/**      * Add the given token to the cache.      * @param token The token to be added      */
+comment|/**      * Add the given token to the cache. The SecurityTokens getId() identifier will be used to      * key it in the cache.      * @param token The token to be added      */
 name|void
 name|add
 parameter_list|(
@@ -46,12 +46,23 @@ name|SecurityToken
 name|token
 parameter_list|)
 function_decl|;
-comment|/**      * Remove an existing token.      */
+comment|/**      * Add the given token to the cache under the given identifier      * @param identifier The identifier to use to key the SecurityToken in the cache      * @param token The token to be added      */
+name|void
+name|add
+parameter_list|(
+name|String
+name|identifier
+parameter_list|,
+name|SecurityToken
+name|token
+parameter_list|)
+function_decl|;
+comment|/**      * Remove an existing token by its identifier      */
 name|void
 name|remove
 parameter_list|(
-name|SecurityToken
-name|token
+name|String
+name|identifier
 parameter_list|)
 function_decl|;
 comment|/**      * Return the list of all valid token identifiers.      * @return As array of (valid) token identifiers      */
@@ -70,20 +81,12 @@ argument_list|>
 name|getExpiredTokens
 parameter_list|()
 function_decl|;
-comment|/**      * Returns the<code>Token</code> of the given id      * @param id      * @return The requested<code>Token</code> identified by the given id      */
+comment|/**      * Returns the<code>Token</code> of the given identifier      * @param identifier      * @return The requested<code>Token</code> identified by the given identifier      */
 name|SecurityToken
 name|getToken
 parameter_list|(
 name|String
-name|id
-parameter_list|)
-function_decl|;
-comment|/**      * Returns the<code>Token</code> by the associated hash.       * @param hashCode      * @return the<code>Token</code> by the associated hash.       */
-name|SecurityToken
-name|getTokenByAssociatedHash
-parameter_list|(
-name|int
-name|hashCode
+name|identifier
 parameter_list|)
 function_decl|;
 block|}

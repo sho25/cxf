@@ -668,6 +668,9 @@ operator|.
 name|remove
 argument_list|(
 name|token
+operator|.
+name|getId
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Create a new token corresponding to the old token
