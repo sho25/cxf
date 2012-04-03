@@ -2643,6 +2643,10 @@ expr_stmt|;
 if|if
 condition|(
 name|msg
+operator|!=
+literal|null
+operator|&&
+name|msg
 operator|.
 name|getCachedOutputStream
 argument_list|()
@@ -2725,6 +2729,10 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+name|msg
+operator|!=
+literal|null
+operator|&&
 name|msg
 operator|.
 name|getCachedOutputStream
