@@ -408,7 +408,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This resource handles the End User authorising  * or denying the Client to access its resources.  * If End User approves the access this resource will  * redirect End User back to the Client, supplying   * a request token verifier (aka authorization code)  */
+comment|/**  * The Base Redirection-Based Grant Service  */
 end_comment
 
 begin_class
@@ -463,6 +463,7 @@ operator|=
 name|isConfidential
 expr_stmt|;
 block|}
+comment|/**      * Handles the initial authorization request by preparing       * the authorization challenge data and returning it to the user.      * Typically the data are expected to be presented in the HTML form       * @return the authorization data      */
 annotation|@
 name|GET
 annotation|@
@@ -501,6 +502,7 @@ name|params
 argument_list|)
 return|;
 block|}
+comment|/**      * Processes the end user decision      * @return The grant value, authorization code or the token      */
 annotation|@
 name|GET
 annotation|@
@@ -531,6 +533,7 @@ name|params
 argument_list|)
 return|;
 block|}
+comment|/**      * Processes the end user decision      * @return The grant value, authorization code or the token      */
 annotation|@
 name|POST
 annotation|@
@@ -563,6 +566,7 @@ name|params
 argument_list|)
 return|;
 block|}
+comment|/**      * Starts the authorization process      */
 specifier|protected
 name|Response
 name|startAuthorization
@@ -576,6 +580,7 @@ argument_list|>
 name|params
 parameter_list|)
 block|{
+comment|// Make sure the end user has authenticated, check if HTTPS is used
 name|SecurityContext
 name|sc
 init|=
@@ -590,6 +595,8 @@ argument_list|(
 name|params
 argument_list|)
 decl_stmt|;
+comment|// Validate the provided request URI, if any, against the ones Client provided
+comment|// during the registration
 name|String
 name|redirectUri
 init|=
@@ -607,6 +614,7 @@ name|REDIRECT_URI
 argument_list|)
 argument_list|)
 decl_stmt|;
+comment|// Enforce the client confidentiality requirements
 if|if
 condition|(
 operator|!
@@ -635,6 +643,7 @@ name|UNAUTHORIZED_CLIENT
 argument_list|)
 return|;
 block|}
+comment|// Check response_type
 name|String
 name|responseType
 init|=
@@ -675,6 +684,7 @@ name|UNSUPPORTED_RESPONSE_TYPE
 argument_list|)
 return|;
 block|}
+comment|// Get the requested scopes
 name|List
 argument_list|<
 name|String
@@ -695,6 +705,7 @@ name|SCOPE
 argument_list|)
 argument_list|)
 decl_stmt|;
+comment|// Create a UserSubject representing the end user
 name|UserSubject
 name|userSubject
 init|=
@@ -703,6 +714,7 @@ argument_list|(
 name|sc
 argument_list|)
 decl_stmt|;
+comment|// Request a new grant only if no pre-authorized token is available
 name|ServerAccessToken
 name|preauthorizedToken
 init|=
@@ -750,6 +762,7 @@ name|preauthorizedToken
 argument_list|)
 return|;
 block|}
+comment|// Convert the requested scopes to OAuthPermission instances
 name|List
 argument_list|<
 name|OAuthPermission
@@ -792,6 +805,7 @@ name|INVALID_SCOPE
 argument_list|)
 return|;
 block|}
+comment|// Return the authorization challenge data to the end user
 name|OAuthAuthorizationData
 name|data
 init|=
@@ -816,6 +830,7 @@ name|build
 argument_list|()
 return|;
 block|}
+comment|/**      * Create the authorization challenge data       */
 specifier|protected
 name|OAuthAuthorizationData
 name|createAuthorizationData
@@ -1023,6 +1038,7 @@ return|return
 name|secData
 return|;
 block|}
+comment|/**      * Completes the authorization process      */
 specifier|protected
 name|Response
 name|completeAuthorization
@@ -1036,12 +1052,14 @@ argument_list|>
 name|params
 parameter_list|)
 block|{
+comment|// Make sure the end user has authenticated, check if HTTPS is used
 name|SecurityContext
 name|securityContext
 init|=
 name|getAndValidateSecurityContext
 argument_list|()
 decl_stmt|;
+comment|// Make sure the session is valid
 if|if
 condition|(
 operator|!
@@ -1093,6 +1111,7 @@ name|REDIRECT_URI
 argument_list|)
 argument_list|)
 decl_stmt|;
+comment|// Get the end user decision value
 name|String
 name|decision
 init|=
@@ -1117,6 +1136,7 @@ argument_list|(
 name|decision
 argument_list|)
 decl_stmt|;
+comment|// Return the error if denied
 if|if
 condition|(
 operator|!
@@ -1136,6 +1156,7 @@ name|ACCESS_DENIED
 argument_list|)
 return|;
 block|}
+comment|// Check if the end user may have had a chance to down-scope the requested scopes
 name|List
 argument_list|<
 name|String
@@ -1246,6 +1267,7 @@ argument_list|(
 name|securityContext
 argument_list|)
 decl_stmt|;
+comment|// Request a new grant
 return|return
 name|createGrant
 argument_list|(

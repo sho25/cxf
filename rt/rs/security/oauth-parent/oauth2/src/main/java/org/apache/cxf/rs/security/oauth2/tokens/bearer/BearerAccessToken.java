@@ -103,6 +103,10 @@ name|OAuthUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Simple Bearer Access Token implementations  */
+end_comment
+
 begin_class
 specifier|public
 class|class

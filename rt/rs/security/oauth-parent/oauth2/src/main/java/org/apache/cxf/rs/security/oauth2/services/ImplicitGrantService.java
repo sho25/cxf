@@ -182,7 +182,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This resource handles the End User authorising  * or denying the Client to access its resources.  * If End User approves the access this resource will  * return the token directly.  *   * We can consider having a single authorization service dealing with either  * authorization code or implicit grant.  */
+comment|/**  * Redirection-based Implicit Grant Service  *   * This resource handles the End User authorising  * or denying the Client embedded in the Web agent.  *   * We can consider having a single authorization service dealing with either  * authorization code or implicit grant.  */
 end_comment
 
 begin_class
@@ -326,6 +326,7 @@ operator|=
 name|preAuthorizedToken
 expr_stmt|;
 block|}
+comment|// return the code by appending it as a fragment parameter to the redirect URI
 name|StringBuilder
 name|sb
 init|=

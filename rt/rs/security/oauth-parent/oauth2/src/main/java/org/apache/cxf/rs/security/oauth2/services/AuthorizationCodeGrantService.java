@@ -252,7 +252,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This resource handles the End User authorising  * or denying the Client to access its resources.  * If End User approves the access this resource will  * redirect End User back to the Client, supplying   * a request token verifier (aka authorization code)  */
+comment|/**  * This resource handles the End User authorising  * or denying the Client to access its resources.  * If End User approves the access this resource will  * redirect End User back to the Client, supplying   * the authorization code.  */
 end_comment
 
 begin_class
@@ -408,6 +408,7 @@ name|ACCESS_DENIED
 argument_list|)
 return|;
 block|}
+comment|// return the code by appending it as a query parameter to the redirect URI
 name|UriBuilder
 name|ub
 init|=

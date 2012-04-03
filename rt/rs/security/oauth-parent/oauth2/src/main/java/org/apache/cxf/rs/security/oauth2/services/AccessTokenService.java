@@ -371,6 +371,10 @@ name|OAuthConstants
 import|;
 end_import
 
+begin_comment
+comment|/**  * OAuth2 Access Token Service implementation  */
+end_comment
+
 begin_class
 annotation|@
 name|Path
@@ -395,6 +399,7 @@ operator|.
 name|emptyList
 argument_list|()
 decl_stmt|;
+comment|/**      * Sets the list of optional grant handlers      * @param handlers the grant handlers      */
 specifier|public
 name|void
 name|setGrantHandlers
@@ -411,6 +416,7 @@ operator|=
 name|handlers
 expr_stmt|;
 block|}
+comment|/**      * Processes an access token request      * @param params the form parameters representing the access token grant       * @return Access Token or the error       */
 annotation|@
 name|POST
 annotation|@
@@ -436,6 +442,7 @@ argument_list|>
 name|params
 parameter_list|)
 block|{
+comment|// Make sure the client is authenticated
 name|Client
 name|client
 init|=
@@ -444,6 +451,7 @@ argument_list|(
 name|params
 argument_list|)
 decl_stmt|;
+comment|// Find the grant handler
 name|AccessTokenGrantHandler
 name|handler
 init|=
@@ -470,6 +478,7 @@ name|UNSUPPORTED_GRANT_TYPE
 argument_list|)
 return|;
 block|}
+comment|// Create the access token
 name|ServerAccessToken
 name|serverToken
 init|=
@@ -515,6 +524,7 @@ name|INVALID_GRANT
 argument_list|)
 return|;
 block|}
+comment|// Extract the information to be of use for the client
 name|ClientAccessToken
 name|clientToken
 init|=
@@ -542,6 +552,7 @@ name|getParameters
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// Return it to the client
 return|return
 name|Response
 operator|.
@@ -570,6 +581,7 @@ name|build
 argument_list|()
 return|;
 block|}
+comment|/**      * Make sure the client is authenticated      */
 specifier|private
 name|Client
 name|authenticateClientIfNeeded
@@ -721,13 +733,14 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//TODO:
-comment|// consider matching client.getLoginName() against principal.getName() ?
+comment|// TODO: consider matching client.getUserSubject().getLoginName()
+comment|// against principal.getName() ?
 block|}
 block|}
 block|}
 else|else
 block|{
+comment|// the client id and secret are expected to be in the Basic scheme data
 name|String
 index|[]
 name|parts
@@ -803,6 +816,7 @@ return|return
 name|client
 return|;
 block|}
+comment|// Get the Client and check the id and secret
 specifier|private
 name|Client
 name|getAndValidateClient
@@ -863,6 +877,7 @@ return|return
 name|client
 return|;
 block|}
+comment|/**      * Find the mathcing grant handler      */
 specifier|protected
 name|AccessTokenGrantHandler
 name|findGrantHandler
@@ -921,6 +936,7 @@ name|handler
 return|;
 block|}
 block|}
+comment|// Lets try the default grant handler
 if|if
 condition|(
 name|grantHandlers
