@@ -155,8 +155,6 @@ name|configuration
 operator|.
 name|jsse
 operator|.
-name|spring
-operator|.
 name|TLSParameterJaxBUtils
 import|;
 end_import

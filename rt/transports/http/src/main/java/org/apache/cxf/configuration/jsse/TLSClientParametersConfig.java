@@ -14,8 +14,6 @@ operator|.
 name|configuration
 operator|.
 name|jsse
-operator|.
-name|spring
 package|;
 end_package
 
@@ -192,22 +190,6 @@ operator|.
 name|util
 operator|.
 name|PackageUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|configuration
-operator|.
-name|jsse
-operator|.
-name|TLSClientParameters
 import|;
 end_import
 

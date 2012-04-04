@@ -139,8 +139,6 @@ name|configuration
 operator|.
 name|jsse
 operator|.
-name|spring
-operator|.
 name|TLSServerParametersConfig
 import|;
 end_import

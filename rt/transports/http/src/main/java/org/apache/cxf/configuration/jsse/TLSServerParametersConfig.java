@@ -14,8 +14,6 @@ operator|.
 name|configuration
 operator|.
 name|jsse
-operator|.
-name|spring
 package|;
 end_package
 
@@ -52,22 +50,6 @@ operator|.
 name|injection
 operator|.
 name|NoJSR250Annotations
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|configuration
-operator|.
-name|jsse
-operator|.
-name|TLSServerParameters
 import|;
 end_import
 

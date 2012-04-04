@@ -14,8 +14,6 @@ operator|.
 name|configuration
 operator|.
 name|jsse
-operator|.
-name|spring
 package|;
 end_package
 

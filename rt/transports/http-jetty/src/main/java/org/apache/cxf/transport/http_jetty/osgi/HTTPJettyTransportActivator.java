@@ -111,7 +111,7 @@ name|configuration
 operator|.
 name|jsse
 operator|.
-name|TLSServerParameters
+name|TLSParameterJaxBUtils
 import|;
 end_import
 
@@ -127,9 +127,7 @@ name|configuration
 operator|.
 name|jsse
 operator|.
-name|spring
-operator|.
-name|TLSParameterJaxBUtils
+name|TLSServerParameters
 import|;
 end_import
 
