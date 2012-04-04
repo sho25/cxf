@@ -1229,6 +1229,13 @@ block|}
 block|}
 block|}
 block|}
+name|response
+operator|.
+name|setTokenRealm
+argument_list|(
+name|tokenRealm
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 operator|!
@@ -1312,13 +1319,6 @@ operator|.
 name|setAdditionalProperties
 argument_list|(
 name|addProps
-argument_list|)
-expr_stmt|;
-name|response
-operator|.
-name|setTokenRealm
-argument_list|(
-name|tokenRealm
 argument_list|)
 expr_stmt|;
 name|validateTarget
