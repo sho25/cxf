@@ -52,12 +52,12 @@ name|boolean
 name|verifyProofOfPossession
 parameter_list|)
 function_decl|;
-comment|/**      * Return true if this TokenRenewer implementation is able to renew a token      * that corresponds to the given token.      */
+comment|/**      * Return true if this TokenRenewer implementation is able to renew a token.      */
 name|boolean
 name|canHandleToken
 parameter_list|(
 name|ReceivedToken
-name|cancelTarget
+name|renewTarget
 parameter_list|)
 function_decl|;
 comment|/**      * Renew a token given a TokenRenewerParameters      */

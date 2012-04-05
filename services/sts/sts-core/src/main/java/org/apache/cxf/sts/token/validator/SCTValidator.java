@@ -505,13 +505,6 @@ return|return
 name|response
 return|;
 block|}
-name|response
-operator|.
-name|setSecurityToken
-argument_list|(
-name|token
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|token
