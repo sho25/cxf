@@ -841,13 +841,6 @@ index|]
 decl_stmt|;
 if|if
 condition|(
-name|AnnotationUtils
-operator|.
-name|isContextClass
-argument_list|(
-name|type
-argument_list|)
-operator|&&
 name|m
 operator|.
 name|getName
