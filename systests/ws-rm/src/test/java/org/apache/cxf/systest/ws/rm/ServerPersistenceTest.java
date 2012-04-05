@@ -1104,10 +1104,9 @@ literal|5
 argument_list|,
 literal|3
 argument_list|,
-literal|20000
+literal|25000
 argument_list|)
 expr_stmt|;
-comment|//        awaitMessages(5, 8, 10000);
 name|int
 name|nDone
 init|=
@@ -1269,7 +1268,7 @@ while|while
 condition|(
 name|waited
 operator|<
-literal|20
+literal|30
 condition|)
 block|{
 name|nDone
@@ -1565,7 +1564,7 @@ name|nExpectedOut
 argument_list|,
 name|nExpectedIn
 argument_list|,
-literal|10000
+literal|20000
 argument_list|)
 expr_stmt|;
 block|}

@@ -1905,7 +1905,7 @@ name|nExpectedOut
 argument_list|,
 name|nExpectedIn
 argument_list|,
-literal|10000
+literal|20000
 argument_list|)
 expr_stmt|;
 block|}
