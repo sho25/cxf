@@ -90,6 +90,9 @@ decl_stmt|;
 name|boolean
 name|done
 decl_stmt|;
+name|Throwable
+name|throwable
+decl_stmt|;
 comment|/**      * Currently unused      */
 specifier|public
 name|boolean
@@ -148,6 +151,21 @@ name|InterruptedException
 throws|,
 name|ExecutionException
 block|{
+if|if
+condition|(
+name|throwable
+operator|!=
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|ExecutionException
+argument_list|(
+name|throwable
+argument_list|)
+throw|;
+block|}
 return|return
 name|value
 return|;
@@ -172,6 +190,23 @@ block|{
 return|return
 name|value
 return|;
+block|}
+specifier|public
+name|void
+name|exception
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+name|throwable
+operator|=
+name|ex
+expr_stmt|;
+name|done
+operator|=
+literal|true
+expr_stmt|;
 block|}
 comment|/**      * Currently unused      */
 specifier|public
