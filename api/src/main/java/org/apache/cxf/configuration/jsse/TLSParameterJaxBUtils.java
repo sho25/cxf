@@ -337,22 +337,6 @@ name|TrustManagersType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|https
-operator|.
-name|SSLUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class provides some functionality to convert the JAXB  * generated types in the security.xsd to the items needed  * to programatically configure the HTTPConduit and HTTPDestination  * with TLSClientParameters and TLSServerParameters respectively.  */
 end_comment
