@@ -1636,11 +1636,16 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+comment|// need in-exact as it COULD be 3 acks on a slow machine
+comment|//normally it will ack 1,3,5 and then 1-5, but on a slow machine,
+comment|//I've seen 1,3,5, then 1-3,5, and then 1-5
 name|mf
 operator|.
 name|verifyMessages
 argument_list|(
 literal|2
+argument_list|,
+literal|false
 argument_list|,
 literal|false
 argument_list|)
