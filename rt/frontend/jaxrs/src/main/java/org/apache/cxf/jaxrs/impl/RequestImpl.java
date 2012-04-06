@@ -1132,6 +1132,7 @@ name|EntityTag
 name|eTag
 parameter_list|)
 block|{
+specifier|final
 name|ResponseBuilder
 name|rb
 init|=
@@ -1147,16 +1148,23 @@ operator|!=
 literal|null
 condition|)
 block|{
-return|return
-name|rb
-return|;
-block|}
+comment|// the ETag conditions match; so now conditions for last modified must match
 return|return
 name|evaluatePreconditions
 argument_list|(
 name|lastModified
 argument_list|)
 return|;
+block|}
+else|else
+block|{
+comment|// the ETag conditions do not match, so last modified should be ignored
+comment|// see http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html (section 14.26 for
+comment|// "If-None-Match", behavior not specified for "If-Match", section 14.24)
+return|return
+literal|null
+return|;
+block|}
 block|}
 specifier|public
 name|String
