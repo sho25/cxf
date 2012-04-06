@@ -60,6 +60,17 @@ name|ReceivedToken
 name|renewTarget
 parameter_list|)
 function_decl|;
+comment|/**      * Return true if this TokenRenewer implementation is able to renew a token in the given realm.      */
+name|boolean
+name|canHandleToken
+parameter_list|(
+name|ReceivedToken
+name|renewTarget
+parameter_list|,
+name|String
+name|realm
+parameter_list|)
+function_decl|;
 comment|/**      * Renew a token given a TokenRenewerParameters      */
 name|TokenRenewerResponse
 name|renewToken
