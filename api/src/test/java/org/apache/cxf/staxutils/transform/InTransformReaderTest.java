@@ -444,7 +444,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"<ps1:test xmlns:ps1=\"http://foo\"><ps1:a>1 2 3</ps1:a></ps1:test>"
+literal|"<ns:test xmlns:ns=\"http://foo\"><ns:a>1 2 3</ns:a></ns:test>"
 argument_list|,
 name|value
 argument_list|)
@@ -532,7 +532,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"<ps1:test xmlns:ps1=\"http://bar\"><subtest xmlns=\"\"/></ps1:test>"
+literal|"<test xmlns=\"http://bar\"><subtest xmlns=\"\"/></test>"
 argument_list|,
 name|value
 argument_list|)
@@ -633,6 +633,8 @@ argument_list|(
 name|reader2
 argument_list|,
 name|reader
+argument_list|,
+literal|true
 argument_list|,
 literal|true
 argument_list|)
@@ -741,6 +743,8 @@ argument_list|(
 name|reader2
 argument_list|,
 name|reader
+argument_list|,
+literal|true
 argument_list|,
 literal|true
 argument_list|)
@@ -859,6 +863,8 @@ argument_list|(
 name|reader2
 argument_list|,
 name|reader
+argument_list|,
+literal|true
 argument_list|,
 literal|true
 argument_list|)
@@ -982,6 +988,8 @@ argument_list|,
 name|filteredReader
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1112,6 +1120,8 @@ argument_list|,
 name|filteredReader
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1252,6 +1262,8 @@ argument_list|,
 name|filteredReader
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1768,7 +1780,7 @@ name|transformInStreamAndCompare
 argument_list|(
 literal|"../resources/AddRequestIn2.xml"
 argument_list|,
-literal|"../resources/AddRequest.xml"
+literal|"../resources/AddRequest2.xml"
 argument_list|,
 name|transformElements
 argument_list|,
@@ -1849,7 +1861,7 @@ name|transformInStreamAndCompare
 argument_list|(
 literal|"../resources/AddRequestIn2nospace.xml"
 argument_list|,
-literal|"../resources/AddRequest.xml"
+literal|"../resources/AddRequest2.xml"
 argument_list|,
 name|transformElements
 argument_list|,
@@ -2206,7 +2218,7 @@ name|transformInStreamAndCompare
 argument_list|(
 literal|"../resources/AddRequestIn3.xml"
 argument_list|,
-literal|"../resources/AddRequest.xml"
+literal|"../resources/AddRequest3.xml"
 argument_list|,
 name|transformElements
 argument_list|,
@@ -2262,6 +2274,61 @@ argument_list|(
 literal|"../resources/wstrustReqSTRCIn1.xml"
 argument_list|,
 literal|"../resources/wstrustReqSTRC.xml"
+argument_list|,
+name|transformElements
+argument_list|,
+literal|null
+argument_list|,
+literal|null
+argument_list|,
+literal|null
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testPreservePrefixBindings
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|transformElements
+init|=
+operator|new
+name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+argument_list|()
+decl_stmt|;
+name|transformElements
+operator|.
+name|put
+argument_list|(
+literal|"{urn:abc}*"
+argument_list|,
+literal|"{urn:a}*"
+argument_list|)
+expr_stmt|;
+name|TransformTestUtils
+operator|.
+name|transformInStreamAndCompare
+argument_list|(
+literal|"../resources/multiNSIn1.xml"
+argument_list|,
+literal|"../resources/multiNS.xml"
 argument_list|,
 name|transformElements
 argument_list|,

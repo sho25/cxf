@@ -314,6 +314,8 @@ argument_list|,
 name|reader
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -412,6 +414,8 @@ argument_list|,
 name|reader
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -620,6 +624,9 @@ name|reader
 parameter_list|,
 name|boolean
 name|eec
+parameter_list|,
+name|boolean
+name|pfx
 parameter_list|)
 throws|throws
 name|XMLStreamException
@@ -728,6 +735,28 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|pfx
+condition|)
+block|{
+comment|// verify if the namespace prefix are preserved
+name|Assert
+operator|.
+name|assertEquals
+argument_list|(
+name|teacher
+operator|.
+name|getPrefix
+argument_list|()
+argument_list|,
+name|reader
+operator|.
+name|getPrefix
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 name|verifyAttributes
 argument_list|(
 name|teacher
