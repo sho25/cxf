@@ -453,7 +453,7 @@ literal|true
 return|;
 block|}
 comment|/**      * Compare the credentials of the assertion to the credentials used in 2-way TLS or those      * used to verify signatures.      * Return true on a match      * @param subjectKeyInfo the SAMLKeyInfo object      * @param signedResults a list of all of the signed results      * @return true if the credentials of the assertion were used to verify a signature      */
-specifier|private
+specifier|protected
 name|boolean
 name|compareCredentials
 parameter_list|(

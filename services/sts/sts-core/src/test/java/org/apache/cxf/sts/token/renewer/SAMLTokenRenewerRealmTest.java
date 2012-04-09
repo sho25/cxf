@@ -903,6 +903,13 @@ operator|new
 name|SAMLTokenRenewer
 argument_list|()
 decl_stmt|;
+name|samlTokenRenewer
+operator|.
+name|setVerifyProofOfPossession
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String
@@ -1338,6 +1345,13 @@ operator|new
 name|SAMLTokenRenewer
 argument_list|()
 decl_stmt|;
+name|samlTokenRenewer
+operator|.
+name|setVerifyProofOfPossession
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String

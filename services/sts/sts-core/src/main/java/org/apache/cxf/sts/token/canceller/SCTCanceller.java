@@ -826,6 +826,7 @@ return|return
 name|result
 return|;
 block|}
+comment|/**      * Set whether proof of possession is required or not to cancel a token      */
 specifier|public
 name|void
 name|setVerifyProofOfPossession
