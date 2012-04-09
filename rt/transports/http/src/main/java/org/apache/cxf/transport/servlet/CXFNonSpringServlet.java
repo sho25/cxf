@@ -773,6 +773,10 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|bus
+operator|=
+literal|null
+expr_stmt|;
 block|}
 block|}
 block|}
