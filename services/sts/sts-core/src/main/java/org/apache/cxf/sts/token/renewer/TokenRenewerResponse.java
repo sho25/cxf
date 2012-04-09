@@ -71,19 +71,6 @@ name|long
 name|lifetime
 decl_stmt|;
 specifier|private
-name|byte
-index|[]
-name|entropy
-decl_stmt|;
-specifier|private
-name|long
-name|keySize
-decl_stmt|;
-specifier|private
-name|boolean
-name|computedKey
-decl_stmt|;
-specifier|private
 name|TokenReference
 name|attachedReference
 decl_stmt|;
@@ -91,58 +78,6 @@ specifier|private
 name|TokenReference
 name|unAttachedReference
 decl_stmt|;
-comment|/**      * Return true if the entropy represents a Computed Key.      */
-specifier|public
-name|boolean
-name|isComputedKey
-parameter_list|()
-block|{
-return|return
-name|computedKey
-return|;
-block|}
-comment|/**      * Set whether the entropy represents a Computed Key or not      */
-specifier|public
-name|void
-name|setComputedKey
-parameter_list|(
-name|boolean
-name|computedKey
-parameter_list|)
-block|{
-name|this
-operator|.
-name|computedKey
-operator|=
-name|computedKey
-expr_stmt|;
-block|}
-comment|/**      * Get the KeySize that the TokenProvider set      */
-specifier|public
-name|long
-name|getKeySize
-parameter_list|()
-block|{
-return|return
-name|keySize
-return|;
-block|}
-comment|/**      * Set the KeySize      */
-specifier|public
-name|void
-name|setKeySize
-parameter_list|(
-name|long
-name|keySize
-parameter_list|)
-block|{
-name|this
-operator|.
-name|keySize
-operator|=
-name|keySize
-expr_stmt|;
-block|}
 comment|/**      * Set the token      * @param token the token to set      */
 specifier|public
 name|void
@@ -219,34 +154,6 @@ parameter_list|()
 block|{
 return|return
 name|lifetime
-return|;
-block|}
-comment|/**      * Set the entropy associated with the token.      * @param entropy the entropy associated with the token.      */
-specifier|public
-name|void
-name|setEntropy
-parameter_list|(
-name|byte
-index|[]
-name|entropy
-parameter_list|)
-block|{
-name|this
-operator|.
-name|entropy
-operator|=
-name|entropy
-expr_stmt|;
-block|}
-comment|/**      * Get the entropy associated with the token.      * @return the entropy associated with the token.      */
-specifier|public
-name|byte
-index|[]
-name|getEntropy
-parameter_list|()
-block|{
-return|return
-name|entropy
 return|;
 block|}
 comment|/**      * Set the attached TokenReference      * @param attachtedReference the attached TokenReference      */
