@@ -523,6 +523,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|tok
+operator|=
 name|renewToken
 argument_list|(
 name|message
@@ -636,7 +638,7 @@ block|}
 block|}
 block|}
 specifier|private
-name|void
+name|SecurityToken
 name|renewToken
 parameter_list|(
 name|SoapMessage
@@ -661,7 +663,9 @@ name|isExpired
 argument_list|()
 condition|)
 block|{
-return|return;
+return|return
+name|tok
+return|;
 block|}
 name|STSClient
 name|client
@@ -725,7 +729,9 @@ literal|"Renew"
 argument_list|)
 condition|)
 block|{
-return|return;
+return|return
+name|tok
+return|;
 block|}
 synchronized|synchronized
 init|(
@@ -813,13 +819,14 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+return|return
 name|client
 operator|.
 name|renewSecurityToken
 argument_list|(
 name|tok
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 catch|catch
 parameter_list|(
