@@ -306,6 +306,15 @@ name|SELF_SIGN_SAML_ASSERTION
 init|=
 literal|"ws-security.self-sign-saml-assertion"
 decl_stmt|;
+comment|/**      * This configuration tag specifies the attribute URI of the SAML attributestatement      * where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SAML_ROLE_ATTRIBUTENAME
+init|=
+literal|"ws-security.saml-role-attributename"
+decl_stmt|;
 comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static
@@ -573,6 +582,8 @@ block|,
 name|CACHE_CONFIG_FILE
 block|,
 name|TOKEN_STORE_CACHE_INSTANCE
+block|,
+name|SAML_ROLE_ATTRIBUTENAME
 block|}
 argument_list|)
 argument_list|)
