@@ -793,7 +793,7 @@ name|ReflectionUtil
 operator|.
 name|findMethod
 argument_list|(
-name|container
+name|o
 operator|.
 name|getClass
 argument_list|()
@@ -822,6 +822,13 @@ name|bn
 argument_list|)
 expr_stmt|;
 comment|//returns the recipe
+if|if
+condition|(
+name|o
+operator|!=
+literal|null
+condition|)
+block|{
 name|m
 operator|=
 name|ReflectionUtil
@@ -861,6 +868,7 @@ argument_list|,
 name|beanInstance
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
