@@ -2579,6 +2579,17 @@ name|getId
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|m2
+operator|.
+name|setContextualProperty
+argument_list|(
+name|SecurityConstants
+operator|.
+name|TOKEN
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
