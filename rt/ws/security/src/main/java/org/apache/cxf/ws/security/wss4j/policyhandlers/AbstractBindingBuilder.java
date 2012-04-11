@@ -4670,11 +4670,6 @@ condition|(
 name|st
 operator|==
 literal|null
-operator|||
-name|st
-operator|.
-name|isExpired
-argument_list|()
 condition|)
 block|{
 name|String
@@ -4716,12 +4711,6 @@ condition|(
 name|st
 operator|!=
 literal|null
-operator|&&
-operator|!
-name|st
-operator|.
-name|isExpired
-argument_list|()
 condition|)
 block|{
 name|getTokenStore

@@ -681,6 +681,22 @@ operator|=
 name|transformedTokenIdentifier
 expr_stmt|;
 block|}
+comment|/**      * Set the id      */
+specifier|public
+name|void
+name|setId
+parameter_list|(
+name|String
+name|id
+parameter_list|)
+block|{
+name|this
+operator|.
+name|id
+operator|=
+name|id
+expr_stmt|;
+block|}
 comment|/**      * @return Returns the id.      */
 specifier|public
 name|String
