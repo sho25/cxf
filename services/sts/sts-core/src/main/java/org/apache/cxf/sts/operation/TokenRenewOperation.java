@@ -597,34 +597,6 @@ name|TokenRenewer
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|private
-name|boolean
-name|allowRenewalBeforeExpiry
-decl_stmt|;
-specifier|public
-name|boolean
-name|isAllowRenewalBeforeExpiry
-parameter_list|()
-block|{
-return|return
-name|allowRenewalBeforeExpiry
-return|;
-block|}
-specifier|public
-name|void
-name|setAllowRenewalBeforeExpiry
-parameter_list|(
-name|boolean
-name|allowRenewalBeforeExpiry
-parameter_list|)
-block|{
-name|this
-operator|.
-name|allowRenewalBeforeExpiry
-operator|=
-name|allowRenewalBeforeExpiry
-expr_stmt|;
-block|}
 specifier|public
 name|void
 name|setTokenRenewers
@@ -890,7 +862,7 @@ name|REQUEST_FAILED
 argument_list|)
 throw|;
 block|}
-comment|// Reject a non-expired token (valid or invalid) by default
+comment|// Reject an invalid token
 if|if
 condition|(
 name|tokenResponse
@@ -905,10 +877,6 @@ name|STATE
 operator|.
 name|EXPIRED
 operator|&&
-operator|!
-operator|(
-name|allowRenewalBeforeExpiry
-operator|&&
 name|tokenResponse
 operator|.
 name|getToken
@@ -916,18 +884,17 @@ argument_list|()
 operator|.
 name|getState
 argument_list|()
-operator|==
+operator|!=
 name|STATE
 operator|.
 name|VALID
-operator|)
 condition|)
 block|{
 name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"The token is not expired, and so it cannot be renewed"
+literal|"The token is not valid or expired, and so it cannot be renewed"
 argument_list|)
 expr_stmt|;
 throw|throw

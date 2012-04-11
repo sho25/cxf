@@ -230,6 +230,24 @@ name|TOKEN_REALM
 init|=
 literal|"org.apache.cxf.sts.token.realm"
 decl_stmt|;
+comment|/**      * Constant to store whether the token is allowed to be renewed or not in the cached Security      * Token properties.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TOKEN_RENEWING_ALLOW
+init|=
+literal|"org.apache.cxf.sts.token.renewing.allow"
+decl_stmt|;
+comment|/**      * Constant to store whether the token is allowed to be renewed after it has expired or not       * in the cached Security Token properties.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TOKEN_RENEWING_ALLOW_AFTER_EXPIRY
+init|=
+literal|"org.apache.cxf.sts.token.renewing.allow.after.expiry"
+decl_stmt|;
 specifier|private
 name|STSConstants
 parameter_list|()

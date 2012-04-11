@@ -52,6 +52,14 @@ name|boolean
 name|verifyProofOfPossession
 parameter_list|)
 function_decl|;
+comment|/**      * boolean for enabling/disabling renewal after expiry.      */
+name|void
+name|setAllowRenewalAfterExpiry
+parameter_list|(
+name|boolean
+name|allowRenewalAfterExpiry
+parameter_list|)
+function_decl|;
 comment|/**      * Return true if this TokenRenewer implementation is able to renew a token.      */
 name|boolean
 name|canHandleToken
