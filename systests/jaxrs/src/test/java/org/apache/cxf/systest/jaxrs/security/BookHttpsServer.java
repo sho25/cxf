@@ -163,7 +163,7 @@ specifier|final
 name|String
 name|SERVER_CONFIG_FILE
 init|=
-literal|"org/apache/cxf/systest/jaxrs/security/jaxrs-https.xml"
+literal|"org/apache/cxf/systest/jaxrs/security/jaxrs-https-server.xml"
 decl_stmt|;
 specifier|protected
 name|void

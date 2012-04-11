@@ -639,7 +639,7 @@ argument_list|()
 decl_stmt|;
 name|checkBindingFactory
 argument_list|(
-name|bus
+name|b
 argument_list|)
 expr_stmt|;
 return|return

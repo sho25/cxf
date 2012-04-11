@@ -242,7 +242,7 @@ name|getFactoryClass
 parameter_list|()
 block|{
 return|return
-name|JAXRSClientFactoryBean
+name|JAXRSSpringClientFactoryBean
 operator|.
 name|class
 return|;
