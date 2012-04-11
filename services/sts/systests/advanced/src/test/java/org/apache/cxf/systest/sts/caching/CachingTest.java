@@ -675,6 +675,15 @@ operator|.
 name|TOKEN_ID
 argument_list|)
 expr_stmt|;
+name|ep
+operator|.
+name|remove
+argument_list|(
+name|SecurityConstants
+operator|.
+name|TOKEN
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|doubleIt
