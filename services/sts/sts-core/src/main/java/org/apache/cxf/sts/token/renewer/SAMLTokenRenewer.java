@@ -1209,7 +1209,6 @@ operator|.
 name|getSignatureValue
 argument_list|()
 decl_stmt|;
-comment|// Remove the previous token (now expired) from the cache
 name|int
 name|hash
 init|=
@@ -1285,6 +1284,7 @@ argument_list|(
 name|assertion
 argument_list|)
 decl_stmt|;
+comment|// Remove the previous token (now expired) from the cache
 name|tokenStore
 operator|.
 name|remove
@@ -1748,40 +1748,6 @@ operator|.
 name|TOKEN_RENEWING_ALLOW_AFTER_EXPIRY
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|isAllowRenewal
-operator|==
-literal|null
-operator|||
-name|isAllowRenewalAfterExpiry
-operator|==
-literal|null
-condition|)
-block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|WARNING
-argument_list|,
-literal|"One of isAllowRenewal or isAllowRenewalAfterExpiry not set"
-argument_list|)
-expr_stmt|;
-throw|throw
-operator|new
-name|STSException
-argument_list|(
-literal|"Error with cached token"
-argument_list|,
-name|STSException
-operator|.
-name|REQUEST_FAILED
-argument_list|)
-throw|;
-block|}
 if|if
 condition|(
 name|isAllowRenewal
