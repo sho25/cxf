@@ -700,7 +700,7 @@ operator|.
 name|getPropertyValues
 argument_list|()
 operator|.
-name|add
+name|addPropertyValue
 argument_list|(
 name|v
 operator|.

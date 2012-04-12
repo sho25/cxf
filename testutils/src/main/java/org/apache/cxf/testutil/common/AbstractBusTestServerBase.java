@@ -63,6 +63,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|bus
 operator|.
 name|shutdown
@@ -70,6 +72,15 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|t
+parameter_list|)
+block|{
+comment|//ignore, we're shutting down
+block|}
 block|}
 return|return
 name|ret

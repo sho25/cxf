@@ -445,6 +445,9 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
+operator|(
+name|Bus
+operator|)
 name|context
 operator|.
 name|getBean
@@ -571,7 +574,7 @@ operator|.
 name|getPropertyValues
 argument_list|()
 operator|.
-name|add
+name|addPropertyValue
 argument_list|(
 literal|"busConfig"
 argument_list|,
