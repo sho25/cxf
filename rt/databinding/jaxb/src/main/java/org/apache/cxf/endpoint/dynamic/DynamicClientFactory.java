@@ -3268,6 +3268,10 @@ block|{
 if|if
 condition|(
 name|key
+operator|!=
+literal|null
+operator|&&
+name|key
 operator|.
 name|equals
 argument_list|(
