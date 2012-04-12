@@ -697,6 +697,13 @@ operator|.
 name|UNAUTHORIZED
 argument_list|)
 decl_stmt|;
+name|StringBuilder
+name|sb
+init|=
+operator|new
+name|StringBuilder
+argument_list|()
+decl_stmt|;
 name|List
 argument_list|<
 name|String
@@ -722,13 +729,6 @@ operator|>
 literal|0
 condition|)
 block|{
-name|StringBuilder
-name|sb
-init|=
-operator|new
-name|StringBuilder
-argument_list|()
-decl_stmt|;
 comment|// should HttpHeadersImpl do it ?
 name|String
 index|[]
@@ -765,6 +765,18 @@ literal|0
 index|]
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+name|sb
+operator|.
+name|append
+argument_list|(
+literal|"Basic"
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|realmName
@@ -799,8 +811,6 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
-block|}
 return|return
 name|builder
 operator|.
