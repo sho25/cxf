@@ -53,7 +53,7 @@ name|provider
 operator|.
 name|model
 operator|.
-name|RequestSecurityTokenResponseType
+name|RequestSecurityTokenCollectionType
 import|;
 end_import
 
@@ -75,20 +75,20 @@ name|provider
 operator|.
 name|model
 operator|.
-name|RequestSecurityTokenType
+name|RequestSecurityTokenResponseCollectionType
 import|;
 end_import
 
 begin_interface
 specifier|public
 interface|interface
-name|ValidateOperation
+name|RequestCollectionOperation
 block|{
-name|RequestSecurityTokenResponseType
-name|validate
+name|RequestSecurityTokenResponseCollectionType
+name|requestCollection
 parameter_list|(
-name|RequestSecurityTokenType
-name|request
+name|RequestSecurityTokenCollectionType
+name|requestCollection
 parameter_list|,
 name|WebServiceContext
 name|context
