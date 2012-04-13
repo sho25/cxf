@@ -532,16 +532,19 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|"Princiapl must be alice"
-argument_list|,
-literal|"alice"
+literal|"Principal must be alice"
 argument_list|,
 name|pr
 operator|.
 name|getName
 argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"alice"
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Disable the STSClient after the first invocation
