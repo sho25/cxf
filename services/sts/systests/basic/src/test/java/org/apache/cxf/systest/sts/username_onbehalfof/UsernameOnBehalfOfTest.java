@@ -471,6 +471,15 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Only run these tests for the standalone scenario.
+if|if
+condition|(
+operator|!
+name|standalone
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -711,6 +720,15 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Only run these tests for the standalone scenario.
+if|if
+condition|(
+operator|!
+name|standalone
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -1154,6 +1172,15 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Only run these tests for the standalone scenario.
+if|if
+condition|(
+operator|!
+name|standalone
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -1588,6 +1615,15 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Only run these tests for the standalone scenario.
+if|if
+condition|(
+operator|!
+name|standalone
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -2015,6 +2051,15 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Only run these tests for the standalone scenario.
+if|if
+condition|(
+operator|!
+name|standalone
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=

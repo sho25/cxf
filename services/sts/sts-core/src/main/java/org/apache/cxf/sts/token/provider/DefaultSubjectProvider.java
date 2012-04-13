@@ -713,6 +713,32 @@ name|getPrincipal
 argument_list|()
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|principal
+operator|==
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Error in getting principal"
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|STSException
+argument_list|(
+literal|"Error in getting principal"
+argument_list|,
+name|STSException
+operator|.
+name|REQUEST_FAILED
+argument_list|)
+throw|;
+block|}
 name|SubjectBean
 name|subjectBean
 init|=
