@@ -566,6 +566,48 @@ name|allAcknowledged
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+literal|null
+operator|==
+name|target
+operator|||
+name|RMUtils
+operator|.
+name|getAddressingConstants
+argument_list|()
+operator|.
+name|getAnonymousURI
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|target
+operator|.
+name|getAddress
+argument_list|()
+operator|.
+name|getValue
+argument_list|()
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+literal|"STANDALONE_ANON_TERMINATE_SEQUENCE_MSG"
+argument_list|)
+expr_stmt|;
+comment|// keep the sequence and let RMOutInterceptor remove it after building the TS message
+comment|// if we remove the sequence here, RMOutInterceptor should check for a null sequence
+block|}
+else|else
+block|{
 name|RMEndpoint
 name|rme
 init|=
@@ -596,6 +638,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|/**      * Returns the source associated with this source sequence.      *       * @return the source.      */

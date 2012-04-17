@@ -3105,7 +3105,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|7
+literal|8
 argument_list|,
 name|intf
 operator|.
@@ -3215,6 +3215,39 @@ name|assertTrue
 argument_list|(
 literal|"Operation is toway."
 argument_list|,
+name|oi
+operator|.
+name|isOneWay
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|oi
+operator|=
+name|intf
+operator|.
+name|getOperation
+argument_list|(
+operator|new
+name|QName
+argument_list|(
+name|ns
+argument_list|,
+literal|"TerminateSequenceAnonymous"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNotNull
+argument_list|(
+literal|"No operation info."
+argument_list|,
+name|oi
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"Operation is oneway."
+argument_list|,
+operator|!
 name|oi
 operator|.
 name|isOneWay

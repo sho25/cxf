@@ -266,6 +266,12 @@ function_decl|;
 specifier|public
 specifier|abstract
 name|QName
+name|getTerminateSequenceAnonymousOperationName
+parameter_list|()
+function_decl|;
+specifier|public
+specifier|abstract
+name|QName
 name|getSequenceAckOperationName
 parameter_list|()
 function_decl|;
