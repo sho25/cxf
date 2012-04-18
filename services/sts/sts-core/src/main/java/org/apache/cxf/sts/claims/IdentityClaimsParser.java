@@ -370,6 +370,9 @@ name|valueNode
 operator|.
 name|getTextContent
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

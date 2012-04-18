@@ -2878,6 +2878,9 @@ name|token
 operator|.
 name|getTextContent
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|LOG
@@ -2975,6 +2978,9 @@ argument_list|(
 name|token
 operator|.
 name|getTextContent
+argument_list|()
+operator|.
+name|trim
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -3110,6 +3116,9 @@ literal|0
 argument_list|)
 operator|.
 name|getTextContent
+argument_list|()
+operator|.
+name|trim
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -4175,6 +4184,9 @@ name|child
 operator|.
 name|getTextContent
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|keyRequirements
@@ -4228,6 +4240,9 @@ name|child
 operator|.
 name|getTextContent
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 decl_stmt|;
 name|tokenRequirements
 operator|.
@@ -4279,6 +4294,9 @@ init|=
 name|child
 operator|.
 name|getTextContent
+argument_list|()
+operator|.
+name|trim
 argument_list|()
 decl_stmt|;
 name|LOG
