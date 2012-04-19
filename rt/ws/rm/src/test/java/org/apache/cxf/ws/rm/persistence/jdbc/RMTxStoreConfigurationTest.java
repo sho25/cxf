@@ -214,6 +214,16 @@ name|getUrl
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|assertNull
+argument_list|(
+literal|"schema should be unset"
+argument_list|,
+name|store
+operator|.
+name|getSchemaName
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
