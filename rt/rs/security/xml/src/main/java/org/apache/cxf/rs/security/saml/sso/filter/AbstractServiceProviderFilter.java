@@ -55,6 +55,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|UUID
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -647,7 +657,19 @@ argument_list|(
 name|authnRequestEncoded
 argument_list|)
 expr_stmt|;
-comment|// set relay state if any
+name|info
+operator|.
+name|setRelayState
+argument_list|(
+name|UUID
+operator|.
+name|randomUUID
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|info
 return|;
