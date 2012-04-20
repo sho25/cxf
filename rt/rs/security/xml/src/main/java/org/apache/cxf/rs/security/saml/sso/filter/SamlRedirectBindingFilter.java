@@ -130,7 +130,7 @@ block|{
 name|SamlRequestInfo
 name|info
 init|=
-name|createSamlResponseInfo
+name|createSamlRequestInfo
 argument_list|(
 name|m
 argument_list|)

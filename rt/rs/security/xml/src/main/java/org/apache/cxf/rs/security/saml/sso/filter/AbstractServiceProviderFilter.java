@@ -585,7 +585,7 @@ return|;
 block|}
 specifier|protected
 name|SamlRequestInfo
-name|createSamlResponseInfo
+name|createSamlRequestInfo
 parameter_list|(
 name|Message
 name|m

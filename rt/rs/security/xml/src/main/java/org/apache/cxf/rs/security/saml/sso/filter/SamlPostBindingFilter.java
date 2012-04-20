@@ -116,7 +116,7 @@ block|{
 name|SamlRequestInfo
 name|info
 init|=
-name|createSamlResponseInfo
+name|createSamlRequestInfo
 argument_list|(
 name|m
 argument_list|)
@@ -132,7 +132,7 @@ expr_stmt|;
 comment|// This depends on RequestDispatcherProvider linking
 comment|// SamlResponseInfo with the jsp page which will fill
 comment|// in the XHTML form using SamlResponseInfo
-comment|// in principle we could've builf the XHTML form right here
+comment|// in principle we could've built the XHTML form right here
 comment|// but it will be cleaner to get that done in JSP
 return|return
 name|Response
