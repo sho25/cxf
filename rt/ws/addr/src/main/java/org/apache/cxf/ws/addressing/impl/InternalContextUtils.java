@@ -57,6 +57,18 @@ name|java
 operator|.
 name|util
 operator|.
+name|concurrent
+operator|.
+name|RejectedExecutionException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Level
@@ -1212,6 +1224,8 @@ operator|.
 name|pause
 argument_list|()
 expr_stmt|;
+try|try
+block|{
 comment|// ... and resume on executor thread
 name|getExecutor
 argument_list|(
@@ -1241,6 +1255,32 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|RejectedExecutionException
+name|e
+parameter_list|)
+block|{
+comment|//the executor queue is full, so run the task in the caller thread
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Executor queue is full, use the caller thread."
+operator|+
+literal|"  Users can specify a larger executor queue to avoid this."
+argument_list|)
+expr_stmt|;
+name|inMessage
+operator|.
+name|getInterceptorChain
+argument_list|()
+operator|.
+name|resume
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 block|}
