@@ -6153,6 +6153,13 @@ decl_stmt|;
 name|String
 name|type
 init|=
+name|enumCreated
+condition|?
+name|getTypicalClassName
+argument_list|(
+name|name
+argument_list|)
+else|:
 name|getPrimitiveType
 argument_list|(
 name|paramEl
@@ -6234,13 +6241,6 @@ block|}
 name|String
 name|paramName
 init|=
-name|enumCreated
-condition|?
-name|getTypicalClassName
-argument_list|(
-name|name
-argument_list|)
-else|:
 name|name
 operator|.
 name|replaceAll
