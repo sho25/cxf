@@ -6722,7 +6722,8 @@ return|;
 block|}
 else|else
 block|{
-return|return
+name|theName
+operator|=
 name|theName
 operator|.
 name|substring
@@ -6741,6 +6742,16 @@ argument_list|)
 operator|.
 name|toLowerCase
 argument_list|()
+expr_stmt|;
+return|return
+name|theName
+operator|.
+name|replaceAll
+argument_list|(
+literal|"[\\.\\-]"
+argument_list|,
+literal|"_"
+argument_list|)
 return|;
 block|}
 block|}
