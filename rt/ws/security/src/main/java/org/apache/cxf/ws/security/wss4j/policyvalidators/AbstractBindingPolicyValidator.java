@@ -710,6 +710,13 @@ operator|.
 name|getXpath
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|xpath
+operator|!=
+literal|null
+condition|)
+block|{
 name|String
 index|[]
 name|nodes
@@ -762,6 +769,7 @@ block|{
 return|return
 literal|false
 return|;
+block|}
 block|}
 block|}
 block|}
