@@ -802,7 +802,6 @@ name|RejectedExecutionException
 name|e
 parameter_list|)
 block|{
-comment|//the executor queue is full, so run the task in the caller thread
 name|LOG
 operator|.
 name|warning
@@ -812,11 +811,30 @@ operator|+
 literal|"  Users can specify a larger executor queue to avoid this."
 argument_list|)
 expr_stmt|;
+comment|// only block the thread if the prop is unset or set to false, otherwise let it go
+if|if
+condition|(
+operator|!
+name|MessageUtils
+operator|.
+name|isTrue
+argument_list|(
+name|message
+operator|.
+name|getContextualProperty
+argument_list|(
+literal|"org.apache.cxf.oneway.rejected_execution_exception"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+comment|//the executor queue is full, so run the task in the caller thread
 name|chain
 operator|.
 name|resume
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
