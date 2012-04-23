@@ -65,20 +65,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|UriInfo
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|w3c
@@ -144,22 +130,6 @@ operator|.
 name|ext
 operator|.
 name|RequestHandler
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|impl
-operator|.
-name|UriInfoImpl
 import|;
 end_import
 
