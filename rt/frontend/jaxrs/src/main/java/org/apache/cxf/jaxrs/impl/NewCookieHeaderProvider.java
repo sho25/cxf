@@ -105,6 +105,14 @@ name|SECURE
 init|=
 literal|"Secure"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|EXPIRES
+init|=
+literal|"Expires"
+decl_stmt|;
 specifier|public
 name|NewCookie
 name|fromString
@@ -327,6 +335,20 @@ name|isSecure
 operator|=
 literal|true
 expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|theToken
+operator|.
+name|startsWith
+argument_list|(
+name|EXPIRES
+argument_list|)
+condition|)
+block|{
+comment|// ignore
+continue|continue;
 block|}
 else|else
 block|{
