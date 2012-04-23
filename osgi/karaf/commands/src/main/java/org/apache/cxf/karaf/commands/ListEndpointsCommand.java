@@ -157,7 +157,7 @@ specifier|final
 name|String
 name|HEADER_FORMAT
 init|=
-literal|"%-25s %-10s %-60s"
+literal|"%-25s %-10s %-60s %-40s"
 decl_stmt|;
 specifier|protected
 specifier|static
@@ -165,7 +165,7 @@ specifier|final
 name|String
 name|OUTPUT_FORMAT
 init|=
-literal|"[%-23s] [%-8s] [%-58s]"
+literal|"[%-23s] [%-8s] [%-58s] [%-38s]"
 decl_stmt|;
 annotation|@
 name|Argument
@@ -333,6 +333,8 @@ argument_list|,
 literal|"State"
 argument_list|,
 literal|"Address"
+argument_list|,
+literal|"BusID"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -387,6 +389,14 @@ operator|.
 name|getAddress
 argument_list|()
 decl_stmt|;
+name|String
+name|busId
+init|=
+name|b
+operator|.
+name|getId
+argument_list|()
+decl_stmt|;
 name|System
 operator|.
 name|out
@@ -404,6 +414,8 @@ argument_list|,
 name|started
 argument_list|,
 name|address
+argument_list|,
+name|busId
 argument_list|)
 argument_list|)
 expr_stmt|;
