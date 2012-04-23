@@ -500,7 +500,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_TYPE
+name|ACCEPT
 argument_list|,
 literal|"application/xml"
 argument_list|)
@@ -511,7 +511,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_LANGUAGE
+name|ACCEPT_LANGUAGE
 argument_list|,
 literal|"en"
 argument_list|)
@@ -522,7 +522,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_ENCODING
+name|ACCEPT_ENCODING
 argument_list|,
 literal|"utf-8"
 argument_list|)
@@ -589,7 +589,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_TYPE
+name|ACCEPT
 argument_list|,
 literal|"application/xml"
 argument_list|)
@@ -600,7 +600,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_LANGUAGE
+name|ACCEPT_LANGUAGE
 argument_list|,
 literal|"en"
 argument_list|)
@@ -611,7 +611,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_ENCODING
+name|ACCEPT_ENCODING
 argument_list|,
 literal|"utf-8"
 argument_list|)
@@ -720,7 +720,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_TYPE
+name|ACCEPT
 argument_list|,
 literal|"application/xml"
 argument_list|)
@@ -731,7 +731,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_LANGUAGE
+name|ACCEPT_LANGUAGE
 argument_list|,
 literal|"en"
 argument_list|)
@@ -742,9 +742,9 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_ENCODING
+name|ACCEPT_ENCODING
 argument_list|,
-literal|"utf-8"
+literal|"gzip"
 argument_list|)
 expr_stmt|;
 name|List
@@ -818,7 +818,7 @@ argument_list|(
 literal|"en"
 argument_list|)
 argument_list|,
-literal|"utf-8"
+literal|"gzip"
 argument_list|)
 decl_stmt|;
 name|list
@@ -858,7 +858,7 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_TYPE
+name|ACCEPT
 argument_list|,
 literal|"application/xml"
 argument_list|)
@@ -869,9 +869,9 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_LANGUAGE
+name|ACCEPT_LANGUAGE
 argument_list|,
-literal|"en"
+literal|"en-us"
 argument_list|)
 expr_stmt|;
 name|metadata
@@ -880,9 +880,9 @@ name|putSingle
 argument_list|(
 name|HttpHeaders
 operator|.
-name|CONTENT_ENCODING
+name|ACCEPT_ENCODING
 argument_list|,
-literal|"utf-8"
+literal|"gzip;q=1.0, compress"
 argument_list|)
 expr_stmt|;
 name|List
@@ -915,7 +915,7 @@ argument_list|(
 literal|"en"
 argument_list|)
 argument_list|,
-literal|"utf-8"
+literal|"gzip"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -935,7 +935,7 @@ argument_list|(
 literal|"en"
 argument_list|)
 argument_list|,
-literal|"utf-8"
+literal|"gzip"
 argument_list|)
 decl_stmt|;
 name|list
