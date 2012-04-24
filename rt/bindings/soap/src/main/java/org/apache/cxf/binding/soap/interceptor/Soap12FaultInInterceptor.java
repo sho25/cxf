@@ -771,6 +771,8 @@ name|SoapFault
 argument_list|(
 literal|"Could not parse message."
 argument_list|,
+name|e
+argument_list|,
 name|message
 operator|.
 name|getVersion
