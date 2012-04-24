@@ -262,18 +262,6 @@ operator|.
 name|newDocument
 argument_list|()
 decl_stmt|;
-name|doc
-operator|.
-name|appendChild
-argument_list|(
-name|doc
-operator|.
-name|createElement
-argument_list|(
-literal|"root"
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|Issuer
 name|issuer
 init|=
@@ -367,6 +355,13 @@ argument_list|,
 name|doc
 argument_list|)
 decl_stmt|;
+name|doc
+operator|.
+name|appendChild
+argument_list|(
+name|policyElement
+argument_list|)
+expr_stmt|;
 comment|// String outputString = DOM2Writer.nodeToString(policyElement);
 name|assertNotNull
 argument_list|(
