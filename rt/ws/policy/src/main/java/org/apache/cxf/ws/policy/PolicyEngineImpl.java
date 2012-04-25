@@ -2013,7 +2013,7 @@ operator|.
 name|getInFaultInterceptors
 argument_list|()
 operator|.
-name|add
+name|remove
 argument_list|(
 name|PolicyVerificationInFaultInterceptor
 operator|.
