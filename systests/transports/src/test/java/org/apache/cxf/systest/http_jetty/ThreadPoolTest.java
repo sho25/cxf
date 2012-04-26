@@ -331,9 +331,7 @@ name|greeter
 operator|.
 name|greetMeLater
 argument_list|(
-literal|2
-operator|*
-literal|1000
+literal|1600
 argument_list|)
 expr_stmt|;
 block|}
@@ -344,11 +342,6 @@ name|t
 parameter_list|)
 block|{
 comment|//ignore
-name|t
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 block|}
 name|long
 name|end
@@ -384,6 +377,21 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//make sure things are running
+name|greeter
+operator|.
+name|greetMeLater
+argument_list|(
+literal|1
+argument_list|)
+expr_stmt|;
+name|greeter
+operator|.
+name|greetMeLater
+argument_list|(
+literal|1
+argument_list|)
+expr_stmt|;
 name|TestRunnable
 name|r
 index|[]
