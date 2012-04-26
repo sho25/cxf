@@ -787,6 +787,8 @@ operator|.
 name|getEndpointIdentifier
 argument_list|(
 name|endpoint
+argument_list|,
+name|bus
 argument_list|)
 argument_list|,
 operator|(

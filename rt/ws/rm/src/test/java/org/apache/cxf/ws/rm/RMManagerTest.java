@@ -5069,7 +5069,7 @@ name|store
 operator|.
 name|getSourceSequences
 argument_list|(
-literal|"{S}s.{P}p"
+literal|"{S}s.{P}p@cxf"
 argument_list|)
 argument_list|)
 operator|.
@@ -5123,7 +5123,7 @@ name|store
 operator|.
 name|getDestinationSequences
 argument_list|(
-literal|"{S}s.{P}p"
+literal|"{S}s.{P}p@cxf"
 argument_list|)
 argument_list|)
 operator|.

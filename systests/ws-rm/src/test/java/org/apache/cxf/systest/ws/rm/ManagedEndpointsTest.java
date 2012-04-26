@@ -685,6 +685,8 @@ operator|.
 name|getEndpointIdentifier
 argument_list|(
 name|ep
+argument_list|,
+name|clientBus
 argument_list|)
 decl_stmt|;
 name|greeter

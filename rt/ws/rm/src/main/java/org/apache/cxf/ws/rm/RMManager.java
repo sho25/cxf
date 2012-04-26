@@ -1013,6 +1013,9 @@ name|client
 operator|.
 name|getEndpoint
 argument_list|()
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|Collection
@@ -2890,6 +2893,9 @@ operator|.
 name|getEndpointIdentifier
 argument_list|(
 name|endpoint
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|Collection

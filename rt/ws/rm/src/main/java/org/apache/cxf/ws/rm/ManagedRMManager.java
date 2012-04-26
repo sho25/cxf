@@ -251,6 +251,11 @@ operator|.
 name|getEndpointIdentifier
 argument_list|(
 name|ep
+argument_list|,
+name|manager
+operator|.
+name|getBus
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
