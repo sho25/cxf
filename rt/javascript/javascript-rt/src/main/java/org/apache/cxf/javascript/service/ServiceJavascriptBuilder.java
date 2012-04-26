@@ -3152,6 +3152,24 @@ operator|++
 expr_stmt|;
 block|}
 block|}
+elseif|else
+if|if
+condition|(
+name|isRPC
+condition|)
+block|{
+comment|//make sure the rpc element has a valid prefix
+name|prefixAccumulator
+operator|.
+name|xmlElementString
+argument_list|(
+name|currentOperation
+operator|.
+name|getName
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|soapBindingInfo
