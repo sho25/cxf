@@ -98,7 +98,13 @@ name|String
 argument_list|,
 name|Extension
 argument_list|>
-argument_list|()
+argument_list|(
+literal|16
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|4
+argument_list|)
 decl_stmt|;
 specifier|private
 name|ExtensionRegistry

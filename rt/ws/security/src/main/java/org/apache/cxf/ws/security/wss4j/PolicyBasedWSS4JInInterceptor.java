@@ -1299,7 +1299,13 @@ name|Object
 argument_list|,
 name|Properties
 argument_list|>
-argument_list|()
+argument_list|(
+literal|16
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|2
+argument_list|)
 expr_stmt|;
 name|info
 operator|.

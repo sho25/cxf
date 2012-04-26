@@ -106,7 +106,13 @@ name|K
 argument_list|,
 name|T
 argument_list|>
-argument_list|()
+argument_list|(
+literal|16
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|4
+argument_list|)
 expr_stmt|;
 block|}
 elseif|else

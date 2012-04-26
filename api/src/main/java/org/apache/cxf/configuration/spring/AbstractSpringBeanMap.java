@@ -336,7 +336,13 @@ name|X
 argument_list|,
 name|V
 argument_list|>
-argument_list|()
+argument_list|(
+literal|4
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|4
+argument_list|)
 decl_stmt|;
 specifier|public
 name|void

@@ -660,6 +660,10 @@ name|Object
 argument_list|>
 argument_list|(
 literal|4
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|2
 argument_list|)
 argument_list|)
 expr_stmt|;

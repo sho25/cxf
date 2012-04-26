@@ -816,7 +816,13 @@ name|String
 argument_list|,
 name|Object
 argument_list|>
-argument_list|()
+argument_list|(
+literal|8
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|4
+argument_list|)
 decl_stmt|;
 specifier|protected
 name|Map

@@ -9291,7 +9291,13 @@ argument_list|>
 argument_list|,
 name|Boolean
 argument_list|>
-argument_list|()
+argument_list|(
+literal|4
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|1
+argument_list|)
 decl_stmt|;
 name|Annotation
 index|[]

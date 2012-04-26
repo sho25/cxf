@@ -110,7 +110,13 @@ name|String
 argument_list|,
 name|Cookie
 argument_list|>
-argument_list|()
+argument_list|(
+literal|4
+argument_list|,
+literal|0.75f
+argument_list|,
+literal|4
+argument_list|)
 decl_stmt|;
 specifier|private
 name|boolean
