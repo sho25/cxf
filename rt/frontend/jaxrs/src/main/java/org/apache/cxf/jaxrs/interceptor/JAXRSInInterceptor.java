@@ -938,6 +938,8 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+name|acceptContentTypes
+operator|=
 name|JAXRSUtils
 operator|.
 name|sortMediaTypes
