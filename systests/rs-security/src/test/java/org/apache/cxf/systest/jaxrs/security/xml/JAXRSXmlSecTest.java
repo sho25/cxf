@@ -1119,7 +1119,7 @@ name|properties
 argument_list|,
 name|SecurityUtils
 operator|.
-name|X509_KEY
+name|X509_CERT
 argument_list|,
 name|aes128GCM
 argument_list|,
@@ -1201,7 +1201,7 @@ name|properties
 argument_list|,
 name|SecurityUtils
 operator|.
-name|X509_KEY
+name|X509_CERT
 argument_list|,
 name|XMLCipher
 operator|.
@@ -1481,7 +1481,7 @@ name|properties
 argument_list|,
 name|SecurityUtils
 operator|.
-name|X509_KEY
+name|X509_CERT
 argument_list|,
 literal|"http://www.w3.org/2009/xmlenc11#aes128-gcm"
 argument_list|,
@@ -1630,7 +1630,7 @@ name|properties
 argument_list|,
 name|SecurityUtils
 operator|.
-name|X509_KEY
+name|X509_CERT
 argument_list|,
 name|XMLCipher
 operator|.

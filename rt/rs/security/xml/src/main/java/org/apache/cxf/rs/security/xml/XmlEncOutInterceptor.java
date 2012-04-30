@@ -573,7 +573,7 @@ name|keyIdentifierType
 init|=
 name|SecurityUtils
 operator|.
-name|X509_KEY
+name|X509_CERT
 decl_stmt|;
 specifier|private
 name|String
@@ -1729,7 +1729,7 @@ name|equals
 argument_list|(
 name|SecurityUtils
 operator|.
-name|X509_KEY
+name|X509_CERT
 argument_list|)
 condition|)
 block|{

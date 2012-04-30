@@ -295,9 +295,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|X509_KEY
+name|X509_CERT
 init|=
-literal|"X509_KEY"
+literal|"X509Certificate"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -305,7 +305,7 @@ specifier|final
 name|String
 name|X509_ISSUER_SERIAL
 init|=
-literal|"X509_ISSUER_SERIAL"
+literal|"X509IssuerCerial"
 decl_stmt|;
 specifier|public
 specifier|static
