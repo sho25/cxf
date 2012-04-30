@@ -305,7 +305,7 @@ specifier|final
 name|String
 name|X509_ISSUER_SERIAL
 init|=
-literal|"X509IssuerCerial"
+literal|"X509IssuerSerial"
 decl_stmt|;
 specifier|public
 specifier|static
