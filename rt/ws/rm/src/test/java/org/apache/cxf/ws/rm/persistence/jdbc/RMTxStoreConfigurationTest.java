@@ -55,16 +55,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|sql
-operator|.
-name|SQLFeatureNotSupportedException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|logging
@@ -563,8 +553,6 @@ specifier|public
 name|Logger
 name|getParentLogger
 parameter_list|()
-throws|throws
-name|SQLFeatureNotSupportedException
 block|{
 return|return
 literal|null
