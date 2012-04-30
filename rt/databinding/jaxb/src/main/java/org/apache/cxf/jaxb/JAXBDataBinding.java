@@ -4614,15 +4614,6 @@ name|Object
 name|objectFactory
 parameter_list|)
 block|{
-try|try
-block|{
-name|Class
-operator|.
-name|forName
-argument_list|(
-literal|"org.objectweb.asm.ClassWriter"
-argument_list|)
-expr_stmt|;
 return|return
 name|WrapperHelperCompiler
 operator|.
@@ -4640,18 +4631,6 @@ name|fields
 argument_list|,
 name|objectFactory
 argument_list|)
-return|;
-block|}
-catch|catch
-parameter_list|(
-name|ClassNotFoundException
-name|e
-parameter_list|)
-block|{
-comment|// ASM not found, just use reflection based stuff
-block|}
-return|return
-literal|null
 return|;
 block|}
 specifier|public
