@@ -553,7 +553,7 @@ name|AbstractCodegenMoho
 extends|extends
 name|AbstractMojo
 block|{
-comment|/**      * @parameter expression="${project.build.outputDirectory}"      * @readonly      * @required      */
+comment|/**      * @parameter expression="${project.build.outputDirectory}"      * @required      */
 specifier|protected
 name|String
 name|classesDirectory
