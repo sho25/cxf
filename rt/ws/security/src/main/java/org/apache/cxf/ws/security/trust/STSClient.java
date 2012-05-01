@@ -4926,7 +4926,7 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-literal|"dsig"
+literal|"ds"
 argument_list|,
 literal|"KeyInfo"
 argument_list|,
@@ -4937,7 +4937,7 @@ name|writer
 operator|.
 name|writeNamespace
 argument_list|(
-literal|"dsig"
+literal|"ds"
 argument_list|,
 literal|"http://www.w3.org/2000/09/xmldsig#"
 argument_list|)
@@ -5021,7 +5021,7 @@ name|writer
 operator|.
 name|writeStartElement
 argument_list|(
-literal|"dsig"
+literal|"ds"
 argument_list|,
 literal|"KeyValue"
 argument_list|,
