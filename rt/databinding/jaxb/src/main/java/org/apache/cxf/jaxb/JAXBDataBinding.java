@@ -1090,6 +1090,13 @@ argument_list|(
 name|doc
 argument_list|)
 expr_stmt|;
+name|nd
+operator|=
+name|super
+operator|.
+name|getNode
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
