@@ -392,6 +392,13 @@ name|subjectNameIDFormat
 argument_list|)
 expr_stmt|;
 block|}
+name|subjectBean
+operator|.
+name|setSubjectConfirmationData
+argument_list|(
+name|subjectConfirmationData
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|SAML2Constants
