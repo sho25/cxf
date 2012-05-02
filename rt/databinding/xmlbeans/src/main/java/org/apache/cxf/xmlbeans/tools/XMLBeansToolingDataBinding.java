@@ -1587,6 +1587,23 @@ argument_list|(
 literal|"1.5"
 argument_list|)
 expr_stmt|;
+name|options
+operator|.
+name|setCharacterEncoding
+argument_list|(
+operator|(
+name|String
+operator|)
+name|context
+operator|.
+name|get
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_ENCODING
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|// save .xsb files
 name|typeSystem
 operator|.
