@@ -698,7 +698,6 @@ literal|"invalidSAMLsecurity"
 argument_list|)
 throw|;
 block|}
-comment|// TODO clock skew - future TTL required here.
 comment|// We must have a NotOnOrAfter timestamp
 if|if
 condition|(
@@ -714,7 +713,7 @@ operator|.
 name|getNotOnOrAfter
 argument_list|()
 operator|.
-name|isAfterNow
+name|isBeforeNow
 argument_list|()
 condition|)
 block|{
