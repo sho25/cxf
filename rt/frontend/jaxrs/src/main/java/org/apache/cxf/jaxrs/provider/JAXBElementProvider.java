@@ -1461,6 +1461,16 @@ operator|new
 name|WebApplicationException
 argument_list|(
 name|e
+argument_list|,
+name|Response
+operator|.
+name|status
+argument_list|(
+literal|400
+argument_list|)
+operator|.
+name|build
+argument_list|()
 argument_list|)
 throw|;
 block|}
