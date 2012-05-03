@@ -221,6 +221,7 @@ name|SamlpRequestComponentBuilder
 block|{
 specifier|private
 specifier|static
+specifier|volatile
 name|SAMLObjectBuilder
 argument_list|<
 name|AuthnRequest
@@ -229,6 +230,7 @@ name|authnRequestBuilder
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|volatile
 name|SAMLObjectBuilder
 argument_list|<
 name|Issuer
@@ -237,6 +239,7 @@ name|issuerBuilder
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|volatile
 name|SAMLObjectBuilder
 argument_list|<
 name|NameIDPolicy
@@ -245,6 +248,7 @@ name|nameIDBuilder
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|volatile
 name|SAMLObjectBuilder
 argument_list|<
 name|RequestedAuthnContext
@@ -253,6 +257,7 @@ name|requestedAuthnCtxBuilder
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|volatile
 name|SAMLObjectBuilder
 argument_list|<
 name|AuthnContextClassRef
@@ -261,6 +266,7 @@ name|requestedAuthnCtxClassRefBuilder
 decl_stmt|;
 specifier|private
 specifier|static
+specifier|volatile
 name|XMLObjectBuilderFactory
 name|builderFactory
 init|=

@@ -80,6 +80,7 @@ name|String
 name|originalIssuer
 decl_stmt|;
 specifier|private
+specifier|transient
 name|Principal
 name|principal
 decl_stmt|;

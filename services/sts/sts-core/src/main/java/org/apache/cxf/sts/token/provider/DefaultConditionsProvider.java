@@ -464,6 +464,36 @@ name|getExpires
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|creationTime
+operator|==
+literal|null
+operator|||
+name|expirationTime
+operator|==
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Error in parsing Timestamp Created or Expiration Strings"
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|STSException
+argument_list|(
+literal|"Error in parsing Timestamp Created or Expiration Strings"
+argument_list|,
+name|STSException
+operator|.
+name|INVALID_TIME
+argument_list|)
+throw|;
+block|}
 comment|// Check to see if the created time is in the future
 name|Date
 name|validCreation
@@ -495,16 +525,12 @@ name|currentTime
 operator|+
 name|futureTimeToLive
 operator|*
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 block|}
 if|if
 condition|(
-name|creationTime
-operator|!=
-literal|null
-operator|&&
 name|creationTime
 operator|.
 name|after
