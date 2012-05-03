@@ -43,13 +43,6 @@ name|state
 parameter_list|)
 function_decl|;
 name|RequestState
-name|getRequestState
-parameter_list|(
-name|String
-name|relayState
-parameter_list|)
-function_decl|;
-name|RequestState
 name|removeRequestState
 parameter_list|(
 name|String

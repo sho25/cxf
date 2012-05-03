@@ -134,6 +134,8 @@ comment|// SamlResponseInfo with the jsp page which will fill
 comment|// in the XHTML form using SamlResponseInfo
 comment|// in principle we could've built the XHTML form right here
 comment|// but it will be cleaner to get that done in JSP
+comment|// Note the view handler will also need to set a RelayState
+comment|// cookie
 return|return
 name|Response
 operator|.
