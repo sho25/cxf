@@ -1946,6 +1946,10 @@ name|secondEncrParts
 operator|.
 name|isEmpty
 argument_list|()
+operator|&&
+name|encrBase
+operator|instanceof
+name|WSSecDKEncrypt
 condition|)
 block|{
 try|try
@@ -2005,6 +2009,10 @@ name|secondEncrParts
 operator|.
 name|isEmpty
 argument_list|()
+operator|&&
+name|encrBase
+operator|instanceof
+name|WSSecEncrypt
 condition|)
 block|{
 try|try

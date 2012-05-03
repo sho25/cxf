@@ -8833,10 +8833,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|crypto
-operator|!=
-literal|null
-operator|&&
 name|encrUser
 operator|==
 literal|null

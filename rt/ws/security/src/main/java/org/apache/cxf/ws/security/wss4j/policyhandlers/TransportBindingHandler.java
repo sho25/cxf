@@ -2471,7 +2471,11 @@ block|}
 else|else
 block|{
 return|return
-literal|null
+operator|new
+name|byte
+index|[
+literal|0
+index|]
 return|;
 block|}
 block|}

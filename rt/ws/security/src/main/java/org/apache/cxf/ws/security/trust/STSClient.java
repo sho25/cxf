@@ -7378,6 +7378,9 @@ name|getTime
 argument_list|()
 operator|+
 operator|(
+operator|(
+name|long
+operator|)
 name|ttl
 operator|*
 literal|1000L

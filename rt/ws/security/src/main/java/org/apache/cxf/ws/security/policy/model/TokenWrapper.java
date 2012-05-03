@@ -75,18 +75,6 @@ name|apache
 operator|.
 name|neethi
 operator|.
-name|Assertion
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
 name|ExactlyOne
 import|;
 end_import
@@ -135,8 +123,6 @@ name|TokenWrapper
 extends|extends
 name|AbstractSecurityAssertion
 implements|implements
-name|Assertion
-implements|,
 name|PolicyContainingAssertion
 block|{
 specifier|protected

@@ -451,6 +451,13 @@ name|SoapMessage
 name|soapMessage
 parameter_list|)
 block|{
+if|if
+condition|(
+name|soapMessage
+operator|!=
+literal|null
+condition|)
+block|{
 name|List
 argument_list|<
 name|WSHandlerResult
@@ -513,6 +520,7 @@ block|{
 return|return
 name|token
 return|;
+block|}
 block|}
 block|}
 block|}
