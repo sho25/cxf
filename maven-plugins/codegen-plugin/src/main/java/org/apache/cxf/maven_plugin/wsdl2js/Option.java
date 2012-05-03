@@ -123,7 +123,7 @@ name|File
 name|output
 decl_stmt|;
 comment|/**      * Whether to validate the WSDL.       */
-name|Boolean
+name|String
 name|validate
 decl_stmt|;
 comment|/**      * The wsdl version.      */
@@ -188,7 +188,7 @@ name|validate
 operator|=
 name|other
 operator|.
-name|isValidate
+name|getValidate
 argument_list|()
 expr_stmt|;
 block|}
@@ -290,20 +290,20 @@ expr_stmt|;
 block|}
 comment|/**      * @return Validating the WSDL?      */
 specifier|public
-name|Boolean
-name|isValidate
+name|String
+name|getValidate
 parameter_list|()
 block|{
 return|return
 name|validate
 return|;
 block|}
-comment|/**      * Control WSDL validation.      * @param validate true to validate.      */
+comment|/**      * Control WSDL validation.      * @param validate true or all to validate.      */
 specifier|public
 name|void
 name|setValidate
 parameter_list|(
-name|Boolean
+name|String
 name|validate
 parameter_list|)
 block|{

@@ -370,9 +370,7 @@ name|ToolConstants
 operator|.
 name|CFG_VALIDATE_WSDL
 argument_list|,
-name|Boolean
-operator|.
-name|TRUE
+literal|"all"
 argument_list|)
 expr_stmt|;
 name|env
@@ -477,9 +475,7 @@ name|ToolConstants
 operator|.
 name|CFG_VALIDATE_WSDL
 argument_list|,
-name|Boolean
-operator|.
-name|TRUE
+literal|"all"
 argument_list|)
 expr_stmt|;
 name|env

@@ -1708,11 +1708,20 @@ argument_list|,
 name|service
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|context
+operator|.
+name|basicValidateWSDL
+argument_list|()
+condition|)
+block|{
 name|validate
 argument_list|(
 name|service
 argument_list|)
 expr_stmt|;
+block|}
 comment|// Build the JavaModel from the ServiceModel
 name|processor
 operator|.

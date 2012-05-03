@@ -788,12 +788,8 @@ if|if
 condition|(
 name|env
 operator|.
-name|optionSet
-argument_list|(
-name|ToolConstants
-operator|.
-name|CFG_VALIDATE_WSDL
-argument_list|)
+name|fullValidateWSDL
+argument_list|()
 condition|)
 block|{
 name|validate
@@ -975,7 +971,7 @@ if|if
 condition|(
 name|env
 operator|.
-name|validateWSDL
+name|fullValidateWSDL
 argument_list|()
 condition|)
 block|{
