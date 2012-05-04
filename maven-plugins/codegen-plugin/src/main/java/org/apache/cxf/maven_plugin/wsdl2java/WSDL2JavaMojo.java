@@ -691,6 +691,13 @@ argument_list|(
 name|wsdlOption
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|encoding
+operator|!=
+literal|null
+condition|)
+block|{
 name|ret
 operator|.
 name|add
@@ -709,6 +716,7 @@ argument_list|,
 name|encoding
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ret
 return|;
