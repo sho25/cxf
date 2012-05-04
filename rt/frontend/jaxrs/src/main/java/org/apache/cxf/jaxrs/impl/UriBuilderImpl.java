@@ -2268,15 +2268,11 @@ literal|"path is null"
 argument_list|)
 throw|;
 block|}
-comment|// this is the cheapest way to figure out if a given path is a full-fledged
-comment|// URI with the http(s) scheme but a more formal approach may be needed
 if|if
 condition|(
-name|path
-operator|.
-name|startsWith
+name|isAbsoluteUriPath
 argument_list|(
-literal|"http"
+name|path
 argument_list|)
 condition|)
 block|{
@@ -3363,15 +3359,31 @@ operator|==
 literal|null
 condition|)
 block|{
-name|paths
-operator|.
-name|clear
+name|clearPathAndMatrix
 argument_list|()
 expr_stmt|;
-name|matrix
-operator|.
-name|clear
+block|}
+elseif|else
+if|if
+condition|(
+name|isAbsoluteUriPath
+argument_list|(
+name|path
+argument_list|)
+condition|)
+block|{
+name|clearPathAndMatrix
 argument_list|()
+expr_stmt|;
+name|uri
+argument_list|(
+name|URI
+operator|.
+name|create
+argument_list|(
+name|path
+argument_list|)
+argument_list|)
 expr_stmt|;
 block|}
 else|else
@@ -3384,6 +3396,46 @@ expr_stmt|;
 block|}
 return|return
 name|this
+return|;
+block|}
+specifier|private
+name|void
+name|clearPathAndMatrix
+parameter_list|()
+block|{
+name|paths
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|matrix
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+block|}
+specifier|private
+name|boolean
+name|isAbsoluteUriPath
+parameter_list|(
+name|String
+name|path
+parameter_list|)
+block|{
+comment|// This is the cheapest way to figure out if a given path is an absolute
+comment|// URI with the http(s) scheme, more expensive way is to always convert
+comment|// a path to URI and check if it starts from some scheme or not
+comment|// Given that the list of schemes can be open-ended it is recommended that
+comment|// UriBuilder.fromUri is called instead for schemes like 'file', 'jms', etc
+comment|// be supported though the use of non-http schemes for *building* new URIs
+comment|// is pretty limited in the context of working with JAX-RS services
+return|return
+name|path
+operator|.
+name|startsWith
+argument_list|(
+literal|"http"
+argument_list|)
 return|;
 block|}
 annotation|@
