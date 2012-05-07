@@ -869,17 +869,6 @@ name|String
 name|validateWsdl
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Validate: "
-operator|+
-name|validateWsdl
-argument_list|)
-expr_stmt|;
 name|this
 operator|.
 name|validateWsdl
@@ -895,17 +884,6 @@ name|String
 name|v
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Validate: "
-operator|+
-name|v
-argument_list|)
-expr_stmt|;
 name|this
 operator|.
 name|validateWsdl
