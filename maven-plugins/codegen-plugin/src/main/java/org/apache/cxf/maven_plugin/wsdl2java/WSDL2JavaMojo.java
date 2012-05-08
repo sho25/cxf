@@ -841,6 +841,13 @@ name|isDebugEnabled
 argument_list|()
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|encoding
+operator|!=
+literal|null
+condition|)
+block|{
 name|list
 operator|.
 name|add
@@ -859,6 +866,7 @@ argument_list|,
 name|encoding
 argument_list|)
 expr_stmt|;
+block|}
 name|String
 index|[]
 name|args
