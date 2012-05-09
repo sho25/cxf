@@ -248,10 +248,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -378,6 +383,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.2.2 (WSS1.0) Mutual Authentication with X.509 Certificates, Sign, Encrypt      */
 annotation|@
@@ -500,6 +512,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -626,6 +645,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.2.4 (WSS1.1) Mutual Authentication with X.509 Certificates, Sign, Encrypt      */
 annotation|@
@@ -748,6 +774,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

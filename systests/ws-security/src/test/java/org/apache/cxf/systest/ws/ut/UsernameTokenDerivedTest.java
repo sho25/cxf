@@ -256,10 +256,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -386,6 +391,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Here the key derived from a UsernameToken (and derived again) is used as a protection       * token for the symmetric binding, and used to sign the SOAP Body.      */
 annotation|@
@@ -508,6 +520,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -634,6 +653,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Here the key derived from a UsernameToken is used to sign the Timestamp over the Transport      * binding.      */
 annotation|@
@@ -756,6 +782,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -882,6 +915,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Here the key derived from a UsernameToken is used to sign the message signature over the      * Symmetric binding. The UsernameToken is encrypted.      */
 annotation|@
@@ -1006,6 +1046,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Here the key derived from a UsernameToken is used to sign the message signature over the      * Symmetric binding. The UsernameToken is encrypted and signed.      */
 annotation|@
@@ -1128,6 +1175,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

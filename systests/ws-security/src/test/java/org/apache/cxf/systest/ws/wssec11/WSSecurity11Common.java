@@ -386,6 +386,13 @@ name|output
 argument_list|)
 expr_stmt|;
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 specifier|static

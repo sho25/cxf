@@ -356,10 +356,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -486,6 +491,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.3.1.2 (WSS1.0) SAML1.1 Assertion (Sender Vouches) over SSL      */
 annotation|@
@@ -608,6 +620,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -734,6 +753,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.3.1.4 (WSS1.0) SAML1.1 Sender Vouches with X.509 Certificates, Sign, Optional Encrypt      */
 annotation|@
@@ -856,6 +882,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -982,6 +1015,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.3.2.1 (WSS1.1) SAML 2.0 Bearer      */
 annotation|@
@@ -1104,6 +1144,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1230,6 +1277,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.3.2.3 (WSS1.1) SAML2.0 HoK over SSL      */
 annotation|@
@@ -1354,6 +1408,13 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * 2.3.2.4 (WSS1.1) SAML1.1/2.0 Sender Vouches with X.509 Certificate, Sign, Encrypt      */
 annotation|@
@@ -1476,6 +1537,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1610,6 +1678,13 @@ operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
