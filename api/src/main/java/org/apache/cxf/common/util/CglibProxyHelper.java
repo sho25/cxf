@@ -249,6 +249,13 @@ argument_list|()
 decl_stmt|;
 name|enhancer
 operator|.
+name|setClassLoader
+argument_list|(
+name|loader
+argument_list|)
+expr_stmt|;
+name|enhancer
+operator|.
 name|setSuperclass
 argument_list|(
 name|superClass

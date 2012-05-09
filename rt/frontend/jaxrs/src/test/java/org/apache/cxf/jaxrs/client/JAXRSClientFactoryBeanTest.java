@@ -401,6 +401,19 @@ argument_list|(
 name|client
 argument_list|)
 expr_stmt|;
+name|assertSame
+argument_list|(
+name|client
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getClassLoader
+argument_list|()
+argument_list|,
+name|loader
+argument_list|)
+expr_stmt|;
 comment|// tricky to test the loader has been used correctly with Maven
 comment|// given that the system loader loads all the test classes
 block|}
