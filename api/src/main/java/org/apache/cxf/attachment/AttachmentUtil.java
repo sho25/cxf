@@ -1868,9 +1868,7 @@ argument_list|>
 name|atts
 parameter_list|)
 block|{
-name|LazyDataSource
-name|lazyDS
-init|=
+return|return
 operator|new
 name|LazyDataSource
 argument_list|(
@@ -1878,15 +1876,6 @@ name|contentId
 argument_list|,
 name|atts
 argument_list|)
-decl_stmt|;
-comment|//ensure the attachment DS is loaded to make it also work with SUN's activation lib
-name|lazyDS
-operator|.
-name|getContentType
-argument_list|()
-expr_stmt|;
-return|return
-name|lazyDS
 return|;
 block|}
 block|}

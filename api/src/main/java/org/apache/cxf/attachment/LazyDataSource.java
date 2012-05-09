@@ -393,6 +393,9 @@ name|DataSource
 name|getDataSource
 parameter_list|()
 block|{
+name|load
+argument_list|()
+expr_stmt|;
 return|return
 name|dataSource
 return|;
