@@ -53,7 +53,7 @@ name|wssec11
 operator|.
 name|server
 operator|.
-name|Server
+name|Server11
 import|;
 end_import
 
@@ -73,7 +73,7 @@ name|wssec11
 operator|.
 name|server
 operator|.
-name|ServerRestricted
+name|Server11Restricted
 import|;
 end_import
 
@@ -145,7 +145,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|Server11
 operator|.
 name|class
 argument_list|,
@@ -183,7 +183,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|ServerRestricted
+name|Server11Restricted
 operator|.
 name|class
 argument_list|,
@@ -278,6 +278,8 @@ argument_list|(
 name|argv
 argument_list|,
 name|unrestrictedPoliciesInstalled
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
