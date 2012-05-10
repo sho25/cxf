@@ -10151,7 +10151,7 @@ name|addRequestHeader
 argument_list|(
 literal|"Cookie"
 argument_list|,
-literal|"a=b,c=d"
+literal|"a=b;c=d"
 argument_list|)
 expr_stmt|;
 name|get

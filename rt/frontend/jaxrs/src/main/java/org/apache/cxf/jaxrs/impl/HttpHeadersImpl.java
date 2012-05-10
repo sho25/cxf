@@ -288,6 +288,14 @@ specifier|private
 specifier|static
 specifier|final
 name|String
+name|DEFAULT_COOKIE_SEPARATOR
+init|=
+literal|";"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
 name|COMPLEX_HEADER_EXPRESSION
 init|=
 literal|"(([\\w]+=\"[^\"]*\")|([\\w]+=[\\w]+)|([\\w]+))(;(([\\w]+=\"[^\"]*\")|([\\w]+=[\\w]+)|([\\w]+)))?"
@@ -711,7 +719,7 @@ block|}
 else|else
 block|{
 return|return
-name|DEFAULT_SEPARATOR
+name|DEFAULT_COOKIE_SEPARATOR
 return|;
 block|}
 block|}

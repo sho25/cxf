@@ -6246,7 +6246,7 @@ name|add
 argument_list|(
 literal|"Cookie"
 argument_list|,
-literal|"c1=c1Value, c2=c2Value"
+literal|"c1=c1Value; c2=c2Value"
 argument_list|)
 expr_stmt|;
 name|headers

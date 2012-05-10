@@ -1673,7 +1673,7 @@ name|HttpHeaders
 operator|.
 name|COOKIE
 argument_list|,
-literal|"a=b,c=d"
+literal|"a=b;c=d"
 argument_list|)
 expr_stmt|;
 name|m
@@ -1754,7 +1754,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testGetCookiesWithSemiColon
+name|testGetCookiesWithComma
 parameter_list|()
 throws|throws
 name|Exception
@@ -1786,7 +1786,7 @@ name|put
 argument_list|(
 literal|"org.apache.cxf.http.cookie.separator"
 argument_list|,
-literal|";"
+literal|","
 argument_list|)
 expr_stmt|;
 name|m
@@ -1815,11 +1815,7 @@ name|HttpHeaders
 operator|.
 name|COOKIE
 argument_list|,
-literal|"a=b"
-operator|+
-literal|";"
-operator|+
-literal|"c=d"
+literal|"a=b,c=d"
 argument_list|)
 expr_stmt|;
 name|m
