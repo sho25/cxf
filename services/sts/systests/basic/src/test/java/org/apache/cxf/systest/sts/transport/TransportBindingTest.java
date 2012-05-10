@@ -343,10 +343,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -490,6 +495,13 @@ argument_list|,
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -629,6 +641,13 @@ argument_list|(
 name|transportSaml2Port
 argument_list|,
 literal|30
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -797,6 +816,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -936,6 +962,13 @@ argument_list|(
 name|transportSaml1Port
 argument_list|,
 literal|40
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1100,6 +1133,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 specifier|static

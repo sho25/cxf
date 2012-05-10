@@ -347,10 +347,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}

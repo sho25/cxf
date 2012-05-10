@@ -642,10 +642,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -912,6 +917,13 @@ operator|!=
 literal|null
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Test the Public Key SAML2 case      */
 annotation|@
@@ -1174,6 +1186,13 @@ operator|!=
 literal|null
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Test the Bearer SAML1 case      */
 annotation|@
@@ -1399,6 +1418,13 @@ name|contains
 argument_list|(
 literal|"bearer"
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1714,6 +1740,13 @@ argument_list|(
 name|confirmMethod
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Test that a request with no AppliesTo can be created by the CXF STS client.      */
 annotation|@
@@ -1798,6 +1831,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Test the Bearer SAML1 case with a Context Attribute      */
 annotation|@
@@ -2032,6 +2072,13 @@ literal|"bearer"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Test the Bearer SAML1 case with a Lifetime element      */
 annotation|@
@@ -2257,6 +2304,13 @@ name|contains
 argument_list|(
 literal|"bearer"
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
