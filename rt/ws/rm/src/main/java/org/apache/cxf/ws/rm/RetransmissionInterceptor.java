@@ -27,10 +27,6 @@ name|OutputStream
 import|;
 end_import
 
-begin_comment
-comment|//import org.apache.cxf.interceptor.AttachmentOutInterceptor;
-end_comment
-
 begin_import
 import|import
 name|org
@@ -58,10 +54,6 @@ operator|.
 name|MessageSenderInterceptor
 import|;
 end_import
-
-begin_comment
-comment|//import org.apache.cxf.interceptor.StaxOutInterceptor;
-end_comment
 
 begin_import
 import|import
@@ -185,9 +177,6 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//        super(Phase.PRE_STREAM);
-comment|//        addBefore(StaxOutInterceptor.class.getName());
-comment|//        addBefore(AttachmentOutInterceptor.class.getName());
 block|}
 specifier|public
 name|RMManager
