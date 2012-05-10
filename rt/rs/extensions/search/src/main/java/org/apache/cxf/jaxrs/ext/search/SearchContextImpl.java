@@ -213,7 +213,7 @@ block|{
 name|String
 name|errorMessage
 init|=
-literal|"The condition type can not be a primitive type"
+literal|"Primitive condition types are not supported"
 decl_stmt|;
 name|LOG
 operator|.
