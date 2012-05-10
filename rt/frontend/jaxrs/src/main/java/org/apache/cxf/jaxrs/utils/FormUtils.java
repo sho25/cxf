@@ -345,6 +345,14 @@ init|=
 literal|"maxFormParameterCount"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|CONTENT_DISPOSITION_FILES_PARAM
+init|=
+literal|"files"
+decl_stmt|;
+specifier|private
 name|FormUtils
 parameter_list|()
 block|{              }
@@ -1240,6 +1248,19 @@ literal|400
 argument_list|)
 throw|;
 block|}
+if|if
+condition|(
+name|CONTENT_DISPOSITION_FILES_PARAM
+operator|.
+name|equals
+argument_list|(
+name|name
+argument_list|)
+condition|)
+block|{
+comment|// this is a reserved name in Content-Disposition for parts containing files
+continue|continue;
+block|}
 try|try
 block|{
 name|String
@@ -1281,6 +1302,29 @@ else|:
 name|value
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IllegalArgumentException
+name|ex
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Illegal URL-encoded characters, make sure that no "
+operator|+
+literal|"@FormParam and @Multipart annotations are mixed up"
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|WebApplicationException
+argument_list|(
+literal|415
+argument_list|)
+throw|;
 block|}
 catch|catch
 parameter_list|(
