@@ -113,7 +113,7 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|StaxOutInterceptor
+name|MessageSenderInterceptor
 import|;
 end_import
 
@@ -246,7 +246,7 @@ name|super
 argument_list|(
 name|Phase
 operator|.
-name|PRE_STREAM
+name|PREPARE_SEND
 argument_list|)
 expr_stmt|;
 name|outbound
@@ -261,17 +261,17 @@ argument_list|()
 expr_stmt|;
 name|addAfter
 argument_list|(
-literal|"org.apache.cxf.ws.rm.RetransmissionInterceptor"
-argument_list|)
-expr_stmt|;
-name|addBefore
-argument_list|(
-name|StaxOutInterceptor
+name|MessageSenderInterceptor
 operator|.
 name|class
 operator|.
 name|getName
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|addAfter
+argument_list|(
+literal|"org.apache.cxf.ws.rm.RetransmissionInterceptor"
 argument_list|)
 expr_stmt|;
 block|}

@@ -27,19 +27,9 @@ name|OutputStream
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|AttachmentOutInterceptor
-import|;
-end_import
+begin_comment
+comment|//import org.apache.cxf.interceptor.AttachmentOutInterceptor;
+end_comment
 
 begin_import
 import|import
@@ -65,9 +55,13 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|StaxOutInterceptor
+name|MessageSenderInterceptor
 import|;
 end_import
+
+begin_comment
+comment|//import org.apache.cxf.interceptor.StaxOutInterceptor;
+end_comment
 
 begin_import
 import|import
@@ -125,6 +119,24 @@ name|Phase
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|common
+operator|.
+name|gzip
+operator|.
+name|GZIPOutInterceptor
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -150,12 +162,12 @@ name|super
 argument_list|(
 name|Phase
 operator|.
-name|PRE_STREAM
+name|PREPARE_SEND
 argument_list|)
 expr_stmt|;
-name|addBefore
+name|addAfter
 argument_list|(
-name|StaxOutInterceptor
+name|MessageSenderInterceptor
 operator|.
 name|class
 operator|.
@@ -165,7 +177,7 @@ argument_list|)
 expr_stmt|;
 name|addBefore
 argument_list|(
-name|AttachmentOutInterceptor
+name|GZIPOutInterceptor
 operator|.
 name|class
 operator|.
@@ -173,6 +185,9 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//        super(Phase.PRE_STREAM);
+comment|//        addBefore(StaxOutInterceptor.class.getName());
+comment|//        addBefore(AttachmentOutInterceptor.class.getName());
 block|}
 specifier|public
 name|RMManager
