@@ -918,7 +918,10 @@ literal|true
 argument_list|,
 literal|"urn:oasis:names:tc:SAML:2.0:nameid-format:persistent"
 argument_list|,
-literal|"Issuer"
+name|getIssuerId
+argument_list|(
+name|m
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|AuthnContextClassRef
