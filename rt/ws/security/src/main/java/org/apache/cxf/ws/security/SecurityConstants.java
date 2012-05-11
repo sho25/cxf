@@ -470,6 +470,15 @@ name|TOKEN_STORE_CACHE_INSTANCE
 init|=
 literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
 decl_stmt|;
+comment|/**      * Set this property to avoid STS client trying send WS-MetadataExchange call using      * STS EPR WSA address when the endpoint contract contains no WS-MetadataExchange info.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
+init|=
+literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -584,6 +593,8 @@ block|,
 name|TOKEN_STORE_CACHE_INSTANCE
 block|,
 name|SAML_ROLE_ATTRIBUTENAME
+block|,
+name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 block|}
 argument_list|)
 argument_list|)

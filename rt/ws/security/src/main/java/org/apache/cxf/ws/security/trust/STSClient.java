@@ -2850,6 +2850,9 @@ name|configureViaEPR
 parameter_list|(
 name|EndpointReferenceType
 name|ref
+parameter_list|,
+name|boolean
+name|useEPRWSAAddrAsMEXLocation
 parameter_list|)
 block|{
 if|if
@@ -2949,6 +2952,8 @@ init|=
 name|findMEXLocation
 argument_list|(
 name|ref
+argument_list|,
+name|useEPRWSAAddrAsMEXLocation
 argument_list|)
 decl_stmt|;
 if|if
@@ -3191,6 +3196,9 @@ name|findMEXLocation
 parameter_list|(
 name|EndpointReferenceType
 name|ref
+parameter_list|,
+name|boolean
+name|useEPRWSAAddrAsMEXLocation
 parameter_list|)
 block|{
 if|if
@@ -3260,6 +3268,15 @@ block|}
 block|}
 block|}
 return|return
+name|useEPRWSAAddrAsMEXLocation
+condition|?
+name|EndpointReferenceUtils
+operator|.
+name|getAddress
+argument_list|(
+name|ref
+argument_list|)
+else|:
 literal|null
 return|;
 block|}

@@ -359,6 +359,8 @@ operator|.
 name|configureViaEPR
 argument_list|(
 name|ref
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|assertEquals

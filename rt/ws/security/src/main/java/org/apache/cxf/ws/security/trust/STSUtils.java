@@ -782,6 +782,27 @@ literal|null
 condition|)
 block|{
 comment|//configure via mex
+name|boolean
+name|useEPRWSAAddrAsMEXLocation
+init|=
+operator|!
+name|Boolean
+operator|.
+name|valueOf
+argument_list|(
+operator|(
+name|String
+operator|)
+name|message
+operator|.
+name|getContextualProperty
+argument_list|(
+name|SecurityConstants
+operator|.
+name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
+argument_list|)
+argument_list|)
+decl_stmt|;
 name|client
 operator|.
 name|configureViaEPR
@@ -790,6 +811,8 @@ name|itok
 operator|.
 name|getIssuerEpr
 argument_list|()
+argument_list|,
+name|useEPRWSAAddrAsMEXLocation
 argument_list|)
 expr_stmt|;
 block|}
