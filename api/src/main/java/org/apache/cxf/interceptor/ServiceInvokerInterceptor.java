@@ -496,8 +496,9 @@ argument_list|(
 name|endpoint
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+name|Executor
+name|executor2
+init|=
 name|exchange
 operator|.
 name|get
@@ -506,8 +507,16 @@ name|Executor
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|executor2
 operator|==
 name|executor
+operator|||
+name|executor
+operator|==
+literal|null
 condition|)
 block|{
 comment|// already executing on the appropriate executor

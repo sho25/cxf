@@ -421,20 +421,6 @@ name|ServiceInfo
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|workqueue
-operator|.
-name|SynchronousExecutor
-import|;
-end_import
-
 begin_comment
 comment|/**  * The CXF Service implementation which is used   * to register the JAX-RS endpoint with the runtime.  */
 end_comment
@@ -548,13 +534,6 @@ operator|.
 name|classResourceInfos
 operator|=
 name|cri
-expr_stmt|;
-name|executor
-operator|=
-name|SynchronousExecutor
-operator|.
-name|getInstance
-argument_list|()
 expr_stmt|;
 name|this
 operator|.
