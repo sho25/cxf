@@ -87,6 +87,16 @@ end_import
 
 begin_import
 import|import
+name|junit
+operator|.
+name|framework
+operator|.
+name|AssertionFailedError
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -1657,6 +1667,8 @@ comment|//            null};
 comment|//        mf.verifyActions(expectedActions, false);
 comment|//        mf.verifyAcknowledgements(new boolean[]{true, true, false}, false);
 comment|// verify the final ack range to be complete
+try|try
+block|{
 name|mf
 operator|.
 name|verifyAcknowledgementRange
@@ -1666,6 +1678,47 @@ argument_list|,
 literal|5
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|AssertionFailedError
+name|er
+parameter_list|)
+block|{
+comment|//possibly only got the first 2 ranges when split in 3, lets
+comment|//wait for the third and then recheck
+name|awaitMessages
+argument_list|(
+literal|1
+argument_list|,
+literal|3
+argument_list|)
+expr_stmt|;
+name|mf
+operator|.
+name|reset
+argument_list|(
+name|out
+operator|.
+name|getOutboundMessages
+argument_list|()
+argument_list|,
+name|in
+operator|.
+name|getInboundMessages
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|mf
+operator|.
+name|verifyAcknowledgementRange
+argument_list|(
+literal|1
+argument_list|,
+literal|5
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 name|void
 name|recover
