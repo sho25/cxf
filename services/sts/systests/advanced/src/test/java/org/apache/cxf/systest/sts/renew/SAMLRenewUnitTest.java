@@ -258,10 +258,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -426,6 +431,13 @@ argument_list|,
 name|renewedToken
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -588,6 +600,13 @@ argument_list|,
 name|renewedToken
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -717,6 +736,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -884,6 +910,13 @@ argument_list|,
 name|renewedToken
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|org
@@ -1020,6 +1053,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|SecurityToken

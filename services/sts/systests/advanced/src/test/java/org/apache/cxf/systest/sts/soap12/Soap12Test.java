@@ -393,10 +393,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -522,6 +527,13 @@ argument_list|,
 literal|30
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Test the endpoint address sent to the STS as part of AppliesTo. If the STS does not      * recognise the endpoint address it does not issue a token.      */
 annotation|@
@@ -619,6 +631,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|SecurityToken

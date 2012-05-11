@@ -281,10 +281,15 @@ specifier|static
 name|void
 name|cleanup
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|SecurityTestUtil
 operator|.
 name|cleanup
+argument_list|()
+expr_stmt|;
+name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
@@ -412,6 +417,13 @@ argument_list|,
 literal|25
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * In this test, a token is issued by the first STS in the default realm. The second STS is       * configured to trust the signing cert of the default realm (via a cert constraint) and so       * authentication succeeds.      */
 annotation|@
@@ -535,6 +547,13 @@ argument_list|(
 name|transportPort
 argument_list|,
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -673,6 +692,13 @@ parameter_list|)
 block|{
 comment|// expected
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * In this test, a token is issued by the first STS in realm "A". The second STS is configured      * to trust realm "A" (via a cert constraint) and so authentication succeeds. The service      * endpoint also sends a tokenType (SAML2) to the second STS, and so the IdentityMapper is      * invoked to transform the authenticated principal into a principal in the current realm.      */
 annotation|@
@@ -796,6 +822,13 @@ argument_list|(
 name|transportPort
 argument_list|,
 literal|25
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
