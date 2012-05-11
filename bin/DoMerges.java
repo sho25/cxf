@@ -1003,6 +1003,14 @@ argument_list|(
 literal|':'
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|idx
+operator|!=
+operator|-
+literal|1
+condition|)
+block|{
 name|propSource
 operator|=
 name|line
@@ -1084,6 +1092,7 @@ argument_list|,
 name|merged
 argument_list|)
 expr_stmt|;
+block|}
 name|line
 operator|=
 name|reader
