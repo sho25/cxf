@@ -245,7 +245,7 @@ name|HttpHeaders
 operator|.
 name|CACHE_CONTROL
 argument_list|,
-literal|"no-store"
+literal|"no-cache, no-store"
 argument_list|)
 operator|.
 name|header
