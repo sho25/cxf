@@ -229,7 +229,7 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|String
+name|int
 name|PORT
 init|=
 name|BookNonSpringServer
@@ -259,6 +259,9 @@ argument_list|,
 literal|true
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|createStaticBus
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@

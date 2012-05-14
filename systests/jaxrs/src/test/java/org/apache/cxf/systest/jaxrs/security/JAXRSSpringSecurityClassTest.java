@@ -147,7 +147,7 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|String
+name|int
 name|PORT
 init|=
 name|BookServerSecuritySpringClass
@@ -173,6 +173,8 @@ argument_list|(
 name|BookServerSecuritySpringClass
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

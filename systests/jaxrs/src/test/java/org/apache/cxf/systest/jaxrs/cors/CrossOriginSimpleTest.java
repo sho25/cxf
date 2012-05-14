@@ -343,7 +343,7 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|String
+name|int
 name|PORT
 init|=
 name|SpringServer
@@ -2622,12 +2622,15 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|String
+name|int
 name|PORT
 init|=
-name|AbstractSpringServer
+name|allocatePortAsInt
+argument_list|(
+name|SpringServer
 operator|.
-name|PORT
+name|class
+argument_list|)
 decl_stmt|;
 specifier|public
 name|SpringServer
@@ -2636,6 +2639,8 @@ block|{
 name|super
 argument_list|(
 literal|"/jaxrs_cors"
+argument_list|,
+name|PORT
 argument_list|)
 expr_stmt|;
 block|}

@@ -369,20 +369,7 @@ block|{
 name|init
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"----books: "
-operator|+
-name|books
-operator|.
-name|size
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("----books: " + books.size());
 block|}
 annotation|@
 name|PostConstruct
@@ -403,15 +390,7 @@ name|void
 name|preDestroy
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"PreDestroy called"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("PreDestroy called");
 block|}
 annotation|@
 name|GET

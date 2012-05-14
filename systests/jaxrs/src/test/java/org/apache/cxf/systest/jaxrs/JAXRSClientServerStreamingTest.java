@@ -636,6 +636,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//keep out of process due to stack traces testing failures
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"

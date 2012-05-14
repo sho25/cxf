@@ -103,7 +103,7 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|String
+name|int
 name|PORT
 init|=
 name|BookServerJaasSecurity

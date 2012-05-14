@@ -165,7 +165,7 @@ block|{
 specifier|public
 specifier|static
 specifier|final
-name|String
+name|int
 name|PORT
 init|=
 name|SpringServer
@@ -204,6 +204,19 @@ extends|extends
 name|AbstractSpringServer
 block|{
 specifier|public
+specifier|static
+specifier|final
+name|int
+name|PORT
+init|=
+name|allocatePortAsInt
+argument_list|(
+name|SpringServer
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+specifier|public
 name|SpringServer
 parameter_list|()
 block|{
@@ -212,6 +225,8 @@ argument_list|(
 literal|"/jaxrs_uriinfo"
 argument_list|,
 literal|"/app"
+argument_list|,
+name|PORT
 argument_list|)
 expr_stmt|;
 block|}

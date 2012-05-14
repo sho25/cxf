@@ -187,8 +187,13 @@ argument_list|(
 name|BookServerResourceCreatedOutside
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|createStaticBus
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
