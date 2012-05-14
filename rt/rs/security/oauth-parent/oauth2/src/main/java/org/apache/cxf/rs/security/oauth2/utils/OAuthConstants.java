@@ -92,6 +92,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|ACCESS_TOKEN_EXPIRES_IN
+init|=
+literal|"expires_in"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|GRANT_TYPE
 init|=
 literal|"grant_type"
@@ -111,6 +119,14 @@ name|String
 name|TOKEN_RESPONSE_TYPE
 init|=
 literal|"token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REFRESH_TOKEN
+init|=
+literal|"refresh_token"
 decl_stmt|;
 comment|// Well-known grant types
 specifier|public
@@ -237,6 +253,14 @@ name|String
 name|ERROR_DESCRIPTION_KEY
 init|=
 literal|"error_description"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ERROR_URI_KEY
+init|=
+literal|"error_uri"
 decl_stmt|;
 specifier|public
 specifier|static
