@@ -298,28 +298,23 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Validate a SignedEncryptedSupportingToken policy.   */
+comment|/**  * Validate SupportingToken policies.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|SignedEncryptedTokenPolicyValidator
+name|ConcreteSupportingTokenPolicyValidator
 extends|extends
 name|AbstractSupportingTokenPolicyValidator
 block|{
 specifier|public
-name|SignedEncryptedTokenPolicyValidator
+name|ConcreteSupportingTokenPolicyValidator
 parameter_list|()
 block|{
 name|setSigned
 argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
-name|setEncrypted
-argument_list|(
-literal|true
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -364,7 +359,7 @@ name|get
 argument_list|(
 name|SP12Constants
 operator|.
-name|SIGNED_ENCRYPTED_SUPPORTING_TOKENS
+name|SUPPORTING_TOKENS
 argument_list|)
 decl_stmt|;
 if|if
@@ -428,7 +423,7 @@ name|SPConstants
 operator|.
 name|SupportTokenType
 operator|.
-name|SUPPORTING_TOKEN_SIGNED_ENCRYPTED
+name|SUPPORTING_TOKEN_SUPPORTING
 operator|!=
 name|binding
 operator|.
@@ -539,6 +534,27 @@ if|if
 condition|(
 name|token
 operator|instanceof
+name|SamlToken
+condition|)
+block|{
+if|if
+condition|(
+operator|!
+name|processSAMLTokens
+argument_list|()
+condition|)
+block|{
+name|processingFailed
+operator|=
+literal|true
+expr_stmt|;
+block|}
+block|}
+elseif|else
+if|if
+condition|(
+name|token
+operator|instanceof
 name|KerberosToken
 condition|)
 block|{
@@ -600,27 +616,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|token
-operator|instanceof
-name|SamlToken
-condition|)
-block|{
-if|if
-condition|(
-operator|!
-name|processSAMLTokens
-argument_list|()
-condition|)
-block|{
-name|processingFailed
-operator|=
-literal|true
-expr_stmt|;
-block|}
-block|}
-elseif|else
-if|if
-condition|(
 operator|!
 operator|(
 name|token
@@ -643,7 +638,7 @@ name|ai
 operator|.
 name|setNotAsserted
 argument_list|(
-literal|"The received token does not match the signed encrypted supporting token requirement"
+literal|"The received token does not match the supporting token requirement"
 argument_list|)
 expr_stmt|;
 return|return
