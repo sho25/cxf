@@ -714,7 +714,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/books/123"
+literal|"/bookstore/books/text/xml/123"
 argument_list|)
 decl_stmt|;
 name|wc
@@ -767,7 +767,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/books/123"
+literal|"/bookstore/books/text/xml/123"
 argument_list|,
 literal|"text/xml"
 argument_list|,

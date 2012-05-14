@@ -3302,7 +3302,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"/books/{bookId}/"
+literal|"/books/text/xml/{bookId}"
 argument_list|)
 annotation|@
 name|Produces
