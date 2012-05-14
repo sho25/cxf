@@ -555,6 +555,9 @@ literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 block|}
 comment|// the purpose of this test shows how one service include two ports with different
 comment|// transport work

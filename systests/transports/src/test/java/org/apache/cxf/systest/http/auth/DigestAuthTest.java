@@ -246,6 +246,8 @@ specifier|static
 name|void
 name|startServer
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|launchServer
 argument_list|(
@@ -255,6 +257,9 @@ name|class
 argument_list|,
 literal|true
 argument_list|)
+expr_stmt|;
+name|createStaticBus
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
