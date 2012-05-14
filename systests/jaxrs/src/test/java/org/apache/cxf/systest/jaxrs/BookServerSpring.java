@@ -140,7 +140,6 @@ name|BookServerSpring
 extends|extends
 name|AbstractBusTestServerBase
 block|{
-specifier|public
 specifier|static
 specifier|final
 name|String

@@ -393,6 +393,22 @@ name|jaxrs
 operator|.
 name|model
 operator|.
+name|AbstractResourceInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|model
+operator|.
 name|wadl
 operator|.
 name|WadlGenerator
@@ -506,6 +522,11 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|AbstractResourceInfo
+operator|.
+name|clearAllMaps
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"

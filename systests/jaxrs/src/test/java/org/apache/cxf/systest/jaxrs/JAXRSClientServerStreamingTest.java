@@ -285,6 +285,22 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|model
+operator|.
+name|AbstractResourceInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
 name|provider
 operator|.
 name|JAXBElementProvider
@@ -636,6 +652,11 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|AbstractResourceInfo
+operator|.
+name|clearAllMaps
+argument_list|()
+expr_stmt|;
 comment|//keep out of process due to stack traces testing failures
 name|assertTrue
 argument_list|(
