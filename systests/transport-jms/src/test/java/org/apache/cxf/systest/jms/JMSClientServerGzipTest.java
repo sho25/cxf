@@ -826,6 +826,13 @@ name|getCause
 argument_list|()
 throw|;
 block|}
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class

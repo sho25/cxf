@@ -1216,6 +1216,9 @@ literal|false
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|URL

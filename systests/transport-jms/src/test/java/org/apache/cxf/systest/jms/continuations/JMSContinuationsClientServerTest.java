@@ -279,6 +279,9 @@ name|serversStarted
 operator|=
 literal|true
 expr_stmt|;
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|URL
