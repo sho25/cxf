@@ -408,6 +408,11 @@ argument_list|(
 literal|"org/apache/cxf/systest/ws/addr_wsdl/jaxwsmm/server.xml"
 argument_list|)
 decl_stmt|;
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
 name|JaxWsServerFactoryBean
 name|serviceFactory
 init|=
@@ -691,15 +696,16 @@ operator|new
 name|SpringBusFactory
 argument_list|()
 decl_stmt|;
+name|Bus
 name|bus
-operator|=
+init|=
 name|bf
 operator|.
 name|createBus
 argument_list|(
 literal|"org/apache/cxf/systest/ws/policy/addr-inline-policy-old.xml"
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|BusFactory
 operator|.
 name|setDefaultBus
@@ -762,6 +768,13 @@ operator|.
 name|deliver
 argument_list|(
 literal|"This is another test"
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

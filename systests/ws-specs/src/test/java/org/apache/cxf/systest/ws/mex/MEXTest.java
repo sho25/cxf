@@ -183,6 +183,9 @@ literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -199,6 +202,14 @@ operator|new
 name|JaxWsProxyFactoryBean
 argument_list|()
 decl_stmt|;
+name|proxyFac
+operator|.
+name|setBus
+argument_list|(
+name|getStaticBus
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|proxyFac
 operator|.
 name|setAddress

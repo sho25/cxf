@@ -116,6 +116,18 @@ name|DecoupledJMSTest
 extends|extends
 name|MAPTestBase
 block|{
+specifier|static
+specifier|final
+name|String
+name|PORT
+init|=
+name|allocatePort
+argument_list|(
+name|DecoupledJMSTest
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -162,6 +174,15 @@ parameter_list|)
 throws|throws
 name|MalformedURLException
 block|{     }
+specifier|public
+name|String
+name|getPort
+parameter_list|()
+block|{
+return|return
+name|PORT
+return|;
+block|}
 annotation|@
 name|Test
 annotation|@
