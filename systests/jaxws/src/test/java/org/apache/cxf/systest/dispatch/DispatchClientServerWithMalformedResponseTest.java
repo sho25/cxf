@@ -357,6 +357,14 @@ name|void
 name|run
 parameter_list|()
 block|{
+name|setBus
+argument_list|(
+name|BusFactory
+operator|.
+name|getDefaultBus
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|Object
 name|implementor
 init|=
@@ -474,6 +482,9 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -502,7 +513,15 @@ parameter_list|()
 block|{
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|setThreadDefaultBus
+argument_list|(
+name|getStaticBus
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|BusFactory
+operator|.
+name|getThreadDefaultBus
 argument_list|()
 operator|.
 name|getOutInterceptors
@@ -517,7 +536,7 @@ argument_list|)
 expr_stmt|;
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|()
 operator|.
 name|getInInterceptors
@@ -532,7 +551,7 @@ argument_list|)
 expr_stmt|;
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|()
 operator|.
 name|getInInterceptors
