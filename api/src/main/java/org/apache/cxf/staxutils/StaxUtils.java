@@ -1053,6 +1053,34 @@ specifier|private
 name|StaxUtils
 parameter_list|()
 block|{     }
+specifier|public
+specifier|static
+name|void
+name|setInnerElementLevelThreshold
+parameter_list|(
+name|int
+name|i
+parameter_list|)
+block|{
+name|innerElementLevelThreshold
+operator|=
+name|i
+expr_stmt|;
+block|}
+specifier|public
+specifier|static
+name|void
+name|setInnerElementCountThreshold
+parameter_list|(
+name|int
+name|i
+parameter_list|)
+block|{
+name|innerElementCountThreshold
+operator|=
+name|i
+expr_stmt|;
+block|}
 comment|/**      * CXF works with multiple STaX parsers. When we can't find any other way to work       * against the different parsers, this can be used to condition code. Note: if you've got      * Woodstox in the class path without being the default provider, this will return      * the wrong answer.      * @return true if Woodstox is in the classpath.       */
 specifier|public
 specifier|static
