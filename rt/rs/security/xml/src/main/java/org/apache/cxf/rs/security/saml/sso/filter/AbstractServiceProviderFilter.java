@@ -1198,6 +1198,10 @@ decl_stmt|;
 name|String
 name|relayState
 init|=
+name|URLEncoder
+operator|.
+name|encode
+argument_list|(
 name|UUID
 operator|.
 name|randomUUID
@@ -1205,6 +1209,9 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+literal|"UTF-8"
+argument_list|)
 decl_stmt|;
 name|getStateProvider
 argument_list|()
