@@ -226,6 +226,11 @@ name|info
 operator|.
 name|getWebAppContext
 argument_list|()
+argument_list|,
+name|info
+operator|.
+name|getWebAppDomain
+argument_list|()
 argument_list|)
 decl_stmt|;
 return|return

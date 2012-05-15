@@ -103,6 +103,7 @@ name|SSOConstants
 operator|.
 name|DEFAULT_STATE_TIME
 decl_stmt|;
+comment|//TODO: support attaching a signature to the cookie value
 specifier|protected
 name|String
 name|createCookie
@@ -115,6 +116,9 @@ name|value
 parameter_list|,
 name|String
 name|path
+parameter_list|,
+name|String
+name|domain
 parameter_list|)
 block|{
 name|String
@@ -126,9 +130,9 @@ literal|"="
 operator|+
 name|value
 decl_stmt|;
-comment|// Make sure all the SP application filters can get this token;
-comment|// Path property should be enough for a single container, Domain
-comment|// property may need to be used for more complex environments
+comment|// Setting a specific path restricts the browsers
+comment|// to return a cookie only to the web applications
+comment|// listening on that specific context path
 if|if
 condition|(
 name|path
@@ -141,6 +145,23 @@ operator|+=
 literal|";Path="
 operator|+
 name|path
+expr_stmt|;
+block|}
+comment|// Setting a specific domain further restricts the browsers
+comment|// to return a cookie only to the web applications
+comment|// listening on the specific context path within a particular domain
+if|if
+condition|(
+name|domain
+operator|!=
+literal|null
+condition|)
+block|{
+name|contextCookie
+operator|+=
+literal|";Domain="
+operator|+
+name|domain
 expr_stmt|;
 block|}
 comment|// Keep the cookie across the browser restarts until it actually expires.

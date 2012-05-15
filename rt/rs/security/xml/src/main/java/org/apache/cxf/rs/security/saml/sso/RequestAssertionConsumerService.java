@@ -822,6 +822,11 @@ name|requestState
 operator|.
 name|getWebAppContext
 argument_list|()
+argument_list|,
+name|requestState
+operator|.
+name|getWebAppDomain
+argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// Finally, redirect to the service provider endpoint
