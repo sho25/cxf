@@ -221,7 +221,7 @@ argument_list|)
 throw|;
 block|}
 comment|// The Response must contain a Destination that matches the assertionConsumerURL if it is
-comment|// signed and received over the POST Binding.
+comment|// signed and received over the redirect Binding.
 name|String
 name|destination
 init|=
@@ -232,6 +232,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|postBinding
 operator|&&
 name|samlResponse
