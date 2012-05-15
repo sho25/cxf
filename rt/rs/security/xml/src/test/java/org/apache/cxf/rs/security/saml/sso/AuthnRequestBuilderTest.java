@@ -18,8 +18,6 @@ operator|.
 name|saml
 operator|.
 name|sso
-operator|.
-name|filter
 package|;
 end_package
 

@@ -18,8 +18,6 @@ operator|.
 name|saml
 operator|.
 name|sso
-operator|.
-name|filter
 package|;
 end_package
 
@@ -104,26 +102,6 @@ operator|.
 name|message
 operator|.
 name|Message
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|saml
-operator|.
-name|sso
-operator|.
-name|SSOConstants
 import|;
 end_import
 
