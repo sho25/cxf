@@ -65,11 +65,11 @@ specifier|final
 name|long
 name|DEFAULT_STATE_TIME
 init|=
-literal|2
+literal|2L
 operator|*
-literal|60
+literal|60L
 operator|*
-literal|1000
+literal|1000L
 decl_stmt|;
 specifier|private
 name|SSOConstants

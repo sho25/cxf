@@ -27,6 +27,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Date
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|List
 import|;
 end_import
@@ -107,8 +117,22 @@ name|AudienceRestriction
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|opensaml
+operator|.
+name|saml2
+operator|.
+name|core
+operator|.
+name|AuthnStatement
+import|;
+end_import
+
 begin_comment
-comment|/**  * Validate a SAML 2.0 Protocol Response according to the Web SSO profile. The Response  * should be validated by the SAMLProtocolResponseValidator first.  *   * TODO If an<AuthnStatement> used to establish a security context for the principal contains a SessionNotOnOrAfter attribute, the security context SHOULD be discarded once this time is reached  TODO The service provider MUST ensure that bearer assertions are not replayed, by maintaining the set of used ID values for the length of time for which the assertion would be considered valid based on the NotOnOrAfter attribute in the<SubjectConfirmationData>.  */
+comment|/**  * Validate a SAML 2.0 Protocol Response according to the Web SSO profile. The Response  * should be validated by the SAMLProtocolResponseValidator first.  *  TODO The service provider MUST ensure that bearer assertions are not replayed, by maintaining the set of used ID values for the length of time for which the assertion would be considered valid based on the NotOnOrAfter attribute in the<SubjectConfirmationData>.  */
 end_comment
 
 begin_class
@@ -151,9 +175,9 @@ specifier|private
 name|String
 name|spIdentifier
 decl_stmt|;
-comment|/**      * Validate a SAML 2 Protocol Response      * @param samlResponse      * @param postBinding      * @throws WSSecurityException      */
+comment|/**      * Validate a SAML 2 Protocol Response      * @param samlResponse      * @param postBinding      * @return a SSOValidatorResponse object      * @throws WSSecurityException      */
 specifier|public
-name|void
+name|SSOValidatorResponse
 name|validateSamlResponse
 parameter_list|(
 name|org
@@ -276,6 +300,11 @@ name|boolean
 name|foundValidSubject
 init|=
 literal|false
+decl_stmt|;
+name|Date
+name|sessionNotOnOrAfter
+init|=
+literal|null
 decl_stmt|;
 for|for
 control|(
@@ -423,6 +452,40 @@ name|foundValidSubject
 operator|=
 literal|true
 expr_stmt|;
+comment|// Store Session NotOnOrAfter
+for|for
+control|(
+name|AuthnStatement
+name|authnStatment
+range|:
+name|assertion
+operator|.
+name|getAuthnStatements
+argument_list|()
+control|)
+block|{
+if|if
+condition|(
+name|authnStatment
+operator|.
+name|getSessionNotOnOrAfter
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|sessionNotOnOrAfter
+operator|=
+name|authnStatment
+operator|.
+name|getSessionNotOnOrAfter
+argument_list|()
+operator|.
+name|toDate
+argument_list|()
+expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 block|}
@@ -453,6 +516,33 @@ literal|"invalidSAMLsecurity"
 argument_list|)
 throw|;
 block|}
+name|SSOValidatorResponse
+name|validatorResponse
+init|=
+operator|new
+name|SSOValidatorResponse
+argument_list|()
+decl_stmt|;
+name|validatorResponse
+operator|.
+name|setResponseId
+argument_list|(
+name|samlResponse
+operator|.
+name|getID
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|validatorResponse
+operator|.
+name|setSessionNotOnOrAfter
+argument_list|(
+name|sessionNotOnOrAfter
+argument_list|)
+expr_stmt|;
+return|return
+name|validatorResponse
+return|;
 block|}
 comment|/**      * Validate the Issuer (if it exists)      */
 specifier|private
