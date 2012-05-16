@@ -325,6 +325,13 @@ argument_list|(
 name|bus
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 finally|finally
 block|{
@@ -368,6 +375,13 @@ decl_stmt|;
 name|assertNotNullExtensions
 argument_list|(
 name|bus
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

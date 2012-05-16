@@ -73,7 +73,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|BusFactory
+name|Bus
 import|;
 end_import
 
@@ -320,10 +320,22 @@ specifier|protected
 name|NumberImpl
 name|servant
 decl_stmt|;
+specifier|protected
+name|Bus
+name|bus
+decl_stmt|;
 specifier|public
 name|NumberFactoryImpl
-parameter_list|()
-block|{     }
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|bus
+operator|=
+name|b
+expr_stmt|;
+block|}
 specifier|public
 name|W3CEndpointReference
 name|create
@@ -377,10 +389,7 @@ name|portName
 argument_list|,
 name|id
 argument_list|,
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|)
 decl_stmt|;
 name|Source
@@ -449,10 +458,7 @@ init|=
 operator|new
 name|EndpointImpl
 argument_list|(
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|,
 name|servant
 argument_list|,
@@ -502,10 +508,7 @@ name|EmbeddedJMSBrokerLauncher
 operator|.
 name|updateWsdlExtensors
 argument_list|(
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|,
 name|wsdlLocation
 argument_list|)
@@ -515,10 +518,7 @@ operator|=
 operator|new
 name|EndpointImpl
 argument_list|(
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|,
 name|servant
 argument_list|,

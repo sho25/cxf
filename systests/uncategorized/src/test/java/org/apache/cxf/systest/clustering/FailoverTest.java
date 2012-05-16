@@ -657,8 +657,6 @@ argument_list|(
 name|Server
 operator|.
 name|class
-argument_list|,
-literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -787,6 +785,10 @@ name|shutdown
 argument_list|(
 literal|true
 argument_list|)
+expr_stmt|;
+name|bus
+operator|=
+literal|null
 expr_stmt|;
 block|}
 block|}
@@ -918,6 +920,22 @@ comment|// in which case we should revert back to the original
 comment|// java.net.ConnectionException on the unavailable
 comment|// replica A
 comment|//
+if|if
+condition|(
+operator|!
+operator|(
+name|cause
+operator|instanceof
+name|ConnectException
+operator|)
+condition|)
+block|{
+name|cause
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+block|}
 name|assertTrue
 argument_list|(
 literal|"should revert to original exception when no failover: "

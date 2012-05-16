@@ -219,6 +219,9 @@ literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -327,6 +330,11 @@ literal|"registerCallback called"
 argument_list|,
 name|resp
 argument_list|)
+expr_stmt|;
+name|ep
+operator|.
+name|stop
+argument_list|()
 expr_stmt|;
 block|}
 block|}

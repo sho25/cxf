@@ -73,7 +73,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|BusFactory
+name|Bus
 import|;
 end_import
 
@@ -147,6 +147,19 @@ name|ManualNumberFactoryImpl
 extends|extends
 name|NumberFactoryImpl
 block|{
+specifier|public
+name|ManualNumberFactoryImpl
+parameter_list|(
+name|Bus
+name|b
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|b
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|W3CEndpointReference
 name|create
@@ -230,10 +243,7 @@ init|=
 operator|new
 name|EndpointImpl
 argument_list|(
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|,
 name|servant
 argument_list|,

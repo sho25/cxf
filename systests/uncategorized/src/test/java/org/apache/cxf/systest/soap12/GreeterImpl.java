@@ -145,15 +145,7 @@ argument_list|(
 literal|"Executing operation sayHi"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation sayHi\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation sayHi\n");
 return|return
 literal|"Bonjour"
 return|;
@@ -199,15 +191,7 @@ argument_list|(
 literal|"Executing operation pingMe, throwing PingMeFault exception"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation pingMe, throwing PingMeFault exception\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation pingMe, throwing PingMeFault exception\n");
 throw|throw
 operator|new
 name|PingMeFault

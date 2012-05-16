@@ -137,34 +137,8 @@ name|TradePriceData
 name|body
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"-----TradePriceData TickerPrice : ----- "
-operator|+
-name|body
-operator|.
-name|getTickerPrice
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"-----TradePriceData TickerSymbol : ----- "
-operator|+
-name|body
-operator|.
-name|getTickerSymbol
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("-----TradePriceData TickerPrice : ----- " + body.getTickerPrice());
+comment|//System.out.println("-----TradePriceData TickerSymbol : ----- " + body.getTickerSymbol());
 block|}
 specifier|public
 name|String

@@ -46,26 +46,6 @@ index|[]
 name|in
 parameter_list|)
 block|{
-for|for
-control|(
-name|String
-name|str
-range|:
-name|in
-control|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"--str-- "
-operator|+
-name|str
-argument_list|)
-expr_stmt|;
-block|}
 return|return
 name|in
 return|;

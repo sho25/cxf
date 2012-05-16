@@ -238,6 +238,8 @@ argument_list|(
 name|SOAPRpcLitServerImpl
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|assertTrue

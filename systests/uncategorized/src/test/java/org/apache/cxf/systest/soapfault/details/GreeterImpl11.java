@@ -261,7 +261,7 @@ argument_list|)
 decl_stmt|;
 name|cause
 operator|.
-name|printStackTrace
+name|fillInStackTrace
 argument_list|()
 expr_stmt|;
 throw|throw
@@ -284,17 +284,7 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"*********  greetMeOneWay: "
-operator|+
-name|requestType
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("*********  greetMeOneWay: " + requestType);
 block|}
 specifier|public
 name|void
@@ -337,15 +327,7 @@ argument_list|(
 literal|"Executing operation pingMe, throwing PingMeFault exception"
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation pingMe, throwing PingMeFault exception\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation pingMe, throwing PingMeFault exception\n");
 throw|throw
 operator|new
 name|PingMeFault

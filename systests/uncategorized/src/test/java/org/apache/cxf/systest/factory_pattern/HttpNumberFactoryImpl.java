@@ -73,7 +73,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|BusFactory
+name|Bus
 import|;
 end_import
 
@@ -149,10 +149,15 @@ name|NumberFactoryImpl
 block|{
 specifier|public
 name|HttpNumberFactoryImpl
-parameter_list|()
+parameter_list|(
+name|Bus
+name|bus
+parameter_list|)
 block|{
 name|super
-argument_list|()
+argument_list|(
+name|bus
+argument_list|)
 expr_stmt|;
 comment|// do servant creation up front so manual epr creation test has endpoint to talk to.
 comment|// the manual epr will not come from create()
@@ -187,10 +192,7 @@ name|portName
 argument_list|,
 name|id
 argument_list|,
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|)
 decl_stmt|;
 name|Source
@@ -238,10 +240,7 @@ init|=
 operator|new
 name|EndpointImpl
 argument_list|(
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|,
 name|servant
 argument_list|,
