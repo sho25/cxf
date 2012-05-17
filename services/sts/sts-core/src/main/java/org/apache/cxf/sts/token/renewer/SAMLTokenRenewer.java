@@ -1276,12 +1276,24 @@ argument_list|,
 name|tokenParameters
 argument_list|)
 expr_stmt|;
+name|AssertionWrapper
+name|renewedAssertion
+init|=
+operator|new
+name|AssertionWrapper
+argument_list|(
+name|assertion
+operator|.
+name|getXmlObject
+argument_list|()
+argument_list|)
+decl_stmt|;
 name|String
 name|oldId
 init|=
 name|createNewId
 argument_list|(
-name|assertion
+name|renewedAssertion
 argument_list|)
 decl_stmt|;
 comment|// Remove the previous token (now expired) from the cache
@@ -1307,14 +1319,14 @@ expr_stmt|;
 comment|// Create new Conditions& sign the Assertion
 name|createNewConditions
 argument_list|(
-name|assertion
+name|renewedAssertion
 argument_list|,
 name|tokenParameters
 argument_list|)
 expr_stmt|;
 name|signAssertion
 argument_list|(
-name|assertion
+name|renewedAssertion
 argument_list|,
 name|tokenParameters
 argument_list|)
@@ -1330,7 +1342,7 @@ decl_stmt|;
 name|Element
 name|token
 init|=
-name|assertion
+name|renewedAssertion
 operator|.
 name|toDOM
 argument_list|(
@@ -1339,7 +1351,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|assertion
+name|renewedAssertion
 operator|.
 name|getSaml1
 argument_list|()
@@ -1385,7 +1397,7 @@ name|storeTokenInCache
 argument_list|(
 name|tokenStore
 argument_list|,
-name|assertion
+name|renewedAssertion
 argument_list|,
 name|tokenParameters
 operator|.
@@ -1409,7 +1421,7 @@ name|response
 operator|.
 name|setTokenId
 argument_list|(
-name|assertion
+name|renewedAssertion
 operator|.
 name|getId
 argument_list|()
@@ -1432,7 +1444,7 @@ literal|0
 decl_stmt|;
 if|if
 condition|(
-name|assertion
+name|renewedAssertion
 operator|.
 name|getSamlVersion
 argument_list|()
@@ -1447,7 +1459,7 @@ condition|)
 block|{
 name|validFrom
 operator|=
-name|assertion
+name|renewedAssertion
 operator|.
 name|getSaml2
 argument_list|()
@@ -1460,7 +1472,7 @@ argument_list|()
 expr_stmt|;
 name|validTill
 operator|=
-name|assertion
+name|renewedAssertion
 operator|.
 name|getSaml2
 argument_list|()
@@ -1488,7 +1500,7 @@ else|else
 block|{
 name|validFrom
 operator|=
-name|assertion
+name|renewedAssertion
 operator|.
 name|getSaml1
 argument_list|()
@@ -1501,7 +1513,7 @@ argument_list|()
 expr_stmt|;
 name|validTill
 operator|=
-name|assertion
+name|renewedAssertion
 operator|.
 name|getSaml1
 argument_list|()
