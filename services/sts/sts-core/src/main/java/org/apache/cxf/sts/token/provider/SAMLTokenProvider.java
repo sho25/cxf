@@ -233,6 +233,22 @@ name|cxf
 operator|.
 name|sts
 operator|.
+name|claims
+operator|.
+name|ClaimsAttributeStatementProvider
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
 name|request
 operator|.
 name|KeyRequirements
@@ -2359,7 +2375,8 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|// If no statements, then default to the DefaultAttributeStatementProvider
+comment|// If no statements, then default to the DefaultAttributeStatementProvider and the
+comment|// ClaimsAttributeStatementProvider
 if|if
 condition|(
 operator|(
@@ -2429,6 +2446,36 @@ argument_list|(
 name|attributeBean
 argument_list|)
 expr_stmt|;
+name|attributeProvider
+operator|=
+operator|new
+name|ClaimsAttributeStatementProvider
+argument_list|()
+expr_stmt|;
+name|attributeBean
+operator|=
+name|attributeProvider
+operator|.
+name|getStatement
+argument_list|(
+name|tokenParameters
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|attributeBean
+operator|!=
+literal|null
+condition|)
+block|{
+name|attrBeanList
+operator|.
+name|add
+argument_list|(
+name|attributeBean
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 comment|// Get the Subject and Conditions
 name|SubjectBean
