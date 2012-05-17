@@ -81,6 +81,24 @@ name|SPStateManager
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|saml
+operator|.
+name|ext
+operator|.
+name|OpenSAMLUtil
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Path
@@ -103,6 +121,14 @@ name|SSOConstants
 operator|.
 name|DEFAULT_STATE_TIME
 decl_stmt|;
+static|static
+block|{
+name|OpenSAMLUtil
+operator|.
+name|initSamlEngine
+argument_list|()
+expr_stmt|;
+block|}
 comment|//TODO: support attaching a signature to the cookie value
 specifier|protected
 name|String
