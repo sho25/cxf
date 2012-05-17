@@ -400,7 +400,9 @@ argument_list|)
 operator|.
 name|header
 argument_list|(
-literal|"Set-Cookie"
+name|HttpHeaders
+operator|.
+name|SET_COOKIE
 argument_list|,
 name|contextCookie
 argument_list|)

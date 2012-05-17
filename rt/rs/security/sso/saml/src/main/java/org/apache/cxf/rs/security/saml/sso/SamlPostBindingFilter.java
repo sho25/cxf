@@ -71,6 +71,22 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|ext
+operator|.
+name|MessageContextImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
 name|model
 operator|.
 name|ClassResourceInfo
@@ -146,8 +162,49 @@ comment|// SamlResponseInfo with the jsp page which will fill
 comment|// in the XHTML form using SamlResponseInfo
 comment|// in principle we could've built the XHTML form right here
 comment|// but it will be cleaner to get that done in JSP
-comment|// Note the view handler will also need to set a RelayState
-comment|// cookie
+name|String
+name|contextCookie
+init|=
+name|createCookie
+argument_list|(
+name|SSOConstants
+operator|.
+name|RELAY_STATE
+argument_list|,
+name|info
+operator|.
+name|getRelayState
+argument_list|()
+argument_list|,
+name|info
+operator|.
+name|getWebAppContext
+argument_list|()
+argument_list|,
+name|info
+operator|.
+name|getWebAppDomain
+argument_list|()
+argument_list|)
+decl_stmt|;
+operator|new
+name|MessageContextImpl
+argument_list|(
+name|m
+argument_list|)
+operator|.
+name|getHttpServletResponse
+argument_list|()
+operator|.
+name|addHeader
+argument_list|(
+name|HttpHeaders
+operator|.
+name|SET_COOKIE
+argument_list|,
+name|contextCookie
+argument_list|)
+expr_stmt|;
 return|return
 name|Response
 operator|.
