@@ -675,6 +675,12 @@ specifier|private
 name|String
 name|signaturePropertiesFile
 decl_stmt|;
+specifier|private
+name|boolean
+name|enforceAssertionsSigned
+init|=
+literal|true
+decl_stmt|;
 annotation|@
 name|Context
 specifier|private
@@ -702,6 +708,22 @@ block|{
 return|return
 name|supportDeflateEncoding
 return|;
+block|}
+comment|/**      * Enforce that Assertions must be signed if the POST binding was used. The default is true.      */
+specifier|public
+name|void
+name|setEnforceAssertionsSigned
+parameter_list|(
+name|boolean
+name|enforceAssertionsSigned
+parameter_list|)
+block|{
+name|this
+operator|.
+name|enforceAssertionsSigned
+operator|=
+name|enforceAssertionsSigned
+expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -1750,7 +1772,13 @@ name|getIssuerId
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// TODO post binding
+name|ssoResponseValidator
+operator|.
+name|setEnforceAssertionsSigned
+argument_list|(
+name|enforceAssertionsSigned
+argument_list|)
+expr_stmt|;
 return|return
 name|ssoResponseValidator
 operator|.
@@ -1758,7 +1786,7 @@ name|validateSamlResponse
 argument_list|(
 name|samlResponse
 argument_list|,
-literal|false
+name|postBinding
 argument_list|)
 return|;
 block|}

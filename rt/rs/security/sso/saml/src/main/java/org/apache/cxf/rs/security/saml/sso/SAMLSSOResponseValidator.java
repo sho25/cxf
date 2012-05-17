@@ -175,6 +175,28 @@ specifier|private
 name|String
 name|spIdentifier
 decl_stmt|;
+specifier|private
+name|boolean
+name|enforceAssertionsSigned
+init|=
+literal|true
+decl_stmt|;
+comment|/**      * Enforce that Assertions must be signed if the POST binding was used. The default is true.      */
+specifier|public
+name|void
+name|setEnforceAssertionsSigned
+parameter_list|(
+name|boolean
+name|enforceAssertionsSigned
+parameter_list|)
+block|{
+name|this
+operator|.
+name|enforceAssertionsSigned
+operator|=
+name|enforceAssertionsSigned
+expr_stmt|;
+block|}
 comment|/**      * Validate a SAML 2 Protocol Response      * @param samlResponse      * @param postBinding      * @return a SSOValidatorResponse object      * @throws WSSecurityException      */
 specifier|public
 name|SSOValidatorResponse
@@ -365,6 +387,8 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+name|enforceAssertionsSigned
+operator|&&
 name|postBinding
 operator|&&
 name|assertion
