@@ -185,15 +185,7 @@ parameter_list|)
 throws|throws
 name|BadRecordLitFault
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing testDocLitFault sayHi\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing testDocLitFault sayHi\n");
 name|List
 argument_list|<
 name|Header

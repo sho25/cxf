@@ -186,6 +186,13 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|100000
+argument_list|)
+expr_stmt|;
 name|testUtilities
 operator|.
 name|setBus

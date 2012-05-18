@@ -152,11 +152,16 @@ name|ManualNumberFactoryImpl
 parameter_list|(
 name|Bus
 name|b
+parameter_list|,
+name|String
+name|p
 parameter_list|)
 block|{
 name|super
 argument_list|(
 name|b
+argument_list|,
+name|p
 argument_list|)
 expr_stmt|;
 block|}
@@ -272,7 +277,8 @@ name|ep
 operator|.
 name|publish
 argument_list|(
-name|NUMBER_SERVANT_ADDRESS_ROOT
+name|getServantAddressRoot
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|templateEpr

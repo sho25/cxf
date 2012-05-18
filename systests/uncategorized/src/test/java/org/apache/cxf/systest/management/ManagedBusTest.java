@@ -260,7 +260,11 @@ name|TestUtil
 operator|.
 name|getPortNumber
 argument_list|(
-literal|"Server.1"
+name|ManagedBusTest
+operator|.
+name|class
+argument_list|,
+literal|1
 argument_list|)
 decl_stmt|;
 specifier|public
@@ -650,7 +654,7 @@ name|factory
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/management/managed-spring.xml"
+literal|"org/apache/cxf/systest/management/managed-bus.xml"
 argument_list|,
 literal|true
 argument_list|)

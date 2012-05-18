@@ -858,13 +858,6 @@ argument_list|,
 name|url
 argument_list|)
 expr_stmt|;
-name|defaultConfigFileName
-operator|=
-name|url
-operator|.
-name|toString
-argument_list|()
-expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
@@ -877,6 +870,14 @@ name|class
 argument_list|,
 literal|true
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|createStaticBus
+argument_list|(
+name|url
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

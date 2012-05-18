@@ -238,7 +238,7 @@ block|{
 name|String
 name|exMessage
 init|=
-literal|null
+literal|""
 decl_stmt|;
 name|QName
 name|faultCode
