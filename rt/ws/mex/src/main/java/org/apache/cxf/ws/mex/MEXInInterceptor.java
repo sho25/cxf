@@ -415,6 +415,13 @@ condition|(
 name|inProps
 operator|!=
 literal|null
+operator|&&
+name|inProps
+operator|.
+name|getAction
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 name|action
