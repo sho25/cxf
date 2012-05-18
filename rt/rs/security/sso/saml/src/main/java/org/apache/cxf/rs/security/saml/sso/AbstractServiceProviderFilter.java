@@ -912,6 +912,14 @@ name|webAppDomain
 operator|!=
 literal|null
 operator|&&
+operator|(
+name|responseState
+operator|.
+name|getWebAppDomain
+argument_list|()
+operator|==
+literal|null
+operator|||
 operator|!
 name|webAppDomain
 operator|.
@@ -922,6 +930,7 @@ operator|.
 name|getWebAppDomain
 argument_list|()
 argument_list|)
+operator|)
 operator|||
 name|responseState
 operator|.
