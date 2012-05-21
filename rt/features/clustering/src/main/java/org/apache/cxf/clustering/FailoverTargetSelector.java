@@ -822,6 +822,13 @@ name|FailoverStrategy
 name|strategy
 parameter_list|)
 block|{
+if|if
+condition|(
+name|strategy
+operator|!=
+literal|null
+condition|)
+block|{
 name|getLogger
 argument_list|()
 operator|.
@@ -845,6 +852,7 @@ name|failoverStrategy
 operator|=
 name|strategy
 expr_stmt|;
+block|}
 block|}
 comment|/**      * @return strategy the FailoverStrategy to use      */
 specifier|public

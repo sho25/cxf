@@ -276,6 +276,14 @@ argument_list|(
 name|endpoint
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|getStrategy
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|selector
 operator|.
 name|setStrategy
@@ -284,6 +292,7 @@ name|getStrategy
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|selector
 return|;
