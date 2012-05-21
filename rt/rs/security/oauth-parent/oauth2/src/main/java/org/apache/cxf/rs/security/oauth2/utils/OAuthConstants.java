@@ -153,6 +153,14 @@ name|IMPLICIT_GRANT
 init|=
 literal|"implicit"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REFRESH_TOKEN_GRANT
+init|=
+literal|"refresh_token"
+decl_stmt|;
 comment|// etc
 comment|// Well-known token types
 specifier|public

@@ -170,7 +170,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * TODO: Consider introducing a dedicated entity representing a user pre authorization      * Get preauthorized access token       * @param accessToken the token key       * @return AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Get preauthorized access token       * @param client Client      * @param subject End User subject       * @return AccessToken access token      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|getPreauthorizedToken
 parameter_list|(
@@ -186,7 +186,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Refresh access token       * @param clientId the client id      * @param refreshToken the token key       * @return AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Refresh access token       * @param clientId the client id      * @param refreshToken refresh token key       * @return AccessToken      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|refreshAccessToken
 parameter_list|(
