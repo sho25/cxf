@@ -41,11 +41,27 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|annotation
+operator|.
+name|XmlRootElement
+import|;
+end_import
+
 begin_comment
 comment|/**  * Represents a login name which AuthorizationService  * may capture after the end user approved a given third party request  */
 end_comment
 
 begin_class
+annotation|@
+name|XmlRootElement
 specifier|public
 class|class
 name|UserSubject
@@ -66,6 +82,10 @@ operator|.
 name|emptyList
 argument_list|()
 decl_stmt|;
+specifier|public
+name|UserSubject
+parameter_list|()
+block|{              }
 specifier|public
 name|UserSubject
 parameter_list|(
@@ -106,7 +126,7 @@ operator|=
 name|roles
 expr_stmt|;
 block|}
-comment|/**      * Returns the user login name      * @return the login name      */
+comment|/**      * Return the user login name      * @return the login name      */
 specifier|public
 name|String
 name|getLogin
@@ -116,7 +136,23 @@ return|return
 name|login
 return|;
 block|}
-comment|/**      * Returns the optional list of user roles which may have       * been captured during the authentication process       * @return the list of roles      */
+comment|/**      * Set the user login name      * @param login the login name      */
+specifier|public
+name|void
+name|setLogin
+parameter_list|(
+name|String
+name|login
+parameter_list|)
+block|{
+name|this
+operator|.
+name|login
+operator|=
+name|login
+expr_stmt|;
+block|}
+comment|/**      * Return the optional list of user roles which may have       * been captured during the authentication process       * @return the list of roles      */
 specifier|public
 name|List
 argument_list|<
@@ -126,13 +162,27 @@ name|getRoles
 parameter_list|()
 block|{
 return|return
-name|Collections
-operator|.
-name|unmodifiableList
-argument_list|(
 name|roles
-argument_list|)
 return|;
+block|}
+comment|/**      * Set the optional list of user roles which may have       * been captured during the authentication process       * @param roles the list of roles      */
+specifier|public
+name|void
+name|setRoles
+parameter_list|(
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|roles
+parameter_list|)
+block|{
+name|this
+operator|.
+name|roles
+operator|=
+name|roles
+expr_stmt|;
 block|}
 block|}
 end_class

@@ -199,7 +199,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Removes the token      * @param token the token      * @throws OAuthServiceException      */
+comment|/**      * Removes the token      * @param accessToken the token      * @throws OAuthServiceException      */
 name|void
 name|removeAccessToken
 parameter_list|(

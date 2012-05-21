@@ -196,6 +196,14 @@ name|MAC_AUTHORIZATION_SCHEME
 init|=
 literal|"Mac"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ALL_AUTH_SCHEMES
+init|=
+literal|"*"
+decl_stmt|;
 comment|// Authorization Code grant constants
 specifier|public
 specifier|static

@@ -41,11 +41,27 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|annotation
+operator|.
+name|XmlRootElement
+import|;
+end_import
+
 begin_comment
 comment|/**  * Provides the complete information about a given opaque permission.  * For example, a scope parameter such as "read_calendar" will be  * translated into the instance of this class in order to provide  * the human readable description and optionally restrict it to  * a limited set of HTTP verbs and request URIs  */
 end_comment
 
 begin_class
+annotation|@
+name|XmlRootElement
 specifier|public
 class|class
 name|OAuthPermission
@@ -76,6 +92,10 @@ operator|.
 name|emptyList
 argument_list|()
 decl_stmt|;
+specifier|public
+name|OAuthPermission
+parameter_list|()
+block|{              }
 specifier|public
 name|OAuthPermission
 parameter_list|(
