@@ -242,8 +242,6 @@ name|REFRESH_TOKEN_GRANT
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|ServerAccessToken
 name|createAccessToken
