@@ -74,6 +74,11 @@ name|SourceSequence
 name|seq
 parameter_list|)
 function_decl|;
+comment|/**      * @return the total number of unacknowledged messages in this queue      */
+name|int
+name|countUnacknowledged
+parameter_list|()
+function_decl|;
 comment|/**      * @return true if there are no unacknowledged messages in the queue      */
 name|boolean
 name|isEmpty

@@ -499,6 +499,8 @@ literal|"messageNumber"
 block|,
 literal|"retries"
 block|,
+literal|"maxRetries"
+block|,
 literal|"previous"
 block|,
 literal|"next"
@@ -538,6 +540,10 @@ block|{
 name|SimpleType
 operator|.
 name|LONG
+block|,
+name|SimpleType
+operator|.
+name|INTEGER
 block|,
 name|SimpleType
 operator|.
@@ -712,27 +718,12 @@ name|boolean
 name|outbound
 parameter_list|)
 block|{
-name|int
-name|count
-init|=
-literal|0
-decl_stmt|;
 if|if
 condition|(
 name|outbound
 condition|)
 block|{
-name|Source
-name|source
-init|=
-name|endpoint
-operator|.
-name|getSource
-argument_list|()
-decl_stmt|;
-name|RetransmissionQueue
-name|queue
-init|=
+return|return
 name|endpoint
 operator|.
 name|getManager
@@ -740,40 +731,18 @@ argument_list|()
 operator|.
 name|getRetransmissionQueue
 argument_list|()
-decl_stmt|;
-for|for
-control|(
-name|SourceSequence
-name|ss
-range|:
-name|source
-operator|.
-name|getAllSequences
-argument_list|()
-control|)
-block|{
-name|count
-operator|+=
-name|queue
 operator|.
 name|countUnacknowledged
-argument_list|(
-name|ss
-argument_list|)
-expr_stmt|;
-block|}
+argument_list|()
+return|;
 block|}
 else|else
 block|{
-comment|//            Destination destination = endpoint.getDestination();
-comment|//            RedeliveryQueue queue = endpoint.getManager().getRedeliveryQueue();
-comment|//            for (DestinationSequence ds : destination.getAllSequences()) {
-comment|//                count += queue.countUndelivered(ds);
-comment|//            }
-block|}
+comment|//            return endpoint.getManager().getRedeliveryQueue().countUndelivered();
 return|return
-name|count
+literal|0
 return|;
+block|}
 block|}
 annotation|@
 name|ManagedOperation
@@ -830,11 +799,6 @@ operator|.
 name|getManager
 argument_list|()
 decl_stmt|;
-name|int
-name|count
-init|=
-literal|0
-decl_stmt|;
 if|if
 condition|(
 name|outbound
@@ -863,8 +827,7 @@ literal|"no sequence"
 argument_list|)
 throw|;
 block|}
-name|count
-operator|=
+return|return
 name|manager
 operator|.
 name|getRetransmissionQueue
@@ -874,7 +837,7 @@ name|countUnacknowledged
 argument_list|(
 name|ss
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 else|else
 block|{
@@ -882,11 +845,11 @@ comment|//            DestinationSequence ds = getDestinationSeq(sid);
 comment|//            if (null == ds) {
 comment|//                throw new IllegalArgumentException("no sequence");
 comment|//            }
-comment|//            count = manager.getRedeliveryQueue().countUndelivered(ds);
-block|}
+comment|//            return manager.getRedeliveryQueue().countUndelivered(ds);
 return|return
-name|count
+literal|0
 return|;
+block|}
 block|}
 annotation|@
 name|ManagedOperation
@@ -2911,6 +2874,11 @@ argument_list|()
 block|,
 name|rs
 operator|.
+name|getMaxRetries
+argument_list|()
+block|,
+name|rs
+operator|.
 name|getPrevious
 argument_list|()
 block|,
@@ -3061,6 +3029,139 @@ operator|.
 name|getLastControlMessage
 argument_list|()
 argument_list|)
+return|;
+block|}
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Number of Outbound Queued Messages"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getQueuedMessagesOutboundCount
+parameter_list|()
+block|{
+return|return
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRetransmissionQueue
+argument_list|()
+operator|.
+name|countUnacknowledged
+argument_list|()
+return|;
+block|}
+comment|//    @ManagedAttribute(description = "Number of Outbound Completed Messages", currencyTimeLimit = 10)
+comment|//    public int getCompletedMessagesOutboundCount() {
+comment|//        return endpoint.getManager().countCompleted();
+comment|//    }
+comment|//    @ManagedAttribute(description = "Number of Inbound Queued Messages", currencyTimeLimit = 10)
+comment|//    public int getQueuedMessagesInboundCount() {
+comment|//        return endpoint.getManager().getRedeliveryQueue().countUndelivered();
+comment|//    }
+comment|//    @ManagedAttribute(description = "Number of Inbound Completed Messages", currencyTimeLimit = 10)
+comment|//    public int getCompletedMessagesInboundCount() {
+comment|//        return endpoint.getManager().countCompleted();
+comment|//    }
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Number of Processing Source Sequences"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getProcessingSourceSequenceCount
+parameter_list|()
+block|{
+return|return
+name|endpoint
+operator|.
+name|getProcessingSourceSequenceCount
+argument_list|()
+return|;
+block|}
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Number of Completed Source Sequences"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getCompletedSourceSequenceCount
+parameter_list|()
+block|{
+return|return
+name|endpoint
+operator|.
+name|getCompletedSourceSequenceCount
+argument_list|()
+return|;
+block|}
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Number of Processing Destination Sequences"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getProcessingDestinationSequenceCount
+parameter_list|()
+block|{
+return|return
+name|endpoint
+operator|.
+name|getProcessingDestinationSequenceCount
+argument_list|()
+return|;
+block|}
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Number of Completed Destination Sequences"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getCompletedDestinationSequenceCount
+parameter_list|()
+block|{
+return|return
+name|endpoint
+operator|.
+name|getCompletedDestinationSequenceCount
+argument_list|()
 return|;
 block|}
 block|}

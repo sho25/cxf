@@ -297,6 +297,36 @@ operator|!=
 literal|null
 return|;
 block|}
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Total Number of Outbound Queued Messages"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getQueuedMessagesOutboundCount
+parameter_list|()
+block|{
+return|return
+name|manager
+operator|.
+name|getRetransmissionQueue
+argument_list|()
+operator|.
+name|countUnacknowledged
+argument_list|()
+return|;
+block|}
+comment|//    @ManagedAttribute(description = "Total Number of Inbound Queued Messages", currencyTimeLimit = 10)
+comment|//    public int getQueuedMessagesInboundCount() {
+comment|//        return manager.getRedeliveryQueue().countUndelivered();
+comment|//    }
 block|}
 end_class
 
