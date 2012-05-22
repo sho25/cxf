@@ -241,6 +241,20 @@ name|Base64
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|opensaml
+operator|.
+name|saml2
+operator|.
+name|core
+operator|.
+name|AuthnRequest
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -431,6 +445,18 @@ argument_list|)
 throw|;
 block|}
 block|}
+block|}
+specifier|protected
+name|void
+name|signAuthnRequest
+parameter_list|(
+name|AuthnRequest
+name|authnRequest
+parameter_list|)
+throws|throws
+name|Exception
+block|{
+comment|// Do nothing as we sign the request in a different way for the redirect binding
 block|}
 comment|/**      * Sign a request according to the redirect binding spec for Web SSO      */
 specifier|private
