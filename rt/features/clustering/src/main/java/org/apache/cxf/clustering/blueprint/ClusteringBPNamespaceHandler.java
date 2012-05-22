@@ -268,6 +268,11 @@ return|return
 literal|null
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 name|Set
 argument_list|<
@@ -276,7 +281,6 @@ argument_list|>
 name|getManagedClasses
 parameter_list|()
 block|{
-comment|//probably should have the various stuff in cxf-api in here?
 return|return
 literal|null
 return|;
@@ -298,7 +302,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/clustering.xsd"
+literal|"/schemas/clustering.xsd"
 argument_list|)
 return|;
 block|}
