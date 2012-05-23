@@ -349,11 +349,13 @@ specifier|final
 name|AddressingProperties
 name|maps
 init|=
-name|RMContextUtils
+name|ContextUtils
 operator|.
 name|retrieveMAPs
 argument_list|(
 name|message
+argument_list|,
+literal|false
 argument_list|,
 literal|false
 argument_list|,
