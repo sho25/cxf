@@ -712,6 +712,12 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
+comment|//the search for the conduit could cause extra properties to be reset/loaded.
+name|message
+operator|.
+name|resetContextCache
+argument_list|()
+expr_stmt|;
 name|message
 operator|.
 name|put
