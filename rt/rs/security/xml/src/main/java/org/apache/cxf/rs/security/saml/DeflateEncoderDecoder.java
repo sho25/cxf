@@ -106,7 +106,9 @@ name|inflater
 init|=
 operator|new
 name|Inflater
-argument_list|()
+argument_list|(
+literal|true
+argument_list|)
 decl_stmt|;
 name|inflater
 operator|.
@@ -263,7 +265,13 @@ name|compresser
 init|=
 operator|new
 name|Deflater
-argument_list|()
+argument_list|(
+name|Deflater
+operator|.
+name|DEFLATED
+argument_list|,
+literal|true
+argument_list|)
 decl_stmt|;
 name|compresser
 operator|.
