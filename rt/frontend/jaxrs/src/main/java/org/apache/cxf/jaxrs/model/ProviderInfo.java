@@ -17,6 +17,18 @@ name|model
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|Bus
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -36,6 +48,9 @@ name|ProviderInfo
 parameter_list|(
 name|T
 name|provider
+parameter_list|,
+name|Bus
+name|bus
 parameter_list|)
 block|{
 name|super
@@ -51,6 +66,8 @@ name|getClass
 argument_list|()
 argument_list|,
 literal|true
+argument_list|,
+name|bus
 argument_list|)
 expr_stmt|;
 name|this
