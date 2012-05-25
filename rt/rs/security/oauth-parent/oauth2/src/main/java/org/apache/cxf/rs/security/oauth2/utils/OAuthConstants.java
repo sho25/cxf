@@ -204,6 +204,15 @@ name|ALL_AUTH_SCHEMES
 init|=
 literal|"*"
 decl_stmt|;
+comment|// Default Client Authentication Scheme
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|BASIC_SCHEME
+init|=
+literal|"Basic"
+decl_stmt|;
 comment|// Authorization Code grant constants
 specifier|public
 specifier|static

@@ -785,9 +785,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-literal|"Basic"
+name|OAuthConstants
 operator|.
-name|equals
+name|BASIC_SCHEME
+operator|.
+name|equalsIgnoreCase
 argument_list|(
 name|scheme
 argument_list|)
@@ -810,7 +812,7 @@ block|{
 comment|// section 2.3.2
 comment|// the client has authenticated itself using some other scheme
 comment|// in which case the mapping between the scheme and the client_id
-comment|// should've been done, in which case the client_id is expected
+comment|// should've been done and the client_id is expected
 comment|// on the current message
 name|Object
 name|clientIdProp
@@ -864,9 +866,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-literal|"Basic"
+name|OAuthConstants
 operator|.
-name|equals
+name|BASIC_SCHEME
+operator|.
+name|equalsIgnoreCase
 argument_list|(
 name|parts
 index|[
