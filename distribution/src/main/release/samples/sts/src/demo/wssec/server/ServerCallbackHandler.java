@@ -126,7 +126,6 @@ operator|instanceof
 name|WSPasswordCallback
 condition|)
 block|{
-comment|// CXF
 name|WSPasswordCallback
 name|pc
 init|=
