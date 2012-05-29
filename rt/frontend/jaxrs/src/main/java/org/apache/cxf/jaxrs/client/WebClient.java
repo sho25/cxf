@@ -297,6 +297,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|feature
+operator|.
+name|AbstractFeature
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|helpers
 operator|.
 name|CastUtils
@@ -745,7 +759,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates a Spring-configuration aware WebClient      * @param baseAddress baseAddress      * @param providers list of providers      * @param configLocation classpath location of Spring configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient      * @param baseAddress baseAddress      * @param providers list of providers      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
@@ -788,7 +802,63 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates a Spring-configuration aware WebClient      * @param baseAddress baseAddress      * @param configLocation classpath location of Spring configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient with a list of custom features      * @param baseAddress baseAddress      * @param providers list of providers      * @param features the features which will be applied to the client      * @param configLocation classpath location of the configuration resource, can be null      * @return WebClient instance      */
+specifier|public
+specifier|static
+name|WebClient
+name|create
+parameter_list|(
+name|String
+name|baseAddress
+parameter_list|,
+name|List
+argument_list|<
+name|?
+argument_list|>
+name|providers
+parameter_list|,
+name|List
+argument_list|<
+name|AbstractFeature
+argument_list|>
+name|features
+parameter_list|,
+name|String
+name|configLocation
+parameter_list|)
+block|{
+name|JAXRSClientFactoryBean
+name|bean
+init|=
+name|getBean
+argument_list|(
+name|baseAddress
+argument_list|,
+name|configLocation
+argument_list|)
+decl_stmt|;
+name|bean
+operator|.
+name|setProviders
+argument_list|(
+name|providers
+argument_list|)
+expr_stmt|;
+name|bean
+operator|.
+name|setFeatures
+argument_list|(
+name|features
+argument_list|)
+expr_stmt|;
+return|return
+name|bean
+operator|.
+name|createWebClient
+argument_list|()
+return|;
+block|}
+comment|/**      * Creates WebClient      * @param baseAddress baseAddress      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
@@ -818,7 +888,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates a Spring-configuration aware WebClient which will do basic authentication      * @param baseAddress baseAddress      * @param username username      * @param password password      * @param configLocation classpath location of Spring configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient which will do basic authentication      * @param baseAddress baseAddress      * @param username username      * @param password password      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
