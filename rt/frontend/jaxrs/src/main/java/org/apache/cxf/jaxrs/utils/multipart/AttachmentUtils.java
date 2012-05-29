@@ -793,6 +793,8 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
+argument_list|,
+literal|400
 argument_list|)
 throw|;
 block|}
