@@ -23,11 +23,32 @@ name|state
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
 name|RequestState
+implements|implements
+name|Serializable
 block|{
+comment|/**      *       */
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|869323136115571943L
+decl_stmt|;
 specifier|private
 name|String
 name|targetAddress
