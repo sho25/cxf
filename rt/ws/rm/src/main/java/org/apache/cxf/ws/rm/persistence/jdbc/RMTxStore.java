@@ -902,6 +902,7 @@ name|ALTER_TABLE_STMT_STR
 init|=
 literal|"ALTER TABLE {0} ADD {1} {2}"
 decl_stmt|;
+comment|// create_schema may not work for several reasons, if so, create one manually
 specifier|private
 specifier|static
 specifier|final
@@ -910,13 +911,21 @@ name|CREATE_SCHEMA_STMT_STR
 init|=
 literal|"CREATE SCHEMA {0}"
 decl_stmt|;
+comment|// given the schema, try these standard statements to switch to the schema
 specifier|private
 specifier|static
 specifier|final
 name|String
-name|SET_CURRENT_SCHEMA_STMT_STR
+index|[]
+name|SET_SCHEMA_STMT_STRS
 init|=
-literal|"SET CURRENT SCHEMA {0}"
+block|{
+literal|"SET SCHEMA {0}"
+block|,
+literal|"SET CURRENT_SCHEMA = {0}"
+block|,
+literal|"ALTER SESSION SET CURRENT_SCHEMA = {0}"
+block|}
 decl_stmt|;
 specifier|private
 specifier|static
@@ -4081,7 +4090,7 @@ name|SQLException
 name|ex
 parameter_list|)
 block|{
-comment|// pass through to assume it is already created
+comment|// assume it is already created or no authorization is provided (create one manually)
 block|}
 name|stmt
 operator|.
@@ -4095,6 +4104,28 @@ operator|.
 name|createStatement
 argument_list|()
 expr_stmt|;
+name|SQLException
+name|ex0
+init|=
+literal|null
+decl_stmt|;
+for|for
+control|(
+name|int
+name|i
+init|=
+literal|0
+init|;
+name|i
+operator|<
+name|SET_SCHEMA_STMT_STRS
+operator|.
+name|length
+condition|;
+name|i
+operator|++
+control|)
+block|{
 try|try
 block|{
 name|stmt
@@ -4105,12 +4136,16 @@ name|MessageFormat
 operator|.
 name|format
 argument_list|(
-name|SET_CURRENT_SCHEMA_STMT_STR
+name|SET_SCHEMA_STMT_STRS
+index|[
+name|i
+index|]
 argument_list|,
 name|schemaName
 argument_list|)
 argument_list|)
 expr_stmt|;
+break|break;
 block|}
 catch|catch
 parameter_list|(
@@ -4118,9 +4153,34 @@ name|SQLException
 name|ex
 parameter_list|)
 block|{
-throw|throw
 name|ex
+operator|.
+name|setNextException
+argument_list|(
+name|ex0
+argument_list|)
+expr_stmt|;
+name|ex0
+operator|=
+name|ex
+expr_stmt|;
+if|if
+condition|(
+name|i
+operator|==
+name|SET_SCHEMA_STMT_STRS
+operator|.
+name|length
+operator|-
+literal|1
+condition|)
+block|{
+throw|throw
+name|ex0
 throw|;
+block|}
+comment|// continue
+block|}
 block|}
 name|stmt
 operator|.
