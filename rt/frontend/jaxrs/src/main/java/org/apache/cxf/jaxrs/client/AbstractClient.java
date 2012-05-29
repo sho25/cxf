@@ -2339,7 +2339,7 @@ name|writeTo
 argument_list|(
 name|o
 argument_list|,
-name|cls
+name|theClass
 argument_list|,
 name|type
 argument_list|,
