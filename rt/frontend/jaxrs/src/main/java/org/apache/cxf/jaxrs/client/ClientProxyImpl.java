@@ -4412,6 +4412,14 @@ name|outMessage
 argument_list|,
 name|method
 operator|.
+name|getParameterTypes
+argument_list|()
+index|[
+name|bodyIndex
+index|]
+argument_list|,
+name|method
+operator|.
 name|getGenericParameterTypes
 argument_list|()
 index|[
@@ -4433,6 +4441,11 @@ argument_list|(
 name|body
 argument_list|,
 name|outMessage
+argument_list|,
+name|body
+operator|.
+name|getClass
+argument_list|()
 argument_list|,
 name|body
 operator|.
