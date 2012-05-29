@@ -267,7 +267,6 @@ name|SOAP_JMS_PREFIX
 operator|+
 name|ISFAULT_PARAMETER_NAME
 decl_stmt|;
-comment|//
 specifier|public
 specifier|static
 specifier|final

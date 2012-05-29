@@ -39,6 +39,24 @@ name|Map
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|jms
+operator|.
+name|spec
+operator|.
+name|JMSSpecConstants
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -170,9 +188,22 @@ name|keySet
 argument_list|()
 control|)
 block|{
+comment|// now we just skip the MESSAGE_TYPE_PARAMETER_NAME
+comment|// and TARGETSERVICE_PARAMETER_NAME
 if|if
 condition|(
-literal|"targetService"
+name|JMSSpecConstants
+operator|.
+name|TARGETSERVICE_PARAMETER_NAME
+operator|.
+name|equals
+argument_list|(
+name|key
+argument_list|)
+operator|||
+name|JMSURIConstants
+operator|.
+name|MESSAGE_TYPE_PARAMETER_NAME
 operator|.
 name|equals
 argument_list|(

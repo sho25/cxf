@@ -149,6 +149,15 @@ name|REPLYTONAME_PARAMETER_NAME
 init|=
 literal|"replyToName"
 decl_stmt|;
+comment|// The new configuration to set the message type of jms message body
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MESSAGE_TYPE_PARAMETER_NAME
+init|=
+literal|"messageType"
+decl_stmt|;
 comment|// default parameters
 specifier|public
 specifier|static
