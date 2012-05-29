@@ -27,6 +27,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Map
@@ -199,8 +209,19 @@ specifier|public
 name|void
 name|close
 parameter_list|()
+throws|throws
+name|IOException
 block|{
-comment|// complete
+name|requestStateMap
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|responseStateMap
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 end_class

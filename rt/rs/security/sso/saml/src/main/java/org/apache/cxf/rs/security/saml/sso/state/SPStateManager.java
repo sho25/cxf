@@ -23,6 +23,26 @@ name|state
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Closeable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
 begin_comment
 comment|/**  * SSO Service Provider State Manager.  *   * TODO: review the possibility of working with the Servlet HTTPSession  * instead; in that case it can be tricky to configure various containers   * (Tomcat, Jetty) to make sure the cookies are shared across multiple   * war contexts which will be needed if RequestAssertionConsumerService  * needs to be run in its own war file instead of having every application   * war on the SP side have a dedicated RequestAssertionConsumerService endpoint     */
 end_comment
@@ -31,6 +51,8 @@ begin_interface
 specifier|public
 interface|interface
 name|SPStateManager
+extends|extends
+name|Closeable
 block|{
 name|void
 name|setRequestState
@@ -76,6 +98,8 @@ function_decl|;
 name|void
 name|close
 parameter_list|()
+throws|throws
+name|IOException
 function_decl|;
 block|}
 end_interface
