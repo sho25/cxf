@@ -57,6 +57,18 @@ begin_import
 import|import
 name|org
 operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|Element
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|apache
 operator|.
 name|cxf
@@ -97,7 +109,9 @@ name|saml
 operator|.
 name|ext
 operator|.
-name|AssertionWrapper
+name|builder
+operator|.
+name|SAML2Constants
 import|;
 end_import
 
@@ -111,13 +125,9 @@ name|ws
 operator|.
 name|security
 operator|.
-name|saml
+name|util
 operator|.
-name|ext
-operator|.
-name|builder
-operator|.
-name|SAML2Constants
+name|DOM2Writer
 import|;
 end_import
 
@@ -597,13 +607,9 @@ name|sessionNotOnOrAfter
 argument_list|)
 expr_stmt|;
 comment|// the assumption for now is that SAMLResponse will contain only a single assertion
-name|validatorResponse
-operator|.
-name|setAssertion
-argument_list|(
-operator|new
-name|AssertionWrapper
-argument_list|(
+name|Element
+name|assertionElement
+init|=
 name|samlResponse
 operator|.
 name|getAssertions
@@ -613,10 +619,20 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
-argument_list|)
 operator|.
-name|assertionToString
+name|getDOM
 argument_list|()
+decl_stmt|;
+name|validatorResponse
+operator|.
+name|setAssertion
+argument_list|(
+name|DOM2Writer
+operator|.
+name|nodeToString
+argument_list|(
+name|assertionElement
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
