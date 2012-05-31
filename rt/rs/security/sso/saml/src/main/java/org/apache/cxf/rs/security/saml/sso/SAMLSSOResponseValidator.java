@@ -667,18 +667,18 @@ condition|)
 block|{
 return|return;
 block|}
-comment|// Issuer value must match Issuer IDP
+comment|// Issuer value must match (be contained in) Issuer IDP
 if|if
 condition|(
 operator|!
+name|issuerIDP
+operator|.
+name|startsWith
+argument_list|(
 name|issuer
 operator|.
 name|getValue
 argument_list|()
-operator|.
-name|equals
-argument_list|(
-name|issuerIDP
 argument_list|)
 condition|)
 block|{
