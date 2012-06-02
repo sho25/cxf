@@ -154,6 +154,13 @@ argument_list|(
 literal|"init"
 argument_list|)
 expr_stmt|;
+name|bean
+operator|.
+name|setDestroyMethod
+argument_list|(
+literal|"destroy"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Override
