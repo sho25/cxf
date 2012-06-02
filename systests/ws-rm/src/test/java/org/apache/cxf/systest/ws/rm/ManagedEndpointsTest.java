@@ -294,12 +294,11 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|ManagedEndpointsTest
 operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|//    public static final String DECOUPLE_PORT = allocatePort("decoupled.port");
 specifier|private
 specifier|static
 specifier|final

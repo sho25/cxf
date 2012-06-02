@@ -273,7 +273,9 @@ name|DECOUPLE_PORT
 init|=
 name|allocatePort
 argument_list|(
-literal|"decoupled.port"
+name|RetransmissionQueueTest
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 specifier|private
