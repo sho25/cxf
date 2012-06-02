@@ -309,10 +309,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-specifier|private
-name|Bus
-name|bus
-decl_stmt|;
 specifier|public
 specifier|static
 class|class
