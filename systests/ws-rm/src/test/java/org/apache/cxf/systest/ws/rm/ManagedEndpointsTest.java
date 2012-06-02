@@ -536,6 +536,27 @@ annotation|@
 name|Test
 specifier|public
 name|void
+name|runTests
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+comment|//There is a problem if testSuspendAndResumeSourceSequence is run first
+comment|//Need to get Aki to look at it.  For now, just force them into
+comment|//an order that works
+name|testManagedEndpointsOneway
+argument_list|()
+expr_stmt|;
+name|stopBus
+argument_list|()
+expr_stmt|;
+name|testSuspendAndResumeSourceSequence
+argument_list|()
+expr_stmt|;
+block|}
+comment|//@Test
+specifier|public
+name|void
 name|testManagedEndpointsOneway
 parameter_list|()
 throws|throws
@@ -1731,8 +1752,7 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testSuspendAndResumeSourceSequence
