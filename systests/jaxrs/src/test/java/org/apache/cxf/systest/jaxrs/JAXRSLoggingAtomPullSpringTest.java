@@ -385,7 +385,7 @@ name|testutil
 operator|.
 name|common
 operator|.
-name|AbstractClientServerTestBase
+name|AbstractBusClientServerTestBase
 import|;
 end_import
 
@@ -434,7 +434,7 @@ specifier|public
 class|class
 name|JAXRSLoggingAtomPullSpringTest
 extends|extends
-name|AbstractClientServerTestBase
+name|AbstractBusClientServerTestBase
 block|{
 specifier|public
 specifier|static
@@ -572,6 +572,9 @@ name|LogRecord
 operator|.
 name|class
 argument_list|)
+expr_stmt|;
+name|createStaticBus
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
