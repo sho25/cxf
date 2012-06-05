@@ -526,27 +526,6 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|runTests
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-comment|//There is a problem if testSuspendAndResumeSourceSequence is run first
-comment|//Need to get Aki to look at it.  For now, just force them into
-comment|//an order that works
-name|testManagedEndpointsOneway
-argument_list|()
-expr_stmt|;
-name|stopBus
-argument_list|()
-expr_stmt|;
-name|testSuspendAndResumeSourceSequence
-argument_list|()
-expr_stmt|;
-block|}
-comment|//@Test
-specifier|public
-name|void
 name|testManagedEndpointsOneway
 parameter_list|()
 throws|throws
@@ -771,6 +750,8 @@ index|[]
 block|{
 name|epId
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|o
@@ -800,6 +781,8 @@ index|[]
 block|{
 name|epId
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|ObjectName
@@ -945,6 +928,8 @@ index|[]
 block|{
 name|sseqId
 block|}
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|o
@@ -1035,6 +1020,8 @@ index|[]
 block|{
 name|dseqId
 block|}
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|o
@@ -1265,6 +1252,8 @@ literal|1L
 block|,
 literal|1L
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|o
@@ -1419,6 +1408,8 @@ literal|3L
 block|,
 literal|3L
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|o
@@ -1549,6 +1540,8 @@ literal|3L
 block|,
 literal|3L
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 comment|// 7 sec retry interval + 5 sec
@@ -1651,6 +1644,8 @@ literal|1L
 block|,
 literal|3L
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|o
@@ -1692,6 +1687,8 @@ literal|1L
 block|,
 literal|3L
 block|}
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|o
@@ -1742,7 +1739,8 @@ name|length
 argument_list|)
 expr_stmt|;
 block|}
-comment|//@Test
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testSuspendAndResumeSourceSequence
@@ -2310,6 +2308,9 @@ parameter_list|,
 name|T
 index|[]
 name|target
+parameter_list|,
+name|boolean
+name|exact
 parameter_list|)
 block|{
 name|assertTrue
@@ -2342,6 +2343,52 @@ index|[]
 operator|)
 name|value
 decl_stmt|;
+if|if
+condition|(
+name|exact
+condition|)
+block|{
+comment|// exact-match
+name|assertEquals
+argument_list|(
+name|desc
+operator|+
+literal|" length"
+argument_list|,
+name|target
+operator|.
+name|length
+argument_list|,
+name|values
+operator|.
+name|length
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+comment|// partial-match (the values must contain the target)
+name|assertTrue
+argument_list|(
+name|desc
+operator|+
+literal|" length"
+argument_list|,
+name|target
+operator|.
+name|length
+operator|<=
+name|values
+operator|.
+name|length
+argument_list|)
+expr_stmt|;
+block|}
+name|int
+name|d
+init|=
+literal|0
+decl_stmt|;
 for|for
 control|(
 name|int
@@ -2359,6 +2406,44 @@ name|i
 operator|++
 control|)
 block|{
+while|while
+condition|(
+operator|!
+name|target
+index|[
+name|i
+index|]
+operator|.
+name|equals
+argument_list|(
+name|values
+index|[
+name|i
+operator|+
+name|d
+index|]
+argument_list|)
+condition|)
+block|{
+if|if
+condition|(
+name|d
+operator|>=
+name|values
+operator|.
+name|length
+operator|-
+name|target
+operator|.
+name|length
+condition|)
+block|{
+break|break;
+block|}
+name|d
+operator|++
+expr_stmt|;
+block|}
 name|assertEquals
 argument_list|(
 name|desc
@@ -2371,6 +2456,8 @@ argument_list|,
 name|values
 index|[
 name|i
+operator|+
+name|d
 index|]
 argument_list|)
 expr_stmt|;
