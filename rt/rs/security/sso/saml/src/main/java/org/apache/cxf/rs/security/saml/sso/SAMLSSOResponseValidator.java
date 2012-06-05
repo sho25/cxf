@@ -632,6 +632,11 @@ operator|.
 name|nodeToString
 argument_list|(
 name|assertionElement
+operator|.
+name|cloneNode
+argument_list|(
+literal|true
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
