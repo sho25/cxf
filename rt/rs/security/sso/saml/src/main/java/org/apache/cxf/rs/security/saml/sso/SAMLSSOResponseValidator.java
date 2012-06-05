@@ -210,6 +210,12 @@ init|=
 literal|true
 decl_stmt|;
 specifier|private
+name|boolean
+name|enforceKnownIssuer
+init|=
+literal|true
+decl_stmt|;
+specifier|private
 name|TokenReplayCache
 argument_list|<
 name|String
@@ -230,6 +236,22 @@ operator|.
 name|enforceAssertionsSigned
 operator|=
 name|enforceAssertionsSigned
+expr_stmt|;
+block|}
+comment|/**      * Enforce that the Issuer of the received Response/Assertion is known. The default is true.      */
+specifier|public
+name|void
+name|setEnforceKnownIssuer
+parameter_list|(
+name|boolean
+name|enforceKnownIssuer
+parameter_list|)
+block|{
+name|this
+operator|.
+name|enforceKnownIssuer
+operator|=
+name|enforceKnownIssuer
 expr_stmt|;
 block|}
 comment|/**      * Validate a SAML 2 Protocol Response      * @param samlResponse      * @param postBinding      * @return a SSOValidatorResponse object      * @throws WSSecurityException      */
@@ -675,6 +697,8 @@ block|}
 comment|// Issuer value must match (be contained in) Issuer IDP
 if|if
 condition|(
+name|enforceKnownIssuer
+operator|&&
 operator|!
 name|issuerIDP
 operator|.
