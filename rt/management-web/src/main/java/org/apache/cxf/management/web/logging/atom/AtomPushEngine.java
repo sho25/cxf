@@ -97,6 +97,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|TimeUnit
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -397,6 +409,31 @@ operator|.
 name|shutdown
 argument_list|()
 expr_stmt|;
+try|try
+block|{
+comment|//wait a little to try and flush the batches
+comment|//it's not critical, but can avoid errors on the
+comment|//console and such which could be confusing
+name|executor
+operator|.
+name|awaitTermination
+argument_list|(
+literal|20
+argument_list|,
+name|TimeUnit
+operator|.
+name|SECONDS
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e
+parameter_list|)
+block|{
+comment|//ignore
+block|}
 block|}
 specifier|private
 name|boolean
