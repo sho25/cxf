@@ -563,7 +563,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItOBOAsymmetricSAML2BearerPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
@@ -819,7 +819,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItOBOAsymmetricSAML2BearerPort"
 argument_list|)
 decl_stmt|;
 comment|//
@@ -1278,7 +1278,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItOBOAsymmetricSAML2BearerPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
@@ -1728,7 +1728,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItOBOAsymmetricSAML2BearerPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
@@ -2171,7 +2171,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItOBOAsymmetricSAML2BearerPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType

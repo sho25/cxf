@@ -916,7 +916,7 @@ argument_list|)
 decl_stmt|;
 name|stsClient
 operator|.
-name|setOnBehalfOf
+name|setActAs
 argument_list|(
 operator|new
 name|WSSUsernameCallbackHandler
@@ -1006,7 +1006,7 @@ argument_list|)
 expr_stmt|;
 name|stsClient
 operator|.
-name|setOnBehalfOf
+name|setActAs
 argument_list|(
 operator|new
 name|WSSUsernameCallbackHandler
@@ -1418,7 +1418,7 @@ argument_list|)
 decl_stmt|;
 name|stsClient
 operator|.
-name|setOnBehalfOf
+name|setActAs
 argument_list|(
 operator|new
 name|WSSUsernameCallbackHandler
@@ -1864,7 +1864,7 @@ argument_list|)
 decl_stmt|;
 name|stsClient
 operator|.
-name|setOnBehalfOf
+name|setActAs
 argument_list|(
 operator|new
 name|WSSUsernameCallbackHandler
@@ -2262,7 +2262,7 @@ argument_list|)
 expr_stmt|;
 name|stsClient
 operator|.
-name|setOnBehalfOf
+name|setActAs
 argument_list|(
 operator|new
 name|WSSUsernameCallbackHandler
