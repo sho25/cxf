@@ -79,17 +79,7 @@ name|String
 name|stringParam0
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"*********  greetMeOneWay: "
-operator|+
-name|stringParam0
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("*********  greetMeOneWay: " + stringParam0);
 block|}
 block|}
 end_class

@@ -73,28 +73,8 @@ name|String
 name|me
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation greetMe"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Message received: "
-operator|+
-name|me
-operator|+
-literal|"\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation greetMe");
+comment|//System.out.println("Message received: " + me + "\n");
 return|return
 literal|"Hello "
 operator|+
@@ -106,17 +86,7 @@ name|String
 name|sayHi
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation sayHi"
-operator|+
-literal|"\n"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation sayHi" + "\n");
 return|return
 literal|"Bonjour"
 return|;
@@ -129,26 +99,8 @@ name|String
 name|me
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Executing operation greetMeOneWay\n"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Hello there "
-operator|+
-name|me
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Executing operation greetMeOneWay\n");
+comment|//System.out.println("Hello there " + me);
 block|}
 block|}
 end_class

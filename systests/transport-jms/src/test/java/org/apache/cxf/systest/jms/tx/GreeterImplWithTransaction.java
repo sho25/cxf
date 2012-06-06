@@ -91,17 +91,7 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Reached here :"
-operator|+
-name|requestType
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Reached here :" + requestType);
 if|if
 condition|(
 literal|"Bad guy"
@@ -122,17 +112,7 @@ literal|false
 argument_list|)
 condition|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Throw exception here :"
-operator|+
-name|requestType
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Throw exception here :" + requestType);
 throw|throw
 operator|new
 name|RuntimeException

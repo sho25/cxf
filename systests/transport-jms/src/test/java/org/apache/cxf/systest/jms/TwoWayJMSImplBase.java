@@ -316,46 +316,10 @@ operator|.
 name|getMessageContext
 argument_list|()
 decl_stmt|;
-name|JMSMessageHeadersType
-name|headers
-init|=
-operator|(
-name|JMSMessageHeadersType
-operator|)
-name|mc
-operator|.
-name|get
-argument_list|(
-name|JMSConstants
-operator|.
-name|JMS_SERVER_REQUEST_HEADERS
-argument_list|)
-decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"get the message headers JMSCorrelationID: "
-operator|+
-name|headers
-operator|.
-name|getJMSCorrelationID
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Reached here :"
-operator|+
-name|me
-argument_list|)
-expr_stmt|;
+comment|//JMSMessageHeadersType headers =
+comment|//    (JMSMessageHeadersType) mc.get(JMSConstants.JMS_SERVER_REQUEST_HEADERS);
+comment|//System.out.println("get the message headers JMSCorrelationID: " + headers.getJMSCorrelationID());
+comment|//System.out.println("Reached here :" + me);
 comment|// set reply header custom property
 name|JMSPropertyType
 name|testProperty
@@ -380,25 +344,8 @@ operator|+
 name|me
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"found property in request headers at index: "
-operator|+
-name|headers
-operator|.
-name|getProperty
-argument_list|()
-operator|.
-name|indexOf
-argument_list|(
-name|testProperty
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("found property in request headers at index: "
+comment|//                   + headers.getProperty().indexOf(testProperty));
 name|JMSMessageHeadersType
 name|responseHeaders
 init|=
@@ -447,17 +394,7 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"*********  greetMeOneWay: "
-operator|+
-name|requestType
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("*********  greetMeOneWay: " + requestType);
 block|}
 specifier|public
 name|TestRpcLitFaultResponse

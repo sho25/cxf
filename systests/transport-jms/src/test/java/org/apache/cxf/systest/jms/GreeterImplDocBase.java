@@ -67,15 +67,7 @@ name|String
 name|sayHi
 parameter_list|()
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Call sayHi here "
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Call sayHi here ");
 return|return
 literal|"Bonjour"
 return|;
@@ -88,17 +80,7 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Reached here :"
-operator|+
-name|requestType
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Reached here :" + requestType);
 return|return
 literal|"Hello "
 operator|+
@@ -113,17 +95,7 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"*********  greetMeOneWay: "
-operator|+
-name|requestType
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("*********  greetMeOneWay: " + requestType);
 block|}
 specifier|public
 name|void
