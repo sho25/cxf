@@ -347,6 +347,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|transport
+operator|.
+name|http
+operator|.
+name|HTTPException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|ws
 operator|.
 name|addressing
@@ -919,15 +935,52 @@ comment|// indicated by a thrown IOException("Not found"),
 comment|// in which case we should revert back to the original
 comment|// java.net.ConnectionException on the unavailable
 comment|// replica A
-comment|//
-if|if
-condition|(
-operator|!
-operator|(
+name|boolean
+name|isOrig
+init|=
 name|cause
 operator|instanceof
 name|ConnectException
-operator|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|isOrig
+condition|)
+block|{
+comment|//depending on the order of the tests,
+comment|//the port COULD have been created, but no service deployed
+name|isOrig
+operator|=
+name|cause
+operator|instanceof
+name|HTTPException
+operator|&&
+name|cause
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"SoapContext/ReplicatedPortA"
+argument_list|)
+operator|&&
+name|cause
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"404:"
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+operator|!
+name|isOrig
 condition|)
 block|{
 name|cause
@@ -942,9 +995,7 @@ literal|"should revert to original exception when no failover: "
 operator|+
 name|cause
 argument_list|,
-name|cause
-operator|instanceof
-name|ConnectException
+name|isOrig
 argument_list|)
 expr_stmt|;
 comment|// similarly the current endpoint referenced by the client
