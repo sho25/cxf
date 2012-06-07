@@ -217,15 +217,9 @@ block|{
 operator|new
 name|Server
 argument_list|()
-expr_stmt|;
-operator|new
-name|SpringBusFactory
-argument_list|()
 operator|.
-name|createBus
-argument_list|(
-name|configFileName
-argument_list|)
+name|run
+argument_list|()
 expr_stmt|;
 name|System
 operator|.
