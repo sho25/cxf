@@ -1285,6 +1285,13 @@ name|isSignRequest
 argument_list|()
 condition|)
 block|{
+name|authnRequest
+operator|.
+name|setDestination
+argument_list|(
+name|idpServiceAddress
+argument_list|)
+expr_stmt|;
 name|signAuthnRequest
 argument_list|(
 name|authnRequest
