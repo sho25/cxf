@@ -1785,6 +1785,12 @@ literal|300
 decl_stmt|;
 specifier|protected
 name|boolean
+name|sendRenewing
+init|=
+literal|true
+decl_stmt|;
+specifier|protected
+name|boolean
 name|allowRenewing
 init|=
 literal|true
@@ -2032,6 +2038,21 @@ operator|.
 name|enableLifetime
 operator|=
 name|enableLifetime
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setSendRenewing
+parameter_list|(
+name|boolean
+name|sendRenewing
+parameter_list|)
+block|{
+name|this
+operator|.
+name|sendRenewing
+operator|=
+name|sendRenewing
 expr_stmt|;
 block|}
 comment|/**      * Sets the WS-P policy that is applied to communications between this client and the remote server      * if no value is supplied for {@link #setWsdlLocation(String)}.      *<p/>      * Accepts {@link Policy} or {@link Element} as input.      *      * @param newPolicy the policy object      *      * @throws IllegalArgumentException if {@code newPolicy} is not one of the supported types.      */
@@ -4483,6 +4504,11 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Write out renewal semantics
+if|if
+condition|(
+name|sendRenewing
+condition|)
+block|{
 name|writer
 operator|.
 name|writeStartElement
@@ -4536,6 +4562,7 @@ operator|.
 name|writeEndElement
 argument_list|()
 expr_stmt|;
+block|}
 name|writer
 operator|.
 name|writeEndElement
