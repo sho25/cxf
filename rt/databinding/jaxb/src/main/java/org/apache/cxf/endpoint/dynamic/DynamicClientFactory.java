@@ -3739,7 +3739,7 @@ name|javaCompiler
 operator|.
 name|setTarget
 argument_list|(
-literal|"1.5"
+literal|"1.6"
 argument_list|)
 expr_stmt|;
 return|return
