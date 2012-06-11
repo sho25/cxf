@@ -3771,16 +3771,6 @@ expr_stmt|;
 block|}
 comment|/*             try {                 //make sure the input stream is also closed in this                  //case so that any resources it may have is cleaned up                 Message m = outMessage.getExchange().getInMessage();                 if (m != null) {                     InputStream ins = m.getContent(InputStream.class);                     if (ins != null) {                         ins.close();                     }                 }             } catch (IOException ex) {                 //ignore             }             */
 block|}
-specifier|public
-name|void
-name|flush
-parameter_list|()
-throws|throws
-name|IOException
-block|{
-comment|//ignore until we close
-comment|// or we'll force chunking and cause all kinds of network packets
-block|}
 block|}
 specifier|protected
 name|boolean

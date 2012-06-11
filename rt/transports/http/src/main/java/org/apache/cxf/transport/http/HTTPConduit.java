@@ -5263,26 +5263,6 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-specifier|public
-name|void
-name|flush
-parameter_list|()
-throws|throws
-name|IOException
-block|{
-if|if
-condition|(
-operator|!
-name|chunking
-condition|)
-block|{
-name|super
-operator|.
-name|flush
-argument_list|()
-expr_stmt|;
-block|}
-block|}
 comment|/**          * Perform any actions required on stream closure (handle response etc.)          */
 specifier|public
 name|void
