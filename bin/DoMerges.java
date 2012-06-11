@@ -294,6 +294,17 @@ operator|.
 name|iterator
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|it
+operator|.
+name|hasNext
+argument_list|()
+condition|)
+block|{
+return|return;
+block|}
 name|Range
 name|last
 init|=
