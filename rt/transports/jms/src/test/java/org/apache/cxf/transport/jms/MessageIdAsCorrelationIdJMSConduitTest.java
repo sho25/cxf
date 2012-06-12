@@ -77,7 +77,9 @@ name|apache
 operator|.
 name|activemq
 operator|.
-name|ActiveMQConnectionFactory
+name|pool
+operator|.
+name|PooledConnectionFactory
 import|;
 end_import
 
@@ -285,6 +287,8 @@ parameter_list|(
 name|String
 name|replyDestination
 parameter_list|)
+throws|throws
+name|Exception
 block|{
 name|BusFactory
 name|bf
@@ -326,7 +330,7 @@ decl_stmt|;
 name|connectionFactory
 operator|=
 operator|new
-name|ActiveMQConnectionFactory
+name|PooledConnectionFactory
 argument_list|(
 name|BROKER_URI
 argument_list|)
@@ -442,6 +446,13 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -449,6 +460,8 @@ specifier|public
 name|void
 name|testSendReceiveWithTempReplyQueue
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|sendAndReceive
 argument_list|(
@@ -462,6 +475,8 @@ specifier|public
 name|void
 name|testSendReceive
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|sendAndReceive
 argument_list|(
