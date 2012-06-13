@@ -18,6 +18,22 @@ argument_list|(
 name|namespace
 operator|=
 literal|"http://superbooks"
+argument_list|,
+name|xmlns
+operator|=
+block|{
+annotation|@
+name|XmlNs
+argument_list|(
+name|prefix
+operator|=
+literal|"os"
+argument_list|,
+name|namespaceURI
+operator|=
+literal|"http://superbooks"
+argument_list|)
+block|}
 argument_list|)
 end_annotation
 
@@ -36,6 +52,20 @@ operator|.
 name|jaxb
 package|;
 end_package
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|annotation
+operator|.
+name|XmlNs
+import|;
+end_import
 
 end_unit
 
