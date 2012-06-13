@@ -620,6 +620,8 @@ argument_list|,
 literal|"thebook2"
 argument_list|,
 literal|"thechapter"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|List
@@ -1551,6 +1553,8 @@ argument_list|,
 literal|"book2"
 argument_list|,
 literal|"chapter"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|List
@@ -1714,6 +1718,8 @@ argument_list|,
 literal|"thebook2"
 argument_list|,
 literal|"thechapter"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|List
@@ -2248,6 +2254,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|"thechapter"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -2450,7 +2458,6 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-comment|//System.out.println(wadl);
 name|Document
 name|doc
 init|=
@@ -2477,6 +2484,8 @@ argument_list|,
 literal|"thebook2"
 argument_list|,
 literal|"thechapter"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|List
@@ -2548,6 +2557,9 @@ name|book2El
 parameter_list|,
 name|String
 name|chapterEl
+parameter_list|,
+name|boolean
+name|customPrefix
 parameter_list|)
 block|{
 name|List
@@ -2675,6 +2687,16 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|String
+name|prefix
+init|=
+operator|!
+name|customPrefix
+condition|?
+literal|"tns"
+else|:
+literal|"os"
+decl_stmt|;
 name|assertTrue
 argument_list|(
 name|checkElement
@@ -2683,7 +2705,9 @@ name|elementEls
 argument_list|,
 name|bookEl
 argument_list|,
-literal|"tns:book"
+name|prefix
+operator|+
+literal|":book"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2702,7 +2726,9 @@ name|elementEls
 argument_list|,
 name|book2El
 argument_list|,
-literal|"tns:book2"
+name|prefix
+operator|+
+literal|":book2"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2715,7 +2741,9 @@ name|elementEls
 argument_list|,
 name|chapterEl
 argument_list|,
-literal|"tns:chapter"
+name|prefix
+operator|+
+literal|":chapter"
 argument_list|)
 argument_list|)
 expr_stmt|;
