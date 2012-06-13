@@ -1847,7 +1847,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      * Construct a token containing the secret to return to the client. If encryptIssuedToken is set      * then the token is wrapped in an EncryptedKey DOM element, otherwise it is returned in a       * BinarySecretType JAXBElement.      */
+comment|/**      * Construct a token containing the secret to return to the client. The secret is returned in a       * BinarySecretType JAXBElement.      */
 specifier|private
 name|Object
 name|constructSecretToken
@@ -1865,24 +1865,7 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
-if|if
-condition|(
-name|encryptIssuedToken
-condition|)
-block|{
-return|return
-name|encryptSecret
-argument_list|(
-name|secret
-argument_list|,
-name|encryptionProperties
-argument_list|,
-name|keyRequirements
-argument_list|)
-return|;
-block|}
-else|else
-block|{
+comment|/*if (encryptIssuedToken) {             return encryptSecret(secret, encryptionProperties, keyRequirements);         } else {         */
 name|BinarySecretType
 name|binarySecretType
 init|=
@@ -1930,7 +1913,6 @@ decl_stmt|;
 return|return
 name|binarySecret
 return|;
-block|}
 block|}
 block|}
 end_class
