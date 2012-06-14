@@ -5901,7 +5901,7 @@ name|param
 argument_list|)
 condition|)
 block|{
-comment|//In interecptors not called when checked exception thrown from server
+comment|//In interceptors not called when checked exception thrown from server
 name|assertTrue
 argument_list|(
 literal|"In Interceptor not invoked"
