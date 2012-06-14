@@ -794,7 +794,9 @@ specifier|final
 name|String
 name|CREATE_DEST_SEQUENCE_STMT_STR
 init|=
-literal|"INSERT INTO CXF_RM_DEST_SEQUENCES (SEQ_ID, ACKS_TO, ENDPOINT_ID, PROTOCOL_VERSION) "
+literal|"INSERT INTO CXF_RM_DEST_SEQUENCES "
+operator|+
+literal|"(SEQ_ID, ACKS_TO, ENDPOINT_ID, PROTOCOL_VERSION) "
 operator|+
 literal|"VALUES(?, ?, ?, ?)"
 decl_stmt|;
@@ -804,7 +806,11 @@ specifier|final
 name|String
 name|CREATE_SRC_SEQUENCE_STMT_STR
 init|=
-literal|"INSERT INTO CXF_RM_SRC_SEQUENCES VALUES(?, 1, '0', ?, ?, ?, ?)"
+literal|"INSERT INTO CXF_RM_SRC_SEQUENCES "
+operator|+
+literal|"(SEQ_ID, CUR_MSG_NO, LAST_MSG, EXPIRY, OFFERING_SEQ_ID, ENDPOINT_ID, PROTOCOL_VERSION) "
+operator|+
+literal|"VALUES(?, 1, '0', ?, ?, ?, ?)"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -844,7 +850,7 @@ specifier|final
 name|String
 name|CREATE_MESSAGE_STMT_STR
 init|=
-literal|"INSERT INTO {0} VALUES(?, ?, ?, ?)"
+literal|"INSERT INTO {0} (SEQ_ID, MSG_NO, SEND_TO, CONTENT) VALUES(?, ?, ?, ?)"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -5268,7 +5274,8 @@ return|return
 name|connection
 return|;
 block|}
-specifier|private
+specifier|protected
+specifier|synchronized
 name|void
 name|verifyConnection
 parameter_list|()
@@ -5337,7 +5344,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 specifier|synchronized
 name|void
 name|updateConnectionState
