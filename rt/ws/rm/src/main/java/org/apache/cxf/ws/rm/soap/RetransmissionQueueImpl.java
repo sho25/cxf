@@ -3398,6 +3398,23 @@ operator|.
 name|releaseTempFileHold
 argument_list|()
 expr_stmt|;
+comment|// call close to dispose
+try|try
+block|{
+name|saved
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|e
+parameter_list|)
+block|{
+comment|// ignore
+block|}
 block|}
 block|}
 comment|/**          * @return associated message context          */

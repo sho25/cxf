@@ -273,6 +273,11 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+name|saved
+operator|.
+name|lockOutputStream
+argument_list|()
+expr_stmt|;
 name|message
 operator|.
 name|setContent
