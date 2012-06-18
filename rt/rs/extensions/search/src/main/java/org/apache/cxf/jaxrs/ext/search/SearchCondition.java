@@ -118,20 +118,6 @@ argument_list|>
 name|visitor
 parameter_list|)
 function_decl|;
-comment|/**      *       * This method is now deprecated and will be removed soon.      *       * Utility method for converting this condition into an SQL expression      * @param table table name      * @param columns column names, a wildcard as in 'SELECT * from table' will be used      *                if names are not provided       * @return SQL expression      */
-annotation|@
-name|Deprecated
-name|String
-name|toSQL
-parameter_list|(
-name|String
-name|table
-parameter_list|,
-name|String
-modifier|...
-name|columns
-parameter_list|)
-function_decl|;
 block|}
 end_interface
 

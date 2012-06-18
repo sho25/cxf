@@ -217,7 +217,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -304,7 +304,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -374,7 +374,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -444,7 +444,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -539,7 +539,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -617,7 +617,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -695,7 +695,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -760,7 +760,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
@@ -819,7 +819,12 @@ argument_list|)
 argument_list|,
 literal|"table"
 argument_list|,
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
 literal|"NAMES"
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|filter
@@ -834,7 +839,7 @@ name|sql
 init|=
 name|visitor
 operator|.
-name|getResult
+name|getQuery
 argument_list|()
 decl_stmt|;
 name|assertTrue
