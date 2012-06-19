@@ -22,7 +22,7 @@ end_package
 begin_class
 specifier|public
 class|class
-name|FiqlParseException
+name|SearchParseException
 extends|extends
 name|Exception
 block|{
@@ -35,7 +35,7 @@ init|=
 literal|1182999957472822704L
 decl_stmt|;
 specifier|public
-name|FiqlParseException
+name|SearchParseException
 parameter_list|()
 block|{
 name|super
@@ -43,7 +43,7 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|public
-name|FiqlParseException
+name|SearchParseException
 parameter_list|(
 name|String
 name|arg0
@@ -61,7 +61,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|FiqlParseException
+name|SearchParseException
 parameter_list|(
 name|String
 name|arg0
@@ -74,7 +74,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|FiqlParseException
+name|SearchParseException
 parameter_list|(
 name|Throwable
 name|arg0

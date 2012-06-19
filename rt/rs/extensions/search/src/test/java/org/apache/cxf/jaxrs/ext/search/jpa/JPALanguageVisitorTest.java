@@ -35,7 +35,7 @@ name|ext
 operator|.
 name|search
 operator|.
-name|FiqlParser
+name|SearchCondition
 import|;
 end_import
 
@@ -53,7 +53,9 @@ name|ext
 operator|.
 name|search
 operator|.
-name|SearchCondition
+name|fiql
+operator|.
+name|FiqlParser
 import|;
 end_import
 

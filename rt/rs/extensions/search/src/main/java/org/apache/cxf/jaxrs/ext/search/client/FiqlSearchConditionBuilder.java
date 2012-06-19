@@ -87,7 +87,7 @@ name|ext
 operator|.
 name|search
 operator|.
-name|FiqlParser
+name|SearchUtils
 import|;
 end_import
 
@@ -105,7 +105,9 @@ name|ext
 operator|.
 name|search
 operator|.
-name|SearchUtils
+name|fiql
+operator|.
+name|FiqlParser
 import|;
 end_import
 

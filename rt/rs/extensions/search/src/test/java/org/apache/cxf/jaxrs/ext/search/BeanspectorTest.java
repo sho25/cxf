@@ -83,7 +83,7 @@ name|void
 name|testSimpleBean
 parameter_list|()
 throws|throws
-name|FiqlParseException
+name|SearchParseException
 block|{
 name|Beanspector
 argument_list|<
@@ -199,7 +199,7 @@ name|void
 name|testMismatchedAccessorTypes
 parameter_list|()
 throws|throws
-name|FiqlParseException
+name|SearchParseException
 block|{
 operator|new
 name|Beanspector
