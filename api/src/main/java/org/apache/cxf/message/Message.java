@@ -79,6 +79,12 @@ name|TRANSPORT
 init|=
 literal|"org.apache.cxf.transport"
 decl_stmt|;
+comment|/*      * Boolean property which can be used to check that the current request      * is part of the SOAP (JAX-WS) or non-SOAP/REST (JAX-RS) execution context.      */
+name|String
+name|REST_MESSAGE
+init|=
+literal|"org.apache.cxf.rest.message"
+decl_stmt|;
 comment|/**      * Boolean property specifying if the message is a request message.      */
 name|String
 name|REQUESTOR_ROLE
