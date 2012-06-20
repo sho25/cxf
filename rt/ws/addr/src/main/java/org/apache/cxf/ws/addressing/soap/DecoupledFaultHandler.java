@@ -204,7 +204,7 @@ end_comment
 begin_class
 specifier|public
 class|class
-name|OneWayDecoupledFaultHandler
+name|DecoupledFaultHandler
 extends|extends
 name|AbstractSoapInterceptor
 block|{
@@ -217,7 +217,7 @@ init|=
 literal|"http://schemas.xmlsoap.org/wsdl/soap/envelope/fault"
 decl_stmt|;
 specifier|public
-name|OneWayDecoupledFaultHandler
+name|DecoupledFaultHandler
 parameter_list|()
 block|{
 name|super
@@ -261,14 +261,6 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|message
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|isOneWay
-argument_list|()
-operator|&&
 operator|!
 name|ContextUtils
 operator|.

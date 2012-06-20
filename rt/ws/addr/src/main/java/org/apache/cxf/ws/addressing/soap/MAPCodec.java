@@ -688,9 +688,9 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|ONE_WAY_DECOUPLED_FAULT_SUPPORT
+name|DECOUPLED_FAULT_SUPPORT
 init|=
-literal|"org.apache.cxf.ws.addressing.oneway.decoupled_fault_support"
+literal|"org.apache.cxf.ws.addressing.decoupled_fault_support"
 decl_stmt|;
 comment|/**      * REVISIT: map usage that the *same* interceptor instance       * is used in all chains.      */
 specifier|protected
@@ -948,14 +948,14 @@ name|getContextualBoolean
 argument_list|(
 name|message
 argument_list|,
-name|ONE_WAY_DECOUPLED_FAULT_SUPPORT
+name|DECOUPLED_FAULT_SUPPORT
 argument_list|,
 literal|false
 argument_list|)
 condition|)
 block|{
 operator|new
-name|OneWayDecoupledFaultHandler
+name|DecoupledFaultHandler
 argument_list|()
 operator|.
 name|handleFault

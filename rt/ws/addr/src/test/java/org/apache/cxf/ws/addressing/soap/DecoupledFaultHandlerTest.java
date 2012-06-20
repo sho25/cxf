@@ -232,7 +232,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|OneWayDecoupledFaultHandlerTest
+name|DecoupledFaultHandlerTest
 extends|extends
 name|Assert
 block|{
@@ -243,11 +243,11 @@ name|void
 name|testOnewayFault
 parameter_list|()
 block|{
-name|OneWayDecoupledFaultHandler
+name|DecoupledFaultHandler
 name|handler
 init|=
 operator|new
-name|OneWayDecoupledFaultHandler
+name|DecoupledFaultHandler
 argument_list|()
 block|{
 specifier|protected
