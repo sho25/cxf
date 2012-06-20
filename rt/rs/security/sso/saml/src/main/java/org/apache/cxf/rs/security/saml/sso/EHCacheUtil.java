@@ -125,10 +125,12 @@ literal|0
 argument_list|,
 name|key
 operator|.
-name|indexOf
+name|lastIndexOf
 argument_list|(
 literal|'-'
 argument_list|)
+operator|-
+literal|1
 argument_list|)
 argument_list|)
 expr_stmt|;

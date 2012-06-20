@@ -207,7 +207,7 @@ specifier|final
 name|String
 name|CACHE_KEY
 init|=
-literal|"cxf-samlp-replay-cache"
+literal|"cxf.samlp.replay.cache"
 decl_stmt|;
 specifier|private
 name|Ehcache

@@ -218,7 +218,7 @@ specifier|final
 name|String
 name|REQUEST_CACHE_KEY
 init|=
-literal|"cxf-samlp-request-state-cache"
+literal|"cxf.samlp.request.state.cache"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -226,7 +226,7 @@ specifier|final
 name|String
 name|RESPONSE_CACHE_KEY
 init|=
-literal|"cxf-samlp-response-state-cache"
+literal|"cxf.samlp.response.state.cache"
 decl_stmt|;
 specifier|private
 name|Ehcache
