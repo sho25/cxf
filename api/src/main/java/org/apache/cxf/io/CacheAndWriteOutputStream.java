@@ -59,6 +59,21 @@ block|{
 name|super
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|stream
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Stream may not be null"
+argument_list|)
+throw|;
+block|}
 name|flowThroughStream
 operator|=
 name|stream
