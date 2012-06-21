@@ -229,6 +229,22 @@ name|ws
 operator|.
 name|security
 operator|.
+name|SecurityConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|policy
 operator|.
 name|SPConstants
@@ -2378,6 +2394,37 @@ argument_list|,
 literal|false
 argument_list|,
 name|crypto
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+operator|!
+name|encr
+operator|.
+name|isCertSet
+argument_list|()
+operator|&&
+name|crypto
+operator|==
+literal|null
+condition|)
+block|{
+name|policyNotAsserted
+argument_list|(
+name|recToken
+argument_list|,
+literal|"Missing security configuration. "
+operator|+
+literal|"Make sure jaxws:client element is configured "
+operator|+
+literal|"with a "
+operator|+
+name|SecurityConstants
+operator|.
+name|ENCRYPT_PROPERTIES
+operator|+
+literal|" value."
 argument_list|)
 expr_stmt|;
 block|}

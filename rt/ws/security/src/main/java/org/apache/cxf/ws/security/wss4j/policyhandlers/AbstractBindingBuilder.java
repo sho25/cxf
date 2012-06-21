@@ -9757,7 +9757,7 @@ name|policyNotAsserted
 argument_list|(
 name|token
 argument_list|,
-literal|"No "
+literal|"A "
 operator|+
 operator|(
 name|sign
@@ -9767,7 +9767,7 @@ else|:
 literal|"encryption"
 operator|)
 operator|+
-literal|" username found."
+literal|" username needs to be declared."
 argument_list|)
 expr_stmt|;
 block|}
