@@ -947,7 +947,9 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|setProperty
+name|msg
+operator|.
+name|setContextualProperty
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -979,7 +981,9 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|setProperty
+name|msg
+operator|.
+name|setContextualProperty
 argument_list|(
 name|WSHandlerConstants
 operator|.
