@@ -831,7 +831,7 @@ block|{
 comment|//the executor queue is full, so run the task in the caller thread
 name|chain
 operator|.
-name|resume
+name|unpause
 argument_list|()
 expr_stmt|;
 block|}
