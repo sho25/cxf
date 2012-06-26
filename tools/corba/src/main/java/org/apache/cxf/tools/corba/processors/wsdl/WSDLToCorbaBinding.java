@@ -2278,6 +2278,11 @@ operator|.
 name|readLine
 argument_list|()
 expr_stmt|;
+name|bufferedReader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

@@ -435,6 +435,11 @@ literal|"\n"
 argument_list|)
 expr_stmt|;
 block|}
+name|bufrd
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|String
 name|scriptStr
 init|=

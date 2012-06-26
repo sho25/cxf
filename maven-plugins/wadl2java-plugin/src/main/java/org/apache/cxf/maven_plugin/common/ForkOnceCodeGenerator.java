@@ -165,6 +165,11 @@ operator|-
 literal|1
 condition|)
 block|{
+name|reader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 return|return;
 block|}
 name|String
@@ -224,6 +229,11 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
+name|reader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 end_class

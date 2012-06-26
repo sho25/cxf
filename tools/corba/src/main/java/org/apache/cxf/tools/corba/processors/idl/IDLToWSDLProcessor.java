@@ -3204,6 +3204,11 @@ operator|.
 name|readLine
 argument_list|()
 expr_stmt|;
+name|bufferedReader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -4136,6 +4141,11 @@ operator|-
 literal|1
 condition|)
 block|{
+name|reader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 throw|throw
 operator|new
 name|RuntimeException
@@ -4191,6 +4201,11 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
+name|reader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

@@ -1612,6 +1612,11 @@ argument_list|(
 name|buffer
 argument_list|)
 decl_stmt|;
+name|filebuffer
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"wsdl location should be url style in build.xml"
@@ -2838,6 +2843,11 @@ name|buffer
 argument_list|)
 expr_stmt|;
 block|}
+name|fin
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Service QName in client is not correct"

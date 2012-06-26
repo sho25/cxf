@@ -429,6 +429,11 @@ block|}
 try|try
 block|{
 comment|// get a parameter reader
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
 name|ParamReader
 name|pr
 init|=

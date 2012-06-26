@@ -536,6 +536,11 @@ argument_list|(
 name|bytes
 argument_list|)
 expr_stmt|;
+name|dis
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|ByteArrayInputStream
 name|bin
 init|=

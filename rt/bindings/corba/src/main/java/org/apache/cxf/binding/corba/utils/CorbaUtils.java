@@ -3873,6 +3873,11 @@ operator|==
 literal|null
 condition|)
 block|{
+name|reader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 throw|throw
 operator|new
 name|RuntimeException

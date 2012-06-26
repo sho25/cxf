@@ -139,6 +139,11 @@ argument_list|,
 name|result
 argument_list|)
 expr_stmt|;
+name|cos
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test

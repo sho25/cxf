@@ -242,6 +242,11 @@ operator|+
 name|readLen
 expr_stmt|;
 block|}
+name|fileReader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|String
 name|serviceString
 init|=
@@ -433,6 +438,11 @@ operator|+
 name|readLen
 expr_stmt|;
 block|}
+name|fileReader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|String
 name|serviceString
 init|=
