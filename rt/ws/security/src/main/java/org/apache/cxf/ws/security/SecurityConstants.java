@@ -479,6 +479,15 @@ name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 init|=
 literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
 decl_stmt|;
+comment|/**      * This configuration tag is a comma separated String of regular expressions which      * will be applied to the subject DN of the certificate used for signature      * validation, after trust verification of the certificate chain associated with the       * certificate. These constraints are not used when the certificate is contained in      * the keystore (direct trust).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SUBJECT_CERT_CONSTRAINTS
+init|=
+literal|"ws-security.subject.cert.constraints"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -595,6 +604,8 @@ block|,
 name|SAML_ROLE_ATTRIBUTENAME
 block|,
 name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
+block|,
+name|SUBJECT_CERT_CONSTRAINTS
 block|}
 argument_list|)
 argument_list|)
