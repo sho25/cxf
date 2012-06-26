@@ -1268,6 +1268,9 @@ argument_list|,
 literal|true
 argument_list|)
 operator|.
+name|getAllTypes
+argument_list|()
+operator|.
 name|keySet
 argument_list|()
 argument_list|)

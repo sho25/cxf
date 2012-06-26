@@ -1798,6 +1798,9 @@ name|cris
 argument_list|,
 literal|false
 argument_list|)
+operator|.
+name|getAllTypes
+argument_list|()
 decl_stmt|;
 name|Map
 argument_list|<
