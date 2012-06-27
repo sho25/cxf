@@ -91,6 +91,12 @@ parameter_list|(
 name|Object
 name|obj
 parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|adapterClass
+parameter_list|,
 name|Annotation
 index|[]
 name|anns
@@ -103,10 +109,7 @@ name|obj
 argument_list|,
 name|getAdapter
 argument_list|(
-name|obj
-operator|.
-name|getClass
-argument_list|()
+name|adapterClass
 argument_list|,
 name|anns
 argument_list|)
