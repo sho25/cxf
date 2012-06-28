@@ -244,7 +244,7 @@ specifier|final
 name|String
 name|TEST_DB_NAME
 init|=
-literal|"rmdb2"
+literal|"rmdbu"
 decl_stmt|;
 annotation|@
 name|BeforeClass

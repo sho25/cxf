@@ -168,7 +168,7 @@ specifier|final
 name|String
 name|TEST_DB_NAME
 init|=
-literal|"rmdb3"
+literal|"rmdbts"
 decl_stmt|;
 specifier|private
 specifier|static
