@@ -3848,6 +3848,11 @@ operator|.
 name|HTTP_MOVED_TEMP
 case|:
 case|case
+name|HttpURLConnection
+operator|.
+name|HTTP_SEE_OTHER
+case|:
+case|case
 literal|307
 case|:
 name|connection
@@ -7081,6 +7086,12 @@ operator|.
 name|HTTP_MOVED_TEMP
 case|:
 comment|// 302
+case|case
+name|HttpURLConnection
+operator|.
+name|HTTP_SEE_OTHER
+case|:
+comment|// 303
 case|case
 literal|307
 case|:
