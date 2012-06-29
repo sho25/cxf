@@ -218,11 +218,6 @@ argument_list|)
 return|;
 block|}
 comment|/**      * @param connection the given HttpURLConnection      * @return an input stream containing the response content if non-empty      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"resource"
-argument_list|)
 specifier|private
 specifier|static
 name|InputStream

@@ -353,11 +353,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"resource"
-argument_list|)
 specifier|public
 name|void
 name|handleMessage
