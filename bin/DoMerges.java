@@ -2383,6 +2383,8 @@ literal|"git"
 block|,
 literal|"diff"
 block|,
+literal|"-R"
+block|,
 name|id
 operator|+
 literal|"^"
