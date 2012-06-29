@@ -1032,11 +1032,6 @@ comment|//suppress the unused get method warning in eclipse.   The class is priv
 comment|//so nothing really calls the "get" method, but this is needed for the
 comment|//test case
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
-annotation|@
 name|GET
 specifier|public
 name|String

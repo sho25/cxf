@@ -431,6 +431,11 @@ name|getClassPath
 argument_list|()
 argument_list|)
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
 name|URLClassLoader
 name|classLoader
 init|=
@@ -524,6 +529,11 @@ operator|instanceof
 name|URLClassLoader
 condition|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
 name|URLClassLoader
 name|urlloader
 init|=

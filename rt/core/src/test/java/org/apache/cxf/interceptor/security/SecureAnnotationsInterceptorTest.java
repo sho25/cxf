@@ -567,11 +567,6 @@ class|class
 name|TestService
 block|{
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
-annotation|@
 name|SecureRolesAllowed
 argument_list|(
 literal|"testRole"
@@ -587,11 +582,6 @@ specifier|static
 class|class
 name|TestService2
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
 annotation|@
 name|SecureRolesAllowed
 argument_list|(

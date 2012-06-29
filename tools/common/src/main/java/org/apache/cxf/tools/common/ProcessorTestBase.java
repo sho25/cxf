@@ -462,6 +462,11 @@ operator|instanceof
 name|URLClassLoader
 condition|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
 name|URLClassLoader
 name|urlLoader
 init|=
@@ -701,6 +706,11 @@ expr_stmt|;
 block|}
 block|}
 block|}
+name|jar
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 block|}

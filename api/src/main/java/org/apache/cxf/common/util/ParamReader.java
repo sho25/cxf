@@ -439,6 +439,8 @@ name|c
 argument_list|)
 decl_stmt|;
 comment|// get the parameter names
+try|try
+block|{
 return|return
 name|pr
 operator|.
@@ -447,6 +449,15 @@ argument_list|(
 name|method
 argument_list|)
 return|;
+block|}
+finally|finally
+block|{
+name|pr
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(

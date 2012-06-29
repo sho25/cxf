@@ -3953,6 +3953,11 @@ expr_stmt|;
 block|}
 block|}
 block|}
+name|jar
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 specifier|static
 name|void
