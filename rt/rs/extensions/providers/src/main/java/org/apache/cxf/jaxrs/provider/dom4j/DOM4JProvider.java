@@ -206,6 +206,8 @@ argument_list|(
 block|{
 literal|"application/xml"
 block|,
+literal|"text/xml"
+block|,
 literal|"application/json"
 block|}
 argument_list|)
@@ -220,6 +222,8 @@ name|Consumes
 argument_list|(
 block|{
 literal|"application/xml"
+block|,
+literal|"text/xml"
 block|,
 literal|"application/json"
 block|}
