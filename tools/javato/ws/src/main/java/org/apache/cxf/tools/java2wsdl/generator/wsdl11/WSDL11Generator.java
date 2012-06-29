@@ -1054,6 +1054,14 @@ argument_list|)
 expr_stmt|;
 name|generator
 operator|.
+name|setToolContext
+argument_list|(
+name|getToolContext
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|generator
+operator|.
 name|generate
 argument_list|(
 name|outputdir

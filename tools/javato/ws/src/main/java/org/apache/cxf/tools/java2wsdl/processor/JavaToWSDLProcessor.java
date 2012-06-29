@@ -1124,6 +1124,13 @@ control|)
 block|{
 name|generator
 operator|.
+name|setToolContext
+argument_list|(
+name|context
+argument_list|)
+expr_stmt|;
+name|generator
+operator|.
 name|setServiceModel
 argument_list|(
 name|service

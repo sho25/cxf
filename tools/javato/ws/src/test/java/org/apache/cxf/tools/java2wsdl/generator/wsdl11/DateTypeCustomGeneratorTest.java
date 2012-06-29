@@ -240,6 +240,13 @@ argument_list|(
 name|env
 argument_list|)
 expr_stmt|;
+name|gen
+operator|.
+name|setToolContext
+argument_list|(
+name|env
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|After

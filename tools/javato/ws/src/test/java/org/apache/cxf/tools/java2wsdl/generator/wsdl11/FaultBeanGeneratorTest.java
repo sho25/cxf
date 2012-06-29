@@ -295,6 +295,13 @@ argument_list|()
 decl_stmt|;
 name|generator
 operator|.
+name|setToolContext
+argument_list|(
+name|env
+argument_list|)
+expr_stmt|;
+name|generator
+operator|.
 name|setServiceModel
 argument_list|(
 name|getServiceInfo
@@ -416,6 +423,13 @@ name|setServiceModel
 argument_list|(
 name|getServiceInfo
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|generator
+operator|.
+name|setToolContext
+argument_list|(
+name|env
 argument_list|)
 expr_stmt|;
 name|generator

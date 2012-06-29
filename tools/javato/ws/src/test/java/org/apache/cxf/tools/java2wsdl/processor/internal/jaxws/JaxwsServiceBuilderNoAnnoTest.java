@@ -212,6 +212,13 @@ name|getBus
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|generator
+operator|.
+name|setToolContext
+argument_list|(
+name|env
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
