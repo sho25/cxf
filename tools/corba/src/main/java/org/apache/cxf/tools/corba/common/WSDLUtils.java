@@ -335,6 +335,8 @@ operator|new
 name|FileWriterUtil
 argument_list|(
 name|outputdir
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|Writer

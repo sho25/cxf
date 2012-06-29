@@ -2402,7 +2402,9 @@ name|toString
 argument_list|()
 decl_stmt|;
 return|return
+operator|new
 name|FileWriterUtil
+argument_list|()
 operator|.
 name|getWriter
 argument_list|(
@@ -2427,6 +2429,8 @@ operator|new
 name|FileWriterUtil
 argument_list|(
 name|outputDirectory
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 return|return
@@ -2479,7 +2483,9 @@ name|toString
 argument_list|()
 decl_stmt|;
 return|return
+operator|new
 name|FileWriterUtil
+argument_list|()
 operator|.
 name|getWriter
 argument_list|(
@@ -2492,11 +2498,15 @@ block|}
 else|else
 block|{
 return|return
+operator|new
 name|FileWriterUtil
+argument_list|()
 operator|.
 name|getWriter
 argument_list|(
 name|file
+argument_list|,
+literal|"UTF-8"
 argument_list|)
 return|;
 block|}

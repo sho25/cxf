@@ -751,6 +751,8 @@ argument_list|(
 name|this
 operator|.
 name|baseDir
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 try|try

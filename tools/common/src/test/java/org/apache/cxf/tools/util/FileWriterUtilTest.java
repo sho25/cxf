@@ -178,6 +178,8 @@ name|targetDir
 operator|.
 name|getAbsolutePath
 argument_list|()
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|fileWriter
@@ -303,6 +305,8 @@ name|targetDir
 operator|.
 name|getAbsolutePath
 argument_list|()
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertNotNull

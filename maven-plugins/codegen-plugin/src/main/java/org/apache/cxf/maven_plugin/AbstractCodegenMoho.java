@@ -547,6 +547,22 @@ name|StreamConsumer
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|sonatype
+operator|.
+name|plexus
+operator|.
+name|build
+operator|.
+name|incremental
+operator|.
+name|BuildContext
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -619,6 +635,11 @@ comment|/**      * @parameter expression="${cxf.wsdlRoot}" default-value="${base
 specifier|protected
 name|File
 name|wsdlRoot
+decl_stmt|;
+comment|/** @component */
+specifier|protected
+name|BuildContext
+name|buildContext
 decl_stmt|;
 comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      *       * @parameter expression="${cxf.codegen.jvmArgs}"      * @since 2.4      */
 specifier|private
@@ -941,6 +962,17 @@ name|getAbsolutePath
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|buildContext
+operator|.
+name|refresh
+argument_list|(
+name|getGeneratedSourceRoot
+argument_list|()
+operator|.
+name|getAbsoluteFile
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 if|if
 condition|(
@@ -968,6 +1000,17 @@ name|getGeneratedTestRoot
 argument_list|()
 operator|.
 name|getAbsolutePath
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|buildContext
+operator|.
+name|refresh
+argument_list|(
+name|getGeneratedTestRoot
+argument_list|()
+operator|.
+name|getAbsoluteFile
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1375,6 +1418,16 @@ name|delete
 argument_list|()
 return|;
 block|}
+name|buildContext
+operator|.
+name|refresh
+argument_list|(
+name|f
+operator|.
+name|getParentFile
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 literal|true
 return|;

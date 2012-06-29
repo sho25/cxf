@@ -1068,6 +1068,13 @@ argument_list|()
 decl_stmt|;
 name|generator
 operator|.
+name|setToolContext
+argument_list|(
+name|context
+argument_list|)
+expr_stmt|;
+name|generator
+operator|.
 name|setAllowImports
 argument_list|(
 name|context
