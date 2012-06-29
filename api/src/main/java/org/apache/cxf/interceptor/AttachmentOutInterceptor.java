@@ -319,6 +319,9 @@ argument_list|,
 name|getMultipartType
 argument_list|()
 argument_list|,
+name|writeOptionalTypeParameters
+argument_list|()
+argument_list|,
 name|getRootHeaders
 argument_list|()
 argument_list|)
@@ -400,6 +403,15 @@ parameter_list|()
 block|{
 return|return
 literal|"multipart/related"
+return|;
+block|}
+specifier|protected
+name|boolean
+name|writeOptionalTypeParameters
+parameter_list|()
+block|{
+return|return
+literal|true
 return|;
 block|}
 specifier|protected

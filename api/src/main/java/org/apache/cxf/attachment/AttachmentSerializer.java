@@ -158,6 +158,15 @@ specifier|public
 class|class
 name|AttachmentSerializer
 block|{
+comment|// http://tools.ietf.org/html/rfc2387
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|DEFAULT_MULTIPART_TYPE
+init|=
+literal|"multipart/related"
+decl_stmt|;
 specifier|private
 name|Message
 name|message
@@ -201,6 +210,12 @@ name|xop
 init|=
 literal|true
 decl_stmt|;
+specifier|private
+name|boolean
+name|writeOptionalTypeParameters
+init|=
+literal|true
+decl_stmt|;
 specifier|public
 name|AttachmentSerializer
 parameter_list|(
@@ -221,6 +236,9 @@ name|messageParam
 parameter_list|,
 name|String
 name|multipartType
+parameter_list|,
+name|boolean
+name|writeOptionalTypeParameters
 parameter_list|,
 name|Map
 argument_list|<
@@ -243,6 +261,12 @@ operator|.
 name|multipartType
 operator|=
 name|multipartType
+expr_stmt|;
+name|this
+operator|.
+name|writeOptionalTypeParameters
+operator|=
+name|writeOptionalTypeParameters
 expr_stmt|;
 name|this
 operator|.
@@ -398,7 +422,7 @@ name|multipartType
 operator|==
 literal|null
 condition|?
-literal|"multipart/related"
+name|DEFAULT_MULTIPART_TYPE
 else|:
 name|multipartType
 decl_stmt|;
@@ -416,8 +440,31 @@ argument_list|(
 name|requestMimeType
 argument_list|)
 expr_stmt|;
+comment|// having xop set to true implies multipart/related, but just in case...
+name|boolean
+name|xopOrMultipartRelated
+init|=
+name|xop
+operator|||
+name|DEFAULT_MULTIPART_TYPE
+operator|.
+name|equalsIgnoreCase
+argument_list|(
+name|requestMimeType
+argument_list|)
+operator|||
+name|DEFAULT_MULTIPART_TYPE
+operator|.
+name|startsWith
+argument_list|(
+name|requestMimeType
+argument_list|)
+decl_stmt|;
+comment|// type is a required parameter for multipart/related only
 if|if
 condition|(
+name|xopOrMultipartRelated
+operator|&&
 name|requestMimeType
 operator|.
 name|indexOf
@@ -470,11 +517,27 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// boundary
 name|ct
 operator|.
 name|append
 argument_list|(
 literal|"; "
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|"boundary=\""
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|bodyBoundary
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|"\""
 argument_list|)
 expr_stmt|;
 name|String
@@ -489,21 +552,19 @@ operator|.
 name|BODY_ATTACHMENT_ID
 argument_list|)
 decl_stmt|;
+comment|// 'start' is a required parameter for XOP/MTOM, clearly defined
+comment|// for simpler multipart/related payloads but is not needed for
+comment|// multipart/mixed, multipart/form-data
+if|if
+condition|(
+name|xopOrMultipartRelated
+condition|)
+block|{
 name|ct
 operator|.
 name|append
 argument_list|(
-literal|"boundary=\""
-argument_list|)
-operator|.
-name|append
-argument_list|(
-name|bodyBoundary
-argument_list|)
-operator|.
-name|append
-argument_list|(
-literal|"\"; "
+literal|"; "
 argument_list|)
 operator|.
 name|append
@@ -521,7 +582,24 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-literal|">\"; "
+literal|">\""
+argument_list|)
+expr_stmt|;
+block|}
+comment|// start-info is a required parameter for XOP/MTOM, may be needed for
+comment|// other WS cases but is redundant in simpler multipart/related cases
+if|if
+condition|(
+name|writeOptionalTypeParameters
+operator|||
+name|xop
+condition|)
+block|{
+name|ct
+operator|.
+name|append
+argument_list|(
+literal|"; "
 argument_list|)
 operator|.
 name|append
@@ -539,6 +617,7 @@ argument_list|(
 literal|"\""
 argument_list|)
 expr_stmt|;
+block|}
 name|message
 operator|.
 name|put

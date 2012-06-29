@@ -146,6 +146,15 @@ name|rootHeaders
 argument_list|)
 return|;
 block|}
+specifier|protected
+name|boolean
+name|writeOptionalTypeParameters
+parameter_list|()
+block|{
+return|return
+literal|false
+return|;
+block|}
 block|}
 end_class
 
