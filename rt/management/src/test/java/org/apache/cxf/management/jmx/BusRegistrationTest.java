@@ -572,6 +572,8 @@ return|return
 name|getObjectName
 argument_list|(
 name|busId
+argument_list|,
+name|bus
 argument_list|)
 return|;
 block|}
@@ -582,6 +584,9 @@ name|getObjectName
 parameter_list|(
 name|String
 name|id
+parameter_list|,
+name|Bus
+name|bus
 parameter_list|)
 throws|throws
 name|JMException
@@ -622,7 +627,24 @@ name|ManagementConstants
 operator|.
 name|TYPE_PROP
 operator|+
-literal|"=Bus"
+literal|"=Bus,"
+argument_list|)
+expr_stmt|;
+comment|// Added the instance id to make the ObjectName unique
+name|buffer
+operator|.
+name|append
+argument_list|(
+name|ManagementConstants
+operator|.
+name|INSTANCE_ID_PROP
+operator|+
+literal|"="
+operator|+
+name|bus
+operator|.
+name|hashCode
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return

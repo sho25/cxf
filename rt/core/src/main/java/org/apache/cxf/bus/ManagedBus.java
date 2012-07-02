@@ -222,6 +222,25 @@ operator|+
 literal|"="
 operator|+
 name|TYPE_VALUE
+operator|+
+literal|","
+argument_list|)
+expr_stmt|;
+comment|// Added the instance id to make the ObjectName unique
+name|buffer
+operator|.
+name|append
+argument_list|(
+name|ManagementConstants
+operator|.
+name|INSTANCE_ID_PROP
+operator|+
+literal|"="
+operator|+
+name|bus
+operator|.
+name|hashCode
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return

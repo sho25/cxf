@@ -85,6 +85,14 @@ name|PORT_NAME_PROP
 init|=
 literal|"port"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|INSTANCE_ID_PROP
+init|=
+literal|"instance.id"
+decl_stmt|;
 specifier|private
 name|ManagementConstants
 parameter_list|()

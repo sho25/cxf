@@ -608,6 +608,28 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|','
+argument_list|)
+expr_stmt|;
+comment|// Added the instance id to make the ObjectName unique
+name|buffer
+operator|.
+name|append
+argument_list|(
+name|ManagementConstants
+operator|.
+name|INSTANCE_ID_PROP
+operator|+
+literal|"="
+operator|+
+name|aWorkQueue
+operator|.
+name|hashCode
+argument_list|()
+argument_list|)
 expr_stmt|;
 comment|//Use default domain name of server
 return|return
