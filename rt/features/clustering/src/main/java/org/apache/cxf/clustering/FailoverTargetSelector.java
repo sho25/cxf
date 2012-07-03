@@ -242,7 +242,7 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|protected
-name|Map
+name|ConcurrentHashMap
 argument_list|<
 name|InvocationKey
 argument_list|,
@@ -289,7 +289,6 @@ expr_stmt|;
 block|}
 comment|/**      * Called prior to the interceptor chain being traversed.      *       * @param message the current Message      */
 specifier|public
-specifier|synchronized
 name|void
 name|prepare
 parameter_list|(
@@ -408,7 +407,7 @@ argument_list|)
 decl_stmt|;
 name|inProgress
 operator|.
-name|put
+name|putIfAbsent
 argument_list|(
 name|key
 argument_list|,
