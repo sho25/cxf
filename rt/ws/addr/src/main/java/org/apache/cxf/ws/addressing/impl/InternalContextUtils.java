@@ -960,6 +960,31 @@ operator|.
 name|reset
 argument_list|()
 expr_stmt|;
+comment|//cleanup pathinfo
+if|if
+condition|(
+name|inMessage
+operator|.
+name|get
+argument_list|(
+name|Message
+operator|.
+name|PATH_INFO
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+name|inMessage
+operator|.
+name|remove
+argument_list|(
+name|Message
+operator|.
+name|PATH_INFO
+argument_list|)
+expr_stmt|;
+block|}
 name|inMessage
 operator|.
 name|getInterceptorChain
@@ -1646,6 +1671,31 @@ block|}
 comment|// async service invocation required *after* a response
 comment|// has been sent (i.e. to a oneway, or a partial response
 comment|// to a decoupled twoway)
+comment|//cleanup pathinfo
+if|if
+condition|(
+name|inMessage
+operator|.
+name|get
+argument_list|(
+name|Message
+operator|.
+name|PATH_INFO
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+name|inMessage
+operator|.
+name|remove
+argument_list|(
+name|Message
+operator|.
+name|PATH_INFO
+argument_list|)
+expr_stmt|;
+block|}
 comment|// pause dispatch on current thread ...
 name|inMessage
 operator|.
