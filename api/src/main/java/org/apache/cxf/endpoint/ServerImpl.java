@@ -845,12 +845,6 @@ block|}
 name|getDestination
 argument_list|()
 operator|.
-name|shutdown
-argument_list|()
-expr_stmt|;
-name|getDestination
-argument_list|()
-operator|.
 name|setMessageObserver
 argument_list|(
 literal|null
@@ -867,6 +861,13 @@ name|destroy
 parameter_list|()
 block|{
 name|stop
+argument_list|()
+expr_stmt|;
+comment|// we should shutdown the destination here
+name|getDestination
+argument_list|()
+operator|.
+name|shutdown
 argument_list|()
 expr_stmt|;
 if|if
