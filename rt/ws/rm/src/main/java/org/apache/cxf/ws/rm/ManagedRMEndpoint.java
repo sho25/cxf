@@ -2485,7 +2485,7 @@ literal|"no source sequence"
 argument_list|)
 throw|;
 block|}
-comment|//TODO use cancel insted of suspend
+comment|//TODO use cancel instead of suspend
 name|RetransmissionQueue
 name|rq
 init|=
@@ -2572,7 +2572,7 @@ literal|"no source sequence"
 argument_list|)
 throw|;
 block|}
-comment|//TODO use cancel insted of suspend
+comment|//TODO use cancel instead of suspend
 comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
 comment|//         rq.suspend(ds);
 name|ds
