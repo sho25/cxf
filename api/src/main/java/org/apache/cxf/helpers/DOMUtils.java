@@ -3309,6 +3309,13 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|el
+operator|.
+name|getNamespaceURI
+argument_list|()
+operator|!=
+literal|null
+operator|&&
 name|localName
 operator|.
 name|equals
