@@ -871,6 +871,11 @@ name|void
 name|activate
 parameter_list|()
 block|{
+name|super
+operator|.
+name|activate
+argument_list|()
+expr_stmt|;
 name|LOG
 operator|.
 name|log
@@ -938,6 +943,11 @@ name|void
 name|deactivate
 parameter_list|()
 block|{
+name|super
+operator|.
+name|deactivate
+argument_list|()
+expr_stmt|;
 name|LOG
 operator|.
 name|log
