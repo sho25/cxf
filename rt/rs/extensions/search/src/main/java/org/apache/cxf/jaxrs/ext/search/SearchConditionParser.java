@@ -19,6 +19,10 @@ name|search
 package|;
 end_package
 
+begin_comment
+comment|/**  * Search Language Parser implementation.  * FIQL Language parser is the default implementation.   */
+end_comment
+
 begin_interface
 specifier|public
 interface|interface
