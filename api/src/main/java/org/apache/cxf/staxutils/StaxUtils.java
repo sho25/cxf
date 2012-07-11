@@ -103,7 +103,7 @@ name|util
 operator|.
 name|concurrent
 operator|.
-name|BlockingQueue
+name|ArrayBlockingQueue
 import|;
 end_import
 
@@ -115,7 +115,7 @@ name|util
 operator|.
 name|concurrent
 operator|.
-name|LinkedBlockingQueue
+name|BlockingQueue
 import|;
 end_import
 
@@ -931,7 +931,7 @@ block|}
 name|NS_AWARE_INPUT_FACTORY_POOL
 operator|=
 operator|new
-name|LinkedBlockingQueue
+name|ArrayBlockingQueue
 argument_list|<
 name|XMLInputFactory
 argument_list|>
@@ -942,7 +942,7 @@ expr_stmt|;
 name|OUTPUT_FACTORY_POOL
 operator|=
 operator|new
-name|LinkedBlockingQueue
+name|ArrayBlockingQueue
 argument_list|<
 name|XMLOutputFactory
 argument_list|>
