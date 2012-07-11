@@ -562,6 +562,7 @@ expr_stmt|;
 block|}
 specifier|public
 specifier|final
+specifier|synchronized
 name|void
 name|load
 parameter_list|(
@@ -664,6 +665,7 @@ block|}
 block|}
 block|}
 specifier|public
+specifier|synchronized
 name|void
 name|add
 parameter_list|(
@@ -925,6 +927,7 @@ argument_list|(
 literal|"deprecation"
 argument_list|)
 specifier|final
+specifier|synchronized
 name|void
 name|load
 parameter_list|(
@@ -2050,6 +2053,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
+specifier|synchronized
 name|void
 name|destroyBeans
 parameter_list|()
