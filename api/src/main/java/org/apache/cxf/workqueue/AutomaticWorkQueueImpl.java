@@ -2112,6 +2112,9 @@ parameter_list|)
 block|{
 try|try
 block|{
+if|if
+condition|(
+operator|!
 name|getExecutor
 argument_list|()
 operator|.
@@ -2128,7 +2131,12 @@ name|TimeUnit
 operator|.
 name|MILLISECONDS
 argument_list|)
-expr_stmt|;
+condition|)
+block|{
+throw|throw
+name|ree
+throw|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -2137,11 +2145,7 @@ name|ie
 parameter_list|)
 block|{
 throw|throw
-operator|new
-name|RejectedExecutionException
-argument_list|(
-name|ie
-argument_list|)
+name|ree
 throw|;
 block|}
 block|}
