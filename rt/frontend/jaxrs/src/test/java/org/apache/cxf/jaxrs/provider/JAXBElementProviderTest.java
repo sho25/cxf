@@ -9577,6 +9577,8 @@ name|locations
 operator|.
 name|add
 argument_list|(
+literal|"file:"
+operator|+
 name|loc
 argument_list|)
 expr_stmt|;
@@ -9823,6 +9825,8 @@ name|locations
 operator|.
 name|add
 argument_list|(
+literal|"file:"
+operator|+
 name|loc
 argument_list|)
 expr_stmt|;
