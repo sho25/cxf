@@ -2902,9 +2902,9 @@ name|origBus
 init|=
 name|BusFactory
 operator|.
-name|getThreadDefaultBus
+name|getAndSetThreadDefaultBus
 argument_list|(
-literal|false
+name|bus
 argument_list|)
 decl_stmt|;
 name|ClassLoaderHolder
@@ -2914,13 +2914,6 @@ literal|null
 decl_stmt|;
 try|try
 block|{
-name|BusFactory
-operator|.
-name|setThreadDefaultBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 name|ClassLoader
 name|loader
 init|=
@@ -3355,6 +3348,13 @@ name|reset
 argument_list|()
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|origBus
+operator|!=
+name|bus
+condition|)
+block|{
 name|BusFactory
 operator|.
 name|setThreadDefaultBus
@@ -3362,6 +3362,7 @@ argument_list|(
 name|origBus
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|/**      * TODO This is SOAP specific code and should not be in cxf core      * @param fault      */
@@ -4620,18 +4621,11 @@ name|origBus
 init|=
 name|BusFactory
 operator|.
-name|getThreadDefaultBus
-argument_list|(
-literal|false
-argument_list|)
-decl_stmt|;
-name|BusFactory
-operator|.
-name|setThreadDefaultBus
+name|getAndSetThreadDefaultBus
 argument_list|(
 name|bus
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 comment|// execute chain
 name|ClientCallback
 name|callback
@@ -5096,6 +5090,13 @@ block|}
 block|}
 finally|finally
 block|{
+if|if
+condition|(
+name|origBus
+operator|!=
+name|bus
+condition|)
+block|{
 name|BusFactory
 operator|.
 name|setThreadDefaultBus
@@ -5103,6 +5104,7 @@ argument_list|(
 name|origBus
 argument_list|)
 expr_stmt|;
+block|}
 synchronized|synchronized
 init|(
 name|message

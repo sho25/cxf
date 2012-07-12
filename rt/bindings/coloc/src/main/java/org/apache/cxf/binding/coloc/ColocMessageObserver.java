@@ -494,9 +494,9 @@ name|origBus
 init|=
 name|BusFactory
 operator|.
-name|getThreadDefaultBus
+name|getAndSetThreadDefaultBus
 argument_list|(
-literal|false
+name|bus
 argument_list|)
 decl_stmt|;
 name|ClassLoaderHolder
@@ -523,13 +523,6 @@ name|loader
 argument_list|)
 expr_stmt|;
 block|}
-name|BusFactory
-operator|.
-name|setThreadDefaultBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|LOG
@@ -991,6 +984,13 @@ expr_stmt|;
 block|}
 finally|finally
 block|{
+if|if
+condition|(
+name|origBus
+operator|!=
+name|bus
+condition|)
+block|{
 name|BusFactory
 operator|.
 name|setThreadDefaultBus
@@ -998,6 +998,7 @@ argument_list|(
 name|origBus
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|origLoader
