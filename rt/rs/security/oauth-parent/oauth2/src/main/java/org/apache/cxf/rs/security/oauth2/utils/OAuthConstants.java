@@ -157,11 +157,18 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|RESOURCE_OWNER_GRANT
+init|=
+literal|"password"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|REFRESH_TOKEN_GRANT
 init|=
 literal|"refresh_token"
 decl_stmt|;
-comment|// etc
 comment|// Well-known token types
 specifier|public
 specifier|static
@@ -261,6 +268,23 @@ name|String
 name|AUTHORIZATION_DECISION_DENY
 init|=
 literal|"deny"
+decl_stmt|;
+comment|// Resource Owner grant constants
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RESOURCE_OWNER_NAME
+init|=
+literal|"username"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RESOURCE_OWNER_PASSWORD
+init|=
+literal|"password"
 decl_stmt|;
 comment|// Error constants
 specifier|public
