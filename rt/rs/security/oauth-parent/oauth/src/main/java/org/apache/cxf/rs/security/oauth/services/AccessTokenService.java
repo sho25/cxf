@@ -161,6 +161,9 @@ argument_list|()
 argument_list|,
 name|getDataProvider
 argument_list|()
+argument_list|,
+name|getValidator
+argument_list|()
 argument_list|)
 return|;
 block|}

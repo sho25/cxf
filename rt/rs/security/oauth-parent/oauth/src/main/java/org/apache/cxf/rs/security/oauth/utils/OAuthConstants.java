@@ -43,7 +43,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|OAUTH_DATA_VALIDATOR_CLASS
+name|OAUTH_VALIDATOR_CLASS
 init|=
 literal|"oauth.data.validator-class"
 decl_stmt|;
@@ -54,6 +54,14 @@ name|String
 name|OAUTH_DATA_PROVIDER_INSTANCE_KEY
 init|=
 literal|"oauth.data.provider-instance.key"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|OAUTH_VALIDATOR_INSTANCE_KEY
+init|=
+literal|"oauth.data.validator-instance.key"
 decl_stmt|;
 specifier|public
 specifier|static

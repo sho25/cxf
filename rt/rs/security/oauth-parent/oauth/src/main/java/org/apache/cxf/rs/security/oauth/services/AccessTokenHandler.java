@@ -123,6 +123,16 @@ end_import
 
 begin_import
 import|import
+name|net
+operator|.
+name|oauth
+operator|.
+name|OAuthValidator
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -354,6 +364,9 @@ name|mc
 parameter_list|,
 name|OAuthDataProvider
 name|dataProvider
+parameter_list|,
+name|OAuthValidator
+name|validator
 parameter_list|)
 block|{
 try|try
@@ -504,6 +517,8 @@ argument_list|,
 name|requestToken
 argument_list|,
 name|dataProvider
+argument_list|,
+name|validator
 argument_list|)
 expr_stmt|;
 name|AccessTokenRegistration
