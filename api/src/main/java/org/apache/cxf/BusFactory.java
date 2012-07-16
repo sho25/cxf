@@ -183,6 +183,7 @@ block|{
 name|Bus
 name|bus
 decl_stmt|;
+specifier|volatile
 name|boolean
 name|stale
 decl_stmt|;
