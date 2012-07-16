@@ -392,6 +392,7 @@ return|return
 name|context
 return|;
 block|}
+specifier|public
 specifier|static
 name|TLSClientParameters
 name|createTLSClientParametersFromType
