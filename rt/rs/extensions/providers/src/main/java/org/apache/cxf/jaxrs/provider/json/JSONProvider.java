@@ -2284,6 +2284,11 @@ init|=
 name|obj
 operator|!=
 name|actualObject
+operator|||
+name|cls
+operator|.
+name|isInterface
+argument_list|()
 condition|?
 name|actualObject
 operator|.
