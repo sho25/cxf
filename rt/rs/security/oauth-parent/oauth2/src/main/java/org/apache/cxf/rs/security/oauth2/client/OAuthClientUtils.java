@@ -821,7 +821,7 @@ argument_list|()
 operator|&&
 name|map
 operator|.
-name|containsValue
+name|containsKey
 argument_list|(
 name|OAuthConstants
 operator|.
