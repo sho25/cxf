@@ -752,7 +752,7 @@ name|GSSCredential
 operator|)
 name|message
 operator|.
-name|get
+name|getContextualProperty
 argument_list|(
 name|GSSCredential
 operator|.
