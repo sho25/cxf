@@ -469,6 +469,13 @@ argument_list|(
 name|policy
 argument_list|)
 expr_stmt|;
+name|kbInterceptor
+operator|.
+name|setCredDelegation
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|WebClient
 operator|.
 name|getConfig
