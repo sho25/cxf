@@ -363,6 +363,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|INVALID_CLIENT
+init|=
+literal|"invalid_client"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|INVALID_SCOPE
 init|=
 literal|"invalid_scope"

@@ -270,7 +270,7 @@ name|OAuthServiceException
 argument_list|(
 name|OAuthConstants
 operator|.
-name|UNAUTHORIZED_CLIENT
+name|INVALID_REQUEST
 argument_list|)
 throw|;
 block|}
@@ -305,7 +305,7 @@ name|OAuthServiceException
 argument_list|(
 name|OAuthConstants
 operator|.
-name|UNAUTHORIZED_CLIENT
+name|INVALID_REQUEST
 argument_list|)
 throw|;
 block|}
