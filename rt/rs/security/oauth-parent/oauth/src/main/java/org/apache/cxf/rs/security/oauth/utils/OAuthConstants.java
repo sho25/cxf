@@ -119,6 +119,14 @@ name|OAUTH_CONSUMER_SECRET
 init|=
 literal|"oauth_consumer_secret"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|OAUTH_CALLBACK_OOB
+init|=
+literal|"oob"
+decl_stmt|;
 specifier|private
 name|OAuthConstants
 parameter_list|()

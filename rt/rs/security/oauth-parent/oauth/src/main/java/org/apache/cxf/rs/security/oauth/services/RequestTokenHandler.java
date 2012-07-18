@@ -850,23 +850,31 @@ parameter_list|)
 throws|throws
 name|OAuthProblemException
 block|{
+comment|// the callback must not be empty or null, and it should either match
+comment|// the pre-registered callback URI or have the common root with the
+comment|// the pre-registered application URI
 if|if
 condition|(
+operator|!
 name|StringUtils
 operator|.
 name|isEmpty
 argument_list|(
 name|oauthCallback
 argument_list|)
-operator|||
+operator|&&
+operator|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|client
 operator|.
 name|getCallbackURI
 argument_list|()
-operator|!=
-literal|null
+argument_list|)
 operator|&&
-operator|!
 name|oauthCallback
 operator|.
 name|equals
@@ -877,14 +885,17 @@ name|getCallbackURI
 argument_list|()
 argument_list|)
 operator|||
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|client
 operator|.
 name|getApplicationURI
 argument_list|()
-operator|!=
-literal|null
+argument_list|)
 operator|&&
-operator|!
 name|oauthCallback
 operator|.
 name|startsWith
@@ -894,8 +905,11 @@ operator|.
 name|getApplicationURI
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
+return|return;
+block|}
 name|OAuthProblemException
 name|problemEx
 init|=
@@ -931,7 +945,6 @@ expr_stmt|;
 throw|throw
 name|problemEx
 throw|;
-block|}
 block|}
 specifier|public
 name|void
