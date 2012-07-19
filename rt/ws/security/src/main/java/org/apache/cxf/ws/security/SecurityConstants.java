@@ -251,6 +251,7 @@ name|STS_APPLIES_TO
 init|=
 literal|"ws-security.sts.applies-to"
 decl_stmt|;
+comment|/**      * This configuration tag specifies the time in seconds after Creation that an incoming       * Timestamp is valid for. The default value is 300 seconds (5 minutes).      */
 specifier|public
 specifier|static
 specifier|final
