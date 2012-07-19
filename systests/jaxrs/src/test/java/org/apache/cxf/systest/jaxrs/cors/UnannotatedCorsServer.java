@@ -206,10 +206,6 @@ block|{
 literal|"http://area51.mil:31415"
 block|}
 argument_list|,
-name|allowCredentials
-operator|=
-literal|true
-argument_list|,
 name|exposeHeaders
 operator|=
 block|{
