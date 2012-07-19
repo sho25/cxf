@@ -1265,6 +1265,16 @@ argument_list|)
 expr_stmt|;
 name|encrKey
 operator|.
+name|setKeyEncAlgo
+argument_list|(
+name|encryptionProperties
+operator|.
+name|getKeyWrapAlgorithm
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|encrKey
+operator|.
 name|prepare
 argument_list|(
 name|doc
