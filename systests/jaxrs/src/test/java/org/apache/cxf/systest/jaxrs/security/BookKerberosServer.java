@@ -228,6 +228,8 @@ literal|"http"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//filter.setLoginContextName("KerberosServerKeyTab");
+comment|//filter.setServicePrincipalName("HTTP/ktab");
 name|sf
 operator|.
 name|setProvider

@@ -936,8 +936,7 @@ name|LoginException
 block|{
 comment|// The login without a callback can work if
 comment|// - Kerberos keytabs are used with a principal name set in the JAAS config
-comment|// - TGT cache is available and either a principalName is set in the JAAS config
-comment|//   or Kerberos is integrated into the OS logon process
+comment|// - Kerberos is integrated into the OS logon process
 comment|//   meaning that a process which runs this code has the
 comment|//   user identity
 name|LoginContext
@@ -947,9 +946,13 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|callbackHandler
-operator|!=
-literal|null
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
+name|loginContextName
+argument_list|)
 operator|||
 name|loginConfig
 operator|!=
@@ -968,27 +971,6 @@ argument_list|,
 name|callbackHandler
 argument_list|,
 name|loginConfig
-argument_list|)
-expr_stmt|;
-block|}
-elseif|else
-if|if
-condition|(
-operator|!
-name|StringUtils
-operator|.
-name|isEmpty
-argument_list|(
-name|loginContextName
-argument_list|)
-condition|)
-block|{
-name|lc
-operator|=
-operator|new
-name|LoginContext
-argument_list|(
-name|loginContextName
 argument_list|)
 expr_stmt|;
 block|}
