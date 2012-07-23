@@ -1552,7 +1552,7 @@ argument_list|)
 decl_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|paramsbean
 operator|.
