@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Configuration tags used to configure the WS-SecurityPolicy layer.  */
 end_comment
 
 begin_class
@@ -67,6 +67,10 @@ specifier|final
 class|class
 name|SecurityConstants
 block|{
+comment|//
+comment|// User properties
+comment|//
+comment|/**      * The user's name. It is used differently by each of the WS-Security functions:      * a) It is used as the name in the UsernameToken      * b) It is used as the alias name in the keystore to get the user's cert and private key for signature      *    if {@link SIGNATURE_USERNAME} is not set.      * c) It is used as the alias name in the keystore to get the user's public key for encryption if       *    {@link ENCRYPT_USERNAME} is not set.      */
 specifier|public
 specifier|static
 specifier|final
@@ -75,6 +79,7 @@ name|USERNAME
 init|=
 literal|"ws-security.username"
 decl_stmt|;
+comment|/**      * The user's password when a {@link CALLBACK_HANDLER} is not defined. It is currently only used for       * the case of adding a password to a UsernameToken.      */
 specifier|public
 specifier|static
 specifier|final
@@ -83,6 +88,84 @@ name|PASSWORD
 init|=
 literal|"ws-security.password"
 decl_stmt|;
+comment|/**      * The user's name for signature. It is used as the alias name in the keystore to get the user's cert       * and private key for signature. If this is not defined, then {@link USERNAME} is used instead. If       * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link SIGNATURE_PROPERTIES}. If that's also not set, and the keystore only contains a single key,       * that key will be used.       */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SIGNATURE_USERNAME
+init|=
+literal|"ws-security.signature.username"
+decl_stmt|;
+comment|/**      * The user's name for encryption. It is used as the alias name in the keystore to get the user's public       * key for encryption. If this is not defined, then {@link USERNAME} is used instead. If       * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link ENCRYPT_PROPERTIES}. If that's also not set, and the keystore only contains a single key,       * that key will be used.      *       * For the web service provider, the "useReqSigCert" keyword can be used to accept (encrypt to) any       * client whose public key is in the service's truststore (defined in {@link ENCRYPT_PROPERTIES}).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENCRYPT_USERNAME
+init|=
+literal|"ws-security.encryption.username"
+decl_stmt|;
+comment|//
+comment|// Callback class and Crypto properties
+comment|//
+comment|/**      * The CallbackHandler implementation class used to obtain passwords, for both outbound and inbound       * requests. The value of this tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CALLBACK_HANDLER
+init|=
+literal|"ws-security.callback-handler"
+decl_stmt|;
+comment|/**      * The SAML CallbackHandler implementation class used to construct SAML Assertions. The value of this       * tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SAML_CALLBACK_HANDLER
+init|=
+literal|"ws-security.saml-callback-handler"
+decl_stmt|;
+comment|/**      * The Crypto property configuration to use for signature, if {@link SIGNATURE_CRYPTO} is not set instead.      * The value of this tag must be either:      * a) A Java Properties object that contains the Crypto configuration.      * b) The path of the Crypto property file that contains the Crypto configuration.      * c) A URL that points to the Crypto property file that contains the Crypto configuration.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SIGNATURE_PROPERTIES
+init|=
+literal|"ws-security.signature.properties"
+decl_stmt|;
+comment|/**      * The Crypto property configuration to use for encryption, if {@link ENCRYPT_CRYPTO} is not set instead.      * The value of this tag must be either:      * a) A Java Properties object that contains the Crypto configuration.      * b) The path of the Crypto property file that contains the Crypto configuration.      * c) A URL that points to the Crypto property file that contains the Crypto configuration.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENCRYPT_PROPERTIES
+init|=
+literal|"ws-security.encryption.properties"
+decl_stmt|;
+comment|/**      * A Crypto object to be used for signature. If this is not defined then the       * {@link SIGNATURE_PROPERTIES} is used instead.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SIGNATURE_CRYPTO
+init|=
+literal|"ws-security.signature.crypto"
+decl_stmt|;
+comment|/**      * A Crypto object to be used for encryption. If this is not defined then the       * {@link ENCRYPT_PROPERTIES} is used instead.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENCRYPT_CRYPTO
+init|=
+literal|"ws-security.encryption.crypto"
+decl_stmt|;
+comment|//
+comment|// Boolean WS-Security configuration tags, e.g. the value should be "true" or "false".
+comment|//
 specifier|public
 specifier|static
 specifier|final
@@ -91,6 +174,175 @@ name|VALIDATE_TOKEN
 init|=
 literal|"ws-security.validate.token"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_REVOCATION
+init|=
+literal|"ws-security.enableRevocation"
+decl_stmt|;
+comment|//WebLogic and WCF always encrypt UsernameTokens whenever possible
+comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
+comment|//Be default, we will encrypt as well for interop reasons.  However, this
+comment|//setting can be set to false to turn that off.
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ALWAYS_ENCRYPT_UT
+init|=
+literal|"ws-security.username-token.always.encrypted"
+decl_stmt|;
+comment|/**      * Whether to ensure compliance with the Basic Security Profile (BSP) 1.1 or not. The      * default value is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|IS_BSP_COMPLIANT
+init|=
+literal|"ws-security.is-bsp-compliant"
+decl_stmt|;
+comment|/**      * This configuration tag specifies whether to self-sign a SAML Assertion or not. If this      * is set to true, then an enveloped signature will be generated when the SAML Assertion is      * constructed. The default is false.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SELF_SIGN_SAML_ASSERTION
+init|=
+literal|"ws-security.self-sign-saml-assertion"
+decl_stmt|;
+comment|/**      * Set this to "false" to not cache UsernameToken nonces. The default value is "true" for      * message recipients, and "false" for message initiators. Set it to true to cache for      * both cases.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_NONCE_CACHE
+init|=
+literal|"ws-security.enable.nonce.cache"
+decl_stmt|;
+comment|/**      * Set this to "false" to not cache Timestamp Created Strings (these are only cached in       * conjunction with a message Signature). The default value is "true" for message recipients,       * and "false" for message initiators. Set it to true to cache for both cases.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_TIMESTAMP_CACHE
+init|=
+literal|"ws-security.enable.timestamp.cache"
+decl_stmt|;
+comment|//
+comment|// (Non-boolean) Configuration parameters
+comment|//
+comment|/**      * This configuration tag specifies the time in seconds after Creation that an incoming       * Timestamp is valid for. The default value is 300 seconds (5 minutes).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TIMESTAMP_TTL
+init|=
+literal|"ws-security.timestamp.timeToLive"
+decl_stmt|;
+comment|/**      * This configuration tag specifies the time in seconds in the future within which      * the Created time of an incoming Timestamp is valid. WSS4J rejects by default any      * timestamp which is "Created" in the future, and so there could potentially be      * problems in a scenario where a client's clock is slightly askew. The default      * value for this parameter is "0", meaning that no future-created Timestamps are      * allowed.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TIMESTAMP_FUTURE_TTL
+init|=
+literal|"ws-security.timestamp.futureTimeToLive"
+decl_stmt|;
+comment|/**      * This configuration tag specifies the attribute URI of the SAML attributestatement      * where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SAML_ROLE_ATTRIBUTENAME
+init|=
+literal|"ws-security.saml-role-attributename"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_CLIENT
+init|=
+literal|"ws-security.kerberos.client"
+decl_stmt|;
+comment|/**      * The JAAS Context name to use for Kerberos. This is currently only supported for SPNEGO.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_JAAS_CONTEXT_NAME
+init|=
+literal|"ws-security.kerberos.jaas.context"
+decl_stmt|;
+comment|/**      * The Kerberos Service Provider Name (spn) to use. This is currently only supported for SPNEGO.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_SPN
+init|=
+literal|"ws-security.kerberos.spn"
+decl_stmt|;
+comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SPNEGO_CLIENT_ACTION
+init|=
+literal|"ws-security.spnego.client.action"
+decl_stmt|;
+comment|/**      * This holds a reference to a ReplayCache instance used to cache UsernameToken nonces. The      * default instance that is used is the EHCacheReplayCache.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|NONCE_CACHE_INSTANCE
+init|=
+literal|"ws-security.nonce.cache.instance"
+decl_stmt|;
+comment|/**      * This holds a reference to a ReplayCache instance used to cache Timestamp Created Strings. The      * default instance that is used is the EHCacheReplayCache.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TIMESTAMP_CACHE_INSTANCE
+init|=
+literal|"ws-security.timestamp.cache.instance"
+decl_stmt|;
+comment|/**      * Set this property to point to a configuration file for the underlying caching implementation.      * The default configuration file that is used is cxf-ehcache.xml in this module.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CACHE_CONFIG_FILE
+init|=
+literal|"ws-security.cache.config.file"
+decl_stmt|;
+comment|/**      * The TokenStore instance to use to cache security tokens. By default this uses the      * EHCacheTokenStore if EhCache is available. Otherwise it uses the MemoryTokenStore.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|TOKEN_STORE_CACHE_INSTANCE
+init|=
+literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
+decl_stmt|;
+comment|/**      * This configuration tag is a comma separated String of regular expressions which      * will be applied to the subject DN of the certificate used for signature      * validation, after trust verification of the certificate chain associated with the       * certificate. These constraints are not used when the certificate is contained in      * the keystore (direct trust).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SUBJECT_CERT_CONSTRAINTS
+init|=
+literal|"ws-security.subject.cert.constraints"
+decl_stmt|;
+comment|//
+comment|// Validator implementations for validating received security tokens
+comment|//
 specifier|public
 specifier|static
 specifier|final
@@ -147,94 +399,9 @@ name|SCT_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.sct.validator"
 decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|CALLBACK_HANDLER
-init|=
-literal|"ws-security.callback-handler"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SAML_CALLBACK_HANDLER
-init|=
-literal|"ws-security.saml-callback-handler"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SIGNATURE_USERNAME
-init|=
-literal|"ws-security.signature.username"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SIGNATURE_PROPERTIES
-init|=
-literal|"ws-security.signature.properties"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_USERNAME
-init|=
-literal|"ws-security.encryption.username"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_PROPERTIES
-init|=
-literal|"ws-security.encryption.properties"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SIGNATURE_CRYPTO
-init|=
-literal|"ws-security.signature.crypto"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_CRYPTO
-init|=
-literal|"ws-security.encryption.crypto"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|CRYPTO_CACHE
-init|=
-literal|"ws-security.crypto.cache"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TOKEN
-init|=
-literal|"ws-security.token"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TOKEN_ID
-init|=
-literal|"ws-security.token.id"
-decl_stmt|;
+comment|//
+comment|// STS Client Configuration tags
+comment|//
 specifier|public
 specifier|static
 specifier|final
@@ -251,70 +418,39 @@ name|STS_APPLIES_TO
 init|=
 literal|"ws-security.sts.applies-to"
 decl_stmt|;
-comment|/**      * This configuration tag specifies the time in seconds after Creation that an incoming       * Timestamp is valid for. The default value is 300 seconds (5 minutes).      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|TIMESTAMP_TTL
+name|STS_TOKEN_USE_CERT_FOR_KEYINFO
 init|=
-literal|"ws-security.timestamp.timeToLive"
+literal|"ws-security.sts.token.usecert"
 decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|ENABLE_REVOCATION
+name|STS_TOKEN_DO_CANCEL
 init|=
-literal|"ws-security.enableRevocation"
+literal|"ws-security.sts.token.do.cancel"
 decl_stmt|;
-comment|//WebLogic and WCF always encrypt UsernameTokens whenever possible
-comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
-comment|//Be default, we will encrypt as well for interop reasons.  However, this
-comment|//setting can be set to false to turn that off.
+comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|ALWAYS_ENCRYPT_UT
+name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 init|=
-literal|"ws-security.username-token.always.encrypted"
+literal|"ws-security.cache.issued.token.in.endpoint"
 decl_stmt|;
-comment|/**      * Whether to ensure compliance with the Basic Security Profile (BSP) 1.1 or not. The      * default value is "true".      */
+comment|/**      * Set this property to avoid STS client trying send WS-MetadataExchange call using      * STS EPR WSA address when the endpoint contract contains no WS-MetadataExchange info.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|IS_BSP_COMPLIANT
+name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 init|=
-literal|"ws-security.is-bsp-compliant"
-decl_stmt|;
-comment|/**      * This configuration tag specifies the time in seconds in the future within which      * the Created time of an incoming Timestamp is valid. WSS4J rejects by default any      * timestamp which is "Created" in the future, and so there could potentially be      * problems in a scenario where a client's clock is slightly askew. The default      * value for this parameter is "0", meaning that no future-created Timestamps are      * allowed.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TIMESTAMP_FUTURE_TTL
-init|=
-literal|"ws-security.timestamp.futureTimeToLive"
-decl_stmt|;
-comment|/**      * This configuration tag specifies whether to self-sign a SAML Assertion or not. If this      * is set to true, then an enveloped signature will be generated when the SAML Assertion is      * constructed. The default is false.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SELF_SIGN_SAML_ASSERTION
-init|=
-literal|"ws-security.self-sign-saml-assertion"
-decl_stmt|;
-comment|/**      * This configuration tag specifies the attribute URI of the SAML attributestatement      * where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SAML_ROLE_ATTRIBUTENAME
-init|=
-literal|"ws-security.saml-role-attributename"
+literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
 decl_stmt|;
 comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
@@ -345,22 +481,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|STS_TOKEN_USE_CERT_FOR_KEYINFO
-init|=
-literal|"ws-security.sts.token.usecert"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_DO_CANCEL
-init|=
-literal|"ws-security.sts.token.do.cancel"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|STS_TOKEN_ACT_AS
 init|=
 literal|"ws-security.sts.token.act-as"
@@ -373,121 +493,24 @@ name|STS_TOKEN_ON_BEHALF_OF
 init|=
 literal|"ws-security.sts.token.on-behalf-of"
 decl_stmt|;
+comment|//
+comment|// Internal tags
+comment|//
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|KERBEROS_CLIENT
+name|TOKEN
 init|=
-literal|"ws-security.kerberos.client"
+literal|"ws-security.token"
 decl_stmt|;
-comment|/**      * The JAAS Context name to use for Kerberos. This is currently only supported for SPNEGO.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|KERBEROS_JAAS_CONTEXT_NAME
+name|TOKEN_ID
 init|=
-literal|"ws-security.kerberos.jaas.context"
-decl_stmt|;
-comment|/**      * The Kerberos Service Provider Name (spn) to use. This is currently only supported for SPNEGO.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|KERBEROS_SPN
-init|=
-literal|"ws-security.kerberos.spn"
-decl_stmt|;
-comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SPNEGO_CLIENT_ACTION
-init|=
-literal|"ws-security.spnego.client.action"
-decl_stmt|;
-comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
-init|=
-literal|"ws-security.cache.issued.token.in.endpoint"
-decl_stmt|;
-comment|/**      * Set this to "false" to not cache UsernameToken nonces. The default value is "true" for      * message recipients, and "false" for message initiators. Set it to true to cache for      * both cases.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENABLE_NONCE_CACHE
-init|=
-literal|"ws-security.enable.nonce.cache"
-decl_stmt|;
-comment|/**      * This holds a reference to a ReplayCache instance used to cache UsernameToken nonces. The      * default instance that is used is the EHCacheReplayCache.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|NONCE_CACHE_INSTANCE
-init|=
-literal|"ws-security.nonce.cache.instance"
-decl_stmt|;
-comment|/**      * Set this to "false" to not cache Timestamp Created Strings (these are only cached in       * conjunction with a message Signature). The default value is "true" for message recipients,       * and "false" for message initiators. Set it to true to cache for both cases.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENABLE_TIMESTAMP_CACHE
-init|=
-literal|"ws-security.enable.timestamp.cache"
-decl_stmt|;
-comment|/**      * This holds a reference to a ReplayCache instance used to cache Timestamp Created Strings. The      * default instance that is used is the EHCacheReplayCache.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TIMESTAMP_CACHE_INSTANCE
-init|=
-literal|"ws-security.timestamp.cache.instance"
-decl_stmt|;
-comment|/**      * Set this property to point to a configuration file for the underlying caching implementation.      * The default configuration file that is used is cxf-ehcache.xml in this module.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|CACHE_CONFIG_FILE
-init|=
-literal|"ws-security.cache.config.file"
-decl_stmt|;
-comment|/**      * The TokenStore instance to use to cache security tokens. By default this uses the      * EHCacheTokenStore if EhCache is available. Otherwise it uses the MemoryTokenStore.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TOKEN_STORE_CACHE_INSTANCE
-init|=
-literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
-decl_stmt|;
-comment|/**      * Set this property to avoid STS client trying send WS-MetadataExchange call using      * STS EPR WSA address when the endpoint contract contains no WS-MetadataExchange info.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
-init|=
-literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
-decl_stmt|;
-comment|/**      * This configuration tag is a comma separated String of regular expressions which      * will be applied to the subject DN of the certificate used for signature      * validation, after trust verification of the certificate chain associated with the       * certificate. These constraints are not used when the certificate is contained in      * the keystore (direct trust).      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SUBJECT_CERT_CONSTRAINTS
-init|=
-literal|"ws-security.subject.cert.constraints"
+literal|"ws-security.token.id"
 decl_stmt|;
 specifier|public
 specifier|static
