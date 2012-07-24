@@ -27,7 +27,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collections
+name|LinkedHashMap
 import|;
 end_import
 
@@ -60,6 +60,10 @@ name|String
 name|tokenType
 decl_stmt|;
 specifier|private
+name|String
+name|refreshToken
+decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -68,9 +72,13 @@ name|String
 argument_list|>
 name|parameters
 init|=
-name|Collections
-operator|.
-name|emptyMap
+operator|new
+name|LinkedHashMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -114,6 +122,32 @@ parameter_list|()
 block|{
 return|return
 name|tokenKey
+return|;
+block|}
+comment|/**      * Sets the refresh token key the client can use to obtain a new      * access token      * @param refreshToken the refresh token      */
+specifier|public
+name|void
+name|setRefreshToken
+parameter_list|(
+name|String
+name|refreshToken
+parameter_list|)
+block|{
+name|this
+operator|.
+name|refreshToken
+operator|=
+name|refreshToken
+expr_stmt|;
+block|}
+comment|/**      * Gets the refresh token key the client can use to obtain a new      * access token      * @return the refresh token      */
+specifier|public
+name|String
+name|getRefreshToken
+parameter_list|()
+block|{
+return|return
+name|refreshToken
 return|;
 block|}
 comment|/**      * Sets token parameters      * @param parameters the token parameters      */

@@ -641,6 +641,16 @@ name|getTokenKey
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|clientToken
+operator|.
+name|setRefreshToken
+argument_list|(
+name|serverToken
+operator|.
+name|getRefreshToken
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|writeOptionalParameters
@@ -700,7 +710,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|//TODO: also set a refresh token if any
 comment|// Return it to the client
 return|return
 name|Response
