@@ -2998,7 +2998,7 @@ operator|==
 literal|null
 condition|)
 block|{
-return|return;
+continue|continue;
 block|}
 name|Artifact
 name|wsdlArtifact
