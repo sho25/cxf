@@ -225,17 +225,17 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|MAC_TOKEN_KEY
+name|MAC_TOKEN_ID
 init|=
-literal|"token"
+literal|"id"
 decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|MAC_TOKEN_TIMESTAMP
+name|MAC_TOKEN_EXTENSION
 init|=
-literal|"timestamp"
+literal|"ext"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -251,7 +251,7 @@ specifier|final
 name|String
 name|MAC_TOKEN_SIGNATURE
 init|=
-literal|"signature"
+literal|"mac"
 decl_stmt|;
 comment|// Token Authorization schemes
 specifier|public
@@ -450,6 +450,16 @@ name|ACCESS_DENIED
 init|=
 literal|"access_denied"
 decl_stmt|;
+comment|// CXF-Specific parameters
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ACCESS_TOKEN_ISSUED_AT
+init|=
+literal|"issued_at"
+decl_stmt|;
+comment|// End Of CXF-Specific
 specifier|private
 name|OAuthConstants
 parameter_list|()

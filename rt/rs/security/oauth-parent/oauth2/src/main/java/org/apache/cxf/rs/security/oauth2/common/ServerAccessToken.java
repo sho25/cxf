@@ -58,14 +58,6 @@ name|String
 name|grantType
 decl_stmt|;
 specifier|private
-name|long
-name|issuedAt
-decl_stmt|;
-specifier|private
-name|long
-name|lifetime
-decl_stmt|;
-specifier|private
 name|Client
 name|client
 decl_stmt|;
@@ -98,7 +90,7 @@ name|String
 name|tokenKey
 parameter_list|,
 name|long
-name|lifetime
+name|expiresIn
 parameter_list|,
 name|long
 name|issuedAt
@@ -109,6 +101,10 @@ argument_list|(
 name|tokenType
 argument_list|,
 name|tokenKey
+argument_list|,
+name|expiresIn
+argument_list|,
+name|issuedAt
 argument_list|)
 expr_stmt|;
 name|this
@@ -116,18 +112,6 @@ operator|.
 name|client
 operator|=
 name|client
-expr_stmt|;
-name|this
-operator|.
-name|lifetime
-operator|=
-name|lifetime
-expr_stmt|;
-name|this
-operator|.
-name|issuedAt
-operator|=
-name|issuedAt
 expr_stmt|;
 block|}
 comment|/**      * Returns the Client associated with this token      * @return the client      */
@@ -140,16 +124,8 @@ return|return
 name|client
 return|;
 block|}
-comment|/**      * Returns the time (in seconds) when this token was issued at      * @return the seconds      */
-specifier|public
-name|long
-name|getIssuedAt
-parameter_list|()
-block|{
-return|return
-name|issuedAt
-return|;
-block|}
+annotation|@
+name|Deprecated
 comment|/**      * Returns the number of seconds this token can be valid after it was issued      * @return the seconds      */
 specifier|public
 name|long
@@ -157,7 +133,8 @@ name|getLifetime
 parameter_list|()
 block|{
 return|return
-name|lifetime
+name|getExpiresIn
+argument_list|()
 return|;
 block|}
 comment|/**      * Returns a list of opaque permissions/scopes      * @return the scopes      */

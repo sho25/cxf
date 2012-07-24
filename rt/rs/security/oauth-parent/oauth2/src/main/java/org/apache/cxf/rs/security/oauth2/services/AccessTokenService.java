@@ -662,7 +662,7 @@ name|setExpiresIn
 argument_list|(
 name|serverToken
 operator|.
-name|getLifetime
+name|getExpiresIn
 argument_list|()
 argument_list|)
 expr_stmt|;
