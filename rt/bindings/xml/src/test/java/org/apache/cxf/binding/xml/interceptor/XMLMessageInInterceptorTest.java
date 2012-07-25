@@ -271,7 +271,7 @@ argument_list|)
 operator|.
 name|setTypeClass
 argument_list|(
-name|MyComplexStructType
+name|String
 operator|.
 name|class
 argument_list|)
@@ -288,7 +288,7 @@ argument_list|)
 operator|.
 name|setTypeClass
 argument_list|(
-name|String
+name|MyComplexStructType
 operator|.
 name|class
 argument_list|)
@@ -349,7 +349,7 @@ name|list
 operator|.
 name|get
 argument_list|(
-literal|0
+literal|1
 argument_list|)
 operator|instanceof
 name|MyComplexStructType
@@ -369,7 +369,7 @@ name|list
 operator|.
 name|get
 argument_list|(
-literal|1
+literal|0
 argument_list|)
 operator|)
 operator|.
