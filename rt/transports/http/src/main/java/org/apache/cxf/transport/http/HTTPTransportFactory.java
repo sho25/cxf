@@ -1168,7 +1168,7 @@ name|HTTPConduit
 name|conduit
 init|=
 operator|new
-name|HTTPConduit
+name|URLConnectionHTTPConduit
 argument_list|(
 name|bus
 argument_list|,
