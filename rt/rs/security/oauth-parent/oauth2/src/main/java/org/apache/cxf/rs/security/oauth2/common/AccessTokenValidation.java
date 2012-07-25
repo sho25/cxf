@@ -217,7 +217,7 @@ name|tokenLifetime
 operator|=
 name|token
 operator|.
-name|getLifetime
+name|getExpiresIn
 argument_list|()
 expr_stmt|;
 name|this
