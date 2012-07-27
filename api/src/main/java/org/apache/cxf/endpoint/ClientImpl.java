@@ -3816,28 +3816,16 @@ argument_list|(
 name|inMsg
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|LOG
-operator|.
-name|isLoggable
-argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|)
-condition|)
-block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"set responseContext to be"
-operator|+
+comment|// remove the recursive reference if present
 name|resContext
+operator|.
+name|remove
+argument_list|(
+name|Message
+operator|.
+name|INVOCATION_CONTEXT
 argument_list|)
 expr_stmt|;
-block|}
 name|responseContext
 operator|.
 name|put
