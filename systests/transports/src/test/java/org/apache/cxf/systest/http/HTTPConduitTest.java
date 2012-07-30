@@ -63,6 +63,16 @@ name|java
 operator|.
 name|net
 operator|.
+name|URI
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|net
+operator|.
 name|URL
 import|;
 end_import
@@ -3653,8 +3663,8 @@ parameter_list|(
 name|AuthorizationPolicy
 name|authPolicy
 parameter_list|,
-name|URL
-name|currentURL
+name|URI
+name|currentURI
 parameter_list|,
 name|Message
 name|message

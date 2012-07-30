@@ -25,7 +25,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|URL
+name|URI
 import|;
 end_import
 
@@ -84,8 +84,8 @@ parameter_list|(
 name|AuthorizationPolicy
 name|authPolicy
 parameter_list|,
-name|URL
-name|currentURL
+name|URI
+name|currentURI
 parameter_list|,
 name|Message
 name|message
@@ -101,7 +101,7 @@ name|getAuthorization
 argument_list|(
 name|authPolicy
 argument_list|,
-name|currentURL
+name|currentURI
 argument_list|,
 name|message
 argument_list|)

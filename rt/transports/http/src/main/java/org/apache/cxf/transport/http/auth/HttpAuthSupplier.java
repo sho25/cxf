@@ -25,7 +25,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|URL
+name|URI
 import|;
 end_import
 
@@ -73,14 +73,14 @@ name|boolean
 name|requiresRequestCaching
 parameter_list|()
 function_decl|;
-comment|/**      * The HTTPConduit makes a call to this method to obtain      * an Authentication token for http authentication.      *       * @param authPolicy credentials for the authentication      * @param url The URL we want to connect to      * @param message     The CXF Message      * @param fullHeader  The full WWW-Authenticate header or null if preemptive auth      * @return token for Authenticate string or null if authentication is not possible      */
+comment|/**      * The HTTPConduit makes a call to this method to obtain      * an Authentication token for http authentication.      *       * @param authPolicy credentials for the authentication      * @param uri  The URI we want to connect to      * @param message     The CXF Message      * @param fullHeader  The full WWW-Authenticate header or null if preemptive auth      * @return token for Authenticate string or null if authentication is not possible      */
 name|String
 name|getAuthorization
 parameter_list|(
 name|AuthorizationPolicy
 name|authPolicy
 parameter_list|,
-name|URL
+name|URI
 name|url
 parameter_list|,
 name|Message

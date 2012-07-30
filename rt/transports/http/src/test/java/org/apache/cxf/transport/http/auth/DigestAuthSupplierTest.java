@@ -35,17 +35,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|MalformedURLException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|net
-operator|.
-name|URL
+name|URI
 import|;
 end_import
 
@@ -247,7 +237,7 @@ name|void
 name|testEncode
 parameter_list|()
 throws|throws
-name|MalformedURLException
+name|Exception
 block|{
 name|String
 name|origNonce
@@ -317,11 +307,11 @@ argument_list|(
 literal|"testPassword"
 argument_list|)
 expr_stmt|;
-name|URL
-name|url
+name|URI
+name|uri
 init|=
 operator|new
-name|URL
+name|URI
 argument_list|(
 literal|"http://myserver"
 argument_list|)
@@ -347,7 +337,7 @@ name|getAuthorization
 argument_list|(
 name|authorizationPolicy
 argument_list|,
-name|url
+name|uri
 argument_list|,
 name|message
 argument_list|,

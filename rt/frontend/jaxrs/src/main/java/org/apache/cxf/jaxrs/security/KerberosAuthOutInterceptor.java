@@ -23,7 +23,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|MalformedURLException
+name|URI
 import|;
 end_import
 
@@ -33,7 +33,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|URL
+name|URISyntaxException
 import|;
 end_import
 
@@ -253,10 +253,10 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-name|URL
-name|currentURL
+name|URI
+name|currentURI
 init|=
-name|getCurrentURL
+name|getCurrentURI
 argument_list|(
 name|message
 argument_list|)
@@ -271,7 +271,7 @@ argument_list|(
 name|getPolicy
 argument_list|()
 argument_list|,
-name|currentURL
+name|currentURI
 argument_list|,
 name|message
 argument_list|)
@@ -358,8 +358,8 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-name|URL
-name|getCurrentURL
+name|URI
+name|getCurrentURI
 parameter_list|(
 name|Message
 name|message
@@ -369,7 +369,7 @@ try|try
 block|{
 return|return
 operator|new
-name|URL
+name|URI
 argument_list|(
 operator|(
 name|String
@@ -387,8 +387,8 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|MalformedURLException
-name|ex
+name|URISyntaxException
+name|e
 parameter_list|)
 block|{
 comment|// is not expected to happen
@@ -396,7 +396,7 @@ throw|throw
 operator|new
 name|RuntimeException
 argument_list|(
-name|ex
+name|e
 argument_list|)
 throw|;
 block|}

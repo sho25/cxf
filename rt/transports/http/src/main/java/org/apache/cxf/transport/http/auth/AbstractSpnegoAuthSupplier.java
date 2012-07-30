@@ -25,7 +25,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|URL
+name|URI
 import|;
 end_import
 
@@ -398,8 +398,8 @@ parameter_list|(
 name|AuthorizationPolicy
 name|authPolicy
 parameter_list|,
-name|URL
-name|currentURL
+name|URI
+name|currentURI
 parameter_list|,
 name|Message
 name|message
@@ -432,7 +432,7 @@ name|spn
 init|=
 name|getCompleteServicePrincipalName
 argument_list|(
-name|currentURL
+name|currentURI
 argument_list|)
 decl_stmt|;
 name|boolean
@@ -881,8 +881,8 @@ specifier|protected
 name|String
 name|getCompleteServicePrincipalName
 parameter_list|(
-name|URL
-name|currentURL
+name|URI
+name|currentURI
 parameter_list|)
 block|{
 name|String
@@ -894,7 +894,7 @@ literal|null
 condition|?
 literal|"HTTP/"
 operator|+
-name|currentURL
+name|currentURI
 operator|.
 name|getHost
 argument_list|()

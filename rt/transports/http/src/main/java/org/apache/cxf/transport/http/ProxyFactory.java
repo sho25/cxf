@@ -43,7 +43,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|URL
+name|URI
 import|;
 end_import
 
@@ -296,7 +296,7 @@ parameter_list|(
 name|HTTPClientPolicy
 name|policy
 parameter_list|,
-name|URL
+name|URI
 name|currentUrl
 parameter_list|)
 block|{

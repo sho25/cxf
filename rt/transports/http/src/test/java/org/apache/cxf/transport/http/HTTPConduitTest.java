@@ -33,7 +33,7 @@ name|java
 operator|.
 name|net
 operator|.
-name|URL
+name|URI
 import|;
 end_import
 
@@ -409,8 +409,8 @@ parameter_list|(
 name|AuthorizationPolicy
 name|authPolicy
 parameter_list|,
-name|URL
-name|currentURL
+name|URI
+name|currentURI
 parameter_list|,
 name|Message
 name|message
@@ -545,7 +545,7 @@ literal|"unexpected upfront URL"
 argument_list|,
 name|conduit
 operator|.
-name|getURL
+name|getURI
 argument_list|(
 literal|false
 argument_list|)
@@ -557,7 +557,7 @@ literal|"unexpected on-demand URL"
 argument_list|,
 name|conduit
 operator|.
-name|getURL
+name|getURI
 argument_list|()
 operator|.
 name|getPath
