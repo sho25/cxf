@@ -111,7 +111,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"CherryServer.xml"
+literal|"/ServerConfig.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

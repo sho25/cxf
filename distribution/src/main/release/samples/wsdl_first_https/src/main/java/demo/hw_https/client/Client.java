@@ -263,7 +263,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"SecureClient.xml"
+literal|"/SecureClient.xml"
 argument_list|)
 expr_stmt|;
 block|}
@@ -289,7 +289,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"InsecureClient.xml"
+literal|"/InsecureClient.xml"
 argument_list|)
 expr_stmt|;
 block|}
