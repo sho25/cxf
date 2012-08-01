@@ -1025,21 +1025,6 @@ operator|+
 literal|"/jaxws/add"
 argument_list|)
 expr_stmt|;
-comment|//manually set the action
-name|disp
-operator|.
-name|getRequestContext
-argument_list|()
-operator|.
-name|put
-argument_list|(
-name|BindingProvider
-operator|.
-name|SOAPACTION_URI_PROPERTY
-argument_list|,
-name|expectedOut
-argument_list|)
-expr_stmt|;
 name|disp
 operator|.
 name|invoke
