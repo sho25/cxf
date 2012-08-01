@@ -862,6 +862,8 @@ argument_list|,
 operator|new
 name|SpnegoSTSInvoker
 argument_list|()
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
