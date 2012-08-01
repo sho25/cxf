@@ -161,18 +161,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|namespace
-operator|.
-name|QName
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -1124,28 +1112,14 @@ block|{
 comment|//RpcLit will use the JAXB Bridge to marshall part message when it is
 comment|//annotated with @XmlList,@XmlAttachmentRef,@XmlJavaTypeAdapter
 comment|//TODO:Cache the JAXBRIContext
-name|QName
-name|qname
-init|=
-operator|new
-name|QName
-argument_list|(
-literal|null
-argument_list|,
-name|part
-operator|.
-name|getConcreteName
-argument_list|()
-operator|.
-name|getLocalPart
-argument_list|()
-argument_list|)
-decl_stmt|;
 name|JAXBEncoderDecoder
 operator|.
 name|marshalWithBridge
 argument_list|(
-name|qname
+name|part
+operator|.
+name|getConcreteName
+argument_list|()
 argument_list|,
 name|part
 operator|.
