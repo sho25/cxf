@@ -368,7 +368,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An single class that provides both an input and an output filter for CORS, following  * http://www.w3.org/TR/cors/. The input examines the input headers. If the request is valid, it stores the  * information in the Exchange to allow the response handler to add the appropriate headers to the response.  * If you need complex or subtle control of the behavior here (e.g. clearing the prefight cache) you might be  * better off reading the source of this and implementing this inside your service.  *   * This class will perform preflight processing even if there is a resource method annotated   * to handle @OPTIONS,  *<em>unless</em> that method is annotated as follows:  *<pre>  *   @CrossOriginResourceSharing(localPreflight = true)  *</pre>  * or unless the<tt>defaultOptionsMethodsHandlePreflight</tt> property of this class is set to<tt>true</tt>.  */
+comment|/**  * A single class that provides both an input and an output filter for CORS, following  * http://www.w3.org/TR/cors/. The input filter examines the input headers. If the request is valid, it stores the  * information in the Exchange to allow the response handler to add the appropriate headers to the response.  * If you need complex or subtle control of the behavior here (e.g. clearing the prefight cache) you might be  * better off reading the source of this class and implementing this inside your service.  *   * This class will perform preflight processing even if there is a resource method annotated   * to handle @OPTIONS,  *<em>unless</em> that method is annotated as follows:  *<pre>  *   @CrossOriginResourceSharing(localPreflight = true)  *</pre>  * or unless the<tt>defaultOptionsMethodsHandlePreflight</tt> property of this class is set to<tt>true</tt>.  */
 end_comment
 
 begin_class
@@ -2452,7 +2452,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * The origin strings to allow. Call {@link #setAllowAllOrigins(boolean)} to enable '*'.      *       * @param allowedOrigins a list of case-sensitive origin strings.      */
+comment|/**      * The origin strings to allow. An empty list allows all origins.      *       * @param allowedOrigins a list of case-sensitive origin strings.      */
 specifier|public
 name|void
 name|setAllowOrigins
@@ -2471,6 +2471,7 @@ operator|=
 name|allowedOrigins
 expr_stmt|;
 block|}
+comment|/** @return the list of allowed origins. */
 specifier|public
 name|List
 argument_list|<
