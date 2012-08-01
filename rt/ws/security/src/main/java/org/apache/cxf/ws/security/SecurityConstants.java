@@ -164,8 +164,9 @@ init|=
 literal|"ws-security.encryption.crypto"
 decl_stmt|;
 comment|//
-comment|// Boolean WS-Security configuration tags, e.g. the value should be "true" or "false".
+comment|// Boolean configuration tags, e.g. the value should be "true" or "false".
 comment|//
+comment|/**      * Whether to validate the password of a received UsernameToken or not. The default is true.      */
 specifier|public
 specifier|static
 specifier|final
@@ -174,6 +175,7 @@ name|VALIDATE_TOKEN
 init|=
 literal|"ws-security.validate.token"
 decl_stmt|;
+comment|/**      * Whether to enable Certificate Revocation List (CRL) checking or not when verifying trust       * in a certificate. The default value is "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -182,10 +184,11 @@ name|ENABLE_REVOCATION
 init|=
 literal|"ws-security.enableRevocation"
 decl_stmt|;
-comment|//WebLogic and WCF always encrypt UsernameTokens whenever possible
+comment|// WebLogic and WCF always encrypt UsernameTokens whenever possible
 comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
 comment|//Be default, we will encrypt as well for interop reasons.  However, this
 comment|//setting can be set to false to turn that off.
+comment|/**      * Whether to always encrypt UsernameTokens whenever possible. The default is true.      */
 specifier|public
 specifier|static
 specifier|final
@@ -203,7 +206,7 @@ name|IS_BSP_COMPLIANT
 init|=
 literal|"ws-security.is-bsp-compliant"
 decl_stmt|;
-comment|/**      * This configuration tag specifies whether to self-sign a SAML Assertion or not. If this      * is set to true, then an enveloped signature will be generated when the SAML Assertion is      * constructed. The default is false.      */
+comment|/**      * Whether to self-sign a SAML Assertion or not. If this is set to true, then an enveloped signature       * will be generated when the SAML Assertion is constructed. The default is false.      */
 specifier|public
 specifier|static
 specifier|final
@@ -212,7 +215,7 @@ name|SELF_SIGN_SAML_ASSERTION
 init|=
 literal|"ws-security.self-sign-saml-assertion"
 decl_stmt|;
-comment|/**      * Set this to "false" to not cache UsernameToken nonces. The default value is "true" for      * message recipients, and "false" for message initiators. Set it to true to cache for      * both cases.      */
+comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces.       */
 specifier|public
 specifier|static
 specifier|final
@@ -221,7 +224,7 @@ name|ENABLE_NONCE_CACHE
 init|=
 literal|"ws-security.enable.nonce.cache"
 decl_stmt|;
-comment|/**      * Set this to "false" to not cache Timestamp Created Strings (these are only cached in       * conjunction with a message Signature). The default value is "true" for message recipients,       * and "false" for message initiators. Set it to true to cache for both cases.      */
+comment|/**      * Whether to cache Timestamp Created Strings (these are only cached in conjunction with a message       * Signature).The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache Timestamp Created Strings.      */
 specifier|public
 specifier|static
 specifier|final
@@ -547,23 +550,35 @@ name|USERNAME
 block|,
 name|PASSWORD
 block|,
+name|SIGNATURE_USERNAME
+block|,
+name|ENCRYPT_USERNAME
+block|,
 name|CALLBACK_HANDLER
 block|,
-name|SIGNATURE_USERNAME
+name|SAML_CALLBACK_HANDLER
 block|,
 name|SIGNATURE_PROPERTIES
 block|,
 name|SIGNATURE_CRYPTO
 block|,
-name|ENCRYPT_USERNAME
-block|,
 name|ENCRYPT_PROPERTIES
 block|,
 name|ENCRYPT_CRYPTO
 block|,
-name|TOKEN
+name|VALIDATE_TOKEN
 block|,
-name|TOKEN_ID
+name|ENABLE_REVOCATION
+block|,
+name|ALWAYS_ENCRYPT_UT
+block|,
+name|IS_BSP_COMPLIANT
+block|,
+name|SELF_SIGN_SAML_ASSERTION
+block|,
+name|ENABLE_NONCE_CACHE
+block|,
+name|ENABLE_TIMESTAMP_CACHE
 block|,
 name|STS_CLIENT
 block|,
@@ -574,8 +589,6 @@ block|,
 name|STS_TOKEN_DO_CANCEL
 block|,
 name|TIMESTAMP_TTL
-block|,
-name|ALWAYS_ENCRYPT_UT
 block|,
 name|STS_TOKEN_ACT_AS
 block|,
@@ -590,8 +603,6 @@ block|,
 name|TIMESTAMP_TOKEN_VALIDATOR
 block|,
 name|SIGNATURE_TOKEN_VALIDATOR
-block|,
-name|IS_BSP_COMPLIANT
 block|,
 name|TIMESTAMP_FUTURE_TTL
 block|,
@@ -613,11 +624,7 @@ name|KERBEROS_SPN
 block|,
 name|SPNEGO_CLIENT_ACTION
 block|,
-name|ENABLE_NONCE_CACHE
-block|,
 name|NONCE_CACHE_INSTANCE
-block|,
-name|ENABLE_TIMESTAMP_CACHE
 block|,
 name|TIMESTAMP_CACHE_INSTANCE
 block|,
@@ -630,6 +637,10 @@ block|,
 name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 block|,
 name|SUBJECT_CERT_CONSTRAINTS
+block|,
+name|TOKEN
+block|,
+name|TOKEN_ID
 block|}
 argument_list|)
 argument_list|)
