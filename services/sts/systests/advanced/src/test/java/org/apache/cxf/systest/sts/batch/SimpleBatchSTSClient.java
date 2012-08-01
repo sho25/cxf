@@ -3217,7 +3217,7 @@ name|boi
 init|=
 name|findOperation
 argument_list|(
-literal|"/RST/RequestCollection"
+literal|"/BatchIssue"
 argument_list|)
 decl_stmt|;
 name|client
@@ -3508,7 +3508,7 @@ name|boi
 init|=
 name|findOperation
 argument_list|(
-literal|"/RST/RequestCollection"
+literal|"/BatchValidate"
 argument_list|)
 decl_stmt|;
 name|client
