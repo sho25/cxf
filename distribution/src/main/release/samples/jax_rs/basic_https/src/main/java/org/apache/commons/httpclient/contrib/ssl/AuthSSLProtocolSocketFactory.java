@@ -391,6 +391,12 @@ init|=
 literal|null
 decl_stmt|;
 specifier|private
+name|String
+name|keyPassword
+init|=
+literal|null
+decl_stmt|;
+specifier|private
 name|URL
 name|truststoreUrl
 init|=
@@ -408,7 +414,7 @@ name|sslcontext
 init|=
 literal|null
 decl_stmt|;
-comment|/**      * Constructor for AuthSSLProtocolSocketFactory. Either a keystore or truststore file      * must be given. Otherwise SSL context initialization error will result.      *      * @param keystoreUrl URL of the keystore file. May be<tt>null</tt> if HTTPS client      *        authentication is not to be used.      * @param keystorePassword Password to unlock the keystore. IMPORTANT: this implementation      *        assumes that the same password is used to protect the key and the keystore itself.      * @param truststoreUrl URL of the truststore file. May be<tt>null</tt> if HTTPS server      *        authentication is not to be used.      * @param truststorePassword Password to unlock the truststore.      */
+comment|/**      * Constructor for AuthSSLProtocolSocketFactory. Either a keystore or truststore file      * must be given. Otherwise SSL context initialization error will result.      *      * @param keystoreUrl URL of the keystore file. May be<tt>null</tt> if HTTPS client      *        authentication is not to be used.      * @param keystorePassword Password to unlock the keystore.      * @param keyPassword Password to unlock any private key in the keystore.      * @param truststoreUrl URL of the truststore file. May be<tt>null</tt> if HTTPS server      *        authentication is not to be used.      * @param truststorePassword Password to unlock the truststore.      */
 specifier|public
 name|AuthSSLProtocolSocketFactory
 parameter_list|(
@@ -419,6 +425,10 @@ parameter_list|,
 specifier|final
 name|String
 name|keystorePassword
+parameter_list|,
+specifier|final
+name|String
+name|keyPassword
 parameter_list|,
 specifier|final
 name|URL
@@ -443,6 +453,12 @@ operator|.
 name|keystorePassword
 operator|=
 name|keystorePassword
+expr_stmt|;
+name|this
+operator|.
+name|keyPassword
+operator|=
+name|keyPassword
 expr_stmt|;
 name|this
 operator|.
@@ -574,7 +590,7 @@ name|keystore
 parameter_list|,
 specifier|final
 name|String
-name|password
+name|keyPassword
 parameter_list|)
 throws|throws
 name|KeyStoreException
@@ -624,11 +640,11 @@ name|init
 argument_list|(
 name|keystore
 argument_list|,
-name|password
+name|keyPassword
 operator|!=
 literal|null
 condition|?
-name|password
+name|keyPassword
 operator|.
 name|toCharArray
 argument_list|()
@@ -991,7 +1007,7 @@ name|keystore
 argument_list|,
 name|this
 operator|.
-name|keystorePassword
+name|keyPassword
 argument_list|)
 expr_stmt|;
 block|}

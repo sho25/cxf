@@ -195,7 +195,7 @@ init|=
 operator|new
 name|File
 argument_list|(
-literal|"certs/clientKeystore.jks"
+literal|"src/main/config/clientKeystore.jks"
 argument_list|)
 decl_stmt|;
 name|File
@@ -204,7 +204,7 @@ init|=
 operator|new
 name|File
 argument_list|(
-literal|"certs/commonTruststore.jks"
+literal|"src/main/config/clientKeystore.jks"
 argument_list|)
 decl_stmt|;
 comment|// Send HTTP GET request to query customer info - using portable HttpClient method
@@ -227,7 +227,9 @@ operator|.
 name|toURL
 argument_list|()
 argument_list|,
-literal|"password"
+literal|"cspass"
+argument_list|,
+literal|"ckpass"
 argument_list|,
 name|truststore
 operator|.
@@ -237,7 +239,7 @@ operator|.
 name|toURL
 argument_list|()
 argument_list|,
-literal|"password"
+literal|"cspass"
 argument_list|)
 argument_list|,
 literal|9000
