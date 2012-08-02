@@ -746,7 +746,7 @@ block|{
 comment|//if it's not an element, we need to make it one
 name|mpi
 operator|.
-name|setElementQName
+name|setConcreteName
 argument_list|(
 name|mpi
 operator|.
