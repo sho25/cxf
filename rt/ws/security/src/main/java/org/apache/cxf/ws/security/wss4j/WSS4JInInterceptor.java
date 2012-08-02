@@ -2352,12 +2352,17 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
-comment|/*          * now check the security actions: do they match, in any order?          */
 if|if
 condition|(
-operator|!
 name|ignoreActions
-operator|&&
+condition|)
+block|{
+comment|// Not applicable for the WS-SecurityPolicy case
+return|return;
+block|}
+comment|// now check the security actions: do they match, in any order?
+if|if
+condition|(
 operator|!
 name|checkReceiverResultsAnyOrder
 argument_list|(
@@ -2383,6 +2388,46 @@ operator|.
 name|INVALID_SECURITY
 argument_list|)
 throw|;
+block|}
+comment|// Now check to see if SIGNATURE_PARTS are specified
+name|String
+name|signatureParts
+init|=
+operator|(
+name|String
+operator|)
+name|getProperty
+argument_list|(
+name|msg
+argument_list|,
+name|WSHandlerConstants
+operator|.
+name|SIGNATURE_PARTS
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|signatureParts
+operator|!=
+literal|null
+condition|)
+block|{
+name|String
+name|warning
+init|=
+literal|"To enforce that particular elements were signed you must either "
+operator|+
+literal|"use WS-SecurityPolicy, or else use the CryptoCoverageChecker or "
+operator|+
+literal|"SignatureCoverageChecker"
+decl_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|warning
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|private
