@@ -246,7 +246,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"wssec.xml"
+literal|"/ClientConfig.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

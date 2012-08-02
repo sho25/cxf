@@ -99,7 +99,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"wssec.xml"
+literal|"/ServiceConfig.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
