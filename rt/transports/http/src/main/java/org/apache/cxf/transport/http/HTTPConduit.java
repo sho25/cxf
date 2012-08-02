@@ -4730,9 +4730,11 @@ literal|"The https URL hostname does not match the "
 operator|+
 literal|"Common Name (CN) on the server certificate in the client's truststore.  "
 operator|+
-literal|"To disable this check (NOT recommended for production) set the CXF "
+literal|"Make sure server certificate is correct, or to disable this check "
 operator|+
-literal|"client TLS configuration property \"disableCNCheck\" to true."
+literal|"(NOT recommended for production) set the CXF client TLS "
+operator|+
+literal|"configuration property \"disableCNCheck\" to true."
 argument_list|)
 throw|;
 block|}
