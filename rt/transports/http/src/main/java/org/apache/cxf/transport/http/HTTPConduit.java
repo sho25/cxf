@@ -4728,11 +4728,11 @@ name|IOException
 argument_list|(
 literal|"The https URL hostname does not match the "
 operator|+
-literal|"Common Name (CN) on the server certificate.  To disable this check "
+literal|"Common Name (CN) on the server certificate in the client's truststore.  "
 operator|+
-literal|"(NOT recommended for production) set the CXF client TLS configuration "
+literal|"To disable this check (NOT recommended for production) set the CXF "
 operator|+
-literal|"property \"disableCNCheck\" to true."
+literal|"client TLS configuration property \"disableCNCheck\" to true."
 argument_list|)
 throw|;
 block|}
