@@ -202,13 +202,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test the SignatureCoverageChecker, which extends the CryptoCoverageChecker to provide  * an easier way to check to see if the SOAP Body and Timestamp were signed.  */
+comment|/**  * Test the DefaultCryptoCoverageChecker, which extends the CryptoCoverageChecker to provide  * an easier way to check to see if the SOAP (1.1 + 1.2) Body was signed and/or encrypted, and   * if the Timestamp was signed.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|SignatureCheckerTest
+name|DefaultCryptoCoverageCheckerTest
 extends|extends
 name|AbstractSecurityTest
 block|{
@@ -447,16 +447,12 @@ name|doc
 argument_list|)
 decl_stmt|;
 specifier|final
-name|SignatureCoverageChecker
+name|CryptoCoverageChecker
 name|checker
 init|=
 operator|new
-name|SignatureCoverageChecker
-argument_list|(
-literal|true
-argument_list|,
-literal|true
-argument_list|)
+name|DefaultCryptoCoverageChecker
+argument_list|()
 decl_stmt|;
 name|checker
 operator|.
