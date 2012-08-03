@@ -264,6 +264,21 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+for|for
+control|(
+name|int
+name|x
+init|=
+literal|0
+init|;
+name|x
+operator|<
+literal|500
+condition|;
+name|x
+operator|++
+control|)
+block|{
 name|assertEquals
 argument_list|(
 literal|"Hello World"
@@ -276,6 +291,7 @@ literal|"World"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 operator|(
 operator|(
 name|java
