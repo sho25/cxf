@@ -147,6 +147,24 @@ name|security
 operator|.
 name|wss4j
 operator|.
+name|DefaultCryptoCoverageChecker
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|wss4j
+operator|.
 name|WSS4JInInterceptor
 import|;
 end_import
@@ -294,13 +312,18 @@ name|put
 argument_list|(
 literal|"user"
 argument_list|,
+literal|"abcd"
+argument_list|)
+expr_stmt|;
+name|outProps
+operator|.
+name|put
+argument_list|(
+literal|"signatureUser"
+argument_list|,
 literal|"clientx509v1"
 argument_list|)
 expr_stmt|;
-comment|//If you are using the patch WSS-194, then uncomment below two lines and
-comment|//comment the above "user" prop line.
-comment|//outProps.put("user", "abcd");
-comment|//outProps.put("signatureUser", "clientx509v1");
 name|outProps
 operator|.
 name|put
@@ -493,6 +516,46 @@ name|inProps
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// Check to make sure that the SOAP Body and Timestamp were signed,
+comment|// and that the SOAP Body was encrypted
+name|DefaultCryptoCoverageChecker
+name|coverageChecker
+init|=
+operator|new
+name|DefaultCryptoCoverageChecker
+argument_list|()
+decl_stmt|;
+name|coverageChecker
+operator|.
+name|setSignBody
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|coverageChecker
+operator|.
+name|setSignTimestamp
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|coverageChecker
+operator|.
+name|setEncryptBody
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|getInInterceptors
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|coverageChecker
+argument_list|)
+expr_stmt|;
 name|GreeterService
 name|service
 init|=
@@ -577,7 +640,7 @@ literal|"\n"
 argument_list|)
 expr_stmt|;
 block|}
-comment|// allow aynchronous resends to occur
+comment|// allow asynchronous resends to occur
 name|Thread
 operator|.
 name|sleep
