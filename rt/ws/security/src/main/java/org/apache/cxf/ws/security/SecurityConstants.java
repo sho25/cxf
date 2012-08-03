@@ -164,7 +164,7 @@ init|=
 literal|"ws-security.encryption.crypto"
 decl_stmt|;
 comment|//
-comment|// Boolean configuration tags, e.g. the value should be "true" or "false".
+comment|// Boolean WS-Security configuration tags, e.g. the value should be "true" or "false".
 comment|//
 comment|/**      * Whether to validate the password of a received UsernameToken or not. The default is true.      */
 specifier|public
@@ -234,9 +234,9 @@ init|=
 literal|"ws-security.enable.timestamp.cache"
 decl_stmt|;
 comment|//
-comment|// (Non-boolean) Configuration parameters
+comment|// Non-boolean WS-Security Configuration parameters
 comment|//
-comment|/**      * This configuration tag specifies the time in seconds after Creation that an incoming       * Timestamp is valid for. The default value is 300 seconds (5 minutes).      */
+comment|/**      * The time in seconds after Creation that an incoming Timestamp is valid for. The default      * value is 300 seconds (5 minutes).      */
 specifier|public
 specifier|static
 specifier|final
@@ -245,7 +245,7 @@ name|TIMESTAMP_TTL
 init|=
 literal|"ws-security.timestamp.timeToLive"
 decl_stmt|;
-comment|/**      * This configuration tag specifies the time in seconds in the future within which      * the Created time of an incoming Timestamp is valid. WSS4J rejects by default any      * timestamp which is "Created" in the future, and so there could potentially be      * problems in a scenario where a client's clock is slightly askew. The default      * value for this parameter is "0", meaning that no future-created Timestamps are      * allowed.      */
+comment|/**      * The time in seconds in the future within which the Created time of an incoming       * Timestamp is valid. The default value is "60", to avoid problems where clocks are       * slightly askew. To reject all future-created Timestamps, set this value to "0".       */
 specifier|public
 specifier|static
 specifier|final
@@ -254,7 +254,7 @@ name|TIMESTAMP_FUTURE_TTL
 init|=
 literal|"ws-security.timestamp.futureTimeToLive"
 decl_stmt|;
-comment|/**      * This configuration tag specifies the attribute URI of the SAML attributestatement      * where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
+comment|/**      * The attribute URI of the SAML AttributeStatement where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
 specifier|public
 specifier|static
 specifier|final
@@ -263,6 +263,7 @@ name|SAML_ROLE_ATTRIBUTENAME
 init|=
 literal|"ws-security.saml-role-attributename"
 decl_stmt|;
+comment|/**      * A reference to the KerberosClient class used to obtain a service ticket.       */
 specifier|public
 specifier|static
 specifier|final
@@ -270,6 +271,15 @@ name|String
 name|KERBEROS_CLIENT
 init|=
 literal|"ws-security.kerberos.client"
+decl_stmt|;
+comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SPNEGO_CLIENT_ACTION
+init|=
+literal|"ws-security.spnego.client.action"
 decl_stmt|;
 comment|/**      * The JAAS Context name to use for Kerberos. This is currently only supported for SPNEGO.      */
 specifier|public
@@ -288,15 +298,6 @@ name|String
 name|KERBEROS_SPN
 init|=
 literal|"ws-security.kerberos.spn"
-decl_stmt|;
-comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SPNEGO_CLIENT_ACTION
-init|=
-literal|"ws-security.spnego.client.action"
 decl_stmt|;
 comment|/**      * This holds a reference to a ReplayCache instance used to cache UsernameToken nonces. The      * default instance that is used is the EHCacheReplayCache.      */
 specifier|public
@@ -334,7 +335,7 @@ name|TOKEN_STORE_CACHE_INSTANCE
 init|=
 literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
 decl_stmt|;
-comment|/**      * This configuration tag is a comma separated String of regular expressions which      * will be applied to the subject DN of the certificate used for signature      * validation, after trust verification of the certificate chain associated with the       * certificate. These constraints are not used when the certificate is contained in      * the keystore (direct trust).      */
+comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the  certificate. These constraints are not used when the certificate       * is contained in the keystore (direct trust).      */
 specifier|public
 specifier|static
 specifier|final
@@ -346,6 +347,7 @@ decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
 comment|//
+comment|/**      * The WSS4J Validator instance to use to validate UsernameTokens. The default value is the      * UsernameTokenValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -354,6 +356,7 @@ name|USERNAME_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.ut.validator"
 decl_stmt|;
+comment|/**      * The WSS4J Validator instance to use to validate SAML 1.1 Tokens. The default value is the      * SamlAssertionValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -362,6 +365,7 @@ name|SAML1_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.saml1.validator"
 decl_stmt|;
+comment|/**      * The WSS4J Validator instance to use to validate SAML 2.0 Tokens. The default value is the      * SamlAssertionValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -370,6 +374,7 @@ name|SAML2_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.saml2.validator"
 decl_stmt|;
+comment|/**      * The WSS4J Validator instance to use to validate Timestamps. The default value is the      * TimestampValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -378,6 +383,7 @@ name|TIMESTAMP_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.timestamp.validator"
 decl_stmt|;
+comment|/**      * The WSS4J Validator instance to use to validate trust in credentials used in      * Signature verification. The default value is the SignatureTrustValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -386,6 +392,7 @@ name|SIGNATURE_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.signature.validator"
 decl_stmt|;
+comment|/**      * The WSS4J Validator instance to use to validate BinarySecurityTokens. The default value       * is the NoOpValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -394,6 +401,7 @@ name|BST_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.bst.validator"
 decl_stmt|;
+comment|/**      * The WSS4J Validator instance to use to validate SecurityContextTokens. The default value is       * the NoOpValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -405,6 +413,7 @@ decl_stmt|;
 comment|//
 comment|// STS Client Configuration tags
 comment|//
+comment|/**      * A reference to the STSClient class used to communicate with the STS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -413,6 +422,7 @@ name|STS_CLIENT
 init|=
 literal|"ws-security.sts.client"
 decl_stmt|;
+comment|/**      * The "AppliesTo" address to send to the STS. The default is the endpoint address of the       * service provider.      */
 specifier|public
 specifier|static
 specifier|final
@@ -421,6 +431,7 @@ name|STS_APPLIES_TO
 init|=
 literal|"ws-security.sts.applies-to"
 decl_stmt|;
+comment|/**      * Whether to write out an X509Certificate structure in UseKey/KeyInfo, or whether to write      * out a KeyValue structure. The default value is "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -429,6 +440,7 @@ name|STS_TOKEN_USE_CERT_FOR_KEYINFO
 init|=
 literal|"ws-security.sts.token.usecert"
 decl_stmt|;
+comment|/**      * Whether to cancel a token when using SecureConversation after successful invocation. The      * default is "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -446,7 +458,7 @@ name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 init|=
 literal|"ws-security.cache.issued.token.in.endpoint"
 decl_stmt|;
-comment|/**      * Set this property to avoid STS client trying send WS-MetadataExchange call using      * STS EPR WSA address when the endpoint contract contains no WS-MetadataExchange info.      */
+comment|/**      * Whether to avoid STS client trying send WS-MetadataExchange call using      * STS EPR WSA address when the endpoint contract contains no WS-MetadataExchange info.      * The default value is "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -455,7 +467,7 @@ name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 init|=
 literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
 decl_stmt|;
-comment|/**      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
+comment|/**      *       * A Crypto object to be used for the STS. If this is not defined then the       * {@link STS_TOKEN_PROPERTIES} is used instead.      *       * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response.      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static
 specifier|final
@@ -464,6 +476,7 @@ name|STS_TOKEN_CRYPTO
 init|=
 literal|"ws-security.sts.token.crypto"
 decl_stmt|;
+comment|/**      * The Crypto property configuration to use for the STS, if {@link STS_TOKEN_CRYPTO} is not      * set instead.      * The value of this tag must be either:      * a) A Java Properties object that contains the Crypto configuration.      * b) The path of the Crypto property file that contains the Crypto configuration.      * c) A URL that points to the Crypto property file that contains the Crypto configuration.      */
 specifier|public
 specifier|static
 specifier|final
@@ -472,6 +485,7 @@ name|STS_TOKEN_PROPERTIES
 init|=
 literal|"ws-security.sts.token.properties"
 decl_stmt|;
+comment|/**      * The alias name in the keystore to get the user's public key to send to the STS for the      * PublicKey KeyType case.      */
 specifier|public
 specifier|static
 specifier|final
@@ -480,6 +494,7 @@ name|STS_TOKEN_USERNAME
 init|=
 literal|"ws-security.sts.token.username"
 decl_stmt|;
+comment|/**      * The token to be sent to the STS in an "ActAs" field. It can be either:      * a) A String      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      */
 specifier|public
 specifier|static
 specifier|final
@@ -488,6 +503,7 @@ name|STS_TOKEN_ACT_AS
 init|=
 literal|"ws-security.sts.token.act-as"
 decl_stmt|;
+comment|/**      * The token to be sent to the STS in an "OnBehalfOf" field. It can be either:      * a) A String      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      */
 specifier|public
 specifier|static
 specifier|final
@@ -580,49 +596,19 @@ name|ENABLE_NONCE_CACHE
 block|,
 name|ENABLE_TIMESTAMP_CACHE
 block|,
-name|STS_CLIENT
-block|,
-name|STS_TOKEN_PROPERTIES
-block|,
-name|STS_TOKEN_CRYPTO
-block|,
-name|STS_TOKEN_DO_CANCEL
-block|,
 name|TIMESTAMP_TTL
-block|,
-name|STS_TOKEN_ACT_AS
-block|,
-name|STS_TOKEN_USERNAME
-block|,
-name|STS_TOKEN_USE_CERT_FOR_KEYINFO
-block|,
-name|SAML1_TOKEN_VALIDATOR
-block|,
-name|SAML2_TOKEN_VALIDATOR
-block|,
-name|TIMESTAMP_TOKEN_VALIDATOR
-block|,
-name|SIGNATURE_TOKEN_VALIDATOR
 block|,
 name|TIMESTAMP_FUTURE_TTL
 block|,
-name|BST_TOKEN_VALIDATOR
-block|,
-name|SAML_CALLBACK_HANDLER
-block|,
-name|STS_TOKEN_ON_BEHALF_OF
+name|SAML_ROLE_ATTRIBUTENAME
 block|,
 name|KERBEROS_CLIENT
 block|,
-name|SCT_TOKEN_VALIDATOR
-block|,
-name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
+name|SPNEGO_CLIENT_ACTION
 block|,
 name|KERBEROS_JAAS_CONTEXT_NAME
 block|,
 name|KERBEROS_SPN
-block|,
-name|SPNEGO_CLIENT_ACTION
 block|,
 name|NONCE_CACHE_INSTANCE
 block|,
@@ -632,11 +618,43 @@ name|CACHE_CONFIG_FILE
 block|,
 name|TOKEN_STORE_CACHE_INSTANCE
 block|,
-name|SAML_ROLE_ATTRIBUTENAME
+name|SUBJECT_CERT_CONSTRAINTS
+block|,
+name|USERNAME_TOKEN_VALIDATOR
+block|,
+name|SAML1_TOKEN_VALIDATOR
+block|,
+name|SAML2_TOKEN_VALIDATOR
+block|,
+name|TIMESTAMP_TOKEN_VALIDATOR
+block|,
+name|SIGNATURE_TOKEN_VALIDATOR
+block|,
+name|BST_TOKEN_VALIDATOR
+block|,
+name|SCT_TOKEN_VALIDATOR
+block|,
+name|STS_CLIENT
+block|,
+name|STS_APPLIES_TO
+block|,
+name|STS_TOKEN_USE_CERT_FOR_KEYINFO
+block|,
+name|STS_TOKEN_DO_CANCEL
+block|,
+name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 block|,
 name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 block|,
-name|SUBJECT_CERT_CONSTRAINTS
+name|STS_TOKEN_CRYPTO
+block|,
+name|STS_TOKEN_PROPERTIES
+block|,
+name|STS_TOKEN_USERNAME
+block|,
+name|STS_TOKEN_ACT_AS
+block|,
+name|STS_TOKEN_ON_BEHALF_OF
 block|,
 name|TOKEN
 block|,
