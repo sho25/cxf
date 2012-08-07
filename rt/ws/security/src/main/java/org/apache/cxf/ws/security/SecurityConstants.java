@@ -188,7 +188,7 @@ comment|// WebLogic and WCF always encrypt UsernameTokens whenever possible
 comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
 comment|//Be default, we will encrypt as well for interop reasons.  However, this
 comment|//setting can be set to false to turn that off.
-comment|/**      * Whether to always encrypt UsernameTokens whenever possible. The default is true.      */
+comment|/**      * Whether to always encrypt UsernameTokens that are defined as a SupportingToken. The default       * is true. This should not be set to false in a production environment, as it exposes the       * password (or the digest of the password) on the wire.      */
 specifier|public
 specifier|static
 specifier|final
@@ -236,7 +236,7 @@ decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
-comment|/**      * The time in seconds after Creation that an incoming Timestamp is valid for. The default      * value is 300 seconds (5 minutes).      */
+comment|/**      * The time in seconds to append to the Creation value of an incoming Timestamp to determine      * whether to accept the Timestamp as valid or not. The default value is 300 seconds (5 minutes).      */
 specifier|public
 specifier|static
 specifier|final
