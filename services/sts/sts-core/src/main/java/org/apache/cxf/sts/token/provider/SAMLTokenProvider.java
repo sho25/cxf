@@ -2375,38 +2375,38 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|// If no statements, then default to the DefaultAttributeStatementProvider and the
-comment|// ClaimsAttributeStatementProvider
+comment|// If no providers have been configured, then default to the
+comment|// DefaultAttributeStatementProvider and the ClaimsAttributeStatementProvider
 if|if
 condition|(
 operator|(
-name|attrBeanList
+name|attributeStatementProviders
 operator|==
 literal|null
 operator|||
-name|attrBeanList
+name|attributeStatementProviders
 operator|.
 name|isEmpty
 argument_list|()
 operator|)
 operator|&&
 operator|(
-name|authBeanList
+name|authenticationStatementProviders
 operator|==
 literal|null
 operator|||
-name|authBeanList
+name|authenticationStatementProviders
 operator|.
 name|isEmpty
 argument_list|()
 operator|)
 operator|&&
 operator|(
-name|authDecisionBeanList
+name|authDecisionStatementProviders
 operator|==
 literal|null
 operator|||
-name|authDecisionBeanList
+name|authDecisionStatementProviders
 operator|.
 name|isEmpty
 argument_list|()
