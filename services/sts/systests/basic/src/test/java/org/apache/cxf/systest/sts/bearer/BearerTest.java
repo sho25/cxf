@@ -506,6 +506,10 @@ name|equals
 argument_list|(
 name|deployment
 argument_list|)
+operator|||
+name|deployment
+operator|==
+literal|null
 condition|)
 block|{
 name|standalone
