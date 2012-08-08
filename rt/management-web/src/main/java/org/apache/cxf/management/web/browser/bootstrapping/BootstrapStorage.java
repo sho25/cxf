@@ -823,6 +823,9 @@ name|Variant
 argument_list|(
 name|mime
 argument_list|,
+operator|(
+name|String
+operator|)
 literal|null
 argument_list|,
 name|staticFile
