@@ -1528,6 +1528,13 @@ name|serviceBinding2
 operator|.
 name|getJaxwsClass
 argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|serviceBinding2
+operator|.
+name|getJaxwsClass
+argument_list|()
 operator|.
 name|getComments
 argument_list|()
