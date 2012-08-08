@@ -447,6 +447,9 @@ name|Variant
 argument_list|(
 name|mt1
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|"zip"
@@ -465,6 +468,9 @@ name|Variant
 argument_list|(
 name|mt1
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|"identity"
@@ -483,6 +489,9 @@ name|Variant
 argument_list|(
 name|mt2
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|"zip"
@@ -501,6 +510,9 @@ name|Variant
 argument_list|(
 name|mt2
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|"identity"
@@ -991,6 +1003,9 @@ name|Variant
 argument_list|(
 literal|null
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|"zip"
@@ -1009,6 +1024,9 @@ name|Variant
 argument_list|(
 literal|null
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|"identity"
@@ -1093,6 +1111,9 @@ argument_list|,
 literal|"*"
 argument_list|)
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|null
@@ -1117,6 +1138,9 @@ argument_list|,
 literal|"xml"
 argument_list|)
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|null

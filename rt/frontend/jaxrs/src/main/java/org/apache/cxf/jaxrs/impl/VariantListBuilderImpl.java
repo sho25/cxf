@@ -370,6 +370,9 @@ name|Variant
 argument_list|(
 literal|null
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 name|enc
@@ -436,6 +439,9 @@ name|Variant
 argument_list|(
 name|type
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 name|enc
@@ -455,6 +461,9 @@ name|Variant
 argument_list|(
 name|type
 argument_list|,
+operator|(
+name|Locale
+operator|)
 literal|null
 argument_list|,
 literal|null

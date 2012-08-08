@@ -354,11 +354,9 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|Response
-name|getResponse
+name|getServerResponse
 parameter_list|()
 block|{
 name|Response
@@ -816,7 +814,7 @@ block|{
 name|Response
 name|response
 init|=
-name|getResponse
+name|getServerResponse
 argument_list|()
 decl_stmt|;
 try|try

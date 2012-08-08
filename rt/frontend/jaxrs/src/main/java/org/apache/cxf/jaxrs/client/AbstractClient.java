@@ -1452,6 +1452,8 @@ return|return
 literal|null
 return|;
 block|}
+try|try
+block|{
 return|return
 name|state
 operator|.
@@ -1464,6 +1466,21 @@ operator|.
 name|build
 argument_list|()
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|CloneNotSupportedException
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|ClientWebApplicationException
+argument_list|(
+name|ex
+argument_list|)
+throw|;
+block|}
 block|}
 comment|/**      * {@inheritDoc}      */
 specifier|public

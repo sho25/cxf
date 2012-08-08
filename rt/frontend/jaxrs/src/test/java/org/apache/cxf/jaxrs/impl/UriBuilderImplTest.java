@@ -1797,6 +1797,9 @@ argument_list|()
 operator|.
 name|uri
 argument_list|(
+operator|(
+name|URI
+operator|)
 literal|null
 argument_list|)
 expr_stmt|;
