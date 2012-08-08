@@ -121,6 +121,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Locale
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Level
@@ -824,7 +834,7 @@ argument_list|(
 name|mime
 argument_list|,
 operator|(
-name|String
+name|Locale
 operator|)
 literal|null
 argument_list|,
