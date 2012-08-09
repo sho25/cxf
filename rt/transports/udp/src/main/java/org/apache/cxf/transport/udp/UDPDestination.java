@@ -704,6 +704,15 @@ argument_list|)
 expr_stmt|;
 name|dcfg
 operator|.
+name|setSendBufferSize
+argument_list|(
+literal|64
+operator|*
+literal|1024
+argument_list|)
+expr_stmt|;
+name|dcfg
+operator|.
 name|setReuseAddress
 argument_list|(
 literal|true

@@ -468,7 +468,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testLargRequest
+name|testLargeRequest
 parameter_list|()
 throws|throws
 name|Exception
@@ -519,7 +519,7 @@ literal|0
 init|;
 name|x
 operator|<
-literal|32100
+literal|10000
 condition|;
 name|x
 operator|++
