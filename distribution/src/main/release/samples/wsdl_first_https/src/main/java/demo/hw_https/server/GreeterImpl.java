@@ -59,7 +59,7 @@ literal|"http://apache.org/hello_world_soap_http"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./wsdl/hello_world.wsdl"
+literal|"file:./src/main/config/hello_world.wsdl"
 argument_list|)
 specifier|public
 class|class
