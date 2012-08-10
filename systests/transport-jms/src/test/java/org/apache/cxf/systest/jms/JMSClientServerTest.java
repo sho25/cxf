@@ -1118,7 +1118,7 @@ operator|=
 operator|new
 name|EmbeddedJMSBrokerLauncher
 argument_list|(
-literal|"vm://JMSClientServerTest"
+literal|"vm://JMSClientServerTest?jms.watchTopicAdvisories=false"
 argument_list|)
 expr_stmt|;
 name|launchServer
@@ -7192,7 +7192,7 @@ literal|"&jndiConnectionFactoryName=ConnectionFactory&jndiURL="
 operator|+
 name|broker
 operator|.
-name|getBrokerURL
+name|getEncodedBrokerURL
 argument_list|()
 decl_stmt|;
 if|if

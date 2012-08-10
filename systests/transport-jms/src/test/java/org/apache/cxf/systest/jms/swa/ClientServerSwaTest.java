@@ -313,7 +313,7 @@ name|ADDRESS
 operator|+
 name|broker
 operator|.
-name|getBrokerURL
+name|getEncodedBrokerURL
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -372,7 +372,7 @@ operator|=
 operator|new
 name|EmbeddedJMSBrokerLauncher
 argument_list|(
-literal|"vm://ClientServerSwaTest"
+literal|"vm://ClientServerSwaTest?jms.watchTopicAdvisories=false"
 argument_list|)
 expr_stmt|;
 name|System
@@ -483,7 +483,7 @@ name|ADDRESS
 operator|+
 name|broker
 operator|.
-name|getBrokerURL
+name|getEncodedBrokerURL
 argument_list|()
 argument_list|)
 expr_stmt|;

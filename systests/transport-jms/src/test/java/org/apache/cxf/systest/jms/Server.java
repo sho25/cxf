@@ -564,7 +564,7 @@ literal|"&jndiConnectionFactoryName=ConnectionFactory&jndiURL="
 operator|+
 name|broker
 operator|.
-name|getBrokerURL
+name|getEncodedBrokerURL
 argument_list|()
 decl_stmt|;
 name|Endpoint
@@ -596,7 +596,7 @@ literal|"&jndiConnectionFactoryName=ConnectionFactory&jndiURL="
 operator|+
 name|broker
 operator|.
-name|getBrokerURL
+name|getEncodedBrokerURL
 argument_list|()
 decl_stmt|;
 name|Endpoint
@@ -631,7 +631,7 @@ literal|"&jndiConnectionFactoryName=ConnectionFactory&jndiURL="
 operator|+
 name|broker
 operator|.
-name|getBrokerURL
+name|getEncodedBrokerURL
 argument_list|()
 decl_stmt|;
 name|Hello
