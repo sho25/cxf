@@ -413,6 +413,22 @@ name|BindingOperationInfo
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|model
+operator|.
+name|EndpointInfo
+import|;
+end_import
+
 begin_comment
 comment|/**  * Bean to help easily create Server endpoints for JAX-WS.  *<pre>  * JaxWsServerFactoryBean sf = new JaxWsServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://acme.com/myService");  * sf.create();  *</pre>  * This will start a server and register it with the ServerManager.   */
 end_comment
@@ -1069,6 +1085,32 @@ name|isPopulateFromClass
 argument_list|()
 condition|)
 block|{
+for|for
+control|(
+name|EndpointInfo
+name|ei
+range|:
+name|bindingInfo
+operator|.
+name|getService
+argument_list|()
+operator|.
+name|getEndpoints
+argument_list|()
+control|)
+block|{
+name|ei
+operator|.
+name|setProperty
+argument_list|(
+literal|"soap.no.validate.parts"
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
+block|}
 comment|//Provider, but no wsdl.  Synthetic ops
 for|for
 control|(
