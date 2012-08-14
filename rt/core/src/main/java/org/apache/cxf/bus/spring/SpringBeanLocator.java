@@ -702,6 +702,10 @@ try|try
 block|{
 name|t
 operator|=
+name|type
+operator|.
+name|cast
+argument_list|(
 name|context
 operator|.
 name|getBean
@@ -709,6 +713,7 @@ argument_list|(
 name|name
 argument_list|,
 name|type
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -898,6 +903,10 @@ name|lst
 operator|.
 name|add
 argument_list|(
+name|type
+operator|.
+name|cast
+argument_list|(
 name|context
 operator|.
 name|getBean
@@ -905,6 +914,7 @@ argument_list|(
 name|n
 argument_list|,
 name|type
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

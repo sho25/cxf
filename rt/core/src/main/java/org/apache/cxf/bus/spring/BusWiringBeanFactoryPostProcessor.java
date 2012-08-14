@@ -1185,6 +1185,12 @@ expr_stmt|;
 block|}
 block|}
 return|return
+name|Bus
+operator|.
+name|class
+operator|.
+name|cast
+argument_list|(
 name|ctx
 operator|.
 name|getBean
@@ -1196,6 +1202,7 @@ argument_list|,
 name|Bus
 operator|.
 name|class
+argument_list|)
 argument_list|)
 return|;
 block|}

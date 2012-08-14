@@ -318,6 +318,10 @@ name|resourceType
 operator|.
 name|cast
 argument_list|(
+name|resourceType
+operator|.
+name|cast
+argument_list|(
 name|context
 operator|.
 name|getBean
@@ -325,6 +329,7 @@ argument_list|(
 name|resourceName
 argument_list|,
 name|resourceType
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -102,15 +102,17 @@ comment|/**  *   */
 end_comment
 
 begin_class
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 specifier|public
 specifier|final
 class|class
 name|OldSpringSupport
 implements|implements
 name|FactoryBean
-argument_list|<
-name|Object
-argument_list|>
 implements|,
 name|BeanNameAware
 block|{
