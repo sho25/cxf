@@ -1084,7 +1084,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testGetMissingContentLegth
+name|testGetMissingContentLength
 parameter_list|()
 throws|throws
 name|Exception
@@ -1139,7 +1139,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testGetContentLegth
+name|testGetContentLength
 parameter_list|()
 throws|throws
 name|Exception
