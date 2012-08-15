@@ -328,6 +328,11 @@ block|}
 block|}
 annotation|@
 name|Logging
+argument_list|(
+name|pretty
+operator|=
+literal|true
+argument_list|)
 annotation|@
 name|WebService
 annotation|@
