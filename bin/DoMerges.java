@@ -3069,6 +3069,7 @@ operator|+
 name|ver
 argument_list|)
 expr_stmt|;
+comment|//File logF = getLogFile("Blocking", ver.toString(), blocks);
 name|File
 name|logF
 init|=
@@ -3081,7 +3082,12 @@ operator|.
 name|toString
 argument_list|()
 argument_list|,
-name|blocks
+operator|new
+name|ArrayList
+argument_list|<
+name|VerLog
+argument_list|>
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|p
