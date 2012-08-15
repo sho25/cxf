@@ -4987,6 +4987,11 @@ name|append
 argument_list|(
 name|s
 argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|"\n"
+argument_list|)
 expr_stmt|;
 block|}
 name|char
