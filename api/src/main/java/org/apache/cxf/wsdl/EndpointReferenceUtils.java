@@ -3306,6 +3306,13 @@ return|return
 literal|""
 return|;
 block|}
+if|if
+condition|(
+name|bus
+operator|!=
+literal|null
+condition|)
+block|{
 name|WSDLManager
 name|manager
 init|=
@@ -3351,6 +3358,7 @@ name|e
 parameter_list|)
 block|{
 comment|//ignore
+block|}
 block|}
 block|}
 return|return
