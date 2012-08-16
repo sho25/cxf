@@ -69,7 +69,7 @@ name|xml
 operator|.
 name|bind
 operator|.
-name|JAXBException
+name|JAXBContext
 import|;
 end_import
 
@@ -81,7 +81,7 @@ name|xml
 operator|.
 name|bind
 operator|.
-name|Marshaller
+name|JAXBException
 import|;
 end_import
 
@@ -118,6 +118,22 @@ operator|.
 name|dom
 operator|.
 name|Element
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|binding
+operator|.
+name|soap
+operator|.
+name|SoapMessage
 import|;
 end_import
 
@@ -299,7 +315,7 @@ operator|=
 name|mapCodec
 expr_stmt|;
 block|}
-comment|/**      * Encode message in exposed version.      *       * @param exposeAs specifies the WS-Addressing version to expose      * @param value the value to encode      * @param localName the localName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB marshaller to use      */
+comment|/**      * Encode message in exposed version.      *       * @param exposeAs specifies the WS-Addressing version to expose      * @param value the value to encode      * @param localName the localName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
 specifier|public
 parameter_list|<
 name|T
@@ -307,6 +323,9 @@ parameter_list|>
 name|void
 name|encodeAsExposed
 parameter_list|(
+name|SoapMessage
+name|message
+parameter_list|,
 name|String
 name|exposeAs
 parameter_list|,
@@ -322,11 +341,11 @@ name|T
 argument_list|>
 name|clz
 parameter_list|,
-name|Element
-name|header
-parameter_list|,
-name|Marshaller
+name|JAXBContext
 name|marshaller
+parameter_list|,
+name|boolean
+name|mustUnderstand
 parameter_list|)
 throws|throws
 name|JAXBException
@@ -352,6 +371,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|value
 argument_list|,
 operator|new
@@ -364,9 +385,9 @@ argument_list|)
 argument_list|,
 name|clz
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
@@ -399,6 +420,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|convert
 argument_list|(
 operator|(
@@ -419,9 +442,9 @@ name|AttributedURI
 operator|.
 name|class
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
@@ -442,6 +465,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|convert
 argument_list|(
 operator|(
@@ -462,9 +487,9 @@ name|Names200408
 operator|.
 name|EPR_TYPE
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
@@ -485,6 +510,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|convert
 argument_list|(
 operator|(
@@ -505,9 +532,9 @@ name|Relationship
 operator|.
 name|class
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
@@ -541,6 +568,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|convertTo200403
 argument_list|(
 operator|(
@@ -573,9 +602,9 @@ name|AttributedURI
 operator|.
 name|class
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
@@ -596,6 +625,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|convertTo200403
 argument_list|(
 operator|(
@@ -616,9 +647,9 @@ name|Names200403
 operator|.
 name|EPR_TYPE
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
@@ -639,6 +670,8 @@ name|codec
 operator|.
 name|encodeMAP
 argument_list|(
+name|message
+argument_list|,
 name|convertTo200403
 argument_list|(
 operator|(
@@ -671,9 +704,9 @@ name|Relationship
 operator|.
 name|class
 argument_list|,
-name|header
-argument_list|,
 name|marshaller
+argument_list|,
+name|mustUnderstand
 argument_list|)
 expr_stmt|;
 block|}
