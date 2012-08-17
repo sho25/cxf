@@ -161,7 +161,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -303,14 +303,14 @@ specifier|private
 specifier|final
 name|Collection
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|features
 init|=
 operator|new
 name|CopyOnWriteArrayList
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -1079,7 +1079,7 @@ condition|)
 block|{
 for|for
 control|(
-name|AbstractFeature
+name|Feature
 name|f
 range|:
 name|features
@@ -1238,7 +1238,7 @@ block|}
 specifier|public
 name|Collection
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getFeatures
 parameter_list|()
@@ -1254,7 +1254,9 @@ name|setFeatures
 parameter_list|(
 name|Collection
 argument_list|<
-name|AbstractFeature
+name|?
+extends|extends
+name|Feature
 argument_list|>
 name|features
 parameter_list|)

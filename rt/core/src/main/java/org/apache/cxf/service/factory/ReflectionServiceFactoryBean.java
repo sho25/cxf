@@ -1632,8 +1632,6 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|?
-extends|extends
 name|Feature
 argument_list|>
 name|features
@@ -15706,8 +15704,6 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|?
-extends|extends
 name|Feature
 argument_list|>
 name|getFeatures
@@ -15734,7 +15730,12 @@ name|this
 operator|.
 name|features
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|features2
+argument_list|)
 expr_stmt|;
 block|}
 specifier|private

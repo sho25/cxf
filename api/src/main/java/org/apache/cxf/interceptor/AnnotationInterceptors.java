@@ -99,7 +99,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -981,7 +981,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getFeatures
 parameter_list|()
@@ -993,7 +993,7 @@ name|Features
 operator|.
 name|class
 argument_list|,
-name|AbstractFeature
+name|Feature
 operator|.
 name|class
 argument_list|)

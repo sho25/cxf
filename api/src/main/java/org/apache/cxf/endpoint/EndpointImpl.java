@@ -21,16 +21,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|List
 import|;
 end_import
@@ -226,6 +216,20 @@ operator|.
 name|feature
 operator|.
 name|Feature
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|CastUtils
 import|;
 end_import
 
@@ -856,7 +860,7 @@ name|properties
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @return the list of fearures<b>already</b> activated for this endpoint.      */
+comment|/**      * @return the list of features<b>already</b> activated for this endpoint.      */
 specifier|public
 name|List
 argument_list|<
@@ -869,7 +873,7 @@ return|return
 name|activeFeatures
 return|;
 block|}
-comment|/**      * @param the list of fearures<b>already</b> activated for this endpoint.      */
+comment|/**      * @param the list of features<b>already</b> activated for this endpoint.      */
 specifier|public
 name|void
 name|initializeActiveFeatures
@@ -885,11 +889,9 @@ parameter_list|)
 block|{
 name|activeFeatures
 operator|=
-operator|new
-name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+name|CastUtils
+operator|.
+name|cast
 argument_list|(
 name|features
 argument_list|)

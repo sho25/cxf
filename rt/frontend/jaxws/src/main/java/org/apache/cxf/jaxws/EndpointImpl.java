@@ -509,7 +509,21 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|CastUtils
 import|;
 end_import
 
@@ -799,7 +813,7 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|features
 decl_stmt|;
@@ -3720,7 +3734,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getFeatures
 parameter_list|()
@@ -3737,7 +3751,7 @@ operator|=
 operator|new
 name|ArrayList
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -3752,7 +3766,9 @@ name|setFeatures
 parameter_list|(
 name|List
 argument_list|<
-name|AbstractFeature
+name|?
+extends|extends
+name|Feature
 argument_list|>
 name|features
 parameter_list|)
@@ -3761,7 +3777,12 @@ name|this
 operator|.
 name|features
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|features
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public

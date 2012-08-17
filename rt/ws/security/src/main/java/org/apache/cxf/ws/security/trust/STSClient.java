@@ -549,7 +549,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -1942,7 +1942,7 @@ decl_stmt|;
 specifier|protected
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|features
 decl_stmt|;
@@ -3621,7 +3621,7 @@ condition|)
 block|{
 for|for
 control|(
-name|AbstractFeature
+name|Feature
 name|f
 range|:
 name|features
@@ -9919,20 +9919,27 @@ name|setFeatures
 parameter_list|(
 name|List
 argument_list|<
-name|AbstractFeature
+name|?
+extends|extends
+name|Feature
 argument_list|>
 name|f
 parameter_list|)
 block|{
 name|features
 operator|=
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|f
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getFeatures
 parameter_list|()
