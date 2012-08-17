@@ -1309,6 +1309,22 @@ name|ws
 operator|.
 name|addressing
 operator|.
+name|MAPAggregator
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|addressing
+operator|.
 name|WSAddressingFeature
 import|;
 end_import
@@ -3507,6 +3523,8 @@ block|{
 name|setupUDP
 argument_list|(
 name|sb
+argument_list|,
+name|ei
 argument_list|)
 expr_stmt|;
 block|}
@@ -3522,6 +3540,9 @@ name|setupUDP
 parameter_list|(
 name|InterceptorProvider
 name|p
+parameter_list|,
+name|EndpointInfo
+name|ei
 parameter_list|)
 block|{
 comment|//soap UDP requires ws-addressing turned on
@@ -3727,6 +3748,20 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+argument_list|)
+expr_stmt|;
+comment|// don't send the ReplyTo headers if we don't need to either
+name|ei
+operator|.
+name|setProperty
+argument_list|(
+name|MAPAggregator
+operator|.
+name|WRITE_ANONYMOUS_REPLY_TO
+argument_list|,
+name|Boolean
+operator|.
+name|FALSE
 argument_list|)
 expr_stmt|;
 block|}
@@ -6242,6 +6277,11 @@ comment|//soap.udp REQUIRES usage of WS-Addressing... we need to turn this on
 name|setupUDP
 argument_list|(
 name|e
+argument_list|,
+name|e
+operator|.
+name|getEndpointInfo
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
