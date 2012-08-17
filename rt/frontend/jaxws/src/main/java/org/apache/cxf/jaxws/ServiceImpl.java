@@ -657,7 +657,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -4394,7 +4394,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
-name|AbstractFeature
+name|Feature
 name|af
 range|:
 name|endpoint

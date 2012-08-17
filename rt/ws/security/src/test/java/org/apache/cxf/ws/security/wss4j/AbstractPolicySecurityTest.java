@@ -323,7 +323,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -3276,7 +3276,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getActiveFeatures
 parameter_list|()

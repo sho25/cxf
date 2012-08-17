@@ -107,7 +107,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -687,7 +687,7 @@ comment|/**      * @return the list of fearures<b>already</b> activated for this
 specifier|public
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getActiveFeatures
 parameter_list|()

@@ -189,7 +189,9 @@ name|getActive
 parameter_list|(
 name|List
 argument_list|<
-name|AbstractFeature
+name|?
+extends|extends
+name|Feature
 argument_list|>
 name|features
 parameter_list|,
@@ -214,7 +216,7 @@ condition|)
 block|{
 for|for
 control|(
-name|AbstractFeature
+name|Feature
 name|feature
 range|:
 name|features

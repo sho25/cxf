@@ -353,7 +353,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -1674,7 +1674,7 @@ condition|)
 block|{
 for|for
 control|(
-name|AbstractFeature
+name|Feature
 name|feature
 range|:
 name|endpoint

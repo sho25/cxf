@@ -259,7 +259,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -354,14 +354,14 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|features
 init|=
 operator|new
 name|ArrayList
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -1424,7 +1424,7 @@ block|}
 specifier|public
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getFeatures
 parameter_list|()
@@ -1439,7 +1439,9 @@ name|setFeatures
 parameter_list|(
 name|List
 argument_list|<
-name|AbstractFeature
+name|?
+extends|extends
+name|Feature
 argument_list|>
 name|f
 parameter_list|)
@@ -1448,7 +1450,14 @@ name|this
 operator|.
 name|features
 operator|=
+operator|new
+name|ArrayList
+argument_list|<
+name|Feature
+argument_list|>
+argument_list|(
 name|f
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public

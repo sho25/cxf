@@ -129,7 +129,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -539,7 +539,7 @@ argument_list|)
 expr_stmt|;
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|features
 init|=
@@ -699,7 +699,9 @@ argument_list|)
 expr_stmt|;
 name|List
 argument_list|<
-name|AbstractFeature
+name|?
+extends|extends
+name|Feature
 argument_list|>
 name|features
 init|=
@@ -866,7 +868,7 @@ argument_list|)
 expr_stmt|;
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|features
 init|=

@@ -637,7 +637,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -2426,7 +2426,7 @@ block|{
 comment|// the feature list to be searched is the endpoint and the bus's lists
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|endpointFeatures
 init|=
@@ -2445,7 +2445,7 @@ argument_list|()
 decl_stmt|;
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|allFeatures
 decl_stmt|;
@@ -2467,7 +2467,7 @@ operator|=
 operator|new
 name|ArrayList
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 argument_list|(
 name|endpointFeatures
@@ -2517,7 +2517,7 @@ expr_stmt|;
 block|}
 for|for
 control|(
-name|AbstractFeature
+name|Feature
 name|feature
 range|:
 name|allFeatures

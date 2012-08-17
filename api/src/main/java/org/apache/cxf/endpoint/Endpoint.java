@@ -71,7 +71,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|AbstractFeature
+name|Feature
 import|;
 end_import
 
@@ -198,7 +198,7 @@ parameter_list|)
 function_decl|;
 name|List
 argument_list|<
-name|AbstractFeature
+name|Feature
 argument_list|>
 name|getActiveFeatures
 parameter_list|()
