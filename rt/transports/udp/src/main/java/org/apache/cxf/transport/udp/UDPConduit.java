@@ -1829,6 +1829,14 @@ condition|(
 name|i
 operator|==
 literal|null
+operator|||
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|isSynchronous
+argument_list|()
 condition|)
 block|{
 name|socket
