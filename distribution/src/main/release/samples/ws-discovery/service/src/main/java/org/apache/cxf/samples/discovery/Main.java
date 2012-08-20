@@ -59,21 +59,16 @@ name|Endpoint
 import|;
 end_import
 
-begin_comment
-comment|/**  *   */
-end_comment
-
 begin_class
 specifier|public
+specifier|final
 class|class
 name|Main
 block|{
-specifier|public
+specifier|private
 name|Main
 parameter_list|()
-block|{
-comment|// TODO Auto-generated constructor stub
-block|}
+block|{     }
 specifier|public
 specifier|static
 name|void
@@ -86,7 +81,10 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|//find a randomish port to use
+comment|//find a randomish port to use.   The clients will
+comment|//use WS-Discovery to find these services so
+comment|//it really doesn't matter what port we publish them
+comment|//on (or what URL or anything like that)
 name|ServerSocket
 name|sock
 init|=

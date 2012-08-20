@@ -99,24 +99,16 @@ name|WSDiscoveryClient
 import|;
 end_import
 
-begin_comment
-comment|/**  *   */
-end_comment
-
 begin_class
 specifier|public
 specifier|final
 class|class
 name|Client
 block|{
-comment|/**      *       */
-specifier|public
+specifier|private
 name|Client
 parameter_list|()
-block|{
-comment|// TODO Auto-generated constructor stub
-block|}
-comment|/**      * @param args      */
+block|{     }
 specifier|public
 specifier|static
 name|void
@@ -129,6 +121,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+comment|//USe ws-discovery to find references to services that implement the Greeter portType
 name|WSDiscoveryClient
 name|client
 init|=
@@ -152,8 +145,6 @@ argument_list|(
 literal|"http://cxf.apache.org/hello_world/discovery"
 argument_list|,
 literal|"Greeter"
-argument_list|,
-literal|"tp"
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -169,6 +160,7 @@ operator|new
 name|GreeterService
 argument_list|()
 decl_stmt|;
+comment|//loop through all of them and have them greet me.
 for|for
 control|(
 name|EndpointReference

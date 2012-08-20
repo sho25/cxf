@@ -172,15 +172,6 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|sn
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 literal|"http://docs.oasis-open.org/ws-dd/ns/discovery/2009/01"
