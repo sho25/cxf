@@ -3750,14 +3750,12 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
-comment|// don't send the ReplyTo headers if we don't need to either
+comment|// don't send the optional ReplyTo headers if we don't need to either
 name|ei
 operator|.
 name|setProperty
 argument_list|(
-name|MAPAggregator
-operator|.
-name|WRITE_ANONYMOUS_REPLY_TO
+literal|"ws-addressing.write.optional.replyto"
 argument_list|,
 name|Boolean
 operator|.
