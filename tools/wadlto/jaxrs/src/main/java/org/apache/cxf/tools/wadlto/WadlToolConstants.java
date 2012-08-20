@@ -130,6 +130,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_TYPE_MAP
+init|=
+literal|"typeMap"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_MULTIPLE_XML_REPS
 init|=
 literal|"supportMultipleXmlReps"

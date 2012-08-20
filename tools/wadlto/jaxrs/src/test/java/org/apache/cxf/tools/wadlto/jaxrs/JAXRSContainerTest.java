@@ -989,6 +989,17 @@ name|put
 argument_list|(
 name|WadlToolConstants
 operator|.
+name|CFG_TYPE_MAP
+argument_list|,
+literal|"date=javax.xml.datatype.XMLGregorianCalendar"
+argument_list|)
+expr_stmt|;
+name|context
+operator|.
+name|put
+argument_list|(
+name|WadlToolConstants
+operator|.
 name|CFG_COMPILE
 argument_list|,
 literal|"true"
