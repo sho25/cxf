@@ -138,6 +138,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_MEDIA_TYPE_MAP
+init|=
+literal|"mediaTypeMap"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_MULTIPLE_XML_REPS
 init|=
 literal|"supportMultipleXmlReps"
