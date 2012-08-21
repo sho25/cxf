@@ -21,16 +21,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
-operator|.
-name|File
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|LinkedList
@@ -102,7 +92,7 @@ decl_stmt|;
 class|class
 name|ErrorInfo
 block|{
-name|File
+name|String
 name|file
 decl_stmt|;
 name|int
@@ -119,7 +109,7 @@ name|message
 decl_stmt|;
 name|ErrorInfo
 parameter_list|(
-name|File
+name|String
 name|f
 parameter_list|,
 name|int
@@ -174,7 +164,7 @@ specifier|public
 name|void
 name|addError
 parameter_list|(
-name|File
+name|String
 name|file
 parameter_list|,
 name|int
@@ -203,7 +193,7 @@ specifier|public
 name|void
 name|addError
 parameter_list|(
-name|File
+name|String
 name|file
 parameter_list|,
 name|int
@@ -243,7 +233,7 @@ specifier|public
 name|void
 name|addWarning
 parameter_list|(
-name|File
+name|String
 name|file
 parameter_list|,
 name|int
@@ -272,7 +262,7 @@ specifier|public
 name|void
 name|addWarning
 parameter_list|(
-name|File
+name|String
 name|file
 parameter_list|,
 name|int
@@ -298,9 +288,6 @@ block|{
 name|message
 operator|=
 name|file
-operator|.
-name|getAbsolutePath
-argument_list|()
 operator|+
 literal|" ["
 operator|+
@@ -364,9 +351,6 @@ argument_list|(
 name|e
 operator|.
 name|file
-operator|.
-name|getAbsolutePath
-argument_list|()
 argument_list|)
 operator|.
 name|append

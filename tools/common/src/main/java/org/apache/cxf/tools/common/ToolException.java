@@ -422,9 +422,6 @@ return|return
 name|e
 operator|.
 name|file
-operator|.
-name|getAbsolutePath
-argument_list|()
 operator|+
 literal|" ["
 operator|+
