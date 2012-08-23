@@ -2223,6 +2223,17 @@ argument_list|,
 literal|"true"
 argument_list|)
 expr_stmt|;
+name|context
+operator|.
+name|put
+argument_list|(
+name|WadlToolConstants
+operator|.
+name|CFG_INHERIT_PARAMS
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 name|container
 operator|.
 name|setContext

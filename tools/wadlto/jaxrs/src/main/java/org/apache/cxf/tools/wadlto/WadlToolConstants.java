@@ -210,6 +210,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_INHERIT_PARAMS
+init|=
+literal|"inheritResourceParams"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_WADLURL
 init|=
 literal|"wadl"
