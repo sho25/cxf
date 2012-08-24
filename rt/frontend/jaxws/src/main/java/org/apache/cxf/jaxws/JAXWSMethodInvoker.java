@@ -493,6 +493,13 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|exchange
+operator|.
+name|setOutMessage
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 name|javax
 operator|.
 name|servlet
