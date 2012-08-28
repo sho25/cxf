@@ -115,6 +115,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|X_OAUTH_STATE
+init|=
+literal|"state"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|OAUTH_CONSUMER_SECRET
 init|=
 literal|"oauth_consumer_secret"

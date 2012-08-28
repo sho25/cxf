@@ -550,7 +550,9 @@ name|oAuthMessage
 operator|.
 name|getParameter
 argument_list|(
-literal|"state"
+name|OAuthConstants
+operator|.
+name|X_OAUTH_STATE
 argument_list|)
 argument_list|)
 expr_stmt|;

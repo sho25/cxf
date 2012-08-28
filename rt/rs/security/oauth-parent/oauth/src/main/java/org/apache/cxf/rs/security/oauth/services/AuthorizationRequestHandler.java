@@ -1111,7 +1111,9 @@ name|queryParams
 operator|.
 name|put
 argument_list|(
-literal|"state"
+name|OAuthConstants
+operator|.
+name|X_OAUTH_STATE
 argument_list|,
 name|token
 operator|.

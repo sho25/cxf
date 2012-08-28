@@ -259,6 +259,8 @@ block|,
 literal|"application/xml;q=0.9"
 block|,
 literal|"application/json;q=0.9"
+block|,
+literal|"application/x-www-form-urlencoded"
 block|}
 argument_list|)
 specifier|public
