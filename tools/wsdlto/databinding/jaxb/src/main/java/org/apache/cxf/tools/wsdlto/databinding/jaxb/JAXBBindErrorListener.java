@@ -224,6 +224,40 @@ name|SAXParseException
 name|exception
 parameter_list|)
 block|{
+for|for
+control|(
+name|StackTraceElement
+name|el
+range|:
+operator|new
+name|Exception
+argument_list|()
+operator|.
+name|getStackTrace
+argument_list|()
+control|)
+block|{
+if|if
+condition|(
+name|el
+operator|.
+name|getClassName
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"DowngradingErrorHandler"
+argument_list|)
+condition|)
+block|{
+comment|//this is from within JAXB as it tries to validate the schemas
+comment|//Xerces has issues with schema imports that don't have a
+comment|//schemaLocation (or a schemaLocation that is not fully resolvable)
+comment|//and emits strange warnings that are completely not
+comment|//correct so we'll try and skip them.
+return|return;
+block|}
+block|}
 if|if
 condition|(
 name|this
