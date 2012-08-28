@@ -209,9 +209,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|core
-operator|.
-name|MediaType
+name|WebApplicationException
 import|;
 end_import
 
@@ -661,6 +659,18 @@ name|TOKEN_REJECTED
 argument_list|)
 throw|;
 block|}
+name|String
+name|decision
+init|=
+name|oAuthMessage
+operator|.
+name|getParameter
+argument_list|(
+name|OAuthConstants
+operator|.
+name|AUTHORIZATION_DECISION_KEY
+argument_list|)
+decl_stmt|;
 name|OAuthAuthorizationData
 name|secData
 init|=
@@ -679,6 +689,30 @@ name|oAuthMessage
 argument_list|)
 condition|)
 block|{
+if|if
+condition|(
+name|decision
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// this is a user decision request, the session has expired or been possibly hijacked
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Session authenticity token is missing or invalid"
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|WebApplicationException
+argument_list|(
+literal|400
+argument_list|)
+throw|;
+block|}
+comment|// assume it is an initial authorization request
 name|addAuthenticityTokenToSession
 argument_list|(
 name|secData
@@ -705,18 +739,6 @@ name|build
 argument_list|()
 return|;
 block|}
-name|String
-name|decision
-init|=
-name|oAuthMessage
-operator|.
-name|getParameter
-argument_list|(
-name|OAuthConstants
-operator|.
-name|AUTHORIZATION_DECISION_KEY
-argument_list|)
-decl_stmt|;
 name|boolean
 name|allow
 init|=
@@ -1131,13 +1153,6 @@ name|Response
 operator|.
 name|ok
 argument_list|()
-operator|.
-name|type
-argument_list|(
-name|MediaType
-operator|.
-name|TEXT_HTML
-argument_list|)
 operator|.
 name|entity
 argument_list|(

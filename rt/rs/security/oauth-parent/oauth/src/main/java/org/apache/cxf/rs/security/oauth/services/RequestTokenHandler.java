@@ -851,8 +851,8 @@ throws|throws
 name|OAuthProblemException
 block|{
 comment|// the callback must not be empty or null, and it should either match
-comment|// the pre-registered callback URI or have the common root with the
-comment|// the pre-registered application URI
+comment|// the registered callback URI or have the common root with the
+comment|// the registered application URI (but only if no callback was registered)
 if|if
 condition|(
 operator|!
@@ -862,9 +862,11 @@ name|isEmpty
 argument_list|(
 name|oauthCallback
 argument_list|)
-operator|&&
-operator|(
-operator|!
+condition|)
+block|{
+name|boolean
+name|registeredCallbackIsEmpty
+init|=
 name|StringUtils
 operator|.
 name|isEmpty
@@ -874,6 +876,11 @@ operator|.
 name|getCallbackURI
 argument_list|()
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|registeredCallbackIsEmpty
 operator|&&
 name|oauthCallback
 operator|.
@@ -884,7 +891,14 @@ operator|.
 name|getCallbackURI
 argument_list|()
 argument_list|)
-operator|||
+condition|)
+block|{
+return|return;
+block|}
+if|if
+condition|(
+name|registeredCallbackIsEmpty
+operator|&&
 operator|!
 name|StringUtils
 operator|.
@@ -905,10 +919,10 @@ operator|.
 name|getApplicationURI
 argument_list|()
 argument_list|)
-operator|)
 condition|)
 block|{
 return|return;
+block|}
 block|}
 name|OAuthProblemException
 name|problemEx
