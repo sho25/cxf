@@ -4255,6 +4255,17 @@ name|IOException
 function_decl|;
 specifier|protected
 name|void
+name|handleNoOutput
+parameter_list|()
+throws|throws
+name|IOException
+block|{
+comment|//For GET and DELETE and such, this will be called
+comment|//For some implementations, this notice may be required to
+comment|//actually execute the request
+block|}
+specifier|protected
+name|void
 name|handleResponseOnWorkqueue
 parameter_list|(
 name|boolean
@@ -4704,6 +4715,9 @@ literal|"GET"
 argument_list|)
 condition|)
 block|{
+name|handleNoOutput
+argument_list|()
+expr_stmt|;
 return|return;
 block|}
 comment|// Trust is okay, write the cached request
@@ -4886,6 +4900,9 @@ name|method
 argument_list|)
 condition|)
 block|{
+name|handleNoOutput
+argument_list|()
+expr_stmt|;
 return|return;
 block|}
 if|if
@@ -4900,6 +4917,9 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|handleNoOutput
+argument_list|()
+expr_stmt|;
 return|return;
 block|}
 name|setupWrappedStream
