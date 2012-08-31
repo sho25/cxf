@@ -4186,6 +4186,8 @@ parameter_list|(
 name|Message
 name|inMessage
 parameter_list|)
+throws|throws
+name|IOException
 function_decl|;
 specifier|protected
 specifier|abstract
