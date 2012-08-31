@@ -159,7 +159,7 @@ literal|" and "
 operator|+
 name|connectionInfo
 operator|.
-name|getURL
+name|getURI
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -195,7 +195,7 @@ literal|" on "
 operator|+
 name|c
 operator|.
-name|getURL
+name|getURI
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -225,7 +225,7 @@ literal|"TLS Connection to: "
 operator|+
 name|c
 operator|.
-name|getURL
+name|getURI
 argument_list|()
 argument_list|)
 expr_stmt|;

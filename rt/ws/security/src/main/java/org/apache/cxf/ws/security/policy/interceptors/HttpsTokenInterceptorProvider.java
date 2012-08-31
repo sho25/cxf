@@ -25,16 +25,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|HttpURLConnection
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|security
 operator|.
 name|Principal
@@ -100,18 +90,6 @@ operator|.
 name|util
 operator|.
 name|TreeMap
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|net
-operator|.
-name|ssl
-operator|.
-name|HttpsURLConnection
 import|;
 end_import
 
@@ -725,17 +703,17 @@ operator|.
 name|getAssertion
 argument_list|()
 decl_stmt|;
-name|HttpURLConnection
-name|connection
+name|String
+name|scheme
 init|=
 operator|(
-name|HttpURLConnection
+name|String
 operator|)
 name|message
 operator|.
 name|get
 argument_list|(
-literal|"http.connection"
+literal|"http.scheme"
 argument_list|)
 decl_stmt|;
 name|ai
@@ -763,9 +741,12 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|connection
-operator|instanceof
-name|HttpsURLConnection
+literal|"https"
+operator|.
+name|equals
+argument_list|(
+name|scheme
+argument_list|)
 condition|)
 block|{
 if|if
@@ -1006,7 +987,7 @@ name|ai
 operator|.
 name|setNotAsserted
 argument_list|(
-literal|"HttpURLConnection is not a HttpsURLConnection"
+literal|"Not an HTTPs connection"
 argument_list|)
 expr_stmt|;
 block|}

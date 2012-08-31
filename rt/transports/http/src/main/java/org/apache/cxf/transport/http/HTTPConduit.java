@@ -131,16 +131,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URL
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Arrays
@@ -3988,7 +3978,7 @@ name|String
 name|conduitName
 decl_stmt|;
 specifier|protected
-name|String
+name|URI
 name|url
 decl_stmt|;
 specifier|protected
@@ -4009,7 +3999,7 @@ parameter_list|,
 name|String
 name|conduitName
 parameter_list|,
-name|String
+name|URI
 name|url
 parameter_list|)
 block|{
@@ -5093,6 +5083,9 @@ operator|.
 name|contains
 argument_list|(
 name|url
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -5499,6 +5492,9 @@ name|getConduitName
 argument_list|()
 argument_list|,
 name|url
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 name|newURL
 argument_list|,
@@ -5607,32 +5603,9 @@ argument_list|)
 decl_stmt|;
 name|URI
 name|currentURI
-decl_stmt|;
-try|try
-block|{
-name|currentURI
-operator|=
-operator|new
-name|URI
-argument_list|(
+init|=
 name|url
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|URISyntaxException
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|IOException
-argument_list|(
-name|e
-argument_list|)
-throw|;
-block|}
+decl_stmt|;
 name|String
 name|realm
 init|=
@@ -5727,6 +5700,9 @@ expr_stmt|;
 name|retransmit
 argument_list|(
 name|url
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return
@@ -5965,11 +5941,10 @@ argument_list|,
 name|getResponseMessage
 argument_list|()
 argument_list|,
-operator|new
-name|URL
-argument_list|(
 name|url
-argument_list|)
+operator|.
+name|toURL
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -6039,11 +6014,10 @@ argument_list|,
 name|getResponseMessage
 argument_list|()
 argument_list|,
-operator|new
-name|URL
-argument_list|(
 name|url
-argument_list|)
+operator|.
+name|toURL
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -6606,7 +6580,7 @@ block|{
 try|try
 block|{
 comment|// We must connect or we will not get the credentials.
-comment|// The call is (said to be) ingored internally if
+comment|// The call is (said to be) ignored internally if
 comment|// already connected.
 name|HttpsURLConnectionInfo
 name|info
