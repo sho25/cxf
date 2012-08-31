@@ -826,7 +826,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testBasicAuth
+name|testDigestAuth
 parameter_list|()
 throws|throws
 name|Exception
