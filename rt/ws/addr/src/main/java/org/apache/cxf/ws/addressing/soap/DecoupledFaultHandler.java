@@ -322,6 +322,27 @@ argument_list|)
 condition|)
 block|{
 comment|//Just keep the wsa headers to remove the not understand headers
+if|if
+condition|(
+name|exchange
+operator|.
+name|getOutMessage
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|message
+operator|=
+operator|(
+name|SoapMessage
+operator|)
+name|exchange
+operator|.
+name|getOutMessage
+argument_list|()
+expr_stmt|;
+block|}
 name|Iterator
 argument_list|<
 name|Header
