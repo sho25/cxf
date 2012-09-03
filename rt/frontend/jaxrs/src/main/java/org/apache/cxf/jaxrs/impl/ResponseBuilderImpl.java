@@ -33,18 +33,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
-name|Type
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|net
 operator|.
 name|URI
@@ -1513,28 +1501,6 @@ parameter_list|,
 name|Annotation
 index|[]
 name|arg1
-parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
-block|}
-annotation|@
-name|Override
-specifier|public
-name|ResponseBuilder
-name|entity
-parameter_list|(
-name|Object
-name|arg0
-parameter_list|,
-name|Type
-name|arg1
-parameter_list|,
-name|Annotation
-index|[]
-name|arg2
 parameter_list|)
 block|{
 comment|// TODO Auto-generated method stub

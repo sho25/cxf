@@ -1322,11 +1322,6 @@ name|next
 operator|.
 name|getRel
 argument_list|()
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -1350,11 +1345,6 @@ name|prev
 operator|.
 name|getRel
 argument_list|()
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
