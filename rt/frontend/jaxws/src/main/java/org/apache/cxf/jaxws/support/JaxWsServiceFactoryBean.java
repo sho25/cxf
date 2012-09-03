@@ -4078,6 +4078,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|faultInfo
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|StringUtils
 operator|.
@@ -4144,6 +4148,10 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+name|faultInfo
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|StringUtils
 operator|.
