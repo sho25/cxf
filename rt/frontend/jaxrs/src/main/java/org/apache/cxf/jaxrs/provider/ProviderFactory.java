@@ -2225,9 +2225,14 @@ operator|.
 name|getWebApplicationExceptionClass
 argument_list|(
 operator|(
+operator|(
 name|WebApplicationException
 operator|)
 name|exception
+operator|)
+operator|.
+name|getResponse
+argument_list|()
 argument_list|,
 name|exceptionType
 argument_list|)

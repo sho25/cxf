@@ -69,6 +69,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|WebApplicationException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|core
 operator|.
 name|MediaType
@@ -116,22 +128,6 @@ operator|.
 name|client
 operator|.
 name|JAXRSClientFactoryBean
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|client
-operator|.
-name|ServerWebApplicationException
 import|;
 end_import
 
@@ -336,7 +332,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ServerWebApplicationException
+name|WebApplicationException
 name|ex
 parameter_list|)
 block|{
@@ -345,6 +341,9 @@ argument_list|(
 literal|403
 argument_list|,
 name|ex
+operator|.
+name|getResponse
+argument_list|()
 operator|.
 name|getStatus
 argument_list|()
@@ -532,7 +531,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ServerWebApplicationException
+name|WebApplicationException
 name|ex
 parameter_list|)
 block|{
@@ -541,6 +540,9 @@ argument_list|(
 literal|403
 argument_list|,
 name|ex
+operator|.
+name|getResponse
+argument_list|()
 operator|.
 name|getStatus
 argument_list|()
@@ -751,7 +753,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ServerWebApplicationException
+name|WebApplicationException
 name|ex
 parameter_list|)
 block|{
@@ -760,6 +762,9 @@ argument_list|(
 literal|403
 argument_list|,
 name|ex
+operator|.
+name|getResponse
+argument_list|()
 operator|.
 name|getStatus
 argument_list|()
@@ -883,7 +888,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ServerWebApplicationException
+name|WebApplicationException
 name|ex
 parameter_list|)
 block|{
@@ -892,6 +897,9 @@ argument_list|(
 literal|403
 argument_list|,
 name|ex
+operator|.
+name|getResponse
+argument_list|()
 operator|.
 name|getStatus
 argument_list|()

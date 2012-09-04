@@ -1880,7 +1880,7 @@ if|if
 condition|(
 name|status
 operator|>=
-literal|400
+literal|300
 condition|)
 block|{
 if|if
@@ -1956,8 +1956,7 @@ condition|)
 block|{
 name|t
 operator|=
-operator|new
-name|ServerWebApplicationException
+name|convertToWebApplicationException
 argument_list|(
 name|r
 argument_list|)
