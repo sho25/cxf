@@ -21,17 +21,13 @@ end_package
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|apache
+name|ws
 operator|.
-name|cxf
+name|rs
 operator|.
-name|jaxrs
-operator|.
-name|client
-operator|.
-name|ServerWebApplicationException
+name|WebApplicationException
 import|;
 end_import
 
@@ -388,7 +384,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ServerWebApplicationException
+name|WebApplicationException
 name|ex
 parameter_list|)
 block|{
