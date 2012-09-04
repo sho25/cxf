@@ -235,6 +235,20 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|client
+operator|.
+name|ClientException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|core
 operator|.
 name|Cookie
@@ -1515,7 +1529,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClientWebApplicationException
+name|ClientException
 argument_list|(
 name|ex
 argument_list|)
@@ -3105,7 +3119,7 @@ if|if
 condition|(
 name|ex
 operator|instanceof
-name|ClientWebApplicationException
+name|ClientException
 condition|)
 block|{
 throw|throw
@@ -3122,7 +3136,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClientWebApplicationException
+name|ClientException
 argument_list|(
 name|ex
 argument_list|)
@@ -3204,7 +3218,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClientWebApplicationException
+name|ClientException
 argument_list|(
 literal|"Response timeout"
 argument_list|)
@@ -4044,7 +4058,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|ClientWebApplicationException
+name|ClientException
 argument_list|(
 name|errorMsg
 operator|.
@@ -4052,8 +4066,6 @@ name|toString
 argument_list|()
 argument_list|,
 name|cause
-argument_list|,
-name|response
 argument_list|)
 throw|;
 block|}

@@ -77,6 +77,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|client
+operator|.
+name|ClientException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -100,22 +114,6 @@ operator|.
 name|spring
 operator|.
 name|SpringBusFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|client
-operator|.
-name|ClientWebApplicationException
 import|;
 end_import
 
@@ -611,7 +609,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClientWebApplicationException
+name|ClientException
 name|ex
 parameter_list|)
 block|{
@@ -929,7 +927,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClientWebApplicationException
+name|ClientException
 name|ex
 parameter_list|)
 block|{
@@ -1920,7 +1918,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|ClientWebApplicationException
+name|ClientException
 name|ex
 parameter_list|)
 block|{
