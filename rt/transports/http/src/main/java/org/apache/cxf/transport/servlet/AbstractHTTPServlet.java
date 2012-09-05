@@ -1219,8 +1219,9 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-if|if
-condition|(
+name|boolean
+name|staticResourcesMatch
+init|=
 name|staticResourcesList
 operator|!=
 literal|null
@@ -1231,7 +1232,10 @@ name|staticResourcesList
 argument_list|,
 name|request
 argument_list|)
-operator|||
+decl_stmt|;
+name|boolean
+name|staticWelcomeFileMatch
+init|=
 name|staticWelcomeFile
 operator|!=
 literal|null
@@ -1257,6 +1261,12 @@ argument_list|(
 literal|"/"
 argument_list|)
 operator|)
+decl_stmt|;
+if|if
+condition|(
+name|staticResourcesMatch
+operator|||
+name|staticWelcomeFileMatch
 condition|)
 block|{
 name|serveStaticContent
@@ -1265,9 +1275,7 @@ name|request
 argument_list|,
 name|response
 argument_list|,
-name|staticWelcomeFile
-operator|!=
-literal|null
+name|staticWelcomeFileMatch
 condition|?
 name|staticWelcomeFile
 else|:
