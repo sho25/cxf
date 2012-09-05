@@ -153,6 +153,10 @@ operator|.
 name|emptyList
 argument_list|()
 decl_stmt|;
+specifier|private
+name|boolean
+name|checkConfiguredRolesOnly
+decl_stmt|;
 annotation|@
 name|Override
 specifier|protected
@@ -174,6 +178,9 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
+name|checkConfiguredRolesOnly
+operator|&&
 operator|!
 name|super
 operator|.
@@ -261,7 +268,8 @@ block|}
 else|else
 block|{
 return|return
-literal|true
+operator|!
+name|checkConfiguredRolesOnly
 return|;
 block|}
 block|}
@@ -500,6 +508,21 @@ argument_list|(
 literal|" "
 argument_list|)
 argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setCheckConfiguredRolesOnly
+parameter_list|(
+name|boolean
+name|checkConfiguredRolesOnly
+parameter_list|)
+block|{
+name|this
+operator|.
+name|checkConfiguredRolesOnly
+operator|=
+name|checkConfiguredRolesOnly
 expr_stmt|;
 block|}
 specifier|private
