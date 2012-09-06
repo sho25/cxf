@@ -1060,6 +1060,8 @@ operator|.
 name|urlEncode
 argument_list|(
 name|value
+argument_list|,
+name|enc
 argument_list|)
 decl_stmt|;
 name|os
