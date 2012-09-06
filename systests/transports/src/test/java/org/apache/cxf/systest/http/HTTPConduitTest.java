@@ -1550,6 +1550,29 @@ name|getTrustManagers
 argument_list|()
 return|;
 block|}
+comment|//methods that a subclass can override to inject a Proxy into the flow
+comment|//and assert the proxy was appropriately called
+specifier|public
+name|void
+name|configureProxy
+parameter_list|(
+name|Client
+name|c
+parameter_list|)
+block|{     }
+specifier|public
+name|void
+name|resetProxyCount
+parameter_list|()
+block|{     }
+specifier|public
+name|void
+name|assertProxyRequestCount
+parameter_list|(
+name|int
+name|i
+parameter_list|)
+block|{     }
 specifier|private
 name|Greeter
 name|getMortimerGreeter
@@ -1621,6 +1644,16 @@ argument_list|,
 name|PORT0
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|mortimer
+argument_list|)
+argument_list|)
+expr_stmt|;
 return|return
 name|mortimer
 return|;
@@ -1665,6 +1698,11 @@ name|equals
 argument_list|(
 name|answer
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertProxyRequestCount
+argument_list|(
+literal|1
 argument_list|)
 expr_stmt|;
 block|}
@@ -1737,6 +1775,11 @@ name|oldLevel
 argument_list|)
 expr_stmt|;
 block|}
+name|assertProxyRequestCount
+argument_list|(
+literal|1
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * This methods tests that a conduit that is not configured      * to follow redirects will not. The default is not to       * follow redirects.       * Rethwel redirects to Mortimer.      *       * Note: Unfortunately, the invocation will       * "fail" for any number of other reasons.      *       */
 annotation|@
@@ -1819,7 +1862,17 @@ name|updateAddressPort
 argument_list|(
 name|rethwel
 argument_list|,
-name|PORT5
+name|PORT4
+argument_list|)
+expr_stmt|;
+name|configureProxy
+argument_list|(
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|rethwel
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|String
@@ -1852,6 +1905,11 @@ parameter_list|)
 block|{
 comment|//e.printStackTrace();
 block|}
+name|assertProxyRequestCount
+argument_list|(
+literal|1
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * We use this class to reset the default bus.      * Note: This may not always work in the future.      * I was lucky in that "defaultBus" is actually a       * protected static.      */
 class|class
@@ -2003,6 +2061,16 @@ argument_list|,
 name|rethwel
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|rethwel
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|String
 name|answer
 init|=
@@ -2023,6 +2091,11 @@ name|equals
 argument_list|(
 name|answer
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertProxyRequestCount
+argument_list|(
+literal|2
 argument_list|)
 expr_stmt|;
 block|}
@@ -2131,6 +2204,16 @@ argument_list|,
 name|PORT6
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|hurlon
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|String
 name|answer
 init|=
@@ -2163,6 +2246,11 @@ comment|// This exception will be one of not being able to
 comment|// read from the StreamReader
 comment|//e.printStackTrace();
 block|}
+name|assertProxyRequestCount
+argument_list|(
+literal|2
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * This methods tests a basic https connection to Bethal.      * It supplies an authorization policy with premetive user/pass      * to avoid the 401.      */
 annotation|@
@@ -2455,6 +2543,16 @@ name|getPassword
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|bethal
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|String
 name|answer
 init|=
@@ -2503,6 +2601,13 @@ name|equals
 argument_list|(
 name|answer
 argument_list|)
+argument_list|)
+expr_stmt|;
+comment|//With HTTPS, it will just be a CONNECT to the proxy and all the
+comment|//data is encrypted.  Thus, the proxy cannot distinquish the requests
+name|assertProxyRequestCount
+argument_list|(
+literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -2667,6 +2772,11 @@ argument_list|(
 name|authPolicy
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|client
+argument_list|)
+expr_stmt|;
 name|String
 name|answer
 init|=
@@ -2687,6 +2797,11 @@ name|equals
 argument_list|(
 name|answer
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertProxyRequestCount
+argument_list|(
+literal|0
 argument_list|)
 expr_stmt|;
 block|}
@@ -2824,10 +2939,22 @@ argument_list|(
 name|tlsClientParameters
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|client
+argument_list|)
+expr_stmt|;
 name|poltim
 operator|.
 name|sayHi
 argument_list|()
+expr_stmt|;
+comment|//client -> poltim is https and thus not recorded but then redirected to mortimer
+comment|//client -> mortimer is http and recoreded
+name|assertProxyRequestCount
+argument_list|(
+literal|1
+argument_list|)
 expr_stmt|;
 block|}
 class|class
@@ -3231,6 +3358,11 @@ literal|"Bethal"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|configureProxy
+argument_list|(
+name|client
+argument_list|)
+expr_stmt|;
 name|String
 name|answer
 init|=
@@ -3251,6 +3383,11 @@ name|equals
 argument_list|(
 name|answer
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertProxyRequestCount
+argument_list|(
+literal|0
 argument_list|)
 expr_stmt|;
 comment|// Nobody will not equal OU=Bethal
@@ -3297,6 +3434,11 @@ comment|//e.printStackTrace();
 comment|//assertTrue("Trust Decider was not called",
 comment|//              0> trustDecider.wasCalled());
 block|}
+name|assertProxyRequestCount
+argument_list|(
+literal|0
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -3496,6 +3638,16 @@ argument_list|)
 expr_stmt|;
 comment|// We actually get our answer from Bethal at the end of the
 comment|// redirects.
+name|configureProxy
+argument_list|(
+name|ClientProxy
+operator|.
+name|getClient
+argument_list|(
+name|tarpin
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|String
 name|answer
 init|=
@@ -3504,6 +3656,11 @@ operator|.
 name|sayHi
 argument_list|()
 decl_stmt|;
+name|assertProxyRequestCount
+argument_list|(
+literal|0
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Trust Decider wasn't called correctly"
@@ -3566,6 +3723,11 @@ parameter_list|)
 block|{
 comment|//e.printStackTrace();
 block|}
+name|assertProxyRequestCount
+argument_list|(
+literal|0
+argument_list|)
+expr_stmt|;
 comment|// Set back to unlimited.
 name|http
 operator|.
@@ -3638,6 +3800,11 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|assertProxyRequestCount
+argument_list|(
+literal|0
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 class|class
