@@ -6167,6 +6167,12 @@ condition|(
 operator|!
 name|cri
 operator|.
+name|contextsAvailable
+argument_list|()
+operator|||
+operator|!
+name|cri
+operator|.
 name|isSingleton
 argument_list|()
 condition|)
@@ -6414,6 +6420,14 @@ name|Message
 name|message
 parameter_list|)
 block|{
+if|if
+condition|(
+name|resource
+operator|.
+name|contextsAvailable
+argument_list|()
+condition|)
+block|{
 name|injectContextMethods
 argument_list|(
 name|requestObject
@@ -6432,6 +6446,7 @@ argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 end_function
 
@@ -6602,10 +6617,6 @@ block|}
 block|}
 block|}
 end_function
-
-begin_comment
-comment|// TODO : should we have context and resource fields be treated as context fields ?
-end_comment
 
 begin_function
 specifier|public

@@ -8560,11 +8560,8 @@ name|Message
 name|inMessage
 parameter_list|)
 block|{
-name|ExceptionMapper
-argument_list|<
-name|T
-argument_list|>
-name|mapper
+name|ProviderFactory
+name|factory
 init|=
 name|ProviderFactory
 operator|.
@@ -8572,6 +8569,14 @@ name|getInstance
 argument_list|(
 name|inMessage
 argument_list|)
+decl_stmt|;
+name|ExceptionMapper
+argument_list|<
+name|T
+argument_list|>
+name|mapper
+init|=
+name|factory
 operator|.
 name|createExceptionMapper
 argument_list|(
@@ -8643,7 +8648,6 @@ operator|.
 name|class
 condition|)
 block|{
-comment|//TODO: consider using switch statements
 try|try
 block|{
 name|Constructor
@@ -8731,6 +8735,14 @@ operator|.
 name|build
 argument_list|()
 return|;
+block|}
+finally|finally
+block|{
+name|factory
+operator|.
+name|clearExceptionMapperProxies
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 return|return

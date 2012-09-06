@@ -654,6 +654,13 @@ argument_list|)
 decl_stmt|;
 name|localClient
 operator|.
+name|accept
+argument_list|(
+literal|"text/xml"
+argument_list|)
+expr_stmt|;
+name|localClient
+operator|.
 name|path
 argument_list|(
 literal|"bookstore/books"
