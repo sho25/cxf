@@ -154,16 +154,6 @@ argument_list|)
 expr_stmt|;
 name|nc
 operator|.
-name|setNamespace
-argument_list|(
-name|c
-operator|.
-name|getNamespace
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|nc
-operator|.
 name|setOriginalIssuer
 argument_list|(
 name|c
