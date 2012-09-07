@@ -309,8 +309,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|contextsAvailable
-init|=
-literal|true
 decl_stmt|;
 specifier|protected
 name|AbstractResourceInfo
