@@ -1690,6 +1690,20 @@ operator|.
 name|sayHi
 argument_list|()
 decl_stmt|;
+name|answer
+operator|=
+name|mortimer
+operator|.
+name|sayHi
+argument_list|()
+expr_stmt|;
+name|answer
+operator|=
+name|mortimer
+operator|.
+name|sayHi
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Unexpected answer: "
