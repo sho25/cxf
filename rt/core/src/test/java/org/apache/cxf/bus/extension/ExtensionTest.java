@@ -252,14 +252,19 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
-literal|"ExtensionException does not wrap IllegalAccessException"
+literal|"ExtensionException does not wrap NoSuchMethodException "
+operator|+
+name|ex
+operator|.
+name|getCause
+argument_list|()
 argument_list|,
 name|ex
 operator|.
 name|getCause
 argument_list|()
 operator|instanceof
-name|IllegalAccessException
+name|NoSuchMethodException
 argument_list|)
 expr_stmt|;
 block|}
@@ -295,14 +300,14 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
-literal|"ExtensionException does not wrap InstantiationException"
+literal|"ExtensionException does not wrap IllegalArgumentException"
 argument_list|,
 name|ex
 operator|.
 name|getCause
 argument_list|()
 operator|instanceof
-name|InstantiationException
+name|IllegalArgumentException
 argument_list|)
 expr_stmt|;
 block|}
@@ -427,6 +432,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
+specifier|static
 class|class
 name|MyServiceConstructorThrowsException
 block|{
