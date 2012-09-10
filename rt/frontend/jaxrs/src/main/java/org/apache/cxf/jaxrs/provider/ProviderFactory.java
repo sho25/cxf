@@ -6198,8 +6198,6 @@ range|:
 name|jaxbReaders
 control|)
 block|{
-name|schemasMethodAvailable
-operator|=
 name|injectProviderProperty
 argument_list|(
 name|r
