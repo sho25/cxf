@@ -583,6 +583,13 @@ name|DataSource
 argument_list|>
 argument_list|()
 decl_stmt|;
+name|p
+operator|.
+name|setUseDataSourceContentType
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|DataSource
 name|ds
 init|=
@@ -648,7 +655,7 @@ name|MediaType
 operator|.
 name|valueOf
 argument_list|(
-literal|"image/bar"
+literal|"image/jpeg"
 argument_list|)
 argument_list|,
 name|outHeaders
