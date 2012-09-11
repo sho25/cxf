@@ -63,6 +63,19 @@ return|return
 literal|null
 return|;
 block|}
+comment|/**      *       * @param pojo Object which is being mapped      * @return entry content      */
+specifier|public
+name|String
+name|getContent
+parameter_list|(
+name|T
+name|pojo
+parameter_list|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 block|}
 end_class
 
