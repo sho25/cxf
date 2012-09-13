@@ -680,6 +680,11 @@ name|attributesIndexed
 operator|=
 literal|false
 expr_stmt|;
+name|namespaceContext
+operator|.
+name|down
+argument_list|()
+expr_stmt|;
 specifier|final
 name|QName
 name|theName
@@ -1069,6 +1074,11 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|namespaceContext
+operator|.
+name|up
+argument_list|()
+expr_stmt|;
 specifier|final
 name|boolean
 name|dropped

@@ -918,6 +918,11 @@ block|{
 name|currentDepth
 operator|++
 expr_stmt|;
+name|namespaceContext
+operator|.
+name|down
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|matchesDropped
@@ -1870,6 +1875,11 @@ parameter_list|()
 throws|throws
 name|XMLStreamException
 block|{
+name|namespaceContext
+operator|.
+name|up
+argument_list|()
+expr_stmt|;
 operator|--
 name|currentDepth
 expr_stmt|;
