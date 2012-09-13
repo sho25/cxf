@@ -950,6 +950,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
+comment|//policy = UseAsyncPolicy.ALWAYS;
 name|policy
 operator|=
 name|UseAsyncPolicy
