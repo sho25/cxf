@@ -1064,9 +1064,6 @@ name|updatedResponse
 expr_stmt|;
 block|}
 block|}
-comment|// TODO: enable or remove, depending on the API clarifications
-comment|// Global pre-match response filters
-comment|// JAXRSUtils.runContainerResponseFilters(providerFactory, response, message, ori, true);
 name|List
 argument_list|<
 name|ProviderInfo
