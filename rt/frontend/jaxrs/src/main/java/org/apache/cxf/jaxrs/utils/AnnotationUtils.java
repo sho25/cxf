@@ -977,7 +977,7 @@ name|add
 argument_list|(
 name|a
 operator|.
-name|getClass
+name|annotationType
 argument_list|()
 operator|.
 name|getName

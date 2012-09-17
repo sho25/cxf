@@ -9253,9 +9253,6 @@ name|m
 parameter_list|,
 name|OperationResourceInfo
 name|ori
-parameter_list|,
-name|boolean
-name|preMatch
 parameter_list|)
 block|{
 name|List
@@ -9267,16 +9264,9 @@ argument_list|>
 argument_list|>
 name|containerFilters
 init|=
-name|preMatch
-condition|?
 name|pf
 operator|.
-name|getPreMatchContainerResponseFilters
-argument_list|()
-else|:
-name|pf
-operator|.
-name|getPostMatchContainerResponseFilters
+name|getContainerResponseFilters
 argument_list|(
 name|ori
 operator|==
@@ -9313,7 +9303,7 @@ operator|.
 name|getInMessage
 argument_list|()
 argument_list|,
-name|preMatch
+literal|false
 argument_list|,
 literal|true
 argument_list|)

@@ -1017,13 +1017,6 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// Global post-match and name-bound response filters
-if|if
-condition|(
-name|ori
-operator|!=
-literal|null
-condition|)
-block|{
 name|JAXRSUtils
 operator|.
 name|runContainerResponseFilters
@@ -1035,8 +1028,6 @@ argument_list|,
 name|message
 argument_list|,
 name|ori
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 name|Response
@@ -1062,7 +1053,6 @@ name|response
 operator|=
 name|updatedResponse
 expr_stmt|;
-block|}
 block|}
 name|List
 argument_list|<
