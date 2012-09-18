@@ -3334,6 +3334,8 @@ operator|new
 name|ReaderInterceptorMBR
 argument_list|(
 name|mr
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 name|int
