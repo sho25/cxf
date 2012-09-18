@@ -4203,14 +4203,6 @@ parameter_list|,
 name|Object
 name|body
 parameter_list|,
-name|MultivaluedMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-name|headers
-parameter_list|,
 name|OutputStream
 name|os
 parameter_list|)
@@ -4368,8 +4360,6 @@ argument_list|()
 argument_list|,
 name|anns
 argument_list|,
-name|headers
-argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
@@ -4393,8 +4383,6 @@ name|getClass
 argument_list|()
 argument_list|,
 name|anns
-argument_list|,
-name|headers
 argument_list|,
 name|os
 argument_list|)

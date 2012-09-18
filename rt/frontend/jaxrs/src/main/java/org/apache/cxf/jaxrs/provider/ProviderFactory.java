@@ -3336,6 +3336,12 @@ argument_list|(
 name|mr
 argument_list|,
 name|m
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getInMessage
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|int
