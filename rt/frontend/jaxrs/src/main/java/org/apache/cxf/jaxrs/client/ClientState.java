@@ -52,8 +52,6 @@ operator|.
 name|core
 operator|.
 name|Response
-operator|.
-name|ResponseBuilder
 import|;
 end_import
 
@@ -106,17 +104,17 @@ name|URI
 name|getBaseURI
 parameter_list|()
 function_decl|;
-comment|/**      * Sets the responseBuilder      * @param responseBuilder responseBuilder      */
+comment|/**      * Sets Response      * @param response response      */
 name|void
-name|setResponseBuilder
+name|setResponse
 parameter_list|(
-name|ResponseBuilder
-name|responseBuilder
+name|Response
+name|response
 parameter_list|)
 function_decl|;
-comment|/**      * Gets the responseBuilder      * @return responseBuilder      */
-name|ResponseBuilder
-name|getResponseBuilder
+comment|/**      * Gets Response      * @return response      */
+name|Response
+name|getResponse
 parameter_list|()
 function_decl|;
 comment|/**      * Sets the request headers      * @param requestHeaders request headers      */

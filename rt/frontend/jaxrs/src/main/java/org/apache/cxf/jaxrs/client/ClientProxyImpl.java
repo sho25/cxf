@@ -3968,6 +3968,14 @@ argument_list|(
 name|outMessage
 argument_list|)
 expr_stmt|;
+name|getState
+argument_list|()
+operator|.
+name|setResponse
+argument_list|(
+name|r
+argument_list|)
+expr_stmt|;
 name|Method
 name|method
 init|=
