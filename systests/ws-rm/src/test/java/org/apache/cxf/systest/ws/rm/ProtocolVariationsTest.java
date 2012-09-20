@@ -1876,11 +1876,15 @@ argument_list|)
 expr_stmt|;
 comment|// verify a partial error text match to exclude an unexpected exception
 comment|// (see WSRM_REQUIRED_EXC in Messages.properties)
+comment|//because the ws-rm namespace isn't correct, can't detect it's a ws-rm message
+comment|//so can't understand ws-rm header
 specifier|final
 name|String
 name|text
 init|=
-literal|"WS-ReliableMessaging is required"
+literal|"MustUnderstand headers: "
+operator|+
+literal|"[{http://cxf.apache.org/invalid}Sequence] are not understood."
 decl_stmt|;
 name|assertTrue
 argument_list|(
