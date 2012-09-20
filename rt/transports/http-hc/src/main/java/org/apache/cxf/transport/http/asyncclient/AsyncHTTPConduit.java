@@ -2321,6 +2321,14 @@ operator|==
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|exception
+operator|==
+literal|null
+condition|)
+block|{
+comment|//already have an exception, skip waiting
 try|try
 block|{
 name|wait
@@ -2345,6 +2353,7 @@ argument_list|(
 name|e
 argument_list|)
 throw|;
+block|}
 block|}
 if|if
 condition|(
@@ -2858,7 +2867,6 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-specifier|synchronized
 name|int
 name|getResponseCode
 parameter_list|()
