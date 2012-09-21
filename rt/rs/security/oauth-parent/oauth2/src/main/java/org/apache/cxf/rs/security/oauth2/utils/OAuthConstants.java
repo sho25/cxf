@@ -192,9 +192,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|MAC_TOKEN_SECRET
+name|MAC_TOKEN_KEY
 init|=
-literal|"secret"
+literal|"mac_key"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -202,7 +202,7 @@ specifier|final
 name|String
 name|MAC_TOKEN_ALGORITHM
 init|=
-literal|"algorithm"
+literal|"mac_algorithm"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -228,6 +228,14 @@ name|String
 name|MAC_TOKEN_ID
 init|=
 literal|"id"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MAC_TOKEN_TIMESTAMP
+init|=
+literal|"ts"
 decl_stmt|;
 specifier|public
 specifier|static

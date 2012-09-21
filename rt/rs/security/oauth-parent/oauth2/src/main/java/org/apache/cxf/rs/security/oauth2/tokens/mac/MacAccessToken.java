@@ -103,6 +103,10 @@ name|OAuthUtils
 import|;
 end_import
 
+begin_comment
+comment|//See http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -252,7 +256,7 @@ name|String
 name|tokenKey
 parameter_list|,
 name|String
-name|tokenSecret
+name|macKey
 parameter_list|,
 name|long
 name|lifetime
@@ -282,7 +286,7 @@ name|setExtraParameters
 argument_list|(
 name|algo
 argument_list|,
-name|tokenSecret
+name|macKey
 argument_list|)
 expr_stmt|;
 block|}
@@ -294,13 +298,13 @@ name|HmacAlgorithm
 name|algo
 parameter_list|,
 name|String
-name|secret
+name|macKey
 parameter_list|)
 block|{
 name|String
-name|theSecret
+name|theKey
 init|=
-name|secret
+name|macKey
 operator|==
 literal|null
 condition|?
@@ -311,7 +315,7 @@ argument_list|(
 name|algo
 argument_list|)
 else|:
-name|secret
+name|macKey
 decl_stmt|;
 name|super
 operator|.
@@ -322,9 +326,9 @@ name|put
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_SECRET
+name|MAC_TOKEN_KEY
 argument_list|,
-name|theSecret
+name|theKey
 argument_list|)
 expr_stmt|;
 name|super
@@ -347,7 +351,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|String
-name|getMacKey
+name|getMacId
 parameter_list|()
 block|{
 return|return
@@ -359,7 +363,7 @@ return|;
 block|}
 specifier|public
 name|String
-name|getMacSecret
+name|getMacKey
 parameter_list|()
 block|{
 return|return
@@ -372,7 +376,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_SECRET
+name|MAC_TOKEN_KEY
 argument_list|)
 return|;
 block|}

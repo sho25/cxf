@@ -645,7 +645,7 @@ name|computeHmac
 argument_list|(
 name|macAccessToken
 operator|.
-name|getMacSecret
+name|getMacKey
 argument_list|()
 argument_list|,
 name|hmacAlgo

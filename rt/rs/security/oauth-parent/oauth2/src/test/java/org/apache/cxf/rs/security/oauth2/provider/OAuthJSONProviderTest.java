@@ -595,7 +595,7 @@ name|put
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_SECRET
+name|MAC_TOKEN_KEY
 argument_list|,
 literal|"test_mac_secret"
 argument_list|)
@@ -717,9 +717,9 @@ literal|"\"expires_in\":12345,"
 operator|+
 literal|"\"scope\":\"read\","
 operator|+
-literal|"\"secret\":\"adijq39jdlaska9asud\","
+literal|"\"mac_key\":\"adijq39jdlaska9asud\","
 operator|+
-literal|"\"algorithm\":\"hmac-sha-256\","
+literal|"\"mac_algorithm\":\"hmac-sha-256\","
 operator|+
 literal|"\"my_parameter\":\"abc\""
 operator|+
@@ -750,7 +750,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_SECRET
+name|MAC_TOKEN_KEY
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -1302,7 +1302,7 @@ name|MAC_TOKEN_ALGORITHM
 argument_list|)
 decl_stmt|;
 name|String
-name|macSecret
+name|macKey
 init|=
 name|token
 operator|.
@@ -1313,7 +1313,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_SECRET
+name|MAC_TOKEN_KEY
 argument_list|)
 decl_stmt|;
 name|sb
@@ -1326,7 +1326,7 @@ name|toAuthorizationHeader
 argument_list|(
 name|macAlgo
 argument_list|,
-name|macSecret
+name|macKey
 argument_list|)
 argument_list|)
 expr_stmt|;
