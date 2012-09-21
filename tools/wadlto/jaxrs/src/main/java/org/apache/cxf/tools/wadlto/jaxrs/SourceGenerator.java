@@ -8048,7 +8048,7 @@ decl_stmt|;
 if|if
 condition|(
 name|clsName
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
