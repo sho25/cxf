@@ -676,24 +676,16 @@ specifier|protected
 name|WebClient
 parameter_list|(
 name|URI
-name|baseAddress
+name|baseURI
 parameter_list|)
 block|{
-name|super
-argument_list|(
-name|baseAddress
-argument_list|)
-expr_stmt|;
-name|cfg
-operator|.
-name|getInInterceptors
-argument_list|()
-operator|.
-name|add
+name|this
 argument_list|(
 operator|new
-name|ClientAsyncResponseInterceptor
-argument_list|()
+name|LocalClientState
+argument_list|(
+name|baseURI
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -1663,7 +1655,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP Async POST invocation and returns Future.      * Shortcut for async().get(InvocationCallback)      * @param callback invocation callback       * @return the future      */
+comment|/**      * Does HTTP Async POST invocation and returns Future.      * Shortcut for async().post(Entity, InvocationCallback)      * @param callback invocation callback       * @return the future      */
 specifier|public
 parameter_list|<
 name|T
