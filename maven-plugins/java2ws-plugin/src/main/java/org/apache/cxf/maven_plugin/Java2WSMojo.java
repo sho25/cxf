@@ -308,6 +308,11 @@ specifier|private
 name|Boolean
 name|quiet
 decl_stmt|;
+comment|/**      * @parameter      */
+specifier|private
+name|String
+name|address
+decl_stmt|;
 comment|/**      * @parameter  expression="${project.compileClasspathElements}"      * @required      */
 specifier|private
 name|List
@@ -996,6 +1001,29 @@ operator|.
 name|add
 argument_list|(
 literal|"-quiet"
+argument_list|)
+expr_stmt|;
+block|}
+comment|// address arg
+if|if
+condition|(
+name|address
+operator|!=
+literal|null
+condition|)
+block|{
+name|args
+operator|.
+name|add
+argument_list|(
+literal|"-address"
+argument_list|)
+expr_stmt|;
+name|args
+operator|.
+name|add
+argument_list|(
+name|address
 argument_list|)
 expr_stmt|;
 block|}
