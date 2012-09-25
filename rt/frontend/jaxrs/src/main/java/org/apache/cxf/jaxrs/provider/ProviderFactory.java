@@ -5021,6 +5021,10 @@ argument_list|,
 name|clientRequestFilters
 argument_list|,
 name|clientResponseFilters
+argument_list|,
+name|readerInterceptors
+argument_list|,
+name|writerInterceptors
 argument_list|)
 expr_stmt|;
 block|}
