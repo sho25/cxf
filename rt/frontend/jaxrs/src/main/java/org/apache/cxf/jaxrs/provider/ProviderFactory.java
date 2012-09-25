@@ -6947,7 +6947,7 @@ operator|.
 name|getProvider
 argument_list|()
 argument_list|,
-literal|"setSchemas"
+literal|"setSchemaLocations"
 argument_list|,
 name|List
 operator|.
@@ -6984,7 +6984,7 @@ operator|.
 name|getProvider
 argument_list|()
 argument_list|,
-literal|"setSchemas"
+literal|"setSchemaLocations"
 argument_list|,
 name|List
 operator|.

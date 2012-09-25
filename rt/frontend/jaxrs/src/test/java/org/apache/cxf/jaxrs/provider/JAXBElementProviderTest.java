@@ -9497,7 +9497,7 @@ argument_list|)
 expr_stmt|;
 name|provider
 operator|.
-name|setSchemas
+name|setSchemaLocations
 argument_list|(
 name|locations
 argument_list|)
@@ -9584,7 +9584,7 @@ argument_list|)
 expr_stmt|;
 name|provider
 operator|.
-name|setSchemas
+name|setSchemaLocations
 argument_list|(
 name|locations
 argument_list|)
@@ -9669,7 +9669,7 @@ argument_list|)
 expr_stmt|;
 name|provider
 operator|.
-name|setSchemas
+name|setSchemaLocations
 argument_list|(
 name|locations
 argument_list|)
@@ -9832,7 +9832,7 @@ argument_list|)
 expr_stmt|;
 name|provider
 operator|.
-name|setSchemas
+name|setSchemaLocations
 argument_list|(
 name|locations
 argument_list|)
