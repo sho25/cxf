@@ -3403,7 +3403,7 @@ name|utils
 operator|.
 name|appendLine
 argument_list|(
-literal|"var arrayItem;"
+literal|"var arrayItem = null;"
 argument_list|)
 expr_stmt|;
 block|}
