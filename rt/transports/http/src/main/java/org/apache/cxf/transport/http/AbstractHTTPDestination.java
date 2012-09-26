@@ -1222,10 +1222,9 @@ name|Base64Exception
 name|ex
 parameter_list|)
 block|{
-comment|// Invalid authentication => treat as not authenticated
+comment|// Invalid authentication => treat as not authenticated or use the Principal
 block|}
 block|}
-elseif|else
 if|if
 condition|(
 name|pp
