@@ -630,7 +630,7 @@ specifier|final
 name|String
 name|SO_TIMEOUT
 init|=
-literal|"org.apache.cxf.transport.http.async.SO_LINGER"
+literal|"org.apache.cxf.transport.http.async.SO_TIMEOUT"
 decl_stmt|;
 comment|//ConnectionPool
 specifier|public
