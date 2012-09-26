@@ -904,6 +904,17 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+name|factory
+operator|.
+name|applyDynamicFeatures
+argument_list|(
+name|getServiceFactory
+argument_list|()
+operator|.
+name|getClassResourceInfo
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|applyFeatures
 argument_list|()
 expr_stmt|;
