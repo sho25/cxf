@@ -353,6 +353,19 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//add the StaxInEndingInterceptor which will close the reader
+name|message
+operator|.
+name|getInterceptorChain
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|StaxInEndingInterceptor
+operator|.
+name|INSTANCE
+argument_list|)
+expr_stmt|;
 name|ct
 operator|=
 name|ct
