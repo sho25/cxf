@@ -2557,15 +2557,12 @@ name|Exception
 name|ex2
 parameter_list|)
 block|{
-name|ex2
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 return|return
 operator|new
 name|WebApplicationException
 argument_list|(
+name|ex2
+argument_list|,
 name|r
 argument_list|)
 return|;
