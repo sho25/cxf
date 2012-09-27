@@ -552,6 +552,15 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|helper
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 try|try
 block|{
 name|MessageContentsList
