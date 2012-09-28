@@ -147,6 +147,10 @@ argument_list|(
 name|SP12Constants
 operator|.
 name|SAML_TOKEN
+argument_list|,
+name|SP12Constants
+operator|.
+name|SUPPORTING_TOKENS
 argument_list|)
 argument_list|,
 operator|new
@@ -248,6 +252,10 @@ argument_list|(
 name|SP12Constants
 operator|.
 name|SAML_TOKEN
+argument_list|,
+name|SP12Constants
+operator|.
+name|SUPPORTING_TOKENS
 argument_list|)
 argument_list|,
 operator|new

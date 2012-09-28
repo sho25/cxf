@@ -1346,6 +1346,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+comment|/*             // Check that the things that weren't asserted are expected             Set<QName> assertions = aim.keySet();             for (QName assertionType : assertions) {                 Collection<AssertionInfo> ais = aim.get(assertionType);                 for (AssertionInfo ai : ais) {                     if (!ai.isAsserted()&& ((notAssertedInAssertions == null)                         || (!notAssertedInAssertions.contains(assertionType)))) {                         throw new Exception("Assertion: " + assertionType + " is not asserted: "                             + ai.getErrorMessage());                     }                 }             }             */
 if|if
 condition|(
 name|notAssertedInAssertions
