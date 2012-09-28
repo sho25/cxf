@@ -2463,11 +2463,6 @@ name|HttpParams
 name|createHttpParams
 parameter_list|()
 block|{
-name|super
-operator|.
-name|createHttpParams
-argument_list|()
-expr_stmt|;
 name|HttpParams
 name|params
 init|=
