@@ -121,7 +121,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|//USe ws-discovery to find references to services that implement the Greeter portType
+comment|//Use WS-Discovery to find references to services that implement the Greeter portType
 name|WSDiscoveryClient
 name|client
 init|=

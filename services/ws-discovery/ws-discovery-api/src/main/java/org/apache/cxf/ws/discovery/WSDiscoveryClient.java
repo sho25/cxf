@@ -719,6 +719,11 @@ decl_stmt|;
 name|Bus
 name|bus
 decl_stmt|;
+name|int
+name|defaultProbeTimeout
+init|=
+literal|1000
+decl_stmt|;
 specifier|public
 name|WSDiscoveryClient
 parameter_list|()
@@ -749,6 +754,28 @@ argument_list|(
 name|address
 argument_list|)
 expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setDefaultProbeTimeout
+parameter_list|(
+name|int
+name|i
+parameter_list|)
+block|{
+name|defaultProbeTimeout
+operator|=
+name|i
+expr_stmt|;
+block|}
+specifier|public
+name|int
+name|getDefaultProbeTimeout
+parameter_list|()
+block|{
+return|return
+name|defaultProbeTimeout
+return|;
 block|}
 specifier|public
 name|String
@@ -1549,7 +1576,7 @@ name|probe
 argument_list|(
 name|p
 argument_list|,
-literal|1000
+name|defaultProbeTimeout
 argument_list|)
 decl_stmt|;
 name|List
@@ -1632,7 +1659,7 @@ name|probe
 argument_list|(
 name|params
 argument_list|,
-literal|1000
+name|defaultProbeTimeout
 argument_list|)
 return|;
 block|}
@@ -1836,12 +1863,7 @@ name|InterruptedException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+comment|// ?
 block|}
 catch|catch
 parameter_list|(
@@ -1849,12 +1871,7 @@ name|ExecutionException
 name|e
 parameter_list|)
 block|{
-comment|// TODO Auto-generated catch block
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+comment|// ?
 block|}
 block|}
 block|}
