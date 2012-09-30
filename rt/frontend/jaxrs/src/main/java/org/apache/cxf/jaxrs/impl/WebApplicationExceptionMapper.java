@@ -159,6 +159,10 @@ name|PhaseInterceptorChain
 import|;
 end_import
 
+begin_comment
+comment|/**  * Default exception mapper for {@link WebApplicationException}.  * This class interacts with {@link FaultListener}. If the service has a {@link FaultListener},  * then this mapper calls it to determine whether to log the exception. In theory, {@link FaultListener}  * objects could take other actions, but since they cannot produce a {@link Response}, they  * are practically limited to controlling logging.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -297,13 +301,15 @@ argument_list|,
 name|ex
 argument_list|)
 decl_stmt|;
-name|boolean
-name|doDefault
-init|=
+if|if
+condition|(
 name|flogger
 operator|!=
 literal|null
-condition|?
+condition|)
+block|{
+if|if
+condition|(
 name|flogger
 operator|.
 name|faultOccurred
@@ -314,13 +320,27 @@ name|errorMessage
 argument_list|,
 name|msg
 argument_list|)
-else|:
-literal|true
-decl_stmt|;
+condition|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
+name|errorMessage
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+else|else
+block|{
 if|if
 condition|(
-name|doDefault
-operator|&&
 name|LOG
 operator|.
 name|isLoggable
@@ -344,8 +364,7 @@ argument_list|,
 name|ex
 argument_list|)
 expr_stmt|;
-block|}
-block|}
+comment|/*                      * only print a stack trace if we are logging FINE.                      * If there is a listener, let it print the stack trace if                      * wants one.                      */
 if|if
 condition|(
 name|printStackTrace
@@ -353,7 +372,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|warning
+name|fine
 argument_list|(
 name|getStackTrace
 argument_list|(
@@ -361,6 +380,9 @@ name|ex
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+block|}
 block|}
 return|return
 name|r
@@ -509,6 +531,7 @@ name|toString
 argument_list|()
 return|;
 block|}
+comment|/**      * Control whether this mapper logs backtraces. If there is no {@link FaultListener},      * and this is<tt>true</tt>, this mapper will log the stack trace at FINE.      * @param printStackTrace whether to log stack trace.      */
 specifier|public
 name|void
 name|setPrintStackTrace
