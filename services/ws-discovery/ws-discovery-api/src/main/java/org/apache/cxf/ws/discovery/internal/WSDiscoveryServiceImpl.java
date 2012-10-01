@@ -678,6 +678,13 @@ argument_list|(
 literal|"org.apache.cxf.service.ws-discovery.address"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|address
+operator|!=
+literal|null
+condition|)
+block|{
 name|client
 operator|.
 name|setAddress
@@ -685,6 +692,7 @@ argument_list|(
 name|address
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|udpEndpoint
