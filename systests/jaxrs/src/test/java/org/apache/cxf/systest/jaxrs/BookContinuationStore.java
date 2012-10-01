@@ -239,7 +239,6 @@ name|MILLISECONDS
 argument_list|)
 expr_stmt|;
 block|}
-comment|//Not currently invoked
 annotation|@
 name|GET
 annotation|@
