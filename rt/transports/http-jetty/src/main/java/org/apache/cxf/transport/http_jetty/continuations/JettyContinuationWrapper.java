@@ -257,6 +257,10 @@ name|isResumed
 operator|=
 literal|true
 expr_stmt|;
+name|isPending
+operator|=
+literal|false
+expr_stmt|;
 name|continuation
 operator|.
 name|resume
@@ -433,6 +437,7 @@ name|isPending
 operator|=
 literal|false
 expr_stmt|;
+comment|//REVISIT: isResumed = false;
 block|}
 specifier|public
 name|void
@@ -454,6 +459,7 @@ name|isPending
 operator|=
 literal|false
 expr_stmt|;
+comment|//isResumed = true;
 block|}
 block|}
 end_class

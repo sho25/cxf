@@ -405,6 +405,10 @@ name|isResumed
 operator|=
 literal|true
 expr_stmt|;
+name|isPending
+operator|=
+literal|false
+expr_stmt|;
 name|redispatch
 argument_list|()
 expr_stmt|;
@@ -502,6 +506,7 @@ name|isPending
 operator|=
 literal|false
 expr_stmt|;
+comment|//REVISIT: isResumed = false;
 block|}
 specifier|public
 name|void
@@ -537,6 +542,7 @@ name|isPending
 operator|=
 literal|false
 expr_stmt|;
+comment|//REVISIT: isResumed = true;
 name|redispatch
 argument_list|()
 expr_stmt|;
