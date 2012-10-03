@@ -352,7 +352,7 @@ name|WSConstants
 operator|.
 name|WSS_SAML_TOKEN_TYPE
 argument_list|,
-literal|5
+literal|2
 argument_list|,
 literal|true
 argument_list|)
@@ -367,7 +367,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|5000
+literal|2100
 argument_list|)
 expr_stmt|;
 comment|// Renew the token
@@ -521,7 +521,7 @@ name|WSConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
-literal|5
+literal|2
 argument_list|,
 literal|true
 argument_list|)
@@ -536,7 +536,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|5000
+literal|2100
 argument_list|)
 expr_stmt|;
 comment|// Renew the token
@@ -690,7 +690,7 @@ name|WSConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
-literal|5
+literal|2
 argument_list|,
 literal|false
 argument_list|)
@@ -705,7 +705,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|5000
+literal|2100
 argument_list|)
 expr_stmt|;
 comment|// Renew the token - this will fail as we didn't send a Renewing @OK attribute
@@ -1000,7 +1000,7 @@ name|WSConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
 argument_list|,
-literal|5
+literal|2
 argument_list|,
 literal|true
 argument_list|)
@@ -1015,7 +1015,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|5000
+literal|2100
 argument_list|)
 expr_stmt|;
 comment|// Renew the token
