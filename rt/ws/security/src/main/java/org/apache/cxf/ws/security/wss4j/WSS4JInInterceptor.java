@@ -2608,6 +2608,8 @@ parameter_list|,
 name|RequestData
 name|reqData
 parameter_list|)
+throws|throws
+name|WSSecurityException
 block|{
 comment|//
 comment|// Try to get Crypto Provider from message context properties.
