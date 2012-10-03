@@ -148,8 +148,9 @@ name|receiveTimes
 operator|.
 name|add
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|now
 argument_list|)

@@ -168,8 +168,9 @@ name|add
 argument_list|(
 literal|0
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|size
 argument_list|)

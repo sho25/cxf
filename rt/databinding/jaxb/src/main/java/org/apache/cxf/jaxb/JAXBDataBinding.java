@@ -1825,8 +1825,9 @@ block|{
 name|Integer
 name|mtomThresholdInt
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|getMtomThreshold
 argument_list|()

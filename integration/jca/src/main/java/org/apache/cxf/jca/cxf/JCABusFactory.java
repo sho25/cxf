@@ -1292,9 +1292,12 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
+operator|(
+name|long
+operator|)
 name|pollIntervalSeconds
 operator|*
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 block|}

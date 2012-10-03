@@ -106,8 +106,9 @@ name|context
 parameter_list|)
 block|{
 return|return
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|reader
 operator|.
@@ -156,8 +157,9 @@ name|writer
 operator|.
 name|writeValueAsInt
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 operator|(

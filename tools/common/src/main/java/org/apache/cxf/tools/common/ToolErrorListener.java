@@ -186,6 +186,8 @@ argument_list|,
 name|column
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -253,6 +255,8 @@ argument_list|,
 name|line
 argument_list|,
 name|column
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|)

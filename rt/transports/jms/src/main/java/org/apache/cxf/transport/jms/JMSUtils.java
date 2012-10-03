@@ -1149,8 +1149,9 @@ name|messageProperties
 operator|.
 name|setJMSDeliveryMode
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|message
 operator|.
@@ -1163,8 +1164,9 @@ name|messageProperties
 operator|.
 name|setJMSExpiration
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|message
 operator|.
@@ -1187,8 +1189,9 @@ name|messageProperties
 operator|.
 name|setJMSPriority
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|message
 operator|.
@@ -1216,8 +1219,9 @@ name|messageProperties
 operator|.
 name|setJMSTimeStamp
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|message
 operator|.

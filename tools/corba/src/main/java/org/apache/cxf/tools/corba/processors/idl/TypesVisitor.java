@@ -225,13 +225,7 @@ name|identifierNode
 argument_list|)
 expr_stmt|;
 block|}
-elseif|else
-if|if
-condition|(
-name|visitor
-operator|==
-literal|null
-condition|)
+else|else
 block|{
 comment|// REVISIT: !!!!!
 comment|// This is ugly. It should be done in the SimpleTypeSpecVisitor.accept(node) method.

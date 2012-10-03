@@ -106,8 +106,9 @@ name|context
 parameter_list|)
 block|{
 return|return
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 name|reader
 operator|.
@@ -164,8 +165,9 @@ name|writer
 operator|.
 name|writeValueAsByte
 argument_list|(
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 name|byteValue
 argument_list|)

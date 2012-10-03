@@ -586,8 +586,9 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|0
 argument_list|)
@@ -628,8 +629,9 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|0
 argument_list|)
@@ -650,8 +652,9 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 literal|0
 argument_list|)
@@ -672,8 +675,9 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -697,8 +701,9 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -722,8 +727,9 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|char
@@ -930,8 +936,9 @@ name|proxy
 parameter_list|)
 block|{
 return|return
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|System
 operator|.

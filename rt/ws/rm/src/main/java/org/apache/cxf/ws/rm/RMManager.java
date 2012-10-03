@@ -1514,8 +1514,9 @@ name|bri
 operator|.
 name|setMilliseconds
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|RetransmissionQueue
 operator|.
@@ -2737,8 +2738,9 @@ operator|new
 name|Object
 index|[]
 block|{
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|reliableEndpoints
 operator|.

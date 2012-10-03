@@ -1096,8 +1096,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1150,8 +1151,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1204,8 +1206,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1258,8 +1261,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1389,8 +1393,9 @@ block|{
 name|Integer
 name|result
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1507,8 +1512,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1687,8 +1693,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.
@@ -1741,8 +1748,9 @@ block|{
 try|try
 block|{
 return|return
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|stream
 operator|.

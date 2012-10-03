@@ -208,11 +208,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Invalid name ["
-operator|+
-name|name
-operator|+
-literal|"]"
+literal|"Invalid name [null]"
 argument_list|)
 throw|;
 block|}
@@ -679,11 +675,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Invalid name ["
-operator|+
-name|name
-operator|+
-literal|"]"
+literal|"Invalid name [null]"
 argument_list|)
 throw|;
 block|}

@@ -1025,8 +1025,9 @@ comment|// This means that we can directly write out the chars in the normal
 comment|// range 0-127 even when using UTF-8
 name|obj
 operator|=
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 call|(
 name|char
@@ -1062,8 +1063,9 @@ case|:
 comment|// A wide char is mapped to a string, we need it as a character
 name|obj
 operator|=
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 name|data
 operator|.

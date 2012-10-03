@@ -2564,6 +2564,9 @@ operator|!=
 literal|null
 operator|&&
 name|currentEvent
+operator|.
+name|getValue
+argument_list|()
 operator|!=
 literal|null
 condition|)
@@ -2637,6 +2640,9 @@ operator|!=
 literal|null
 operator|&&
 name|currentEvent
+operator|.
+name|getValue
+argument_list|()
 operator|!=
 literal|null
 condition|)

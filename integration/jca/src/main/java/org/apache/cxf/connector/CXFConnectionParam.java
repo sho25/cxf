@@ -497,7 +497,7 @@ literal|null
 condition|)
 block|{
 return|return
-name|obj1
+literal|null
 operator|==
 name|obj2
 return|;

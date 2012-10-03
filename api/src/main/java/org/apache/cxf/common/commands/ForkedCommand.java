@@ -724,9 +724,12 @@ expr_stmt|;
 block|}
 name|join
 argument_list|(
+operator|(
+name|long
+operator|)
 name|timeout
 operator|*
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 block|}

@@ -95,8 +95,9 @@ name|part2
 operator|.
 name|value
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|part2
 operator|.

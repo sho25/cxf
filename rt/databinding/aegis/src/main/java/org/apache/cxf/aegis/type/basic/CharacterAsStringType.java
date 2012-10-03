@@ -179,8 +179,9 @@ name|context
 argument_list|)
 decl_stmt|;
 return|return
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|char

@@ -1457,6 +1457,16 @@ name|getPayload
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|frameType
+operator|=
+name|frame
+operator|.
+name|getHeader
+argument_list|()
+operator|.
+name|getFrameType
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

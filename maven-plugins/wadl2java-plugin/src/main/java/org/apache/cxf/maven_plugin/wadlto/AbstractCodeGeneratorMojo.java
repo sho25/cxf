@@ -1401,11 +1401,7 @@ throw|throw
 operator|new
 name|MojoExecutionException
 argument_list|(
-literal|"Unable to find "
-operator|+
-name|file
-operator|+
-literal|" for artifact "
+literal|"Unable to find file for artifact "
 operator|+
 name|a
 operator|.
@@ -1911,11 +1907,7 @@ throw|throw
 operator|new
 name|MojoExecutionException
 argument_list|(
-literal|"Unable to find "
-operator|+
-name|file
-operator|+
-literal|" for artifact "
+literal|"Unable to find file for artifact "
 operator|+
 name|a
 operator|.

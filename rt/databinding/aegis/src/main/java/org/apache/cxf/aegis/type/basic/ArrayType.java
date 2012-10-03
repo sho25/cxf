@@ -1759,8 +1759,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[
@@ -1826,8 +1827,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[
@@ -1893,8 +1895,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[
@@ -1960,8 +1963,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[
@@ -2027,8 +2031,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Float
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[
@@ -2094,8 +2099,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[
@@ -2229,8 +2235,9 @@ control|)
 block|{
 name|writeValue
 argument_list|(
-operator|new
 name|Character
+operator|.
+name|valueOf
 argument_list|(
 name|objects
 index|[

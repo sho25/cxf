@@ -297,11 +297,14 @@ condition|)
 block|{
 name|createTimerTask
 argument_list|(
+operator|(
+name|long
+operator|)
 name|batchTime
 operator|*
-literal|60
+literal|60L
 operator|*
-literal|1000
+literal|1000L
 argument_list|)
 expr_stmt|;
 block|}
