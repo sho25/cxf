@@ -1698,7 +1698,13 @@ decl_stmt|;
 name|Scope
 name|scopedName
 init|=
+operator|new
+name|Scope
+argument_list|(
 name|scope
+argument_list|,
+name|node
+argument_list|)
 decl_stmt|;
 name|String
 name|name
