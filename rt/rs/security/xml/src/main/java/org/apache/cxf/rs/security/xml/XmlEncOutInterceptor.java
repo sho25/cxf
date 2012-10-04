@@ -1148,13 +1148,13 @@ name|generateKey
 argument_list|()
 expr_stmt|;
 block|}
-block|}
 return|return
 name|symmetricKey
 operator|.
 name|getEncoded
 argument_list|()
 return|;
+block|}
 block|}
 specifier|private
 name|X509Certificate

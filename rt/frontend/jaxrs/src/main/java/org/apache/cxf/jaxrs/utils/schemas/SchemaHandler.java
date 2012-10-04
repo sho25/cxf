@@ -769,8 +769,12 @@ name|toArray
 argument_list|(
 operator|new
 name|Source
-index|[]
-block|{}
+index|[
+name|sources
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 argument_list|)
 expr_stmt|;

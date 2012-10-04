@@ -2701,8 +2701,12 @@ name|toArray
 argument_list|(
 operator|new
 name|String
-index|[]
-block|{}
+index|[
+name|args
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 argument_list|)
 expr_stmt|;

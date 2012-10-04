@@ -432,6 +432,13 @@ finally|finally
 block|{
 try|try
 block|{
+if|if
+condition|(
+name|reader
+operator|!=
+literal|null
+condition|)
+block|{
 try|try
 block|{
 comment|//on woodstox, calling closeCompletely will allow any
@@ -466,6 +473,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(

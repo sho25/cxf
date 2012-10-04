@@ -584,8 +584,12 @@ name|toArray
 argument_list|(
 operator|new
 name|Annotation
-index|[]
-block|{}
+index|[
+name|annoList
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 return|;
 block|}

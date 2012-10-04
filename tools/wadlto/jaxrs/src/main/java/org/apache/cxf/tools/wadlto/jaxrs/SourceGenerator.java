@@ -9713,8 +9713,12 @@ name|toArray
 argument_list|(
 operator|new
 name|String
-index|[]
-block|{}
+index|[
+name|compilerArgs
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 argument_list|)
 expr_stmt|;

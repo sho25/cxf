@@ -514,8 +514,8 @@ expr_stmt|;
 if|if
 condition|(
 name|obj
-operator|instanceof
-name|XmlObject
+operator|!=
+literal|null
 condition|)
 block|{
 name|XmlObject

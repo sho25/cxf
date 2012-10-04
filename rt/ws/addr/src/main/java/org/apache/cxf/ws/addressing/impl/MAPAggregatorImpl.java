@@ -5486,8 +5486,8 @@ decl_stmt|;
 if|if
 condition|(
 name|conduit
-operator|instanceof
-name|Observable
+operator|!=
+literal|null
 condition|)
 block|{
 name|MessageObserver

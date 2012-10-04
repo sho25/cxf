@@ -304,14 +304,6 @@ condition|(
 name|catalog
 operator|!=
 literal|null
-operator|&&
-operator|!
-literal|""
-operator|.
-name|equals
-argument_list|(
-name|catalog
-argument_list|)
 condition|)
 block|{
 name|options

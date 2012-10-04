@@ -384,8 +384,15 @@ name|toArray
 argument_list|(
 operator|new
 name|Principal
-index|[]
-block|{}
+index|[
+name|subject
+operator|.
+name|getPrincipals
+argument_list|()
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 decl_stmt|;
 if|if

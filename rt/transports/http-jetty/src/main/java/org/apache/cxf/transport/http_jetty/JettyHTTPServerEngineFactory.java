@@ -1356,7 +1356,7 @@ parameter_list|()
 block|{
 comment|// shut down the jetty server in the portMap
 comment|// To avoid the CurrentModificationException,
-comment|// do not use portMap.vaules directly
+comment|// do not use portMap.values directly
 name|JettyHTTPServerEngine
 index|[]
 name|engines
@@ -1371,7 +1371,13 @@ argument_list|(
 operator|new
 name|JettyHTTPServerEngine
 index|[
-literal|0
+name|portMap
+operator|.
+name|values
+argument_list|()
+operator|.
+name|size
+argument_list|()
 index|]
 argument_list|)
 decl_stmt|;

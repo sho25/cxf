@@ -684,8 +684,12 @@ name|toArray
 argument_list|(
 operator|new
 name|AbstractDestination
-index|[]
-block|{}
+index|[
+name|dest2
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 return|;
 block|}

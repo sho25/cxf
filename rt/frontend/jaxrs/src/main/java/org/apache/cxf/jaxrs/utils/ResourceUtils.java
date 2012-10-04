@@ -4046,8 +4046,8 @@ operator|!=
 name|type
 operator|&&
 name|genCls
-operator|instanceof
-name|Class
+operator|!=
+literal|null
 operator|&&
 name|genCls
 operator|!=

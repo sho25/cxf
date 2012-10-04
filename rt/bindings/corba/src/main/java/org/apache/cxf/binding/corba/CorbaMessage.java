@@ -393,7 +393,12 @@ argument_list|(
 operator|new
 name|CorbaStreamable
 index|[
-literal|0
+name|this
+operator|.
+name|arguments
+operator|.
+name|size
+argument_list|()
 index|]
 argument_list|)
 return|;

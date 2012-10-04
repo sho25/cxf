@@ -175,6 +175,13 @@ argument_list|(
 name|file
 argument_list|)
 expr_stmt|;
+name|element
+operator|=
+name|document
+operator|.
+name|getDocumentElement
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -212,13 +219,6 @@ name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
-name|element
-operator|=
-name|document
-operator|.
-name|getDocumentElement
-argument_list|()
-expr_stmt|;
 block|}
 specifier|public
 name|String
