@@ -374,7 +374,7 @@ name|name
 init|=
 name|a
 operator|.
-name|getNodeName
+name|getLocalName
 argument_list|()
 decl_stmt|;
 if|if
@@ -395,11 +395,6 @@ else|else
 block|{
 return|return
 name|name
-operator|.
-name|substring
-argument_list|(
-literal|6
-argument_list|)
 return|;
 block|}
 block|}
