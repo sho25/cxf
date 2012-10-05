@@ -1335,10 +1335,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|obj
-operator|==
-literal|null
-operator|&&
 name|needToRender
 argument_list|(
 name|obj

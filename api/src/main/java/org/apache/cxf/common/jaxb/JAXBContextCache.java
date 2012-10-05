@@ -979,13 +979,6 @@ block|}
 block|}
 block|}
 block|}
-if|if
-condition|(
-name|context
-operator|==
-literal|null
-condition|)
-block|{
 try|try
 block|{
 name|context
@@ -1134,7 +1127,6 @@ argument_list|,
 name|cachedContextAndSchemas
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return

@@ -2009,13 +2009,6 @@ name|t
 throw|;
 block|}
 block|}
-if|if
-condition|(
-name|t
-operator|==
-literal|null
-condition|)
-block|{
 name|t
 operator|=
 name|convertToWebApplicationException
@@ -2023,7 +2016,6 @@ argument_list|(
 name|r
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|inMessage

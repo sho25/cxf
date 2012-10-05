@@ -1507,7 +1507,7 @@ decl_stmt|;
 if|if
 condition|(
 name|useIn
-operator|&
+operator|&&
 operator|!
 name|fault
 condition|)
