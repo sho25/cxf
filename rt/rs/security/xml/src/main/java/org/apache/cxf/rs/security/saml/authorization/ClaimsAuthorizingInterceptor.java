@@ -508,7 +508,7 @@ operator|!
 operator|(
 name|sc
 operator|instanceof
-name|SAMLSecurityContext
+name|JAXRSSAMLSecurityContext
 operator|)
 condition|)
 block|{
@@ -533,7 +533,7 @@ condition|(
 name|authorize
 argument_list|(
 operator|(
-name|SAMLSecurityContext
+name|JAXRSSAMLSecurityContext
 operator|)
 name|sc
 argument_list|,
@@ -678,7 +678,7 @@ specifier|protected
 name|boolean
 name|authorize
 parameter_list|(
-name|SAMLSecurityContext
+name|JAXRSSAMLSecurityContext
 name|sc
 parameter_list|,
 name|Method

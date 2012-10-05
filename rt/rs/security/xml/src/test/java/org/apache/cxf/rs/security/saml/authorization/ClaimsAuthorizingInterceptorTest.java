@@ -1170,7 +1170,7 @@ name|SecurityContext
 name|sc
 init|=
 operator|new
-name|SAMLSecurityContext
+name|JAXRSSAMLSecurityContext
 argument_list|(
 operator|new
 name|Subject
