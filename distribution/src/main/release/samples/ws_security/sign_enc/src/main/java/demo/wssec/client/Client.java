@@ -405,7 +405,9 @@ name|WSU_NS
 operator|+
 literal|"}Timestamp;"
 operator|+
-literal|"{Element}{http://schemas.xmlsoap.org/soap/envelope/}Body"
+literal|"{Element}{http://schemas.xmlsoap.org/soap/envelope/}Body;"
+operator|+
+literal|"{}{http://www.w3.org/2005/08/addressing}ReplyTo;"
 argument_list|)
 expr_stmt|;
 name|bus
