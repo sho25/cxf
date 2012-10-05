@@ -379,7 +379,7 @@ argument_list|()
 decl_stmt|;
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 name|customName
 argument_list|)
@@ -389,7 +389,7 @@ else|else
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 literal|"alice"
 argument_list|)
@@ -414,7 +414,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 literal|"doe"
 argument_list|)
@@ -438,7 +438,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 literal|"alice@cxf.apache.org"
 argument_list|)
@@ -481,7 +481,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 name|requestedRole
 argument_list|)

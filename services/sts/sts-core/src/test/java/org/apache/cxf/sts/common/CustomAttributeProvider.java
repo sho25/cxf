@@ -1081,15 +1081,10 @@ name|attributeBean
 operator|.
 name|setAttributeValues
 argument_list|(
-name|Collections
-operator|.
-name|singletonList
-argument_list|(
 name|claim
 operator|.
-name|getValue
+name|getValues
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 return|return

@@ -1376,7 +1376,7 @@ expr_stmt|;
 block|}
 name|c
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 name|claimValue
 operator|.

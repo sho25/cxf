@@ -299,7 +299,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 literal|"aliceClaim"
 argument_list|)
@@ -324,7 +324,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 literal|"bobClaim"
 argument_list|)

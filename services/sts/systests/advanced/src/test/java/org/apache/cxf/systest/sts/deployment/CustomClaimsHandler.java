@@ -281,7 +281,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 literal|"admin-user"
 argument_list|)
@@ -303,7 +303,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 name|parameters
 operator|.
@@ -331,7 +331,7 @@ condition|)
 block|{
 name|claim
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 name|parameters
 operator|.

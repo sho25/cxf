@@ -311,7 +311,7 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setValue
+name|addValue
 argument_list|(
 name|getGlobalClaims
 argument_list|()
