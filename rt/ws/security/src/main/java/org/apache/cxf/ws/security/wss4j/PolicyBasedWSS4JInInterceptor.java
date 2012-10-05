@@ -65,6 +65,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Arrays
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Collection
 import|;
 end_import
@@ -3117,14 +3127,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-for|for
-control|(
-name|String
-name|xPath
-range|:
-name|xpaths
-control|)
-block|{
 try|try
 block|{
 name|CryptoCoverageUtil
@@ -3137,7 +3139,7 @@ name|refs
 argument_list|,
 name|namespaces
 argument_list|,
-name|xPath
+name|xpaths
 argument_list|,
 name|type
 argument_list|,
@@ -3159,15 +3161,22 @@ literal|"No "
 operator|+
 name|type
 operator|+
-literal|" element found matching XPath "
+literal|" element found matching one of the XPaths "
 operator|+
-name|xPath
+name|Arrays
+operator|.
+name|toString
+argument_list|(
+name|xpaths
+operator|.
+name|toArray
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
 literal|false
 return|;
-block|}
 block|}
 block|}
 block|}
