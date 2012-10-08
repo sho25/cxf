@@ -1847,11 +1847,7 @@ condition|)
 block|{
 name|pfx
 operator|=
-operator|new
-name|String
-argument_list|(
 literal|"corba"
-argument_list|)
 expr_stmt|;
 name|def
 operator|.
@@ -2155,11 +2151,7 @@ condition|)
 block|{
 name|corbaPrefix
 operator|=
-operator|new
-name|String
-argument_list|(
 literal|"corba"
-argument_list|)
 expr_stmt|;
 name|def
 operator|.

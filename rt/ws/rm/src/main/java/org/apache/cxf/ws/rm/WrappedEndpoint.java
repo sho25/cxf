@@ -528,8 +528,11 @@ condition|(
 name|MAPAggregator
 operator|.
 name|USING_ADDRESSING
-operator|==
+operator|.
+name|equals
+argument_list|(
 name|key
+argument_list|)
 condition|)
 block|{
 return|return
@@ -588,8 +591,11 @@ condition|(
 name|MAPAggregator
 operator|.
 name|USING_ADDRESSING
-operator|==
+operator|.
+name|equals
+argument_list|(
 name|key
+argument_list|)
 condition|)
 block|{
 name|usingAddressing
