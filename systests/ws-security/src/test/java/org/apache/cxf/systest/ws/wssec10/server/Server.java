@@ -73,9 +73,9 @@ name|systest
 operator|.
 name|ws
 operator|.
-name|wssec11
+name|common
 operator|.
-name|WSSecurity11Common
+name|SecurityTestUtil
 import|;
 end_import
 
@@ -142,7 +142,7 @@ static|static
 block|{
 name|unrestrictedPoliciesInstalled
 operator|=
-name|WSSecurity11Common
+name|SecurityTestUtil
 operator|.
 name|checkUnrestrictedPoliciesInstalled
 argument_list|()
