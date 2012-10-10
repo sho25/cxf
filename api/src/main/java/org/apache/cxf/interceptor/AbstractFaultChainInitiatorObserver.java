@@ -295,6 +295,13 @@ name|bus
 operator|=
 name|bus
 expr_stmt|;
+if|if
+condition|(
+name|bus
+operator|!=
+literal|null
+condition|)
+block|{
 name|loader
 operator|=
 name|bus
@@ -306,6 +313,7 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
