@@ -1312,12 +1312,10 @@ if|if
 condition|(
 name|fileName
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 literal|"\""
 argument_list|)
-operator|>
-literal|0
 condition|)
 block|{
 name|fileName

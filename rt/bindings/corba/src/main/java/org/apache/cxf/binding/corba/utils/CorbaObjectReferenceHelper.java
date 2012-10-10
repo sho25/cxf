@@ -915,9 +915,7 @@ block|{
 name|String
 name|ret
 init|=
-operator|new
-name|String
-argument_list|()
+literal|""
 decl_stmt|;
 name|byte
 name|data

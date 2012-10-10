@@ -3910,8 +3910,8 @@ operator|==
 literal|null
 operator|&&
 name|corbaTypeImpl
-operator|instanceof
-name|Object
+operator|!=
+literal|null
 condition|)
 block|{
 name|result

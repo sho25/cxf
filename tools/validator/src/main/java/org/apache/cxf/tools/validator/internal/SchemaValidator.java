@@ -1545,12 +1545,10 @@ if|if
 condition|(
 name|s
 operator|.
-name|indexOf
+name|contains
 argument_list|(
 literal|"http-conf"
 argument_list|)
-operator|>
-literal|0
 condition|)
 block|{
 name|xsdUrls
