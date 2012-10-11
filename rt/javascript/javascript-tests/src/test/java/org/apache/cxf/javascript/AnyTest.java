@@ -250,7 +250,9 @@ literal|"any-service-endpoint"
 argument_list|,
 literal|"/org/apache/cxf/javascript/AnyTests.js"
 argument_list|,
-literal|true
+name|Boolean
+operator|.
+name|TRUE
 argument_list|)
 expr_stmt|;
 name|implementor

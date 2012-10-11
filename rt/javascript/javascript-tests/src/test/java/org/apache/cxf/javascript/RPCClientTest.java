@@ -236,7 +236,9 @@ literal|"rpc-service-endpoint"
 argument_list|,
 literal|"/org/apache/cxf/javascript/RPCTests.js"
 argument_list|,
-literal|false
+name|Boolean
+operator|.
+name|FALSE
 argument_list|)
 expr_stmt|;
 name|implementor

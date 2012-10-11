@@ -218,8 +218,8 @@ parameter_list|,
 name|String
 name|testsJavascript
 parameter_list|,
-name|boolean
-name|validation
+name|Object
+name|validationType
 parameter_list|)
 throws|throws
 name|Exception
@@ -327,11 +327,6 @@ argument_list|(
 name|testsJavascript
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|validation
-condition|)
-block|{
 name|endpoint
 operator|.
 name|getService
@@ -343,12 +338,9 @@ name|Message
 operator|.
 name|SCHEMA_VALIDATION_ENABLED
 argument_list|,
-name|Boolean
-operator|.
-name|TRUE
+name|validationType
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 specifier|protected
 name|String
