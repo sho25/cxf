@@ -745,9 +745,6 @@ operator|.
 name|put
 argument_list|(
 name|wsdlURL
-operator|.
-name|toString
-argument_list|()
 argument_list|,
 name|wsdlNode
 argument_list|)
@@ -3161,9 +3158,6 @@ operator|=
 name|resolveByCatalog
 argument_list|(
 name|wsdlURI
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|targetNode

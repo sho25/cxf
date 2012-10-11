@@ -166,9 +166,6 @@ operator|+
 literal|" = "
 operator|+
 name|value
-operator|.
-name|toString
-argument_list|()
 operator|+
 literal|";"
 argument_list|)

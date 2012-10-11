@@ -2189,9 +2189,6 @@ operator|=
 name|normalizePackageNamePart
 argument_list|(
 name|name
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

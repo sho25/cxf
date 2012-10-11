@@ -2344,16 +2344,10 @@ name|ret
 operator|==
 literal|null
 operator|||
-operator|(
-name|ret
-operator|!=
-literal|null
-operator|&&
 name|ret
 operator|.
 name|booleanValue
 argument_list|()
-operator|)
 return|;
 block|}
 annotation|@

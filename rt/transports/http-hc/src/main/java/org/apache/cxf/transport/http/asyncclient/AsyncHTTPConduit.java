@@ -2250,13 +2250,6 @@ name|count
 init|=
 literal|0
 decl_stmt|;
-if|if
-condition|(
-name|buffer
-operator|!=
-literal|null
-condition|)
-block|{
 while|while
 condition|(
 name|buffer
@@ -2336,7 +2329,6 @@ block|{
 return|return
 name|count
 return|;
-block|}
 block|}
 block|}
 if|if

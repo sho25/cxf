@@ -375,10 +375,6 @@ operator|==
 literal|null
 operator|||
 name|className
-operator|!=
-literal|null
-operator|&&
-name|className
 operator|.
 name|equals
 argument_list|(

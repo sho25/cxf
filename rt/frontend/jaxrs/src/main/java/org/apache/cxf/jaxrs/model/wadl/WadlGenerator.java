@@ -10464,9 +10464,6 @@ operator|.
 name|path
 argument_list|(
 name|loc
-operator|.
-name|toString
-argument_list|()
 argument_list|)
 operator|.
 name|build

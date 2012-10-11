@@ -4443,11 +4443,6 @@ name|inpart
 operator|==
 literal|null
 operator|||
-operator|(
-name|inpart
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|isSamePart
 argument_list|(
@@ -4455,7 +4450,6 @@ name|inpart
 argument_list|,
 name|part
 argument_list|)
-operator|)
 condition|)
 block|{
 name|outputUnlistedParts

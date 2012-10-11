@@ -111,7 +111,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|Collections
 import|;
 end_import
 
@@ -1321,28 +1321,12 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Removes namespace from output
+comment|/*             setOutTransformElements(new HashMap<String, String>() {                 private static final long serialVersionUID = -1341932955817405356L;                  {                     put("{" + LOGGING_NAMESPACE + "}*", "*");                 }             }); */
 name|setOutTransformElements
 argument_list|(
-operator|new
-name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-argument_list|()
-block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1341932955817405356L
-decl_stmt|;
-block|{
-name|put
+name|Collections
+operator|.
+name|singletonMap
 argument_list|(
 literal|"{"
 operator|+
@@ -1352,34 +1336,15 @@ literal|"}*"
 argument_list|,
 literal|"*"
 argument_list|)
-expr_stmt|;
-block|}
-block|}
 argument_list|)
 expr_stmt|;
 comment|// Adds namespace to input
+comment|/*             setInTransformElements(new HashMap<String, String>() {                 private static final long serialVersionUID = -1509522821399368946L;                  {                     put("*", "{" + LOGGING_NAMESPACE + "}*");                 }             }); */
 name|setInTransformElements
 argument_list|(
-operator|new
-name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
-argument_list|()
-block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-operator|-
-literal|1509522821399368946L
-decl_stmt|;
-block|{
-name|put
+name|Collections
+operator|.
+name|singletonMap
 argument_list|(
 literal|"*"
 argument_list|,
@@ -1389,9 +1354,6 @@ name|LOGGING_NAMESPACE
 operator|+
 literal|"}*"
 argument_list|)
-expr_stmt|;
-block|}
-block|}
 argument_list|)
 expr_stmt|;
 block|}

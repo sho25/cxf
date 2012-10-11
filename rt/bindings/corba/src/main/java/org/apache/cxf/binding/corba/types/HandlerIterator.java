@@ -136,13 +136,6 @@ name|boolean
 name|hasNext
 parameter_list|()
 block|{
-if|if
-condition|(
-name|next
-operator|==
-literal|null
-condition|)
-block|{
 while|while
 condition|(
 name|next
@@ -267,7 +260,6 @@ block|}
 name|count
 operator|++
 expr_stmt|;
-block|}
 block|}
 return|return
 name|next

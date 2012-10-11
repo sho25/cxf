@@ -421,9 +421,6 @@ name|source
 operator|.
 name|getName
 argument_list|()
-operator|.
-name|toString
-argument_list|()
 return|;
 block|}
 comment|/**      * @return the expiry data of this sequence      */
