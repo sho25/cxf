@@ -1798,7 +1798,11 @@ name|readShort
 argument_list|()
 expr_stmt|;
 comment|// class index or (12) name index
-comment|// fall through
+name|readShort
+argument_list|()
+expr_stmt|;
+comment|// string index or class index
+break|break;
 case|case
 name|CONSTANT_CLASS
 case|:
@@ -1825,7 +1829,11 @@ comment|// entries occupy two "slots" in the cpool table.
 name|i
 operator|++
 expr_stmt|;
-comment|// fall through
+name|readInt
+argument_list|()
+expr_stmt|;
+comment|// value
+break|break;
 case|case
 name|CONSTANT_INTEGER
 case|:

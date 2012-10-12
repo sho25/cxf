@@ -427,10 +427,6 @@ comment|//ignore - no resource manager
 block|}
 if|if
 condition|(
-name|resourceManager
-operator|==
-literal|null
-operator|&&
 name|m
 operator|==
 literal|null
@@ -462,10 +458,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|resourceManager
-operator|==
-literal|null
-operator|&&
 name|m
 operator|!=
 literal|null

@@ -572,8 +572,8 @@ name|left
 operator|+
 name|right
 operator|)
-operator|/
-literal|2
+operator|>>>
+literal|1
 decl_stmt|;
 name|int
 name|res
