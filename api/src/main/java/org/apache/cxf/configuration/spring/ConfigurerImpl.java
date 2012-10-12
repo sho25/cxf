@@ -151,6 +151,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|regex
+operator|.
+name|PatternSyntaxException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -594,6 +606,8 @@ literal|"\\."
 argument_list|)
 expr_stmt|;
 block|}
+try|try
+block|{
 name|Matcher
 name|matcher
 init|=
@@ -666,6 +680,15 @@ argument_list|(
 name|holder
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|PatternSyntaxException
+name|npe
+parameter_list|)
+block|{
+comment|//not a valid patter, we'll ignore
+block|}
 block|}
 else|else
 block|{
