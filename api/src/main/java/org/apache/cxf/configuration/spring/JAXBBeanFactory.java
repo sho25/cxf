@@ -250,6 +250,16 @@ name|e
 argument_list|)
 throw|;
 block|}
+finally|finally
+block|{
+name|StaxUtils
+operator|.
+name|close
+argument_list|(
+name|data
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 block|}
 end_class

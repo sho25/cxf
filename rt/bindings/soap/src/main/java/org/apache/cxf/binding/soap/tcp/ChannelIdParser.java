@@ -208,6 +208,16 @@ name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
+finally|finally
+block|{
+name|StaxUtils
+operator|.
+name|close
+argument_list|(
+name|streamReader
+argument_list|)
+expr_stmt|;
+block|}
 return|return
 literal|0
 return|;

@@ -870,6 +870,16 @@ name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
+finally|finally
+block|{
+name|StaxUtils
+operator|.
+name|close
+argument_list|(
+name|xmlReader
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 return|return
 literal|false

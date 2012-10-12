@@ -163,6 +163,11 @@ name|tmpFile
 init|=
 literal|null
 decl_stmt|;
+name|XMLStreamReader
+name|rdr
+init|=
+literal|null
+decl_stmt|;
 try|try
 block|{
 comment|// create tmp file
@@ -203,16 +208,15 @@ argument_list|(
 name|tmpFile
 argument_list|)
 decl_stmt|;
-name|XMLStreamReader
 name|rdr
-init|=
+operator|=
 name|StaxUtils
 operator|.
 name|createXMLStreamReader
 argument_list|(
 name|tmpIn
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 while|while
 condition|(
 name|rdr
@@ -433,6 +437,13 @@ name|delete
 argument_list|()
 expr_stmt|;
 block|}
+name|StaxUtils
+operator|.
+name|close
+argument_list|(
+name|rdr
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 block|}
