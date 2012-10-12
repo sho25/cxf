@@ -23,6 +23,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -42,6 +54,22 @@ operator|.
 name|dom
 operator|.
 name|Element
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -217,6 +245,21 @@ argument_list|<
 name|Element
 argument_list|>
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|HttpsTokenBuilder
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 name|PolicyBuilder
 name|builder
 decl_stmt|;
@@ -368,14 +411,16 @@ operator|==
 literal|null
 condition|)
 block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
+name|LOG
+operator|.
+name|warning
 argument_list|(
-literal|"sp:HttpsToken/wsp:Policy must have a value"
+literal|"sp:HttpsToken/wsp:Policy should have a value!"
 argument_list|)
-throw|;
+expr_stmt|;
 block|}
+else|else
+block|{
 name|Element
 name|child
 init|=
@@ -469,6 +514,7 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
