@@ -1247,7 +1247,9 @@ block|{
 if|if
 condition|(
 name|isPayloadEmpty
-argument_list|()
+argument_list|(
+name|headers
+argument_list|)
 condition|)
 block|{
 if|if

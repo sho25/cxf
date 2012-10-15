@@ -73,9 +73,15 @@ begin_annotation_defn
 annotation|@
 name|Target
 argument_list|(
+block|{
 name|ElementType
 operator|.
 name|PARAMETER
+block|,
+name|ElementType
+operator|.
+name|METHOD
+block|}
 argument_list|)
 annotation|@
 name|Retention
