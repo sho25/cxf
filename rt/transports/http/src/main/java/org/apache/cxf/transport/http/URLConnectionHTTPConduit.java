@@ -833,8 +833,15 @@ name|connection
 operator|.
 name|setChunkedStreamingMode
 argument_list|(
-operator|-
-literal|1
+name|URLConnectionHTTPConduit
+operator|.
+name|this
+operator|.
+name|getClient
+argument_list|()
+operator|.
+name|getChunkLength
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
