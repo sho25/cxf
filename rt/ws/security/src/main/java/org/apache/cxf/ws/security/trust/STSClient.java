@@ -9690,6 +9690,15 @@ name|rstClaims
 expr_stmt|;
 block|}
 specifier|public
+name|Element
+name|getClaims
+parameter_list|()
+block|{
+return|return
+name|claims
+return|;
+block|}
+specifier|public
 name|List
 argument_list|<
 name|Interceptor
