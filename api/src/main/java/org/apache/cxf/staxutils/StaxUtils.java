@@ -1421,7 +1421,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Return a new factory so that the caller can set sticky parameters.      * @param nsAware      * @return      */
+comment|/**      * Return a new factory so that the caller can set sticky parameters.      * @param nsAware      */
 specifier|public
 specifier|static
 name|XMLInputFactory
@@ -6931,7 +6931,7 @@ literal|"InputSource must have a ByteStream or CharacterStream"
 argument_list|)
 throw|;
 block|}
-comment|/**      * @param in      * @param encoding      * @param ctx      * @return      */
+comment|/**      * @param in      * @param encoding      */
 specifier|public
 specifier|static
 name|XMLStreamReader
@@ -7000,7 +7000,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @param in      * @return      */
+comment|/**      * @param in      */
 specifier|public
 specifier|static
 name|XMLStreamReader
@@ -7511,7 +7511,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * @param reader      * @return      */
+comment|/**      * @param reader      */
 specifier|public
 specifier|static
 name|XMLStreamReader
@@ -7712,7 +7712,7 @@ name|prefix
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a unique namespace uri/prefix combination.      *       * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
+comment|/**      * Create a unique namespace uri/prefix combination.      *       * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|String

@@ -1223,7 +1223,7 @@ name|notifyLifecycleManager
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Create a Client that uses a specific EndpointImpl.      * @param bus      * @param service      * @param port      * @param endpointImplFactory      */
+comment|/**      * Create a Client that uses a specific EndpointImpl.      * @param bus      * @param svc      * @param port      * @param endpointImplFactory      */
 specifier|public
 name|ClientImpl
 parameter_list|(

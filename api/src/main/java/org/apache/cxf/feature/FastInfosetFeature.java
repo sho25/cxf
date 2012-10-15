@@ -195,7 +195,7 @@ operator|=
 name|b
 expr_stmt|;
 block|}
-comment|/**      * Retrieve the value set with {@link #setForce(int)}.      * @return      */
+comment|/**      * Retrieve the value set with {@link #setForce(boolean)}.      */
 specifier|public
 name|boolean
 name|getForce

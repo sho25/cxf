@@ -972,7 +972,7 @@ literal|"."
 argument_list|)
 return|;
 block|}
-comment|/**      *  create own array of property descriptors to:      *<pre>      *  - prevent memory leaks by Introspector's cache      *  - get correct type for generic properties from superclass      *     that are limited to a specific type in beanClass      *    see http://bugs.sun.com/view_bug.do?bug_id=6528714      *   we cannot use BeanUtils.getPropertyDescriptors because of issue SPR-6063      *</pre>      * @param refClass calling class for class loading.      * @param beanInfo Bean in question      * @param beanClass class for bean in question      * @param propertyDescriptors raw descriptors      * @return       */
+comment|/**      *  create own array of property descriptors to:      *<pre>      *  - prevent memory leaks by Introspector's cache      *  - get correct type for generic properties from superclass      *     that are limited to a specific type in beanClass      *    see http://bugs.sun.com/view_bug.do?bug_id=6528714      *   we cannot use BeanUtils.getPropertyDescriptors because of issue SPR-6063      *</pre>      * @param refClass calling class for class loading.      * @param beanInfo Bean in question      * @param beanClass class for bean in question      * @param propertyDescriptors raw descriptors      */
 specifier|public
 specifier|static
 name|PropertyDescriptor
@@ -1385,7 +1385,7 @@ return|return
 name|m
 return|;
 block|}
-comment|/**      * Look for a specified annotation on a method. If there, return it. If not, search it's containing class.      * Assume that the annotation is marked @Inherited.      *       * @param m method to examine      * @param annotationType the annotation type to look for.      * @return      */
+comment|/**      * Look for a specified annotation on a method. If there, return it. If not, search it's containing class.      * Assume that the annotation is marked @Inherited.      *       * @param m method to examine      * @param annotationType the annotation type to look for.      */
 specifier|public
 specifier|static
 parameter_list|<

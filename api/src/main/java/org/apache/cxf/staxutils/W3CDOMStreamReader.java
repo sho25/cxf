@@ -372,7 +372,7 @@ name|getOwnerDocument
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Get the document associated with this stream.      *       * @return      */
+comment|/**      * Get the document associated with this stream.      */
 specifier|public
 name|Document
 name|getDocument

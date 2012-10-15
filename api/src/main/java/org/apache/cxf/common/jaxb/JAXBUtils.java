@@ -1368,7 +1368,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Generates a Java package name from a URI according to the      * algorithm outlined in Appendix D of JAXB (2.0+).      *       * @param namespaceURI the namespace URI.      * @return the package name.      */
+comment|/**      * Generates a Java package name from a URI according to the      * algorithm outlined in Appendix D of JAXB (2.0+).      *       * @param uri the namespace URI.      * @return the package name.      */
 specifier|public
 specifier|static
 name|String

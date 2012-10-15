@@ -164,7 +164,7 @@ specifier|private
 name|IOUtils
 parameter_list|()
 block|{      }
-comment|/**      * Use this function instead of new String(byte[], String) to avoid surprises from       * non-standard default encodings.      * @param bytes      * @param charsetName      * @return      */
+comment|/**      * Use this function instead of new String(byte[], String) to avoid surprises from       * non-standard default encodings.      * @param bytes      * @param charsetName      */
 specifier|public
 specifier|static
 name|String
@@ -209,7 +209,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Use this function instead of new String(byte[]) to avoid surprises from non-standard default encodings.      * @param bytes      * @return      */
+comment|/**      * Use this function instead of new String(byte[]) to avoid surprises from non-standard default encodings.      * @param bytes      */
 specifier|public
 specifier|static
 name|String
@@ -232,7 +232,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Use this function instead of new String(byte[], int, int, String)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param charsetName      * @param start      * @param length      * @return      */
+comment|/**      * Use this function instead of new String(byte[], int, int, String)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param charsetName      * @param start      * @param length      */
 specifier|public
 specifier|static
 name|String
@@ -287,7 +287,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Use this function instead of new String(byte[], int, int)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param start      * @param length      * @return      */
+comment|/**      * Use this function instead of new String(byte[], int, int)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param start      * @param length      */
 specifier|public
 specifier|static
 name|String
@@ -1067,7 +1067,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Load the InputStream into memory and return a ByteArrayInputStream that      * represents it. Closes the in stream.      *       * @param in      * @return      * @throws IOException      */
+comment|/**      * Load the InputStream into memory and return a ByteArrayInputStream that      * represents it. Closes the in stream.      *       * @param in      * @throws IOException      */
 specifier|public
 specifier|static
 name|ByteArrayInputStream

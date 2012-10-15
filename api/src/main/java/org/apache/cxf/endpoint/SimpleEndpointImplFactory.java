@@ -106,7 +106,7 @@ name|endpointInfo
 argument_list|)
 return|;
 block|}
-comment|/**      * Avoid the need to contruct these objects over and over      * in cases where the code knows that it needs the basic      * case.      * @return      */
+comment|/**      * Avoid the need to construct these objects over and over      * in cases where the code knows that it needs the basic      * case.      */
 specifier|public
 specifier|static
 name|EndpointImplFactory

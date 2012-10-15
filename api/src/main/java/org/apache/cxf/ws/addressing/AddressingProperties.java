@@ -154,7 +154,7 @@ name|AttributedURIType
 name|iri
 parameter_list|)
 function_decl|;
-comment|/**      * Used to specify a different WS-Addressing namespace URI,       * so as to cause MAPs to be exposed (i.e. encoded in externalized      * message with a different WS-Addressing version).      *       * @return WS-Addressing namespace URI      */
+comment|/**      * Used to specify a different WS-Addressing namespace URI,       * so as to cause MAPs to be exposed (i.e. encoded in externalized      * message with a different WS-Addressing version).      */
 name|void
 name|exposeAs
 parameter_list|(

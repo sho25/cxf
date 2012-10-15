@@ -684,7 +684,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * @param ns      * @return      */
 specifier|public
 specifier|static
 name|String

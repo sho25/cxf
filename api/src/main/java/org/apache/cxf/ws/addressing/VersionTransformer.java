@@ -2018,7 +2018,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Parse an EndpointReferenceType from a DOM element.  Handles all of      * the WS-Addressing namespaces currently supported.      * @param ref      * @return      * @throws JAXBException      */
+comment|/**      * Parse an EndpointReferenceType from a DOM element.  Handles all of      * the WS-Addressing namespaces currently supported.      * @param ref      * @throws JAXBException      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -2152,7 +2152,7 @@ name|o
 argument_list|)
 return|;
 block|}
-comment|/**      * Converts a version specific EndpointReferenceType to the native version      * used internally by CXF      * @param exposed      * @return      */
+comment|/**      * Converts a version specific EndpointReferenceType to the native version      * used internally by CXF      * @param exposed      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -2255,7 +2255,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Gets the Class representing the EndpointReferenceType that is used      * for the specific WS-Addressing version      * @param exposedURI      * @return      */
+comment|/**      * Gets the Class representing the EndpointReferenceType that is used      * for the specific WS-Addressing version      * @param exposedURI      */
 specifier|public
 specifier|static
 name|Class

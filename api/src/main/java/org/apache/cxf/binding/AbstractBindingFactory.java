@@ -267,7 +267,7 @@ name|ns
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Copies extensors from the Binding to BindingInfo.      * @param service      * @param binding      * @return      */
+comment|/**      * Copies extensors from the Binding to BindingInfo.      * @param service      * @param binding      * @param ns      */
 specifier|public
 name|BindingInfo
 name|createBindingInfo

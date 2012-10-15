@@ -885,7 +885,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Retrieve the string values for an enumeration.      * @param type      * @return      */
+comment|/**      * Retrieve the string values for an enumeration.      * @param type      */
 specifier|public
 specifier|static
 name|List
@@ -972,7 +972,7 @@ return|return
 name|values
 return|;
 block|}
-comment|/**      * Is there an import for a particular namespace in a schema?      * @param schema      * @param namespaceUri      * @return      */
+comment|/**      * Is there an import for a particular namespace in a schema?      * @param schema      * @param namespaceUri      */
 specifier|public
 specifier|static
 name|boolean
@@ -1202,7 +1202,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This copes with an observed phenomenon in the schema built by the      * ReflectionServiceFactoryBean. It is creating element such that: (a) the      * type is not set. (b) the refName is set. (c) the namespaceURI in the      * refName is set empty. This apparently indicates 'same Schema' to everyone      * else, so thus function implements that convention here. It is unclear if      * that is a correct structure, and it if changes, we can simplify or      * eliminate this function.      *      * @param name      * @param referencingURI      * @return      */
+comment|/**      * This copes with an observed phenomenon in the schema built by the      * ReflectionServiceFactoryBean. It is creating element such that: (a) the      * type is not set. (b) the refName is set. (c) the namespaceURI in the      * refName is set empty. This apparently indicates 'same Schema' to everyone      * else, so thus function implements that convention here. It is unclear if      * that is a correct structure, and it if changes, we can simplify or      * eliminate this function.      *      * @param name      * @param referencingURI      */
 specifier|public
 specifier|static
 name|XmlSchemaElement
@@ -1820,7 +1820,7 @@ return|return
 name|sequence
 return|;
 block|}
-comment|/**      * By convention, an element that is named in its schema's TNS can have a 'name' but      * no QName. This can get inconvenient for consumers who want to think about qualified names.      * Unfortunately, XmlSchema elements, unlike types, don't store a reference to their containing      * schema.      * @param element      * @param schema      * @return      */
+comment|/**      * By convention, an element that is named in its schema's TNS can have a 'name' but      * no QName. This can get inconvenient for consumers who want to think about qualified names.      * Unfortunately, XmlSchema elements, unlike types, don't store a reference to their containing      * schema.      * @param element      * @param schema      */
 specifier|public
 specifier|static
 name|QName
@@ -1884,7 +1884,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Follow a chain of references from element to element until we can obtain      * a type.      *      * @param element      * @return      */
+comment|/**      * Follow a chain of references from element to element until we can obtain      * a type.      *      * @param element      */
 specifier|public
 specifier|static
 name|XmlSchemaType
@@ -2093,7 +2093,7 @@ name|getSchemaType
 argument_list|()
 return|;
 block|}
-comment|/**      * If the object is an attribute or an anyAttribute,      * return the 'Annotated'. If it's not one of those, or it's a group,      * throw. We're not ready for groups yet.      * @param object      * @return      */
+comment|/**      * If the object is an attribute or an anyAttribute,      * return the 'Annotated'. If it's not one of those, or it's a group,      * throw. We're not ready for groups yet.      * @param object      */
 specifier|public
 specifier|static
 name|XmlSchemaAnnotated
@@ -2176,7 +2176,7 @@ operator|)
 name|object
 return|;
 block|}
-comment|/**      * If the object is an element or an any, return the particle. If it's not a particle, or it's a group,      * throw. We're not ready for groups yet.      * @param object      * @return      */
+comment|/**      * If the object is an element or an any, return the particle. If it's not a particle, or it's a group,      * throw. We're not ready for groups yet.      * @param object      */
 specifier|public
 specifier|static
 name|XmlSchemaParticle
@@ -2583,7 +2583,7 @@ name|QUALIFIED
 argument_list|)
 return|;
 block|}
-comment|/**      * due to a bug, feature, or just plain oddity of JAXB, it isn't good enough      * to just check the form of an element and of its schema. If schema 'a'      * (default unqualified) has a complex type with an element with a ref= to      * schema (b) (default unqualified), JAXB seems to expect to see a      * qualifier, anyway.<br/> So, if the element is local to a complex type,      * all we care about is the default element form of the schema and the local      * form of the element.<br/> If, on the other hand, the element is global,      * we might need to compare namespaces.<br/>      *      * @param attribute the attribute      * @param global if this element is a global element (complex type ref= to      *                it, or in a part)      * @param localSchema the schema of the complex type containing the      *                reference, only used for the 'odd case'.      * @param elementSchema the schema for the element.      * @return if the element needs to be qualified.      */
+comment|/**      * due to a bug, feature, or just plain oddity of JAXB, it isn't good enough      * to just check the form of an element and of its schema. If schema 'a'      * (default unqualified) has a complex type with an element with a ref= to      * schema (b) (default unqualified), JAXB seems to expect to see a      * qualifier, anyway.<br/> So, if the element is local to a complex type,      * all we care about is the default element form of the schema and the local      * form of the element.<br/> If, on the other hand, the element is global,      * we might need to compare namespaces.<br/>      *      * @param attribute the attribute      * @param global if this element is a global element (complex type ref= to      *                it, or in a part)      * @param localSchema the schema of the complex type containing the      *                reference, only used for the 'odd case'.      * @param attributeSchema the schema for the element.      * @return if the element needs to be qualified.      */
 specifier|public
 specifier|static
 name|boolean

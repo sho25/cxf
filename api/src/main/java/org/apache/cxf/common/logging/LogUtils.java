@@ -710,7 +710,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param name the resource name      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param resourcename the resource name      * @return an appropriate Logger       */
 specifier|public
 specifier|static
 name|Logger
@@ -740,7 +740,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param name the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param resourcename the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger       */
 specifier|public
 specifier|static
 name|Logger
@@ -797,7 +797,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param name the resource name      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param resourcename the resource name      * @return an appropriate Logger       */
 specifier|public
 specifier|static
 name|Logger
@@ -827,7 +827,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param name the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param resourcename the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger       */
 specifier|public
 specifier|static
 name|Logger

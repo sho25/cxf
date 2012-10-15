@@ -104,7 +104,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract logic for creating XMLStreamReader from DOM documents. Its works  * using adapters for Element, Node and Attribute (  *   * @see ElementAdapter }  * @author<a href="mailto:tsztelak@gmail.com">Tomasz Sztelak</a>  */
+comment|/**  * Abstract logic for creating XMLStreamReader from DOM documents. Its works  * using adapters for Element, Node and Attribute.  *   * @author<a href="mailto:tsztelak@gmail.com">Tomasz Sztelak</a>  */
 end_comment
 
 begin_class
@@ -405,7 +405,7 @@ literal|false
 return|;
 block|}
 block|}
-comment|/**      * @param element      */
+comment|/**      * @param frame      */
 specifier|public
 name|AbstractDOMStreamReader
 parameter_list|(

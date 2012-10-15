@@ -873,7 +873,7 @@ return|return
 name|activeFeatures
 return|;
 block|}
-comment|/**      * @param the list of features<b>already</b> activated for this endpoint.      */
+comment|/**      * @param features the list of features<b>already</b> activated for this endpoint.      */
 specifier|public
 name|void
 name|initializeActiveFeatures

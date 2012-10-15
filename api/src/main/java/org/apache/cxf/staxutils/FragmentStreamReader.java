@@ -414,7 +414,7 @@ return|return
 name|advanceAtEnd
 return|;
 block|}
-comment|/**      * Set whether or not the FragmentStreamReader should move past the END_ELEMENT      * when it is done parsing.      * @param advanceAtEnd      */
+comment|/**      * Set whether or not the FragmentStreamReader should move past the END_ELEMENT      * when it is done parsing.      * @param a      */
 specifier|public
 name|void
 name|setAdvanceAtEnd

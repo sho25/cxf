@@ -194,7 +194,6 @@ argument_list|(
 literal|"multipart/related"
 argument_list|)
 decl_stmt|;
-comment|/**      * contruct the soap message with attachments from mime input stream      *       * @param messageParam      */
 specifier|public
 name|AttachmentInInterceptor
 parameter_list|()

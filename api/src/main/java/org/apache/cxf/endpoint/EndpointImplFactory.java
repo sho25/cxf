@@ -66,7 +66,7 @@ specifier|public
 interface|interface
 name|EndpointImplFactory
 block|{
-comment|/**      * Create an EndpointImpl from a bus, service, and endpoint info.      * @param bus      * @param service      * @param endpointInfo      * @return      */
+comment|/**      * Create an EndpointImpl from a bus, service, and endpoint info.      * @param bus      * @param service      * @param endpointInfo      */
 name|EndpointImpl
 name|newEndpointImpl
 parameter_list|(

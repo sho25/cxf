@@ -102,7 +102,7 @@ specifier|public
 annotation_defn|@interface
 name|UseAsyncMethod
 block|{
-comment|/**      * By default, if continuations are not available,       * it will use the non-async method.  If you ALWAYS       * want the async method called, set this to true.  However,      * that can cause threads to block.      * @return      */
+comment|/**      * By default, if continuations are not available,       * it will use the non-async method.  If you ALWAYS       * want the async method called, set this to true.  However,      * that can cause threads to block.      */
 name|boolean
 name|always
 parameter_list|()

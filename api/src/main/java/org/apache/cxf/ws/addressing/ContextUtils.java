@@ -769,7 +769,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      * requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      */
+comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of requestor      */
 specifier|public
 specifier|static
 name|void
@@ -802,7 +802,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of      * requestor      * @param handler true if HANDLER scope, APPLICATION scope otherwise      * @param isProviderContext true if the binding provider request context       */
+comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of requestor      * @param isProviderContext true if the binding provider request context       */
 specifier|public
 specifier|static
 name|void
@@ -1252,7 +1252,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Helper method to determine if an MAPs Action is empty (a null action      * is considered empty, whereas a zero length action suppresses      * the propagation of the Action property).      *      * @param ref the MAPs Action under test      * @return true if the Action is empty      */
+comment|/**      * Helper method to determine if an MAPs Action is empty (a null action      * is considered empty, whereas a zero length action suppresses      * the propagation of the Action property).      *      * @param maps the MAPs Action under test      * @return true if the Action is empty      */
 specifier|public
 specifier|static
 name|boolean
@@ -1445,7 +1445,7 @@ name|faultName
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Retrieve MAP fault name from the message.      *      * @param message the current message      * @returned the retrieved fault name      */
+comment|/**      * Retrieve MAP fault name from the message.      *      * @param message the current message      * @return the retrieved fault name      */
 specifier|public
 specifier|static
 name|String
@@ -1490,7 +1490,7 @@ name|reason
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Retrieve MAP fault reason from the message.      *      * @param message the current message      * @returned the retrieved fault reason      */
+comment|/**      * Retrieve MAP fault reason from the message.      *      * @param message the current message      * @return the retrieved fault reason      */
 specifier|public
 specifier|static
 name|String
@@ -1534,7 +1534,7 @@ name|TRUE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Retrieve indication that a partial response has been sent.      *      * @param message the current message      * @returned the retrieved indication that a partial response      * has been sent      */
+comment|/**      * Retrieve indication that a partial response has been sent.      *      * @param message the current message      * @return the retrieved indication that a partial response      * has been sent      */
 specifier|public
 specifier|static
 name|boolean
@@ -1604,7 +1604,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Retrieve indication that a deferred uncorrelated message abort is      * supported      *      * @param message the current message      * @returned the retrieved indication       */
+comment|/**      * Retrieve indication that a deferred uncorrelated message abort is      * supported      *      * @param message the current message      * @return the retrieved indication       */
 specifier|public
 specifier|static
 name|boolean
@@ -1686,7 +1686,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Retrieve indication that a deferred uncorrelated message abort should      * occur.      *      * @param message the current message      * @returned the retrieved indication       */
+comment|/**      * Retrieve indication that a deferred uncorrelated message abort should      * occur.      *      * @param message the current message      * @return the retrieved indication       */
 specifier|public
 specifier|static
 name|boolean
@@ -1732,7 +1732,7 @@ name|booleanValue
 argument_list|()
 return|;
 block|}
-comment|/**      * Retrieve indication that an async post-response service invocation      * is required.      *       * @param message the current message      * @returned the retrieved indication that an async post-response service      * invocation is required.      */
+comment|/**      * Retrieve indication that an async post-response service invocation      * is required.      *       * @param message the current message      * @return the retrieved indication that an async post-response service      * invocation is required.      */
 specifier|public
 specifier|static
 name|boolean
@@ -2041,7 +2041,7 @@ name|el
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create a Binding specific Message.      *       * @param message the current message      * @return the Method from the BindingOperationInfo      */
+comment|/**      * Create a Binding specific Message.      *       * @param exchange the current exchange      * @return the Method from the BindingOperationInfo      */
 specifier|public
 specifier|static
 name|Message

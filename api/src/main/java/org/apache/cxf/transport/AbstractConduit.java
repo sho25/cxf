@@ -116,7 +116,7 @@ return|return
 name|target
 return|;
 block|}
-comment|/**      * @param message for which content should be closed.      */
+comment|/**      * @param msg for which content should be closed.      */
 specifier|public
 name|void
 name|close

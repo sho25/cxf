@@ -109,7 +109,7 @@ specifier|private
 name|ServiceUtils
 parameter_list|()
 block|{     }
-comment|/**      * A short cut method to be able to test for if Schema Validation should be enabled      * for IN or OUT without having to check BOTH and IN or OUT.      *       * @param message      * @param type      * @return      */
+comment|/**      * A short cut method to be able to test for if Schema Validation should be enabled      * for IN or OUT without having to check BOTH and IN or OUT.      *       * @param message      * @param type      */
 specifier|public
 specifier|static
 name|boolean
@@ -170,7 +170,7 @@ argument_list|)
 operator|)
 return|;
 block|}
-comment|/**      * Determines the appropriate SchemaValidationType to return based on either      * a Boolean (for backwards compatibility) or the selected Schema Validation Type.      *       * Package private as the isSchemaValidationEnabled method should be used instead.  Only      * visible for easier testing      *       * @param message      * @return      */
+comment|/**      * Determines the appropriate SchemaValidationType to return based on either      * a Boolean (for backwards compatibility) or the selected Schema Validation Type.      *       * Package private as the isSchemaValidationEnabled method should be used instead.  Only      * visible for easier testing      *       * @param message      */
 specifier|static
 name|SchemaValidationType
 name|getSchemaValidationType
@@ -731,7 +731,7 @@ operator|+
 literal|"/"
 return|;
 block|}
-comment|/**      * Method makePackageName      *       * @param namespace      * @return      */
+comment|/**      * Method makePackageName      *       * @param namespace      */
 specifier|public
 specifier|static
 name|String

@@ -993,7 +993,7 @@ return|return
 name|cause
 return|;
 block|}
-comment|/**      * Find the correct Fault part for a particular exception.      *       * @param op      * @param class1      * @return      */
+comment|/**      * Find the correct Fault part for a particular exception.      *       * @param op      * @param class1      */
 specifier|public
 name|FaultInfo
 name|getFaultForClass

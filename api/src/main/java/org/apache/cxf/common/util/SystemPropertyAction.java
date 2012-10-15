@@ -260,7 +260,7 @@ name|def
 return|;
 block|}
 block|}
-comment|/**      * Get the system propery via the AccessController, but if a SecurityException is       * raised, just return null;      * @param name      * @return      */
+comment|/**      * Get the system property via the AccessController, but if a SecurityException is       * raised, just return null;      * @param name      */
 specifier|public
 specifier|static
 name|String

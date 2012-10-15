@@ -544,7 +544,7 @@ return|return
 name|builder
 return|;
 block|}
-comment|/**      * This function is much like getAttribute, but returns null, not "", for a nonexistent attribute.      *       * @param e      * @param attributeName      * @return      */
+comment|/**      * This function is much like getAttribute, but returns null, not "", for a nonexistent attribute.      *       * @param e      * @param attributeName      */
 specifier|public
 specifier|static
 name|String
@@ -1646,7 +1646,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return the first element child with the specified qualified name.      *       * @param parent      * @param q      * @return      */
+comment|/**      * Return the first element child with the specified qualified name.      *       * @param parent      * @param q      */
 specifier|public
 specifier|static
 name|Element
@@ -1686,7 +1686,7 @@ name|lp
 argument_list|)
 return|;
 block|}
-comment|/**      * Return the first element child with the specified qualified name.      *       * @param parent      * @param ns      * @param lp      * @return      */
+comment|/**      * Return the first element child with the specified qualified name.      *       * @param parent      * @param ns      * @param lp      */
 specifier|public
 specifier|static
 name|Element
@@ -1788,7 +1788,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return child elements with specified name.      *       * @param parent      * @param ns      * @param localName      * @return      */
+comment|/**      * Return child elements with specified name.      *       * @param parent      * @param ns      * @param localName      */
 specifier|public
 specifier|static
 name|List
@@ -2019,7 +2019,7 @@ return|return
 name|r
 return|;
 block|}
-comment|/**      * Get the first child of the specified type.      *       * @param parent      * @param type      * @return      */
+comment|/**      * Get the first child of the specified type.      *       * @param parent      * @param type      */
 specifier|public
 specifier|static
 name|Node

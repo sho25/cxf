@@ -273,7 +273,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Creates a "default" BindingInfo object for the service.  Called by      * createBindingInfo(Service service, String binding, Object config) to actually      * create the BindingInfo.  Can return a subclass which can then process      * the extensors within the subclass.      * @param service      * @return      */
+comment|/**      * Creates a "default" BindingInfo object for the service.  Called by      * createBindingInfo(Service service, String binding, Object config) to actually      * create the BindingInfo.  Can return a subclass which can then process      * the extensors within the subclass.      */
 specifier|public
 name|BindingInfo
 name|createBindingInfo

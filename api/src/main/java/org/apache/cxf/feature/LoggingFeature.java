@@ -527,7 +527,7 @@ operator|=
 name|lim
 expr_stmt|;
 block|}
-comment|/**      * Retrieve the value set with {@link #setLimit(int)}.      * @return      */
+comment|/**      * Retrieve the value set with {@link #setLimit(int)}.      */
 specifier|public
 name|int
 name|getLimit
@@ -537,7 +537,7 @@ return|return
 name|limit
 return|;
 block|}
-comment|/**      * @return      */
+comment|/**      */
 specifier|public
 name|boolean
 name|isPrettyLogging

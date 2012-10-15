@@ -51,7 +51,7 @@ argument_list|>
 name|resourceType
 parameter_list|)
 function_decl|;
-comment|/**      * Resolve a resource given its name and return an InputStream to it.      *      * @param resourceName name of the resource to resolve.      * @return an InputStream for the resource or null if it could not be found.      */
+comment|/**      * Resolve a resource given its name and return an InputStream to it.      *      * @param name name of the resource to resolve.      * @return an InputStream for the resource or null if it could not be found.      */
 name|InputStream
 name|getAsStream
 parameter_list|(

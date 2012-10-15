@@ -161,7 +161,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Add a new declaration to the current scope. This is visible within      * the current scope as well as from any nested scopes.      *      * @param prefix the prefix to be used for this namespace      * @param URI the namespace name of this namespace.      */
+comment|/**      * Add a new declaration to the current scope. This is visible within      * the current scope as well as from any nested scopes.      *      * @param prefix the prefix to be used for this namespace      * @param uri the namespace name of this namespace.      */
 specifier|public
 specifier|synchronized
 name|void
@@ -188,7 +188,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a new declaration to the current scope using a unique prefix      * and return the prefix. This is useful when one just wants to add a      * decl and doesn't want to have to deal with creating unique prefixes.      * If the namespace name is already declared and in scope, then the      * previously declared prefix is returned.      *      * @param URI the namespace name of this namespace      * @return the unique prefix created or previously declared      *         for this namespace      */
+comment|/**      * Add a new declaration to the current scope using a unique prefix      * and return the prefix. This is useful when one just wants to add a      * decl and doesn't want to have to deal with creating unique prefixes.      * If the namespace name is already declared and in scope, then the      * previously declared prefix is returned.      *      * @param uri the namespace name of this namespace      * @return the unique prefix created or previously declared      *         for this namespace      */
 specifier|public
 specifier|synchronized
 name|String
@@ -245,7 +245,7 @@ return|return
 name|uniquePrefix
 return|;
 block|}
-comment|/**      * Return the prefix associated with the given namespace name by      * looking thru all the namespace declarations that are in scope.      *      * @param URI the namespace name for whom a declared prefix is desired      * @return the prefix or null if namespace name not found      */
+comment|/**      * Return the prefix associated with the given namespace name by      * looking thru all the namespace declarations that are in scope.      *      * @param uri the namespace name for whom a declared prefix is desired      * @return the prefix or null if namespace name not found      */
 specifier|public
 specifier|synchronized
 name|String

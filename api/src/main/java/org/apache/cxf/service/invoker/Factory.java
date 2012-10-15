@@ -40,7 +40,7 @@ specifier|public
 interface|interface
 name|Factory
 block|{
-comment|/**      * Creates the object that will be used for the invoke       * @param e       * @return      * @throws Throwable      */
+comment|/**      * Creates the object that will be used for the invoke       * @param e       * @throws Throwable      */
 name|Object
 name|create
 parameter_list|(
