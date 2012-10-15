@@ -695,7 +695,7 @@ name|xmlPI
 operator|+
 name|start
 operator|+
-literal|" xmlns:ps1=\"http://testbeans.com/v3\"><ps1:bean/></testBean>"
+literal|" xmlns:ps2=\"http://testbeans.com/v3\"><ps2:bean/></testBean>"
 decl_stmt|;
 name|String
 name|expected2
@@ -704,7 +704,7 @@ name|xmlPI
 operator|+
 name|start
 operator|+
-literal|"><ps1:bean xmlns:ps1=\"http://testbeans.com/v3\"/></testBean>"
+literal|"><ps2:bean xmlns:ps2=\"http://testbeans.com/v3\"/></testBean>"
 decl_stmt|;
 name|String
 name|out
@@ -1662,6 +1662,12 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testRemoveOneNamespace
@@ -1690,7 +1696,7 @@ name|inMap
 operator|.
 name|put
 argument_list|(
-literal|"{http://www.chinamobile.com/vgop/serviceorder/v1_0}result"
+literal|"{http://cxf.apache.org/vgop/serviceorder/v1_0}result"
 argument_list|,
 literal|"result"
 argument_list|)
