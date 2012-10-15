@@ -96,7 +96,7 @@ name|String
 name|format
 parameter_list|()
 default|default
-literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims"
+literal|"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"
 function_decl|;
 name|String
 name|name

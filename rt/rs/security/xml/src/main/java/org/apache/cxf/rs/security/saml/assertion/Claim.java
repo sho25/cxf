@@ -70,7 +70,7 @@ specifier|final
 name|String
 name|DEFAULT_NAME_FORMAT
 init|=
-literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims"
+literal|"urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified"
 decl_stmt|;
 specifier|private
 name|String
