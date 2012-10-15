@@ -3292,6 +3292,7 @@ block|}
 block|}
 comment|/**          * Cancel further resend (although no ACK has been received).          */
 specifier|protected
+specifier|synchronized
 name|void
 name|cancel
 parameter_list|()
@@ -3314,6 +3315,7 @@ expr_stmt|;
 block|}
 block|}
 specifier|protected
+specifier|synchronized
 name|void
 name|suspend
 parameter_list|()
@@ -3343,6 +3345,7 @@ expr_stmt|;
 block|}
 block|}
 specifier|protected
+specifier|synchronized
 name|void
 name|resume
 parameter_list|()
