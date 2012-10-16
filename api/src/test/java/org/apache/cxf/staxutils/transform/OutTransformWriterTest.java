@@ -695,7 +695,7 @@ name|xmlPI
 operator|+
 name|start
 operator|+
-literal|" xmlns:ps2=\"http://testbeans.com/v3\"><ps2:bean/></testBean>"
+literal|" xmlns:ps1=\"http://testbeans.com/v3\"><ps1:bean/></testBean>"
 decl_stmt|;
 name|String
 name|expected2
@@ -704,7 +704,7 @@ name|xmlPI
 operator|+
 name|start
 operator|+
-literal|"><ps2:bean xmlns:ps2=\"http://testbeans.com/v3\"/></testBean>"
+literal|"><ps1:bean xmlns:ps1=\"http://testbeans.com/v3\"/></testBean>"
 decl_stmt|;
 name|String
 name|out

@@ -437,6 +437,13 @@ argument_list|(
 name|prefix
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|ns
+operator|!=
+literal|null
+condition|)
+block|{
 name|addPrefix
 argument_list|(
 name|prefix
@@ -444,6 +451,7 @@ argument_list|,
 name|ns
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ns
 return|;
@@ -548,6 +556,13 @@ argument_list|(
 name|actualNs
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|prefix
+operator|!=
+literal|null
+condition|)
+block|{
 name|addPrefix
 argument_list|(
 name|prefix
@@ -555,6 +570,7 @@ argument_list|,
 name|actualNs
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|prefix
 return|;
