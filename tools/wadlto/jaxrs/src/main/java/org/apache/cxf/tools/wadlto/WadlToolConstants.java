@@ -184,6 +184,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_NO_VOID_FOR_EMPTY_RESPONSES
+init|=
+literal|"noVoidForEmptyResponses"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_NO_ADDRESS_BINDING
 init|=
 name|ToolConstants

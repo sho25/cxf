@@ -209,6 +209,17 @@ name|put
 argument_list|(
 name|WadlToolConstants
 operator|.
+name|CFG_NO_VOID_FOR_EMPTY_RESPONSES
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
+name|context
+operator|.
+name|put
+argument_list|(
+name|WadlToolConstants
+operator|.
 name|CFG_COMPILE
 argument_list|,
 literal|"true"
