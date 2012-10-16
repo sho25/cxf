@@ -1251,7 +1251,10 @@ condition|(
 name|fault
 operator|!=
 literal|null
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 operator|!
 operator|(
 name|fault
@@ -1263,6 +1266,25 @@ block|{
 return|return
 literal|true
 return|;
+block|}
+elseif|else
+if|if
+condition|(
+operator|!
+name|responseExpected
+operator|&&
+operator|!
+name|messageDirectionReversed
+condition|)
+block|{
+comment|// According to jsr224 9.3.2.1,
+comment|// If throw ProtocolException or a subclass:
+comment|// No response, normal message processing stops, close is called on each previously invoked handler
+comment|// in the chain, the exception is dispatched (see section 9.1.2.3).
+return|return
+literal|true
+return|;
+block|}
 block|}
 if|if
 condition|(
