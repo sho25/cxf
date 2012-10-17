@@ -3245,6 +3245,13 @@ argument_list|(
 name|exchange
 argument_list|)
 expr_stmt|;
+name|exchange
+operator|.
+name|setOutMessage
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 literal|null
