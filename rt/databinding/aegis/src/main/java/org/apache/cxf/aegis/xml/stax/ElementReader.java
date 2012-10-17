@@ -201,8 +201,6 @@ class|class
 name|ElementReader
 extends|extends
 name|AbstractMessageReader
-implements|implements
-name|MessageReader
 block|{
 specifier|private
 specifier|static

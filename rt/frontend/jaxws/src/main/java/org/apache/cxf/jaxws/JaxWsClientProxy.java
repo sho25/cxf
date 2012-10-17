@@ -43,18 +43,6 @@ name|lang
 operator|.
 name|reflect
 operator|.
-name|InvocationHandler
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|lang
-operator|.
-name|reflect
-operator|.
 name|InvocationTargetException
 import|;
 end_import
@@ -540,8 +528,6 @@ name|frontend
 operator|.
 name|ClientProxy
 implements|implements
-name|InvocationHandler
-implements|,
 name|BindingProvider
 block|{
 specifier|public

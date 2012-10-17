@@ -159,8 +159,6 @@ class|class
 name|ElementWriter
 extends|extends
 name|AbstractMessageWriter
-implements|implements
-name|MessageWriter
 block|{
 specifier|private
 name|XMLStreamWriter

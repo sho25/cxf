@@ -23,18 +23,6 @@ name|jibx
 operator|.
 name|runtime
 operator|.
-name|IBindingFactory
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|jibx
-operator|.
-name|runtime
-operator|.
 name|impl
 operator|.
 name|BindingFactoryBase
@@ -52,8 +40,6 @@ class|class
 name|JibxNullBindingFactory
 extends|extends
 name|BindingFactoryBase
-implements|implements
-name|IBindingFactory
 block|{
 specifier|private
 specifier|static

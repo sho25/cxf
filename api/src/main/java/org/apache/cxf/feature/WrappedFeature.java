@@ -79,8 +79,6 @@ class|class
 name|WrappedFeature
 extends|extends
 name|AbstractFeature
-implements|implements
-name|Feature
 block|{
 specifier|final
 name|Feature

@@ -5792,8 +5792,6 @@ class|class
 name|LocationFilterReader
 extends|extends
 name|StreamReaderDelegate
-implements|implements
-name|XMLStreamReader
 block|{
 name|boolean
 name|isImport
