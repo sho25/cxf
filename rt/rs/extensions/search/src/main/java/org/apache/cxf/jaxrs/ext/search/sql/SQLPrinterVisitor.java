@@ -134,6 +134,8 @@ extends|extends
 name|AbstractSearchConditionVisitor
 argument_list|<
 name|T
+argument_list|,
+name|String
 argument_list|>
 block|{
 specifier|private

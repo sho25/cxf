@@ -212,6 +212,9 @@ operator|.
 name|accept
 argument_list|(
 name|visitor
+operator|.
+name|visitor
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|String

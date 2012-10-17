@@ -29,9 +29,11 @@ interface|interface
 name|SearchConditionVisitor
 parameter_list|<
 name|T
+parameter_list|,
+name|E
 parameter_list|>
 block|{
-comment|/*      * Callback providing a current SearchCondition object       */
+comment|/*      * Accept a current SearchCondition object       */
 name|void
 name|visit
 parameter_list|(
@@ -41,6 +43,11 @@ name|T
 argument_list|>
 name|sc
 parameter_list|)
+function_decl|;
+comment|/**      * Return a built query object       * @return the query      */
+name|E
+name|getQuery
+parameter_list|()
 function_decl|;
 block|}
 end_interface

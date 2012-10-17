@@ -306,6 +306,8 @@ extends|extends
 name|AbstractSearchConditionVisitor
 argument_list|<
 name|T
+argument_list|,
+name|Query
 argument_list|>
 block|{
 comment|//private Analyzer analyzer;

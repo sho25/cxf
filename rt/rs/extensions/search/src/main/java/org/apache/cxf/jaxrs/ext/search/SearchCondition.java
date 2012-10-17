@@ -114,6 +114,8 @@ parameter_list|(
 name|SearchConditionVisitor
 argument_list|<
 name|T
+argument_list|,
+name|?
 argument_list|>
 name|visitor
 parameter_list|)
