@@ -4571,7 +4571,7 @@ literal|"c.d.a"
 argument_list|,
 literal|"query"
 argument_list|,
-literal|"xs:int"
+literal|"xs:boolean"
 argument_list|)
 argument_list|,
 operator|new

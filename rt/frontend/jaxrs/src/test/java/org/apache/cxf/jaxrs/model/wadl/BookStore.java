@@ -1062,7 +1062,7 @@ class|class
 name|QueryBean3
 block|{
 specifier|private
-name|int
+name|boolean
 name|a
 decl_stmt|;
 specifier|private
@@ -1070,8 +1070,8 @@ name|int
 name|b
 decl_stmt|;
 specifier|public
-name|int
-name|getA
+name|boolean
+name|isA
 parameter_list|()
 block|{
 return|return
