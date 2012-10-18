@@ -251,6 +251,8 @@ class|class
 name|UriBuilderImpl
 extends|extends
 name|UriBuilder
+implements|implements
+name|Cloneable
 block|{
 specifier|private
 name|String

@@ -296,6 +296,8 @@ class|class
 name|ResponseBuilderImpl
 extends|extends
 name|ResponseBuilder
+implements|implements
+name|Cloneable
 block|{
 specifier|private
 name|int

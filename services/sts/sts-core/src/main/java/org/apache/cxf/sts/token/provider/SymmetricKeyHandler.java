@@ -889,7 +889,7 @@ name|WARNING
 argument_list|,
 literal|"Received secret of length "
 operator|+
-name|secret
+name|secretValue
 operator|.
 name|length
 operator|+
