@@ -7718,6 +7718,53 @@ else|else
 block|{
 try|try
 block|{
+name|Constructor
+argument_list|<
+name|?
+argument_list|>
+name|c
+init|=
+name|cls
+operator|.
+name|getConstructor
+argument_list|(
+operator|new
+name|Class
+argument_list|<
+name|?
+argument_list|>
+index|[]
+block|{
+name|String
+operator|.
+name|class
+block|}
+block|)
+empty_stmt|;
+return|return
+name|c
+operator|.
+name|newInstance
+argument_list|(
+operator|new
+name|Object
+index|[]
+block|{
+name|value
+block|}
+argument_list|)
+return|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+comment|// try valueOf
+block|}
+try|try
+block|{
 name|Method
 name|m
 init|=
@@ -7768,9 +7815,8 @@ argument_list|)
 throw|;
 block|}
 block|}
-block|}
 end_function
 
-unit|}
+unit|} }
 end_unit
 
