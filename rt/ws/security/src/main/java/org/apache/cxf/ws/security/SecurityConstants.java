@@ -467,6 +467,15 @@ name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 init|=
 literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
 decl_stmt|;
+comment|/**      * Switch STS client to send Soap 1.2 messages      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STS_CLIENT_SOAP12_BINDING
+init|=
+literal|"ws-security.sts.client-soap12-binding"
+decl_stmt|;
 comment|/**      *       * A Crypto object to be used for the STS. If this is not defined then the       * {@link STS_TOKEN_PROPERTIES} is used instead.      *       * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response.      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
 specifier|public
 specifier|static
