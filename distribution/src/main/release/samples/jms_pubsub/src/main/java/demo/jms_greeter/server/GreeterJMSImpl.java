@@ -65,7 +65,7 @@ literal|"org.apache.cxf.jms_greeter.JMSGreeterPortType"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./wsdl/jms_greeter.wsdl"
+literal|"file:./src/main/config/jms_greeter.wsdl"
 argument_list|)
 specifier|public
 class|class
