@@ -418,6 +418,11 @@ argument_list|,
 name|stream
 argument_list|)
 expr_stmt|;
+name|stream
+operator|.
+name|holdTempFile
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 annotation|@
@@ -616,6 +621,11 @@ name|CachedOutputStream
 operator|.
 name|class
 argument_list|)
+expr_stmt|;
+name|stream
+operator|.
+name|releaseTempFileHold
+argument_list|()
 expr_stmt|;
 comment|// Create a new incoming exchange and store the original exchange for the response
 name|ExchangeImpl

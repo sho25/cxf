@@ -697,6 +697,11 @@ argument_list|,
 name|stream
 argument_list|)
 expr_stmt|;
+name|stream
+operator|.
+name|holdTempFile
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 annotation|@
@@ -823,6 +828,11 @@ operator|.
 name|getInputStream
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|stream
+operator|.
+name|releaseTempFileHold
+argument_list|()
 expr_stmt|;
 if|if
 condition|(
