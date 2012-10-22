@@ -171,21 +171,6 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-else|else
-block|{
-name|System
-operator|.
-name|err
-operator|.
-name|println
-argument_list|(
-literal|"Invalid argument "
-operator|+
-name|arg
-argument_list|)
-expr_stmt|;
-return|return;
-block|}
 block|}
 name|HelloWorld
 name|client
