@@ -1115,14 +1115,15 @@ name|responseMsg
 argument_list|)
 expr_stmt|;
 block|}
+return|return;
 block|}
 block|}
 else|else
 block|{
 comment|// server side - abort
-comment|//System.out.println("Logical handler server side aborting");
+comment|// Even return false, also should try to set the XMLStreamWriter using
+comment|// reader or domWriter, or the SOAPMessage's body maybe empty.
 block|}
-return|return;
 block|}
 if|if
 condition|(
