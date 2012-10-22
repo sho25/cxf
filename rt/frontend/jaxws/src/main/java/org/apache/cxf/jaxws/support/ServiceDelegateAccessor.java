@@ -101,6 +101,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|ReflectionUtil
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|jaxws
 operator|.
 name|ServiceImpl
@@ -108,7 +124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A utility that allows access to the 'private' implementation specific delegate  * of a Service. Usefull when extensions to the JAXWS Service supported methods  * are required.  */
+comment|/**  * A utility that allows access to the 'private' implementation specific delegate  * of a Service. Useful when extensions to the JAXWS Service supported methods  * are required.  */
 end_comment
 
 begin_class
@@ -181,11 +197,11 @@ argument_list|(
 name|DELEGATE_FIELD_NAME
 argument_list|)
 decl_stmt|;
-name|delegateField
+name|ReflectionUtil
 operator|.
 name|setAccessible
 argument_list|(
-literal|true
+name|delegateField
 argument_list|)
 expr_stmt|;
 name|delegate
@@ -221,11 +237,11 @@ argument_list|(
 name|DELEGATE_FIELD_NAME2
 argument_list|)
 decl_stmt|;
-name|delegateField
+name|ReflectionUtil
 operator|.
 name|setAccessible
 argument_list|(
-literal|true
+name|delegateField
 argument_list|)
 expr_stmt|;
 name|delegate
