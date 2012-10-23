@@ -260,12 +260,14 @@ name|ProtectionDomain
 name|protectionDomain
 decl_stmt|;
 specifier|private
+specifier|final
 name|ClassLoader
 name|ploader
 decl_stmt|;
 specifier|public
 name|PlugInClassLoader
 parameter_list|(
+specifier|final
 name|ClassLoader
 name|p
 parameter_list|)
