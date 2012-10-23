@@ -79,6 +79,15 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|DEFAULT_DATE_FORMAT
+init|=
+literal|"yyyy-MM-dd"
+decl_stmt|;
+comment|//public static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|DATE_FORMAT_PROPERTY
 init|=
 literal|"search.date-format"
@@ -123,9 +132,6 @@ argument_list|,
 name|String
 argument_list|>
 name|properties
-parameter_list|,
-name|String
-name|defaultFormat
 parameter_list|)
 block|{
 name|String
@@ -146,7 +152,7 @@ name|dfProperty
 operator|==
 literal|null
 condition|?
-name|defaultFormat
+name|DEFAULT_DATE_FORMAT
 else|:
 name|dfProperty
 argument_list|)

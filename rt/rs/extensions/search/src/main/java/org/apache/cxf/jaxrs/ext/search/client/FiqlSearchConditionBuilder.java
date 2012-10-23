@@ -314,10 +314,6 @@ operator|.
 name|getDateFormat
 argument_list|(
 name|properties
-argument_list|,
-name|FiqlParser
-operator|.
-name|DEFAULT_DATE_FORMAT
 argument_list|)
 expr_stmt|;
 name|timeZoneSupported
@@ -330,7 +326,7 @@ name|properties
 argument_list|,
 name|Boolean
 operator|.
-name|TRUE
+name|FALSE
 argument_list|)
 expr_stmt|;
 block|}

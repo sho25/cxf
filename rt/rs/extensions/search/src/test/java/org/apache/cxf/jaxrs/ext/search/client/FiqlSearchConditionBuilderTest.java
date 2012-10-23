@@ -27,16 +27,6 @@ name|java
 operator|.
 name|text
 operator|.
-name|DateFormat
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|text
-operator|.
 name|ParseException
 import|;
 end_import
@@ -128,18 +118,6 @@ import|;
 end_import
 
 begin_import
-import|import static
-name|junit
-operator|.
-name|framework
-operator|.
-name|Assert
-operator|.
-name|assertEquals
-import|;
-end_import
-
-begin_import
 import|import
 name|org
 operator|.
@@ -173,6 +151,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|BeforeClass
 import|;
 end_import
@@ -191,6 +179,8 @@ begin_class
 specifier|public
 class|class
 name|FiqlSearchConditionBuilderTest
+extends|extends
+name|Assert
 block|{
 specifier|private
 specifier|static
@@ -205,16 +195,6 @@ specifier|private
 specifier|static
 name|TimeZone
 name|tz
-decl_stmt|;
-specifier|private
-name|DateFormat
-name|df
-init|=
-operator|new
-name|SimpleDateFormat
-argument_list|(
-literal|"yyyy-MM-dd HH:mm Z"
-argument_list|)
 decl_stmt|;
 annotation|@
 name|BeforeClass
@@ -345,11 +325,37 @@ name|ret
 argument_list|)
 expr_stmt|;
 block|}
+specifier|private
+name|Date
+name|parseDate
+parameter_list|(
+name|String
+name|format
+parameter_list|,
+name|String
+name|value
+parameter_list|)
+throws|throws
+name|ParseException
+block|{
+return|return
+operator|new
+name|SimpleDateFormat
+argument_list|(
+name|format
+argument_list|)
+operator|.
+name|parse
+argument_list|(
+name|value
+argument_list|)
+return|;
+block|}
 annotation|@
 name|Test
 specifier|public
 name|void
-name|testEqualToDate
+name|testEqualToDateDefault
 parameter_list|()
 throws|throws
 name|ParseException
@@ -357,11 +363,13 @@ block|{
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
-literal|"2011-03-01 12:34 +0000"
+name|SearchUtils
+operator|.
+name|DEFAULT_DATE_FORMAT
+argument_list|,
+literal|"2011-03-01"
 argument_list|)
 decl_stmt|;
 name|String
@@ -384,7 +392,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo==2011-03-01T12:34:00.000+00:00"
+literal|"foo==2011-03-01"
 argument_list|,
 name|ret
 argument_list|)
@@ -441,10 +449,10 @@ expr_stmt|;
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
+literal|"yyyy-MM-dd HH:mm Z"
+argument_list|,
 literal|"2011-03-01 12:34 +0000"
 argument_list|)
 decl_stmt|;
@@ -615,7 +623,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testNotEqualToDate
+name|testNotEqualToDateDefault
 parameter_list|()
 throws|throws
 name|ParseException
@@ -623,11 +631,13 @@ block|{
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
-literal|"2011-03-01 12:34 +0000"
+name|SearchUtils
+operator|.
+name|DEFAULT_DATE_FORMAT
+argument_list|,
+literal|"2011-03-01"
 argument_list|)
 decl_stmt|;
 name|String
@@ -650,7 +660,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo!=2011-03-01T12:34:00.000+00:00"
+literal|"foo!=2011-03-01"
 argument_list|,
 name|ret
 argument_list|)
@@ -1095,11 +1105,13 @@ block|{
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
-literal|"2011-03-02 22:33 +0000"
+name|SearchUtils
+operator|.
+name|DEFAULT_DATE_FORMAT
+argument_list|,
+literal|"2011-03-02"
 argument_list|)
 decl_stmt|;
 name|String
@@ -1122,7 +1134,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=gt=2011-03-02T22:33:00.000+00:00"
+literal|"foo=gt=2011-03-02"
 argument_list|,
 name|ret
 argument_list|)
@@ -1140,11 +1152,13 @@ block|{
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
-literal|"2011-03-02 22:33 +0000"
+name|SearchUtils
+operator|.
+name|DEFAULT_DATE_FORMAT
+argument_list|,
+literal|"2011-03-02"
 argument_list|)
 decl_stmt|;
 name|String
@@ -1167,7 +1181,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=lt=2011-03-02T22:33:00.000+00:00"
+literal|"foo=lt=2011-03-02"
 argument_list|,
 name|ret
 argument_list|)
@@ -1185,11 +1199,13 @@ block|{
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
-literal|"2011-03-02 22:33 +0000"
+name|SearchUtils
+operator|.
+name|DEFAULT_DATE_FORMAT
+argument_list|,
+literal|"2011-03-02"
 argument_list|)
 decl_stmt|;
 name|String
@@ -1212,7 +1228,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=le=2011-03-02T22:33:00.000+00:00"
+literal|"foo=le=2011-03-02"
 argument_list|,
 name|ret
 argument_list|)
@@ -1230,11 +1246,13 @@ block|{
 name|Date
 name|d
 init|=
-name|df
-operator|.
-name|parse
+name|parseDate
 argument_list|(
-literal|"2011-03-02 22:33 +0000"
+name|SearchUtils
+operator|.
+name|DEFAULT_DATE_FORMAT
+argument_list|,
+literal|"2011-03-02"
 argument_list|)
 decl_stmt|;
 name|String
@@ -1257,7 +1275,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"foo=ge=2011-03-02T22:33:00.000+00:00"
+literal|"foo=ge=2011-03-02"
 argument_list|,
 name|ret
 argument_list|)

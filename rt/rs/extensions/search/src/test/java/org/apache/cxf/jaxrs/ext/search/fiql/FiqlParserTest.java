@@ -835,7 +835,7 @@ init|=
 operator|new
 name|SimpleDateFormat
 argument_list|(
-name|FiqlParser
+name|SearchUtils
 operator|.
 name|DEFAULT_DATE_FORMAT
 argument_list|)
