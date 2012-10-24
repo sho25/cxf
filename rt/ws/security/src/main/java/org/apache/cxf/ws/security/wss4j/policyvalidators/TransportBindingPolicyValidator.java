@@ -384,19 +384,6 @@ name|getTransportToken
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertPolicy
-argument_list|(
-name|aim
-argument_list|,
-name|binding
-operator|.
-name|getTransportToken
-argument_list|()
-operator|.
-name|getToken
-argument_list|()
-argument_list|)
-expr_stmt|;
 block|}
 comment|// Check the AlgorithmSuite
 name|AlgorithmSuitePolicyValidator
