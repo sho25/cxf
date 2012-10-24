@@ -308,6 +308,10 @@ decl_stmt|;
 if|if
 condition|(
 name|operation
+operator|!=
+literal|null
+operator|&&
+name|operation
 operator|.
 name|getInput
 argument_list|()

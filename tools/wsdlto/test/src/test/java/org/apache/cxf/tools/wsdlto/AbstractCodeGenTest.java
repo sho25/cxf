@@ -367,6 +367,17 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|put
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 decl_stmt|;

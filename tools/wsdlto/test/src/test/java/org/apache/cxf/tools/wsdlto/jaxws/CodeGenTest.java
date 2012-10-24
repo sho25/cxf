@@ -394,6 +394,15 @@ argument_list|,
 literal|"TRUE"
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
 name|processor
 operator|.
 name|setContext
@@ -826,6 +835,15 @@ literal|"/wsdl2java_wsdl/pizza.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
 name|processor
 operator|.
 name|setContext
@@ -1054,6 +1072,15 @@ operator|.
 name|CFG_EXTRA_SOAPHEADER
 argument_list|,
 literal|"FALSE"
+argument_list|)
+expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
 argument_list|)
 expr_stmt|;
 name|processor
@@ -2646,6 +2673,16 @@ literal|"/wsdl2java_wsdl/hello_world_async_noservice.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|//no binding so all the tests that check bindings fail
 name|processor
 operator|.
 name|setContext
@@ -6334,6 +6371,16 @@ literal|"/wsdl2java_wsdl/hello_world_holder.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|// testing multiple parts in body
 name|processor
 operator|.
 name|setContext
@@ -6781,6 +6828,15 @@ name|getLocation
 argument_list|(
 literal|"/wsdl2java_wsdl/interoptestdoclit.wsdl"
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
 argument_list|)
 expr_stmt|;
 name|processor
@@ -8166,6 +8222,16 @@ literal|"/wsdl2java_wsdl/swa-mime-binding.xml"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|// swa-mime puts multple parts in body
 name|processor
 operator|.
 name|setContext
@@ -8307,6 +8373,18 @@ literal|"/wsdl2java_wsdl/soapheader_rpc.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|// headers must be element, but validation
+comment|// doesn't fully process the entire soap:binding information to
+comment|// to figure out which parts are headers and which are body for rpc/lit
 name|processor
 operator|.
 name|setContext
@@ -8839,7 +8917,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testWebFaultAnnotaion
+name|testWebFaultAnnotation
 parameter_list|()
 throws|throws
 name|Exception
@@ -8869,6 +8947,16 @@ argument_list|,
 literal|"HelloWorldService"
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|//testing some technically invalid fault message formats
 name|processor
 operator|.
 name|setContext
@@ -9243,6 +9331,15 @@ name|String
 index|[
 literal|0
 index|]
+argument_list|)
+expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
 argument_list|)
 expr_stmt|;
 name|processor

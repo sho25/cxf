@@ -2327,6 +2327,19 @@ argument_list|)
 expr_stmt|;
 continue|continue;
 block|}
+if|if
+condition|(
+name|binding
+operator|.
+name|getPortType
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+comment|//will error later
+continue|continue;
+block|}
 for|for
 control|(
 name|Iterator

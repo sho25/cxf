@@ -593,6 +593,16 @@ literal|"/wsdl2java_wsdl/cxf1969/report_incident.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//wsdl is invalid, but want to test some of the parsing of the invalid parts
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
 name|processor
 operator|.
 name|setContext
@@ -653,6 +663,16 @@ literal|"/wsdl2java_wsdl/cxf-1678/hello_world_logical_only.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|//no binding/service
 name|processor
 operator|.
 name|setContext
@@ -2577,6 +2597,16 @@ literal|"/wsdl2java_wsdl/helloworld_withnoservice.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
+comment|//no binding/service
 name|processor
 operator|.
 name|setContext
@@ -4079,6 +4109,15 @@ literal|"/wsdl2java_wsdl/cxf778/hello_world_recursive.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
 name|processor
 operator|.
 name|setContext
@@ -4499,8 +4538,15 @@ literal|"/wsdl2java_wsdl/cxf939/bug.wsdl"
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// env.put(ToolConstants.CFG_VALIDATE_WSDL,
-comment|// ToolConstants.CFG_VALIDATE_WSDL);
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
 name|processor
 operator|.
 name|setContext
@@ -5945,6 +5991,15 @@ literal|"/wsdl2java_wsdl/cxf1112/binding.xml"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
+argument_list|)
+expr_stmt|;
 name|processor
 operator|.
 name|setContext
@@ -6004,6 +6059,15 @@ name|getLocation
 argument_list|(
 literal|"/wsdl2java_wsdl/cxf1112/binding.xml"
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|env
+operator|.
+name|remove
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_VALIDATE_WSDL
 argument_list|)
 expr_stmt|;
 name|processor
