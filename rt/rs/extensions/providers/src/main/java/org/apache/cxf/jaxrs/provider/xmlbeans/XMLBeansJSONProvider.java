@@ -404,7 +404,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|result
+name|xsr
 operator|=
 literal|null
 expr_stmt|;
