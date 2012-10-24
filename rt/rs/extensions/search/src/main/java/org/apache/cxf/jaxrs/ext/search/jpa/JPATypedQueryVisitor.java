@@ -51,6 +51,18 @@ name|TypedQuery
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|criteria
+operator|.
+name|CriteriaQuery
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -61,6 +73,8 @@ parameter_list|>
 extends|extends
 name|AbstractJPATypedQueryVisitor
 argument_list|<
+name|T
+argument_list|,
 name|T
 argument_list|,
 name|TypedQuery
@@ -137,6 +151,12 @@ argument_list|()
 operator|.
 name|createQuery
 argument_list|(
+operator|(
+name|CriteriaQuery
+argument_list|<
+name|T
+argument_list|>
+operator|)
 name|getCriteriaQuery
 argument_list|()
 argument_list|)
