@@ -484,6 +484,17 @@ argument_list|(
 name|wsdlUrl
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+literal|"HelloWorldPortSpringICF"
+operator|.
+name|equals
+argument_list|(
+name|portName
+argument_list|)
+condition|)
+block|{
 name|EmbeddedJMSBrokerLauncher
 operator|.
 name|updateWsdlExtensors
@@ -496,6 +507,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|WSDLServiceFactory
 name|factory
 init|=
