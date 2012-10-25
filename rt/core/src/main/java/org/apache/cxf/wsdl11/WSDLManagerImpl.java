@@ -913,6 +913,14 @@ parameter_list|)
 throws|throws
 name|WSDLException
 block|{
+name|String
+name|urlString
+init|=
+name|url
+operator|.
+name|toString
+argument_list|()
+decl_stmt|;
 synchronized|synchronized
 init|(
 name|definitionsMap
@@ -924,7 +932,7 @@ name|definitionsMap
 operator|.
 name|containsKey
 argument_list|(
-name|url
+name|urlString
 argument_list|)
 condition|)
 block|{
@@ -933,7 +941,7 @@ name|definitionsMap
 operator|.
 name|get
 argument_list|(
-name|url
+name|urlString
 argument_list|)
 return|;
 block|}
@@ -943,10 +951,7 @@ name|def
 init|=
 name|loadDefinition
 argument_list|(
-name|url
-operator|.
-name|toString
-argument_list|()
+name|urlString
 argument_list|)
 decl_stmt|;
 synchronized|synchronized
@@ -958,7 +963,7 @@ name|definitionsMap
 operator|.
 name|put
 argument_list|(
-name|url
+name|urlString
 argument_list|,
 name|def
 argument_list|)
