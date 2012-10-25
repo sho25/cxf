@@ -543,10 +543,6 @@ argument_list|,
 name|document
 argument_list|)
 expr_stmt|;
-name|nd
-operator|=
-name|document
-expr_stmt|;
 block|}
 name|W3CDOMStreamWriter
 name|writer

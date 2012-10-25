@@ -1318,13 +1318,6 @@ name|X
 argument_list|,
 name|V
 argument_list|>
-implements|implements
-name|Map
-argument_list|<
-name|X
-argument_list|,
-name|V
-argument_list|>
 block|{
 specifier|private
 specifier|static

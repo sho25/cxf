@@ -1178,11 +1178,7 @@ argument_list|(
 name|getBus
 argument_list|()
 argument_list|,
-name|getServiceFactory
-argument_list|()
-operator|.
-name|getService
-argument_list|()
+name|service
 argument_list|,
 name|ei
 argument_list|)

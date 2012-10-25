@@ -447,11 +447,6 @@ operator|+
 name|local
 argument_list|)
 decl_stmt|;
-name|el
-operator|=
-operator|(
-name|Element
-operator|)
 name|part
 operator|.
 name|getEnvelope

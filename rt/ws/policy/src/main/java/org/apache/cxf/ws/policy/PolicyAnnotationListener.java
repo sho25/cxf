@@ -2905,10 +2905,6 @@ name|uri
 argument_list|)
 condition|)
 block|{
-name|uri
-operator|=
-name|defName
-expr_stmt|;
 name|Attr
 name|att
 init|=

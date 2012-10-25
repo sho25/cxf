@@ -7147,18 +7147,6 @@ name|e
 init|=
 name|si
 operator|.
-name|getElementByQName
-argument_list|(
-name|mpi
-operator|.
-name|getElementQName
-argument_list|()
-argument_list|)
-decl_stmt|;
-name|e
-operator|=
-name|si
-operator|.
 name|getSchema
 argument_list|()
 operator|.
@@ -7172,7 +7160,7 @@ operator|.
 name|getLocalPart
 argument_list|()
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|e

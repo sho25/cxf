@@ -1053,17 +1053,6 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|conf
-operator|=
-name|bus
-operator|.
-name|getExtension
-argument_list|(
-name|Configurer
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if

@@ -850,12 +850,6 @@ throws|throws
 name|Exception
 block|{
 comment|// ********************** Load Trusted CA file **********************
-name|TrustManager
-index|[]
-name|trustStoreManagers
-init|=
-literal|null
-decl_stmt|;
 name|KeyStore
 name|trustedCertStore
 init|=
@@ -872,14 +866,6 @@ name|pkcs12
 condition|)
 block|{
 comment|//TODO could support multiple trust cas
-name|trustStoreManagers
-operator|=
-operator|new
-name|TrustManager
-index|[
-literal|1
-index|]
-expr_stmt|;
 name|trustedCertStore
 operator|.
 name|load
@@ -1073,15 +1059,11 @@ argument_list|,
 name|trustStoreLocation
 argument_list|)
 expr_stmt|;
-name|trustStoreManagers
-operator|=
+return|return
 name|tmf
 operator|.
 name|getTrustManagers
 argument_list|()
-expr_stmt|;
-return|return
-name|trustStoreManagers
 return|;
 block|}
 specifier|protected

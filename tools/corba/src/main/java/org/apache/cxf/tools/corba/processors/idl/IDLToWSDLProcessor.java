@@ -2217,11 +2217,6 @@ name|outDir
 init|=
 name|outputDir
 decl_stmt|;
-name|String
-name|filename
-init|=
-name|name
-decl_stmt|;
 name|int
 name|index
 init|=
@@ -2248,8 +2243,9 @@ argument_list|,
 name|index
 argument_list|)
 expr_stmt|;
+name|String
 name|filename
-operator|=
+init|=
 name|name
 operator|.
 name|substring
@@ -2263,7 +2259,7 @@ operator|.
 name|length
 argument_list|()
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 return|return
 name|getOutputWriter
 argument_list|(

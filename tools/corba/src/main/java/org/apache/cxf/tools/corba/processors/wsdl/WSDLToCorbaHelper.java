@@ -2234,13 +2234,6 @@ operator|new
 name|CorbaTypeImpl
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
-name|memtype
-init|=
-operator|new
-name|CorbaTypeImpl
-argument_list|()
-decl_stmt|;
 name|XmlSchemaType
 name|schemaType
 init|=
@@ -2451,8 +2444,9 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|CorbaTypeImpl
 name|memtype
-operator|=
+init|=
 name|createNillableUnion
 argument_list|(
 name|elName
@@ -2466,7 +2460,7 @@ argument_list|()
 argument_list|,
 name|elementQualified
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|memName
 operator|=
 name|createQNameCorbaNamespace

@@ -2425,14 +2425,6 @@ argument_list|(
 literal|"="
 argument_list|)
 decl_stmt|;
-name|String
-name|excludePackagename
-init|=
-name|pns
-index|[
-name|j
-index|]
-decl_stmt|;
 if|if
 condition|(
 name|pos
@@ -2482,8 +2474,9 @@ name|CFG_NO_ADDRESS_BINDING
 argument_list|)
 expr_stmt|;
 block|}
+name|String
 name|excludePackagename
-operator|=
+init|=
 name|pns
 index|[
 name|j
@@ -2495,7 +2488,7 @@ name|pos
 operator|+
 literal|1
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|env
 operator|.
 name|addExcludeNamespacePackageMap

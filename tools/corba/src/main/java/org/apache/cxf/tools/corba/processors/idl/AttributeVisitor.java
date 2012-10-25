@@ -1732,9 +1732,7 @@ block|{
 name|OperationType
 name|operation
 init|=
-operator|new
-name|OperationType
-argument_list|()
+literal|null
 decl_stmt|;
 try|try
 block|{
