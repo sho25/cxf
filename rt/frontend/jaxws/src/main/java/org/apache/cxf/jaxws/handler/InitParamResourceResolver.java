@@ -99,8 +99,6 @@ argument_list|(
 name|InitParamResourceResolver
 operator|.
 name|class
-argument_list|,
-literal|"APIMessages"
 argument_list|)
 decl_stmt|;
 name|Map

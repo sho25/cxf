@@ -235,8 +235,6 @@ argument_list|(
 name|BusFactory
 operator|.
 name|class
-argument_list|,
-literal|"APIMessages"
 argument_list|)
 decl_stmt|;
 comment|/**      * Creates a new bus. While concrete<code>BusFactory</code> may offer differently parameterized methods      * for creating a bus, all factories support this no-arg factory method.      *      * @return the newly created bus.      */
