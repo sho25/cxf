@@ -926,6 +926,29 @@ init|(
 name|definitionsMap
 init|)
 block|{
+comment|//This needs to use the exact URL object for the cache
+comment|//as the urlString object is not held onto strongly
+comment|//and thus, could cause the definition to be garbage
+comment|//collected.
+if|if
+condition|(
+name|definitionsMap
+operator|.
+name|containsKey
+argument_list|(
+name|url
+argument_list|)
+condition|)
+block|{
+return|return
+name|definitionsMap
+operator|.
+name|get
+argument_list|(
+name|url
+argument_list|)
+return|;
+block|}
 if|if
 condition|(
 name|definitionsMap
@@ -959,11 +982,16 @@ init|(
 name|definitionsMap
 init|)
 block|{
+comment|//see note about about the url
+comment|//The loadDefinition call will add it with the
+comment|//string form, we just need to add it with the
+comment|//url form (which Sonar will complain about,
+comment|//but we need to do it)
 name|definitionsMap
 operator|.
 name|put
 argument_list|(
-name|urlString
+name|url
 argument_list|,
 name|def
 argument_list|)
