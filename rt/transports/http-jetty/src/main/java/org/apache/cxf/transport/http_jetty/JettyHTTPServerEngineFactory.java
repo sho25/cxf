@@ -823,8 +823,6 @@ operator|==
 name|ref
 condition|)
 block|{
-name|ref
-operator|=
 name|getOrCreate
 argument_list|(
 name|this
