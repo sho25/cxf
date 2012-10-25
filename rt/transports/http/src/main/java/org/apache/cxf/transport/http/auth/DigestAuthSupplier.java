@@ -258,6 +258,11 @@ block|{
 if|if
 condition|(
 name|authPolicy
+operator|==
+literal|null
+operator|||
+operator|(
+name|authPolicy
 operator|.
 name|getUserName
 argument_list|()
@@ -270,6 +275,7 @@ name|getPassword
 argument_list|()
 operator|==
 literal|null
+operator|)
 condition|)
 block|{
 return|return
@@ -345,10 +351,6 @@ name|authHeader
 operator|.
 name|authTypeIsDigest
 argument_list|()
-operator|&&
-name|authPolicy
-operator|!=
-literal|null
 condition|)
 block|{
 name|Map

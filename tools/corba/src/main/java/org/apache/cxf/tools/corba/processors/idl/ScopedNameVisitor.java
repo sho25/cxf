@@ -2161,6 +2161,13 @@ name|result
 init|=
 literal|false
 decl_stmt|;
+if|if
+condition|(
+name|scopeList
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|Scope
@@ -2177,13 +2184,6 @@ name|scopeName
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|scopeList
-operator|!=
-literal|null
-condition|)
-block|{
 for|for
 control|(
 name|Scope

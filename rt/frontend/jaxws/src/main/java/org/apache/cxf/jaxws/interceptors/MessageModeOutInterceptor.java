@@ -1828,6 +1828,10 @@ decl_stmt|;
 if|if
 condition|(
 name|client
+operator|&&
+name|bop
+operator|!=
+literal|null
 condition|)
 block|{
 name|bmsg
@@ -1841,6 +1845,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|bop
+operator|!=
+literal|null
+operator|&&
 name|bop
 operator|.
 name|getOutput

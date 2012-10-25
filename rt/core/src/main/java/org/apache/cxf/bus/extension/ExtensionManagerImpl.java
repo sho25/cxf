@@ -1181,6 +1181,13 @@ argument_list|,
 name|bus
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|activated
+condition|)
+block|{
 name|Configurer
 name|configurer
 init|=
@@ -1212,6 +1219,7 @@ argument_list|(
 name|obj
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// let the object know for which namespaces it has been activated
 name|ResourceResolver

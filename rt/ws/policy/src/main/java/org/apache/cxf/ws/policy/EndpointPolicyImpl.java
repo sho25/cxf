@@ -652,6 +652,13 @@ name|void
 name|initializePolicy
 parameter_list|()
 block|{
+if|if
+condition|(
+name|engine
+operator|!=
+literal|null
+condition|)
+block|{
 name|policy
 operator|=
 name|engine
@@ -694,12 +701,6 @@ operator|.
 name|normalize
 argument_list|(
 name|engine
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-name|engine
 operator|.
 name|getRegistry
 argument_list|()
@@ -707,6 +708,7 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|void

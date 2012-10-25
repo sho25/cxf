@@ -3147,6 +3147,15 @@ block|{
 if|if
 condition|(
 name|messageProperties
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
+if|if
+condition|(
+name|messageProperties
 operator|.
 name|isSetSOAPJMSTargetService
 argument_list|()
@@ -3298,10 +3307,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|messageProperties
-operator|!=
-literal|null
-operator|&&
 name|messageProperties
 operator|.
 name|isSetProperty
