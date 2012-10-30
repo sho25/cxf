@@ -516,14 +516,6 @@ init|(
 name|mutex
 init|)
 block|{
-while|while
-condition|(
-operator|!
-name|serverIsStopped
-condition|)
-block|{
-try|try
-block|{
 name|TimeoutCounter
 name|tc
 init|=
@@ -533,6 +525,14 @@ argument_list|(
 name|DEFAULT_TIMEOUT
 argument_list|)
 decl_stmt|;
+while|while
+condition|(
+operator|!
+name|serverIsStopped
+condition|)
+block|{
+try|try
+block|{
 name|mutex
 operator|.
 name|wait
@@ -581,15 +581,14 @@ name|inProcess
 condition|)
 block|{
 comment|//wait for process to end...
-name|TimeoutCounter
 name|tc
-init|=
+operator|=
 operator|new
 name|TimeoutCounter
 argument_list|(
 name|DEFAULT_TIMEOUT
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 while|while
 condition|(
 operator|!
@@ -1199,8 +1198,6 @@ init|(
 name|mutex
 init|)
 block|{
-do|do
-block|{
 name|TimeoutCounter
 name|tc
 init|=
@@ -1210,6 +1207,8 @@ argument_list|(
 name|DEFAULT_TIMEOUT
 argument_list|)
 decl_stmt|;
+do|do
+block|{
 try|try
 block|{
 name|mutex

@@ -269,7 +269,13 @@ name|host
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|components
+operator|!=
+literal|null
+condition|)
 block|{
 name|sb
 operator|.
