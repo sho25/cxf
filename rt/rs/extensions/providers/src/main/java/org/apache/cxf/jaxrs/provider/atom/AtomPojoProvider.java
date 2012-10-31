@@ -3574,6 +3574,9 @@ name|message
 parameter_list|,
 name|Exception
 name|ex
+parameter_list|,
+name|int
+name|status
 parameter_list|)
 block|{
 name|LOG
@@ -3590,7 +3593,7 @@ name|Response
 operator|.
 name|status
 argument_list|(
-literal|500
+name|status
 argument_list|)
 operator|.
 name|type
@@ -3633,6 +3636,27 @@ name|response
 argument_list|)
 throw|;
 block|}
+block|}
+specifier|private
+name|void
+name|reportError
+parameter_list|(
+name|String
+name|message
+parameter_list|,
+name|Exception
+name|ex
+parameter_list|)
+block|{
+name|reportError
+argument_list|(
+name|message
+argument_list|,
+name|ex
+argument_list|,
+literal|500
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|boolean
@@ -4206,6 +4230,8 @@ operator|+
 literal|" can not be deserialized from Feed"
 argument_list|,
 name|ex
+argument_list|,
+literal|400
 argument_list|)
 expr_stmt|;
 block|}
@@ -4343,6 +4369,8 @@ operator|+
 literal|" can not be deserialized from Entry"
 argument_list|,
 name|ex
+argument_list|,
+literal|400
 argument_list|)
 expr_stmt|;
 block|}
