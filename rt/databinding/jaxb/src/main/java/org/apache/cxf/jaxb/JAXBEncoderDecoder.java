@@ -3357,11 +3357,11 @@ operator|.
 name|getGenericType
 argument_list|()
 decl_stmt|;
-name|f
+name|ReflectionUtil
 operator|.
 name|setAccessible
 argument_list|(
-literal|true
+name|f
 argument_list|)
 expr_stmt|;
 if|if

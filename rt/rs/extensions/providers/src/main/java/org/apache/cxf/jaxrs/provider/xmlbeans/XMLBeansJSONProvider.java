@@ -404,10 +404,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|xsr
-operator|=
-literal|null
-expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

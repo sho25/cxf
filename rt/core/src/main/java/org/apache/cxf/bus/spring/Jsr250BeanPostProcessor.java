@@ -348,10 +348,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|resourceManager
-operator|==
-literal|null
-operator|&&
 name|m
 operator|!=
 literal|null

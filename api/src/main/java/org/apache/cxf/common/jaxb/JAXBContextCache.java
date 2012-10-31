@@ -1010,12 +1010,8 @@ argument_list|,
 name|classes
 argument_list|)
 decl_stmt|;
-while|while
+if|if
 condition|(
-name|cachedContextAndSchemas
-operator|==
-literal|null
-operator|&&
 name|added
 condition|)
 block|{
@@ -2089,6 +2085,11 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
+name|ins
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

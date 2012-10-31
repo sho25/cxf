@@ -764,9 +764,7 @@ condition|)
 block|{
 try|try
 block|{
-name|Thread
-operator|.
-name|sleep
+name|wait
 argument_list|(
 literal|100
 argument_list|)

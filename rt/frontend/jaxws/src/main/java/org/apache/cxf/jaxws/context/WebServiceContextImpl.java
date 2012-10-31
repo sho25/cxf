@@ -562,6 +562,13 @@ name|wsdlDescription
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|wsdlDescription
+operator|!=
+literal|null
+condition|)
+block|{
 name|builder
 operator|.
 name|wsdlDocumentLocation
@@ -572,6 +579,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 comment|/*         if (ep.getEndpointInfo().getService().getDescription() != null) {             builder.wsdlDocumentLocation(ep.getEndpointInfo().getService()                                      .getDescription().getBaseURI());         }         */
 if|if
 condition|(

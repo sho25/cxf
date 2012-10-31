@@ -616,9 +616,9 @@ block|{
 comment|//ignore, process hasn't ended
 try|try
 block|{
-name|Thread
+name|mutex
 operator|.
-name|sleep
+name|wait
 argument_list|(
 literal|1000
 argument_list|)
@@ -1207,7 +1207,15 @@ argument_list|(
 name|DEFAULT_TIMEOUT
 argument_list|)
 decl_stmt|;
-do|do
+while|while
+condition|(
+operator|!
+operator|(
+name|serverIsReady
+operator|||
+name|serverLaunchFailed
+operator|)
+condition|)
 block|{
 try|try
 block|{
@@ -1242,15 +1250,6 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-do|while
-condition|(
-operator|!
-name|serverIsReady
-operator|&&
-operator|!
-name|serverLaunchFailed
-condition|)
-do|;
 block|}
 if|if
 condition|(

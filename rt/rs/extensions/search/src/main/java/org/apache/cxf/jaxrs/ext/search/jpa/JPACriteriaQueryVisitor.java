@@ -556,8 +556,12 @@ name|toArray
 argument_list|(
 operator|new
 name|Selection
-index|[]
-block|{}
+index|[
+name|selections
+operator|.
+name|size
+argument_list|()
+index|]
 argument_list|)
 return|;
 block|}
