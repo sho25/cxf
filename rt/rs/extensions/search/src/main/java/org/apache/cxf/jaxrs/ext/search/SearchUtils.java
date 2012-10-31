@@ -83,7 +83,6 @@ name|DEFAULT_DATE_FORMAT
 init|=
 literal|"yyyy-MM-dd"
 decl_stmt|;
-comment|//public static final String DEFAULT_DATE_FORMAT = "yyyy-MM-dd'T'HH:mm:ss.SSSZ";
 specifier|public
 specifier|static
 specifier|final
@@ -114,7 +113,7 @@ specifier|final
 name|String
 name|BEAN_PROPERTY_MAP
 init|=
-literal|"search.lax.property.match"
+literal|"search.bean.property.map"
 decl_stmt|;
 specifier|private
 name|SearchUtils
