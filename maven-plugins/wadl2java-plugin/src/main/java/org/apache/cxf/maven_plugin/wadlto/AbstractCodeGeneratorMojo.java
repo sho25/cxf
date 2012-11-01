@@ -2185,7 +2185,7 @@ argument_list|()
 operator|.
 name|setQuotedArgumentsEnabled
 argument_list|(
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 comment|// for JVM args
