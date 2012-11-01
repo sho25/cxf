@@ -3169,9 +3169,9 @@ block|}
 if|if
 condition|(
 operator|(
-name|type
-operator|instanceof
-name|Struct
+name|struct
+operator|!=
+literal|null
 operator|)
 operator|&&
 operator|(

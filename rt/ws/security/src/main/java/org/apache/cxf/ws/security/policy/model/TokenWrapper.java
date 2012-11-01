@@ -273,7 +273,7 @@ argument_list|(
 name|all
 argument_list|)
 expr_stmt|;
-name|PolicyComponent
+name|Policy
 name|pc
 init|=
 name|p
@@ -291,14 +291,11 @@ decl_stmt|;
 if|if
 condition|(
 name|pc
-operator|instanceof
-name|Policy
+operator|!=
+literal|null
 condition|)
 block|{
 return|return
-operator|(
-name|Policy
-operator|)
 name|pc
 return|;
 block|}

@@ -185,18 +185,6 @@ name|Policy
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|neethi
-operator|.
-name|PolicyComponent
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -1157,7 +1145,7 @@ argument_list|(
 name|all
 argument_list|)
 expr_stmt|;
-name|PolicyComponent
+name|Policy
 name|pc
 init|=
 name|p
@@ -1175,14 +1163,11 @@ decl_stmt|;
 if|if
 condition|(
 name|pc
-operator|instanceof
-name|Policy
+operator|!=
+literal|null
 condition|)
 block|{
 return|return
-operator|(
-name|Policy
-operator|)
 name|pc
 return|;
 block|}

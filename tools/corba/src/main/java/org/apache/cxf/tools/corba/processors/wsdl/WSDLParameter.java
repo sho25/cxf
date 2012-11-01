@@ -2984,7 +2984,7 @@ block|{
 comment|// We need to get annotation information for the schema type we are
 comment|// about to pass in.
 comment|// This is used to produce the correct object reference type.
-name|XmlSchemaObject
+name|XmlSchemaElement
 name|schemaObj
 init|=
 name|getSchemaObject
@@ -3002,18 +3002,13 @@ decl_stmt|;
 if|if
 condition|(
 name|schemaObj
-operator|instanceof
-name|XmlSchemaElement
+operator|!=
+literal|null
 condition|)
 block|{
 name|annotation
 operator|=
-operator|(
-operator|(
-name|XmlSchemaElement
-operator|)
 name|schemaObj
-operator|)
 operator|.
 name|getAnnotation
 argument_list|()

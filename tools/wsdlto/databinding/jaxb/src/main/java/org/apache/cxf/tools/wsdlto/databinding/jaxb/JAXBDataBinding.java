@@ -5324,8 +5324,8 @@ decl_stmt|;
 if|if
 condition|(
 name|rawJaxbModelGenCode
-operator|instanceof
-name|S2JJAXBModel
+operator|!=
+literal|null
 condition|)
 block|{
 name|S2JJAXBModel
