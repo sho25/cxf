@@ -2013,7 +2013,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testWebClientPathParamConverter
+name|testWebClientParamConverter
 parameter_list|()
 block|{
 name|WebClient
@@ -2053,11 +2053,15 @@ argument_list|,
 operator|new
 name|ComplexObject
 argument_list|()
+argument_list|,
+operator|new
+name|ComplexObject
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://foo/complex?param=complex"
+literal|"http://foo/complex?param=complex&param=complex"
 argument_list|,
 name|wc
 operator|.
