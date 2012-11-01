@@ -153,6 +153,10 @@ init|=
 operator|-
 literal|1
 decl_stmt|;
+comment|/**      * Force GZIP instead of negotiate      */
+name|boolean
+name|force
+decl_stmt|;
 annotation|@
 name|Override
 specifier|protected
@@ -182,6 +186,9 @@ name|threshold
 operator|==
 operator|-
 literal|1
+operator|&&
+operator|!
+name|force
 condition|)
 block|{
 name|provider
@@ -219,6 +226,13 @@ operator|.
 name|setThreshold
 argument_list|(
 name|threshold
+argument_list|)
+expr_stmt|;
+name|out
+operator|.
+name|setForce
+argument_list|(
+name|force
 argument_list|)
 expr_stmt|;
 name|remove
@@ -337,6 +351,30 @@ parameter_list|()
 block|{
 return|return
 name|threshold
+return|;
+block|}
+comment|/**      * Set if GZIP is always used without negotiation       * @param b      */
+specifier|public
+name|void
+name|setForce
+parameter_list|(
+name|boolean
+name|b
+parameter_list|)
+block|{
+name|force
+operator|=
+name|b
+expr_stmt|;
+block|}
+comment|/**      * Retrieve the value set with {@link #setForce(boolean)}.      */
+specifier|public
+name|boolean
+name|getForce
+parameter_list|()
+block|{
+return|return
+name|force
 return|;
 block|}
 block|}
