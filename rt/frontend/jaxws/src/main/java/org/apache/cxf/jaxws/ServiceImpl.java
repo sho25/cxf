@@ -4197,7 +4197,9 @@ name|db
 operator|=
 operator|new
 name|SourceDataBinding
-argument_list|()
+argument_list|(
+name|type
+argument_list|)
 expr_stmt|;
 block|}
 name|sf
