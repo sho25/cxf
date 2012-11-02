@@ -5835,10 +5835,6 @@ else|else
 block|{
 if|if
 condition|(
-name|mt
-operator|!=
-literal|null
-operator|&&
 literal|"multipart"
 operator|.
 name|equalsIgnoreCase
@@ -5915,12 +5911,6 @@ literal|"WRONG_FORM_MEDIA_TYPE"
 argument_list|,
 name|BUNDLE
 argument_list|,
-name|mt
-operator|==
-literal|null
-condition|?
-literal|"*/*"
-else|:
 name|mt
 operator|.
 name|toString

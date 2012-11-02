@@ -551,13 +551,6 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|arr
-operator|!=
-literal|null
-condition|)
-block|{
 for|for
 control|(
 name|String
@@ -591,7 +584,6 @@ argument_list|(
 name|s
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|str

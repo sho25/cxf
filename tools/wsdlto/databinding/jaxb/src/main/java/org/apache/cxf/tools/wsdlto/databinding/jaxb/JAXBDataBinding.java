@@ -5321,13 +5321,6 @@ name|class
 argument_list|)
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|rawJaxbModelGenCode
-operator|!=
-literal|null
-condition|)
-block|{
 name|S2JJAXBModel
 name|schem2JavaJaxbModel
 init|=
@@ -5432,7 +5425,6 @@ argument_list|(
 name|str
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return;
 block|}

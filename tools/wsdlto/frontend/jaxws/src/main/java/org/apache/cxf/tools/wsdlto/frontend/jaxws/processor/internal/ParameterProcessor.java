@@ -2697,10 +2697,6 @@ name|size
 argument_list|()
 operator|==
 literal|1
-operator|&&
-name|inputWrapElement
-operator|!=
-literal|null
 condition|)
 block|{
 name|QName

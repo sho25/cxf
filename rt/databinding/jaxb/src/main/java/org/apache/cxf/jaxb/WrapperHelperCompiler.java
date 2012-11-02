@@ -746,17 +746,6 @@ init|=
 name|computeSignature
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|sig
-operator|==
-literal|null
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
 name|MethodVisitor
 name|mv
 init|=
