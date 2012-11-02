@@ -56,6 +56,7 @@ specifier|public
 name|Name
 parameter_list|()
 block|{              }
+specifier|public
 name|Name
 parameter_list|(
 name|String

@@ -73,8 +73,6 @@ specifier|public
 class|class
 name|Book
 block|{
-annotation|@
-name|Id
 specifier|private
 name|int
 name|id
@@ -91,12 +89,12 @@ specifier|private
 name|OwnerInfo
 name|ownerInfo
 decl_stmt|;
-annotation|@
-name|ManyToOne
 specifier|private
 name|Library
 name|library
 decl_stmt|;
+annotation|@
+name|Id
 specifier|public
 name|int
 name|getId
@@ -195,6 +193,8 @@ operator|=
 name|ownerInfo
 expr_stmt|;
 block|}
+annotation|@
+name|ManyToOne
 specifier|public
 name|Library
 name|getLibrary

@@ -375,7 +375,7 @@ name|Persistence
 operator|.
 name|createEntityManagerFactory
 argument_list|(
-literal|"testUnit"
+literal|"testUnitHibernate"
 argument_list|)
 expr_stmt|;
 name|em
@@ -1525,6 +1525,10 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+comment|// "ownerInfo.name" maps to Name class and this
+comment|// does not work in OpenJPA, as opposed to Hibernate
+comment|// "ownerInfo.name.name" will map to primitive type, see
+comment|// testEqualsOwnerNameQuery3(), which also works in OpenJPA
 specifier|public
 name|void
 name|testEqualsOwnerNameQuery2
