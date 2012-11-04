@@ -260,7 +260,7 @@ decl_stmt|;
 if|if
 condition|(
 name|preAuthorizedToken
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
