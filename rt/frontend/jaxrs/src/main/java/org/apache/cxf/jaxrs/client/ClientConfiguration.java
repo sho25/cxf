@@ -717,7 +717,7 @@ operator|=
 name|interceptors
 expr_stmt|;
 block|}
-comment|/**      * Sets the list of in fault interceptors which will deal with the HTTP      * faults; the client code may choose to catch {@link ServerWebApplicationException}      * exceptions instead.      *        * @param interceptors in fault interceptors      */
+comment|/**      * Sets the list of in fault interceptors which will deal with the HTTP      * faults; the client code may choose to catch {@link WebApplicationException}      * exceptions instead.      *        * @param interceptors in fault interceptors      */
 specifier|public
 name|void
 name|setInFaultInterceptors
@@ -739,7 +739,7 @@ operator|=
 name|interceptors
 expr_stmt|;
 block|}
-comment|/**      * Sets the list of out fault interceptors which will deal with the client-side      * faults; the client code may choose to catch {@link ClientWebApplicationException}      * exceptions instead.      *        * @param interceptors out fault interceptors      */
+comment|/**      * Sets the list of out fault interceptors which will deal with the client-side      * faults; the client code may choose to catch {@link ClientException}      * exceptions instead.      *        * @param interceptors out fault interceptors      */
 specifier|public
 name|void
 name|setOutFaultInterceptors

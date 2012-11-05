@@ -113,7 +113,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|NotAuthorizedException
 import|;
 end_import
 
@@ -1067,7 +1067,7 @@ operator|!=
 literal|null
 condition|?
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|ex
 argument_list|,
@@ -1075,7 +1075,7 @@ name|response
 argument_list|)
 else|:
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|response
 argument_list|)

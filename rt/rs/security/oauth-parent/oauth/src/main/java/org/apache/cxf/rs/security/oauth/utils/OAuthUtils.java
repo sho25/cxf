@@ -155,7 +155,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|NotAuthorizedException
 import|;
 end_import
 
@@ -1303,7 +1303,7 @@ block|}
 block|}
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|builder
 operator|.

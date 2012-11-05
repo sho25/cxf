@@ -59,7 +59,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|BadRequestException
 import|;
 end_import
 
@@ -438,15 +438,15 @@ operator|!=
 literal|null
 condition|?
 operator|new
-name|WebApplicationException
+name|BadRequestException
 argument_list|(
-name|ex
-argument_list|,
 name|response
+argument_list|,
+name|ex
 argument_list|)
 else|:
 operator|new
-name|WebApplicationException
+name|BadRequestException
 argument_list|(
 name|response
 argument_list|)

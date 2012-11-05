@@ -69,7 +69,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|InternalServerErrorException
 import|;
 end_import
 
@@ -498,10 +498,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|500
-argument_list|)
+name|InternalServerErrorException
+argument_list|()
 throw|;
 block|}
 comment|// Get the scheme and its data, Bearer only is supported by default

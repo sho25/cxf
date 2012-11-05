@@ -87,16 +87,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|HttpURLConnection
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|HashMap
@@ -121,6 +111,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|BadRequestException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|Consumes
 import|;
 end_import
@@ -133,7 +135,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|Produces
+name|InternalServerErrorException
 import|;
 end_import
 
@@ -145,7 +147,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|Produces
 import|;
 end_import
 
@@ -413,11 +415,9 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|BadRequestException
 argument_list|(
-name|HttpURLConnection
-operator|.
-name|HTTP_INTERNAL_ERROR
+name|e
 argument_list|)
 throw|;
 block|}
@@ -555,11 +555,9 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
-name|HttpURLConnection
-operator|.
-name|HTTP_INTERNAL_ERROR
+name|e
 argument_list|)
 throw|;
 block|}
@@ -571,11 +569,9 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
-name|HttpURLConnection
-operator|.
-name|HTTP_INTERNAL_ERROR
+name|ioe
 argument_list|)
 throw|;
 block|}

@@ -143,7 +143,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|InternalServerErrorException
 import|;
 end_import
 
@@ -1487,10 +1487,8 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|500
-argument_list|)
+name|InternalServerErrorException
+argument_list|()
 throw|;
 block|}
 if|if

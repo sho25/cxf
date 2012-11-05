@@ -93,7 +93,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|NotSupportedException
 import|;
 end_import
 
@@ -368,10 +368,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|415
-argument_list|)
+name|NotSupportedException
+argument_list|()
 throw|;
 block|}
 name|element

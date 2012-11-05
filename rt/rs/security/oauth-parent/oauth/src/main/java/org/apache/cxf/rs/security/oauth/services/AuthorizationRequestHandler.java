@@ -209,7 +209,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|BadRequestException
 import|;
 end_import
 
@@ -706,10 +706,8 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|400
-argument_list|)
+name|BadRequestException
+argument_list|()
 throw|;
 block|}
 comment|// assume it is an initial authorization request

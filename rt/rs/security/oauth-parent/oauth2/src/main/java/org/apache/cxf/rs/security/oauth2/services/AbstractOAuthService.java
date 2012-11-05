@@ -41,7 +41,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|BadRequestException
 import|;
 end_import
 
@@ -368,7 +368,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference       * @throws WebApplicationException if no matching Client is found,       *         the error is returned directly to the end user without       *         following the redirect URI if any      */
+comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference       * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found,       *         the error is returned directly to the end user without       *         following the redirect URI if any      */
 specifier|protected
 name|Client
 name|getClient
@@ -459,10 +459,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|400
-argument_list|)
+name|BadRequestException
+argument_list|()
 throw|;
 block|}
 block|}
@@ -490,7 +488,7 @@ argument_list|)
 decl_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|BadRequestException
 argument_list|(
 name|Response
 operator|.

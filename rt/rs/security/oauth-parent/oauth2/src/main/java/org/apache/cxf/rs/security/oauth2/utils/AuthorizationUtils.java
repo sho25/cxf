@@ -59,7 +59,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|NotAuthorizedException
 import|;
 end_import
 
@@ -192,9 +192,9 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
-literal|401
+name|ex
 argument_list|)
 throw|;
 block|}
@@ -224,9 +224,17 @@ return|;
 block|}
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
+argument_list|(
+name|Response
+operator|.
+name|status
 argument_list|(
 literal|401
+argument_list|)
+operator|.
+name|build
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -445,7 +453,7 @@ argument_list|()
 decl_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|r
 argument_list|)
