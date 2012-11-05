@@ -187,7 +187,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|Produces
+name|InternalServerErrorException
 import|;
 end_import
 
@@ -199,7 +199,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|Produces
 import|;
 end_import
 
@@ -1220,7 +1220,7 @@ argument_list|()
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
 name|ex
 argument_list|)
@@ -1561,7 +1561,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|()
 throw|;
 block|}
@@ -1650,7 +1650,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|()
 throw|;
 block|}

@@ -89,7 +89,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|InternalServerErrorException
 import|;
 end_import
 
@@ -765,7 +765,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
 name|ex
 argument_list|)

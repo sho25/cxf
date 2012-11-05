@@ -111,6 +111,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|InternalServerErrorException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|WebApplicationException
 import|;
 end_import
@@ -465,10 +477,8 @@ block|{
 comment|// must not happen if isReadable() returned true
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|500
-argument_list|)
+name|InternalServerErrorException
+argument_list|()
 throw|;
 block|}
 name|XMLSource

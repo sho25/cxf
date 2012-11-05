@@ -99,7 +99,19 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|BadRequestException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|NotSupportedException
 import|;
 end_import
 
@@ -777,7 +789,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|BadRequestException
 argument_list|(
 operator|new
 name|MultipartReadException
@@ -797,8 +809,6 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
-argument_list|,
-literal|400
 argument_list|)
 throw|;
 block|}
@@ -1153,10 +1163,8 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
-argument_list|(
-literal|415
-argument_list|)
+name|NotSupportedException
+argument_list|()
 throw|;
 block|}
 block|}

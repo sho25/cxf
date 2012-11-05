@@ -9919,6 +9919,11 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|ex
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 name|Throwable
 name|cause
 init|=

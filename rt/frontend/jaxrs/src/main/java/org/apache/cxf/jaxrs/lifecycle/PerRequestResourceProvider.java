@@ -61,7 +61,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|InternalServerErrorException
 import|;
 end_import
 
@@ -321,7 +321,7 @@ literal|" can not be instantiated"
 decl_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
 name|Response
 operator|.
@@ -363,7 +363,7 @@ literal|" due to IllegalAccessException"
 decl_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
 name|Response
 operator|.
@@ -405,7 +405,7 @@ literal|" due to InvocationTargetException"
 decl_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|InternalServerErrorException
 argument_list|(
 name|Response
 operator|.

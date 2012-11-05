@@ -135,7 +135,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|NotAuthorizedException
 import|;
 end_import
 
@@ -555,7 +555,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
@@ -607,7 +607,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
@@ -672,7 +672,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
@@ -779,7 +779,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
@@ -806,7 +806,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
@@ -833,7 +833,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
@@ -1029,7 +1029,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|WebApplicationException
+name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
