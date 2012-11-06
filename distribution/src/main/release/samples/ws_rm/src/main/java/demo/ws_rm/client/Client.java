@@ -259,6 +259,9 @@ name|wsdlURL
 operator|=
 name|wsdlFile
 operator|.
+name|toURI
+argument_list|()
+operator|.
 name|toURL
 argument_list|()
 expr_stmt|;
