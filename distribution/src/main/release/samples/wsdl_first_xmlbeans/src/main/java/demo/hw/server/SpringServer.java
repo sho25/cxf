@@ -32,6 +32,9 @@ specifier|public
 class|class
 name|SpringServer
 block|{
+name|ClassPathXmlApplicationContext
+name|context
+decl_stmt|;
 specifier|protected
 name|SpringServer
 parameter_list|()
@@ -47,9 +50,8 @@ argument_list|(
 literal|"Starting Server"
 argument_list|)
 expr_stmt|;
-name|ClassPathXmlApplicationContext
 name|context
-init|=
+operator|=
 operator|new
 name|ClassPathXmlApplicationContext
 argument_list|(
@@ -60,7 +62,7 @@ block|{
 literal|"/demo/hw/server/server-beans.xml"
 block|}
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 block|}
 specifier|public
 specifier|static
