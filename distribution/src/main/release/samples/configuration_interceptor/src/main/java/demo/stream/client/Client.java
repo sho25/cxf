@@ -104,7 +104,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"hello_world.wsdl"
+literal|"/wsdl/hello_world.wsdl"
 argument_list|)
 decl_stmt|;
 name|SOAPService
