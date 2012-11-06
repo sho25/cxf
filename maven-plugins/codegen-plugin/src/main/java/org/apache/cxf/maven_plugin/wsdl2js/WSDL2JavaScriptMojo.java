@@ -661,10 +661,14 @@ block|}
 block|}
 try|try
 block|{
+name|createMarkerFile
+argument_list|(
+name|wsdlOption
+argument_list|,
 name|doneFile
-operator|.
-name|createNewFile
-argument_list|()
+argument_list|,
+name|wsdlURI
+argument_list|)
 expr_stmt|;
 block|}
 catch|catch
