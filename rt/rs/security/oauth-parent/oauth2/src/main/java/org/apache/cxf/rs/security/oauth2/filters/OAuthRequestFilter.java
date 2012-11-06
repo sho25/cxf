@@ -201,6 +201,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|rs
 operator|.
 name|security
@@ -372,6 +386,18 @@ name|ClassResourceInfo
 name|resourceClass
 parameter_list|)
 block|{
+if|if
+condition|(
+name|isCorsRequest
+argument_list|(
+name|m
+argument_list|)
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 comment|// Get the access token
 name|AccessTokenValidation
 name|accessTokenV
@@ -833,6 +859,34 @@ argument_list|)
 return|;
 block|}
 block|}
+return|;
+block|}
+specifier|protected
+name|boolean
+name|isCorsRequest
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
+block|{
+comment|//Redirection-based flows (Implicit Grant Flow specifically) may have
+comment|//the browser issuing CORS preflight OPTIONS request.
+comment|//org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter can be
+comment|//used to handle preflights but local preflights (to be handled by the service code)
+comment|// will be blocked by this filter unless CORS filter has done the initial validation
+comment|// and set a message "local_preflight" property to true
+return|return
+name|MessageUtils
+operator|.
+name|isTrue
+argument_list|(
+name|m
+operator|.
+name|get
+argument_list|(
+literal|"local_preflight"
+argument_list|)
+argument_list|)
 return|;
 block|}
 block|}

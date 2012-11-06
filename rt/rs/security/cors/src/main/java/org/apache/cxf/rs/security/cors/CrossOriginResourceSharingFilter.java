@@ -368,7 +368,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A single class that provides both an input and an output filter for CORS, following  * http://www.w3.org/TR/cors/. The input filter examines the input headers. If the request is valid, it stores the  * information in the Exchange to allow the response handler to add the appropriate headers to the response.  * If you need complex or subtle control of the behavior here (e.g. clearing the prefight cache) you might be  * better off reading the source of this class and implementing this inside your service.  *   * This class will perform preflight processing even if there is a resource method annotated   * to handle @OPTIONS,  *<em>unless</em> that method is annotated as follows:  *<pre>  *   @CrossOriginResourceSharing(localPreflight = true)  *</pre>  * or unless the<tt>defaultOptionsMethodsHandlePreflight</tt> property of this class is set to<tt>true</tt>.  */
+comment|/**  * A single class that provides both an input and an output filter for CORS, following  * http://www.w3.org/TR/cors/. The input filter examines the input headers. If the request is valid, it stores the  * information in the Exchange to allow the response handler to add the appropriate headers to the response.  * If you need complex or subtle control of the behavior here (e.g. clearing the prefight cache) you might be  * better off reading the source of this class and implementing this inside your service.  *   * This class will perform preflight processing even if there is a resource method annotated   * to handle @OPTIONS,  *<em>unless</em> that method is annotated as follows:  *<pre>  *   @LocalPreflight  *</pre>  * or unless the<tt>defaultOptionsMethodsHandlePreflight</tt> property of this class is set to<tt>true</tt>.  */
 end_comment
 
 begin_class
@@ -405,6 +405,30 @@ name|compile
 argument_list|(
 literal|",\\w*"
 argument_list|)
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|LOCAL_PREFLIGHT
+init|=
+literal|"local_preflight"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|LOCAL_PREFLIGHT_ORIGIN
+init|=
+literal|"local_preflight.origin"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|LOCAL_PREFLIGHT_METHOD
+init|=
+literal|"local_preflight.method"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -795,33 +819,9 @@ name|ClassResourceInfo
 name|resourceClass
 parameter_list|)
 block|{
-comment|/*          * What to do if the resource class indeed has a method annotated with @OPTIONS           * that is matched by this request? We go ahead and do this job unless the request          * has one of our annotations on it (or its parent class) indicating 'localPreflight' --          * or the defaultOptionsMethodsHandlePreflight flag is true.          */
-name|LocalPreflight
-name|preflightAnnotation
-init|=
-name|getAnnotation
-argument_list|(
-name|opResInfo
-argument_list|,
-name|LocalPreflight
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|preflightAnnotation
-operator|!=
-literal|null
-operator|||
-name|defaultOptionsMethodsHandlePreflight
-condition|)
-block|{
-return|return
-literal|null
-return|;
-comment|// let the resource method take all responsibility.
-block|}
+comment|// Validate main CORS preflight properties (origin, method)
+comment|// even if Local preflight is requested
+comment|// 5.2.1 -- must have origin, must have one origin.
 name|List
 argument_list|<
 name|String
@@ -837,10 +837,6 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
-name|String
-name|origin
-decl_stmt|;
-comment|// 5.2.1 -- must have origin, must have one origin.
 if|if
 condition|(
 name|headerOriginValues
@@ -859,15 +855,18 @@ return|return
 literal|null
 return|;
 block|}
+name|String
 name|origin
-operator|=
+init|=
 name|headerOriginValues
 operator|.
 name|get
 argument_list|(
 literal|0
 argument_list|)
-expr_stmt|;
+decl_stmt|;
+comment|// 5.2.3 must have access-control-request-method, must be single-valued
+comment|// we should reject parse errors but we cannot.
 name|List
 argument_list|<
 name|String
@@ -883,8 +882,6 @@ argument_list|,
 literal|false
 argument_list|)
 decl_stmt|;
-comment|// 5.2.3 must have access-control-request-method, must be single-valued
-comment|// we should reject parse errors but we cannot.
 if|if
 condition|(
 name|requestMethodValues
@@ -918,7 +915,7 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-comment|/*          * CORS doesn't send enough information with a preflight to accurately identity the single method          * that will handle the request. We ask the JAX-RS runtime to find the matching method which is          * expected to have a CrossOriginResourceSharing annotation set.          */
+comment|/*          * Ask JAX-RS runtime to validate that the matching resource method actually exists.          */
 name|Method
 name|method
 init|=
@@ -939,6 +936,60 @@ block|{
 return|return
 literal|null
 return|;
+block|}
+comment|/*          * What to do if the resource class indeed has a method annotated with @OPTIONS           * that is matched by this request? We go ahead and do this job unless the request          * has one of our annotations on it (or its parent class) indicating 'localPreflight' --          * or the defaultOptionsMethodsHandlePreflight flag is true.          */
+name|LocalPreflight
+name|preflightAnnotation
+init|=
+name|getAnnotation
+argument_list|(
+name|opResInfo
+argument_list|,
+name|LocalPreflight
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|preflightAnnotation
+operator|!=
+literal|null
+operator|||
+name|defaultOptionsMethodsHandlePreflight
+condition|)
+block|{
+name|m
+operator|.
+name|put
+argument_list|(
+name|LOCAL_PREFLIGHT
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
+name|LOCAL_PREFLIGHT_ORIGIN
+argument_list|,
+name|origin
+argument_list|)
+expr_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
+name|LOCAL_PREFLIGHT_METHOD
+argument_list|,
+name|method
+argument_list|)
+expr_stmt|;
+return|return
+literal|null
+return|;
+comment|// let the resource method take all responsibility.
 block|}
 name|CrossOriginResourceSharing
 name|ann
