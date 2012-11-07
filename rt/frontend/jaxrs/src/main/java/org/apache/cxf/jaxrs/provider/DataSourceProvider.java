@@ -525,7 +525,7 @@ expr_stmt|;
 block|}
 name|IOUtils
 operator|.
-name|copy
+name|copyAndCloseInput
 argument_list|(
 name|ds
 operator|.
