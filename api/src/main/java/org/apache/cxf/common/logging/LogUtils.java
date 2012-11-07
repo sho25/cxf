@@ -913,6 +913,11 @@ name|n
 argument_list|)
 expr_stmt|;
 block|}
+name|String
+name|bundleName
+init|=
+name|name
+decl_stmt|;
 try|try
 block|{
 name|Logger
@@ -927,14 +932,14 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|name
+name|bundleName
 operator|==
 literal|null
 condition|)
 block|{
 comment|//grab the bundle prior to the call to Logger.getLogger(...) so the
 comment|//ResourceBundle can be loaded outside the big sync block that getLogger really is
-name|name
+name|bundleName
 operator|=
 name|BundleUtils
 operator|.
@@ -966,7 +971,7 @@ block|}
 block|}
 else|else
 block|{
-name|name
+name|bundleName
 operator|=
 name|BundleUtils
 operator|.
@@ -974,7 +979,7 @@ name|getBundleName
 argument_list|(
 name|cls
 argument_list|,
-name|name
+name|bundleName
 argument_list|)
 expr_stmt|;
 try|try
@@ -987,7 +992,7 @@ name|getBundle
 argument_list|(
 name|cls
 argument_list|,
-name|name
+name|bundleName
 argument_list|)
 expr_stmt|;
 block|}
@@ -1060,12 +1065,7 @@ name|newInstance
 argument_list|(
 name|loggerName
 argument_list|,
-name|BundleUtils
-operator|.
-name|getBundleName
-argument_list|(
-name|cls
-argument_list|)
+name|bundleName
 argument_list|)
 return|;
 block|}
@@ -1121,14 +1121,7 @@ name|newInstance
 argument_list|(
 name|loggerName
 argument_list|,
-name|BundleUtils
-operator|.
-name|getBundleName
-argument_list|(
-name|cls
-argument_list|,
-name|name
-argument_list|)
+name|bundleName
 argument_list|)
 return|;
 block|}
@@ -1192,7 +1185,7 @@ name|getLogger
 argument_list|(
 name|loggerName
 argument_list|,
-name|name
+name|bundleName
 argument_list|)
 expr_stmt|;
 comment|//NOPMD
