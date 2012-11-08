@@ -39,6 +39,20 @@ name|Bus
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|osgi
+operator|.
+name|service
+operator|.
+name|cm
+operator|.
+name|ConfigurationAdmin
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -61,6 +75,10 @@ parameter_list|(
 name|String
 name|name
 parameter_list|)
+function_decl|;
+name|ConfigurationAdmin
+name|getConfigAdmin
+parameter_list|()
 function_decl|;
 block|}
 end_interface
