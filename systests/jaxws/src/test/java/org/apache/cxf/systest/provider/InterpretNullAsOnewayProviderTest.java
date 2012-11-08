@@ -258,6 +258,20 @@ argument_list|,
 name|ep1
 argument_list|)
 expr_stmt|;
+name|ep1
+operator|.
+name|getProperties
+argument_list|()
+operator|.
+name|put
+argument_list|(
+literal|"jaxws.provider.interpretNullAsOneway"
+argument_list|,
+name|Boolean
+operator|.
+name|FALSE
+argument_list|)
+expr_stmt|;
 comment|// endpoint interpreting null as oneway
 name|NullProviderService
 name|servant2
@@ -294,9 +308,7 @@ name|put
 argument_list|(
 literal|"jaxws.provider.interpretNullAsOneway"
 argument_list|,
-name|Boolean
-operator|.
-name|TRUE
+literal|"false"
 argument_list|)
 expr_stmt|;
 comment|// endpoint interpreting null as oneway
@@ -324,18 +336,6 @@ argument_list|(
 literal|"endpoint published"
 argument_list|,
 name|ep3
-argument_list|)
-expr_stmt|;
-name|ep3
-operator|.
-name|getProperties
-argument_list|()
-operator|.
-name|put
-argument_list|(
-literal|"jaxws.provider.interpretNullAsOneway"
-argument_list|,
-literal|"true"
 argument_list|)
 expr_stmt|;
 block|}
@@ -522,7 +522,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testInterpretNullAsOneway
+name|testNotInterpretNullAsOneway2
 parameter_list|()
 throws|throws
 name|Exception
@@ -535,12 +535,12 @@ argument_list|(
 name|ADDRESS2
 argument_list|)
 decl_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|"http 202 must be returned"
+literal|"Soap fault must be returned"
 argument_list|,
-literal|202
-argument_list|,
+literal|400
+operator|<=
 name|conn
 operator|.
 name|getResponseCode
@@ -552,7 +552,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testInterpretNullAsOneway2
+name|testInterpretNullAsOneway
 parameter_list|()
 throws|throws
 name|Exception

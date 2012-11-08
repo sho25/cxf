@@ -721,6 +721,60 @@ name|isOneWay
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// request-response with null response, interpretNullAsOneway not set so
+comment|// default should be true
+name|ex
+operator|.
+name|setOneWay
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+name|serviceObject
+operator|.
+name|setNullable
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|obj
+operator|=
+operator|(
+name|MessageContentsList
+operator|)
+name|jaxwsMethodInvoker
+operator|.
+name|invoke
+argument_list|(
+name|ex
+argument_list|,
+operator|new
+name|MessageContentsList
+argument_list|(
+operator|new
+name|Object
+index|[]
+block|{
+operator|new
+name|StreamSource
+argument_list|()
+block|}
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNull
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|isOneWay
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// request-response with null response, interpretNullAsOneway disabled
 name|ex
 operator|.
@@ -734,6 +788,17 @@ operator|.
 name|setNullable
 argument_list|(
 literal|true
+argument_list|)
+expr_stmt|;
+name|inMessage
+operator|.
+name|setContextualProperty
+argument_list|(
+literal|"jaxws.provider.interpretNullAsOneway"
+argument_list|,
+name|Boolean
+operator|.
+name|FALSE
 argument_list|)
 expr_stmt|;
 name|obj
@@ -789,7 +854,7 @@ name|isOneWay
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// request-response with null response, interpretNullAsOneway enabled
+comment|// request-response with null response, interpretNullAsOneway explicitly enabled
 name|ex
 operator|.
 name|setOneWay
