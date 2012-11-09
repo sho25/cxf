@@ -1056,10 +1056,14 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|String
+name|StringBuilder
 name|sum
 init|=
+operator|new
+name|StringBuilder
+argument_list|(
 literal|""
+argument_list|)
 decl_stmt|;
 for|for
 control|(
@@ -1120,7 +1124,9 @@ name|getValue
 argument_list|()
 decl_stmt|;
 name|sum
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"/"
 operator|+
 operator|(
@@ -1135,6 +1141,7 @@ argument_list|)
 else|:
 name|v
 operator|)
+argument_list|)
 expr_stmt|;
 block|}
 block|}
@@ -1146,6 +1153,9 @@ operator|.
 name|fromPath
 argument_list|(
 name|sum
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|objects

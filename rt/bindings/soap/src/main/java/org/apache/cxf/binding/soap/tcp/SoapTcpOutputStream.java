@@ -585,7 +585,7 @@ throws|throws
 name|IOException
 block|{
 name|String
-name|openChannelMsg
+name|initialMessage
 init|=
 literal|"<s:Envelope xmlns:s=\"http://schemas.xmlsoap.org/soap/envelope/\">"
 operator|+
@@ -595,13 +595,25 @@ literal|" xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\""
 operator|+
 literal|" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">"
 decl_stmt|;
+name|StringBuilder
 name|openChannelMsg
-operator|+=
+init|=
+operator|new
+name|StringBuilder
+argument_list|(
+name|initialMessage
+argument_list|)
+decl_stmt|;
+name|openChannelMsg
+operator|.
+name|append
+argument_list|(
 literal|"<targetWSURI xmlns=\"\">"
 operator|+
 name|targetWsURI
 operator|+
 literal|"</targetWSURI>"
+argument_list|)
 expr_stmt|;
 for|for
 control|(
@@ -612,12 +624,15 @@ name|supportedMimeTypes
 control|)
 block|{
 name|openChannelMsg
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"<negotiatedMimeTypes xmlns=\"\">"
 operator|+
 name|mimeType
 operator|+
 literal|"</negotiatedMimeTypes>"
+argument_list|)
 expr_stmt|;
 block|}
 for|for
@@ -629,17 +644,23 @@ name|supportedParams
 control|)
 block|{
 name|openChannelMsg
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"<negotiatedParams xmlns=\"\">"
 operator|+
 name|param
 operator|+
 literal|"</negotiatedParams>"
+argument_list|)
 expr_stmt|;
 block|}
 name|openChannelMsg
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"</openChannel></s:Body></s:Envelope>"
+argument_list|)
 expr_stmt|;
 name|SoapTcpFrameContentDescription
 name|contentDesc
@@ -732,6 +753,9 @@ operator|.
 name|setPayload
 argument_list|(
 name|openChannelMsg
+operator|.
+name|toString
+argument_list|()
 operator|.
 name|getBytes
 argument_list|(

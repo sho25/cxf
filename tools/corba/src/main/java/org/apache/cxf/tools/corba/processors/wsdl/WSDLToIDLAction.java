@@ -3443,10 +3443,14 @@ name|scope
 init|=
 name|root
 decl_stmt|;
-name|String
+name|StringBuilder
 name|dotScopedName
 init|=
+operator|new
+name|StringBuilder
+argument_list|(
 literal|""
+argument_list|)
 decl_stmt|;
 for|for
 control|(
@@ -3468,11 +3472,14 @@ name|i
 control|)
 block|{
 name|dotScopedName
-operator|+=
+operator|.
+name|append
+argument_list|(
 name|name
 index|[
 name|i
 index|]
+argument_list|)
 expr_stmt|;
 comment|// If we have the name CORBA, we need to make sure we are not handling the CORBA.Object
 comment|// name which is used for object references.  If so, we don't want to generate a module
@@ -3486,6 +3493,9 @@ operator|.
 name|equals
 argument_list|(
 name|dotScopedName
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 operator|&&
 name|name
@@ -3551,6 +3561,9 @@ name|getNamespaceURI
 argument_list|()
 argument_list|,
 name|dotScopedName
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// Check to see if CORBAType exists. If so, create type for it
@@ -3610,8 +3623,11 @@ expr_stmt|;
 block|}
 block|}
 name|dotScopedName
-operator|+=
+operator|.
+name|append
+argument_list|(
 literal|"."
+argument_list|)
 expr_stmt|;
 name|scope
 operator|=
