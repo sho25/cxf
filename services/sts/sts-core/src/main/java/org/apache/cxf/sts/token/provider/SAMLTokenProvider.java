@@ -2375,8 +2375,8 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|// If no providers have been configured, then default to the
-comment|// DefaultAttributeStatementProvider and the ClaimsAttributeStatementProvider
+comment|// If no providers have been configured, then default to the ClaimsAttributeStatementProvider
+comment|// If no Claims are available then use the DefaultAttributeStatementProvider
 if|if
 condition|(
 operator|(
@@ -2426,7 +2426,7 @@ name|AttributeStatementProvider
 name|attributeProvider
 init|=
 operator|new
-name|DefaultAttributeStatementProvider
+name|ClaimsAttributeStatementProvider
 argument_list|()
 decl_stmt|;
 name|AttributeStatementBean
@@ -2439,6 +2439,13 @@ argument_list|(
 name|tokenParameters
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|attributeBean
+operator|!=
+literal|null
+condition|)
+block|{
 name|attrBeanList
 operator|.
 name|add
@@ -2446,10 +2453,13 @@ argument_list|(
 name|attributeBean
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
 name|attributeProvider
 operator|=
 operator|new
-name|ClaimsAttributeStatementProvider
+name|DefaultAttributeStatementProvider
 argument_list|()
 expr_stmt|;
 name|attributeBean
@@ -2461,13 +2471,6 @@ argument_list|(
 name|tokenParameters
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|attributeBean
-operator|!=
-literal|null
-condition|)
-block|{
 name|attrBeanList
 operator|.
 name|add
