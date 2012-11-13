@@ -8464,20 +8464,6 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// We hope that we can't have parts that different only in namespace.
-name|el
-operator|.
-name|setName
-argument_list|(
-name|mpi
-operator|.
-name|getName
-argument_list|()
-operator|.
-name|getLocalPart
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|Map
 argument_list|<
 name|Class
@@ -8515,13 +8501,6 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|el
-operator|.
-name|setName
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
 name|XmlSchemaUtils
 operator|.
 name|setElementRefName
@@ -8537,6 +8516,20 @@ expr_stmt|;
 block|}
 else|else
 block|{
+comment|// We hope that we can't have parts that different only in namespace.
+name|el
+operator|.
+name|setName
+argument_list|(
+name|mpi
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|getLocalPart
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|mpi
