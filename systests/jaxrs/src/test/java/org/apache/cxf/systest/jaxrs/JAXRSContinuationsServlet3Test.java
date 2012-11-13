@@ -79,6 +79,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Ignore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -86,7 +96,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JAXRSContinuationsTest
+name|JAXRSContinuationsServlet3Test
 extends|extends
 name|AbstractJAXRSContinuationsTest
 block|{
@@ -96,7 +106,7 @@ specifier|final
 name|String
 name|PORT
 init|=
-name|BookContinuationServer
+name|BookContinuationServlet3Server
 operator|.
 name|PORT
 decl_stmt|;
@@ -124,7 +134,7 @@ literal|"server did not launch correctly"
 argument_list|,
 name|launchServer
 argument_list|(
-name|BookContinuationServer
+name|BookContinuationServlet3Server
 operator|.
 name|class
 argument_list|)
@@ -133,6 +143,8 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testDefaultTimeout
@@ -193,6 +205,8 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testContinuationWithTimeHandler
