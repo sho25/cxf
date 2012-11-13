@@ -1220,6 +1220,55 @@ name|build
 argument_list|()
 return|;
 block|}
+comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference       * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found      */
+specifier|protected
+name|Client
+name|getClient
+parameter_list|(
+name|String
+name|clientId
+parameter_list|)
+block|{
+name|Client
+name|client
+init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+name|client
+operator|=
+name|getValidClient
+argument_list|(
+name|clientId
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|OAuthServiceException
+name|ex
+parameter_list|)
+block|{
+comment|// log it
+block|}
+if|if
+condition|(
+name|client
+operator|==
+literal|null
+condition|)
+block|{
+name|reportInvalidRequestError
+argument_list|(
+literal|"Client ID is invalid"
+argument_list|)
+expr_stmt|;
+block|}
+return|return
+name|client
+return|;
+block|}
 block|}
 end_class
 
