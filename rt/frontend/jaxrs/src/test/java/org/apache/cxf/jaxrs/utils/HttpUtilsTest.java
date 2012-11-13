@@ -945,7 +945,7 @@ argument_list|)
 expr_stmt|;
 name|req
 operator|.
-name|getLocalPort
+name|getServerPort
 argument_list|()
 expr_stmt|;
 name|EasyMock
@@ -1062,7 +1062,7 @@ argument_list|)
 expr_stmt|;
 name|req
 operator|.
-name|getLocalPort
+name|getServerPort
 argument_list|()
 expr_stmt|;
 name|EasyMock
