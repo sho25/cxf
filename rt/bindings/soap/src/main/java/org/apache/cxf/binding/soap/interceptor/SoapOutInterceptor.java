@@ -85,6 +85,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|AsyncHandler
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|w3c
@@ -1535,6 +1547,37 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|int
+name|paraLength
+init|=
+name|objs
+operator|.
+name|size
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|objs
+operator|.
+name|get
+argument_list|(
+name|paraLength
+operator|-
+literal|1
+argument_list|)
+operator|instanceof
+name|AsyncHandler
+condition|)
+block|{
+comment|//when use asyn handler in bare mode the last parameter is AsyncHandler
+comment|//which shouldn't count in as parameter length
+name|paraLength
+operator|=
+name|paraLength
+operator|-
+literal|1
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|part
@@ -1542,10 +1585,7 @@ operator|.
 name|getIndex
 argument_list|()
 operator|>=
-name|objs
-operator|.
-name|size
-argument_list|()
+name|paraLength
 condition|)
 block|{
 comment|// The optional out of band header is not a part of parameters of the method
