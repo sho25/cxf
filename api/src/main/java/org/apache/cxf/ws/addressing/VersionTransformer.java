@@ -2145,7 +2145,7 @@ block|}
 return|return
 name|convertToNative
 argument_list|(
-name|o
+literal|null
 argument_list|)
 return|;
 block|}

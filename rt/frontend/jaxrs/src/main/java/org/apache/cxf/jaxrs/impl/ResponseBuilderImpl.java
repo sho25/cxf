@@ -1181,7 +1181,7 @@ name|metadata
 operator|.
 name|remove
 argument_list|(
-name|v
+literal|null
 argument_list|)
 expr_stmt|;
 if|if
@@ -1195,7 +1195,7 @@ name|varyValues
 operator|.
 name|remove
 argument_list|(
-name|v
+literal|null
 argument_list|)
 expr_stmt|;
 block|}

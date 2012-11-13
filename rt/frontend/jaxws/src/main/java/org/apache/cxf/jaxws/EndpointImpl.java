@@ -3402,7 +3402,7 @@ name|other
 operator|.
 name|remove
 argument_list|(
-name|o
+literal|null
 argument_list|)
 expr_stmt|;
 block|}

@@ -1133,7 +1133,7 @@ name|JAXRSUtils
 operator|.
 name|createResponse
 argument_list|(
-name|resource
+literal|null
 argument_list|,
 name|message
 argument_list|,

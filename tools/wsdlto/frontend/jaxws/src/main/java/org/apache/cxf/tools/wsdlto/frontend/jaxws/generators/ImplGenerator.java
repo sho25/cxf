@@ -551,7 +551,7 @@ name|outputImpl
 argument_list|(
 name|intf
 argument_list|,
-name|service
+literal|null
 argument_list|,
 literal|""
 argument_list|,

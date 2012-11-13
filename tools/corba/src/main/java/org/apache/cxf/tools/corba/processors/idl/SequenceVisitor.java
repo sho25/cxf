@@ -560,7 +560,7 @@ name|schemaType
 operator|=
 name|generateSchemaType
 argument_list|(
-name|stype
+literal|null
 argument_list|,
 name|scopedName
 argument_list|,

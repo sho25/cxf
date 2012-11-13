@@ -6574,7 +6574,7 @@ name|providerInfo
 operator|==
 literal|null
 condition|?
-name|providerInfo
+literal|null
 else|:
 name|providerInfo
 operator|.

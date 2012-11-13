@@ -1804,6 +1804,13 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|dataBinding
+operator|=
+name|p
+operator|.
+name|getDataBinding
+argument_list|()
+expr_stmt|;
 name|obj
 operator|=
 name|p

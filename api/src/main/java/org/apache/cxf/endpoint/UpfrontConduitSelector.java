@@ -152,6 +152,8 @@ operator|==
 literal|null
 condition|)
 block|{
+name|c
+operator|=
 name|getSelectedConduit
 argument_list|(
 name|message

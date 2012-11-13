@@ -1330,8 +1330,6 @@ if|if
 condition|(
 name|needToRender
 argument_list|(
-name|obj
-argument_list|,
 name|part
 argument_list|)
 condition|)
@@ -1389,9 +1387,6 @@ specifier|private
 name|boolean
 name|needToRender
 parameter_list|(
-name|Object
-name|obj
-parameter_list|,
 name|MessagePartInfo
 name|part
 parameter_list|)

@@ -6376,7 +6376,7 @@ name|c
 operator|.
 name|getNamespaceURI
 argument_list|(
-name|s
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
