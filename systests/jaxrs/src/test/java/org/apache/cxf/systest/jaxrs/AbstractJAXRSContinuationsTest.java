@@ -342,7 +342,7 @@ init|=
 operator|new
 name|CountDownLatch
 argument_list|(
-literal|1
+literal|5
 argument_list|)
 decl_stmt|;
 name|executor
@@ -372,19 +372,114 @@ name|doneSignal
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|//        executor.execute(new BookWorker("http://localhost:" + port + "/bookstore/" + pathSegment + "/2",
-comment|//                                        "2",
-comment|//                                        "CXF in Action2", startSignal, doneSignal));
-comment|//        executor.execute(new BookWorker("http://localhost:" + port + "/bookstore/" + pathSegment + "/3",
-comment|//                                        "3",
-comment|//                                        "CXF in Action3", startSignal, doneSignal));
-comment|//        executor.execute(new BookWorker("http://localhost:" + port + "/bookstore/" + pathSegment + "/4",
-comment|//                                        "4",
-comment|//                                        "CXF in Action4", startSignal, doneSignal));
-comment|//        executor.execute(new BookWorker("http://localhost:" + port + "/bookstore/" + pathSegment + "/5",
-comment|//                                        "5",
-comment|//                                        "CXF in Action5", startSignal, doneSignal));
-comment|//
+name|executor
+operator|.
+name|execute
+argument_list|(
+operator|new
+name|BookWorker
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|port
+operator|+
+literal|"/bookstore/"
+operator|+
+name|pathSegment
+operator|+
+literal|"/2"
+argument_list|,
+literal|"2"
+argument_list|,
+literal|"CXF in Action2"
+argument_list|,
+name|startSignal
+argument_list|,
+name|doneSignal
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|executor
+operator|.
+name|execute
+argument_list|(
+operator|new
+name|BookWorker
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|port
+operator|+
+literal|"/bookstore/"
+operator|+
+name|pathSegment
+operator|+
+literal|"/3"
+argument_list|,
+literal|"3"
+argument_list|,
+literal|"CXF in Action3"
+argument_list|,
+name|startSignal
+argument_list|,
+name|doneSignal
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|executor
+operator|.
+name|execute
+argument_list|(
+operator|new
+name|BookWorker
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|port
+operator|+
+literal|"/bookstore/"
+operator|+
+name|pathSegment
+operator|+
+literal|"/4"
+argument_list|,
+literal|"4"
+argument_list|,
+literal|"CXF in Action4"
+argument_list|,
+name|startSignal
+argument_list|,
+name|doneSignal
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|executor
+operator|.
+name|execute
+argument_list|(
+operator|new
+name|BookWorker
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|port
+operator|+
+literal|"/bookstore/"
+operator|+
+name|pathSegment
+operator|+
+literal|"/5"
+argument_list|,
+literal|"5"
+argument_list|,
+literal|"CXF in Action5"
+argument_list|,
+name|startSignal
+argument_list|,
+name|doneSignal
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|startSignal
 operator|.
 name|countDown
