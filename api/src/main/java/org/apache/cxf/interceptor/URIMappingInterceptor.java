@@ -494,6 +494,8 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 name|URIMappingInterceptor
 parameter_list|()

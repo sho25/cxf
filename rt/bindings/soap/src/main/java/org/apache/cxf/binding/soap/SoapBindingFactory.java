@@ -1019,20 +1019,6 @@ name|cxf
 operator|.
 name|interceptor
 operator|.
-name|URIMappingInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
 name|WrappedOutInterceptor
 import|;
 end_import
@@ -3372,21 +3358,6 @@ argument_list|(
 name|SoapHeaderOutFilterInterceptor
 operator|.
 name|INSTANCE
-argument_list|)
-expr_stmt|;
-comment|// REVISIT: The phase interceptor chain seems to freak out if this added
-comment|// first. Not sure what the deal is at the moment, I suspect the
-comment|// ordering algorithm needs to be improved
-name|sb
-operator|.
-name|getInInterceptors
-argument_list|()
-operator|.
-name|add
-argument_list|(
-operator|new
-name|URIMappingInterceptor
-argument_list|()
 argument_list|)
 expr_stmt|;
 if|if
