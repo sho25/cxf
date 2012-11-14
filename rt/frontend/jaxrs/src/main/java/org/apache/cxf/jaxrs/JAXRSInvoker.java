@@ -749,6 +749,11 @@ name|AsyncResponseImpl
 operator|)
 name|asyncResp
 decl_stmt|;
+name|asyncImpl
+operator|.
+name|prepareContinuation
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|asyncImpl
