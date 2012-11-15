@@ -670,28 +670,6 @@ name|getBytes
 argument_list|()
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|Boolean
-operator|.
-name|getBoolean
-argument_list|(
-literal|"java.awt.headless"
-argument_list|)
-condition|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Running headless. Ignoring an Image property."
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
 name|xop
 operator|.
 name|setImage
@@ -710,7 +688,6 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 name|xop
 return|;
