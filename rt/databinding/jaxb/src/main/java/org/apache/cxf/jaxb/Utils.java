@@ -1062,12 +1062,9 @@ return|return
 literal|false
 return|;
 block|}
-else|else
-block|{
 return|return
 literal|true
 return|;
-block|}
 block|}
 block|}
 return|return
