@@ -1200,6 +1200,13 @@ argument_list|,
 name|boi
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|boi
+operator|!=
+literal|null
+condition|)
+block|{
 name|exchange
 operator|.
 name|put
@@ -1214,6 +1221,7 @@ name|getOperationInfo
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|protected
 name|List

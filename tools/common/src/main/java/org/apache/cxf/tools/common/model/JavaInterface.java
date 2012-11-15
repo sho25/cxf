@@ -1100,6 +1100,13 @@ block|{
 return|return;
 block|}
 comment|// replace "$" with "." to correctly deal with member classes
+if|if
+condition|(
+name|i
+operator|!=
+literal|null
+condition|)
+block|{
 name|imports
 operator|.
 name|add
@@ -1114,6 +1121,7 @@ literal|"\\."
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void

@@ -1562,6 +1562,13 @@ expr_stmt|;
 block|}
 block|}
 comment|// decode spaces before returning otherwise File.exists returns false
+if|if
+condition|(
+name|path
+operator|!=
+literal|null
+condition|)
+block|{
 return|return
 name|path
 operator|.
@@ -1571,6 +1578,10 @@ literal|"%20"
 argument_list|,
 literal|" "
 argument_list|)
+return|;
+block|}
+return|return
+literal|null
 return|;
 block|}
 specifier|private

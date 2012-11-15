@@ -2748,6 +2748,13 @@ name|elem
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|firstChild
+operator|!=
+literal|null
+condition|)
+block|{
 name|firstChild
 operator|.
 name|appendChild
@@ -2755,6 +2762,7 @@ argument_list|(
 name|cloneNode
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|boolean

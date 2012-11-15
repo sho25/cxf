@@ -6953,6 +6953,13 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//Deal with Attributes defined in Extension
+if|if
+condition|(
+name|attrMembers
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|int
@@ -6991,6 +6998,7 @@ argument_list|(
 name|member
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|corbaStruct

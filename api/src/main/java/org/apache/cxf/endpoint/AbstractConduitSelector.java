@@ -676,6 +676,10 @@ block|}
 if|if
 condition|(
 name|c
+operator|!=
+literal|null
+operator|&&
+name|c
 operator|.
 name|getTarget
 argument_list|()

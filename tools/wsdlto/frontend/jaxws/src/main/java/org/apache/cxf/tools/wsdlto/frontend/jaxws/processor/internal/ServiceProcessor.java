@@ -3219,6 +3219,7 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|inbindings
@@ -3235,7 +3236,6 @@ name|ExtensibilityElement
 argument_list|>
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 name|String
 name|use

@@ -652,10 +652,6 @@ condition|(
 name|corbaType
 operator|!=
 literal|null
-operator|||
-name|schemaType
-operator|!=
-literal|null
 condition|)
 block|{
 name|alias
@@ -668,8 +664,15 @@ name|getQName
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// if (schemaType == null) might not be correct here
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|schemaType
+operator|==
+literal|null
+condition|)
 block|{
 name|wsdlVisitor
 operator|.

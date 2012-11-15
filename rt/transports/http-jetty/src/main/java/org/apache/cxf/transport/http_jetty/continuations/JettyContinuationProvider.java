@@ -200,6 +200,17 @@ block|}
 if|if
 condition|(
 name|m
+operator|==
+literal|null
+operator|||
+name|m
+operator|.
+name|getExchange
+argument_list|()
+operator|==
+literal|null
+operator|||
+name|m
 operator|.
 name|getExchange
 argument_list|()

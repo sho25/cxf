@@ -569,6 +569,10 @@ block|}
 if|if
 condition|(
 name|schemaType
+operator|!=
+literal|null
+operator|&&
+name|schemaType
 operator|.
 name|isBuiltinType
 argument_list|()
@@ -587,7 +591,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|schemaType
+operator|!=
+literal|null
+condition|)
 block|{
 name|result
 operator|=

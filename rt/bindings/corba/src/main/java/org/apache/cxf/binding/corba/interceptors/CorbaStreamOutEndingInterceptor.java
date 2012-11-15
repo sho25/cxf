@@ -1496,6 +1496,8 @@ parameter_list|)
 block|{
 name|QName
 name|paramQName
+init|=
+literal|null
 decl_stmt|;
 name|MessagePartInfo
 name|part
@@ -1530,7 +1532,13 @@ name|getElementQName
 argument_list|()
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|part
+operator|!=
+literal|null
+condition|)
 block|{
 name|paramQName
 operator|=

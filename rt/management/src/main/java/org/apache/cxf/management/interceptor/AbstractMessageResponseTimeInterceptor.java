@@ -547,6 +547,8 @@ argument_list|,
 literal|"CAN_NOT_GET_BUS_FROM_EXCHANGE"
 argument_list|)
 expr_stmt|;
+name|bus
+operator|=
 name|BusFactory
 operator|.
 name|getThreadDefaultBus
