@@ -265,7 +265,7 @@ name|cos
 operator|.
 name|setCipherTransformation
 argument_list|(
-literal|"DES/CFB8/NoPadding"
+literal|"RC4"
 argument_list|)
 expr_stmt|;
 specifier|final
@@ -420,7 +420,7 @@ name|cos
 operator|.
 name|setCipherTransformation
 argument_list|(
-literal|"DES/CFB8/NoPadding"
+literal|"RC4"
 argument_list|)
 expr_stmt|;
 specifier|final
