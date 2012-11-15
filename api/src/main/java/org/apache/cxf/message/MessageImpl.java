@@ -933,6 +933,13 @@ condition|(
 name|m
 operator|!=
 literal|null
+operator|&&
+name|m
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 name|super
