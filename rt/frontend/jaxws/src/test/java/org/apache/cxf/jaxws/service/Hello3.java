@@ -43,6 +43,16 @@ name|javax
 operator|.
 name|jws
 operator|.
+name|WebMethod
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
 name|WebService
 import|;
 end_import
@@ -157,6 +167,28 @@ name|String
 argument_list|>
 name|list
 parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
+annotation|@
+name|Override
+annotation|@
+name|WebMethod
+specifier|public
+name|String
+name|addNumbers
+parameter_list|(
+name|int
+name|arg0
+parameter_list|,
+name|int
+name|arg1
+parameter_list|)
+throws|throws
+name|AddNumbersException
 block|{
 comment|// TODO Auto-generated method stub
 return|return
