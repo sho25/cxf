@@ -73,6 +73,24 @@ name|XmlParamType
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|aegis
+operator|.
+name|type
+operator|.
+name|java5
+operator|.
+name|XmlReturnType
+import|;
+end_import
+
 begin_comment
 comment|/**  *  */
 end_comment
@@ -116,6 +134,13 @@ name|DataHandlerBean
 name|dhBean
 parameter_list|)
 function_decl|;
+annotation|@
+name|XmlReturnType
+argument_list|(
+name|name
+operator|=
+literal|"inputDhBean"
+argument_list|)
 name|DataHandlerBean
 name|produceDataHandlerBean
 parameter_list|()
