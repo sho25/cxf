@@ -473,6 +473,22 @@ argument_list|)
 expr_stmt|;
 comment|// this test makes sure that an automatically generated id will be
 comment|// mapped to the static default bus name "cxf".
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"bus: "
+operator|+
+name|BusFactory
+operator|.
+name|getThreadDefaultBus
+argument_list|(
+literal|false
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|control
 operator|.
 name|reset
@@ -548,6 +564,14 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
+name|Bus
+name|bus
+init|=
+name|BusFactory
+operator|.
+name|getDefaultBus
+argument_list|()
+decl_stmt|;
 name|assertEquals
 argument_list|(
 literal|"{ns1}service.{ns2}endpoint@"
@@ -562,11 +586,15 @@ name|getEndpointIdentifier
 argument_list|(
 name|e
 argument_list|,
-name|BusFactory
-operator|.
-name|getDefaultBus
-argument_list|()
+name|bus
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|shutdown
+argument_list|(
+literal|true
 argument_list|)
 expr_stmt|;
 comment|// a generated bundle artifact bus
