@@ -911,10 +911,15 @@ name|Integer
 operator|.
 name|toString
 argument_list|(
+name|Math
+operator|.
+name|abs
+argument_list|(
 name|this
 operator|.
 name|hashCode
 argument_list|()
+argument_list|)
 argument_list|)
 else|:
 name|id
