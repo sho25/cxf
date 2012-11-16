@@ -884,6 +884,13 @@ specifier|protected
 name|Executor
 name|executor
 decl_stmt|;
+comment|// This is mostly to hold onto the client proxy that is using this ClientImpl so
+comment|// the IBM JDK's aggressive garbage collector doesn't gc the ClientProxy while
+comment|// an invocation is being made
+specifier|private
+name|Object
+name|clientProxy
+decl_stmt|;
 specifier|public
 name|ClientImpl
 parameter_list|(
@@ -1335,6 +1342,28 @@ block|}
 name|notifyLifecycleManager
 argument_list|()
 expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setProxyObject
+parameter_list|(
+name|Object
+name|cp
+parameter_list|)
+block|{
+name|clientProxy
+operator|=
+name|cp
+expr_stmt|;
+block|}
+specifier|public
+name|Object
+name|getProxyObject
+parameter_list|()
+block|{
+return|return
+name|clientProxy
+return|;
 block|}
 specifier|public
 name|Bus
