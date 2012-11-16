@@ -27,7 +27,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collections
+name|LinkedList
 import|;
 end_import
 
@@ -68,9 +68,11 @@ name|OAuthPermission
 argument_list|>
 name|scopes
 init|=
-name|Collections
-operator|.
-name|emptyList
+operator|new
+name|LinkedList
+argument_list|<
+name|OAuthPermission
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private

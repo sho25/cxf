@@ -27,7 +27,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collections
+name|LinkedList
 import|;
 end_import
 
@@ -75,9 +75,11 @@ name|String
 argument_list|>
 name|httpVerbs
 init|=
-name|Collections
-operator|.
-name|emptyList
+operator|new
+name|LinkedList
+argument_list|<
+name|String
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -87,9 +89,11 @@ name|String
 argument_list|>
 name|uris
 init|=
-name|Collections
-operator|.
-name|emptyList
+operator|new
+name|LinkedList
+argument_list|<
+name|String
+argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
