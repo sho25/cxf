@@ -19,6 +19,18 @@ name|search
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Type
+import|;
+end_import
+
 begin_comment
 comment|/**  * Encapsulates a basic search statement such as a = b, i< 5, etc  */
 end_comment
@@ -37,6 +49,10 @@ name|Object
 name|value
 decl_stmt|;
 specifier|private
+name|Type
+name|propertyType
+decl_stmt|;
+specifier|private
 name|ConditionType
 name|condition
 decl_stmt|;
@@ -48,6 +64,9 @@ name|property
 parameter_list|,
 name|Object
 name|value
+parameter_list|,
+name|Type
+name|type
 parameter_list|,
 name|ConditionType
 name|condition
@@ -71,6 +90,12 @@ name|condition
 operator|=
 name|condition
 expr_stmt|;
+name|this
+operator|.
+name|propertyType
+operator|=
+name|type
+expr_stmt|;
 block|}
 specifier|public
 name|String
@@ -88,6 +113,15 @@ parameter_list|()
 block|{
 return|return
 name|value
+return|;
+block|}
+specifier|public
+name|Type
+name|getValueType
+parameter_list|()
+block|{
+return|return
+name|propertyType
 return|;
 block|}
 specifier|public
