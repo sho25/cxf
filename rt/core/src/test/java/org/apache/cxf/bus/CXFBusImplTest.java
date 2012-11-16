@@ -596,10 +596,15 @@ name|Bus
 operator|.
 name|DEFAULT_BUS_ID
 operator|+
+name|Math
+operator|.
+name|abs
+argument_list|(
 name|bus
 operator|.
 name|hashCode
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|bus
@@ -613,12 +618,12 @@ name|assertEquals
 argument_list|(
 literal|"The bus id should be changed"
 argument_list|,
+literal|"test"
+argument_list|,
 name|bus
 operator|.
 name|getId
 argument_list|()
-argument_list|,
-literal|"test"
 argument_list|)
 expr_stmt|;
 block|}
