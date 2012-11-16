@@ -1265,7 +1265,10 @@ block|}
 block|}
 block|}
 return|return
+name|adjustObject
+argument_list|(
 name|result
+argument_list|)
 return|;
 block|}
 name|boolean
