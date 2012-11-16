@@ -397,6 +397,9 @@ name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
+name|Endpoint
+name|ep
+decl_stmt|;
 specifier|protected
 name|void
 name|run
@@ -417,6 +420,11 @@ operator|.
 name|createBus
 argument_list|()
 decl_stmt|;
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
 name|BusFactory
 operator|.
 name|setDefaultBus
@@ -491,6 +499,8 @@ name|PORT
 operator|+
 literal|"/SoapContext/GreeterPort"
 decl_stmt|;
+name|ep
+operator|=
 name|Endpoint
 operator|.
 name|publish
@@ -506,6 +516,21 @@ name|info
 argument_list|(
 literal|"Published greeter endpoint."
 argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|tearDown
+parameter_list|()
+block|{
+name|ep
+operator|.
+name|stop
+argument_list|()
+expr_stmt|;
+name|ep
+operator|=
+literal|null
 expr_stmt|;
 block|}
 specifier|public
