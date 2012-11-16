@@ -745,7 +745,7 @@ name|class
 argument_list|)
 argument_list|)
 operator|.
-name|andReturn
+name|andStubReturn
 argument_list|(
 name|bindingFactoryManager
 argument_list|)

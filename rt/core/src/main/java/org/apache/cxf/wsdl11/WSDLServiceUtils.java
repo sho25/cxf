@@ -172,8 +172,9 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-name|factory
-operator|=
+name|BindingFactoryManager
+name|manager
+init|=
 name|bus
 operator|.
 name|getExtension
@@ -182,6 +183,17 @@ name|BindingFactoryManager
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|manager
+operator|!=
+literal|null
+condition|)
+block|{
+name|factory
+operator|=
+name|manager
 operator|.
 name|getBindingFactory
 argument_list|(
@@ -191,6 +203,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
