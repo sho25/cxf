@@ -2303,6 +2303,10 @@ block|{
 if|if
 condition|(
 name|anonymous
+operator|&&
+name|corbaTypeImpl
+operator|instanceof
+name|Anonfixed
 condition|)
 block|{
 name|Anonfixed
@@ -2331,7 +2335,13 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|corbaTypeImpl
+operator|instanceof
+name|Fixed
+condition|)
 block|{
 name|Fixed
 name|fixed

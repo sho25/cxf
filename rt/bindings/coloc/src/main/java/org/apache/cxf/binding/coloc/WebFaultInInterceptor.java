@@ -420,6 +420,12 @@ name|op
 operator|.
 name|isUnwrapped
 argument_list|()
+operator|&&
+operator|(
+name|op
+operator|instanceof
+name|UnwrappedOperationInfo
+operator|)
 condition|)
 block|{
 name|op

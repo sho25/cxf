@@ -427,6 +427,13 @@ name|message
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|message
+operator|instanceof
+name|CorbaMessage
+condition|)
+block|{
 operator|(
 operator|(
 name|CorbaMessage
@@ -440,6 +447,7 @@ name|typeMap
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 specifier|public
 name|void
 name|close
@@ -450,6 +458,13 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|message
+operator|instanceof
+name|CorbaMessage
+condition|)
+block|{
 name|buildRequestResult
 argument_list|(
 operator|(
@@ -458,6 +473,7 @@ operator|)
 name|message
 argument_list|)
 expr_stmt|;
+block|}
 name|message
 operator|.
 name|getContent

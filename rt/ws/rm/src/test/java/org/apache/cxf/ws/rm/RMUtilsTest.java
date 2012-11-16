@@ -473,22 +473,7 @@ argument_list|)
 expr_stmt|;
 comment|// this test makes sure that an automatically generated id will be
 comment|// mapped to the static default bus name "cxf".
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"bus: "
-operator|+
-name|BusFactory
-operator|.
-name|getThreadDefaultBus
-argument_list|(
-literal|false
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// System.out.println("bus: " + BusFactory.getThreadDefaultBus(false));
 name|control
 operator|.
 name|reset

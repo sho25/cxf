@@ -324,6 +324,13 @@ operator|.
 name|TYPE_ASSERTION
 operator|||
 operator|!
+operator|(
+name|policyComponent
+operator|instanceof
+name|Assertion
+operator|)
+operator|||
+operator|!
 name|getName
 argument_list|()
 operator|.
