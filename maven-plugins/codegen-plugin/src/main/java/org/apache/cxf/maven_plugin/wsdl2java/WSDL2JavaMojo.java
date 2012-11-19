@@ -1340,6 +1340,12 @@ decl_stmt|;
 name|DataOutputStream
 name|writer
 init|=
+literal|null
+decl_stmt|;
+try|try
+block|{
+name|writer
+operator|=
 operator|new
 name|DataOutputStream
 argument_list|(
@@ -1349,7 +1355,7 @@ argument_list|(
 name|doneFile
 argument_list|)
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|writer
 operator|.
 name|writeUTF
@@ -1362,11 +1368,23 @@ operator|.
 name|flush
 argument_list|()
 expr_stmt|;
+block|}
+finally|finally
+block|{
+if|if
+condition|(
+name|writer
+operator|!=
+literal|null
+condition|)
+block|{
 name|writer
 operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
+block|}
 block|}
 comment|/**      * Finds the timestamp for a given URI. Calls {@link #getBaseFileURI(URI)} prior to the timestamp      * check in order to handle "classpath" and "jar" URIs.      *       * @param uri the URI to timestamp      * @return a timestamp      */
 specifier|protected
