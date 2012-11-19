@@ -113,7 +113,7 @@ literal|"http://apache.org/hello_world_soap_http"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"wsdl/hello_world.wsdl"
+literal|"/hello_world.wsdl"
 argument_list|)
 annotation|@
 name|ServiceMode
@@ -181,7 +181,7 @@ argument_list|()
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralResp1.xml"
+literal|"/GreetMeDocLiteralResp1.xml"
 argument_list|)
 decl_stmt|;
 name|response

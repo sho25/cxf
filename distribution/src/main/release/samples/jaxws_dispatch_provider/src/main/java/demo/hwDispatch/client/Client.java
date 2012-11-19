@@ -333,7 +333,7 @@ name|class
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralReq1.xml"
+literal|"/GreetMeDocLiteralReq1.xml"
 argument_list|)
 decl_stmt|;
 if|if
@@ -474,7 +474,7 @@ name|class
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralReq2.xml"
+literal|"/GreetMeDocLiteralReq2.xml"
 argument_list|)
 decl_stmt|;
 if|if
@@ -630,7 +630,7 @@ name|class
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralReq3.xml"
+literal|"/GreetMeDocLiteralReq3.xml"
 argument_list|)
 decl_stmt|;
 if|if

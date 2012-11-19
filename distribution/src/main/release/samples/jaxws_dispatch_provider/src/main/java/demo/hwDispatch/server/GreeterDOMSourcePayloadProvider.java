@@ -216,7 +216,7 @@ argument_list|()
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralResp3.xml"
+literal|"/GreetMeDocLiteralResp3.xml"
 argument_list|)
 decl_stmt|;
 name|SOAPMessage
