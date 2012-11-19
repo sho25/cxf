@@ -100,7 +100,7 @@ name|HandlerChain
 argument_list|(
 name|file
 operator|=
-literal|"../common/demo_handlers.xml"
+literal|"/demo_handlers.xml"
 argument_list|)
 specifier|public
 class|class
