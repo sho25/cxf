@@ -218,6 +218,9 @@ name|wsdlURL
 operator|=
 name|wsdlFile
 operator|.
+name|toURI
+argument_list|()
+operator|.
 name|toURL
 argument_list|()
 expr_stmt|;
@@ -303,7 +306,7 @@ name|class
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralReq1.xml"
+literal|"/GreetMeDocLiteralReq1.xml"
 argument_list|)
 decl_stmt|;
 name|SOAPMessage
@@ -417,7 +420,7 @@ name|class
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"GreetMeDocLiteralReq3.xml"
+literal|"/GreetMeDocLiteralReq2.xml"
 argument_list|)
 decl_stmt|;
 name|SOAPMessage
