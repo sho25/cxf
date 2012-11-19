@@ -298,6 +298,9 @@ name|wsdlURL
 operator|=
 name|wsdlFile
 operator|.
+name|toURI
+argument_list|()
+operator|.
 name|toURL
 argument_list|()
 expr_stmt|;
@@ -350,7 +353,7 @@ name|class
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"callback_infoset.xml"
+literal|"/callback_infoset.xml"
 argument_list|)
 decl_stmt|;
 name|Document
