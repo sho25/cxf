@@ -961,7 +961,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|1001
+literal|1250
 argument_list|)
 expr_stmt|;
 name|inHandler
