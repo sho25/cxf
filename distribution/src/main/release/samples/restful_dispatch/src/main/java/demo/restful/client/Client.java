@@ -492,7 +492,7 @@ argument_list|()
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"CustomerJohnReq.xml"
+literal|"/CustomerJohnReq.xml"
 argument_list|)
 decl_stmt|;
 name|Document

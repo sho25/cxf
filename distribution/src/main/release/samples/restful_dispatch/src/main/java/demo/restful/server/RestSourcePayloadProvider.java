@@ -409,7 +409,7 @@ block|{
 return|return
 name|createDOMSource
 argument_list|(
-literal|"CustomerAllResp.xml"
+literal|"/CustomerAllResp.xml"
 argument_list|)
 return|;
 block|}
@@ -424,7 +424,7 @@ block|{
 return|return
 name|createDOMSource
 argument_list|(
-literal|"CustomerJohnResp.xml"
+literal|"/CustomerJohnResp.xml"
 argument_list|)
 return|;
 block|}
@@ -440,7 +440,7 @@ comment|// TBD: returned update customer info
 return|return
 name|createDOMSource
 argument_list|(
-literal|"CustomerJohnResp.xml"
+literal|"/CustomerJohnResp.xml"
 argument_list|)
 return|;
 block|}
