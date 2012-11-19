@@ -61,7 +61,7 @@ literal|"org.apache.cxf.hello_world_soap_http.Greeter"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./wsdl/hello_world_wssec.wsdl"
+literal|"file:./src/main/resources/hello_world_wssec.wsdl"
 argument_list|,
 name|targetNamespace
 operator|=
