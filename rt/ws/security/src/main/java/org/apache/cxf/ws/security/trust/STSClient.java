@@ -3019,6 +3019,13 @@ argument_list|()
 decl_stmt|;
 name|proxyFac
 operator|.
+name|setBindingId
+argument_list|(
+name|soapVersion
+argument_list|)
+expr_stmt|;
+name|proxyFac
+operator|.
 name|setAddress
 argument_list|(
 name|mexLoc
