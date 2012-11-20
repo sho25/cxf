@@ -115,6 +115,14 @@ name|BEAN_PROPERTY_MAP
 init|=
 literal|"search.bean.property.map"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SEARCH_VISITOR_PROPERTY
+init|=
+literal|"search.visitor"
+decl_stmt|;
 specifier|private
 name|SearchUtils
 parameter_list|()
