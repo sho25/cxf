@@ -133,8 +133,6 @@ operator|.
 name|CLIENT_CREDENTIALS_GRANT
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|MultivaluedMap
 argument_list|<

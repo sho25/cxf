@@ -142,8 +142,6 @@ operator|.
 name|RESOURCE_OWNER_GRANT
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|MultivaluedMap
 argument_list|<

@@ -129,8 +129,6 @@ operator|.
 name|REFRESH_TOKEN_GRANT
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|MultivaluedMap
 argument_list|<
