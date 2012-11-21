@@ -279,6 +279,9 @@ name|Exception
 block|{
 comment|//
 comment|// This test fails with the IBM JDK 7
+comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
+comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
+comment|// allows us to use the existing IVParameterSpec class.
 comment|//
 if|if
 condition|(
@@ -472,6 +475,9 @@ return|return;
 block|}
 comment|//
 comment|// This test fails with the IBM JDK 7
+comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
+comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
+comment|// allows us to use the existing IVParameterSpec class.
 comment|//
 if|if
 condition|(
@@ -665,6 +671,9 @@ return|return;
 block|}
 comment|//
 comment|// This test fails with the IBM JDK 7
+comment|// IBM JDK 7 appears to require a GCMParameter class to be used, which
+comment|// only exists in JDK 7. The Sun JDK appears to be more lenient and
+comment|// allows us to use the existing IVParameterSpec class.
 comment|//
 if|if
 condition|(
