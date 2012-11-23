@@ -74,7 +74,7 @@ name|keyWrapAlgorithm
 init|=
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSA15
+name|KEYTRANSPORT_RSAOEP
 decl_stmt|;
 specifier|private
 name|int
