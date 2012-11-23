@@ -156,6 +156,8 @@ literal|"-p"
 block|,
 literal|"custom.service"
 block|,
+literal|"-async getName,delete"
+block|,
 literal|"-compile"
 block|,
 name|getLocation

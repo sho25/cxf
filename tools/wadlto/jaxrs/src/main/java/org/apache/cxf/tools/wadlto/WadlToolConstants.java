@@ -222,6 +222,18 @@ name|CFG_INHERIT_PARAMS
 init|=
 literal|"inheritResourceParams"
 decl_stmt|;
+comment|// JAX-RS 2.0 @Suspended AsyncResponse
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_SUSPENDED_ASYNC
+init|=
+literal|"async"
+decl_stmt|;
+comment|// CXF @UseAsyncMethod - equivalent of the proposed @ManagedAsync which
+comment|// which did not make it into JAX-RS 2.0
+comment|//public static final String CFG_MANAGED_ASYNC = "managedAsync";
 specifier|public
 specifier|static
 specifier|final
