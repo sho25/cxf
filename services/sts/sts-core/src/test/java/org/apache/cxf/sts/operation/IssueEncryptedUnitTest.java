@@ -1161,7 +1161,7 @@ name|setEncryptionAlgorithm
 argument_list|(
 name|WSConstants
 operator|.
-name|TRIPLE_DES
+name|AES_128
 argument_list|)
 expr_stmt|;
 name|service
@@ -1606,7 +1606,7 @@ name|class
 argument_list|,
 name|WSConstants
 operator|.
-name|TRIPLE_DES
+name|AES_128
 argument_list|)
 decl_stmt|;
 name|request
