@@ -2155,10 +2155,43 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|// REVISIT: add support for @{Fault}Action annotation (generated
-comment|// from the wsaw:Action WSDL element). For the moment we just
-comment|// pick up the wsaw:Action attribute by walking the WSDL model
-comment|// directly
+if|if
+condition|(
+name|fault
+operator|instanceof
+name|Fault
+operator|&&
+name|Names
+operator|.
+name|WSA_NAMESPACE_NAME
+operator|.
+name|equals
+argument_list|(
+operator|(
+operator|(
+name|Fault
+operator|)
+name|fault
+operator|)
+operator|.
+name|getFaultCode
+argument_list|()
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|)
+condition|)
+block|{
+comment|// wsa relevant faults should use the wsa-fault action value
+name|action
+operator|=
+name|Names
+operator|.
+name|WSA_DEFAULT_FAULT_ACTION
+expr_stmt|;
+block|}
+else|else
+block|{
 name|action
 operator|=
 name|getActionFromServiceModel
@@ -2168,6 +2201,11 @@ argument_list|,
 name|fault
 argument_list|)
 expr_stmt|;
+block|}
+comment|// REVISIT: add support for @{Fault}Action annotation (generated
+comment|// from the wsaw:Action WSDL element). For the moment we just
+comment|// pick up the wsaw:Action attribute by walking the WSDL model
+comment|// directly
 name|LOG
 operator|.
 name|fine
@@ -2453,6 +2491,18 @@ operator|.
 name|getFaultInfo
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|fi
+operator|.
+name|size
+argument_list|()
+operator|==
+literal|0
+condition|)
+block|{
+continue|continue;
+block|}
 name|Class
 argument_list|<
 name|?
