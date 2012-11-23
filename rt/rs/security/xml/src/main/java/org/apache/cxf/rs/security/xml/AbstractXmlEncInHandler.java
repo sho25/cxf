@@ -842,7 +842,7 @@ condition|)
 block|{
 name|throwFault
 argument_list|(
-literal|"Symmetric Key Algorithm is not supported"
+literal|"Key Transport Algorithm is not supported"
 argument_list|,
 literal|null
 argument_list|)
@@ -883,6 +883,29 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+elseif|else
+if|if
+condition|(
+operator|!
+name|XMLCipher
+operator|.
+name|RSA_OAEP
+operator|.
+name|equals
+argument_list|(
+name|keyEncAlgo
+argument_list|)
+condition|)
+block|{
+comment|// RSA OAEP is the required default Key Transport Algorithm
+name|throwFault
+argument_list|(
+literal|"Key Transport Algorithm is not supported"
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
 name|Element
 name|cipherValue

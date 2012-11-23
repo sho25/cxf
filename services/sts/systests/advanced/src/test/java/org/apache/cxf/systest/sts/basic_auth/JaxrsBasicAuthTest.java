@@ -351,21 +351,6 @@ literal|"Exception expected"
 argument_list|)
 throw|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"The number "
-operator|+
-name|numToDouble
-operator|+
-literal|" doubled is "
-operator|+
-name|resp
-argument_list|)
-expr_stmt|;
 name|org
 operator|.
 name|junit

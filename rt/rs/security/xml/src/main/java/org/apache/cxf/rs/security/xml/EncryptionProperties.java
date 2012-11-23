@@ -19,6 +19,22 @@ name|xml
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|encryption
+operator|.
+name|XMLCipher
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -27,6 +43,10 @@ block|{
 specifier|private
 name|String
 name|encryptionKeyTransportAlgo
+init|=
+name|XMLCipher
+operator|.
+name|RSA_OAEP
 decl_stmt|;
 specifier|private
 name|String
