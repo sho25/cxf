@@ -984,6 +984,55 @@ name|algoSuiteString
 operator|=
 name|algoSuite
 expr_stmt|;
+if|if
+condition|(
+name|algoSuiteString
+operator|!=
+literal|null
+operator|&&
+name|algoSuiteString
+operator|.
+name|endsWith
+argument_list|(
+literal|"Rsa15"
+argument_list|)
+condition|)
+block|{
+name|int
+name|index
+init|=
+name|algoSuiteString
+operator|.
+name|indexOf
+argument_list|(
+literal|"Rsa15"
+argument_list|)
+decl_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"An Rsa15 AlgorithmSuite - "
+operator|+
+name|algoSuiteString
+operator|+
+literal|" - has been configured, "
+operator|+
+literal|"which is not recommended. Please consider using "
+operator|+
+name|algoSuiteString
+operator|.
+name|substring
+argument_list|(
+literal|0
+argument_list|,
+name|index
+argument_list|)
+operator|+
+literal|" instead."
+argument_list|)
+expr_stmt|;
+block|}
 comment|// TODO: Optimize this :-)
 if|if
 condition|(
