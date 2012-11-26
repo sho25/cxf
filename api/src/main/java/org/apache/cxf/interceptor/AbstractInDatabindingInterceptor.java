@@ -1468,7 +1468,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// configure endpoint and operation level schema validation based on annotations
+comment|// configure endpoint and operation level schema validation
 name|setOperationSchemaValidation
 argument_list|(
 name|operation

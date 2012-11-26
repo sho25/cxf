@@ -502,8 +502,7 @@ name|cache
 init|=
 literal|null
 decl_stmt|;
-comment|// configure endpoint and operation level schema validation based on
-comment|// annotations
+comment|// configure endpoint and operation level schema validation
 name|setOperationSchemaValidation
 argument_list|(
 name|operation
@@ -874,7 +873,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * Where an operation level validation type has been set, copy it to the message, so it can be interrogated      * by all downstream interceptors and update the DataReader with the schema.      *       * @param bop      * @param message      * @param reader      */
+comment|/**      * Where an operation level validation type has been set, copy it to the message, so it can be interrogated      * by all downstream interceptors      *       * @param bop      * @param message      * @param reader      */
 specifier|private
 name|void
 name|setOperationSchemaValidation
@@ -1190,7 +1189,7 @@ return|return
 name|writer
 return|;
 block|}
-comment|/**      * Based on the Schema Validation configuration, will initialise the DataWriter with or without the schema set.      *       * Can also be called to override schema validation at operation level, thus the writer.setSchema(null)      * to remove schema validation      *       * Note this is different to the reader side, as we know the binding operation info up front, so won't      * need to overwrite the service level schema validation.      */
+comment|/**      * Based on the Schema Validation configuration, will initialise the DataWriter with or without the schema set.      */
 specifier|private
 name|void
 name|setDataWriterValidation
