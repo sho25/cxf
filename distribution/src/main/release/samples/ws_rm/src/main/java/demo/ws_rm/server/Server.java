@@ -145,7 +145,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"ws_rm.xml"
+literal|"/server.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
