@@ -9688,9 +9688,7 @@ decl_stmt|;
 name|source
 operator|.
 name|setBuffering
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 expr_stmt|;
 name|String
 name|targetNs
@@ -10174,9 +10172,7 @@ decl_stmt|;
 name|source
 operator|.
 name|setBuffering
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 expr_stmt|;
 name|Map
 argument_list|<

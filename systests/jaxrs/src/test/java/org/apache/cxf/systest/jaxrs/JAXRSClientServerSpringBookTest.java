@@ -1757,6 +1757,11 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|source
+operator|.
+name|setBuffering
+argument_list|()
+expr_stmt|;
 name|Map
 argument_list|<
 name|String

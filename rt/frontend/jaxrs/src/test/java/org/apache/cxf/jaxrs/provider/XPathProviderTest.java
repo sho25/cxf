@@ -438,6 +438,13 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|provider
+operator|.
+name|setForceDOM
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|Book
 name|book
 init|=

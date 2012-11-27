@@ -2805,9 +2805,7 @@ decl_stmt|;
 name|source
 operator|.
 name|setBuffering
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 expr_stmt|;
 name|Book
 name|b

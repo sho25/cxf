@@ -805,10 +805,16 @@ name|orig
 operator|.
 name|getText
 argument_list|()
+operator|.
+name|trim
+argument_list|()
 argument_list|,
 name|actual
 operator|.
 name|getText
+argument_list|()
+operator|.
+name|trim
 argument_list|()
 argument_list|)
 expr_stmt|;

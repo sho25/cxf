@@ -2101,8 +2101,19 @@ name|s
 operator|.
 name|indexOf
 argument_list|(
-literal|"<import namespace=\"http://foo.com/HelloWorld\" "
-operator|+
+literal|"<import namespace=\"http://foo.com/HelloWorld\""
+argument_list|)
+operator|!=
+operator|-
+literal|1
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|s
+operator|.
+name|indexOf
+argument_list|(
 literal|"schemaLocation=\"HelloService_schema1.xsd\"/>"
 argument_list|)
 operator|!=
