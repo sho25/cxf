@@ -253,6 +253,8 @@ decl_stmt|;
 specifier|volatile
 name|boolean
 name|isNew
+init|=
+literal|true
 decl_stmt|;
 specifier|volatile
 name|boolean
