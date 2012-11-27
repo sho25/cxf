@@ -221,6 +221,9 @@ name|AddNumbersService
 argument_list|(
 name|wsdl
 operator|.
+name|toURI
+argument_list|()
+operator|.
 name|toURL
 argument_list|()
 argument_list|,
