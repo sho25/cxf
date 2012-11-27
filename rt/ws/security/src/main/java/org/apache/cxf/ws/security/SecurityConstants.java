@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Configuration tags used to configure the WS-SecurityPolicy layer.  */
+comment|/**  * Configuration tags used to configure the WS-SecurityPolicy layer. Some of them are also   * used by the non WS-SecurityPolicy approach in the WSS4J(Out|In)Interceptors.  */
 end_comment
 
 begin_class
@@ -232,6 +232,15 @@ name|String
 name|ENABLE_TIMESTAMP_CACHE
 init|=
 literal|"ws-security.enable.timestamp.cache"
+decl_stmt|;
+comment|/**      * Whether to validate the SubjectConfirmation requirements of a received SAML Token      * (sender-vouches or holder-of-key). The default is true.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|VALIDATE_SAML_SUBJECT_CONFIRMATION
+init|=
+literal|"ws-security.validate.saml.subject.conf"
 decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
