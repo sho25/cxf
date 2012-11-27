@@ -34,6 +34,8 @@ name|COOKIE
 block|,
 name|FORM
 block|,
+name|BEAN
+block|,
 name|REQUEST_BODY
 block|,
 name|CONTEXT
