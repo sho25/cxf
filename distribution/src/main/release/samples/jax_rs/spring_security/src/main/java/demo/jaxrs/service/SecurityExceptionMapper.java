@@ -49,6 +49,8 @@ name|springframework
 operator|.
 name|security
 operator|.
+name|access
+operator|.
 name|AccessDeniedException
 import|;
 end_import
