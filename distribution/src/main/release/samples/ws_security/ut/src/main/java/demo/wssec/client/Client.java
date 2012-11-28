@@ -176,19 +176,6 @@ class|class
 name|Client
 block|{
 specifier|private
-specifier|static
-specifier|final
-name|String
-name|USER_NAME
-init|=
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"user.name"
-argument_list|)
-decl_stmt|;
-specifier|private
 name|Client
 parameter_list|()
 block|{     }

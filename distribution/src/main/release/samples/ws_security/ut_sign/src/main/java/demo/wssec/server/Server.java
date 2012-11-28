@@ -190,9 +190,6 @@ init|=
 literal|"http://localhost:9000/SoapContext/GreeterPort"
 decl_stmt|;
 name|Endpoint
-name|e
-init|=
-name|Endpoint
 operator|.
 name|publish
 argument_list|(
@@ -200,7 +197,7 @@ name|address
 argument_list|,
 name|implementor
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 block|}
 specifier|public
 specifier|static
