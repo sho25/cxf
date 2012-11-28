@@ -595,7 +595,7 @@ name|oldbus
 init|=
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|(
 literal|false
 argument_list|)
@@ -712,7 +712,7 @@ argument_list|)
 expr_stmt|;
 name|BusFactory
 operator|.
-name|setDefaultBus
+name|setThreadDefaultBus
 argument_list|(
 name|b
 argument_list|)
@@ -768,7 +768,7 @@ finally|finally
 block|{
 name|BusFactory
 operator|.
-name|setDefaultBus
+name|setThreadDefaultBus
 argument_list|(
 name|oldbus
 argument_list|)

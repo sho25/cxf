@@ -603,7 +603,7 @@ name|b
 init|=
 name|BusFactory
 operator|.
-name|getDefaultBus
+name|getThreadDefaultBus
 argument_list|(
 literal|false
 argument_list|)
