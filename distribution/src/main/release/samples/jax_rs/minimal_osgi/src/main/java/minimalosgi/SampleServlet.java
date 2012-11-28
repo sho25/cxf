@@ -82,6 +82,15 @@ name|SampleServlet
 extends|extends
 name|CXFNonSpringJaxrsServlet
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1531317723099896635L
+decl_stmt|;
 specifier|protected
 name|void
 name|createServerFromApplication
