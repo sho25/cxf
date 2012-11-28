@@ -55,7 +55,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"/demo/hw/server/server-beans.xml"
+literal|"/server-beans.xml"
 block|}
 argument_list|)
 expr_stmt|;
