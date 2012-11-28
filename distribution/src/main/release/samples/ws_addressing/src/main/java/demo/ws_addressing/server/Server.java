@@ -111,7 +111,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"server.xml"
+literal|"/server.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

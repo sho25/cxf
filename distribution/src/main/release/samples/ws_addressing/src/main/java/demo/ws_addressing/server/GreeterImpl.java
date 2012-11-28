@@ -95,7 +95,7 @@ literal|"http://apache.org/hello_world_soap_http"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"file:./wsdl/hello_world_addr.wsdl"
+literal|"file:./src/main/resources/hello_world_addr.wsdl"
 argument_list|)
 specifier|public
 class|class
