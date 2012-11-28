@@ -151,7 +151,7 @@ specifier|private
 name|OAuthContextUtils
 parameter_list|()
 block|{     }
-comment|/**      * @param mc the {@link MessageContext}      * @return the name of the UserSubject of the logged in user      * @throws WebApplicationException with Status 401 if not authenticated      */
+comment|/**      * @param mc the {@link MessageContext}      * @return the name of the UserSubject of the logged in user or resource owner      * @throws WebApplicationException with Status 401 if not authenticated      */
 specifier|public
 specifier|static
 name|String
@@ -181,7 +181,7 @@ name|getLogin
 argument_list|()
 return|;
 block|}
-comment|/**      * @param mc the {@link MessageContext}      * @return the list of roles of the logged in user      * @throws WebApplicationException with Status 401 if not authenticated      */
+comment|/**      * @param mc the {@link MessageContext}      * @return the list of roles of the logged in user or resource owner      * @throws WebApplicationException with Status 401 if not authenticated      */
 specifier|public
 specifier|static
 name|List
@@ -342,7 +342,7 @@ name|getTokenKey
 argument_list|()
 return|;
 block|}
-comment|/**      * @param mc the {@link MessageContext}      * @return the client the user is using to access      * @throws WebApplicationException with Status 401 if not authenticated      */
+comment|/**      * @param mc the {@link MessageContext}      * @return the client registration id      * @throws WebApplicationException with Status 401 if not authenticated      */
 specifier|public
 specifier|static
 name|String
@@ -367,7 +367,7 @@ name|getClientId
 argument_list|()
 return|;
 block|}
-comment|/**      * @param mc the {@link MessageContext}      * @param client the desired client      * @throws WebApplicationException with Status 401 if not authenticated      * @throws WebApplicationException with Status 403 if user doesn't have needed role      */
+comment|/**      * @param mc the {@link MessageContext}      * @param client the desired client registration id      * @throws WebApplicationException with Status 403 if the current client id is not valid      */
 specifier|public
 specifier|static
 name|void

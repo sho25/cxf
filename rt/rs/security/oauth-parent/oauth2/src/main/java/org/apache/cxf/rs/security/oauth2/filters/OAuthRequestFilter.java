@@ -558,6 +558,11 @@ operator|.
 name|getTokenSubject
 argument_list|()
 argument_list|,
+name|accessTokenV
+operator|.
+name|getClientSubject
+argument_list|()
+argument_list|,
 name|matchingPermissions
 argument_list|,
 name|accessTokenV
@@ -771,7 +776,7 @@ name|accessTokenV
 parameter_list|)
 block|{
 name|UserSubject
-name|endUserSubject
+name|resourceOwnerSubject
 init|=
 name|accessTokenV
 operator|.
@@ -796,7 +801,7 @@ name|this
 operator|.
 name|useUserSubject
 condition|?
-name|endUserSubject
+name|resourceOwnerSubject
 else|:
 name|clientSubject
 decl_stmt|;

@@ -52,14 +52,18 @@ name|OAuthContext
 block|{
 specifier|private
 name|UserSubject
-name|subject
+name|resourceOwnerSubject
+decl_stmt|;
+specifier|private
+name|UserSubject
+name|clientSubject
 decl_stmt|;
 specifier|private
 name|List
 argument_list|<
 name|OAuthPermission
 argument_list|>
-name|permissions
+name|tokenPermissions
 decl_stmt|;
 specifier|private
 name|String
@@ -77,7 +81,10 @@ specifier|public
 name|OAuthContext
 parameter_list|(
 name|UserSubject
-name|subject
+name|resourceOwnerSubject
+parameter_list|,
+name|UserSubject
+name|clientSubject
 parameter_list|,
 name|List
 argument_list|<
@@ -91,13 +98,19 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|subject
+name|resourceOwnerSubject
 operator|=
-name|subject
+name|resourceOwnerSubject
 expr_stmt|;
 name|this
 operator|.
-name|permissions
+name|clientSubject
+operator|=
+name|clientSubject
+expr_stmt|;
+name|this
+operator|.
+name|tokenPermissions
 operator|=
 name|perms
 expr_stmt|;
@@ -108,14 +121,24 @@ operator|=
 name|tokenGrantType
 expr_stmt|;
 block|}
-comment|/**      * Gets the {@link UserSubject} representing the end user authorizing the client       * at the authorization grant creation time       * @return the subject      */
+comment|/**      * Gets the {@link UserSubject} representing the resource owner      * @return the subject      */
 specifier|public
 name|UserSubject
 name|getSubject
 parameter_list|()
 block|{
 return|return
-name|subject
+name|resourceOwnerSubject
+return|;
+block|}
+comment|/**      * Gets the {@link UserSubject} representing the client      * @return the subject      */
+specifier|public
+name|UserSubject
+name|getClientSubject
+parameter_list|()
+block|{
+return|return
+name|clientSubject
 return|;
 block|}
 comment|/**      * Gets the list of the permissions assigned to the current access token      * @return the permissions      */
@@ -132,7 +155,7 @@ name|Collections
 operator|.
 name|unmodifiableList
 argument_list|(
-name|permissions
+name|tokenPermissions
 argument_list|)
 return|;
 block|}
