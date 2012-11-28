@@ -205,14 +205,15 @@ argument_list|(
 name|client
 argument_list|)
 expr_stmt|;
-comment|// the OAuth filter will use Client.getUserSubject()
-comment|// to initialize the request security context
 return|return
 name|doCreateAccessToken
 argument_list|(
 name|client
 argument_list|,
-literal|null
+name|client
+operator|.
+name|getSubject
+argument_list|()
 argument_list|,
 name|OAuthUtils
 operator|.
