@@ -378,7 +378,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"me.bmp"
+literal|"/me.bmp"
 argument_list|)
 decl_stmt|;
 name|File
