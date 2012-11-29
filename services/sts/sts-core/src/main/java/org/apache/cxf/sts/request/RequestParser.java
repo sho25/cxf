@@ -2631,7 +2631,7 @@ argument_list|)
 decl_stmt|;
 name|tokenRequirements
 operator|.
-name|setClaims
+name|setPrimaryClaims
 argument_list|(
 name|requestedClaims
 argument_list|)
@@ -2640,7 +2640,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Found Claims token"
+literal|"Found Primary Claims token"
 argument_list|)
 expr_stmt|;
 block|}
@@ -4407,13 +4407,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|tokenRequirements
-operator|.
-name|getClaims
-argument_list|()
-operator|==
-literal|null
-operator|&&
 literal|"Claims"
 operator|.
 name|equals
@@ -4435,7 +4428,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Found Claims element"
+literal|"Found Secondary Claims element"
 argument_list|)
 expr_stmt|;
 name|RequestClaimCollection
@@ -4450,7 +4443,7 @@ argument_list|)
 decl_stmt|;
 name|tokenRequirements
 operator|.
-name|setClaims
+name|setSecondaryClaims
 argument_list|(
 name|requestedClaims
 argument_list|)

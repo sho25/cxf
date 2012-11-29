@@ -532,7 +532,12 @@ name|retrieveClaimValues
 argument_list|(
 name|providerParameters
 operator|.
-name|getRequestedClaims
+name|getRequestedPrimaryClaims
+argument_list|()
+argument_list|,
+name|providerParameters
+operator|.
+name|getRequestedSecondaryClaims
 argument_list|()
 argument_list|,
 name|params

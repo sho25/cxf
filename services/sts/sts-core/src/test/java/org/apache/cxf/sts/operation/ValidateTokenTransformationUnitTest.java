@@ -5184,7 +5184,7 @@ argument_list|)
 expr_stmt|;
 name|providerParameters
 operator|.
-name|setRequestedClaims
+name|setRequestedSecondaryClaims
 argument_list|(
 name|requestedClaims
 argument_list|)
