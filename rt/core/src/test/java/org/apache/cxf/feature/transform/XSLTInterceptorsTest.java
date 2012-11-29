@@ -668,6 +668,11 @@ operator|new
 name|CachedOutputStream
 argument_list|()
 decl_stmt|;
+name|cos
+operator|.
+name|holdTempFile
+argument_list|()
+expr_stmt|;
 name|message
 operator|.
 name|setContent
@@ -710,6 +715,11 @@ expr_stmt|;
 name|os
 operator|.
 name|close
+argument_list|()
+expr_stmt|;
+name|cos
+operator|.
+name|releaseTempFileHold
 argument_list|()
 expr_stmt|;
 name|Document
@@ -760,6 +770,11 @@ operator|new
 name|CachedWriter
 argument_list|()
 decl_stmt|;
+name|cWriter
+operator|.
+name|holdTempFile
+argument_list|()
+expr_stmt|;
 name|XMLStreamWriter
 name|xWriter
 init|=
@@ -816,6 +831,11 @@ expr_stmt|;
 name|tXWriter
 operator|.
 name|close
+argument_list|()
+expr_stmt|;
+name|cWriter
+operator|.
+name|releaseTempFileHold
 argument_list|()
 expr_stmt|;
 name|Document

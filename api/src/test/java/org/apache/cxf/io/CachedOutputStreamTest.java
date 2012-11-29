@@ -607,7 +607,9 @@ name|cos
 init|=
 operator|new
 name|CachedOutputStream
-argument_list|()
+argument_list|(
+literal|64
+argument_list|)
 decl_stmt|;
 name|cos
 operator|.
