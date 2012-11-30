@@ -1566,7 +1566,7 @@ argument_list|)
 annotation|@
 name|XMLInstruction
 argument_list|(
-literal|"<!DOCTYPE Something SYSTEM 'my.dtd'><?xmlstylesheet href='common.css'?>"
+literal|"<!DOCTYPE Something SYSTEM 'my.dtd'><?xmlstylesheet href='common.css' ?>"
 argument_list|)
 annotation|@
 name|XSISchemaLocation
