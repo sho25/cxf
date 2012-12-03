@@ -413,9 +413,41 @@ name|getTokenType
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//TODO: token parameters should also be included probably
-comment|//      though it's not obvious the embedded client can deal with
-comment|//      MAC tokens or other sophisticated tokens
+if|if
+condition|(
+name|isWriteOptionalParameters
+argument_list|()
+condition|)
+block|{
+name|sb
+operator|.
+name|append
+argument_list|(
+literal|"&"
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|OAuthConstants
+operator|.
+name|ACCESS_TOKEN_EXPIRES_IN
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|"="
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|token
+operator|.
+name|getExpiresIn
+argument_list|()
+argument_list|)
+expr_stmt|;
+comment|//TODO: also report the approved scope and other parameters if any
+block|}
 return|return
 name|Response
 operator|.
