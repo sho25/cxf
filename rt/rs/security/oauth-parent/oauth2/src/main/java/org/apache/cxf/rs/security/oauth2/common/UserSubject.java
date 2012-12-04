@@ -98,7 +98,6 @@ name|Property
 argument_list|>
 argument_list|()
 decl_stmt|;
-empty_stmt|;
 specifier|public
 name|UserSubject
 parameter_list|()
