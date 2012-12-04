@@ -1872,6 +1872,8 @@ operator|==
 literal|null
 condition|)
 block|{
+name|def
+operator|=
 name|bus
 operator|.
 name|getExtension
