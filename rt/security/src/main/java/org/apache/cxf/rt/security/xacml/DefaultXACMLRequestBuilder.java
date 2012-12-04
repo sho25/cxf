@@ -593,11 +593,11 @@ name|attributes
 argument_list|)
 decl_stmt|;
 comment|// Environment
-name|EnvironmentType
-name|environmentType
-init|=
-literal|null
-decl_stmt|;
+name|attributes
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|sendDateTime
@@ -650,26 +650,22 @@ argument_list|)
 decl_stmt|;
 name|attributes
 operator|.
-name|clear
-argument_list|()
-expr_stmt|;
-name|attributes
-operator|.
 name|add
 argument_list|(
 name|environmentAttribute
 argument_list|)
 expr_stmt|;
+block|}
+name|EnvironmentType
 name|environmentType
-operator|=
+init|=
 name|RequestComponentBuilder
 operator|.
 name|createEnvironmentType
 argument_list|(
 name|attributes
 argument_list|)
-expr_stmt|;
-block|}
+decl_stmt|;
 comment|// Request
 name|RequestType
 name|request
