@@ -101,16 +101,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collections
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|HashSet
 import|;
 end_import
@@ -312,30 +302,6 @@ name|XmlAccessType
 name|accessType
 parameter_list|)
 block|{
-if|if
-condition|(
-name|cls
-operator|.
-name|isAnnotationPresent
-argument_list|(
-name|XmlTransient
-operator|.
-name|class
-argument_list|)
-condition|)
-block|{
-comment|// When placed on a class, it indicates that the class shouldn't be mapped
-comment|// to XML by itself. Properties on such class will be mapped to XML along
-comment|// with its derived classes, as if the class is inlined.
-return|return
-name|Collections
-operator|.
-name|emptySet
-argument_list|()
-return|;
-block|}
-else|else
-block|{
 return|return
 name|getFieldsInternal
 argument_list|(
@@ -344,7 +310,6 @@ argument_list|,
 name|accessType
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
@@ -394,17 +359,28 @@ name|superClass
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|superClass
 operator|.
-name|isAnnotationPresent
+name|equals
 argument_list|(
-name|XmlTransient
+name|Object
+operator|.
+name|class
+argument_list|)
+operator|&&
+operator|!
+name|superClass
+operator|.
+name|equals
+argument_list|(
+name|Throwable
 operator|.
 name|class
 argument_list|)
 condition|)
 block|{
-comment|// only if superClass is @XmlTransient annotated it will be processed recursively
+comment|// process super class until java.lang.Object or java.lang.Throwable is not reached
 name|fields
 operator|.
 name|addAll
@@ -476,30 +452,6 @@ name|boolean
 name|acceptSetters
 parameter_list|)
 block|{
-if|if
-condition|(
-name|cls
-operator|.
-name|isAnnotationPresent
-argument_list|(
-name|XmlTransient
-operator|.
-name|class
-argument_list|)
-condition|)
-block|{
-comment|// When placed on a class, it indicates that the class shouldn't be mapped
-comment|// to XML by itself. Properties on such class will be mapped to XML along
-comment|// with its derived classes, as if the class is inlined.
-return|return
-name|Collections
-operator|.
-name|emptySet
-argument_list|()
-return|;
-block|}
-else|else
-block|{
 return|return
 name|getMethodsInternal
 argument_list|(
@@ -510,7 +462,6 @@ argument_list|,
 name|acceptSetters
 argument_list|)
 return|;
-block|}
 block|}
 specifier|private
 specifier|static
@@ -563,17 +514,28 @@ name|superClass
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|superClass
 operator|.
-name|isAnnotationPresent
+name|equals
 argument_list|(
-name|XmlTransient
+name|Object
+operator|.
+name|class
+argument_list|)
+operator|&&
+operator|!
+name|superClass
+operator|.
+name|equals
+argument_list|(
+name|Throwable
 operator|.
 name|class
 argument_list|)
 condition|)
 block|{
-comment|// only if superClass is @XmlTransient annotated it will be processed recursively
+comment|// process super class until java.lang.Object or java.lang.Throwable is not reached
 name|methods
 operator|.
 name|addAll
