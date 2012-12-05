@@ -2237,6 +2237,17 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|header
+operator|.
+name|getDirection
+argument_list|()
+operator|!=
+name|Header
+operator|.
+name|Direction
+operator|.
+name|DIRECTION_IN
+operator|&&
 operator|!
 name|header
 operator|.
