@@ -1171,6 +1171,19 @@ name|getMessageParts
 argument_list|()
 control|)
 block|{
+if|if
+condition|(
+name|p
+operator|.
+name|getTypeClass
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+comment|//WSDL part wasn't mapped to a parameter
+continue|continue;
+block|}
 name|ensureSize
 argument_list|(
 name|partNames
