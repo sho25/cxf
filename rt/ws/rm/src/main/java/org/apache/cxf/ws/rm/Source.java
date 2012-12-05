@@ -65,6 +65,18 @@ name|util
 operator|.
 name|concurrent
 operator|.
+name|ConcurrentHashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
 name|locks
 operator|.
 name|Condition
@@ -208,7 +220,7 @@ expr_stmt|;
 name|map
 operator|=
 operator|new
-name|HashMap
+name|ConcurrentHashMap
 argument_list|<
 name|String
 argument_list|,
@@ -315,11 +327,6 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
-synchronized|synchronized
-init|(
-name|map
-init|)
-block|{
 name|map
 operator|.
 name|put
@@ -335,7 +342,6 @@ argument_list|,
 name|seq
 argument_list|)
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|persist
@@ -386,11 +392,6 @@ block|{
 name|SourceSequence
 name|o
 decl_stmt|;
-synchronized|synchronized
-init|(
-name|map
-init|)
-block|{
 name|o
 operator|=
 name|map
@@ -406,7 +407,6 @@ name|getValue
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 name|RMStore
 name|store
 init|=
