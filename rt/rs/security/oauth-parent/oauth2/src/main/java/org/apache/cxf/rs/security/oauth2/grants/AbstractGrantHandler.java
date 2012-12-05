@@ -368,6 +368,8 @@ name|getPreauthorizedToken
 argument_list|(
 name|client
 argument_list|,
+name|requestedScope
+argument_list|,
 name|subject
 argument_list|,
 name|supportedGrant

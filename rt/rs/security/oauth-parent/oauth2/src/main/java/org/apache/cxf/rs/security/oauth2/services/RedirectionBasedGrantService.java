@@ -741,6 +741,8 @@ name|getPreauthorizedToken
 argument_list|(
 name|client
 argument_list|,
+name|requestedScope
+argument_list|,
 name|userSubject
 argument_list|,
 name|supportedGrantType

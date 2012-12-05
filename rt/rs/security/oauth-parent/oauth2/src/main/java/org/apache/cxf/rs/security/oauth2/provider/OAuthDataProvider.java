@@ -170,12 +170,18 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Get preauthorized access token       * @param client Client      * @param subject End User subject       * @return AccessToken access token      * @throws OAuthServiceException      */
+comment|/**      * Get preauthorized access token       * @param client Client      * @param requestedScopes the scopes requested by the client      * @param subject End User subject       * @return AccessToken access token      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|getPreauthorizedToken
 parameter_list|(
 name|Client
 name|client
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|requestedScopes
 parameter_list|,
 name|UserSubject
 name|subject
@@ -186,15 +192,21 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Refresh access token       * @param clientId the client id      * @param refreshToken refresh token key       * @return AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Refresh access token       * @param client the client      * @param refreshToken refresh token key       * @param requestedScopes the scopes requested by the client        * @return AccessToken      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|refreshAccessToken
 parameter_list|(
-name|String
-name|clientId
+name|Client
+name|client
 parameter_list|,
 name|String
 name|refreshToken
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|requestedScopes
 parameter_list|)
 throws|throws
 name|OAuthServiceException
