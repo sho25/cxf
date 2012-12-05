@@ -669,6 +669,8 @@ argument_list|,
 name|memberNode
 argument_list|,
 name|wsdlVisitor
+argument_list|,
+literal|true
 argument_list|)
 condition|)
 block|{
