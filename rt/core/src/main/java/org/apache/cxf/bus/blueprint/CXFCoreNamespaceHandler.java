@@ -424,14 +424,7 @@ literal|"def"
 expr_stmt|;
 block|}
 return|return
-name|super
-operator|.
-name|getId
-argument_list|(
-name|element
-argument_list|,
-name|context
-argument_list|)
+name|id
 return|;
 block|}
 specifier|protected
