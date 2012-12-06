@@ -2148,10 +2148,10 @@ else|else
 block|{
 name|nextObject
 operator|=
-name|Collections
-operator|.
-name|singletonList
+name|getCollectionSingleton
 argument_list|(
+name|valueType
+argument_list|,
 name|value
 argument_list|)
 expr_stmt|;
@@ -2218,10 +2218,10 @@ block|{
 return|return
 name|isCollection
 condition|?
-name|Collections
-operator|.
-name|singletonList
+name|getCollectionSingleton
 argument_list|(
+name|valueType
+argument_list|,
 name|lastCastedValue
 argument_list|)
 else|:
