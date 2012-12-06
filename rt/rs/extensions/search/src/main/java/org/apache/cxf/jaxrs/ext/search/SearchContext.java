@@ -19,6 +19,16 @@ name|search
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
 begin_comment
 comment|/**  * Represents the current search expression.  */
 end_comment
@@ -45,6 +55,31 @@ argument_list|>
 name|cls
 parameter_list|)
 function_decl|;
+comment|/**      * Returns the typed search condition representing       * the search expression which is extracted from       * the request URI      *       * @param cls the type of the bean(s) the new search condition will       *        attempt to match      * @param beanProperties mapping between search and bean properties             * @return the search condition      */
+parameter_list|<
+name|T
+parameter_list|>
+name|SearchCondition
+argument_list|<
+name|T
+argument_list|>
+name|getCondition
+parameter_list|(
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|cls
+parameter_list|,
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|beanProperties
+parameter_list|)
+function_decl|;
 comment|/**      * Returns the typed search condition representing       * the provided search expression      *       * @param expression the search expression      * @param cls the type of the bean(s) the new search condition will       *        attempt to match      * @return the search condition      */
 parameter_list|<
 name|T
@@ -63,6 +98,34 @@ argument_list|<
 name|T
 argument_list|>
 name|cls
+parameter_list|)
+function_decl|;
+comment|/**      * Returns the typed search condition representing       * the provided search expression      *       * @param expression the search expression      * @param cls the type of the bean(s) the new search condition will       *        attempt to match      * @param beanProperties mapping between search and bean properties             * @return the search condition      */
+parameter_list|<
+name|T
+parameter_list|>
+name|SearchCondition
+argument_list|<
+name|T
+argument_list|>
+name|getCondition
+parameter_list|(
+name|String
+name|expression
+parameter_list|,
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|cls
+parameter_list|,
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|beanProperties
 parameter_list|)
 function_decl|;
 comment|/**      * Returns the search expression      * @return the expression which is extracted from       *         the request URI, can be null      */
