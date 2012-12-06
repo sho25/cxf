@@ -35,10 +35,26 @@ name|PartialCondition
 name|and
 parameter_list|()
 function_decl|;
+comment|/** shortcut for and().is() */
+name|Property
+name|and
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+function_decl|;
 comment|/** Disjunct current expression with another */
 name|PartialCondition
 name|or
 parameter_list|()
+function_decl|;
+comment|/** shortcut for or().is() */
+name|Property
+name|or
+parameter_list|(
+name|String
+name|name
+parameter_list|)
 function_decl|;
 comment|/** Finalize condition construction and build search condition query. */
 name|String
