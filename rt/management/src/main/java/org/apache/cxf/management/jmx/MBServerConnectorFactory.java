@@ -485,12 +485,20 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
+if|if
+condition|(
+name|server
+operator|==
+literal|null
+condition|)
+block|{
 name|server
 operator|=
 name|MBeanServerHolder
 operator|.
 name|INSTANCE
 expr_stmt|;
+block|}
 comment|// Create the JMX service URL.
 name|JMXServiceURL
 name|url
