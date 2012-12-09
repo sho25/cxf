@@ -56,6 +56,11 @@ name|String
 name|name
 parameter_list|)
 function_decl|;
+comment|/** Wraps the current expression in ()*/
+name|CompleteCondition
+name|wrap
+parameter_list|()
+function_decl|;
 comment|/** Finalize condition construction and build search condition query. */
 name|String
 name|query

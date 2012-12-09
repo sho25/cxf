@@ -57,23 +57,47 @@ name|CompleteCondition
 name|equalTo
 parameter_list|(
 name|String
-name|literalOrPattern
+name|value
+parameter_list|,
+name|String
+modifier|...
+name|moreValues
 parameter_list|)
 function_decl|;
 comment|/** Is numeric property equal to given double number? */
 name|CompleteCondition
 name|equalTo
 parameter_list|(
-name|double
+name|Double
 name|number
+parameter_list|,
+name|Double
+modifier|...
+name|moreValues
 parameter_list|)
 function_decl|;
 comment|/** Is numeric property equal to given long number? */
 name|CompleteCondition
 name|equalTo
 parameter_list|(
-name|long
+name|Long
 name|number
+parameter_list|,
+name|Long
+modifier|...
+name|moreValues
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property equal to given long number? */
+name|CompleteCondition
+name|equalTo
+parameter_list|(
+name|Integer
+name|number
+parameter_list|,
+name|Integer
+modifier|...
+name|moreValues
 parameter_list|)
 function_decl|;
 comment|/** Is date property same as given date? */
@@ -82,6 +106,10 @@ name|equalTo
 parameter_list|(
 name|Date
 name|date
+parameter_list|,
+name|Date
+modifier|...
+name|moreValues
 parameter_list|)
 function_decl|;
 comment|/** Is date property same as date distant from now by given period of time? */
@@ -90,6 +118,10 @@ name|equalTo
 parameter_list|(
 name|Duration
 name|distanceFromNow
+parameter_list|,
+name|Duration
+modifier|...
+name|moreValues
 parameter_list|)
 function_decl|;
 comment|/** Is textual property different than given literal or not matching given pattern? */
