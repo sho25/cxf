@@ -382,15 +382,6 @@ argument_list|,
 name|transformReader
 argument_list|)
 expr_stmt|;
-name|message
-operator|.
-name|removeContent
-argument_list|(
-name|InputStream
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 specifier|protected
