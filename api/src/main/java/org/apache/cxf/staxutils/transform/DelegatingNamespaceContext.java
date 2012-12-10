@@ -442,6 +442,13 @@ condition|(
 name|ns
 operator|!=
 literal|null
+operator|&&
+name|ns
+operator|.
+name|length
+argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 name|addPrefix
