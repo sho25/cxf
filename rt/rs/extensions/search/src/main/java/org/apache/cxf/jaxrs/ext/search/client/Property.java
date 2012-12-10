@@ -43,6 +43,24 @@ name|Duration
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|search
+operator|.
+name|ConditionType
+import|;
+end_import
+
 begin_comment
 comment|/**  * Part of fluent interface of {@link SearchConditionBuilder}.  */
 end_comment
@@ -136,7 +154,7 @@ comment|/** Is numeric property different than given double number? */
 name|CompleteCondition
 name|notEqualTo
 parameter_list|(
-name|double
+name|Double
 name|number
 parameter_list|)
 function_decl|;
@@ -144,7 +162,15 @@ comment|/** Is numeric property different than given long number? */
 name|CompleteCondition
 name|notEqualTo
 parameter_list|(
-name|long
+name|Long
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property different than given int number? */
+name|CompleteCondition
+name|notEqualTo
+parameter_list|(
+name|Integer
 name|number
 parameter_list|)
 function_decl|;
@@ -168,7 +194,7 @@ comment|/** Is numeric property greater than given number? */
 name|CompleteCondition
 name|greaterThan
 parameter_list|(
-name|double
+name|Double
 name|number
 parameter_list|)
 function_decl|;
@@ -176,7 +202,15 @@ comment|/** Is numeric property greater than given number? */
 name|CompleteCondition
 name|greaterThan
 parameter_list|(
-name|long
+name|Long
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property greater than given number? */
+name|CompleteCondition
+name|greaterThan
+parameter_list|(
+name|Integer
 name|number
 parameter_list|)
 function_decl|;
@@ -184,7 +218,7 @@ comment|/** Is numeric property less than given number? */
 name|CompleteCondition
 name|lessThan
 parameter_list|(
-name|double
+name|Double
 name|number
 parameter_list|)
 function_decl|;
@@ -192,7 +226,15 @@ comment|/** Is numeric property less than given number? */
 name|CompleteCondition
 name|lessThan
 parameter_list|(
-name|long
+name|Long
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property less than given number? */
+name|CompleteCondition
+name|lessThan
+parameter_list|(
+name|Integer
 name|number
 parameter_list|)
 function_decl|;
@@ -200,7 +242,7 @@ comment|/** Is numeric property greater or equal to given number? */
 name|CompleteCondition
 name|greaterOrEqualTo
 parameter_list|(
-name|double
+name|Double
 name|number
 parameter_list|)
 function_decl|;
@@ -208,7 +250,15 @@ comment|/** Is numeric property greater or equal to given number? */
 name|CompleteCondition
 name|greaterOrEqualTo
 parameter_list|(
-name|long
+name|Long
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property greater or equal to given number? */
+name|CompleteCondition
+name|greaterOrEqualTo
+parameter_list|(
+name|Integer
 name|number
 parameter_list|)
 function_decl|;
@@ -216,7 +266,7 @@ comment|/** Is numeric property less or equal to given number? */
 name|CompleteCondition
 name|lessOrEqualTo
 parameter_list|(
-name|double
+name|Double
 name|number
 parameter_list|)
 function_decl|;
@@ -224,7 +274,15 @@ comment|/** Is numeric property less or equal to given number? */
 name|CompleteCondition
 name|lessOrEqualTo
 parameter_list|(
-name|long
+name|Long
+name|number
+parameter_list|)
+function_decl|;
+comment|/** Is numeric property less or equal to given number? */
+name|CompleteCondition
+name|lessOrEqualTo
+parameter_list|(
+name|Integer
 name|number
 parameter_list|)
 function_decl|;
@@ -322,6 +380,72 @@ name|lexicalNotAfter
 parameter_list|(
 name|String
 name|literal
+parameter_list|)
+function_decl|;
+comment|/** Generic */
+name|CompleteCondition
+name|comparesTo
+parameter_list|(
+name|ConditionType
+name|op
+parameter_list|,
+name|String
+name|value
+parameter_list|)
+function_decl|;
+comment|/** Generic */
+name|CompleteCondition
+name|comparesTo
+parameter_list|(
+name|ConditionType
+name|op
+parameter_list|,
+name|Double
+name|value
+parameter_list|)
+function_decl|;
+comment|/** Generic */
+name|CompleteCondition
+name|comparesTo
+parameter_list|(
+name|ConditionType
+name|op
+parameter_list|,
+name|Long
+name|value
+parameter_list|)
+function_decl|;
+comment|/** Generic */
+name|CompleteCondition
+name|comparesTo
+parameter_list|(
+name|ConditionType
+name|op
+parameter_list|,
+name|Integer
+name|value
+parameter_list|)
+function_decl|;
+comment|/** Generic */
+name|CompleteCondition
+name|comparesTo
+parameter_list|(
+name|ConditionType
+name|op
+parameter_list|,
+name|Date
+name|value
+parameter_list|)
+function_decl|;
+comment|/** Generic */
+name|CompleteCondition
+name|comparesTo
+parameter_list|(
+name|ConditionType
+name|op
+parameter_list|,
+name|Duration
+name|value
 parameter_list|)
 function_decl|;
 block|}

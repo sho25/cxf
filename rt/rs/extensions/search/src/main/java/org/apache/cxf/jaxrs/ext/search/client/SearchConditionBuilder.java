@@ -61,6 +61,14 @@ name|DEFAULT_LANGUAGE
 init|=
 literal|"FIQL"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|FIQL
+init|=
+name|DEFAULT_LANGUAGE
+decl_stmt|;
 comment|/**      * Creates instance of builder.      *       * @return default implementation of builder.      */
 specifier|public
 specifier|static

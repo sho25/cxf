@@ -43,8 +43,6 @@ block|,
 name|OR
 block|,
 name|AND
-block|,
-name|CUSTOM
 block|}
 end_enum
 
