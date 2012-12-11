@@ -1540,8 +1540,22 @@ name|getSubCode
 argument_list|()
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|SOAPConstants
+operator|.
+name|URI_NS_SOAP_1_1_ENVELOPE
+operator|.
+name|equals
+argument_list|(
+name|soapFault
+operator|.
+name|getNamespaceURI
+argument_list|()
+argument_list|)
 condition|)
 block|{
+comment|// set the subcode only if it is supported (e.g, 1.2)
 name|soapFault
 operator|.
 name|appendFaultSubcode
