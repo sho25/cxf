@@ -16,6 +16,8 @@ operator|.
 name|ext
 operator|.
 name|search
+operator|.
+name|visitor
 package|;
 end_package
 
@@ -80,6 +82,24 @@ operator|.
 name|util
 operator|.
 name|Set
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|ext
+operator|.
+name|search
+operator|.
+name|SearchConditionVisitor
 import|;
 end_import
 
