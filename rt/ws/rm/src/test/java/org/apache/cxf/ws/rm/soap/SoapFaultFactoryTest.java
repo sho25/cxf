@@ -439,6 +439,9 @@ name|andReturn
 argument_list|(
 name|code
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 if|if
 condition|(
@@ -587,12 +590,8 @@ name|getFaultCode
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertNull
 argument_list|(
-name|RM10Constants
-operator|.
-name|SEQUENCE_TERMINATED_FAULT_QNAME
-argument_list|,
 name|fault
 operator|.
 name|getSubCode

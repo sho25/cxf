@@ -494,6 +494,9 @@ name|andReturn
 argument_list|(
 name|ex
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|Endpoint
 name|e
@@ -650,6 +653,9 @@ name|andReturn
 argument_list|(
 name|ex
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|Endpoint
 name|e
