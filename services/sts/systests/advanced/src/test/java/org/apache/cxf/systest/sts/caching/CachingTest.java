@@ -615,7 +615,7 @@ literal|"DoubleItTransportSAML1Port"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|transportSaml1Port
+name|port
 init|=
 name|service
 operator|.
@@ -630,7 +630,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -638,7 +638,7 @@ expr_stmt|;
 comment|// Make a successful invocation
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -650,7 +650,7 @@ init|=
 operator|(
 name|BindingProvider
 operator|)
-name|transportSaml1Port
+name|port
 decl_stmt|;
 name|clearSTSClient
 argument_list|(
@@ -660,7 +660,7 @@ expr_stmt|;
 comment|// This should succeed as the token is cached
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -673,7 +673,7 @@ name|ClientProxy
 operator|.
 name|getClient
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|)
 decl_stmt|;
 name|Endpoint
@@ -706,7 +706,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|35
 argument_list|)
@@ -733,7 +733,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|transportSaml1Port
+name|port
 operator|)
 operator|.
 name|close
@@ -838,11 +838,11 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItTransportSAML1Port"
+literal|"DoubleItTransportSAML1Port2"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|transportSaml1Port
+name|port
 init|=
 name|service
 operator|.
@@ -857,7 +857,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -867,7 +867,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|transportSaml1Port
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -885,7 +885,7 @@ expr_stmt|;
 comment|// Make a successful invocation
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -897,7 +897,7 @@ init|=
 operator|(
 name|BindingProvider
 operator|)
-name|transportSaml1Port
+name|port
 decl_stmt|;
 name|clearSTSClient
 argument_list|(
@@ -909,7 +909,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|35
 argument_list|)
@@ -936,7 +936,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|transportSaml1Port
+name|port
 operator|)
 operator|.
 name|close
@@ -1045,7 +1045,7 @@ literal|"DoubleItTransportSAML1AlternativePort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|transportSaml1Port
+name|port
 init|=
 name|service
 operator|.
@@ -1060,7 +1060,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -1068,7 +1068,7 @@ expr_stmt|;
 comment|// Make an initial successful invocation
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1081,7 +1081,7 @@ name|ClientProxy
 operator|.
 name|getClient
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|)
 decl_stmt|;
 name|Endpoint
@@ -1187,7 +1187,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1216,7 +1216,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|transportSaml1Port
+name|port
 argument_list|,
 literal|35
 argument_list|)
@@ -1229,7 +1229,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|transportSaml1Port
+name|port
 operator|)
 operator|.
 name|close

@@ -568,7 +568,7 @@ literal|"DoubleItAsymmetricSAML2BearerPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|bearerPort
+name|port
 init|=
 name|service
 operator|.
@@ -583,7 +583,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -600,7 +600,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -611,7 +611,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -626,7 +626,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -639,14 +639,14 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|close
 argument_list|()
 expr_stmt|;
 name|DoubleItPortType
-name|bearerPort2
+name|port2
 init|=
 name|service
 operator|.
@@ -661,7 +661,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort2
+name|port2
 argument_list|,
 name|PORT
 argument_list|)
@@ -678,7 +678,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort2
+name|port2
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -688,7 +688,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort2
+name|port2
 operator|)
 operator|.
 name|getRequestContext
@@ -706,7 +706,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort2
+name|port2
 argument_list|,
 literal|30
 argument_list|)
@@ -733,7 +733,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|bearerPort2
+name|port2
 operator|)
 operator|.
 name|close
@@ -839,14 +839,14 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItAsymmetricSAML2BearerPort2"
 argument_list|)
 decl_stmt|;
 comment|//
 comment|// Proxy no. 1
 comment|//
 name|DoubleItPortType
-name|bearerPort
+name|port
 init|=
 name|service
 operator|.
@@ -861,7 +861,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -878,7 +878,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -895,7 +895,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -918,7 +918,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -933,7 +933,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -945,7 +945,7 @@ init|=
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 decl_stmt|;
 name|clearSTSClient
 argument_list|(
@@ -955,7 +955,7 @@ expr_stmt|;
 comment|// This invocation should be successful as the token is cached
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -964,7 +964,7 @@ comment|//
 comment|// Proxy no. 2
 comment|//
 name|DoubleItPortType
-name|bearerPort2
+name|port2
 init|=
 name|service
 operator|.
@@ -979,7 +979,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort2
+name|port2
 argument_list|,
 name|PORT
 argument_list|)
@@ -996,7 +996,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort2
+name|port2
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -1008,7 +1008,7 @@ operator|=
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort2
+name|port2
 expr_stmt|;
 name|clearSTSClient
 argument_list|(
@@ -1020,7 +1020,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort2
+name|port2
 argument_list|,
 literal|40
 argument_list|)
@@ -1072,7 +1072,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort2
+name|port2
 argument_list|,
 literal|40
 argument_list|)
@@ -1117,7 +1117,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort2
+name|port2
 argument_list|,
 literal|40
 argument_list|)
@@ -1144,7 +1144,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|close
@@ -1250,11 +1250,11 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItAsymmetricSAML2BearerPort3"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|bearerPort
+name|port
 init|=
 name|service
 operator|.
@@ -1269,7 +1269,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -1286,7 +1286,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -1297,7 +1297,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1317,7 +1317,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1332,7 +1332,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1341,7 +1341,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1356,7 +1356,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1365,7 +1365,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1382,7 +1382,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1408,7 +1408,7 @@ init|=
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 decl_stmt|;
 name|clearSTSClient
 argument_list|(
@@ -1420,7 +1420,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1435,7 +1435,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1444,7 +1444,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1459,7 +1459,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1468,7 +1468,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1485,7 +1485,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1528,7 +1528,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1545,7 +1545,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1572,7 +1572,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|close
@@ -1678,11 +1678,11 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItAsymmetricSAML2BearerPort4"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|bearerPort
+name|port
 init|=
 name|service
 operator|.
@@ -1697,7 +1697,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -1714,7 +1714,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -1725,7 +1725,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1745,7 +1745,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1764,7 +1764,7 @@ init|=
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 decl_stmt|;
 name|p
 operator|.
@@ -1786,7 +1786,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1796,7 +1796,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1829,7 +1829,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1845,7 +1845,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1878,7 +1878,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1888,7 +1888,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1921,7 +1921,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -1931,7 +1931,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -1966,7 +1966,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -1993,7 +1993,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|close
@@ -2099,11 +2099,11 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItAsymmetricSAML2BearerPort"
+literal|"DoubleItAsymmetricSAML2BearerPort5"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
-name|bearerPort
+name|port
 init|=
 name|service
 operator|.
@@ -2118,7 +2118,7 @@ argument_list|)
 decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 name|PORT
 argument_list|)
@@ -2135,7 +2135,7 @@ argument_list|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 argument_list|,
 name|STSPORT2
 argument_list|)
@@ -2146,7 +2146,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -2166,7 +2166,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -2186,7 +2186,7 @@ init|=
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 decl_stmt|;
 name|STSClient
 name|stsClient
@@ -2215,7 +2215,7 @@ argument_list|)
 expr_stmt|;
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -2229,7 +2229,7 @@ expr_stmt|;
 comment|// This should work
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|25
 argument_list|)
@@ -2239,7 +2239,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|getRequestContext
@@ -2256,7 +2256,7 @@ try|try
 block|{
 name|doubleIt
 argument_list|(
-name|bearerPort
+name|port
 argument_list|,
 literal|30
 argument_list|)
@@ -2283,7 +2283,7 @@ name|io
 operator|.
 name|Closeable
 operator|)
-name|bearerPort
+name|port
 operator|)
 operator|.
 name|close
