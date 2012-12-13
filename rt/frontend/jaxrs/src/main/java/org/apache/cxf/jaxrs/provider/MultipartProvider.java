@@ -1137,13 +1137,13 @@ return|;
 block|}
 if|if
 condition|(
-name|Map
-operator|.
-name|class
+name|c
 operator|.
 name|isAssignableFrom
 argument_list|(
-name|c
+name|Map
+operator|.
+name|class
 argument_list|)
 condition|)
 block|{
