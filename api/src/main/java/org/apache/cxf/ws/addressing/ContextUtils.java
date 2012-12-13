@@ -568,7 +568,7 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|PARTIAL_REPONSE_SENT_PROPERTY
+name|PARTIAL_RESPONSE_SENT_PROPERTY
 init|=
 literal|"org.apache.cxf.ws.addressing.partial.response.sent"
 decl_stmt|;
@@ -1527,7 +1527,7 @@ name|message
 operator|.
 name|put
 argument_list|(
-name|PARTIAL_REPONSE_SENT_PROPERTY
+name|PARTIAL_RESPONSE_SENT_PROPERTY
 argument_list|,
 name|Boolean
 operator|.
@@ -1555,7 +1555,7 @@ name|message
 operator|.
 name|get
 argument_list|(
-name|PARTIAL_REPONSE_SENT_PROPERTY
+name|PARTIAL_RESPONSE_SENT_PROPERTY
 argument_list|)
 decl_stmt|;
 return|return

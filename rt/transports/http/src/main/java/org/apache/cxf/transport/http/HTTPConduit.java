@@ -5866,7 +5866,7 @@ name|message
 argument_list|,
 name|Message
 operator|.
-name|PROCESS_ONEWAY_REPONSE
+name|PROCESS_ONEWAY_RESPONSE
 argument_list|,
 literal|false
 argument_list|)

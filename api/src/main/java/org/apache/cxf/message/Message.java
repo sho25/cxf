@@ -138,9 +138,15 @@ literal|"OnewayRequest"
 decl_stmt|;
 comment|/**      * Boolean property specifying if oneWay response must be processed.      */
 name|String
-name|PROCESS_ONEWAY_REPONSE
+name|PROCESS_ONEWAY_RESPONSE
 init|=
 literal|"org.apache.cxf.transport.processOneWayResponse"
+decl_stmt|;
+comment|/**      * @deprecated use PROCESS_ONEWAY_RESPONSE      */
+name|String
+name|PROCESS_ONEWAY_REPONSE
+init|=
+name|PROCESS_ONEWAY_RESPONSE
 decl_stmt|;
 name|String
 name|ROBUST_ONEWAY
