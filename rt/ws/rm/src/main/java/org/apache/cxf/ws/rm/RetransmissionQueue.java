@@ -100,6 +100,14 @@ name|SourceSequence
 name|seq
 parameter_list|)
 function_decl|;
+comment|/**      * Purge all candiates for the given sequence.      *       * @param seq the sequence object      */
+name|void
+name|purgeAll
+parameter_list|(
+name|SourceSequence
+name|seq
+parameter_list|)
+function_decl|;
 comment|/**      *       * @param seq      * @return      */
 name|List
 argument_list|<

@@ -2485,7 +2485,6 @@ literal|"no source sequence"
 argument_list|)
 throw|;
 block|}
-comment|//TODO use cancel instead of suspend
 name|RetransmissionQueue
 name|rq
 init|=
@@ -2497,9 +2496,29 @@ operator|.
 name|getRetransmissionQueue
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
 name|rq
 operator|.
-name|suspend
+name|countUnacknowledged
+argument_list|(
+name|ss
+argument_list|)
+operator|>
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|JMException
+argument_list|(
+literal|"sequence not empty"
+argument_list|)
+throw|;
+block|}
+name|rq
+operator|.
+name|stop
 argument_list|(
 name|ss
 argument_list|)
@@ -2572,7 +2591,6 @@ literal|"no source sequence"
 argument_list|)
 throw|;
 block|}
-comment|//TODO use cancel instead of suspend
 comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
 comment|//         rq.suspend(ds);
 name|ds
@@ -2583,6 +2601,80 @@ operator|.
 name|removeSequence
 argument_list|(
 name|ds
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Purge UnAcknowledged Messages"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|void
+name|purgeUnAcknowledgedMessages
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+block|{
+name|SourceSequence
+name|ss
+init|=
+name|getSourceSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ss
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
+name|RetransmissionQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRetransmissionQueue
+argument_list|()
+decl_stmt|;
+name|rq
+operator|.
+name|purgeAll
+argument_list|(
+name|ss
 argument_list|)
 expr_stmt|;
 block|}
