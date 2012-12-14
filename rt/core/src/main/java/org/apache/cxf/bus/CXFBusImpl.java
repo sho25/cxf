@@ -551,8 +551,10 @@ condition|(
 name|obj
 operator|==
 literal|null
-operator|&&
-operator|!
+condition|)
+block|{
+if|if
+condition|(
 name|missingExtensions
 operator|.
 name|contains
@@ -561,6 +563,11 @@ name|extensionType
 argument_list|)
 condition|)
 block|{
+comment|//already know we cannot find it
+return|return
+literal|null
+return|;
+block|}
 name|ConfiguredBeanLocator
 name|loc
 init|=
@@ -665,6 +672,7 @@ return|;
 block|}
 else|else
 block|{
+comment|//record that it couldn't be found to avoid expensive searches again in the future
 name|missingExtensions
 operator|.
 name|add
