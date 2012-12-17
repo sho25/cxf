@@ -3204,6 +3204,16 @@ init|(
 name|exchange
 init|)
 block|{
+if|if
+condition|(
+name|getResponseCode
+argument_list|(
+name|exchange
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
 try|try
 block|{
 name|exchange
@@ -3224,6 +3234,11 @@ name|ex
 parameter_list|)
 block|{
 comment|// ignore
+block|}
+block|}
+else|else
+block|{
+return|return;
 block|}
 block|}
 if|if
