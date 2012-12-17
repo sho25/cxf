@@ -1310,7 +1310,7 @@ literal|null
 expr_stmt|;
 block|}
 block|}
-specifier|public
+specifier|protected
 name|void
 name|finalize
 parameter_list|()
