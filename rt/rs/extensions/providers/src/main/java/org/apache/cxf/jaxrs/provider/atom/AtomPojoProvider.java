@@ -2076,7 +2076,7 @@ return|return
 literal|null
 return|;
 block|}
-specifier|private
+specifier|protected
 parameter_list|<
 name|T
 parameter_list|>
@@ -2189,6 +2189,10 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|pojoClass
+operator|==
+literal|null
+operator|||
 name|pojoClass
 operator|==
 name|Object
