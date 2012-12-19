@@ -731,10 +731,12 @@ name|String
 index|[]
 name|pathValues
 init|=
-name|values
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|values
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;
@@ -838,10 +840,12 @@ name|String
 index|[]
 name|pairs
 init|=
-name|sequence
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|sequence
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;
@@ -877,10 +881,12 @@ name|String
 index|[]
 name|value
 init|=
-name|thePair
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|thePair
+argument_list|,
 literal|"="
 argument_list|)
 decl_stmt|;

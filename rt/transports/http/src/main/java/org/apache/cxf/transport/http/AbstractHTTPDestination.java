@@ -1084,14 +1084,22 @@ literal|null
 return|;
 block|}
 name|String
-name|authType
+name|creds
+index|[]
 init|=
-name|credentials
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|credentials
+argument_list|,
 literal|" "
 argument_list|)
+decl_stmt|;
+name|String
+name|authType
+init|=
+name|creds
 index|[
 literal|0
 index|]
@@ -1109,12 +1117,7 @@ block|{
 name|String
 name|authEncoded
 init|=
-name|credentials
-operator|.
-name|split
-argument_list|(
-literal|" "
-argument_list|)
+name|creds
 index|[
 literal|1
 index|]
