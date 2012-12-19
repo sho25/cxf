@@ -645,7 +645,7 @@ name|String
 name|str
 parameter_list|,
 name|String
-name|sperator
+name|seperator
 parameter_list|)
 block|{
 name|List
@@ -675,7 +675,7 @@ name|str
 operator|.
 name|split
 argument_list|(
-literal|"/"
+name|seperator
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -718,7 +718,7 @@ name|String
 name|str
 parameter_list|,
 name|String
-name|sperator
+name|seperator
 parameter_list|)
 block|{
 name|List
@@ -735,7 +735,7 @@ name|str
 operator|.
 name|split
 argument_list|(
-literal|"/"
+name|seperator
 argument_list|)
 argument_list|)
 decl_stmt|;
