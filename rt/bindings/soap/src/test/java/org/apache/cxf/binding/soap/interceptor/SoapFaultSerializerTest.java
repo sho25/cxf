@@ -980,10 +980,7 @@ name|verifyFaultToSoapFault
 argument_list|(
 name|fault
 argument_list|,
-name|ex
-operator|.
-name|toString
-argument_list|()
+literal|null
 argument_list|,
 literal|true
 argument_list|,
@@ -997,10 +994,7 @@ name|verifyFaultToSoapFault
 argument_list|(
 name|fault
 argument_list|,
-name|ex
-operator|.
-name|toString
-argument_list|()
+literal|null
 argument_list|,
 literal|true
 argument_list|,
@@ -1026,10 +1020,7 @@ name|verifyFaultToSoapFault
 argument_list|(
 name|fault
 argument_list|,
-name|ex
-operator|.
-name|toString
-argument_list|()
+literal|null
 argument_list|,
 literal|false
 argument_list|,
@@ -1043,10 +1034,7 @@ name|verifyFaultToSoapFault
 argument_list|(
 name|fault
 argument_list|,
-name|ex
-operator|.
-name|toString
-argument_list|()
+literal|null
 argument_list|,
 literal|false
 argument_list|,
