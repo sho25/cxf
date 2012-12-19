@@ -832,7 +832,7 @@ name|String
 name|str
 parameter_list|,
 name|String
-name|seperator
+name|separator
 parameter_list|)
 block|{
 name|List
@@ -862,7 +862,7 @@ name|split
 argument_list|(
 name|str
 argument_list|,
-name|seperator
+name|separator
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -905,7 +905,7 @@ name|String
 name|str
 parameter_list|,
 name|String
-name|seperator
+name|separator
 parameter_list|)
 block|{
 name|List
@@ -922,7 +922,7 @@ name|split
 argument_list|(
 name|str
 argument_list|,
-name|seperator
+name|separator
 argument_list|)
 argument_list|)
 decl_stmt|;
