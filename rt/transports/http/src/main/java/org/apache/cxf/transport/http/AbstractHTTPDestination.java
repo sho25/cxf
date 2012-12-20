@@ -3879,10 +3879,6 @@ argument_list|(
 name|in
 argument_list|,
 name|wrappedStream
-argument_list|,
-name|IOUtils
-operator|.
-name|DEFAULT_BUFFER_SIZE
 argument_list|)
 return|;
 block|}
