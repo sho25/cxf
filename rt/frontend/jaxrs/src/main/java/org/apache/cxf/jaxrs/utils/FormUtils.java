@@ -604,10 +604,12 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|postBody
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|postBody
+argument_list|,
 literal|"&"
 argument_list|)
 argument_list|)

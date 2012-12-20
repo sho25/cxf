@@ -566,15 +566,17 @@ name|String
 index|[]
 name|authPair
 init|=
+name|StringUtils
+operator|.
+name|split
+argument_list|(
 name|authHeaders
 operator|.
 name|get
 argument_list|(
 literal|0
 argument_list|)
-operator|.
-name|split
-argument_list|(
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;

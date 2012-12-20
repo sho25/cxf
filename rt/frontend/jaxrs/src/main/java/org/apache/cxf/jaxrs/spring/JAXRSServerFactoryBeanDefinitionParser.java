@@ -348,10 +348,12 @@ name|String
 index|[]
 name|values
 init|=
-name|val
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|val
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;

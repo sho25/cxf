@@ -133,6 +133,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|StringUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|configuration
 operator|.
 name|blueprint
@@ -258,10 +274,12 @@ name|String
 index|[]
 name|values
 init|=
-name|val
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|val
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;

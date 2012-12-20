@@ -1247,10 +1247,12 @@ name|String
 index|[]
 name|locations
 init|=
-name|schemas
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|schemas
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;
@@ -1405,10 +1407,12 @@ name|String
 index|[]
 name|values
 init|=
-name|value
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|value
+argument_list|,
 name|splitChar
 argument_list|)
 decl_stmt|;
@@ -1854,10 +1858,12 @@ name|String
 index|[]
 name|classNames
 init|=
-name|serviceBeans
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|serviceBeans
+argument_list|,
 name|splitChar
 argument_list|)
 decl_stmt|;
@@ -2036,10 +2042,12 @@ name|String
 index|[]
 name|classNames
 init|=
-name|providersList
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|providersList
+argument_list|,
 name|splitChar
 argument_list|)
 decl_stmt|;
@@ -2291,10 +2299,12 @@ name|String
 index|[]
 name|pairs
 init|=
-name|sequence
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|sequence
+argument_list|,
 literal|" "
 argument_list|)
 decl_stmt|;
@@ -2330,10 +2340,12 @@ name|String
 index|[]
 name|values
 init|=
-name|thePair
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|thePair
+argument_list|,
 literal|"="
 argument_list|)
 decl_stmt|;

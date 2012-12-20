@@ -1876,10 +1876,12 @@ name|String
 index|[]
 name|segments
 init|=
-name|thePath
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|thePath
+argument_list|,
 literal|"/"
 argument_list|)
 decl_stmt|;
@@ -7784,10 +7786,12 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|query
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|query
+argument_list|,
 name|sep
 argument_list|)
 argument_list|)

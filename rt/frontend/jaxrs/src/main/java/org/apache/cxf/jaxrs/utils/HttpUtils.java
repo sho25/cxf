@@ -1215,10 +1215,12 @@ name|String
 index|[]
 name|values
 init|=
-name|value
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|value
+argument_list|,
 literal|"-"
 argument_list|)
 decl_stmt|;
