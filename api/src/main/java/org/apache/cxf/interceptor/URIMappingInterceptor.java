@@ -2391,10 +2391,12 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-name|query
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|query
+argument_list|,
 literal|"&"
 argument_list|)
 argument_list|)
@@ -2421,10 +2423,12 @@ name|String
 index|[]
 name|keyValue
 init|=
-name|part
+name|StringUtils
 operator|.
 name|split
 argument_list|(
+name|part
+argument_list|,
 literal|"="
 argument_list|)
 decl_stmt|;
