@@ -2139,7 +2139,7 @@ operator|!
 name|isXop
 operator|||
 name|length
-operator|<
+operator|<=
 name|threshold
 condition|)
 block|{
