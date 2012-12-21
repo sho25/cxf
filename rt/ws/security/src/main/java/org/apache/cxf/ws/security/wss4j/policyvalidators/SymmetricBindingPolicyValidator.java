@@ -326,9 +326,7 @@ name|results
 argument_list|)
 condition|)
 block|{
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 comment|// Check various properties of the binding
 if|if
@@ -350,9 +348,7 @@ name|message
 argument_list|)
 condition|)
 block|{
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 comment|// Check various tokens of the binding
 if|if
@@ -374,9 +370,7 @@ name|encryptedResults
 argument_list|)
 condition|)
 block|{
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 return|return

@@ -358,9 +358,7 @@ argument_list|(
 literal|"Signature Confirmation policy validation failed"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 return|return

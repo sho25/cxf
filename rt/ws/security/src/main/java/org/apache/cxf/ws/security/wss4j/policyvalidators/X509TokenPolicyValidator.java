@@ -401,9 +401,7 @@ argument_list|(
 literal|"The received token does not match the token inclusion requirement"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 if|if
 condition|(
@@ -426,9 +424,7 @@ argument_list|(
 literal|"An incorrect X.509 Token Type is detected"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 return|return

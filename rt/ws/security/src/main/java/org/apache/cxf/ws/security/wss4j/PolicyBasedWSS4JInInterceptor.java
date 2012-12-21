@@ -3290,9 +3290,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
 block|}
 block|}
 block|}
@@ -3458,9 +3455,7 @@ operator|+
 name|type
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 for|for
@@ -3522,9 +3517,6 @@ operator|+
 name|type
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
 block|}
 block|}
 block|}
@@ -5793,9 +5785,6 @@ operator|+
 literal|" found."
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
 block|}
 block|}
 block|}
@@ -5947,9 +5936,6 @@ operator|+
 literal|" found."
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
 block|}
 block|}
 catch|catch
@@ -5974,9 +5960,6 @@ name|getMessage
 argument_list|()
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
 block|}
 block|}
 block|}

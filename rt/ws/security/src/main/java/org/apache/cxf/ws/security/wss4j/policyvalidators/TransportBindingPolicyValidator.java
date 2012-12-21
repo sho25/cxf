@@ -359,9 +359,7 @@ argument_list|(
 literal|"TLS is not enabled"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 comment|// HttpsToken is validated by the HttpsTokenInterceptorProvider
 if|if
@@ -429,9 +427,7 @@ argument_list|(
 name|error
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 name|assertPolicy
 argument_list|(
@@ -515,9 +511,7 @@ argument_list|(
 name|error
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 name|assertPolicy
 argument_list|(

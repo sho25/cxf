@@ -376,9 +376,7 @@ argument_list|(
 literal|"The received token does not match the token inclusion requirement"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 name|Element
 name|template
@@ -410,9 +408,7 @@ argument_list|(
 literal|"Error in validating the IssuedToken policy"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 name|TLSSessionInfo
 name|tlsInfo
@@ -467,9 +463,7 @@ argument_list|(
 literal|"Assertion fails holder-of-key requirements"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 return|return

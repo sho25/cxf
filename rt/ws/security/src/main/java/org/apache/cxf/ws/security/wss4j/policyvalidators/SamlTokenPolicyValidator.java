@@ -449,9 +449,7 @@ argument_list|(
 literal|"The received token does not match the token inclusion requirement"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 comment|// All of the received SAML Assertions must conform to the policy
 for|for
@@ -495,9 +493,7 @@ argument_list|(
 literal|"Wrong SAML Version"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 name|TLSSessionInfo
 name|tlsInfo
@@ -552,9 +548,7 @@ argument_list|(
 literal|"Assertion fails holder-of-key requirements"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 if|if
 condition|(
@@ -580,9 +574,7 @@ argument_list|(
 literal|"Assertion fails sender-vouches requirements"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 comment|/*                     if (!checkIssuerName(samlToken, assertionWrapper)) {                         ai.setNotAsserted("Wrong IssuerName");                     }                  */
 block|}

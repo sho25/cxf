@@ -380,9 +380,7 @@ argument_list|(
 literal|"The received token does not match the token inclusion requirement"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 if|if
 condition|(
@@ -397,9 +395,7 @@ name|utResults
 argument_list|)
 condition|)
 block|{
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 return|return

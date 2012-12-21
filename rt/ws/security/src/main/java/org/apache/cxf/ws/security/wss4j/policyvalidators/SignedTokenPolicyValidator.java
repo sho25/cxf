@@ -682,9 +682,7 @@ argument_list|(
 literal|"The received token does not match the signed supporting token requirement"
 argument_list|)
 expr_stmt|;
-return|return
-literal|false
-return|;
+continue|continue;
 block|}
 block|}
 block|}
