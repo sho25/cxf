@@ -450,6 +450,7 @@ argument_list|,
 name|msg
 argument_list|)
 decl_stmt|;
+comment|// log with warning instead sever, as this may happen for some delayed messages
 name|LogUtils
 operator|.
 name|log
@@ -458,7 +459,7 @@ name|LOG
 argument_list|,
 name|Level
 operator|.
-name|SEVERE
+name|WARNING
 argument_list|,
 literal|"SEQ_FAULT_MSG"
 argument_list|,
