@@ -695,7 +695,7 @@ name|xmlPI
 operator|+
 name|start
 operator|+
-literal|" xmlns:ps1=\"http://testbeans.com/v3\"><ps1:bean/></testBean>"
+literal|" xmlns:ps2=\"http://testbeans.com/v3\"><ps2:bean/></testBean>"
 decl_stmt|;
 name|String
 name|expected2
@@ -704,7 +704,7 @@ name|xmlPI
 operator|+
 name|start
 operator|+
-literal|"><ps1:bean xmlns:ps1=\"http://testbeans.com/v3\"/></testBean>"
+literal|"><ps2:bean xmlns:ps2=\"http://testbeans.com/v3\"/></testBean>"
 decl_stmt|;
 name|String
 name|out
@@ -3031,6 +3031,61 @@ argument_list|(
 literal|"<ps1:test xmlns:ps1=\"http://bar\"><ps1:a>1</ps1:a></ps1:test>"
 argument_list|,
 name|value
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testNamespacedAttributeDropElement
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|transformElements
+init|=
+operator|new
+name|HashMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+argument_list|()
+decl_stmt|;
+name|transformElements
+operator|.
+name|put
+argument_list|(
+literal|"{http://www.w3.org/2005/08/addressing}ReplyTo"
+argument_list|,
+literal|""
+argument_list|)
+expr_stmt|;
+name|TransformTestUtils
+operator|.
+name|transformOutStreamAndCompare
+argument_list|(
+literal|"../resources/greetMeWSAReqIn.xml"
+argument_list|,
+literal|"../resources/greetMeWSAReq.xml"
+argument_list|,
+name|transformElements
+argument_list|,
+literal|null
+argument_list|,
+literal|null
+argument_list|,
+literal|null
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
