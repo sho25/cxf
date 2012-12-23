@@ -333,7 +333,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-elseif|else
 if|if
 condition|(
 operator|!
