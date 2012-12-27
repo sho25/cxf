@@ -21,6 +21,16 @@ name|client
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
 begin_comment
 comment|/**  * Part of fluent interface of {@link SearchConditionBuilder}.  */
 end_comment
@@ -66,6 +76,28 @@ parameter_list|,
 name|CompleteCondition
 modifier|...
 name|cn
+parameter_list|)
+function_decl|;
+comment|/** Conjunct multiple expressions */
+name|CompleteCondition
+name|and
+parameter_list|(
+name|List
+argument_list|<
+name|CompleteCondition
+argument_list|>
+name|conditions
+parameter_list|)
+function_decl|;
+comment|/** Disjunct multiple expressions */
+name|CompleteCondition
+name|or
+parameter_list|(
+name|List
+argument_list|<
+name|CompleteCondition
+argument_list|>
+name|conditions
 parameter_list|)
 function_decl|;
 block|}
