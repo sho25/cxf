@@ -227,6 +227,14 @@ extends|extends
 name|AbstractJAXWSMethodInvoker
 block|{
 specifier|public
+specifier|static
+specifier|final
+name|String
+name|COPY_SOAP_HEADERS_BY_FAULT
+init|=
+literal|"org.apache.cxf.fault.copySoapHeaders"
+decl_stmt|;
+specifier|public
 name|JAXWSMethodInvoker
 parameter_list|(
 specifier|final
@@ -478,6 +486,23 @@ name|f
 parameter_list|)
 block|{
 comment|//get chance to copy over customer's header
+if|if
+condition|(
+name|MessageUtils
+operator|.
+name|getContextualBoolean
+argument_list|(
+name|exchange
+operator|.
+name|getInMessage
+argument_list|()
+argument_list|,
+name|COPY_SOAP_HEADERS_BY_FAULT
+argument_list|,
+literal|true
+argument_list|)
+condition|)
+block|{
 name|updateHeader
 argument_list|(
 name|exchange
@@ -485,6 +510,7 @@ argument_list|,
 name|ctx
 argument_list|)
 expr_stmt|;
+block|}
 throw|throw
 name|f
 throw|;
