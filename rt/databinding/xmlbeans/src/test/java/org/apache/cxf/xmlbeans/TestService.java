@@ -47,16 +47,6 @@ end_import
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|Assert
-import|;
-end_import
-
-begin_import
-import|import
 name|com
 operator|.
 name|sample
@@ -64,6 +54,16 @@ operator|.
 name|procure
 operator|.
 name|PurchaseOrderDocument
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
+name|Assert
 import|;
 end_import
 

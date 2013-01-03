@@ -87,16 +87,6 @@ end_import
 
 begin_import
 import|import
-name|junit
-operator|.
-name|framework
-operator|.
-name|AssertionFailedError
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -1654,7 +1644,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|AssertionFailedError
+name|AssertionError
 name|er
 parameter_list|)
 block|{
