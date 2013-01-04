@@ -4247,13 +4247,6 @@ argument_list|(
 name|wssConfig
 argument_list|)
 decl_stmt|;
-name|sig
-operator|.
-name|setWsConfig
-argument_list|(
-name|wssConfig
-argument_list|)
-expr_stmt|;
 comment|// If a EncryptedKeyToken is used, set the correct value type to
 comment|// be used in the wsse:Reference in ds:KeyInfo
 name|int
