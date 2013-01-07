@@ -1216,19 +1216,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|beanClass
-operator|==
-name|Throwable
-operator|.
-name|class
-condition|)
-block|{
-comment|// do nothing
-block|}
-elseif|else
-if|if
-condition|(
-name|Throwable
+name|RuntimeException
 operator|.
 name|class
 operator|.
@@ -1246,7 +1234,7 @@ name|getBeanInfo
 argument_list|(
 name|beanClass
 argument_list|,
-name|Throwable
+name|RuntimeException
 operator|.
 name|class
 argument_list|)
@@ -1255,7 +1243,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|RuntimeException
+name|Exception
 operator|.
 name|class
 operator|.
@@ -1273,7 +1261,7 @@ name|getBeanInfo
 argument_list|(
 name|beanClass
 argument_list|,
-name|RuntimeException
+name|Exception
 operator|.
 name|class
 argument_list|)
