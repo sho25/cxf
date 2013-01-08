@@ -3033,6 +3033,11 @@ operator|!=
 name|names
 condition|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 name|StringTokenizer
 name|st
 init|=

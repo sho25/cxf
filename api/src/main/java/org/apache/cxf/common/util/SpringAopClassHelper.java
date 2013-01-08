@@ -101,6 +101,11 @@ literal|"org.springframework.aop.framework.Advised"
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|protected
 name|Class
 argument_list|<
@@ -196,6 +201,11 @@ return|return
 name|o
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|protected
 name|Class
 argument_list|<
