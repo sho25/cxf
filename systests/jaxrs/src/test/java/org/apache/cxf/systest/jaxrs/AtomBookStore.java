@@ -603,6 +603,8 @@ name|AtomUtils
 operator|.
 name|createBookEntry
 argument_list|(
+name|factory
+argument_list|,
 name|b
 argument_list|)
 decl_stmt|;
