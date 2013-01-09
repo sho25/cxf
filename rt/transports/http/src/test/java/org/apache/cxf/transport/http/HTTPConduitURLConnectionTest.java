@@ -536,9 +536,24 @@ init|=
 name|doTestTLSServerParameters
 argument_list|()
 decl_stmt|;
+name|assertNotNull
+argument_list|(
+literal|"Connection should not be null"
+argument_list|,
+name|connection
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"TLS Client Parameters should generate an HttpsURLConnection"
+literal|"TLS Client Parameters should generate an HttpsURLConnection instead of "
+operator|+
+name|connection
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
 argument_list|,
 name|HttpsURLConnection
 operator|.
@@ -614,9 +629,24 @@ init|=
 name|doTestTLSServerParameters
 argument_list|()
 decl_stmt|;
+name|assertNotNull
+argument_list|(
+literal|"Connection should not be null"
+argument_list|,
+name|connection
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"TLS Client Parameters should generate an HttpsURLConnection"
+literal|"TLS Client Parameters should generate an HttpsURLConnection instead of "
+operator|+
+name|connection
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
 argument_list|,
 name|connection
 operator|.
