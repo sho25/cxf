@@ -119,7 +119,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|client
+name|core
 operator|.
 name|Configuration
 import|;

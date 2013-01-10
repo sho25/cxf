@@ -540,7 +540,7 @@ init|=
 operator|new
 name|CountDownLatch
 argument_list|(
-literal|5
+literal|1
 argument_list|)
 decl_stmt|;
 name|executor

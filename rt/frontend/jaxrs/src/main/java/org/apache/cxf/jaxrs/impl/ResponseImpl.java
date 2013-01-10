@@ -645,8 +645,7 @@ name|hasEntity
 parameter_list|()
 block|{
 return|return
-name|getEntity
-argument_list|()
+name|entity
 operator|!=
 literal|null
 return|;

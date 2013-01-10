@@ -2758,10 +2758,12 @@ specifier|public
 name|UriBuilder
 name|path
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
-argument_list|<
-name|?
-argument_list|>
 name|resource
 parameter_list|)
 throws|throws
@@ -2841,10 +2843,12 @@ specifier|public
 name|UriBuilder
 name|path
 parameter_list|(
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 name|Class
-argument_list|<
-name|?
-argument_list|>
 name|resource
 parameter_list|,
 name|String
@@ -5039,6 +5043,8 @@ name|fragment
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|UriBuilder
 name|resolveTemplate
@@ -5063,6 +5069,8 @@ literal|true
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|UriBuilder
 name|resolveTemplate
@@ -5095,6 +5103,8 @@ name|encodePathSlash
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|UriBuilder
 name|resolveTemplates
@@ -5119,6 +5129,8 @@ literal|true
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|UriBuilder
 name|resolveTemplates
@@ -5168,6 +5180,8 @@ return|return
 name|this
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|UriBuilder
 name|resolveTemplateFromEncoded
@@ -5195,6 +5209,8 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|UriBuilder
 name|resolveTemplatesFromEncoded

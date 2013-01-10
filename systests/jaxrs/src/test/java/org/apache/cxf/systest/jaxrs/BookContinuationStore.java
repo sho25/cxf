@@ -779,23 +779,6 @@ name|Override
 specifier|public
 name|void
 name|onComplete
-parameter_list|()
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"CompletionCallback: onComplete"
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Override
-specifier|public
-name|void
-name|onError
 parameter_list|(
 name|Throwable
 name|throwable
@@ -807,7 +790,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"CompletionCallback: onError"
+literal|"CompletionCallback: onComplete"
 argument_list|)
 expr_stmt|;
 block|}

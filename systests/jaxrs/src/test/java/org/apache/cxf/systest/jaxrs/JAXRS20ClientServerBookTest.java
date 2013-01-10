@@ -93,20 +93,6 @@ name|rs
 operator|.
 name|client
 operator|.
-name|ClientException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|client
-operator|.
 name|ClientRequestContext
 import|;
 end_import
@@ -879,7 +865,7 @@ specifier|public
 name|void
 name|failed
 parameter_list|(
-name|ClientException
+name|Throwable
 name|error
 parameter_list|)
 block|{             }
@@ -1010,7 +996,7 @@ specifier|public
 name|void
 name|failed
 parameter_list|(
-name|ClientException
+name|Throwable
 name|error
 parameter_list|)
 block|{             }
@@ -1149,7 +1135,7 @@ specifier|public
 name|void
 name|failed
 parameter_list|(
-name|ClientException
+name|Throwable
 name|error
 parameter_list|)
 block|{             }

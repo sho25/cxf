@@ -249,7 +249,7 @@ name|rs
 operator|.
 name|core
 operator|.
-name|Configurable
+name|Context
 import|;
 end_import
 
@@ -263,7 +263,7 @@ name|rs
 operator|.
 name|core
 operator|.
-name|Context
+name|FeatureContext
 import|;
 end_import
 
@@ -1312,7 +1312,7 @@ parameter_list|(
 name|ResourceInfo
 name|resourceInfo
 parameter_list|,
-name|Configurable
+name|FeatureContext
 name|configurable
 parameter_list|)
 block|{
