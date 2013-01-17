@@ -93,11 +93,28 @@ parameter_list|)
 block|{
 comment|//System.out.println("Executing operation greetMe");
 comment|//System.out.println("Message received: " + me + "\n");
+if|if
+condition|(
+literal|"return null"
+operator|.
+name|equals
+argument_list|(
+name|me
+argument_list|)
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
+else|else
+block|{
 return|return
 literal|"Hello "
 operator|+
 name|me
 return|;
+block|}
 block|}
 specifier|public
 name|String
