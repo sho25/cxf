@@ -343,6 +343,10 @@ name|BUFFER_SIZE
 init|=
 literal|4096
 decl_stmt|;
+specifier|private
+name|boolean
+name|reportByteArraySize
+decl_stmt|;
 specifier|public
 name|boolean
 name|isReadable
@@ -542,6 +546,8 @@ comment|// TODO: if it's a range request, then we should probably always return 
 comment|// Content-Length and Content-Range in handleRangeRequest
 if|if
 condition|(
+name|reportByteArraySize
+operator|&&
 name|byte
 index|[]
 operator|.
@@ -1085,6 +1091,21 @@ return|return
 literal|false
 return|;
 block|}
+block|}
+specifier|public
+name|void
+name|setReportByteArraySize
+parameter_list|(
+name|boolean
+name|report
+parameter_list|)
+block|{
+name|this
+operator|.
+name|reportByteArraySize
+operator|=
+name|report
+expr_stmt|;
 block|}
 block|}
 end_class

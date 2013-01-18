@@ -441,6 +441,13 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|p
+operator|.
+name|setReportByteArraySize
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|providers
 operator|.
 name|add
