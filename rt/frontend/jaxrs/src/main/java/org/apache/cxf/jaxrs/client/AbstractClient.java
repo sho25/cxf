@@ -4142,6 +4142,17 @@ name|Object
 name|pValue
 parameter_list|)
 block|{
+if|if
+condition|(
+name|pValue
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|Class
 argument_list|<
 name|?
