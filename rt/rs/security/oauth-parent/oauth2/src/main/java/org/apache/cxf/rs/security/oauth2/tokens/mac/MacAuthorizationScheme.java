@@ -400,7 +400,7 @@ name|MAC_TOKEN_TIMESTAMP
 argument_list|,
 name|timestamp
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 return|return
