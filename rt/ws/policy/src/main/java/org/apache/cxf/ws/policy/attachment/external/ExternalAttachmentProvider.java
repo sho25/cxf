@@ -1007,6 +1007,17 @@ argument_list|(
 name|p
 argument_list|)
 expr_stmt|;
+comment|// cache the element so it can be used when generating the wsdl
+name|attachment
+operator|.
+name|setElement
+argument_list|(
+operator|(
+name|Element
+operator|)
+name|nd
+argument_list|)
+expr_stmt|;
 block|}
 elseif|else
 if|if

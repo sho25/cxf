@@ -652,6 +652,10 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// Add policy to the service model (and consequently to the WSDL)
+comment|// FIXME - ideally this should probably be moved up to where the policies are applied to the
+comment|// endpoint, rather than this late.  As a consequence of its location, you have to declare a
+comment|// ws policy feature on every endpoint in order to get any policy attachments into the
+comment|// wsdl.  Alternatively add to the WSDLServiceBuilder somehow.
 name|ServiceModelPolicyUpdater
 name|pu
 init|=
