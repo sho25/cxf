@@ -11435,6 +11435,15 @@ name|m
 operator|.
 name|put
 argument_list|(
+literal|"org.apache.cxf.http.header.split"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
+name|m
+operator|.
+name|put
+argument_list|(
 name|Message
 operator|.
 name|PROTOCOL_HEADERS
