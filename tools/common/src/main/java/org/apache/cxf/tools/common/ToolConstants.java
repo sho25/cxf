@@ -1273,6 +1273,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|COMPILER
+init|=
+literal|"compiler"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_WSDL_VERSION
 init|=
 literal|"wsdlversion"

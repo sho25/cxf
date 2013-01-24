@@ -421,7 +421,7 @@ else|:
 name|s
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|addArgs
 parameter_list|(
@@ -1102,7 +1102,7 @@ name|idx
 argument_list|)
 return|;
 block|}
-specifier|private
+specifier|protected
 name|boolean
 name|useJava6Compiler
 parameter_list|(
