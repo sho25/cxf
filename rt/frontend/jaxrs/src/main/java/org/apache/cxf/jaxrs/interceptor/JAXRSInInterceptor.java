@@ -1526,6 +1526,28 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// Global and name-bound post-match request filters
+if|if
+condition|(
+name|JAXRSUtils
+operator|.
+name|runContainerRequestFilters
+argument_list|(
+name|providerFactory
+argument_list|,
+name|message
+argument_list|,
+literal|false
+argument_list|,
+name|ori
+operator|.
+name|getNameBindings
+argument_list|()
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 comment|//Process parameters
 try|try
 block|{
