@@ -124,7 +124,7 @@ name|Policy
 argument_list|(
 name|uri
 operator|=
-literal|"classpath:/java_first_policies/SslWithUsernamePasswordToken.xml"
+literal|"classpath:/java_first_policies/UsernamePasswordToken.xml"
 argument_list|,
 name|placement
 operator|=
@@ -188,7 +188,7 @@ name|Policy
 argument_list|(
 name|uri
 operator|=
-literal|"classpath:/java_first_policies/SslWithUsernamePasswordToken.xml"
+literal|"classpath:/java_first_policies/UsernamePasswordToken.xml"
 argument_list|,
 name|placement
 operator|=
