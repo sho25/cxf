@@ -735,6 +735,21 @@ operator|=
 name|dataProvider
 expr_stmt|;
 block|}
+specifier|public
+name|void
+name|setNonceVerifier
+parameter_list|(
+name|NonceVerifier
+name|nonceVerifier
+parameter_list|)
+block|{
+name|this
+operator|.
+name|nonceVerifier
+operator|=
+name|nonceVerifier
+expr_stmt|;
+block|}
 block|}
 end_class
 
