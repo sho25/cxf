@@ -235,7 +235,7 @@ parameter_list|)
 block|{
 name|out
 operator|.
-name|setAttributesToElements
+name|setSkipOnFault
 argument_list|(
 name|value
 argument_list|)
