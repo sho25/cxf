@@ -883,6 +883,24 @@ name|CustomHeaderAdded
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|BookServer20
+operator|.
+name|PostMatchMode
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Path
@@ -2798,6 +2816,8 @@ literal|"/bookheaders/simple/"
 argument_list|)
 annotation|@
 name|CustomHeaderAdded
+annotation|@
+name|PostMatchMode
 specifier|public
 name|Response
 name|getBookByHeaderSimple
@@ -2847,6 +2867,8 @@ literal|"/bookheaders/simple/"
 argument_list|)
 annotation|@
 name|CustomHeaderAdded
+annotation|@
+name|PostMatchMode
 specifier|public
 name|Response
 name|echoBookByHeaderSimple
