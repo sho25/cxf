@@ -96,6 +96,9 @@ decl_stmt|;
 name|Endpoint
 name|ep
 decl_stmt|;
+name|Endpoint
+name|ep11
+decl_stmt|;
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -176,7 +179,7 @@ name|PORT
 operator|+
 literal|"/SoapContext/Soap11Port"
 expr_stmt|;
-name|ep
+name|ep11
 operator|=
 name|Endpoint
 operator|.
@@ -196,6 +199,11 @@ throws|throws
 name|Exception
 block|{
 name|ep
+operator|.
+name|stop
+argument_list|()
+expr_stmt|;
+name|ep11
 operator|.
 name|stop
 argument_list|()
