@@ -69,6 +69,16 @@ name|ToolConstants
 operator|.
 name|CFG_CLASSDIR
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_XJC_ARGS
+init|=
+name|ToolConstants
+operator|.
+name|CFG_XJC_ARGS
+decl_stmt|;
 comment|/**      * Default      */
 specifier|public
 specifier|static
