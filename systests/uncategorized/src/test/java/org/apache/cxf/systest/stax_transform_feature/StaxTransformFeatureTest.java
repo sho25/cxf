@@ -712,24 +712,6 @@ operator|.
 name|INFO
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"### logLevel.info = "
-operator|+
-name|LOG
-operator|.
-name|isLoggable
-argument_list|(
-name|Level
-operator|.
-name|INFO
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
