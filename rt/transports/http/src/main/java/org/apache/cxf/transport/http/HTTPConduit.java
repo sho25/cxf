@@ -6760,6 +6760,7 @@ name|FINE
 argument_list|,
 literal|"Trust Decider "
 operator|+
+operator|(
 name|trustDecider
 operator|!=
 literal|null
@@ -6773,6 +6774,7 @@ name|decider2
 operator|.
 name|getLogicalName
 argument_list|()
+operator|)
 operator|+
 literal|" considers Conduit "
 operator|+
