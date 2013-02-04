@@ -6761,6 +6761,15 @@ argument_list|,
 literal|"Trust Decider "
 operator|+
 name|trustDecider
+operator|!=
+literal|null
+condition|?
+name|trustDecider
+operator|.
+name|getLogicalName
+argument_list|()
+else|:
+name|decider2
 operator|.
 name|getLogicalName
 argument_list|()
