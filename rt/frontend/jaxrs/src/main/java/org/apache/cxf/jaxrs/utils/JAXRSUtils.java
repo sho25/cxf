@@ -5385,11 +5385,6 @@ name|getDefaultParameterValue
 argument_list|()
 expr_stmt|;
 block|}
-name|Object
-name|result
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|parameter
@@ -5402,8 +5397,7 @@ operator|.
 name|PATH
 condition|)
 block|{
-name|result
-operator|=
+return|return
 name|readFromUriParam
 argument_list|(
 name|message
@@ -5426,7 +5420,7 @@ argument_list|,
 operator|!
 name|isEncoded
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 if|if
 condition|(
@@ -5440,8 +5434,7 @@ operator|.
 name|QUERY
 condition|)
 block|{
-name|result
-operator|=
+return|return
 name|readQueryString
 argument_list|(
 name|parameter
@@ -5462,7 +5455,7 @@ argument_list|,
 operator|!
 name|isEncoded
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 if|if
 condition|(
@@ -5476,8 +5469,7 @@ operator|.
 name|MATRIX
 condition|)
 block|{
-name|result
-operator|=
+return|return
 name|processMatrixParam
 argument_list|(
 name|message
@@ -5498,7 +5490,7 @@ argument_list|,
 operator|!
 name|isEncoded
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 if|if
 condition|(
@@ -5512,8 +5504,7 @@ operator|.
 name|FORM
 condition|)
 block|{
-name|result
-operator|=
+return|return
 name|processFormParam
 argument_list|(
 name|message
@@ -5534,7 +5525,7 @@ argument_list|,
 operator|!
 name|isEncoded
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 if|if
 condition|(
@@ -5548,8 +5539,7 @@ operator|.
 name|COOKIE
 condition|)
 block|{
-name|result
-operator|=
+return|return
 name|processCookieParam
 argument_list|(
 name|message
@@ -5567,8 +5557,13 @@ name|paramAnns
 argument_list|,
 name|defaultValue
 argument_list|)
-expr_stmt|;
+return|;
 block|}
+name|Object
+name|result
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|parameter
