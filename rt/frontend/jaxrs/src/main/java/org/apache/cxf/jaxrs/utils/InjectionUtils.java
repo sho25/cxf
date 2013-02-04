@@ -363,6 +363,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|ClientErrorException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|InternalServerErrorException
 import|;
 end_import
@@ -376,18 +388,6 @@ operator|.
 name|rs
 operator|.
 name|NotFoundException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|ServerErrorException
 import|;
 end_import
 
@@ -2484,7 +2484,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|ServerErrorException
+name|ClientErrorException
 argument_list|(
 name|HttpUtils
 operator|.
