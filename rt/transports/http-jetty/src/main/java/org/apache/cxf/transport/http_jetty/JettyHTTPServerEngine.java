@@ -447,7 +447,7 @@ name|server
 operator|.
 name|ssl
 operator|.
-name|SslSocketConnector
+name|SslConnector
 import|;
 end_import
 
@@ -2536,7 +2536,7 @@ operator|!
 operator|(
 name|connector
 operator|instanceof
-name|SslSocketConnector
+name|SslConnector
 operator|)
 condition|)
 block|{
@@ -2575,7 +2575,7 @@ if|if
 condition|(
 name|connector
 operator|instanceof
-name|SslSocketConnector
+name|SslConnector
 condition|)
 block|{
 throw|throw
