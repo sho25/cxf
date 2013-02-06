@@ -497,7 +497,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|ProviderFactory
+name|ServerProviderFactory
 import|;
 end_import
 
@@ -848,7 +848,7 @@ name|isOneWay
 argument_list|()
 condition|)
 block|{
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -1063,10 +1063,10 @@ name|getInMessage
 argument_list|()
 decl_stmt|;
 specifier|final
-name|ProviderFactory
+name|ServerProviderFactory
 name|providerFactory
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -2017,7 +2017,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(

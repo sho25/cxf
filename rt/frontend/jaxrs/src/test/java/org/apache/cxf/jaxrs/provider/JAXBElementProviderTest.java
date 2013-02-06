@@ -11652,10 +11652,10 @@ name|Message
 name|createMessage
 parameter_list|()
 block|{
-name|ProviderFactory
+name|ServerProviderFactory
 name|factory
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|()
@@ -11800,7 +11800,7 @@ name|endpoint
 operator|.
 name|get
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|class
 operator|.

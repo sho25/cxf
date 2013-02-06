@@ -1803,7 +1803,7 @@ block|{
 name|ProviderFactory
 name|factory
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|()
@@ -1948,7 +1948,7 @@ name|endpoint
 operator|.
 name|get
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|class
 operator|.

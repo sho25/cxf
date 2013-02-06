@@ -179,7 +179,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|ProviderFactory
+name|ServerProviderFactory
 import|;
 end_import
 
@@ -857,7 +857,7 @@ name|endp
 operator|.
 name|get
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|class
 operator|.
@@ -872,7 +872,7 @@ argument_list|()
 operator|.
 name|andReturn
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|()

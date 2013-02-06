@@ -89,7 +89,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|ProviderFactory
+name|ServerProviderFactory
 import|;
 end_import
 
@@ -243,11 +243,11 @@ operator|.
 name|create
 argument_list|()
 decl_stmt|;
-name|ProviderFactory
+name|ServerProviderFactory
 name|factory
 init|=
 operator|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|)
 name|s
 operator|.
@@ -256,7 +256,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|class
 operator|.

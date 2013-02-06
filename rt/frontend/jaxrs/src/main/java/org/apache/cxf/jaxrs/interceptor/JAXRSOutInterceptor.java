@@ -547,7 +547,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|ProviderFactory
+name|ServerProviderFactory
 import|;
 end_import
 
@@ -770,10 +770,10 @@ name|Message
 name|message
 parameter_list|)
 block|{
-name|ProviderFactory
+name|ServerProviderFactory
 name|providerFactory
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -912,7 +912,7 @@ specifier|private
 name|void
 name|processResponse
 parameter_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 name|providerFactory
 parameter_list|,
 name|Message
@@ -1124,7 +1124,7 @@ specifier|private
 name|Response
 name|runResponseFilters
 parameter_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 name|providerFactory
 parameter_list|,
 name|Message
@@ -1184,7 +1184,7 @@ argument_list|>
 argument_list|>
 name|handlers
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -1805,7 +1805,7 @@ control|)
 block|{
 name|writers
 operator|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -2578,7 +2578,7 @@ specifier|private
 name|Response
 name|handleFilterException
 parameter_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 name|pf
 parameter_list|,
 name|Message

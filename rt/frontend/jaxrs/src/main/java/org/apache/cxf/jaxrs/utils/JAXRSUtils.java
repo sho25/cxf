@@ -1543,6 +1543,22 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|provider
+operator|.
+name|ServerProviderFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
 name|utils
 operator|.
 name|multipart
@@ -6486,7 +6502,7 @@ block|{
 name|BeanParamInfo
 name|bmi
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -6995,7 +7011,7 @@ name|?
 argument_list|>
 name|provider
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -7994,7 +8010,7 @@ specifier|final
 name|ProviderFactory
 name|pf
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -9632,7 +9648,7 @@ name|T
 argument_list|>
 name|mapper
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -9967,7 +9983,7 @@ specifier|static
 name|boolean
 name|runContainerRequestFilters
 parameter_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 name|pf
 parameter_list|,
 name|Message
@@ -10098,7 +10114,7 @@ specifier|static
 name|void
 name|runContainerResponseFilters
 parameter_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 name|pf
 parameter_list|,
 name|Response

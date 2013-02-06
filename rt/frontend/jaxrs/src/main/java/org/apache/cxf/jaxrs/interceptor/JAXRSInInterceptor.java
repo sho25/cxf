@@ -363,7 +363,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|ProviderFactory
+name|ServerProviderFactory
 import|;
 end_import
 
@@ -655,7 +655,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -758,7 +758,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(
@@ -815,10 +815,10 @@ name|Message
 name|message
 parameter_list|)
 block|{
-name|ProviderFactory
+name|ServerProviderFactory
 name|providerFactory
 init|=
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|getInstance
 argument_list|(

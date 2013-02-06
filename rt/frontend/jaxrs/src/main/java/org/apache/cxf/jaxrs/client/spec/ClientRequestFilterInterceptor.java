@@ -133,9 +133,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|model
+name|client
 operator|.
-name|ProviderInfo
+name|ClientProviderFactory
 import|;
 end_import
 
@@ -149,9 +149,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
+name|model
 operator|.
-name|ProviderFactory
+name|ProviderInfo
 import|;
 end_import
 
@@ -270,10 +270,10 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-name|ProviderFactory
+name|ClientProviderFactory
 name|pf
 init|=
-name|ProviderFactory
+name|ClientProviderFactory
 operator|.
 name|getInstance
 argument_list|(

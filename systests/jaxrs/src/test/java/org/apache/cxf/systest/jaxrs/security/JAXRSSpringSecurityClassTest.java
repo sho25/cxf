@@ -238,6 +238,13 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+name|wc
+operator|.
+name|accept
+argument_list|(
+literal|"application/xml"
+argument_list|)
+expr_stmt|;
 name|Response
 name|r
 init|=
@@ -328,6 +335,13 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+name|wc
+operator|.
+name|accept
+argument_list|(
+literal|"application/xml"
+argument_list|)
+expr_stmt|;
 name|Response
 name|r
 init|=
