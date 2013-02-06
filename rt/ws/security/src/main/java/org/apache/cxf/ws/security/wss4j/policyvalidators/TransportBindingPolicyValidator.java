@@ -383,6 +383,34 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Check the AlgorithmSuite
+name|AlgorithmSuitePolicyValidator
+name|algorithmValidator
+init|=
+operator|new
+name|AlgorithmSuitePolicyValidator
+argument_list|(
+name|results
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|algorithmValidator
+operator|.
+name|validatePolicy
+argument_list|(
+name|ai
+argument_list|,
+name|binding
+operator|.
+name|getAlgorithmSuite
+argument_list|()
+argument_list|)
+condition|)
+block|{
+continue|continue;
+block|}
 comment|// Check the IncludeTimestamp
 if|if
 condition|(
