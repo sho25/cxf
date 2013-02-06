@@ -13,6 +13,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|client
+operator|.
 name|spring
 package|;
 end_package
@@ -63,10 +65,10 @@ parameter_list|()
 block|{
 name|registerBeanDefinitionParser
 argument_list|(
-literal|"server"
+literal|"client"
 argument_list|,
 operator|new
-name|JAXRSServerFactoryBeanDefinitionParser
+name|JAXRSClientFactoryBeanDefinitionParser
 argument_list|()
 argument_list|)
 expr_stmt|;

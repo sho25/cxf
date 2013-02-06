@@ -13,6 +13,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|client
+operator|.
 name|blueprint
 package|;
 end_package
@@ -173,7 +175,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/jaxrs.xsd"
+literal|"/schemas/blueprint/jaxrs-client.xsd"
 argument_list|)
 return|;
 block|}
@@ -198,7 +200,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-literal|"server"
+literal|"client"
 operator|.
 name|equals
 argument_list|(
@@ -208,7 +210,7 @@ condition|)
 block|{
 return|return
 operator|new
-name|JAXRSServerFactoryBeanDefinitionParser
+name|JAXRSClientFactoryBeanDefinitionParser
 argument_list|()
 operator|.
 name|parse

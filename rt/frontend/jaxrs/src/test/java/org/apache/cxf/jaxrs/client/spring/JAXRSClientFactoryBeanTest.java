@@ -13,6 +13,8 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
+name|client
+operator|.
 name|spring
 package|;
 end_package
