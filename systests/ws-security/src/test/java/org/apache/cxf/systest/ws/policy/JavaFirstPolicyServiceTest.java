@@ -225,7 +225,7 @@ name|policy
 operator|.
 name|javafirst
 operator|.
-name|BindingSimpleServiceClient
+name|BindingSimpleService
 import|;
 end_import
 
@@ -864,7 +864,7 @@ literal|"org/apache/cxf/systest/ws/policy/client/sslnocertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
-name|BindingSimpleServiceClient
+name|BindingSimpleService
 name|simpleService
 init|=
 name|clientContext
@@ -873,7 +873,7 @@ name|getBean
 argument_list|(
 literal|"BindingSimpleServiceClient"
 argument_list|,
-name|BindingSimpleServiceClient
+name|BindingSimpleService
 operator|.
 name|class
 argument_list|)
@@ -994,7 +994,7 @@ literal|"org/apache/cxf/systest/ws/policy/client/sslcertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
-name|BindingSimpleServiceClient
+name|BindingSimpleService
 name|simpleService
 init|=
 name|clientContext
@@ -1003,7 +1003,7 @@ name|getBean
 argument_list|(
 literal|"BindingSimpleServiceClient"
 argument_list|,
-name|BindingSimpleServiceClient
+name|BindingSimpleService
 operator|.
 name|class
 argument_list|)
