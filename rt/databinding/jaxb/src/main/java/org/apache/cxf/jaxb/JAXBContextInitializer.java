@@ -1828,7 +1828,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
 name|void
 name|addClass
 parameter_list|(
