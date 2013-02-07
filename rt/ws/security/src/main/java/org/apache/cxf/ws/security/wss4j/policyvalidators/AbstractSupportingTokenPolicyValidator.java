@@ -2526,7 +2526,7 @@ name|sl
 operator|.
 name|size
 argument_list|()
-operator|==
+operator|>=
 literal|1
 condition|)
 block|{
