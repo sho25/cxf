@@ -164,7 +164,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"/org/apache/cxf/jaxrs/spring/clients.xml"
+literal|"/org/apache/cxf/jaxrs/client/spring/clients.xml"
 block|}
 argument_list|)
 decl_stmt|;
