@@ -335,11 +335,23 @@ name|void
 name|reset
 parameter_list|()
 block|{
+try|try
+block|{
 name|continuation
 operator|.
 name|complete
 argument_list|()
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+comment|// explicit complete call does not seem to work
+comment|// with the non-Servlet3 Jetty Continuation
+block|}
 name|obj
 operator|=
 literal|null
