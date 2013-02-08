@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Provides a starting point implementation for a interceptors that   * participate in phased message processing. Developers should extend from   * this class when implementing custom interceptors.  * Developers need to provide an implementation for handleMessage() and   * can overide the handleFault() implementation. They should not overide   * the other methods.  */
+comment|/**  * Provides a starting point implementation for a interceptors that   * participate in phased message processing. Developers should extend from   * this class when implementing custom interceptors.  * Developers need to provide an implementation for handleMessage() and   * can override the handleFault() implementation. They should not override  * the other methods.  */
 end_comment
 
 begin_class
