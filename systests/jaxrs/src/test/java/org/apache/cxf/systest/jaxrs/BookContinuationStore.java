@@ -982,7 +982,9 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"CompletionCallback: onComplete"
+literal|"CompletionCallback: onComplete, throwable: "
+operator|+
+name|throwable
 argument_list|)
 expr_stmt|;
 block|}
