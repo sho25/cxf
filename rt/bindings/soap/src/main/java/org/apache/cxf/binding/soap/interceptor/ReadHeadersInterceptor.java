@@ -839,13 +839,10 @@ expr_stmt|;
 return|return;
 block|}
 comment|/*          * Reject OPTIONS, and any other noise that is not allowed in SOAP.          */
-if|if
-condition|(
-operator|!
-literal|"POST"
-operator|.
-name|equals
-argument_list|(
+specifier|final
+name|String
+name|verb
+init|=
 operator|(
 name|String
 operator|)
@@ -865,6 +862,19 @@ name|Message
 operator|.
 name|HTTP_REQUEST_METHOD
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|verb
+operator|!=
+literal|null
+operator|&&
+operator|!
+literal|"POST"
+operator|.
+name|equals
+argument_list|(
+name|verb
 argument_list|)
 condition|)
 block|{
