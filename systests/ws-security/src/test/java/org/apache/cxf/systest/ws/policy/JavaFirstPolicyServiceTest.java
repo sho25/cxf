@@ -245,7 +245,7 @@ name|policy
 operator|.
 name|javafirst
 operator|.
-name|NoAlternativesOperationSimpleServiceClient
+name|NoAlternativesOperationSimpleService
 import|;
 end_import
 
@@ -265,7 +265,7 @@ name|policy
 operator|.
 name|javafirst
 operator|.
-name|OperationSimpleServiceClient
+name|OperationSimpleService
 import|;
 end_import
 
@@ -1105,7 +1105,7 @@ literal|"org/apache/cxf/systest/ws/policy/client/sslnocertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
-name|NoAlternativesOperationSimpleServiceClient
+name|NoAlternativesOperationSimpleService
 name|simpleService
 init|=
 name|clientContext
@@ -1114,7 +1114,7 @@ name|getBean
 argument_list|(
 literal|"NoAlternativesOperationSimpleServiceClient"
 argument_list|,
-name|NoAlternativesOperationSimpleServiceClient
+name|NoAlternativesOperationSimpleService
 operator|.
 name|class
 argument_list|)
@@ -1307,7 +1307,7 @@ literal|"org/apache/cxf/systest/ws/policy/client/sslcertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
-name|NoAlternativesOperationSimpleServiceClient
+name|NoAlternativesOperationSimpleService
 name|simpleService
 init|=
 name|clientContext
@@ -1316,7 +1316,7 @@ name|getBean
 argument_list|(
 literal|"NoAlternativesOperationSimpleServiceClient"
 argument_list|,
-name|NoAlternativesOperationSimpleServiceClient
+name|NoAlternativesOperationSimpleService
 operator|.
 name|class
 argument_list|)
@@ -1491,7 +1491,7 @@ literal|"org/apache/cxf/systest/ws/policy/client/sslnocertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
-name|OperationSimpleServiceClient
+name|OperationSimpleService
 name|simpleService
 init|=
 name|clientContext
@@ -1500,7 +1500,7 @@ name|getBean
 argument_list|(
 literal|"OperationSimpleServiceClient"
 argument_list|,
-name|OperationSimpleServiceClient
+name|OperationSimpleService
 operator|.
 name|class
 argument_list|)
@@ -1623,7 +1623,7 @@ literal|"org/apache/cxf/systest/ws/policy/client/sslcertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
-name|OperationSimpleServiceClient
+name|OperationSimpleService
 name|simpleService
 init|=
 name|clientContext
@@ -1632,7 +1632,7 @@ name|getBean
 argument_list|(
 literal|"OperationSimpleServiceClient"
 argument_list|,
-name|OperationSimpleServiceClient
+name|OperationSimpleService
 operator|.
 name|class
 argument_list|)

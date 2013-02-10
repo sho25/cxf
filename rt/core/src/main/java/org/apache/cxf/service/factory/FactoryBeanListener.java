@@ -70,7 +70,7 @@ block|,
 comment|/**          * Server, targetObject, Class          */
 name|SERVER_CREATED
 block|,
-comment|/**          * BindingInfo, BindingOperationInfo          */
+comment|/**          * BindingInfo, BindingOperationInfo, Implementation Method          */
 name|BINDING_OPERATION_CREATED
 block|,
 comment|/**          * BindingInfo          */

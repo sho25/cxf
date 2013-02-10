@@ -14749,7 +14749,7 @@ return|return
 literal|1
 return|;
 block|}
-specifier|protected
+specifier|public
 name|MethodDispatcher
 name|getMethodDispatcher
 parameter_list|()

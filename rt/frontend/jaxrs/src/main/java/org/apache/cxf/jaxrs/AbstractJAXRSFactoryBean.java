@@ -1064,9 +1064,11 @@ name|Event
 operator|.
 name|BINDING_OPERATION_CREATED
 argument_list|,
-name|boi
+name|bi
 argument_list|,
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -1326,6 +1328,8 @@ name|cri
 operator|.
 name|getServiceClass
 argument_list|()
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
