@@ -1461,8 +1461,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testOperationNoClientCertAlternativePolicy
@@ -1752,6 +1750,16 @@ name|client
 operator|.
 name|getEndpoint
 argument_list|()
+operator|.
+name|getOutInterceptors
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|wssOut
+argument_list|)
+expr_stmt|;
+name|client
 operator|.
 name|getOutInterceptors
 argument_list|()
