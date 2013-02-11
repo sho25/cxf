@@ -503,7 +503,7 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 name|eap
 operator|.
@@ -511,9 +511,6 @@ name|getEffectivePolicy
 argument_list|(
 name|bfi
 argument_list|)
-operator|.
-name|isEmpty
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|control
@@ -606,7 +603,7 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 name|eap
 operator|.
@@ -614,9 +611,6 @@ name|getEffectivePolicy
 argument_list|(
 name|bmi
 argument_list|)
-operator|.
-name|isEmpty
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|control
@@ -709,7 +703,7 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 name|eap
 operator|.
@@ -717,9 +711,6 @@ name|getEffectivePolicy
 argument_list|(
 name|boi
 argument_list|)
-operator|.
-name|isEmpty
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|control
@@ -812,7 +803,7 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 name|eap
 operator|.
@@ -820,9 +811,6 @@ name|getEffectivePolicy
 argument_list|(
 name|ei
 argument_list|)
-operator|.
-name|isEmpty
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|control
@@ -915,7 +903,7 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|assertTrue
+name|assertNull
 argument_list|(
 name|eap
 operator|.
@@ -923,9 +911,6 @@ name|getEffectivePolicy
 argument_list|(
 name|si
 argument_list|)
-operator|.
-name|isEmpty
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|control
