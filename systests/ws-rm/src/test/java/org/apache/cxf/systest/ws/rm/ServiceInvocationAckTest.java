@@ -65,6 +65,8 @@ block|{
 name|startServer
 argument_list|(
 name|PORT
+argument_list|,
+literal|""
 argument_list|)
 expr_stmt|;
 block|}
