@@ -2862,10 +2862,29 @@ decl_stmt|;
 if|if
 condition|(
 name|props
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Cannot find Crypto Encryption properties: "
+operator|+
+name|e
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|WSSecurityException
+argument_list|(
+literal|"Cannot find Crypto Encryption properties: "
+operator|+
+name|e
+argument_list|)
+throw|;
+block|}
 name|encrCrypto
 operator|=
 name|CryptoFactory
@@ -2909,7 +2928,6 @@ argument_list|,
 name|encrCrypto
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
@@ -2982,10 +3000,29 @@ decl_stmt|;
 if|if
 condition|(
 name|props
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Cannot find Crypto Signature properties: "
+operator|+
+name|s
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|WSSecurityException
+argument_list|(
+literal|"Cannot find Crypto Signature properties: "
+operator|+
+name|s
+argument_list|)
+throw|;
+block|}
 name|signCrypto
 operator|=
 name|CryptoFactory
@@ -3029,7 +3066,6 @@ argument_list|,
 name|signCrypto
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 return|return
