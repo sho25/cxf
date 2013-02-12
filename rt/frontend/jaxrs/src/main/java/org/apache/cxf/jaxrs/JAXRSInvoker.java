@@ -1682,7 +1682,14 @@ name|JAXRSUtils
 operator|.
 name|findTargetMethod
 argument_list|(
+name|Collections
+operator|.
+name|singletonMap
+argument_list|(
 name|subCri
+argument_list|,
+name|values
+argument_list|)
 argument_list|,
 name|inMessage
 argument_list|,
@@ -1890,7 +1897,12 @@ name|JAXRSUtils
 operator|.
 name|createResponse
 argument_list|(
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
 name|subCri
+argument_list|)
 argument_list|,
 literal|null
 argument_list|,
