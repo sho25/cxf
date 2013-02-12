@@ -417,16 +417,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -1079,7 +1069,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testNoAltOperationNoClientCertAlternativePolicy
+name|testNoAltOperationNoClientCertPolicy
 parameter_list|()
 block|{
 name|System
@@ -1281,7 +1271,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testNoAltOperationClientCertAlternativePolicy
+name|testNoAltOperationClientCertPolicy
 parameter_list|()
 block|{
 name|System
@@ -1503,6 +1493,12 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|// no security on ping!
+name|simpleService
+operator|.
+name|ping
+argument_list|()
+expr_stmt|;
 try|try
 block|{
 name|simpleService
@@ -1571,6 +1567,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+comment|// this is successful because the alternative policy allows a password to be specified.
 name|wssOut
 operator|.
 name|setProperties
@@ -1591,8 +1588,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testOperationClientCertAlternativePolicy
@@ -1635,6 +1630,12 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|// no security on ping!
+name|simpleService
+operator|.
+name|ping
+argument_list|()
+expr_stmt|;
 try|try
 block|{
 name|simpleService
@@ -1683,6 +1684,7 @@ operator|.
 name|doStuff
 argument_list|()
 expr_stmt|;
+comment|// this is successful because the alternative policy allows a password to be specified.
 name|wssOut
 operator|.
 name|setProperties
@@ -1695,31 +1697,11 @@ literal|"password"
 argument_list|)
 argument_list|)
 expr_stmt|;
-try|try
-block|{
 name|simpleService
 operator|.
 name|doStuff
 argument_list|()
 expr_stmt|;
-name|fail
-argument_list|(
-literal|"Expected exception password is not supported"
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|SOAPFaultException
-name|e
-parameter_list|)
-block|{
-name|assertTrue
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
-block|}
 block|}
 specifier|private
 name|WSS4JOutInterceptor

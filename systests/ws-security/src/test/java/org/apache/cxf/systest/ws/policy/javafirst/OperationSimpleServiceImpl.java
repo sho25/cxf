@@ -98,7 +98,7 @@ name|placement
 operator|=
 name|Placement
 operator|.
-name|BINDING_OPERATION
+name|BINDING_OPERATION_INPUT
 argument_list|)
 annotation|@
 name|Override
