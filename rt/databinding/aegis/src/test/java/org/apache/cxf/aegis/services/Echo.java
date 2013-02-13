@@ -74,6 +74,8 @@ parameter_list|(
 name|String
 name|string
 parameter_list|)
+throws|throws
+name|Exception
 block|{
 return|return
 name|string

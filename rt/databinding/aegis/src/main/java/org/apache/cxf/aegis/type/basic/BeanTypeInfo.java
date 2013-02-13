@@ -1251,6 +1251,16 @@ name|isAssignableFrom
 argument_list|(
 name|beanClass
 argument_list|)
+operator|&&
+operator|!
+name|Exception
+operator|.
+name|class
+operator|.
+name|equals
+argument_list|(
+name|beanClass
+argument_list|)
 condition|)
 block|{
 name|beanInfo
