@@ -930,7 +930,30 @@ block|}
 else|else
 block|{
 comment|// TODO: wsdl2.0 support
+throw|throw
+operator|new
+name|ToolException
+argument_list|(
+literal|"Only WSDL 1.1 supported"
+argument_list|)
+throw|;
 block|}
+block|}
+if|if
+condition|(
+name|serviceList
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+throw|throw
+operator|new
+name|ToolException
+argument_list|(
+literal|"Did not find any services in WSDL"
+argument_list|)
+throw|;
 block|}
 name|Map
 argument_list|<
