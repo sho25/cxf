@@ -169,7 +169,21 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|MessageProcessingException
+name|ProcessingException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|client
+operator|.
+name|ResponseProcessingException
 import|;
 end_import
 
@@ -1479,7 +1493,7 @@ argument_list|>
 name|cls
 parameter_list|)
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 throws|,
 name|IllegalStateException
 block|{
@@ -1509,7 +1523,7 @@ argument_list|>
 name|genType
 parameter_list|)
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 throws|,
 name|IllegalStateException
 block|{
@@ -1543,7 +1557,7 @@ index|[]
 name|anns
 parameter_list|)
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 throws|,
 name|IllegalStateException
 block|{
@@ -1581,7 +1595,7 @@ index|[]
 name|anns
 parameter_list|)
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 throws|,
 name|IllegalStateException
 block|{
@@ -1629,7 +1643,7 @@ index|[]
 name|anns
 parameter_list|)
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 throws|,
 name|IllegalStateException
 block|{
@@ -1806,8 +1820,10 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|MessageProcessingException
+name|ResponseProcessingException
 argument_list|(
+name|this
+argument_list|,
 name|ex
 argument_list|)
 throw|;
@@ -1824,8 +1840,10 @@ block|}
 block|}
 throw|throw
 operator|new
-name|MessageProcessingException
+name|ResponseProcessingException
 argument_list|(
+name|this
+argument_list|,
 literal|"No Message Body reader is available"
 argument_list|)
 throw|;
@@ -1867,7 +1885,7 @@ name|boolean
 name|bufferEntity
 parameter_list|()
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 block|{
 if|if
 condition|(
@@ -1922,8 +1940,10 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|MessageProcessingException
+name|ResponseProcessingException
 argument_list|(
+name|this
+argument_list|,
 name|ex
 argument_list|)
 throw|;
@@ -1938,7 +1958,7 @@ name|void
 name|close
 parameter_list|()
 throws|throws
-name|MessageProcessingException
+name|ProcessingException
 block|{
 if|if
 condition|(
@@ -1978,8 +1998,10 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|MessageProcessingException
+name|ResponseProcessingException
 argument_list|(
+name|this
+argument_list|,
 name|ex
 argument_list|)
 throw|;

@@ -109,11 +109,9 @@ begin_import
 import|import
 name|javax
 operator|.
-name|ws
+name|annotation
 operator|.
-name|rs
-operator|.
-name|BindingPriority
+name|Priority
 import|;
 end_import
 
@@ -724,7 +722,7 @@ block|}
 annotation|@
 name|PreMatching
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|1
 argument_list|)
@@ -802,7 +800,7 @@ block|}
 annotation|@
 name|PreMatching
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|3
 argument_list|)
@@ -877,7 +875,7 @@ block|}
 annotation|@
 name|PreMatching
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|2
 argument_list|)
@@ -1022,7 +1020,7 @@ throw|;
 block|}
 block|}
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|3
 argument_list|)
@@ -1063,7 +1061,7 @@ expr_stmt|;
 block|}
 block|}
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|1
 argument_list|)
@@ -1135,7 +1133,7 @@ expr_stmt|;
 block|}
 block|}
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|4
 argument_list|)
@@ -1216,7 +1214,7 @@ expr_stmt|;
 block|}
 block|}
 annotation|@
-name|BindingPriority
+name|Priority
 argument_list|(
 literal|2
 argument_list|)

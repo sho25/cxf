@@ -67,9 +67,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|client
-operator|.
-name|ClientException
+name|ProcessingException
 import|;
 end_import
 
@@ -399,7 +397,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 name|ex
 argument_list|)

@@ -147,6 +147,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|ProcessingException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|ServerErrorException
 import|;
 end_import
@@ -173,7 +185,7 @@ name|rs
 operator|.
 name|client
 operator|.
-name|ClientException
+name|ResponseProcessingException
 import|;
 end_import
 
@@ -1336,7 +1348,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClientException
+name|ProcessingException
 name|ex
 parameter_list|)
 block|{
@@ -7230,7 +7242,7 @@ name|Test
 argument_list|(
 name|expected
 operator|=
-name|ClientException
+name|ResponseProcessingException
 operator|.
 name|class
 argument_list|)
@@ -7250,7 +7262,7 @@ name|Test
 argument_list|(
 name|expected
 operator|=
-name|ClientException
+name|ResponseProcessingException
 operator|.
 name|class
 argument_list|)
@@ -7326,7 +7338,7 @@ name|Test
 argument_list|(
 name|expected
 operator|=
-name|ClientException
+name|ResponseProcessingException
 operator|.
 name|class
 argument_list|)

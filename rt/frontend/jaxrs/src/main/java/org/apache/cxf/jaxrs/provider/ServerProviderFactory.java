@@ -135,7 +135,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|BindingPriority
+name|Priorities
 import|;
 end_import
 
@@ -2875,7 +2875,7 @@ name|register
 argument_list|(
 name|provider
 argument_list|,
-name|BindingPriority
+name|Priorities
 operator|.
 name|USER
 argument_list|,
@@ -3057,7 +3057,7 @@ name|register
 argument_list|(
 name|providerClass
 argument_list|,
-name|BindingPriority
+name|Priorities
 operator|.
 name|USER
 argument_list|,
@@ -4243,24 +4243,6 @@ return|return
 literal|false
 return|;
 block|}
-annotation|@
-name|Override
-specifier|public
-name|FeatureContext
-name|setProperty
-parameter_list|(
-name|String
-name|name
-parameter_list|,
-name|Object
-name|value
-parameter_list|)
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
-block|}
 specifier|private
 name|Object
 name|createProvider
@@ -4295,6 +4277,24 @@ name|ex
 argument_list|)
 throw|;
 block|}
+block|}
+annotation|@
+name|Override
+specifier|public
+name|FeatureContext
+name|property
+parameter_list|(
+name|String
+name|arg0
+parameter_list|,
+name|Object
+name|arg1
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
 block|}
 block|}
 specifier|private

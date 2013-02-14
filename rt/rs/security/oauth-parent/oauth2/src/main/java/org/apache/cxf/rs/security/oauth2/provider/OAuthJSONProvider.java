@@ -125,6 +125,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|ProcessingException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|Produces
 import|;
 end_import
@@ -138,20 +150,6 @@ operator|.
 name|rs
 operator|.
 name|WebApplicationException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|client
-operator|.
-name|ClientException
 import|;
 end_import
 
@@ -1172,7 +1170,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 literal|"JSON Sequence is broken"
 argument_list|)

@@ -95,9 +95,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|client
-operator|.
-name|ClientException
+name|ProcessingException
 import|;
 end_import
 
@@ -501,7 +499,7 @@ if|if
 condition|(
 name|ex
 operator|instanceof
-name|ClientException
+name|ProcessingException
 condition|)
 block|{
 name|exception
@@ -514,7 +512,7 @@ block|{
 name|exception
 operator|=
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 name|ex
 argument_list|)
@@ -532,7 +530,7 @@ operator|.
 name|failed
 argument_list|(
 operator|(
-name|ClientException
+name|ProcessingException
 operator|)
 name|exception
 argument_list|)

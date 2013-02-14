@@ -79,9 +79,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|client
-operator|.
-name|ClientException
+name|ProcessingException
 import|;
 end_import
 
@@ -1013,7 +1011,7 @@ name|Test
 argument_list|(
 name|expected
 operator|=
-name|ClientException
+name|ProcessingException
 operator|.
 name|class
 argument_list|)
@@ -1176,7 +1174,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|ClientException
+name|ProcessingException
 name|ex
 parameter_list|)
 block|{

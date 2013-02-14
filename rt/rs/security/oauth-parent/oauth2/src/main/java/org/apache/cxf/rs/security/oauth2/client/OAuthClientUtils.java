@@ -79,9 +79,21 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|ProcessingException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|client
 operator|.
-name|ClientException
+name|ResponseProcessingException
 import|;
 end_import
 
@@ -677,7 +689,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 name|ex
 argument_list|)
@@ -781,8 +793,10 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ResponseProcessingException
 argument_list|(
+name|response
+argument_list|,
 name|ex
 argument_list|)
 throw|;
@@ -1339,7 +1353,7 @@ else|else
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 operator|new
 name|OAuthServiceException

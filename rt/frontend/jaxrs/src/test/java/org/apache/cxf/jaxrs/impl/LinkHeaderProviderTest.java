@@ -213,6 +213,11 @@ name|headerValue
 init|=
 literal|"<http://bar>;rel=next;title=\"Next Link\";type=text/xml;method=get"
 decl_stmt|;
+name|String
+name|expected
+init|=
+literal|"<http://bar>;rel=\"next\";title=\"Next Link\";type=\"text/xml\";method=\"get\""
+decl_stmt|;
 name|Link
 name|l
 init|=
@@ -233,9 +238,9 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|result
+name|expected
 argument_list|,
-name|headerValue
+name|result
 argument_list|)
 expr_stmt|;
 block|}

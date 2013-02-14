@@ -238,9 +238,7 @@ name|Builder
 name|builder
 init|=
 operator|new
-name|Link
-operator|.
-name|Builder
+name|LinkBuilderImpl
 argument_list|()
 decl_stmt|;
 name|builder

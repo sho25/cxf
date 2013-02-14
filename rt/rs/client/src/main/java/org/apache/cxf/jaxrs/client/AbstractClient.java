@@ -223,6 +223,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|ProcessingException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|WebApplicationException
 import|;
 end_import
@@ -237,7 +249,7 @@ name|rs
 operator|.
 name|client
 operator|.
-name|ClientException
+name|ResponseProcessingException
 import|;
 end_import
 
@@ -2923,7 +2935,7 @@ name|contentType
 argument_list|,
 literal|null
 argument_list|,
-literal|null
+name|r
 argument_list|)
 expr_stmt|;
 block|}
@@ -3169,7 +3181,7 @@ if|if
 condition|(
 name|ex
 operator|instanceof
-name|ClientException
+name|ProcessingException
 condition|)
 block|{
 throw|throw
@@ -3186,7 +3198,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 name|ex
 argument_list|)
@@ -3283,7 +3295,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 literal|"Response timeout"
 argument_list|)
@@ -4360,9 +4372,16 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|response
+operator|==
+literal|null
+condition|)
+block|{
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 name|errorMsg
 operator|.
@@ -4372,6 +4391,24 @@ argument_list|,
 name|cause
 argument_list|)
 throw|;
+block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|ResponseProcessingException
+argument_list|(
+name|response
+argument_list|,
+name|errorMsg
+operator|.
+name|toString
+argument_list|()
+argument_list|,
+name|cause
+argument_list|)
+throw|;
+block|}
 block|}
 specifier|private
 specifier|static

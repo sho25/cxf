@@ -215,7 +215,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|WebApplicationException
+name|ProcessingException
 import|;
 end_import
 
@@ -227,9 +227,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|client
-operator|.
-name|ClientException
+name|WebApplicationException
 import|;
 end_import
 
@@ -4303,7 +4301,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|ClientException
+name|ProcessingException
 argument_list|(
 name|errorMsg
 operator|.
