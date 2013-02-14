@@ -116,7 +116,7 @@ name|SimpleAuthorizingInterceptor
 extends|extends
 name|AbstractAuthorizingInInterceptor
 block|{
-specifier|private
+specifier|protected
 name|Map
 argument_list|<
 name|String
@@ -140,7 +140,7 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|private
+specifier|protected
 name|Map
 argument_list|<
 name|String
@@ -157,7 +157,7 @@ operator|.
 name|emptyMap
 argument_list|()
 decl_stmt|;
-specifier|private
+specifier|protected
 name|List
 argument_list|<
 name|String
