@@ -1874,19 +1874,22 @@ operator|instanceof
 name|SoapFault
 argument_list|)
 expr_stmt|;
-comment|// verify a partial error text match to exclude an unexpected exception
-comment|// because there is a mustUnderstand header that is not understood,
-comment|// the corresponding error is returned.
 specifier|final
 name|String
 name|text
 init|=
-literal|"MustUnderstand headers: "
-operator|+
-literal|"[{http://cxf.apache.org/invalid}Sequence] are not understood."
+literal|"WS-ReliableMessaging is required"
 decl_stmt|;
 name|assertTrue
 argument_list|(
+name|e
+operator|.
+name|getCause
+argument_list|()
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
 name|e
 operator|.
 name|getCause
