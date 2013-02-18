@@ -595,6 +595,10 @@ name|ourCause
 operator|!=
 literal|null
 operator|&&
+operator|(
+operator|!
+name|hasSuppressed
+operator|||
 name|ourCause
 operator|!=
 name|suppressed
@@ -603,6 +607,7 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
+operator|)
 condition|)
 block|{
 name|printThrowable
