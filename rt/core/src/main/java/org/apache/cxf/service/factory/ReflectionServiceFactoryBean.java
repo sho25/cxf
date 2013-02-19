@@ -16015,6 +16015,19 @@ name|WSDLException
 name|e
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+literal|"Failed to parse WSDL"
+argument_list|,
+name|e
+argument_list|)
+expr_stmt|;
 return|return
 literal|true
 return|;
