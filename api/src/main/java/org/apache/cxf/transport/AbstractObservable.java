@@ -135,10 +135,7 @@ name|old
 init|=
 name|incomingObserver
 decl_stmt|;
-name|incomingObserver
-operator|=
-name|observer
-expr_stmt|;
+comment|// the observer switch must take place before activation or after deactivation
 if|if
 condition|(
 name|observer
@@ -146,6 +143,10 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|incomingObserver
+operator|=
+name|observer
+expr_stmt|;
 name|getLogger
 argument_list|()
 operator|.
@@ -208,6 +209,10 @@ name|deactivate
 argument_list|()
 expr_stmt|;
 block|}
+name|incomingObserver
+operator|=
+name|observer
+expr_stmt|;
 block|}
 block|}
 block|}
