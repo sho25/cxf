@@ -1673,6 +1673,9 @@ parameter_list|)
 block|{
 name|message
 operator|.
+name|getExchange
+argument_list|()
+operator|.
 name|put
 argument_list|(
 name|Message

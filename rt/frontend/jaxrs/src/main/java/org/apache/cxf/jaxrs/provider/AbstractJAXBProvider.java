@@ -4348,7 +4348,6 @@ argument_list|)
 throw|;
 block|}
 specifier|protected
-specifier|static
 name|void
 name|handleJAXBException
 parameter_list|(
@@ -4475,7 +4474,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-specifier|static
 name|void
 name|handleXMLStreamException
 parameter_list|(
