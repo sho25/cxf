@@ -411,6 +411,13 @@ name|foundPolicy
 operator|=
 literal|true
 expr_stmt|;
+name|kerberosToken
+operator|.
+name|setPolicy
+argument_list|(
+name|child
+argument_list|)
+expr_stmt|;
 name|NodeList
 name|policyChildren
 init|=

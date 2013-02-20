@@ -410,6 +410,13 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|x509Token
+operator|.
+name|setPolicy
+argument_list|(
+name|policyElement
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|DOMUtils

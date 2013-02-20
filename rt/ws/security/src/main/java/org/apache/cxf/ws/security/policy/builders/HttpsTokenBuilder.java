@@ -421,6 +421,13 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|httpsToken
+operator|.
+name|setPolicy
+argument_list|(
+name|polEl
+argument_list|)
+expr_stmt|;
 name|Element
 name|child
 init|=

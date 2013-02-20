@@ -426,6 +426,13 @@ name|foundPolicy
 operator|=
 literal|true
 expr_stmt|;
+name|conversationToken
+operator|.
+name|setPolicy
+argument_list|(
+name|elem
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|DOMUtils

@@ -583,6 +583,13 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+name|issuedToken
+operator|.
+name|setPolicy
+argument_list|(
+name|child
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|Iterator

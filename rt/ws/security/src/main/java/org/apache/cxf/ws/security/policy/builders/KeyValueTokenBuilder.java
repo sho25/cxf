@@ -412,6 +412,13 @@ literal|"sp:KeyValueToken/wsp:Policy must have a value"
 argument_list|)
 throw|;
 block|}
+name|token
+operator|.
+name|setPolicy
+argument_list|(
+name|polEl
+argument_list|)
+expr_stmt|;
 name|Element
 name|child
 init|=

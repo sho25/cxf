@@ -398,6 +398,13 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|usernameToken
+operator|.
+name|setPolicy
+argument_list|(
+name|polEl
+argument_list|)
+expr_stmt|;
 name|NodeList
 name|children
 init|=
