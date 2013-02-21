@@ -460,6 +460,24 @@ name|boolean
 name|expectEncoded
 decl_stmt|;
 specifier|public
+name|FormEncodingProvider
+parameter_list|()
+block|{              }
+specifier|public
+name|FormEncodingProvider
+parameter_list|(
+name|boolean
+name|expectEncoded
+parameter_list|)
+block|{
+name|this
+operator|.
+name|expectEncoded
+operator|=
+name|expectEncoded
+expr_stmt|;
+block|}
+specifier|public
 name|void
 name|setExpectedEncoded
 parameter_list|(
