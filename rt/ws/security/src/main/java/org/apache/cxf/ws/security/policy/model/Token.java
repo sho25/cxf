@@ -110,6 +110,11 @@ specifier|private
 name|Element
 name|policy
 decl_stmt|;
+comment|/**      * A reference to the DOM wst:Claims child Element      */
+specifier|private
+name|Element
+name|claims
+decl_stmt|;
 comment|/**      * A Reference to a parent SupportingToken assertion      */
 specifier|private
 name|SupportingToken
@@ -345,6 +350,30 @@ operator|.
 name|policy
 operator|=
 name|policy
+expr_stmt|;
+block|}
+specifier|public
+name|Element
+name|getClaims
+parameter_list|()
+block|{
+return|return
+name|claims
+return|;
+block|}
+specifier|public
+name|void
+name|setClaims
+parameter_list|(
+name|Element
+name|claims
+parameter_list|)
+block|{
+name|this
+operator|.
+name|claims
+operator|=
+name|claims
 expr_stmt|;
 block|}
 block|}

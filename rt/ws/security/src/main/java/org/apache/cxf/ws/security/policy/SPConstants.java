@@ -1312,6 +1312,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CLAIMS
+init|=
+literal|"Claims"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|REQUIRE_DERIVED_KEYS
 init|=
 literal|"RequireDerivedKeys"
