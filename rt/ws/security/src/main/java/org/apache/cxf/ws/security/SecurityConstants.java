@@ -263,6 +263,24 @@ name|TIMESTAMP_FUTURE_TTL
 init|=
 literal|"ws-security.timestamp.futureTimeToLive"
 decl_stmt|;
+comment|/**      * The time in seconds to append to the Creation value of an incoming UsernameToken to determine      * whether to accept the UsernameToken as valid or not. The default value is 300 seconds (5 minutes).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|USERNAMETOKEN_TTL
+init|=
+literal|"ws-security.usernametoken.timeToLive"
+decl_stmt|;
+comment|/**      * The time in seconds in the future within which the Created time of an incoming       * UsernameToken is valid. The default value is "60", to avoid problems where clocks are       * slightly askew. To reject all future-created UsernameTokens, set this value to "0".       */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|USERNAMETOKEN_FUTURE_TTL
+init|=
+literal|"ws-security.usernametoken.futureTimeToLive"
+decl_stmt|;
 comment|/**      * The attribute URI of the SAML AttributeStatement where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
 specifier|public
 specifier|static
