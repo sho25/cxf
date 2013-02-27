@@ -1831,6 +1831,10 @@ condition|(
 name|publishedEndpointUrl
 operator|!=
 literal|null
+operator|&&
+name|wsdlLocation
+operator|!=
+literal|null
 condition|)
 block|{
 name|endpointInfo
