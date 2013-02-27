@@ -1487,7 +1487,7 @@ literal|"Get the message from the request for processing"
 argument_list|)
 expr_stmt|;
 block|}
-name|copyKnownRequestParameters
+name|copyKnownRequestAttributes
 argument_list|(
 name|req
 argument_list|,
@@ -1532,7 +1532,7 @@ block|}
 block|}
 specifier|private
 name|void
-name|copyKnownRequestParameters
+name|copyKnownRequestAttributes
 parameter_list|(
 name|HttpServletRequest
 name|request
@@ -1549,7 +1549,7 @@ name|SERVICE_REDIRECTION
 argument_list|,
 name|request
 operator|.
-name|getParameter
+name|getAttribute
 argument_list|(
 name|SERVICE_REDIRECTION
 argument_list|)

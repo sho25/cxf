@@ -1860,8 +1860,8 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|String
-name|getParameter
+name|Object
+name|getAttribute
 parameter_list|(
 name|String
 name|name
@@ -1886,7 +1886,7 @@ block|}
 return|return
 name|super
 operator|.
-name|getParameter
+name|getAttribute
 argument_list|(
 name|name
 argument_list|)
