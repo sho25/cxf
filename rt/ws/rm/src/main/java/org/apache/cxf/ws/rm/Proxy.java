@@ -725,6 +725,16 @@ name|getIdentifier
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|ts
+operator|.
+name|setLastMsgNumber
+argument_list|(
+name|ss
+operator|.
+name|getCurrentMessageNr
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|EncoderDecoder
 name|codec
 init|=

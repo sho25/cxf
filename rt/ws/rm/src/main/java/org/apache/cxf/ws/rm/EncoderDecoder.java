@@ -245,6 +245,14 @@ argument_list|>
 name|getTerminateSequenceType
 parameter_list|()
 function_decl|;
+comment|/**      * Get the class used for the TerminateSequenceResponseType.      *       * @return class      */
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|getTerminateSequenceResponseType
+parameter_list|()
+function_decl|;
 comment|/**      * Builds an element containing WS-RM headers. This adds the appropriate WS-RM and WS-A namespace      * declarations to the element, and then adds any WS-RM headers set in the supplied properties as child      * elements.      *       * @param rmps      * @param qname constructed element name      * @return element      */
 name|Element
 name|buildHeaders
