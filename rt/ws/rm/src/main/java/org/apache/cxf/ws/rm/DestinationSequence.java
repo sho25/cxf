@@ -507,10 +507,12 @@ name|String
 name|correlationID
 decl_stmt|;
 specifier|private
+specifier|volatile
 name|long
 name|inProcessNumber
 decl_stmt|;
 specifier|private
+specifier|volatile
 name|long
 name|highNumberCompleted
 decl_stmt|;
