@@ -1187,7 +1187,7 @@ operator|.
 name|normalize
 argument_list|()
 operator|.
-name|getPath
+name|getRawPath
 argument_list|()
 argument_list|)
 expr_stmt|;
