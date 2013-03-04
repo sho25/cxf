@@ -3195,6 +3195,14 @@ block|{
 name|QName
 name|qname
 init|=
+name|actualClass
+operator|==
+name|Document
+operator|.
+name|class
+condition|?
+literal|null
+else|:
 name|getQName
 argument_list|(
 name|actualClass
