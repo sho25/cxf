@@ -209,6 +209,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_CLIENT_JAR
+init|=
+literal|"clientjar"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_ALL
 init|=
 literal|"all"
