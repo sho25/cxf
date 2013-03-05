@@ -1363,6 +1363,27 @@ argument_list|(
 name|m
 argument_list|)
 decl_stmt|;
+comment|// if there is no adapter, yet we have a collection make sure
+comment|// we return the Generic type; if there is an annotation let the
+comment|// adapter handle what gets populated
+if|if
+condition|(
+name|adapter
+operator|==
+literal|null
+operator|&&
+name|m
+operator|.
+name|getGenericReturnType
+argument_list|()
+operator|instanceof
+name|ParameterizedType
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|Class
 argument_list|<
 name|?

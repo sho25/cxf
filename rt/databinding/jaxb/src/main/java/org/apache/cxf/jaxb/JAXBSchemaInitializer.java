@@ -3758,6 +3758,35 @@ argument_list|(
 name|m
 argument_list|)
 decl_stmt|;
+comment|// we want to return the right type for collections so if we get null
+comment|// from the return type we check if it's ParameterizedType and get the
+comment|// generic return type.
+if|if
+condition|(
+operator|(
+name|type
+operator|==
+literal|null
+operator|)
+operator|&&
+operator|(
+name|m
+operator|.
+name|getGenericReturnType
+argument_list|()
+operator|instanceof
+name|ParameterizedType
+operator|)
+condition|)
+block|{
+name|type
+operator|=
+name|m
+operator|.
+name|getGenericReturnType
+argument_list|()
+expr_stmt|;
+block|}
 name|JAXBBeanInfo
 name|beanInfo
 init|=
