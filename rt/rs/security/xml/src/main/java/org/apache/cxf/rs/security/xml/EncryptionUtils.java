@@ -113,9 +113,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
+operator|.
+name|ext
 operator|.
 name|WSSecurityException
 import|;
@@ -127,9 +129,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|util
 operator|.
@@ -334,6 +336,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILED_ENCRYPTION
 argument_list|,
 literal|null
@@ -355,6 +359,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILED_ENCRYPTION
 argument_list|,
@@ -490,6 +496,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILED_ENCRYPTION
 argument_list|,
 literal|null
@@ -511,6 +519,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILED_ENCRYPTION
 argument_list|,
@@ -784,11 +794,9 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|UNSUPPORTED_ALGORITHM
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|,
 name|ex
 argument_list|)

@@ -87,9 +87,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
+operator|.
+name|ext
 operator|.
 name|WSSecurityException
 import|;
@@ -101,13 +103,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
-operator|.
-name|ext
 operator|.
 name|builder
 operator|.
@@ -121,9 +121,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|util
 operator|.
@@ -317,6 +317,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -367,6 +369,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -428,6 +432,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -470,6 +476,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -597,6 +605,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -733,6 +743,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -779,6 +791,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -924,6 +938,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -973,6 +989,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -1010,6 +1028,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -1099,6 +1119,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -1152,6 +1174,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -1181,6 +1205,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -1221,6 +1247,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
@@ -1267,6 +1295,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
@@ -1311,6 +1341,8 @@ operator|new
 name|WSSecurityException
 argument_list|(
 name|WSSecurityException
+operator|.
+name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,

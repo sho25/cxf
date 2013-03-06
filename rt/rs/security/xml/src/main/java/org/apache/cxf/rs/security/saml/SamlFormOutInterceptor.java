@@ -173,15 +173,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -259,7 +257,7 @@ operator|.
 name|SAML_TOKEN_ELEMENT
 argument_list|)
 decl_stmt|;
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertionWrapper
 decl_stmt|;
 if|if
@@ -272,7 +270,7 @@ block|{
 name|assertionWrapper
 operator|=
 operator|new
-name|AssertionWrapper
+name|SamlAssertionWrapper
 argument_list|(
 name|samlToken
 argument_list|)

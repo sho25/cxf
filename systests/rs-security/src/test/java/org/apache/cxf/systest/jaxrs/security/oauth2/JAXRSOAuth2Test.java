@@ -397,11 +397,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
-operator|.
-name|components
+name|common
 operator|.
 name|crypto
 operator|.

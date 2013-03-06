@@ -171,15 +171,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -358,7 +356,7 @@ operator|.
 name|getDocumentElement
 argument_list|()
 decl_stmt|;
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertion
 init|=
 name|SAMLUtils

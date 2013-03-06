@@ -439,15 +439,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|OpenSAMLUtil
 import|;
 end_import
 
@@ -457,15 +455,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|OpenSAMLUtil
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -900,11 +896,11 @@ operator|.
 name|getAssertion
 argument_list|()
 decl_stmt|;
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertionWrapper
 init|=
 operator|new
-name|AssertionWrapper
+name|SamlAssertionWrapper
 argument_list|(
 name|DOMUtils
 operator|.
@@ -955,7 +951,7 @@ parameter_list|(
 name|Message
 name|m
 parameter_list|,
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertionWrapper
 parameter_list|)
 block|{
