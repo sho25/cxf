@@ -471,7 +471,7 @@ name|WSS_X509_PKI_PATH_V1_TOKEN10
 operator|.
 name|equals
 argument_list|(
-name|requiredType
+name|requiredVersionAndType
 argument_list|)
 operator|||
 name|SPConstants
@@ -480,7 +480,7 @@ name|WSS_X509_PKI_PATH_V1_TOKEN11
 operator|.
 name|equals
 argument_list|(
-name|requiredType
+name|requiredVersionAndType
 argument_list|)
 condition|)
 block|{

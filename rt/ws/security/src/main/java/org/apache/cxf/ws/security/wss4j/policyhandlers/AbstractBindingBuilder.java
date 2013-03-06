@@ -3468,7 +3468,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampLast
+name|LaxTimestampFirst
 operator|+
 literal|" requires a timestamp"
 argument_list|)
