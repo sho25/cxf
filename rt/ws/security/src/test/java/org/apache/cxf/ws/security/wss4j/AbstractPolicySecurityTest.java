@@ -2001,7 +2001,7 @@ name|cryptoProps
 operator|.
 name|getProperty
 argument_list|(
-literal|"org.apache.wss4j.dom.crypto.merlin.keystore.alias"
+literal|"org.apache.ws.security.crypto.merlin.keystore.alias"
 argument_list|)
 decl_stmt|;
 name|CryptoType
