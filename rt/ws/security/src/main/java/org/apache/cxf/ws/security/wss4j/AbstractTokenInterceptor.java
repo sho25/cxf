@@ -451,11 +451,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
-name|WSConstants
+name|ext
+operator|.
+name|WSPasswordCallback
 import|;
 end_import
 
@@ -465,11 +467,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
-name|WSPasswordCallback
+name|WSConstants
 import|;
 end_import
 
@@ -1202,8 +1204,10 @@ parameter_list|,
 name|Token
 name|info
 parameter_list|,
-name|int
-name|type
+name|WSPasswordCallback
+operator|.
+name|Usage
+name|usage
 parameter_list|,
 name|SoapMessage
 name|message
@@ -1248,7 +1252,7 @@ name|WSPasswordCallback
 argument_list|(
 name|userName
 argument_list|,
-name|type
+name|usage
 argument_list|)
 block|}
 decl_stmt|;

@@ -73,15 +73,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -112,7 +110,7 @@ parameter_list|(
 name|Element
 name|claimsPolicy
 parameter_list|,
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertion
 parameter_list|)
 block|{
@@ -274,7 +272,7 @@ specifier|private
 name|boolean
 name|findClaimInAssertion
 parameter_list|(
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertion
 parameter_list|,
 name|URI

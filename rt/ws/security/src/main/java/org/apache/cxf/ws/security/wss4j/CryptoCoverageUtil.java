@@ -185,9 +185,25 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
+operator|.
+name|ext
+operator|.
+name|WSSecurityException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|dom
 operator|.
 name|WSConstants
 import|;
@@ -199,25 +215,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|WSDataRef
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|WSSecurityException
 import|;
 end_import
 
@@ -442,6 +444,12 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -556,6 +564,12 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -812,6 +826,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|)
 throw|;
@@ -889,6 +905,12 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
 literal|"The "
 operator|+
 name|getCoverageTypeString

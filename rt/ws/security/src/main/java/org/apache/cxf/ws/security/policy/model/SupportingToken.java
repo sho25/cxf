@@ -448,7 +448,7 @@ operator|=
 name|signedParts
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      * @see org.apache.ws.security.policy.TokenWrapper#setToken(org.apache.ws.security.policy.Token)      */
+comment|/*      * (non-Javadoc)      * @see org.apache.wss4j.dom.policy.TokenWrapper#setToken(org.apache.ws.security.policy.Token)      */
 specifier|public
 name|void
 name|setToken
