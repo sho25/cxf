@@ -55,11 +55,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
+name|wss4j
 operator|.
 name|policy
 operator|.
@@ -75,17 +71,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
+name|wss4j
 operator|.
 name|policy
 operator|.
 name|model
 operator|.
-name|Token
+name|AbstractToken
 import|;
 end_import
 
@@ -104,7 +96,7 @@ specifier|protected
 name|boolean
 name|isTokenRequired
 parameter_list|(
-name|Token
+name|AbstractToken
 name|token
 parameter_list|,
 name|Message
@@ -116,7 +108,7 @@ name|inclusion
 init|=
 name|token
 operator|.
-name|getInclusion
+name|getIncludeTokenType
 argument_list|()
 decl_stmt|;
 if|if
