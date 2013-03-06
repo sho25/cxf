@@ -450,6 +450,8 @@ name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
+literal|null
+argument_list|,
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -569,6 +571,8 @@ operator|.
 name|ErrorCode
 operator|.
 name|FAILURE
+argument_list|,
+literal|null
 argument_list|,
 literal|"The "
 operator|+
@@ -910,6 +914,8 @@ operator|.
 name|ErrorCode
 operator|.
 name|FAILURE
+argument_list|,
+literal|null
 argument_list|,
 literal|"The "
 operator|+

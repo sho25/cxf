@@ -737,7 +737,7 @@ name|setProperty
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_FILE
+name|SIG_VER_PROP_FILE
 argument_list|,
 literal|"insecurity.properties"
 argument_list|)
