@@ -335,15 +335,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -715,7 +713,7 @@ name|String
 name|clientId
 parameter_list|)
 block|{
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|wrapper
 init|=
 name|toWrapper

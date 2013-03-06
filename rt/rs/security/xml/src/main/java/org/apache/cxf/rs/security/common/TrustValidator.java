@@ -158,7 +158,7 @@ argument_list|()
 decl_stmt|;
 name|data
 operator|.
-name|setSigCrypto
+name|setSigVerCrypto
 argument_list|(
 name|crypto
 argument_list|)

@@ -121,9 +121,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
+operator|.
+name|ext
 operator|.
 name|WSSecurityException
 import|;
@@ -135,15 +137,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -747,11 +747,11 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|wrapper
 init|=
 operator|new
-name|AssertionWrapper
+name|SamlAssertionWrapper
 argument_list|(
 name|assertionElement
 argument_list|)
