@@ -25,15 +25,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -49,7 +47,7 @@ block|{
 name|void
 name|handle
 parameter_list|(
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertionWrapper
 parameter_list|,
 name|TokenProviderParameters

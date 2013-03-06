@@ -137,9 +137,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|CustomTokenPrincipal
 import|;
@@ -151,11 +151,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|xml
 operator|.
 name|security
 operator|.
-name|util
+name|utils
 operator|.
 name|Base64
 import|;
