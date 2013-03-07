@@ -25,17 +25,15 @@ end_package
 
 begin_import
 import|import
-name|org
+name|javax
 operator|.
-name|apache
+name|ws
 operator|.
-name|cxf
+name|rs
 operator|.
-name|common
+name|core
 operator|.
-name|util
-operator|.
-name|Base64Exception
+name|Form
 import|;
 end_import
 
@@ -47,13 +45,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|common
 operator|.
-name|ext
+name|util
 operator|.
-name|form
-operator|.
-name|Form
+name|Base64Exception
 import|;
 end_import
 
@@ -137,7 +133,7 @@ parameter_list|)
 block|{
 name|form
 operator|.
-name|set
+name|param
 argument_list|(
 name|Constants
 operator|.
@@ -150,7 +146,7 @@ argument_list|)
 expr_stmt|;
 name|form
 operator|.
-name|set
+name|param
 argument_list|(
 name|Constants
 operator|.
