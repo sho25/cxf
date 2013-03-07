@@ -93,9 +93,9 @@ name|ws
 operator|.
 name|security
 operator|.
-name|policy
+name|wss4j
 operator|.
-name|SP12Constants
+name|UsernameTokenInterceptor
 import|;
 end_import
 
@@ -105,15 +105,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
 name|wss4j
 operator|.
-name|UsernameTokenInterceptor
+name|policy
+operator|.
+name|SP12Constants
 import|;
 end_import
 

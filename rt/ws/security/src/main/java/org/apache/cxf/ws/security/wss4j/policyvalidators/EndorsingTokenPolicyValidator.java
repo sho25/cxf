@@ -93,15 +93,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|wss4j
 operator|.
-name|ws
+name|dom
 operator|.
-name|security
-operator|.
-name|policy
-operator|.
-name|SP12Constants
+name|WSSecurityEngineResult
 import|;
 end_import
 
@@ -113,9 +109,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|policy
 operator|.
-name|WSSecurityEngineResult
+name|SP12Constants
 import|;
 end_import
 

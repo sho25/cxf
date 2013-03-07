@@ -197,11 +197,7 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
+name|wss4j
 operator|.
 name|policy
 operator|.

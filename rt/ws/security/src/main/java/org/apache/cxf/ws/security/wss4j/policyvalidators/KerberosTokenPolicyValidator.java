@@ -83,15 +83,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|wss4j
 operator|.
-name|ws
+name|dom
 operator|.
-name|security
+name|message
 operator|.
-name|policy
+name|token
 operator|.
-name|SP12Constants
+name|KerberosSecurity
 import|;
 end_import
 
@@ -103,13 +103,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|policy
 operator|.
-name|message
-operator|.
-name|token
-operator|.
-name|KerberosSecurity
+name|SP12Constants
 import|;
 end_import
 

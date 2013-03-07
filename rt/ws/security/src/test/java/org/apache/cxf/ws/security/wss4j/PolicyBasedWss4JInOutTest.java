@@ -53,9 +53,11 @@ name|ws
 operator|.
 name|security
 operator|.
-name|policy
+name|wss4j
 operator|.
-name|SP12Constants
+name|CryptoCoverageUtil
+operator|.
+name|CoverageType
 import|;
 end_import
 
@@ -65,17 +67,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
 name|wss4j
 operator|.
-name|CryptoCoverageUtil
+name|policy
 operator|.
-name|CoverageType
+name|SP12Constants
 import|;
 end_import
 
