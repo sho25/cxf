@@ -11436,8 +11436,6 @@ name|getTypes
 argument_list|(
 literal|"text/plain"
 argument_list|)
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 name|assertSame
@@ -11477,8 +11475,6 @@ name|getTypes
 argument_list|(
 literal|"text/xml"
 argument_list|)
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -11523,8 +11519,6 @@ argument_list|(
 literal|"*,text/plain,text/xml"
 argument_list|)
 argument_list|)
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -11569,8 +11563,6 @@ argument_list|(
 literal|"*,text/plain, text/xml,x/y"
 argument_list|)
 argument_list|)
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -14587,8 +14579,6 @@ argument_list|,
 name|requestContentType
 argument_list|,
 name|acceptContentTypes
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 if|if

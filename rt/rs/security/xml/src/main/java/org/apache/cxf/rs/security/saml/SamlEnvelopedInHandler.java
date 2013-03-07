@@ -47,9 +47,21 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|core
+name|HttpMethod
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
 operator|.
-name|Response
+name|ws
+operator|.
+name|rs
+operator|.
+name|container
+operator|.
+name|ContainerRequestContext
 import|;
 end_import
 
@@ -125,9 +137,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|model
+name|utils
 operator|.
-name|ClassResourceInfo
+name|JAXRSUtils
 import|;
 end_import
 
@@ -199,16 +211,21 @@ name|SamlEnvelopedInHandler
 parameter_list|()
 block|{     }
 specifier|public
-name|Response
-name|handleRequest
+name|void
+name|filter
 parameter_list|(
-name|Message
-name|message
-parameter_list|,
-name|ClassResourceInfo
-name|resourceClass
+name|ContainerRequestContext
+name|context
 parameter_list|)
 block|{
+name|Message
+name|message
+init|=
+name|JAXRSUtils
+operator|.
+name|getCurrentMessage
+argument_list|()
+decl_stmt|;
 name|String
 name|method
 init|=
@@ -226,7 +243,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-literal|"GET"
+name|HttpMethod
+operator|.
+name|GET
 operator|.
 name|equals
 argument_list|(
@@ -234,9 +253,7 @@ name|method
 argument_list|)
 condition|)
 block|{
-return|return
-literal|null
-return|;
+return|return;
 block|}
 name|Document
 name|doc
@@ -509,9 +526,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-return|return
-literal|null
-return|;
 block|}
 specifier|private
 name|Element

@@ -1003,10 +1003,10 @@ block|{
 name|Priority
 name|b
 init|=
-name|providerCls
-operator|.
-name|getAnnotation
+name|getClassAnnotation
 argument_list|(
+name|providerCls
+argument_list|,
 name|Priority
 operator|.
 name|class

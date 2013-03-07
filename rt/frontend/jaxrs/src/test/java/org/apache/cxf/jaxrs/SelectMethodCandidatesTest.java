@@ -3263,8 +3263,6 @@ argument_list|,
 name|requestContentType
 argument_list|,
 name|acceptContentTypes
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 if|if

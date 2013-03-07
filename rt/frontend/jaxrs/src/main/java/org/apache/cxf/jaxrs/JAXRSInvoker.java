@@ -1700,8 +1700,6 @@ argument_list|,
 name|contentType
 argument_list|,
 name|acceptContentType
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 name|exchange
@@ -1742,6 +1740,8 @@ name|subOri
 operator|.
 name|getNameBindings
 argument_list|()
+argument_list|,
+literal|true
 argument_list|)
 condition|)
 block|{
