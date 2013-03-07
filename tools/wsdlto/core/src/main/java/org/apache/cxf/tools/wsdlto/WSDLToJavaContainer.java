@@ -2693,10 +2693,12 @@ block|{
 if|if
 condition|(
 operator|!
-name|name
+name|StringUtils
 operator|.
 name|isEmpty
-argument_list|()
+argument_list|(
+name|name
+argument_list|)
 condition|)
 block|{
 if|if
