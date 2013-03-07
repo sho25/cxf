@@ -470,6 +470,20 @@ specifier|public
 name|Trace
 parameter_list|()
 block|{         }
+comment|//when acting as a function
+specifier|public
+name|Trace
+parameter_list|(
+name|String
+name|msg
+parameter_list|)
+block|{
+name|jsStaticFunction_trace
+argument_list|(
+name|msg
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|Override
 specifier|public
