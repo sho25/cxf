@@ -939,7 +939,7 @@ name|SPConstants
 operator|.
 name|SPVersion
 operator|.
-name|SP12
+name|SP11
 argument_list|,
 name|policy
 argument_list|)
