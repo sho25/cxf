@@ -141,25 +141,9 @@ name|SPConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|policy
-operator|.
-name|model
-operator|.
-name|AlgorithmSuite
-import|;
-end_import
+begin_comment
+comment|// import org.apache.cxf.ws.security.policy.model.AlgorithmSuite;
+end_comment
 
 begin_import
 import|import
@@ -518,27 +502,7 @@ name|foundAlgorithmSuite
 operator|=
 literal|true
 expr_stmt|;
-name|parent
-operator|.
-name|setAlgorithmSuite
-argument_list|(
-operator|(
-name|AlgorithmSuite
-operator|)
-operator|new
-name|AlgorithmSuiteBuilder
-argument_list|(
-name|bus
-argument_list|)
-operator|.
-name|build
-argument_list|(
-name|child
-argument_list|,
-name|factory
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|/*                         parent.setAlgorithmSuite((AlgorithmSuite)new AlgorithmSuiteBuilder(bus)                             .build(child, factory));                             */
 block|}
 elseif|else
 if|if
