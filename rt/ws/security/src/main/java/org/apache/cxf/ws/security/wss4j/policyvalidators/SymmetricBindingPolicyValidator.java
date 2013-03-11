@@ -312,6 +312,8 @@ name|checkProtectionOrder
 argument_list|(
 name|binding
 argument_list|,
+name|aim
+argument_list|,
 name|ai
 argument_list|,
 name|results
