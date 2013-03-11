@@ -69,6 +69,20 @@ return|return
 literal|"Response"
 return|;
 block|}
+specifier|public
+name|String
+name|echo2
+parameter_list|(
+name|String
+name|request
+parameter_list|)
+throws|throws
+name|ListException2
+block|{
+return|return
+literal|"Response"
+return|;
+block|}
 block|}
 end_class
 

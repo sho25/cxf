@@ -5260,6 +5260,23 @@ operator|-
 literal|1
 argument_list|)
 expr_stmt|;
+name|unboundIndex
+operator|=
+name|wsdlContent
+operator|.
+name|indexOf
+argument_list|(
+literal|"<xs:element maxOccurs=\"unbounded\" minOccurs=\"0\" name=\"address\" type=\"tns:myData\"/>"
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|unboundIndex
+operator|>
+operator|-
+literal|1
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
