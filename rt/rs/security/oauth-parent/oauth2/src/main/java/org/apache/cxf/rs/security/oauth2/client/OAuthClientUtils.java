@@ -579,7 +579,7 @@ name|consumer
 argument_list|,
 name|grant
 argument_list|,
-literal|true
+name|setAuthorizationHeader
 argument_list|)
 return|;
 block|}
