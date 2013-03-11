@@ -1226,6 +1226,12 @@ name|String
 name|absoluteURI
 init|=
 name|i
+operator|==
+literal|null
+condition|?
+name|uri
+else|:
+name|i
 operator|.
 name|getBaseURI
 argument_list|()
