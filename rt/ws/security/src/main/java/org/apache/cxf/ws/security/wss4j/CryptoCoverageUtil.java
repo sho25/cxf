@@ -440,6 +440,22 @@ name|soapBody
 argument_list|)
 condition|)
 block|{
+name|Exception
+name|ex
+init|=
+operator|new
+name|Exception
+argument_list|(
+literal|"The "
+operator|+
+name|getCoverageTypeString
+argument_list|(
+name|type
+argument_list|)
+operator|+
+literal|" does not cover the required elements (soap:Body)."
+argument_list|)
+decl_stmt|;
 throw|throw
 operator|new
 name|WSSecurityException
@@ -450,16 +466,7 @@ name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
-literal|null
-argument_list|,
-literal|"The "
-operator|+
-name|getCoverageTypeString
-argument_list|(
-name|type
-argument_list|)
-operator|+
-literal|" does not cover the required elements (soap:Body)."
+name|ex
 argument_list|)
 throw|;
 block|}

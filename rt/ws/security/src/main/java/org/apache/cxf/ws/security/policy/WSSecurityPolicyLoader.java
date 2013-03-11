@@ -1568,6 +1568,14 @@ name|REQUIRE_ISSUER_SERIAL_REFERENCE
 block|,
 name|SP12Constants
 operator|.
+name|REQUIRE_EMBEDDED_TOKEN_REFERENCE
+block|,
+name|SP11Constants
+operator|.
+name|REQUIRE_EMBEDDED_TOKEN_REFERENCE
+block|,
+name|SP12Constants
+operator|.
 name|ENCRYPT_BEFORE_SIGNING
 block|,
 name|SP12Constants
