@@ -1083,6 +1083,13 @@ argument_list|()
 operator|)
 operator|||
 operator|(
+name|implInfo
+operator|.
+name|getSEIClass
+argument_list|()
+operator|!=
+literal|null
+operator|&&
 name|cls
 operator|.
 name|isInterface
