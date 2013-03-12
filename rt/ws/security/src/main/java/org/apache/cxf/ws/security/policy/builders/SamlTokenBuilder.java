@@ -666,7 +666,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"sp:SpnegoContextToken/wsp:Policy must have a value"
+literal|"sp:SamlToken/wsp:Policy must have a value"
 argument_list|)
 throw|;
 block|}

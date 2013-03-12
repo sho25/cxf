@@ -525,9 +525,7 @@ name|notAssertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
-operator|.
-name|LAYOUT
+name|layout
 argument_list|,
 name|error
 argument_list|)
@@ -545,9 +543,7 @@ name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
-operator|.
-name|LAYOUT
+name|layout
 argument_list|)
 expr_stmt|;
 block|}

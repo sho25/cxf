@@ -4073,15 +4073,6 @@ name|aim
 argument_list|,
 name|SP12Constants
 operator|.
-name|LAYOUT
-argument_list|)
-expr_stmt|;
-name|assertPolicy
-argument_list|(
-name|aim
-argument_list|,
-name|SP12Constants
-operator|.
 name|WSS10
 argument_list|)
 expr_stmt|;
