@@ -697,8 +697,6 @@ name|ErrorCode
 operator|.
 name|FAILED_AUTHENTICATION
 argument_list|,
-name|errorMessage
-argument_list|,
 name|ex
 argument_list|)
 throw|;
@@ -762,7 +760,11 @@ name|ErrorCode
 operator|.
 name|FAILED_AUTHENTICATION
 argument_list|,
+operator|new
+name|Exception
+argument_list|(
 name|errorMessage
+argument_list|)
 argument_list|)
 throw|;
 block|}

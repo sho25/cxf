@@ -579,8 +579,9 @@ name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
-literal|null
-argument_list|,
+operator|new
+name|Exception
+argument_list|(
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -597,6 +598,7 @@ operator|+
 name|name
 operator|+
 literal|")."
+argument_list|)
 argument_list|)
 throw|;
 block|}
@@ -922,8 +924,9 @@ name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
-literal|null
-argument_list|,
+operator|new
+name|Exception
+argument_list|(
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -936,6 +939,7 @@ operator|+
 name|xpathString
 operator|+
 literal|")."
+argument_list|)
 argument_list|)
 throw|;
 block|}
