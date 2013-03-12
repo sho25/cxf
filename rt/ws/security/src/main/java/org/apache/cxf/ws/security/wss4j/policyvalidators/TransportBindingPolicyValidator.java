@@ -573,6 +573,13 @@ name|name
 argument_list|)
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|algSuiteAis
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|AssertionInfo
@@ -588,6 +595,7 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// Check the IncludeTimestamp
 if|if

@@ -155,6 +155,9 @@ specifier|public
 name|AlgorithmSuite
 name|getAlgorithmSuite
 parameter_list|(
+name|Bus
+name|bus
+parameter_list|,
 name|SPConstants
 operator|.
 name|SPVersion

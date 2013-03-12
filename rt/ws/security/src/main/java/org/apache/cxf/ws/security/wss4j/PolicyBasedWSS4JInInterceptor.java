@@ -3913,24 +3913,6 @@ operator|.
 name|REQUIRE_EMBEDDED_TOKEN_REFERENCE
 argument_list|)
 expr_stmt|;
-name|assertPolicy
-argument_list|(
-name|aim
-argument_list|,
-name|SPConstants
-operator|.
-name|TRUST_10
-argument_list|)
-expr_stmt|;
-name|assertPolicy
-argument_list|(
-name|aim
-argument_list|,
-name|SPConstants
-operator|.
-name|WSS10
-argument_list|)
-expr_stmt|;
 comment|// WSS10
 name|assertPolicy
 argument_list|(
@@ -3977,21 +3959,21 @@ operator|.
 name|MUST_SUPPORT_REF_EMBEDDED_TOKEN
 argument_list|)
 expr_stmt|;
-comment|// Trust 1.3
+comment|// Trust 1.0
 name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
 name|SPConstants
 operator|.
-name|TRUST_13
+name|TRUST_10
 argument_list|)
 expr_stmt|;
 name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
+name|SPConstants
 operator|.
 name|MUST_SUPPORT_CLIENT_CHALLENGE
 argument_list|)
@@ -4000,7 +3982,7 @@ name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
+name|SPConstants
 operator|.
 name|MUST_SUPPORT_SERVER_CHALLENGE
 argument_list|)
@@ -4009,7 +3991,7 @@ name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
+name|SPConstants
 operator|.
 name|REQUIRE_CLIENT_ENTROPY
 argument_list|)
@@ -4018,7 +4000,7 @@ name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
+name|SPConstants
 operator|.
 name|REQUIRE_SERVER_ENTROPY
 argument_list|)
@@ -4027,9 +4009,19 @@ name|assertPolicy
 argument_list|(
 name|aim
 argument_list|,
-name|SP12Constants
+name|SPConstants
 operator|.
 name|MUST_SUPPORT_ISSUED_TOKENS
+argument_list|)
+expr_stmt|;
+comment|// Trust 1.3
+name|assertPolicy
+argument_list|(
+name|aim
+argument_list|,
+name|SPConstants
+operator|.
+name|TRUST_13
 argument_list|)
 expr_stmt|;
 name|assertPolicy

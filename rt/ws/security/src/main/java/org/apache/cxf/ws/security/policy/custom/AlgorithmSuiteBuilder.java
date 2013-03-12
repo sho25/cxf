@@ -327,6 +327,8 @@ name|loader
 operator|.
 name|getAlgorithmSuite
 argument_list|(
+name|bus
+argument_list|,
 name|spVersion
 argument_list|,
 name|nestedPolicy
