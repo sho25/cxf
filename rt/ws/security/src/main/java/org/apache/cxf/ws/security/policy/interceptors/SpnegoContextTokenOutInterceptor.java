@@ -490,6 +490,12 @@ condition|(
 name|tok
 operator|==
 literal|null
+operator|||
+operator|!
+name|tok
+operator|.
+name|isExpired
+argument_list|()
 condition|)
 block|{
 name|tok
