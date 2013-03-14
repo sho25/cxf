@@ -3945,6 +3945,15 @@ operator|.
 name|REQUIRE_EMBEDDED_TOKEN_REFERENCE
 argument_list|)
 expr_stmt|;
+name|assertPolicy
+argument_list|(
+name|aim
+argument_list|,
+name|SPConstants
+operator|.
+name|REQUIRE_INTERNAL_REFERENCE
+argument_list|)
+expr_stmt|;
 comment|// WSS10
 name|assertPolicy
 argument_list|(

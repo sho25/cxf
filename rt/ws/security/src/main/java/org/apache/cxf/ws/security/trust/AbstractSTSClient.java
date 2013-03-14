@@ -1776,14 +1776,7 @@ specifier|protected
 name|String
 name|wspNamespace
 init|=
-name|SPConstants
-operator|.
-name|SPVersion
-operator|.
-name|SP12
-operator|.
-name|getNamespace
-argument_list|()
+literal|"http://www.w3.org/ns/ws-policy"
 decl_stmt|;
 specifier|protected
 name|Object

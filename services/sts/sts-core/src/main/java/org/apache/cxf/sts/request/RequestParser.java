@@ -1373,6 +1373,13 @@ name|element
 operator|.
 name|getLocalName
 argument_list|()
+operator|+
+literal|" "
+operator|+
+name|element
+operator|.
+name|getNamespaceURI
+argument_list|()
 argument_list|)
 expr_stmt|;
 throw|throw
