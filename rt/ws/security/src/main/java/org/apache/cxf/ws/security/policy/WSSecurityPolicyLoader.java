@@ -1447,6 +1447,40 @@ name|X509TokenBuilder
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//This is for the assertions that would contain nested policies
+name|reg
+operator|.
+name|registerBuilder
+argument_list|(
+operator|new
+name|XMLPrimitiveAssertionBuilder
+argument_list|()
+block|{
+specifier|public
+name|QName
+index|[]
+name|getKnownElements
+parameter_list|()
+block|{
+return|return
+operator|new
+name|QName
+index|[]
+block|{
+comment|//SecureConversation
+name|SP12Constants
+operator|.
+name|BOOTSTRAP_POLICY
+block|,
+name|SP11Constants
+operator|.
+name|BOOTSTRAP_POLICY
+block|,                                                     }
+return|;
+block|}
+block|}
+argument_list|)
+expr_stmt|;
 comment|//add generic assertions for these known things to prevent warnings
 name|List
 argument_list|<
@@ -1749,15 +1783,6 @@ block|,
 name|SP12Constants
 operator|.
 name|MUST_NOT_SEND_RENEW
-block|,
-comment|// SecureConversation
-name|SP12Constants
-operator|.
-name|BOOTSTRAP_POLICY
-block|,
-name|SP11Constants
-operator|.
-name|BOOTSTRAP_POLICY
 block|,
 comment|// Backwards compatibility thing
 operator|new
