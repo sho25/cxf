@@ -321,6 +321,9 @@ comment|/**      * Cache the last SSLContext to avoid recreation      */
 name|SSLSocketFactory
 name|socketFactory
 decl_stmt|;
+name|int
+name|lastTlsHash
+decl_stmt|;
 comment|/**      * This constructor initialized the factory with the configured TLS      * Client Parameters for the HTTPConduit for which this factory is used.      */
 specifier|public
 name|HttpsURLConnectionFactory
@@ -485,6 +488,30 @@ parameter_list|)
 throws|throws
 name|GeneralSecurityException
 block|{
+name|int
+name|hash
+init|=
+name|tlsClientParameters
+operator|.
+name|hashCode
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|hash
+operator|!=
+name|lastTlsHash
+condition|)
+block|{
+name|lastTlsHash
+operator|=
+name|hash
+expr_stmt|;
+name|socketFactory
+operator|=
+literal|null
+expr_stmt|;
+block|}
 comment|// always reload socketFactory from HttpsURLConnection.defaultSSLSocketFactory and
 comment|// tlsClientParameters.sslSocketFactory to allow runtime configuration change
 if|if
