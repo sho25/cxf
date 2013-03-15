@@ -503,6 +503,7 @@ operator|=
 name|meta
 expr_stmt|;
 block|}
+specifier|public
 name|void
 name|setStatus
 parameter_list|(
@@ -517,6 +518,7 @@ operator|=
 name|s
 expr_stmt|;
 block|}
+specifier|public
 name|void
 name|setEntity
 parameter_list|(
@@ -541,6 +543,7 @@ operator|=
 name|anns
 expr_stmt|;
 block|}
+specifier|public
 name|Annotation
 index|[]
 name|getEntityAnnotations

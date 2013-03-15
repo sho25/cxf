@@ -2344,6 +2344,8 @@ operator|(
 name|MessageBodyWriter
 operator|)
 name|mw
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 name|int
