@@ -455,6 +455,15 @@ argument_list|(
 name|p
 argument_list|)
 expr_stmt|;
+name|providers
+operator|.
+name|add
+argument_list|(
+operator|new
+name|ContentTypeModifyingMBW
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|JAXBElementProvider
 argument_list|<
 name|?

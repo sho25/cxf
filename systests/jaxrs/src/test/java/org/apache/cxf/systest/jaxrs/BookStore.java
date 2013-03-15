@@ -1056,6 +1056,27 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
+literal|"/customtext"
+argument_list|)
+annotation|@
+name|Produces
+argument_list|(
+literal|"text/custom"
+argument_list|)
+specifier|public
+name|String
+name|getCustomBookTest
+parameter_list|()
+block|{
+return|return
+literal|"Good book"
+return|;
+block|}
+annotation|@
+name|GET
+annotation|@
+name|Path
+argument_list|(
 literal|"/booknames/123"
 argument_list|)
 annotation|@
