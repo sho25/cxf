@@ -1196,19 +1196,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-literal|"SAML token security failure"
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 operator|(
 operator|(

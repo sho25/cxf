@@ -10631,7 +10631,7 @@ name|getAllAssertionsByLocalname
 argument_list|(
 name|SPConstants
 operator|.
-name|WSS10
+name|WSS11
 argument_list|)
 expr_stmt|;
 if|if
