@@ -4781,6 +4781,18 @@ name|ServiceNameType
 operator|)
 name|jaxbVal
 decl_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINEST
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|log
@@ -4800,6 +4812,7 @@ name|getLocalPart
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|Service
 name|service
 init|=

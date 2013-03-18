@@ -3577,6 +3577,18 @@ name|class
 argument_list|)
 control|)
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINER
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|finer
@@ -3589,6 +3601,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|String
 name|inName
 init|=

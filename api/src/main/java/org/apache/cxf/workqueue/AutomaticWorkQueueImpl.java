@@ -885,6 +885,18 @@ block|}
 block|}
 block|}
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|StringBuilder
 name|buf
 init|=
@@ -953,6 +965,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|initialThreads
