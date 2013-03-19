@@ -394,7 +394,7 @@ name|add
 argument_list|(
 name|SP12Constants
 operator|.
-name|ENCRYPTED_SUPPORTING_TOKENS
+name|SIGNED_ENDORSING_SUPPORTING_TOKENS
 argument_list|)
 expr_stmt|;
 name|ASSERTION_TYPES
@@ -422,15 +422,6 @@ argument_list|(
 name|SP12Constants
 operator|.
 name|SIGNED_ENDORSING_ENCRYPTED_SUPPORTING_TOKENS
-argument_list|)
-expr_stmt|;
-name|ASSERTION_TYPES
-operator|.
-name|add
-argument_list|(
-name|SP12Constants
-operator|.
-name|SUPPORTING_TOKENS
 argument_list|)
 expr_stmt|;
 name|ASSERTION_TYPES
@@ -682,7 +673,7 @@ name|add
 argument_list|(
 name|SP11Constants
 operator|.
-name|SUPPORTING_TOKENS
+name|SIGNED_ENDORSING_SUPPORTING_TOKENS
 argument_list|)
 expr_stmt|;
 block|}

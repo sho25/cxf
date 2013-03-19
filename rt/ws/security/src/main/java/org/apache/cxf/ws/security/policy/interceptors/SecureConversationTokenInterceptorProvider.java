@@ -357,6 +357,14 @@ argument_list|,
 name|SP12Constants
 operator|.
 name|SECURE_CONVERSATION_TOKEN
+argument_list|,
+name|SP12Constants
+operator|.
+name|BOOTSTRAP_POLICY
+argument_list|,
+name|SP11Constants
+operator|.
+name|BOOTSTRAP_POLICY
 argument_list|)
 argument_list|)
 expr_stmt|;

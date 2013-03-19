@@ -1677,7 +1677,7 @@ name|SP12Constants
 operator|.
 name|LAXTSLAST
 block|,
-name|SP11Constants
+name|SP12Constants
 operator|.
 name|STRICT
 block|,

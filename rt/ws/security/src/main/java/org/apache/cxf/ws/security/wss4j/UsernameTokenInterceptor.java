@@ -1744,7 +1744,7 @@ name|tok
 operator|.
 name|getPasswordType
 argument_list|()
-operator|==
+operator|!=
 name|UsernameToken
 operator|.
 name|PasswordType
