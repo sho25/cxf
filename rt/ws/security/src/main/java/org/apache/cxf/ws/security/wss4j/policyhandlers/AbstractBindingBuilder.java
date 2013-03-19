@@ -3407,7 +3407,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampLast
+name|LaxTsLast
 operator|==
 name|layout
 operator|.
@@ -3430,7 +3430,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampLast
+name|LaxTsLast
 operator|+
 literal|" requires a timestamp"
 argument_list|)
@@ -3484,7 +3484,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampFirst
+name|LaxTsFirst
 operator|==
 name|layout
 operator|.
@@ -3507,7 +3507,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampFirst
+name|LaxTsFirst
 operator|+
 literal|" requires a timestamp"
 argument_list|)

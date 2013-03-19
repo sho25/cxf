@@ -1124,7 +1124,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampFirst
+name|LaxTsFirst
 decl_stmt|;
 name|boolean
 name|timestampLast
@@ -1138,7 +1138,7 @@ name|SPConstants
 operator|.
 name|Layout
 operator|.
-name|LaxTimestampLast
+name|LaxTsLast
 decl_stmt|;
 if|if
 condition|(

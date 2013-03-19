@@ -95,9 +95,9 @@ name|Lax
 block|,
 name|Strict
 block|,
-name|LaxTimestampFirst
+name|LaxTsFirst
 block|,
-name|LaxTimestampLast
+name|LaxTsLast
 block|}
 empty_stmt|;
 comment|////////////////////////////////////////////////////////////////////////////////////////////////
