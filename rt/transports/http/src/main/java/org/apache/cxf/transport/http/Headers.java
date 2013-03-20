@@ -1734,7 +1734,7 @@ name|getRequestProperty
 argument_list|(
 literal|"User-Agent"
 argument_list|)
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
