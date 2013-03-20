@@ -1725,18 +1725,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// make sure we don't add more than one User-Agent header
 if|if
 condition|(
-operator|!
 name|connection
 operator|.
-name|getRequestProperties
-argument_list|()
-operator|.
-name|containsKey
+name|getRequestProperty
 argument_list|(
 literal|"User-Agent"
 argument_list|)
+operator|!=
+literal|null
 condition|)
 block|{
 name|connection
