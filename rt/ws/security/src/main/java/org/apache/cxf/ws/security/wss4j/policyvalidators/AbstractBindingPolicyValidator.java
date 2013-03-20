@@ -943,7 +943,12 @@ name|results
 operator|.
 name|get
 argument_list|(
-literal|0
+name|results
+operator|.
+name|size
+argument_list|()
+operator|-
+literal|1
 argument_list|)
 operator|.
 name|get
@@ -998,12 +1003,7 @@ name|results
 operator|.
 name|get
 argument_list|(
-name|results
-operator|.
-name|size
-argument_list|()
-operator|-
-literal|1
+literal|0
 argument_list|)
 operator|.
 name|get
