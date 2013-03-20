@@ -3923,7 +3923,7 @@ if|if
 condition|(
 literal|"Content-Type"
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|header
 operator|.
