@@ -4524,8 +4524,10 @@ name|dialectAttr
 operator|=
 name|claimsElement
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"Dialect"
 argument_list|)
 expr_stmt|;

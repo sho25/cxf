@@ -9258,8 +9258,10 @@ block|{
 return|return
 name|child
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"URI"
 argument_list|)
 return|;
