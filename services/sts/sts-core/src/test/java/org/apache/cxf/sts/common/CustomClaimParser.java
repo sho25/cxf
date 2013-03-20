@@ -132,8 +132,10 @@ name|claimTypeUri
 init|=
 name|claim
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"Uri"
 argument_list|)
 decl_stmt|;
@@ -161,8 +163,10 @@ name|claimValue
 init|=
 name|claim
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"value"
 argument_list|)
 decl_stmt|;
@@ -178,8 +182,10 @@ name|scope
 init|=
 name|claim
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"scope"
 argument_list|)
 decl_stmt|;

@@ -1942,8 +1942,10 @@ name|assertionId
 init|=
 name|issuedAssertion
 operator|.
-name|getAttributeNode
+name|getAttributeNodeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"AssertionID"
 argument_list|)
 operator|.

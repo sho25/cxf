@@ -2654,8 +2654,10 @@ name|equals
 argument_list|(
 name|operation
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"name"
 argument_list|)
 argument_list|)
@@ -2740,8 +2742,10 @@ block|{
 return|return
 name|policyReference
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"URI"
 argument_list|)
 return|;
@@ -2788,8 +2792,10 @@ block|{
 return|return
 name|policyReference
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"URI"
 argument_list|)
 return|;

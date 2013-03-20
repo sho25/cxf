@@ -2590,8 +2590,10 @@ name|id
 init|=
 name|protectedElement
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"Id"
 argument_list|)
 decl_stmt|;

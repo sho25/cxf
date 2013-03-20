@@ -820,8 +820,10 @@ name|setTokenId
 argument_list|(
 name|token
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"ID"
 argument_list|)
 argument_list|)
@@ -835,8 +837,10 @@ name|setTokenId
 argument_list|(
 name|token
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"AssertionID"
 argument_list|)
 argument_list|)

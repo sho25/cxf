@@ -405,8 +405,10 @@ name|nb
 init|=
 name|e2
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"NotBefore"
 argument_list|)
 decl_stmt|;
@@ -415,8 +417,10 @@ name|noa
 init|=
 name|e2
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"NotOnOrAfter"
 argument_list|)
 decl_stmt|;
@@ -444,8 +448,10 @@ argument_list|)
 expr_stmt|;
 name|e2
 operator|.
-name|setAttribute
+name|setAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"NotBefore"
 argument_list|,
 name|nb
@@ -453,8 +459,10 @@ argument_list|)
 expr_stmt|;
 name|e2
 operator|.
-name|setAttribute
+name|setAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"NotOnOrAfter"
 argument_list|,
 name|noa

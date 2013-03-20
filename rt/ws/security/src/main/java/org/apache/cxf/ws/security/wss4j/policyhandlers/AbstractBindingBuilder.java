@@ -7105,8 +7105,10 @@ name|idAttr
 init|=
 name|elem
 operator|.
-name|getAttributeNode
+name|getAttributeNodeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"Id"
 argument_list|)
 decl_stmt|;
@@ -8610,8 +8612,10 @@ name|idAttr
 init|=
 name|el
 operator|.
-name|getAttributeNode
+name|getAttributeNodeNS
 argument_list|(
+literal|null
+argument_list|,
 literal|"Id"
 argument_list|)
 decl_stmt|;

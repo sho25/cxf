@@ -375,8 +375,10 @@ name|nameAttribute
 init|=
 name|element
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 name|SPConstants
 operator|.
 name|NAME
@@ -399,8 +401,10 @@ name|namespaceAttribute
 init|=
 name|element
 operator|.
-name|getAttribute
+name|getAttributeNS
 argument_list|(
+literal|null
+argument_list|,
 name|SPConstants
 operator|.
 name|NAMESPACE
