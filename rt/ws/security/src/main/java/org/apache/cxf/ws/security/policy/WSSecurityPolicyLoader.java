@@ -1514,6 +1514,14 @@ name|ENCRYPT_SIGNATURE
 block|,
 name|SP12Constants
 operator|.
+name|PROTECT_TOKENS
+block|,
+name|SP11Constants
+operator|.
+name|PROTECT_TOKENS
+block|,
+name|SP12Constants
+operator|.
 name|ONLY_SIGN_ENTIRE_HEADERS_AND_BODY
 block|,
 name|SP11Constants
