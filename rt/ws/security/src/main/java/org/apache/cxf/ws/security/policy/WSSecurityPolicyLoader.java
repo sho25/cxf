@@ -1640,10 +1640,6 @@ name|SP11Constants
 operator|.
 name|PROTECT_TOKENS
 block|,
-name|SP11Constants
-operator|.
-name|PROTECT_TOKENS
-block|,
 name|SP12Constants
 operator|.
 name|RSA_KEY_VALUE
