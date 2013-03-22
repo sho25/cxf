@@ -2356,15 +2356,6 @@ name|WSSecurityEngineResult
 argument_list|>
 name|signatureResults
 init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
-argument_list|()
-decl_stmt|;
-name|signatureResults
-operator|=
 name|WSSecurityUtil
 operator|.
 name|fetchAllActionResults
@@ -2374,10 +2365,8 @@ argument_list|,
 name|WSConstants
 operator|.
 name|SIGN
-argument_list|,
-name|signatureResults
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 comment|// Store the last signature result
 if|if
 condition|(
@@ -2435,15 +2424,6 @@ name|WSSecurityEngineResult
 argument_list|>
 name|timestampResults
 init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
-argument_list|()
-decl_stmt|;
-name|timestampResults
-operator|=
 name|WSSecurityUtil
 operator|.
 name|fetchAllActionResults
@@ -2453,10 +2433,8 @@ argument_list|,
 name|WSConstants
 operator|.
 name|TS
-argument_list|,
-name|timestampResults
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 operator|!

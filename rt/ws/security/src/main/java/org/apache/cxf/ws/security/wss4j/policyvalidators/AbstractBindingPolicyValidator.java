@@ -49,16 +49,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|ArrayList
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Collection
 import|;
 end_import
@@ -654,13 +644,6 @@ name|WSSecurityEngineResult
 argument_list|>
 name|timestampResults
 init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
-argument_list|()
-decl_stmt|;
 name|WSSecurityUtil
 operator|.
 name|fetchAllActionResults
@@ -670,10 +653,8 @@ argument_list|,
 name|WSConstants
 operator|.
 name|TS
-argument_list|,
-name|timestampResults
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 comment|// Check whether we received a timestamp and compare it to the policy
 if|if
 condition|(
