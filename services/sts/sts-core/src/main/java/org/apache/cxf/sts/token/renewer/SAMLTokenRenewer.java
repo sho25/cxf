@@ -3522,7 +3522,7 @@ operator|.
 name|UT_SIGN
 argument_list|)
 expr_stmt|;
-name|signedResult
+name|signedResults
 operator|.
 name|addAll
 argument_list|(
