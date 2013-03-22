@@ -3326,13 +3326,6 @@ name|WSSecurityEngineResult
 argument_list|>
 name|signedResults
 init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
-argument_list|()
-decl_stmt|;
 name|WSSecurityUtil
 operator|.
 name|fetchAllActionResults
@@ -3345,10 +3338,8 @@ argument_list|,
 name|WSConstants
 operator|.
 name|SIGN
-argument_list|,
-name|signedResults
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|IssuedTokenPolicyValidator
 name|issuedValidator
 init|=
