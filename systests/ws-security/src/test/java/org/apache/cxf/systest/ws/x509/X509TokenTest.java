@@ -4381,7 +4381,7 @@ operator|.
 name|Test
 specifier|public
 name|void
-name|testEndorsing
+name|testNegativeEndorsing
 parameter_list|()
 throws|throws
 name|Exception
@@ -4465,7 +4465,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItTransportEndorsingPort"
+literal|"DoubleItTransportNegativeEndorsingPort"
 argument_list|)
 decl_stmt|;
 name|DoubleItPortType
@@ -4504,7 +4504,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItTransportEndorsingPort2"
+literal|"DoubleItTransportNegativeEndorsingPort2"
 argument_list|)
 expr_stmt|;
 name|port
