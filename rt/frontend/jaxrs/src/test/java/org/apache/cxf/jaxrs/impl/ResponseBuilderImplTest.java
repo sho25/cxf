@@ -1916,36 +1916,36 @@ name|assertEquals
 argument_list|(
 literal|"Wrong status"
 argument_list|,
+name|status
+argument_list|,
 name|ri
 operator|.
 name|getStatus
 argument_list|()
-argument_list|,
-name|status
 argument_list|)
 expr_stmt|;
 name|assertSame
 argument_list|(
 literal|"Wrong entity"
 argument_list|,
+name|entity
+argument_list|,
 name|ri
 operator|.
 name|getEntity
 argument_list|()
-argument_list|,
-name|entity
 argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"Wrong meta"
 argument_list|,
+name|meta
+argument_list|,
 name|ri
 operator|.
 name|getMetadata
 argument_list|()
-argument_list|,
-name|meta
 argument_list|)
 expr_stmt|;
 block|}
