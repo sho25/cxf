@@ -98,15 +98,10 @@ name|int
 name|innerElementCountThreshold
 parameter_list|)
 block|{
-name|super
+name|this
 argument_list|(
 name|reader
-argument_list|)
-expr_stmt|;
-name|this
-operator|.
-name|props
-operator|=
+argument_list|,
 operator|new
 name|DocumentDepthProperties
 argument_list|(
@@ -115,6 +110,7 @@ argument_list|,
 name|innerElementLevelThreshold
 argument_list|,
 name|innerElementCountThreshold
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
