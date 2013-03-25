@@ -1453,10 +1453,14 @@ modifier|...
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
+comment|// TODO: Implement
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"Not implemented"
+argument_list|)
+throw|;
 block|}
 annotation|@
 name|Override
@@ -1471,10 +1475,14 @@ argument_list|>
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
+comment|// TODO: Implement
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"Not implemented"
+argument_list|)
+throw|;
 block|}
 annotation|@
 name|Override
@@ -1486,10 +1494,14 @@ name|String
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
+comment|// TODO: Implement
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"Not implemented"
+argument_list|)
+throw|;
 block|}
 annotation|@
 name|Override
@@ -1505,10 +1517,14 @@ index|[]
 name|arg1
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
+comment|// TODO: Implement
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"Not implemented"
+argument_list|)
+throw|;
 block|}
 annotation|@
 name|Override
@@ -1517,15 +1533,39 @@ name|ResponseBuilder
 name|link
 parameter_list|(
 name|URI
-name|arg0
+name|href
 parameter_list|,
 name|String
-name|arg1
+name|rel
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
+name|Link
+operator|.
+name|Builder
+name|linkBuilder
+init|=
+operator|new
+name|LinkBuilderImpl
+argument_list|()
+decl_stmt|;
 return|return
-literal|null
+name|links
+argument_list|(
+name|linkBuilder
+operator|.
+name|uri
+argument_list|(
+name|href
+argument_list|)
+operator|.
+name|rel
+argument_list|(
+name|rel
+argument_list|)
+operator|.
+name|build
+argument_list|()
+argument_list|)
 return|;
 block|}
 annotation|@
@@ -1535,15 +1575,39 @@ name|ResponseBuilder
 name|link
 parameter_list|(
 name|String
-name|arg0
+name|href
 parameter_list|,
 name|String
-name|arg1
+name|rel
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
+name|Link
+operator|.
+name|Builder
+name|linkBuilder
+init|=
+operator|new
+name|LinkBuilderImpl
+argument_list|()
+decl_stmt|;
 return|return
-literal|null
+name|links
+argument_list|(
+name|linkBuilder
+operator|.
+name|uri
+argument_list|(
+name|href
+argument_list|)
+operator|.
+name|rel
+argument_list|(
+name|rel
+argument_list|)
+operator|.
+name|build
+argument_list|()
+argument_list|)
 return|;
 block|}
 annotation|@
@@ -1554,12 +1618,22 @@ name|links
 parameter_list|(
 name|Link
 modifier|...
-name|arg0
+name|links
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 return|return
-literal|null
+name|addHeader
+argument_list|(
+name|HttpHeaders
+operator|.
+name|LINK
+argument_list|,
+operator|(
+name|Object
+index|[]
+operator|)
+name|links
+argument_list|)
 return|;
 block|}
 annotation|@
@@ -1577,10 +1651,14 @@ argument_list|>
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
+comment|// TODO: Implement
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"Not implemented"
+argument_list|)
+throw|;
 block|}
 annotation|@
 name|Override
@@ -1593,10 +1671,14 @@ modifier|...
 name|arg0
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
+comment|// TODO: Implement
+throw|throw
+operator|new
+name|UnsupportedOperationException
+argument_list|(
+literal|"Not implemented"
+argument_list|)
+throw|;
 block|}
 block|}
 end_class
