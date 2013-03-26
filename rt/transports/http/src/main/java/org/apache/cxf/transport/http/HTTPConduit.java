@@ -4688,6 +4688,15 @@ argument_list|(
 name|newURL
 argument_list|)
 expr_stmt|;
+name|outMessage
+operator|.
+name|put
+argument_list|(
+literal|"http.retransmit.url"
+argument_list|,
+name|newURL
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|cachedStream
