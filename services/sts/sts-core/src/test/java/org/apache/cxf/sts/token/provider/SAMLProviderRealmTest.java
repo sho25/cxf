@@ -275,9 +275,9 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|util
+name|principal
 operator|.
-name|DOM2Writer
+name|CustomTokenPrincipal
 import|;
 end_import
 
@@ -289,9 +289,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|CustomTokenPrincipal
+name|util
+operator|.
+name|DOM2Writer
 import|;
 end_import
 

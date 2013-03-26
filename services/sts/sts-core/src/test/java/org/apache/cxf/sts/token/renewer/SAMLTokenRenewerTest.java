@@ -537,9 +537,9 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|saml
+name|principal
 operator|.
-name|SamlAssertionWrapper
+name|CustomTokenPrincipal
 import|;
 end_import
 
@@ -551,9 +551,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|CustomTokenPrincipal
+name|saml
+operator|.
+name|SamlAssertionWrapper
 import|;
 end_import
 
