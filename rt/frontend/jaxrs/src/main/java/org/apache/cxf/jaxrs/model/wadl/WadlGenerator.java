@@ -2370,7 +2370,7 @@ name|publishedEndpointUrl
 return|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handleGrammars
 parameter_list|(
@@ -2508,7 +2508,7 @@ name|sbGrammars
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handleResource
 parameter_list|(
@@ -3099,7 +3099,7 @@ literal|">"
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|String
 name|getPath
 parameter_list|(
@@ -3243,7 +3243,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|//CHECKSTYLE:OFF
-specifier|private
+specifier|protected
 name|boolean
 name|handleOperation
 parameter_list|(
@@ -4151,7 +4151,7 @@ literal|"</resource>"
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handlePathAndMatrixClassParams
 parameter_list|(
@@ -4197,7 +4197,7 @@ name|MATRIX
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|doHandleClassParams
 parameter_list|(
@@ -4404,7 +4404,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handlePathAndMatrixParams
 parameter_list|(
@@ -4445,7 +4445,7 @@ name|isJson
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handleParameter
 parameter_list|(
@@ -4595,7 +4595,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handleParams
 parameter_list|(
