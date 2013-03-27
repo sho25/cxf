@@ -711,6 +711,11 @@ argument_list|(
 literal|"SOAPEXCEPTION"
 argument_list|,
 name|BUNDLE
+argument_list|,
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 argument_list|,
 name|e
@@ -850,6 +855,11 @@ argument_list|(
 literal|"SOAPEXCEPTION"
 argument_list|,
 name|BUNDLE
+argument_list|,
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 argument_list|,
 name|e
@@ -1399,6 +1409,11 @@ argument_list|(
 literal|"SOAPEXCEPTION"
 argument_list|,
 name|BUNDLE
+argument_list|,
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 argument_list|,
 name|e
