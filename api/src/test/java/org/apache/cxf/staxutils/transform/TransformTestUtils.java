@@ -686,6 +686,8 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
+literal|"parsing event"
+argument_list|,
 name|tevent
 argument_list|,
 name|revent
@@ -724,6 +726,8 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
+literal|"wrong start element."
+argument_list|,
 name|teacher
 operator|.
 name|getName
@@ -745,6 +749,8 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
+literal|"wrong start element prefix."
+argument_list|,
 name|teacher
 operator|.
 name|getPrefix
@@ -754,6 +760,13 @@ name|reader
 operator|.
 name|getPrefix
 argument_list|()
+argument_list|)
+expr_stmt|;
+name|verifyNamespaceDeclarations
+argument_list|(
+name|teacher
+argument_list|,
+name|reader
 argument_list|)
 expr_stmt|;
 block|}
@@ -799,6 +812,8 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
+literal|"wrong end element qname."
+argument_list|,
 name|teacher
 operator|.
 name|getName
@@ -840,6 +855,8 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
+literal|"wrong characteres."
+argument_list|,
 name|teacher
 operator|.
 name|getText
@@ -976,7 +993,16 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
-name|avalue
+literal|"attribute "
+operator|+
+name|teacher
+operator|.
+name|getAttributeName
+argument_list|(
+name|i
+argument_list|)
+operator|+
+literal|" has wrong value."
 argument_list|,
 name|teacher
 operator|.
@@ -984,6 +1010,8 @@ name|getAttributeValue
 argument_list|(
 name|i
 argument_list|)
+argument_list|,
+name|avalue
 argument_list|)
 expr_stmt|;
 block|}
@@ -992,12 +1020,86 @@ name|Assert
 operator|.
 name|assertTrue
 argument_list|(
+literal|"attributes must be exhausted."
+argument_list|,
 name|attributesMap
 operator|.
 name|isEmpty
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
+specifier|private
+specifier|static
+name|void
+name|verifyNamespaceDeclarations
+parameter_list|(
+name|XMLStreamReader
+name|teacher
+parameter_list|,
+name|XMLStreamReader
+name|reader
+parameter_list|)
+block|{
+name|int
+name|dcount
+init|=
+name|teacher
+operator|.
+name|getNamespaceCount
+argument_list|()
+decl_stmt|;
+for|for
+control|(
+name|int
+name|i
+init|=
+literal|0
+init|;
+name|i
+operator|<
+name|dcount
+condition|;
+name|i
+operator|++
+control|)
+block|{
+name|String
+name|p
+init|=
+name|teacher
+operator|.
+name|getNamespacePrefix
+argument_list|(
+name|i
+argument_list|)
+decl_stmt|;
+name|Assert
+operator|.
+name|assertEquals
+argument_list|(
+literal|"nsdecl prefix "
+operator|+
+name|p
+operator|+
+literal|" is incorrectly bound."
+argument_list|,
+name|teacher
+operator|.
+name|getNamespaceURI
+argument_list|(
+name|i
+argument_list|)
+argument_list|,
+name|reader
+operator|.
+name|getNamespaceURI
+argument_list|(
+name|p
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 comment|/**      * Returns the next relevant reader event.      *        * @param reader      * @return      * @throws XMLStreamException      */
 specifier|private
