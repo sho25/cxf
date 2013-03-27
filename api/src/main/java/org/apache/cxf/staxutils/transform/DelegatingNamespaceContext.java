@@ -430,6 +430,13 @@ operator|!=
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|cache
+operator|!=
+name|nss
+condition|)
+block|{
 name|cache
 operator|.
 name|put
@@ -439,6 +446,7 @@ argument_list|,
 name|ns
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ns
 return|;
@@ -642,6 +650,13 @@ argument_list|)
 argument_list|)
 condition|)
 block|{
+if|if
+condition|(
+name|pfs
+operator|!=
+name|cache
+condition|)
+block|{
 name|cache
 operator|.
 name|put
@@ -651,6 +666,7 @@ argument_list|,
 name|prefix
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|prefix
 return|;
