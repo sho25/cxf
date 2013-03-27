@@ -5645,7 +5645,7 @@ return|;
 block|}
 comment|//TODO: Collapse multiple parameters into a holder
 comment|//CHECKSTYLE:OFF
-specifier|private
+specifier|protected
 name|void
 name|handleRepresentation
 parameter_list|(
