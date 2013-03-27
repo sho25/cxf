@@ -1040,6 +1040,10 @@ decl_stmt|;
 if|if
 condition|(
 name|failHeaders
+operator|!=
+literal|null
+operator|&&
+name|failHeaders
 operator|.
 name|size
 argument_list|()
