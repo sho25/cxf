@@ -371,6 +371,24 @@ name|SUBJECT_CERT_CONSTRAINTS
 init|=
 literal|"ws-security.subject.cert.constraints"
 decl_stmt|;
+comment|/**      * The Subject Role Classifier to use. If one of the WSS4J Validators returns a JAAS Subject      * from Validation, then the WSS4JInInterceptor will attempt to create a SecurityContext      * based on this Subject. If this value is not specified, then it tries to get roles using      * the DefaultSecurityContext in cxf-rt-core. Otherwise it uses this value in combination      * with the SUBJECT_ROLE_CLASSIFIER_TYPE to get the roles from the Subject.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SUBJECT_ROLE_CLASSIFIER
+init|=
+literal|"ws-security.role.classifier"
+decl_stmt|;
+comment|/**      * The Subject Role Classifier Type to use. If one of the WSS4J Validators returns a JAAS Subject      * from Validation, then the WSS4JInInterceptor will attempt to create a SecurityContext      * based on this Subject. Currently accepted values are "prefix" or "classname". Must be      * used in conjunction with the SUBJECT_ROLE_CLASSIFIER. The default value is "prefix".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SUBJECT_ROLE_CLASSIFIER_TYPE
+init|=
+literal|"ws-security.role.classifier.type"
+decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
 comment|//
@@ -695,6 +713,10 @@ block|,
 name|TOKEN
 block|,
 name|TOKEN_ID
+block|,
+name|SUBJECT_ROLE_CLASSIFIER
+block|,
+name|SUBJECT_ROLE_CLASSIFIER_TYPE
 block|}
 argument_list|)
 argument_list|)
