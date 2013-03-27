@@ -2443,6 +2443,13 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|values
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|String
@@ -2480,6 +2487,7 @@ name|trim
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 return|return
