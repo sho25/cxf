@@ -10844,6 +10844,9 @@ name|m
 parameter_list|,
 name|OperationResourceInfo
 name|ori
+parameter_list|,
+name|Method
+name|invoked
 parameter_list|)
 throws|throws
 name|IOException
@@ -10913,7 +10916,7 @@ name|r
 argument_list|,
 name|m
 argument_list|,
-name|ori
+name|invoked
 argument_list|)
 decl_stmt|;
 for|for

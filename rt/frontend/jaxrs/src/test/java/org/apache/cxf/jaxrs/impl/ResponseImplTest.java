@@ -411,7 +411,7 @@ name|assertNull
 argument_list|(
 name|ri
 operator|.
-name|getHeader
+name|getHeaderString
 argument_list|(
 literal|"a"
 argument_list|)

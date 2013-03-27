@@ -772,8 +772,7 @@ return|return
 name|headers
 return|;
 block|}
-comment|// TODO: Make this method private with the upgrade to the latest API snapshot
-specifier|public
+specifier|private
 name|String
 name|getHeader
 parameter_list|(
