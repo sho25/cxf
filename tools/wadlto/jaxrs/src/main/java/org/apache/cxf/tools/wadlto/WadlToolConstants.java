@@ -79,6 +79,26 @@ name|ToolConstants
 operator|.
 name|CFG_XJC_ARGS
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_VERBOSE
+init|=
+name|ToolConstants
+operator|.
+name|CFG_VERBOSE
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_ENCODING
+init|=
+name|ToolConstants
+operator|.
+name|CFG_ENCODING
+decl_stmt|;
 comment|/**      * Default      */
 specifier|public
 specifier|static
