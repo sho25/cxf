@@ -477,7 +477,7 @@ name|common
 operator|.
 name|principal
 operator|.
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 import|;
 end_import
 
@@ -1759,11 +1759,11 @@ name|assertTrue
 argument_list|(
 name|p1
 operator|instanceof
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 operator|||
 name|p2
 operator|instanceof
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 argument_list|)
 expr_stmt|;
 name|Principal
@@ -1771,7 +1771,7 @@ name|utPrincipal
 init|=
 name|p1
 operator|instanceof
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 condition|?
 name|p1
 else|:

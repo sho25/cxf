@@ -77,7 +77,7 @@ name|common
 operator|.
 name|principal
 operator|.
-name|WSUsernameTokenPrincipal
+name|WSUsernameTokenPrincipalImpl
 import|;
 end_import
 
@@ -191,11 +191,11 @@ operator|.
 name|getUsernametoken
 argument_list|()
 decl_stmt|;
-name|WSUsernameTokenPrincipal
+name|WSUsernameTokenPrincipalImpl
 name|principal
 init|=
 operator|new
-name|WSUsernameTokenPrincipal
+name|WSUsernameTokenPrincipalImpl
 argument_list|(
 name|ut
 operator|.

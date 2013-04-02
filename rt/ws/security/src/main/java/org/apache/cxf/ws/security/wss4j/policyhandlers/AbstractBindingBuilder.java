@@ -889,7 +889,7 @@ name|common
 operator|.
 name|principal
 operator|.
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 import|;
 end_import
 
@@ -10557,11 +10557,11 @@ operator|.
 name|UT
 condition|)
 block|{
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 name|principal
 init|=
 operator|(
-name|WSUsernameTokenPrincipal
+name|UsernameTokenPrincipal
 operator|)
 name|wser
 operator|.
