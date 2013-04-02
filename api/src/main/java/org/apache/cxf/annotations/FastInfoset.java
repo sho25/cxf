@@ -102,11 +102,60 @@ specifier|public
 annotation_defn|@interface
 name|FastInfoset
 block|{
+comment|/**      * Set to true in order for FastInfoset to be always used without negotiation      */
 name|boolean
 name|force
 parameter_list|()
 default|default
 literal|false
+function_decl|;
+comment|/**      * Sets the property<code>attributeValueMapMemoryLimit</code> on FastInfoset StAX Serializers. The property      * controls attribute value map size and can be used to control the memory and (indirectly) CPU footprint of      * processing.      */
+name|int
+name|serializerAttributeValueMapMemoryLimit
+parameter_list|()
+default|default
+operator|-
+literal|1
+function_decl|;
+comment|/**      * Sets the property<code>minAttributeValueSize</code> on FastInfoset StAX Serializers. The property controls the      *<b>minimum</b> size of attribute values to be indexed.      */
+name|int
+name|serializerMinAttributeValueSize
+parameter_list|()
+default|default
+operator|-
+literal|1
+function_decl|;
+comment|/**      * Sets the property<code>maxAttributeValueSize</code> on FastInfoset StAX Serializers. The property controls the      *<b>maximum</b> size of attribute values to be indexed. Tests have shown that setting this property to lower      * values reduces CPU burden of processing, at the expense of larger sizes of resultant encoded Fast Infoset data.      */
+name|int
+name|serializerMaxAttributeValueSize
+parameter_list|()
+default|default
+operator|-
+literal|1
+function_decl|;
+comment|/**      * Sets the property<code>characterContentChunkMapMemoryLimit</code> on FastInfoset StAX Serializers. The property      * controls character content chunk map size and can be used to control the memory and (indirectly) CPU footprint of      * processing.      */
+name|int
+name|serializerCharacterContentChunkMapMemoryLimit
+parameter_list|()
+default|default
+operator|-
+literal|1
+function_decl|;
+comment|/**      * Sets the property<code>minCharacterContentChunkSize</code> on FastInfoset StAX Serializers. The property      * controls the<b>minimum</b> size of character content chunks to be indexed.      */
+name|int
+name|serializerMinCharacterContentChunkSize
+parameter_list|()
+default|default
+operator|-
+literal|1
+function_decl|;
+comment|/**      * Sets the property<code>maxCharacterContentChunkSize</code> on FastInfoset StAX Serializers. The property      * controls the<b>maximum</b> size of character content chunks to be indexed. Tests have shown that setting this      * property to lower values reduces CPU burden of processing, at the expense of larger sizes of resultant encoded      * Fast Infoset data.      */
+name|int
+name|serializerMaxCharacterContentChunkSize
+parameter_list|()
+default|default
+operator|-
+literal|1
 function_decl|;
 block|}
 end_annotation_defn
