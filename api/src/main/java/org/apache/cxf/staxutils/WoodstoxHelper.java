@@ -41,6 +41,20 @@ end_import
 
 begin_import
 import|import
+name|com
+operator|.
+name|ctc
+operator|.
+name|wstx
+operator|.
+name|stax
+operator|.
+name|WstxInputFactory
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|codehaus
@@ -72,14 +86,6 @@ parameter_list|()
 block|{
 return|return
 operator|new
-name|com
-operator|.
-name|ctc
-operator|.
-name|wstx
-operator|.
-name|stax
-operator|.
 name|WstxInputFactory
 argument_list|()
 return|;
