@@ -689,20 +689,6 @@ end_import
 
 begin_import
 import|import
-name|com
-operator|.
-name|ctc
-operator|.
-name|wstx
-operator|.
-name|stax
-operator|.
-name|WstxInputFactory
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -804,18 +790,6 @@ operator|.
 name|helpers
 operator|.
 name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|codehaus
-operator|.
-name|stax2
-operator|.
-name|XMLStreamReader2
 import|;
 end_import
 
@@ -1078,13 +1052,10 @@ name|Long
 operator|.
 name|MAX_VALUE
 decl_stmt|;
-comment|//will change to false in the near future
 specifier|private
 specifier|static
 name|boolean
 name|allowInsecureParser
-init|=
-literal|true
 decl_stmt|;
 static|static
 block|{
@@ -1932,8 +1903,9 @@ name|createWoodstoxFactory
 parameter_list|()
 block|{
 return|return
-operator|new
-name|WstxInputFactory
+name|WoodstoxHelper
+operator|.
+name|createInputFactory
 argument_list|()
 return|;
 block|}
@@ -9723,15 +9695,12 @@ name|Object
 name|v
 parameter_list|)
 block|{
-operator|(
-operator|(
-name|XMLStreamReader2
-operator|)
-name|reader
-operator|)
+name|WoodstoxHelper
 operator|.
 name|setProperty
 argument_list|(
+name|reader
+argument_list|,
 name|p
 argument_list|,
 name|v
