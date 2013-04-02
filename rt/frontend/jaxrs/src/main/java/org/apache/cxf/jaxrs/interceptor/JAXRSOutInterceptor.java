@@ -1093,6 +1093,15 @@ name|boolean
 name|firstTry
 parameter_list|)
 block|{
+name|response
+operator|=
+name|JAXRSUtils
+operator|.
+name|copyResponseIfNeeded
+argument_list|(
+name|response
+argument_list|)
+expr_stmt|;
 specifier|final
 name|Exchange
 name|exchange

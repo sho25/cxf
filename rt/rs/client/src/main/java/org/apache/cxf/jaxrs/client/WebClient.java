@@ -5008,7 +5008,7 @@ block|}
 block|}
 name|rb
 operator|=
-name|Response
+name|JAXRSUtils
 operator|.
 name|fromResponse
 argument_list|(
