@@ -917,6 +917,17 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+name|NegotiationUtils
+operator|.
+name|assertPolicy
+argument_list|(
+name|aim
+argument_list|,
+name|SPConstants
+operator|.
+name|BOOTSTRAP_POLICY
+argument_list|)
+expr_stmt|;
 name|Object
 name|s
 init|=
@@ -1098,6 +1109,9 @@ init|=
 name|tok
 operator|.
 name|getBootstrapPolicy
+argument_list|()
+operator|.
+name|getPolicy
 argument_list|()
 decl_stmt|;
 if|if

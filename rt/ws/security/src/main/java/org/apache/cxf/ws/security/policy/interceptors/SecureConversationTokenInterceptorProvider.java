@@ -468,6 +468,9 @@ name|itok
 operator|.
 name|getBootstrapPolicy
 argument_list|()
+operator|.
+name|getPolicy
+argument_list|()
 decl_stmt|;
 name|Policy
 name|p
