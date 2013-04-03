@@ -4139,6 +4139,9 @@ name|andReturn
 argument_list|(
 name|rme
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|DestinationSequence
 operator|.
