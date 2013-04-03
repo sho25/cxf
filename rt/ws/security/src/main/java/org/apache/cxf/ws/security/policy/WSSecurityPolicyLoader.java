@@ -507,6 +507,20 @@ name|wss4j
 operator|.
 name|policy
 operator|.
+name|SPConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|policy
+operator|.
 name|builders
 operator|.
 name|AsymmetricBindingBuilder
@@ -1777,7 +1791,9 @@ name|QName
 argument_list|(
 literal|"http://schemas.microsoft.com/ws/2005/07/securitypolicy"
 argument_list|,
-literal|"MustNotSendCancel"
+name|SPConstants
+operator|.
+name|MUST_NOT_SEND_CANCEL
 argument_list|)
 block|,
 comment|// SCT
