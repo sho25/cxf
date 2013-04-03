@@ -153,7 +153,7 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
 name|cache
 operator|.

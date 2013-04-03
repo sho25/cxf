@@ -99,24 +99,6 @@ name|SecurityConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|cache
-operator|.
-name|ReplayCacheFactory
-import|;
-end_import
-
 begin_comment
 comment|/**  * An abstract factory to return a TokenStore instance. It returns an EHCacheTokenStoreFactory  * if EH-Cache is available. Otherwise it returns a MemoryTokenStoreFactory.  */
 end_comment
@@ -308,7 +290,7 @@ name|String
 operator|)
 name|o
 argument_list|,
-name|ReplayCacheFactory
+name|TokenStoreFactory
 operator|.
 name|class
 argument_list|)

@@ -213,11 +213,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|wss4j
 operator|.
-name|ws
-operator|.
-name|security
+name|common
 operator|.
 name|cache
 operator|.
@@ -321,8 +319,6 @@ name|EHCacheManagerHolder
 operator|.
 name|getCacheManager
 argument_list|(
-name|bus
-argument_list|,
 name|configFileURL
 argument_list|)
 expr_stmt|;
