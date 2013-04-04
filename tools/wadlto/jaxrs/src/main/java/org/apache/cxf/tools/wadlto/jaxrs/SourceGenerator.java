@@ -9906,6 +9906,14 @@ name|startsWith
 argument_list|(
 literal|"/"
 argument_list|)
+operator|&&
+operator|!
+name|href
+operator|.
+name|contains
+argument_list|(
+literal|".."
+argument_list|)
 condition|)
 block|{
 name|schemaURI
