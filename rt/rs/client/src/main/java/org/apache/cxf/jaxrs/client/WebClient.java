@@ -4127,12 +4127,14 @@ name|HttpHeaders
 operator|.
 name|ACCEPT
 argument_list|,
+name|JAXRSUtils
+operator|.
+name|mediaTypeToString
+argument_list|(
 name|MediaType
 operator|.
 name|APPLICATION_XML_TYPE
-operator|.
-name|toString
-argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

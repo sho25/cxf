@@ -2322,6 +2322,10 @@ name|MediaType
 operator|.
 name|APPLICATION_XML
 else|:
+name|JAXRSUtils
+operator|.
+name|mediaTypeToString
+argument_list|(
 name|ori
 operator|.
 name|getConsumeTypes
@@ -2331,9 +2335,7 @@ name|get
 argument_list|(
 literal|0
 argument_list|)
-operator|.
-name|toString
-argument_list|()
+argument_list|)
 decl_stmt|;
 name|headers
 operator|.
@@ -2477,10 +2479,12 @@ name|HttpHeaders
 operator|.
 name|ACCEPT
 argument_list|,
-name|mt
+name|JAXRSUtils
 operator|.
-name|toString
-argument_list|()
+name|mediaTypeToString
+argument_list|(
+name|mt
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

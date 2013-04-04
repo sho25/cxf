@@ -5797,10 +5797,12 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|mt
+name|JAXRSUtils
 operator|.
-name|toString
-argument_list|()
+name|mediaTypeToString
+argument_list|(
+name|mt
+argument_list|)
 argument_list|)
 operator|.
 name|append

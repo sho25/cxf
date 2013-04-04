@@ -1763,10 +1763,12 @@ argument_list|)
 expr_stmt|;
 name|responseContentType
 operator|=
-name|responseMediaType
+name|JAXRSUtils
 operator|.
-name|toString
-argument_list|()
+name|mediaTypeToString
+argument_list|(
+name|responseMediaType
+argument_list|)
 expr_stmt|;
 if|if
 condition|(

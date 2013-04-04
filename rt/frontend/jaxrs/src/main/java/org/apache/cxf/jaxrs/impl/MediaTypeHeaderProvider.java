@@ -593,6 +593,22 @@ name|MediaType
 name|type
 parameter_list|)
 block|{
+return|return
+name|typeToString
+argument_list|(
+name|type
+argument_list|)
+return|;
+block|}
+specifier|public
+specifier|static
+name|String
+name|typeToString
+parameter_list|(
+name|MediaType
+name|type
+parameter_list|)
+block|{
 name|StringBuilder
 name|sb
 init|=
@@ -880,10 +896,10 @@ name|mType
 operator|+
 literal|"' to '"
 operator|+
+name|typeToString
+argument_list|(
 name|mt
-operator|.
-name|toString
-argument_list|()
+argument_list|)
 operator|+
 literal|"'"
 argument_list|)
