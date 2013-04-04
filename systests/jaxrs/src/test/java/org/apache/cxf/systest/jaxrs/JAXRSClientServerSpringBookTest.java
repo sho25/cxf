@@ -1062,7 +1062,7 @@ name|resourceTypeAddress
 init|=
 name|address
 operator|+
-literal|"/bookstoreImportResourceType.xml#bookstoreType"
+literal|"/bookstoreImportResourceType.wadl#bookstoreType"
 decl_stmt|;
 name|assertEquals
 argument_list|(
