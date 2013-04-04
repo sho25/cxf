@@ -1191,9 +1191,9 @@ else|else
 block|{
 name|mt
 operator|=
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|ctProperty
 operator|.

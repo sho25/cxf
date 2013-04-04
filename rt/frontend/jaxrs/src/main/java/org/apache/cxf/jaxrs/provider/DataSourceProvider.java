@@ -209,6 +209,22 @@ name|InputStreamDataSource
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|JAXRSUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Provider
@@ -570,9 +586,9 @@ name|type
 operator|.
 name|equals
 argument_list|(
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|ct
 argument_list|)

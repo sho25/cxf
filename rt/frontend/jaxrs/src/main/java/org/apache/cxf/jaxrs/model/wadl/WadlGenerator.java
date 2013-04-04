@@ -1242,9 +1242,9 @@ specifier|final
 name|MediaType
 name|WADL_TYPE
 init|=
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 literal|"application/vnd.sun.wadl+xml"
 argument_list|)
@@ -11768,9 +11768,9 @@ name|this
 operator|.
 name|defaultMediaType
 operator|=
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|mt
 argument_list|)

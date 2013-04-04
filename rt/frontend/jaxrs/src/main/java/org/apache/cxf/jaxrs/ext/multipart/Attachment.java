@@ -165,6 +165,22 @@ name|MetadataMap
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|JAXRSUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * This class represents an attachment; generally a multipart part.   * Some constructors in here are intended only for  * internal use in CXF, others are suitable or preparing   * attachments to pass to the {@link org.apache.cxf.jaxrs.client.WebClient} API.   * See the {@link AttachmentBuilder} for a convenient   * way to create attachments for use with {@link org.apache.cxf.jaxrs.client.WebClient}.  */
 end_comment
@@ -651,9 +667,9 @@ name|MediaType
 operator|.
 name|TEXT_PLAIN_TYPE
 else|:
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|value
 argument_list|)

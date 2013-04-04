@@ -3004,9 +3004,9 @@ block|{
 name|MediaType
 name|mt
 init|=
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|mimeType
 argument_list|)

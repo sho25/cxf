@@ -1682,9 +1682,9 @@ name|MediaType
 operator|.
 name|WILDCARD_TYPE
 else|:
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|responseContentType
 argument_list|)
@@ -2631,9 +2631,9 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|JAXRSUtils
 operator|.

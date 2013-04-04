@@ -63,6 +63,22 @@ name|MediaType
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|JAXRSUtils
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -90,9 +106,9 @@ specifier|final
 name|MediaType
 name|MULTIPART_RELATED_TYPE
 init|=
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 literal|"multipart/related"
 argument_list|)

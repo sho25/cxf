@@ -2423,9 +2423,9 @@ decl_stmt|;
 name|MediaType
 name|contentType
 init|=
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|headers
 operator|.
@@ -4450,9 +4450,9 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|map
 operator|.

@@ -1263,9 +1263,9 @@ literal|null
 condition|?
 literal|null
 else|:
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|header
 argument_list|)

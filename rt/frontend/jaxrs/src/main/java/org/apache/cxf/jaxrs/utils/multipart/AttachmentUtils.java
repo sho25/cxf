@@ -1152,9 +1152,9 @@ name|mt1
 operator|.
 name|isCompatible
 argument_list|(
-name|MediaType
+name|JAXRSUtils
 operator|.
-name|valueOf
+name|toMediaType
 argument_list|(
 name|mt2
 argument_list|)
