@@ -110,6 +110,8 @@ name|int
 name|arg1
 parameter_list|)
 throws|throws
+name|AddNumbersSubException
+throws|,
 name|AddNumbersException
 function_decl|;
 block|}

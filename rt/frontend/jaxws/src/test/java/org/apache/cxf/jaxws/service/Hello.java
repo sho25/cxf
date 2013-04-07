@@ -297,6 +297,8 @@ name|int
 name|arg1
 parameter_list|)
 throws|throws
+name|AddNumbersSubException
+throws|,
 name|AddNumbersException
 block|{
 if|if
@@ -313,6 +315,23 @@ operator|new
 name|AddNumbersException
 argument_list|(
 literal|"Sum is less than 0."
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|arg0
+operator|+
+name|arg1
+operator|==
+literal|100
+condition|)
+block|{
+throw|throw
+operator|new
+name|AddNumbersSubException
+argument_list|(
+literal|"Sum is 100"
 argument_list|)
 throw|;
 block|}
