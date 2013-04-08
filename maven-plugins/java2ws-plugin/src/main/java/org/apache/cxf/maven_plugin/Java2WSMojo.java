@@ -313,6 +313,11 @@ specifier|private
 name|String
 name|address
 decl_stmt|;
+comment|/**      * @parameter      */
+specifier|private
+name|String
+name|classifier
+decl_stmt|;
 comment|/**      * @parameter  expression="${project.compileClasspathElements}"      * @required      */
 specifier|private
 name|List
@@ -1639,6 +1644,29 @@ name|exists
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+name|classifier
+operator|!=
+literal|null
+condition|)
+block|{
+name|projectHelper
+operator|.
+name|attachArtifact
+argument_list|(
+name|project
+argument_list|,
+literal|"wsdl"
+argument_list|,
+name|classifier
+argument_list|,
+name|wsdlFile
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|projectHelper
 operator|.
 name|attachArtifact
@@ -1650,6 +1678,7 @@ argument_list|,
 name|wsdlFile
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}

@@ -4015,7 +4015,7 @@ name|wsdlArtifact
 init|=
 name|artifactFactory
 operator|.
-name|createBuildArtifact
+name|createArtifactWithClassifier
 argument_list|(
 name|wsdlA
 operator|.
@@ -4035,6 +4035,11 @@ argument_list|,
 name|wsdlA
 operator|.
 name|getType
+argument_list|()
+argument_list|,
+name|wsdlA
+operator|.
+name|getClassifier
 argument_list|()
 argument_list|)
 decl_stmt|;
