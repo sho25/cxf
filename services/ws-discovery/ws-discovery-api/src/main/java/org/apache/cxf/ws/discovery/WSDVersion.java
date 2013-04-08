@@ -240,15 +240,6 @@ name|WSDVersion10
 extends|extends
 name|WSDVersion
 block|{
-specifier|static
-specifier|final
-name|WSDVersion10
-name|INSTANCE
-init|=
-operator|new
-name|WSDVersion10
-argument_list|()
-decl_stmt|;
 specifier|private
 name|WSDVersion10
 parameter_list|()
