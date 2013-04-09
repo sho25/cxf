@@ -19,6 +19,16 @@ name|inherit
 package|;
 end_package
 
+begin_import
+import|import
+name|javax
+operator|.
+name|jws
+operator|.
+name|WebMethod
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -38,6 +48,13 @@ name|String
 name|bye
 parameter_list|)
 function_decl|;
+annotation|@
+name|WebMethod
+argument_list|(
+name|operationName
+operator|=
+literal|"anotherHello"
+argument_list|)
 name|String
 name|hello
 parameter_list|()
