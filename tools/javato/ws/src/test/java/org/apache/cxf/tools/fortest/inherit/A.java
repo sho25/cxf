@@ -105,6 +105,18 @@ return|return
 name|bye
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|String
+name|hello
+parameter_list|()
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
 block|}
 end_class
 
