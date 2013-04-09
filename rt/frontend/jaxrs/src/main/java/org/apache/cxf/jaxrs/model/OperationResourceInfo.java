@@ -818,6 +818,8 @@ operator|.
 name|sortMediaTypes
 argument_list|(
 name|consumeMediaTypes
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -859,6 +861,8 @@ operator|.
 name|value
 argument_list|()
 argument_list|)
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -880,6 +884,8 @@ name|classResourceInfo
 operator|.
 name|getConsumeMime
 argument_list|()
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 block|}
