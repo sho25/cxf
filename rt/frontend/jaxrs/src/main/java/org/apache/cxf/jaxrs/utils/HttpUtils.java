@@ -2909,7 +2909,7 @@ name|CONTENT_TYPE
 argument_list|,
 name|JAXRSUtils
 operator|.
-name|removeMediaTypeParameter
+name|mediaTypeToString
 argument_list|(
 name|mt
 argument_list|,

@@ -904,6 +904,10 @@ operator|.
 name|sortMediaTypes
 argument_list|(
 name|produceMediaTypes
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 expr_stmt|;
 block|}
@@ -945,6 +949,10 @@ operator|.
 name|value
 argument_list|()
 argument_list|)
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 expr_stmt|;
 block|}
@@ -966,6 +974,10 @@ name|classResourceInfo
 operator|.
 name|getProduceMime
 argument_list|()
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 expr_stmt|;
 block|}

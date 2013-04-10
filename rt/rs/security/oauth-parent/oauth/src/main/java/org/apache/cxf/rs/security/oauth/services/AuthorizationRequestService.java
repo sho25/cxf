@@ -256,9 +256,9 @@ literal|"application/xhtml+xml"
 block|,
 literal|"text/html"
 block|,
-literal|"application/xml;q=0.9"
+literal|"application/xml;qs=0.9"
 block|,
-literal|"application/json;q=0.9"
+literal|"application/json;qs=0.9"
 block|,
 literal|"application/x-www-form-urlencoded"
 block|}
@@ -293,9 +293,9 @@ literal|"application/xhtml+xml"
 block|,
 literal|"text/html"
 block|,
-literal|"application/xml;q=0.9"
+literal|"application/xml;qs=0.9"
 block|,
-literal|"application/json;q=0.9"
+literal|"application/json;qs=0.9"
 block|,
 literal|"application/x-www-form-urlencoded"
 block|}

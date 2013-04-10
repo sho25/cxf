@@ -8606,7 +8606,7 @@ literal|"/bookstore/books/123"
 argument_list|,
 literal|"resources/expected_get_book123json.txt"
 argument_list|,
-literal|"application/json, application/xml"
+literal|"application/json, application/xml;q=0.9"
 argument_list|,
 literal|"application/json"
 argument_list|,

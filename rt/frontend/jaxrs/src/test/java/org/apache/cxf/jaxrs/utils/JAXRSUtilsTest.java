@@ -2772,7 +2772,7 @@ name|contentTypes
 argument_list|,
 name|getTypes
 argument_list|(
-literal|"application/json,application/xml"
+literal|"application/json,application/xml;q=0.9"
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -11712,7 +11712,7 @@ name|sortMediaTypes
 argument_list|(
 name|getTypes
 argument_list|(
-literal|"*,text/plain,text/xml"
+literal|"*/*;q=0.1,text/plain,text/xml;q=0.8"
 argument_list|)
 argument_list|)
 argument_list|)
@@ -11757,7 +11757,7 @@ name|sortMediaTypes
 argument_list|(
 name|getTypes
 argument_list|(
-literal|"*,text/plain, text/xml,x/y"
+literal|"*;q=0.1,text/plain,text/xml;q=0.9,x/y"
 argument_list|)
 argument_list|)
 argument_list|)
