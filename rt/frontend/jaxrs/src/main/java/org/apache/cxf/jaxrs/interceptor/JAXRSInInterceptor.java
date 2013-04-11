@@ -938,6 +938,10 @@ operator|.
 name|sortMediaTypes
 argument_list|(
 name|acceptTypes
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_Q_PARAM
 argument_list|)
 expr_stmt|;
 block|}

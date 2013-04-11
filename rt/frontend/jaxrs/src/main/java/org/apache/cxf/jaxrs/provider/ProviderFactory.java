@@ -4177,6 +4177,8 @@ operator|.
 name|sortMediaTypes
 argument_list|(
 name|types1
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|List
@@ -4199,6 +4201,8 @@ operator|.
 name|sortMediaTypes
 argument_list|(
 name|types2
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 return|return
@@ -4209,6 +4213,8 @@ argument_list|(
 name|types1
 argument_list|,
 name|types2
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
@@ -4290,6 +4296,10 @@ name|getProviderProduceTypes
 argument_list|(
 name|e1
 argument_list|)
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 decl_stmt|;
 name|List
@@ -4308,6 +4318,10 @@ name|getProviderProduceTypes
 argument_list|(
 name|e2
 argument_list|)
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 decl_stmt|;
 return|return
@@ -4318,6 +4332,10 @@ argument_list|(
 name|types1
 argument_list|,
 name|types2
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 return|;
 block|}
@@ -4409,6 +4427,10 @@ operator|.
 name|class
 argument_list|)
 argument_list|)
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 decl_stmt|;
 name|List
@@ -4437,6 +4459,10 @@ operator|.
 name|class
 argument_list|)
 argument_list|)
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 decl_stmt|;
 return|return
@@ -4447,6 +4473,10 @@ argument_list|(
 name|types1
 argument_list|,
 name|types2
+argument_list|,
+name|JAXRSUtils
+operator|.
+name|MEDIA_TYPE_QS_PARAM
 argument_list|)
 return|;
 block|}
