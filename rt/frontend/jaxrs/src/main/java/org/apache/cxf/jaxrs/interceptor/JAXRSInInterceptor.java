@@ -851,7 +851,9 @@ condition|)
 block|{
 name|requestContentType
 operator|=
-literal|"*/*"
+name|MediaType
+operator|.
+name|WILDCARD
 expr_stmt|;
 block|}
 name|String

@@ -5040,7 +5040,7 @@ argument_list|)
 annotation|@
 name|Produces
 argument_list|(
-literal|"application/json;q=0.9"
+literal|"application/json;qs=0.9"
 argument_list|)
 specifier|public
 name|Book
