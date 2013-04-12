@@ -1921,17 +1921,6 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|PASSWORD_TYPE_STRICT
-argument_list|,
-literal|"false"
-argument_list|)
-expr_stmt|;
-name|inProperties
-operator|.
-name|put
-argument_list|(
-name|WSHandlerConstants
-operator|.
 name|PW_CALLBACK_CLASS
 argument_list|,
 literal|"org.apache.cxf.ws.security.wss4j.TestPwdCallback"
@@ -1958,33 +1947,8 @@ literal|"//wsse:Security"
 argument_list|)
 expr_stmt|;
 comment|//
-comment|// This should pass, as even though passwordType is set to digest, we are
-comment|// overriding the default handler behaviour of requiring a strict password
-comment|// type
-comment|//
-name|makeInvocation
-argument_list|(
-name|outProperties
-argument_list|,
-name|xpaths
-argument_list|,
-name|inProperties
-argument_list|)
-expr_stmt|;
-comment|//
 comment|// This should fail, as we are requiring a digest password type
 comment|//
-name|inProperties
-operator|.
-name|put
-argument_list|(
-name|WSHandlerConstants
-operator|.
-name|PASSWORD_TYPE_STRICT
-argument_list|,
-literal|"true"
-argument_list|)
-expr_stmt|;
 try|try
 block|{
 name|makeInvocation
