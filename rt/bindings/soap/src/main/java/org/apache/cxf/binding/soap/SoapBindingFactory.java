@@ -6153,6 +6153,11 @@ name|Endpoint
 name|e
 parameter_list|)
 block|{
+synchronized|synchronized
+init|(
+name|d
+init|)
+block|{
 name|MessageObserver
 name|mo
 init|=
@@ -6621,6 +6626,7 @@ argument_list|(
 name|mo
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

@@ -1391,6 +1391,11 @@ literal|"EndpointInfo cannot be null"
 argument_list|)
 throw|;
 block|}
+synchronized|synchronized
+init|(
+name|registry
+init|)
+block|{
 name|AbstractHTTPDestination
 name|d
 init|=
@@ -1566,6 +1571,7 @@ block|}
 return|return
 name|d
 return|;
+block|}
 block|}
 block|}
 end_class
