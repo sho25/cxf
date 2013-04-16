@@ -3214,6 +3214,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|qname
+operator|!=
+literal|null
+operator|&&
 name|ignoreNamespaces
 operator|&&
 operator|(
