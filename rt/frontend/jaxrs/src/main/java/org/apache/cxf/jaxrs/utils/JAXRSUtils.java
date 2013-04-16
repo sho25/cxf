@@ -1843,7 +1843,7 @@ specifier|final
 name|String
 name|PARTIAL_HIERARCHICAL_MEDIA_SUBTYPE_CHECK
 init|=
-literal|"partial.hierarchical.media.subtype.check"
+literal|"media.subtype.partial.check"
 decl_stmt|;
 specifier|public
 specifier|static
