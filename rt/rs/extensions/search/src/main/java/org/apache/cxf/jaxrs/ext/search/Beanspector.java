@@ -524,6 +524,9 @@ operator|.
 name|get
 argument_list|(
 name|getterOrSetterName
+operator|.
+name|toLowerCase
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -679,6 +682,9 @@ operator|.
 name|get
 argument_list|(
 name|setterName
+operator|.
+name|toLowerCase
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if

@@ -3497,6 +3497,9 @@ operator|.
 name|singletonMap
 argument_list|(
 name|templateName
+operator|.
+name|toLowerCase
+argument_list|()
 argument_list|,
 name|ct
 argument_list|)
