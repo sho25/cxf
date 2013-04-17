@@ -231,9 +231,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|Bus
-name|bus
-decl_stmt|;
 name|String
 name|name
 init|=
@@ -260,18 +257,19 @@ operator|.
 name|getNewInstance
 argument_list|()
 decl_stmt|;
+annotation|@
+name|Deprecated
 specifier|public
 name|KerberosClient
 parameter_list|(
 name|Bus
 name|b
 parameter_list|)
-block|{
-name|bus
-operator|=
-name|b
-expr_stmt|;
-block|}
+block|{     }
+specifier|public
+name|KerberosClient
+parameter_list|()
+block|{     }
 specifier|public
 name|String
 name|getBeanName
