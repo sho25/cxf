@@ -269,6 +269,11 @@ name|Response
 name|getResponse
 parameter_list|()
 function_decl|;
+comment|/**      * Releases the internal state and configuration associated with this client       */
+name|void
+name|close
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
