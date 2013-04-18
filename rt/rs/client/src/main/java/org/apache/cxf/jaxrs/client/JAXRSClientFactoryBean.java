@@ -948,10 +948,27 @@ name|Client
 name|create
 parameter_list|()
 block|{
+if|if
+condition|(
+name|serviceClass
+operator|==
+name|WebClient
+operator|.
+name|class
+condition|)
+block|{
+return|return
+name|createWebClient
+argument_list|()
+return|;
+block|}
+else|else
+block|{
 return|return
 name|createWithValues
 argument_list|()
 return|;
+block|}
 block|}
 comment|/**      * Create a Client instance. Proxies and WebClients are Clients.      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      *              * @return the client      */
 specifier|public
