@@ -1210,19 +1210,19 @@ return|return
 name|webClient
 return|;
 block|}
-comment|/**      * Converts proxy to Client      * @param proxy the proxy      * @return proxy as a Client       */
+comment|/**      * Converts object to Client      * @param object the object      * @return Client object converted to Client       */
 specifier|public
 specifier|static
 name|Client
 name|client
 parameter_list|(
 name|Object
-name|proxy
+name|object
 parameter_list|)
 block|{
 if|if
 condition|(
-name|proxy
+name|object
 operator|instanceof
 name|Client
 condition|)
@@ -1231,7 +1231,7 @@ return|return
 operator|(
 name|Client
 operator|)
-name|proxy
+name|object
 return|;
 block|}
 return|return
