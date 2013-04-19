@@ -1854,7 +1854,6 @@ name|PasswordCallbackHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// outProperties.put("password", "password");
 name|WSS4JStaxOutInterceptor
 name|ohandler
 init|=
@@ -2209,7 +2208,6 @@ operator|.
 name|KeyIdentifier_SecurityTokenDirectReference
 argument_list|)
 expr_stmt|;
-comment|// outProperties.put("password", "password");
 name|WSS4JStaxOutInterceptor
 name|ohandler
 init|=

@@ -1493,7 +1493,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"Assertion fails sender-vouches requirements"
+literal|"An error was discovered processing"
 argument_list|)
 argument_list|)
 expr_stmt|;
