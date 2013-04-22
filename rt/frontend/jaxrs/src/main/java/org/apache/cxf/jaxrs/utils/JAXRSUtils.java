@@ -5376,7 +5376,7 @@ decl_stmt|;
 name|int
 name|size1
 init|=
-name|mts1
+name|actualMts1
 operator|.
 name|size
 argument_list|()
@@ -5384,7 +5384,7 @@ decl_stmt|;
 name|int
 name|size2
 init|=
-name|mts2
+name|actualMts2
 operator|.
 name|size
 argument_list|()
