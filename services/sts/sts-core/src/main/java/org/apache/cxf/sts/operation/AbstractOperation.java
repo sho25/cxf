@@ -1964,17 +1964,16 @@ operator|==
 literal|null
 condition|)
 block|{
-throw|throw
-operator|new
-name|STSException
+name|LOG
+operator|.
+name|fine
 argument_list|(
 literal|"No encryption alias is configured"
-argument_list|,
-name|STSException
-operator|.
-name|REQUEST_FAILED
 argument_list|)
-throw|;
+expr_stmt|;
+return|return
+name|element
+return|;
 block|}
 comment|// Get the encryption algorithm to use
 name|String
