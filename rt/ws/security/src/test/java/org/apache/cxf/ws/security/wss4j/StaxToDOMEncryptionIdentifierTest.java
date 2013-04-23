@@ -1247,15 +1247,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testEncryptEncryptedKeySHA1
@@ -1420,7 +1413,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_EncryptedKey
+name|KeyIdentifier_EncryptedKeySha1Identifier
 argument_list|)
 expr_stmt|;
 name|Properties
