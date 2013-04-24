@@ -1659,11 +1659,11 @@ index|[]
 block|{
 name|WSSConstants
 operator|.
-name|SIGNATURE
+name|TIMESTAMP
 block|,
 name|WSSConstants
 operator|.
-name|TIMESTAMP
+name|SIGNATURE
 block|}
 argument_list|)
 expr_stmt|;
