@@ -3569,7 +3569,7 @@ name|getMethod
 condition|?
 name|MediaType
 operator|.
-name|WILDCARD_TYPE
+name|APPLICATION_OCTET_STREAM_TYPE
 else|:
 name|toMediaType
 argument_list|(
