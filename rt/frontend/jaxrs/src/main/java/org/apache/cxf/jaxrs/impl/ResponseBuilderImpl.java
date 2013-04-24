@@ -379,6 +379,12 @@ name|copy
 operator|.
 name|status
 expr_stmt|;
+name|statusSet
+operator|=
+name|copy
+operator|.
+name|statusSet
+expr_stmt|;
 name|metadata
 operator|.
 name|putAll
