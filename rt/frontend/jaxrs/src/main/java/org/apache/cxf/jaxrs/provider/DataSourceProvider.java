@@ -425,18 +425,6 @@ name|mt
 parameter_list|)
 block|{
 return|return
-operator|!
-name|mt
-operator|.
-name|getType
-argument_list|()
-operator|.
-name|equals
-argument_list|(
-literal|"multipart"
-argument_list|)
-operator|&&
-operator|(
 name|DataSource
 operator|.
 name|class
@@ -454,7 +442,6 @@ name|isAssignableFrom
 argument_list|(
 name|type
 argument_list|)
-operator|)
 return|;
 block|}
 specifier|public

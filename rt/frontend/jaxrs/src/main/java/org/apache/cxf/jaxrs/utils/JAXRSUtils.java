@@ -1857,14 +1857,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|DEFAULT_PROVIDERS_FOR_SIMPLE_TYPES
-init|=
-literal|"defaultProviders.for.simpleTypes"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|MEDIA_TYPE_Q_PARAM
 init|=
 literal|"q"
