@@ -1096,7 +1096,7 @@ name|innerElementCountThreshold
 operator|=
 name|getInteger
 argument_list|(
-name|INNER_ELEMENT_LEVEL_SYSTEM_PROP
+name|INNER_ELEMENT_COUNT_SYSTEM_PROP
 argument_list|,
 name|innerElementCountThreshold
 argument_list|)
@@ -1105,7 +1105,7 @@ name|innerElementLevelThreshold
 operator|=
 name|getInteger
 argument_list|(
-name|INNER_ELEMENT_COUNT_SYSTEM_PROP
+name|INNER_ELEMENT_LEVEL_SYSTEM_PROP
 argument_list|,
 name|innerElementLevelThreshold
 argument_list|)
