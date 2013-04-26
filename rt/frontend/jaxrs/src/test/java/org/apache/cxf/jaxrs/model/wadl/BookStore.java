@@ -71,6 +71,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|DefaultValue
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|GET
 import|;
 end_import
@@ -356,7 +368,7 @@ literal|"en-us"
 argument_list|,
 name|title
 operator|=
-literal|"book store resource"
+literal|"book store \"resource\""
 argument_list|,
 name|value
 operator|=
@@ -375,7 +387,7 @@ name|Description
 argument_list|(
 name|value
 operator|=
-literal|"Attachments"
+literal|"Attachments, max< 10"
 argument_list|,
 name|target
 operator|=
@@ -512,7 +524,7 @@ block|{     }
 annotation|@
 name|Path
 argument_list|(
-literal|"books/{bookid}"
+literal|"books/\"{bookid}\""
 argument_list|)
 specifier|public
 name|Object
@@ -664,7 +676,12 @@ name|MatrixParam
 argument_list|(
 literal|"mid"
 argument_list|)
-name|int
+annotation|@
+name|DefaultValue
+argument_list|(
+literal|"mid> 5"
+argument_list|)
+name|String
 name|matrixId
 parameter_list|,
 annotation|@

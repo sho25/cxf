@@ -3148,30 +3148,28 @@ operator|=
 name|path
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|thePath
-operator|.
-name|contains
-argument_list|(
-literal|"&"
-argument_list|)
-condition|)
-block|{
-name|thePath
-operator|=
-name|thePath
-operator|.
-name|replace
-argument_list|(
-literal|"&"
-argument_list|,
-literal|"&amp;"
-argument_list|)
-expr_stmt|;
-block|}
 return|return
+name|xmlEncodeIfNeeded
+argument_list|(
 name|thePath
+argument_list|)
+return|;
+block|}
+specifier|private
+name|String
+name|xmlEncodeIfNeeded
+parameter_list|(
+name|String
+name|value
+parameter_list|)
+block|{
+return|return
+name|XMLUtils
+operator|.
+name|xmlEncode
+argument_list|(
+name|value
+argument_list|)
 return|;
 block|}
 specifier|private
@@ -3242,7 +3240,7 @@ literal|">"
 argument_list|)
 expr_stmt|;
 block|}
-comment|//CHECKSTYLE:OFF
+comment|// CHECKSTYLE:OFF
 specifier|protected
 name|boolean
 name|handleOperation
@@ -3309,7 +3307,7 @@ operator|.
 name|getAnnotations
 argument_list|()
 decl_stmt|;
-comment|//CHECKSTYLE:ON
+comment|// CHECKSTYLE:ON
 name|boolean
 name|samePathOperationFollows
 init|=
@@ -5246,10 +5244,13 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
+name|xmlEncodeIfNeeded
+argument_list|(
 name|pm
 operator|.
 name|getDefaultValue
 argument_list|()
+argument_list|)
 argument_list|)
 operator|.
 name|append
@@ -5643,8 +5644,8 @@ operator|!=
 literal|null
 return|;
 block|}
-comment|//TODO: Collapse multiple parameters into a holder
-comment|//CHECKSTYLE:OFF
+comment|// TODO: Collapse multiple parameters into a holder
+comment|// CHECKSTYLE:OFF
 specifier|protected
 name|void
 name|handleRepresentation
@@ -5691,7 +5692,7 @@ name|boolean
 name|inbound
 parameter_list|)
 block|{
-comment|//CHECKSTYLE:ON
+comment|// CHECKSTYLE:ON
 name|List
 argument_list|<
 name|MediaType
@@ -6823,7 +6824,7 @@ return|return
 name|cris
 return|;
 block|}
-comment|//TODO: deal with caching later on
+comment|// TODO: deal with caching later on
 specifier|public
 name|Response
 name|getExistingWadl
@@ -7125,7 +7126,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|//TODO: deal with caching later on
+comment|// TODO: deal with caching later on
 specifier|public
 name|Response
 name|getExistingResource
@@ -8965,8 +8966,8 @@ return|return
 name|hackAroundEmptyNamespaceIssue
 return|;
 block|}
-comment|//create a copy of the dom so we
-comment|//can modify it.
+comment|// create a copy of the dom so we
+comment|// can modify it.
 name|d
 operator|=
 name|copy
@@ -9177,8 +9178,8 @@ condition|(
 name|hasStuffToRemove
 condition|)
 block|{
-comment|//create a copy of the dom so we
-comment|//can modify it.
+comment|// create a copy of the dom so we
+comment|// can modify it.
 name|d
 operator|=
 name|copy
@@ -9296,7 +9297,7 @@ name|XMLStreamException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|// ignore
 block|}
 catch|catch
 parameter_list|(
@@ -9304,7 +9305,7 @@ name|ParserConfigurationException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|// ignore
 block|}
 return|return
 name|doc
@@ -9511,14 +9512,17 @@ name|append
 argument_list|(
 literal|"<doc title=\""
 operator|+
+name|xmlEncodeIfNeeded
+argument_list|(
 name|applicationTitle
+argument_list|)
 operator|+
 literal|"\"/>"
 argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|handleDocs
 parameter_list|(
@@ -9701,10 +9705,13 @@ name|append
 argument_list|(
 literal|" title=\""
 operator|+
+name|xmlEncodeIfNeeded
+argument_list|(
 name|d
 operator|.
 name|title
 argument_list|()
+argument_list|)
 operator|+
 literal|"\""
 argument_list|)
@@ -9734,10 +9741,13 @@ name|sb
 operator|.
 name|append
 argument_list|(
+name|xmlEncodeIfNeeded
+argument_list|(
 name|d
 operator|.
 name|value
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
