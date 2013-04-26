@@ -1451,20 +1451,8 @@ argument_list|(
 name|inProperties
 argument_list|)
 decl_stmt|;
-name|WSS4JPrincipalInterceptor
-name|principalInterceptor
-init|=
-operator|new
-name|WSS4JPrincipalInterceptor
-argument_list|()
-decl_stmt|;
-name|principalInterceptor
-operator|.
-name|setPrincipalName
-argument_list|(
-literal|"username"
-argument_list|)
-expr_stmt|;
+comment|//WSS4JPrincipalInterceptor principalInterceptor = new WSS4JPrincipalInterceptor();
+comment|//principalInterceptor.setPrincipalName("username");
 name|service
 operator|.
 name|getInInterceptors
@@ -1475,16 +1463,7 @@ argument_list|(
 name|inhandler
 argument_list|)
 expr_stmt|;
-name|service
-operator|.
-name|getInInterceptors
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|principalInterceptor
-argument_list|)
-expr_stmt|;
+comment|//service.getInInterceptors().add(principalInterceptor);
 comment|// Create + configure client
 name|Echo
 name|echo
@@ -1545,11 +1524,11 @@ index|[]
 block|{
 name|WSSConstants
 operator|.
-name|SIGNATURE
+name|USERNAMETOKEN
 block|,
 name|WSSConstants
 operator|.
-name|USERNAMETOKEN
+name|SIGNATURE
 block|}
 argument_list|)
 expr_stmt|;

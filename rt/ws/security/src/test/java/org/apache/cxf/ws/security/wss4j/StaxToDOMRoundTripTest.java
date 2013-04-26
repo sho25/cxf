@@ -2107,11 +2107,11 @@ index|[]
 block|{
 name|WSSConstants
 operator|.
-name|SIGNATURE
+name|USERNAMETOKEN
 block|,
 name|WSSConstants
 operator|.
-name|USERNAMETOKEN
+name|SIGNATURE
 block|}
 argument_list|)
 expr_stmt|;
@@ -2781,15 +2781,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSignatureTimestampWrongNamespace
@@ -3090,11 +3083,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+comment|// expected
 block|}
 block|}
 annotation|@
