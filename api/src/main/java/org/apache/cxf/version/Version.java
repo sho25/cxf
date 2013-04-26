@@ -249,11 +249,9 @@ literal|" "
 operator|+
 name|version
 operator|+
-literal|" ("
+literal|"-"
 operator|+
 name|buildNumber
-operator|+
-literal|")"
 expr_stmt|;
 block|}
 else|else
