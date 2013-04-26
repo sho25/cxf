@@ -110,6 +110,21 @@ parameter_list|)
 throws|throws
 name|DoubleItFault
 block|{
+if|if
+condition|(
+name|numberToDouble
+operator|==
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|DoubleItFault
+argument_list|(
+literal|"0 can't be doubled!"
+argument_list|)
+throw|;
+block|}
 return|return
 name|numberToDouble
 operator|*
