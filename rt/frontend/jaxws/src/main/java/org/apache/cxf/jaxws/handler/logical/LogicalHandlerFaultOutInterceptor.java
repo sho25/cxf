@@ -459,6 +459,28 @@ argument_list|(
 name|doc
 argument_list|)
 decl_stmt|;
+comment|// set up the namespace context
+try|try
+block|{
+name|writer
+operator|.
+name|setNamespaceContext
+argument_list|(
+name|origWriter
+operator|.
+name|getNamespaceContext
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|ex
+parameter_list|)
+block|{
+comment|// don't set the namespaceContext
+block|}
 comment|// Replace stax writer with DomStreamWriter
 name|message
 operator|.

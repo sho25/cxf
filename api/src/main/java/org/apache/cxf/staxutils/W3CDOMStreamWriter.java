@@ -583,11 +583,24 @@ name|W3CNamespaceContext
 operator|)
 condition|)
 block|{
-name|context
-operator|=
+comment|// set the outside namespace context
+name|W3CNamespaceContext
+name|childContext
+init|=
 operator|new
 name|W3CNamespaceContext
 argument_list|()
+decl_stmt|;
+name|childContext
+operator|.
+name|setOutNamespaceContext
+argument_list|(
+name|context
+argument_list|)
+expr_stmt|;
+name|context
+operator|=
+name|childContext
 expr_stmt|;
 block|}
 operator|(
