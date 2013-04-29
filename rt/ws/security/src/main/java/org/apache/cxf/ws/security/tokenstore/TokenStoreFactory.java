@@ -124,15 +124,11 @@ name|?
 argument_list|>
 name|cacheManagerClass
 init|=
-name|ClassLoaderUtils
+name|Class
 operator|.
-name|loadClass
+name|forName
 argument_list|(
 literal|"net.sf.ehcache.CacheManager"
-argument_list|,
-name|TokenStoreFactory
-operator|.
-name|class
 argument_list|)
 decl_stmt|;
 if|if
