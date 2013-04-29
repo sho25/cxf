@@ -125,6 +125,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|security
+operator|.
+name|SecurityContext
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|staxutils
 operator|.
 name|StaxUtils
@@ -318,6 +332,12 @@ specifier|private
 specifier|transient
 name|Principal
 name|principal
+decl_stmt|;
+comment|/**      * The SecurityContext originally associated with this token      */
+specifier|private
+specifier|transient
+name|SecurityContext
+name|securityContext
 decl_stmt|;
 specifier|public
 name|SecurityToken
@@ -1597,6 +1617,32 @@ parameter_list|()
 block|{
 return|return
 name|principal
+return|;
+block|}
+comment|/**      * Set the SecurityContext associated with this SecurityToken      * @param securityContext the SecurityContext associated with this SecurityToken      */
+specifier|public
+name|void
+name|setSecurityContext
+parameter_list|(
+name|SecurityContext
+name|securityContext
+parameter_list|)
+block|{
+name|this
+operator|.
+name|securityContext
+operator|=
+name|securityContext
+expr_stmt|;
+block|}
+comment|/**      * Get the SecurityContext associated with this SecurityToken      * @return the SecurityContext associated with this SecurityToken      */
+specifier|public
+name|SecurityContext
+name|getSecurityContext
+parameter_list|()
+block|{
+return|return
+name|securityContext
 return|;
 block|}
 block|}
