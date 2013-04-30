@@ -876,7 +876,11 @@ name|Message
 operator|.
 name|HTTP_REQUEST_METHOD
 argument_list|,
-literal|"POST"
+name|HttpMethod
+operator|.
+name|POST
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|String
