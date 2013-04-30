@@ -454,7 +454,8 @@ init|=
 operator|(
 name|LocalClientState
 operator|)
-name|initialState
+name|getState
+argument_list|()
 operator|.
 name|newState
 argument_list|(
