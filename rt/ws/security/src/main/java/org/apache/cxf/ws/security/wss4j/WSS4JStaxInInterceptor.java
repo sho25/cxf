@@ -993,6 +993,13 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|nonceCache
+operator|!=
+literal|null
+condition|)
+block|{
+if|if
+condition|(
 name|securityProperties
 operator|!=
 literal|null
@@ -1020,6 +1027,7 @@ name|nonceCache
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 name|ReplayCache
 name|timestampCache
 init|=
@@ -1038,6 +1046,13 @@ operator|.
 name|TIMESTAMP_CACHE_INSTANCE
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|timestampCache
+operator|!=
+literal|null
+condition|)
+block|{
 if|if
 condition|(
 name|securityProperties
@@ -1066,6 +1081,7 @@ argument_list|,
 name|timestampCache
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|boolean
 name|enableRevocation
