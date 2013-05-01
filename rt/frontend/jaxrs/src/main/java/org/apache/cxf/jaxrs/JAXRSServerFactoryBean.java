@@ -886,13 +886,6 @@ argument_list|)
 expr_stmt|;
 name|factory
 operator|.
-name|setApplicationProvider
-argument_list|(
-name|appProvider
-argument_list|)
-expr_stmt|;
-name|factory
-operator|.
 name|setRequestPreprocessor
 argument_list|(
 operator|new
@@ -1102,6 +1095,13 @@ decl_stmt|;
 name|setBeanInfo
 argument_list|(
 name|factory
+argument_list|)
+expr_stmt|;
+name|factory
+operator|.
+name|setApplicationProvider
+argument_list|(
+name|appProvider
 argument_list|)
 expr_stmt|;
 name|super
