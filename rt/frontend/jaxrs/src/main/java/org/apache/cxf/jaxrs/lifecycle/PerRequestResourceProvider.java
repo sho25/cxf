@@ -271,6 +271,8 @@ argument_list|(
 name|c
 argument_list|,
 name|m
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 try|try

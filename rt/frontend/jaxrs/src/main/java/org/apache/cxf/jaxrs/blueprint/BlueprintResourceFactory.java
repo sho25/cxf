@@ -391,6 +391,10 @@ argument_list|(
 name|c
 argument_list|,
 name|m
+argument_list|,
+operator|!
+name|isSingleton
+argument_list|()
 argument_list|)
 decl_stmt|;
 comment|//TODO Very springish...
