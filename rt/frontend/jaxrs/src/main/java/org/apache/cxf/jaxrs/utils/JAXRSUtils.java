@@ -6387,12 +6387,11 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|// for tests only
 name|contentType
 operator|=
 name|MediaType
 operator|.
-name|WILDCARD
+name|APPLICATION_OCTET_STREAM
 expr_stmt|;
 block|}
 return|return
