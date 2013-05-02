@@ -3303,6 +3303,34 @@ argument_list|(
 literal|"-jar"
 argument_list|)
 expr_stmt|;
+name|String
+name|tmpFilePath
+init|=
+name|file
+operator|.
+name|getAbsolutePath
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|tmpFilePath
+operator|.
+name|contains
+argument_list|(
+literal|" "
+argument_list|)
+condition|)
+block|{
+comment|//ensure the path is in double quotation marks if the path contain space
+name|tmpFilePath
+operator|=
+literal|"\""
+operator|+
+name|tmpFilePath
+operator|+
+literal|"\""
+expr_stmt|;
+block|}
 name|cmd
 operator|.
 name|createArg
@@ -3310,10 +3338,7 @@ argument_list|()
 operator|.
 name|setValue
 argument_list|(
-name|file
-operator|.
-name|getAbsolutePath
-argument_list|()
+name|tmpFilePath
 argument_list|)
 expr_stmt|;
 block|}
