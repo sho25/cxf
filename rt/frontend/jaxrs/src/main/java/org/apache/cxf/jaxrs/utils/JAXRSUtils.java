@@ -8002,6 +8002,8 @@ operator|new
 name|ResourceContextImpl
 argument_list|(
 name|contextMessage
+argument_list|,
+name|contextMessage
 operator|.
 name|getExchange
 argument_list|()
