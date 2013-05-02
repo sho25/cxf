@@ -2131,8 +2131,7 @@ argument_list|()
 operator|.
 name|getInstance
 argument_list|(
-operator|new
-name|MessageImpl
+name|createMessage
 argument_list|()
 argument_list|)
 decl_stmt|;
