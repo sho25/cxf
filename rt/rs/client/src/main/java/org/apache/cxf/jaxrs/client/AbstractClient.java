@@ -2610,6 +2610,8 @@ argument_list|,
 name|contentType
 argument_list|,
 name|outMessage
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 if|if
@@ -3006,6 +3008,8 @@ argument_list|,
 name|contentType
 argument_list|,
 name|outMessage
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 if|if

@@ -2607,6 +2607,8 @@ expr_stmt|;
 name|validatePostResponse
 argument_list|(
 name|wc
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -2873,6 +2875,9 @@ name|validatePostResponse
 parameter_list|(
 name|WebClient
 name|wc
+parameter_list|,
+name|boolean
+name|async
 parameter_list|)
 block|{
 name|validateResponse
@@ -2890,7 +2895,12 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
+operator|!
+name|async
+condition|?
 literal|"serverRead"
+else|:
+literal|"serverReadAsync"
 argument_list|,
 name|response
 operator|.
@@ -3106,6 +3116,8 @@ expr_stmt|;
 name|validatePostResponse
 argument_list|(
 name|wc
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -3235,7 +3247,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/bookheaders/simple"
+literal|"/bookstore/bookheaders/simple/async"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -3292,6 +3304,8 @@ expr_stmt|;
 name|validatePostResponse
 argument_list|(
 name|wc
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -3311,7 +3325,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore/bookheaders/simple"
+literal|"/bookstore/bookheaders/simple/async"
 decl_stmt|;
 name|doTestPostBookAsyncHandler
 argument_list|(

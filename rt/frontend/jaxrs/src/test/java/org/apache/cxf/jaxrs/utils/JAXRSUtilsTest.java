@@ -11513,7 +11513,13 @@ name|OperationResourceInfo
 argument_list|(
 name|m
 argument_list|,
-literal|null
+operator|new
+name|ClassResourceInfo
+argument_list|(
+name|Customer
+operator|.
+name|class
+argument_list|)
 argument_list|)
 argument_list|,
 operator|new

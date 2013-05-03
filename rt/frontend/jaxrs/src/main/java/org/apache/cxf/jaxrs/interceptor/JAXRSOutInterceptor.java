@@ -1822,6 +1822,17 @@ argument_list|,
 name|responseMediaType
 argument_list|,
 name|message
+argument_list|,
+name|ori
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|ori
+operator|.
+name|getNameBindings
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|OutputStream

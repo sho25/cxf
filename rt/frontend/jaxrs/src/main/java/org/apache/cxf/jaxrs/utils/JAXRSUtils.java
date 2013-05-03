@@ -6411,9 +6411,6 @@ name|contentType
 argument_list|)
 argument_list|,
 name|ori
-operator|.
-name|getConsumeTypes
-argument_list|()
 argument_list|,
 name|message
 argument_list|)
@@ -9147,11 +9144,8 @@ parameter_list|,
 name|MediaType
 name|contentType
 parameter_list|,
-name|List
-argument_list|<
-name|MediaType
-argument_list|>
-name|consumeTypes
+name|OperationResourceInfo
+name|ori
 parameter_list|,
 name|Message
 name|m
@@ -9171,7 +9165,10 @@ name|JAXRSUtils
 operator|.
 name|intersectMimeTypes
 argument_list|(
-name|consumeTypes
+name|ori
+operator|.
+name|getConsumeTypes
+argument_list|()
 argument_list|,
 name|contentType
 argument_list|)
@@ -9214,6 +9211,11 @@ argument_list|,
 name|type
 argument_list|,
 name|m
+argument_list|,
+name|ori
+operator|.
+name|getNameBindings
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
