@@ -12115,7 +12115,7 @@ name|entry
 range|:
 name|response
 operator|.
-name|getHeaders
+name|getMetadata
 argument_list|()
 operator|.
 name|entrySet
@@ -12275,7 +12275,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Custom annotations if any may can not be copied"
+literal|"Custom annotations if any can not be copied"
 argument_list|)
 expr_stmt|;
 block|}
