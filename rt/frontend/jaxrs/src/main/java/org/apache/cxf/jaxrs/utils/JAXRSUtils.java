@@ -9445,8 +9445,6 @@ name|parameterType
 argument_list|,
 name|parameterAnnotations
 argument_list|,
-name|mediaType
-argument_list|,
 name|is
 argument_list|,
 name|m
@@ -9618,8 +9616,6 @@ argument_list|,
 name|genericType
 argument_list|,
 name|annotations
-argument_list|,
-name|mediaType
 argument_list|,
 name|entityStream
 argument_list|,
