@@ -3992,7 +3992,7 @@ name|EndpointReferenceUtils
 operator|.
 name|getAddress
 argument_list|(
-name|ref
+name|cref
 argument_list|)
 decl_stmt|;
 if|if
