@@ -920,6 +920,24 @@ return|return
 name|requestContext
 return|;
 block|}
+specifier|public
+name|Endpoint
+name|getEndpoint
+parameter_list|()
+block|{
+return|return
+name|conduitSelector
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|conduitSelector
+operator|.
+name|getEndpoint
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 
