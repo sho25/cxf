@@ -1125,7 +1125,7 @@ name|addHeader
 argument_list|(
 name|HttpHeaders
 operator|.
-name|ACCEPT
+name|CONTENT_TYPE
 argument_list|,
 name|mt
 argument_list|)
@@ -1156,7 +1156,7 @@ name|addHeader
 argument_list|(
 name|HttpHeaders
 operator|.
-name|ACCEPT_LANGUAGE
+name|CONTENT_LANGUAGE
 argument_list|,
 name|l
 argument_list|)
@@ -1187,7 +1187,7 @@ name|addHeader
 argument_list|(
 name|HttpHeaders
 operator|.
-name|ACCEPT_ENCODING
+name|CONTENT_ENCODING
 argument_list|,
 name|enc
 argument_list|)
@@ -1554,6 +1554,20 @@ argument_list|>
 name|methods
 parameter_list|)
 block|{
+if|if
+condition|(
+name|methods
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+name|allow
+argument_list|()
+return|;
+block|}
+else|else
+block|{
 return|return
 name|allow
 argument_list|(
@@ -1572,6 +1586,7 @@ index|]
 argument_list|)
 argument_list|)
 return|;
+block|}
 block|}
 annotation|@
 name|Override
