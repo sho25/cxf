@@ -3531,6 +3531,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|token
+operator|!=
+literal|null
+operator|&&
 name|id
 operator|.
 name|equals
