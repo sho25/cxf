@@ -93,20 +93,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|Response
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -151,7 +137,7 @@ decl_stmt|;
 specifier|public
 name|ContainerResponseContextImpl
 parameter_list|(
-name|Response
+name|ResponseImpl
 name|r
 parameter_list|,
 name|Message
@@ -209,7 +195,7 @@ name|super
 operator|.
 name|r
 operator|.
-name|getEntity
+name|getActualEntity
 argument_list|()
 argument_list|)
 return|;
@@ -232,7 +218,7 @@ name|super
 operator|.
 name|r
 operator|.
-name|getEntity
+name|getActualEntity
 argument_list|()
 argument_list|,
 name|getEntityClass
