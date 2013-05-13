@@ -344,7 +344,6 @@ argument_list|,
 literal|null
 argument_list|)
 operator|&&
-operator|!
 name|p
 operator|.
 name|isReadable

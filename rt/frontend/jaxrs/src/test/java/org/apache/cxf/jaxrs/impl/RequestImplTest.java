@@ -1165,6 +1165,9 @@ name|getFirst
 argument_list|(
 literal|"ETag"
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

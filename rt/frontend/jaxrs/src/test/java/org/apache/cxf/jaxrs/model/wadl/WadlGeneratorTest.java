@@ -2357,6 +2357,9 @@ name|HttpHeaders
 operator|.
 name|CONTENT_TYPE
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//        File f = new File("test.xml");
@@ -2509,6 +2512,9 @@ name|HttpHeaders
 operator|.
 name|CONTENT_TYPE
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|String
