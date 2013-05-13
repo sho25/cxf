@@ -569,7 +569,7 @@ block|{
 comment|// ignore and continue
 name|LOG
 operator|.
-name|warning
+name|fine
 argument_list|(
 name|e
 operator|.
