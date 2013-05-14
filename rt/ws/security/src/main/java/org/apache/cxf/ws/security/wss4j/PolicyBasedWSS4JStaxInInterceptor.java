@@ -2711,6 +2711,13 @@ argument_list|(
 name|securityEvent
 argument_list|)
 expr_stmt|;
+name|super
+operator|.
+name|registerSecurityEvent
+argument_list|(
+name|securityEvent
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 decl_stmt|;
