@@ -661,6 +661,21 @@ argument_list|>
 name|ignoreParams
 parameter_list|)
 block|{
+if|if
+condition|(
+name|type
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"MediaType parameter is null"
+argument_list|)
+throw|;
+block|}
 name|StringBuilder
 name|sb
 init|=

@@ -470,6 +470,21 @@ argument_list|>
 name|type
 parameter_list|)
 block|{
+if|if
+condition|(
+name|type
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"HeaderDelegate type is null"
+argument_list|)
+throw|;
+block|}
 return|return
 operator|(
 name|HeaderDelegate
