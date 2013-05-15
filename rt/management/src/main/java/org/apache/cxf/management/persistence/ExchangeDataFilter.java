@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This interface can be implemented to indicate to PersistOutInterceptor  * if an ExchangeData should be persisted.  *   * @author remi  *  */
+comment|/**  * This interface can be implemented to indicate to PersistOutInterceptor  * if an ExchangeData should be persisted.  */
 end_comment
 
 begin_interface

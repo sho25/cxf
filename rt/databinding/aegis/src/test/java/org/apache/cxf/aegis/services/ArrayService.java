@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An array service for testing.  * There are some JAX-WS annotations for tests with JAX-WS.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * An array service for testing.  * There are some JAX-WS annotations for tests with JAX-WS.  */
 end_comment
 
 begin_class

@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This strategy simply retries the invocation using the same Endpoint (CXF-2036).  *   * @author Dennis Kieselhorst  *  */
+comment|/**  * This strategy simply retries the invocation using the same Endpoint (CXF-2036).  */
 end_comment
 
 begin_class

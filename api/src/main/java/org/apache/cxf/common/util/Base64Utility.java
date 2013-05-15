@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Base64Utility - this static class provides useful base64   *                 encoding utilities.  *<p>  * @author Darach Ennis  * @author Craig Ryan  */
+comment|/**  * Base64Utility - this static class provides useful base64   *                 encoding utilities.  */
 end_comment
 
 begin_comment

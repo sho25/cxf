@@ -128,7 +128,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * AegisType for the Date class which serializes as an xsd:date (no time  * and timezone information).  *   * @author Dennis Kieselhorst  *  */
+comment|/**  * AegisType for the Date class which serializes as an xsd:date (no time  * and timezone information).  */
 end_comment
 
 begin_class

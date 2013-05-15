@@ -56,7 +56,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A session implementation bound to HTTP.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * A session implementation bound to HTTP.  */
 end_comment
 
 begin_class

@@ -19,10 +19,6 @@ name|ws1
 package|;
 end_package
 
-begin_comment
-comment|/**  *<br/>  *   * @author xfournet  */
-end_comment
-
 begin_class
 specifier|public
 class|class

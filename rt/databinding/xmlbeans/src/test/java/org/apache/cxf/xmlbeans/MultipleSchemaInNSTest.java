@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests that we can handle multiple schemas within the same namespace.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Tests that we can handle multiple schemas within the same namespace.  */
 end_comment
 
 begin_class

@@ -314,7 +314,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An ArrayType.  *  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * An ArrayType.  */
 end_comment
 
 begin_class

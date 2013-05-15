@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Invokers control how a particular service is invoked. It may maintain  * state or it may create new service objects for every request. It is  * up to the invoker.  *   * @author Dan Diephouse  */
+comment|/**  * Invokers control how a particular service is invoked. It may maintain  * state or it may create new service objects for every request. It is  * up to the invoker.  */
 end_comment
 
 begin_interface

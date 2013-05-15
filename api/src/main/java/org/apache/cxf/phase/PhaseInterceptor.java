@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A phase interceptor is an intercetor that participates in a   * PhaseInterceptorChain.  * The phase property controls the phase in which the interceptor is placed.  * The before and after properties allow for fine grained control over where   * the phase the interceptor is placed. They specify the IDs of the   * interceptors that must be placed before and after the interceptor.  *  * @see org.apache.cxf.phase.PhaseInterceptorChain  * @author Dan Diephouse  */
+comment|/**  * A phase interceptor is an intercetor that participates in a   * PhaseInterceptorChain.  * The phase property controls the phase in which the interceptor is placed.  * The before and after properties allow for fine grained control over where   * the phase the interceptor is placed. They specify the IDs of the   * interceptors that must be placed before and after the interceptor.  *  * @see org.apache.cxf.phase.PhaseInterceptorChain  */
 end_comment
 
 begin_interface

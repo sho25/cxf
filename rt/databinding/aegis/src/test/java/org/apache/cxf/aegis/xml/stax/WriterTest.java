@@ -149,10 +149,6 @@ name|Test
 import|;
 end_import
 
-begin_comment
-comment|/**  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  * @since Nov 4, 2004  */
-end_comment
-
 begin_class
 specifier|public
 class|class

@@ -448,7 +448,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Takes a Fault and converts it to a local exception type if possible.  *   * @author Dan Diephouse  */
+comment|/**  * Takes a Fault and converts it to a local exception type if possible.  */
 end_comment
 
 begin_class

@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A base class to build your own message implementations on.  *   * @author Dan  */
+comment|/**  * A base class to build your own message implementations on.  */
 end_comment
 
 begin_class

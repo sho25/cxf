@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * SimpleSerializer  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * SimpleSerializer  */
 end_comment
 
 begin_class

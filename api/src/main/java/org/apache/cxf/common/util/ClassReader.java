@@ -148,7 +148,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is the class file reader for obtaining the parameter names for declared  * methods in a class. The class must have debugging attributes for us to obtain  * this information.  *<p>  * This does not work for inherited methods. To obtain parameter names for  * inherited methods, you must use a paramReader for the class that originally  * declared the method.  *<p>  * don't get tricky, it's the bare minimum. Instances of this class are not  * threadsafe -- don't share them.  *<p>  *   * @author Edwin Smith, Macromedia  */
+comment|/**  * This is the class file reader for obtaining the parameter names for declared  * methods in a class. The class must have debugging attributes for us to obtain  * this information.  *<p>  * This does not work for inherited methods. To obtain parameter names for  * inherited methods, you must use a paramReader for the class that originally  * declared the method.  *<p>  * don't get tricky, it's the bare minimum. Instances of this class are not  * threadsafe -- don't share them.  *<p>  */
 end_comment
 
 begin_class

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A Session which can be bound to HTTP, WS-Adddressing, etc.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * A Session which can be bound to HTTP, WS-Adddressing, etc.  */
 end_comment
 
 begin_interface

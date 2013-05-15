@@ -130,7 +130,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<code>AegisType</code> for a<code>BigDecimal</code>  *   * @author<a href="mailto:peter.royal@pobox.com">peter royal</a>  */
+comment|/**  *<code>AegisType</code> for a<code>BigDecimal</code>  */
 end_comment
 
 begin_class

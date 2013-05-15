@@ -174,7 +174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * XPath test assertions.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * XPath test assertions.  */
 end_comment
 
 begin_class

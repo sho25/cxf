@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This filter will only persist exchange data with a specific status.  *   * @author remi  *  */
+comment|/**  * This filter will only persist exchange data with a specific status.  */
 end_comment
 
 begin_class

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * SOAP constants from the specifications.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  * @since Feb 18, 2004  */
+comment|/**  * SOAP constants from the specifications.  */
 end_comment
 
 begin_class

@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Writes messages to an output stream.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Writes messages to an output stream.  */
 end_comment
 
 begin_interface

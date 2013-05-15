@@ -190,7 +190,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Invokes a Binding's invoker with the<code>INVOCATION_INPUT</code> from  * the Exchange.  * @author Dan Diephouse  */
+comment|/**  * Invokes a Binding's invoker with the<code>INVOCATION_INPUT</code> from  * the Exchange.  */
 end_comment
 
 begin_class

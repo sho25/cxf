@@ -948,7 +948,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Performs WS-Security inbound actions.  *   * @author<a href="mailto:tsztelak@gmail.com">Tomasz Sztelak</a>  */
+comment|/**  * Performs WS-Security inbound actions.  */
 end_comment
 
 begin_class

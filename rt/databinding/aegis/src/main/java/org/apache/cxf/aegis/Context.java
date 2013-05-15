@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Holds information about the message request and response. Applications should not need to   * work with this class.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  * @since Feb 13, 2004  */
+comment|/**  * Holds information about the message request and response. Applications should not need to   * work with this class.  */
 end_comment
 
 begin_class

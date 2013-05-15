@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A MessageReader. You must call getNextChildReader() until  * hasMoreChildReaders() returns false.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * A MessageReader. You must call getNextChildReader() until  * hasMoreChildReaders() returns false.  */
 end_comment
 
 begin_interface

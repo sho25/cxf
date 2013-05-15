@@ -410,7 +410,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Few simple utils to read DOM. This is originally from the Jakarta Commons Modeler.  *   * @author Costin Manolache  */
+comment|/**  * Few simple utils to read DOM. This is originally from the Jakarta Commons Modeler.  */
 end_comment
 
 begin_class

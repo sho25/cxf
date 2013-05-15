@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Helps when constructing, or using services.  *   * @author Arjen Poutsma  */
+comment|/**  * Helps when constructing, or using services.  */
 end_comment
 
 begin_class

@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * AegisType for the Time class which serializes to an xs:time.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * AegisType for the Time class which serializes to an xs:time.  */
 end_comment
 
 begin_class

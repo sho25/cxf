@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Service that echoes the username and password back to the user in an xml  * document  *   * @author Brian Bonner  */
+comment|/**  * Service that echoes the username and password back to the user in an xml  * document  */
 end_comment
 
 begin_class

@@ -238,7 +238,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * CXF interceptor that uncompresses those incoming messages that have "gzip"  * content-encoding. An instance of this class should be added as an in and  * inFault interceptor on clients that need to talk to a service that returns  * gzipped responses or on services that want to accept gzipped requests. For  * clients, you probably also want to use  * {@link org.apache.cxf.transports.http.configuration.HTTPClientPolicy#setAcceptEncoding}  * to let the server know you can handle compressed responses. To compress  * outgoing messages, see {@link GZIPOutInterceptor}. This class was originally  * based on one of the CXF samples (configuration_interceptor).  *   * @author Ian Roberts (i.roberts@dcs.shef.ac.uk)  */
+comment|/**  * CXF interceptor that uncompresses those incoming messages that have "gzip"  * content-encoding. An instance of this class should be added as an in and  * inFault interceptor on clients that need to talk to a service that returns  * gzipped responses or on services that want to accept gzipped requests. For  * clients, you probably also want to use  * {@link org.apache.cxf.transports.http.configuration.HTTPClientPolicy#setAcceptEncoding}  * to let the server know you can handle compressed responses. To compress  * outgoing messages, see {@link GZIPOutInterceptor}. This class was originally  * based on one of the CXF samples (configuration_interceptor).  */
 end_comment
 
 begin_class

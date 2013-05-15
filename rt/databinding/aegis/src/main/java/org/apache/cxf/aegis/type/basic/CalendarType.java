@@ -124,7 +124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * AegisType for the Calendar class.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * AegisType for the Calendar class.  */
 end_comment
 
 begin_class

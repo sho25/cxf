@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Basic type conversions for reading messages.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Basic type conversions for reading messages.  */
 end_comment
 
 begin_class

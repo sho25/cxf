@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * IgnoreProperty Annotation allows us to Ignore JavaBean Properties  * when using AEGIS POJO Binding with Java 5 Annotations  *   * @author<a href="mailto:adam@multicom.co.uk">Adam J Chesney</a>  *  */
+comment|/**  * IgnoreProperty Annotation allows us to Ignore JavaBean Properties  * when using AEGIS POJO Binding with Java 5 Annotations  */
 end_comment
 
 begin_annotation_defn

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Enumeration for the ways in which the CXF bus can be wired into a Spring  * bean.  *   * @author Ian Roberts  */
+comment|/**  * Enumeration for the ways in which the CXF bus can be wired into a Spring  * bean.  */
 end_comment
 
 begin_enum

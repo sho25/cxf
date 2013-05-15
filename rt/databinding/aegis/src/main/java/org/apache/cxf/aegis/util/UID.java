@@ -27,10 +27,6 @@ name|Random
 import|;
 end_import
 
-begin_comment
-comment|/**  * @author Hani Suleiman Date: Jun 10, 2005 Time: 3:20:28 PM  */
-end_comment
-
 begin_class
 specifier|public
 specifier|final

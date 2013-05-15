@@ -526,7 +526,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JAXBEncoderDecoderTest  * @author apaibir  */
+comment|/**  * JAXBEncoderDecoderTest  */
 end_comment
 
 begin_class

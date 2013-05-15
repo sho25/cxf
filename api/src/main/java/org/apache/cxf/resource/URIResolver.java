@@ -288,7 +288,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Resolves a File, classpath resource, or URL according to the follow rules:  *<ul>  *<li>Check to see if a file exists, relative to the base URI.</li>  *<li>If the file doesn't exist, check the classpath</li>  *<li>If the classpath doesn't exist, try to create URL from the URI.</li>  *</ul>  *   * @author Dan Diephouse  */
+comment|/**  * Resolves a File, classpath resource, or URL according to the follow rules:  *<ul>  *<li>Check to see if a file exists, relative to the base URI.</li>  *<li>If the file doesn't exist, check the classpath</li>  *<li>If the classpath doesn't exist, try to create URL from the URI.</li>  *</ul>  */
 end_comment
 
 begin_class

@@ -265,10 +265,6 @@ name|Test
 import|;
 end_import
 
-begin_comment
-comment|/**  * @author<a href="mailto:tsztelak@gmail.com">Tomasz Sztelak</a>  */
-end_comment
-
 begin_class
 specifier|public
 class|class

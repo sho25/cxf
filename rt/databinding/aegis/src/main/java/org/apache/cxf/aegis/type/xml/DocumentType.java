@@ -208,7 +208,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Reads and writes<code>org.w3c.dom.Document</code> types.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Reads and writes<code>org.w3c.dom.Document</code> types.  */
 end_comment
 
 begin_class

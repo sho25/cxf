@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Basic type conversion functionality for writing messages.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Basic type conversion functionality for writing messages.  */
 end_comment
 
 begin_class

@@ -83,10 +83,6 @@ name|NotFoundException
 import|;
 end_import
 
-begin_comment
-comment|/**  *<br/>  *   * @author xfournet  */
-end_comment
-
 begin_interface
 specifier|public
 interface|interface

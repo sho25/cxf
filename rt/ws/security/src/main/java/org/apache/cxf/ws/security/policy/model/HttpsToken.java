@@ -93,10 +93,6 @@ name|SPConstants
 import|;
 end_import
 
-begin_comment
-comment|/**  * @author Ruchith Fernando (ruchith.fernando@gmail.com)  */
-end_comment
-
 begin_class
 specifier|public
 class|class

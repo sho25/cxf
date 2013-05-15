@@ -220,7 +220,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Converts back and forth to byte[] objects.  * There is a co-routine between this class and the MTOM ByteArrayType. This class can accept either   * inline base64 or an MTOM attachment. It passes the problem over the ByteArrayType for the later.   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Converts back and forth to byte[] objects.  * There is a co-routine between this class and the MTOM ByteArrayType. This class can accept either   * inline base64 or an MTOM attachment. It passes the problem over the ByteArrayType for the later.   */
 end_comment
 
 begin_class

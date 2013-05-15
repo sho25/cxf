@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Has a static method which shouldn't be registered with the service.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Has a static method which shouldn't be registered with the service.  */
 end_comment
 
 begin_class

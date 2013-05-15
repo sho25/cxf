@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Annotates services method parameters to provide information about how they  * are to be serialized.  *   * @author Dan Diephouse  */
+comment|/**  * Annotates services method parameters to provide information about how they  * are to be serialized.  */
 end_comment
 
 begin_annotation_defn

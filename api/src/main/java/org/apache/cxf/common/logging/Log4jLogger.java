@@ -166,7 +166,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * java.util.logging.Logger implementation delegating to Log4j.  * All methods can be used except:  *   setLevel  *   addHandler / getHandlers  *   setParent / getParent  *   setUseParentHandlers / getUseParentHandlers  *  * @author gnodet  */
+comment|/**  * java.util.logging.Logger implementation delegating to Log4j.  * All methods can be used except:  *   setLevel  *   addHandler / getHandlers  *   setParent / getParent  *   setUseParentHandlers / getUseParentHandlers  */
 end_comment
 
 begin_class

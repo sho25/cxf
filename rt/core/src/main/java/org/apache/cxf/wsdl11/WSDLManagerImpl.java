@@ -516,7 +516,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * WSDLManagerImpl  *   * @author dkulp  */
+comment|/**  * WSDLManagerImpl  */
 end_comment
 
 begin_class

@@ -304,11 +304,7 @@ import|;
 end_import
 
 begin_comment
-comment|//import org.apache.handler_test.PingException;
-end_comment
-
-begin_comment
-comment|/**  * Describe class TestSOAPHandler here.  *  *  * Created: Fri Oct 21 13:24:05 2005  *  * @author<a href="mailto:codea@iona.com">codea</a>  * @version 1.0  */
+comment|/**  * Describe class TestSOAPHandler here.  */
 end_comment
 
 begin_class

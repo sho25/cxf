@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * AegisType for the Date class which serializes as an xsd:date (no time  * information).  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * AegisType for the Date class which serializes as an xsd:date (no time  * information).  */
 end_comment
 
 begin_class

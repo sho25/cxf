@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A {@code PatternBuilderTest} is ...  *  * @author Guillaume Sauthier  */
+comment|/**  * A {@code PatternBuilderTest} is ...  */
 end_comment
 
 begin_class

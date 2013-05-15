@@ -224,7 +224,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Facade for DOMStreamReader using JDOM implmentation.  *   * @author<a href="mailto:tsztelak@gmail.com">Tomasz Sztelak</a>  */
+comment|/**  * Facade for DOMStreamReader using JDOM implmentation.  */
 end_comment
 
 begin_class

@@ -192,7 +192,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Reads literal encoded messages.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Reads literal encoded messages.  */
 end_comment
 
 begin_class

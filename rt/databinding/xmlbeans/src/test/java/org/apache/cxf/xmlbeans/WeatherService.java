@@ -87,10 +87,6 @@ name|WeatherForecasts
 import|;
 end_import
 
-begin_comment
-comment|/**  * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
-end_comment
-
 begin_class
 annotation|@
 name|WebService

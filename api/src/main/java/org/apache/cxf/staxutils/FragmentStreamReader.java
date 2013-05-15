@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wraps a XMLStreamReader and provides optional START_DOCUMENT and END_DOCUMENT events.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Wraps a XMLStreamReader and provides optional START_DOCUMENT and END_DOCUMENT events.  */
 end_comment
 
 begin_class

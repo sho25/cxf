@@ -196,7 +196,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Static methods/constants for Aegis.  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * Static methods/constants for Aegis.  */
 end_comment
 
 begin_class

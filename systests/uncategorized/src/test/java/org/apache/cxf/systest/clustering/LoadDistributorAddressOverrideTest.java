@@ -115,10 +115,6 @@ name|Test
 import|;
 end_import
 
-begin_comment
-comment|/**  *  * @author jtalbut  */
-end_comment
-
 begin_class
 specifier|public
 class|class

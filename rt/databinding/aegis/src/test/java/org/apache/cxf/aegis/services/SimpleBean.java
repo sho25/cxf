@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * SomeBean  *   * @author<a href="mailto:dan@envoisolutions.com">Dan Diephouse</a>  */
+comment|/**  * SomeBean  */
 end_comment
 
 begin_class

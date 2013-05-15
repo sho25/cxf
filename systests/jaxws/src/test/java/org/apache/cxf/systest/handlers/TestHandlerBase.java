@@ -126,7 +126,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Describe class TestHandlerBase here.  *  *  * Created: Fri Oct 21 14:02:50 2005  *  * @author<a href="mailto:codea@iona.com">codea</a>  * @version 1.0  */
+comment|/**  * Describe class TestHandlerBase here.  */
 end_comment
 
 begin_class

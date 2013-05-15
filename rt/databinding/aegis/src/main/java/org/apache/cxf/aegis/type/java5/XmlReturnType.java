@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Annotates a service's return type to provide information about how it is to  * be serialized.  *   * @author Dan Diephouse  */
+comment|/**  * Annotates a service's return type to provide information about how it is to  * be serialized.  */
 end_comment
 
 begin_annotation_defn

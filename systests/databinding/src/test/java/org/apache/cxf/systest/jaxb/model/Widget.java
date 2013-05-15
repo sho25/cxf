@@ -135,10 +135,6 @@ name|ToStringBuilder
 import|;
 end_import
 
-begin_comment
-comment|/**  * @author shade  */
-end_comment
-
 begin_class
 annotation|@
 name|XmlType
