@@ -433,6 +433,7 @@ name|MediaType
 name|getMediaType
 parameter_list|()
 block|{
+comment|//return r.getEntity() != null ? r.getMediaType() : null;
 return|return
 name|r
 operator|.

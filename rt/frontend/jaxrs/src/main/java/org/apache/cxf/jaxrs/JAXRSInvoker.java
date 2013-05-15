@@ -97,18 +97,6 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|InternalServerErrorException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|NotFoundException
 import|;
 end_import
@@ -833,7 +821,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|InternalServerErrorException
+name|WebApplicationException
 name|ex
 parameter_list|)
 block|{
