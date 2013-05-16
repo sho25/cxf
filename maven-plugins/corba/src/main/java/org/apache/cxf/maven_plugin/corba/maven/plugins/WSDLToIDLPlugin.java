@@ -864,6 +864,13 @@ argument_list|(
 name|origContext
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|cp
+operator|!=
+literal|null
+condition|)
+block|{
 name|System
 operator|.
 name|setProperty
@@ -873,6 +880,7 @@ argument_list|,
 name|cp
 argument_list|)
 expr_stmt|;
+block|}
 name|Map
 argument_list|<
 name|Object

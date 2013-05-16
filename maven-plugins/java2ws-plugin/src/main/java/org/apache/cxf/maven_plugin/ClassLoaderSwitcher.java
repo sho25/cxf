@@ -543,6 +543,13 @@ argument_list|(
 name|origContextClassloader
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|origClassPath
+operator|!=
+literal|null
+condition|)
+block|{
 name|System
 operator|.
 name|setProperty
@@ -552,6 +559,7 @@ argument_list|,
 name|origClassPath
 argument_list|)
 expr_stmt|;
+block|}
 name|Map
 argument_list|<
 name|Object
