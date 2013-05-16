@@ -291,6 +291,11 @@ argument_list|(
 literal|"XML_STREAM_EXC"
 argument_list|,
 name|LOG
+argument_list|,
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 argument_list|,
 name|e
