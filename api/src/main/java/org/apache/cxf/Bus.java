@@ -72,6 +72,20 @@ name|Bus
 extends|extends
 name|InterceptorProvider
 block|{
+specifier|public
+enum|enum
+name|BusState
+block|{
+name|INITIAL
+block|,
+name|INITIALIZING
+block|,
+name|RUNNING
+block|,
+name|SHUTTING_DOWN
+block|,
+name|SHUTDOWN
+block|;     }
 name|String
 name|DEFAULT_BUS_ID
 init|=
@@ -125,10 +139,6 @@ name|wait
 parameter_list|)
 function_decl|;
 name|void
-name|run
-parameter_list|()
-function_decl|;
-name|void
 name|setProperty
 parameter_list|(
 name|String
@@ -159,6 +169,10 @@ argument_list|<
 name|Feature
 argument_list|>
 name|getFeatures
+parameter_list|()
+function_decl|;
+name|BusState
+name|getState
 parameter_list|()
 function_decl|;
 block|}
