@@ -93,20 +93,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|bus
-operator|.
-name|CXFBusImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|common
 operator|.
 name|injection
@@ -1038,7 +1024,7 @@ name|AbstractBasicInterceptorProvider
 implements|implements
 name|ApplicationContextAware
 block|{
-name|CXFBusImpl
+name|Bus
 name|bus
 decl_stmt|;
 name|String
@@ -1092,14 +1078,10 @@ condition|)
 block|{
 return|return;
 block|}
-name|CXFBusImpl
-name|b
-init|=
-operator|(
-name|CXFBusImpl
-operator|)
+name|bus
+operator|=
 name|bb
-decl_stmt|;
+expr_stmt|;
 if|if
 condition|(
 name|properties
@@ -1107,7 +1089,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|setProperties
 argument_list|(
@@ -1129,7 +1111,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|getInInterceptors
 argument_list|()
@@ -1151,7 +1133,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|getOutInterceptors
 argument_list|()
@@ -1173,7 +1155,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|getInFaultInterceptors
 argument_list|()
@@ -1195,7 +1177,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|getOutFaultInterceptors
 argument_list|()
@@ -1218,7 +1200,7 @@ name|id
 argument_list|)
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|setId
 argument_list|(
@@ -1233,7 +1215,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|b
+name|bus
 operator|.
 name|setFeatures
 argument_list|(
@@ -1245,10 +1227,6 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-name|bus
-operator|=
-name|b
-expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -1269,7 +1247,6 @@ condition|)
 block|{
 return|return;
 block|}
-comment|/*             bus = (CXFBusImpl)BusWiringBeanFactoryPostProcessor                     .addBus(applicationContext, busName);                     */
 block|}
 specifier|public
 name|List
@@ -1567,7 +1544,10 @@ condition|)
 block|{
 name|bus
 operator|.
-name|setOutFaultInterceptors
+name|getOutFaultInterceptors
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|interceptors
 argument_list|)

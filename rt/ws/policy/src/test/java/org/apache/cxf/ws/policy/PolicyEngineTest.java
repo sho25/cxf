@@ -123,7 +123,9 @@ name|cxf
 operator|.
 name|bus
 operator|.
-name|CXFBusImpl
+name|extension
+operator|.
+name|ExtensionManagerBus
 import|;
 end_import
 
@@ -616,7 +618,7 @@ name|Bus
 name|bus
 init|=
 operator|new
-name|CXFBusImpl
+name|ExtensionManagerBus
 argument_list|()
 decl_stmt|;
 name|engine

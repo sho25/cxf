@@ -503,6 +503,46 @@ return|return
 literal|null
 return|;
 block|}
+specifier|public
+name|void
+name|setId
+parameter_list|(
+name|String
+name|i
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+block|}
+specifier|public
+name|void
+name|setProperties
+parameter_list|(
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|properties
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+block|}
+specifier|public
+name|void
+name|setFeatures
+parameter_list|(
+name|Collection
+argument_list|<
+name|?
+extends|extends
+name|Feature
+argument_list|>
+name|features
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+block|}
 block|}
 end_class
 

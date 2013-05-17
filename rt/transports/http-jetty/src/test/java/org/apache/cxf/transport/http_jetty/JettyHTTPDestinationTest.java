@@ -229,7 +229,9 @@ name|cxf
 operator|.
 name|bus
 operator|.
-name|CXFBusImpl
+name|extension
+operator|.
+name|ExtensionManagerBus
 import|;
 end_import
 
@@ -1499,7 +1501,7 @@ operator|.
 name|setBus
 argument_list|(
 operator|new
-name|CXFBusImpl
+name|ExtensionManagerBus
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1762,7 +1764,7 @@ name|Bus
 name|defaultBus
 init|=
 operator|new
-name|CXFBusImpl
+name|ExtensionManagerBus
 argument_list|()
 decl_stmt|;
 name|assertSame
@@ -2489,7 +2491,7 @@ expr_stmt|;
 name|bus
 operator|=
 operator|new
-name|CXFBusImpl
+name|ExtensionManagerBus
 argument_list|()
 expr_stmt|;
 name|transportFactory
@@ -3224,7 +3226,7 @@ block|{
 name|bus
 operator|=
 operator|new
-name|CXFBusImpl
+name|ExtensionManagerBus
 argument_list|()
 expr_stmt|;
 name|bus
@@ -3234,6 +3236,17 @@ argument_list|(
 name|mgr
 argument_list|,
 name|ConduitInitiatorManager
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
+name|setExtension
+argument_list|(
+literal|null
+argument_list|,
+name|QueryHandlerRegistry
 operator|.
 name|class
 argument_list|)

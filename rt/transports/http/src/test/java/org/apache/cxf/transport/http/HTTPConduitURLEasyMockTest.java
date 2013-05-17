@@ -179,7 +179,9 @@ name|cxf
 operator|.
 name|bus
 operator|.
-name|CXFBusImpl
+name|extension
+operator|.
+name|ExtensionManagerBus
 import|;
 end_import
 
@@ -1832,11 +1834,11 @@ name|expectLastCall
 argument_list|()
 expr_stmt|;
 block|}
-name|CXFBusImpl
+name|ExtensionManagerBus
 name|bus
 init|=
 operator|new
-name|CXFBusImpl
+name|ExtensionManagerBus
 argument_list|()
 decl_stmt|;
 name|control
