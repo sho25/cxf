@@ -365,6 +365,14 @@ argument_list|(
 name|newCache
 argument_list|)
 expr_stmt|;
+comment|// Set the TimeToLive value from the CacheConfiguration
+name|ttl
+operator|=
+name|cc
+operator|.
+name|getTimeToLiveSeconds
+argument_list|()
+expr_stmt|;
 block|}
 comment|/**      * Set a new (default) TTL value in seconds      * @param newTtl a new (default) TTL value in seconds      */
 specifier|public
