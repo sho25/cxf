@@ -379,6 +379,26 @@ name|X509Utils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|slf4j
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|slf4j
+operator|.
+name|LoggerFactory
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -394,7 +414,21 @@ name|CN_PREFIX
 init|=
 literal|"cn="
 decl_stmt|;
-comment|//private static final Logger LOG = LoggerFactory.getLogger(FilePersistenceManager.class);
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LoggerFactory
+operator|.
+name|getLogger
+argument_list|(
+name|FileLocator
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|private
 specifier|final
 name|File
@@ -818,7 +852,6 @@ init|=
 name|getX509Files
 argument_list|()
 decl_stmt|;
-comment|//        String searchId = DnUtils.extractMostSignificantAttribute(subjectDN);
 for|for
 control|(
 name|File
@@ -829,6 +862,16 @@ control|)
 block|{
 try|try
 block|{
+if|if
+condition|(
+name|certFile
+operator|.
+name|isDirectory
+argument_list|()
+condition|)
+block|{
+continue|continue;
+block|}
 name|X509Certificate
 name|cert
 init|=
@@ -837,8 +880,6 @@ argument_list|(
 name|certFile
 argument_list|)
 decl_stmt|;
-comment|//                String id = DnUtils.extractMostSignificantAttribute(cert.getSubjectDN().getName());
-comment|//                if (searchId.equalsIgnoreCase(id)) {
 if|if
 condition|(
 name|subjectDN
@@ -883,24 +924,25 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
+name|LOG
+operator|.
+name|warn
 argument_list|(
-literal|"Error reading certificate for "
-operator|+
-name|subjectDN
-operator|+
-literal|": "
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"Cannot load certificate from file: %s. Error: %s"
+argument_list|,
+name|certFile
+argument_list|,
 name|e
 operator|.
 name|getMessage
 argument_list|()
-argument_list|,
-name|e
 argument_list|)
-throw|;
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 return|return
@@ -951,6 +993,16 @@ control|)
 block|{
 try|try
 block|{
+if|if
+condition|(
+name|certFile
+operator|.
+name|isDirectory
+argument_list|()
+condition|)
+block|{
+continue|continue;
+block|}
 name|X509Certificate
 name|cert
 init|=
@@ -1016,24 +1068,25 @@ name|Exception
 name|e
 parameter_list|)
 block|{
-throw|throw
-operator|new
-name|RuntimeException
+name|LOG
+operator|.
+name|warn
 argument_list|(
-literal|"Error reading certificate for issuer "
-operator|+
-name|issuer
-operator|+
-literal|": "
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+literal|"Cannot load certificate from file: %s. Error: %s"
+argument_list|,
+name|certFile
+argument_list|,
 name|e
 operator|.
 name|getMessage
 argument_list|()
-argument_list|,
-name|e
 argument_list|)
-throw|;
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 return|return

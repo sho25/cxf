@@ -251,6 +251,11 @@ name|String
 index|[]
 name|split
 decl_stmt|;
+name|String
+name|normalized
+init|=
+name|val
+decl_stmt|;
 if|if
 condition|(
 literal|null
@@ -302,7 +307,7 @@ operator|.
 name|trim
 argument_list|()
 decl_stmt|;
-name|val
+name|normalized
 operator|=
 name|prefix
 operator|+
@@ -313,7 +318,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|val
+name|normalized
 operator|=
 name|val
 operator|.
@@ -323,7 +328,7 @@ expr_stmt|;
 block|}
 block|}
 return|return
-name|val
+name|normalized
 return|;
 block|}
 specifier|public

@@ -131,8 +131,6 @@ name|XKMSException
 operator|)
 name|e
 decl_stmt|;
-name|result
-operator|=
 name|initResultType
 argument_list|(
 name|xkmsEx
@@ -162,8 +160,6 @@ operator|instanceof
 name|UnsupportedOperationException
 condition|)
 block|{
-name|result
-operator|=
 name|initResultType
 argument_list|(
 name|e
@@ -191,8 +187,6 @@ operator|instanceof
 name|IllegalArgumentException
 condition|)
 block|{
-name|result
-operator|=
 name|initResultType
 argument_list|(
 name|e
@@ -214,8 +208,6 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|result
-operator|=
 name|initResultType
 argument_list|(
 name|e
@@ -396,7 +388,7 @@ name|T
 extends|extends
 name|ResultType
 parameter_list|>
-name|T
+name|void
 name|initResultType
 parameter_list|(
 name|String
@@ -490,9 +482,6 @@ name|resultDetails
 argument_list|)
 expr_stmt|;
 block|}
-return|return
-name|result
-return|;
 block|}
 block|}
 end_class
