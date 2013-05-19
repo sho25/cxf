@@ -65,8 +65,6 @@ name|eventing
 operator|.
 name|base
 operator|.
-name|aux
-operator|.
 name|SingletonSubscriptionManagerContainer
 import|;
 end_import

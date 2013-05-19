@@ -273,7 +273,7 @@ name|eventing
 operator|.
 name|base
 operator|.
-name|TestUtil
+name|SingletonSubscriptionManagerContainer
 import|;
 end_import
 
@@ -291,9 +291,7 @@ name|eventing
 operator|.
 name|base
 operator|.
-name|aux
-operator|.
-name|SingletonSubscriptionManagerContainer
+name|TestUtil
 import|;
 end_import
 

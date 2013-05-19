@@ -16,8 +16,6 @@ operator|.
 name|eventing
 operator|.
 name|base
-operator|.
-name|aux
 package|;
 end_package
 
@@ -58,24 +56,6 @@ operator|.
 name|manager
 operator|.
 name|SubscriptionManagerImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|eventing
-operator|.
-name|base
-operator|.
-name|SimpleEventingIntegrationTest
 import|;
 end_import
 
