@@ -1661,6 +1661,13 @@ operator|.
 name|CONTENT_TYPE
 argument_list|)
 expr_stmt|;
+name|HttpUtils
+operator|.
+name|convertHeaderValuesToStringIfNeeded
+argument_list|(
+name|responseHeaders
+argument_list|)
+expr_stmt|;
 return|return;
 block|}
 name|Object
