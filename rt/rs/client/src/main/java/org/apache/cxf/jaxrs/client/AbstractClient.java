@@ -2772,8 +2772,6 @@ return|return
 operator|new
 name|WebApplicationException
 argument_list|(
-name|ex2
-argument_list|,
 name|r
 argument_list|)
 return|;
