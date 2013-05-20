@@ -449,7 +449,7 @@ name|Pattern
 operator|.
 name|compile
 argument_list|(
-literal|",\\w*"
+literal|","
 argument_list|)
 decl_stmt|;
 specifier|private
