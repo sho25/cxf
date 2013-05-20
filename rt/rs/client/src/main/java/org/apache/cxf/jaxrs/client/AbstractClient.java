@@ -2764,7 +2764,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex2
 parameter_list|)
 block|{
