@@ -615,7 +615,7 @@ name|JettyHTTPServerEngineFactory
 operator|.
 name|destroyForPort
 argument_list|(
-literal|1234
+name|PORT1
 argument_list|)
 expr_stmt|;
 block|}

@@ -666,7 +666,7 @@ specifier|private
 name|boolean
 name|configFinalized
 decl_stmt|;
-comment|/**      * Constructor, using Jetty server engine.      *       * @param b the associated Bus      * @param ci the associated conduit initiator      * @param endpointInfo the endpoint info of the destination      * @param serverEngineFactory       * @throws IOException      */
+comment|/**      * Constructor      *      * @param b  the associated Bus      * @param registry the associated destinationRegistry      * @param ei the endpoint info of the destination      * @param serverEngineFactory the serverEngineFactory which could be used to create ServerEngine      * @throws java.io.IOException      */
 specifier|public
 name|JettyHTTPDestination
 parameter_list|(
@@ -685,7 +685,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-comment|//Add the defualt port if the address is missing it
+comment|//Add the default port if the address is missing it
 name|super
 argument_list|(
 name|bus
