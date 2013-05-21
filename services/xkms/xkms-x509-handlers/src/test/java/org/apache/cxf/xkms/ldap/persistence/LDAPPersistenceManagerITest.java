@@ -163,7 +163,7 @@ name|x509
 operator|.
 name|handlers
 operator|.
-name|LDAPSearch
+name|LdapRegisterHandler
 import|;
 end_import
 
@@ -181,7 +181,25 @@ name|x509
 operator|.
 name|handlers
 operator|.
-name|LdapRegisterHandler
+name|LdapSchemaConfig
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|xkms
+operator|.
+name|x509
+operator|.
+name|handlers
+operator|.
+name|LdapSearch
 import|;
 end_import
 
@@ -249,6 +267,16 @@ name|String
 name|EXPECTED_SUBJECT_DN
 init|=
 literal|"CN=www.issuer.com, L=CGN, ST=NRW, C=DE, O=Issuer"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|LdapSchemaConfig
+name|LDAP_CERT_CONFIG
+init|=
+operator|new
+name|LdapSchemaConfig
+argument_list|()
 decl_stmt|;
 annotation|@
 name|Test
@@ -473,11 +501,11 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|LDAPSearch
+name|LdapSearch
 name|ldapSearch
 init|=
 operator|new
-name|LDAPSearch
+name|LdapSearch
 argument_list|(
 literal|"ldap://localhost:2389"
 argument_list|,
@@ -501,6 +529,8 @@ operator|new
 name|LdapRegisterHandler
 argument_list|(
 name|ldapSearch
+argument_list|,
+name|LDAP_CERT_CONFIG
 argument_list|,
 literal|"dc=example,dc=com"
 argument_list|)
@@ -604,11 +634,11 @@ parameter_list|()
 throws|throws
 name|CertificateException
 block|{
-name|LDAPSearch
+name|LdapSearch
 name|ldapSearch
 init|=
 operator|new
-name|LDAPSearch
+name|LdapSearch
 argument_list|(
 literal|"ldap://localhost:2389"
 argument_list|,
@@ -624,6 +654,8 @@ operator|new
 name|LdapLocator
 argument_list|(
 name|ldapSearch
+argument_list|,
+name|LDAP_CERT_CONFIG
 argument_list|,
 literal|"dc=example,dc=com"
 argument_list|)

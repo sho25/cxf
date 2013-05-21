@@ -226,7 +226,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|LDAPSearch
+name|LdapSearch
 block|{
 specifier|private
 specifier|static
@@ -246,7 +246,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|LDAPSearch
+name|LdapSearch
 operator|.
 name|class
 argument_list|)
@@ -272,7 +272,7 @@ name|InitialDirContext
 name|dirContext
 decl_stmt|;
 specifier|public
-name|LDAPSearch
+name|LdapSearch
 parameter_list|(
 name|String
 name|ldapuri

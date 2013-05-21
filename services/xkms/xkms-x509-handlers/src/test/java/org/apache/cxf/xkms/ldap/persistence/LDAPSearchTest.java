@@ -99,7 +99,7 @@ name|x509
 operator|.
 name|handlers
 operator|.
-name|LDAPSearch
+name|LdapSearch
 import|;
 end_import
 
@@ -145,11 +145,11 @@ name|URISyntaxException
 throws|,
 name|NamingException
 block|{
-name|LDAPSearch
+name|LdapSearch
 name|ldapSearch
 init|=
 operator|new
-name|LDAPSearch
+name|LdapSearch
 argument_list|(
 literal|"ldap://localhost:2389"
 argument_list|,
