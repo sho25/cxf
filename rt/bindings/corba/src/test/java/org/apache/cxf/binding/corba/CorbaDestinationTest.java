@@ -285,10 +285,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|m
-argument_list|,
-name|m
-argument_list|,
-name|rtype
 argument_list|)
 decl_stmt|;
 name|assertNotNull

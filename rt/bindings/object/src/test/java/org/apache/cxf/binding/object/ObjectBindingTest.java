@@ -832,10 +832,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|inMsg
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|)
 decl_stmt|;
 name|backChannel

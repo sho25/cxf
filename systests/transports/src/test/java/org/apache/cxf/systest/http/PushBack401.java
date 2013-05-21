@@ -235,22 +235,6 @@ name|Headers
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|EndpointReferenceType
-import|;
-end_import
-
 begin_comment
 comment|/*  * This interceptor will issue 401s  *    No Authorization Header  --> 401 Realm=Cronus  *    Username Mary            --> 401 Realm=Andromeda  *    Username Edward          --> 401 Realm=Zorantius  *    Username George          --> 401 Realm=Cronus  *    If the password is not "password" a 401 is issued without   *    realm.  */
 end_comment
@@ -897,18 +881,6 @@ operator|.
 name|getExchange
 argument_list|()
 decl_stmt|;
-name|EndpointReferenceType
-name|target
-init|=
-name|exchange
-operator|.
-name|get
-argument_list|(
-name|EndpointReferenceType
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
 name|Conduit
 name|conduit
 init|=
@@ -920,10 +892,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|message
-argument_list|,
-literal|null
-argument_list|,
-name|target
 argument_list|)
 decl_stmt|;
 name|exchange

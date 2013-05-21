@@ -2386,10 +2386,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|m
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be got from the conduit
@@ -2665,10 +2661,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|m
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be got from the conduit

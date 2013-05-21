@@ -196,19 +196,13 @@ return|return
 name|reference
 return|;
 block|}
-comment|/**      * Retreive a back-channel Conduit, which must be policy-compatible      * with the current Message and associated Destination. For example      * compatible Quality of Protection must be asserted on the back-channel.      * This would generally only be an issue if the back-channel is decoupled.      *       * @param inMessage the current inbound message (null to indicate a       * disassociated back-channel)      * @param partialResponse in the decoupled case, this is expected to be the      * outbound Message to be sent over the in-built back-channel.       * @param address the backchannel address (null to indicate anonymous)      * @return a suitable Conduit      */
+comment|/**      * Retrieve a back-channel Conduit, which must be policy-compatible      * with the current Message and associated Destination. For example      * compatible Quality of Protection must be asserted on the back-channel.      * This would generally only be an issue if the back-channel is decoupled.      *       * @param inMessage the current inbound message (null to indicate a       * disassociated back-channel)      * @return a suitable Conduit      */
 specifier|public
 name|Conduit
 name|getBackChannel
 parameter_list|(
 name|Message
 name|inMessage
-parameter_list|,
-name|Message
-name|partialResponse
-parameter_list|,
-name|EndpointReferenceType
-name|address
 parameter_list|)
 throws|throws
 name|IOException

@@ -71,18 +71,12 @@ name|EndpointReferenceType
 name|getAddress
 parameter_list|()
 function_decl|;
-comment|/**      * Retreive a back-channel Conduit, which must be policy-compatible      * with the current Message and associated Destination. For example      * compatible Quality of Protection must be asserted on the back-channel.      *       * @param inMessage the current message      * @param unused1 - will likely always be null        * @param unused2 - will likely always be null      * @return a suitable Conduit      */
+comment|/**      * Retreive a back-channel Conduit, which must be policy-compatible      * with the current Message and associated Destination. For example      * compatible Quality of Protection must be asserted on the back-channel.      *       * @param inMessage the current message      * @return a suitable Conduit      */
 name|Conduit
 name|getBackChannel
 parameter_list|(
 name|Message
 name|inMessage
-parameter_list|,
-name|Message
-name|unused1
-parameter_list|,
-name|EndpointReferenceType
-name|unused2
 parameter_list|)
 throws|throws
 name|IOException

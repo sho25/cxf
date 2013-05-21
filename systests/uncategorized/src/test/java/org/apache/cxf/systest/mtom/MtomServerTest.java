@@ -1581,10 +1581,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|message
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|)
 decl_stmt|;
 name|MessageImpl

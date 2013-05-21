@@ -729,12 +729,6 @@ name|getBackChannel
 parameter_list|(
 name|Message
 name|inMessage
-parameter_list|,
-name|Message
-name|partialResponse
-parameter_list|,
-name|EndpointReferenceType
-name|address
 parameter_list|)
 throws|throws
 name|IOException

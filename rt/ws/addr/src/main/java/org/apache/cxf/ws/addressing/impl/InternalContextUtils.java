@@ -838,10 +838,6 @@ operator|.
 name|getBackChannel
 argument_list|(
 name|inMessage
-argument_list|,
-name|partialResponse
-argument_list|,
-name|reference
 argument_list|)
 decl_stmt|;
 name|Exception
@@ -1871,12 +1867,6 @@ name|getBackChannel
 parameter_list|(
 name|Message
 name|inMessage
-parameter_list|,
-name|Message
-name|partialResponse
-parameter_list|,
-name|EndpointReferenceType
-name|address
 parameter_list|)
 throws|throws
 name|IOException
