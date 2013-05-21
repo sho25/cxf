@@ -755,7 +755,9 @@ operator|new
 name|ProviderFactory
 operator|.
 name|ClassComparator
-argument_list|()
+argument_list|(
+name|paramType
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return

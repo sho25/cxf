@@ -69,6 +69,22 @@ end_import
 
 begin_import
 import|import
+name|com
+operator|.
+name|fasterxml
+operator|.
+name|jackson
+operator|.
+name|jaxrs
+operator|.
+name|json
+operator|.
+name|JacksonJsonProvider
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -304,14 +320,6 @@ operator|.
 name|singletonList
 argument_list|(
 operator|new
-name|org
-operator|.
-name|codehaus
-operator|.
-name|jackson
-operator|.
-name|jaxrs
-operator|.
 name|JacksonJsonProvider
 argument_list|()
 argument_list|)
