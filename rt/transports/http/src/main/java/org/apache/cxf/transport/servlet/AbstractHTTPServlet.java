@@ -514,7 +514,7 @@ specifier|final
 name|String
 name|STATIC_RESOURCES_MAP_RESOURCE
 init|=
-literal|"/WEB-INF/cxfServletStaticResourcesMap.txt"
+literal|"/cxfServletStaticResourcesMap.txt"
 decl_stmt|;
 specifier|private
 specifier|static
