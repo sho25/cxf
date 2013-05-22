@@ -71,6 +71,18 @@ name|BeanCreationException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|springframework
+operator|.
+name|util
+operator|.
+name|ClassUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -101,11 +113,6 @@ literal|"org.springframework.aop.framework.Advised"
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|protected
 name|Class
 argument_list|<
@@ -122,7 +129,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|AopUtils
+name|ClassUtils
 operator|.
 name|isCglibProxyClass
 argument_list|(
@@ -201,11 +208,6 @@ return|return
 name|o
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|protected
 name|Class
 argument_list|<
@@ -341,7 +343,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|AopUtils
+name|ClassUtils
 operator|.
 name|isCglibProxyClass
 argument_list|(

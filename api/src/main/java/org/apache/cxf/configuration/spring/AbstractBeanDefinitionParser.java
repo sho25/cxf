@@ -2009,11 +2009,6 @@ return|return
 name|context
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|protected
 name|void
 name|mapElementToJaxbProperty
@@ -2097,7 +2092,7 @@ argument_list|)
 expr_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|getContext
 argument_list|(
@@ -2107,7 +2102,7 @@ argument_list|)
 expr_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|writer
 operator|.
@@ -2117,7 +2112,7 @@ argument_list|)
 expr_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|c
 argument_list|)
@@ -2364,11 +2359,6 @@ name|args
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 name|AbstractBeanDefinition
 name|mapElementToJaxbBean
@@ -2503,7 +2493,7 @@ argument_list|)
 expr_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|writer
 operator|.
@@ -2513,7 +2503,7 @@ argument_list|)
 expr_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|getContext
 argument_list|(
@@ -2538,7 +2528,7 @@ control|)
 block|{
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|o
 argument_list|)
@@ -3033,11 +3023,6 @@ operator|!=
 name|names
 condition|)
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 name|StringTokenizer
 name|st
 init|=
@@ -3048,7 +3033,7 @@ name|names
 argument_list|,
 name|BeanDefinitionParserDelegate
 operator|.
-name|BEAN_NAME_DELIMITERS
+name|MULTI_VALUE_ATTRIBUTE_DELIMITERS
 argument_list|)
 decl_stmt|;
 if|if

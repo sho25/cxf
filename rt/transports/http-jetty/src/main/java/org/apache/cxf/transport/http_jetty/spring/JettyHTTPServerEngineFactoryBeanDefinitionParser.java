@@ -481,11 +481,6 @@ name|id
 return|;
 block|}
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
-annotation|@
 name|Override
 specifier|public
 name|void
@@ -578,7 +573,7 @@ expr_stmt|;
 block|}
 name|bean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|mapElementToJaxbBean
 argument_list|(
@@ -598,7 +593,7 @@ argument_list|)
 expr_stmt|;
 name|bean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|mapElementToJaxbBean
 argument_list|(

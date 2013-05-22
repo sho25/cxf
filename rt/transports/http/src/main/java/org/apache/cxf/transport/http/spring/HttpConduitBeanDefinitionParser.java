@@ -649,11 +649,6 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * Inject the "setTlsClientParameters" method with      * a TLSClientParametersConfig object initialized with the JAXB      * generated type unmarshalled from the selected node.      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 name|void
 name|mapTLSClientParameters
@@ -1146,7 +1141,7 @@ argument_list|)
 expr_stmt|;
 name|jaxbbean
 operator|.
-name|addConstructorArg
+name|addConstructorArgValue
 argument_list|(
 name|paramsbean
 operator|.
