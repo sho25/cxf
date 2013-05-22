@@ -494,6 +494,11 @@ argument_list|(
 name|sc
 argument_list|)
 expr_stmt|;
+name|finalizeServletInit
+argument_list|(
+name|sc
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 specifier|static
