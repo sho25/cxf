@@ -1216,9 +1216,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 name|handleNonEndorsingSupportingTokens
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|transportTokenWrapper
+operator|!=
+literal|null
+condition|)
+block|{
 name|handleEndorsingSupportingTokens
 argument_list|()
 expr_stmt|;
