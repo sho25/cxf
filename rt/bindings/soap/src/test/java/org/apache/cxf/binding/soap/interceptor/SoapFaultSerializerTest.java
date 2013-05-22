@@ -1007,7 +1007,7 @@ argument_list|)
 decl_stmt|;
 name|fault
 operator|.
-name|appendSubCode
+name|addSubCode
 argument_list|(
 operator|new
 name|QName
@@ -1022,7 +1022,7 @@ argument_list|)
 expr_stmt|;
 name|fault
 operator|.
-name|appendSubCode
+name|addSubCode
 argument_list|(
 operator|new
 name|QName

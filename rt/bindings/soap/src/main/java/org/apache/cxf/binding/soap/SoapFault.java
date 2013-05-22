@@ -688,7 +688,7 @@ block|}
 comment|/**      * Appends the SubCode to the SubCode list.      *       * @param subCode The SubCode element as detailed by the SOAP 1.2 spec.       */
 specifier|public
 name|void
-name|appendSubCode
+name|addSubCode
 parameter_list|(
 name|QName
 name|subCode
