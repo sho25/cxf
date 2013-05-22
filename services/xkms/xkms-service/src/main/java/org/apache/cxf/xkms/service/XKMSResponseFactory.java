@@ -264,12 +264,14 @@ name|generateUniqueID
 parameter_list|()
 block|{
 return|return
+literal|"I"
+operator|+
 name|UUID
 operator|.
 name|randomUUID
 argument_list|()
 operator|.
-name|toString
+name|getMostSignificantBits
 argument_list|()
 return|;
 block|}
