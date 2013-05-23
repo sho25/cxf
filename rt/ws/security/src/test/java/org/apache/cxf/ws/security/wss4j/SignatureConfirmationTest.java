@@ -281,9 +281,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|WSSecurityEngineResult
 import|;
@@ -295,9 +295,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|handler
 operator|.
@@ -311,9 +311,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|handler
 operator|.
@@ -737,7 +737,7 @@ name|setProperty
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_FILE
+name|SIG_VER_PROP_FILE
 argument_list|,
 literal|"insecurity.properties"
 argument_list|)

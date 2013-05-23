@@ -55,15 +55,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -78,7 +76,7 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|,
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|wrapper
 parameter_list|)
 function_decl|;

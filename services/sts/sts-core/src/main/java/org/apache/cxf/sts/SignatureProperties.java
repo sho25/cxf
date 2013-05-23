@@ -41,9 +41,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|WSConstants
 import|;

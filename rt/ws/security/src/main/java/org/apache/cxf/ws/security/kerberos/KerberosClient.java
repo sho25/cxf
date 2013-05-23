@@ -147,9 +147,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|WSSConfig
 import|;
@@ -161,9 +161,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|message
 operator|.
@@ -179,13 +179,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|util
 operator|.
-name|Base64
+name|WSSecurityUtil
 import|;
 end_import
 
@@ -195,13 +195,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|xml
 operator|.
 name|security
 operator|.
-name|util
+name|utils
 operator|.
-name|WSSecurityUtil
+name|Base64
 import|;
 end_import
 

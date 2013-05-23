@@ -185,9 +185,25 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
+operator|.
+name|ext
+operator|.
+name|WSSecurityException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|dom
 operator|.
 name|WSConstants
 import|;
@@ -199,25 +215,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|WSDataRef
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|WSSecurityException
 import|;
 end_import
 
@@ -438,9 +440,11 @@ name|soapBody
 argument_list|)
 condition|)
 block|{
-throw|throw
+name|Exception
+name|ex
+init|=
 operator|new
-name|WSSecurityException
+name|Exception
 argument_list|(
 literal|"The "
 operator|+
@@ -450,6 +454,19 @@ name|type
 argument_list|)
 operator|+
 literal|" does not cover the required elements (soap:Body)."
+argument_list|)
+decl_stmt|;
+throw|throw
+operator|new
+name|WSSecurityException
+argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
+name|ex
 argument_list|)
 throw|;
 block|}
@@ -556,6 +573,15 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
+operator|new
+name|Exception
+argument_list|(
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -572,6 +598,7 @@ operator|+
 name|name
 operator|+
 literal|")."
+argument_list|)
 argument_list|)
 throw|;
 block|}
@@ -812,6 +839,8 @@ name|WSSecurityException
 argument_list|(
 name|WSSecurityException
 operator|.
+name|ErrorCode
+operator|.
 name|FAILURE
 argument_list|)
 throw|;
@@ -889,6 +918,15 @@ throw|throw
 operator|new
 name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
+operator|new
+name|Exception
+argument_list|(
 literal|"The "
 operator|+
 name|getCoverageTypeString
@@ -901,6 +939,7 @@ operator|+
 name|xpathString
 operator|+
 literal|")."
+argument_list|)
 argument_list|)
 throw|;
 block|}

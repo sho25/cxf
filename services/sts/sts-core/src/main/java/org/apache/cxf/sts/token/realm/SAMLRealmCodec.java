@@ -25,15 +25,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -46,11 +44,11 @@ specifier|public
 interface|interface
 name|SAMLRealmCodec
 block|{
-comment|/**      * Get the realm associated with the AssertionWrapper parameter      * @param assertion a SAML Assertion wrapper object      * @return the realm associated with the AssertionWrapper parameter      */
+comment|/**      * Get the realm associated with the SamlAssertionWrapper parameter      * @param assertion a SAML Assertion wrapper object      * @return the realm associated with the SamlAssertionWrapper parameter      */
 name|String
 name|getRealmFromToken
 parameter_list|(
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertion
 parameter_list|)
 function_decl|;

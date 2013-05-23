@@ -213,13 +213,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
-operator|.
-name|ext
 operator|.
 name|bean
 operator|.
@@ -235,13 +233,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
-operator|.
-name|ext
 operator|.
 name|builder
 operator|.
@@ -1300,19 +1296,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|assertTrue
-argument_list|(
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-literal|"SAML token security failure"
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 operator|(
 operator|(
@@ -1509,7 +1493,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"Assertion fails sender-vouches requirements"
+literal|"An error was discovered processing"
 argument_list|)
 argument_list|)
 expr_stmt|;

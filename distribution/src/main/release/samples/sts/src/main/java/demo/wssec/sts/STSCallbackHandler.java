@@ -71,9 +71,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
+operator|.
+name|ext
 operator|.
 name|WSPasswordCallback
 import|;
@@ -146,6 +148,8 @@ argument_list|()
 operator|==
 name|WSPasswordCallback
 operator|.
+name|Usage
+operator|.
 name|DECRYPT
 operator|||
 name|pc
@@ -154,6 +158,8 @@ name|getUsage
 argument_list|()
 operator|==
 name|WSPasswordCallback
+operator|.
+name|Usage
 operator|.
 name|SIGNATURE
 condition|)
@@ -189,6 +195,8 @@ name|getUsage
 argument_list|()
 operator|==
 name|WSPasswordCallback
+operator|.
+name|Usage
 operator|.
 name|USERNAME_TOKEN
 condition|)

@@ -133,11 +133,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
-name|WSSConfig
+name|saml
+operator|.
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -147,15 +149,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
-name|saml
-operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|WSSConfig
 import|;
 end_import
 
@@ -210,7 +208,7 @@ name|deflate
 expr_stmt|;
 block|}
 specifier|protected
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|createAssertion
 parameter_list|(
 name|Message

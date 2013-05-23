@@ -242,6 +242,15 @@ name|VALIDATE_SAML_SUBJECT_CONFIRMATION
 init|=
 literal|"ws-security.validate.saml.subject.conf"
 decl_stmt|;
+comment|/**      * Whether to enable streaming WS-Security. If set to false (the default), the old DOM      * implementation is used. If set to true, the new streaming (StAX) implementation is used.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_STREAMING_SECURITY
+init|=
+literal|"ws-security.enable.streaming"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//

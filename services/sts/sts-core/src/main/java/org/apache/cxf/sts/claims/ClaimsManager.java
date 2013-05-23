@@ -163,15 +163,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
 name|saml
 operator|.
-name|ext
-operator|.
-name|AssertionWrapper
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -759,11 +757,11 @@ throw|;
 block|}
 comment|// Get the claims of the received token (only SAML supported)
 comment|// Consider refactoring to use a CallbackHandler and keep ClaimsManager token independent
-name|AssertionWrapper
+name|SamlAssertionWrapper
 name|assertion
 init|=
 operator|(
-name|AssertionWrapper
+name|SamlAssertionWrapper
 operator|)
 name|parameters
 operator|.
@@ -772,7 +770,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|AssertionWrapper
+name|SamlAssertionWrapper
 operator|.
 name|class
 operator|.

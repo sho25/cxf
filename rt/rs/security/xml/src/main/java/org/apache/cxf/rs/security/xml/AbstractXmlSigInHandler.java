@@ -217,11 +217,13 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|common
 operator|.
-name|WSConstants
+name|crypto
+operator|.
+name|Crypto
 import|;
 end_import
 
@@ -231,15 +233,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
-name|components
-operator|.
-name|crypto
-operator|.
-name|Crypto
+name|WSConstants
 import|;
 end_import
 

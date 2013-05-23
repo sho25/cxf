@@ -117,24 +117,6 @@ name|SecurityContext
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|saml
-operator|.
-name|ext
-operator|.
-name|OpenSAMLUtil
-import|;
-end_import
-
 begin_comment
 comment|/**  * Some unit tests to test the AbstractXACMLAuthorizingInterceptor.  */
 end_comment
@@ -152,6 +134,16 @@ name|Assert
 block|{
 static|static
 block|{
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
+name|saml
+operator|.
 name|OpenSAMLUtil
 operator|.
 name|initSamlEngine

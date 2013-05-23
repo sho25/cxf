@@ -285,9 +285,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|WSConstants
 import|;
@@ -299,9 +299,9 @@ name|org
 operator|.
 name|apache
 operator|.
-name|ws
+name|wss4j
 operator|.
-name|security
+name|dom
 operator|.
 name|handler
 operator|.
@@ -990,9 +990,9 @@ operator|.
 name|getReason
 argument_list|()
 operator|.
-name|startsWith
+name|contains
 argument_list|(
-literal|"The message has expired"
+literal|" The security semantics of the message have expired"
 argument_list|)
 argument_list|)
 expr_stmt|;
