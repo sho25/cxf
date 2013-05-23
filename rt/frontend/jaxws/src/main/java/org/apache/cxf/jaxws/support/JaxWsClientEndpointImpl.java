@@ -23,7 +23,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Arrays
+name|List
 import|;
 end_import
 
@@ -159,8 +159,10 @@ parameter_list|,
 name|ServiceImpl
 name|si
 parameter_list|,
+name|List
+argument_list|<
 name|WebServiceFeature
-modifier|...
+argument_list|>
 name|wf
 parameter_list|)
 throws|throws
@@ -174,12 +176,7 @@ name|s
 argument_list|,
 name|ei
 argument_list|,
-name|Arrays
-operator|.
-name|asList
-argument_list|(
 name|wf
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|executorProvider
