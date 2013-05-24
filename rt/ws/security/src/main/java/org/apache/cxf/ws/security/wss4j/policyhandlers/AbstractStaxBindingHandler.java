@@ -1038,6 +1038,12 @@ name|addSamlToken
 parameter_list|(
 name|SamlToken
 name|token
+parameter_list|,
+name|boolean
+name|signed
+parameter_list|,
+name|boolean
+name|endorsing
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -1185,22 +1191,6 @@ name|handler
 argument_list|)
 expr_stmt|;
 comment|// Action
-name|boolean
-name|selfSignAssertion
-init|=
-name|MessageUtils
-operator|.
-name|getContextualBoolean
-argument_list|(
-name|message
-argument_list|,
-name|SecurityConstants
-operator|.
-name|SELF_SIGN_SAML_ASSERTION
-argument_list|,
-literal|false
-argument_list|)
-decl_stmt|;
 name|String
 name|samlAction
 init|=
@@ -1210,7 +1200,9 @@ name|SAML_TOKEN_UNSIGNED
 decl_stmt|;
 if|if
 condition|(
-name|selfSignAssertion
+name|signed
+operator|||
+name|endorsing
 condition|)
 block|{
 name|samlAction
@@ -1277,7 +1269,6 @@ name|samlAction
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO -> Set SAML Type from policy?
 name|QName
 name|qname
 init|=
@@ -2769,6 +2760,10 @@ operator|(
 name|SamlToken
 operator|)
 name|token
+argument_list|,
+literal|false
+argument_list|,
+name|endorse
 argument_list|)
 decl_stmt|;
 if|if
