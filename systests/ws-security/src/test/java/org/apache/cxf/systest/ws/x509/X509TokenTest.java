@@ -316,7 +316,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for X.509 Tokens.  */
+comment|/**  * A set of tests for X.509 Tokens. It tests both DOM + StAX clients against the   * DOM server  */
 end_comment
 
 begin_class
@@ -2047,6 +2047,22 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
+argument_list|)
+expr_stmt|;
 name|x509Port
 operator|.
 name|doubleIt
@@ -2189,6 +2205,22 @@ argument_list|(
 name|x509Port
 argument_list|,
 name|PORT2
+argument_list|)
+expr_stmt|;
+comment|// DOM
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
 argument_list|)
 expr_stmt|;
 name|x509Port
@@ -2335,6 +2367,22 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
+argument_list|)
+expr_stmt|;
 name|x509Port
 operator|.
 name|doubleIt
@@ -2479,6 +2527,22 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
+argument_list|)
+expr_stmt|;
 name|x509Port
 operator|.
 name|doubleIt
@@ -2621,6 +2685,22 @@ argument_list|(
 name|x509Port
 argument_list|,
 name|PORT2
+argument_list|)
+expr_stmt|;
+comment|// DOM
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
 argument_list|)
 expr_stmt|;
 name|x509Port
@@ -3419,6 +3499,7 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|x509Port
 operator|.
 name|doubleIt
@@ -3426,6 +3507,9 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+comment|// Streaming - TODO SignedElements not supported
+comment|// SecurityTestUtil.enableStreaming(x509Port);
+comment|// x509Port.doubleIt(25);
 operator|(
 operator|(
 name|java
@@ -3804,6 +3888,22 @@ argument_list|(
 name|x509Port
 argument_list|,
 name|PORT2
+argument_list|)
+expr_stmt|;
+comment|// DOM
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
 argument_list|)
 expr_stmt|;
 name|x509Port

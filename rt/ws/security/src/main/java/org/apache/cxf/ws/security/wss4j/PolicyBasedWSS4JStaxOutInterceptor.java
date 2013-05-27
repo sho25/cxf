@@ -1067,7 +1067,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|ENC_PROP_REF_ID
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1105,7 +1105,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_REF_ID
+name|ENC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1147,7 +1147,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_REF_ID
+name|ENC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1335,7 +1335,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|ENC_PROP_REF_ID
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1373,7 +1373,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_REF_ID
+name|ENC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1415,7 +1415,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_REF_ID
+name|ENC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1628,7 +1628,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_REF_ID
+name|ENC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1682,7 +1682,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|ENC_PROP_REF_ID
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1740,7 +1740,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SIG_PROP_REF_ID
+name|ENC_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
@@ -1794,7 +1794,7 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|ENC_PROP_REF_ID
+name|SIG_PROP_REF_ID
 argument_list|,
 literal|"RefId-"
 operator|+
