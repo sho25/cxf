@@ -42,6 +42,7 @@ name|Number
 name|getNumUnCheckedApplicationFaults
 parameter_list|()
 function_decl|;
+comment|/**      * Get the Average Response Time      * NOTE: if the invocation number is 0, this method      * will return -1      */
 name|Number
 name|getAvgResponseTime
 parameter_list|()

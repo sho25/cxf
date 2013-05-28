@@ -361,6 +361,22 @@ name|Number
 name|getAvgResponseTime
 parameter_list|()
 block|{
+if|if
+condition|(
+name|invocations
+operator|.
+name|get
+argument_list|()
+operator|==
+literal|0
+condition|)
+block|{
+return|return
+operator|-
+literal|1
+return|;
+comment|//return -1 if invocation number is 0;
+block|}
 return|return
 call|(
 name|int
