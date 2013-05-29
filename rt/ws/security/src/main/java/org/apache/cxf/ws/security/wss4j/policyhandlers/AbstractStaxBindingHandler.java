@@ -2983,7 +2983,7 @@ name|boolean
 name|endorse
 parameter_list|)
 throws|throws
-name|WSSecurityException
+name|Exception
 block|{
 name|Map
 argument_list|<
@@ -3059,7 +3059,7 @@ name|boolean
 name|endorse
 parameter_list|)
 throws|throws
-name|WSSecurityException
+name|Exception
 block|{
 return|return
 name|handleSupportingTokens
@@ -3103,7 +3103,7 @@ argument_list|>
 name|ret
 parameter_list|)
 throws|throws
-name|WSSecurityException
+name|Exception
 block|{
 if|if
 condition|(
@@ -3309,14 +3309,20 @@ argument_list|>
 name|ret
 parameter_list|)
 throws|throws
-name|WSSecurityException
+name|Exception
 block|{
 if|if
 condition|(
 name|endorse
 condition|)
 block|{
-comment|/* TODO             WSSecUsernameToken utBuilder = addDKUsernameToken(token, true);             if (utBuilder != null) {                 utBuilder.prepare(saaj.getSOAPPart());                 addSupportingElement(utBuilder.getUsernameTokenElement());                 ret.put(token, utBuilder);                 if (encryptedToken) {                     WSEncryptionPart part = new WSEncryptionPart(utBuilder.getId(), "Element");                     part.setElement(utBuilder.getUsernameTokenElement());                     encryptedTokensList.add(part);                 }             }             */
+throw|throw
+operator|new
+name|Exception
+argument_list|(
+literal|"Endorsing UsernameTokens are not supported in the streaming code"
+argument_list|)
+throw|;
 block|}
 else|else
 block|{
@@ -3482,7 +3488,7 @@ name|void
 name|addSupportingTokens
 parameter_list|()
 throws|throws
-name|WSSecurityException
+name|Exception
 block|{
 name|Collection
 argument_list|<
