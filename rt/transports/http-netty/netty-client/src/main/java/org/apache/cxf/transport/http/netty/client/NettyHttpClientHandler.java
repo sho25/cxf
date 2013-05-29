@@ -160,6 +160,11 @@ operator|.
 name|getChannel
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|BlockingQueue
 argument_list|<
 name|NettyHttpClientRequest
@@ -254,6 +259,11 @@ operator|.
 name|getChannel
 argument_list|()
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|BlockingQueue
 argument_list|<
 name|NettyHttpClientRequest
