@@ -396,6 +396,7 @@ name|getTextContent
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|el
 operator|=
 name|DOMUtils
@@ -405,7 +406,6 @@ argument_list|(
 name|el
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 catch|catch
