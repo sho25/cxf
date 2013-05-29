@@ -948,6 +948,11 @@ argument_list|,
 literal|2
 argument_list|)
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"expected SOAPFaultException"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
