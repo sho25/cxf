@@ -147,7 +147,7 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|eventing
+name|addressing
 operator|.
 name|ReferenceParametersType
 import|;

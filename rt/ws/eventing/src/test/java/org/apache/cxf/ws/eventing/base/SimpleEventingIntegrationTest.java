@@ -21,6 +21,18 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|bind
+operator|.
+name|JAXBElement
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -115,7 +127,7 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|eventing
+name|addressing
 operator|.
 name|AttributedURIType
 import|;
@@ -131,7 +143,7 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|eventing
+name|addressing
 operator|.
 name|EndpointReferenceType
 import|;
@@ -147,9 +159,9 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|eventing
+name|addressing
 operator|.
-name|NotifyTo
+name|ReferenceParametersType
 import|;
 end_import
 
@@ -165,7 +177,7 @@ name|ws
 operator|.
 name|eventing
 operator|.
-name|ReferenceParametersType
+name|ObjectFactory
 import|;
 end_import
 
@@ -1219,17 +1231,13 @@ argument_list|()
 return|;
 block|}
 specifier|protected
-name|NotifyTo
+name|JAXBElement
+argument_list|<
+name|EndpointReferenceType
+argument_list|>
 name|createDummyNotifyTo
 parameter_list|()
 block|{
-name|NotifyTo
-name|ret
-init|=
-operator|new
-name|NotifyTo
-argument_list|()
-decl_stmt|;
 name|EndpointReferenceType
 name|eventSinkERT
 init|=
@@ -1258,15 +1266,15 @@ argument_list|(
 name|eventSinkAddr
 argument_list|)
 expr_stmt|;
-name|ret
+return|return
+operator|new
+name|ObjectFactory
+argument_list|()
 operator|.
-name|setValue
+name|createNotifyTo
 argument_list|(
 name|eventSinkERT
 argument_list|)
-expr_stmt|;
-return|return
-name|ret
 return|;
 block|}
 specifier|protected

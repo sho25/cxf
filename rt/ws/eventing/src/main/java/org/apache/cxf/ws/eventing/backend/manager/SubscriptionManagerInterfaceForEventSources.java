@@ -41,9 +41,9 @@ name|cxf
 operator|.
 name|ws
 operator|.
-name|eventing
+name|addressing
 operator|.
-name|DeliveryType
+name|EndpointReferenceType
 import|;
 end_import
 
@@ -59,7 +59,7 @@ name|ws
 operator|.
 name|eventing
 operator|.
-name|EndpointReferenceType
+name|DeliveryType
 import|;
 end_import
 
