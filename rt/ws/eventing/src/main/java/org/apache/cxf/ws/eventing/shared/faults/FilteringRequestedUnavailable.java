@@ -74,6 +74,14 @@ name|LOCAL_PART
 init|=
 literal|"FilteringRequestedUnavailable"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
 specifier|public
 name|FilteringRequestedUnavailable
 parameter_list|()

@@ -453,10 +453,16 @@ name|eventSinkERT
 argument_list|)
 expr_stmt|;
 name|JAXBElement
+argument_list|<
+name|String
+argument_list|>
 name|idqn
 init|=
 operator|new
 name|JAXBElement
+argument_list|<
+name|String
+argument_list|>
 argument_list|(
 operator|new
 name|QName
