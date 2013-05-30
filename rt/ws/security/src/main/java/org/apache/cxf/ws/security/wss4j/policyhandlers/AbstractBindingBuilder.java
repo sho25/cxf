@@ -1982,13 +1982,13 @@ specifier|protected
 name|Element
 name|bstElement
 decl_stmt|;
-specifier|private
+specifier|protected
 name|Element
-name|lastSupportingTokenElement
+name|lastEncryptedKeyElement
 decl_stmt|;
 specifier|private
 name|Element
-name|lastEncryptedKeyElement
+name|lastSupportingTokenElement
 decl_stmt|;
 specifier|private
 name|Element
@@ -2067,7 +2067,7 @@ name|signatures
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|void
 name|insertAfter
 parameter_list|(

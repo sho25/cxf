@@ -1879,7 +1879,7 @@ name|doEndorse
 argument_list|()
 expr_stmt|;
 block|}
-name|checkForSignatureProtection
+name|encryptTokensInSecurityHeader
 argument_list|(
 name|encryptionToken
 argument_list|,
@@ -1890,7 +1890,7 @@ block|}
 block|}
 specifier|private
 name|void
-name|checkForSignatureProtection
+name|encryptTokensInSecurityHeader
 parameter_list|(
 name|AbstractToken
 name|encryptionToken
@@ -1899,6 +1899,19 @@ name|WSSecBase
 name|encrBase
 parameter_list|)
 block|{
+name|List
+argument_list|<
+name|WSEncryptionPart
+argument_list|>
+name|secondEncrParts
+init|=
+operator|new
+name|ArrayList
+argument_list|<
+name|WSEncryptionPart
+argument_list|>
+argument_list|()
+decl_stmt|;
 comment|// Check for signature protection
 if|if
 condition|(
@@ -1915,19 +1928,6 @@ operator|.
 name|ENCRYPT_SIGNATURE
 argument_list|)
 expr_stmt|;
-name|List
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
-name|secondEncrParts
-init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
-argument_list|()
-decl_stmt|;
 comment|// Now encrypt the signature using the above token
 if|if
 condition|(
@@ -1983,6 +1983,8 @@ name|sigConfList
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+comment|// Add any SupportingTokens that need to be encrypted
 if|if
 condition|(
 name|isRequestor
@@ -1999,6 +2001,17 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+name|secondEncrParts
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+return|return;
+block|}
+comment|// Perform encryption
+if|if
+condition|(
 name|encryptionToken
 operator|.
 name|getDerivedKeys
@@ -2007,12 +2020,6 @@ operator|==
 name|DerivedKeys
 operator|.
 name|RequireDerivedKeys
-operator|&&
-operator|!
-name|secondEncrParts
-operator|.
-name|isEmpty
-argument_list|()
 operator|&&
 name|encrBase
 operator|instanceof
@@ -2071,12 +2078,6 @@ block|}
 elseif|else
 if|if
 condition|(
-operator|!
-name|secondEncrParts
-operator|.
-name|isEmpty
-argument_list|()
-operator|&&
 name|encrBase
 operator|instanceof
 name|WSSecEncrypt
@@ -2106,6 +2107,23 @@ operator|+
 literal|":ReferenceList"
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|lastEncryptedKeyElement
+operator|!=
+literal|null
+condition|)
+block|{
+name|insertAfter
+argument_list|(
+name|secondRefList
+argument_list|,
+name|lastEncryptedKeyElement
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|this
 operator|.
 name|insertBeforeBottomUp
@@ -2113,6 +2131,7 @@ argument_list|(
 name|secondRefList
 argument_list|)
 expr_stmt|;
+block|}
 operator|(
 operator|(
 name|WSSecEncrypt
@@ -2141,7 +2160,6 @@ argument_list|(
 name|ex
 argument_list|)
 throw|;
-block|}
 block|}
 block|}
 block|}
