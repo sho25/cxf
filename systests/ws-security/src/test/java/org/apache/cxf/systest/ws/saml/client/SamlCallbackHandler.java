@@ -708,11 +708,6 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-if|if
-condition|(
-name|signAssertion
-condition|)
-block|{
 name|String
 name|file
 init|=
@@ -749,7 +744,6 @@ argument_list|(
 literal|"password"
 argument_list|)
 expr_stmt|;
-block|}
 name|callback
 operator|.
 name|setSignAssertion

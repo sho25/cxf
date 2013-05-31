@@ -1668,6 +1668,19 @@ operator|.
 name|ACTION
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|action
+operator|.
+name|contains
+argument_list|(
+name|ConfigurationConstants
+operator|.
+name|SAML_TOKEN_SIGNED
+argument_list|)
+condition|)
+block|{
 name|config
 operator|.
 name|put
@@ -1683,6 +1696,7 @@ operator|+
 name|actionToPerform
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
