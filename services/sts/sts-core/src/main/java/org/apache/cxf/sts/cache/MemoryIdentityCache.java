@@ -913,22 +913,6 @@ name|identities
 argument_list|)
 expr_stmt|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Cache content: "
-operator|+
-name|this
-operator|.
-name|cache
-operator|.
-name|toString
-argument_list|()
-argument_list|)
-expr_stmt|;
 return|return
 name|targetPrincipal
 return|;
