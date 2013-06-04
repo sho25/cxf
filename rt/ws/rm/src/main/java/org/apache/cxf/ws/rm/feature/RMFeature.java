@@ -504,6 +504,9 @@ condition|)
 block|{
 name|manager
 operator|.
+name|getConfiguration
+argument_list|()
+operator|.
 name|setDeliveryAssurance
 argument_list|(
 name|deliveryAssurance
@@ -564,6 +567,9 @@ condition|)
 block|{
 name|manager
 operator|.
+name|getConfiguration
+argument_list|()
+operator|.
 name|setRMNamespace
 argument_list|(
 name|rmNamespace
@@ -578,6 +584,9 @@ name|rm10AddressingNamespace
 condition|)
 block|{
 name|manager
+operator|.
+name|getConfiguration
+argument_list|()
 operator|.
 name|setRM10AddressingNamespace
 argument_list|(

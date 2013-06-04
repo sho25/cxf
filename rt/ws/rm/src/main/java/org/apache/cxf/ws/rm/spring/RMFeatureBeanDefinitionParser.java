@@ -241,39 +241,11 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|mapElementToJaxbProperty
-argument_list|(
-name|element
-argument_list|,
-name|bean
-argument_list|,
-operator|new
-name|QName
-argument_list|(
-literal|"http://docs.oasis-open.org/ws-rx/wsrmp/200702"
-argument_list|,
-literal|"RMAssertion"
-argument_list|)
-argument_list|,
-literal|"RMAssertion"
-argument_list|,
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|rmp
-operator|.
-name|v200702
-operator|.
-name|RMAssertion
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
+comment|// TODO: handle
+comment|//        mapElementToJaxbProperty(element, bean,
+comment|//                new QName("http://docs.oasis-open.org/ws-rx/wsrmp/200702", "RMAssertion"),
+comment|//                "RMAssertion",
+comment|//                org.apache.cxf.ws.rmp.v200702.RMAssertion.class);
 name|super
 operator|.
 name|parseChildElements
