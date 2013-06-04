@@ -83,6 +83,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|configuration
+operator|.
+name|jsse
+operator|.
+name|TLSServerParameters
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|transport
 operator|.
 name|HttpUriMapper
@@ -186,6 +202,11 @@ name|NettyHttpContextHandler
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|/**      * This field holds the TLS ServerParameters that are programatically      * configured. The tlsServerParamers (due to JAXB) holds the struct      * placed by SpringConfig.      */
+specifier|private
+name|TLSServerParameters
+name|tlsServerParameters
+decl_stmt|;
 specifier|public
 name|NettyHttpServerEngine
 parameter_list|(
@@ -233,6 +254,30 @@ operator|=
 name|protocol
 expr_stmt|;
 block|}
+comment|/**      * This method is used to programmatically set the TLSServerParameters.      * This method may only be called by the factory.      * @throws IOException       */
+specifier|public
+name|void
+name|setTlsServerParameters
+parameter_list|(
+name|TLSServerParameters
+name|params
+parameter_list|)
+block|{
+name|tlsServerParameters
+operator|=
+name|params
+expr_stmt|;
+block|}
+comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used       * in SpringConfiguration.      * @return      */
+specifier|public
+name|TLSServerParameters
+name|getTlsServerParameters
+parameter_list|()
+block|{
+return|return
+name|tlsServerParameters
+return|;
+block|}
 specifier|protected
 name|Channel
 name|startServer
@@ -267,6 +312,8 @@ operator|=
 operator|new
 name|NettyHttpServletPipelineFactory
 argument_list|(
+name|tlsServerParameters
+argument_list|,
 name|handlerMap
 argument_list|)
 expr_stmt|;
