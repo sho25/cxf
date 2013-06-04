@@ -62,14 +62,20 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The utility MD5 sequence generator which can be used for generating  * random values  */
+comment|/**  * The utility Message Digest generator which can be used for generating  * random values  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|MD5SequenceGenerator
+name|MessageDigestGenerator
 block|{
+specifier|private
+name|String
+name|algorithm
+init|=
+literal|"MD5"
+decl_stmt|;
 specifier|public
 name|String
 name|generate
@@ -99,21 +105,21 @@ block|}
 try|try
 block|{
 name|MessageDigest
-name|algorithm
+name|md
 init|=
 name|MessageDigest
 operator|.
 name|getInstance
 argument_list|(
-literal|"MD5"
+name|algorithm
 argument_list|)
 decl_stmt|;
-name|algorithm
+name|md
 operator|.
 name|reset
 argument_list|()
 expr_stmt|;
-name|algorithm
+name|md
 operator|.
 name|update
 argument_list|(
@@ -124,7 +130,7 @@ name|byte
 index|[]
 name|messageDigest
 init|=
-name|algorithm
+name|md
 operator|.
 name|digest
 argument_list|()
@@ -194,6 +200,21 @@ name|e
 argument_list|)
 throw|;
 block|}
+block|}
+specifier|public
+name|void
+name|setAlgorithm
+parameter_list|(
+name|String
+name|algo
+parameter_list|)
+block|{
+name|this
+operator|.
+name|algorithm
+operator|=
+name|algo
+expr_stmt|;
 block|}
 block|}
 end_class
