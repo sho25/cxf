@@ -243,7 +243,7 @@ name|assertEquals
 argument_list|(
 literal|"Wrong number of service links"
 argument_list|,
-literal|4
+literal|6
 argument_list|,
 name|links
 operator|.
