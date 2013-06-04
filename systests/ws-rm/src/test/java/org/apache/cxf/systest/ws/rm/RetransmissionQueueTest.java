@@ -597,13 +597,10 @@ operator|.
 name|class
 argument_list|)
 operator|.
-name|getRMAssertion
+name|getConfiguration
 argument_list|()
 operator|.
-name|getBaseRetransmissionInterval
-argument_list|()
-operator|.
-name|setMilliseconds
+name|setBaseRetransmissionInterval
 argument_list|(
 operator|new
 name|Long
