@@ -4209,13 +4209,9 @@ argument_list|)
 condition|)
 block|{
 comment|//see if it can directly be correlated with the out message:
-name|AddressingProperties
-name|outp
+name|Message
+name|outmsg
 init|=
-name|ContextUtils
-operator|.
-name|retrieveMAPs
-argument_list|(
 name|message
 operator|.
 name|getExchange
@@ -4223,6 +4219,19 @@ argument_list|()
 operator|.
 name|getOutMessage
 argument_list|()
+decl_stmt|;
+name|AddressingProperties
+name|outp
+init|=
+name|outmsg
+operator|!=
+literal|null
+condition|?
+name|ContextUtils
+operator|.
+name|retrieveMAPs
+argument_list|(
+name|outmsg
 argument_list|,
 literal|false
 argument_list|,
@@ -4230,6 +4239,8 @@ literal|true
 argument_list|,
 literal|false
 argument_list|)
+else|:
+literal|null
 decl_stmt|;
 if|if
 condition|(
