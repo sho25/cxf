@@ -1760,7 +1760,7 @@ argument_list|)
 operator|.
 name|parse
 argument_list|(
-literal|"Mon, 20 Oct 2008 14:00:00 GMT"
+literal|"Mon, 22 Oct 2008 14:00:00 GMT"
 argument_list|)
 decl_stmt|;
 name|ResponseBuilder
@@ -1779,35 +1779,15 @@ argument_list|,
 operator|new
 name|EntityTag
 argument_list|(
-literal|"123"
+literal|"\"123\""
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertNotNull
+name|assertNull
 argument_list|(
 literal|"Precondition is not met"
 argument_list|,
 name|rb
-argument_list|)
-expr_stmt|;
-name|Response
-name|r
-init|=
-name|rb
-operator|.
-name|build
-argument_list|()
-decl_stmt|;
-name|assertEquals
-argument_list|(
-literal|"If-Modified-Since precondition was not met"
-argument_list|,
-literal|304
-argument_list|,
-name|r
-operator|.
-name|getStatus
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -1878,7 +1858,7 @@ literal|"124"
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertNull
+name|assertNotNull
 argument_list|(
 literal|"Dates must not be checked if tags do not match"
 argument_list|,
