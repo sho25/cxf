@@ -347,7 +347,7 @@ argument_list|,
 operator|new
 name|HttpChunkAggregator
 argument_list|(
-literal|65536
+literal|1048576
 argument_list|)
 argument_list|)
 expr_stmt|;
