@@ -359,6 +359,26 @@ return|return
 literal|null
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|revokeToken
+parameter_list|(
+name|Client
+name|client
+parameter_list|,
+name|String
+name|token
+parameter_list|,
+name|String
+name|tokenTypeHint
+parameter_list|)
+throws|throws
+name|OAuthServiceException
+block|{
+comment|// TODO Auto-generated method stub
+block|}
 block|}
 end_class
 
