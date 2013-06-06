@@ -458,6 +458,31 @@ name|ACCESS_DENIED
 init|=
 literal|"access_denied"
 decl_stmt|;
+comment|// Token Revocation
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REVOKED_TOKEN_ID
+init|=
+literal|"token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REVOKED_TOKEN_TYPE_HINT
+init|=
+literal|"token_type_hint"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|UNSUPPORTED_TOKEN_TYPE
+init|=
+literal|"unsupported_token_type"
+decl_stmt|;
 comment|// CXF-Specific parameters
 specifier|public
 specifier|static

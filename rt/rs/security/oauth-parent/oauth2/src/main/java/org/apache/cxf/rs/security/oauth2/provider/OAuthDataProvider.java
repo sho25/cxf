@@ -211,12 +211,28 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Removes the token      * @param accessToken the token      * @throws OAuthServiceException      */
+comment|/**      * Removes the access token      * The runtime will call this method if it finds that a token has expired      * @param accessToken the token      * @throws OAuthServiceException      */
 name|void
 name|removeAccessToken
 parameter_list|(
 name|ServerAccessToken
 name|accessToken
+parameter_list|)
+throws|throws
+name|OAuthServiceException
+function_decl|;
+comment|/**      * Revokes a refresh or access token      * @param token token identifier      * @param tokenTypeHint       * @throws OAuthServiceException      */
+name|void
+name|revokeToken
+parameter_list|(
+name|Client
+name|client
+parameter_list|,
+name|String
+name|token
+parameter_list|,
+name|String
+name|tokenTypeHint
 parameter_list|)
 throws|throws
 name|OAuthServiceException
