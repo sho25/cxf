@@ -131,7 +131,7 @@ name|sleep
 argument_list|(
 literal|5
 operator|*
-literal|60
+literal|6000
 operator|*
 literal|1000
 argument_list|)
