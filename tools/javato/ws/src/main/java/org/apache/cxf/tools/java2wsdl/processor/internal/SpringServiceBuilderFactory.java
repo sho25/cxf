@@ -436,6 +436,8 @@ operator|+
 literal|" for databinding "
 operator|+
 name|databindingName
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}

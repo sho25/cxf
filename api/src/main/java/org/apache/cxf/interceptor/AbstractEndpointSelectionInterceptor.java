@@ -148,17 +148,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-comment|/**      * @deprecated      */
-specifier|public
-name|AbstractEndpointSelectionInterceptor
-parameter_list|()
-block|{
-name|super
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
-block|}
 specifier|public
 name|AbstractEndpointSelectionInterceptor
 parameter_list|(

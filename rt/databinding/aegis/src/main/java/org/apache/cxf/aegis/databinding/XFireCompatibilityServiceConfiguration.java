@@ -41,6 +41,8 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|wsdl
+operator|.
 name|service
 operator|.
 name|factory

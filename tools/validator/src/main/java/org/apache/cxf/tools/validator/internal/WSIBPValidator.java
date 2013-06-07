@@ -317,9 +317,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|tools
 operator|.
-name|WSDLHelper
+name|common
+operator|.
+name|ToolException
 import|;
 end_import
 
@@ -331,11 +333,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|tools
+name|wsdl
 operator|.
-name|common
-operator|.
-name|ToolException
+name|WSDLHelper
 import|;
 end_import
 

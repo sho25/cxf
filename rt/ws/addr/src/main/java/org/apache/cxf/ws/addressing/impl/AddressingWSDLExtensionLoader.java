@@ -23,18 +23,6 @@ begin_import
 import|import
 name|javax
 operator|.
-name|wsdl
-operator|.
-name|extensions
-operator|.
-name|ExtensibilityElement
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
 name|xml
 operator|.
 name|bind
@@ -192,8 +180,6 @@ parameter_list|,
 name|Class
 argument_list|<
 name|?
-extends|extends
-name|ExtensibilityElement
 argument_list|>
 name|elementType
 parameter_list|)

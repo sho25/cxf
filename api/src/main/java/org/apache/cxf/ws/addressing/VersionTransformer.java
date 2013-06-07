@@ -237,20 +237,6 @@ name|ServiceNameType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|wsdl
-operator|.
-name|EndpointReferenceUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class is responsible for transforming between the native   * WS-Addressing schema version (i.e. 2005/08) and exposed  * version (currently may be 2005/08 or 2004/08).  *<p>  * The native version is that used throughout the stack, were the  * WS-A types are represented via the JAXB generated types for the  * 2005/08 schema.  *<p>  * The exposed version is that used when the WS-A types are   * externalized, i.e. are encoded in the headers of outgoing   * messages. For outgoing requests, the exposed version is   * determined from configuration. For outgoing responses, the  * exposed version is determined by the exposed version of  * the corresponding request.  *<p>  * The motivation for using different native and exposed types  * is usually to facilitate a WS-* standard based on an earlier   * version of WS-Adressing (for example WS-RM depends on the  * 2004/08 version).  */
 end_comment

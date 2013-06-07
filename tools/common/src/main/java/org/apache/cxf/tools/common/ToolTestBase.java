@@ -65,13 +65,9 @@ begin_import
 import|import
 name|org
 operator|.
-name|apache
+name|junit
 operator|.
-name|cxf
-operator|.
-name|test
-operator|.
-name|AbstractCXFTest
+name|After
 import|;
 end_import
 
@@ -81,7 +77,7 @@ name|org
 operator|.
 name|junit
 operator|.
-name|After
+name|Assert
 import|;
 end_import
 
@@ -101,7 +97,7 @@ specifier|abstract
 class|class
 name|ToolTestBase
 extends|extends
-name|AbstractCXFTest
+name|Assert
 block|{
 specifier|protected
 name|PrintStream

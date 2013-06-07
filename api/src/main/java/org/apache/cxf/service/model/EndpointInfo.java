@@ -53,9 +53,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|ws
 operator|.
-name|WSAEndpointReferenceUtils
+name|addressing
+operator|.
+name|EndpointReferenceUtils
 import|;
 end_import
 
@@ -284,7 +286,7 @@ condition|)
 block|{
 name|address
 operator|=
-name|WSAEndpointReferenceUtils
+name|EndpointReferenceUtils
 operator|.
 name|getEndpointReference
 argument_list|(
@@ -294,7 +296,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|WSAEndpointReferenceUtils
+name|EndpointReferenceUtils
 operator|.
 name|setAddress
 argument_list|(

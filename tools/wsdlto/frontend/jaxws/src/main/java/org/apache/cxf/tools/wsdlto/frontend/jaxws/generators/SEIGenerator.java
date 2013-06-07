@@ -570,7 +570,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-return|return;
+continue|continue;
 block|}
 for|for
 control|(

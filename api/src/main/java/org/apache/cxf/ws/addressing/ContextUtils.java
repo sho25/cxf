@@ -320,20 +320,6 @@ import|;
 end_import
 
 begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|wsdl
-operator|.
-name|EndpointReferenceUtils
-import|;
-end_import
-
-begin_import
 import|import static
 name|org
 operator|.

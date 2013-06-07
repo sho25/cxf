@@ -241,6 +241,8 @@ operator|new
 name|String
 index|[]
 block|{
+literal|"-verbose"
+block|,
 literal|"-i"
 block|,
 literal|"Greeter"

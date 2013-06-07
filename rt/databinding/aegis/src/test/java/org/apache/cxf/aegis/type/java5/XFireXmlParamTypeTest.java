@@ -153,11 +153,6 @@ name|Java5TypeCreator
 name|creator
 decl_stmt|;
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
-annotation|@
 name|Before
 specifier|public
 name|void
@@ -218,7 +213,7 @@ name|aegis
 operator|.
 name|type
 operator|.
-name|Configuration
+name|TypeCreationOptions
 argument_list|()
 argument_list|)
 expr_stmt|;

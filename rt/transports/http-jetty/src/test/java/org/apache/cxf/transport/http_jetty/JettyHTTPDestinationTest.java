@@ -687,7 +687,7 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|JAXWSAConstants
+name|EndpointReferenceUtils
 import|;
 end_import
 
@@ -699,9 +699,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|ws
 operator|.
-name|EndpointReferenceUtils
+name|addressing
+operator|.
+name|JAXWSAConstants
 import|;
 end_import
 

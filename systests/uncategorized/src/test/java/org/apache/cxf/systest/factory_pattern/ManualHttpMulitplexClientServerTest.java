@@ -319,7 +319,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|ws
+operator|.
+name|addressing
 operator|.
 name|EndpointReferenceUtils
 import|;

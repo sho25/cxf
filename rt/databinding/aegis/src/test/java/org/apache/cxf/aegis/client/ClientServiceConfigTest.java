@@ -137,9 +137,9 @@ name|cxf
 operator|.
 name|service
 operator|.
-name|factory
+name|invoker
 operator|.
-name|ReflectionServiceFactoryBean
+name|BeanInvoker
 import|;
 end_import
 
@@ -151,11 +151,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|wsdl
+operator|.
 name|service
 operator|.
-name|invoker
+name|factory
 operator|.
-name|BeanInvoker
+name|ReflectionServiceFactoryBean
 import|;
 end_import
 

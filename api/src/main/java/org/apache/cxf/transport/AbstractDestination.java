@@ -103,9 +103,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl
+name|ws
 operator|.
-name|WSAEndpointReferenceUtils
+name|addressing
+operator|.
+name|EndpointReferenceUtils
 import|;
 end_import
 
@@ -246,7 +248,7 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-name|WSAEndpointReferenceUtils
+name|EndpointReferenceUtils
 operator|.
 name|getAnonymousEndpointReference
 argument_list|()
