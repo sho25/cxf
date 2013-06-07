@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for Kerberos Tokens. The tests are @Ignore'd, as they require a running KDC. To run the  * tests, set up a KDC of realm "WS.APACHE.ORG", with principal "alice" and service principal   * "bob/service.ws.apache.org". Create keytabs for both principals in "/etc/alice.keytab" and  * "/etc/bob.keytab" (this can all be edited in src/test/resource/kerberos.jaas". Then disable the  * @Ignore annotations and run the tests with:  *    * mvn test -Pnochecks -Dtest=KerberosTokenTest   *     -Djava.security.auth.login.config=src/test/resources/kerberos.jaas  *   * See here for more information:  * http://coheigea.blogspot.com/2011/10/using-kerberos-with-web-services-part.html  *   * It tests both DOM + StAX clients against the StAX server  */
+comment|/**  * A set of tests for Kerberos Tokens. The tests are @Ignore'd, as they require a running KDC. To run the  * tests, set up a KDC of realm "WS.APACHE.ORG", with principal "alice" and service principal   * "bob/service.ws.apache.org". Create keytabs for both principals in "/etc/alice.keytab" and  * "/etc/bob.keytab" (this can all be edited in src/test/resource/kerberos.jaas". Then disable the  * @Ignore annotations and run the tests with:  *    * mvn test -Pnochecks -Dtest=StaxKerberosTokenTest   *     -Djava.security.auth.login.config=src/test/resources/kerberos.jaas  *   * See here for more information:  * http://coheigea.blogspot.com/2011/10/using-kerberos-with-web-services-part.html  *   * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
 begin_class
@@ -413,9 +413,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
-comment|// SecurityTestUtil.enableStreaming(kerberosPort);
-comment|// kerberosPort.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -577,9 +589,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
-comment|// SecurityTestUtil.enableStreaming(kerberosPort);
-comment|// kerberosPort.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -608,12 +632,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testKerberosOverTransportEndorsing
@@ -731,9 +749,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
-comment|// SecurityTestUtil.enableStreaming(kerberosPort);
-comment|// kerberosPort.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -1213,9 +1243,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
-comment|// SecurityTestUtil.enableStreaming(kerberosPort);
-comment|// kerberosPort.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java

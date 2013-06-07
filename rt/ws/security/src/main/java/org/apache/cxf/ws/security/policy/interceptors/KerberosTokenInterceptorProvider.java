@@ -764,7 +764,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|KerberosTokenDOMOutInterceptor
+name|KerberosTokenOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -776,7 +776,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|KerberosTokenDOMOutInterceptor
+name|KerberosTokenOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1000,7 +1000,7 @@ block|}
 block|}
 specifier|static
 class|class
-name|KerberosTokenDOMOutInterceptor
+name|KerberosTokenOutInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
 argument_list|<
@@ -1008,7 +1008,7 @@ name|Message
 argument_list|>
 block|{
 specifier|public
-name|KerberosTokenDOMOutInterceptor
+name|KerberosTokenOutInterceptor
 parameter_list|()
 block|{
 name|super
@@ -1042,31 +1042,11 @@ name|class
 argument_list|)
 decl_stmt|;
 comment|// extract Assertion information
-name|boolean
-name|enableStax
-init|=
-name|MessageUtils
-operator|.
-name|isTrue
-argument_list|(
-name|message
-operator|.
-name|getContextualProperty
-argument_list|(
-name|SecurityConstants
-operator|.
-name|ENABLE_STREAMING_SECURITY
-argument_list|)
-argument_list|)
-decl_stmt|;
 if|if
 condition|(
 name|aim
 operator|!=
 literal|null
-operator|&&
-operator|!
-name|enableStax
 condition|)
 block|{
 name|Collection
