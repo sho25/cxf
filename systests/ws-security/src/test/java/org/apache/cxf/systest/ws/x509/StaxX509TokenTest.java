@@ -407,19 +407,12 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/*     // TODO     @org.junit.Test     public void testKeyIdentifier() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxX509TokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);                  URL wsdl = StaxX509TokenTest.class.getResource("DoubleItX509.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKeyIdentifierPort");         DoubleItPortType x509Port =                  service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(x509Port, PORT);         x509Port.doubleIt(25);                  ((java.io.Closeable)x509Port).close();         bus.shutdown(true);     }          @org.junit.Test     public void testKeyIdentifierJaxwsClient() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxX509TokenTest.class.getResource("client/jaxws-client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);                  URL wsdl = StaxX509TokenTest.class.getResource("DoubleItX509.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKeyIdentifierPort");         DoubleItPortType x509Port =                  service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(x509Port, PORT);                  ((BindingProvider)x509Port).getRequestContext().put(SecurityConstants.ENCRYPT_PROPERTIES,                 "org/apache/cxf/systest/ws/wssec10/client/bob.properties");         ((BindingProvider)x509Port).getRequestContext().put(SecurityConstants.ENCRYPT_USERNAME, "bob");                  x509Port.doubleIt(25);                  ((java.io.Closeable)x509Port).close();         bus.shutdown(true);     }          @org.junit.Test     public void testIntermediary() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxX509TokenTest.class.getResource("client/intermediary-client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);                  URL wsdl = StaxX509TokenTest.class.getResource("DoubleItIntermediary.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItPort");         DoubleItPortType x509Port =                  service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(x509Port, INTERMEDIARY_PORT);                  x509Port.doubleIt(25);                  ((java.io.Closeable)x509Port).close();         bus.shutdown(true);     }          @org.junit.Test     public void testIssuerSerial() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxX509TokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxX509TokenTest.class.getResource("DoubleItX509.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItIssuerSerialPort");         DoubleItPortType x509Port =                  service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(x509Port, PORT);         x509Port.doubleIt(25);                  ((java.io.Closeable)x509Port).close();         bus.shutdown(true);     }          @org.junit.Test     public void testThumbprint() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxX509TokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxX509TokenTest.class.getResource("DoubleItX509.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItThumbprintPort");         DoubleItPortType x509Port =                  service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(x509Port, PORT);         x509Port.doubleIt(25);                  ((java.io.Closeable)x509Port).close();         bus.shutdown(true);     }          @org.junit.Test     public void testContentEncryptedElements() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxX509TokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxX509TokenTest.class.getResource("DoubleItX509.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItContentEncryptedElementsPort");         DoubleItPortType x509Port =                  service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(x509Port, PORT);         x509Port.doubleIt(25);                  ((java.io.Closeable)x509Port).close();         bus.shutdown(true);     }     */
-comment|// TODO - See WSS-442
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricIssuerSerial
@@ -574,19 +567,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-449
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricThumbprint
@@ -1050,19 +1036,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - See WSS-442
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricProtectTokens
@@ -2512,19 +2491,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-442
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricEncryption

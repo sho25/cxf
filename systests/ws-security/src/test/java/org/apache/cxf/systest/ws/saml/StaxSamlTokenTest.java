@@ -1543,7 +1543,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-442
+comment|// TODO
 annotation|@
 name|org
 operator|.
@@ -1897,7 +1897,7 @@ block|}
 comment|// Some negative tests. Send a sender-vouches assertion as a SupportingToken...this will
 comment|// fail as the provider will demand that there is a signature covering both the assertion
 comment|// and the message body.
-comment|// TODO See WSS-442
+comment|// TODO
 annotation|@
 name|org
 operator|.
@@ -3523,19 +3523,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-442
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricSamlInitiator
@@ -3717,7 +3710,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-442
+comment|// TODO
 annotation|@
 name|org
 operator|.
@@ -5970,7 +5963,7 @@ expr_stmt|;
 block|}
 comment|// In this test-case, the WSP is configured with a XACML PEP interceptor, which in this
 comment|// case just mocks the call to the PDP + enforces the decision
-comment|// TODO See WSS-442
+comment|// TODO
 annotation|@
 name|org
 operator|.

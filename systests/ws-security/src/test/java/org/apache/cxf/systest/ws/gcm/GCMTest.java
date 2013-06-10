@@ -432,9 +432,20 @@ literal|25
 argument_list|)
 expr_stmt|;
 comment|// Streaming
-comment|// TODO - See WSS-442
-comment|// SecurityTestUtil.enableStreaming(gcmPort);
-comment|// gcmPort.doubleIt(25);
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|gcmPort
+argument_list|)
+expr_stmt|;
+name|gcmPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -633,9 +644,20 @@ literal|25
 argument_list|)
 expr_stmt|;
 comment|// Streaming
-comment|// TODO - See WSS-442
-comment|// SecurityTestUtil.enableStreaming(gcmPort);
-comment|// gcmPort.doubleIt(25);
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|gcmPort
+argument_list|)
+expr_stmt|;
+name|gcmPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -834,9 +856,20 @@ literal|25
 argument_list|)
 expr_stmt|;
 comment|// Streaming
-comment|// TODO - See WSS-442
-comment|// SecurityTestUtil.enableStreaming(gcmPort);
-comment|// gcmPort.doubleIt(25);
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|gcmPort
+argument_list|)
+expr_stmt|;
+name|gcmPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
