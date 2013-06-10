@@ -422,6 +422,13 @@ range|:
 name|roles
 control|)
 block|{
+if|if
+condition|(
+name|role
+operator|!=
+literal|null
+condition|)
+block|{
 name|AttributeValueType
 name|subjectRoleAttributeValue
 init|=
@@ -465,6 +472,7 @@ name|subjectRoleAttribute
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 name|SubjectType
 name|subjectType
 init|=
@@ -490,6 +498,13 @@ name|resource
 range|:
 name|resources
 control|)
+block|{
+if|if
+condition|(
+name|resource
+operator|!=
+literal|null
+condition|)
 block|{
 name|AttributeValueType
 name|resourceAttributeValue
@@ -533,6 +548,7 @@ argument_list|(
 name|resourceAttribute
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|ResourceType
 name|resourceType
