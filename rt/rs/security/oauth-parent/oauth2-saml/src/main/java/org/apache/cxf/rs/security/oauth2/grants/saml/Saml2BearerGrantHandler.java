@@ -834,8 +834,6 @@ argument_list|(
 name|Constants
 operator|.
 name|SAML2_BEARER_GRANT
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}

@@ -177,8 +177,6 @@ argument_list|(
 name|OAuthConstants
 operator|.
 name|CLIENT_CREDENTIALS_GRANT
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}

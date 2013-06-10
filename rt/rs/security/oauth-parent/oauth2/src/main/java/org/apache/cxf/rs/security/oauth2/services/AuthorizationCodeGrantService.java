@@ -470,11 +470,9 @@ return|;
 block|}
 if|if
 condition|(
-operator|!
-name|client
-operator|.
-name|isConfidential
-argument_list|()
+name|redirectUri
+operator|==
+literal|null
 condition|)
 block|{
 name|OOBAuthorizationResponse
