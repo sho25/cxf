@@ -102,28 +102,11 @@ specifier|private
 name|RM10AddressingNamespaceType
 name|rm10AddressingNamespace
 decl_stmt|;
-comment|/**      * Constructor just sets defaults.      */
+comment|/**      * Constructor.      */
 specifier|public
 name|RMConfiguration
 parameter_list|()
-block|{
-name|baseRetransmissionInterval
-operator|=
-operator|new
-name|Long
-argument_list|(
-name|RetransmissionQueue
-operator|.
-name|DEFAULT_BASE_RETRANSMISSION_INTERVAL
-argument_list|)
-expr_stmt|;
-name|rmNamespace
-operator|=
-name|RM10Constants
-operator|.
-name|NAMESPACE_URI
-expr_stmt|;
-block|}
+block|{     }
 comment|/**      * Copy constructor.      *       * @param base      */
 specifier|public
 name|RMConfiguration

@@ -357,7 +357,7 @@ name|policyComponent
 argument_list|)
 decl_stmt|;
 return|return
-name|RM10PolicyUtils
+name|RMPolicyUtilities
 operator|.
 name|equals
 argument_list|(

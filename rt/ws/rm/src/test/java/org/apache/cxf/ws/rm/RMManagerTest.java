@@ -817,16 +817,6 @@ argument_list|()
 expr_stmt|;
 name|assertNull
 argument_list|(
-literal|"RMConfiguration is set."
-argument_list|,
-name|manager
-operator|.
-name|getConfiguration
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|assertNull
-argument_list|(
 literal|"sourcePolicy is set."
 argument_list|,
 name|manager
@@ -860,7 +850,7 @@ argument_list|()
 decl_stmt|;
 name|assertNotNull
 argument_list|(
-literal|"RMAssertion is not set."
+literal|"RMConfiguration is not set."
 argument_list|,
 name|cfg
 argument_list|)

@@ -209,7 +209,7 @@ name|rm
 operator|.
 name|policy
 operator|.
-name|RM10PolicyUtils
+name|RMPolicyUtilities
 import|;
 end_import
 
@@ -524,7 +524,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|RM10PolicyUtils
+name|RMPolicyUtilities
 operator|.
 name|collectRMAssertions
 argument_list|(
