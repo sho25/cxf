@@ -341,6 +341,13 @@ name|Path
 argument_list|(
 literal|"/subresource3"
 argument_list|)
+annotation|@
+name|Consumes
+argument_list|(
+name|MediaType
+operator|.
+name|APPLICATION_FORM_URLENCODED
+argument_list|)
 name|Book
 name|getTheBook3
 parameter_list|(

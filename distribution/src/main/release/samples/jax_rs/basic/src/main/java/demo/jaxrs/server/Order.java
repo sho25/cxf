@@ -196,11 +196,6 @@ name|Path
 argument_list|(
 literal|"products/{productId}/"
 argument_list|)
-annotation|@
-name|Produces
-argument_list|(
-literal|"text/xml"
-argument_list|)
 specifier|public
 name|Product
 name|getProduct
