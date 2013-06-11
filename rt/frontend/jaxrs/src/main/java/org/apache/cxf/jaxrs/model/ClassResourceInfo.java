@@ -1569,6 +1569,15 @@ operator|=
 name|parent
 expr_stmt|;
 block|}
+specifier|public
+name|ClassResourceInfo
+name|getParent
+parameter_list|()
+block|{
+return|return
+name|parent
+return|;
+block|}
 block|}
 end_class
 
