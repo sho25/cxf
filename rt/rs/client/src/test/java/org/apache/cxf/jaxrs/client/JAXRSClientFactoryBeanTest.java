@@ -1414,7 +1414,6 @@ name|Path
 argument_list|(
 literal|"/parts"
 argument_list|)
-specifier|public
 name|IPartsResource
 name|getParts
 parameter_list|()
@@ -1429,7 +1428,6 @@ name|Path
 argument_list|(
 literal|"/{i}/"
 argument_list|)
-specifier|public
 name|IProductResource
 name|elementAt
 parameter_list|(
