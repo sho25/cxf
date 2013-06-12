@@ -106,6 +106,15 @@ name|ENCRYPT_USERNAME
 init|=
 literal|"ws-security.encryption.username"
 decl_stmt|;
+comment|/**      * The actor or role name of the wsse:Security header. If this parameter       * is omitted, the actor name is not set.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ACTOR
+init|=
+literal|"ws-security.actor"
+decl_stmt|;
 comment|//
 comment|// Callback class and Crypto properties
 comment|//
@@ -632,6 +641,8 @@ block|,
 name|SIGNATURE_USERNAME
 block|,
 name|ENCRYPT_USERNAME
+block|,
+name|ACTOR
 block|,
 name|CALLBACK_HANDLER
 block|,
