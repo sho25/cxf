@@ -1958,6 +1958,16 @@ argument_list|)
 expr_stmt|;
 name|feature
 operator|.
+name|setForce
+argument_list|(
+name|annotation
+operator|.
+name|force
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|feature
+operator|.
 name|initialize
 argument_list|(
 name|ep

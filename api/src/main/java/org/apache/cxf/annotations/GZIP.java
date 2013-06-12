@@ -109,6 +109,12 @@ default|default
 operator|-
 literal|1
 function_decl|;
+name|boolean
+name|force
+parameter_list|()
+default|default
+literal|false
+function_decl|;
 block|}
 end_annotation_defn
 
