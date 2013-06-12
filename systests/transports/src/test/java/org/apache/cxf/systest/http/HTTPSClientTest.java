@@ -569,6 +569,8 @@ argument_list|,
 name|address
 argument_list|)
 expr_stmt|;
+comment|//provider.getRequestContext().put("use.async.http.conduit", Boolean.TRUE);
+comment|//for (int x = 0; x< 100000; x++) {
 name|assertEquals
 argument_list|(
 name|port
@@ -581,6 +583,7 @@ argument_list|,
 literal|"Hello Kitty"
 argument_list|)
 expr_stmt|;
+comment|//}
 name|stopServers
 argument_list|()
 expr_stmt|;
