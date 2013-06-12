@@ -2681,27 +2681,6 @@ argument_list|(
 name|aim
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|binding
-operator|instanceof
-name|SymmetricBinding
-condition|)
-block|{
-name|config
-operator|.
-name|put
-argument_list|(
-name|ConfigurationConstants
-operator|.
-name|SIG_KEY_ID
-argument_list|,
-literal|"EncryptedKeySHA1"
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
 name|config
 operator|.
 name|put
@@ -2718,7 +2697,6 @@ name|token
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 comment|// Find out do we also need to include the token as per the Inclusion requirement
 if|if
 condition|(

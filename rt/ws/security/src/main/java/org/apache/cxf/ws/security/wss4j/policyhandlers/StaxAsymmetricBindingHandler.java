@@ -596,11 +596,6 @@ name|getInitiatorToken
 argument_list|()
 expr_stmt|;
 block|}
-name|boolean
-name|attached
-init|=
-literal|false
-decl_stmt|;
 comment|/*             if (initiatorWrapper != null) {                 AbstractToken initiatorToken = initiatorWrapper.getToken();                 if (initiatorToken instanceof IssuedToken) {                     SecurityToken secToken = getSecurityToken();                     if (secToken == null) {                         policyNotAsserted(initiatorToken, "Security token is not found or expired");                         return;                     } else {                         policyAsserted(initiatorToken);                                                  if (includeToken(initiatorToken.getIncludeTokenType())) {                             Element el = secToken.getToken();                             this.addEncryptedKeyElement(cloneElement(el));                             attached = true;                         }                      }                 } else if (initiatorToken instanceof SamlToken) {                     SamlAssertionWrapper assertionWrapper = addSamlToken((SamlToken)initiatorToken);                     if (assertionWrapper != null) {                         if (includeToken(initiatorToken.getIncludeTokenType())) {                             addSupportingElement(assertionWrapper.toDOM(saaj.getSOAPPart()));                             storeAssertionAsSecurityToken(assertionWrapper);                         }                         policyAsserted(initiatorToken);                     }                 }             }             */
 comment|// Add timestamp
 name|List
@@ -668,8 +663,6 @@ argument_list|(
 name|initiatorWrapper
 argument_list|,
 name|sigs
-argument_list|,
-name|attached
 argument_list|)
 expr_stmt|;
 comment|//doEndorse();
@@ -723,8 +716,6 @@ argument_list|(
 name|recipientSignatureToken
 argument_list|,
 name|sigs
-argument_list|,
-name|attached
 argument_list|)
 expr_stmt|;
 block|}
@@ -986,11 +977,6 @@ name|getInitiatorToken
 argument_list|()
 expr_stmt|;
 block|}
-name|boolean
-name|attached
-init|=
-literal|false
-decl_stmt|;
 comment|/*             if (initiatorWrapper != null) {                 AbstractToken initiatorToken = initiatorWrapper.getToken();                 if (initiatorToken instanceof IssuedToken) {                     SecurityToken secToken = getSecurityToken();                     if (secToken == null) {                         policyNotAsserted(initiatorToken, "Security token is not found or expired");                         return;                     } else {                         policyAsserted(initiatorToken);                                                  if (includeToken(initiatorToken.getIncludeTokenType())) {                             Element el = secToken.getToken();                             this.addEncryptedKeyElement(cloneElement(el));                             attached = true;                         }                      }                 } else if (initiatorToken instanceof SamlToken) {                     try {                         SamlAssertionWrapper assertionWrapper = addSamlToken((SamlToken)initiatorToken);                         if (assertionWrapper != null) {                             if (includeToken(initiatorToken.getIncludeTokenType())) {                                 addSupportingElement(assertionWrapper.toDOM(saaj.getSOAPPart()));                                 storeAssertionAsSecurityToken(assertionWrapper);                             }                             policyAsserted(initiatorToken);                         }                     } catch (Exception e) {                         String reason = e.getMessage();                         LOG.log(Level.FINE, "Encrypt before sign failed due to : " + reason);                         throw new Fault(e);                     }                 }             }             */
 name|List
 argument_list|<
@@ -1181,8 +1167,6 @@ argument_list|(
 name|initiatorWrapper
 argument_list|,
 name|sigParts
-argument_list|,
-name|attached
 argument_list|)
 expr_stmt|;
 block|}
@@ -1229,8 +1213,6 @@ argument_list|(
 name|recipientSignatureToken
 argument_list|,
 name|sigParts
-argument_list|,
-name|attached
 argument_list|)
 expr_stmt|;
 block|}
@@ -1479,16 +1461,6 @@ literal|";"
 expr_stmt|;
 block|}
 block|}
-name|encrParts
-operator|.
-name|addAll
-argument_list|(
-name|this
-operator|.
-name|getEncryptedParts
-argument_list|()
-argument_list|)
-expr_stmt|;
 for|for
 control|(
 name|SecurePart
@@ -1640,9 +1612,6 @@ argument_list|<
 name|SecurePart
 argument_list|>
 name|sigParts
-parameter_list|,
-name|boolean
-name|attached
 parameter_list|)
 throws|throws
 name|WSSecurityException
