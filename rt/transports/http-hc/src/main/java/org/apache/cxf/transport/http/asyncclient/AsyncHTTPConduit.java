@@ -1216,6 +1216,38 @@ block|}
 block|}
 if|if
 condition|(
+name|uri
+operator|.
+name|getScheme
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"https"
+argument_list|)
+operator|&&
+name|tlsClientParameters
+operator|!=
+literal|null
+operator|&&
+name|tlsClientParameters
+operator|.
+name|getSSLSocketFactory
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//if they configured in an SSLSocketFactory, we cannot do anything
+comment|//with it as the NIO based transport cannot use socket created from
+comment|//the SSLSocketFactory.
+name|o
+operator|=
+literal|false
+expr_stmt|;
+block|}
+if|if
+condition|(
 operator|!
 name|MessageUtils
 operator|.
