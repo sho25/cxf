@@ -504,9 +504,6 @@ condition|)
 block|{
 name|manager
 operator|.
-name|getConfiguration
-argument_list|()
-operator|.
 name|setDeliveryAssurance
 argument_list|(
 name|deliveryAssurance
