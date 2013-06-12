@@ -73,6 +73,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|LinkedList
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|List
 import|;
 end_import
@@ -592,9 +602,16 @@ decl_stmt|;
 specifier|protected
 name|List
 argument_list|<
-name|?
+name|Object
 argument_list|>
 name|entityProviders
+init|=
+operator|new
+name|LinkedList
+argument_list|<
+name|Object
+argument_list|>
+argument_list|()
 decl_stmt|;
 specifier|protected
 name|AbstractJAXRSFactoryBean
@@ -1393,7 +1410,7 @@ return|return
 name|entityProviders
 return|;
 block|}
-comment|/**      * Sets custom JAX-RS providers.      *       * @param entityProviders the entityProviders      */
+comment|/**      * Add custom JAX-RS providers to the list of providers      *       * @param entityProviders the entityProviders      */
 specifier|public
 name|void
 name|setProviders
@@ -1410,11 +1427,14 @@ block|{
 name|this
 operator|.
 name|entityProviders
-operator|=
+operator|.
+name|addAll
+argument_list|(
 name|providers
+argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets a custom JAX-RS provider.      *       * @param provider the custom provider.      */
+comment|/**      * Add custom JAX-RS provider to the list of providers      *       * @param provider the custom provider.      */
 specifier|public
 name|void
 name|setProvider
@@ -1423,14 +1443,11 @@ name|Object
 name|provider
 parameter_list|)
 block|{
-name|setProviders
-argument_list|(
-name|Collections
+name|entityProviders
 operator|.
-name|singletonList
+name|add
 argument_list|(
 name|provider
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
