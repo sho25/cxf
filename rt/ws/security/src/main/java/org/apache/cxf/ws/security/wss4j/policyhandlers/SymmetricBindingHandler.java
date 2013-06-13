@@ -4986,6 +4986,19 @@ argument_list|(
 name|tempTok
 argument_list|)
 expr_stmt|;
+comment|// Create another cache entry with the SHA1 Identifier as the key for easy retrieval
+name|tokenStore
+operator|.
+name|add
+argument_list|(
+name|tempTok
+operator|.
+name|getSHA1
+argument_list|()
+argument_list|,
+name|tempTok
+argument_list|)
+expr_stmt|;
 name|String
 name|bstTokenId
 init|=
