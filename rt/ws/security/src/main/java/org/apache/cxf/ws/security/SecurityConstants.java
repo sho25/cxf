@@ -584,6 +584,15 @@ name|STS_TOKEN_ON_BEHALF_OF
 init|=
 literal|"ws-security.sts.token.on-behalf-of"
 decl_stmt|;
+comment|/**      * Set this to "false" in order to remove the SOAP mustUnderstand header from security headers generated based on      * a WS-SecurityPolicy.      *      * The default value is "true" which included the SOAP mustUnderstand header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MUST_UNDERSTAND
+init|=
+literal|"ws-security.must-understand"
+decl_stmt|;
 comment|//
 comment|// Internal tags
 comment|//
@@ -737,6 +746,8 @@ block|,
 name|SUBJECT_ROLE_CLASSIFIER
 block|,
 name|SUBJECT_ROLE_CLASSIFIER_TYPE
+block|,
+name|MUST_UNDERSTAND
 block|}
 argument_list|)
 argument_list|)
