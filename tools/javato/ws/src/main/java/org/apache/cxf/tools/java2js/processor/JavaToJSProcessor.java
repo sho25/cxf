@@ -281,7 +281,7 @@ name|cxf
 operator|.
 name|javascript
 operator|.
-name|JavascriptQueryHandler
+name|JavascriptGetInterceptor
 import|;
 end_import
 
@@ -713,7 +713,7 @@ name|CFG_JAVASCRIPT_UTILS
 argument_list|)
 condition|)
 block|{
-name|JavascriptQueryHandler
+name|JavascriptGetInterceptor
 operator|.
 name|writeUtilsToResponseStream
 argument_list|(
