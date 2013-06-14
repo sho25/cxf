@@ -567,21 +567,27 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|int
-name|result
-init|=
+comment|// DOM
 name|kerberosPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
 argument_list|)
-decl_stmt|;
-name|assertTrue
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
 argument_list|(
-name|result
-operator|==
-literal|50
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
 argument_list|)
 expr_stmt|;
 operator|(
@@ -729,21 +735,27 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|int
-name|result
-init|=
+comment|// DOM
 name|kerberosPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
 argument_list|)
-decl_stmt|;
-name|assertTrue
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
 argument_list|(
-name|result
-operator|==
-literal|50
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
 argument_list|)
 expr_stmt|;
 operator|(
@@ -1527,23 +1539,17 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|int
-name|result
-init|=
+comment|// DOM
 name|kerberosPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
 argument_list|)
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|result
-operator|==
-literal|50
-argument_list|)
 expr_stmt|;
+comment|// TODO Streaming
+comment|// SecurityTestUtil.enableStreaming(kerberosPort);
+comment|// kerberosPort.doubleIt(25);
 operator|(
 operator|(
 name|java
@@ -1681,23 +1687,17 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|int
-name|result
-init|=
+comment|// DOM
 name|kerberosPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
 argument_list|)
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|result
-operator|==
-literal|50
-argument_list|)
 expr_stmt|;
+comment|// TODO Streaming
+comment|// SecurityTestUtil.enableStreaming(kerberosPort);
+comment|// kerberosPort.doubleIt(25);
 operator|(
 operator|(
 name|java
@@ -2173,23 +2173,17 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|int
-name|result
-init|=
+comment|// DOM
 name|kerberosPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
 argument_list|)
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|result
-operator|==
-literal|50
-argument_list|)
 expr_stmt|;
+comment|// TODO Streaming
+comment|// SecurityTestUtil.enableStreaming(kerberosPort);
+comment|// kerberosPort.doubleIt(25);
 operator|(
 operator|(
 name|java
@@ -2335,23 +2329,17 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-name|int
-name|result
-init|=
+comment|// DOM
 name|kerberosPort
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
 argument_list|)
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|result
-operator|==
-literal|50
-argument_list|)
 expr_stmt|;
+comment|// TODO Streaming
+comment|// SecurityTestUtil.enableStreaming(kerberosPort);
+comment|// kerberosPort.doubleIt(25);
 operator|(
 operator|(
 name|java
