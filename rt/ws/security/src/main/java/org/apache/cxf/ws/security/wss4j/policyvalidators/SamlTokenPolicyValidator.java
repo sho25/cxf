@@ -752,6 +752,13 @@ return|return
 literal|false
 return|;
 block|}
+if|if
+condition|(
+name|samlTokenType
+operator|!=
+literal|null
+condition|)
+block|{
 name|assertPolicy
 argument_list|(
 name|aim
@@ -774,6 +781,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 literal|true
 return|;
