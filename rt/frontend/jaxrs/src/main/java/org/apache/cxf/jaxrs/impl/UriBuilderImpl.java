@@ -4490,7 +4490,14 @@ name|path
 operator|.
 name|startsWith
 argument_list|(
-literal|"http"
+literal|"http:"
+argument_list|)
+operator|||
+name|path
+operator|.
+name|startsWith
+argument_list|(
+literal|"https:"
 argument_list|)
 return|;
 block|}
