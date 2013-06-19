@@ -27,7 +27,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Collections
+name|LinkedList
 import|;
 end_import
 
@@ -358,9 +358,11 @@ name|AccessTokenGrantHandler
 argument_list|>
 name|grantHandlers
 init|=
-name|Collections
-operator|.
-name|emptyList
+operator|new
+name|LinkedList
+argument_list|<
+name|AccessTokenGrantHandler
+argument_list|>
 argument_list|()
 decl_stmt|;
 comment|/**      * Sets the list of optional grant handlers      * @param handlers the grant handlers      */
@@ -378,6 +380,23 @@ block|{
 name|grantHandlers
 operator|=
 name|handlers
+expr_stmt|;
+block|}
+comment|/**      * Sets a grant handler      * @param handler the grant handler      */
+specifier|public
+name|void
+name|setGrantHandler
+parameter_list|(
+name|AccessTokenGrantHandler
+name|handler
+parameter_list|)
+block|{
+name|grantHandlers
+operator|.
+name|add
+argument_list|(
+name|handler
+argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Processes an access token request      * @param params the form parameters representing the access token grant       * @return Access Token or the error       */
