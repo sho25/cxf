@@ -5197,7 +5197,7 @@ return|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|public
 name|UriBuilder
 name|uriAsTemplate
 parameter_list|(

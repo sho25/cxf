@@ -993,7 +993,7 @@ name|KEEP_CONDUIT_ALIVE
 init|=
 literal|"KeepConduitAlive"
 decl_stmt|;
-specifier|private
+specifier|protected
 specifier|static
 specifier|final
 name|String
