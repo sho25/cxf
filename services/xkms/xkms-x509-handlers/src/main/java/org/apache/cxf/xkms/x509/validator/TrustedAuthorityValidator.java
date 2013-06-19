@@ -489,6 +489,13 @@ name|certificateParams
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|pkixParams
+operator|.
+name|setRevocationEnabled
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|CertPathBuilder
 name|builder
 init|=
