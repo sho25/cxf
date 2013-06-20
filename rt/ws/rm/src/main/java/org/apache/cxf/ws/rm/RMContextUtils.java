@@ -403,7 +403,6 @@ operator|.
 name|RM_PROPERTIES_INBOUND
 return|;
 block|}
-comment|//TODO put this key to the constant
 specifier|public
 specifier|static
 name|ProtocolVariation

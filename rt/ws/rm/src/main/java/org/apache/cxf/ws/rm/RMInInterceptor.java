@@ -263,6 +263,15 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+name|RMContextUtils
+operator|.
+name|getProtocolVariation
+argument_list|(
+name|message
+argument_list|)
+operator|!=
+literal|null
+operator|&&
 name|MessageUtils
 operator|.
 name|isTrue
