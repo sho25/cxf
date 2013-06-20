@@ -109,7 +109,7 @@ name|xkms
 operator|.
 name|handlers
 operator|.
-name|KeyRegisterHandler
+name|Register
 import|;
 end_import
 
@@ -422,9 +422,9 @@ end_import
 begin_class
 specifier|public
 class|class
-name|X509RegisterHandler
+name|X509Register
 implements|implements
-name|KeyRegisterHandler
+name|Register
 block|{
 specifier|protected
 specifier|final
@@ -436,7 +436,7 @@ name|CertificateRepo
 name|certRepo
 decl_stmt|;
 specifier|public
-name|X509RegisterHandler
+name|X509Register
 parameter_list|(
 name|CertificateRepo
 name|certRepo

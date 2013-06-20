@@ -146,7 +146,7 @@ end_import
 begin_interface
 specifier|public
 interface|interface
-name|KeyRegisterHandler
+name|Register
 block|{
 name|boolean
 name|canProcess

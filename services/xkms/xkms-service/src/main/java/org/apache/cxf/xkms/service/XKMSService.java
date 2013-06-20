@@ -105,7 +105,7 @@ name|xkms
 operator|.
 name|handlers
 operator|.
-name|KeyRegisterHandler
+name|Locator
 import|;
 end_import
 
@@ -121,7 +121,7 @@ name|xkms
 operator|.
 name|handlers
 operator|.
-name|Locator
+name|Register
 import|;
 end_import
 
@@ -702,14 +702,14 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|KeyRegisterHandler
+name|Register
 argument_list|>
 name|keyRegisterHandlers
 init|=
 operator|new
 name|ArrayList
 argument_list|<
-name|KeyRegisterHandler
+name|Register
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -748,7 +748,7 @@ try|try
 block|{
 for|for
 control|(
-name|KeyRegisterHandler
+name|Register
 name|handler
 range|:
 name|keyRegisterHandlers
@@ -921,7 +921,7 @@ try|try
 block|{
 for|for
 control|(
-name|KeyRegisterHandler
+name|Register
 name|handler
 range|:
 name|keyRegisterHandlers
@@ -1094,7 +1094,7 @@ try|try
 block|{
 for|for
 control|(
-name|KeyRegisterHandler
+name|Register
 name|handler
 range|:
 name|keyRegisterHandlers
@@ -1740,7 +1740,7 @@ name|setKeyRegisterHandlers
 parameter_list|(
 name|List
 argument_list|<
-name|KeyRegisterHandler
+name|Register
 argument_list|>
 name|keyRegisterHandlers
 parameter_list|)
