@@ -106,12 +106,33 @@ comment|/**      * The value(s) of the property      * @return the value of the 
 name|String
 index|[]
 name|value
-parameter_list|()
-function_decl|;
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 comment|/**      * The key to record the property      * @return the key for the property      */
 name|String
 name|key
 parameter_list|()
+function_decl|;
+comment|/**      * Reference to a named bean that is looked up from the      * configuration associated with the application.       */
+name|String
+name|ref
+parameter_list|()
+default|default
+literal|""
+function_decl|;
+comment|/**      * The class for the property. If "ref" is specified,      * this class is used to cast the looked up reference      * to make sure the Object is of the correct type.       *       * If ref is not set and value is not set, this class      * is used to create a bean. The class must have either       * a default constructor, a constructor that takes an      * org.apache.cxf.endpoint.Endpoint, or a constructor      * that takes a org.apache.cxf.endpoint.Endpoint and       * an org.apache.cxf.Bus.      */
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|beanClass
+parameter_list|()
+default|default
+name|Object
+operator|.
+name|class
 function_decl|;
 block|}
 end_annotation_defn
