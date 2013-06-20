@@ -1769,9 +1769,6 @@ name|key
 argument_list|()
 argument_list|,
 name|s
-index|[
-literal|1
-index|]
 argument_list|)
 expr_stmt|;
 block|}
