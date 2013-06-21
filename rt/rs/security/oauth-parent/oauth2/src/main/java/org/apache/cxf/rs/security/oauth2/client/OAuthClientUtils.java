@@ -872,6 +872,16 @@ name|getKey
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|consumer
+operator|.
+name|getSecret
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|form
 operator|.
 name|param
@@ -886,6 +896,7 @@ name|getSecret
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 else|else
