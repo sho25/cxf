@@ -854,6 +854,8 @@ name|namespaceMap
 argument_list|,
 literal|null
 argument_list|,
+literal|true
+argument_list|,
 literal|null
 argument_list|)
 return|;
@@ -882,6 +884,9 @@ argument_list|<
 name|String
 argument_list|>
 name|primitiveArrayKeys
+parameter_list|,
+name|boolean
+name|readNullAsString
 parameter_list|,
 name|DocumentDepthProperties
 name|depthProps
@@ -935,6 +940,13 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|conf
+operator|.
+name|setReadNullAsEmptyString
+argument_list|(
+name|readNullAsString
+argument_list|)
+expr_stmt|;
 name|XMLInputFactory
 name|factory
 init|=

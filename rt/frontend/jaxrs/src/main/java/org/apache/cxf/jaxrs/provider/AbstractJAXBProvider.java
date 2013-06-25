@@ -4687,6 +4687,9 @@ name|writer
 parameter_list|,
 name|OutputStream
 name|os
+parameter_list|,
+name|boolean
+name|dropAtXmlLevel
 parameter_list|)
 block|{
 return|return
@@ -4700,7 +4703,11 @@ name|os
 argument_list|,
 name|outElementsMap
 argument_list|,
+name|dropAtXmlLevel
+condition|?
 name|outDropElements
+else|:
+literal|null
 argument_list|,
 name|outAppendMap
 argument_list|,

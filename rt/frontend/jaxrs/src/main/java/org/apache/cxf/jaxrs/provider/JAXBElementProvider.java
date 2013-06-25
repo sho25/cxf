@@ -3801,6 +3801,8 @@ argument_list|(
 name|writer
 argument_list|,
 name|os
+argument_list|,
+literal|true
 argument_list|)
 return|;
 block|}
