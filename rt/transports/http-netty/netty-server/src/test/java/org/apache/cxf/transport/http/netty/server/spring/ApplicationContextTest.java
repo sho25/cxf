@@ -644,6 +644,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|info
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -720,6 +722,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|info
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -758,6 +762,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|info
+argument_list|,
+name|bus
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -791,6 +797,8 @@ literal|"bar"
 argument_list|,
 literal|"http://localhost:9001"
 argument_list|)
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|engine
@@ -823,6 +831,8 @@ literal|"foo"
 argument_list|,
 literal|"https://localhost:9002"
 argument_list|)
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|engine
@@ -885,6 +895,8 @@ literal|"foo2"
 argument_list|,
 literal|"https://localhost:9003"
 argument_list|)
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|engine
