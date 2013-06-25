@@ -213,13 +213,6 @@ operator|new
 name|SoapTransportFactory
 argument_list|()
 decl_stmt|;
-name|soapTF
-operator|.
-name|setBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 name|dfm
 operator|.
 name|registerDestinationFactory
@@ -243,9 +236,7 @@ name|localTransport
 init|=
 operator|new
 name|LocalTransportFactory
-argument_list|(
-name|bus
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|localTransport
 operator|.

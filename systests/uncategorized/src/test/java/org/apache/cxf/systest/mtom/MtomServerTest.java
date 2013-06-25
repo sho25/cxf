@@ -621,6 +621,9 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|getStaticBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|TestUtilities
@@ -1060,6 +1063,9 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|getStaticBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|TestUtilities
@@ -1459,6 +1465,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|ei
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|d
@@ -1535,6 +1543,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|ei
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|d

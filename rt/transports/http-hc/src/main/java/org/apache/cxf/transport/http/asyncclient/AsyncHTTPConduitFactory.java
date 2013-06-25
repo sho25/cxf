@@ -1891,6 +1891,9 @@ parameter_list|(
 name|HTTPTransportFactory
 name|f
 parameter_list|,
+name|Bus
+name|bus
+parameter_list|,
 name|EndpointInfo
 name|localInfo
 parameter_list|,
@@ -1913,10 +1916,7 @@ return|return
 operator|new
 name|AsyncHTTPConduit
 argument_list|(
-name|f
-operator|.
-name|getBus
-argument_list|()
+name|bus
 argument_list|,
 name|localInfo
 argument_list|,

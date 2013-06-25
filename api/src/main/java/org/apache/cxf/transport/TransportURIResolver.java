@@ -583,6 +583,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|info
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|Message

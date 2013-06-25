@@ -336,6 +336,14 @@ argument_list|)
 expr_stmt|;
 name|sf
 operator|.
+name|setBus
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|sf
+operator|.
 name|setTransportId
 argument_list|(
 name|LocalTransportFactory
@@ -374,6 +382,9 @@ expr_stmt|;
 name|sf
 operator|.
 name|create
+argument_list|()
+operator|.
+name|start
 argument_list|()
 expr_stmt|;
 name|Node

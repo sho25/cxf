@@ -506,6 +506,11 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|exchange
+operator|.
+name|getBus
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|replaceEndpointAddressPropertyIfNeeded
@@ -566,6 +571,11 @@ argument_list|(
 name|ei
 argument_list|,
 name|epr
+argument_list|,
+name|exchange
+operator|.
+name|getBus
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

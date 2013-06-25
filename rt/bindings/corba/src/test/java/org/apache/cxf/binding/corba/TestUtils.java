@@ -337,6 +337,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|endpointInfo
+argument_list|,
+name|bus
 argument_list|)
 return|;
 block|}
@@ -374,6 +376,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|endpointInfo
+argument_list|,
+name|bus
 argument_list|)
 return|;
 block|}
@@ -411,6 +415,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|endpointInfo
+argument_list|,
+name|bus
 argument_list|)
 return|;
 block|}

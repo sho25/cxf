@@ -149,6 +149,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|ei
+argument_list|,
+name|bus
 argument_list|)
 expr_stmt|;
 name|fail

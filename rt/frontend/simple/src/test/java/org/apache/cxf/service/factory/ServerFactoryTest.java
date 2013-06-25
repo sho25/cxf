@@ -684,8 +684,6 @@ name|asList
 argument_list|(
 literal|"id"
 argument_list|)
-argument_list|,
-name|b
 argument_list|)
 expr_stmt|;
 block|}
@@ -695,6 +693,9 @@ name|getDestination
 parameter_list|(
 name|EndpointInfo
 name|ei
+parameter_list|,
+name|Bus
+name|b
 parameter_list|)
 throws|throws
 name|IOException

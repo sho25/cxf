@@ -720,6 +720,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|bus
 argument_list|)
 return|;
 block|}

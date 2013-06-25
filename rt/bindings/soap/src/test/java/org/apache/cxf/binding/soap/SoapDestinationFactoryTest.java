@@ -325,6 +325,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.

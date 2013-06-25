@@ -1093,6 +1093,9 @@ operator|.
 name|getDestination
 argument_list|(
 name|ei
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 return|;
 block|}
@@ -1153,6 +1156,9 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 return|;
 block|}

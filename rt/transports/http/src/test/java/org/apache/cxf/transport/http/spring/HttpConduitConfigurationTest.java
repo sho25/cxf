@@ -444,9 +444,7 @@ name|atf
 init|=
 operator|new
 name|HTTPTransportFactory
-argument_list|(
-name|bus
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|HTTPConduit
 name|conduit
@@ -459,6 +457,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|verifyConduit
@@ -497,9 +497,7 @@ name|atf
 init|=
 operator|new
 name|HTTPTransportFactory
-argument_list|(
-name|bus
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|HTTPConduit
 name|conduit
@@ -512,6 +510,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|verifyConduit

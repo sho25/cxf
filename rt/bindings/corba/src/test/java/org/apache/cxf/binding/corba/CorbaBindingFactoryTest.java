@@ -654,6 +654,8 @@ operator|.
 name|getConduit
 argument_list|(
 name|endpointInfo
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -670,6 +672,8 @@ argument_list|(
 name|endpointInfo
 argument_list|,
 literal|null
+argument_list|,
+name|bus
 argument_list|)
 expr_stmt|;
 name|assertNotNull
@@ -697,6 +701,8 @@ argument_list|(
 name|endpointInfo
 argument_list|,
 name|target
+argument_list|,
+name|bus
 argument_list|)
 expr_stmt|;
 name|assertNotNull
@@ -733,6 +739,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|endpointInfo
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|assertNotNull

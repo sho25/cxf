@@ -1172,6 +1172,11 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
+name|registerBean
+argument_list|(
+name|bean
+argument_list|)
+expr_stmt|;
 return|return
 name|map
 operator|.

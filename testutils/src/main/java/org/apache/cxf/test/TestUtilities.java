@@ -976,6 +976,9 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|TestMessageObserver
@@ -1152,6 +1155,9 @@ operator|.
 name|getConduit
 argument_list|(
 name|ei
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|TestMessageObserver

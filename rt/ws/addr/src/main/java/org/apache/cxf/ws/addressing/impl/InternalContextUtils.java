@@ -1940,6 +1940,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|reference
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 comment|// ensure decoupled back channel input stream is closed
