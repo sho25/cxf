@@ -452,7 +452,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The jetty http handler did not take effect"
+literal|"The netty http handler did not take effect"
 argument_list|,
 name|response
 argument_list|,
@@ -481,7 +481,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The jetty http handler did not take effect"
+literal|"The netty http handler did not take effect"
 argument_list|,
 name|response
 argument_list|,
@@ -521,7 +521,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The jetty http handler did not take effect"
+literal|"The netty http handler did not take effect"
 argument_list|,
 name|response
 argument_list|,
@@ -662,7 +662,7 @@ expr_stmt|;
 block|}
 name|assertEquals
 argument_list|(
-literal|"the jetty http handler did not take effect"
+literal|"the netty http handler did not take effect"
 argument_list|,
 name|response
 argument_list|,
@@ -697,7 +697,7 @@ expr_stmt|;
 block|}
 name|assertEquals
 argument_list|(
-literal|"the jetty http handler did not take effect"
+literal|"the netty http handler did not take effect"
 argument_list|,
 name|response
 argument_list|,
