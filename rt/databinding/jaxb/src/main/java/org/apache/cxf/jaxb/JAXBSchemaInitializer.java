@@ -4351,6 +4351,13 @@ argument_list|)
 decl_stmt|;
 name|el
 operator|.
+name|setNillable
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+name|el
+operator|.
 name|getRef
 argument_list|()
 operator|.
