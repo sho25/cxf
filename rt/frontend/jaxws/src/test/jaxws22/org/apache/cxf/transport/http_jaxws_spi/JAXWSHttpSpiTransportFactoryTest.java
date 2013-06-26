@@ -215,8 +215,6 @@ operator|=
 operator|new
 name|JAXWSHttpSpiTransportFactory
 argument_list|(
-name|bus
-argument_list|,
 name|context
 argument_list|)
 expr_stmt|;
@@ -322,6 +320,8 @@ operator|.
 name|getDestination
 argument_list|(
 name|endpoint
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|assertNotNull
