@@ -956,6 +956,42 @@ name|HTTP_PUT_METHOD
 init|=
 literal|"PUT"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|Set
+argument_list|<
+name|String
+argument_list|>
+name|KNOWN_HTTP_VERBS_WITH_NO_CONTENT
+init|=
+operator|new
+name|HashSet
+argument_list|<
+name|String
+argument_list|>
+argument_list|(
+name|Arrays
+operator|.
+name|asList
+argument_list|(
+operator|new
+name|String
+index|[]
+block|{
+literal|"GET"
+block|,
+literal|"DELETE"
+block|,
+literal|"HEAD"
+block|,
+literal|"OPTIONS"
+block|,
+literal|"TRACE"
+block|}
+argument_list|)
+argument_list|)
+decl_stmt|;
 comment|/**      * This constant is the Message(Map) key for a list of visited URLs that      * is used in redirect loop protection.      */
 specifier|private
 specifier|static
@@ -4907,10 +4943,6 @@ name|makeTrustDecision
 argument_list|()
 expr_stmt|;
 comment|// Trust is okay, set up for writing the request.
-comment|// If this is a GET method we must not touch the output
-comment|// stream as this automatically turns the request into a POST.
-comment|// Nor it should be done in case of DELETE/HEAD/OPTIONS
-comment|// - strangely, empty PUTs work ok
 name|String
 name|method
 init|=
@@ -4919,18 +4951,9 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|!
-literal|"POST"
+name|KNOWN_HTTP_VERBS_WITH_NO_CONTENT
 operator|.
-name|equals
-argument_list|(
-name|method
-argument_list|)
-operator|&&
-operator|!
-literal|"PUT"
-operator|.
-name|equals
+name|contains
 argument_list|(
 name|method
 argument_list|)
@@ -4947,7 +4970,7 @@ name|outMessage
 operator|.
 name|get
 argument_list|(
-literal|"org.apache.cxf.post.empty"
+literal|"org.apache.cxf.empty.request"
 argument_list|)
 operator|!=
 literal|null
