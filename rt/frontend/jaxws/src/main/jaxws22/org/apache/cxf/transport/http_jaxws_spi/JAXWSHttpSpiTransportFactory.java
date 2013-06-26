@@ -135,9 +135,6 @@ decl_stmt|;
 specifier|public
 name|JAXWSHttpSpiTransportFactory
 parameter_list|(
-name|Bus
-name|bus
-parameter_list|,
 name|HttpContext
 name|context
 parameter_list|)
@@ -151,13 +148,6 @@ name|context
 operator|=
 name|context
 expr_stmt|;
-name|this
-operator|.
-name|bus
-operator|=
-name|bus
-expr_stmt|;
-comment|//directly set the bus to prevent this factory from being registered
 block|}
 specifier|public
 name|Destination
@@ -165,6 +155,9 @@ name|getDestination
 parameter_list|(
 name|EndpointInfo
 name|endpointInfo
+parameter_list|,
+name|Bus
+name|bus
 parameter_list|)
 throws|throws
 name|IOException
@@ -181,8 +174,7 @@ operator|=
 operator|new
 name|JAXWSHttpSpiDestination
 argument_list|(
-name|getBus
-argument_list|()
+name|bus
 argument_list|,
 name|registry
 argument_list|,
