@@ -2520,7 +2520,7 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
+comment|// TODO WSS-456 Streaming
 comment|// SecurityTestUtil.enableStreaming(x509Port);
 comment|// x509Port.doubleIt(25);
 operator|(
