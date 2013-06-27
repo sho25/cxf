@@ -559,6 +559,7 @@ name|tlsServerParameters
 operator|=
 name|tlsServerParameters
 expr_stmt|;
+comment|// TODO need to check the if we need pass other setting
 name|this
 operator|.
 name|executionHandler
@@ -569,7 +570,7 @@ argument_list|(
 operator|new
 name|OrderedMemoryAwareThreadPoolExecutor
 argument_list|(
-literal|200
+name|threadPoolSize
 argument_list|,
 literal|2048576
 argument_list|,

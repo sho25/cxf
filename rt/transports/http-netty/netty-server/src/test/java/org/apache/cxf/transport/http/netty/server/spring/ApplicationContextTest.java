@@ -687,8 +687,19 @@ operator|.
 name|getEngine
 argument_list|()
 decl_stmt|;
-comment|//assertEquals(111, engine.getThreadingParameters().getMinThreads());
-comment|//assertEquals(120, engine.getThreadingParameters().getMaxThreads());
+name|assertEquals
+argument_list|(
+literal|120
+argument_list|,
+name|engine
+operator|.
+name|getThreadingParameters
+argument_list|()
+operator|.
+name|getThreadPoolSize
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|ConduitInitiatorManager
 name|cim
 init|=
@@ -811,8 +822,26 @@ operator|.
 name|getEngine
 argument_list|()
 expr_stmt|;
-comment|//assertEquals(40000, engine.getMaxIdleTime());
-comment|//assertTrue("The engine should support session manager", engine.isSessionSupport());
+name|assertEquals
+argument_list|(
+literal|40000
+argument_list|,
+name|engine
+operator|.
+name|getReadIdleTime
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+literal|"The engine should support session manager"
+argument_list|,
+name|engine
+operator|.
+name|isSessionSupport
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|NettyHttpDestination
 name|jd3
 init|=
