@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for keys derived from Username Tokens.  */
+comment|/**  * A set of tests for keys derived from Username Tokens. Endorsing UsernameTokens are not  * supported in the streaming code, only in the DOM code.  */
 end_comment
 
 begin_class
