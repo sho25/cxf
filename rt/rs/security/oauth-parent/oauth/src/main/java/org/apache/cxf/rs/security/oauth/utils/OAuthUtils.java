@@ -806,10 +806,10 @@ argument_list|(
 name|token
 argument_list|)
 expr_stmt|;
+block|}
 throw|throw
 name|ex
 throw|;
-block|}
 block|}
 if|if
 condition|(
