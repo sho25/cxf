@@ -687,6 +687,13 @@ argument_list|(
 name|name
 argument_list|)
 expr_stmt|;
+name|validatePropertyValue
+argument_list|(
+name|name
+argument_list|,
+name|value
+argument_list|)
+expr_stmt|;
 name|Class
 argument_list|<
 name|?
