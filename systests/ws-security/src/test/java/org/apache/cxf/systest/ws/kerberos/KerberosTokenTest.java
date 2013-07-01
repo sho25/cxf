@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for Kerberos Tokens. The tests are @Ignore'd, as they require a running KDC. To run the  * tests, set up a KDC of realm "WS.APACHE.ORG", with principal "alice" and service principal   * "bob/service.ws.apache.org". Create keytabs for both principals in "/etc/alice.keytab" and  * "/etc/bob.keytab" (this can all be edited in src/test/resource/kerberos.jaas". Then disable the  * @Ignore annotations and run the tests with:  *    * mvn test -Pnochecks -Dtest=KerberosTokenTest   *     -Djava.security.auth.login.config=src/test/resources/kerberos.jaas  *   * See here for more information:  * http://coheigea.blogspot.com/2011/10/using-kerberos-with-web-services-part.html  */
+comment|/**  * A set of tests for Kerberos Tokens. The tests are @Ignore'd, as they require a running KDC. To run the  * tests, set up a KDC of realm "WS.APACHE.ORG", with principal "alice" and service principal   * "bob/service.ws.apache.org". Create keytabs for both principals in "/etc/alice.keytab" and  * "/etc/bob.keytab" (this can all be edited in src/test/resource/kerberos.jaas". Then disable the  * @Ignore annotations and run the tests with:  *    * mvn test -Pnochecks -Dtest=KerberosTokenTest   *     -Djava.security.auth.login.config=src/test/resources/kerberos.jaas  *   * See here for more information:  * http://coheigea.blogspot.com/2011/10/using-kerberos-with-web-services-part.html  *   * It tests both DOM + StAX clients against the DOM server  */
 end_comment
 
 begin_class
