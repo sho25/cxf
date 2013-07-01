@@ -147,7 +147,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/blueprint/soap.xsd"
+literal|"schemas/configuration/blueprint/soap.xsd"
 argument_list|)
 return|;
 block|}

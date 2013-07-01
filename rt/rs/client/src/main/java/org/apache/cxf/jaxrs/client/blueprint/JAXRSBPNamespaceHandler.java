@@ -175,7 +175,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/jaxrs-client.xsd"
+literal|"schemas/blueprint/jaxrs-client.xsd"
 argument_list|)
 return|;
 block|}

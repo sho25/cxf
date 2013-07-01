@@ -302,7 +302,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/clustering.xsd"
+literal|"schemas/clustering.xsd"
 argument_list|)
 return|;
 block|}

@@ -191,7 +191,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/wsrm-manager.xsd"
+literal|"schemas/configuration/wsrm-manager.xsd"
 argument_list|)
 return|;
 block|}
@@ -215,7 +215,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/wsrm-policy.xsd"
+literal|"schemas/configuration/wsrm-policy.xsd"
 argument_list|)
 return|;
 block|}
@@ -239,7 +239,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/wsrmp-1.1-schema-200702.xsd"
+literal|"schemas/configuration/wsrmp-1.1-schema-200702.xsd"
 argument_list|)
 return|;
 block|}

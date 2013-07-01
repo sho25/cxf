@@ -173,7 +173,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/simple.xsd"
+literal|"schemas/blueprint/simple.xsd"
 argument_list|)
 return|;
 block|}

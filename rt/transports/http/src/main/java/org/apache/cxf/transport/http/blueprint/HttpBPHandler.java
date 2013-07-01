@@ -181,7 +181,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/http-conf.xsd"
+literal|"schemas/configuration/http-conf.xsd"
 argument_list|)
 return|;
 block|}

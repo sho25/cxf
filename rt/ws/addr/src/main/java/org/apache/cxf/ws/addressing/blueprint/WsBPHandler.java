@@ -179,7 +179,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/ws-addr-conf.xsd"
+literal|"schemas/ws-addr-conf.xsd"
 argument_list|)
 return|;
 block|}

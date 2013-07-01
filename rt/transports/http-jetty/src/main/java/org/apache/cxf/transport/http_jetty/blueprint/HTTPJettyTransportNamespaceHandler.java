@@ -236,7 +236,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/http-jetty.xsd"
+literal|"schemas/configuration/http-jetty.xsd"
 argument_list|)
 return|;
 block|}

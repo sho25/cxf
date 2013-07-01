@@ -173,7 +173,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/jaxrs.xsd"
+literal|"schemas/blueprint/jaxrs.xsd"
 argument_list|)
 return|;
 block|}

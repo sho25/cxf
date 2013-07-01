@@ -158,7 +158,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/blueprint/policy.xsd"
+literal|"schemas/blueprint/policy.xsd"
 argument_list|)
 return|;
 block|}
@@ -182,7 +182,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/ws-policy-200702.xsd"
+literal|"schemas/ws-policy-200702.xsd"
 argument_list|)
 return|;
 block|}
@@ -206,7 +206,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/ws-policy-200607.xsd"
+literal|"schemas/ws-policy-200607.xsd"
 argument_list|)
 return|;
 block|}
@@ -230,7 +230,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/ws-policy-200409.xsd"
+literal|"schemas/ws-policy-200409.xsd"
 argument_list|)
 return|;
 block|}

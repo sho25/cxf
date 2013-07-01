@@ -157,7 +157,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/cxf-beans.xsd"
+literal|"schemas/configuration/cxf-beans.xsd"
 argument_list|)
 return|;
 block|}
@@ -181,7 +181,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/parameterized-types.xsd"
+literal|"schemas/configuration/parameterized-types.xsd"
 argument_list|)
 return|;
 block|}
@@ -205,7 +205,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/configuration/security.xsd"
+literal|"schemas/configuration/security.xsd"
 argument_list|)
 return|;
 block|}
@@ -229,7 +229,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/schemas/wsdl/wsdl.xsd"
+literal|"schemas/wsdl/wsdl.xsd"
 argument_list|)
 return|;
 block|}
