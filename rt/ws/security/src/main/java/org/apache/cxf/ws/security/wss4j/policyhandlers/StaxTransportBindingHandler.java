@@ -591,6 +591,13 @@ argument_list|(
 name|aim
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|tbinding
+operator|!=
+literal|null
+condition|)
+block|{
 name|TransportToken
 name|token
 init|=
@@ -610,6 +617,7 @@ name|IssuedToken
 condition|)
 block|{
 comment|// TODO
+block|}
 block|}
 try|try
 block|{
