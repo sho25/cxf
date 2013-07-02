@@ -987,6 +987,10 @@ name|boolean
 name|timestampAdded
 decl_stmt|;
 specifier|protected
+name|boolean
+name|signatureConfirmationAdded
+decl_stmt|;
+specifier|protected
 name|Set
 argument_list|<
 name|SecurePart
@@ -4610,6 +4614,10 @@ name|securePart
 argument_list|)
 expr_stmt|;
 block|}
+name|signatureConfirmationAdded
+operator|=
+literal|true
+expr_stmt|;
 block|}
 comment|/**      * Identifies the portions of the message to be signed      */
 specifier|protected

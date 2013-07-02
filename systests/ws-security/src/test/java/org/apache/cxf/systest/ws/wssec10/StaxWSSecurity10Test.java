@@ -165,7 +165,7 @@ name|wssec10
 operator|.
 name|server
 operator|.
-name|Server
+name|StaxServer
 import|;
 end_import
 
@@ -276,13 +276,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * It tests both DOM + StAX clients against the DOM server  */
+comment|/**  * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|WSSecurity10Test
+name|StaxWSSecurity10Test
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -293,7 +293,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|)
@@ -305,7 +305,7 @@ name|SSL_PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
@@ -354,7 +354,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
