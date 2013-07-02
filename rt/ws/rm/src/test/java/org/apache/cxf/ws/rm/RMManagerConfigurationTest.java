@@ -463,9 +463,6 @@ argument_list|()
 operator|.
 name|getRM10AddressingNamespace
 argument_list|()
-operator|.
-name|getUri
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|TestStore

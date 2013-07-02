@@ -588,6 +588,9 @@ operator|.
 name|setRM10AddressingNamespace
 argument_list|(
 name|rm10AddressingNamespace
+operator|.
+name|getUri
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

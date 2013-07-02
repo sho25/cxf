@@ -17,24 +17,6 @@ name|rm
 package|;
 end_package
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|rm
-operator|.
-name|manager
-operator|.
-name|RM10AddressingNamespaceType
-import|;
-end_import
-
 begin_comment
 comment|/**  * Configuration parameters for reliable messaging. These may be defined by a combination of Spring/Blueprint  * configuration with default values and WS-ReliableMessagingPolicy overrides.  */
 end_comment
@@ -91,7 +73,7 @@ name|String
 name|rmNamespace
 decl_stmt|;
 specifier|private
-name|RM10AddressingNamespaceType
+name|String
 name|rm10AddressingNamespace
 decl_stmt|;
 comment|/**      * Constructor.      */
@@ -142,6 +124,12 @@ operator|=
 name|base
 operator|.
 name|sequenceTransportSecurityRequired
+expr_stmt|;
+name|inOrder
+operator|=
+name|base
+operator|.
+name|inOrder
 expr_stmt|;
 name|deliveryAssurance
 operator|=
@@ -431,7 +419,7 @@ name|uri
 expr_stmt|;
 block|}
 specifier|public
-name|RM10AddressingNamespaceType
+name|String
 name|getRM10AddressingNamespace
 parameter_list|()
 block|{
@@ -443,7 +431,7 @@ specifier|public
 name|void
 name|setRM10AddressingNamespace
 parameter_list|(
-name|RM10AddressingNamespaceType
+name|String
 name|addrns
 parameter_list|)
 block|{
@@ -451,38 +439,6 @@ name|rm10AddressingNamespace
 operator|=
 name|addrns
 expr_stmt|;
-block|}
-comment|/**      * @return protocol variation      */
-specifier|public
-name|ProtocolVariation
-name|getConfiguredProtocol
-parameter_list|()
-block|{
-name|String
-name|addrns
-init|=
-name|rm10AddressingNamespace
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-name|rm10AddressingNamespace
-operator|.
-name|getUri
-argument_list|()
-decl_stmt|;
-return|return
-name|ProtocolVariation
-operator|.
-name|findVariant
-argument_list|(
-name|getRMNamespace
-argument_list|()
-argument_list|,
-name|addrns
-argument_list|)
-return|;
 block|}
 block|}
 end_class

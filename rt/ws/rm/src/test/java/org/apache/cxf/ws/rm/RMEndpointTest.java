@@ -1025,6 +1025,10 @@ name|rme
 operator|.
 name|initialise
 argument_list|(
+operator|new
+name|RMConfiguration
+argument_list|()
+argument_list|,
 name|c
 argument_list|,
 name|epr

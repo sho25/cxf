@@ -884,6 +884,10 @@ specifier|private
 name|ManagedRMEndpoint
 name|managedEndpoint
 decl_stmt|;
+specifier|private
+name|RMConfiguration
+name|configuration
+decl_stmt|;
 comment|/**      * Constructor.      *       * @param m      * @param ae      * @param pv      */
 specifier|public
 name|RMEndpoint
@@ -1233,6 +1237,16 @@ return|return
 name|conduit
 return|;
 block|}
+comment|/**      * Get the RM configuration applied to this endpoint.      *       * @return configuration      */
+specifier|public
+name|RMConfiguration
+name|getConfiguration
+parameter_list|()
+block|{
+return|return
+name|configuration
+return|;
+block|}
 comment|/**      * Returns the replyTo address of the first application request, i.e. the      * target address to which to send CreateSequence, CreateSequenceResponse      * and TerminateSequence messages originating from the from the server.      *       * @return the replyTo address      */
 name|EndpointReferenceType
 name|getReplyTo
@@ -1245,6 +1259,9 @@ block|}
 name|void
 name|initialise
 parameter_list|(
+name|RMConfiguration
+name|config
+parameter_list|,
 name|Conduit
 name|c
 parameter_list|,
@@ -1263,6 +1280,10 @@ name|Destination
 name|d
 parameter_list|)
 block|{
+name|configuration
+operator|=
+name|config
+expr_stmt|;
 name|conduit
 operator|=
 name|c
