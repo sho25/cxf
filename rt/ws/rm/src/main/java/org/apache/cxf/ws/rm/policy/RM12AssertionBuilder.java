@@ -239,7 +239,7 @@ name|INORDER_NAME
 init|=
 literal|"InOrder"
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -255,7 +255,7 @@ argument_list|,
 name|SEQUENCESTR_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -271,7 +271,7 @@ argument_list|,
 name|SEQUENCETRANSEC_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -287,7 +287,7 @@ argument_list|,
 name|DELIVERYASSURANCE_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -303,7 +303,7 @@ argument_list|,
 name|EXACTLYONCE_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -319,7 +319,7 @@ argument_list|,
 name|ATLEASTONCE_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -335,7 +335,7 @@ argument_list|,
 name|ATMOSTONCE_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName
@@ -351,7 +351,7 @@ argument_list|,
 name|INORDER_NAME
 argument_list|)
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|QName

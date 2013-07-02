@@ -1970,15 +1970,21 @@ condition|)
 block|{
 return|return;
 block|}
+for|for
+control|(
+name|Endpoint
+name|endpoint
+range|:
+name|endpoints
+operator|.
+name|values
+argument_list|()
+control|)
+block|{
 name|EndpointInfo
 name|ei
 init|=
-name|getEndpoint
-argument_list|(
-name|ProtocolVariation
-operator|.
-name|RM10WSA200408
-argument_list|)
+name|endpoint
 operator|.
 name|getEndpointInfo
 argument_list|()
@@ -2159,6 +2165,7 @@ argument_list|,
 name|effectiveInbound
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// TODO: FaultPolicy (SequenceFault)
 block|}
