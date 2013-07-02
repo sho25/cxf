@@ -2216,7 +2216,7 @@ name|Thread
 operator|.
 name|sleep
 argument_list|(
-literal|10000
+literal|15000
 argument_list|)
 expr_stmt|;
 name|o
