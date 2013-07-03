@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|wsdl
+operator|.
+name|interceptors
 package|;
 end_package
 

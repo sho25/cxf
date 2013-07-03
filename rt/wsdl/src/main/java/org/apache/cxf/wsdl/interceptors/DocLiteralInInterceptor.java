@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|wsdl
+operator|.
+name|interceptors
 package|;
 end_package
 
@@ -160,6 +162,34 @@ operator|.
 name|endpoint
 operator|.
 name|Endpoint
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|interceptor
+operator|.
+name|AbstractInDatabindingInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|interceptor
+operator|.
+name|Fault
 import|;
 end_import
 
