@@ -97,6 +97,18 @@ name|javax
 operator|.
 name|xml
 operator|.
+name|stream
+operator|.
+name|XMLStreamException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
 name|xpath
 operator|.
 name|XPathConstants
@@ -902,6 +914,8 @@ parameter_list|,
 name|Document
 name|doc
 parameter_list|)
+throws|throws
+name|XMLStreamException
 block|{
 name|XPathUtils
 name|xpu

@@ -3751,6 +3751,8 @@ parameter_list|(
 name|Document
 name|doc
 parameter_list|)
+throws|throws
+name|Exception
 block|{
 return|return
 name|XMLUtils
