@@ -282,6 +282,15 @@ name|qn
 argument_list|)
 expr_stmt|;
 block|}
+name|ASSERTION_NAMES
+operator|.
+name|add
+argument_list|(
+name|RSPAssertionBuilder
+operator|.
+name|CONFORMANT_QNAME
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|RMPolicyUtilities
@@ -432,7 +441,7 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Collect RMAssertions from map. This checks both namespaces defined for WS-RM policy assertions.      *       * @param aim map, may be<code>null</code>      * @return merged collection, never<code>null</code>      */
+comment|/**      * Collect RMAssertions from map. This checks both namespaces defined for WS-RM policy assertions, along with the      * WS-I RSP namespace.      *       * @param aim map, may be<code>null</code>      * @return merged collection, never<code>null</code>      */
 specifier|public
 specifier|static
 name|Collection
