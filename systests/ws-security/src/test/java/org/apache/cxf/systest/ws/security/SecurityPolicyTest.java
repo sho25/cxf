@@ -1999,6 +1999,7 @@ literal|"bob.properties"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|pt
 operator|.
 name|doubleIt
@@ -2006,6 +2007,9 @@ argument_list|(
 literal|5
 argument_list|)
 expr_stmt|;
+comment|// TODO EncryptBeforeSigning + EncryptSignature not working
+comment|// SecurityTestUtil.enableStreaming(pt);
+comment|// pt.doubleIt(5);
 operator|(
 operator|(
 name|java
@@ -2243,6 +2247,7 @@ literal|"bob.properties"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|pt
 operator|.
 name|doubleIt
@@ -2250,10 +2255,15 @@ argument_list|(
 literal|5
 argument_list|)
 expr_stmt|;
-comment|//((BindingProvider)pt).getRequestContext().put(BindingProvider.ENDPOINT_ADDRESS_PROPERTY,
-comment|//                                              POLICY_SIGNENC_PROVIDER_ADDRESS);
-comment|//int x = pt.doubleIt(5);
-comment|//assertEquals(10, x);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
+argument_list|)
+expr_stmt|;
+comment|// pt.doubleIt(5);
 operator|(
 operator|(
 name|java
@@ -2393,6 +2403,22 @@ operator|.
 name|PASSWORD
 argument_list|,
 literal|"pwd"
+argument_list|)
+expr_stmt|;
+comment|// DOM
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
 argument_list|)
 expr_stmt|;
 name|pt
@@ -2682,6 +2708,27 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|//This should work as it should be properly signed.
+comment|// DOM
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|5
+argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|10
@@ -2753,6 +2800,7 @@ argument_list|,
 name|POLICY_SIGNONLY_ADDRESS
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|pt
@@ -2787,6 +2835,37 @@ literal|"policy alternatives"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
+argument_list|)
+expr_stmt|;
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|5
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"should have had a security/policy exception as the body wasn't signed"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|// expected
 block|}
 operator|(
 operator|(
@@ -3457,6 +3536,27 @@ literal|"bob.properties"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|5
+argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|10
@@ -3658,6 +3758,7 @@ literal|"alice.properties"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|assertEquals
 argument_list|(
 literal|10
@@ -3670,6 +3771,9 @@ literal|5
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// TODO See WSS-458 Streaming
+comment|// SecurityTestUtil.enableStreaming(pt);
+comment|// assertEquals(10, pt.doubleIt(5));
 operator|(
 operator|(
 name|java
@@ -4357,9 +4461,6 @@ argument_list|,
 name|SERVICE_QNAME
 argument_list|)
 decl_stmt|;
-name|DoubleItPortType
-name|pt
-decl_stmt|;
 name|QName
 name|portQName
 init|=
@@ -4371,8 +4472,9 @@ argument_list|,
 literal|"DoubleItPortCXF4122"
 argument_list|)
 decl_stmt|;
+name|DoubleItPortType
 name|pt
-operator|=
+init|=
 name|service
 operator|.
 name|getPort
@@ -4383,7 +4485,7 @@ name|DoubleItPortType
 operator|.
 name|class
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|updateAddressPort
 argument_list|(
 name|pt
@@ -4462,6 +4564,7 @@ literal|"bob.properties"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|pt
@@ -4517,6 +4620,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|// TODO EncryptBeforeSigning + EncryptSignature not working
+comment|/*         SecurityTestUtil.enableStreaming(pt);         try {             pt.doubleIt(5);             fail("should fail on server side when do signature validation due the revoked certificates");         } catch (Exception ex) {             String errorMessage = ex.getMessage();             // Different errors using different JDKs...             System.out.println("ERR1: " + errorMessage);         }         */
 operator|(
 operator|(
 name|java

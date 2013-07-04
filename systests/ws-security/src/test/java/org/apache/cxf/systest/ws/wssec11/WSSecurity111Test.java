@@ -108,7 +108,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class runs the first half of the tests, as having all in   * the one class causes an out of memory problem in eclipse  */
+comment|/**  * This class runs the first half of the tests, as having all in   * the one class causes an out of memory problem in eclipse.  *   * It tests both DOM + StAX clients against the DOM server.  */
 end_comment
 
 begin_class
@@ -293,6 +293,76 @@ literal|"UXD-SEES"
 block|,          }
 decl_stmt|;
 name|runClientServer
+argument_list|(
+name|argv
+argument_list|,
+name|unrestrictedPoliciesInstalled
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testClientServerStreaming
+parameter_list|()
+throws|throws
+name|IOException
+block|{
+if|if
+condition|(
+operator|(
+operator|!
+name|unrestrictedPoliciesInstalled
+operator|)
+operator|&&
+operator|(
+name|WSSecurity11Common
+operator|.
+name|isIBMJDK16
+argument_list|()
+operator|)
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Not running as there is a problem with 1.6 jdk and restricted jars"
+argument_list|)
+expr_stmt|;
+return|return;
+block|}
+name|String
+index|[]
+name|argv
+init|=
+operator|new
+name|String
+index|[]
+block|{
+literal|"A"
+block|,
+literal|"A-NoTimestamp"
+block|,
+comment|// TODO Derived "AD",
+comment|// TODO EncryptBeforeSigning not working "A-ES",
+comment|// TODO Derived "AD-ES",
+literal|"UX"
+block|,
+literal|"UX-NoTimestamp"
+block|,
+comment|// TODO Derived "UXD",
+literal|"UX-SEES"
+block|,
+comment|// TODO Derived "UXD-SEES",
+block|}
+decl_stmt|;
+name|runClientServerStreaming
 argument_list|(
 name|argv
 argument_list|,
