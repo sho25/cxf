@@ -79,7 +79,7 @@ name|xml
 operator|.
 name|stream
 operator|.
-name|XMLStreamReader
+name|XMLStreamException
 import|;
 end_import
 
@@ -89,9 +89,9 @@ name|javax
 operator|.
 name|xml
 operator|.
-name|transform
+name|stream
 operator|.
-name|TransformerException
+name|XMLStreamReader
 import|;
 end_import
 
@@ -213,7 +213,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|DOMUtils
+name|XMLUtils
 import|;
 end_import
 
@@ -418,9 +418,9 @@ operator|new
 name|CachedOutputStream
 argument_list|()
 decl_stmt|;
-name|DOMUtils
+name|XMLUtils
 operator|.
-name|writeXml
+name|writeTo
 argument_list|(
 name|input
 argument_list|,
@@ -468,7 +468,7 @@ throw|;
 block|}
 catch|catch
 parameter_list|(
-name|TransformerException
+name|XMLStreamException
 name|e
 parameter_list|)
 block|{

@@ -500,9 +500,9 @@ operator|new
 name|CachedOutputStream
 argument_list|()
 decl_stmt|;
-name|DOMUtils
+name|XMLUtils
 operator|.
-name|writeXml
+name|writeTo
 argument_list|(
 name|newDoc
 argument_list|,

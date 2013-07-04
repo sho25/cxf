@@ -767,9 +767,9 @@ argument_list|(
 name|tmpFile
 argument_list|)
 expr_stmt|;
-name|DOMUtils
+name|XMLUtils
 operator|.
-name|writeXml
+name|writeTo
 argument_list|(
 name|rootElement
 argument_list|,

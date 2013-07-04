@@ -5775,9 +5775,9 @@ argument_list|,
 name|importWSDLMap
 argument_list|)
 expr_stmt|;
-name|DOMUtils
+name|XMLUtils
 operator|.
-name|writeXml
+name|writeTo
 argument_list|(
 name|defEle
 argument_list|,
@@ -5898,9 +5898,9 @@ argument_list|,
 name|importWSDLMap
 argument_list|)
 expr_stmt|;
-name|DOMUtils
+name|XMLUtils
 operator|.
-name|writeXml
+name|writeTo
 argument_list|(
 name|importEle
 argument_list|,
