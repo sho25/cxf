@@ -99,6 +99,24 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|sts
+operator|.
+name|token
+operator|.
+name|realm
+operator|.
+name|SAMLRealmCodec
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|ws
 operator|.
 name|security
@@ -296,6 +314,19 @@ comment|/**      * Get the RelationshipResolver objects to use.      * @return t
 name|RelationshipResolver
 name|getRelationshipResolver
 parameter_list|()
+function_decl|;
+comment|/**      * Get the SAML Realm Codec object to use.      * @return the SAMLRealmCodec object to use.      */
+name|SAMLRealmCodec
+name|getSamlRealmCodec
+parameter_list|()
+function_decl|;
+comment|/**      * Set the SAML Realm Codec object to use.      * @param samlRealmCodec the SAMLRealmCodec object to use.      */
+name|void
+name|setSamlRealmCodec
+parameter_list|(
+name|SAMLRealmCodec
+name|samlRealmCodec
+parameter_list|)
 function_decl|;
 block|}
 end_interface
