@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for AlgorithmSuites. Essentially it checks that a service endpoint will  * reject a client request that uses a different AlgorithmSuite.  */
+comment|/**  * This is a test for AlgorithmSuites. Essentially it checks that a service endpoint will  * reject a client request that uses a different AlgorithmSuite. It tests both DOM + StAX   * clients against the DOM server.  */
 end_comment
 
 begin_class
@@ -370,6 +370,22 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// This should succeed as the client + server policies match
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -410,6 +426,38 @@ expr_stmt|;
 comment|// This should fail as the client uses Basic128Rsa15 + the server uses Basic128
 try|try
 block|{
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on Rsa15 AlgorithmSuite"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|// expected
+block|}
+try|try
+block|{
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -473,6 +521,38 @@ expr_stmt|;
 comment|// This should fail as the client uses Basic128Rsa15 + the server uses Basic128
 try|try
 block|{
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on Basic256 AlgorithmSuite"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|// expected
+block|}
+try|try
+block|{
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -629,6 +709,22 @@ argument_list|(
 name|port
 argument_list|,
 name|PORT
+argument_list|)
+expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
 argument_list|)
 expr_stmt|;
 name|port

@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for the DefaultCryptoCoverageChecker.  */
+comment|/**  * A set of tests for the DefaultCryptoCoverageChecker. It tests both DOM + StAX   * clients against the DOM server.  */
 end_comment
 
 begin_class

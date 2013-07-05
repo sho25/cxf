@@ -1966,7 +1966,16 @@ name|httpsSecurityToken
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|httpsTokenSecurityEvent
+operator|.
+name|getAuthenticationType
+argument_list|()
+operator|==
+literal|null
+condition|)
 block|{
 name|httpsTokenSecurityEvent
 operator|.

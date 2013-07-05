@@ -115,7 +115,7 @@ name|https
 operator|.
 name|server
 operator|.
-name|Server
+name|StaxServer
 import|;
 end_import
 
@@ -160,13 +160,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for the HttpsToken policy. It tests both DOM + StAX clients against the   * DOM server.  */
+comment|/**  * A set of tests for the HttpsToken policy. It tests both DOM + StAX clients against the   * StAX server.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|HttpsTokenTest
+name|StaxHttpsTokenTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -177,7 +177,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|)
@@ -222,7 +222,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
@@ -277,7 +277,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|HttpsTokenTest
+name|StaxHttpsTokenTest
 operator|.
 name|class
 operator|.
@@ -316,7 +316,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|HttpsTokenTest
+name|StaxHttpsTokenTest
 operator|.
 name|class
 operator|.
@@ -453,24 +453,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"HttpsToken"
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-name|error
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 try|try
 block|{
@@ -556,7 +539,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|HttpsTokenTest
+name|StaxHttpsTokenTest
 operator|.
 name|class
 operator|.
@@ -595,7 +578,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|HttpsTokenTest
+name|StaxHttpsTokenTest
 operator|.
 name|class
 operator|.
@@ -732,24 +715,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"HttpsToken"
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-name|error
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 try|try
 block|{
