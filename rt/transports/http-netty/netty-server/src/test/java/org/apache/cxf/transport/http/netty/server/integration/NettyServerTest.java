@@ -196,7 +196,7 @@ name|Endpoint
 operator|.
 name|publish
 argument_list|(
-literal|"http://localhost:"
+literal|"netty://http://localhost:"
 operator|+
 name|PORT
 operator|+
