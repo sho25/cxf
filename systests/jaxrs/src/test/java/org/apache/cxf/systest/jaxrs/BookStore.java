@@ -1198,11 +1198,6 @@ block|}
 return|;
 block|}
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
-annotation|@
 name|GET
 annotation|@
 name|Path
@@ -8065,8 +8060,6 @@ name|arg0
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|writeTo
@@ -8317,8 +8310,6 @@ name|arg1
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
 name|writeTo
