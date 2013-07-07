@@ -508,6 +508,20 @@ name|bookid
 argument_list|)
 return|;
 block|}
+specifier|public
+name|Book
+name|getTheBookQueryBean
+parameter_list|(
+name|Book
+name|book
+parameter_list|)
+throws|throws
+name|BookNotFoundFault
+block|{
+return|return
+name|book
+return|;
+block|}
 block|}
 end_class
 
