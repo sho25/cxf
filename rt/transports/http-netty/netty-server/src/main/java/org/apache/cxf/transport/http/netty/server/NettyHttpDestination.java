@@ -554,7 +554,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-specifier|protected
+specifier|private
 name|String
 name|getAddress
 parameter_list|(
