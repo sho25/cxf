@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for policy alternatives. The endpoint requires either a UsernameToken (insecured) OR  * a message signature using the Asymmetric binding.  */
+comment|/**  * This is a test for policy alternatives. The endpoint requires either a UsernameToken (insecured) OR  * a message signature using the Asymmetric binding. It tests both DOM + StAX clients against the   * DOM server  */
 end_comment
 
 begin_class
@@ -384,6 +384,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|utPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|utPort
+argument_list|)
+expr_stmt|;
 name|utPort
 operator|.
 name|doubleIt
@@ -529,8 +545,48 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
+name|utPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on no Security"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// expected
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|utPort
+argument_list|)
+expr_stmt|;
 name|utPort
 operator|.
 name|doubleIt
@@ -698,6 +754,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|utPort
 operator|.
 name|doubleIt
@@ -705,6 +762,9 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+comment|// TODO See WSS-458 Streaming
+comment|// SecurityTestUtil.enableStreaming(utPort);
+comment|// utPort.doubleIt(25);
 operator|(
 operator|(
 name|java
@@ -843,6 +903,7 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|utPort
@@ -885,6 +946,45 @@ literal|"HttpsToken"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|utPort
+argument_list|)
+expr_stmt|;
+name|utPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected because no client certificate"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// assertTrue(ex.getMessage().contains("HttpsToken"));
 block|}
 operator|(
 operator|(
@@ -1024,6 +1124,7 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|transportPort
@@ -1054,6 +1155,45 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|transportPort
+argument_list|)
+expr_stmt|;
+name|transportPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected because no client certificate"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// assertTrue(ex.getMessage().contains("HttpsToken"));
 block|}
 operator|(
 operator|(
@@ -1193,8 +1333,48 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
+name|transportPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not signing a wsa header"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// expected
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|transportPort
+argument_list|)
+expr_stmt|;
 name|transportPort
 operator|.
 name|doubleIt
