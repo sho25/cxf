@@ -1058,7 +1058,7 @@ name|put
 argument_list|(
 literal|"ws-security.callback-handler"
 argument_list|,
-literal|"org.apache.cxf.systest.ws.wssec10.client.KeystorePasswordCallback"
+literal|"org.apache.cxf.systest.ws.common.KeystorePasswordCallback"
 argument_list|)
 expr_stmt|;
 name|client

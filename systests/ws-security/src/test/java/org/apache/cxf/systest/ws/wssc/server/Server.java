@@ -95,9 +95,7 @@ name|systest
 operator|.
 name|ws
 operator|.
-name|wssc
-operator|.
-name|client
+name|common
 operator|.
 name|KeystorePasswordCallback
 import|;

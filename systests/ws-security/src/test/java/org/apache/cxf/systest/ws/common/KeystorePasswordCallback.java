@@ -15,9 +15,7 @@ name|systest
 operator|.
 name|ws
 operator|.
-name|wssec10
-operator|.
-name|client
+name|common
 package|;
 end_package
 
@@ -110,13 +108,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  */
+comment|/**  * A CallbackHandler implementation for keystores.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|UTPasswordCallback
+name|KeystorePasswordCallback
 implements|implements
 name|CallbackHandler
 block|{
@@ -139,7 +137,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
-name|UTPasswordCallback
+name|KeystorePasswordCallback
 parameter_list|()
 block|{
 name|passwords
@@ -148,26 +146,7 @@ name|put
 argument_list|(
 literal|"Alice"
 argument_list|,
-literal|"ecilA"
-argument_list|)
-expr_stmt|;
-name|passwords
-operator|.
-name|put
-argument_list|(
-literal|"Frank"
-argument_list|,
-literal|"knarF"
-argument_list|)
-expr_stmt|;
-comment|//for MS clients
-name|passwords
-operator|.
-name|put
-argument_list|(
-literal|"abcd"
-argument_list|,
-literal|"dcba"
+literal|"abcd!1234"
 argument_list|)
 expr_stmt|;
 name|passwords
@@ -183,13 +162,49 @@ name|passwords
 operator|.
 name|put
 argument_list|(
+literal|"Bob"
+argument_list|,
+literal|"abcd!1234"
+argument_list|)
+expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
 literal|"bob"
 argument_list|,
 literal|"password"
 argument_list|)
 expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"abcd"
+argument_list|,
+literal|"dcba"
+argument_list|)
+expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"6e0e88f36ebb8744d470f62f604d03ea4ebe5094"
+argument_list|,
+literal|"password"
+argument_list|)
+expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"wss40rev"
+argument_list|,
+literal|"security"
+argument_list|)
+expr_stmt|;
 block|}
-comment|/**      * Here, we attempt to get the password from the private       * alias/passwords map.      */
+comment|/**      * It attempts to get the password from the private       * alias/passwords map.      */
 specifier|public
 name|void
 name|handle
@@ -260,29 +275,17 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-block|}
-block|}
-comment|/**      * Add an alias/password pair to the callback mechanism.      */
-specifier|public
-name|void
-name|setAliasPassword
-parameter_list|(
-name|String
-name|alias
-parameter_list|,
-name|String
-name|password
-parameter_list|)
+else|else
 block|{
-name|passwords
+name|pc
 operator|.
-name|put
+name|setPassword
 argument_list|(
-name|alias
-argument_list|,
-name|password
+literal|"password"
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 end_class

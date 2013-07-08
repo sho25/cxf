@@ -15,9 +15,7 @@ name|systest
 operator|.
 name|ws
 operator|.
-name|wssec11
-operator|.
-name|server
+name|common
 package|;
 end_package
 
@@ -110,13 +108,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  */
+comment|/**  * A CallbackHandler implementation for UsernameTokens.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|KeystorePasswordCallback
+name|UTPasswordCallback
 implements|implements
 name|CallbackHandler
 block|{
@@ -139,7 +137,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
-name|KeystorePasswordCallback
+name|UTPasswordCallback
 parameter_list|()
 block|{
 name|passwords
@@ -148,7 +146,26 @@ name|put
 argument_list|(
 literal|"Alice"
 argument_list|,
-literal|"abcd!1234"
+literal|"ecilA"
+argument_list|)
+expr_stmt|;
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"Frank"
+argument_list|,
+literal|"invalid-password"
+argument_list|)
+expr_stmt|;
+comment|//for MS clients
+name|passwords
+operator|.
+name|put
+argument_list|(
+literal|"abcd"
+argument_list|,
+literal|"dcba"
 argument_list|)
 expr_stmt|;
 name|passwords
@@ -164,31 +181,13 @@ name|passwords
 operator|.
 name|put
 argument_list|(
-literal|"Bob"
-argument_list|,
-literal|"abcd!1234"
-argument_list|)
-expr_stmt|;
-name|passwords
-operator|.
-name|put
-argument_list|(
 literal|"bob"
 argument_list|,
 literal|"password"
 argument_list|)
 expr_stmt|;
-name|passwords
-operator|.
-name|put
-argument_list|(
-literal|"abcd"
-argument_list|,
-literal|"dcba"
-argument_list|)
-expr_stmt|;
 block|}
-comment|/**      * It attempts to get the password from the private       * alias/passwords map.      */
+comment|/**      * Here, we attempt to get the password from the private       * alias/passwords map.      */
 specifier|public
 name|void
 name|handle
