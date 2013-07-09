@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for various Required/Signed/Encrypted Parts/Elements  */
+comment|/**  * This is a test for various Required/Signed/Encrypted Parts/Elements. It tests both DOM + StAX   * clients against the DOM server  */
 end_comment
 
 begin_class
@@ -350,6 +350,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -388,6 +404,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -435,6 +452,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a required header which isn't present"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "RequiredParts: No header element";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -798,6 +855,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -836,6 +909,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -884,6 +958,46 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a body which isn't signed"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "SignedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
 comment|// This should fail, as the service requires that the To header must be signed
 name|portQName
 operator|=
@@ -915,6 +1029,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -962,6 +1077,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a body which isn't signed"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "SignedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1325,6 +1480,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1363,6 +1534,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1411,6 +1583,46 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a body which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
 comment|// This should fail, as the service requires that the To header must be encrypted
 name|portQName
 operator|=
@@ -1442,6 +1654,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1489,6 +1702,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a header which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(

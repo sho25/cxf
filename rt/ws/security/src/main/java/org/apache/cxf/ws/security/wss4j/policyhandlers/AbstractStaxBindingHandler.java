@@ -5397,7 +5397,7 @@ name|qname
 argument_list|,
 name|Modifier
 operator|.
-name|Content
+name|Element
 argument_list|)
 decl_stmt|;
 name|securePart
