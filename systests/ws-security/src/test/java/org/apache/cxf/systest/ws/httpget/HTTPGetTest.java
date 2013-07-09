@@ -777,7 +777,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps

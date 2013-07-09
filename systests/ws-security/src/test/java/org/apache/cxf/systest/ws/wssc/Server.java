@@ -537,7 +537,7 @@ name|ENCRYPT_PROPERTIES
 operator|+
 literal|".sct"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 if|if
@@ -563,7 +563,7 @@ name|SIGNATURE_PROPERTIES
 operator|+
 literal|".sct"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 name|ep
@@ -579,7 +579,7 @@ name|ENCRYPT_PROPERTIES
 operator|+
 literal|".sct"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 block|}
@@ -607,7 +607,7 @@ name|ENCRYPT_PROPERTIES
 operator|+
 literal|".sct"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 name|ep
@@ -623,7 +623,7 @@ name|SIGNATURE_PROPERTIES
 operator|+
 literal|".sct"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|ep

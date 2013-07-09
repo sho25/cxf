@@ -1050,7 +1050,7 @@ name|put
 argument_list|(
 literal|"ws-security.encryption.properties"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 name|client

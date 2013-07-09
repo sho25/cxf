@@ -438,7 +438,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -705,7 +705,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -1000,7 +1000,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -1297,7 +1297,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -1564,7 +1564,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -1859,7 +1859,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -2156,7 +2156,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -2165,7 +2165,7 @@ name|put
 argument_list|(
 literal|"encryptionPropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -2446,7 +2446,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -2455,7 +2455,7 @@ name|put
 argument_list|(
 literal|"encryptionPropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 name|outProps
@@ -2770,7 +2770,7 @@ name|put
 argument_list|(
 literal|"signaturePropFile"
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 expr_stmt|;
 name|outProps

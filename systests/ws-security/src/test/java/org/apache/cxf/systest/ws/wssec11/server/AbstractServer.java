@@ -371,7 +371,7 @@ name|SecurityConstants
 operator|.
 name|ENCRYPT_PROPERTIES
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/bob.properties"
+literal|"bob.properties"
 argument_list|)
 expr_stmt|;
 name|ep

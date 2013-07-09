@@ -792,7 +792,7 @@ name|CryptoFactory
 operator|.
 name|getInstance
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 decl_stmt|;
 name|CryptoType

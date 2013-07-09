@@ -711,7 +711,7 @@ block|{
 name|String
 name|file
 init|=
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 decl_stmt|;
 name|Crypto
 name|crypto
@@ -783,7 +783,7 @@ name|CryptoFactory
 operator|.
 name|getInstance
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec10/client/alice.properties"
+literal|"alice.properties"
 argument_list|)
 decl_stmt|;
 name|CryptoType
