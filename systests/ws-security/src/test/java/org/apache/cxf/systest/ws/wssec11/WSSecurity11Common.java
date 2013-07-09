@@ -259,7 +259,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec11/client/client.xml"
+literal|"org/apache/cxf/systest/ws/wssec11/client.xml"
 argument_list|)
 expr_stmt|;
 block|}
@@ -273,7 +273,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec11/client/client_restricted.xml"
+literal|"org/apache/cxf/systest/ws/wssec11/client_restricted.xml"
 argument_list|)
 expr_stmt|;
 block|}
@@ -451,7 +451,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec11/client/client.xml"
+literal|"org/apache/cxf/systest/ws/wssec11/client.xml"
 argument_list|)
 expr_stmt|;
 block|}
@@ -465,7 +465,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec11/client/client_restricted.xml"
+literal|"org/apache/cxf/systest/ws/wssec11/client_restricted.xml"
 argument_list|)
 expr_stmt|;
 block|}

@@ -263,7 +263,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/policy-client.xml"
+literal|"policy-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -486,7 +486,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/policy-client.xml"
+literal|"policy-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -771,7 +771,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/policy-client.xml"
+literal|"policy-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1056,7 +1056,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/policy-client.xml"
+literal|"policy-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1279,7 +1279,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/policy-client.xml"
+literal|"policy-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

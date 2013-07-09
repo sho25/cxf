@@ -429,7 +429,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec10/client/client.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/client.xml"
 argument_list|)
 expr_stmt|;
 block|}
@@ -639,7 +639,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec10/client/client.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/client.xml"
 argument_list|)
 expr_stmt|;
 block|}

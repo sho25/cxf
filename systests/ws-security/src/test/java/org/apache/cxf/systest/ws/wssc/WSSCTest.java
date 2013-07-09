@@ -232,7 +232,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssc/client/client.xml"
+literal|"org/apache/cxf/systest/ws/wssc/client.xml"
 argument_list|)
 expr_stmt|;
 name|BusFactory

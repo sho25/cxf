@@ -263,7 +263,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/endorsing-client.xml"
+literal|"endorsing-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -566,7 +566,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/endorsing-client.xml"
+literal|"endorsing-client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

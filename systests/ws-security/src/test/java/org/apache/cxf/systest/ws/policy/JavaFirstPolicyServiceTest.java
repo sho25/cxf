@@ -531,7 +531,7 @@ init|=
 operator|new
 name|ClassPathXmlApplicationContext
 argument_list|(
-literal|"org/apache/cxf/systest/ws/policy/client/javafirstclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/javafirstclient.xml"
 argument_list|)
 decl_stmt|;
 name|JavaFirstAttachmentPolicyService
@@ -673,7 +673,7 @@ init|=
 operator|new
 name|ClassPathXmlApplicationContext
 argument_list|(
-literal|"org/apache/cxf/systest/ws/policy/client/javafirstclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/javafirstclient.xml"
 argument_list|)
 decl_stmt|;
 name|SslUsernamePasswordAttachmentService
@@ -815,7 +815,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"org/apache/cxf/systest/ws/policy/client/sslnocertclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/sslnocertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
@@ -945,7 +945,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"org/apache/cxf/systest/ws/policy/client/sslcertclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/sslcertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
@@ -1056,7 +1056,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"org/apache/cxf/systest/ws/policy/client/sslnocertclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/sslnocertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
@@ -1258,7 +1258,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"org/apache/cxf/systest/ws/policy/client/sslcertclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/sslcertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
@@ -1440,7 +1440,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"org/apache/cxf/systest/ws/policy/client/sslnocertclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/sslnocertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;
@@ -1577,7 +1577,7 @@ operator|new
 name|String
 index|[]
 block|{
-literal|"org/apache/cxf/systest/ws/policy/client/sslcertclient.xml"
+literal|"org/apache/cxf/systest/ws/policy/sslcertclient.xml"
 block|}
 argument_list|)
 decl_stmt|;

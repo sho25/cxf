@@ -293,7 +293,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -461,7 +461,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -629,7 +629,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -797,7 +797,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -953,7 +953,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1113,7 +1113,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1273,7 +1273,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1421,7 +1421,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1540,7 +1540,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*     @org.junit.Test     public void testKerberosOverSymmetricDerivedProtection() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxKerberosTokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxKerberosTokenTest.class.getResource("DoubleItKerberos.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKerberosSymmetricDerivedProtectionPort");         DoubleItPortType kerberosPort =                  service.getPort(portQName, DoubleItPortType.class);                  updateAddressPort(kerberosPort, PORT);         int result = kerberosPort.doubleIt(25);         assertTrue(result == 50);                  ((java.io.Closeable)kerberosPort).close();         bus.shutdown(true);     }     */
+comment|/*     @org.junit.Test     public void testKerberosOverSymmetricDerivedProtection() throws Exception {          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxKerberosTokenTest.class.getResource("client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxKerberosTokenTest.class.getResource("DoubleItKerberos.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKerberosSymmetricDerivedProtectionPort");         DoubleItPortType kerberosPort =                  service.getPort(portQName, DoubleItPortType.class);                  updateAddressPort(kerberosPort, PORT);         int result = kerberosPort.doubleIt(25);         assertTrue(result == 50);                  ((java.io.Closeable)kerberosPort).close();         bus.shutdown(true);     }     */
 annotation|@
 name|org
 operator|.
@@ -1578,7 +1578,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1734,7 +1734,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1865,7 +1865,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*     @org.junit.Test     public void testKerberosOverSymmetricEndorsingEncrypted() throws Exception {                  if (!unrestrictedPoliciesInstalled) {             return;         }          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxKerberosTokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxKerberosTokenTest.class.getResource("DoubleItKerberos.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKerberosSymmetricEndorsingEncryptedPort");         DoubleItPortType kerberosPort =                  service.getPort(portQName, DoubleItPortType.class);                  updateAddressPort(kerberosPort, PORT);                  int result = kerberosPort.doubleIt(25);         assertTrue(result == 50);                  ((java.io.Closeable)kerberosPort).close();         bus.shutdown(true);     }          @org.junit.Test     public void testKerberosOverSymmetricSignedEndorsingEncrypted() throws Exception {                  if (!unrestrictedPoliciesInstalled) {             return;         }          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxKerberosTokenTest.class.getResource("client/client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxKerberosTokenTest.class.getResource("DoubleItKerberos.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKerberosSymmetricSignedEndorsingEncryptedPort");         DoubleItPortType kerberosPort =                  service.getPort(portQName, DoubleItPortType.class);                  updateAddressPort(kerberosPort, PORT);                  int result = kerberosPort.doubleIt(25);         assertTrue(result == 50);                  ((java.io.Closeable)kerberosPort).close();         bus.shutdown(true);     }     */
+comment|/*     @org.junit.Test     public void testKerberosOverSymmetricEndorsingEncrypted() throws Exception {                  if (!unrestrictedPoliciesInstalled) {             return;         }          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxKerberosTokenTest.class.getResource("client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxKerberosTokenTest.class.getResource("DoubleItKerberos.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKerberosSymmetricEndorsingEncryptedPort");         DoubleItPortType kerberosPort =                  service.getPort(portQName, DoubleItPortType.class);                  updateAddressPort(kerberosPort, PORT);                  int result = kerberosPort.doubleIt(25);         assertTrue(result == 50);                  ((java.io.Closeable)kerberosPort).close();         bus.shutdown(true);     }          @org.junit.Test     public void testKerberosOverSymmetricSignedEndorsingEncrypted() throws Exception {                  if (!unrestrictedPoliciesInstalled) {             return;         }          SpringBusFactory bf = new SpringBusFactory();         URL busFile = StaxKerberosTokenTest.class.getResource("client.xml");          Bus bus = bf.createBus(busFile.toString());         SpringBusFactory.setDefaultBus(bus);         SpringBusFactory.setThreadDefaultBus(bus);          URL wsdl = StaxKerberosTokenTest.class.getResource("DoubleItKerberos.wsdl");         Service service = Service.create(wsdl, SERVICE_QNAME);         QName portQName = new QName(NAMESPACE, "DoubleItKerberosSymmetricSignedEndorsingEncryptedPort");         DoubleItPortType kerberosPort =                  service.getPort(portQName, DoubleItPortType.class);                  updateAddressPort(kerberosPort, PORT);                  int result = kerberosPort.doubleIt(25);         assertTrue(result == 50);                  ((java.io.Closeable)kerberosPort).close();         bus.shutdown(true);     }     */
 block|}
 end_class
 

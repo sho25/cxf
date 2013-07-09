@@ -320,7 +320,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -587,7 +587,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -882,7 +882,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1179,7 +1179,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1446,7 +1446,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -1741,7 +1741,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -2038,7 +2038,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -2328,7 +2328,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -2652,7 +2652,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -3042,7 +3042,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -3224,7 +3224,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client/client.xml"
+literal|"client.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
