@@ -471,6 +471,8 @@ name|notifier
 operator|.
 name|waitForJavascript
 argument_list|(
+literal|2
+operator|*
 literal|10000
 argument_list|)
 decl_stmt|;
