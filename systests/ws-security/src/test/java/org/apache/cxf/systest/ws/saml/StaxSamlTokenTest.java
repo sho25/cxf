@@ -1954,7 +1954,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// assertTrue(ex.getMessage().contains("Wrong SAML Version"));
+name|String
+name|error
+init|=
+literal|"Policy enforces SamlVersion20Profile11 but we got 1.1"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -2455,7 +2472,19 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// assertTrue(ex.getMessage().contains("SamlToken not satisfied"));
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"SamlToken not satisfied"
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -2687,7 +2716,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// assertTrue(ex.getMessage().contains("Wrong SAML Version"));
+name|String
+name|error
+init|=
+literal|"Policy enforces SamlVersion20Profile11 but we got 1.1"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -2804,8 +2850,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "SamlToken not satisfied";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"SamlToken not satisfied"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(

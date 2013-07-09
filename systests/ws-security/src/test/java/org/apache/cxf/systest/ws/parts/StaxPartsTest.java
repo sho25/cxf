@@ -596,8 +596,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "SignedParts";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"Body must be signed"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 comment|// Streaming
 try|try
@@ -700,8 +716,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "SignedParts";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"To must be signed"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 comment|// Streaming
 try|try

@@ -4648,8 +4648,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"X509Token not satisfied"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 comment|// This should fail, as the client is not sending a PKI Token
 name|portQName
@@ -4711,8 +4727,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"WssX509PkiPathV1Token11"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(
@@ -4936,8 +4968,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"X509Token not satisfied"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 try|try
 block|{
@@ -4976,8 +5024,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
-comment|// assertTrue(ex.getMessage().contains(error));
+comment|// expected
 block|}
 operator|(
 operator|(
