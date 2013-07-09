@@ -1840,10 +1840,10 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Sets encryption, signature and exchang as key usage for provided keyBinding.      *      * @param keyBinding KeyBinding to set KeyUsage within      */
+comment|/**      * Sets encryption, signature and exchange as key usage for provided keyBinding.      *      * @param keyBinding KeyBinding to set KeyUsage within      */
 specifier|protected
 name|void
-name|setKeyUssageAll
+name|setKeyUsageAll
 parameter_list|(
 name|KeyBindingAbstractType
 name|keyBinding
