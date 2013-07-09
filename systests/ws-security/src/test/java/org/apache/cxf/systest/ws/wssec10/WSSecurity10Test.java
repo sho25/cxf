@@ -612,7 +612,8 @@ operator|new
 name|String
 index|[]
 block|{
-comment|// TODO - See WSS-458 "UserName",
+literal|"UserName"
+block|,
 literal|"UserNameOverTransport"
 block|,
 literal|"MutualCertificate10SignEncrypt"

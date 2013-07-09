@@ -1246,9 +1246,21 @@ operator|==
 literal|50
 argument_list|)
 expr_stmt|;
-comment|// TODO - See WSS-458 Streaming
-comment|// SecurityTestUtil.enableStreaming(saml1Port);
-comment|// saml1Port.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|saml1Port
+argument_list|)
+expr_stmt|;
+name|saml1Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java

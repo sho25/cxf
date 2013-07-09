@@ -3789,9 +3789,26 @@ literal|5
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// TODO See WSS-458 Streaming
-comment|// SecurityTestUtil.enableStreaming(pt);
-comment|// assertEquals(10, pt.doubleIt(5));
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|10
+argument_list|,
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|5
+argument_list|)
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java

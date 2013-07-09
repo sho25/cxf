@@ -891,9 +891,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO - See WSS-458 Streaming
-comment|// SecurityTestUtil.enableStreaming(kerberosPort);
-comment|// kerberosPort.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|kerberosPort
+argument_list|)
+expr_stmt|;
+name|kerberosPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
