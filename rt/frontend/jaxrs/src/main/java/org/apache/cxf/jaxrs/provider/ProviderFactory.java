@@ -2207,6 +2207,12 @@ name|expectedType
 operator|.
 name|isArray
 argument_list|()
+operator|&&
+operator|!
+name|actualClass
+operator|.
+name|isArray
+argument_list|()
 condition|)
 block|{
 name|expectedType
