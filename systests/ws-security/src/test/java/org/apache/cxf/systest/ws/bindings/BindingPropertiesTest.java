@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for various properties associated with a security binding  */
+comment|/**  * This is a test for various properties associated with a security binding. It tests both DOM +   * StAX clients against the DOM server  */
 end_comment
 
 begin_class
@@ -351,6 +351,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|port
 operator|.
 name|doubleIt
@@ -358,6 +359,9 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
+comment|// TODO - XPath support Streaming
+comment|// SecurityTestUtil.enableStreaming(port);
+comment|// port.doubleIt(25);
 comment|// This should fail, as OnlySignEntireHeadersAndBody is specified
 name|portQName
 operator|=
@@ -389,6 +393,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -436,6 +441,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on OnlySignEntireHeadersAndBody property"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "OnlySignEntireHeadersAndBody does not match the requirements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -575,6 +620,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -613,6 +674,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -660,6 +722,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not encrypting the signature property"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "The signature is not protected";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -799,6 +901,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -837,6 +955,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -884,6 +1003,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not sending a Timestamp"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "Received Timestamp does not match the requirements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1023,6 +1182,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1061,6 +1236,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1108,6 +1284,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not encrypting before signing"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "Not encrypted before signed";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1247,6 +1463,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1285,6 +1517,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1333,6 +1566,46 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not signing before encrypting"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "Not signed before encrypted";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
 operator|(
 operator|(
 name|java
@@ -1355,19 +1628,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO It's not sending the Timestamp "first" correctly
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testTimestampFirst
@@ -1478,6 +1744,16 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// TODO It's not sending the Timestamp "first" correctly - DOM
+comment|// port.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1516,8 +1792,17 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|/*         // DOM         try {             port.doubleIt(25);             fail("Failure expected on on sending the timestamp last");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             String error = "Layout does not match the requirements";             assertTrue(ex.getMessage().contains(error));         }         */
+comment|// Streaming
 try|try
 block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1545,24 +1830,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"Layout does not match the requirements"
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-name|error
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// String error = "Layout does not match the requirements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1702,6 +1971,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1740,6 +2025,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1787,6 +2073,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on sending the timestamp first"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "Layout does not match the requirements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1926,6 +2252,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1964,6 +2306,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -2011,6 +2354,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on sending the timestamp last"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "Layout does not match the requirements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -2380,6 +2763,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -2418,6 +2817,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -2466,6 +2866,8 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+comment|// Streaming
+comment|/*          * TODO - See WSS-460         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on not enabling SignatureConfirmation");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "Check Signature confirmation";             // assertTrue(ex.getMessage().contains(error));         }         */
 operator|(
 operator|(
 name|java
