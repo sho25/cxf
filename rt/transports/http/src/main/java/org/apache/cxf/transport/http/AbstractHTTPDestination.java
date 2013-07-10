@@ -1414,19 +1414,6 @@ operator|new
 name|MessageImpl
 argument_list|()
 expr_stmt|;
-name|setupMessage
-argument_list|(
-name|inMessage
-argument_list|,
-name|config
-argument_list|,
-name|context
-argument_list|,
-name|req
-argument_list|,
-name|resp
-argument_list|)
-expr_stmt|;
 name|ExchangeImpl
 name|exchange
 init|=
@@ -1439,6 +1426,19 @@ operator|.
 name|setInMessage
 argument_list|(
 name|inMessage
+argument_list|)
+expr_stmt|;
+name|setupMessage
+argument_list|(
+name|inMessage
+argument_list|,
+name|config
+argument_list|,
+name|context
+argument_list|,
+name|req
+argument_list|,
+name|resp
 argument_list|)
 expr_stmt|;
 name|exchange
@@ -1616,6 +1616,15 @@ argument_list|,
 name|resp
 argument_list|)
 expr_stmt|;
+specifier|final
+name|Exchange
+name|exchange
+init|=
+name|inMessage
+operator|.
+name|getExchange
+argument_list|()
+decl_stmt|;
 name|DelegatingInputStream
 name|in
 init|=
@@ -1638,21 +1647,20 @@ condition|(
 operator|!
 name|cached
 operator|&&
-name|inMessage
+name|exchange
 operator|.
-name|getExchange
+name|isOneWay
 argument_list|()
-operator|.
-name|getOutMessage
-argument_list|()
-operator|==
-literal|null
 condition|)
 block|{
 comment|//For one-ways, we need to cache the values of the HttpServletRequest
 comment|//so they can be queried later for things like paths and schemes
 comment|//and such like that.
-name|inMessage
+comment|//Please note, exchange used to always get the "current" message
+name|exchange
+operator|.
+name|getInMessage
+argument_list|()
 operator|.
 name|put
 argument_list|(
