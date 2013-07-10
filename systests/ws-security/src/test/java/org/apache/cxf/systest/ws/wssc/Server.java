@@ -446,7 +446,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssc/server/server.xml"
+literal|"org/apache/cxf/systest/ws/wssc/server.xml"
 argument_list|)
 decl_stmt|;
 name|BusFactory
