@@ -2766,6 +2766,9 @@ name|sigToken
 operator|instanceof
 name|X509Token
 operator|)
+operator|&&
+name|isRequestor
+argument_list|()
 condition|)
 block|{
 name|parts

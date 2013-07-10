@@ -2023,19 +2023,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - See WSS-457
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSymmetricProtectTokens
