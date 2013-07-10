@@ -1345,7 +1345,10 @@ condition|(
 name|asyncResponse
 operator|!=
 literal|null
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 operator|!
 name|asyncResponse
 operator|.
@@ -1362,6 +1365,15 @@ argument_list|,
 name|asyncResponse
 argument_list|)
 expr_stmt|;
+block|}
+else|else
+block|{
+name|providerFactory
+operator|.
+name|clearThreadLocalProxies
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
