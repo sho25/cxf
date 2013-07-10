@@ -507,7 +507,7 @@ name|Produces
 argument_list|(
 literal|"application/xml"
 argument_list|)
-name|Book
+name|BookBean
 name|getTheBookQueryBean
 parameter_list|(
 annotation|@
@@ -515,7 +515,7 @@ name|QueryParam
 argument_list|(
 literal|""
 argument_list|)
-name|Book
+name|BookBean
 name|book
 parameter_list|)
 throws|throws
