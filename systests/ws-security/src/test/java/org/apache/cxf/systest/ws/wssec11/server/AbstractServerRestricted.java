@@ -176,7 +176,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec11/server/server.xml"
+literal|"org/apache/cxf/systest/ws/wssec11/server.xml"
 argument_list|)
 decl_stmt|;
 operator|new
@@ -414,7 +414,7 @@ name|SecurityConstants
 operator|.
 name|ENCRYPT_PROPERTIES
 argument_list|,
-literal|"org/apache/cxf/systest/ws/wssec11/server/restricted/bob.properties"
+literal|"restricted/bob.properties"
 argument_list|)
 expr_stmt|;
 name|ep

@@ -443,7 +443,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec10/client/client_restricted.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/client_restricted.xml"
 argument_list|)
 expr_stmt|;
 block|}
@@ -654,7 +654,7 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|(
-literal|"org/apache/cxf/systest/ws/wssec10/client/client_restricted.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/client_restricted.xml"
 argument_list|)
 expr_stmt|;
 block|}

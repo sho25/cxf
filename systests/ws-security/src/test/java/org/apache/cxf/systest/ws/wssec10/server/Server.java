@@ -154,14 +154,14 @@ condition|)
 block|{
 name|configFileName
 operator|=
-literal|"org/apache/cxf/systest/ws/wssec10/server/server.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/server.xml"
 expr_stmt|;
 block|}
 else|else
 block|{
 name|configFileName
 operator|=
-literal|"org/apache/cxf/systest/ws/wssec10/server/server_restricted.xml"
+literal|"org/apache/cxf/systest/ws/wssec10/server_restricted.xml"
 expr_stmt|;
 block|}
 block|}
