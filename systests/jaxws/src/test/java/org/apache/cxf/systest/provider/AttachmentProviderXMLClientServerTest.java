@@ -31,6 +31,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|StringReader
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|net
 operator|.
 name|HttpURLConnection
@@ -133,9 +143,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -402,11 +412,15 @@ expr_stmt|;
 name|Document
 name|result
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
+argument_list|(
+operator|new
+name|StringReader
 argument_list|(
 name|root
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|List

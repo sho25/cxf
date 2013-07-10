@@ -135,18 +135,6 @@ name|javax
 operator|.
 name|xml
 operator|.
-name|parsers
-operator|.
-name|ParserConfigurationException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
 name|stream
 operator|.
 name|XMLStreamReader
@@ -375,7 +363,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|DOMUtils
 import|;
 end_import
 
@@ -1128,7 +1116,7 @@ block|{
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()
@@ -1218,19 +1206,6 @@ block|}
 catch|catch
 parameter_list|(
 name|JAXBException
-name|e
-parameter_list|)
-block|{
-comment|// TODO Auto-generated catch block
-name|e
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ParserConfigurationException
 name|e
 parameter_list|)
 block|{

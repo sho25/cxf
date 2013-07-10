@@ -191,7 +191,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|XPathUtils
 import|;
 end_import
 
@@ -203,9 +203,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XPathUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -545,9 +545,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|in
 argument_list|)
@@ -729,9 +729,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|in
 argument_list|)
@@ -967,9 +967,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|in
 argument_list|)
@@ -1206,9 +1206,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|respin
 argument_list|)

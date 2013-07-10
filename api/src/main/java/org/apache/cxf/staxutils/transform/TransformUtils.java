@@ -135,7 +135,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|DOMUtils
 import|;
 end_import
 
@@ -507,7 +507,7 @@ block|{
 name|QName
 name|lname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(
@@ -520,7 +520,7 @@ decl_stmt|;
 name|QName
 name|rname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(
@@ -644,7 +644,7 @@ block|{
 name|QName
 name|lname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(
@@ -657,7 +657,7 @@ decl_stmt|;
 name|QName
 name|rname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(
@@ -844,7 +844,7 @@ block|}
 name|QName
 name|lname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(
@@ -854,7 +854,7 @@ decl_stmt|;
 name|QName
 name|rname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(
@@ -922,7 +922,7 @@ block|{
 name|QName
 name|name
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(

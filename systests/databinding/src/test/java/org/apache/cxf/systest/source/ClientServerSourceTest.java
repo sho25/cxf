@@ -165,20 +165,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
-operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|interceptor
 operator|.
 name|LoggingInInterceptor
@@ -507,7 +493,7 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()
@@ -567,7 +553,7 @@ argument_list|)
 expr_stmt|;
 name|doc
 operator|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()
@@ -668,7 +654,7 @@ try|try
 block|{
 name|doc
 operator|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()

@@ -151,7 +151,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|DOMUtils
 import|;
 end_import
 
@@ -541,7 +541,7 @@ block|{
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()

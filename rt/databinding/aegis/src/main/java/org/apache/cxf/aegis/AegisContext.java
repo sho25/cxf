@@ -371,9 +371,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -1435,9 +1435,9 @@ block|{
 try|try
 block|{
 return|return
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|getClass
 argument_list|()

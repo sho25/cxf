@@ -75,9 +75,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|jaxws
 operator|.
-name|XMLUtils
+name|JaxWsProxyFactoryBean
 import|;
 end_import
 
@@ -89,9 +89,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxws
+name|staxutils
 operator|.
-name|JaxWsProxyFactoryBean
+name|StaxUtils
 import|;
 end_import
 
@@ -412,9 +412,9 @@ decl_stmt|;
 name|Document
 name|dom
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|url
 operator|.

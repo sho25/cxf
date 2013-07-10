@@ -666,7 +666,7 @@ block|{
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()

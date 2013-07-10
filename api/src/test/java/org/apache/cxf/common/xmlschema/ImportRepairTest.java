@@ -1232,8 +1232,6 @@ name|PrettyPrintXMLStreamWriter
 argument_list|(
 name|xwriter
 argument_list|,
-literal|0
-argument_list|,
 literal|2
 argument_list|)
 expr_stmt|;

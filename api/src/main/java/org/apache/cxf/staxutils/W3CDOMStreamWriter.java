@@ -175,7 +175,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|MapNamespaceContext
+name|DOMUtils
 import|;
 end_import
 
@@ -189,7 +189,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|MapNamespaceContext
 import|;
 end_import
 
@@ -263,7 +263,7 @@ name|ParserConfigurationException
 block|{
 name|document
 operator|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()

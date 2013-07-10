@@ -538,7 +538,7 @@ parameter_list|)
 block|{
 name|setEnvelopeQName
 argument_list|(
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(

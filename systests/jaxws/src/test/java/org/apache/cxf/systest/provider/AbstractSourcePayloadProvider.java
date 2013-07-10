@@ -591,9 +591,9 @@ return|return
 operator|new
 name|DOMSource
 argument_list|(
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|greetMeInputStream
 argument_list|)

@@ -412,7 +412,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|hasAttribute
 argument_list|(

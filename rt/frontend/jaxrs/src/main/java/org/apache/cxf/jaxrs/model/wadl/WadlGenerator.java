@@ -11373,7 +11373,7 @@ block|{
 name|QName
 name|qname
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|convertStringToQName
 argument_list|(

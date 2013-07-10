@@ -261,7 +261,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|DOMUtils
 import|;
 end_import
 
@@ -711,9 +711,9 @@ condition|)
 block|{
 name|faultCode
 operator|=
-name|XMLUtils
+name|DOMUtils
 operator|.
-name|getQName
+name|createQName
 argument_list|(
 name|el
 operator|.
@@ -804,9 +804,9 @@ name|subCodes
 operator|.
 name|add
 argument_list|(
-name|XMLUtils
+name|DOMUtils
 operator|.
-name|getQName
+name|createQName
 argument_list|(
 name|v
 operator|.

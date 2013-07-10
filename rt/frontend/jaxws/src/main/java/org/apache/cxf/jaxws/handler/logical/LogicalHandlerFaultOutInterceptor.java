@@ -25,18 +25,6 @@ name|javax
 operator|.
 name|xml
 operator|.
-name|parsers
-operator|.
-name|ParserConfigurationException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
 name|soap
 operator|.
 name|SOAPMessage
@@ -165,7 +153,7 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|DOMUtils
 import|;
 end_import
 
@@ -417,8 +405,6 @@ condition|)
 block|{
 return|return;
 block|}
-try|try
-block|{
 name|XMLStreamWriter
 name|origWriter
 init|=
@@ -434,7 +420,7 @@ decl_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|newDocument
 argument_list|()
@@ -512,21 +498,6 @@ argument_list|(
 name|ending
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|ParserConfigurationException
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|Fault
-argument_list|(
-name|e
-argument_list|)
-throw|;
-block|}
 block|}
 specifier|private
 class|class

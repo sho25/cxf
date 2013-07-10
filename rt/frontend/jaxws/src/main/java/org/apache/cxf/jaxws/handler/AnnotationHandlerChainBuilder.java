@@ -343,6 +343,20 @@ name|PortComponentHandlerType
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|StaxUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|SuppressWarnings
@@ -549,9 +563,9 @@ block|}
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|handlerFileURL
 operator|.
