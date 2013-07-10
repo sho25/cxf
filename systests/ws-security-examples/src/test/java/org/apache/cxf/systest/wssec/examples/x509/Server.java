@@ -17,9 +17,7 @@ name|wssec
 operator|.
 name|examples
 operator|.
-name|saml
-operator|.
-name|server
+name|x509
 package|;
 end_package
 

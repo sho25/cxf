@@ -17,9 +17,7 @@ name|wssec
 operator|.
 name|examples
 operator|.
-name|secconv
-operator|.
-name|server
+name|saml
 package|;
 end_package
 

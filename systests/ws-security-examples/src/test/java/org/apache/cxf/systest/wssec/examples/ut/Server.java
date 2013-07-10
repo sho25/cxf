@@ -18,8 +18,6 @@ operator|.
 name|examples
 operator|.
 name|ut
-operator|.
-name|server
 package|;
 end_package
 

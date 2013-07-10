@@ -17,9 +17,7 @@ name|wssec
 operator|.
 name|examples
 operator|.
-name|x509
-operator|.
-name|server
+name|secconv
 package|;
 end_package
 
