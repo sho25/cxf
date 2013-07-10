@@ -140,13 +140,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of (negative) tests for Username Tokens policies over the Transport Binding.  * It tests both DOM + StAX clients against the DOM server  */
+comment|/**  * A set of (negative) tests for Username Tokens policies over the Transport Binding.  * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -157,7 +157,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|PolicyServer
+name|StaxPolicyServer
 operator|.
 name|class
 argument_list|)
@@ -202,7 +202,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|PolicyServer
+name|StaxPolicyServer
 operator|.
 name|class
 argument_list|,
@@ -257,7 +257,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -296,7 +296,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -436,7 +436,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"These policy alternatives can not be satisfied"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -489,7 +489,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
@@ -537,7 +537,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -576,7 +576,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -716,7 +716,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"These policy alternatives can not be satisfied"
+literal|"UsernameToken password must not be hashed"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -769,7 +769,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 comment|// This should fail, as the client is not sending any password
@@ -919,7 +919,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -958,7 +958,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -1098,7 +1098,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"These policy alternatives can not be satisfied"
+literal|"UsernameToken does not contain a hashed password"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -1151,7 +1151,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 comment|// This should fail, as the client is not sending any password
@@ -1301,7 +1301,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -1340,7 +1340,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -1480,7 +1480,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"These policy alternatives can not be satisfied"
+literal|"UsernameToken does not contain a created timestamp"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -1533,7 +1533,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
@@ -1581,7 +1581,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -1620,7 +1620,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|UsernameTokenPolicyTest
+name|StaxUsernameTokenPolicyTest
 operator|.
 name|class
 operator|.
@@ -1760,7 +1760,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"These policy alternatives can not be satisfied"
+literal|"UsernameToken does not contain a nonce"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -1806,7 +1806,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "These policy alternatives can not be satisfied";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
