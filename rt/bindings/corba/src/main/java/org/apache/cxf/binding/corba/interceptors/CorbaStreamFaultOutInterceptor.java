@@ -379,20 +379,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
-operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|interceptor
 operator|.
 name|Fault
@@ -578,6 +564,20 @@ operator|.
 name|model
 operator|.
 name|ServiceModelUtil
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|StaxUtils
 import|;
 end_import
 
@@ -1943,7 +1943,7 @@ name|fine
 argument_list|(
 literal|"Exception DOM: "
 operator|+
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

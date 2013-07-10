@@ -133,9 +133,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|resource
 operator|.
-name|XMLUtils
+name|ExtendedURIResolver
 import|;
 end_import
 
@@ -147,9 +147,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|resource
+name|staxutils
 operator|.
-name|ExtendedURIResolver
+name|StaxUtils
 import|;
 end_import
 
@@ -400,7 +400,7 @@ decl_stmt|;
 name|String
 name|content
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -575,7 +575,7 @@ decl_stmt|;
 name|String
 name|content
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

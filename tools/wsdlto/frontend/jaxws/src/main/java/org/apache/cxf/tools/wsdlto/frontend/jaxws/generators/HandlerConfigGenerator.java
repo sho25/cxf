@@ -87,9 +87,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -444,13 +444,15 @@ name|ToolException
 block|{
 try|try
 block|{
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|generateXMLFile
+name|writeTo
 argument_list|(
 name|hChains
 argument_list|,
 name|writer
+argument_list|,
+literal|2
 argument_list|)
 expr_stmt|;
 name|writer

@@ -1529,8 +1529,6 @@ operator|.
 name|ELEMENT_NODE
 condition|)
 block|{
-try|try
-block|{
 return|return
 name|StaxUtils
 operator|.
@@ -1542,15 +1540,6 @@ operator|)
 name|node
 argument_list|)
 return|;
-block|}
-catch|catch
-parameter_list|(
-name|XMLStreamException
-name|e
-parameter_list|)
-block|{
-comment|// won't happen
-block|}
 block|}
 else|else
 block|{

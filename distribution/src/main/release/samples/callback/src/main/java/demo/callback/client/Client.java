@@ -139,7 +139,21 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
+name|DOMUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|StaxUtils
 import|;
 end_import
 
@@ -317,9 +331,9 @@ decl_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|is
 argument_list|)
@@ -327,9 +341,9 @@ decl_stmt|;
 name|Element
 name|referenceParameters
 init|=
-name|XMLUtils
+name|DOMUtils
 operator|.
-name|fetchElementByNameAttribute
+name|findChildWithAtt
 argument_list|(
 name|doc
 operator|.
@@ -337,6 +351,8 @@ name|getDocumentElement
 argument_list|()
 argument_list|,
 literal|"wsa:ReferenceParameters"
+argument_list|,
+literal|"name"
 argument_list|,
 literal|""
 argument_list|)

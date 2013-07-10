@@ -2617,7 +2617,6 @@ argument_list|(
 name|server
 argument_list|)
 decl_stmt|;
-comment|//XMLUtils.printDOM(doc);
 name|assertValid
 argument_list|(
 literal|"//xsd:schema/xsd:complexType[@name='entity']"
@@ -2717,7 +2716,6 @@ argument_list|(
 name|server
 argument_list|)
 decl_stmt|;
-comment|//org.apache.cxf.helpers.XMLUtils.printDOM(doc);
 name|assertValid
 argument_list|(
 literal|"//xsd:schema/xsd:complexType[@name='convert']/xsd:sequence/xsd:element[@type='xs:int']"
@@ -2821,7 +2819,6 @@ argument_list|(
 name|server
 argument_list|)
 decl_stmt|;
-comment|//org.apache.cxf.helpers.XMLUtils.printDOM(doc2);
 name|assertValid
 argument_list|(
 literal|"//xsd:schema/xsd:complexType[@name='convert']/xsd:sequence/"

@@ -121,9 +121,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -349,7 +349,7 @@ comment|// Print the DOM node
 name|String
 name|xmlString
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

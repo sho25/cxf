@@ -35,7 +35,7 @@ name|w3c
 operator|.
 name|dom
 operator|.
-name|Node
+name|Document
 import|;
 end_import
 
@@ -75,9 +75,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -162,7 +162,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|Node
+name|Document
 name|wsdl
 init|=
 name|getWSDLDocument
@@ -195,7 +195,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

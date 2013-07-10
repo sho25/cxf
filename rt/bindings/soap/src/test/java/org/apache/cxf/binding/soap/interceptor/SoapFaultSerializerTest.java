@@ -359,20 +359,6 @@ name|cxf
 operator|.
 name|helpers
 operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|helpers
-operator|.
 name|XPathUtils
 import|;
 end_import
@@ -601,7 +587,7 @@ name|xpathExpression
 operator|+
 literal|" from document:\n"
 operator|+
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

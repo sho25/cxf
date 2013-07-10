@@ -261,9 +261,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|service
 operator|.
-name|XMLUtils
+name|model
+operator|.
+name|SchemaInfo
 import|;
 end_import
 
@@ -275,11 +277,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|service
+name|staxutils
 operator|.
-name|model
-operator|.
-name|SchemaInfo
+name|StaxUtils
 import|;
 end_import
 
@@ -844,7 +844,7 @@ argument_list|,
 literal|"UTF-8"
 argument_list|)
 expr_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(

@@ -321,20 +321,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
-operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|jaxws
 operator|.
 name|javaee
@@ -609,7 +595,7 @@ block|{
 name|String
 name|xml
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -721,7 +707,7 @@ block|{
 name|String
 name|xml
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -908,7 +894,7 @@ block|{
 name|String
 name|xml
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -1321,7 +1307,7 @@ block|{
 name|String
 name|xml
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

@@ -237,9 +237,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -455,9 +455,9 @@ decl_stmt|;
 name|Document
 name|doc
 init|=
-name|XMLUtils
+name|StaxUtils
 operator|.
-name|parse
+name|read
 argument_list|(
 name|is
 argument_list|)

@@ -555,20 +555,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
-operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|service
 operator|.
 name|model
@@ -5676,7 +5662,7 @@ argument_list|,
 literal|"UTF-8"
 argument_list|)
 expr_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -5793,7 +5779,7 @@ argument_list|,
 name|importWSDLMap
 argument_list|)
 expr_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -5916,7 +5902,7 @@ argument_list|,
 name|importWSDLMap
 argument_list|)
 expr_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(

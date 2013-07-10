@@ -149,9 +149,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -391,7 +391,7 @@ name|node
 parameter_list|)
 block|{
 return|return
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

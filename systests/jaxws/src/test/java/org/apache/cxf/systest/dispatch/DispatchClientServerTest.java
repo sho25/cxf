@@ -485,20 +485,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
-operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|jaxws
 operator|.
 name|DispatchImpl
@@ -4036,7 +4022,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -4163,7 +4149,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -4267,7 +4253,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -4450,7 +4436,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -4629,7 +4615,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -4759,7 +4745,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -4906,7 +4892,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -5013,7 +4999,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -5107,7 +5093,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -5254,7 +5240,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -5362,7 +5348,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(
@@ -5457,7 +5443,7 @@ literal|"Expected: "
 operator|+
 name|expected
 argument_list|,
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|toString
 argument_list|(

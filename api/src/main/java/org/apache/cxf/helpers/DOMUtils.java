@@ -418,7 +418,7 @@ condition|)
 block|{
 name|loader
 operator|=
-name|XMLUtils
+name|DOMUtils
 operator|.
 name|class
 operator|.
@@ -1348,7 +1348,7 @@ block|}
 comment|/**      * Find the first direct child with a given attribute.      *       * @param parent      * @param elemName name of the element, or null for any      * @param attName attribute we're looking for      * @param attVal attribute value or null if we just want any      */
 specifier|public
 specifier|static
-name|Node
+name|Element
 name|findChildWithAtt
 parameter_list|(
 name|Node
@@ -1364,11 +1364,12 @@ name|String
 name|attVal
 parameter_list|)
 block|{
-name|Node
+name|Element
 name|child
 init|=
-name|DOMUtils
-operator|.
+operator|(
+name|Element
+operator|)
 name|getChild
 argument_list|(
 name|parent
@@ -1421,6 +1422,9 @@ condition|)
 block|{
 name|child
 operator|=
+operator|(
+name|Element
+operator|)
 name|getNext
 argument_list|(
 name|child
@@ -1476,6 +1480,9 @@ condition|)
 block|{
 name|child
 operator|=
+operator|(
+name|Element
+operator|)
 name|getNext
 argument_list|(
 name|child

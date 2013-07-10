@@ -189,9 +189,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|XMLUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -388,7 +388,7 @@ name|WSDLException
 block|{
 try|try
 block|{
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -433,7 +433,7 @@ name|WSDLException
 block|{
 try|try
 block|{
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(

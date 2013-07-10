@@ -87,20 +87,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
-operator|.
-name|XMLUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|staxutils
 operator|.
 name|StaxUtils
@@ -321,7 +307,7 @@ argument_list|,
 literal|"custom_test.xsd"
 argument_list|)
 decl_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -416,7 +402,7 @@ argument_list|,
 literal|"custom_test.wsdl"
 argument_list|)
 decl_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -532,7 +518,7 @@ argument_list|,
 literal|"custom_test.wsdl"
 argument_list|)
 decl_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -635,7 +621,7 @@ argument_list|,
 literal|"custom_test.wsdl"
 argument_list|)
 decl_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
@@ -748,7 +734,7 @@ argument_list|,
 literal|"custom_test4.wsdl"
 argument_list|)
 decl_stmt|;
-name|XMLUtils
+name|StaxUtils
 operator|.
 name|writeTo
 argument_list|(
