@@ -1115,7 +1115,7 @@ name|XmlSchemaObject
 argument_list|>
 name|items
 init|=
-name|XmlSchemaUtils
+name|JavascriptUtils
 operator|.
 name|getContentElements
 argument_list|(
@@ -2081,7 +2081,7 @@ name|XmlSchemaObject
 argument_list|>
 name|items
 init|=
-name|XmlSchemaUtils
+name|JavascriptUtils
 operator|.
 name|getContentElements
 argument_list|(
@@ -2211,7 +2211,7 @@ name|XmlSchemaObject
 argument_list|>
 name|contentElements
 init|=
-name|XmlSchemaUtils
+name|JavascriptUtils
 operator|.
 name|getContentElements
 argument_list|(

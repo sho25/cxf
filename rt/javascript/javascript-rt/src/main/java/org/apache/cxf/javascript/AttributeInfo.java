@@ -372,7 +372,7 @@ block|{
 name|XmlSchemaAnnotated
 name|annotated
 init|=
-name|XmlSchemaUtils
+name|JavascriptUtils
 operator|.
 name|getObjectAnnotated
 argument_list|(
@@ -844,7 +844,7 @@ name|URI_2001_SCHEMA_XSD
 argument_list|)
 condition|)
 block|{
-name|XmlSchemaUtils
+name|JavascriptUtils
 operator|.
 name|unsupportedConstruct
 argument_list|(
