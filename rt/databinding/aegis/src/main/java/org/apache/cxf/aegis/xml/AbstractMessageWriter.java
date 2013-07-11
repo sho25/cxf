@@ -35,13 +35,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|util
+name|schema
 operator|.
-name|SOAPConstants
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -186,9 +188,9 @@ name|getAttributeWriter
 argument_list|(
 literal|"type"
 argument_list|,
-name|SOAPConstants
+name|Constants
 operator|.
-name|XSI_NS
+name|URI_2001_SCHEMA_XSI
 argument_list|)
 operator|.
 name|writeValue
@@ -209,9 +211,9 @@ name|getAttributeWriter
 argument_list|(
 literal|"nil"
 argument_list|,
-name|SOAPConstants
+name|Constants
 operator|.
-name|XSI_NS
+name|URI_2001_SCHEMA_XSI
 argument_list|)
 decl_stmt|;
 name|attWriter

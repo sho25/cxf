@@ -35,7 +35,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|wsdl
 operator|.
 name|WSDLConstants
 import|;
@@ -47,13 +47,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|util
+name|schema
 operator|.
-name|SOAPConstants
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -206,9 +208,9 @@ name|addNamespace
 argument_list|(
 literal|"xsd"
 argument_list|,
-name|SOAPConstants
+name|Constants
 operator|.
-name|XSD
+name|URI_2001_SCHEMA_XSD
 argument_list|)
 expr_stmt|;
 name|addNamespace

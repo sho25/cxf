@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|wsdl
 package|;
 end_package
 

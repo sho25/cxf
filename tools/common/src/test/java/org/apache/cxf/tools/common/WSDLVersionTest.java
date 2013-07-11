@@ -25,7 +25,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|wsdl
 operator|.
 name|WSDLConstants
 import|;

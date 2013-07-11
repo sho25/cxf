@@ -11,9 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
-operator|.
-name|addressing
+name|wsdl11
 package|;
 end_package
 
@@ -79,7 +77,23 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|ws
+operator|.
+name|addressing
+operator|.
+name|JAXWSAConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|wsdl
 operator|.
 name|WSDLConstants
 import|;
@@ -90,7 +104,6 @@ comment|/***  * Only public/static/final fields can be resolved  * The prefix MU
 end_comment
 
 begin_class
-specifier|public
 specifier|final
 class|class
 name|NSManager

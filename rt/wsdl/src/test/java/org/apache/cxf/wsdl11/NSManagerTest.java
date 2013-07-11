@@ -10,22 +10,10 @@ operator|.
 name|apache
 operator|.
 name|cxf
+operator|.
+name|wsdl11
 package|;
 end_package
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
-name|WSDLConstants
-import|;
-end_import
 
 begin_import
 import|import
@@ -51,11 +39,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|wsdl
 operator|.
-name|addressing
-operator|.
-name|NSManager
+name|WSDLConstants
 import|;
 end_import
 

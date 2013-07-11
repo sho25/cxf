@@ -177,13 +177,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|util
+name|schema
 operator|.
-name|SOAPConstants
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -247,9 +249,9 @@ name|addNamespace
 argument_list|(
 literal|"xsi"
 argument_list|,
-name|SOAPConstants
+name|Constants
 operator|.
-name|XSI_NS
+name|URI_2001_SCHEMA_XSI
 argument_list|)
 expr_stmt|;
 name|context
@@ -278,9 +280,9 @@ operator|=
 operator|new
 name|DefaultTypeMapping
 argument_list|(
-name|SOAPConstants
+name|Constants
 operator|.
-name|XSD
+name|URI_2001_SCHEMA_XSD
 argument_list|,
 name|baseMapping
 argument_list|)

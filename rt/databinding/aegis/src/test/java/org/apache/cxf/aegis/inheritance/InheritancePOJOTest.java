@@ -125,11 +125,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|frontend
 operator|.
-name|util
-operator|.
-name|SOAPConstants
+name|ServerFactoryBean
 import|;
 end_import
 
@@ -139,11 +137,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|frontend
+name|commons
 operator|.
-name|ServerFactoryBean
+name|schema
+operator|.
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -435,9 +437,9 @@ name|addNamespace
 argument_list|(
 literal|"xsi"
 argument_list|,
-name|SOAPConstants
+name|Constants
 operator|.
-name|XSI_NS
+name|URI_2001_SCHEMA_XSI
 argument_list|)
 expr_stmt|;
 name|addNamespace

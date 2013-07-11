@@ -325,9 +325,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|wsdl
 operator|.
-name|WSDLConstants
+name|JAXBExtensionHelper
 import|;
 end_import
 
@@ -341,7 +341,7 @@ name|cxf
 operator|.
 name|wsdl
 operator|.
-name|JAXBExtensionHelper
+name|WSDLConstants
 import|;
 end_import
 
