@@ -11,7 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl11
+name|tools
+operator|.
+name|wsdlto
+operator|.
+name|core
 package|;
 end_package
 

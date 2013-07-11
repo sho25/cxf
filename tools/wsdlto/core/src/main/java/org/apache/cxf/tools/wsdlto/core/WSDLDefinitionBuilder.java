@@ -11,7 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl11
+name|tools
+operator|.
+name|wsdlto
+operator|.
+name|core
 package|;
 end_package
 
@@ -302,6 +306,20 @@ operator|.
 name|wsdl
 operator|.
 name|WSDLManager
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|wsdl11
+operator|.
+name|WSDLRuntimeException
 import|;
 end_import
 

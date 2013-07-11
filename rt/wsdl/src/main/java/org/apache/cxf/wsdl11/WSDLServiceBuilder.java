@@ -3360,6 +3360,8 @@ name|wFactory
 operator|.
 name|createEndpointInfo
 argument_list|(
+name|bus
+argument_list|,
 name|service
 argument_list|,
 name|bi

@@ -1789,6 +1789,8 @@ name|wsdlEndpointFactory
 operator|.
 name|createEndpointInfo
 argument_list|(
+name|bus
+argument_list|,
 name|service
 operator|.
 name|getServiceInfos
@@ -1905,6 +1907,8 @@ name|wsdlEndpointFactory
 operator|.
 name|createPortExtensors
 argument_list|(
+name|bus
+argument_list|,
 name|ei
 argument_list|,
 name|service

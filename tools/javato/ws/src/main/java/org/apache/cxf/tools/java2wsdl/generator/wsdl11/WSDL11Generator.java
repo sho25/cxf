@@ -357,9 +357,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wsdl11
+name|tools
 operator|.
-name|ServiceWSDLBuilder
+name|wsdlto
+operator|.
+name|core
+operator|.
+name|WSDLDefinitionBuilder
 import|;
 end_import
 
@@ -373,7 +377,7 @@ name|cxf
 operator|.
 name|wsdl11
 operator|.
-name|WSDLDefinitionBuilder
+name|ServiceWSDLBuilder
 import|;
 end_import
 
