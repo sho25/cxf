@@ -111,12 +111,6 @@ name|CurrentElement
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|QName
-name|currElem
-decl_stmt|;
-name|boolean
-name|nestedStartElement
-decl_stmt|;
 specifier|public
 name|PrettyPrintXMLStreamWriter
 parameter_list|(

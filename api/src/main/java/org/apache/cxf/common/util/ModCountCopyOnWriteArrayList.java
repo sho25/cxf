@@ -75,6 +75,7 @@ name|serialVersionUID
 init|=
 literal|1783937035760941219L
 decl_stmt|;
+specifier|private
 name|AtomicInteger
 name|modCount
 init|=
