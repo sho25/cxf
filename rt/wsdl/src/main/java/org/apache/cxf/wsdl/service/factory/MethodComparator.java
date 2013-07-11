@@ -11,19 +11,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|wsdl
+operator|.
+name|service
+operator|.
+name|factory
 package|;
 end_package
-
-begin_import
-import|import
-name|java
-operator|.
-name|io
-operator|.
-name|Serializable
-import|;
-end_import
 
 begin_import
 import|import
@@ -47,12 +41,7 @@ name|Comparator
 import|;
 end_import
 
-begin_comment
-comment|/**  * Sorts methods according to their name, number of parameters, and parameter  * types.  */
-end_comment
-
 begin_class
-specifier|public
 class|class
 name|MethodComparator
 implements|implements
@@ -60,17 +49,7 @@ name|Comparator
 argument_list|<
 name|Method
 argument_list|>
-implements|,
-name|Serializable
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|6723063699608000703L
-decl_stmt|;
 specifier|public
 name|int
 name|compare
