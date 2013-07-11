@@ -1392,7 +1392,7 @@ literal|1
 operator|&&
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 operator|.
 name|equals
 argument_list|(

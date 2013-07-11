@@ -2698,7 +2698,7 @@ name|setTypeQName
 argument_list|(
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|)
 expr_stmt|;
 name|mInfo
@@ -2767,7 +2767,7 @@ name|setTypeQName
 argument_list|(
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|)
 expr_stmt|;
 name|BindingOperationInfo
@@ -4859,7 +4859,7 @@ name|setTypeQName
 argument_list|(
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|)
 expr_stmt|;
 name|part

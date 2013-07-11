@@ -1685,7 +1685,7 @@ name|class
 argument_list|,
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|,
 operator|new
 name|ObjectType
@@ -1742,7 +1742,7 @@ name|class
 argument_list|,
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|,
 operator|new
 name|SourceType
@@ -1837,7 +1837,7 @@ name|class
 argument_list|,
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|,
 operator|new
 name|XMLStreamReaderType
@@ -2135,7 +2135,7 @@ name|class
 argument_list|,
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|,
 operator|new
 name|DocumentType
@@ -2197,7 +2197,7 @@ name|jdomDocClass
 argument_list|,
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|,
 operator|new
 name|JDOMDocumentType
@@ -2242,7 +2242,7 @@ name|jdomElementClass
 argument_list|,
 name|Constants
 operator|.
-name|XSD_ANY
+name|XSD_ANYTYPE
 argument_list|,
 operator|new
 name|JDOMElementType
