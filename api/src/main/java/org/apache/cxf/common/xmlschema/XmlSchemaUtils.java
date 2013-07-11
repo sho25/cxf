@@ -523,6 +523,24 @@ name|XmlSchemaType
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|commons
+operator|.
+name|schema
+operator|.
+name|constants
+operator|.
+name|Constants
+import|;
+end_import
+
 begin_comment
 comment|/**  * Some functions that avoid problems with Commons XML Schema.  */
 end_comment
@@ -1066,9 +1084,9 @@ argument_list|(
 name|namespaceUri
 argument_list|)
 operator|||
-name|XmlSchemaConstants
+name|Constants
 operator|.
-name|XSD_NAMESPACE_URI
+name|URI_2001_SCHEMA_XSD
 operator|.
 name|equals
 argument_list|(

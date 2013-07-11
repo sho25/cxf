@@ -245,13 +245,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|util
+name|schema
 operator|.
-name|XMLSchemaQNames
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -1515,7 +1517,7 @@ name|type
 operator|.
 name|setSchemaType
 argument_list|(
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|)

@@ -169,13 +169,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|xmlschema
+name|schema
 operator|.
-name|XmlSchemaConstants
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -252,9 +254,9 @@ name|singletonMap
 argument_list|(
 literal|"xs"
 argument_list|,
-name|XmlSchemaConstants
+name|Constants
 operator|.
-name|XSD_NAMESPACE_URI
+name|URI_2001_SCHEMA_XSD
 argument_list|)
 decl_stmt|;
 name|String

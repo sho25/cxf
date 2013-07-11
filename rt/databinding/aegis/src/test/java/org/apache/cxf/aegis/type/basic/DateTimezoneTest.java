@@ -113,13 +113,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|util
+name|schema
 operator|.
-name|XMLSchemaQNames
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -210,7 +212,7 @@ name|Calendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
@@ -227,7 +229,7 @@ name|Calendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATE
 argument_list|,
@@ -351,7 +353,7 @@ name|Date
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
@@ -368,7 +370,7 @@ name|Date
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATE
 argument_list|,

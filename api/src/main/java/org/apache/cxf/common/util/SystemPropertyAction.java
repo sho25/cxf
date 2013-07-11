@@ -107,10 +107,12 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+specifier|private
 specifier|final
 name|String
 name|property
 decl_stmt|;
+specifier|private
 specifier|final
 name|String
 name|def

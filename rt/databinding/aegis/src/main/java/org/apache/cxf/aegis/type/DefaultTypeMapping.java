@@ -783,13 +783,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|common
+name|commons
 operator|.
-name|util
+name|schema
 operator|.
-name|XMLSchemaQNames
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -1510,7 +1512,7 @@ name|BigDecimal
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DECIMAL
 argument_list|,
@@ -1529,7 +1531,7 @@ name|BigInteger
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_INTEGER
 argument_list|,
@@ -1548,7 +1550,7 @@ name|Boolean
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_BOOLEAN
 argument_list|,
@@ -1567,7 +1569,7 @@ name|Calendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
@@ -1586,7 +1588,7 @@ name|Date
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
@@ -1605,7 +1607,7 @@ name|Float
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_FLOAT
 argument_list|,
@@ -1624,7 +1626,7 @@ name|Double
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DOUBLE
 argument_list|,
@@ -1643,7 +1645,7 @@ name|Integer
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_INT
 argument_list|,
@@ -1662,7 +1664,7 @@ name|Long
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_LONG
 argument_list|,
@@ -1681,7 +1683,7 @@ name|Object
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|,
@@ -1700,7 +1702,7 @@ name|Byte
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_BYTE
 argument_list|,
@@ -1719,7 +1721,7 @@ name|Short
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_SHORT
 argument_list|,
@@ -1738,7 +1740,7 @@ name|Source
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|,
@@ -1757,7 +1759,7 @@ name|String
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_STRING
 argument_list|,
@@ -1776,7 +1778,7 @@ name|Time
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_TIME
 argument_list|,
@@ -1795,7 +1797,7 @@ name|Timestamp
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
@@ -1814,9 +1816,9 @@ name|URI
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
-name|XSD_URI
+name|XSD_ANYURI
 argument_list|,
 operator|new
 name|URIType
@@ -1833,7 +1835,7 @@ name|XMLStreamReader
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|,
@@ -1852,7 +1854,7 @@ name|boolean
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_BOOLEAN
 argument_list|,
@@ -1872,7 +1874,7 @@ index|[]
 operator|.
 expr|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_BASE64
 argument_list|,
@@ -1891,7 +1893,7 @@ name|double
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DOUBLE
 argument_list|,
@@ -1910,7 +1912,7 @@ name|float
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_FLOAT
 argument_list|,
@@ -1929,7 +1931,7 @@ name|int
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_INT
 argument_list|,
@@ -1948,7 +1950,7 @@ name|short
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_SHORT
 argument_list|,
@@ -1967,7 +1969,7 @@ name|byte
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_BYTE
 argument_list|,
@@ -1986,7 +1988,7 @@ name|long
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_LONG
 argument_list|,
@@ -2009,7 +2011,7 @@ name|Date
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
@@ -2032,7 +2034,7 @@ name|Date
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATE
 argument_list|,
@@ -2051,7 +2053,7 @@ name|Number
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DECIMAL
 argument_list|,
@@ -2063,7 +2065,7 @@ expr_stmt|;
 name|QName
 name|mtomBase64
 init|=
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_BASE64
 decl_stmt|;
@@ -2131,7 +2133,7 @@ name|Document
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|,
@@ -2193,7 +2195,7 @@ name|defaultNillable
 argument_list|,
 name|jdomDocClass
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|,
@@ -2238,7 +2240,7 @@ name|defaultNillable
 argument_list|,
 name|jdomElementClass
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_ANY
 argument_list|,
@@ -2256,29 +2258,6 @@ parameter_list|)
 block|{
 comment|// not available.
 block|}
-block|}
-specifier|public
-specifier|static
-name|DefaultTypeMapping
-name|createSoap11TypeMapping
-parameter_list|(
-name|boolean
-name|defaultNillable
-parameter_list|,
-name|boolean
-name|enableMtomXmime
-parameter_list|)
-block|{
-return|return
-name|createSoap11TypeMapping
-argument_list|(
-name|defaultNillable
-argument_list|,
-name|enableMtomXmime
-argument_list|,
-literal|false
-argument_list|)
-return|;
 block|}
 comment|/**      * Create a type mapping object with a stock set of mappings, including the SOAP 1.1 'encoded'      * types.      * @param defaultNillable whether elements are nillable by default.      * @param enableMtomXmime whether to enable XMIME annotations with MTOM.      * @param enableJDOM whether to add mappings for JDOM.      * @return      */
 specifier|public
@@ -2862,7 +2841,7 @@ name|Duration
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DURATION
 argument_list|,
@@ -2899,7 +2878,7 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATE
 argument_list|,
@@ -2936,7 +2915,7 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_TIME
 argument_list|,
@@ -2973,9 +2952,9 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
-name|XSD_G_DAY
+name|XSD_DAY
 argument_list|,
 operator|new
 name|org
@@ -3010,9 +2989,9 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
-name|XSD_G_MONTH
+name|XSD_MONTH
 argument_list|,
 operator|new
 name|org
@@ -3047,9 +3026,9 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
-name|XSD_G_MONTH_DAY
+name|XSD_MONTHDAY
 argument_list|,
 operator|new
 name|org
@@ -3084,9 +3063,9 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
-name|XSD_G_YEAR
+name|XSD_YEAR
 argument_list|,
 operator|new
 name|org
@@ -3121,9 +3100,9 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
-name|XSD_G_YEAR_MONTH
+name|XSD_YEARMONTH
 argument_list|,
 operator|new
 name|org
@@ -3158,7 +3137,7 @@ name|XMLGregorianCalendar
 operator|.
 name|class
 argument_list|,
-name|XMLSchemaQNames
+name|Constants
 operator|.
 name|XSD_DATETIME
 argument_list|,
