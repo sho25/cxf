@@ -1372,11 +1372,9 @@ name|allMultiparts
 init|=
 name|AttachmentUtils
 operator|.
-name|getAllMultiparts
+name|getMatchingAttachments
 argument_list|(
 name|id
-argument_list|,
-name|mt
 argument_list|,
 name|infos
 argument_list|)
