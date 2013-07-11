@@ -1179,9 +1179,7 @@ name|elem
 operator|.
 name|getAttribute
 argument_list|(
-name|BeanConstants
-operator|.
-name|CREATED_FROM_API_ATTR
+literal|"createdFromAPI"
 argument_list|)
 decl_stmt|;
 if|if
@@ -3011,9 +3009,7 @@ name|elem
 operator|.
 name|getAttribute
 argument_list|(
-name|BeanConstants
-operator|.
-name|NAME_ATTR
+literal|"name"
 argument_list|)
 decl_stmt|;
 if|if
