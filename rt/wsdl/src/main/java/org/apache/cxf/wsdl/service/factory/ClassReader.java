@@ -11,9 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|wsdl
 operator|.
-name|util
+name|service
+operator|.
+name|factory
 package|;
 end_package
 
@@ -152,7 +154,6 @@ comment|/**  * This is the class file reader for obtaining the parameter names f
 end_comment
 
 begin_class
-specifier|public
 class|class
 name|ClassReader
 extends|extends
