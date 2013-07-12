@@ -151,24 +151,6 @@ name|JAXWSAConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|impl
-operator|.
-name|AddressingPropertiesImpl
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -262,7 +244,7 @@ block|{
 name|outProps
 operator|=
 operator|new
-name|AddressingPropertiesImpl
+name|AddressingProperties
 argument_list|(
 name|inProps
 operator|.

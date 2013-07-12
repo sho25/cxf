@@ -659,24 +659,6 @@ name|Names200408
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|impl
-operator|.
-name|AddressingPropertiesImpl
-import|;
-end_import
-
 begin_comment
 comment|/**  * SOAP interceptor responsible for {en|de}coding the Message Addressing   * Properties for {outgo|incom}ing messages.  */
 end_comment
@@ -2515,7 +2497,7 @@ parameter_list|)
 block|{
 comment|// REVISIT generate MessageAddressingHeaderRequired fault if an
 comment|// expected header is missing
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 init|=
 literal|null
@@ -2673,7 +2655,7 @@ block|{
 name|maps
 operator|=
 operator|new
-name|AddressingPropertiesImpl
+name|AddressingProperties
 argument_list|()
 expr_stmt|;
 name|maps
@@ -3270,7 +3252,7 @@ name|Element
 argument_list|>
 name|referenceParameterHeaders
 parameter_list|,
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 parameter_list|,
 name|Unmarshaller

@@ -2050,11 +2050,11 @@ block|{
 comment|// ensure there is a MAPs instance available for the outbound
 comment|// partial response that contains appropriate To and ReplyTo
 comment|// properties (i.e. anonymous& none respectively)
-name|AddressingPropertiesImpl
+name|AddressingProperties
 name|maps
 init|=
 operator|new
-name|AddressingPropertiesImpl
+name|AddressingProperties
 argument_list|()
 decl_stmt|;
 name|maps

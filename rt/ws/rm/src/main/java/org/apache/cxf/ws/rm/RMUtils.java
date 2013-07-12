@@ -155,24 +155,6 @@ name|AddressingConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|impl
-operator|.
-name|AddressingConstantsImpl
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final
@@ -315,7 +297,7 @@ expr_stmt|;
 name|WSA_CONSTANTS
 operator|=
 operator|new
-name|AddressingConstantsImpl
+name|AddressingConstants
 argument_list|()
 expr_stmt|;
 block|}

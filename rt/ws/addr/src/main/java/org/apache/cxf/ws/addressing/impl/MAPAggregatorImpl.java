@@ -6006,7 +6006,7 @@ block|{
 name|maps
 operator|=
 operator|new
-name|AddressingPropertiesImpl
+name|AddressingProperties
 argument_list|()
 expr_stmt|;
 name|setupNamespace
