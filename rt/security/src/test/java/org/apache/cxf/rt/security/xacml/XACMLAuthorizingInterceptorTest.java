@@ -208,11 +208,11 @@ argument_list|,
 name|sc
 argument_list|)
 expr_stmt|;
-name|XACMLAuthorizingInterceptor
+name|AbstractXACMLAuthorizingInterceptor
 name|authorizingInterceptor
 init|=
 operator|new
-name|XACMLAuthorizingInterceptor
+name|DummyXACMLAuthorizingInterceptor
 argument_list|()
 decl_stmt|;
 name|authorizingInterceptor
@@ -281,11 +281,11 @@ argument_list|,
 name|sc
 argument_list|)
 expr_stmt|;
-name|XACMLAuthorizingInterceptor
+name|AbstractXACMLAuthorizingInterceptor
 name|authorizingInterceptor
 init|=
 operator|new
-name|XACMLAuthorizingInterceptor
+name|DummyXACMLAuthorizingInterceptor
 argument_list|()
 decl_stmt|;
 try|try

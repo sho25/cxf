@@ -96,6 +96,8 @@ throws|throws
 name|Exception
 function_decl|;
 comment|/**      * Return the list of Resources that have been inserted into the Request.      *       * @param message The Message from which to retrieve the resource      * @return the list of Resources that have been inserted into the Request      */
+annotation|@
+name|Deprecated
 name|List
 argument_list|<
 name|String
