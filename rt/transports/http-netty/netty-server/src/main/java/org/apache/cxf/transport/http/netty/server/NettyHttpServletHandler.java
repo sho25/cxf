@@ -831,6 +831,8 @@ name|nettyHttpContextHandler
 operator|.
 name|getContextPath
 argument_list|()
+argument_list|,
+name|ctx
 argument_list|)
 decl_stmt|;
 name|nettyHttpContextHandler
@@ -1281,6 +1283,9 @@ name|request
 parameter_list|,
 name|String
 name|contextPath
+parameter_list|,
+name|ChannelHandlerContext
+name|ctx
 parameter_list|)
 block|{
 return|return
@@ -1290,6 +1295,8 @@ argument_list|(
 name|request
 argument_list|,
 name|contextPath
+argument_list|,
+name|ctx
 argument_list|)
 return|;
 block|}
