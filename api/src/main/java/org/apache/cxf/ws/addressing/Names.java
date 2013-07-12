@@ -449,15 +449,6 @@ name|WSA_NAMESPACE_NAME
 operator|+
 name|WSA_FAULT_DELIMITER
 decl_stmt|;
-comment|// REVISIT delimiter should be ":" if target namespace is a URN
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|WSA_ACTION_DELIMITER
-init|=
-literal|"/"
-decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -751,30 +742,6 @@ name|WSA_NAMESPACE_NAME
 argument_list|,
 name|INVALID_CARDINALITY_NAME
 argument_list|)
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SOAP11HTTP_ADDRESSING_BINDING
-init|=
-literal|"http://schemas.xmlsoap.org/soap/envelope/?addressing=ms"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SOAP12HTTP_ADDRESSING_BINDING
-init|=
-literal|"http://www.w3.org/2003/05/soap-envelope?addressing=ms"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SOAP_ACTION_HEADER
-init|=
-literal|"SOAPAction"
 decl_stmt|;
 comment|/**      * The set of headers understood by the protocol binding.      */
 specifier|public

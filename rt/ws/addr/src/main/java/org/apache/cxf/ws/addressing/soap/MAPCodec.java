@@ -3838,9 +3838,7 @@ name|mimeHeaders
 operator|.
 name|get
 argument_list|(
-name|Names
-operator|.
-name|SOAP_ACTION_HEADER
+literal|"SOAPAction"
 argument_list|)
 decl_stmt|;
 comment|// only propogate to SOAPAction header if currently non-empty
