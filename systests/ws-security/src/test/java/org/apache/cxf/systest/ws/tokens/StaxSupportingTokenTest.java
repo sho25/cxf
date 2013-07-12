@@ -140,13 +140,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for various properties associated with SupportingTokens, i.e.  * Signed, Encrypted etc.  *   * It tests both DOM + StAX clients against the DOM server  */
+comment|/**  * This is a test for various properties associated with SupportingTokens, i.e.  * Signed, Encrypted etc.  *   * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -157,7 +157,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|)
@@ -202,7 +202,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
@@ -257,7 +257,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 operator|.
 name|class
 operator|.
@@ -296,7 +296,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 operator|.
 name|class
 operator|.
@@ -437,7 +437,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"The received token does not match the signed supporting token requirement"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -490,7 +490,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "The received token does not match the signed supporting token requirement";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 comment|// This should fail, as the client is (encrypting) but not signing the UsernameToken
@@ -557,7 +557,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"The received token does not match the signed supporting token requirement"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -610,7 +610,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "The received token does not match the signed supporting token requirement";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
@@ -658,7 +658,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 operator|.
 name|class
 operator|.
@@ -697,7 +697,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 operator|.
 name|class
 operator|.
@@ -838,7 +838,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"The received token does not match the encrypted supporting token requirement"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -891,7 +891,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "The received token does not match the encrypted supporting token requirement";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 comment|// This should fail, as the client is (signing) but not encrypting the UsernameToken
@@ -958,7 +958,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"The received token does not match the encrypted supporting token requirement"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -1011,7 +1011,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "The received token does not match the encrypted supporting token requirement";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
@@ -1059,7 +1059,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 operator|.
 name|class
 operator|.
@@ -1098,7 +1098,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SupportingTokenTest
+name|StaxSupportingTokenTest
 operator|.
 name|class
 operator|.
@@ -1239,7 +1239,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"The received token does not match the signed encrypted supporting token requirement"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -1292,8 +1292,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error =
-comment|//    "The received token does not match the signed encrypted supporting token requirement";
+comment|// String error = "UsernameToken not satisfied";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 comment|// This should fail, as the client is (encrypting) but not signing the UsernameToken
@@ -1360,7 +1359,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"The received token does not match the signed encrypted supporting token requirement"
+literal|"UsernameToken not satisfied"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -1413,9 +1412,8 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|//String error =
-comment|//    "The received token does not match the signed encrypted supporting token requirement";
-comment|//assertTrue(ex.getMessage().contains(error));
+comment|// String error = "UsernameToken not satisfied";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
