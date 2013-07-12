@@ -281,11 +281,15 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|ws
 operator|.
-name|wsdl
+name|commons
 operator|.
-name|WSDLConstants
+name|schema
+operator|.
+name|constants
+operator|.
+name|Constants
 import|;
 end_import
 
@@ -446,9 +450,9 @@ name|SchemaFactory
 operator|.
 name|newInstance
 argument_list|(
-name|WSDLConstants
+name|Constants
 operator|.
-name|NS_SCHEMA_XSD
+name|URI_2001_SCHEMA_XSD
 argument_list|)
 decl_stmt|;
 name|Schema
