@@ -486,7 +486,7 @@ end_comment
 begin_class
 specifier|public
 class|class
-name|WSSecurityClientTest
+name|StaxWSSecurityClientTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -498,7 +498,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|)
@@ -511,7 +511,7 @@ name|DEC_PORT
 init|=
 name|allocatePort
 argument_list|(
-name|WSSecurityClientTest
+name|StaxWSSecurityClientTest
 operator|.
 name|class
 argument_list|)
@@ -541,7 +541,7 @@ try|try
 block|{
 name|tmp
 operator|=
-name|WSSecurityClientTest
+name|StaxWSSecurityClientTest
 operator|.
 name|class
 operator|.
@@ -632,7 +632,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
