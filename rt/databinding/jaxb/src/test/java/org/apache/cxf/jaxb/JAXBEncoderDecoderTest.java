@@ -1381,7 +1381,7 @@ name|xmlResult
 operator|.
 name|contains
 argument_list|(
-literal|"ns3:string2"
+literal|":string2>cord</ns"
 argument_list|)
 argument_list|)
 expr_stmt|;
