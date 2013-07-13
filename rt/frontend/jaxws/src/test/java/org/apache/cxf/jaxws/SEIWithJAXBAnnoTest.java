@@ -319,9 +319,7 @@ decl_stmt|;
 name|String
 name|expected
 init|=
-literal|"<ns2:addNumbers xmlns:ns2=\"http://service.jaxws.cxf.apache.org/\">"
-operator|+
-literal|"<arg0>str1 str2 str3</arg0></ns2:addNumbers>"
+literal|"<arg0>str1 str2 str3</arg0>"
 decl_stmt|;
 name|assertTrue
 argument_list|(

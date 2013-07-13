@@ -273,7 +273,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"wsdli:wsdlLocation=\"http://cxf.apache.org wsdlLoc\""
+literal|":wsdlLocation=\"http://cxf.apache.org wsdlLoc\""
 argument_list|)
 argument_list|)
 expr_stmt|;

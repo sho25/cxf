@@ -810,25 +810,24 @@ begin_decl_stmt
 name|String
 name|expected
 init|=
-literal|"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-operator|+
-literal|"<ns2:addNumbers xmlns:ns2=\"http://service.jaxws.cxf.apache.org/\">"
-operator|+
-literal|"<arg0>str1 str2 str3</arg0></ns2:addNumbers>"
+literal|"<arg0>str1 str2 str3</arg0>"
 decl_stmt|;
 end_decl_stmt
 
 begin_expr_stmt
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"The generated request wrapper class does not contain the correct annotations"
-argument_list|,
-name|expected
 argument_list|,
 name|bout
 operator|.
 name|toString
 argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|expected
+argument_list|)
 argument_list|)
 expr_stmt|;
 end_expr_stmt
@@ -856,25 +855,24 @@ end_expr_stmt
 begin_expr_stmt
 name|expected
 operator|=
-literal|"<?xml version=\"1.0\" encoding=\"UTF-8\" standalone=\"yes\"?>"
-operator|+
-literal|"<ns2:addNumbersResponse xmlns:ns2=\"http://service.jaxws.cxf.apache.org/\">"
-operator|+
-literal|"<return>1</return><return>2</return><return>3</return></ns2:addNumbersResponse>"
+literal|"<return>1</return><return>2</return><return>3</return>"
 expr_stmt|;
 end_expr_stmt
 
 begin_expr_stmt
-name|assertEquals
+name|assertTrue
 argument_list|(
 literal|"The generated response wrapper class is not correct"
-argument_list|,
-name|expected
 argument_list|,
 name|bout
 operator|.
 name|toString
 argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|expected
+argument_list|)
 argument_list|)
 expr_stmt|;
 end_expr_stmt
