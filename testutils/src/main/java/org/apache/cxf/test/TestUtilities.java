@@ -891,6 +891,37 @@ name|namespaces
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+specifier|public
+name|void
+name|assertXPathEquals
+parameter_list|(
+name|String
+name|xpath
+parameter_list|,
+name|QName
+name|value
+parameter_list|,
+name|Node
+name|node
+parameter_list|)
+throws|throws
+name|Exception
+block|{
+name|XPathAssert
+operator|.
+name|assertXPathEquals
+argument_list|(
+name|xpath
+argument_list|,
+name|value
+argument_list|,
+name|node
+argument_list|,
+name|namespaces
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Assert that this node is not a Soap fault body.      *       * @param node      * @throws Exception      */
 specifier|public
 name|void
