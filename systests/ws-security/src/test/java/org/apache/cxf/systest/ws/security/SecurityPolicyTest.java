@@ -2025,7 +2025,7 @@ argument_list|(
 literal|5
 argument_list|)
 expr_stmt|;
-comment|// TODO EncryptBeforeSigning + EncryptSignature not working
+comment|// TODO See WSS-464
 comment|// SecurityTestUtil.enableStreaming(pt);
 comment|// pt.doubleIt(5);
 operator|(
@@ -4677,7 +4677,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO EncryptBeforeSigning + EncryptSignature not working
+comment|// TODO See WSS-464
 comment|/*         SecurityTestUtil.enableStreaming(pt);         try {             pt.doubleIt(5);             fail("should fail on server side when do signature validation due the revoked certificates");         } catch (Exception ex) {             String errorMessage = ex.getMessage();             // Different errors using different JDKs...             System.out.println("ERR1: " + errorMessage);         }         */
 operator|(
 operator|(
