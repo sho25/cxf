@@ -2143,6 +2143,22 @@ literal|"bob.properties"
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|5
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|pt
+argument_list|)
+expr_stmt|;
 name|pt
 operator|.
 name|doubleIt
@@ -2281,7 +2297,13 @@ argument_list|(
 name|pt
 argument_list|)
 expr_stmt|;
-comment|// pt.doubleIt(5);
+name|pt
+operator|.
+name|doubleIt
+argument_list|(
+literal|5
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
