@@ -3285,6 +3285,10 @@ block|{
 name|WSSConstants
 operator|.
 name|SIGNATURE
+block|,
+name|WSSConstants
+operator|.
+name|SIGNATURE_CONFIRMATION
 block|}
 argument_list|)
 expr_stmt|;
@@ -3293,13 +3297,6 @@ operator|.
 name|setSignatureUser
 argument_list|(
 literal|"myalias"
-argument_list|)
-expr_stmt|;
-name|outProperties
-operator|.
-name|setEnableSignatureConfirmation
-argument_list|(
-literal|true
 argument_list|)
 expr_stmt|;
 name|Properties
