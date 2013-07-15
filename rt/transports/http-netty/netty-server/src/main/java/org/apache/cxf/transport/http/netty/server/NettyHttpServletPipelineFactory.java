@@ -503,6 +503,11 @@ name|NettyHttpContextHandler
 argument_list|>
 name|handlerMap
 decl_stmt|;
+specifier|private
+specifier|final
+name|int
+name|maxChunkContentSize
+decl_stmt|;
 specifier|public
 name|NettyHttpServletPipelineFactory
 parameter_list|(
@@ -514,6 +519,9 @@ name|supportSession
 parameter_list|,
 name|int
 name|threadPoolSize
+parameter_list|,
+name|int
+name|maxChunkContentSize
 parameter_list|,
 name|Map
 argument_list|<
@@ -558,6 +566,12 @@ operator|.
 name|tlsServerParameters
 operator|=
 name|tlsServerParameters
+expr_stmt|;
+name|this
+operator|.
+name|maxChunkContentSize
+operator|=
+name|maxChunkContentSize
 expr_stmt|;
 comment|// TODO need to check the if we need pass other setting
 name|this
@@ -870,7 +884,7 @@ argument_list|,
 operator|new
 name|HttpChunkAggregator
 argument_list|(
-literal|1048576
+name|maxChunkContentSize
 argument_list|)
 argument_list|)
 expr_stmt|;
