@@ -1069,6 +1069,17 @@ name|wadlGenerator
 decl_stmt|;
 if|if
 condition|(
+name|generator
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+name|filters
+return|;
+block|}
+if|if
+condition|(
 name|filters
 operator|.
 name|size
