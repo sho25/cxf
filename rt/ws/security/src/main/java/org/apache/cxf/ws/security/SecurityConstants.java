@@ -593,6 +593,15 @@ name|MUST_UNDERSTAND
 init|=
 literal|"ws-security.must-understand"
 decl_stmt|;
+comment|/**      * Set this to "false" if security context must not be created from JAAS Subject.      *      * The default value is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SC_FROM_JAAS_SUBJECT
+init|=
+literal|"ws-security.sc.jaas-subject"
+decl_stmt|;
 comment|//
 comment|// Internal tags
 comment|//
