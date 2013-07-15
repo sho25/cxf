@@ -13,9 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|model
+name|ext
 operator|.
-name|wadl
+name|xml
 package|;
 end_package
 
@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * References the concrete response or request class for   * WADL generator be able to generate representations and link  * them to schema elements. For example, it can be applied to   * methods returning a JAX-RS {@link Response}.   *   */
+comment|/**  * Can be applied to methods returning a JAX-RS {@link Response}  *   */
 end_comment
 
 begin_annotation_defn
