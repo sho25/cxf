@@ -385,9 +385,9 @@ condition|)
 block|{
 name|cacheManager
 operator|=
-name|CacheManager
+name|EHCacheUtil
 operator|.
-name|create
+name|createCacheManager
 argument_list|()
 expr_stmt|;
 block|}
@@ -479,9 +479,9 @@ block|}
 block|}
 name|cacheManager
 operator|=
-name|CacheManager
+name|EHCacheUtil
 operator|.
-name|create
+name|createCacheManager
 argument_list|(
 name|conf
 argument_list|)
