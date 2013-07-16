@@ -395,7 +395,7 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"TESB Runtime: getting public certificate for alias: %s; issuer: %s; subjectDN: %s"
+literal|"XKMS Runtime: getting public certificate for alias: %s; issuer: %s; subjectDN: %s"
 argument_list|,
 name|cryptoType
 operator|.
