@@ -243,27 +243,12 @@ name|AbstractHTTPDestination
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|ApplicationListener
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
 name|LoggerListener
 implements|implements
-name|ApplicationListener
-argument_list|<
-name|AbstractSTSEvent
-argument_list|>
+name|STSEventListener
 block|{
 specifier|public
 enum|enum
@@ -629,7 +614,7 @@ annotation|@
 name|Override
 specifier|public
 name|void
-name|onApplicationEvent
+name|handleSTSEvent
 parameter_list|(
 name|AbstractSTSEvent
 name|event

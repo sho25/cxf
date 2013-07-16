@@ -783,18 +783,6 @@ name|WSHandlerResult
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|ApplicationEvent
-import|;
-end_import
-
 begin_comment
 comment|/**  * An implementation of the IssueOperation interface.  */
 end_comment
@@ -1544,7 +1532,7 @@ argument_list|,
 name|context
 argument_list|)
 decl_stmt|;
-name|ApplicationEvent
+name|STSIssueSuccessEvent
 name|event
 init|=
 operator|new
@@ -1609,7 +1597,7 @@ name|RuntimeException
 name|ex
 parameter_list|)
 block|{
-name|ApplicationEvent
+name|STSIssueFailureEvent
 name|event
 init|=
 operator|new

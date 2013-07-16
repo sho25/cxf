@@ -545,18 +545,6 @@ name|WSSecurityException
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|ApplicationEvent
-import|;
-end_import
-
 begin_comment
 comment|/**  * An implementation of the ValidateOperation interface.  */
 end_comment
@@ -1134,7 +1122,7 @@ argument_list|,
 name|tokenRequirements
 argument_list|)
 decl_stmt|;
-name|ApplicationEvent
+name|STSValidateSuccessEvent
 name|event
 init|=
 operator|new
@@ -1199,7 +1187,7 @@ name|RuntimeException
 name|ex
 parameter_list|)
 block|{
-name|ApplicationEvent
+name|STSValidateFailureEvent
 name|event
 init|=
 operator|new
