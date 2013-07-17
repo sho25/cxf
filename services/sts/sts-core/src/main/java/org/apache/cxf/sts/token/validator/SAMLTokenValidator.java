@@ -1266,6 +1266,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|cachedRealm
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|tokenRealm
 operator|.
