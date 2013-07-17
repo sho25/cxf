@@ -427,20 +427,15 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO The client uses XKMS to locate the public key of the service with which to encrypt
-comment|// the message.
+comment|// The client uses XKMS to locate the public key of the service with which to encrypt
+comment|// the message. Then the client uses XKMS to both locate + validate the signing cert
+comment|// on processing the service response
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testAsymmetricBinding
