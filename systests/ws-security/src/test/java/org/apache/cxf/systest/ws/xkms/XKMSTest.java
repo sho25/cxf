@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests that uses XKMS with WS-Security to locate + validate X.509 tokens.  */
+comment|/**  * A set of tests that uses XKMS with WS-Security to locate + validate X.509 tokens.  *   * It tests both DOM + StAX clients against the DOM server  */
 end_comment
 
 begin_class
@@ -403,8 +403,20 @@ literal|25
 argument_list|)
 expr_stmt|;
 comment|// Streaming
-comment|// SecurityTestUtil.enableStreaming(port);
-comment|// port.doubleIt(25);
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -554,8 +566,20 @@ literal|25
 argument_list|)
 expr_stmt|;
 comment|// Streaming
-comment|// SecurityTestUtil.enableStreaming(x509Port);
-comment|// x509Port.doubleIt(25);
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
