@@ -3788,6 +3788,24 @@ name|relToCommon
 argument_list|)
 return|;
 block|}
+specifier|public
+specifier|static
+name|String
+name|toHttpLanguage
+parameter_list|(
+name|Locale
+name|locale
+parameter_list|)
+block|{
+return|return
+name|Headers
+operator|.
+name|toHttpLanguage
+argument_list|(
+name|locale
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 
