@@ -25,14 +25,6 @@ name|AbstractSTSSuccessEvent
 extends|extends
 name|AbstractSTSEvent
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1L
-decl_stmt|;
 specifier|public
 name|AbstractSTSSuccessEvent
 parameter_list|(

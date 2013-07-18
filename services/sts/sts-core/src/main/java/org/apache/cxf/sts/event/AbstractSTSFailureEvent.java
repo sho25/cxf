@@ -25,14 +25,6 @@ name|AbstractSTSFailureEvent
 extends|extends
 name|AbstractSTSEvent
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|long
-name|serialVersionUID
-init|=
-literal|1L
-decl_stmt|;
 comment|//private static final String OPERATION = "Issue";
 specifier|private
 name|Exception
