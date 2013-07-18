@@ -23,16 +23,6 @@ begin_import
 import|import
 name|javax
 operator|.
-name|ejb
-operator|.
-name|Stateless
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
 name|jws
 operator|.
 name|WebService
@@ -58,8 +48,6 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|Stateless
 annotation|@
 name|WebService
 argument_list|(
