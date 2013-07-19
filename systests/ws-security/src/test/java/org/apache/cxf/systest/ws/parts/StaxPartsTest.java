@@ -373,7 +373,110 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|/*          * TODO WSS-459         // This should fail, as the service requires a (bad) header         portQName = new QName(NAMESPACE, "DoubleItRequiredPartsPort2");         port = service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(port, PORT);                  // DOM         try {             port.doubleIt(25);             fail("Failure expected on a required header which isn't present");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "RequiredParts: No header element";             // assertTrue(ex.getMessage().contains(error));         }          // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a required header which isn't present");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "RequiredParts: No header element";             // assertTrue(ex.getMessage().contains(error));         }         */
+comment|// This should fail, as the service requires a (bad) header
+name|portQName
+operator|=
+operator|new
+name|QName
+argument_list|(
+name|NAMESPACE
+argument_list|,
+literal|"DoubleItRequiredPartsPort2"
+argument_list|)
+expr_stmt|;
+name|port
+operator|=
+name|service
+operator|.
+name|getPort
+argument_list|(
+name|portQName
+argument_list|,
+name|DoubleItPortType
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|updateAddressPort
+argument_list|(
+name|port
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
+comment|// DOM
+try|try
+block|{
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a required header which isn't present"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "RequiredParts: No header element";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a required header which isn't present"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "RequiredParts: No header element";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
 operator|(
 operator|(
 name|java
