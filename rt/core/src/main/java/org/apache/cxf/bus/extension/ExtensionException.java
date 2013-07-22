@@ -65,6 +65,7 @@ init|=
 literal|1L
 decl_stmt|;
 comment|/**      * Constructs a<code>ExtensionException</code> with the provided detail message.      */
+specifier|public
 name|ExtensionException
 parameter_list|(
 name|Message
@@ -78,6 +79,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Constructs a<code>ExtensionException</code> with the detail message and cause      * provided.      */
+specifier|public
 name|ExtensionException
 parameter_list|(
 name|Message
@@ -96,6 +98,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * Constructs an<code>ExtensionException</code> with the provided cause.      */
+specifier|public
 name|ExtensionException
 parameter_list|(
 name|Throwable

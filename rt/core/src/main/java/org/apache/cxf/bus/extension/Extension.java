@@ -148,7 +148,7 @@ specifier|public
 class|class
 name|Extension
 block|{
-specifier|private
+specifier|protected
 specifier|static
 specifier|final
 name|Logger
@@ -301,6 +301,18 @@ name|cls
 operator|.
 name|getClassLoader
 argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|Extension
+parameter_list|(
+name|ClassLoader
+name|loader
+parameter_list|)
+block|{
+name|classloader
+operator|=
+name|loader
 expr_stmt|;
 block|}
 specifier|public
@@ -678,7 +690,7 @@ operator|=
 name|a
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|Class
 argument_list|<
 name|?

@@ -103,7 +103,9 @@ name|extensions
 init|=
 operator|new
 name|TextExtensionFragmentParser
-argument_list|()
+argument_list|(
+literal|null
+argument_list|)
 operator|.
 name|getExtensions
 argument_list|(
