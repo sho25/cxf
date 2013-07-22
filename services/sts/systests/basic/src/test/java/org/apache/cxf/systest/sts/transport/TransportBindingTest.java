@@ -1243,7 +1243,13 @@ argument_list|(
 name|transportSaml1Port
 argument_list|)
 expr_stmt|;
-comment|// TODO doubleIt(transportSaml1Port, 25);
+name|doubleIt
+argument_list|(
+name|transportSaml1Port
+argument_list|,
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
