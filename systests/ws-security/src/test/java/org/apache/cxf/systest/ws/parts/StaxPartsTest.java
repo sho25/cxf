@@ -1070,7 +1070,183 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-comment|/*          * TODO WSS-459         // DOM         try {             port.doubleIt(25);             fail("Failure expected on a body which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "EncryptedParts";             // assertTrue(ex.getMessage().contains(error));         }                  // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a body which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "EncryptedParts";             // assertTrue(ex.getMessage().contains(error));         }                  // This should fail, as the service requires that the To header must be encrypted         portQName = new QName(NAMESPACE, "DoubleItEncryptedPartsPort3");         port = service.getPort(portQName, DoubleItPortType.class);         updateAddressPort(port, PORT);                  // DOM         try {             port.doubleIt(25);             fail("Failure expected on a header which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "EncryptedParts";             // (ex.getMessage().contains(error));         }                  // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a header which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "EncryptedParts";             // assertTrue(ex.getMessage().contains(error));         }         */
+comment|// DOM
+try|try
+block|{
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a body which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a body which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
+comment|// This should fail, as the service requires that the To header must be encrypted
+name|portQName
+operator|=
+operator|new
+name|QName
+argument_list|(
+name|NAMESPACE
+argument_list|,
+literal|"DoubleItEncryptedPartsPort3"
+argument_list|)
+expr_stmt|;
+name|port
+operator|=
+name|service
+operator|.
+name|getPort
+argument_list|(
+name|portQName
+argument_list|,
+name|DoubleItPortType
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|updateAddressPort
+argument_list|(
+name|port
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
+comment|// DOM
+try|try
+block|{
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a header which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedParts";
+comment|// (ex.getMessage().contains(error));
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a header which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedParts";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
 operator|(
 operator|(
 name|java
