@@ -704,6 +704,11 @@ name|ClassLoader
 name|cl
 parameter_list|)
 block|{
+name|Throwable
+name|origEx
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|classloader
@@ -729,6 +734,11 @@ name|nex
 parameter_list|)
 block|{
 comment|//ignore, fall into the stuff below
+comment|//save the exception though as this is likely the important one
+name|origEx
+operator|=
+name|nex
+expr_stmt|;
 block|}
 block|}
 try|try
@@ -782,6 +792,18 @@ operator|!
 name|optional
 condition|)
 block|{
+if|if
+condition|(
+name|origEx
+operator|!=
+literal|null
+condition|)
+block|{
+name|ex
+operator|=
+name|origEx
+expr_stmt|;
+block|}
 throw|throw
 operator|new
 name|ExtensionException
@@ -796,7 +818,7 @@ argument_list|,
 name|name
 argument_list|)
 argument_list|,
-name|nex
+name|ex
 argument_list|)
 throw|;
 block|}
