@@ -506,7 +506,6 @@ name|NettyInterceptor
 argument_list|>
 name|interceptors
 decl_stmt|;
-comment|//private List<String> contexts = new ArrayList<String>();
 specifier|public
 name|NettyHttpServletHandler
 parameter_list|(
