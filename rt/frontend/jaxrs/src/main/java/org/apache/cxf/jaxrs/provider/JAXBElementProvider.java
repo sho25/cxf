@@ -1480,6 +1480,8 @@ throw|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|StaxUtils
 operator|.
 name|close
@@ -1487,6 +1489,15 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|e
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
 block|}
 comment|// unreachable
 return|return
@@ -1559,6 +1570,8 @@ throw|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|StaxUtils
 operator|.
 name|close
@@ -1566,6 +1579,15 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|e
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
 block|}
 block|}
 return|return
@@ -1855,6 +1877,8 @@ return|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|StaxUtils
 operator|.
 name|close
@@ -1862,6 +1886,15 @@ argument_list|(
 name|xmlReader
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|e
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
 block|}
 block|}
 specifier|protected

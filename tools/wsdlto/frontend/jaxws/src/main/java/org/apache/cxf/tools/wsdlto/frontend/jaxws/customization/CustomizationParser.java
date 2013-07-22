@@ -1072,6 +1072,8 @@ throw|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|StaxUtils
 operator|.
 name|close
@@ -1079,6 +1081,15 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|e
+parameter_list|)
+block|{
+comment|//ignore
+block|}
 try|try
 block|{
 name|ins

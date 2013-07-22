@@ -1716,6 +1716,8 @@ throw|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|StaxUtils
 operator|.
 name|close
@@ -1723,6 +1725,21 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|e
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|BadRequestException
+argument_list|(
+name|e
+argument_list|)
+throw|;
+block|}
 block|}
 comment|// unreachable
 return|return

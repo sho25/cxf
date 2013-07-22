@@ -137,6 +137,18 @@ name|xml
 operator|.
 name|stream
 operator|.
+name|XMLStreamException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
 name|XMLStreamReader
 import|;
 end_import
@@ -2245,6 +2257,8 @@ throw|;
 block|}
 finally|finally
 block|{
+try|try
+block|{
 name|StaxUtils
 operator|.
 name|close
@@ -2252,6 +2266,15 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|XMLStreamException
+name|e
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
 block|}
 block|}
 specifier|private
