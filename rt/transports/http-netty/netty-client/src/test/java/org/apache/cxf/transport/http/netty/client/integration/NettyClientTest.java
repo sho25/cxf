@@ -516,6 +516,8 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
 specifier|public
 name|void
 name|testInvocationWithTransportId
@@ -526,7 +528,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"//http://localhost:"
+literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
