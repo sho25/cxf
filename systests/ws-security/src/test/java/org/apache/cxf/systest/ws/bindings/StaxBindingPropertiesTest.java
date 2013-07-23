@@ -995,7 +995,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"Received Timestamp does not match the requirements"
+literal|"Timestamp must be present"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -2445,7 +2445,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO
+comment|// TODO - See WSS-470
 annotation|@
 name|org
 operator|.
@@ -2895,7 +2895,45 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// Streaming
-comment|/*          * TODO - See WSS-460         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on not enabling SignatureConfirmation");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "Check Signature confirmation";             // assertTrue(ex.getMessage().contains(error));         }         */
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not enabling SignatureConfirmation"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "Check Signature confirmation";
+comment|// assertTrue(ex.getMessage().contains(error));
+block|}
 operator|(
 operator|(
 name|java
