@@ -43,16 +43,6 @@ name|javax
 operator|.
 name|servlet
 operator|.
-name|FilterRegistration
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|servlet
-operator|.
 name|ServletConfig
 import|;
 end_import
@@ -1053,6 +1043,10 @@ name|String
 name|getServletPath
 parameter_list|()
 block|{
+name|javax
+operator|.
+name|servlet
+operator|.
 name|FilterRegistration
 name|fr
 init|=
