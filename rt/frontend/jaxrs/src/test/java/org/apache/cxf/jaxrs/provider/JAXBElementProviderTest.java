@@ -3331,9 +3331,6 @@ name|class
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|TagVO2
-argument_list|>
 argument_list|(
 name|TagVO2
 operator|.

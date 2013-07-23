@@ -2084,9 +2084,6 @@ name|class
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|T
-argument_list|>
 argument_list|(
 name|memberClass
 argument_list|)
@@ -2141,9 +2138,6 @@ name|collection
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|T
-argument_list|>
 argument_list|(
 name|memberClass
 argument_list|)
@@ -2197,9 +2191,6 @@ name|collection
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|T1
-argument_list|>
 argument_list|(
 name|memberClass
 argument_list|)
@@ -2273,9 +2264,6 @@ name|collection
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|T1
-argument_list|>
 argument_list|(
 name|memberClass
 argument_list|)
@@ -2286,9 +2274,6 @@ name|class
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|T2
-argument_list|>
 argument_list|(
 name|responseClass
 argument_list|)
@@ -2356,9 +2341,6 @@ name|class
 argument_list|,
 operator|new
 name|ParameterizedCollectionType
-argument_list|<
-name|T
-argument_list|>
 argument_list|(
 name|responseClass
 argument_list|)

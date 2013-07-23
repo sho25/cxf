@@ -56,9 +56,6 @@ specifier|public
 specifier|final
 class|class
 name|ParameterizedCollectionType
-parameter_list|<
-name|T
-parameter_list|>
 implements|implements
 name|ParameterizedType
 block|{
@@ -66,7 +63,7 @@ specifier|private
 specifier|final
 name|Class
 argument_list|<
-name|T
+name|?
 argument_list|>
 name|collectionMemberClass
 decl_stmt|;
@@ -81,7 +78,7 @@ name|ParameterizedCollectionType
 parameter_list|(
 name|Class
 argument_list|<
-name|T
+name|?
 argument_list|>
 name|collectionMemberClass
 parameter_list|)
