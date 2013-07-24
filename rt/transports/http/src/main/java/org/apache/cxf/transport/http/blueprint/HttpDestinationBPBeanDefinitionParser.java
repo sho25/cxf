@@ -295,7 +295,7 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-name|mapElementToServerPoliy
+name|mapElementToHolder
 argument_list|(
 name|context
 argument_list|,
@@ -312,6 +312,10 @@ literal|"server"
 argument_list|)
 argument_list|,
 literal|"server"
+argument_list|,
+name|HTTPServerPolicyHolder
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 name|mapElementToJaxbProperty
@@ -521,7 +525,7 @@ block|}
 block|}
 specifier|private
 name|void
-name|mapElementToServerPoliy
+name|mapElementToHolder
 parameter_list|(
 name|ParserContext
 name|ctx
@@ -537,6 +541,12 @@ name|name
 parameter_list|,
 name|String
 name|propertyName
+parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|cls
 parameter_list|)
 block|{
 name|Element
@@ -576,9 +586,7 @@ name|ef
 operator|.
 name|setRuntimeClass
 argument_list|(
-name|HTTPServerPolicyHolder
-operator|.
-name|class
+name|cls
 argument_list|)
 expr_stmt|;
 try|try
