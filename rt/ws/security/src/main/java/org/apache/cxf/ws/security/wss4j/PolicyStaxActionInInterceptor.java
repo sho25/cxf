@@ -968,6 +968,15 @@ name|aim
 argument_list|,
 name|SPConstants
 operator|.
+name|ISSUED_TOKEN
+argument_list|)
+expr_stmt|;
+name|assertAllAssertionsByLocalname
+argument_list|(
+name|aim
+argument_list|,
+name|SPConstants
+operator|.
 name|ONLY_SIGN_ENTIRE_HEADERS_AND_BODY
 argument_list|)
 expr_stmt|;
