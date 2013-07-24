@@ -2219,7 +2219,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 specifier|synchronized
 name|JAXBContext
 name|getContext
