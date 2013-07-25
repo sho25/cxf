@@ -63,7 +63,7 @@ name|wssec11
 operator|.
 name|server
 operator|.
-name|Server11
+name|StaxServer11
 import|;
 end_import
 
@@ -83,7 +83,7 @@ name|wssec11
 operator|.
 name|server
 operator|.
-name|Server11Restricted
+name|StaxServer11Restricted
 import|;
 end_import
 
@@ -108,13 +108,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class runs the first half of the tests, as having all in   * the one class causes an out of memory problem in eclipse.  *   * It tests both DOM + StAX clients against the DOM server.  */
+comment|/**  * This class runs the first half of the tests, as having all in   * the one class causes an out of memory problem in eclipse.  *   * It tests both DOM + StAX clients against the StAX server.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|WSSecurity111Test
+name|StaxWSSecurity111Test
 extends|extends
 name|WSSecurity11Common
 block|{
@@ -157,7 +157,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server11
+name|StaxServer11
 operator|.
 name|class
 argument_list|,
@@ -195,7 +195,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server11Restricted
+name|StaxServer11Restricted
 operator|.
 name|class
 argument_list|,
@@ -275,22 +275,19 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-literal|"AD"
-block|,
+comment|// TODO See WSS-472 - "AD",
 literal|"A-ES"
 block|,
-literal|"AD-ES"
-block|,
+comment|// TODO See WSS-472 - "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-literal|"UXD"
-block|,
+comment|// TODO See WSS-472 - "UXD",
 literal|"UX-SEES"
 block|,
-literal|"UXD-SEES"
-block|,          }
+comment|// TODO See WSS-472 - "UXD-SEES",
+block|}
 decl_stmt|;
 name|runClientServer
 argument_list|(
@@ -300,7 +297,7 @@ name|unrestrictedPoliciesInstalled
 argument_list|,
 literal|false
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -372,7 +369,7 @@ name|unrestrictedPoliciesInstalled
 argument_list|,
 literal|false
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

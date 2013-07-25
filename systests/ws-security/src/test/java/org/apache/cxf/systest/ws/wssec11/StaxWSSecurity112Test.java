@@ -63,7 +63,7 @@ name|wssec11
 operator|.
 name|server
 operator|.
-name|Server11
+name|StaxServer12
 import|;
 end_import
 
@@ -83,7 +83,7 @@ name|wssec11
 operator|.
 name|server
 operator|.
-name|Server11Restricted
+name|StaxServer12Restricted
 import|;
 end_import
 
@@ -108,13 +108,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class runs the first half of the tests, as having all in   * the one class causes an out of memory problem in eclipse.  *   * It tests both DOM + StAX clients against the DOM server.  */
+comment|/**  * This class runs the second half of the tests, as having all in   * the one class causes an out of memory problem in eclipse  *   * It tests DOM clients against the StAX server.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|WSSecurity111Test
+name|StaxWSSecurity112Test
 extends|extends
 name|WSSecurity11Common
 block|{
@@ -157,7 +157,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server11
+name|StaxServer12
 operator|.
 name|class
 argument_list|,
@@ -195,7 +195,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server11Restricted
+name|StaxServer12Restricted
 operator|.
 name|class
 argument_list|,
@@ -267,112 +267,58 @@ name|String
 index|[]
 name|argv
 init|=
+literal|null
+decl_stmt|;
+if|if
+condition|(
+name|unrestrictedPoliciesInstalled
+condition|)
+block|{
+name|argv
+operator|=
 operator|new
 name|String
 index|[]
 block|{
-literal|"A"
+literal|"X"
 block|,
-literal|"A-NoTimestamp"
+literal|"X-NoTimestamp"
 block|,
-literal|"AD"
+literal|"X-AES128"
 block|,
-literal|"A-ES"
+literal|"X-AES256"
 block|,
-literal|"AD-ES"
+literal|"X-TripleDES"
 block|,
-literal|"UX"
+comment|/*                  * TODO See WSS-472                 "XD",                 "XD-ES",                 "XD-SEES",                 */
+block|}
+expr_stmt|;
+block|}
+else|else
+block|{
+name|argv
+operator|=
+operator|new
+name|String
+index|[]
+block|{
+literal|"X"
 block|,
-literal|"UX-NoTimestamp"
+literal|"X-NoTimestamp"
 block|,
-literal|"UXD"
-block|,
-literal|"UX-SEES"
-block|,
-literal|"UXD-SEES"
-block|,          }
-decl_stmt|;
+comment|/*                  * TODO See WSS-472                 "XD",                 "XD-ES",                 "XD-SEES",                 */
+block|}
+expr_stmt|;
+block|}
 name|runClientServer
 argument_list|(
 name|argv
 argument_list|,
 name|unrestrictedPoliciesInstalled
 argument_list|,
-literal|false
+literal|true
 argument_list|,
-literal|false
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
-name|testClientServerStreaming
-parameter_list|()
-throws|throws
-name|IOException
-block|{
-if|if
-condition|(
-operator|(
-operator|!
-name|unrestrictedPoliciesInstalled
-operator|)
-operator|&&
-operator|(
-name|WSSecurity11Common
-operator|.
-name|isIBMJDK16
-argument_list|()
-operator|)
-condition|)
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Not running as there is a problem with 1.6 jdk and restricted jars"
-argument_list|)
-expr_stmt|;
-return|return;
-block|}
-name|String
-index|[]
-name|argv
-init|=
-operator|new
-name|String
-index|[]
-block|{
-literal|"A"
-block|,
-literal|"A-NoTimestamp"
-block|,
-comment|// TODO Derived "AD",
-comment|// TODO See WSS-468 EncryptBeforeSigning not working "A-ES",
-comment|// TODO Derived "AD-ES",
-literal|"UX"
-block|,
-literal|"UX-NoTimestamp"
-block|,
-comment|// TODO Derived "UXD",
-literal|"UX-SEES"
-block|,
-comment|// TODO Derived "UXD-SEES",
-block|}
-decl_stmt|;
-name|runClientServerStreaming
-argument_list|(
-name|argv
-argument_list|,
-name|unrestrictedPoliciesInstalled
-argument_list|,
-literal|false
-argument_list|,
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
