@@ -101,7 +101,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|LinkedList
+name|Arrays
 import|;
 end_import
 
@@ -787,6 +787,9 @@ operator|.
 name|init
 argument_list|()
 expr_stmt|;
+comment|//  AccessTokenService may be configured with the form provider
+comment|// which will not decode by default - so listing both the actual
+comment|// and encoded grant type value will help
 name|ENCODED_SAML2_BEARER_GRANT
 operator|=
 name|HttpUtils
@@ -831,57 +834,18 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-name|Constants
+name|Arrays
 operator|.
-name|SAML2_BEARER_GRANT
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Override
-specifier|public
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getSupportedGrantTypes
-parameter_list|()
-block|{
-comment|// AccessTokenService may be configured with the form provider
-comment|// which will not decode by default - so listing both the actual
-comment|// and encoded grant type value will help
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|types
-init|=
-operator|new
-name|LinkedList
-argument_list|<
-name|String
-argument_list|>
-argument_list|()
-decl_stmt|;
-name|types
-operator|.
-name|add
+name|asList
 argument_list|(
 name|Constants
 operator|.
 name|SAML2_BEARER_GRANT
-argument_list|)
-expr_stmt|;
-name|types
-operator|.
-name|add
-argument_list|(
+argument_list|,
 name|ENCODED_SAML2_BEARER_GRANT
 argument_list|)
+argument_list|)
 expr_stmt|;
-return|return
-name|types
-return|;
 block|}
 specifier|public
 name|void
@@ -940,11 +904,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-name|checkIfGrantSupported
-argument_list|(
-name|client
-argument_list|)
-expr_stmt|;
 name|String
 name|assertion
 init|=
@@ -1032,6 +991,10 @@ argument_list|(
 name|client
 argument_list|,
 name|grantSubject
+argument_list|,
+name|Constants
+operator|.
+name|SAML2_BEARER_GRANT
 argument_list|,
 name|OAuthUtils
 operator|.

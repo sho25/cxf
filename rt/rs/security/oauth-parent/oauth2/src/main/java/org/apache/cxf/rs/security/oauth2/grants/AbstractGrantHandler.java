@@ -416,6 +416,8 @@ name|supportedGrants
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Deprecated
 specifier|protected
 name|void
 name|checkIfGrantSupported
@@ -433,7 +435,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-specifier|protected
+specifier|private
 name|void
 name|checkIfGrantSupported
 parameter_list|(

@@ -434,6 +434,40 @@ argument_list|(
 name|params
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|OAuthUtils
+operator|.
+name|isGrantSupportedForClient
+argument_list|(
+name|client
+argument_list|,
+name|isCanSupportPublicClients
+argument_list|()
+argument_list|,
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|GRANT_TYPE
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return
+name|createErrorResponse
+argument_list|(
+name|params
+argument_list|,
+name|OAuthConstants
+operator|.
+name|UNAUTHORIZED_CLIENT
+argument_list|)
+return|;
+block|}
 comment|// Find the grant handler
 name|AccessTokenGrantHandler
 name|handler
@@ -633,7 +667,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Find the mathcing grant handler      */
+comment|/**      * Find the matching grant handler      */
 specifier|protected
 name|AccessTokenGrantHandler
 name|findGrantHandler

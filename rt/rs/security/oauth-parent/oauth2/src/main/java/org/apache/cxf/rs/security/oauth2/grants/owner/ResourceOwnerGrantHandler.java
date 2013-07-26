@@ -222,11 +222,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-name|checkIfGrantSupported
-argument_list|(
-name|client
-argument_list|)
-expr_stmt|;
 name|String
 name|ownerName
 init|=

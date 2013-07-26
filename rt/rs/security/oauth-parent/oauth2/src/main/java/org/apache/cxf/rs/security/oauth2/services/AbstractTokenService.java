@@ -723,6 +723,15 @@ name|support
 expr_stmt|;
 block|}
 specifier|public
+name|boolean
+name|isCanSupportPublicClients
+parameter_list|()
+block|{
+return|return
+name|canSupportPublicClients
+return|;
+block|}
+specifier|public
 name|void
 name|setWriteCustomErrors
 parameter_list|(
