@@ -421,19 +421,6 @@ operator|.
 name|PATH_INFO
 argument_list|)
 decl_stmt|;
-comment|// cannot have two wsdl's being written for the same endpoint at the same
-comment|// time as the addresses may get mixed up
-synchronized|synchronized
-init|(
-name|message
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|getEndpoint
-argument_list|()
-init|)
-block|{
 name|Map
 argument_list|<
 name|String
@@ -484,17 +471,6 @@ argument_list|,
 name|map
 argument_list|,
 name|ctx
-argument_list|,
-name|message
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|getEndpoint
-argument_list|()
-operator|.
-name|getEndpointInfo
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|Endpoint
@@ -575,8 +551,9 @@ argument_list|,
 name|doc
 argument_list|)
 expr_stmt|;
-comment|// FIXME - how can I change this to provide a different interceptor chain that just has the
-comment|// stax, gzip and message sender components.
+comment|// TODO - how can I improve this to provide a specific interceptor chain that just has the
+comment|// stax, gzip and message sender components, while also ensuring that GZIP is only provided
+comment|// if its already configured for the endpoint.
 name|Iterator
 argument_list|<
 name|Interceptor
@@ -671,6 +648,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// notice this is being added after the purge above, don't swap the order!
 name|mout
 operator|.
 name|getInterceptorChain
@@ -703,7 +681,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-block|}
 specifier|private
 name|Document
 name|getDocument
@@ -724,10 +701,24 @@ name|params
 parameter_list|,
 name|String
 name|ctxUri
-parameter_list|,
-name|EndpointInfo
-name|endpointInfo
 parameter_list|)
+block|{
+comment|// cannot have two wsdl's being generated for the same endpoint at the same
+comment|// time as the addresses may get mixed up
+comment|// For WSDL's the WSDLWriter does not share any state between documents.
+comment|// For XSD's, the WSDLGetUtils makes a copy of any XSD schema documents before updating
+comment|// any addresses and returning them, so for both WSDL and XSD this is the only part that needs
+comment|// to be synchronized.
+synchronized|synchronized
+init|(
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getEndpoint
+argument_list|()
+init|)
 block|{
 return|return
 operator|new
@@ -744,9 +735,19 @@ name|params
 argument_list|,
 name|ctxUri
 argument_list|,
-name|endpointInfo
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|getEndpoint
+argument_list|()
+operator|.
+name|getEndpointInfo
+argument_list|()
 argument_list|)
 return|;
+block|}
 block|}
 specifier|private
 name|boolean
