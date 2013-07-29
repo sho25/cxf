@@ -521,6 +521,13 @@ operator|.
 name|getWSDLService
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|wsdlService
+operator|!=
+literal|null
+condition|)
+block|{
 name|attributes
 operator|.
 name|add
@@ -544,6 +551,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 comment|// WSDL Operation
 name|QName
 name|wsdlOperation
