@@ -333,7 +333,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|XMLStreamDataReader
+name|XMLStreamDataWriter
 operator|.
 name|class
 argument_list|)
