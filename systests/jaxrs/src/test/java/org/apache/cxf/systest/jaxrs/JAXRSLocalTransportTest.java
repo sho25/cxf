@@ -410,9 +410,7 @@ name|LocalConduit
 operator|.
 name|DIRECT_DISPATCH
 argument_list|,
-name|Boolean
-operator|.
-name|TRUE
+literal|"true"
 argument_list|)
 expr_stmt|;
 name|Book
