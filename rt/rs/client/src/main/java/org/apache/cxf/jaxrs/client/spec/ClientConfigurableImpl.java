@@ -258,6 +258,8 @@ operator|new
 name|ConfigurationImpl
 argument_list|(
 name|config
+argument_list|,
+name|CLIENT_FILTER_INTERCEPTOR_CLASSES
 argument_list|)
 argument_list|)
 expr_stmt|;
