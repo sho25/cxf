@@ -409,12 +409,19 @@ name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
+comment|// @Ignore'd because failing too often on slow Jenkins machines
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testSTSClientCaching
