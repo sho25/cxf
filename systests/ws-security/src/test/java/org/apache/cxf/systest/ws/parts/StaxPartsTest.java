@@ -234,19 +234,12 @@ name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
-comment|// TODO See WSS-471
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testRequiredParts
@@ -441,8 +434,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "RequiredParts: No header element";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"must be present"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 comment|// Streaming
 try|try
@@ -481,7 +490,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "RequiredParts: No header element";
+comment|// String error = "must be present";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
@@ -907,19 +916,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-471
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testEncryptedParts
@@ -1114,8 +1116,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "EncryptedParts";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"Body must be encrypted"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 comment|// Streaming
 try|try
@@ -1154,7 +1172,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "EncryptedParts";
+comment|// String error = "Body must be encrypted";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 comment|// This should fail, as the service requires that the To header must be encrypted
@@ -1218,8 +1236,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "EncryptedParts";
-comment|// (ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"To must be encrypted"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 comment|// Streaming
 try|try
@@ -1258,7 +1292,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "EncryptedParts";
+comment|// String error = "To must be encrypted";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
