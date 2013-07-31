@@ -2445,19 +2445,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - See WSS-470
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testTokenProtection
@@ -2568,6 +2561,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -2606,6 +2615,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -2635,22 +2645,57 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "Layout does not match the requirements";
-comment|// assertTrue(ex.getMessage().contains(error));
-name|System
-operator|.
-name|out
-operator|.
-name|println
+name|String
+name|error
+init|=
+literal|"BinarySecurityToken must be signed by its signature"
+decl_stmt|;
+name|assertTrue
 argument_list|(
-literal|"EX: "
-operator|+
 name|ex
 operator|.
 name|getMessage
 argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not protecting the token"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "BinarySecurityToken must be signed by its signature";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
