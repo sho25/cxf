@@ -1437,7 +1437,7 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
@@ -1452,7 +1452,7 @@ name|assertEquals
 argument_list|(
 name|Collections
 operator|.
-name|singletonList
+name|singleton
 argument_list|(
 name|CustomNameBinding
 operator|.

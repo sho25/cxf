@@ -315,7 +315,7 @@ name|String
 name|producesTypes
 decl_stmt|;
 specifier|private
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
@@ -323,7 +323,7 @@ name|nameBindings
 init|=
 name|Collections
 operator|.
-name|emptyList
+name|emptySet
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1188,7 +1188,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
@@ -1220,7 +1220,7 @@ specifier|public
 name|void
 name|setNameBindings
 parameter_list|(
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>

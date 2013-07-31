@@ -61,7 +61,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|LinkedList
+name|LinkedHashSet
 import|;
 end_import
 
@@ -649,7 +649,7 @@ name|getBus
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
@@ -680,14 +680,14 @@ name|getClassResourceInfo
 argument_list|()
 control|)
 block|{
-name|List
+name|Set
 argument_list|<
 name|String
 argument_list|>
 name|clsNameBindings
 init|=
 operator|new
-name|LinkedList
+name|LinkedHashSet
 argument_list|<
 name|String
 argument_list|>
