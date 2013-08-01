@@ -275,18 +275,18 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-comment|// TODO See WSS-472 - "AD",
+comment|// TODO Derived - "AD",
 literal|"A-ES"
 block|,
-comment|// TODO See WSS-472 - "AD-ES",
+comment|// TODO Derived - "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-comment|// TODO See WSS-472 - "UXD",
+comment|// TODO Derived - "UXD",
 literal|"UX-SEES"
 block|,
-comment|// TODO See WSS-472 - "UXD-SEES",
+comment|// TODO Derived - "UXD-SEES",
 block|}
 decl_stmt|;
 name|runClientServer

@@ -290,7 +290,7 @@ literal|"X-AES256"
 block|,
 literal|"X-TripleDES"
 block|,
-comment|/*                  * TODO See WSS-472                 "XD",                 "XD-ES",                 "XD-SEES",                 */
+comment|/*                  * TODO Derived                 "XD",                 "XD-ES",                 "XD-SEES",                 */
 block|}
 expr_stmt|;
 block|}
@@ -306,7 +306,7 @@ literal|"X"
 block|,
 literal|"X-NoTimestamp"
 block|,
-comment|/*                  * TODO See WSS-472                 "XD",                 "XD-ES",                 "XD-SEES",                 */
+comment|/*                  * TODO Derived                 "XD",                 "XD-ES",                 "XD-SEES",                 */
 block|}
 expr_stmt|;
 block|}
