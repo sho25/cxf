@@ -37,18 +37,6 @@ name|IOException
 import|;
 end_import
 
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
-name|cert
-operator|.
-name|X509Certificate
-import|;
-end_import
-
 begin_interface
 specifier|public
 interface|interface
@@ -56,19 +44,19 @@ name|XKMSClientCache
 extends|extends
 name|Closeable
 block|{
-comment|/**      * Store an X509Certificate in the Cache      */
+comment|/**      * Store an XKMSCacheToken in the Cache using the given key      */
 name|void
 name|put
 parameter_list|(
 name|String
 name|key
 parameter_list|,
-name|X509Certificate
-name|certificate
+name|XKMSCacheToken
+name|cacheToken
 parameter_list|)
 function_decl|;
-comment|/**      * Get an X509Certificate from the cache matching the given key. Returns null if there      * is no such certificate in the cache.      */
-name|X509Certificate
+comment|/**      * Get an XKMSCacheToken from the cache matching the given key. Returns null if there      * is no such XKMSCacheToken in the cache.      */
+name|XKMSCacheToken
 name|get
 parameter_list|(
 name|String

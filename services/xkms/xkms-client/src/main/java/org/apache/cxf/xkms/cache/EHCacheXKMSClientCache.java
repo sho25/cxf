@@ -49,18 +49,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|security
-operator|.
-name|cert
-operator|.
-name|X509Certificate
-import|;
-end_import
-
-begin_import
-import|import
 name|net
 operator|.
 name|sf
@@ -497,7 +485,7 @@ name|newCache
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store an X509Certificate in the Cache      */
+comment|/**      * Store an XKMSCacheToken in the Cache using the given key      */
 specifier|public
 name|void
 name|put
@@ -505,8 +493,8 @@ parameter_list|(
 name|String
 name|key
 parameter_list|,
-name|X509Certificate
-name|certificate
+name|XKMSCacheToken
+name|cacheToken
 parameter_list|)
 block|{
 name|cache
@@ -518,20 +506,16 @@ name|Element
 argument_list|(
 name|key
 argument_list|,
-name|certificate
+name|cacheToken
 argument_list|,
 literal|false
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get an X509Certificate from the cache matching the given key. Returns null if there      * is no such certificate in the cache.      */
+comment|/**      * Get an XKMSCacheToken from the cache matching the given key. Returns null if there      * is no such XKMSCacheToken in the cache, or if the certificate has expired in the cache      */
 specifier|public
-name|X509Certificate
+name|XKMSCacheToken
 name|get
 parameter_list|(
 name|String
@@ -563,7 +547,7 @@ condition|)
 block|{
 return|return
 operator|(
-name|X509Certificate
+name|XKMSCacheToken
 operator|)
 name|element
 operator|.
@@ -589,6 +573,19 @@ operator|!=
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|cache
+operator|!=
+literal|null
+condition|)
+block|{
+name|cache
+operator|.
+name|removeAll
+argument_list|()
+expr_stmt|;
+block|}
 name|cacheManager
 operator|.
 name|shutdown
