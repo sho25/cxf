@@ -2921,6 +2921,7 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+comment|//just need a simple generic context to handle the exceptions internal primitives
 name|JAXBContext
 name|exceptionContext
 init|=
@@ -2932,7 +2933,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|OrderException
+name|String
 operator|.
 name|class
 block|,         }
