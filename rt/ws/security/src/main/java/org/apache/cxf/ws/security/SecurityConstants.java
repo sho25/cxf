@@ -380,7 +380,7 @@ name|TOKEN_STORE_CACHE_INSTANCE
 init|=
 literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
 decl_stmt|;
-comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the  certificate. These constraints are not used when the certificate       * is contained in the keystore (direct trust).      */
+comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the  certificate.      */
 specifier|public
 specifier|static
 specifier|final
