@@ -741,6 +741,9 @@ name|context
 parameter_list|,
 name|boolean
 name|q
+parameter_list|,
+name|String
+name|defaultNs
 parameter_list|)
 block|{
 name|super
@@ -761,6 +764,13 @@ operator|.
 name|createJAXBContextProxy
 argument_list|(
 name|context
+argument_list|,
+name|serviceInfo
+operator|.
+name|getXmlSchemaCollection
+argument_list|()
+argument_list|,
+name|defaultNs
 argument_list|)
 expr_stmt|;
 name|this
