@@ -131,22 +131,6 @@ name|ws
 operator|.
 name|addressing
 operator|.
-name|AddressingBuilder
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
 name|AddressingProperties
 import|;
 end_import
@@ -648,20 +632,11 @@ name|createMaps
 parameter_list|()
 block|{
 comment|// get Message Addressing Properties instance
-name|AddressingBuilder
-name|builder
-init|=
-name|AddressingBuilder
-operator|.
-name|getAddressingBuilder
-argument_list|()
-decl_stmt|;
 name|AddressingProperties
 name|maps
 init|=
-name|builder
-operator|.
-name|newAddressingProperties
+operator|new
+name|AddressingProperties
 argument_list|()
 decl_stmt|;
 comment|// set MessageID property
