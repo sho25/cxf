@@ -310,7 +310,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testProxyDirectDispatchGet
+name|testProxyPipedDispatchGet
 parameter_list|()
 throws|throws
 name|Exception
@@ -329,7 +329,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|//WebClient.getConfig(localProxy).getRequestContext().put(LocalConduit.DIRECT_DISPATCH, Boolean.TRUE);
 name|Book
 name|book
 init|=
