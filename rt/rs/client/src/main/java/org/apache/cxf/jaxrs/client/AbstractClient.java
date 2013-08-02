@@ -3187,7 +3187,7 @@ return|return
 literal|null
 return|;
 block|}
-specifier|private
+specifier|protected
 name|boolean
 name|responseStreamCanBeClosed
 parameter_list|(
@@ -3202,6 +3202,12 @@ name|cls
 parameter_list|)
 block|{
 return|return
+name|cls
+operator|!=
+name|InputStream
+operator|.
+name|class
+operator|&&
 name|MessageUtils
 operator|.
 name|isTrue
