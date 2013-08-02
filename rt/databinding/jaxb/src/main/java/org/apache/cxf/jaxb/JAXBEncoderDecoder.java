@@ -3037,8 +3037,7 @@ name|marshaller
 argument_list|,
 name|writer
 argument_list|,
-operator|new
-name|JAXBElement
+name|newJAXBElement
 argument_list|(
 name|mname
 argument_list|,
