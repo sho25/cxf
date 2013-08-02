@@ -525,6 +525,8 @@ operator|==
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|URI
 name|propResourceUri
 init|=
@@ -554,8 +556,6 @@ argument_list|()
 expr_stmt|;
 block|}
 else|else
-block|{
-try|try
 block|{
 name|File
 name|f
@@ -589,6 +589,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
+block|}
 catch|catch
 parameter_list|(
 name|IOException
@@ -596,7 +597,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// let CryptoFactory try to load it
-block|}
 block|}
 block|}
 if|if
