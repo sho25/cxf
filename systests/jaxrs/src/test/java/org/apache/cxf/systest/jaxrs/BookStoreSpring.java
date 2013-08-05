@@ -676,11 +676,6 @@ name|book
 return|;
 block|}
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
-annotation|@
 name|POST
 annotation|@
 name|Path
