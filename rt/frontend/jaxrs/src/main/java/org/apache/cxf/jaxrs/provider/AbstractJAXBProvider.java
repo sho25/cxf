@@ -1158,7 +1158,7 @@ name|nsMapper
 init|=
 name|JAXBUtils
 operator|.
-name|setNamespaceWrapper
+name|setNamespaceMapper
 argument_list|(
 name|map
 argument_list|,

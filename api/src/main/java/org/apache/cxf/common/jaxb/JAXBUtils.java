@@ -3487,7 +3487,7 @@ block|}
 specifier|public
 specifier|static
 name|Object
-name|setNamespaceWrapper
+name|setNamespaceMapper
 parameter_list|(
 specifier|final
 name|Map

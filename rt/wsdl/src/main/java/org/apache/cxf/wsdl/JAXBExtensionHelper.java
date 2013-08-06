@@ -2377,7 +2377,7 @@ expr_stmt|;
 block|}
 name|JAXBUtils
 operator|.
-name|setNamespaceWrapper
+name|setNamespaceMapper
 argument_list|(
 name|nspref
 argument_list|,

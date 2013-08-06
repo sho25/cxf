@@ -1619,7 +1619,7 @@ argument_list|()
 decl_stmt|;
 name|JAXBUtils
 operator|.
-name|setNamespaceWrapper
+name|setNamespaceMapper
 argument_list|(
 name|mapper
 argument_list|,
