@@ -193,6 +193,8 @@ name|removeExtensions
 parameter_list|(
 name|List
 argument_list|<
+name|?
+extends|extends
 name|Extension
 argument_list|>
 name|list
@@ -227,6 +229,8 @@ name|addExtensions
 parameter_list|(
 name|List
 argument_list|<
+name|?
+extends|extends
 name|Extension
 argument_list|>
 name|list
