@@ -864,7 +864,7 @@ name|c
 init|=
 literal|null
 decl_stmt|;
-name|ClassNotFoundException
+name|Throwable
 name|origExc
 init|=
 literal|null
@@ -879,6 +879,17 @@ name|loadClass
 argument_list|(
 name|className
 argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|NoClassDefFoundError
+name|e
+parameter_list|)
+block|{
+name|origExc
+operator|=
+name|e
 expr_stmt|;
 block|}
 catch|catch
