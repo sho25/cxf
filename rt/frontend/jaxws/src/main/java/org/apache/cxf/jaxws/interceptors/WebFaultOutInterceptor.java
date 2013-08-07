@@ -772,7 +772,7 @@ name|convertedLang
 operator|=
 name|convertedLang
 operator|+
-literal|'-'
+literal|'_'
 operator|+
 name|country
 expr_stmt|;
