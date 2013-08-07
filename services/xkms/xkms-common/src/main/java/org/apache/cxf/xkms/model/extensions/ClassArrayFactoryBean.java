@@ -43,6 +43,10 @@ name|FactoryBean
 import|;
 end_import
 
+begin_comment
+comment|/**  * Needed for detail messages in war deployment (spring)  */
+end_comment
+
 begin_class
 specifier|public
 class|class

@@ -195,22 +195,6 @@ name|pax
 operator|.
 name|exam
 operator|.
-name|CoreOptions
-operator|.
-name|systemTimeout
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
 name|karaf
 operator|.
 name|options
@@ -353,6 +337,21 @@ name|HTTP_PORT
 operator|+
 literal|"/cxf/XKMS"
 decl_stmt|;
+comment|// Adding apache snapshots as cxf trunk may contain snapshot dependencies
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|REPOS
+init|=
+literal|"http://repo1.maven.org/maven2@id=central, "
+comment|//        + "http://svn.apache.org/repos/asf/servicemix/m2-repo@id=servicemix, "
+operator|+
+literal|"http://repository.apache.org/content/groups/snapshots-group@snapshots@noreleases@id=apache-snapshots "
+decl_stmt|;
+comment|//        + "http://repository.springsource.com/maven/bundles/release@id=springsource.release, "
+comment|//        + "http://repository.springsource.com/maven/bundles/external@id=springsource.external, "
+comment|//        + "http://oss.sonatype.org/content/repositories/releases/@id=sonatype";
 annotation|@
 name|Inject
 specifier|protected
@@ -410,38 +409,7 @@ argument_list|)
 operator|.
 name|type
 argument_list|(
-literal|"zip"
-argument_list|)
-decl_stmt|;
-name|MavenUrlReference
-name|cxfFeatures
-init|=
-name|maven
-argument_list|()
-operator|.
-name|groupId
-argument_list|(
-literal|"org.apache.cxf.karaf"
-argument_list|)
-operator|.
-name|artifactId
-argument_list|(
-literal|"apache-cxf"
-argument_list|)
-operator|.
-name|version
-argument_list|(
-name|projectVersion
-argument_list|)
-operator|.
-name|type
-argument_list|(
-literal|"xml"
-argument_list|)
-operator|.
-name|classifier
-argument_list|(
-literal|"features"
+literal|"tar.gz"
 argument_list|)
 decl_stmt|;
 name|MavenUrlReference
@@ -502,17 +470,11 @@ argument_list|(
 literal|false
 argument_list|)
 block|,
-comment|/*              * Timeout is set to 15 minutes because installation of cxf and xkms takes ages. The reason should              * be investigated in the near future. One problem is the usage of pax exam snapshot build which              * makes maven scan the snapshot repositories for each dependency but that should not be the main              * reason.              */
-name|systemTimeout
-argument_list|(
-literal|900000
-argument_list|)
-block|,
 name|logLevel
 argument_list|(
 name|LogLevel
 operator|.
-name|ERROR
+name|INFO
 argument_list|)
 block|,
 name|keepRuntimeFolder
@@ -553,18 +515,20 @@ argument_list|)
 block|,
 name|features
 argument_list|(
-name|cxfFeatures
-argument_list|,
-literal|"cxf"
-argument_list|)
-block|,
-name|features
-argument_list|(
 name|xkmsFeatures
 argument_list|,
 literal|"cxf-xkms-service"
 argument_list|,
 literal|"cxf-xkms-client"
+argument_list|)
+block|,
+name|editConfigurationFilePut
+argument_list|(
+literal|"etc/org.ops4j.pax.url.mvn.cfg"
+argument_list|,
+literal|"org.ops4j.pax.url.mvn.repositories"
+argument_list|,
+name|REPOS
 argument_list|)
 block|,
 name|editConfigurationFilePut

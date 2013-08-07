@@ -821,7 +821,7 @@ argument_list|<
 name|ValidateRequestType
 argument_list|>
 operator|)
-name|u
+name|unmarshaller
 operator|.
 name|unmarshal
 argument_list|(

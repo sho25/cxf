@@ -19,6 +19,10 @@ name|extensions
 package|;
 end_package
 
+begin_comment
+comment|/**  * Needed for detail messages in OSGi blueprint deployment  */
+end_comment
+
 begin_class
 specifier|public
 class|class
