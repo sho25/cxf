@@ -2850,7 +2850,8 @@ operator|.
 name|getMaxRetries
 argument_list|()
 else|:
-literal|0
+operator|-
+literal|1
 expr_stmt|;
 name|AddressingProperties
 name|maps
@@ -2960,6 +2961,10 @@ name|manager
 operator|.
 name|getTimer
 argument_list|()
+operator|&&
+name|maxRetries
+operator|!=
+literal|0
 condition|)
 block|{
 name|schedule
