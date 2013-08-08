@@ -509,6 +509,24 @@ operator|.
 name|size
 argument_list|()
 operator|==
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"No UseKeyWithType elements found"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|ids
+operator|.
+name|size
+argument_list|()
+operator|==
 literal|1
 condition|)
 block|{

@@ -2012,6 +2012,15 @@ name|enableXKRSS
 operator|=
 name|enableXKRSS
 expr_stmt|;
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"enableXKRSS:"
+operator|+
+name|enableXKRSS
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|void
