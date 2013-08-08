@@ -8321,6 +8321,13 @@ return|return
 literal|null
 return|;
 block|}
+name|value
+operator|=
+name|value
+operator|.
+name|trim
+argument_list|()
+expr_stmt|;
 name|int
 name|index
 init|=
