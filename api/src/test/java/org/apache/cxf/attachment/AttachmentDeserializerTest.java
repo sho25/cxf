@@ -790,24 +790,27 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// try streaming a character off the wire
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|255
+argument_list|,
 name|attIs
 operator|.
 name|read
 argument_list|()
-operator|==
-literal|'/'
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|216
+argument_list|,
+operator|(
+name|char
+operator|)
 name|attIs
 operator|.
 name|read
 argument_list|()
-operator|==
-literal|'9'
 argument_list|)
 expr_stmt|;
 comment|//        Attachment invalid = atts.get("INVALID");
@@ -998,24 +1001,24 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// try streaming a character off the wire
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|255
+argument_list|,
 name|attIs
 operator|.
 name|read
 argument_list|()
-operator|==
-literal|'/'
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|assertEquals
 argument_list|(
+literal|216
+argument_list|,
 name|attIs
 operator|.
 name|read
 argument_list|()
-operator|==
-literal|'9'
 argument_list|)
 expr_stmt|;
 comment|//        Attachment invalid = atts.get("INVALID");

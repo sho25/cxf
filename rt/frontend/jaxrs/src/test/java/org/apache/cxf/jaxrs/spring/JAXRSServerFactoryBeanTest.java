@@ -531,6 +531,11 @@ literal|0
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|ctx
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 specifier|private
 name|void
