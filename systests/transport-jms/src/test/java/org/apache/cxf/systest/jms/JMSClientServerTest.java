@@ -3379,6 +3379,11 @@ name|UndeclaredThrowableException
 name|ex
 parameter_list|)
 block|{
+name|ctx
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 throw|throw
 operator|(
 name|Exception

@@ -2315,6 +2315,11 @@ argument_list|,
 name|g2
 argument_list|)
 expr_stmt|;
+name|ctx
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -2409,6 +2414,11 @@ expr_stmt|;
 return|return;
 block|}
 block|}
+name|ctx
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|fail
 argument_list|(
 literal|"Did not configure the client"
@@ -2564,6 +2574,11 @@ operator|.
 name|getBus
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|ctx
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@

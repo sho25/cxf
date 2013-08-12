@@ -842,6 +842,11 @@ name|next
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|context
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 finally|finally
 block|{
