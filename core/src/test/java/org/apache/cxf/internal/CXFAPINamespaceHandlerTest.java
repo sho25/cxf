@@ -100,6 +100,16 @@ literal|"http://schemas.xmlsoap.org/wsdl/"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|assertNotNull
+argument_list|(
+name|handler
+operator|.
+name|getSchemaLocation
+argument_list|(
+literal|"http://cxf.apache.org/blueprint/core"
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class
