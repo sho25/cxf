@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|wstx_msv_validation
+name|staxutils
+operator|.
+name|validation
 package|;
 end_package
 
