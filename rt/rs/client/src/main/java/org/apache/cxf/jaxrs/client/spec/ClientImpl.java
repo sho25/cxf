@@ -920,9 +920,6 @@ expr_stmt|;
 name|initTargetClientIfNeeded
 argument_list|()
 expr_stmt|;
-comment|// API gives options to register new providers between
-comment|// individual requests (sigh) or on per-WebTarget basis so we have to
-comment|// register directly on the endpoint-specific ClientFactory
 name|ClientProviderFactory
 name|pf
 init|=
@@ -1048,7 +1045,6 @@ argument_list|(
 name|providers
 argument_list|)
 expr_stmt|;
-comment|// Collect the properties which may have been reset the requests
 name|WebClient
 operator|.
 name|getConfig
