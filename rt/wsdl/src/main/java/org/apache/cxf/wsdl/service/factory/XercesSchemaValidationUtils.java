@@ -11,9 +11,33 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|xsdvalidation
+name|wsdl
+operator|.
+name|service
+operator|.
+name|factory
 package|;
 end_package
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|InputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Reader
+import|;
+end_import
 
 begin_import
 import|import
@@ -126,6 +150,20 @@ operator|.
 name|ls
 operator|.
 name|LSResourceResolver
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|StaxUtils
 import|;
 end_import
 
@@ -328,6 +366,199 @@ name|index
 argument_list|)
 return|;
 block|}
+block|}
+class|class
+name|DOMLSInput
+implements|implements
+name|LSInput
+block|{
+specifier|private
+name|String
+name|systemId
+decl_stmt|;
+specifier|private
+name|String
+name|data
+decl_stmt|;
+name|DOMLSInput
+parameter_list|(
+name|Document
+name|doc
+parameter_list|,
+name|String
+name|systemId
+parameter_list|)
+throws|throws
+name|TransformerException
+block|{
+name|this
+operator|.
+name|systemId
+operator|=
+name|systemId
+expr_stmt|;
+name|data
+operator|=
+name|StaxUtils
+operator|.
+name|toString
+argument_list|(
+name|doc
+argument_list|)
+expr_stmt|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|String
+name|getBaseURI
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|InputStream
+name|getByteStream
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|boolean
+name|getCertifiedText
+parameter_list|()
+block|{
+return|return
+literal|false
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|Reader
+name|getCharacterStream
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|String
+name|getEncoding
+parameter_list|()
+block|{
+return|return
+literal|"utf-8"
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|String
+name|getPublicId
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|String
+name|getStringData
+parameter_list|()
+block|{
+return|return
+name|data
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|String
+name|getSystemId
+parameter_list|()
+block|{
+return|return
+name|systemId
+return|;
+block|}
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setBaseURI
+parameter_list|(
+name|String
+name|baseURI
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setByteStream
+parameter_list|(
+name|InputStream
+name|byteStream
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setCertifiedText
+parameter_list|(
+name|boolean
+name|certifiedText
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setCharacterStream
+parameter_list|(
+name|Reader
+name|characterStream
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setEncoding
+parameter_list|(
+name|String
+name|encoding
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setPublicId
+parameter_list|(
+name|String
+name|publicId
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setStringData
+parameter_list|(
+name|String
+name|stringData
+parameter_list|)
+block|{         }
+comment|/** {@inheritDoc}*/
+specifier|public
+name|void
+name|setSystemId
+parameter_list|(
+name|String
+name|systemId
+parameter_list|)
+block|{         }
 block|}
 specifier|private
 name|XSImplementation
