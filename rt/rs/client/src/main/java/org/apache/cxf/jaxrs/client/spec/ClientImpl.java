@@ -1045,6 +1045,14 @@ argument_list|(
 name|providers
 argument_list|)
 expr_stmt|;
+name|pf
+operator|.
+name|setDynamicConfiguration
+argument_list|(
+name|getConfiguration
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|WebClient
 operator|.
 name|getConfig
@@ -1057,8 +1065,6 @@ argument_list|()
 operator|.
 name|putAll
 argument_list|(
-name|configImpl
-operator|.
 name|getConfiguration
 argument_list|()
 operator|.

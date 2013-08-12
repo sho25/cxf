@@ -2162,7 +2162,7 @@ name|dynamicFeatures
 control|)
 block|{
 name|FeatureContext
-name|methodConfigurable
+name|featureContext
 init|=
 operator|new
 name|MethodFeatureContextImpl
@@ -2180,7 +2180,17 @@ argument_list|(
 name|ori
 argument_list|)
 argument_list|,
-name|methodConfigurable
+name|featureContext
+argument_list|)
+expr_stmt|;
+name|super
+operator|.
+name|setDynamicConfiguration
+argument_list|(
+name|featureContext
+operator|.
+name|getConfiguration
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
