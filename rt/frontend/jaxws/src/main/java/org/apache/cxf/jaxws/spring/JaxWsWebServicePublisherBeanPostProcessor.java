@@ -715,14 +715,6 @@ expr_stmt|;
 block|}
 else|else
 block|{
-if|if
-condition|(
-name|logger
-operator|.
-name|isDebugEnabled
-argument_list|()
-condition|)
-block|{
 name|Message
 name|message
 init|=
@@ -751,7 +743,6 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|bean
