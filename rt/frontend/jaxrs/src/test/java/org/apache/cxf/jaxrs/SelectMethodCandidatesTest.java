@@ -3916,7 +3916,7 @@ argument_list|)
 expr_stmt|;
 name|acceptContentTypes
 operator|=
-literal|"application/xml,application/json"
+literal|"application/xml,application/json;q=0.8"
 expr_stmt|;
 name|ori
 operator|=
