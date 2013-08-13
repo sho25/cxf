@@ -1664,6 +1664,11 @@ block|}
 comment|//if (encryptionToken == null&& encrParts.size()> 0) {
 comment|//REVISIT - no token to encrypt with
 comment|//}
+name|WSSecBase
+name|encrBase
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|encryptionToken
@@ -1678,9 +1683,8 @@ operator|>
 literal|0
 condition|)
 block|{
-name|WSSecBase
 name|encrBase
-init|=
+operator|=
 name|doEncryption
 argument_list|(
 name|wrapper
@@ -1689,7 +1693,7 @@ name|encrParts
 argument_list|,
 literal|true
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|handleEncryptedSignedHeaders
 argument_list|(
 name|encrParts
@@ -1697,6 +1701,7 @@ argument_list|,
 name|sigParts
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|timestampEl
@@ -1764,15 +1769,16 @@ try|try
 block|{
 if|if
 condition|(
-operator|(
 name|sigParts
 operator|.
 name|size
 argument_list|()
 operator|>
 literal|0
-operator|)
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 name|initiatorWrapper
 operator|!=
 literal|null
@@ -1841,6 +1847,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+block|}
 catch|catch
 parameter_list|(
 name|WSSecurityException
@@ -1879,6 +1886,13 @@ name|doEndorse
 argument_list|()
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|encrBase
+operator|!=
+literal|null
+condition|)
+block|{
 name|encryptTokensInSecurityHeader
 argument_list|(
 name|encryptionToken
