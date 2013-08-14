@@ -846,25 +846,11 @@ expr_stmt|;
 block|}
 try|try
 block|{
-name|String
-name|ret
-init|=
 name|greeter
 operator|.
 name|greetMe
 argument_list|(
 literal|"exceed maxLength"
-argument_list|)
-decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"the ret is "
-operator|+
-name|ret
 argument_list|)
 expr_stmt|;
 name|fail
