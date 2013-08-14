@@ -1764,6 +1764,13 @@ if|if
 condition|(
 name|endpoint
 operator|!=
+literal|null
+condition|)
+block|{
+if|if
+condition|(
+name|endpoint
+operator|!=
 name|originalEndpoint
 condition|)
 block|{
@@ -1835,6 +1842,7 @@ name|getAddress
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|originalEndpoint
