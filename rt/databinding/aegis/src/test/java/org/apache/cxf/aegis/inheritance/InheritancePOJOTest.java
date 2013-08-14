@@ -352,8 +352,27 @@ argument_list|,
 name|d
 argument_list|)
 expr_stmt|;
-comment|// assertValid("count(" + employeeType + extension +
-comment|// "/xsd:sequence/*)=1", d);
+comment|// Check elements/attributes from abstract type are not in the extended type
+name|assertInvalid
+argument_list|(
+name|employeeType
+operator|+
+name|extension
+operator|+
+literal|"/xsd:sequence/xsd:element[@name='name']"
+argument_list|,
+name|d
+argument_list|)
+expr_stmt|;
+name|assertInvalid
+argument_list|(
+name|employeeType
+operator|+
+literal|"/xsd:attribute[@name='nickname']"
+argument_list|,
+name|d
+argument_list|)
+expr_stmt|;
 comment|// check for BaseUser as abstract
 name|String
 name|baseUserType
@@ -374,6 +393,15 @@ argument_list|(
 name|baseUserType
 operator|+
 literal|"/xsd:sequence/xsd:element[@name='name']"
+argument_list|,
+name|d
+argument_list|)
+expr_stmt|;
+name|assertValid
+argument_list|(
+name|baseUserType
+operator|+
+literal|"/xsd:attribute[@name='nickname']"
 argument_list|,
 name|d
 argument_list|)

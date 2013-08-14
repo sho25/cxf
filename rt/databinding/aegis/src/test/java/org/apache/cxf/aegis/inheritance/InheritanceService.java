@@ -52,6 +52,13 @@ argument_list|(
 literal|"Dan D. Man"
 argument_list|)
 expr_stmt|;
+name|e
+operator|.
+name|setNickname
+argument_list|(
+literal|"bar"
+argument_list|)
+expr_stmt|;
 return|return
 name|e
 return|;
