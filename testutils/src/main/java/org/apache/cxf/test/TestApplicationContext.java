@@ -175,6 +175,8 @@ argument_list|(
 operator|new
 name|BusEntityResolver
 argument_list|(
+name|cl
+argument_list|,
 operator|new
 name|BeansDtdResolver
 argument_list|()
