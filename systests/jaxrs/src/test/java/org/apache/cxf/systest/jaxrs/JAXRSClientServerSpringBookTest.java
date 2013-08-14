@@ -2959,6 +2959,8 @@ argument_list|(
 literal|"SuperBook2"
 argument_list|,
 literal|999L
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|Book
@@ -3084,6 +3086,8 @@ argument_list|(
 literal|"SuperBook2"
 argument_list|,
 literal|999L
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|Book
