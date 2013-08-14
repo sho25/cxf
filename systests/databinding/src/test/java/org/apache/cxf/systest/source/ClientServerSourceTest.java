@@ -547,6 +547,12 @@ name|resp
 operator|.
 name|getNode
 argument_list|()
+operator|.
+name|getFirstChild
+argument_list|()
+operator|.
+name|getFirstChild
+argument_list|()
 argument_list|)
 argument_list|)
 argument_list|)
