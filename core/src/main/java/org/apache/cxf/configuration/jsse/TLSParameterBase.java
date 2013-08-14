@@ -312,7 +312,7 @@ return|return
 name|cipherSuiteFilters
 return|;
 block|}
-comment|/**      * This sets the secure random provider and alogorithm. If left unset or set      * to null, it uses the system default.      */
+comment|/**      * This sets the secure random provider and algorithm. If left unset or set      * to null, it uses the system default.      */
 specifier|public
 specifier|final
 name|void
@@ -352,7 +352,7 @@ operator|=
 name|constraints
 expr_stmt|;
 block|}
-comment|/**      * Returns the secure random alogorithm.      */
+comment|/**      * Returns the secure random algorithm.      */
 specifier|public
 name|SecureRandom
 name|getSecureRandom

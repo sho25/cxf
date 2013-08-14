@@ -62,7 +62,7 @@ specifier|private
 name|int
 name|sslCacheTimeout
 init|=
-literal|86400000
+literal|86400
 decl_stmt|;
 specifier|private
 name|boolean
@@ -124,7 +124,7 @@ return|return
 name|sslSocketFactory
 return|;
 block|}
-comment|/**      * Returns the SSL cache timeout if it has been configured or the JDK default value      */
+comment|/**      * Returns the SSL cache timeout in seconds if it has been configured or the default value      */
 specifier|public
 name|int
 name|getSslCacheTimeout
@@ -134,7 +134,7 @@ return|return
 name|sslCacheTimeout
 return|;
 block|}
-comment|/**      * This sets the SSL Session Cache timeout value for client sessions handled by CXF      */
+comment|/**      * This sets the SSL Session Cache timeout value in seconds for client sessions handled by CXF      */
 specifier|public
 name|void
 name|setSslCacheTimeout
