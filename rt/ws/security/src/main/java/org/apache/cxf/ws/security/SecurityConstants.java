@@ -407,6 +407,15 @@ name|SUBJECT_ROLE_CLASSIFIER_TYPE
 init|=
 literal|"ws-security.role.classifier.type"
 decl_stmt|;
+comment|/**      * This configuration tag allows the user to override the default Asymmetric Signature       * algorithm (RSA-SHA1) for use in WS-SecurityPolicy, as the WS-SecurityPolicy specification      * does not allow the use of other algorithms at present.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ASYMMETRIC_SIGNATURE_ALGORITHM
+init|=
+literal|"ws-security.asymmetric.signature.algorithm"
+decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
 comment|//
@@ -757,6 +766,8 @@ block|,
 name|SUBJECT_ROLE_CLASSIFIER_TYPE
 block|,
 name|MUST_UNDERSTAND
+block|,
+name|ASYMMETRIC_SIGNATURE_ALGORITHM
 block|}
 argument_list|)
 argument_list|)
