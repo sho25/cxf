@@ -1469,6 +1469,8 @@ argument_list|()
 operator|.
 name|endsWith
 argument_list|(
+literal|":"
+operator|+
 name|namespaceURI
 argument_list|)
 condition|)
