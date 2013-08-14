@@ -1261,15 +1261,6 @@ condition|)
 block|{
 return|return;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"2"
-argument_list|)
-expr_stmt|;
 throw|throw
 name|exception
 throw|;
