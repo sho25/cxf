@@ -608,6 +608,16 @@ name|getTokenKey
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|oauthContext
+operator|.
+name|setTokenAudience
+argument_list|(
+name|accessTokenV
+operator|.
+name|getAudience
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|m
 operator|.
 name|setContent

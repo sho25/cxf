@@ -52,6 +52,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CLIENT_AUDIENCE
+init|=
+literal|"audience"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|REDIRECT_URI
 init|=
 literal|"redirect_uri"
