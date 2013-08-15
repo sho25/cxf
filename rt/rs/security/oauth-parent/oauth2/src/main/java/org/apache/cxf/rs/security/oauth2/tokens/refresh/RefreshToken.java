@@ -29,7 +29,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashSet
+name|LinkedList
 import|;
 end_import
 
@@ -39,7 +39,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Set
+name|List
 import|;
 end_import
 
@@ -135,14 +135,14 @@ extends|extends
 name|ServerAccessToken
 block|{
 specifier|private
-name|Set
+name|List
 argument_list|<
 name|String
 argument_list|>
 name|accessTokens
 init|=
 operator|new
-name|HashSet
+name|LinkedList
 argument_list|<
 name|String
 argument_list|>
@@ -215,7 +215,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|Set
+name|List
 argument_list|<
 name|String
 argument_list|>
@@ -230,7 +230,7 @@ specifier|public
 name|void
 name|setAccessTokens
 parameter_list|(
-name|Set
+name|List
 argument_list|<
 name|String
 argument_list|>
