@@ -536,7 +536,7 @@ operator|.
 name|getSubject
 argument_list|()
 argument_list|,
-literal|null
+name|params
 argument_list|)
 return|;
 block|}

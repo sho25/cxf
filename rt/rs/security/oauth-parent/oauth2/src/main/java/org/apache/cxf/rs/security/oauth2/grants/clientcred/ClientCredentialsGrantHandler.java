@@ -137,26 +137,6 @@ name|OAuthConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|utils
-operator|.
-name|OAuthUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * The "client_credentials" grant handler  */
 end_comment
@@ -208,19 +188,7 @@ operator|.
 name|getSubject
 argument_list|()
 argument_list|,
-name|OAuthUtils
-operator|.
-name|parseScope
-argument_list|(
 name|params
-operator|.
-name|getFirst
-argument_list|(
-name|OAuthConstants
-operator|.
-name|SCOPE
-argument_list|)
-argument_list|)
 argument_list|)
 return|;
 block|}

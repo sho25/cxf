@@ -414,6 +414,15 @@ name|grant
 operator|.
 name|getApprovedScopes
 argument_list|()
+argument_list|,
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|CLIENT_AUDIENCE
+argument_list|)
 argument_list|)
 return|;
 block|}
