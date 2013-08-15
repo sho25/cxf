@@ -768,19 +768,6 @@ block|{
 comment|// just unbind the channel
 if|if
 condition|(
-name|serverChannel
-operator|!=
-literal|null
-condition|)
-block|{
-name|serverChannel
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
-if|if
-condition|(
 name|servletPipeline
 operator|!=
 literal|null
@@ -792,6 +779,7 @@ name|shutdown
 argument_list|()
 expr_stmt|;
 block|}
+comment|/*if (serverChannel != null) {             try {                 serverChannel.close().sync();             } catch (InterruptedException exception) {                 // do nothing here;             }         }*/
 name|bossGroup
 operator|.
 name|shutdownGracefully
