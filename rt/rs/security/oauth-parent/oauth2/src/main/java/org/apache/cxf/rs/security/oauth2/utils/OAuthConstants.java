@@ -96,6 +96,15 @@ name|ACCESS_TOKEN_EXPIRES_IN
 init|=
 literal|"expires_in"
 decl_stmt|;
+comment|// CXF-Specific
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ACCESS_TOKEN_ISSUED_AT
+init|=
+literal|"issued_at"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -185,6 +194,15 @@ name|String
 name|MAC_TOKEN_TYPE
 init|=
 literal|"mac"
+decl_stmt|;
+comment|// CXF-specific
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REFRESH_TOKEN_TYPE
+init|=
+literal|"refresh"
 decl_stmt|;
 comment|// MAC token parameters
 comment|// Set by Access Token Service
@@ -483,16 +501,6 @@ name|UNSUPPORTED_TOKEN_TYPE
 init|=
 literal|"unsupported_token_type"
 decl_stmt|;
-comment|// CXF-Specific parameters
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ACCESS_TOKEN_ISSUED_AT
-init|=
-literal|"issued_at"
-decl_stmt|;
-comment|// End Of CXF-Specific
 specifier|private
 name|OAuthConstants
 parameter_list|()
