@@ -267,7 +267,7 @@ name|void
 name|postShutdown
 parameter_list|()
 block|{
-comment|// TODO Do we need to keep the track of the NettyHttpConduit?
+comment|// shutdown the group
 block|}
 specifier|public
 name|boolean

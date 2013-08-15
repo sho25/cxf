@@ -33,9 +33,19 @@ end_import
 
 begin_import
 import|import
-name|org
+name|io
 operator|.
-name|jboss
+name|netty
+operator|.
+name|buffer
+operator|.
+name|ByteBuf
+import|;
+end_import
+
+begin_import
+import|import
+name|io
 operator|.
 name|netty
 operator|.
@@ -45,15 +55,13 @@ name|codec
 operator|.
 name|http
 operator|.
-name|DefaultHttpRequest
+name|DefaultFullHttpRequest
 import|;
 end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -69,9 +77,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -87,9 +93,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -105,9 +109,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -139,6 +141,10 @@ name|URI
 name|uri
 decl_stmt|;
 specifier|private
+name|String
+name|method
+decl_stmt|;
+specifier|private
 name|CxfResponseCallBack
 name|cxfResponseCallback
 decl_stmt|;
@@ -168,10 +174,25 @@ name|requestUri
 expr_stmt|;
 name|this
 operator|.
+name|method
+operator|=
+name|method
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|createRequest
+parameter_list|(
+name|ByteBuf
+name|content
+parameter_list|)
+block|{
+name|this
+operator|.
 name|request
 operator|=
 operator|new
-name|DefaultHttpRequest
+name|DefaultFullHttpRequest
 argument_list|(
 name|HttpVersion
 operator|.
@@ -191,12 +212,17 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|content
 argument_list|)
 expr_stmt|;
 comment|// setup the default headers
 name|request
 operator|.
-name|setHeader
+name|headers
+argument_list|()
+operator|.
+name|set
 argument_list|(
 literal|"Connection"
 argument_list|,
@@ -205,7 +231,10 @@ argument_list|)
 expr_stmt|;
 name|request
 operator|.
-name|setHeader
+name|headers
+argument_list|()
+operator|.
+name|set
 argument_list|(
 literal|"Host"
 argument_list|,
@@ -231,21 +260,6 @@ block|{
 return|return
 name|request
 return|;
-block|}
-specifier|public
-name|void
-name|setRequest
-parameter_list|(
-name|HttpRequest
-name|request
-parameter_list|)
-block|{
-name|this
-operator|.
-name|request
-operator|=
-name|request
-expr_stmt|;
 block|}
 specifier|public
 name|HttpResponse

@@ -483,7 +483,6 @@ argument_list|(
 name|address
 argument_list|)
 expr_stmt|;
-comment|//factory.setTransportId("http://cxf.apache.org/transports/http/netty/client");
 name|Greeter
 name|greeter
 init|=
