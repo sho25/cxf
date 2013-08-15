@@ -779,7 +779,33 @@ name|shutdown
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*if (serverChannel != null) {             try {                 serverChannel.close().sync();             } catch (InterruptedException exception) {                 // do nothing here;             }         }*/
+if|if
+condition|(
+name|serverChannel
+operator|!=
+literal|null
+condition|)
+block|{
+try|try
+block|{
+name|serverChannel
+operator|.
+name|closeFuture
+argument_list|()
+operator|.
+name|sync
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|exception
+parameter_list|)
+block|{
+comment|// do nothing here;
+block|}
+block|}
 name|bossGroup
 operator|.
 name|shutdownGracefully
