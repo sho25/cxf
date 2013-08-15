@@ -97,9 +97,23 @@ end_import
 
 begin_import
 import|import
-name|org
+name|io
 operator|.
-name|jboss
+name|netty
+operator|.
+name|handler
+operator|.
+name|codec
+operator|.
+name|http
+operator|.
+name|ClientCookieEncoder
+import|;
+end_import
+
+begin_import
+import|import
+name|io
 operator|.
 name|netty
 operator|.
@@ -115,9 +129,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -127,15 +139,13 @@ name|codec
 operator|.
 name|http
 operator|.
-name|CookieEncoder
+name|HttpContent
 import|;
 end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -151,9 +161,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -169,9 +177,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -187,9 +193,7 @@ end_import
 
 begin_import
 import|import static
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -209,9 +213,7 @@ end_import
 
 begin_import
 import|import static
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -272,6 +274,9 @@ operator|=
 operator|new
 name|NettyServletOutputStream
 argument_list|(
+operator|(
+name|HttpContent
+operator|)
 name|response
 argument_list|)
 expr_stmt|;
@@ -305,18 +310,19 @@ name|Cookie
 name|cookie
 parameter_list|)
 block|{
-name|CookieEncoder
-name|cookieEncoder
-init|=
-operator|new
-name|CookieEncoder
-argument_list|(
-literal|true
-argument_list|)
-decl_stmt|;
-name|cookieEncoder
+name|HttpHeaders
 operator|.
-name|addCookie
+name|addHeader
+argument_list|(
+name|this
+operator|.
+name|originalResponse
+argument_list|,
+name|SET_COOKIE
+argument_list|,
+name|ClientCookieEncoder
+operator|.
+name|encode
 argument_list|(
 name|cookie
 operator|.
@@ -328,21 +334,6 @@ operator|.
 name|getValue
 argument_list|()
 argument_list|)
-expr_stmt|;
-name|HttpHeaders
-operator|.
-name|addHeader
-argument_list|(
-name|this
-operator|.
-name|originalResponse
-argument_list|,
-name|SET_COOKIE
-argument_list|,
-name|cookieEncoder
-operator|.
-name|encode
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -452,7 +443,10 @@ name|this
 operator|.
 name|originalResponse
 operator|.
-name|containsHeader
+name|headers
+argument_list|()
+operator|.
+name|contains
 argument_list|(
 name|name
 argument_list|)
@@ -778,7 +772,10 @@ name|this
 operator|.
 name|originalResponse
 operator|.
-name|clearHeaders
+name|headers
+argument_list|()
+operator|.
+name|clear
 argument_list|()
 expr_stmt|;
 name|this

@@ -269,9 +269,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -283,9 +281,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -301,9 +297,23 @@ end_import
 
 begin_import
 import|import
-name|org
+name|io
 operator|.
-name|jboss
+name|netty
+operator|.
+name|handler
+operator|.
+name|codec
+operator|.
+name|http
+operator|.
+name|HttpContent
+import|;
+end_import
+
+begin_import
+import|import
+name|io
 operator|.
 name|netty
 operator|.
@@ -319,9 +329,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -339,9 +347,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -357,9 +363,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -375,9 +379,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -391,9 +393,7 @@ end_import
 
 begin_import
 import|import static
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -484,14 +484,6 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|private
-name|CookieDecoder
-name|cookieDecoder
-init|=
-operator|new
-name|CookieDecoder
-argument_list|()
-decl_stmt|;
-specifier|private
 name|String
 name|characterEncoding
 decl_stmt|;
@@ -545,6 +537,9 @@ operator|=
 operator|new
 name|NettyServletInputStream
 argument_list|(
+operator|(
+name|HttpContent
+operator|)
 name|request
 argument_list|)
 expr_stmt|;
@@ -587,7 +582,7 @@ name|sslHandler
 init|=
 name|channelHandlerContext
 operator|.
-name|getPipeline
+name|pipeline
 argument_list|()
 operator|.
 name|get
@@ -609,7 +604,7 @@ name|session
 init|=
 name|sslHandler
 operator|.
-name|getEngine
+name|engine
 argument_list|()
 operator|.
 name|getSession
@@ -695,7 +690,10 @@ name|this
 operator|.
 name|originalRequest
 operator|.
-name|getHeader
+name|headers
+argument_list|()
+operator|.
+name|get
 argument_list|(
 name|COOKIE
 argument_list|)
@@ -709,9 +707,7 @@ condition|)
 block|{
 name|Set
 argument_list|<
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -725,7 +721,7 @@ name|Cookie
 argument_list|>
 name|cookies
 init|=
-name|cookieDecoder
+name|CookieDecoder
 operator|.
 name|decode
 argument_list|(
@@ -761,9 +757,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -820,6 +814,9 @@ name|cookie
 operator|.
 name|setMaxAge
 argument_list|(
+operator|(
+name|int
+operator|)
 name|c
 operator|.
 name|getMaxAge
@@ -959,7 +956,10 @@ name|this
 operator|.
 name|originalRequest
 operator|.
-name|getHeaderNames
+name|headers
+argument_list|()
+operator|.
+name|names
 argument_list|()
 argument_list|)
 return|;
@@ -988,7 +988,10 @@ name|this
 operator|.
 name|originalRequest
 operator|.
-name|getHeaders
+name|headers
+argument_list|()
+operator|.
+name|getAll
 argument_list|(
 name|name
 argument_list|)
@@ -1036,7 +1039,7 @@ operator|.
 name|getMethod
 argument_list|()
 operator|.
-name|getName
+name|name
 argument_list|()
 return|;
 block|}
@@ -1338,7 +1341,7 @@ name|this
 operator|.
 name|queryStringDecoder
 operator|.
-name|getParameters
+name|parameters
 argument_list|()
 return|;
 block|}
@@ -1363,7 +1366,7 @@ name|this
 operator|.
 name|queryStringDecoder
 operator|.
-name|getParameters
+name|parameters
 argument_list|()
 argument_list|)
 return|;
@@ -1389,7 +1392,7 @@ name|this
 operator|.
 name|queryStringDecoder
 operator|.
-name|getParameters
+name|parameters
 argument_list|()
 operator|.
 name|get
@@ -1682,7 +1685,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getRemoteAddress
+name|remoteAddress
 argument_list|()
 decl_stmt|;
 return|return
@@ -1713,7 +1716,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getRemoteAddress
+name|remoteAddress
 argument_list|()
 decl_stmt|;
 return|return
@@ -1741,7 +1744,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getRemoteAddress
+name|remoteAddress
 argument_list|()
 decl_stmt|;
 return|return
@@ -1769,7 +1772,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getLocalAddress
+name|localAddress
 argument_list|()
 decl_stmt|;
 return|return
@@ -1797,7 +1800,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getLocalAddress
+name|localAddress
 argument_list|()
 decl_stmt|;
 return|return
@@ -1873,7 +1876,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getPipeline
+name|pipeline
 argument_list|()
 operator|.
 name|get
@@ -1915,7 +1918,7 @@ operator|.
 name|get
 argument_list|()
 operator|.
-name|getLocalAddress
+name|localAddress
 argument_list|()
 decl_stmt|;
 return|return

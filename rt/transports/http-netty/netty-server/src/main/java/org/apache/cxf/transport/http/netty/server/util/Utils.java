@@ -155,9 +155,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -173,9 +171,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -191,9 +187,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -209,9 +203,7 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -227,9 +219,7 @@ end_import
 
 begin_import
 import|import static
-name|org
-operator|.
-name|jboss
+name|io
 operator|.
 name|netty
 operator|.
@@ -577,7 +567,10 @@ name|cookieString
 init|=
 name|request
 operator|.
-name|getHeader
+name|headers
+argument_list|()
+operator|.
+name|get
 argument_list|(
 name|COOKIE
 argument_list|)
@@ -602,20 +595,13 @@ name|Cookie
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|CookieDecoder
-name|cookieDecoder
-init|=
-operator|new
-name|CookieDecoder
-argument_list|()
-decl_stmt|;
 name|Set
 argument_list|<
 name|Cookie
 argument_list|>
 name|cookies
 init|=
-name|cookieDecoder
+name|CookieDecoder
 operator|.
 name|decode
 argument_list|(
@@ -680,7 +666,10 @@ name|cookieString
 init|=
 name|response
 operator|.
-name|getHeader
+name|headers
+argument_list|()
+operator|.
+name|get
 argument_list|(
 name|COOKIE
 argument_list|)
@@ -705,20 +694,13 @@ name|Cookie
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|CookieDecoder
-name|cookieDecoder
-init|=
-operator|new
-name|CookieDecoder
-argument_list|()
-decl_stmt|;
 name|Set
 argument_list|<
 name|Cookie
 argument_list|>
 name|cookies
 init|=
-name|cookieDecoder
+name|CookieDecoder
 operator|.
 name|decode
 argument_list|(
