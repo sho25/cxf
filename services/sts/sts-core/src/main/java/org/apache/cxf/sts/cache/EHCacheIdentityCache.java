@@ -602,6 +602,11 @@ name|EHCacheManagerHolder
 operator|.
 name|getCacheManager
 argument_list|(
+name|bus
+operator|.
+name|getId
+argument_list|()
+argument_list|,
 name|configFileURL
 argument_list|)
 expr_stmt|;
@@ -614,6 +619,11 @@ name|EHCacheManagerHolder
 operator|.
 name|getCacheManager
 argument_list|(
+name|bus
+operator|.
+name|getId
+argument_list|()
+argument_list|,
 name|getDefaultConfigFileURL
 argument_list|()
 argument_list|)
