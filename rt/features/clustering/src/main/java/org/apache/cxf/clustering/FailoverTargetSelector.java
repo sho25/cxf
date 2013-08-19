@@ -1399,7 +1399,7 @@ operator|&&
 operator|!
 name|requestURI
 operator|.
-name|startsWith
+name|equals
 argument_list|(
 name|endpointAddress
 argument_list|)
