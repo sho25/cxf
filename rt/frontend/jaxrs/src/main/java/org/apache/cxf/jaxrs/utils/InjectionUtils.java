@@ -8767,6 +8767,12 @@ condition|)
 block|{
 name|type
 operator|=
+name|processGenericTypeIfNeeded
+argument_list|(
+name|serviceCls
+argument_list|,
+name|targetType
+argument_list|,
 operator|(
 operator|(
 name|GenericEntity
@@ -8779,6 +8785,7 @@ operator|)
 operator|.
 name|getType
 argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 elseif|else
