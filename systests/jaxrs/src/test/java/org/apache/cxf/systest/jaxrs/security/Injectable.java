@@ -33,6 +33,20 @@ name|SecurityContext
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|UriInfo
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -43,6 +57,13 @@ name|setSecurityContext
 parameter_list|(
 name|SecurityContext
 name|sc
+parameter_list|)
+function_decl|;
+name|void
+name|setUriInfo
+parameter_list|(
+name|UriInfo
+name|ui
 parameter_list|)
 function_decl|;
 block|}
