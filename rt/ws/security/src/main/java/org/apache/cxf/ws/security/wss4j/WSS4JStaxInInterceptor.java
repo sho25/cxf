@@ -951,12 +951,12 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|configureProperties
+name|configureCallbackHandler
 argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|configureCallbackHandler
+name|configureProperties
 argument_list|(
 name|soapMessage
 argument_list|)

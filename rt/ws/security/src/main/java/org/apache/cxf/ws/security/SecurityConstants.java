@@ -416,6 +416,15 @@ name|ASYMMETRIC_SIGNATURE_ALGORITHM
 init|=
 literal|"ws-security.asymmetric.signature.algorithm"
 decl_stmt|;
+comment|/**      * This holds a reference to a PasswordEncryptor instance, which is used to encrypt or       * decrypt passwords in the Merlin Crypto implementation (or any custom Crypto implementations).      *       * By default, WSS4J uses the StrongJasyptPasswordEncryptor, which must be instantiated with a       * master password to use to decrypt keystore passwords in the Merlin Crypto properties file.      * This master password is obtained via the CallbackHandler defined via PW_CALLBACK_CLASS      * or PW_CALLBACK_REF.      *       * The encrypted passwords must be stored in the format "ENC(encoded encrypted password)".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PASSWORD_ENCRYPTOR_INSTANCE
+init|=
+literal|"ws-security.password.encryptor.instance"
+decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
 comment|//
@@ -768,6 +777,8 @@ block|,
 name|MUST_UNDERSTAND
 block|,
 name|ASYMMETRIC_SIGNATURE_ALGORITHM
+block|,
+name|PASSWORD_ENCRYPTOR_INSTANCE
 block|}
 argument_list|)
 argument_list|)
