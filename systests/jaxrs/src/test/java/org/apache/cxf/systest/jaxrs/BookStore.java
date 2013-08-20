@@ -935,22 +935,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|impl
-operator|.
-name|ResourceContextImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
 name|utils
 operator|.
 name|InjectionUtils
@@ -5927,14 +5911,8 @@ name|ResourceContext
 name|rc
 parameter_list|)
 block|{
-comment|// This cast is temporarily
 return|return
-operator|(
-operator|(
-name|ResourceContextImpl
-operator|)
 name|rc
-operator|)
 operator|.
 name|initResource
 argument_list|(
