@@ -277,26 +277,6 @@ name|options
 operator|.
 name|KarafDistributionOption
 operator|.
-name|keepRuntimeFolder
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
-name|karaf
-operator|.
-name|options
-operator|.
-name|KarafDistributionOption
-operator|.
 name|logLevel
 import|;
 end_import
@@ -502,9 +482,6 @@ name|value
 argument_list|(
 literal|"true"
 argument_list|)
-block|,
-name|keepRuntimeFolder
-argument_list|()
 block|,
 name|replaceConfigurationFile
 argument_list|(
