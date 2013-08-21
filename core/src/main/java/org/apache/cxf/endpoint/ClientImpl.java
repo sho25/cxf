@@ -5140,7 +5140,8 @@ name|setExchangeProperties
 argument_list|(
 name|exchange
 argument_list|,
-literal|null
+name|getEndpoint
+argument_list|()
 argument_list|,
 literal|null
 argument_list|)
@@ -5587,10 +5588,6 @@ condition|(
 name|endpoint
 operator|!=
 literal|null
-operator|&&
-name|boi
-operator|!=
-literal|null
 condition|)
 block|{
 name|EndpointInfo
@@ -5601,6 +5598,13 @@ operator|.
 name|getEndpointInfo
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|boi
+operator|!=
+literal|null
+condition|)
+block|{
 name|exchange
 operator|.
 name|put
@@ -5615,6 +5619,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|QName
 name|serviceQName
 init|=
