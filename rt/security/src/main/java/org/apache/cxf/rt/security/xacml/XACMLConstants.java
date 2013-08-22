@@ -208,9 +208,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|RESOURCE_WSDL_URI_ID
+name|RESOURCE_WSDL_ENDPOINT
 init|=
-literal|"urn:cxf:apache:org:wsdl:resource-id"
+literal|"urn:cxf:apache:org:wsdl:endpoint"
 decl_stmt|;
 specifier|public
 specifier|static

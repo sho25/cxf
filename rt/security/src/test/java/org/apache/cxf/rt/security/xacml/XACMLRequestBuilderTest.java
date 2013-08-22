@@ -1023,7 +1023,7 @@ if|if
 condition|(
 name|XACMLConstants
 operator|.
-name|RESOURCE_WSDL_URI_ID
+name|RESOURCE_WSDL_ENDPOINT
 operator|.
 name|equals
 argument_list|(
@@ -1380,7 +1380,7 @@ if|if
 condition|(
 name|XACMLConstants
 operator|.
-name|RESOURCE_WSDL_URI_ID
+name|RESOURCE_WSDL_ENDPOINT
 operator|.
 name|equals
 argument_list|(

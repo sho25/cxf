@@ -584,9 +584,9 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// Resource URI
+comment|// WSDL Endpoint
 name|String
-name|resourceURI
+name|endpointURI
 init|=
 name|messageParser
 operator|.
@@ -603,7 +603,7 @@ name|createAttribute
 argument_list|(
 name|XACMLConstants
 operator|.
-name|RESOURCE_WSDL_URI_ID
+name|RESOURCE_WSDL_ENDPOINT
 argument_list|,
 name|XACMLConstants
 operator|.
@@ -611,7 +611,7 @@ name|XS_STRING
 argument_list|,
 literal|null
 argument_list|,
-name|resourceURI
+name|endpointURI
 argument_list|)
 argument_list|)
 expr_stmt|;
