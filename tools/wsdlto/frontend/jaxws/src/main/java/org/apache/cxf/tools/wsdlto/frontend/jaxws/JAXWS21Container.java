@@ -114,6 +114,15 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+name|String
+name|getServiceTarget
+parameter_list|()
+block|{
+return|return
+literal|"jaxws21"
+return|;
+block|}
+specifier|public
 name|void
 name|validate
 parameter_list|(
