@@ -961,7 +961,7 @@ name|common
 operator|.
 name|crypto
 operator|.
-name|PasswordEncryptor
+name|JasyptPasswordEncryptor
 import|;
 end_import
 
@@ -977,7 +977,7 @@ name|common
 operator|.
 name|crypto
 operator|.
-name|StrongJasyptPasswordEncryptor
+name|PasswordEncryptor
 import|;
 end_import
 
@@ -3368,7 +3368,7 @@ condition|)
 block|{
 return|return
 operator|new
-name|StrongJasyptPasswordEncryptor
+name|JasyptPasswordEncryptor
 argument_list|(
 name|callbackHandler
 argument_list|)
