@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|common
 operator|.
-name|client
+name|util
 package|;
 end_package
 
