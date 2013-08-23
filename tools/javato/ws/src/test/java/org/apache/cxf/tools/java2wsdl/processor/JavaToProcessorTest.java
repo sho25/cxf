@@ -4791,6 +4791,7 @@ operator|+
 literal|"/exception_prop_order.wsdl"
 argument_list|)
 expr_stmt|;
+comment|//env.put(ToolConstants.CFG_OUTPUTFILE, "/x1/tmp/exception_prop_order.wsdl");
 name|env
 operator|.
 name|put

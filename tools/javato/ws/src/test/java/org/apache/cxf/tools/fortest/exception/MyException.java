@@ -61,6 +61,8 @@ block|,
 literal|"from"
 block|,
 literal|"id"
+block|,
+literal|"message"
 block|}
 argument_list|)
 specifier|public
