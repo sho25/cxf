@@ -3936,13 +3936,13 @@ block|}
 comment|// Create element in xsd:sequence for Exception.class
 if|if
 condition|(
-name|cls
-operator|.
-name|equals
-argument_list|(
 name|Exception
 operator|.
 name|class
+operator|.
+name|isAssignableFrom
+argument_list|(
+name|cls
 argument_list|)
 condition|)
 block|{
