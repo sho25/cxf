@@ -278,6 +278,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|isGET
+argument_list|(
+name|message
+argument_list|)
+operator|||
 name|checkContextProperty
 argument_list|(
 name|message
