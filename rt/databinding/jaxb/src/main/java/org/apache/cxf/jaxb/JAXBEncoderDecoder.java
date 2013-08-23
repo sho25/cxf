@@ -2620,10 +2620,27 @@ decl_stmt|;
 if|if
 condition|(
 name|sch
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Schema associated with "
+operator|+
+name|namespace
+operator|+
+literal|" is null"
+argument_list|)
+expr_stmt|;
+name|namespace
+operator|=
+literal|null
+expr_stmt|;
+block|}
+elseif|else
 if|if
 condition|(
 operator|!
@@ -2636,21 +2653,6 @@ block|{
 name|namespace
 operator|=
 literal|null
-expr_stmt|;
-block|}
-block|}
-else|else
-block|{
-name|LOG
-operator|.
-name|warning
-argument_list|(
-literal|"Schema associated with "
-operator|+
-name|namespace
-operator|+
-literal|" is null"
-argument_list|)
 expr_stmt|;
 block|}
 name|List
