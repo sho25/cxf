@@ -468,7 +468,9 @@ operator|.
 name|getLineNumber
 argument_list|()
 operator|+
-literal|"\n"
+name|Message
+operator|.
+name|EXCEPTION_CAUSE_SUFFIX
 argument_list|)
 expr_stmt|;
 block|}
@@ -507,7 +509,9 @@ operator|.
 name|getMessage
 argument_list|()
 operator|+
-literal|"\n"
+name|Message
+operator|.
+name|EXCEPTION_CAUSE_SUFFIX
 argument_list|)
 expr_stmt|;
 block|}

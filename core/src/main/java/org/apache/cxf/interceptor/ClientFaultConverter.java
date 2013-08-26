@@ -1630,7 +1630,9 @@ name|StringTokenizer
 argument_list|(
 name|ss
 argument_list|,
-literal|"\n"
+name|Message
+operator|.
+name|EXCEPTION_CAUSE_SUFFIX
 argument_list|)
 decl_stmt|;
 while|while

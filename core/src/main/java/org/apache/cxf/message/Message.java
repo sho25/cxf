@@ -268,6 +268,12 @@ name|EXCEPTION_MESSAGE_CAUSE_ENABLED
 init|=
 literal|"exceptionMessageCauseEnabled"
 decl_stmt|;
+comment|/**      * A very unique delimiter used for exception with FAULT_STACKTRACE_ENABLED enable,       * which is easy for client to differentiate the cause and stacktrace when unmarsall       * a fault message       */
+name|String
+name|EXCEPTION_CAUSE_SUFFIX
+init|=
+literal|"#*#"
+decl_stmt|;
 name|String
 name|CONTENT_TYPE
 init|=
