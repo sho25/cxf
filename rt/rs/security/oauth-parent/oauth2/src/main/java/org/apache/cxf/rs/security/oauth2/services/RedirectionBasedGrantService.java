@@ -681,7 +681,6 @@ name|isGrantSupportedForClient
 argument_list|(
 name|client
 argument_list|,
-operator|!
 name|canSupportPublicClient
 argument_list|(
 name|client
