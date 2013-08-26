@@ -1013,15 +1013,6 @@ name|isValid
 return|;
 block|}
 specifier|public
-name|boolean
-name|isAudienceIsEndpointAddress
-parameter_list|()
-block|{
-return|return
-name|audienceIsEndpointAddress
-return|;
-block|}
-specifier|public
 name|void
 name|setAudienceIsEndpointAddress
 parameter_list|(
