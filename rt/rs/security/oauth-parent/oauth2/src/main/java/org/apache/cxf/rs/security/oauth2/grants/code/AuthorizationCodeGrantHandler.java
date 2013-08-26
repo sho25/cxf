@@ -415,14 +415,10 @@ operator|.
 name|getApprovedScopes
 argument_list|()
 argument_list|,
-name|params
+name|grant
 operator|.
-name|getFirst
-argument_list|(
-name|OAuthConstants
-operator|.
-name|CLIENT_AUDIENCE
-argument_list|)
+name|getAudience
+argument_list|()
 argument_list|)
 return|;
 block|}
