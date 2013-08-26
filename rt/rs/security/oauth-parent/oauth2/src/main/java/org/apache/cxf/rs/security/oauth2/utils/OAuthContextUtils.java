@@ -151,6 +151,36 @@ specifier|private
 name|OAuthContextUtils
 parameter_list|()
 block|{     }
+comment|/**      * @param mc the {@link MessageContext}      * @return the id of the UserSubject of the logged in user or resource owner      * @throws WebApplicationException with Status 401 if not authenticated      */
+specifier|public
+specifier|static
+name|String
+name|resolveUserId
+parameter_list|(
+specifier|final
+name|MessageContext
+name|mc
+parameter_list|)
+block|{
+specifier|final
+name|OAuthContext
+name|oauth
+init|=
+name|getContext
+argument_list|(
+name|mc
+argument_list|)
+decl_stmt|;
+return|return
+name|oauth
+operator|.
+name|getSubject
+argument_list|()
+operator|.
+name|getId
+argument_list|()
+return|;
+block|}
 comment|/**      * @param mc the {@link MessageContext}      * @return the name of the UserSubject of the logged in user or resource owner      * @throws WebApplicationException with Status 401 if not authenticated      */
 specifier|public
 specifier|static
