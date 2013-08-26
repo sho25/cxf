@@ -1871,34 +1871,6 @@ operator|.
 name|getOutMessage
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|jmsConfig
-operator|.
-name|isPubSubDomain
-argument_list|()
-condition|)
-block|{
-comment|// we will never receive a non-oneway invocation in pub-sub
-comment|// domain from CXF client - however a mis-behaving pure JMS
-comment|// client could conceivably make suce an invocation, in which
-comment|// case we silently discard the reply
-name|getLogger
-argument_list|()
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|WARNING
-argument_list|,
-literal|"discarding reply for non-oneway invocation "
-argument_list|,
-literal|"with 'topic' destinationStyle"
-argument_list|)
-expr_stmt|;
-return|return;
-block|}
 try|try
 block|{
 specifier|final
