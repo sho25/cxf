@@ -278,6 +278,12 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
+name|isRequestor
+argument_list|(
+name|message
+argument_list|)
+operator|&&
 name|isGET
 argument_list|(
 name|message
