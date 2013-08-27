@@ -35,6 +35,18 @@ name|net
 operator|.
 name|ssl
 operator|.
+name|HostnameVerifier
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|net
+operator|.
+name|ssl
+operator|.
 name|SSLSocketFactory
 import|;
 end_import
@@ -72,6 +84,34 @@ specifier|private
 name|boolean
 name|useHttpsURLConnectionDefaultHostnameVerifier
 decl_stmt|;
+specifier|private
+name|HostnameVerifier
+name|hostnameVerifier
+decl_stmt|;
+comment|/**      * Set custom HostnameVerifier      * @param verifier hostname verifier      */
+specifier|public
+name|void
+name|setHostnameVerifier
+parameter_list|(
+name|HostnameVerifier
+name|verifier
+parameter_list|)
+block|{
+name|hostnameVerifier
+operator|=
+name|verifier
+expr_stmt|;
+block|}
+comment|/**      * Get custom HostnameVerifier      * @return hostname verifier      */
+specifier|public
+name|HostnameVerifier
+name|getHostnameVerifier
+parameter_list|()
+block|{
+return|return
+name|hostnameVerifier
+return|;
+block|}
 comment|/**      * Set whether or not JSEE should omit checking if the host name      * specified in the URL matches that of the Common Name      * (CN) on the server's certificate. Default is false;        * this attribute should not be set to true during production use.      */
 specifier|public
 name|void
