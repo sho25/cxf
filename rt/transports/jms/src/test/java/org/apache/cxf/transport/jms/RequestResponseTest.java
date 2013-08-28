@@ -965,6 +965,8 @@ argument_list|(
 literal|false
 argument_list|)
 decl_stmt|;
+try|try
+block|{
 comment|// set up MessageObserver for handling the conduit message
 name|MessageObserver
 name|observer
@@ -1091,30 +1093,9 @@ argument_list|(
 name|inMessage
 argument_list|)
 expr_stmt|;
-comment|// wait for a while for the jms session recycling
-name|inMessage
-operator|=
-literal|null
-expr_stmt|;
-comment|// Send a second message to check for an issue
-comment|// Where the session was closed the second time
-name|sendoutMessage
-argument_list|(
-name|conduit
-argument_list|,
-name|outMessage
-argument_list|,
-literal|false
-argument_list|)
-expr_stmt|;
-name|waitForReceiveInMessage
-argument_list|()
-expr_stmt|;
-name|verifyReceivedMessage
-argument_list|(
-name|inMessage
-argument_list|)
-expr_stmt|;
+block|}
+finally|finally
+block|{
 name|conduit
 operator|.
 name|close
@@ -1125,6 +1106,7 @@ operator|.
 name|shutdown
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

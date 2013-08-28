@@ -608,7 +608,7 @@ parameter_list|)
 block|{
 name|assertFalse
 argument_list|(
-literal|"JMSConduit can't perpare to send out message"
+literal|"JMSConduit can't prepare to send out message"
 argument_list|,
 literal|false
 argument_list|)
@@ -848,6 +848,28 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|jmsConfig
+operator|!=
+literal|null
+operator|&&
+name|jmsConfig
+operator|.
+name|getReceiveTimeout
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+name|jmsConfig
+operator|.
+name|setReceiveTimeout
+argument_list|(
+literal|5000L
+argument_list|)
+expr_stmt|;
+block|}
 name|JMSConduit
 name|jmsConduit
 init|=
