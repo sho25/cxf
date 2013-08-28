@@ -33,6 +33,14 @@ extends|extends
 name|AccessToken
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|831870452726298523L
+decl_stmt|;
+specifier|private
 name|String
 name|scope
 decl_stmt|;

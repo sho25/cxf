@@ -114,6 +114,15 @@ name|BearerAccessToken
 extends|extends
 name|ServerAccessToken
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|3614732043728799245L
+decl_stmt|;
 specifier|public
 name|BearerAccessToken
 parameter_list|(

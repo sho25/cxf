@@ -114,6 +114,15 @@ name|MacAccessToken
 extends|extends
 name|ServerAccessToken
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4331703769692080818L
+decl_stmt|;
 specifier|public
 name|MacAccessToken
 parameter_list|(

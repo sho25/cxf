@@ -54,6 +54,14 @@ extends|extends
 name|AccessToken
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|638776204861456064L
+decl_stmt|;
+specifier|private
 name|String
 name|grantType
 decl_stmt|;

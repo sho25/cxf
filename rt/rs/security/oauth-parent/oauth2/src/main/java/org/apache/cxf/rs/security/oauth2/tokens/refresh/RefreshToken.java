@@ -135,6 +135,14 @@ extends|extends
 name|ServerAccessToken
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|2837120382251693874L
+decl_stmt|;
+specifier|private
 name|List
 argument_list|<
 name|String
