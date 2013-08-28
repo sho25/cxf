@@ -2457,6 +2457,10 @@ if|if
 condition|(
 operator|!
 name|chunking
+operator|&&
+name|wrappedStream
+operator|!=
+literal|null
 condition|)
 block|{
 name|CachedOutputStream
