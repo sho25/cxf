@@ -484,14 +484,6 @@ argument_list|()
 operator|==
 literal|null
 operator|&&
-name|client
-operator|.
-name|getRedirectUris
-argument_list|()
-operator|.
-name|isEmpty
-argument_list|()
-operator|&&
 name|clientSecret
 operator|==
 literal|null
