@@ -17,7 +17,7 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|saml
+name|utils
 package|;
 end_package
 

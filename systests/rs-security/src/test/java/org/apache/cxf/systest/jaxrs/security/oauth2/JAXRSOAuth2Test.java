@@ -293,7 +293,7 @@ name|oauth2
 operator|.
 name|saml
 operator|.
-name|Base64UrlUtility
+name|Constants
 import|;
 end_import
 
@@ -311,9 +311,9 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|saml
+name|utils
 operator|.
-name|Constants
+name|Base64UrlUtility
 import|;
 end_import
 
