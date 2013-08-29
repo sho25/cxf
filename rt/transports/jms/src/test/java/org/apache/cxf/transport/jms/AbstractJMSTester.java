@@ -340,6 +340,10 @@ specifier|protected
 name|Message
 name|inMessage
 decl_stmt|;
+specifier|protected
+name|String
+name|wsdlURL
+decl_stmt|;
 specifier|public
 specifier|static
 name|void
@@ -450,6 +454,10 @@ literal|"cxf.config.file"
 argument_list|)
 expr_stmt|;
 block|}
+name|wsdlURL
+operator|=
+literal|null
+expr_stmt|;
 block|}
 specifier|protected
 name|void
@@ -479,6 +487,13 @@ argument_list|(
 name|wsdl
 argument_list|)
 decl_stmt|;
+name|wsdlURL
+operator|=
+name|wsdlUrl
+operator|.
+name|toString
+argument_list|()
+expr_stmt|;
 name|assertNotNull
 argument_list|(
 name|wsdlUrl
@@ -490,10 +505,7 @@ name|updateWsdlExtensors
 argument_list|(
 name|bus
 argument_list|,
-name|wsdlUrl
-operator|.
-name|toString
-argument_list|()
+name|wsdlURL
 argument_list|)
 expr_stmt|;
 name|WSDLServiceFactory
@@ -504,7 +516,7 @@ name|WSDLServiceFactory
 argument_list|(
 name|bus
 argument_list|,
-name|wsdlUrl
+name|wsdlURL
 argument_list|,
 operator|new
 name|QName
