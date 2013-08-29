@@ -845,6 +845,8 @@ name|rootInstance
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
 name|persistRoots
 argument_list|(
 name|exchange
@@ -854,6 +856,7 @@ argument_list|,
 name|provider
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private

@@ -29,13 +29,7 @@ extends|extends
 name|BookStoreStorage
 implements|implements
 name|BookInterface
-implements|,
-name|LifecycleInterface
 block|{
-specifier|private
-name|boolean
-name|postConstructCalled
-decl_stmt|;
 specifier|public
 name|BookStoreWithInterface
 parameter_list|()
@@ -73,23 +67,6 @@ argument_list|,
 name|book
 argument_list|)
 expr_stmt|;
-block|}
-specifier|public
-name|void
-name|postConstruct
-parameter_list|()
-block|{
-name|postConstructCalled
-operator|=
-literal|true
-expr_stmt|;
-block|}
-specifier|public
-name|void
-name|preDestroy
-parameter_list|()
-block|{
-comment|//System.out.println("PreDestroy called");
 block|}
 specifier|public
 name|Book
