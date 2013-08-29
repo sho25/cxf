@@ -308,8 +308,9 @@ decl_stmt|;
 if|if
 condition|(
 name|mgr
-operator|!=
-literal|null
+operator|.
+name|canValidate
+argument_list|()
 condition|)
 block|{
 name|mgr

@@ -839,7 +839,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"cvc-maxLength-valid"
+literal|"the length of the value is 96, but the required maximum is 30"
 argument_list|)
 argument_list|)
 expr_stmt|;
