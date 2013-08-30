@@ -472,7 +472,7 @@ block|{
 return|return
 name|m
 operator|.
-name|get
+name|getContent
 argument_list|(
 name|OutputStream
 operator|.
@@ -763,7 +763,7 @@ parameter_list|)
 block|{
 name|m
 operator|.
-name|put
+name|setContent
 argument_list|(
 name|OutputStream
 operator|.
