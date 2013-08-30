@@ -379,7 +379,7 @@ name|stream
 expr_stmt|;
 name|m
 operator|.
-name|put
+name|setContent
 argument_list|(
 name|InputStream
 operator|.
