@@ -940,6 +940,12 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+operator|!
+name|readNullAsString
+condition|)
+block|{
 name|conf
 operator|.
 name|setReadNullAsEmptyString
@@ -947,6 +953,7 @@ argument_list|(
 name|readNullAsString
 argument_list|)
 expr_stmt|;
+block|}
 name|XMLInputFactory
 name|factory
 init|=
