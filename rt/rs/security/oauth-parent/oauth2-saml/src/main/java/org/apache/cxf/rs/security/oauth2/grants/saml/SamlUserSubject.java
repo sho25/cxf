@@ -81,6 +81,15 @@ extends|extends
 name|UserSubject
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1135272749329239037L
+decl_stmt|;
+specifier|private
 name|Claims
 name|claims
 decl_stmt|;
