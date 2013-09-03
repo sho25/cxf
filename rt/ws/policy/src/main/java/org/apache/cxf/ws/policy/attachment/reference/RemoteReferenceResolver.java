@@ -65,9 +65,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|resource
 operator|.
-name|DOMUtils
+name|ExtendedURIResolver
 import|;
 end_import
 
@@ -79,9 +79,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|resource
+name|staxutils
 operator|.
-name|ExtendedURIResolver
+name|StaxUtils
 import|;
 end_import
 
@@ -271,9 +271,9 @@ try|try
 block|{
 name|doc
 operator|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|is
 operator|.

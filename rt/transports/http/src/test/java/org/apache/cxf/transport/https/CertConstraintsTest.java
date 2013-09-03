@@ -141,9 +141,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|DOMUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -866,9 +866,9 @@ name|name
 argument_list|)
 decl_stmt|;
 return|return
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|inStream
 argument_list|)

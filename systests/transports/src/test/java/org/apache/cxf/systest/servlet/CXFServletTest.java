@@ -225,9 +225,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|staxutils
 operator|.
-name|DOMUtils
+name|StaxUtils
 import|;
 end_import
 
@@ -414,9 +414,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|response
 operator|.
@@ -991,9 +991,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|res
 operator|.
@@ -1091,9 +1091,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|res
 operator|.
@@ -1211,9 +1211,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|res
 operator|.
@@ -1279,9 +1279,9 @@ argument_list|)
 expr_stmt|;
 name|doc
 operator|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|res
 operator|.
@@ -1368,9 +1368,9 @@ expr_stmt|;
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|res
 operator|.

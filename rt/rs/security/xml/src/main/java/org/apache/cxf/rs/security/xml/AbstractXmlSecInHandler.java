@@ -149,9 +149,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|message
 operator|.
-name|DOMUtils
+name|Message
 import|;
 end_import
 
@@ -163,9 +163,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|staxutils
 operator|.
-name|Message
+name|StaxUtils
 import|;
 end_import
 
@@ -310,9 +310,9 @@ try|try
 block|{
 name|doc
 operator|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 operator|new
 name|InputStreamReader

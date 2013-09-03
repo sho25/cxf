@@ -510,9 +510,9 @@ name|bos
 argument_list|)
 expr_stmt|;
 return|return
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|bos
 operator|.

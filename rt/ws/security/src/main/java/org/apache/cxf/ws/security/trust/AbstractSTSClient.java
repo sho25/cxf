@@ -4816,9 +4816,9 @@ specifier|final
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 operator|new
 name|StringReader

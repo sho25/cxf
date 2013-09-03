@@ -915,6 +915,20 @@ name|ResourceManager
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|StaxUtils
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|final
@@ -3738,9 +3752,9 @@ block|{
 name|Document
 name|doc
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 operator|new
 name|InputStreamReader

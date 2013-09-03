@@ -2253,9 +2253,9 @@ block|}
 try|try
 block|{
 return|return
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 operator|new
 name|StringReader
@@ -7029,9 +7029,9 @@ block|{
 name|Element
 name|appEl
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|is
 argument_list|)
@@ -7353,9 +7353,9 @@ block|{
 name|Element
 name|docEl
 init|=
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 name|is
 argument_list|)

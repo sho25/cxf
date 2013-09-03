@@ -199,6 +199,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|staxutils
+operator|.
+name|StaxUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|systest
 operator|.
 name|ws
@@ -2602,9 +2616,9 @@ argument_list|)
 decl_stmt|;
 comment|// System.out.println(wsdlContents);
 return|return
-name|DOMUtils
+name|StaxUtils
 operator|.
-name|readXml
+name|read
 argument_list|(
 operator|new
 name|StringReader
