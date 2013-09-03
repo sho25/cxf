@@ -2380,7 +2380,7 @@ name|XmlAccessType
 name|accessType
 parameter_list|)
 block|{
-comment|// We only accept non static fields which are not marked @XmlTransient
+comment|// We only accept non static fields which are not marked @XmlTransient or has transient modifier
 if|if
 condition|(
 name|Modifier
@@ -2400,6 +2400,16 @@ argument_list|(
 name|XmlTransient
 operator|.
 name|class
+argument_list|)
+operator|||
+name|Modifier
+operator|.
+name|isTransient
+argument_list|(
+name|field
+operator|.
+name|getModifiers
+argument_list|()
 argument_list|)
 condition|)
 block|{
