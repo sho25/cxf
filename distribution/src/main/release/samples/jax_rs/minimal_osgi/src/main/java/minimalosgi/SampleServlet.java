@@ -87,6 +87,8 @@ parameter_list|,
 name|ServletConfig
 name|servletConfig
 parameter_list|)
+throws|throws
+name|ServletException
 block|{
 return|return
 operator|new
