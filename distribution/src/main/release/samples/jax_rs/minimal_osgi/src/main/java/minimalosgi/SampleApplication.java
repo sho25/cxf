@@ -37,6 +37,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|ApplicationPath
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|core
 operator|.
 name|Application
@@ -44,6 +56,11 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|ApplicationPath
+argument_list|(
+literal|"/app"
+argument_list|)
 specifier|public
 class|class
 name|SampleApplication
