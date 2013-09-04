@@ -5136,6 +5136,14 @@ argument_list|(
 name|exchange
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|putAll
+argument_list|(
+name|getRequestContext
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|setExchangeProperties
 argument_list|(
 name|exchange
