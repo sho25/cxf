@@ -21,13 +21,25 @@ end_package
 
 begin_import
 import|import
-name|javax
+name|java
 operator|.
-name|xml
+name|util
 operator|.
-name|ws
+name|logging
 operator|.
-name|WebServiceContext
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
 import|;
 end_import
 
@@ -51,11 +63,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|common
 operator|.
-name|request
+name|logging
 operator|.
-name|DefaultDelegationHandler
+name|LogUtils
 import|;
 end_import
 
@@ -72,6 +84,24 @@ operator|.
 name|request
 operator|.
 name|ReceivedToken
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|token
+operator|.
+name|delegation
+operator|.
+name|SAMLDelegationHandler
 import|;
 end_import
 
@@ -144,7 +174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This DelegationHandler implementation extends the Default implementation to allow SAML  * Tokens with HolderOfKey Subject Confirmation. It also doesn't require that the AppliesTo  * address matches an AudienceRestriction condition in the SAML Token.  */
+comment|/**  * This TokenDelegationHandler implementation extends the Default implementation to allow SAML  * Tokens with HolderOfKey Subject Confirmation. It also doesn't require that the AppliesTo  * address matches an AudienceRestriction condition in the SAML Token.  */
 end_comment
 
 begin_class
@@ -152,8 +182,23 @@ specifier|public
 class|class
 name|HOKDelegationHandler
 extends|extends
-name|DefaultDelegationHandler
+name|SAMLDelegationHandler
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|HOKDelegationHandler
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 comment|/**      * Is Delegation allowed for a particular token      */
 annotation|@
 name|Override
@@ -161,9 +206,6 @@ specifier|protected
 name|boolean
 name|isDelegationAllowed
 parameter_list|(
-name|WebServiceContext
-name|context
-parameter_list|,
 name|ReceivedToken
 name|receivedToken
 parameter_list|,
@@ -171,20 +213,6 @@ name|String
 name|appliesToAddress
 parameter_list|)
 block|{
-comment|// It must be a SAML Token
-if|if
-condition|(
-operator|!
-name|isSAMLToken
-argument_list|(
-name|receivedToken
-argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
 name|Element
 name|validateTargetElement
 init|=
@@ -272,6 +300,19 @@ name|WSSecurityException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+literal|"Error in ascertaining whether delegation is allowed"
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
 return|return
 literal|false
 return|;

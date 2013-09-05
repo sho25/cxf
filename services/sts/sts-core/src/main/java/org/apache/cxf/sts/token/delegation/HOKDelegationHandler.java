@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|sts
 operator|.
-name|request
+name|token
+operator|.
+name|delegation
 package|;
 end_package
 
@@ -53,18 +55,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|WebServiceContext
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|w3c
@@ -88,6 +78,22 @@ operator|.
 name|logging
 operator|.
 name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|request
+operator|.
+name|ReceivedToken
 import|;
 end_import
 
@@ -160,7 +166,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This DelegationHandler implementation extends the Default implementation to allow SAML  * Tokens with HolderOfKey Subject Confirmation.  */
+comment|/**  * This TokenDelegationHandler implementation extends the Default implementation to allow SAML  * Tokens with HolderOfKey Subject Confirmation.  */
 end_comment
 
 begin_class
@@ -168,7 +174,7 @@ specifier|public
 class|class
 name|HOKDelegationHandler
 extends|extends
-name|DefaultDelegationHandler
+name|SAMLDelegationHandler
 block|{
 specifier|private
 specifier|static
@@ -192,9 +198,6 @@ specifier|protected
 name|boolean
 name|isDelegationAllowed
 parameter_list|(
-name|WebServiceContext
-name|context
-parameter_list|,
 name|ReceivedToken
 name|receivedToken
 parameter_list|,
@@ -202,20 +205,6 @@ name|String
 name|appliesToAddress
 parameter_list|)
 block|{
-comment|// It must be a SAML Token
-if|if
-condition|(
-operator|!
-name|isSAMLToken
-argument_list|(
-name|receivedToken
-argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
 name|Element
 name|validateTargetElement
 init|=
