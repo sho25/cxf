@@ -520,11 +520,6 @@ name|category
 argument_list|,
 name|getRelativePathForSubjectDn
 argument_list|(
-name|id
-operator|.
-name|getIdentifier
-argument_list|()
-argument_list|,
 name|cert
 argument_list|)
 argument_list|)
@@ -710,9 +705,6 @@ specifier|public
 name|String
 name|getRelativePathForSubjectDn
 parameter_list|(
-name|String
-name|subjectDn
-parameter_list|,
 name|X509Certificate
 name|cert
 parameter_list|)
@@ -743,7 +735,7 @@ name|path
 init|=
 name|convertDnForFileSystem
 argument_list|(
-name|subjectDn
+name|issuer
 argument_list|)
 operator|+
 literal|"-"
@@ -752,13 +744,6 @@ name|serialNumber
 operator|.
 name|toString
 argument_list|()
-operator|+
-literal|"-"
-operator|+
-name|convertDnForFileSystem
-argument_list|(
-name|issuer
-argument_list|)
 operator|+
 literal|".cer"
 decl_stmt|;

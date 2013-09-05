@@ -222,9 +222,7 @@ specifier|final
 name|String
 name|EXPECTED_CERT_FILE_NAME
 init|=
-literal|"CN-www.issuer.com_L-CGN_ST-NRW_C-DE_O-Issuer-"
-operator|+
-literal|"11688544847478700689-CN-www.issuer.com_L-CGN_ST-NRW_C-DE_O-Issuer.cer"
+literal|"CN-www.issuer.com_L-CGN_ST-NRW_C-DE_O-Issuer-11688544847478700689.cer"
 decl_stmt|;
 annotation|@
 name|Test
