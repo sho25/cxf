@@ -747,7 +747,7 @@ specifier|abstract
 class|class
 name|ProviderFactory
 block|{
-specifier|protected
+specifier|public
 specifier|static
 specifier|final
 name|String
@@ -2501,7 +2501,7 @@ argument_list|>
 argument_list|>
 name|readers
 init|=
-name|getPostMatchContainerFilters
+name|getBoundFilters
 argument_list|(
 name|readerInterceptors
 argument_list|,
@@ -2705,7 +2705,7 @@ argument_list|>
 argument_list|>
 name|writers
 init|=
-name|getPostMatchContainerFilters
+name|getBoundFilters
 argument_list|(
 name|writerInterceptors
 argument_list|,
@@ -5308,7 +5308,7 @@ argument_list|<
 name|T
 argument_list|>
 argument_list|>
-name|getPostMatchContainerFilters
+name|getBoundFilters
 parameter_list|(
 name|Map
 argument_list|<

@@ -1059,7 +1059,7 @@ name|names
 parameter_list|)
 block|{
 return|return
-name|getPostMatchContainerFilters
+name|getBoundFilters
 argument_list|(
 name|postMatchContainerRequestFilters
 argument_list|,
@@ -1215,7 +1215,7 @@ name|names
 parameter_list|)
 block|{
 return|return
-name|getPostMatchContainerFilters
+name|getBoundFilters
 argument_list|(
 name|postMatchContainerResponseFilters
 argument_list|,

@@ -1137,8 +1137,6 @@ operator|.
 name|getBus
 argument_list|()
 argument_list|,
-literal|null
-argument_list|,
 name|contracts
 argument_list|)
 argument_list|)
