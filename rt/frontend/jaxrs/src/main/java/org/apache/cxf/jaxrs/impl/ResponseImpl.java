@@ -2233,12 +2233,36 @@ argument_list|)
 throw|;
 block|}
 block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|ResponseProcessingException
+argument_list|(
+name|this
+argument_list|,
+literal|"No message body reader for class: "
+operator|+
+name|cls
+argument_list|,
+literal|null
+argument_list|)
+throw|;
+block|}
 block|}
 throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"The entity is not backed by an input stream"
+literal|"The entity is not backed by an input stream, entity class is : "
+operator|+
+name|entity
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
 argument_list|)
 throw|;
 block|}
