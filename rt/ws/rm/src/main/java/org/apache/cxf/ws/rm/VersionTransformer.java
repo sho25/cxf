@@ -2652,7 +2652,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 Expires with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 OfferType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|OfferType

@@ -296,6 +296,20 @@ specifier|public
 specifier|static
 specifier|final
 name|QName
+name|CLOSE_SEQUENCE_RESPONSE_QNAME
+init|=
+operator|new
+name|QName
+argument_list|(
+name|NAMESPACE_URI
+argument_list|,
+literal|"CloseSequenceResponse"
+argument_list|)
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|QName
 name|ACK_REQ_QNAME
 init|=
 operator|new
@@ -763,6 +777,16 @@ return|return
 name|CLOSE_SEQUENCE_ACTION
 return|;
 block|}
+comment|// only defined for WS-RM 1.1/1.2
+specifier|public
+name|String
+name|getCloseSequenceResponseAction
+parameter_list|()
+block|{
+return|return
+name|CLOSE_SEQUENCE_RESPONSE_ACTION
+return|;
+block|}
 specifier|public
 name|String
 name|getAckRequestedAction
@@ -870,6 +894,16 @@ parameter_list|()
 block|{
 return|return
 name|CLOSE_SEQUENCE_QNAME
+return|;
+block|}
+comment|// not part of the interface, only in WS-RM 1.1/1.2
+specifier|public
+name|QName
+name|getCloseSequenceResponseOperationName
+parameter_list|()
+block|{
+return|return
+name|CLOSE_SEQUENCE_RESPONSE_QNAME
 return|;
 block|}
 specifier|public
