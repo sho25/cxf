@@ -1831,10 +1831,6 @@ condition|(
 name|publishedEndpointUrl
 operator|!=
 literal|null
-operator|&&
-name|wsdlLocation
-operator|!=
-literal|null
 condition|)
 block|{
 name|endpointInfo
@@ -1848,6 +1844,18 @@ argument_list|,
 name|publishedEndpointUrl
 argument_list|)
 expr_stmt|;
+block|}
+if|if
+condition|(
+name|publishedEndpointUrl
+operator|!=
+literal|null
+operator|&&
+name|wsdlLocation
+operator|!=
+literal|null
+condition|)
+block|{
 comment|//early update the publishedEndpointUrl so that endpoints in the same app sharing the same wsdl
 comment|//do not require all of them to be queried for wsdl before the wsdl is finally fully updated
 name|Definition
