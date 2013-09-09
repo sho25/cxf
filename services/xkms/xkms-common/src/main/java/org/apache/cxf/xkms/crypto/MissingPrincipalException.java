@@ -14,26 +14,8 @@ operator|.
 name|xkms
 operator|.
 name|crypto
-operator|.
-name|impl
 package|;
 end_package
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|xkms
-operator|.
-name|crypto
-operator|.
-name|CryptoProviderException
-import|;
-end_import
 
 begin_class
 specifier|public
