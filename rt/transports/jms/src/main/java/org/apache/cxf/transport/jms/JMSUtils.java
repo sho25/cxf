@@ -3164,9 +3164,25 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// if (messageProperties.isSetTimeToLive()) {
-comment|// jmsMessage.setJMSExpiration(expiration);
-comment|// }
+if|if
+condition|(
+name|messageProperties
+operator|.
+name|isSetJMSExpiration
+argument_list|()
+condition|)
+block|{
+name|jmsMessage
+operator|.
+name|setJMSExpiration
+argument_list|(
+name|messageProperties
+operator|.
+name|getJMSExpiration
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 if|if
 condition|(
 name|messageProperties
