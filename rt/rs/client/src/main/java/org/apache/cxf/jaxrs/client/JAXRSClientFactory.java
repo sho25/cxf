@@ -1334,11 +1334,11 @@ operator|new
 name|Class
 index|[]
 block|{
-name|cls
-block|,
 name|Client
 operator|.
 name|class
+block|,
+name|cls
 block|}
 argument_list|,
 name|handler

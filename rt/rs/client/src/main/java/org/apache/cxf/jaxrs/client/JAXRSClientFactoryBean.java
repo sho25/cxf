@@ -1210,11 +1210,6 @@ operator|new
 name|Class
 index|[]
 block|{
-name|cri
-operator|.
-name|getServiceClass
-argument_list|()
-block|,
 name|Client
 operator|.
 name|class
@@ -1222,6 +1217,11 @@ block|,
 name|InvocationHandlerAware
 operator|.
 name|class
+block|,
+name|cri
+operator|.
+name|getServiceClass
+argument_list|()
 block|}
 decl_stmt|;
 name|Client
