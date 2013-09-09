@@ -14,6 +14,8 @@ operator|.
 name|xkms
 operator|.
 name|crypto
+operator|.
+name|impl
 package|;
 end_package
 
@@ -54,6 +56,38 @@ operator|.
 name|security
 operator|.
 name|SecurityConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|xkms
+operator|.
+name|crypto
+operator|.
+name|CryptoProviderException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|xkms
+operator|.
+name|crypto
+operator|.
+name|CryptoProviderFactory
 import|;
 end_import
 
