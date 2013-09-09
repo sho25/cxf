@@ -755,6 +755,14 @@ name|DEFAULT_FILTER_NAME_BINDING
 init|=
 literal|"org.apache.cxf.filter.binding"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PROVIDER_SELECTION_PROPERTY_CHANGED
+init|=
+literal|"provider.selection.property.changed"
+decl_stmt|;
 specifier|protected
 specifier|static
 specifier|final
