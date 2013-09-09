@@ -1079,6 +1079,8 @@ name|HttpServletRequest
 name|getHttpServletRequest
 parameter_list|()
 block|{
+try|try
+block|{
 return|return
 name|getContext
 argument_list|(
@@ -1087,6 +1089,17 @@ operator|.
 name|class
 argument_list|)
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|t
+parameter_list|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 block|}
 specifier|public
 name|HttpServletResponse
