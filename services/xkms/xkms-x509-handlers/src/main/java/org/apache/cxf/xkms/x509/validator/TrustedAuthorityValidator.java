@@ -578,7 +578,7 @@ operator|.
 name|getCertPath
 argument_list|()
 decl_stmt|;
-comment|// Now validate the CertPath including CRL checking
+comment|// Now validate the CertPath (including CRL checking)
 if|if
 condition|(
 operator|!
@@ -618,6 +618,7 @@ name|crlParams
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 name|CertPathValidator
 name|validator
 init|=
@@ -637,7 +638,6 @@ argument_list|,
 name|pkixParams
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
