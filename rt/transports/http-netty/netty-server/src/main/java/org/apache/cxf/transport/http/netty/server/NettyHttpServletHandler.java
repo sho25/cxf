@@ -822,9 +822,9 @@ name|nettyHttpContextHandler
 operator|.
 name|handle
 argument_list|(
-name|request
+name|nettyServletRequest
 operator|.
-name|getUri
+name|getRequestURI
 argument_list|()
 argument_list|,
 name|nettyServletRequest

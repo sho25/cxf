@@ -530,6 +530,16 @@ argument_list|(
 name|contextPath
 argument_list|)
 expr_stmt|;
+name|uriParser
+operator|.
+name|parse
+argument_list|(
+name|request
+operator|.
+name|getUri
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|this
 operator|.
 name|inputStream
