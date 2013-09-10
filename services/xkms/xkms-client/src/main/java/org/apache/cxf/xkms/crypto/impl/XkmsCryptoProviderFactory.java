@@ -155,6 +155,10 @@ name|XKMSPortType
 import|;
 end_import
 
+begin_comment
+comment|/**  * For usage in OSGi this factory will be published as a service.  * Outside OSGi it can be used directly   */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -246,6 +250,19 @@ name|e
 argument_list|)
 throw|;
 block|}
+block|}
+specifier|public
+name|Crypto
+name|create
+parameter_list|()
+block|{
+return|return
+operator|new
+name|XkmsCryptoProvider
+argument_list|(
+name|xkmsConsumer
+argument_list|)
+return|;
 block|}
 block|}
 end_class

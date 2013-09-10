@@ -52,12 +52,18 @@ specifier|public
 interface|interface
 name|CryptoProviderFactory
 block|{
+comment|/**      * Create with merlin fallback settings retrieved from cxf message      * @param message      * @return      */
 name|Crypto
 name|create
 parameter_list|(
 name|Message
 name|message
 parameter_list|)
+function_decl|;
+comment|/**      * Create without fallback crypto       *       * @param cryptoProperties      * @return xkms crypto      */
+name|Crypto
+name|create
+parameter_list|()
 function_decl|;
 block|}
 end_interface
