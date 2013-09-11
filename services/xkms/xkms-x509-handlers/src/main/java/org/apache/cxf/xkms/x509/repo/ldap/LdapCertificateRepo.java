@@ -528,7 +528,7 @@ name|rootDN
 argument_list|,
 name|ldapConfig
 operator|.
-name|getAttrCrlBinary
+name|getCrlFilter
 argument_list|()
 argument_list|,
 name|ldapConfig
