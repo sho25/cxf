@@ -4192,41 +4192,6 @@ name|getWrappedOperation
 argument_list|()
 expr_stmt|;
 block|}
-comment|//CXF-2836:To correct the wsa:action header value for dispatch client
-name|BindingOperationInfo
-name|dbop
-init|=
-operator|(
-name|BindingOperationInfo
-operator|)
-name|bop
-operator|.
-name|getProperty
-argument_list|(
-literal|"dispatchToOperation"
-argument_list|)
-decl_stmt|;
-if|if
-condition|(
-literal|null
-operator|!=
-name|dbop
-condition|)
-block|{
-comment|//modifies the bop and bp to the value of dispatch client really invokes,
-comment|//This helps corrct the wsa:action header value
-name|bop
-operator|=
-name|dbop
-expr_stmt|;
-name|op
-operator|=
-name|dbop
-operator|.
-name|getOperationInfo
-argument_list|()
-expr_stmt|;
-block|}
 name|String
 name|actionUri
 init|=
