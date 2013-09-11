@@ -245,7 +245,7 @@ name|forName
 argument_list|(
 name|ifName
 argument_list|,
-literal|false
+literal|true
 argument_list|,
 name|loader
 argument_list|)
@@ -261,6 +261,16 @@ return|return
 literal|false
 return|;
 block|}
+block|}
+catch|catch
+parameter_list|(
+name|NoClassDefFoundError
+name|e
+parameter_list|)
+block|{
+return|return
+literal|false
+return|;
 block|}
 catch|catch
 parameter_list|(
