@@ -47,6 +47,22 @@ name|Crypto
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|w3
+operator|.
+name|_2002
+operator|.
+name|_03
+operator|.
+name|xkms_wsdl
+operator|.
+name|XKMSPortType
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -64,6 +80,25 @@ comment|/**      * Create without fallback crypto       *       * @param cryptoP
 name|Crypto
 name|create
 parameter_list|()
+function_decl|;
+comment|/**      * Create with fallback crypto      *       * @param fallbackCrypto      * @return      */
+name|Crypto
+name|create
+parameter_list|(
+name|Crypto
+name|fallbackCrypto
+parameter_list|)
+function_decl|;
+comment|/**      * Create with overridden XKMSPortType and fallbackCrypto      *       * @param xkmsClient      * @param fallbackCrypto      * @return      */
+name|Crypto
+name|create
+parameter_list|(
+name|XKMSPortType
+name|xkmsClient
+parameter_list|,
+name|Crypto
+name|fallbackCrypto
+parameter_list|)
 function_decl|;
 block|}
 end_interface

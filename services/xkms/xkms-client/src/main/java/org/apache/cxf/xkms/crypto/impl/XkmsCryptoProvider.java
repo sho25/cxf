@@ -294,6 +294,7 @@ import|;
 end_import
 
 begin_class
+specifier|public
 class|class
 name|XkmsCryptoProvider
 extends|extends
