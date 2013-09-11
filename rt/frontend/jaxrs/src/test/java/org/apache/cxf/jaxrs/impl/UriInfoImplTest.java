@@ -281,7 +281,7 @@ name|UriInfoImpl
 argument_list|(
 name|mockMessage
 argument_list|(
-literal|"http://localhost:8080/baz"
+literal|"http://localhost:8080/baz/"
 argument_list|,
 literal|null
 argument_list|)
@@ -293,7 +293,7 @@ name|assertEquals
 argument_list|(
 literal|"Wrong base path"
 argument_list|,
-literal|"http://localhost:8080/baz"
+literal|"http://localhost:8080/baz/"
 argument_list|,
 name|u
 operator|.
@@ -385,7 +385,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://localhost:8080/baz/a"
+literal|"http://localhost:8080/a"
 argument_list|,
 name|resolved
 operator|.
