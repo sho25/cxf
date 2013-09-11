@@ -926,6 +926,27 @@ operator|.
 name|ISSUER_SERIAL
 condition|)
 block|{
+comment|// Try local Crypto first
+name|X509Certificate
+index|[]
+name|localCerts
+init|=
+name|getCertificateLocally
+argument_list|(
+name|cryptoType
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|localCerts
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|localCerts
+return|;
+block|}
 name|String
 name|key
 init|=
@@ -942,7 +963,7 @@ name|getSerial
 argument_list|()
 argument_list|)
 decl_stmt|;
-comment|// Try local cache first
+comment|// Try local cache next
 if|if
 condition|(
 name|xkmsClientCache
