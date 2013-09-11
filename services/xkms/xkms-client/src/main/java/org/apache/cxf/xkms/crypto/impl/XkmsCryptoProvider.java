@@ -1236,7 +1236,7 @@ name|cert
 block|}
 return|;
 block|}
-comment|/**      * Try to get certificate locally      *       * @param cryptoType      * @return if found certificate otherwise null returned      */
+comment|/**      * Try to get certificate locally. First try using the supplied CryptoType. If this      * does not work, and if the supplied CryptoType is a ALIAS, then try again with SUBJECT_DN      * in case the supplied Alias is actually a Certificate's Subject DN      *       * @param cryptoType      * @return if found certificate otherwise null returned      */
 specifier|private
 name|X509Certificate
 index|[]
@@ -1246,6 +1246,19 @@ name|CryptoType
 name|cryptoType
 parameter_list|)
 block|{
+comment|// This only applies if we've configured a local Crypto instance...
+if|if
+condition|(
+name|defaultCrypto
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
+comment|// First try using the supplied CryptoType instance
 name|X509Certificate
 index|[]
 name|localCerts
@@ -1274,6 +1287,84 @@ name|LOG
 operator|.
 name|info
 argument_list|(
+literal|"Certificate is not found in local keystore using desired CryptoType: "
+operator|+
+name|cryptoType
+operator|.
+name|getType
+argument_list|()
+operator|.
+name|name
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|localCerts
+operator|==
+literal|null
+operator|&&
+name|cryptoType
+operator|.
+name|getType
+argument_list|()
+operator|==
+name|CryptoType
+operator|.
+name|TYPE
+operator|.
+name|ALIAS
+condition|)
+block|{
+comment|// If none found then try using either the Subject DN. This is because an
+comment|// Encryption username in CXF is configured as an Alias in WSS4J, but may in fact
+comment|// be a Subject DN
+name|CryptoType
+name|newCryptoType
+init|=
+operator|new
+name|CryptoType
+argument_list|(
+name|CryptoType
+operator|.
+name|TYPE
+operator|.
+name|SUBJECT_DN
+argument_list|)
+decl_stmt|;
+name|newCryptoType
+operator|.
+name|setSubjectDN
+argument_list|(
+name|cryptoType
+operator|.
+name|getAlias
+argument_list|()
+argument_list|)
+expr_stmt|;
+try|try
+block|{
+name|localCerts
+operator|=
+name|defaultCrypto
+operator|.
+name|getX509Certificates
+argument_list|(
+name|newCryptoType
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
 literal|"Certificate is not found in local keystore and will be requested from "
 operator|+
 literal|"XKMS (first trying the cache): "
@@ -1284,6 +1375,7 @@ name|getAlias
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|localCerts
