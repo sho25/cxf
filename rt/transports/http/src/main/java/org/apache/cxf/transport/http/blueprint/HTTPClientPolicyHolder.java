@@ -387,6 +387,15 @@ name|getProxyServer
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// need to check if the property is set to avoid NPE
+if|if
+condition|(
+name|clientPolicy
+operator|.
+name|isSetProxyServerPort
+argument_list|()
+condition|)
+block|{
 name|this
 operator|.
 name|setProxyServerPort
@@ -397,6 +406,7 @@ name|getProxyServerPort
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|this
 operator|.
 name|setProxyServerType
