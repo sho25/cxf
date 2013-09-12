@@ -261,6 +261,14 @@ operator|+
 literal|".documentHolder"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|TRANSFORM_SKIP
+init|=
+literal|"transform.skip"
+decl_stmt|;
+specifier|private
 name|Interceptor
 argument_list|<
 name|Message
@@ -651,6 +659,20 @@ operator|.
 name|add
 argument_list|(
 name|wsdlGetOutInterceptor
+argument_list|)
+expr_stmt|;
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|put
+argument_list|(
+name|TRANSFORM_SKIP
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
 argument_list|)
 expr_stmt|;
 comment|// skip the service executor and goto the end of the chain.
