@@ -287,6 +287,9 @@ block|}
 block|}
 if|if
 condition|(
+name|isCheckAudienceRestriction
+argument_list|()
+operator|&&
 name|appliesToAddress
 operator|!=
 literal|null
