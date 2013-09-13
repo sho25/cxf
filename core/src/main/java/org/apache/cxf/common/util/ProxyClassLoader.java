@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility class loader that can be used to create proxies in cases where  * the the JAX-RS client classes are not visible to the loader of the  * service class.      */
+comment|/**  * Utility class loader that can be used to create proxies in cases where  * the the client classes are not visible to the loader of the  * service class.      */
 end_comment
 
 begin_class
@@ -80,6 +80,19 @@ name|ClassLoader
 name|loader
 parameter_list|)
 block|{
+if|if
+condition|(
+name|loader
+operator|==
+literal|null
+condition|)
+block|{
+name|loader
+operator|=
+name|getSystemClassLoader
+argument_list|()
+expr_stmt|;
+block|}
 name|loaders
 operator|.
 name|add
@@ -123,6 +136,14 @@ block|}
 catch|catch
 parameter_list|(
 name|ClassNotFoundException
+name|cnfe
+parameter_list|)
+block|{
+comment|// Try next
+block|}
+catch|catch
+parameter_list|(
+name|NoClassDefFoundError
 name|cnfe
 parameter_list|)
 block|{
