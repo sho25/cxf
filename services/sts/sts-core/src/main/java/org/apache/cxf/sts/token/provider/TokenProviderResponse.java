@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Date
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|w3c
@@ -49,10 +59,6 @@ name|String
 name|tokenId
 decl_stmt|;
 specifier|private
-name|long
-name|lifetime
-decl_stmt|;
-specifier|private
 name|byte
 index|[]
 name|entropy
@@ -72,6 +78,18 @@ decl_stmt|;
 specifier|private
 name|TokenReference
 name|unAttachedReference
+decl_stmt|;
+specifier|private
+name|Date
+name|created
+decl_stmt|;
+specifier|private
+name|Date
+name|expires
+decl_stmt|;
+specifier|private
+name|long
+name|lifetime
 decl_stmt|;
 comment|/**      * Return true if the entropy represents a Computed Key.      */
 specifier|public
@@ -177,32 +195,6 @@ return|return
 name|tokenId
 return|;
 block|}
-comment|/**      * Set the lifetime of the Token to be returned in seconds      * @param lifetime the lifetime of the Token to be returned in seconds      */
-specifier|public
-name|void
-name|setLifetime
-parameter_list|(
-name|long
-name|lifetime
-parameter_list|)
-block|{
-name|this
-operator|.
-name|lifetime
-operator|=
-name|lifetime
-expr_stmt|;
-block|}
-comment|/**      * Get the lifetime of the Token to be returned in seconds      * @return the lifetime of the Token to be returned in seconds      */
-specifier|public
-name|long
-name|getLifetime
-parameter_list|()
-block|{
-return|return
-name|lifetime
-return|;
-block|}
 comment|/**      * Set the entropy associated with the token.      * @param entropy the entropy associated with the token.      */
 specifier|public
 name|void
@@ -281,6 +273,84 @@ parameter_list|()
 block|{
 return|return
 name|unAttachedReference
+return|;
+block|}
+comment|/**      * Get the Date that this Token was Created       * @return the Date that this Token was Created       */
+specifier|public
+name|Date
+name|getCreated
+parameter_list|()
+block|{
+return|return
+name|created
+return|;
+block|}
+comment|/**      * Set the Date that this Token was Created       * @param created the Date that this Token was Created      */
+specifier|public
+name|void
+name|setCreated
+parameter_list|(
+name|Date
+name|created
+parameter_list|)
+block|{
+name|this
+operator|.
+name|created
+operator|=
+name|created
+expr_stmt|;
+block|}
+comment|/**      * Get the Date that this Token expires      * @return the Date that this Token expires      */
+specifier|public
+name|Date
+name|getExpires
+parameter_list|()
+block|{
+return|return
+name|expires
+return|;
+block|}
+comment|/**      * Set the Date that this Token expires      * @param expires the Date that this Token expires      */
+specifier|public
+name|void
+name|setExpires
+parameter_list|(
+name|Date
+name|expires
+parameter_list|)
+block|{
+name|this
+operator|.
+name|expires
+operator|=
+name|expires
+expr_stmt|;
+block|}
+comment|/**      * Set the lifetime of the Token to be returned in seconds.      * @deprecated use setCreated/setExpires instead      * @param lifetime the lifetime of the Token to be returned in seconds      */
+specifier|public
+name|void
+name|setLifetime
+parameter_list|(
+name|long
+name|lifetime
+parameter_list|)
+block|{
+name|this
+operator|.
+name|lifetime
+operator|=
+name|lifetime
+expr_stmt|;
+block|}
+comment|/**      * Get the lifetime of the Token to be returned in seconds      * @deprecated use getCreated/getExpires instead      * @return the lifetime of the Token to be returned in seconds      */
+specifier|public
+name|long
+name|getLifetime
+parameter_list|()
+block|{
+return|return
+name|lifetime
 return|;
 block|}
 block|}

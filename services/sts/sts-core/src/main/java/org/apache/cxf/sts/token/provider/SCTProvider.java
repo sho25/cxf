@@ -581,6 +581,20 @@ argument_list|)
 expr_stmt|;
 comment|// putting the secret key into the cache
 name|Date
+name|currentDate
+init|=
+operator|new
+name|Date
+argument_list|()
+decl_stmt|;
+name|response
+operator|.
+name|setCreated
+argument_list|(
+name|currentDate
+argument_list|)
+expr_stmt|;
+name|Date
 name|expires
 init|=
 literal|null
@@ -601,7 +615,7 @@ expr_stmt|;
 name|long
 name|currentTime
 init|=
-name|expires
+name|currentDate
 operator|.
 name|getTime
 argument_list|()
@@ -620,6 +634,13 @@ operator|)
 argument_list|)
 expr_stmt|;
 block|}
+name|response
+operator|.
+name|setExpires
+argument_list|(
+name|expires
+argument_list|)
+expr_stmt|;
 name|SecurityToken
 name|token
 init|=
@@ -631,7 +652,7 @@ operator|.
 name|getIdentifier
 argument_list|()
 argument_list|,
-literal|null
+name|currentDate
 argument_list|,
 name|expires
 argument_list|)
@@ -884,13 +905,6 @@ operator|.
 name|setUnattachedReference
 argument_list|(
 name|unAttachedReference
-argument_list|)
-expr_stmt|;
-name|response
-operator|.
-name|setLifetime
-argument_list|(
-name|lifetime
 argument_list|)
 expr_stmt|;
 return|return

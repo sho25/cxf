@@ -1489,6 +1489,16 @@ name|createLifetime
 argument_list|(
 name|tokenProviderResponse
 operator|.
+name|getCreated
+argument_list|()
+argument_list|,
+name|tokenProviderResponse
+operator|.
+name|getExpires
+argument_list|()
+argument_list|,
+name|tokenProviderResponse
+operator|.
 name|getLifetime
 argument_list|()
 argument_list|)

@@ -2303,6 +2303,16 @@ name|createLifetime
 argument_list|(
 name|tokenResponse
 operator|.
+name|getCreated
+argument_list|()
+argument_list|,
+name|tokenResponse
+operator|.
+name|getExpires
+argument_list|()
+argument_list|,
+name|tokenResponse
+operator|.
 name|getLifetime
 argument_list|()
 argument_list|)
