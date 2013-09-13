@@ -204,7 +204,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The SAML TokenDelegationHandler implementation. It disallows ActAs or OnBehalfOf for  * all cases apart from the case of a Bearer SAML Token. In addition, the AppliesTo  * address (if supplied) must match an AudienceRestriction address (if in token)  */
+comment|/**  * The SAML TokenDelegationHandler implementation. It disallows ActAs or OnBehalfOf for  * all cases apart from the case of a Bearer SAML Token. In addition, the AppliesTo  * address (if supplied) must match an AudienceRestriction address (if in token), if the  * "checkAudienceRestriction" property is set to "true".  */
 end_comment
 
 begin_class
@@ -232,8 +232,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|checkAudienceRestriction
-init|=
-literal|true
 decl_stmt|;
 specifier|public
 name|boolean
@@ -720,7 +718,7 @@ return|return
 name|checkAudienceRestriction
 return|;
 block|}
-comment|/**      * Set whether to perform a check that the received AppliesTo address is contained in the      * token as one of the AudienceRestriction URIs. The default is true.      * @param checkAudienceRestriction whether to perform an audience restriction check or not      */
+comment|/**      * Set whether to perform a check that the received AppliesTo address is contained in the      * token as one of the AudienceRestriction URIs. The default is false.      * @param checkAudienceRestriction whether to perform an audience restriction check or not      */
 specifier|public
 name|void
 name|setCheckAudienceRestriction
