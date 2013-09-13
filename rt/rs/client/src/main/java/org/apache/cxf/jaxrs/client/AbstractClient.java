@@ -3782,9 +3782,11 @@ decl_stmt|;
 name|UriBuilder
 name|builder
 init|=
-name|UriBuilder
+operator|new
+name|UriBuilderImpl
+argument_list|()
 operator|.
-name|fromUri
+name|uri
 argument_list|(
 name|newBaseURI
 argument_list|)

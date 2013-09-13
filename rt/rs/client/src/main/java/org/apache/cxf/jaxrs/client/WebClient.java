@@ -395,20 +395,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|UriBuilder
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -2566,9 +2552,11 @@ block|{
 name|URI
 name|u
 init|=
-name|UriBuilder
+operator|new
+name|UriBuilderImpl
+argument_list|()
 operator|.
-name|fromUri
+name|uri
 argument_list|(
 name|URI
 operator|.
