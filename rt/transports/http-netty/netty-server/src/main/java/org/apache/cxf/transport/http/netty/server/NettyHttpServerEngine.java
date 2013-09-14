@@ -135,6 +135,18 @@ name|netty
 operator|.
 name|channel
 operator|.
+name|ChannelOption
+import|;
+end_import
+
+begin_import
+import|import
+name|io
+operator|.
+name|netty
+operator|.
+name|channel
+operator|.
 name|EventLoopGroup
 import|;
 end_import
@@ -419,6 +431,15 @@ argument_list|(
 name|NioServerSocketChannel
 operator|.
 name|class
+argument_list|)
+operator|.
+name|option
+argument_list|(
+name|ChannelOption
+operator|.
+name|SO_REUSEADDR
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 comment|// Set up the idle handler
