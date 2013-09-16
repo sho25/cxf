@@ -211,6 +211,14 @@ specifier|private
 specifier|static
 specifier|final
 name|String
+name|WSSE_NS
+init|=
+literal|"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
 name|WSU_NS
 init|=
 literal|"http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd"
@@ -369,9 +377,9 @@ literal|"encryptionParts"
 argument_list|,
 literal|"{Element}{"
 operator|+
-name|WSU_NS
+name|WSSE_NS
 operator|+
-literal|"}Timestamp;"
+literal|"}UsernameToken;"
 operator|+
 literal|"{Content}{http://schemas.xmlsoap.org/soap/envelope/}Body"
 argument_list|)
