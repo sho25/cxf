@@ -1426,7 +1426,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex
 parameter_list|)
 block|{
@@ -1863,7 +1863,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex
 parameter_list|)
 block|{
@@ -2284,7 +2284,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex
 parameter_list|)
 block|{
@@ -2737,7 +2737,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|ex
 parameter_list|)
 block|{
@@ -2954,12 +2954,15 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|Level
+name|String
 name|getLogLevel
 parameter_list|()
 block|{
 return|return
 name|logLevel
+operator|.
+name|getName
+argument_list|()
 return|;
 block|}
 specifier|public
