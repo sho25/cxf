@@ -1909,19 +1909,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|key
-operator|+
-literal|": "
-operator|+
-name|ret
-argument_list|)
-expr_stmt|;
 return|return
 name|ret
 return|;
