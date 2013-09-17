@@ -739,6 +739,8 @@ operator|new
 name|Class
 index|[]
 block|{
+name|cls
+block|,
 name|BindingProvider
 operator|.
 name|class
@@ -750,8 +752,6 @@ block|,
 name|Client
 operator|.
 name|class
-block|,
-name|cls
 block|}
 return|;
 block|}
