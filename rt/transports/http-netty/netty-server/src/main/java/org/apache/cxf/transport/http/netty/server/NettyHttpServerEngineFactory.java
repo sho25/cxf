@@ -564,6 +564,17 @@ name|shutdown
 argument_list|()
 expr_stmt|;
 block|}
+comment|// The engine which is in shutdown status cannot be started anymore
+name|portMap
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|threadingParametersMap
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 name|tlsServerParametersMap
 operator|.
 name|clear

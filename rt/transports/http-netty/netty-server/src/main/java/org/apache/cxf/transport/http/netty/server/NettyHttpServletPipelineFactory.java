@@ -669,9 +669,6 @@ name|allChannels
 operator|.
 name|close
 argument_list|()
-operator|.
-name|awaitUninterruptibly
-argument_list|()
 expr_stmt|;
 name|watchdog
 operator|.
