@@ -169,7 +169,9 @@ name|combined
 init|=
 operator|new
 name|ProxyClassLoader
-argument_list|()
+argument_list|(
+name|interfaces
+argument_list|)
 decl_stmt|;
 for|for
 control|(
