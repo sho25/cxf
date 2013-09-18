@@ -930,6 +930,13 @@ decl_stmt|;
 specifier|public
 specifier|static
 name|int
+name|ANEWARRAY
+init|=
+literal|0
+decl_stmt|;
+specifier|public
+specifier|static
+name|int
 name|DUP
 init|=
 literal|0
