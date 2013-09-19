@@ -224,7 +224,7 @@ name|SELF_SIGN_SAML_ASSERTION
 init|=
 literal|"ws-security.self-sign-saml-assertion"
 decl_stmt|;
-comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces.       */
+comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces. Note that caching only applies when either a UsernameToken      * WS-SecurityPolicy is in effect, or else that a UsernameToken action has been configured      * for the non-security-policy case.      */
 specifier|public
 specifier|static
 specifier|final
@@ -233,7 +233,7 @@ name|ENABLE_NONCE_CACHE
 init|=
 literal|"ws-security.enable.nonce.cache"
 decl_stmt|;
-comment|/**      * Whether to cache Timestamp Created Strings (these are only cached in conjunction with a message       * Signature).The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache Timestamp Created Strings.      */
+comment|/**      * Whether to cache Timestamp Created Strings (these are only cached in conjunction with a message       * Signature).The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache Timestamp Created Strings.      * Note that caching only applies when either a "IncludeTimestamp" policy is in effect, or      * else that a Timestamp action has been configured for the non-security-policy case.      */
 specifier|public
 specifier|static
 specifier|final
