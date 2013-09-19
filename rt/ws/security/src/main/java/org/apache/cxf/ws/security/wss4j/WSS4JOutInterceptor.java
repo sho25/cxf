@@ -1073,6 +1073,18 @@ argument_list|(
 literal|""
 argument_list|)
 operator|)
+operator|&&
+operator|(
+name|String
+operator|)
+name|getOption
+argument_list|(
+name|WSHandlerConstants
+operator|.
+name|SIGNATURE_USER
+argument_list|)
+operator|==
+literal|null
 condition|)
 block|{
 comment|/*                      * We need a username - if none throw an SoapFault. For                      * encryption there is a specific parameter to get a username.                      */
