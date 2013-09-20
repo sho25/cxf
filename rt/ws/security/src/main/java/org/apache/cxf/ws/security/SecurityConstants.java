@@ -242,6 +242,15 @@ name|ENABLE_TIMESTAMP_CACHE
 init|=
 literal|"ws-security.enable.timestamp.cache"
 decl_stmt|;
+comment|/**      * Whether to cache SAML2 Token Identifiers, if the token contains a "OneTimeUse" Condition.      * The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache SAML2 Token Identifiers.      * Note that caching only applies when either a "SamlToken" policy is in effect, or      * else that a SAML action has been configured for the non-security-policy case.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_SAML_ONE_TIME_USE_CACHE
+init|=
+literal|"ws-security.enable.saml.cache"
+decl_stmt|;
 comment|/**      * Whether to validate the SubjectConfirmation requirements of a received SAML Token      * (sender-vouches or holder-of-key). The default is true.      */
 specifier|public
 specifier|static
@@ -361,6 +370,15 @@ name|String
 name|TIMESTAMP_CACHE_INSTANCE
 init|=
 literal|"ws-security.timestamp.cache.instance"
+decl_stmt|;
+comment|/**      * This holds a reference to a ReplayCache instance used to cache SAML2 Token Identifiers, when      * the token has a "OneTimeUse" Condition. The default instance that is used is the EHCacheReplayCache.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SAML_ONE_TIME_USE_CACHE_INSTANCE
+init|=
+literal|"ws-security.saml.cache.instance"
 decl_stmt|;
 comment|/**      * Set this property to point to a configuration file for the underlying caching implementation.      * The default configuration file that is used is cxf-ehcache.xml in this module.      */
 specifier|public
@@ -779,6 +797,10 @@ block|,
 name|ASYMMETRIC_SIGNATURE_ALGORITHM
 block|,
 name|PASSWORD_ENCRYPTOR_INSTANCE
+block|,
+name|ENABLE_SAML_ONE_TIME_USE_CACHE
+block|,
+name|SAML_ONE_TIME_USE_CACHE_INSTANCE
 block|}
 argument_list|)
 argument_list|)
