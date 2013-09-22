@@ -785,6 +785,13 @@ name|getAddress
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|super
+operator|.
+name|setDestinationFactory
+argument_list|(
+name|df
+argument_list|)
+expr_stmt|;
 block|}
 if|if
 condition|(
