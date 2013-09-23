@@ -764,7 +764,7 @@ argument_list|)
 expr_stmt|;
 name|r
 operator|.
-name|setMessage
+name|setOutMessage
 argument_list|(
 name|createMessage
 argument_list|()

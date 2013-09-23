@@ -433,7 +433,6 @@ name|MediaType
 name|getMediaType
 parameter_list|()
 block|{
-comment|//return r.getEntity() != null ? r.getMediaType() : null;
 return|return
 name|r
 operator|.
@@ -596,7 +595,8 @@ name|setEntity
 argument_list|(
 name|entity
 argument_list|,
-literal|null
+name|getResponseEntityAnnotations
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
