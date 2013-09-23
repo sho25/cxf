@@ -233,7 +233,7 @@ name|singletonMap
 argument_list|(
 literal|"my_parameter"
 argument_list|,
-literal|"abc"
+literal|"http://abc"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -328,7 +328,7 @@ literal|"\"expires_in\":12345,"
 operator|+
 literal|"\"scope\":\"read\","
 operator|+
-literal|"\"my_parameter\":\"abc\""
+literal|"\"my_parameter\":\"http://abc\""
 operator|+
 literal|"}"
 decl_stmt|;
@@ -346,7 +346,7 @@ name|singletonMap
 argument_list|(
 literal|"my_parameter"
 argument_list|,
-literal|"abc"
+literal|"http://abc"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -517,7 +517,7 @@ expr_stmt|;
 block|}
 name|assertEquals
 argument_list|(
-literal|"abc"
+literal|"http://abc"
 argument_list|,
 name|extraParams
 operator|.
@@ -619,7 +619,7 @@ name|put
 argument_list|(
 literal|"my_parameter"
 argument_list|,
-literal|"abc"
+literal|"http://abc"
 argument_list|)
 expr_stmt|;
 name|token
@@ -721,7 +721,7 @@ literal|"\"mac_key\":\"adijq39jdlaska9asud\","
 operator|+
 literal|"\"mac_algorithm\":\"hmac-sha-256\","
 operator|+
-literal|"\"my_parameter\":\"abc\""
+literal|"\"my_parameter\":\"http://abc\""
 operator|+
 literal|"}"
 decl_stmt|;
