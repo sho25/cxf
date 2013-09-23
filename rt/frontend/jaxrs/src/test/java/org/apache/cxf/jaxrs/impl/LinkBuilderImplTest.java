@@ -599,7 +599,7 @@ name|resource
 operator|.
 name|contains
 argument_list|(
-literal|"<resource/consumesappjson>"
+literal|"<consumesappjson>"
 argument_list|)
 argument_list|)
 expr_stmt|;

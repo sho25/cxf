@@ -7981,12 +7981,12 @@ block|{
 name|String
 name|msg1
 init|=
-literal|"No message body writer has been found for response class GregorianCalendar."
+literal|"No message body writer has been found for class java.util.GregorianCalendar, ContentType: */*"
 decl_stmt|;
 name|String
 name|msg2
 init|=
-literal|"No message body writer has been found for response class Calendar."
+literal|"No message body writer has been found for class java.util.Calendar, ContentType: */*"
 decl_stmt|;
 name|getAndCompareStrings
 argument_list|(
