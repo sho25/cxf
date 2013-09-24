@@ -445,7 +445,7 @@ decl_stmt|;
 specifier|protected
 name|List
 argument_list|<
-name|?
+name|Object
 argument_list|>
 name|customAttributeValues
 decl_stmt|;
@@ -631,7 +631,7 @@ name|setCustomAttributeValues
 parameter_list|(
 name|List
 argument_list|<
-name|?
+name|Object
 argument_list|>
 name|customAttributeValues
 parameter_list|)
@@ -818,7 +818,7 @@ condition|)
 block|{
 name|attributeBean
 operator|.
-name|setCustomAttributeValues
+name|setAttributeValues
 argument_list|(
 name|customAttributeValues
 argument_list|)
@@ -828,14 +828,9 @@ else|else
 block|{
 name|attributeBean
 operator|.
-name|setAttributeValues
-argument_list|(
-name|Collections
-operator|.
-name|singletonList
+name|addAttributeValue
 argument_list|(
 literal|"user"
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

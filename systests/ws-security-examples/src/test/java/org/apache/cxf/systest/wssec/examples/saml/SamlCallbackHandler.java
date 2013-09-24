@@ -604,14 +604,9 @@ expr_stmt|;
 block|}
 name|attributeBean
 operator|.
-name|setAttributeValues
-argument_list|(
-name|Collections
-operator|.
-name|singletonList
+name|addAttributeValue
 argument_list|(
 literal|"system-user"
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|attrBean

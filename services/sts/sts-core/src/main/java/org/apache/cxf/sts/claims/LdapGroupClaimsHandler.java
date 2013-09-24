@@ -1521,7 +1521,14 @@ name|c
 operator|.
 name|setValues
 argument_list|(
+operator|new
+name|ArrayList
+argument_list|<
+name|Object
+argument_list|>
+argument_list|(
 name|filteredGroups
+argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// c.setIssuer(issuer);
