@@ -397,24 +397,11 @@ block|,
 literal|"application/json"
 block|}
 argument_list|)
-annotation|@
-name|Description
-argument_list|(
-name|lang
-operator|=
-literal|"en-us"
-argument_list|,
-name|title
-operator|=
-literal|"book store \"resource\""
-argument_list|,
-name|value
-operator|=
-literal|"super resource"
-argument_list|)
 specifier|public
 class|class
 name|BookStore
+implements|implements
+name|BookDescription
 block|{
 annotation|@
 name|Descriptions
