@@ -167,7 +167,7 @@ name|jaxrs
 operator|.
 name|interceptor
 operator|.
-name|JAXBDefaultFaultOutInterceptor
+name|JAXRSDefaultFaultOutInterceptor
 import|;
 end_import
 
@@ -372,7 +372,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|JAXBDefaultFaultOutInterceptor
+name|JAXRSDefaultFaultOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;

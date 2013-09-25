@@ -180,7 +180,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JAXBDefaultFaultOutInterceptor
+name|JAXRSDefaultFaultOutInterceptor
 extends|extends
 name|AbstractOutDatabindingInterceptor
 block|{
@@ -194,13 +194,13 @@ name|BundleUtils
 operator|.
 name|getBundle
 argument_list|(
-name|JAXBDefaultFaultOutInterceptor
+name|JAXRSDefaultFaultOutInterceptor
 operator|.
 name|class
 argument_list|)
 decl_stmt|;
 specifier|public
-name|JAXBDefaultFaultOutInterceptor
+name|JAXRSDefaultFaultOutInterceptor
 parameter_list|()
 block|{
 name|super
@@ -212,7 +212,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|JAXBDefaultFaultOutInterceptor
+name|JAXRSDefaultFaultOutInterceptor
 parameter_list|(
 name|String
 name|phase
