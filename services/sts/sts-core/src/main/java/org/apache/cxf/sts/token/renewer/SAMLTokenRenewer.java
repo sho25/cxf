@@ -1985,7 +1985,7 @@ argument_list|()
 decl_stmt|;
 name|requestData
 operator|.
-name|setSigCrypto
+name|setSigVerCrypto
 argument_list|(
 name|sigCrypto
 argument_list|)
