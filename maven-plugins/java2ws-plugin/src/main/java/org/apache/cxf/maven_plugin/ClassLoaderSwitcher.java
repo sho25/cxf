@@ -533,6 +533,13 @@ name|void
 name|restoreClassLoader
 parameter_list|()
 block|{
+if|if
+condition|(
+name|origContextClassloader
+operator|!=
+literal|null
+condition|)
+block|{
 name|Thread
 operator|.
 name|currentThread
@@ -543,6 +550,12 @@ argument_list|(
 name|origContextClassloader
 argument_list|)
 expr_stmt|;
+name|origContextClassloader
+operator|=
+literal|null
+expr_stmt|;
+comment|// don't hold a reference.
+block|}
 if|if
 condition|(
 name|origClassPath
@@ -560,6 +573,13 @@ name|origClassPath
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|origProps
+operator|!=
+literal|null
+condition|)
+block|{
 name|Map
 argument_list|<
 name|Object
@@ -626,11 +646,7 @@ argument_list|(
 name|origProps
 argument_list|)
 expr_stmt|;
-name|origContextClassloader
-operator|=
-literal|null
-expr_stmt|;
-comment|// don't hold a reference.
+block|}
 block|}
 block|}
 end_class
