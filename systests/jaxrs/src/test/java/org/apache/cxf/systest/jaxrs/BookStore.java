@@ -1342,7 +1342,7 @@ name|header
 argument_list|(
 literal|"Location"
 argument_list|,
-literal|"/?a"
+literal|"relative?loop=true"
 argument_list|)
 operator|.
 name|build
@@ -1363,7 +1363,7 @@ name|header
 argument_list|(
 literal|"Location"
 argument_list|,
-literal|"/?redirect=true"
+literal|"relative?redirect=true"
 argument_list|)
 operator|.
 name|build
