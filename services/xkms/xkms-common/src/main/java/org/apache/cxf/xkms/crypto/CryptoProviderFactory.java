@@ -100,6 +100,20 @@ name|Crypto
 name|fallbackCrypto
 parameter_list|)
 function_decl|;
+comment|/**      * Create with overridden XKMSPortType, fallbackCrypto and control of getting X509 from local keystore      *       * @param xkmsClient      * @param fallbackCrypto      * @param allowX509FromJKS      * @return      */
+name|Crypto
+name|create
+parameter_list|(
+name|XKMSPortType
+name|xkmsClient
+parameter_list|,
+name|Crypto
+name|fallbackCrypto
+parameter_list|,
+name|boolean
+name|allowX509FromJKS
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
