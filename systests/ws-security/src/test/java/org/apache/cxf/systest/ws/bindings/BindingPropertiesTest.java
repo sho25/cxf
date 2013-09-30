@@ -359,9 +359,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO - XPath support Streaming
-comment|// SecurityTestUtil.enableStreaming(port);
-comment|// port.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 comment|// This should fail, as OnlySignEntireHeadersAndBody is specified
 name|portQName
 operator|=

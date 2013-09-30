@@ -235,19 +235,12 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|// Child of Body is signed which conflicts with the OnlySignEntireHeadersAndBody property
-comment|// TODO Support for streaming XPath
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testOnlySignEntireHeadersAndBody
@@ -366,9 +359,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO - XPath support Streaming
-comment|// SecurityTestUtil.enableStreaming(port);
-comment|// port.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 comment|// This should fail, as OnlySignEntireHeadersAndBody is specified
 name|portQName
 operator|=
@@ -433,7 +438,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"OnlySignEntireHeadersAndBody does not match the requirements"
+literal|"OnlySignEntireHeadersAndBody not fulfilled"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -486,7 +491,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "OnlySignEntireHeadersAndBody does not match the requirements";
+comment|// String error = "OnlySignEntireHeadersAndBody not fulfilled";
 comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
