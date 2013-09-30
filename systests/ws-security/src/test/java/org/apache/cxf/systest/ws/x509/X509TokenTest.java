@@ -2782,9 +2782,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
-comment|// SecurityTestUtil.enableStreaming(x509Port);
-comment|// x509Port.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
+argument_list|)
+expr_stmt|;
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
