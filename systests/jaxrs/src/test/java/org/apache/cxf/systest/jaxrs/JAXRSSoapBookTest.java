@@ -959,6 +959,8 @@ argument_list|(
 name|BookServerRestSoap
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -6116,7 +6118,6 @@ name|assertTrue
 argument_list|(
 literal|"Client In Fault In Interceptor was invoked"
 argument_list|,
-operator|!
 name|testFeature
 operator|.
 name|faultInInterceptorCalled

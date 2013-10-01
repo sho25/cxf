@@ -2856,8 +2856,6 @@ specifier|public
 name|Response
 name|infault
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 throw|throw
 operator|new
@@ -2876,8 +2874,6 @@ specifier|public
 name|Response
 name|outfault
 parameter_list|()
-throws|throws
-name|Exception
 block|{
 return|return
 name|Response
