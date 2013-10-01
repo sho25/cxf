@@ -1432,7 +1432,7 @@ name|endpoint
 operator|.
 name|get
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|class
 operator|.
