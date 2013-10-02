@@ -749,7 +749,7 @@ name|message
 operator|.
 name|get
 argument_list|(
-literal|"http.retransmit.url"
+literal|"transport.retransmit.url"
 argument_list|)
 decl_stmt|;
 if|if
