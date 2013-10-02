@@ -391,6 +391,13 @@ name|attrBean
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|callback
+operator|.
+name|setSignAssertion
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 block|}

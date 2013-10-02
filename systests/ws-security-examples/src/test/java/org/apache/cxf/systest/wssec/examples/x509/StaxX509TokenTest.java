@@ -144,13 +144,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for X509 Tokens using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  *   * It tests both DOM + StAX clients against the DOM server  */
+comment|/**  * A set of tests for X509 Tokens using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  *   * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|X509TokenTest
+name|StaxX509TokenTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -161,7 +161,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|)
@@ -206,7 +206,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
@@ -262,7 +262,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -301,7 +301,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -423,7 +423,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -462,7 +462,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -560,13 +560,19 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.2.3 (WSS1.1) Anonymous with X.509 Certificate, Sign, Encrypt      */
+comment|/**      * 2.2.3 (WSS1.1) Anonymous with X.509 Certificate, Sign, Encrypt      * TODO Support streaming derived      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testSymmetricSignEncrypt
@@ -584,7 +590,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -623,7 +629,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -709,13 +715,19 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.2.4 (WSS1.1) Mutual Authentication with X.509 Certificates, Sign, Encrypt      */
+comment|/**      * 2.2.4 (WSS1.1) Mutual Authentication with X.509 Certificates, Sign, Encrypt      * TODO - Support streaming Endorsing      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testSymmetricEndorsing
@@ -733,7 +745,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.
@@ -772,7 +784,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|X509TokenTest
+name|StaxX509TokenTest
 operator|.
 name|class
 operator|.

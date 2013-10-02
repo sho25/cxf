@@ -215,15 +215,6 @@ name|IS_BSP_COMPLIANT
 init|=
 literal|"ws-security.is-bsp-compliant"
 decl_stmt|;
-comment|/**      * Whether to self-sign a SAML Assertion or not. If this is set to true, then an enveloped signature       * will be generated when the SAML Assertion is constructed. The default is false.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SELF_SIGN_SAML_ASSERTION
-init|=
-literal|"ws-security.self-sign-saml-assertion"
-decl_stmt|;
 comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces. Note that caching only applies when either a UsernameToken      * WS-SecurityPolicy is in effect, or else that a UsernameToken action has been configured      * for the non-security-policy case.      */
 specifier|public
 specifier|static
@@ -717,8 +708,6 @@ block|,
 name|ALWAYS_ENCRYPT_UT
 block|,
 name|IS_BSP_COMPLIANT
-block|,
-name|SELF_SIGN_SAML_ASSERTION
 block|,
 name|ENABLE_NONCE_CACHE
 block|,
