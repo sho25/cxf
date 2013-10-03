@@ -3323,6 +3323,13 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|soapOperationInfo
+operator|!=
+literal|null
+condition|)
+block|{
 name|String
 name|soapNS
 decl_stmt|;
@@ -3414,6 +3421,7 @@ argument_list|(
 name|operationPolicy
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|String
 name|soapAction
