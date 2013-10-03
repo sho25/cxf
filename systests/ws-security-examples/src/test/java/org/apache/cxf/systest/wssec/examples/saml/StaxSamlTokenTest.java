@@ -210,13 +210,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for SAML Tokens using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  *   * It tests both DOM + StAX clients against the DOM server  */
+comment|/**  * A set of tests for SAML Tokens using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  *   * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|SamlTokenTest
+name|StaxSamlTokenTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -227,7 +227,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|)
@@ -239,7 +239,7 @@ name|PORT2
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
@@ -298,7 +298,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|StaxServer
 operator|.
 name|class
 argument_list|,
@@ -370,7 +370,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -409,7 +409,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -531,7 +531,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -570,7 +570,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -692,7 +692,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -731,7 +731,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -853,7 +853,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -892,7 +892,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1014,7 +1014,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1053,7 +1053,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1160,7 +1160,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1199,7 +1199,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1321,7 +1321,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1360,7 +1360,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1482,7 +1482,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1521,7 +1521,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1619,13 +1619,19 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.3.2.4 (WSS1.1) SAML1.1/2.0 Sender Vouches with X.509 Certificate, Sign, Encrypt      */
+comment|/**      * 2.3.2.4 (WSS1.1) SAML1.1/2.0 Sender Vouches with X.509 Certificate, Sign, Encrypt      * TODO Endorsing support      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testSymmetricSV
@@ -1643,7 +1649,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1682,7 +1688,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1768,13 +1774,19 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.3.2.5 (WSS1.1) SAML1.1/2.0 Holder of Key, Sign, Encrypt      */
+comment|/**      * 2.3.2.5 (WSS1.1) SAML1.1/2.0 Holder of Key, Sign, Encrypt      * TODO Endorsing Support      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
 specifier|public
 name|void
 name|testSymmetricIssuedToken
@@ -1792,7 +1804,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
@@ -1831,7 +1843,7 @@ expr_stmt|;
 name|URL
 name|wsdl
 init|=
-name|SamlTokenTest
+name|StaxSamlTokenTest
 operator|.
 name|class
 operator|.
