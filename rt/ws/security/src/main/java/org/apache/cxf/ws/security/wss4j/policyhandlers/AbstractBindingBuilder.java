@@ -2893,6 +2893,8 @@ argument_list|()
 argument_list|,
 name|LOG
 argument_list|)
+argument_list|,
+name|reason
 argument_list|)
 throw|;
 block|}
