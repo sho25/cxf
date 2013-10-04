@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a CXF intermediary.  * The intermediary validates the UsernameToken, and then inserts the username into a SAML  * Assertion which it signs and sends to a provider (via TLS).  */
+comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a CXF intermediary.  * The intermediary validates the UsernameToken, and then inserts the username into a SAML  * Assertion which it signs and sends to a provider (via TLS).  *   * It tests both DOM + StAX clients against the DOM server  */
 end_comment
 
 begin_class
@@ -380,11 +380,47 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 name|doubleIt
 argument_list|(
 name|transportUTPort
 argument_list|,
 literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|transportUTPort
+operator|=
+name|service
+operator|.
+name|getPort
+argument_list|(
+name|portQName
+argument_list|,
+name|DoubleItPortType
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|updateAddressPort
+argument_list|(
+name|transportUTPort
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|transportUTPort
+argument_list|)
+expr_stmt|;
+name|doubleIt
+argument_list|(
+name|transportUTPort
+argument_list|,
+literal|45
 argument_list|)
 expr_stmt|;
 operator|(
