@@ -1918,6 +1918,11 @@ argument_list|()
 operator|.
 name|hasFault
 argument_list|()
+operator|&&
+name|isRequestor
+argument_list|(
+name|msg
+argument_list|)
 condition|)
 block|{
 name|LOG
