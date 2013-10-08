@@ -397,8 +397,7 @@ name|bytesRead
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
+comment|//read more
 while|while
 condition|(
 operator|(
@@ -421,7 +420,6 @@ name|totalRead
 operator|+=
 name|bytesRead
 expr_stmt|;
-block|}
 block|}
 if|if
 condition|(
