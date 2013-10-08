@@ -416,13 +416,6 @@ operator|new
 name|SpringBus
 argument_list|()
 decl_stmt|;
-name|b
-operator|.
-name|setApplicationContext
-argument_list|(
-name|context
-argument_list|)
-expr_stmt|;
 name|ConfigurableApplicationContext
 name|cctx
 init|=
@@ -441,6 +434,13 @@ argument_list|(
 name|name
 argument_list|,
 name|b
+argument_list|)
+expr_stmt|;
+name|b
+operator|.
+name|setApplicationContext
+argument_list|(
+name|context
 argument_list|)
 expr_stmt|;
 block|}
