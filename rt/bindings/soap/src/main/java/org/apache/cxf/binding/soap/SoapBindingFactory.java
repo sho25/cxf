@@ -4318,7 +4318,10 @@ operator|=
 operator|new
 name|MessageInfo
 argument_list|(
-literal|null
+name|bop
+operator|.
+name|getOperationInfo
+argument_list|()
 argument_list|,
 name|type
 argument_list|,

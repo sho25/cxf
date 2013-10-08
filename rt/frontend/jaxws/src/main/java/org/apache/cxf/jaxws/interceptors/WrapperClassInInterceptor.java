@@ -908,6 +908,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|mpi
+operator|!=
+literal|null
+operator|&&
 name|lst
 operator|.
 name|hasValue
@@ -937,6 +941,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|mpi
+operator|==
+literal|null
+operator|||
 name|mpi
 operator|.
 name|getTypeClass

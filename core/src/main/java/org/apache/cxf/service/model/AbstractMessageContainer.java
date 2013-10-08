@@ -532,10 +532,14 @@ decl_stmt|;
 if|if
 condition|(
 name|mpi
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{
+return|return
+name|mpi
+return|;
+block|}
 for|for
 control|(
 name|MessagePartInfo
@@ -563,7 +567,6 @@ block|{
 return|return
 name|mpi2
 return|;
-block|}
 block|}
 block|}
 for|for
