@@ -2187,6 +2187,9 @@ name|JAXRSUtils
 operator|.
 name|IGNORE_MESSAGE_WRITERS
 argument_list|,
+operator|!
+name|isJson
+operator|&&
 name|ignoreMessageWriters
 argument_list|)
 expr_stmt|;
