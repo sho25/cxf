@@ -129,15 +129,13 @@ end_import
 
 begin_import
 import|import
-name|com
+name|org
 operator|.
-name|ibm
+name|apache
 operator|.
-name|wsdl
+name|cxf
 operator|.
-name|util
-operator|.
-name|xml
+name|helpers
 operator|.
 name|DOMUtils
 import|;
@@ -279,7 +277,7 @@ name|actualHeaderelement
 init|=
 name|DOMUtils
 operator|.
-name|getFirstChildElement
+name|getFirstElement
 argument_list|(
 name|context
 operator|.
@@ -342,7 +340,7 @@ name|actualHeaderelement
 operator|=
 name|DOMUtils
 operator|.
-name|getNextSiblingElement
+name|getNextElement
 argument_list|(
 name|actualHeaderelement
 argument_list|)

@@ -271,22 +271,6 @@ end_import
 
 begin_import
 import|import
-name|com
-operator|.
-name|ibm
-operator|.
-name|wsdl
-operator|.
-name|util
-operator|.
-name|xml
-operator|.
-name|DOMUtils
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -350,6 +334,20 @@ operator|.
 name|logging
 operator|.
 name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|helpers
+operator|.
+name|DOMUtils
 import|;
 end_import
 
@@ -1400,7 +1398,7 @@ name|W3CDOMStreamReader
 argument_list|(
 name|DOMUtils
 operator|.
-name|getFirstChildElement
+name|getFirstElement
 argument_list|(
 name|SAAJUtils
 operator|.
