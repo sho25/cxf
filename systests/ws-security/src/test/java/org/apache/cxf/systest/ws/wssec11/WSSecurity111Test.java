@@ -351,9 +351,10 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-comment|// TODO Derived "AD",
+literal|"AD"
+block|,
 comment|// TODO See WSS-468 EncryptBeforeSigning not working "A-ES",
-comment|// TODO Derived "AD-ES",
+comment|// TODO See WSS-468 Derived "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
