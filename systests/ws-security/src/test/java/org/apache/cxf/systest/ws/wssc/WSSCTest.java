@@ -154,7 +154,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *  */
+comment|/**  * SecureConversation tests.  *   * It tests both DOM + StAX clients against the DOM server  */
 end_comment
 
 begin_class
@@ -301,9 +301,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"SecureConversation_MutualCertificate10SignEncrypt_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "SecureConversation_MutualCertificate10SignEncrypt_IPingService");
 block|}
 annotation|@
 name|Test
@@ -316,6 +320,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"AC_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"AC_IPingService"
 argument_list|)
 expr_stmt|;
@@ -331,9 +344,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"ADC_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "ADC_IPingService");
 block|}
 annotation|@
 name|Test
@@ -346,9 +363,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"ADC-ES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "ADC-ES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -361,6 +382,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"_A_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"_A_IPingService"
 argument_list|)
 expr_stmt|;
@@ -376,9 +406,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_AD_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_AD_IPingService");
 block|}
 annotation|@
 name|Test
@@ -391,9 +425,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_AD-ES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_AD-ES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -406,6 +444,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"UXC_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"UXC_IPingService"
 argument_list|)
 expr_stmt|;
@@ -421,9 +468,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"UXDC_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "UXDC_IPingService");
 block|}
 annotation|@
 name|Test
@@ -436,9 +487,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"UXDC-SEES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "UXDC-SEES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -451,6 +506,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"_UX_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"_UX_IPingService"
 argument_list|)
 expr_stmt|;
@@ -466,9 +530,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_UXD_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_UXD_IPingService");
 block|}
 annotation|@
 name|Test
@@ -481,9 +549,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_UXD-SEES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_UXD-SEES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -496,6 +568,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"XC_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"XC_IPingService"
 argument_list|)
 expr_stmt|;
@@ -511,9 +592,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"XDC_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "XDC_IPingService");
 block|}
 annotation|@
 name|Test
@@ -526,9 +611,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"XDC_IPingService1"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "XDC_IPingService1");
 block|}
 annotation|@
 name|Test
@@ -541,9 +630,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"XDC-ES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "XDC-ES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -556,9 +649,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"XDC-SEES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "XDC-SEES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -571,6 +668,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"_X_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"_X_IPingService"
 argument_list|)
 expr_stmt|;
@@ -586,6 +692,15 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
+literal|"_X10_IPingService"
+argument_list|)
+expr_stmt|;
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
 literal|"_X10_IPingService"
 argument_list|)
 expr_stmt|;
@@ -601,9 +716,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_XD_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_XD_IPingService");
 block|}
 annotation|@
 name|Test
@@ -616,9 +735,13 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_XD-SEES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_XD-SEES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -631,14 +754,21 @@ name|Exception
 block|{
 name|runTest
 argument_list|(
+literal|false
+argument_list|,
 literal|"_XD-ES_IPingService"
 argument_list|)
 expr_stmt|;
+comment|// TODO Hanging due to Derived Keys...
+comment|// runTest(true, "_XD-ES_IPingService");
 block|}
 specifier|private
 name|void
 name|runTest
 parameter_list|(
+name|boolean
+name|streaming
+parameter_list|,
 name|String
 modifier|...
 name|argv
@@ -740,6 +870,50 @@ argument_list|,
 name|Boolean
 operator|.
 name|TRUE
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|streaming
+condition|)
+block|{
+operator|(
+operator|(
+name|BindingProvider
+operator|)
+name|port
+operator|)
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+name|SecurityConstants
+operator|.
+name|ENABLE_STREAMING_SECURITY
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
+operator|(
+operator|(
+name|BindingProvider
+operator|)
+name|port
+operator|)
+operator|.
+name|getResponseContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+name|SecurityConstants
+operator|.
+name|ENABLE_STREAMING_SECURITY
+argument_list|,
+literal|"true"
 argument_list|)
 expr_stmt|;
 block|}

@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for SecureConversation using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  */
+comment|/**  * A set of tests for SecureConversation using policies defined in the OASIS spec:  * "WS-SecurityPolicy Examples Version 1.0".  *   * It tests both DOM + StAX clients against the DOM server  */
 end_comment
 
 begin_class
@@ -352,6 +352,22 @@ argument_list|(
 name|samlPort
 argument_list|,
 name|PORT
+argument_list|)
+expr_stmt|;
+comment|// DOM
+name|samlPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|samlPort
 argument_list|)
 expr_stmt|;
 name|samlPort
