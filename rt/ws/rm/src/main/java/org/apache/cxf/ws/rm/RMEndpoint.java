@@ -701,7 +701,7 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|EndpointPolicyImpl
+name|EndpointPolicy
 import|;
 end_import
 
@@ -717,7 +717,7 @@ name|ws
 operator|.
 name|policy
 operator|.
-name|PolicyEngineImpl
+name|PolicyEngine
 import|;
 end_import
 
@@ -2267,7 +2267,7 @@ name|setPolicies
 parameter_list|()
 block|{
 comment|// use same WS-policies as for application endpoint
-name|PolicyEngineImpl
+name|PolicyEngine
 name|engine
 init|=
 name|manager
@@ -2277,7 +2277,7 @@ argument_list|()
 operator|.
 name|getExtension
 argument_list|(
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 argument_list|)
@@ -2316,13 +2316,9 @@ operator|.
 name|getEndpointInfo
 argument_list|()
 decl_stmt|;
-name|EndpointPolicyImpl
+name|EndpointPolicy
 name|epi
 init|=
-call|(
-name|EndpointPolicyImpl
-call|)
-argument_list|(
 literal|null
 operator|==
 name|conduit
@@ -2349,7 +2345,6 @@ name|getEndpointInfo
 argument_list|()
 argument_list|,
 name|conduit
-argument_list|)
 argument_list|)
 decl_stmt|;
 if|if

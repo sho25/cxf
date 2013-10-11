@@ -577,7 +577,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|}
@@ -747,7 +747,7 @@ name|BindingOperationInfo
 operator|.
 name|class
 block|,
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|,
@@ -780,7 +780,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|,
@@ -805,7 +805,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|}
@@ -1004,7 +1004,7 @@ name|BindingFaultInfo
 operator|.
 name|class
 block|,
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|}
@@ -1025,7 +1025,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|,
@@ -1050,7 +1050,7 @@ operator|new
 name|Class
 index|[]
 block|{
-name|PolicyEngineImpl
+name|PolicyEngine
 operator|.
 name|class
 block|}
