@@ -804,6 +804,13 @@ operator|.
 name|getSamlAssertionWrapper
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|receivedAssertion
+operator|!=
+literal|null
+condition|)
+block|{
 name|roles
 operator|=
 name|SAMLUtils
@@ -860,6 +867,7 @@ argument_list|,
 name|context
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
