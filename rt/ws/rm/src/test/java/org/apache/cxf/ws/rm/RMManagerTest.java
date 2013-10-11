@@ -3651,6 +3651,15 @@ name|ProtocolVariation
 operator|.
 name|class
 argument_list|)
+argument_list|,
+name|EasyMock
+operator|.
+name|isA
+argument_list|(
+name|Exchange
+operator|.
+name|class
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|EasyMock
