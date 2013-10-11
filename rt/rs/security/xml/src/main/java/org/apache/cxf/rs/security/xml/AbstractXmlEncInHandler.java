@@ -325,9 +325,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|util
+operator|.
+name|KeyUtils
 import|;
 end_import
 
@@ -341,9 +343,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|util
-operator|.
-name|WSSecurityUtil
+name|WSConstants
 import|;
 end_import
 
@@ -1484,7 +1484,7 @@ block|{
 name|SecretKey
 name|key
 init|=
-name|WSSecurityUtil
+name|KeyUtils
 operator|.
 name|prepareSecretKey
 argument_list|(
