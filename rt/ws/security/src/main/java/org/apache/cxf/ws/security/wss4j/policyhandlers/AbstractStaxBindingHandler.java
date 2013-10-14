@@ -2510,8 +2510,6 @@ name|SAML_TOKEN_UNSIGNED
 decl_stmt|;
 if|if
 condition|(
-name|signed
-operator|||
 name|endorsing
 condition|)
 block|{
