@@ -589,6 +589,17 @@ argument_list|,
 name|doc
 argument_list|)
 expr_stmt|;
+name|mout
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|CONTENT_TYPE
+argument_list|,
+literal|"text/xml"
+argument_list|)
+expr_stmt|;
 comment|// just remove the interceptor which should not be used
 name|cleanUpOutInterceptors
 argument_list|(

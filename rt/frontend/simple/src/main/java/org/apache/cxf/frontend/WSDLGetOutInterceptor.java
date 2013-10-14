@@ -244,6 +244,17 @@ condition|)
 block|{
 return|return;
 block|}
+name|message
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|CONTENT_TYPE
+argument_list|,
+literal|"text/xml"
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|StaxUtils
