@@ -946,7 +946,8 @@ argument_list|,
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming - Problem with including encrypted SAML Token in header
+comment|// TODO Streaming - The encrypted issued token is placed under the ReferenceList
+comment|// and hence an error is thrown on the receiving side
 name|symmetricSaml1Port
 operator|=
 name|service
@@ -981,7 +982,7 @@ name|BindingProvider
 operator|)
 name|symmetricSaml1Port
 argument_list|,
-name|STSPORT
+name|STSPORT2
 argument_list|)
 expr_stmt|;
 block|}
@@ -1148,11 +1149,65 @@ name|STSPORT2
 argument_list|)
 expr_stmt|;
 block|}
+comment|// DOM
 name|doubleIt
 argument_list|(
 name|symmetricSaml2Port
 argument_list|,
 literal|30
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|symmetricSaml2Port
+operator|=
+name|service
+operator|.
+name|getPort
+argument_list|(
+name|portQName
+argument_list|,
+name|DoubleItPortType
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
+name|updateAddressPort
+argument_list|(
+name|symmetricSaml2Port
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|standalone
+condition|)
+block|{
+name|TokenTestUtils
+operator|.
+name|updateSTSPort
+argument_list|(
+operator|(
+name|BindingProvider
+operator|)
+name|symmetricSaml2Port
+argument_list|,
+name|STSPORT2
+argument_list|)
+expr_stmt|;
+block|}
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|symmetricSaml2Port
+argument_list|)
+expr_stmt|;
+name|doubleIt
+argument_list|(
+name|symmetricSaml2Port
+argument_list|,
+literal|25
 argument_list|)
 expr_stmt|;
 operator|(
