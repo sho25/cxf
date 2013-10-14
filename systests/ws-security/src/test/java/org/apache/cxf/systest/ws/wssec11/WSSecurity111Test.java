@@ -359,11 +359,12 @@ literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-comment|// TODO Derived "UXD",
+literal|"UXD"
+block|,
 literal|"UX-SEES"
 block|,
-comment|// TODO Derived "UXD-SEES",
-block|}
+literal|"UXD-SEES"
+block|,         }
 decl_stmt|;
 name|runClientServerStreaming
 argument_list|(

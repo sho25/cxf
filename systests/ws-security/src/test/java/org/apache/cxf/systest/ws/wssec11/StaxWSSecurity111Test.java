@@ -275,18 +275,18 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-comment|// TODO Derived - "AD",
+comment|// TODO Derived hanging - "AD",
 literal|"A-ES"
 block|,
-comment|// TODO Derived - "AD-ES",
+comment|// TODO Derived hanging - "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-comment|// TODO Derived - "UXD",
+comment|// TODO Derived hanging - "UXD",
 literal|"UX-SEES"
 block|,
-comment|// TODO Derived - "UXD-SEES",
+comment|// TODO Derived hanging - "UXD-SEES",
 block|}
 decl_stmt|;
 name|runClientServer
@@ -348,17 +348,17 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-comment|// TODO Derived "AD",
+comment|// TODO Derived hanging "AD",
 comment|// TODO See WSS-468 EncryptBeforeSigning not working "A-ES",
-comment|// TODO Derived "AD-ES",
+comment|// TODO Derived hanging "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-comment|// TODO Derived "UXD",
+comment|// TODO Derived hanging "UXD",
 literal|"UX-SEES"
 block|,
-comment|// TODO Derived "UXD-SEES",
+comment|// TODO Derived hanging "UXD-SEES",
 block|}
 decl_stmt|;
 name|runClientServerStreaming
