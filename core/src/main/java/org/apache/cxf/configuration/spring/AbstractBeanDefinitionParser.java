@@ -2723,6 +2723,14 @@ name|startsWith
 argument_list|(
 literal|"#"
 argument_list|)
+operator|&&
+operator|!
+name|val
+operator|.
+name|startsWith
+argument_list|(
+literal|"#{"
+argument_list|)
 condition|)
 block|{
 name|bean
