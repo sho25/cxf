@@ -9475,16 +9475,6 @@ operator|!=
 name|control
 condition|)
 block|{
-operator|(
-operator|(
-name|Closeable
-operator|)
-name|control
-operator|)
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"Failed to stop greeter"
@@ -9496,6 +9486,16 @@ argument_list|(
 literal|null
 argument_list|)
 argument_list|)
+expr_stmt|;
+operator|(
+operator|(
+name|Closeable
+operator|)
+name|control
+operator|)
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 name|controlBus
 operator|.
