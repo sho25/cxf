@@ -507,6 +507,8 @@ argument_list|,
 literal|true
 argument_list|,
 literal|true
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|PolicyUtils
@@ -563,6 +565,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|conduit
+argument_list|,
+name|msg
 argument_list|)
 decl_stmt|;
 name|LOG

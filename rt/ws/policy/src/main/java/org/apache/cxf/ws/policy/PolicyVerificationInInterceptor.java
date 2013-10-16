@@ -448,6 +448,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 block|}
@@ -462,6 +464,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 block|}

@@ -428,6 +428,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 for|for

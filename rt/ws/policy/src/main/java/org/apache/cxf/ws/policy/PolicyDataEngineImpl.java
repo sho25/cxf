@@ -316,6 +316,9 @@ parameter_list|>
 name|T
 name|getClientEndpointPolicy
 parameter_list|(
+name|Message
+name|m
+parameter_list|,
 name|EndpointInfo
 name|ei
 parameter_list|,
@@ -343,6 +346,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|c
+argument_list|,
+name|m
 argument_list|)
 operator|.
 name|getChosenAlternative
@@ -497,6 +502,9 @@ parameter_list|>
 name|T
 name|getServerEndpointPolicy
 parameter_list|(
+name|Message
+name|m
+parameter_list|,
 name|EndpointInfo
 name|ei
 parameter_list|,
@@ -524,6 +532,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|d
+argument_list|,
+name|m
 argument_list|)
 operator|.
 name|getChosenAlternative

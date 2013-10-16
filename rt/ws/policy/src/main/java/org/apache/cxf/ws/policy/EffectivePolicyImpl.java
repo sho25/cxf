@@ -149,22 +149,6 @@ name|cxf
 operator|.
 name|common
 operator|.
-name|i18n
-operator|.
-name|Message
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|common
-operator|.
 name|logging
 operator|.
 name|LogUtils
@@ -182,6 +166,20 @@ operator|.
 name|interceptor
 operator|.
 name|Interceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
 import|;
 end_import
 
@@ -386,6 +384,10 @@ argument_list|>
 name|interceptors
 decl_stmt|;
 specifier|public
+name|EffectivePolicyImpl
+parameter_list|()
+block|{     }
+specifier|public
 name|Policy
 name|getPolicy
 parameter_list|()
@@ -443,6 +445,9 @@ name|engine
 parameter_list|,
 name|boolean
 name|inbound
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|initialise
@@ -454,6 +459,8 @@ argument_list|,
 name|inbound
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -472,6 +479,9 @@ name|inbound
 parameter_list|,
 name|boolean
 name|fault
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|policy
@@ -500,6 +510,8 @@ argument_list|(
 name|engine
 argument_list|,
 literal|null
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -534,6 +546,9 @@ name|requestor
 parameter_list|,
 name|boolean
 name|request
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|initialisePolicy
@@ -549,6 +564,8 @@ argument_list|,
 name|request
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|chooseAlternative
@@ -556,6 +573,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|initialiseInterceptors
@@ -582,12 +601,6 @@ parameter_list|,
 name|Assertor
 name|assertor
 parameter_list|,
-name|boolean
-name|requestor
-parameter_list|,
-name|boolean
-name|request
-parameter_list|,
 name|List
 argument_list|<
 name|List
@@ -596,6 +609,9 @@ name|Assertion
 argument_list|>
 argument_list|>
 name|incoming
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|initialisePolicy
@@ -606,11 +622,13 @@ name|boi
 argument_list|,
 name|engine
 argument_list|,
-name|requestor
+literal|false
 argument_list|,
-name|request
+literal|false
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|chooseAlternative
@@ -620,6 +638,8 @@ argument_list|,
 name|assertor
 argument_list|,
 name|incoming
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|initialiseInterceptors
@@ -648,6 +668,9 @@ name|requestor
 parameter_list|,
 name|boolean
 name|request
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Assertor
@@ -666,6 +689,8 @@ argument_list|,
 name|request
 argument_list|,
 literal|null
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if
@@ -681,6 +706,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|initialiseInterceptors
@@ -743,6 +770,9 @@ name|engine
 parameter_list|,
 name|Assertor
 name|assertor
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|initialisePolicy
@@ -754,6 +784,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|engine
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|chooseAlternative
@@ -761,6 +793,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|initialiseInterceptors
@@ -876,6 +910,9 @@ name|request
 parameter_list|,
 name|Assertor
 name|assertor
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 if|if
@@ -933,6 +970,8 @@ name|Conduit
 operator|.
 name|class
 argument_list|)
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -954,6 +993,8 @@ name|Destination
 operator|.
 name|class
 argument_list|)
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1062,6 +1103,9 @@ name|bfi
 parameter_list|,
 name|PolicyEngine
 name|engine
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|policy
@@ -1076,6 +1120,8 @@ operator|(
 name|Destination
 operator|)
 literal|null
+argument_list|,
+name|m
 argument_list|)
 operator|.
 name|getPolicy
@@ -1150,6 +1196,9 @@ name|engine
 parameter_list|,
 name|Assertor
 name|assertor
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|chooseAlternative
@@ -1159,6 +1208,8 @@ argument_list|,
 name|assertor
 argument_list|,
 literal|null
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1179,6 +1230,9 @@ name|Assertion
 argument_list|>
 argument_list|>
 name|incoming
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Collection
@@ -1201,6 +1255,8 @@ argument_list|,
 name|assertor
 argument_list|,
 name|incoming
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if
@@ -1231,6 +1287,16 @@ operator|new
 name|PolicyException
 argument_list|(
 operator|new
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|i18n
+operator|.
 name|Message
 argument_list|(
 literal|"NO_ALTERNATIVE_EXC"

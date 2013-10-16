@@ -445,6 +445,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|Service
@@ -1481,6 +1495,9 @@ name|transport
 operator|.
 name|Destination
 name|d
+parameter_list|,
+name|Message
+name|message
 parameter_list|)
 block|{
 name|configuration
@@ -1504,7 +1521,9 @@ name|d
 argument_list|)
 expr_stmt|;
 name|setPolicies
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 expr_stmt|;
 if|if
 condition|(
@@ -2264,7 +2283,10 @@ expr_stmt|;
 block|}
 name|void
 name|setPolicies
-parameter_list|()
+parameter_list|(
+name|Message
+name|message
+parameter_list|)
 block|{
 comment|// use same WS-policies as for application endpoint
 name|PolicyEngine
@@ -2333,6 +2355,8 @@ name|getEndpointInfo
 argument_list|()
 argument_list|,
 literal|null
+argument_list|,
+name|message
 argument_list|)
 else|:
 name|engine
@@ -2345,6 +2369,8 @@ name|getEndpointInfo
 argument_list|()
 argument_list|,
 name|conduit
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 if|if
@@ -2394,6 +2420,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|false
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 name|EffectivePolicyImpl
@@ -2414,6 +2442,8 @@ argument_list|,
 literal|true
 argument_list|,
 literal|false
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 name|BindingInfo

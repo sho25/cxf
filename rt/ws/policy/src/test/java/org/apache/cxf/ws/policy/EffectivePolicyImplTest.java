@@ -129,6 +129,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -707,6 +721,8 @@ argument_list|,
 name|pe
 argument_list|,
 literal|false
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|control
@@ -762,6 +778,10 @@ block|,
 name|Assertor
 operator|.
 name|class
+block|,
+name|Message
+operator|.
+name|class
 block|}
 argument_list|)
 decl_stmt|;
@@ -785,6 +805,10 @@ operator|.
 name|class
 block|,
 name|Assertor
+operator|.
+name|class
+block|,
+name|Message
 operator|.
 name|class
 block|}
@@ -900,6 +924,8 @@ argument_list|,
 name|requestor
 argument_list|,
 name|a
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -919,6 +945,8 @@ argument_list|(
 name|pe
 argument_list|,
 name|a
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -960,6 +988,8 @@ argument_list|,
 name|requestor
 argument_list|,
 name|requestor
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|control
@@ -1007,6 +1037,10 @@ block|,
 name|PolicyEngine
 operator|.
 name|class
+block|,
+name|Message
+operator|.
+name|class
 block|}
 argument_list|)
 decl_stmt|;
@@ -1030,6 +1064,10 @@ operator|.
 name|class
 block|,
 name|Assertor
+operator|.
+name|class
+block|,
+name|Message
 operator|.
 name|class
 block|}
@@ -1136,6 +1174,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|pe
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1150,6 +1190,8 @@ argument_list|(
 name|pe
 argument_list|,
 name|a
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1189,6 +1231,8 @@ argument_list|,
 name|pe
 argument_list|,
 name|a
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|control
@@ -1349,6 +1393,8 @@ operator|(
 name|Conduit
 operator|)
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -1373,6 +1419,8 @@ argument_list|,
 operator|(
 name|Destination
 operator|)
+literal|null
+argument_list|,
 literal|null
 argument_list|)
 argument_list|)
@@ -1560,6 +1608,8 @@ argument_list|,
 name|requestor
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -1585,6 +1635,13 @@ name|void
 name|testInitialiseServerFaultPolicy
 parameter_list|()
 block|{
+name|Message
+name|m
+init|=
+operator|new
+name|MessageImpl
+argument_list|()
+decl_stmt|;
 name|EndpointInfo
 name|ei
 init|=
@@ -1677,6 +1734,8 @@ operator|(
 name|Destination
 operator|)
 literal|null
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -1858,6 +1917,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|engine
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|assertSame
@@ -1883,6 +1944,13 @@ name|void
 name|testChooseAlternative
 parameter_list|()
 block|{
+name|Message
+name|m
+init|=
+operator|new
+name|MessageImpl
+argument_list|()
+decl_stmt|;
 name|EffectivePolicyImpl
 name|epi
 init|=
@@ -1970,6 +2038,8 @@ argument_list|,
 name|assertor
 argument_list|,
 literal|null
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -1992,6 +2062,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|fail
@@ -2061,6 +2133,8 @@ argument_list|,
 name|assertor
 argument_list|,
 literal|null
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -2081,6 +2155,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|Collection
@@ -2296,7 +2372,7 @@ extends|extends
 name|Message
 argument_list|>
 argument_list|>
-name|m
+name|il
 init|=
 operator|new
 name|ArrayList
@@ -2320,7 +2396,7 @@ name|reg
 argument_list|,
 literal|null
 argument_list|,
-name|m
+name|il
 argument_list|)
 expr_stmt|;
 name|PolicyAssertion
@@ -2414,7 +2490,7 @@ argument_list|(
 name|qn
 argument_list|)
 expr_stmt|;
-name|m
+name|il
 operator|=
 operator|new
 name|ArrayList
@@ -2438,7 +2514,7 @@ name|reg
 argument_list|,
 name|qn
 argument_list|,
-name|m
+name|il
 argument_list|)
 expr_stmt|;
 name|control
@@ -2517,7 +2593,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-name|m
+name|il
 operator|=
 operator|new
 name|ArrayList
@@ -2531,7 +2607,7 @@ argument_list|>
 argument_list|>
 argument_list|()
 expr_stmt|;
-name|m
+name|il
 operator|.
 name|add
 argument_list|(
@@ -2548,7 +2624,7 @@ name|reg
 argument_list|,
 name|qn
 argument_list|,
-name|m
+name|il
 argument_list|)
 expr_stmt|;
 name|control

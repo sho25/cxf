@@ -1670,6 +1670,8 @@ name|getEndpointInfo
 argument_list|()
 argument_list|,
 name|destination
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 name|List

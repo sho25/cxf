@@ -179,6 +179,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|Message
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|factory
@@ -992,6 +1006,9 @@ name|boi
 parameter_list|,
 name|Conduit
 name|c
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|EffectivePolicy
@@ -1045,6 +1062,8 @@ argument_list|,
 literal|true
 argument_list|,
 literal|true
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|boi
@@ -1110,6 +1129,9 @@ name|Assertion
 argument_list|>
 argument_list|>
 name|incoming
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 if|if
@@ -1220,11 +1242,9 @@ name|this
 argument_list|,
 name|assertor
 argument_list|,
-literal|false
-argument_list|,
-literal|false
-argument_list|,
 name|incoming
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 return|return
@@ -1270,6 +1290,9 @@ name|bfi
 parameter_list|,
 name|Destination
 name|d
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 if|if
@@ -1308,6 +1331,8 @@ argument_list|,
 name|this
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 return|return
@@ -1370,6 +1395,8 @@ argument_list|,
 name|this
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|bfi
@@ -1501,6 +1528,9 @@ name|ei
 parameter_list|,
 name|Conduit
 name|conduit
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Assertor
@@ -1521,6 +1551,8 @@ argument_list|,
 literal|true
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 return|;
 block|}
@@ -1533,6 +1565,9 @@ name|ei
 parameter_list|,
 name|Destination
 name|destination
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Assertor
@@ -1553,6 +1588,8 @@ argument_list|,
 literal|false
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 return|;
 block|}
@@ -1568,6 +1605,9 @@ name|isRequestor
 parameter_list|,
 name|Assertor
 name|assertor
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|EndpointPolicy
@@ -1606,6 +1646,8 @@ argument_list|,
 name|isRequestor
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 return|;
 block|}
@@ -1660,6 +1702,9 @@ name|ei
 parameter_list|,
 name|BindingOperationInfo
 name|boi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|EffectivePolicy
@@ -1701,6 +1746,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|true
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|boi
@@ -1754,6 +1801,9 @@ name|ei
 parameter_list|,
 name|BindingOperationInfo
 name|boi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|EffectivePolicy
@@ -1795,6 +1845,8 @@ argument_list|,
 literal|true
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|boi
@@ -1851,6 +1903,9 @@ name|boi
 parameter_list|,
 name|BindingFaultInfo
 name|bfi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|EffectivePolicy
@@ -1902,6 +1957,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|this
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 if|if
@@ -2941,6 +2998,9 @@ name|isRequestor
 parameter_list|,
 name|Assertor
 name|assertor
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|EndpointPolicyImpl
@@ -2961,7 +3021,9 @@ decl_stmt|;
 name|epi
 operator|.
 name|initialize
-argument_list|()
+argument_list|(
+name|m
+argument_list|)
 expr_stmt|;
 name|ei
 operator|.

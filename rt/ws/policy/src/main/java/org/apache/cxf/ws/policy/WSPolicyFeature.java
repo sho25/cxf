@@ -573,6 +573,8 @@ argument_list|(
 name|ei
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|pe
@@ -649,6 +651,8 @@ operator|.
 name|getServerEndpointPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|)

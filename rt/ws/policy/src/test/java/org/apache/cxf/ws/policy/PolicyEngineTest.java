@@ -179,6 +179,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|phase
 operator|.
 name|PhaseInterceptor
@@ -469,6 +483,14 @@ decl_stmt|;
 specifier|private
 name|PolicyEngineImpl
 name|engine
+decl_stmt|;
+specifier|private
+name|Message
+name|msg
+init|=
+operator|new
+name|MessageImpl
+argument_list|()
 decl_stmt|;
 annotation|@
 name|Before
@@ -871,6 +893,8 @@ argument_list|,
 literal|true
 argument_list|,
 literal|true
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -896,6 +920,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|conduit
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -912,6 +938,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|conduit
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -992,6 +1020,8 @@ operator|(
 name|Conduit
 operator|)
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1148,6 +1178,8 @@ argument_list|,
 name|destination
 argument_list|,
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1166,6 +1198,8 @@ argument_list|,
 name|destination
 argument_list|,
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1248,6 +1282,8 @@ operator|)
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1378,6 +1414,8 @@ argument_list|,
 name|engine
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1405,6 +1443,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1423,6 +1463,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1505,6 +1547,8 @@ operator|(
 name|Destination
 operator|)
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1613,6 +1657,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|true
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1636,6 +1682,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1650,6 +1698,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1725,6 +1775,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1838,6 +1890,8 @@ argument_list|,
 literal|true
 argument_list|,
 literal|false
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1861,6 +1915,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1875,6 +1931,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1950,6 +2008,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2066,6 +2126,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|engine
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -2091,6 +2153,8 @@ argument_list|,
 literal|null
 argument_list|,
 name|bfi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2107,6 +2171,8 @@ argument_list|,
 literal|null
 argument_list|,
 name|bfi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2184,6 +2250,8 @@ argument_list|,
 literal|null
 argument_list|,
 name|bfi
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2221,6 +2289,10 @@ operator|.
 name|class
 block|,
 name|Assertor
+operator|.
+name|class
+block|,
+name|Message
 operator|.
 name|class
 block|}
@@ -2295,6 +2367,8 @@ argument_list|,
 literal|true
 argument_list|,
 name|conduit
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 operator|.
@@ -2319,6 +2393,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|conduit
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2363,6 +2439,10 @@ block|,
 name|Assertor
 operator|.
 name|class
+block|,
+name|Message
+operator|.
+name|class
 block|}
 argument_list|)
 decl_stmt|;
@@ -2435,6 +2515,8 @@ argument_list|,
 literal|false
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 operator|.
@@ -2459,6 +2541,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2501,6 +2585,10 @@ operator|.
 name|class
 block|,
 name|Assertor
+operator|.
+name|class
+block|,
+name|Message
 operator|.
 name|class
 block|}
@@ -2575,6 +2663,8 @@ argument_list|,
 literal|false
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 operator|.
@@ -2601,6 +2691,8 @@ argument_list|,
 literal|false
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2723,6 +2815,8 @@ operator|(
 name|Conduit
 operator|)
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2740,6 +2834,8 @@ operator|(
 name|Destination
 operator|)
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2825,6 +2921,8 @@ operator|(
 name|Destination
 operator|)
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 argument_list|)
 expr_stmt|;

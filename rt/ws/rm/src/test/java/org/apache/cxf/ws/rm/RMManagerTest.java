@@ -2190,6 +2190,8 @@ argument_list|,
 name|replyTo
 argument_list|,
 literal|null
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -2603,6 +2605,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 name|EasyMock

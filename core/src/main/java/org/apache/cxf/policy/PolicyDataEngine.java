@@ -103,6 +103,9 @@ parameter_list|>
 name|T
 name|getClientEndpointPolicy
 parameter_list|(
+name|Message
+name|m
+parameter_list|,
 name|EndpointInfo
 name|ei
 parameter_list|,
@@ -122,6 +125,9 @@ parameter_list|>
 name|T
 name|getServerEndpointPolicy
 parameter_list|(
+name|Message
+name|m
+parameter_list|,
 name|EndpointInfo
 name|ei
 parameter_list|,

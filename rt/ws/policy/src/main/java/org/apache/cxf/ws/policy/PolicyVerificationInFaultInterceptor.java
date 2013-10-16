@@ -452,6 +452,8 @@ argument_list|,
 name|boi
 argument_list|,
 name|bfi
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 if|if

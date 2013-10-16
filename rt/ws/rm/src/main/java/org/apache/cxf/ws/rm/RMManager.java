@@ -2295,6 +2295,8 @@ argument_list|,
 name|replyTo
 argument_list|,
 name|dest
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 name|reliableEndpoints
@@ -3288,6 +3290,8 @@ name|getConfiguration
 argument_list|()
 argument_list|,
 name|conduit
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|,

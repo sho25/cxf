@@ -581,6 +581,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|true
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|PolicyUtils
@@ -686,6 +688,8 @@ argument_list|,
 name|bfi
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 decl_stmt|;
 if|if

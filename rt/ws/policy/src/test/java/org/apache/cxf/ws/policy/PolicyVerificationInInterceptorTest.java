@@ -539,6 +539,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|message
 argument_list|)
 argument_list|)
 operator|.
@@ -700,6 +702,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|message
 argument_list|)
 argument_list|)
 operator|.

@@ -491,6 +491,8 @@ operator|)
 name|pe
 argument_list|,
 literal|true
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|msg
@@ -594,6 +596,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|conduit
+argument_list|,
+name|msg
 argument_list|)
 decl_stmt|;
 if|if
@@ -639,6 +643,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|boi
+argument_list|,
+name|msg
 argument_list|)
 decl_stmt|;
 if|if
@@ -726,6 +732,8 @@ argument_list|(
 name|ei
 argument_list|,
 name|destination
+argument_list|,
+name|msg
 argument_list|)
 decl_stmt|;
 if|if
