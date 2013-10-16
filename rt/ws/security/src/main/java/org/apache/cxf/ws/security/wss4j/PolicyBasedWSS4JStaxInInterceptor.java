@@ -3325,6 +3325,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|policy
+operator|!=
+literal|null
+operator|&&
 name|soapOperationInfo
 operator|!=
 literal|null

@@ -790,6 +790,8 @@ block|,
 name|ENABLE_SAML_ONE_TIME_USE_CACHE
 block|,
 name|SAML_ONE_TIME_USE_CACHE_INSTANCE
+block|,
+name|ENABLE_STREAMING_SECURITY
 block|}
 argument_list|)
 argument_list|)
