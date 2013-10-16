@@ -91,6 +91,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|Consumes
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|NotAcceptableException
 import|;
 end_import
@@ -104,6 +116,18 @@ operator|.
 name|rs
 operator|.
 name|NotSupportedException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|Produces
 import|;
 end_import
 
@@ -235,12 +259,6 @@ end_import
 
 begin_class
 annotation|@
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|Produces
 argument_list|(
 block|{
@@ -251,15 +269,11 @@ block|,
 literal|"text/xml"
 block|,
 literal|"application/json"
+block|,
+literal|"application/*+json"
 block|}
 argument_list|)
 annotation|@
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|Consumes
 argument_list|(
 block|{
@@ -270,6 +284,8 @@ block|,
 literal|"text/xml"
 block|,
 literal|"application/json"
+block|,
+literal|"application/*+json"
 block|}
 argument_list|)
 specifier|public
