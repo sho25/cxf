@@ -1219,6 +1219,15 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|JAXRSUtils
+operator|.
+name|intersectMimeTypes
+argument_list|(
+literal|"application/json"
+argument_list|,
+literal|"application/json+v2"
+argument_list|)
+expr_stmt|;
 name|doTestFormParamsWithEncoding
 argument_list|(
 literal|"UTF-8"
