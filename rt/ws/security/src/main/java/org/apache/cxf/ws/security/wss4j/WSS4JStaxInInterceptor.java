@@ -2827,6 +2827,16 @@ argument_list|)
 expr_stmt|;
 name|pc
 operator|.
+name|setKey
+argument_list|(
+name|tok
+operator|.
+name|getKey
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|pc
+operator|.
 name|setCustomToken
 argument_list|(
 name|tok
