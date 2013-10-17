@@ -21,6 +21,16 @@ name|common
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
 begin_comment
 comment|/**  * Base permission description  * @see OAuthAuthorizationData  */
 end_comment
@@ -29,7 +39,17 @@ begin_class
 specifier|public
 class|class
 name|Permission
+implements|implements
+name|Serializable
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|8988574955042726083L
+decl_stmt|;
 specifier|private
 name|String
 name|permission
