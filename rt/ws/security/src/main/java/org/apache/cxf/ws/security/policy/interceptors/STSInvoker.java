@@ -1553,6 +1553,11 @@ argument_list|)
 decl_stmt|;
 name|str
 operator|.
+name|addWSSENamespace
+argument_list|()
+expr_stmt|;
+name|str
+operator|.
 name|setReference
 argument_list|(
 name|ref

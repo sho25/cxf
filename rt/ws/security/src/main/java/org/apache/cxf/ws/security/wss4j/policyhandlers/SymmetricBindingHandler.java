@@ -3334,6 +3334,10 @@ operator|||
 name|encrToken
 operator|instanceof
 name|SpnegoContextToken
+operator|||
+name|encrToken
+operator|instanceof
+name|SecureConversationToken
 condition|)
 block|{
 comment|//Setting the AttachedReference or the UnattachedReference according to the flag
