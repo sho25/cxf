@@ -33,16 +33,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|Map
 import|;
 end_import
@@ -54,6 +44,18 @@ operator|.
 name|util
 operator|.
 name|Timer
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|ConcurrentHashMap
 import|;
 end_import
 
@@ -930,7 +932,7 @@ argument_list|>
 name|reliableEndpoints
 init|=
 operator|new
-name|HashMap
+name|ConcurrentHashMap
 argument_list|<
 name|Endpoint
 argument_list|,
@@ -1714,7 +1716,6 @@ expr_stmt|;
 block|}
 comment|// The real stuff ...
 specifier|public
-specifier|synchronized
 name|RMEndpoint
 name|getReliableEndpoint
 parameter_list|(
@@ -2149,6 +2150,31 @@ operator|==
 name|rme
 condition|)
 block|{
+synchronized|synchronized
+init|(
+name|endpoint
+init|)
+block|{
+name|rme
+operator|=
+name|reliableEndpoints
+operator|.
+name|get
+argument_list|(
+name|endpoint
+argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|rme
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|rme
+return|;
+block|}
 name|rme
 operator|=
 name|createReliableEndpoint
@@ -2315,6 +2341,7 @@ argument_list|(
 literal|"Created new RMEndpoint."
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|rme
@@ -3055,7 +3082,6 @@ expr_stmt|;
 block|}
 comment|// unregistring of this managed bean from the server is done by the bus itself
 block|}
-specifier|synchronized
 name|void
 name|shutdownReliableEndpoint
 parameter_list|(
@@ -3066,17 +3092,13 @@ block|{
 name|RMEndpoint
 name|rme
 init|=
-literal|null
-decl_stmt|;
-name|rme
-operator|=
 name|reliableEndpoints
 operator|.
 name|get
 argument_list|(
 name|e
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|rme
@@ -3298,6 +3320,11 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+synchronized|synchronized
+init|(
+name|reliableEndpoints
+init|)
+block|{
 name|reliableEndpoints
 operator|.
 name|put
@@ -3307,6 +3334,7 @@ argument_list|,
 name|rme
 argument_list|)
 expr_stmt|;
+block|}
 for|for
 control|(
 name|SourceSequence
