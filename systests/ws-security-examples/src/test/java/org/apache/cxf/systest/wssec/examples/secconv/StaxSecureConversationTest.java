@@ -239,19 +239,12 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/**      * 2.4.1 (WSS 1.0) Secure Conversation bootstrapped by Mutual      * Authentication with X.509 Certificates      */
-comment|// TODO Support SecureConversation on the Stax Server side.
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSecureConversation
@@ -369,7 +362,7 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// Streaming
+comment|// TODO Streaming investigate
 comment|// SecurityTestUtil.enableStreaming(samlPort);
 comment|// samlPort.doubleIt(25);
 operator|(
