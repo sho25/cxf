@@ -1306,7 +1306,13 @@ name|setAction
 argument_list|(
 name|namespace
 operator|+
+operator|(
+name|sc
+condition|?
+literal|"/RST/SCT/Cancel"
+else|:
 literal|"/RST/Cancel"
+operator|)
 argument_list|)
 expr_stmt|;
 name|service
@@ -1580,7 +1586,7 @@ name|QName
 argument_list|(
 name|namespace
 argument_list|,
-literal|"CancelSecurityToken"
+literal|"RequestSecurityToken"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1633,7 +1639,7 @@ name|QName
 argument_list|(
 name|namespace
 argument_list|,
-literal|"CancelSecurityTokenResponse"
+literal|"RequestSecurityToken"
 argument_list|)
 argument_list|)
 expr_stmt|;
