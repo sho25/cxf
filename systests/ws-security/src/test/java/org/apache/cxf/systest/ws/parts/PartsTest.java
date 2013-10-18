@@ -631,6 +631,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -669,6 +685,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -716,6 +733,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a required header which isn't present"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "RequiredElements: No header element";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1256,6 +1313,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1294,6 +1367,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1341,6 +1415,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a header which isn't signed"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "SignedElements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -1881,6 +1995,22 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -1919,6 +2049,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -1966,6 +2097,46 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on a header which isn't encrypted"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// String error = "EncryptedElements";
+comment|// assertTrue(ex.getMessage().contains(error));
 block|}
 operator|(
 operator|(
@@ -2103,13 +2274,6 @@ argument_list|(
 name|port
 argument_list|,
 name|PORT
-argument_list|)
-expr_stmt|;
-name|port
-operator|.
-name|doubleIt
-argument_list|(
-literal|25
 argument_list|)
 expr_stmt|;
 comment|// This should fail, as the service requires that the header must be encrypted
