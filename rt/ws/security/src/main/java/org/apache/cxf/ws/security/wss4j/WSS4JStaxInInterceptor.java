@@ -1025,6 +1025,8 @@ operator|.
 name|getCallbackHandler
 argument_list|()
 argument_list|,
+name|WSS4JUtils
+operator|.
 name|getTokenStore
 argument_list|(
 name|soapMessage
