@@ -1631,6 +1631,16 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
+comment|//recalc based on new endpoint
+name|SoapActionInInterceptor
+operator|.
+name|getAndSetOperation
+argument_list|(
+name|message
+argument_list|,
+name|s
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
