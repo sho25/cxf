@@ -362,7 +362,7 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming investigate
+comment|// TODO Streaming Ordering issue
 comment|// SecurityTestUtil.enableStreaming(samlPort);
 comment|// samlPort.doubleIt(25);
 operator|(
