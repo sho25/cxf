@@ -254,7 +254,7 @@ name|super
 argument_list|(
 name|Phase
 operator|.
-name|WRITE
+name|PRE_LOGICAL
 argument_list|)
 expr_stmt|;
 block|}
