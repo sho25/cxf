@@ -201,6 +201,8 @@ argument_list|(
 name|alternative
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 operator|&&
 name|this
@@ -253,6 +255,8 @@ argument_list|(
 name|alternative
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 condition|)
 block|{

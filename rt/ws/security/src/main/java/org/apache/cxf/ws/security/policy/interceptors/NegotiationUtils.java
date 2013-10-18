@@ -1688,7 +1688,9 @@ init|=
 name|ep
 operator|.
 name|getInterceptors
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 decl_stmt|;
 for|for
 control|(
@@ -1723,7 +1725,9 @@ init|=
 name|ep
 operator|.
 name|getVocabulary
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 decl_stmt|;
 if|if
 condition|(

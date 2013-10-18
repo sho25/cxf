@@ -437,6 +437,8 @@ argument_list|(
 name|maxAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -456,6 +458,8 @@ argument_list|(
 name|minAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -513,6 +517,13 @@ name|void
 name|testChooseMaxAlternative
 parameter_list|()
 block|{
+name|Message
+name|m
+init|=
+operator|new
+name|MessageImpl
+argument_list|()
+decl_stmt|;
 name|AlternativeSelector
 name|selector
 init|=
@@ -657,6 +668,8 @@ argument_list|(
 name|maxAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -676,6 +689,8 @@ argument_list|(
 name|minAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -689,13 +704,6 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|Message
-name|m
-init|=
-operator|new
-name|MessageImpl
-argument_list|()
-decl_stmt|;
 name|Collection
 argument_list|<
 name|Assertion

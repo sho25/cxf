@@ -614,7 +614,9 @@ argument_list|(
 name|ep
 operator|.
 name|getInterceptors
-argument_list|()
+argument_list|(
+name|msg
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertions
@@ -624,7 +626,9 @@ argument_list|(
 name|ep
 operator|.
 name|getVocabulary
-argument_list|()
+argument_list|(
+name|msg
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -750,7 +754,9 @@ argument_list|(
 name|ep
 operator|.
 name|getInterceptors
-argument_list|()
+argument_list|(
+name|msg
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertions
@@ -760,7 +766,9 @@ argument_list|(
 name|ep
 operator|.
 name|getVocabulary
-argument_list|()
+argument_list|(
+name|msg
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

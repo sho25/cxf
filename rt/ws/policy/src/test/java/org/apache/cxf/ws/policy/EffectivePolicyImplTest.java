@@ -316,6 +316,14 @@ specifier|private
 name|IMocksControl
 name|control
 decl_stmt|;
+specifier|private
+name|Message
+name|msg
+init|=
+operator|new
+name|MessageImpl
+argument_list|()
+decl_stmt|;
 annotation|@
 name|Before
 specifier|public
@@ -594,6 +602,10 @@ block|{
 name|PolicyEngine
 operator|.
 name|class
+block|,
+name|Message
+operator|.
+name|class
 block|}
 argument_list|)
 decl_stmt|;
@@ -700,6 +712,8 @@ argument_list|(
 name|pe
 argument_list|,
 literal|false
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -832,6 +846,10 @@ block|{
 name|PolicyEngine
 operator|.
 name|class
+block|,
+name|Message
+operator|.
+name|class
 block|}
 argument_list|)
 decl_stmt|;
@@ -961,6 +979,8 @@ argument_list|(
 name|pe
 argument_list|,
 literal|false
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -1091,6 +1111,10 @@ block|{
 name|PolicyEngine
 operator|.
 name|class
+block|,
+name|Message
+operator|.
+name|class
 block|}
 argument_list|)
 decl_stmt|;
@@ -1206,6 +1230,8 @@ argument_list|(
 name|pe
 argument_list|,
 literal|false
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|EasyMock
@@ -2331,6 +2357,8 @@ argument_list|,
 name|useIn
 argument_list|,
 name|fault
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -2432,6 +2460,8 @@ argument_list|,
 name|useIn
 argument_list|,
 name|fault
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -2531,6 +2561,8 @@ argument_list|,
 name|useIn
 argument_list|,
 name|fault
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -2641,6 +2673,8 @@ argument_list|,
 name|useIn
 argument_list|,
 name|fault
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 name|assertEquals

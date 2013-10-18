@@ -386,6 +386,13 @@ argument_list|(
 name|ea
 argument_list|)
 expr_stmt|;
+name|Message
+name|m
+init|=
+operator|new
+name|MessageImpl
+argument_list|()
+decl_stmt|;
 name|EasyMock
 operator|.
 name|expect
@@ -397,6 +404,8 @@ argument_list|(
 name|firstAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -410,13 +419,6 @@ operator|.
 name|replay
 argument_list|()
 expr_stmt|;
-name|Message
-name|m
-init|=
-operator|new
-name|MessageImpl
-argument_list|()
-decl_stmt|;
 name|assertNull
 argument_list|(
 name|selector
@@ -456,6 +458,8 @@ argument_list|(
 name|firstAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -594,6 +598,8 @@ argument_list|(
 name|firstAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.
@@ -613,6 +619,8 @@ argument_list|(
 name|secondAlternative
 argument_list|,
 name|assertor
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 operator|.

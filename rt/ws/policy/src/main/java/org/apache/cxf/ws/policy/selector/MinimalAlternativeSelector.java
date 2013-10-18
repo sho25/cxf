@@ -209,6 +209,8 @@ argument_list|(
 name|alternative
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 operator|&&
 name|isCompatibleWithRequest
@@ -284,6 +286,8 @@ argument_list|(
 name|alternative
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 operator|&&
 operator|(

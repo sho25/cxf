@@ -522,6 +522,8 @@ argument_list|,
 name|inbound
 argument_list|,
 name|fault
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -582,6 +584,8 @@ argument_list|(
 name|engine
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -647,6 +651,8 @@ argument_list|(
 name|engine
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -715,6 +721,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|requestor
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -802,6 +810,8 @@ argument_list|(
 name|engine
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1320,6 +1330,9 @@ name|initialiseInterceptors
 parameter_list|(
 name|PolicyEngine
 name|engine
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|initialiseInterceptors
@@ -1327,6 +1340,8 @@ argument_list|(
 name|engine
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1338,6 +1353,9 @@ name|engine
 parameter_list|,
 name|boolean
 name|useIn
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|initialiseInterceptors
@@ -1347,6 +1365,8 @@ argument_list|,
 name|useIn
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1361,6 +1381,9 @@ name|useIn
 parameter_list|,
 name|boolean
 name|fault
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 if|if
@@ -1459,6 +1482,8 @@ argument_list|,
 name|useIn
 argument_list|,
 name|fault
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1501,6 +1526,9 @@ name|engine
 parameter_list|,
 name|Policy
 name|p
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Collection
@@ -1559,6 +1587,8 @@ argument_list|(
 name|alternative
 argument_list|,
 literal|null
+argument_list|,
+name|m
 argument_list|)
 condition|)
 block|{
@@ -1611,6 +1641,9 @@ name|useIn
 parameter_list|,
 name|boolean
 name|fault
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|QName
@@ -1761,6 +1794,8 @@ argument_list|(
 name|engine
 argument_list|,
 name|p
+argument_list|,
+name|m
 argument_list|)
 control|)
 block|{
@@ -1777,6 +1812,8 @@ argument_list|,
 name|useIn
 argument_list|,
 name|fault
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}

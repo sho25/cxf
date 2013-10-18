@@ -411,6 +411,9 @@ name|updatePolicy
 parameter_list|(
 name|Policy
 name|p
+parameter_list|,
+name|Message
+name|msg
 parameter_list|)
 block|{
 name|EndpointPolicyImpl
@@ -502,7 +505,7 @@ name|epi
 operator|.
 name|finalizeConfig
 argument_list|(
-literal|null
+name|msg
 argument_list|)
 expr_stmt|;
 return|return
@@ -522,13 +525,15 @@ name|chosenAlternative
 return|;
 block|}
 specifier|public
-specifier|synchronized
 name|Collection
 argument_list|<
 name|Assertion
 argument_list|>
 name|getVocabulary
-parameter_list|()
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -539,7 +544,7 @@ condition|)
 block|{
 name|initializeVocabulary
 argument_list|(
-literal|null
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -548,13 +553,15 @@ name|vocabulary
 return|;
 block|}
 specifier|public
-specifier|synchronized
 name|Collection
 argument_list|<
 name|Assertion
 argument_list|>
 name|getFaultVocabulary
-parameter_list|()
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -565,7 +572,7 @@ condition|)
 block|{
 name|initializeVocabulary
 argument_list|(
-literal|null
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -574,7 +581,6 @@ name|faultVocabulary
 return|;
 block|}
 specifier|public
-specifier|synchronized
 name|List
 argument_list|<
 name|Interceptor
@@ -585,7 +591,10 @@ name|Message
 argument_list|>
 argument_list|>
 name|getInterceptors
-parameter_list|()
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -596,7 +605,7 @@ condition|)
 block|{
 name|initializeInterceptors
 argument_list|(
-literal|null
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -605,7 +614,6 @@ name|interceptors
 return|;
 block|}
 specifier|public
-specifier|synchronized
 name|List
 argument_list|<
 name|Interceptor
@@ -616,7 +624,10 @@ name|Message
 argument_list|>
 argument_list|>
 name|getFaultInterceptors
-parameter_list|()
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -627,7 +638,7 @@ condition|)
 block|{
 name|initializeInterceptors
 argument_list|(
-literal|null
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -777,7 +788,9 @@ block|{
 name|alternative
 operator|=
 name|getSupportedAlternatives
-argument_list|()
+argument_list|(
+name|m
+argument_list|)
 expr_stmt|;
 block|}
 if|if
@@ -826,7 +839,10 @@ argument_list|<
 name|Assertion
 argument_list|>
 name|getSupportedAlternatives
-parameter_list|()
+parameter_list|(
+name|Message
+name|msg
+parameter_list|)
 block|{
 name|Collection
 argument_list|<
@@ -884,6 +900,8 @@ argument_list|(
 name|alternative
 argument_list|,
 name|assertor
+argument_list|,
+name|msg
 argument_list|)
 condition|)
 block|{
@@ -1241,6 +1259,9 @@ name|getSupportedAlternatives
 parameter_list|(
 name|Policy
 name|p
+parameter_list|,
+name|Message
+name|msg
 parameter_list|)
 block|{
 name|Collection
@@ -1299,6 +1320,8 @@ argument_list|(
 name|alternative
 argument_list|,
 literal|null
+argument_list|,
+name|msg
 argument_list|)
 condition|)
 block|{
@@ -1337,6 +1360,9 @@ name|a
 parameter_list|,
 name|boolean
 name|fault
+parameter_list|,
+name|Message
+name|msg
 parameter_list|)
 block|{
 name|QName
@@ -1424,6 +1450,8 @@ range|:
 name|getSupportedAlternatives
 argument_list|(
 name|p
+argument_list|,
+name|msg
 argument_list|)
 control|)
 block|{
@@ -1436,6 +1464,8 @@ argument_list|,
 name|a2
 argument_list|,
 name|fault
+argument_list|,
+name|msg
 argument_list|)
 expr_stmt|;
 block|}
@@ -1543,6 +1573,8 @@ argument_list|,
 name|a
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1591,6 +1623,8 @@ argument_list|,
 name|a
 argument_list|,
 literal|true
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}
@@ -1717,6 +1751,8 @@ argument_list|,
 name|a
 argument_list|,
 literal|false
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|initializeInterceptors
@@ -1728,6 +1764,8 @@ argument_list|,
 name|a
 argument_list|,
 literal|true
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 block|}

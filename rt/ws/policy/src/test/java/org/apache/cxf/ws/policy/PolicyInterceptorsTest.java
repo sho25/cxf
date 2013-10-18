@@ -1075,7 +1075,9 @@ argument_list|(
 name|endpointPolicy
 operator|.
 name|getFaultInterceptors
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 argument_list|)
 operator|.
 name|andReturn
@@ -1153,7 +1155,9 @@ argument_list|(
 name|endpointPolicy
 operator|.
 name|getFaultVocabulary
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 argument_list|)
 operator|.
 name|andReturn
@@ -1276,7 +1280,9 @@ argument_list|(
 name|endpointPolicy
 operator|.
 name|getInterceptors
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 argument_list|)
 operator|.
 name|andReturn
@@ -1354,7 +1360,9 @@ argument_list|(
 name|endpointPolicy
 operator|.
 name|getVocabulary
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 argument_list|)
 operator|.
 name|andReturn

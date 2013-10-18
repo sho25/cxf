@@ -220,6 +220,9 @@ name|alterative
 parameter_list|,
 name|Assertor
 name|assertor
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 function_decl|;
 comment|// available throughout the outbound path
