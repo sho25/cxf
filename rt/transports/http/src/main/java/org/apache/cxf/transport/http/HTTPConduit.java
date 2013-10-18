@@ -1005,8 +1005,6 @@ index|[]
 block|{
 literal|"GET"
 block|,
-literal|"DELETE"
-block|,
 literal|"HEAD"
 block|,
 literal|"OPTIONS"
