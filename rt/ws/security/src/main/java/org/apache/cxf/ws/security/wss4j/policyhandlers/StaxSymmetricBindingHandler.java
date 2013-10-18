@@ -2976,6 +2976,13 @@ name|getToken
 argument_list|()
 operator|instanceof
 name|SecureConversationToken
+operator|||
+name|recToken
+operator|.
+name|getToken
+argument_list|()
+operator|instanceof
+name|SpnegoContextToken
 operator|)
 operator|&&
 operator|!
