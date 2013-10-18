@@ -1639,7 +1639,7 @@ name|QName
 argument_list|(
 name|namespace
 argument_list|,
-literal|"RequestSecurityToken"
+literal|"RequestSecurityTokenResponse"
 argument_list|)
 argument_list|)
 expr_stmt|;
