@@ -92,10 +92,17 @@ specifier|public
 annotation_defn|@interface
 name|XSISchemaLocation
 block|{
-comment|/**      * schema location relative to a base URI of the web application      */
+comment|/**      * Schema location       * By default it is assumed to be relative to a base URI of the web application      */
 name|String
 name|value
 parameter_list|()
+function_decl|;
+comment|/**      * If the location is relative and this property is set to true then       * the location will be resolved against the base URI of the web application      */
+name|boolean
+name|resolve
+parameter_list|()
+default|default
+literal|true
 function_decl|;
 comment|/**      * Can be used to get xsi:noNamespaceSchemaLocation produced.      * By default, xsi:schemaLocation will be set.      */
 name|boolean
