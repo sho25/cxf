@@ -1235,6 +1235,13 @@ name|e
 argument_list|)
 throw|;
 block|}
+if|if
+condition|(
+name|tbinding
+operator|!=
+literal|null
+condition|)
+block|{
 name|assertAlgorithmSuite
 argument_list|(
 name|tbinding
@@ -1265,6 +1272,7 @@ name|getNamespaceURI
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Handle the non-endorsing supporting tokens      */
 specifier|private

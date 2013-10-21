@@ -828,6 +828,15 @@ name|AlgorithmSuite
 name|algorithmSuite
 parameter_list|)
 block|{
+if|if
+condition|(
+name|algorithmSuite
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|AssertionInfoMap
 name|aim
 init|=
