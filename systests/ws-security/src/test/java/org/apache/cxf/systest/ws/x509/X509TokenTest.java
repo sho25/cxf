@@ -867,7 +867,7 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming
+comment|// TODO WSS-468 Streaming
 comment|// SecurityTestUtil.enableStreaming(x509Port);
 comment|// x509Port.doubleIt(25);
 operator|(
@@ -1015,7 +1015,7 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO WSS-469 Streaming
+comment|// TODO WSS-468 Streaming
 comment|// SecurityTestUtil.enableStreaming(x509Port);
 comment|// x509Port.doubleIt(25);
 operator|(
@@ -6336,6 +6336,22 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
 name|port
 operator|.
 name|doubleIt
@@ -6374,6 +6390,7 @@ argument_list|,
 name|PORT2
 argument_list|)
 expr_stmt|;
+comment|// DOM
 try|try
 block|{
 name|port
@@ -6421,6 +6438,45 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+comment|// Streaming
+try|try
+block|{
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|port
+argument_list|)
+expr_stmt|;
+name|port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+name|fail
+argument_list|(
+literal|"Failure expected on not endorsing the token"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+name|ex
+parameter_list|)
+block|{
+comment|// expected
 block|}
 operator|(
 operator|(
