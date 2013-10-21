@@ -275,19 +275,22 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-comment|// TODO Derived hanging - "AD",
+literal|"AD"
+block|,
 literal|"A-ES"
 block|,
-comment|// TODO Derived hanging - "AD-ES",
+literal|"AD-ES"
+block|,
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-comment|// TODO Derived hanging - "UXD",
+literal|"UXD"
+block|,
 literal|"UX-SEES"
 block|,
-comment|// TODO Derived hanging - "UXD-SEES",
-block|}
+literal|"UXD-SEES"
+block|,         }
 decl_stmt|;
 name|runClientServer
 argument_list|(
@@ -348,18 +351,20 @@ literal|"A"
 block|,
 literal|"A-NoTimestamp"
 block|,
-comment|// TODO Derived hanging "AD",
+literal|"AD"
+block|,
 comment|// TODO See WSS-468 EncryptBeforeSigning not working "A-ES",
-comment|// TODO Derived hanging "AD-ES",
+comment|// TODO WSS-468 Ordering issue same as above "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"
 block|,
-comment|// TODO Derived hanging "UXD",
+literal|"UXD"
+block|,
 literal|"UX-SEES"
 block|,
-comment|// TODO Derived hanging "UXD-SEES",
-block|}
+literal|"UXD-SEES"
+block|,         }
 decl_stmt|;
 name|runClientServerStreaming
 argument_list|(

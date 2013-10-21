@@ -290,7 +290,11 @@ literal|"X-AES256"
 block|,
 literal|"X-TripleDES"
 block|,
-comment|/*                  * TODO Derived                 "XD",                 "XD-ES",                 "XD-SEES",                 */
+literal|"XD"
+block|,
+literal|"XD-ES"
+block|,
+comment|// TODO Investigate "XD-SEES",
 block|}
 expr_stmt|;
 block|}
@@ -306,7 +310,11 @@ literal|"X"
 block|,
 literal|"X-NoTimestamp"
 block|,
-comment|/*                  * TODO Derived                 "XD",                 "XD-ES",                 "XD-SEES",                 */
+literal|"XD"
+block|,
+literal|"XD-ES"
+block|,
+comment|// TODO Investigate "XD-SEES",
 block|}
 expr_stmt|;
 block|}

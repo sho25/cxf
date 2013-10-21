@@ -354,7 +354,7 @@ block|,
 literal|"AD"
 block|,
 comment|// TODO See WSS-468 EncryptBeforeSigning not working "A-ES",
-comment|// TODO See WSS-468 Derived "AD-ES",
+comment|// TODO See WSS-468 Ordering issue as above "AD-ES",
 literal|"UX"
 block|,
 literal|"UX-NoTimestamp"

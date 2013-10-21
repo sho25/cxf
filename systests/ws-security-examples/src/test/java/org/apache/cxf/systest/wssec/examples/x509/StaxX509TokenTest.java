@@ -560,19 +560,13 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.2.3 (WSS1.1) Anonymous with X.509 Certificate, Sign, Encrypt      * TODO Support streaming derived      */
+comment|/**      * 2.2.3 (WSS1.1) Anonymous with X.509 Certificate, Sign, Encrypt      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSymmetricSignEncrypt
@@ -690,9 +684,21 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-comment|// TODO - Support derived Streaming
-comment|// SecurityTestUtil.enableStreaming(x509Port);
-comment|// x509Port.doubleIt(25);
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|x509Port
+argument_list|)
+expr_stmt|;
+name|x509Port
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
@@ -715,19 +721,13 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * 2.2.4 (WSS1.1) Mutual Authentication with X.509 Certificates, Sign, Encrypt      * TODO - Support streaming Endorsing      */
+comment|/**      * 2.2.4 (WSS1.1) Mutual Authentication with X.509 Certificates, Sign, Encrypt      */
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSymmetricEndorsing
