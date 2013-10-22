@@ -2309,6 +2309,12 @@ name|isAssignableFrom
 argument_list|(
 name|expectedType
 argument_list|)
+operator|||
+name|actualClass
+operator|==
+name|Object
+operator|.
+name|class
 condition|)
 block|{
 if|if
