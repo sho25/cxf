@@ -430,19 +430,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-480
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSpnegoOverSymmetricDerived
@@ -561,10 +554,28 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// DOM
-comment|// spnegoPort.doubleIt(25);
-comment|// TODO Hanging, see WSS-480 Streaming
-comment|// SecurityTestUtil.enableStreaming(spnegoPort);
-comment|// spnegoPort.doubleIt(25);
+name|spnegoPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
+comment|// Streaming
+name|SecurityTestUtil
+operator|.
+name|enableStreaming
+argument_list|(
+name|spnegoPort
+argument_list|)
+expr_stmt|;
+name|spnegoPort
+operator|.
+name|doubleIt
+argument_list|(
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java

@@ -306,7 +306,7 @@ argument_list|,
 literal|"SecureConversation_MutualCertificate10SignEncrypt_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
+comment|// TODO Endorsing streaming not supported
 comment|// runTest(true, "SecureConversation_MutualCertificate10SignEncrypt_IPingService");
 block|}
 annotation|@
@@ -349,8 +349,13 @@ argument_list|,
 literal|"ADC_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "ADC_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"ADC_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -368,7 +373,7 @@ argument_list|,
 literal|"ADC-ES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
+comment|// TODO Error with "EncryptBeforeSigning" ordering.
 comment|// runTest(true, "ADC-ES_IPingService");
 block|}
 annotation|@
@@ -411,8 +416,13 @@ argument_list|,
 literal|"_AD_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "_AD_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"_AD_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -430,7 +440,7 @@ argument_list|,
 literal|"_AD-ES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
+comment|// TODO Error with "EncryptBeforeSigning" ordering.
 comment|// runTest(true, "_AD-ES_IPingService");
 block|}
 annotation|@
@@ -473,8 +483,13 @@ argument_list|,
 literal|"UXDC_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "UXDC_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"UXDC_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -492,8 +507,13 @@ argument_list|,
 literal|"UXDC-SEES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "UXDC-SEES_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"UXDC-SEES_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -535,8 +555,13 @@ argument_list|,
 literal|"_UXD_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "_UXD_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"_UXD_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -554,8 +579,13 @@ argument_list|,
 literal|"_UXD-SEES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "_UXD-SEES_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"_UXD-SEES_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -591,8 +621,7 @@ argument_list|,
 literal|"XDC_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "XDC_IPingService");
+comment|// TODO Streaming endorsing not working runTest(true, "XDC_IPingService");
 block|}
 annotation|@
 name|Test
@@ -610,8 +639,7 @@ argument_list|,
 literal|"XDC_IPingService1"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "XDC_IPingService1");
+comment|// TODO Streaming endorsing not working runTest(true, "XDC_IPingService1");
 block|}
 annotation|@
 name|Test
@@ -629,8 +657,7 @@ argument_list|,
 literal|"XDC-ES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "XDC-ES_IPingService");
+comment|// TODO Streaming endorsing not working runTest(true, "XDC-ES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -648,8 +675,7 @@ argument_list|,
 literal|"XDC-SEES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "XDC-SEES_IPingService");
+comment|// TODO runTest(true, "XDC-SEES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -709,8 +735,7 @@ argument_list|,
 literal|"_XD_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "_XD_IPingService");
+comment|// TODO Streaming endorsing not working runTest(true, "_XD_IPingService");
 block|}
 annotation|@
 name|Test
@@ -728,8 +753,7 @@ argument_list|,
 literal|"_XD-SEES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
-comment|// runTest(true, "_XD-SEES_IPingService");
+comment|// TODO Streaming endorsing not working runTest(true, "_XD-SEES_IPingService");
 block|}
 annotation|@
 name|Test
@@ -747,7 +771,7 @@ argument_list|,
 literal|"_XD-ES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO Hanging due to Derived Keys...
+comment|// TODO "EncryptBeforeSigning" ordering issue
 comment|// runTest(true, "_XD-ES_IPingService");
 block|}
 specifier|private
