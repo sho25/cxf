@@ -294,7 +294,7 @@ literal|"XD"
 block|,
 literal|"XD-ES"
 block|,
-comment|// TODO Investigate "XD-SEES",
+comment|// TODO Endorsing derived streaming not working "XD-SEES",
 block|}
 expr_stmt|;
 block|}
@@ -314,7 +314,7 @@ literal|"XD"
 block|,
 literal|"XD-ES"
 block|,
-comment|// TODO Investigate "XD-SEES",
+comment|// TODO Endorsing derived streaming not working "XD-SEES",
 block|}
 expr_stmt|;
 block|}

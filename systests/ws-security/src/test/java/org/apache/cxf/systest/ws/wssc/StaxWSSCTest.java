@@ -290,7 +290,7 @@ name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
-comment|// TODO
+comment|// TODO Endorsing derived keys not supported.
 annotation|@
 name|Test
 annotation|@
@@ -514,7 +514,13 @@ argument_list|,
 literal|"UXDC-SEES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// TODO runTest(true, "UXDC-SEES_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"UXDC-SEES_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -580,7 +586,13 @@ argument_list|,
 literal|"_UXD-SEES_IPingService"
 argument_list|)
 expr_stmt|;
-comment|// runTest(true, "_UXD-SEES_IPingService");
+name|runTest
+argument_list|(
+literal|true
+argument_list|,
+literal|"_UXD-SEES_IPingService"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test
