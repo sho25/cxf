@@ -703,6 +703,13 @@ name|inFaultMessage
 operator|=
 name|m
 expr_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|m
+condition|)
+block|{
 name|m
 operator|.
 name|setExchange
@@ -710,6 +717,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|Message
@@ -732,6 +740,13 @@ name|outFaultMessage
 operator|=
 name|m
 expr_stmt|;
+if|if
+condition|(
+literal|null
+operator|!=
+name|m
+condition|)
+block|{
 name|m
 operator|.
 name|setExchange
@@ -739,6 +754,7 @@ argument_list|(
 name|this
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void
