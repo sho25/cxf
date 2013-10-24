@@ -1385,6 +1385,10 @@ operator|new
 name|String
 argument_list|(
 name|text
+argument_list|,
+name|start
+argument_list|,
+name|len
 argument_list|)
 argument_list|)
 expr_stmt|;
