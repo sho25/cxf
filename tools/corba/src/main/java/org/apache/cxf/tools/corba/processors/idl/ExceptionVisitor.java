@@ -501,10 +501,12 @@ block|{
 name|AST
 name|memberNode
 init|=
-name|memberTypeNode
+name|TypesUtils
 operator|.
-name|getNextSibling
-argument_list|()
+name|getCorbaTypeNameNode
+argument_list|(
+name|memberTypeNode
+argument_list|)
 decl_stmt|;
 name|TypesVisitor
 name|visitor

@@ -2609,13 +2609,6 @@ operator|.
 name|getType
 argument_list|()
 expr_stmt|;
-name|_ttype
-operator|=
-name|testLiteralsTable
-argument_list|(
-name|_ttype
-argument_list|)
-expr_stmt|;
 name|_returnToken
 operator|.
 name|setType
