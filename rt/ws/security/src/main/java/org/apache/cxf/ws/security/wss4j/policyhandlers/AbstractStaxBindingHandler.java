@@ -2439,7 +2439,7 @@ specifier|protected
 name|SecurePart
 name|addIssuedToken
 parameter_list|(
-name|IssuedToken
+name|AbstractToken
 name|token
 parameter_list|,
 name|SecurityToken
