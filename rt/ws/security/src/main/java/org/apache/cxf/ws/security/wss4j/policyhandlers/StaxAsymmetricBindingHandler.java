@@ -619,6 +619,9 @@ parameter_list|,
 name|SoapMessage
 name|msg
 parameter_list|,
+name|AsymmetricBinding
+name|abinding
+parameter_list|,
 name|Map
 argument_list|<
 name|String
@@ -637,6 +640,8 @@ name|properties
 argument_list|,
 name|msg
 argument_list|,
+name|abinding
+argument_list|,
 name|outboundTokens
 argument_list|)
 expr_stmt|;
@@ -645,6 +650,12 @@ operator|.
 name|message
 operator|=
 name|msg
+expr_stmt|;
+name|this
+operator|.
+name|abinding
+operator|=
+name|abinding
 expr_stmt|;
 block|}
 specifier|public
@@ -666,16 +677,6 @@ name|class
 argument_list|)
 decl_stmt|;
 name|configureTimestamp
-argument_list|(
-name|aim
-argument_list|)
-expr_stmt|;
-name|abinding
-operator|=
-operator|(
-name|AsymmetricBinding
-operator|)
-name|getBinding
 argument_list|(
 name|aim
 argument_list|)
@@ -1125,7 +1126,6 @@ argument_list|,
 name|sigs
 argument_list|)
 expr_stmt|;
-comment|//doEndorse();
 block|}
 elseif|else
 if|if
@@ -1821,6 +1821,9 @@ name|ex
 argument_list|)
 throw|;
 block|}
+name|addSupportingTokens
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|encryptionToken
@@ -1841,9 +1844,6 @@ name|isRequestor
 argument_list|()
 condition|)
 block|{
-name|addSupportingTokens
-argument_list|()
-expr_stmt|;
 name|encrParts
 operator|.
 name|addAll
@@ -1957,16 +1957,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|sigParts
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|0
-condition|)
-block|{
-if|if
-condition|(
 name|timestampAdded
 condition|)
 block|{
@@ -2001,15 +1991,16 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-operator|(
 name|sigParts
 operator|.
 name|size
 argument_list|()
 operator|>
 literal|0
-operator|)
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 name|initiatorWrapper
 operator|!=
 literal|null
@@ -2086,9 +2077,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//if (isRequestor()) {
-comment|//    doEndorse();
-comment|//}
 block|}
 block|}
 catch|catch

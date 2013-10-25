@@ -1008,17 +1008,6 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|isRequestor
-argument_list|()
-condition|)
-block|{
-comment|//Setup required tokens
-name|initializeTokens
-argument_list|()
-expr_stmt|;
-block|}
-if|if
-condition|(
 name|sbinding
 operator|.
 name|getProtectionOrder
@@ -1128,14 +1117,6 @@ name|ONLY_SIGN_ENTIRE_HEADERS_AND_BODY
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-specifier|private
-name|void
-name|initializeTokens
-parameter_list|()
-block|{
-comment|//Setting up encryption token and signature token
-comment|/*         Token sigTok = getSignatureToken().getToken();         //Token encrTok = getEncryptionToken().getToken();                  if (sigTok instanceof IssuedToken) {             //IssuedToken issuedToken = (IssuedToken)sigTok;                          //REVISIT - WS-Trust STS token retrieval         } else if (sigTok instanceof SecureConversationToken) {             //REVISIT - SecureConversation token retrieval         }         */
 block|}
 specifier|private
 name|void
@@ -1478,21 +1459,17 @@ name|timestampPart
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|isRequestor
-argument_list|()
-condition|)
-block|{
-name|this
-operator|.
 name|addSupportingTokens
 argument_list|(
 name|sigParts
 argument_list|)
 expr_stmt|;
-block|}
-else|else
+if|if
+condition|(
+operator|!
+name|isRequestor
+argument_list|()
+condition|)
 block|{
 name|addSignatureConfirmation
 argument_list|(
@@ -2148,17 +2125,17 @@ name|timestampPart
 argument_list|)
 expr_stmt|;
 block|}
+name|addSupportingTokens
+argument_list|(
+name|sigs
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|isRequestor
 argument_list|()
 condition|)
 block|{
-name|addSupportingTokens
-argument_list|(
-name|sigs
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 operator|!
@@ -2194,11 +2171,6 @@ block|}
 else|else
 block|{
 comment|//confirm sig
-name|assertSupportingTokens
-argument_list|(
-name|sigs
-argument_list|)
-expr_stmt|;
 name|addSignatureConfirmation
 argument_list|(
 name|sigs
