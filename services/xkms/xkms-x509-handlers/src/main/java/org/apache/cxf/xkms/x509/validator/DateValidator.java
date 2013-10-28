@@ -445,7 +445,7 @@ condition|)
 block|{
 name|LOG
 operator|.
-name|severe
+name|info
 argument_list|(
 literal|"Certificate is expired: "
 operator|+
