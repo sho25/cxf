@@ -656,6 +656,24 @@ name|InvalidAlgorithmParameterException
 name|e
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
+literal|"Invalid algorithm by certificate chain validation: "
+operator|+
+name|e
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|e
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|RuntimeException
@@ -670,6 +688,24 @@ name|NoSuchAlgorithmException
 name|e
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
+literal|"Unknown algorithm by certificate chain validation: "
+operator|+
+name|e
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|e
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|RuntimeException
@@ -690,8 +726,10 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|WARNING
 argument_list|,
+literal|"Certificate chain invalid: "
+operator|+
 name|e
 operator|.
 name|getMessage
@@ -716,8 +754,10 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|WARNING
 argument_list|,
+literal|"Certificate chain invalid: "
+operator|+
 name|e
 operator|.
 name|getMessage
