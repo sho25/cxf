@@ -531,6 +531,20 @@ argument_list|,
 literal|"*/*"
 argument_list|)
 expr_stmt|;
+comment|// do the same using extension mappings& matrix parameters
+name|getAndCompareJson
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/bookstore/bookstore/books/entries/123.json;a=b"
+argument_list|,
+literal|"resources/expected_atom_book_json_matrix.txt"
+argument_list|,
+literal|"*/*"
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|Entry
