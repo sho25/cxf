@@ -324,6 +324,14 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
+name|getEndpoint
+argument_list|()
+argument_list|,
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
 name|getService
 argument_list|()
 operator|.
