@@ -2104,6 +2104,12 @@ operator|.
 name|getRequired
 argument_list|()
 argument_list|)
+operator|&&
+name|this
+operator|.
+name|wsFeatures
+operator|!=
+literal|null
 condition|)
 block|{
 for|for
