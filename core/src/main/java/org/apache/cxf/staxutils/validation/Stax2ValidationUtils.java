@@ -744,13 +744,6 @@ condition|)
 block|{
 continue|continue;
 block|}
-name|LOG
-operator|.
-name|info
-argument_list|(
-name|uri
-argument_list|)
-expr_stmt|;
 name|Element
 name|serialized
 init|=
