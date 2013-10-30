@@ -2451,6 +2451,7 @@ name|RECV_RESULTS
 argument_list|)
 argument_list|)
 decl_stmt|;
+comment|// Try DOM results first
 if|if
 condition|(
 name|handlerResults
@@ -2494,7 +2495,6 @@ range|:
 name|engineResults
 control|)
 block|{
-comment|/*                    Integer actInt = (Integer)engineResult.get(WSSecurityEngineResult.TAG_ACTION);                     String id = (String)engineResult.get(WSSecurityEngineResult.TAG_ID);                     Element tokenElement =                          (Element)engineResult.get(WSSecurityEngineResult.TAG_TOKEN_ELEMENT);                  */
 name|Object
 name|token
 init|=
@@ -2523,6 +2523,8 @@ return|;
 block|}
 block|}
 block|}
+comment|// Now try steaming results
+comment|/*          * TODO Uncomment this after we release a beta/RC         try {             org.apache.xml.security.stax.securityToken.SecurityToken securityToken =                  findInboundSecurityToken(WSSecurityEventConstants.SamlToken, messageContext);             if (securityToken instanceof SamlSecurityToken&& ((SamlSecurityToken)securityToken).getSamlAssertionWrapper() != null) {                 return ((SamlSecurityToken)securityToken).getSamlAssertionWrapper();             }         } catch (XMLSecurityException e) {             LOG.log(Level.FINE, e.getMessage(), e);             return null;         }         */
 return|return
 literal|null
 return|;
