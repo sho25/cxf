@@ -465,6 +465,15 @@ argument_list|,
 literal|""
 argument_list|)
 expr_stmt|;
+name|expectedParams
+operator|.
+name|put
+argument_list|(
+literal|"algorithm"
+argument_list|,
+literal|"MD5"
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 name|expectedParams
