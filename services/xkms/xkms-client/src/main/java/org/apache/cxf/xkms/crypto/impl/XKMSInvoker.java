@@ -227,22 +227,6 @@ name|xkms
 operator|.
 name|exception
 operator|.
-name|XKMSNotFoundException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|xkms
-operator|.
-name|exception
-operator|.
 name|XKMSValidateException
 import|;
 end_import
@@ -1125,15 +1109,18 @@ name|hasNext
 argument_list|()
 condition|)
 block|{
-throw|throw
-operator|new
-name|XKMSNotFoundException
+name|LOG
+operator|.
+name|warn
 argument_list|(
-literal|"X509Certificate is not found for id: "
+literal|"X509Certificate is not found in XKMS for id: "
 operator|+
 name|ids
 argument_list|)
-throw|;
+expr_stmt|;
+return|return
+literal|null
+return|;
 block|}
 name|KeyInfoType
 name|keyInfo
@@ -1167,15 +1154,18 @@ name|hasNext
 argument_list|()
 condition|)
 block|{
-throw|throw
-operator|new
-name|XKMSNotFoundException
+name|LOG
+operator|.
+name|warn
 argument_list|(
-literal|"X509Certificate is not found for id: "
+literal|"X509Certificate is not found in XKMS for id: "
 operator|+
 name|ids
 argument_list|)
-throw|;
+expr_stmt|;
+return|return
+literal|null
+return|;
 block|}
 name|JAXBElement
 argument_list|<
