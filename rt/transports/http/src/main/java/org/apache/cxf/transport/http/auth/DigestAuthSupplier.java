@@ -728,6 +728,10 @@ name|algorithm
 argument_list|)
 condition|)
 block|{
+name|algorithm
+operator|=
+literal|"MD5"
+expr_stmt|;
 name|String
 name|tmp2
 init|=
@@ -978,15 +982,6 @@ argument_list|(
 literal|"response"
 argument_list|,
 name|response
-argument_list|)
-expr_stmt|;
-name|outParams
-operator|.
-name|put
-argument_list|(
-literal|"algorithm"
-argument_list|,
-name|algorithm
 argument_list|)
 expr_stmt|;
 return|return
