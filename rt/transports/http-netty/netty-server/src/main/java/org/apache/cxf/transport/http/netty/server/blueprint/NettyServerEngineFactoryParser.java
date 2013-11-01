@@ -374,6 +374,13 @@ operator|.
 name|ACTIVATION_EAGER
 argument_list|)
 expr_stmt|;
+name|ef
+operator|.
+name|setDestroyMethod
+argument_list|(
+literal|"destroy"
+argument_list|)
+expr_stmt|;
 return|return
 name|ef
 return|;

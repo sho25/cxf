@@ -1051,10 +1051,20 @@ name|void
 name|destroy
 parameter_list|()
 block|{
+comment|// need to release the reference of the jaxb Classes
 name|factory
 operator|.
 name|postShutdown
 argument_list|()
+expr_stmt|;
+name|jaxbClasses
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|jaxbContext
+operator|=
+literal|null
 expr_stmt|;
 block|}
 specifier|public
