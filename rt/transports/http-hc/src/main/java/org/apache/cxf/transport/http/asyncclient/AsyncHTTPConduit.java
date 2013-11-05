@@ -1022,6 +1022,21 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|client
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"HttpAsyncClient is null"
+argument_list|)
+throw|;
+block|}
 return|return
 name|client
 return|;
