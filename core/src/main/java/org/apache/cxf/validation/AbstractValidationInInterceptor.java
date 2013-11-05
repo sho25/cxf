@@ -134,7 +134,7 @@ argument_list|)
 decl_stmt|;
 name|provider
 operator|.
-name|validate
+name|validateParameters
 argument_list|(
 name|resourceInstance
 argument_list|,
