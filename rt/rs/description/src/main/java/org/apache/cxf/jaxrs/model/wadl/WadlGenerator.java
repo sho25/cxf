@@ -3269,6 +3269,13 @@ argument_list|()
 argument_list|)
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|this
+operator|.
+name|supportJaxbSubstitutions
+condition|)
+block|{
 for|for
 control|(
 name|Class
@@ -3292,6 +3299,7 @@ argument_list|,
 name|cls
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|extraClasses
 operator|.
