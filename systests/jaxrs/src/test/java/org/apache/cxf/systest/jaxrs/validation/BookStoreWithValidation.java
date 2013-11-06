@@ -55,6 +55,16 @@ name|javax
 operator|.
 name|validation
 operator|.
+name|Valid
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|validation
+operator|.
 name|constraints
 operator|.
 name|NotNull
@@ -285,6 +295,8 @@ name|Path
 argument_list|(
 literal|"/booksResponse/{bookId}"
 argument_list|)
+annotation|@
+name|Valid
 specifier|public
 name|Response
 name|getBookResponse
