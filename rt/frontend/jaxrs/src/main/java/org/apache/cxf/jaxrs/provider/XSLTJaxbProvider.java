@@ -829,21 +829,6 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|InjectionUtils
-operator|.
-name|isSupportedCollectionOrArray
-argument_list|(
-name|type
-argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-comment|// JAXB support is required
-if|if
-condition|(
 operator|!
 name|super
 operator|.
@@ -863,6 +848,20 @@ return|return
 literal|false
 return|;
 block|}
+if|if
+condition|(
+name|InjectionUtils
+operator|.
+name|isSupportedCollectionOrArray
+argument_list|(
+name|type
+argument_list|)
+condition|)
+block|{
+return|return
+name|supportJaxbOnly
+return|;
+block|}
 comment|// if the user has set the list of in classes and a given class
 comment|// is in that list then it can only be handled by the template
 if|if
@@ -874,6 +873,13 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
+operator|||
+name|inClassesToHandle
+operator|==
+literal|null
+operator|&&
+operator|!
+name|supportJaxbOnly
 condition|)
 block|{
 return|return
@@ -913,27 +919,13 @@ name|MediaType
 name|mt
 parameter_list|)
 block|{
-if|if
-condition|(
-name|InjectionUtils
-operator|.
-name|isSupportedCollectionOrArray
-argument_list|(
-name|type
-argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
 comment|// JAXB support is required
 if|if
 condition|(
 operator|!
 name|super
 operator|.
-name|isReadable
+name|isWriteable
 argument_list|(
 name|type
 argument_list|,
@@ -949,6 +941,20 @@ return|return
 literal|false
 return|;
 block|}
+if|if
+condition|(
+name|InjectionUtils
+operator|.
+name|isSupportedCollectionOrArray
+argument_list|(
+name|type
+argument_list|)
+condition|)
+block|{
+return|return
+name|supportJaxbOnly
+return|;
+block|}
 comment|// if the user has set the list of out classes and a given class
 comment|// is in that list then it can only be handled by the template
 if|if
@@ -960,6 +966,13 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
+operator|||
+name|outClassesToHandle
+operator|==
+literal|null
+operator|&&
+operator|!
+name|supportJaxbOnly
 condition|)
 block|{
 return|return
@@ -1312,7 +1325,7 @@ block|{
 try|try
 block|{
 comment|//Saxon doesn't allow creating a Filter or Handler from anything other than it's original
-comment|//Templates.  That then requires setting the paramaters after the fact, but there
+comment|//Templates.  That then requires setting the parameters after the fact, but there
 comment|//isn't a standard API for that, so we have to grab the Transformer via reflection to
 comment|//set the parameters.
 name|Transformer
@@ -2084,9 +2097,9 @@ parameter_list|)
 block|{
 return|return
 name|inClassesToHandle
-operator|==
+operator|!=
 literal|null
-operator|||
+operator|&&
 name|inClassesToHandle
 operator|.
 name|contains
@@ -2121,9 +2134,9 @@ parameter_list|)
 block|{
 return|return
 name|outClassesToHandle
-operator|==
+operator|!=
 literal|null
-operator|||
+operator|&&
 name|outClassesToHandle
 operator|.
 name|contains
