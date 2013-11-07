@@ -3224,6 +3224,16 @@ name|isXmlRoot
 argument_list|(
 name|cls
 argument_list|)
+operator|||
+name|Modifier
+operator|.
+name|isAbstract
+argument_list|(
+name|cls
+operator|.
+name|getModifiers
+argument_list|()
+argument_list|)
 condition|)
 block|{
 name|XmlSeeAlso
