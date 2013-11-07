@@ -893,6 +893,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// TODO Encrypted tokens not yet working with StAX
+comment|// See WSS-484
 annotation|@
 name|org
 operator|.
