@@ -552,6 +552,10 @@ decl_stmt|;
 if|if
 condition|(
 name|location
+operator|!=
+literal|null
+operator|&&
+name|location
 operator|.
 name|contains
 argument_list|(
@@ -577,6 +581,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|location
+operator|!=
+literal|null
+operator|&&
 name|location
 operator|.
 name|contains
