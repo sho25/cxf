@@ -105,7 +105,7 @@ name|cxf
 operator|.
 name|validation
 operator|.
-name|AbstractValidationInInterceptor
+name|ValidationInInterceptor
 import|;
 end_import
 
@@ -114,7 +114,7 @@ specifier|public
 class|class
 name|JAXRSValidationInInterceptor
 extends|extends
-name|AbstractValidationInInterceptor
+name|ValidationInInterceptor
 implements|implements
 name|ContainerRequestFilter
 block|{
@@ -139,7 +139,7 @@ annotation|@
 name|Override
 specifier|protected
 name|Object
-name|getResourceInstance
+name|getServiceObject
 parameter_list|(
 name|Message
 name|message
@@ -158,7 +158,7 @@ annotation|@
 name|Override
 specifier|protected
 name|Method
-name|getResourceMethod
+name|getServiceMethod
 parameter_list|(
 name|Message
 name|message
@@ -184,7 +184,7 @@ block|{
 return|return
 name|super
 operator|.
-name|getResourceMethod
+name|getServiceMethod
 argument_list|(
 name|message
 argument_list|)

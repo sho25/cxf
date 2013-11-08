@@ -204,6 +204,10 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+name|Object
+name|serviceObject
+decl_stmt|;
+specifier|private
 specifier|volatile
 name|ValidationProvider
 name|provider
@@ -219,6 +223,21 @@ name|super
 argument_list|(
 name|phase
 argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setServiceObject
+parameter_list|(
+name|Object
+name|object
+parameter_list|)
+block|{
+name|this
+operator|.
+name|serviceObject
+operator|=
+name|object
 expr_stmt|;
 block|}
 specifier|public
@@ -250,16 +269,16 @@ name|Fault
 block|{
 specifier|final
 name|Object
-name|resourceInstance
+name|theServiceObject
 init|=
-name|getResourceInstance
+name|getServiceObject
 argument_list|(
 name|message
 argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|resourceInstance
+name|theServiceObject
 operator|==
 literal|null
 condition|)
@@ -267,7 +286,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"Resource instance is not available"
+literal|"Service object is not available"
 decl_stmt|;
 name|LOG
 operator|.
@@ -288,7 +307,7 @@ specifier|final
 name|Method
 name|method
 init|=
-name|getResourceMethod
+name|getServiceMethod
 argument_list|(
 name|message
 argument_list|)
@@ -303,7 +322,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"Resource method is not available"
+literal|"Service method is not available"
 decl_stmt|;
 name|LOG
 operator|.
@@ -338,7 +357,7 @@ name|handleValidation
 argument_list|(
 name|message
 argument_list|,
-name|resourceInstance
+name|theServiceObject
 argument_list|,
 name|method
 argument_list|,
@@ -347,17 +366,20 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-specifier|abstract
 name|Object
-name|getResourceInstance
+name|getServiceObject
 parameter_list|(
 name|Message
 name|message
 parameter_list|)
-function_decl|;
+block|{
+return|return
+name|serviceObject
+return|;
+block|}
 specifier|protected
 name|Method
-name|getResourceMethod
+name|getServiceMethod
 parameter_list|(
 name|Message
 name|message

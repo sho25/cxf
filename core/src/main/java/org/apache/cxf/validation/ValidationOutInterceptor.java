@@ -67,14 +67,13 @@ end_import
 
 begin_class
 specifier|public
-specifier|abstract
 class|class
-name|AbstractValidationOutInterceptor
+name|ValidationOutInterceptor
 extends|extends
 name|AbstractValidationInterceptor
 block|{
 specifier|public
-name|AbstractValidationOutInterceptor
+name|ValidationOutInterceptor
 parameter_list|()
 block|{
 name|super
@@ -86,7 +85,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|AbstractValidationOutInterceptor
+name|ValidationOutInterceptor
 parameter_list|(
 name|String
 name|phase
