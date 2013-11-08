@@ -107,7 +107,7 @@ name|bind
 operator|.
 name|annotation
 operator|.
-name|XmlRootElement
+name|XmlSeeAlso
 import|;
 end_import
 
@@ -121,7 +121,7 @@ name|bind
 operator|.
 name|annotation
 operator|.
-name|XmlSeeAlso
+name|XmlType
 import|;
 end_import
 
@@ -192,7 +192,7 @@ operator|=
 literal|"class"
 argument_list|)
 annotation|@
-name|XmlRootElement
+name|XmlType
 argument_list|(
 name|name
 operator|=
@@ -201,13 +201,13 @@ argument_list|)
 annotation|@
 name|XmlSeeAlso
 argument_list|(
-name|SuperBook
+name|SuperBook2
 operator|.
 name|class
 argument_list|)
 specifier|public
 class|class
-name|Book
+name|BookType
 block|{
 specifier|private
 name|String
@@ -236,7 +236,7 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|public
-name|Book
+name|BookType
 parameter_list|()
 block|{
 name|init
@@ -245,7 +245,7 @@ expr_stmt|;
 comment|//System.out.println("----chapters: " + chapters.size());
 block|}
 specifier|public
-name|Book
+name|BookType
 parameter_list|(
 name|String
 name|name
@@ -317,7 +317,7 @@ specifier|public
 name|void
 name|cloneState
 parameter_list|(
-name|Book
+name|BookType
 name|book
 parameter_list|)
 block|{
@@ -339,7 +339,7 @@ block|}
 annotation|@
 name|GET
 specifier|public
-name|Book
+name|BookType
 name|retrieveState
 parameter_list|()
 block|{

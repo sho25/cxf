@@ -1585,6 +1585,8 @@ operator|)
 operator|.
 name|getCollectionOrArray
 argument_list|(
+name|unmarshaller
+argument_list|,
 name|theType
 argument_list|,
 name|type
