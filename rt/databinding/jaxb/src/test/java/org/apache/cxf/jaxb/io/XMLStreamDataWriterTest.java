@@ -1746,6 +1746,28 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// there should be no namespace decls
+if|if
+condition|(
+operator|!
+name|db
+operator|.
+name|getContext
+argument_list|()
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"eclipse"
+argument_list|)
+condition|)
+block|{
+comment|//bug in eclipse moxy
+comment|//https://bugs.eclipse.org/bugs/show_bug.cgi?id=421463
 name|assertEquals
 argument_list|(
 literal|"<x:greetMe><x:requestType>Hello</x:requestType></x:greetMe>"
@@ -1753,6 +1775,7 @@ argument_list|,
 name|xstr
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 name|JAXBDataBinding
