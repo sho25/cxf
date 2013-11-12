@@ -6000,7 +6000,7 @@ name|exchange
 operator|.
 name|put
 argument_list|(
-literal|"org.apache.cxf.http.no_io_exceptions"
+literal|"org.apache.cxf.transport.no_io_exceptions"
 argument_list|,
 literal|true
 argument_list|)

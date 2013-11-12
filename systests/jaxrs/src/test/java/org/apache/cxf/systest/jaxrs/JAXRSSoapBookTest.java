@@ -6223,7 +6223,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"org.apache.cxf.http.no_io_exceptions"
+literal|"org.apache.cxf.transport.no_io_exceptions"
 argument_list|,
 literal|false
 argument_list|)
