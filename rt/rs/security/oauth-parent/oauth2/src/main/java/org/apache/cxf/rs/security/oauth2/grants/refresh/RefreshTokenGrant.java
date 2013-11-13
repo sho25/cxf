@@ -101,6 +101,15 @@ implements|implements
 name|AccessTokenGrant
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4855594852737940210L
+decl_stmt|;
+specifier|private
 name|String
 name|refreshToken
 decl_stmt|;

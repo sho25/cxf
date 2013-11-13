@@ -1046,6 +1046,15 @@ name|CustomGrant
 implements|implements
 name|AccessTokenGrant
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|4007538779198315873L
+decl_stmt|;
 annotation|@
 name|Override
 specifier|public

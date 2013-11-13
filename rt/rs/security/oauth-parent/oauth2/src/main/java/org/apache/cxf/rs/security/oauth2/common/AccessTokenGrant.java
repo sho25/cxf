@@ -23,6 +23,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|io
+operator|.
+name|Serializable
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -43,6 +53,8 @@ begin_interface
 specifier|public
 interface|interface
 name|AccessTokenGrant
+extends|extends
+name|Serializable
 block|{
 comment|/**      * Returns the token grant type, example, "authorization_code"      * @return the grant type      */
 name|String
