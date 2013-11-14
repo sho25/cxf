@@ -137,20 +137,6 @@ name|Message
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|phase
-operator|.
-name|PhaseInterceptorChain
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -428,35 +414,6 @@ argument_list|(
 name|timeout
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|PhaseInterceptorChain
-operator|.
-name|getCurrentMessage
-argument_list|()
-operator|==
-literal|null
-condition|)
-block|{
-comment|// the current thread is different to the one which holds a lock on PhaseInterceptorChain
-name|inMessage
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|put
-argument_list|(
-name|Message
-operator|.
-name|SUSPENDED_INVOCATION
-argument_list|,
-literal|true
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
-comment|// Need to get the right message which is handled in the interceptor chain
 name|inMessage
 operator|.
 name|getExchange
@@ -471,7 +428,6 @@ operator|.
 name|suspend
 argument_list|()
 expr_stmt|;
-block|}
 return|return
 literal|true
 return|;

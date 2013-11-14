@@ -369,11 +369,6 @@ name|WSDL_OPERATION
 init|=
 literal|"javax.xml.ws.wsdl.operation"
 decl_stmt|;
-name|String
-name|SUSPENDED_INVOCATION
-init|=
-literal|"org.apache.cxf.suspended.invocation"
-decl_stmt|;
 comment|/**      * Some properties to allow adding interceptors to the chain      * on a per-request basis.  All are a Collection<Interceptor>       * These are NOT contextual properties (ie: not searched outside the message).      * They must exist on the message itself at time of Chain creation      */
 name|String
 name|IN_INTERCEPTORS
