@@ -377,7 +377,7 @@ name|this
 argument_list|(
 name|resolver
 argument_list|,
-literal|null
+name|providerType
 argument_list|,
 literal|null
 argument_list|)
