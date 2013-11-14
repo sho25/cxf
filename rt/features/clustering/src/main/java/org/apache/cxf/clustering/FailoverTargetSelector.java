@@ -283,6 +283,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|supportNotAvailableErrorsOnly
+init|=
+literal|true
 decl_stmt|;
 comment|/**      * Normal constructor.      */
 specifier|public
