@@ -863,14 +863,32 @@ return|return
 literal|true
 return|;
 block|}
-block|}
+else|else
+block|{
+name|String
+name|error
+init|=
+literal|"Only ServiceInvokerInterceptor can update the current chain message"
+decl_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|error
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|IllegalStateException
 argument_list|(
-literal|"Only ServiceInvokerInterceptor can update the current chain message"
+name|error
 argument_list|)
 throw|;
+block|}
+block|}
+return|return
+literal|false
+return|;
 block|}
 specifier|public
 specifier|synchronized
