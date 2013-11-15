@@ -11464,7 +11464,7 @@ name|ct
 init|=
 name|response
 operator|.
-name|getHeaders
+name|getMetadata
 argument_list|()
 operator|.
 name|getFirst
