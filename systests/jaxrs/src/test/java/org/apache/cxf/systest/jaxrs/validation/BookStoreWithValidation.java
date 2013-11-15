@@ -288,6 +288,8 @@ literal|"/books/{bookId}"
 argument_list|)
 annotation|@
 name|Override
+annotation|@
+name|NotNull
 specifier|public
 name|BookWithValidation
 name|getBook
