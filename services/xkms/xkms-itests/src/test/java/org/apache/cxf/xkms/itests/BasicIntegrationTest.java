@@ -277,26 +277,6 @@ name|options
 operator|.
 name|KarafDistributionOption
 operator|.
-name|keepRuntimeFolder
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
-name|karaf
-operator|.
-name|options
-operator|.
-name|KarafDistributionOption
-operator|.
 name|replaceConfigurationFile
 import|;
 end_import
@@ -592,8 +572,6 @@ operator|.
 name|ignoreLocalConsole
 argument_list|()
 block|,
-name|keepRuntimeFolder
-argument_list|()
 comment|//CoreOptions.vmOption("-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005")
 block|}
 return|;
