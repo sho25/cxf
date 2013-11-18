@@ -308,6 +308,8 @@ decl_stmt|;
 specifier|protected
 name|boolean
 name|disableAddressUpdates
+init|=
+literal|true
 decl_stmt|;
 specifier|protected
 name|String
