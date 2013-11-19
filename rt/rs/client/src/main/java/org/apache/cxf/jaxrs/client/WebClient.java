@@ -2616,7 +2616,8 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Updates the current URI query parameters      * @param name query name      * @param values query values      * @return updated WebClient      */
+annotation|@
+name|Override
 specifier|public
 name|WebClient
 name|query
@@ -2629,22 +2630,18 @@ modifier|...
 name|values
 parameter_list|)
 block|{
-name|addMatrixQueryParamsToBuilder
-argument_list|(
-name|getCurrentBuilder
-argument_list|()
-argument_list|,
-name|name
-argument_list|,
-name|ParameterType
+return|return
+operator|(
+name|WebClient
+operator|)
+name|super
 operator|.
-name|QUERY
+name|query
+argument_list|(
+name|name
 argument_list|,
 name|values
 argument_list|)
-expr_stmt|;
-return|return
-name|this
 return|;
 block|}
 comment|/**      * Updates the current URI matrix parameters      * @param name matrix name      * @param values matrix values      * @return updated WebClient      */

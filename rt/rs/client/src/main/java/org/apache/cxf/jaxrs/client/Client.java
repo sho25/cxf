@@ -214,6 +214,18 @@ name|Cookie
 name|cookie
 parameter_list|)
 function_decl|;
+comment|/**      * Updates the current URI query parameters      * @param name query name      * @param values query values      * @return updated WebClient      */
+name|Client
+name|query
+parameter_list|(
+name|String
+name|name
+parameter_list|,
+name|Object
+modifier|...
+name|values
+parameter_list|)
+function_decl|;
 comment|/**      * Sets arbitrary HTTP Header      * @param name header name      * @param values list of header values      * @return the updated Client      */
 name|Client
 name|header

@@ -1029,6 +1029,37 @@ block|}
 comment|/**      * {@inheritDoc}      */
 specifier|public
 name|Client
+name|query
+parameter_list|(
+name|String
+name|name
+parameter_list|,
+name|Object
+modifier|...
+name|values
+parameter_list|)
+block|{
+name|addMatrixQueryParamsToBuilder
+argument_list|(
+name|getCurrentBuilder
+argument_list|()
+argument_list|,
+name|name
+argument_list|,
+name|ParameterType
+operator|.
+name|QUERY
+argument_list|,
+name|values
+argument_list|)
+expr_stmt|;
+return|return
+name|this
+return|;
+block|}
+comment|/**      * {@inheritDoc}      */
+specifier|public
+name|Client
 name|header
 parameter_list|(
 name|String
