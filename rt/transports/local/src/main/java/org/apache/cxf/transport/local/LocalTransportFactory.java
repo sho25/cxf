@@ -617,6 +617,15 @@ name|add
 argument_list|(
 name|Message
 operator|.
+name|ENDPOINT_ADDRESS
+argument_list|)
+expr_stmt|;
+name|messageIncludeProperties
+operator|.
+name|add
+argument_list|(
+name|Message
+operator|.
 name|HTTP_REQUEST_METHOD
 argument_list|)
 expr_stmt|;
