@@ -249,9 +249,8 @@ name|OAuthConstants
 operator|.
 name|GRANT_TYPE
 argument_list|,
-name|OAuthConstants
-operator|.
-name|CLIENT_CREDENTIALS_GRANT
+name|getType
+argument_list|()
 argument_list|)
 expr_stmt|;
 if|if
