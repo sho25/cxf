@@ -1414,7 +1414,7 @@ name|addresses
 init|=
 name|assertValid
 argument_list|(
-literal|"//http:address/@locatiossn"
+literal|"//http:address/@location"
 argument_list|,
 name|doc
 argument_list|)
