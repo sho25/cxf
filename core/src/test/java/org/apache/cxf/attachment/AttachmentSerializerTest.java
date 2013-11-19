@@ -589,7 +589,7 @@ condition|)
 block|{
 name|assertEquals
 argument_list|(
-literal|"application/xop+xml; charset=UTF-8; type=\"application/soap+xml\";"
+literal|"application/xop+xml; charset=UTF-8; type=\"application/soap+xml\""
 argument_list|,
 name|part
 operator|.
@@ -607,7 +607,7 @@ else|else
 block|{
 name|assertEquals
 argument_list|(
-literal|"text/xml; charset=UTF-8; type=\"application/soap+xml\";"
+literal|"text/xml; charset=UTF-8; type=\"application/soap+xml\""
 argument_list|,
 name|part
 operator|.
@@ -1049,7 +1049,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"application/xop+xml; charset=UTF-8; type=\"application/soap+xml\";"
+literal|"application/xop+xml; charset=UTF-8; type=\"application/soap+xml\""
 argument_list|,
 name|part
 operator|.
