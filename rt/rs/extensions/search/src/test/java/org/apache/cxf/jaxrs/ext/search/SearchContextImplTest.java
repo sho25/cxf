@@ -231,8 +231,6 @@ argument_list|,
 literal|"_s=ab"
 argument_list|)
 expr_stmt|;
-name|assertNull
-argument_list|(
 operator|new
 name|SearchContextImpl
 argument_list|(
@@ -244,7 +242,6 @@ argument_list|(
 name|Book
 operator|.
 name|class
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
