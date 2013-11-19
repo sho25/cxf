@@ -24,7 +24,7 @@ specifier|public
 class|class
 name|SearchParseException
 extends|extends
-name|Exception
+name|RuntimeException
 block|{
 specifier|private
 specifier|static
