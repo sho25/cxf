@@ -349,7 +349,6 @@ name|crypto
 decl_stmt|;
 comment|/**      * The principal of this SecurityToken      */
 specifier|private
-specifier|transient
 name|Principal
 name|principal
 decl_stmt|;
