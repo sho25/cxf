@@ -63,6 +63,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|binding
+operator|.
+name|soap
+operator|.
+name|SoapTransportFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -111,7 +127,7 @@ name|transport
 operator|.
 name|http
 operator|.
-name|HTTPTransportFactory
+name|DestinationRegistryImpl
 import|;
 end_import
 
@@ -120,7 +136,7 @@ specifier|public
 class|class
 name|JAXWSHttpSpiTransportFactory
 extends|extends
-name|HTTPTransportFactory
+name|SoapTransportFactory
 implements|implements
 name|DestinationFactory
 block|{
@@ -176,7 +192,9 @@ name|JAXWSHttpSpiDestination
 argument_list|(
 name|bus
 argument_list|,
-name|registry
+operator|new
+name|DestinationRegistryImpl
+argument_list|()
 argument_list|,
 name|endpointInfo
 argument_list|)
