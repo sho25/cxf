@@ -224,6 +224,17 @@ name|obj
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|boolean
+name|isSingletonFactory
+parameter_list|()
+block|{
+return|return
+name|factory
+operator|instanceof
+name|SingletonFactory
+return|;
+block|}
 block|}
 end_class
 

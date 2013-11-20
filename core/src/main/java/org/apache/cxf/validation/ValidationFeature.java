@@ -11,8 +11,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
-operator|.
 name|validation
 package|;
 end_package
@@ -60,7 +58,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JAXRSValidationFeature
+name|ValidationFeature
 extends|extends
 name|AbstractFeature
 block|{
@@ -85,7 +83,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|JAXRSValidationInInterceptor
+name|ValidationInInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -97,7 +95,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|JAXRSValidationOutInterceptor
+name|ValidationOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;

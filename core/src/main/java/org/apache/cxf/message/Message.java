@@ -103,6 +103,12 @@ name|INVOCATION_CONTEXT
 init|=
 literal|"org.apache.cxf.invocation.context"
 decl_stmt|;
+comment|/**      *  Current Service Object      */
+name|String
+name|SERVICE_OBJECT
+init|=
+literal|"org.apache.cxf.service.object"
+decl_stmt|;
 comment|/**      * A Map containing the MIME headers for a SOAP message.      */
 name|String
 name|MIME_HEADERS
