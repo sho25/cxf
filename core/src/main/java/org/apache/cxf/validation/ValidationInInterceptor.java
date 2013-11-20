@@ -131,6 +131,16 @@ argument_list|(
 name|message
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|arguments
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
 name|provider
 operator|.
 name|validateParameters
@@ -145,6 +155,7 @@ name|toArray
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|message
 operator|.
 name|getExchange
