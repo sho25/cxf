@@ -2837,13 +2837,24 @@ comment|// to allow unmarshalling the body of a server originated TerminateSeque
 comment|// In the logical RM interceptor set it back to what it was so that the logical
 comment|// addressing interceptor does not try to send a partial response to
 comment|// server originated oneway RM protocol messages.
-comment|//
+comment|// The actions that can appear in the response to the requestor should be excluded.
 if|if
 condition|(
 operator|!
 name|consts
 operator|.
 name|getCreateSequenceResponseAction
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|action
+argument_list|)
+operator|&&
+operator|!
+name|consts
+operator|.
+name|getSequenceAckAction
 argument_list|()
 operator|.
 name|equals
