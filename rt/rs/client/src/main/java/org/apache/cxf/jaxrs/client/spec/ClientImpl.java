@@ -1141,6 +1141,17 @@ operator|=
 name|targetClient
 expr_stmt|;
 block|}
+specifier|public
+name|WebClient
+name|getWebClient
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|targetClient
+return|;
+block|}
 annotation|@
 name|Override
 specifier|public

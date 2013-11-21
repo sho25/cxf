@@ -391,6 +391,17 @@ name|sync
 argument_list|()
 expr_stmt|;
 block|}
+specifier|public
+name|WebClient
+name|getWebClient
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|webClient
+return|;
+block|}
 annotation|@
 name|Override
 specifier|public
