@@ -29,6 +29,11 @@ name|Continuation
 name|getContinuation
 parameter_list|()
 function_decl|;
+comment|/**      * Let the provider know that the exchange is complete      */
+name|void
+name|complete
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
