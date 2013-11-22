@@ -197,6 +197,20 @@ name|rs
 operator|.
 name|container
 operator|.
+name|Suspended
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|container
+operator|.
 name|TimeoutHandler
 import|;
 end_import
@@ -289,6 +303,8 @@ specifier|public
 name|void
 name|getBookDescriptionWithTimeout
 parameter_list|(
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|async
 parameter_list|)
@@ -330,6 +346,8 @@ specifier|public
 name|void
 name|getBookDescriptionImmediateResume
 parameter_list|(
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|async
 parameter_list|)
@@ -361,6 +379,8 @@ argument_list|)
 name|String
 name|id
 parameter_list|,
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|async
 parameter_list|)
@@ -413,6 +433,8 @@ argument_list|)
 name|String
 name|id
 parameter_list|,
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|async
 parameter_list|)
@@ -461,6 +483,8 @@ argument_list|)
 name|String
 name|id
 parameter_list|,
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|async
 parameter_list|)
@@ -509,6 +533,8 @@ argument_list|)
 name|String
 name|id
 parameter_list|,
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|async
 parameter_list|)
@@ -554,6 +580,8 @@ argument_list|)
 name|String
 name|id
 parameter_list|,
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|response
 parameter_list|)
@@ -582,6 +610,8 @@ specifier|public
 name|void
 name|handleContinuationRequestNotFound
 parameter_list|(
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|response
 parameter_list|)
@@ -617,6 +647,8 @@ specifier|public
 name|void
 name|handleContinuationRequestNotFoundUnmapped
 parameter_list|(
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|response
 parameter_list|)
@@ -652,6 +684,8 @@ specifier|public
 name|void
 name|handleNotMappedAfterSuspend
 parameter_list|(
+annotation|@
+name|Suspended
 name|AsyncResponse
 name|response
 parameter_list|)
