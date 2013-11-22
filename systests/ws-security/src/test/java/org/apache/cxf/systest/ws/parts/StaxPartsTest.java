@@ -1424,7 +1424,7 @@ name|PORT
 argument_list|)
 expr_stmt|;
 comment|// DOM
-comment|/* TODO See WSS-482         try {             port.doubleIt(25);             fail("Failure expected on a header which isn't signed");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             String error = "SignedElements";             assertTrue(ex.getMessage().contains(error));         }                  // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a header which isn't signed");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "SignedElements";             // assertTrue(ex.getMessage().contains(error));         }         */
+comment|/* TODO See WSS-482 - Remove comment when we move off WSS4J RC         try {             port.doubleIt(25);             fail("Failure expected on a header which isn't signed");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             String error = "To must be signed";             assertTrue(ex.getMessage().contains(error));         }                  // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a header which isn't signed");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "To must be signed";             // assertTrue(ex.getMessage().contains(error));         }         */
 operator|(
 operator|(
 name|java
@@ -2018,7 +2018,7 @@ argument_list|,
 name|PORT
 argument_list|)
 expr_stmt|;
-comment|/*          * TODO See WSS-482         // DOM         try {             port.doubleIt(25);             fail("Failure expected on a header which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             System.out.println("ERR2: " + ex.getMessage());             String error = "EncryptedElements";             assertTrue(ex.getMessage().contains(error));         }                  // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a header which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "EncryptedElements";             // assertTrue(ex.getMessage().contains(error));         }         */
+comment|/*           TODO See WSS-482 - Remove comment when we move off WSS4J RC         // DOM         try {             port.doubleIt(25);             fail("Failure expected on a header which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             String error = "To must be encrypted";             assertTrue(ex.getMessage().contains(error));         }                  // Streaming         try {             SecurityTestUtil.enableStreaming(port);             port.doubleIt(25);             fail("Failure expected on a header which isn't encrypted");         } catch (javax.xml.ws.soap.SOAPFaultException ex) {             // String error = "To must be encrypted";             // assertTrue(ex.getMessage().contains(error));         }         */
 operator|(
 operator|(
 name|java
