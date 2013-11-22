@@ -446,6 +446,11 @@ argument_list|,
 literal|null
 argument_list|,
 name|req
+operator|.
+name|getServletContext
+argument_list|()
+argument_list|,
+name|req
 argument_list|,
 name|resp
 argument_list|)
