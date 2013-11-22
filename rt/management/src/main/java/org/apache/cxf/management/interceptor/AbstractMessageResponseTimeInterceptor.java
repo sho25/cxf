@@ -642,10 +642,16 @@ name|serviceName
 init|=
 literal|"\""
 operator|+
+name|escapePatternChars
+argument_list|(
 name|service
 operator|.
 name|getName
 argument_list|()
+operator|.
+name|toString
+argument_list|()
+argument_list|)
 operator|+
 literal|"\""
 decl_stmt|;
@@ -972,6 +978,8 @@ operator|-
 literal|1
 condition|)
 block|{
+name|value
+operator|=
 name|value
 operator|.
 name|replace
