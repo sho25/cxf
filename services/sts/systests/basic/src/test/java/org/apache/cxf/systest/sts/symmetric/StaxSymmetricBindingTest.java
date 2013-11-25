@@ -805,7 +805,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO Encrypted tokens not yet working with StAX
+comment|// TODO (WSS-484) Uncomment when we upgrade to WSS4J 2.0-SNAPSHOT again
 annotation|@
 name|org
 operator|.
