@@ -185,17 +185,7 @@ begin_comment
 comment|/**  * A set of tests for the SwA specification (SOAP with Attachments) via WS-SecurityPolicy.  *   * It tests both DOM + StAX clients against the StAX server  */
 end_comment
 
-begin_comment
-comment|//TODO Wait until we move off the WSS4J 2.0 beta release
-end_comment
-
 begin_class
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 class|class
 name|StaxSWAPolicyTest

@@ -2433,19 +2433,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - re-enable once we move off WSS4J 2.0-beta
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSignedAttachments
@@ -2790,19 +2783,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - re-enable once we move off WSS4J 2.0-beta
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testEncryptedAttachments

@@ -892,19 +892,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO (WSS-484) Uncomment when we upgrade to WSS4J 2.0-SNAPSHOT again
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testUsernameTokenSAML1Encrypted
