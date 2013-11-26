@@ -255,7 +255,7 @@ name|serviceObject
 decl_stmt|;
 specifier|private
 specifier|volatile
-name|ValidationProvider
+name|BeanValidationProvider
 name|provider
 decl_stmt|;
 specifier|public
@@ -290,7 +290,7 @@ specifier|public
 name|void
 name|setProvider
 parameter_list|(
-name|ValidationProvider
+name|BeanValidationProvider
 name|provider
 parameter_list|)
 block|{
@@ -667,7 +667,7 @@ name|arguments
 parameter_list|)
 function_decl|;
 specifier|protected
-name|ValidationProvider
+name|BeanValidationProvider
 name|getProvider
 parameter_list|(
 name|Message
@@ -688,7 +688,7 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|ValidationProvider
+name|BeanValidationProvider
 operator|.
 name|class
 operator|.
@@ -706,7 +706,7 @@ block|{
 name|provider
 operator|=
 operator|(
-name|ValidationProvider
+name|BeanValidationProvider
 operator|)
 name|prop
 expr_stmt|;
@@ -716,7 +716,7 @@ block|{
 name|provider
 operator|=
 operator|new
-name|ValidationProvider
+name|BeanValidationProvider
 argument_list|()
 expr_stmt|;
 block|}

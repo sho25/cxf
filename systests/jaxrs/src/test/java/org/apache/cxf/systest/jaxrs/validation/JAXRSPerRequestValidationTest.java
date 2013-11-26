@@ -91,7 +91,7 @@ name|jaxrs
 operator|.
 name|validation
 operator|.
-name|JAXRSValidationInvoker
+name|JAXRSBeanValidationInvoker
 import|;
 end_import
 
@@ -232,7 +232,7 @@ operator|.
 name|setInvoker
 argument_list|(
 operator|new
-name|JAXRSValidationInvoker
+name|JAXRSBeanValidationInvoker
 argument_list|()
 argument_list|)
 expr_stmt|;

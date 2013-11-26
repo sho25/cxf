@@ -139,7 +139,7 @@ name|cxf
 operator|.
 name|validation
 operator|.
-name|ValidationProvider
+name|BeanValidationProvider
 import|;
 end_import
 
@@ -154,14 +154,14 @@ class|class
 name|BookStoreWithValidation
 block|{
 specifier|private
-name|ValidationProvider
+name|BeanValidationProvider
 name|provider
 decl_stmt|;
 specifier|public
 name|void
 name|setProvider
 parameter_list|(
-name|ValidationProvider
+name|BeanValidationProvider
 name|provider
 parameter_list|)
 block|{

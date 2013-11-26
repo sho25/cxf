@@ -84,7 +84,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ValidationOutInterceptor
+name|BeanValidationOutInterceptor
 extends|extends
 name|AbstractValidationInterceptor
 block|{
@@ -93,7 +93,7 @@ name|boolean
 name|enforceOnlyBeanConstraints
 decl_stmt|;
 specifier|public
-name|ValidationOutInterceptor
+name|BeanValidationOutInterceptor
 parameter_list|()
 block|{
 name|super
@@ -105,7 +105,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|ValidationOutInterceptor
+name|BeanValidationOutInterceptor
 parameter_list|(
 name|String
 name|phase
@@ -164,7 +164,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|ValidationInInterceptor
+name|BeanValidationInInterceptor
 operator|.
 name|INPUT_VALIDATION_FAILED
 argument_list|)
@@ -184,7 +184,7 @@ literal|0
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|ValidationProvider
+name|BeanValidationProvider
 name|theProvider
 init|=
 name|getOutProvider
@@ -235,14 +235,14 @@ name|entity
 return|;
 block|}
 specifier|protected
-name|ValidationProvider
+name|BeanValidationProvider
 name|getOutProvider
 parameter_list|(
 name|Message
 name|message
 parameter_list|)
 block|{
-name|ValidationProvider
+name|BeanValidationProvider
 name|provider
 init|=
 name|message
@@ -252,7 +252,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|ValidationProvider
+name|BeanValidationProvider
 operator|.
 name|class
 argument_list|)

@@ -170,7 +170,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ValidationProvider
+name|BeanValidationProvider
 block|{
 specifier|private
 specifier|static
@@ -182,7 +182,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|ValidationProvider
+name|BeanValidationProvider
 operator|.
 name|class
 argument_list|)
@@ -193,7 +193,7 @@ name|ValidatorFactory
 name|factory
 decl_stmt|;
 specifier|public
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|()
 block|{
 try|try
@@ -226,7 +226,7 @@ throw|;
 block|}
 block|}
 specifier|public
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|(
 name|ParameterNameProvider
 name|parameterNameProvider
@@ -243,7 +243,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|(
 name|ValidationConfiguration
 name|cfg
@@ -300,7 +300,7 @@ throw|;
 block|}
 block|}
 specifier|public
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|(
 name|ValidatorFactory
 name|factory
@@ -329,7 +329,7 @@ name|factory
 expr_stmt|;
 block|}
 specifier|public
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|(
 name|ValidationProviderResolver
 name|resolver
@@ -352,7 +352,7 @@ argument_list|<
 name|T
 argument_list|>
 parameter_list|>
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|(
 name|ValidationProviderResolver
 name|resolver
@@ -392,7 +392,7 @@ argument_list|<
 name|T
 argument_list|>
 parameter_list|>
-name|ValidationProvider
+name|BeanValidationProvider
 parameter_list|(
 name|ValidationProviderResolver
 name|resolver

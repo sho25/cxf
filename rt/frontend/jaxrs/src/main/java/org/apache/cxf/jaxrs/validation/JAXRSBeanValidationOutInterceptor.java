@@ -121,25 +121,25 @@ name|cxf
 operator|.
 name|validation
 operator|.
-name|ValidationOutInterceptor
+name|BeanValidationOutInterceptor
 import|;
 end_import
 
 begin_class
 specifier|public
 class|class
-name|JAXRSValidationOutInterceptor
+name|JAXRSBeanValidationOutInterceptor
 extends|extends
-name|ValidationOutInterceptor
+name|BeanValidationOutInterceptor
 implements|implements
 name|ContainerResponseFilter
 block|{
 specifier|public
-name|JAXRSValidationOutInterceptor
+name|JAXRSBeanValidationOutInterceptor
 parameter_list|()
 block|{     }
 specifier|public
-name|JAXRSValidationOutInterceptor
+name|JAXRSBeanValidationOutInterceptor
 parameter_list|(
 name|String
 name|phase
