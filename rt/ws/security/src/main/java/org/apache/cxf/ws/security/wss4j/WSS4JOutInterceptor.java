@@ -885,6 +885,17 @@ argument_list|(
 name|mc
 argument_list|)
 expr_stmt|;
+name|reqData
+operator|.
+name|setAttachmentCallbackHandler
+argument_list|(
+operator|new
+name|AttachmentOutCallbackHandler
+argument_list|(
+name|mc
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|/*              * The overall try, just to have a finally at the end to perform some              * housekeeping.              */
 try|try
 block|{

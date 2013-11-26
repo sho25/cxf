@@ -3416,8 +3416,6 @@ name|token
 argument_list|,
 name|WSPasswordCallback
 operator|.
-name|Usage
-operator|.
 name|SIGNATURE
 argument_list|)
 decl_stmt|;

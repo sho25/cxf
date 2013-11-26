@@ -193,24 +193,6 @@ name|WSPasswordCallback
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|common
-operator|.
-name|ext
-operator|.
-name|WSPasswordCallback
-operator|.
-name|Usage
-import|;
-end_import
-
 begin_class
 specifier|final
 class|class
@@ -696,7 +678,7 @@ parameter_list|,
 name|String
 name|userName
 parameter_list|,
-name|Usage
+name|int
 name|usage
 parameter_list|)
 block|{
@@ -743,7 +725,7 @@ parameter_list|(
 name|String
 name|userName
 parameter_list|,
-name|Usage
+name|int
 name|usage
 parameter_list|,
 name|CallbackHandler

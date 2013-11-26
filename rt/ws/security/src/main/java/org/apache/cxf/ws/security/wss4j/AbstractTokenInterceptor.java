@@ -1487,9 +1487,7 @@ parameter_list|,
 name|AbstractToken
 name|info
 parameter_list|,
-name|WSPasswordCallback
-operator|.
-name|Usage
+name|int
 name|usage
 parameter_list|,
 name|SoapMessage

@@ -753,9 +753,7 @@ parameter_list|,
 name|String
 name|userName
 parameter_list|,
-name|WSPasswordCallback
-operator|.
-name|Usage
+name|int
 name|type
 parameter_list|,
 name|Class

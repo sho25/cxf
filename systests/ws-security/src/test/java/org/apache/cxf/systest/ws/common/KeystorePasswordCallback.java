@@ -255,8 +255,6 @@ argument_list|()
 operator|==
 name|WSPasswordCallback
 operator|.
-name|Usage
-operator|.
 name|PASSWORD_ENCRYPTOR_PASSWORD
 condition|)
 block|{

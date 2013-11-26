@@ -1596,6 +1596,17 @@ argument_list|(
 name|msg
 argument_list|)
 expr_stmt|;
+name|reqData
+operator|.
+name|setAttachmentCallbackHandler
+argument_list|(
+operator|new
+name|AttachmentInCallbackHandler
+argument_list|(
+name|msg
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|setAlgorithmSuites
 argument_list|(
 name|msg

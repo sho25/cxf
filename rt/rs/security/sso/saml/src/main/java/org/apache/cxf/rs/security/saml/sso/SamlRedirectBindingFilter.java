@@ -833,8 +833,6 @@ name|signatureUser
 argument_list|,
 name|WSPasswordCallback
 operator|.
-name|Usage
-operator|.
 name|SIGNATURE
 argument_list|)
 block|}

@@ -909,6 +909,28 @@ block|{
 comment|// If no actions configured (with SecurityPolicy) then return
 return|return;
 block|}
+if|if
+condition|(
+name|secProps
+operator|.
+name|getAttachmentCallbackHandler
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+name|secProps
+operator|.
+name|setAttachmentCallbackHandler
+argument_list|(
+operator|new
+name|AttachmentOutCallbackHandler
+argument_list|(
+name|mc
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 name|SecurityEventListener
 name|securityEventListener
 init|=
@@ -1744,7 +1766,7 @@ operator|.
 name|PRE_STREAM_ENDING
 argument_list|)
 expr_stmt|;
-name|getAfter
+name|getBefore
 argument_list|()
 operator|.
 name|add

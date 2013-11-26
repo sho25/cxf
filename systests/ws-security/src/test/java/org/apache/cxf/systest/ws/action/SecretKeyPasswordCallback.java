@@ -273,8 +273,6 @@ argument_list|()
 operator|==
 name|WSPasswordCallback
 operator|.
-name|Usage
-operator|.
 name|SECRET_KEY
 condition|)
 block|{

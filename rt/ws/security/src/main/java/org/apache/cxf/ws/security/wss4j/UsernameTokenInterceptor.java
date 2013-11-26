@@ -2352,8 +2352,6 @@ name|token
 argument_list|,
 name|WSPasswordCallback
 operator|.
-name|Usage
-operator|.
 name|USERNAME_TOKEN
 argument_list|,
 name|message
