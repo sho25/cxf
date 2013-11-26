@@ -35,6 +35,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -531,6 +543,24 @@ name|PolicyException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
+literal|"Inbound policy verification failed: "
+operator|+
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|e
+argument_list|)
+expr_stmt|;
 comment|//To check if there is ws addressing policy violation and throw WSA specific
 comment|//exception to pass jaxws2.2 tests
 if|if
