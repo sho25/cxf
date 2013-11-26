@@ -1034,7 +1034,7 @@ operator|.
 name|getMessage
 argument_list|()
 operator|.
-name|startsWith
+name|contains
 argument_list|(
 literal|"Different HTTP Scheme or Host Redirect detected on"
 argument_list|)
@@ -1356,7 +1356,7 @@ operator|.
 name|getMessage
 argument_list|()
 operator|.
-name|startsWith
+name|contains
 argument_list|(
 literal|"Relative Redirect detected on"
 argument_list|)
