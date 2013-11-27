@@ -3392,6 +3392,11 @@ operator|new
 name|XMLStreamException
 argument_list|(
 name|e
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -10245,6 +10250,11 @@ operator|new
 name|XMLStreamException
 argument_list|(
 name|cce
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|cce
 argument_list|)
 throw|;
 block|}
@@ -10284,6 +10294,11 @@ throw|throw
 operator|new
 name|XMLStreamException
 argument_list|(
+name|cce
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
 name|cce
 argument_list|)
 throw|;
