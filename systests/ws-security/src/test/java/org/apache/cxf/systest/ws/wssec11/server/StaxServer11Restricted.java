@@ -86,6 +86,7 @@ name|StaxServer11Restricted
 extends|extends
 name|AbstractServerRestricted
 block|{
+specifier|public
 specifier|static
 specifier|final
 name|String
