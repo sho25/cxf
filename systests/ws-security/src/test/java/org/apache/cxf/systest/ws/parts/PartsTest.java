@@ -2548,27 +2548,6 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO Investigate...
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-operator|&&
-operator|!
-name|STAX_PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|getPort
-argument_list|()
-argument_list|)
-condition|)
-block|{
 name|port
 operator|.
 name|doubleIt
@@ -2576,7 +2555,6 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-block|}
 comment|// This should fail, as the service requires that the header must be encrypted
 name|portQName
 operator|=
