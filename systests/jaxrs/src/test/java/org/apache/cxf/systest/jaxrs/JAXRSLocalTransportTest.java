@@ -832,7 +832,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|500
+literal|403
 argument_list|,
 name|r
 operator|.
@@ -893,7 +893,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|500
+literal|403
 argument_list|,
 name|r
 operator|.
