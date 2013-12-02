@@ -287,6 +287,7 @@ name|properties
 decl_stmt|;
 comment|/**      * The secret associated with the Token      */
 specifier|private
+specifier|transient
 name|byte
 index|[]
 name|secret
