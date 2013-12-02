@@ -148,8 +148,6 @@ argument_list|()
 operator|==
 name|WSPasswordCallback
 operator|.
-name|Usage
-operator|.
 name|DECRYPT
 operator|||
 name|pc
@@ -158,8 +156,6 @@ name|getUsage
 argument_list|()
 operator|==
 name|WSPasswordCallback
-operator|.
-name|Usage
 operator|.
 name|SIGNATURE
 condition|)
@@ -195,8 +191,6 @@ name|getUsage
 argument_list|()
 operator|==
 name|WSPasswordCallback
-operator|.
-name|Usage
 operator|.
 name|USERNAME_TOKEN
 condition|)
