@@ -1069,6 +1069,13 @@ argument_list|,
 name|soapMessage
 argument_list|)
 expr_stmt|;
+name|secProps
+operator|.
+name|setMsgContext
+argument_list|(
+name|soapMessage
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|SecurityEventListener
@@ -2656,7 +2663,7 @@ operator|.
 name|toString
 argument_list|()
 argument_list|,
-name|WSS4JInInterceptor
+name|WSS4JStaxInInterceptor
 operator|.
 name|class
 argument_list|)
@@ -2664,6 +2671,24 @@ operator|.
 name|newInstance
 argument_list|()
 return|;
+block|}
+elseif|else
+if|if
+condition|(
+name|o
+operator|!=
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"Cannot load Validator: "
+operator|+
+name|o
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 catch|catch
