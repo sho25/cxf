@@ -103,12 +103,9 @@ name|m
 operator|.
 name|put
 argument_list|(
-name|SearchConditionParser
+name|SearchContextImpl
 operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
+name|CUSTOM_SEARCH_PARSER_PROPERTY
 argument_list|,
 operator|new
 name|CustomParser
