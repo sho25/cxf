@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Search Language Parser implementation.  * FIQL Language parser is the default implementation.   */
+comment|/**  * Search Expression Parser converts an expression into SearchCondition.  */
 end_comment
 
 begin_interface
@@ -38,7 +38,7 @@ argument_list|>
 name|parse
 parameter_list|(
 name|String
-name|fiqlExpression
+name|searchExpression
 parameter_list|)
 throws|throws
 name|SearchParseException
