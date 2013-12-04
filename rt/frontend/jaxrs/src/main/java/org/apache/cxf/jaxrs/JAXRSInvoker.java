@@ -860,15 +860,6 @@ argument_list|,
 name|rootInstance
 argument_list|)
 expr_stmt|;
-name|exchange
-operator|.
-name|remove
-argument_list|(
-name|JAXRSUtils
-operator|.
-name|ROOT_INSTANCE
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 block|}
