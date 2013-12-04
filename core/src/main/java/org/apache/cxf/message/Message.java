@@ -148,11 +148,11 @@ name|PROCESS_ONEWAY_RESPONSE
 init|=
 literal|"org.apache.cxf.transport.processOneWayResponse"
 decl_stmt|;
-comment|/**      * @deprecated use PROCESS_ONEWAY_RESPONSE      */
+comment|/**      * Boolean property specifying if the thread which runs a request is       * different to the thread which created this Message.      */
 name|String
-name|PROCESS_ONEWAY_REPONSE
+name|THREAD_CONTEXT_SWITCHED
 init|=
-name|PROCESS_ONEWAY_RESPONSE
+literal|"thread.context.switched"
 decl_stmt|;
 name|String
 name|ROBUST_ONEWAY
