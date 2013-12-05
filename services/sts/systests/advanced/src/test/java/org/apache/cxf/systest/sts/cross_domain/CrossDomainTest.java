@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test, a CXF client checks to see that the location defined on it's STSClient is different  * from that configured in the Issuer of the IssuedToken policy supplied in the WSDL of the  * service provider. It obtains a SAML Token from the configured STS first, and then sends it in  * the security header to the second STS. The returned token is then sent to the service provider.  * This illustrates cross-domain SSO: https://issues.apache.org/jira/browse/CXF-3520  */
+comment|/**  * In this test, a CXF client checks to see that the location defined on its STSClient is different  * from that configured in the Issuer of the IssuedToken policy supplied in the WSDL of the  * service provider. It obtains a SAML Token from the configured STS first, and then sends it in  * the security header to the second STS. The returned token is then sent to the service provider.  * This illustrates cross-domain SSO: https://issues.apache.org/jira/browse/CXF-3520  */
 end_comment
 
 begin_class

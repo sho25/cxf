@@ -2680,15 +2680,21 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|LOG
-operator|.
-name|info
+throw|throw
+operator|new
+name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
 literal|"Cannot load Validator: "
 operator|+
 name|o
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 catch|catch
