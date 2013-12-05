@@ -1971,7 +1971,7 @@ name|IOException
 block|{
 if|if
 condition|(
-name|connectionManager
+name|client
 operator|==
 literal|null
 condition|)
