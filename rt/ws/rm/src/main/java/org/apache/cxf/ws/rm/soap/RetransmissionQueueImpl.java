@@ -2698,10 +2698,13 @@ operator|.
 name|flush
 argument_list|()
 expr_stmt|;
-name|os
+comment|// closing the conduit this way will close the underlining stream that is os.
+name|c
 operator|.
 name|close
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 expr_stmt|;
 block|}
 catch|catch
