@@ -239,7 +239,7 @@ annotation|@
 name|Bean
 specifier|public
 name|Server
-name|create
+name|jaxrsServer
 parameter_list|()
 block|{
 name|List
