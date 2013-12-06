@@ -29,6 +29,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|Addressing
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -64,6 +78,13 @@ argument_list|,
 name|wsdlLocation
 operator|=
 literal|"testutils/jms_test.wsdl"
+argument_list|)
+annotation|@
+name|Addressing
+argument_list|(
+name|required
+operator|=
+literal|true
 argument_list|)
 specifier|public
 class|class
