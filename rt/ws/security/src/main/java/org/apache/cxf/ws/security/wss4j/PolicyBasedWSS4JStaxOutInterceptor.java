@@ -549,6 +549,22 @@ name|org
 operator|.
 name|apache
 operator|.
+name|wss4j
+operator|.
+name|stax
+operator|.
+name|ext
+operator|.
+name|WSSSecurityProperties
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|xml
 operator|.
 name|security
@@ -1067,6 +1083,9 @@ name|aim
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -1141,6 +1160,8 @@ argument_list|(
 name|e
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 decl_stmt|;
 name|Crypto
@@ -1176,6 +1197,8 @@ argument_list|(
 name|s
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -1310,6 +1333,9 @@ name|aim
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -1384,6 +1410,8 @@ argument_list|(
 name|e
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 decl_stmt|;
 name|Crypto
@@ -1419,6 +1447,8 @@ argument_list|(
 name|s
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -1553,6 +1583,9 @@ name|aim
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -1627,6 +1660,8 @@ argument_list|(
 name|e
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 decl_stmt|;
 name|Crypto
@@ -1662,6 +1697,8 @@ argument_list|(
 name|s
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -1905,6 +1942,9 @@ name|e
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -2020,6 +2060,8 @@ argument_list|,
 name|getPasswordEncryptor
 argument_list|(
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2072,6 +2114,9 @@ name|s
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -2187,6 +2232,8 @@ argument_list|,
 name|getPasswordEncryptor
 argument_list|(
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2249,6 +2296,9 @@ name|OutboundSecurityToken
 argument_list|>
 argument_list|>
 name|outboundTokens
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -2294,6 +2344,8 @@ argument_list|(
 name|aim
 argument_list|,
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -2326,6 +2378,8 @@ argument_list|(
 name|aim
 argument_list|,
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -2358,6 +2412,8 @@ argument_list|(
 name|aim
 argument_list|,
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -2368,6 +2424,8 @@ argument_list|(
 name|msg
 argument_list|,
 name|outboundTokens
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 if|if
@@ -2399,8 +2457,7 @@ decl_stmt|;
 operator|new
 name|StaxTransportBindingHandler
 argument_list|(
-name|getProperties
-argument_list|()
+name|securityProperties
 argument_list|,
 name|msg
 argument_list|,
@@ -2443,8 +2500,7 @@ decl_stmt|;
 operator|new
 name|StaxAsymmetricBindingHandler
 argument_list|(
-name|getProperties
-argument_list|()
+name|securityProperties
 argument_list|,
 name|msg
 argument_list|,
@@ -2487,8 +2543,7 @@ decl_stmt|;
 operator|new
 name|StaxSymmetricBindingHandler
 argument_list|(
-name|getProperties
-argument_list|()
+name|securityProperties
 argument_list|,
 name|msg
 argument_list|,
@@ -2507,8 +2562,7 @@ comment|// Fall back to Transport Binding
 operator|new
 name|StaxTransportBindingHandler
 argument_list|(
-name|getProperties
-argument_list|()
+name|securityProperties
 argument_list|,
 name|msg
 argument_list|,

@@ -1277,6 +1277,9 @@ name|aim
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -1376,6 +1379,8 @@ argument_list|(
 name|e
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 decl_stmt|;
 name|Crypto
@@ -1411,6 +1416,8 @@ argument_list|(
 name|s
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -1545,6 +1552,9 @@ name|aim
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|XMLSecurityException
@@ -1759,6 +1769,8 @@ argument_list|(
 name|e
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 decl_stmt|;
 name|Crypto
@@ -1794,6 +1806,8 @@ argument_list|(
 name|s
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -2013,6 +2027,9 @@ name|aim
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -2112,6 +2129,8 @@ argument_list|(
 name|e
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 decl_stmt|;
 name|Crypto
@@ -2147,6 +2166,8 @@ argument_list|(
 name|s
 argument_list|,
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -2390,6 +2411,9 @@ name|e
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -2505,6 +2529,8 @@ argument_list|,
 name|getPasswordEncryptor
 argument_list|(
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2557,6 +2583,9 @@ name|s
 parameter_list|,
 name|SoapMessage
 name|message
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|WSSecurityException
@@ -2672,6 +2701,8 @@ argument_list|,
 name|getPasswordEncryptor
 argument_list|(
 name|message
+argument_list|,
+name|securityProperties
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2723,6 +2754,9 @@ name|configureProperties
 parameter_list|(
 name|SoapMessage
 name|msg
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 throws|throws
 name|XMLSecurityException
@@ -2744,6 +2778,8 @@ argument_list|(
 name|aim
 argument_list|,
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 name|checkSymmetricBinding
@@ -2751,6 +2787,8 @@ argument_list|(
 name|aim
 argument_list|,
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 name|checkTransportBinding
@@ -2758,6 +2796,8 @@ argument_list|(
 name|aim
 argument_list|,
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 comment|// Allow for setting non-standard asymmetric signature algorithms
@@ -2845,6 +2885,8 @@ operator|.
 name|configureProperties
 argument_list|(
 name|msg
+argument_list|,
+name|securityProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -2857,6 +2899,9 @@ name|isNonceCacheRequired
 parameter_list|(
 name|SoapMessage
 name|msg
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 block|{
 name|AssertionInfoMap
@@ -2920,6 +2965,9 @@ name|isTimestampCacheRequired
 parameter_list|(
 name|SoapMessage
 name|msg
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 block|{
 name|AssertionInfoMap
@@ -2983,6 +3031,9 @@ name|isSamlCacheRequired
 parameter_list|(
 name|SoapMessage
 name|msg
+parameter_list|,
+name|WSSSecurityProperties
+name|securityProperties
 parameter_list|)
 block|{
 name|AssertionInfoMap
