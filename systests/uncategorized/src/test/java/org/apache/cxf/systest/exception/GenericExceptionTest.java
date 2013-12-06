@@ -138,9 +138,10 @@ specifier|final
 name|String
 name|PORT
 init|=
-literal|"9001"
+name|Server
+operator|.
+name|PORT
 decl_stmt|;
-comment|//Server.PORT;
 specifier|private
 specifier|final
 name|QName
@@ -164,7 +165,18 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|//assertTrue("server did not launch correctly", launchServer(Server.class));
+name|assertTrue
+argument_list|(
+literal|"server did not launch correctly"
+argument_list|,
+name|launchServer
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Test

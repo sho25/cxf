@@ -37,6 +37,10 @@ name|b
 decl_stmt|;
 specifier|public
 name|ObjectWithGenerics
+parameter_list|()
+block|{              }
+specifier|public
+name|ObjectWithGenerics
 parameter_list|(
 name|A
 name|aa
