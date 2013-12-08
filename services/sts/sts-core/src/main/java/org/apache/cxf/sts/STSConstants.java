@@ -248,6 +248,15 @@ name|TOKEN_RENEWING_ALLOW_AFTER_EXPIRY
 init|=
 literal|"org.apache.cxf.sts.token.renewing.allow.after.expiry"
 decl_stmt|;
+comment|/**      * Constant to specify service endpoint as certificate alias for encryption.      * Constant is recognized by STS encryption alias is replaced with AppliesTo() address.       * This address will be used in WSS4J crypto to search service certificate      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|USE_ENDPOINT_AS_CERT_ALIAS
+init|=
+literal|"useEndpointAsCertAlias"
+decl_stmt|;
 specifier|private
 name|STSConstants
 parameter_list|()
