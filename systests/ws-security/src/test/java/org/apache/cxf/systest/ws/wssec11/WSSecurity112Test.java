@@ -652,7 +652,20 @@ literal|false
 argument_list|)
 block|}
 block|,
-comment|// TODO Investigate {new TestParam("XD-ES", StaxServer12.PORT, false)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"XD-ES"
+argument_list|,
+name|StaxServer12
+operator|.
+name|PORT
+argument_list|,
+literal|false
+argument_list|)
+block|}
+block|,
 comment|// TODO Endorsing derived streaming not working
 comment|// {new TestParam("XD-SEES", StaxServer12.PORT, false)},
 block|}
@@ -783,7 +796,20 @@ literal|false
 argument_list|)
 block|}
 block|,
-comment|// TODO Investigate {new TestParam("XD-ES", StaxServer12Restricted.PORT, false)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"XD-ES"
+argument_list|,
+name|StaxServer12Restricted
+operator|.
+name|PORT
+argument_list|,
+literal|false
+argument_list|)
+block|}
+block|,
 comment|// TODO Endorsing derived streaming not working
 comment|// {new TestParam("XD-SEES", StaxServer12Restricted.PORT, false)},
 block|}

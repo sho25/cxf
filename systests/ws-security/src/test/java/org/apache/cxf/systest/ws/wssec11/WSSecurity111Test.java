@@ -758,8 +758,30 @@ literal|false
 argument_list|)
 block|}
 block|,
-comment|// TODO Investigate {new TestParam("A-ES", staxPort, false)},
-comment|// TODO Investigate {new TestParam("AD-ES", staxPort, false)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"A-ES"
+argument_list|,
+name|staxPort
+argument_list|,
+literal|false
+argument_list|)
+block|}
+block|,
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"AD-ES"
+argument_list|,
+name|staxPort
+argument_list|,
+literal|false
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam
