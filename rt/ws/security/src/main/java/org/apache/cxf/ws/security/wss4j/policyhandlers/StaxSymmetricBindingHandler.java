@@ -1068,7 +1068,7 @@ condition|)
 block|{
 name|properties
 operator|.
-name|setEncryptSymmetricEncrytionKey
+name|setEncryptSymmetricEncryptionKey
 argument_list|(
 literal|false
 argument_list|)
@@ -2927,7 +2927,7 @@ argument_list|)
 expr_stmt|;
 name|properties
 operator|.
-name|setEncryptSymmetricEncrytionKey
+name|setEncryptSymmetricEncryptionKey
 argument_list|(
 literal|false
 argument_list|)
@@ -3064,7 +3064,7 @@ condition|)
 block|{
 name|properties
 operator|.
-name|setEncryptSymmetricEncrytionKey
+name|setEncryptSymmetricEncryptionKey
 argument_list|(
 literal|false
 argument_list|)
