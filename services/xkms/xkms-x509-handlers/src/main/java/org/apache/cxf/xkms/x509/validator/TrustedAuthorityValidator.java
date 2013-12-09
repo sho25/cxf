@@ -664,7 +664,9 @@ name|Level
 operator|.
 name|SEVERE
 argument_list|,
-literal|"Invalid algorithm by certificate chain validation: "
+literal|"Invalid algorithm parameter by certificate chain validation. "
+operator|+
+literal|"It is likely that issuer certificates are not found in XKMS trusted storage. "
 operator|+
 name|e
 operator|.
