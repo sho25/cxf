@@ -142,8 +142,6 @@ literal|true
 decl_stmt|;
 name|boolean
 name|textOverlay
-init|=
-literal|false
 decl_stmt|;
 specifier|public
 name|OverlayW3CDOMStreamWriter
