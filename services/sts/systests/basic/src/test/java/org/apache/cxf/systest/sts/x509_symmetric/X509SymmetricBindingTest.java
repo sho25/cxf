@@ -1149,10 +1149,16 @@ name|symmetricSaml2Port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See WSS-481 - "Problem with EncryptSignature + EndorsingSupportingTokens"
+comment|// TODO Streaming client is not including a separate main Signature
 if|if
 condition|(
 operator|!
+operator|(
+name|test
+operator|.
+name|isStreaming
+argument_list|()
+operator|&&
 name|STAX_PORT
 operator|.
 name|equals
@@ -1162,6 +1168,7 @@ operator|.
 name|getPort
 argument_list|()
 argument_list|)
+operator|)
 condition|)
 block|{
 name|doubleIt
