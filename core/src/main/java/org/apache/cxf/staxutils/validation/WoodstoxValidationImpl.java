@@ -197,7 +197,6 @@ operator|!=
 literal|null
 return|;
 block|}
-comment|/** {@inheritDoc}      * @throws XMLStreamException */
 specifier|public
 name|void
 name|setupValidation
