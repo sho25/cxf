@@ -796,10 +796,7 @@ condition|)
 block|{
 name|name
 operator|=
-name|intf
-operator|.
-name|getName
-argument_list|()
+name|port
 operator|+
 literal|"Impl"
 expr_stmt|;

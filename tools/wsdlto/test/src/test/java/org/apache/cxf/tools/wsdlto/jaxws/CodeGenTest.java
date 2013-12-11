@@ -2033,7 +2033,7 @@ name|classLoader
 operator|.
 name|loadClass
 argument_list|(
-literal|"org.apache.cxf.w2j.hello_world_rpclit.GreeterRPCLitImpl"
+literal|"org.apache.cxf.w2j.hello_world_rpclit.SoapPortRPCLitImpl"
 argument_list|)
 expr_stmt|;
 name|assertNotNull

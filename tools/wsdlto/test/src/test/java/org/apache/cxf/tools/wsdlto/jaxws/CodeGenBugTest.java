@@ -884,7 +884,7 @@ name|classLoader
 operator|.
 name|loadClass
 argument_list|(
-literal|"org.apache.cxf.w2j.hello_world_soap_http.GreeterImpl"
+literal|"org.apache.cxf.w2j.hello_world_soap_http.SoapPortImpl"
 argument_list|)
 decl_stmt|;
 name|WebService
@@ -6885,7 +6885,7 @@ name|classLoader
 operator|.
 name|loadClass
 argument_list|(
-literal|"org.apache.hello_world_soap_http.PingImpl"
+literal|"org.apache.hello_world_soap_http.PingSoapPortImpl"
 argument_list|)
 decl_stmt|;
 name|WebService
@@ -7298,7 +7298,7 @@ name|File
 argument_list|(
 name|output
 argument_list|,
-literal|"org/apache/cxf/w2j/hello_world_soap_http/GreeterImpl.java"
+literal|"org/apache/cxf/w2j/hello_world_soap_http/Soap_PortImpl.java"
 argument_list|)
 operator|.
 name|exists
@@ -7312,7 +7312,7 @@ name|File
 argument_list|(
 name|output
 argument_list|,
-literal|"org/apache/cxf/w2j/hello_world_soap_http/GreeterImpl1.java"
+literal|"org/apache/cxf/w2j/hello_world_soap_http/SoapPortImpl.java"
 argument_list|)
 operator|.
 name|exists
