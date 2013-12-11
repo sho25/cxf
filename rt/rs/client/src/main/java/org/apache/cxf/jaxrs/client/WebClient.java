@@ -7628,6 +7628,8 @@ name|HttpMethod
 operator|.
 name|POST
 argument_list|,
+name|entity
+argument_list|,
 name|genericType
 argument_list|)
 return|;
