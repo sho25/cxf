@@ -859,6 +859,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
 name|test
 operator|.
 name|isStreaming
