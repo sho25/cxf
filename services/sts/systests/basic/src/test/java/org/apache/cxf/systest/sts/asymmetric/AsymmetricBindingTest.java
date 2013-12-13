@@ -1321,17 +1321,6 @@ literal|0
 index|]
 argument_list|)
 expr_stmt|;
-comment|// TODO Streaming - The encrypted issued token is placed under the Signature
-comment|// and hence an error is thrown on the receiving side
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|doubleIt
 argument_list|(
 name|asymmetricSaml1EncryptedPort
@@ -1339,7 +1328,6 @@ argument_list|,
 literal|40
 argument_list|)
 expr_stmt|;
-block|}
 operator|(
 operator|(
 name|java

@@ -2586,20 +2586,13 @@ argument_list|()
 condition|)
 block|{
 comment|// An Encrypted Token...just include it as is
-name|WSSConstants
-operator|.
-name|Action
-name|actionToPerform
-init|=
-name|WSSConstants
-operator|.
-name|CUSTOM_TOKEN
-decl_stmt|;
 name|properties
 operator|.
 name|addAction
 argument_list|(
-name|actionToPerform
+name|WSSConstants
+operator|.
+name|CUSTOM_TOKEN
 argument_list|)
 expr_stmt|;
 block|}
