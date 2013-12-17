@@ -242,7 +242,7 @@ block|}
 elseif|else
 if|if
 condition|(
-literal|"http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702/ws-securitypolicy-1.2.xsd"
+literal|"http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"
 operator|.
 name|equals
 argument_list|(

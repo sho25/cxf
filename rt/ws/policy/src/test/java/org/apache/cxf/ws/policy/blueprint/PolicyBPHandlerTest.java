@@ -105,6 +105,16 @@ literal|"http://schemas.xmlsoap.org/ws/2004/09/policy"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|assertNotNull
+argument_list|(
+name|handler
+operator|.
+name|getSchemaLocation
+argument_list|(
+literal|"http://docs.oasis-open.org/ws-sx/ws-securitypolicy/200702"
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class
