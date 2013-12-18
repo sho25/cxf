@@ -156,7 +156,7 @@ condition|)
 block|{
 name|location
 operator|=
-literal|"schemas/blueprint/policy.xsd"
+literal|"schemas/policy.xsd"
 expr_stmt|;
 block|}
 elseif|else
