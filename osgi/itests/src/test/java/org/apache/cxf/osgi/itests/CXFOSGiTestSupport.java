@@ -651,6 +651,8 @@ argument_list|(
 name|cxfUrl
 argument_list|,
 literal|"cxf-core"
+argument_list|,
+literal|"cxf-jaxws"
 argument_list|)
 argument_list|)
 return|;
@@ -1967,7 +1969,7 @@ block|}
 block|}
 specifier|public
 name|void
-name|assertBlueprintNameSpacePublished
+name|assertBlueprintNamespacePublished
 parameter_list|(
 name|String
 name|namespace
