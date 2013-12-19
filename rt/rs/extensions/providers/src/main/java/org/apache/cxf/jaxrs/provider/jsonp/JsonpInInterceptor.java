@@ -307,7 +307,7 @@ argument_list|)
 operator|.
 name|getFirst
 argument_list|(
-name|CALLBACK_KEY
+name|CALLBACK_PARAM
 argument_list|)
 decl_stmt|;
 if|if

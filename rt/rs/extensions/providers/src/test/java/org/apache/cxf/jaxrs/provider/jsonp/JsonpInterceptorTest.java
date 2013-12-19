@@ -226,7 +226,7 @@ name|QUERY_STRING
 argument_list|,
 name|JsonpInInterceptor
 operator|.
-name|CALLBACK_KEY
+name|CALLBACK_PARAM
 operator|+
 literal|"="
 operator|+
