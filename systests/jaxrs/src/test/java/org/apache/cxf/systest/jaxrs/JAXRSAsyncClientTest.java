@@ -842,6 +842,11 @@ name|NotFoundException
 argument_list|)
 expr_stmt|;
 block|}
+name|wc
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -952,6 +957,11 @@ name|ProcessingException
 argument_list|)
 expr_stmt|;
 block|}
+name|wc
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -1053,6 +1063,11 @@ name|ResponseProcessingException
 argument_list|)
 expr_stmt|;
 block|}
+name|wc
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -1155,6 +1170,11 @@ name|value
 argument_list|)
 expr_stmt|;
 block|}
+name|wc
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 specifier|private
 name|WebClient
