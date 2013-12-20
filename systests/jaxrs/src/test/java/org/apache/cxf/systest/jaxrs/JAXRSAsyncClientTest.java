@@ -455,8 +455,6 @@ block|}
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testRetrieveBookCustomMethodAsyncSync
@@ -547,8 +545,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testDeleteWithBody
@@ -723,6 +719,8 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testGetBookAsyncResponse404
@@ -781,6 +779,8 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testGetBookAsync404
@@ -856,6 +856,8 @@ block|}
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testPostBookProcessingException
@@ -966,6 +968,8 @@ block|}
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testGetBookResponseProcessingException
@@ -1067,6 +1071,8 @@ block|}
 block|}
 annotation|@
 name|Test
+annotation|@
+name|Ignore
 specifier|public
 name|void
 name|testGetBookAsync404Callback
