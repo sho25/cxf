@@ -442,7 +442,7 @@ argument_list|)
 expr_stmt|;
 name|codeReg
 operator|.
-name|setTempClientSecretHash
+name|setClientCodeVerifier
 argument_list|(
 name|params
 operator|.
@@ -450,7 +450,7 @@ name|getFirst
 argument_list|(
 name|OAuthConstants
 operator|.
-name|TEMP_CLIENT_SECRET_HASH
+name|AUTHORIZATION_CODE_VERIFIER
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -69,6 +69,15 @@ extends|extends
 name|Permission
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6486616235830491290L
+decl_stmt|;
+specifier|private
 name|List
 argument_list|<
 name|String

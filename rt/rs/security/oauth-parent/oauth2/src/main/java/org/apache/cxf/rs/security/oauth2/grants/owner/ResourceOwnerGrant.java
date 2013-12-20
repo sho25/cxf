@@ -85,6 +85,15 @@ extends|extends
 name|AbstractGrant
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|1673025972824906386L
+decl_stmt|;
+specifier|private
 name|String
 name|ownerName
 decl_stmt|;

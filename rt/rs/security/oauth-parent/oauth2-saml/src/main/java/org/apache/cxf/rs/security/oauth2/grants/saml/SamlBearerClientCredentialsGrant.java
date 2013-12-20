@@ -84,6 +84,14 @@ name|SamlBearerClientCredentialsGrant
 extends|extends
 name|AbstractSaml2BearerGrant
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4801583498206813025L
+decl_stmt|;
 specifier|public
 name|SamlBearerClientCredentialsGrant
 parameter_list|(

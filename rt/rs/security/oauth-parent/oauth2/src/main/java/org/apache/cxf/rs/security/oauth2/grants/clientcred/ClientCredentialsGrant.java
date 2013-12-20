@@ -70,6 +70,14 @@ name|ClientCredentialsGrant
 extends|extends
 name|AbstractGrant
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|5586488165697954347L
+decl_stmt|;
 specifier|public
 name|ClientCredentialsGrant
 parameter_list|()

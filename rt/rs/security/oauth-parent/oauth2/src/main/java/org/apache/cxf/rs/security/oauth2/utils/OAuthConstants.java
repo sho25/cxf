@@ -52,22 +52,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|TEMP_CLIENT_SECRET
-init|=
-literal|"tcs"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TEMP_CLIENT_SECRET_HASH
-init|=
-literal|"tcsh"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|CLIENT_AUDIENCE
 init|=
 literal|"audience"
@@ -218,6 +202,23 @@ name|String
 name|MAC_TOKEN_TYPE
 init|=
 literal|"mac"
+decl_stmt|;
+comment|// http://datatracker.ietf.org/doc/draft-sakimura-oauth-tcse
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUTHORIZATION_CODE_VERIFIER
+init|=
+literal|"code_verifier"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUTHORIZATION_CODE_CHALLENGE
+init|=
+literal|"code_challenge"
 decl_stmt|;
 comment|// CXF-specific
 specifier|public

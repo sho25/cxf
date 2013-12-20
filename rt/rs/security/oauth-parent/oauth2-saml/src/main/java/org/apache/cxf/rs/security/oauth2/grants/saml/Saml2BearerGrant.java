@@ -64,6 +64,15 @@ name|Saml2BearerGrant
 extends|extends
 name|AbstractSaml2BearerGrant
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|7296527609343431294L
+decl_stmt|;
 specifier|public
 name|Saml2BearerGrant
 parameter_list|(
