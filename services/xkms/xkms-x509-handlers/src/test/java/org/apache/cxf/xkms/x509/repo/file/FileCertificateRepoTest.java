@@ -222,7 +222,7 @@ specifier|final
 name|String
 name|EXPECTED_CERT_FILE_NAME
 init|=
-literal|"CN-www.issuer.com_L-CGN_ST-NRW_C-DE_O-Issuer-11688544847478700689.cer"
+literal|"CN-www.issuer.com_L-CGN_ST-NRW_C-DE_O-Issuer.cer"
 decl_stmt|;
 annotation|@
 name|Test
@@ -733,7 +733,7 @@ argument_list|(
 literal|"src/test/resources/store1"
 argument_list|)
 operator|.
-name|convertDnForFileSystem
+name|convertIdForFileSystem
 argument_list|(
 name|EXAMPLE_SUBJECT_DN
 argument_list|)

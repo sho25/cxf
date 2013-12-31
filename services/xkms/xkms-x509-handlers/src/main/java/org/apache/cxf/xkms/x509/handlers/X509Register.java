@@ -646,7 +646,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Exactly one useKeyWith element needed"
+literal|"Exactly one useKeyWith element is supported"
 argument_list|)
 throw|;
 comment|//TODO standard requires support for multiple useKeyWith attributes

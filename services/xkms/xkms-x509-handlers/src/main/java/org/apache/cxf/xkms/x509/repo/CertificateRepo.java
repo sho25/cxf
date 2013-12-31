@@ -122,6 +122,13 @@ name|serviceName
 parameter_list|)
 function_decl|;
 name|X509Certificate
+name|findByEndpoint
+parameter_list|(
+name|String
+name|endpoint
+parameter_list|)
+function_decl|;
+name|X509Certificate
 name|findByIssuerSerial
 parameter_list|(
 name|String

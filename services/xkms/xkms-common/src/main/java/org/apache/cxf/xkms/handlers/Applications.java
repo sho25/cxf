@@ -34,10 +34,16 @@ argument_list|(
 literal|"urn:ietf:rfc:2818"
 argument_list|)
 block|,
-comment|/**      * Service Endpoint Name      */
-name|SERVICE_SOAP
+comment|/**      * Service Name      */
+name|SERVICE_NAME
 argument_list|(
-literal|"urn:apache:cxf:service:soap"
+literal|"urn:apache:cxf:service:name"
+argument_list|)
+block|,
+comment|/**      * Service Endpoint      */
+name|SERVICE_ENDPOINT
+argument_list|(
+literal|"urn:apache:cxf:service:endpoint"
 argument_list|)
 block|,
 comment|/**      * Certificate Issuer      */

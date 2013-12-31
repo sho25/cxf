@@ -805,7 +805,7 @@ name|setApplication
 argument_list|(
 name|Applications
 operator|.
-name|SERVICE_SOAP
+name|SERVICE_NAME
 operator|.
 name|getUri
 argument_list|()
