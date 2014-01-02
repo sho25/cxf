@@ -177,7 +177,11 @@ operator|.
 name|JAVA_VERSION_16
 condition|)
 block|{
-comment|//doTestJavaDocs("classpath:/javadocs/pet-store-javadoc17.jar");
+name|doTestJavaDocs
+argument_list|(
+literal|"classpath:/javadocs/pet-store-javadoc17.jar"
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|private
