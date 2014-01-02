@@ -89,6 +89,14 @@ name|Crypto
 name|fallbackCrypto
 parameter_list|)
 function_decl|;
+comment|/**      * Create with overridden keystoreProperties to create default Crypto      *       * @param xkmsClient      * @param keystoreProperties      * @return      */
+name|Crypto
+name|create
+parameter_list|(
+name|String
+name|keystoreProperties
+parameter_list|)
+function_decl|;
 comment|/**      * Create with overridden XKMSPortType and fallbackCrypto      *       * @param xkmsClient      * @param fallbackCrypto      * @return      */
 name|Crypto
 name|create
