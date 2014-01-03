@@ -6560,12 +6560,17 @@ block|{
 comment|//Add an id
 name|id
 operator|=
-literal|"Id-"
-operator|+
-name|elem
+name|wssConfig
 operator|.
-name|hashCode
+name|getIdAllocator
 argument_list|()
+operator|.
+name|createId
+argument_list|(
+literal|"_"
+argument_list|,
+name|elem
+argument_list|)
 expr_stmt|;
 name|String
 name|pfx
