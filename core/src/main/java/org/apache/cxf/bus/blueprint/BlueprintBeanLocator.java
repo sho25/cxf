@@ -440,6 +440,13 @@ operator|&&
 name|container
 operator|instanceof
 name|ExtendedBlueprintContainer
+operator|&&
+name|bm
+operator|.
+name|getClassName
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 try|try
