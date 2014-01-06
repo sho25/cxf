@@ -238,17 +238,6 @@ argument_list|>
 implements|implements
 name|SoapInterceptor
 block|{
-comment|/**      * @deprecated      */
-specifier|public
-name|AbstractSoapInterceptor
-parameter_list|()
-block|{
-name|super
-argument_list|(
-literal|null
-argument_list|)
-expr_stmt|;
-block|}
 specifier|public
 name|AbstractSoapInterceptor
 parameter_list|(

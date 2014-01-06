@@ -1602,16 +1602,6 @@ operator|=
 name|classNames
 expr_stmt|;
 block|}
-comment|/**      * Return the type mapping configuration associated with this context.      *       * @return Returns the configuration.      * @deprecated 2.1      */
-specifier|public
-name|TypeCreationOptions
-name|getConfiguration
-parameter_list|()
-block|{
-return|return
-name|configuration
-return|;
-block|}
 comment|/**      * Return the type mapping configuration associated with this context.      *       * @return Returns the configuration.      */
 specifier|public
 name|TypeCreationOptions
@@ -1621,22 +1611,6 @@ block|{
 return|return
 name|configuration
 return|;
-block|}
-comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *       * @param configuration The configuration to set.      * @deprecated 2.1      */
-specifier|public
-name|void
-name|setConfiguration
-parameter_list|(
-name|TypeCreationOptions
-name|newConfiguration
-parameter_list|)
-block|{
-name|this
-operator|.
-name|configuration
-operator|=
-name|newConfiguration
-expr_stmt|;
 block|}
 comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *       * @param configuration The configuration to set.      */
 specifier|public
