@@ -662,7 +662,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|SEVERE
+name|WARNING
 argument_list|,
 literal|"Invalid algorithm parameter by certificate chain validation. "
 operator|+
@@ -676,13 +676,9 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-name|e
-argument_list|)
-throw|;
+return|return
+literal|false
+return|;
 block|}
 catch|catch
 parameter_list|(
@@ -696,9 +692,9 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|SEVERE
+name|WARNING
 argument_list|,
-literal|"Unknown algorithm by certificate chain validation: "
+literal|"Unknown algorithm by trust chain validation: "
 operator|+
 name|e
 operator|.
@@ -708,13 +704,9 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-throw|throw
-operator|new
-name|RuntimeException
-argument_list|(
-name|e
-argument_list|)
-throw|;
+return|return
+literal|false
+return|;
 block|}
 catch|catch
 parameter_list|(
@@ -730,7 +722,7 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-literal|"Certificate chain invalid: "
+literal|"Cannot build certification path: "
 operator|+
 name|e
 operator|.
@@ -758,7 +750,7 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-literal|"Certificate chain invalid: "
+literal|"Cannot vaidate certification path: "
 operator|+
 name|e
 operator|.
