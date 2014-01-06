@@ -253,10 +253,6 @@ specifier|private
 name|ServiceRegistration
 name|workQueueServiceRegistration
 decl_stmt|;
-specifier|private
-name|ServiceRegistration
-name|wqSingleConfigRegistratin
-decl_stmt|;
 comment|/** {@inheritDoc}*/
 specifier|public
 name|void
@@ -578,11 +574,6 @@ name|shutDown
 argument_list|()
 expr_stmt|;
 name|workQueueServiceRegistration
-operator|.
-name|unregister
-argument_list|()
-expr_stmt|;
-name|wqSingleConfigRegistratin
 operator|.
 name|unregister
 argument_list|()
