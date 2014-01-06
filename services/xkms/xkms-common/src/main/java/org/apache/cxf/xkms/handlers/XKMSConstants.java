@@ -31,6 +31,14 @@ name|XKMS_ENDPOINT_NAME
 init|=
 literal|"http://cxf.apache.org/services/XKMS/"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DIRECT_TRUST_VALIDATION
+init|=
+literal|"http://cxf.apache.org/xkms#DirectTrust"
+decl_stmt|;
 specifier|private
 name|XKMSConstants
 parameter_list|()
