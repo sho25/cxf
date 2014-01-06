@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An immutable struct that contains information about a negotiated  * TLS Session, including the (potentially negotiated) peer certificates  * as well as the currently effective TLS ciper suite.  */
+comment|/**  * An immutable struct that contains information about a negotiated  * TLS Session, including the (potentially negotiated) peer certificates  * as well as the currently effective TLS cipher suite.  */
 end_comment
 
 begin_class
@@ -85,7 +85,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param       suite      *              The negotiated cipher suite      *              This parameter may not be null, by contract      *      * @param       session      *              The JSSE representation of the SSL Session      *              negotiated with the peer (optionally null, if      *              it is unavailable)      *      * @param       certs      *              the peer X.509 certificate chain (optinally null)      */
+comment|/**      * @param       suite      *              The negotiated cipher suite      *              This parameter may not be null, by contract      *      * @param       session      *              The JSSE representation of the SSL Session      *              negotiated with the peer (optionally null, if      *              it is unavailable)      *      * @param       certs      *              the peer X.509 certificate chain (optionally null)      */
 specifier|public
 name|TLSSessionInfo
 parameter_list|(
