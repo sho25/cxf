@@ -734,11 +734,6 @@ name|message
 return|;
 block|}
 comment|/**      * Extract the payload of an incoming message.      * @param inMessage       *       * @param message the incoming message      * @param encoding the message encoding      * @return the message payload as byte[]      * @throws UnsupportedEncodingException      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 specifier|static
 name|void
@@ -791,7 +786,7 @@ name|support
 operator|.
 name|converter
 operator|.
-name|SimpleMessageConverter102
+name|SimpleMessageConverter
 argument_list|()
 operator|.
 name|fromMessage

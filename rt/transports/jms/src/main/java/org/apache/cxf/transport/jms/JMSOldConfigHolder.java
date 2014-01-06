@@ -1575,14 +1575,15 @@ name|isSetUseJMS11
 argument_list|()
 condition|)
 block|{
-name|jmsConfig
+name|LOG
 operator|.
-name|setUseJms11
+name|log
 argument_list|(
-name|endpoint
+name|Level
 operator|.
-name|isUseJMS11
-argument_list|()
+name|WARNING
+argument_list|,
+literal|"Use of jms:endpoint[@useJms11] is no longer supported"
 argument_list|)
 expr_stmt|;
 block|}
@@ -1976,14 +1977,15 @@ name|isSetUseJms11
 argument_list|()
 condition|)
 block|{
-name|endpoint
+name|LOG
 operator|.
-name|setUseJMS11
+name|log
 argument_list|(
-name|address
+name|Level
 operator|.
-name|isUseJms11
-argument_list|()
+name|WARNING
+argument_list|,
+literal|"Use of address[@useJms11] is no longer supported"
 argument_list|)
 expr_stmt|;
 block|}

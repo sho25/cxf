@@ -390,13 +390,6 @@ argument_list|)
 expr_stmt|;
 name|jmsConfig
 operator|.
-name|setUseJms11
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
-name|jmsConfig
-operator|.
 name|setTransactionManager
 argument_list|(
 operator|new
@@ -742,13 +735,6 @@ operator|.
 name|setPubSubDomain
 argument_list|(
 literal|false
-argument_list|)
-expr_stmt|;
-name|jmsConfig
-operator|.
-name|setUseJms11
-argument_list|(
-literal|true
 argument_list|)
 expr_stmt|;
 name|JMSConfigFeature
