@@ -242,26 +242,11 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 class|class
 name|JAXWSMethodDispatcher
 extends|extends
 name|SimpleMethodDispatcher
-implements|implements
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|frontend
-operator|.
-name|MethodDispatcher
 block|{
 specifier|private
 specifier|static
