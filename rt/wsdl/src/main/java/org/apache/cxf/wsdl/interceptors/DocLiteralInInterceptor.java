@@ -483,16 +483,6 @@ operator|.
 name|UNMARSHAL
 argument_list|)
 expr_stmt|;
-name|addAfter
-argument_list|(
-name|URIMappingInterceptor
-operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
-argument_list|)
-expr_stmt|;
 block|}
 specifier|public
 name|void
