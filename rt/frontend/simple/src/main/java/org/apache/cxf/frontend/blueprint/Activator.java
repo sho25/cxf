@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxws
+name|frontend
 operator|.
-name|osgi
+name|blueprint
 package|;
 end_package
 
@@ -46,22 +46,6 @@ operator|.
 name|blueprint
 operator|.
 name|NamespaceHandlerRegisterer
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxws
-operator|.
-name|blueprint
-operator|.
-name|JAXWSBPNamespaceHandler
 import|;
 end_import
 
@@ -124,7 +108,7 @@ parameter_list|()
 block|{
 return|return
 operator|new
-name|JAXWSBPNamespaceHandler
+name|SimpleBPNamespaceHandler
 argument_list|()
 return|;
 block|}
@@ -138,7 +122,7 @@ name|context
 argument_list|,
 name|factory
 argument_list|,
-literal|"http://cxf.apache.org/blueprint/jaxws"
+literal|"http://cxf.apache.org/blueprint/simple"
 argument_list|)
 expr_stmt|;
 block|}
