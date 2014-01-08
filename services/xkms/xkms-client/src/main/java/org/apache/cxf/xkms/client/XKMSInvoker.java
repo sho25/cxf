@@ -13,9 +13,7 @@ name|cxf
 operator|.
 name|xkms
 operator|.
-name|crypto
-operator|.
-name|impl
+name|client
 package|;
 end_package
 
@@ -148,22 +146,6 @@ operator|.
 name|namespace
 operator|.
 name|QName
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|xkms
-operator|.
-name|client
-operator|.
-name|X509AppId
 import|;
 end_import
 
@@ -516,6 +498,7 @@ import|;
 end_import
 
 begin_class
+specifier|public
 class|class
 name|XKMSInvoker
 block|{

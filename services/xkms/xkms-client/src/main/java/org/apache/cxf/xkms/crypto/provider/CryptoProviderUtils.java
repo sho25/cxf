@@ -15,7 +15,7 @@ name|xkms
 operator|.
 name|crypto
 operator|.
-name|impl
+name|provider
 package|;
 end_package
 

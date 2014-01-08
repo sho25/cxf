@@ -15,7 +15,7 @@ name|xkms
 operator|.
 name|crypto
 operator|.
-name|impl
+name|provider
 package|;
 end_package
 
@@ -160,6 +160,22 @@ operator|.
 name|cache
 operator|.
 name|XKMSClientCache
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|xkms
+operator|.
+name|client
+operator|.
+name|XKMSInvoker
 import|;
 end_import
 
