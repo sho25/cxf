@@ -669,6 +669,11 @@ argument_list|)
 throw|;
 block|}
 block|}
+name|appContext
+operator|.
+name|refresh
+argument_list|()
+expr_stmt|;
 return|return
 name|appContext
 return|;

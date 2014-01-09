@@ -674,7 +674,10 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"wsdl is not generated"
+literal|"wsdl is not generated "
+operator|+
+name|getStdErr
+argument_list|()
 argument_list|,
 name|wsdlFile
 operator|.
