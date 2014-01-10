@@ -189,6 +189,11 @@ argument_list|)
 expr_stmt|;
 name|assertBundleStarted
 argument_list|(
+literal|"org.apache.cxf.cxf-rt-frontend-simple"
+argument_list|)
+expr_stmt|;
+name|assertBundleStarted
+argument_list|(
 literal|"org.apache.cxf.cxf-rt-frontend-jaxws"
 argument_list|)
 expr_stmt|;

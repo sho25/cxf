@@ -261,6 +261,13 @@ argument_list|,
 literal|1000
 argument_list|)
 expr_stmt|;
+name|assertBlueprintNamespacePublished
+argument_list|(
+literal|"http://cxf.apache.org/blueprint/simple"
+argument_list|,
+literal|1000
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Configuration
