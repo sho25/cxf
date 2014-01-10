@@ -177,6 +177,13 @@ argument_list|(
 name|publicKey
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|cert
+operator|!=
+literal|null
+condition|)
+block|{
 name|trustCredential
 operator|.
 name|setCertificates
@@ -189,6 +196,7 @@ name|cert
 block|}
 argument_list|)
 expr_stmt|;
+block|}
 name|validator
 operator|.
 name|validate
