@@ -1011,7 +1011,7 @@ name|indexOf
 argument_list|(
 literal|")"
 argument_list|,
-name|operMarkerIndex
+name|startOfOpSigIndex
 argument_list|)
 decl_stmt|;
 name|int
@@ -1029,8 +1029,6 @@ condition|(
 name|endOfOpSigIndex
 operator|==
 name|startOfOpSigIndex
-operator|+
-literal|1
 operator|&&
 name|paramLen
 operator|==
