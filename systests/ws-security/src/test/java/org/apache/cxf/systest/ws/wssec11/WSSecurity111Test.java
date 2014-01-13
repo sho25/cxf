@@ -659,9 +659,30 @@ literal|true
 argument_list|)
 block|}
 block|,
-comment|// TODO See WSS-468 EncryptBeforeSigning not working
-comment|// {new TestParam("A-ES", domPort, true)},
-comment|// {new TestParam("AD-ES", domPort, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"A-ES"
+argument_list|,
+name|domPort
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"AD-ES"
+argument_list|,
+name|domPort
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam
@@ -878,9 +899,30 @@ literal|true
 argument_list|)
 block|}
 block|,
-comment|// TODO See WSS-468 EncryptBeforeSigning not working
-comment|// {new TestParam("A-ES", staxPort, true)},
-comment|// {new TestParam("AD-ES", staxPort, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"A-ES"
+argument_list|,
+name|staxPort
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"AD-ES"
+argument_list|,
+name|staxPort
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam

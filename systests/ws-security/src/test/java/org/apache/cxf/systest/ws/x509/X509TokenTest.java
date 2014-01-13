@@ -1094,16 +1094,6 @@ name|x509Port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO WSS-468 Streaming
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|x509Port
 operator|.
 name|doubleIt
@@ -1111,7 +1101,6 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-block|}
 operator|(
 operator|(
 name|java
@@ -1268,16 +1257,6 @@ name|x509Port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO WSS-468 Streaming
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|x509Port
 operator|.
 name|doubleIt
@@ -1285,7 +1264,6 @@ argument_list|(
 literal|25
 argument_list|)
 expr_stmt|;
-block|}
 operator|(
 operator|(
 name|java
