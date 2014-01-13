@@ -594,6 +594,21 @@ name|WSS4JStaxInInterceptor
 extends|extends
 name|AbstractWSS4JStaxInterceptor
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SECURITY_PROCESSED
+init|=
+name|WSS4JStaxInInterceptor
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|".DONE"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -766,6 +781,13 @@ name|Fault
 block|{
 if|if
 condition|(
+name|soapMessage
+operator|.
+name|containsKey
+argument_list|(
+name|SECURITY_PROCESSED
+argument_list|)
+operator|||
 name|isGET
 argument_list|(
 name|soapMessage
@@ -1021,6 +1043,17 @@ comment|// them e.g.in the FaultOutInterceptor. Why? Because we do streaming sec
 comment|// interceptor doesn't handle the ws-security stuff but just setup the relevant stuff
 comment|// for it. Exceptions will be thrown as a wrapped XMLStreamException during further
 comment|// processing in the WS-Stack.
+name|soapMessage
+operator|.
+name|put
+argument_list|(
+name|SECURITY_PROCESSED
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
