@@ -652,12 +652,6 @@ block|{
 if|if
 condition|(
 operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-operator|&&
-operator|!
 name|STAX_PORT
 operator|.
 name|equals
@@ -933,12 +927,6 @@ parameter_list|)
 block|{
 if|if
 condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-operator|&&
 operator|!
 name|STAX_PORT
 operator|.
