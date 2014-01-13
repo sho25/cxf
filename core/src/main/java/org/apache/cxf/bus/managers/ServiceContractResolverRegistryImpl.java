@@ -170,7 +170,7 @@ name|b
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the bus with which the registry is associated.      *      * @param bus      */
+comment|/**      * Sets the bus with which the registry is associated.      *      * @param b      */
 specifier|public
 specifier|final
 name|void

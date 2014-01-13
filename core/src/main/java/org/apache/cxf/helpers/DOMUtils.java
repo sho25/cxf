@@ -462,7 +462,7 @@ return|return
 name|factory
 return|;
 block|}
-comment|/**      * Creates a new Docuement object      * @return      * @throws ParserConfigurationException      */
+comment|/**      * Creates a new Document object      * @throws ParserConfigurationException      */
 specifier|public
 specifier|static
 name|Document
@@ -1569,7 +1569,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a QName object based on the qualified name      * and using the Node as a base to lookup the namespace      * for the prefix      * @param qualifiedName      * @param node      * @return      */
+comment|/**      * Creates a QName object based on the qualified name      * and using the Node as a base to lookup the namespace      * for the prefix      * @param qualifiedName      * @param node      */
 specifier|public
 specifier|static
 name|QName

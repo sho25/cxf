@@ -382,7 +382,7 @@ return|return
 name|logical
 return|;
 block|}
-comment|/**      * Walk the list of registered EndpointResolvers, so as to mint a new       * abstract EPR for a gievn physical EPR.      *       * @param serviceName      * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Walk the list of registered EndpointResolvers, so as to mint a new       * abstract EPR for a given physical EPR.      *       * @param physical      * @return the newly minted EPR if appropriate, null otherwise      */
 specifier|public
 name|EndpointReferenceType
 name|mint

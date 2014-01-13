@@ -170,7 +170,7 @@ return|return
 name|toURIType
 return|;
 block|}
-comment|/**      * Mutator for the<b>To</b> property.      * @param iri new value for To property      */
+comment|/**      * Mutator for the<b>To</b> property.      * @param t new value for To property      */
 specifier|public
 name|void
 name|setTo
@@ -184,7 +184,7 @@ operator|=
 name|t
 expr_stmt|;
 block|}
-comment|/**      * Mutator for the<b>To</b> property.      * @param iri new value for To property      */
+comment|/**      * Mutator for the<b>To</b> property.      * @param epr new value for To property      */
 specifier|public
 name|void
 name|setTo
@@ -356,7 +356,7 @@ return|return
 name|namespaceURI
 return|;
 block|}
-comment|/**      * Used to specify a different WS-Addressing namespace URI,       * so as to cause MAPs to be exposed (i.e. encoded in externalized      * message with a different WS-Addressing version).      *       * @return WS-Addressing namespace URI      */
+comment|/**      * Used to specify a different WS-Addressing namespace URI,       * so as to cause MAPs to be exposed (i.e. encoded in externalized      * message with a different WS-Addressing version).      */
 specifier|public
 name|void
 name|exposeAs
