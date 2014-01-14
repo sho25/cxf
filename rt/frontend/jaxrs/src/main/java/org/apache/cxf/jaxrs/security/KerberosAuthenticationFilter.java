@@ -809,7 +809,12 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Unsuccessful JAAS login for the service principal"
+literal|"Unsuccessful JAAS login for the service principal: "
+operator|+
+name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 expr_stmt|;
 throw|throw
@@ -818,6 +823,8 @@ name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -845,6 +852,8 @@ name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
@@ -872,6 +881,8 @@ name|NotAuthorizedException
 argument_list|(
 name|getFaultResponse
 argument_list|()
+argument_list|,
+name|e
 argument_list|)
 throw|;
 block|}
