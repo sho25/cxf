@@ -91,6 +91,8 @@ name|springframework
 operator|.
 name|security
 operator|.
+name|access
+operator|.
 name|annotation
 operator|.
 name|Secured
