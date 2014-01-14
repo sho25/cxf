@@ -865,15 +865,6 @@ operator|.
 name|getMessage
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|assertTrue
 argument_list|(
 name|message
@@ -898,7 +889,6 @@ literal|"PolicyViolationException"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 operator|(
 operator|(

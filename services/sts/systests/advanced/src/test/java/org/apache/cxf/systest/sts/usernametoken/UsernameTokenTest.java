@@ -857,15 +857,6 @@ name|SOAPFaultException
 name|fault
 parameter_list|)
 block|{
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|String
 name|message
 init|=
@@ -898,7 +889,6 @@ literal|"PolicyViolationException"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 operator|(
 operator|(

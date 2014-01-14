@@ -649,15 +649,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|String
 name|error
 init|=
@@ -686,7 +677,6 @@ literal|"UsernameToken not satisfied"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 operator|(
 operator|(
@@ -930,15 +920,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|String
 name|error
 init|=
@@ -967,7 +948,6 @@ literal|"password must not be hashed"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|// This should fail, as the client is not sending any password
 name|portQName
@@ -1292,15 +1272,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|String
 name|error
 init|=
@@ -1329,7 +1300,6 @@ literal|"UsernameToken does not contain a hashed password"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|// This should fail, as the client is not sending any password
 name|portQName
@@ -1654,15 +1624,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|String
 name|error
 init|=
@@ -1691,7 +1652,6 @@ literal|"UsernameToken does not contain a created"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 operator|(
 operator|(
@@ -1935,15 +1895,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|String
 name|error
 init|=
@@ -1972,7 +1923,6 @@ literal|"UsernameToken does not contain a nonce"
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 operator|(
 operator|(
