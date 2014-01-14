@@ -1916,15 +1916,9 @@ name|port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO It's not sending the Timestamp "first" correctly - DOM
 comment|// TODO Timestamp First/Last validation not working - see WSS-444
 if|if
 condition|(
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-operator|&&
 operator|!
 name|STAX_PORT
 operator|.
@@ -1997,15 +1991,9 @@ expr_stmt|;
 block|}
 try|try
 block|{
-comment|// TODO DOM not working as above
 comment|// TODO Timestamp First/Last validation not working - see WSS-444
 if|if
 condition|(
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-operator|&&
 operator|!
 name|STAX_PORT
 operator|.
@@ -2046,8 +2034,24 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// String error = "Layout does not match the requirements";
-comment|// assertTrue(ex.getMessage().contains(error));
+name|String
+name|error
+init|=
+literal|"Layout does not match the requirements"
+decl_stmt|;
+name|assertTrue
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|error
+argument_list|)
+argument_list|)
+expr_stmt|;
 block|}
 operator|(
 operator|(

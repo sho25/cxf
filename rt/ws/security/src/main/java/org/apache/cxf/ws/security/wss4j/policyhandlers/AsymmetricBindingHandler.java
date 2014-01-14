@@ -920,6 +920,9 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|reshuffleTimestamp
+argument_list|()
+expr_stmt|;
 name|assertAlgorithmSuite
 argument_list|(
 name|abinding
