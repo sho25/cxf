@@ -764,8 +764,18 @@ literal|true
 argument_list|)
 block|}
 block|,
-comment|// TODO Error with "EncryptBeforeSigning" ordering.
-comment|// {new TestParam("ADC-ES_IPingService", PORT, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"ADC-ES_IPingService"
+argument_list|,
+name|PORT
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam
@@ -790,8 +800,18 @@ literal|true
 argument_list|)
 block|}
 block|,
-comment|// TODO Error with "EncryptBeforeSigning" ordering.
-comment|// {new TestParam("_AD-ES_IPingService", PORT, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"_AD-ES_IPingService"
+argument_list|,
+name|PORT
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam
@@ -887,7 +907,7 @@ comment|// TODO Streaming endorsing not working
 comment|// {new TestParam("_XD_IPingService", PORT, true)},
 comment|// {new TestParam("_XD-SEES_IPingService", PORT, true)},
 comment|// {new TestParam("_XD-ES_IPingService", PORT, true)},
-comment|// TODO Endorsing derived keys not supported.
+comment|// TODO StAX Policy Validation error caused by incorrect DOM message
 comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
 comment|//               STAX_PORT, false)},
 block|{
@@ -1181,8 +1201,18 @@ literal|true
 argument_list|)
 block|}
 block|,
-comment|// TODO Error with "EncryptBeforeSigning" ordering.
-comment|// {new TestParam("ADC-ES_IPingService", STAX_PORT, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"ADC-ES_IPingService"
+argument_list|,
+name|STAX_PORT
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam
@@ -1207,8 +1237,18 @@ literal|true
 argument_list|)
 block|}
 block|,
-comment|// TODO Error with "EncryptBeforeSigning" ordering.
-comment|// {new TestParam("_AD-ES_IPingService", STAX_PORT, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"_AD-ES_IPingService"
+argument_list|,
+name|STAX_PORT
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam

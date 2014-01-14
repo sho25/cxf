@@ -1156,17 +1156,6 @@ name|symmetricSaml1Port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO Streaming - The encrypted issued token is placed under the ReferenceList
-comment|// and hence an error is thrown on the receiving side
-if|if
-condition|(
-operator|!
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-condition|)
-block|{
 name|doubleIt
 argument_list|(
 name|symmetricSaml1Port
@@ -1174,7 +1163,6 @@ argument_list|,
 literal|25
 argument_list|)
 expr_stmt|;
-block|}
 operator|(
 operator|(
 name|java

@@ -2254,7 +2254,9 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// TODO Endorsing SAML not supported Streaming
-comment|// TODO Problem with policy validation on the StAX Server side
+comment|// TODO WSS-490 Problem with policy validation on the StAX Server side
+comment|// Remove "PORT.equals(test.getPort())" as per below to reproduce
+comment|// if (!test.isStreaming()) {
 if|if
 condition|(
 operator|!
