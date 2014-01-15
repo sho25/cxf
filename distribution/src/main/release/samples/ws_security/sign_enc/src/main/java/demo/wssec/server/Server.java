@@ -163,6 +163,10 @@ name|WSS4JOutInterceptor
 import|;
 end_import
 
+begin_comment
+comment|/**  * A DOM-based server  */
+end_comment
+
 begin_class
 specifier|public
 class|class

@@ -251,13 +251,17 @@ name|XMLSecurityConstants
 import|;
 end_import
 
+begin_comment
+comment|/**  * A StAX-based server  */
+end_comment
+
 begin_class
 specifier|public
 class|class
-name|Server
+name|StaxServer
 block|{
 specifier|protected
-name|Server
+name|StaxServer
 parameter_list|()
 throws|throws
 name|Exception
@@ -268,7 +272,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Starting Server"
+literal|"Starting StaxServer"
 argument_list|)
 expr_stmt|;
 name|Object
@@ -346,7 +350,7 @@ name|getProperties
 argument_list|(
 literal|"etc/Server_Decrypt.properties"
 argument_list|,
-name|Server
+name|StaxServer
 operator|.
 name|class
 operator|.
@@ -363,7 +367,7 @@ name|getProperties
 argument_list|(
 literal|"etc/Server_SignVerf.properties"
 argument_list|,
-name|Server
+name|StaxServer
 operator|.
 name|class
 operator|.
@@ -717,7 +721,7 @@ name|bus
 argument_list|)
 expr_stmt|;
 operator|new
-name|Server
+name|StaxServer
 argument_list|()
 expr_stmt|;
 name|System
@@ -726,7 +730,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Server ready..."
+literal|"StaxServer ready..."
 argument_list|)
 expr_stmt|;
 name|Thread
@@ -753,7 +757,7 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Server exiting"
+literal|"StaxServer exiting"
 argument_list|)
 expr_stmt|;
 name|System

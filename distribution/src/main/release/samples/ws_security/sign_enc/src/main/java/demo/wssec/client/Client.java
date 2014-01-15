@@ -201,6 +201,10 @@ name|WSS4JOutInterceptor
 import|;
 end_import
 
+begin_comment
+comment|/**  * A DOM-based client  */
+end_comment
+
 begin_class
 specifier|public
 specifier|final

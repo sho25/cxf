@@ -297,30 +297,22 @@ name|wssec
 operator|.
 name|server
 operator|.
-name|Server
-import|;
-end_import
-
-begin_import
-import|import
-name|demo
-operator|.
-name|wssec
-operator|.
-name|server
-operator|.
 name|UTPasswordCallback
 import|;
 end_import
+
+begin_comment
+comment|/**  * A StAX-based client  */
+end_comment
 
 begin_class
 specifier|public
 specifier|final
 class|class
-name|Client
+name|StaxClient
 block|{
 specifier|private
-name|Client
+name|StaxClient
 parameter_list|()
 block|{     }
 specifier|public
@@ -347,7 +339,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|Client
+name|StaxClient
 operator|.
 name|class
 operator|.
@@ -385,7 +377,7 @@ name|getProperties
 argument_list|(
 literal|"etc/Client_Encrypt.properties"
 argument_list|,
-name|Server
+name|StaxClient
 operator|.
 name|class
 operator|.
@@ -402,7 +394,7 @@ name|getProperties
 argument_list|(
 literal|"etc/Client_Sign.properties"
 argument_list|,
-name|Server
+name|StaxClient
 operator|.
 name|class
 operator|.
