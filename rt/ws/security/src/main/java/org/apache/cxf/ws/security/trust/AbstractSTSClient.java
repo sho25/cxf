@@ -4752,6 +4752,8 @@ elseif|else
 if|if
 condition|(
 name|isSpnego
+operator|||
+name|isSecureConv
 condition|)
 block|{
 name|addKeySize
@@ -5116,15 +5118,6 @@ if|if
 condition|(
 operator|!
 name|wroteKeySize
-operator|&&
-operator|(
-operator|!
-name|isSecureConv
-operator|||
-name|keySize
-operator|!=
-literal|256
-operator|)
 condition|)
 block|{
 name|addKeySize
