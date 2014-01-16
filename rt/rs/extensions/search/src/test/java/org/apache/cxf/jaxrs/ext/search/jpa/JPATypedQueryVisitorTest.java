@@ -526,7 +526,7 @@ argument_list|)
 expr_stmt|;
 name|b1
 operator|.
-name|setTitle
+name|setBookTitle
 argument_list|(
 literal|"num9"
 argument_list|)
@@ -684,7 +684,7 @@ argument_list|)
 expr_stmt|;
 name|b2
 operator|.
-name|setTitle
+name|setBookTitle
 argument_list|(
 literal|"num10"
 argument_list|)
@@ -842,7 +842,7 @@ argument_list|)
 expr_stmt|;
 name|b3
 operator|.
-name|setTitle
+name|setBookTitle
 argument_list|(
 literal|"num11"
 argument_list|)
@@ -1163,7 +1163,7 @@ name|books
 init|=
 name|queryBooks
 argument_list|(
-literal|"id==10;title==num10"
+literal|"id==10;bookTitle==num10"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1201,7 +1201,7 @@ argument_list|(
 literal|0
 argument_list|)
 operator|.
-name|getTitle
+name|getBookTitle
 argument_list|()
 argument_list|)
 argument_list|)
@@ -1603,7 +1603,7 @@ argument_list|(
 literal|0
 argument_list|)
 operator|.
-name|getTitle
+name|getBookTitle
 argument_list|()
 argument_list|)
 argument_list|)
@@ -1626,7 +1626,7 @@ name|books
 init|=
 name|queryBooks
 argument_list|(
-literal|"id==10;title==num9"
+literal|"id==10;bookTitle==num9"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -2513,7 +2513,7 @@ name|books
 init|=
 name|queryBooks
 argument_list|(
-literal|"libAddress==town;title==num10"
+literal|"libAddress==town;bookTitle==num10"
 argument_list|,
 literal|null
 argument_list|,
@@ -2711,7 +2711,7 @@ name|books
 init|=
 name|queryBooks
 argument_list|(
-literal|"title==num1*"
+literal|"bookTitle==num1*"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -3713,7 +3713,7 @@ name|add
 argument_list|(
 name|Book_
 operator|.
-name|title
+name|bookTitle
 argument_list|)
 expr_stmt|;
 name|jpa
@@ -3857,7 +3857,7 @@ name|add
 argument_list|(
 name|Book_
 operator|.
-name|title
+name|bookTitle
 argument_list|)
 expr_stmt|;
 return|return

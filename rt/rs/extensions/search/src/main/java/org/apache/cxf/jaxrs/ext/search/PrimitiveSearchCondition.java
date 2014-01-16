@@ -491,9 +491,6 @@ literal|0
 argument_list|,
 name|index
 argument_list|)
-operator|.
-name|toLowerCase
-argument_list|()
 expr_stmt|;
 block|}
 else|else
@@ -527,6 +524,9 @@ operator|.
 name|getValue
 argument_list|(
 name|thePropertyName
+operator|.
+name|toLowerCase
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

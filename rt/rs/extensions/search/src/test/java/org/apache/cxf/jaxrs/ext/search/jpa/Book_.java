@@ -89,7 +89,7 @@ name|Book
 argument_list|,
 name|String
 argument_list|>
-name|title
+name|bookTitle
 decl_stmt|;
 specifier|public
 specifier|static

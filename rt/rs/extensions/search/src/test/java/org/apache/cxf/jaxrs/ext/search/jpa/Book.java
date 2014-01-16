@@ -119,7 +119,7 @@ name|id
 decl_stmt|;
 specifier|private
 name|String
-name|title
+name|bookTitle
 decl_stmt|;
 specifier|private
 name|OwnerAddress
@@ -189,16 +189,16 @@ expr_stmt|;
 block|}
 specifier|public
 name|String
-name|getTitle
+name|getBookTitle
 parameter_list|()
 block|{
 return|return
-name|title
+name|bookTitle
 return|;
 block|}
 specifier|public
 name|void
-name|setTitle
+name|setBookTitle
 parameter_list|(
 name|String
 name|name
@@ -206,7 +206,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|title
+name|bookTitle
 operator|=
 name|name
 expr_stmt|;

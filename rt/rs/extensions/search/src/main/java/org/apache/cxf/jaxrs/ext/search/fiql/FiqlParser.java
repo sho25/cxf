@@ -3700,6 +3700,14 @@ return|;
 block|}
 else|else
 block|{
+name|String
+name|templateNameLCase
+init|=
+name|templateName
+operator|.
+name|toLowerCase
+argument_list|()
+decl_stmt|;
 return|return
 operator|new
 name|SimpleSearchCondition
@@ -3711,10 +3719,7 @@ name|Collections
 operator|.
 name|singletonMap
 argument_list|(
-name|templateName
-operator|.
-name|toLowerCase
-argument_list|()
+name|templateNameLCase
 argument_list|,
 name|ct
 argument_list|)
@@ -3723,7 +3728,7 @@ name|Collections
 operator|.
 name|singletonMap
 argument_list|(
-name|templateName
+name|templateNameLCase
 argument_list|,
 name|name
 argument_list|)
@@ -3732,7 +3737,7 @@ name|Collections
 operator|.
 name|singletonMap
 argument_list|(
-name|templateName
+name|templateNameLCase
 argument_list|,
 name|tvalue
 operator|.
