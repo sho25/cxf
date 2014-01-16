@@ -992,7 +992,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|" The security semantics of the message have expired"
+literal|"The message has expired"
 argument_list|)
 argument_list|)
 expr_stmt|;

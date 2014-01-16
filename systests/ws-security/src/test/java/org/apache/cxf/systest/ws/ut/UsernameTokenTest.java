@@ -2197,7 +2197,12 @@ block|{
 name|String
 name|error
 init|=
-literal|"A replay attack has been detected"
+literal|"An error was discovered processing the<wsse:Security> header."
+decl_stmt|;
+name|String
+name|error2
+init|=
+literal|"The security token could not be authenticated or authorized"
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -2218,7 +2223,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"The security token could not be authenticated or authorized"
+name|error2
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -5551,7 +5551,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"A replay attack has been detected"
+literal|"An error was discovered processing the<wsse:Security> header."
 decl_stmt|;
 name|assertTrue
 argument_list|(

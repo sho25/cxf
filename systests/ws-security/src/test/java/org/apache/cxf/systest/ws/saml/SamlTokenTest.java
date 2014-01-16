@@ -5809,7 +5809,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"A replay attack has been detected"
+literal|"An error was discovered processing the<wsse:Security> header."
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -5821,6 +5821,16 @@ operator|.
 name|contains
 argument_list|(
 name|error
+argument_list|)
+operator|||
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+literal|"A replay attack has been detected"
 argument_list|)
 argument_list|)
 expr_stmt|;

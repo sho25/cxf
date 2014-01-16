@@ -4674,6 +4674,13 @@ name|contains
 argument_list|(
 literal|"Error during certificate path validation"
 argument_list|)
+operator|||
+name|errorMessage
+operator|.
+name|contains
+argument_list|(
+literal|"The security token could not be authenticated or authorized"
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
