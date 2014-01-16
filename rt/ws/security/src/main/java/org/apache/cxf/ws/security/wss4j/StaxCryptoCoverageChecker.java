@@ -276,7 +276,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interceptor handles parsing the StaX WS-Security results (events) + checks that the  * specified crypto coverage events actually occurred. The default functionality is to enforce   * that the SOAP Body, Timestamp, and WS-Addressing ReplyTo and FaultTo headers must be signed   * (if they exist in the message payload).  *   * Note that this interceptor must be explicitly added to the InInterceptor chain.  */
+comment|/**  * This interceptor handles parsing the StaX WS-Security results (events) + checks that the  * specified crypto coverage events actually occurred. The default functionality is to enforce   * that the SOAP Body, Timestamp, and WS-Addressing ReplyTo and FaultTo headers must be signed,  * and the UsernameToken must be encrypted (if they exist in the message payload).  *   * Note that this interceptor must be explicitly added to the InInterceptor chain.  */
 end_comment
 
 begin_class
@@ -388,6 +388,12 @@ argument_list|)
 expr_stmt|;
 comment|// Sign Addressing Headers
 name|setSignAddressingHeaders
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+comment|// Encrypt UsernameToken
+name|setEncryptUsernameToken
 argument_list|(
 literal|true
 argument_list|)

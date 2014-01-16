@@ -1517,6 +1517,13 @@ argument_list|(
 name|ohandler
 argument_list|)
 expr_stmt|;
+name|checker
+operator|.
+name|setEncryptUsernameToken
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"test"
