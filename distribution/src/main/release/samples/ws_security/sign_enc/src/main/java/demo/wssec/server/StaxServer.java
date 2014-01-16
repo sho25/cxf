@@ -485,9 +485,9 @@ name|QName
 argument_list|(
 name|WSSConstants
 operator|.
-name|NS_WSU10
+name|NS_WSSE10
 argument_list|,
-literal|"Timestamp"
+literal|"UsernameToken"
 argument_list|)
 argument_list|,
 name|SecurePart
