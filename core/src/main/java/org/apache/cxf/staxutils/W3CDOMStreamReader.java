@@ -387,6 +387,8 @@ name|String
 name|getSystemId
 parameter_list|()
 block|{
+try|try
+block|{
 return|return
 name|sysId
 operator|==
@@ -397,6 +399,18 @@ operator|.
 name|getDocumentURI
 argument_list|()
 else|:
+name|sysId
+return|;
+block|}
+catch|catch
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+comment|//ignore, probably not DOM level 3
+block|}
+return|return
 name|sysId
 return|;
 block|}
