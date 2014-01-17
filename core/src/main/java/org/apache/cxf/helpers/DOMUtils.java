@@ -746,6 +746,15 @@ operator|==
 name|Node
 operator|.
 name|TEXT_NODE
+operator|||
+name|n1
+operator|.
+name|getNodeType
+argument_list|()
+operator|==
+name|Node
+operator|.
+name|CDATA_SECTION_NODE
 condition|)
 block|{
 if|if
