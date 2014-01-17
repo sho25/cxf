@@ -329,6 +329,9 @@ name|dr
 init|=
 operator|(
 name|DataReaderImpl
+argument_list|<
+name|XMLStreamReader
+argument_list|>
 operator|)
 name|db
 operator|.

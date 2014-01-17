@@ -409,6 +409,9 @@ name|dw
 init|=
 operator|(
 name|DataWriterImpl
+argument_list|<
+name|XMLStreamWriter
+argument_list|>
 operator|)
 name|db
 operator|.
