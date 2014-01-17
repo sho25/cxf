@@ -1090,7 +1090,7 @@ name|subjectBean
 return|;
 block|}
 comment|/**      * Get the SubjectConfirmation method given a tokenType and keyType      */
-specifier|private
+specifier|protected
 name|String
 name|getSubjectConfirmationMethod
 parameter_list|(
@@ -1198,7 +1198,7 @@ block|}
 block|}
 block|}
 comment|/**      * Create a KeyInfoBean that contains an X.509 certificate or Public Key      */
-specifier|private
+specifier|protected
 specifier|static
 name|KeyInfoBean
 name|createKeyInfo
@@ -1271,7 +1271,7 @@ name|keyInfo
 return|;
 block|}
 comment|/**      * Create an EncryptedKey KeyInfo.      */
-specifier|private
+specifier|protected
 specifier|static
 name|KeyInfoBean
 name|createKeyInfo
