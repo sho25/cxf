@@ -2227,6 +2227,13 @@ name|portInfo
 operator|!=
 literal|null
 operator|&&
+name|portInfo
+operator|.
+name|getAddress
+argument_list|()
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|portInfo
 operator|.
