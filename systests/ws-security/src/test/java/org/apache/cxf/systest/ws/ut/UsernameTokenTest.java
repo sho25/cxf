@@ -2197,7 +2197,7 @@ block|{
 name|String
 name|error
 init|=
-literal|"An error was discovered processing the<wsse:Security> header."
+literal|"A replay attack has been detected"
 decl_stmt|;
 name|String
 name|error2
