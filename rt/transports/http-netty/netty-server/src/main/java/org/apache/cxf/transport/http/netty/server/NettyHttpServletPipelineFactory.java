@@ -498,6 +498,11 @@ specifier|final
 name|int
 name|maxChunkContentSize
 decl_stmt|;
+specifier|private
+specifier|final
+name|EventExecutorGroup
+name|applicationExecutor
+decl_stmt|;
 specifier|public
 name|NettyHttpServletPipelineFactory
 parameter_list|(
@@ -562,6 +567,15 @@ operator|.
 name|maxChunkContentSize
 operator|=
 name|maxChunkContentSize
+expr_stmt|;
+comment|//TODO need to configure the thread size of EventExecutorGroup
+name|applicationExecutor
+operator|=
+operator|new
+name|DefaultEventExecutorGroup
+argument_list|(
+literal|16
+argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -673,6 +687,11 @@ expr_stmt|;
 name|watchdog
 operator|.
 name|stopWatching
+argument_list|()
+expr_stmt|;
+name|applicationExecutor
+operator|.
+name|shutdownGracefully
 argument_list|()
 expr_stmt|;
 block|}
@@ -984,21 +1003,11 @@ argument_list|(
 name|ch
 argument_list|)
 decl_stmt|;
-comment|//TODO need to configure the thread size of EventExecutorGroup
-name|EventExecutorGroup
-name|e1
-init|=
-operator|new
-name|DefaultEventExecutorGroup
-argument_list|(
-literal|16
-argument_list|)
-decl_stmt|;
 name|pipeline
 operator|.
 name|addLast
 argument_list|(
-name|e1
+name|applicationExecutor
 argument_list|,
 literal|"handler"
 argument_list|,
