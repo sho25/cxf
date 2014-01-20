@@ -756,8 +756,6 @@ name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
 argument_list|,
-literal|null
-argument_list|,
 name|e
 argument_list|)
 throw|;
@@ -979,8 +977,6 @@ operator|.
 name|FAILURE
 argument_list|,
 literal|"invalidSAMLsecurity"
-argument_list|,
-literal|null
 argument_list|,
 name|e
 argument_list|)

@@ -2035,7 +2035,7 @@ argument_list|)
 decl_stmt|;
 name|assertion
 operator|.
-name|parseHOKSubject
+name|parseSubject
 argument_list|(
 operator|new
 name|WSSSAMLKeyInfoProcessor

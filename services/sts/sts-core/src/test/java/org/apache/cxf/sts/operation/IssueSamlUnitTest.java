@@ -5249,7 +5249,7 @@ argument_list|)
 expr_stmt|;
 name|assertionWrapper
 operator|.
-name|parseHOKSubject
+name|parseSubject
 argument_list|(
 operator|new
 name|WSSSAMLKeyInfoProcessor
