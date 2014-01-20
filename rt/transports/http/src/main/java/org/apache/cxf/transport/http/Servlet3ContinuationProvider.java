@@ -523,8 +523,8 @@ decl_stmt|;
 if|if
 condition|(
 name|ex
-operator|!=
-literal|null
+operator|instanceof
+name|IOException
 operator|&&
 name|isClientDisconnected
 argument_list|(
@@ -717,10 +717,6 @@ condition|(
 name|exName
 operator|!=
 literal|null
-operator|&&
-name|ex
-operator|instanceof
-name|IOException
 condition|)
 block|{
 return|return
