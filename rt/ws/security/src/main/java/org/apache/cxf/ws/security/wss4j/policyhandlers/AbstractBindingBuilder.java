@@ -4459,14 +4459,23 @@ operator|.
 name|getSecurityTokenReference
 argument_list|()
 decl_stmt|;
-comment|// TODO Add support for SAML2 here
 if|if
 condition|(
-operator|(
 name|WSConstants
 operator|.
 name|WSS_SAML_KI_VALUE_TYPE
-operator|)
+operator|.
+name|equals
+argument_list|(
+name|secRef
+operator|.
+name|getKeyIdentifierValueType
+argument_list|()
+argument_list|)
+operator|||
+name|WSConstants
+operator|.
+name|WSS_SAML2_KI_VALUE_TYPE
 operator|.
 name|equals
 argument_list|(
