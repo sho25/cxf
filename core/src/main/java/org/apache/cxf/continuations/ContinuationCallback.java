@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Callback that receives continuation status updates.  *   * Note: this interface is a work in progress  */
+comment|/**  * Callback that receives continuation status updates.  */
 end_comment
 
 begin_interface
@@ -24,16 +24,23 @@ specifier|public
 interface|interface
 name|ContinuationCallback
 block|{
+comment|/**      * This method is called when the container completes writing the response to the client        */
 name|void
 name|onComplete
 parameter_list|()
 function_decl|;
+comment|/**      * This method is called when the exception gets propagated to the container        * @param t the propagated exception instance      */
 name|void
 name|onError
 parameter_list|(
 name|Throwable
 name|error
 parameter_list|)
+function_decl|;
+comment|/**      * This method may be called if the container detects that the client has disconnected      */
+name|void
+name|onDisconnect
+parameter_list|()
 function_decl|;
 block|}
 end_interface
