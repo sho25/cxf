@@ -41,20 +41,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|buslifecycle
-operator|.
-name|BusLifeCycleManager
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|configuration
 operator|.
 name|ConfiguredBeanLocator
@@ -560,16 +546,18 @@ condition|(
 name|event
 operator|instanceof
 name|ContextClosedEvent
+operator|&&
+name|getState
+argument_list|()
+operator|==
+name|BusState
+operator|.
+name|RUNNING
 condition|)
 block|{
-name|getExtension
-argument_list|(
-name|BusLifeCycleManager
-operator|.
-name|class
-argument_list|)
-operator|.
-name|postShutdown
+comment|// The bus could be create by using SpringBusFactory.createBus("/cxf.xml");
+comment|// Just to make sure the shutdown is called rightly
+name|shutdown
 argument_list|()
 expr_stmt|;
 block|}
