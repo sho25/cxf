@@ -2310,11 +2310,6 @@ name|tokenResponse
 operator|.
 name|getExpires
 argument_list|()
-argument_list|,
-name|tokenResponse
-operator|.
-name|getLifetime
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|JAXBElement

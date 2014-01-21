@@ -1635,11 +1635,6 @@ name|tokenRenewerResponse
 operator|.
 name|getExpires
 argument_list|()
-argument_list|,
-name|tokenRenewerResponse
-operator|.
-name|getLifetime
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|JAXBElement

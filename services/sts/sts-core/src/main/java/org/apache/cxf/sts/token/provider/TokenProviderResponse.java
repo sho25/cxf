@@ -87,10 +87,6 @@ specifier|private
 name|Date
 name|expires
 decl_stmt|;
-specifier|private
-name|long
-name|lifetime
-decl_stmt|;
 comment|/**      * Return true if the entropy represents a Computed Key.      */
 specifier|public
 name|boolean
@@ -326,32 +322,6 @@ name|expires
 operator|=
 name|expires
 expr_stmt|;
-block|}
-comment|/**      * Set the lifetime of the Token to be returned in seconds.      * @deprecated use setCreated/setExpires instead      * @param lifetime the lifetime of the Token to be returned in seconds      */
-specifier|public
-name|void
-name|setLifetime
-parameter_list|(
-name|long
-name|lifetime
-parameter_list|)
-block|{
-name|this
-operator|.
-name|lifetime
-operator|=
-name|lifetime
-expr_stmt|;
-block|}
-comment|/**      * Get the lifetime of the Token to be returned in seconds      * @deprecated use getCreated/getExpires instead      * @return the lifetime of the Token to be returned in seconds      */
-specifier|public
-name|long
-name|getLifetime
-parameter_list|()
-block|{
-return|return
-name|lifetime
-return|;
 block|}
 block|}
 end_class
