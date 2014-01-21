@@ -141,6 +141,17 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|ori
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 specifier|final
 name|ResourceProvider
 name|resourceProvider
