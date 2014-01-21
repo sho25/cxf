@@ -413,6 +413,10 @@ argument_list|,
 literal|"http://cxf.apache.org/configuration/security"
 argument_list|,
 literal|"http://schemas.xmlsoap.org/wsdl/"
+argument_list|,
+literal|"http://www.w3.org/2005/08/addressing"
+argument_list|,
+literal|"http://schemas.xmlsoap.org/ws/2004/08/addressing"
 argument_list|)
 expr_stmt|;
 block|}
