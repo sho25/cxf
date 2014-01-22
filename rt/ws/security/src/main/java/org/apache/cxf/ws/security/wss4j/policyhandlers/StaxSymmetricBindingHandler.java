@@ -1583,6 +1583,8 @@ condition|)
 block|{
 name|storeSecurityToken
 argument_list|(
+name|encryptionToken
+argument_list|,
 name|tok
 argument_list|)
 expr_stmt|;
@@ -2369,6 +2371,8 @@ condition|)
 block|{
 name|storeSecurityToken
 argument_list|(
+name|sigToken
+argument_list|,
 name|sigTok
 argument_list|)
 expr_stmt|;

@@ -2065,6 +2065,8 @@ condition|)
 block|{
 name|storeSecurityToken
 argument_list|(
+name|token
+argument_list|,
 name|securityToken
 argument_list|)
 expr_stmt|;
