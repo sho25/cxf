@@ -1600,6 +1600,14 @@ operator|=
 name|MESSAGE_EXPIRED_ERR
 expr_stmt|;
 block|}
+else|else
+block|{
+comment|// Default
+name|errorMessage
+operator|=
+name|INVALID_SECURITY_ERR
+expr_stmt|;
+block|}
 return|return
 name|errorMessage
 return|;

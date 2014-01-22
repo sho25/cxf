@@ -3163,34 +3163,7 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"Check Signature confirmation"
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-name|error
-argument_list|)
-operator|||
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-literal|"SignatureConfirmation must be present"
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 operator|(
 operator|(
