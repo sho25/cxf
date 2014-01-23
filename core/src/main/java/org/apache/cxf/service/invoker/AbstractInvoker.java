@@ -449,6 +449,11 @@ argument_list|,
 name|exchange
 argument_list|,
 name|params
+argument_list|,
+name|serviceObject
+operator|.
+name|getClass
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//Method m = (Method)bop.getOperationInfo().getProperty(Method.class.getName());
@@ -500,6 +505,12 @@ argument_list|<
 name|Object
 argument_list|>
 name|params
+parameter_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|serviceObjectClass
 parameter_list|)
 block|{
 comment|//nothing to do
