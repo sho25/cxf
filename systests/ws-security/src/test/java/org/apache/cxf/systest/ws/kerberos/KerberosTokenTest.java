@@ -2005,8 +2005,20 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// TODO Streaming support
+comment|// TODO Kerberos derived regression on streaming inbound
 if|if
 condition|(
+operator|!
+name|STAX_PORT
+operator|.
+name|equals
+argument_list|(
+name|test
+operator|.
+name|getPort
+argument_list|()
+argument_list|)
+operator|&&
 operator|!
 name|test
 operator|.
