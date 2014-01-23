@@ -118,6 +118,10 @@ argument_list|()
 decl_stmt|;
 specifier|protected
 name|AccessToken
+parameter_list|()
+block|{              }
+specifier|protected
+name|AccessToken
 parameter_list|(
 name|String
 name|tokenType

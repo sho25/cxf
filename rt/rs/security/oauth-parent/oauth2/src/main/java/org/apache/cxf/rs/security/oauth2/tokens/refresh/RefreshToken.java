@@ -258,6 +258,10 @@ name|accessTokens
 expr_stmt|;
 block|}
 specifier|public
+name|RefreshToken
+parameter_list|()
+block|{              }
+specifier|public
 name|List
 argument_list|<
 name|String

@@ -153,6 +153,10 @@ name|audience
 decl_stmt|;
 specifier|protected
 name|ServerAccessToken
+parameter_list|()
+block|{              }
+specifier|protected
+name|ServerAccessToken
 parameter_list|(
 name|Client
 name|client
@@ -316,6 +320,21 @@ block|{
 return|return
 name|client
 return|;
+block|}
+specifier|public
+name|void
+name|setClient
+parameter_list|(
+name|Client
+name|c
+parameter_list|)
+block|{
+name|this
+operator|.
+name|client
+operator|=
+name|c
+expr_stmt|;
 block|}
 comment|/**      * Returns a list of opaque permissions/scopes      * @return the scopes      */
 specifier|public

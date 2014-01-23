@@ -212,6 +212,10 @@ name|newKey
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+name|BearerAccessToken
+parameter_list|()
+block|{              }
 block|}
 end_class
 

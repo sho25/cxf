@@ -201,6 +201,10 @@ name|subject
 decl_stmt|;
 specifier|public
 name|Client
+parameter_list|()
+block|{              }
+specifier|public
+name|Client
 parameter_list|(
 name|String
 name|clientId
@@ -282,6 +286,19 @@ return|return
 name|clientId
 return|;
 block|}
+specifier|public
+name|void
+name|setClientId
+parameter_list|(
+name|String
+name|id
+parameter_list|)
+block|{
+name|clientId
+operator|=
+name|id
+expr_stmt|;
+block|}
 comment|/**      * Gets the client secret      * @return the secret      */
 specifier|public
 name|String
@@ -291,6 +308,21 @@ block|{
 return|return
 name|clientSecret
 return|;
+block|}
+specifier|public
+name|void
+name|setClientSecret
+parameter_list|(
+name|String
+name|secret
+parameter_list|)
+block|{
+name|this
+operator|.
+name|clientSecret
+operator|=
+name|secret
+expr_stmt|;
 block|}
 comment|/**      * Gets the name of the third-party application      * this client represents      * @return the application name      */
 specifier|public
