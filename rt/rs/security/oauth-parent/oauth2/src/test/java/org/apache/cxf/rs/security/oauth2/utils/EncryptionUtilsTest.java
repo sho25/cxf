@@ -856,7 +856,7 @@ expr_stmt|;
 name|RefreshToken
 name|refreshToken
 init|=
-name|EncryptionUtils
+name|ModelEncryptionSupport
 operator|.
 name|decryptRefreshToken
 argument_list|(

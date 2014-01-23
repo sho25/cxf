@@ -133,6 +133,10 @@ name|redirectUri
 decl_stmt|;
 specifier|public
 name|AuthorizationCodeGrant
+parameter_list|()
+block|{              }
+specifier|public
+name|AuthorizationCodeGrant
 parameter_list|(
 name|String
 name|code
@@ -204,6 +208,21 @@ block|{
 return|return
 name|code
 return|;
+block|}
+specifier|public
+name|void
+name|setCode
+parameter_list|(
+name|String
+name|c
+parameter_list|)
+block|{
+name|this
+operator|.
+name|code
+operator|=
+name|c
+expr_stmt|;
 block|}
 comment|/**      * {@inheritDoc}      */
 specifier|public

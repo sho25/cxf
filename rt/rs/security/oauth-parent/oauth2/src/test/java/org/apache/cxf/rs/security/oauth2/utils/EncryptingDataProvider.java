@@ -403,9 +403,9 @@ decl_stmt|;
 name|String
 name|encryptedToken
 init|=
-name|EncryptionUtils
+name|ModelEncryptionSupport
 operator|.
-name|encryptTokenWithSecretKey
+name|encryptAccessToken
 argument_list|(
 name|token
 argument_list|,
@@ -455,9 +455,9 @@ throws|throws
 name|OAuthServiceException
 block|{
 return|return
-name|EncryptionUtils
+name|ModelEncryptionSupport
 operator|.
-name|decryptToken
+name|decryptAccessToken
 argument_list|(
 name|this
 argument_list|,
@@ -641,9 +641,9 @@ decl_stmt|;
 name|String
 name|encryptedRefreshToken
 init|=
-name|EncryptionUtils
+name|ModelEncryptionSupport
 operator|.
-name|encryptTokenWithSecretKey
+name|encryptRefreshToken
 argument_list|(
 name|refreshToken
 argument_list|,
