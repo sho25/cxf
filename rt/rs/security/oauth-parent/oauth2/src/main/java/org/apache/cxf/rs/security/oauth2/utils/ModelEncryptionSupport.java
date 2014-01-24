@@ -826,7 +826,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -992,7 +992,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -1156,7 +1156,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
