@@ -885,7 +885,7 @@ name|message
 operator|.
 name|contains
 argument_list|(
-literal|"PolicyViolationException"
+literal|"The security token could not be authenticated or authorized"
 argument_list|)
 argument_list|)
 expr_stmt|;
