@@ -789,7 +789,6 @@ return|;
 block|}
 comment|/**      * Remove the transport protocol from the path and make       * it starts with /      * @param path       * @return trimmed path      */
 specifier|public
-specifier|static
 name|String
 name|getTrimmedPath
 parameter_list|(
