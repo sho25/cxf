@@ -593,7 +593,7 @@ name|STS_TOKEN_USERNAME
 init|=
 literal|"ws-security.sts.token.username"
 decl_stmt|;
-comment|/**      * The token to be sent to the STS in an "ActAs" field. It can be either:      * a) A String      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      */
+comment|/**      * The token to be sent to the STS in an "ActAs" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *       * In the case of a CallbackHandler, it must be able to handle a       * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a       * reference to the current Message. The CallbackHandler implementation is required to set       * the token Element to be sent in the request on the Callback.      *       * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
 specifier|public
 specifier|static
 specifier|final
@@ -602,7 +602,7 @@ name|STS_TOKEN_ACT_AS
 init|=
 literal|"ws-security.sts.token.act-as"
 decl_stmt|;
-comment|/**      * The token to be sent to the STS in an "OnBehalfOf" field. It can be either:      * a) A String      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      */
+comment|/**      * The token to be sent to the STS in an "OnBehalfOf" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *       * In the case of a CallbackHandler, it must be able to handle a       * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a       * reference to the current Message. The CallbackHandler implementation is required to set       * the token Element to be sent in the request on the Callback.      *       * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
 specifier|public
 specifier|static
 specifier|final
