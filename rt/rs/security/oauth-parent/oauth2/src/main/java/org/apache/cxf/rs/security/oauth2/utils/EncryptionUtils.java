@@ -95,6 +95,26 @@ name|SecretKeySpec
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|provider
+operator|.
+name|OAuthServiceException
+import|;
+end_import
+
 begin_comment
 comment|/**  * Encryption helpers  */
 end_comment
@@ -142,7 +162,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -386,7 +406,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -477,7 +497,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -563,7 +583,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -727,7 +747,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -775,7 +795,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)
@@ -811,7 +831,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)

@@ -256,7 +256,7 @@ argument_list|()
 argument_list|,
 name|grant
 operator|.
-name|getLifetime
+name|getExpiresIn
 argument_list|()
 argument_list|)
 condition|)
