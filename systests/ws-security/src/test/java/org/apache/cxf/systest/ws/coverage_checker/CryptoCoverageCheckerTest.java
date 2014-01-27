@@ -3427,11 +3427,21 @@ name|isStreaming
 argument_list|()
 condition|)
 block|{
+name|int
+name|result
+init|=
 name|port
 operator|.
 name|doubleIt
 argument_list|(
 literal|25
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|50
+argument_list|,
+name|result
 argument_list|)
 expr_stmt|;
 comment|// Now try with a message that will create a Fault in the SEI
