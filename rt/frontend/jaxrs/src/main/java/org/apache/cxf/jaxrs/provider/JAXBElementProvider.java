@@ -1837,7 +1837,7 @@ name|LOG
 operator|.
 name|severe
 argument_list|(
-literal|"No InputStream, Reader, or XMStreamReader is available"
+literal|"No InputStream, Reader, or XMLStreamReader is available"
 argument_list|)
 expr_stmt|;
 throw|throw
@@ -3945,7 +3945,7 @@ name|LOG
 operator|.
 name|severe
 argument_list|(
-literal|"No OutputStream, Writer, or XMStreamWriter is available"
+literal|"No OutputStream, Writer, or XMLStreamWriter is available"
 argument_list|)
 expr_stmt|;
 throw|throw
