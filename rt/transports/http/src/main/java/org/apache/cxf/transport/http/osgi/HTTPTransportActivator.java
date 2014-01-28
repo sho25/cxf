@@ -652,7 +652,7 @@ name|properties
 argument_list|,
 literal|"org.apache.cxf.servlet.disable-address-updates"
 argument_list|,
-literal|"false"
+literal|"true"
 argument_list|)
 argument_list|)
 expr_stmt|;
