@@ -608,6 +608,14 @@ block|}
 else|else
 block|{
 return|return
+operator|(
+name|value
+operator|==
+literal|null
+operator|)
+condition|?
+literal|"<null>"
+else|:
 name|value
 operator|.
 name|toString
