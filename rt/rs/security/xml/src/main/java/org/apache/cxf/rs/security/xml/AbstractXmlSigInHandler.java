@@ -686,7 +686,7 @@ condition|)
 block|{
 name|throwFault
 argument_list|(
-literal|"Signature Algorithm is not supported"
+literal|"Signature C14n Algorithm is not supported"
 argument_list|,
 literal|null
 argument_list|)
