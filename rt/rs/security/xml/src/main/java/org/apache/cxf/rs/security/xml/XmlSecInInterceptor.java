@@ -1896,7 +1896,7 @@ argument_list|)
 operator|&&
 name|sigProps
 operator|.
-name|getSignatureC14Method
+name|getSignatureC14nMethod
 argument_list|()
 operator|!=
 literal|null
@@ -1904,7 +1904,7 @@ operator|&&
 operator|!
 name|sigProps
 operator|.
-name|getSignatureC14Method
+name|getSignatureC14nMethod
 argument_list|()
 operator|.
 name|equals
@@ -1950,7 +1950,7 @@ argument_list|)
 operator|&&
 name|sigProps
 operator|.
-name|getSignatureC14Transform
+name|getSignatureC14nTransform
 argument_list|()
 operator|!=
 literal|null
@@ -1958,7 +1958,7 @@ operator|&&
 operator|!
 name|sigProps
 operator|.
-name|getSignatureC14Transform
+name|getSignatureC14nTransform
 argument_list|()
 operator|.
 name|equals
