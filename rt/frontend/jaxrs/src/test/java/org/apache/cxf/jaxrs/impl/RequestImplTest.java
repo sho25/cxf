@@ -1873,7 +1873,7 @@ name|putSingle
 argument_list|(
 literal|"If-Modified-Since"
 argument_list|,
-literal|"Tue, 21 Oct 2008 14:00:00 GMT"
+literal|"Tue, 20 Oct 2008 14:00:00 GMT"
 argument_list|)
 expr_stmt|;
 name|Date
@@ -1891,7 +1891,7 @@ argument_list|)
 operator|.
 name|parse
 argument_list|(
-literal|"Mon, 20 Oct 2008 14:00:00 GMT"
+literal|"Mon, 21 Oct 2008 14:00:00 GMT"
 argument_list|)
 decl_stmt|;
 name|ResponseBuilder
@@ -1914,7 +1914,7 @@ literal|"124"
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|assertNotNull
+name|assertNull
 argument_list|(
 literal|"Dates must not be checked if tags do not match"
 argument_list|,
