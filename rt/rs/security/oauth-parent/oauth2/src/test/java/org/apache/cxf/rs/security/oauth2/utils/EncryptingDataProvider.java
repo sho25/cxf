@@ -594,6 +594,33 @@ block|}
 annotation|@
 name|Override
 specifier|public
+name|List
+argument_list|<
+name|OAuthPermission
+argument_list|>
+name|convertScopeToPermissions
+parameter_list|(
+name|Client
+name|client
+parameter_list|,
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|requestedScope
+parameter_list|)
+block|{
+comment|// assuming that no specific scopes is documented/supported
+return|return
+name|Collections
+operator|.
+name|emptyList
+argument_list|()
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
 name|ServerAccessToken
 name|getPreauthorizedToken
 parameter_list|(
@@ -615,29 +642,9 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-return|return
-literal|null
-return|;
-block|}
-annotation|@
-name|Override
-specifier|public
-name|List
-argument_list|<
-name|OAuthPermission
-argument_list|>
-name|convertScopeToPermissions
-parameter_list|(
-name|Client
-name|client
-parameter_list|,
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|requestedScope
-parameter_list|)
-block|{
+comment|// This is an optimization useful in cases where a client requests an authorization code:
+comment|// if a user has already provided a given client with a pre-authorized token then challenging
+comment|// a user with yet another form asking for the authorization is redundant
 return|return
 literal|null
 return|;
