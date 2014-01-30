@@ -244,6 +244,15 @@ name|SecurityToken
 implements|implements
 name|Serializable
 block|{
+comment|/**      * This tag holds an ID of a Bootstrap SecurityToken stored in the TokenStore       */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|BOOTSTRAP_TOKEN_ID
+init|=
+literal|"bootstrap_security_token_id"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
