@@ -76,7 +76,7 @@ block|{
 return|return
 name|CompressionUtils
 operator|.
-name|decompress
+name|inflate
 argument_list|(
 name|deflatedToken
 argument_list|)
@@ -95,7 +95,7 @@ block|{
 return|return
 name|CompressionUtils
 operator|.
-name|compress
+name|deflate
 argument_list|(
 name|tokenBytes
 argument_list|)

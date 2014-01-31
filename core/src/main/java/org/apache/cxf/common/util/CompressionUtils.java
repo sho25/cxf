@@ -96,7 +96,7 @@ block|{              }
 specifier|public
 specifier|static
 name|InputStream
-name|decompress
+name|inflate
 parameter_list|(
 name|byte
 index|[]
@@ -106,7 +106,7 @@ throws|throws
 name|DataFormatException
 block|{
 return|return
-name|decompress
+name|inflate
 argument_list|(
 name|deflatedToken
 argument_list|,
@@ -117,7 +117,7 @@ block|}
 specifier|public
 specifier|static
 name|InputStream
-name|decompress
+name|inflate
 parameter_list|(
 name|byte
 index|[]
@@ -310,7 +310,7 @@ specifier|public
 specifier|static
 name|byte
 index|[]
-name|compress
+name|deflate
 parameter_list|(
 name|byte
 index|[]
@@ -318,7 +318,7 @@ name|tokenBytes
 parameter_list|)
 block|{
 return|return
-name|compress
+name|deflate
 argument_list|(
 name|tokenBytes
 argument_list|,
@@ -330,7 +330,7 @@ specifier|public
 specifier|static
 name|byte
 index|[]
-name|compress
+name|deflate
 parameter_list|(
 name|byte
 index|[]

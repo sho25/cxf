@@ -885,7 +885,7 @@ name|bytes
 operator|=
 name|CompressionUtils
 operator|.
-name|compress
+name|deflate
 argument_list|(
 name|bytes
 argument_list|,
@@ -1173,7 +1173,7 @@ name|readBytesFromStream
 argument_list|(
 name|CompressionUtils
 operator|.
-name|decompress
+name|inflate
 argument_list|(
 name|result
 argument_list|,
