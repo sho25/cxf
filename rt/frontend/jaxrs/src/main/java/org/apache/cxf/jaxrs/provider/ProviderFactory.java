@@ -6156,6 +6156,10 @@ block|}
 elseif|else
 if|if
 condition|(
+name|actualType
+operator|!=
+literal|null
+operator|&&
 name|expectedClass
 operator|.
 name|isAssignableFrom
