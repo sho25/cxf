@@ -2630,6 +2630,12 @@ operator|==
 name|Void
 operator|.
 name|class
+operator|||
+name|responseClass
+operator|==
+name|Void
+operator|.
+name|TYPE
 condition|)
 block|{
 name|accepts
@@ -5143,9 +5149,9 @@ operator|.
 name|getReturnType
 argument_list|()
 operator|==
-name|void
+name|Void
 operator|.
-name|class
+name|TYPE
 condition|)
 block|{
 return|return

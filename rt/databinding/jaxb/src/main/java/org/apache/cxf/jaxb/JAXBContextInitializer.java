@@ -2832,6 +2832,15 @@ name|class
 operator|||
 name|method
 operator|.
+name|getReturnType
+argument_list|()
+operator|==
+name|Void
+operator|.
+name|TYPE
+operator|||
+name|method
+operator|.
 name|getParameterTypes
 argument_list|()
 operator|.
