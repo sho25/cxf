@@ -260,6 +260,15 @@ name|ENABLE_STREAMING_SECURITY
 init|=
 literal|"ws-security.enable.streaming"
 decl_stmt|;
+comment|/**      * Whether to return the security error message to the client, and not one of the default error      * QNames. The default is false.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RETURN_SECURITY_ERROR
+init|=
+literal|"ws-security.return.security.error"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -792,6 +801,8 @@ block|,
 name|SAML_ONE_TIME_USE_CACHE_INSTANCE
 block|,
 name|ENABLE_STREAMING_SECURITY
+block|,
+name|RETURN_SECURITY_ERROR
 block|}
 argument_list|)
 argument_list|)
