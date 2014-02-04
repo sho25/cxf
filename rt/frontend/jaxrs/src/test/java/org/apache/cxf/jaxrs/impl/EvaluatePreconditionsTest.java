@@ -89,6 +89,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|TimeZone
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|servlet
@@ -315,6 +325,18 @@ operator|.
 name|setEntityTag
 argument_list|(
 name|ETAG_OLD
+argument_list|)
+expr_stmt|;
+name|DATE_FMT_822
+operator|.
+name|setTimeZone
+argument_list|(
+name|TimeZone
+operator|.
+name|getTimeZone
+argument_list|(
+literal|"GMT"
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|service
