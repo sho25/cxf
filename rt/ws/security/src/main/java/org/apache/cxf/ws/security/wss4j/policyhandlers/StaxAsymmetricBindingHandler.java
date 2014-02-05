@@ -1560,6 +1560,13 @@ argument_list|(
 name|wrapper
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|wrapper
+operator|!=
+literal|null
+condition|)
+block|{
 name|encryptionToken
 operator|=
 name|wrapper
@@ -1572,6 +1579,7 @@ argument_list|(
 name|encryptionToken
 argument_list|)
 expr_stmt|;
+block|}
 name|AbstractTokenWrapper
 name|initiatorWrapper
 init|=

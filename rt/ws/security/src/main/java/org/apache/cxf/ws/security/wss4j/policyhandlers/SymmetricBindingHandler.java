@@ -1183,21 +1183,11 @@ init|=
 name|getSignedParts
 argument_list|()
 decl_stmt|;
-comment|//if (encryptionToken == null&& encrParts.size()> 0) {
-comment|//REVISIT - nothing to encrypt?
-comment|//}
 if|if
 condition|(
 name|encryptionToken
 operator|!=
 literal|null
-operator|&&
-name|encrParts
-operator|.
-name|size
-argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 comment|//The encryption token can be an IssuedToken or a
