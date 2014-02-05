@@ -134,6 +134,8 @@ argument_list|,
 name|constructorProxies
 argument_list|,
 name|bus
+argument_list|,
+name|provider
 argument_list|)
 expr_stmt|;
 name|this
