@@ -527,6 +527,24 @@ argument_list|()
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|WebClient
+operator|.
+name|getConfig
+argument_list|(
+name|proxy
+argument_list|)
+operator|.
+name|getHttpConduit
+argument_list|()
+operator|.
+name|getClient
+argument_list|()
+operator|.
+name|setReceiveTimeout
+argument_list|(
+literal|10000000L
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|SuperBook
@@ -676,7 +694,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore"
+literal|"/webapp/custombus/genericstore"
 decl_stmt|;
 name|GenericBookStoreSpring
 name|proxy
@@ -772,7 +790,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore"
+literal|"/webapp/custombus/genericstore"
 decl_stmt|;
 name|GenericBookStoreSpring
 name|proxy
@@ -1908,7 +1926,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore/books/superbook"
+literal|"/webapp/custombus/genericstore/books/superbook"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -2002,7 +2020,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore/books/superbook"
+literal|"/webapp/custombus/genericstore/books/superbook"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -2087,7 +2105,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore/books/superbooks"
+literal|"/webapp/custombus/genericstore/books/superbooks"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -2224,7 +2242,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore/books/superbooks2"
+literal|"/webapp/custombus/genericstore/books/superbooks2"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -2340,7 +2358,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/webapp/genericstore/books/superbooks"
+literal|"/webapp/custombus/genericstore/books/superbooks"
 decl_stmt|;
 name|WebClient
 name|wc
