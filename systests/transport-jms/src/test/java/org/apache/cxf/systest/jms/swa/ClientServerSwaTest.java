@@ -372,7 +372,9 @@ operator|=
 operator|new
 name|EmbeddedJMSBrokerLauncher
 argument_list|(
-literal|"vm://ClientServerSwaTest?jms.watchTopicAdvisories=false"
+literal|"vm://ClientServerSwaTest"
+operator|+
+literal|"?jms.watchTopicAdvisories=false&broker.persistent=false"
 argument_list|)
 expr_stmt|;
 name|System

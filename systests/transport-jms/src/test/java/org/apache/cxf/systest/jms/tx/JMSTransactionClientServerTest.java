@@ -247,6 +247,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Ignore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -279,6 +289,10 @@ name|JmsTransactionManager
 import|;
 end_import
 
+begin_comment
+comment|/**  * Test transactions based on spring transactions.  * These will not be supported anymore in cxf>= 3  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -286,6 +300,15 @@ name|JMSTransactionClientServerTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|BROKER_URI
+init|=
+literal|"vm://JMSTransactionClientServerTest?broker.persistent=false"
+decl_stmt|;
+specifier|private
 specifier|static
 name|EmbeddedJMSBrokerLauncher
 name|broker
@@ -468,7 +491,7 @@ operator|=
 operator|new
 name|EmbeddedJMSBrokerLauncher
 argument_list|(
-literal|"vm://JMSTransactionClientServerTest"
+name|BROKER_URI
 argument_list|)
 expr_stmt|;
 name|System
@@ -559,6 +582,8 @@ return|return
 name|q
 return|;
 block|}
+annotation|@
+name|Ignore
 annotation|@
 name|Test
 specifier|public
@@ -665,6 +690,8 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Ignore
 annotation|@
 name|Test
 specifier|public

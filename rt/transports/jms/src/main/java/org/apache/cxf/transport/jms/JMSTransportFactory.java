@@ -342,8 +342,6 @@ return|return
 operator|new
 name|JMSConduit
 argument_list|(
-name|endpointInfo
-argument_list|,
 name|target
 argument_list|,
 name|jmsConf

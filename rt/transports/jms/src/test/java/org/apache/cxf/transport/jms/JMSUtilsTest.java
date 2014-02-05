@@ -65,6 +65,24 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|jms
+operator|.
+name|util
+operator|.
+name|JMSUtil
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|junit
 operator|.
 name|Assert
@@ -101,7 +119,7 @@ name|assertEquals
 argument_list|(
 literal|"Get the wrong encoding"
 argument_list|,
-name|JMSUtils
+name|JMSMessageUtils
 operator|.
 name|getEncoding
 argument_list|(
@@ -115,7 +133,7 @@ name|assertEquals
 argument_list|(
 literal|"Get the wrong encoding"
 argument_list|,
-name|JMSUtils
+name|JMSMessageUtils
 operator|.
 name|getEncoding
 argument_list|(
@@ -129,7 +147,7 @@ name|assertEquals
 argument_list|(
 literal|"Get the wrong encoding"
 argument_list|,
-name|JMSUtils
+name|JMSMessageUtils
 operator|.
 name|getEncoding
 argument_list|(
@@ -141,7 +159,7 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-name|JMSUtils
+name|JMSMessageUtils
 operator|.
 name|getEncoding
 argument_list|(
@@ -210,7 +228,7 @@ decl_stmt|;
 name|String
 name|correlationID
 init|=
-name|JMSUtils
+name|JMSUtil
 operator|.
 name|createCorrelationId
 argument_list|(
@@ -262,7 +280,7 @@ argument_list|)
 decl_stmt|;
 name|correlationID
 operator|=
-name|JMSUtils
+name|JMSUtil
 operator|.
 name|createCorrelationId
 argument_list|(
@@ -313,7 +331,7 @@ argument_list|)
 decl_stmt|;
 name|correlationID
 operator|=
-name|JMSUtils
+name|JMSUtil
 operator|.
 name|createCorrelationId
 argument_list|(
@@ -364,7 +382,7 @@ argument_list|)
 decl_stmt|;
 name|correlationID
 operator|=
-name|JMSUtils
+name|JMSUtil
 operator|.
 name|createCorrelationId
 argument_list|(
@@ -405,7 +423,7 @@ argument_list|)
 expr_stmt|;
 name|correlationID
 operator|=
-name|JMSUtils
+name|JMSUtil
 operator|.
 name|createCorrelationId
 argument_list|(

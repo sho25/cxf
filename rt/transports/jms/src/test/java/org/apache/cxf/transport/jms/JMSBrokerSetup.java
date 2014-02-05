@@ -341,7 +341,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/*class ContainerWapper extends  BrokerContainerImpl {                  public void shutdown() {             super.containerShutdown();         }     }*/
 block|}
 end_class
 

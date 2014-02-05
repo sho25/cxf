@@ -191,6 +191,7 @@ name|JMS_SERVER_CONFIG_ID
 init|=
 literal|"jms-server"
 decl_stmt|;
+comment|// Is used by WS-Addressing
 specifier|public
 specifier|static
 specifier|final
