@@ -6393,6 +6393,13 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
+name|exchange
+operator|.
+name|setInMessage
+argument_list|(
+name|inMessage
+argument_list|)
+expr_stmt|;
 return|return;
 block|}
 block|}
