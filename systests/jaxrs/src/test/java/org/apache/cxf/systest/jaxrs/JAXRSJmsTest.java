@@ -449,6 +449,8 @@ argument_list|(
 name|JMSServer
 operator|.
 name|class
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1365,9 +1367,26 @@ name|consumer
 operator|.
 name|receive
 argument_list|(
-literal|300000
+literal|5000
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|jmsMessage
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"No response recieved on "
+operator|+
+name|replyToDestination
+argument_list|)
+throw|;
+block|}
 name|byte
 index|[]
 name|bytes
@@ -1506,7 +1525,7 @@ name|message
 init|=
 name|session
 operator|.
-name|createMessage
+name|createBytesMessage
 argument_list|()
 decl_stmt|;
 name|message

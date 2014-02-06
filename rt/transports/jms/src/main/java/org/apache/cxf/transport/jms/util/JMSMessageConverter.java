@@ -368,18 +368,12 @@ return|;
 block|}
 else|else
 block|{
-throw|throw
+return|return
 operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"Unsupported message type "
-operator|+
-name|nullSafeClassName
-argument_list|(
-name|message
-argument_list|)
-argument_list|)
-throw|;
+name|byte
+index|[]
+block|{}
+return|;
 block|}
 block|}
 block|}

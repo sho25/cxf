@@ -1183,9 +1183,6 @@ condition|)
 block|{
 name|inMessage
 operator|.
-name|getExchange
-argument_list|()
-operator|.
 name|put
 argument_list|(
 name|org
