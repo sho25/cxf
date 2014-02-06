@@ -353,7 +353,9 @@ name|transport
 operator|.
 name|jms
 operator|.
-name|JMSUtils
+name|util
+operator|.
+name|JMSUtil
 import|;
 end_import
 
@@ -970,7 +972,7 @@ decl_stmt|;
 name|Message
 name|message
 init|=
-name|JMSUtils
+name|JMSUtil
 operator|.
 name|createAndSetPayload
 argument_list|(
