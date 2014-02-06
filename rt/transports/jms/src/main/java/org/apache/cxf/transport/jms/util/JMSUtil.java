@@ -184,10 +184,15 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-specifier|final
 name|String
 name|messageSelector
 init|=
+name|correlationId
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 literal|"JMSCorrelationID = '"
 operator|+
 name|correlationId
@@ -302,7 +307,7 @@ name|String
 name|prefix
 parameter_list|,
 name|long
-name|i
+name|sequenceNUm
 parameter_list|)
 block|{
 name|String
@@ -312,7 +317,7 @@ name|Long
 operator|.
 name|toHexString
 argument_list|(
-name|i
+name|sequenceNUm
 argument_list|)
 decl_stmt|;
 name|StringBuilder

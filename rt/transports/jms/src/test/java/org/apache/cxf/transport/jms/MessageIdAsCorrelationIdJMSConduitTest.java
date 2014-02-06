@@ -204,7 +204,6 @@ specifier|private
 name|ConnectionFactory
 name|connectionFactory
 decl_stmt|;
-comment|//private String requestMessageId;
 annotation|@
 name|Test
 specifier|public

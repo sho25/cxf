@@ -258,7 +258,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Factory to create JmsTemplates and JmsListeners from configuration and context information  */
+comment|/**  * Factory to create jms helper objects from configuration and context information  */
 end_comment
 
 begin_class

@@ -423,8 +423,11 @@ name|JMSUtil
 import|;
 end_import
 
+begin_comment
+comment|/**  * Static util methods for converting cxf to jms messages and vice a versa   */
+end_comment
+
 begin_class
-specifier|public
 specifier|final
 class|class
 name|JMSMessageUtils
