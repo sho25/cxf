@@ -6425,6 +6425,11 @@ operator|.
 name|writeEndElement
 argument_list|()
 expr_stmt|;
+name|addClaims
+argument_list|(
+name|writer
+argument_list|)
+expr_stmt|;
 name|writer
 operator|.
 name|writeStartElement
