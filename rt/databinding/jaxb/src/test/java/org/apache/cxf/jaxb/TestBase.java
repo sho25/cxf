@@ -666,6 +666,9 @@ name|getResource
 argument_list|(
 literal|"/org/apache/cxf/jaxb/resources/wsdl/hello_world.wsdl"
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 operator|new
 name|QName

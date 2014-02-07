@@ -1146,6 +1146,9 @@ name|getResource
 argument_list|(
 literal|"/wsdl/jaxb/hello_world.wsdl"
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 operator|new
 name|QName
@@ -1369,6 +1372,9 @@ name|getResource
 argument_list|(
 literal|"/wsdl/jaxb/doc_lit_bare.wsdl"
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 operator|new
 name|QName

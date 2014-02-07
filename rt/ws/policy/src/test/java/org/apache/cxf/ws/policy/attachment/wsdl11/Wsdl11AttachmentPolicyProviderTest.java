@@ -807,6 +807,9 @@ operator|.
 name|getDefinition
 argument_list|(
 name|url
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 argument_list|)
 operator|.

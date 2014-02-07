@@ -19,16 +19,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URL
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Map
@@ -125,16 +115,6 @@ comment|/**      * Returns the WSDLFactory that is used to read/write WSDL defin
 name|WSDLFactory
 name|getWSDLFactory
 parameter_list|()
-function_decl|;
-comment|/**      * Get the WSDL definition for the given URL.  Implementations      * may return a copy from a local cache or load a new copy       * from the URL.      * @param url - the location of the WSDL to load       * @return the wsdl definition      */
-name|Definition
-name|getDefinition
-parameter_list|(
-name|URL
-name|url
-parameter_list|)
-throws|throws
-name|WSDLException
 function_decl|;
 comment|/**      * Get the WSDL definition for the given URL.  Implementations      * may return a copy from a local cache or load a new copy       * from the URL.      * @param url - the location of the WSDL to load       * @return the wsdl definition      */
 name|Definition

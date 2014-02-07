@@ -19,16 +19,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|URL
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -762,105 +752,6 @@ parameter_list|()
 block|{
 return|return
 name|registry
-return|;
-block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.wsdl.WSDLManager#getDefinition(java.net.URL)      */
-specifier|public
-name|Definition
-name|getDefinition
-parameter_list|(
-name|URL
-name|url
-parameter_list|)
-throws|throws
-name|WSDLException
-block|{
-name|String
-name|urlString
-init|=
-name|url
-operator|.
-name|toString
-argument_list|()
-decl_stmt|;
-synchronized|synchronized
-init|(
-name|definitionsMap
-init|)
-block|{
-comment|//This needs to use the exact URL object for the cache
-comment|//as the urlString object is not held onto strongly
-comment|//and thus, could cause the definition to be garbage
-comment|//collected.
-if|if
-condition|(
-name|definitionsMap
-operator|.
-name|containsKey
-argument_list|(
-name|url
-argument_list|)
-condition|)
-block|{
-return|return
-name|definitionsMap
-operator|.
-name|get
-argument_list|(
-name|url
-argument_list|)
-return|;
-block|}
-if|if
-condition|(
-name|definitionsMap
-operator|.
-name|containsKey
-argument_list|(
-name|urlString
-argument_list|)
-condition|)
-block|{
-return|return
-name|definitionsMap
-operator|.
-name|get
-argument_list|(
-name|urlString
-argument_list|)
-return|;
-block|}
-block|}
-name|Definition
-name|def
-init|=
-name|loadDefinition
-argument_list|(
-name|urlString
-argument_list|)
-decl_stmt|;
-synchronized|synchronized
-init|(
-name|definitionsMap
-init|)
-block|{
-comment|//see note about about the url
-comment|//The loadDefinition call will add it with the
-comment|//string form, we just need to add it with the
-comment|//url form (which Sonar will complain about,
-comment|//but we need to do it)
-name|definitionsMap
-operator|.
-name|put
-argument_list|(
-name|url
-argument_list|,
-name|def
-argument_list|)
-expr_stmt|;
-block|}
-return|return
-name|def
 return|;
 block|}
 comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.wsdl.WSDLManager#getDefinition(java.lang.String)      */
