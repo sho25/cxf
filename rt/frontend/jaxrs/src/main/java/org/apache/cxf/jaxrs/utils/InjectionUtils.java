@@ -6831,6 +6831,11 @@ condition|)
 block|{
 return|return;
 block|}
+synchronized|synchronized
+init|(
+name|instance
+init|)
+block|{
 for|for
 control|(
 name|Map
@@ -6889,11 +6894,6 @@ argument_list|)
 decl_stmt|;
 try|try
 block|{
-synchronized|synchronized
-init|(
-name|instance
-init|)
-block|{
 if|if
 condition|(
 name|value
@@ -6914,7 +6914,6 @@ argument_list|)
 condition|)
 block|{
 continue|continue;
-block|}
 block|}
 block|}
 catch|catch
@@ -6971,11 +6970,6 @@ argument_list|)
 decl_stmt|;
 try|try
 block|{
-synchronized|synchronized
-init|(
-name|instance
-init|)
-block|{
 if|if
 condition|(
 name|value
@@ -6991,7 +6985,6 @@ argument_list|)
 condition|)
 block|{
 continue|continue;
-block|}
 block|}
 block|}
 catch|catch
@@ -7013,6 +7006,7 @@ argument_list|,
 name|value
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_function
