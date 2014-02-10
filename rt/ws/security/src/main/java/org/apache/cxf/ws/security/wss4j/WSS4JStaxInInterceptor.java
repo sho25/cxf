@@ -944,7 +944,7 @@ operator|.
 name|setAttachmentCallbackHandler
 argument_list|(
 operator|new
-name|AttachmentInCallbackHandler
+name|AttachmentCallbackHandler
 argument_list|(
 name|soapMessage
 argument_list|)

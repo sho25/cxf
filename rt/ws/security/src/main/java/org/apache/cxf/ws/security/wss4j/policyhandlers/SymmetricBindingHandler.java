@@ -293,7 +293,7 @@ name|security
 operator|.
 name|wss4j
 operator|.
-name|AttachmentOutCallbackHandler
+name|AttachmentCallbackHandler
 import|;
 end_import
 
@@ -3193,7 +3193,7 @@ operator|.
 name|setAttachmentCallbackHandler
 argument_list|(
 operator|new
-name|AttachmentOutCallbackHandler
+name|AttachmentCallbackHandler
 argument_list|(
 name|message
 argument_list|)
@@ -4675,7 +4675,7 @@ operator|.
 name|setAttachmentCallbackHandler
 argument_list|(
 operator|new
-name|AttachmentOutCallbackHandler
+name|AttachmentCallbackHandler
 argument_list|(
 name|message
 argument_list|)

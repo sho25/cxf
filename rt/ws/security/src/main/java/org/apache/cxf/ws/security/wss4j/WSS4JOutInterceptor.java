@@ -824,7 +824,7 @@ operator|.
 name|setAttachmentCallbackHandler
 argument_list|(
 operator|new
-name|AttachmentOutCallbackHandler
+name|AttachmentCallbackHandler
 argument_list|(
 name|mc
 argument_list|)

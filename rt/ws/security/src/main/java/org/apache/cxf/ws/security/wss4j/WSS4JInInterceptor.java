@@ -1581,7 +1581,7 @@ operator|.
 name|setAttachmentCallbackHandler
 argument_list|(
 operator|new
-name|AttachmentInCallbackHandler
+name|AttachmentCallbackHandler
 argument_list|(
 name|msg
 argument_list|)
