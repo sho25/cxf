@@ -36,6 +36,10 @@ name|void
 name|start
 parameter_list|()
 function_decl|;
+name|void
+name|shutdown
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
