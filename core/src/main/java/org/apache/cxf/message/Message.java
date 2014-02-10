@@ -583,6 +583,14 @@ name|Object
 name|v
 parameter_list|)
 function_decl|;
+comment|/**      * @return set of defined contextual property keys      */
+name|Set
+argument_list|<
+name|String
+argument_list|>
+name|getContextualPropertyKeys
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
