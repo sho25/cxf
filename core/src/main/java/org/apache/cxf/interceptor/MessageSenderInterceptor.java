@@ -236,6 +236,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|static
 class|class
 name|MessageSenderEndingInterceptor
 extends|extends
@@ -313,7 +314,8 @@ throw|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|public
+specifier|static
 name|Conduit
 name|getConduit
 parameter_list|(

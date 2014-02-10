@@ -21,6 +21,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|InputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|ArrayList
@@ -166,20 +176,6 @@ operator|.
 name|continuations
 operator|.
 name|SuspendedInvocationException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|io
-operator|.
-name|CachedOutputStream
 import|;
 end_import
 
@@ -971,7 +967,7 @@ operator|.
 name|setContent
 argument_list|(
 operator|(
-name|CachedOutputStream
+name|InputStream
 operator|)
 name|message
 operator|.

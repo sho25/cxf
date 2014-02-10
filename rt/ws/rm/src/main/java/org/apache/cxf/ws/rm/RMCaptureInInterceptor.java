@@ -308,6 +308,9 @@ operator|.
 name|SAVED_CONTENT
 argument_list|,
 name|saved
+operator|.
+name|getInputStream
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

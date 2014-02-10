@@ -2667,6 +2667,15 @@ name|outputDir
 expr_stmt|;
 block|}
 specifier|public
+name|long
+name|getThreshold
+parameter_list|()
+block|{
+return|return
+name|threshold
+return|;
+block|}
+specifier|public
 name|void
 name|setThreshold
 parameter_list|(
