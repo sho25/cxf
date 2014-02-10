@@ -53,6 +53,7 @@ name|ORIGINAL_REQUESTOR_ROLE
 init|=
 literal|"org.apache.cxf.client.original"
 decl_stmt|;
+comment|/** Message content (must be an instance of {@link RewindableInputStream}. */
 specifier|public
 specifier|static
 specifier|final
@@ -60,6 +61,24 @@ name|String
 name|SAVED_CONTENT
 init|=
 literal|"org.apache.cxf.ws.rm.content"
+decl_stmt|;
+comment|/** Retransmission in progress flag (Boolean.TRUE if in progress). */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RM_RETRANSMISSION
+init|=
+literal|"org.apache.cxf.ws.rm.retransmitting"
+decl_stmt|;
+comment|/** Boolean property TRUE for a chain used only to capture (not send) a message. */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|MESSAGE_CAPTURE_CHAIN
+init|=
+literal|"org.apache.cxf.rm.captureOnly"
 decl_stmt|;
 specifier|static
 specifier|final

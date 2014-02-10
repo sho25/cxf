@@ -2742,7 +2742,7 @@ specifier|public
 name|void
 name|resend
 parameter_list|(
-name|SoapMessage
+name|Message
 name|ctx
 parameter_list|,
 name|boolean

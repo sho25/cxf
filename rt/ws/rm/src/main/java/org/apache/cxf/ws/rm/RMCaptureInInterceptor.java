@@ -278,6 +278,26 @@ operator|.
 name|lockOutputStream
 argument_list|()
 expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Capturing the original RM message"
+argument_list|)
+expr_stmt|;
+name|RewindableInputStream
+name|ris
+init|=
+name|RewindableInputStream
+operator|.
+name|makeRewindable
+argument_list|(
+name|saved
+operator|.
+name|getInputStream
+argument_list|()
+argument_list|)
+decl_stmt|;
 name|message
 operator|.
 name|setContent
@@ -286,17 +306,7 @@ name|InputStream
 operator|.
 name|class
 argument_list|,
-name|saved
-operator|.
-name|getInputStream
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Capturing the original RM message"
+name|ris
 argument_list|)
 expr_stmt|;
 name|message
@@ -307,10 +317,7 @@ name|RMMessageConstants
 operator|.
 name|SAVED_CONTENT
 argument_list|,
-name|saved
-operator|.
-name|getInputStream
-argument_list|()
+name|ris
 argument_list|)
 expr_stmt|;
 block|}

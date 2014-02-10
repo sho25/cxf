@@ -63,20 +63,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|io
-operator|.
-name|WriteOnCloseOutputStream
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|message
 operator|.
 name|Message
@@ -130,7 +116,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Just absorbs faults which will be handled by retransmission.  */
 end_comment
 
 begin_class
@@ -312,35 +298,6 @@ operator|.
 name|class
 argument_list|,
 literal|null
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
-name|WriteOnCloseOutputStream
-name|stream
-init|=
-name|RMUtils
-operator|.
-name|createCachedStream
-argument_list|(
-name|message
-argument_list|,
-name|os
-argument_list|)
-decl_stmt|;
-name|stream
-operator|.
-name|registerCallback
-argument_list|(
-operator|new
-name|RetransmissionCallback
-argument_list|(
-name|message
-argument_list|,
-name|getManager
-argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

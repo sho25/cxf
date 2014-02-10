@@ -257,11 +257,6 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|addAfter
-argument_list|(
-literal|"org.apache.cxf.ws.rm.RetransmissionInterceptor"
-argument_list|)
-expr_stmt|;
 block|}
 specifier|public
 name|void
