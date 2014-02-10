@@ -81,7 +81,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|InternalServerErrorException
+name|WebApplicationException
 import|;
 end_import
 
@@ -140,6 +140,22 @@ operator|.
 name|model
 operator|.
 name|ProviderInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|ExceptionUtils
 import|;
 end_import
 
@@ -470,21 +486,16 @@ operator|+
 literal|" can not be instantiated"
 decl_stmt|;
 throw|throw
-operator|new
-name|InternalServerErrorException
+name|ExceptionUtils
+operator|.
+name|toInternalServerErrorException
 argument_list|(
-name|Response
-operator|.
+literal|null
+argument_list|,
 name|serverError
-argument_list|()
-operator|.
-name|entity
 argument_list|(
 name|msg
 argument_list|)
-operator|.
-name|build
-argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -512,21 +523,16 @@ operator|+
 literal|" due to IllegalAccessException"
 decl_stmt|;
 throw|throw
-operator|new
-name|InternalServerErrorException
+name|ExceptionUtils
+operator|.
+name|toInternalServerErrorException
 argument_list|(
-name|Response
-operator|.
+literal|null
+argument_list|,
 name|serverError
-argument_list|()
-operator|.
-name|entity
 argument_list|(
 name|msg
 argument_list|)
-operator|.
-name|build
-argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -574,7 +580,7 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|InternalServerErrorException
+name|WebApplicationException
 argument_list|()
 throw|;
 block|}
@@ -596,9 +602,29 @@ operator|+
 literal|" due to InvocationTargetException"
 decl_stmt|;
 throw|throw
-operator|new
-name|InternalServerErrorException
+name|ExceptionUtils
+operator|.
+name|toInternalServerErrorException
 argument_list|(
+literal|null
+argument_list|,
+name|serverError
+argument_list|(
+name|msg
+argument_list|)
+argument_list|)
+throw|;
+block|}
+block|}
+specifier|private
+name|Response
+name|serverError
+parameter_list|(
+name|String
+name|msg
+parameter_list|)
+block|{
+return|return
 name|Response
 operator|.
 name|serverError
@@ -611,9 +637,7 @@ argument_list|)
 operator|.
 name|build
 argument_list|()
-argument_list|)
-throw|;
-block|}
+return|;
 block|}
 comment|/**      * {@inheritDoc}      */
 specifier|public
