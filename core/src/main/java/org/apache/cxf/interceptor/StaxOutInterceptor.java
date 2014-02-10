@@ -232,7 +232,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Creates an XMLStreamReader from the InputStream on the Message.  */
+comment|/**  * Creates an XMLStreamWriter from the OutputStream on the Message.  */
 end_comment
 
 begin_class
