@@ -654,7 +654,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|OData2Parser
+name|ODataParser
 parameter_list|<
 name|T
 parameter_list|>
@@ -1557,7 +1557,7 @@ block|}
 block|}
 comment|/**      * Creates OData 2.0 parser.      *       * @param conditionClass - class of T used to create condition objects. Class T must have      *            accessible no-arguments constructor and complementary setters to these used in       *            OData 2.0 $filter expressions.      */
 specifier|public
-name|OData2Parser
+name|ODataParser
 parameter_list|(
 specifier|final
 name|Class
