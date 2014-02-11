@@ -275,20 +275,6 @@ name|ClassPathXmlApplicationContext
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|jms
-operator|.
-name|connection
-operator|.
-name|JmsTransactionManager
-import|;
-end_import
-
 begin_comment
 comment|/**  * Test transactions based on spring transactions.  * These will not be supported anymore in cxf>= 3  */
 end_comment
@@ -409,17 +395,6 @@ operator|.
 name|setPubSubDomain
 argument_list|(
 literal|false
-argument_list|)
-expr_stmt|;
-name|jmsConfig
-operator|.
-name|setTransactionManager
-argument_list|(
-operator|new
-name|JmsTransactionManager
-argument_list|(
-name|connectionFactory
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|jmsConfig

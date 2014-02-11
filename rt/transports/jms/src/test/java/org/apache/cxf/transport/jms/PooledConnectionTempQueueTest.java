@@ -190,7 +190,6 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
-comment|//Session session = con1.createSession(false, Session.AUTO_ACKNOWLEDGE);
 comment|// This order seems to matter to reproduce the issue
 name|con1
 operator|.

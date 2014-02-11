@@ -474,7 +474,7 @@ name|waitTime
 operator|++
 expr_stmt|;
 block|}
-name|assertTrue
+name|assertNotNull
 argument_list|(
 literal|"Can't receive the Destination message in "
 operator|+
@@ -483,8 +483,6 @@ operator|+
 literal|" seconds"
 argument_list|,
 name|destMessage
-operator|!=
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -717,7 +715,7 @@ literal|"Should get the instance of ActiveMQConnectionFactory"
 argument_list|,
 name|jmsConfig
 operator|.
-name|getPlainConnectionFactory
+name|getConnectionFactory
 argument_list|()
 operator|instanceof
 name|ActiveMQConnectionFactory
@@ -731,7 +729,7 @@ name|ActiveMQConnectionFactory
 operator|)
 name|jmsConfig
 operator|.
-name|getPlainConnectionFactory
+name|getConnectionFactory
 argument_list|()
 decl_stmt|;
 name|assertEquals
@@ -988,13 +986,11 @@ argument_list|(
 literal|2000
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be get from the destination
@@ -1104,13 +1100,11 @@ argument_list|(
 name|outMessage
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be get from the destination
@@ -1233,13 +1227,11 @@ name|createMessageObserver
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage
@@ -1275,13 +1267,11 @@ argument_list|(
 literal|false
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage
@@ -1352,13 +1342,11 @@ argument_list|,
 name|contextReplyTo
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage
@@ -1407,13 +1395,11 @@ operator|.
 name|FALSE
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage
@@ -1456,13 +1442,11 @@ operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage
@@ -2408,13 +2392,11 @@ operator|new
 name|MessageImpl
 argument_list|()
 decl_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|backConduit
 argument_list|,
 name|replyMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -2442,14 +2424,11 @@ argument_list|(
 name|observer
 argument_list|)
 expr_stmt|;
-comment|// set is oneway false for get response from destination
-name|sendoutMessage
+name|sendMessageSync
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be got from the destination,
@@ -2469,13 +2448,11 @@ literal|null
 expr_stmt|;
 comment|// Send a second message to check for an issue
 comment|// Where the session was closed the second time
-name|sendoutMessage
+name|sendMessageSync
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 name|waitForReceiveInMessage
@@ -2705,13 +2682,11 @@ name|ENCODING
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|backConduit
 argument_list|,
 name|replyMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -2739,14 +2714,11 @@ argument_list|(
 name|observer
 argument_list|)
 expr_stmt|;
-comment|// set is oneway false for get response from destination
-name|sendoutMessage
+name|sendMessageSync
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 comment|// wait for the message to be got from the destination,
@@ -2939,13 +2911,11 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage
@@ -3062,13 +3032,11 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
-name|sendoutMessage
+name|sendOneWayMessage
 argument_list|(
 name|conduit
 argument_list|,
 name|outMessage
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|waitForReceiveDestMessage

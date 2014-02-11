@@ -327,15 +327,17 @@ begin_import
 import|import
 name|org
 operator|.
-name|springframework
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
 operator|.
 name|jms
 operator|.
-name|support
+name|util
 operator|.
-name|destination
-operator|.
-name|JndiDestinationResolver
+name|JMSDestinationResolver
 import|;
 end_import
 
@@ -887,11 +889,11 @@ condition|)
 block|{
 comment|// Setup Destination jndi destination resolver
 specifier|final
-name|JndiDestinationResolver
+name|JMSDestinationResolver
 name|jndiDestinationResolver
 init|=
 operator|new
-name|JndiDestinationResolver
+name|JMSDestinationResolver
 argument_list|()
 decl_stmt|;
 name|jndiDestinationResolver
