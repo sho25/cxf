@@ -4407,9 +4407,9 @@ decl_stmt|;
 name|Response
 name|r
 init|=
-name|Response
+name|JAXRSUtils
 operator|.
-name|status
+name|toResponseBuilder
 argument_list|(
 name|status
 argument_list|)

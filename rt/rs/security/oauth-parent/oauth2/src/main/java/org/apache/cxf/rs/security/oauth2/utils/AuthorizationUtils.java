@@ -143,6 +143,22 @@ name|ExceptionUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|JAXRSUtils
+import|;
+end_import
+
 begin_comment
 comment|/**  * Authorization helpers  */
 end_comment
@@ -236,15 +252,7 @@ name|toNotAuthorizedException
 argument_list|(
 literal|null
 argument_list|,
-name|Response
-operator|.
-name|status
-argument_list|(
-literal|401
-argument_list|)
-operator|.
-name|build
-argument_list|()
+literal|null
 argument_list|)
 throw|;
 block|}
@@ -391,9 +399,9 @@ block|{
 name|ResponseBuilder
 name|rb
 init|=
-name|Response
+name|JAXRSUtils
 operator|.
-name|status
+name|toResponseBuilder
 argument_list|(
 literal|401
 argument_list|)

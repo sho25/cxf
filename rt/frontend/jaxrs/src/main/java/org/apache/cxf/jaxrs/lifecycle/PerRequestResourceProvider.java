@@ -625,10 +625,12 @@ name|msg
 parameter_list|)
 block|{
 return|return
-name|Response
+name|JAXRSUtils
 operator|.
-name|serverError
-argument_list|()
+name|toResponseBuilder
+argument_list|(
+literal|500
+argument_list|)
 operator|.
 name|entity
 argument_list|(

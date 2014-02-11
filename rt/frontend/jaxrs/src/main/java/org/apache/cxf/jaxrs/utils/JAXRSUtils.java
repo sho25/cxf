@@ -4664,9 +4664,7 @@ block|{
 name|ResponseBuilder
 name|rb
 init|=
-name|Response
-operator|.
-name|status
+name|toResponseBuilder
 argument_list|(
 name|status
 argument_list|)

@@ -1626,15 +1626,7 @@ name|toNotAuthorizedException
 argument_list|(
 literal|null
 argument_list|,
-name|Response
-operator|.
-name|status
-argument_list|(
-literal|401
-argument_list|)
-operator|.
-name|build
-argument_list|()
+literal|null
 argument_list|)
 throw|;
 block|}

@@ -551,6 +551,22 @@ name|InjectionUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|JAXRSUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Produces
@@ -3610,9 +3626,9 @@ expr_stmt|;
 name|Response
 name|response
 init|=
-name|Response
+name|JAXRSUtils
 operator|.
-name|status
+name|toResponseBuilder
 argument_list|(
 name|status
 argument_list|)

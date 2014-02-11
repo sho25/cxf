@@ -1106,9 +1106,9 @@ name|getFaultResponse
 parameter_list|()
 block|{
 return|return
-name|Response
+name|JAXRSUtils
 operator|.
-name|status
+name|toResponseBuilder
 argument_list|(
 literal|401
 argument_list|)
