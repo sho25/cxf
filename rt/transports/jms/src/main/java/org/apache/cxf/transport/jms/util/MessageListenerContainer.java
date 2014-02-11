@@ -268,6 +268,10 @@ name|void
 name|stop
 parameter_list|()
 block|{
+name|running
+operator|=
+literal|false
+expr_stmt|;
 name|ResourceCloser
 operator|.
 name|close
@@ -281,6 +285,14 @@ name|close
 argument_list|(
 name|session
 argument_list|)
+expr_stmt|;
+name|consumer
+operator|=
+literal|null
+expr_stmt|;
+name|session
+operator|=
+literal|null
 expr_stmt|;
 block|}
 annotation|@
