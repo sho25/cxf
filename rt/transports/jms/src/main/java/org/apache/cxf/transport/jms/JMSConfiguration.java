@@ -135,25 +135,17 @@ begin_import
 import|import
 name|org
 operator|.
-name|springframework
+name|apache
 operator|.
-name|beans
+name|cxf
 operator|.
-name|factory
+name|transport
 operator|.
-name|InitializingBean
-import|;
-end_import
-
-begin_import
-import|import
-name|org
+name|jms
 operator|.
-name|springframework
+name|util
 operator|.
-name|jndi
-operator|.
-name|JndiTemplate
+name|JndiHelper
 import|;
 end_import
 
@@ -163,8 +155,6 @@ name|NoJSR250Annotations
 specifier|public
 class|class
 name|JMSConfiguration
-implements|implements
-name|InitializingBean
 block|{
 comment|/**      * The use of -1 is to make easier to determine      * if the setCacheLevel has been called.      */
 specifier|public
@@ -183,7 +173,7 @@ init|=
 literal|true
 decl_stmt|;
 specifier|private
-name|JndiTemplate
+name|JndiHelper
 name|jndiTemplate
 decl_stmt|;
 specifier|private
@@ -1291,7 +1281,7 @@ specifier|public
 name|void
 name|setJndiTemplate
 parameter_list|(
-name|JndiTemplate
+name|JndiHelper
 name|jndiTemplate
 parameter_list|)
 block|{
@@ -1303,7 +1293,7 @@ name|jndiTemplate
 expr_stmt|;
 block|}
 specifier|public
-name|JndiTemplate
+name|JndiHelper
 name|getJndiTemplate
 parameter_list|()
 block|{

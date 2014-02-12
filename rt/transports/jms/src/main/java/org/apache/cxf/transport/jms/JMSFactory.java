@@ -308,9 +308,6 @@ block|{
 name|ConnectionFactory
 name|cf
 init|=
-operator|(
-name|ConnectionFactory
-operator|)
 name|jmsConfig
 operator|.
 name|getJndiTemplate
@@ -319,6 +316,10 @@ operator|.
 name|lookup
 argument_list|(
 name|connectionFactoryName
+argument_list|,
+name|ConnectionFactory
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 if|if

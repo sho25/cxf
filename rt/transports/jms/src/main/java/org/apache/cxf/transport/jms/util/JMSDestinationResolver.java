@@ -59,18 +59,6 @@ name|NamingException
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|jndi
-operator|.
-name|JndiTemplate
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -78,7 +66,7 @@ name|JMSDestinationResolver
 implements|implements
 name|DestinationResolver
 block|{
-name|JndiTemplate
+name|JndiHelper
 name|jndiTemplate
 decl_stmt|;
 specifier|public
@@ -169,7 +157,7 @@ specifier|public
 name|void
 name|setJndiTemplate
 parameter_list|(
-name|JndiTemplate
+name|JndiHelper
 name|jt
 parameter_list|)
 block|{
