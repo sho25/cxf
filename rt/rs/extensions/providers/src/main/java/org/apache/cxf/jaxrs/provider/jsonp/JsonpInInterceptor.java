@@ -238,7 +238,7 @@ literal|null
 condition|)
 block|{
 comment|// may be needed to enforce the selection of
-comment|// JSON-awarenprovider
+comment|// JSON-aware provider
 name|message
 operator|.
 name|put
@@ -307,7 +307,7 @@ argument_list|)
 operator|.
 name|getFirst
 argument_list|(
-name|CALLBACK_PARAM
+name|callbackParam
 argument_list|)
 decl_stmt|;
 if|if
