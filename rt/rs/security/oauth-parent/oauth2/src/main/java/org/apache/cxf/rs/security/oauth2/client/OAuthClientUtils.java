@@ -287,9 +287,9 @@ name|oauth2
 operator|.
 name|tokens
 operator|.
-name|mac
+name|hawk
 operator|.
-name|MacAuthorizationScheme
+name|HawkAuthorizationScheme
 import|;
 end_import
 
@@ -1492,7 +1492,7 @@ if|if
 condition|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_TYPE
+name|HAWK_TOKEN_TYPE
 operator|.
 name|equals
 argument_list|(
@@ -1518,11 +1518,11 @@ literal|"MAC scheme requires HTTP Request properties"
 argument_list|)
 throw|;
 block|}
-name|MacAuthorizationScheme
+name|HawkAuthorizationScheme
 name|macAuthData
 init|=
 operator|new
-name|MacAuthorizationScheme
+name|HawkAuthorizationScheme
 argument_list|(
 name|httpProps
 argument_list|,
@@ -1541,7 +1541,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_ALGORITHM
+name|HAWK_TOKEN_ALGORITHM
 argument_list|)
 decl_stmt|;
 name|String
@@ -1556,7 +1556,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_KEY
+name|HAWK_TOKEN_KEY
 argument_list|)
 decl_stmt|;
 name|sb

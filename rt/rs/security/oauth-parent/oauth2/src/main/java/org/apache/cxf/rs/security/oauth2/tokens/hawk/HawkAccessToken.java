@@ -19,7 +19,7 @@ name|oauth2
 operator|.
 name|tokens
 operator|.
-name|mac
+name|hawk
 package|;
 end_package
 
@@ -79,6 +79,46 @@ name|oauth2
 operator|.
 name|utils
 operator|.
+name|HmacAlgorithm
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
+name|HmacUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
 name|OAuthConstants
 import|;
 end_import
@@ -104,13 +144,21 @@ import|;
 end_import
 
 begin_comment
-comment|//See http://tools.ietf.org/html/draft-ietf-oauth-v2-http-mac-01
+comment|//https://tools.ietf.org/html/draft-hammer-oauth-v2-mac-token-05
+end_comment
+
+begin_comment
+comment|//->
+end_comment
+
+begin_comment
+comment|//https://github.com/hueniverse/hawk/blob/master/README.md
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|MacAccessToken
+name|HawkAccessToken
 extends|extends
 name|ServerAccessToken
 block|{
@@ -124,7 +172,7 @@ operator|-
 literal|4331703769692080818L
 decl_stmt|;
 specifier|public
-name|MacAccessToken
+name|HawkAccessToken
 parameter_list|(
 name|Client
 name|client
@@ -146,7 +194,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|MacAccessToken
+name|HawkAccessToken
 parameter_list|(
 name|Client
 name|client
@@ -174,7 +222,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|MacAccessToken
+name|HawkAccessToken
 parameter_list|(
 name|Client
 name|client
@@ -207,7 +255,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|MacAccessToken
+name|HawkAccessToken
 parameter_list|(
 name|Client
 name|client
@@ -231,7 +279,7 @@ name|client
 argument_list|,
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_TYPE
+name|HAWK_TOKEN_TYPE
 argument_list|,
 name|tokenKey
 argument_list|,
@@ -251,7 +299,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|MacAccessToken
+name|HawkAccessToken
 parameter_list|(
 name|Client
 name|client
@@ -278,7 +326,7 @@ name|client
 argument_list|,
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_TYPE
+name|HAWK_TOKEN_TYPE
 argument_list|,
 name|tokenKey
 argument_list|,
@@ -298,7 +346,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|MacAccessToken
+name|HawkAccessToken
 parameter_list|(
 name|ServerAccessToken
 name|token
@@ -315,7 +363,7 @@ name|token
 argument_list|,
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_TYPE
+name|HAWK_TOKEN_TYPE
 argument_list|)
 argument_list|,
 name|newKey
@@ -358,7 +406,7 @@ name|put
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_KEY
+name|HAWK_TOKEN_KEY
 argument_list|,
 name|theKey
 argument_list|)
@@ -372,7 +420,7 @@ name|put
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_ALGORITHM
+name|HAWK_TOKEN_ALGORITHM
 argument_list|,
 name|algo
 operator|.
@@ -408,7 +456,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_KEY
+name|HAWK_TOKEN_KEY
 argument_list|)
 return|;
 block|}
@@ -427,7 +475,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_ALGORITHM
+name|HAWK_TOKEN_ALGORITHM
 argument_list|)
 return|;
 block|}

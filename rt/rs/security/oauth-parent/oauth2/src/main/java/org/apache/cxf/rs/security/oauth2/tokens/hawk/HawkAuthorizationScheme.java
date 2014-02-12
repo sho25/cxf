@@ -19,7 +19,7 @@ name|oauth2
 operator|.
 name|tokens
 operator|.
-name|mac
+name|hawk
 package|;
 end_package
 
@@ -131,14 +131,46 @@ name|oauth2
 operator|.
 name|utils
 operator|.
+name|HmacUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
 name|OAuthConstants
 import|;
 end_import
 
+begin_comment
+comment|// https://tools.ietf.org/html/draft-hammer-oauth-v2-mac-token-05
+end_comment
+
+begin_comment
+comment|// ->
+end_comment
+
+begin_comment
+comment|// https://github.com/hueniverse/hawk/blob/master/README.md
+end_comment
+
 begin_class
 specifier|public
 class|class
-name|MacAuthorizationScheme
+name|HawkAuthorizationScheme
 block|{
 specifier|private
 specifier|static
@@ -165,7 +197,7 @@ name|String
 name|nonce
 decl_stmt|;
 specifier|public
-name|MacAuthorizationScheme
+name|HawkAuthorizationScheme
 parameter_list|(
 name|HttpRequestProperties
 name|props
@@ -212,7 +244,7 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|public
-name|MacAuthorizationScheme
+name|HawkAuthorizationScheme
 parameter_list|(
 name|HttpRequestProperties
 name|props
@@ -242,7 +274,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_ID
+name|HAWK_TOKEN_ID
 argument_list|)
 expr_stmt|;
 name|this
@@ -255,7 +287,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_TIMESTAMP
+name|HAWK_TOKEN_TIMESTAMP
 argument_list|)
 expr_stmt|;
 name|this
@@ -268,7 +300,7 @@ name|get
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_NONCE
+name|HAWK_TOKEN_NONCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -343,7 +375,7 @@ name|append
 argument_list|(
 name|OAuthConstants
 operator|.
-name|MAC_AUTHORIZATION_SCHEME
+name|HAWK_AUTHORIZATION_SCHEME
 argument_list|)
 operator|.
 name|append
@@ -357,7 +389,7 @@ name|sb
 argument_list|,
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_ID
+name|HAWK_TOKEN_ID
 argument_list|,
 name|macKey
 argument_list|,
@@ -370,7 +402,20 @@ name|sb
 argument_list|,
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_NONCE
+name|HAWK_TOKEN_TIMESTAMP
+argument_list|,
+name|timestamp
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
+name|addParameter
+argument_list|(
+name|sb
+argument_list|,
+name|OAuthConstants
+operator|.
+name|HAWK_TOKEN_NONCE
 argument_list|,
 name|nonce
 argument_list|,
@@ -383,22 +428,9 @@ name|sb
 argument_list|,
 name|OAuthConstants
 operator|.
-name|MAC_TOKEN_SIGNATURE
+name|HAWK_TOKEN_SIGNATURE
 argument_list|,
 name|signature
-argument_list|,
-literal|false
-argument_list|)
-expr_stmt|;
-name|addParameter
-argument_list|(
-name|sb
-argument_list|,
-name|OAuthConstants
-operator|.
-name|MAC_TOKEN_TIMESTAMP
-argument_list|,
-name|timestamp
 argument_list|,
 literal|true
 argument_list|)
@@ -546,6 +578,10 @@ name|props
 operator|.
 name|getPort
 argument_list|()
+operator|+
+name|SEPARATOR
+operator|+
+literal|""
 operator|+
 name|SEPARATOR
 operator|+

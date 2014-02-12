@@ -19,7 +19,7 @@ name|oauth2
 operator|.
 name|tokens
 operator|.
-name|mac
+name|hawk
 package|;
 end_package
 
