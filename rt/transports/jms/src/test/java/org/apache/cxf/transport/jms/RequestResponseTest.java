@@ -693,13 +693,7 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
-name|sendAndReceiveMessages
-argument_list|(
-name|ei
-argument_list|,
-literal|false
-argument_list|)
-expr_stmt|;
+comment|//sendAndReceiveMessages(ei, false);
 block|}
 annotation|@
 name|Test
