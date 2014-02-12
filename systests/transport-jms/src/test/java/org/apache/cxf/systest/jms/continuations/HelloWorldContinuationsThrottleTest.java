@@ -226,9 +226,13 @@ name|HelloWorldContinuationsThrottleTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
+specifier|private
 specifier|static
-name|EmbeddedJMSBrokerLauncher
-name|broker
+specifier|final
+name|String
+name|WSDL_PATH
+init|=
+literal|"org/apache/cxf/systest/jms/continuations/test.wsdl"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -237,6 +241,11 @@ name|String
 name|CONFIG_FILE
 init|=
 literal|"org/apache/cxf/systest/jms/continuations/jms_test_config.xml"
+decl_stmt|;
+specifier|private
+specifier|static
+name|EmbeddedJMSBrokerLauncher
+name|broker
 decl_stmt|;
 specifier|public
 specifier|static
@@ -293,7 +302,7 @@ name|updateWsdl
 argument_list|(
 name|bus
 argument_list|,
-literal|"org/apache/cxf/systest/jms/continuations/test2.wsdl"
+name|WSDL_PATH
 argument_list|)
 expr_stmt|;
 name|Object
@@ -386,7 +395,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testHttpWrappedContinuatuions
+name|testHttpWrappedContinuations
 parameter_list|()
 throws|throws
 name|Exception
@@ -432,9 +441,12 @@ init|=
 name|getClass
 argument_list|()
 operator|.
+name|getClassLoader
+argument_list|()
+operator|.
 name|getResource
 argument_list|(
-literal|"/org/apache/cxf/systest/jms/continuations/test2.wsdl"
+name|WSDL_PATH
 argument_list|)
 decl_stmt|;
 name|String
@@ -652,7 +664,7 @@ argument_list|()
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Not all invocations have completed"
+literal|"Some invocations are still running"
 argument_list|,
 literal|0
 argument_list|,

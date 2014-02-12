@@ -2038,6 +2038,9 @@ name|void
 name|close
 parameter_list|()
 block|{
+name|shutdownListeners
+argument_list|()
+expr_stmt|;
 name|ResourceCloser
 operator|.
 name|close
@@ -2045,8 +2048,9 @@ argument_list|(
 name|connection
 argument_list|)
 expr_stmt|;
-name|shutdownListeners
-argument_list|()
+name|connection
+operator|=
+literal|null
 expr_stmt|;
 name|LOG
 operator|.

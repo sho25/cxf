@@ -413,7 +413,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"JMSConfiguration.connectionFactory may not be null"
+literal|"connectionFactory may not be null"
 argument_list|)
 throw|;
 block|}
@@ -428,7 +428,7 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"JMSConfigruation.targetDestination may not be null"
+literal|"targetDestination may not be null"
 argument_list|)
 throw|;
 block|}

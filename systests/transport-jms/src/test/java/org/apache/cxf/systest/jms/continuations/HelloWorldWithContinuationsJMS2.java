@@ -173,7 +173,7 @@ literal|"org.apache.cxf.systest.jms.continuations.HelloContinuation"
 argument_list|,
 name|wsdlLocation
 operator|=
-literal|"org/apache/cxf/systest/jms/continuations/test2.wsdl"
+literal|"org/apache/cxf/systest/jms/continuations/test.wsdl"
 argument_list|)
 specifier|public
 class|class
