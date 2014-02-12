@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jaxrs
+operator|.
+name|jms
 package|;
 end_package
 
@@ -62,13 +64,12 @@ name|void
 name|run
 parameter_list|()
 block|{
-comment|// create the application context
 name|context
 operator|=
 operator|new
 name|ClassPathXmlApplicationContext
 argument_list|(
-literal|"org/apache/cxf/systest/jaxrs/resources/jms_server_config.xml"
+literal|"org/apache/cxf/systest/jaxrs/jms/jms_server_config.xml"
 argument_list|)
 expr_stmt|;
 name|context

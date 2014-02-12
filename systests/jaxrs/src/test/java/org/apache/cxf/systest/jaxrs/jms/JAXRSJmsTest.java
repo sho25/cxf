@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jaxrs
+operator|.
+name|jms
 package|;
 end_package
 
@@ -268,6 +270,38 @@ operator|.
 name|model
 operator|.
 name|AbstractResourceInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|Book
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|JMSBookStore
 import|;
 end_import
 
