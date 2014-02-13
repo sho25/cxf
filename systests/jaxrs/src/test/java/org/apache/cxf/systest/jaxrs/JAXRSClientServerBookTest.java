@@ -2178,7 +2178,7 @@ name|wc
 operator|.
 name|query
 argument_list|(
-literal|"id2"
+literal|"id_2"
 argument_list|,
 literal|"20"
 argument_list|)
