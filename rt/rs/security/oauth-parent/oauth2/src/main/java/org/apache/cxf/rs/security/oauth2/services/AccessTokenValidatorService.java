@@ -29,6 +29,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|Consumes
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|Encoded
 import|;
 end_import
@@ -53,7 +65,7 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|GET
+name|POST
 import|;
 end_import
 
@@ -148,7 +160,7 @@ extends|extends
 name|AbstractAccessTokenValidator
 block|{
 annotation|@
-name|GET
+name|POST
 annotation|@
 name|Produces
 argument_list|(
@@ -161,6 +173,13 @@ name|MediaType
 operator|.
 name|APPLICATION_JSON
 block|}
+argument_list|)
+annotation|@
+name|Consumes
+argument_list|(
+name|MediaType
+operator|.
+name|APPLICATION_FORM_URLENCODED
 argument_list|)
 specifier|public
 name|AccessTokenValidation
