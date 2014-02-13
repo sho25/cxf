@@ -125,16 +125,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -322,11 +312,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Fixing, in progress"
-argument_list|)
 specifier|public
 name|void
 name|testQueryCollection
@@ -358,11 +343,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Fixing, in progress"
-argument_list|)
 specifier|public
 name|void
 name|testQueryCollection2
@@ -394,11 +374,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Fixing, in progress"
-argument_list|)
 specifier|public
 name|void
 name|testQueryCollection3
@@ -430,11 +405,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Fixing, in progress"
-argument_list|)
 specifier|public
 name|void
 name|testQueryElementCollection
@@ -528,11 +498,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Fixing, in progress"
-argument_list|)
 specifier|public
 name|void
 name|testQueryCollectionSize2
@@ -564,11 +529,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
-argument_list|(
-literal|"Fixing, in progress"
-argument_list|)
 specifier|public
 name|void
 name|testAndQueryCollection

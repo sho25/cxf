@@ -1295,6 +1295,13 @@ name|propertyName
 argument_list|,
 name|typedValue
 argument_list|,
+name|property
+operator|.
+name|typeInfo
+operator|.
+name|getGenericType
+argument_list|()
+argument_list|,
 name|conditionType
 argument_list|,
 name|condition
