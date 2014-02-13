@@ -648,7 +648,9 @@ block|{
 throw|throw
 operator|new
 name|RuntimeException
-argument_list|()
+argument_list|(
+name|ex
+argument_list|)
 throw|;
 block|}
 return|return
