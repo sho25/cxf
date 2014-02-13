@@ -237,6 +237,11 @@ name|createConnection
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|connection
+operator|.
+name|start
+argument_list|()
+expr_stmt|;
 name|Session
 name|session
 init|=
@@ -356,6 +361,11 @@ name|createConnection
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|connection
+operator|.
+name|start
+argument_list|()
+expr_stmt|;
 name|Session
 name|session
 init|=
