@@ -135,6 +135,29 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
+name|String
+index|[]
+name|getAuthorizationParts
+parameter_list|(
+name|Message
+name|message
+parameter_list|)
+block|{
+return|return
+name|super
+operator|.
+name|getAuthorizationParts
+argument_list|(
+name|message
+argument_list|)
+return|;
+comment|//        You can customise it, extract the token from the message, example, get
+comment|//        WS-Security Binary token put on the message by WSS4JInInterceptor
+comment|//
+comment|//        String token = getTokenFromCurrentMessage(mc);
+comment|//        return new String[] {"Bearer", token};
+block|}
 specifier|public
 name|Collection
 argument_list|<
@@ -214,16 +237,6 @@ name|Message
 name|message
 parameter_list|)
 block|{     }
-comment|//    protected String[] getAuthorizationParts() {
-comment|//        // the current message is wrapped in MessageContext
-comment|//        MessageContext mc = getMessageContext();
-comment|//
-comment|//        // extract the token from the message, example, get
-comment|//        // WS-Security Binary token put on the message by WSS4JInInterceptor
-comment|//
-comment|//        String token = getTokenFromCurrentMessage(mc);
-comment|//        return new String[] {"Bearer", token};
-comment|//    }
 block|}
 end_class
 
