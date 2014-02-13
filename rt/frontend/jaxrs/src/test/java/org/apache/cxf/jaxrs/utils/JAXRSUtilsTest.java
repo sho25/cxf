@@ -14599,7 +14599,7 @@ name|Message
 operator|.
 name|QUERY_STRING
 argument_list|,
-literal|"a=aValue&query2=b"
+literal|"a_value=aValue&query2=b"
 argument_list|)
 expr_stmt|;
 name|JAXRSUtils

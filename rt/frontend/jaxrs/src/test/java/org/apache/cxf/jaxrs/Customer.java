@@ -1300,7 +1300,7 @@ block|}
 annotation|@
 name|QueryParam
 argument_list|(
-literal|"a"
+literal|"a_value"
 argument_list|)
 specifier|public
 name|void
