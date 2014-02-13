@@ -510,6 +510,23 @@ name|UNSUPPORTED_TOKEN_TYPE
 init|=
 literal|"unsupported_token_type"
 decl_stmt|;
+comment|// Authorization scheme constants, used internally by AccessTokenValidation client and service
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUTHORIZATION_SCHEME_TYPE
+init|=
+literal|"authScheme"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUTHORIZATION_SCHEME_DATA
+init|=
+literal|"authSchemeData"
+decl_stmt|;
 specifier|private
 name|OAuthConstants
 parameter_list|()
