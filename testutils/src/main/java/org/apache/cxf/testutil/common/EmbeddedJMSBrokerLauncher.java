@@ -980,6 +980,13 @@ argument_list|()
 expr_stmt|;
 name|broker
 operator|.
+name|setPersistent
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+name|broker
+operator|.
 name|setPersistenceAdapter
 argument_list|(
 operator|new
@@ -1025,8 +1032,6 @@ operator|.
 name|addConnector
 argument_list|(
 name|brokerUrl1
-operator|+
-literal|"?daemon=true"
 argument_list|)
 expr_stmt|;
 name|broker

@@ -290,16 +290,8 @@ name|JMSSharedQueueTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|BROKER_URI
-init|=
-literal|"vm://SharedQueueTest"
-operator|+
-literal|"?jms.watchTopicAdvisories=false&broker.persistent=false"
-decl_stmt|;
+comment|//    private static final String BROKER_URI = "vm://SharedQueueTest"
+comment|//        + "?jms.watchTopicAdvisories=false&broker.persistent=false";
 specifier|private
 specifier|static
 name|EmbeddedJMSBrokerLauncher
@@ -323,9 +315,7 @@ name|broker
 operator|=
 operator|new
 name|EmbeddedJMSBrokerLauncher
-argument_list|(
-name|BROKER_URI
-argument_list|)
+argument_list|()
 expr_stmt|;
 name|launchServer
 argument_list|(

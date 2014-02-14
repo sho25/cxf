@@ -218,7 +218,7 @@ specifier|private
 name|Long
 name|clientReceiveTimeout
 init|=
-literal|0L
+literal|60000L
 decl_stmt|;
 specifier|private
 name|Long

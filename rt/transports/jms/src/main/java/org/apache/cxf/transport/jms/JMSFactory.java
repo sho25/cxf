@@ -598,6 +598,11 @@ argument_list|(
 name|jmsConfig
 argument_list|)
 decl_stmt|;
+name|connection
+operator|.
+name|start
+argument_list|()
+expr_stmt|;
 name|session
 operator|=
 name|connection
@@ -648,11 +653,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 name|container
-operator|.
-name|start
-argument_list|()
-expr_stmt|;
-name|connection
 operator|.
 name|start
 argument_list|()

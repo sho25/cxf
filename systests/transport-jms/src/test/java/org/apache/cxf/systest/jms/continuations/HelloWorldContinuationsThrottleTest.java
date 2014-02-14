@@ -346,9 +346,7 @@ name|broker
 operator|=
 operator|new
 name|EmbeddedJMSBrokerLauncher
-argument_list|(
-literal|"vm://HelloWorldContinuationsThrottleTest"
-argument_list|)
+argument_list|()
 expr_stmt|;
 name|System
 operator|.
