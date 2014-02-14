@@ -1189,7 +1189,7 @@ name|property
 operator|.
 name|typeInfo
 operator|.
-name|getWrappedTypeClass
+name|getTypeClass
 argument_list|()
 operator|.
 name|isAssignableFrom
