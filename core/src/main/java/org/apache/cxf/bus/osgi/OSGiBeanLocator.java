@@ -376,6 +376,12 @@ control|)
 block|{
 if|if
 condition|(
+name|type
+operator|==
+name|ClassLoader
+operator|.
+name|class
+operator|&&
 name|checkCompatibleLocators
 operator|&&
 operator|!
