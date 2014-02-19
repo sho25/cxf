@@ -1313,9 +1313,19 @@ argument_list|(
 name|sendingCert
 argument_list|)
 expr_stmt|;
-comment|// TODO Uncomment
-comment|//properties.setEncryptionKeyIdentifier(
-comment|//    convertKeyIdentifier(encryptionProperties.getEncryptionKeyIdType()));
+name|properties
+operator|.
+name|setEncryptionKeyIdentifier
+argument_list|(
+name|convertKeyIdentifier
+argument_list|(
+name|encryptionProperties
+operator|.
+name|getEncryptionKeyIdType
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|encryptionProperties
