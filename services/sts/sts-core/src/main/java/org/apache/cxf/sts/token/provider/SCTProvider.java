@@ -233,9 +233,9 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|derivedKey
+name|ext
 operator|.
-name|ConversationException
+name|WSSecurityException
 import|;
 end_import
 
@@ -955,7 +955,7 @@ name|String
 name|tokenType
 parameter_list|)
 throws|throws
-name|ConversationException
+name|WSSecurityException
 block|{
 if|if
 condition|(
@@ -1021,8 +1021,14 @@ else|else
 block|{
 throw|throw
 operator|new
-name|ConversationException
+name|WSSecurityException
 argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
 literal|"unsupportedSecConvVersion"
 argument_list|)
 throw|;
