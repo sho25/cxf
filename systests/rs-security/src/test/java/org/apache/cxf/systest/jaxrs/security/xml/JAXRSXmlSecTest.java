@@ -2209,21 +2209,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-if|if
-condition|(
-name|STAX_PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|port
-argument_list|)
-condition|)
-block|{
-comment|// TODO Problem with error handling on the server side
-return|return;
-block|}
 name|String
 name|address
 init|=
