@@ -563,19 +563,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO @Ignore'ing this test due to a recent merge from Andrei
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testCombinedPolicy
