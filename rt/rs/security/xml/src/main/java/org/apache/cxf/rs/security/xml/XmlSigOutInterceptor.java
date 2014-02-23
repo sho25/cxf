@@ -1070,7 +1070,7 @@ name|setAttributeNS
 argument_list|(
 literal|null
 argument_list|,
-literal|"ID"
+literal|"Id"
 argument_list|,
 name|id
 argument_list|)
@@ -1081,7 +1081,7 @@ name|setIdAttributeNS
 argument_list|(
 literal|null
 argument_list|,
-literal|"ID"
+literal|"Id"
 argument_list|,
 literal|true
 argument_list|)
@@ -1210,7 +1210,7 @@ name|setAttributeNS
 argument_list|(
 literal|null
 argument_list|,
-literal|"ID"
+literal|"Id"
 argument_list|,
 name|id
 argument_list|)
@@ -1221,7 +1221,7 @@ name|setIdAttributeNS
 argument_list|(
 literal|null
 argument_list|,
-literal|"ID"
+literal|"Id"
 argument_list|,
 literal|true
 argument_list|)
@@ -1352,7 +1352,7 @@ name|setAttributeNS
 argument_list|(
 literal|null
 argument_list|,
-literal|"ID"
+literal|"Id"
 argument_list|,
 name|id
 argument_list|)
@@ -1366,7 +1366,7 @@ name|setIdAttributeNS
 argument_list|(
 literal|null
 argument_list|,
-literal|"ID"
+literal|"Id"
 argument_list|,
 literal|true
 argument_list|)

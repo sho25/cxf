@@ -768,20 +768,6 @@ name|x509Port
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO Wait until we pick up WSS4J 2.0.0-SNAPSHOT again
-if|if
-condition|(
-name|PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|getPort
-argument_list|()
-argument_list|)
-condition|)
-block|{
 try|try
 block|{
 name|x509Port
@@ -816,6 +802,24 @@ name|error
 init|=
 literal|"No certificates were found for decryption"
 decl_stmt|;
+if|if
+condition|(
+name|STAX_PORT
+operator|.
+name|equals
+argument_list|(
+name|test
+operator|.
+name|getPort
+argument_list|()
+argument_list|)
+condition|)
+block|{
+name|error
+operator|=
+literal|"Referenced security token could not be retrieved"
+expr_stmt|;
+block|}
 name|assertTrue
 argument_list|(
 name|ex
@@ -829,7 +833,6 @@ name|error
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 operator|(
 operator|(

@@ -826,11 +826,6 @@ name|namespace
 operator|=
 literal|"http://cxf.apache.org/log"
 argument_list|)
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unused"
-argument_list|)
 specifier|private
 specifier|static
 class|class
