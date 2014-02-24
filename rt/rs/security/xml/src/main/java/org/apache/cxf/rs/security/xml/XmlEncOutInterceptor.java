@@ -798,10 +798,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|userName
-operator|!=
-literal|null
-operator|&&
 name|SecurityUtils
 operator|.
 name|USE_REQUEST_SIGNATURE_CERT

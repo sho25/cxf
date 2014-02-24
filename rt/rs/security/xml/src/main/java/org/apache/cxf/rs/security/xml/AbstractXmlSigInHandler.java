@@ -1278,7 +1278,7 @@ condition|)
 block|{
 name|throwFault
 argument_list|(
-literal|"Multiple Signature Reference are not currently supported"
+literal|"Multiple Signature References are not currently supported"
 argument_list|,
 literal|null
 argument_list|)
