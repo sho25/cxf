@@ -73,6 +73,16 @@ name|javax
 operator|.
 name|jms
 operator|.
+name|ConnectionFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|jms
+operator|.
 name|DeliveryMode
 import|;
 end_import
@@ -655,30 +665,6 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The concurrentConsumer should be set"
-argument_list|,
-name|jmsConfig
-operator|.
-name|getConcurrentConsumers
-argument_list|()
-argument_list|,
-literal|3
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"The maxConcurrentConsumer should be set"
-argument_list|,
-name|jmsConfig
-operator|.
-name|getMaxConcurrentConsumers
-argument_list|()
-argument_list|,
-literal|5
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
 literal|"The maxSuspendedContinuations should be set"
 argument_list|,
 name|jmsConfig
@@ -687,16 +673,6 @@ name|getMaxSuspendedContinuations
 argument_list|()
 argument_list|,
 literal|2
-argument_list|)
-expr_stmt|;
-name|assertTrue
-argument_list|(
-literal|"The acceptMessagesWhileStopping should be set to true"
-argument_list|,
-name|jmsConfig
-operator|.
-name|isAcceptMessagesWhileStopping
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertNotNull
@@ -840,6 +816,24 @@ argument_list|(
 name|ei
 argument_list|)
 decl_stmt|;
+name|ConnectionFactory
+name|cf
+init|=
+name|destination
+operator|.
+name|getJmsConfig
+argument_list|()
+operator|.
+name|getConnectionFactory
+argument_list|()
+decl_stmt|;
+name|assertNotNull
+argument_list|(
+literal|"ConnectionFactory should not be null"
+argument_list|,
+name|cf
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"Can't get the right DurableSubscriberName"
@@ -1184,21 +1178,6 @@ argument_list|,
 literal|true
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|conduit
-operator|.
-name|getJmsConfig
-argument_list|()
-operator|.
-name|getReplyDestination
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|Message
 name|outMessage
 init|=
@@ -1257,16 +1236,6 @@ operator|=
 literal|null
 expr_stmt|;
 comment|/* 2. Test that replyTo destination set in WSDL IS used           * in spec non-compliant mode */
-name|conduit
-operator|.
-name|getJmsConfig
-argument_list|()
-operator|.
-name|setEnforceSpec
-argument_list|(
-literal|false
-argument_list|)
-expr_stmt|;
 name|sendOneWayMessage
 argument_list|(
 name|conduit

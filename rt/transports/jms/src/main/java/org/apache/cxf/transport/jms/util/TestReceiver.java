@@ -111,6 +111,10 @@ name|TextMessage
 import|;
 end_import
 
+begin_comment
+comment|/**  * Receiver for integration tests. It simulates the server side of the service  */
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -140,6 +144,7 @@ specifier|private
 name|boolean
 name|forceMessageIdAsCorrelationId
 decl_stmt|;
+comment|/**      *       * @param connectionFactory      * @param receiveQueueName listen on this queue      * @param forceMessageIdAsCorrelationId force the usage of messageId even if correlationId is set      */
 specifier|public
 name|TestReceiver
 parameter_list|(
@@ -336,7 +341,7 @@ block|}
 block|}
 specifier|private
 name|void
-name|receiveAndRespondWithMessageIdAsCorrelationId
+name|receiveAndRespond
 parameter_list|()
 block|{
 name|ResourceCloser
@@ -417,7 +422,7 @@ name|consumer
 operator|.
 name|receive
 argument_list|(
-literal|1000
+literal|10000
 argument_list|)
 decl_stmt|;
 if|if
@@ -427,6 +432,15 @@ operator|==
 literal|null
 condition|)
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"TestReceiver timed out"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|RuntimeException
@@ -545,7 +559,11 @@ name|out
 operator|.
 name|println
 argument_list|(
-literal|"Sending reply to "
+literal|"Sending reply with correlation id "
+operator|+
+name|correlationId
+operator|+
+literal|" to "
 operator|+
 name|replyDest
 argument_list|)
@@ -603,7 +621,7 @@ name|void
 name|run
 parameter_list|()
 block|{
-name|receiveAndRespondWithMessageIdAsCorrelationId
+name|receiveAndRespond
 argument_list|()
 expr_stmt|;
 block|}
