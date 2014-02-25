@@ -1460,7 +1460,9 @@ name|endpoint
 init|=
 operator|new
 name|JMSEndpoint
-argument_list|()
+argument_list|(
+literal|""
+argument_list|)
 decl_stmt|;
 name|endpoint
 operator|.

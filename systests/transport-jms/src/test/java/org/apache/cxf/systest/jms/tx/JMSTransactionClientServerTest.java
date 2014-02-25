@@ -397,13 +397,6 @@ argument_list|(
 literal|false
 argument_list|)
 expr_stmt|;
-name|jmsConfig
-operator|.
-name|setCacheLevel
-argument_list|(
-literal|3
-argument_list|)
-expr_stmt|;
 name|JMSConfigFeature
 name|jmsConfigFeature
 init|=
