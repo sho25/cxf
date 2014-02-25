@@ -80,6 +80,15 @@ name|MESSAGE_CAPTURE_CHAIN
 init|=
 literal|"org.apache.cxf.rm.captureOnly"
 decl_stmt|;
+comment|/** Client callback (must be instance of {@link MessageCallback}). */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RM_CLIENT_CALLBACK
+init|=
+literal|"org.apache.cxf.rm.clientCallback"
+decl_stmt|;
 specifier|static
 specifier|final
 name|String

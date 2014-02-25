@@ -484,6 +484,23 @@ argument_list|(
 name|wsdl
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|wsdlUrl
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"Wsdl file not found on class path "
+operator|+
+name|wsdl
+argument_list|)
+throw|;
+block|}
 name|String
 name|wsdlURL
 init|=

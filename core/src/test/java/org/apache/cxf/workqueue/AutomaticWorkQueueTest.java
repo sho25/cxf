@@ -540,16 +540,8 @@ argument_list|,
 name|TIMEOUT
 argument_list|)
 expr_stmt|;
-name|assertEquals
-argument_list|(
-name|INITIAL_SIZE
-argument_list|,
-name|workqueue
-operator|.
-name|getPoolSize
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|// Don't check the PoolSize as different JDK return different value
+comment|//assertEquals(INITIAL_SIZE, workqueue.getPoolSize());
 comment|// Give threads a chance to dequeue (5sec max)
 name|int
 name|i
