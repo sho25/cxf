@@ -181,12 +181,6 @@ block|}
 annotation|@
 name|Test
 comment|// seems to cause PermGen issue to another systests/jaxrs later in some system. the code under analysis
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testBookWithWebSocket
