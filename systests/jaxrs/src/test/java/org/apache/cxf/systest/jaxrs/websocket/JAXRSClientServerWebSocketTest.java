@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jaxrs
+operator|.
+name|websocket
 package|;
 end_package
 
@@ -112,7 +114,7 @@ specifier|final
 name|String
 name|PORT
 init|=
-name|BookServer
+name|BookServerWebSocket
 operator|.
 name|PORT
 decl_stmt|;
@@ -165,7 +167,7 @@ argument_list|,
 name|launchServer
 argument_list|(
 operator|new
-name|BookServer
+name|BookServerWebSocket
 argument_list|(
 name|properties
 argument_list|)
