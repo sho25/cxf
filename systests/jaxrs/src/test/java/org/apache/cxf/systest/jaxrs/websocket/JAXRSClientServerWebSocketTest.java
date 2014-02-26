@@ -396,7 +396,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /bookstore/booksplain\r\n\r\n123"
+literal|"POST /bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
 operator|.
 name|getBytes
 argument_list|()
