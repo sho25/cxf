@@ -1815,6 +1815,7 @@ name|XMLSecurityException
 block|{
 if|if
 condition|(
+operator|(
 name|XMLSecurityConstants
 operator|.
 name|Asym_Sig
@@ -1838,6 +1839,7 @@ operator|.
 name|getAlgorithmUsage
 argument_list|()
 argument_list|)
+operator|)
 operator|&&
 name|sigProps
 operator|.
@@ -1998,6 +2000,19 @@ argument_list|(
 name|event
 operator|.
 name|getAlgorithmUsage
+argument_list|()
+argument_list|)
+operator|&&
+operator|!
+name|XMLSecurityConstants
+operator|.
+name|NS_XMLDSIG_ENVELOPED_SIGNATURE
+operator|.
+name|equals
+argument_list|(
+name|event
+operator|.
+name|getAlgorithmURI
 argument_list|()
 argument_list|)
 operator|&&
