@@ -157,7 +157,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/bookstore"
+literal|"/web/bookstore"
 argument_list|)
 specifier|public
 class|class

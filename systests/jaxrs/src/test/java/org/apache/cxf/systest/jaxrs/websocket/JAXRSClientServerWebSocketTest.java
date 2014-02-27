@@ -194,7 +194,7 @@ literal|"ws://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/bookstore"
+literal|"/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
 name|wsclient
@@ -219,7 +219,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /bookstore/booknames"
+literal|"GET /web/bookstore/booknames"
 operator|.
 name|getBytes
 argument_list|()
@@ -292,7 +292,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /bookstore/books/123"
+literal|"GET /web/bookstore/books/123"
 operator|.
 name|getBytes
 argument_list|()
@@ -359,7 +359,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /bookstore/booknames\r\n\r\n123"
+literal|"POST /web/bookstore/booknames\r\n\r\n123"
 operator|.
 name|getBytes
 argument_list|()
@@ -389,7 +389,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
+literal|"POST /web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
 operator|.
 name|getBytes
 argument_list|()
@@ -446,7 +446,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /bookstore/bookbought"
+literal|"GET /web/bookstore/bookbought"
 operator|.
 name|getBytes
 argument_list|()
