@@ -1166,9 +1166,6 @@ expr_stmt|;
 comment|// Put the token on the out message so that we can sign the response
 name|exchange
 operator|.
-name|getEndpoint
-argument_list|()
-operator|.
 name|put
 argument_list|(
 name|SecurityConstants
