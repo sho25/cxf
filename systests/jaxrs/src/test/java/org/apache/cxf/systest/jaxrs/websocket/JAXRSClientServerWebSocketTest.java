@@ -219,7 +219,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /bookstore/booknames/123"
+literal|"GET /bookstore/booknames"
 operator|.
 name|getBytes
 argument_list|()
