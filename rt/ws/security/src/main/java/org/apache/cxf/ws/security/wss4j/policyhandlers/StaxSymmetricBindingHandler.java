@@ -1881,6 +1881,9 @@ expr_stmt|;
 name|enforceEncryptBeforeSigningWithSignedSAML
 argument_list|()
 expr_stmt|;
+name|prependSignatureToSC
+argument_list|()
+expr_stmt|;
 comment|// Reshuffle so that a IssuedToken is above a Signature that references it
 if|if
 condition|(
@@ -2479,6 +2482,9 @@ name|addSupportingTokens
 argument_list|()
 expr_stmt|;
 name|removeSignatureIfSignedSAML
+argument_list|()
+expr_stmt|;
+name|prependSignatureToSC
 argument_list|()
 expr_stmt|;
 comment|//Encryption
@@ -3405,7 +3411,7 @@ operator|.
 name|getActions
 argument_list|()
 decl_stmt|;
-comment|// Add a Signature directly before a Kerberos or SCT, otherwise just append it
+comment|// Add a Signature directly before Kerberos, otherwise just append it
 name|boolean
 name|actionAdded
 init|=
@@ -3450,15 +3456,6 @@ argument_list|(
 name|WSSConstants
 operator|.
 name|KERBEROS_TOKEN
-argument_list|)
-operator|||
-name|action
-operator|.
-name|equals
-argument_list|(
-name|WSSConstants
-operator|.
-name|SIGNATURE_CONFIRMATION
 argument_list|)
 condition|)
 block|{
