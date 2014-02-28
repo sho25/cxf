@@ -452,6 +452,8 @@ operator|new
 name|WebApplicationException
 argument_list|(
 name|cause
+argument_list|,
+name|response
 argument_list|)
 return|;
 block|}
