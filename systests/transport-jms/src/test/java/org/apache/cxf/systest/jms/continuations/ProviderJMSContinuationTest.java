@@ -379,7 +379,6 @@ argument_list|,
 name|serviceName
 argument_list|)
 decl_stmt|;
-comment|// FIXME add cff feature
 name|HelloWorldPortType
 name|greeter
 init|=
@@ -390,6 +389,8 @@ argument_list|(
 name|HelloWorldPortType
 operator|.
 name|class
+argument_list|,
+name|cff
 argument_list|)
 decl_stmt|;
 name|greeter
