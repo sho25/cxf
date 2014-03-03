@@ -632,7 +632,10 @@ condition|(
 name|alternate
 operator|!=
 literal|null
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 name|LOG
 operator|.
 name|isLoggable
@@ -659,6 +662,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|alternates
 operator|.
 name|add
