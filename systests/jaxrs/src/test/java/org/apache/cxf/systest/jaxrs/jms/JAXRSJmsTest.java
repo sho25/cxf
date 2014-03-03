@@ -508,15 +508,13 @@ name|endpointAddressUrlEncoded
 init|=
 literal|"jms:jndi:dynamicQueues/test.jmstransport.text"
 operator|+
-literal|"?jndiInitialContextFactory=org.apache.activemq.jndi.ActiveMQInitialContextFactory"
+literal|"?replyToName=dynamicQueues/test.jmstransport.response"
 operator|+
-literal|"&replyToName=dynamicQueues/test.jmstransport.response"
+literal|"&jndiInitialContextFactory=org.apache.activemq.jndi.ActiveMQInitialContextFactory"
 operator|+
 literal|"&jndiURL=tcp://localhost:"
 operator|+
 name|JMS_PORT
-operator|+
-literal|"&jndiConnectionFactoryName=ConnectionFactory"
 decl_stmt|;
 name|WebClient
 name|client

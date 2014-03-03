@@ -173,22 +173,6 @@ name|Destination
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|beans
-operator|.
-name|factory
-operator|.
-name|annotation
-operator|.
-name|Required
-import|;
-end_import
-
 begin_comment
 comment|/**  * Allows to configure the JMSConfiguration directly at the Client or Server. Simply add this class to the  * Features and reference a JMSConfiguration. The configuration inside this class takes precedence over a  * configuration that is generated from the old configuration style.  */
 end_comment
@@ -374,8 +358,6 @@ return|return
 name|jmsConfig
 return|;
 block|}
-annotation|@
-name|Required
 specifier|public
 name|void
 name|setJmsConfig

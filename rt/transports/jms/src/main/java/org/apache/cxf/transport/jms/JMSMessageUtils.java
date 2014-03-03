@@ -1543,12 +1543,8 @@ if|if
 condition|(
 name|endpoint
 operator|.
-name|getParameter
-argument_list|(
-name|JMSSpecConstants
-operator|.
-name|TARGETSERVICE_PARAMETER_NAME
-argument_list|)
+name|getTargetService
+argument_list|()
 operator|!=
 literal|null
 condition|)

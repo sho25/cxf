@@ -348,7 +348,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|String
+name|Object
 argument_list|>
 name|parseQuery
 parameter_list|()
@@ -357,7 +357,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|String
+name|Object
 argument_list|>
 name|rc
 init|=
@@ -366,7 +366,7 @@ name|HashMap
 argument_list|<
 name|String
 argument_list|,
-name|String
+name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;

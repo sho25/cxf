@@ -517,6 +517,13 @@ argument_list|)
 expr_stmt|;
 name|ep
 operator|.
+name|setAddress
+argument_list|(
+literal|"jms:jndi:dynamicQueues/test.cxf.factory_pattern.queue"
+argument_list|)
+expr_stmt|;
+name|ep
+operator|.
 name|publish
 argument_list|()
 expr_stmt|;
