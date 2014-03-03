@@ -620,10 +620,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|greeter
-operator|=
-literal|null
-expr_stmt|;
+comment|// FIXME add cff feature
 name|greeter
 operator|=
 name|service
@@ -635,8 +632,6 @@ argument_list|,
 name|Greeter
 operator|.
 name|class
-argument_list|,
-name|cff
 argument_list|)
 expr_stmt|;
 for|for
