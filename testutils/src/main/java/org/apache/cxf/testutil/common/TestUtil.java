@@ -1117,10 +1117,11 @@ name|address
 operator|.
 name|startsWith
 argument_list|(
-literal|"http:"
+literal|"http"
 argument_list|)
 condition|)
 block|{
+comment|// http and https are ok
 name|URL
 name|url
 init|=
