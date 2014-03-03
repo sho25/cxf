@@ -398,6 +398,15 @@ name|TOKEN_STORE_CACHE_INSTANCE
 init|=
 literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
 decl_stmt|;
+comment|/**      * The Cache Identifier to use with the TokenStore. CXF uses the following key to retrieve a      * token store: "org.apache.cxf.ws.security.tokenstore.TokenStore-<identifier>". This key can be       * used to configure service-specific cache configuration. If the identifier does not match, then it       * falls back to a cache configuration with key "org.apache.cxf.ws.security.tokenstore.TokenStore".      *       * The default "<identifier>" is the QName of the service in question. However to pick up a       * custom cache configuration (for example, if you want to specify a TokenStore per-client proxy),      * it can be configured with this identifier instead.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CACHE_IDENTIFIER
+init|=
+literal|"ws-security.cache.identifier"
+decl_stmt|;
 comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the  certificate.      */
 specifier|public
 specifier|static
@@ -803,6 +812,8 @@ block|,
 name|ENABLE_STREAMING_SECURITY
 block|,
 name|RETURN_SECURITY_ERROR
+block|,
+name|CACHE_IDENTIFIER
 block|}
 argument_list|)
 argument_list|)
