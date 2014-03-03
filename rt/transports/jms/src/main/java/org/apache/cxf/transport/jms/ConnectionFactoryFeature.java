@@ -220,22 +220,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|!
-operator|(
 name|conduit
 operator|instanceof
 name|JMSConduit
-operator|)
 condition|)
 block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"This feature only works for jms transport"
-argument_list|)
-throw|;
-block|}
 name|JMSConduit
 name|jmsConduit
 init|=
@@ -254,6 +243,7 @@ argument_list|(
 name|connectionFactory
 argument_list|)
 expr_stmt|;
+block|}
 name|super
 operator|.
 name|initialize
@@ -287,22 +277,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|!
-operator|(
 name|destination
 operator|instanceof
 name|JMSDestination
-operator|)
 condition|)
 block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"This feature only works for jms transport"
-argument_list|)
-throw|;
-block|}
 name|JMSDestination
 name|jmsDestination
 init|=
@@ -321,6 +300,7 @@ argument_list|(
 name|connectionFactory
 argument_list|)
 expr_stmt|;
+block|}
 name|super
 operator|.
 name|initialize
