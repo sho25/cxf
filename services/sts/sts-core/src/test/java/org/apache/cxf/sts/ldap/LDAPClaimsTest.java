@@ -165,7 +165,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
@@ -181,7 +183,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
@@ -249,7 +253,7 @@ name|sts
 operator|.
 name|claims
 operator|.
-name|RequestClaim
+name|ProcessedClaim
 import|;
 end_import
 
@@ -265,7 +269,7 @@ name|sts
 operator|.
 name|claims
 operator|.
-name|RequestClaimCollection
+name|ProcessedClaimCollection
 import|;
 end_import
 
@@ -542,7 +546,7 @@ argument_list|,
 literal|"Property 'claimUser' not configured"
 argument_list|)
 expr_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|createRequestClaimCollection
@@ -606,7 +610,7 @@ name|user
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|retrievedClaims
 init|=
 name|claimsHandler
@@ -651,7 +655,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|Claim
+name|ProcessedClaim
 name|c
 range|:
 name|retrievedClaims
@@ -760,18 +764,18 @@ argument_list|,
 literal|"Property 'claimUser' not configured"
 argument_list|)
 expr_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|createRequestClaimCollection
 argument_list|()
 decl_stmt|;
 comment|// add unsupported but mandatory claim
-name|RequestClaim
+name|Claim
 name|claim
 init|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 decl_stmt|;
 name|claim
@@ -876,18 +880,18 @@ argument_list|,
 literal|"Property 'claimUser' not configured"
 argument_list|)
 expr_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|createRequestClaimCollection
 argument_list|()
 decl_stmt|;
 comment|// add unsupported but optional unsupported claim
-name|RequestClaim
+name|Claim
 name|claim
 init|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 decl_stmt|;
 name|claim
@@ -972,7 +976,7 @@ name|user
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|retrievedClaims
 init|=
 name|claimsHandler
@@ -1017,7 +1021,7 @@ argument_list|)
 expr_stmt|;
 for|for
 control|(
-name|Claim
+name|ProcessedClaim
 name|c
 range|:
 name|retrievedClaims
@@ -1069,22 +1073,22 @@ block|}
 block|}
 block|}
 specifier|private
-name|RequestClaimCollection
+name|ClaimCollection
 name|createRequestClaimCollection
 parameter_list|()
 block|{
-name|RequestClaimCollection
+name|ClaimCollection
 name|claims
 init|=
 operator|new
-name|RequestClaimCollection
+name|ClaimCollection
 argument_list|()
 decl_stmt|;
-name|RequestClaim
+name|Claim
 name|claim
 init|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 decl_stmt|;
 name|claim
@@ -1113,7 +1117,7 @@ expr_stmt|;
 name|claim
 operator|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 expr_stmt|;
 name|claim
@@ -1142,7 +1146,7 @@ expr_stmt|;
 name|claim
 operator|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 expr_stmt|;
 name|claim

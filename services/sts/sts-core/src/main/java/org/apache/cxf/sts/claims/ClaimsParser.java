@@ -29,13 +29,31 @@ name|Element
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|claims
+operator|.
+name|Claim
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
 name|ClaimsParser
 block|{
-comment|/**      * @param claim Element to parse claim request from      * @return RequestClaim parsed from claim      */
-name|RequestClaim
+comment|/**      * @param claim Element to parse claim request from      * @return Claim parsed from claim      */
+name|Claim
 name|parse
 parameter_list|(
 name|Element

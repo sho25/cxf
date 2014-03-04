@@ -17,24 +17,14 @@ name|claims
 package|;
 end_package
 
-begin_import
-import|import
-name|java
-operator|.
-name|net
-operator|.
-name|URI
-import|;
-end_import
-
 begin_comment
-comment|/**  * This holds a collection of RequestClaims.  */
+comment|/**  * This holds a collection of Claims that have been processed by a ClaimsHandler implementation  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|RequestClaimCollection
+name|ProcessedClaimCollection
 extends|extends
 name|java
 operator|.
@@ -42,7 +32,7 @@ name|util
 operator|.
 name|ArrayList
 argument_list|<
-name|RequestClaim
+name|ProcessedClaim
 argument_list|>
 block|{
 comment|/**      *       */
@@ -52,36 +42,9 @@ specifier|final
 name|long
 name|serialVersionUID
 init|=
-literal|6013920740410651546L
+operator|-
+literal|4630183900697336428L
 decl_stmt|;
-specifier|private
-name|URI
-name|dialect
-decl_stmt|;
-specifier|public
-name|URI
-name|getDialect
-parameter_list|()
-block|{
-return|return
-name|dialect
-return|;
-block|}
-specifier|public
-name|void
-name|setDialect
-parameter_list|(
-name|URI
-name|dialect
-parameter_list|)
-block|{
-name|this
-operator|.
-name|dialect
-operator|=
-name|dialect
-expr_stmt|;
-block|}
 block|}
 end_class
 

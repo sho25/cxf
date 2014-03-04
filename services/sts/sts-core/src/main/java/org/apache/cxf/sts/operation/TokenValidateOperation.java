@@ -99,6 +99,24 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|claims
+operator|.
+name|ClaimCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|sts
 operator|.
 name|QNameConstants
@@ -130,22 +148,6 @@ operator|.
 name|sts
 operator|.
 name|STSConstants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|sts
-operator|.
-name|claims
-operator|.
-name|RequestClaimCollection
 import|;
 end_import
 
@@ -884,7 +886,7 @@ name|tokenResponse
 argument_list|)
 expr_stmt|;
 comment|// Check if the requested claims can be handled by the configured claim handlers
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|providerParameters
