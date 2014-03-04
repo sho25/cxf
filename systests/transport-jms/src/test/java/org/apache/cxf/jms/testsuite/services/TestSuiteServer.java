@@ -100,7 +100,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|Server
+name|TestSuiteServer
 extends|extends
 name|AbstractBusTestServerBase
 block|{
@@ -1032,11 +1032,11 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|Server
+name|TestSuiteServer
 name|s
 init|=
 operator|new
-name|Server
+name|TestSuiteServer
 argument_list|()
 decl_stmt|;
 name|s

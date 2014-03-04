@@ -311,6 +311,13 @@ argument_list|)
 decl_stmt|;
 name|ep
 operator|.
+name|setBus
+argument_list|(
+name|bus
+argument_list|)
+expr_stmt|;
+name|ep
+operator|.
 name|getFeatures
 argument_list|()
 operator|.

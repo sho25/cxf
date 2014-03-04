@@ -209,7 +209,7 @@ name|testsuite
 operator|.
 name|services
 operator|.
-name|Server
+name|TestSuiteServer
 import|;
 end_import
 
@@ -804,7 +804,7 @@ literal|"server did not launch correctly"
 argument_list|,
 name|launchServer
 argument_list|(
-name|Server
+name|TestSuiteServer
 operator|.
 name|class
 argument_list|,

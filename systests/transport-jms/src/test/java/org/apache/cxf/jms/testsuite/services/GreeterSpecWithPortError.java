@@ -11,9 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
 name|jms
+operator|.
+name|testsuite
+operator|.
+name|services
 package|;
 end_package
 
