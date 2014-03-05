@@ -1066,6 +1066,8 @@ name|ParameterType
 operator|.
 name|QUERY
 argument_list|,
+literal|null
+argument_list|,
 name|values
 argument_list|)
 expr_stmt|;
@@ -1136,6 +1138,8 @@ name|values
 index|[
 literal|0
 index|]
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1157,6 +1161,8 @@ argument_list|,
 name|convertParamValue
 argument_list|(
 name|o
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3980,6 +3986,10 @@ parameter_list|,
 name|ParameterType
 name|pt
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|Object
 modifier|...
 name|pValues
@@ -4120,6 +4130,8 @@ name|next
 argument_list|()
 argument_list|,
 name|pt
+argument_list|,
+name|anns
 argument_list|)
 expr_stmt|;
 block|}
@@ -4135,6 +4147,8 @@ argument_list|,
 name|pValue
 argument_list|,
 name|pt
+argument_list|,
+name|anns
 argument_list|)
 expr_stmt|;
 block|}
@@ -4226,6 +4240,8 @@ argument_list|,
 name|v
 argument_list|,
 name|pt
+argument_list|,
+name|anns
 argument_list|)
 expr_stmt|;
 block|}
@@ -4247,6 +4263,10 @@ name|pValue
 parameter_list|,
 name|ParameterType
 name|pt
+parameter_list|,
+name|Annotation
+index|[]
+name|anns
 parameter_list|)
 block|{
 name|Object
@@ -4255,6 +4275,8 @@ init|=
 name|convertParamValue
 argument_list|(
 name|pValue
+argument_list|,
+name|anns
 argument_list|)
 decl_stmt|;
 name|addMatrixOrQueryToBuilder
@@ -4325,6 +4347,10 @@ name|convertParamValue
 parameter_list|(
 name|Object
 name|pValue
+parameter_list|,
+name|Annotation
+index|[]
+name|anns
 parameter_list|)
 block|{
 if|if
@@ -4338,43 +4364,6 @@ return|return
 literal|null
 return|;
 block|}
-name|Class
-argument_list|<
-name|?
-argument_list|>
-name|pClass
-init|=
-name|pValue
-operator|.
-name|getClass
-argument_list|()
-decl_stmt|;
-if|if
-condition|(
-name|pClass
-operator|==
-name|String
-operator|.
-name|class
-operator|||
-name|pClass
-operator|.
-name|isPrimitive
-argument_list|()
-condition|)
-block|{
-return|return
-name|pValue
-operator|.
-name|toString
-argument_list|()
-return|;
-block|}
-comment|// A little scope for some optimization exists, particularly,
-comment|// it is feasible a complex object may need to be repeatedly converted
-comment|// so we can keep a map of ParamConverter on the bus, that said
-comment|// it seems an over-optimization at this stage, it's a 5% case;
-comment|// typical requests have a limited number of simple URI parameters
 name|ProviderFactory
 name|pf
 init|=
@@ -4395,6 +4384,17 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|pClass
+init|=
+name|pValue
+operator|.
+name|getClass
+argument_list|()
+decl_stmt|;
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -4417,6 +4417,8 @@ operator|.
 name|createParameterHandler
 argument_list|(
 name|pClass
+argument_list|,
+name|anns
 argument_list|)
 decl_stmt|;
 if|if

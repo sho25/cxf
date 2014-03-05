@@ -2671,6 +2671,8 @@ argument_list|(
 name|convertParamValue
 argument_list|(
 name|path
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2801,6 +2803,8 @@ argument_list|,
 name|ParameterType
 operator|.
 name|MATRIX
+argument_list|,
+literal|null
 argument_list|,
 name|values
 argument_list|)
