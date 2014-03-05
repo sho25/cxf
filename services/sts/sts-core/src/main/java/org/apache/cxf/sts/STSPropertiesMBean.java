@@ -328,6 +328,19 @@ name|SAMLRealmCodec
 name|samlRealmCodec
 parameter_list|)
 function_decl|;
+comment|/**      * Get whether to validate a client Public Key or Certificate presented as part of a       * UseKey element. This is true by default.      */
+name|boolean
+name|isValidateUseKey
+parameter_list|()
+function_decl|;
+comment|/**      * Set whether to validate a client Public Key or Certificate presented as part of a       * UseKey element. If this is set to true (the default), the public key must be trusted      * by the Signature Crypto of the STS.      *       * @param validateUseKey whether to validate a client UseKey or not.      */
+name|void
+name|setValidateUseKey
+parameter_list|(
+name|boolean
+name|validateUseKey
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
