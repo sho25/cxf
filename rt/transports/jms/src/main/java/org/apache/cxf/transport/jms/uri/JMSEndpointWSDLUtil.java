@@ -251,6 +251,7 @@ name|EndpointInfo
 name|ei
 parameter_list|)
 block|{
+comment|// TODO We could have more than one parameter
 name|JndiContextParameterType
 name|jndiContextParameterType
 init|=
