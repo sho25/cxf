@@ -2493,17 +2493,6 @@ return|return
 name|path
 return|;
 block|}
-annotation|@
-name|Override
-specifier|public
-name|String
-name|getRequestURI
-parameter_list|()
-block|{
-return|return
-name|path
-return|;
-block|}
 specifier|public
 name|void
 name|setParameter
