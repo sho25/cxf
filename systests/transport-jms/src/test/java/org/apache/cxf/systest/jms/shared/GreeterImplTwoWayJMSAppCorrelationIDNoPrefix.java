@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jms
+operator|.
+name|shared
 package|;
 end_package
 
@@ -24,6 +26,22 @@ operator|.
 name|jws
 operator|.
 name|WebService
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jms
+operator|.
+name|TwoWayJMSImplBase
 import|;
 end_import
 

@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jms
+operator|.
+name|shared
 package|;
 end_package
 
@@ -27,17 +29,33 @@ name|WebService
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jms
+operator|.
+name|TwoWayJMSImplBase
+import|;
+end_import
+
 begin_class
 annotation|@
 name|WebService
 argument_list|(
 name|serviceName
 operator|=
-literal|"HelloWorldServiceAppCorrelationIDStaticPrefix"
+literal|"HelloWorldServiceRuntimeCorrelationIDStaticPrefix"
 argument_list|,
 name|portName
 operator|=
-literal|"HelloWorldPortAppCorrelationIDStaticPrefixSales"
+literal|"HelloWorldPortRuntimeCorrelationIDStaticPrefixEng"
 argument_list|,
 name|endpointInterface
 operator|=
@@ -53,7 +71,7 @@ literal|"testutils/jms_test.wsdl"
 argument_list|)
 specifier|public
 class|class
-name|GreeterImplTwoWayJMSAppCorrelationIDStaticPrefixSales
+name|GreeterImplTwoWayJMSRuntimeCorrelationIDStaticPrefixEng
 extends|extends
 name|TwoWayJMSImplBase
 block|{          }
