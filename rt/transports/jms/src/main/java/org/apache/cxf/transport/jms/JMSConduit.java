@@ -398,7 +398,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with jms://. JMSConduit converts CXF Messages to JMS Messages and sends the request by   * using a JMS destination. If the Exchange is not oneway it then recevies the response and converts it to   * a CXF Message. This is then provided in the Exchange and also sent to the incomingObserver.  */
+comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with "jms:". JMSConduit converts CXF Messages to JMS Messages and sends the request  * over a queue or a topic.  * If the Exchange is not one way it then receives the response and converts it to   * a CXF Message. This is then provided in the Exchange and also sent to the IncomingObserver.  */
 end_comment
 
 begin_class
@@ -631,7 +631,7 @@ name|jmsListener
 operator|=
 name|JMSFactory
 operator|.
-name|createSimpleJmsListener
+name|createListenerContainer
 argument_list|(
 name|jmsConfig
 argument_list|,

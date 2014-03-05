@@ -927,13 +927,14 @@ name|JMSException
 name|e
 parameter_list|)
 block|{
+throw|throw
 name|JMSUtil
 operator|.
 name|convertJmsException
 argument_list|(
 name|e
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 finally|finally
 block|{
