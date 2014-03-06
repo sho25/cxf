@@ -225,15 +225,6 @@ specifier|final
 class|class
 name|SAMLUtils
 block|{
-comment|/**      * This configuration tag specifies the default attribute name where the roles are present      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SAML_ROLE_ATTRIBUTENAME_DEFAULT
-init|=
-literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role"
-decl_stmt|;
 specifier|private
 name|SAMLUtils
 parameter_list|()
@@ -606,6 +597,8 @@ condition|)
 block|{
 name|roleAttributeName
 operator|=
+name|SAMLClaim
+operator|.
 name|SAML_ROLE_ATTRIBUTENAME_DEFAULT
 expr_stmt|;
 block|}

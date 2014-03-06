@@ -30,6 +30,15 @@ name|SAMLClaim
 extends|extends
 name|Claim
 block|{
+comment|/**      * This configuration tag specifies the default attribute name where the roles are present      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SAML_ROLE_ATTRIBUTENAME_DEFAULT
+init|=
+literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
