@@ -149,15 +149,6 @@ literal|"/schemaimport/sayHi"
 operator|+
 literal|"?xsd=sayhi/sayhi/sayhi-schema1.xsd"
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|schemaURL
-argument_list|)
-expr_stmt|;
 name|URL
 name|url
 init|=
