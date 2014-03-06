@@ -6229,7 +6229,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"true"
+literal|"0"
 argument_list|,
 operator|(
 operator|(
@@ -6240,7 +6240,7 @@ operator|)
 operator|.
 name|getAttribute
 argument_list|(
-literal|"nillable"
+literal|"minOccurs"
 argument_list|)
 argument_list|)
 expr_stmt|;
