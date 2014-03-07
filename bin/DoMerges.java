@@ -477,6 +477,8 @@ literal|"git"
 block|,
 literal|"commit"
 block|,
+literal|"--no-edit"
+block|,
 literal|"-a"
 block|}
 argument_list|)
