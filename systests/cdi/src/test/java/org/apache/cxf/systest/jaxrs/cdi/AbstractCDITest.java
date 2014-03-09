@@ -463,8 +463,8 @@ return|return
 name|wc
 return|;
 block|}
-specifier|abstract
 specifier|protected
+specifier|abstract
 name|int
 name|getPort
 parameter_list|()
