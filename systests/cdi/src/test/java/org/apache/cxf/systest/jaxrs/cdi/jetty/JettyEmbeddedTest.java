@@ -16,6 +16,8 @@ operator|.
 name|jaxrs
 operator|.
 name|cdi
+operator|.
+name|jetty
 package|;
 end_package
 
@@ -32,6 +34,24 @@ operator|.
 name|model
 operator|.
 name|AbstractResourceInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|cdi
+operator|.
+name|AbstractCDITest
 import|;
 end_import
 
@@ -58,7 +78,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JettyWarTest
+name|JettyEmbeddedTest
 extends|extends
 name|AbstractCDITest
 block|{
@@ -90,8 +110,6 @@ parameter_list|()
 block|{
 name|super
 argument_list|(
-literal|"/jaxrs_cdi"
-argument_list|,
 literal|"/"
 argument_list|,
 name|PORT
@@ -114,6 +132,7 @@ operator|.
 name|clearAllMaps
 argument_list|()
 expr_stmt|;
+comment|//keep out of process due to stack traces testing failures
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
