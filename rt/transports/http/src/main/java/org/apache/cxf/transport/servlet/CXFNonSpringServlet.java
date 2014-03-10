@@ -529,11 +529,7 @@ operator|.
 name|destinationRegistry
 operator|=
 name|getDestinationRegistryFromBus
-argument_list|(
-name|this
-operator|.
-name|bus
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 block|}
@@ -571,10 +567,7 @@ block|}
 specifier|protected
 name|DestinationRegistry
 name|getDestinationRegistryFromBus
-parameter_list|(
-name|Bus
-name|bus
-parameter_list|)
+parameter_list|()
 block|{
 name|DestinationFactoryManager
 name|dfm
