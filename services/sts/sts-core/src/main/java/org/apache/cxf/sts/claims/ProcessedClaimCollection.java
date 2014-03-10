@@ -18,13 +18,13 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This holds a collection of Claims.  */
+comment|/**  * This holds a collection of Claims that have been processed by a ClaimsHandler implementation  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|ClaimCollection
+name|ProcessedClaimCollection
 extends|extends
 name|java
 operator|.
@@ -32,7 +32,7 @@ name|util
 operator|.
 name|ArrayList
 argument_list|<
-name|Claim
+name|ProcessedClaim
 argument_list|>
 block|{
 comment|/**      *       */

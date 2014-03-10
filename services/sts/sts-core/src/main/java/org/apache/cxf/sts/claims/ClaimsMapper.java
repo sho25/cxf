@@ -27,13 +27,13 @@ interface|interface
 name|ClaimsMapper
 block|{
 comment|/**      * Map a collection of claims in the source realm to the target realm      * @param sourceRealm the source realm of the Principal      * @param sourceClaims the claims collection in the source realm      * @param targetRealm the target realm of the Principal      * @return claims collection of the target realm      */
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|mapClaims
 parameter_list|(
 name|String
 name|sourceRealm
 parameter_list|,
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|sourceClaims
 parameter_list|,
 name|String

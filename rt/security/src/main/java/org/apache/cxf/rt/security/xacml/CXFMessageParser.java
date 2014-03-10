@@ -51,11 +51,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|message
 operator|.
-name|security
-operator|.
-name|SAMLSecurityContext
+name|Message
 import|;
 end_import
 
@@ -67,9 +65,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|rt
 operator|.
-name|Message
+name|security
+operator|.
+name|saml
+operator|.
+name|SAMLSecurityContext
 import|;
 end_import
 
