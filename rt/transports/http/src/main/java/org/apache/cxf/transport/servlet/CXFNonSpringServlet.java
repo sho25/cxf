@@ -568,8 +568,7 @@ name|class
 argument_list|)
 return|;
 block|}
-specifier|private
-specifier|static
+specifier|protected
 name|DestinationRegistry
 name|getDestinationRegistryFromBus
 parameter_list|(
