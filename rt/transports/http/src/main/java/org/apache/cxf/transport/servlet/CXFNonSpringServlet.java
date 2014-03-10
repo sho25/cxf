@@ -365,6 +365,10 @@ init|=
 operator|-
 literal|2437897227486327166L
 decl_stmt|;
+specifier|protected
+name|Bus
+name|bus
+decl_stmt|;
 specifier|private
 name|DestinationRegistry
 name|destinationRegistry
@@ -372,10 +376,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|globalRegistry
-decl_stmt|;
-specifier|private
-name|Bus
-name|bus
 decl_stmt|;
 specifier|private
 name|ServletController
