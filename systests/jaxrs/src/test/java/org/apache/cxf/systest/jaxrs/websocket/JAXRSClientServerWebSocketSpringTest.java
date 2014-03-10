@@ -89,7 +89,11 @@ block|{
 annotation|@
 name|SuppressWarnings
 argument_list|(
+block|{
 literal|"unused"
+block|,
+literal|"resource"
+block|}
 argument_list|)
 name|ApplicationContext
 name|appctxt
