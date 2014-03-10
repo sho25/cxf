@@ -536,7 +536,12 @@ name|book
 operator|.
 name|setName
 argument_list|(
-literal|"Redirect complete"
+literal|"Redirect complete: "
+operator|+
+name|request
+operator|.
+name|getRequestURI
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return

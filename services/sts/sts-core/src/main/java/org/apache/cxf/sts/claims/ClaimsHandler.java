@@ -37,6 +37,24 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|claims
+operator|.
+name|ClaimCollection
+import|;
+end_import
+
 begin_comment
 comment|/**  * This interface provides a pluggable way to handle Claims.  */
 end_comment
@@ -53,10 +71,10 @@ argument_list|>
 name|getSupportedClaimTypes
 parameter_list|()
 function_decl|;
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|retrieveClaimValues
 parameter_list|(
-name|RequestClaimCollection
+name|ClaimCollection
 name|claims
 parameter_list|,
 name|ClaimsParameters

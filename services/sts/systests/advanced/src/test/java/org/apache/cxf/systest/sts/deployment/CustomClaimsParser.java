@@ -111,11 +111,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
-name|ClaimsParser
+name|Claim
 import|;
 end_import
 
@@ -131,7 +133,7 @@ name|sts
 operator|.
 name|claims
 operator|.
-name|RequestClaim
+name|ClaimsParser
 import|;
 end_import
 
@@ -170,7 +172,7 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|public
-name|RequestClaim
+name|Claim
 name|parse
 parameter_list|(
 name|Element
@@ -186,7 +188,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|RequestClaim
+name|Claim
 name|parseClaimType
 parameter_list|(
 name|Element
@@ -243,11 +245,11 @@ argument_list|,
 literal|"Optional"
 argument_list|)
 decl_stmt|;
-name|RequestClaim
+name|Claim
 name|requestClaim
 init|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 decl_stmt|;
 try|try
@@ -337,11 +339,11 @@ argument_list|,
 literal|"Optional"
 argument_list|)
 decl_stmt|;
-name|RequestClaim
+name|Claim
 name|requestClaim
 init|=
 operator|new
-name|RequestClaim
+name|Claim
 argument_list|()
 decl_stmt|;
 try|try
@@ -410,7 +412,7 @@ condition|)
 block|{
 name|requestClaim
 operator|.
-name|setClaimValue
+name|addValue
 argument_list|(
 name|valueNode
 operator|.
