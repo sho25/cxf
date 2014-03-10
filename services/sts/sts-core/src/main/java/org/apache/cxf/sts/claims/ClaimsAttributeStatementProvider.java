@@ -193,11 +193,11 @@ operator|.
 name|getClaimsManager
 argument_list|()
 decl_stmt|;
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|retrievedClaims
 init|=
 operator|new
-name|ClaimCollection
+name|ProcessedClaimCollection
 argument_list|()
 decl_stmt|;
 if|if
@@ -411,7 +411,7 @@ return|;
 block|}
 name|Iterator
 argument_list|<
-name|Claim
+name|ProcessedClaim
 argument_list|>
 name|claimIterator
 init|=
@@ -472,7 +472,7 @@ name|hasNext
 argument_list|()
 condition|)
 block|{
-name|Claim
+name|ProcessedClaim
 name|claim
 init|=
 name|claimIterator

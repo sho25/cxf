@@ -47,11 +47,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
-name|ClaimsParser
+name|Claim
 import|;
 end_import
 
@@ -67,7 +69,7 @@ name|sts
 operator|.
 name|claims
 operator|.
-name|RequestClaim
+name|ClaimsParser
 import|;
 end_import
 
@@ -87,7 +89,7 @@ init|=
 literal|"http://my.custom.org/my/custom/namespace"
 decl_stmt|;
 specifier|public
-name|RequestClaim
+name|Claim
 name|parse
 parameter_list|(
 name|Element
@@ -172,7 +174,7 @@ argument_list|)
 decl_stmt|;
 name|response
 operator|.
-name|setClaimValue
+name|addValue
 argument_list|(
 name|claimValue
 argument_list|)
@@ -218,8 +220,17 @@ specifier|public
 class|class
 name|CustomRequestClaim
 extends|extends
-name|RequestClaim
+name|Claim
 block|{
+comment|/**          *           */
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|7407723714936495457L
+decl_stmt|;
 specifier|private
 name|String
 name|scope

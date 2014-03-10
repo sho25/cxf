@@ -57,7 +57,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
@@ -73,7 +75,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
@@ -125,7 +129,7 @@ name|sts
 operator|.
 name|claims
 operator|.
-name|RequestClaim
+name|ProcessedClaim
 import|;
 end_import
 
@@ -141,7 +145,7 @@ name|sts
 operator|.
 name|claims
 operator|.
-name|RequestClaimCollection
+name|ProcessedClaimCollection
 import|;
 end_import
 
@@ -196,10 +200,10 @@ literal|"http://schemas.mycompany.com/claims/language"
 argument_list|)
 decl_stmt|;
 specifier|public
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|retrieveClaimValues
 parameter_list|(
-name|RequestClaimCollection
+name|ClaimCollection
 name|claims
 parameter_list|,
 name|ClaimsParameters
@@ -220,26 +224,26 @@ operator|>
 literal|0
 condition|)
 block|{
-name|ClaimCollection
+name|ProcessedClaimCollection
 name|claimCollection
 init|=
 operator|new
-name|ClaimCollection
+name|ProcessedClaimCollection
 argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|RequestClaim
+name|Claim
 name|requestClaim
 range|:
 name|claims
 control|)
 block|{
-name|Claim
+name|ProcessedClaim
 name|claim
 init|=
 operator|new
-name|Claim
+name|ProcessedClaim
 argument_list|()
 decl_stmt|;
 name|claim

@@ -117,11 +117,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
+operator|.
+name|security
 operator|.
 name|claims
 operator|.
-name|RequestClaim
+name|Claim
 import|;
 end_import
 
@@ -1011,7 +1013,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|RequestClaim
+name|Claim
 name|claim
 range|:
 name|params
@@ -1077,7 +1079,7 @@ argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|RequestClaim
+name|Claim
 name|claim
 range|:
 name|params

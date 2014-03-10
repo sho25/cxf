@@ -61,15 +61,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|rt
 operator|.
 name|security
 operator|.
-name|saml
+name|claims
 operator|.
-name|assertion
-operator|.
-name|Claims
+name|ClaimCollection
 import|;
 end_import
 
@@ -90,7 +88,7 @@ operator|-
 literal|1135272749329239037L
 decl_stmt|;
 specifier|private
-name|Claims
+name|ClaimCollection
 name|claims
 decl_stmt|;
 specifier|public
@@ -105,7 +103,7 @@ name|String
 argument_list|>
 name|roles
 parameter_list|,
-name|Claims
+name|ClaimCollection
 name|claims
 parameter_list|)
 block|{
@@ -124,7 +122,7 @@ name|claims
 expr_stmt|;
 block|}
 specifier|public
-name|Claims
+name|ClaimCollection
 name|getClaims
 parameter_list|()
 block|{

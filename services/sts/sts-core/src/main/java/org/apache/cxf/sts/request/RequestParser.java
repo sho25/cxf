@@ -367,6 +367,42 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|claims
+operator|.
+name|Claim
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|claims
+operator|.
+name|ClaimCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|sts
 operator|.
 name|QNameConstants
@@ -430,38 +466,6 @@ operator|.
 name|claims
 operator|.
 name|IdentityClaimsParser
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|sts
-operator|.
-name|claims
-operator|.
-name|RequestClaim
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|sts
-operator|.
-name|claims
-operator|.
-name|RequestClaimCollection
 import|;
 end_import
 
@@ -2628,7 +2632,7 @@ operator|.
 name|getValue
 argument_list|()
 decl_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|parseClaims
@@ -4440,7 +4444,7 @@ argument_list|(
 literal|"Found Secondary Claims element"
 argument_list|)
 expr_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|parseClaims
@@ -4488,12 +4492,12 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Create a RequestClaimCollection from a DOM Element      */
+comment|/**      * Create a ClaimCollection from a DOM Element      */
 end_comment
 
 begin_function
 specifier|private
-name|RequestClaimCollection
+name|ClaimCollection
 name|parseClaims
 parameter_list|(
 name|Element
@@ -4511,11 +4515,11 @@ name|dialectAttr
 init|=
 literal|null
 decl_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 operator|new
-name|RequestClaimCollection
+name|ClaimCollection
 argument_list|()
 decl_stmt|;
 try|try
@@ -4598,7 +4602,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|RequestClaim
+name|Claim
 name|requestClaim
 init|=
 name|parseChildClaimType
@@ -4642,13 +4646,13 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Create a RequestClaimCollection from a JAXB ClaimsType object      */
+comment|/**      * Create a ClaimCollection from a JAXB ClaimsType object      */
 end_comment
 
 begin_function
 specifier|private
 specifier|static
-name|RequestClaimCollection
+name|ClaimCollection
 name|parseClaims
 parameter_list|(
 name|ClaimsType
@@ -4666,11 +4670,11 @@ name|dialectAttr
 init|=
 literal|null
 decl_stmt|;
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 operator|new
-name|RequestClaimCollection
+name|ClaimCollection
 argument_list|()
 decl_stmt|;
 try|try
@@ -4750,7 +4754,7 @@ operator|instanceof
 name|Element
 condition|)
 block|{
-name|RequestClaim
+name|Claim
 name|requestClaim
 init|=
 name|parseChildClaimType
@@ -4789,13 +4793,13 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Parse a child ClaimType into a RequestClaim object.      */
+comment|/**      * Parse a child ClaimType into a Claim object.      */
 end_comment
 
 begin_function
 specifier|private
 specifier|static
-name|RequestClaim
+name|Claim
 name|parseChildClaimType
 parameter_list|(
 name|Element

@@ -39,18 +39,6 @@ begin_import
 import|import
 name|org
 operator|.
-name|w3c
-operator|.
-name|dom
-operator|.
-name|Element
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
 name|apache
 operator|.
 name|cxf
@@ -62,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This Callback class provides a pluggable way of sending Claims to the STS. A CallbackHandler  * instance will be supplied with this class, which contains a reference to the current  * Message. The CallbackHandler implementation is required to set the claims Element to be  * sent in the request.   */
+comment|/**  * This Callback class provides a pluggable way of sending Claims to the STS. A CallbackHandler  * instance will be supplied with this class, which contains a reference to the current  * Message. The CallbackHandler implementation is required to set the claims Object to be  * sent in the request. This object can be either a DOM Element to be written out "as is", or else  * a org.apache.cxf.rt.security.claims.ClaimCollection Object which will be serialized in the   * request.  */
 end_comment
 
 begin_class
@@ -73,7 +61,7 @@ implements|implements
 name|Callback
 block|{
 specifier|private
-name|Element
+name|Object
 name|claims
 decl_stmt|;
 specifier|private
@@ -104,7 +92,7 @@ specifier|public
 name|void
 name|setClaims
 parameter_list|(
-name|Element
+name|Object
 name|claims
 parameter_list|)
 block|{
@@ -116,7 +104,7 @@ name|claims
 expr_stmt|;
 block|}
 specifier|public
-name|Element
+name|Object
 name|getClaims
 parameter_list|()
 block|{

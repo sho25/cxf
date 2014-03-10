@@ -167,9 +167,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|sts
+name|rt
 operator|.
-name|QNameConstants
+name|security
+operator|.
+name|claims
+operator|.
+name|ClaimCollection
 import|;
 end_import
 
@@ -183,9 +187,7 @@ name|cxf
 operator|.
 name|sts
 operator|.
-name|claims
-operator|.
-name|RequestClaimCollection
+name|QNameConstants
 import|;
 end_import
 
@@ -982,7 +984,7 @@ name|context
 argument_list|)
 expr_stmt|;
 comment|// Check if the requested claims can be handled by the configured claim handlers
-name|RequestClaimCollection
+name|ClaimCollection
 name|requestedClaims
 init|=
 name|providerParameters

@@ -3470,7 +3470,6 @@ block|}
 comment|/**      * This test creates a SAML1 Assertion and sends it in the security header to the provider.      */
 annotation|@
 name|Test
-comment|//@Ignore
 specifier|public
 name|void
 name|testSaml1TokenWithRoles
