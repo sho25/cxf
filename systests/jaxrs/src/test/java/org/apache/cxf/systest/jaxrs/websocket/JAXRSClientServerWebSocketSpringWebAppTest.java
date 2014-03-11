@@ -140,7 +140,7 @@ name|JAXRSClientServerWebSocketSpringWebAppTest
 extends|extends
 name|JAXRSClientServerWebSocketTest
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -148,7 +148,7 @@ name|PORT
 init|=
 name|BookServerWebSocket
 operator|.
-name|PORT
+name|PORT_WAR
 decl_stmt|;
 annotation|@
 name|BeforeClass
@@ -198,7 +198,9 @@ name|Integer
 operator|.
 name|parseInt
 argument_list|(
-name|PORT
+name|BookServerWebSocket
+operator|.
+name|PORT_WAR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -307,6 +309,15 @@ operator|.
 name|start
 argument_list|()
 expr_stmt|;
+block|}
+specifier|protected
+name|String
+name|getPort
+parameter_list|()
+block|{
+return|return
+name|PORT
+return|;
 block|}
 block|}
 end_class

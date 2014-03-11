@@ -88,7 +88,7 @@ name|JAXRSClientServerWebSocketTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|String
@@ -143,7 +143,8 @@ name|address
 init|=
 literal|"ws://localhost:"
 operator|+
-name|PORT
+name|getPort
+argument_list|()
 operator|+
 literal|"/web/bookstore"
 decl_stmt|;
@@ -641,7 +642,8 @@ name|address
 init|=
 literal|"ws://localhost:"
 operator|+
-name|PORT
+name|getPort
+argument_list|()
 operator|+
 literal|"/web/bookstore"
 decl_stmt|;
@@ -784,7 +786,8 @@ name|address
 init|=
 literal|"ws://localhost:"
 operator|+
-name|PORT
+name|getPort
+argument_list|()
 operator|+
 literal|"/web/bookstore"
 decl_stmt|;
@@ -899,7 +902,8 @@ name|address
 init|=
 literal|"ws://localhost:"
 operator|+
-name|PORT
+name|getPort
+argument_list|()
 operator|+
 literal|"/web/bookstore"
 decl_stmt|;
@@ -1362,6 +1366,15 @@ name|toString
 argument_list|()
 return|;
 block|}
+block|}
+specifier|protected
+name|String
+name|getPort
+parameter_list|()
+block|{
+return|return
+name|PORT
+return|;
 block|}
 block|}
 end_class
