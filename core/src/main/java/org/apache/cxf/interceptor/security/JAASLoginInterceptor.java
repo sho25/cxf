@@ -743,6 +743,8 @@ name|class
 argument_list|,
 name|createSecurityContext
 argument_list|(
+name|name
+argument_list|,
 name|subject
 argument_list|)
 argument_list|)
@@ -819,6 +821,9 @@ specifier|protected
 name|SecurityContext
 name|createSecurityContext
 parameter_list|(
+name|String
+name|name
+parameter_list|,
 name|Subject
 name|subject
 parameter_list|)
@@ -851,6 +856,8 @@ return|return
 operator|new
 name|DefaultSecurityContext
 argument_list|(
+name|name
+argument_list|,
 name|subject
 argument_list|)
 return|;
