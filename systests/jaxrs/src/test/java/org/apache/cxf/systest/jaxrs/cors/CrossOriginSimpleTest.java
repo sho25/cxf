@@ -2811,7 +2811,7 @@ name|CorsHeaderConstants
 operator|.
 name|HEADER_AC_REQUEST_HEADERS
 argument_list|,
-literal|"X-custom-1, X-custom-2"
+literal|"X-custom-1, x-custom-2"
 argument_list|)
 expr_stmt|;
 name|HttpResponse
@@ -2919,7 +2919,7 @@ index|[]
 block|{
 literal|"X-custom-1"
 block|,
-literal|"X-custom-2"
+literal|"x-custom-2"
 block|}
 argument_list|)
 argument_list|,
