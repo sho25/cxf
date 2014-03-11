@@ -1108,7 +1108,7 @@ name|getContextualProperty
 argument_list|(
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 argument_list|)
 decl_stmt|;
 if|if

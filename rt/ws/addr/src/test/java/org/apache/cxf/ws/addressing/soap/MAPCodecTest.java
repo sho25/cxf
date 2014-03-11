@@ -517,7 +517,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 import|;
 end_import
 
@@ -535,43 +535,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_OUTBOUND
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|JAXWSAConstants
-operator|.
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|addressing
-operator|.
-name|JAXWSAConstants
-operator|.
-name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 import|;
 end_import
 
@@ -2906,19 +2870,11 @@ name|outbound
 parameter_list|)
 block|{
 return|return
-name|requestor
-condition|?
 name|outbound
 condition|?
-name|CLIENT_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 else|:
-name|CLIENT_ADDRESSING_PROPERTIES_INBOUND
-else|:
-name|outbound
-condition|?
-name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
-else|:
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 return|;
 block|}
 specifier|private

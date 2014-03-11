@@ -163,7 +163,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 import|;
 end_import
 
@@ -181,7 +181,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 import|;
 end_import
 
@@ -254,7 +254,7 @@ name|MAPTest
 operator|.
 name|INBOUND_KEY
 argument_list|,
-name|CLIENT_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 argument_list|)
 expr_stmt|;
 name|mapProperties
@@ -265,7 +265,7 @@ name|MAPTest
 operator|.
 name|OUTBOUND_KEY
 argument_list|,
-name|CLIENT_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|)
 expr_stmt|;
 block|}

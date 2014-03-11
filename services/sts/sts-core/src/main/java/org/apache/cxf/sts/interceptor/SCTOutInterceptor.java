@@ -209,7 +209,7 @@ name|getContextualProperty
 argument_list|(
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 argument_list|)
 decl_stmt|;
 name|AddressingProperties
@@ -224,7 +224,7 @@ name|getContextualProperty
 argument_list|(
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|)
 decl_stmt|;
 if|if
@@ -293,7 +293,7 @@ name|put
 argument_list|(
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|,
 name|outProps
 argument_list|)

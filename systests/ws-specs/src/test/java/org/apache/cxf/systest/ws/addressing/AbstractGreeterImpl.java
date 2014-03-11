@@ -279,7 +279,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 import|;
 end_import
 
@@ -630,7 +630,7 @@ block|{
 name|String
 name|property
 init|=
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 decl_stmt|;
 name|AddressingProperties
 name|maps

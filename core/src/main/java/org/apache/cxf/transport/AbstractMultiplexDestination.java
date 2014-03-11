@@ -155,7 +155,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 import|;
 end_import
 
@@ -344,7 +344,7 @@ name|contextMap
 operator|.
 name|get
 argument_list|(
-name|SERVER_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 argument_list|)
 decl_stmt|;
 if|if

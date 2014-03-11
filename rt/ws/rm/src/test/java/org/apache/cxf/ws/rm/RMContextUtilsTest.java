@@ -861,7 +861,7 @@ name|get
 argument_list|(
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|)
 argument_list|)
 operator|.
@@ -933,7 +933,7 @@ name|put
 argument_list|(
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|,
 name|maps
 argument_list|)

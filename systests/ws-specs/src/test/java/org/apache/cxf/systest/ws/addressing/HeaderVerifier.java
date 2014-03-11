@@ -389,7 +389,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|CLIENT_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 import|;
 end_import
 
@@ -407,7 +407,7 @@ name|addressing
 operator|.
 name|JAXWSAConstants
 operator|.
-name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 import|;
 end_import
 
@@ -1233,7 +1233,7 @@ name|message
 operator|.
 name|get
 argument_list|(
-name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
+name|ADDRESSING_PROPERTIES_OUTBOUND
 argument_list|)
 decl_stmt|;
 return|return
@@ -1292,7 +1292,7 @@ name|message
 operator|.
 name|get
 argument_list|(
-name|CLIENT_ADDRESSING_PROPERTIES_INBOUND
+name|ADDRESSING_PROPERTIES_INBOUND
 argument_list|)
 decl_stmt|;
 return|return
