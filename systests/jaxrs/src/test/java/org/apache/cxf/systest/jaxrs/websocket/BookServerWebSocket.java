@@ -244,7 +244,7 @@ literal|"ws://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/"
+literal|"/websocket"
 argument_list|)
 expr_stmt|;
 name|server

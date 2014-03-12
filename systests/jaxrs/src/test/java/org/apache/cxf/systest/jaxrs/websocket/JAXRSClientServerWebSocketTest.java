@@ -146,7 +146,7 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
-literal|"/web/bookstore"
+literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
 name|wsclient
@@ -171,7 +171,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /web/bookstore/booknames"
+literal|"GET /websocket/web/bookstore/booknames"
 operator|.
 name|getBytes
 argument_list|()
@@ -276,7 +276,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /web/bookstore/books/123"
+literal|"GET /websocket/web/bookstore/books/123"
 operator|.
 name|getBytes
 argument_list|()
@@ -374,7 +374,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
+literal|"POST /websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
 operator|.
 name|getBytes
 argument_list|()
@@ -462,7 +462,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /web/bookstore/bookbought"
+literal|"GET /websocket/web/bookstore/bookbought"
 operator|.
 name|getBytes
 argument_list|()
@@ -645,7 +645,7 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
-literal|"/web/bookstore"
+literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
 name|wsclient
@@ -669,7 +669,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /web/bookstore/booknames/servletstream"
+literal|"GET /websocket/web/bookstore/booknames/servletstream"
 operator|.
 name|getBytes
 argument_list|()
@@ -789,7 +789,7 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
-literal|"/web/bookstore"
+literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
 name|wsclient
@@ -814,7 +814,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /web/bookstore/booknames"
+literal|"POST /websocket/web/bookstore/booknames"
 operator|.
 name|getBytes
 argument_list|()
@@ -905,7 +905,7 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
-literal|"/web/bookstore"
+literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
 name|wsclient
@@ -930,7 +930,7 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /bookstore2"
+literal|"GET /websocket/bookstore2"
 operator|.
 name|getBytes
 argument_list|()
