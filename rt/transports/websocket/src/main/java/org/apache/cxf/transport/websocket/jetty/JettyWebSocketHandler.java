@@ -173,7 +173,6 @@ name|IOException
 throws|,
 name|ServletException
 block|{
-comment|// only switch to websocket if websocket is enabled for this destination
 if|if
 condition|(
 name|webSocketManager
