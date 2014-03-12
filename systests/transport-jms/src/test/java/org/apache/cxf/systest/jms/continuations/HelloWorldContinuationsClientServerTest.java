@@ -160,6 +160,13 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|startBusAndJMS
+argument_list|(
+name|HelloWorldContinuationsClientServerTest
+operator|.
+name|class
+argument_list|)
+expr_stmt|;
 name|publish
 argument_list|(
 operator|new
