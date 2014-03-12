@@ -933,12 +933,23 @@ name|Element
 name|token
 parameter_list|)
 block|{
+if|if
+condition|(
+name|token
+operator|!=
+literal|null
+condition|)
+block|{
 name|this
 operator|.
 name|token
 operator|=
+name|cloneElement
+argument_list|(
 name|token
+argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the identifier corresponding to a transformed version of this token      */
 specifier|public
