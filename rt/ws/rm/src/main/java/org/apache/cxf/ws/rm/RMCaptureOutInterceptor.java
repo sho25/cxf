@@ -1523,7 +1523,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|// capture message if retranmission possible
+comment|// capture message if retransmission possible
 if|if
 condition|(
 name|isApplicationMessage

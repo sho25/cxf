@@ -3793,7 +3793,9 @@ init|=
 name|manager
 operator|.
 name|getRetransmitChain
-argument_list|()
+argument_list|(
+name|message
+argument_list|)
 decl_stmt|;
 name|ProtocolVariation
 name|protocol
