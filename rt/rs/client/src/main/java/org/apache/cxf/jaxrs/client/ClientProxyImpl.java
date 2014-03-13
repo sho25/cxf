@@ -3625,8 +3625,11 @@ name|value
 argument_list|,
 name|m
 operator|.
-name|getAnnotations
+name|getParameterAnnotations
 argument_list|()
+index|[
+literal|0
+index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
