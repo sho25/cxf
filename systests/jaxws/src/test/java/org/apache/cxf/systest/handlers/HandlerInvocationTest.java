@@ -696,6 +696,9 @@ comment|//System.setProperty(SAAJFactoryResolver.MESSAGE_FACTORY_KEY,
 comment|//                     "com.ibm.ws.webservices.engine.soap.MessageFactoryImpl");
 comment|//System.setProperty(SAAJFactoryResolver.SOAP_FACTORY_KEY,
 comment|//    "com.ibm.ws.webservices.engine.xmlsoap.SOAPFactory");
+name|createStaticBus
+argument_list|()
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
