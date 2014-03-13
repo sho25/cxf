@@ -11,13 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|rt
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
-name|authorization
+name|claims
 package|;
 end_package
 
@@ -226,24 +224,6 @@ operator|.
 name|phase
 operator|.
 name|Phase
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rt
-operator|.
-name|security
-operator|.
-name|claims
-operator|.
-name|SAMLClaim
 import|;
 end_import
 
