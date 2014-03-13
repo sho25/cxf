@@ -1057,13 +1057,6 @@ parameter_list|)
 block|{
 comment|//ignore
 block|}
-name|Thread
-operator|.
-name|sleep
-argument_list|(
-literal|100
-argument_list|)
-expr_stmt|;
 block|}
 comment|// --- tests ---
 annotation|@
@@ -8686,20 +8679,16 @@ argument_list|(
 literal|"one"
 argument_list|)
 expr_stmt|;
-comment|// force greeter to be re-initialized so that a new sequence is created
-name|ClientProxy
-operator|.
-name|getClient
-argument_list|(
+comment|//hold onto the greeter to keep the sequence open
+name|Closeable
+name|oldGreeter
+init|=
+operator|(
+name|Closeable
+operator|)
 name|greeter
-argument_list|)
-operator|.
-name|getConduit
-argument_list|()
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+decl_stmt|;
+comment|// force greeter to be re-initialized so that a new sequence is created
 name|initProxy
 argument_list|(
 literal|false
@@ -8802,6 +8791,12 @@ name|expectedActions
 argument_list|,
 literal|false
 argument_list|)
+expr_stmt|;
+comment|//now close the old greeter to cleanup the sequence
+name|oldGreeter
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 comment|// --- test utilities ---
@@ -9395,15 +9390,6 @@ comment|//so that release the port if the destination reference count hit zero
 if|if
 condition|(
 name|greeter
-operator|!=
-literal|null
-condition|)
-block|{
-comment|//ClientProxy.getClient(greeter).getConduit().close();
-block|}
-if|if
-condition|(
-name|greeter
 operator|instanceof
 name|Closeable
 condition|)
@@ -9418,15 +9404,6 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-block|}
-if|if
-condition|(
-name|dispatch
-operator|!=
-literal|null
-condition|)
-block|{
-comment|//((DispatchImpl<?>)dispatch).getClient().getConduit().close();
 block|}
 if|if
 condition|(

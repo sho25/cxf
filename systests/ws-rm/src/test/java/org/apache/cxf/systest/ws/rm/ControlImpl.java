@@ -706,34 +706,14 @@ operator|.
 name|STRING
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"greetMeOneWay arg: "
-operator|+
-name|s
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("greetMeOneWay arg: " + s);
 return|return
 literal|null
 return|;
 block|}
 else|else
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"greetMe arg: "
-operator|+
-name|s
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("greetMe arg: " + s);
 name|String
 name|resp
 init|=

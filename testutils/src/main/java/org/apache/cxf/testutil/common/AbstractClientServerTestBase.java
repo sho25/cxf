@@ -205,6 +205,7 @@ name|passed
 argument_list|)
 expr_stmt|;
 block|}
+comment|/**      * Starts the server inProcess      */
 specifier|public
 specifier|static
 name|boolean
@@ -277,6 +278,7 @@ return|return
 name|ok
 return|;
 block|}
+comment|/**      * Starts the server inProcess      */
 specifier|public
 specifier|static
 name|boolean
@@ -289,72 +291,16 @@ argument_list|>
 name|clz
 parameter_list|)
 block|{
-name|boolean
-name|ok
-init|=
-literal|false
-decl_stmt|;
-try|try
-block|{
-name|ServerLauncher
-name|sl
-init|=
-operator|new
-name|ServerLauncher
-argument_list|(
-name|clz
-operator|.
-name|getName
-argument_list|()
-argument_list|)
-decl_stmt|;
-name|ok
-operator|=
-name|sl
-operator|.
-name|launchServer
-argument_list|()
-expr_stmt|;
-name|assertTrue
-argument_list|(
-literal|"server failed to launch"
-argument_list|,
-name|ok
-argument_list|)
-expr_stmt|;
-name|launchers
-operator|.
-name|add
-argument_list|(
-literal|0
-argument_list|,
-name|sl
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|ex
-parameter_list|)
-block|{
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
-name|fail
-argument_list|(
-literal|"failed to launch server "
-operator|+
-name|clz
-argument_list|)
-expr_stmt|;
-block|}
 return|return
-name|ok
+name|launchServer
+argument_list|(
+name|clz
+argument_list|,
+literal|true
+argument_list|)
 return|;
 block|}
+comment|/**      * Starts the server inProcess or out of process depending on the param      */
 specifier|public
 specifier|static
 name|boolean
@@ -438,6 +384,7 @@ return|return
 name|ok
 return|;
 block|}
+comment|/**      * Starts the server inProcess      */
 specifier|public
 specifier|static
 name|boolean
@@ -471,10 +418,11 @@ name|props
 argument_list|,
 name|args
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 return|;
 block|}
+comment|/**      * Starts the server inProcess or out of process depending on the param      */
 specifier|public
 specifier|static
 name|boolean
