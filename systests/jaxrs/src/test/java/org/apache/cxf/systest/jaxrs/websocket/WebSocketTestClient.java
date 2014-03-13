@@ -818,7 +818,7 @@ name|add
 argument_list|(
 name|bao
 operator|.
-name|toString
+name|toByteArray
 argument_list|()
 argument_list|)
 expr_stmt|;
