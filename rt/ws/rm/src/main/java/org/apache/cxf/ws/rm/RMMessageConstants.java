@@ -71,14 +71,14 @@ name|RM_RETRANSMISSION
 init|=
 literal|"org.apache.cxf.ws.rm.retransmitting"
 decl_stmt|;
-comment|/** Boolean property TRUE for a chain used only to capture (not send) a message. */
+comment|/** Boolean property TRUE for a chain used to capture a message. */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|MESSAGE_CAPTURE_CHAIN
+name|MESSAGE_CAPTURE
 init|=
-literal|"org.apache.cxf.rm.captureOnly"
+literal|"org.apache.cxf.rm.capture"
 decl_stmt|;
 comment|/** Client callback (must be instance of {@link MessageCallback}). */
 specifier|public
