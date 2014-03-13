@@ -19,6 +19,16 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|jms
+operator|.
+name|Connection
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -189,6 +199,15 @@ name|void
 name|shutdown
 parameter_list|()
 block|{         }
+specifier|public
+name|Connection
+name|getConnection
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
 block|}
 block|}
 end_class

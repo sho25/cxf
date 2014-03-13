@@ -224,6 +224,15 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+name|Connection
+name|getConnection
+parameter_list|()
+block|{
+return|return
+name|connection
+return|;
+block|}
+specifier|public
 name|void
 name|setTransacted
 parameter_list|(

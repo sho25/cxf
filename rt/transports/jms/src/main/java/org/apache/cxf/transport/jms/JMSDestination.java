@@ -461,6 +461,11 @@ argument_list|(
 name|inMessage
 argument_list|,
 name|jmsConfig
+argument_list|,
+name|jmsListener
+operator|.
+name|getConnection
+argument_list|()
 argument_list|)
 return|;
 block|}
