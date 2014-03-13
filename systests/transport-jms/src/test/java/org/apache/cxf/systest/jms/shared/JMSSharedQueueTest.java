@@ -95,6 +95,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|TimeUnit
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -405,6 +417,7 @@ name|String
 name|prefix
 decl_stmt|;
 specifier|private
+specifier|volatile
 name|Throwable
 name|ex
 decl_stmt|;
@@ -510,6 +523,7 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
+comment|//e.printStackTrace();
 name|ex
 operator|=
 name|e
@@ -756,6 +770,17 @@ operator|.
 name|shutdown
 argument_list|()
 expr_stmt|;
+name|executor
+operator|.
+name|awaitTermination
+argument_list|(
+literal|10
+argument_list|,
+name|TimeUnit
+operator|.
+name|SECONDS
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|ClientRunnable
@@ -774,6 +799,14 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|client
+operator|.
+name|getException
+argument_list|()
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 throw|throw
 name|client
 operator|.
@@ -1408,6 +1441,8 @@ argument_list|,
 name|HelloWorldPortType
 operator|.
 name|class
+argument_list|,
+name|cff
 argument_list|)
 argument_list|)
 decl_stmt|;
