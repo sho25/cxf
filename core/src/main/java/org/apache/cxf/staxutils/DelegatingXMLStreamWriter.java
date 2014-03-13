@@ -58,6 +58,8 @@ name|DelegatingXMLStreamWriter
 implements|implements
 name|XMLStreamWriter
 block|{
+specifier|protected
+specifier|final
 name|XMLStreamWriter
 name|delegate
 decl_stmt|;
