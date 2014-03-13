@@ -612,6 +612,11 @@ literal|null
 decl_stmt|;
 try|try
 block|{
+name|response
+operator|=
+name|createServletResponse
+argument_list|()
+expr_stmt|;
 name|request
 operator|=
 name|createServletRequest
@@ -622,11 +627,6 @@ name|offset
 argument_list|,
 name|length
 argument_list|)
-expr_stmt|;
-name|response
-operator|=
-name|createServletResponse
-argument_list|()
 expr_stmt|;
 if|if
 condition|(
@@ -688,6 +688,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// may want to move this error reporting code to WebSocketServletHolder
 specifier|private
 name|void
 name|reportErrorStatus
