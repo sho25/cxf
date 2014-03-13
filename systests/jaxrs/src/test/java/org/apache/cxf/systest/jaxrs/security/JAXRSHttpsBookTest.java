@@ -312,6 +312,11 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|createStaticBus
+argument_list|(
+literal|"org/apache/cxf/systest/jaxrs/security/jaxrs-https-server.xml"
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 literal|"server did not launch correctly"
