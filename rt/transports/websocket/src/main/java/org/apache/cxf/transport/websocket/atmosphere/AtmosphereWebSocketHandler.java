@@ -364,7 +364,13 @@ name|AtmosphereConfig
 name|config
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"configure(AtmosphereConfig)"
+argument_list|)
+expr_stmt|;
 block|}
 comment|/** {@inheritDoc}*/
 annotation|@

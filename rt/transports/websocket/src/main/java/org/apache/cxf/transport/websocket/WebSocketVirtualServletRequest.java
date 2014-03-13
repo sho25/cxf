@@ -445,7 +445,6 @@ name|origin
 argument_list|)
 condition|)
 block|{
-comment|//REVISIT for now, log it here and reject the request later.
 name|LOG
 operator|.
 name|log
@@ -466,6 +465,11 @@ name|origin
 block|}
 argument_list|)
 expr_stmt|;
+throw|throw
+operator|new
+name|InvalidPathException
+argument_list|()
+throw|;
 block|}
 name|this
 operator|.
@@ -1810,7 +1814,6 @@ name|IOException
 throws|,
 name|ServletException
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -1840,7 +1843,6 @@ name|IOException
 throws|,
 name|ServletException
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -1992,7 +1994,6 @@ name|String
 name|getQueryString
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2015,7 +2016,6 @@ name|String
 name|getRemoteUser
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2100,33 +2100,6 @@ init|=
 name|getRequestURI
 argument_list|()
 decl_stmt|;
-comment|//REVISIT the way to reject the requeist uri that does not match the original request
-if|if
-condition|(
-operator|!
-name|uri
-operator|.
-name|startsWith
-argument_list|(
-name|ouri
-argument_list|)
-condition|)
-block|{
-name|sb
-operator|.
-name|append
-argument_list|(
-literal|"invalid"
-argument_list|)
-operator|.
-name|append
-argument_list|(
-name|uri
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
 name|sb
 operator|.
 name|append
@@ -2142,7 +2115,6 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 name|sb
 return|;
@@ -2154,7 +2126,6 @@ name|String
 name|getRequestedSessionId
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2202,7 +2173,6 @@ name|HttpSession
 name|getSession
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2228,7 +2198,6 @@ name|boolean
 name|create
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2276,7 +2245,6 @@ name|boolean
 name|isRequestedSessionIdFromCookie
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2299,7 +2267,6 @@ name|boolean
 name|isRequestedSessionIdFromURL
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2322,7 +2289,6 @@ name|boolean
 name|isRequestedSessionIdFromUrl
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2345,7 +2311,6 @@ name|boolean
 name|isRequestedSessionIdValid
 parameter_list|()
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2371,7 +2336,6 @@ name|String
 name|role
 parameter_list|)
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2402,7 +2366,6 @@ parameter_list|)
 throws|throws
 name|ServletException
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
@@ -2424,7 +2387,6 @@ parameter_list|()
 throws|throws
 name|ServletException
 block|{
-comment|// TODO Auto-generated method stub
 name|LOG
 operator|.
 name|log
