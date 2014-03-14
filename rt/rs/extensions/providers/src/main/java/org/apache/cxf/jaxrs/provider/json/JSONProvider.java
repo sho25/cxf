@@ -3646,6 +3646,8 @@ argument_list|,
 name|isCollection
 operator|||
 name|dropRootInXmlNeeded
+argument_list|,
+name|enc
 argument_list|)
 decl_stmt|;
 name|writer

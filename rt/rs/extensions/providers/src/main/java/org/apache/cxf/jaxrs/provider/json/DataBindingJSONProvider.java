@@ -503,6 +503,9 @@ parameter_list|,
 name|Type
 name|genericType
 parameter_list|,
+name|String
+name|enc
+parameter_list|,
 name|OutputStream
 name|os
 parameter_list|)
@@ -590,6 +593,8 @@ argument_list|,
 name|arrayKeys
 argument_list|,
 name|dropRootElement
+argument_list|,
+name|enc
 argument_list|)
 decl_stmt|;
 name|writer
