@@ -342,9 +342,7 @@ literal|0
 expr_stmt|;
 name|minHandlingTime
 operator|=
-name|Integer
-operator|.
-name|MAX_VALUE
+literal|0
 expr_stmt|;
 block|}
 specifier|public
@@ -372,10 +370,8 @@ literal|0
 condition|)
 block|{
 return|return
-operator|-
-literal|1
+literal|0
 return|;
-comment|//return -1 if invocation number is 0;
 block|}
 return|return
 call|(
