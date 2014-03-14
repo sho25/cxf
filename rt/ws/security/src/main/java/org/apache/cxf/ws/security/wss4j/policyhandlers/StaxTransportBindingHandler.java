@@ -1180,6 +1180,9 @@ operator|.
 name|ENCRYPTED_PARTS
 argument_list|)
 expr_stmt|;
+name|putCustomTokenAfterSignature
+argument_list|()
+expr_stmt|;
 block|}
 comment|/**      * Handle the non-endorsing supporting tokens      */
 specifier|private

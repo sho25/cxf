@@ -240,6 +240,20 @@ decl_stmt|;
 specifier|static
 specifier|final
 name|String
+name|PORT2
+init|=
+name|allocatePort
+argument_list|(
+name|Server
+operator|.
+name|class
+argument_list|,
+literal|2
+argument_list|)
+decl_stmt|;
+specifier|static
+specifier|final
+name|String
 name|STAX_PORT
 init|=
 name|allocatePort
@@ -247,6 +261,20 @@ argument_list|(
 name|StaxServer
 operator|.
 name|class
+argument_list|)
+decl_stmt|;
+specifier|static
+specifier|final
+name|String
+name|STAX_PORT2
+init|=
+name|allocatePort
+argument_list|(
+name|StaxServer
+operator|.
+name|class
+argument_list|,
+literal|2
 argument_list|)
 decl_stmt|;
 specifier|private
@@ -462,6 +490,18 @@ name|TestParam
 index|[]
 index|[]
 block|{
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"SecureConversation_UserNameOverTransport_IPingService"
+argument_list|,
+name|PORT2
+argument_list|,
+literal|false
+argument_list|)
+block|}
+block|,
 block|{
 operator|new
 name|TestParam
@@ -738,6 +778,18 @@ literal|false
 argument_list|)
 block|}
 block|,
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"SecureConversation_UserNameOverTransport_IPingService"
+argument_list|,
+name|PORT2
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 comment|// TODO Endorsing streaming not supported
 comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService", PORT, true)},
 block|{
@@ -907,6 +959,18 @@ comment|// TODO Streaming endorsing not working
 comment|// {new TestParam("_XD_IPingService", PORT, true)},
 comment|// {new TestParam("_XD-SEES_IPingService", PORT, true)},
 comment|// {new TestParam("_XD-ES_IPingService", PORT, true)},
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"SecureConversation_UserNameOverTransport_IPingService"
+argument_list|,
+name|STAX_PORT2
+argument_list|,
+literal|false
+argument_list|)
+block|}
+block|,
 comment|// TODO StAX Policy Validation error caused by incorrect DOM message
 comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
 comment|//               STAX_PORT, false)},
@@ -1174,6 +1238,18 @@ literal|false
 argument_list|)
 block|}
 block|,
+block|{
+operator|new
+name|TestParam
+argument_list|(
+literal|"SecureConversation_UserNameOverTransport_IPingService"
+argument_list|,
+name|STAX_PORT2
+argument_list|,
+literal|true
+argument_list|)
+block|}
+block|,
 comment|// TODO Endorsing derived keys not supported.
 comment|// {new TestParam("SecureConversation_MutualCertificate10SignEncrypt_IPingService",
 comment|//               STAX_PORT, true)},
@@ -1418,6 +1494,59 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|PORT2
+operator|.
+name|equals
+argument_list|(
+name|test
+operator|.
+name|port
+argument_list|)
+operator|||
+name|STAX_PORT2
+operator|.
+name|equals
+argument_list|(
+name|test
+operator|.
+name|port
+argument_list|)
+condition|)
+block|{
+operator|(
+operator|(
+name|BindingProvider
+operator|)
+name|port
+operator|)
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+name|BindingProvider
+operator|.
+name|ENDPOINT_ADDRESS_PROPERTY
+argument_list|,
+literal|"https://localhost:"
+operator|+
+name|test
+operator|.
+name|port
+operator|+
+literal|"/"
+operator|+
+name|test
+operator|.
+name|prefix
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 operator|(
 operator|(
 name|BindingProvider
@@ -1447,6 +1576,7 @@ operator|.
 name|prefix
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|test
