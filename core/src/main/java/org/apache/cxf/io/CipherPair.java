@@ -41,16 +41,6 @@ name|java
 operator|.
 name|security
 operator|.
-name|NoSuchAlgorithmException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
 name|SecureRandom
 import|;
 end_import
@@ -72,16 +62,6 @@ operator|.
 name|crypto
 operator|.
 name|KeyGenerator
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|crypto
-operator|.
-name|NoSuchPaddingException
 import|;
 end_import
 
@@ -296,7 +276,9 @@ parameter_list|(
 name|GeneralSecurityException
 name|e
 parameter_list|)
-block|{         }
+block|{
+comment|// ignore
+block|}
 return|return
 name|enccipher
 return|;
@@ -351,7 +333,9 @@ parameter_list|(
 name|GeneralSecurityException
 name|e
 parameter_list|)
-block|{         }
+block|{
+comment|// ignore
+block|}
 return|return
 name|deccipher
 return|;
