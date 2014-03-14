@@ -23,6 +23,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|Closeable
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|net
 operator|.
 name|URL
@@ -3342,6 +3352,26 @@ name|MessageObserver
 name|observer
 parameter_list|)
 block|{                     }
+specifier|public
+name|void
+name|addCleanupHook
+parameter_list|(
+name|Closeable
+name|c
+parameter_list|)
+block|{         }
+specifier|public
+name|List
+argument_list|<
+name|Closeable
+argument_list|>
+name|getCleanupHooks
+parameter_list|()
+block|{
+return|return
+literal|null
+return|;
+block|}
 block|}
 comment|/**      * A simple container used to reduce argument numbers to satisfy      * project code conventions.      */
 specifier|protected
