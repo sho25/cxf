@@ -65,6 +65,22 @@ name|HttpServletResponse
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|http
+operator|.
+name|HttpUrlUtil
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -163,8 +179,13 @@ name|getName
 argument_list|()
 argument_list|)
 operator|||
+name|HttpUrlUtil
+operator|.
 name|checkContextPath
 argument_list|(
+name|getName
+argument_list|()
+argument_list|,
 name|target
 argument_list|)
 condition|)
