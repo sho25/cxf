@@ -169,6 +169,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|AddressingFeature
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|w3c
@@ -1796,19 +1810,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO See CXF-5567
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testUsernameTokenSAML1Dispatch
@@ -1918,6 +1925,10 @@ operator|.
 name|Mode
 operator|.
 name|PAYLOAD
+argument_list|,
+operator|new
+name|AddressingFeature
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|updateAddressPort
@@ -1994,6 +2005,7 @@ argument_list|,
 name|stsClient
 argument_list|)
 expr_stmt|;
+comment|//client.getRequestContext().put("find.dispatch.operation", Boolean.TRUE);
 if|if
 condition|(
 name|test
