@@ -4296,39 +4296,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|String
-name|errorMessage
-init|=
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-decl_stmt|;
-comment|// Different errors using different JDKs...
-name|assertTrue
-argument_list|(
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"Certificate has been revoked"
-argument_list|)
-operator|||
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"Certificate revocation"
-argument_list|)
-operator|||
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"Error during certificate path validation"
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 operator|(
 operator|(
@@ -4643,46 +4611,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-name|String
-name|errorMessage
-init|=
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-decl_stmt|;
-comment|// Different errors using different JDKs...
-name|assertTrue
-argument_list|(
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"Certificate has been revoked"
-argument_list|)
-operator|||
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"Certificate revocation"
-argument_list|)
-operator|||
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"Error during certificate path validation"
-argument_list|)
-operator|||
-name|errorMessage
-operator|.
-name|contains
-argument_list|(
-literal|"The security token could not be authenticated or authorized"
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 comment|// TODO See WSS-464
 comment|/*         SecurityTestUtil.enableStreaming(pt);         try {             pt.doubleIt(5);             fail("should fail on server side when do signature validation due the revoked certificates");         } catch (Exception ex) {             String errorMessage = ex.getMessage();             // Different errors using different JDKs...             System.out.println("ERR1: " + errorMessage);         }         */
