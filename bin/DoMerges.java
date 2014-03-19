@@ -1778,18 +1778,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-else|else
-block|{
-name|records
-operator|.
-name|add
-argument_list|(
-literal|"M "
-operator|+
-name|ver
-argument_list|)
-expr_stmt|;
-block|}
 block|}
 specifier|private
 specifier|static
