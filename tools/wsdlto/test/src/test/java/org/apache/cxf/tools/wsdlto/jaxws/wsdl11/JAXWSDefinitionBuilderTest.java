@@ -468,7 +468,7 @@ operator|.
 name|getName
 argument_list|()
 operator|+
-literal|" is an HTTPAddress"
+literal|" is not an HTTPAddress"
 argument_list|,
 name|obj
 operator|instanceof
