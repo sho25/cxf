@@ -194,11 +194,7 @@ name|SOAPMessageContext
 name|smc
 parameter_list|)
 block|{
-name|logToSystemOut
-argument_list|(
-name|smc
-argument_list|)
-expr_stmt|;
+comment|// logToSystemOut(smc);
 return|return
 literal|true
 return|;
@@ -211,11 +207,7 @@ name|SOAPMessageContext
 name|smc
 parameter_list|)
 block|{
-name|logToSystemOut
-argument_list|(
-name|smc
-argument_list|)
-expr_stmt|;
+comment|// logToSystemOut(smc);
 return|return
 literal|true
 return|;
