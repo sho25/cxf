@@ -229,7 +229,7 @@ name|REFRESH_TOKEN_TYPE
 init|=
 literal|"refresh"
 decl_stmt|;
-comment|// MAC token parameters
+comment|// Hawk token parameters
 comment|// Set by Access Token Service
 specifier|public
 specifier|static
@@ -287,6 +287,23 @@ name|String
 name|HAWK_TOKEN_SIGNATURE
 init|=
 literal|"mac"
+decl_stmt|;
+comment|// Mac/Hawk HMAC algorithm names
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|HMAC_ALGO_SHA_1
+init|=
+literal|"hmac-sha-1"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|HMAC_ALGO_SHA_256
+init|=
+literal|"hmac-sha-256"
 decl_stmt|;
 comment|// Token Authorization schemes
 specifier|public
