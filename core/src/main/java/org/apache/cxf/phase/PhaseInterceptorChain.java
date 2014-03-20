@@ -1857,6 +1857,18 @@ operator|!
 name|isOneWay
 condition|)
 block|{
+comment|// CXF-5629. when exchange is one way and robust, it becomes req-resp in order to
+comment|// send the fault
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|setOneWay
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 name|faultObserver
 operator|.
 name|onMessage
