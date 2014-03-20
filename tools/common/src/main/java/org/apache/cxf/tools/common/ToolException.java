@@ -576,7 +576,7 @@ name|ps
 argument_list|,
 name|pfx
 operator|+
-literal|"/t"
+literal|"\t"
 argument_list|,
 literal|"Suppressed: "
 argument_list|)
@@ -618,7 +618,7 @@ name|ps
 argument_list|,
 name|pfx
 operator|+
-literal|"/t"
+literal|"\t"
 argument_list|,
 literal|"Caused by: "
 argument_list|)
@@ -780,7 +780,7 @@ name|suppressed
 operator|.
 name|add
 argument_list|(
-name|t2
+name|t
 argument_list|)
 expr_stmt|;
 if|if
