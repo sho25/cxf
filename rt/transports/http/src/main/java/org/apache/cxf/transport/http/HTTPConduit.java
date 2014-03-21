@@ -6065,7 +6065,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**          * This predicate returns true iff the exchange indicates           * a oneway MEP.          *           * @param exchange The exchange in question          */
+comment|/**          * This predicate returns true if the exchange indicates           * a oneway MEP.          *           * @param exchange The exchange in question          */
 specifier|private
 name|boolean
 name|isOneway
@@ -6091,6 +6091,9 @@ name|doProcessResponse
 parameter_list|(
 name|Message
 name|message
+parameter_list|,
+name|int
+name|responseCode
 parameter_list|)
 block|{
 comment|// 1. Not oneWay
@@ -6110,8 +6113,13 @@ return|return
 literal|true
 return|;
 block|}
-comment|// 2. Context property
-return|return
+comment|// 2. Robust OneWays could have a fault
+if|if
+condition|(
+name|responseCode
+operator|==
+literal|500
+operator|&&
 name|MessageUtils
 operator|.
 name|getContextualBoolean
@@ -6120,10 +6128,18 @@ name|message
 argument_list|,
 name|Message
 operator|.
-name|PROCESS_ONEWAY_RESPONSE
+name|ROBUST_ONEWAY
 argument_list|,
 literal|false
 argument_list|)
+condition|)
+block|{
+return|return
+literal|true
+return|;
+block|}
+return|return
+literal|false
 return|;
 block|}
 specifier|protected
@@ -6288,9 +6304,12 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|isOneway
+operator|!
+name|doProcessResponse
 argument_list|(
-name|exchange
+name|outMessage
+argument_list|,
+name|responseCode
 argument_list|)
 operator|||
 name|HttpURLConnection
@@ -6307,16 +6326,22 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
-operator|(
 name|in
 operator|==
 literal|null
-operator|)
 operator|||
 operator|!
-name|doProcessResponse
+name|MessageUtils
+operator|.
+name|getContextualBoolean
 argument_list|(
 name|outMessage
+argument_list|,
+name|Message
+operator|.
+name|PROCESS_ONEWAY_RESPONSE
+argument_list|,
+literal|false
 argument_list|)
 condition|)
 block|{
@@ -6417,19 +6442,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-if|if
-condition|(
-name|in
-operator|!=
-literal|null
-condition|)
-block|{
-name|in
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 name|exchange
 operator|.

@@ -127,6 +127,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPFaultException
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -1211,21 +1225,11 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|WebServiceException
+name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-comment|// actually it should be instance of javax.xml.ws.soap.SOAPFaultException
-name|assertEquals
-argument_list|(
-name|FAULT_MESSAGE
-argument_list|,
-name|ex
-operator|.
-name|getMessage
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//expected
 block|}
 block|}
 specifier|private
