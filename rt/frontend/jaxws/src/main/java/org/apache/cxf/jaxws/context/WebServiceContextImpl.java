@@ -753,15 +753,24 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|/**      * Sets reference to the specified MessageContext and returns the previous reference, if any.      *       * @param ctx       The MessageContext to set      * @return          The former MessageContext reference, if any.      */
 specifier|public
 specifier|static
-name|void
+name|MessageContext
 name|setMessageContext
 parameter_list|(
 name|MessageContext
 name|ctx
 parameter_list|)
 block|{
+name|MessageContext
+name|oldCtx
+init|=
+name|context
+operator|.
+name|get
+argument_list|()
+decl_stmt|;
 name|context
 operator|.
 name|set
@@ -769,6 +778,9 @@ argument_list|(
 name|ctx
 argument_list|)
 expr_stmt|;
+return|return
+name|oldCtx
+return|;
 block|}
 specifier|public
 specifier|static
