@@ -97,20 +97,6 @@ name|Greeter
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|core
-operator|.
-name|io
-operator|.
-name|ClassPathResource
-import|;
-end_import
-
 begin_class
 specifier|public
 specifier|final

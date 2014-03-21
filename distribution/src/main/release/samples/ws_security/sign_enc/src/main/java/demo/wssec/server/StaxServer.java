@@ -233,24 +233,6 @@ name|SecurePart
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|security
-operator|.
-name|stax
-operator|.
-name|ext
-operator|.
-name|XMLSecurityConstants
-import|;
-end_import
-
 begin_comment
 comment|/**  * A StAX-based server  */
 end_comment
