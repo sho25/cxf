@@ -551,10 +551,9 @@ block|}
 block|}
 comment|// add Acknowledgements (to application messages or explicitly
 comment|// created Acknowledgement messages only)
-if|if
-condition|(
-name|isApplicationMessage
-operator|||
+name|boolean
+name|isAck
+init|=
 name|constants
 operator|.
 name|getSequenceAckAction
@@ -564,6 +563,12 @@ name|equals
 argument_list|(
 name|action
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|isApplicationMessage
+operator|||
+name|isAck
 condition|)
 block|{
 name|AttributedURIType
@@ -635,6 +640,8 @@ block|}
 block|}
 if|if
 condition|(
+name|isAck
+operator|||
 name|constants
 operator|.
 name|getSequenceAckAction
