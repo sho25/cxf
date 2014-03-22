@@ -1737,6 +1737,8 @@ literal|"--stdout"
 block|,
 literal|"-1"
 block|,
+literal|"-k"
+block|,
 name|ver
 block|}
 argument_list|)
@@ -1974,6 +1976,8 @@ block|{
 literal|"git"
 block|,
 literal|"am"
+block|,
+literal|"-k"
 block|,
 name|outputFile
 operator|.
