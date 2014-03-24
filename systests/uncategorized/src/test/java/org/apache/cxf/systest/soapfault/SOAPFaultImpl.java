@@ -104,43 +104,9 @@ name|Fault
 name|fault
 parameter_list|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Received soap fault message"
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"FaultString: "
-operator|+
-name|fault
-operator|.
-name|getFaultstring
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"FaulCode: "
-operator|+
-name|fault
-operator|.
-name|getFaultcode
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Received soap fault message");
+comment|//System.out.println("FaultString: " + fault.getFaultstring());
+comment|//System.out.println("FaulCode: " + fault.getFaultcode());
 block|}
 block|}
 end_class
