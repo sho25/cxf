@@ -53,6 +53,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|UnsupportedEncodingException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|security
 operator|.
 name|Principal
@@ -412,8 +422,46 @@ argument_list|(
 literal|"onMessage(WebSocket, String)"
 argument_list|)
 expr_stmt|;
-return|return
+comment|//TODO may want to use string directly instead of converting it to byte[]
+name|byte
+index|[]
+name|bdata
+init|=
 literal|null
+decl_stmt|;
+try|try
+block|{
+name|bdata
+operator|=
+name|data
+operator|.
+name|getBytes
+argument_list|(
+literal|"utf-8"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|UnsupportedEncodingException
+name|e
+parameter_list|)
+block|{
+comment|// will not happen
+block|}
+return|return
+name|onMessage
+argument_list|(
+name|webSocket
+argument_list|,
+name|bdata
+argument_list|,
+literal|0
+argument_list|,
+name|bdata
+operator|.
+name|length
+argument_list|)
 return|;
 block|}
 comment|/** {@inheritDoc}*/
