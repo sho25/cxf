@@ -485,15 +485,6 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
-name|m
-operator|.
-name|writeTo
-argument_list|(
-name|System
-operator|.
-name|out
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 end_class
