@@ -301,7 +301,7 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
-literal|"http://cxf.apache.org/transports/websockt"
+literal|"http://cxf.apache.org/transports/websocket"
 argument_list|,
 literal|"http://cxf.apache.org/transports/websocket/configuration"
 argument_list|)
