@@ -410,6 +410,20 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|//if we get this far, we're going to be outputting some valid content, but we COULD
+comment|//also be "echoing" some of the content from the input.   Thus, we need to
+comment|//mark it as requiring the input to be cached.
+name|message
+operator|.
+name|put
+argument_list|(
+literal|"cxf.io.cacheinput"
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 literal|null
