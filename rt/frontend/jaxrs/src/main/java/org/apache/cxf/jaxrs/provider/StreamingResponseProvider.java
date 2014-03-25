@@ -344,11 +344,11 @@ argument_list|()
 throw|;
 block|}
 comment|//TODO: review the possibility of caching the providers
-name|StreamingProviderWriterImpl
+name|StreamingResponseWriter
 name|thewriter
 init|=
 operator|new
-name|StreamingProviderWriterImpl
+name|StreamingResponseWriter
 argument_list|(
 name|writer
 argument_list|,
@@ -407,7 +407,7 @@ return|;
 block|}
 specifier|private
 class|class
-name|StreamingProviderWriterImpl
+name|StreamingResponseWriter
 implements|implements
 name|StreamingResponse
 operator|.
@@ -453,7 +453,7 @@ name|OutputStream
 name|os
 decl_stmt|;
 specifier|public
-name|StreamingProviderWriterImpl
+name|StreamingResponseWriter
 parameter_list|(
 name|MessageBodyWriter
 argument_list|<
