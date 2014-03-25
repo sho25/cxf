@@ -239,7 +239,9 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"PUT /customerservice/customers\r\nContent-Type: text/xml; charset=ISO-8859-1\r\n\r\n"
+literal|"PUT /customerservice/customers\r\nContent-Type: text/xml;"
+operator|+
+literal|" charset=ISO-8859-1\r\n\r\n"
 operator|+
 name|inputData
 argument_list|)
@@ -307,7 +309,9 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"POST /customerservice/customers\r\nContent-Type: text/xml; charset=ISO-8859-1\r\nAccept: text/xml\r\n\r\n"
+literal|"POST /customerservice/customers\r\nContent-Type: text/xml; "
+operator|+
+literal|"charset=ISO-8859-1\r\nAccept: text/xml\r\n\r\n"
 operator|+
 name|inputData
 argument_list|)
