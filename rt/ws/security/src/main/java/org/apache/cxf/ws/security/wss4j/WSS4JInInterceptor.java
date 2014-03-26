@@ -4456,6 +4456,13 @@ decl_stmt|;
 if|if
 condition|(
 name|returnSecurityError
+operator|||
+name|MessageUtils
+operator|.
+name|isRequestor
+argument_list|(
+name|message
+argument_list|)
 condition|)
 block|{
 name|errorMessage

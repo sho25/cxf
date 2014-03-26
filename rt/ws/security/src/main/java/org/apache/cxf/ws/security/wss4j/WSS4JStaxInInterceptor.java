@@ -1007,6 +1007,13 @@ operator|.
 name|getInboundWSSec
 argument_list|(
 name|secProps
+argument_list|,
+name|MessageUtils
+operator|.
+name|isRequestor
+argument_list|(
+name|soapMessage
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|newXmlStreamReader
