@@ -124,6 +124,14 @@ name|maximumKeySize
 init|=
 literal|512
 decl_stmt|;
+specifier|private
+name|String
+name|digestAlgorithm
+init|=
+name|WSConstants
+operator|.
+name|SHA1
+decl_stmt|;
 specifier|public
 name|SignatureProperties
 parameter_list|()
@@ -363,6 +371,32 @@ operator|.
 name|acceptedC14nAlgorithms
 operator|=
 name|acceptedC14nAlgorithms
+expr_stmt|;
+block|}
+comment|/**      * Get the Digest algorithm to use for Signature      * @return the Digest algorithm to use for Signature      */
+specifier|public
+name|String
+name|getDigestAlgorithm
+parameter_list|()
+block|{
+return|return
+name|digestAlgorithm
+return|;
+block|}
+comment|/**      * Set the Digest algorithm to use for Signature      * @param digestAlgorithm the Digest algorithm to use for Signature      */
+specifier|public
+name|void
+name|setDigestAlgorithm
+parameter_list|(
+name|String
+name|digestAlgorithm
+parameter_list|)
+block|{
+name|this
+operator|.
+name|digestAlgorithm
+operator|=
+name|digestAlgorithm
 expr_stmt|;
 block|}
 block|}

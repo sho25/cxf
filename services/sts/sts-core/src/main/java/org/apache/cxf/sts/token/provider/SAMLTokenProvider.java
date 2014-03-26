@@ -2092,6 +2092,11 @@ argument_list|,
 name|c14nAlgorithm
 argument_list|,
 name|signatureAlgorithm
+argument_list|,
+name|signatureProperties
+operator|.
+name|getDigestAlgorithm
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
