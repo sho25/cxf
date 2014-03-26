@@ -1363,6 +1363,8 @@ name|type
 argument_list|,
 name|is
 argument_list|,
+name|anns
+argument_list|,
 name|mt
 argument_list|)
 expr_stmt|;
@@ -1583,6 +1585,10 @@ parameter_list|,
 name|InputStream
 name|is
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|MediaType
 name|mt
 parameter_list|)
@@ -1616,6 +1622,8 @@ argument_list|(
 name|unmarshaller
 argument_list|,
 name|reader
+argument_list|,
+name|anns
 argument_list|,
 name|mt
 argument_list|)
@@ -1659,6 +1667,8 @@ argument_list|(
 name|unmarshaller
 argument_list|,
 name|is
+argument_list|,
+name|anns
 argument_list|,
 name|mt
 argument_list|)
@@ -1859,6 +1869,10 @@ parameter_list|,
 name|InputStream
 name|is
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|MediaType
 name|mt
 parameter_list|)
@@ -1982,6 +1996,10 @@ name|unmarshaller
 parameter_list|,
 name|XMLStreamReader
 name|reader
+parameter_list|,
+name|Annotation
+index|[]
+name|anns
 parameter_list|,
 name|MediaType
 name|mt
@@ -2619,6 +2637,8 @@ name|enc
 argument_list|,
 name|os
 argument_list|,
+name|anns
+argument_list|,
 name|m
 argument_list|,
 name|qname
@@ -2659,6 +2679,8 @@ name|enc
 argument_list|,
 name|os
 argument_list|,
+name|anns
+argument_list|,
 name|m
 argument_list|,
 name|qname
@@ -2680,6 +2702,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+comment|//CHECKSTYLE:OFF
 specifier|protected
 name|void
 name|marshalCollectionMember
@@ -2702,6 +2725,10 @@ parameter_list|,
 name|OutputStream
 name|os
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|MediaType
 name|mt
 parameter_list|,
@@ -2711,6 +2738,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+comment|//CHECKSTYLE:ON
 if|if
 condition|(
 name|obj
@@ -2870,6 +2898,8 @@ argument_list|,
 name|enc
 argument_list|,
 name|os
+argument_list|,
+name|anns
 argument_list|,
 name|mt
 argument_list|,
@@ -3050,6 +3080,8 @@ argument_list|,
 name|enc
 argument_list|,
 name|os
+argument_list|,
+name|anns
 argument_list|,
 name|mt
 argument_list|,
@@ -3569,6 +3601,7 @@ literal|null
 return|;
 block|}
 block|}
+comment|//CHECKSTYLE:OFF
 specifier|protected
 name|void
 name|marshal
@@ -3591,6 +3624,10 @@ parameter_list|,
 name|OutputStream
 name|os
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|MediaType
 name|mt
 parameter_list|,
@@ -3600,6 +3637,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+comment|//CHECKSTYLE:ON
 for|for
 control|(
 name|Map
@@ -3781,6 +3819,8 @@ name|obj
 argument_list|,
 name|writer
 argument_list|,
+name|anns
+argument_list|,
 name|mt
 argument_list|)
 expr_stmt|;
@@ -3807,6 +3847,8 @@ argument_list|,
 name|obj
 argument_list|,
 name|os
+argument_list|,
+name|anns
 argument_list|,
 name|mt
 argument_list|)
@@ -3991,6 +4033,10 @@ parameter_list|,
 name|OutputStream
 name|os
 parameter_list|,
+name|Annotation
+index|[]
+name|anns
+parameter_list|,
 name|MediaType
 name|mt
 parameter_list|)
@@ -4079,6 +4125,10 @@ name|obj
 parameter_list|,
 name|XMLStreamWriter
 name|writer
+parameter_list|,
+name|Annotation
+index|[]
+name|anns
 parameter_list|,
 name|MediaType
 name|mt
