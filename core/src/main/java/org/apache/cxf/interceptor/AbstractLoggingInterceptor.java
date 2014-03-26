@@ -377,7 +377,7 @@ specifier|protected
 name|int
 name|limit
 init|=
-literal|100
+literal|48
 operator|*
 literal|1024
 decl_stmt|;

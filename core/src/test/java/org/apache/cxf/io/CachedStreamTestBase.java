@@ -370,13 +370,13 @@ init|=
 name|createCache
 argument_list|()
 decl_stmt|;
-comment|//ensure output data size larger then 64k which will generate tmp file
+comment|//ensure output data size larger then 128k which will generate tmp file
 name|String
 name|result
 init|=
 name|initTestData
 argument_list|(
-literal|65
+literal|130
 argument_list|)
 decl_stmt|;
 name|File

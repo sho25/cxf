@@ -2811,7 +2811,7 @@ condition|)
 block|{
 name|i
 operator|=
-literal|64
+literal|128
 operator|*
 literal|1024
 expr_stmt|;
