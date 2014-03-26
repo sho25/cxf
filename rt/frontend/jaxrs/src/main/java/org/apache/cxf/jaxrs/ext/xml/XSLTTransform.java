@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to assign qualified XML names to arbitrary classes  * for the purpose of matching them with external schema definitions   *   */
+comment|/**  * Can be used to enable server-side XSLT transformations   *   */
 end_comment
 
 begin_annotation_defn
@@ -101,7 +101,7 @@ name|String
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * Media types       **/
+comment|/**      * Supported media types       **/
 name|String
 index|[]
 name|mediaTypes
