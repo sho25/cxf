@@ -2815,6 +2815,14 @@ operator|.
 name|getAny
 argument_list|()
 decl_stmt|;
+name|Object
+name|obj
+init|=
+name|useKeyJaxb
+operator|.
+name|getValue
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|KeyInfoType
@@ -2825,6 +2833,10 @@ name|useKeyJaxb
 operator|.
 name|getDeclaredType
 argument_list|()
+operator|||
+name|obj
+operator|instanceof
+name|KeyInfoType
 condition|)
 block|{
 name|KeyInfoType
@@ -2940,6 +2952,10 @@ name|useKeyJaxb
 operator|.
 name|getDeclaredType
 argument_list|()
+operator|||
+name|obj
+operator|instanceof
+name|SecurityTokenReferenceType
 condition|)
 block|{
 name|SecurityTokenReferenceType
