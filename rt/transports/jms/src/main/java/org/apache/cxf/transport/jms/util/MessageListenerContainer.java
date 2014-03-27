@@ -27,7 +27,7 @@ name|util
 operator|.
 name|concurrent
 operator|.
-name|ExecutorService
+name|Executor
 import|;
 end_import
 
@@ -171,7 +171,7 @@ name|Session
 name|session
 decl_stmt|;
 specifier|private
-name|ExecutorService
+name|Executor
 name|executor
 decl_stmt|;
 specifier|private
@@ -212,15 +212,6 @@ operator|.
 name|listenerHandler
 operator|=
 name|listenerHandler
-expr_stmt|;
-name|executor
-operator|=
-name|Executors
-operator|.
-name|newFixedThreadPool
-argument_list|(
-literal|20
-argument_list|)
 expr_stmt|;
 block|}
 specifier|public
@@ -278,7 +269,7 @@ name|messageSelector
 expr_stmt|;
 block|}
 specifier|private
-name|ExecutorService
+name|Executor
 name|getExecutor
 parameter_list|()
 block|{
@@ -307,7 +298,7 @@ specifier|public
 name|void
 name|setExecutor
 parameter_list|(
-name|ExecutorService
+name|Executor
 name|executor
 parameter_list|)
 block|{
