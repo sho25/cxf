@@ -631,7 +631,7 @@ name|eprString
 operator|.
 name|contains
 argument_list|(
-literal|"wsdli:wsdlLocation=\"http://service/1 wsdlLoc\""
+literal|"wsdlLocation=\"http://service/1 wsdlLoc\""
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -721,13 +721,22 @@ literal|"Metadata"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+name|eprString
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
 name|eprString
 operator|.
 name|contains
 argument_list|(
-literal|"wsdli:wsdlLocation=\"wsdlLoc\""
+literal|"wsdlLocation=\"wsdlLoc\""
 argument_list|)
 argument_list|)
 expr_stmt|;
