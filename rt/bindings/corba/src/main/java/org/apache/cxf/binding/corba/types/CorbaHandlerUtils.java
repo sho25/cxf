@@ -197,7 +197,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -658,7 +658,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|CorbaUtils
@@ -1210,7 +1210,7 @@ name|arrayBound
 init|=
 literal|0
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|baseType
 init|=
 name|obj
@@ -1552,7 +1552,7 @@ name|seqBound
 init|=
 literal|0
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|baseType
 init|=
 name|obj
@@ -2643,7 +2643,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|CorbaUtils
@@ -3368,7 +3368,7 @@ name|CorbaObjectHandler
 name|handler
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|seqType
 init|=
 name|handler
@@ -3480,7 +3480,7 @@ specifier|static
 name|boolean
 name|isOctets
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|baseType
 parameter_list|)
 block|{

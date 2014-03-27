@@ -185,7 +185,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -1757,7 +1757,7 @@ comment|// QName.  If we have defined this type, we don't need to add it to the 
 comment|// again.
 name|List
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|allTypes
 init|=
@@ -1770,7 +1770,7 @@ for|for
 control|(
 name|Iterator
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|iter
 init|=
@@ -1786,7 +1786,7 @@ argument_list|()
 condition|;
 control|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|impl
 init|=
 name|iter

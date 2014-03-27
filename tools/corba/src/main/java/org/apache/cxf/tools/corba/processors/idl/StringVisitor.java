@@ -139,7 +139,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -623,7 +623,7 @@ argument_list|(
 name|simpleType
 argument_list|)
 expr_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|anon
 init|=
 literal|null
@@ -900,7 +900,7 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|anon
 init|=
 literal|null
@@ -1141,11 +1141,11 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 comment|// corba type
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaString
 init|=
 operator|new
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|()
 decl_stmt|;
 if|if

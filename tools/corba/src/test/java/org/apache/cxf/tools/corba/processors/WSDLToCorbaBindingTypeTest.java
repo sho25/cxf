@@ -291,7 +291,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -2373,7 +2373,7 @@ argument_list|)
 expr_stmt|;
 name|List
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|types
 init|=
@@ -2400,7 +2400,7 @@ name|i
 operator|++
 control|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|types
@@ -2724,7 +2724,7 @@ argument_list|)
 expr_stmt|;
 name|List
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|types
 init|=
@@ -2751,7 +2751,7 @@ name|i
 operator|++
 control|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|types
@@ -3280,7 +3280,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|tmap
 init|=
@@ -3289,13 +3289,13 @@ name|HashMap
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 argument_list|()
 decl_stmt|;
 for|for
 control|(
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 range|:
 name|mapType
@@ -3664,7 +3664,7 @@ literal|0
 decl_stmt|;
 for|for
 control|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 range|:
 name|mapType

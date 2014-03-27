@@ -45,7 +45,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -81,7 +81,7 @@ name|XmlSchemaType
 name|getSchemaType
 parameter_list|()
 function_decl|;
-name|CorbaTypeImpl
+name|CorbaType
 name|getCorbaType
 parameter_list|()
 function_decl|;

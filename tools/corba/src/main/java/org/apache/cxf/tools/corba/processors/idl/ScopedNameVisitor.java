@@ -177,7 +177,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -538,7 +538,7 @@ name|stype
 init|=
 literal|null
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 literal|null
@@ -793,7 +793,7 @@ expr_stmt|;
 block|}
 specifier|private
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|getCorbaSchemaType
 parameter_list|(
 name|XmlSchema
@@ -809,7 +809,7 @@ name|Scope
 name|scopedName
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 literal|null
@@ -832,7 +832,7 @@ block|{
 name|ctype
 operator|=
 operator|new
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|()
 expr_stmt|;
 name|ctype
@@ -2850,7 +2850,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|findCorbaTypeForSchemaType
 parameter_list|(
 name|TypeMappingType
@@ -2863,14 +2863,14 @@ name|Scope
 name|scopedName
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|result
 init|=
 literal|null
 decl_stmt|;
 for|for
 control|(
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 range|:
 name|typeMap
@@ -2997,7 +2997,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|findCorbaType
 parameter_list|(
 name|TypeMappingType
@@ -3007,14 +3007,14 @@ name|QName
 name|typeName
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|result
 init|=
 literal|null
 decl_stmt|;
 for|for
 control|(
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 range|:
 name|typeMap
@@ -3284,7 +3284,7 @@ argument_list|,
 name|name
 argument_list|)
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 init|=
 name|findCorbaType
@@ -3424,7 +3424,7 @@ specifier|static
 name|void
 name|populateAliasSchemaType
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 parameter_list|,
 name|WSDLASTVisitor
@@ -3466,7 +3466,7 @@ operator|)
 name|corbaType
 decl_stmt|;
 comment|//loop through alias base types, till you get a non-alias corba type
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|findCorbaType

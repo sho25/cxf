@@ -103,7 +103,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -282,7 +282,7 @@ operator|.
 name|getSchemaType
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 init|=
 name|typesVisitor
@@ -601,7 +601,7 @@ parameter_list|,
 name|XmlSchemaType
 name|schemaType
 parameter_list|,
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 parameter_list|,
 name|Scope
@@ -728,7 +728,7 @@ parameter_list|,
 name|XmlSchemaType
 name|schemaType
 parameter_list|,
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 parameter_list|,
 name|Scope

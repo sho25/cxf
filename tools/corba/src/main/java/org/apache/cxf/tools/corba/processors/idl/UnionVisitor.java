@@ -105,7 +105,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -457,7 +457,7 @@ argument_list|(
 name|discriminatorNode
 argument_list|)
 expr_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 name|visitor
@@ -837,7 +837,7 @@ operator|.
 name|getSchemaType
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 name|visitor
@@ -1330,7 +1330,7 @@ init|=
 name|getSchemaType
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 name|getCorbaType

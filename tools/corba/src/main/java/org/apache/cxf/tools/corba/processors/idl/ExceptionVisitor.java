@@ -87,7 +87,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -540,7 +540,7 @@ operator|.
 name|getSchemaType
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 name|visitor
@@ -950,7 +950,7 @@ parameter_list|(
 name|AST
 name|memberNode
 parameter_list|,
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 parameter_list|,
 name|Scope

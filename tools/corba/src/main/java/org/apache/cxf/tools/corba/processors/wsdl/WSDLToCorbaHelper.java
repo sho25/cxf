@@ -263,7 +263,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -1114,7 +1114,7 @@ name|Map
 argument_list|<
 name|QName
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|recursionMap
 init|=
@@ -1123,7 +1123,7 @@ name|HashMap
 argument_list|<
 name|QName
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -1198,7 +1198,7 @@ name|defn
 expr_stmt|;
 block|}
 specifier|public
-name|CorbaTypeImpl
+name|CorbaType
 name|convertSchemaToCorbaType
 parameter_list|(
 name|XmlSchemaType
@@ -1219,7 +1219,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -1564,7 +1564,7 @@ name|XmlSchemaSequence
 operator|)
 name|container
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|memberType
 init|=
 name|processSequenceType
@@ -1772,7 +1772,7 @@ name|XmlSchemaElement
 operator|)
 name|container
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 name|processLocalElement
@@ -1921,7 +1921,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 name|processChoice
@@ -2004,7 +2004,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 name|processAllType
@@ -2072,7 +2072,7 @@ name|member
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processChoice
 parameter_list|(
 name|XmlSchemaChoice
@@ -2130,7 +2130,7 @@ argument_list|(
 name|choicename
 argument_list|)
 expr_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 name|createUnion
@@ -2217,7 +2217,7 @@ operator|+
 literal|"Array"
 argument_list|)
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|arrayType
 init|=
 name|createArray
@@ -2277,7 +2277,7 @@ name|corbatype
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processLocalElement
 parameter_list|(
 name|QName
@@ -2292,11 +2292,11 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|membertype
 init|=
 operator|new
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|()
 decl_stmt|;
 name|XmlSchemaType
@@ -2451,7 +2451,7 @@ name|isNillable
 argument_list|()
 condition|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|elemtype
 init|=
 name|convertSchemaToCorbaType
@@ -2509,7 +2509,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|CorbaTypeImpl
+name|CorbaType
 name|memtype
 init|=
 name|createNillableUnion
@@ -2755,7 +2755,7 @@ operator|+
 literal|"Array"
 argument_list|)
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|arraytype
 init|=
 literal|null
@@ -3005,7 +3005,7 @@ specifier|private
 name|String
 name|getModulePrefix
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 parameter_list|)
 block|{
@@ -3051,7 +3051,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|processSequenceType
 parameter_list|(
 name|XmlSchemaSequence
@@ -3066,7 +3066,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 literal|null
@@ -3241,7 +3241,7 @@ operator|+
 literal|"Array"
 argument_list|)
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|atype
 init|=
 name|createArray
@@ -3376,7 +3376,7 @@ name|type
 return|;
 block|}
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|processAllType
 parameter_list|(
 name|XmlSchemaAll
@@ -3534,7 +3534,7 @@ name|type
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processPrimitiveType
 parameter_list|(
 name|QName
@@ -3552,11 +3552,11 @@ name|getLocalPart
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 operator|(
-name|CorbaTypeImpl
+name|CorbaType
 operator|)
 name|CORBAPRIMITIVEMAP
 operator|.
@@ -3573,7 +3573,7 @@ literal|null
 condition|)
 block|{
 comment|//REVISIT, bravi, not an ideal way to add the fixed& octet type to the typemap.
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 literal|null
@@ -3838,7 +3838,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-name|CorbaTypeImpl
+name|CorbaType
 name|membertype
 init|=
 literal|null
@@ -3874,7 +3874,7 @@ operator|.
 name|OPTIONAL
 condition|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|attType
 init|=
 literal|null
@@ -4244,7 +4244,7 @@ name|members
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processElementType
 parameter_list|(
 name|XmlSchemaElement
@@ -4363,7 +4363,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-name|CorbaTypeImpl
+name|CorbaType
 name|result
 init|=
 name|convertSchemaToCorbaType
@@ -4396,7 +4396,7 @@ name|result
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processSimpleType
 parameter_list|(
 name|XmlSchemaSimpleType
@@ -4411,7 +4411,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -4574,7 +4574,7 @@ operator|.
 name|getContent
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|itemType
 init|=
 literal|null
@@ -4810,7 +4810,7 @@ name|corbaTypeImpl
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processSimpleRestrictionType
 parameter_list|(
 name|XmlSchemaSimpleType
@@ -4828,7 +4828,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -5178,7 +5178,7 @@ name|corbaTypeImpl
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|getLocalType
 parameter_list|(
 name|QName
@@ -5891,7 +5891,7 @@ return|;
 block|}
 comment|/**      * Create a CORBA Array or Sequence based on min and max Occurs If minOccurs ==      * maxOccurs == 1 then log warning and return null. Else if minOccurs is      * equal to maxOccurs then create an Array. Else create a Sequence      */
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|createArray
 parameter_list|(
 name|QName
@@ -5934,7 +5934,7 @@ return|;
 block|}
 comment|/**      * Create a CORBA Array or Sequence based on min and max Occurs If minOccurs ==      * maxOccurs == 1 then log warning and return null. Else if minOccurs is      * equal to maxOccurs then create an Array. Else create a Sequence      */
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|createArray
 parameter_list|(
 name|QName
@@ -6128,7 +6128,7 @@ return|;
 block|}
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processComplexType
 parameter_list|(
 name|XmlSchemaComplexType
@@ -6146,7 +6146,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 literal|null
@@ -6277,7 +6277,7 @@ name|corbatype
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processStruct
 parameter_list|(
 name|XmlSchemaComplexType
@@ -6723,7 +6723,7 @@ name|attrMembers
 init|=
 literal|null
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|basetype
 init|=
 literal|null
@@ -7577,7 +7577,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|seqtype
 init|=
 name|processSequenceType
@@ -7713,7 +7713,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|alltype
 init|=
 name|processAllType
@@ -7962,7 +7962,7 @@ name|choicemem
 return|;
 block|}
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|createNillableUnion
 parameter_list|(
 name|QName
@@ -8134,7 +8134,7 @@ name|nilUnion
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processLiteralArray
 parameter_list|(
 name|XmlSchemaComplexType
@@ -8227,7 +8227,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-name|CorbaTypeImpl
+name|CorbaType
 name|arrayType
 init|=
 literal|null
@@ -8660,7 +8660,7 @@ argument_list|)
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processOMGUnion
 parameter_list|(
 name|XmlSchemaComplexType
@@ -8880,7 +8880,7 @@ operator|)
 name|st1
 expr_stmt|;
 block|}
-name|CorbaTypeImpl
+name|CorbaType
 name|disctype
 init|=
 name|convertSchemaToCorbaType
@@ -9276,7 +9276,7 @@ name|corbaUnion
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|processRegularUnion
 parameter_list|(
 name|XmlSchemaComplexType
@@ -9602,7 +9602,7 @@ specifier|protected
 name|boolean
 name|isDuplicate
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 parameter_list|)
 block|{
@@ -9633,7 +9633,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|(
-name|CorbaTypeImpl
+name|CorbaType
 operator|)
 name|CORBAPRIMITIVEMAP
 operator|.
@@ -9663,7 +9663,7 @@ condition|)
 block|{
 name|Iterator
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|i
 init|=
@@ -9683,7 +9683,7 @@ name|hasNext
 argument_list|()
 condition|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|i
@@ -9773,14 +9773,14 @@ literal|false
 return|;
 block|}
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|isDuplicateException
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|duplicate
 init|=
 literal|null
@@ -9818,7 +9818,7 @@ condition|)
 block|{
 name|Iterator
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|i
 init|=
@@ -9838,7 +9838,7 @@ name|hasNext
 argument_list|()
 condition|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|i

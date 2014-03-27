@@ -73,7 +73,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -513,7 +513,7 @@ name|QName
 name|key
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -541,7 +541,7 @@ block|{
 name|corbaTypeImpl
 operator|=
 operator|new
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|()
 expr_stmt|;
 name|corbaTypeImpl

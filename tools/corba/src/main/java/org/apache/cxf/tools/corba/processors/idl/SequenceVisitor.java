@@ -85,7 +85,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -412,7 +412,7 @@ operator|.
 name|getSchemaType
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 init|=
 name|visitor
@@ -570,7 +570,7 @@ name|fullyQualifiedName
 argument_list|)
 expr_stmt|;
 block|}
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 init|=
 literal|null
@@ -819,10 +819,10 @@ name|ct
 return|;
 block|}
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|generateCorbaSequence
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 parameter_list|,
 name|XmlSchemaType
@@ -969,7 +969,7 @@ specifier|private
 name|Anonsequence
 name|generateCorbaAnonsequence
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 parameter_list|,
 name|XmlSchemaType

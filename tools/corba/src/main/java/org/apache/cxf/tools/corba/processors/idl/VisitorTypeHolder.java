@@ -35,7 +35,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -60,14 +60,14 @@ specifier|public
 class|class
 name|VisitorTypeHolder
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|ctype
 decl_stmt|;
 name|XmlSchemaType
 name|stype
 decl_stmt|;
 specifier|public
-name|CorbaTypeImpl
+name|CorbaType
 name|getCorbaType
 parameter_list|()
 block|{
@@ -88,7 +88,7 @@ specifier|public
 name|void
 name|setCorbaType
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 parameter_list|)
 block|{

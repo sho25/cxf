@@ -229,6 +229,18 @@ name|wsdl
 operator|.
 name|extensions
 operator|.
+name|ExtensibilityElement
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|wsdl
+operator|.
+name|extensions
+operator|.
 name|schema
 operator|.
 name|Schema
@@ -321,7 +333,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -3314,6 +3326,9 @@ name|port
 operator|.
 name|addExtensibilityElement
 argument_list|(
+operator|(
+name|ExtensibilityElement
+operator|)
 name|address
 argument_list|)
 expr_stmt|;
@@ -3346,7 +3361,7 @@ parameter_list|)
 block|{
 name|List
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|types
 init|=
@@ -3380,7 +3395,7 @@ name|i
 operator|++
 control|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|types
@@ -3437,7 +3452,7 @@ parameter_list|)
 block|{
 name|List
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|types
 init|=
@@ -3530,7 +3545,7 @@ name|i
 operator|++
 control|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 init|=
 name|types

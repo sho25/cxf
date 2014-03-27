@@ -299,7 +299,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -646,7 +646,7 @@ parameter_list|()
 block|{     }
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|processObject
 parameter_list|(
 name|Definition
@@ -670,7 +670,7 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -1096,10 +1096,10 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|processStringType
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 parameter_list|,
 name|QName
@@ -1259,7 +1259,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|mapToArray
 parameter_list|(
 name|QName
@@ -1281,7 +1281,7 @@ name|boolean
 name|anonymous
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbatype
 init|=
 literal|null
@@ -1442,7 +1442,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|mapToSequence
 parameter_list|(
 name|QName
@@ -1464,7 +1464,7 @@ name|boolean
 name|anonymous
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -1996,7 +1996,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|processDecimalType
 parameter_list|(
 name|XmlSchemaSimpleTypeRestriction
@@ -2005,7 +2005,7 @@ parameter_list|,
 name|QName
 name|name
 parameter_list|,
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 parameter_list|,
 name|boolean
@@ -2489,10 +2489,10 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|processBase64Type
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 parameter_list|,
 name|QName
@@ -2704,7 +2704,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|getFixedCorbaType
 parameter_list|(
 name|QName
@@ -2796,7 +2796,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|getAnonFixedCorbaType
 parameter_list|(
 name|QName
@@ -2863,7 +2863,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|CorbaTypeImpl
+name|CorbaType
 name|getOctetCorbaType
 parameter_list|(
 name|QName

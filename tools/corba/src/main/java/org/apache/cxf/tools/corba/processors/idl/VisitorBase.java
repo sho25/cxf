@@ -55,7 +55,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -175,7 +175,7 @@ name|XmlSchemaType
 name|schemaType
 decl_stmt|;
 specifier|private
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 decl_stmt|;
 specifier|private
@@ -318,7 +318,7 @@ specifier|protected
 name|void
 name|setCorbaType
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 parameter_list|)
 block|{
@@ -328,7 +328,7 @@ name|type
 expr_stmt|;
 block|}
 specifier|public
-name|CorbaTypeImpl
+name|CorbaType
 name|getCorbaType
 parameter_list|()
 block|{

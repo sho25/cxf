@@ -83,7 +83,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -131,7 +131,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|typeMap
 decl_stmt|;
@@ -162,7 +162,7 @@ name|HashMap
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 argument_list|()
 expr_stmt|;
@@ -185,7 +185,7 @@ parameter_list|(
 name|String
 name|name
 parameter_list|,
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 parameter_list|)
 block|{
@@ -200,7 +200,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|CorbaTypeImpl
+name|CorbaType
 name|getType
 parameter_list|(
 name|String
@@ -331,7 +331,7 @@ name|Entry
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 argument_list|>
 name|mapSet
@@ -351,7 +351,7 @@ name|Entry
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 argument_list|>
 name|i
@@ -374,7 +374,7 @@ name|Entry
 argument_list|<
 name|String
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|entry
 init|=

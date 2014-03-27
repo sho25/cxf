@@ -95,7 +95,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -503,7 +503,7 @@ parameter_list|)
 block|{
 name|List
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|types
 init|=
@@ -516,7 +516,7 @@ for|for
 control|(
 name|Iterator
 argument_list|<
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|it
 init|=
@@ -532,7 +532,7 @@ argument_list|()
 condition|;
 control|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 init|=
 name|it

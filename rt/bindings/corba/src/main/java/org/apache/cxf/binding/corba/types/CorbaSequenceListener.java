@@ -79,7 +79,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -208,7 +208,7 @@ name|serviceInfo
 operator|=
 name|sInfo
 expr_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|seqType
 init|=
 name|handler

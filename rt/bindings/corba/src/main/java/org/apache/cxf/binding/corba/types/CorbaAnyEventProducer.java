@@ -189,7 +189,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -814,7 +814,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|impl
 init|=
 name|obj

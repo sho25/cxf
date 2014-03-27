@@ -55,7 +55,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -378,7 +378,7 @@ operator|.
 name|getSchemaType
 argument_list|()
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 init|=
 name|visitor
@@ -700,7 +700,7 @@ specifier|private
 name|void
 name|addCorbaParam
 parameter_list|(
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaType
 parameter_list|,
 name|ModeType

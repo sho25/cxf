@@ -85,7 +85,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -219,7 +219,7 @@ parameter_list|,
 name|XmlSchemaType
 name|schemaTypeRef
 parameter_list|,
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeRef
 parameter_list|,
 name|Scope
@@ -440,7 +440,7 @@ name|Scope
 name|newScope
 parameter_list|)
 block|{
-name|CorbaTypeImpl
+name|CorbaType
 name|nextCorbaType
 init|=
 literal|null
@@ -450,7 +450,7 @@ name|nextSchemaType
 init|=
 literal|null
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|oldCorbaType
 init|=
 name|getCorbaType

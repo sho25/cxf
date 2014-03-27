@@ -65,7 +65,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -85,7 +85,7 @@ name|Map
 argument_list|<
 name|QName
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 name|map
 init|=
@@ -94,7 +94,7 @@ name|HashMap
 argument_list|<
 name|QName
 argument_list|,
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -122,11 +122,11 @@ argument_list|,
 literal|"string"
 argument_list|)
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 operator|new
-name|CorbaTypeImpl
+name|CorbaType
 argument_list|()
 decl_stmt|;
 name|corbaTypeImpl

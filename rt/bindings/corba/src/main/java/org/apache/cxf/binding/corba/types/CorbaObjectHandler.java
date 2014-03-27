@@ -61,7 +61,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -127,7 +127,7 @@ name|TypeCode
 name|typeCode
 decl_stmt|;
 specifier|protected
-name|CorbaTypeImpl
+name|CorbaType
 name|type
 decl_stmt|;
 specifier|protected
@@ -173,7 +173,7 @@ expr_stmt|;
 name|type
 operator|=
 operator|(
-name|CorbaTypeImpl
+name|CorbaType
 operator|)
 name|objType
 expr_stmt|;
@@ -230,7 +230,7 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|CorbaTypeImpl
+name|CorbaType
 name|getType
 parameter_list|()
 block|{

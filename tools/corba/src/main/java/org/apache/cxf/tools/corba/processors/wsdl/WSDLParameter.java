@@ -155,7 +155,7 @@ name|corba
 operator|.
 name|wsdl
 operator|.
-name|CorbaTypeImpl
+name|CorbaType
 import|;
 end_import
 
@@ -2845,7 +2845,7 @@ name|idltype
 init|=
 literal|null
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
@@ -2860,7 +2860,7 @@ block|{
 name|corbaTypeImpl
 operator|=
 operator|(
-name|CorbaTypeImpl
+name|CorbaType
 operator|)
 name|WSDLToCorbaHelper
 operator|.
@@ -3132,7 +3132,7 @@ name|idltype
 init|=
 literal|null
 decl_stmt|;
-name|CorbaTypeImpl
+name|CorbaType
 name|corbaTypeImpl
 init|=
 literal|null
