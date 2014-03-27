@@ -230,8 +230,6 @@ parameter_list|(
 name|String
 name|str
 parameter_list|)
-throws|throws
-name|Base64Exception
 block|{
 try|try
 block|{
