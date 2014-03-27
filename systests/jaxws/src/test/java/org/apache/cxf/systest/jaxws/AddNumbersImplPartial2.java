@@ -30,11 +30,6 @@ end_import
 begin_class
 annotation|@
 name|WebService
-argument_list|(
-name|wsdlLocation
-operator|=
-literal|"partialwsdl/AddNumbersImplPartial2Service.wsdl"
-argument_list|)
 specifier|public
 class|class
 name|AddNumbersImplPartial2

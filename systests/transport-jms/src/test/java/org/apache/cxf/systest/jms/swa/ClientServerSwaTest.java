@@ -287,9 +287,17 @@ argument_list|()
 decl_stmt|;
 name|factory
 operator|.
+name|setBus
+argument_list|(
+name|getBus
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|factory
+operator|.
 name|setWsdlLocation
 argument_list|(
-literal|"classpath:wsdl/swa-mime-jms.wsdl"
+literal|"classpath:/swa-mime_jms.wsdl"
 argument_list|)
 expr_stmt|;
 name|factory
@@ -459,7 +467,7 @@ name|factory
 operator|.
 name|setWsdlLocation
 argument_list|(
-literal|"classpath:wsdl/swa-mime-jms.wsdl"
+literal|"classpath:/swa-mime_jms.wsdl"
 argument_list|)
 expr_stmt|;
 name|factory
@@ -493,7 +501,7 @@ name|QName
 argument_list|(
 literal|"http://cxf.apache.org/swa"
 argument_list|,
-literal|"SwAServiceHttpPort"
+literal|"SwAServiceJMSPort"
 argument_list|)
 argument_list|)
 expr_stmt|;
