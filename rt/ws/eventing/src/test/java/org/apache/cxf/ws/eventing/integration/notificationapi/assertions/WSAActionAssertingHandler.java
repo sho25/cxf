@@ -235,7 +235,7 @@ if|if
 condition|(
 name|elm
 operator|.
-name|getTagName
+name|getLocalName
 argument_list|()
 operator|.
 name|equals

@@ -263,6 +263,15 @@ name|String
 name|ns
 parameter_list|)
 block|{
+if|if
+condition|(
+operator|!
+name|namespaces
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 name|namespaces
 operator|.
 name|getFirst
@@ -287,6 +296,7 @@ argument_list|,
 name|prefix
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|String
