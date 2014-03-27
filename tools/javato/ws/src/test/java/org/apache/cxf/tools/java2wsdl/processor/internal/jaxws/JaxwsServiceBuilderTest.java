@@ -425,6 +425,18 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+name|isMOXy
+argument_list|()
+condition|)
+block|{
+comment|//This test is testing to see if the lack of namespace declarations on the wrapper classes
+comment|//can still map into the targetnamespace of the service.   MOXy always looks for the
+comment|//namespace on the annotation or in package-info and thus cannot support this.  This
+comment|//is fairly bad practice anyway.
+return|return;
+block|}
 name|builder
 operator|.
 name|setServiceClass
