@@ -2623,6 +2623,8 @@ block|{
 continue|continue;
 block|}
 block|}
+comment|//StaxUtils.print(r.getNode());
+comment|//System.out.println();
 name|addSchemaDocument
 argument_list|(
 name|serviceInfo
