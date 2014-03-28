@@ -1286,14 +1286,9 @@ parameter_list|)
 throws|throws
 name|JMSException
 block|{
-name|String
-name|replyTo
-init|=
-name|userDestination
-decl_stmt|;
 if|if
 condition|(
-name|replyTo
+name|userDestination
 operator|==
 literal|null
 condition|)
@@ -1312,7 +1307,7 @@ name|resolveDestinationName
 argument_list|(
 name|session
 argument_list|,
-name|replyTo
+name|userDestination
 argument_list|,
 name|replyPubSubDomain
 argument_list|)
