@@ -5878,6 +5878,13 @@ name|e
 argument_list|)
 throw|;
 block|}
+name|cookies
+operator|.
+name|writeToMessageHeaders
+argument_list|(
+name|outMessage
+argument_list|)
+expr_stmt|;
 name|retransmit
 argument_list|(
 name|newURL
