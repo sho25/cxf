@@ -572,9 +572,16 @@ operator|==
 name|maps
 condition|)
 block|{
+comment|//if wsrmp:RMAssertion and addressing is optional
 if|if
 condition|(
 name|isServer
+operator|&&
+operator|!
+name|isRMPolicyEnabled
+argument_list|(
+name|message
+argument_list|)
 condition|)
 block|{
 name|org
