@@ -96,6 +96,16 @@ specifier|public
 annotation_defn|@interface
 name|XSLTTransform
 block|{
+specifier|public
+enum|enum
+name|TransformType
+block|{
+name|CLIENT
+block|,
+name|SERVER
+block|,
+name|BOTH
+block|}
 comment|/**      * Template location      */
 name|String
 name|value
@@ -107,10 +117,16 @@ index|[]
 name|mediaTypes
 argument_list|()
 expr|default
-block|{
-literal|"*/*"
-block|}
+block|{ }
 expr_stmt|;
+name|TransformType
+name|type
+parameter_list|()
+default|default
+name|TransformType
+operator|.
+name|SERVER
+function_decl|;
 block|}
 end_annotation_defn
 
