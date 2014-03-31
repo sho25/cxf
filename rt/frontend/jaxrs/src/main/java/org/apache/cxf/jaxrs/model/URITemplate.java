@@ -1100,6 +1100,13 @@ condition|(
 name|finalGroup
 operator|==
 literal|null
+operator|||
+name|finalGroup
+operator|.
+name|startsWith
+argument_list|(
+name|SLASH_QUOTE
+argument_list|)
 condition|)
 block|{
 name|finalGroup
