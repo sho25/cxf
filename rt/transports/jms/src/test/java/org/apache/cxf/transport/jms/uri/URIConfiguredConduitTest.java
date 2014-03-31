@@ -358,6 +358,8 @@ name|SERVICE_QUEUE
 operator|+
 literal|"?jndiInitialContextFactory=org.apache.activemq.jndi.ActiveMQInitialContextFactory"
 operator|+
+literal|"&useConduitIdSelector=false"
+operator|+
 literal|"&replyToName=dynamicQueues/testreply"
 operator|+
 literal|"&messageType=text"
@@ -390,6 +392,8 @@ operator|+
 name|SERVICE_QUEUE
 operator|+
 literal|"?replyToName=testreply"
+operator|+
+literal|"&useConduitIdSelector=false"
 operator|+
 literal|"&messageType=text"
 operator|+

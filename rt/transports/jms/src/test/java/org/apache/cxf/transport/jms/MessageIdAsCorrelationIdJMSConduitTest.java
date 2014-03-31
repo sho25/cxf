@@ -330,6 +330,13 @@ argument_list|)
 expr_stmt|;
 name|jmsConfig
 operator|.
+name|setUseConduitIdSelector
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+name|jmsConfig
+operator|.
 name|setReplyDestination
 argument_list|(
 name|replyDestination

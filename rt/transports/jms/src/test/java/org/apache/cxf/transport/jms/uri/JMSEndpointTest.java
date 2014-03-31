@@ -144,7 +144,7 @@ init|=
 operator|new
 name|JMSEndpoint
 argument_list|(
-literal|"jms:queue:Foo.Bar?foo=bar&foo2=bar2"
+literal|"jms:queue:Foo.Bar?foo=bar&foo2=bar2&useConduitIdSelector=false"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -179,6 +179,16 @@ argument_list|,
 name|JMSEndpoint
 operator|.
 name|QUEUE
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|false
+argument_list|,
+name|endpoint
+operator|.
+name|isUseConduitIdSelector
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertEquals
