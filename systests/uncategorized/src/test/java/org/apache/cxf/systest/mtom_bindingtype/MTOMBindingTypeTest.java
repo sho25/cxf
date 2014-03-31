@@ -504,7 +504,7 @@ expr_stmt|;
 name|String
 name|expected
 init|=
-literal|"<xop:Include xmlns:xop="
+literal|"<xop:Include "
 decl_stmt|;
 name|assertTrue
 argument_list|(
