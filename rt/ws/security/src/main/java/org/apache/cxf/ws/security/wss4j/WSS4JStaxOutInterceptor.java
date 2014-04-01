@@ -71,6 +71,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -106,6 +118,22 @@ operator|.
 name|soap
 operator|.
 name|SoapMessage
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -536,6 +564,21 @@ operator|+
 literal|".outputstream"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|WSS4JStaxOutInterceptor
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
+specifier|private
 name|WSS4JStaxOutInterceptorInternal
 name|ending
 decl_stmt|;
@@ -666,7 +709,7 @@ return|return
 name|mtomEnabled
 return|;
 block|}
-comment|/**      * Enable or disable mtom with WS-Security.   By default MTOM is disabled as      * attachments would not get encrypted or be part of the signature.      * @param mtomEnabled      */
+comment|/**      * Enable or disable mtom with WS-Security. MTOM is disabled if we are signing or      * encrypting the message Body, as otherwise attachments would not get encrypted      * or be part of the signature.      * @param mtomEnabled      */
 specifier|public
 name|void
 name|setAllowMTOM
@@ -706,28 +749,29 @@ name|key
 argument_list|)
 return|;
 block|}
-specifier|public
+specifier|protected
 name|void
-name|handleMessage
+name|handleSecureMTOM
 parameter_list|(
 name|SoapMessage
 name|mc
+parameter_list|,
+name|WSSSecurityProperties
+name|secProps
 parameter_list|)
-throws|throws
-name|Fault
 block|{
-comment|//must turn off mtom when using WS-Sec so binary is inlined so it can
-comment|//be properly signed/encrypted/etc...
 if|if
 condition|(
-operator|!
 name|mtomEnabled
 condition|)
 block|{
-name|mc
-operator|.
-name|put
-argument_list|(
+return|return;
+block|}
+comment|//must turn off mtom when using WS-Sec so binary is inlined so it can
+comment|//be properly signed/encrypted/etc...
+name|String
+name|mtomKey
+init|=
 name|org
 operator|.
 name|apache
@@ -739,11 +783,53 @@ operator|.
 name|Message
 operator|.
 name|MTOM_ENABLED
-argument_list|,
-literal|false
+decl_stmt|;
+if|if
+condition|(
+name|mc
+operator|.
+name|get
+argument_list|(
+name|mtomKey
+argument_list|)
+operator|==
+name|Boolean
+operator|.
+name|TRUE
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"MTOM will be disabled as the WSS4JOutInterceptor.mtomEnabled property"
+operator|+
+literal|" is set to false"
 argument_list|)
 expr_stmt|;
 block|}
+name|mc
+operator|.
+name|put
+argument_list|(
+name|mtomKey
+argument_list|,
+name|Boolean
+operator|.
+name|FALSE
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|handleMessage
+parameter_list|(
+name|SoapMessage
+name|mc
+parameter_list|)
+throws|throws
+name|Fault
+block|{
 name|OutputStream
 name|os
 init|=
@@ -892,6 +978,13 @@ block|{
 comment|// If no actions configured (with SecurityPolicy) then return
 return|return;
 block|}
+name|handleSecureMTOM
+argument_list|(
+name|mc
+argument_list|,
+name|secProps
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|secProps

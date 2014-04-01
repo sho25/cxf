@@ -505,7 +505,7 @@ return|return
 name|mtomEnabled
 return|;
 block|}
-comment|/**      * Enable or disable mtom with WS-Security.   By default MTOM is disabled as      * attachments would not get encrypted or be part of the signature.      * @param mtomEnabled      */
+comment|/**      * Enable or disable mtom with WS-Security. MTOM is disabled if we are signing or      * encrypting the message Body, as otherwise attachments would not get encrypted      * or be part of the signature.      * @param mtomEnabled      */
 specifier|public
 name|void
 name|setAllowMTOM
@@ -519,6 +519,80 @@ operator|.
 name|mtomEnabled
 operator|=
 name|allowMTOM
+expr_stmt|;
+block|}
+specifier|protected
+name|void
+name|handleSecureMTOM
+parameter_list|(
+name|SoapMessage
+name|mc
+parameter_list|,
+name|List
+argument_list|<
+name|HandlerAction
+argument_list|>
+name|actions
+parameter_list|)
+block|{
+if|if
+condition|(
+name|mtomEnabled
+condition|)
+block|{
+return|return;
+block|}
+comment|//must turn off mtom when using WS-Sec so binary is inlined so it can
+comment|//be properly signed/encrypted/etc...
+name|String
+name|mtomKey
+init|=
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Message
+operator|.
+name|MTOM_ENABLED
+decl_stmt|;
+if|if
+condition|(
+name|mc
+operator|.
+name|get
+argument_list|(
+name|mtomKey
+argument_list|)
+operator|==
+name|Boolean
+operator|.
+name|TRUE
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"MTOM will be disabled as the WSS4JOutInterceptor.mtomEnabled property"
+operator|+
+literal|" is set to false"
+argument_list|)
+expr_stmt|;
+block|}
+name|mc
+operator|.
+name|put
+argument_list|(
+name|mtomKey
+argument_list|,
+name|Boolean
+operator|.
+name|FALSE
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@
@@ -610,65 +684,6 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-comment|//must turn off mtom when using WS-Sec so binary is inlined so it can
-comment|//be properly signed/encrypted/etc...
-if|if
-condition|(
-operator|!
-name|mtomEnabled
-condition|)
-block|{
-name|String
-name|mtomKey
-init|=
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|message
-operator|.
-name|Message
-operator|.
-name|MTOM_ENABLED
-decl_stmt|;
-if|if
-condition|(
-name|mc
-operator|.
-name|get
-argument_list|(
-name|mtomKey
-argument_list|)
-operator|==
-name|Boolean
-operator|.
-name|TRUE
-condition|)
-block|{
-name|LOG
-operator|.
-name|warning
-argument_list|(
-literal|"MTOM will be disabled as the WSS4JOutInterceptor.mtomEnabled property"
-operator|+
-literal|" is set to false"
-argument_list|)
-expr_stmt|;
-block|}
-name|mc
-operator|.
-name|put
-argument_list|(
-name|mtomKey
-argument_list|,
-name|Boolean
-operator|.
-name|FALSE
-argument_list|)
-expr_stmt|;
-block|}
 if|if
 condition|(
 name|mc
@@ -957,6 +972,13 @@ condition|)
 block|{
 return|return;
 block|}
+name|handleSecureMTOM
+argument_list|(
+name|mc
+argument_list|,
+name|actions
+argument_list|)
+expr_stmt|;
 comment|/*                  * For every action we need a username, so get this now. The                  * username defined in the deployment descriptor takes precedence.                  */
 name|reqData
 operator|.
@@ -1173,7 +1195,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*                  * Now get the SOAP part from the request message and convert it                  * into a Document. This forces CXF to serialize the SOAP request                  * into FORM_STRING. This string is converted into a document.                  * During the FORM_STRING serialization CXF performs multi-ref of                  * complex data types (if requested), generates and inserts                  * references for attachements and so on. The resulting Document                  * MUST be the complete and final SOAP request as CXF would send it                  * over the wire. Therefore this must shall be the last (or only)                  * handler in a chain. Now we can perform our security operations on                  * this request.                  */
+comment|/*                  * Now get the SOAP part from the request message and convert it                  * into a Document. This forces CXF to serialize the SOAP request                  * into FORM_STRING. This string is converted into a document.                  * During the FORM_STRING serialization CXF performs multi-ref of                  * complex data types (if requested), generates and inserts                  * references for attachments and so on. The resulting Document                  * MUST be the complete and final SOAP request as CXF would send it                  * over the wire. Therefore this must shall be the last (or only)                  * handler in a chain. Now we can perform our security operations on                  * this request.                  */
 name|SOAPMessage
 name|saaj
 init|=
