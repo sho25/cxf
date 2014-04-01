@@ -1080,6 +1080,7 @@ name|reconnectOnException
 expr_stmt|;
 block|}
 specifier|public
+specifier|synchronized
 name|ConnectionFactory
 name|getConnectionFactory
 parameter_list|()
@@ -1295,6 +1296,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
+specifier|synchronized
 name|Destination
 name|getReplyDestination
 parameter_list|(
