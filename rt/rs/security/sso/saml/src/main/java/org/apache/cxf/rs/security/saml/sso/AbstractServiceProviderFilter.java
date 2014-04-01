@@ -1068,7 +1068,6 @@ name|SamlAssertionWrapper
 name|assertionWrapper
 parameter_list|)
 block|{
-comment|// don't worry about roles/claims for now, just set a basic SecurityContext
 name|Subject
 name|subject
 init|=
