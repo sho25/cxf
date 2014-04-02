@@ -391,7 +391,14 @@ name|loader
 init|=
 operator|new
 name|ProxyClassLoader
+argument_list|(
+name|BookStore
+operator|.
+name|class
+operator|.
+name|getClassLoader
 argument_list|()
+argument_list|)
 decl_stmt|;
 name|loader
 operator|.
