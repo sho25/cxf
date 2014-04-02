@@ -170,6 +170,8 @@ init|=
 operator|new
 name|ProxyClassLoader
 argument_list|(
+name|loader
+argument_list|,
 name|interfaces
 argument_list|)
 decl_stmt|;
