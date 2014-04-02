@@ -396,6 +396,22 @@ operator|.
 name|getName
 argument_list|()
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|QName
+name|PARTICIPANTS
+init|=
+name|WS_TRUST_FACTORY
+operator|.
+name|createParticipants
+argument_list|(
+literal|null
+argument_list|)
+operator|.
+name|getName
+argument_list|()
+decl_stmt|;
 comment|//
 comment|// Key Requirement QNames
 comment|//
