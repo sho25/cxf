@@ -19,16 +19,6 @@ name|util
 package|;
 end_package
 
-begin_import
-import|import
-name|javax
-operator|.
-name|jms
-operator|.
-name|Connection
-import|;
-end_import
-
 begin_interface
 specifier|public
 interface|interface
@@ -48,10 +38,6 @@ parameter_list|()
 function_decl|;
 name|void
 name|shutdown
-parameter_list|()
-function_decl|;
-name|Connection
-name|getConnection
 parameter_list|()
 function_decl|;
 block|}
