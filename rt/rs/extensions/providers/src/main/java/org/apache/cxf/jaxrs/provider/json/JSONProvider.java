@@ -1395,6 +1395,18 @@ name|reader
 init|=
 literal|null
 decl_stmt|;
+name|String
+name|enc
+init|=
+name|HttpUtils
+operator|.
+name|getEncoding
+argument_list|(
+name|mt
+argument_list|,
+literal|"UTF-8"
+argument_list|)
+decl_stmt|;
 try|try
 block|{
 name|InputStream
@@ -1437,6 +1449,8 @@ argument_list|,
 name|realStream
 argument_list|,
 literal|false
+argument_list|,
+name|enc
 argument_list|)
 expr_stmt|;
 name|copyReaderToWriter
@@ -1522,6 +1536,8 @@ argument_list|,
 name|realStream
 argument_list|,
 name|isCollection
+argument_list|,
+name|enc
 argument_list|)
 decl_stmt|;
 name|Object
@@ -1813,6 +1829,9 @@ name|is
 parameter_list|,
 name|boolean
 name|isCollection
+parameter_list|,
+name|String
+name|enc
 parameter_list|)
 throws|throws
 name|Exception
@@ -1825,6 +1844,8 @@ argument_list|(
 name|type
 argument_list|,
 name|is
+argument_list|,
+name|enc
 argument_list|)
 decl_stmt|;
 return|return
@@ -1851,6 +1872,9 @@ name|type
 parameter_list|,
 name|InputStream
 name|is
+parameter_list|,
+name|String
+name|enc
 parameter_list|)
 throws|throws
 name|Exception
@@ -1877,6 +1901,8 @@ operator|.
 name|createBadgerFishReader
 argument_list|(
 name|is
+argument_list|,
+name|enc
 argument_list|)
 expr_stmt|;
 block|}
@@ -1898,6 +1924,8 @@ name|primitiveArrayKeys
 argument_list|,
 name|getDepthProperties
 argument_list|()
+argument_list|,
+name|enc
 argument_list|)
 expr_stmt|;
 block|}
@@ -3340,6 +3368,8 @@ operator|.
 name|createBadgerFishWriter
 argument_list|(
 name|os
+argument_list|,
+name|enc
 argument_list|)
 return|;
 block|}

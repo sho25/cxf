@@ -454,6 +454,9 @@ name|createBadgerFishWriter
 parameter_list|(
 name|OutputStream
 name|os
+parameter_list|,
+name|String
+name|enc
 parameter_list|)
 throws|throws
 name|XMLStreamException
@@ -471,6 +474,8 @@ operator|.
 name|createXMLStreamWriter
 argument_list|(
 name|os
+argument_list|,
+name|enc
 argument_list|)
 return|;
 block|}
@@ -481,6 +486,9 @@ name|createBadgerFishReader
 parameter_list|(
 name|InputStream
 name|is
+parameter_list|,
+name|String
+name|enc
 parameter_list|)
 throws|throws
 name|XMLStreamException
@@ -498,6 +506,8 @@ operator|.
 name|createXMLStreamReader
 argument_list|(
 name|is
+argument_list|,
+name|enc
 argument_list|)
 return|;
 block|}
@@ -835,6 +845,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|"UTF-8"
 argument_list|)
 return|;
 block|}
@@ -865,6 +877,9 @@ name|primitiveArrayKeys
 parameter_list|,
 name|DocumentDepthProperties
 name|depthProps
+parameter_list|,
+name|String
+name|enc
 parameter_list|)
 throws|throws
 name|Exception
@@ -947,6 +962,8 @@ operator|.
 name|createXMLStreamReader
 argument_list|(
 name|is
+argument_list|,
+name|enc
 argument_list|)
 argument_list|)
 return|;
