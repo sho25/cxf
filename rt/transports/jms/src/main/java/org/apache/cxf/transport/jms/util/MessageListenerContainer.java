@@ -900,11 +900,6 @@ expr_stmt|;
 block|}
 block|}
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"PMD"
-argument_list|)
 specifier|static
 class|class
 name|XATransactionalMessageListener
@@ -953,10 +948,6 @@ throw|;
 block|}
 if|if
 condition|(
-name|session
-operator|==
-literal|null
-operator|||
 operator|!
 operator|(
 name|session
