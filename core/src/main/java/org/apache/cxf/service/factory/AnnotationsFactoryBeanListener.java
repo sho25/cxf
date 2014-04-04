@@ -183,22 +183,6 @@ name|cxf
 operator|.
 name|annotations
 operator|.
-name|SchemaValidation
-operator|.
-name|SchemaValidationType
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|annotations
-operator|.
 name|WSDLDocumentation
 import|;
 end_import
@@ -2171,11 +2155,6 @@ block|}
 block|}
 block|}
 comment|/**      * @param endpoint      * @param annotation      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|private
 name|void
 name|addSchemaValidationSupport
@@ -2196,31 +2175,6 @@ condition|)
 block|{
 comment|// if someone has gone to the effort of specifying enabled=false, then we need to
 comment|// handle that, otherwise we use the new SchemaValidationType type only
-if|if
-condition|(
-operator|!
-name|annotation
-operator|.
-name|enabled
-argument_list|()
-condition|)
-block|{
-name|endpoint
-operator|.
-name|put
-argument_list|(
-name|Message
-operator|.
-name|SCHEMA_VALIDATION_ENABLED
-argument_list|,
-name|SchemaValidationType
-operator|.
-name|NONE
-argument_list|)
-expr_stmt|;
-block|}
-else|else
-block|{
 name|endpoint
 operator|.
 name|put
@@ -2235,7 +2189,6 @@ name|type
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 specifier|private

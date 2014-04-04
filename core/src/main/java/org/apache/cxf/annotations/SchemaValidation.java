@@ -118,14 +118,7 @@ name|BOTH
 block|,
 name|NONE
 block|}
-annotation|@
-name|Deprecated
-name|boolean
-name|enabled
-parameter_list|()
-default|default
-literal|true
-function_decl|;
+comment|/**      * Schema Validation Type      * @return validation type      */
 name|SchemaValidationType
 name|type
 parameter_list|()
@@ -134,6 +127,14 @@ name|SchemaValidationType
 operator|.
 name|BOTH
 function_decl|;
+comment|/**      * Optional list of schema locations      * @return schema locations      */
+name|String
+index|[]
+name|schemas
+argument_list|()
+expr|default
+block|{ }
+expr_stmt|;
 block|}
 end_annotation_defn
 
