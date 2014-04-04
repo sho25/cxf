@@ -1033,8 +1033,6 @@ name|registedPath
 argument_list|)
 condition|)
 block|{
-comment|//|| HttpUrlUtil.checkContextPath(registedPath, path)) {
-comment|// Throw the address is already used exception
 throw|throw
 operator|new
 name|Fault
@@ -1053,7 +1051,6 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-comment|/*             if (HttpUrlUtil.checkContextPath(path, registedPath)) {                 throw new Fault(new Message("ADD_HANDLER_CONTEXT_CONFILICT_MSG", LOG, url, registedPath));             }             */
 block|}
 block|}
 comment|/**      * Register a servant.      *       * @param url the URL associated with the servant      * @param handler notified on incoming HTTP requests      */
