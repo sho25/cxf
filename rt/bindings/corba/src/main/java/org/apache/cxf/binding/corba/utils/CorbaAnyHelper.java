@@ -2141,6 +2141,8 @@ argument_list|,
 literal|"_read"
 argument_list|,
 literal|"(Lorg/omg/CORBA/portable/InputStream;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -2224,6 +2226,8 @@ argument_list|,
 literal|"read_value"
 argument_list|,
 literal|"(Lorg/omg/CORBA/portable/InputStream;Lorg/omg/CORBA/TypeCode;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2512,6 +2516,8 @@ argument_list|,
 literal|"_write"
 argument_list|,
 literal|"(Lorg/omg/CORBA/portable/OutputStream;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -2584,6 +2590,8 @@ argument_list|,
 literal|"write_value"
 argument_list|,
 literal|"(Lorg/omg/CORBA/portable/OutputStream;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2881,6 +2889,8 @@ argument_list|,
 literal|"extract_Streamable"
 argument_list|,
 literal|"()Lorg/omg/CORBA/portable/Streamable;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -3035,6 +3045,8 @@ argument_list|,
 literal|"insert_Streamable"
 argument_list|,
 literal|"(Lorg/omg/CORBA/portable/Streamable;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -3302,6 +3314,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Lcom/sun/corba/se/spi/orb/ORB;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -3504,6 +3518,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Lcom/sun/corba/se/spi/orb/ORB;Lorg/omg/CORBA/Any;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|l1

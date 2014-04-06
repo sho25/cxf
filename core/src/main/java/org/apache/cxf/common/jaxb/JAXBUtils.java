@@ -6378,6 +6378,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Ljava/util/Map;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -6817,6 +6819,8 @@ argument_list|,
 literal|"getPreDeclaredNamespaceUris"
 argument_list|,
 literal|"()[Ljava/lang/String;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -7023,6 +7027,8 @@ argument_list|,
 literal|"asList"
 argument_list|,
 literal|"([Ljava/lang/Object;)Ljava/util/List;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -7038,6 +7044,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Ljava/util/Collection;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -7249,6 +7257,8 @@ argument_list|,
 literal|"remove"
 argument_list|,
 literal|"(Ljava/lang/Object;)Z"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -7433,6 +7443,8 @@ argument_list|,
 literal|"size"
 argument_list|,
 literal|"()I"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -7459,6 +7471,8 @@ argument_list|,
 literal|"toArray"
 argument_list|,
 literal|"([Ljava/lang/Object;)[Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -8007,6 +8021,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"()V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -8332,6 +8348,8 @@ argument_list|,
 literal|"get"
 argument_list|,
 literal|"(Ljava/lang/Object;)Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv

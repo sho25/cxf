@@ -3286,6 +3286,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Ljava/lang/String;Ljava/lang/String;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -3428,6 +3430,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"()V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|Label
@@ -3518,6 +3522,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Ljava/lang/String;Ljava/lang/String;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4031,6 +4037,8 @@ argument_list|,
 literal|"getOtherAttributes"
 argument_list|,
 literal|"()Ljava/util/Map;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4063,6 +4071,8 @@ argument_list|,
 literal|"get"
 argument_list|,
 literal|"(Ljava/lang/Object;)Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4219,6 +4229,8 @@ argument_list|,
 literal|"valueOf"
 argument_list|,
 literal|"(Ljava/lang/String;)Ljava/lang/Boolean;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4451,6 +4463,8 @@ argument_list|,
 literal|"getOtherAttributes"
 argument_list|,
 literal|"()Ljava/util/Map;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4483,6 +4497,8 @@ argument_list|,
 literal|"remove"
 argument_list|,
 literal|"(Ljava/lang/Object;)Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4594,6 +4610,8 @@ argument_list|,
 literal|"getOtherAttributes"
 argument_list|,
 literal|"()Ljava/util/Map;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4637,6 +4655,8 @@ argument_list|,
 literal|"toString"
 argument_list|,
 literal|"()Ljava/lang/String;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -4652,6 +4672,8 @@ argument_list|,
 literal|"put"
 argument_list|,
 literal|"(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv

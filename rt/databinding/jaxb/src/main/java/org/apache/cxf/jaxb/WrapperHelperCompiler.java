@@ -958,6 +958,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"()V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 if|if
@@ -1023,6 +1025,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"()V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -1232,6 +1236,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"()V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -1433,6 +1439,8 @@ argument_list|,
 literal|"get"
 argument_list|,
 literal|"(I)Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 if|if
@@ -1521,6 +1529,8 @@ name|get
 argument_list|(
 name|tp
 argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -1555,6 +1565,8 @@ name|tp
 argument_list|)
 operator|+
 literal|")V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -1662,6 +1674,8 @@ index|[
 name|x
 index|]
 argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -1696,6 +1710,8 @@ name|tp
 argument_list|)
 operator|+
 literal|")V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1754,6 +1770,8 @@ name|tp
 argument_list|)
 operator|+
 literal|")V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1808,6 +1826,8 @@ name|tp
 argument_list|)
 operator|+
 literal|")V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -2000,6 +2020,8 @@ index|[
 name|x
 index|]
 argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2048,6 +2070,8 @@ argument_list|,
 literal|"get"
 argument_list|,
 literal|"(I)Ljava/lang/Object;"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2158,6 +2182,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"(Ljava/lang/String;)V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2252,6 +2278,8 @@ index|[
 name|x
 index|]
 argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -2345,6 +2373,8 @@ argument_list|,
 literal|"addAll"
 argument_list|,
 literal|"(Ljava/util/Collection;)Z"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2473,6 +2503,8 @@ argument_list|,
 literal|"<init>"
 argument_list|,
 literal|"()V"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2634,6 +2666,8 @@ argument_list|,
 literal|"add"
 argument_list|,
 literal|"(Ljava/lang/Object;)Z"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2719,6 +2753,8 @@ name|getMethodSignature
 argument_list|(
 name|method
 argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 if|if
@@ -2798,6 +2834,8 @@ argument_list|,
 literal|"getValue"
 argument_list|,
 literal|"()Ljava/lang/Object;"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 name|mv
@@ -2821,6 +2859,8 @@ argument_list|,
 literal|"add"
 argument_list|,
 literal|"(Ljava/lang/Object;)Z"
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|mv
@@ -3041,6 +3081,8 @@ name|cl
 argument_list|)
 operator|+
 literal|";"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
