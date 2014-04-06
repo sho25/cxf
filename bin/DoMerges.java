@@ -3558,7 +3558,6 @@ argument_list|()
 operator|>
 literal|0
 operator|&&
-operator|!
 name|onBranch
 operator|.
 name|remove
