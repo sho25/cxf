@@ -203,6 +203,10 @@ name|LogUtils
 import|;
 end_import
 
+begin_comment
+comment|/**  * Listen for messages on a queue or topic asynchronously by registering a  * MessageListener.  *   * Warning: This class does not refresh connections when the server goes away  * This has to be handled outside.  */
+end_comment
+
 begin_class
 specifier|public
 class|class

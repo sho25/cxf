@@ -65,16 +65,6 @@ name|javax
 operator|.
 name|jms
 operator|.
-name|JMSException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|jms
-operator|.
 name|MessageConsumer
 import|;
 end_import
@@ -106,16 +96,6 @@ operator|.
 name|naming
 operator|.
 name|Context
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|naming
-operator|.
-name|NamingException
 import|;
 end_import
 
@@ -349,15 +329,7 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|JMSException
-name|e
-parameter_list|)
-block|{
-comment|// Ignore
-block|}
-catch|catch
-parameter_list|(
-name|NamingException
+name|Exception
 name|e
 parameter_list|)
 block|{
