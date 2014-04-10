@@ -420,11 +420,11 @@ operator|new
 name|TestMessageListener
 argument_list|()
 decl_stmt|;
-name|PollingMessageListenerContainer
+name|AbstractMessageListenerContainer
 name|container
 init|=
 operator|new
-name|PollingMessageListenerContainer
+name|MessageListenerContainer
 argument_list|(
 name|connection
 argument_list|,
@@ -560,7 +560,7 @@ operator|new
 name|TestMessageListener
 argument_list|()
 decl_stmt|;
-name|MessageListenerContainer
+name|AbstractMessageListenerContainer
 name|container
 init|=
 operator|new

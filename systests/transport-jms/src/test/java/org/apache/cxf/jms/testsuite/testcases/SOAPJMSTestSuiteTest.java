@@ -3872,8 +3872,6 @@ name|sender
 operator|.
 name|sendMessage
 argument_list|(
-name|closer
-argument_list|,
 name|session
 argument_list|,
 name|targetDest

@@ -49,13 +49,21 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
+name|hello_world_doc_lit
 operator|.
-name|systest
+name|Greeter
+import|;
+end_import
+
+begin_import
+import|import
+name|org
 operator|.
-name|jms
+name|apache
 operator|.
-name|GreeterImplDocBase
+name|hello_world_doc_lit
+operator|.
+name|PingMeFault
 import|;
 end_import
 
@@ -70,8 +78,8 @@ argument_list|)
 specifier|public
 class|class
 name|GreeterImplWithTransaction
-extends|extends
-name|GreeterImplDocBase
+implements|implements
+name|Greeter
 block|{
 specifier|private
 name|AtomicBoolean
@@ -91,7 +99,17 @@ name|String
 name|requestType
 parameter_list|)
 block|{
-comment|//System.out.println("Reached here :" + requestType);
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Reached here :"
+operator|+
+name|requestType
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 literal|"Bad guy"
@@ -140,6 +158,58 @@ return|return
 literal|"Hello "
 operator|+
 name|requestType
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|greetMeOneWay
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+block|{
+if|if
+condition|(
+literal|"Bad guy"
+operator|.
+name|equals
+argument_list|(
+name|name
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Got a bad guy call for greetMe"
+argument_list|)
+throw|;
+block|}
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|pingMe
+parameter_list|()
+throws|throws
+name|PingMeFault
+block|{
+comment|// TODO Auto-generated method stub
+block|}
+annotation|@
+name|Override
+specifier|public
+name|String
+name|sayHi
+parameter_list|()
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
 return|;
 block|}
 block|}

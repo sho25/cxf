@@ -873,10 +873,7 @@ name|c
 operator|.
 name|createSession
 argument_list|(
-name|jmsConfig
-operator|.
-name|isSessionTransacted
-argument_list|()
+literal|false
 argument_list|,
 name|Session
 operator|.
@@ -1436,8 +1433,6 @@ name|sender
 operator|.
 name|sendMessage
 argument_list|(
-name|closer
-argument_list|,
 name|session
 argument_list|,
 name|targetDest
