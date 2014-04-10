@@ -960,7 +960,7 @@ argument_list|()
 decl_stmt|;
 name|LOG
 operator|.
-name|warning
+name|fine
 argument_list|(
 name|message
 argument_list|)
