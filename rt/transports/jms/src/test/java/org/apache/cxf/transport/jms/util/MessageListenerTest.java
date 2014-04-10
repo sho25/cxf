@@ -1011,28 +1011,8 @@ argument_list|,
 name|queue
 argument_list|)
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Messages in queue "
-operator|+
-name|queue
-operator|.
-name|getQueueName
-argument_list|()
-operator|+
-literal|": "
-operator|+
-name|actualNum
-operator|+
-literal|", expecting: "
-operator|+
-name|expectedNum
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Messages in queue " + queue.getQueueName() + ": " + actualNum
+comment|//                   + ", expecting: " + expectedNum);
 name|Thread
 operator|.
 name|sleep
@@ -1337,15 +1317,7 @@ name|text
 argument_list|)
 condition|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Simulating Processing successful"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Simulating Processing successful");
 block|}
 elseif|else
 if|if
@@ -1385,15 +1357,7 @@ name|getJMSRedelivered
 argument_list|()
 condition|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Simulating processing worked on second try"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Simulating processing worked on second try");
 block|}
 else|else
 block|{

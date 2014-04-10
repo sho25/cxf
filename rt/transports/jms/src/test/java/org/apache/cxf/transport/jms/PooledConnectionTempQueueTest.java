@@ -139,6 +139,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -361,18 +371,14 @@ operator|.
 name|receive
 argument_list|()
 decl_stmt|;
-name|System
+name|Assert
 operator|.
-name|out
-operator|.
-name|println
+name|assertNotNull
 argument_list|(
 name|replyMsg
-operator|.
-name|getJMSCorrelationID
-argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//System.out.println(replyMsg.getJMSCorrelationID());
 name|consumer
 operator|.
 name|close
@@ -457,25 +463,8 @@ operator|.
 name|receive
 argument_list|()
 decl_stmt|;
-name|String
-name|requestMessageId
-init|=
-name|inMessage
-operator|.
-name|getJMSMessageID
-argument_list|()
-decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Received message "
-operator|+
-name|requestMessageId
-argument_list|)
-expr_stmt|;
+comment|//String requestMessageId = inMessage.getJMSMessageID();
+comment|//System.out.println("Received message " + requestMessageId);
 specifier|final
 name|TextMessage
 name|replyMessage
@@ -511,20 +500,7 @@ name|getJMSReplyTo
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Sending reply to "
-operator|+
-name|inMessage
-operator|.
-name|getJMSReplyTo
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Sending reply to " + inMessage.getJMSReplyTo());
 name|producer
 operator|.
 name|send

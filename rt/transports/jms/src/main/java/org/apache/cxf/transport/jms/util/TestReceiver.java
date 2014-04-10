@@ -432,15 +432,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"TestReceiver timed out"
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("TestReceiver timed out");
 throw|throw
 operator|new
 name|RuntimeException
@@ -458,17 +450,7 @@ operator|.
 name|getJMSMessageID
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Received message "
-operator|+
-name|requestMessageId
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Received message " + requestMessageId);
 specifier|final
 name|TextMessage
 name|replyMessage
@@ -553,21 +535,7 @@ name|replyDest
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Sending reply with correlation id "
-operator|+
-name|correlationId
-operator|+
-literal|" to "
-operator|+
-name|replyDest
-argument_list|)
-expr_stmt|;
+comment|//System.out.println("Sending reply with correlation id " + correlationId + " to " + replyDest);
 name|producer
 operator|.
 name|send
