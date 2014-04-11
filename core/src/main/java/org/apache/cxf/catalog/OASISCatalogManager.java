@@ -728,10 +728,6 @@ condition|(
 name|classLoader
 operator|==
 literal|null
-operator|||
-name|catalog
-operator|==
-literal|null
 condition|)
 block|{
 return|return;
@@ -765,6 +761,33 @@ operator|.
 name|nextElement
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|catalog
+operator|==
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+literal|"Catalog found at {0} but no org.apache.xml.resolver.CatalogManager was found."
+operator|+
+literal|"  Check the classpatch for an xmlresolver jar."
+argument_list|,
+name|catalogURL
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
 if|if
 condition|(
 operator|!
@@ -827,10 +850,6 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
-operator|&&
-name|catalog
-operator|!=
-literal|null
 condition|)
 block|{
 if|if
@@ -890,6 +909,34 @@ block|{
 comment|//just process as is
 block|}
 block|}
+if|if
+condition|(
+name|catalog
+operator|==
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+literal|"Catalog found at {0} but no org.apache.xml.resolver.CatalogManager was found."
+operator|+
+literal|"  Check the classpatch for an xmlresolver jar."
+argument_list|,
+name|catalogURL
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 operator|(
 operator|(
 name|Catalog
@@ -912,6 +959,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private
