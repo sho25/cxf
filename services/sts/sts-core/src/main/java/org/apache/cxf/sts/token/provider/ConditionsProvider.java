@@ -25,22 +25,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|cxf
-operator|.
-name|sts
-operator|.
-name|request
-operator|.
-name|Lifetime
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
 name|wss4j
 operator|.
 name|common
@@ -68,17 +52,6 @@ name|getConditions
 parameter_list|(
 name|TokenProviderParameters
 name|providerParameters
-parameter_list|)
-function_decl|;
-comment|/**      * Get a ConditionsBean object.      */
-name|ConditionsBean
-name|getConditions
-parameter_list|(
-name|String
-name|appliesToAddress
-parameter_list|,
-name|Lifetime
-name|tokenLifetime
 parameter_list|)
 function_decl|;
 comment|/**      * Get the lifetime to use (in seconds)      */

@@ -407,7 +407,7 @@ argument_list|)
 return|;
 block|}
 comment|/**      * Get a ConditionsBean object.      */
-specifier|public
+specifier|private
 name|ConditionsBean
 name|getConditions
 parameter_list|(
