@@ -227,6 +227,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|net
@@ -1388,6 +1400,33 @@ operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Asynchronous connection to "
+operator|+
+name|uri
+operator|.
+name|toString
+argument_list|()
+operator|+
+literal|" has been set up"
+argument_list|)
+expr_stmt|;
+block|}
 name|message
 operator|.
 name|put
