@@ -201,7 +201,9 @@ name|cxf
 operator|.
 name|jaxws
 operator|.
-name|javaee
+name|handler
+operator|.
+name|types
 operator|.
 name|DescriptionType
 import|;
@@ -217,7 +219,9 @@ name|cxf
 operator|.
 name|jaxws
 operator|.
-name|javaee
+name|handler
+operator|.
+name|types
 operator|.
 name|DisplayNameType
 import|;

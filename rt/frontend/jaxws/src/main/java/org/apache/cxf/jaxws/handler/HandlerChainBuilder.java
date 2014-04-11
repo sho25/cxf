@@ -219,7 +219,9 @@ name|cxf
 operator|.
 name|jaxws
 operator|.
-name|javaee
+name|handler
+operator|.
+name|types
 operator|.
 name|ParamValueType
 import|;
@@ -235,7 +237,9 @@ name|cxf
 operator|.
 name|jaxws
 operator|.
-name|javaee
+name|handler
+operator|.
+name|types
 operator|.
 name|PortComponentHandlerType
 import|;
