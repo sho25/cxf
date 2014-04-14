@@ -848,10 +848,26 @@ name|WebServiceException
 name|e
 parameter_list|)
 block|{
+name|String
+name|expected
+init|=
+literal|"Value '1' is not facet-valid"
+decl_stmt|;
+name|assertTrue
+argument_list|(
 name|e
 operator|.
-name|printStackTrace
+name|getMessage
 argument_list|()
+operator|.
+name|indexOf
+argument_list|(
+name|expected
+argument_list|)
+operator|!=
+operator|-
+literal|1
+argument_list|)
 expr_stmt|;
 block|}
 block|}
