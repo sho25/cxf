@@ -559,6 +559,12 @@ condition|(
 name|transformedToken
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|transformedToken
+operator|.
+name|isExpired
+argument_list|()
 condition|)
 block|{
 name|SamlAssertionWrapper

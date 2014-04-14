@@ -466,19 +466,6 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|Collection
-argument_list|<
-name|SecurityToken
-argument_list|>
-name|getExpiredTokens
-parameter_list|()
-block|{
-comment|// TODO Auto-generated method stub
-return|return
-literal|null
-return|;
-block|}
-specifier|public
 name|SecurityToken
 name|getToken
 parameter_list|(

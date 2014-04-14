@@ -73,14 +73,6 @@ argument_list|>
 name|getTokenIdentifiers
 parameter_list|()
 function_decl|;
-comment|/**      * Return the list of expired tokens.      * @return An array of expired<code>Tokens</code>      */
-name|Collection
-argument_list|<
-name|SecurityToken
-argument_list|>
-name|getExpiredTokens
-parameter_list|()
-function_decl|;
 comment|/**      * Returns the<code>Token</code> of the given identifier      * @param identifier      * @return The requested<code>Token</code> identified by the given identifier      */
 name|SecurityToken
 name|getToken

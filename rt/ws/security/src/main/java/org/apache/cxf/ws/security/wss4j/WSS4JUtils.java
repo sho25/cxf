@@ -1048,6 +1048,11 @@ condition|(
 name|existingToken
 operator|==
 literal|null
+operator|||
+name|existingToken
+operator|.
+name|isExpired
+argument_list|()
 condition|)
 block|{
 name|Date

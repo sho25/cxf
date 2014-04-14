@@ -1863,6 +1863,11 @@ condition|(
 name|token
 operator|==
 literal|null
+operator|||
+name|token
+operator|.
+name|isExpired
+argument_list|()
 condition|)
 block|{
 name|byte
