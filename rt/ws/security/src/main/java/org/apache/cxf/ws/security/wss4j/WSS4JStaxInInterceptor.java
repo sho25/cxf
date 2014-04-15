@@ -946,6 +946,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+specifier|final
 name|TokenStoreCallbackHandler
 name|callbackHandler
 init|=
@@ -986,6 +987,7 @@ argument_list|(
 name|soapMessage
 argument_list|)
 expr_stmt|;
+specifier|final
 name|List
 argument_list|<
 name|SecurityEventListener
@@ -999,6 +1001,7 @@ argument_list|,
 name|secProps
 argument_list|)
 decl_stmt|;
+specifier|final
 name|InboundWSSec
 name|inboundWSSec
 init|=
@@ -1194,6 +1197,7 @@ name|SecurityEvent
 argument_list|>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SecurityEventListener
 name|securityEventListener
 init|=

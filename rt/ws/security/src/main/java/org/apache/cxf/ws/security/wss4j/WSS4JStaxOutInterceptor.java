@@ -1234,6 +1234,7 @@ name|SecurityEvent
 argument_list|>
 argument_list|()
 decl_stmt|;
+specifier|final
 name|SecurityEventListener
 name|securityEventListener
 init|=

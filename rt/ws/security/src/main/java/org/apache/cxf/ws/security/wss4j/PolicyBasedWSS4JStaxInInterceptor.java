@@ -2237,6 +2237,7 @@ parameter_list|)
 throws|throws
 name|WSSPolicyException
 block|{
+specifier|final
 name|List
 argument_list|<
 name|SecurityEventListener
