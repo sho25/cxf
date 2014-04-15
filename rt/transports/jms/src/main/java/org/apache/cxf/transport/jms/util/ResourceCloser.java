@@ -172,6 +172,11 @@ name|resource
 argument_list|)
 expr_stmt|;
 block|}
+name|resources
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|void

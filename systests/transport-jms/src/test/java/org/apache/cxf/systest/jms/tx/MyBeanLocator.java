@@ -11,11 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|transport
+name|systest
 operator|.
 name|jms
 operator|.
-name|uri
+name|tx
 package|;
 end_package
 

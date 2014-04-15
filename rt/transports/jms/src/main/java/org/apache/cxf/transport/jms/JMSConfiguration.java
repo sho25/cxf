@@ -989,6 +989,7 @@ operator|=
 name|sessionTransacted
 expr_stmt|;
 block|}
+comment|/**      * For compatibility with old spring based code      * @param transactionManager      */
 annotation|@
 name|Deprecated
 specifier|public
@@ -1463,6 +1464,8 @@ name|getTransactionManager
 parameter_list|()
 block|{
 return|return
+name|this
+operator|.
 name|transactionManager
 return|;
 block|}
