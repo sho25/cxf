@@ -1625,6 +1625,12 @@ condition|(
 name|config
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|config
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|Crypto
