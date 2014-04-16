@@ -2394,6 +2394,8 @@ name|pf
 operator|.
 name|createResponseExceptionMapper
 argument_list|(
+name|message
+argument_list|,
 name|exType
 argument_list|)
 return|;

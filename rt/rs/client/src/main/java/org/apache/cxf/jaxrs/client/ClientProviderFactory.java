@@ -680,6 +680,9 @@ name|T
 argument_list|>
 name|createResponseExceptionMapper
 parameter_list|(
+name|Message
+name|m
+parameter_list|,
 name|Class
 argument_list|<
 name|?
@@ -728,7 +731,7 @@ name|em
 argument_list|,
 name|paramType
 argument_list|,
-literal|null
+name|m
 argument_list|,
 name|ResponseExceptionMapper
 operator|.
