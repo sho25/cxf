@@ -637,8 +637,6 @@ specifier|public
 class|class
 name|AsyncHTTPConduitFactory
 implements|implements
-name|BusLifeCycleListener
-implements|,
 name|HTTPConduitFactory
 block|{
 comment|//TCP related properties
@@ -1529,26 +1527,6 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|initComplete
-parameter_list|()
-block|{     }
-specifier|public
-specifier|synchronized
-name|void
-name|preShutdown
-parameter_list|()
-block|{
-name|shutdown
-argument_list|()
-expr_stmt|;
-block|}
-specifier|public
-name|void
-name|postShutdown
-parameter_list|()
-block|{     }
-specifier|public
-name|void
 name|shutdown
 parameter_list|()
 block|{
@@ -1627,7 +1605,30 @@ argument_list|)
 operator|.
 name|registerLifeCycleListener
 argument_list|(
-name|this
+operator|new
+name|BusLifeCycleListener
+argument_list|()
+block|{
+specifier|public
+name|void
+name|initComplete
+parameter_list|()
+block|{             }
+specifier|public
+name|void
+name|preShutdown
+parameter_list|()
+block|{
+name|shutdown
+argument_list|()
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|postShutdown
+parameter_list|()
+block|{             }
+block|}
 argument_list|)
 expr_stmt|;
 block|}
