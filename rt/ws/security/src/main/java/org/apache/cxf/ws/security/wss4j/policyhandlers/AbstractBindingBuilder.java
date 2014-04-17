@@ -3280,6 +3280,13 @@ operator|instanceof
 name|SupportingTokens
 condition|)
 block|{
+name|assertionInfo
+operator|.
+name|setAsserted
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|handleSupportingTokens
 argument_list|(
 operator|(
