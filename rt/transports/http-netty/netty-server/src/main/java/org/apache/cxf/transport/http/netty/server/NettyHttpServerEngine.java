@@ -261,20 +261,6 @@ name|NioServerSocketChannel
 import|;
 end_import
 
-begin_import
-import|import
-name|io
-operator|.
-name|netty
-operator|.
-name|handler
-operator|.
-name|timeout
-operator|.
-name|IdleStateHandler
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -552,22 +538,6 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
-comment|// Set up the idle handler
-name|IdleStateHandler
-name|idleStateHandler
-init|=
-operator|new
-name|IdleStateHandler
-argument_list|(
-name|getReadIdleTime
-argument_list|()
-argument_list|,
-name|getWriteIdleTime
-argument_list|()
-argument_list|,
-literal|0
-argument_list|)
-decl_stmt|;
 comment|// Set up the event pipeline factory.
 name|servletPipeline
 operator|=
@@ -587,7 +557,7 @@ name|maxChunkContentSize
 argument_list|,
 name|handlerMap
 argument_list|,
-name|idleStateHandler
+name|this
 argument_list|)
 expr_stmt|;
 comment|// Start the servletPipeline's timer
