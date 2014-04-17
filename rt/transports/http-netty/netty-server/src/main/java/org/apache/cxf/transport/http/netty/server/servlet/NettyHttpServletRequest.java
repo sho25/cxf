@@ -2070,13 +2070,10 @@ name|String
 name|getAuthType
 parameter_list|()
 block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Method 'getAuthType' not yet implemented!"
-argument_list|)
-throw|;
+comment|// CXF Calls this method to cache the Request informaiton
+return|return
+literal|null
+return|;
 block|}
 annotation|@
 name|Override
@@ -2085,13 +2082,10 @@ name|String
 name|getPathTranslated
 parameter_list|()
 block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Method 'getPathTranslated' not yet implemented!"
-argument_list|)
-throw|;
+comment|// CXF Calls this method to cache the Request informaiton
+return|return
+literal|null
+return|;
 block|}
 annotation|@
 name|Override
@@ -2100,13 +2094,10 @@ name|String
 name|getRemoteUser
 parameter_list|()
 block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Method 'getRemoteUser' not yet implemented!"
-argument_list|)
-throw|;
+comment|// CXF Calls this method to cache the Request informaiton
+return|return
+literal|null
+return|;
 block|}
 annotation|@
 name|Override
@@ -2157,13 +2148,9 @@ name|boolean
 name|isRequestedSessionIdValid
 parameter_list|()
 block|{
-throw|throw
-operator|new
-name|IllegalStateException
-argument_list|(
-literal|"Method 'isRequestedSessionIdValid' not yet implemented!"
-argument_list|)
-throw|;
+return|return
+literal|false
+return|;
 block|}
 annotation|@
 name|Override
