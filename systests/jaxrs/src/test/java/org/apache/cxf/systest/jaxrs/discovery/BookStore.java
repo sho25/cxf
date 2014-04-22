@@ -120,14 +120,11 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|Path
-argument_list|(
-literal|"/bookstore/"
-argument_list|)
 specifier|public
 class|class
 name|BookStore
+implements|implements
+name|BookStoreInterface
 block|{
 annotation|@
 name|POST
