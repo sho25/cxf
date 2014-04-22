@@ -1399,6 +1399,13 @@ operator|new
 name|XmlSecInInterceptor
 argument_list|()
 decl_stmt|;
+name|sigInInterceptor
+operator|.
+name|setRequireSignature
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 operator|!
@@ -2723,6 +2730,13 @@ operator|new
 name|XmlSecInInterceptor
 argument_list|()
 decl_stmt|;
+name|encInInterceptor
+operator|.
+name|setRequireEncryption
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|bean
 operator|.
 name|getInInterceptors

@@ -2404,7 +2404,7 @@ name|super
 argument_list|(
 name|Phase
 operator|.
-name|PRE_PROTOCOL
+name|PRE_LOGICAL
 argument_list|)
 expr_stmt|;
 name|this
