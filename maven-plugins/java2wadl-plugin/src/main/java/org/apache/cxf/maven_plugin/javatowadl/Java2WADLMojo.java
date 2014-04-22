@@ -460,8 +460,6 @@ argument_list|()
 operator|.
 name|getDirectory
 argument_list|()
-operator|+
-literal|"/classes"
 block|}
 argument_list|)
 expr_stmt|;
