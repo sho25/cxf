@@ -2120,21 +2120,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-if|if
-condition|(
-name|STAX_PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|port
-argument_list|)
-condition|)
-block|{
-comment|// TODO We are not processing encrypted Signatures correctly
-return|return;
-block|}
 name|String
 name|address
 init|=
@@ -2231,21 +2216,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-if|if
-condition|(
-name|STAX_PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|port
-argument_list|)
-condition|)
-block|{
-comment|// TODO We are not processing encrypted Signatures correctly
-return|return;
-block|}
 name|String
 name|address
 init|=
@@ -2392,21 +2362,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-if|if
-condition|(
-name|STAX_PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|port
-argument_list|)
-condition|)
-block|{
-comment|// TODO Supporting UseReqSigCert
-return|return;
-block|}
 name|String
 name|address
 init|=
@@ -2665,7 +2620,7 @@ argument_list|()
 decl_stmt|;
 name|encInterceptor
 operator|.
-name|setKeyIdentifierType
+name|setEncryptionKeyIdentifierType
 argument_list|(
 name|encryptionProperties
 operator|.
