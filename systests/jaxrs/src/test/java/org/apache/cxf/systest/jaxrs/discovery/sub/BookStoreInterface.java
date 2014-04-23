@@ -16,6 +16,8 @@ operator|.
 name|jaxrs
 operator|.
 name|discovery
+operator|.
+name|sub
 package|;
 end_package
 
