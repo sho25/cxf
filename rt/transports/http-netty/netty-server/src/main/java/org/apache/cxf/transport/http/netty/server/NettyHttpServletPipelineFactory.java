@@ -562,7 +562,7 @@ operator|=
 operator|new
 name|DefaultEventExecutorGroup
 argument_list|(
-literal|16
+name|threadPoolSize
 argument_list|)
 expr_stmt|;
 block|}
