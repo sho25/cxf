@@ -545,7 +545,7 @@ block|}
 elseif|else
 if|if
 condition|(
-literal|"base-packages"
+literal|"basePackages"
 operator|.
 name|equals
 argument_list|(
