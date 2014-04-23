@@ -645,6 +645,7 @@ argument_list|(
 name|action
 argument_list|)
 operator|||
+operator|(
 name|constants
 operator|.
 name|getTerminateSequenceAction
@@ -654,6 +655,16 @@ name|equals
 argument_list|(
 name|action
 argument_list|)
+operator|&&
+name|RM10Constants
+operator|.
+name|NAMESPACE_URI
+operator|.
+name|equals
+argument_list|(
+name|rmNamespace
+argument_list|)
+operator|)
 condition|)
 block|{
 name|maps
