@@ -252,6 +252,22 @@ name|CFG_INHERIT_PARAMS
 init|=
 literal|"inheritResourceParams"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_GENERATE_RESPONSE_IF_HEADERS_SET
+init|=
+literal|"generateResponseIfHeadersSet"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CFG_GENERATE_RESPONSE_FOR_METHODS
+init|=
+literal|"generateResponseForMethods"
+decl_stmt|;
 comment|// JAX-RS 2.0 @Suspended AsyncResponse
 specifier|public
 specifier|static
@@ -261,9 +277,6 @@ name|CFG_SUSPENDED_ASYNC
 init|=
 literal|"async"
 decl_stmt|;
-comment|// CXF @UseAsyncMethod - equivalent of the proposed @ManagedAsync which
-comment|// which did not make it into JAX-RS 2.0
-comment|//public static final String CFG_MANAGED_ASYNC = "managedAsync";
 specifier|public
 specifier|static
 specifier|final
