@@ -3584,7 +3584,7 @@ name|mt
 operator|==
 literal|null
 condition|?
-literal|"UTF-8"
+name|defaultEncoding
 else|:
 name|mt
 operator|.
@@ -3601,7 +3601,7 @@ name|charset
 operator|==
 literal|null
 condition|?
-literal|"UTF-8"
+name|defaultEncoding
 else|:
 name|charset
 return|;
