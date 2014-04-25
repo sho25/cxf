@@ -628,6 +628,19 @@ name|boolean
 name|last
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"[ws] received fragment bytes (last?"
+operator|+
+name|last
+operator|+
+literal|") --> "
+operator|+
+name|fragment
+argument_list|)
+expr_stmt|;
 name|processFragments
 argument_list|(
 name|fragment
@@ -677,6 +690,19 @@ name|boolean
 name|last
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"[ws] received fragment (last?"
+operator|+
+name|last
+operator|+
+literal|") --> "
+operator|+
+name|fragment
+argument_list|)
+expr_stmt|;
 name|processFragments
 argument_list|(
 name|fragment
