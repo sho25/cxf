@@ -23,6 +23,20 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|MultivaluedMap
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -37,6 +51,26 @@ name|MessageContext
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|common
+operator|.
+name|UserSubject
+import|;
+end_import
+
 begin_comment
 comment|/**  * SessionAuthenticityTokenProvider responsible for storing and retrieving tokens   * to validate the authenticity of request sessions  */
 end_comment
@@ -46,28 +80,61 @@ specifier|public
 interface|interface
 name|SessionAuthenticityTokenProvider
 block|{
-comment|/**      * Creates a new session token and stores it      *       * @param mc the {@link MessageContext} of this request      * @return the created session token      */
+comment|/**      * Creates a new session token and stores it      *       * @param mc the {@link MessageContext} of this request      * @param params redirection-based grant request parameters      * @param subject authenticated end user      * @return the created session token      */
 name|String
 name|createSessionToken
 parameter_list|(
 name|MessageContext
 name|mc
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|params
+parameter_list|,
+name|UserSubject
+name|subject
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieves the stored session token      *       * @param mc the {@link MessageContext} of this request      * @return the stored token      */
+comment|/**      * Retrieves the stored session token      *       * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      * @return the stored token      */
 name|String
 name|getSessionToken
 parameter_list|(
 name|MessageContext
 name|mc
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|params
+parameter_list|,
+name|UserSubject
+name|subject
 parameter_list|)
 function_decl|;
-comment|/**      * Removes the stored session token      *       * @param mc the {@link MessageContext} of this request      */
+comment|/**      * Removes the stored session token      *       * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      */
 name|String
 name|removeSessionToken
 parameter_list|(
 name|MessageContext
 name|mc
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|params
+parameter_list|,
+name|UserSubject
+name|subject
 parameter_list|)
 function_decl|;
 block|}
