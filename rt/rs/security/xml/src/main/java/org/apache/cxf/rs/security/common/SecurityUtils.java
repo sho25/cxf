@@ -593,6 +593,21 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+name|crypto
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|Exception
+argument_list|(
+literal|"Crypto instance is null"
+argument_list|)
+throw|;
+block|}
 name|CryptoType
 name|cryptoType
 init|=
