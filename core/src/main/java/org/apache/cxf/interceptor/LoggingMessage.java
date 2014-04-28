@@ -178,6 +178,15 @@ argument_list|()
 expr_stmt|;
 block|}
 specifier|public
+name|String
+name|getId
+parameter_list|()
+block|{
+return|return
+name|id
+return|;
+block|}
+specifier|public
 specifier|static
 name|String
 name|nextId
