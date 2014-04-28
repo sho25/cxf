@@ -209,7 +209,7 @@ name|parser
 operator|.
 name|parse
 argument_list|(
-literal|"name==ami*;level=gt=10"
+literal|"name==ami%*;level=gt=10"
 argument_list|)
 decl_stmt|;
 name|SQLPrinterVisitor
@@ -247,14 +247,14 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
-literal|"SELECT * FROM table WHERE (name LIKE 'ami%') AND (level> '10')"
+literal|"SELECT * FROM table WHERE (name LIKE 'ami\\%%') AND (level> '10')"
 operator|.
 name|equals
 argument_list|(
 name|sql
 argument_list|)
 operator|||
-literal|"SELECT * FROM table WHERE (level> '10') AND (name LIKE 'ami%')"
+literal|"SELECT * FROM table WHERE (level> '10') AND (name LIKE 'ami\\%%')"
 operator|.
 name|equals
 argument_list|(
