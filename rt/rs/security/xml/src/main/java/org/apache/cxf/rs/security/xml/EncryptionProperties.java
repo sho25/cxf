@@ -51,10 +51,6 @@ decl_stmt|;
 specifier|private
 name|String
 name|encryptionSymmetricKeyAlgo
-init|=
-name|XMLCipher
-operator|.
-name|AES_256
 decl_stmt|;
 specifier|private
 name|String
