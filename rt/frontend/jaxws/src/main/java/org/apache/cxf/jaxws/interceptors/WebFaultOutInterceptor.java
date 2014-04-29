@@ -830,7 +830,7 @@ name|convertedLang
 operator|=
 name|convertedLang
 operator|+
-literal|'_'
+literal|'-'
 operator|+
 name|country
 expr_stmt|;
