@@ -107,7 +107,7 @@ name|oauth2
 operator|.
 name|common
 operator|.
-name|ClientCredentialType
+name|ClientCredential
 import|;
 end_import
 
@@ -337,11 +337,15 @@ name|Client
 argument_list|(
 literal|"CN=whateverhost.com,OU=Morpit,O=ApacheTest,L=Syracuse,C=US"
 argument_list|,
-literal|null
-argument_list|,
-name|ClientCredentialType
+operator|new
+name|ClientCredential
+argument_list|(
+name|ClientCredential
+operator|.
+name|Type
 operator|.
 name|X509CERTIFICATE
+argument_list|)
 argument_list|,
 literal|true
 argument_list|,
