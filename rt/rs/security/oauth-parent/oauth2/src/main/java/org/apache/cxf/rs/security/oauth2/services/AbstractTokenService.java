@@ -433,7 +433,7 @@ block|{
 comment|// Both client_id and client_secret are expected in the form payload
 name|client
 operator|=
-name|getAndValidateClient
+name|getAndValidateClientFromIdAndSecret
 argument_list|(
 name|params
 operator|.
@@ -634,7 +634,7 @@ block|}
 comment|// Get the Client and check the id and secret
 specifier|protected
 name|Client
-name|getAndValidateClient
+name|getAndValidateClientFromIdAndSecret
 parameter_list|(
 name|String
 name|clientId
@@ -822,7 +822,7 @@ index|]
 argument_list|)
 decl_stmt|;
 return|return
-name|getAndValidateClient
+name|getAndValidateClientFromIdAndSecret
 argument_list|(
 name|authInfo
 index|[
