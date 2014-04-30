@@ -807,7 +807,7 @@ argument_list|()
 operator|&&
 name|c
 operator|.
-name|getClientKey
+name|getClientSecret
 argument_list|()
 operator|==
 literal|null
