@@ -1072,6 +1072,16 @@ name|CLIENT_AUDIENCE
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|secData
+operator|.
+name|setApplicationName
+argument_list|(
+name|client
+operator|.
+name|getApplicationCertificate
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|Map
 argument_list|<
 name|String
