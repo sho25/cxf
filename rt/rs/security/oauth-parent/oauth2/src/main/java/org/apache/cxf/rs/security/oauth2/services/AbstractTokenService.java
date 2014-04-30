@@ -751,7 +751,7 @@ operator|.
 name|getClientKey
 argument_list|()
 operator|.
-name|getCredential
+name|getKey
 argument_list|()
 operator|.
 name|equals
@@ -1068,7 +1068,7 @@ operator|.
 name|getClientKey
 argument_list|()
 operator|.
-name|getCredential
+name|getKey
 argument_list|()
 operator|!=
 literal|null
@@ -1085,7 +1085,7 @@ operator|.
 name|getClientKey
 argument_list|()
 operator|.
-name|getCredential
+name|getKey
 argument_list|()
 argument_list|,
 name|credType

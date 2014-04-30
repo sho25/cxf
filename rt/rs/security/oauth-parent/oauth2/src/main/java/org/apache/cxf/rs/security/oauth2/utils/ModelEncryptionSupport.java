@@ -2235,7 +2235,7 @@ literal|null
 else|:
 name|cred
 operator|.
-name|getCredential
+name|getKey
 argument_list|()
 argument_list|)
 argument_list|)
