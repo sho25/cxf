@@ -53,8 +53,6 @@ block|{
 name|PASSWORD
 block|,
 name|X509CERTIFICATE
-block|,
-name|PUBLIC_KEY
 block|}
 specifier|private
 name|String
