@@ -263,20 +263,6 @@ name|pax
 operator|.
 name|exam
 operator|.
-name|CoreOptions
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
 name|Option
 import|;
 end_import
@@ -435,7 +421,75 @@ name|exam
 operator|.
 name|CoreOptions
 operator|.
+name|composite
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|ops4j
+operator|.
+name|pax
+operator|.
+name|exam
+operator|.
+name|CoreOptions
+operator|.
 name|maven
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|ops4j
+operator|.
+name|pax
+operator|.
+name|exam
+operator|.
+name|CoreOptions
+operator|.
+name|systemProperty
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|ops4j
+operator|.
+name|pax
+operator|.
+name|exam
+operator|.
+name|CoreOptions
+operator|.
+name|when
+import|;
+end_import
+
+begin_import
+import|import static
+name|org
+operator|.
+name|ops4j
+operator|.
+name|pax
+operator|.
+name|exam
+operator|.
+name|karaf
+operator|.
+name|options
+operator|.
+name|KarafDistributionOption
+operator|.
+name|editConfigurationFilePut
 import|;
 end_import
 
@@ -479,6 +533,26 @@ name|karafDistributionConfiguration
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|ops4j
+operator|.
+name|pax
+operator|.
+name|exam
+operator|.
+name|karaf
+operator|.
+name|options
+operator|.
+name|KarafDistributionOption
+operator|.
+name|keepRuntimeFolder
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -488,6 +562,13 @@ specifier|public
 class|class
 name|CXFOSGiTestSupport
 block|{
+specifier|static
+specifier|final
+name|String
+name|KARAF_VERSION
+init|=
+literal|"2.3.5"
+decl_stmt|;
 specifier|static
 specifier|final
 name|Long
@@ -521,6 +602,7 @@ specifier|protected
 name|FeaturesService
 name|featureService
 decl_stmt|;
+specifier|protected
 name|ExecutorService
 name|executor
 init|=
@@ -528,6 +610,14 @@ name|Executors
 operator|.
 name|newCachedThreadPool
 argument_list|()
+decl_stmt|;
+specifier|protected
+name|MavenUrlReference
+name|cxfUrl
+decl_stmt|;
+specifier|protected
+name|MavenUrlReference
+name|karafUrl
 decl_stmt|;
 comment|/**      * @param probe      * @return      */
 annotation|@
@@ -555,15 +645,14 @@ return|return
 name|probe
 return|;
 block|}
-comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *      * @return      */
+comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *       * @return      */
 specifier|protected
 name|Option
 name|cxfBaseConfig
 parameter_list|()
 block|{
-name|MavenUrlReference
 name|karafUrl
-init|=
+operator|=
 name|maven
 argument_list|()
 operator|.
@@ -577,17 +666,18 @@ argument_list|(
 literal|"apache-karaf"
 argument_list|)
 operator|.
-name|versionAsInProject
-argument_list|()
+name|version
+argument_list|(
+name|KARAF_VERSION
+argument_list|)
 operator|.
 name|type
 argument_list|(
 literal|"tar.gz"
 argument_list|)
-decl_stmt|;
-name|MavenUrlReference
+expr_stmt|;
 name|cxfUrl
-init|=
+operator|=
 name|maven
 argument_list|()
 operator|.
@@ -613,10 +703,18 @@ name|classifier
 argument_list|(
 literal|"features"
 argument_list|)
+expr_stmt|;
+name|String
+name|localRepo
+init|=
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"localRepository"
+argument_list|)
 decl_stmt|;
 return|return
-name|CoreOptions
-operator|.
 name|composite
 argument_list|(
 name|karafDistributionConfiguration
@@ -629,12 +727,17 @@ argument_list|)
 operator|.
 name|karafVersion
 argument_list|(
-literal|"2.3.3"
+name|KARAF_VERSION
 argument_list|)
 operator|.
 name|name
 argument_list|(
 literal|"Apache Karaf"
+argument_list|)
+operator|.
+name|useDeployFolder
+argument_list|(
+literal|false
 argument_list|)
 operator|.
 name|unpackDirectory
@@ -646,6 +749,9 @@ literal|"target/paxexam/"
 argument_list|)
 argument_list|)
 argument_list|,
+name|keepRuntimeFolder
+argument_list|()
+argument_list|,
 name|features
 argument_list|(
 name|cxfUrl
@@ -654,10 +760,39 @@ literal|"cxf-core"
 argument_list|,
 literal|"cxf-jaxws"
 argument_list|)
+argument_list|,
+name|systemProperty
+argument_list|(
+literal|"java.awt.headless"
+argument_list|)
+operator|.
+name|value
+argument_list|(
+literal|"true"
+argument_list|)
+argument_list|,
+name|when
+argument_list|(
+name|localRepo
+operator|!=
+literal|null
+argument_list|)
+operator|.
+name|useOptions
+argument_list|(
+name|editConfigurationFilePut
+argument_list|(
+literal|"etc/org.ops4j.pax.url.mvn.cfg"
+argument_list|,
+literal|"org.ops4j.pax.url.mvn.localRepository"
+argument_list|,
+name|localRepo
+argument_list|)
+argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Executes a shell command and returns output as a String.      * Commands have a default timeout of 10 seconds.      *      * @param command      * @return      */
+comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *       * @param command      * @return      */
 specifier|protected
 name|String
 name|executeCommand
@@ -678,7 +813,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Executes a shell command and returns output as a String.      * Commands have a default timeout of 10 seconds.      *      * @param command The command to execute.      * @param timeout The amount of time in millis to wait for the command to execute.      * @param silent  Specifies if the command should be displayed in the screen.      * @return      */
+comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *       * @param command The command to execute.      * @param timeout The amount of time in millis to wait for the command to execute.      * @param silent Specifies if the command should be displayed in the screen.      * @return      */
 specifier|protected
 name|String
 name|executeCommand
@@ -875,7 +1010,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      * Executes multiple commands inside a Single Session.      * Commands have a default timeout of 10 seconds.      *      * @param commands      * @return      */
+comment|/**      * Executes multiple commands inside a Single Session. Commands have a default timeout of 10 seconds.      *       * @param commands      * @return      */
 specifier|protected
 name|String
 name|executeCommands
@@ -1137,7 +1272,7 @@ literal|" does not exist"
 argument_list|)
 throw|;
 block|}
-comment|/*     * Explode the dictionary into a ,-delimited list of key=value pairs     */
+comment|/*      * Explode the dictionary into a ,-delimited list of key=value pairs      */
 specifier|private
 specifier|static
 name|String
@@ -1288,8 +1423,6 @@ annotation|@
 name|SuppressWarnings
 argument_list|(
 block|{
-literal|"rawtypes"
-block|,
 literal|"unchecked"
 block|}
 argument_list|)
@@ -1600,7 +1733,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Finds a free port starting from the give port numner.      *      * @return      */
+comment|/**      * Finds a free port starting from the give port numner.      *       * @return      */
 specifier|protected
 name|int
 name|getFreePort
@@ -1626,7 +1759,7 @@ return|return
 name|port
 return|;
 block|}
-comment|/**      * Returns true if port is available for use.      *      * @param port      * @return      */
+comment|/**      * Returns true if port is available for use.      *       * @param port      * @return      */
 specifier|public
 specifier|static
 name|boolean
@@ -1688,7 +1821,7 @@ name|IOException
 name|e
 parameter_list|)
 block|{
-comment|//ignore
+comment|// ignore
 block|}
 finally|finally
 block|{
@@ -1735,11 +1868,6 @@ literal|false
 return|;
 block|}
 comment|/**      * Provides an iterable collection of references, even if the original array is null      */
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"rawtypes"
-argument_list|)
 specifier|private
 specifier|static
 name|Collection
@@ -1865,15 +1993,6 @@ return|return
 literal|null
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-block|{
-literal|"rawtypes"
-block|,
-literal|"unchecked"
-block|}
-argument_list|)
 specifier|public
 name|void
 name|assertServicePublished
