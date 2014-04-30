@@ -251,7 +251,7 @@ name|oauth2
 operator|.
 name|common
 operator|.
-name|ClientCredential
+name|ClientKey
 import|;
 end_import
 
@@ -660,7 +660,7 @@ operator|&&
 operator|(
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|.
 name|getType
@@ -668,7 +668,7 @@ argument_list|()
 operator|==
 literal|null
 operator|||
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 operator|.
@@ -676,7 +676,7 @@ name|PASSWORD
 operator|!=
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|.
 name|getType
@@ -707,7 +707,7 @@ argument_list|()
 operator|&&
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|==
 literal|null
@@ -729,7 +729,7 @@ literal|null
 operator|||
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|==
 literal|null
@@ -748,7 +748,7 @@ operator|||
 operator|!
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|.
 name|getCredential
@@ -1024,14 +1024,14 @@ name|Client
 name|client
 parameter_list|)
 block|{
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 name|credType
 init|=
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|.
 name|getType
@@ -1041,7 +1041,7 @@ if|if
 condition|(
 name|credType
 operator|!=
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 operator|.
@@ -1049,7 +1049,7 @@ name|X509CERTIFICATE
 operator|&&
 name|credType
 operator|!=
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 operator|.
@@ -1065,7 +1065,7 @@ if|if
 condition|(
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|.
 name|getCredential
@@ -1082,7 +1082,7 @@ name|tlsSessionInfo
 argument_list|,
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 operator|.
 name|getCredential
@@ -1103,7 +1103,7 @@ parameter_list|,
 name|String
 name|base64EncodedCert
 parameter_list|,
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 name|type
@@ -1137,7 +1137,7 @@ name|encodedKey
 init|=
 name|type
 operator|==
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 operator|.

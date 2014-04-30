@@ -1296,12 +1296,12 @@ name|assertEquals
 argument_list|(
 name|c
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 argument_list|,
 name|c2
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 argument_list|)
 expr_stmt|;

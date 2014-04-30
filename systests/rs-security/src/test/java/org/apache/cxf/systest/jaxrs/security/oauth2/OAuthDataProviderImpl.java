@@ -107,7 +107,7 @@ name|oauth2
 operator|.
 name|common
 operator|.
-name|ClientCredential
+name|ClientKey
 import|;
 end_import
 
@@ -338,9 +338,9 @@ argument_list|(
 literal|"CN=whateverhost.com,OU=Morpit,O=ApacheTest,L=Syracuse,C=US"
 argument_list|,
 operator|new
-name|ClientCredential
+name|ClientKey
 argument_list|(
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 operator|.

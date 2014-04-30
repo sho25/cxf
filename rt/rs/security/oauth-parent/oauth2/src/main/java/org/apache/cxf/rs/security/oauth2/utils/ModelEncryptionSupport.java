@@ -153,7 +153,7 @@ name|oauth2
 operator|.
 name|common
 operator|.
-name|ClientCredential
+name|ClientKey
 import|;
 end_import
 
@@ -1991,7 +1991,7 @@ argument_list|(
 name|sequence
 argument_list|)
 decl_stmt|;
-name|ClientCredential
+name|ClientKey
 name|clientCred
 init|=
 name|StringUtils
@@ -2007,14 +2007,14 @@ condition|?
 literal|null
 else|:
 operator|new
-name|ClientCredential
+name|ClientKey
 argument_list|(
 name|parts
 index|[
 literal|1
 index|]
 argument_list|,
-name|ClientCredential
+name|ClientKey
 operator|.
 name|Type
 operator|.
@@ -2212,12 +2212,12 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-name|ClientCredential
+name|ClientKey
 name|cred
 init|=
 name|client
 operator|.
-name|getClientCredential
+name|getClientKey
 argument_list|()
 decl_stmt|;
 comment|// 1: secret

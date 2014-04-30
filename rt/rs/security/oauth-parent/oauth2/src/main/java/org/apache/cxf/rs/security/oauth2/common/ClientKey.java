@@ -34,7 +34,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ClientCredential
+name|ClientKey
 implements|implements
 name|Serializable
 block|{
@@ -65,11 +65,11 @@ name|Type
 name|type
 decl_stmt|;
 specifier|public
-name|ClientCredential
+name|ClientKey
 parameter_list|()
 block|{              }
 specifier|public
-name|ClientCredential
+name|ClientKey
 parameter_list|(
 name|String
 name|password
@@ -86,7 +86,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|ClientCredential
+name|ClientKey
 parameter_list|(
 name|Type
 name|type
@@ -101,7 +101,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|ClientCredential
+name|ClientKey
 parameter_list|(
 name|String
 name|cred
@@ -208,14 +208,14 @@ if|if
 condition|(
 name|obj
 operator|instanceof
-name|ClientCredential
+name|ClientKey
 condition|)
 block|{
-name|ClientCredential
+name|ClientKey
 name|other
 init|=
 operator|(
-name|ClientCredential
+name|ClientKey
 operator|)
 name|obj
 decl_stmt|;
