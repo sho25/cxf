@@ -149,6 +149,22 @@ name|cxf
 operator|.
 name|common
 operator|.
+name|logging
+operator|.
+name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
 name|util
 operator|.
 name|SystemPropertyAction
@@ -358,11 +374,46 @@ operator|.
 name|getAbsolutePath
 argument_list|()
 operator|+
-literal|" is now writable, please set java.io.tempdir"
+literal|" is not writable, please set java.io.tempdir"
 operator|+
-literal|" to an writable directory"
+literal|" to a writable directory"
 argument_list|)
 throw|;
+block|}
+if|if
+condition|(
+name|checkExists
+operator|.
+name|getUsableSpace
+argument_list|()
+operator|<
+literal|1024
+operator|*
+literal|1024
+condition|)
+block|{
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|FileUtils
+operator|.
+name|class
+argument_list|)
+operator|.
+name|warning
+argument_list|(
+literal|"The directory "
+operator|+
+name|s
+operator|+
+literal|" has very "
+operator|+
+literal|"little usable temporary space.  Operations"
+operator|+
+literal|" requiring temporary files may fail."
+argument_list|)
+expr_stmt|;
 block|}
 name|File
 name|f
@@ -370,12 +421,17 @@ init|=
 operator|new
 name|File
 argument_list|(
-name|s
+name|checkExists
 argument_list|,
 literal|"cxf-tmp-"
 operator|+
 name|x
 argument_list|)
+decl_stmt|;
+name|int
+name|count
+init|=
+literal|0
 decl_stmt|;
 while|while
 condition|(
@@ -386,6 +442,27 @@ name|mkdir
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+name|count
+operator|>
+literal|10000
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Could not create a temporary directory in "
+operator|+
+name|s
+operator|+
+literal|",  please set java.io.tempdir"
+operator|+
+literal|" to a writable directory"
+argument_list|)
+throw|;
+block|}
 name|x
 operator|=
 call|(
@@ -405,12 +482,15 @@ operator|=
 operator|new
 name|File
 argument_list|(
-name|s
+name|checkExists
 argument_list|,
 literal|"cxf-tmp-"
 operator|+
 name|x
 argument_list|)
+expr_stmt|;
+name|count
+operator|++
 expr_stmt|;
 block|}
 name|File
