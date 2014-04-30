@@ -140,7 +140,7 @@ name|isOverlaid
 init|=
 literal|true
 decl_stmt|;
-name|boolean
+name|Boolean
 name|textOverlay
 decl_stmt|;
 specifier|public
@@ -323,7 +323,7 @@ argument_list|()
 expr_stmt|;
 name|textOverlay
 operator|=
-literal|false
+literal|null
 expr_stmt|;
 block|}
 specifier|public
@@ -487,6 +487,10 @@ name|isOverlaid
 operator|=
 literal|false
 expr_stmt|;
+name|textOverlay
+operator|=
+literal|null
+expr_stmt|;
 block|}
 return|return;
 block|}
@@ -509,6 +513,12 @@ expr_stmt|;
 name|isOverlaid
 operator|=
 literal|false
+expr_stmt|;
+name|textOverlay
+operator|=
+name|Boolean
+operator|.
+name|FALSE
 expr_stmt|;
 block|}
 specifier|protected
@@ -686,6 +696,10 @@ name|isOverlaid
 operator|=
 literal|false
 expr_stmt|;
+name|textOverlay
+operator|=
+literal|null
+expr_stmt|;
 block|}
 return|return;
 block|}
@@ -708,6 +722,10 @@ name|local
 argument_list|)
 expr_stmt|;
 name|isOverlaid
+operator|=
+literal|false
+expr_stmt|;
+name|textOverlay
 operator|=
 literal|false
 expr_stmt|;
@@ -903,6 +921,10 @@ name|isOverlaid
 operator|=
 literal|false
 expr_stmt|;
+name|textOverlay
+operator|=
+literal|null
+expr_stmt|;
 block|}
 return|return;
 block|}
@@ -930,6 +952,10 @@ name|isOverlaid
 operator|=
 literal|false
 expr_stmt|;
+name|textOverlay
+operator|=
+literal|false
+expr_stmt|;
 block|}
 block|}
 specifier|public
@@ -946,6 +972,10 @@ if|if
 condition|(
 operator|!
 name|isOverlaid
+operator|||
+name|textOverlay
+operator|==
+literal|null
 condition|)
 block|{
 name|super
