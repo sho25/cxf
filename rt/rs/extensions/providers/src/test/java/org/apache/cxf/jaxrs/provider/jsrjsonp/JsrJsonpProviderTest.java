@@ -15,7 +15,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|jsr353
+name|jsrjsonp
 package|;
 end_package
 
@@ -192,12 +192,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JsonJsr353ProviderTest
+name|JsrJsonpProviderTest
 extends|extends
 name|Assert
 block|{
 specifier|private
-name|JsonJsr353Provider
+name|JsrJsonpProvider
 name|provider
 decl_stmt|;
 annotation|@
@@ -210,7 +210,7 @@ block|{
 name|provider
 operator|=
 operator|new
-name|JsonJsr353Provider
+name|JsrJsonpProvider
 argument_list|()
 expr_stmt|;
 block|}

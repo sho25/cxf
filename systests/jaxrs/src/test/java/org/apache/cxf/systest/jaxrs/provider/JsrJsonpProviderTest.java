@@ -177,9 +177,9 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|jsr353
+name|jsrjsonp
 operator|.
-name|JsonJsr353Provider
+name|JsrJsonpProvider
 import|;
 end_import
 
@@ -296,7 +296,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JsonJsr353ProviderTest
+name|JsrJsonpProviderTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -308,7 +308,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|JsonJsr353ProviderTest
+name|JsrJsonpProviderTest
 operator|.
 name|class
 argument_list|)
@@ -366,7 +366,7 @@ operator|.
 name|setProvider
 argument_list|(
 operator|new
-name|JsonJsr353Provider
+name|JsrJsonpProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1215,7 +1215,7 @@ operator|>
 name|asList
 argument_list|(
 operator|new
-name|JsonJsr353Provider
+name|JsrJsonpProvider
 argument_list|()
 argument_list|)
 argument_list|)

@@ -15,7 +15,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|jsr353
+name|jsrjsonp
 package|;
 end_package
 
@@ -288,7 +288,7 @@ annotation|@
 name|Provider
 specifier|public
 class|class
-name|JsonJsr353Provider
+name|JsrJsonpProvider
 implements|implements
 name|MessageBodyReader
 argument_list|<
