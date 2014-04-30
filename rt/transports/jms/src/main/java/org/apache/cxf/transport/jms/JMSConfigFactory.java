@@ -402,16 +402,6 @@ argument_list|)
 expr_stmt|;
 name|jmsConfig
 operator|.
-name|setReconnectOnException
-argument_list|(
-name|endpoint
-operator|.
-name|isReconnectOnException
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|jmsConfig
-operator|.
 name|setExplicitQosEnabled
 argument_list|(
 literal|true

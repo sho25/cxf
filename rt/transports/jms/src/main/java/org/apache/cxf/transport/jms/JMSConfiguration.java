@@ -187,12 +187,6 @@ argument_list|()
 decl_stmt|;
 specifier|private
 name|boolean
-name|reconnectOnException
-init|=
-literal|true
-decl_stmt|;
-specifier|private
-name|boolean
 name|pubSubNoLocal
 decl_stmt|;
 specifier|private
@@ -1072,15 +1066,8 @@ return|return
 name|useConduitIdSelector
 return|;
 block|}
-specifier|public
-name|boolean
-name|isReconnectOnException
-parameter_list|()
-block|{
-return|return
-name|reconnectOnException
-return|;
-block|}
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setReconnectOnException
@@ -1089,12 +1076,7 @@ name|boolean
 name|reconnectOnException
 parameter_list|)
 block|{
-name|this
-operator|.
-name|reconnectOnException
-operator|=
-name|reconnectOnException
-expr_stmt|;
+comment|// Ignore. We always reconnect on exceptions
 block|}
 specifier|public
 name|ConnectionFactory

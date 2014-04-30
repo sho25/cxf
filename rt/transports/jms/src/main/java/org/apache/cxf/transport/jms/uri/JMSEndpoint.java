@@ -120,7 +120,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Parses and holds configuration retrieved from a SOAP/JMS spec URI  */
 end_comment
 
 begin_class
@@ -128,6 +128,7 @@ specifier|public
 class|class
 name|JMSEndpoint
 block|{
+comment|// JMS Variants
 specifier|public
 specifier|static
 specifier|final
@@ -160,49 +161,7 @@ name|JNDI_TOPIC
 init|=
 literal|"jndi-topic"
 decl_stmt|;
-comment|// shared parameters
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DELIVERYMODE_PARAMETER_NAME
-init|=
-literal|"deliveryMode"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TIMETOLIVE_PARAMETER_NAME
-init|=
-literal|"timeToLive"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|PRIORITY_PARAMETER_NAME
-init|=
-literal|"priority"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|REPLYTONAME_PARAMETER_NAME
-init|=
-literal|"replyToName"
-decl_stmt|;
-comment|// The new configuration to set the message type of jms message body
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|MESSAGE_TYPE_PARAMETER_NAME
-init|=
-literal|"messageType"
-decl_stmt|;
-comment|// default parameters
+comment|// default values
 specifier|public
 specifier|static
 specifier|final
@@ -233,31 +192,7 @@ name|Message
 operator|.
 name|DEFAULT_PRIORITY
 decl_stmt|;
-comment|// jndi parameters ? need to be sure.
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|JNDICONNECTIONFACTORYNAME_PARAMETER_NAME
-init|=
-literal|"jndiConnectionFactoryName"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|JNDIINITIALCONTEXTFACTORY_PARAMETER_NAME
-init|=
-literal|"jndiInitialContextFactory"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|JNDIURL_PARAMETER_NAME
-init|=
-literal|"jndiURL"
-decl_stmt|;
+comment|/**      * All parameters with this prefix will go to jndiParameters and be used      * as the jndi inital context properties      */
 specifier|public
 specifier|static
 specifier|final
@@ -266,15 +201,7 @@ name|JNDI_PARAMETER_NAME_PREFIX
 init|=
 literal|"jndi-"
 decl_stmt|;
-comment|// queue and topic parameters
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|TOPICREPLYTONAME_PARAMETER_NAME
-init|=
-literal|"topicReplyToName"
-decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -292,6 +219,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -325,29 +253,18 @@ specifier|private
 name|String
 name|destinationName
 decl_stmt|;
+comment|/**      * URI parameters      * Will be filled from URI query parameters with matching names      */
+specifier|private
+name|String
+name|conduitIdSelectorPrefix
+decl_stmt|;
 specifier|private
 name|DeliveryModeType
 name|deliveryMode
 decl_stmt|;
 specifier|private
-name|MessageType
-name|messageType
-decl_stmt|;
-specifier|private
-name|long
-name|timeToLive
-decl_stmt|;
-specifier|private
-name|Integer
-name|priority
-decl_stmt|;
-specifier|private
 name|String
-name|replyToName
-decl_stmt|;
-specifier|private
-name|String
-name|topicReplyToName
+name|durableSubscriptionName
 decl_stmt|;
 specifier|private
 name|String
@@ -361,25 +278,23 @@ name|jndiInitialContextFactory
 decl_stmt|;
 specifier|private
 name|String
-name|jndiURL
+name|jndiTransactionManagerName
 decl_stmt|;
 specifier|private
 name|String
-name|username
+name|jndiURL
+decl_stmt|;
+specifier|private
+name|MessageType
+name|messageType
 decl_stmt|;
 specifier|private
 name|String
 name|password
 decl_stmt|;
 specifier|private
-name|boolean
-name|reconnectOnException
-init|=
-literal|true
-decl_stmt|;
-specifier|private
-name|String
-name|durableSubscriptionName
+name|Integer
+name|priority
 decl_stmt|;
 specifier|private
 name|long
@@ -389,7 +304,7 @@ literal|60000L
 decl_stmt|;
 specifier|private
 name|String
-name|targetService
+name|replyToName
 decl_stmt|;
 specifier|private
 name|boolean
@@ -397,7 +312,15 @@ name|sessionTransacted
 decl_stmt|;
 specifier|private
 name|String
-name|conduitIdSelectorPrefix
+name|targetService
+decl_stmt|;
+specifier|private
+name|long
+name|timeToLive
+decl_stmt|;
+specifier|private
+name|String
+name|topicReplyToName
 decl_stmt|;
 specifier|private
 name|boolean
@@ -407,7 +330,7 @@ literal|true
 decl_stmt|;
 specifier|private
 name|String
-name|jndiTransactionManagerName
+name|username
 decl_stmt|;
 comment|/**      * @param uri      * @param subject      */
 specifier|public
@@ -1632,30 +1555,6 @@ operator|.
 name|password
 operator|=
 name|password
-expr_stmt|;
-block|}
-specifier|public
-name|boolean
-name|isReconnectOnException
-parameter_list|()
-block|{
-return|return
-name|reconnectOnException
-return|;
-block|}
-specifier|public
-name|void
-name|setReconnectOnException
-parameter_list|(
-name|boolean
-name|reconnectOnException
-parameter_list|)
-block|{
-name|this
-operator|.
-name|reconnectOnException
-operator|=
-name|reconnectOnException
 expr_stmt|;
 block|}
 specifier|public
