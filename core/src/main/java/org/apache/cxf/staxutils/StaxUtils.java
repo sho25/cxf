@@ -4099,7 +4099,6 @@ name|read
 operator|<=
 literal|0
 operator|&&
-operator|!
 name|fragment
 condition|)
 block|{
