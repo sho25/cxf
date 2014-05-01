@@ -75,6 +75,36 @@ name|Target
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|message
+operator|.
+name|Exchange
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|invoker
+operator|.
+name|Factory
+import|;
+end_import
+
 begin_comment
 comment|/**  * Defines the factory used for the service.  *   * Either use the factoryClass attribute to define your own   * factory or use one of the "value" convenience enums.  */
 end_comment
@@ -121,6 +151,8 @@ comment|/**      * The class for the factory.  It MUST have a constructor that t
 name|Class
 argument_list|<
 name|?
+extends|extends
+name|Factory
 argument_list|>
 name|factoryClass
 parameter_list|()
@@ -140,17 +172,41 @@ name|Pooled
 block|,
 comment|//args[0] is the size of the pool
 name|PerRequest
-block|,
-name|Spring
-block|,
-comment|//args[0] is the Spring bean name
 block|}
 empty_stmt|;
 specifier|static
 specifier|final
 class|class
 name|DEFAULT
-block|{ }
+implements|implements
+name|Factory
+block|{
+specifier|public
+name|Object
+name|create
+parameter_list|(
+name|Exchange
+name|e
+parameter_list|)
+throws|throws
+name|Throwable
+block|{
+return|return
+literal|null
+return|;
+block|}
+specifier|public
+name|void
+name|release
+parameter_list|(
+name|Exchange
+name|e
+parameter_list|,
+name|Object
+name|o
+parameter_list|)
+block|{         }
+block|}
 block|}
 end_annotation_defn
 

@@ -14,6 +14,8 @@ operator|.
 name|service
 operator|.
 name|invoker
+operator|.
+name|spring
 package|;
 end_package
 
@@ -28,6 +30,22 @@ operator|.
 name|message
 operator|.
 name|Exchange
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|invoker
+operator|.
+name|Factory
 import|;
 end_import
 
@@ -80,9 +98,11 @@ name|Factory
 implements|,
 name|ApplicationContextAware
 block|{
+specifier|volatile
 name|ApplicationContext
 name|ctx
 decl_stmt|;
+specifier|final
 name|String
 name|beanName
 decl_stmt|;
@@ -96,6 +116,28 @@ block|{
 name|beanName
 operator|=
 name|name
+expr_stmt|;
+block|}
+specifier|public
+name|SpringBeanFactory
+parameter_list|(
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|c
+parameter_list|,
+name|String
+index|[]
+name|args
+parameter_list|)
+block|{
+name|beanName
+operator|=
+name|args
+index|[
+literal|0
+index|]
 expr_stmt|;
 block|}
 comment|/** {@inheritDoc}*/
