@@ -378,6 +378,15 @@ name|isWildcardStringMatch
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|value
+operator|=
+name|SearchUtils
+operator|.
+name|duplicateSingleQuoteIfNeeded
+argument_list|(
+name|value
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|tableAlias
