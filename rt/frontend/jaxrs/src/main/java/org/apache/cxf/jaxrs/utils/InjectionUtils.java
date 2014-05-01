@@ -3252,6 +3252,10 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|factoryMethodEx
+operator|=
+literal|null
+expr_stmt|;
 break|break;
 block|}
 block|}
@@ -3261,26 +3265,38 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-comment|// Don't throw exception immediately, but store it and try other factory methods
+comment|// If it is enum and the method name is "fromValue" then don't throw
+comment|// the exception immediately but try the next factory method
 name|factoryMethodEx
 operator|=
 name|ex
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|cls
+operator|.
+name|isEnum
+argument_list|()
+operator|||
+operator|!
+literal|"fromValue"
+operator|.
+name|equals
+argument_list|(
+name|mName
+argument_list|)
+condition|)
+block|{
+break|break;
+block|}
 block|}
 block|}
 if|if
 condition|(
-operator|(
 name|factoryMethodEx
 operator|!=
 literal|null
-operator|)
-operator|&&
-operator|(
-name|result
-operator|==
-literal|null
-operator|)
 condition|)
 block|{
 name|Throwable
@@ -3453,17 +3469,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// factory method is not accessible: try another
-block|}
-end_catch
-
-begin_catch
-catch|catch
-parameter_list|(
-name|IllegalArgumentException
-name|ex
-parameter_list|)
-block|{
-comment|// String argument doesn't fit to factory method: try another
 block|}
 end_catch
 
