@@ -857,7 +857,7 @@ argument_list|(
 operator|new
 name|OwnerAddress
 argument_list|(
-literal|"Street3"
+literal|"Street&'3"
 argument_list|)
 argument_list|)
 expr_stmt|;
