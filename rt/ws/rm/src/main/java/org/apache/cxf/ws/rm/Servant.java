@@ -1543,11 +1543,13 @@ operator|.
 name|getAccept
 argument_list|()
 decl_stmt|;
-assert|assert
-literal|null
-operator|!=
+if|if
+condition|(
 name|accept
-assert|;
+operator|!=
+literal|null
+condition|)
+block|{
 name|Destination
 name|dest
 init|=
@@ -1612,6 +1614,7 @@ argument_list|(
 name|ds
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
