@@ -89,6 +89,15 @@ name|RM_CLIENT_CALLBACK
 init|=
 literal|"org.apache.cxf.rm.clientCallback"
 decl_stmt|;
+comment|/** Mode for requesting acknowledgements ({@link org.apache.cxf.ws.rm.managerAckRequestMode} value,      *  overrides SourcePolicy configuration). */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ACK_REQUEST_MODE
+init|=
+literal|"org.apache.cxf.rm.ackRequestMode"
+decl_stmt|;
 specifier|static
 specifier|final
 name|String
