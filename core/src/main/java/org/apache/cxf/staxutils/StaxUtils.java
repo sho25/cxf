@@ -4096,7 +4096,7 @@ expr_stmt|;
 if|if
 condition|(
 name|read
-operator|<=
+operator|<
 literal|0
 operator|&&
 name|fragment

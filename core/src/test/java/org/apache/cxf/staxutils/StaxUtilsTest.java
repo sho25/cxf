@@ -2214,7 +2214,7 @@ literal|"<inner>\n"
 operator|+
 literal|"<body>body text here</body>\n"
 operator|+
-literal|"</inner>"
+literal|"</inner>\n"
 decl_stmt|;
 name|String
 name|xml
@@ -2222,8 +2222,6 @@ init|=
 literal|"<outer>\n"
 operator|+
 name|innerXml
-operator|+
-literal|"\n"
 operator|+
 literal|"</outer>"
 decl_stmt|;
@@ -2355,18 +2353,8 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-name|sw
-operator|.
-name|toString
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|//System.out.println(innerXml);
+comment|//System.out.println(sw.toString());
 name|assertEquals
 argument_list|(
 name|innerXml
