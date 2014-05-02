@@ -916,14 +916,6 @@ argument_list|,
 literal|true
 argument_list|)
 expr_stmt|;
-comment|// oneway
-name|greeter
-operator|.
-name|greetMeOneWay
-argument_list|(
-literal|"CXF"
-argument_list|)
-expr_stmt|;
 comment|// two-way
 name|assertEquals
 argument_list|(
@@ -935,6 +927,14 @@ name|greetMe
 argument_list|(
 literal|"cxf"
 argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// oneway
+name|greeter
+operator|.
+name|greetMeOneWay
+argument_list|(
+literal|"CXF"
 argument_list|)
 expr_stmt|;
 comment|// exception
@@ -1075,9 +1075,9 @@ operator|.
 name|getCreateSequenceAction
 argument_list|()
 block|,
-name|GREETMEONEWAY_ACTION
-block|,
 name|GREETME_ACTION
+block|,
+name|GREETMEONEWAY_ACTION
 block|,
 name|PINGME_ACTION
 block|,
@@ -1149,9 +1149,9 @@ literal|false
 block|,
 literal|false
 block|,
-literal|false
-block|,
 literal|true
+block|,
+literal|false
 block|,
 literal|true
 block|}
