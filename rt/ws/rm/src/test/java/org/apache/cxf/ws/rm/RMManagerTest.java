@@ -3712,6 +3712,13 @@ argument_list|)
 argument_list|,
 name|EasyMock
 operator|.
+name|eq
+argument_list|(
+literal|false
+argument_list|)
+argument_list|,
+name|EasyMock
+operator|.
 name|isA
 argument_list|(
 name|ProtocolVariation
