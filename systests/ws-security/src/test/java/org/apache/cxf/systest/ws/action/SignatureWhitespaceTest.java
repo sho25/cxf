@@ -513,7 +513,7 @@ name|QName
 argument_list|(
 name|NAMESPACE
 argument_list|,
-literal|"DoubleItSignaturePort"
+literal|"DoubleItSignaturePort2"
 argument_list|)
 decl_stmt|;
 name|Dispatch
