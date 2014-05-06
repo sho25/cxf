@@ -1089,6 +1089,15 @@ return|return
 name|server
 return|;
 block|}
+specifier|public
+name|Server
+name|getServer
+parameter_list|()
+block|{
+return|return
+name|server
+return|;
+block|}
 specifier|protected
 name|ServerProviderFactory
 name|setupFactory
