@@ -5556,7 +5556,7 @@ name|PORT
 operator|+
 literal|"/bookstore/propagate-exception"
 argument_list|,
-literal|""
+literal|"Error: 500"
 argument_list|,
 literal|"application/xml"
 argument_list|,
