@@ -415,7 +415,6 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO test not working
 annotation|@
 name|org
 operator|.
