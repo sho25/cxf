@@ -1324,7 +1324,6 @@ parameter_list|)
 block|{
 if|if
 condition|(
-operator|!
 name|isRequestor
 argument_list|(
 name|message
@@ -1338,6 +1337,18 @@ argument_list|(
 name|Fault
 operator|.
 name|FAULT_CODE_CLIENT
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|f
+operator|.
+name|setFaultCode
+argument_list|(
+name|Fault
+operator|.
+name|FAULT_CODE_SERVER
 argument_list|)
 expr_stmt|;
 block|}
