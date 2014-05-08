@@ -587,6 +587,7 @@ throw|;
 block|}
 block|}
 specifier|public
+specifier|static
 name|byte
 index|[]
 name|signData
@@ -618,6 +619,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
+specifier|static
 name|byte
 index|[]
 name|signData
@@ -723,6 +725,7 @@ throw|;
 block|}
 block|}
 specifier|public
+specifier|static
 name|void
 name|verifySignature
 parameter_list|(
@@ -756,6 +759,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|static
 name|void
 name|verifySignature
 parameter_list|(
