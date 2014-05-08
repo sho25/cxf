@@ -1905,6 +1905,33 @@ if|if
 condition|(
 name|consts
 operator|.
+name|getAckRequestedAction
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|action
+argument_list|)
+condition|)
+block|{
+name|boi
+operator|=
+name|bi
+operator|.
+name|getOperation
+argument_list|(
+name|consts
+operator|.
+name|getAckRequestedOperationName
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|consts
+operator|.
 name|getTerminateSequenceAction
 argument_list|()
 operator|.
@@ -2025,11 +2052,26 @@ operator|=
 literal|false
 expr_stmt|;
 block|}
-assert|assert
+comment|// make sure the binding information has been set
+if|if
+condition|(
 name|boi
-operator|!=
+operator|==
 literal|null
-assert|;
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"No BindingInfo for action "
+operator|+
+name|action
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|exchange
 operator|.
 name|put
@@ -2062,6 +2104,7 @@ argument_list|(
 name|isOneway
 argument_list|)
 expr_stmt|;
+block|}
 comment|// Fix requestor role (as the client side message observer always sets it to TRUE)
 comment|// to allow unmarshalling the body of a server originated TerminateSequence request.
 comment|// In the logical RM interceptor set it back to what it was so that the logical
