@@ -998,9 +998,6 @@ parameter_list|,
 name|boolean
 name|isServer
 parameter_list|,
-name|boolean
-name|oneWay
-parameter_list|,
 specifier|final
 name|ProtocolVariation
 name|protocol
@@ -1113,9 +1110,6 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-operator|!
-name|oneWay
-operator|&&
 name|sp
 operator|.
 name|isIncludeOffer

@@ -2870,17 +2870,6 @@ name|msg
 argument_list|)
 throw|;
 block|}
-name|boolean
-name|oneWay
-init|=
-name|message
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|isOneWay
-argument_list|()
-decl_stmt|;
 name|Proxy
 name|proxy
 init|=
@@ -2919,8 +2908,6 @@ argument_list|,
 name|relatesTo
 argument_list|,
 name|isServer
-argument_list|,
-name|oneWay
 argument_list|,
 name|protocol
 argument_list|,

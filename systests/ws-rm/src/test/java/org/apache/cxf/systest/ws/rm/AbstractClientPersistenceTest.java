@@ -1367,7 +1367,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|0
+literal|1
 argument_list|,
 name|dss
 operator|.
@@ -1770,7 +1770,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|0
+literal|1
 argument_list|,
 name|dss
 operator|.

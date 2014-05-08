@@ -3684,8 +3684,6 @@ name|relatesTo
 argument_list|,
 name|isServer
 argument_list|,
-literal|false
-argument_list|,
 name|ProtocolVariation
 operator|.
 name|RM10WSA200408
@@ -3708,8 +3706,6 @@ argument_list|,
 name|relatesTo
 argument_list|,
 name|isServer
-argument_list|,
-literal|false
 argument_list|,
 name|ProtocolVariation
 operator|.
