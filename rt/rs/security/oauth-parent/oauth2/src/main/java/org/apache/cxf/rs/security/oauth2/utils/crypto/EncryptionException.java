@@ -18,6 +18,8 @@ operator|.
 name|oauth2
 operator|.
 name|utils
+operator|.
+name|crypto
 package|;
 end_package
 

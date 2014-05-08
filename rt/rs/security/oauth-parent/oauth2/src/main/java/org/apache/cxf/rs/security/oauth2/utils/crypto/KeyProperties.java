@@ -18,6 +18,8 @@ operator|.
 name|oauth2
 operator|.
 name|utils
+operator|.
+name|crypto
 package|;
 end_package
 
@@ -46,7 +48,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|SecretKeyProperties
+name|KeyProperties
 block|{
 specifier|private
 name|String
@@ -81,11 +83,11 @@ name|boolean
 name|compressionSupported
 decl_stmt|;
 specifier|public
-name|SecretKeyProperties
+name|KeyProperties
 parameter_list|()
 block|{     }
 specifier|public
-name|SecretKeyProperties
+name|KeyProperties
 parameter_list|(
 name|String
 name|keyAlgo
@@ -101,7 +103,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|SecretKeyProperties
+name|KeyProperties
 parameter_list|(
 name|String
 name|keyAlgo

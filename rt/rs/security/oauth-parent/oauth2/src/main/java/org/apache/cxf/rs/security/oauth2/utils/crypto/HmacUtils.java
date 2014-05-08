@@ -18,6 +18,8 @@ operator|.
 name|oauth2
 operator|.
 name|utils
+operator|.
+name|crypto
 package|;
 end_package
 
@@ -168,6 +170,26 @@ operator|.
 name|provider
 operator|.
 name|OAuthServiceException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
+name|Base64UrlUtility
 import|;
 end_import
 

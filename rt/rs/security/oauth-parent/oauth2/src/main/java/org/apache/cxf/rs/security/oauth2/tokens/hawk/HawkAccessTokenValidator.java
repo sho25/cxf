@@ -277,7 +277,7 @@ name|oauth2
 operator|.
 name|utils
 operator|.
-name|HmacUtils
+name|OAuthConstants
 import|;
 end_import
 
@@ -297,7 +297,9 @@ name|oauth2
 operator|.
 name|utils
 operator|.
-name|OAuthConstants
+name|crypto
+operator|.
+name|HmacUtils
 import|;
 end_import
 

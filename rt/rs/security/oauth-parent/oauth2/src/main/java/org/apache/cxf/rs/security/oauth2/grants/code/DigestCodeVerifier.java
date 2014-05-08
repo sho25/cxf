@@ -59,7 +59,9 @@ name|oauth2
 operator|.
 name|utils
 operator|.
-name|MessageDigestGenerator
+name|crypto
+operator|.
+name|MessageDigestUtils
 import|;
 end_import
 
@@ -78,24 +80,17 @@ name|String
 name|codeVerifier
 parameter_list|)
 block|{
-name|MessageDigestGenerator
-name|mdg
-init|=
-operator|new
-name|MessageDigestGenerator
-argument_list|()
-decl_stmt|;
 name|byte
 index|[]
 name|digest
 init|=
-name|mdg
+name|MessageDigestUtils
 operator|.
 name|createDigest
 argument_list|(
 name|codeVerifier
 argument_list|,
-name|MessageDigestGenerator
+name|MessageDigestUtils
 operator|.
 name|ALGO_SHA_256
 argument_list|)

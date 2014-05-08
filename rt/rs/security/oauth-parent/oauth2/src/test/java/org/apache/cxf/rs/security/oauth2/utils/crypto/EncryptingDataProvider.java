@@ -18,6 +18,8 @@ operator|.
 name|oauth2
 operator|.
 name|utils
+operator|.
+name|crypto
 package|;
 end_package
 
@@ -275,6 +277,26 @@ name|RefreshToken
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
+name|OAuthUtils
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -337,7 +359,9 @@ operator|=
 name|EncryptionUtils
 operator|.
 name|getSecretKey
-argument_list|()
+argument_list|(
+literal|"AES"
+argument_list|)
 expr_stmt|;
 name|String
 name|encryptedClient

@@ -18,6 +18,8 @@ operator|.
 name|oauth2
 operator|.
 name|utils
+operator|.
+name|crypto
 package|;
 end_package
 
@@ -633,7 +635,9 @@ init|=
 name|EncryptionUtils
 operator|.
 name|getSecretKey
-argument_list|()
+argument_list|(
+literal|"AES"
+argument_list|)
 decl_stmt|;
 name|String
 name|encryptedSecretKey
@@ -998,11 +1002,11 @@ argument_list|,
 name|bos
 argument_list|)
 expr_stmt|;
-name|SecretKeyProperties
+name|KeyProperties
 name|props1
 init|=
 operator|new
-name|SecretKeyProperties
+name|KeyProperties
 argument_list|(
 name|publicKey
 operator|.
@@ -1027,11 +1031,11 @@ argument_list|,
 name|props1
 argument_list|)
 decl_stmt|;
-name|SecretKeyProperties
+name|KeyProperties
 name|props2
 init|=
 operator|new
-name|SecretKeyProperties
+name|KeyProperties
 argument_list|(
 name|privateKey
 operator|.

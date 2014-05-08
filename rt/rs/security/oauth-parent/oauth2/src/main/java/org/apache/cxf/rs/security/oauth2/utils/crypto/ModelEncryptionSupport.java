@@ -18,6 +18,8 @@ operator|.
 name|oauth2
 operator|.
 name|utils
+operator|.
+name|crypto
 package|;
 end_package
 
@@ -303,7 +305,7 @@ parameter_list|,
 name|Key
 name|secretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -366,7 +368,7 @@ parameter_list|,
 name|Key
 name|secretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -429,7 +431,7 @@ parameter_list|,
 name|Key
 name|secretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -492,7 +494,7 @@ parameter_list|,
 name|Key
 name|secretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -541,7 +543,7 @@ argument_list|,
 name|encodedSecretKey
 argument_list|,
 operator|new
-name|SecretKeyProperties
+name|KeyProperties
 argument_list|(
 literal|"AES"
 argument_list|)
@@ -559,7 +561,7 @@ parameter_list|,
 name|String
 name|encodedSecretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -627,7 +629,7 @@ parameter_list|,
 name|Key
 name|secretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -681,7 +683,7 @@ argument_list|,
 name|encodedSecretKey
 argument_list|,
 operator|new
-name|SecretKeyProperties
+name|KeyProperties
 argument_list|(
 literal|"AES"
 argument_list|)
@@ -702,7 +704,7 @@ parameter_list|,
 name|String
 name|encodedSecretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -780,7 +782,7 @@ parameter_list|,
 name|Key
 name|secretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -838,7 +840,7 @@ argument_list|,
 name|encodedSecretKey
 argument_list|,
 operator|new
-name|SecretKeyProperties
+name|KeyProperties
 argument_list|(
 literal|"AES"
 argument_list|)
@@ -859,7 +861,7 @@ parameter_list|,
 name|String
 name|encodedSecretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -937,7 +939,7 @@ parameter_list|,
 name|Key
 name|key
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -995,7 +997,7 @@ argument_list|,
 name|encodedSecretKey
 argument_list|,
 operator|new
-name|SecretKeyProperties
+name|KeyProperties
 argument_list|(
 literal|"AES"
 argument_list|)
@@ -1016,7 +1018,7 @@ parameter_list|,
 name|String
 name|encodedSecretKey
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
@@ -1094,7 +1096,7 @@ parameter_list|,
 name|Key
 name|key
 parameter_list|,
-name|SecretKeyProperties
+name|KeyProperties
 name|props
 parameter_list|)
 throws|throws
