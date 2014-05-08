@@ -356,7 +356,7 @@ name|Exception
 block|{
 name|key
 operator|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|getSecretKey
 argument_list|(

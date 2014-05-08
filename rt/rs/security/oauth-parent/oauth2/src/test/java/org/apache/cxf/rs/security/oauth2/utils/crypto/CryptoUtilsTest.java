@@ -404,7 +404,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|EncryptionUtilsTest
+name|CryptoUtilsTest
 extends|extends
 name|Assert
 block|{
@@ -632,7 +632,7 @@ decl_stmt|;
 name|SecretKey
 name|secretKey
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|getSecretKey
 argument_list|(
@@ -642,7 +642,7 @@ decl_stmt|;
 name|String
 name|encryptedSecretKey
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|encryptSecretKey
 argument_list|(
@@ -673,7 +673,7 @@ expr_stmt|;
 name|SecretKey
 name|decryptedSecretKey
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|decryptSecretKey
 argument_list|(
@@ -798,7 +798,7 @@ expr_stmt|;
 name|String
 name|encrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|encryptSequence
 argument_list|(
@@ -815,7 +815,7 @@ decl_stmt|;
 name|String
 name|decrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|decryptSequence
 argument_list|(
@@ -1017,7 +1017,7 @@ decl_stmt|;
 name|String
 name|encrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|encryptSequence
 argument_list|(
@@ -1046,7 +1046,7 @@ decl_stmt|;
 name|String
 name|decrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|decryptSequence
 argument_list|(
@@ -1212,7 +1212,7 @@ expr_stmt|;
 name|String
 name|encrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|encryptSequence
 argument_list|(
@@ -1229,7 +1229,7 @@ decl_stmt|;
 name|String
 name|decrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|decryptSequence
 argument_list|(
@@ -1449,7 +1449,7 @@ expr_stmt|;
 name|String
 name|encrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|encryptSequence
 argument_list|(
@@ -1466,7 +1466,7 @@ decl_stmt|;
 name|String
 name|decrypted
 init|=
-name|EncryptionUtils
+name|CryptoUtils
 operator|.
 name|decryptSequence
 argument_list|(
