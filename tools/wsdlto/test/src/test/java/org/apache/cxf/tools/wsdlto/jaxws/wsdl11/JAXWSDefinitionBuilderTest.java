@@ -95,20 +95,6 @@ begin_import
 import|import
 name|javax
 operator|.
-name|wsdl
-operator|.
-name|extensions
-operator|.
-name|http
-operator|.
-name|HTTPAddress
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
 name|xml
 operator|.
 name|namespace
@@ -194,6 +180,22 @@ operator|.
 name|wsdl
 operator|.
 name|JAXBExtensibilityElement
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|wsdl
+operator|.
+name|http
+operator|.
+name|AddressType
 import|;
 end_import
 
@@ -468,11 +470,11 @@ operator|.
 name|getName
 argument_list|()
 operator|+
-literal|" is not an HTTPAddress"
+literal|" is not an AddressType"
 argument_list|,
 name|obj
 operator|instanceof
-name|HTTPAddress
+name|AddressType
 argument_list|)
 expr_stmt|;
 name|Binding

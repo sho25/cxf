@@ -8451,7 +8451,7 @@ name|classLoader
 operator|.
 name|loadClass
 argument_list|(
-literal|"org.apache.header_test.rpc.TestRPCHeader"
+literal|"org.apache.header_test.rpc.TestRPCHeaderPort"
 argument_list|)
 decl_stmt|;
 name|Method
