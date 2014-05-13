@@ -313,6 +313,16 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
+if|if
+condition|(
+name|isGET
+argument_list|(
+name|message
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 comment|// check for Content-Encoding header - we are only interested in
 comment|// messages that say they are gzipped.
 name|Map
