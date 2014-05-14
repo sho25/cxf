@@ -902,10 +902,9 @@ decl_stmt|;
 name|boolean
 name|isLastMessage
 init|=
-name|constants
+name|RM10Constants
 operator|.
-name|getCloseSequenceAction
-argument_list|()
+name|CLOSE_SEQUENCE_ACTION
 operator|.
 name|equals
 argument_list|(
