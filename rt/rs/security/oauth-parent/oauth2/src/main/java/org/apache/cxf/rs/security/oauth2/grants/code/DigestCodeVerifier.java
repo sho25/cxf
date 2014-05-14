@@ -59,8 +59,6 @@ name|oauth2
 operator|.
 name|utils
 operator|.
-name|crypto
-operator|.
 name|MessageDigestUtils
 import|;
 end_import

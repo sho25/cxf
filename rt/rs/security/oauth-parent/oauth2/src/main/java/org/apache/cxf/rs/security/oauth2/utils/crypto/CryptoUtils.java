@@ -372,7 +372,7 @@ block|}
 specifier|public
 specifier|static
 name|RSAPublicKey
-name|getRsaPublicKey
+name|getRSAPublicKey
 parameter_list|(
 name|String
 name|encodedModulus
