@@ -1751,6 +1751,15 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
+name|responseHeaders
+operator|.
+name|put
+argument_list|(
+name|name
+argument_list|,
+name|value
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Override
