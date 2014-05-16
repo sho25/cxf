@@ -609,8 +609,9 @@ operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
+name|Response
+name|response
+init|=
 name|exchange
 operator|.
 name|get
@@ -619,6 +620,10 @@ name|Response
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|response
 operator|==
 literal|null
 condition|)
@@ -684,9 +689,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|Response
-name|r
-init|=
+name|response
+operator|=
 name|exchange
 operator|.
 name|get
@@ -695,10 +699,10 @@ name|Response
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 if|if
 condition|(
-name|r
+name|response
 operator|!=
 literal|null
 condition|)
@@ -707,7 +711,7 @@ name|createOutMessage
 argument_list|(
 name|message
 argument_list|,
-name|r
+name|response
 argument_list|)
 expr_stmt|;
 name|message
