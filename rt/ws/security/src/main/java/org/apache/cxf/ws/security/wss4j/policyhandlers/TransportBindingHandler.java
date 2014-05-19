@@ -1005,6 +1005,10 @@ operator|||
 name|token
 operator|instanceof
 name|KerberosToken
+operator|||
+name|token
+operator|instanceof
+name|SpnegoContextToken
 condition|)
 block|{
 name|SecurityToken

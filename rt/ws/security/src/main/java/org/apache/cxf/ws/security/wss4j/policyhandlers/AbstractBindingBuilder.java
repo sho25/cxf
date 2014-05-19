@@ -1655,6 +1655,22 @@ name|policy
 operator|.
 name|model
 operator|.
+name|SpnegoContextToken
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|policy
+operator|.
+name|model
+operator|.
 name|SupportingTokens
 import|;
 end_import
@@ -3415,6 +3431,10 @@ operator|||
 name|token
 operator|instanceof
 name|KerberosToken
+operator|||
+name|token
+operator|instanceof
+name|SpnegoContextToken
 condition|)
 block|{
 comment|//ws-trust/ws-sc stuff.......
