@@ -335,7 +335,7 @@ name|SPNEGO_CLIENT_ACTION
 init|=
 literal|"ws-security.spnego.client.action"
 decl_stmt|;
-comment|/**      * The JAAS Context name to use for Kerberos. This is currently only supported for SPNEGO.      */
+comment|/**      * The JAAS Context name to use for Kerberos.      */
 specifier|public
 specifier|static
 specifier|final
@@ -344,7 +344,7 @@ name|KERBEROS_JAAS_CONTEXT_NAME
 init|=
 literal|"ws-security.kerberos.jaas.context"
 decl_stmt|;
-comment|/**      * The Kerberos Service Provider Name (spn) to use. This is currently only supported for SPNEGO.      */
+comment|/**      * The Kerberos Service Provider Name (spn) to use.      */
 specifier|public
 specifier|static
 specifier|final
