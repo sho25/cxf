@@ -181,6 +181,13 @@ name|Principal
 name|getUserPrincipal
 parameter_list|()
 function_decl|;
+name|Object
+name|getAttribute
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+function_decl|;
 name|void
 name|write
 parameter_list|(
