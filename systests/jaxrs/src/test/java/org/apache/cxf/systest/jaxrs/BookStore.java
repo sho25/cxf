@@ -3179,6 +3179,8 @@ name|Book
 argument_list|>
 name|postBookGetCollection
 parameter_list|(
+annotation|@
+name|Nullable
 name|Book
 name|book
 parameter_list|)
@@ -3198,6 +3200,13 @@ name|Book
 argument_list|>
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|book
+operator|!=
+literal|null
+condition|)
+block|{
 name|list
 operator|.
 name|add
@@ -3205,6 +3214,7 @@ argument_list|(
 name|book
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|list
 return|;
