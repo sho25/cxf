@@ -29,7 +29,7 @@ name|security
 operator|.
 name|interfaces
 operator|.
-name|RSAPublicKey
+name|RSAPrivateKey
 import|;
 end_import
 
@@ -93,8 +93,8 @@ block|{
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPublicKey
-name|publicKey
+name|RSAPrivateKey
+name|privateKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -110,7 +110,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKey
+name|privateKey
 argument_list|,
 name|headers
 argument_list|,
@@ -127,8 +127,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPublicKey
-name|publicKey
+name|RSAPrivateKey
+name|privateKey
 parameter_list|,
 name|SecretKey
 name|secretKey
@@ -140,7 +140,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKey
+name|privateKey
 argument_list|,
 operator|new
 name|JweHeaders
@@ -179,8 +179,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPublicKey
-name|publicKey
+name|RSAPrivateKey
+name|privateKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -202,7 +202,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKey
+name|privateKey
 argument_list|,
 name|headers
 argument_list|,
@@ -221,8 +221,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPublicKey
-name|publicKey
+name|RSAPrivateKey
+name|privateKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -241,7 +241,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|publicKey
+name|privateKey
 argument_list|,
 name|headers
 argument_list|,
@@ -260,8 +260,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPublicKey
-name|publicKey
+name|RSAPrivateKey
+name|privateKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -288,7 +288,7 @@ name|super
 argument_list|(
 name|headers
 argument_list|,
-name|publicKey
+name|privateKey
 argument_list|,
 name|cek
 argument_list|,

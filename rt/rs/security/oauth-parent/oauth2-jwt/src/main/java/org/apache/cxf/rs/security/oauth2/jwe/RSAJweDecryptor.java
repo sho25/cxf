@@ -29,7 +29,7 @@ name|security
 operator|.
 name|interfaces
 operator|.
-name|RSAPrivateKey
+name|RSAPublicKey
 import|;
 end_import
 
@@ -46,8 +46,8 @@ parameter_list|(
 name|String
 name|jweContent
 parameter_list|,
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|boolean
 name|unwrap
@@ -57,7 +57,7 @@ name|super
 argument_list|(
 name|jweContent
 argument_list|,
-name|privateKey
+name|publicKey
 argument_list|,
 name|unwrap
 argument_list|)
@@ -69,15 +69,15 @@ parameter_list|(
 name|String
 name|jweContent
 parameter_list|,
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|)
 block|{
 name|this
 argument_list|(
 name|jweContent
 argument_list|,
-name|privateKey
+name|publicKey
 argument_list|,
 literal|true
 argument_list|)
@@ -91,9 +91,9 @@ block|{
 return|return
 operator|(
 operator|(
-name|RSAPrivateKey
+name|RSAPublicKey
 operator|)
-name|getPrivateKey
+name|getDecryptionKey
 argument_list|()
 operator|)
 operator|.

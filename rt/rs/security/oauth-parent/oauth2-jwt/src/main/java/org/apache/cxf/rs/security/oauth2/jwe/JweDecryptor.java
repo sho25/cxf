@@ -118,7 +118,7 @@ name|jweConsumer
 decl_stmt|;
 specifier|private
 name|Key
-name|privateKey
+name|decryptionKey
 decl_stmt|;
 specifier|private
 name|boolean
@@ -139,7 +139,7 @@ name|String
 name|jweContent
 parameter_list|,
 name|Key
-name|privateKey
+name|decryptionKey
 parameter_list|,
 name|boolean
 name|unwrap
@@ -157,9 +157,9 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|privateKey
+name|decryptionKey
 operator|=
-name|privateKey
+name|decryptionKey
 expr_stmt|;
 name|this
 operator|.
@@ -170,11 +170,11 @@ expr_stmt|;
 block|}
 specifier|protected
 name|Key
-name|getPrivateKey
+name|getDecryptionKey
 parameter_list|()
 block|{
 return|return
-name|privateKey
+name|decryptionKey
 return|;
 block|}
 specifier|protected
@@ -216,7 +216,7 @@ argument_list|(
 name|getEncryptedContentEncryptionKey
 argument_list|()
 argument_list|,
-name|privateKey
+name|decryptionKey
 argument_list|,
 name|keyProps
 argument_list|)
@@ -235,7 +235,7 @@ argument_list|,
 name|getContentEncryptionAlgorithm
 argument_list|()
 argument_list|,
-name|privateKey
+name|decryptionKey
 argument_list|,
 name|keyProps
 argument_list|)
