@@ -1294,8 +1294,6 @@ argument_list|(
 name|types
 argument_list|,
 name|ori
-argument_list|,
-name|params
 argument_list|)
 decl_stmt|;
 name|UriBuilder
@@ -2049,10 +2047,6 @@ name|map
 parameter_list|,
 name|OperationResourceInfo
 name|ori
-parameter_list|,
-name|Object
-index|[]
-name|params
 parameter_list|)
 block|{
 name|List
