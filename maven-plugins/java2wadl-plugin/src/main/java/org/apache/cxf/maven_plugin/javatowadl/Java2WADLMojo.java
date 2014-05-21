@@ -411,7 +411,7 @@ decl_stmt|;
 comment|/**      * @parameter default-value="false"      */
 specifier|private
 name|boolean
-name|linkJsonToXmlSchema
+name|linkAnyMediaTypeToXmlSchema
 decl_stmt|;
 comment|/**      * @parameter default-value="false"      */
 specifier|private
@@ -615,9 +615,9 @@ argument_list|)
 expr_stmt|;
 name|wg
 operator|.
-name|setLinkJsonToXmlSchema
+name|setLinkAnyMediaTypeToXmlSchema
 argument_list|(
-name|linkJsonToXmlSchema
+name|linkAnyMediaTypeToXmlSchema
 argument_list|)
 expr_stmt|;
 name|wg
