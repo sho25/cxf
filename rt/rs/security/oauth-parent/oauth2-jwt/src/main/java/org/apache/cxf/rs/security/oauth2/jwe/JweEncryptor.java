@@ -69,7 +69,7 @@ name|oauth2
 operator|.
 name|jwt
 operator|.
-name|Algorithms
+name|Algorithm
 import|;
 end_import
 
@@ -457,7 +457,7 @@ name|getContentEncryptionKeyEncryptionAlgo
 parameter_list|()
 block|{
 return|return
-name|Algorithms
+name|Algorithm
 operator|.
 name|toJavaName
 argument_list|(
@@ -474,7 +474,7 @@ name|getContentEncryptionAlgo
 parameter_list|()
 block|{
 return|return
-name|Algorithms
+name|Algorithm
 operator|.
 name|toJavaName
 argument_list|(
@@ -513,7 +513,7 @@ decl_stmt|;
 name|String
 name|contentEncryptionAlgoJavaName
 init|=
-name|Algorithms
+name|Algorithm
 operator|.
 name|toJavaName
 argument_list|(

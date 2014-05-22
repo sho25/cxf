@@ -104,7 +104,7 @@ block|}
 specifier|public
 name|JwtHeaders
 parameter_list|(
-name|Algorithms
+name|Algorithm
 name|algo
 parameter_list|)
 block|{

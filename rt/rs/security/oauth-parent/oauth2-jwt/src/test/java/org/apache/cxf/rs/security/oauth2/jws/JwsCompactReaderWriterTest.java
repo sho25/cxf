@@ -99,7 +99,7 @@ name|oauth2
 operator|.
 name|jwt
 operator|.
-name|Algorithms
+name|Algorithm
 import|;
 end_import
 
@@ -417,7 +417,7 @@ init|=
 operator|new
 name|JwtHeaders
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|HmacSHA256
 operator|.
@@ -650,7 +650,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|HmacSHA256
 operator|.
@@ -809,7 +809,7 @@ init|=
 operator|new
 name|JwtHeaders
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|HmacSHA256
 operator|.
@@ -967,7 +967,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|HmacSHA256
 operator|.
@@ -1126,7 +1126,7 @@ name|headers
 operator|.
 name|setAlgorithm
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|SHA256withRSA
 operator|.
@@ -1238,7 +1238,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|SHA256withRSA
 operator|.

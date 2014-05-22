@@ -85,7 +85,7 @@ name|oauth2
 operator|.
 name|jwt
 operator|.
-name|Algorithms
+name|Algorithm
 import|;
 end_import
 
@@ -516,7 +516,7 @@ init|=
 operator|new
 name|KeyProperties
 argument_list|(
-name|Algorithms
+name|Algorithm
 operator|.
 name|toJavaName
 argument_list|(

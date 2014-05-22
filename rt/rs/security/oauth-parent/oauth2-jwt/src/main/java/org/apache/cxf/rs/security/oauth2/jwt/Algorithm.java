@@ -44,7 +44,7 @@ end_import
 begin_enum
 specifier|public
 enum|enum
-name|Algorithms
+name|Algorithm
 block|{
 comment|// Signature
 name|HmacSHA256
@@ -445,7 +445,7 @@ end_decl_stmt
 
 begin_constructor
 specifier|private
-name|Algorithms
+name|Algorithm
 parameter_list|(
 name|String
 name|jwtName
@@ -463,7 +463,7 @@ end_constructor
 
 begin_constructor
 specifier|private
-name|Algorithms
+name|Algorithm
 parameter_list|(
 name|String
 name|jwtName
