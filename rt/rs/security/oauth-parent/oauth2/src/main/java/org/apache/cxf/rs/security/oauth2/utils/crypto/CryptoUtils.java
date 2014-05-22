@@ -915,7 +915,7 @@ block|}
 block|}
 specifier|public
 specifier|static
-name|void
+name|boolean
 name|verifySignature
 parameter_list|(
 name|byte
@@ -933,6 +933,7 @@ name|String
 name|signAlgo
 parameter_list|)
 block|{
+return|return
 name|verifySignature
 argument_list|(
 name|data
@@ -945,11 +946,11 @@ name|signAlgo
 argument_list|,
 literal|null
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 specifier|public
 specifier|static
-name|void
+name|boolean
 name|verifySignature
 parameter_list|(
 name|byte
@@ -1011,13 +1012,14 @@ argument_list|(
 name|data
 argument_list|)
 expr_stmt|;
+return|return
 name|s
 operator|.
 name|verify
 argument_list|(
 name|signature
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 catch|catch
 parameter_list|(

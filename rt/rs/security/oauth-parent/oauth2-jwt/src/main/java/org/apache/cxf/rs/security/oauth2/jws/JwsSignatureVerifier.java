@@ -44,7 +44,7 @@ end_import
 begin_interface
 specifier|public
 interface|interface
-name|JwsSignatureProvider
+name|JwsSignatureVerifier
 block|{
 name|byte
 index|[]
@@ -54,7 +54,7 @@ name|JwtHeaders
 name|headers
 parameter_list|,
 name|String
-name|text
+name|unsignedText
 parameter_list|)
 function_decl|;
 block|}

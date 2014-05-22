@@ -46,8 +46,8 @@ specifier|public
 interface|interface
 name|JwsSignatureValidator
 block|{
-name|void
-name|validate
+name|boolean
+name|verify
 parameter_list|(
 name|JwtHeaders
 name|headers
