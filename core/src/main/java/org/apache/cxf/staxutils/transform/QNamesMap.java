@@ -187,27 +187,9 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-comment|// assume it is something like {somens}* : *
+comment|// assume it is something like {somens}* => * or {somens}* => {anotherns}*
+comment|// and return QName(nsuri, lcname) which covers both cases.
 return|return
-literal|"*"
-operator|.
-name|equals
-argument_list|(
-name|values
-index|[
-name|i
-index|]
-argument_list|)
-condition|?
-operator|new
-name|QName
-argument_list|(
-name|key
-operator|.
-name|getLocalPart
-argument_list|()
-argument_list|)
-else|:
 operator|new
 name|QName
 argument_list|(
