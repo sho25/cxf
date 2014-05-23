@@ -456,6 +456,17 @@ name|put
 argument_list|(
 name|JwtConstants
 operator|.
+name|RSA_1_5_ALGO
+argument_list|,
+name|RSA_1_5_ALGO_JAVA
+argument_list|)
+expr_stmt|;
+name|JWT_TO_JAVA_NAMES
+operator|.
+name|put
+argument_list|(
+name|JwtConstants
+operator|.
 name|A256GCM_ALGO
 argument_list|,
 name|A256GCM_ALGO_JAVA
