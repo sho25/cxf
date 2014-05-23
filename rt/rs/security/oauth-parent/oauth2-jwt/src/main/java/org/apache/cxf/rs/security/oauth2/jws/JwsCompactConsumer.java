@@ -510,7 +510,7 @@ specifier|public
 name|boolean
 name|verifySignatureWith
 parameter_list|(
-name|JwsSignatureValidator
+name|JwsSignatureVerifier
 name|validator
 parameter_list|)
 block|{

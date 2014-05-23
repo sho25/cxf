@@ -120,7 +120,7 @@ specifier|public
 class|class
 name|PrivateKeyJwsSignatureProvider
 implements|implements
-name|JwsSignatureVerifier
+name|JwsSignatureProvider
 block|{
 specifier|private
 name|PrivateKey

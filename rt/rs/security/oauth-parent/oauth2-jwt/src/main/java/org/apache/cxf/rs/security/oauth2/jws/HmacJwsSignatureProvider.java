@@ -134,9 +134,9 @@ specifier|public
 class|class
 name|HmacJwsSignatureProvider
 implements|implements
-name|JwsSignatureVerifier
+name|JwsSignatureProvider
 implements|,
-name|JwsSignatureValidator
+name|JwsSignatureVerifier
 block|{
 specifier|private
 name|byte

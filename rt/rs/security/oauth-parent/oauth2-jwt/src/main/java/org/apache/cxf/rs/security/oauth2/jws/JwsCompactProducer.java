@@ -397,7 +397,7 @@ specifier|public
 name|void
 name|signWith
 parameter_list|(
-name|JwsSignatureVerifier
+name|JwsSignatureProvider
 name|signer
 parameter_list|)
 block|{

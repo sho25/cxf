@@ -110,7 +110,7 @@ specifier|public
 class|class
 name|PublicKeyJwsSignatureVerifier
 implements|implements
-name|JwsSignatureValidator
+name|JwsSignatureVerifier
 block|{
 specifier|private
 name|PublicKey
