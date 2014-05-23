@@ -497,8 +497,10 @@ decl_stmt|;
 return|return
 name|CryptoUtils
 operator|.
-name|generateSecureRandomBytes
+name|getSecretKey
 argument_list|(
+name|algo
+argument_list|,
 name|Algorithm
 operator|.
 name|valueOf
@@ -508,9 +510,10 @@ argument_list|)
 operator|.
 name|getKeySizeBits
 argument_list|()
-operator|/
-literal|8
 argument_list|)
+operator|.
+name|getEncoded
+argument_list|()
 return|;
 block|}
 else|else

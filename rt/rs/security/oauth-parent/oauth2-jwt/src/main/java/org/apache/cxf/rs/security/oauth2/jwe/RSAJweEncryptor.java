@@ -29,7 +29,7 @@ name|security
 operator|.
 name|interfaces
 operator|.
-name|RSAPrivateKey
+name|RSAPublicKey
 import|;
 end_import
 
@@ -93,8 +93,8 @@ block|{
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|String
 name|contentEncryptionAlgo
@@ -115,15 +115,15 @@ argument_list|,
 name|contentEncryptionAlgo
 argument_list|)
 argument_list|,
-name|privateKey
+name|publicKey
 argument_list|)
 expr_stmt|;
 block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -139,7 +139,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|privateKey
+name|publicKey
 argument_list|,
 name|headers
 argument_list|,
@@ -156,8 +156,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|SecretKey
 name|secretKey
@@ -169,7 +169,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|privateKey
+name|publicKey
 argument_list|,
 operator|new
 name|JweHeaders
@@ -208,8 +208,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -231,7 +231,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|privateKey
+name|publicKey
 argument_list|,
 name|headers
 argument_list|,
@@ -250,8 +250,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -270,7 +270,7 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|privateKey
+name|publicKey
 argument_list|,
 name|headers
 argument_list|,
@@ -289,8 +289,8 @@ block|}
 specifier|public
 name|RSAJweEncryptor
 parameter_list|(
-name|RSAPrivateKey
-name|privateKey
+name|RSAPublicKey
+name|publicKey
 parameter_list|,
 name|JweHeaders
 name|headers
@@ -317,7 +317,7 @@ name|super
 argument_list|(
 name|headers
 argument_list|,
-name|privateKey
+name|publicKey
 argument_list|,
 name|cek
 argument_list|,
