@@ -2034,17 +2034,6 @@ operator|.
 name|notifyAll
 argument_list|()
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Message accepted "
-operator|+
-name|msgNum
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 annotation|@
@@ -2082,17 +2071,6 @@ name|callbacks
 operator|.
 name|notifyAll
 argument_list|()
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Message acknowledged "
-operator|+
-name|msgNum
-argument_list|)
 expr_stmt|;
 block|}
 block|}
