@@ -1040,6 +1040,16 @@ name|getMessageContext
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|requestData
+operator|.
+name|setSubjectCertConstraints
+argument_list|(
+name|certConstraints
+operator|.
+name|getCompiledSubjectContraints
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|WSDocInfo
 name|docInfo
 init|=

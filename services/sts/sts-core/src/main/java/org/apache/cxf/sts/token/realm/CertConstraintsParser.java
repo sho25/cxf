@@ -229,6 +229,18 @@ block|}
 block|}
 block|}
 block|}
+specifier|public
+name|Collection
+argument_list|<
+name|Pattern
+argument_list|>
+name|getCompiledSubjectContraints
+parameter_list|()
+block|{
+return|return
+name|subjectDNPatterns
+return|;
+block|}
 comment|/**      * @return      true if the certificate's SubjectDN matches the constraints defined in the      *              subject DNConstraints; false, otherwise. The certificate subject DN only      *              has to match ONE of the subject cert constraints (not all).      */
 specifier|public
 name|boolean
