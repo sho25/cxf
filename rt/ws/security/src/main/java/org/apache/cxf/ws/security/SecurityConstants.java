@@ -823,6 +823,8 @@ block|,
 name|RETURN_SECURITY_ERROR
 block|,
 name|CACHE_IDENTIFIER
+block|,
+name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 block|}
 argument_list|)
 argument_list|)
