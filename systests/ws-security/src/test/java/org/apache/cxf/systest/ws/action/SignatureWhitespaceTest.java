@@ -194,7 +194,7 @@ name|PORT
 init|=
 name|allocatePort
 argument_list|(
-name|Server
+name|SignatureServer
 operator|.
 name|class
 argument_list|)
@@ -239,7 +239,7 @@ comment|// run the server in the same process
 comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|Server
+name|SignatureServer
 operator|.
 name|class
 argument_list|,
