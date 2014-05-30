@@ -2720,11 +2720,6 @@ return|return
 name|p
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 name|void
 name|setUpPhaseInterceptorInvocations
 parameter_list|(
@@ -2771,9 +2766,9 @@ name|setContent
 argument_list|(
 name|EasyMock
 operator|.
-name|isA
+name|eq
 argument_list|(
-name|Class
+name|Exception
 operator|.
 name|class
 argument_list|)

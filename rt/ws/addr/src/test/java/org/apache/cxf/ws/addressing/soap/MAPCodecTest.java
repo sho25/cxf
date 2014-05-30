@@ -2687,7 +2687,7 @@ name|name
 parameter_list|,
 name|Class
 argument_list|<
-name|T
+name|?
 argument_list|>
 name|clz
 parameter_list|,
@@ -2769,6 +2769,11 @@ index|[
 name|index
 index|]
 decl_stmt|;
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unchecked"
+argument_list|)
 name|JAXBElement
 argument_list|<
 name|?
@@ -2778,7 +2783,7 @@ init|=
 operator|new
 name|JAXBElement
 argument_list|<
-name|T
+name|Object
 argument_list|>
 argument_list|(
 operator|new
@@ -2789,6 +2794,12 @@ argument_list|,
 name|name
 argument_list|)
 argument_list|,
+operator|(
+name|Class
+argument_list|<
+name|Object
+argument_list|>
+operator|)
 name|clz
 argument_list|,
 name|clz

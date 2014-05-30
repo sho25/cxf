@@ -525,7 +525,7 @@ name|namespaceMap
 operator|.
 name|put
 argument_list|(
-literal|"http://fortest.jaxrs.cxf.apache.org"
+literal|"http://resources.jaxrs.cxf.apache.org"
 argument_list|,
 literal|"ns1"
 argument_list|)
