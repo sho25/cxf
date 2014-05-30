@@ -162,6 +162,9 @@ parameter_list|,
 name|SecretKey
 name|secretKey
 parameter_list|,
+name|String
+name|secretKeyJwtAlgorithm
+parameter_list|,
 name|byte
 index|[]
 name|iv
@@ -181,15 +184,7 @@ operator|.
 name|getJwtName
 argument_list|()
 argument_list|,
-name|Algorithm
-operator|.
-name|toJwtName
-argument_list|(
-name|secretKey
-operator|.
-name|getAlgorithm
-argument_list|()
-argument_list|)
+name|secretKeyJwtAlgorithm
 argument_list|)
 argument_list|,
 name|secretKey
