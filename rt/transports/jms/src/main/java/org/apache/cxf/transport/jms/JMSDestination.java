@@ -903,6 +903,16 @@ name|isSessionTransacted
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|container
+operator|.
+name|setDurableSubscriptionName
+argument_list|(
+name|jmsConfig
+operator|.
+name|getDurableSubscriptionName
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|Executor
 name|executor
 init|=
