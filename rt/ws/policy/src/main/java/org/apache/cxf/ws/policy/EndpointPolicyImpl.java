@@ -964,6 +964,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+specifier|synchronized
 name|void
 name|initializeVocabulary
 parameter_list|(
@@ -971,6 +972,15 @@ name|Message
 name|m
 parameter_list|)
 block|{
+if|if
+condition|(
+name|vocabulary
+operator|!=
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|vocabulary
 operator|=
 operator|new
@@ -1472,6 +1482,7 @@ block|}
 block|}
 block|}
 block|}
+specifier|synchronized
 name|void
 name|initializeInterceptors
 parameter_list|(
@@ -1479,6 +1490,15 @@ name|Message
 name|m
 parameter_list|)
 block|{
+if|if
+condition|(
+name|interceptors
+operator|!=
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 if|if
 condition|(
 name|engine
