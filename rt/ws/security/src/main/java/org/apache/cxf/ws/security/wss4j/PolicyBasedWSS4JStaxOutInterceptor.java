@@ -368,12 +368,6 @@ operator|&&
 name|enableStax
 condition|)
 block|{
-name|getProperties
-argument_list|()
-operator|.
-name|clear
-argument_list|()
-expr_stmt|;
 name|super
 operator|.
 name|handleMessage
