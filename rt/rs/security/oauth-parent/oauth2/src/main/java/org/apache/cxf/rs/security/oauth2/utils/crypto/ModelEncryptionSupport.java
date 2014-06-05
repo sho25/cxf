@@ -2028,9 +2028,9 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setAllowedGrantTypes
+name|setApplicationLogoUri
 argument_list|(
-name|parseSimpleList
+name|getStringPart
 argument_list|(
 name|parts
 index|[
@@ -2041,7 +2041,7 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setRegisteredScopes
+name|setAllowedGrantTypes
 argument_list|(
 name|parseSimpleList
 argument_list|(
@@ -2054,7 +2054,7 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setRedirectUris
+name|setRegisteredScopes
 argument_list|(
 name|parseSimpleList
 argument_list|(
@@ -2067,7 +2067,7 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setRegisteredAudiences
+name|setRedirectUris
 argument_list|(
 name|parseSimpleList
 argument_list|(
@@ -2080,13 +2080,26 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
+name|setRegisteredAudiences
+argument_list|(
+name|parseSimpleList
+argument_list|(
+name|parts
+index|[
+literal|11
+index|]
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|c
+operator|.
 name|setProperties
 argument_list|(
 name|parseSimpleMap
 argument_list|(
 name|parts
 index|[
-literal|11
+literal|12
 index|]
 argument_list|)
 argument_list|)
@@ -2099,7 +2112,7 @@ name|recreateUserSubject
 argument_list|(
 name|parts
 index|[
-literal|12
+literal|13
 index|]
 argument_list|)
 argument_list|)
@@ -2268,7 +2281,28 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 7: grants
+comment|// 7: app certificate
+name|state
+operator|.
+name|append
+argument_list|(
+name|tokenizeString
+argument_list|(
+name|client
+operator|.
+name|getApplicationCertificate
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|state
+operator|.
+name|append
+argument_list|(
+name|SEP
+argument_list|)
+expr_stmt|;
+comment|// 8: grants
 name|state
 operator|.
 name|append
@@ -2289,7 +2323,7 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 8: redirect URIs
+comment|// 9: redirect URIs
 name|state
 operator|.
 name|append
@@ -2310,7 +2344,7 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 9: registered scopes
+comment|// 10: registered scopes
 name|state
 operator|.
 name|append
@@ -2331,7 +2365,7 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 10: registered audiences
+comment|// 11: registered audiences
 name|state
 operator|.
 name|append
@@ -2352,7 +2386,7 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 11: properties
+comment|// 12: properties
 name|state
 operator|.
 name|append
@@ -2373,7 +2407,7 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 12: subject
+comment|// 13: subject
 name|tokenizeUserSubject
 argument_list|(
 name|state
