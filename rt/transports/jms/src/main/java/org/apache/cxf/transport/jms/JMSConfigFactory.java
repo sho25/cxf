@@ -452,14 +452,13 @@ name|getDurableSubscriptionName
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// TODO We might need a separate config here
 name|jmsConfig
 operator|.
-name|setDurableSubscriptionClientId
+name|setClientID
 argument_list|(
 name|endpoint
 operator|.
-name|getDurableSubscriptionName
+name|getClientID
 argument_list|()
 argument_list|)
 expr_stmt|;
