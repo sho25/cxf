@@ -222,7 +222,7 @@ name|secretKey
 argument_list|,
 name|Algorithm
 operator|.
-name|stripAlgoProperties
+name|toJwtName
 argument_list|(
 name|secretKey
 operator|.
