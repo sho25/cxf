@@ -169,8 +169,9 @@ end_import
 
 begin_class
 specifier|public
+specifier|abstract
 class|class
-name|JweEncryptor
+name|AbstractJweEncryptor
 block|{
 specifier|protected
 specifier|static
@@ -224,8 +225,8 @@ specifier|private
 name|boolean
 name|wrap
 decl_stmt|;
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|SecretKey
 name|cek
@@ -260,8 +261,8 @@ name|iv
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -294,8 +295,8 @@ operator|=
 name|iv
 expr_stmt|;
 block|}
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -328,8 +329,8 @@ operator|=
 name|authTagLen
 expr_stmt|;
 block|}
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -351,8 +352,8 @@ operator|=
 name|cekEncryptionKey
 expr_stmt|;
 block|}
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -387,8 +388,8 @@ operator|=
 name|cekEncryptionKey
 expr_stmt|;
 block|}
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -435,8 +436,8 @@ operator|=
 name|wrap
 expr_stmt|;
 block|}
-specifier|public
-name|JweEncryptor
+specifier|protected
+name|AbstractJweEncryptor
 parameter_list|(
 name|JweHeaders
 name|headers

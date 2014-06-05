@@ -677,11 +677,11 @@ argument_list|,
 literal|"AES"
 argument_list|)
 decl_stmt|;
-name|JweEncryptor
+name|DirectKeyJweEncryptor
 name|encryptor
 init|=
 operator|new
-name|JweEncryptor
+name|DirectKeyJweEncryptor
 argument_list|(
 name|key
 argument_list|,
@@ -774,11 +774,11 @@ argument_list|,
 literal|"AES"
 argument_list|)
 decl_stmt|;
-name|JweDecryptor
+name|DirectKeyJweDecryptor
 name|decryptor
 init|=
 operator|new
-name|JweDecryptor
+name|DirectKeyJweDecryptor
 argument_list|(
 name|jweContent
 argument_list|,

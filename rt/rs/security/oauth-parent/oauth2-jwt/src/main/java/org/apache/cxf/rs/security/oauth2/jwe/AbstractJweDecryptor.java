@@ -109,8 +109,9 @@ end_import
 
 begin_class
 specifier|public
+specifier|abstract
 class|class
-name|JweDecryptor
+name|AbstractJweDecryptor
 block|{
 specifier|private
 name|JweCompactConsumer
@@ -137,8 +138,8 @@ operator|new
 name|CeProvider
 argument_list|()
 decl_stmt|;
-specifier|public
-name|JweDecryptor
+specifier|protected
+name|AbstractJweDecryptor
 parameter_list|(
 name|String
 name|jweContent
@@ -173,8 +174,8 @@ operator|=
 name|unwrap
 expr_stmt|;
 block|}
-specifier|public
-name|JweDecryptor
+specifier|protected
+name|AbstractJweDecryptor
 parameter_list|(
 name|String
 name|jweContent
@@ -514,7 +515,7 @@ name|encryptedKey
 parameter_list|)
 block|{
 return|return
-name|JweDecryptor
+name|AbstractJweDecryptor
 operator|.
 name|this
 operator|.

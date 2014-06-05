@@ -88,7 +88,7 @@ specifier|public
 class|class
 name|RSAJweEncryptor
 extends|extends
-name|JweEncryptor
+name|WrappedKeyJweEncryptor
 block|{
 specifier|public
 name|RSAJweEncryptor
