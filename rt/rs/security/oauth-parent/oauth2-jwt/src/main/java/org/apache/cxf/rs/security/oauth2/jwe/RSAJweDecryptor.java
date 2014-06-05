@@ -105,7 +105,7 @@ operator|(
 operator|(
 name|RSAPublicKey
 operator|)
-name|getDecryptionKey
+name|getCekDecryptionKey
 argument_list|()
 operator|)
 operator|.
