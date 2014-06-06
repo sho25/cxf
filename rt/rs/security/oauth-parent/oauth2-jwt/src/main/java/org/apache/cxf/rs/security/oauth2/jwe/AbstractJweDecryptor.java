@@ -152,7 +152,7 @@ name|ceProvider
 argument_list|)
 return|;
 block|}
-specifier|public
+specifier|protected
 name|JweHeaders
 name|getHeaders
 parameter_list|()
