@@ -488,6 +488,27 @@ argument_list|,
 name|id
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|Boolean
+operator|.
+name|TRUE
+operator|.
+name|equals
+argument_list|(
+name|message
+operator|.
+name|get
+argument_list|(
+name|Message
+operator|.
+name|DECOUPLED_CHANNEL_MESSAGE
+argument_list|)
+argument_list|)
+condition|)
+block|{
+comment|// avoid logging the default responseCode 200 for the decoupled responses
 name|Integer
 name|responseCode
 init|=
@@ -520,6 +541,7 @@ argument_list|(
 name|responseCode
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|String
 name|encoding
