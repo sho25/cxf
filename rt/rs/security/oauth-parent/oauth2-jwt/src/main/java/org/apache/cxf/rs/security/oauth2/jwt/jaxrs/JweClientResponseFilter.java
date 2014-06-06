@@ -51,9 +51,9 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|container
+name|client
 operator|.
-name|ContainerRequestContext
+name|ClientRequestContext
 import|;
 end_import
 
@@ -65,9 +65,9 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|container
+name|client
 operator|.
-name|ContainerRequestFilter
+name|ClientResponseContext
 import|;
 end_import
 
@@ -79,22 +79,20 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|container
+name|client
 operator|.
-name|PreMatching
+name|ClientResponseFilter
 import|;
 end_import
 
 begin_class
-annotation|@
-name|PreMatching
 specifier|public
 class|class
-name|JweContainerRequestFilter
+name|JweClientResponseFilter
 extends|extends
 name|AbstractJweDecryptingFilter
 implements|implements
-name|ContainerRequestFilter
+name|ClientResponseFilter
 block|{
 annotation|@
 name|Override
@@ -102,13 +100,16 @@ specifier|public
 name|void
 name|filter
 parameter_list|(
-name|ContainerRequestContext
-name|context
+name|ClientRequestContext
+name|req
+parameter_list|,
+name|ClientResponseContext
+name|res
 parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|context
+name|res
 operator|.
 name|setEntityStream
 argument_list|(
@@ -117,7 +118,7 @@ name|ByteArrayInputStream
 argument_list|(
 name|decrypt
 argument_list|(
-name|context
+name|res
 operator|.
 name|getEntityStream
 argument_list|()
