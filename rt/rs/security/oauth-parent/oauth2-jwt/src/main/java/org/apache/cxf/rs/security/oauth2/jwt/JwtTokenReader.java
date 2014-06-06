@@ -38,16 +38,6 @@ function_decl|;
 name|JwtToken
 name|fromJson
 parameter_list|(
-name|String
-name|jsonHeaders
-parameter_list|,
-name|String
-name|jsonClaims
-parameter_list|)
-function_decl|;
-name|JwtToken
-name|fromJson
-parameter_list|(
 name|JwtTokenJson
 name|jsonPair
 parameter_list|)

@@ -422,6 +422,12 @@ operator|.
 name|append
 argument_list|(
 name|encodedContentEncryptionKey
+operator|==
+literal|null
+condition|?
+literal|""
+else|:
+name|encodedContentEncryptionKey
 argument_list|)
 operator|.
 name|append
@@ -431,6 +437,12 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
+name|encodedInitVector
+operator|==
+literal|null
+condition|?
+literal|""
+else|:
 name|encodedInitVector
 argument_list|)
 operator|.

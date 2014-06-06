@@ -149,6 +149,24 @@ name|authTagLen
 argument_list|)
 expr_stmt|;
 block|}
+specifier|protected
+name|byte
+index|[]
+name|getEncryptedContentEncryptionKey
+parameter_list|(
+name|byte
+index|[]
+name|theCek
+parameter_list|)
+block|{
+return|return
+operator|new
+name|byte
+index|[
+literal|0
+index|]
+return|;
+block|}
 block|}
 end_class
 

@@ -279,9 +279,7 @@ return|return
 name|claims
 return|;
 block|}
-annotation|@
-name|Override
-specifier|public
+specifier|private
 name|JwtToken
 name|fromJson
 parameter_list|(
