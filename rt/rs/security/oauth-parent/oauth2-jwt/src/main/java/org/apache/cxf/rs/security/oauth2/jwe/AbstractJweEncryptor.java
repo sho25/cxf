@@ -162,6 +162,8 @@ specifier|public
 specifier|abstract
 class|class
 name|AbstractJweEncryptor
+implements|implements
+name|JweEncryptor
 block|{
 specifier|protected
 specifier|static
@@ -472,7 +474,7 @@ return|;
 block|}
 specifier|public
 name|String
-name|getJweContent
+name|encrypt
 parameter_list|(
 name|byte
 index|[]
@@ -606,7 +608,7 @@ return|;
 block|}
 specifier|public
 name|String
-name|getJweContent
+name|encryptText
 parameter_list|(
 name|String
 name|text
@@ -615,7 +617,7 @@ block|{
 try|try
 block|{
 return|return
-name|getJweContent
+name|encrypt
 argument_list|(
 name|text
 operator|.

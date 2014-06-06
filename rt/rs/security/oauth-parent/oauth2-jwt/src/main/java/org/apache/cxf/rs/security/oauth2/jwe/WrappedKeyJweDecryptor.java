@@ -113,17 +113,12 @@ decl_stmt|;
 specifier|public
 name|WrappedKeyJweDecryptor
 parameter_list|(
-name|String
-name|jweContent
-parameter_list|,
 name|Key
 name|cekDecryptionKey
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|jweContent
-argument_list|,
 name|cekDecryptionKey
 argument_list|,
 literal|true
@@ -133,9 +128,6 @@ block|}
 specifier|public
 name|WrappedKeyJweDecryptor
 parameter_list|(
-name|String
-name|jweContent
-parameter_list|,
 name|Key
 name|cekDecryptionKey
 parameter_list|,
@@ -145,8 +137,6 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|jweContent
-argument_list|,
 name|cekDecryptionKey
 argument_list|,
 name|unwrap
@@ -158,9 +148,6 @@ block|}
 specifier|public
 name|WrappedKeyJweDecryptor
 parameter_list|(
-name|String
-name|jweContent
-parameter_list|,
 name|Key
 name|cekDecryptionKey
 parameter_list|,
@@ -173,8 +160,6 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|jweContent
-argument_list|,
 name|props
 argument_list|)
 expr_stmt|;

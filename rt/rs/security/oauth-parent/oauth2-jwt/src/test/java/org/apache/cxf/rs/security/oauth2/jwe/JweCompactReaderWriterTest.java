@@ -649,7 +649,7 @@ decl_stmt|;
 return|return
 name|encryptor
 operator|.
-name|getJweContent
+name|encryptText
 argument_list|(
 name|content
 argument_list|)
@@ -691,7 +691,7 @@ decl_stmt|;
 return|return
 name|encryptor
 operator|.
-name|getJweContent
+name|encryptText
 argument_list|(
 name|content
 argument_list|)
@@ -728,8 +728,6 @@ init|=
 operator|new
 name|RSAJweDecryptor
 argument_list|(
-name|jweContent
-argument_list|,
 name|privateKey
 argument_list|)
 decl_stmt|;
@@ -738,7 +736,12 @@ name|decryptedText
 init|=
 name|decryptor
 operator|.
-name|getDecryptedContentText
+name|decrypt
+argument_list|(
+name|jweContent
+argument_list|)
+operator|.
+name|getContentText
 argument_list|()
 decl_stmt|;
 name|assertEquals
@@ -780,8 +783,6 @@ init|=
 operator|new
 name|DirectKeyJweDecryptor
 argument_list|(
-name|jweContent
-argument_list|,
 name|key
 argument_list|)
 decl_stmt|;
@@ -790,7 +791,12 @@ name|decryptedText
 init|=
 name|decryptor
 operator|.
-name|getDecryptedContentText
+name|decrypt
+argument_list|(
+name|jweContent
+argument_list|)
+operator|.
+name|getContentText
 argument_list|()
 decl_stmt|;
 name|assertEquals

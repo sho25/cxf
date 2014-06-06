@@ -55,17 +55,12 @@ block|{
 specifier|public
 name|RSAJweDecryptor
 parameter_list|(
-name|String
-name|jweContent
-parameter_list|,
 name|RSAPrivateKey
 name|privateKey
 parameter_list|)
 block|{
 name|this
 argument_list|(
-name|jweContent
-argument_list|,
 name|privateKey
 argument_list|,
 literal|true
@@ -75,9 +70,6 @@ block|}
 specifier|public
 name|RSAJweDecryptor
 parameter_list|(
-name|String
-name|jweContent
-parameter_list|,
 name|RSAPrivateKey
 name|privateKey
 parameter_list|,
@@ -87,8 +79,6 @@ parameter_list|)
 block|{
 name|this
 argument_list|(
-name|jweContent
-argument_list|,
 name|privateKey
 argument_list|,
 name|unwrap
@@ -100,9 +90,6 @@ block|}
 specifier|public
 name|RSAJweDecryptor
 parameter_list|(
-name|String
-name|jweContent
-parameter_list|,
 name|RSAPrivateKey
 name|privateKey
 parameter_list|,
@@ -115,8 +102,6 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-name|jweContent
-argument_list|,
 name|privateKey
 argument_list|,
 name|unwrap
