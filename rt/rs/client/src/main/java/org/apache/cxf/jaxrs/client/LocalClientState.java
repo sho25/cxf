@@ -137,6 +137,14 @@ init|=
 literal|"http"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|WS_SCHEME
+init|=
+literal|"ws"
+decl_stmt|;
+specifier|private
 name|MultivaluedMap
 argument_list|<
 name|String
@@ -198,7 +206,7 @@ name|baseURI
 expr_stmt|;
 if|if
 condition|(
-name|isHttpScheme
+name|isSupportedScheme
 argument_list|(
 name|baseURI
 argument_list|)
@@ -595,7 +603,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|isHttpScheme
+name|isSupportedScheme
 argument_list|(
 name|currentURI
 argument_list|)
@@ -689,7 +697,7 @@ block|}
 specifier|private
 specifier|static
 name|boolean
-name|isHttpScheme
+name|isSupportedScheme
 parameter_list|(
 name|URI
 name|uri
@@ -707,6 +715,7 @@ name|getScheme
 argument_list|()
 argument_list|)
 operator|&&
+operator|(
 name|uri
 operator|.
 name|getScheme
@@ -716,6 +725,17 @@ name|startsWith
 argument_list|(
 name|HTTP_SCHEME
 argument_list|)
+operator|||
+name|uri
+operator|.
+name|getScheme
+argument_list|()
+operator|.
+name|startsWith
+argument_list|(
+name|WS_SCHEME
+argument_list|)
+operator|)
 return|;
 block|}
 block|}
