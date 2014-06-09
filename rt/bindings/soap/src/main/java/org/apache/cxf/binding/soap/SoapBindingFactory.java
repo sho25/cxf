@@ -3751,6 +3751,47 @@ name|header
 operator|!=
 literal|null
 operator|&&
+name|header
+operator|.
+name|getMessage
+argument_list|()
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Problem with WSDL: soap:header element"
+operator|+
+literal|" for operation "
+operator|+
+name|bop
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" under binding "
+operator|+
+name|bop
+operator|.
+name|getBinding
+argument_list|()
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" does not contain a valid message attribute."
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+name|header
+operator|!=
+literal|null
+operator|&&
 name|serviceInfo
 operator|.
 name|getMessage
