@@ -678,26 +678,6 @@ block|}
 elseif|else
 if|if
 condition|(
-name|applicationTitle
-operator|!=
-literal|null
-condition|)
-block|{
-name|name
-operator|=
-name|applicationTitle
-operator|.
-name|replaceAll
-argument_list|(
-literal|" "
-argument_list|,
-literal|""
-argument_list|)
-expr_stmt|;
-block|}
-elseif|else
-if|if
-condition|(
 name|classResourceNames
 operator|.
 name|size
