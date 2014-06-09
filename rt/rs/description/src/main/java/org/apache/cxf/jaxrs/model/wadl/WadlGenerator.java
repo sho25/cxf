@@ -11659,13 +11659,7 @@ name|ui
 argument_list|)
 return|;
 block|}
-elseif|else
-if|if
-condition|(
-name|context
-operator|!=
-literal|null
-condition|)
+else|else
 block|{
 name|SchemaCollection
 name|coll
