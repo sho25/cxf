@@ -2407,6 +2407,13 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|srcFiles
+operator|.
+name|size
+argument_list|()
+operator|>
+literal|0
+operator|&&
 operator|!
 name|compileJavaSrc
 argument_list|(
