@@ -702,7 +702,7 @@ name|URI
 operator|.
 name|create
 argument_list|(
-literal|"/"
+literal|"ws://foo"
 argument_list|)
 argument_list|,
 name|wc
@@ -739,7 +739,7 @@ name|URI
 operator|.
 name|create
 argument_list|(
-literal|"/a"
+literal|"ws://foo/a"
 argument_list|)
 argument_list|,
 name|wc
@@ -787,7 +787,7 @@ name|URI
 operator|.
 name|create
 argument_list|(
-literal|"/"
+literal|"ws://foo"
 argument_list|)
 argument_list|,
 name|wc
@@ -826,7 +826,7 @@ name|URI
 operator|.
 name|create
 argument_list|(
-literal|"/"
+literal|"ws://bar"
 argument_list|)
 argument_list|,
 name|wc
