@@ -2922,6 +2922,14 @@ name|newAddress
 operator|.
 name|startsWith
 argument_list|(
+literal|"/"
+argument_list|)
+operator|&&
+operator|!
+name|newAddress
+operator|.
+name|startsWith
+argument_list|(
 name|getBaseURI
 argument_list|()
 operator|.

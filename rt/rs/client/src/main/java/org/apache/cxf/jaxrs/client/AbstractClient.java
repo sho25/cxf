@@ -1934,11 +1934,6 @@ argument_list|(
 name|uri
 argument_list|)
 expr_stmt|;
-name|resetCurrentBuilder
-argument_list|(
-name|uri
-argument_list|)
-expr_stmt|;
 block|}
 specifier|protected
 name|void
