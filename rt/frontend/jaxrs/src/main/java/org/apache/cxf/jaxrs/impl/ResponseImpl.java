@@ -2356,6 +2356,7 @@ name|IllegalStateException
 argument_list|(
 literal|"The entity is not backed by an input stream, entity class is : "
 operator|+
+operator|(
 name|entity
 operator|!=
 literal|null
@@ -2369,6 +2370,7 @@ name|getName
 argument_list|()
 else|:
 literal|null
+operator|)
 argument_list|)
 throw|;
 block|}
