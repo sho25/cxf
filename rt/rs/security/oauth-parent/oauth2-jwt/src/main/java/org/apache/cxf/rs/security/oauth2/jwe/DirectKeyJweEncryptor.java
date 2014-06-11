@@ -82,6 +82,15 @@ name|cek
 operator|.
 name|getAlgorithm
 argument_list|()
+argument_list|,
+name|cek
+operator|.
+name|getEncoded
+argument_list|()
+operator|.
+name|length
+operator|*
+literal|8
 argument_list|)
 argument_list|)
 argument_list|,
