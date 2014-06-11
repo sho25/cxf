@@ -468,9 +468,7 @@ name|Algorithm
 operator|.
 name|toJavaName
 argument_list|(
-name|headers
-operator|.
-name|getContentEncryptionAlgorithm
+name|getContentEncryptionAlgoJwt
 argument_list|()
 argument_list|)
 return|;
