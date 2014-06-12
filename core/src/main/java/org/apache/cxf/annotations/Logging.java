@@ -75,6 +75,20 @@ name|Target
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|interceptor
+operator|.
+name|AbstractLoggingInterceptor
+import|;
+end_import
+
 begin_comment
 comment|/**  * Enables message Logging  */
 end_comment
@@ -107,7 +121,9 @@ name|int
 name|limit
 parameter_list|()
 default|default
-literal|65536
+name|AbstractLoggingInterceptor
+operator|.
+name|DEFAULT_LIMIT
 function_decl|;
 comment|/**      * the locations where the messages are logged.   The default is      *<logger> which means to log to the java.util.logging.Logger,       * but<stdout>,<stderr>, and a "file:/.." URI are acceptable.       */
 name|String
