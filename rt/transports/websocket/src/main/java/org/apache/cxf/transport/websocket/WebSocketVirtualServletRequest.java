@@ -1969,6 +1969,18 @@ operator|.
 name|getPathTranslated
 argument_list|()
 decl_stmt|;
+comment|// some container may choose not to return this value
+if|if
+condition|(
+name|opathtrans
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|String
 name|opathinfo
 init|=

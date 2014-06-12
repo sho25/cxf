@@ -33,7 +33,7 @@ specifier|final
 name|String
 name|DEFAULT_REQUEST_ID_KEY
 init|=
-literal|"requestId"
+literal|"Request-Id"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -41,7 +41,7 @@ specifier|final
 name|String
 name|DEFAULT_RESPONSE_ID_KEY
 init|=
-literal|"responseId"
+literal|"Response-Id"
 decl_stmt|;
 specifier|private
 name|WebSocketConstants

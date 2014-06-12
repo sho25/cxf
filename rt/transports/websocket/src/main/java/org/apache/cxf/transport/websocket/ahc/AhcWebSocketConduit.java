@@ -65,6 +65,16 @@ name|java
 operator|.
 name|net
 operator|.
+name|SocketTimeoutException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|net
+operator|.
 name|URI
 import|;
 end_import
@@ -1607,9 +1617,14 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|IOException
+name|SocketTimeoutException
 argument_list|(
-literal|"timeout"
+literal|"Read timed out while invoking "
+operator|+
+name|entity
+operator|.
+name|getUri
+argument_list|()
 argument_list|)
 throw|;
 block|}
