@@ -1018,9 +1018,14 @@ operator|.
 name|valueOf
 argument_list|(
 operator|(
+operator|(
 name|String
 operator|)
 name|st
+operator|)
+operator|.
+name|toUpperCase
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
