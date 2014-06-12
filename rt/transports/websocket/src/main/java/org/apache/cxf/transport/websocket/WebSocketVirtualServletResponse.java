@@ -1657,11 +1657,6 @@ name|ServletOutputStream
 name|createOutputStream
 parameter_list|()
 block|{
-return|return
-operator|new
-name|ServletOutputStream
-argument_list|()
-block|{
 comment|//REVISIT
 comment|// This output buffering is needed as the server side websocket does
 comment|// not support the fragment transmission mode when sending back a large data.
@@ -1671,6 +1666,11 @@ comment|// unbuffered as individual websocket messages.
 comment|// the things to consider :
 comment|// - provide a size limit if we are use this buffering
 comment|// - add a chunking mode in the cxf websocket's binding.
+return|return
+operator|new
+name|ServletOutputStream
+argument_list|()
+block|{
 specifier|private
 name|InternalByteArrayOutputStream
 name|buffer
