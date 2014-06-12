@@ -781,6 +781,14 @@ decl_stmt|;
 if|if
 condition|(
 name|requri
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// jaxrs speicfies a sub-path using prop org.apache.cxf.request.uri
+if|if
+condition|(
+name|requri
 operator|.
 name|startsWith
 argument_list|(
@@ -800,10 +808,16 @@ name|requri
 operator|.
 name|indexOf
 argument_list|(
-name|url
+literal|'/'
+argument_list|,
+literal|3
+operator|+
+name|requri
 operator|.
-name|getPath
-argument_list|()
+name|indexOf
+argument_list|(
+literal|':'
+argument_list|)
 argument_list|)
 argument_list|)
 argument_list|)
@@ -821,6 +835,21 @@ name|getPath
 argument_list|()
 operator|+
 name|requri
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+comment|// jaxws
+name|entity
+operator|.
+name|setPath
+argument_list|(
+name|url
+operator|.
+name|getPath
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
