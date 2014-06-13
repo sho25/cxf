@@ -368,6 +368,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SESSION_AUTHENTICITY_TOKEN_PARAM_NAME
+init|=
+literal|"session_authenticity_token_param_name"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|AUTHORIZATION_DECISION_KEY
 init|=
 literal|"oauthDecision"
