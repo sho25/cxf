@@ -225,6 +225,7 @@ name|args
 index|[]
 decl_stmt|;
 specifier|protected
+specifier|volatile
 name|Object
 name|obj
 decl_stmt|;
@@ -892,6 +893,17 @@ name|Bus
 name|b
 parameter_list|)
 block|{
+if|if
+condition|(
+name|obj
+operator|!=
+literal|null
+condition|)
+block|{
+return|return
+name|obj
+return|;
+block|}
 name|Class
 argument_list|<
 name|?
