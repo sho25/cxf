@@ -1264,7 +1264,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|public
 specifier|static
 class|class
 name|NSContext

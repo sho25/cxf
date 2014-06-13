@@ -867,7 +867,7 @@ comment|// if this is being called for an operation, then override the service l
 block|}
 block|}
 comment|/**      * Where an operation level validation type has been set, copy it to the message, so it can be interrogated      * by all downstream interceptors.  It is expected that sub classes will call setDataReaderValidation subsequent      * to this to ensure the DataReader schema reference is updated as appropriate.      *       * @param bop      * @param message      * @param reader      * @see #setDataReaderValidation(Service, Message, DataReader)      */
-specifier|private
+specifier|protected
 name|void
 name|setOperationSchemaValidation
 parameter_list|(
