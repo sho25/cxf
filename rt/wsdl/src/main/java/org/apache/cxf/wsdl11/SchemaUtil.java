@@ -874,7 +874,7 @@ argument_list|()
 operator|.
 name|endsWith
 argument_list|(
-literal|".xsd"
+literal|".XSD"
 argument_list|)
 operator|&&
 name|def
