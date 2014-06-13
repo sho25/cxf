@@ -266,6 +266,9 @@ argument_list|()
 operator|.
 name|getContentType
 argument_list|()
+argument_list|,
+name|getDefaultMediaType
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if

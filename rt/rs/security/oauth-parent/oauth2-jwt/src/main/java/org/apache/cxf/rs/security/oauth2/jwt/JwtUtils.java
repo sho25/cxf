@@ -38,6 +38,9 @@ name|checkContentType
 parameter_list|(
 name|String
 name|contentType
+parameter_list|,
+name|String
+name|defaultType
 parameter_list|)
 block|{
 if|if
@@ -96,6 +99,13 @@ operator|+
 name|contentType
 expr_stmt|;
 block|}
+block|}
+else|else
+block|{
+name|contentType
+operator|=
+name|defaultType
+expr_stmt|;
 block|}
 return|return
 name|contentType
