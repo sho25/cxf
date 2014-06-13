@@ -95,6 +95,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|HEADER_X509_THUMBPRINT_SHA256
+init|=
+literal|"x5t#S256"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|HEADER_JSON_WEB_KEY
 init|=
 literal|"jwk"

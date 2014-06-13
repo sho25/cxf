@@ -182,6 +182,16 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|X509_THUMBPRINT_SHA256
+init|=
+name|JwtConstants
+operator|.
+name|HEADER_X509_THUMBPRINT_SHA256
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|KEY_TYPE_OCTET
 init|=
 literal|"oct"
