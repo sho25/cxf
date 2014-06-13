@@ -33,18 +33,6 @@ name|RSAPrivateKey
 import|;
 end_import
 
-begin_import
-import|import
-name|java
-operator|.
-name|security
-operator|.
-name|interfaces
-operator|.
-name|RSAPublicKey
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -118,7 +106,7 @@ block|{
 return|return
 operator|(
 operator|(
-name|RSAPublicKey
+name|RSAPrivateKey
 operator|)
 name|getCekDecryptionKey
 argument_list|()

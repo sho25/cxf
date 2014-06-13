@@ -514,6 +514,8 @@ argument_list|(
 name|jweContent
 argument_list|,
 name|specPlainText
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -588,6 +590,8 @@ argument_list|,
 name|JwsCompactReaderWriterTest
 operator|.
 name|ENCODED_TOKEN_SIGNED_BY_MAC
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -737,6 +741,9 @@ name|jweContent
 parameter_list|,
 name|String
 name|plainContent
+parameter_list|,
+name|boolean
+name|unwrap
 parameter_list|)
 throws|throws
 name|Exception
@@ -760,6 +767,8 @@ operator|new
 name|RSAJweDecryptor
 argument_list|(
 name|privateKey
+argument_list|,
+name|unwrap
 argument_list|)
 decl_stmt|;
 name|String
