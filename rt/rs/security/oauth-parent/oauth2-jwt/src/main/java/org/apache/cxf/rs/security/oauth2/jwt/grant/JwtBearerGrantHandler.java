@@ -139,7 +139,7 @@ name|oauth2
 operator|.
 name|jws
 operator|.
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 import|;
 end_import
 
@@ -353,7 +353,7 @@ throw|;
 block|}
 try|try
 block|{
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 name|jwsReader
 init|=
 name|getJwsReader
@@ -380,7 +380,7 @@ argument_list|()
 argument_list|,
 name|jwsReader
 operator|.
-name|getUnsignedEncodedToken
+name|getUnsignedEncodedPayload
 argument_list|()
 argument_list|,
 name|jwsReader
@@ -473,7 +473,7 @@ throw|;
 block|}
 block|}
 specifier|protected
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 name|getJwsReader
 parameter_list|(
 name|String
@@ -482,7 +482,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 argument_list|(
 name|assertion
 argument_list|,

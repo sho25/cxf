@@ -261,7 +261,7 @@ name|oauth2
 operator|.
 name|jws
 operator|.
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 import|;
 end_import
 
@@ -281,7 +281,7 @@ name|oauth2
 operator|.
 name|jws
 operator|.
-name|JwsCompactProducer
+name|JwsJwtCompactProducer
 import|;
 end_import
 
@@ -580,11 +580,11 @@ name|SecurityException
 argument_list|()
 throw|;
 block|}
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 name|p
 init|=
 operator|new
-name|JwsCompactConsumer
+name|JwsJwtCompactConsumer
 argument_list|(
 name|IOUtils
 operator|.
@@ -732,11 +732,11 @@ name|SecurityException
 argument_list|()
 throw|;
 block|}
-name|JwsCompactProducer
+name|JwsJwtCompactProducer
 name|p
 init|=
 operator|new
-name|JwsCompactProducer
+name|JwsJwtCompactProducer
 argument_list|(
 name|token
 argument_list|)
@@ -757,7 +757,7 @@ name|ByteArrayInputStream
 argument_list|(
 name|p
 operator|.
-name|getSignedEncodedToken
+name|getSignedEncodedJws
 argument_list|()
 operator|.
 name|getBytes
