@@ -514,7 +514,7 @@ if|if
 condition|(
 name|jmsConfig
 operator|.
-name|getClientID
+name|getDurableSubscriptionClientId
 argument_list|()
 operator|!=
 literal|null
@@ -526,7 +526,7 @@ name|setClientID
 argument_list|(
 name|jmsConfig
 operator|.
-name|getClientID
+name|getDurableSubscriptionClientId
 argument_list|()
 argument_list|)
 expr_stmt|;

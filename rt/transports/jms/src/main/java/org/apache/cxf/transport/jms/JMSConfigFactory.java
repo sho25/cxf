@@ -454,11 +454,11 @@ argument_list|)
 expr_stmt|;
 name|jmsConfig
 operator|.
-name|setClientID
+name|setDurableSubscriptionClientId
 argument_list|(
 name|endpoint
 operator|.
-name|getClientID
+name|getDurableSubscriptionClientId
 argument_list|()
 argument_list|)
 expr_stmt|;
