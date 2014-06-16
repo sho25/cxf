@@ -46,6 +46,13 @@ specifier|public
 interface|interface
 name|JwsSignatureProvider
 block|{
+name|void
+name|prepareHeaders
+parameter_list|(
+name|JwtHeaders
+name|headers
+parameter_list|)
+function_decl|;
 name|byte
 index|[]
 name|sign

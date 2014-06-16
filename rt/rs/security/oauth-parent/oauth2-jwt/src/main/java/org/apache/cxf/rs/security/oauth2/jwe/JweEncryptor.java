@@ -32,6 +32,9 @@ parameter_list|(
 name|byte
 index|[]
 name|jweContent
+parameter_list|,
+name|String
+name|contentType
 parameter_list|)
 function_decl|;
 name|String
@@ -39,6 +42,9 @@ name|encryptText
 parameter_list|(
 name|String
 name|jweContent
+parameter_list|,
+name|String
+name|contentType
 parameter_list|)
 function_decl|;
 block|}

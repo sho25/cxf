@@ -696,6 +696,8 @@ operator|.
 name|encryptText
 argument_list|(
 name|content
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
@@ -729,6 +731,8 @@ operator|.
 name|encryptText
 argument_list|(
 name|content
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
