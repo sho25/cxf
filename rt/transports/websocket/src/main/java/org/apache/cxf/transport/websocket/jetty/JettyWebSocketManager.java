@@ -31,6 +31,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|Executor
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|servlet
@@ -129,6 +141,20 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|workqueue
+operator|.
+name|OneShotAsyncExecutor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|eclipse
 operator|.
 name|jetty
@@ -176,6 +202,10 @@ specifier|private
 name|ServletContext
 name|servletContext
 decl_stmt|;
+specifier|private
+name|Executor
+name|executor
+decl_stmt|;
 specifier|public
 name|void
 name|init
@@ -203,6 +233,16 @@ name|dest
 argument_list|,
 literal|8192
 argument_list|)
+expr_stmt|;
+comment|//FIXME get the bus's executor for async service invocation to decouple
+comment|// the service invocation from websocket's onMessage call which is synchronously
+comment|// blocked.
+name|executor
+operator|=
+name|OneShotAsyncExecutor
+operator|.
+name|getInstance
+argument_list|()
 expr_stmt|;
 block|}
 name|void
@@ -306,7 +346,6 @@ return|return
 literal|false
 return|;
 block|}
-specifier|public
 name|void
 name|service
 parameter_list|(
@@ -347,6 +386,14 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+name|Executor
+name|getExecutor
+parameter_list|()
+block|{
+return|return
+name|executor
+return|;
 block|}
 block|}
 end_class

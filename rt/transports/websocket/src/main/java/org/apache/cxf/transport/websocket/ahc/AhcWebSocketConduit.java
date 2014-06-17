@@ -1261,7 +1261,13 @@ parameter_list|()
 throws|throws
 name|IOException
 block|{
-comment|// TODO Auto-generated method stub
+name|handleResponseOnWorkqueue
+argument_list|(
+literal|true
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Override
