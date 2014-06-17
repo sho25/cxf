@@ -257,13 +257,6 @@ block|{
 name|super
 argument_list|(
 name|SUPPORTED_ALGORITHMS
-argument_list|,
-name|Algorithm
-operator|.
-name|SHA256withRSA
-operator|.
-name|getJwtName
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|this

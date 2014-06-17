@@ -216,13 +216,6 @@ block|{
 name|super
 argument_list|(
 name|SUPPORTED_ALGORITHMS
-argument_list|,
-name|Algorithm
-operator|.
-name|HmacSHA256
-operator|.
-name|getJwtName
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|this
@@ -242,13 +235,6 @@ block|{
 name|super
 argument_list|(
 name|SUPPORTED_ALGORITHMS
-argument_list|,
-name|Algorithm
-operator|.
-name|HmacSHA256
-operator|.
-name|getJwtName
-argument_list|()
 argument_list|)
 expr_stmt|;
 try|try

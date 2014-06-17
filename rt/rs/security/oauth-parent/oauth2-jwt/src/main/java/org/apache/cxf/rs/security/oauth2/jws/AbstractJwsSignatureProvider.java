@@ -78,9 +78,6 @@ argument_list|<
 name|String
 argument_list|>
 name|supportedAlgorithms
-parameter_list|,
-name|String
-name|algo
 parameter_list|)
 block|{
 name|this
@@ -88,12 +85,6 @@ operator|.
 name|supportedAlgorithms
 operator|=
 name|supportedAlgorithms
-expr_stmt|;
-name|this
-operator|.
-name|defaultJwtAlgorithm
-operator|=
-name|algo
 expr_stmt|;
 block|}
 annotation|@
