@@ -646,7 +646,7 @@ name|int
 name|length
 parameter_list|)
 block|{
-comment|// need to invoke the service asynchronously if the websocket's onMessage is synchronously blocked
+comment|// invoke the service asynchronously as the jetty websocket's onMessage is synchronously blocked
 name|manager
 operator|.
 name|getExecutor

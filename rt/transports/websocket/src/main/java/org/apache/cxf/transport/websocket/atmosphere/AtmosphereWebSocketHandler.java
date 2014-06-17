@@ -559,6 +559,7 @@ argument_list|(
 literal|"invokeService(WebSocket, InputStream)"
 argument_list|)
 expr_stmt|;
+comment|// invoke the service directly as atmosphere's onMessage is not synchronously blocked
 name|HttpServletRequest
 name|request
 init|=
