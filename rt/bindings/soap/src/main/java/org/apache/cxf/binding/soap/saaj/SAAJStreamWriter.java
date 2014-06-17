@@ -1001,11 +1001,11 @@ operator|)
 operator|.
 name|addChildElement
 argument_list|(
-operator|new
-name|QName
-argument_list|(
 name|local
-argument_list|)
+argument_list|,
+literal|""
+argument_list|,
+literal|""
 argument_list|)
 expr_stmt|;
 block|}
@@ -1022,11 +1022,6 @@ operator|)
 operator|.
 name|addChildElement
 argument_list|(
-operator|new
-name|QName
-argument_list|(
-name|ns
-argument_list|,
 name|local
 argument_list|,
 name|pfx
@@ -1036,7 +1031,8 @@ condition|?
 literal|""
 else|:
 name|pfx
-argument_list|)
+argument_list|,
+name|ns
 argument_list|)
 expr_stmt|;
 block|}
