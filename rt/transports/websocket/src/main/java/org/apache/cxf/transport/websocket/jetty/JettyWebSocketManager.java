@@ -147,7 +147,7 @@ name|cxf
 operator|.
 name|workqueue
 operator|.
-name|OneShotAsyncExecutor
+name|WorkQueueManager
 import|;
 end_import
 
@@ -182,11 +182,10 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * This class is used to provide the common functionality used by  * the two jetty websocket destination classes: JettyWebSocketDestination and JettyWebSocketServletDestination.  */
 end_comment
 
 begin_class
-specifier|public
 class|class
 name|JettyWebSocketManager
 block|{
@@ -234,14 +233,23 @@ argument_list|,
 literal|8192
 argument_list|)
 expr_stmt|;
-comment|//FIXME get the bus's executor for async service invocation to decouple
-comment|// the service invocation from websocket's onMessage call which is synchronously
-comment|// blocked.
+comment|// the executor for decoupling the service invocation from websocket's onMessage call which is
+comment|// synchronously blocked
 name|executor
 operator|=
-name|OneShotAsyncExecutor
+name|dest
 operator|.
-name|getInstance
+name|getBus
+argument_list|()
+operator|.
+name|getExtension
+argument_list|(
+name|WorkQueueManager
+operator|.
+name|class
+argument_list|)
+operator|.
+name|getAutomaticWorkQueue
 argument_list|()
 expr_stmt|;
 block|}

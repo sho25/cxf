@@ -545,9 +545,11 @@ name|AtmosphereRequest
 argument_list|>
 name|invokeService
 parameter_list|(
+specifier|final
 name|WebSocket
 name|webSocket
 parameter_list|,
+specifier|final
 name|InputStream
 name|stream
 parameter_list|)
@@ -559,7 +561,25 @@ argument_list|(
 literal|"invokeService(WebSocket, InputStream)"
 argument_list|)
 expr_stmt|;
-comment|// invoke the service directly as atmosphere's onMessage is not synchronously blocked
+comment|// invoke the service directly as onMessage is synchronously blocked (in jetty)
+name|destination
+operator|.
+name|getExecutor
+argument_list|()
+operator|.
+name|execute
+argument_list|(
+operator|new
+name|Runnable
+argument_list|()
+block|{
+annotation|@
+name|Override
+specifier|public
+name|void
+name|run
+parameter_list|()
+block|{
 name|HttpServletRequest
 name|request
 init|=
@@ -694,6 +714,10 @@ name|e
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+block|}
+argument_list|)
+expr_stmt|;
 return|return
 literal|null
 return|;
