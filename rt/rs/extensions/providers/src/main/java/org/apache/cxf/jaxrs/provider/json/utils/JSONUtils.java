@@ -425,7 +425,7 @@ specifier|final
 class|class
 name|JSONUtils
 block|{
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|String
@@ -433,7 +433,7 @@ name|XSI_PREFIX
 init|=
 literal|"xsi"
 decl_stmt|;
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|String

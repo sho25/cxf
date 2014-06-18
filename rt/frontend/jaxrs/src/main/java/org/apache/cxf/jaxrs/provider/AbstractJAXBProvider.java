@@ -1238,6 +1238,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|nsMapper
+operator|!=
+literal|null
+operator|&&
 name|namespaceMapperPropertyName
 operator|!=
 literal|null
