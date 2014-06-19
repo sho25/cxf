@@ -2193,6 +2193,16 @@ condition|(
 name|postName
 operator|!=
 literal|null
+operator|&&
+name|postName
+operator|.
+name|indexOf
+argument_list|(
+literal|'.'
+argument_list|)
+operator|!=
+operator|-
+literal|1
 condition|)
 block|{
 specifier|final
