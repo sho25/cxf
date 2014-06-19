@@ -297,13 +297,13 @@ name|AbstractJPATypedQueryVisitorTest
 extends|extends
 name|Assert
 block|{
+specifier|protected
+name|EntityManager
+name|em
+decl_stmt|;
 specifier|private
 name|EntityManagerFactory
 name|emFactory
-decl_stmt|;
-specifier|private
-name|EntityManager
-name|em
 decl_stmt|;
 specifier|private
 name|Connection
