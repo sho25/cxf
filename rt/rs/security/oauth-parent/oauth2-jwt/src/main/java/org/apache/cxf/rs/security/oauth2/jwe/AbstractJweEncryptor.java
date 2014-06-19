@@ -642,6 +642,8 @@ name|JweCompactProducer
 argument_list|(
 name|theHeaders
 argument_list|,
+name|writer
+argument_list|,
 name|jweContentEncryptionKey
 argument_list|,
 name|theIv
