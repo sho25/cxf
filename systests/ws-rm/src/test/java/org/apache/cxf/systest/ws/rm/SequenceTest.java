@@ -2712,15 +2712,61 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// allow resends to kick in
-comment|// await multiple of 3 resends to avoid shutting down server
-comment|// in the course of retransmission - this is harmless but pollutes test output
+comment|// first duplicate received will trigger acknowledgement
 name|awaitMessages
 argument_list|(
-literal|3
+literal|1
 argument_list|,
-literal|0
+literal|1
 argument_list|,
-literal|7500
+literal|3000
+argument_list|)
+expr_stmt|;
+name|mf
+operator|.
+name|reset
+argument_list|(
+name|outRecorder
+operator|.
+name|getOutboundMessages
+argument_list|()
+argument_list|,
+name|inRecorder
+operator|.
+name|getInboundMessages
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|mf
+operator|.
+name|verifyMessages
+argument_list|(
+literal|1
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+name|mf
+operator|.
+name|verifyMessages
+argument_list|(
+literal|1
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
+name|mf
+operator|.
+name|verifyAcknowledgements
+argument_list|(
+operator|new
+name|boolean
+index|[]
+block|{
+literal|true
+block|}
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -4577,7 +4623,7 @@ argument_list|)
 expr_stmt|;
 name|fail
 argument_list|(
-literal|"Expected fault."
+literal|"Expected timeout."
 argument_list|)
 expr_stmt|;
 block|}
@@ -4587,57 +4633,41 @@ name|WebServiceException
 name|ex
 parameter_list|)
 block|{
-name|SoapFault
-name|sf
+name|assertTrue
+argument_list|(
+literal|"Unexpected exception cause"
+argument_list|,
+name|ex
+operator|.
+name|getCause
+argument_list|()
+operator|instanceof
+name|IOException
+argument_list|)
+expr_stmt|;
+name|IOException
+name|ie
 init|=
 operator|(
-name|SoapFault
+name|IOException
 operator|)
 name|ex
 operator|.
 name|getCause
 argument_list|()
 decl_stmt|;
-name|assertEquals
-argument_list|(
-literal|"Unexpected fault code."
-argument_list|,
-name|Soap11
-operator|.
-name|getInstance
-argument_list|()
-operator|.
-name|getReceiver
-argument_list|()
-argument_list|,
-name|sf
-operator|.
-name|getFaultCode
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|assertNull
-argument_list|(
-literal|"Unexpected sub code."
-argument_list|,
-name|sf
-operator|.
-name|getSubCode
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Unexpected reason."
+literal|"Unexpected IOException message"
 argument_list|,
-name|sf
+name|ie
 operator|.
-name|getReason
+name|getMessage
 argument_list|()
 operator|.
-name|endsWith
+name|startsWith
 argument_list|(
-literal|"has already been delivered."
+literal|"Timed out"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4645,7 +4675,7 @@ block|}
 comment|// wait for resend to occur
 name|awaitMessages
 argument_list|(
-literal|3
+literal|4
 argument_list|,
 literal|3
 argument_list|,
@@ -4680,6 +4710,7 @@ decl_stmt|;
 comment|// Expected outbound:
 comment|// CreateSequence
 comment|// + two requests
+comment|// + acknowledgement
 name|String
 index|[]
 name|expectedActions
@@ -4687,7 +4718,7 @@ init|=
 operator|new
 name|String
 index|[
-literal|3
+literal|4
 index|]
 decl_stmt|;
 name|expectedActions
@@ -4699,31 +4730,29 @@ name|RM10Constants
 operator|.
 name|CREATE_SEQUENCE_ACTION
 expr_stmt|;
-for|for
-control|(
-name|int
-name|i
-init|=
-literal|1
-init|;
-name|i
-operator|<
-name|expectedActions
-operator|.
-name|length
-condition|;
-name|i
-operator|++
-control|)
-block|{
 name|expectedActions
 index|[
-name|i
+literal|1
 index|]
 operator|=
 name|GREETME_ACTION
 expr_stmt|;
-block|}
+name|expectedActions
+index|[
+literal|2
+index|]
+operator|=
+name|GREETME_ACTION
+expr_stmt|;
+name|expectedActions
+index|[
+literal|3
+index|]
+operator|=
+name|RM10Constants
+operator|.
+name|SEQUENCE_ACKNOWLEDGMENT_ACTION
+expr_stmt|;
 name|mf
 operator|.
 name|verifyActions
@@ -4746,6 +4775,8 @@ block|,
 literal|"1"
 block|,
 literal|"1"
+block|,
+literal|null
 block|}
 argument_list|,
 literal|true
@@ -4758,7 +4789,9 @@ argument_list|(
 operator|new
 name|boolean
 index|[
-literal|3
+name|expectedActions
+operator|.
+name|length
 index|]
 argument_list|,
 literal|true
@@ -4770,9 +4803,16 @@ name|verifyAcknowledgements
 argument_list|(
 operator|new
 name|boolean
-index|[
-literal|3
-index|]
+index|[]
+block|{
+literal|false
+block|,
+literal|false
+block|,
+literal|false
+block|,
+literal|true
+block|}
 argument_list|,
 literal|true
 argument_list|)
@@ -4780,7 +4820,7 @@ expr_stmt|;
 comment|// Expected inbound:
 comment|// createSequenceResponse
 comment|// + 1 response without acknowledgement
-comment|// + 1 fault
+comment|// + 1 acknowledgement/last message
 name|mf
 operator|.
 name|verifyMessages
@@ -4802,7 +4842,9 @@ name|CREATE_SEQUENCE_RESPONSE_ACTION
 block|,
 name|GREETME_RESPONSE_ACTION
 block|,
-name|RM10_GENERIC_FAULT_ACTION
+name|RM10Constants
+operator|.
+name|SEQUENCE_ACKNOWLEDGMENT_ACTION
 block|}
 expr_stmt|;
 name|mf
@@ -4838,9 +4880,14 @@ name|verifyAcknowledgements
 argument_list|(
 operator|new
 name|boolean
-index|[
-literal|3
-index|]
+index|[]
+block|{
+literal|false
+block|,
+literal|false
+block|,
+literal|true
+block|}
 argument_list|,
 literal|false
 argument_list|)
