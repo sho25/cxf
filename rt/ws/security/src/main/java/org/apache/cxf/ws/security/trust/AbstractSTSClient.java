@@ -3148,6 +3148,15 @@ name|trim
 argument_list|()
 expr_stmt|;
 block|}
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"EPR address: "
+operator|+
+name|location
+argument_list|)
+expr_stmt|;
 specifier|final
 name|QName
 name|sName
@@ -3197,6 +3206,19 @@ operator|=
 name|epName
 expr_stmt|;
 block|}
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"EPR endpoint: "
+operator|+
+name|serviceName
+operator|+
+literal|" "
+operator|+
+name|endpointName
+argument_list|)
+expr_stmt|;
 block|}
 specifier|final
 name|String
@@ -3231,6 +3253,15 @@ argument_list|,
 name|useEPRWSAAddrAsMEXLocation
 argument_list|)
 decl_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"WS-MEX location: "
+operator|+
+name|mexLoc
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|mexLoc
@@ -3586,6 +3617,13 @@ operator|.
 name|getName
 argument_list|()
 expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Matched endpoint to location"
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 block|}
@@ -3634,6 +3672,13 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Anonymous location so taking first endpoint"
+argument_list|)
+expr_stmt|;
 name|serviceName
 operator|=
 name|services
