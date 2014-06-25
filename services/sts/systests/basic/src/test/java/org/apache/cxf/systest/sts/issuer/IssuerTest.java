@@ -205,6 +205,14 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|// These tests require port numbers in the WSDLs and so we can't easily do variable substitution
+specifier|private
+specifier|static
+name|boolean
+name|portFree
+init|=
+literal|true
+decl_stmt|;
 annotation|@
 name|BeforeClass
 specifier|public
@@ -270,7 +278,11 @@ name|IOException
 name|ex
 parameter_list|)
 block|{
-comment|// standalone is set to false + the test won't run
+name|portFree
+operator|=
+literal|false
+expr_stmt|;
+comment|// portFree is set to false + the test won't run
 block|}
 block|}
 annotation|@
@@ -312,6 +324,14 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+operator|!
+name|portFree
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -457,6 +477,14 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+operator|!
+name|portFree
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -602,6 +630,14 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+operator|!
+name|portFree
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
