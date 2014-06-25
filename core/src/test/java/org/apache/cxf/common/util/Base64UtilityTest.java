@@ -145,7 +145,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testEncodeMulltipleChunks
+name|testEncodeMultipleChunks
 parameter_list|()
 throws|throws
 name|Exception
