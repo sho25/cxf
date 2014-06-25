@@ -3387,7 +3387,7 @@ init|;
 name|offset
 operator|+
 name|blockSize
-operator|<=
+operator|<
 name|bytes
 operator|.
 name|length
