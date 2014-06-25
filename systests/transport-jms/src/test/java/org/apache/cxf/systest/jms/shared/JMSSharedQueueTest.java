@@ -711,7 +711,7 @@ name|void
 name|executeAsync
 parameter_list|(
 name|ClientRunnable
-modifier|...
+index|[]
 name|clients
 parameter_list|)
 throws|throws
@@ -979,9 +979,14 @@ argument_list|)
 decl_stmt|;
 name|executeAsync
 argument_list|(
+operator|new
+name|ClientRunnable
+index|[]
+block|{
 name|engClient
-argument_list|,
+block|,
 name|salesClient
+block|}
 argument_list|)
 expr_stmt|;
 block|}
@@ -1088,19 +1093,24 @@ name|executeAsync
 argument_list|(
 operator|new
 name|ClientRunnable
+index|[]
+block|{
+operator|new
+name|ClientRunnable
 argument_list|(
 name|portEng
 argument_list|)
-argument_list|,
+block|,
 operator|new
 name|ClientRunnable
 argument_list|(
 name|portSales
 argument_list|)
+block|}
 argument_list|)
 expr_stmt|;
 block|}
-comment|/* TO DO:      * This tests shows a missing QoS. When CXF clients share a named (persistent) reply queue      *  with an application provided correlationID there will be a guaranteed response      * message loss.       *       * A large number of threads is used to ensure message loss and avoid a false       * positive assertion      */
+comment|/* TO DO:      * This tests shows a missing QoS. When CXF clients share a named (persistent) reply queue      *  with an application provided correlationID there will be a guaranteed response      * message loss.      *      * A large number of threads is used to ensure message loss and avoid a false      * positive assertion      */
 annotation|@
 name|Test
 specifier|public
@@ -1216,7 +1226,7 @@ name|clients
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * This tests a use case where there is a shared request and reply queues between      * two servers (Eng and Sales). However each server has a design time provided selector      * which allows them to share the same queue and do not consume the other's      * messages.       *       * The clients to these two servers use the same request and reply queues.      * An Eng client uses a design time selector prefix to form request message       * correlationID and to form a reply consumer that filters only reply      * messages originated from the Eng server. To differentiate between      * one Eng client instance from another this suffix is supplemented by      * a runtime value of ConduitId which has 1-1 relation to a client instance      * This guarantees that an Eng client instance will only consume its own reply       * messages.       *       * In case of a single client instance being shared among multiple threads      * the third portion of the request message correlationID,       * an atomic rolling message counter, ensures that each message gets a unique ID      *        * So the model is:      *       * Many concurrent Sales clients to a single request and reply queues (Q1, Q2)       * to a single Sales server      * Many concurrent Eng clients to a single request and reply queues (Q1, Q2)       * to a single Eng server      */
+comment|/*      * This tests a use case where there is a shared request and reply queues between      * two servers (Eng and Sales). However each server has a design time provided selector      * which allows them to share the same queue and do not consume the other's      * messages.      *      * The clients to these two servers use the same request and reply queues.      * An Eng client uses a design time selector prefix to form request message      * correlationID and to form a reply consumer that filters only reply      * messages originated from the Eng server. To differentiate between      * one Eng client instance from another this suffix is supplemented by      * a runtime value of ConduitId which has 1-1 relation to a client instance      * This guarantees that an Eng client instance will only consume its own reply      * messages.      *      * In case of a single client instance being shared among multiple threads      * the third portion of the request message correlationID,      * an atomic rolling message counter, ensures that each message gets a unique ID      *      * So the model is:      *      * Many concurrent Sales clients to a single request and reply queues (Q1, Q2)      * to a single Sales server      * Many concurrent Eng clients to a single request and reply queues (Q1, Q2)      * to a single Eng server      */
 annotation|@
 name|Test
 specifier|public
