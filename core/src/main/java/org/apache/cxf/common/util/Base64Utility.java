@@ -957,11 +957,7 @@ comment|// slot is needed.
 comment|//
 if|if
 condition|(
-operator|(
 name|l
-operator|-
-name|o
-operator|)
 operator|%
 literal|3
 operator|==
@@ -1012,8 +1008,6 @@ name|int
 name|rest
 init|=
 name|l
-operator|-
-name|o
 decl_stmt|;
 while|while
 condition|(
