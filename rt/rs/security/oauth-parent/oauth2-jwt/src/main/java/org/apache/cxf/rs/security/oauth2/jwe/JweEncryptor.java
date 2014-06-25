@@ -21,6 +21,16 @@ name|jwe
 package|;
 end_package
 
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|OutputStream
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -37,9 +47,12 @@ name|String
 name|contentType
 parameter_list|)
 function_decl|;
-name|JweEncryptorWorkerState
-name|newWorkerState
+name|JweOutputStream
+name|createJweStream
 parameter_list|(
+name|OutputStream
+name|os
+parameter_list|,
 name|String
 name|contentType
 parameter_list|)
