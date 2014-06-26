@@ -109,9 +109,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|concurrent
-operator|.
-name|ConcurrentHashMap
+name|WeakHashMap
 import|;
 end_import
 
@@ -1071,8 +1069,12 @@ argument_list|>
 argument_list|>
 name|map
 init|=
+name|Collections
+operator|.
+name|synchronizedMap
+argument_list|(
 operator|new
-name|ConcurrentHashMap
+name|WeakHashMap
 argument_list|<
 name|Class
 argument_list|<
@@ -1091,6 +1093,7 @@ argument_list|>
 argument_list|>
 argument_list|(
 literal|2
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|bus
@@ -1242,8 +1245,12 @@ argument_list|>
 argument_list|>
 name|map
 init|=
+name|Collections
+operator|.
+name|synchronizedMap
+argument_list|(
 operator|new
-name|ConcurrentHashMap
+name|WeakHashMap
 argument_list|<
 name|Class
 argument_list|<
@@ -1265,6 +1272,7 @@ argument_list|>
 argument_list|>
 argument_list|(
 literal|2
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|bus
