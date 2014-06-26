@@ -834,7 +834,7 @@ name|boolean
 name|isVerbose
 parameter_list|()
 block|{
-name|Object
+name|String
 name|verboseProperty
 init|=
 name|get
@@ -842,6 +842,10 @@ argument_list|(
 name|ToolConstants
 operator|.
 name|CFG_VERBOSE
+argument_list|,
+name|String
+operator|.
+name|class
 argument_list|)
 decl_stmt|;
 if|if
@@ -863,6 +867,13 @@ operator|.
 name|CFG_VERBOSE
 operator|.
 name|equals
+argument_list|(
+name|verboseProperty
+argument_list|)
+operator|||
+name|Boolean
+operator|.
+name|parseBoolean
 argument_list|(
 name|verboseProperty
 argument_list|)
