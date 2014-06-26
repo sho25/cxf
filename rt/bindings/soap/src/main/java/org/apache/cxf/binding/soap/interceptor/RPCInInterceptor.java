@@ -1096,16 +1096,23 @@ name|next
 argument_list|()
 expr_stmt|;
 block|}
+comment|// only check the localpart as explained above
 if|if
 condition|(
 operator|!
 name|qn
+operator|.
+name|getLocalPart
+argument_list|()
 operator|.
 name|equals
 argument_list|(
 name|part
 operator|.
 name|getConcreteName
+argument_list|()
+operator|.
+name|getLocalPart
 argument_list|()
 argument_list|)
 condition|)
