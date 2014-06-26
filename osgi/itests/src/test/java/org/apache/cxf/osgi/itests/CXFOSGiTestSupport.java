@@ -533,26 +533,6 @@ name|karafDistributionConfiguration
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
-name|karaf
-operator|.
-name|options
-operator|.
-name|KarafDistributionOption
-operator|.
-name|keepRuntimeFolder
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -748,9 +728,6 @@ argument_list|(
 literal|"target/paxexam/"
 argument_list|)
 argument_list|)
-argument_list|,
-name|keepRuntimeFolder
-argument_list|()
 argument_list|,
 name|features
 argument_list|(
