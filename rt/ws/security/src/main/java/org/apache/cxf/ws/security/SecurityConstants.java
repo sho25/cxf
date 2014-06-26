@@ -584,6 +584,15 @@ name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 init|=
 literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
 decl_stmt|;
+comment|/**      * Whether to prefer to use WS-MEX over a STSClient's location/wsdlLocation properties      * when making an STS RequestSecurityToken call. This can be set to true for the scenario      * of making a WS-MEX call to an initial STS, and using the returned token to make another      * call to an STS (which is configured using the STSClient configuration). Default is       * "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
+init|=
+literal|"ws-security.sts.prefer-wsmex"
+decl_stmt|;
 comment|/**      * Switch STS client to send Soap 1.2 messages      */
 specifier|public
 specifier|static
@@ -825,6 +834,8 @@ block|,
 name|CACHE_IDENTIFIER
 block|,
 name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
+block|,
+name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
 block|}
 argument_list|)
 argument_list|)

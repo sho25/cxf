@@ -363,7 +363,7 @@ name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
-comment|//  In this test, a CXF client checks to see that the location defined on its STSClient is different
+comment|// In this test, a CXF client checks to see that the location defined on its STSClient is different
 comment|// from that configured in the Issuer of the IssuedToken policy supplied in the WSDL of the
 comment|// service provider. It obtains a SAML Token from the configured STS first, and then sends it in
 comment|// the security header to the second STS. The returned token is then sent to the service provider.
@@ -529,12 +529,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testCrossDomainMEX
