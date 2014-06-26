@@ -3557,6 +3557,19 @@ name|getMethods
 argument_list|()
 control|)
 block|{
+if|if
+condition|(
+name|m
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|startsWith
+argument_list|(
+literal|"set"
+argument_list|)
+condition|)
+block|{
 name|Annotation
 name|annotation
 init|=
@@ -3663,6 +3676,7 @@ name|t
 parameter_list|)
 block|{
 comment|// ignore
+block|}
 block|}
 block|}
 block|}
