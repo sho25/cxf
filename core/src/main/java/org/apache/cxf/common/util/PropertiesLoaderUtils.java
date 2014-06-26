@@ -176,6 +176,24 @@ operator|new
 name|Properties
 argument_list|()
 decl_stmt|;
+comment|// Set default class loader if neccessary
+if|if
+condition|(
+name|classLoader
+operator|==
+literal|null
+condition|)
+block|{
+name|classLoader
+operator|=
+name|PropertiesLoaderUtils
+operator|.
+name|class
+operator|.
+name|getClassLoader
+argument_list|()
+expr_stmt|;
+block|}
 name|Enumeration
 argument_list|<
 name|URL
