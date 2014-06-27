@@ -215,6 +215,23 @@ name|name
 argument_list|)
 return|;
 block|}
+specifier|public
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Class
+argument_list|<
+name|?
+argument_list|>
+argument_list|>
+name|getFieldTypes
+parameter_list|()
+block|{
+return|return
+name|fieldTypes
+return|;
+block|}
 block|}
 end_class
 
