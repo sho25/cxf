@@ -799,10 +799,7 @@ condition|(
 name|cache
 operator|instanceof
 name|RefCountCache
-condition|)
-block|{
-if|if
-condition|(
+operator|&&
 operator|(
 operator|(
 name|RefCountCache
@@ -826,7 +823,6 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}
