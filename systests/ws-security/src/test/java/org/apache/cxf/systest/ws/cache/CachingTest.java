@@ -637,6 +637,8 @@ expr_stmt|;
 comment|// We expect two tokens as the identifier + SHA-1 are cached
 name|assertEquals
 argument_list|(
+literal|2
+argument_list|,
 name|tokenStore
 operator|.
 name|getTokenIdentifiers
@@ -644,13 +646,12 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
-argument_list|,
-literal|2
 argument_list|)
 expr_stmt|;
 comment|// Second invocation
-name|port
-operator|=
+name|DoubleItPortType
+name|port2
+init|=
 name|service
 operator|.
 name|getPort
@@ -661,10 +662,10 @@ name|DoubleItPortType
 operator|.
 name|class
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|port
+name|port2
 argument_list|,
 name|test
 operator|.
@@ -684,11 +685,11 @@ name|SecurityTestUtil
 operator|.
 name|enableStreaming
 argument_list|(
-name|port
+name|port2
 argument_list|)
 expr_stmt|;
 block|}
-name|port
+name|port2
 operator|.
 name|doubleIt
 argument_list|(
@@ -701,7 +702,7 @@ name|ClientProxy
 operator|.
 name|getClient
 argument_list|(
-name|port
+name|port2
 argument_list|)
 expr_stmt|;
 name|tokenStore
@@ -732,6 +733,8 @@ expr_stmt|;
 comment|// There should now be 4 tokens as both proxies share the same TokenStore
 name|assertEquals
 argument_list|(
+literal|4
+argument_list|,
 name|tokenStore
 operator|.
 name|getTokenIdentifiers
@@ -739,8 +742,6 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
-argument_list|,
-literal|4
 argument_list|)
 expr_stmt|;
 operator|(
@@ -756,6 +757,43 @@ operator|)
 operator|.
 name|close
 argument_list|()
+expr_stmt|;
+comment|//port2 is still holding onto the cache, thus, this should still be 4
+name|assertEquals
+argument_list|(
+literal|4
+argument_list|,
+name|tokenStore
+operator|.
+name|getTokenIdentifiers
+argument_list|()
+operator|.
+name|size
+argument_list|()
+argument_list|)
+expr_stmt|;
+operator|(
+operator|(
+name|java
+operator|.
+name|io
+operator|.
+name|Closeable
+operator|)
+name|port2
+operator|)
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+comment|//port2 is now closed, this should be null
+name|assertNull
+argument_list|(
+name|tokenStore
+operator|.
+name|getTokenIdentifiers
+argument_list|()
+argument_list|)
 expr_stmt|;
 name|bus
 operator|.
@@ -984,6 +1022,8 @@ expr_stmt|;
 comment|// We expect two tokens as the identifier + SHA-1 are cached
 name|assertEquals
 argument_list|(
+literal|2
+argument_list|,
 name|tokenStore
 operator|.
 name|getTokenIdentifiers
@@ -991,13 +1031,12 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
-argument_list|,
-literal|2
 argument_list|)
 expr_stmt|;
 comment|// Second invocation
-name|port
-operator|=
+name|DoubleItPortType
+name|port2
+init|=
 name|service
 operator|.
 name|getPort
@@ -1008,10 +1047,10 @@ name|DoubleItPortType
 operator|.
 name|class
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|updateAddressPort
 argument_list|(
-name|port
+name|port2
 argument_list|,
 name|test
 operator|.
@@ -1023,7 +1062,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|port
+name|port2
 operator|)
 operator|.
 name|getRequestContext
@@ -1042,7 +1081,7 @@ operator|(
 operator|(
 name|BindingProvider
 operator|)
-name|port
+name|port2
 operator|)
 operator|.
 name|getRequestContext
@@ -1069,11 +1108,11 @@ name|SecurityTestUtil
 operator|.
 name|enableStreaming
 argument_list|(
-name|port
+name|port2
 argument_list|)
 expr_stmt|;
 block|}
-name|port
+name|port2
 operator|.
 name|doubleIt
 argument_list|(
@@ -1086,7 +1125,7 @@ name|ClientProxy
 operator|.
 name|getClient
 argument_list|(
-name|port
+name|port2
 argument_list|)
 expr_stmt|;
 name|tokenStore
@@ -1117,6 +1156,8 @@ expr_stmt|;
 comment|// We expect two tokens as the identifier + SHA-1 are cached
 name|assertEquals
 argument_list|(
+literal|2
+argument_list|,
 name|tokenStore
 operator|.
 name|getTokenIdentifiers
@@ -1124,8 +1165,6 @@ argument_list|()
 operator|.
 name|size
 argument_list|()
-argument_list|,
-literal|2
 argument_list|)
 expr_stmt|;
 operator|(
@@ -1137,6 +1176,20 @@ operator|.
 name|Closeable
 operator|)
 name|port
+operator|)
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+operator|(
+operator|(
+name|java
+operator|.
+name|io
+operator|.
+name|Closeable
+operator|)
+name|port2
 operator|)
 operator|.
 name|close
