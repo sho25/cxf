@@ -1621,6 +1621,17 @@ condition|(
 name|p
 operator|!=
 literal|null
+operator|&&
+name|p
+operator|.
+name|type
+argument_list|()
+operator|!=
+name|Proxy
+operator|.
+name|Type
+operator|.
+name|DIRECT
 condition|)
 block|{
 name|InetSocketAddress
