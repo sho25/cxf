@@ -718,6 +718,14 @@ name|getSecureSocketProtocol
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//recalc the hashcode since somet of the above MAY have changed the tlsClientParameters
+name|lastTlsHash
+operator|=
+name|tlsClientParameters
+operator|.
+name|hashCode
+argument_list|()
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -1149,6 +1157,16 @@ name|idx
 index|]
 operator|instanceof
 name|X509KeyManager
+operator|&&
+operator|!
+operator|(
+name|keyManagers
+index|[
+name|idx
+index|]
+operator|instanceof
+name|AliasedX509ExtendedKeyManager
+operator|)
 condition|)
 block|{
 try|try
