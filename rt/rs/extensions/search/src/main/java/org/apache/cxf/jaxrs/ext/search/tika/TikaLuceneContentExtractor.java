@@ -917,7 +917,7 @@ name|date
 init|=
 name|SearchUtils
 operator|.
-name|timestampFromString
+name|dateFromStringWithDefaultFormats
 argument_list|(
 name|value
 argument_list|)
