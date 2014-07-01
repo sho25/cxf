@@ -867,6 +867,10 @@ comment|//NOPMD
 name|Message
 name|message
 decl_stmt|;
+specifier|final
+name|int
+name|lim
+decl_stmt|;
 specifier|public
 name|LogWriter
 parameter_list|(
@@ -914,6 +918,19 @@ name|StringWriter
 argument_list|()
 expr_stmt|;
 block|}
+name|lim
+operator|=
+name|limit
+operator|==
+operator|-
+literal|1
+condition|?
+name|Integer
+operator|.
+name|MAX_VALUE
+else|:
+name|limit
+expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -940,7 +957,7 @@ literal|null
 operator|&&
 name|count
 operator|<
-name|limit
+name|lim
 condition|)
 block|{
 name|out2
@@ -991,7 +1008,7 @@ literal|null
 operator|&&
 name|count
 operator|<
-name|limit
+name|lim
 condition|)
 block|{
 name|out2
@@ -1046,7 +1063,7 @@ literal|null
 operator|&&
 name|count
 operator|<
-name|limit
+name|lim
 condition|)
 block|{
 name|out2
@@ -1085,7 +1102,7 @@ if|if
 condition|(
 name|count
 operator|>=
-name|limit
+name|lim
 condition|)
 block|{
 name|buffer
@@ -1097,7 +1114,7 @@ name|append
 argument_list|(
 literal|"(message truncated to "
 operator|+
-name|limit
+name|lim
 operator|+
 literal|" bytes)\n"
 argument_list|)
@@ -1225,6 +1242,11 @@ name|Logger
 name|logger
 decl_stmt|;
 comment|//NOPMD
+specifier|private
+specifier|final
+name|int
+name|lim
+decl_stmt|;
 specifier|public
 name|LoggingCallback
 parameter_list|(
@@ -1258,6 +1280,21 @@ operator|.
 name|origStream
 operator|=
 name|os
+expr_stmt|;
+name|this
+operator|.
+name|lim
+operator|=
+name|limit
+operator|==
+operator|-
+literal|1
+condition|?
+name|Integer
+operator|.
+name|MAX_VALUE
+else|:
+name|limit
 expr_stmt|;
 block|}
 specifier|public
@@ -1356,7 +1393,7 @@ operator|.
 name|size
 argument_list|()
 operator|>=
-name|limit
+name|lim
 condition|)
 block|{
 name|buffer
@@ -1368,7 +1405,7 @@ name|append
 argument_list|(
 literal|"(message truncated to "
 operator|+
-name|limit
+name|lim
 operator|+
 literal|" bytes)\n"
 argument_list|)
@@ -1414,7 +1451,7 @@ operator|.
 name|size
 argument_list|()
 operator|>=
-name|limit
+name|lim
 condition|)
 block|{
 name|buffer
@@ -1426,7 +1463,7 @@ name|append
 argument_list|(
 literal|"(message truncated to "
 operator|+
-name|limit
+name|lim
 operator|+
 literal|" bytes)\n"
 argument_list|)
