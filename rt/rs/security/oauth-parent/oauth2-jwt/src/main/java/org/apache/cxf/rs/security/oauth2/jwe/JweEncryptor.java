@@ -47,7 +47,7 @@ name|String
 name|contentType
 parameter_list|)
 function_decl|;
-name|JweOutputStream
+name|OutputStream
 name|createJweStream
 parameter_list|(
 name|OutputStream
