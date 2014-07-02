@@ -648,7 +648,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|1
+literal|0
 argument_list|,
 name|getHits
 argument_list|(

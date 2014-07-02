@@ -1365,7 +1365,7 @@ name|date
 init|=
 name|SearchUtils
 operator|.
-name|timestampFromString
+name|dateFromStringWithContextProperties
 argument_list|(
 name|value
 operator|.

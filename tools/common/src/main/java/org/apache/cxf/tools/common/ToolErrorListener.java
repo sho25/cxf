@@ -185,7 +185,7 @@ name|line
 argument_list|,
 name|column
 argument_list|,
-literal|null
+name|message
 argument_list|,
 literal|null
 argument_list|)
@@ -256,7 +256,7 @@ name|line
 argument_list|,
 name|column
 argument_list|,
-literal|null
+name|message
 argument_list|,
 literal|null
 argument_list|)
