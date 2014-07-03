@@ -412,6 +412,11 @@ condition|)
 block|{
 return|return;
 block|}
+name|deleted
+argument_list|(
+name|pid
+argument_list|)
+expr_stmt|;
 name|String
 name|url
 init|=
