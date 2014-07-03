@@ -574,7 +574,7 @@ name|content
 init|=
 name|extractor
 operator|.
-name|extractAll
+name|extract
 argument_list|(
 name|in
 argument_list|,
