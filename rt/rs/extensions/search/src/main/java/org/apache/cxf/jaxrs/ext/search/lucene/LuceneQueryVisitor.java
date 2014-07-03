@@ -344,7 +344,6 @@ argument_list|,
 name|Query
 argument_list|>
 block|{
-comment|//private Analyzer analyzer;
 specifier|private
 name|String
 name|contentsFieldName
@@ -661,9 +660,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|//public void setAnalyzer(Analyzer a) {
-comment|//    this.analyzer = a;
-comment|//}
 specifier|public
 name|Query
 name|getQuery
@@ -1229,8 +1225,6 @@ name|cls
 argument_list|)
 condition|)
 block|{
-comment|// If needed, long and double can be supported too
-comment|// Also, perhaps Strings may optionally be compared with string comparators
 name|Query
 name|query
 init|=
@@ -1357,8 +1351,6 @@ name|cls
 argument_list|)
 condition|)
 block|{
-comment|// This code has not been tested - most likely needs to be fixed
-comment|// Resolution should be configurable ?
 specifier|final
 name|Date
 name|date
