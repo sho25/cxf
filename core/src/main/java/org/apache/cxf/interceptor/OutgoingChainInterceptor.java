@@ -363,6 +363,14 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|CACHE_INPUT_PROPERTY
+init|=
+literal|"cxf.io.cacheinput"
+decl_stmt|;
+specifier|private
 name|PhaseChainCache
 name|chainCache
 init|=
@@ -413,17 +421,33 @@ decl_stmt|;
 comment|//if we get this far, we're going to be outputting some valid content, but we COULD
 comment|//also be "echoing" some of the content from the input.   Thus, we need to
 comment|//mark it as requiring the input to be cached.
+if|if
+condition|(
+name|message
+operator|.
+name|getExchange
+argument_list|()
+operator|.
+name|get
+argument_list|(
+name|CACHE_INPUT_PROPERTY
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
 name|message
 operator|.
 name|put
 argument_list|(
-literal|"cxf.io.cacheinput"
+name|CACHE_INPUT_PROPERTY
 argument_list|,
 name|Boolean
 operator|.
 name|TRUE
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 literal|null
