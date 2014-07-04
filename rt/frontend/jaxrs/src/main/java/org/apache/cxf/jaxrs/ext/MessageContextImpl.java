@@ -640,7 +640,9 @@ name|put
 argument_list|(
 literal|"cxf.io.cacheinput"
 argument_list|,
-literal|null
+name|Boolean
+operator|.
+name|FALSE
 argument_list|)
 expr_stmt|;
 throw|throw
