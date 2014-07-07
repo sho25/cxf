@@ -119,7 +119,7 @@ name|jaxrs
 operator|.
 name|provider
 operator|.
-name|ProviderFactory
+name|ServerProviderFactory
 import|;
 end_import
 
@@ -313,13 +313,16 @@ argument_list|)
 expr_stmt|;
 operator|(
 operator|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|)
-name|bus
+name|server
 operator|.
-name|getProperty
+name|getEndpoint
+argument_list|()
+operator|.
+name|get
 argument_list|(
-name|ProviderFactory
+name|ServerProviderFactory
 operator|.
 name|class
 operator|.
