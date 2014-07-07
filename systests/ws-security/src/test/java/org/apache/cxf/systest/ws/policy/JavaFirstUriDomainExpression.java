@@ -138,7 +138,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|UriDomainExpression
+name|JavaFirstUriDomainExpression
 implements|implements
 name|DomainExpression
 block|{
@@ -148,7 +148,7 @@ name|String
 name|url
 decl_stmt|;
 specifier|public
-name|UriDomainExpression
+name|JavaFirstUriDomainExpression
 parameter_list|(
 specifier|final
 name|String

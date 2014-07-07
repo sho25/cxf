@@ -116,7 +116,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|URIDomainExpressionBuilder
+name|JavaFirstURIDomainExpressionBuilder
 implements|implements
 name|DomainExpressionBuilder
 block|{
@@ -172,7 +172,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|UriDomainExpression
+name|JavaFirstUriDomainExpression
 argument_list|(
 name|paramElement
 operator|.
