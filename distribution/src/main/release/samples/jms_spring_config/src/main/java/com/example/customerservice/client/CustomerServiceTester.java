@@ -27,9 +27,9 @@ end_import
 
 begin_import
 import|import
-name|junit
+name|org
 operator|.
-name|framework
+name|junit
 operator|.
 name|Assert
 import|;
@@ -70,6 +70,10 @@ operator|.
 name|NoSuchCustomerException
 import|;
 end_import
+
+begin_comment
+comment|/**  * Calls the CustomerService using the proxy created by CXF and does some assertions to make   * sure the calls work.  *   * This also shows how typical user code on the client side could look like. Make sure to keep your business code  * free from spring and cxf dependencies as far as possible.  */
+end_comment
 
 begin_class
 specifier|public

@@ -29,16 +29,15 @@ name|ClassPathXmlApplicationContext
 import|;
 end_import
 
+begin_comment
+comment|/**  * Starter that initializes the spring context, fetches our test client and then shuts down spring   */
+end_comment
+
 begin_class
 specifier|public
-specifier|final
 class|class
 name|CustomerServiceSpringClient
 block|{
-specifier|private
-name|CustomerServiceSpringClient
-parameter_list|()
-block|{     }
 specifier|public
 specifier|static
 name|void
@@ -51,7 +50,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|// Initialize the spring context and fetch our test client
 name|ClassPathXmlApplicationContext
 name|context
 init|=
@@ -86,15 +84,9 @@ argument_list|()
 expr_stmt|;
 name|context
 operator|.
-name|stop
+name|close
 argument_list|()
 expr_stmt|;
-name|context
-operator|.
-name|destroy
-argument_list|()
-expr_stmt|;
-comment|//System.exit(0);
 block|}
 block|}
 end_class

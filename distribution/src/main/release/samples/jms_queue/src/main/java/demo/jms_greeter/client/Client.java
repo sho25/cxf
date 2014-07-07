@@ -273,6 +273,9 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|// If you prefer to define the ConnectionFactory directly instead of using a JNDI look.
+comment|// You can inject is like this:
+comment|//service.getPort(PORT_NAME, JMSGreeterPortType.class, new ConnectionFactoryFeature(cf));
 name|System
 operator|.
 name|out

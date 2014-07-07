@@ -29,15 +29,15 @@ name|ClassPathXmlApplicationContext
 import|;
 end_import
 
+begin_comment
+comment|/**  * Starter that initializes the spring context and so also creates the service endpoint.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
 name|CustomerServiceSpringServer
 block|{
-specifier|protected
-name|CustomerServiceSpringServer
-parameter_list|()
-block|{     }
 specifier|public
 specifier|static
 name|void
@@ -61,6 +61,15 @@ argument_list|)
 decl_stmt|;
 name|System
 operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Server started. Press any key to shut down."
+argument_list|)
+expr_stmt|;
+name|System
+operator|.
 name|in
 operator|.
 name|read
@@ -68,12 +77,7 @@ argument_list|()
 expr_stmt|;
 name|ctx
 operator|.
-name|stop
-argument_list|()
-expr_stmt|;
-name|ctx
-operator|.
-name|destroy
+name|close
 argument_list|()
 expr_stmt|;
 block|}
