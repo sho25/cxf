@@ -63,6 +63,17 @@ name|void
 name|reset
 parameter_list|()
 function_decl|;
+name|void
+name|enable
+parameter_list|(
+name|boolean
+name|value
+parameter_list|)
+function_decl|;
+name|boolean
+name|isEnabled
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
