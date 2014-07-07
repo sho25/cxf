@@ -180,15 +180,6 @@ operator|!
 name|forceDisabled
 condition|)
 block|{
-name|ex
-operator|.
-name|put
-argument_list|(
-literal|"org.apache.cxf.management.counter.enabled"
-argument_list|,
-literal|true
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|isClient
