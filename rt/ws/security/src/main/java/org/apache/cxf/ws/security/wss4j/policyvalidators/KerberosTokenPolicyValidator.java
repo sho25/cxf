@@ -228,6 +228,15 @@ argument_list|,
 name|kerberosToken
 argument_list|)
 expr_stmt|;
+name|assertPolicy
+argument_list|(
+name|aim
+argument_list|,
+name|SPConstants
+operator|.
+name|REQUIRE_KEY_IDENTIFIER_REFERENCE
+argument_list|)
+expr_stmt|;
 block|}
 return|return
 literal|true
