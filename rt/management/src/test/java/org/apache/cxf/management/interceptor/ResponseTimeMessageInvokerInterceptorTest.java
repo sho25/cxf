@@ -112,6 +112,9 @@ expr_stmt|;
 name|setupExchangeForMessage
 argument_list|()
 expr_stmt|;
+name|setupOperationForMessage
+argument_list|()
+expr_stmt|;
 name|EasyMock
 operator|.
 name|expect
@@ -288,13 +291,6 @@ operator|.
 name|verify
 argument_list|(
 name|mhtr
-argument_list|)
-expr_stmt|;
-name|EasyMock
-operator|.
-name|verify
-argument_list|(
-name|cRepository
 argument_list|)
 expr_stmt|;
 block|}
