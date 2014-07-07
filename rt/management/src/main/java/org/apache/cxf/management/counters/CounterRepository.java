@@ -366,6 +366,16 @@ argument_list|)
 expr_stmt|;
 name|bus
 operator|.
+name|getOutFaultInterceptors
+argument_list|()
+operator|.
+name|add
+argument_list|(
+name|out
+argument_list|)
+expr_stmt|;
+name|bus
+operator|.
 name|setExtension
 argument_list|(
 name|this
@@ -431,8 +441,6 @@ operator|=
 name|createCounter
 argument_list|(
 name|on
-argument_list|,
-name|mhtr
 argument_list|)
 expr_stmt|;
 name|counters
@@ -513,9 +521,6 @@ name|createCounter
 parameter_list|(
 name|ObjectName
 name|on
-parameter_list|,
-name|MessageHandlingTimeRecorder
-name|mhtr
 parameter_list|)
 block|{
 name|Counter
