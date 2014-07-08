@@ -415,6 +415,17 @@ return|return
 name|this
 return|;
 block|}
+specifier|public
+name|void
+name|checkContext
+parameter_list|()
+block|{
+name|uriInfo
+operator|.
+name|getQueryParameters
+argument_list|()
+expr_stmt|;
+block|}
 annotation|@
 name|GET
 annotation|@

@@ -6364,7 +6364,9 @@ name|Book2
 name|getBookSubResourceRC
 parameter_list|()
 block|{
-return|return
+name|Book2
+name|book
+init|=
 name|resourceContext
 operator|.
 name|getResource
@@ -6373,6 +6375,14 @@ name|Book2
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+name|book
+operator|.
+name|checkContext
+argument_list|()
+expr_stmt|;
+return|return
+name|book
 return|;
 block|}
 annotation|@
