@@ -227,6 +227,14 @@ name|SEARCH_VISITOR_PROPERTY
 init|=
 literal|"search.visitor"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DECODE_QUERY_VALUES
+init|=
+literal|"search.decode.values"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -317,7 +325,6 @@ name|pattern
 argument_list|)
 return|;
 block|}
-comment|//new SimpleDateFormat(DEFAULT_DATE_FORMAT);
 specifier|public
 specifier|static
 name|Date
