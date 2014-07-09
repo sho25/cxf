@@ -1719,8 +1719,16 @@ name|QueryParam
 argument_list|(
 literal|"query5"
 argument_list|)
+name|char
+name|queryChar5
+parameter_list|,
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"query6"
+argument_list|)
 name|String
-name|queryString4
+name|queryString6
 parameter_list|)
 block|{
 comment|// complete

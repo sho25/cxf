@@ -11055,6 +11055,10 @@ name|Boolean
 operator|.
 name|TYPE
 block|,
+name|char
+operator|.
+name|class
+block|,
 name|String
 operator|.
 name|class
@@ -11088,7 +11092,7 @@ name|Message
 operator|.
 name|QUERY_STRING
 argument_list|,
-literal|"query=first&query2=second&query3=3&query4=true&query5"
+literal|"query=first&query2=second&query3=3&query4=true&query6"
 argument_list|)
 expr_stmt|;
 name|List
@@ -11184,7 +11188,21 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Fourth Query Parameter of multiple was not matched correctly"
+literal|"Fifth Query Parameter of multiple was not matched correctly"
+argument_list|,
+literal|'\u0000'
+argument_list|,
+name|params
+operator|.
+name|get
+argument_list|(
+literal|4
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Six Query Parameter of multiple was not matched correctly"
 argument_list|,
 literal|""
 argument_list|,
@@ -11192,7 +11210,7 @@ name|params
 operator|.
 name|get
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 argument_list|)
 expr_stmt|;
