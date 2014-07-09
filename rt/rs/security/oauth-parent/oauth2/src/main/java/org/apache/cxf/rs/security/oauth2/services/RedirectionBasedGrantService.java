@@ -1074,11 +1074,11 @@ argument_list|)
 expr_stmt|;
 name|secData
 operator|.
-name|setApplicationName
+name|setApplicationCertificates
 argument_list|(
 name|client
 operator|.
-name|getApplicationCertificate
+name|getApplicationCertificates
 argument_list|()
 argument_list|)
 expr_stmt|;

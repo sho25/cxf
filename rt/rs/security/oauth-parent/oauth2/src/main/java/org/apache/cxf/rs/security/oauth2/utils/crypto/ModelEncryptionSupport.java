@@ -2028,9 +2028,9 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setApplicationLogoUri
+name|setApplicationCertificates
 argument_list|(
-name|getStringPart
+name|parseSimpleList
 argument_list|(
 name|parts
 index|[
@@ -2281,18 +2281,15 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 7: app certificate
+comment|// 7: app certificates
 name|state
 operator|.
 name|append
 argument_list|(
-name|tokenizeString
-argument_list|(
 name|client
 operator|.
-name|getApplicationCertificate
+name|getApplicationCertificates
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|state
