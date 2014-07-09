@@ -649,6 +649,8 @@ throw|throw
 operator|new
 name|WebApplicationException
 argument_list|(
+name|e
+argument_list|,
 literal|413
 argument_list|)
 throw|;
