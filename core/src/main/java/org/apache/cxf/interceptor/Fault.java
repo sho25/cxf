@@ -19,6 +19,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|HttpURLConnection
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|ResourceBundle
@@ -46,18 +56,6 @@ operator|.
 name|namespace
 operator|.
 name|QName
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|w3c
-operator|.
-name|dom
-operator|.
-name|Element
 import|;
 end_import
 
@@ -104,6 +102,18 @@ operator|.
 name|helpers
 operator|.
 name|DOMUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|w3c
+operator|.
+name|dom
+operator|.
+name|Element
 import|;
 end_import
 
@@ -168,7 +178,9 @@ specifier|final
 name|int
 name|DEFAULT_HTTP_RESPONSE_CODE
 init|=
-literal|500
+name|HttpURLConnection
+operator|.
+name|HTTP_INTERNAL_ERROR
 decl_stmt|;
 specifier|private
 specifier|static
