@@ -1293,6 +1293,27 @@ name|LAX_PROPERTY_MATCH
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|props
+operator|.
+name|put
+argument_list|(
+name|SearchUtils
+operator|.
+name|DECODE_QUERY_VALUES
+argument_list|,
+operator|(
+name|String
+operator|)
+name|message
+operator|.
+name|getContextualProperty
+argument_list|(
+name|SearchUtils
+operator|.
+name|DECODE_QUERY_VALUES
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|// FIQL specific
 name|props
 operator|.
