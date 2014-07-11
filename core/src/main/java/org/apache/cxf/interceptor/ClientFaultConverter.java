@@ -1124,6 +1124,15 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|exClass
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
+if|if
+condition|(
 name|e
 operator|==
 literal|null
