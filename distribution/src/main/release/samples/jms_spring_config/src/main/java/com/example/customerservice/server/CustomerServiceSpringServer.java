@@ -35,9 +35,14 @@ end_comment
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|CustomerServiceSpringServer
 block|{
+specifier|private
+name|CustomerServiceSpringServer
+parameter_list|()
+block|{     }
 specifier|public
 specifier|static
 name|void
