@@ -219,6 +219,14 @@ init|=
 literal|"rs.security.encryption.in.properties"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_PROPS
+init|=
+literal|"rs.security.encryption.properties"
+decl_stmt|;
+specifier|private
 name|JweDecryptor
 name|decryptor
 decl_stmt|;
@@ -335,6 +343,8 @@ name|getCurrentMessage
 argument_list|()
 argument_list|,
 name|RSSEC_ENCRYPTION_IN_PROPS
+argument_list|,
+name|RSSEC_ENCRYPTION_PROPS
 argument_list|,
 name|CryptoUtils
 operator|.

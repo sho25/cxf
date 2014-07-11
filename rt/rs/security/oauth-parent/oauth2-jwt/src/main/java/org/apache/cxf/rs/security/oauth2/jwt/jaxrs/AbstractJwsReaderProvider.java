@@ -140,9 +140,17 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_PROPS
+name|RSSEC_SIGNATURE_IN_PROPS
 init|=
 literal|"rs.security.signature.in.properties"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_PROPS
+init|=
+literal|"rs.security.signature.properties"
 decl_stmt|;
 specifier|private
 name|JwsSignatureVerifier
@@ -224,6 +232,8 @@ name|JAXRSUtils
 operator|.
 name|getCurrentMessage
 argument_list|()
+argument_list|,
+name|RSSEC_SIGNATURE_IN_PROPS
 argument_list|,
 name|RSSEC_SIGNATURE_PROPS
 argument_list|)
