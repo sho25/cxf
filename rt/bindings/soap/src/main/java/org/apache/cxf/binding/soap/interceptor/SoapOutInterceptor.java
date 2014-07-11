@@ -25,6 +25,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|EOFException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|OutputStream
 import|;
 end_import
@@ -2086,6 +2096,7 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|// Write body end
 name|xtw
 operator|.
 name|writeEndElement
@@ -2114,6 +2125,21 @@ parameter_list|(
 name|XMLStreamException
 name|e
 parameter_list|)
+block|{
+if|if
+condition|(
+name|e
+operator|.
+name|getCause
+argument_list|()
+operator|instanceof
+name|EOFException
+condition|)
+block|{
+comment|//Nothing we can do about this, some clients will close the connection early if
+comment|//they fully parse everything they need
+block|}
+else|else
 block|{
 name|SoapVersion
 name|soapVersion
@@ -2153,6 +2179,7 @@ name|getSender
 argument_list|()
 argument_list|)
 throw|;
+block|}
 block|}
 block|}
 block|}
