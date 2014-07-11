@@ -2276,11 +2276,6 @@ name|boolean
 name|isOneWay
 parameter_list|)
 block|{
-name|StaxSource
-name|createdSource
-init|=
-literal|null
-decl_stmt|;
 name|checkError
 argument_list|()
 expr_stmt|;
