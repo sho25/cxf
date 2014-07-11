@@ -652,7 +652,7 @@ literal|1
 argument_list|,
 name|getHits
 argument_list|(
-literal|"modified=le=2007-09-15T09:02:31"
+literal|"modified=le=2007-09-15T10:02:31"
 argument_list|,
 name|documentMetadata
 operator|.
