@@ -682,7 +682,7 @@ name|hits
 init|=
 name|search
 argument_list|(
-literal|"modified=le=2007-09-15T09:02:31"
+literal|"modified=le=2007-09-16"
 argument_list|)
 decl_stmt|;
 name|assertEquals
