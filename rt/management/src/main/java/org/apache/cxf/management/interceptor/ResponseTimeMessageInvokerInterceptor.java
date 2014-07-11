@@ -175,13 +175,13 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
+name|forceDisabled
+operator|&&
 name|isServiceCounterEnabled
 argument_list|(
 name|ex
 argument_list|)
-operator|&&
-operator|!
-name|forceDisabled
 condition|)
 block|{
 name|message

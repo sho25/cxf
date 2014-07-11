@@ -298,7 +298,7 @@ condition|(
 name|minHandlingTime
 operator|==
 literal|0
-operator||
+operator|||
 name|minHandlingTime
 operator|>
 name|handlingTime
