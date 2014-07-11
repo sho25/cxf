@@ -629,6 +629,7 @@ operator|.
 name|commit
 argument_list|()
 expr_stmt|;
+comment|// testPDF.pdf 'modified' is set to '2007-09-14T09:02:31Z'
 name|assertEquals
 argument_list|(
 literal|1
@@ -652,7 +653,7 @@ literal|1
 argument_list|,
 name|getHits
 argument_list|(
-literal|"modified=le=2007-09-15T09:02:31"
+literal|"modified=le=2007-09-15T10:02:31"
 argument_list|,
 name|documentMetadata
 operator|.
