@@ -36,7 +36,6 @@ specifier|public
 interface|interface
 name|XMLStreamReaderWrapper
 block|{
-specifier|public
 name|XMLStreamReader
 name|wrap
 parameter_list|(

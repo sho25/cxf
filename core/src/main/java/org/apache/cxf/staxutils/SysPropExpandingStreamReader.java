@@ -81,13 +81,16 @@ parameter_list|)
 block|{
 if|if
 condition|(
-operator|!
 name|isEmpty
 argument_list|(
 name|value
 argument_list|)
 condition|)
 block|{
+return|return
+name|value
+return|;
+block|}
 specifier|final
 name|int
 name|startIndx
@@ -225,7 +228,6 @@ operator|.
 name|toString
 argument_list|()
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}
