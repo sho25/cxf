@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -39,16 +49,30 @@ name|XMLStreamReader
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
+name|util
+operator|.
+name|StreamReaderDelegate
+import|;
+end_import
+
 begin_comment
-comment|/**  * A wrapper around XMLStreamReader that expands system property references in element and attribute values.  *   */
+comment|/**  * A StreamReaderDelegate that expands property references in element and attribute values.  *   */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|SysPropExpandingStreamReader
+name|PropertiesExpandingStreamReader
 extends|extends
-name|DelegatingXMLStreamReader
+name|StreamReaderDelegate
 block|{
 specifier|public
 specifier|static
@@ -58,11 +82,29 @@ name|DELIMITER
 init|=
 literal|"@"
 decl_stmt|;
+specifier|private
+specifier|final
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|props
+decl_stmt|;
 specifier|public
-name|SysPropExpandingStreamReader
+name|PropertiesExpandingStreamReader
 parameter_list|(
 name|XMLStreamReader
 name|reader
+parameter_list|,
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|props
 parameter_list|)
 block|{
 name|super
@@ -70,10 +112,16 @@ argument_list|(
 name|reader
 argument_list|)
 expr_stmt|;
+name|this
+operator|.
+name|props
+operator|=
+name|props
+expr_stmt|;
 block|}
 specifier|protected
 name|String
-name|expandSystemProperty
+name|expandProperty
 parameter_list|(
 name|String
 name|value
@@ -163,9 +211,9 @@ specifier|final
 name|String
 name|envValue
 init|=
-name|System
+name|props
 operator|.
-name|getProperty
+name|get
 argument_list|(
 name|propName
 argument_list|)
@@ -307,7 +355,7 @@ throws|throws
 name|XMLStreamException
 block|{
 return|return
-name|expandSystemProperty
+name|expandProperty
 argument_list|(
 name|super
 operator|.
@@ -330,7 +378,7 @@ name|localName
 parameter_list|)
 block|{
 return|return
-name|expandSystemProperty
+name|expandProperty
 argument_list|(
 name|super
 operator|.
@@ -354,7 +402,7 @@ name|index
 parameter_list|)
 block|{
 return|return
-name|expandSystemProperty
+name|expandProperty
 argument_list|(
 name|super
 operator|.
@@ -373,7 +421,7 @@ name|getText
 parameter_list|()
 block|{
 return|return
-name|expandSystemProperty
+name|expandProperty
 argument_list|(
 name|super
 operator|.
