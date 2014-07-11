@@ -629,6 +629,7 @@ operator|.
 name|commit
 argument_list|()
 expr_stmt|;
+comment|// testPDF.pdf 'modified' is set to '2007-09-14T09:02:31Z'
 name|assertEquals
 argument_list|(
 literal|1
