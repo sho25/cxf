@@ -807,6 +807,13 @@ name|getAudience
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|oauthContext
+operator|.
+name|setTokenRequestParts
+argument_list|(
+name|authParts
+argument_list|)
+expr_stmt|;
 name|m
 operator|.
 name|setContent
