@@ -216,6 +216,10 @@ name|value
 parameter_list|)
 block|{
 return|return
+name|value
+operator|!=
+literal|null
+condition|?
 name|DateTools
 operator|.
 name|dateToString
@@ -226,6 +230,8 @@ name|Resolution
 operator|.
 name|MILLISECOND
 argument_list|)
+else|:
+literal|null
 return|;
 block|}
 block|}
