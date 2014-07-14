@@ -347,7 +347,7 @@ name|org
 operator|.
 name|junit
 operator|.
-name|BeforeClass
+name|Before
 import|;
 end_import
 
@@ -357,7 +357,7 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Before
+name|BeforeClass
 import|;
 end_import
 
@@ -821,7 +821,7 @@ name|Collection
 argument_list|<
 name|ScoreDoc
 argument_list|>
-name|custom
+name|hits
 init|=
 name|search
 argument_list|(
@@ -830,7 +830,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|custom
+name|hits
 operator|.
 name|size
 argument_list|()
