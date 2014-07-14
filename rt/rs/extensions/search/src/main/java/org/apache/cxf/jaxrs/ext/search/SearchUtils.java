@@ -167,7 +167,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|TIMESTAMP_WITH_TIMEZONE
+name|TIMESTAMP_NO_TIMEZONE
 init|=
 literal|"yyyy-MM-dd'T'HH:mm:ss"
 decl_stmt|;
@@ -1073,7 +1073,7 @@ argument_list|(
 operator|new
 name|SimpleDateFormat
 argument_list|(
-name|TIMESTAMP_WITH_TIMEZONE
+name|TIMESTAMP_NO_TIMEZONE
 argument_list|)
 argument_list|,
 name|value

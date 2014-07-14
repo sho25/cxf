@@ -636,7 +636,7 @@ literal|1
 argument_list|,
 name|getHits
 argument_list|(
-literal|"modified=gt=2007-09-14T09:02:31"
+literal|"modified=gt=2007-09-14T09:02:31Z"
 argument_list|,
 name|documentMetadata
 operator|.
@@ -647,14 +647,13 @@ operator|.
 name|length
 argument_list|)
 expr_stmt|;
-comment|// TODO Check why this does not work
 name|assertEquals
 argument_list|(
 literal|1
 argument_list|,
 name|getHits
 argument_list|(
-literal|"modified=le=2007-09-15T09:02:31Z"
+literal|"modified=le=2007-09-15T09:02:31-0500"
 argument_list|,
 name|documentMetadata
 operator|.
