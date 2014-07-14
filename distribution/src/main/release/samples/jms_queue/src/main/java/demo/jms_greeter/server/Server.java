@@ -152,8 +152,9 @@ name|ConnectionFactory
 name|cf
 parameter_list|)
 block|{
-name|ep
-operator|=
+name|EndpointImpl
+name|epi
+init|=
 operator|(
 name|EndpointImpl
 operator|)
@@ -163,8 +164,8 @@ name|create
 argument_list|(
 name|impl
 argument_list|)
-expr_stmt|;
-name|ep
+decl_stmt|;
+name|epi
 operator|.
 name|setFeatures
 argument_list|(
@@ -180,7 +181,7 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|ep
+name|epi
 operator|.
 name|publish
 argument_list|()
