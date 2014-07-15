@@ -24,7 +24,7 @@ end_package
 begin_interface
 specifier|public
 interface|interface
-name|JwsSignatureProviderWorker
+name|JwsSignature
 block|{
 name|void
 name|update

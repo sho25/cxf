@@ -119,7 +119,7 @@ name|oauth2
 operator|.
 name|jwe
 operator|.
-name|JweDecryptionOutput
+name|JweDecryption
 import|;
 end_import
 
@@ -139,7 +139,7 @@ name|oauth2
 operator|.
 name|jwe
 operator|.
-name|JweDecryptor
+name|JweDecryptionOutput
 import|;
 end_import
 
@@ -179,7 +179,7 @@ name|oauth2
 operator|.
 name|jwe
 operator|.
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 import|;
 end_import
 
@@ -227,8 +227,8 @@ init|=
 literal|"rs.security.encryption.properties"
 decl_stmt|;
 specifier|private
-name|JweDecryptor
-name|decryptor
+name|JweDecryption
+name|decryption
 decl_stmt|;
 specifier|private
 name|JweCryptoProperties
@@ -248,10 +248,10 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|JweDecryptor
+name|JweDecryption
 name|theDecryptor
 init|=
-name|getInitializedDecryptor
+name|getInitializedDecryption
 argument_list|()
 decl_stmt|;
 name|JweDecryptionOutput
@@ -299,33 +299,33 @@ comment|// complete
 block|}
 specifier|public
 name|void
-name|setDecryptor
+name|setDecryption
 parameter_list|(
-name|JweDecryptor
+name|JweDecryption
 name|decryptor
 parameter_list|)
 block|{
 name|this
 operator|.
-name|decryptor
+name|decryption
 operator|=
 name|decryptor
 expr_stmt|;
 block|}
 specifier|protected
-name|JweDecryptor
-name|getInitializedDecryptor
+name|JweDecryption
+name|getInitializedDecryption
 parameter_list|()
 block|{
 if|if
 condition|(
-name|decryptor
+name|decryption
 operator|!=
 literal|null
 condition|)
 block|{
 return|return
-name|decryptor
+name|decryption
 return|;
 block|}
 try|try
@@ -353,7 +353,7 @@ argument_list|)
 decl_stmt|;
 return|return
 operator|new
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 argument_list|(
 name|pk
 argument_list|,

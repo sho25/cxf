@@ -86,12 +86,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|RSAJweEncryptor
+name|RSAJweEncryption
 extends|extends
-name|WrappedKeyJweEncryptor
+name|WrappedKeyJweEncryption
 block|{
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey
@@ -120,7 +120,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey
@@ -154,7 +154,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey
@@ -207,7 +207,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey
@@ -250,7 +250,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey
@@ -292,7 +292,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey
@@ -331,7 +331,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|RSAJweEncryptor
+name|RSAJweEncryption
 parameter_list|(
 name|RSAPublicKey
 name|publicKey

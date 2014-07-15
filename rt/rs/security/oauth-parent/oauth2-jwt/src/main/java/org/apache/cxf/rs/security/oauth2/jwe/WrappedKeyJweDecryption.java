@@ -98,9 +98,9 @@ end_import
 begin_class
 specifier|public
 class|class
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 extends|extends
-name|AbstractJweDecryptor
+name|AbstractJweDecryption
 block|{
 specifier|private
 name|Key
@@ -111,7 +111,7 @@ name|boolean
 name|unwrap
 decl_stmt|;
 specifier|public
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 parameter_list|(
 name|Key
 name|cekDecryptionKey
@@ -126,7 +126,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 parameter_list|(
 name|Key
 name|cekDecryptionKey
@@ -146,7 +146,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 parameter_list|(
 name|Key
 name|cekDecryptionKey
@@ -166,7 +166,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|WrappedKeyJweDecryptor
+name|WrappedKeyJweDecryption
 parameter_list|(
 name|Key
 name|cekDecryptionKey

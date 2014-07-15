@@ -132,9 +132,9 @@ end_import
 begin_class
 specifier|public
 class|class
-name|WrappedKeyJweEncryptor
+name|WrappedKeyJweEncryption
 extends|extends
-name|AbstractJweEncryptor
+name|AbstractJweEncryption
 block|{
 specifier|private
 name|Key
@@ -149,7 +149,7 @@ name|AtomicInteger
 name|providedCekUsageCount
 decl_stmt|;
 specifier|public
-name|WrappedKeyJweEncryptor
+name|WrappedKeyJweEncryption
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -171,7 +171,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|WrappedKeyJweEncryptor
+name|WrappedKeyJweEncryption
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -205,7 +205,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|WrappedKeyJweEncryptor
+name|WrappedKeyJweEncryption
 parameter_list|(
 name|JweHeaders
 name|headers
@@ -247,7 +247,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|WrappedKeyJweEncryptor
+name|WrappedKeyJweEncryption
 parameter_list|(
 name|JweHeaders
 name|headers
