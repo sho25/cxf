@@ -907,6 +907,9 @@ operator|.
 name|getAvgResponseTime
 argument_list|()
 argument_list|,
+operator|(
+name|long
+operator|)
 literal|1000
 argument_list|)
 expr_stmt|;
@@ -1067,6 +1070,9 @@ operator|.
 name|getAvgResponseTime
 argument_list|()
 argument_list|,
+operator|(
+name|long
+operator|)
 literal|1500
 argument_list|)
 expr_stmt|;
