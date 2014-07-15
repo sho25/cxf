@@ -68,6 +68,9 @@ comment|/**          * EndpointInfo, Endpoint, Class          */
 name|ENDPOINT_CREATED
 block|,
 comment|/**          * Server, targetObject, Class          */
+name|PRE_SERVER_CREATE
+block|,
+comment|/**          * Server, targetObject, Class          */
 name|SERVER_CREATED
 block|,
 comment|/**          * BindingInfo, BindingOperationInfo, Implementation Method          */
@@ -75,6 +78,9 @@ name|BINDING_OPERATION_CREATED
 block|,
 comment|/**          * BindingInfo          */
 name|BINDING_CREATED
+block|,
+comment|/**          * Endpoint, Client          */
+name|PRE_CLIENT_CREATE
 block|,
 comment|/**          * Endpoint, Client          */
 name|CLIENT_CREATED
