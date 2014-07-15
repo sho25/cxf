@@ -79,7 +79,7 @@ block|,
 comment|/**          * BindingInfo          */
 name|BINDING_CREATED
 block|,
-comment|/**          * Endpoint, Client          */
+comment|/**          * Endpoint          */
 name|PRE_CLIENT_CREATE
 block|,
 comment|/**          * Endpoint, Client          */
