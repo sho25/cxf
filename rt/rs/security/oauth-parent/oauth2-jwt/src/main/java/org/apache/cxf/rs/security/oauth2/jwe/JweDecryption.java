@@ -33,6 +33,14 @@ name|String
 name|jweContent
 parameter_list|)
 function_decl|;
+name|byte
+index|[]
+name|decrypt
+parameter_list|(
+name|JweCompactConsumer
+name|consumer
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
