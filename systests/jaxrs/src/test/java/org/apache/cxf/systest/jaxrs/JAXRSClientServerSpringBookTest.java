@@ -5500,10 +5500,12 @@ decl_stmt|;
 name|assertTrue
 argument_list|(
 name|content
+argument_list|,
+name|content
 operator|.
 name|contains
 argument_list|(
-literal|"Invalid content was found starting with element 'id'"
+literal|"Invalid content was found starting with element"
 argument_list|)
 argument_list|)
 expr_stmt|;
