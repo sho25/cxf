@@ -706,7 +706,7 @@ name|void
 name|writeStartDocument
 parameter_list|(
 name|String
-name|arg0
+name|version
 parameter_list|)
 throws|throws
 name|XMLStreamException
@@ -717,7 +717,9 @@ name|factory
 operator|.
 name|createStartDocument
 argument_list|(
-name|arg0
+literal|null
+argument_list|,
+name|version
 argument_list|)
 argument_list|)
 expr_stmt|;
