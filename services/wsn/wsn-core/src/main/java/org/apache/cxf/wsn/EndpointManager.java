@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|net
+operator|.
+name|URL
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -54,6 +64,9 @@ name|address
 parameter_list|,
 name|Object
 name|service
+parameter_list|,
+name|URL
+name|wsdlLocation
 parameter_list|)
 throws|throws
 name|EndpointRegistrationException

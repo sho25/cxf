@@ -113,11 +113,11 @@ literal|"org.oasis_open.docs.wsn.bw_2.CreatePullPoint"
 argument_list|,
 name|targetNamespace
 operator|=
-literal|"http://docs.oasis-open.org/wsn/bw-2"
+literal|"http://cxf.apache.org/wsn/jaxws"
 argument_list|,
 name|serviceName
 operator|=
-literal|"CreatePullPoint"
+literal|"CreatePullPointService"
 argument_list|,
 name|portName
 operator|=
