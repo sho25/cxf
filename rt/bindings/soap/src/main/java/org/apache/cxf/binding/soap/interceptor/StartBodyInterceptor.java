@@ -221,7 +221,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"ReadHeadersInterceptor skipped in HTTP GET method"
+literal|"StartBodyInterceptor skipped in HTTP GET method"
 argument_list|)
 expr_stmt|;
 return|return;
