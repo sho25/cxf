@@ -566,7 +566,7 @@ literal|0
 init|;
 name|x
 operator|<
-literal|10000
+literal|6500
 condition|;
 name|x
 operator|++

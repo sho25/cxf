@@ -204,6 +204,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -227,7 +230,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/booknames"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booknames"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -241,7 +251,7 @@ name|wsclient
 operator|.
 name|await
 argument_list|(
-literal|3
+literal|30000
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -327,7 +337,12 @@ name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/booknames"
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booknames"
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -414,7 +429,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/books/123"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/books/123"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -504,7 +526,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
+operator|(
+literal|"POST "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -584,7 +613,12 @@ name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"POST /websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
+literal|"POST "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n123"
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -661,7 +695,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/bookbought"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/bookbought"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -828,6 +869,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -857,7 +901,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/bookstream\r\nAccept: application/json\r\n\r\n"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/bookstream\r\nAccept: application/json\r\n\r\n"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -1046,6 +1097,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -1069,7 +1123,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/booknames"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booknames"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -1191,6 +1252,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore/books/1"
 decl_stmt|;
 name|WebClient
@@ -1250,6 +1314,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -1272,7 +1339,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/booknames/servletstream"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booknames/servletstream"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -1387,6 +1461,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -1417,7 +1494,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"POST /websocket/web/bookstore/booknames"
+operator|(
+literal|"POST "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booknames"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -1507,6 +1591,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -1530,7 +1617,14 @@ name|wsclient
 operator|.
 name|sendMessage
 argument_list|(
-literal|"GET /websocket/bookstore2"
+operator|(
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/bookstore2"
+operator|)
 operator|.
 name|getBytes
 argument_list|()
@@ -1620,6 +1714,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -1643,7 +1740,12 @@ name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"POST /websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n459"
+literal|"POST "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n\r\n459"
 argument_list|)
 expr_stmt|;
 name|assertTrue
@@ -1767,7 +1869,12 @@ name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"POST /websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n"
+literal|"POST "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n"
 operator|+
 name|WebSocketConstants
 operator|.
@@ -1784,7 +1891,12 @@ name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"POST /websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n"
+literal|"POST "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/booksplain\r\nContent-Type: text/plain\r\n"
 operator|+
 name|WebSocketConstants
 operator|.
@@ -1935,6 +2047,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/websocket/web/bookstore"
 decl_stmt|;
 name|WebSocketTestClient
@@ -1965,14 +2080,24 @@ name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/hold/3000"
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/hold/3000"
 argument_list|)
 expr_stmt|;
 name|wsclient
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /websocket/web/bookstore/hold/3000"
+literal|"GET "
+operator|+
+name|getContext
+argument_list|()
+operator|+
+literal|"/websocket/web/bookstore/hold/3000"
 argument_list|)
 expr_stmt|;
 comment|// each call takes 3 seconds but executed in parallel, so waiting 4 secs is sufficient
@@ -2028,6 +2153,15 @@ parameter_list|()
 block|{
 return|return
 name|PORT
+return|;
+block|}
+specifier|protected
+name|String
+name|getContext
+parameter_list|()
+block|{
+return|return
+literal|""
 return|;
 block|}
 block|}

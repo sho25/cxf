@@ -5643,6 +5643,15 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
+name|hasAttributes
+argument_list|(
+name|type
+argument_list|)
+condition|)
+block|{
+if|if
+condition|(
 name|type
 operator|.
 name|getParticle
@@ -5829,6 +5838,7 @@ block|}
 return|return
 literal|true
 return|;
+block|}
 block|}
 return|return
 literal|false

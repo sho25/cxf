@@ -93,7 +93,7 @@ name|boolean
 name|flushed
 decl_stmt|;
 specifier|private
-name|JwsSignatureProviderWorker
+name|JwsSignature
 name|signature
 decl_stmt|;
 specifier|public
@@ -102,7 +102,7 @@ parameter_list|(
 name|OutputStream
 name|out
 parameter_list|,
-name|JwsSignatureProviderWorker
+name|JwsSignature
 name|signature
 parameter_list|)
 block|{

@@ -306,7 +306,7 @@ name|webappcontext
 operator|.
 name|setContextPath
 argument_list|(
-literal|"/"
+literal|"/webapp"
 argument_list|)
 expr_stmt|;
 name|webappcontext
@@ -369,6 +369,9 @@ operator|+
 name|getPort
 argument_list|()
 operator|+
+name|getContext
+argument_list|()
+operator|+
 literal|"/http/web/bookstore/books/1"
 decl_stmt|;
 name|WebClient
@@ -418,6 +421,17 @@ parameter_list|()
 block|{
 return|return
 name|PORT
+return|;
+block|}
+annotation|@
+name|Override
+specifier|protected
+name|String
+name|getContext
+parameter_list|()
+block|{
+return|return
+literal|"/webapp"
 return|;
 block|}
 block|}
