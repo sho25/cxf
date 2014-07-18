@@ -483,10 +483,13 @@ block|{
 comment|// will not happen
 block|}
 return|return
-name|onMessage
+name|invokeService
 argument_list|(
 name|webSocket
 argument_list|,
+operator|new
+name|ByteArrayInputStream
+argument_list|(
 name|bdata
 argument_list|,
 literal|0
@@ -494,6 +497,7 @@ argument_list|,
 name|bdata
 operator|.
 name|length
+argument_list|)
 argument_list|)
 return|;
 block|}
@@ -521,6 +525,32 @@ name|int
 name|length
 parameter_list|)
 block|{
+specifier|final
+name|byte
+index|[]
+name|safedata
+init|=
+operator|new
+name|byte
+index|[
+name|length
+index|]
+decl_stmt|;
+name|System
+operator|.
+name|arraycopy
+argument_list|(
+name|data
+argument_list|,
+name|offset
+argument_list|,
+name|safedata
+argument_list|,
+literal|0
+argument_list|,
+name|length
+argument_list|)
+expr_stmt|;
 return|return
 name|invokeService
 argument_list|(
@@ -529,10 +559,12 @@ argument_list|,
 operator|new
 name|ByteArrayInputStream
 argument_list|(
-name|data
+name|safedata
 argument_list|,
-name|offset
+literal|0
 argument_list|,
+name|safedata
+operator|.
 name|length
 argument_list|)
 argument_list|)
@@ -562,6 +594,9 @@ literal|"invokeService(WebSocket, InputStream)"
 argument_list|)
 expr_stmt|;
 comment|// invoke the service directly as onMessage is synchronously blocked (in jetty)
+comment|// make sure the byte array passed to this method is immutable, as the websocket framework
+comment|// may corrupt the byte array after this method is returned (i.e., before the data is returned in
+comment|// the executor's thread.
 name|destination
 operator|.
 name|getExecutor

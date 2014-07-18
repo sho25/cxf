@@ -618,12 +618,40 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
-name|invokeService
+specifier|final
+name|byte
+index|[]
+name|safedata
+init|=
+operator|new
+name|byte
+index|[
+name|length
+index|]
+decl_stmt|;
+name|System
+operator|.
+name|arraycopy
 argument_list|(
 name|data
 argument_list|,
 name|offset
 argument_list|,
+name|safedata
+argument_list|,
+literal|0
+argument_list|,
+name|length
+argument_list|)
+expr_stmt|;
+name|invokeService
+argument_list|(
+name|safedata
+argument_list|,
+literal|0
+argument_list|,
+name|safedata
+operator|.
 name|length
 argument_list|)
 expr_stmt|;
@@ -647,6 +675,9 @@ name|length
 parameter_list|)
 block|{
 comment|// invoke the service asynchronously as the jetty websocket's onMessage is synchronously blocked
+comment|// make sure the byte array passed to this method is immutable, as the websocket framework
+comment|// may corrupt the byte array after this method is returned (i.e., before the data is returned in
+comment|// the executor's thread.
 name|manager
 operator|.
 name|getExecutor
