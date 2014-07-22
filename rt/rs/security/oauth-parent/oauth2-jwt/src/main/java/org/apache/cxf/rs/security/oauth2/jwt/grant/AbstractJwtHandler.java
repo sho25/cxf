@@ -398,7 +398,7 @@ specifier|protected
 name|void
 name|validateExpiryTime
 parameter_list|(
-name|Integer
+name|Long
 name|timestamp
 parameter_list|)
 block|{
@@ -416,7 +416,7 @@ specifier|protected
 name|void
 name|validateNotBeforeTime
 parameter_list|(
-name|Integer
+name|Long
 name|timestamp
 parameter_list|)
 block|{
@@ -434,7 +434,7 @@ specifier|protected
 name|void
 name|validateIssuedAtTime
 parameter_list|(
-name|Integer
+name|Long
 name|timestamp
 parameter_list|)
 block|{

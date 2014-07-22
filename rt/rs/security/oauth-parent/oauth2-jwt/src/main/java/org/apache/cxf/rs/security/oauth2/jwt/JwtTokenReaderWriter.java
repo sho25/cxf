@@ -1228,7 +1228,7 @@ condition|)
 block|{
 name|value
 operator|=
-name|Integer
+name|Long
 operator|.
 name|valueOf
 argument_list|(

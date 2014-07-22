@@ -507,14 +507,14 @@ name|claims
 operator|.
 name|setNotBefore
 argument_list|(
-literal|1300815780
+literal|1300815780L
 argument_list|)
 expr_stmt|;
 name|claims
 operator|.
 name|setExpiryTime
 argument_list|(
-literal|1300819380
+literal|1300819380L
 argument_list|)
 expr_stmt|;
 name|claims
@@ -846,7 +846,7 @@ name|claims
 operator|.
 name|setExpiryTime
 argument_list|(
-literal|1300819380
+literal|1300819380L
 argument_list|)
 expr_stmt|;
 name|claims
@@ -1078,7 +1078,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|Integer
+name|Long
 operator|.
 name|valueOf
 argument_list|(
@@ -1288,7 +1288,7 @@ name|claims
 operator|.
 name|setExpiryTime
 argument_list|(
-literal|1300819380
+literal|1300819380L
 argument_list|)
 expr_stmt|;
 name|claims
