@@ -316,10 +316,7 @@ name|registry
 argument_list|,
 name|ei
 argument_list|,
-name|ei
-operator|.
-name|toString
-argument_list|()
+name|path
 argument_list|)
 expr_stmt|;
 name|this
