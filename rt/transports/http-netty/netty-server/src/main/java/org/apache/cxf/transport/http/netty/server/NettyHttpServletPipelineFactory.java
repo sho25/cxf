@@ -407,7 +407,7 @@ name|util
 operator|.
 name|concurrent
 operator|.
-name|GlobalEventExecutor
+name|ImmediateEventExecutor
 import|;
 end_import
 
@@ -436,7 +436,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|//TODO how to manage the allChannels
+comment|//Holds the child channel
 specifier|private
 specifier|final
 name|ChannelGroup
@@ -445,7 +445,7 @@ init|=
 operator|new
 name|DefaultChannelGroup
 argument_list|(
-name|GlobalEventExecutor
+name|ImmediateEventExecutor
 operator|.
 name|INSTANCE
 argument_list|)
@@ -670,6 +670,9 @@ block|{
 name|allChannels
 operator|.
 name|close
+argument_list|()
+operator|.
+name|awaitUninterruptibly
 argument_list|()
 expr_stmt|;
 name|watchdog
