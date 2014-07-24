@@ -427,6 +427,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|closeResponseInputStream
+init|=
+literal|true
 decl_stmt|;
 specifier|public
 name|boolean
