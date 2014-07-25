@@ -21,6 +21,20 @@ name|jaxrs
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
+name|SchemaValidation
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -111,6 +125,8 @@ name|id
 argument_list|)
 return|;
 block|}
+annotation|@
+name|SchemaValidation
 specifier|public
 name|Book
 name|getThatBook

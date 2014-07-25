@@ -1087,13 +1087,13 @@ name|Annotation
 index|[]
 name|staticAnns
 init|=
-name|invoked
+name|ori
 operator|!=
 literal|null
 condition|?
-name|invoked
+name|ori
 operator|.
-name|getAnnotations
+name|getOutAnnotations
 argument_list|()
 else|:
 operator|new
