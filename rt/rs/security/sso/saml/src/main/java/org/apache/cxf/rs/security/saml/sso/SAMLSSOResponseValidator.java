@@ -840,6 +840,11 @@ return|return
 literal|false
 return|;
 block|}
+name|boolean
+name|foundBearerSubjectConf
+init|=
+literal|false
+decl_stmt|;
 comment|// We need to find a Bearer Subject Confirmation method
 for|for
 control|(
@@ -875,6 +880,10 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|foundBearerSubjectConf
+operator|=
+literal|true
+expr_stmt|;
 name|validateSubjectConfirmation
 argument_list|(
 name|subjectConf
@@ -890,7 +899,7 @@ expr_stmt|;
 block|}
 block|}
 return|return
-literal|true
+name|foundBearerSubjectConf
 return|;
 block|}
 comment|/**      * Validate a (Bearer) Subject Confirmation      */
