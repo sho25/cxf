@@ -394,6 +394,8 @@ argument_list|)
 expr_stmt|;
 name|parsePolicies
 argument_list|(
+name|aim
+argument_list|,
 name|ais
 argument_list|,
 name|message
@@ -408,6 +410,9 @@ specifier|private
 name|void
 name|parsePolicies
 parameter_list|(
+name|AssertionInfoMap
+name|aim
+parameter_list|,
 name|Collection
 argument_list|<
 name|AssertionInfo
@@ -506,6 +511,13 @@ name|message
 argument_list|)
 condition|)
 block|{
+name|assertSecurePartsIfTokenNotRequired
+argument_list|(
+name|binding
+argument_list|,
+name|aim
+argument_list|)
+expr_stmt|;
 continue|continue;
 block|}
 name|DerivedKeys
