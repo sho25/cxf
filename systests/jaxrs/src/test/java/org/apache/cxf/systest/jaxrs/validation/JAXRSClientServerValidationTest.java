@@ -348,11 +348,6 @@ name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|protected
 name|void
 name|run

@@ -1306,7 +1306,10 @@ argument_list|)
 return|;
 block|}
 block|}
+annotation|@
+name|SafeVarargs
 specifier|public
+specifier|final
 name|void
 name|addAll
 parameter_list|(

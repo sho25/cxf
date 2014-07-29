@@ -213,6 +213,8 @@ name|ClasspathScanner
 parameter_list|()
 block|{     }
 comment|/**      * Scans list of base packages for all classes marked with specific annotations.       * @param basePackage base package       * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too       * @throws IOException class metadata is not readable       * @throws ClassNotFoundException class not found      */
+annotation|@
+name|SafeVarargs
 specifier|public
 specifier|static
 name|Map
@@ -261,6 +263,10 @@ argument_list|(
 name|basePackage
 argument_list|)
 argument_list|,
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
@@ -268,9 +274,12 @@ argument_list|(
 name|annotations
 argument_list|)
 argument_list|)
+argument_list|)
 return|;
 block|}
 comment|/**      * Scans list of base packages for all classes marked with specific annotations.       * @param basePackages list of base packages       * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too       * @throws IOException class metadata is not readable       * @throws ClassNotFoundException class not found      */
+annotation|@
+name|SafeVarargs
 specifier|public
 specifier|static
 name|Map
@@ -317,11 +326,16 @@ name|findClasses
 argument_list|(
 name|basePackages
 argument_list|,
+name|Collections
+operator|.
+name|unmodifiableList
+argument_list|(
 name|Arrays
 operator|.
 name|asList
 argument_list|(
 name|annotations
+argument_list|)
 argument_list|)
 argument_list|)
 return|;

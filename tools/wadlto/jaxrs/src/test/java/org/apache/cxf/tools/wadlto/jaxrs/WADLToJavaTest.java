@@ -430,7 +430,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|ClassLoader
+name|URLClassLoader
 name|cl
 init|=
 operator|new
@@ -526,6 +526,11 @@ argument_list|(
 literal|"superbooks.Chapter"
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|cl
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 return|return
 name|files
