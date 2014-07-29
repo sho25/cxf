@@ -34,7 +34,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JweEncryption
+name|JweEncryptionState
 block|{
 specifier|private
 name|Cipher
@@ -63,7 +63,7 @@ name|boolean
 name|compressionSupported
 decl_stmt|;
 specifier|public
-name|JweEncryption
+name|JweEncryptionState
 parameter_list|(
 name|Cipher
 name|cipher

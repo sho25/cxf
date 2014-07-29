@@ -3475,8 +3475,8 @@ parameter_list|,
 name|Key
 name|wrapperKey
 parameter_list|,
-name|String
-name|wrapperKeyAlgo
+name|KeyProperties
+name|wrapperKeyProps
 parameter_list|)
 throws|throws
 name|SecurityException
@@ -3497,11 +3497,7 @@ argument_list|)
 argument_list|,
 name|wrapperKey
 argument_list|,
-operator|new
-name|KeyProperties
-argument_list|(
-name|wrapperKeyAlgo
-argument_list|)
+name|wrapperKeyProps
 argument_list|)
 return|;
 block|}
