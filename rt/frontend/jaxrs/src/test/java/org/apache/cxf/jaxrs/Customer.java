@@ -1254,7 +1254,7 @@ annotation|@
 name|Context
 specifier|public
 name|void
-name|setUriInfo
+name|setTestUriInfo
 parameter_list|(
 name|UriInfo
 name|ui
