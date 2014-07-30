@@ -1813,13 +1813,6 @@ argument_list|(
 name|cloneNode
 argument_list|)
 expr_stmt|;
-name|childNode
-operator|=
-name|childNode
-operator|.
-name|getNextSibling
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 if|if
