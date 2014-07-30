@@ -2352,7 +2352,7 @@ operator|.
 name|getMethodToInvoke
 argument_list|()
 operator|.
-name|getName
+name|toString
 argument_list|()
 expr_stmt|;
 block|}
