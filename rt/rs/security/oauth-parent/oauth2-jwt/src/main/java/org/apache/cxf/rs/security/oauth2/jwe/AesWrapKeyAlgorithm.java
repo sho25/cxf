@@ -106,9 +106,9 @@ end_import
 begin_class
 specifier|public
 class|class
-name|AesWrapKeyEncryption
+name|AesWrapKeyAlgorithm
 extends|extends
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 block|{
 specifier|private
 specifier|static
@@ -153,7 +153,7 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 specifier|public
-name|AesWrapKeyEncryption
+name|AesWrapKeyAlgorithm
 parameter_list|(
 name|byte
 index|[]
@@ -184,7 +184,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
-name|AesWrapKeyEncryption
+name|AesWrapKeyAlgorithm
 parameter_list|(
 name|SecretKey
 name|key

@@ -121,7 +121,7 @@ begin_class
 specifier|public
 specifier|abstract
 class|class
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 implements|implements
 name|KeyEncryptionAlgorithm
 block|{
@@ -145,7 +145,7 @@ argument_list|>
 name|supportedAlgorithms
 decl_stmt|;
 specifier|protected
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 parameter_list|(
 name|Key
 name|key
@@ -170,7 +170,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 parameter_list|(
 name|Key
 name|key
@@ -198,7 +198,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 parameter_list|(
 name|Key
 name|key
@@ -226,7 +226,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 parameter_list|(
 name|Key
 name|key

@@ -131,8 +131,6 @@ name|cek
 argument_list|,
 name|iv
 argument_list|,
-name|DEFAULT_AUTH_TAG_LENGTH
-argument_list|,
 literal|true
 argument_list|,
 literal|null
@@ -184,8 +182,6 @@ literal|null
 argument_list|,
 name|iv
 argument_list|,
-name|DEFAULT_AUTH_TAG_LENGTH
-argument_list|,
 literal|true
 argument_list|,
 literal|null
@@ -208,9 +204,6 @@ parameter_list|,
 name|byte
 index|[]
 name|iv
-parameter_list|,
-name|int
-name|authTagLen
 parameter_list|,
 name|boolean
 name|wrap
@@ -235,8 +228,6 @@ name|cek
 argument_list|,
 name|iv
 argument_list|,
-name|DEFAULT_AUTH_TAG_LENGTH
-argument_list|,
 name|writer
 argument_list|)
 expr_stmt|;
@@ -258,9 +249,6 @@ name|byte
 index|[]
 name|iv
 parameter_list|,
-name|int
-name|authTagLen
-parameter_list|,
 name|JwtHeadersWriter
 name|writer
 parameter_list|)
@@ -272,8 +260,6 @@ argument_list|,
 name|cek
 argument_list|,
 name|iv
-argument_list|,
-name|authTagLen
 argument_list|,
 name|keyEncryptionAlgorithm
 argument_list|,

@@ -88,7 +88,7 @@ specifier|public
 class|class
 name|RSAOaepKeyEncryption
 extends|extends
-name|AbstractWrapKeyEncryption
+name|AbstractWrapKeyAlgorithm
 block|{
 specifier|private
 specifier|static

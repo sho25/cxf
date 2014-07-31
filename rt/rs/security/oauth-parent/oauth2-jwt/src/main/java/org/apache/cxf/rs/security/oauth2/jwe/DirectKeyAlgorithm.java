@@ -24,7 +24,7 @@ end_package
 begin_class
 specifier|public
 class|class
-name|DirectKeyEncryption
+name|DirectKeyAlgorithm
 implements|implements
 name|KeyEncryptionAlgorithm
 block|{
