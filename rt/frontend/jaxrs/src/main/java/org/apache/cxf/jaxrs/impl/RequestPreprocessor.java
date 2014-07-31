@@ -952,6 +952,10 @@ decl_stmt|;
 if|if
 condition|(
 name|list
+operator|!=
+literal|null
+operator|&&
+name|list
 operator|.
 name|size
 argument_list|()

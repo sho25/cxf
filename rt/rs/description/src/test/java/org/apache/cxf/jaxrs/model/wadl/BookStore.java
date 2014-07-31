@@ -1059,7 +1059,7 @@ name|bean
 decl_stmt|;
 specifier|public
 name|int
-name|getA
+name|getAProp
 parameter_list|()
 block|{
 return|return

@@ -4757,7 +4757,7 @@ argument_list|,
 operator|new
 name|Param
 argument_list|(
-literal|"a"
+literal|"aProp"
 argument_list|,
 literal|"query"
 argument_list|,
