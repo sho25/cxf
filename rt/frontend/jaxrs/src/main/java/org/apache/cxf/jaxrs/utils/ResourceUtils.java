@@ -235,6 +235,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -6303,9 +6315,15 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|fine
+name|log
 argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
 literal|"No JAXB context can be created"
+argument_list|,
+name|ex
 argument_list|)
 expr_stmt|;
 block|}
