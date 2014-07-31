@@ -729,7 +729,11 @@ argument_list|,
 operator|new
 name|Class
 index|[]
-block|{}
+block|{
+name|Message
+operator|.
+name|class
+block|}
 argument_list|)
 decl_stmt|;
 name|Method
@@ -845,7 +849,9 @@ decl_stmt|;
 name|epi
 operator|.
 name|initializePolicy
-argument_list|()
+argument_list|(
+name|m
+argument_list|)
 expr_stmt|;
 name|EasyMock
 operator|.
@@ -971,6 +977,8 @@ operator|.
 name|getAggregatedServicePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -1000,6 +1008,8 @@ operator|.
 name|getAggregatedEndpointPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -1079,7 +1089,9 @@ decl_stmt|;
 name|epi
 operator|.
 name|initializePolicy
-argument_list|()
+argument_list|(
+literal|null
+argument_list|)
 expr_stmt|;
 name|assertSame
 argument_list|(

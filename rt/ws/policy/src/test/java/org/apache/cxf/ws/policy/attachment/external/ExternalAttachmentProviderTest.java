@@ -510,6 +510,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -546,6 +548,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 operator|.
 name|getAssertions
@@ -610,6 +614,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -646,6 +652,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 operator|.
 name|getAssertions
@@ -710,6 +718,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -746,6 +756,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 operator|.
 name|getAssertions
@@ -810,6 +822,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -846,6 +860,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 operator|.
 name|getAssertions
@@ -910,6 +926,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -946,6 +964,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 operator|.
 name|getAssertions

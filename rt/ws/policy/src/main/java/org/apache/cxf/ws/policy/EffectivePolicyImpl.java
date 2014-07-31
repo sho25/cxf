@@ -1051,6 +1051,8 @@ operator|.
 name|getAggregatedOperationPolicy
 argument_list|(
 name|boi
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1077,6 +1079,8 @@ operator|.
 name|getAggregatedMessagePolicy
 argument_list|(
 name|bmi
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1153,6 +1157,8 @@ operator|.
 name|getAggregatedOperationPolicy
 argument_list|(
 name|boi
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1179,6 +1185,8 @@ operator|.
 name|getAggregatedFaultPolicy
 argument_list|(
 name|bfi
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 expr_stmt|;

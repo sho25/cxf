@@ -147,9 +147,9 @@ name|cxf
 operator|.
 name|common
 operator|.
-name|i18n
+name|injection
 operator|.
-name|Message
+name|NoJSR250Annotations
 import|;
 end_import
 
@@ -161,11 +161,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|message
 operator|.
-name|injection
-operator|.
-name|NoJSR250Annotations
+name|Message
 import|;
 end_import
 
@@ -487,6 +485,9 @@ name|getEffectivePolicy
 parameter_list|(
 name|BindingFaultInfo
 name|bfi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|readDocument
@@ -553,6 +554,9 @@ name|getEffectivePolicy
 parameter_list|(
 name|BindingMessageInfo
 name|bmi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|readDocument
@@ -619,6 +623,9 @@ name|getEffectivePolicy
 parameter_list|(
 name|BindingOperationInfo
 name|boi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|readDocument
@@ -685,6 +692,9 @@ name|getEffectivePolicy
 parameter_list|(
 name|EndpointInfo
 name|ei
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|readDocument
@@ -751,6 +761,9 @@ name|getEffectivePolicy
 parameter_list|(
 name|ServiceInfo
 name|si
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|readDocument
@@ -861,6 +874,16 @@ operator|new
 name|PolicyException
 argument_list|(
 operator|new
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|i18n
+operator|.
 name|Message
 argument_list|(
 literal|"COULD_NOT_OPEN_ATTACHMENT_DOC_EXC"

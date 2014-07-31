@@ -3420,6 +3420,8 @@ operator|.
 name|getAggregatedServicePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -3483,6 +3485,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -3505,6 +3509,8 @@ operator|.
 name|getAggregatedServicePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3573,6 +3579,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -3590,6 +3598,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -3629,6 +3639,8 @@ operator|.
 name|getAggregatedServicePolicy
 argument_list|(
 name|si
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3672,6 +3684,8 @@ operator|.
 name|getAggregatedEndpointPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -3735,6 +3749,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -3757,6 +3773,8 @@ operator|.
 name|getAggregatedEndpointPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3825,6 +3843,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -3842,6 +3862,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -3881,6 +3903,8 @@ operator|.
 name|getAggregatedEndpointPolicy
 argument_list|(
 name|ei
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -3924,6 +3948,8 @@ operator|.
 name|getAggregatedOperationPolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -3987,6 +4013,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4009,6 +4037,8 @@ operator|.
 name|getAggregatedOperationPolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4077,6 +4107,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4094,6 +4126,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4133,6 +4167,8 @@ operator|.
 name|getAggregatedOperationPolicy
 argument_list|(
 name|boi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4180,6 +4216,8 @@ operator|.
 name|getAggregatedMessagePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -4243,6 +4281,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4265,6 +4305,8 @@ operator|.
 name|getAggregatedMessagePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4333,6 +4375,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4350,6 +4394,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4389,6 +4435,8 @@ operator|.
 name|getAggregatedMessagePolicy
 argument_list|(
 name|bmi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4436,6 +4484,8 @@ operator|.
 name|getAggregatedFaultPolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -4499,6 +4549,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4521,6 +4573,8 @@ operator|.
 name|getAggregatedFaultPolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4589,6 +4643,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4606,6 +4662,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 operator|.
@@ -4645,6 +4703,8 @@ operator|.
 name|getAggregatedFaultPolicy
 argument_list|(
 name|bfi
+argument_list|,
+literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -2302,6 +2302,9 @@ name|getAggregatedServicePolicy
 parameter_list|(
 name|ServiceInfo
 name|si
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 if|if
@@ -2339,6 +2342,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|si
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if
@@ -2389,6 +2394,9 @@ name|getAggregatedEndpointPolicy
 parameter_list|(
 name|EndpointInfo
 name|ei
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Policy
@@ -2413,6 +2421,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|ei
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if
@@ -2463,6 +2473,9 @@ name|getAggregatedOperationPolicy
 parameter_list|(
 name|BindingOperationInfo
 name|boi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Policy
@@ -2487,6 +2500,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|boi
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if
@@ -2537,6 +2552,9 @@ name|getAggregatedMessagePolicy
 parameter_list|(
 name|BindingMessageInfo
 name|bmi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Policy
@@ -2561,6 +2579,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bmi
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if
@@ -2611,6 +2631,9 @@ name|getAggregatedFaultPolicy
 parameter_list|(
 name|BindingFaultInfo
 name|bfi
+parameter_list|,
+name|Message
+name|m
 parameter_list|)
 block|{
 name|Policy
@@ -2635,6 +2658,8 @@ operator|.
 name|getEffectivePolicy
 argument_list|(
 name|bfi
+argument_list|,
+name|m
 argument_list|)
 decl_stmt|;
 if|if

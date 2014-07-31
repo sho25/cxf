@@ -667,7 +667,9 @@ name|m
 parameter_list|)
 block|{
 name|initializePolicy
-argument_list|()
+argument_list|(
+name|m
+argument_list|)
 expr_stmt|;
 name|checkExactlyOnes
 argument_list|()
@@ -693,7 +695,10 @@ expr_stmt|;
 block|}
 name|void
 name|initializePolicy
-parameter_list|()
+parameter_list|(
+name|Message
+name|m
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -712,6 +717,8 @@ name|ei
 operator|.
 name|getService
 argument_list|()
+argument_list|,
+name|m
 argument_list|)
 expr_stmt|;
 name|policy
@@ -725,6 +732,8 @@ operator|.
 name|getAggregatedEndpointPolicy
 argument_list|(
 name|ei
+argument_list|,
+name|m
 argument_list|)
 argument_list|)
 expr_stmt|;
