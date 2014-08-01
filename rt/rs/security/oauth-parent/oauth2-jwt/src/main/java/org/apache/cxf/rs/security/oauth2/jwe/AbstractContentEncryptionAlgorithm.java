@@ -113,7 +113,7 @@ specifier|final
 name|int
 name|DEFAULT_IV_SIZE
 init|=
-literal|96
+literal|128
 decl_stmt|;
 specifier|private
 specifier|static
@@ -283,7 +283,8 @@ name|CryptoUtils
 operator|.
 name|generateSecureRandomBytes
 argument_list|(
-name|DEFAULT_IV_SIZE
+name|getIvSize
+argument_list|()
 argument_list|)
 return|;
 block|}
@@ -326,6 +327,15 @@ parameter_list|()
 block|{
 return|return
 name|authTagLen
+return|;
+block|}
+specifier|protected
+name|int
+name|getIvSize
+parameter_list|()
+block|{
+return|return
+name|DEFAULT_IV_SIZE
 return|;
 block|}
 block|}
