@@ -369,9 +369,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|A192CBC_HS354_ALGO
+name|A192CBC_HS384_ALGO
 init|=
-literal|"A192CBC-HS354"
+literal|"A192CBC-HS384"
 decl_stmt|;
 specifier|public
 specifier|static

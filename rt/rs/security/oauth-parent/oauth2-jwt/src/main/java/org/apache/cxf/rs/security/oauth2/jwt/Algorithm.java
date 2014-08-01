@@ -243,11 +243,11 @@ argument_list|,
 literal|128
 argument_list|)
 block|,
-name|A192CBC_HS354
+name|A192CBC_HS384
 argument_list|(
 name|JwtConstants
 operator|.
-name|A192CBC_HS354_ALGO
+name|A192CBC_HS384_ALGO
 argument_list|,
 literal|"AES/CBC/PKCS7Padding"
 argument_list|,
@@ -645,7 +645,7 @@ name|AES_CBC_ALGO_JAVA
 argument_list|,
 name|JwtConstants
 operator|.
-name|A192CBC_HS354_ALGO
+name|A192CBC_HS384_ALGO
 argument_list|)
 expr_stmt|;
 name|JAVA_TO_JWT_NAMES
@@ -885,7 +885,7 @@ name|put
 argument_list|(
 name|JwtConstants
 operator|.
-name|A192CBC_HS354_ALGO
+name|A192CBC_HS384_ALGO
 argument_list|,
 name|AES_CBC_ALGO_JAVA
 argument_list|)
