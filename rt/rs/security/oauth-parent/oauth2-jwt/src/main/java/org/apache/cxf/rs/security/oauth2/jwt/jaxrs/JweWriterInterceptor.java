@@ -674,7 +674,7 @@ argument_list|()
 argument_list|,
 name|encryption
 operator|.
-name|getAuthTagLen
+name|getAuthTagProducer
 argument_list|()
 argument_list|)
 decl_stmt|;
