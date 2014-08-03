@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jaxrs
+operator|.
+name|cdi
 package|;
 end_package
 

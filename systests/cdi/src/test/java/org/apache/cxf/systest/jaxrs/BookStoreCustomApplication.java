@@ -125,6 +125,24 @@ name|ValidationExceptionMapper
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|cdi
+operator|.
+name|BookStore
+import|;
+end_import
+
 begin_class
 annotation|@
 name|ApplicationPath

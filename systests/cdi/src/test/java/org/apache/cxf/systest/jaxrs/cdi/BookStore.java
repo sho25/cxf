@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|jaxrs
+operator|.
+name|cdi
 package|;
 end_package
 
@@ -196,6 +198,22 @@ operator|.
 name|core
 operator|.
 name|UriInfo
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|BookStoreService
 import|;
 end_import
 

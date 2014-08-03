@@ -57,6 +57,24 @@ name|Named
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|cdi
+operator|.
+name|Book
+import|;
+end_import
+
 begin_class
 annotation|@
 name|Named
