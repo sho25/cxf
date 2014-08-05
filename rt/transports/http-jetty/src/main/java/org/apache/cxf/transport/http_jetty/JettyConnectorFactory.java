@@ -40,18 +40,13 @@ specifier|public
 interface|interface
 name|JettyConnectorFactory
 block|{
-comment|/**      * Create a Listener.      *       * @param port the listen port      */
+comment|/**      * Create a Listener.      * @param jettyHTTPServerEngine       *       * @param host the host to bind to.  IP address or hostname is allowed. null to bind to all hosts.      * @param port the listen port      */
 name|AbstractConnector
 name|createConnector
 parameter_list|(
-name|int
-name|port
-parameter_list|)
-function_decl|;
-comment|/**      * Create a Listener.      *       * @param host the host to bind to.  IP address or hostname is allowed. null to bind to all hosts.      * @param port the listen port      */
-name|AbstractConnector
-name|createConnector
-parameter_list|(
+name|JettyHTTPServerEngine
+name|jettyHTTPServerEngine
+parameter_list|,
 name|String
 name|host
 parameter_list|,
