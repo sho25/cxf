@@ -186,6 +186,10 @@ literal|"-p"
 block|,
 literal|"custom.service"
 block|,
+literal|"-tMap"
+block|,
+literal|"{http://www.w3.org/2001/XMLSchema}date=java.util.List..String"
+block|,
 literal|"-async getName,delete"
 block|,
 literal|"-compile"
