@@ -336,6 +336,8 @@ specifier|public
 name|void
 name|testMakeSureTransportFactoryHasEngineFactoryConfigured
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 comment|// This file configures the factory to configure
 comment|// port 1234 with default TLS.
@@ -389,8 +391,6 @@ name|engine
 init|=
 literal|null
 decl_stmt|;
-try|try
-block|{
 name|engine
 operator|=
 name|factory
@@ -402,21 +402,6 @@ argument_list|,
 literal|"https"
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-name|fail
-argument_list|(
-literal|"Error getting factory"
-operator|+
-name|e
-argument_list|)
-expr_stmt|;
-block|}
 name|assertNotNull
 argument_list|(
 literal|"Engine is not available."
