@@ -568,6 +568,10 @@ decl_stmt|;
 if|if
 condition|(
 name|authHeaders
+operator|==
+literal|null
+operator|||
+name|authHeaders
 operator|.
 name|size
 argument_list|()
