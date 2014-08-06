@@ -665,6 +665,15 @@ name|SC_FROM_JAAS_SUBJECT
 init|=
 literal|"ws-security.sc.jaas-subject"
 decl_stmt|;
+comment|/**      * A delegated credential to use for WS-Security. Currently only a Kerberos GSSCredential      * Object is supported. This is used to retrieve a service ticket instead of using the      * client credentials.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DELEGATED_CREDENTIAL
+init|=
+literal|"ws-security.delegated.credential"
+decl_stmt|;
 comment|//
 comment|// Internal tags
 comment|//
@@ -836,6 +845,8 @@ block|,
 name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
 block|,
 name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
+block|,
+name|DELEGATED_CREDENTIAL
 block|}
 argument_list|)
 argument_list|)
