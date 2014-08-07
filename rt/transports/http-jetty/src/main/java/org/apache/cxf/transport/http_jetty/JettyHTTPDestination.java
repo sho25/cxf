@@ -871,7 +871,7 @@ name|e
 argument_list|)
 throw|;
 block|}
-comment|// pick the handler supportig websocket if jetty-websocket is available otherwise pick the default handler.
+comment|// pick the handler supporting websocket if jetty-websocket is available otherwise pick the default handler.
 name|JettyHTTPHandler
 name|jhd
 init|=
