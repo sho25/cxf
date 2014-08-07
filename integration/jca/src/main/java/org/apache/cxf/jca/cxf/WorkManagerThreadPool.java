@@ -327,6 +327,20 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|public
+name|void
+name|execute
+parameter_list|(
+name|Runnable
+name|command
+parameter_list|)
+block|{
+name|dispatch
+argument_list|(
+name|command
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
