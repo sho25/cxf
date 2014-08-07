@@ -536,18 +536,28 @@ operator|++
 expr_stmt|;
 block|}
 block|}
-name|assertEquals
+comment|//Jetty 8 and 9 use different numbers of threads for the connectors and internal management.
+comment|//Make sure we have some that took longer and some that took shorter
+name|assertTrue
 argument_list|(
-literal|3
-argument_list|,
 name|countLess
+operator|>=
+literal|2
+operator|&&
+name|countLess
+operator|<=
+literal|3
 argument_list|)
 expr_stmt|;
-name|assertEquals
+name|assertTrue
 argument_list|(
-literal|2
-argument_list|,
 name|countMore
+operator|>=
+literal|2
+operator|&&
+name|countMore
+operator|<=
+literal|3
 argument_list|)
 expr_stmt|;
 block|}

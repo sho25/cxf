@@ -149,23 +149,6 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testEmptyHostHeader
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-name|sendQuery
-argument_list|(
-literal|""
-argument_list|,
-literal|"HTTP/1.1 200 OK"
-argument_list|)
-expr_stmt|;
-block|}
-annotation|@
-name|Test
-specifier|public
-name|void
 name|testCorrectHostHeader
 parameter_list|()
 throws|throws

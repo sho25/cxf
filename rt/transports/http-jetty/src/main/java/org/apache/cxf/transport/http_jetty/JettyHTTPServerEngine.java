@@ -1506,9 +1506,6 @@ expr_stmt|;
 name|addServerMBean
 argument_list|()
 expr_stmt|;
-name|setupThreadPool
-argument_list|()
-expr_stmt|;
 if|if
 condition|(
 name|connector
@@ -1552,6 +1549,9 @@ name|addConnector
 argument_list|(
 name|connector
 argument_list|)
+expr_stmt|;
+name|setupThreadPool
+argument_list|()
 expr_stmt|;
 comment|/*              * The server may have no handler, it might have a collection handler,              * it might have a one-shot. We need to add one or more of ours.              *              */
 name|int
