@@ -509,35 +509,6 @@ argument_list|,
 name|factory
 argument_list|)
 expr_stmt|;
-comment|// The Engine for port 1234 was configured for TLS.
-comment|// and the connector which is injected into the engine
-comment|// should be an instance of SslSocketConnector
-comment|// here will throw an error if it is not.
-try|try
-block|{
-name|factory
-operator|.
-name|createJettyHTTPServerEngine
-argument_list|(
-literal|1234
-argument_list|,
-literal|"https"
-argument_list|)
-expr_stmt|;
-name|fail
-argument_list|(
-literal|"A configure error should be thrown here "
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Exception
-name|e
-parameter_list|)
-block|{
-comment|// experct the exception
-block|}
 block|}
 block|}
 end_class
