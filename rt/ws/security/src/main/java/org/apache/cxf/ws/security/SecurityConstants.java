@@ -269,6 +269,15 @@ name|RETURN_SECURITY_ERROR
 init|=
 literal|"ws-security.return.security.error"
 decl_stmt|;
+comment|/**      * Whether to use credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a GSSCredential Object from the Message Context using the       * DELEGATED_CREDENTIAL configuration tag below, and then use this to obtain a service ticket.      * The default is "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_USE_CREDENTIAL_DELEGATION
+init|=
+literal|"ws-security.kerberos.use.credential.delegation"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -847,6 +856,8 @@ block|,
 name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
 block|,
 name|DELEGATED_CREDENTIAL
+block|,
+name|KERBEROS_USE_CREDENTIAL_DELEGATION
 block|}
 argument_list|)
 argument_list|)
