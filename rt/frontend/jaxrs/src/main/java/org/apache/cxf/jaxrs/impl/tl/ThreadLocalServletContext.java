@@ -1242,6 +1242,20 @@ name|getJspConfigDescriptor
 argument_list|()
 return|;
 block|}
+comment|//Servlet 3.1 additions
+specifier|public
+name|String
+name|getVirtualServerName
+parameter_list|()
+block|{
+return|return
+name|get
+argument_list|()
+operator|.
+name|getVirtualServerName
+argument_list|()
+return|;
+block|}
 block|}
 end_class
 

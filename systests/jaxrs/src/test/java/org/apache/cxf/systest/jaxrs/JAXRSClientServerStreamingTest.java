@@ -733,7 +733,7 @@ name|header
 argument_list|(
 literal|"fail-write"
 argument_list|,
-literal|""
+literal|"yes"
 argument_list|)
 expr_stmt|;
 name|Response

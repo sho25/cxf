@@ -746,6 +746,24 @@ name|getStatus
 argument_list|()
 return|;
 block|}
+comment|//Servlet 3.1 additions
+specifier|public
+name|void
+name|setContentLengthLong
+parameter_list|(
+name|long
+name|len
+parameter_list|)
+block|{
+name|get
+argument_list|()
+operator|.
+name|setContentLengthLong
+argument_list|(
+name|len
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 

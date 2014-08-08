@@ -557,9 +557,21 @@ name|Level
 operator|.
 name|INFO
 argument_list|,
-literal|"getAttribute({0})"
+literal|"getAttribute({0}) -> {1}"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 name|name
+block|,
+name|attributes
+operator|.
+name|get
+argument_list|(
+name|name
+argument_list|)
+block|}
 argument_list|)
 expr_stmt|;
 block|}
@@ -1586,7 +1598,12 @@ name|Level
 operator|.
 name|INFO
 argument_list|,
-literal|"getContextPath"
+literal|"getContextPath -> "
+operator|+
+name|webSocketHolder
+operator|.
+name|getContextPath
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return
@@ -1892,17 +1909,6 @@ name|String
 name|getPathInfo
 parameter_list|()
 block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|INFO
-argument_list|,
-literal|"getPathInfo"
-argument_list|)
-expr_stmt|;
 name|String
 name|uri
 init|=
@@ -1923,6 +1929,23 @@ operator|.
 name|getServletPath
 argument_list|()
 decl_stmt|;
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
+literal|"getPathInfo "
+operator|+
+name|servletpath
+operator|+
+literal|" "
+operator|+
+name|uri
+argument_list|)
+expr_stmt|;
 comment|//TODO remove the query string part
 comment|//REVISIT may cache this value in requstHeaders?
 return|return
@@ -1944,17 +1967,6 @@ name|String
 name|getPathTranslated
 parameter_list|()
 block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|INFO
-argument_list|,
-literal|"getPathTranslated"
-argument_list|)
-expr_stmt|;
 name|String
 name|path
 init|=
@@ -1989,6 +2001,23 @@ operator|.
 name|getPathInfo
 argument_list|()
 decl_stmt|;
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
+literal|"getPathTranslated "
+operator|+
+name|path
+operator|+
+literal|" "
+operator|+
+name|opathinfo
+argument_list|)
+expr_stmt|;
 name|int
 name|pos
 init|=
@@ -2085,7 +2114,16 @@ name|Level
 operator|.
 name|INFO
 argument_list|,
-literal|"getRequestURI"
+literal|"getRequestURI "
+operator|+
+name|requestHeaders
+operator|.
+name|get
+argument_list|(
+name|WebSocketUtils
+operator|.
+name|URI_KEY
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
@@ -2106,17 +2144,6 @@ name|StringBuffer
 name|getRequestURL
 parameter_list|()
 block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|INFO
-argument_list|,
-literal|"getRequestURL"
-argument_list|)
-expr_stmt|;
 name|StringBuffer
 name|sb
 init|=
@@ -2152,6 +2179,19 @@ operator|.
 name|length
 argument_list|()
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|,
+literal|"getRequestURL "
+operator|+
+name|uri
 argument_list|)
 expr_stmt|;
 return|return
@@ -2195,7 +2235,12 @@ name|Level
 operator|.
 name|INFO
 argument_list|,
-literal|"getServletPath"
+literal|"getServletPath "
+operator|+
+name|webSocketHolder
+operator|.
+name|getServletPath
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return
