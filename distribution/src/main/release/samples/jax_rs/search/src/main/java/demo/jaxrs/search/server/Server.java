@@ -250,6 +250,13 @@ argument_list|()
 decl_stmt|;
 name|sf
 operator|.
+name|setProperties
+argument_list|(
+name|properties
+argument_list|)
+expr_stmt|;
+name|sf
+operator|.
 name|setResourceClasses
 argument_list|(
 name|Catalog
