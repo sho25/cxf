@@ -131,7 +131,7 @@ name|iv
 argument_list|)
 argument_list|,
 operator|new
-name|DirectKeyAlgorithm
+name|DirectKeyEncryptionAlgorithm
 argument_list|()
 argument_list|)
 expr_stmt|;

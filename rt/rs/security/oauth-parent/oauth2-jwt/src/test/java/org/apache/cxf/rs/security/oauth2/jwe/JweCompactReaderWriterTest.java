@@ -741,11 +741,11 @@ name|getJwtName
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|AesWrapKeyAlgorithm
+name|AesWrapKeyEncryptionAlgorithm
 name|keyEncryption
 init|=
 operator|new
-name|AesWrapKeyAlgorithm
+name|AesWrapKeyEncryptionAlgorithm
 argument_list|(
 name|Base64UrlUtility
 operator|.

@@ -377,7 +377,7 @@ name|oauth2
 operator|.
 name|jwe
 operator|.
-name|RSAOaepKeyEncryption
+name|RSAOaepKeyEncryptionAlgorithm
 import|;
 end_import
 
@@ -934,7 +934,7 @@ argument_list|(
 name|headers
 argument_list|,
 operator|new
-name|RSAOaepKeyEncryption
+name|RSAOaepKeyEncryptionAlgorithm
 argument_list|(
 operator|(
 name|RSAPublicKey

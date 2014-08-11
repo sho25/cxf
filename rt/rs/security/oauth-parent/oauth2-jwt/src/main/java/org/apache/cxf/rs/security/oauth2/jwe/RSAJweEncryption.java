@@ -94,7 +94,7 @@ name|contentEncryptionJwtAlgo
 argument_list|)
 argument_list|,
 operator|new
-name|RSAOaepKeyEncryption
+name|RSAOaepKeyEncryptionAlgorithm
 argument_list|(
 name|publicKey
 argument_list|,
@@ -215,7 +215,7 @@ block|{
 name|this
 argument_list|(
 operator|new
-name|RSAOaepKeyEncryption
+name|RSAOaepKeyEncryptionAlgorithm
 argument_list|(
 name|publicKey
 argument_list|,
@@ -235,7 +235,7 @@ block|}
 specifier|public
 name|RSAJweEncryption
 parameter_list|(
-name|RSAOaepKeyEncryption
+name|RSAOaepKeyEncryptionAlgorithm
 name|keyEncryptionAlgorithm
 parameter_list|,
 name|JweHeaders
