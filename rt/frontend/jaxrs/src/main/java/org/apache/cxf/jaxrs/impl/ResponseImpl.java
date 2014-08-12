@@ -2369,7 +2369,10 @@ operator|.
 name|getName
 argument_list|()
 else|:
-literal|null
+name|cls
+operator|.
+name|getName
+argument_list|()
 operator|)
 argument_list|)
 throw|;
