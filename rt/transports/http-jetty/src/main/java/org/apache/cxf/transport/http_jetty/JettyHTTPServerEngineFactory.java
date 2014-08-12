@@ -1086,6 +1086,15 @@ operator|.
 name|getMaxThreads
 argument_list|()
 decl_stmt|;
+specifier|final
+name|String
+name|threadNamePrefix
+init|=
+name|fallbackThreadingParameters
+operator|.
+name|getThreadNamePrefix
+argument_list|()
+decl_stmt|;
 name|LOG
 operator|.
 name|log
@@ -1105,6 +1114,8 @@ block|,
 name|min
 block|,
 name|max
+block|,
+name|threadNamePrefix
 block|}
 argument_list|)
 expr_stmt|;

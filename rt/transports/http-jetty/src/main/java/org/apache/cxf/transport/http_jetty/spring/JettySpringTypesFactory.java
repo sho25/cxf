@@ -415,6 +415,16 @@ name|getMinThreads
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|params
+operator|.
+name|setThreadNamePrefix
+argument_list|(
+name|paramtype
+operator|.
+name|getThreadNamePrefix
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|params
 return|;
