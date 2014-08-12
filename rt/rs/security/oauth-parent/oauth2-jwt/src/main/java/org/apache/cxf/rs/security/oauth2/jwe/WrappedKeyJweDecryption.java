@@ -209,7 +209,7 @@ parameter_list|,
 name|JwtHeadersReader
 name|reader
 parameter_list|,
-name|ContentEncryptionCipherProperties
+name|ContentDecryptionAlgorithm
 name|cipherProps
 parameter_list|)
 block|{

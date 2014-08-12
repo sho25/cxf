@@ -185,7 +185,7 @@ name|AbstractJweEncryption
 implements|implements
 name|JweEncryptionProvider
 block|{
-specifier|private
+specifier|protected
 specifier|static
 specifier|final
 name|int
@@ -428,15 +428,6 @@ argument_list|)
 return|;
 block|}
 specifier|protected
-name|int
-name|getAuthTagLen
-parameter_list|()
-block|{
-return|return
-name|DEFAULT_AUTH_TAG_LENGTH
-return|;
-block|}
-specifier|protected
 name|byte
 index|[]
 name|getAAD
@@ -549,8 +540,7 @@ name|theIv
 argument_list|,
 name|cipher
 argument_list|,
-name|getAuthTagLen
-argument_list|()
+name|DEFAULT_AUTH_TAG_LENGTH
 argument_list|)
 return|;
 block|}
@@ -673,6 +663,11 @@ argument_list|(
 name|state
 operator|.
 name|secretKey
+argument_list|,
+name|this
+operator|.
+name|getContentEncryptionAlgoJwt
+argument_list|()
 argument_list|)
 argument_list|,
 name|state
@@ -692,6 +687,9 @@ parameter_list|(
 name|byte
 index|[]
 name|theCek
+parameter_list|,
+name|String
+name|algoJwt
 parameter_list|)
 block|{
 return|return

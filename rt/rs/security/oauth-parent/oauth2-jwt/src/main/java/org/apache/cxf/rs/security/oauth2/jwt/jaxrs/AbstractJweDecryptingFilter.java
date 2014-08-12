@@ -119,7 +119,7 @@ name|oauth2
 operator|.
 name|jwe
 operator|.
-name|JweDecryption
+name|JweDecryptionOutput
 import|;
 end_import
 
@@ -139,7 +139,7 @@ name|oauth2
 operator|.
 name|jwe
 operator|.
-name|JweDecryptionOutput
+name|JweDecryptionProvider
 import|;
 end_import
 
@@ -227,7 +227,7 @@ init|=
 literal|"rs.security.encryption.properties"
 decl_stmt|;
 specifier|private
-name|JweDecryption
+name|JweDecryptionProvider
 name|decryption
 decl_stmt|;
 specifier|private
@@ -248,7 +248,7 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|JweDecryption
+name|JweDecryptionProvider
 name|theDecryptor
 init|=
 name|getInitializedDecryption
@@ -301,7 +301,7 @@ specifier|public
 name|void
 name|setDecryption
 parameter_list|(
-name|JweDecryption
+name|JweDecryptionProvider
 name|decryptor
 parameter_list|)
 block|{
@@ -313,7 +313,7 @@ name|decryptor
 expr_stmt|;
 block|}
 specifier|protected
-name|JweDecryption
+name|JweDecryptionProvider
 name|getInitializedDecryption
 parameter_list|()
 block|{
