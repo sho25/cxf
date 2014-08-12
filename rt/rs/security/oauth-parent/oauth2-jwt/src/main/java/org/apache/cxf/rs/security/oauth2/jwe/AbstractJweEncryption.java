@@ -448,11 +448,14 @@ block|{
 return|return
 name|contentEncryptionAlgo
 operator|.
-name|getAAD
+name|getAdditionalAuthenticationData
+argument_list|(
+name|writer
+operator|.
+name|headersToJson
 argument_list|(
 name|theHeaders
-argument_list|,
-name|writer
+argument_list|)
 argument_list|)
 return|;
 block|}

@@ -21,27 +21,14 @@ name|jwe
 package|;
 end_package
 
-begin_interface
-interface|interface
-name|ContentEncryptionAlgorithm
+begin_class
+specifier|public
+class|class
+name|AesGcmContentDecryptionAlgorithm
 extends|extends
-name|ContentEncryptionCipherProperties
-block|{
-name|byte
-index|[]
-name|getInitVector
-parameter_list|()
-function_decl|;
-name|byte
-index|[]
-name|getContentEncryptionKey
-parameter_list|(
-name|JweHeaders
-name|headers
-parameter_list|)
-function_decl|;
-block|}
-end_interface
+name|AbstractContentEncryptionCipherProperties
+block|{ }
+end_class
 
 end_unit
 

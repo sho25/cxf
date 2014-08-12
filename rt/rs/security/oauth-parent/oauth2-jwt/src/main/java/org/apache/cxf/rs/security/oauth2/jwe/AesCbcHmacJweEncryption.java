@@ -1012,13 +1012,10 @@ name|Override
 specifier|public
 name|byte
 index|[]
-name|getAAD
+name|getAdditionalAuthenticationData
 parameter_list|(
-name|JweHeaders
-name|theHeaders
-parameter_list|,
-name|JwtHeadersWriter
-name|writer
+name|String
+name|headersJson
 parameter_list|)
 block|{
 return|return
