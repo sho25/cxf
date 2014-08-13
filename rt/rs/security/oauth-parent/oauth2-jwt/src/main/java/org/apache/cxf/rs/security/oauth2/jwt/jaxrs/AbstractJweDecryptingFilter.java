@@ -299,7 +299,7 @@ comment|// complete
 block|}
 specifier|public
 name|void
-name|setDecryption
+name|setDecryptionProvider
 parameter_list|(
 name|JweDecryptionProvider
 name|decryptor

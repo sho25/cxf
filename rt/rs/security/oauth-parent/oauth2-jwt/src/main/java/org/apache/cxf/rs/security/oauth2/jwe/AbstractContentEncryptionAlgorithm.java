@@ -199,6 +199,8 @@ name|generateSecureRandomBytes
 argument_list|(
 name|getIvSize
 argument_list|()
+operator|/
+literal|8
 argument_list|)
 return|;
 block|}
