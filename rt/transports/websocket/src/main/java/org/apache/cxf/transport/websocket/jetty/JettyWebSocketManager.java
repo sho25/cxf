@@ -211,6 +211,9 @@ name|init
 parameter_list|(
 name|AbstractHTTPDestination
 name|dest
+parameter_list|,
+name|Acceptor
+name|acceptor
 parameter_list|)
 block|{
 name|this
@@ -225,10 +228,7 @@ operator|=
 operator|new
 name|WebSocketFactory
 argument_list|(
-operator|(
-name|Acceptor
-operator|)
-name|dest
+name|acceptor
 argument_list|,
 literal|8192
 argument_list|)

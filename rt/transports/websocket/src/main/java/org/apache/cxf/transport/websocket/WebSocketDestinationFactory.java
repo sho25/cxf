@@ -378,6 +378,8 @@ name|serverEngineFactory
 argument_list|)
 return|;
 block|}
+else|else
+block|{
 return|return
 operator|new
 name|Jetty9WebSocketDestination
@@ -391,6 +393,7 @@ argument_list|,
 name|serverEngineFactory
 argument_list|)
 return|;
+block|}
 block|}
 else|else
 block|{
