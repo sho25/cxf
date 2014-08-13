@@ -454,7 +454,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -471,7 +471,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -741,7 +741,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -758,7 +758,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -890,7 +890,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -907,7 +907,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3365,7 +3365,7 @@ literal|"superbooks"
 argument_list|,
 literal|"custom.books"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3382,7 +3382,7 @@ literal|"superbooks"
 argument_list|,
 literal|"custom.books"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3522,7 +3522,7 @@ literal|"custom.books.schema"
 argument_list|,
 literal|"custom.books.service"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3539,7 +3539,7 @@ literal|"custom.books.schema"
 argument_list|,
 literal|"custom.books.service"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3668,7 +3668,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3685,7 +3685,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|10
+literal|11
 argument_list|,
 literal|true
 argument_list|)
@@ -3825,7 +3825,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|12
+literal|14
 argument_list|,
 literal|true
 argument_list|)
@@ -3842,7 +3842,7 @@ literal|"superbooks"
 argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 argument_list|,
-literal|12
+literal|14
 argument_list|,
 literal|true
 argument_list|)
