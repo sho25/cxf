@@ -387,7 +387,7 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
+name|Throwable
 name|mapperEx
 parameter_list|)
 block|{
