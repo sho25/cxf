@@ -1033,7 +1033,13 @@ operator|new
 name|JweWriterInterceptor
 argument_list|()
 decl_stmt|;
-comment|//jweWriter.setUseJweOutputStream(true);
+name|jweWriter
+operator|.
+name|setUseJweOutputStream
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 specifier|final
 name|String
 name|cekEncryptionKey
