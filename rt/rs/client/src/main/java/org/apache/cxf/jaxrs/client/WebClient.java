@@ -5296,6 +5296,11 @@ argument_list|,
 literal|false
 argument_list|)
 decl_stmt|;
+name|setSupportOnewayResponseProperty
+argument_list|(
+name|m
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|inAnns

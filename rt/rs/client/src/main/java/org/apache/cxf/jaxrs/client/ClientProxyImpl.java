@@ -4923,6 +4923,11 @@ name|isOneway
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|setSupportOnewayResponseProperty
+argument_list|(
+name|outMessage
+argument_list|)
+expr_stmt|;
 name|outMessage
 operator|.
 name|setContent
