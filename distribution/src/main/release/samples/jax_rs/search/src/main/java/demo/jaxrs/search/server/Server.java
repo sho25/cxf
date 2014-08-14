@@ -185,6 +185,14 @@ throws|throws
 name|Exception
 block|{
 specifier|final
+name|Storage
+name|storage
+init|=
+operator|new
+name|Storage
+argument_list|()
+decl_stmt|;
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -277,7 +285,9 @@ name|SingletonResourceProvider
 argument_list|(
 operator|new
 name|Catalog
-argument_list|()
+argument_list|(
+name|storage
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
