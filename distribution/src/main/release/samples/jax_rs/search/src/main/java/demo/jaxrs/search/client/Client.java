@@ -554,6 +554,26 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
+if|if
+condition|(
+name|status
+operator|==
+literal|409
+condition|)
+block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Document already exists: "
+operator|+
+name|filename
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 finally|finally
 block|{

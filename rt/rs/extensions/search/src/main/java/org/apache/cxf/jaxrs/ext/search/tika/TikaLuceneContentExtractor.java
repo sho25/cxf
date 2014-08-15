@@ -725,7 +725,10 @@ argument_list|(
 operator|new
 name|StringField
 argument_list|(
-literal|"source"
+name|documentMetadata
+operator|.
+name|getSourceFieldName
+argument_list|()
 argument_list|,
 name|documentMetadata
 operator|.
