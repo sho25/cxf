@@ -71,9 +71,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|commons
+name|cxf
 operator|.
-name|lang
+name|common
+operator|.
+name|util
 operator|.
 name|StringUtils
 import|;
@@ -709,7 +711,7 @@ condition|(
 operator|!
 name|StringUtils
 operator|.
-name|isBlank
+name|isEmpty
 argument_list|(
 name|documentMetadata
 operator|.
