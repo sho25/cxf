@@ -189,7 +189,7 @@ name|webappcontext
 operator|.
 name|setWar
 argument_list|(
-literal|"webapp"
+literal|"src/main/webapp"
 argument_list|)
 expr_stmt|;
 name|HandlerCollection
