@@ -224,7 +224,7 @@ specifier|final
 name|String
 name|HOSTED_MODE_ENDPOINT_URL
 init|=
-literal|"/log/browser/settings"
+literal|"settings"
 decl_stmt|;
 specifier|private
 specifier|static
