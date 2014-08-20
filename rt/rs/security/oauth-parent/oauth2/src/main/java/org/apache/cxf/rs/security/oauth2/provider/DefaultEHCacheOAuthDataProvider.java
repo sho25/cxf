@@ -453,7 +453,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-name|removeAccessToken
+name|revokeAccessToken
 argument_list|(
 name|accessToken
 operator|.
@@ -464,7 +464,7 @@ expr_stmt|;
 block|}
 specifier|protected
 name|boolean
-name|removeAccessToken
+name|revokeAccessToken
 parameter_list|(
 name|String
 name|accessTokenKey
@@ -481,7 +481,7 @@ return|;
 block|}
 specifier|protected
 name|RefreshToken
-name|removeRefreshToken
+name|revokeRefreshToken
 parameter_list|(
 name|Client
 name|client
@@ -553,6 +553,9 @@ specifier|protected
 name|void
 name|saveRefreshToken
 parameter_list|(
+name|ServerAccessToken
+name|at
+parameter_list|,
 name|RefreshToken
 name|refreshToken
 parameter_list|)

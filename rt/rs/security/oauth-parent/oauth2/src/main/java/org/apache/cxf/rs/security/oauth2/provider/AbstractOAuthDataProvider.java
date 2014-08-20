@@ -262,7 +262,7 @@ block|{
 name|RefreshToken
 name|oldRefreshToken
 init|=
-name|removeRefreshToken
+name|revokeRefreshToken
 argument_list|(
 name|client
 argument_list|,
@@ -310,7 +310,7 @@ name|OAuthServiceException
 block|{
 if|if
 condition|(
-name|removeAccessToken
+name|revokeAccessToken
 argument_list|(
 name|tokenKey
 argument_list|)
@@ -321,7 +321,7 @@ block|}
 name|RefreshToken
 name|oldRefreshToken
 init|=
-name|removeRefreshToken
+name|revokeRefreshToken
 argument_list|(
 name|client
 argument_list|,
@@ -346,7 +346,7 @@ name|getAccessTokens
 argument_list|()
 control|)
 block|{
-name|removeAccessToken
+name|revokeAccessToken
 argument_list|(
 name|accessTokenKey
 argument_list|)
@@ -630,6 +630,8 @@ argument_list|)
 expr_stmt|;
 name|saveRefreshToken
 argument_list|(
+name|at
+argument_list|,
 name|rt
 argument_list|)
 expr_stmt|;
@@ -799,6 +801,9 @@ specifier|abstract
 name|void
 name|saveRefreshToken
 parameter_list|(
+name|ServerAccessToken
+name|at
+parameter_list|,
 name|RefreshToken
 name|refreshToken
 parameter_list|)
@@ -806,7 +811,7 @@ function_decl|;
 specifier|protected
 specifier|abstract
 name|boolean
-name|removeAccessToken
+name|revokeAccessToken
 parameter_list|(
 name|String
 name|accessTokenKey
@@ -815,7 +820,7 @@ function_decl|;
 specifier|protected
 specifier|abstract
 name|RefreshToken
-name|removeRefreshToken
+name|revokeRefreshToken
 parameter_list|(
 name|Client
 name|client
