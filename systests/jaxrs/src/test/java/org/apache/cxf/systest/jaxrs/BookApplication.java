@@ -189,6 +189,12 @@ specifier|private
 name|long
 name|defaultId
 decl_stmt|;
+annotation|@
+name|Context
+specifier|private
+name|UriInfo
+name|uriInfo
+decl_stmt|;
 specifier|public
 name|BookApplication
 parameter_list|(
@@ -399,7 +405,9 @@ operator|.
 name|jaxrs
 operator|.
 name|BookStore
-argument_list|()
+argument_list|(
+name|uriInfo
+argument_list|)
 decl_stmt|;
 name|store
 operator|.

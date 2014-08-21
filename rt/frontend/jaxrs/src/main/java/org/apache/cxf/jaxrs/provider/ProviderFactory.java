@@ -6434,7 +6434,8 @@ name|candidates
 return|;
 block|}
 block|}
-specifier|protected
+specifier|public
+specifier|static
 name|ProviderInfo
 argument_list|<
 name|?
@@ -6459,6 +6460,12 @@ argument_list|,
 name|Object
 argument_list|>
 name|values
+parameter_list|,
+name|Bus
+name|theBus
+parameter_list|,
+name|boolean
+name|checkContexts
 parameter_list|)
 block|{
 name|Map
@@ -6495,8 +6502,7 @@ argument_list|,
 name|?
 argument_list|>
 operator|)
-name|getBus
-argument_list|()
+name|theBus
 operator|.
 name|getProperty
 argument_list|(
@@ -6776,8 +6782,9 @@ name|instance
 argument_list|,
 name|proxies
 argument_list|,
-name|getBus
-argument_list|()
+name|theBus
+argument_list|,
+name|checkContexts
 argument_list|)
 return|;
 block|}
@@ -7533,6 +7540,11 @@ operator|)
 name|o
 argument_list|,
 name|values
+argument_list|,
+name|getBus
+argument_list|()
+argument_list|,
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
