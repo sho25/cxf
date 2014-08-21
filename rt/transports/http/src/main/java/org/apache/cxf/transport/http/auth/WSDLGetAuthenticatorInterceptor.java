@@ -488,14 +488,6 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|//should return 401
-name|LOG
-operator|.
-name|info
-argument_list|(
-literal|"=====> no authorization header, should return 401"
-argument_list|)
-expr_stmt|;
 name|handle401response
 argument_list|(
 name|message
@@ -533,13 +525,6 @@ operator|==
 literal|null
 condition|)
 block|{
-name|LOG
-operator|.
-name|info
-argument_list|(
-literal|"=====> login failed, should return 401"
-argument_list|)
-expr_stmt|;
 name|handle401response
 argument_list|(
 name|message
@@ -606,13 +591,6 @@ operator|.
 name|setContentLength
 argument_list|(
 literal|0
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|info
-argument_list|(
-literal|"=====> reset response header"
 argument_list|)
 expr_stmt|;
 name|message
