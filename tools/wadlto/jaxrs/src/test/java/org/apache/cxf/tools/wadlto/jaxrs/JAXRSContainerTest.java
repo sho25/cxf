@@ -578,7 +578,7 @@ name|WadlToolConstants
 operator|.
 name|CFG_INHERIT_PARAMS
 argument_list|,
-literal|"=last"
+literal|"last"
 argument_list|)
 expr_stmt|;
 name|container
