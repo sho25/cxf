@@ -7955,7 +7955,7 @@ argument_list|(
 name|contextMessage
 argument_list|)
 operator|.
-name|getDynamicConfiguration
+name|getConfiguration
 argument_list|()
 expr_stmt|;
 block|}

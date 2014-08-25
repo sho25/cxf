@@ -1301,7 +1301,7 @@ argument_list|)
 expr_stmt|;
 name|pf
 operator|.
-name|setDynamicConfiguration
+name|setConfiguration
 argument_list|(
 name|getConfiguration
 argument_list|()
