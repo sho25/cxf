@@ -407,7 +407,7 @@ name|StandardAnalyzer
 argument_list|(
 name|Version
 operator|.
-name|LUCENE_40
+name|LUCENE_4_9
 argument_list|)
 decl_stmt|;
 name|directory
@@ -424,7 +424,7 @@ name|IndexWriterConfig
 argument_list|(
 name|Version
 operator|.
-name|LUCENE_40
+name|LUCENE_4_9
 argument_list|,
 name|analyzer
 argument_list|)
