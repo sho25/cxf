@@ -406,7 +406,7 @@ decl_stmt|;
 return|return
 name|cpf
 operator|.
-name|getDynamicConfiguration
+name|getConfiguration
 argument_list|()
 return|;
 block|}

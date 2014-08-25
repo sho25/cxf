@@ -437,6 +437,8 @@ decl_stmt|;
 name|assertEquals
 argument_list|(
 name|address
+operator|+
+literal|"?prop=cxf"
 argument_list|,
 name|response
 argument_list|)

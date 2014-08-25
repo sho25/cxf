@@ -337,7 +337,7 @@ name|jaxrs
 operator|.
 name|model
 operator|.
-name|ClassResourceInfo
+name|ApplicationInfo
 import|;
 end_import
 
@@ -353,7 +353,7 @@ name|jaxrs
 operator|.
 name|model
 operator|.
-name|ProviderInfo
+name|ClassResourceInfo
 import|;
 end_import
 
@@ -537,10 +537,7 @@ name|ResourceComparator
 name|rc
 decl_stmt|;
 specifier|private
-name|ProviderInfo
-argument_list|<
-name|Application
-argument_list|>
+name|ApplicationInfo
 name|appProvider
 decl_stmt|;
 specifier|private
@@ -584,10 +581,7 @@ block|{
 name|setApplication
 argument_list|(
 operator|new
-name|ProviderInfo
-argument_list|<
-name|Application
-argument_list|>
+name|ApplicationInfo
 argument_list|(
 name|app
 argument_list|,
@@ -601,10 +595,7 @@ specifier|public
 name|void
 name|setApplication
 parameter_list|(
-name|ProviderInfo
-argument_list|<
-name|Application
-argument_list|>
+name|ApplicationInfo
 name|provider
 parameter_list|)
 block|{
