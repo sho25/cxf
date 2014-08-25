@@ -1959,6 +1959,9 @@ name|T
 argument_list|>
 name|paramType
 parameter_list|,
+name|Type
+name|genericType
+parameter_list|,
 name|Annotation
 index|[]
 name|anns
@@ -2004,7 +2007,7 @@ name|getConverter
 argument_list|(
 name|paramType
 argument_list|,
-name|paramType
+name|genericType
 argument_list|,
 name|anns
 argument_list|)

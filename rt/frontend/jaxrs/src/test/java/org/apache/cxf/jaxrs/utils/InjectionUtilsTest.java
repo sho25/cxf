@@ -355,6 +355,10 @@ name|Id
 operator|.
 name|class
 argument_list|,
+name|Id
+operator|.
+name|class
+argument_list|,
 operator|new
 name|Annotation
 index|[]
@@ -1016,6 +1020,10 @@ argument_list|(
 literal|"AUDI"
 argument_list|,
 literal|false
+argument_list|,
+name|CarType
+operator|.
+name|class
 argument_list|,
 name|CarType
 operator|.

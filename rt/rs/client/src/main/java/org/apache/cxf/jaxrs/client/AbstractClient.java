@@ -4456,6 +4456,8 @@ name|createParameterHandler
 argument_list|(
 name|pClass
 argument_list|,
+name|pClass
+argument_list|,
 name|anns
 argument_list|)
 decl_stmt|;

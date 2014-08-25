@@ -2439,6 +2439,9 @@ name|T
 argument_list|>
 name|pClass
 parameter_list|,
+name|Type
+name|genericType
+parameter_list|,
 name|Annotation
 index|[]
 name|paramAnns
@@ -2548,6 +2551,8 @@ argument_list|(
 name|value
 argument_list|,
 name|pClass
+argument_list|,
+name|genericType
 argument_list|,
 name|paramAnns
 argument_list|,
@@ -3003,6 +3008,9 @@ name|T
 argument_list|>
 name|pClass
 parameter_list|,
+name|Type
+name|genericType
+parameter_list|,
 name|Annotation
 index|[]
 name|anns
@@ -3044,6 +3052,8 @@ operator|.
 name|createParameterHandler
 argument_list|(
 name|pClass
+argument_list|,
+name|genericType
 argument_list|,
 name|anns
 argument_list|)
@@ -4356,6 +4366,8 @@ name|decoded
 argument_list|,
 name|type
 argument_list|,
+name|type
+argument_list|,
 name|paramAnns
 argument_list|,
 name|pType
@@ -4687,6 +4699,8 @@ name|decoded
 argument_list|,
 name|valueType
 argument_list|,
+name|valueType
+argument_list|,
 name|paramAnns
 argument_list|,
 name|pathParam
@@ -4810,6 +4824,8 @@ argument_list|(
 name|value
 argument_list|,
 name|decoded
+argument_list|,
+name|valueType
 argument_list|,
 name|valueType
 argument_list|,
@@ -5910,6 +5926,8 @@ name|decoded
 argument_list|,
 name|realType
 argument_list|,
+name|realType
+argument_list|,
 name|paramAnns
 argument_list|,
 name|pathParam
@@ -6441,6 +6459,8 @@ argument_list|,
 name|decoded
 argument_list|,
 name|paramType
+argument_list|,
+name|genericType
 argument_list|,
 name|paramAnns
 argument_list|,
@@ -8831,6 +8851,8 @@ init|=
 name|createFromParameterHandler
 argument_list|(
 name|value
+argument_list|,
+name|cls
 argument_list|,
 name|cls
 argument_list|,
