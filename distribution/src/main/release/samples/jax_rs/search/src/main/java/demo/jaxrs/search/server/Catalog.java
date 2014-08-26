@@ -1721,7 +1721,6 @@ argument_list|)
 return|;
 block|}
 specifier|private
-specifier|static
 name|LuceneQueryVisitor
 argument_list|<
 name|SearchBean
@@ -1779,6 +1778,8 @@ argument_list|(
 literal|"ct"
 argument_list|,
 literal|"contents"
+argument_list|,
+name|analyzer
 argument_list|)
 decl_stmt|;
 name|visitor
