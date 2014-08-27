@@ -425,7 +425,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"configure(AtmosphereConfig)"
 argument_list|)
@@ -450,7 +450,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"onMessage(WebSocket, String)"
 argument_list|)
@@ -588,7 +588,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"invokeService(WebSocket, InputStream)"
 argument_list|)
@@ -879,7 +879,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|severe
 argument_list|(
 literal|"onError(WebSocket, WebSocketException)"
 argument_list|)

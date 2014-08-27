@@ -545,7 +545,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -555,7 +555,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getAttribute({0}) -> {1}"
 argument_list|,
@@ -600,7 +600,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getAttributeNames()"
 argument_list|)
@@ -631,7 +631,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getCharacterEncoding()"
 argument_list|)
@@ -653,7 +653,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getContentLength()"
 argument_list|)
@@ -675,7 +675,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getContentType()"
 argument_list|)
@@ -702,7 +702,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getDispatcherType()"
 argument_list|)
@@ -792,7 +792,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getLocalAddr()"
 argument_list|)
@@ -817,7 +817,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getLocalName()"
 argument_list|)
@@ -842,7 +842,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getLocalPort()"
 argument_list|)
@@ -867,7 +867,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getLocale()"
 argument_list|)
@@ -895,7 +895,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getLocales()"
 argument_list|)
@@ -926,7 +926,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -936,7 +936,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getParameter({0})"
 argument_list|,
@@ -968,7 +968,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getParameterMap()"
 argument_list|)
@@ -994,7 +994,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getParameterNames()"
 argument_list|)
@@ -1023,7 +1023,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1033,7 +1033,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getParameterValues({0})"
 argument_list|,
@@ -1058,7 +1058,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getProtocol"
 argument_list|)
@@ -1085,7 +1085,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getReader"
 argument_list|)
@@ -1121,7 +1121,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRealPath"
 argument_list|)
@@ -1143,7 +1143,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRemoteAddr"
 argument_list|)
@@ -1168,7 +1168,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRemoteHost"
 argument_list|)
@@ -1193,7 +1193,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRemotePort"
 argument_list|)
@@ -1222,7 +1222,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRequestDispatcher"
 argument_list|)
@@ -1244,7 +1244,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getScheme"
 argument_list|)
@@ -1283,7 +1283,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getServerPort"
 argument_list|)
@@ -1308,7 +1308,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getServletContext"
 argument_list|)
@@ -1333,7 +1333,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isAsyncStarted"
 argument_list|)
@@ -1355,7 +1355,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isAsyncSupported"
 argument_list|)
@@ -1377,7 +1377,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isSecure"
 argument_list|)
@@ -1405,7 +1405,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"removeAttribute"
 argument_list|)
@@ -1437,7 +1437,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setAttribute"
 argument_list|)
@@ -1470,7 +1470,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setCharacterEncoding"
 argument_list|)
@@ -1490,7 +1490,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"startAsync"
 argument_list|)
@@ -1519,7 +1519,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"startAsync"
 argument_list|)
@@ -1549,7 +1549,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"authenticate"
 argument_list|)
@@ -1571,7 +1571,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getAuthType"
 argument_list|)
@@ -1596,7 +1596,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getContextPath -> "
 operator|+
@@ -1627,7 +1627,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getCookies"
 argument_list|)
@@ -1652,7 +1652,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getDateHeader"
 argument_list|)
@@ -1677,7 +1677,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getHeader"
 argument_list|)
@@ -1707,7 +1707,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getHeaderNames"
 argument_list|)
@@ -1743,7 +1743,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getHeaders"
 argument_list|)
@@ -1784,7 +1784,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getIntHeader"
 argument_list|)
@@ -1828,7 +1828,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getMethod"
 argument_list|)
@@ -1864,7 +1864,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getPart"
 argument_list|)
@@ -1893,7 +1893,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getParts"
 argument_list|)
@@ -1935,7 +1935,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getPathInfo "
 operator|+
@@ -2007,7 +2007,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getPathTranslated "
 operator|+
@@ -2068,7 +2068,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getQueryString"
 argument_list|)
@@ -2090,7 +2090,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRemoteUser"
 argument_list|)
@@ -2112,7 +2112,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRequestURI "
 operator|+
@@ -2187,7 +2187,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRequestURL "
 operator|+
@@ -2211,7 +2211,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getRequestedSessionId"
 argument_list|)
@@ -2233,7 +2233,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getServletPath "
 operator|+
@@ -2263,7 +2263,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getSession"
 argument_list|)
@@ -2288,7 +2288,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getSession"
 argument_list|)
@@ -2310,7 +2310,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getUserPrincipal"
 argument_list|)
@@ -2335,7 +2335,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isRequestedSessionIdFromCookie"
 argument_list|)
@@ -2357,7 +2357,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isRequestedSessionIdFromURL"
 argument_list|)
@@ -2379,7 +2379,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isRequestedSessionIdFromUrl"
 argument_list|)
@@ -2401,7 +2401,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isRequestedSessionIdValid"
 argument_list|)
@@ -2426,7 +2426,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"isUserInRole"
 argument_list|)
@@ -2456,7 +2456,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"login"
 argument_list|)
@@ -2477,7 +2477,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"logout"
 argument_list|)

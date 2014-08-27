@@ -1757,7 +1757,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1767,7 +1767,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"onMessage({0})"
 argument_list|,
@@ -1876,7 +1876,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1886,7 +1886,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"onMessage({0})"
 argument_list|,

@@ -257,7 +257,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"flushBuffer()"
 argument_list|)
@@ -281,7 +281,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getBufferSize()"
 argument_list|)
@@ -303,7 +303,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getCharacterEncoding()"
 argument_list|)
@@ -325,7 +325,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getContentType()"
 argument_list|)
@@ -352,7 +352,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getLocale"
 argument_list|)
@@ -389,7 +389,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getWriter()"
 argument_list|)
@@ -434,7 +434,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"resetBuffer()"
 argument_list|)
@@ -458,7 +458,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -468,7 +468,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setBufferSize({0})"
 argument_list|,
@@ -496,7 +496,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -506,7 +506,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setCharacterEncoding({0})"
 argument_list|,
@@ -533,7 +533,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -543,7 +543,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setContentLength({0})"
 argument_list|,
@@ -584,7 +584,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -594,7 +594,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setContentType({0})"
 argument_list|,
@@ -630,7 +630,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -640,7 +640,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setLocale({0})"
 argument_list|,
@@ -667,7 +667,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -677,7 +677,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"addCookie({0})"
 argument_list|,
@@ -708,7 +708,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -718,7 +718,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"addDateHeader({0}, {1})"
 argument_list|,
@@ -755,7 +755,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -765,7 +765,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"addHeader({0}, {1})"
 argument_list|,
@@ -811,7 +811,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -821,7 +821,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"addIntHeader({0}, {1})"
 argument_list|,
@@ -869,7 +869,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -879,7 +879,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"containsHeader({0})"
 argument_list|,
@@ -914,7 +914,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -924,7 +924,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"encodeRedirectURL({0})"
 argument_list|,
@@ -954,7 +954,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -964,7 +964,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"encodeRedirectUrl({0})"
 argument_list|,
@@ -994,7 +994,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1004,7 +1004,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"encodeURL({0})"
 argument_list|,
@@ -1034,7 +1034,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1044,7 +1044,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"encodeUrl({0})"
 argument_list|,
@@ -1074,7 +1074,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1084,7 +1084,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getHeader({0})"
 argument_list|,
@@ -1112,7 +1112,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getHeaderNames()"
 argument_list|)
@@ -1142,7 +1142,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1152,7 +1152,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getHeaders({0})"
 argument_list|,
@@ -1177,7 +1177,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"getStatus()"
 argument_list|)
@@ -1229,7 +1229,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1239,7 +1239,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"sendError{0}"
 argument_list|,
@@ -1317,7 +1317,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1327,7 +1327,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"sendError({0}, {1})"
 argument_list|,
@@ -1420,7 +1420,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1430,7 +1430,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"sendRedirect({0})"
 argument_list|,
@@ -1461,7 +1461,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1471,7 +1471,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setDateHeader({0}, {1})"
 argument_list|,
@@ -1508,7 +1508,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1518,7 +1518,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setHeader({0}, {1})"
 argument_list|,
@@ -1564,7 +1564,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1574,7 +1574,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setIntHeader({0}, {1})"
 argument_list|,
@@ -1608,7 +1608,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1618,7 +1618,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setStatus({0})"
 argument_list|,
@@ -1664,7 +1664,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1674,7 +1674,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"setStatus({0}, {1})"
 argument_list|,
