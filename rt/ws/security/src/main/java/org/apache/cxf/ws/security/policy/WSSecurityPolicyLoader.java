@@ -61,6 +61,30 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -108,6 +132,22 @@ operator|.
 name|injection
 operator|.
 name|NoJSR250Annotations
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -1131,6 +1171,21 @@ name|PolicyInterceptorProviderLoader
 implements|,
 name|AssertionBuilderLoader
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|WSSecurityPolicyLoader
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 name|Bus
 name|bus
 decl_stmt|;
@@ -1164,6 +1219,19 @@ comment|//probably wss4j isn't found or something. We'll ignore this
 comment|//as the policy framework will then not find the providers
 comment|//and error out at that point.  If nothing uses ws-securitypolicy
 comment|//no warnings/errors will display
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"Could not load or register WS-SecurityPolicy related classes."
+argument_list|,
+name|t
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|public
