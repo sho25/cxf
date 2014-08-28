@@ -7956,7 +7956,9 @@ name|contextMessage
 argument_list|)
 operator|.
 name|getConfiguration
-argument_list|()
+argument_list|(
+name|contextMessage
+argument_list|)
 expr_stmt|;
 block|}
 elseif|else

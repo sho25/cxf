@@ -407,7 +407,9 @@ return|return
 name|cpf
 operator|.
 name|getConfiguration
-argument_list|()
+argument_list|(
+name|m
+argument_list|)
 return|;
 block|}
 specifier|private
