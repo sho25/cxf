@@ -1227,7 +1227,7 @@ control|)
 block|{
 specifier|final
 name|DocumentStoredFieldVisitor
-name|visitor
+name|fieldVisitor
 init|=
 operator|new
 name|DocumentStoredFieldVisitor
@@ -1245,14 +1245,14 @@ name|scoreDoc
 operator|.
 name|doc
 argument_list|,
-name|visitor
+name|fieldVisitor
 argument_list|)
 expr_stmt|;
 name|builder
 operator|.
 name|add
 argument_list|(
-name|visitor
+name|fieldVisitor
 operator|.
 name|getDocument
 argument_list|()
@@ -1791,7 +1791,7 @@ name|LuceneQueryVisitor
 argument_list|<
 name|SearchBean
 argument_list|>
-name|visitor
+name|newVisitor
 init|=
 operator|new
 name|LuceneQueryVisitor
@@ -1806,7 +1806,7 @@ argument_list|,
 name|analyzer
 argument_list|)
 decl_stmt|;
-name|visitor
+name|newVisitor
 operator|.
 name|setPrimitiveFieldTypeMap
 argument_list|(
@@ -1814,7 +1814,7 @@ name|fieldTypes
 argument_list|)
 expr_stmt|;
 return|return
-name|visitor
+name|newVisitor
 return|;
 block|}
 specifier|private
