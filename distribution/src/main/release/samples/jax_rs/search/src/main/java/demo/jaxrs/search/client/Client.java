@@ -263,7 +263,7 @@ name|url
 argument_list|,
 name|httpClient
 argument_list|,
-literal|"ct==Java"
+literal|"ct==websockets"
 argument_list|)
 expr_stmt|;
 name|search
@@ -272,7 +272,7 @@ name|url
 argument_list|,
 name|httpClient
 argument_list|,
-literal|"ct==websockets"
+literal|"ct==Java"
 argument_list|)
 expr_stmt|;
 name|search

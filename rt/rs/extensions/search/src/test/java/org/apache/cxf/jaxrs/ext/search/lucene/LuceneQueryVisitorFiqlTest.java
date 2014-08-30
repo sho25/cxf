@@ -890,6 +890,11 @@ argument_list|)
 expr_stmt|;
 name|visitor
 operator|.
+name|reset
+argument_list|()
+expr_stmt|;
+name|visitor
+operator|.
 name|visit
 argument_list|(
 name|filter2
@@ -1025,6 +1030,11 @@ operator|+
 name|index
 argument_list|)
 decl_stmt|;
+name|visitor
+operator|.
+name|reset
+argument_list|()
+expr_stmt|;
 name|visitor
 operator|.
 name|visit
