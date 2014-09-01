@@ -1657,6 +1657,8 @@ name|theType
 argument_list|,
 name|type
 argument_list|,
+name|genericType
+argument_list|,
 name|org
 operator|.
 name|apache
