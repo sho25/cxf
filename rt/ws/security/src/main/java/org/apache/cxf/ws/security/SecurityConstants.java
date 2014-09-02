@@ -278,6 +278,15 @@ name|KERBEROS_USE_CREDENTIAL_DELEGATION
 init|=
 literal|"ws-security.kerberos.use.credential.delegation"
 decl_stmt|;
+comment|/**      * Whether the Kerberos username is in servicename form or not. The default is "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
+init|=
+literal|"ws-security.kerberos.is.username.in.servicename.form"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -858,6 +867,8 @@ block|,
 name|DELEGATED_CREDENTIAL
 block|,
 name|KERBEROS_USE_CREDENTIAL_DELEGATION
+block|,
+name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
 block|}
 argument_list|)
 argument_list|)
