@@ -49,6 +49,14 @@ name|REPLYTO_PROPERTY
 init|=
 literal|"org.apache.cxf.ws.addressing.replyto"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DECOUPLED_ENDPOINT_BASE_PROPERTY
+init|=
+literal|"org.apache.cxf.ws.addressing.decoupled.endpoint.base"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
