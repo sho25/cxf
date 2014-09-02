@@ -49,7 +49,7 @@ block|{
 return|return
 name|JweCompactConsumer
 operator|.
-name|getEncryptedContentWithAuthTag
+name|getCipherWithAuthTag
 argument_list|(
 name|cipher
 argument_list|,

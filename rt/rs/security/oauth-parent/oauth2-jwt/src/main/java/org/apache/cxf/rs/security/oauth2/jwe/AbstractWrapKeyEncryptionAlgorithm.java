@@ -307,7 +307,9 @@ name|AlgorithmParameterSpec
 name|spec
 init|=
 name|getAlgorithmParameterSpec
-argument_list|()
+argument_list|(
+name|headers
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -407,7 +409,10 @@ block|}
 specifier|protected
 name|AlgorithmParameterSpec
 name|getAlgorithmParameterSpec
-parameter_list|()
+parameter_list|(
+name|JweHeaders
+name|headers
+parameter_list|)
 block|{
 return|return
 literal|null

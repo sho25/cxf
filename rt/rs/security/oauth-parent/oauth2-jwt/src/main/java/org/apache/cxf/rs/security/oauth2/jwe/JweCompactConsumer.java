@@ -391,7 +391,7 @@ name|getEncryptedContentWithAuthTag
 parameter_list|()
 block|{
 return|return
-name|getEncryptedContentWithAuthTag
+name|getCipherWithAuthTag
 argument_list|(
 name|encryptedContent
 argument_list|,
@@ -403,7 +403,7 @@ specifier|public
 specifier|static
 name|byte
 index|[]
-name|getEncryptedContentWithAuthTag
+name|getCipherWithAuthTag
 parameter_list|(
 name|byte
 index|[]
