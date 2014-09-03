@@ -1102,11 +1102,11 @@ argument_list|(
 name|is
 argument_list|)
 decl_stmt|;
-name|JsonWebKeyReaderWriter
+name|JwkSetReaderWriter
 name|reader
 init|=
 operator|new
-name|JsonWebKeyReaderWriter
+name|DefaultJwkSetReaderWriter
 argument_list|()
 decl_stmt|;
 return|return

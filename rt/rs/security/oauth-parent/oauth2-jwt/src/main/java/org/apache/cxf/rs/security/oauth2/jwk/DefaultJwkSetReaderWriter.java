@@ -44,10 +44,14 @@ end_import
 begin_class
 specifier|public
 class|class
-name|JsonWebKeyReaderWriter
+name|DefaultJwkSetReaderWriter
 extends|extends
 name|AbstractJwtObjectReaderWriter
+implements|implements
+name|JwkSetReaderWriter
 block|{
+annotation|@
+name|Override
 specifier|public
 name|String
 name|jwkToJson
@@ -63,6 +67,8 @@ name|jwk
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|String
 name|jwksToJson
@@ -78,6 +84,8 @@ name|jwks
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|JsonWebKey
 name|jsonToJwk
@@ -104,6 +112,8 @@ return|return
 name|jwk
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|JsonWebKeys
 name|jsonToJwks
