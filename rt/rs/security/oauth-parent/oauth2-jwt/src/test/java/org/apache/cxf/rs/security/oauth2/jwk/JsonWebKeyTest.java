@@ -1112,7 +1112,7 @@ decl_stmt|;
 return|return
 name|reader
 operator|.
-name|jsonToJwks
+name|jsonToJwkSet
 argument_list|(
 name|s
 argument_list|)
