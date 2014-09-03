@@ -69,8 +69,6 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|jwt
-operator|.
 name|jwk
 operator|.
 name|JsonWebKey
