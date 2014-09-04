@@ -414,7 +414,7 @@ name|keysMap
 init|=
 name|jwks
 operator|.
-name|getKeysMap
+name|getKeyIdMap
 argument_list|()
 decl_stmt|;
 name|assertEquals
