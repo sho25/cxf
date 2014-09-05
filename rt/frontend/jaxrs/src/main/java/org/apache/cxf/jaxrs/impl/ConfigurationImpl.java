@@ -63,6 +63,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|LinkedHashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Map
 import|;
 end_import
@@ -180,7 +190,7 @@ argument_list|>
 name|providers
 init|=
 operator|new
-name|HashMap
+name|LinkedHashMap
 argument_list|<
 name|Object
 argument_list|,
@@ -206,7 +216,7 @@ argument_list|>
 name|features
 init|=
 operator|new
-name|HashMap
+name|LinkedHashMap
 argument_list|<
 name|Feature
 argument_list|,
