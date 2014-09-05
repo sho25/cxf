@@ -881,7 +881,7 @@ name|super
 operator|.
 name|getValue
 argument_list|(
-name|RSA_PUBLIC_EXP
+name|RSA_MODULUS
 argument_list|)
 decl_stmt|;
 name|String
