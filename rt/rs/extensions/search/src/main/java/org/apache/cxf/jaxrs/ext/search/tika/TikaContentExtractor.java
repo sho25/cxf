@@ -659,6 +659,8 @@ name|ParseContext
 argument_list|()
 expr_stmt|;
 block|}
+try|try
+block|{
 name|parser
 operator|.
 name|parse
@@ -672,6 +674,47 @@ argument_list|,
 name|context
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+comment|// Starting from Tika 1.6 PDFParser (with other parsers to be updated in the future) will skip
+comment|// the content processing if the content handler is null. This can be used to optimize the
+comment|// extraction process. If we get an exception with a null handler then a given parser is still
+comment|// not ready to accept null handlers so lets retry with IgnoreContentHandler.
+if|if
+condition|(
+name|handler
+operator|==
+literal|null
+condition|)
+block|{
+name|parser
+operator|.
+name|parse
+argument_list|(
+name|in
+argument_list|,
+operator|new
+name|IgnoreContentHandler
+argument_list|()
+argument_list|,
+name|metadata
+argument_list|,
+name|context
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+throw|throw
+name|ex
+throw|;
+block|}
+block|}
 return|return
 operator|new
 name|TikaContent
@@ -772,9 +815,7 @@ operator|new
 name|ToTextContentHandler
 argument_list|()
 else|:
-operator|new
-name|IgnoreContentHandler
-argument_list|()
+literal|null
 decl_stmt|;
 return|return
 name|extract
@@ -844,6 +885,12 @@ name|getContent
 parameter_list|()
 block|{
 return|return
+name|contentHandler
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 name|contentHandler
 operator|.
 name|toString
