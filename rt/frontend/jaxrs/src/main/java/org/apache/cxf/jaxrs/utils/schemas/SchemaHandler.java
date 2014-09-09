@@ -490,6 +490,16 @@ argument_list|)
 operator|==
 operator|-
 literal|1
+operator|||
+name|loc
+operator|.
+name|lastIndexOf
+argument_list|(
+literal|'*'
+argument_list|)
+operator|!=
+operator|-
+literal|1
 condition|)
 block|{
 name|schemaURLs
