@@ -715,11 +715,11 @@ decl_stmt|;
 name|String
 name|expected1
 init|=
-literal|"{\"application\":{\"grammars\":{\"include\":{\"@href\":\"http:\\/\\/localhost:8080\\/baz"
+literal|"{\"application\":{\"grammars\":{\"include\":{\"@href\":\"http://localhost:8080/baz"
 operator|+
-literal|"\\/json.schema\"}},\"resources\":{\"@base\":\"http:\\/\\/localhost:8080\\/baz\","
+literal|"/json.schema\"}},\"resources\":{\"@base\":\"http://localhost:8080/baz\","
 operator|+
-literal|"\"resource\":{\"@path\":\"\\/bookstore\\/{id}\""
+literal|"\"resource\":{\"@path\":\"/bookstore/{id}\""
 decl_stmt|;
 name|assertTrue
 argument_list|(
@@ -734,9 +734,9 @@ expr_stmt|;
 name|String
 name|expected2
 init|=
-literal|"\"response\":{\"representation\":[{\"@mediaType\":\"application\\/xml\"},"
+literal|"\"response\":{\"representation\":[{\"@mediaType\":\"application/xml\"},"
 operator|+
-literal|"{\"@element\":\"Chapter\",\"@mediaType\":\"application\\/json\"}]}"
+literal|"{\"@element\":\"Chapter\",\"@mediaType\":\"application/json\"}]}"
 decl_stmt|;
 name|assertTrue
 argument_list|(
