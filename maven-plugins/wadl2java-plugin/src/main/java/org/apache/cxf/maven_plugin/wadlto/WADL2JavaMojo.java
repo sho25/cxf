@@ -582,7 +582,7 @@ name|includes
 argument_list|,
 name|excludes
 argument_list|,
-literal|null
+name|defaultOptions
 argument_list|,
 name|classesDir
 argument_list|)
