@@ -5142,6 +5142,15 @@ operator|.
 name|UT_SIGN
 argument_list|)
 expr_stmt|;
+name|actions
+operator|.
+name|add
+argument_list|(
+name|WSConstants
+operator|.
+name|ST_SIGNED
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|WSSecurityEngineResult

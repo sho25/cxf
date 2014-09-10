@@ -813,6 +813,13 @@ name|TAG_DATA_REF_URIS
 argument_list|)
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|dataRefs
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|WSDataRef
@@ -945,6 +952,7 @@ block|{
 return|return
 literal|false
 return|;
+block|}
 block|}
 block|}
 block|}
