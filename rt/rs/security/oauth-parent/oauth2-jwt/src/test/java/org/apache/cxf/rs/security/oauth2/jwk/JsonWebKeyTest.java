@@ -1102,11 +1102,11 @@ argument_list|(
 name|is
 argument_list|)
 decl_stmt|;
-name|JwkSetReaderWriter
+name|JwkReaderWriter
 name|reader
 init|=
 operator|new
-name|DefaultJwkSetReaderWriter
+name|DefaultJwkReaderWriter
 argument_list|()
 decl_stmt|;
 return|return

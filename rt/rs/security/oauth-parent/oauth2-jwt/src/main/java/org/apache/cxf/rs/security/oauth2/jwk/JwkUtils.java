@@ -191,7 +191,7 @@ argument_list|,
 name|props
 argument_list|,
 operator|new
-name|DefaultJwkSetReaderWriter
+name|DefaultJwkReaderWriter
 argument_list|()
 argument_list|)
 return|;
@@ -207,7 +207,7 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|JwkSetReaderWriter
+name|JwkReaderWriter
 name|reader
 parameter_list|)
 block|{
@@ -305,7 +305,7 @@ argument_list|,
 name|bus
 argument_list|,
 operator|new
-name|DefaultJwkSetReaderWriter
+name|DefaultJwkReaderWriter
 argument_list|()
 argument_list|)
 return|;
@@ -321,7 +321,7 @@ parameter_list|,
 name|Bus
 name|bus
 parameter_list|,
-name|JwkSetReaderWriter
+name|JwkReaderWriter
 name|reader
 parameter_list|)
 block|{
