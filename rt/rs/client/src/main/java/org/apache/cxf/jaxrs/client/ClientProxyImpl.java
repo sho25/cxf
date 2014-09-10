@@ -3637,6 +3637,13 @@ index|[]
 block|{}
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|value
+operator|!=
+literal|null
+condition|)
+block|{
 name|String
 name|annotationValue
 init|=
@@ -3668,6 +3675,7 @@ index|]
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
