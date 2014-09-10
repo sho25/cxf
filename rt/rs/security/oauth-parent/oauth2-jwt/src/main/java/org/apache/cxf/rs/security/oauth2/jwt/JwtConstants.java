@@ -175,6 +175,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|MEDIA_TYPE_JOSE_JSON
+init|=
+literal|"application/jose+json"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CLAIM_ISSUER
 init|=
 literal|"iss"
