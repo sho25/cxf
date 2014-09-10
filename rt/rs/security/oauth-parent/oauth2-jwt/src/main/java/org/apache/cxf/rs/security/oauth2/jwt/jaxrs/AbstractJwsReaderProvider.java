@@ -464,6 +464,10 @@ argument_list|(
 name|m
 argument_list|,
 name|props
+argument_list|,
+name|JsonWebKey
+operator|.
+name|KEY_OPER_VERIFY
 argument_list|)
 decl_stmt|;
 if|if

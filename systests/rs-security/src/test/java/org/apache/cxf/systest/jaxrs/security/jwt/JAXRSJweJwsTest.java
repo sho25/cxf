@@ -1144,7 +1144,7 @@ name|put
 argument_list|(
 literal|"rs.security.signature.properties"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/secret.jws.properties"
+literal|"org/apache/cxf/systest/jaxrs/security/secret.jwk.properties"
 argument_list|)
 expr_stmt|;
 name|BookStore

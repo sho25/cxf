@@ -496,6 +496,10 @@ argument_list|(
 name|m
 argument_list|,
 name|props
+argument_list|,
+name|JsonWebKey
+operator|.
+name|KEY_OPER_SIGN
 argument_list|)
 decl_stmt|;
 name|rsaSignatureAlgo

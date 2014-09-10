@@ -1013,6 +1013,10 @@ argument_list|(
 name|m
 argument_list|,
 name|props
+argument_list|,
+name|JsonWebKey
+operator|.
+name|KEY_OPER_ENCRYPT
 argument_list|)
 decl_stmt|;
 name|keyEncryptionAlgo
