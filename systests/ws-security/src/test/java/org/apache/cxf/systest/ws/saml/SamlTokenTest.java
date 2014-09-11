@@ -1303,6 +1303,8 @@ operator|new
 name|SamlCallbackHandler
 argument_list|(
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|samlCallbackHandler
@@ -4960,7 +4962,11 @@ name|callbackHandler
 init|=
 operator|new
 name|SamlCallbackHandler
-argument_list|()
+argument_list|(
+literal|true
+argument_list|,
+literal|true
+argument_list|)
 decl_stmt|;
 name|callbackHandler
 operator|.
