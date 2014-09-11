@@ -1265,6 +1265,10 @@ name|CryptoUtils
 operator|.
 name|getECPrivateKey
 argument_list|(
+name|JsonWebKey
+operator|.
+name|EC_CURVE_P256
+argument_list|,
 name|EC_PRIVATE_KEY_ENCODED
 argument_list|)
 decl_stmt|;
@@ -1294,6 +1298,10 @@ name|CryptoUtils
 operator|.
 name|getECPublicKey
 argument_list|(
+name|JsonWebKey
+operator|.
+name|EC_CURVE_P256
+argument_list|,
 name|EC_X_POINT_ENCODED
 argument_list|,
 name|EC_Y_POINT_ENCODED
