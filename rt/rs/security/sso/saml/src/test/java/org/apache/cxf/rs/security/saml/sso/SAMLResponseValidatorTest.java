@@ -533,7 +533,7 @@ name|setConfirmationMethod
 argument_list|(
 name|SAML2Constants
 operator|.
-name|CONF_BEARER
+name|CONF_SENDER_VOUCHES
 argument_list|)
 expr_stmt|;
 name|SAMLCallback
@@ -735,7 +735,7 @@ name|setConfirmationMethod
 argument_list|(
 name|SAML2Constants
 operator|.
-name|CONF_BEARER
+name|CONF_SENDER_VOUCHES
 argument_list|)
 expr_stmt|;
 name|SAMLCallback
@@ -953,7 +953,7 @@ name|setConfirmationMethod
 argument_list|(
 name|SAML2Constants
 operator|.
-name|CONF_BEARER
+name|CONF_SENDER_VOUCHES
 argument_list|)
 expr_stmt|;
 name|SAMLCallback
@@ -1268,7 +1268,7 @@ name|setConfirmationMethod
 argument_list|(
 name|SAML2Constants
 operator|.
-name|CONF_BEARER
+name|CONF_SENDER_VOUCHES
 argument_list|)
 expr_stmt|;
 name|SAMLCallback
@@ -1583,7 +1583,7 @@ name|setConfirmationMethod
 argument_list|(
 name|SAML2Constants
 operator|.
-name|CONF_BEARER
+name|CONF_SENDER_VOUCHES
 argument_list|)
 expr_stmt|;
 name|SAMLCallback

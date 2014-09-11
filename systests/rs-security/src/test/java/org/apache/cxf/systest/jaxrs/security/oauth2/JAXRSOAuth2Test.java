@@ -1032,15 +1032,6 @@ argument_list|,
 name|CRYPTO_RESOURCE_PROPERTIES
 argument_list|)
 expr_stmt|;
-name|properties
-operator|.
-name|put
-argument_list|(
-literal|"ws-security.self-sign-saml-assertion"
-argument_list|,
-literal|"true"
-argument_list|)
-expr_stmt|;
 name|bean
 operator|.
 name|setProperties
