@@ -1758,7 +1758,7 @@ operator|.
 name|getFactoryAlgorithm
 argument_list|()
 else|:
-name|KeyManagerFactory
+name|TrustManagerFactory
 operator|.
 name|getDefaultAlgorithm
 argument_list|()
