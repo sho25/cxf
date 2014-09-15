@@ -2027,6 +2027,13 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+if|if
+condition|(
+name|token
+operator|!=
+literal|null
+condition|)
+block|{
 specifier|final
 name|SecurityContext
 name|sc
@@ -2058,6 +2065,7 @@ block|}
 return|return
 literal|true
 return|;
+block|}
 block|}
 block|}
 block|}
