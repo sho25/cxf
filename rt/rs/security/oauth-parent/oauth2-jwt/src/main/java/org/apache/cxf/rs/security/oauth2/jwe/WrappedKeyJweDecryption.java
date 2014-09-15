@@ -173,7 +173,7 @@ block|}
 specifier|public
 name|WrappedKeyJweDecryption
 parameter_list|(
-name|WrappedKeyDecryptionAlgorithm
+name|KeyDecryptionAlgorithm
 name|keyDecryptionAlgo
 parameter_list|,
 name|JweCryptoProperties
@@ -200,7 +200,7 @@ block|}
 specifier|public
 name|WrappedKeyJweDecryption
 parameter_list|(
-name|WrappedKeyDecryptionAlgorithm
+name|KeyDecryptionAlgorithm
 name|keyDecryptionAlgo
 parameter_list|,
 name|JweCryptoProperties
