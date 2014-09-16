@@ -569,6 +569,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|RSSEC_KEY_PSWD_PROVIDER
+init|=
+literal|"rs.security.key.password.provider"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|RSSEC_SIG_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.signature.key.password.provider"

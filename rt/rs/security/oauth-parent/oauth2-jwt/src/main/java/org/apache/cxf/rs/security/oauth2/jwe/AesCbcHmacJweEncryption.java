@@ -370,7 +370,7 @@ name|String
 name|keyAlgo
 parameter_list|,
 name|String
-name|celAlgoJwt
+name|cekAlgoJwt
 parameter_list|,
 name|KeyEncryptionAlgorithm
 name|keyEncryptionAlgorithm
@@ -385,7 +385,7 @@ name|keyAlgo
 argument_list|,
 name|validateCekAlgorithm
 argument_list|(
-name|celAlgoJwt
+name|cekAlgoJwt
 argument_list|)
 argument_list|)
 argument_list|,
