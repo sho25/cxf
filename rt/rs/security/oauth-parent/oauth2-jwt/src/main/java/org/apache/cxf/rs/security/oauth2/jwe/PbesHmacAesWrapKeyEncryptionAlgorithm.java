@@ -751,16 +751,11 @@ argument_list|)
 expr_stmt|;
 name|headers
 operator|.
-name|setHeader
+name|setIntegerHeader
 argument_list|(
 literal|"p2c"
 argument_list|,
-name|Integer
-operator|.
-name|valueOf
-argument_list|(
 name|pbesCount
-argument_list|)
 argument_list|)
 expr_stmt|;
 specifier|final
