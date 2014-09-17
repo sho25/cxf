@@ -1215,6 +1215,12 @@ name|jwtKeyName
 argument_list|)
 argument_list|,
 name|key
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+name|key
 operator|.
 name|getEncoded
 argument_list|()
