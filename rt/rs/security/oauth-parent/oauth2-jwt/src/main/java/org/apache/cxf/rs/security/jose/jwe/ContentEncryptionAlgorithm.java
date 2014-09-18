@@ -28,6 +28,10 @@ name|ContentEncryptionAlgorithm
 extends|extends
 name|ContentEncryptionCipherProperties
 block|{
+name|String
+name|getAlgorithm
+parameter_list|()
+function_decl|;
 name|byte
 index|[]
 name|getInitVector

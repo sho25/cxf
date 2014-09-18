@@ -373,6 +373,17 @@ argument_list|(
 name|headers
 argument_list|,
 name|keyEncryption
+argument_list|,
+operator|new
+name|AesGcmContentEncryptionAlgorithm
+argument_list|(
+name|Algorithm
+operator|.
+name|A128GCM
+operator|.
+name|getJwtName
+argument_list|()
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|String

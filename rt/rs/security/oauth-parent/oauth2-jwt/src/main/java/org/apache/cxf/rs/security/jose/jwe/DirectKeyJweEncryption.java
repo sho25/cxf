@@ -128,6 +128,11 @@ argument_list|(
 name|cek
 argument_list|,
 name|iv
+argument_list|,
+name|headers
+operator|.
+name|getContentEncryptionAlgorithm
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;

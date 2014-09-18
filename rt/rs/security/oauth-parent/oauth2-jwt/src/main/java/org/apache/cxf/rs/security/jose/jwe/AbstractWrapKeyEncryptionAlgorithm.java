@@ -272,6 +272,17 @@ block|}
 annotation|@
 name|Override
 specifier|public
+name|String
+name|getAlgorithm
+parameter_list|()
+block|{
+return|return
+name|algorithm
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
 name|byte
 index|[]
 name|getEncryptedContentEncryptionKey
@@ -287,8 +298,6 @@ block|{
 name|checkAlgorithms
 argument_list|(
 name|headers
-argument_list|,
-name|algorithm
 argument_list|)
 expr_stmt|;
 name|KeyProperties
@@ -457,9 +466,6 @@ name|checkAlgorithms
 parameter_list|(
 name|JweHeaders
 name|headers
-parameter_list|,
-name|String
-name|defaultAlgo
 parameter_list|)
 block|{
 name|String
@@ -477,7 +483,7 @@ name|providedAlgo
 operator|==
 literal|null
 operator|&&
-name|defaultAlgo
+name|algorithm
 operator|==
 literal|null
 operator|)
@@ -487,7 +493,7 @@ name|providedAlgo
 operator|!=
 literal|null
 operator|&&
-name|defaultAlgo
+name|algorithm
 operator|!=
 literal|null
 operator|&&
@@ -496,7 +502,7 @@ name|providedAlgo
 operator|.
 name|equals
 argument_list|(
-name|defaultAlgo
+name|algorithm
 argument_list|)
 operator|)
 condition|)
@@ -523,7 +529,7 @@ block|}
 elseif|else
 if|if
 condition|(
-name|defaultAlgo
+name|algorithm
 operator|!=
 literal|null
 condition|)
@@ -532,12 +538,12 @@ name|headers
 operator|.
 name|setKeyEncryptionAlgorithm
 argument_list|(
-name|defaultAlgo
+name|algorithm
 argument_list|)
 expr_stmt|;
 name|checkAlgorithm
 argument_list|(
-name|defaultAlgo
+name|algorithm
 argument_list|)
 expr_stmt|;
 block|}

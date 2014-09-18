@@ -786,9 +786,6 @@ name|checkAlgorithms
 parameter_list|(
 name|JweHeaders
 name|headers
-parameter_list|,
-name|String
-name|defaultAlgo
 parameter_list|)
 block|{
 comment|// complete
@@ -1196,6 +1193,17 @@ argument_list|)
 expr_stmt|;
 return|return
 name|b
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|String
+name|getAlgorithm
+parameter_list|()
+block|{
+return|return
+name|keyAlgoJwt
 return|;
 block|}
 block|}

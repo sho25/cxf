@@ -2201,13 +2201,6 @@ name|AesCbcHmacJweEncryption
 argument_list|(
 name|Algorithm
 operator|.
-name|A128KW
-operator|.
-name|getJwtName
-argument_list|()
-argument_list|,
-name|Algorithm
-operator|.
 name|A128CBC_HS256
 operator|.
 name|getJwtName
