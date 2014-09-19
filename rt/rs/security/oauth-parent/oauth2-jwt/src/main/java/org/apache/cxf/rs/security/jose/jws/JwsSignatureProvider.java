@@ -46,6 +46,10 @@ specifier|public
 interface|interface
 name|JwsSignatureProvider
 block|{
+name|String
+name|getAlgorithm
+parameter_list|()
+function_decl|;
 name|JwsSignature
 name|createJwsSignature
 parameter_list|(

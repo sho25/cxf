@@ -1199,12 +1199,7 @@ operator|new
 name|HmacJwsSignatureProvider
 argument_list|(
 name|ENCODED_MAC_KEY
-argument_list|)
-decl_stmt|;
-name|hmacProvider
-operator|.
-name|setDefaultJwtAlgorithm
-argument_list|(
+argument_list|,
 name|Algorithm
 operator|.
 name|HmacSHA256
@@ -1212,7 +1207,7 @@ operator|.
 name|getJwtName
 argument_list|()
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|doTestJweJwsRsa
 argument_list|(
 name|address

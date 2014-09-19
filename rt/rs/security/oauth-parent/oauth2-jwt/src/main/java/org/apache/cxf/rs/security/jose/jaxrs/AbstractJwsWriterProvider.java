@@ -539,6 +539,8 @@ operator|new
 name|PrivateKeyJwsSignatureProvider
 argument_list|(
 name|pk
+argument_list|,
+name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
 block|}

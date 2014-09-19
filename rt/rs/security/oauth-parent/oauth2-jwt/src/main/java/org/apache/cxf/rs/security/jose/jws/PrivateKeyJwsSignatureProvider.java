@@ -231,6 +231,9 @@ name|PrivateKeyJwsSignatureProvider
 parameter_list|(
 name|PrivateKey
 name|key
+parameter_list|,
+name|String
+name|algo
 parameter_list|)
 block|{
 name|this
@@ -238,6 +241,8 @@ argument_list|(
 name|key
 argument_list|,
 literal|null
+argument_list|,
+name|algo
 argument_list|)
 expr_stmt|;
 block|}
@@ -249,6 +254,9 @@ name|key
 parameter_list|,
 name|AlgorithmParameterSpec
 name|spec
+parameter_list|,
+name|String
+name|algo
 parameter_list|)
 block|{
 name|this
@@ -258,6 +266,8 @@ argument_list|,
 literal|null
 argument_list|,
 name|spec
+argument_list|,
+name|algo
 argument_list|)
 expr_stmt|;
 block|}
@@ -272,6 +282,9 @@ name|random
 parameter_list|,
 name|AlgorithmParameterSpec
 name|spec
+parameter_list|,
+name|String
+name|algo
 parameter_list|)
 block|{
 name|this
@@ -283,6 +296,8 @@ argument_list|,
 name|spec
 argument_list|,
 name|SUPPORTED_ALGORITHMS
+argument_list|,
+name|algo
 argument_list|)
 expr_stmt|;
 block|}
@@ -303,11 +318,16 @@ argument_list|<
 name|String
 argument_list|>
 name|supportedAlgorithms
+parameter_list|,
+name|String
+name|algo
 parameter_list|)
 block|{
 name|super
 argument_list|(
 name|supportedAlgorithms
+argument_list|,
+name|algo
 argument_list|)
 expr_stmt|;
 name|this
