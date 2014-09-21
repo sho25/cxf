@@ -377,7 +377,7 @@ name|htmls
 operator|.
 name|setContextPath
 argument_list|(
-literal|"/browser"
+literal|"/catalog"
 argument_list|)
 expr_stmt|;
 name|htmls
