@@ -1490,7 +1490,7 @@ control|)
 block|{
 name|List
 argument_list|<
-name|String
+name|?
 argument_list|>
 name|headerList
 init|=
@@ -1503,7 +1503,7 @@ argument_list|)
 decl_stmt|;
 for|for
 control|(
-name|String
+name|Object
 name|value
 range|:
 name|headerList
@@ -1520,6 +1520,9 @@ operator|+
 literal|": "
 operator|+
 name|value
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

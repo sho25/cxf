@@ -1486,6 +1486,15 @@ name|boolean
 name|delegateOnly
 parameter_list|)
 block|{
+if|if
+condition|(
+name|headers
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|RuntimeDelegate
 name|rd
 init|=
