@@ -494,6 +494,11 @@ literal|"id"
 argument_list|)
 name|Long
 name|id
+parameter_list|,
+annotation|@
+name|BeanParam
+name|TheBeanParam
+name|beanParam
 parameter_list|)
 block|{
 return|return

@@ -12009,7 +12009,7 @@ name|setProperty
 argument_list|(
 name|reader
 argument_list|,
-literal|"com.ctc.wstx.maxAttributeCount"
+literal|"com.ctc.wstx.maxAttributesPerElement"
 argument_list|,
 name|maxAttributeCount
 argument_list|)
