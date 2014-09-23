@@ -7655,6 +7655,23 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+name|crypto
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|Fault
+argument_list|(
+literal|"No Crypto token properties are available to retrieve a certificate"
+argument_list|,
+name|LOG
+argument_list|)
+throw|;
+block|}
 name|String
 name|alias
 init|=
