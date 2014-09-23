@@ -1080,7 +1080,7 @@ name|a
 return|;
 block|}
 annotation|@
-name|PathParam
+name|HeaderParam
 argument_list|(
 literal|"a"
 argument_list|)

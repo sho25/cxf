@@ -3789,7 +3789,7 @@ name|verifyParameters
 argument_list|(
 name|resource
 argument_list|,
-literal|2
+literal|1
 argument_list|,
 operator|new
 name|Param
@@ -3799,16 +3799,6 @@ argument_list|,
 literal|"template"
 argument_list|,
 literal|"xs:long"
-argument_list|)
-argument_list|,
-operator|new
-name|Param
-argument_list|(
-literal|"a"
-argument_list|,
-literal|"template"
-argument_list|,
-literal|"xs:int"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4752,7 +4742,7 @@ argument_list|,
 literal|1
 argument_list|)
 decl_stmt|;
-comment|// 6 parameters are expected
+comment|// 7 parameters are expected
 name|verifyParameters
 argument_list|(
 name|requestEls
@@ -4762,7 +4752,17 @@ argument_list|(
 literal|0
 argument_list|)
 argument_list|,
-literal|6
+literal|7
+argument_list|,
+operator|new
+name|Param
+argument_list|(
+literal|"a"
+argument_list|,
+literal|"header"
+argument_list|,
+literal|"xs:int"
+argument_list|)
 argument_list|,
 operator|new
 name|Param
