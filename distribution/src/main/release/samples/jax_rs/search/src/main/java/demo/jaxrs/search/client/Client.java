@@ -213,7 +213,7 @@ specifier|final
 name|String
 name|url
 init|=
-literal|"http://localhost:9000/jaxrs/catalog"
+literal|"http://localhost:9000/catalog"
 decl_stmt|;
 specifier|final
 name|HttpClient
