@@ -284,6 +284,15 @@ argument_list|,
 literal|"ct==WebSockets"
 argument_list|)
 expr_stmt|;
+name|search
+argument_list|(
+name|url
+argument_list|,
+name|httpClient
+argument_list|,
+literal|"ct==jaxrs,source==*jaxrs*"
+argument_list|)
+expr_stmt|;
 name|delete
 argument_list|(
 name|url
