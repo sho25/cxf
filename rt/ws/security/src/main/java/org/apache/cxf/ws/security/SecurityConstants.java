@@ -692,6 +692,15 @@ name|DELEGATED_CREDENTIAL
 init|=
 literal|"ws-security.delegated.credential"
 decl_stmt|;
+comment|/**      * This is the value in seconds within which a token is considered to be expired by the      * client. When a cached token (from a STS) is retrieved by the client, it is considered      * to be expired if it will expire in a time less than the value specified by this tag.      * This prevents token expiry when the message is en route / being processed by the      * service. When the token is found to be expired then it will be renewed via the STS.      *       * The default value is 10 (seconds). Specify 0 to avoid this check.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
+init|=
+literal|"ws-security.sts.token.imminent-expiry-value"
+decl_stmt|;
 comment|//
 comment|// Internal tags
 comment|//
@@ -869,6 +878,8 @@ block|,
 name|KERBEROS_USE_CREDENTIAL_DELEGATION
 block|,
 name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
+block|,
+name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
 block|}
 argument_list|)
 argument_list|)
