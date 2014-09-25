@@ -232,9 +232,6 @@ operator|.
 name|getEntityStream
 argument_list|()
 argument_list|)
-argument_list|,
-name|getSigProperties
-argument_list|()
 argument_list|)
 decl_stmt|;
 if|if

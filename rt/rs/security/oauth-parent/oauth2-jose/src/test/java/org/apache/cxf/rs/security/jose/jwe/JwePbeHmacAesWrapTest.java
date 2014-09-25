@@ -417,10 +417,6 @@ operator|new
 name|WrappedKeyJweDecryption
 argument_list|(
 name|keyDecryption
-argument_list|,
-literal|null
-argument_list|,
-literal|null
 argument_list|)
 decl_stmt|;
 name|String

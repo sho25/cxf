@@ -121,15 +121,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|common
 operator|.
-name|security
+name|util
 operator|.
-name|jose
-operator|.
-name|jwa
-operator|.
-name|Algorithm
+name|Base64UrlUtility
 import|;
 end_import
 
@@ -145,11 +141,11 @@ name|rs
 operator|.
 name|security
 operator|.
-name|oauth2
+name|jose
 operator|.
-name|utils
+name|jwa
 operator|.
-name|Base64UrlUtility
+name|Algorithm
 import|;
 end_import
 

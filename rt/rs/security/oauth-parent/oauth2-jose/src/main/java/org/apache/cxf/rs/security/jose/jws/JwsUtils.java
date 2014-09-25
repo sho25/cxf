@@ -396,7 +396,7 @@ block|{
 name|theVerifier
 operator|=
 operator|new
-name|PublicKeyJwsSignatureVerifier
+name|EcDsaJwsSignatureVerifier
 argument_list|(
 name|JwkUtils
 operator|.

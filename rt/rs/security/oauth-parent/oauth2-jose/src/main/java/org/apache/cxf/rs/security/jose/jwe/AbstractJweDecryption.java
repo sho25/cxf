@@ -170,10 +170,6 @@ implements|implements
 name|JweDecryptionProvider
 block|{
 specifier|private
-name|JweCryptoProperties
-name|props
-decl_stmt|;
-specifier|private
 name|KeyDecryptionAlgorithm
 name|keyDecryptionAlgo
 decl_stmt|;
@@ -192,9 +188,6 @@ decl_stmt|;
 specifier|protected
 name|AbstractJweDecryption
 parameter_list|(
-name|JweCryptoProperties
-name|props
-parameter_list|,
 name|JoseHeadersReader
 name|theReader
 parameter_list|,
@@ -205,12 +198,6 @@ name|ContentDecryptionAlgorithm
 name|contentDecryptionAlgo
 parameter_list|)
 block|{
-name|this
-operator|.
-name|props
-operator|=
-name|props
-expr_stmt|;
 if|if
 condition|(
 name|theReader
@@ -309,13 +296,6 @@ name|JweCompactConsumer
 name|consumer
 parameter_list|)
 block|{
-name|consumer
-operator|.
-name|enforceJweCryptoProperties
-argument_list|(
-name|props
-argument_list|)
-expr_stmt|;
 name|byte
 index|[]
 name|cek

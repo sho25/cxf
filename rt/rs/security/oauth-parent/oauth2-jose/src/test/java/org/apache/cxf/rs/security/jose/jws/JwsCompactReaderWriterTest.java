@@ -1349,7 +1349,7 @@ operator|.
 name|verifySignatureWith
 argument_list|(
 operator|new
-name|PublicKeyJwsSignatureVerifier
+name|EcDsaJwsSignatureVerifier
 argument_list|(
 name|publicKey
 argument_list|)

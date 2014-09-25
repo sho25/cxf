@@ -292,9 +292,6 @@ name|readStringFromStream
 argument_list|(
 name|is
 argument_list|)
-argument_list|,
-name|getSigProperties
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|p

@@ -92,8 +92,6 @@ argument_list|(
 name|keyDecryptionAlgo
 argument_list|,
 literal|null
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}
@@ -103,17 +101,12 @@ parameter_list|(
 name|KeyDecryptionAlgorithm
 name|keyDecryptionAlgo
 parameter_list|,
-name|JweCryptoProperties
-name|props
-parameter_list|,
 name|JoseHeadersReader
 name|reader
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|props
-argument_list|,
 name|reader
 argument_list|,
 name|keyDecryptionAlgo
