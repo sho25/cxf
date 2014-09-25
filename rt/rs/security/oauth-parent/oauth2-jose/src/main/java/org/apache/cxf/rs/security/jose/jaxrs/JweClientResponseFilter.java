@@ -107,9 +107,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwe
-operator|.
-name|JweDecryptionOutput
+name|JoseUtils
 import|;
 end_import
 
@@ -127,9 +125,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
+name|jwe
 operator|.
-name|JwtUtils
+name|JweDecryptionOutput
 import|;
 end_import
 
@@ -217,7 +215,7 @@ expr_stmt|;
 name|String
 name|ct
 init|=
-name|JwtUtils
+name|JoseUtils
 operator|.
 name|checkContentType
 argument_list|(

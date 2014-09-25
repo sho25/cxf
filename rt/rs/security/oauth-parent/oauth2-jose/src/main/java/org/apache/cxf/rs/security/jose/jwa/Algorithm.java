@@ -55,9 +55,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtConstants
+name|JoseConstants
 import|;
 end_import
 
@@ -69,7 +67,7 @@ block|{
 comment|// Signature
 name|HmacSHA256
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|,
@@ -78,7 +76,7 @@ argument_list|)
 block|,
 name|HmacSHA384
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_384_ALGO
 argument_list|,
@@ -87,7 +85,7 @@ argument_list|)
 block|,
 name|HmacSHA512
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_512_ALGO
 argument_list|,
@@ -96,7 +94,7 @@ argument_list|)
 block|,
 name|SHA256withRSA
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|,
@@ -105,7 +103,7 @@ argument_list|)
 block|,
 name|SHA384withRSA
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_384_ALGO
 argument_list|,
@@ -114,7 +112,7 @@ argument_list|)
 block|,
 name|SHA512withRSA
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_512_ALGO
 argument_list|,
@@ -123,7 +121,7 @@ argument_list|)
 block|,
 name|SHA256withECDSA
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_256_ALGO
 argument_list|,
@@ -132,7 +130,7 @@ argument_list|)
 block|,
 name|SHA384withECDSA
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_384_ALGO
 argument_list|,
@@ -141,7 +139,7 @@ argument_list|)
 block|,
 name|SHA512withECDSA
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|,
@@ -151,7 +149,7 @@ block|,
 comment|// Key Encryption
 name|RSA_OAEP
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_OAEP_ALGO
 argument_list|,
@@ -163,7 +161,7 @@ argument_list|)
 block|,
 name|RSA_OAEP_256
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_OAEP_256_ALGO
 argument_list|,
@@ -175,7 +173,7 @@ argument_list|)
 block|,
 name|RSA_1_5
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_1_5_ALGO
 argument_list|,
@@ -187,7 +185,7 @@ argument_list|)
 block|,
 name|A128KW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128KW_ALGO
 argument_list|,
@@ -198,7 +196,7 @@ argument_list|)
 block|,
 name|A192KW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192KW_ALGO
 argument_list|,
@@ -209,7 +207,7 @@ argument_list|)
 block|,
 name|A256KW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256KW_ALGO
 argument_list|,
@@ -220,7 +218,7 @@ argument_list|)
 block|,
 name|A128GCMKW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCMKW_ALGO
 argument_list|,
@@ -231,7 +229,7 @@ argument_list|)
 block|,
 name|A192GCMKW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCMKW_ALGO
 argument_list|,
@@ -242,7 +240,7 @@ argument_list|)
 block|,
 name|A256GCMKW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCMKW_ALGO
 argument_list|,
@@ -253,7 +251,7 @@ argument_list|)
 block|,
 name|PBES2_HS256_A128KW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|,
@@ -264,7 +262,7 @@ argument_list|)
 block|,
 name|PBES2_HS384_A192KW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS384_A192KW_ALGO
 argument_list|,
@@ -275,7 +273,7 @@ argument_list|)
 block|,
 name|PBES2_HS512_A256KW
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS512_A256KW_ALGO
 argument_list|,
@@ -287,7 +285,7 @@ block|,
 comment|// Content Encryption
 name|A128GCM
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCM_ALGO
 argument_list|,
@@ -298,7 +296,7 @@ argument_list|)
 block|,
 name|A192GCM
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCM_ALGO
 argument_list|,
@@ -309,7 +307,7 @@ argument_list|)
 block|,
 name|A256GCM
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCM_ALGO
 argument_list|,
@@ -320,7 +318,7 @@ argument_list|)
 block|,
 name|A128CBC_HS256
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128CBC_HS256_ALGO
 argument_list|,
@@ -331,7 +329,7 @@ argument_list|)
 block|,
 name|A192CBC_HS384
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192CBC_HS384_ALGO
 argument_list|,
@@ -342,7 +340,7 @@ argument_list|)
 block|,
 name|A256CBC_HS512
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256CBC_HS512_ALGO
 argument_list|,
@@ -520,7 +518,7 @@ name|put
 argument_list|(
 name|HMAC_SHA_256_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -531,7 +529,7 @@ name|put
 argument_list|(
 name|HMAC_SHA_384_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_384_ALGO
 argument_list|)
@@ -542,7 +540,7 @@ name|put
 argument_list|(
 name|HMAC_SHA_512_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_512_ALGO
 argument_list|)
@@ -553,7 +551,7 @@ name|put
 argument_list|(
 name|RS_SHA_256_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -564,7 +562,7 @@ name|put
 argument_list|(
 name|RS_SHA_384_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_384_ALGO
 argument_list|)
@@ -575,7 +573,7 @@ name|put
 argument_list|(
 name|RS_SHA_512_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_512_ALGO
 argument_list|)
@@ -586,7 +584,7 @@ name|put
 argument_list|(
 name|ES_SHA_256_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_256_ALGO
 argument_list|)
@@ -597,7 +595,7 @@ name|put
 argument_list|(
 name|ES_SHA_384_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_384_ALGO
 argument_list|)
@@ -608,7 +606,7 @@ name|put
 argument_list|(
 name|ES_SHA_512_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|)
@@ -619,7 +617,7 @@ name|put
 argument_list|(
 name|RSA_OAEP_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_OAEP_ALGO
 argument_list|)
@@ -630,7 +628,7 @@ name|put
 argument_list|(
 name|RSA_OAEP_256_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_OAEP_256_ALGO
 argument_list|)
@@ -641,7 +639,7 @@ name|put
 argument_list|(
 name|RSA_1_5_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_1_5_ALGO
 argument_list|)
@@ -652,7 +650,7 @@ name|put
 argument_list|(
 name|AES_GCM_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCM_ALGO
 argument_list|)
@@ -663,7 +661,7 @@ name|put
 argument_list|(
 name|AES_GCM_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCM_ALGO
 argument_list|)
@@ -674,7 +672,7 @@ name|put
 argument_list|(
 name|AES_GCM_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCM_ALGO
 argument_list|)
@@ -685,7 +683,7 @@ name|put
 argument_list|(
 name|AES_WRAP_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128KW_ALGO
 argument_list|)
@@ -696,7 +694,7 @@ name|put
 argument_list|(
 name|AES_WRAP_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192KW_ALGO
 argument_list|)
@@ -707,7 +705,7 @@ name|put
 argument_list|(
 name|AES_WRAP_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256KW_ALGO
 argument_list|)
@@ -718,7 +716,7 @@ name|put
 argument_list|(
 name|AES_CBC_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128CBC_HS256_ALGO
 argument_list|)
@@ -729,7 +727,7 @@ name|put
 argument_list|(
 name|AES_CBC_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192CBC_HS384_ALGO
 argument_list|)
@@ -740,7 +738,7 @@ name|put
 argument_list|(
 name|AES_CBC_ALGO_JAVA
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256CBC_HS512_ALGO
 argument_list|)
@@ -760,7 +758,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|,
@@ -771,7 +769,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_384_ALGO
 argument_list|,
@@ -782,7 +780,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_512_ALGO
 argument_list|,
@@ -793,7 +791,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|,
@@ -804,7 +802,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_384_ALGO
 argument_list|,
@@ -815,7 +813,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RS_SHA_512_ALGO
 argument_list|,
@@ -826,7 +824,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_256_ALGO
 argument_list|,
@@ -837,7 +835,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_384_ALGO
 argument_list|,
@@ -848,7 +846,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|,
@@ -859,7 +857,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_OAEP_ALGO
 argument_list|,
@@ -870,7 +868,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_OAEP_256_ALGO
 argument_list|,
@@ -881,7 +879,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|RSA_1_5_ALGO
 argument_list|,
@@ -892,7 +890,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128KW_ALGO
 argument_list|,
@@ -903,7 +901,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192KW_ALGO
 argument_list|,
@@ -914,7 +912,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256KW_ALGO
 argument_list|,
@@ -925,7 +923,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCM_ALGO
 argument_list|,
@@ -936,7 +934,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCM_ALGO
 argument_list|,
@@ -947,7 +945,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCM_ALGO
 argument_list|,
@@ -958,7 +956,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCMKW_ALGO
 argument_list|,
@@ -969,7 +967,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCMKW_ALGO
 argument_list|,
@@ -980,7 +978,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCMKW_ALGO
 argument_list|,
@@ -991,7 +989,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128CBC_HS256_ALGO
 argument_list|,
@@ -1002,7 +1000,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192CBC_HS384_ALGO
 argument_list|,
@@ -1013,7 +1011,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256CBC_HS512_ALGO
 argument_list|,
@@ -1024,7 +1022,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|,
@@ -1035,7 +1033,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS384_A192KW_ALGO
 argument_list|,
@@ -1046,7 +1044,7 @@ name|JWT_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS512_A256KW_ALGO
 argument_list|,
@@ -1316,7 +1314,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128KW_ALGO
 operator|.
@@ -1325,7 +1323,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192KW_ALGO
 operator|.
@@ -1334,7 +1332,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256KW_ALGO
 operator|.
@@ -1354,7 +1352,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCMKW_ALGO
 operator|.
@@ -1363,7 +1361,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCMKW_ALGO
 operator|.
@@ -1372,7 +1370,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCMKW_ALGO
 operator|.
@@ -1392,7 +1390,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128GCM_ALGO
 operator|.
@@ -1401,7 +1399,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192GCM_ALGO
 operator|.
@@ -1410,7 +1408,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256GCM_ALGO
 operator|.
@@ -1430,7 +1428,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_256_ALGO
 operator|.
@@ -1439,7 +1437,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_384_ALGO
 operator|.
@@ -1448,7 +1446,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HMAC_SHA_512_ALGO
 operator|.
@@ -1468,7 +1466,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A128CBC_HS256_ALGO
 operator|.
@@ -1477,7 +1475,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A192CBC_HS384_ALGO
 operator|.
@@ -1486,7 +1484,7 @@ argument_list|(
 name|algo
 argument_list|)
 operator|||
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|A256CBC_HS512_ALGO
 operator|.

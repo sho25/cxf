@@ -45,9 +45,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtHeadersReader
+name|JoseHeadersReader
 import|;
 end_import
 
@@ -102,7 +100,7 @@ parameter_list|,
 name|JweCryptoProperties
 name|props
 parameter_list|,
-name|JwtHeadersReader
+name|JoseHeadersReader
 name|reader
 parameter_list|)
 block|{
@@ -129,7 +127,7 @@ parameter_list|,
 name|JweCryptoProperties
 name|props
 parameter_list|,
-name|JwtHeadersReader
+name|JoseHeadersReader
 name|reader
 parameter_list|,
 name|ContentDecryptionAlgorithm

@@ -16,20 +16,18 @@ operator|.
 name|security
 operator|.
 name|jose
-operator|.
-name|jwt
 package|;
 end_package
 
 begin_interface
 specifier|public
 interface|interface
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 block|{
 name|String
 name|headersToJson
 parameter_list|(
-name|JwtHeaders
+name|JoseHeaders
 name|headers
 parameter_list|)
 function_decl|;

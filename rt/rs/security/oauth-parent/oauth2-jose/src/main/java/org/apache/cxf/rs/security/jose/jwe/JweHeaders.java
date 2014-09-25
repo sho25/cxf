@@ -55,9 +55,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtConstants
+name|JoseConstants
 import|;
 end_import
 
@@ -75,9 +73,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtHeaders
+name|JoseHeaders
 import|;
 end_import
 
@@ -95,9 +91,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 import|;
 end_import
 
@@ -126,7 +120,7 @@ specifier|public
 class|class
 name|JweHeaders
 extends|extends
-name|JwtHeaders
+name|JoseHeaders
 block|{
 specifier|public
 name|JweHeaders
@@ -269,7 +263,7 @@ condition|)
 block|{
 name|setZipAlgorithm
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|DEFLATE_ZIP_ALGORITHM
 argument_list|)
@@ -314,7 +308,7 @@ parameter_list|)
 block|{
 name|setHeader
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|JWE_HEADER_CONTENT_ENC_ALGORITHM
 argument_list|,
@@ -333,7 +327,7 @@ name|String
 operator|)
 name|getHeader
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|JWE_HEADER_CONTENT_ENC_ALGORITHM
 argument_list|)
@@ -349,7 +343,7 @@ parameter_list|)
 block|{
 name|setHeader
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|JWE_HEADER_ZIP_ALGORITHM
 argument_list|,
@@ -368,7 +362,7 @@ name|String
 operator|)
 name|getHeader
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|JWE_HEADER_ZIP_ALGORITHM
 argument_list|)
@@ -377,7 +371,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|JwtHeaders
+name|JoseHeaders
 name|setHeader
 parameter_list|(
 name|String
@@ -389,7 +383,7 @@ parameter_list|)
 block|{
 return|return
 operator|(
-name|JwtHeaders
+name|JoseHeaders
 operator|)
 name|super
 operator|.
@@ -406,7 +400,7 @@ name|byte
 index|[]
 name|toCipherAdditionalAuthData
 parameter_list|(
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|)
 block|{

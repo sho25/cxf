@@ -61,9 +61,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtHeadersReader
+name|JoseHeadersReader
 import|;
 end_import
 
@@ -81,9 +79,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtTokenReaderWriter
+name|JoseHeadersReaderWriter
 import|;
 end_import
 
@@ -152,7 +148,7 @@ argument_list|(
 name|jweContent
 argument_list|,
 operator|new
-name|JwtTokenReaderWriter
+name|JoseHeadersReaderWriter
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -163,7 +159,7 @@ parameter_list|(
 name|String
 name|jweContent
 parameter_list|,
-name|JwtHeadersReader
+name|JoseHeadersReader
 name|reader
 parameter_list|)
 block|{

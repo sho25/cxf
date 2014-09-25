@@ -69,9 +69,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|AbstractJwtObject
+name|AbstractJoseObject
 import|;
 end_import
 
@@ -89,9 +87,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtConstants
+name|JoseConstants
 import|;
 end_import
 
@@ -100,7 +96,7 @@ specifier|public
 class|class
 name|JsonWebKey
 extends|extends
-name|AbstractJwtObject
+name|AbstractJoseObject
 block|{
 specifier|public
 specifier|static
@@ -132,7 +128,7 @@ specifier|final
 name|String
 name|KEY_ALGO
 init|=
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HEADER_ALGORITHM
 decl_stmt|;
@@ -142,7 +138,7 @@ specifier|final
 name|String
 name|KEY_ID
 init|=
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HEADER_KEY_ID
 decl_stmt|;
@@ -152,7 +148,7 @@ specifier|final
 name|String
 name|X509_URL
 init|=
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HEADER_X509_URL
 decl_stmt|;
@@ -162,7 +158,7 @@ specifier|final
 name|String
 name|X509_CHAIN
 init|=
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HEADER_X509_CHAIN
 decl_stmt|;
@@ -172,7 +168,7 @@ specifier|final
 name|String
 name|X509_THUMBPRINT
 init|=
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HEADER_X509_THUMBPRINT
 decl_stmt|;
@@ -182,7 +178,7 @@ specifier|final
 name|String
 name|X509_THUMBPRINT_SHA256
 init|=
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|HEADER_X509_THUMBPRINT_SHA256
 decl_stmt|;

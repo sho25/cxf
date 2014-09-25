@@ -35,9 +35,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|AbstractJwtObjectReaderWriter
+name|AbstractJoseObjectReaderWriter
 import|;
 end_import
 
@@ -46,7 +44,7 @@ specifier|public
 class|class
 name|DefaultJwkReaderWriter
 extends|extends
-name|AbstractJwtObjectReaderWriter
+name|AbstractJoseObjectReaderWriter
 implements|implements
 name|JwkReaderWriter
 block|{

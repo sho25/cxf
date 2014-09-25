@@ -129,9 +129,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwa
-operator|.
-name|Algorithm
+name|JoseHeadersWriter
 import|;
 end_import
 
@@ -149,9 +147,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
+name|jwa
 operator|.
-name|JwtHeadersWriter
+name|Algorithm
 import|;
 end_import
 
@@ -465,7 +463,7 @@ parameter_list|,
 name|KeyEncryptionAlgorithm
 name|keyEncryptionAlgorithm
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|)
 block|{

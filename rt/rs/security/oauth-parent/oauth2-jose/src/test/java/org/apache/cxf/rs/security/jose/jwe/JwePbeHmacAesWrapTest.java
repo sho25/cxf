@@ -45,9 +45,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwa
-operator|.
-name|Algorithm
+name|JoseConstants
 import|;
 end_import
 
@@ -65,9 +63,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
+name|jwa
 operator|.
-name|JwtConstants
+name|Algorithm
 import|;
 end_import
 
@@ -199,7 +197,7 @@ name|headers
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|)
@@ -230,7 +228,7 @@ name|PbesHmacAesWrapKeyEncryptionAlgorithm
 argument_list|(
 name|password
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|)
@@ -328,7 +326,7 @@ name|headers
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|)
@@ -359,7 +357,7 @@ name|PbesHmacAesWrapKeyEncryptionAlgorithm
 argument_list|(
 name|password
 argument_list|,
-name|JwtConstants
+name|JoseConstants
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|)

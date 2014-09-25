@@ -35,9 +35,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 import|;
 end_import
 
@@ -77,7 +75,7 @@ parameter_list|,
 name|ContentEncryptionAlgorithm
 name|contentEncryptionAlgo
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|)
 block|{
@@ -142,7 +140,7 @@ parameter_list|,
 name|ContentEncryptionAlgorithm
 name|contentEncryptionAlgo
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|)
 block|{

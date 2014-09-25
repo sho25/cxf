@@ -55,9 +55,25 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
+name|JoseHeadersReaderWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|org
 operator|.
-name|JwtHeadersWriter
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|JoseHeadersWriter
 import|;
 end_import
 
@@ -163,7 +179,7 @@ parameter_list|(
 name|JweHeaders
 name|headers
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|,
 name|byte
@@ -307,7 +323,7 @@ parameter_list|(
 name|JweHeaders
 name|headers
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|,
 name|byte
@@ -396,7 +412,7 @@ parameter_list|(
 name|JweHeaders
 name|headers
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|,
 name|byte
@@ -439,7 +455,7 @@ parameter_list|,
 name|JweHeaders
 name|headers
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|,
 name|byte
@@ -477,7 +493,7 @@ parameter_list|(
 name|JweHeaders
 name|headers
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|)
 block|{
@@ -488,7 +504,7 @@ operator|==
 literal|null
 condition|?
 operator|new
-name|JwtTokenReaderWriter
+name|JoseHeadersReaderWriter
 argument_list|()
 else|:
 name|writer
@@ -611,7 +627,7 @@ parameter_list|,
 name|JweHeaders
 name|headers
 parameter_list|,
-name|JwtHeadersWriter
+name|JoseHeadersWriter
 name|writer
 parameter_list|,
 name|byte

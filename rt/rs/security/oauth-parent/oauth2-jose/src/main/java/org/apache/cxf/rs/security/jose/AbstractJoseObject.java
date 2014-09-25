@@ -16,8 +16,6 @@ operator|.
 name|security
 operator|.
 name|jose
-operator|.
-name|jwt
 package|;
 end_package
 
@@ -45,7 +43,7 @@ begin_class
 specifier|public
 specifier|abstract
 class|class
-name|AbstractJwtObject
+name|AbstractJoseObject
 block|{
 specifier|protected
 name|Map
@@ -66,11 +64,11 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|protected
-name|AbstractJwtObject
+name|AbstractJoseObject
 parameter_list|()
 block|{              }
 specifier|protected
-name|AbstractJwtObject
+name|AbstractJoseObject
 parameter_list|(
 name|Map
 argument_list|<
@@ -209,11 +207,11 @@ block|{
 return|return
 name|obj
 operator|instanceof
-name|AbstractJwtObject
+name|AbstractJoseObject
 operator|&&
 operator|(
 operator|(
-name|AbstractJwtObject
+name|AbstractJoseObject
 operator|)
 name|obj
 operator|)

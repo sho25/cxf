@@ -16,17 +16,15 @@ operator|.
 name|security
 operator|.
 name|jose
-operator|.
-name|jwt
 package|;
 end_package
 
 begin_interface
 specifier|public
 interface|interface
-name|JwtHeadersReader
+name|JoseHeadersReader
 block|{
-name|JwtHeaders
+name|JoseHeaders
 name|fromJsonHeaders
 parameter_list|(
 name|String

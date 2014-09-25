@@ -16,8 +16,6 @@ operator|.
 name|security
 operator|.
 name|jose
-operator|.
-name|jwt
 package|;
 end_package
 
@@ -111,10 +109,30 @@ name|Set
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwt
+operator|.
+name|JwtConstants
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
-name|AbstractJwtObjectReaderWriter
+name|AbstractJoseObjectReaderWriter
 block|{
 specifier|private
 specifier|static
@@ -157,7 +175,7 @@ specifier|protected
 name|String
 name|toJson
 parameter_list|(
-name|AbstractJwtObject
+name|AbstractJoseObject
 name|jwt
 parameter_list|)
 block|{
@@ -425,7 +443,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|AbstractJwtObject
+name|AbstractJoseObject
 operator|.
 name|class
 operator|.
@@ -445,7 +463,7 @@ argument_list|(
 name|toJson
 argument_list|(
 operator|(
-name|AbstractJwtObject
+name|AbstractJoseObject
 operator|)
 name|value
 argument_list|)
@@ -633,7 +651,7 @@ specifier|protected
 name|void
 name|fromJsonInternal
 parameter_list|(
-name|AbstractJwtObject
+name|AbstractJoseObject
 name|jwt
 parameter_list|,
 name|String
@@ -685,7 +703,7 @@ specifier|protected
 name|void
 name|fromJsonInternal
 parameter_list|(
-name|AbstractJwtObject
+name|AbstractJoseObject
 name|jwt
 parameter_list|,
 name|Map

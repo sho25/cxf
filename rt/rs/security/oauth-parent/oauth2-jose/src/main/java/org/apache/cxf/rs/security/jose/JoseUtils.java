@@ -16,8 +16,6 @@ operator|.
 name|security
 operator|.
 name|jose
-operator|.
-name|jwt
 package|;
 end_package
 
@@ -25,10 +23,10 @@ begin_class
 specifier|public
 specifier|final
 class|class
-name|JwtUtils
+name|JoseUtils
 block|{
 specifier|private
-name|JwtUtils
+name|JoseUtils
 parameter_list|()
 block|{              }
 specifier|public

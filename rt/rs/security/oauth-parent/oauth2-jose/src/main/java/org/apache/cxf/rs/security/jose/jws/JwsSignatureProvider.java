@@ -21,26 +21,6 @@ name|jws
 package|;
 end_package
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|jose
-operator|.
-name|jwt
-operator|.
-name|JwtHeaders
-import|;
-end_import
-
 begin_interface
 specifier|public
 interface|interface
@@ -53,7 +33,7 @@ function_decl|;
 name|JwsSignature
 name|createJwsSignature
 parameter_list|(
-name|JwtHeaders
+name|JwsHeaders
 name|headers
 parameter_list|)
 function_decl|;

@@ -99,9 +99,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|AbstractJwtObject
+name|AbstractJoseObject
 import|;
 end_import
 
@@ -110,7 +108,7 @@ specifier|public
 class|class
 name|JsonWebKeys
 extends|extends
-name|AbstractJwtObject
+name|AbstractJoseObject
 block|{
 specifier|public
 specifier|static
