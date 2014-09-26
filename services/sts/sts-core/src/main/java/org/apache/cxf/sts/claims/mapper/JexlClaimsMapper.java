@@ -220,13 +220,6 @@ operator|new
 name|JexlEngine
 argument_list|()
 decl_stmt|;
-name|JexlContext
-name|context
-init|=
-operator|new
-name|MapContext
-argument_list|()
-decl_stmt|;
 specifier|private
 name|Script
 name|script
@@ -323,6 +316,13 @@ name|ClaimsParameters
 name|parameters
 parameter_list|)
 block|{
+name|JexlContext
+name|context
+init|=
+operator|new
+name|MapContext
+argument_list|()
+decl_stmt|;
 name|context
 operator|.
 name|set
