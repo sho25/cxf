@@ -647,13 +647,6 @@ name|this
 operator|.
 name|manager
 operator|.
-name|register
-argument_list|()
-expr_stmt|;
-name|this
-operator|.
-name|manager
-operator|.
 name|init
 argument_list|()
 expr_stmt|;
@@ -844,13 +837,6 @@ name|setServer
 argument_list|(
 name|server
 argument_list|)
-expr_stmt|;
-name|this
-operator|.
-name|manager
-operator|.
-name|register
-argument_list|()
 expr_stmt|;
 name|this
 operator|.

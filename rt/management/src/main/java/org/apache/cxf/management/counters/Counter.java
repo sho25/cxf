@@ -54,6 +54,10 @@ name|Number
 name|getNumInvocations
 parameter_list|()
 function_decl|;
+name|boolean
+name|isEnabled
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
