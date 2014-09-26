@@ -2054,7 +2054,7 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setRegisteredScopes
+name|setRedirectUris
 argument_list|(
 name|parseSimpleList
 argument_list|(
@@ -2067,7 +2067,7 @@ argument_list|)
 expr_stmt|;
 name|c
 operator|.
-name|setRedirectUris
+name|setRegisteredScopes
 argument_list|(
 name|parseSimpleList
 argument_list|(
