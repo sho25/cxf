@@ -190,7 +190,7 @@ return|return
 name|targetCollection
 return|;
 block|}
-comment|/**      * @param claimTypeURI claim type URI      * @param values values of created claim. Can be null if no values shall be added to claim.      * @return Returns new claim with provided claim type and values      */
+comment|/**      * @param processedClaimTypeURI claim type URI      * @param values values of created claim. Can be null if no values shall be added to claim.      * @return Returns new claim with provided claim type and values      */
 specifier|public
 name|ProcessedClaim
 name|create
@@ -257,7 +257,7 @@ return|return
 name|processedClaim
 return|;
 block|}
-comment|/**      * @param claims Collection of multiple claims with different claim types      * @param claimType URI of claim type to be selected from claim collection      * @return Returns first claim from claims collection matching the provided claimType      */
+comment|/**      * @param processedClaims Collection of multiple claims with different claim types      * @param processedClaimType URI of claim type to be selected from claim collection      * @return Returns first claim from claims collection matching the provided claimType      */
 specifier|public
 name|ProcessedClaim
 name|get
@@ -324,7 +324,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * @param claims Collection of claims to be mapped to a differnt claim type      * @param map Map of old:new claim types      * @param keepUnmapped if set to false only claims with a claim type contained in the map will be      *            returned. If set to false claims with an unmapped claim type will also be returned.      * @return Returns claim collection with mapped claim types      */
+comment|/**      * @param processedClaims Collection of claims to be mapped to a differnt claim type      * @param map Map of old:new claim types      * @param keepUnmapped if set to false only claims with a claim type contained in the map will be      *            returned. If set to false claims with an unmapped claim type will also be returned.      * @return Returns claim collection with mapped claim types      */
 specifier|public
 name|ProcessedClaimCollection
 name|mapType
@@ -460,7 +460,7 @@ return|return
 name|mappedProcessedClaims
 return|;
 block|}
-comment|/**      * @param claim Claim providing values to be mapped      * @param map Map of old:new mapping values      * @param keepUnmapped if set to false only values contained in the map will be returned. If set to true,      *            values not contained in the map will also remain in the returned claim.      * @return Returns the provided claim with mapped values      */
+comment|/**      * @param processedClaim Claim providing values to be mapped      * @param map Map of old:new mapping values      * @param keepUnmapped if set to false only values contained in the map will be returned. If set to true,      *            values not contained in the map will also remain in the returned claim.      * @return Returns the provided claim with mapped values      */
 specifier|public
 name|ProcessedClaim
 name|mapValues
@@ -600,7 +600,7 @@ return|return
 name|processedClaim
 return|;
 block|}
-comment|/**      * @param claims Collection of claims containing claims with claim types of listed<code>claimType</code>      *            array      * @param targetClaimType claim type URI of merged result claim      * @param delimiter Delimiter added between multiple claim types. Value can be<code>null</code>.      * @param claimType URIs of claim types to be merged. Merging will be in the same order as the provided      *            claim type URIs. If a claim type is not found in the collection this claim type will be      *            omitted.      * @return Returns merged claim of all found claim types      */
+comment|/**      * @param processedClaims Collection of claims containing claims with claim types of listed<code>claimType</code>      *            array      * @param targetClaimType claim type URI of merged result claim      * @param delimiter Delimiter added between multiple claim types. Value can be<code>null</code>.      * @param processedClaimType URIs of claim types to be merged. Merging will be in the same order as the provided      *            claim type URIs. If a claim type is not found in the collection this claim type will be      *            omitted.      * @return Returns merged claim of all found claim types      */
 specifier|public
 name|ProcessedClaim
 name|merge
@@ -774,7 +774,7 @@ return|return
 name|mergedProcessedClaim
 return|;
 block|}
-comment|/**      * @param claim Claim to be updated      * @param claimTypeURI URI as String to be set as claim type in provided claim      * @return Returns updated claim      */
+comment|/**      * @param processedClaim Claim to be updated      * @param processedClaimTypeURI URI as String to be set as claim type in provided claim      * @return Returns updated claim      */
 specifier|public
 name|ProcessedClaim
 name|setType
@@ -802,7 +802,7 @@ return|return
 name|processedClaim
 return|;
 block|}
-comment|/**      * All claims within the provided collection will be updated in the following manner: If no original      * issuer is set, the issuer in the provided claims will be set as original issuer. If an original issuer      * was already set before, the original issuer will not be updated. All claims will be updated to have the      * provided issuer name be set as the claim issuer.      *       * @param claims Collection of claims to be updated      * @param issuerName Issuer to be set for all claims within the collection      * @return Returns updated claim collection      */
+comment|/**      * All claims within the provided collection will be updated in the following manner: If no original      * issuer is set, the issuer in the provided claims will be set as original issuer. If an original issuer      * was already set before, the original issuer will not be updated. All claims will be updated to have the      * provided issuer name be set as the claim issuer.      *       * @param processedClaims Collection of claims to be updated      * @param issuerName Issuer to be set for all claims within the collection      * @return Returns updated claim collection      */
 specifier|public
 name|ProcessedClaimCollection
 name|updateIssuer
@@ -855,7 +855,7 @@ return|return
 name|processedClaims
 return|;
 block|}
-comment|/**      * @param claim values of this claim will be transformed to uppercase format      * @return Returns claim with values all in uppercase format      */
+comment|/**      * @param processedClaim values of this claim will be transformed to uppercase format      * @return Returns claim with values all in uppercase format      */
 specifier|public
 name|ProcessedClaim
 name|upperCaseValues
@@ -947,7 +947,7 @@ return|return
 name|processedClaim
 return|;
 block|}
-comment|/**      * @param claim values of this claim will be transformed to lowercase format      * @return Returns claim with values all in lowercase format      */
+comment|/**      * @param processedClaim values of this claim will be transformed to lowercase format      * @return Returns claim with values all in lowercase format      */
 specifier|public
 name|ProcessedClaim
 name|lowerCaseValues
@@ -1039,7 +1039,7 @@ return|return
 name|processedClaim
 return|;
 block|}
-comment|/**      * @param claim Claim providing values to be wrapped      * @param prefix Prefix to be added to each claim value. Can be null.      * @param suffix Suffix to be appended to each claim value. Can be null.      * @return Returns the provided claim with wrapped values      */
+comment|/**      * @param processedClaim Claim providing values to be wrapped      * @param prefix Prefix to be added to each claim value. Can be null.      * @param suffix Suffix to be appended to each claim value. Can be null.      * @return Returns the provided claim with wrapped values      */
 specifier|public
 name|ProcessedClaim
 name|wrapValues
