@@ -332,6 +332,8 @@ name|toRSAPublicKey
 argument_list|(
 name|jwk
 argument_list|)
+argument_list|,
+name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
 block|}
@@ -374,6 +376,8 @@ name|JsonWebKey
 operator|.
 name|OCTET_KEY_VALUE
 argument_list|)
+argument_list|,
+name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
 block|}
@@ -404,6 +408,8 @@ name|toECPublicKey
 argument_list|(
 name|jwk
 argument_list|)
+argument_list|,
+name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
 block|}

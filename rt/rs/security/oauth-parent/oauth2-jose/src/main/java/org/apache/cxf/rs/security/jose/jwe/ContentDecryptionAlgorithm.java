@@ -31,6 +31,9 @@ name|byte
 index|[]
 name|getEncryptedSequence
 parameter_list|(
+name|JweHeaders
+name|headers
+parameter_list|,
 name|byte
 index|[]
 name|cipher

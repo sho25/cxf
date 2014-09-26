@@ -417,6 +417,10 @@ operator|new
 name|WrappedKeyJweDecryption
 argument_list|(
 name|keyDecryption
+argument_list|,
+operator|new
+name|AesGcmContentDecryptionAlgorithm
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|String

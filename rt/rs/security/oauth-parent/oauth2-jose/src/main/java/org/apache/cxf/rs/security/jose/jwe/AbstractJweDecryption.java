@@ -547,6 +547,11 @@ name|getEncryptedSequence
 argument_list|(
 name|consumer
 operator|.
+name|getJweHeaders
+argument_list|()
+argument_list|,
+name|consumer
+operator|.
 name|getEncryptedContent
 argument_list|()
 argument_list|,
