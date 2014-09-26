@@ -1158,6 +1158,11 @@ continue|continue;
 block|}
 block|}
 block|}
+if|if
+condition|(
+name|signed
+condition|)
+block|{
 name|Principal
 name|principal
 init|=
@@ -1232,6 +1237,7 @@ literal|null
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
