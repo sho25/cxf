@@ -246,11 +246,11 @@ index|[]
 index|[]
 block|{
 block|{
-literal|"src/test/resources/jexlClaimMappingsWithoutFunctions.script"
+literal|"jexlClaimMappingsWithoutFunctions.script"
 block|}
 block|,
 block|{
-literal|"src/test/resources/jexlClaimMappingsWithFunctions.script"
+literal|"jexlClaimMappingsWithFunctions.script"
 block|}
 block|}
 decl_stmt|;

@@ -2057,7 +2057,7 @@ name|claimsMapper
 operator|.
 name|setScript
 argument_list|(
-literal|"src/test/resources/jexlIssueSamlClaimsTest.script"
+literal|"jexlIssueSamlClaimsTest.script"
 argument_list|)
 expr_stmt|;
 block|}
