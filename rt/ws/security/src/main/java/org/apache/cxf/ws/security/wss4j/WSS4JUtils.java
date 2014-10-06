@@ -688,7 +688,7 @@ condition|)
 block|{
 name|o
 operator|=
-literal|"cxf-ehcache.xml"
+literal|"/cxf-ehcache.xml"
 expr_stmt|;
 block|}
 if|if
