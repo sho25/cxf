@@ -137,26 +137,6 @@ name|JsonWebKey
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|provider
-operator|.
-name|OAuthServiceException
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -270,7 +250,7 @@ else|else
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 literal|"Invalid JWS Compact sequence"
 argument_list|)
