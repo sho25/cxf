@@ -260,7 +260,7 @@ specifier|final
 name|String
 name|DEFAULT_CONFIG_URL
 init|=
-literal|"cxf-samlp-ehcache.xml"
+literal|"/cxf-samlp-ehcache.xml"
 decl_stmt|;
 specifier|private
 name|Ehcache
