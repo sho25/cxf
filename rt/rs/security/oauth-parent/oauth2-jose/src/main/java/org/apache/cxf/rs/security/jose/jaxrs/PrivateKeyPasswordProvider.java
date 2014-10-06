@@ -15,11 +15,9 @@ name|rs
 operator|.
 name|security
 operator|.
-name|oauth2
+name|jose
 operator|.
-name|utils
-operator|.
-name|crypto
+name|jaxrs
 package|;
 end_package
 

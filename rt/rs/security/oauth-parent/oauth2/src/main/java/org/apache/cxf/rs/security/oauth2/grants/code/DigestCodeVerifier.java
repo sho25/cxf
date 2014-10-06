@@ -47,13 +47,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|common
 operator|.
-name|security
+name|util
 operator|.
-name|oauth2
-operator|.
-name|utils
+name|crypto
 operator|.
 name|MessageDigestUtils
 import|;

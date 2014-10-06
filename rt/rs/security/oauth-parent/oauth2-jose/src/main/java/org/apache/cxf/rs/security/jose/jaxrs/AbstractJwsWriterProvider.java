@@ -287,28 +287,6 @@ name|JwtHeaders
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|utils
-operator|.
-name|crypto
-operator|.
-name|CryptoUtils
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -456,7 +434,7 @@ name|props
 operator|.
 name|get
 argument_list|(
-name|CryptoUtils
+name|KeyManagementUtils
 operator|.
 name|RSSEC_KEY_STORE_TYPE
 argument_list|)
@@ -520,7 +498,7 @@ init|=
 operator|(
 name|RSAPrivateKey
 operator|)
-name|CryptoUtils
+name|KeyManagementUtils
 operator|.
 name|loadPrivateKey
 argument_list|(
@@ -528,7 +506,7 @@ name|m
 argument_list|,
 name|props
 argument_list|,
-name|CryptoUtils
+name|KeyManagementUtils
 operator|.
 name|RSSEC_SIG_KEY_PSWD_PROVIDER
 argument_list|)

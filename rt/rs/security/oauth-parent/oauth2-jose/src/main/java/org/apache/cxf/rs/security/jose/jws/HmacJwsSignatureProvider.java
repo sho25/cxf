@@ -83,15 +83,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|common
 operator|.
-name|security
+name|util
 operator|.
-name|jose
+name|crypto
 operator|.
-name|jwa
-operator|.
-name|Algorithm
+name|HmacUtils
 import|;
 end_import
 
@@ -107,13 +105,11 @@ name|rs
 operator|.
 name|security
 operator|.
-name|oauth2
+name|jose
 operator|.
-name|utils
+name|jwa
 operator|.
-name|crypto
-operator|.
-name|HmacUtils
+name|Algorithm
 import|;
 end_import
 

@@ -11,13 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|common
 operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|utils
+name|util
 operator|.
 name|crypto
 package|;
@@ -166,26 +162,6 @@ operator|.
 name|util
 operator|.
 name|Base64Utility
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|provider
-operator|.
-name|OAuthServiceException
 import|;
 end_import
 
@@ -344,7 +320,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)
@@ -358,7 +334,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)
@@ -398,7 +374,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)
@@ -562,7 +538,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)
@@ -805,7 +781,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)
@@ -819,7 +795,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)
@@ -870,7 +846,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|OAuthServiceException
+name|SecurityException
 argument_list|(
 name|e
 argument_list|)

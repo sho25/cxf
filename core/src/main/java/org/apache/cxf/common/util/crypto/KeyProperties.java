@@ -11,13 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|common
 operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|utils
+name|util
 operator|.
 name|crypto
 package|;

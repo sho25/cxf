@@ -43,11 +43,9 @@ name|rs
 operator|.
 name|security
 operator|.
-name|oauth2
+name|jose
 operator|.
-name|utils
-operator|.
-name|crypto
+name|jaxrs
 operator|.
 name|PrivateKeyPasswordProvider
 import|;
