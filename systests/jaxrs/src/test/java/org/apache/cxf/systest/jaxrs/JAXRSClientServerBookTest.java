@@ -5016,6 +5016,8 @@ operator|.
 name|getBookWithSemicolon
 argument_list|(
 literal|"123;:"
+argument_list|,
+literal|"custom;:header"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -5121,6 +5123,8 @@ operator|.
 name|getBookWithSemicolon
 argument_list|(
 literal|"123;:"
+argument_list|,
+literal|"custom;:header"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -5177,6 +5181,8 @@ operator|.
 name|getBookWithSemicolon
 argument_list|(
 literal|"123;"
+argument_list|,
+literal|"custom;:header"
 argument_list|)
 decl_stmt|;
 name|assertEquals
