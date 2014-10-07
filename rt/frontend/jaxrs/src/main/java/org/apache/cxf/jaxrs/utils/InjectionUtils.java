@@ -8942,6 +8942,7 @@ name|m
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|MessageUtils
 operator|.
 name|getContextualBoolean
@@ -8950,7 +8951,7 @@ name|m
 argument_list|,
 name|ENUM_CONVERSION_CASE_SENSITIVE
 argument_list|,
-literal|true
+literal|false
 argument_list|)
 condition|)
 block|{
