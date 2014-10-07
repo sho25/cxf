@@ -1532,6 +1532,13 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+name|detail
+operator|!=
+literal|null
+condition|)
+block|{
 name|Element
 name|el
 init|=
@@ -1617,6 +1624,7 @@ argument_list|(
 name|el
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private
