@@ -1363,6 +1363,9 @@ argument_list|(
 name|key
 argument_list|,
 name|value
+operator|.
+name|trim
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
