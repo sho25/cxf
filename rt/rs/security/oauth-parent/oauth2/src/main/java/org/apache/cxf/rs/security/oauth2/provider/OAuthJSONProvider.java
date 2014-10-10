@@ -1321,6 +1321,9 @@ name|index
 operator|+
 literal|1
 argument_list|)
+operator|.
+name|trim
+argument_list|()
 decl_stmt|;
 if|if
 condition|(
@@ -1363,9 +1366,6 @@ argument_list|(
 name|key
 argument_list|,
 name|value
-operator|.
-name|trim
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

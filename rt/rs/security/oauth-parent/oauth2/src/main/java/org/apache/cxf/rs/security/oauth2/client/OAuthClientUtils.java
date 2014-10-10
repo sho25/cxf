@@ -1445,6 +1445,17 @@ throws|throws
 name|OAuthServiceException
 block|{
 comment|// this should all be handled by token specific serializers
+name|String
+name|tokenType
+init|=
+name|token
+operator|.
+name|getTokenType
+argument_list|()
+operator|.
+name|toLowerCase
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|OAuthConstants
@@ -1453,10 +1464,7 @@ name|BEARER_TOKEN_TYPE
 operator|.
 name|equals
 argument_list|(
-name|token
-operator|.
-name|getTokenType
-argument_list|()
+name|tokenType
 argument_list|)
 condition|)
 block|{
@@ -1496,10 +1504,7 @@ name|HAWK_TOKEN_TYPE
 operator|.
 name|equals
 argument_list|(
-name|token
-operator|.
-name|getTokenType
-argument_list|()
+name|tokenType
 argument_list|)
 condition|)
 block|{
