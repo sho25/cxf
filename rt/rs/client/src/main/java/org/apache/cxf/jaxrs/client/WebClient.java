@@ -839,6 +839,18 @@ name|ClientAsyncResponseInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|cfg
+operator|.
+name|getOutInterceptors
+argument_list|()
+operator|.
+name|add
+argument_list|(
+operator|new
+name|BodyWriter
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 comment|/**      * Creates WebClient      * @param baseAddress baseAddress      */
 specifier|public
@@ -5390,18 +5402,6 @@ operator|.
 name|class
 argument_list|,
 name|inGenericType
-argument_list|)
-expr_stmt|;
-name|m
-operator|.
-name|getInterceptorChain
-argument_list|()
-operator|.
-name|add
-argument_list|(
-operator|new
-name|BodyWriter
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
