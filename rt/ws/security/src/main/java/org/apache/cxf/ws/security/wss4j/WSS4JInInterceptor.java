@@ -3484,7 +3484,7 @@ name|get
 argument_list|(
 name|WSSecurityEngineResult
 operator|.
-name|TAG_SAML_ASSERTION
+name|TAG_TRANSFORMED_TOKEN
 argument_list|)
 decl_stmt|;
 if|if
@@ -3502,7 +3502,7 @@ name|get
 argument_list|(
 name|WSSecurityEngineResult
 operator|.
-name|TAG_TRANSFORMED_TOKEN
+name|TAG_SAML_ASSERTION
 argument_list|)
 expr_stmt|;
 block|}
