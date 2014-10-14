@@ -39,13 +39,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|jaxrs
 operator|.
-name|security
+name|provider
 operator|.
-name|jose
+name|json
 operator|.
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 import|;
 end_import
 
@@ -54,7 +54,7 @@ specifier|public
 class|class
 name|JwtClaims
 extends|extends
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 block|{
 specifier|public
 name|JwtClaims
