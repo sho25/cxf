@@ -269,23 +269,23 @@ name|RETURN_SECURITY_ERROR
 init|=
 literal|"ws-security.return.security.error"
 decl_stmt|;
-comment|/**      * Whether to use credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a GSSCredential Object from the Message Context using the       * DELEGATED_CREDENTIAL configuration tag below, and then use this to obtain a service ticket.      * The default is "false".      */
+comment|/**      * Set this to "false" in order to remove the SOAP mustUnderstand header from security headers generated based on      * a WS-SecurityPolicy.      *      * The default value is "true" which included the SOAP mustUnderstand header.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|KERBEROS_USE_CREDENTIAL_DELEGATION
+name|MUST_UNDERSTAND
 init|=
-literal|"ws-security.kerberos.use.credential.delegation"
+literal|"ws-security.must-understand"
 decl_stmt|;
-comment|/**      * Whether the Kerberos username is in servicename form or not. The default is "false".      */
+comment|/**      * Set this to "false" if security context must not be created from JAAS Subject.      *      * The default value is "true".      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
+name|SC_FROM_JAAS_SUBJECT
 init|=
-literal|"ws-security.kerberos.is.username.in.servicename.form"
+literal|"ws-security.sc.jaas-subject"
 decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
@@ -335,15 +335,6 @@ name|SAML_ROLE_ATTRIBUTENAME
 init|=
 literal|"ws-security.saml-role-attributename"
 decl_stmt|;
-comment|/**      * A reference to the KerberosClient class used to obtain a service ticket.       */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|KERBEROS_CLIENT
-init|=
-literal|"ws-security.kerberos.client"
-decl_stmt|;
 comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
 specifier|public
 specifier|static
@@ -352,24 +343,6 @@ name|String
 name|SPNEGO_CLIENT_ACTION
 init|=
 literal|"ws-security.spnego.client.action"
-decl_stmt|;
-comment|/**      * The JAAS Context name to use for Kerberos.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|KERBEROS_JAAS_CONTEXT_NAME
-init|=
-literal|"ws-security.kerberos.jaas.context"
-decl_stmt|;
-comment|/**      * The Kerberos Service Provider Name (spn) to use.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|KERBEROS_SPN
-init|=
-literal|"ws-security.kerberos.spn"
 decl_stmt|;
 comment|/**      * This holds a reference to a ReplayCache instance used to cache UsernameToken nonces. The      * default instance that is used is the EHCacheReplayCache.      */
 specifier|public
@@ -469,6 +442,15 @@ name|String
 name|PASSWORD_ENCRYPTOR_INSTANCE
 init|=
 literal|"ws-security.password.encryptor.instance"
+decl_stmt|;
+comment|/**      * A delegated credential to use for WS-Security. Currently only a Kerberos GSSCredential      * Object is supported. This is used to retrieve a service ticket instead of using the      * client credentials.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DELEGATED_CREDENTIAL
+init|=
+literal|"ws-security.delegated.credential"
 decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
@@ -665,33 +647,6 @@ name|STS_TOKEN_ON_BEHALF_OF
 init|=
 literal|"ws-security.sts.token.on-behalf-of"
 decl_stmt|;
-comment|/**      * Set this to "false" in order to remove the SOAP mustUnderstand header from security headers generated based on      * a WS-SecurityPolicy.      *      * The default value is "true" which included the SOAP mustUnderstand header.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|MUST_UNDERSTAND
-init|=
-literal|"ws-security.must-understand"
-decl_stmt|;
-comment|/**      * Set this to "false" if security context must not be created from JAAS Subject.      *      * The default value is "true".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SC_FROM_JAAS_SUBJECT
-init|=
-literal|"ws-security.sc.jaas-subject"
-decl_stmt|;
-comment|/**      * A delegated credential to use for WS-Security. Currently only a Kerberos GSSCredential      * Object is supported. This is used to retrieve a service ticket instead of using the      * client credentials.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DELEGATED_CREDENTIAL
-init|=
-literal|"ws-security.delegated.credential"
-decl_stmt|;
 comment|/**      * This is the value in seconds within which a token is considered to be expired by the      * client. When a cached token (from a STS) is retrieved by the client, it is considered      * to be expired if it will expire in a time less than the value specified by this tag.      * This prevents token expiry when the message is en route / being processed by the      * service. When the token is found to be expired then it will be renewed via the STS.      *       * The default value is 10 (seconds). Specify 0 to avoid this check.      */
 specifier|public
 specifier|static
@@ -700,6 +655,54 @@ name|String
 name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
 init|=
 literal|"ws-security.sts.token.imminent-expiry-value"
+decl_stmt|;
+comment|//
+comment|// Kerberos Configuration tags
+comment|//
+comment|/**      * Whether to use credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a GSSCredential Object from the Message Context using the       * DELEGATED_CREDENTIAL configuration tag below, and then use this to obtain a service ticket.      * The default is "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_USE_CREDENTIAL_DELEGATION
+init|=
+literal|"ws-security.kerberos.use.credential.delegation"
+decl_stmt|;
+comment|/**      * Whether the Kerberos username is in servicename form or not. The default is "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
+init|=
+literal|"ws-security.kerberos.is.username.in.servicename.form"
+decl_stmt|;
+comment|/**      * The JAAS Context name to use for Kerberos.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_JAAS_CONTEXT_NAME
+init|=
+literal|"ws-security.kerberos.jaas.context"
+decl_stmt|;
+comment|/**      * The Kerberos Service Provider Name (spn) to use.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_SPN
+init|=
+literal|"ws-security.kerberos.spn"
+decl_stmt|;
+comment|/**      * A reference to the KerberosClient class used to obtain a service ticket.       */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_CLIENT
+init|=
+literal|"ws-security.kerberos.client"
 decl_stmt|;
 comment|//
 comment|// Internal tags
