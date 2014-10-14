@@ -29,13 +29,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|jaxrs
 operator|.
-name|security
+name|provider
 operator|.
-name|jose
+name|json
 operator|.
-name|AbstractJoseObjectReaderWriter
+name|JsonMapObjectReaderWriter
 import|;
 end_import
 
@@ -44,7 +44,7 @@ specifier|public
 class|class
 name|DefaultJwkReaderWriter
 extends|extends
-name|AbstractJoseObjectReaderWriter
+name|JsonMapObjectReaderWriter
 implements|implements
 name|JwkReaderWriter
 block|{
@@ -82,7 +82,7 @@ operator|new
 name|JsonWebKeys
 argument_list|()
 decl_stmt|;
-name|fromJsonInternal
+name|fromJson
 argument_list|(
 name|jwks
 argument_list|,
@@ -127,7 +127,7 @@ operator|new
 name|JsonWebKey
 argument_list|()
 decl_stmt|;
-name|fromJsonInternal
+name|fromJson
 argument_list|(
 name|jwk
 argument_list|,

@@ -11,11 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|jaxrs
 operator|.
-name|security
+name|provider
 operator|.
-name|jose
+name|json
 package|;
 end_package
 
@@ -43,7 +43,7 @@ begin_class
 specifier|public
 specifier|abstract
 class|class
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 block|{
 specifier|protected
 name|Map
@@ -64,11 +64,11 @@ argument_list|>
 argument_list|()
 decl_stmt|;
 specifier|protected
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 parameter_list|()
 block|{              }
 specifier|protected
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 parameter_list|(
 name|Map
 argument_list|<
@@ -207,11 +207,11 @@ block|{
 return|return
 name|obj
 operator|instanceof
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 operator|&&
 operator|(
 operator|(
-name|AbstractJoseObject
+name|AbstractJsonMapObject
 operator|)
 name|obj
 operator|)
