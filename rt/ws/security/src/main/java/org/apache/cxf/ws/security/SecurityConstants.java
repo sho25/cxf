@@ -659,6 +659,15 @@ decl_stmt|;
 comment|//
 comment|// Kerberos Configuration tags
 comment|//
+comment|/**      * Whether to request credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a kerberos service ticket that can be used for delegation. The default      * is "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
+init|=
+literal|"ws-security.kerberos.request.credential.delegation"
+decl_stmt|;
 comment|/**      * Whether to use credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a GSSCredential Object from the Message Context using the       * DELEGATED_CREDENTIAL configuration tag below, and then use this to obtain a service ticket.      * The default is "false".      */
 specifier|public
 specifier|static
@@ -883,6 +892,8 @@ block|,
 name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
 block|,
 name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
+block|,
+name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
 block|}
 argument_list|)
 argument_list|)
