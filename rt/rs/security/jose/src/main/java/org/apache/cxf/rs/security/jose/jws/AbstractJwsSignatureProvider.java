@@ -21,6 +21,24 @@ name|jws
 package|;
 end_package
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|JoseHeaders
+import|;
+end_import
+
 begin_class
 specifier|public
 specifier|abstract
@@ -48,10 +66,10 @@ name|algo
 expr_stmt|;
 block|}
 specifier|protected
-name|JwsHeaders
+name|JoseHeaders
 name|prepareHeaders
 parameter_list|(
-name|JwsHeaders
+name|JoseHeaders
 name|headers
 parameter_list|)
 block|{
@@ -65,7 +83,7 @@ block|{
 name|headers
 operator|=
 operator|new
-name|JwsHeaders
+name|JoseHeaders
 argument_list|()
 expr_stmt|;
 block|}
@@ -126,7 +144,7 @@ specifier|public
 name|JwsSignature
 name|createJwsSignature
 parameter_list|(
-name|JwsHeaders
+name|JoseHeaders
 name|headers
 parameter_list|)
 block|{
@@ -145,7 +163,7 @@ specifier|abstract
 name|JwsSignature
 name|doCreateJwsSignature
 parameter_list|(
-name|JwsHeaders
+name|JoseHeaders
 name|headers
 parameter_list|)
 function_decl|;

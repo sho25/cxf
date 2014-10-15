@@ -35,9 +35,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtClaims
+name|JoseHeaders
 import|;
 end_import
 
@@ -57,7 +55,7 @@ name|jose
 operator|.
 name|jwt
 operator|.
-name|JwtHeaders
+name|JwtClaims
 import|;
 end_import
 
@@ -167,7 +165,7 @@ block|}
 specifier|public
 name|JwsJwtCompactProducer
 parameter_list|(
-name|JwtHeaders
+name|JoseHeaders
 name|headers
 parameter_list|,
 name|JwtClaims
@@ -187,7 +185,7 @@ block|}
 specifier|public
 name|JwsJwtCompactProducer
 parameter_list|(
-name|JwtHeaders
+name|JoseHeaders
 name|headers
 parameter_list|,
 name|JwtClaims
@@ -223,17 +221,10 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-operator|new
-name|JwsHeaders
-argument_list|(
 name|token
 operator|.
 name|getHeaders
 argument_list|()
-operator|.
-name|asMap
-argument_list|()
-argument_list|)
 argument_list|,
 name|w
 argument_list|,

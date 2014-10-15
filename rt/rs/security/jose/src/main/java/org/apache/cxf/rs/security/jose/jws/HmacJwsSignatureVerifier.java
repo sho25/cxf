@@ -107,9 +107,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwa
-operator|.
-name|Algorithm
+name|JoseHeaders
 import|;
 end_import
 
@@ -127,9 +125,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
+name|jwa
 operator|.
-name|JwtHeaders
+name|Algorithm
 import|;
 end_import
 
@@ -287,7 +285,7 @@ specifier|public
 name|boolean
 name|verify
 parameter_list|(
-name|JwtHeaders
+name|JoseHeaders
 name|headers
 parameter_list|,
 name|String
@@ -325,7 +323,7 @@ name|byte
 index|[]
 name|computeMac
 parameter_list|(
-name|JwtHeaders
+name|JoseHeaders
 name|headers
 parameter_list|,
 name|String

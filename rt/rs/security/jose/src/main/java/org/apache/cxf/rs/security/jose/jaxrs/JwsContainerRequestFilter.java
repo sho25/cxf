@@ -307,7 +307,7 @@ name|checkContentType
 argument_list|(
 name|p
 operator|.
-name|getJwsHeaders
+name|getJoseHeaders
 argument_list|()
 operator|.
 name|getContentType

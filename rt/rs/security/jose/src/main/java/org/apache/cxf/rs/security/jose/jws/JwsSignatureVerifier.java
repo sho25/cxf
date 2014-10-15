@@ -35,9 +35,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jwt
-operator|.
-name|JwtHeaders
+name|JoseHeaders
 import|;
 end_import
 
@@ -49,7 +47,7 @@ block|{
 name|boolean
 name|verify
 parameter_list|(
-name|JwtHeaders
+name|JoseHeaders
 name|headers
 parameter_list|,
 name|String

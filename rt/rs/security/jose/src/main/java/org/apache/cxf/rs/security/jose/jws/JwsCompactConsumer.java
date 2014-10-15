@@ -427,8 +427,8 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|JwsHeaders
-name|getJwsHeaders
+name|JoseHeaders
+name|getJoseHeaders
 parameter_list|()
 block|{
 name|JoseHeaders
@@ -458,11 +458,7 @@ argument_list|()
 throw|;
 block|}
 return|return
-operator|new
-name|JwsHeaders
-argument_list|(
 name|joseHeaders
-argument_list|)
 return|;
 block|}
 specifier|public
@@ -481,7 +477,7 @@ name|validator
 operator|.
 name|verify
 argument_list|(
-name|getJwsHeaders
+name|getJoseHeaders
 argument_list|()
 argument_list|,
 name|getUnsignedEncodedPayload
