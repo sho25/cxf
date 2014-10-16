@@ -215,6 +215,15 @@ name|IS_BSP_COMPLIANT
 init|=
 literal|"ws-security.is-bsp-compliant"
 decl_stmt|;
+comment|/**      * Whether to allow unsigned saml assertions as SecurityContext Principals. The default is false.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
+init|=
+literal|"ws-security.enable.unsigned-saml-assertion.principal"
+decl_stmt|;
 comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces. Note that caching only applies when either a UsernameToken      * WS-SecurityPolicy is in effect, or else that a UsernameToken action has been configured      * for the non-security-policy case.      */
 specifier|public
 specifier|static
@@ -894,6 +903,8 @@ block|,
 name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
 block|,
 name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
+block|,
+name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
 block|}
 argument_list|)
 argument_list|)
