@@ -380,7 +380,7 @@ argument_list|()
 argument_list|,
 name|jwsReader
 operator|.
-name|getUnsignedEncodedPayload
+name|getUnsignedEncodedSequence
 argument_list|()
 argument_list|,
 name|jwsReader

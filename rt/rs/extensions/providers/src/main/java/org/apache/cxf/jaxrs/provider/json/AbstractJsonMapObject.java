@@ -135,16 +135,7 @@ name|asMap
 parameter_list|()
 block|{
 return|return
-operator|new
-name|LinkedHashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
-argument_list|(
 name|values
-argument_list|)
 return|;
 block|}
 specifier|protected
