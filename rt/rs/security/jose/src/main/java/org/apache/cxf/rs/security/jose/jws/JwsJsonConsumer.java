@@ -91,7 +91,7 @@ name|provider
 operator|.
 name|json
 operator|.
-name|AbstractJsonMapObject
+name|JsonMapObject
 import|;
 end_import
 
@@ -194,13 +194,12 @@ name|void
 name|prepare
 parameter_list|()
 block|{
-name|AbstractJsonMapObject
+name|JsonMapObject
 name|jsonObject
 init|=
 operator|new
-name|AbstractJsonMapObject
+name|JsonMapObject
 argument_list|()
-block|{ }
 decl_stmt|;
 operator|new
 name|JsonMapObjectReaderWriter

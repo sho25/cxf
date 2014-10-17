@@ -45,7 +45,7 @@ name|provider
 operator|.
 name|json
 operator|.
-name|AbstractJsonMapObject
+name|JsonMapObject
 import|;
 end_import
 
@@ -54,7 +54,7 @@ specifier|public
 class|class
 name|JwtClaims
 extends|extends
-name|AbstractJsonMapObject
+name|JsonMapObject
 block|{
 specifier|public
 name|JwtClaims
@@ -105,7 +105,7 @@ return|return
 operator|(
 name|String
 operator|)
-name|getValue
+name|getClaim
 argument_list|(
 name|JwtConstants
 operator|.
@@ -207,7 +207,7 @@ name|getExpiryTime
 parameter_list|()
 block|{
 return|return
-name|getLongDate
+name|getLongProperty
 argument_list|(
 name|JwtConstants
 operator|.
@@ -239,7 +239,7 @@ name|getNotBefore
 parameter_list|()
 block|{
 return|return
-name|getLongDate
+name|getLongProperty
 argument_list|(
 name|JwtConstants
 operator|.
@@ -271,7 +271,7 @@ name|getIssuedAt
 parameter_list|()
 block|{
 return|return
-name|getLongDate
+name|getLongProperty
 argument_list|(
 name|JwtConstants
 operator|.
@@ -287,7 +287,7 @@ name|String
 name|id
 parameter_list|)
 block|{
-name|setValue
+name|setClaim
 argument_list|(
 name|JwtConstants
 operator|.
@@ -325,7 +325,7 @@ name|Object
 name|value
 parameter_list|)
 block|{
-name|setValue
+name|setProperty
 argument_list|(
 name|name
 argument_list|,
@@ -345,7 +345,7 @@ name|name
 parameter_list|)
 block|{
 return|return
-name|getValue
+name|getProperty
 argument_list|(
 name|name
 argument_list|)

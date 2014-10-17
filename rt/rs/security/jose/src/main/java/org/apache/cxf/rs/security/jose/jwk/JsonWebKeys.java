@@ -99,7 +99,7 @@ name|provider
 operator|.
 name|json
 operator|.
-name|AbstractJsonMapObject
+name|JsonMapObject
 import|;
 end_import
 
@@ -108,7 +108,7 @@ specifier|public
 class|class
 name|JsonWebKeys
 extends|extends
-name|AbstractJsonMapObject
+name|JsonMapObject
 block|{
 specifier|public
 specifier|static
@@ -140,7 +140,7 @@ argument_list|>
 operator|)
 name|super
 operator|.
-name|getValue
+name|getProperty
 argument_list|(
 name|KEYS_PROPERTY
 argument_list|)
@@ -222,7 +222,7 @@ argument_list|>
 operator|)
 name|super
 operator|.
-name|getValue
+name|getProperty
 argument_list|(
 name|KEYS_PROPERTY
 argument_list|)
@@ -278,7 +278,7 @@ parameter_list|)
 block|{
 name|super
 operator|.
-name|setValue
+name|setProperty
 argument_list|(
 name|KEYS_PROPERTY
 argument_list|,

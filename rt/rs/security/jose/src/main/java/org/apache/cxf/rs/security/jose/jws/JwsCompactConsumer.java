@@ -427,7 +427,7 @@ if|if
 condition|(
 name|joseHeaders
 operator|.
-name|getHeaderUpdateCount
+name|getUpdateCount
 argument_list|()
 operator|!=
 literal|null
@@ -436,7 +436,9 @@ block|{
 throw|throw
 operator|new
 name|SecurityException
-argument_list|()
+argument_list|(
+literal|"Duplicate headers have been detected"
+argument_list|)
 throw|;
 block|}
 return|return
