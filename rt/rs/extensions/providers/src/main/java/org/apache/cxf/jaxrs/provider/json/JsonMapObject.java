@@ -62,7 +62,6 @@ name|Integer
 argument_list|>
 name|updateCount
 decl_stmt|;
-specifier|private
 name|Map
 argument_list|<
 name|String
