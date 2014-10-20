@@ -210,25 +210,7 @@ name|String
 name|toJson
 parameter_list|()
 block|{
-comment|// The "header" member MUST be present and contain the value JWS
-comment|// Unprotected Header when the JWS Unprotected Header value is non-
-comment|// empty; otherwise, it MUST be absent. This value is represented as
-comment|// an unencoded JSON object, rather than as a string. These Header
-comment|// Parameter values are not integrity protected.
-if|if
-condition|(
-name|headerEntries
-operator|==
-literal|null
-condition|)
-block|{
 return|return
-literal|""
-return|;
-block|}
-return|return
-literal|"\"header\":"
-operator|+
 name|writer
 operator|.
 name|headersToJson

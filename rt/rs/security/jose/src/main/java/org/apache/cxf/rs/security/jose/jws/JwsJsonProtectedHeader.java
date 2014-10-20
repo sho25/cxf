@@ -205,27 +205,10 @@ return|;
 block|}
 specifier|public
 name|String
-name|toJson
+name|getEncodedHeaderEntries
 parameter_list|()
 block|{
-if|if
-condition|(
-name|headerEntries
-operator|==
-literal|null
-condition|)
-block|{
 return|return
-literal|""
-return|;
-block|}
-comment|//The "protected" member MUST be present and contain the value
-comment|// BASE64URL(UTF8(JWS Protected Header)) when the JWS Protected
-comment|// Header value is non-empty; otherwise, it MUST be absent. These
-comment|// Header Parameter values are integrity protected.
-return|return
-literal|"\"protected\":\""
-operator|+
 name|Base64UrlUtility
 operator|.
 name|encode
@@ -237,8 +220,6 @@ argument_list|(
 name|headerEntries
 argument_list|)
 argument_list|)
-operator|+
-literal|"\""
 return|;
 block|}
 block|}
