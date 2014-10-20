@@ -434,6 +434,8 @@ block|{
 literal|".*_NULL_.*"
 block|,
 literal|".*_anon_.*"
+block|,
+literal|".*_DES_.*"
 block|}
 argument_list|)
 decl_stmt|;
