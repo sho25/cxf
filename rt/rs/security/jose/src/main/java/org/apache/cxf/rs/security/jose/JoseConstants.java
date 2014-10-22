@@ -173,6 +173,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|MEDIA_TYPE_JOSE
+init|=
+literal|"application/jose"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|MEDIA_TYPE_JOSE_JSON
 init|=
 literal|"application/jose+json"
