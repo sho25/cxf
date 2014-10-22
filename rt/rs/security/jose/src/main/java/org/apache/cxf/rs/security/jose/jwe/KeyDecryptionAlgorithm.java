@@ -26,6 +26,10 @@ specifier|public
 interface|interface
 name|KeyDecryptionAlgorithm
 block|{
+name|String
+name|getAlgorithm
+parameter_list|()
+function_decl|;
 name|byte
 index|[]
 name|getDecryptedContentEncryptionKey

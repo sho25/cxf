@@ -25,6 +25,8 @@ begin_interface
 specifier|public
 interface|interface
 name|JweDecryptionProvider
+extends|extends
+name|JweKeyProperties
 block|{
 name|JweDecryptionOutput
 name|decrypt
