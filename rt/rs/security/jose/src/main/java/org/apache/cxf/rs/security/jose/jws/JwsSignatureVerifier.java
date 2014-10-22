@@ -58,6 +58,10 @@ index|[]
 name|signature
 parameter_list|)
 function_decl|;
+name|String
+name|getAlgorithm
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 

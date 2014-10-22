@@ -911,6 +911,15 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|rsaSignatureAlgo
+operator|=
+name|getSignatureAlgo
+argument_list|(
+name|props
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 name|theVerifier
 operator|=
 operator|new
@@ -927,6 +936,8 @@ name|m
 argument_list|,
 name|props
 argument_list|)
+argument_list|,
+name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
 block|}
