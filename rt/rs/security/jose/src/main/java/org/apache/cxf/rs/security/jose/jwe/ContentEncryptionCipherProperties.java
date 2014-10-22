@@ -38,6 +38,10 @@ specifier|public
 interface|interface
 name|ContentEncryptionCipherProperties
 block|{
+name|String
+name|getAlgorithm
+parameter_list|()
+function_decl|;
 name|byte
 index|[]
 name|getAdditionalAuthenticationData
@@ -53,10 +57,6 @@ name|byte
 index|[]
 name|iv
 parameter_list|)
-function_decl|;
-name|String
-name|getAlgorithm
-parameter_list|()
 function_decl|;
 block|}
 end_interface
