@@ -335,7 +335,7 @@ name|hwEndpoint
 operator|=
 name|serverFactoryBean
 operator|.
-name|getServer
+name|create
 argument_list|()
 operator|.
 name|getEndpoint
@@ -356,7 +356,7 @@ name|hwgEndpoint
 operator|=
 name|serverFactoryBean
 operator|.
-name|getServer
+name|create
 argument_list|()
 operator|.
 name|getEndpoint
@@ -377,7 +377,7 @@ name|dlbEndpoint
 operator|=
 name|serverFactoryBean
 operator|.
-name|getServer
+name|create
 argument_list|()
 operator|.
 name|getEndpoint

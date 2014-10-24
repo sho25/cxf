@@ -142,6 +142,14 @@ argument_list|(
 literal|"helloServer"
 argument_list|)
 decl_stmt|;
+name|assertNotNull
+argument_list|(
+name|serverFB
+operator|.
+name|getServer
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|Document
 name|d
 init|=

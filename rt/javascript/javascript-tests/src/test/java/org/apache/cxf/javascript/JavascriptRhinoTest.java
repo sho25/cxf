@@ -229,7 +229,7 @@ name|endpoint
 operator|=
 name|serverFactoryBean
 operator|.
-name|getServer
+name|create
 argument_list|()
 operator|.
 name|getEndpoint
