@@ -1805,7 +1805,7 @@ name|FACTORY
 init|=
 name|XMLEventFactory
 operator|.
-name|newFactory
+name|newInstance
 argument_list|()
 decl_stmt|;
 specifier|private
