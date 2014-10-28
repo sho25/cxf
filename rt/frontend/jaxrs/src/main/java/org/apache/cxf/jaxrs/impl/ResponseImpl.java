@@ -2177,6 +2177,12 @@ name|ReaderInterceptor
 argument_list|>
 name|readers
 init|=
+name|outMessage
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
 name|ProviderFactory
 operator|.
 name|getInstance
