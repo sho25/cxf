@@ -126,7 +126,6 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-comment|// TODO Auto-generated method stub
 name|Iterator
 argument_list|<
 name|Header
@@ -160,6 +159,10 @@ decl_stmt|;
 comment|//Only remove inbound marked headers..
 if|if
 condition|(
+name|hdr
+operator|==
+literal|null
+operator|||
 name|hdr
 operator|.
 name|getDirection
