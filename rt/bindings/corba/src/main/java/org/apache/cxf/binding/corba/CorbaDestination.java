@@ -465,6 +465,20 @@ name|omg
 operator|.
 name|PortableServer
 operator|.
+name|POAPackage
+operator|.
+name|ObjectNotActive
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|omg
+operator|.
+name|PortableServer
+operator|.
 name|RequestProcessingPolicyValue
 import|;
 end_import
@@ -1811,6 +1825,26 @@ operator|.
 name|deactivate_object
 argument_list|(
 name|objectId
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|ObjectNotActive
+name|ona
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"Caught ObjectNotActive exception: "
+operator|+
+name|ona
+operator|+
+literal|" during deactivate_object() call on POA: "
+operator|+
+name|bindingPOA
 argument_list|)
 expr_stmt|;
 block|}
