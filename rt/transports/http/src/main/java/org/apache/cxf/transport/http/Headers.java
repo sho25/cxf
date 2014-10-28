@@ -1519,10 +1519,18 @@ name|header
 operator|+
 literal|": "
 operator|+
+operator|(
+name|value
+operator|==
+literal|null
+condition|?
+literal|"<null>"
+else|:
 name|value
 operator|.
 name|toString
 argument_list|()
+operator|)
 argument_list|)
 expr_stmt|;
 block|}
