@@ -35,7 +35,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashSet
+name|Collections
 import|;
 end_import
 
@@ -76,6 +76,16 @@ operator|.
 name|util
 operator|.
 name|Set
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|WeakHashMap
 import|;
 end_import
 
@@ -368,12 +378,19 @@ name|WebClient
 argument_list|>
 name|baseClients
 init|=
+name|Collections
+operator|.
+name|newSetFromMap
+argument_list|(
 operator|new
-name|HashSet
+name|WeakHashMap
 argument_list|<
 name|WebClient
+argument_list|,
+name|Boolean
 argument_list|>
 argument_list|()
+argument_list|)
 decl_stmt|;
 specifier|public
 name|ClientImpl
