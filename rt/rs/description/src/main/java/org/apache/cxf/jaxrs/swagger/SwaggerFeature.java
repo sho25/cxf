@@ -569,8 +569,6 @@ decl_stmt|;
 name|setBasePath
 argument_list|(
 name|address
-operator|+
-literal|"/api-docs"
 argument_list|)
 expr_stmt|;
 block|}
