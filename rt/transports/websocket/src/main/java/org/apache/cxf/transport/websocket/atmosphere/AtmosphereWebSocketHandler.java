@@ -838,7 +838,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"onOpen(WebSocket)"
 argument_list|)
@@ -857,7 +857,7 @@ parameter_list|)
 block|{
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"onClose(WebSocket)"
 argument_list|)
