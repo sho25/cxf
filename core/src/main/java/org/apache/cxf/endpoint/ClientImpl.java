@@ -4269,6 +4269,21 @@ name|Message
 name|message
 parameter_list|)
 block|{
+if|if
+condition|(
+name|bus
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"Message received on a Client that has been closed or destroyed."
+argument_list|)
+throw|;
+block|}
 name|Endpoint
 name|endpoint
 init|=
