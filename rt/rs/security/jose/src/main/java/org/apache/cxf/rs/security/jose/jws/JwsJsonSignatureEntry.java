@@ -594,8 +594,6 @@ name|unprotectedHeader
 operator|.
 name|toJson
 argument_list|()
-operator|+
-literal|"\""
 argument_list|)
 expr_stmt|;
 block|}
