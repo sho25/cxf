@@ -881,9 +881,16 @@ condition|)
 block|{
 name|name
 operator|=
+name|NameUtil
+operator|.
+name|mangleNameToClassName
+argument_list|(
 name|port
 operator|+
 literal|"Impl"
+argument_list|,
+literal|true
+argument_list|)
 expr_stmt|;
 name|name
 operator|=
