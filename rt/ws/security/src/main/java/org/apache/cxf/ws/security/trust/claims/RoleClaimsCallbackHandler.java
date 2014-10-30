@@ -11,11 +11,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
+name|ws
 operator|.
-name|sts
+name|security
 operator|.
-name|jaas
+name|trust
+operator|.
+name|claims
 package|;
 end_package
 
@@ -109,26 +111,6 @@ name|DOMUtils
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|trust
-operator|.
-name|claims
-operator|.
-name|ClaimsCallback
-import|;
-end_import
-
 begin_comment
 comment|/**  * This CallbackHandler implementation creates a Claims Element for a "role" ClaimType and  * stores it on the ClaimsCallback object.  */
 end_comment
@@ -136,7 +118,7 @@ end_comment
 begin_class
 specifier|public
 class|class
-name|ClaimsCallbackHandler
+name|RoleClaimsCallbackHandler
 implements|implements
 name|CallbackHandler
 block|{
