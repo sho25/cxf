@@ -569,26 +569,6 @@ name|karafDistributionConfiguration
 import|;
 end_import
 
-begin_import
-import|import static
-name|org
-operator|.
-name|ops4j
-operator|.
-name|pax
-operator|.
-name|exam
-operator|.
-name|karaf
-operator|.
-name|options
-operator|.
-name|KarafDistributionOption
-operator|.
-name|keepRuntimeFolder
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -897,9 +877,8 @@ literal|"target/paxexam/"
 argument_list|)
 argument_list|)
 argument_list|,
-name|keepRuntimeFolder
-argument_list|()
-argument_list|,
+comment|//DO NOT COMMIT WITH THIS LINE ENABLED!!!
+comment|//org.ops4j.pax.exam.karaf.options.KarafDistributionOption.keepRuntimeFolder(),
 name|features
 argument_list|(
 name|cxfUrl
