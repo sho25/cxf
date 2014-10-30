@@ -1433,7 +1433,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"connecting"
 argument_list|)
@@ -1487,7 +1487,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"connected"
 argument_list|)
@@ -1522,7 +1522,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"already connected"
 argument_list|)
@@ -1664,7 +1664,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1674,7 +1674,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"onOpen({0})"
 argument_list|,
@@ -1699,7 +1699,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -1709,7 +1709,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"onCose({0})"
 argument_list|,

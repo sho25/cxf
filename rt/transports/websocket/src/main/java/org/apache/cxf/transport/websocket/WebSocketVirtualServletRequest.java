@@ -1590,6 +1590,18 @@ name|String
 name|getContextPath
 parameter_list|()
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|log
@@ -1606,6 +1618,7 @@ name|getContextPath
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|webSocketHolder
 operator|.
@@ -1929,6 +1942,18 @@ operator|.
 name|getServletPath
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|log
@@ -1946,6 +1971,7 @@ operator|+
 name|uri
 argument_list|)
 expr_stmt|;
+block|}
 comment|//TODO remove the query string part
 comment|//REVISIT may cache this value in requstHeaders?
 return|return
@@ -2106,6 +2132,18 @@ name|String
 name|getRequestURI
 parameter_list|()
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|log
@@ -2126,6 +2164,7 @@ name|URI_KEY
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|requestHeaders
 operator|.

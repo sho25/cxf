@@ -420,7 +420,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -430,7 +430,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"onClose({0}, {1})"
 argument_list|,
@@ -470,7 +470,7 @@ name|isLoggable
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|)
 condition|)
 block|{
@@ -480,7 +480,7 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|INFO
+name|FINE
 argument_list|,
 literal|"onOpen({0}))"
 argument_list|,
