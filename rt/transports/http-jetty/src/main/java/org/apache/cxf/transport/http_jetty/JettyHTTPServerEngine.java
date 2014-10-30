@@ -1571,6 +1571,11 @@ operator|new
 name|ErrorHandler
 argument_list|()
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|public
 name|void
 name|handle
@@ -1621,6 +1626,7 @@ operator|instanceof
 name|Response
 condition|)
 block|{
+comment|//need to use the deprecated method to support compiling with Jetty 8
 operator|(
 operator|(
 name|Response
