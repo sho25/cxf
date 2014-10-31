@@ -725,11 +725,6 @@ specifier|private
 name|RepositorySystem
 name|repositorySystem
 decl_stmt|;
-comment|/**      * @component      * @readonly      * @required      */
-specifier|private
-name|MavenSession
-name|session
-decl_stmt|;
 specifier|public
 name|AbstractCodegenMoho
 parameter_list|()
@@ -4466,7 +4461,7 @@ name|request
 operator|.
 name|setServers
 argument_list|(
-name|session
+name|mavenSession
 operator|.
 name|getRequest
 argument_list|()
@@ -4479,7 +4474,7 @@ name|request
 operator|.
 name|setMirrors
 argument_list|(
-name|session
+name|mavenSession
 operator|.
 name|getRequest
 argument_list|()
@@ -4492,7 +4487,7 @@ name|request
 operator|.
 name|setProxies
 argument_list|(
-name|session
+name|mavenSession
 operator|.
 name|getRequest
 argument_list|()
@@ -4505,7 +4500,7 @@ name|request
 operator|.
 name|setLocalRepository
 argument_list|(
-name|session
+name|mavenSession
 operator|.
 name|getLocalRepository
 argument_list|()
@@ -4515,7 +4510,7 @@ name|request
 operator|.
 name|setRemoteRepositories
 argument_list|(
-name|session
+name|mavenSession
 operator|.
 name|getRequest
 argument_list|()
