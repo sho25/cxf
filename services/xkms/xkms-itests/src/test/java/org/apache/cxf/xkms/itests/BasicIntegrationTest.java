@@ -593,11 +593,6 @@ argument_list|)
 block|,
 name|copy
 argument_list|(
-literal|"data/xkms/certificates/crls/wss40CACRL.cer"
-argument_list|)
-block|,
-name|copy
-argument_list|(
 literal|"etc/org.ops4j.pax.logging.cfg"
 argument_list|)
 block|,
@@ -669,7 +664,7 @@ comment|//CoreOptions.vmOption("-Xrunjdwp:transport=dt_socket,server=y,suspend=y
 block|}
 return|;
 block|}
-specifier|private
+specifier|protected
 name|Option
 name|copy
 parameter_list|(

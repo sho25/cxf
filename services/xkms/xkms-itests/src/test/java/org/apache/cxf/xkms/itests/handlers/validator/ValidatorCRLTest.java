@@ -535,6 +535,11 @@ name|getConfig
 argument_list|()
 argument_list|)
 block|,
+name|copy
+argument_list|(
+literal|"data/xkms/certificates/crls/wss40CACRL.cer"
+argument_list|)
+block|,
 name|editConfigurationFilePut
 argument_list|(
 literal|"etc/org.apache.cxf.xkms.cfg"
