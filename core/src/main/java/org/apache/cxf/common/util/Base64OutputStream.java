@@ -321,6 +321,10 @@ block|{
 if|if
 condition|(
 name|flushed
+operator|||
+name|lastChunk
+operator|==
+literal|null
 condition|)
 block|{
 return|return;
@@ -357,8 +361,10 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
-argument_list|()
+name|IOException
+argument_list|(
+name|ex
+argument_list|)
 throw|;
 block|}
 name|flushed

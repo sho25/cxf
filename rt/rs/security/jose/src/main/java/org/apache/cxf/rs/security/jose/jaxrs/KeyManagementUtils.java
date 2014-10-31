@@ -215,6 +215,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|RSSEC_KEY_STORE_ALIASES
+init|=
+literal|"rs.security.keystore.aliases"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|RSSEC_KEY_STORE_FILE
 init|=
 literal|"rs.security.keystore.file"
