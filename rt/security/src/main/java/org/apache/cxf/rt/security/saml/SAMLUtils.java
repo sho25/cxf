@@ -93,7 +93,7 @@ name|common
 operator|.
 name|security
 operator|.
-name|SimplePrincipal
+name|SimpleGroup
 import|;
 end_import
 
@@ -693,7 +693,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|SimplePrincipal
+name|SimpleGroup
 argument_list|(
 operator|(
 name|String

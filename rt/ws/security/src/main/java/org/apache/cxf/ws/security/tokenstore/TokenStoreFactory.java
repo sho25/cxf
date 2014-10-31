@@ -153,7 +153,7 @@ block|{
 comment|//ignore
 block|}
 block|}
-specifier|protected
+specifier|public
 specifier|static
 specifier|synchronized
 name|boolean
