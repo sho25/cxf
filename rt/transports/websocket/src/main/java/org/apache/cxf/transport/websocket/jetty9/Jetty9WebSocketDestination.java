@@ -115,6 +115,30 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|RejectedExecutionException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|servlet
@@ -192,6 +216,22 @@ operator|.
 name|classloader
 operator|.
 name|ClassLoaderUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -508,6 +548,21 @@ name|JettyHTTPDestination
 implements|implements
 name|WebSocketDestinationService
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|Jetty9WebSocketDestination
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 comment|//REVISIT make these keys configurable
 specifier|private
 name|String
@@ -861,9 +916,7 @@ comment|// invoke the service asynchronously as the jetty websocket's onMessage 
 comment|// make sure the byte array passed to this method is immutable, as the websocket framework
 comment|// may corrupt the byte array after this method is returned (i.e., before the data is returned in
 comment|// the executor's thread.
-name|executor
-operator|.
-name|execute
+name|executeServiceTask
 argument_list|(
 operator|new
 name|Runnable
@@ -1002,6 +1055,46 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+block|}
+specifier|private
+name|void
+name|executeServiceTask
+parameter_list|(
+name|Runnable
+name|r
+parameter_list|)
+block|{
+try|try
+block|{
+name|executor
+operator|.
+name|execute
+argument_list|(
+name|r
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|RejectedExecutionException
+name|e
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Executor queue is full, run the service invocation task in caller thread."
+operator|+
+literal|"  Users can specify a larger executor queue to avoid this."
+argument_list|)
+expr_stmt|;
+name|r
+operator|.
+name|run
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void

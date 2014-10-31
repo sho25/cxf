@@ -115,6 +115,18 @@ name|java
 operator|.
 name|util
 operator|.
+name|concurrent
+operator|.
+name|RejectedExecutionException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Level
@@ -678,12 +690,7 @@ comment|// invoke the service asynchronously as the jetty websocket's onMessage 
 comment|// make sure the byte array passed to this method is immutable, as the websocket framework
 comment|// may corrupt the byte array after this method is returned (i.e., before the data is returned in
 comment|// the executor's thread.
-name|manager
-operator|.
-name|getExecutor
-argument_list|()
-operator|.
-name|execute
+name|executeServiceTask
 argument_list|(
 operator|new
 name|Runnable
@@ -814,6 +821,49 @@ block|}
 block|}
 argument_list|)
 expr_stmt|;
+block|}
+specifier|private
+name|void
+name|executeServiceTask
+parameter_list|(
+name|Runnable
+name|r
+parameter_list|)
+block|{
+try|try
+block|{
+name|manager
+operator|.
+name|getExecutor
+argument_list|()
+operator|.
+name|execute
+argument_list|(
+name|r
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|RejectedExecutionException
+name|e
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Executor queue is full, run the service invocation task in caller thread."
+operator|+
+literal|"  Users can specify a larger executor queue to avoid this."
+argument_list|)
+expr_stmt|;
+name|r
+operator|.
+name|run
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 comment|// may want to move this error reporting code to WebSocketServletHolder
 specifier|private
