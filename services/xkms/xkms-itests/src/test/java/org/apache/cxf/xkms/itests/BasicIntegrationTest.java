@@ -659,7 +659,7 @@ operator|.
 name|ignoreLocalConsole
 argument_list|()
 block|,
-comment|//KarafDistributionOption.keepRuntimeFolder(),
+comment|//org.ops4j.pax.exam.karaf.options.KarafDistributionOption.keepRuntimeFolder(),
 comment|//CoreOptions.vmOption("-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=5005")
 block|}
 return|;

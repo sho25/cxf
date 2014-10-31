@@ -198,6 +198,16 @@ argument_list|,
 name|parentType
 argument_list|,
 name|elementType
+argument_list|,
+literal|null
+argument_list|,
+name|this
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getClassLoader
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

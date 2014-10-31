@@ -280,6 +280,15 @@ argument_list|,
 name|parentType
 argument_list|,
 name|elementType
+argument_list|,
+literal|null
+argument_list|,
+name|XMLWSDLExtensionLoader
+operator|.
+name|class
+operator|.
+name|getClassLoader
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
