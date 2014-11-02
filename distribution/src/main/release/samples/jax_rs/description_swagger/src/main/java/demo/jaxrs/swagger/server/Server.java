@@ -239,7 +239,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"/swagger"
+literal|"/META-INF/resources/webjars/swagger-ui/2.0.24"
 argument_list|)
 operator|.
 name|toURI
