@@ -1546,6 +1546,8 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
+name|ExceptionUtils
+operator|.
 name|getStackTrace
 argument_list|(
 name|e

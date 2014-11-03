@@ -408,9 +408,6 @@ condition|)
 block|{
 name|prop
 operator|=
-operator|(
-name|String
-operator|)
 name|m
 operator|.
 name|getContextualProperty
