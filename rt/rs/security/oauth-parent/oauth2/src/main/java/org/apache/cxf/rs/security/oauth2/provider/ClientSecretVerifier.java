@@ -29,29 +29,36 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|rs
 operator|.
-name|ext
+name|security
 operator|.
-name|MessageContext
+name|oauth2
+operator|.
+name|common
+operator|.
+name|Client
 import|;
 end_import
 
 begin_comment
-comment|/**  * ClientIdProvider is responsible for providing a mapping between  * the authenticated client and its id    */
+comment|/**  * ClientSecretVerifier is responsible for validating a client secret    */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|ClientIdProvider
+name|ClientSecretVerifier
 block|{
-comment|/**      * Get a client id      *       * @param mc the {@link MessageContext} of this request      * @return the client id      */
-name|String
-name|getClientId
+comment|/**      * Validate a client secret      *       * @param client the {@link Client} the Client      * @param clientSecret the secret      * @return true if the secret is valid, false otherwise      */
+name|boolean
+name|validateClientSecret
 parameter_list|(
-name|MessageContext
-name|mc
+name|Client
+name|client
+parameter_list|,
+name|String
+name|clientSecret
 parameter_list|)
 function_decl|;
 block|}
