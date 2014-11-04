@@ -729,10 +729,7 @@ argument_list|()
 argument_list|,
 name|cipherSuites
 argument_list|,
-name|tlsClientParameters
-operator|.
-name|getSecureSocketProtocol
-argument_list|()
+name|protocol
 argument_list|)
 expr_stmt|;
 comment|//recalc the hashcode since somet of the above MAY have changed the tlsClientParameters
