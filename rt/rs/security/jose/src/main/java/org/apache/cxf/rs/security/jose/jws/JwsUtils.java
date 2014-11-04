@@ -724,6 +724,13 @@ operator|.
 name|KEY_OPER_SIGN
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|jwk
+operator|!=
+literal|null
+condition|)
+block|{
 name|rsaSignatureAlgo
 operator|=
 name|getSignatureAlgo
@@ -747,6 +754,7 @@ argument_list|,
 name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -1062,6 +1070,13 @@ operator|.
 name|KEY_OPER_VERIFY
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|jwk
+operator|!=
+literal|null
+condition|)
+block|{
 name|rsaSignatureAlgo
 operator|=
 name|getSignatureAlgo
@@ -1085,6 +1100,7 @@ argument_list|,
 name|rsaSignatureAlgo
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
