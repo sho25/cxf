@@ -208,6 +208,10 @@ name|AnnotationUtils
 operator|.
 name|getAnnotatedMethod
 argument_list|(
+name|Customer
+operator|.
+name|class
+argument_list|,
 name|m
 argument_list|)
 decl_stmt|;
@@ -279,6 +283,10 @@ name|AnnotationUtils
 operator|.
 name|getAnnotatedMethod
 argument_list|(
+name|Customer
+operator|.
+name|class
+argument_list|,
 name|m
 argument_list|)
 decl_stmt|;

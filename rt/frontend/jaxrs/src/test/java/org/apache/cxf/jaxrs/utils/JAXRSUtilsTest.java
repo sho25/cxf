@@ -13076,6 +13076,10 @@ name|AnnotationUtils
 operator|.
 name|getAnnotatedMethod
 argument_list|(
+name|Customer
+operator|.
+name|class
+argument_list|,
 name|methodToInvoke
 argument_list|)
 argument_list|,
