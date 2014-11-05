@@ -29,7 +29,7 @@ interface|interface
 name|NonceStore
 block|{
 name|void
-name|storeNonce
+name|initNonceHistory
 parameter_list|(
 name|String
 name|tokenKey
