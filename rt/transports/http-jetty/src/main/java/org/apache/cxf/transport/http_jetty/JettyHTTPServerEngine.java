@@ -3298,7 +3298,7 @@ operator|.
 name|getSecureSocketProtocol
 argument_list|()
 decl_stmt|;
-comment|// Exclude SSLv3 by default unless the protocol is given as SSLv3
+comment|// Exclude SSLv3 + SSLv2Hello by default unless the protocol is given as SSLv3
 if|if
 condition|(
 operator|!
@@ -3323,6 +3323,13 @@ operator|.
 name|addExcludeProtocols
 argument_list|(
 literal|"SSLv3"
+argument_list|)
+expr_stmt|;
+name|scf
+operator|.
+name|addExcludeProtocols
+argument_list|(
+literal|"SSLv2Hello"
 argument_list|)
 expr_stmt|;
 block|}
