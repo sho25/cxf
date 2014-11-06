@@ -57,8 +57,6 @@ name|apache
 operator|.
 name|activemq
 operator|.
-name|spring
-operator|.
 name|ActiveMQConnectionFactory
 import|;
 end_import
@@ -484,7 +482,9 @@ name|connectionFactory
 init|=
 operator|new
 name|ActiveMQConnectionFactory
-argument_list|()
+argument_list|(
+literal|"vm://JmsServiceTest"
+argument_list|)
 decl_stmt|;
 name|connectionFactory
 operator|.
@@ -546,14 +546,14 @@ operator|new
 name|Option
 index|[]
 block|{
-name|cxfBaseConfig
+name|cxfBaseConfigWithTestUtils
 argument_list|()
 block|,
 name|logLevel
 argument_list|(
 name|LogLevel
 operator|.
-name|INFO
+name|WARN
 argument_list|)
 block|,
 name|features
