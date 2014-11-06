@@ -117,26 +117,6 @@ name|JoseHeadersReaderWriter
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|jose
-operator|.
-name|jws
-operator|.
-name|JwsUtils
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -598,7 +578,7 @@ name|validateCriticalHeaders
 parameter_list|()
 block|{
 return|return
-name|JwsUtils
+name|JweUtils
 operator|.
 name|validateCriticalHeaders
 argument_list|(
