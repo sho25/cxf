@@ -2093,6 +2093,13 @@ return|;
 block|}
 finally|finally
 block|{
+if|if
+condition|(
+name|responseContext
+operator|!=
+literal|null
+condition|)
+block|{
 name|responseContext
 operator|.
 name|put
@@ -2105,6 +2112,7 @@ argument_list|,
 name|resp
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|public
@@ -2188,6 +2196,10 @@ decl_stmt|;
 if|if
 condition|(
 name|resp
+operator|!=
+literal|null
+operator|&&
+name|responseContext
 operator|!=
 literal|null
 condition|)
@@ -5089,6 +5101,10 @@ expr_stmt|;
 if|if
 condition|(
 name|resCtx
+operator|!=
+literal|null
+operator|&&
+name|responseContext
 operator|!=
 literal|null
 condition|)
