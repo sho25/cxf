@@ -15,11 +15,11 @@ name|rs
 operator|.
 name|security
 operator|.
-name|jose
+name|oauth2
+operator|.
+name|grants
 operator|.
 name|jwt
-operator|.
-name|grant
 package|;
 end_package
 
