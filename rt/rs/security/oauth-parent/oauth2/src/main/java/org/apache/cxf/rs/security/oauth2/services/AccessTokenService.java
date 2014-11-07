@@ -245,6 +245,26 @@ name|security
 operator|.
 name|oauth2
 operator|.
+name|common
+operator|.
+name|UserSubject
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
 name|grants
 operator|.
 name|code
@@ -697,6 +717,11 @@ argument_list|(
 name|client
 argument_list|,
 name|clientToken
+argument_list|,
+name|serverToken
+operator|.
+name|getSubject
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Return it to the client
@@ -737,6 +762,9 @@ name|client
 parameter_list|,
 name|ClientAccessToken
 name|clientToken
+parameter_list|,
+name|UserSubject
+name|endUser
 parameter_list|)
 block|{
 for|for
@@ -754,6 +782,8 @@ argument_list|(
 name|client
 argument_list|,
 name|clientToken
+argument_list|,
+name|endUser
 argument_list|)
 expr_stmt|;
 block|}

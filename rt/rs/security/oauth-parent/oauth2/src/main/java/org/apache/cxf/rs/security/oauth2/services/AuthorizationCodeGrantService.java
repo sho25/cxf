@@ -531,6 +531,11 @@ name|grant
 operator|.
 name|getCode
 argument_list|()
+argument_list|,
+name|grant
+operator|.
+name|getSubject
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -650,6 +655,9 @@ name|client
 parameter_list|,
 name|String
 name|code
+parameter_list|,
+name|UserSubject
+name|endUser
 parameter_list|)
 block|{
 if|if
@@ -667,6 +675,8 @@ argument_list|(
 name|client
 argument_list|,
 name|code
+argument_list|,
+name|endUser
 argument_list|)
 return|;
 block|}

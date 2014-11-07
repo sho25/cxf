@@ -487,6 +487,11 @@ argument_list|(
 name|client
 argument_list|,
 name|clientToken
+argument_list|,
+name|token
+operator|.
+name|getSubject
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// return the token by appending it as a fragment parameter to the redirect URI
@@ -791,6 +796,9 @@ name|client
 parameter_list|,
 name|ClientAccessToken
 name|clientToken
+parameter_list|,
+name|UserSubject
+name|endUser
 parameter_list|)
 block|{
 for|for
@@ -808,6 +816,8 @@ argument_list|(
 name|client
 argument_list|,
 name|clientToken
+argument_list|,
+name|endUser
 argument_list|)
 expr_stmt|;
 block|}

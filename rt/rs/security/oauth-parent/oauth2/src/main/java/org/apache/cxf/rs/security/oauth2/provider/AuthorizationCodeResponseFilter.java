@@ -41,6 +41,26 @@ name|Client
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|common
+operator|.
+name|UserSubject
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
@@ -54,6 +74,9 @@ name|client
 parameter_list|,
 name|String
 name|code
+parameter_list|,
+name|UserSubject
+name|endUser
 parameter_list|)
 function_decl|;
 block|}
