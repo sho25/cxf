@@ -811,7 +811,6 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-operator|!
 operator|(
 operator|(
 name|MultipleEndpointObserver
@@ -826,9 +825,6 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-return|return;
-block|}
-block|}
 name|getDestination
 argument_list|()
 operator|.
@@ -837,6 +833,19 @@ argument_list|(
 literal|null
 argument_list|)
 expr_stmt|;
+block|}
+block|}
+else|else
+block|{
+name|getDestination
+argument_list|()
+operator|.
+name|setMessageObserver
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
+block|}
 name|stopped
 operator|=
 literal|true
