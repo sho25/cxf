@@ -217,6 +217,11 @@ argument_list|,
 name|len
 argument_list|)
 expr_stmt|;
+name|out
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Override

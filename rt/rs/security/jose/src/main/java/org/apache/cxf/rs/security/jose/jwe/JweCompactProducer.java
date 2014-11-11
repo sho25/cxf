@@ -758,6 +758,11 @@ argument_list|(
 name|dotBytes
 argument_list|)
 expr_stmt|;
+name|os
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|String

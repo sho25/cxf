@@ -552,6 +552,11 @@ argument_list|,
 name|out
 argument_list|)
 expr_stmt|;
+name|out
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|rem
@@ -581,11 +586,9 @@ literal|null
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Override
 specifier|public
 name|void
-name|flush
+name|finalFlush
 parameter_list|()
 throws|throws
 name|IOException
