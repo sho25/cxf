@@ -62,9 +62,7 @@ specifier|private
 name|String
 name|signatureAlgorithm
 init|=
-name|WSConstants
-operator|.
-name|RSA_SHA1
+literal|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha256"
 decl_stmt|;
 specifier|private
 name|String
@@ -130,13 +128,22 @@ name|digestAlgorithm
 init|=
 name|WSConstants
 operator|.
-name|SHA1
+name|SHA256
 decl_stmt|;
 specifier|public
 name|SignatureProperties
 parameter_list|()
 block|{
 comment|// Default signature algorithms
+name|acceptedSignatureAlgorithms
+operator|.
+name|add
+argument_list|(
+name|WSConstants
+operator|.
+name|RSA_SHA1
+argument_list|)
+expr_stmt|;
 name|acceptedSignatureAlgorithms
 operator|.
 name|add
