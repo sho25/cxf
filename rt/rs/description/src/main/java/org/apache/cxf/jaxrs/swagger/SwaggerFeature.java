@@ -148,19 +148,19 @@ specifier|private
 name|String
 name|title
 init|=
-literal|"Rest sample app"
+literal|"Sample REST Application"
 decl_stmt|;
 specifier|private
 name|String
 name|description
 init|=
-literal|"This is a app."
+literal|"The Application"
 decl_stmt|;
 specifier|private
 name|String
 name|contact
 init|=
-literal|"freeman.fang@gmail.com"
+literal|"committer@apache.org"
 decl_stmt|;
 specifier|private
 name|String
