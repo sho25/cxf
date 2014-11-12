@@ -1078,10 +1078,6 @@ condition|)
 block|{
 return|return;
 block|}
-name|bus
-operator|=
-name|bb
-expr_stmt|;
 if|if
 condition|(
 name|properties
@@ -1089,7 +1085,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|setProperties
 argument_list|(
@@ -1111,7 +1107,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|getInInterceptors
 argument_list|()
@@ -1133,7 +1129,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|getOutInterceptors
 argument_list|()
@@ -1155,7 +1151,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|getInFaultInterceptors
 argument_list|()
@@ -1177,7 +1173,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|getOutFaultInterceptors
 argument_list|()
@@ -1200,7 +1196,7 @@ name|id
 argument_list|)
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|setId
 argument_list|(
@@ -1215,7 +1211,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|bus
+name|bb
 operator|.
 name|setFeatures
 argument_list|(
@@ -1227,6 +1223,10 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
+name|bus
+operator|=
+name|bb
+expr_stmt|;
 block|}
 specifier|public
 name|void
