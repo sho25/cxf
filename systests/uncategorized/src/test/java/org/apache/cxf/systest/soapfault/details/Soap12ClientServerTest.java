@@ -377,11 +377,6 @@ operator|.
 name|getStackTrace
 argument_list|()
 decl_stmt|;
-name|ex
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"org.apache.cxf.systest.soapfault.details.GreeterImpl12"
