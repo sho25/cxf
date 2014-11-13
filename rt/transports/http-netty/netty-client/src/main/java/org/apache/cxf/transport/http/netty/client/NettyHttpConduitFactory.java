@@ -357,6 +357,17 @@ specifier|public
 name|NettyHttpConduitFactory
 parameter_list|()
 block|{
+name|io
+operator|.
+name|netty
+operator|.
+name|util
+operator|.
+name|Version
+operator|.
+name|identify
+argument_list|()
+expr_stmt|;
 name|Object
 name|st
 init|=
