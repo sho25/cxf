@@ -2020,6 +2020,16 @@ name|ex
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|ex
+operator|.
+name|getLoadedObject
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|ret
 operator|.
 name|add
@@ -2035,6 +2045,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
