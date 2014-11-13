@@ -413,6 +413,11 @@ name|sb
 operator|.
 name|append
 argument_list|(
+literal|"Caused by: "
+argument_list|)
+operator|.
+name|append
+argument_list|(
 name|throwable
 operator|.
 name|getClass
@@ -420,8 +425,11 @@ argument_list|()
 operator|.
 name|getCanonicalName
 argument_list|()
-operator|+
-literal|" : "
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|": "
 operator|+
 name|throwable
 operator|.
@@ -429,6 +437,13 @@ name|getMessage
 argument_list|()
 operator|+
 literal|"\n"
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|Message
+operator|.
+name|EXCEPTION_CAUSE_SUFFIX
 argument_list|)
 expr_stmt|;
 while|while
