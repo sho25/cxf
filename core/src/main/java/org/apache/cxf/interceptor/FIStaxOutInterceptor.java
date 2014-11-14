@@ -722,6 +722,10 @@ decl_stmt|;
 if|if
 condition|(
 name|s
+operator|!=
+literal|null
+operator|&&
+name|s
 operator|.
 name|contains
 argument_list|(
