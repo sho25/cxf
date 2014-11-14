@@ -763,6 +763,7 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
 name|consumer
 operator|.
 name|verifySignatureWith
