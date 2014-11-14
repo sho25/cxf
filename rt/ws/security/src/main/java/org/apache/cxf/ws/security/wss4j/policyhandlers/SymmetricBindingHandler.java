@@ -2474,7 +2474,7 @@ name|SPConstants
 operator|.
 name|SPVersion
 operator|.
-name|SP12
+name|SP11
 condition|)
 block|{
 name|dkEncr
@@ -2483,7 +2483,7 @@ name|setWscVersion
 argument_list|(
 name|ConversationConstants
 operator|.
-name|VERSION_05_12
+name|VERSION_05_02
 argument_list|)
 expr_stmt|;
 block|}
@@ -3912,7 +3912,7 @@ name|SPConstants
 operator|.
 name|SPVersion
 operator|.
-name|SP12
+name|SP11
 condition|)
 block|{
 name|dkSign
@@ -3921,7 +3921,7 @@ name|setWscVersion
 argument_list|(
 name|ConversationConstants
 operator|.
-name|VERSION_05_12
+name|VERSION_05_02
 argument_list|)
 expr_stmt|;
 block|}
