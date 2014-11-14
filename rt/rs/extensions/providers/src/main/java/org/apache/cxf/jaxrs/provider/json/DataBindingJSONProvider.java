@@ -616,6 +616,9 @@ argument_list|(
 name|writer
 argument_list|,
 name|ignoreNamespaces
+argument_list|,
+operator|!
+name|writeXsiType
 argument_list|)
 return|;
 block|}
