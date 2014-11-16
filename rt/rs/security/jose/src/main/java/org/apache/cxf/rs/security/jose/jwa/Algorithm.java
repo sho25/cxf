@@ -346,6 +346,8 @@ argument_list|,
 literal|256
 argument_list|)
 block|,
+comment|//TODO: default to "AES/CBC/PKCS5Padding" if Cipher "AES/CBC/PKCS7Padding"
+comment|// can not be initialized, apparently Java 8 has decided to settle on PKCS5Padding only
 name|A128CBC_HS256
 argument_list|(
 name|JoseConstants

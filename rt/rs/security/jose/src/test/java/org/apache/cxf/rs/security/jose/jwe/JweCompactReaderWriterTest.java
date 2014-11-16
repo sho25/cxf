@@ -653,7 +653,6 @@ name|Exception
 block|{
 try|try
 block|{
-comment|// Java 8 apparently has it
 name|Cipher
 operator|.
 name|getInstance
@@ -663,6 +662,15 @@ operator|.
 name|AES_GCM_ALGO_JAVA
 argument_list|)
 expr_stmt|;
+name|Cipher
+operator|.
+name|getInstance
+argument_list|(
+name|Algorithm
+operator|.
+name|AES_CBC_ALGO_JAVA
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -670,7 +678,6 @@ name|Throwable
 name|t
 parameter_list|)
 block|{
-comment|// Oracle Java 7
 name|Security
 operator|.
 name|addProvider
