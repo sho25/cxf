@@ -361,7 +361,7 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|getInMessage
+name|getOutMessage
 argument_list|()
 argument_list|,
 literal|true
