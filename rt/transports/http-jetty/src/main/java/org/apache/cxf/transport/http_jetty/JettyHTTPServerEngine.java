@@ -752,6 +752,14 @@ name|JettyHTTPServerEngine
 implements|implements
 name|ServerEngine
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DO_NOT_CHECK_URL_PROP
+init|=
+literal|"org.apache.cxf.transports.http_jetty.DontCheckUrl"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -766,14 +774,6 @@ name|JettyHTTPServerEngine
 operator|.
 name|class
 argument_list|)
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|DO_NOT_CHECK_URL_PROP
-init|=
-literal|"org.apache.cxf.transports.http_jetty.DontCheckUrl"
 decl_stmt|;
 comment|/**      * This is the network port for which this engine is allocated.      */
 specifier|private
