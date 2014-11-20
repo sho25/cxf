@@ -223,6 +223,18 @@ argument_list|)
 expr_stmt|;
 name|context
 operator|.
+name|setWelcomeFiles
+argument_list|(
+operator|new
+name|String
+index|[]
+block|{
+literal|"index.jsp"
+block|}
+argument_list|)
+expr_stmt|;
+name|context
+operator|.
 name|addServlet
 argument_list|(
 name|servletHolder
@@ -255,7 +267,7 @@ name|setInitParameter
 argument_list|(
 literal|"redirects-list"
 argument_list|,
-literal|"/ /index.html /.*[.]js /css/.* /images/.* lib/.*"
+literal|"/ /index.jsp /.*[.]js /css/.* /images/.* lib/.*"
 argument_list|)
 expr_stmt|;
 name|servletHolder
