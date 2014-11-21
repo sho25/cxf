@@ -183,11 +183,11 @@ parameter_list|(
 name|String
 name|msg
 parameter_list|,
-name|Logger
-name|log
-parameter_list|,
 name|Throwable
 name|t
+parameter_list|,
+name|Logger
+name|log
 parameter_list|)
 block|{
 name|super

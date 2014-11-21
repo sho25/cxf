@@ -3785,11 +3785,11 @@ throw|throw
 operator|new
 name|TrustException
 argument_list|(
-name|LOG
-argument_list|,
 literal|"WS_MEX_ERROR"
 argument_list|,
 name|ex
+argument_list|,
+name|LOG
 argument_list|)
 throw|;
 block|}
@@ -8887,9 +8887,9 @@ name|TrustException
 argument_list|(
 literal|"DERIVED_KEY_ERROR"
 argument_list|,
-name|LOG
-argument_list|,
 name|e
+argument_list|,
+name|LOG
 argument_list|)
 throw|;
 block|}
@@ -9179,9 +9179,9 @@ name|TrustException
 argument_list|(
 literal|"ENCRYPTED_KEY_ERROR"
 argument_list|,
-name|LOG
-argument_list|,
 name|e
+argument_list|,
+name|LOG
 argument_list|)
 throw|;
 block|}
