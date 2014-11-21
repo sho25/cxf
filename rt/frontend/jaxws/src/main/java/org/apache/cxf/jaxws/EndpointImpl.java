@@ -1399,6 +1399,8 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|bus
+argument_list|,
 name|implementor
 argument_list|)
 return|;

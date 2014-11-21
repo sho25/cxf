@@ -562,6 +562,9 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|getBus
+argument_list|()
+argument_list|,
 name|provider
 operator|.
 name|getProvider

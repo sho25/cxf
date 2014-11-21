@@ -1149,6 +1149,9 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|getBus
+argument_list|()
+argument_list|,
 name|bean
 argument_list|)
 decl_stmt|;

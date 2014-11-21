@@ -627,6 +627,9 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|getServletBus
+argument_list|()
+argument_list|,
 name|bean
 argument_list|)
 decl_stmt|;

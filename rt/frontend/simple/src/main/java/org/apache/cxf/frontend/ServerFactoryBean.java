@@ -709,6 +709,8 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|bus
+argument_list|,
 name|serviceBean
 argument_list|)
 argument_list|)
@@ -800,6 +802,9 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|getBus
+argument_list|()
+argument_list|,
 name|getServiceBean
 argument_list|()
 argument_list|)
@@ -1261,6 +1266,9 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|getBus
+argument_list|()
+argument_list|,
 name|serviceBean
 argument_list|)
 return|;

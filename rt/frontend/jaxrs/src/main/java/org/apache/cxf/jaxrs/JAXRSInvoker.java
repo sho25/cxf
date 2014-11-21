@@ -1648,6 +1648,11 @@ name|ClassHelper
 operator|.
 name|getRealClass
 argument_list|(
+name|exchange
+operator|.
+name|getBus
+argument_list|()
+argument_list|,
 name|result
 argument_list|)
 argument_list|,
