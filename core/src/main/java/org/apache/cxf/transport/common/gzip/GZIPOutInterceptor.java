@@ -287,6 +287,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|message
+operator|.
+name|MessageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|phase
 operator|.
 name|AbstractPhaseInterceptor
@@ -551,6 +565,8 @@ init|=
 name|gzipPermitted
 argument_list|(
 name|message
+argument_list|,
+name|force
 argument_list|)
 decl_stmt|;
 if|if
@@ -637,12 +653,16 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * Checks whether we can, cannot or must use gzip compression on this output      * message. Gzip is always permitted if the message is a client request. If      * the message is a server response we check the Accept-Encoding header of      * the corresponding request message - with no Accept-Encoding we assume      * that gzip is not permitted. For the full gory details, see<a      * href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">section      * 14.3 of RFC 2616</a> (HTTP 1.1).      *       * @param message the outgoing message.      * @return whether to attempt gzip compression for this message.      * @throws Fault if the Accept-Encoding header does not allow any encoding      *                 that we can support (identity, gzip or x-gzip).      */
-specifier|private
+specifier|public
+specifier|static
 name|UseGzip
 name|gzipPermitted
 parameter_list|(
 name|Message
 name|message
+parameter_list|,
+name|boolean
+name|force
 parameter_list|)
 throws|throws
 name|Fault
@@ -656,6 +676,8 @@ name|NO
 decl_stmt|;
 if|if
 condition|(
+name|MessageUtils
+operator|.
 name|isRequestor
 argument_list|(
 name|message
