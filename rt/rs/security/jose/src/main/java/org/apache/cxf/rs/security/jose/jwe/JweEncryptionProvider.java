@@ -39,6 +39,7 @@ name|JweHeaders
 name|jweHeaders
 parameter_list|)
 function_decl|;
+comment|/**      * Prepare JWE state (optional operation)      */
 name|JweEncryptionState
 name|createJweEncryptionState
 parameter_list|(

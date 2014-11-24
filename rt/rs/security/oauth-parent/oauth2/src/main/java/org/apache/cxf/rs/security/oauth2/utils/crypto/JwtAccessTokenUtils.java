@@ -892,6 +892,26 @@ name|NoneJwsSignature
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|byte
+index|[]
+name|sign
+parameter_list|(
+name|JoseHeaders
+name|headers
+parameter_list|,
+name|byte
+index|[]
+name|content
+parameter_list|)
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
 block|}
 specifier|private
 specifier|static
