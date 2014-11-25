@@ -220,6 +220,9 @@ argument_list|>
 operator|)
 name|m
 operator|.
+name|getExchange
+argument_list|()
+operator|.
 name|get
 argument_list|(
 name|PROPERTY_KEY
@@ -304,6 +307,9 @@ argument_list|>
 argument_list|()
 expr_stmt|;
 name|m
+operator|.
+name|getExchange
+argument_list|()
 operator|.
 name|put
 argument_list|(
