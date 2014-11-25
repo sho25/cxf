@@ -451,6 +451,11 @@ specifier|private
 name|boolean
 name|checkAbsolutePathSlash
 decl_stmt|;
+comment|/**      * @parameter default-value="false"      */
+specifier|private
+name|boolean
+name|ignoreOverloadedMethods
+decl_stmt|;
 comment|/**      * @parameter      */
 specifier|private
 name|String
@@ -470,6 +475,11 @@ comment|/**      * @parameter default-value="wadl"      */
 specifier|private
 name|String
 name|outputFileExtension
+decl_stmt|;
+comment|/**      * @parameter      */
+specifier|private
+name|String
+name|stylesheetReference
 decl_stmt|;
 specifier|private
 name|ClassLoader
@@ -690,6 +700,13 @@ argument_list|(
 name|checkAbsolutePathSlash
 argument_list|)
 expr_stmt|;
+name|wg
+operator|.
+name|setIgnoreOverloadedMethods
+argument_list|(
+name|ignoreOverloadedMethods
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|applicationTitle
@@ -720,6 +737,13 @@ name|namespacePrefix
 argument_list|)
 expr_stmt|;
 block|}
+name|wg
+operator|.
+name|setStylesheetReference
+argument_list|(
+name|stylesheetReference
+argument_list|)
+expr_stmt|;
 block|}
 specifier|private
 name|void
