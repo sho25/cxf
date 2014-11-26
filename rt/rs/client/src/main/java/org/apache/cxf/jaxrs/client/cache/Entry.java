@@ -94,8 +94,7 @@ name|emptyMap
 argument_list|()
 decl_stmt|;
 specifier|private
-name|byte
-index|[]
+name|Serializable
 name|data
 decl_stmt|;
 specifier|private
@@ -122,9 +121,8 @@ specifier|public
 name|Entry
 parameter_list|(
 specifier|final
-name|byte
-index|[]
-name|bytes
+name|Serializable
+name|data
 parameter_list|,
 specifier|final
 name|MultivaluedMap
@@ -153,7 +151,7 @@ name|this
 operator|.
 name|data
 operator|=
-name|bytes
+name|data
 expr_stmt|;
 name|this
 operator|.
@@ -232,8 +230,7 @@ name|cacheHeaders
 expr_stmt|;
 block|}
 specifier|public
-name|byte
-index|[]
+name|Serializable
 name|getData
 parameter_list|()
 block|{
@@ -246,8 +243,7 @@ name|void
 name|setData
 parameter_list|(
 specifier|final
-name|byte
-index|[]
+name|Serializable
 name|data
 parameter_list|)
 block|{
