@@ -175,7 +175,6 @@ name|CacheControlClientRequestFilter
 implements|implements
 name|ClientRequestFilter
 block|{
-specifier|public
 specifier|static
 specifier|final
 name|String
@@ -183,7 +182,6 @@ name|NO_CACHE_PROPERTY
 init|=
 literal|"no_client_cache"
 decl_stmt|;
-specifier|public
 specifier|static
 specifier|final
 name|String
@@ -191,13 +189,19 @@ name|CACHED_ENTITY_PROPERTY
 init|=
 literal|"client_cached_entity"
 decl_stmt|;
-specifier|public
 specifier|static
 specifier|final
 name|String
 name|CLIENT_ACCEPTS
 init|=
 literal|"client_accepts"
+decl_stmt|;
+specifier|static
+specifier|final
+name|String
+name|CLIENT_CACHE_CONTROL
+init|=
+literal|"client_cache_control"
 decl_stmt|;
 specifier|private
 name|Cache
@@ -262,6 +266,8 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+comment|//TODO: Review the possibility of supporting POST responses, example,
+comment|//      POST create request may get a created entity representation returned
 name|request
 operator|.
 name|setProperty
@@ -324,6 +330,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|//TODO: do the extra validation against the conditional headers
+comment|//      which may be contained in the current request
 if|if
 condition|(
 name|entry
@@ -448,6 +456,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+comment|// Should the map of all request headers shared ?
 name|request
 operator|.
 name|setProperty
@@ -455,6 +464,22 @@ argument_list|(
 name|CLIENT_ACCEPTS
 argument_list|,
 name|accepts
+argument_list|)
+expr_stmt|;
+name|request
+operator|.
+name|setProperty
+argument_list|(
+name|CLIENT_CACHE_CONTROL
+argument_list|,
+name|request
+operator|.
+name|getHeaderString
+argument_list|(
+name|HttpHeaders
+operator|.
+name|CACHE_CONTROL
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
