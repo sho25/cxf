@@ -17,9 +17,9 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|utils
+name|tokens
 operator|.
-name|crypto
+name|jwt
 package|;
 end_package
 
