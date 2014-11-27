@@ -407,6 +407,9 @@ name|params
 parameter_list|,
 name|UserSubject
 name|userSubject
+parameter_list|,
+name|Client
+name|client
 parameter_list|)
 block|{
 if|if
@@ -425,6 +428,8 @@ argument_list|(
 name|params
 argument_list|,
 name|userSubject
+argument_list|,
+name|client
 argument_list|)
 expr_stmt|;
 block|}
@@ -436,6 +441,8 @@ argument_list|(
 name|params
 argument_list|,
 name|userSubject
+argument_list|,
+name|client
 argument_list|)
 return|;
 block|}

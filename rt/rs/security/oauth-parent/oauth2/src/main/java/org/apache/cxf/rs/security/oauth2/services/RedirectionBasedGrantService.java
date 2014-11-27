@@ -637,12 +637,22 @@ argument_list|(
 name|sc
 argument_list|)
 decl_stmt|;
+name|Client
+name|client
+init|=
+name|getClient
+argument_list|(
+name|params
+argument_list|)
+decl_stmt|;
 return|return
 name|startAuthorization
 argument_list|(
 name|params
 argument_list|,
 name|userSubject
+argument_list|,
+name|client
 argument_list|)
 return|;
 block|}
@@ -660,16 +670,11 @@ name|params
 parameter_list|,
 name|UserSubject
 name|userSubject
-parameter_list|)
-block|{
+parameter_list|,
 name|Client
 name|client
-init|=
-name|getClient
-argument_list|(
-name|params
-argument_list|)
-decl_stmt|;
+parameter_list|)
+block|{
 comment|// Validate the provided request URI, if any, against the ones Client provided
 comment|// during the registration
 name|String
