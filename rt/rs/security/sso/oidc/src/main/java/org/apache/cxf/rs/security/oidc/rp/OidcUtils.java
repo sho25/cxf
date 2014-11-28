@@ -127,6 +127,14 @@ specifier|final
 class|class
 name|OidcUtils
 block|{
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ID_TOKEN
+init|=
+literal|"id_token"
+decl_stmt|;
 specifier|private
 name|OidcUtils
 parameter_list|()
