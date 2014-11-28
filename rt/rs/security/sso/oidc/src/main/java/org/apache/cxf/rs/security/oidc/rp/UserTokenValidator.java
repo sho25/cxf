@@ -77,14 +77,34 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserIdToken
+name|UserToken
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oidc
+operator|.
+name|utils
+operator|.
+name|OidcUtils
 import|;
 end_import
 
 begin_class
 specifier|public
 class|class
-name|IdTokenValidator
+name|UserTokenValidator
 extends|extends
 name|AbstractTokenValidator
 block|{
@@ -95,7 +115,7 @@ init|=
 literal|true
 decl_stmt|;
 specifier|public
-name|UserIdToken
+name|UserToken
 name|getIdTokenFromJwt
 parameter_list|(
 name|ClientAccessToken
@@ -125,7 +145,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|UserIdToken
+name|UserToken
 name|getIdTokenFromJwt
 parameter_list|(
 name|JwtToken
@@ -138,7 +158,7 @@ block|{
 comment|//TODO: do the extra validation if needed
 return|return
 operator|new
-name|UserIdToken
+name|UserToken
 argument_list|(
 name|jwt
 operator|.
@@ -171,7 +191,9 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-literal|"id_token"
+name|OidcUtils
+operator|.
+name|ID_TOKEN
 argument_list|)
 decl_stmt|;
 name|JwtToken

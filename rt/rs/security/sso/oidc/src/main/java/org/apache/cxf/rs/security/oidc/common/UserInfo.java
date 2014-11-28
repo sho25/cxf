@@ -68,7 +68,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|UserProfile
+name|UserInfo
 extends|extends
 name|JwtClaims
 block|{
@@ -129,11 +129,11 @@ init|=
 literal|"address"
 decl_stmt|;
 specifier|public
-name|UserProfile
+name|UserInfo
 parameter_list|()
 block|{     }
 specifier|public
-name|UserProfile
+name|UserInfo
 parameter_list|(
 name|Map
 argument_list|<

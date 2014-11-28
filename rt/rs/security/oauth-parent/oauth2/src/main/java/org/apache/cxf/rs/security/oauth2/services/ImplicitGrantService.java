@@ -484,14 +484,9 @@ argument_list|)
 decl_stmt|;
 name|processClientAccessToken
 argument_list|(
-name|client
-argument_list|,
 name|clientToken
 argument_list|,
 name|token
-operator|.
-name|getSubject
-argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// return the token by appending it as a fragment parameter to the redirect URI
@@ -791,14 +786,11 @@ specifier|protected
 name|void
 name|processClientAccessToken
 parameter_list|(
-name|Client
-name|client
-parameter_list|,
 name|ClientAccessToken
 name|clientToken
 parameter_list|,
-name|UserSubject
-name|endUser
+name|ServerAccessToken
+name|serverToken
 parameter_list|)
 block|{
 for|for
@@ -813,11 +805,9 @@ name|filter
 operator|.
 name|process
 argument_list|(
-name|client
-argument_list|,
 name|clientToken
 argument_list|,
-name|endUser
+name|serverToken
 argument_list|)
 expr_stmt|;
 block|}
