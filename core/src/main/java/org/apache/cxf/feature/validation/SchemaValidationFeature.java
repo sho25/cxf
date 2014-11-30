@@ -256,7 +256,7 @@ name|setProperty
 argument_list|(
 name|Message
 operator|.
-name|SCHEMA_VALIDATION_ENABLED
+name|SCHEMA_VALIDATION_TYPE
 argument_list|,
 name|type
 argument_list|)

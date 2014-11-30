@@ -112,7 +112,11 @@ name|SchemaValidationType
 block|{
 name|IN
 block|,
+name|REQUEST
+block|,
 name|OUT
+block|,
+name|RESPONSE
 block|,
 name|BOTH
 block|,

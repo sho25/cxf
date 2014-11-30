@@ -257,10 +257,17 @@ name|MTOM_THRESHOLD
 init|=
 literal|"mtom-threshold"
 decl_stmt|;
+comment|/**      * Runtime schema validation property      */
 name|String
 name|SCHEMA_VALIDATION_ENABLED
 init|=
 literal|"schema-validation-enabled"
+decl_stmt|;
+comment|/**      * The default values for schema validation will be set in the service model using this property      */
+name|String
+name|SCHEMA_VALIDATION_TYPE
+init|=
+literal|"schema-validation-type"
 decl_stmt|;
 comment|/**      * Boolean property specifying if the Java stack trace is returned as a        * SOAP fault message.      */
 name|String

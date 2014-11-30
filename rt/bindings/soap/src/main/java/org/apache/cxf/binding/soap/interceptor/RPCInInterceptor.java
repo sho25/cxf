@@ -1437,11 +1437,6 @@ expr_stmt|;
 comment|// configure endpoint and operation level schema validation
 name|setOperationSchemaValidation
 argument_list|(
-name|operation
-operator|.
-name|getOperationInfo
-argument_list|()
-argument_list|,
 name|message
 argument_list|)
 expr_stmt|;

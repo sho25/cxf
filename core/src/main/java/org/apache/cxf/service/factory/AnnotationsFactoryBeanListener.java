@@ -2139,15 +2139,16 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|// if someone has gone to the effort of specifying enabled=false, then we need to
-comment|// handle that, otherwise we use the new SchemaValidationType type only
 name|endpoint
 operator|.
-name|put
+name|getEndpointInfo
+argument_list|()
+operator|.
+name|setProperty
 argument_list|(
 name|Message
 operator|.
-name|SCHEMA_VALIDATION_ENABLED
+name|SCHEMA_VALIDATION_TYPE
 argument_list|,
 name|annotation
 operator|.
@@ -2492,9 +2493,6 @@ name|SchemaValidation
 name|annotation
 parameter_list|)
 block|{
-comment|// Notice no support for deprecated enabled property here!
-comment|// TODO - should we check for the use of this property and at least log the fact we are
-comment|// ignoring it
 if|if
 condition|(
 name|annotation
@@ -2508,7 +2506,7 @@ name|setProperty
 argument_list|(
 name|Message
 operator|.
-name|SCHEMA_VALIDATION_ENABLED
+name|SCHEMA_VALIDATION_TYPE
 argument_list|,
 name|annotation
 operator|.
