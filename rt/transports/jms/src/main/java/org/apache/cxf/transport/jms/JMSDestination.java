@@ -1249,6 +1249,14 @@ operator|.
 name|JMS_SERVER_REQUEST_HEADERS
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|jmsConfig
+operator|.
+name|isCreateSecurityContext
+argument_list|()
+condition|)
+block|{
 name|SecurityContext
 name|securityContext
 init|=
@@ -1272,6 +1280,7 @@ argument_list|,
 name|securityContext
 argument_list|)
 expr_stmt|;
+block|}
 name|inMessage
 operator|.
 name|put
