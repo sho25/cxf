@@ -308,7 +308,7 @@ block|{
 name|Greeter
 name|greeter
 init|=
-name|greeterHttp
+name|greeterHttpProxy
 argument_list|(
 literal|"8181"
 argument_list|)
@@ -345,7 +345,7 @@ block|{
 name|Greeter
 name|greeter
 init|=
-name|greeterHttp
+name|greeterHttpProxy
 argument_list|(
 name|HttpTestActivator
 operator|.
@@ -374,7 +374,7 @@ expr_stmt|;
 block|}
 specifier|private
 name|Greeter
-name|greeterHttp
+name|greeterHttpProxy
 parameter_list|(
 name|String
 name|port
@@ -431,7 +431,19 @@ operator|new
 name|Option
 index|[]
 block|{
-name|cxfBaseConfigWithTestUtils
+name|cxfBaseConfig
+argument_list|()
+block|,
+name|features
+argument_list|(
+name|cxfUrl
+argument_list|,
+literal|"cxf-core"
+argument_list|,
+literal|"cxf-jaxws"
+argument_list|)
+block|,
+name|testUtils
 argument_list|()
 block|,
 name|logLevel
