@@ -3967,6 +3967,16 @@ name|i
 operator|++
 control|)
 block|{
+if|if
+condition|(
+name|callbacks
+index|[
+name|i
+index|]
+operator|instanceof
+name|WSPasswordCallback
+condition|)
+block|{
 name|WSPasswordCallback
 name|pc
 init|=
@@ -4030,6 +4040,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 return|return;
+block|}
 block|}
 block|}
 if|if

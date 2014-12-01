@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|ws
+name|kerberos
+operator|.
+name|wssec
 operator|.
 name|kerberos
 package|;
