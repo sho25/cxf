@@ -714,14 +714,6 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|ACTIVE_JAXRS_PROVIDER_KEY
-init|=
-literal|"active.jaxrs.provider"
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|String
 name|SUPPORT_TYPE_AS_MULTIPART
 init|=
 literal|"support.type.as.multipart"
@@ -2973,6 +2965,8 @@ name|mc
 operator|.
 name|put
 argument_list|(
+name|ProviderFactory
+operator|.
 name|ACTIVE_JAXRS_PROVIDER_KEY
 argument_list|,
 name|this
@@ -3013,7 +3007,9 @@ name|mc
 operator|.
 name|put
 argument_list|(
-literal|"active.jaxrs.provider"
+name|ProviderFactory
+operator|.
+name|ACTIVE_JAXRS_PROVIDER_KEY
 argument_list|,
 literal|null
 argument_list|)
