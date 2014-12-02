@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|ws
+name|kerberos
+operator|.
+name|wssec
 operator|.
 name|spnego
 package|;
@@ -88,12 +90,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|Server
+name|StaxServer
 extends|extends
 name|AbstractBusTestServerBase
 block|{
 specifier|public
-name|Server
+name|StaxServer
 parameter_list|()
 block|{      }
 specifier|protected
@@ -104,13 +106,13 @@ block|{
 name|URL
 name|busFile
 init|=
-name|Server
+name|StaxServer
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"server.xml"
+literal|"stax-server.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -140,7 +142,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|Server
+name|StaxServer
 argument_list|()
 expr_stmt|;
 block|}
