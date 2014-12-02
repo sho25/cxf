@@ -834,6 +834,8 @@ operator|.
 name|toRSAPublicKey
 argument_list|(
 name|jwk
+argument_list|,
+literal|true
 argument_list|)
 argument_list|,
 name|rsaSignatureAlgo
@@ -1492,7 +1494,7 @@ name|props
 argument_list|,
 name|JsonWebKey
 operator|.
-name|KEY_OPER_SIGN
+name|KEY_OPER_VERIFY
 argument_list|)
 decl_stmt|;
 if|if
