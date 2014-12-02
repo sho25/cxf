@@ -8923,9 +8923,6 @@ literal|""
 expr_stmt|;
 if|if
 condition|(
-name|decode
-operator|||
-operator|(
 name|decodePlus
 operator|&&
 name|value
@@ -8934,7 +8931,23 @@ name|contains
 argument_list|(
 literal|"+"
 argument_list|)
-operator|)
+condition|)
+block|{
+name|value
+operator|=
+name|value
+operator|.
+name|replace
+argument_list|(
+literal|'+'
+argument_list|,
+literal|' '
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|decode
 condition|)
 block|{
 name|value

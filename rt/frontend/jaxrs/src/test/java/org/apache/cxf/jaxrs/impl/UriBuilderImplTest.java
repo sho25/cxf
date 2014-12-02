@@ -2716,7 +2716,7 @@ name|assertEquals
 argument_list|(
 literal|"URI is not built correctly"
 argument_list|,
-literal|"http://bar/foo+%20%2B?q=a%2Bb%20%2B"
+literal|"http://bar/foo+%20%2B?q=a+b%20%2B"
 argument_list|,
 name|newUri
 operator|.
