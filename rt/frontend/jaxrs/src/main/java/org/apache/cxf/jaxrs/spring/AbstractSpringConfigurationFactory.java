@@ -222,17 +222,9 @@ name|class
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|setRootResources
+name|setJaxrsResources
 argument_list|(
 name|factory
-argument_list|)
-expr_stmt|;
-name|factory
-operator|.
-name|setProviders
-argument_list|(
-name|getJaxrsProviders
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|factory
@@ -299,7 +291,7 @@ block|}
 specifier|protected
 specifier|abstract
 name|void
-name|setRootResources
+name|setJaxrsResources
 parameter_list|(
 name|JAXRSServerFactoryBean
 name|factory
