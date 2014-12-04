@@ -13,9 +13,11 @@ name|cxf
 operator|.
 name|systest
 operator|.
+name|kerberos
+operator|.
 name|jaxrs
 operator|.
-name|security
+name|kerberos
 package|;
 end_package
 
@@ -92,22 +94,6 @@ operator|.
 name|security
 operator|.
 name|KerberosAuthenticationFilter
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|systest
-operator|.
-name|jaxrs
-operator|.
-name|BookStore
 import|;
 end_import
 
@@ -197,7 +183,7 @@ operator|new
 name|SingletonResourceProvider
 argument_list|(
 operator|new
-name|BookStore
+name|BookStoreImpl
 argument_list|()
 argument_list|)
 argument_list|)
@@ -213,7 +199,7 @@ name|filter
 operator|.
 name|setLoginContextName
 argument_list|(
-literal|"KerberosServer"
+literal|"bob"
 argument_list|)
 expr_stmt|;
 name|filter
@@ -222,9 +208,9 @@ name|setCallbackHandler
 argument_list|(
 name|getCallbackHandler
 argument_list|(
-literal|"HTTP/localhost"
+literal|"bob"
 argument_list|,
-literal|"http"
+literal|"bob"
 argument_list|)
 argument_list|)
 expr_stmt|;
