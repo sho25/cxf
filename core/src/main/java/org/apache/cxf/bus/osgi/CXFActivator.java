@@ -226,12 +226,6 @@ name|CXFActivator
 implements|implements
 name|BundleActivator
 block|{
-comment|/*      * a flag to tell if run the CXF in OSGi cont      */
-specifier|private
-specifier|static
-name|boolean
-name|inOSGi
-decl_stmt|;
 specifier|private
 name|List
 argument_list|<
@@ -270,10 +264,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-name|inOSGi
-operator|=
-literal|true
-expr_stmt|;
 name|cxfBundleListener
 operator|=
 operator|new
@@ -604,16 +594,6 @@ argument_list|(
 name|extensions
 argument_list|)
 expr_stmt|;
-block|}
-specifier|public
-specifier|static
-name|boolean
-name|isInOSGi
-parameter_list|()
-block|{
-return|return
-name|inOSGi
-return|;
 block|}
 block|}
 end_class

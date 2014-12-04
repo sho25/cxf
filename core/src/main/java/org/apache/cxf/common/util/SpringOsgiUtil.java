@@ -86,31 +86,16 @@ import|;
 end_import
 
 begin_class
-specifier|public
+specifier|final
 class|class
 name|SpringOsgiUtil
 block|{
+specifier|private
 name|SpringOsgiUtil
 parameter_list|()
-throws|throws
-name|Exception
-block|{
-name|Class
-operator|.
-name|forName
-argument_list|(
-literal|"org.springframework.osgi.io.OsgiBundleResourcePatternResolver"
-argument_list|)
-expr_stmt|;
-name|Class
-operator|.
-name|forName
-argument_list|(
-literal|"org.springframework.osgi.util.BundleDelegatingClassLoader"
-argument_list|)
-expr_stmt|;
-block|}
+block|{     }
 specifier|public
+specifier|static
 name|ResourcePatternResolver
 name|getResolver
 parameter_list|(
@@ -118,8 +103,6 @@ name|ClassLoader
 name|loader
 parameter_list|)
 block|{
-comment|//in OSGi should use spring-dm OsgiBundleResourcePatternResolver
-comment|// which can handle bundle url
 name|Bundle
 name|bundle
 init|=
