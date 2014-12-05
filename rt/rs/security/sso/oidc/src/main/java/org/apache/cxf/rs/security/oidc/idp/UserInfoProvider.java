@@ -17,8 +17,6 @@ name|security
 operator|.
 name|oidc
 operator|.
-name|rp
-operator|.
 name|idp
 package|;
 end_package
