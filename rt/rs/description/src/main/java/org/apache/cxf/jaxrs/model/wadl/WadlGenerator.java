@@ -14417,10 +14417,7 @@ argument_list|(
 name|serviceClass
 argument_list|)
 else|:
-name|jaxbQname
-operator|.
-name|getNamespaceURI
-argument_list|()
+literal|null
 decl_stmt|;
 name|String
 name|localName
@@ -14450,11 +14447,7 @@ name|pName
 operator|+
 literal|"."
 else|:
-literal|"{"
-operator|+
-name|pName
-operator|+
-literal|"}"
+literal|""
 decl_stmt|;
 return|return
 name|nsName
