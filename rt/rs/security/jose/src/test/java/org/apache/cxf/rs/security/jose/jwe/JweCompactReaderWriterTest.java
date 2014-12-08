@@ -872,6 +872,26 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|//
+comment|// This test fails with the IBM JDK
+comment|//
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 specifier|final
 name|String
 name|specPlainText
