@@ -63,6 +63,8 @@ block|,
 name|URL
 block|,
 name|STACKTRACE
+block|,
+name|KEYTYPE
 block|}
 end_enum
 
