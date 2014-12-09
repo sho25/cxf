@@ -274,6 +274,8 @@ argument_list|(
 name|authScheme
 argument_list|,
 name|authSchemeData
+argument_list|,
+name|params
 argument_list|)
 return|;
 block|}

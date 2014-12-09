@@ -33,6 +33,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|MultivaluedMap
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -90,6 +104,14 @@ name|authScheme
 parameter_list|,
 name|String
 name|authSchemeData
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|extraProps
 parameter_list|)
 throws|throws
 name|OAuthServiceException

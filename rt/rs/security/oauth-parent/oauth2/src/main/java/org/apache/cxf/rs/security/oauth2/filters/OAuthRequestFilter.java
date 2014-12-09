@@ -635,6 +635,8 @@ argument_list|(
 name|authScheme
 argument_list|,
 name|authSchemeData
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 comment|// Find the scopes which match the current request
