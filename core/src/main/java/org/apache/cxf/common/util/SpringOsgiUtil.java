@@ -161,11 +161,17 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
+name|bundle
+operator|!=
+literal|null
+condition|?
 operator|new
 name|OsgiBundleResourcePatternResolver
 argument_list|(
 name|bundle
 argument_list|)
+else|:
+literal|null
 return|;
 block|}
 block|}
