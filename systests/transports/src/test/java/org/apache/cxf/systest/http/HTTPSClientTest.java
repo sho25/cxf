@@ -600,7 +600,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/jaxws-server.xml"
+literal|"jaxws-server.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -627,7 +627,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/jaxws-server.xml"
+literal|"jaxws-server.xml"
 argument_list|,
 literal|"http://localhost:"
 operator|+
@@ -654,7 +654,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/jaxws-publish.xml"
+literal|"jaxws-publish.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -681,7 +681,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/jaxws-publish-callback.xml"
+literal|"jaxws-publish-callback.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -708,7 +708,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/jaxws-tlsrefs-publish.xml"
+literal|"jaxws-tlsrefs-publish.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -735,7 +735,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/pkcs12.xml"
+literal|"pkcs12.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -762,7 +762,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/resource-key-spec.xml"
+literal|"resource-key-spec.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -789,7 +789,7 @@ name|Exception
 block|{
 name|testSuccessfulCall
 argument_list|(
-literal|"resources/resource-key-spec-url.xml"
+literal|"resource-key-spec-url.xml"
 argument_list|,
 literal|"https://localhost:"
 operator|+
@@ -851,7 +851,7 @@ name|kst
 operator|.
 name|setFile
 argument_list|(
-literal|"src/test/java/org/apache/cxf/systest/http/resources/Bethal.jks"
+literal|"src/test/resources/keys/Bethal.jks"
 argument_list|)
 expr_stmt|;
 name|kst
@@ -935,7 +935,7 @@ name|kst
 operator|.
 name|setFile
 argument_list|(
-literal|"src/test/java/org/apache/cxf/systest/http/resources/Truststore.jks"
+literal|"src/test/resources/keys/Truststore.jks"
 argument_list|)
 expr_stmt|;
 name|kst
@@ -1018,7 +1018,7 @@ name|kst
 operator|.
 name|setFile
 argument_list|(
-literal|"src/test/java/org/apache/cxf/systest/http/resources/Morpit.jks"
+literal|"src/test/resources/keys/Morpit.jks"
 argument_list|)
 expr_stmt|;
 name|kst
@@ -1102,7 +1102,7 @@ name|kst
 operator|.
 name|setFile
 argument_list|(
-literal|"src/test/java/org/apache/cxf/systest/http/resources/Truststore.jks"
+literal|"src/test/resources/keys/Truststore.jks"
 argument_list|)
 expr_stmt|;
 name|kst

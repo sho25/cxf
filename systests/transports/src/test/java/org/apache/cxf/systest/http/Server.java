@@ -278,7 +278,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 operator|.
 name|toString

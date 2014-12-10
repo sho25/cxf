@@ -492,7 +492,7 @@ name|Exception
 block|{
 name|setTheConfiguration
 argument_list|(
-literal|"resources/jaxws-server-constraints.xml"
+literal|"jaxws-server-constraints.xml"
 argument_list|)
 expr_stmt|;
 name|startServers

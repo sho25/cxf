@@ -104,7 +104,7 @@ block|{
 name|String
 name|configurationFile
 init|=
-literal|"resources/SessionServer.xml"
+literal|"SessionServer.xml"
 decl_stmt|;
 name|URL
 name|configure

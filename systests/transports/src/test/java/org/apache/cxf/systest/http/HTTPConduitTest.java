@@ -680,20 +680,25 @@ block|{
 try|try
 block|{
 comment|//System.setProperty("javax.net.debug", "all");
-name|String
-name|keystore
+name|URL
+name|key
 init|=
-operator|new
-name|File
-argument_list|(
 name|Server
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/Morpit.jks"
+literal|"../../../../../keys/Morpit.jks"
 argument_list|)
+decl_stmt|;
+name|String
+name|keystore
+init|=
+operator|new
+name|File
+argument_list|(
+name|key
 operator|.
 name|toURI
 argument_list|()
@@ -721,20 +726,24 @@ argument_list|,
 literal|"password"
 argument_list|)
 decl_stmt|;
-name|String
-name|truststore
-init|=
-operator|new
-name|File
-argument_list|(
+name|key
+operator|=
 name|Server
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/Truststore.jks"
+literal|"../../../../../keys/Truststore.jks"
 argument_list|)
+expr_stmt|;
+name|String
+name|truststore
+init|=
+operator|new
+name|File
+argument_list|(
+name|key
 operator|.
 name|toURI
 argument_list|()
@@ -1216,8 +1225,6 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/"
-operator|+
 name|name
 operator|+
 literal|".cxf"
@@ -1589,7 +1596,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -1827,7 +1834,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -2005,7 +2012,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/Http2HttpRedirect.cxf"
+literal|"Http2HttpRedirect.cxf"
 argument_list|)
 decl_stmt|;
 comment|// We go through the back door, setting the default bus.
@@ -2026,7 +2033,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -2151,7 +2158,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/Http2HttpLoopRedirectFail.cxf"
+literal|"Http2HttpLoopRedirectFail.cxf"
 argument_list|)
 decl_stmt|;
 comment|// We go through the back door, setting the default bus.
@@ -2172,7 +2179,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -2302,7 +2309,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/BethalClientConfig.cxf"
+literal|"BethalClientConfig.cxf"
 argument_list|)
 decl_stmt|;
 comment|// We go through the back door, setting the default bus.
@@ -2323,7 +2330,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -2418,7 +2425,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/BethalClientBeans.xml"
+literal|"BethalClientBeans.xml"
 argument_list|)
 decl_stmt|;
 comment|// We go through the back door, setting the default bus.
@@ -2667,7 +2674,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -2868,7 +2875,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -3247,7 +3254,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -3514,7 +3521,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
@@ -4089,7 +4096,7 @@ argument_list|()
 operator|.
 name|getResource
 argument_list|(
-literal|"resources/greeting.wsdl"
+literal|"greeting.wsdl"
 argument_list|)
 decl_stmt|;
 name|assertNotNull
