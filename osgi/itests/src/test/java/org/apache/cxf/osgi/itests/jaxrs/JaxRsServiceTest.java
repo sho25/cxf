@@ -669,6 +669,8 @@ argument_list|,
 literal|"cxf-core"
 argument_list|,
 literal|"cxf-jaxrs"
+argument_list|,
+literal|"http"
 argument_list|)
 block|,
 name|logLevel
