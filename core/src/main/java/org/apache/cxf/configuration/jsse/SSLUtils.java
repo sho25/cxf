@@ -402,7 +402,6 @@ name|DEFAULT_WANT_CLIENT_AUTHENTICATION
 init|=
 literal|true
 decl_stmt|;
-comment|/**      * By default, only include export-compatible ciphersuites.      */
 specifier|private
 specifier|static
 specifier|final
@@ -424,6 +423,7 @@ literal|".*"
 block|}
 argument_list|)
 decl_stmt|;
+comment|/**      * By default, exclude NULL, anon, EXPORT, DES ciphersuites      */
 specifier|private
 specifier|static
 specifier|final
@@ -444,6 +444,8 @@ block|{
 literal|".*_NULL_.*"
 block|,
 literal|".*_anon_.*"
+block|,
+literal|".*_EXPORT_.*"
 block|,
 literal|".*_DES_.*"
 block|}
