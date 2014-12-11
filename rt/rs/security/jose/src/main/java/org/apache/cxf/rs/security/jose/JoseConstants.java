@@ -411,6 +411,14 @@ name|A256GCM_ALGO
 init|=
 literal|"A256GCM"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JOSE_CONTEXT_PROPERTY
+init|=
+literal|"org.apache.cxf.jose.context"
+decl_stmt|;
 specifier|private
 name|JoseConstants
 parameter_list|()
