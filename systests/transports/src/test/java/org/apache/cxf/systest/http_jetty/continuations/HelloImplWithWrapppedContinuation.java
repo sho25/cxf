@@ -320,20 +320,7 @@ name|surname
 argument_list|)
 expr_stmt|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Saying hi to "
-operator|+
-name|sb
-operator|.
-name|toString
-argument_list|()
-argument_list|)
-expr_stmt|;
+comment|// System.out.println("Saying hi to " + sb.toString());
 return|return
 literal|"Hi "
 operator|+

@@ -170,15 +170,7 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"!!!!start"
-argument_list|)
-expr_stmt|;
+comment|// System.out.println("!!!!start");
 name|SessionServer
 name|s
 init|=
@@ -209,18 +201,6 @@ name|exit
 argument_list|(
 operator|-
 literal|1
-argument_list|)
-expr_stmt|;
-block|}
-finally|finally
-block|{
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"done!"
 argument_list|)
 expr_stmt|;
 block|}

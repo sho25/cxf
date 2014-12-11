@@ -355,7 +355,6 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*finally {             System.out.println("done!");         } */
 block|}
 block|}
 end_class
