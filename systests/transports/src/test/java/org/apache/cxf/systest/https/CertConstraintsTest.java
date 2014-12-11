@@ -13,7 +13,7 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|http
+name|https
 package|;
 end_package
 
