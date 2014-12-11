@@ -311,6 +311,11 @@ operator|.
 name|getKeyEncryptionAlgorithm
 argument_list|()
 decl_stmt|;
+name|validateKeyEncryptionAlgorithm
+argument_list|(
+name|keyAlgo
+argument_list|)
+expr_stmt|;
 return|return
 name|Algorithm
 operator|.
@@ -338,6 +343,7 @@ name|supportedAlgo
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|supportedAlgo
 operator|.
 name|equals

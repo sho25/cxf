@@ -972,7 +972,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|RSAOaepKeyEncryptionAlgorithm
+name|RSAKeyEncryptionAlgorithm
 argument_list|(
 name|key
 argument_list|,
@@ -1172,7 +1172,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|RSAOaepKeyDecryptionAlgorithm
+name|RSAKeyDecryptionAlgorithm
 argument_list|(
 name|key
 argument_list|,
