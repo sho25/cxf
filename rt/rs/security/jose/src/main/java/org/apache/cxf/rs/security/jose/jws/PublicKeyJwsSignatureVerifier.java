@@ -303,7 +303,7 @@ block|{
 return|return
 name|Algorithm
 operator|.
-name|isRsaShaSign
+name|isRsaSign
 argument_list|(
 name|algo
 argument_list|)

@@ -321,6 +321,7 @@ name|SecurityException
 argument_list|()
 throw|;
 block|}
+comment|//TODO: validate "A key of size 2048 bits or larger MUST be used" for PS-SHA algorithms
 block|}
 specifier|protected
 name|boolean
@@ -333,7 +334,7 @@ block|{
 return|return
 name|Algorithm
 operator|.
-name|isRsaShaSign
+name|isRsaSign
 argument_list|(
 name|algo
 argument_list|)
