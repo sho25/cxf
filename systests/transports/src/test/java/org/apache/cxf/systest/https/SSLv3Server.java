@@ -13,9 +13,7 @@ name|cxf
 operator|.
 name|systest
 operator|.
-name|ws
-operator|.
-name|ssl
+name|https
 package|;
 end_package
 
@@ -88,12 +86,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|Server
+name|SSLv3Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
 specifier|public
-name|Server
+name|SSLv3Server
 parameter_list|()
 block|{      }
 specifier|protected
@@ -110,7 +108,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"server.xml"
+literal|"sslv3-server.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -140,7 +138,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|Server
+name|SSLv3Server
 argument_list|()
 expr_stmt|;
 block|}
