@@ -21,7 +21,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|List
+name|LinkedList
 import|;
 end_import
 
@@ -31,7 +31,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|LinkedList
+name|List
 import|;
 end_import
 
@@ -151,22 +151,6 @@ name|commons
 operator|.
 name|schema
 operator|.
-name|XmlSchemaElement
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|ws
-operator|.
-name|commons
-operator|.
-name|schema
-operator|.
 name|XmlSchemaChoice
 import|;
 end_import
@@ -184,6 +168,22 @@ operator|.
 name|schema
 operator|.
 name|XmlSchemaChoiceMember
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|ws
+operator|.
+name|commons
+operator|.
+name|schema
+operator|.
+name|XmlSchemaElement
 import|;
 end_import
 
