@@ -392,6 +392,10 @@ decl_stmt|;
 if|if
 condition|(
 name|headers
+operator|!=
+literal|null
+operator|&&
+name|headers
 operator|.
 name|size
 argument_list|()
