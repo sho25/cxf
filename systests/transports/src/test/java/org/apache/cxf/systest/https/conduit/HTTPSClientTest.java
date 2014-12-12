@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|https
+operator|.
+name|conduit
 package|;
 end_package
 
@@ -168,6 +170,22 @@ operator|.
 name|dynamic
 operator|.
 name|JaxWsDynamicClientFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|https
+operator|.
+name|BusServer
 import|;
 end_import
 

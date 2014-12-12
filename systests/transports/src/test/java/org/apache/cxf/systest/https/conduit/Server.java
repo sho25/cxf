@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|https
+operator|.
+name|conduit
 package|;
 end_package
 

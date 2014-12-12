@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|https
+operator|.
+name|conduit
 package|;
 end_package
 
@@ -189,6 +191,18 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|BindingProvider
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -330,6 +344,22 @@ operator|.
 name|message
 operator|.
 name|Message
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|https
+operator|.
+name|BusServer
 import|;
 end_import
 
@@ -627,7 +657,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"../../../../../keys/Morpit.jks"
+literal|"../../../../../../keys/Morpit.jks"
 argument_list|)
 decl_stmt|;
 name|String
@@ -672,7 +702,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"../../../../../keys/Truststore.jks"
+literal|"../../../../../../keys/Truststore.jks"
 argument_list|)
 expr_stmt|;
 name|String
@@ -3280,6 +3310,28 @@ argument_list|(
 name|gordy
 argument_list|)
 decl_stmt|;
+name|BindingProvider
+name|provider
+init|=
+operator|(
+name|BindingProvider
+operator|)
+name|gordy
+decl_stmt|;
+name|provider
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+literal|"use.async.http.conduit"
+argument_list|,
+name|Boolean
+operator|.
+name|FALSE
+argument_list|)
+expr_stmt|;
 name|HTTPConduit
 name|http
 init|=

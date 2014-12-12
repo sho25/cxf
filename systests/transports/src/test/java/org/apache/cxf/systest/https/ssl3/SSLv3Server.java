@@ -14,6 +14,8 @@ operator|.
 name|systest
 operator|.
 name|https
+operator|.
+name|ssl3
 package|;
 end_package
 
@@ -86,12 +88,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ClientAuthServer
+name|SSLv3Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
 specifier|public
-name|ClientAuthServer
+name|SSLv3Server
 parameter_list|()
 block|{      }
 specifier|protected
@@ -102,13 +104,13 @@ block|{
 name|URL
 name|busFile
 init|=
-name|Server
+name|SSLv3Server
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"client-auth-server.xml"
+literal|"sslv3-server.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -138,7 +140,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|ClientAuthServer
+name|SSLv3Server
 argument_list|()
 expr_stmt|;
 block|}
