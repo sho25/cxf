@@ -63,16 +63,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|UUID
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|servlet
@@ -1895,12 +1885,9 @@ argument_list|()
 decl_stmt|;
 name|sessionToken
 operator|=
-name|UUID
+name|OAuthUtils
 operator|.
-name|randomUUID
-argument_list|()
-operator|.
-name|toString
+name|generateRandomTokenKey
 argument_list|()
 expr_stmt|;
 name|session
