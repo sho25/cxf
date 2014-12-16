@@ -1178,6 +1178,11 @@ literal|null
 expr_stmt|;
 block|}
 block|}
+name|Principal
+name|principal
+init|=
+literal|null
+decl_stmt|;
 if|if
 condition|(
 name|secToken
@@ -1199,6 +1204,8 @@ argument_list|(
 name|ut
 argument_list|)
 expr_stmt|;
+name|credential
+operator|=
 name|validator
 operator|.
 name|validate
@@ -1208,10 +1215,23 @@ argument_list|,
 name|requestData
 argument_list|)
 expr_stmt|;
-block|}
-name|Principal
 name|principal
-init|=
+operator|=
+name|credential
+operator|.
+name|getPrincipal
+argument_list|()
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|principal
+operator|==
+literal|null
+condition|)
+block|{
+name|principal
+operator|=
 name|createPrincipal
 argument_list|(
 name|ut
@@ -1239,7 +1259,8 @@ operator|.
 name|getCreated
 argument_list|()
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 comment|// Get the realm of the UsernameToken
 name|String
 name|tokenRealm
