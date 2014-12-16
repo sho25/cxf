@@ -293,7 +293,7 @@ specifier|final
 class|class
 name|ModelEncryptionSupport
 block|{
-specifier|private
+specifier|public
 specifier|static
 specifier|final
 name|String
@@ -2786,7 +2786,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|String
 name|getStringPart
@@ -2976,7 +2976,7 @@ return|return
 name|props
 return|;
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|String
 index|[]
@@ -3195,7 +3195,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|String
 name|tokenizeString

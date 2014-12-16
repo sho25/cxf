@@ -67,6 +67,26 @@ name|oauth2
 operator|.
 name|common
 operator|.
+name|OAuthRedirectionState
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|common
+operator|.
 name|UserSubject
 import|;
 end_import
@@ -80,7 +100,7 @@ specifier|public
 interface|interface
 name|SessionAuthenticityTokenProvider
 block|{
-comment|/**      * Creates a new session token and stores it      *       * @param mc the {@link MessageContext} of this request      * @param params redirection-based grant request parameters      * @param subject authenticated end user      * @return the created session token      */
+comment|/**      * Create a new session token and stores it      *       * @param mc the {@link MessageContext} of this request      * @param params redirection-based grant request parameters      * @param subject authenticated end user      * @param secData       * @return the created session token      */
 name|String
 name|createSessionToken
 parameter_list|(
@@ -97,9 +117,12 @@ name|params
 parameter_list|,
 name|UserSubject
 name|subject
+parameter_list|,
+name|OAuthRedirectionState
+name|secData
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieves the stored session token      *       * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      * @return the stored token      */
+comment|/**      * Retrieve the stored session token      *       * @param mc the {@link MessageContext} of this request         * @param params grant authorization parameters      * @param subject authenticated end user      * @return the stored token      */
 name|String
 name|getSessionToken
 parameter_list|(
@@ -118,7 +141,7 @@ name|UserSubject
 name|subject
 parameter_list|)
 function_decl|;
-comment|/**      * Removes the stored session token      *       * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      */
+comment|/**      * Remove the stored session token      *       * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      */
 name|String
 name|removeSessionToken
 parameter_list|(
@@ -132,6 +155,20 @@ argument_list|,
 name|String
 argument_list|>
 name|params
+parameter_list|,
+name|UserSubject
+name|subject
+parameter_list|)
+function_decl|;
+comment|/**      * Expand the session token      *       * @param mc the {@link MessageContext} of this request      * @param sessionToken the token      * @param subject authenticated end user      * @return the expanded token or null      */
+name|OAuthRedirectionState
+name|getSessionState
+parameter_list|(
+name|MessageContext
+name|messageContext
+parameter_list|,
+name|String
+name|sessionToken
 parameter_list|,
 name|UserSubject
 name|subject

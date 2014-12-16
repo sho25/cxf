@@ -2013,7 +2013,7 @@ name|RS_SHA_256_ALGO
 return|;
 block|}
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|JwsCompactConsumer
 name|verify
@@ -2055,7 +2055,7 @@ return|return
 name|jws
 return|;
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|String
 name|sign
