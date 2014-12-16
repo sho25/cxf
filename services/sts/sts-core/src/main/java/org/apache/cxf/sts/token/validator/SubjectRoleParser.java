@@ -51,48 +51,27 @@ name|Subject
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|common
-operator|.
-name|saml
-operator|.
-name|SamlAssertionWrapper
-import|;
-end_import
-
 begin_comment
-comment|/**  * This interface defines a way to extract roles from a SAML Assertion  */
+comment|/**  * This interface defines a way to extract roles from a JAAS Subject  */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|SAMLRoleParser
-extends|extends
 name|SubjectRoleParser
 block|{
-comment|/**      * Return the set of User/Principal roles from the Assertion.      * @param principal the Principal associated with the Assertion      * @param subject the JAAS Subject associated with a successful validation of the Assertion      * @param assertion The Assertion object      * @return the set of User/Principal roles from the Assertion.      */
+comment|/**      * Return the set of User/Principal roles from the Subject.      * @param principal the optional Principal       * @param subject the JAAS Subject      * @return the set of User/Principal roles from the Subject.      */
 name|Set
 argument_list|<
 name|Principal
 argument_list|>
-name|parseRolesFromAssertion
+name|parseRolesFromSubject
 parameter_list|(
 name|Principal
 name|principal
 parameter_list|,
 name|Subject
 name|subject
-parameter_list|,
-name|SamlAssertionWrapper
-name|assertion
 parameter_list|)
 function_decl|;
 block|}
