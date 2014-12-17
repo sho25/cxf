@@ -371,12 +371,12 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
-name|calulateDefaultResourcePackage
+name|calculateDefaultResourcePackage
 argument_list|(
 name|server
 argument_list|)
 expr_stmt|;
-name|calulateDefaultBasePath
+name|calculateDefaultBasePath
 argument_list|(
 name|server
 argument_list|)
@@ -605,7 +605,7 @@ expr_stmt|;
 block|}
 specifier|private
 name|void
-name|calulateDefaultResourcePackage
+name|calculateDefaultResourcePackage
 parameter_list|(
 name|Server
 name|server
@@ -687,7 +687,7 @@ block|}
 block|}
 specifier|private
 name|void
-name|calulateDefaultBasePath
+name|calculateDefaultBasePath
 parameter_list|(
 name|Server
 name|server
