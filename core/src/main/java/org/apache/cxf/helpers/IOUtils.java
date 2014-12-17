@@ -306,11 +306,6 @@ block|{
 comment|// ignore
 block|}
 comment|// it may be an attachment stream
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"resource"
-argument_list|)
 name|PushbackInputStream
 name|pbStream
 init|=
