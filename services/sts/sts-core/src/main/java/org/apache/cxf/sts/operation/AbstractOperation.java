@@ -3709,8 +3709,8 @@ operator|.
 name|getToken
 argument_list|()
 expr_stmt|;
-comment|// The parsed principal is set if available. It's up to other components to
-comment|// deal with the STATE of the validation
+comment|// The parsed principal/roles is set if available. It's up to other
+comment|// components to deal with the STATE of the validation
 name|token
 operator|.
 name|setPrincipal
@@ -3718,6 +3718,16 @@ argument_list|(
 name|tokenResponse
 operator|.
 name|getPrincipal
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|token
+operator|.
+name|setRoles
+argument_list|(
+name|tokenResponse
+operator|.
+name|getRoles
 argument_list|()
 argument_list|)
 expr_stmt|;
