@@ -341,6 +341,13 @@ argument_list|)
 block|,
 name|mvnBundle
 argument_list|(
+literal|"org.apache.geronimo.specs"
+argument_list|,
+literal|"geronimo-servlet_3.0_spec"
+argument_list|)
+block|,
+name|mvnBundle
+argument_list|(
 literal|"org.apache.cxf"
 argument_list|,
 literal|"cxf-rt-transports-http"
