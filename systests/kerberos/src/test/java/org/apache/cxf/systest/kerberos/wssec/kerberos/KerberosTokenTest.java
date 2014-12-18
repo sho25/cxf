@@ -873,7 +873,7 @@ name|File
 argument_list|(
 name|basedir
 operator|+
-literal|"/target/test-classes/krb5.conf"
+literal|"/target/test-classes/wssec.kerberos.krb5.conf"
 argument_list|)
 decl_stmt|;
 name|FileOutputStream
