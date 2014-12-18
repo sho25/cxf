@@ -77,7 +77,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserToken
+name|IdToken
 import|;
 end_import
 
@@ -104,7 +104,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|UserTokenValidator
+name|IdTokenValidator
 extends|extends
 name|AbstractTokenValidator
 block|{
@@ -115,7 +115,7 @@ init|=
 literal|true
 decl_stmt|;
 specifier|public
-name|UserToken
+name|IdToken
 name|getIdTokenFromJwt
 parameter_list|(
 name|ClientAccessToken
@@ -145,7 +145,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|UserToken
+name|IdToken
 name|getIdTokenFromJwt
 parameter_list|(
 name|JwtToken
@@ -158,7 +158,7 @@ block|{
 comment|//TODO: do the extra validation if needed
 return|return
 operator|new
-name|UserToken
+name|IdToken
 argument_list|(
 name|jwt
 operator|.

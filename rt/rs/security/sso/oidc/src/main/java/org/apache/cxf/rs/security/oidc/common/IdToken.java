@@ -54,7 +54,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|UserToken
+name|IdToken
 extends|extends
 name|JwtClaims
 block|{
@@ -91,11 +91,11 @@ init|=
 literal|"azp"
 decl_stmt|;
 specifier|public
-name|UserToken
+name|IdToken
 parameter_list|()
 block|{     }
 specifier|public
-name|UserToken
+name|IdToken
 parameter_list|(
 name|Map
 argument_list|<

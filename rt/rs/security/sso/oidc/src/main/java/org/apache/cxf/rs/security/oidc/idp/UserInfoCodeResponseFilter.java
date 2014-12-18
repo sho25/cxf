@@ -173,7 +173,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserToken
+name|IdToken
 import|;
 end_import
 
@@ -227,12 +227,12 @@ name|ServerAccessToken
 name|st
 parameter_list|)
 block|{
-name|UserToken
+name|IdToken
 name|token
 init|=
 name|userInfoProvider
 operator|.
-name|getUserToken
+name|getIdToken
 argument_list|(
 name|st
 operator|.

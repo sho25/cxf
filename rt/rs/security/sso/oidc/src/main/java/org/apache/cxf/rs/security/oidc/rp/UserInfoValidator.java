@@ -73,7 +73,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserInfo
+name|IdToken
 import|;
 end_import
 
@@ -93,7 +93,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserToken
+name|UserInfo
 import|;
 end_import
 
@@ -115,7 +115,7 @@ parameter_list|(
 name|WebClient
 name|profileClient
 parameter_list|,
-name|UserToken
+name|IdToken
 name|idToken
 parameter_list|)
 block|{
@@ -137,7 +137,7 @@ parameter_list|(
 name|WebClient
 name|profileClient
 parameter_list|,
-name|UserToken
+name|IdToken
 name|idToken
 parameter_list|,
 name|boolean
@@ -203,7 +203,7 @@ parameter_list|(
 name|String
 name|profileJwtToken
 parameter_list|,
-name|UserToken
+name|IdToken
 name|idToken
 parameter_list|)
 block|{
@@ -233,7 +233,7 @@ parameter_list|(
 name|JwtToken
 name|jwt
 parameter_list|,
-name|UserToken
+name|IdToken
 name|idToken
 parameter_list|)
 block|{
@@ -270,7 +270,7 @@ parameter_list|(
 name|String
 name|profileJwtToken
 parameter_list|,
-name|UserToken
+name|IdToken
 name|idToken
 parameter_list|)
 block|{
@@ -305,7 +305,7 @@ parameter_list|(
 name|UserInfo
 name|profile
 parameter_list|,
-name|UserToken
+name|IdToken
 name|idToken
 parameter_list|)
 block|{

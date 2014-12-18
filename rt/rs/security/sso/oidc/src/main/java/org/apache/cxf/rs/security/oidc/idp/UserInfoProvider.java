@@ -87,7 +87,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserInfo
+name|IdToken
 import|;
 end_import
 
@@ -107,7 +107,7 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserToken
+name|UserInfo
 import|;
 end_import
 
@@ -116,8 +116,8 @@ specifier|public
 interface|interface
 name|UserInfoProvider
 block|{
-name|UserToken
-name|getUserToken
+name|IdToken
+name|getIdToken
 parameter_list|(
 name|String
 name|clientId
