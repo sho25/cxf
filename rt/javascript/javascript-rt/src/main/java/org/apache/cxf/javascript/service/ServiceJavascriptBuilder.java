@@ -2339,10 +2339,34 @@ argument_list|)
 expr_stmt|;
 name|utils
 operator|.
+name|startIf
+argument_list|(
+literal|"client.parseErrorDetails"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"client.user_onerror(httpStatus, httpStatusText, client.parseErrorDetails(this));"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|appendElse
+argument_list|()
+expr_stmt|;
+name|utils
+operator|.
 name|appendLine
 argument_list|(
 literal|"client.user_onerror(httpStatus, httpStatusText);"
 argument_list|)
+expr_stmt|;
+name|utils
+operator|.
+name|endBlock
+argument_list|()
 expr_stmt|;
 name|utils
 operator|.
