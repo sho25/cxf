@@ -1020,6 +1020,16 @@ operator|.
 name|getConfiguration
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|rmps
+operator|.
+name|getCloseSequence
+argument_list|()
+condition|)
+block|{
 name|scheduleAcknowledgement
 argument_list|(
 name|cfg
@@ -1028,6 +1038,7 @@ name|getAcknowledgementIntervalTime
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|long
 name|inactivityTimeout
 init|=
