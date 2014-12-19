@@ -3191,6 +3191,19 @@ argument_list|)
 expr_stmt|;
 name|utils
 operator|.
+name|appendElse
+argument_list|()
+expr_stmt|;
+comment|// else non-match
+name|utils
+operator|.
+name|appendLine
+argument_list|(
+literal|"break;"
+argument_list|)
+expr_stmt|;
+name|utils
+operator|.
 name|endBlock
 argument_list|()
 expr_stmt|;
