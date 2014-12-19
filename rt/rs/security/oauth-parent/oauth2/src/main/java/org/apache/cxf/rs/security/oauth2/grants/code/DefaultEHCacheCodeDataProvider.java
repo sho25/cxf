@@ -354,11 +354,11 @@ argument_list|)
 expr_stmt|;
 name|grant
 operator|.
-name|setClientCodeVerifier
+name|setClientCodeChallenge
 argument_list|(
 name|reg
 operator|.
-name|getClientCodeVerifier
+name|getClientCodeChallenge
 argument_list|()
 argument_list|)
 expr_stmt|;

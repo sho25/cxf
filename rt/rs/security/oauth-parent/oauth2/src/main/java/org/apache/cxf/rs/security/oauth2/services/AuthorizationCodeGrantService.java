@@ -573,7 +573,7 @@ parameter_list|)
 block|{
 name|data
 operator|.
-name|setClientCodeVerifier
+name|setClientCodeChallenge
 argument_list|(
 name|params
 operator|.
@@ -581,7 +581,7 @@ name|getFirst
 argument_list|(
 name|OAuthConstants
 operator|.
-name|AUTHORIZATION_CODE_VERIFIER
+name|AUTHORIZATION_CODE_CHALLENGE
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -727,11 +727,11 @@ argument_list|)
 expr_stmt|;
 name|codeReg
 operator|.
-name|setClientCodeVerifier
+name|setClientCodeChallenge
 argument_list|(
 name|state
 operator|.
-name|getClientCodeVerifier
+name|getClientCodeChallenge
 argument_list|()
 argument_list|)
 expr_stmt|;

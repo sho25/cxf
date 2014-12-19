@@ -2549,7 +2549,7 @@ argument_list|)
 expr_stmt|;
 name|grant
 operator|.
-name|setClientCodeVerifier
+name|setClientCodeChallenge
 argument_list|(
 name|getStringPart
 argument_list|(
@@ -2735,7 +2735,7 @@ name|tokenizeString
 argument_list|(
 name|grant
 operator|.
-name|getClientCodeVerifier
+name|getClientCodeChallenge
 argument_list|()
 argument_list|)
 argument_list|)
