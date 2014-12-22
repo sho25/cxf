@@ -920,6 +920,16 @@ argument_list|)
 expr_stmt|;
 name|oauthContext
 operator|.
+name|setClientConfidential
+argument_list|(
+name|accessTokenV
+operator|.
+name|isClientConfidential
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|oauthContext
+operator|.
 name|setTokenKey
 argument_list|(
 name|accessTokenV
