@@ -4579,11 +4579,9 @@ name|Message
 argument_list|>
 name|mc
 init|=
-operator|new
 name|Capture
-argument_list|<
-name|Message
-argument_list|>
+operator|.
+name|newInstance
 argument_list|()
 decl_stmt|;
 name|setUpRecoverReliableEndpoint
