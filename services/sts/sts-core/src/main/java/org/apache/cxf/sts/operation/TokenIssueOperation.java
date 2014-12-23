@@ -1597,6 +1597,24 @@ name|RuntimeException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
+literal|"Cannot issue token: "
+operator|+
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
 name|STSIssueFailureEvent
 name|event
 init|=

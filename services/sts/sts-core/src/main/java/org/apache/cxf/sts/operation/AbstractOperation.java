@@ -3202,26 +3202,31 @@ operator|!
 name|foundService
 condition|)
 block|{
+name|String
+name|msg
+init|=
+literal|"No service corresponding to "
+operator|+
+name|address
+operator|+
+literal|" is known. Check 'services' property configuration in SecurityTokenServiceProvider"
+decl_stmt|;
 name|LOG
 operator|.
 name|log
 argument_list|(
 name|Level
 operator|.
-name|WARNING
+name|SEVERE
 argument_list|,
-literal|"The Service cannot match the received AppliesTo address"
+name|msg
 argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
 name|STSException
 argument_list|(
-literal|"No service corresponding to "
-operator|+
-name|address
-operator|+
-literal|" is known"
+name|msg
 argument_list|,
 name|STSException
 operator|.
