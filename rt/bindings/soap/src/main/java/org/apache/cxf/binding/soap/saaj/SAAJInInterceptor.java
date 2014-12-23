@@ -1485,6 +1485,21 @@ name|addHeader
 argument_list|()
 expr_stmt|;
 block|}
+comment|//If we have an xmlReader that already is counting the attributes and such
+comment|//then we don't want to rely on the system level defaults in StaxUtils.copy
+comment|//CXF-6173
+name|boolean
+name|secureReader
+init|=
+name|StaxUtils
+operator|.
+name|isSecureReader
+argument_list|(
+name|xmlReader
+argument_list|,
+name|message
+argument_list|)
+decl_stmt|;
 name|StaxUtils
 operator|.
 name|copy
@@ -1513,7 +1528,8 @@ argument_list|)
 argument_list|,
 literal|true
 argument_list|,
-literal|true
+operator|!
+name|secureReader
 argument_list|)
 expr_stmt|;
 name|DOMSource
