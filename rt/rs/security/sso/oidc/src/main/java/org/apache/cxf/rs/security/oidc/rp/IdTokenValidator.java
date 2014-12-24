@@ -116,7 +116,7 @@ literal|true
 decl_stmt|;
 specifier|public
 name|IdToken
-name|getIdTokenFromJwt
+name|getIdToken
 parameter_list|(
 name|ClientAccessToken
 name|at
