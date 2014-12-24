@@ -2960,7 +2960,12 @@ specifier|final
 name|String
 name|alreadySetProp
 init|=
-literal|"bus.providers.set"
+literal|"bus.providers.set."
+operator|+
+name|this
+operator|.
+name|hashCode
+argument_list|()
 decl_stmt|;
 if|if
 condition|(
