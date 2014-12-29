@@ -923,6 +923,23 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|KeyPairGenerator
 name|kpg
 init|=
