@@ -366,6 +366,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|ECDH_ES_DIRECT_ALGO
+init|=
+literal|"ECDH-ES"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|PBES2_HS256_A128KW_ALGO
 init|=
 literal|"PBES2-HS256+A128KW"
