@@ -280,6 +280,15 @@ name|contentEncryptionAlgo
 expr_stmt|;
 block|}
 specifier|protected
+name|ContentEncryptionAlgorithm
+name|getContentEncryptionAlgorithm
+parameter_list|()
+block|{
+return|return
+name|contentEncryptionAlgo
+return|;
+block|}
+specifier|protected
 name|AlgorithmParameterSpec
 name|getAlgorithmParameterSpec
 parameter_list|(
@@ -289,7 +298,8 @@ name|theIv
 parameter_list|)
 block|{
 return|return
-name|contentEncryptionAlgo
+name|getContentEncryptionAlgorithm
+argument_list|()
 operator|.
 name|getAlgorithmParameterSpec
 argument_list|(
@@ -390,7 +400,8 @@ name|getProvidedContentEncryptionKey
 parameter_list|()
 block|{
 return|return
-name|contentEncryptionAlgo
+name|getContentEncryptionAlgorithm
+argument_list|()
 operator|.
 name|getContentEncryptionKey
 argument_list|(
@@ -409,7 +420,8 @@ name|theCek
 parameter_list|)
 block|{
 return|return
-name|keyEncryptionAlgo
+name|getKeyEncryptionAlgo
+argument_list|()
 operator|.
 name|getEncryptedContentEncryptionKey
 argument_list|(
@@ -456,7 +468,8 @@ name|theHeaders
 parameter_list|)
 block|{
 return|return
-name|contentEncryptionAlgo
+name|getContentEncryptionAlgorithm
+argument_list|()
 operator|.
 name|getAdditionalAuthenticationData
 argument_list|(
@@ -589,7 +602,8 @@ name|getKeyAlgorithm
 parameter_list|()
 block|{
 return|return
-name|keyEncryptionAlgo
+name|getKeyEncryptionAlgo
+argument_list|()
 operator|.
 name|getAlgorithm
 argument_list|()
@@ -603,7 +617,8 @@ name|getContentAlgorithm
 parameter_list|()
 block|{
 return|return
-name|contentEncryptionAlgo
+name|getContentEncryptionAlgorithm
+argument_list|()
 operator|.
 name|getAlgorithm
 argument_list|()
@@ -794,7 +809,8 @@ name|byte
 index|[]
 name|theIv
 init|=
-name|contentEncryptionAlgo
+name|getContentEncryptionAlgorithm
+argument_list|()
 operator|.
 name|getInitVector
 argument_list|()
@@ -845,9 +861,7 @@ operator|!=
 literal|null
 operator|&&
 operator|!
-name|keyEncryptionAlgo
-operator|.
-name|getAlgorithm
+name|getKeyAlgorithm
 argument_list|()
 operator|.
 name|equals
@@ -866,9 +880,7 @@ operator|!=
 literal|null
 operator|&&
 operator|!
-name|contentEncryptionAlgo
-operator|.
-name|getAlgorithm
+name|getContentAlgorithm
 argument_list|()
 operator|.
 name|equals
