@@ -630,7 +630,7 @@ name|STSLoginModule
 implements|implements
 name|LoginModule
 block|{
-comment|/**      * Whether we require roles or not from the STS. If this is not set then the       * WS-Trust validate binding is used. If it is set then the issue binding is       * used, where the Username + Password credentials are passed via "OnBehalfOf".      * In addition, claims are added to the request for the standard "role" ClaimType.      */
+comment|/**      * Whether we require roles or not from the STS. If this is not set then the       * WS-Trust validate binding is used. If it is set then the issue binding is       * used, where the Username + Password credentials are passed via "OnBehalfOf"      * (unless the DISABLE_ON_BEHALF_OF property is set to "true", see below). In addition,       * claims are added to the request for the standard "role" ClaimType.      */
 specifier|public
 specifier|static
 specifier|final
@@ -638,6 +638,15 @@ name|String
 name|REQUIRE_ROLES
 init|=
 literal|"require.roles"
+decl_stmt|;
+comment|/**      * Whether to disable passing Username + Password credentials via "OnBehalfOf". If the      * REQUIRE_ROLES property (see above) is set to "true", then the Issue Binding is used      * and the credentials are passed via OnBehalfOf. If this (DISABLE_ON_BEHALF_OF) property      * is set to "true", then the credentials instead are passed through to the       * WS-SecurityPolicy layer and used depending on the security policy of the STS endpoint.      * For example, if the STS endpoint requires a WS-Security UsernameToken, then the       * credentials are inserted here.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DISABLE_ON_BEHALF_OF
+init|=
+literal|"disable.on.behalf.of"
 decl_stmt|;
 comment|/**      * The WSDL Location of the STS      */
 specifier|public
@@ -756,6 +765,10 @@ name|boolean
 name|requireRoles
 decl_stmt|;
 specifier|private
+name|boolean
+name|disableOnBehalfOf
+decl_stmt|;
+specifier|private
 name|String
 name|wsdlLocation
 decl_stmt|;
@@ -866,6 +879,34 @@ operator|.
 name|get
 argument_list|(
 name|REQUIRE_ROLES
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|options
+operator|.
+name|containsKey
+argument_list|(
+name|DISABLE_ON_BEHALF_OF
+argument_list|)
+condition|)
+block|{
+name|disableOnBehalfOf
+operator|=
+name|Boolean
+operator|.
+name|parseBoolean
+argument_list|(
+operator|(
+name|String
+operator|)
+name|options
+operator|.
+name|get
+argument_list|(
+name|DISABLE_ON_BEHALF_OF
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1253,6 +1294,14 @@ operator|.
 name|setUseIssueBinding
 argument_list|(
 name|requireRoles
+argument_list|)
+expr_stmt|;
+name|validator
+operator|.
+name|setUseOnBehalfOf
+argument_list|(
+operator|!
+name|disableOnBehalfOf
 argument_list|)
 expr_stmt|;
 comment|// Authenticate token
