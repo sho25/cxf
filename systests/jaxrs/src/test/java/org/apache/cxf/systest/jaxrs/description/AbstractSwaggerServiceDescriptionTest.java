@@ -264,14 +264,14 @@ import|;
 end_import
 
 begin_import
-import|import static
+import|import
 name|org
 operator|.
-name|hamcrest
+name|skyscreamer
 operator|.
-name|CoreMatchers
+name|jsonassert
 operator|.
-name|equalTo
+name|JSONAssert
 import|;
 end_import
 
@@ -1044,7 +1044,9 @@ name|getStatus
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertThat
+name|JSONAssert
+operator|.
+name|assertEquals
 argument_list|(
 name|IOUtils
 operator|.
@@ -1059,8 +1061,6 @@ name|getEntity
 argument_list|()
 argument_list|)
 argument_list|,
-name|equalTo
-argument_list|(
 name|Json
 operator|.
 name|createObjectBuilder
@@ -1162,7 +1162,8 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
-argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1219,7 +1220,9 @@ name|getStatus
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|assertThat
+name|JSONAssert
+operator|.
+name|assertEquals
 argument_list|(
 name|IOUtils
 operator|.
@@ -1234,8 +1237,6 @@ name|getEntity
 argument_list|()
 argument_list|)
 argument_list|,
-name|equalTo
-argument_list|(
 name|Json
 operator|.
 name|createObjectBuilder
@@ -1361,7 +1362,8 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
-argument_list|)
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
