@@ -1664,7 +1664,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|updateClassResourceProviders
 parameter_list|()
