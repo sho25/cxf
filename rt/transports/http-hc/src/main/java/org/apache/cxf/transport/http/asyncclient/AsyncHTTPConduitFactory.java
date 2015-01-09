@@ -423,6 +423,24 @@ name|nio
 operator|.
 name|client
 operator|.
+name|HttpAsyncClientBuilder
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|http
+operator|.
+name|impl
+operator|.
+name|nio
+operator|.
+name|client
+operator|.
 name|HttpAsyncClients
 import|;
 end_import
@@ -1968,8 +1986,9 @@ return|;
 block|}
 block|}
 decl_stmt|;
-name|client
-operator|=
+name|HttpAsyncClientBuilder
+name|httpAsyncClientBuilder
+init|=
 name|HttpAsyncClients
 operator|.
 name|custom
@@ -2009,6 +2028,15 @@ parameter_list|)
 block|{                 }
 block|}
 argument_list|)
+decl_stmt|;
+name|adaptClientBuilder
+argument_list|(
+name|httpAsyncClientBuilder
+argument_list|)
+expr_stmt|;
+name|client
+operator|=
+name|httpAsyncClientBuilder
 operator|.
 name|build
 argument_list|()
@@ -2020,6 +2048,15 @@ name|start
 argument_list|()
 expr_stmt|;
 block|}
+comment|//provide a hook to customize the builder
+specifier|protected
+name|void
+name|adaptClientBuilder
+parameter_list|(
+name|HttpAsyncClientBuilder
+name|httpAsyncClientBuilder
+parameter_list|)
+block|{         }
 specifier|public
 name|CloseableHttpAsyncClient
 name|createClient
