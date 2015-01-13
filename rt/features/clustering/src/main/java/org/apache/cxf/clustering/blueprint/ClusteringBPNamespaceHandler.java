@@ -113,7 +113,7 @@ name|cxf
 operator|.
 name|clustering
 operator|.
-name|LoadDistributorTargetSelector
+name|LoadDistributorFeature
 import|;
 end_import
 
@@ -251,7 +251,7 @@ return|return
 operator|new
 name|SimpleBPBeanDefinitionParser
 argument_list|(
-name|LoadDistributorTargetSelector
+name|LoadDistributorFeature
 operator|.
 name|class
 argument_list|)
