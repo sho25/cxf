@@ -2791,6 +2791,8 @@ argument_list|(
 literal|"http://service.apache.org"
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|validator
 operator|.
 name|validateSamlResponse
@@ -2800,6 +2802,20 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+name|fail
+argument_list|(
+literal|"Expected failure on bad response"
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|WSSecurityException
+name|ex
+parameter_list|)
+block|{
+comment|// expected
+block|}
 block|}
 annotation|@
 name|org
