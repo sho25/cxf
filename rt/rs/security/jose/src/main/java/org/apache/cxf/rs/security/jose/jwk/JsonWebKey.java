@@ -306,9 +306,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|EC_CURVE_P512
+name|EC_CURVE_P521
 init|=
-literal|"P-512"
+literal|"P-521"
 decl_stmt|;
 specifier|public
 specifier|static
