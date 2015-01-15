@@ -233,8 +233,6 @@ operator|.
 name|claimsToJson
 argument_list|(
 name|claims
-argument_list|,
-literal|null
 argument_list|)
 expr_stmt|;
 block|}

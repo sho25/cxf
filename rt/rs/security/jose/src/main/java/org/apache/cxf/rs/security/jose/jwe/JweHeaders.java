@@ -113,7 +113,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseHeadersWriter
+name|JoseHeadersReaderWriter
 import|;
 end_import
 
@@ -417,15 +417,14 @@ specifier|public
 name|byte
 index|[]
 name|toCipherAdditionalAuthData
-parameter_list|(
-name|JoseHeadersWriter
-name|writer
-parameter_list|)
+parameter_list|()
 block|{
 return|return
 name|toCipherAdditionalAuthData
 argument_list|(
-name|writer
+operator|new
+name|JoseHeadersReaderWriter
+argument_list|()
 operator|.
 name|headersToJson
 argument_list|(

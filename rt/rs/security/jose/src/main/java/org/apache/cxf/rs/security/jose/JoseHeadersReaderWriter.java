@@ -43,13 +43,7 @@ class|class
 name|JoseHeadersReaderWriter
 extends|extends
 name|JsonMapObjectReaderWriter
-implements|implements
-name|JoseHeadersReader
-implements|,
-name|JoseHeadersWriter
 block|{
-annotation|@
-name|Override
 specifier|public
 name|String
 name|headersToJson
@@ -65,8 +59,6 @@ name|headers
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|JoseHeaders
 name|fromJsonHeaders

@@ -93,10 +93,6 @@ class|class
 name|JwtTokenReaderWriter
 extends|extends
 name|JoseHeadersReaderWriter
-implements|implements
-name|JwtTokenReader
-implements|,
-name|JwtTokenWriter
 block|{
 specifier|private
 specifier|static
@@ -131,8 +127,6 @@ name|CLAIM_NOT_BEFORE
 argument_list|)
 argument_list|)
 decl_stmt|;
-annotation|@
-name|Override
 specifier|public
 name|String
 name|claimsToJson
@@ -148,8 +142,6 @@ name|claims
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|JwtTokenJson
 name|tokenToJson
@@ -180,8 +172,6 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|JwtClaims
 name|fromJsonClaims
@@ -245,8 +235,6 @@ name|claims
 argument_list|)
 return|;
 block|}
-annotation|@
-name|Override
 specifier|public
 name|JwtToken
 name|fromJson

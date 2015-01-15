@@ -130,8 +130,6 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
-literal|null
-argument_list|,
 operator|new
 name|EcdhDirectKeyDecryptionAlgorithm
 argument_list|(
