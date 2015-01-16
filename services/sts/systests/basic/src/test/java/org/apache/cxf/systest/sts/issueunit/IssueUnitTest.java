@@ -3535,7 +3535,11 @@ name|parameters
 operator|.
 name|setAppliesToAddress
 argument_list|(
-literal|"http://dummy-service.com/dummy"
+literal|"https://localhost:"
+operator|+
+name|STSPORT
+operator|+
+literal|"/SecurityTokenService/b-issuer/Transport"
 argument_list|)
 expr_stmt|;
 comment|// Add STSProperties object
