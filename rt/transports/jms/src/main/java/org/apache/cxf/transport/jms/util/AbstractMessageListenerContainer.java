@@ -81,16 +81,6 @@ name|javax
 operator|.
 name|jms
 operator|.
-name|MessageConsumer
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|jms
-operator|.
 name|MessageListener
 import|;
 end_import
@@ -185,14 +175,6 @@ decl_stmt|;
 specifier|protected
 name|boolean
 name|running
-decl_stmt|;
-specifier|protected
-name|MessageConsumer
-name|consumer
-decl_stmt|;
-specifier|protected
-name|Session
-name|session
 decl_stmt|;
 specifier|protected
 name|Executor
@@ -385,7 +367,6 @@ operator|=
 name|transactionManager
 expr_stmt|;
 block|}
-comment|/*     protected TransactionManager getTransactionManager() {         if (this.transactionManager == null) {             try {                 InitialContext ctx = new InitialContext();                 this.transactionManager = (TransactionManager)ctx                     .lookup("javax.transaction.TransactionManager");             } catch (NamingException e) {                 // Ignore             }         }         return this.transactionManager;     }     */
 block|}
 end_class
 

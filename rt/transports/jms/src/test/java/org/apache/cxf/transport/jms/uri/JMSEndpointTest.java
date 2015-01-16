@@ -91,7 +91,7 @@ init|=
 operator|new
 name|JMSEndpoint
 argument_list|(
-literal|"jms:queue:Foo.Bar"
+literal|"jms:queue:Foo.Bar?concurrentConsumers=21"
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -125,6 +125,16 @@ argument_list|,
 name|endpoint
 operator|.
 name|getJmsVariant
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|21
+argument_list|,
+name|endpoint
+operator|.
+name|getConcurrentConsumers
 argument_list|()
 argument_list|)
 expr_stmt|;
