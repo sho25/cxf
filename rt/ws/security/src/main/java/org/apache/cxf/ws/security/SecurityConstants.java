@@ -296,6 +296,15 @@ name|SC_FROM_JAAS_SUBJECT
 init|=
 literal|"ws-security.sc.jaas-subject"
 decl_stmt|;
+comment|/**      * Enable SAML AudienceRestriction validation. If this is set to "true", then IF the      * SAML Token contains Audience Restriction URIs, one of them must match either the      * request URL or the Service QName. The default is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUDIENCE_RESTRICTION_VALIDATION
+init|=
+literal|"ws-security.validate.audience-restriction"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -905,6 +914,8 @@ block|,
 name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
 block|,
 name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
+block|,
+name|AUDIENCE_RESTRICTION_VALIDATION
 block|}
 argument_list|)
 argument_list|)
