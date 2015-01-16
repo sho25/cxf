@@ -628,8 +628,6 @@ name|at
 init|=
 name|getClientAccessToken
 argument_list|(
-name|consumer
-argument_list|,
 name|code
 argument_list|,
 name|postMessage
@@ -747,9 +745,6 @@ specifier|private
 name|ClientAccessToken
 name|getClientAccessToken
 parameter_list|(
-name|Consumer
-name|consumer
-parameter_list|,
 name|String
 name|code
 parameter_list|,
@@ -807,14 +802,14 @@ name|void
 name|setUserInfoClient
 parameter_list|(
 name|UserInfoClient
-name|tokenClient
+name|client
 parameter_list|)
 block|{
 name|this
 operator|.
 name|tokenClient
 operator|=
-name|tokenClient
+name|client
 expr_stmt|;
 block|}
 specifier|public
