@@ -1035,7 +1035,7 @@ name|assertEquals
 argument_list|(
 name|message
 operator|+
-literal|" -> number of messages"
+literal|" -> number of messages on queue"
 argument_list|,
 name|expectedNum
 argument_list|,
