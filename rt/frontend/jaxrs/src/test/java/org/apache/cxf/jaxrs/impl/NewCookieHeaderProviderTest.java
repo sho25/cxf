@@ -263,7 +263,7 @@ name|NewCookie
 operator|.
 name|valueOf
 argument_list|(
-literal|"foo=bar;comment=comment;path=path;max-Age=10;domain=domain;secure;version=1"
+literal|"foo=bar;comment=comment;path=path;max-age=10;domain=domain;secure;version=1"
 argument_list|)
 decl_stmt|;
 name|assertTrue
