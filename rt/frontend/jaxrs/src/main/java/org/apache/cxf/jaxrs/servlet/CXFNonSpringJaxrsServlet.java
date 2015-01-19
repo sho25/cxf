@@ -763,7 +763,7 @@ name|Set
 argument_list|<
 name|Object
 argument_list|>
-name|applicationSingletones
+name|applicationSingletons
 parameter_list|)
 block|{
 name|this
@@ -771,7 +771,7 @@ argument_list|(
 operator|new
 name|ApplicationImpl
 argument_list|(
-name|applicationSingletones
+name|applicationSingletons
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4162,7 +4162,7 @@ name|Set
 argument_list|<
 name|Object
 argument_list|>
-name|applicationSingletones
+name|applicationSingletons
 decl_stmt|;
 specifier|public
 name|ApplicationImpl
@@ -4171,14 +4171,14 @@ name|Set
 argument_list|<
 name|Object
 argument_list|>
-name|applicationSingletones
+name|applicationSingletons
 parameter_list|)
 block|{
 name|this
 operator|.
-name|applicationSingletones
+name|applicationSingletons
 operator|=
-name|applicationSingletones
+name|applicationSingletons
 expr_stmt|;
 block|}
 specifier|public
@@ -4190,7 +4190,7 @@ name|getSingletons
 parameter_list|()
 block|{
 return|return
-name|applicationSingletones
+name|applicationSingletons
 return|;
 block|}
 block|}
