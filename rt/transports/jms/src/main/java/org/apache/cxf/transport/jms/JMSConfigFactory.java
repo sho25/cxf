@@ -542,6 +542,16 @@ name|getPassword
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|jmsConfig
+operator|.
+name|setConcurrentConsumers
+argument_list|(
+name|endpoint
+operator|.
+name|getConcurrentConsumers
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|TransactionManager
 name|tm
 init|=
