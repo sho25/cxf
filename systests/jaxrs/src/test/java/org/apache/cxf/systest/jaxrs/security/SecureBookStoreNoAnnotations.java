@@ -233,6 +233,18 @@ literal|123L
 argument_list|)
 return|;
 block|}
+specifier|public
+name|Book
+name|echoBook
+parameter_list|(
+name|Book
+name|b
+parameter_list|)
+block|{
+return|return
+name|b
+return|;
+block|}
 block|}
 end_class
 
