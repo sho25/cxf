@@ -113,18 +113,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|xpath
-operator|.
-name|XPathExpressionException
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|w3c
@@ -3914,8 +3902,6 @@ literal|null
 condition|)
 block|{
 comment|// Handle SignedElements
-try|try
-block|{
 name|result
 operator|.
 name|addAll
@@ -3937,31 +3923,6 @@ literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|XPathExpressionException
-name|e
-parameter_list|)
-block|{
-name|LOG
-operator|.
-name|log
-argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|,
-name|e
-operator|.
-name|getMessage
-argument_list|()
-argument_list|,
-name|e
-argument_list|)
-expr_stmt|;
-comment|// REVISIT
-block|}
 block|}
 return|return
 name|result
