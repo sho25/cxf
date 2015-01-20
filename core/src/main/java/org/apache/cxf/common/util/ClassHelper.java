@@ -19,6 +19,18 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|lang
+operator|.
+name|reflect
+operator|.
+name|Proxy
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -156,7 +168,10 @@ name|o
 parameter_list|)
 block|{
 return|return
+name|getRealObjectInternal
+argument_list|(
 name|o
+argument_list|)
 operator|.
 name|getClass
 argument_list|()
@@ -189,6 +204,17 @@ name|o
 parameter_list|)
 block|{
 return|return
+name|o
+operator|instanceof
+name|Proxy
+condition|?
+name|Proxy
+operator|.
+name|getInvocationHandler
+argument_list|(
+name|o
+argument_list|)
+else|:
 name|o
 return|;
 block|}
