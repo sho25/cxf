@@ -5509,9 +5509,9 @@ name|providers
 operator|.
 name|add
 argument_list|(
-operator|new
 name|NotFoundExceptionMapper
-argument_list|()
+operator|.
+name|class
 argument_list|)
 expr_stmt|;
 name|BookStore
