@@ -335,6 +335,15 @@ return|;
 block|}
 specifier|public
 name|String
+name|getEncodedSignature
+parameter_list|()
+block|{
+return|return
+name|signature
+return|;
+block|}
+specifier|public
+name|String
 name|getSignedEncodedJws
 parameter_list|()
 block|{
