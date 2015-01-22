@@ -557,8 +557,6 @@ name|ex
 operator|.
 name|getMessage
 argument_list|()
-argument_list|,
-name|e
 argument_list|)
 expr_stmt|;
 comment|//To check if there is ws addressing policy violation and throw WSA specific
