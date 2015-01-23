@@ -96,6 +96,8 @@ operator|+
 literal|"&jndiInitialContextFactory"
 operator|+
 literal|"=org.apache.activemq.jndi.ActiveMQInitialContextFactory"
+operator|+
+literal|"&jndiURL=tcp://localhost:61616"
 decl_stmt|;
 specifier|private
 specifier|static
