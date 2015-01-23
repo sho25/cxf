@@ -1493,6 +1493,10 @@ name|Client
 operator|.
 name|class
 block|,
+name|InvocationHandlerAware
+operator|.
+name|class
+block|,
 name|cls
 block|}
 argument_list|,
