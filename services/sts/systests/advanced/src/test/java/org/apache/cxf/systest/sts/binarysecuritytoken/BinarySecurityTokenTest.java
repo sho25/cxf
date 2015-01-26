@@ -857,38 +857,7 @@ name|SOAPFaultException
 name|fault
 parameter_list|)
 block|{
-name|String
-name|message
-init|=
-name|fault
-operator|.
-name|getMessage
-argument_list|()
-decl_stmt|;
-name|assertTrue
-argument_list|(
-name|message
-operator|.
-name|contains
-argument_list|(
-literal|"STS Authentication failed"
-argument_list|)
-operator|||
-name|message
-operator|.
-name|contains
-argument_list|(
-literal|"Validation of security token failed"
-argument_list|)
-operator|||
-name|message
-operator|.
-name|contains
-argument_list|(
-literal|"The security token could not be authenticated or authorized"
-argument_list|)
-argument_list|)
-expr_stmt|;
+comment|// expected
 block|}
 operator|(
 operator|(

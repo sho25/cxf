@@ -213,6 +213,22 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
+name|ext
+operator|.
+name|WSSecurityException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|example
 operator|.
 name|contract
@@ -2194,16 +2210,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"A replay attack has been detected"
-decl_stmt|;
-name|String
-name|error2
-init|=
-literal|"The security token could not be authenticated or authorized"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -2213,17 +2219,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
-argument_list|)
-operator|||
-name|ex
+name|WSSecurityException
 operator|.
-name|getMessage
-argument_list|()
-operator|.
-name|contains
-argument_list|(
-name|error2
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2454,11 +2452,6 @@ name|SOAPFaultException
 name|ex
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"A replay attack has been detected"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -2466,9 +2459,11 @@ operator|.
 name|getMessage
 argument_list|()
 operator|.
-name|contains
+name|equals
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;

@@ -269,7 +269,7 @@ name|ENABLE_STREAMING_SECURITY
 init|=
 literal|"ws-security.enable.streaming"
 decl_stmt|;
-comment|/**      * Whether to return the security error message to the client, and not one of the default error      * QNames. The default is false.      */
+comment|/**      * Whether to return the security error message to the client, and not the default error message.      * The "real" security errors should not be returned to the client in a deployment scenario,      * as they may leak information about the deployment, or otherwise provide a "oracle" for attacks.      * The default is false.      */
 specifier|public
 specifier|static
 specifier|final

@@ -1325,7 +1325,9 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"The signature or decryption was invalid"
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|,
 name|fault
 operator|.
@@ -1364,7 +1366,7 @@ name|assertEquals
 argument_list|(
 name|WSSecurityException
 operator|.
-name|FAILED_CHECK
+name|SECURITY_ERROR
 argument_list|,
 name|subcode
 argument_list|)
