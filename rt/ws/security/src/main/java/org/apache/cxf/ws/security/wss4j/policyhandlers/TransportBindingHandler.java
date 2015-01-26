@@ -2241,7 +2241,7 @@ argument_list|)
 expr_stmt|;
 name|message
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|SecurityConstants
 operator|.

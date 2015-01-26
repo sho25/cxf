@@ -576,19 +576,10 @@ name|String
 name|key
 parameter_list|)
 function_decl|;
+comment|/**      * Resets the cache of contextual properties that messages may contain.  Subsequent      * calls to getContextualProperty will likely recalculate the cache.      */
 name|void
 name|resetContextCache
 parameter_list|()
-function_decl|;
-name|void
-name|setContextualProperty
-parameter_list|(
-name|String
-name|key
-parameter_list|,
-name|Object
-name|v
-parameter_list|)
 function_decl|;
 comment|/**      * @return set of defined contextual property keys      */
 name|Set

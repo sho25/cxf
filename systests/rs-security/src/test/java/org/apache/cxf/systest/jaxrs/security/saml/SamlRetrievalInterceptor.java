@@ -383,7 +383,7 @@ argument_list|)
 decl_stmt|;
 name|message
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|SAMLConstants
 operator|.

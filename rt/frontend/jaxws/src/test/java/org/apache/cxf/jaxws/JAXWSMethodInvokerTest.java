@@ -1304,7 +1304,7 @@ argument_list|)
 expr_stmt|;
 name|inMessage
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 literal|"jaxws.provider.interpretNullAsOneway"
 argument_list|,
@@ -1383,7 +1383,7 @@ argument_list|)
 expr_stmt|;
 name|inMessage
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 literal|"jaxws.provider.interpretNullAsOneway"
 argument_list|,

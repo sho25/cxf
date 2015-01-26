@@ -1178,7 +1178,6 @@ literal|null
 expr_stmt|;
 block|}
 block|}
-specifier|public
 name|void
 name|setContextualProperty
 parameter_list|(

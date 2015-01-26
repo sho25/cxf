@@ -3413,7 +3413,7 @@ argument_list|)
 expr_stmt|;
 name|m2
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|SecurityConstants
 operator|.

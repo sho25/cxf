@@ -1577,7 +1577,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.

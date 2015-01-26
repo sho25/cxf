@@ -945,7 +945,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -979,7 +979,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -1013,7 +1013,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -1047,7 +1047,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -1081,7 +1081,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -1115,7 +1115,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -1144,7 +1144,7 @@ argument_list|)
 decl_stmt|;
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
@@ -1182,7 +1182,7 @@ condition|)
 block|{
 name|msg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|ConfigurationConstants
 operator|.

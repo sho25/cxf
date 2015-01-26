@@ -488,7 +488,7 @@ argument_list|)
 expr_stmt|;
 name|inmsg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|SecurityConstants
 operator|.
@@ -499,7 +499,7 @@ argument_list|)
 expr_stmt|;
 name|inmsg
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|SecurityConstants
 operator|.

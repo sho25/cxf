@@ -467,7 +467,7 @@ argument_list|()
 decl_stmt|;
 name|m
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 literal|"org.apache.cxf.wsa.metadata.wsdlLocationOnly"
 argument_list|,

@@ -899,7 +899,7 @@ name|Fault
 block|{
 name|message
 operator|.
-name|setContextualProperty
+name|put
 argument_list|(
 name|Message
 operator|.
