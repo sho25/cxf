@@ -522,11 +522,6 @@ name|name
 init|=
 literal|null
 decl_stmt|;
-name|String
-name|password
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|policy
@@ -539,13 +534,6 @@ operator|=
 name|policy
 operator|.
 name|getUserName
-argument_list|()
-expr_stmt|;
-name|password
-operator|=
-name|policy
-operator|.
-name|getPassword
 argument_list|()
 expr_stmt|;
 block|}
@@ -580,8 +568,6 @@ argument_list|,
 name|BUNDLE
 argument_list|,
 name|name
-argument_list|,
-name|password
 argument_list|)
 decl_stmt|;
 name|LOG
