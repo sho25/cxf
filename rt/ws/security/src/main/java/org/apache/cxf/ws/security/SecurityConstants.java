@@ -172,6 +172,15 @@ name|ENCRYPT_CRYPTO
 init|=
 literal|"ws-security.encryption.crypto"
 decl_stmt|;
+comment|/**      * A message property for prepared X509 certificate to be used for encryption.       * If this is not defined, then the certificate will be either loaded from the       * keystore {@link ENCRYPT_PROPERTIES} or extracted from request       * (if {@link ENCRYPT_USERNAME} has value "useReqSigCert").      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENCRYPT_CERT
+init|=
+literal|"ws-security.encryption.certificate"
+decl_stmt|;
 comment|//
 comment|// Boolean WS-Security configuration tags, e.g. the value should be "true" or "false".
 comment|//
