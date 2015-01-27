@@ -247,6 +247,22 @@ name|apache
 operator|.
 name|wss4j
 operator|.
+name|common
+operator|.
+name|ext
+operator|.
+name|WSSecurityException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
 name|stax
 operator|.
 name|ext
@@ -617,11 +633,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
-name|String
-name|error
-init|=
-literal|"An error was discovered processing"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -631,7 +642,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -966,11 +979,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
-name|String
-name|error
-init|=
-literal|"An error was discovered processing"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -980,7 +988,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1317,11 +1327,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
-name|String
-name|error
-init|=
-literal|"An error was discovered processing"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -1331,7 +1336,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1653,11 +1660,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
-name|String
-name|error
-init|=
-literal|"An error was discovered processing"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -1667,7 +1669,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2615,11 +2619,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
-name|String
-name|error
-init|=
-literal|"An error was discovered processing"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -2629,7 +2628,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2962,11 +2963,6 @@ name|ex
 parameter_list|)
 block|{
 comment|// expected
-name|String
-name|error
-init|=
-literal|"An error was discovered processing"
-decl_stmt|;
 name|assertTrue
 argument_list|(
 name|ex
@@ -2976,7 +2972,9 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-name|error
+name|WSSecurityException
+operator|.
+name|UNIFIED_SECURITY_ERR
 argument_list|)
 argument_list|)
 expr_stmt|;
