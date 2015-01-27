@@ -3689,9 +3689,9 @@ argument_list|)
 decl_stmt|;
 return|return
 name|ignoreParam
-operator|!=
+operator|==
 literal|null
-operator|&&
+operator|||
 name|MessageUtils
 operator|.
 name|isTrue
