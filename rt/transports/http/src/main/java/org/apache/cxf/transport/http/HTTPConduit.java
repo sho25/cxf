@@ -950,6 +950,14 @@ name|KEY_HTTP_CONNECTION
 init|=
 literal|"http.connection"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|KEY_HTTP_CONNECTION_ADDRESS
+init|=
+literal|"http.connection.address"
+decl_stmt|;
 comment|/**      * The Logger for this class.      */
 specifier|protected
 specifier|static
@@ -1826,8 +1834,8 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|,
-name|URI
-name|url
+name|Address
+name|address
 parameter_list|,
 name|HTTPClientPolicy
 name|csPolicy
@@ -1849,14 +1857,14 @@ block|{
 comment|// This call can possibly change the conduit endpoint address and
 comment|// protocol from the default set in EndpointInfo that is associated
 comment|// with the Conduit.
-name|URI
-name|currentURI
+name|Address
+name|currentAddress
 decl_stmt|;
 try|try
 block|{
-name|currentURI
+name|currentAddress
 operator|=
-name|setupURI
+name|setupAddress
 argument_list|(
 name|message
 argument_list|)
@@ -1894,7 +1902,7 @@ name|setupConnection
 argument_list|(
 name|message
 argument_list|,
-name|currentURI
+name|currentAddress
 argument_list|,
 name|csPolicy
 argument_list|)
@@ -2163,7 +2171,10 @@ name|setHeadersByAuthorizationPolicy
 argument_list|(
 name|message
 argument_list|,
-name|currentURI
+name|currentAddress
+operator|.
+name|getURI
+argument_list|()
 argument_list|)
 expr_stmt|;
 operator|new
@@ -2709,8 +2720,8 @@ block|}
 block|}
 comment|/**      * This function sets up a URL based on ENDPOINT_ADDRESS, PATH_INFO,      * and QUERY_STRING properties in the Message. The QUERY_STRING gets      * added with a "?" after the PATH_INFO. If the ENDPOINT_ADDRESS is not      * set on the Message, the endpoint address is taken from the       * "defaultEndpointURL".      *<p>      * The PATH_INFO is only added to the endpoint address string should       * the PATH_INFO not equal the end of the endpoint address string.      *       * @param message The message holds the addressing information.      *       * @return The full URL specifying the HTTP request to the endpoint.      *       * @throws MalformedURLException      * @throws URISyntaxException       */
 specifier|private
-name|URI
-name|setupURI
+name|Address
+name|setupAddress
 parameter_list|(
 name|Message
 name|message
@@ -2799,7 +2810,11 @@ name|defaultEndpointURIString
 argument_list|)
 expr_stmt|;
 return|return
+operator|new
+name|Address
+argument_list|(
 name|uri
+argument_list|)
 return|;
 block|}
 name|result
@@ -2863,9 +2878,13 @@ expr_stmt|;
 block|}
 return|return
 operator|new
+name|Address
+argument_list|(
+operator|new
 name|URI
 argument_list|(
 name|result
+argument_list|)
 argument_list|)
 return|;
 block|}
