@@ -1501,6 +1501,16 @@ name|Level
 name|level
 parameter_list|)
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|level
+argument_list|)
+condition|)
+block|{
 for|for
 control|(
 name|String
@@ -1557,6 +1567,7 @@ argument_list|()
 operator|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
