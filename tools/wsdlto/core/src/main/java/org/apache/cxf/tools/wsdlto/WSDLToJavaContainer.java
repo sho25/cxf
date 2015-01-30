@@ -3936,6 +3936,11 @@ condition|)
 block|{
 comment|//make sure the "raw" form is used for the wsdlLocation
 comment|//instead of the absolute URI that normalize may return
+name|boolean
+name|assumeFileURI
+init|=
+literal|false
+decl_stmt|;
 try|try
 block|{
 name|URI
@@ -3947,6 +3952,26 @@ argument_list|(
 name|wsdl
 argument_list|)
 decl_stmt|;
+name|String
+name|uriScheme
+init|=
+name|uri
+operator|.
+name|getScheme
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|uriScheme
+operator|==
+literal|null
+condition|)
+block|{
+name|assumeFileURI
+operator|=
+literal|true
+expr_stmt|;
+block|}
 name|wsdl
 operator|=
 name|uri
@@ -3962,6 +3987,16 @@ name|e
 parameter_list|)
 block|{
 comment|//not a URL, assume file
+name|assumeFileURI
+operator|=
+literal|true
+expr_stmt|;
+block|}
+if|if
+condition|(
+name|assumeFileURI
+condition|)
+block|{
 if|if
 condition|(
 name|wsdl
