@@ -1285,6 +1285,54 @@ comment|// TODO Supporting streaming Spnego outbound
 comment|// runKerberosTest(portName, true, PORT2);
 comment|// runKerberosTest(portName, true, STAX_PORT2);
 block|}
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Test
+annotation|@
+name|org
+operator|.
+name|junit
+operator|.
+name|Ignore
+specifier|public
+name|void
+name|testSpnegoOverSymmetricSecureConversation
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+if|if
+condition|(
+operator|!
+name|runTests
+operator|||
+operator|!
+name|unrestrictedPoliciesInstalled
+condition|)
+block|{
+return|return;
+block|}
+name|String
+name|portName
+init|=
+literal|"DoubleItSpnegoSymmetricSecureConversationPort"
+decl_stmt|;
+name|runKerberosTest
+argument_list|(
+name|portName
+argument_list|,
+literal|false
+argument_list|,
+name|PORT
+argument_list|)
+expr_stmt|;
+comment|//runKerberosTest(portName, false, STAX_PORT);
+comment|//runKerberosTest(portName, true, PORT);
+comment|//runKerberosTest(portName, true, STAX_PORT);
+block|}
 specifier|private
 name|void
 name|runKerberosTest
