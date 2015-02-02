@@ -399,6 +399,38 @@ name|apache
 operator|.
 name|maven
 operator|.
+name|plugins
+operator|.
+name|annotations
+operator|.
+name|Component
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|maven
+operator|.
+name|plugins
+operator|.
+name|annotations
+operator|.
+name|Parameter
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|maven
+operator|.
 name|project
 operator|.
 name|MavenProject
@@ -630,38 +662,105 @@ name|HTTP_PROXY_PASSWORD
 init|=
 literal|"http.proxyPassword"
 decl_stmt|;
-comment|/**      * @parameter expression="${project.build.outputDirectory}"      * @required      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"project.build.outputDirectory"
+argument_list|,
+name|required
+operator|=
+literal|true
+argument_list|)
 specifier|protected
 name|String
 name|classesDirectory
 decl_stmt|;
-comment|/**      * By default all maven dependencies of type "wsdl" are added to the effective wsdlOptions. Setting this      * parameter to true disables this functionality      *       * @parameter expression="${cxf.disableDependencyScan}" default-value="false"      */
+comment|/**      * By default all maven dependencies of type "wsdl" are added to the effective wsdlOptions. Setting this      * parameter to true disables this functionality      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.disableDependencyScan"
+argument_list|,
+name|defaultValue
+operator|=
+literal|"false"
+argument_list|)
 specifier|protected
 name|boolean
 name|disableDependencyScan
 decl_stmt|;
-comment|/**      * Disables the scanning of the wsdlRoot/testWsdlRoot directories.      * By default, we scan for *.wsdl (see include/exclude params as well) in the wsdlRoot      * directories and run the tool on all the wsdls we find. This disables that scan      * and requires an explicit wsdlOption to be set for each wsdl that needs to be processed.      * @parameter expression="${cxf.disableDirectoryScan}" default-value="false"      */
+comment|/**      * Disables the scanning of the wsdlRoot/testWsdlRoot directories.      * By default, we scan for *.wsdl (see include/exclude params as well) in the wsdlRoot      * directories and run the tool on all the wsdls we find. This disables that scan      * and requires an explicit wsdlOption to be set for each wsdl that needs to be processed.      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.disableDirectoryScan"
+argument_list|,
+name|defaultValue
+operator|=
+literal|"false"
+argument_list|)
 specifier|protected
 name|boolean
 name|disableDirectoryScan
 decl_stmt|;
-comment|/**      * Allows running the JavaToWs in a separate process. Valid values are "false", "always", and "once" The      * value of "true" is equal to "once"      *       * @parameter default-value="false"      * @since 2.4      */
+comment|/**      * Allows running the JavaToWs in a separate process. Valid values are "false", "always", and "once" The      * value of "true" is equal to "once"      */
+annotation|@
+name|Parameter
+argument_list|(
+name|defaultValue
+operator|=
+literal|"false"
+argument_list|)
 specifier|protected
 name|String
 name|fork
 decl_stmt|;
-comment|/**      * A list of wsdl files to include. Can contain ant-style wildcards and double wildcards. Defaults to      * *.wsdl      *       * @parameter      */
+comment|/**      * A list of wsdl files to include. Can contain ant-style wildcards and double wildcards. Defaults to      * *.wsdl      */
+annotation|@
+name|Parameter
 specifier|protected
 name|String
 name|includes
 index|[]
 decl_stmt|;
-comment|/**      * Directory in which the "DONE" markers are saved that      *       * @parameter expression="${cxf.markerDirectory}"      *            default-value="${project.build.directory}/cxf-codegen-plugin-markers"      */
+comment|/**      * Directory in which the "DONE" markers are saved that      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.markerDirectory"
+argument_list|,
+name|defaultValue
+operator|=
+literal|"${project.build.directory}/cxf-codegen-plugin-markers"
+argument_list|)
 specifier|protected
 name|File
 name|markerDirectory
 decl_stmt|;
-comment|/**      * The plugin dependencies, needed for the fork mode.      *       * @parameter expression="${plugin.artifacts}"      * @required      * @readonly      */
+comment|/**      * The plugin dependencies, needed for the fork mode      */
+annotation|@
+name|Parameter
+argument_list|(
+name|required
+operator|=
+literal|true
+argument_list|,
+name|readonly
+operator|=
+literal|true
+argument_list|,
+name|property
+operator|=
+literal|"plugin.artifacts"
+argument_list|)
 specifier|protected
 name|List
 argument_list|<
@@ -669,58 +768,133 @@ name|Artifact
 argument_list|>
 name|pluginArtifacts
 decl_stmt|;
-comment|/**      * @parameter expression="${project}"      * @required      */
+annotation|@
+name|Parameter
+argument_list|(
+name|required
+operator|=
+literal|true
+argument_list|,
+name|property
+operator|=
+literal|"project"
+argument_list|)
 specifier|protected
 name|MavenProject
 name|project
 decl_stmt|;
-comment|/**      * Use the compile classpath rather than the test classpath for execution useful if the test dependencies      * clash with those of wsdl2java      *       * @parameter expression="${cxf.useCompileClasspath}" default-value="false"      */
+comment|/**      * Use the compile classpath rather than the test classpath for execution useful if the test dependencies      * clash with those of wsdl2java      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.useCompileClasspath"
+argument_list|,
+name|defaultValue
+operator|=
+literal|"false"
+argument_list|)
 specifier|protected
 name|boolean
 name|useCompileClasspath
 decl_stmt|;
-comment|/**      * A list of wsdl files to exclude. Can contain ant-style wildcards and double wildcards.      *       * @parameter      */
+comment|/**      * A list of wsdl files to exclude. Can contain ant-style wildcards and double wildcards.      */
+annotation|@
+name|Parameter
 specifier|protected
 name|String
 name|excludes
 index|[]
 decl_stmt|;
-comment|/**      * @parameter expression="${cxf.testWsdlRoot}" default-value="${basedir}/src/test/resources/wsdl"      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.testWsdlRoot"
+argument_list|,
+name|defaultValue
+operator|=
+literal|"${basedir}/src/test/resources/wsdl"
+argument_list|)
 specifier|protected
 name|File
 name|testWsdlRoot
 decl_stmt|;
-comment|/**      * @parameter expression="${cxf.wsdlRoot}" default-value="${basedir}/src/main/resources/wsdl"      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.wsdlRoot"
+argument_list|,
+name|defaultValue
+operator|=
+literal|"${basedir}/src/main/resources/wsdl"
+argument_list|)
 specifier|protected
 name|File
 name|wsdlRoot
 decl_stmt|;
-comment|/** @component */
+annotation|@
+name|Component
 specifier|protected
 name|BuildContext
 name|buildContext
 decl_stmt|;
-comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      *       * @parameter expression="${cxf.codegen.jvmArgs}"      * @since 2.4      */
+comment|/**      * Sets the JVM arguments (i.e.<code>-Xms128m -Xmx128m</code>) if fork is set to<code>true</code>.      */
+annotation|@
+name|Parameter
+argument_list|(
+name|property
+operator|=
+literal|"cxf.codegen.jvmArgs"
+argument_list|)
 specifier|private
 name|String
 name|additionalJvmArgs
 decl_stmt|;
-comment|/**      * Sets the Java executable to use when fork parameter is<code>true</code>.      *       * @parameter default-value="${java.home}/bin/java"      * @since 2.4      */
+comment|/**      * Sets the Java executable to use when fork parameter is<code>true</code>.      */
+annotation|@
+name|Parameter
+argument_list|(
+name|defaultValue
+operator|=
+literal|"${java.home}/bin/java"
+argument_list|)
 specifier|private
 name|String
 name|javaExecutable
 decl_stmt|;
-comment|/**      * The Maven session.      *       * @parameter expression="${session}"      * @readonly      * @required      */
+comment|/**      * The Maven session.      */
+annotation|@
+name|Parameter
+argument_list|(
+name|readonly
+operator|=
+literal|true
+argument_list|,
+name|required
+operator|=
+literal|true
+argument_list|,
+name|property
+operator|=
+literal|"session"
+argument_list|)
 specifier|private
 name|MavenSession
 name|mavenSession
 decl_stmt|;
-comment|/**      * @component      * @readonly      * @required      */
+annotation|@
+name|Component
 specifier|private
 name|ProjectDependenciesResolver
 name|projectDependencyResolver
 decl_stmt|;
-comment|/**      * @component      * @readonly      * @required      */
+annotation|@
+name|Component
 specifier|private
 name|RepositorySystem
 name|repositorySystem
