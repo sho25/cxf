@@ -284,6 +284,14 @@ specifier|private
 specifier|static
 specifier|final
 name|String
+name|JAXRS_APPLICATION_SERVLET_NAME
+init|=
+literal|"javax.ws.rs.core.Application"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
 name|JAXRS_APPLICATION_PARAM
 init|=
 literal|"javax.ws.rs.Application"
@@ -555,7 +563,7 @@ block|{
 comment|// Servlet name is a JAX-RS Application class name
 name|servletName
 operator|=
-name|JAXRS_APPLICATION_PARAM
+name|JAXRS_APPLICATION_SERVLET_NAME
 expr_stmt|;
 comment|// Servlet mapping is obtained from a servlet registration
 comment|// with a JAX-RS Application class name
@@ -565,7 +573,7 @@ name|getServletMapping
 argument_list|(
 name|ctx
 argument_list|,
-name|JAXRS_APPLICATION_PARAM
+name|servletName
 argument_list|)
 expr_stmt|;
 block|}
