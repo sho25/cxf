@@ -4621,10 +4621,7 @@ operator|.
 name|getMessageInfo
 argument_list|()
 operator|.
-name|getMessageParts
-argument_list|()
-operator|.
-name|size
+name|getMessagePartsNumber
 argument_list|()
 operator|>
 literal|0
@@ -4641,10 +4638,8 @@ operator|.
 name|getMessageInfo
 argument_list|()
 operator|.
-name|getMessagePart
-argument_list|(
-literal|0
-argument_list|)
+name|getFirstMessagePart
+argument_list|()
 decl_stmt|;
 if|if
 condition|(

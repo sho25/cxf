@@ -2687,13 +2687,8 @@ name|part
 init|=
 name|fault
 operator|.
-name|getMessageParts
+name|getFirstMessagePart
 argument_list|()
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
 decl_stmt|;
 name|Class
 argument_list|<

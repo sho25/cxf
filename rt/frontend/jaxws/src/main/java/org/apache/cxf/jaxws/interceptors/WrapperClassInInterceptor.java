@@ -682,10 +682,8 @@ name|wrapperPart
 init|=
 name|wrappedMessageInfo
 operator|.
-name|getMessagePart
-argument_list|(
-literal|0
-argument_list|)
+name|getFirstMessagePart
+argument_list|()
 decl_stmt|;
 name|Class
 argument_list|<

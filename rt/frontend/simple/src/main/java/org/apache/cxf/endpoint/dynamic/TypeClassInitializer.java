@@ -619,10 +619,8 @@ operator|.
 name|getInput
 argument_list|()
 operator|.
-name|getMessagePart
-argument_list|(
-literal|0
-argument_list|)
+name|getFirstMessagePart
+argument_list|()
 operator|.
 name|getElementQName
 argument_list|()
@@ -642,10 +640,8 @@ operator|.
 name|getOutput
 argument_list|()
 operator|.
-name|getMessagePart
-argument_list|(
-literal|0
-argument_list|)
+name|getFirstMessagePart
+argument_list|()
 operator|.
 name|getElementQName
 argument_list|()

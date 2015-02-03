@@ -5135,10 +5135,7 @@ if|if
 condition|(
 name|bodyMessage
 operator|.
-name|getMessageParts
-argument_list|()
-operator|.
-name|size
+name|getMessagePartsNumber
 argument_list|()
 operator|==
 literal|1

@@ -3785,7 +3785,6 @@ argument_list|()
 operator|!=
 literal|null
 operator|&&
-operator|!
 name|bop
 operator|.
 name|getOperationInfo
@@ -3794,11 +3793,10 @@ operator|.
 name|getInput
 argument_list|()
 operator|.
-name|getMessageParts
+name|getMessagePartsNumber
 argument_list|()
-operator|.
-name|isEmpty
-argument_list|()
+operator|>
+literal|0
 condition|)
 block|{
 name|QName

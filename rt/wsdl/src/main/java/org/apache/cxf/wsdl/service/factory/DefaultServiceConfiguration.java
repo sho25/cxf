@@ -672,10 +672,7 @@ operator|.
 name|getInput
 argument_list|()
 operator|.
-name|getMessageParts
-argument_list|()
-operator|.
-name|size
+name|getMessagePartsNumber
 argument_list|()
 argument_list|,
 literal|false

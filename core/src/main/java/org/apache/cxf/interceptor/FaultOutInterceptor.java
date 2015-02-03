@@ -446,13 +446,7 @@ name|part
 init|=
 name|fi
 operator|.
-name|getMessageParts
-argument_list|()
-operator|.
-name|iterator
-argument_list|()
-operator|.
-name|next
+name|getFirstMessagePart
 argument_list|()
 decl_stmt|;
 name|DataBinding
