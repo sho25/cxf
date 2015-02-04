@@ -9019,7 +9019,7 @@ name|docEl
 argument_list|,
 name|XLS_NS
 argument_list|,
-literal|"import"
+literal|"include"
 argument_list|)
 decl_stmt|;
 name|handleExistingDocRefs
