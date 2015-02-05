@@ -375,6 +375,8 @@ name|transport
 operator|.
 name|websocket
 operator|.
+name|jetty
+operator|.
 name|WebSocketServletHolder
 import|;
 end_import
@@ -391,6 +393,8 @@ name|transport
 operator|.
 name|websocket
 operator|.
+name|jetty
+operator|.
 name|WebSocketVirtualServletRequest
 import|;
 end_import
@@ -406,6 +410,8 @@ operator|.
 name|transport
 operator|.
 name|websocket
+operator|.
+name|jetty
 operator|.
 name|WebSocketVirtualServletResponse
 import|;

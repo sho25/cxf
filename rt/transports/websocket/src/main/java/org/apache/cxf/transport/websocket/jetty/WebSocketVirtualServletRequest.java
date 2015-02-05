@@ -14,6 +14,8 @@ operator|.
 name|transport
 operator|.
 name|websocket
+operator|.
+name|jetty
 package|;
 end_package
 
@@ -324,6 +326,38 @@ operator|.
 name|logging
 operator|.
 name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|websocket
+operator|.
+name|InvalidPathException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|websocket
+operator|.
+name|WebSocketUtils
 import|;
 end_import
 

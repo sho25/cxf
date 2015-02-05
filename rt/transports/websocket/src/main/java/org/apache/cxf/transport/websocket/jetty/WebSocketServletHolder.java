@@ -14,6 +14,8 @@ operator|.
 name|transport
 operator|.
 name|websocket
+operator|.
+name|jetty
 package|;
 end_package
 
