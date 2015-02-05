@@ -470,6 +470,7 @@ name|app
 operator|==
 literal|null
 operator|||
+operator|(
 name|app
 operator|.
 name|getClasses
@@ -485,6 +486,7 @@ argument_list|()
 operator|.
 name|isEmpty
 argument_list|()
+operator|)
 condition|)
 block|{
 comment|// The best effort at detecting a CXFNonSpringJaxrsServlet
