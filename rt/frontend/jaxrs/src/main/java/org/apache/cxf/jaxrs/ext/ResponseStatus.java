@@ -65,6 +65,20 @@ name|Target
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|Response
+import|;
+end_import
+
 begin_annotation_defn
 annotation|@
 name|Retention
@@ -86,7 +100,9 @@ specifier|public
 annotation_defn|@interface
 name|ResponseStatus
 block|{
-name|int
+name|Response
+operator|.
+name|Status
 index|[]
 name|value
 parameter_list|()
