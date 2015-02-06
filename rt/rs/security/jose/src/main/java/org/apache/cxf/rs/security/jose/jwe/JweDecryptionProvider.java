@@ -39,8 +39,8 @@ name|byte
 index|[]
 name|decrypt
 parameter_list|(
-name|JweCompactConsumer
-name|consumer
+name|JweDecryptionInput
+name|jweInput
 parameter_list|)
 function_decl|;
 block|}

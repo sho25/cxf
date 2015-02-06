@@ -261,6 +261,9 @@ operator|.
 name|decrypt
 argument_list|(
 name|jweConsumer
+operator|.
+name|getJweDecryptionInput
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|JwtClaims

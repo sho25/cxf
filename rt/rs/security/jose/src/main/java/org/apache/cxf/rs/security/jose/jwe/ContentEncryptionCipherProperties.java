@@ -48,6 +48,10 @@ name|getAdditionalAuthenticationData
 parameter_list|(
 name|String
 name|headersJson
+parameter_list|,
+name|byte
+index|[]
+name|aad
 parameter_list|)
 function_decl|;
 name|AlgorithmParameterSpec

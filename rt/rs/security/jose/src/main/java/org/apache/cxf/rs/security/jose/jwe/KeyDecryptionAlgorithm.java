@@ -34,8 +34,8 @@ name|byte
 index|[]
 name|getDecryptedContentEncryptionKey
 parameter_list|(
-name|JweCompactConsumer
-name|consumer
+name|JweDecryptionInput
+name|jweDecryptionInput
 parameter_list|)
 function_decl|;
 block|}

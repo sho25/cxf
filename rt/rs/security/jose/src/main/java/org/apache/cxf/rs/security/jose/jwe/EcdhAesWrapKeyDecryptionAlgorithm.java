@@ -118,8 +118,8 @@ name|byte
 index|[]
 name|getDecryptedContentEncryptionKey
 parameter_list|(
-name|JweCompactConsumer
-name|consumer
+name|JweDecryptionInput
+name|jweDecryptionInput
 parameter_list|)
 block|{
 name|byte
@@ -130,7 +130,7 @@ name|EcdhDirectKeyJweDecryption
 operator|.
 name|getDecryptedContentEncryptionKeyFromHeaders
 argument_list|(
-name|consumer
+name|jweDecryptionInput
 operator|.
 name|getJweHeaders
 argument_list|()
@@ -171,7 +171,7 @@ name|aesWrap
 operator|.
 name|getDecryptedContentEncryptionKey
 argument_list|(
-name|consumer
+name|jweDecryptionInput
 argument_list|)
 return|;
 block|}

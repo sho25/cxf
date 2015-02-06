@@ -491,6 +491,8 @@ operator|.
 name|createJweEncryptionState
 argument_list|(
 name|jweHeaders
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 try|try

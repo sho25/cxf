@@ -226,8 +226,8 @@ name|byte
 index|[]
 name|getEncryptedContentEncryptionKey
 parameter_list|(
-name|JweCompactConsumer
-name|consumer
+name|JweDecryptionInput
+name|jweDecryptionInput
 parameter_list|)
 block|{
 name|byte
@@ -238,7 +238,7 @@ name|super
 operator|.
 name|getEncryptedContentEncryptionKey
 argument_list|(
-name|consumer
+name|jweDecryptionInput
 argument_list|)
 decl_stmt|;
 name|byte
@@ -247,7 +247,7 @@ name|tag
 init|=
 name|getDecodedBytes
 argument_list|(
-name|consumer
+name|jweDecryptionInput
 argument_list|,
 literal|"tag"
 argument_list|)
@@ -267,8 +267,8 @@ specifier|protected
 name|AlgorithmParameterSpec
 name|getAlgorithmParameterSpec
 parameter_list|(
-name|JweCompactConsumer
-name|consumer
+name|JweDecryptionInput
+name|jweDecryptionInput
 parameter_list|)
 block|{
 name|byte
@@ -277,7 +277,7 @@ name|iv
 init|=
 name|getDecodedBytes
 argument_list|(
-name|consumer
+name|jweDecryptionInput
 argument_list|,
 literal|"iv"
 argument_list|)
@@ -298,8 +298,8 @@ name|byte
 index|[]
 name|getDecodedBytes
 parameter_list|(
-name|JweCompactConsumer
-name|consumer
+name|JweDecryptionInput
+name|jweDecryptionInput
 parameter_list|,
 name|String
 name|headerName
@@ -310,7 +310,7 @@ block|{
 name|Object
 name|ivHeader
 init|=
-name|consumer
+name|jweDecryptionInput
 operator|.
 name|getJweHeaders
 argument_list|()

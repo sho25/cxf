@@ -45,6 +45,10 @@ name|createJweEncryptionState
 parameter_list|(
 name|JweHeaders
 name|jweHeaders
+parameter_list|,
+name|byte
+index|[]
+name|aad
 parameter_list|)
 function_decl|;
 block|}
