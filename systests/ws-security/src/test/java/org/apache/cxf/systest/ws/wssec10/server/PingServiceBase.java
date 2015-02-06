@@ -79,10 +79,6 @@ operator|.
 name|String
 name|echo
 parameter_list|(
-name|java
-operator|.
-name|lang
-operator|.
 name|String
 name|request
 parameter_list|)
