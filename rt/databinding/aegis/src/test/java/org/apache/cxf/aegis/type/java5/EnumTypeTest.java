@@ -264,7 +264,7 @@ name|tm
 decl_stmt|;
 specifier|private
 enum|enum
-name|smallEnum
+name|SmallEnum
 block|{
 name|VALUE1
 block|,
@@ -350,7 +350,7 @@ name|type
 operator|.
 name|setTypeClass
 argument_list|(
-name|smallEnum
+name|SmallEnum
 operator|.
 name|class
 argument_list|)
@@ -382,7 +382,7 @@ name|writeObjectToElement
 argument_list|(
 name|type
 argument_list|,
-name|smallEnum
+name|SmallEnum
 operator|.
 name|VALUE1
 argument_list|,
@@ -434,7 +434,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-name|smallEnum
+name|SmallEnum
 operator|.
 name|VALUE1
 argument_list|,
@@ -461,7 +461,7 @@ argument_list|()
 operator|.
 name|createType
 argument_list|(
-name|smallEnum
+name|SmallEnum
 operator|.
 name|class
 argument_list|)
@@ -629,7 +629,7 @@ name|type
 operator|.
 name|setTypeClass
 argument_list|(
-name|smallEnum
+name|SmallEnum
 operator|.
 name|class
 argument_list|)

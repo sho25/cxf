@@ -23,7 +23,6 @@ end_package
 
 begin_interface
 specifier|public
-specifier|abstract
 interface|interface
 name|IdlType
 extends|extends

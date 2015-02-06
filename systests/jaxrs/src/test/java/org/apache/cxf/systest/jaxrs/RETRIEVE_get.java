@@ -99,6 +99,7 @@ name|HttpMethod
 argument_list|(
 literal|"GET"
 argument_list|)
+comment|//CHECKSTYLE:OFF
 specifier|public
 annotation_defn|@interface
 name|RETRIEVE_get

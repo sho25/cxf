@@ -43,7 +43,6 @@ end_import
 
 begin_interface
 specifier|public
-specifier|abstract
 interface|interface
 name|IdlDefn
 block|{
