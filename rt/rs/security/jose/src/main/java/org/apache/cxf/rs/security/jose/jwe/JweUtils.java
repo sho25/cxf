@@ -2647,7 +2647,7 @@ return|return
 operator|new
 name|AesCbcHmacJweEncryption
 argument_list|(
-name|headers
+name|contentEncryptionAlgo
 argument_list|,
 name|keyEncryptionProvider
 argument_list|)
@@ -2659,8 +2659,6 @@ return|return
 operator|new
 name|WrappedKeyJweEncryption
 argument_list|(
-name|headers
-argument_list|,
 name|keyEncryptionProvider
 argument_list|,
 name|getContentEncryptionAlgorithm
@@ -3656,8 +3654,6 @@ return|return
 operator|new
 name|DirectKeyJweEncryption
 argument_list|(
-name|headers
-argument_list|,
 name|ctEncryptionProvider
 argument_list|)
 return|;

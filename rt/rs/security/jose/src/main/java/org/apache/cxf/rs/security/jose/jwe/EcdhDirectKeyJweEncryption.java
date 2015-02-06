@@ -192,12 +192,6 @@ block|{
 name|super
 argument_list|(
 operator|new
-name|JweHeaders
-argument_list|(
-name|ctAlgo
-argument_list|)
-argument_list|,
-operator|new
 name|EcdhAesGcmContentEncryptionAlgorithm
 argument_list|(
 name|peerPublicKey
