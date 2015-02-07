@@ -450,6 +450,7 @@ return|;
 block|}
 else|else
 block|{
+comment|// hack for CXF-3453
 name|String
 name|msg
 init|=
