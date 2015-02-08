@@ -202,6 +202,26 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testContendDispositionFileNameKanjiChars
+parameter_list|()
+block|{
+name|assertEquals
+argument_list|(
+literal|"世界ーファイル.txt"
+argument_list|,
+name|AttachmentUtil
+operator|.
+name|getContentDispositionFileName
+argument_list|(
+literal|"filename*=UTF-8''%e4%b8%96%e7%95%8c%e3%83%bc%e3%83%95%e3%82%a1%e3%82%a4%e3%83%ab.txt"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
