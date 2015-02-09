@@ -5957,6 +5957,7 @@ name|parameterTypes
 operator|.
 name|length
 operator|&&
+operator|!
 name|PropertyUtils
 operator|.
 name|isTrue
@@ -5965,7 +5966,7 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-literal|"org.apache.cxf.preferModelParameters"
+literal|"org.apache.cxf.preferMethodParameters"
 argument_list|)
 argument_list|)
 decl_stmt|;
