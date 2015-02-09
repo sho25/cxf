@@ -3191,7 +3191,7 @@ block|}
 name|String
 name|proxyAuthString
 init|=
-name|authSupplier
+name|proxyAuthSupplier
 operator|.
 name|getAuthorization
 argument_list|(
