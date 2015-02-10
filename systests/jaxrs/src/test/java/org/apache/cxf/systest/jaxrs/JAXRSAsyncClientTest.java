@@ -401,16 +401,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -505,8 +495,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testRetrieveBookCustomMethodAsyncSync
@@ -600,8 +589,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testDeleteWithBody
@@ -695,8 +683,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testRetrieveBookCustomMethodAsync
@@ -782,8 +769,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testGetBookAsyncResponse404
@@ -845,8 +831,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testGetBookAsync404
@@ -927,8 +912,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testNonExistent
@@ -1050,8 +1033,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testPostBookProcessingException
@@ -1165,8 +1147,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testGetBookResponseProcessingException
@@ -1271,8 +1252,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testGetBookAsync404Callback
