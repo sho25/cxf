@@ -28,6 +28,7 @@ name|JweEncryptionProvider
 extends|extends
 name|JweKeyProperties
 block|{
+comment|/**      * JWE compact encryption      */
 name|String
 name|encrypt
 parameter_list|(
@@ -39,16 +40,12 @@ name|JweHeaders
 name|jweHeaders
 parameter_list|)
 function_decl|;
-comment|/**      * Prepare JWE state (optional operation)      */
+comment|/**      * Prepare JWE state for completing either      * JWE compact or JSON encryption       */
 name|JweEncryptionState
 name|createJweEncryptionState
 parameter_list|(
-name|JweHeaders
-name|jweHeaders
-parameter_list|,
-name|byte
-index|[]
-name|aad
+name|JweEncryptionInput
+name|jweInput
 parameter_list|)
 function_decl|;
 block|}
