@@ -1020,6 +1020,13 @@ argument_list|>
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|classes
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 specifier|final
@@ -1084,6 +1091,7 @@ block|}
 block|}
 block|}
 block|}
+block|}
 return|return
 name|grouped
 return|;
@@ -1135,6 +1143,13 @@ argument_list|>
 name|classes
 parameter_list|)
 block|{
+if|if
+condition|(
+name|classes
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 specifier|final
@@ -1180,6 +1195,7 @@ expr_stmt|;
 return|return
 name|clazz
 return|;
+block|}
 block|}
 block|}
 return|return
