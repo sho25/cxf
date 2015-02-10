@@ -571,6 +571,32 @@ condition|)
 block|{
 comment|// return
 block|}
+if|if
+condition|(
+name|message
+operator|.
+name|getContent
+argument_list|(
+name|SOAPMessage
+operator|.
+name|class
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|SoapFault
+argument_list|(
+literal|"Error obtaining SOAP document"
+argument_list|,
+name|Fault
+operator|.
+name|FAULT_CODE_CLIENT
+argument_list|)
+throw|;
+block|}
 name|Element
 name|documentElement
 init|=
