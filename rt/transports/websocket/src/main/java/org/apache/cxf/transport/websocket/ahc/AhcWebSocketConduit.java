@@ -179,7 +179,7 @@ name|http
 operator|.
 name|client
 operator|.
-name|websocket
+name|ws
 operator|.
 name|WebSocket
 import|;
@@ -195,7 +195,7 @@ name|http
 operator|.
 name|client
 operator|.
-name|websocket
+name|ws
 operator|.
 name|WebSocketByteListener
 import|;
@@ -211,7 +211,7 @@ name|http
 operator|.
 name|client
 operator|.
-name|websocket
+name|ws
 operator|.
 name|WebSocketTextListener
 import|;
@@ -227,7 +227,7 @@ name|http
 operator|.
 name|client
 operator|.
-name|websocket
+name|ws
 operator|.
 name|WebSocketUpgradeHandler
 import|;
