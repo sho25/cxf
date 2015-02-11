@@ -6815,6 +6815,10 @@ argument_list|()
 operator|.
 name|isSynchronous
 argument_list|()
+operator|&&
+name|ex
+operator|!=
+literal|null
 condition|)
 block|{
 comment|//TODO: make sure it works with the failover feature
