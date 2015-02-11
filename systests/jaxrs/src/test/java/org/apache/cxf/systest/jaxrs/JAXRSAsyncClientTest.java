@@ -75,16 +75,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
-operator|.
-name|ConnectException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -969,7 +959,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost/bookstore"
+literal|"http://localhostt/bookstore"
 decl_stmt|;
 name|List
 argument_list|<
@@ -1067,7 +1057,7 @@ operator|.
 name|getCause
 argument_list|()
 operator|instanceof
-name|ConnectException
+name|IOException
 argument_list|)
 expr_stmt|;
 block|}
@@ -1092,7 +1082,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost/bookstore"
+literal|"http://localhostt/bookstore"
 decl_stmt|;
 name|Client
 name|c
@@ -1182,7 +1172,7 @@ operator|.
 name|getCause
 argument_list|()
 operator|instanceof
-name|ConnectException
+name|IOException
 argument_list|)
 expr_stmt|;
 block|}

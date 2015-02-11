@@ -63,16 +63,6 @@ name|java
 operator|.
 name|net
 operator|.
-name|ConnectException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|net
-operator|.
 name|HttpURLConnection
 import|;
 end_import
@@ -1017,7 +1007,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhost/bookstore"
+literal|"http://localhostt/bookstore"
 decl_stmt|;
 name|WebClient
 name|wc
@@ -1062,7 +1052,7 @@ operator|.
 name|getCause
 argument_list|()
 operator|instanceof
-name|ConnectException
+name|IOException
 argument_list|)
 expr_stmt|;
 block|}

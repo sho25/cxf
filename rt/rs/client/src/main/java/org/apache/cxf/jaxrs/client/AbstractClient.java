@@ -99,16 +99,6 @@ name|java
 operator|.
 name|net
 operator|.
-name|ConnectException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|net
-operator|.
 name|HttpURLConnection
 import|;
 end_import
@@ -6825,10 +6815,6 @@ argument_list|()
 operator|.
 name|isSynchronous
 argument_list|()
-operator|&&
-name|ex
-operator|instanceof
-name|ConnectException
 condition|)
 block|{
 comment|//TODO: make sure it works with the failover feature
