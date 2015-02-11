@@ -446,6 +446,14 @@ decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
+name|String
+name|USE_ASYNC_PROPERTY
+init|=
+literal|"use.async.http.conduit"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|TimeZone
 name|TIME_ZONE_GMT
 init|=
@@ -1597,8 +1605,32 @@ name|EMPTY_REQUEST_PROPERTY
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|// Apparently HttpUrlConnection sets a form Content-Type
-comment|// if no Content-Type is set even for empty requests
+comment|// HttpUrlConnection sets a form Content-Type and completely loses custom Accept
+comment|// if HTTP proxies are used if no Content-Type is set for empty requests
+name|boolean
+name|asyncConduitUsed
+init|=
+name|PropertyUtils
+operator|.
+name|isTrue
+argument_list|(
+name|message
+operator|.
+name|get
+argument_list|(
+name|USE_ASYNC_PROPERTY
+argument_list|)
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+operator|!
+name|asyncConduitUsed
+operator|||
+operator|!
+name|emptyRequest
+condition|)
+block|{
 name|String
 name|ct
 init|=
@@ -1620,6 +1652,7 @@ argument_list|,
 name|ct
 argument_list|)
 expr_stmt|;
+block|}
 name|transferProtocolHeadersToURLConnection
 argument_list|(
 name|connection
