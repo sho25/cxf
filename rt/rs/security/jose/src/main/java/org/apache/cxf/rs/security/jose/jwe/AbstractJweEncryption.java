@@ -785,7 +785,7 @@ name|equals
 argument_list|(
 name|jweInHeaders
 operator|.
-name|getAlgorithm
+name|getContentEncryptionAlgorithm
 argument_list|()
 argument_list|)
 condition|)

@@ -273,7 +273,6 @@ extends|extends
 name|Assert
 block|{
 comment|// A1 example
-specifier|private
 specifier|static
 specifier|final
 name|byte
@@ -394,7 +393,6 @@ operator|)
 literal|252
 block|}
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -412,7 +410,6 @@ literal|"tPs6mS6XrgxnxbWhojf663tuEQueGC-FCMfra36C9knDFGzKsNa7LZK2dj"
 operator|+
 literal|"YgyD3JR_MB_4NUJW_TqOQtwHYbxevoJArm-L5StowjzGy-_bq6Gw"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
