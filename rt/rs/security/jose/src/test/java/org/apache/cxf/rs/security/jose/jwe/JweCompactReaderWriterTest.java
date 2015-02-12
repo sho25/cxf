@@ -491,7 +491,6 @@ literal|219
 block|}
 decl_stmt|;
 comment|// A3 example
-specifier|private
 specifier|static
 specifier|final
 name|byte
@@ -615,7 +614,6 @@ operator|)
 literal|207
 block|}
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|byte
@@ -656,7 +654,6 @@ block|,
 literal|101
 block|}
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
