@@ -417,7 +417,6 @@ name|RSA_PUBLIC_EXPONENT_ENCODED_A1
 init|=
 literal|"AQAB"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -435,7 +434,6 @@ literal|"t3UVe4WO3JkJOzlpUf-KTVI2Ptgm-dARxTEtE-id-4OJr0h-K-VFs3VSnd"
 operator|+
 literal|"VTIznSxfyrj8ILL6MG_Uv8YAu7VILSB3lOW085-4qE3DzgrTjgyQ"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|byte
