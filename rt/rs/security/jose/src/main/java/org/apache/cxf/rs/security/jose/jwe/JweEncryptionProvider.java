@@ -41,8 +41,8 @@ name|jweHeaders
 parameter_list|)
 function_decl|;
 comment|/**      * Prepare JWE state for completing either      * JWE compact or JSON encryption       */
-name|JweEncryptionState
-name|createJweEncryptionState
+name|JweEncryptionOutput
+name|getEncryptionOutput
 parameter_list|(
 name|JweEncryptionInput
 name|jweInput

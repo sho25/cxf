@@ -261,7 +261,7 @@ name|jose
 operator|.
 name|jwe
 operator|.
-name|JweEncryptionProvider
+name|JweEncryptionOutput
 import|;
 end_import
 
@@ -281,7 +281,7 @@ name|jose
 operator|.
 name|jwe
 operator|.
-name|JweEncryptionState
+name|JweEncryptionProvider
 import|;
 end_import
 
@@ -503,12 +503,12 @@ condition|(
 name|useJweOutputStream
 condition|)
 block|{
-name|JweEncryptionState
+name|JweEncryptionOutput
 name|encryption
 init|=
 name|theEncryptionProvider
 operator|.
-name|createJweEncryptionState
+name|getEncryptionOutput
 argument_list|(
 operator|new
 name|JweEncryptionInput
