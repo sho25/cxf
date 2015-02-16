@@ -255,11 +255,7 @@ operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
 argument_list|,
-operator|new
-name|JwsJsonProtectedHeader
-argument_list|(
 name|headerEntries
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -321,11 +317,7 @@ operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
 argument_list|,
-operator|new
-name|JwsJsonProtectedHeader
-argument_list|(
 name|headerEntries
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
@@ -385,11 +377,7 @@ operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
 argument_list|,
-operator|new
-name|JwsJsonProtectedHeader
-argument_list|(
 name|headerEntries
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|producer
@@ -406,11 +394,7 @@ operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
 argument_list|,
-operator|new
-name|JwsJsonProtectedHeader
-argument_list|(
 name|headerEntries
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|assertEquals
