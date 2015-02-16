@@ -936,7 +936,7 @@ operator|)
 operator|||
 name|jweInHeaders
 operator|.
-name|getAlgorithm
+name|getContentEncryptionAlgorithm
 argument_list|()
 operator|!=
 literal|null

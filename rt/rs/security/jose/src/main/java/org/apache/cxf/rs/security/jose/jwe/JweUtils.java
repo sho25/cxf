@@ -3549,6 +3549,7 @@ argument_list|(
 name|keyEncryptionAlgo
 argument_list|)
 expr_stmt|;
+block|}
 name|headers
 operator|.
 name|setContentEncryptionAlgorithm
@@ -3570,7 +3571,6 @@ argument_list|(
 name|compression
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 return|return
 name|headers
