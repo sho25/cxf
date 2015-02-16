@@ -128,7 +128,7 @@ specifier|public
 class|class
 name|AesCbcHmacJweEncryption
 extends|extends
-name|AbstractJweEncryption
+name|JweEncryption
 block|{
 specifier|private
 specifier|static
@@ -309,6 +309,8 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
+name|keyEncryptionAlgorithm
+argument_list|,
 operator|new
 name|AesCbcContentEncryptionAlgorithm
 argument_list|(
@@ -321,8 +323,6 @@ argument_list|(
 name|cekAlgoJwt
 argument_list|)
 argument_list|)
-argument_list|,
-name|keyEncryptionAlgorithm
 argument_list|)
 expr_stmt|;
 block|}

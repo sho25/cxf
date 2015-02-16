@@ -80,7 +80,7 @@ specifier|public
 class|class
 name|AesCbcHmacJweDecryption
 extends|extends
-name|AbstractJweDecryption
+name|JweDecryption
 block|{
 specifier|private
 name|String
