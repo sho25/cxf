@@ -116,7 +116,7 @@ specifier|public
 class|class
 name|EcdhDirectKeyJweDecryption
 extends|extends
-name|DirectKeyJweDecryption
+name|JweDecryption
 block|{
 specifier|public
 name|EcdhDirectKeyJweDecryption

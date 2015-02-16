@@ -1420,7 +1420,7 @@ name|JweEncryptionProvider
 name|jwe1
 init|=
 operator|new
-name|WrappedKeyJweEncryption
+name|JweEncryption
 argument_list|(
 name|keyEncryption1
 argument_list|,
@@ -1445,7 +1445,7 @@ name|JweEncryptionProvider
 name|jwe2
 init|=
 operator|new
-name|WrappedKeyJweEncryption
+name|JweEncryption
 argument_list|(
 name|keyEncryption2
 argument_list|,

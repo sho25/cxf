@@ -343,7 +343,7 @@ name|JweEncryptionProvider
 name|encryption
 init|=
 operator|new
-name|WrappedKeyJweEncryption
+name|JweEncryption
 argument_list|(
 name|keyEncryption
 argument_list|,
@@ -389,7 +389,7 @@ name|JweDecryptionProvider
 name|decryption
 init|=
 operator|new
-name|WrappedKeyJweDecryption
+name|JweDecryption
 argument_list|(
 name|keyDecryption
 argument_list|,

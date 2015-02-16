@@ -24,12 +24,12 @@ end_package
 begin_class
 specifier|public
 class|class
-name|WrappedKeyJweDecryption
+name|JweDecryption
 extends|extends
 name|AbstractJweDecryption
 block|{
 specifier|public
-name|WrappedKeyJweDecryption
+name|JweDecryption
 parameter_list|(
 name|KeyDecryptionAlgorithm
 name|keyDecryptionAlgo

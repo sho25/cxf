@@ -168,7 +168,7 @@ specifier|public
 class|class
 name|EcdhDirectKeyJweEncryption
 extends|extends
-name|DirectKeyJweEncryption
+name|JweEncryption
 block|{
 specifier|public
 name|EcdhDirectKeyJweEncryption
@@ -192,6 +192,10 @@ block|{
 name|super
 argument_list|(
 operator|new
+name|EcdhDirectKeyEncryptionAlgorithm
+argument_list|()
+argument_list|,
+operator|new
 name|EcdhAesGcmContentEncryptionAlgorithm
 argument_list|(
 name|peerPublicKey
@@ -204,10 +208,6 @@ name|apvString
 argument_list|,
 name|ctAlgo
 argument_list|)
-argument_list|,
-operator|new
-name|EcdhDirectKeyEncryptionAlgorithm
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
