@@ -127,7 +127,7 @@ name|jose
 operator|.
 name|jwe
 operator|.
-name|DirectKeyJweDecryption
+name|JweDecryption
 import|;
 end_import
 
@@ -622,7 +622,7 @@ name|SecretKey
 name|key
 parameter_list|)
 block|{
-name|DirectKeyJweDecryption
+name|JweDecryption
 name|jweDecryption
 init|=
 name|JweUtils
