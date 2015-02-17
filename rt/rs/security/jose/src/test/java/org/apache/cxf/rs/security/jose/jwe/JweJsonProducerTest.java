@@ -220,7 +220,6 @@ name|JweJsonProducerTest
 extends|extends
 name|Assert
 block|{
-specifier|private
 specifier|static
 specifier|final
 name|byte
@@ -265,7 +264,6 @@ operator|-
 literal|39
 block|}
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|byte
@@ -310,7 +308,6 @@ block|,
 literal|91
 block|}
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|byte
@@ -358,7 +355,6 @@ operator|-
 literal|100
 block|}
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -384,7 +380,6 @@ literal|"\"tag\":\"GxWlwvTPmHi4ZnQgafiHew\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -404,7 +399,6 @@ literal|"\"tag\":\"GxWlwvTPmHi4ZnQgafiHew\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -430,7 +424,6 @@ literal|"\"tag\":\"Te59ApbK8wNBDY_1_dgYSw\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -448,7 +441,6 @@ literal|"\"tag\":\"Te59ApbK8wNBDY_1_dgYSw\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -474,11 +466,18 @@ literal|"}"
 operator|+
 literal|"],"
 operator|+
-literal|"\"aad\":\"WyJ2Y2FyZCIsW1sidmVyc2lvbiIse30sInRleHQiLCI0LjAiXSxbImZuIix7fSwidGV4dCIsIk1lcmlhZG9jIEJyYW5keWJ1Y"
+literal|"\"aad\":\""
 operator|+
-literal|"2siXSxbIm4iLHt9LCJ0ZXh0IixbIkJyYW5keWJ1Y2siLCJNZXJpYWRvYyIsIk1yLiIsIiJdXSxbImJkYXkiLHt9LCJ0ZXh0"
+name|Base64UrlUtility
+operator|.
+name|encode
+argument_list|(
+name|JweJsonProducerTest
+operator|.
+name|EXTRA_AAD_SOURCE
+argument_list|)
 operator|+
-literal|"IiwiVEEgMjk4MiJdLFsiZ2VuZGVyIix7fSwidGV4dCIsIk0iXV1d\","
+literal|"\","
 operator|+
 literal|"\"iv\":\"48V1_ALb6US04U3b\","
 operator|+
@@ -488,7 +487,6 @@ literal|"\"tag\":\"oVUQGS9608D-INq61-vOaA\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -532,7 +530,6 @@ literal|"\"tag\":\"oVUQGS9608D-INq61-vOaA\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -552,7 +549,6 @@ literal|"[\"gender\",{},\"text\",\"M\"]"
 operator|+
 literal|"]]"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
@@ -578,7 +574,6 @@ literal|"\"tag\":\"U0m_YmjN04DJvceFICbCVQ\""
 operator|+
 literal|"}"
 decl_stmt|;
-specifier|private
 specifier|static
 specifier|final
 name|String
