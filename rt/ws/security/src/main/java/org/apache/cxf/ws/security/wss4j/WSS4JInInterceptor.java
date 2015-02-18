@@ -2059,9 +2059,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Request does not contain Security header, "
-operator|+
-literal|"but it's a fault."
+literal|"The request is a SOAP Fault, but it is not secured"
 argument_list|)
 expr_stmt|;
 comment|// We allow lax action matching here for backwards compatibility
