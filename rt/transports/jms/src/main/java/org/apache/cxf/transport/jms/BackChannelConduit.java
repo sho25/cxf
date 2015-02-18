@@ -602,14 +602,15 @@ operator|.
 name|getOutMessage
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|ResourceCloser
 name|closer
 init|=
 operator|new
 name|ResourceCloser
 argument_list|()
-decl_stmt|;
-try|try
+init|)
 block|{
 name|Session
 name|session
@@ -933,14 +934,6 @@ argument_list|(
 name|ex
 argument_list|)
 throw|;
-block|}
-finally|finally
-block|{
-name|closer
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 comment|/**      * @param messageProperties      * @param inMessageProperties      */

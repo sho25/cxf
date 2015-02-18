@@ -2315,7 +2315,7 @@ block|{
 comment|//ignore
 block|}
 try|try
-block|{
+init|(
 name|InputStream
 name|ins
 init|=
@@ -2336,10 +2336,10 @@ argument_list|)
 operator|+
 literal|"/jaxb.index"
 argument_list|)
-decl_stmt|;
+init|;
 name|BufferedReader
 name|reader
-init|=
+operator|=
 operator|new
 name|BufferedReader
 argument_list|(
@@ -2351,7 +2351,8 @@ argument_list|,
 literal|"UTF-8"
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 if|if
 condition|(
 operator|!
@@ -2477,11 +2478,6 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
-name|ins
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

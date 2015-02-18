@@ -105,6 +105,8 @@ class|class
 name|ResourceCloser
 implements|implements
 name|Closeable
+implements|,
+name|AutoCloseable
 block|{
 specifier|private
 name|AbstractSequentialList

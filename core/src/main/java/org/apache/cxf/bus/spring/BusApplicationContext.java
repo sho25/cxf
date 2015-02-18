@@ -1039,6 +1039,8 @@ range|:
 name|exts
 control|)
 block|{
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -1046,22 +1048,12 @@ name|r
 operator|.
 name|getInputStream
 argument_list|()
-decl_stmt|;
-name|BufferedReader
-name|rd
-init|=
-operator|new
-name|BufferedReader
-argument_list|(
-operator|new
-name|InputStreamReader
-argument_list|(
-name|is
-argument_list|,
-literal|"UTF-8"
-argument_list|)
-argument_list|)
-decl_stmt|;
+init|;                         BufferedReader rd = new BufferedReader(new InputStreamReader(is
+operator|,
+init|"UTF-8")
+block|)
+block|)
+block|{
 name|String
 name|line
 init|=
@@ -1109,11 +1101,7 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
-name|is
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
@@ -1125,11 +1113,17 @@ block|{
 comment|// ignore
 block|}
 block|}
+end_class
+
+begin_decl_stmt
 name|boolean
 name|usingDefault
 init|=
 literal|false
 decl_stmt|;
+end_decl_stmt
+
+begin_if
 if|if
 condition|(
 literal|null
@@ -1167,6 +1161,9 @@ block|}
 expr_stmt|;
 block|}
 block|}
+end_if
+
+begin_if
 if|if
 condition|(
 literal|null
@@ -1190,6 +1187,9 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+end_if
+
+begin_for
 for|for
 control|(
 name|String
@@ -1319,6 +1319,9 @@ throw|;
 block|}
 block|}
 block|}
+end_for
+
+begin_if
 if|if
 condition|(
 literal|null
@@ -1379,6 +1382,9 @@ expr_stmt|;
 block|}
 block|}
 block|}
+end_if
+
+begin_decl_stmt
 name|String
 name|sysCfgFileUrl
 init|=
@@ -1391,6 +1397,9 @@ operator|.
 name|USER_CFG_FILE_PROPERTY_URL
 argument_list|)
 decl_stmt|;
+end_decl_stmt
+
+begin_if
 if|if
 condition|(
 literal|null
@@ -1467,6 +1476,9 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+end_if
+
+begin_if
 if|if
 condition|(
 name|LOG
@@ -1489,6 +1501,9 @@ name|resources
 argument_list|)
 expr_stmt|;
 block|}
+end_if
+
+begin_if
 if|if
 condition|(
 literal|0
@@ -1503,6 +1518,9 @@ return|return
 literal|null
 return|;
 block|}
+end_if
+
+begin_decl_stmt
 name|Resource
 index|[]
 name|res
@@ -1516,6 +1534,9 @@ name|size
 argument_list|()
 index|]
 decl_stmt|;
+end_decl_stmt
+
+begin_expr_stmt
 name|res
 operator|=
 name|resources
@@ -1525,11 +1546,16 @@ argument_list|(
 name|res
 argument_list|)
 expr_stmt|;
+end_expr_stmt
+
+begin_return
 return|return
 name|res
 return|;
-block|}
-specifier|public
+end_return
+
+begin_function
+unit|}          public
 specifier|static
 name|Resource
 name|findResource
@@ -1703,6 +1729,9 @@ literal|null
 return|;
 block|}
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|protected
@@ -1771,6 +1800,9 @@ name|reader
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_function
 specifier|static
 name|String
 name|getSpringValidationMode
@@ -1828,6 +1860,9 @@ block|}
 argument_list|)
 return|;
 block|}
+end_function
+
+begin_function
 name|void
 name|setEntityResolvers
 parameter_list|(
@@ -1868,6 +1903,9 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+end_function
+
+begin_function
 annotation|@
 name|Override
 specifier|protected
@@ -1930,8 +1968,8 @@ name|beanDefinitionReader
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-end_class
+end_function
 
+unit|}
 end_unit
 
