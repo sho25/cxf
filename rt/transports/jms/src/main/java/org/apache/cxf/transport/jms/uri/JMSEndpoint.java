@@ -1579,8 +1579,9 @@ name|this
 operator|.
 name|concurrentConsumers
 operator|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|concurrentConsumers
 argument_list|)

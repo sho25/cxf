@@ -1379,8 +1379,10 @@ decl_stmt|;
 if|if
 condition|(
 name|certConstraintsList
-operator|!=
-literal|null
+operator|.
+name|length
+operator|>
+literal|0
 condition|)
 block|{
 name|Collection

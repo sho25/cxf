@@ -291,8 +291,8 @@ decl_stmt|;
 if|if
 condition|(
 name|rc
-operator|instanceof
-name|Closeable
+operator|!=
+literal|null
 condition|)
 block|{
 name|close
@@ -321,8 +321,8 @@ expr_stmt|;
 if|if
 condition|(
 name|rc
-operator|instanceof
-name|Closeable
+operator|!=
+literal|null
 condition|)
 block|{
 name|close

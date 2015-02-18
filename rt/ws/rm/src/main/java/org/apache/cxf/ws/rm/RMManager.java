@@ -1587,8 +1587,9 @@ block|{
 name|Long
 name|value
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|RetransmissionQueue
 operator|.

@@ -306,8 +306,9 @@ comment|// validate digits and scale
 name|Long
 name|digits
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|digitsNode
 operator|.
@@ -318,8 +319,9 @@ decl_stmt|;
 name|Long
 name|scale
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|scaleNode
 operator|.

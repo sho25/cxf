@@ -1753,6 +1753,13 @@ init|=
 name|getSignatureToken
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|sigAbstractTokenWrapper
+operator|!=
+literal|null
+condition|)
+block|{
 name|AbstractToken
 name|sigToken
 init|=
@@ -1763,10 +1770,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|sigAbstractTokenWrapper
-operator|!=
-literal|null
-operator|&&
 name|isRequestor
 argument_list|()
 condition|)
@@ -1783,13 +1786,7 @@ name|sigParts
 argument_list|)
 expr_stmt|;
 block|}
-elseif|else
-if|if
-condition|(
-operator|!
-name|isRequestor
-argument_list|()
-condition|)
+else|else
 block|{
 name|addSignatureConfirmation
 argument_list|(
@@ -1807,6 +1804,7 @@ argument_list|,
 name|sigParts
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 name|removeSignatureIfSignedSAML

@@ -328,8 +328,9 @@ name|customers
 operator|.
 name|remove
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|id
 argument_list|)

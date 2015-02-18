@@ -671,8 +671,9 @@ name|anonstring
 operator|.
 name|setBound
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|boundNode
 operator|.
@@ -740,8 +741,9 @@ name|anonwstring
 operator|.
 name|setBound
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|boundNode
 operator|.
@@ -945,8 +947,9 @@ name|anonstring
 operator|.
 name|setBound
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|boundNode
 operator|.
@@ -1011,8 +1014,9 @@ name|anonwstring
 operator|.
 name|setBound
 argument_list|(
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|boundNode
 operator|.

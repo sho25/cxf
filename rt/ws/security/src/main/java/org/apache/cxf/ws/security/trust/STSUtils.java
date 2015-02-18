@@ -752,10 +752,6 @@ name|getIssuer
 argument_list|()
 operator|!=
 literal|null
-operator|&&
-name|message
-operator|!=
-literal|null
 condition|)
 block|{
 name|EndpointReferenceType

@@ -463,8 +463,9 @@ comment|// process first array
 name|Long
 name|size
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|firstSizeNode
 operator|.
@@ -796,8 +797,9 @@ decl_stmt|;
 name|Long
 name|size
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|node
 operator|.
