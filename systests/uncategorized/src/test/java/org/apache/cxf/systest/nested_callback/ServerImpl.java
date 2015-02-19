@@ -381,11 +381,11 @@ argument_list|,
 name|portString
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|seiName
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|seiName

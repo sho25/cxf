@@ -96,11 +96,11 @@ operator|new
 name|MapEventLogger
 argument_list|()
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|line
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for

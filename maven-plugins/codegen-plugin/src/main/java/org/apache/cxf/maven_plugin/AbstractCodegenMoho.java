@@ -3640,11 +3640,11 @@ operator|!=
 literal|0
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"\nExit code: "
 argument_list|)
@@ -3714,11 +3714,11 @@ literal|"WSDL2Java Error"
 argument_list|)
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|msg

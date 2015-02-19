@@ -162,7 +162,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 operator|.
 name|append

@@ -710,11 +710,11 @@ argument_list|,
 name|exc
 argument_list|)
 expr_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|strBuf
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|strBuf

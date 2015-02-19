@@ -1145,11 +1145,11 @@ argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|msg
@@ -1450,11 +1450,11 @@ name|output
 argument_list|)
 expr_stmt|;
 block|}
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 literal|"\nExit code: "
 argument_list|)
@@ -1558,11 +1558,11 @@ literal|"JavaToWS Error"
 argument_list|)
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|msg
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|msg

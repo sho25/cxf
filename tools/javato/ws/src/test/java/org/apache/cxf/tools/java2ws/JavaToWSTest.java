@@ -2614,11 +2614,11 @@ operator|.
 name|getClassLoader
 argument_list|()
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|classPath
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 if|if

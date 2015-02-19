@@ -571,11 +571,11 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|StringBuffer
+name|StringBuilder
 name|ob
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 for|for

@@ -188,11 +188,11 @@ operator|.
 name|X_OAUTH_SCOPE
 argument_list|)
 decl_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|url
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|(
 name|authorizeUrl
 argument_list|)

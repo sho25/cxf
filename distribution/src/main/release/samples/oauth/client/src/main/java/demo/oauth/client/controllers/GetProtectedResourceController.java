@@ -554,7 +554,7 @@ operator|.
 name|QUERY_STRING
 argument_list|)
 expr_stmt|;
-name|StringBuffer
+name|StringBuilder
 name|bodyBuffer
 init|=
 name|readBody
@@ -659,7 +659,7 @@ argument_list|)
 return|;
 block|}
 specifier|private
-name|StringBuffer
+name|StringBuilder
 name|readBody
 parameter_list|(
 name|OAuthMessage
@@ -668,11 +668,11 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|StringBuffer
+name|StringBuilder
 name|body
 init|=
 operator|new
-name|StringBuffer
+name|StringBuilder
 argument_list|()
 decl_stmt|;
 name|InputStream
