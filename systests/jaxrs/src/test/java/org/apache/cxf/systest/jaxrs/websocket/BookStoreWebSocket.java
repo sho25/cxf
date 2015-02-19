@@ -483,7 +483,7 @@ argument_list|)
 annotation|@
 name|Produces
 argument_list|(
-literal|"text/*"
+literal|"application/*"
 argument_list|)
 specifier|public
 name|StreamingOutput
