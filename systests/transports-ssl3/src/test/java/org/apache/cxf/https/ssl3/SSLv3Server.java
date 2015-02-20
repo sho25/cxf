@@ -11,8 +11,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
 name|https
 operator|.
 name|ssl3
@@ -26,6 +24,16 @@ operator|.
 name|net
 operator|.
 name|URL
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|security
+operator|.
+name|Security
 import|;
 end_import
 
@@ -95,7 +103,18 @@ block|{
 specifier|public
 name|SSLv3Server
 parameter_list|()
-block|{      }
+block|{
+comment|// Remove "SSLv3" from the default disabled algorithm list for the purposes of this test
+name|Security
+operator|.
+name|setProperty
+argument_list|(
+literal|"jdk.tls.disabledAlgorithms"
+argument_list|,
+literal|"MD5"
+argument_list|)
+expr_stmt|;
+block|}
 specifier|protected
 name|void
 name|run

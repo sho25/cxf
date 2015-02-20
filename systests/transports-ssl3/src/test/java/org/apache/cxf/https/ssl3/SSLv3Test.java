@@ -11,8 +11,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
 name|https
 operator|.
 name|ssl3
@@ -443,7 +441,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"../../../../../../keys/Truststore.jks"
+literal|"../../../../../keys/Truststore.jks"
 argument_list|)
 decl_stmt|;
 name|TrustManager
@@ -656,7 +654,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"../../../../../../keys/Truststore.jks"
+literal|"../../../../../keys/Truststore.jks"
 argument_list|)
 decl_stmt|;
 name|TrustManager

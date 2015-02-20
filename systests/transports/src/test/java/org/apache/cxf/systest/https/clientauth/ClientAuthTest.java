@@ -526,7 +526,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"../ssl3/sslv3-client.xml"
+literal|"client-no-auth.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
