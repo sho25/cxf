@@ -6264,6 +6264,8 @@ name|XMLStreamException
 throws|,
 name|IOException
 block|{
+try|try
+init|(
 name|InputStream
 name|fin
 init|=
@@ -6272,8 +6274,7 @@ name|FileInputStream
 argument_list|(
 name|is
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 return|return
 name|read
@@ -6281,14 +6282,6 @@ argument_list|(
 name|fin
 argument_list|)
 return|;
-block|}
-finally|finally
-block|{
-name|fin
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 specifier|public

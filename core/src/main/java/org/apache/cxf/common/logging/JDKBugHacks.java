@@ -319,6 +319,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+init|(
 name|BufferedReader
 name|din
 init|=
@@ -331,8 +333,7 @@ argument_list|(
 name|ins
 argument_list|)
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 name|cname
 operator|=
@@ -356,14 +357,6 @@ name|trim
 argument_list|()
 expr_stmt|;
 block|}
-block|}
-finally|finally
-block|{
-name|din
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 block|}
