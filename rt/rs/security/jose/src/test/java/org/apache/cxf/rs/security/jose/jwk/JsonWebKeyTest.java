@@ -737,6 +737,12 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
+name|String
+name|password
+init|=
+literal|"Thus from my lips, by yours, my sin is purged."
+decl_stmt|;
 name|Security
 operator|.
 name|addProvider
@@ -770,7 +776,7 @@ name|encryptJwkSet
 argument_list|(
 name|jwks
 argument_list|,
-literal|"password"
+name|password
 operator|.
 name|toCharArray
 argument_list|()
@@ -868,7 +874,7 @@ name|decryptJwkSet
 argument_list|(
 name|encryptedKeySet
 argument_list|,
-literal|"password"
+name|password
 operator|.
 name|toCharArray
 argument_list|()
@@ -905,6 +911,12 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+specifier|final
+name|String
+name|password
+init|=
+literal|"Thus from my lips, by yours, my sin is purged."
+decl_stmt|;
 specifier|final
 name|String
 name|key
@@ -950,7 +962,7 @@ name|encryptJwkKey
 argument_list|(
 name|jwk
 argument_list|,
-literal|"password"
+name|password
 operator|.
 name|toCharArray
 argument_list|()
@@ -1048,7 +1060,7 @@ name|decryptJwkKey
 argument_list|(
 name|encryptedKey
 argument_list|,
-literal|"password"
+name|password
 operator|.
 name|toCharArray
 argument_list|()

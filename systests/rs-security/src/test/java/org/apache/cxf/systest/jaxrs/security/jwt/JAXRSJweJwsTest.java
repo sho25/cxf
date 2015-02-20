@@ -1272,7 +1272,9 @@ name|provider
 init|=
 operator|new
 name|PrivateKeyPasswordProviderImpl
-argument_list|()
+argument_list|(
+literal|"Thus from my lips, by yours, my sin is purged."
+argument_list|)
 decl_stmt|;
 name|bean
 operator|.
@@ -3087,6 +3089,30 @@ name|PrivateKeyPasswordProviderImpl
 implements|implements
 name|PrivateKeyPasswordProvider
 block|{
+specifier|private
+name|String
+name|password
+init|=
+literal|"password"
+decl_stmt|;
+specifier|public
+name|PrivateKeyPasswordProviderImpl
+parameter_list|()
+block|{                      }
+specifier|public
+name|PrivateKeyPasswordProviderImpl
+parameter_list|(
+name|String
+name|password
+parameter_list|)
+block|{
+name|this
+operator|.
+name|password
+operator|=
+name|password
+expr_stmt|;
+block|}
 annotation|@
 name|Override
 specifier|public
@@ -3099,7 +3125,7 @@ name|storeProperties
 parameter_list|)
 block|{
 return|return
-literal|"password"
+name|password
 operator|.
 name|toCharArray
 argument_list|()
