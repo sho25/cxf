@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|servlet
+operator|.
+name|sci
 package|;
 end_package
 
@@ -230,6 +232,22 @@ operator|.
 name|logging
 operator|.
 name|LogUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|servlet
+operator|.
+name|CXFNonSpringJaxrsServlet
 import|;
 end_import
 
