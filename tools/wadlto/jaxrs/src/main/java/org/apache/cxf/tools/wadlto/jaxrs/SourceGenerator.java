@@ -1695,9 +1695,9 @@ name|XSD_SPECIFIC_TYPE_MAP
 operator|.
 name|put
 argument_list|(
-literal|"doable"
+literal|"double"
 argument_list|,
-literal|"doable"
+literal|"double"
 argument_list|)
 expr_stmt|;
 name|XSD_SPECIFIC_TYPE_MAP

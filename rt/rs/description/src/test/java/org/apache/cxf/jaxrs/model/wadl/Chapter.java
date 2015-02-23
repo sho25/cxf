@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|resources
+name|model
+operator|.
+name|wadl
 package|;
 end_package
 
@@ -96,24 +98,6 @@ operator|.
 name|xml
 operator|.
 name|XMLName
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|model
-operator|.
-name|wadl
-operator|.
-name|Description
 import|;
 end_import
 

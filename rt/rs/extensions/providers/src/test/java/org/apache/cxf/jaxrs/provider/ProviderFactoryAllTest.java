@@ -123,7 +123,7 @@ name|jaxrs
 operator|.
 name|resources
 operator|.
-name|Chapter
+name|TagVO
 import|;
 end_import
 
@@ -272,11 +272,11 @@ name|pf
 operator|.
 name|createMessageBodyReader
 argument_list|(
-name|Chapter
+name|TagVO
 operator|.
 name|class
 argument_list|,
-name|Chapter
+name|TagVO
 operator|.
 name|class
 argument_list|,

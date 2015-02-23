@@ -1640,7 +1640,7 @@ name|indexOf
 argument_list|(
 name|openChar
 argument_list|,
-name|closingIndex
+name|nextOpenIndex
 operator|+
 literal|1
 argument_list|)

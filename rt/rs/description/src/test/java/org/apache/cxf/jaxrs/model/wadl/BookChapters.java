@@ -13,7 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|resources
+name|model
+operator|.
+name|wadl
 package|;
 end_package
 
@@ -91,7 +93,7 @@ block|}
 argument_list|)
 specifier|public
 class|class
-name|BookStore
+name|BookChapters
 block|{
 annotation|@
 name|GET

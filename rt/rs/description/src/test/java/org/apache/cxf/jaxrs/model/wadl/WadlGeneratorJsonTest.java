@@ -13,9 +13,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
+name|model
 operator|.
-name|json
+name|wadl
 package|;
 end_package
 
@@ -235,27 +235,11 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|model
+name|provider
 operator|.
-name|wadl
+name|json
 operator|.
-name|WadlGenerator
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
-name|resources
-operator|.
-name|BookStore
+name|JSONProvider
 import|;
 end_import
 
@@ -446,7 +430,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|WadlGeneratorTest
+name|WadlGeneratorJsonTest
 extends|extends
 name|Assert
 block|{
@@ -492,11 +476,11 @@ name|ResourceUtils
 operator|.
 name|createClassResourceInfo
 argument_list|(
-name|BookStore
+name|BookChapters
 operator|.
 name|class
 argument_list|,
-name|BookStore
+name|BookChapters
 operator|.
 name|class
 argument_list|,
