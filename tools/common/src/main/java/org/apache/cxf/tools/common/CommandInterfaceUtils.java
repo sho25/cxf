@@ -92,6 +92,8 @@ argument_list|,
 literal|"org.apache.commons.logging.impl.Jdk14Logger"
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|InputStream
 name|commandConfig
 init|=
@@ -103,10 +105,7 @@ name|getResourceAsStream
 argument_list|(
 literal|"commandLogging.properties"
 argument_list|)
-decl_stmt|;
-try|try
-block|{
-try|try
+init|)
 block|{
 name|LogManager
 operator|.
@@ -118,15 +117,6 @@ argument_list|(
 name|commandConfig
 argument_list|)
 expr_stmt|;
-block|}
-finally|finally
-block|{
-name|commandConfig
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
