@@ -429,7 +429,9 @@ return|;
 block|}
 try|try
 block|{
-comment|// get a parameter reader
+comment|// get the parameter names
+try|try
+init|(
 name|ParamReader
 name|pr
 init|=
@@ -438,9 +440,7 @@ name|ParamReader
 argument_list|(
 name|c
 argument_list|)
-decl_stmt|;
-comment|// get the parameter names
-try|try
+init|)
 block|{
 return|return
 name|pr
@@ -450,14 +450,6 @@ argument_list|(
 name|method
 argument_list|)
 return|;
-block|}
-finally|finally
-block|{
-name|pr
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 catch|catch
