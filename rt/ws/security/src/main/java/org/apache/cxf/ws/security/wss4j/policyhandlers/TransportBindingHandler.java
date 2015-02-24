@@ -872,6 +872,8 @@ parameter_list|,
 name|SoapMessage
 name|message
 parameter_list|)
+throws|throws
+name|SOAPException
 block|{
 name|super
 argument_list|(
@@ -2365,6 +2367,13 @@ argument_list|(
 name|wssConfig
 argument_list|)
 decl_stmt|;
+name|dkSig
+operator|.
+name|setCallbackLookup
+argument_list|(
+name|callbackLookup
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|wrapper
@@ -2824,6 +2833,13 @@ argument_list|(
 name|wssConfig
 argument_list|)
 decl_stmt|;
+name|dkSign
+operator|.
+name|setCallbackLookup
+argument_list|(
+name|callbackLookup
+argument_list|)
+expr_stmt|;
 name|AlgorithmSuite
 name|algorithmSuite
 init|=
@@ -3079,6 +3095,13 @@ argument_list|(
 name|wssConfig
 argument_list|)
 decl_stmt|;
+name|sig
+operator|.
+name|setCallbackLookup
+argument_list|(
+name|callbackLookup
+argument_list|)
+expr_stmt|;
 comment|//Setting the AttachedReference or the UnattachedReference according to the flag
 name|Element
 name|ref
