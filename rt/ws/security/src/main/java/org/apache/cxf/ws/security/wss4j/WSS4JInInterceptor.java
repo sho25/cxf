@@ -1903,10 +1903,17 @@ name|getSecurityHeader
 argument_list|(
 name|doc
 operator|.
-name|getSOAPPart
+name|getSOAPHeader
 argument_list|()
 argument_list|,
 name|actor
+argument_list|,
+name|version
+operator|.
+name|getVersion
+argument_list|()
+operator|!=
+literal|1.1
 argument_list|)
 decl_stmt|;
 name|List
@@ -1926,10 +1933,6 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|wsResult
-operator|!=
-literal|null
-operator|&&
 operator|!
 name|wsResult
 operator|.
@@ -2022,17 +2025,6 @@ block|}
 else|else
 block|{
 comment|// no security header found
-comment|// Create an empty result list to pass into the required validation
-comment|// methods.
-name|wsResult
-operator|=
-operator|new
-name|ArrayList
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
-argument_list|()
-expr_stmt|;
 if|if
 condition|(
 name|doc
