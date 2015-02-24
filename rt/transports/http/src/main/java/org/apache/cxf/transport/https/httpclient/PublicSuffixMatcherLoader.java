@@ -244,6 +244,8 @@ literal|"URL is null"
 argument_list|)
 throw|;
 block|}
+try|try
+init|(
 specifier|final
 name|InputStream
 name|in
@@ -252,8 +254,7 @@ name|url
 operator|.
 name|openStream
 argument_list|()
-decl_stmt|;
-try|try
+init|)
 block|{
 return|return
 name|load
@@ -261,14 +262,6 @@ argument_list|(
 name|in
 argument_list|)
 return|;
-block|}
-finally|finally
-block|{
-name|in
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 specifier|public
@@ -298,6 +291,8 @@ literal|"File is null"
 argument_list|)
 throw|;
 block|}
+try|try
+init|(
 specifier|final
 name|InputStream
 name|in
@@ -307,8 +302,7 @@ name|FileInputStream
 argument_list|(
 name|file
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 return|return
 name|load
@@ -316,14 +310,6 @@ argument_list|(
 name|in
 argument_list|)
 return|;
-block|}
-finally|finally
-block|{
-name|in
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 block|}
 specifier|public
