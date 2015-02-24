@@ -537,11 +537,11 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|saml2
-operator|.
 name|core
 operator|.
-name|Attribute
+name|xml
+operator|.
+name|XMLObject
 import|;
 end_import
 
@@ -551,9 +551,13 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|saml
 operator|.
-name|XMLObject
+name|saml2
+operator|.
+name|core
+operator|.
+name|Attribute
 import|;
 end_import
 

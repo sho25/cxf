@@ -751,6 +751,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|common
 operator|.
 name|SAMLVersion
@@ -2813,7 +2815,10 @@ argument_list|)
 expr_stmt|;
 name|dkEncr
 operator|.
-name|setParts
+name|getParts
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|encrParts
 argument_list|)
@@ -3944,7 +3949,10 @@ block|}
 block|}
 name|dkSign
 operator|.
-name|setParts
+name|getParts
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|sigParts
 argument_list|)

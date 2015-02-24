@@ -945,7 +945,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -973,7 +973,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -1001,7 +1001,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -1029,7 +1029,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -1302,7 +1302,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -1330,7 +1330,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -1358,7 +1358,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&
@@ -1386,7 +1386,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 operator|&&

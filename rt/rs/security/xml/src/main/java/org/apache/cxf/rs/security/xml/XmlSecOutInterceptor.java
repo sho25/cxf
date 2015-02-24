@@ -715,9 +715,11 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|xmlsec
 operator|.
 name|signature
+operator|.
+name|support
 operator|.
 name|SignatureConstants
 import|;

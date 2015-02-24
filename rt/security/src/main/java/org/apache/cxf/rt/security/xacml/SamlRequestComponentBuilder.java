@@ -47,7 +47,11 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|Configuration
+name|core
+operator|.
+name|xml
+operator|.
+name|XMLObjectBuilderFactory
 import|;
 end_import
 
@@ -56,6 +60,24 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|core
+operator|.
+name|xml
+operator|.
+name|config
+operator|.
+name|XMLObjectProviderRegistrySupport
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|opensaml
+operator|.
+name|saml
 operator|.
 name|common
 operator|.
@@ -69,6 +91,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|common
 operator|.
 name|SAMLVersion
@@ -80,6 +104,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -147,18 +173,6 @@ name|XACMLAuthzDecisionQueryType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|opensaml
-operator|.
-name|xml
-operator|.
-name|XMLObjectBuilderFactory
-import|;
-end_import
-
 begin_comment
 comment|/**  * A set of utility methods to construct XACML SAML Request statements, based on the  * SAML 2.0 profile of XACML v2.0 specification.  */
 end_comment
@@ -193,7 +207,7 @@ specifier|volatile
 name|XMLObjectBuilderFactory
 name|builderFactory
 init|=
-name|Configuration
+name|XMLObjectProviderRegistrySupport
 operator|.
 name|getBuilderFactory
 argument_list|()

@@ -257,9 +257,11 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|common
+name|core
 operator|.
-name|SAMLVersion
+name|xml
+operator|.
+name|XMLObject
 import|;
 end_import
 
@@ -269,9 +271,11 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|saml
 operator|.
-name|XMLObject
+name|common
+operator|.
+name|SAMLVersion
 import|;
 end_import
 
@@ -1662,6 +1666,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -1675,6 +1681,8 @@ argument_list|<
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml1
 operator|.
@@ -1741,6 +1749,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -1782,6 +1792,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -1800,6 +1812,8 @@ control|(
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml1
 operator|.
@@ -1988,6 +2002,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -2001,6 +2017,8 @@ argument_list|<
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -2073,6 +2091,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -2114,6 +2134,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -2132,6 +2154,8 @@ control|(
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.

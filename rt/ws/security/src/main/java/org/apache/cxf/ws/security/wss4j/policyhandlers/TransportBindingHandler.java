@@ -2470,7 +2470,10 @@ argument_list|)
 expr_stmt|;
 name|dkSig
 operator|.
-name|setParts
+name|getParts
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|sigParts
 argument_list|)
@@ -2999,7 +3002,10 @@ argument_list|)
 expr_stmt|;
 name|dkSign
 operator|.
-name|setParts
+name|getParts
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|sigParts
 argument_list|)
@@ -3620,7 +3626,10 @@ argument_list|)
 expr_stmt|;
 name|sig
 operator|.
-name|setParts
+name|getParts
+argument_list|()
+operator|.
+name|addAll
 argument_list|(
 name|sigParts
 argument_list|)

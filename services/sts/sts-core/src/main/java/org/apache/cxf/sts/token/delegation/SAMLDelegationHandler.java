@@ -195,6 +195,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -611,6 +613,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -654,6 +658,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -678,6 +684,8 @@ control|(
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.

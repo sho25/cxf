@@ -115,6 +115,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -128,6 +130,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
