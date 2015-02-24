@@ -209,6 +209,17 @@ operator|.
 name|getCurrentMessage
 argument_list|()
 decl_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+name|WSDLGetUtils
+operator|.
+name|AUTO_REWRITE_ADDRESS_ALL
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 name|String
 name|base
 init|=
