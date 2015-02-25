@@ -1976,6 +1976,8 @@ name|i
 init|=
 literal|0
 decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -1984,8 +1986,7 @@ name|FileInputStream
 argument_list|(
 name|inputFile
 argument_list|)
-decl_stmt|;
-try|try
+init|)
 block|{
 while|while
 condition|(
@@ -2015,14 +2016,6 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-block|}
-finally|finally
-block|{
-name|is
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 block|}
 name|outputstream
 operator|.
