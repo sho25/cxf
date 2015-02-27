@@ -123,24 +123,6 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|jose
-operator|.
 name|JoseHeaders
 import|;
 end_import
@@ -179,7 +161,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|SignatureAlgorithm
 import|;
 end_import
 
@@ -1450,7 +1452,7 @@ argument_list|()
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1607,7 +1609,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1653,7 +1655,7 @@ name|protectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1675,7 +1677,7 @@ name|getSignatureProvider
 argument_list|(
 name|rsaKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1713,7 +1715,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1739,7 +1741,7 @@ name|getSignatureProvider
 argument_list|(
 name|rsaKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1776,7 +1778,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -1798,7 +1800,7 @@ name|Cipher
 operator|.
 name|getInstance
 argument_list|(
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_JAVA
 argument_list|)
@@ -1836,7 +1838,7 @@ argument_list|()
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2001,7 +2003,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2047,7 +2049,7 @@ name|protectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2069,7 +2071,7 @@ name|getSignatureProvider
 argument_list|(
 name|rsaKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2113,7 +2115,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2139,7 +2141,7 @@ name|getSignatureProvider
 argument_list|(
 name|rsaKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2182,7 +2184,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_ALGO
 argument_list|)
@@ -2216,7 +2218,7 @@ name|Cipher
 operator|.
 name|getInstance
 argument_list|(
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_JAVA
 argument_list|)
@@ -2256,7 +2258,7 @@ argument_list|()
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|)
@@ -2353,9 +2355,9 @@ argument_list|(
 name|ecKey
 argument_list|)
 argument_list|,
-name|JoseConstants
+name|SignatureAlgorithm
 operator|.
-name|ES_SHA_512_ALGO
+name|ES512
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -2439,7 +2441,7 @@ name|verifySignatureWith
 argument_list|(
 name|ecPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|)
@@ -2487,7 +2489,7 @@ argument_list|()
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2615,7 +2617,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2661,7 +2663,7 @@ name|protectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2683,7 +2685,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2721,7 +2723,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2747,7 +2749,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2784,7 +2786,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2816,7 +2818,7 @@ argument_list|()
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2942,7 +2944,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -2988,7 +2990,7 @@ name|protectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3010,7 +3012,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3054,7 +3056,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3080,7 +3082,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3123,7 +3125,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3179,7 +3181,7 @@ name|protectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3237,7 +3239,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3277,7 +3279,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3303,7 +3305,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3342,7 +3344,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3398,7 +3400,7 @@ name|unprotectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3449,7 +3451,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3489,7 +3491,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3515,7 +3517,7 @@ name|getSignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3554,7 +3556,7 @@ name|verifySignatureWith
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3576,7 +3578,7 @@ name|Cipher
 operator|.
 name|getInstance
 argument_list|(
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_JAVA
 argument_list|)
@@ -3640,7 +3642,7 @@ name|firstSignerProtectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -3698,7 +3700,7 @@ name|getSignatureProvider
 argument_list|(
 name|rsaKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -3737,7 +3739,7 @@ name|secondSignerUnprotectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|)
@@ -3769,7 +3771,7 @@ name|getSignatureProvider
 argument_list|(
 name|ecKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|)
@@ -3839,7 +3841,7 @@ name|thirdSignerProtectedHeader
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3890,7 +3892,7 @@ name|getSignatureProvider
 argument_list|(
 name|hmacKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -3991,7 +3993,7 @@ name|verifySignatureWith
 argument_list|(
 name|rsaPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -4005,7 +4007,7 @@ name|verifySignatureWith
 argument_list|(
 name|ecPublicKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_ALGO
 argument_list|)
@@ -4019,7 +4021,7 @@ name|verifySignatureWith
 argument_list|(
 name|hmacKey
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)

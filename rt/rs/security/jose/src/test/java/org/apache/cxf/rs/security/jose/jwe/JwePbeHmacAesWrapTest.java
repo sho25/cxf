@@ -45,7 +45,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
+name|jwa
+operator|.
+name|AlgorithmUtils
 import|;
 end_import
 
@@ -65,7 +67,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|ContentAlgorithm
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -192,7 +214,7 @@ name|password
 init|=
 literal|"Thus from my lips, by yours, my sin is purged."
 decl_stmt|;
-name|KeyEncryptionAlgorithm
+name|KeyEncryptionProvider
 name|keyEncryption
 init|=
 operator|new
@@ -200,9 +222,9 @@ name|PbesHmacAesWrapKeyEncryptionAlgorithm
 argument_list|(
 name|password
 argument_list|,
-name|JoseConstants
+name|KeyAlgorithm
 operator|.
-name|PBES2_HS256_A128KW_ALGO
+name|PBES2_HS256_A128KW
 argument_list|)
 decl_stmt|;
 name|JweEncryptionProvider
@@ -211,12 +233,9 @@ init|=
 operator|new
 name|AesCbcHmacJweEncryption
 argument_list|(
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|A128CBC_HS256
-operator|.
-name|getJwtName
-argument_list|()
 argument_list|,
 name|keyEncryption
 argument_list|)
@@ -303,7 +322,7 @@ name|headers
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|PBES2_HS256_A128KW_ALGO
 argument_list|)
@@ -312,11 +331,11 @@ name|headers
 operator|.
 name|setContentEncryptionAlgorithm
 argument_list|(
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|A128GCM
 operator|.
-name|getJwtName
+name|getJwaName
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -326,7 +345,7 @@ name|password
 init|=
 literal|"Thus from my lips, by yours, my sin is purged."
 decl_stmt|;
-name|KeyEncryptionAlgorithm
+name|KeyEncryptionProvider
 name|keyEncryption
 init|=
 operator|new
@@ -334,9 +353,9 @@ name|PbesHmacAesWrapKeyEncryptionAlgorithm
 argument_list|(
 name|password
 argument_list|,
-name|JoseConstants
+name|KeyAlgorithm
 operator|.
-name|PBES2_HS256_A128KW_ALGO
+name|PBES2_HS256_A128KW
 argument_list|)
 decl_stmt|;
 name|JweEncryptionProvider
@@ -350,12 +369,9 @@ argument_list|,
 operator|new
 name|AesGcmContentEncryptionAlgorithm
 argument_list|(
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|A128GCM
-operator|.
-name|getJwtName
-argument_list|()
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -396,9 +412,9 @@ argument_list|,
 operator|new
 name|AesGcmContentDecryptionAlgorithm
 argument_list|(
-name|JoseConstants
+name|ContentAlgorithm
 operator|.
-name|A128GCM_ALGO
+name|A128GCM
 argument_list|)
 argument_list|)
 decl_stmt|;

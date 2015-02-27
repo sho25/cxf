@@ -277,7 +277,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
 import|;
 end_import
 
@@ -419,7 +419,7 @@ name|Cipher
 operator|.
 name|getInstance
 argument_list|(
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|AES_GCM_ALGO_JAVA
 argument_list|)

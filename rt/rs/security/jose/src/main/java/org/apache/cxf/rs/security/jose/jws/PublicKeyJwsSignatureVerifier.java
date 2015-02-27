@@ -111,7 +111,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|SignatureAlgorithm
 import|;
 end_import
 
@@ -131,7 +151,7 @@ name|AlgorithmParameterSpec
 name|signatureSpec
 decl_stmt|;
 specifier|private
-name|String
+name|SignatureAlgorithm
 name|supportedAlgo
 decl_stmt|;
 specifier|public
@@ -140,7 +160,7 @@ parameter_list|(
 name|PublicKey
 name|key
 parameter_list|,
-name|String
+name|SignatureAlgorithm
 name|supportedAlgorithm
 parameter_list|)
 block|{
@@ -163,7 +183,7 @@ parameter_list|,
 name|AlgorithmParameterSpec
 name|spec
 parameter_list|,
-name|String
+name|SignatureAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -221,7 +241,7 @@ name|signature
 argument_list|,
 name|key
 argument_list|,
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|toJavaName
 argument_list|(
@@ -279,6 +299,9 @@ operator|.
 name|equals
 argument_list|(
 name|supportedAlgo
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -301,7 +324,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|isRsaSign
 argument_list|(
@@ -312,7 +335,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|String
+name|SignatureAlgorithm
 name|getAlgorithm
 parameter_list|()
 block|{

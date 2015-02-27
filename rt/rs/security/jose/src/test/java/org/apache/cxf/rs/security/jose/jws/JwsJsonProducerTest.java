@@ -35,7 +35,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
+name|JoseHeaders
 import|;
 end_import
 
@@ -53,7 +53,29 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseHeaders
+name|jwa
+operator|.
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|SignatureAlgorithm
 import|;
 end_import
 
@@ -236,7 +258,7 @@ name|headerEntries
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -250,9 +272,9 @@ name|HmacJwsSignatureProvider
 argument_list|(
 name|ENCODED_MAC_KEY_1
 argument_list|,
-name|JoseConstants
+name|SignatureAlgorithm
 operator|.
-name|HMAC_SHA_256_ALGO
+name|HS256
 argument_list|)
 argument_list|,
 name|headerEntries
@@ -298,7 +320,7 @@ name|headerEntries
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -312,9 +334,9 @@ name|HmacJwsSignatureProvider
 argument_list|(
 name|ENCODED_MAC_KEY_1
 argument_list|,
-name|JoseConstants
+name|SignatureAlgorithm
 operator|.
-name|HMAC_SHA_256_ALGO
+name|HS256
 argument_list|)
 argument_list|,
 name|headerEntries
@@ -358,7 +380,7 @@ name|headerEntries
 operator|.
 name|setAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -372,9 +394,9 @@ name|HmacJwsSignatureProvider
 argument_list|(
 name|ENCODED_MAC_KEY_1
 argument_list|,
-name|JoseConstants
+name|SignatureAlgorithm
 operator|.
-name|HMAC_SHA_256_ALGO
+name|HS256
 argument_list|)
 argument_list|,
 name|headerEntries
@@ -389,9 +411,9 @@ name|HmacJwsSignatureProvider
 argument_list|(
 name|ENCODED_MAC_KEY_2
 argument_list|,
-name|JoseConstants
+name|SignatureAlgorithm
 operator|.
-name|HMAC_SHA_256_ALGO
+name|HS256
 argument_list|)
 argument_list|,
 name|headerEntries

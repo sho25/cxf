@@ -95,7 +95,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -115,7 +135,7 @@ name|boolean
 name|unwrap
 decl_stmt|;
 specifier|private
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 decl_stmt|;
 specifier|public
@@ -124,7 +144,7 @@ parameter_list|(
 name|Key
 name|cekDecryptionKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -144,7 +164,7 @@ parameter_list|(
 name|Key
 name|cekDecryptionKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|,
 name|boolean
@@ -317,7 +337,7 @@ name|keyAlgo
 argument_list|)
 expr_stmt|;
 return|return
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|toJavaName
 argument_list|(
@@ -346,6 +366,9 @@ operator|&&
 operator|!
 name|supportedAlgo
 operator|.
+name|getJwaName
+argument_list|()
+operator|.
 name|equals
 argument_list|(
 name|keyAlgo
@@ -368,7 +391,7 @@ name|jweDecryptionInput
 parameter_list|)
 block|{
 return|return
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|toJavaName
 argument_list|(
@@ -413,7 +436,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|String
+name|KeyAlgorithm
 name|getAlgorithm
 parameter_list|()
 block|{

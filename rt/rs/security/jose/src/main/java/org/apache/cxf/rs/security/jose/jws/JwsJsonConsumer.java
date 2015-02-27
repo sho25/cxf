@@ -667,6 +667,9 @@ name|validator
 operator|.
 name|getAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -864,6 +867,9 @@ argument_list|(
 name|validator
 operator|.
 name|getAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 decl_stmt|;

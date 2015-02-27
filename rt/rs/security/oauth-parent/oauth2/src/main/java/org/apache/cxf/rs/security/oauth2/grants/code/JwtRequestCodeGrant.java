@@ -121,7 +121,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
+name|jwa
+operator|.
+name|AlgorithmUtils
 import|;
 end_import
 
@@ -426,7 +428,7 @@ name|getHmacSignatureProvider
 argument_list|(
 name|hmac
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|)
@@ -645,7 +647,7 @@ name|getDirectKeyJweEncryption
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|A128GCM_ALGO
 argument_list|)

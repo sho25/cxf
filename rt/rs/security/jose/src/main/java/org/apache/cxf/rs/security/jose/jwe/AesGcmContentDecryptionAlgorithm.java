@@ -37,7 +37,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -53,7 +73,7 @@ block|{
 specifier|public
 name|AesGcmContentDecryptionAlgorithm
 parameter_list|(
-name|String
+name|ContentAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -93,7 +113,7 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|isAesGcm
 argument_list|(
@@ -102,6 +122,9 @@ argument_list|)
 operator|||
 operator|!
 name|getAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 operator|.
 name|equals

@@ -49,7 +49,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -81,7 +101,7 @@ parameter_list|(
 name|RSAPrivateKey
 name|privateKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -101,7 +121,7 @@ parameter_list|(
 name|RSAPrivateKey
 name|privateKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|,
 name|boolean
@@ -161,7 +181,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|isRsaKeyWrap
 argument_list|(

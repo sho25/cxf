@@ -67,7 +67,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -124,7 +124,7 @@ parameter_list|(
 name|ECPrivateKey
 name|privateKey
 parameter_list|,
-name|String
+name|ContentAlgorithm
 name|supportedCtAlgo
 parameter_list|)
 block|{
@@ -157,10 +157,10 @@ name|ECPrivateKey
 name|privateKey
 parameter_list|)
 block|{
-name|Algorithm
+name|ContentAlgorithm
 name|jwtAlgo
 init|=
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|valueOf
 argument_list|(
@@ -260,7 +260,7 @@ name|apvBytes
 argument_list|,
 name|jwtAlgo
 operator|.
-name|getJwtName
+name|getJwaName
 argument_list|()
 argument_list|,
 name|jwtAlgo

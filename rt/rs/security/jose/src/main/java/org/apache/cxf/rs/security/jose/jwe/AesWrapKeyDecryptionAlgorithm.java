@@ -65,7 +65,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -97,7 +117,7 @@ parameter_list|(
 name|String
 name|encodedKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -137,7 +157,7 @@ name|byte
 index|[]
 name|secretKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -149,7 +169,7 @@ name|createSecretKeySpec
 argument_list|(
 name|secretKey
 argument_list|,
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|AES_WRAP_ALGO_JAVA
 argument_list|)
@@ -179,7 +199,7 @@ parameter_list|(
 name|SecretKey
 name|secretKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -233,7 +253,7 @@ name|keyAlgo
 parameter_list|)
 block|{
 return|return
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|isAesKeyWrap
 argument_list|(

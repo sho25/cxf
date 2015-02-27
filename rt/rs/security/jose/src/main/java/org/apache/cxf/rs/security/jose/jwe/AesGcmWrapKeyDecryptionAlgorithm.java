@@ -93,7 +93,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -125,7 +145,7 @@ parameter_list|(
 name|String
 name|encodedKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -165,7 +185,7 @@ name|byte
 index|[]
 name|secretKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -177,9 +197,9 @@ name|createSecretKeySpec
 argument_list|(
 name|secretKey
 argument_list|,
-name|Algorithm
+name|AlgorithmUtils
 operator|.
-name|AES_ALGO_JAVA
+name|AES
 argument_list|)
 argument_list|,
 name|supportedAlgo
@@ -207,7 +227,7 @@ parameter_list|(
 name|SecretKey
 name|secretKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|supportedAlgo
 parameter_list|)
 block|{
@@ -365,7 +385,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|isAesGcmKeyWrap
 argument_list|(

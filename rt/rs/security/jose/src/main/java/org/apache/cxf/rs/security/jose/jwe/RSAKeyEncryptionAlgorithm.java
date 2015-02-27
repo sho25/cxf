@@ -49,7 +49,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -66,7 +86,7 @@ parameter_list|(
 name|RSAPublicKey
 name|publicKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|jweAlgo
 parameter_list|)
 block|{
@@ -86,7 +106,7 @@ parameter_list|(
 name|RSAPublicKey
 name|publicKey
 parameter_list|,
-name|String
+name|KeyAlgorithm
 name|jweAlgo
 parameter_list|,
 name|boolean
@@ -101,7 +121,7 @@ name|jweAlgo
 argument_list|,
 name|wrap
 argument_list|,
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|RSA_CEK_SET
 argument_list|)

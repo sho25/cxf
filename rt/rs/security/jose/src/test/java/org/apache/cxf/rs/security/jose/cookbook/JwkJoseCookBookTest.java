@@ -79,7 +79,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
+name|jwa
+operator|.
+name|AlgorithmUtils
 import|;
 end_import
 
@@ -867,7 +869,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|HMAC_SHA_256_ALGO
 argument_list|,
@@ -924,7 +926,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|A256GCM_ALGO
 argument_list|,

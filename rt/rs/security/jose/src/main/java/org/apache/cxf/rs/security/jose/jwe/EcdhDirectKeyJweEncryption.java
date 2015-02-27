@@ -119,7 +119,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
+name|jwa
+operator|.
+name|AlgorithmUtils
 import|;
 end_import
 
@@ -139,7 +141,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -185,7 +187,7 @@ parameter_list|,
 name|String
 name|apvString
 parameter_list|,
-name|String
+name|ContentAlgorithm
 name|ctAlgo
 parameter_list|)
 block|{
@@ -230,7 +232,7 @@ name|headers
 operator|.
 name|setKeyEncryptionAlgorithm
 argument_list|(
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|ECDH_ES_DIRECT_ALGO
 argument_list|)
@@ -263,7 +265,7 @@ parameter_list|,
 name|String
 name|apvString
 parameter_list|,
-name|String
+name|ContentAlgorithm
 name|ctAlgo
 parameter_list|)
 block|{
@@ -286,6 +288,9 @@ argument_list|,
 name|apvString
 argument_list|,
 name|ctAlgo
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -432,10 +437,10 @@ operator|.
 name|getPrivate
 argument_list|()
 decl_stmt|;
-name|Algorithm
+name|ContentAlgorithm
 name|jwtAlgo
 init|=
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|valueOf
 argument_list|(
@@ -501,7 +506,7 @@ name|apvBytes
 argument_list|,
 name|jwtAlgo
 operator|.
-name|getJwtName
+name|getJwaName
 argument_list|()
 argument_list|,
 name|jwtAlgo

@@ -421,6 +421,9 @@ name|jwe
 operator|.
 name|getKeyAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 operator|||
 name|keyAlgo

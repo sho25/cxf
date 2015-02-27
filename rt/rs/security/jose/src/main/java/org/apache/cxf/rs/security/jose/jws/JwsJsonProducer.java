@@ -564,6 +564,9 @@ name|signer
 operator|.
 name|getAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 expr_stmt|;
 return|return

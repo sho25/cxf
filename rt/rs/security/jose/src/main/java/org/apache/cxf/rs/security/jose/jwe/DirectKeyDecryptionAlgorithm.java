@@ -31,6 +31,26 @@ name|Key
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -97,7 +117,7 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|String
+name|KeyAlgorithm
 name|getAlgorithm
 parameter_list|()
 block|{

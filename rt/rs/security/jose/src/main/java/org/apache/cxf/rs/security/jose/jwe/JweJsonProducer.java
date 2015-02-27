@@ -1119,6 +1119,9 @@ name|encryptor
 operator|.
 name|getContentAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

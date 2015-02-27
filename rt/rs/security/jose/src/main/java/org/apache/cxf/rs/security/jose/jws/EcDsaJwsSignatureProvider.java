@@ -81,7 +81,27 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|AlgorithmUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|SignatureAlgorithm
 import|;
 end_import
 
@@ -98,7 +118,7 @@ parameter_list|(
 name|ECPrivateKey
 name|key
 parameter_list|,
-name|String
+name|SignatureAlgorithm
 name|algo
 parameter_list|)
 block|{
@@ -121,7 +141,7 @@ parameter_list|,
 name|AlgorithmParameterSpec
 name|spec
 parameter_list|,
-name|String
+name|SignatureAlgorithm
 name|algo
 parameter_list|)
 block|{
@@ -149,7 +169,7 @@ parameter_list|,
 name|AlgorithmParameterSpec
 name|spec
 parameter_list|,
-name|String
+name|SignatureAlgorithm
 name|algo
 parameter_list|)
 block|{
@@ -176,7 +196,7 @@ name|algo
 parameter_list|)
 block|{
 return|return
-name|Algorithm
+name|AlgorithmUtils
 operator|.
 name|isEcDsaSign
 argument_list|(
@@ -209,6 +229,9 @@ argument_list|(
 name|super
 operator|.
 name|getAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 argument_list|)

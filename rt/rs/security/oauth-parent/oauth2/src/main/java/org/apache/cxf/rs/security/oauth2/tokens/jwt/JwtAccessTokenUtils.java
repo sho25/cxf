@@ -87,7 +87,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseConstants
+name|jwa
+operator|.
+name|AlgorithmUtils
 import|;
 end_import
 
@@ -107,7 +109,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|Algorithm
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -467,11 +469,11 @@ name|getDirectKeyJweEncryption
 argument_list|(
 name|key
 argument_list|,
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|A128GCM
 operator|.
-name|getJwtName
+name|getJwaName
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -631,11 +633,11 @@ name|getDirectKeyJweDecryption
 argument_list|(
 name|key
 argument_list|,
-name|Algorithm
+name|ContentAlgorithm
 operator|.
 name|A128GCM
 operator|.
-name|getJwtName
+name|getJwaName
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -713,7 +715,7 @@ name|getRSAKeySignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
@@ -790,7 +792,7 @@ name|getRSAKeySignatureVerifier
 argument_list|(
 name|key
 argument_list|,
-name|JoseConstants
+name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_ALGO
 argument_list|)
