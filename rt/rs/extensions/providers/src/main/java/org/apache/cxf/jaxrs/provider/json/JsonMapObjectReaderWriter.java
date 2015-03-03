@@ -135,6 +135,24 @@ name|boolean
 name|format
 decl_stmt|;
 specifier|public
+name|JsonMapObjectReaderWriter
+parameter_list|()
+block|{              }
+specifier|public
+name|JsonMapObjectReaderWriter
+parameter_list|(
+name|boolean
+name|format
+parameter_list|)
+block|{
+name|this
+operator|.
+name|format
+operator|=
+name|format
+expr_stmt|;
+block|}
+specifier|public
 name|String
 name|toJson
 parameter_list|(
