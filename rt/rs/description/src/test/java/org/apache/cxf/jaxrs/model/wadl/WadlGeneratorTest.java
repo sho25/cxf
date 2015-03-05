@@ -4794,7 +4794,7 @@ argument_list|(
 literal|0
 argument_list|)
 argument_list|,
-literal|6
+literal|7
 argument_list|,
 operator|new
 name|Param
@@ -4840,6 +4840,16 @@ operator|new
 name|Param
 argument_list|(
 literal|"c.d.a"
+argument_list|,
+literal|"query"
+argument_list|,
+literal|"xs:boolean"
+argument_list|)
+argument_list|,
+operator|new
+name|Param
+argument_list|(
+literal|"c.d2.a"
 argument_list|,
 literal|"query"
 argument_list|,

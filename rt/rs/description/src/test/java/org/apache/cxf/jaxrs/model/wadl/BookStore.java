@@ -1282,6 +1282,15 @@ name|bean
 return|;
 block|}
 specifier|public
+name|QueryBean3
+name|getD2
+parameter_list|()
+block|{
+return|return
+name|bean
+return|;
+block|}
+specifier|public
 name|QueryBean2
 name|getIt
 parameter_list|()

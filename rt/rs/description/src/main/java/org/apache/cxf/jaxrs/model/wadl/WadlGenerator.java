@@ -6129,6 +6129,13 @@ argument_list|,
 name|isJson
 argument_list|)
 expr_stmt|;
+name|parentBeanClasses
+operator|.
+name|remove
+argument_list|(
+name|type
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|private
@@ -6653,6 +6660,13 @@ argument_list|,
 name|parentBeanClasses
 argument_list|,
 name|isJson
+argument_list|)
+expr_stmt|;
+name|parentBeanClasses
+operator|.
+name|remove
+argument_list|(
+name|paramCls
 argument_list|)
 expr_stmt|;
 block|}
