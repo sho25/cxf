@@ -1398,27 +1398,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-operator|!
-operator|(
 name|obj
 operator|instanceof
 name|String
-operator|)
 condition|)
 block|{
-name|LOG
-operator|.
-name|warning
-argument_list|(
-literal|"LDAP attribute '"
-operator|+
-name|ldapAttribute
-operator|+
-literal|"' has got an unsupported value type"
-argument_list|)
-expr_stmt|;
-break|break;
-block|}
 name|String
 name|itemValue
 init|=
@@ -1520,6 +1504,40 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+elseif|else
+if|if
+condition|(
+name|obj
+operator|instanceof
+name|byte
+index|[]
+condition|)
+block|{
+comment|// Just store byte[]
+name|c
+operator|.
+name|addValue
+argument_list|(
+name|obj
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"LDAP attribute '"
+operator|+
+name|ldapAttribute
+operator|+
+literal|"' has got an unsupported value type"
+argument_list|)
+expr_stmt|;
+break|break;
+block|}
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1539,6 +1557,16 @@ literal|"'"
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|claimValue
+operator|.
+name|length
+argument_list|()
+operator|>
+literal|0
+condition|)
+block|{
 name|c
 operator|.
 name|addValue
@@ -1549,6 +1577,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 comment|// c.setIssuer(issuer);
 comment|// c.setOriginalIssuer(originalIssuer);
 comment|// c.setNamespace(namespace);
