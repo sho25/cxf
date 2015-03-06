@@ -998,6 +998,13 @@ decl_stmt|;
 specifier|public
 specifier|static
 name|int
+name|V1_7
+init|=
+literal|0
+decl_stmt|;
+specifier|public
+specifier|static
+name|int
 name|ACC_ABSTRACT
 init|=
 literal|0
