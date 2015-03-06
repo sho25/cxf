@@ -523,6 +523,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|CFG_SEI_SUPER
+init|=
+literal|"seiSuper"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|CFG_MARK_GENERATED
 init|=
 literal|"mark-generated"

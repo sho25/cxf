@@ -291,6 +291,15 @@ operator|.
 name|CFG_MIMEMETHODS
 argument_list|)
 expr_stmt|;
+name|set
+operator|.
+name|add
+argument_list|(
+name|ToolConstants
+operator|.
+name|CFG_SEI_SUPER
+argument_list|)
+expr_stmt|;
 return|return
 name|set
 return|;
