@@ -697,7 +697,7 @@ name|setResourcePackage
 argument_list|(
 name|resourceInfo
 operator|.
-name|getResourceClass
+name|getServiceClass
 argument_list|()
 operator|.
 name|getPackage
