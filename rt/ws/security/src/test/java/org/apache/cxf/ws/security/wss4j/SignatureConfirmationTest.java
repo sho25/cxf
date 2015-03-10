@@ -563,7 +563,8 @@ comment|// Save the signature for future confirmation
 comment|//
 name|List
 argument_list|<
-name|WSHandlerResult
+name|byte
+index|[]
 argument_list|>
 name|sigv
 init|=
@@ -838,7 +839,8 @@ name|testSignatureConfirmationResponse
 parameter_list|(
 name|List
 argument_list|<
-name|WSHandlerResult
+name|byte
+index|[]
 argument_list|>
 name|sigSaved
 parameter_list|,
