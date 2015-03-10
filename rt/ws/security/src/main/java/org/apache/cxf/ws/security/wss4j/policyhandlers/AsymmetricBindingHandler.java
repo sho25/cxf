@@ -4045,9 +4045,7 @@ operator|.
 name|getSignatureElement
 argument_list|()
 expr_stmt|;
-name|signatures
-operator|.
-name|add
+name|addSig
 argument_list|(
 name|dkSign
 operator|.
@@ -4280,9 +4278,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|signatures
-operator|.
-name|add
+name|addSig
 argument_list|(
 name|sig
 operator|.

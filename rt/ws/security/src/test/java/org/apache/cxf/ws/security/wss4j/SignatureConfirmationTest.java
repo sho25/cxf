@@ -51,6 +51,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Set
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -561,9 +571,9 @@ decl_stmt|;
 comment|//
 comment|// Save the signature for future confirmation
 comment|//
-name|List
+name|Set
 argument_list|<
-name|WSHandlerResult
+name|Integer
 argument_list|>
 name|sigv
 init|=
@@ -572,7 +582,7 @@ operator|.
 name|cast
 argument_list|(
 operator|(
-name|List
+name|Set
 argument_list|<
 name|?
 argument_list|>
@@ -836,9 +846,9 @@ specifier|private
 name|void
 name|testSignatureConfirmationResponse
 parameter_list|(
-name|List
+name|Set
 argument_list|<
-name|WSHandlerResult
+name|Integer
 argument_list|>
 name|sigSaved
 parameter_list|,

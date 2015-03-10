@@ -1518,9 +1518,7 @@ operator|>
 literal|0
 condition|)
 block|{
-name|signatures
-operator|.
-name|add
+name|addSig
 argument_list|(
 name|this
 operator|.
@@ -2188,9 +2186,7 @@ name|isEmpty
 argument_list|()
 condition|)
 block|{
-name|signatures
-operator|.
-name|add
+name|addSig
 argument_list|(
 name|doSignature
 argument_list|(
