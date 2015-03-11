@@ -155,9 +155,7 @@ name|cxf
 operator|.
 name|binding
 operator|.
-name|soap
-operator|.
-name|SoapBinding
+name|Binding
 import|;
 end_import
 
@@ -1256,7 +1254,9 @@ name|Message
 name|message
 parameter_list|)
 block|{
-return|return
+name|Binding
+name|binding
+init|=
 name|message
 operator|.
 name|getExchange
@@ -1264,8 +1264,24 @@ argument_list|()
 operator|.
 name|getBinding
 argument_list|()
-operator|instanceof
-name|SoapBinding
+decl_stmt|;
+return|return
+name|binding
+operator|!=
+literal|null
+operator|&&
+name|binding
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getSimpleName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"SoapBinding"
+argument_list|)
 return|;
 block|}
 comment|/**      * Get MessageId from WS Addressing properties      *       * @param message      * @return message id      */

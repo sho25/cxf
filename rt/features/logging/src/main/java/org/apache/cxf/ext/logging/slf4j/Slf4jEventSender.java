@@ -143,6 +143,9 @@ name|event
 operator|.
 name|getPortTypeName
 argument_list|()
+operator|.
+name|getLocalPart
+argument_list|()
 operator|+
 literal|"."
 operator|+
