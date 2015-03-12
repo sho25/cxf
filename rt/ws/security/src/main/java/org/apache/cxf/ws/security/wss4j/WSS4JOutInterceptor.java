@@ -1554,6 +1554,12 @@ condition|(
 name|actionMap
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|actionMap
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 for|for
