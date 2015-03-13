@@ -2284,12 +2284,15 @@ name|boolean
 name|exclude
 parameter_list|)
 block|{
-name|String
-index|[]
-name|cipherSuites
-init|=
-literal|null
-decl_stmt|;
+comment|// First check the "include" case only. If we have defined explicit "cipherSuite"
+comment|// configuration, then just return these. Otherwise see if we have defined ciphersuites
+comment|// via a system property.
+if|if
+condition|(
+operator|!
+name|exclude
+condition|)
+block|{
 if|if
 condition|(
 operator|!
@@ -2305,8 +2308,7 @@ argument_list|()
 operator|)
 condition|)
 block|{
-name|cipherSuites
-operator|=
+return|return
 name|getCiphersFromList
 argument_list|(
 name|cipherSuitesList
@@ -2315,24 +2317,19 @@ name|log
 argument_list|,
 name|exclude
 argument_list|)
-expr_stmt|;
-return|return
-name|cipherSuites
 return|;
 block|}
-if|if
-condition|(
-operator|!
-name|exclude
-condition|)
+else|else
 block|{
+name|String
+index|[]
 name|cipherSuites
-operator|=
+init|=
 name|getSystemCiphersuites
 argument_list|(
 name|log
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|cipherSuites
@@ -2345,6 +2342,8 @@ name|cipherSuites
 return|;
 block|}
 block|}
+block|}
+comment|// Otherwise check the "include/exclude" cipherSuiteFilter configuration
 name|LogUtils
 operator|.
 name|log
@@ -2604,8 +2603,7 @@ condition|(
 name|exclude
 condition|)
 block|{
-name|cipherSuites
-operator|=
+return|return
 name|getCiphersFromList
 argument_list|(
 name|excludedCipherSuites
@@ -2614,12 +2612,11 @@ name|log
 argument_list|,
 name|exclude
 argument_list|)
-expr_stmt|;
+return|;
 block|}
 else|else
 block|{
-name|cipherSuites
-operator|=
+return|return
 name|getCiphersFromList
 argument_list|(
 name|filteredCipherSuites
@@ -2628,11 +2625,8 @@ name|log
 argument_list|,
 name|exclude
 argument_list|)
-expr_stmt|;
-block|}
-return|return
-name|cipherSuites
 return|;
+block|}
 block|}
 end_function
 
