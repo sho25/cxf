@@ -765,7 +765,7 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|xmlsec
 operator|.
 name|signature
 operator|.
@@ -779,7 +779,7 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|xmlsec
 operator|.
 name|signature
 operator|.

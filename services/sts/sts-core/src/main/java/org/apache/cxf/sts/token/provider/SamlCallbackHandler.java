@@ -235,9 +235,13 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|saml
+operator|.
+name|bean
+operator|.
+name|Version
 import|;
 end_import
 
@@ -245,11 +249,13 @@ begin_import
 import|import
 name|org
 operator|.
-name|opensaml
+name|apache
 operator|.
-name|common
+name|wss4j
 operator|.
-name|SAMLVersion
+name|dom
+operator|.
+name|WSConstants
 import|;
 end_import
 
@@ -536,9 +542,9 @@ name|callback
 operator|.
 name|setSamlVersion
 argument_list|(
-name|SAMLVersion
+name|Version
 operator|.
-name|VERSION_20
+name|SAML_20
 argument_list|)
 expr_stmt|;
 block|}
@@ -548,9 +554,9 @@ name|callback
 operator|.
 name|setSamlVersion
 argument_list|(
-name|SAMLVersion
+name|Version
 operator|.
-name|VERSION_11
+name|SAML_11
 argument_list|)
 expr_stmt|;
 name|saml1

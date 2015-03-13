@@ -553,6 +553,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|common
 operator|.
 name|SAMLVersion
@@ -565,7 +567,7 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|xmlsec
 operator|.
 name|signature
 operator|.
@@ -579,7 +581,7 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|xml
+name|xmlsec
 operator|.
 name|signature
 operator|.
@@ -1542,13 +1544,17 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
+if|if
+condition|(
+name|validateSignatureAgainstProfile
+condition|)
+block|{
 name|assertion
 operator|.
-name|validateAssertion
-argument_list|(
 name|validateSignatureAgainstProfile
-argument_list|)
+argument_list|()
 expr_stmt|;
+block|}
 block|}
 specifier|protected
 name|boolean

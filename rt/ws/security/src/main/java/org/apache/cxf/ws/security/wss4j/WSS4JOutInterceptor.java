@@ -1152,7 +1152,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*                  * Now we perform some set-up for UsernameToken and Signature                  * functions. No need to do it for encryption only. Check if                  * username is available and then get a passowrd.                  */
+comment|// Check to see if we require a username (+ if it's missing)
 name|boolean
 name|userNameRequired
 init|=
@@ -1260,7 +1260,6 @@ operator|==
 literal|null
 condition|)
 block|{
-comment|/*                      * We need a username - if none throw an SoapFault. For                      * encryption there is a specific parameter to get a username.                      */
 throw|throw
 operator|new
 name|SoapFault
@@ -1555,6 +1554,12 @@ condition|(
 name|actionMap
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|actionMap
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 for|for

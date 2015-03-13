@@ -51,6 +51,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Set
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -272,20 +282,6 @@ operator|.
 name|staxutils
 operator|.
 name|StaxUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSSecurityEngineResult
 import|;
 end_import
 
@@ -561,10 +557,9 @@ decl_stmt|;
 comment|//
 comment|// Save the signature for future confirmation
 comment|//
-name|List
+name|Set
 argument_list|<
-name|byte
-index|[]
+name|Integer
 argument_list|>
 name|sigv
 init|=
@@ -573,7 +568,7 @@ operator|.
 name|cast
 argument_list|(
 operator|(
-name|List
+name|Set
 argument_list|<
 name|?
 argument_list|>
@@ -764,26 +759,6 @@ expr_stmt|;
 comment|//
 comment|// Check that the inbound signature result was saved
 comment|//
-name|WSSecurityEngineResult
-name|result
-init|=
-operator|(
-name|WSSecurityEngineResult
-operator|)
-name|inmsg
-operator|.
-name|get
-argument_list|(
-name|WSS4JInInterceptor
-operator|.
-name|SIGNATURE_RESULT
-argument_list|)
-decl_stmt|;
-name|assertNotNull
-argument_list|(
-name|result
-argument_list|)
-expr_stmt|;
 name|List
 argument_list|<
 name|WSHandlerResult
@@ -837,10 +812,9 @@ specifier|private
 name|void
 name|testSignatureConfirmationResponse
 parameter_list|(
-name|List
+name|Set
 argument_list|<
-name|byte
-index|[]
+name|Integer
 argument_list|>
 name|sigSaved
 parameter_list|,

@@ -51,6 +51,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|common
 operator|.
 name|SAMLVersion
@@ -62,6 +64,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -77,6 +81,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -90,6 +96,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -105,6 +113,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -119,6 +129,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -132,6 +144,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.

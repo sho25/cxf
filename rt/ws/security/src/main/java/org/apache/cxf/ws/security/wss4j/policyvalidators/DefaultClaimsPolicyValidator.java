@@ -336,6 +336,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -352,6 +354,8 @@ argument_list|<
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -388,6 +392,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -403,6 +409,8 @@ argument_list|<
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -422,6 +430,8 @@ control|(
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -483,6 +493,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -499,6 +511,8 @@ argument_list|<
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml1
 operator|.
@@ -535,6 +549,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml1
 operator|.
 name|core
@@ -550,6 +566,8 @@ argument_list|<
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml1
 operator|.
@@ -569,6 +587,8 @@ control|(
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml1
 operator|.

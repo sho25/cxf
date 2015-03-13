@@ -69,7 +69,11 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|Configuration
+name|core
+operator|.
+name|xml
+operator|.
+name|XMLObjectBuilderFactory
 import|;
 end_import
 
@@ -78,6 +82,24 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|core
+operator|.
+name|xml
+operator|.
+name|config
+operator|.
+name|XMLObjectProviderRegistrySupport
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|opensaml
+operator|.
+name|saml
 operator|.
 name|common
 operator|.
@@ -91,6 +113,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|common
 operator|.
 name|SAMLVersion
@@ -102,6 +126,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -117,6 +143,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -130,6 +158,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -145,6 +175,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -158,6 +190,8 @@ import|import
 name|org
 operator|.
 name|opensaml
+operator|.
+name|saml
 operator|.
 name|saml2
 operator|.
@@ -173,6 +207,8 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
@@ -187,23 +223,13 @@ name|org
 operator|.
 name|opensaml
 operator|.
+name|saml
+operator|.
 name|saml2
 operator|.
 name|core
 operator|.
 name|RequestedAuthnContext
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|opensaml
-operator|.
-name|xml
-operator|.
-name|XMLObjectBuilderFactory
 import|;
 end_import
 
@@ -268,7 +294,7 @@ specifier|volatile
 name|XMLObjectBuilderFactory
 name|builderFactory
 init|=
-name|Configuration
+name|XMLObjectProviderRegistrySupport
 operator|.
 name|getBuilderFactory
 argument_list|()

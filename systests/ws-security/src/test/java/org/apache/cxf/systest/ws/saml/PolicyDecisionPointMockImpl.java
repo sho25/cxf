@@ -221,7 +221,27 @@ name|org
 operator|.
 name|opensaml
 operator|.
-name|Configuration
+name|core
+operator|.
+name|xml
+operator|.
+name|XMLObjectBuilderFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|opensaml
+operator|.
+name|core
+operator|.
+name|xml
+operator|.
+name|config
+operator|.
+name|XMLObjectProviderRegistrySupport
 import|;
 end_import
 
@@ -349,18 +369,6 @@ name|SubjectType
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|opensaml
-operator|.
-name|xml
-operator|.
-name|XMLObjectBuilderFactory
-import|;
-end_import
-
 begin_comment
 comment|/**  * A test implementation of PolicyDecisionPoint. It just mocks up a Response  * object based on the role of the Subject. If the role is "manager" then it permits the  * request, otherwise it denies it.  */
 end_comment
@@ -413,7 +421,7 @@ decl_stmt|;
 name|XMLObjectBuilderFactory
 name|builderFactory
 init|=
-name|Configuration
+name|XMLObjectProviderRegistrySupport
 operator|.
 name|getBuilderFactory
 argument_list|()
@@ -662,7 +670,10 @@ argument_list|()
 decl_stmt|;
 name|response
 operator|.
-name|setResult
+name|getResults
+argument_list|()
+operator|.
+name|add
 argument_list|(
 name|result
 argument_list|)
@@ -898,7 +909,7 @@ name|equals
 argument_list|(
 name|attribute
 operator|.
-name|getAttributeID
+name|getAttributeId
 argument_list|()
 argument_list|)
 condition|)
