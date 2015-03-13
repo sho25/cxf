@@ -4898,7 +4898,7 @@ argument_list|<
 name|Integer
 argument_list|>
 argument_list|(
-literal|2
+literal|3
 argument_list|)
 decl_stmt|;
 name|actions
