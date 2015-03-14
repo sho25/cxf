@@ -347,6 +347,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|common
@@ -1845,6 +1863,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -1975,6 +1995,8 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1984,6 +2006,8 @@ operator|.
 name|USERNAME_TOKEN10
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1993,6 +2017,8 @@ operator|.
 name|USERNAME_TOKEN11
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2002,6 +2028,8 @@ operator|.
 name|HASH_PASSWORD
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2011,6 +2039,8 @@ operator|.
 name|NO_PASSWORD
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2020,6 +2050,8 @@ operator|.
 name|NONCE
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2077,6 +2109,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -2154,6 +2188,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2208,6 +2244,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2243,6 +2281,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2278,6 +2318,8 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2289,6 +2331,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2298,6 +2342,8 @@ operator|.
 name|USERNAME_TOKEN10
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2307,6 +2353,8 @@ operator|.
 name|USERNAME_TOKEN11
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2326,6 +2374,8 @@ name|message
 argument_list|)
 condition|)
 block|{
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2453,6 +2503,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim

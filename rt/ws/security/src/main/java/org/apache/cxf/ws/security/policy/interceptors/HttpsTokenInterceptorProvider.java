@@ -447,6 +447,24 @@ name|ws
 operator|.
 name|security
 operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|wss4j
 operator|.
 name|WSS4JStaxInInterceptor
@@ -1030,7 +1048,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1295,7 +1313,7 @@ argument_list|,
 name|trust
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1371,7 +1389,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1448,7 +1466,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1559,7 +1577,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1782,7 +1800,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1793,7 +1811,7 @@ operator|.
 name|HTTP_DIGEST_AUTHENTICATION
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1804,7 +1822,7 @@ operator|.
 name|HTTP_BASIC_AUTHENTICATION
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2009,7 +2027,7 @@ argument_list|(
 name|httpsSecurityToken
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2124,7 +2142,7 @@ argument_list|(
 name|httpsSecurityToken
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2196,7 +2214,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(

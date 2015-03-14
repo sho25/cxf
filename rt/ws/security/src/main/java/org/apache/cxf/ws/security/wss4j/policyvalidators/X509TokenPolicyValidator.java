@@ -157,6 +157,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|common
@@ -411,6 +429,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -440,6 +460,8 @@ argument_list|,
 name|results
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -449,6 +471,8 @@ operator|.
 name|WSS_X509_PKI_PATH_V1_TOKEN10
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -458,6 +482,8 @@ operator|.
 name|WSS_X509_PKI_PATH_V1_TOKEN11
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -467,6 +493,8 @@ operator|.
 name|WSS_X509_V1_TOKEN10
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -476,6 +504,8 @@ operator|.
 name|WSS_X509_V1_TOKEN11
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -485,6 +515,8 @@ operator|.
 name|WSS_X509_V3_TOKEN10
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -494,6 +526,8 @@ operator|.
 name|WSS_X509_V3_TOKEN11
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -503,6 +537,8 @@ operator|.
 name|REQUIRE_ISSUER_SERIAL_REFERENCE
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -512,6 +548,8 @@ operator|.
 name|REQUIRE_THUMBPRINT_REFERENCE
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -521,6 +559,8 @@ operator|.
 name|REQUIRE_KEY_IDENTIFIER_REFERENCE
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim

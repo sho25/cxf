@@ -115,6 +115,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|dom
@@ -294,6 +312,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -321,6 +341,8 @@ argument_list|,
 name|results
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -330,6 +352,8 @@ operator|.
 name|CREATED
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -339,6 +363,8 @@ operator|.
 name|NONCE
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -348,6 +374,8 @@ operator|.
 name|NO_PASSWORD
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -357,6 +385,8 @@ operator|.
 name|HASH_PASSWORD
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -366,6 +396,8 @@ operator|.
 name|USERNAME_TOKEN10
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim

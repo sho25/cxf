@@ -403,6 +403,24 @@ name|security
 operator|.
 name|policy
 operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
 name|interceptors
 operator|.
 name|HttpsTokenInterceptorProvider
@@ -880,7 +898,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -918,7 +936,7 @@ return|;
 block|}
 name|ais
 operator|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -956,7 +974,7 @@ return|;
 block|}
 name|ais
 operator|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1034,7 +1052,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1921,7 +1939,7 @@ name|AssertionInfo
 argument_list|>
 name|signedPartsAis
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -2115,7 +2133,7 @@ name|AssertionInfoMap
 name|aim
 parameter_list|)
 block|{
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2126,7 +2144,7 @@ operator|.
 name|BOOTSTRAP_POLICY
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2137,7 +2155,7 @@ operator|.
 name|MUST_NOT_SEND_AMEND
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2148,7 +2166,7 @@ operator|.
 name|MUST_NOT_SEND_CANCEL
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -2172,7 +2190,7 @@ operator|.
 name|MUST_NOT_SEND_CANCEL
 argument_list|)
 decl_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -3223,7 +3241,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -3383,7 +3401,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(

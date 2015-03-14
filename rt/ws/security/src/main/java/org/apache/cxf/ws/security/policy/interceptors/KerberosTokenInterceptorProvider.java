@@ -329,6 +329,24 @@ name|ws
 operator|.
 name|security
 operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|tokenstore
 operator|.
 name|SecurityToken
@@ -1026,7 +1044,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1235,7 +1253,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1244,7 +1262,7 @@ argument_list|,
 literal|"WssKerberosV5ApReqToken11"
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1353,7 +1371,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1459,7 +1477,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1468,7 +1486,7 @@ argument_list|,
 literal|"WssKerberosV5ApReqToken11"
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1816,7 +1834,7 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -1927,7 +1945,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(
@@ -1936,7 +1954,7 @@ argument_list|,
 literal|"WssKerberosV5ApReqToken11"
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|assertPolicy
 argument_list|(

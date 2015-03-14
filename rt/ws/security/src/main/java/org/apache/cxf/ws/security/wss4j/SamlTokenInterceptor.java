@@ -333,6 +333,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|common
@@ -950,6 +968,8 @@ control|(
 name|AssertionInfo
 name|ai
 range|:
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -1329,6 +1349,8 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1336,6 +1358,8 @@ argument_list|,
 literal|"WssSamlV11Token10"
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1343,6 +1367,8 @@ argument_list|,
 literal|"WssSamlV11Token11"
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1434,6 +1460,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -1673,6 +1701,8 @@ operator|.
 name|SAML_11
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1680,6 +1710,8 @@ argument_list|,
 literal|"WssSamlV11Token10"
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -1707,6 +1739,8 @@ operator|.
 name|SAML_20
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -2104,6 +2138,8 @@ return|return
 literal|false
 return|;
 block|}
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim

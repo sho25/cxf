@@ -119,6 +119,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|dom
@@ -232,6 +250,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -259,6 +279,8 @@ argument_list|,
 name|results
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -268,6 +290,8 @@ operator|.
 name|MUST_SUPPORT_REF_THUMBPRINT
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -277,6 +301,8 @@ operator|.
 name|MUST_SUPPORT_REF_ENCRYPTED_KEY
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -287,6 +313,8 @@ name|REQUIRE_SIGNATURE_CONFIRMATION
 argument_list|)
 expr_stmt|;
 comment|// WSS 1.0
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -296,6 +324,8 @@ operator|.
 name|MUST_SUPPORT_REF_KEY_IDENTIFIER
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -305,6 +335,8 @@ operator|.
 name|MUST_SUPPORT_REF_ISSUER_SERIAL
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -314,6 +346,8 @@ operator|.
 name|MUST_SUPPORT_REF_EXTERNAL_URI
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim

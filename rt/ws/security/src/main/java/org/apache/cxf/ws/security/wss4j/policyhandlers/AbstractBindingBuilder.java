@@ -647,6 +647,24 @@ name|ws
 operator|.
 name|security
 operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|tokenstore
 operator|.
 name|SecurityToken
@@ -7276,9 +7294,7 @@ name|signedParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -12346,6 +12362,8 @@ name|AssertionInfo
 argument_list|>
 name|sgndSuppTokens
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12376,6 +12394,8 @@ name|AssertionInfo
 argument_list|>
 name|endSuppTokens
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12402,6 +12422,8 @@ name|AssertionInfo
 argument_list|>
 name|sgndEndSuppTokens
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12428,6 +12450,8 @@ name|AssertionInfo
 argument_list|>
 name|sgndEncryptedSuppTokens
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12458,6 +12482,8 @@ name|AssertionInfo
 argument_list|>
 name|endorsingEncryptedSuppTokens
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12487,6 +12513,8 @@ name|AssertionInfo
 argument_list|>
 name|sgndEndEncSuppTokens
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12516,6 +12544,8 @@ name|AssertionInfo
 argument_list|>
 name|supportingToks
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -12540,6 +12570,8 @@ name|AssertionInfo
 argument_list|>
 name|encryptedSupportingToks
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim

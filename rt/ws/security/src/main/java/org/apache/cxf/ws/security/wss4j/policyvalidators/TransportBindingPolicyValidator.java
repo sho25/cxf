@@ -135,6 +135,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|dom
@@ -250,6 +268,8 @@ name|AssertionInfo
 argument_list|>
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
 name|aim
@@ -282,6 +302,8 @@ name|signedResults
 argument_list|)
 expr_stmt|;
 comment|// We don't need to check these policies for the Transport binding
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -291,6 +313,8 @@ operator|.
 name|ENCRYPTED_PARTS
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -300,6 +324,8 @@ operator|.
 name|ENCRYPTED_PARTS
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -309,6 +335,8 @@ operator|.
 name|SIGNED_PARTS
 argument_list|)
 expr_stmt|;
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -431,6 +459,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim
@@ -438,6 +468,9 @@ argument_list|,
 name|binding
 operator|.
 name|getTransportToken
+argument_list|()
+operator|.
+name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -477,6 +510,8 @@ argument_list|)
 expr_stmt|;
 continue|continue;
 block|}
+name|PolicyUtils
+operator|.
 name|assertPolicy
 argument_list|(
 name|aim

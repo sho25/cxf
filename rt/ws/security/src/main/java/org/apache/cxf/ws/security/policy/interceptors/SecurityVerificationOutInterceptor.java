@@ -185,6 +185,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|policy
@@ -394,7 +412,7 @@ name|aim
 parameter_list|)
 block|{
 return|return
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|isThereAnAssertionByLocalname
 argument_list|(
@@ -405,7 +423,7 @@ operator|.
 name|TRANSPORT_BINDING
 argument_list|)
 operator|||
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|isThereAnAssertionByLocalname
 argument_list|(
@@ -416,7 +434,7 @@ operator|.
 name|ASYMMETRIC_BINDING
 argument_list|)
 operator|||
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|isThereAnAssertionByLocalname
 argument_list|(
@@ -442,7 +460,7 @@ name|AssertionInfo
 argument_list|>
 name|assertions
 init|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -474,7 +492,7 @@ return|;
 block|}
 name|assertions
 operator|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -506,7 +524,7 @@ return|;
 block|}
 name|assertions
 operator|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -538,7 +556,7 @@ return|;
 block|}
 name|assertions
 operator|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
@@ -570,7 +588,7 @@ return|;
 block|}
 name|assertions
 operator|=
-name|NegotiationUtils
+name|PolicyUtils
 operator|.
 name|getAllAssertionsByLocalname
 argument_list|(
