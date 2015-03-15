@@ -1650,7 +1650,7 @@ name|newStringRange
 argument_list|(
 name|name
 argument_list|,
-literal|""
+literal|null
 argument_list|,
 name|luceneDateValue
 argument_list|,
