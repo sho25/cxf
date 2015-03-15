@@ -1625,10 +1625,7 @@ name|securityProperties
 operator|.
 name|setCallbackHandler
 argument_list|(
-operator|(
-name|CallbackHandler
-operator|)
-name|o
+name|callbackHandler
 argument_list|)
 expr_stmt|;
 block|}
