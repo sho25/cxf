@@ -179,9 +179,7 @@ name|ws
 operator|.
 name|security
 operator|.
-name|tokenstore
-operator|.
-name|SecurityToken
+name|SecurityUtils
 import|;
 end_import
 
@@ -197,9 +195,9 @@ name|ws
 operator|.
 name|security
 operator|.
-name|wss4j
+name|tokenstore
 operator|.
-name|WSS4JUtils
+name|SecurityToken
 import|;
 end_import
 
@@ -971,7 +969,7 @@ operator|.
 name|getCallbackHandler
 argument_list|()
 argument_list|,
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1615,7 +1613,7 @@ operator|.
 name|getCallbackHandler
 argument_list|()
 argument_list|,
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(

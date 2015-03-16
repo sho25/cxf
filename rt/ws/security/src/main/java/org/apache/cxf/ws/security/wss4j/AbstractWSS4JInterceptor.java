@@ -1117,11 +1117,6 @@ name|message
 argument_list|,
 name|propFilename
 argument_list|,
-name|this
-operator|.
-name|getClass
-argument_list|()
-argument_list|,
 name|classLoader
 argument_list|,
 name|passwordEncryptor

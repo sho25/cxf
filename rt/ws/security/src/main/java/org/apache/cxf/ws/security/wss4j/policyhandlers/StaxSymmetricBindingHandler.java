@@ -209,6 +209,22 @@ name|ws
 operator|.
 name|security
 operator|.
+name|SecurityUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|tokenstore
 operator|.
 name|SecurityToken
@@ -948,7 +964,7 @@ operator|.
 name|getCallbackHandler
 argument_list|()
 argument_list|,
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1484,7 +1500,7 @@ block|}
 comment|// Get hold of the token from the token storage
 name|tok
 operator|=
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -2219,7 +2235,7 @@ condition|)
 block|{
 name|sigTok
 operator|=
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -3728,7 +3744,7 @@ name|getEncoded
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(

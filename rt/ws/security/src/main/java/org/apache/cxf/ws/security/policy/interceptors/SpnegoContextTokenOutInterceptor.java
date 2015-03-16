@@ -494,7 +494,7 @@ condition|)
 block|{
 name|tok
 operator|=
-name|NegotiationUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -549,7 +549,7 @@ operator|.
 name|TOKEN_ID
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -648,7 +648,7 @@ name|getId
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(

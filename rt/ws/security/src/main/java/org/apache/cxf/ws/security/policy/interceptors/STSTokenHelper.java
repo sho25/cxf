@@ -235,6 +235,22 @@ name|ws
 operator|.
 name|security
 operator|.
+name|SecurityUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
 name|policy
 operator|.
 name|PolicyUtils
@@ -310,24 +326,6 @@ operator|.
 name|trust
 operator|.
 name|STSUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
-name|wss4j
-operator|.
-name|WSS4JUtils
 import|;
 end_import
 
@@ -770,7 +768,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// ?
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -866,7 +864,7 @@ condition|)
 block|{
 name|tok
 operator|=
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -928,7 +926,7 @@ condition|)
 block|{
 name|tok
 operator|=
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1426,7 +1424,7 @@ operator|.
 name|TOKEN
 argument_list|)
 expr_stmt|;
-name|NegotiationUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1978,7 +1976,7 @@ block|{
 name|TokenStore
 name|tokenStore
 init|=
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -2331,7 +2329,7 @@ block|}
 name|TokenStore
 name|tokenStore
 init|=
-name|WSS4JUtils
+name|SecurityUtils
 operator|.
 name|getTokenStore
 argument_list|(
