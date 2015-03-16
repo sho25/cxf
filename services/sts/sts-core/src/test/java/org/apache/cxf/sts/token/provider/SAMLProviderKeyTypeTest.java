@@ -2834,6 +2834,17 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+if|if
+condition|(
+operator|!
+name|TestUtils
+operator|.
+name|checkUnrestrictedPoliciesInstalled
+argument_list|()
+condition|)
+block|{
+return|return;
+block|}
 name|TokenProvider
 name|samlTokenProvider
 init|=
