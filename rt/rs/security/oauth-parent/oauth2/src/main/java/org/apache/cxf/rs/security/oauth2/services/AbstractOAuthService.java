@@ -277,7 +277,7 @@ specifier|abstract
 class|class
 name|AbstractOAuthService
 block|{
-specifier|private
+specifier|protected
 specifier|static
 specifier|final
 name|Logger
