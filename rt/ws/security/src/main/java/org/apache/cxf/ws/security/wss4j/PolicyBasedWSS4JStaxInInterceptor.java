@@ -359,6 +359,24 @@ name|org
 operator|.
 name|apache
 operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|policy
+operator|.
+name|PolicyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
 name|wss4j
 operator|.
 name|common
@@ -734,6 +752,8 @@ block|{
 name|AssertionInfo
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -930,6 +950,8 @@ block|{
 name|boolean
 name|transportPolicyInEffect
 init|=
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -948,6 +970,8 @@ name|transportPolicyInEffect
 operator|&&
 operator|!
 operator|(
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -959,6 +983,8 @@ argument_list|)
 operator|==
 literal|null
 operator|&&
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -1326,6 +1352,8 @@ block|{
 name|AssertionInfo
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -1775,6 +1803,8 @@ block|{
 name|AssertionInfo
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -1836,6 +1866,8 @@ block|{
 name|AssertionInfo
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim
@@ -1897,6 +1929,8 @@ block|{
 name|AssertionInfo
 name|ais
 init|=
+name|PolicyUtils
+operator|.
 name|getFirstAssertionByLocalname
 argument_list|(
 name|aim

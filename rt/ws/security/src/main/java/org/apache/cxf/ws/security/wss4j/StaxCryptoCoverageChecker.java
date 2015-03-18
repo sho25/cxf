@@ -451,9 +451,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SecurityEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -706,9 +704,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SecurityEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

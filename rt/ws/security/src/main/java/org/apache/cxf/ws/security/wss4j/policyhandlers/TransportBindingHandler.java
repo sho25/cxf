@@ -3721,9 +3721,7 @@ name|result
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -3734,9 +3732,7 @@ name|found
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// Add timestamp
@@ -3824,9 +3820,7 @@ name|parts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|boolean

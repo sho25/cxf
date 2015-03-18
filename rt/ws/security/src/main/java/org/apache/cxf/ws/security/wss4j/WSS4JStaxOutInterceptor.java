@@ -1184,9 +1184,7 @@ name|outgoingSecurityEventList
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|SecurityEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|msg
