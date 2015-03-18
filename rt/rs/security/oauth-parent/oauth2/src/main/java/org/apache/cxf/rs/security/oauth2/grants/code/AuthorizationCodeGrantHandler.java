@@ -465,6 +465,11 @@ argument_list|()
 argument_list|,
 name|grant
 operator|.
+name|getRequestedScopes
+argument_list|()
+argument_list|,
+name|grant
+operator|.
 name|getApprovedScopes
 argument_list|()
 argument_list|,
