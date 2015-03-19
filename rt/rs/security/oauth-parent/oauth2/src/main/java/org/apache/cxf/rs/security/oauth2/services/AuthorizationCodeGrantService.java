@@ -461,6 +461,8 @@ name|AUTHORIZATION_CODE_GRANT
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|OAuthAuthorizationData
 name|createAuthorizationData
@@ -475,6 +477,9 @@ argument_list|,
 name|String
 argument_list|>
 name|params
+parameter_list|,
+name|String
+name|redirectUri
 parameter_list|,
 name|UserSubject
 name|subject
@@ -499,6 +504,8 @@ argument_list|(
 name|client
 argument_list|,
 name|params
+argument_list|,
+name|redirectUri
 argument_list|,
 name|subject
 argument_list|,

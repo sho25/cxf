@@ -1044,7 +1044,7 @@ throw|;
 block|}
 name|accessTokenService
 operator|.
-name|header
+name|replaceHeader
 argument_list|(
 literal|"Authorization"
 argument_list|,

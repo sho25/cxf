@@ -966,6 +966,8 @@ name|client
 argument_list|,
 name|params
 argument_list|,
+name|redirectUri
+argument_list|,
 name|userSubject
 argument_list|,
 name|permissions
@@ -1029,6 +1031,9 @@ name|String
 argument_list|>
 name|params
 parameter_list|,
+name|String
+name|redirectUri
+parameter_list|,
 name|UserSubject
 name|subject
 parameter_list|,
@@ -1067,14 +1072,7 @@ name|secData
 operator|.
 name|setRedirectUri
 argument_list|(
-name|params
-operator|.
-name|getFirst
-argument_list|(
-name|OAuthConstants
-operator|.
-name|REDIRECT_URI
-argument_list|)
+name|redirectUri
 argument_list|)
 expr_stmt|;
 name|secData
