@@ -149,7 +149,7 @@ specifier|private
 name|WebSocketUtils
 parameter_list|()
 block|{     }
-comment|/**      * Read header properties from the specified input stream.      *        * Only a restricted syntax is allowed as the syntax is in our control.      * Not allowed are:      * - multiline or line-wrapped headers are not not      * - charset other than utf-8. (although i would have preferred iso-8859-1 ;-)      *       * @param in the input stream      * @return a map of name value pairs.      * @throws IOException      */
+comment|/**      * Read header properties from the specified input stream.      *        * Only a restricted syntax is allowed as the syntax is in our control.      * Not allowed are:      * - multiline or line-wrapped headers are not not      * - charset other than utf-8. (although i would have preferred iso-8859-1 ;-)      *       * @param in the input stream      * @param req true if the input stream includes the request line      * @return a map of name value pairs.      * @throws IOException      */
 specifier|public
 specifier|static
 name|Map
@@ -162,6 +162,9 @@ name|readHeaders
 parameter_list|(
 name|InputStream
 name|in
+parameter_list|,
+name|boolean
+name|req
 parameter_list|)
 throws|throws
 name|IOException
@@ -187,25 +190,34 @@ operator|.
 name|CASE_INSENSITIVE_ORDER
 argument_list|)
 decl_stmt|;
-comment|// read the request line
 name|String
 name|line
-init|=
+decl_stmt|;
+name|int
+name|del
+decl_stmt|;
+if|if
+condition|(
+name|req
+condition|)
+block|{
+comment|// read the request line
+name|line
+operator|=
 name|readLine
 argument_list|(
 name|in
 argument_list|)
-decl_stmt|;
-name|int
+expr_stmt|;
 name|del
-init|=
+operator|=
 name|line
 operator|.
 name|indexOf
 argument_list|(
 literal|' '
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 if|if
 condition|(
 name|del
@@ -261,6 +273,7 @@ name|trim
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 comment|// read headers
 while|while
 condition|(
@@ -351,6 +364,31 @@ block|}
 block|}
 return|return
 name|headers
+return|;
+block|}
+specifier|public
+specifier|static
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|readHeaders
+parameter_list|(
+name|InputStream
+name|in
+parameter_list|)
+throws|throws
+name|IOException
+block|{
+return|return
+name|readHeaders
+argument_list|(
+name|in
+argument_list|,
+literal|true
+argument_list|)
 return|;
 block|}
 comment|/**      * Read a line terminated by '\n' optionally preceded by '\r' from the       * specified input stream.      * @param in the input stream      * @return      * @throws IOException      */
