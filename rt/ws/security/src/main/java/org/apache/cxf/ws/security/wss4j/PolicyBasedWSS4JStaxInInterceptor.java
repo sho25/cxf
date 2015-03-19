@@ -1304,9 +1304,7 @@ name|securityEvents
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SecurityEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|message
@@ -1983,9 +1981,7 @@ name|securityEventListeners
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SecurityEventListener
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|2
 argument_list|)
@@ -2082,9 +2078,7 @@ name|operationPolicies
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OperationPolicy
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection

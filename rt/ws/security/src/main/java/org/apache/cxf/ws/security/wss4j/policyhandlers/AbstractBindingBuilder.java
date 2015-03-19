@@ -2670,11 +2670,7 @@ name|o
 operator|=
 operator|new
 name|ConcurrentHashMap
-argument_list|<
-name|Object
-argument_list|,
-name|Crypto
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|info
