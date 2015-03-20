@@ -33,11 +33,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|management
+name|message
 operator|.
-name|codahale
-operator|.
-name|CodahaleMetricsContext
+name|Message
 import|;
 end_import
 
@@ -49,9 +47,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|management
-operator|.
-name|codahale
+name|metrics
 operator|.
 name|MetricsContext
 import|;
@@ -65,9 +61,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|metrics
 operator|.
-name|Message
+name|codahale
+operator|.
+name|CodahaleMetricsContext
 import|;
 end_import
 

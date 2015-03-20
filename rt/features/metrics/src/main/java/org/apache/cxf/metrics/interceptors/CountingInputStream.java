@@ -11,9 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|management
+name|metrics
 operator|.
-name|codahale
+name|interceptors
 package|;
 end_package
 

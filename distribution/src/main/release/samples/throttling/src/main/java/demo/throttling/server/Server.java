@@ -89,11 +89,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|management
+name|message
 operator|.
-name|codahale
-operator|.
-name|Metrics
+name|Message
 import|;
 end_import
 
@@ -105,9 +103,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|metrics
 operator|.
-name|Message
+name|MetricsFeature
 import|;
 end_import
 
@@ -272,12 +270,6 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
-operator|new
-name|Metrics
-argument_list|(
-name|b
-argument_list|)
-expr_stmt|;
 name|ThrottlingManager
 name|manager
 init|=
@@ -400,6 +392,10 @@ argument_list|(
 name|address
 argument_list|,
 name|implementor
+argument_list|,
+operator|new
+name|MetricsFeature
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

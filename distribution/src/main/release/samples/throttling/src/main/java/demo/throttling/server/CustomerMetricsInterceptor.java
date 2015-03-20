@@ -113,11 +113,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|management
+name|message
 operator|.
-name|codahale
-operator|.
-name|MessageMetrics
+name|Message
 import|;
 end_import
 
@@ -129,9 +127,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|metrics
 operator|.
-name|Message
+name|ExchangeMetrics
 import|;
 end_import
 
@@ -231,7 +229,7 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-name|MessageMetrics
+name|ExchangeMetrics
 name|m
 init|=
 name|message
@@ -241,7 +239,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|MessageMetrics
+name|ExchangeMetrics
 operator|.
 name|class
 argument_list|)

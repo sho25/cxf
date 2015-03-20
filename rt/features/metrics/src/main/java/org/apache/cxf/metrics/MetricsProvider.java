@@ -11,9 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|management
-operator|.
-name|codahale
+name|metrics
 package|;
 end_package
 
@@ -25,41 +23,58 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
+name|endpoint
 operator|.
-name|FaultMode
+name|Endpoint
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|service
+operator|.
+name|model
+operator|.
+name|BindingOperationInfo
 import|;
 end_import
 
 begin_comment
-comment|/**  * Class to hold all the various metric pieces for a given context (Endpoint, Customer, Operation, etc...)  */
+comment|/**  *   */
 end_comment
 
 begin_interface
 specifier|public
 interface|interface
-name|MetricsContext
+name|MetricsProvider
 block|{
-comment|/**      * Will be called at the start of invoke (or when added to a started MessageMetrics).  This is      * when the metrics should increment "inFlight" counts and other stats.   There is no need to       * record a "start time" as the invoke time will be passed into the stop method.      */
-name|void
-name|start
-parameter_list|()
-function_decl|;
-comment|/**      * Called when the invocation is complete.      *       * @param timeInNS      * @param inSize      * @param outSize      * @param fm      */
-name|void
-name|stop
+name|MetricsContext
+name|createEndpointContext
 parameter_list|(
-name|long
-name|timeInNS
+name|Endpoint
+name|endpoint
 parameter_list|,
-name|long
-name|inSize
+name|boolean
+name|asClient
+parameter_list|)
+function_decl|;
+name|MetricsContext
+name|createOperationContext
+parameter_list|(
+name|Endpoint
+name|endpoint
 parameter_list|,
-name|long
-name|outSize
+name|BindingOperationInfo
+name|boi
 parameter_list|,
-name|FaultMode
-name|fm
+name|boolean
+name|asClient
 parameter_list|)
 function_decl|;
 block|}
