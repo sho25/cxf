@@ -82,14 +82,16 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Some abstract functionality for validating a Security Token.  */
+comment|/**  * Some abstract functionality for validating policies  */
 end_comment
 
 begin_class
 specifier|public
 specifier|abstract
 class|class
-name|AbstractTokenPolicyValidator
+name|AbstractSecurityPolicyValidator
+implements|implements
+name|SecurityPolicyValidator
 block|{
 comment|/**      * Check to see if a token is required or not.      * @param token the token      * @param message The message      * @return true if the token is required      */
 specifier|protected

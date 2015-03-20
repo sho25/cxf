@@ -527,7 +527,7 @@ specifier|abstract
 class|class
 name|AbstractBindingPolicyValidator
 implements|implements
-name|BindingPolicyValidator
+name|SecurityPolicyValidator
 block|{
 specifier|private
 specifier|static
