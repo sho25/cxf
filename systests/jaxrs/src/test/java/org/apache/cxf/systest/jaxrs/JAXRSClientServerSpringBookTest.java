@@ -785,7 +785,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/the/thebooks3/bookstore/books/webex2"
+literal|"/the/thebooks%203/bookstore/books/webex2"
 decl_stmt|;
 name|doTestGetBookWebEx
 argument_list|(
@@ -2909,7 +2909,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/the/thebooks3/bookstore/bookinfo?"
+literal|"/the/thebooks%203/bookstore/bookinfo?"
 operator|+
 literal|"param1=12&param2=3"
 decl_stmt|;
