@@ -732,14 +732,14 @@ argument_list|<
 name|String
 argument_list|>
 argument_list|>
-name|g
+name|gg
 parameter_list|)
 block|{
 name|this
 operator|.
 name|g
 operator|=
-name|g
+name|gg
 expr_stmt|;
 block|}
 specifier|public

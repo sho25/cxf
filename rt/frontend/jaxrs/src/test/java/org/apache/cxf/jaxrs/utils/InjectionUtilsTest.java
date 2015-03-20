@@ -1184,14 +1184,14 @@ name|void
 name|setE
 parameter_list|(
 name|String
-name|e
+name|ee
 parameter_list|)
 block|{
 name|this
 operator|.
 name|e
 operator|=
-name|e
+name|ee
 expr_stmt|;
 block|}
 specifier|public
