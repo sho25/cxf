@@ -251,7 +251,7 @@ operator|&&
 operator|(
 name|SP12Constants
 operator|.
-name|USERNAME_TOKEN
+name|WSS11
 operator|.
 name|equals
 argument_list|(
@@ -266,7 +266,7 @@ argument_list|)
 operator|||
 name|SP11Constants
 operator|.
-name|USERNAME_TOKEN
+name|WSS11
 operator|.
 name|equals
 argument_list|(

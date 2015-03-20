@@ -403,7 +403,7 @@ operator|&&
 operator|(
 name|SP12Constants
 operator|.
-name|USERNAME_TOKEN
+name|LAYOUT
 operator|.
 name|equals
 argument_list|(
@@ -418,7 +418,7 @@ argument_list|)
 operator|||
 name|SP11Constants
 operator|.
-name|USERNAME_TOKEN
+name|LAYOUT
 operator|.
 name|equals
 argument_list|(
@@ -586,7 +586,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|public
+specifier|private
 name|boolean
 name|validatePolicy
 parameter_list|(

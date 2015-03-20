@@ -500,7 +500,7 @@ return|return
 literal|true
 return|;
 block|}
-specifier|public
+specifier|private
 name|boolean
 name|validatePolicy
 parameter_list|(
