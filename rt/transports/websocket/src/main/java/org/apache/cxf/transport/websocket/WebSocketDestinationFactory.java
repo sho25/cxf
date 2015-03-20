@@ -193,6 +193,24 @@ name|websocket
 operator|.
 name|atmosphere
 operator|.
+name|AtmosphereWebSocketJettyDestination
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|websocket
+operator|.
+name|atmosphere
+operator|.
 name|AtmosphereWebSocketServletDestination
 import|;
 end_import
@@ -343,7 +361,7 @@ literal|"ws"
 argument_list|)
 condition|)
 block|{
-comment|// for the embedded mode, we stick with jetty.
+comment|// for the embedded mode, we stick to jetty
 name|JettyHTTPServerEngineFactory
 name|serverEngineFactory
 init|=
@@ -356,6 +374,28 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|ATMOSPHERE_AVAILABLE
+condition|)
+block|{
+comment|// use atmosphere if available
+return|return
+operator|new
+name|AtmosphereWebSocketJettyDestination
+argument_list|(
+name|bus
+argument_list|,
+name|registry
+argument_list|,
+name|endpointInfo
+argument_list|,
+name|serverEngineFactory
+argument_list|)
+return|;
+block|}
+else|else
+block|{
 if|if
 condition|(
 name|serverEngineFactory
@@ -395,6 +435,7 @@ argument_list|)
 return|;
 block|}
 block|}
+block|}
 else|else
 block|{
 comment|//REVISIT other way of getting the registry of http so that the plain cxf servlet finds the destination?
@@ -411,7 +452,7 @@ condition|(
 name|ATMOSPHERE_AVAILABLE
 condition|)
 block|{
-comment|// use atmosphere
+comment|// use atmosphere if available
 return|return
 operator|new
 name|AtmosphereWebSocketServletDestination
@@ -443,6 +484,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|// use jetty-websocket
 if|if
 condition|(
 name|serverEngineFactory
@@ -451,7 +493,6 @@ name|isJetty8
 argument_list|()
 condition|)
 block|{
-comment|// use jetty-websocket
 return|return
 operator|new
 name|JettyWebSocketServletDestination
