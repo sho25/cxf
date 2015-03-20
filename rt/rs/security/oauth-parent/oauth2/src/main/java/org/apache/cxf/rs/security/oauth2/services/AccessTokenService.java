@@ -929,15 +929,15 @@ name|handler
 return|;
 block|}
 block|}
-comment|// Lets try the default grant handler
+comment|// Lets try the well-known grant handlers
 if|if
 condition|(
-name|grantHandlers
+name|super
 operator|.
-name|size
+name|getDataProvider
 argument_list|()
-operator|==
-literal|0
+operator|instanceof
+name|AuthorizationCodeDataProvider
 condition|)
 block|{
 name|AuthorizationCodeGrantHandler
