@@ -327,9 +327,9 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Validate policies. Return true if all of the policies are valid.      */
+comment|/**      * Validate policies.      */
 specifier|public
-name|boolean
+name|void
 name|validatePolicies
 parameter_list|(
 name|PolicyValidatorParameters
@@ -592,9 +592,6 @@ block|}
 comment|/*                     if (!checkIssuerName(samlToken, assertionWrapper)) {                         ai.setNotAsserted("Wrong IssuerName");                     }                  */
 block|}
 block|}
-return|return
-literal|true
-return|;
 block|}
 comment|/**      * Check the IssuerName policy against the received assertion     private boolean checkIssuerName(SamlToken samlToken, AssertionWrapper assertionWrapper) {         String issuerName = samlToken.getIssuerName();         if (issuerName != null&& !"".equals(issuerName)) {             String assertionIssuer = assertionWrapper.getIssuerString();             if (!issuerName.equals(assertionIssuer)) {                 return false;             }         }         return true;     }     */
 comment|/**      * Check the policy version against the received assertion      */

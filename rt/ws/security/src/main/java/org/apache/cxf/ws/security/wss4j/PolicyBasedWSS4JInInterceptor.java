@@ -4608,57 +4608,21 @@ argument_list|(
 name|timestamp
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
 name|checkTokenCoverage
 argument_list|(
 name|parameters
 argument_list|)
-condition|)
-block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Incoming request failed token policy validation"
-argument_list|)
 expr_stmt|;
-block|}
-if|if
-condition|(
-operator|!
 name|checkBindingCoverage
 argument_list|(
 name|parameters
 argument_list|)
-condition|)
-block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Incoming request failed binding policy validation"
-argument_list|)
 expr_stmt|;
-block|}
-if|if
-condition|(
-operator|!
 name|checkSupportingTokenCoverage
 argument_list|(
 name|parameters
 argument_list|)
-condition|)
-block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Incoming request failed supporting token policy validation"
-argument_list|)
 expr_stmt|;
-block|}
 name|super
 operator|.
 name|doResults
@@ -4737,8 +4701,6 @@ name|msg
 argument_list|)
 condition|)
 block|{
-name|check
-operator|&=
 name|assertTokens
 argument_list|(
 name|aim
@@ -4760,8 +4722,6 @@ operator|.
 name|SIGNED
 argument_list|)
 expr_stmt|;
-name|check
-operator|&=
 name|assertTokens
 argument_list|(
 name|aim
@@ -4823,8 +4783,6 @@ operator|.
 name|newXPath
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|assertXPathTokens
 argument_list|(
 name|aim
@@ -4848,8 +4806,6 @@ argument_list|,
 name|xpath
 argument_list|)
 expr_stmt|;
-name|check
-operator|&=
 name|assertXPathTokens
 argument_list|(
 name|aim
@@ -4873,8 +4829,6 @@ argument_list|,
 name|xpath
 argument_list|)
 expr_stmt|;
-name|check
-operator|&=
 name|assertXPathTokens
 argument_list|(
 name|aim
@@ -4899,8 +4853,6 @@ name|xpath
 argument_list|)
 expr_stmt|;
 block|}
-name|check
-operator|&=
 name|assertHeadersExists
 argument_list|(
 name|aim
@@ -4916,18 +4868,13 @@ return|;
 block|}
 comment|/**      * Check the token coverage      */
 specifier|private
-name|boolean
+name|void
 name|checkTokenCoverage
 parameter_list|(
 name|PolicyValidatorParameters
 name|parameters
 parameter_list|)
 block|{
-name|boolean
-name|check
-init|=
-literal|true
-decl_stmt|;
 name|AssertionInfoMap
 name|aim
 init|=
@@ -4960,8 +4907,6 @@ operator|new
 name|X509TokenPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|x509Validator
 operator|.
 name|validatePolicies
@@ -4991,8 +4936,6 @@ operator|new
 name|UsernameTokenPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|utValidator
 operator|.
 name|validatePolicies
@@ -5022,8 +4965,6 @@ operator|new
 name|SamlTokenPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|samlValidator
 operator|.
 name|validatePolicies
@@ -5053,8 +4994,6 @@ operator|new
 name|SecurityContextTokenPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|sctValidator
 operator|.
 name|validatePolicies
@@ -5084,8 +5023,6 @@ operator|new
 name|WSS11PolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|wss11Validator
 operator|.
 name|validatePolicies
@@ -5095,24 +5032,16 @@ argument_list|,
 name|ais
 argument_list|)
 expr_stmt|;
-return|return
-name|check
-return|;
 block|}
 comment|/**      * Check the binding coverage      */
 specifier|private
-name|boolean
+name|void
 name|checkBindingCoverage
 parameter_list|(
 name|PolicyValidatorParameters
 name|parameters
 parameter_list|)
 block|{
-name|boolean
-name|check
-init|=
-literal|true
-decl_stmt|;
 name|AssertionInfoMap
 name|aim
 init|=
@@ -5145,8 +5074,6 @@ operator|new
 name|TransportBindingPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|transportValidator
 operator|.
 name|validatePolicies
@@ -5176,8 +5103,6 @@ operator|new
 name|SymmetricBindingPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|symmetricValidator
 operator|.
 name|validatePolicies
@@ -5207,8 +5132,6 @@ operator|new
 name|AsymmetricBindingPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|asymmetricValidator
 operator|.
 name|validatePolicies
@@ -5239,8 +5162,6 @@ operator|new
 name|AlgorithmSuitePolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|algorithmSuiteValidator
 operator|.
 name|validatePolicies
@@ -5270,8 +5191,6 @@ operator|new
 name|LayoutPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|layoutValidator
 operator|.
 name|validatePolicies
@@ -5281,24 +5200,16 @@ argument_list|,
 name|ais
 argument_list|)
 expr_stmt|;
-return|return
-name|check
-return|;
 block|}
 comment|/**      * Check the supporting token coverage      */
 specifier|private
-name|boolean
+name|void
 name|checkSupportingTokenCoverage
 parameter_list|(
 name|PolicyValidatorParameters
 name|parameters
 parameter_list|)
 block|{
-name|boolean
-name|check
-init|=
-literal|true
-decl_stmt|;
 name|AssertionInfoMap
 name|aim
 init|=
@@ -5331,8 +5242,6 @@ operator|new
 name|ConcreteSupportingTokenPolicyValidator
 argument_list|()
 decl_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5361,8 +5270,6 @@ operator|new
 name|SignedTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5391,8 +5298,6 @@ operator|new
 name|EndorsingTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5421,8 +5326,6 @@ operator|new
 name|SignedEndorsingTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5451,8 +5354,6 @@ operator|new
 name|SignedEncryptedTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5481,8 +5382,6 @@ operator|new
 name|EncryptedTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5511,8 +5410,6 @@ operator|new
 name|EndorsingEncryptedTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5541,8 +5438,6 @@ operator|new
 name|SignedEndorsingEncryptedTokenPolicyValidator
 argument_list|()
 expr_stmt|;
-name|check
-operator|&=
 name|validator
 operator|.
 name|validatePolicies
@@ -5552,9 +5447,6 @@ argument_list|,
 name|ais
 argument_list|)
 expr_stmt|;
-return|return
-name|check
-return|;
 block|}
 specifier|private
 name|boolean

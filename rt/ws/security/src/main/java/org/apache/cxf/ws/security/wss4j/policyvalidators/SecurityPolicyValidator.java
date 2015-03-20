@@ -64,8 +64,8 @@ name|AssertionInfo
 name|assertionInfo
 parameter_list|)
 function_decl|;
-comment|/**      * Validate policies. Return true if all of the policies are valid.      */
-name|boolean
+comment|/**      * Validate policies.      */
+name|void
 name|validatePolicies
 parameter_list|(
 name|PolicyValidatorParameters

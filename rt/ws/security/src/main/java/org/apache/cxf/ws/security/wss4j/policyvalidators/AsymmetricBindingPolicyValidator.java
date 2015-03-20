@@ -323,9 +323,9 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Validate policies. Return true if all of the policies are valid.      */
+comment|/**      * Validate policies.      */
 specifier|public
-name|boolean
+name|void
 name|validatePolicies
 parameter_list|(
 name|PolicyValidatorParameters
@@ -504,9 +504,6 @@ block|{
 continue|continue;
 block|}
 block|}
-return|return
-literal|true
-return|;
 block|}
 comment|/**      * Check various tokens of the binding      */
 specifier|private

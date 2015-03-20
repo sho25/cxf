@@ -235,9 +235,9 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Validate policies. Return true if all of the policies are valid.      */
+comment|/**      * Validate policies.      */
 specifier|public
-name|boolean
+name|void
 name|validatePolicies
 parameter_list|(
 name|PolicyValidatorParameters
@@ -492,9 +492,6 @@ name|SIGNED_PARTS
 argument_list|)
 expr_stmt|;
 block|}
-return|return
-literal|true
-return|;
 block|}
 block|}
 end_class
