@@ -522,6 +522,17 @@ argument_list|>
 argument_list|>
 argument_list|()
 expr_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|PROTOCOL_HEADERS
+argument_list|,
+name|headers
+argument_list|)
+expr_stmt|;
 block|}
 return|return
 name|headers
