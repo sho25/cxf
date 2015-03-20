@@ -307,7 +307,7 @@ name|AbstractGrantHandler
 implements|implements
 name|AccessTokenGrantHandler
 block|{
-specifier|private
+specifier|protected
 specifier|static
 specifier|final
 name|Logger

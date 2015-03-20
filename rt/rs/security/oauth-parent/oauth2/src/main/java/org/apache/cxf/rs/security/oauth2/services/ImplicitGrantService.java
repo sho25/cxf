@@ -463,6 +463,24 @@ operator|=
 name|preAuthorizedToken
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|token
+operator|.
+name|getRefreshToken
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Implicit grant tokens MUST not have refresh tokens, refresh token will not be reported"
+argument_list|)
+expr_stmt|;
+block|}
 name|ClientAccessToken
 name|clientToken
 init|=
