@@ -218,6 +218,13 @@ operator|new
 name|LoggingFeature
 argument_list|()
 decl_stmt|;
+name|loggingFeature
+operator|.
+name|setPrettyLogging
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|Endpoint
 name|ep
 init|=
