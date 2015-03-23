@@ -428,6 +428,29 @@ argument_list|(
 name|requestedScope
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|approvedScope
+operator|!=
+literal|null
+operator|&&
+name|approvedScope
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+comment|// no down-scoping done by a user, all of the requested scopes have been authorized
+name|reg
+operator|.
+name|setApprovedScope
+argument_list|(
+name|requestedScope
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|reg
 operator|.
 name|setApprovedScope
@@ -435,6 +458,7 @@ argument_list|(
 name|approvedScope
 argument_list|)
 expr_stmt|;
+block|}
 name|reg
 operator|.
 name|setAudience
