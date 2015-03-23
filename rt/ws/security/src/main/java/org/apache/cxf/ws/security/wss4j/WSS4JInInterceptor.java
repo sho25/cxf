@@ -587,6 +587,24 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|utils
+operator|.
+name|SecurityUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|security
 operator|.
 name|SecurityContext
@@ -651,7 +669,9 @@ name|ws
 operator|.
 name|security
 operator|.
-name|SecurityUtils
+name|tokenstore
+operator|.
+name|TokenStore
 import|;
 end_import
 
@@ -669,7 +689,7 @@ name|security
 operator|.
 name|tokenstore
 operator|.
-name|TokenStore
+name|TokenStoreUtils
 import|;
 end_import
 
@@ -3968,7 +3988,7 @@ block|{
 name|TokenStore
 name|store
 init|=
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -4036,7 +4056,7 @@ block|{
 name|TokenStore
 name|store
 init|=
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(

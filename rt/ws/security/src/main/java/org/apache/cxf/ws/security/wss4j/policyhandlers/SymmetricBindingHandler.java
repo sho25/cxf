@@ -1996,7 +1996,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|sbinding
 argument_list|,
@@ -2019,7 +2019,7 @@ name|sigTokId
 argument_list|)
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|sigAbstractTokenWrapper
 argument_list|,
@@ -2295,7 +2295,7 @@ expr_stmt|;
 block|}
 else|else
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|sbinding
 argument_list|,
@@ -3116,7 +3116,7 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|recToken
 argument_list|,
@@ -3887,7 +3887,7 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|recToken
 argument_list|,

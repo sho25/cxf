@@ -137,9 +137,9 @@ name|wss4j
 operator|.
 name|common
 operator|.
-name|saml
+name|crypto
 operator|.
-name|SamlAssertionWrapper
+name|WSProviderConfig
 import|;
 end_import
 
@@ -151,9 +151,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSSConfig
+name|saml
+operator|.
+name|SamlAssertionWrapper
 import|;
 end_import
 
@@ -170,7 +172,7 @@ argument_list|>
 block|{
 static|static
 block|{
-name|WSSConfig
+name|WSProviderConfig
 operator|.
 name|init
 argument_list|()

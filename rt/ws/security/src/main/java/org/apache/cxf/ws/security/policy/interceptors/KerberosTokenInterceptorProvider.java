@@ -283,22 +283,6 @@ name|ws
 operator|.
 name|security
 operator|.
-name|SecurityUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
 name|kerberos
 operator|.
 name|KerberosClient
@@ -356,6 +340,24 @@ operator|.
 name|tokenstore
 operator|.
 name|SecurityToken
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|tokenstore
+operator|.
+name|TokenStoreUtils
 import|;
 end_import
 
@@ -1122,7 +1124,7 @@ name|getId
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1145,7 +1147,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1845,7 +1847,7 @@ parameter_list|)
 block|{
 comment|// Just consume this for now as it isn't critical...
 block|}
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(

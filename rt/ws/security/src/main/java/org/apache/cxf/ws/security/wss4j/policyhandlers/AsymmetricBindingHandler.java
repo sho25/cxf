@@ -1068,7 +1068,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|initiatorToken
 argument_list|,
@@ -1207,7 +1207,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|initiatorToken
 argument_list|,
@@ -1772,7 +1772,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|initiatorToken
 argument_list|,
@@ -1965,7 +1965,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|initiatorToken
 argument_list|,
@@ -2048,7 +2048,7 @@ argument_list|,
 name|ex
 argument_list|)
 expr_stmt|;
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|encryptionToken
 argument_list|,
@@ -2934,7 +2934,7 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|recToken
 argument_list|,
@@ -3210,7 +3210,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|recToken
 argument_list|,
@@ -3441,7 +3441,7 @@ argument_list|,
 name|e
 argument_list|)
 expr_stmt|;
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|recToken
 argument_list|,
@@ -4444,7 +4444,7 @@ block|}
 block|}
 else|else
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|token
 argument_list|,

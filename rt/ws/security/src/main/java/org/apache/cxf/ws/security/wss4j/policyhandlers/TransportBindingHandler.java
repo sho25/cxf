@@ -1148,7 +1148,7 @@ operator|==
 literal|null
 condition|)
 block|{
-name|policyNotAsserted
+name|unassertPolicy
 argument_list|(
 name|transportToken
 argument_list|,

@@ -209,22 +209,6 @@ name|ws
 operator|.
 name|security
 operator|.
-name|SecurityUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ws
-operator|.
-name|security
-operator|.
 name|tokenstore
 operator|.
 name|SecurityToken
@@ -246,6 +230,24 @@ operator|.
 name|tokenstore
 operator|.
 name|TokenStore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|security
+operator|.
+name|tokenstore
+operator|.
+name|TokenStoreUtils
 import|;
 end_import
 
@@ -714,7 +716,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// ?
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -810,7 +812,7 @@ condition|)
 block|{
 name|tok
 operator|=
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -872,7 +874,7 @@ condition|)
 block|{
 name|tok
 operator|=
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1370,7 +1372,7 @@ operator|.
 name|TOKEN
 argument_list|)
 expr_stmt|;
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -1922,7 +1924,7 @@ block|{
 name|TokenStore
 name|tokenStore
 init|=
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(
@@ -2275,7 +2277,7 @@ block|}
 name|TokenStore
 name|tokenStore
 init|=
-name|SecurityUtils
+name|TokenStoreUtils
 operator|.
 name|getTokenStore
 argument_list|(

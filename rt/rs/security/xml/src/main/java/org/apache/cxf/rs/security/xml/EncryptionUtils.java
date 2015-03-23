@@ -131,11 +131,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
 name|util
 operator|.
-name|WSSecurityUtil
+name|KeyUtils
 import|;
 end_import
 
@@ -266,7 +266,7 @@ block|{
 name|Cipher
 name|cipher
 init|=
-name|WSSecurityUtil
+name|KeyUtils
 operator|.
 name|getCipherInstance
 argument_list|(
@@ -429,7 +429,7 @@ block|{
 name|Cipher
 name|cipher
 init|=
-name|WSSecurityUtil
+name|KeyUtils
 operator|.
 name|getCipherInstance
 argument_list|(

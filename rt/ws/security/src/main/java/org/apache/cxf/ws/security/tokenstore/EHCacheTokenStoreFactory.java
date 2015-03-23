@@ -51,11 +51,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|rt
 operator|.
 name|security
 operator|.
-name|SecurityConstants
+name|utils
+operator|.
+name|SecurityUtils
 import|;
 end_import
 
@@ -71,7 +73,7 @@ name|ws
 operator|.
 name|security
 operator|.
-name|SecurityUtils
+name|SecurityConstants
 import|;
 end_import
 

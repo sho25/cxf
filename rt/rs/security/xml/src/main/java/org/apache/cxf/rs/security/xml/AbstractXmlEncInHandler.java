@@ -339,20 +339,6 @@ name|org
 operator|.
 name|apache
 operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
 name|xml
 operator|.
 name|security
@@ -727,8 +713,6 @@ name|getNode
 argument_list|(
 name|encDataElement
 argument_list|,
-name|WSConstants
-operator|.
 name|ENC_NS
 argument_list|,
 literal|"EncryptedKey"
@@ -914,8 +898,6 @@ name|getNode
 argument_list|(
 name|encKeyElement
 argument_list|,
-name|WSConstants
-operator|.
 name|ENC_NS
 argument_list|,
 literal|"CipherValue"
@@ -1172,8 +1154,6 @@ name|getNode
 argument_list|(
 name|parent
 argument_list|,
-name|WSConstants
-operator|.
 name|ENC_NS
 argument_list|,
 literal|"EncryptionMethod"
@@ -1220,8 +1200,6 @@ name|getNode
 argument_list|(
 name|parent
 argument_list|,
-name|WSConstants
-operator|.
 name|ENC_NS
 argument_list|,
 literal|"EncryptionMethod"
@@ -1243,8 +1221,6 @@ name|getNode
 argument_list|(
 name|encMethod
 argument_list|,
-name|WSConstants
-operator|.
 name|SIG_NS
 argument_list|,
 literal|"DigestMethod"

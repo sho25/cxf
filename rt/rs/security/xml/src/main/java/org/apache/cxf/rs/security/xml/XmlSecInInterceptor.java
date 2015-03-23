@@ -778,9 +778,7 @@ name|subjectDNPatterns
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1496,9 +1494,7 @@ name|incomingSecurityEventList
 init|=
 operator|new
 name|LinkedList
-argument_list|<
-name|SecurityEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SecurityEventListener
@@ -2438,9 +2434,7 @@ name|subjectDNPatterns
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
