@@ -17,6 +17,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -38,10 +48,21 @@ specifier|public
 interface|interface
 name|ThrottlingManager
 block|{
-comment|/**      * Returns the number of milliseconds the request should be delayed before further processing      * @param m      * @return      */
+comment|/**      * Get the list of phases where this manager will expect to have to make throttling decisions.      * For example: using BasicAuth or other protocol based header, it can be a very early in the       * chain, but for WS-Security based authentication, it would be later.       * @return      */
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getDecisionPhases
+parameter_list|()
+function_decl|;
+comment|/**      * Returns the number of milliseconds the request should be delayed before further processing      * @param phase      * @param m      * @return      */
 name|long
 name|getThrottleDelay
 parameter_list|(
+name|String
+name|phase
+parameter_list|,
 name|Message
 name|m
 parameter_list|)
