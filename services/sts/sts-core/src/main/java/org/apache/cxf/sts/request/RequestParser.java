@@ -929,6 +929,22 @@ name|apache
 operator|.
 name|wss4j
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|XMLUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
 name|dom
 operator|.
 name|WSConstants
@@ -1056,22 +1072,6 @@ operator|.
 name|processor
 operator|.
 name|EncryptedKeyProcessor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|util
-operator|.
-name|WSSecurityUtil
 import|;
 end_import
 
@@ -5457,7 +5457,7 @@ block|}
 comment|// Find processed token corresponding to the URI
 name|referenceURI
 operator|=
-name|WSSecurityUtil
+name|XMLUtils
 operator|.
 name|getIDFromReference
 argument_list|(
