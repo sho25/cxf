@@ -229,7 +229,7 @@ name|sts
 operator|.
 name|request
 operator|.
-name|RequestParser
+name|RequestRequirements
 import|;
 end_import
 
@@ -603,8 +603,8 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 init|=
 name|parseRequest
 argument_list|(
@@ -616,7 +616,7 @@ decl_stmt|;
 name|TokenRequirements
 name|tokenRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -871,7 +871,7 @@ name|providerParameters
 init|=
 name|createTokenProviderParameters
 argument_list|(
-name|requestParser
+name|requestRequirements
 argument_list|,
 name|context
 argument_list|)

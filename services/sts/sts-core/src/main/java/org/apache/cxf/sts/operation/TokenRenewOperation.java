@@ -233,7 +233,7 @@ name|sts
 operator|.
 name|request
 operator|.
-name|RequestParser
+name|RequestRequirements
 import|;
 end_import
 
@@ -645,8 +645,8 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 init|=
 name|parseRequest
 argument_list|(
@@ -658,7 +658,7 @@ decl_stmt|;
 name|KeyRequirements
 name|keyRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getKeyRequirements
 argument_list|()
@@ -666,7 +666,7 @@ decl_stmt|;
 name|TokenRequirements
 name|tokenRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -936,7 +936,7 @@ name|renewerParameters
 operator|=
 name|createTokenRenewerParameters
 argument_list|(
-name|requestParser
+name|requestRequirements
 argument_list|,
 name|context
 argument_list|)
@@ -1670,8 +1670,8 @@ specifier|private
 name|TokenRenewerParameters
 name|createTokenRenewerParameters
 parameter_list|(
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 parameter_list|,
 name|WebServiceContext
 name|context
@@ -1682,7 +1682,7 @@ name|providerParameters
 init|=
 name|createTokenProviderParameters
 argument_list|(
-name|requestParser
+name|requestRequirements
 argument_list|,
 name|context
 argument_list|)

@@ -732,9 +732,7 @@ name|filteredValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1163,9 +1161,7 @@ name|newValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1271,9 +1267,7 @@ name|newValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1409,9 +1403,7 @@ name|newValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1521,9 +1513,7 @@ name|newValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1786,9 +1776,7 @@ name|distincValues
 init|=
 operator|new
 name|LinkedHashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|oldValues
 argument_list|)

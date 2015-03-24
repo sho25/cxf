@@ -887,11 +887,7 @@ name|map
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|NamingEnumeration
@@ -982,9 +978,7 @@ name|searchAttributeList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1068,10 +1062,6 @@ name|String
 index|[]
 name|searchAttributes
 init|=
-literal|null
-decl_stmt|;
-name|searchAttributes
-operator|=
 name|searchAttributeList
 operator|.
 name|toArray
@@ -1085,7 +1075,7 @@ name|size
 argument_list|()
 index|]
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|this

@@ -654,9 +654,7 @@ name|tokenRenewers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenRenewer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|tokenRenewers
@@ -695,9 +693,7 @@ name|tokenProviders
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|tokenProviders
@@ -717,9 +713,7 @@ name|tokenValidators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|tokenValidators

@@ -285,7 +285,7 @@ name|sts
 operator|.
 name|request
 operator|.
-name|RequestParser
+name|RequestRequirements
 import|;
 end_import
 
@@ -1012,8 +1012,8 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 init|=
 name|parseRequest
 argument_list|(
@@ -1026,7 +1026,7 @@ name|providerParameters
 operator|=
 name|createTokenProviderParameters
 argument_list|(
-name|requestParser
+name|requestRequirements
 argument_list|,
 name|context
 argument_list|)
@@ -1075,7 +1075,7 @@ decl_stmt|;
 name|TokenRequirements
 name|tokenRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -1283,9 +1283,7 @@ name|context
 argument_list|,
 name|realm
 argument_list|,
-name|tokenRequirements
-argument_list|,
-name|requestParser
+name|requestRequirements
 argument_list|)
 expr_stmt|;
 block|}
@@ -1324,9 +1322,7 @@ name|context
 argument_list|,
 name|realm
 argument_list|,
-name|tokenRequirements
-argument_list|,
-name|requestParser
+name|requestRequirements
 argument_list|)
 expr_stmt|;
 block|}
@@ -1503,7 +1499,7 @@ block|{
 name|KeyRequirements
 name|keyRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getKeyRequirements
 argument_list|()
@@ -1659,11 +1655,8 @@ parameter_list|,
 name|String
 name|realm
 parameter_list|,
-name|TokenRequirements
-name|tokenRequirements
-parameter_list|,
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 parameter_list|)
 block|{
 name|TokenValidatorResponse
@@ -1675,7 +1668,10 @@ name|context
 argument_list|,
 name|realm
 argument_list|,
-name|tokenRequirements
+name|requestRequirements
+operator|.
+name|getTokenRequirements
+argument_list|()
 argument_list|,
 name|validateTarget
 argument_list|)
@@ -1822,7 +1818,7 @@ block|}
 comment|// See whether OnBehalfOf/ActAs is allowed or not
 name|performDelegationHandling
 argument_list|(
-name|requestParser
+name|requestRequirements
 argument_list|,
 name|context
 argument_list|,

@@ -459,6 +459,22 @@ name|sts
 operator|.
 name|request
 operator|.
+name|RequestRequirements
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|sts
+operator|.
+name|request
+operator|.
 name|TokenRequirements
 import|;
 end_import
@@ -1222,9 +1238,7 @@ name|tokenProviders
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -1236,9 +1250,7 @@ name|tokenValidators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -1272,9 +1284,7 @@ name|delegationHandlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenDelegationHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1489,7 +1499,7 @@ expr_stmt|;
 block|}
 comment|/**      * Check the arguments from the STSProvider and parse the request.      */
 specifier|protected
-name|RequestParser
+name|RequestRequirements
 name|parseRequest
 parameter_list|(
 name|RequestSecurityTokenType
@@ -1548,6 +1558,7 @@ operator|new
 name|RequestParser
 argument_list|()
 decl_stmt|;
+return|return
 name|requestParser
 operator|.
 name|parseRequest
@@ -1563,9 +1574,6 @@ operator|.
 name|getClaimParsers
 argument_list|()
 argument_list|)
-expr_stmt|;
-return|return
-name|requestParser
 return|;
 block|}
 comment|/**      * Create a RequestedReferenceType object using a TokenReference object      */
@@ -2880,8 +2888,8 @@ specifier|protected
 name|TokenProviderParameters
 name|createTokenProviderParameters
 parameter_list|(
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 parameter_list|,
 name|WebServiceContext
 name|context
@@ -2929,7 +2937,7 @@ expr_stmt|;
 name|KeyRequirements
 name|keyRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getKeyRequirements
 argument_list|()
@@ -2937,7 +2945,7 @@ decl_stmt|;
 name|TokenRequirements
 name|tokenRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -3776,8 +3784,8 @@ specifier|protected
 name|void
 name|performDelegationHandling
 parameter_list|(
-name|RequestParser
-name|requestParser
+name|RequestRequirements
+name|requestRequirements
 parameter_list|,
 name|WebServiceContext
 name|context
@@ -3851,7 +3859,7 @@ expr_stmt|;
 name|KeyRequirements
 name|keyRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getKeyRequirements
 argument_list|()
@@ -3859,7 +3867,7 @@ decl_stmt|;
 name|TokenRequirements
 name|tokenRequirements
 init|=
-name|requestParser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -4035,9 +4043,7 @@ name|unhandledClaimTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
