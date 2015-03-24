@@ -77,6 +77,16 @@ begin_import
 import|import
 name|javax
 operator|.
+name|annotation
+operator|.
+name|Priority
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|servlet
 operator|.
 name|http
@@ -94,6 +104,18 @@ operator|.
 name|rs
 operator|.
 name|HttpMethod
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|Priorities
 import|;
 end_import
 
@@ -512,6 +534,14 @@ annotation|@
 name|Provider
 annotation|@
 name|PreMatching
+comment|// Priorities.AUTHORIZATION also works
+annotation|@
+name|Priority
+argument_list|(
+name|Priorities
+operator|.
+name|AUTHENTICATION
+argument_list|)
 specifier|public
 class|class
 name|OAuthRequestFilter
