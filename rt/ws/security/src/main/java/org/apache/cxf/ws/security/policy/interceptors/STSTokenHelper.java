@@ -27,7 +27,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Map
+name|HashMap
 import|;
 end_import
 
@@ -37,7 +37,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Properties
+name|Map
 import|;
 end_import
 
@@ -1992,7 +1992,12 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|properties
 init|=
 name|cachedToken
@@ -2017,9 +2022,12 @@ block|{
 name|String
 name|associatedToken
 init|=
+operator|(
+name|String
+operator|)
 name|properties
 operator|.
-name|getProperty
+name|get
 argument_list|(
 name|key
 argument_list|)
@@ -2082,7 +2090,12 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|properties
 init|=
 name|cachedToken
@@ -2107,9 +2120,12 @@ block|{
 name|String
 name|associatedToken
 init|=
+operator|(
+name|String
+operator|)
 name|properties
 operator|.
-name|getProperty
+name|get
 argument_list|(
 name|key
 argument_list|)
@@ -2359,7 +2375,12 @@ name|onBehalfOfToken
 argument_list|)
 expr_stmt|;
 block|}
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|properties
 init|=
 name|cachedToken
@@ -2377,7 +2398,8 @@ block|{
 name|properties
 operator|=
 operator|new
-name|Properties
+name|HashMap
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|cachedToken
@@ -2456,7 +2478,12 @@ name|actAsToken
 argument_list|)
 expr_stmt|;
 block|}
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|properties
 init|=
 name|cachedToken
@@ -2474,7 +2501,8 @@ block|{
 name|properties
 operator|=
 operator|new
-name|Properties
+name|HashMap
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|cachedToken

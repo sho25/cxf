@@ -35,7 +35,17 @@ name|java
 operator|.
 name|util
 operator|.
-name|Properties
+name|HashMap
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Map
 import|;
 end_import
 
@@ -716,7 +726,12 @@ name|getPrincipal
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|props
 init|=
 name|token
@@ -734,7 +749,8 @@ block|{
 name|props
 operator|=
 operator|new
-name|Properties
+name|HashMap
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -757,7 +773,7 @@ condition|)
 block|{
 name|props
 operator|.
-name|setProperty
+name|put
 argument_list|(
 name|STSConstants
 operator|.
@@ -832,7 +848,7 @@ else|else
 block|{
 name|props
 operator|.
-name|setProperty
+name|put
 argument_list|(
 name|STSConstants
 operator|.
@@ -843,7 +859,7 @@ argument_list|)
 expr_stmt|;
 name|props
 operator|.
-name|setProperty
+name|put
 argument_list|(
 name|STSConstants
 operator|.

@@ -97,16 +97,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Properties
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|logging
 operator|.
 name|Level
@@ -1709,7 +1699,12 @@ throws|throws
 name|WSSecurityException
 block|{
 comment|// Check the cached renewal properties
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|props
 init|=
 name|token
