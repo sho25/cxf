@@ -130,6 +130,10 @@ specifier|private
 name|boolean
 name|prettyLogging
 decl_stmt|;
+specifier|private
+name|TransformerFactory
+name|transformerFactory
+decl_stmt|;
 specifier|public
 name|PrettyLoggingFilter
 parameter_list|(
@@ -148,6 +152,13 @@ operator|.
 name|prettyLogging
 operator|=
 literal|false
+expr_stmt|;
+name|transformerFactory
+operator|=
+name|TransformerFactory
+operator|.
+name|newInstance
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
@@ -244,10 +255,7 @@ block|{
 name|Transformer
 name|serializer
 init|=
-name|TransformerFactory
-operator|.
-name|newInstance
-argument_list|()
+name|transformerFactory
 operator|.
 name|newTransformer
 argument_list|()
