@@ -127,9 +127,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|token
+operator|.
+name|BinarySecurity
 import|;
 end_import
 
@@ -143,11 +145,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|message
-operator|.
-name|token
-operator|.
-name|BinarySecurity
+name|WSConstants
 import|;
 end_import
 

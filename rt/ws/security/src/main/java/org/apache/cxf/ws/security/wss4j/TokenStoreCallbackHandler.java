@@ -147,11 +147,11 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
 name|util
 operator|.
-name|WSSecurityUtil
+name|KeyUtils
 import|;
 end_import
 
@@ -382,7 +382,7 @@ name|byte
 index|[]
 name|digestBytes
 init|=
-name|WSSecurityUtil
+name|KeyUtils
 operator|.
 name|generateDigest
 argument_list|(

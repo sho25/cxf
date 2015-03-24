@@ -205,9 +205,7 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
-operator|.
-name|message
+name|common
 operator|.
 name|token
 operator|.
