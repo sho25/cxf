@@ -231,8 +231,6 @@ name|SecurityUtils
 operator|.
 name|loadResource
 argument_list|(
-literal|null
-argument_list|,
 name|cryptoResource
 argument_list|)
 decl_stmt|;

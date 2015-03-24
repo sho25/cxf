@@ -265,6 +265,20 @@ name|wss4j
 operator|.
 name|common
 operator|.
+name|WSS4JConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|common
+operator|.
 name|crypto
 operator|.
 name|Crypto
@@ -348,20 +362,6 @@ operator|.
 name|util
 operator|.
 name|KeyUtils
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|dom
-operator|.
-name|WSConstants
 import|;
 end_import
 
@@ -2483,7 +2483,7 @@ operator|.
 name|getDOM
 argument_list|()
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
@@ -2505,7 +2505,7 @@ name|getNode
 argument_list|(
 name|encryptedDataDOM
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
@@ -2609,7 +2609,7 @@ name|getNode
 argument_list|(
 name|encKeyElement
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
@@ -3207,7 +3207,7 @@ name|getNode
 argument_list|(
 name|parent
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
@@ -3268,7 +3268,7 @@ name|getNode
 argument_list|(
 name|parent
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|ENC_NS
 argument_list|,
@@ -3291,7 +3291,7 @@ name|getNode
 argument_list|(
 name|encMethod
 argument_list|,
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|SIG_NS
 argument_list|,

@@ -29,9 +29,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|common
 operator|.
-name|WSConstants
+name|WSS4JConstants
 import|;
 end_import
 
@@ -99,7 +99,7 @@ specifier|final
 name|String
 name|RSA_SHA1
 init|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|RSA_SHA1
 decl_stmt|;
@@ -109,7 +109,7 @@ specifier|final
 name|String
 name|DSA_SHA1
 init|=
-name|WSConstants
+name|WSS4JConstants
 operator|.
 name|DSA
 decl_stmt|;
