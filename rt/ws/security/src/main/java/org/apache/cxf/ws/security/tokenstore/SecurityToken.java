@@ -97,7 +97,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Properties
+name|Map
 import|;
 end_import
 
@@ -307,7 +307,12 @@ name|unattachedReference
 decl_stmt|;
 comment|/**      * A bag to hold any other properties      */
 specifier|private
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|properties
 decl_stmt|;
 comment|/**      * The secret associated with the Token      */
@@ -754,7 +759,12 @@ block|}
 block|}
 comment|/**      * @return Returns the properties.      */
 specifier|public
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|getProperties
 parameter_list|()
 block|{
@@ -767,7 +777,12 @@ specifier|public
 name|void
 name|setProperties
 parameter_list|(
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|properties
 parameter_list|)
 block|{

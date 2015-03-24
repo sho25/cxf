@@ -147,9 +147,7 @@ name|subjectDNPatterns
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Set a list of Strings corresponding to regular expression constraints on the subject DN      * of a certificate      */
@@ -175,9 +173,7 @@ name|subjectDNPatterns
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

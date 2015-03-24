@@ -714,9 +714,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try
@@ -1073,10 +1071,6 @@ name|String
 argument_list|>
 name|groups
 init|=
-literal|null
-decl_stmt|;
-name|groups
-operator|=
 name|LdapUtils
 operator|.
 name|getAttributeOfEntries
@@ -1100,7 +1094,7 @@ name|user
 argument_list|,
 literal|"cn"
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 if|if
 condition|(
 name|groups
@@ -1325,9 +1319,7 @@ name|filteredGroups
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

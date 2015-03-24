@@ -719,6 +719,9 @@ argument_list|,
 name|resultsList
 argument_list|)
 expr_stmt|;
+name|RequestRequirements
+name|requestRequirements
+init|=
 name|parser
 operator|.
 name|parseRequest
@@ -731,7 +734,7 @@ literal|null
 argument_list|,
 literal|null
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|SCTCanceller
 name|sctCanceller
 init|=
@@ -745,7 +748,7 @@ name|sctCanceller
 operator|.
 name|canHandleToken
 argument_list|(
-name|parser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -901,6 +904,9 @@ argument_list|,
 name|resultsList
 argument_list|)
 expr_stmt|;
+name|RequestRequirements
+name|requestRequirements
+init|=
 name|parser
 operator|.
 name|parseRequest
@@ -913,7 +919,7 @@ literal|null
 argument_list|,
 literal|null
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|SCTValidator
 name|sctValidator
 init|=
@@ -927,7 +933,7 @@ name|sctValidator
 operator|.
 name|canHandleToken
 argument_list|(
-name|parser
+name|requestRequirements
 operator|.
 name|getTokenRequirements
 argument_list|()
@@ -1091,6 +1097,9 @@ argument_list|,
 name|resultsList
 argument_list|)
 expr_stmt|;
+name|RequestRequirements
+name|requestRequirements
+init|=
 name|parser
 operator|.
 name|parseRequest
@@ -1103,10 +1112,10 @@ literal|null
 argument_list|,
 literal|null
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|assertNotNull
 argument_list|(
-name|parser
+name|requestRequirements
 operator|.
 name|getKeyRequirements
 argument_list|()

@@ -45,7 +45,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Properties
+name|Map
 import|;
 end_import
 
@@ -899,12 +899,7 @@ name|classes
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|classes
@@ -1340,7 +1335,12 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|Properties
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
 name|props
 init|=
 name|secToken
@@ -1358,9 +1358,12 @@ block|{
 name|String
 name|cachedRealm
 init|=
+operator|(
+name|String
+operator|)
 name|props
 operator|.
-name|getProperty
+name|get
 argument_list|(
 name|STSConstants
 operator|.

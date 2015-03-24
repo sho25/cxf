@@ -473,9 +473,7 @@ name|attributeList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String

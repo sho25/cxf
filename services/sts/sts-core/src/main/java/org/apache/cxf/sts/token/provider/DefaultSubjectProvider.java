@@ -1438,7 +1438,7 @@ if|if
 condition|(
 name|WSConstants
 operator|.
-name|WSS_SAML2_TOKEN_TYPE
+name|WSS_SAML_TOKEN_TYPE
 operator|.
 name|equals
 argument_list|(
@@ -1447,7 +1447,7 @@ argument_list|)
 operator|||
 name|WSConstants
 operator|.
-name|SAML2_NS
+name|SAML_NS
 operator|.
 name|equals
 argument_list|(
@@ -1477,7 +1477,7 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|SAML2Constants
+name|SAML1Constants
 operator|.
 name|CONF_HOLDER_KEY
 return|;
@@ -1485,7 +1485,7 @@ block|}
 else|else
 block|{
 return|return
-name|SAML2Constants
+name|SAML1Constants
 operator|.
 name|CONF_BEARER
 return|;
@@ -1515,7 +1515,7 @@ argument_list|)
 condition|)
 block|{
 return|return
-name|SAML1Constants
+name|SAML2Constants
 operator|.
 name|CONF_HOLDER_KEY
 return|;
@@ -1523,7 +1523,7 @@ block|}
 else|else
 block|{
 return|return
-name|SAML1Constants
+name|SAML2Constants
 operator|.
 name|CONF_BEARER
 return|;

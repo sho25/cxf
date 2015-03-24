@@ -160,9 +160,7 @@ name|endpointPatterns
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Return true if the supplied address corresponds to a known address for this service      */
