@@ -109,6 +109,20 @@ name|Request
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|eclipse
+operator|.
+name|jetty
+operator|.
+name|websocket
+operator|.
+name|WebSocketFactory
+import|;
+end_import
+
 begin_comment
 comment|/**  * The extended version of JettyHTTPHandler that can support websocket.  */
 end_comment
@@ -120,9 +134,10 @@ extends|extends
 name|JettyHTTPHandler
 block|{
 specifier|private
-name|JettyWebSocketManager
-name|webSocketManager
+name|WebSocketFactory
+name|webSocketFactory
 decl_stmt|;
+empty_stmt|;
 specifier|public
 name|JettyWebSocketHandler
 parameter_list|(
@@ -132,8 +147,8 @@ parameter_list|,
 name|boolean
 name|cmExact
 parameter_list|,
-name|JettyWebSocketManager
-name|webSocketManager
+name|WebSocketFactory
+name|webSocketFactory
 parameter_list|)
 block|{
 name|super
@@ -145,9 +160,9 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
-name|webSocketManager
+name|webSocketFactory
 operator|=
-name|webSocketManager
+name|webSocketFactory
 expr_stmt|;
 block|}
 annotation|@
@@ -175,7 +190,7 @@ name|ServletException
 block|{
 if|if
 condition|(
-name|webSocketManager
+name|webSocketFactory
 operator|.
 name|acceptWebSocket
 argument_list|(
