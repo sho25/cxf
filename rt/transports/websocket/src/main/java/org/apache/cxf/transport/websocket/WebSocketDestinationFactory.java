@@ -75,6 +75,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|SystemPropertyAction
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -277,6 +293,23 @@ literal|"org.apache.cxf.transport.websocket.atmosphere.AtmosphereWebSocketJettyD
 argument_list|)
 decl_stmt|;
 specifier|private
+specifier|final
+name|boolean
+name|atmosphereDisabled
+init|=
+name|Boolean
+operator|.
+name|valueOf
+argument_list|(
+name|SystemPropertyAction
+operator|.
+name|getPropertyOrNull
+argument_list|(
+literal|"org.apache.cxf.transport.websocket.atmosphere.disabled"
+argument_list|)
+argument_list|)
+decl_stmt|;
+specifier|private
 specifier|static
 name|boolean
 name|probeClass
@@ -433,6 +466,9 @@ decl_stmt|;
 if|if
 condition|(
 name|ATMOSPHERE_AVAILABLE
+operator|&&
+operator|!
+name|atmosphereDisabled
 condition|)
 block|{
 comment|// use atmosphere if available
@@ -509,6 +545,9 @@ comment|// choose atmosphere if available, otherwise assume jetty is available
 if|if
 condition|(
 name|ATMOSPHERE_AVAILABLE
+operator|&&
+operator|!
+name|atmosphereDisabled
 condition|)
 block|{
 comment|// use atmosphere if available
