@@ -56,9 +56,9 @@ argument_list|>
 name|getDecisionPhases
 parameter_list|()
 function_decl|;
-comment|/**      * Returns the number of milliseconds the request should be delayed before further processing      * @param phase      * @param m      * @return      */
-name|long
-name|getThrottleDelay
+comment|/**      * Use information in the message to determine what throttling measures should be taken      * @param phase      * @param m      * @return      */
+name|ThrottleResponse
+name|getThrottleResponse
 parameter_list|(
 name|String
 name|phase
