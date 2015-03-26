@@ -1854,6 +1854,13 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|endpointInfo
+operator|.
+name|getAddress
+argument_list|()
+operator|==
+literal|null
+operator|||
 operator|!
 name|endpointInfo
 operator|.

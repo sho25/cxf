@@ -256,6 +256,13 @@ operator|(
 literal|null
 operator|!=
 name|address
+operator|&&
+literal|null
+operator|!=
+name|address
+operator|.
+name|getAddress
+argument_list|()
 operator|)
 condition|?
 name|address
