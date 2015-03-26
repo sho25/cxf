@@ -1049,9 +1049,7 @@ name|certificateFiles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|File
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try
@@ -1278,9 +1276,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509Certificate
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|File
@@ -1389,9 +1385,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509Certificate
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|File
@@ -1500,9 +1494,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509CRL
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|File
@@ -1753,9 +1745,7 @@ name|result
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509Certificate
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|File
@@ -1930,9 +1920,7 @@ name|result
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509Certificate
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|File

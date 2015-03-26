@@ -698,9 +698,7 @@ name|ids
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509AppId
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ids
@@ -761,9 +759,7 @@ name|ids
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509AppId
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ids

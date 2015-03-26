@@ -745,9 +745,7 @@ name|keyIDs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|UseKeyWithType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -859,9 +857,7 @@ name|keyIDs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|UseKeyWithType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

@@ -680,9 +680,7 @@ name|locators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Locator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -694,9 +692,7 @@ name|validators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Validator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -708,9 +704,7 @@ name|keyRegisterHandlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Register
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
