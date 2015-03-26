@@ -1401,7 +1401,7 @@ operator|.
 name|create
 argument_list|(
 operator|new
-name|GreeterImpl
+name|Hello
 argument_list|()
 argument_list|)
 decl_stmt|;
