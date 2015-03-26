@@ -225,6 +225,14 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+comment|// Setting the limit should omit parts of the body but the result should still be well formed xml
+name|loggingFeature
+operator|.
+name|setLimit
+argument_list|(
+literal|140
+argument_list|)
+expr_stmt|;
 name|Endpoint
 name|ep
 init|=

@@ -172,6 +172,8 @@ name|int
 name|lim
 parameter_list|)
 block|{
+name|this
+operator|.
 name|limit
 operator|=
 name|lim
@@ -183,6 +185,8 @@ name|getLimit
 parameter_list|()
 block|{
 return|return
+name|this
+operator|.
 name|limit
 return|;
 block|}
@@ -194,6 +198,8 @@ name|long
 name|t
 parameter_list|)
 block|{
+name|this
+operator|.
 name|threshold
 operator|=
 name|t
