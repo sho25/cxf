@@ -11299,9 +11299,6 @@ argument_list|<
 name|String
 argument_list|>
 name|names
-parameter_list|,
-name|boolean
-name|sub
 parameter_list|)
 block|{
 name|List

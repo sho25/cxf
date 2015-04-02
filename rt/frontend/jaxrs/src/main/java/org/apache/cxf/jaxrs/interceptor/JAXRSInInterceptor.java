@@ -799,8 +799,6 @@ argument_list|,
 literal|true
 argument_list|,
 literal|null
-argument_list|,
-literal|false
 argument_list|)
 condition|)
 block|{
@@ -1429,6 +1427,12 @@ block|}
 comment|// Global and name-bound post-match request filters
 if|if
 condition|(
+operator|!
+name|ori
+operator|.
+name|isSubResourceLocator
+argument_list|()
+operator|&&
 name|JAXRSUtils
 operator|.
 name|runContainerRequestFilters
@@ -1443,8 +1447,6 @@ name|ori
 operator|.
 name|getNameBindings
 argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 condition|)
 block|{

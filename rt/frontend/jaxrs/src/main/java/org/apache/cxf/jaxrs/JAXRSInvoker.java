@@ -1771,6 +1771,12 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+operator|!
+name|subOri
+operator|.
+name|isSubResourceLocator
+argument_list|()
+operator|&&
 name|JAXRSUtils
 operator|.
 name|runContainerRequestFilters
@@ -1785,8 +1791,6 @@ name|subOri
 operator|.
 name|getNameBindings
 argument_list|()
-argument_list|,
-literal|true
 argument_list|)
 condition|)
 block|{
