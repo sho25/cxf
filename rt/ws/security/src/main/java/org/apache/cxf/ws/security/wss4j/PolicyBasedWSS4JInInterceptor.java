@@ -3106,7 +3106,7 @@ name|Collection
 argument_list|<
 name|WSDataRef
 argument_list|>
-name|signed
+name|dataRefs
 parameter_list|,
 name|SoapMessage
 name|msg
@@ -3201,7 +3201,7 @@ name|checkBodyCoverage
 argument_list|(
 name|soapBody
 argument_list|,
-name|signed
+name|dataRefs
 argument_list|,
 name|type
 argument_list|,
@@ -3219,7 +3219,7 @@ name|checkBodyCoverage
 argument_list|(
 name|soapBody
 argument_list|,
-name|signed
+name|dataRefs
 argument_list|,
 name|type
 argument_list|,
@@ -3275,7 +3275,7 @@ name|checkHeaderCoverage
 argument_list|(
 name|soapHeader
 argument_list|,
-name|signed
+name|dataRefs
 argument_list|,
 name|h
 operator|.
@@ -3372,7 +3372,7 @@ operator|.
 name|getAttachments
 argument_list|()
 argument_list|,
-name|signed
+name|dataRefs
 argument_list|,
 name|type
 argument_list|,
