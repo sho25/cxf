@@ -1941,9 +1941,6 @@ argument_list|(
 name|reqData
 argument_list|,
 name|wsResult
-operator|.
-name|getResults
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

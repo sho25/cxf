@@ -448,6 +448,9 @@ name|parameters
 operator|.
 name|getResults
 argument_list|()
+operator|.
+name|getResults
+argument_list|()
 argument_list|)
 decl_stmt|;
 for|for

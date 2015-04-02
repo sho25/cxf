@@ -871,6 +871,9 @@ name|parameters
 operator|.
 name|getResults
 argument_list|()
+operator|.
+name|getResults
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -1137,6 +1140,9 @@ name|parameters
 operator|.
 name|getResults
 argument_list|()
+operator|.
+name|getResults
+argument_list|()
 control|)
 block|{
 name|Integer
@@ -1324,6 +1330,9 @@ name|parameters
 operator|.
 name|getResults
 argument_list|()
+operator|.
+name|getResults
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -1442,6 +1451,9 @@ name|WSSecurityEngineResult
 name|wser
 range|:
 name|parameters
+operator|.
+name|getResults
+argument_list|()
 operator|.
 name|getResults
 argument_list|()
@@ -1616,6 +1628,9 @@ argument_list|(
 name|wser
 argument_list|,
 name|parameters
+operator|.
+name|getResults
+argument_list|()
 operator|.
 name|getResults
 argument_list|()
@@ -2049,6 +2064,9 @@ name|parameters
 operator|.
 name|getResults
 argument_list|()
+operator|.
+name|getResults
+argument_list|()
 control|)
 block|{
 name|Integer
@@ -2210,6 +2228,9 @@ argument_list|(
 name|secret
 argument_list|,
 name|parameters
+operator|.
+name|getResults
+argument_list|()
 operator|.
 name|getResults
 argument_list|()
@@ -4518,14 +4539,10 @@ decl_stmt|;
 if|if
 condition|(
 name|dataRefs
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{
-return|return
-literal|false
-return|;
-block|}
 for|for
 control|(
 name|WSDataRef
@@ -4547,6 +4564,7 @@ block|{
 return|return
 literal|true
 return|;
+block|}
 block|}
 block|}
 block|}

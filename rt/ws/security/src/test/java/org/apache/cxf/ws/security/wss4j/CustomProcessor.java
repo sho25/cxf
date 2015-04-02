@@ -190,6 +190,13 @@ argument_list|,
 name|this
 argument_list|)
 expr_stmt|;
+name|wsDocInfo
+operator|.
+name|addResult
+argument_list|(
+name|result
+argument_list|)
+expr_stmt|;
 return|return
 name|java
 operator|.

@@ -1486,9 +1486,6 @@ operator|.
 name|setResults
 argument_list|(
 name|rResult
-operator|.
-name|getResults
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|SecurityPolicyValidator

@@ -87,6 +87,22 @@ name|WSSecurityEngineResult
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|dom
+operator|.
+name|handler
+operator|.
+name|WSHandlerResult
+import|;
+end_import
+
 begin_comment
 comment|/**  * Holds various parameters to the policy validators  */
 end_comment
@@ -109,10 +125,7 @@ name|Element
 name|soapBody
 decl_stmt|;
 specifier|private
-name|List
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
+name|WSHandlerResult
 name|results
 decl_stmt|;
 specifier|private
@@ -200,10 +213,7 @@ name|soapBody
 expr_stmt|;
 block|}
 specifier|public
-name|List
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
+name|WSHandlerResult
 name|getResults
 parameter_list|()
 block|{
@@ -215,10 +225,7 @@ specifier|public
 name|void
 name|setResults
 parameter_list|(
-name|List
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
+name|WSHandlerResult
 name|results
 parameter_list|)
 block|{
