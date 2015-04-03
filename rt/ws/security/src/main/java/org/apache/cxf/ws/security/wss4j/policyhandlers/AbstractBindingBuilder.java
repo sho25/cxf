@@ -10053,8 +10053,15 @@ name|encryptedResults
 init|=
 name|rResult
 operator|.
-name|getResults
+name|getActionResults
 argument_list|()
+operator|.
+name|get
+argument_list|(
+name|WSConstants
+operator|.
+name|ENCR
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
