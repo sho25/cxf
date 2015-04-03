@@ -37,17 +37,17 @@ decl_stmt|;
 specifier|public
 name|JoseException
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JoseException
 parameter_list|(
 name|String
-name|text
+name|error
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|text
+name|error
 argument_list|)
 expr_stmt|;
 block|}
@@ -64,25 +64,6 @@ name|cause
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
-name|JoseException
-parameter_list|(
-name|String
-name|text
-parameter_list|,
-name|Throwable
-name|cause
-parameter_list|)
-block|{
-name|super
-argument_list|(
-name|text
-argument_list|,
-name|cause
-argument_list|)
-expr_stmt|;
-block|}
-comment|//Jose Error enum can be introduced too
 block|}
 end_class
 

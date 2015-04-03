@@ -189,6 +189,24 @@ name|security
 operator|.
 name|jose
 operator|.
+name|JoseException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
 name|JoseHeaders
 import|;
 end_import
@@ -429,8 +447,10 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
-argument_list|()
+name|JoseException
+argument_list|(
+literal|"JWT token is not available"
+argument_list|)
 throw|;
 block|}
 name|JoseUtils

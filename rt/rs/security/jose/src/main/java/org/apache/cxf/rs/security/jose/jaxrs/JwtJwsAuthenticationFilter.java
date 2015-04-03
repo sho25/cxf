@@ -141,6 +141,24 @@ name|security
 operator|.
 name|jose
 operator|.
+name|JoseException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
 name|jws
 operator|.
 name|JwsCompactConsumer
@@ -312,8 +330,10 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
-argument_list|()
+name|JoseException
+argument_list|(
+literal|"JWT scheme is expected"
+argument_list|)
 throw|;
 block|}
 name|JwsJwtCompactConsumer

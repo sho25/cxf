@@ -287,11 +287,6 @@ name|String
 name|algo
 parameter_list|)
 block|{
-name|String
-name|error
-init|=
-literal|"Invalid signature algorithm"
-decl_stmt|;
 if|if
 condition|(
 name|algo
@@ -303,9 +298,35 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-name|error
-operator|+
-literal|":"
+literal|"Signature algorithm is not set"
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|JwsException
+argument_list|(
+name|JwsException
+operator|.
+name|Error
+operator|.
+name|ALGORITHM_NOT_SET
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+operator|!
+name|isValidAlgorithmFamily
+argument_list|(
+name|algo
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Invalid signature algorithm: "
 operator|+
 name|algo
 argument_list|)
@@ -314,11 +335,24 @@ throw|throw
 operator|new
 name|JwsException
 argument_list|(
-name|error
+name|JwsException
+operator|.
+name|Error
+operator|.
+name|INVALID_ALGORITHM
 argument_list|)
 throw|;
 block|}
 block|}
+specifier|protected
+specifier|abstract
+name|boolean
+name|isValidAlgorithmFamily
+parameter_list|(
+name|String
+name|algo
+parameter_list|)
+function_decl|;
 block|}
 end_class
 
