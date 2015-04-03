@@ -4937,8 +4937,7 @@ return|return
 literal|true
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|context
 operator|.
 name|optionSet
@@ -4947,14 +4946,6 @@ name|ToolConstants
 operator|.
 name|CFG_NO_TYPES
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

@@ -181,8 +181,9 @@ operator|.
 name|GEN_FROM_SEI
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|genFromSei
 operator|&&
 name|env
@@ -205,14 +206,7 @@ operator|.
 name|IMPL_CLASS
 argument_list|)
 operator|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|public

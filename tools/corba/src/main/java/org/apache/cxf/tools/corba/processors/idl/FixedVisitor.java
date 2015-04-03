@@ -224,8 +224,7 @@ name|AST
 name|node
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|node
 operator|.
 name|getType
@@ -234,14 +233,6 @@ operator|==
 name|IDLTokenTypes
 operator|.
 name|LITERAL_fixed
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

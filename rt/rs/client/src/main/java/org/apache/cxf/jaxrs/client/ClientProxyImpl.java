@@ -2005,8 +2005,7 @@ return|return
 literal|true
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|p
 operator|.
 name|getType
@@ -2030,14 +2029,6 @@ operator|==
 name|AsyncResponse
 operator|.
 name|class
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

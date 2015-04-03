@@ -3739,8 +3739,8 @@ name|MediaType
 name|mt
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
+operator|!
 literal|"entry"
 operator|.
 name|equalsIgnoreCase
@@ -3755,14 +3755,6 @@ argument_list|(
 literal|"type"
 argument_list|)
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 specifier|public

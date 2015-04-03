@@ -105,8 +105,7 @@ operator|.
 name|getPeerCertificates
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|certs
 operator|!=
 literal|null
@@ -117,14 +116,6 @@ literal|0
 index|]
 operator|instanceof
 name|X509Certificate
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 catch|catch

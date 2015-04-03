@@ -1073,8 +1073,7 @@ name|Node
 name|node
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|ToolConstants
 operator|.
 name|NS_JAXWS_BINDINGS
@@ -1096,14 +1095,6 @@ operator|.
 name|getLocalName
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

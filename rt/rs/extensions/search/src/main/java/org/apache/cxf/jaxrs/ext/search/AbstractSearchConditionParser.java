@@ -1551,8 +1551,7 @@ argument_list|(
 name|m
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|pf
 operator|!=
 literal|null
@@ -1569,14 +1568,6 @@ name|EMPTY_ANNOTTAIONS
 argument_list|)
 operator|!=
 literal|null
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

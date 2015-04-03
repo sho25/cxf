@@ -468,8 +468,7 @@ name|Header
 name|header
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|header
 operator|.
 name|getName
@@ -484,14 +483,6 @@ name|Names
 operator|.
 name|WSA_NAMESPACE_NAME
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 block|}

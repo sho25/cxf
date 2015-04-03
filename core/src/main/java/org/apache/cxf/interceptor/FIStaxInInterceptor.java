@@ -479,8 +479,7 @@ name|message
 argument_list|)
 condition|)
 block|{
-if|if
-condition|(
+return|return
 name|isRequestor
 argument_list|(
 name|message
@@ -497,14 +496,6 @@ argument_list|(
 name|FI_GET_SUPPORTED
 argument_list|)
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 else|else

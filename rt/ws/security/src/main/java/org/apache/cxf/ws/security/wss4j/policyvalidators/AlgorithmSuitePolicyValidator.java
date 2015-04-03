@@ -295,8 +295,7 @@ name|AssertionInfo
 name|assertionInfo
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|assertionInfo
 operator|.
 name|getAssertion
@@ -335,14 +334,6 @@ name|getName
 argument_list|()
 argument_list|)
 operator|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Validate policies.      */
@@ -744,9 +735,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|checkKeyLengths
 argument_list|(
 name|result
@@ -757,14 +746,6 @@ name|ai
 argument_list|,
 literal|true
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Check the individual signature references      */
@@ -1096,9 +1077,7 @@ return|;
 block|}
 block|}
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|checkKeyLengths
 argument_list|(
 name|result
@@ -1109,14 +1088,6 @@ name|ai
 argument_list|,
 literal|false
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Check the key lengths of the secret and public keys.      */

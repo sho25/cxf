@@ -3712,8 +3712,7 @@ name|XMLStreamReader
 name|reader
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|ToolConstants
 operator|.
 name|JAXB_BINDINGS
@@ -3737,14 +3736,6 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private
@@ -3758,8 +3749,7 @@ name|XMLStreamReader
 name|reader
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|ToolConstants
 operator|.
 name|JAXWS_BINDINGS
@@ -3771,17 +3761,6 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-condition|)
-block|{
-comment|// Comment this check , by default wsdlLocation value will be the
-comment|// user input wsdl url
-comment|/*              * String wsdlLocation = reader.getAttributeValue(null,              * "wsdlLocation"); if (!StringUtils.isEmpty(wsdlLocation)) { return              * true; }              */
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|protected

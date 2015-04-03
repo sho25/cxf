@@ -1132,8 +1132,7 @@ name|XMLStreamReader
 name|reader
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|ToolConstants
 operator|.
 name|JAXB_BINDINGS
@@ -1145,14 +1144,6 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

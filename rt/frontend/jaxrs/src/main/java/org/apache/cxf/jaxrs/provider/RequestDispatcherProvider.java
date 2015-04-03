@@ -949,8 +949,7 @@ return|;
 block|}
 block|}
 block|}
-if|if
-condition|(
+return|return
 name|mc
 operator|!=
 literal|null
@@ -963,14 +962,6 @@ name|MESSAGE_RESOURCE_PATH_PROPERTY
 argument_list|)
 operator|!=
 literal|null
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

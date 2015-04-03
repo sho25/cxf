@@ -3251,8 +3251,9 @@ expr_stmt|;
 break|break;
 block|}
 block|}
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 literal|null
 operator|!=
 name|bodyElement
@@ -3261,14 +3262,7 @@ name|bodyElement
 operator|.
 name|hasChildNodes
 argument_list|()
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|private

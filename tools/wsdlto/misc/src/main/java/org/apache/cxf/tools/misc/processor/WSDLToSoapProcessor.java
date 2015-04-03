@@ -989,8 +989,9 @@ name|boolean
 name|nameSpaceCheck
 parameter_list|()
 block|{
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|WSDLConstants
 operator|.
 name|RPC
@@ -1019,14 +1020,7 @@ name|ToolConstants
 operator|.
 name|CFG_NAMESPACE
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|protected

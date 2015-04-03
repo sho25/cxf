@@ -991,8 +991,7 @@ name|serviceCounterName
 argument_list|)
 decl_stmt|;
 comment|//If serviceCounter is null, we need to wait ResponseTimeOutInterceptor to create it , hence set to true
-if|if
-condition|(
+return|return
 name|serviceCounter
 operator|==
 literal|null
@@ -1001,14 +1000,6 @@ name|serviceCounter
 operator|.
 name|isEnabled
 argument_list|()
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|protected

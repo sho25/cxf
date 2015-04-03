@@ -2756,8 +2756,7 @@ name|SoapMessage
 name|msg
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|actions
 operator|.
 name|contains
@@ -2775,14 +2774,6 @@ name|WSConstants
 operator|.
 name|UT_NOPASSWORD
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp       */
@@ -2800,8 +2791,7 @@ name|SoapMessage
 name|msg
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|actions
 operator|.
 name|contains
@@ -2810,14 +2800,6 @@ name|WSConstants
 operator|.
 name|TS
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token       */
@@ -2835,8 +2817,7 @@ name|SoapMessage
 name|msg
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|actions
 operator|.
 name|contains
@@ -2854,14 +2835,6 @@ name|WSConstants
 operator|.
 name|ST_SIGNED
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Set a WSS4J AlgorithmSuite object on the RequestData context, to restrict the      * algorithms that are allowed for encryption, signature, etc.      */

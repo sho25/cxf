@@ -294,8 +294,9 @@ name|boolean
 name|passthrough
 parameter_list|()
 block|{
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|env
 operator|.
 name|optionSet
@@ -322,14 +323,7 @@ name|ToolConstants
 operator|.
 name|CFG_GEN_ANT
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|public

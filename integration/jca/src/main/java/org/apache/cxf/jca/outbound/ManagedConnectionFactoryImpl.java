@@ -553,9 +553,7 @@ name|ManagedConnectionFactoryImpl
 operator|)
 name|o
 decl_stmt|;
-if|if
-condition|(
-operator|!
+return|return
 name|ObjectUtils
 operator|.
 name|equals
@@ -567,14 +565,6 @@ argument_list|()
 argument_list|,
 name|busConfigURL
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 specifier|public

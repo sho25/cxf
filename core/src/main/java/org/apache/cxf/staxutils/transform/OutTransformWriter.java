@@ -2444,8 +2444,7 @@ name|boolean
 name|shallow
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 operator|(
 name|dropDepth
 operator|>
@@ -2480,14 +2479,6 @@ argument_list|)
 argument_list|)
 operator|)
 operator|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 annotation|@

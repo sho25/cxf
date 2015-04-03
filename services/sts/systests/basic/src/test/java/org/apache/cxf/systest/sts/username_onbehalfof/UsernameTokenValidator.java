@@ -184,22 +184,13 @@ name|String
 name|realm
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|validateTarget
 operator|.
 name|getToken
 argument_list|()
 operator|instanceof
 name|UsernameTokenType
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Validate a Token using the given TokenValidatorParameters.      */

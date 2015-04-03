@@ -6212,8 +6212,7 @@ literal|true
 return|;
 block|}
 comment|// 2. Robust OneWays could have a fault
-if|if
-condition|(
+return|return
 name|responseCode
 operator|==
 literal|500
@@ -6230,14 +6229,6 @@ name|ROBUST_ONEWAY
 argument_list|,
 literal|false
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|protected

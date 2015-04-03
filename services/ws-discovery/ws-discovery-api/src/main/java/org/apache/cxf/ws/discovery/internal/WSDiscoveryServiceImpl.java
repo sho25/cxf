@@ -4133,8 +4133,9 @@ name|addc
 argument_list|)
 condition|)
 block|{
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|snr
 operator|!=
 literal|null
@@ -4146,14 +4147,7 @@ name|equals
 argument_list|(
 name|snc
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 return|return

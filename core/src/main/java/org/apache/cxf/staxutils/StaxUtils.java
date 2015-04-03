@@ -2062,8 +2062,7 @@ parameter_list|)
 block|{
 comment|//For now, we can only support Woodstox 4.2.x and newer as none of the other
 comment|//stax parsers support these settings
-if|if
-condition|(
+return|return
 name|setProperty
 argument_list|(
 name|factory
@@ -2126,14 +2125,6 @@ literal|"com.ctc.wstx.maxTextLength"
 argument_list|,
 name|maxTextLength
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

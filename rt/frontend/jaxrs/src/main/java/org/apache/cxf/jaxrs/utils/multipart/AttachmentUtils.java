@@ -1198,8 +1198,7 @@ operator|.
 name|getContentDisposition
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|cd
 operator|!=
 literal|null
@@ -1215,14 +1214,6 @@ argument_list|(
 literal|"name"
 argument_list|)
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

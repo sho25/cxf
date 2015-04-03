@@ -5596,8 +5596,7 @@ parameter_list|)
 block|{
 comment|// Now lets see if we have any attributes...
 comment|// This should probably look at the restricted and substitute types too.
-if|if
-condition|(
+return|return
 name|complexType
 operator|.
 name|getAnyAttribute
@@ -5613,14 +5612,6 @@ argument_list|()
 operator|.
 name|isEmpty
 argument_list|()
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

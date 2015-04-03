@@ -240,8 +240,7 @@ return|return
 literal|true
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|Boolean
 operator|.
 name|TRUE
@@ -260,14 +259,6 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

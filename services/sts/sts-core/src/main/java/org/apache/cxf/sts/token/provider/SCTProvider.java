@@ -377,8 +377,7 @@ name|String
 name|realm
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|STSUtils
 operator|.
 name|TOKEN_TYPE_SCT_05_02
@@ -396,14 +395,6 @@ name|equals
 argument_list|(
 name|tokenType
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Set whether Entropy is returned to the client or not      * @param returnEntropy whether Entropy is returned to the client or not      */

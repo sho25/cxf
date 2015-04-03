@@ -853,8 +853,7 @@ argument_list|>
 name|map
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|map
 operator|.
 name|containsKey
@@ -868,14 +867,6 @@ name|containsKey
 argument_list|(
 literal|"xsd"
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 block|}

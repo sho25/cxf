@@ -617,8 +617,7 @@ name|String
 name|tokenType
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|WSConstants
 operator|.
 name|WSS_SAML2_TOKEN_TYPE
@@ -654,14 +653,6 @@ name|equals
 argument_list|(
 name|tokenType
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

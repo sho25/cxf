@@ -568,8 +568,7 @@ return|return
 literal|true
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|expiresAt
 operator|>
 literal|0
@@ -584,14 +583,6 @@ argument_list|(
 name|expiresAt
 argument_list|)
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

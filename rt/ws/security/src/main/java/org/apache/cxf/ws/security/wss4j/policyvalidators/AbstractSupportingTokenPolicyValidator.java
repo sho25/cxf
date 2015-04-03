@@ -922,8 +922,9 @@ block|}
 block|}
 block|}
 block|}
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 operator|(
 name|isEndorsing
 argument_list|()
@@ -970,14 +971,7 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 comment|/**      * Process SAML Tokens. Only signed results are supported.      */
@@ -1101,9 +1095,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|validateSignedEncryptedPolicies
 argument_list|(
 name|parameters
@@ -1126,14 +1118,6 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Process Kerberos Tokens.      */
@@ -1436,9 +1420,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|validateSignedEncryptedPolicies
 argument_list|(
 name|tokenResults
@@ -1458,14 +1440,6 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Process X509 Tokens.      */
@@ -1755,9 +1729,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|validateSignedEncryptedPolicies
 argument_list|(
 name|tokenResults
@@ -1777,14 +1749,6 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Process KeyValue Tokens.      */
@@ -1977,9 +1941,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|validateSignedEncryptedPolicies
 argument_list|(
 name|tokenResults
@@ -1999,14 +1961,6 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Validate (SignedParts|SignedElements|EncryptedParts|EncryptedElements) policies of this      * SupportingToken.      */
@@ -2099,9 +2053,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|validateSignedEncryptedElements
 argument_list|(
 name|encryptedElements
@@ -2114,14 +2066,6 @@ name|tokenResults
 argument_list|,
 name|message
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Process Security Context Tokens.      */
@@ -2376,9 +2320,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|validateSignedEncryptedPolicies
 argument_list|(
 name|tokenResults
@@ -2398,14 +2340,6 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Find an EncryptedKey element that has a cert that matches the cert of the signature, then      * find a DerivedKey element that matches that EncryptedKey element.      */
@@ -2665,19 +2599,10 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|tlsInfo
 operator|!=
 literal|null
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Check the endorsing supporting token policy. If we're using the Transport Binding then      * check that the Timestamp is signed. Otherwise, check that the signature is signed.      * @return true if the endorsed supporting token policy is correct      */

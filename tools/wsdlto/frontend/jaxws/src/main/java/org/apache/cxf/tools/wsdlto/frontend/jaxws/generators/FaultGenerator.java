@@ -303,8 +303,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|env
 operator|.
 name|optionSet
@@ -367,14 +366,6 @@ name|ToolConstants
 operator|.
 name|CFG_GEN_SERVICE
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

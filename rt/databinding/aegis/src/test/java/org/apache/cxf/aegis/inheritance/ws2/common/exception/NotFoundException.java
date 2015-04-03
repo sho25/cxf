@@ -163,8 +163,9 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|id
 operator|!=
 literal|null
@@ -184,14 +185,7 @@ operator|.
 name|id
 operator|!=
 literal|null
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|public

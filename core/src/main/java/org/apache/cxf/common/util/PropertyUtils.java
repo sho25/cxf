@@ -171,8 +171,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|Boolean
 operator|.
 name|TRUE
@@ -191,14 +190,6 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * It might seem odd to return 'true' if a property == FALSE, but it is required sometimes.      *       * Returns false if a value is either the String "false" (regardless of case)  or Boolean.FALSE.      * @param property      * @return false if value is either the String "false" or Boolean.FALSE.  Otherwise returns      * true.      */
@@ -222,8 +213,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|Boolean
 operator|.
 name|FALSE
@@ -242,14 +232,6 @@ operator|.
 name|toString
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

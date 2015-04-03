@@ -2478,8 +2478,9 @@ operator|.
 name|getParentAssertion
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|supportingToken
 operator|instanceof
 name|SupportingTokens
@@ -2493,14 +2494,7 @@ operator|)
 operator|.
 name|isEndorsing
 argument_list|()
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|protected

@@ -3822,8 +3822,7 @@ argument_list|(
 name|ext
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
 name|soapHeader
 operator|.
 name|getMessage
@@ -3847,14 +3846,6 @@ operator|.
 name|getMessage
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

@@ -376,8 +376,10 @@ name|String
 name|name
 parameter_list|)
 block|{
-if|if
-condition|(
+comment|//the validator in ibm doesn't like this type.
+return|return
+operator|!
+operator|(
 name|System
 operator|.
 name|getProperty
@@ -396,15 +398,7 @@ name|equals
 argument_list|(
 name|name
 argument_list|)
-condition|)
-block|{
-comment|//the validator in ibm doesn't like this type.
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|public

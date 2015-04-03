@@ -171,8 +171,9 @@ name|BeanC
 operator|)
 name|o
 decl_stmt|;
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 operator|(
 name|propC
 operator|!=
@@ -198,14 +199,7 @@ name|propC
 operator|!=
 literal|null
 operator|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 specifier|public

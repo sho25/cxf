@@ -164,8 +164,7 @@ operator|.
 name|getToken
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
+return|return
 operator|(
 name|token
 operator|instanceof
@@ -186,14 +185,6 @@ operator|.
 name|getValueType
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

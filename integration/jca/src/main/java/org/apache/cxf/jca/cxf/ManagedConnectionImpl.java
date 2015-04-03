@@ -896,8 +896,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
 literal|null
 operator|!=
 name|cls
@@ -908,14 +907,6 @@ name|WebService
 operator|.
 name|class
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

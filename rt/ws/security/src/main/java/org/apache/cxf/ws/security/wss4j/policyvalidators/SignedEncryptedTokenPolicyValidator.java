@@ -251,8 +251,7 @@ name|AssertionInfo
 name|assertionInfo
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|assertionInfo
 operator|.
 name|getAssertion
@@ -274,14 +273,6 @@ operator|.
 name|getName
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 comment|/**      * Validate policies.       */

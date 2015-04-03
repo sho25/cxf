@@ -968,8 +968,7 @@ name|EndpointReferenceType
 name|epr
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|epr
 operator|!=
 literal|null
@@ -987,14 +986,6 @@ name|getWsdlLocation
 argument_list|()
 operator|==
 literal|null
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

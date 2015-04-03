@@ -468,21 +468,12 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
+operator|!
 name|executor
 operator|.
 name|isShutdown
 argument_list|()
-condition|)
-block|{
-comment|//System.err.println("engine shutdown");
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 specifier|private

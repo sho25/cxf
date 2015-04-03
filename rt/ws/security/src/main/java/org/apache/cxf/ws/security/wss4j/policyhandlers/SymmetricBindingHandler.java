@@ -6003,8 +6003,7 @@ name|boolean
 name|hasSignedPartsOrElements
 parameter_list|()
 block|{
-if|if
-condition|(
+return|return
 name|PolicyUtils
 operator|.
 name|getFirstAssertionByLocalname
@@ -6030,14 +6029,6 @@ name|SIGNED_ELEMENTS
 argument_list|)
 operator|!=
 literal|null
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 block|}

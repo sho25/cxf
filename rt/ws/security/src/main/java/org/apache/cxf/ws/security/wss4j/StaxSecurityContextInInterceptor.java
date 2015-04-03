@@ -1178,8 +1178,7 @@ literal|false
 return|;
 block|}
 comment|// Now check that a PublicKey/X509Certificate was used
-if|if
-condition|(
+return|return
 name|token
 operator|.
 name|getPublicKey
@@ -1204,14 +1203,6 @@ name|length
 operator|>
 literal|0
 operator|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private
@@ -1233,8 +1224,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|event
 operator|.
 name|getSecurityToken
@@ -1262,14 +1252,6 @@ argument_list|()
 operator|.
 name|isSigned
 argument_list|()
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

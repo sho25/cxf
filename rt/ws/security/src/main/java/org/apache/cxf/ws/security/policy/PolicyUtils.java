@@ -581,8 +581,7 @@ name|localname
 argument_list|)
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
+return|return
 operator|(
 name|sp11Ais
 operator|!=
@@ -606,14 +605,6 @@ operator|.
 name|isEmpty
 argument_list|()
 operator|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

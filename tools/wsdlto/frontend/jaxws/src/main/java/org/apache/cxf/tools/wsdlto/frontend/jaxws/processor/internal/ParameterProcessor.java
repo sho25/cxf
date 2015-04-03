@@ -3405,9 +3405,7 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
-operator|!
+return|return
 name|in
 operator|.
 name|getNamespaceURI
@@ -3420,14 +3418,6 @@ operator|.
 name|getNamespaceURI
 argument_list|()
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 specifier|private

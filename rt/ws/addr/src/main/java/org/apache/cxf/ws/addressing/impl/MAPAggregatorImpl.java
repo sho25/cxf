@@ -1544,10 +1544,9 @@ return|return
 literal|false
 return|;
 block|}
-if|if
-condition|(
+return|return
 literal|null
-operator|==
+operator|!=
 name|aim
 operator|.
 name|get
@@ -1556,15 +1555,6 @@ name|MetadataConstants
 operator|.
 name|ADDRESSING_ASSERTION_QNAME
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-comment|// no need to analyse the content of the Addressing assertion here
-return|return
-literal|true
 return|;
 block|}
 comment|/**      * Determine if the use of addressing is indicated by a UsingAddressing in the      * alternative chosen for the current message.      *       * @param message the current message      * @pre message is outbound      * @pre requestor role      */
@@ -1635,8 +1625,7 @@ return|return
 literal|true
 return|;
 block|}
-if|if
-condition|(
+return|return
 literal|null
 operator|!=
 name|aim
@@ -1647,14 +1636,6 @@ name|MetadataConstants
 operator|.
 name|USING_ADDRESSING_2006_QNAME
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

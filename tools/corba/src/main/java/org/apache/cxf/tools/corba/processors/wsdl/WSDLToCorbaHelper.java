@@ -10140,8 +10140,7 @@ name|QName
 name|typeName
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|typeName
 operator|.
 name|equals
@@ -10150,14 +10149,6 @@ name|ReferenceConstants
 operator|.
 name|WSADDRESSING_TYPE
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|private

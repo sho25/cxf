@@ -974,8 +974,7 @@ name|MediaType
 name|mt
 parameter_list|)
 block|{
-if|if
-condition|(
+return|return
 name|mediaTypeSupported
 argument_list|(
 name|mt
@@ -1038,14 +1037,6 @@ name|SUPPORT_TYPE_AS_MULTIPART
 argument_list|)
 argument_list|)
 operator|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|protected

@@ -428,8 +428,7 @@ return|return
 literal|true
 return|;
 block|}
-if|if
-condition|(
+return|return
 name|list
 operator|.
 name|size
@@ -446,14 +445,6 @@ argument_list|(
 literal|0
 argument_list|)
 argument_list|)
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
-return|return
-literal|false
 return|;
 block|}
 specifier|public

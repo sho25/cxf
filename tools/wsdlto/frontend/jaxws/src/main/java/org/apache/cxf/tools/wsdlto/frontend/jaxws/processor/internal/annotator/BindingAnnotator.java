@@ -786,8 +786,9 @@ name|ENCODED
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
+return|return
+operator|!
+operator|(
 name|intf
 operator|.
 name|getSOAPStyle
@@ -820,14 +821,7 @@ operator|.
 name|ParameterStyle
 operator|.
 name|WRAPPED
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
+operator|)
 return|;
 block|}
 block|}

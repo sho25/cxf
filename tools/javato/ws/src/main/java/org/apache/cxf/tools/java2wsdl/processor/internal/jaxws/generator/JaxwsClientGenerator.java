@@ -153,8 +153,8 @@ name|boolean
 name|passthrough
 parameter_list|()
 block|{
-if|if
-condition|(
+return|return
+operator|!
 name|env
 operator|.
 name|optionSet
@@ -163,14 +163,6 @@ name|ToolConstants
 operator|.
 name|CFG_CLIENT
 argument_list|)
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-return|return
-literal|true
 return|;
 block|}
 specifier|public
