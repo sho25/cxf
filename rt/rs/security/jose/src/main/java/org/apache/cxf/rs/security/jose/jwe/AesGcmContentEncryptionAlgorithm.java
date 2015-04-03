@@ -252,10 +252,23 @@ return|return
 name|algo
 return|;
 block|}
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Invalid content encryption algorithm"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
-argument_list|()
+name|JweException
+argument_list|(
+name|JweException
+operator|.
+name|Error
+operator|.
+name|INVALID_CONTENT_ALGORITHM
+argument_list|)
 throw|;
 block|}
 block|}

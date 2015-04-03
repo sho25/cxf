@@ -91,7 +91,9 @@ name|this
 argument_list|(
 name|privateKey
 argument_list|,
-literal|null
+name|KeyAlgorithm
+operator|.
+name|RSA_OAEP
 argument_list|)
 expr_stmt|;
 block|}
@@ -189,11 +191,11 @@ name|keyAlgo
 argument_list|)
 condition|)
 block|{
-throw|throw
-operator|new
-name|SecurityException
-argument_list|()
-throw|;
+name|reportInvalidKeyAlgorithm
+argument_list|(
+name|keyAlgo
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 block|}

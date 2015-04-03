@@ -255,6 +255,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -262,6 +274,22 @@ operator|.
 name|cxf
 operator|.
 name|Bus
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -356,6 +384,24 @@ operator|.
 name|message
 operator|.
 name|MessageUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|JoseException
 import|;
 end_import
 
@@ -498,6 +544,21 @@ name|String
 name|RSSEC_REPORT_KEY_PROP
 init|=
 literal|"rs.security.report.public.key"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|KeyManagementUtils
+operator|.
+name|class
+argument_list|)
 decl_stmt|;
 specifier|private
 name|KeyManagementUtils
@@ -659,9 +720,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"X509 Certificates can not be created"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -800,9 +868,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Public key can not be loaded"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -848,9 +923,16 @@ operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Properties resource is not identified"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|()
 throw|;
 block|}
@@ -1663,9 +1745,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Key store can not be loaded"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -1759,9 +1848,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"X509 Certificate can not be encoded"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -1844,9 +1940,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"X509 Certificate can not be decoded"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -2028,9 +2131,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Certificate path validation error"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -2167,7 +2277,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|()
 throw|;
 block|}
@@ -2230,9 +2340,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Properties resource is not identified"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)
@@ -2323,9 +2440,16 @@ operator|&&
 name|required
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Properties resource is not identified"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|()
 throw|;
 block|}
@@ -2463,9 +2587,16 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Private key can not be loaded"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)

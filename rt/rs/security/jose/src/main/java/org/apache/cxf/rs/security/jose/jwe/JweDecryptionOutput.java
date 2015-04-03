@@ -31,6 +31,24 @@ name|UnsupportedEncodingException
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|JoseException
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -114,7 +132,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JoseException
 argument_list|(
 name|ex
 argument_list|)

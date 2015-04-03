@@ -215,10 +215,23 @@ operator|>
 literal|1
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"Custom IV is recommeded to be used once"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
-name|SecurityException
-argument_list|()
+name|JweException
+argument_list|(
+name|JweException
+operator|.
+name|Error
+operator|.
+name|CUSTOM_IV_REUSED
+argument_list|)
 throw|;
 block|}
 else|else
