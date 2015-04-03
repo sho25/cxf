@@ -1643,6 +1643,13 @@ operator|.
 name|SCT
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|sctResults
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|WSSecurityEngineResult
@@ -1827,6 +1834,7 @@ block|}
 return|return
 literal|true
 return|;
+block|}
 block|}
 block|}
 block|}
