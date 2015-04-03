@@ -436,16 +436,13 @@ argument_list|,
 literal|"true"
 argument_list|)
 expr_stmt|;
-name|framework
-operator|.
-name|interceptor
-argument_list|(
 name|AtmosphereUtils
 operator|.
-name|getInterceptor
+name|addInterceptors
 argument_list|(
+name|framework
+argument_list|,
 name|bus
-argument_list|)
 argument_list|)
 expr_stmt|;
 name|framework
@@ -769,6 +766,15 @@ name|run
 argument_list|()
 expr_stmt|;
 block|}
+block|}
+comment|// used for internal tests
+name|AtmosphereFramework
+name|getAtmosphereFramework
+parameter_list|()
+block|{
+return|return
+name|framework
+return|;
 block|}
 block|}
 end_class
