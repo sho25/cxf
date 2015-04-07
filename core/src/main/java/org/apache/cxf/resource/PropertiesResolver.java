@@ -98,6 +98,17 @@ argument_list|>
 name|resourceType
 parameter_list|)
 block|{
+if|if
+condition|(
+name|resourceName
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 name|Object
 name|obj
 init|=
