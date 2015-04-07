@@ -2123,7 +2123,32 @@ block|,
 name|SP13Constants
 operator|.
 name|MUST_SUPPORT_INTERACTIVE_CHALLENGE
-block|,                      }
+block|,
+comment|// AlgorithmSuite misc
+operator|new
+name|QName
+argument_list|(
+name|SP11Constants
+operator|.
+name|SP_NS
+argument_list|,
+name|SPConstants
+operator|.
+name|INCLUSIVE_C14N
+argument_list|)
+block|,
+operator|new
+name|QName
+argument_list|(
+name|SP12Constants
+operator|.
+name|SP_NS
+argument_list|,
+name|SPConstants
+operator|.
+name|INCLUSIVE_C14N
+argument_list|)
+block|,         }
 argument_list|)
 decl_stmt|;
 specifier|final

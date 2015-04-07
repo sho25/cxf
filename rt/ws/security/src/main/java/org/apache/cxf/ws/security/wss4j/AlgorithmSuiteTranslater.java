@@ -748,6 +748,15 @@ name|addTransformAlgorithm
 argument_list|(
 name|WSConstants
 operator|.
+name|C14N_EXCL_OMIT_COMMENTS
+argument_list|)
+expr_stmt|;
+name|algorithmSuite
+operator|.
+name|addTransformAlgorithm
+argument_list|(
+name|WSConstants
+operator|.
 name|NS_XMLDSIG_ENVELOPED_SIGNATURE
 argument_list|)
 expr_stmt|;
