@@ -139,18 +139,6 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
-if|if
-condition|(
-name|isRequestor
-argument_list|(
-name|message
-argument_list|)
-condition|)
-block|{
-comment|//
-block|}
-else|else
-block|{
 name|OutputStream
 name|out
 init|=
@@ -204,7 +192,6 @@ argument_list|,
 name|newOut
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}
