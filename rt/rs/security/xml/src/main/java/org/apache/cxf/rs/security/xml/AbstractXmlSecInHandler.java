@@ -225,6 +225,24 @@ specifier|abstract
 class|class
 name|AbstractXmlSecInHandler
 block|{
+comment|/**      * A key used to reference the cert that was used to verify the signed request      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SIGNING_CERT
+init|=
+literal|"xml.security.signing.cert"
+decl_stmt|;
+comment|/**      * A key used to reference the public key that was used to verify the signed request      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SIGNING_PUBLIC_KEY
+init|=
+literal|"xml.security.signing.public.key"
+decl_stmt|;
 specifier|protected
 specifier|static
 specifier|final
