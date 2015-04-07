@@ -120,9 +120,11 @@ operator|=
 operator|new
 name|CodahaleMetricsContext
 argument_list|(
-literal|"Customer-"
+literal|"demo.server:customer="
 operator|+
 name|name
+operator|+
+literal|",type=Customer,"
 argument_list|,
 name|registry
 argument_list|)
