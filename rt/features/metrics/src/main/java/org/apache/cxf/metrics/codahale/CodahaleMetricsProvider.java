@@ -289,8 +289,8 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-specifier|protected
-specifier|final
+specifier|public
+specifier|static
 name|void
 name|setupJMXReporter
 parameter_list|(
