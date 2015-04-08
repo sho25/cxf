@@ -2852,7 +2852,7 @@ name|boolean
 name|isResponseRedirected
 parameter_list|(
 name|Message
-name|outMessage
+name|m
 parameter_list|)
 block|{
 return|return
@@ -2862,7 +2862,10 @@ name|TRUE
 operator|.
 name|equals
 argument_list|(
-name|outMessage
+name|m
+operator|.
+name|getExchange
+argument_list|()
 operator|.
 name|get
 argument_list|(
