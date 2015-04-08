@@ -545,6 +545,15 @@ name|SCT_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.sct.validator"
 decl_stmt|;
+comment|/**      * This refers to a Map of QName, SecurityPolicyValidator, which retrieves a SecurityPolicyValidator      * implementation to validate a particular security policy, based on the QName of the policy. Any      * SecurityPolicyValidator implementation defined in this map will override the default value      * used internally for the corresponding QName.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|POLICY_VALIDATOR_MAP
+init|=
+literal|"ws-security.policy.validator.map"
+decl_stmt|;
 comment|//
 comment|// STS Client Configuration tags
 comment|//
@@ -925,6 +934,8 @@ block|,
 name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
 block|,
 name|AUDIENCE_RESTRICTION_VALIDATION
+block|,
+name|POLICY_VALIDATOR_MAP
 block|}
 argument_list|)
 argument_list|)

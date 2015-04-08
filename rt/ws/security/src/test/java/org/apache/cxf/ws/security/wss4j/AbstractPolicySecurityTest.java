@@ -1374,7 +1374,7 @@ block|}
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|checkAssertion
 parameter_list|(
