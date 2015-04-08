@@ -4464,7 +4464,7 @@ name|getInstance
 argument_list|(
 name|cfg
 operator|.
-name|getBus
+name|getEndpoint
 argument_list|()
 argument_list|)
 decl_stmt|;
