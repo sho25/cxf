@@ -306,17 +306,6 @@ operator|.
 name|CONTENT_TYPE
 argument_list|)
 decl_stmt|;
-name|bodyCt
-operator|=
-name|bodyCt
-operator|.
-name|replaceAll
-argument_list|(
-literal|"\""
-argument_list|,
-literal|"\\\""
-argument_list|)
-expr_stmt|;
 comment|// The bodyCt string is used enclosed within "", so if it contains the character ", it
 comment|// should be adjusted, like in the following case:
 comment|//   application/soap+xml; action="urn:ihe:iti:2007:RetrieveDocumentSet"
@@ -476,13 +465,6 @@ operator|-
 literal|1
 condition|)
 block|{
-name|ct
-operator|.
-name|append
-argument_list|(
-literal|"; "
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|xop
@@ -492,7 +474,7 @@ name|ct
 operator|.
 name|append
 argument_list|(
-literal|"type=\"application/xop+xml\""
+literal|"; type=\"application/xop+xml\""
 argument_list|)
 expr_stmt|;
 block|}
@@ -502,7 +484,7 @@ name|ct
 operator|.
 name|append
 argument_list|(
-literal|"type=\""
+literal|"; type=\""
 argument_list|)
 operator|.
 name|append
@@ -522,12 +504,7 @@ name|ct
 operator|.
 name|append
 argument_list|(
-literal|"; "
-argument_list|)
-operator|.
-name|append
-argument_list|(
-literal|"boundary=\""
+literal|"; boundary=\""
 argument_list|)
 operator|.
 name|append
@@ -564,12 +541,7 @@ name|ct
 operator|.
 name|append
 argument_list|(
-literal|"; "
-argument_list|)
-operator|.
-name|append
-argument_list|(
-literal|"start=\"<"
+literal|"; start=\"<"
 argument_list|)
 operator|.
 name|append
@@ -599,12 +571,7 @@ name|ct
 operator|.
 name|append
 argument_list|(
-literal|"; "
-argument_list|)
-operator|.
-name|append
-argument_list|(
-literal|"start-info=\""
+literal|"; start-info=\""
 argument_list|)
 operator|.
 name|append
@@ -719,15 +686,11 @@ name|mimeBodyCt
 operator|.
 name|append
 argument_list|(
-operator|(
 name|xop
 condition|?
-literal|"application/xop+xml"
+literal|"application/xop+xml; charset="
 else|:
-literal|"text/xml"
-operator|)
-operator|+
-literal|"; charset="
+literal|"text/xml; charset="
 argument_list|)
 operator|.
 name|append
@@ -931,14 +894,7 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"\r\n"
-argument_list|)
-expr_stmt|;
-name|writer
-operator|.
-name|write
-argument_list|(
-literal|"Content-Type: "
+literal|"\r\nContent-Type: "
 argument_list|)
 expr_stmt|;
 name|writer
@@ -952,14 +908,7 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"\r\n"
-argument_list|)
-expr_stmt|;
-name|writer
-operator|.
-name|write
-argument_list|(
-literal|"Content-Transfer-Encoding: binary\r\n"
+literal|"\r\nContent-Transfer-Encoding: binary\r\n"
 argument_list|)
 expr_stmt|;
 if|if
@@ -1066,7 +1015,12 @@ operator|.
 name|write
 argument_list|(
 name|name
-operator|+
+argument_list|)
+expr_stmt|;
+name|writer
+operator|.
+name|write
+argument_list|(
 literal|": "
 argument_list|)
 expr_stmt|;
@@ -1243,14 +1197,7 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"\r\n"
-argument_list|)
-expr_stmt|;
-name|writer
-operator|.
-name|write
-argument_list|(
-literal|"--"
+literal|"\r\n--"
 argument_list|)
 expr_stmt|;
 name|writer
@@ -1426,14 +1373,7 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"\r\n"
-argument_list|)
-expr_stmt|;
-name|writer
-operator|.
-name|write
-argument_list|(
-literal|"--"
+literal|"\r\n--"
 argument_list|)
 expr_stmt|;
 name|writer
