@@ -387,6 +387,13 @@ name|isDOMElement
 argument_list|()
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Delegation token is not valid"
+argument_list|)
+expr_stmt|;
 return|return
 name|response
 return|;
@@ -404,11 +411,38 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Delegation is allowed for principal "
+operator|+
+name|tokenParameters
+operator|.
+name|getPrincipal
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|response
 operator|.
 name|setDelegationAllowed
 argument_list|(
 literal|true
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Delegation is not allowed for principal "
+operator|+
+name|tokenParameters
+operator|.
+name|getPrincipal
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

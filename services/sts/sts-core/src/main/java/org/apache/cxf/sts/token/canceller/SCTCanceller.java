@@ -730,6 +730,13 @@ operator|.
 name|CANCELLED
 argument_list|)
 expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SecurityContextToken successfully cancelled"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

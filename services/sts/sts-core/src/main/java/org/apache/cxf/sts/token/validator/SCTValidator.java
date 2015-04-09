@@ -631,6 +631,13 @@ operator|.
 name|VALID
 argument_list|)
 expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SecurityContextToken successfully validated"
+argument_list|)
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(

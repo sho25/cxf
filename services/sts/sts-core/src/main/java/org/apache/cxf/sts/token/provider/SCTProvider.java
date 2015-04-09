@@ -953,6 +953,13 @@ argument_list|(
 name|unAttachedReference
 argument_list|)
 expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SecurityContextToken successfully created"
+argument_list|)
+expr_stmt|;
 return|return
 name|response
 return|;

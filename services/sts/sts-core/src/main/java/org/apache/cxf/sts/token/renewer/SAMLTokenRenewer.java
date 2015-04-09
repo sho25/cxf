@@ -1537,6 +1537,13 @@ name|toDate
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"SAML Token successfully renewed"
+argument_list|)
+expr_stmt|;
 return|return
 name|response
 return|;

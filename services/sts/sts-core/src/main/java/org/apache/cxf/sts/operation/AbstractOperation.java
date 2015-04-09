@@ -3630,6 +3630,22 @@ argument_list|(
 name|token
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|tokenValidators
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"No token validators have been configured to validate the received token"
+argument_list|)
+expr_stmt|;
+block|}
 name|TokenValidatorResponse
 name|tokenResponse
 init|=
@@ -3756,6 +3772,21 @@ expr_stmt|;
 block|}
 break|break;
 block|}
+block|}
+if|if
+condition|(
+name|tokenResponse
+operator|==
+literal|null
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"No token validator has been configured to validate the received token"
+argument_list|)
+expr_stmt|;
 block|}
 return|return
 name|tokenResponse
