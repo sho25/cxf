@@ -1600,6 +1600,13 @@ operator|new
 name|MessageImpl
 argument_list|()
 decl_stmt|;
+name|ex
+operator|.
+name|setOutMessage
+argument_list|(
+name|res
+argument_list|)
+expr_stmt|;
 name|res
 operator|.
 name|put
