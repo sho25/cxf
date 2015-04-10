@@ -345,8 +345,6 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
-name|super
-operator|.
 name|validateSignature
 argument_list|(
 name|jwtToken
@@ -365,8 +363,6 @@ name|getDecodedSignature
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|super
-operator|.
 name|validateClaims
 argument_list|(
 name|client
