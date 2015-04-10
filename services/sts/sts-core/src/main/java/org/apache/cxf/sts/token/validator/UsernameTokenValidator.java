@@ -1055,9 +1055,9 @@ block|{
 name|boolean
 name|allowNamespaceQualifiedPasswordTypes
 init|=
-name|wssConfig
+name|requestData
 operator|.
-name|getAllowNamespaceQualifiedPasswordTypes
+name|isAllowNamespaceQualifiedPasswordTypes
 argument_list|()
 decl_stmt|;
 name|UsernameToken
