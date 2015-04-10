@@ -1929,9 +1929,6 @@ if|if
 condition|(
 name|reqData
 operator|.
-name|getWssConfig
-argument_list|()
-operator|.
 name|isEnableSignatureConfirmation
 argument_list|()
 condition|)
@@ -2226,11 +2223,6 @@ throw|;
 block|}
 finally|finally
 block|{
-name|reqData
-operator|.
-name|clear
-argument_list|()
-expr_stmt|;
 name|reqData
 operator|=
 literal|null

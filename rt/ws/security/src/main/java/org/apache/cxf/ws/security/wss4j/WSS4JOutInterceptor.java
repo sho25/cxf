@@ -1428,11 +1428,6 @@ block|}
 finally|finally
 block|{
 name|reqData
-operator|.
-name|clear
-argument_list|()
-expr_stmt|;
-name|reqData
 operator|=
 literal|null
 expr_stmt|;
