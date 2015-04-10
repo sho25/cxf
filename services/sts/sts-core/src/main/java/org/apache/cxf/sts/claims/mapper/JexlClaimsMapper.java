@@ -288,6 +288,15 @@ name|ClaimUtils
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|functions
+operator|.
+name|put
+argument_list|(
+literal|"LOG"
+argument_list|,
+name|LOG
+argument_list|)
+expr_stmt|;
 name|jexlEngine
 operator|.
 name|setFunctions
