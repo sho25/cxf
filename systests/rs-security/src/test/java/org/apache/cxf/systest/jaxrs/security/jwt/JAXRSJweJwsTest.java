@@ -83,16 +83,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|crypto
-operator|.
-name|Cipher
-import|;
-end_import
-
-begin_import
-import|import
 name|com
 operator|.
 name|fasterxml
@@ -264,26 +254,6 @@ operator|.
 name|jaxrs
 operator|.
 name|PrivateKeyPasswordProvider
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|jose
-operator|.
-name|jwa
-operator|.
-name|AlgorithmUtils
 import|;
 end_import
 
@@ -624,26 +594,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-try|try
-block|{
-comment|// Java 8 apparently has it
-name|Cipher
-operator|.
-name|getInstance
-argument_list|(
-name|AlgorithmUtils
-operator|.
-name|AES_GCM_ALGO_JAVA
-argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|Throwable
-name|t
-parameter_list|)
-block|{
-comment|// Oracle Java 7
+comment|// Still need it for Oracle Java 7 and Java 8
 name|Security
 operator|.
 name|addProvider
@@ -653,7 +604,6 @@ name|BouncyCastleProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 annotation|@
 name|AfterClass
