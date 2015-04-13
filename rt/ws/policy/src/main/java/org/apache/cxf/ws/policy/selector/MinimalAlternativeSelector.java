@@ -219,12 +219,55 @@ name|alternative
 argument_list|,
 name|request
 argument_list|)
-operator|&&
-operator|(
+condition|)
+block|{
+if|if
+condition|(
 literal|null
 operator|==
 name|choice
-operator|||
+condition|)
+block|{
+name|choice
+operator|=
+name|alternative
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|request
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//we have a request policy, we likely want the one longest alternative that
+comment|//matches as any of "optional" incoming policies so that asssertions that were
+comment|//asserted on the incoming will also be assertable on the outgoing.
+comment|//Example: ws:addressing policy asserted on incoming should also be
+comment|// used to add headers for the response
+if|if
+condition|(
+name|alternative
+operator|.
+name|size
+argument_list|()
+operator|>
+name|choice
+operator|.
+name|size
+argument_list|()
+condition|)
+block|{
+name|choice
+operator|=
+name|alternative
+expr_stmt|;
+block|}
+block|}
+elseif|else
+if|if
+condition|(
 name|alternative
 operator|.
 name|size
@@ -234,13 +277,13 @@ name|choice
 operator|.
 name|size
 argument_list|()
-operator|)
 condition|)
 block|{
 name|choice
 operator|=
 name|alternative
 expr_stmt|;
+block|}
 block|}
 block|}
 if|if
