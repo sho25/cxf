@@ -523,6 +523,8 @@ name|security
 operator|.
 name|saml
 operator|.
+name|claims
+operator|.
 name|SAMLSecurityContext
 import|;
 end_import

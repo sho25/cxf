@@ -515,6 +515,8 @@ name|security
 operator|.
 name|saml
 operator|.
+name|claims
+operator|.
 name|SAMLSecurityContext
 import|;
 end_import
@@ -1163,6 +1165,8 @@ name|security
 operator|.
 name|saml
 operator|.
+name|utils
+operator|.
 name|SAMLUtils
 operator|.
 name|getClaims
@@ -1187,6 +1191,8 @@ operator|.
 name|security
 operator|.
 name|saml
+operator|.
+name|utils
 operator|.
 name|SAMLUtils
 operator|.
@@ -1232,6 +1238,8 @@ name|security
 operator|.
 name|saml
 operator|.
+name|utils
+operator|.
 name|SAMLUtils
 operator|.
 name|getIssuer
@@ -1255,6 +1263,8 @@ operator|.
 name|security
 operator|.
 name|saml
+operator|.
+name|utils
 operator|.
 name|SAMLUtils
 operator|.

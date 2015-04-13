@@ -215,6 +215,8 @@ name|security
 operator|.
 name|saml
 operator|.
+name|claims
+operator|.
 name|SAMLSecurityContext
 import|;
 end_import
@@ -232,6 +234,8 @@ operator|.
 name|security
 operator|.
 name|saml
+operator|.
+name|utils
 operator|.
 name|SAMLUtils
 import|;

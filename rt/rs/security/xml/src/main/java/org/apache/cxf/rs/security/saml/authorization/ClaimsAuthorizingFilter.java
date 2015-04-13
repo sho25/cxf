@@ -141,6 +141,8 @@ name|rt
 operator|.
 name|security
 operator|.
+name|saml
+operator|.
 name|claims
 operator|.
 name|ClaimBean
@@ -159,7 +161,9 @@ name|rt
 operator|.
 name|security
 operator|.
-name|claims
+name|saml
+operator|.
+name|interceptor
 operator|.
 name|ClaimsAuthorizingInterceptor
 import|;
