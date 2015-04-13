@@ -123,22 +123,6 @@ name|WSPasswordCallback
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|common
-operator|.
-name|ext
-operator|.
-name|WSSecurityException
-import|;
-end_import
-
 begin_class
 specifier|final
 class|class
@@ -311,7 +295,7 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|WSSecurityException
+name|Exception
 name|ex
 parameter_list|)
 block|{

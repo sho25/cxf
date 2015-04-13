@@ -2067,6 +2067,8 @@ operator|.
 name|SAML_CALLBACK_HANDLER
 argument_list|)
 decl_stmt|;
+try|try
+block|{
 name|CallbackHandler
 name|handler
 init|=
@@ -2102,6 +2104,27 @@ argument_list|(
 name|handler
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|WSSecurityException
+argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
+name|ex
+argument_list|)
+throw|;
+block|}
 comment|// Action
 name|WSSConstants
 operator|.
