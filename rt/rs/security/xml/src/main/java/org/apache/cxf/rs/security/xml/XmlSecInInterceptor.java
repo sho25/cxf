@@ -407,9 +407,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|staxutils
+name|rt
 operator|.
-name|StaxUtils
+name|security
+operator|.
+name|SecurityConstants
 import|;
 end_import
 
@@ -421,11 +423,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|staxutils
 operator|.
-name|security
-operator|.
-name|SecurityConstants
+name|StaxUtils
 import|;
 end_import
 

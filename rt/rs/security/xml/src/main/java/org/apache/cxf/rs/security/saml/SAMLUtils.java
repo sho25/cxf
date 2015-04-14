@@ -189,7 +189,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|rt
 operator|.
 name|security
 operator|.

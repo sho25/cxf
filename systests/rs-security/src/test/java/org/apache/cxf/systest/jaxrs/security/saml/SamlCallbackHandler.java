@@ -205,11 +205,7 @@ name|rt
 operator|.
 name|security
 operator|.
-name|saml
-operator|.
-name|claims
-operator|.
-name|SAMLClaim
+name|SecurityConstants
 import|;
 end_import
 
@@ -221,11 +217,15 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ws
+name|rt
 operator|.
 name|security
 operator|.
-name|SecurityConstants
+name|saml
+operator|.
+name|claims
+operator|.
+name|SAMLClaim
 import|;
 end_import
 

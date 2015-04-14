@@ -1138,13 +1138,15 @@ block|{
 name|Object
 name|o
 init|=
-name|message
+name|SecurityUtils
 operator|.
-name|getContextualProperty
+name|getSecurityPropertyValue
 argument_list|(
 name|SecurityConstants
 operator|.
 name|CALLBACK_HANDLER
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 name|handler

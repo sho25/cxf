@@ -147,11 +147,13 @@ block|{
 name|Object
 name|o
 init|=
-name|message
+name|SecurityUtils
 operator|.
-name|getContextualProperty
+name|getSecurityPropertyValue
 argument_list|(
 name|propKey
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 if|if

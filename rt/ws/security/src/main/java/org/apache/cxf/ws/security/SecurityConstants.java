@@ -66,46 +66,22 @@ specifier|public
 specifier|final
 class|class
 name|SecurityConstants
+extends|extends
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|SecurityConstants
 block|{
 comment|//
 comment|// User properties
 comment|//
-comment|/**      * The user's name. It is used differently by each of the WS-Security functions:      * a) It is used as the name in the UsernameToken      * b) It is used as the alias name in the keystore to get the user's cert and private key for signature      *    if {@link SIGNATURE_USERNAME} is not set.      * c) It is used as the alias name in the keystore to get the user's public key for encryption if       *    {@link ENCRYPT_USERNAME} is not set.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|USERNAME
-init|=
-literal|"ws-security.username"
-decl_stmt|;
-comment|/**      * The user's password when a {@link CALLBACK_HANDLER} is not defined. It is currently only used for       * the case of adding a password to a UsernameToken.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|PASSWORD
-init|=
-literal|"ws-security.password"
-decl_stmt|;
-comment|/**      * The user's name for signature. It is used as the alias name in the keystore to get the user's cert       * and private key for signature. If this is not defined, then {@link USERNAME} is used instead. If       * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link SIGNATURE_PROPERTIES}. If that's also not set, and the keystore only contains a single key,       * that key will be used.       */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SIGNATURE_USERNAME
-init|=
-literal|"ws-security.signature.username"
-decl_stmt|;
-comment|/**      * The user's name for encryption. It is used as the alias name in the keystore to get the user's public       * key for encryption. If this is not defined, then {@link USERNAME} is used instead. If       * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link ENCRYPT_PROPERTIES}. If that's also not set, and the keystore only contains a single key,       * that key will be used.      *       * For the web service provider, the "useReqSigCert" keyword can be used to accept (encrypt to) any       * client whose public key is in the service's truststore (defined in {@link ENCRYPT_PROPERTIES}).      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_USERNAME
-init|=
-literal|"ws-security.encryption.username"
-decl_stmt|;
 comment|/**      * The actor or role name of the wsse:Security header. If this parameter       * is omitted, the actor name is not set.      */
 specifier|public
 specifier|static
@@ -114,72 +90,6 @@ name|String
 name|ACTOR
 init|=
 literal|"ws-security.actor"
-decl_stmt|;
-comment|//
-comment|// Callback class and Crypto properties
-comment|//
-comment|/**      * The CallbackHandler implementation class used to obtain passwords, for both outbound and inbound       * requests. The value of this tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|CALLBACK_HANDLER
-init|=
-literal|"ws-security.callback-handler"
-decl_stmt|;
-comment|/**      * The SAML CallbackHandler implementation class used to construct SAML Assertions. The value of this       * tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SAML_CALLBACK_HANDLER
-init|=
-literal|"ws-security.saml-callback-handler"
-decl_stmt|;
-comment|/**      * The Crypto property configuration to use for signature, if {@link SIGNATURE_CRYPTO} is not set instead.      * The value of this tag must be either:      * a) A Java Properties object that contains the Crypto configuration.      * b) The path of the Crypto property file that contains the Crypto configuration.      * c) A URL that points to the Crypto property file that contains the Crypto configuration.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SIGNATURE_PROPERTIES
-init|=
-literal|"ws-security.signature.properties"
-decl_stmt|;
-comment|/**      * The Crypto property configuration to use for encryption, if {@link ENCRYPT_CRYPTO} is not set instead.      * The value of this tag must be either:      * a) A Java Properties object that contains the Crypto configuration.      * b) The path of the Crypto property file that contains the Crypto configuration.      * c) A URL that points to the Crypto property file that contains the Crypto configuration.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_PROPERTIES
-init|=
-literal|"ws-security.encryption.properties"
-decl_stmt|;
-comment|/**      * A Crypto object to be used for signature. If this is not defined then the       * {@link SIGNATURE_PROPERTIES} is used instead.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SIGNATURE_CRYPTO
-init|=
-literal|"ws-security.signature.crypto"
-decl_stmt|;
-comment|/**      * A Crypto object to be used for encryption. If this is not defined then the       * {@link ENCRYPT_PROPERTIES} is used instead.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_CRYPTO
-init|=
-literal|"ws-security.encryption.crypto"
-decl_stmt|;
-comment|/**      * A message property for prepared X509 certificate to be used for encryption.       * If this is not defined, then the certificate will be either loaded from the       * keystore {@link ENCRYPT_PROPERTIES} or extracted from request       * (if {@link ENCRYPT_USERNAME} has value "useReqSigCert").      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENCRYPT_CERT
-init|=
-literal|"ws-security.encryption.certificate"
 decl_stmt|;
 comment|//
 comment|// Boolean WS-Security configuration tags, e.g. the value should be "true" or "false".
@@ -192,15 +102,6 @@ name|String
 name|VALIDATE_TOKEN
 init|=
 literal|"ws-security.validate.token"
-decl_stmt|;
-comment|/**      * Whether to enable Certificate Revocation List (CRL) checking or not when verifying trust       * in a certificate. The default value is "false".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENABLE_REVOCATION
-init|=
-literal|"ws-security.enableRevocation"
 decl_stmt|;
 comment|// WebLogic and WCF always encrypt UsernameTokens whenever possible
 comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
@@ -224,15 +125,6 @@ name|IS_BSP_COMPLIANT
 init|=
 literal|"ws-security.is-bsp-compliant"
 decl_stmt|;
-comment|/**      * Whether to allow unsigned saml assertions as SecurityContext Principals. The default is false.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
-init|=
-literal|"ws-security.enable.unsigned-saml-assertion.principal"
-decl_stmt|;
 comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces. Note that caching only applies when either a UsernameToken      * WS-SecurityPolicy is in effect, or else that a UsernameToken action has been configured      * for the non-security-policy case.      */
 specifier|public
 specifier|static
@@ -250,24 +142,6 @@ name|String
 name|ENABLE_TIMESTAMP_CACHE
 init|=
 literal|"ws-security.enable.timestamp.cache"
-decl_stmt|;
-comment|/**      * Whether to cache SAML2 Token Identifiers, if the token contains a "OneTimeUse" Condition.      * The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache SAML2 Token Identifiers.      * Note that caching only applies when either a "SamlToken" policy is in effect, or      * else that a SAML action has been configured for the non-security-policy case.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ENABLE_SAML_ONE_TIME_USE_CACHE
-init|=
-literal|"ws-security.enable.saml.cache"
-decl_stmt|;
-comment|/**      * Whether to validate the SubjectConfirmation requirements of a received SAML Token      * (sender-vouches or holder-of-key). The default is true.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|VALIDATE_SAML_SUBJECT_CONFIRMATION
-init|=
-literal|"ws-security.validate.saml.subject.conf"
 decl_stmt|;
 comment|/**      * Whether to enable streaming WS-Security. If set to false (the default), the old DOM      * implementation is used. If set to true, the new streaming (StAX) implementation is used.      */
 specifier|public
@@ -296,23 +170,14 @@ name|MUST_UNDERSTAND
 init|=
 literal|"ws-security.must-understand"
 decl_stmt|;
-comment|/**      * Set this to "false" if security context must not be created from JAAS Subject.      *      * The default value is "true".      */
+comment|/**      * Whether to cache SAML2 Token Identifiers, if the token contains a "OneTimeUse" Condition.      * The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache SAML2 Token Identifiers.      * Note that caching only applies when either a "SamlToken" policy is in effect, or      * else that a SAML action has been configured for the non-security-policy case.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|SC_FROM_JAAS_SUBJECT
+name|ENABLE_SAML_ONE_TIME_USE_CACHE
 init|=
-literal|"ws-security.sc.jaas-subject"
-decl_stmt|;
-comment|/**      * Enable SAML AudienceRestriction validation. If this is set to "true", then IF the      * SAML Token contains Audience Restriction URIs, one of them must match either the      * request URL or the Service QName. The default is "true".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|AUDIENCE_RESTRICTION_VALIDATION
-init|=
-literal|"ws-security.validate.audience-restriction"
+literal|"ws-security.enable.saml.cache"
 decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
@@ -352,15 +217,6 @@ name|String
 name|USERNAMETOKEN_FUTURE_TTL
 init|=
 literal|"ws-security.usernametoken.futureTimeToLive"
-decl_stmt|;
-comment|/**      * The attribute URI of the SAML AttributeStatement where the role information is stored.      * The default is "http://schemas.xmlsoap.org/ws/2005/05/identity/claims/role".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SAML_ROLE_ATTRIBUTENAME
-init|=
-literal|"ws-security.saml-role-attributename"
 decl_stmt|;
 comment|/**      * The SpnegoClientAction implementation to use for SPNEGO. This allows the user to plug in      * a different implementation to obtain a service ticket.      */
 specifier|public
@@ -424,15 +280,6 @@ name|String
 name|CACHE_IDENTIFIER
 init|=
 literal|"ws-security.cache.identifier"
-decl_stmt|;
-comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the  certificate.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|SUBJECT_CERT_CONSTRAINTS
-init|=
-literal|"ws-security.subject.cert.constraints"
 decl_stmt|;
 comment|/**      * The Subject Role Classifier to use. If one of the WSS4J Validators returns a JAAS Subject      * from Validation, then the WSS4JInInterceptor will attempt to create a SecurityContext      * based on this Subject. If this value is not specified, then it tries to get roles using      * the DefaultSecurityContext in cxf-rt-core. Otherwise it uses this value in combination      * with the SUBJECT_ROLE_CLASSIFIER_TYPE to get the roles from the Subject.      */
 specifier|public
@@ -940,6 +787,31 @@ block|}
 argument_list|)
 argument_list|)
 decl_stmt|;
+for|for
+control|(
+name|String
+name|commonProperty
+range|:
+name|COMMON_PROPERTIES
+control|)
+block|{
+name|s
+operator|.
+name|add
+argument_list|(
+name|commonProperty
+argument_list|)
+expr_stmt|;
+name|s
+operator|.
+name|add
+argument_list|(
+literal|"ws-"
+operator|+
+name|commonProperty
+argument_list|)
+expr_stmt|;
+block|}
 name|ALL_PROPERTIES
 operator|=
 name|Collections
