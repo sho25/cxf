@@ -708,10 +708,6 @@ name|signRequest
 decl_stmt|;
 specifier|private
 name|String
-name|signatureUsername
-decl_stmt|;
-specifier|private
-name|String
 name|webAppDomain
 decl_stmt|;
 specifier|private
@@ -828,41 +824,6 @@ parameter_list|()
 block|{
 return|return
 name|idpServiceAddress
-return|;
-block|}
-comment|/**      * Set the username/alias to use to sign any request      * @param signatureUsername the username/alias to use to sign any request      */
-specifier|public
-name|void
-name|setSignatureUsername
-parameter_list|(
-name|String
-name|signatureUsername
-parameter_list|)
-block|{
-name|this
-operator|.
-name|signatureUsername
-operator|=
-name|signatureUsername
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Setting signatureUsername: "
-operator|+
-name|signatureUsername
-argument_list|)
-expr_stmt|;
-block|}
-comment|/**      * Get the username/alias to use to sign any request      * @return the username/alias to use to sign any request      */
-specifier|public
-name|String
-name|getSignatureUsername
-parameter_list|()
-block|{
-return|return
-name|signatureUsername
 return|;
 block|}
 annotation|@
