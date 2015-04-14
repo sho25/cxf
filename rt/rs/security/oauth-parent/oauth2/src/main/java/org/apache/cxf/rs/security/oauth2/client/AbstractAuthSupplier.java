@@ -98,17 +98,12 @@ name|createAuthorizationHeader
 parameter_list|()
 block|{
 return|return
-name|clientAccessToken
+name|OAuthClientUtils
 operator|.
-name|getTokenType
-argument_list|()
-operator|+
-literal|" "
-operator|+
+name|createAuthorizationHeader
+argument_list|(
 name|clientAccessToken
-operator|.
-name|getTokenKey
-argument_list|()
+argument_list|)
 return|;
 block|}
 specifier|protected
