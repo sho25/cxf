@@ -285,7 +285,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -1337,7 +1337,7 @@ name|data
 operator|.
 name|setCallbackHandler
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCallbackHandler
 argument_list|(

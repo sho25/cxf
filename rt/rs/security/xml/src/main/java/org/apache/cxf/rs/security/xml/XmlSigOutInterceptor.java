@@ -221,7 +221,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -655,7 +655,7 @@ decl_stmt|;
 name|String
 name|user
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getUserName
 argument_list|(
@@ -675,7 +675,7 @@ argument_list|(
 name|user
 argument_list|)
 operator|||
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|USE_REQUEST_SIGNATURE_CERT
 operator|.
@@ -696,7 +696,7 @@ block|}
 name|String
 name|password
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getPassword
 argument_list|(
@@ -718,7 +718,7 @@ name|X509Certificate
 index|[]
 name|issuerCerts
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCertificates
 argument_list|(

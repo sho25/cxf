@@ -219,7 +219,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -1810,7 +1810,7 @@ name|X509Certificate
 index|[]
 name|certs
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCertificates
 argument_list|(
@@ -3073,7 +3073,7 @@ block|{
 try|try
 block|{
 return|return
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|loadX509Certificate
 argument_list|(
@@ -3142,7 +3142,7 @@ block|{
 try|try
 block|{
 return|return
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|loadX509IssuerSerial
 argument_list|(

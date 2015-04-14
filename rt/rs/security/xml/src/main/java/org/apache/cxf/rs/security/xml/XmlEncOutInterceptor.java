@@ -287,7 +287,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -304,6 +304,24 @@ operator|.
 name|security
 operator|.
 name|SecurityConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|utils
+operator|.
+name|SecurityUtils
 import|;
 end_import
 
@@ -743,18 +761,6 @@ init|=
 operator|(
 name|String
 operator|)
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rt
-operator|.
-name|security
-operator|.
-name|utils
-operator|.
 name|SecurityUtils
 operator|.
 name|getSecurityPropertyValue
@@ -768,7 +774,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|USE_REQUEST_SIGNATURE_CERT
 operator|.
@@ -836,7 +842,7 @@ argument_list|)
 decl_stmt|;
 name|userName
 operator|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getUserName
 argument_list|(
@@ -1125,7 +1131,7 @@ name|X509Certificate
 index|[]
 name|certs
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCertificates
 argument_list|(
@@ -1596,7 +1602,7 @@ argument_list|()
 operator|==
 literal|null
 condition|?
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 else|:
@@ -1616,7 +1622,7 @@ name|keyIdType
 operator|.
 name|equals
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)
@@ -1729,7 +1735,7 @@ name|keyIdType
 operator|.
 name|equals
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_ISSUER_SERIAL
 argument_list|)

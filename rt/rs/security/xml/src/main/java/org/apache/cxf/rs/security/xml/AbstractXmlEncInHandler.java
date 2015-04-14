@@ -219,7 +219,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -633,7 +633,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|isSignedAndEncryptedTwoWay
 argument_list|(
@@ -1002,7 +1002,7 @@ name|keyIdentifierType
 operator|.
 name|equals
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)
@@ -1034,7 +1034,7 @@ block|{
 try|try
 block|{
 return|return
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|loadX509Certificate
 argument_list|(
@@ -1070,7 +1070,7 @@ name|keyIdentifierType
 operator|.
 name|equals
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_ISSUER_SERIAL
 argument_list|)
@@ -1102,7 +1102,7 @@ block|{
 try|try
 block|{
 return|return
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|loadX509IssuerSerial
 argument_list|(
@@ -1322,7 +1322,7 @@ block|{
 name|CallbackHandler
 name|callback
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCallbackHandler
 argument_list|(

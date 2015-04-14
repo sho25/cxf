@@ -181,7 +181,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -2010,7 +2010,7 @@ name|encryptionProperties
 operator|.
 name|setEncryptionKeyIdType
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)
@@ -2117,7 +2117,7 @@ name|encryptionProperties
 operator|.
 name|setEncryptionKeyIdType
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)
@@ -2233,7 +2233,7 @@ name|encryptionProperties
 operator|.
 name|setEncryptionKeyIdType
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_ISSUER_SERIAL
 argument_list|)
@@ -2452,7 +2452,7 @@ name|encryptionProperties
 operator|.
 name|setEncryptionKeyIdType
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)
@@ -2638,7 +2638,7 @@ name|encryptionProperties
 operator|.
 name|setEncryptionKeyIdType
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)
@@ -3371,7 +3371,7 @@ name|encInterceptor
 operator|.
 name|setKeyIdentifierType
 argument_list|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|X509_CERT
 argument_list|)

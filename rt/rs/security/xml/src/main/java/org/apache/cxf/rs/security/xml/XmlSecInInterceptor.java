@@ -377,7 +377,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -1115,7 +1115,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|isSignedAndEncryptedTwoWay
 argument_list|(
@@ -1225,7 +1225,7 @@ block|{
 name|CallbackHandler
 name|callback
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCallbackHandler
 argument_list|(
@@ -1307,7 +1307,7 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|isSignedAndEncryptedTwoWay
 argument_list|(

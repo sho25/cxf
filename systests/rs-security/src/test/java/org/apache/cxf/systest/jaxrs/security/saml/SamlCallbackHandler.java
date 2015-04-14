@@ -189,7 +189,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -769,13 +769,13 @@ decl_stmt|;
 name|X509Certificate
 name|cert
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCertificates
 argument_list|(
 name|crypto
 argument_list|,
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getUserName
 argument_list|(

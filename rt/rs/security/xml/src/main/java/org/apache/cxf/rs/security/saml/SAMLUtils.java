@@ -157,7 +157,7 @@ name|security
 operator|.
 name|common
 operator|.
-name|SecurityUtils
+name|RSSecurityUtils
 import|;
 end_import
 
@@ -438,7 +438,7 @@ block|{
 name|CallbackHandler
 name|handler
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getCallbackHandler
 argument_list|(
@@ -592,7 +592,7 @@ decl_stmt|;
 name|String
 name|user
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getUserName
 argument_list|(
@@ -622,7 +622,7 @@ block|}
 name|String
 name|password
 init|=
-name|SecurityUtils
+name|RSSecurityUtils
 operator|.
 name|getPassword
 argument_list|(
