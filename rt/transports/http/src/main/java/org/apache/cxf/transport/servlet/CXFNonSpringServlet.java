@@ -945,7 +945,7 @@ name|BusFactory
 operator|.
 name|setThreadDefaultBus
 argument_list|(
-literal|null
+name|origBus
 argument_list|)
 expr_stmt|;
 block|}
