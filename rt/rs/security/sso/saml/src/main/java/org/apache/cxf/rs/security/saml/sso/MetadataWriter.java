@@ -996,15 +996,6 @@ name|writer
 operator|.
 name|writeAttribute
 argument_list|(
-literal|"isDefault"
-argument_list|,
-literal|"true"
-argument_list|)
-expr_stmt|;
-name|writer
-operator|.
-name|writeAttribute
-argument_list|(
 literal|"Binding"
 argument_list|,
 literal|"urn:oasis:names:tc:SAML:2.0:bindings:HTTP-REDIRECT"
