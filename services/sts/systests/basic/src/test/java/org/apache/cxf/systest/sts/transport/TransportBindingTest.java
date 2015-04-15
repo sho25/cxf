@@ -2288,19 +2288,12 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO Not supported for now
 annotation|@
 name|org
 operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testSAML2EndorsingX509
@@ -2308,6 +2301,17 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Only works for DOM (clients)
+if|if
+condition|(
+name|test
+operator|.
+name|isStreaming
+argument_list|()
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=

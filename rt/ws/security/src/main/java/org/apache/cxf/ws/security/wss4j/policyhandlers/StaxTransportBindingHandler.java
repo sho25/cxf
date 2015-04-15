@@ -2317,8 +2317,6 @@ argument_list|)
 expr_stmt|;
 name|configureSignature
 argument_list|(
-name|wrapper
-argument_list|,
 name|token
 argument_list|,
 literal|false
@@ -2473,8 +2471,6 @@ argument_list|)
 expr_stmt|;
 name|configureSignature
 argument_list|(
-name|wrapper
-argument_list|,
 name|token
 argument_list|,
 literal|false

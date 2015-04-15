@@ -3004,9 +3004,7 @@ name|Crypto
 name|crypto
 init|=
 name|getEncryptionCrypto
-argument_list|(
-name|recToken
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|SecurityToken
 name|securityToken
@@ -3147,8 +3145,6 @@ name|setKeyIdentifierType
 argument_list|(
 name|encr
 argument_list|,
-name|recToken
-argument_list|,
 name|encrToken
 argument_list|)
 expr_stmt|;
@@ -3159,8 +3155,6 @@ block|{
 name|setKeyIdentifierType
 argument_list|(
 name|encr
-argument_list|,
-name|recToken
 argument_list|,
 name|encrToken
 argument_list|)
@@ -3205,7 +3199,7 @@ name|setEncryptionUser
 argument_list|(
 name|encr
 argument_list|,
-name|recToken
+name|encrToken
 argument_list|,
 literal|false
 argument_list|,
@@ -3721,8 +3715,6 @@ name|sig
 init|=
 name|getSignatureBuilder
 argument_list|(
-name|wrapper
-argument_list|,
 name|sigToken
 argument_list|,
 name|attached
@@ -4135,8 +4127,6 @@ name|sig
 init|=
 name|getSignatureBuilder
 argument_list|(
-name|wrapper
-argument_list|,
 name|sigToken
 argument_list|,
 name|attached
@@ -4524,9 +4514,12 @@ name|this
 operator|.
 name|getEncryptedKeyBuilder
 argument_list|(
-name|wrapper
-argument_list|,
 name|token
+argument_list|)
+expr_stmt|;
+name|assertPolicy
+argument_list|(
+name|wrapper
 argument_list|)
 expr_stmt|;
 name|Element

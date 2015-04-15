@@ -2156,8 +2156,6 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|getKeyIdentifierType
 argument_list|(
-name|recToken
-argument_list|,
 name|encrToken
 argument_list|)
 argument_list|)
@@ -2539,8 +2537,6 @@ argument_list|()
 decl_stmt|;
 name|configureSignature
 argument_list|(
-name|wrapper
-argument_list|,
 name|sigToken
 argument_list|,
 literal|false
