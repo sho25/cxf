@@ -989,7 +989,7 @@ name|writeAttribute
 argument_list|(
 literal|"index"
 argument_list|,
-literal|"0"
+literal|"1"
 argument_list|)
 expr_stmt|;
 name|writer
