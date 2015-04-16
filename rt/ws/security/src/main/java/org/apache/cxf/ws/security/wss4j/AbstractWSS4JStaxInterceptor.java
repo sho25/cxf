@@ -527,9 +527,9 @@ name|apache
 operator|.
 name|wss4j
 operator|.
-name|dom
+name|stax
 operator|.
-name|WSConstants
+name|ConfigurationConverter
 import|;
 end_import
 
@@ -543,7 +543,9 @@ name|wss4j
 operator|.
 name|stax
 operator|.
-name|ConfigurationConverter
+name|ext
+operator|.
+name|WSSConstants
 import|;
 end_import
 
@@ -614,9 +616,9 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSSConstants
 operator|.
-name|WSSE_NS
+name|NS_WSSE10
 argument_list|,
 literal|"Security"
 argument_list|)
@@ -629,9 +631,9 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSSConstants
 operator|.
-name|ENC_NS
+name|NS_XMLENC
 argument_list|,
 literal|"EncryptedData"
 argument_list|)
@@ -644,9 +646,9 @@ argument_list|(
 operator|new
 name|QName
 argument_list|(
-name|WSConstants
+name|WSSConstants
 operator|.
-name|WSSE11_NS
+name|NS_WSSE11
 argument_list|,
 literal|"EncryptedHeader"
 argument_list|)
