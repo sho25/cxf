@@ -819,12 +819,7 @@ block|{
 name|InputStream
 name|ins
 init|=
-operator|(
-operator|(
-name|URL
-operator|)
-name|o
-operator|)
+name|url
 operator|.
 name|openStream
 argument_list|()
