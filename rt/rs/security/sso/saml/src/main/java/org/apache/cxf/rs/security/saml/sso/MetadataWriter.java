@@ -543,6 +543,9 @@ name|String
 name|serviceURL
 parameter_list|,
 name|String
+name|assertionConsumerServiceURL
+parameter_list|,
+name|String
 name|logoutURL
 parameter_list|,
 name|Key
@@ -674,7 +677,7 @@ name|writeSAMLMetadata
 argument_list|(
 name|writer
 argument_list|,
-name|serviceURL
+name|assertionConsumerServiceURL
 argument_list|,
 name|logoutURL
 argument_list|,
@@ -798,7 +801,7 @@ name|XMLStreamWriter
 name|writer
 parameter_list|,
 name|String
-name|serviceURL
+name|assertionConsumerServiceURL
 parameter_list|,
 name|String
 name|logoutURL
@@ -925,7 +928,7 @@ name|writeAttribute
 argument_list|(
 literal|"Location"
 argument_list|,
-name|serviceURL
+name|assertionConsumerServiceURL
 argument_list|)
 expr_stmt|;
 name|writer
@@ -980,7 +983,7 @@ name|writeAttribute
 argument_list|(
 literal|"Location"
 argument_list|,
-name|serviceURL
+name|assertionConsumerServiceURL
 argument_list|)
 expr_stmt|;
 name|writer
