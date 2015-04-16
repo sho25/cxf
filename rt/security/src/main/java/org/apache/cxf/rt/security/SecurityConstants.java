@@ -231,7 +231,7 @@ name|SAML_ROLE_ATTRIBUTENAME
 init|=
 literal|"security.saml-role-attributename"
 decl_stmt|;
-comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the  certificate.      */
+comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the certificate.      */
 specifier|public
 specifier|static
 specifier|final
@@ -289,6 +289,8 @@ name|ENCRYPT_PROPERTIES
 block|,
 name|ENCRYPT_CRYPTO
 block|,
+name|ENCRYPT_CERT
+block|,
 name|ENABLE_REVOCATION
 block|,
 name|SUBJECT_CERT_CONSTRAINTS
@@ -296,6 +298,12 @@ block|,
 name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
 block|,
 name|AUDIENCE_RESTRICTION_VALIDATION
+block|,
+name|SAML_ROLE_ATTRIBUTENAME
+block|,
+name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
+block|,
+name|SC_FROM_JAAS_SUBJECT
 block|}
 argument_list|)
 argument_list|)
