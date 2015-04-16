@@ -7276,7 +7276,7 @@ operator|.
 name|getNamespace
 argument_list|()
 argument_list|,
-literal|"Element"
+literal|"Header"
 argument_list|)
 decl_stmt|;
 name|securedParts
@@ -7646,7 +7646,7 @@ operator|.
 name|getNamespace
 argument_list|()
 argument_list|,
-literal|"Element"
+literal|"Header"
 argument_list|)
 decl_stmt|;
 name|signedParts
@@ -7839,7 +7839,7 @@ name|this
 operator|.
 name|getElements
 argument_list|(
-literal|"Element"
+literal|"Header"
 argument_list|,
 name|xpaths
 argument_list|,
@@ -13252,7 +13252,7 @@ argument_list|()
 operator|.
 name|equals
 argument_list|(
-literal|"Element"
+literal|"Header"
 argument_list|)
 operator|&&
 name|signedPart
