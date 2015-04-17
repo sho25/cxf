@@ -757,7 +757,7 @@ name|newProperties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -810,7 +810,7 @@ name|newProperties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -1020,7 +1020,7 @@ name|newProperties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -1471,7 +1471,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -1842,7 +1842,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -1964,7 +1964,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -2074,7 +2074,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -2190,7 +2190,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -2297,7 +2297,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -2393,7 +2393,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -2539,7 +2539,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -3321,7 +3321,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)
@@ -3574,7 +3574,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.KeystorePasswordCallback"
 argument_list|)

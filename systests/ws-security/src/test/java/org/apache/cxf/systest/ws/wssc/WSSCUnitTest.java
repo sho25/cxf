@@ -1358,7 +1358,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -1566,7 +1566,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)

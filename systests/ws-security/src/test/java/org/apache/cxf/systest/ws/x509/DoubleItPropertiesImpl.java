@@ -167,7 +167,7 @@ name|EndpointProperty
 argument_list|(
 name|key
 operator|=
-literal|"ws-security.callback-handler"
+literal|"security.callback-handler"
 argument_list|,
 name|value
 operator|=
