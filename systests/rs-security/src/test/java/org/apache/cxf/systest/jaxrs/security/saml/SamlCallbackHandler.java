@@ -783,7 +783,7 @@ name|m
 argument_list|,
 name|crypto
 argument_list|,
-literal|"ws-security.signature.username"
+literal|"security.signature.username"
 argument_list|)
 argument_list|)
 index|[

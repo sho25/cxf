@@ -1152,7 +1152,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.signature.username"
+literal|"security.signature.username"
 argument_list|,
 literal|"alice"
 argument_list|)

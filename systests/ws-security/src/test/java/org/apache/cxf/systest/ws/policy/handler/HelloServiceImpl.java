@@ -148,7 +148,7 @@ name|EndpointProperty
 argument_list|(
 name|key
 operator|=
-literal|"ws-security.signature.username"
+literal|"security.signature.username"
 argument_list|,
 name|value
 operator|=
