@@ -502,7 +502,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+literal|"security.username"
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -527,7 +527,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+literal|"security.username"
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -734,7 +734,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+literal|"security.username"
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -759,7 +759,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+literal|"security.username"
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -1080,7 +1080,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+literal|"security.username"
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1108,7 +1108,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+literal|"security.username"
 argument_list|,
 literal|"bob"
 argument_list|)

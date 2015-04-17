@@ -178,7 +178,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This CallbackHandler implementation obtains a username via the jaxws property   * "ws-security.username", as defined in SecurityConstants, and creates a wss UsernameToken   * (with no password) to be used as the delegation token.  */
+comment|/**  * This CallbackHandler implementation obtains a username via the jaxws property   * "security.username", as defined in SecurityConstants, and creates a wss UsernameToken   * (with no password) to be used as the delegation token.  */
 end_comment
 
 begin_class
