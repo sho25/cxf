@@ -1475,7 +1475,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.signature.properties"
+literal|"security.signature.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/alice.properties"
 argument_list|)

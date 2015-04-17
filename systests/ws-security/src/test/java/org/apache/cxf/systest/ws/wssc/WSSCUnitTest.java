@@ -1367,7 +1367,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.signature.properties"
+literal|"security.signature.properties"
 argument_list|,
 literal|"alice.properties"
 argument_list|)
@@ -1575,7 +1575,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.signature.properties"
+literal|"security.signature.properties"
 argument_list|,
 literal|"alice.properties"
 argument_list|)
