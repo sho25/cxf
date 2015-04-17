@@ -1117,7 +1117,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 literal|"org.apache.cxf.systest.jaxrs.security.saml.SamlCallbackHandler"
 argument_list|)

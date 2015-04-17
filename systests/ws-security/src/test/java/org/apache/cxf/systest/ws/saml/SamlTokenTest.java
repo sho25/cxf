@@ -938,7 +938,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -1010,7 +1010,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -1079,7 +1079,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -1344,7 +1344,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|samlCallbackHandler
 argument_list|)
@@ -1575,7 +1575,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -1885,7 +1885,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlElementCallbackHandler
@@ -2122,7 +2122,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -2210,7 +2210,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|samlCallbackHandler
 argument_list|)
@@ -2403,7 +2403,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -2676,7 +2676,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -2750,7 +2750,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -2817,7 +2817,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -3060,7 +3060,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -3276,7 +3276,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -3492,7 +3492,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -3709,7 +3709,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|samlCallbackHandler
 argument_list|)
@@ -3940,7 +3940,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -4179,7 +4179,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -4409,7 +4409,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -4599,7 +4599,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -4811,7 +4811,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -5024,7 +5024,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -5254,7 +5254,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -5716,7 +5716,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|roleCallbackHandler
 argument_list|)
@@ -5950,7 +5950,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 operator|new
 name|SamlCallbackHandler
@@ -6047,7 +6047,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -6375,7 +6375,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -6692,7 +6692,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -6931,7 +6931,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
@@ -7011,7 +7011,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.saml-callback-handler"
+literal|"security.saml-callback-handler"
 argument_list|,
 name|callbackHandler
 argument_list|)
