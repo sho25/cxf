@@ -2238,7 +2238,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.username"
+literal|"security.encryption.username"
 argument_list|,
 literal|"mystskey"
 argument_list|)
