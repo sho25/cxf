@@ -544,7 +544,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.password"
+literal|"security.password"
 argument_list|,
 literal|"password"
 argument_list|)
@@ -776,7 +776,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.password"
+literal|"security.password"
 argument_list|,
 literal|"password"
 argument_list|)
@@ -1120,7 +1120,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.password"
+literal|"security.password"
 argument_list|,
 literal|"password"
 argument_list|)
