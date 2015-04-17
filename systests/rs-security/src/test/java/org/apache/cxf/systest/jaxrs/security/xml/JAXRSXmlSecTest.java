@@ -1860,7 +1860,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -1982,7 +1982,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -2092,7 +2092,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -2208,7 +2208,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -2315,7 +2315,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -2411,7 +2411,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -2557,7 +2557,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -3339,7 +3339,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)
@@ -3592,7 +3592,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"org/apache/cxf/systest/jaxrs/security/bob.properties"
 argument_list|)

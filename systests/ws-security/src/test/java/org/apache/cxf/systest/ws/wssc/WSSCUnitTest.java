@@ -1376,7 +1376,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"bob.properties"
 argument_list|)
@@ -1584,7 +1584,7 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+literal|"security.encryption.properties"
 argument_list|,
 literal|"bob.properties"
 argument_list|)
