@@ -1284,7 +1284,9 @@ block|{
 return|return
 name|getHeaderDelegate
 argument_list|(
-name|getOtherRuntimeDelegate
+name|RuntimeDelegate
+operator|.
+name|getInstance
 argument_list|()
 argument_list|,
 name|o
