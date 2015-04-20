@@ -202,7 +202,8 @@ name|ThrottleResponse
 name|m
 parameter_list|)
 block|{
-comment|//System.out.println("p  " + metrics.getTotals().getOneMinuteRate() + "  " + metrics.getTotals().getCount());
+comment|//System.out.println("p  " + metrics.getTotals().getOneMinuteRate()
+comment|// + "  " + metrics.getTotals().getCount());
 comment|//Preferred customers are unthrottled until they hit 100req/sec, then start delaying by .05 seconds
 comment|//(drops to max of 50req/sec until below the 100req/sec rate)
 if|if
@@ -332,7 +333,8 @@ name|ThrottleResponse
 name|m
 parameter_list|)
 block|{
-comment|//System.out.println("ch  " + metrics.getTotals().getOneMinuteRate() + "  " + metrics.getTotals().getCount());
+comment|//System.out.println("ch  " + metrics.getTotals().getOneMinuteRate()
+comment|// + "  " + metrics.getTotals().getCount());
 comment|//Cheap customers are always get a .1 sec delay
 name|long
 name|delay
