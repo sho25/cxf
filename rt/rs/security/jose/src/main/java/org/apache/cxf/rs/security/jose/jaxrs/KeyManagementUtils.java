@@ -1735,6 +1735,21 @@ argument_list|(
 name|RSSEC_KEY_STORE_PSWD
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|keyStorePswd
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|JoseException
+argument_list|(
+literal|"No keystore password was defined"
+argument_list|)
+throw|;
+block|}
 try|try
 block|{
 name|InputStream
