@@ -3827,6 +3827,21 @@ try|try
 block|{
 if|if
 condition|(
+name|alias
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"No keystore alias was defined"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
 operator|!
 name|keyStore
 operator|.
@@ -3840,7 +3855,7 @@ throw|throw
 operator|new
 name|SecurityException
 argument_list|(
-literal|"No alias exists in the keystore for the given alias: "
+literal|"No alias exists in the keystore for: "
 operator|+
 name|alias
 argument_list|)
@@ -4151,6 +4166,42 @@ parameter_list|)
 block|{
 try|try
 block|{
+if|if
+condition|(
+name|alias
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"No keystore alias was defined"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
+operator|!
+name|keyStore
+operator|.
+name|containsAlias
+argument_list|(
+name|alias
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"No alias exists in the keystore for: "
+operator|+
+name|alias
+argument_list|)
+throw|;
+block|}
 name|KeyStore
 operator|.
 name|PrivateKeyEntry
