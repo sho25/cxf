@@ -355,7 +355,7 @@ argument_list|)
 operator|)
 return|;
 block|}
-comment|/**      * A convenience method to check for schema validation config in the message context, and then in the service model.      * Does not modify the Message context (other than what is done in the getContextualProperty itself)      *       * @param message      * @param type      */
+comment|/**      * A convenience method to check for schema validation config in the message context, and then in the service model.      * Does not modify the Message context (other than what is done in the getContextualProperty itself)      *       * @param message      */
 specifier|public
 specifier|static
 name|SchemaValidationType

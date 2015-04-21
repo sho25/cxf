@@ -88,7 +88,7 @@ specifier|private
 name|String
 name|key
 decl_stmt|;
-comment|/**      * Returns Subject DN from X509Certificate      *      * @param certificate      * @return Subject DN as a user name      */
+comment|/**      * Returns Subject DN from X509Certificate      *      * @param cert      * @return Subject DN as a user name      */
 annotation|@
 name|Override
 specifier|public

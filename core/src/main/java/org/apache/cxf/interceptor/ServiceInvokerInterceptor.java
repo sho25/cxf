@@ -844,7 +844,7 @@ return|return
 name|invokee
 return|;
 block|}
-comment|/**      * Get the Executor for this invocation.      * @param endpoint      * @return      */
+comment|/**      * Get the Executor for this invocation.      * @param endpoint      */
 specifier|private
 name|Executor
 name|getExecutor

@@ -1696,7 +1696,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Return a cached, namespace-aware, factory.      * @return      */
+comment|/**      * Return a cached, namespace-aware, factory.      */
 specifier|private
 specifier|static
 name|XMLInputFactory
@@ -6513,7 +6513,7 @@ return|return
 name|doc
 return|;
 block|}
-comment|/**      * @param parent      * @return      */
+comment|/**      * @param parent      */
 specifier|private
 specifier|static
 name|Document

@@ -255,7 +255,7 @@ name|password
 argument_list|)
 return|;
 block|}
-comment|/**      * Extracts certificate from message, expecting to find TLSSessionInfo inside.      *      * @param message      * @return      */
+comment|/**      * Extracts certificate from message, expecting to find TLSSessionInfo inside.      *      * @param message      */
 specifier|private
 name|Certificate
 name|getCertificate
