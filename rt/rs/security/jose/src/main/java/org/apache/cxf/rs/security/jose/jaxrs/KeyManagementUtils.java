@@ -1599,6 +1599,32 @@ name|Properties
 name|props
 parameter_list|)
 block|{
+if|if
+condition|(
+operator|!
+name|props
+operator|.
+name|containsKey
+argument_list|(
+name|RSSEC_KEY_STORE_FILE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"No keystore file has been configured"
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|JoseException
+argument_list|(
+literal|"No keystore file has been configured"
+argument_list|)
+throw|;
+block|}
 name|KeyStore
 name|keyStore
 init|=
