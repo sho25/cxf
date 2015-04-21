@@ -3825,6 +3825,27 @@ parameter_list|)
 block|{
 try|try
 block|{
+if|if
+condition|(
+operator|!
+name|keyStore
+operator|.
+name|containsAlias
+argument_list|(
+name|alias
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"No alias exists in the keystore for the given alias: "
+operator|+
+name|alias
+argument_list|)
+throw|;
+block|}
 return|return
 name|keyStore
 operator|.
