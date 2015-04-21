@@ -7721,13 +7721,6 @@ argument_list|(
 name|lastURL
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-operator|!
-name|invalidLoopDetected
-condition|)
-block|{
-comment|// this URI was used sometime earlier
 name|Integer
 name|maxSameURICount
 init|=
@@ -7740,6 +7733,15 @@ argument_list|,
 name|AUTO_REDIRECT_MAX_SAME_URI_COUNT
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|invalidLoopDetected
+condition|)
+block|{
+comment|// This new URI was already recorded earlier even though it is not equal to the last URI
+comment|// Example: a-b-a, where 'a' is the new URI. Check if a limited number of occurrences of this URI
+comment|// is allowed, fail by default.
 if|if
 condition|(
 name|maxSameURICount
@@ -7756,6 +7758,26 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+block|}
+elseif|else
+if|if
+condition|(
+name|maxSameURICount
+operator|!=
+literal|null
+operator|&&
+name|newURLCount
+operator|<=
+name|maxSameURICount
+condition|)
+block|{
+comment|// This new URI was already recorded earlier and is the same as the last URI.
+comment|// Example: a-a. But we have a property supporting a limited number of occurrences of this URI.
+comment|// Continue the invocation.
+name|invalidLoopDetected
+operator|=
+literal|false
+expr_stmt|;
 block|}
 if|if
 condition|(
