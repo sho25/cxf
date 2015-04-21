@@ -129,10 +129,10 @@ name|algo
 expr_stmt|;
 block|}
 specifier|protected
-name|JoseHeaders
+name|JwsHeaders
 name|prepareHeaders
 parameter_list|(
-name|JoseHeaders
+name|JwsHeaders
 name|headers
 parameter_list|)
 block|{
@@ -146,7 +146,7 @@ block|{
 name|headers
 operator|=
 operator|new
-name|JoseHeaders
+name|JwsHeaders
 argument_list|()
 expr_stmt|;
 block|}
@@ -214,7 +214,7 @@ name|byte
 index|[]
 name|sign
 parameter_list|(
-name|JoseHeaders
+name|JwsHeaders
 name|headers
 parameter_list|,
 name|byte
@@ -256,7 +256,7 @@ specifier|public
 name|JwsSignature
 name|createJwsSignature
 parameter_list|(
-name|JoseHeaders
+name|JwsHeaders
 name|headers
 parameter_list|)
 block|{

@@ -61,7 +61,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseHeaders
+name|jws
+operator|.
+name|JwsHeaders
 import|;
 end_import
 
@@ -295,7 +297,7 @@ decl_stmt|;
 annotation|@
 name|Mock
 specifier|private
-name|JoseHeaders
+name|JwsHeaders
 name|headers
 decl_stmt|;
 annotation|@

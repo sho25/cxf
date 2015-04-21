@@ -224,7 +224,7 @@ name|JoseHeaders
 name|unprotectedHeader
 decl_stmt|;
 specifier|private
-name|JoseHeaders
+name|JwsHeaders
 name|unionHeaders
 decl_stmt|;
 specifier|private
@@ -345,7 +345,7 @@ block|{
 name|unionHeaders
 operator|=
 operator|new
-name|JoseHeaders
+name|JwsHeaders
 argument_list|()
 expr_stmt|;
 if|if
@@ -502,7 +502,7 @@ name|unprotectedHeader
 return|;
 block|}
 specifier|public
-name|JoseHeaders
+name|JwsHeaders
 name|getUnionHeader
 parameter_list|()
 block|{

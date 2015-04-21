@@ -2512,11 +2512,11 @@ name|String
 name|ct
 parameter_list|)
 block|{
-name|JoseHeaders
+name|JwsHeaders
 name|headers
 init|=
 operator|new
-name|JoseHeaders
+name|JwsHeaders
 argument_list|()
 decl_stmt|;
 if|if

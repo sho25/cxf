@@ -254,8 +254,9 @@ argument_list|(
 name|TWO_ALG_HEADER_FIELDS_IN_JWS_BOGUS_FIRST
 argument_list|)
 decl_stmt|;
-name|assertFalse
-argument_list|(
+name|boolean
+name|result
+init|=
 name|jwsConsumer
 operator|.
 name|verifySignatureWith
@@ -270,6 +271,10 @@ operator|.
 name|HS256
 argument_list|)
 argument_list|)
+decl_stmt|;
+name|assertFalse
+argument_list|(
+name|result
 argument_list|)
 expr_stmt|;
 block|}

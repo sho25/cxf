@@ -739,11 +739,11 @@ name|JoseHeaders
 name|unprotectedHeader
 parameter_list|)
 block|{
-name|JoseHeaders
+name|JwsHeaders
 name|unionHeaders
 init|=
 operator|new
-name|JoseHeaders
+name|JwsHeaders
 argument_list|()
 decl_stmt|;
 if|if

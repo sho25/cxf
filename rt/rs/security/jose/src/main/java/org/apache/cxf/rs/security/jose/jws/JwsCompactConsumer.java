@@ -538,7 +538,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|JoseHeaders
+name|JwsHeaders
 name|getJoseHeaders
 parameter_list|()
 block|{
@@ -582,7 +582,11 @@ argument_list|)
 throw|;
 block|}
 return|return
+operator|new
+name|JwsHeaders
+argument_list|(
 name|joseHeaders
+argument_list|)
 return|;
 block|}
 specifier|public

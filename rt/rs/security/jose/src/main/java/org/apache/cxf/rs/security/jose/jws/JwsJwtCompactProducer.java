@@ -198,10 +198,14 @@ parameter_list|)
 block|{
 name|super
 argument_list|(
+operator|new
+name|JwsHeaders
+argument_list|(
 name|token
 operator|.
 name|getHeaders
 argument_list|()
+argument_list|)
 argument_list|,
 name|w
 argument_list|,
