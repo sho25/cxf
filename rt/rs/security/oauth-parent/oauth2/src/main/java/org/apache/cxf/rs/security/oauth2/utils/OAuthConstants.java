@@ -186,6 +186,16 @@ name|REFRESH_TOKEN_GRANT
 init|=
 literal|"refresh_token"
 decl_stmt|;
+comment|// CXF-specific grant
+comment|// The token is returned directly to a human user who copies it into a confidential client
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|IMPLICIT_CONFIDENTIAL_GRANT
+init|=
+literal|"urn:ietf:params:oauth:grant-type:implicit-confidential"
+decl_stmt|;
 comment|// Well-known token types
 specifier|public
 specifier|static

@@ -2355,6 +2355,17 @@ argument_list|)
 argument_list|)
 return|;
 block|}
+specifier|protected
+name|String
+name|getSupportedGrantType
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|supportedGrantType
+return|;
+block|}
 specifier|public
 name|void
 name|setResourceOwnerNameProvider
