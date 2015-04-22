@@ -434,6 +434,10 @@ name|boolean
 name|canSupportPublicClients
 decl_stmt|;
 specifier|private
+name|boolean
+name|canSupportEmptyRedirectForPrivateClients
+decl_stmt|;
+specifier|private
 name|OOBResponseDeliverer
 name|oobDeliverer
 decl_stmt|;
@@ -1212,11 +1216,22 @@ name|Client
 name|c
 parameter_list|)
 block|{
+comment|// If a redirect URI is empty then the code will be returned out of band,
+comment|// typically will be returned directly to a human user
 return|return
+operator|(
+name|c
+operator|.
+name|isConfidential
+argument_list|()
+operator|&&
+name|canSupportEmptyRedirectForPrivateClients
+operator|||
 name|canSupportPublicClient
 argument_list|(
 name|c
 argument_list|)
+operator|)
 operator|&&
 name|c
 operator|.
@@ -1270,6 +1285,21 @@ operator|.
 name|codeRequestFilter
 operator|=
 name|codeRequestFilter
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setCanSupportEmptyRedirectForPrivateClients
+parameter_list|(
+name|boolean
+name|canSupportEmptyRedirectForPrivateClients
+parameter_list|)
+block|{
+name|this
+operator|.
+name|canSupportEmptyRedirectForPrivateClients
+operator|=
+name|canSupportEmptyRedirectForPrivateClients
 expr_stmt|;
 block|}
 block|}
