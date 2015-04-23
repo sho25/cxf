@@ -196,6 +196,14 @@ name|IMPLICIT_CONFIDENTIAL_GRANT
 init|=
 literal|"urn:ietf:params:oauth:grant-type:implicit-confidential"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DIRECT_TOKEN_GRANT
+init|=
+literal|"urn:ietf:params:oauth:grant-type:direct-token-grant"
+decl_stmt|;
 comment|// Well-known token types
 specifier|public
 specifier|static
