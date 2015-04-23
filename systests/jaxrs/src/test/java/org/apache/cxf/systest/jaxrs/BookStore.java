@@ -9061,6 +9061,11 @@ specifier|private
 name|long
 name|id
 decl_stmt|;
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"id_2"
+argument_list|)
 specifier|private
 name|long
 name|id2
@@ -9107,11 +9112,6 @@ return|return
 name|id2
 return|;
 block|}
-annotation|@
-name|QueryParam
-argument_list|(
-literal|"id_2"
-argument_list|)
 specifier|public
 name|void
 name|setId2
