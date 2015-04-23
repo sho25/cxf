@@ -2340,6 +2340,8 @@ name|params
 parameter_list|)
 block|{
 return|return
+name|this
+operator|.
 name|getClient
 argument_list|(
 name|params
