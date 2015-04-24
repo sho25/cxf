@@ -1745,6 +1745,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|SECOND_JAXRS_EXCEPTION
+init|=
+literal|"second.jaxrs.exception"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|PARTIAL_HIERARCHICAL_MEDIA_SUBTYPE_CHECK
 init|=
 literal|"media.subtype.partial.check"
