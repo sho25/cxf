@@ -841,11 +841,12 @@ name|obj
 parameter_list|)
 block|{
 return|return
-name|providers
-operator|.
-name|containsKey
+name|isRegistered
 argument_list|(
 name|obj
+operator|.
+name|getClass
+argument_list|()
 argument_list|)
 return|;
 block|}
