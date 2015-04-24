@@ -444,6 +444,11 @@ argument_list|)
 specifier|public
 class|class
 name|BookStore
+extends|extends
+name|AbstractStore
+argument_list|<
+name|Book
+argument_list|>
 implements|implements
 name|BookDescription
 block|{

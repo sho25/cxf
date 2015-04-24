@@ -3627,7 +3627,7 @@ name|resource
 argument_list|,
 literal|"resource"
 argument_list|,
-literal|9
+literal|10
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -3717,7 +3717,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/books/\"{bookid}\""
+literal|"/thestore"
 argument_list|,
 name|resourceEls
 operator|.
@@ -3734,7 +3734,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/booksubresource"
+literal|"/books/\"{bookid}\""
 argument_list|,
 name|resourceEls
 operator|.
@@ -3751,7 +3751,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/form"
+literal|"/booksubresource"
 argument_list|,
 name|resourceEls
 operator|.
@@ -3768,13 +3768,30 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"/itself"
+literal|"/form"
 argument_list|,
 name|resourceEls
 operator|.
 name|get
 argument_list|(
 literal|8
+argument_list|)
+operator|.
+name|getAttribute
+argument_list|(
+literal|"path"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"/itself"
+argument_list|,
+name|resourceEls
+operator|.
+name|get
+argument_list|(
+literal|9
 argument_list|)
 operator|.
 name|getAttribute
@@ -4441,6 +4458,20 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+name|verifyGetResourceMethod
+argument_list|(
+name|resourceEls
+operator|.
+name|get
+argument_list|(
+literal|5
+argument_list|)
+argument_list|,
+name|bookEl
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 comment|// verify resource starting from /booksubresource
 comment|// should have 2 parameters
 name|verifyParameters
@@ -4449,7 +4480,7 @@ name|resourceEls
 operator|.
 name|get
 argument_list|(
-literal|6
+literal|7
 argument_list|)
 argument_list|,
 literal|2
@@ -4481,7 +4512,7 @@ name|resourceEls
 operator|.
 name|get
 argument_list|(
-literal|6
+literal|7
 argument_list|)
 argument_list|,
 literal|""
@@ -4504,7 +4535,7 @@ name|resourceEls
 operator|.
 name|get
 argument_list|(
-literal|6
+literal|7
 argument_list|)
 argument_list|,
 literal|"resource"
