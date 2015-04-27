@@ -3430,11 +3430,6 @@ name|consumeMatched
 init|=
 literal|0
 decl_stmt|;
-name|boolean
-name|resourceMethodsAdded
-init|=
-literal|false
-decl_stmt|;
 name|List
 argument_list|<
 name|OperationResourceInfo
@@ -3765,10 +3760,6 @@ name|added
 operator|=
 literal|true
 expr_stmt|;
-name|resourceMethodsAdded
-operator|=
-literal|true
-expr_stmt|;
 break|break;
 block|}
 block|}
@@ -3847,7 +3838,9 @@ name|finalPathSubresources
 operator|!=
 literal|null
 operator|&&
-name|resourceMethodsAdded
+name|pathMatched
+operator|>
+literal|0
 operator|&&
 operator|!
 name|MessageUtils

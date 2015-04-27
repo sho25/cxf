@@ -4027,7 +4027,7 @@ argument_list|,
 name|createMessage2
 argument_list|()
 argument_list|,
-literal|"/bookstore/books/123"
+literal|"/bookstore/books/sub/123"
 argument_list|,
 literal|"GET"
 argument_list|,
