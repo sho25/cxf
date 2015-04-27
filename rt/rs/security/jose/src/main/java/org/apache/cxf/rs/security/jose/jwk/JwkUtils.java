@@ -2266,6 +2266,23 @@ argument_list|,
 name|bus
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|is
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"Error in loading keystore location: "
+operator|+
+name|keyStoreLoc
+argument_list|)
+throw|;
+block|}
 name|keyContent
 operator|=
 name|IOUtils
