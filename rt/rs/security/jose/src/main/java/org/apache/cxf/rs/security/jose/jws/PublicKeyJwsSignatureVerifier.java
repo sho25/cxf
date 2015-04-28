@@ -293,7 +293,12 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Invalid signature"
+literal|"Invalid signature: "
+operator|+
+name|ex
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 expr_stmt|;
 throw|throw
@@ -305,6 +310,8 @@ operator|.
 name|Error
 operator|.
 name|INVALID_SIGNATURE
+argument_list|,
+name|ex
 argument_list|)
 throw|;
 block|}
