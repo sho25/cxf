@@ -27,9 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|interfaces
-operator|.
-name|RSAPublicKey
+name|PublicKey
 import|;
 end_import
 
@@ -814,7 +812,7 @@ specifier|public
 name|boolean
 name|verifySignatureWith
 parameter_list|(
-name|RSAPublicKey
+name|PublicKey
 name|key
 parameter_list|,
 name|String
@@ -826,7 +824,7 @@ name|verifySignatureWith
 argument_list|(
 name|JwsUtils
 operator|.
-name|getRSAKeySignatureVerifier
+name|getPublicKeySignatureVerifier
 argument_list|(
 name|key
 argument_list|,

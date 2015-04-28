@@ -195,18 +195,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|security
-operator|.
-name|interfaces
-operator|.
-name|RSAPrivateKey
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|ArrayList
@@ -1433,7 +1421,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|RSAPrivateKey
+name|PrivateKey
 name|loadPrivateKey
 parameter_list|(
 name|Message
@@ -1457,9 +1445,6 @@ name|props
 argument_list|)
 decl_stmt|;
 return|return
-operator|(
-name|RSAPrivateKey
-operator|)
 name|loadPrivateKey
 argument_list|(
 name|keyStore
@@ -1476,7 +1461,7 @@ return|;
 block|}
 specifier|private
 specifier|static
-name|RSAPrivateKey
+name|PrivateKey
 name|loadPrivateKey
 parameter_list|(
 name|KeyStore
@@ -1591,9 +1576,6 @@ block|}
 block|}
 block|}
 return|return
-operator|(
-name|RSAPrivateKey
-operator|)
 name|loadPrivateKey
 argument_list|(
 name|keyStore
@@ -2633,7 +2615,7 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|RSAPrivateKey
+name|PrivateKey
 name|loadPrivateKey
 parameter_list|(
 name|Message

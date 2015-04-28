@@ -27,9 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|cert
-operator|.
-name|X509Certificate
+name|PublicKey
 import|;
 end_import
 
@@ -39,9 +37,9 @@ name|java
 operator|.
 name|security
 operator|.
-name|interfaces
+name|cert
 operator|.
-name|RSAPublicKey
+name|X509Certificate
 import|;
 end_import
 
@@ -701,7 +699,7 @@ name|verifySignatureWith
 argument_list|(
 name|JwsUtils
 operator|.
-name|getRSAKeySignatureVerifier
+name|getPublicKeySignatureVerifier
 argument_list|(
 name|cert
 argument_list|,
@@ -714,7 +712,7 @@ specifier|public
 name|boolean
 name|verifySignatureWith
 parameter_list|(
-name|RSAPublicKey
+name|PublicKey
 name|key
 parameter_list|,
 name|String
@@ -726,7 +724,7 @@ name|verifySignatureWith
 argument_list|(
 name|JwsUtils
 operator|.
-name|getRSAKeySignatureVerifier
+name|getPublicKeySignatureVerifier
 argument_list|(
 name|key
 argument_list|,

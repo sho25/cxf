@@ -27,9 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|interfaces
-operator|.
-name|RSAPrivateKey
+name|PrivateKey
 import|;
 end_import
 
@@ -406,7 +404,7 @@ specifier|public
 name|String
 name|signWith
 parameter_list|(
-name|RSAPrivateKey
+name|PrivateKey
 name|key
 parameter_list|)
 block|{
@@ -415,7 +413,7 @@ name|signWith
 argument_list|(
 name|JwsUtils
 operator|.
-name|getRSAKeySignatureProvider
+name|getPrivateKeySignatureProvider
 argument_list|(
 name|key
 argument_list|,
