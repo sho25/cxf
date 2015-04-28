@@ -1252,6 +1252,60 @@ range|:
 name|claims
 control|)
 block|{
+name|ProcessedClaim
+name|c
+init|=
+name|processClaim
+argument_list|(
+name|claim
+argument_list|,
+name|ldapAttributes
+argument_list|,
+name|principal
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|c
+operator|!=
+literal|null
+condition|)
+block|{
+comment|// c.setIssuer(issuer);
+comment|// c.setOriginalIssuer(originalIssuer);
+comment|// c.setNamespace(namespace);
+name|claimsColl
+operator|.
+name|add
+argument_list|(
+name|c
+argument_list|)
+expr_stmt|;
+block|}
+block|}
+return|return
+name|claimsColl
+return|;
+block|}
+specifier|protected
+name|ProcessedClaim
+name|processClaim
+parameter_list|(
+name|Claim
+name|claim
+parameter_list|,
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Attribute
+argument_list|>
+name|ldapAttributes
+parameter_list|,
+name|Principal
+name|principal
+parameter_list|)
+block|{
 name|URI
 name|claimType
 init|=
@@ -1318,9 +1372,10 @@ literal|"' is null"
 argument_list|)
 expr_stmt|;
 block|}
+return|return
+literal|null
+return|;
 block|}
-else|else
-block|{
 name|ProcessedClaim
 name|c
 init|=
@@ -1585,20 +1640,8 @@ literal|"'"
 argument_list|)
 expr_stmt|;
 block|}
-comment|// c.setIssuer(issuer);
-comment|// c.setOriginalIssuer(originalIssuer);
-comment|// c.setNamespace(namespace);
-name|claimsColl
-operator|.
-name|add
-argument_list|(
-name|c
-argument_list|)
-expr_stmt|;
-block|}
-block|}
 return|return
-name|claimsColl
+name|c
 return|;
 block|}
 annotation|@
