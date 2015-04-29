@@ -439,7 +439,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"<http://localhost:8080/base/path/relative>;rel=\"next\""
+literal|"<http://localhost:8080/base/relative>;rel=\"next\""
 argument_list|,
 name|link
 operator|.
@@ -491,7 +491,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"<http://localhost:8080/base/path/relative>;rel=\"next\""
+literal|"<http://localhost:8080/relative>;rel=\"next\""
 argument_list|,
 name|link
 operator|.
