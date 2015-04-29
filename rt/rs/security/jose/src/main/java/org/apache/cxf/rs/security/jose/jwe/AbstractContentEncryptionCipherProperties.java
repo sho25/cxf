@@ -69,13 +69,15 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|rs
 operator|.
-name|util
+name|security
 operator|.
-name|crypto
+name|jose
 operator|.
-name|CryptoUtils
+name|jwa
+operator|.
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -87,15 +89,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|rt
 operator|.
 name|security
 operator|.
-name|jose
+name|crypto
 operator|.
-name|jwa
-operator|.
-name|ContentAlgorithm
+name|CryptoUtils
 import|;
 end_import
 

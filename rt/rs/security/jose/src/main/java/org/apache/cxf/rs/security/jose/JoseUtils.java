@@ -95,13 +95,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|jaxrs
 operator|.
-name|util
+name|utils
 operator|.
-name|crypto
-operator|.
-name|CryptoUtils
+name|JAXRSUtils
 import|;
 end_import
 
@@ -113,11 +111,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|rt
 operator|.
-name|utils
+name|security
 operator|.
-name|JAXRSUtils
+name|crypto
+operator|.
+name|CryptoUtils
 import|;
 end_import
 

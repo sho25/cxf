@@ -45,13 +45,15 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
 name|common
 operator|.
-name|util
-operator|.
-name|crypto
-operator|.
-name|MessageDigestUtils
+name|Client
 import|;
 end_import
 
@@ -63,15 +65,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|rt
 operator|.
 name|security
 operator|.
-name|oauth2
+name|crypto
 operator|.
-name|common
-operator|.
-name|Client
+name|MessageDigestUtils
 import|;
 end_import
 

@@ -39,9 +39,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|common
+name|rt
 operator|.
-name|util
+name|security
 operator|.
 name|crypto
 operator|.
