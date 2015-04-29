@@ -711,7 +711,7 @@ name|jws
 init|=
 name|JwsUtils
 operator|.
-name|getRSAKeySignatureProvider
+name|getPrivateKeySignatureProvider
 argument_list|(
 name|key
 argument_list|,
@@ -788,7 +788,7 @@ name|jws
 init|=
 name|JwsUtils
 operator|.
-name|getRSAKeySignatureVerifier
+name|getPublicKeySignatureVerifier
 argument_list|(
 name|key
 argument_list|,
