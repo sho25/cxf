@@ -1914,9 +1914,7 @@ name|connection
 operator|.
 name|addRequestProperty
 argument_list|(
-name|HttpHeaderHelper
-operator|.
-name|COOKIE
+name|header
 argument_list|,
 name|s
 argument_list|)
