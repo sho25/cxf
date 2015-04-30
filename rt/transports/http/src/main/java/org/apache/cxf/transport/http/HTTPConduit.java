@@ -5531,6 +5531,12 @@ name|cachedStream
 operator|!=
 literal|null
 operator|||
+name|getClient
+argument_list|()
+operator|.
+name|isAutoRedirect
+argument_list|()
+operator|&&
 name|KNOWN_HTTP_VERBS_WITH_NO_CONTENT
 operator|.
 name|contains
@@ -5538,14 +5544,6 @@ argument_list|(
 name|getMethod
 argument_list|()
 argument_list|)
-operator|&&
-operator|(
-name|getClient
-argument_list|()
-operator|.
-name|isAutoRedirect
-argument_list|()
-operator|)
 operator|||
 name|authSupplier
 operator|!=
