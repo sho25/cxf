@@ -215,6 +215,10 @@ specifier|private
 name|UserSubject
 name|subject
 decl_stmt|;
+specifier|private
+name|UserSubject
+name|resourceOwnerSubject
+decl_stmt|;
 specifier|public
 name|Client
 parameter_list|()
@@ -338,7 +342,7 @@ operator|=
 name|id
 expr_stmt|;
 block|}
-comment|/**      * Gets the name of the third-party application      * this client represents      * @return the application name      */
+comment|/**      * Get the name of the third-party application      * this client represents      * @return the application name      */
 specifier|public
 name|String
 name|getApplicationName
@@ -348,7 +352,7 @@ return|return
 name|applicationName
 return|;
 block|}
-comment|/**      * Sets the name of the third-party application      * this client represents      * @param applicationName the name      */
+comment|/**      * Set the name of the third-party application      * this client represents      * @param applicationName the name      */
 specifier|public
 name|void
 name|setApplicationName
@@ -364,7 +368,7 @@ operator|=
 name|applicationName
 expr_stmt|;
 block|}
-comment|/**      * Gets the public URI of the third-party application.      * @return the application URI      */
+comment|/**      * Get the public URI of the third-party application.      * @return the application URI      */
 specifier|public
 name|String
 name|getApplicationWebUri
@@ -374,7 +378,7 @@ return|return
 name|applicationWebUri
 return|;
 block|}
-comment|/**      * Sets the public URI of the third-party application.      * @param applicationWebUri the application URI      */
+comment|/**      * Set the public URI of the third-party application.      * @param applicationWebUri the application URI      */
 specifier|public
 name|void
 name|setApplicationWebUri
@@ -390,7 +394,7 @@ operator|=
 name|applicationWebUri
 expr_stmt|;
 block|}
-comment|/**      * Sets the description of the third-party application.      * @param applicationDescription the description      */
+comment|/**      * Set the description of the third-party application.      * @param applicationDescription the description      */
 specifier|public
 name|void
 name|setApplicationDescription
@@ -406,7 +410,7 @@ operator|=
 name|applicationDescription
 expr_stmt|;
 block|}
-comment|/**      * Gets the description of the third-party application.      * @return the application description      */
+comment|/**      * Get the description of the third-party application.      * @return the application description      */
 specifier|public
 name|String
 name|getApplicationDescription
@@ -416,7 +420,7 @@ return|return
 name|applicationDescription
 return|;
 block|}
-comment|/**      * Sets the URI pointing to a logo image of the client application      * @param logoPath the logo URI      */
+comment|/**      * Set the URI pointing to a logo image of the client application      * @param logoPath the logo URI      */
 specifier|public
 name|void
 name|setApplicationLogoUri
@@ -442,7 +446,7 @@ return|return
 name|applicationLogoUri
 return|;
 block|}
-comment|/**      * Sets the confidentiality status of this client application.      * This can be used to restrict which OAuth2 flows this client      * can participate in.      *       * @param isConf true if the client is confidential      */
+comment|/**      * Set the confidentiality status of this client application.      * This can be used to restrict which OAuth2 flows this client      * can participate in.      *       * @param isConf true if the client is confidential      */
 specifier|public
 name|void
 name|setConfidential
@@ -458,7 +462,7 @@ operator|=
 name|isConf
 expr_stmt|;
 block|}
-comment|/**      * Gets the confidentiality status of this client application.      * @return the confidentiality status      */
+comment|/**      * Get the confidentiality status of this client application.      * @return the confidentiality status      */
 specifier|public
 name|boolean
 name|isConfidential
@@ -487,7 +491,7 @@ operator|=
 name|redirectUris
 expr_stmt|;
 block|}
-comment|/**      * Gets a list of URIs the AuthorizationService      * may return the authorization code to      * @return the redirect uris      */
+comment|/**      * Get a list of URIs the AuthorizationService      * may return the authorization code to      * @return the redirect uris      */
 specifier|public
 name|List
 argument_list|<
@@ -500,7 +504,7 @@ return|return
 name|redirectUris
 return|;
 block|}
-comment|/**      * Sets the list of access token grant types this client      * can use to obtain the access tokens.      * @param allowedGrantTypes the list of grant types      */
+comment|/**      * Set the list of access token grant types this client      * can use to obtain the access tokens.      * @param allowedGrantTypes the list of grant types      */
 specifier|public
 name|void
 name|setAllowedGrantTypes
@@ -519,7 +523,7 @@ operator|=
 name|allowedGrantTypes
 expr_stmt|;
 block|}
-comment|/**      * Gets the list of access token grant types this client      * can use to obtain the access tokens.      * @return the list of grant types      */
+comment|/**      * Get the list of access token grant types this client      * can use to obtain the access tokens.      * @return the list of grant types      */
 specifier|public
 name|List
 argument_list|<
@@ -532,7 +536,7 @@ return|return
 name|allowedGrantTypes
 return|;
 block|}
-comment|/**      * Sets the {@link UserSubject} representing this Client       * authentication, may be setup during the registration.       *      * @param subject the user subject      */
+comment|/**      * Set the {@link UserSubject} representing this Client       * authentication. This property may be set during the registration      * in cases where a 3rd party client needs to authenticate first before      * registering as OAuth2 client. This property may also wrap a clientId      * in cases where a client credentials flow is used         *      * @param subject the user subject      */
 specifier|public
 name|void
 name|setSubject
@@ -548,7 +552,7 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
-comment|/**      * Gets the {@link UserSubject} representing this Client       * authentication      * @return the user subject      */
+comment|/**      * Get the {@link UserSubject} representing this Client       * authentication      * @return the user subject      */
 specifier|public
 name|UserSubject
 name|getSubject
@@ -556,6 +560,32 @@ parameter_list|()
 block|{
 return|return
 name|subject
+return|;
+block|}
+comment|/**      * Set the {@link UserSubject} representing the resource owner       * who has registered this client. This property may be set in cases where      * each account (resource) owner registers account specific Clients      *      * @param subject the resource owner user subject      */
+specifier|public
+name|void
+name|setResourceOwnerSubject
+parameter_list|(
+name|UserSubject
+name|resourceOwnerSubject
+parameter_list|)
+block|{
+name|this
+operator|.
+name|resourceOwnerSubject
+operator|=
+name|resourceOwnerSubject
+expr_stmt|;
+block|}
+comment|/**      * Get the {@link UserSubject} representing the resource owner       * who has registered this client      * @return the resource owner user subject      */
+specifier|public
+name|UserSubject
+name|getResourceOwnerSubject
+parameter_list|()
+block|{
+return|return
+name|resourceOwnerSubject
 return|;
 block|}
 comment|/**      * Get the list of additional client properties      * @return the list of properties      */
