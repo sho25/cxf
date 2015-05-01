@@ -62,6 +62,10 @@ argument_list|()
 decl_stmt|;
 specifier|public
 name|Consumers
+parameter_list|()
+block|{              }
+specifier|public
+name|Consumers
 parameter_list|(
 name|Consumers
 name|consumers
