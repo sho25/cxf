@@ -947,6 +947,16 @@ return|;
 block|}
 catch|catch
 parameter_list|(
+name|NullPointerException
+name|e
+parameter_list|)
+block|{
+throw|throw
+name|e
+throw|;
+block|}
+catch|catch
+parameter_list|(
 name|Throwable
 name|t
 parameter_list|)
