@@ -578,13 +578,12 @@ argument_list|(
 name|transports
 operator|=
 block|{
-comment|// @CreateTransport(protocol = "TCP", address = "127.0.0.1", port=1024)
 annotation|@
 name|CreateTransport
 argument_list|(
 name|protocol
 operator|=
-literal|"UDP"
+literal|"KRB"
 argument_list|,
 name|address
 operator|=
