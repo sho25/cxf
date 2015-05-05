@@ -840,13 +840,6 @@ name|getCanonicalPath
 argument_list|()
 expr_stmt|;
 block|}
-else|else
-block|{
-name|basedir
-operator|+=
-literal|"/.."
-expr_stmt|;
-block|}
 comment|// System.setProperty("sun.security.krb5.debug", "true");
 name|System
 operator|.
@@ -856,7 +849,7 @@ literal|"java.security.auth.login.config"
 argument_list|,
 name|basedir
 operator|+
-literal|"/kerberos/src/test/resources/kerberos.jaas"
+literal|"/src/test/resources/kerberos.jaas"
 argument_list|)
 expr_stmt|;
 block|}
