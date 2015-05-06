@@ -4180,15 +4180,6 @@ operator|.
 name|getRawType
 argument_list|()
 expr_stmt|;
-name|outType
-operator|=
-name|InjectionUtils
-operator|.
-name|getActualType
-argument_list|(
-name|pt
-argument_list|)
-expr_stmt|;
 block|}
 block|}
 return|return
