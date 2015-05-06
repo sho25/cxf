@@ -2808,7 +2808,7 @@ name|value
 operator|=
 literal|"simplePart2"
 argument_list|)
-name|String
+name|Integer
 name|simplePart2
 parameter_list|)
 throws|throws
@@ -2828,6 +2828,9 @@ operator|+
 name|simplePart1
 operator|+
 name|simplePart2
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 name|b1
 operator|.

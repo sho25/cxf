@@ -447,7 +447,7 @@ name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 name|p
 operator|.
@@ -763,7 +763,7 @@ name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|assertTrue
+name|assertFalse
 argument_list|(
 name|p
 operator|.
