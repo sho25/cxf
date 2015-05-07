@@ -693,6 +693,17 @@ name|boolean
 name|isSuspended
 parameter_list|()
 block|{
+if|if
+condition|(
+name|cancelled
+operator|||
+name|resumedByApplication
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 return|return
 name|initialSuspend
 operator|||
