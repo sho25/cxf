@@ -102,11 +102,11 @@ name|ClientAccessToken
 name|at
 parameter_list|)
 block|{
-name|OidcClientTokenContext
+name|OidcClientTokenContextImpl
 name|ctx
 init|=
 operator|new
-name|OidcClientTokenContext
+name|OidcClientTokenContextImpl
 argument_list|()
 decl_stmt|;
 name|ctx
