@@ -293,6 +293,22 @@ name|AlgorithmSuiteType
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|xml
+operator|.
+name|security
+operator|.
+name|transforms
+operator|.
+name|Transforms
+import|;
+end_import
+
 begin_comment
 comment|/**  * Validate results corresponding to the processing of a Signature, EncryptedKey or  * EncryptedData structure against an AlgorithmSuite policy.  */
 end_comment
@@ -937,6 +953,15 @@ operator|||
 name|STRTransform
 operator|.
 name|TRANSFORM_URI
+operator|.
+name|equals
+argument_list|(
+name|transformAlgorithm
+argument_list|)
+operator|||
+name|Transforms
+operator|.
+name|TRANSFORM_ENVELOPED_SIGNATURE
 operator|.
 name|equals
 argument_list|(
