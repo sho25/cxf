@@ -109,6 +109,13 @@ operator|new
 name|OidcClientTokenContextImpl
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|at
+operator|!=
+literal|null
+condition|)
+block|{
 name|ctx
 operator|.
 name|setIdToken
@@ -144,6 +151,7 @@ argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ctx
 return|;
