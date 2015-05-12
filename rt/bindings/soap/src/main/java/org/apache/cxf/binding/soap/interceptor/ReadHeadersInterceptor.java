@@ -1952,6 +1952,7 @@ block|}
 block|}
 block|}
 block|}
+comment|//CHECKSTYLE:ON
 specifier|private
 name|void
 name|addCurrentNamespaceDecls
