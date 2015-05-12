@@ -511,6 +511,18 @@ range|:
 name|ais
 control|)
 block|{
+if|if
+condition|(
+name|ai
+operator|.
+name|isAsserted
+argument_list|()
+condition|)
+block|{
+comment|// Secured Parts could already have been asserted by one of the other validators, if
+comment|// they are a child of a SupportingToken
+continue|continue;
+block|}
 name|SignedParts
 name|p
 init|=
