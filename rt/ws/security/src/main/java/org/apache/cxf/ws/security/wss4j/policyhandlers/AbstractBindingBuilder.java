@@ -6632,7 +6632,7 @@ return|return
 name|id
 return|;
 block|}
-specifier|public
+specifier|protected
 name|String
 name|getPassword
 parameter_list|(
@@ -6684,6 +6684,28 @@ operator|==
 literal|null
 condition|)
 block|{
+comment|// Don't unassert for signature as we might get the password from the crypto properties
+if|if
+condition|(
+name|usage
+operator|==
+name|WSPasswordCallback
+operator|.
+name|SIGNATURE
+condition|)
+block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"No CallbackHandler available to retrieve a password. We will now try the crypto "
+operator|+
+literal|"properties file for a private password"
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|unassertPolicy
 argument_list|(
 name|info
@@ -6691,6 +6713,7 @@ argument_list|,
 literal|"No callback handler and no password available"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 literal|null
 return|;
@@ -6702,6 +6725,28 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+comment|// Don't unassert for signature as we might get the password from the crypto properties
+if|if
+condition|(
+name|usage
+operator|==
+name|WSPasswordCallback
+operator|.
+name|SIGNATURE
+condition|)
+block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"No CallbackHandler available to retrieve a password. We will now try the crypto "
+operator|+
+literal|"properties file for a private password"
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
 name|unassertPolicy
 argument_list|(
 name|info
@@ -6709,6 +6754,7 @@ argument_list|,
 literal|"No callback handler and no password available"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 literal|null
 return|;
