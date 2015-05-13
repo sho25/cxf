@@ -347,16 +347,6 @@ extends|extends
 name|WSS4JStaxOutInterceptor
 block|{
 specifier|public
-specifier|static
-specifier|final
-name|PolicyBasedWSS4JStaxOutInterceptor
-name|INSTANCE
-init|=
-operator|new
-name|PolicyBasedWSS4JStaxOutInterceptor
-argument_list|()
-decl_stmt|;
-specifier|public
 name|void
 name|handleMessage
 parameter_list|(

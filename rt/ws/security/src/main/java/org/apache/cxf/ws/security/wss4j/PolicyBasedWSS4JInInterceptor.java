@@ -574,16 +574,6 @@ name|PolicyBasedWSS4JInInterceptor
 extends|extends
 name|WSS4JInInterceptor
 block|{
-specifier|public
-specifier|static
-specifier|final
-name|PolicyBasedWSS4JInInterceptor
-name|INSTANCE
-init|=
-operator|new
-name|PolicyBasedWSS4JInInterceptor
-argument_list|()
-decl_stmt|;
 comment|/**      *       */
 specifier|public
 name|PolicyBasedWSS4JInInterceptor

@@ -248,6 +248,20 @@ name|inInterceptor
 argument_list|)
 expr_stmt|;
 comment|//not needed on fault chains
+name|PolicyBasedWSS4JStaxOutInterceptor
+name|so
+init|=
+operator|new
+name|PolicyBasedWSS4JStaxOutInterceptor
+argument_list|()
+decl_stmt|;
+name|PolicyBasedWSS4JStaxInInterceptor
+name|si
+init|=
+operator|new
+name|PolicyBasedWSS4JStaxInInterceptor
+argument_list|()
+decl_stmt|;
 name|this
 operator|.
 name|getOutInterceptors
@@ -255,9 +269,7 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|PolicyBasedWSS4JStaxOutInterceptor
-operator|.
-name|INSTANCE
+name|so
 argument_list|)
 expr_stmt|;
 name|this
@@ -267,9 +279,7 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|PolicyBasedWSS4JStaxOutInterceptor
-operator|.
-name|INSTANCE
+name|so
 argument_list|)
 expr_stmt|;
 name|this
@@ -279,9 +289,7 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|PolicyBasedWSS4JStaxInInterceptor
-operator|.
-name|INSTANCE
+name|si
 argument_list|)
 expr_stmt|;
 name|this
@@ -291,9 +299,7 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
-name|PolicyBasedWSS4JStaxInInterceptor
-operator|.
-name|INSTANCE
+name|si
 argument_list|)
 expr_stmt|;
 block|}
