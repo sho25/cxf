@@ -656,16 +656,6 @@ name|PolicyBasedWSS4JStaxInInterceptor
 extends|extends
 name|WSS4JStaxInInterceptor
 block|{
-specifier|public
-specifier|static
-specifier|final
-name|PolicyBasedWSS4JStaxInInterceptor
-name|INSTANCE
-init|=
-operator|new
-name|PolicyBasedWSS4JStaxInInterceptor
-argument_list|()
-decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
