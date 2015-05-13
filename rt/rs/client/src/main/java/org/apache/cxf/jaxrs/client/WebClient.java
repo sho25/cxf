@@ -3254,7 +3254,7 @@ parameter_list|(
 name|String
 name|headerName
 parameter_list|,
-name|String
+name|Object
 name|value
 parameter_list|)
 block|{
@@ -3286,9 +3286,9 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|headers
+name|super
 operator|.
-name|add
+name|header
 argument_list|(
 name|headerName
 argument_list|,

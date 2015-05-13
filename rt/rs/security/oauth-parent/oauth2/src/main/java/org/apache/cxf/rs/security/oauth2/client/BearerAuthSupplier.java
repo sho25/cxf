@@ -320,14 +320,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|at
-operator|.
-name|getExpiresIn
-argument_list|()
-operator|!=
-operator|-
-literal|1
-operator|&&
 name|OAuthUtils
 operator|.
 name|isExpired
