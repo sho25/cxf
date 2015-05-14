@@ -570,6 +570,15 @@ name|AUTHORIZATION_SCHEME_DATA
 init|=
 literal|"authSchemeData"
 decl_stmt|;
+comment|// Default refresh token scope value - checked by CXF utility code
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|REFRESH_TOKEN_SCOPE
+init|=
+literal|"refreshToken"
+decl_stmt|;
 specifier|private
 name|OAuthConstants
 parameter_list|()
