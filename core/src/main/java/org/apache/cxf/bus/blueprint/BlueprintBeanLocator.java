@@ -818,6 +818,10 @@ name|list
 operator|.
 name|isEmpty
 argument_list|()
+operator|&&
+name|context
+operator|!=
+literal|null
 condition|)
 block|{
 try|try
@@ -1107,6 +1111,13 @@ block|}
 block|}
 try|try
 block|{
+if|if
+condition|(
+name|context
+operator|!=
+literal|null
+condition|)
+block|{
 name|ServiceReference
 name|refs
 index|[]
@@ -1209,6 +1220,7 @@ name|loaded
 operator|=
 literal|true
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
