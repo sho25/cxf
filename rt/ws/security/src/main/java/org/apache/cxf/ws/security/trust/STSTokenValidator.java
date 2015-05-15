@@ -1021,9 +1021,9 @@ name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
-literal|"invalidSAMLsecurity"
-argument_list|,
 name|e
+argument_list|,
+literal|"invalidSAMLsecurity"
 argument_list|)
 throw|;
 block|}
@@ -1127,9 +1127,9 @@ name|ErrorCode
 operator|.
 name|FAILURE
 argument_list|,
-literal|"invalidSAMLsecurity"
-argument_list|,
 name|e
+argument_list|,
+literal|"invalidSAMLsecurity"
 argument_list|)
 throw|;
 block|}
