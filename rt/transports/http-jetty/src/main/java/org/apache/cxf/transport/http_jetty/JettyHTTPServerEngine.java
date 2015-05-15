@@ -1773,6 +1773,20 @@ name|url
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|contexts
+operator|==
+literal|null
+condition|)
+block|{
+name|contexts
+operator|=
+operator|new
+name|ContextHandlerCollection
+argument_list|()
+expr_stmt|;
+block|}
 name|SecurityHandler
 name|securityHandler
 init|=
@@ -2045,12 +2059,6 @@ block|}
 block|}
 block|}
 block|}
-name|contexts
-operator|=
-operator|new
-name|ContextHandlerCollection
-argument_list|()
-expr_stmt|;
 comment|/*              * handlerCollection may be null here if is only one handler to deal with.              * Which in turn implies that there can't be a 'defaultHander' to deal with.              */
 if|if
 condition|(
