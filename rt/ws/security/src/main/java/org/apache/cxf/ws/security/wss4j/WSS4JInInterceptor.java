@@ -3332,7 +3332,7 @@ argument_list|,
 name|context
 argument_list|)
 expr_stmt|;
-break|break;
+return|return;
 block|}
 block|}
 block|}
