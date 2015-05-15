@@ -105,6 +105,22 @@ name|JAXRSBPNamespaceHandler
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxws
+operator|.
+name|blueprint
+operator|.
+name|JAXWSBPNamespaceHandler
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -197,7 +213,7 @@ literal|"/schemas/blueprint/jaxws.xsd"
 argument_list|)
 argument_list|,
 operator|new
-name|JAXRSBPNamespaceHandler
+name|JAXWSBPNamespaceHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
