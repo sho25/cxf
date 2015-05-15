@@ -543,18 +543,6 @@ argument_list|,
 literal|"http://nowhere.com/bar/foo"
 argument_list|)
 expr_stmt|;
-name|assertNull
-argument_list|(
-literal|"unexpected upfront URL"
-argument_list|,
-name|conduit
-operator|.
-name|getURI
-argument_list|(
-literal|false
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|"unexpected on-demand URL"

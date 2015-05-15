@@ -1669,7 +1669,9 @@ block|{
 comment|//proxy = control.createMock(Proxy.class);
 name|proxy
 operator|=
-literal|null
+name|Proxy
+operator|.
+name|NO_PROXY
 expr_stmt|;
 name|connection
 operator|=
