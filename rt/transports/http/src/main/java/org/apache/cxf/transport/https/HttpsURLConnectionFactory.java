@@ -684,18 +684,30 @@ name|getSecureRandom
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// The "false" argument means opposite of exclude.
 name|String
 index|[]
 name|cipherSuites
 init|=
 name|SSLUtils
 operator|.
-name|getCiphersuites
+name|getCiphersuitesToInclude
 argument_list|(
 name|tlsClientParameters
 operator|.
 name|getCipherSuites
+argument_list|()
+argument_list|,
+name|tlsClientParameters
+operator|.
+name|getCipherSuitesFilter
+argument_list|()
+argument_list|,
+name|ctx
+operator|.
+name|getSocketFactory
+argument_list|()
+operator|.
+name|getDefaultCipherSuites
 argument_list|()
 argument_list|,
 name|SSLUtils
@@ -705,14 +717,7 @@ argument_list|(
 name|ctx
 argument_list|)
 argument_list|,
-name|tlsClientParameters
-operator|.
-name|getCipherSuitesFilter
-argument_list|()
-argument_list|,
 name|LOG
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 comment|// The SSLSocketFactoryWrapper enables certain cipher suites
