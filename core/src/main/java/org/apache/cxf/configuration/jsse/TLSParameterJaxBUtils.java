@@ -1569,17 +1569,6 @@ operator|.
 name|newInstance
 argument_list|()
 expr_stmt|;
-if|if
-condition|(
-name|ch
-operator|==
-literal|null
-condition|)
-block|{
-return|return
-literal|null
-return|;
-block|}
 name|String
 name|prompt
 init|=

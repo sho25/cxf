@@ -361,8 +361,9 @@ block|{
 name|Integer
 name|limit
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 name|getValue
 argument_list|(
@@ -394,8 +395,9 @@ decl_stmt|;
 name|Long
 name|inMemThreshold
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 name|getValue
 argument_list|(

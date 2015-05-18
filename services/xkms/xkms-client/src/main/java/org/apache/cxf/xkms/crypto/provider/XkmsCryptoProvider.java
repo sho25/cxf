@@ -959,11 +959,9 @@ if|if
 condition|(
 name|allowX509FromJKS
 operator|&&
-operator|(
 name|fallbackCrypto
 operator|!=
 literal|null
-operator|)
 condition|)
 block|{
 name|X509Certificate
@@ -977,11 +975,9 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-operator|(
 name|localCerts
 operator|!=
 literal|null
-operator|)
 operator|&&
 name|localCerts
 operator|.

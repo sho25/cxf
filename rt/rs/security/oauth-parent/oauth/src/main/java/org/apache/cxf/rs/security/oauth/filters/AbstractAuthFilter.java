@@ -1493,12 +1493,6 @@ expr_stmt|;
 block|}
 return|return
 name|roles
-operator|==
-literal|null
-condition|?
-literal|false
-else|:
-name|roles
 operator|.
 name|contains
 argument_list|(

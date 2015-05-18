@@ -3882,6 +3882,10 @@ decl_stmt|;
 if|if
 condition|(
 name|token
+operator|!=
+literal|null
+operator|&&
+name|token
 operator|.
 name|getKeyWrappingToken
 argument_list|()
@@ -4001,6 +4005,10 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|token
+operator|!=
+literal|null
+operator|&&
 name|token
 operator|.
 name|getKeyWrappingToken

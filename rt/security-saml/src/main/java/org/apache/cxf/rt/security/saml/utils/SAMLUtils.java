@@ -665,10 +665,6 @@ name|nameFormat
 operator|==
 literal|null
 operator|||
-name|claim
-operator|instanceof
-name|SAMLClaim
-operator|&&
 name|nameFormat
 operator|.
 name|equals
