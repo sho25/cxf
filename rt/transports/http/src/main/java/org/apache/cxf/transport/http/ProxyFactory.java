@@ -268,7 +268,7 @@ condition|)
 block|{
 name|proxyPort
 operator|=
-literal|null
+literal|"8080"
 expr_stmt|;
 block|}
 name|systemProxyConfiguration

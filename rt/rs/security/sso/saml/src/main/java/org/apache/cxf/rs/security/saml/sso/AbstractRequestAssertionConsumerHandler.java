@@ -1100,7 +1100,7 @@ name|getBytes
 argument_list|()
 operator|.
 name|length
-operator|<
+operator|==
 literal|0
 operator|||
 name|relayState

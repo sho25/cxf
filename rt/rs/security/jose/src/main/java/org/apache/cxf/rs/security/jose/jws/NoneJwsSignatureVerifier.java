@@ -75,6 +75,9 @@ name|equals
 argument_list|(
 name|getAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 operator|&&
 name|signature
