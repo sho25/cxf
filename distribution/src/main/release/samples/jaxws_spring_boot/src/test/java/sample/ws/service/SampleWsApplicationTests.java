@@ -371,7 +371,7 @@ argument_list|()
 argument_list|,
 name|containsString
 argument_list|(
-literal|"<?xml version=\"1.0\" encoding=\"UTF-8\"?><ns2:sayHelloResponse xmlns:ns2=\"http://service.ws.sample/\"><return>Welcome to CXF Spring boot Elan!!!</return></ns2:sayHelloResponse>"
+literal|"<?xml version=\"1.0\" encoding=\"UTF-8\"?><ns2:sayHelloResponse xmlns:ns2=\"http://service.ws.sample/\"><return>Hello, Welcome to CXF Spring boot Elan!!!</return></ns2:sayHelloResponse>"
 argument_list|)
 argument_list|)
 expr_stmt|;
