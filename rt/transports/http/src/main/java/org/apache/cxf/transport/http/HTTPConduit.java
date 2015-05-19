@@ -3092,6 +3092,8 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
 if|if
 condition|(
 name|endpointInfo
@@ -3125,6 +3127,7 @@ name|getAddress
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
