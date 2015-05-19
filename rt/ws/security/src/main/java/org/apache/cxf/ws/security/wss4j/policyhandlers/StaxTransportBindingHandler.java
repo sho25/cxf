@@ -1587,7 +1587,13 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|token
+operator|!=
+literal|null
+condition|)
 block|{
 throw|throw
 operator|new
@@ -1599,6 +1605,16 @@ name|getName
 argument_list|()
 operator|+
 literal|" is not supported in the streaming code"
+argument_list|)
+throw|;
+block|}
+else|else
+block|{
+throw|throw
+operator|new
+name|Exception
+argument_list|(
+literal|"A null token was supplied to the streaming code"
 argument_list|)
 throw|;
 block|}

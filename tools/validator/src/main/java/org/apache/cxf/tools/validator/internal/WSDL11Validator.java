@@ -1472,6 +1472,13 @@ parameter_list|)
 block|{
 comment|//
 block|}
+if|if
+condition|(
+name|loc
+operator|!=
+literal|null
+condition|)
+block|{
 name|java
 operator|.
 name|io
@@ -1541,6 +1548,13 @@ block|}
 block|}
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|files
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|int
@@ -1605,6 +1619,8 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
+block|}
+block|}
 block|}
 block|}
 block|}

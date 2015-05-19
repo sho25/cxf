@@ -1493,6 +1493,13 @@ argument_list|(
 name|filter
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|files
+operator|!=
+literal|null
+condition|)
+block|{
 name|List
 argument_list|<
 name|String
@@ -1592,6 +1599,7 @@ argument_list|()
 index|]
 argument_list|)
 return|;
+block|}
 block|}
 return|return
 literal|null
