@@ -29,6 +29,16 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|servlet
+operator|.
+name|ServletContext
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -134,6 +144,9 @@ specifier|protected
 name|NamespaceHandlerSet
 name|getNamespaceHandlerSet
 parameter_list|(
+name|ServletContext
+name|sc
+parameter_list|,
 name|ClassLoader
 name|tccl
 parameter_list|)
