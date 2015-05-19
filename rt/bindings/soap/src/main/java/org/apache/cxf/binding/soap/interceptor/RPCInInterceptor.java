@@ -67,18 +67,6 @@ name|util
 operator|.
 name|logging
 operator|.
-name|Level
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|logging
-operator|.
 name|Logger
 import|;
 end_import
@@ -685,18 +673,6 @@ name|message
 argument_list|)
 condition|)
 block|{
-if|if
-condition|(
-name|LOG
-operator|.
-name|isLoggable
-argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|)
-condition|)
-block|{
 name|LOG
 operator|.
 name|fine
@@ -704,7 +680,6 @@ argument_list|(
 literal|"RPCInInterceptor skipped in HTTP GET method"
 argument_list|)
 expr_stmt|;
-block|}
 return|return;
 block|}
 name|DepthXMLStreamReader
