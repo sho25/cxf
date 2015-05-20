@@ -111,6 +111,20 @@ name|aries
 operator|.
 name|blueprint
 operator|.
+name|Namespaces
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|aries
+operator|.
+name|blueprint
+operator|.
 name|ParserContext
 import|;
 end_import
@@ -164,6 +178,11 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|Namespaces
+argument_list|(
+literal|"http://cxf.apache.org/transports/http-jetty/configuration"
+argument_list|)
 specifier|public
 class|class
 name|HTTPJettyTransportNamespaceHandler

@@ -77,21 +77,19 @@ name|NamespaceHandler
 import|;
 end_import
 
-begin_comment
-comment|//import org.apache.aries.blueprint.ParserContext;
-end_comment
-
-begin_comment
-comment|//import org.osgi.service.blueprint.container.BlueprintContainer;
-end_comment
-
-begin_comment
-comment|//import org.osgi.service.blueprint.reflect.ComponentMetadata;
-end_comment
-
-begin_comment
-comment|//import org.osgi.service.blueprint.reflect.Metadata;
-end_comment
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|aries
+operator|.
+name|blueprint
+operator|.
+name|Namespaces
+import|;
+end_import
 
 begin_import
 import|import
@@ -139,11 +137,12 @@ name|Metadata
 import|;
 end_import
 
-begin_comment
-comment|/**  *   */
-end_comment
-
 begin_class
+annotation|@
+name|Namespaces
+argument_list|(
+literal|"http://cxf.apache.org/transports/http/configuration"
+argument_list|)
 specifier|public
 class|class
 name|HttpBPHandler
