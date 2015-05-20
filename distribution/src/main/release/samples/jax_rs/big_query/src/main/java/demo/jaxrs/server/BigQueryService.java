@@ -259,10 +259,8 @@ literal|"{\"email\":\""
 operator|+
 name|userInfo
 operator|.
-name|getProperty
-argument_list|(
-literal|"email"
-argument_list|)
+name|getEmail
+argument_list|()
 operator|+
 literal|"\"}"
 argument_list|)
