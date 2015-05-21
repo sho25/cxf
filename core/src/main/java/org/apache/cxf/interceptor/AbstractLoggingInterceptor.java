@@ -453,6 +453,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|showMultipartContent
+init|=
+literal|true
 decl_stmt|;
 specifier|public
 name|AbstractLoggingInterceptor
