@@ -157,27 +157,7 @@ name|org
 operator|.
 name|junit
 operator|.
-name|BeforeClass
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
-name|Test
 import|;
 end_import
 
@@ -198,28 +178,12 @@ name|BlueprintServer
 operator|.
 name|PORT
 decl_stmt|;
-annotation|@
-name|BeforeClass
-specifier|public
-specifier|static
-name|void
-name|beforeClass
-parameter_list|()
-throws|throws
-name|Exception
-block|{
-comment|// must be 'in-process' to communicate with inner class in single JVM
-comment|// and to spawn class SpringServer w/o using main() method
-name|launchServer
-argument_list|(
-name|BlueprintServer
-operator|.
-name|class
-argument_list|,
-literal|true
-argument_list|)
-expr_stmt|;
-block|}
+comment|//    @BeforeClass
+comment|//    public static void beforeClass() throws Exception {
+comment|//        // must be 'in-process' to communicate with inner class in single JVM
+comment|//        // and to spawn class SpringServer w/o using main() method
+comment|//        launchServer(BlueprintServer.class, true);
+comment|//    }
 annotation|@
 name|Ignore
 specifier|public
@@ -257,8 +221,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testHelloRest
@@ -295,8 +258,7 @@ name|service
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Test
+comment|//@Test
 specifier|public
 name|void
 name|testHelloSoap
