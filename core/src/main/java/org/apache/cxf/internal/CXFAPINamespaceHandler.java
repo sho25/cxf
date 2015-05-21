@@ -83,20 +83,6 @@ name|aries
 operator|.
 name|blueprint
 operator|.
-name|Namespaces
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|aries
-operator|.
-name|blueprint
-operator|.
 name|ParserContext
 import|;
 end_import
@@ -223,26 +209,35 @@ name|Metadata
 import|;
 end_import
 
+begin_comment
+comment|//@Namespaces({"http://cxf.apache.org/blueprint/core",
+end_comment
+
+begin_comment
+comment|//             "http://cxf.apache.org/configuration/beans",
+end_comment
+
+begin_comment
+comment|//             "http://cxf.apache.org/configuration/parameterized-types",
+end_comment
+
+begin_comment
+comment|//             "http://cxf.apache.org/configuration/security",
+end_comment
+
+begin_comment
+comment|//             "http://schemas.xmlsoap.org/wsdl/",
+end_comment
+
+begin_comment
+comment|//             "http://www.w3.org/2005/08/addressing",
+end_comment
+
+begin_comment
+comment|//             "http://schemas.xmlsoap.org/ws/2004/08/addressing"})
+end_comment
+
 begin_class
-annotation|@
-name|Namespaces
-argument_list|(
-block|{
-literal|"http://cxf.apache.org/blueprint/core"
-block|,
-literal|"http://cxf.apache.org/configuration/beans"
-block|,
-literal|"http://cxf.apache.org/configuration/parameterized-types"
-block|,
-literal|"http://cxf.apache.org/configuration/security"
-block|,
-literal|"http://schemas.xmlsoap.org/wsdl/"
-block|,
-literal|"http://www.w3.org/2005/08/addressing"
-block|,
-literal|"http://schemas.xmlsoap.org/ws/2004/08/addressing"
-block|}
-argument_list|)
 specifier|public
 class|class
 name|CXFAPINamespaceHandler

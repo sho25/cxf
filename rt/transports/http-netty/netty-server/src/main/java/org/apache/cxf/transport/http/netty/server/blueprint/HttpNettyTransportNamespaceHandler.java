@@ -115,20 +115,6 @@ name|aries
 operator|.
 name|blueprint
 operator|.
-name|Namespaces
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|aries
-operator|.
-name|blueprint
-operator|.
 name|ParserContext
 import|;
 end_import
@@ -181,12 +167,11 @@ name|Metadata
 import|;
 end_import
 
+begin_comment
+comment|//@Namespaces("http://cxf.apache.org/transports/http-netty-server/configuration")
+end_comment
+
 begin_class
-annotation|@
-name|Namespaces
-argument_list|(
-literal|"http://cxf.apache.org/transports/http-netty-server/configuration"
-argument_list|)
 specifier|public
 class|class
 name|HttpNettyTransportNamespaceHandler
