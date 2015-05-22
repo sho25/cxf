@@ -581,6 +581,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -597,7 +599,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -716,6 +719,7 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -740,6 +744,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -756,7 +762,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -845,6 +852,7 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -861,6 +869,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -877,7 +887,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -951,6 +962,7 @@ name|stop
 argument_list|()
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 annotation|@
@@ -988,6 +1000,8 @@ operator|.
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -1004,7 +1018,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -1077,6 +1092,7 @@ name|stop
 argument_list|()
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1093,6 +1109,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -1109,7 +1127,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -1187,6 +1206,7 @@ name|stop
 argument_list|()
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1203,6 +1223,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -1219,7 +1241,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -1295,6 +1318,7 @@ operator|.
 name|stop
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Test
@@ -1538,6 +1562,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -1554,7 +1580,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|publish
@@ -1651,6 +1678,7 @@ argument_list|,
 name|response
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|final
 class|class

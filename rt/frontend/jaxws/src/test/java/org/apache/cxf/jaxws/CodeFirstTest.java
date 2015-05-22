@@ -1140,6 +1140,8 @@ operator|new
 name|Hello
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -1156,7 +1158,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|setExecutor
@@ -1266,6 +1269,7 @@ name|res
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1282,6 +1286,8 @@ operator|new
 name|Hello
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -1298,7 +1304,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|publish
@@ -1601,6 +1608,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1617,6 +1625,8 @@ operator|new
 name|Hello
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -1633,7 +1643,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|publish
@@ -1911,6 +1922,7 @@ block|{
 comment|//this is expected as the client is closed.
 block|}
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1927,6 +1939,8 @@ operator|new
 name|SayHiImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -1943,7 +1957,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|publish
@@ -2100,6 +2115,7 @@ literal|"BonjourBonjour"
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -2116,6 +2132,8 @@ operator|new
 name|ArrayServiceImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -2132,7 +2150,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|publish
@@ -2485,6 +2504,7 @@ argument_list|,
 literal|"list1list2list3"
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Test

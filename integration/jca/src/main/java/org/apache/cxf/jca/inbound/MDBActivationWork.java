@@ -1080,6 +1080,11 @@ name|JaxWsServerFactoryBean
 name|factory
 parameter_list|)
 block|{
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"resource"
+argument_list|)
 name|EndpointImpl
 name|endpoint
 init|=

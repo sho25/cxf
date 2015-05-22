@@ -773,6 +773,8 @@ implements|implements
 name|InterceptorProvider
 implements|,
 name|Configurable
+implements|,
+name|AutoCloseable
 block|{
 comment|/**      * This property controls whether the 'publishEndpoint' permission is checked       * using only the AccessController (i.e. when SecurityManager is not installed).      * By default this check is not done as the system property is not set.      */
 specifier|public
@@ -4421,6 +4423,19 @@ operator|.
 name|getPath
 argument_list|()
 argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|close
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|stop
+argument_list|()
 expr_stmt|;
 block|}
 block|}

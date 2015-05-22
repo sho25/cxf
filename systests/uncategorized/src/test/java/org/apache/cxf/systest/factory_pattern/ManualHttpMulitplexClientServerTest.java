@@ -391,6 +391,9 @@ block|{
 name|Endpoint
 name|ep
 decl_stmt|;
+name|ManualNumberFactoryImpl
+name|implementor
+decl_stmt|;
 specifier|protected
 name|void
 name|run
@@ -404,9 +407,8 @@ name|getDefaultBus
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|Object
 name|implementor
-init|=
+operator|=
 operator|new
 name|ManualNumberFactoryImpl
 argument_list|(
@@ -415,7 +417,7 @@ argument_list|()
 argument_list|,
 name|PORT
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|ep
 operator|=
 name|Endpoint
@@ -432,6 +434,8 @@ specifier|public
 name|void
 name|tearDown
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|ep
 operator|.
@@ -439,6 +443,15 @@ name|stop
 argument_list|()
 expr_stmt|;
 name|ep
+operator|=
+literal|null
+expr_stmt|;
+name|implementor
+operator|.
+name|stop
+argument_list|()
+expr_stmt|;
+name|implementor
 operator|=
 literal|null
 expr_stmt|;

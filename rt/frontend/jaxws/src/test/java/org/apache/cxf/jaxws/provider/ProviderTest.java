@@ -99,6 +99,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -117,7 +119,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|publish
@@ -164,6 +167,7 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -173,6 +177,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -191,7 +197,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|ep
 operator|.
 name|publish
@@ -237,6 +244,7 @@ argument_list|,
 name|response
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|static

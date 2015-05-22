@@ -335,6 +335,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -351,7 +353,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|WebServiceContext
 name|ctx
 init|=
@@ -477,6 +480,7 @@ block|{
 comment|// expected
 block|}
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -498,6 +502,8 @@ operator|new
 name|GreeterImpl
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -514,7 +520,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|WebServiceContext
 name|ctx
 init|=
@@ -632,6 +639,7 @@ block|{
 comment|// expected.
 block|}
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -683,6 +691,8 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -700,7 +710,8 @@ argument_list|(
 name|serviceFactory
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|WebServiceContext
 name|ctx
 init|=
@@ -777,6 +788,7 @@ name|ctx
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -828,6 +840,8 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -845,7 +859,8 @@ argument_list|(
 name|serviceFactory
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 try|try
 block|{
 name|String
@@ -895,6 +910,7 @@ name|getCode
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 annotation|@
@@ -1003,6 +1019,8 @@ operator|new
 name|Hello
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|ep
 init|=
@@ -1019,7 +1037,8 @@ name|String
 operator|)
 literal|null
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|System
 operator|.
 name|setProperty
@@ -1076,6 +1095,7 @@ literal|"local://localhost:9090/hello"
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1127,6 +1147,8 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -1144,7 +1166,8 @@ argument_list|(
 name|serviceFactory
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|endpoint
 operator|.
 name|getFeatures
@@ -1236,6 +1259,7 @@ name|WSAddressingFeature
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1287,6 +1311,8 @@ operator|.
 name|class
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|EndpointImpl
 name|endpoint
 init|=
@@ -1304,7 +1330,8 @@ argument_list|(
 name|serviceFactory
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 try|try
 block|{
 name|String
@@ -1384,6 +1411,7 @@ name|WSAddressingFeature
 argument_list|)
 expr_stmt|;
 block|}
+block|}
 annotation|@
 name|Test
 specifier|public
@@ -1425,6 +1453,11 @@ name|publish
 argument_list|(
 literal|"http://localhost:8080/test"
 argument_list|)
+expr_stmt|;
+name|endpoint
+operator|.
+name|stop
+argument_list|()
 expr_stmt|;
 block|}
 specifier|static
