@@ -1169,9 +1169,9 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|processor
+name|util
 operator|.
-name|X509Util
+name|WSSecurityUtil
 import|;
 end_import
 
@@ -1187,7 +1187,7 @@ name|dom
 operator|.
 name|util
 operator|.
-name|WSSecurityUtil
+name|X509Util
 import|;
 end_import
 
