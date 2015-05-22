@@ -590,6 +590,11 @@ name|excludedheaders
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
+annotation|@
 name|Override
 specifier|public
 name|Action
@@ -1510,6 +1515,11 @@ name|AsyncIOInterceptorAdapter
 block|{
 annotation|@
 name|Override
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|public
 name|byte
 index|[]
