@@ -1200,12 +1200,8 @@ name|expect
 argument_list|(
 name|exg
 operator|.
-name|get
-argument_list|(
-name|BindingOperationInfo
-operator|.
-name|class
-argument_list|)
+name|getBindingOperationInfo
+argument_list|()
 argument_list|)
 operator|.
 name|andReturn

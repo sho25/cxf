@@ -193,12 +193,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Service
-operator|.
-name|class
-argument_list|)
+name|getService
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@

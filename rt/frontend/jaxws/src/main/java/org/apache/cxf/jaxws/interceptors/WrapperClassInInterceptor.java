@@ -649,17 +649,6 @@ argument_list|,
 name|boi2
 argument_list|)
 expr_stmt|;
-name|ex
-operator|.
-name|put
-argument_list|(
-name|OperationInfo
-operator|.
-name|class
-argument_list|,
-name|op
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|isGET

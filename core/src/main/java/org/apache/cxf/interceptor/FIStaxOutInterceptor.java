@@ -815,7 +815,7 @@ name|OutputStream
 name|out
 parameter_list|)
 block|{
-comment|/*         StAXDocumentSerializer serializer = (StAXDocumentSerializer)m.getExchange().get(Endpoint.class)             .remove(StAXDocumentSerializer.class.getName());         if (serializer != null) {             serializer.setOutputStream(out);         } else {             serializer = new StAXDocumentSerializer(out);         }         return serializer;         */
+comment|/*         StAXDocumentSerializer serializer = (StAXDocumentSerializer)m.getExchange().getEndpoint()             .remove(StAXDocumentSerializer.class.getName());         if (serializer != null) {             serializer.setOutputStream(out);         } else {             serializer = new StAXDocumentSerializer(out);         }         return serializer;         */
 specifier|final
 name|StAXDocumentSerializer
 name|stAXDocumentSerializer

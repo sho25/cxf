@@ -318,12 +318,8 @@ name|bop
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|BindingOperationInfo
-operator|.
-name|class
-argument_list|)
+name|getBindingOperationInfo
+argument_list|()
 decl_stmt|;
 comment|//if body is empty and we have BindingOperationInfo, we do not need to match
 comment|//operation anymore, just return
@@ -357,12 +353,8 @@ name|ep
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 decl_stmt|;
 name|bop
 operator|=

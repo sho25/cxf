@@ -2006,12 +2006,8 @@ name|ep
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 decl_stmt|;
 name|Message
 name|msg
@@ -2085,12 +2081,8 @@ name|ei
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 operator|.
 name|getEndpointInfo
 argument_list|()
@@ -2127,12 +2119,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Bus
-operator|.
-name|class
-argument_list|)
+name|getBus
+argument_list|()
 decl_stmt|;
 comment|//this is a response targeting a decoupled endpoint.   Treat it as a oneway so
 comment|//we don't wait for a response.

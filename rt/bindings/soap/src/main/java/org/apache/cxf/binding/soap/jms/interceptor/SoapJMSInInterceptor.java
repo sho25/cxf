@@ -1322,12 +1322,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 decl_stmt|;
 name|Binding
 name|b

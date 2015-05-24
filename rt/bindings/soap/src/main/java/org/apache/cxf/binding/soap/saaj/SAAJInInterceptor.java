@@ -1991,12 +1991,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Bus
-operator|.
-name|class
-argument_list|)
+name|getBus
+argument_list|()
 decl_stmt|;
 name|HeaderProcessor
 name|p

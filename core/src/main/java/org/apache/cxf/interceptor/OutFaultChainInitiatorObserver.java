@@ -195,12 +195,8 @@ name|e
 init|=
 name|ex
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 decl_stmt|;
 name|Client
 name|c

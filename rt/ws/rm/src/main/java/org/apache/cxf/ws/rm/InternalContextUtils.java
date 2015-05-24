@@ -556,12 +556,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Bus
-operator|.
-name|class
-argument_list|)
+name|getBus
+argument_list|()
 decl_stmt|;
 comment|//this is a response targeting a decoupled endpoint.   Treat it as a oneway so
 comment|//we don't wait for a response.
@@ -919,12 +915,8 @@ name|boi
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|BindingOperationInfo
-operator|.
-name|class
-argument_list|)
+name|getBindingOperationInfo
+argument_list|()
 decl_stmt|;
 comment|// insert the executor in the exchange to fool the OneWayProcessorInterceptor
 name|exchange
@@ -1020,12 +1012,8 @@ name|backChannel
 argument_list|,
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1212,12 +1200,8 @@ name|ei
 init|=
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 operator|.
 name|getEndpointInfo
 argument_list|()
@@ -1348,12 +1332,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 decl_stmt|;
 name|Executor
 name|executor
@@ -1389,12 +1369,8 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
-argument_list|(
-name|Bus
-operator|.
-name|class
-argument_list|)
+name|getBus
+argument_list|()
 decl_stmt|;
 if|if
 condition|(

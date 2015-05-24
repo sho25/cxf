@@ -4011,12 +4011,8 @@ argument_list|()
 expr_stmt|;
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 expr_stmt|;
 name|EasyMock
 operator|.
@@ -4991,12 +4987,8 @@ argument_list|)
 decl_stmt|;
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Endpoint
-operator|.
-name|class
-argument_list|)
+name|getEndpoint
+argument_list|()
 expr_stmt|;
 name|EasyMock
 operator|.
@@ -5316,6 +5308,24 @@ argument_list|,
 name|bindingOpInfo
 argument_list|)
 expr_stmt|;
+name|EasyMock
+operator|.
+name|expect
+argument_list|(
+name|exchange
+operator|.
+name|getBindingOperationInfo
+argument_list|()
+argument_list|)
+operator|.
+name|andReturn
+argument_list|(
+name|bindingOpInfo
+argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
+expr_stmt|;
 comment|// Usual fun with EasyMock not always working as expected
 comment|//BindingOperationInfo bindingOpInfo =
 comment|//    EasyMock.createMock(BindingOperationInfo.class);
@@ -5567,12 +5577,8 @@ argument_list|)
 decl_stmt|;
 name|exchange
 operator|.
-name|get
-argument_list|(
-name|Bus
-operator|.
-name|class
-argument_list|)
+name|getBus
+argument_list|()
 expr_stmt|;
 name|EasyMock
 operator|.

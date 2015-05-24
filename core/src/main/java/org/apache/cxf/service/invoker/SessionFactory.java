@@ -173,12 +173,8 @@ name|serv
 init|=
 name|e
 operator|.
-name|get
-argument_list|(
-name|Service
-operator|.
-name|class
-argument_list|)
+name|getService
+argument_list|()
 decl_stmt|;
 name|Object
 name|o
