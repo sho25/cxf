@@ -122,10 +122,23 @@ name|certs
 expr_stmt|;
 block|}
 comment|/**      * @return      the negotiated cipher suite.  This attribute is      *              guaranteed to be non-null.      */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|final
 name|String
 name|getChipherSuite
+parameter_list|()
+block|{
+return|return
+name|cipherSuite
+return|;
+block|}
+comment|/**      * @return      the negotiated cipher suite.  This attribute is      *              guaranteed to be non-null.      */
+specifier|public
+specifier|final
+name|String
+name|getCipherSuite
 parameter_list|()
 block|{
 return|return
