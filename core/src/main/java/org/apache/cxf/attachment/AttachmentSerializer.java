@@ -306,33 +306,18 @@ operator|.
 name|CONTENT_TYPE
 argument_list|)
 decl_stmt|;
-comment|// The bodyCt string is used enclosed within "", so if it contains the character ", it
-comment|// should be adjusted, like in the following case:
-comment|//   application/soap+xml; action="urn:ihe:iti:2007:RetrieveDocumentSet"
-comment|// The attribute action is added in SoapActionOutInterceptor, when SOAP 1.2 is used
-comment|// The string has to be changed in:
-comment|//   application/soap+xml"; action="urn:ihe:iti:2007:RetrieveDocumentSet
-comment|// so when it is enclosed within "", the result must be:
-comment|//   "application/soap+xml"; action="urn:ihe:iti:2007:RetrieveDocumentSet"
-comment|// instead of
-comment|//   "application/soap+xml; action="urn:ihe:iti:2007:RetrieveDocumentSet""
-comment|// that is wrong because when used it produces:
-comment|//   type="application/soap+xml; action="urn:ihe:iti:2007:RetrieveDocumentSet""
+name|String
+name|bodyCtParams
+init|=
+literal|null
+decl_stmt|;
+comment|// split the bodyCt to its head that is the type and its properties so that we
+comment|// can insert the values at the right places based on the soap version and the mtom option
+comment|// bodyCt will be of the form
+comment|// soap11 -> text/xml
+comment|// soap12 -> application/soap+xml; action="urn:ihe:iti:2007:RetrieveDocumentSet"
 if|if
 condition|(
-operator|(
-name|bodyCt
-operator|.
-name|indexOf
-argument_list|(
-literal|'"'
-argument_list|)
-operator|!=
-operator|-
-literal|1
-operator|)
-operator|&&
-operator|(
 name|bodyCt
 operator|.
 name|indexOf
@@ -342,7 +327,6 @@ argument_list|)
 operator|!=
 operator|-
 literal|1
-operator|)
 condition|)
 block|{
 name|int
@@ -355,12 +339,19 @@ argument_list|(
 literal|';'
 argument_list|)
 decl_stmt|;
-name|StringBuilder
-name|st
-init|=
-operator|new
-name|StringBuilder
+comment|// get everything from the semi-colon
+name|bodyCtParams
+operator|=
+name|bodyCt
+operator|.
+name|substring
 argument_list|(
+name|pos
+argument_list|)
+expr_stmt|;
+comment|// keep the type/subtype part in bodyCt
+name|bodyCt
+operator|=
 name|bodyCt
 operator|.
 name|substring
@@ -369,38 +360,6 @@ literal|0
 argument_list|,
 name|pos
 argument_list|)
-argument_list|)
-decl_stmt|;
-name|st
-operator|.
-name|append
-argument_list|(
-literal|"\""
-argument_list|)
-operator|.
-name|append
-argument_list|(
-name|bodyCt
-operator|.
-name|substring
-argument_list|(
-name|pos
-argument_list|,
-name|bodyCt
-operator|.
-name|length
-argument_list|()
-operator|-
-literal|1
-argument_list|)
-argument_list|)
-expr_stmt|;
-name|bodyCt
-operator|=
-name|st
-operator|.
-name|toString
-argument_list|()
 expr_stmt|;
 block|}
 comment|// Set transport mime type
@@ -560,6 +519,7 @@ expr_stmt|;
 block|}
 comment|// start-info is a required parameter for XOP/MTOM, may be needed for
 comment|// other WS cases but is redundant in simpler multipart/related cases
+comment|// the parameters need to be included within the start-info's value in the escaped form
 if|if
 condition|(
 name|writeOptionalTypeParameters
@@ -578,6 +538,26 @@ name|append
 argument_list|(
 name|bodyCt
 argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|bodyCtParams
+operator|!=
+literal|null
+condition|)
+block|{
+name|ct
+operator|.
+name|append
+argument_list|(
+name|escapeQuotes
+argument_list|(
+name|bodyCtParams
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
+name|ct
 operator|.
 name|append
 argument_list|(
@@ -688,15 +668,27 @@ name|append
 argument_list|(
 name|xop
 condition|?
-literal|"application/xop+xml; charset="
+literal|"application/xop+xml"
 else|:
-literal|"text/xml; charset="
+name|bodyCt
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|"; charset="
 argument_list|)
 operator|.
 name|append
 argument_list|(
 name|encoding
 argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|xop
+condition|)
+block|{
+name|mimeBodyCt
 operator|.
 name|append
 argument_list|(
@@ -713,6 +705,22 @@ argument_list|(
 literal|"\""
 argument_list|)
 expr_stmt|;
+block|}
+if|if
+condition|(
+name|bodyCtParams
+operator|!=
+literal|null
+condition|)
+block|{
+name|mimeBodyCt
+operator|.
+name|append
+argument_list|(
+name|bodyCtParams
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -756,6 +764,37 @@ name|encoding
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
+specifier|private
+specifier|static
+name|String
+name|escapeQuotes
+parameter_list|(
+name|String
+name|s
+parameter_list|)
+block|{
+return|return
+name|s
+operator|.
+name|indexOf
+argument_list|(
+literal|'"'
+argument_list|)
+operator|!=
+literal|0
+condition|?
+name|s
+operator|.
+name|replace
+argument_list|(
+literal|"\""
+argument_list|,
+literal|"\\\""
+argument_list|)
+else|:
+name|s
+return|;
 block|}
 specifier|private
 name|String
