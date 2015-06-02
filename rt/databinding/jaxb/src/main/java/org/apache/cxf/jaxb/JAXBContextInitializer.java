@@ -189,6 +189,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Logger
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|xml
@@ -358,6 +370,22 @@ operator|.
 name|jaxb
 operator|.
 name|JAXBUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|logging
+operator|.
+name|LogUtils
 import|;
 end_import
 
@@ -567,6 +595,21 @@ name|JAXBContextInitializer
 extends|extends
 name|ServiceModelVisitor
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|Logger
+name|LOG
+init|=
+name|LogUtils
+operator|.
+name|getL7dLogger
+argument_list|(
+name|JAXBContextInitializer
+operator|.
+name|class
+argument_list|)
+decl_stmt|;
 specifier|private
 name|Set
 argument_list|<
@@ -2168,8 +2211,33 @@ operator|.
 name|length
 operator|>
 literal|0
+operator|&&
+operator|!
+name|Modifier
+operator|.
+name|isAbstract
+argument_list|(
+name|claz
+operator|.
+name|getModifiers
+argument_list|()
+argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|info
+argument_list|(
+literal|"Class "
+operator|+
+name|claz
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|" does not have a default constructor which JAXB requires."
+argument_list|)
+expr_stmt|;
 comment|//there is no init(), but other constructors
 name|Object
 name|factory
