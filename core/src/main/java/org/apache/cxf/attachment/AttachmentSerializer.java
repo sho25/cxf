@@ -311,6 +311,11 @@ name|bodyCtParams
 init|=
 literal|null
 decl_stmt|;
+name|String
+name|bodyCtParamsEscaped
+init|=
+literal|null
+decl_stmt|;
 comment|// split the bodyCt to its head that is the type and its properties so that we
 comment|// can insert the values at the right places based on the soap version and the mtom option
 comment|// bodyCt will be of the form
@@ -347,6 +352,13 @@ operator|.
 name|substring
 argument_list|(
 name|pos
+argument_list|)
+expr_stmt|;
+name|bodyCtParamsEscaped
+operator|=
+name|escapeQuotes
+argument_list|(
+name|bodyCtParams
 argument_list|)
 expr_stmt|;
 comment|// keep the type/subtype part in bodyCt
@@ -541,7 +553,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|bodyCtParams
+name|bodyCtParamsEscaped
 operator|!=
 literal|null
 condition|)
@@ -550,10 +562,7 @@ name|ct
 operator|.
 name|append
 argument_list|(
-name|escapeQuotes
-argument_list|(
-name|bodyCtParams
-argument_list|)
+name|bodyCtParamsEscaped
 argument_list|)
 expr_stmt|;
 block|}
@@ -699,6 +708,23 @@ name|append
 argument_list|(
 name|bodyCt
 argument_list|)
+expr_stmt|;
+if|if
+condition|(
+name|bodyCtParamsEscaped
+operator|!=
+literal|null
+condition|)
+block|{
+name|mimeBodyCt
+operator|.
+name|append
+argument_list|(
+name|bodyCtParamsEscaped
+argument_list|)
+expr_stmt|;
+block|}
+name|mimeBodyCt
 operator|.
 name|append
 argument_list|(
@@ -706,6 +732,7 @@ literal|"\""
 argument_list|)
 expr_stmt|;
 block|}
+elseif|else
 if|if
 condition|(
 name|bodyCtParams

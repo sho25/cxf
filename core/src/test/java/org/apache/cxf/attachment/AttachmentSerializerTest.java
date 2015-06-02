@@ -425,6 +425,11 @@ name|soapCtParams
 init|=
 literal|null
 decl_stmt|;
+name|String
+name|soapCtParamsEscaped
+init|=
+literal|null
+decl_stmt|;
 name|int
 name|p
 init|=
@@ -452,6 +457,13 @@ argument_list|(
 name|p
 argument_list|)
 expr_stmt|;
+name|soapCtParamsEscaped
+operator|=
+name|escapeQuotes
+argument_list|(
+name|soapCtParams
+argument_list|)
+expr_stmt|;
 name|soapCtType
 operator|=
 name|soapContentType
@@ -467,6 +479,10 @@ block|}
 else|else
 block|{
 name|soapCtParams
+operator|=
+literal|""
+expr_stmt|;
+name|soapCtParamsEscaped
 operator|=
 literal|""
 expr_stmt|;
@@ -522,11 +538,15 @@ operator|.
 name|writeProlog
 argument_list|()
 expr_stmt|;
-comment|// we expect
-comment|// - the package header must have type multipart/related
-comment|// - the start-info property must be present for mtom but otherwise optional
-comment|// - the action property should not appear directly
-comment|// - the type property must be application/xop+xml for mtom but otherwise text/xml or application/soap+xml
+comment|// we expect the following rules at the package header level
+comment|// - the package header must have media type multipart/related.
+comment|// - the start-info property must be present for mtom but otherwise optional. its
+comment|//   value must contain the content type associated with the root content's xml serialization,
+comment|//   including its parameters as appropriate.
+comment|// - the action property should not appear directly in the package header level
+comment|// - the type property must contain the media type type/subtype of the root content part.
+comment|//   namely application/xop+xml for mtom but otherwise text/xml or application/soap+xml
+comment|//   depending on the soap version 1.1 or 1.2, respectively.
 name|String
 name|ct
 init|=
@@ -542,17 +562,6 @@ operator|.
 name|CONTENT_TYPE
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"##teset ct="
-operator|+
-name|ct
-argument_list|)
-expr_stmt|;
 name|assertTrue
 argument_list|(
 name|ct
@@ -586,10 +595,9 @@ name|indexOf
 argument_list|(
 literal|"start-info=\""
 operator|+
-name|escapeQuotes
-argument_list|(
-name|soapContentType
-argument_list|)
+name|soapCtType
+operator|+
+name|soapCtParamsEscaped
 operator|+
 literal|"\""
 argument_list|)
@@ -758,10 +766,12 @@ argument_list|(
 literal|0
 argument_list|)
 decl_stmt|;
-comment|// we expect
-comment|// - the envelope header must have type application/xop+xml for mtom but otherwise t
-comment|// - the start-info property must be present for mtom but otherwise text/xml or application/soap+xml
-comment|// - the action must appear if it was present in the original message
+comment|// we expect the following rules at the root content level
+comment|// - the envelope header must have type application/xop+xml for mtom but otherwise the content's
+comment|//   serialization type.
+comment|// - the type property must be present for mtom and it must contain the content's serialization type
+comment|//   including its parameters if appropriate.
+comment|// - the action must appear if it was present in the original message (i.e., for soap 1.2)
 if|if
 condition|(
 name|xop
@@ -773,9 +783,9 @@ literal|"application/xop+xml; charset=UTF-8; type=\""
 operator|+
 name|soapCtType
 operator|+
-literal|"\""
+name|soapCtParamsEscaped
 operator|+
-name|soapCtParams
+literal|"\""
 argument_list|,
 name|part
 operator|.
