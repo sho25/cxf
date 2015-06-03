@@ -195,6 +195,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -2224,6 +2236,18 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|INFO
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|info
@@ -2238,6 +2262,7 @@ operator|+
 literal|" does not have a default constructor which JAXB requires."
 argument_list|)
 expr_stmt|;
+block|}
 comment|//there is no init(), but other constructors
 name|Object
 name|factory
