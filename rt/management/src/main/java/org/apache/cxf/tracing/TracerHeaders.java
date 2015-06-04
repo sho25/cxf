@@ -27,7 +27,7 @@ specifier|final
 name|String
 name|HEADER_TRACE_ID
 init|=
-literal|"org.apache.cxf.jaxrs.tracing.header.trace_id"
+literal|"org.apache.cxf.tracing.header.trace_id"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -35,7 +35,7 @@ specifier|final
 name|String
 name|HEADER_SPAN_ID
 init|=
-literal|"org.apache.cxf.jaxrs.tracing.header.span_id"
+literal|"org.apache.cxf.tracing.header.span_id"
 decl_stmt|;
 specifier|public
 specifier|static
