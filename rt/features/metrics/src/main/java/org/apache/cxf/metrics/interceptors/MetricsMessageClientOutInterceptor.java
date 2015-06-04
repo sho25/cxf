@@ -223,20 +223,6 @@ name|newIn
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-name|message
-operator|.
-name|getExchange
-argument_list|()
-operator|.
-name|getBindingOperationInfo
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
-comment|//we now know the operation, start metrics for it
 name|addOperationMetrics
 argument_list|(
 name|ctx
@@ -252,7 +238,6 @@ name|getBindingOperationInfo
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 name|ctx
 operator|.
 name|start

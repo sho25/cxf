@@ -153,16 +153,6 @@ operator|.
 name|getExchange
 argument_list|()
 decl_stmt|;
-if|if
-condition|(
-name|ex
-operator|.
-name|getBindingOperationInfo
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
 comment|//we now know the operation, start metrics for it
 name|ExchangeMetrics
 name|ctx
@@ -193,7 +183,6 @@ name|getBindingOperationInfo
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 block|}

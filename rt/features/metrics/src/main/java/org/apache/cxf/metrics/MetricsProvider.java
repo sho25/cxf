@@ -88,6 +88,22 @@ name|String
 name|cid
 parameter_list|)
 function_decl|;
+name|MetricsContext
+name|createResourceContext
+parameter_list|(
+name|Endpoint
+name|endpoint
+parameter_list|,
+name|String
+name|resourceName
+parameter_list|,
+name|boolean
+name|asClient
+parameter_list|,
+name|String
+name|cid
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
