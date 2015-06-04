@@ -110,7 +110,7 @@ return|;
 block|}
 else|else
 block|{
-comment|//in case obj has the required method with exact signature despite it's class
+comment|//in case obj has the required method with exact signature despite its class
 comment|//not being assignable from the class declaring the specified method
 name|Method
 name|m
