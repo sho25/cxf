@@ -627,9 +627,20 @@ literal|"multipart/related"
 argument_list|)
 operator|==
 literal|0
+operator|&&
+name|ct
+operator|.
+name|indexOf
+argument_list|(
+literal|"start-info"
+argument_list|)
+operator|==
+operator|-
+literal|1
 condition|)
 block|{
 comment|// the action property may not be found at the package's content-type for non-mtom multipart message
+comment|// but skip searching if the start-info property is set
 name|List
 argument_list|<
 name|String
@@ -647,10 +658,7 @@ name|?
 argument_list|>
 call|)
 argument_list|(
-name|CastUtils
-operator|.
-name|cast
-argument_list|(
+operator|(
 operator|(
 name|Map
 argument_list|<
@@ -667,7 +675,7 @@ name|AttachmentDeserializer
 operator|.
 name|ATTACHMENT_PART_HEADERS
 argument_list|)
-argument_list|)
+operator|)
 operator|.
 name|get
 argument_list|(
