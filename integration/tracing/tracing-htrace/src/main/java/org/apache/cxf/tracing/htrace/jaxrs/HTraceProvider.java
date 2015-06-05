@@ -11,11 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
-operator|.
 name|tracing
 operator|.
 name|htrace
+operator|.
+name|jaxrs
 package|;
 end_package
 
