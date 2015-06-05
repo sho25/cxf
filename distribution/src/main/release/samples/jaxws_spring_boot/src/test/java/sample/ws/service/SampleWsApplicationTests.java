@@ -1,6 +1,6 @@
 begin_unit|revision:0.9.5;language:Java;cregit-version:0.0.1
 begin_comment
-comment|/*  * Copyright 2012-2014 the original author or authors.  *  * Licensed under the Apache License, Version 2.0 (the "License");  * you may not use this file except in compliance with the License.  * You may obtain a copy of the License at  *  *      http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing, software  * distributed under the License is distributed on an "AS IS" BASIS,  * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  * See the License for the specific language governing permissions and  * limitations under the License.  */
+comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or more contributor license agreements. See the NOTICE file  * distributed with this work for additional information  * regarding copyright ownership. The ASF licenses this file  * to you under the Apache License, Version 2.0 (the  * "License"); you may not use this file except in compliance  * with the License. You may obtain a copy of the License at  *  * http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing,  * software distributed under the License is distributed on an  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY  * KIND, either express or implied. See the License for the  * specific language governing permissions and limitations  * under the License.  */
 end_comment
 
 begin_package
@@ -200,16 +200,6 @@ import|;
 end_import
 
 begin_import
-import|import
-name|sample
-operator|.
-name|ws
-operator|.
-name|SampleWsApplication
-import|;
-end_import
-
-begin_import
 import|import static
 name|org
 operator|.
@@ -230,6 +220,16 @@ operator|.
 name|Assert
 operator|.
 name|assertThat
+import|;
+end_import
+
+begin_import
+import|import
+name|sample
+operator|.
+name|ws
+operator|.
+name|SampleWsApplication
 import|;
 end_import
 
@@ -261,6 +261,7 @@ specifier|public
 class|class
 name|SampleWsApplicationTests
 block|{
+comment|//CHECKSTYLE:OFF
 annotation|@
 name|Rule
 specifier|public
@@ -271,6 +272,8 @@ operator|new
 name|OutputCapture
 argument_list|()
 decl_stmt|;
+comment|// SUPPRESS CHECKSTYLE
+comment|//CHECKSTYLE:ON
 specifier|private
 name|WebServiceTemplate
 name|webServiceTemplate
@@ -318,8 +321,8 @@ name|void
 name|testHelloRequest
 parameter_list|()
 block|{
-comment|//final String request = "<q0:sayHello xmlns:q0=\"http://service.ws.sample\">Elan</q0:sayHello>";
-specifier|final
+comment|// final String request =
+comment|// "<q0:sayHello xmlns:q0=\"http://service.ws.sample\">Elan</q0:sayHello>";
 name|String
 name|request
 init|=
@@ -371,7 +374,13 @@ argument_list|()
 argument_list|,
 name|containsString
 argument_list|(
-literal|"<?xml version=\"1.0\" encoding=\"UTF-8\"?><ns2:sayHelloResponse xmlns:ns2=\"http://service.ws.sample/\"><return>Hello, Welcome to CXF Spring boot Elan!!!</return></ns2:sayHelloResponse>"
+literal|"<?xml version=\"1.0\" encoding=\"UTF-8\"?>"
+operator|+
+literal|"<ns2:sayHelloResponse xmlns:ns2=\"http://service.ws.sample/\">"
+operator|+
+literal|"<return>Hello, Welcome to CXF Spring boot Elan!!!</return>"
+operator|+
+literal|"</ns2:sayHelloResponse>"
 argument_list|)
 argument_list|)
 expr_stmt|;
