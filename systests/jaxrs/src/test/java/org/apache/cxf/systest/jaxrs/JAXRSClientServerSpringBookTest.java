@@ -3566,7 +3566,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/the/jsonp2/books/123"
+literal|"/bus/jsonp2/books/123"
 decl_stmt|;
 name|WebClient
 name|client

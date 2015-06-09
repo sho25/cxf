@@ -180,6 +180,8 @@ argument_list|(
 name|provider
 argument_list|,
 name|bus
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|this

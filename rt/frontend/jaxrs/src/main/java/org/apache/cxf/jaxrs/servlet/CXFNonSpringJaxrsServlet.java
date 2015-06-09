@@ -3101,6 +3101,8 @@ name|getBus
 argument_list|()
 argument_list|,
 literal|false
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -3169,6 +3171,8 @@ name|getBus
 argument_list|()
 argument_list|,
 name|isApplication
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

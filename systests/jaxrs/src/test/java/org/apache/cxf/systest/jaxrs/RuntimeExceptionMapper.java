@@ -25,6 +25,18 @@ name|ws
 operator|.
 name|rs
 operator|.
+name|WebApplicationException
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
 name|core
 operator|.
 name|Context
@@ -80,7 +92,7 @@ name|RuntimeExceptionMapper
 implements|implements
 name|ExceptionMapper
 argument_list|<
-name|RuntimeException
+name|WebApplicationException
 argument_list|>
 block|{
 annotation|@
@@ -93,7 +105,7 @@ specifier|public
 name|Response
 name|toResponse
 parameter_list|(
-name|RuntimeException
+name|WebApplicationException
 name|exception
 parameter_list|)
 block|{

@@ -71,6 +71,10 @@ specifier|private
 name|T
 name|provider
 decl_stmt|;
+specifier|private
+name|boolean
+name|custom
+decl_stmt|;
 specifier|public
 name|ProviderInfo
 parameter_list|(
@@ -79,6 +83,9 @@ name|provider
 parameter_list|,
 name|Bus
 name|bus
+parameter_list|,
+name|boolean
+name|custom
 parameter_list|)
 block|{
 name|this
@@ -88,6 +95,8 @@ argument_list|,
 name|bus
 argument_list|,
 literal|true
+argument_list|,
+name|custom
 argument_list|)
 expr_stmt|;
 block|}
@@ -102,6 +111,9 @@ name|bus
 parameter_list|,
 name|boolean
 name|checkContexts
+parameter_list|,
+name|boolean
+name|custom
 parameter_list|)
 block|{
 name|this
@@ -113,6 +125,8 @@ argument_list|,
 name|bus
 argument_list|,
 name|checkContexts
+argument_list|,
+name|custom
 argument_list|)
 expr_stmt|;
 block|}
@@ -138,6 +152,9 @@ name|constructorProxies
 parameter_list|,
 name|Bus
 name|bus
+parameter_list|,
+name|boolean
+name|custom
 parameter_list|)
 block|{
 name|this
@@ -149,6 +166,8 @@ argument_list|,
 name|bus
 argument_list|,
 literal|true
+argument_list|,
+name|custom
 argument_list|)
 expr_stmt|;
 block|}
@@ -177,6 +196,9 @@ name|bus
 parameter_list|,
 name|boolean
 name|checkContexts
+parameter_list|,
+name|boolean
+name|custom
 parameter_list|)
 block|{
 name|super
@@ -207,6 +229,12 @@ operator|.
 name|provider
 operator|=
 name|provider
+expr_stmt|;
+name|this
+operator|.
+name|custom
+operator|=
+name|custom
 expr_stmt|;
 block|}
 annotation|@
@@ -281,6 +309,15 @@ name|provider
 operator|.
 name|hashCode
 argument_list|()
+return|;
+block|}
+specifier|public
+name|boolean
+name|isCustom
+parameter_list|()
+block|{
+return|return
+name|custom
 return|;
 block|}
 block|}
