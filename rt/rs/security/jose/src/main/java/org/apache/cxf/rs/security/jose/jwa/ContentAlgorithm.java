@@ -199,6 +199,17 @@ name|String
 name|algo
 parameter_list|)
 block|{
+if|if
+condition|(
+name|algo
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|null
+return|;
+block|}
 return|return
 name|ContentAlgorithm
 operator|.

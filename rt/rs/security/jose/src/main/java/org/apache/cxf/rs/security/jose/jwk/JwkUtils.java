@@ -2439,7 +2439,7 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|String
+name|KeyOperation
 name|keyOper
 parameter_list|)
 block|{
@@ -2467,7 +2467,7 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|String
+name|KeyOperation
 name|keyOper
 parameter_list|,
 name|String
@@ -2502,7 +2502,7 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|String
+name|KeyOperation
 name|keyOper
 parameter_list|,
 name|String
@@ -2622,7 +2622,7 @@ name|keys
 init|=
 name|jwkSet
 operator|.
-name|getKeyUseMap
+name|getKeyOperationMap
 argument_list|()
 operator|.
 name|get
@@ -2672,7 +2672,7 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|String
+name|KeyOperation
 name|keyOper
 parameter_list|)
 block|{
@@ -2705,7 +2705,7 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|String
+name|KeyOperation
 name|keyOper
 parameter_list|,
 name|JwkReaderWriter
@@ -2872,7 +2872,7 @@ name|keys
 init|=
 name|jwkSet
 operator|.
-name|getKeyUseMap
+name|getKeyOperationMap
 argument_list|()
 operator|.
 name|get
@@ -3082,9 +3082,9 @@ name|jwk
 operator|.
 name|setKeyType
 argument_list|(
-name|JsonWebKey
+name|KeyType
 operator|.
-name|KEY_TYPE_ELLIPTIC
+name|EC
 argument_list|)
 expr_stmt|;
 name|jwk
@@ -3175,9 +3175,9 @@ name|jwk
 operator|.
 name|setKeyType
 argument_list|(
-name|JsonWebKey
+name|KeyType
 operator|.
-name|KEY_TYPE_ELLIPTIC
+name|EC
 argument_list|)
 expr_stmt|;
 name|jwk
@@ -3879,9 +3879,9 @@ name|jwk
 operator|.
 name|setKeyType
 argument_list|(
-name|JsonWebKey
+name|KeyType
 operator|.
-name|KEY_TYPE_OCTET
+name|OCTET
 argument_list|)
 expr_stmt|;
 name|jwk
@@ -4023,9 +4023,9 @@ name|jwk
 operator|.
 name|setKeyType
 argument_list|(
-name|JsonWebKey
+name|KeyType
 operator|.
-name|KEY_TYPE_RSA
+name|RSA
 argument_list|)
 expr_stmt|;
 name|jwk
