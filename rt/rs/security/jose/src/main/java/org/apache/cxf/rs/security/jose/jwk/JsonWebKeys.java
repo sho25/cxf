@@ -349,7 +349,7 @@ name|kid
 init|=
 name|key
 operator|.
-name|getKid
+name|getKeyId
 argument_list|()
 decl_stmt|;
 if|if

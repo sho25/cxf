@@ -1233,7 +1233,7 @@ name|AES_KID_VALUE
 argument_list|,
 name|key
 operator|.
-name|getKid
+name|getKeyId
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1290,7 +1290,7 @@ name|HMAC_KID_VALUE
 argument_list|,
 name|key
 operator|.
-name|getKid
+name|getKeyId
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1361,7 +1361,7 @@ name|RSA_KID_VALUE
 argument_list|,
 name|key
 operator|.
-name|getKid
+name|getKeyId
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1530,7 +1530,7 @@ name|EC_KID_VALUE
 argument_list|,
 name|key
 operator|.
-name|getKid
+name|getKeyId
 argument_list|()
 argument_list|)
 expr_stmt|;

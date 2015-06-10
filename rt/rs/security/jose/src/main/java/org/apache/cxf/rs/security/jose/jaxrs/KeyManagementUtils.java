@@ -533,6 +533,22 @@ name|RSSEC_REPORT_KEY_PROP
 init|=
 literal|"rs.security.report.public.key"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_REPORT_KEY_ID_PROP
+init|=
+literal|"rs.security.report.public.key.id"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ACCEPT_PUBLIC_KEY_PROP
+init|=
+literal|"rs.security.accept.public.key.properties"
+decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
@@ -2015,6 +2031,7 @@ literal|null
 return|;
 block|}
 block|}
+comment|//TODO: enhance the certificate validation code
 specifier|public
 specifier|static
 name|void

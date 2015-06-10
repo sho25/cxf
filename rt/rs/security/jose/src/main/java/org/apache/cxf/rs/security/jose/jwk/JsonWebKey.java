@@ -544,7 +544,7 @@ return|;
 block|}
 specifier|public
 name|void
-name|setKid
+name|setKeyId
 parameter_list|(
 name|String
 name|kid
@@ -560,7 +560,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|String
-name|getKid
+name|getKeyId
 parameter_list|()
 block|{
 return|return
