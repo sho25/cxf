@@ -103,7 +103,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|AlgorithmUtils
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -123,7 +123,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|ContentAlgorithm
+name|KeyAlgorithm
 import|;
 end_import
 
@@ -259,9 +259,9 @@ name|headers
 operator|.
 name|setKeyEncryptionAlgorithm
 argument_list|(
-name|AlgorithmUtils
+name|KeyAlgorithm
 operator|.
-name|ECDH_ES_DIRECT_ALGO
+name|ECDH_ES_DIRECT
 argument_list|)
 expr_stmt|;
 block|}

@@ -668,6 +668,9 @@ name|theHeaders
 operator|.
 name|getContentEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 decl_stmt|;
 name|int
 name|size

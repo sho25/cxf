@@ -447,6 +447,9 @@ name|headers
 operator|.
 name|getKeyEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 return|;
 block|}
@@ -466,6 +469,9 @@ argument_list|(
 name|headers
 operator|.
 name|getContentEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 return|;
@@ -538,7 +544,7 @@ name|JweHeaders
 name|headers
 parameter_list|)
 block|{
-name|String
+name|KeyAlgorithm
 name|providedAlgo
 init|=
 name|headers
@@ -558,9 +564,6 @@ operator|.
 name|equals
 argument_list|(
 name|algorithm
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -595,6 +598,9 @@ block|{
 name|checkAlgorithm
 argument_list|(
 name|providedAlgo
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -613,9 +619,6 @@ operator|.
 name|setKeyEncryptionAlgorithm
 argument_list|(
 name|algorithm
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

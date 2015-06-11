@@ -160,15 +160,10 @@ block|{
 name|ContentAlgorithm
 name|jwtAlgo
 init|=
-name|ContentAlgorithm
-operator|.
-name|valueOf
-argument_list|(
 name|headers
 operator|.
 name|getContentEncryptionAlgorithm
 argument_list|()
-argument_list|)
 decl_stmt|;
 name|JsonWebKey
 name|publicJwk

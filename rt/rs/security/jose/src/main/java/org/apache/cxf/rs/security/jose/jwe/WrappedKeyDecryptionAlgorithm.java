@@ -373,6 +373,9 @@ argument_list|()
 operator|.
 name|getKeyEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 decl_stmt|;
 name|validateKeyEncryptionAlgorithm
 argument_list|(
@@ -469,6 +472,9 @@ name|getJweHeaders
 argument_list|()
 operator|.
 name|getContentEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 return|;

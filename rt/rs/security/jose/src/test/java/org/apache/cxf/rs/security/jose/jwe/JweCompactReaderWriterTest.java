@@ -1031,7 +1031,7 @@ name|publicKey
 argument_list|,
 name|KeyAlgorithm
 operator|.
-name|RSA_1_5
+name|RSA1_5
 argument_list|)
 decl_stmt|;
 name|JweEncryptionProvider
@@ -1090,7 +1090,7 @@ name|privateKey
 argument_list|,
 name|KeyAlgorithm
 operator|.
-name|RSA_1_5
+name|RSA1_5
 argument_list|)
 decl_stmt|;
 name|JweDecryptionProvider

@@ -2583,6 +2583,9 @@ name|inHeaders
 operator|.
 name|getContentEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 expr_stmt|;
 name|keyDecryptionProvider
 operator|=
@@ -2593,6 +2596,9 @@ argument_list|,
 name|inHeaders
 operator|.
 name|getKeyEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -2794,6 +2800,9 @@ name|headers
 operator|.
 name|getKeyEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 decl_stmt|;
 return|return
@@ -2866,6 +2875,9 @@ argument_list|,
 name|headers
 operator|.
 name|getKeyEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -3007,6 +3019,9 @@ init|=
 name|headers
 operator|.
 name|getContentEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 decl_stmt|;
 if|if
@@ -3971,7 +3986,12 @@ name|headers
 operator|.
 name|setContentEncryptionAlgorithm
 argument_list|(
+name|ContentAlgorithm
+operator|.
+name|getAlgorithm
+argument_list|(
 name|contentEncryptionAlgo
+argument_list|)
 argument_list|)
 expr_stmt|;
 if|if

@@ -107,7 +107,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSA_1_5_ALGO
+name|RSA1_5_ALGO
 init|=
 literal|"RSA1_5"
 decl_stmt|;
@@ -655,7 +655,7 @@ name|RSA_OAEP_ALGO
 argument_list|,
 name|RSA_OAEP_256_ALGO
 argument_list|,
-name|RSA_1_5_ALGO
+name|RSA1_5_ALGO
 argument_list|)
 argument_list|)
 decl_stmt|;
@@ -988,7 +988,7 @@ name|put
 argument_list|(
 name|RSA_1_5_ALGO_JAVA
 argument_list|,
-name|RSA_1_5_ALGO
+name|RSA1_5_ALGO
 argument_list|)
 expr_stmt|;
 name|JAVA_TO_JWA_NAMES
@@ -1213,7 +1213,7 @@ name|JWA_TO_JAVA_NAMES
 operator|.
 name|put
 argument_list|(
-name|RSA_1_5_ALGO
+name|RSA1_5_ALGO
 argument_list|,
 name|RSA_1_5_ALGO_JAVA
 argument_list|)

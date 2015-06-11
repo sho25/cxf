@@ -109,6 +109,9 @@ name|headers
 operator|.
 name|getContentEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 decl_stmt|;
 if|if
 condition|(

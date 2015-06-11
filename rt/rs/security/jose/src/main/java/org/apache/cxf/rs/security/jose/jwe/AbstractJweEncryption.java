@@ -981,9 +981,6 @@ name|setKeyEncryptionAlgorithm
 argument_list|(
 name|getKeyAlgorithm
 argument_list|()
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -991,7 +988,10 @@ name|theHeaders
 operator|.
 name|setContentEncryptionAlgorithm
 argument_list|(
-name|getContentEncryptionAlgoJwt
+name|getContentEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getAlgorithm
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1024,9 +1024,6 @@ literal|null
 operator|||
 operator|!
 name|getKeyAlgorithm
-argument_list|()
-operator|.
-name|getJwaName
 argument_list|()
 operator|.
 name|equals
@@ -1076,6 +1073,9 @@ argument_list|(
 name|jweInHeaders
 operator|.
 name|getContentEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 condition|)

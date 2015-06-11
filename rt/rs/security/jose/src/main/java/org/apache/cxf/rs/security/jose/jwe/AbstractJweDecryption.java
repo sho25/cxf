@@ -437,6 +437,9 @@ argument_list|()
 operator|.
 name|getContentEncryptionAlgorithm
 argument_list|()
+operator|.
+name|getJwaName
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|Key
@@ -540,6 +543,9 @@ name|getJweHeaders
 argument_list|()
 operator|.
 name|getContentEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 argument_list|)
 return|;

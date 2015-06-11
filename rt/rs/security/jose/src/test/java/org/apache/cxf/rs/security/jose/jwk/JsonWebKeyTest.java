@@ -831,9 +831,6 @@ argument_list|(
 name|KeyAlgorithm
 operator|.
 name|PBES2_HS256_A128KW
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|,
 name|c
 operator|.
@@ -849,9 +846,6 @@ argument_list|(
 name|ContentAlgorithm
 operator|.
 name|A128CBC_HS256
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|,
 name|c
 operator|.
@@ -1017,9 +1011,6 @@ argument_list|(
 name|KeyAlgorithm
 operator|.
 name|PBES2_HS256_A128KW
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|,
 name|c
 operator|.
@@ -1035,9 +1026,6 @@ argument_list|(
 name|ContentAlgorithm
 operator|.
 name|A128CBC_HS256
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|,
 name|c
 operator|.

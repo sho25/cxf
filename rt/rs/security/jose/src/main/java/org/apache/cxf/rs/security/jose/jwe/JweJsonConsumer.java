@@ -177,6 +177,26 @@ name|JoseUtils
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwa
+operator|.
+name|KeyAlgorithm
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -479,7 +499,7 @@ name|entrySet
 argument_list|()
 control|)
 block|{
-name|String
+name|KeyAlgorithm
 name|keyAlgo
 init|=
 name|entry
@@ -503,9 +523,6 @@ argument_list|(
 name|jwe
 operator|.
 name|getKeyAlgorithm
-argument_list|()
-operator|.
-name|getJwaName
 argument_list|()
 argument_list|)
 operator|||

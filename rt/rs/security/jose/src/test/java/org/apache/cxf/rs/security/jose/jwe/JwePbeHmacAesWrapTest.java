@@ -334,9 +334,6 @@ argument_list|(
 name|ContentAlgorithm
 operator|.
 name|A128GCM
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|)
 expr_stmt|;
 specifier|final
