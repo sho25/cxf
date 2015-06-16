@@ -1499,14 +1499,14 @@ literal|"true"
 operator|.
 name|equals
 argument_list|(
-name|value
+name|valueStr
 argument_list|)
 operator|||
 literal|"false"
 operator|.
 name|equals
 argument_list|(
-name|value
+name|valueStr
 argument_list|)
 condition|)
 block|{
