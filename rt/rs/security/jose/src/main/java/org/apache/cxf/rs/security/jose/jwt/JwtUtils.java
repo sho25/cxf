@@ -113,6 +113,9 @@ name|JwtClaims
 name|claims
 parameter_list|,
 name|int
+name|clockOffset
+parameter_list|,
+name|int
 name|issuedAtRange
 parameter_list|,
 name|boolean
@@ -172,6 +175,18 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|clockOffset
+operator|<=
+literal|0
+condition|)
+block|{
+name|clockOffset
+operator|=
+literal|0
+expr_stmt|;
+block|}
+if|if
+condition|(
 name|issuedAtInSecs
 operator|==
 literal|null
@@ -184,6 +199,8 @@ literal|null
 operator|&&
 operator|(
 name|issuedAtInSecs
+operator|-
+name|clockOffset
 operator|>
 name|currentTimeInSecs
 operator|||
@@ -220,6 +237,8 @@ block|{
 name|validateJwtTimeClaims
 argument_list|(
 name|claims
+argument_list|,
+literal|0
 argument_list|,
 literal|0
 argument_list|,
