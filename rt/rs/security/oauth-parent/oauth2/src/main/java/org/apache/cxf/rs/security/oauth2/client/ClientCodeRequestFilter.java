@@ -738,7 +738,7 @@ name|getFirst
 argument_list|(
 name|OAuthConstants
 operator|.
-name|SCOPE
+name|STATE
 argument_list|)
 else|:
 literal|null
