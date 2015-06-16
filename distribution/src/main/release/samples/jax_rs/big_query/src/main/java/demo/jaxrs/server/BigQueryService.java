@@ -362,6 +362,13 @@ literal|"rows"
 argument_list|)
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|rows
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|Map
@@ -451,6 +458,7 @@ argument_list|(
 name|text
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|bigQueryResponse
