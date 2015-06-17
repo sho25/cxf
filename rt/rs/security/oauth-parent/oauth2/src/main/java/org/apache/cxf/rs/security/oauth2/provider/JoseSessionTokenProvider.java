@@ -984,7 +984,10 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
-literal|null
+name|state
+operator|.
+name|toString
+argument_list|()
 return|;
 block|}
 specifier|public
