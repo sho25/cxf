@@ -196,6 +196,30 @@ class|class
 name|BigQueryService
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|BQ_SELECT
+init|=
+literal|"SELECT corpus,corpus_date FROM publicdata:samples.shakespeare WHERE word=\\\"%s\\\""
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|BQ_REQUEST
+init|=
+literal|"{"
+operator|+
+literal|"\"kind\": \"bigquery#queryRequest\","
+operator|+
+literal|"\"query\": \"%s\","
+operator|+
+literal|"\"maxResults\": %d"
+operator|+
+literal|"}"
+decl_stmt|;
+specifier|private
 name|WebClient
 name|bigQueryClient
 decl_stmt|;
@@ -272,35 +296,33 @@ decl_stmt|;
 name|String
 name|bigQuerySelect
 init|=
-literal|"SELECT corpus,corpus_date FROM publicdata:samples.shakespeare WHERE word=\\\""
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+name|BQ_SELECT
+argument_list|,
 name|searchWord
-operator|+
-literal|"\\\""
+argument_list|)
 decl_stmt|;
 name|String
 name|bigQueryRequest
 init|=
-literal|"{"
-operator|+
-literal|"\"kind\": \"bigquery#queryRequest\","
-operator|+
-literal|"\"query\": \""
-operator|+
+name|String
+operator|.
+name|format
+argument_list|(
+name|BQ_REQUEST
+argument_list|,
 name|bigQuerySelect
-operator|+
-literal|"\","
-operator|+
-literal|"\"maxResults\": "
-operator|+
+argument_list|,
 name|Integer
 operator|.
 name|parseInt
 argument_list|(
 name|maxResults
 argument_list|)
-operator|+
-literal|"}"
+argument_list|)
 decl_stmt|;
 name|JsonMapObject
 name|jsonMap
