@@ -117,7 +117,7 @@ block|}
 specifier|public
 name|JwsHeaders
 parameter_list|(
-name|String
+name|SignatureAlgorithm
 name|sigAlgo
 parameter_list|)
 block|{
@@ -131,11 +131,11 @@ specifier|private
 name|void
 name|init
 parameter_list|(
-name|String
+name|SignatureAlgorithm
 name|sigAlgo
 parameter_list|)
 block|{
-name|setAlgorithm
+name|setSignatureAlgorithm
 argument_list|(
 name|sigAlgo
 argument_list|)
