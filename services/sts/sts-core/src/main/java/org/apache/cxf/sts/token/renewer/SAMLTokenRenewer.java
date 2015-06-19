@@ -1296,7 +1296,7 @@ name|SamlAssertionWrapper
 argument_list|(
 name|assertion
 operator|.
-name|getXmlObject
+name|getSamlObject
 argument_list|()
 argument_list|)
 decl_stmt|;

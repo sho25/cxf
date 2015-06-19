@@ -978,6 +978,11 @@ argument_list|(
 name|actor
 argument_list|,
 name|mustUnderstand
+argument_list|,
+name|saaj
+operator|.
+name|getSOAPPart
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|Element
@@ -992,12 +997,7 @@ operator|=
 name|secHeader
 operator|.
 name|insertSecurityHeader
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 block|}
 catch|catch
