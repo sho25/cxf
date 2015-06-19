@@ -1415,6 +1415,11 @@ argument_list|,
 literal|"UTF-8"
 argument_list|)
 decl_stmt|;
+name|Unmarshaller
+name|unmarshaller
+init|=
+literal|null
+decl_stmt|;
 try|try
 block|{
 name|InputStream
@@ -1522,9 +1527,8 @@ argument_list|,
 name|anns
 argument_list|)
 decl_stmt|;
-name|Unmarshaller
 name|unmarshaller
-init|=
+operator|=
 name|createUnmarshaller
 argument_list|(
 name|theType
@@ -1533,7 +1537,7 @@ name|genericType
 argument_list|,
 name|isCollection
 argument_list|)
-decl_stmt|;
+expr_stmt|;
 name|XMLStreamReader
 name|xsr
 init|=
@@ -1818,6 +1822,13 @@ literal|null
 argument_list|)
 throw|;
 block|}
+name|JAXBUtils
+operator|.
+name|closeUnmarshaller
+argument_list|(
+name|unmarshaller
+argument_list|)
+expr_stmt|;
 block|}
 comment|// unreachable
 return|return
