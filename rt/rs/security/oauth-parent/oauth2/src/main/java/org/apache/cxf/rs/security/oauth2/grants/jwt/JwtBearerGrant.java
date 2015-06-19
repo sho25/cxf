@@ -64,7 +64,7 @@ name|this
 argument_list|(
 name|assertion
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -82,7 +82,7 @@ name|this
 argument_list|(
 name|assertion
 argument_list|,
-literal|false
+name|encoded
 argument_list|,
 literal|null
 argument_list|)
@@ -102,7 +102,7 @@ name|this
 argument_list|(
 name|assertion
 argument_list|,
-literal|false
+literal|true
 argument_list|,
 name|scope
 argument_list|)
