@@ -8170,6 +8170,10 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
+operator|(
+name|Object
+index|[]
+operator|)
 name|value
 argument_list|)
 expr_stmt|;
