@@ -262,12 +262,18 @@ specifier|protected
 name|void
 name|checkSecurityContextStart
 parameter_list|(
-name|SecurityContext
-name|sc
+name|ContainerRequestContext
+name|rc
 parameter_list|)
 block|{
-comment|// The SSO is managed out of band and the act of validating IdToken
-comment|// finalizes the authentication flow
+name|SecurityContext
+name|sc
+init|=
+name|rc
+operator|.
+name|getSecurityContext
+argument_list|()
+decl_stmt|;
 if|if
 condition|(
 name|sc
