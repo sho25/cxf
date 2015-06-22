@@ -556,7 +556,7 @@ name|JweUtils
 operator|.
 name|loadEncryptionProvider
 argument_list|(
-literal|true
+name|jweRequired
 argument_list|)
 return|;
 block|}
