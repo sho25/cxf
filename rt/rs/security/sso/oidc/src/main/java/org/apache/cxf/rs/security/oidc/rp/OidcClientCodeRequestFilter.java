@@ -280,12 +280,12 @@ name|sc
 operator|!=
 literal|null
 operator|&&
+operator|!
+operator|(
 name|sc
-operator|.
-name|getUserPrincipal
-argument_list|()
-operator|!=
-literal|null
+operator|instanceof
+name|OidcSecurityContext
+operator|)
 condition|)
 block|{
 throw|throw
