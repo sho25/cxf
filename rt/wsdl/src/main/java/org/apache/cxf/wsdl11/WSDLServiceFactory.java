@@ -791,7 +791,7 @@ name|cast
 argument_list|(
 name|definition
 operator|.
-name|getPortTypes
+name|getAllPortTypes
 argument_list|()
 argument_list|)
 decl_stmt|;
