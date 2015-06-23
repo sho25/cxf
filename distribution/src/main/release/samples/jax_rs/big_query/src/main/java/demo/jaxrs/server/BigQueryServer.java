@@ -449,16 +449,14 @@ argument_list|)
 decl_stmt|;
 name|bigQueryClient
 operator|.
-name|accept
+name|type
 argument_list|(
 name|MediaType
 operator|.
 name|APPLICATION_JSON
 argument_list|)
-expr_stmt|;
-name|bigQueryClient
 operator|.
-name|type
+name|accept
 argument_list|(
 name|MediaType
 operator|.
@@ -675,8 +673,6 @@ name|MediaType
 operator|.
 name|APPLICATION_FORM_URLENCODED
 argument_list|)
-expr_stmt|;
-name|accessTokenService
 operator|.
 name|accept
 argument_list|(

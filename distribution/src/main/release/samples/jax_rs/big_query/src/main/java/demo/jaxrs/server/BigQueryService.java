@@ -199,7 +199,7 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/search"
+literal|"/"
 argument_list|)
 specifier|public
 class|class

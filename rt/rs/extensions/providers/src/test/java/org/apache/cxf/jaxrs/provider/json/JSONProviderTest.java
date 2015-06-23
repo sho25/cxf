@@ -1516,11 +1516,17 @@ name|ReportDefinition
 argument_list|>
 argument_list|()
 decl_stmt|;
+comment|//provider.setSerializeAsArray(true);
 name|provider
 operator|.
-name|setSerializeAsArray
+name|setArrayKeys
 argument_list|(
-literal|true
+name|Arrays
+operator|.
+name|asList
+argument_list|(
+literal|"parameterList"
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|provider
@@ -1528,6 +1534,18 @@ operator|.
 name|setDropRootElement
 argument_list|(
 literal|true
+argument_list|)
+expr_stmt|;
+name|provider
+operator|.
+name|setOutDropElements
+argument_list|(
+name|Arrays
+operator|.
+name|asList
+argument_list|(
+literal|"parameterList"
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|provider
@@ -1544,11 +1562,16 @@ operator|new
 name|ReportDefinition
 argument_list|()
 decl_stmt|;
+comment|//r.setReportName("report");
 name|r
 operator|.
-name|setReportName
+name|addParameterDefinition
 argument_list|(
-literal|"report"
+operator|new
+name|ParameterDefinition
+argument_list|(
+literal|"param"
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|r
@@ -1558,7 +1581,7 @@ argument_list|(
 operator|new
 name|ParameterDefinition
 argument_list|(
-literal|"param"
+literal|"param2"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1627,19 +1650,19 @@ argument_list|,
 name|bos
 argument_list|)
 expr_stmt|;
-name|assertTrue
+name|System
+operator|.
+name|out
+operator|.
+name|println
 argument_list|(
 name|bos
 operator|.
 name|toString
 argument_list|()
-operator|.
-name|startsWith
-argument_list|(
-literal|"[{\"parameterList\":"
-argument_list|)
 argument_list|)
 expr_stmt|;
+comment|//assertTrue(bos.toString().startsWith("[{\"parameterList\":"));
 block|}
 end_class
 
@@ -1699,13 +1722,7 @@ operator|new
 name|ReportDefinition
 argument_list|()
 decl_stmt|;
-name|r
-operator|.
-name|setReportName
-argument_list|(
-literal|"report"
-argument_list|)
-expr_stmt|;
+comment|//r.setReportName("report");
 name|r
 operator|.
 name|addParameterDefinition
@@ -1881,13 +1898,7 @@ operator|new
 name|ReportDefinition
 argument_list|()
 decl_stmt|;
-name|r
-operator|.
-name|setReportName
-argument_list|(
-literal|"report"
-argument_list|)
-expr_stmt|;
+comment|//r.setReportName("report");
 name|ParameterDefinition
 name|paramDef
 init|=
@@ -2731,13 +2742,7 @@ operator|new
 name|ReportDefinition
 argument_list|()
 decl_stmt|;
-name|r
-operator|.
-name|setReportName
-argument_list|(
-literal|"report"
-argument_list|)
-expr_stmt|;
+comment|//r.setReportName("report");
 name|r
 operator|.
 name|addParameterDefinition
@@ -2936,18 +2941,9 @@ argument_list|)
 decl_stmt|;
 end_decl_stmt
 
-begin_expr_stmt
-name|assertEquals
-argument_list|(
-literal|"report"
-argument_list|,
-name|rd
-operator|.
-name|getReportName
-argument_list|()
-argument_list|)
-expr_stmt|;
-end_expr_stmt
+begin_comment
+comment|//assertEquals("report", rd.getReportName());
+end_comment
 
 begin_decl_stmt
 name|List
@@ -13132,10 +13128,7 @@ specifier|static
 class|class
 name|ReportDefinition
 block|{
-specifier|private
-name|String
-name|reportName
-decl_stmt|;
+comment|//private String reportName;
 specifier|private
 name|List
 argument_list|<
@@ -13154,37 +13147,16 @@ name|String
 name|reportName
 parameter_list|)
 block|{
-name|this
-operator|.
-name|reportName
-operator|=
-name|reportName
-expr_stmt|;
+comment|//    this.reportName = reportName;
 block|}
-specifier|public
-name|String
-name|getReportName
-parameter_list|()
-block|{
-return|return
-name|reportName
-return|;
-block|}
-specifier|public
-name|void
-name|setReportName
-parameter_list|(
-name|String
-name|reportName
-parameter_list|)
-block|{
-name|this
-operator|.
-name|reportName
-operator|=
-name|reportName
-expr_stmt|;
-block|}
+comment|//
+comment|//        public String getReportName() {
+comment|//            return reportName;
+comment|//        }
+comment|//
+comment|//        public void setReportName(String reportName) {
+comment|//            this.reportName = reportName;
+comment|//        }
 specifier|public
 name|List
 argument_list|<
