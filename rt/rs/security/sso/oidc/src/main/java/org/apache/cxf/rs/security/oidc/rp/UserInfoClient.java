@@ -332,11 +332,6 @@ name|getJwtToken
 argument_list|(
 name|profileJwtToken
 argument_list|,
-name|idToken
-operator|.
-name|getAudience
-argument_list|()
-argument_list|,
 operator|(
 name|String
 operator|)

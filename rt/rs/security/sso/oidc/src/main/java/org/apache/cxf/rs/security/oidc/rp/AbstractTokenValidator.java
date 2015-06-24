@@ -325,9 +325,6 @@ name|String
 name|wrappedJwtToken
 parameter_list|,
 name|String
-name|clientId
-parameter_list|,
-name|String
 name|idTokenKid
 parameter_list|,
 name|boolean
