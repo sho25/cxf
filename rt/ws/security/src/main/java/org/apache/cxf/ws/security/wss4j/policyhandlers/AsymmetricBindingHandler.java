@@ -1266,6 +1266,18 @@ argument_list|(
 name|sigs
 argument_list|)
 expr_stmt|;
+name|sigs
+operator|.
+name|addAll
+argument_list|(
+name|this
+operator|.
+name|getSignedParts
+argument_list|(
+literal|null
+argument_list|)
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|isRequestor
@@ -2071,7 +2083,7 @@ operator|=
 name|getEncryptedParts
 argument_list|()
 expr_stmt|;
-comment|//Signed parts are determined before encryption because encrypted signed  headers
+comment|//Signed parts are determined before encryption because encrypted signed headers
 comment|//will not be included otherwise
 name|sigParts
 operator|.
@@ -3675,18 +3687,6 @@ operator|.
 name|getToken
 argument_list|()
 decl_stmt|;
-name|sigParts
-operator|.
-name|addAll
-argument_list|(
-name|this
-operator|.
-name|getSignedParts
-argument_list|(
-literal|null
-argument_list|)
-argument_list|)
-expr_stmt|;
 if|if
 condition|(
 name|sigParts
