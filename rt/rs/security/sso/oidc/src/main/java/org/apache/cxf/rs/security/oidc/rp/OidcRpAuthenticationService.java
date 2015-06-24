@@ -205,7 +205,7 @@ argument_list|()
 operator|.
 name|getFirst
 argument_list|(
-literal|"location"
+literal|"state"
 argument_list|)
 decl_stmt|;
 if|if
