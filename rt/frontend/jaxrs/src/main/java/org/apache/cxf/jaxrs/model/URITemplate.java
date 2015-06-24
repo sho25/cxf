@@ -1047,6 +1047,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|(
 name|value
 operator|==
 literal|null
@@ -1059,6 +1060,16 @@ operator|==
 literal|0
 operator|&&
 name|i
+operator|<
+name|groupCount
+operator|)
+operator|&&
+name|variables
+operator|.
+name|size
+argument_list|()
+operator|+
+literal|1
 operator|<
 name|groupCount
 condition|)
