@@ -107,6 +107,24 @@ name|UserInfo
 name|userInfo
 decl_stmt|;
 specifier|public
+name|OidcClientTokenContextImpl
+parameter_list|()
+block|{              }
+specifier|public
+name|OidcClientTokenContextImpl
+parameter_list|(
+name|IdToken
+name|idToken
+parameter_list|)
+block|{
+name|this
+operator|.
+name|idToken
+operator|=
+name|idToken
+expr_stmt|;
+block|}
+specifier|public
 name|IdToken
 name|getIdToken
 parameter_list|()
