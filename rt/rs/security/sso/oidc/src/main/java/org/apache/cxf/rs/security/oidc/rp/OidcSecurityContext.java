@@ -127,7 +127,9 @@ name|this
 argument_list|(
 operator|new
 name|OidcClientTokenContextImpl
-argument_list|()
+argument_list|(
+name|token
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
