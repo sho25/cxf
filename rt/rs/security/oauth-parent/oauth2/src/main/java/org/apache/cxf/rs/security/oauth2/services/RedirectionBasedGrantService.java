@@ -2152,7 +2152,7 @@ name|sessionToken
 operator|=
 name|OAuthUtils
 operator|.
-name|setDefaultSessionToken
+name|setSessionToken
 argument_list|(
 name|getMessageContext
 argument_list|()
@@ -2222,7 +2222,7 @@ name|sessionToken
 operator|=
 name|OAuthUtils
 operator|.
-name|getDefaultSessionToken
+name|getSessionToken
 argument_list|(
 name|getMessageContext
 argument_list|()

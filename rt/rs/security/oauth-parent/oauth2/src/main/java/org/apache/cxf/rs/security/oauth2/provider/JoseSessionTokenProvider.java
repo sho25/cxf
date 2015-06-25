@@ -347,7 +347,7 @@ decl_stmt|;
 return|return
 name|OAuthUtils
 operator|.
-name|setDefaultSessionToken
+name|setSessionToken
 argument_list|(
 name|mc
 argument_list|,
@@ -381,7 +381,7 @@ block|{
 return|return
 name|OAuthUtils
 operator|.
-name|getDefaultSessionToken
+name|getSessionToken
 argument_list|(
 name|mc
 argument_list|)

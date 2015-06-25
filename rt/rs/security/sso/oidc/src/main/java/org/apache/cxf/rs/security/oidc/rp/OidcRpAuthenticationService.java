@@ -181,7 +181,7 @@ name|oauth2
 operator|.
 name|client
 operator|.
-name|Consumer
+name|ClientTokenContextManager
 import|;
 end_import
 
@@ -199,9 +199,9 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|utils
+name|client
 operator|.
-name|OAuthUtils
+name|Consumer
 import|;
 end_import
 
@@ -216,7 +216,7 @@ class|class
 name|OidcRpAuthenticationService
 block|{
 specifier|private
-name|OidcRpStateManager
+name|ClientTokenContextManager
 name|stateManager
 decl_stmt|;
 specifier|private
@@ -343,19 +343,11 @@ name|OidcClientTokenContext
 name|oidcContext
 parameter_list|)
 block|{
-name|String
-name|key
-init|=
-name|OAuthUtils
-operator|.
-name|generateRandomTokenKey
-argument_list|()
-decl_stmt|;
 name|stateManager
 operator|.
-name|setTokenContext
+name|setClientTokenContext
 argument_list|(
-name|key
+name|mc
 argument_list|,
 name|oidcContext
 argument_list|)
@@ -436,17 +428,6 @@ argument_list|(
 name|redirectUri
 argument_list|)
 operator|.
-name|header
-argument_list|(
-literal|"Set-Cookie"
-argument_list|,
-literal|"org.apache.cxf.websso.context="
-operator|+
-name|key
-operator|+
-literal|";Path=/"
-argument_list|)
-operator|.
 name|build
 argument_list|()
 return|;
@@ -470,7 +451,7 @@ specifier|public
 name|void
 name|setStateManager
 parameter_list|(
-name|OidcRpStateManager
+name|ClientTokenContextManager
 name|stateManager
 parameter_list|)
 block|{

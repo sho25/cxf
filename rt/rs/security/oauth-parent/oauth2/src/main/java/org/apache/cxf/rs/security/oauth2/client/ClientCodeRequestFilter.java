@@ -1528,8 +1528,6 @@ operator|.
 name|removeClientTokenContext
 argument_list|(
 name|mc
-argument_list|,
-name|ctx
 argument_list|)
 expr_stmt|;
 name|ClientTokenContext

@@ -59,14 +59,11 @@ name|MessageContext
 name|mc
 parameter_list|)
 function_decl|;
-name|void
+name|ClientTokenContext
 name|removeClientTokenContext
 parameter_list|(
 name|MessageContext
 name|mc
-parameter_list|,
-name|ClientTokenContext
-name|ctx
 parameter_list|)
 function_decl|;
 block|}
