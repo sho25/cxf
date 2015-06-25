@@ -4135,6 +4135,7 @@ control|)
 block|{
 if|if
 condition|(
+operator|(
 name|e
 operator|.
 name|getValue
@@ -4153,6 +4154,17 @@ argument_list|()
 operator|.
 name|getElement
 argument_list|()
+operator|)
+operator|&&
+name|schemaLocationURI
+operator|.
+name|equals
+argument_list|(
+name|e
+operator|.
+name|getKey
+argument_list|()
+argument_list|)
 condition|)
 block|{
 name|doneSchemas
