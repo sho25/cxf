@@ -332,14 +332,6 @@ name|TraceInfo
 argument_list|>
 operator|)
 name|sampler
-argument_list|,
-operator|new
-name|TraceInfo
-argument_list|(
-name|traceId
-argument_list|,
-name|spanId
-argument_list|)
 argument_list|)
 return|;
 block|}
