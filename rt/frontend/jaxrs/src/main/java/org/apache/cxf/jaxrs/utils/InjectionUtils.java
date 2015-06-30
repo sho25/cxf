@@ -6947,6 +6947,13 @@ operator|=
 literal|"org.apache.cxf.jaxrs.impl.tl.ThreadLocalServletConfig"
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|proxyClassName
+operator|!=
+literal|null
+condition|)
+block|{
 try|try
 block|{
 return|return
@@ -6985,6 +6992,10 @@ name|t
 argument_list|)
 throw|;
 block|}
+block|}
+return|return
+literal|null
+return|;
 block|}
 end_function
 
