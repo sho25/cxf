@@ -4487,13 +4487,6 @@ finally|finally
 block|{
 try|try
 block|{
-if|if
-condition|(
-name|xreader
-operator|!=
-literal|null
-condition|)
-block|{
 name|StaxUtils
 operator|.
 name|close
@@ -4501,7 +4494,6 @@ argument_list|(
 name|xreader
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 catch|catch
 parameter_list|(
