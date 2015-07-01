@@ -65,6 +65,14 @@ extends|extends
 name|SimplePrincipal
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+specifier|private
 name|Subject
 name|subject
 decl_stmt|;
