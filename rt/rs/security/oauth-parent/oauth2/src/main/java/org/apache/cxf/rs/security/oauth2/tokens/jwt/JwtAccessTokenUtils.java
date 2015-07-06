@@ -89,7 +89,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|AlgorithmUtils
+name|ContentAlgorithm
 import|;
 end_import
 
@@ -109,7 +109,7 @@ name|jose
 operator|.
 name|jwa
 operator|.
-name|ContentAlgorithm
+name|SignatureAlgorithm
 import|;
 end_import
 
@@ -472,9 +472,6 @@ argument_list|,
 name|ContentAlgorithm
 operator|.
 name|A128GCM
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|)
 decl_stmt|;
 return|return
@@ -636,9 +633,6 @@ argument_list|,
 name|ContentAlgorithm
 operator|.
 name|A128GCM
-operator|.
-name|getJwaName
-argument_list|()
 argument_list|)
 decl_stmt|;
 return|return
@@ -715,9 +709,9 @@ name|getPrivateKeySignatureProvider
 argument_list|(
 name|key
 argument_list|,
-name|AlgorithmUtils
+name|SignatureAlgorithm
 operator|.
-name|RS_SHA_256_ALGO
+name|RS256
 argument_list|)
 decl_stmt|;
 return|return
@@ -792,9 +786,9 @@ name|getPublicKeySignatureVerifier
 argument_list|(
 name|key
 argument_list|,
-name|AlgorithmUtils
+name|SignatureAlgorithm
 operator|.
-name|RS_SHA_256_ALGO
+name|RS256
 argument_list|)
 decl_stmt|;
 return|return
