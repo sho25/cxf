@@ -142,7 +142,7 @@ specifier|public
 class|class
 name|UserInfoClient
 extends|extends
-name|IdTokenValidator
+name|IdTokenReader
 block|{
 specifier|private
 name|boolean

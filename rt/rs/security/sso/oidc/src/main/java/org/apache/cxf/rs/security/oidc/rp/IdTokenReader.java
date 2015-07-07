@@ -104,7 +104,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|IdTokenValidator
+name|IdTokenReader
 extends|extends
 name|AbstractTokenValidator
 block|{
