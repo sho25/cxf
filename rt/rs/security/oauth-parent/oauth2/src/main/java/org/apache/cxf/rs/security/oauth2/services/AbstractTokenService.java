@@ -1495,6 +1495,21 @@ operator|=
 name|clientIdProvider
 expr_stmt|;
 block|}
+specifier|public
+name|void
+name|setClientSecretVerifier
+parameter_list|(
+name|ClientSecretVerifier
+name|clientSecretVerifier
+parameter_list|)
+block|{
+name|this
+operator|.
+name|clientSecretVerifier
+operator|=
+name|clientSecretVerifier
+expr_stmt|;
+block|}
 block|}
 end_class
 
