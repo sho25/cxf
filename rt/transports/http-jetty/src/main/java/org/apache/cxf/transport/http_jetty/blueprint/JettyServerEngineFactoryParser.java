@@ -917,7 +917,7 @@ name|port
 argument_list|)
 decl_stmt|;
 name|Element
-name|sessionSupport
+name|simpleElement
 init|=
 name|DOMUtils
 operator|.
@@ -934,7 +934,7 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|sessionSupport
+name|simpleElement
 operator|!=
 literal|null
 condition|)
@@ -946,7 +946,7 @@ name|DOMUtils
 operator|.
 name|getContent
 argument_list|(
-name|sessionSupport
+name|simpleElement
 argument_list|)
 decl_stmt|;
 name|ValueMetadata
