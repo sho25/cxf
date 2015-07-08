@@ -2675,6 +2675,13 @@ operator|.
 name|createUnmarshaller
 argument_list|()
 expr_stmt|;
+name|unmarshaller
+operator|.
+name|setEventHandler
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 block|}
 if|if
 condition|(

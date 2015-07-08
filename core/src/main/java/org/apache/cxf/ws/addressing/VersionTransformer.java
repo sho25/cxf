@@ -2110,6 +2110,13 @@ operator|.
 name|createUnmarshaller
 argument_list|()
 decl_stmt|;
+name|um
+operator|.
+name|setEventHandler
+argument_list|(
+literal|null
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|JAXBElement
