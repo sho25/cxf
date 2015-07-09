@@ -2516,6 +2516,13 @@ name|message
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|dkEncr
+operator|.
+name|setStoreBytesInAttachment
+argument_list|(
+name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|recToken
@@ -3281,6 +3288,13 @@ name|message
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|encr
+operator|.
+name|setStoreBytesInAttachment
+argument_list|(
+name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
 name|String
 name|encrTokId
 init|=
@@ -4015,6 +4029,13 @@ name|AttachmentCallbackHandler
 argument_list|(
 name|message
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|dkSign
+operator|.
+name|setStoreBytesInAttachment
+argument_list|(
+name|storeBytesInAttachment
 argument_list|)
 expr_stmt|;
 if|if
@@ -4807,6 +4828,13 @@ name|AttachmentCallbackHandler
 argument_list|(
 name|message
 argument_list|)
+argument_list|)
+expr_stmt|;
+name|sig
+operator|.
+name|setStoreBytesInAttachment
+argument_list|(
+name|storeBytesInAttachment
 argument_list|)
 expr_stmt|;
 comment|// If a EncryptedKeyToken is used, set the correct value type to

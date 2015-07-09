@@ -179,6 +179,15 @@ name|ENABLE_SAML_ONE_TIME_USE_CACHE
 init|=
 literal|"ws-security.enable.saml.cache"
 decl_stmt|;
+comment|/**      * Whether to store bytes (CipherData or BinarySecurityToken) in an attachment. The default is       * true if MTOM is enabled. Set it to false to BASE-64 encode the bytes and "inlined" them in       * the message instead. Setting this to true is more efficient, as it means that the BASE-64       * encoding step can be skipped. This only applies to the DOM WS-Security stack.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STORE_BYTES_IN_ATTACHMENT
+init|=
+literal|"ws-security.store.bytes.in.attachment"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -753,6 +762,8 @@ block|,
 name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
 block|,
 name|POLICY_VALIDATOR_MAP
+block|,
+name|STORE_BYTES_IN_ATTACHMENT
 block|}
 argument_list|)
 argument_list|)
