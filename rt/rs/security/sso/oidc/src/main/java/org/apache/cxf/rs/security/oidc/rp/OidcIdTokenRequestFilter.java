@@ -200,7 +200,7 @@ specifier|private
 name|String
 name|tokenFormParameter
 init|=
-literal|"idtoken"
+literal|"id_token"
 decl_stmt|;
 specifier|private
 name|IdTokenReader

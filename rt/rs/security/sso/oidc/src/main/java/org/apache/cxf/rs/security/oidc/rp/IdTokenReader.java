@@ -260,7 +260,7 @@ return|return
 name|jwt
 return|;
 block|}
-specifier|public
+specifier|private
 name|IdToken
 name|getIdTokenFromJwt
 parameter_list|(
@@ -268,7 +268,6 @@ name|JwtToken
 name|jwt
 parameter_list|)
 block|{
-comment|//TODO: do the extra validation if needed
 return|return
 operator|new
 name|IdToken
