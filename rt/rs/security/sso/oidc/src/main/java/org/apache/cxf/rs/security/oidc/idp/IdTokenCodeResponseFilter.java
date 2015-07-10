@@ -200,7 +200,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|UserInfoCodeResponseFilter
+name|IdTokenCodeResponseFilter
 extends|extends
 name|AbstractJwsJweProducer
 implements|implements
