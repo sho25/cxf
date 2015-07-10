@@ -324,9 +324,6 @@ parameter_list|(
 name|String
 name|wrappedJwtToken
 parameter_list|,
-name|String
-name|idTokenKid
-parameter_list|,
 name|boolean
 name|jweOnly
 parameter_list|)
@@ -415,8 +412,6 @@ init|=
 name|getInitializedSigVerifier
 argument_list|(
 name|jwt
-argument_list|,
-name|idTokenKid
 argument_list|)
 decl_stmt|;
 return|return
@@ -699,9 +694,6 @@ name|getInitializedSigVerifier
 parameter_list|(
 name|JwtToken
 name|jwt
-parameter_list|,
-name|String
-name|idTokenKid
 parameter_list|)
 block|{
 if|if
@@ -736,30 +728,9 @@ return|return
 name|theJwsVerifier
 return|;
 block|}
-if|if
-condition|(
-name|jwkSetClient
-operator|==
-literal|null
-condition|)
-block|{
-throw|throw
-operator|new
-name|SecurityException
-argument_list|(
-literal|"Provider Jwk Set Client is not available"
-argument_list|)
-throw|;
-block|}
 name|String
 name|keyId
 init|=
-name|idTokenKid
-operator|!=
-literal|null
-condition|?
-name|idTokenKid
-else|:
 name|jwt
 operator|.
 name|getHeaders
@@ -791,6 +762,21 @@ operator|==
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|jwkSetClient
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"Provider Jwk Set Client is not available"
+argument_list|)
+throw|;
+block|}
 name|JsonWebKeys
 name|keys
 init|=
@@ -888,7 +874,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|jwkSetClient
+name|theJwsVerifier
 operator|==
 literal|null
 condition|)
@@ -896,7 +882,9 @@ block|{
 throw|throw
 operator|new
 name|SecurityException
-argument_list|()
+argument_list|(
+literal|"JWS Verifier is not available"
+argument_list|)
 throw|;
 block|}
 return|return

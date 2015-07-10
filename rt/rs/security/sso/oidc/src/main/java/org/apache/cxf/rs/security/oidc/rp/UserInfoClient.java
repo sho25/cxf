@@ -332,16 +332,6 @@ name|getJwtToken
 argument_list|(
 name|profileJwtToken
 argument_list|,
-operator|(
-name|String
-operator|)
-name|idToken
-operator|.
-name|getProperty
-argument_list|(
-literal|"kid"
-argument_list|)
-argument_list|,
 name|encryptedOnly
 argument_list|)
 return|;
