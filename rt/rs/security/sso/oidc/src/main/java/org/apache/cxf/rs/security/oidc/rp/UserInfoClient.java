@@ -266,8 +266,6 @@ init|=
 name|getUserInfoJwt
 argument_list|(
 name|profileJwtToken
-argument_list|,
-name|idToken
 argument_list|)
 decl_stmt|;
 return|return
@@ -322,9 +320,6 @@ name|getUserInfoJwt
 parameter_list|(
 name|String
 name|profileJwtToken
-parameter_list|,
-name|IdToken
-name|idToken
 parameter_list|)
 block|{
 return|return
