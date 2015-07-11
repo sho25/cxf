@@ -553,7 +553,7 @@ literal|"/"
 argument_list|)
 condition|)
 block|{
-comment|// get rid of the path
+comment|// get the path part
 name|address
 operator|=
 name|URI
