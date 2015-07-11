@@ -196,6 +196,15 @@ name|Server
 name|server
 parameter_list|)
 function_decl|;
+specifier|protected
+specifier|abstract
+name|void
+name|setBasePathByAddress
+parameter_list|(
+name|String
+name|address
+parameter_list|)
+function_decl|;
 specifier|private
 name|void
 name|calculateDefaultResourcePackage
@@ -316,7 +325,7 @@ operator|.
 name|getAddress
 argument_list|()
 decl_stmt|;
-name|setBasePath
+name|setBasePathByAddress
 argument_list|(
 name|address
 argument_list|)
