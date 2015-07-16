@@ -27,6 +27,16 @@ name|javax
 operator|.
 name|xml
 operator|.
+name|XMLConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
 name|transform
 operator|.
 name|Source
@@ -234,15 +244,12 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   */
+comment|/**  * An interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   *   * @deprecated: Use pep.OpenSAMLXACMLAuthorizingInterceptor instead  */
 end_comment
 
 begin_class
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
+name|Deprecated
 specifier|public
 class|class
 name|XACMLAuthorizingInterceptor
@@ -379,13 +386,29 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|Transformer
-name|trans
+name|TransformerFactory
+name|transformerFactory
 init|=
 name|TransformerFactory
 operator|.
 name|newInstance
 argument_list|()
+decl_stmt|;
+name|transformerFactory
+operator|.
+name|setFeature
+argument_list|(
+name|XMLConstants
+operator|.
+name|FEATURE_SECURE_PROCESSING
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+name|Transformer
+name|transformer
+init|=
+name|transformerFactory
 operator|.
 name|newTransformer
 argument_list|()
@@ -397,7 +420,7 @@ operator|new
 name|DOMResult
 argument_list|()
 decl_stmt|;
-name|trans
+name|transformer
 operator|.
 name|transform
 argument_list|(

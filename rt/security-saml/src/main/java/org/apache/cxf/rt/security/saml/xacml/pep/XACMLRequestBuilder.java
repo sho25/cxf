@@ -18,6 +18,8 @@ operator|.
 name|saml
 operator|.
 name|xacml
+operator|.
+name|pep
 package|;
 end_package
 
@@ -55,33 +57,17 @@ name|Message
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|opensaml
-operator|.
-name|xacml
-operator|.
-name|ctx
-operator|.
-name|RequestType
-import|;
-end_import
-
 begin_comment
-comment|/**  * This interface defines a way to create an XACML Request.  *   * @deprecated use pep.XACMLRequestBuilder instead  */
+comment|/**  * This interface defines a way to create an XACML Request.  */
 end_comment
 
 begin_interface
-annotation|@
-name|Deprecated
 specifier|public
 interface|interface
 name|XACMLRequestBuilder
 block|{
-comment|/**      * Create an XACML Request given a Principal, list of roles and Message.      *       * @param principal The principal to insert into the Subject of the Request      * @param roles The list of roles associated with the principal      * @param message The Message from which to retrieve the resource      * @return An OpenSAML RequestType object      * @throws Exception      */
-name|RequestType
+comment|/**      * Create an XACML Request given a Principal, list of roles and Message.      *       * @param principal The principal to insert into the Subject of the Request      * @param roles The list of roles associated with the principal      * @param message The Message from which to retrieve the resource      * @return An object representing the Request      * @throws Exception      */
+name|Object
 name|createRequest
 parameter_list|(
 name|Principal
@@ -98,29 +84,6 @@ name|message
 parameter_list|)
 throws|throws
 name|Exception
-function_decl|;
-comment|/**      * Return the list of Resources that have been inserted into the Request.      *       * @param message The Message from which to retrieve the resource      * @return the list of Resources that have been inserted into the Request      */
-annotation|@
-name|Deprecated
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getResources
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
-function_decl|;
-comment|/**      * Return the Resource that has been inserted into the Request.      *       * @param message The Message from which to retrieve the resource      * @return the Resource that has been inserted into the Request      */
-annotation|@
-name|Deprecated
-name|String
-name|getResource
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
 function_decl|;
 block|}
 end_interface
