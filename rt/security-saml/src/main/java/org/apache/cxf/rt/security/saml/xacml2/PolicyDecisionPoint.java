@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interface that describes a PolicyDecisionPoint (PDP).  */
+comment|/**  * An interface that describes a PolicyDecisionPoint (PDP) that supports XACML 2.0 using OpenSAML  */
 end_comment
 
 begin_interface

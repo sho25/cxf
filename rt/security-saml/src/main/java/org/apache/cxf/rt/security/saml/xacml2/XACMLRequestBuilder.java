@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface defines a way to create an XACML Request.  */
+comment|/**  * This interface defines a way to create an XACML 2.0 Request using OpenSAML  */
 end_comment
 
 begin_interface

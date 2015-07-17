@@ -344,7 +344,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   */
+comment|/**  * An interceptor to perform an XACML 2.0 authorization request to a remote PDP using OpenSAML,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   */
 end_comment
 
 begin_class
