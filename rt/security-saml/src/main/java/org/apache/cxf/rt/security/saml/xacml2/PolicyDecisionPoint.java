@@ -17,23 +17,35 @@ name|security
 operator|.
 name|saml
 operator|.
-name|xacml
-operator|.
-name|pdp
-operator|.
-name|api
+name|xacml2
 package|;
 end_package
 
 begin_import
 import|import
-name|javax
+name|org
 operator|.
-name|xml
+name|opensaml
 operator|.
-name|transform
+name|xacml
 operator|.
-name|Source
+name|ctx
+operator|.
+name|RequestType
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|opensaml
+operator|.
+name|xacml
+operator|.
+name|ctx
+operator|.
+name|ResponseType
 import|;
 end_import
 
@@ -46,11 +58,11 @@ specifier|public
 interface|interface
 name|PolicyDecisionPoint
 block|{
-comment|/**      * Evaluate an XACML Request and return a Response      * @param request an XACML Request as a Source      * @return the XACML Response as a Source      */
-name|Source
+comment|/**      * Evaluate an XACML Request and return a Response      * @param request an XACML Request as a RequestType      * @return the XACML Response as a ResponseType      */
+name|ResponseType
 name|evaluate
 parameter_list|(
-name|Source
+name|RequestType
 name|request
 parameter_list|)
 function_decl|;

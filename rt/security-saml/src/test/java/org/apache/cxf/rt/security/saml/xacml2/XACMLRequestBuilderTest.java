@@ -17,7 +17,7 @@ name|security
 operator|.
 name|saml
 operator|.
-name|xacml
+name|xacml2
 package|;
 end_package
 
@@ -95,6 +95,26 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|saml
+operator|.
+name|xacml
+operator|.
+name|XACMLConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|opensaml
 operator|.
 name|xacml
@@ -138,11 +158,6 @@ comment|/**  * Some unit tests to create a XACML Request via the XACMLRequestBui
 end_comment
 
 begin_class
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"deprecation"
-argument_list|)
 specifier|public
 class|class
 name|XACMLRequestBuilderTest

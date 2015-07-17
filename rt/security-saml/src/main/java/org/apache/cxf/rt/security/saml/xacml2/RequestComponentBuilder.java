@@ -17,7 +17,7 @@ name|security
 operator|.
 name|saml
 operator|.
-name|xacml
+name|xacml2
 package|;
 end_package
 

@@ -17,7 +17,7 @@ name|security
 operator|.
 name|saml
 operator|.
-name|xacml
+name|xacml2
 package|;
 end_package
 
@@ -96,29 +96,6 @@ name|message
 parameter_list|)
 throws|throws
 name|Exception
-function_decl|;
-comment|/**      * Return the list of Resources that have been inserted into the Request.      *       * @param message The Message from which to retrieve the resource      * @return the list of Resources that have been inserted into the Request      */
-annotation|@
-name|Deprecated
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getResources
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
-function_decl|;
-comment|/**      * Return the Resource that has been inserted into the Request.      *       * @param message The Message from which to retrieve the resource      * @return the Resource that has been inserted into the Request      */
-annotation|@
-name|Deprecated
-name|String
-name|getResource
-parameter_list|(
-name|Message
-name|message
-parameter_list|)
 function_decl|;
 block|}
 end_interface

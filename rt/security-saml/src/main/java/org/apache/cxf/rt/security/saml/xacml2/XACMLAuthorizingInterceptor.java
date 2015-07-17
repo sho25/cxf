@@ -17,7 +17,7 @@ name|security
 operator|.
 name|saml
 operator|.
-name|xacml
+name|xacml2
 package|;
 end_package
 
@@ -344,14 +344,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An abstract interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   *   * This class must be subclassed to actually perform the request to the PDP.  */
+comment|/**  * An interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   */
 end_comment
 
 begin_class
 specifier|public
-specifier|abstract
 class|class
-name|AbstractXACMLAuthorizingInterceptor
+name|XACMLAuthorizingInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
 argument_list|<
@@ -368,7 +367,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|AbstractXACMLAuthorizingInterceptor
+name|XACMLAuthorizingInterceptor
 operator|.
 name|class
 argument_list|)
@@ -381,9 +380,16 @@ operator|new
 name|DefaultXACMLRequestBuilder
 argument_list|()
 decl_stmt|;
+specifier|private
+name|PolicyDecisionPoint
+name|pdp
+decl_stmt|;
 specifier|public
-name|AbstractXACMLAuthorizingInterceptor
-parameter_list|()
+name|XACMLAuthorizingInterceptor
+parameter_list|(
+name|PolicyDecisionPoint
+name|pdp
+parameter_list|)
 block|{
 name|super
 argument_list|(
@@ -406,6 +412,12 @@ name|OpenSAMLUtil
 operator|.
 name|initSamlEngine
 argument_list|()
+expr_stmt|;
+name|this
+operator|.
+name|pdp
+operator|=
+name|pdp
 expr_stmt|;
 block|}
 specifier|public
@@ -861,20 +873,6 @@ return|return
 literal|false
 return|;
 block|}
-specifier|public
-specifier|abstract
-name|ResponseType
-name|performRequest
-parameter_list|(
-name|RequestType
-name|request
-parameter_list|,
-name|Message
-name|message
-parameter_list|)
-throws|throws
-name|Exception
-function_decl|;
 comment|/**      * Handle any Obligations returned by the PDP      */
 specifier|protected
 name|void
@@ -896,6 +894,30 @@ throws|throws
 name|Exception
 block|{
 comment|// Do nothing by default
+block|}
+specifier|protected
+name|ResponseType
+name|performRequest
+parameter_list|(
+name|RequestType
+name|request
+parameter_list|,
+name|Message
+name|message
+parameter_list|)
+throws|throws
+name|Exception
+block|{
+return|return
+name|this
+operator|.
+name|pdp
+operator|.
+name|evaluate
+argument_list|(
+name|request
+argument_list|)
+return|;
 block|}
 block|}
 end_class
