@@ -897,6 +897,12 @@ condition|(
 name|ctHeaderValues
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|ctHeaderValues
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|requestContentType
