@@ -177,6 +177,8 @@ block|,
 literal|"="
 block|,
 literal|"\\."
+block|,
+literal|"\\+"
 block|}
 decl_stmt|;
 for|for
