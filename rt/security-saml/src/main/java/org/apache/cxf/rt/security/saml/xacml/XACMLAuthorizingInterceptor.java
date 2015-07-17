@@ -244,12 +244,10 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   *   * @deprecated: Use pep.OpenSAMLXACMLAuthorizingInterceptor instead  */
+comment|/**  * An interceptor to perform an XACML authorization request to a remote PDP,  * and make an authorization decision based on the response. It takes the principal and roles  * from the SecurityContext, and uses the XACMLRequestBuilder to construct an XACML Request  * statement.   */
 end_comment
 
 begin_class
-annotation|@
-name|Deprecated
 specifier|public
 class|class
 name|XACMLAuthorizingInterceptor

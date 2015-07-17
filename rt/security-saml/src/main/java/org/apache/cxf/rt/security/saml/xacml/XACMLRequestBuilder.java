@@ -70,12 +70,10 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface defines a way to create an XACML Request.  *   * @deprecated use pep.XACMLRequestBuilder instead  */
+comment|/**  * This interface defines a way to create an XACML Request.  */
 end_comment
 
 begin_interface
-annotation|@
-name|Deprecated
 specifier|public
 interface|interface
 name|XACMLRequestBuilder
