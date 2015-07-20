@@ -1716,6 +1716,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The symmetric encryption algorithm "
 operator|+
 name|event
@@ -1724,6 +1728,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -1784,6 +1789,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The key transport algorithm "
 operator|+
 name|event
@@ -1792,6 +1801,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -1838,6 +1848,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The encryption digest algorithm "
 operator|+
 name|event
@@ -1846,6 +1860,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -1916,6 +1931,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The signature algorithm "
 operator|+
 name|event
@@ -1924,6 +1943,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -1970,6 +1990,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The signature digest algorithm "
 operator|+
 name|event
@@ -1978,6 +2002,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -2024,6 +2049,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The signature c14n algorithm "
 operator|+
 name|event
@@ -2032,6 +2061,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -2091,6 +2121,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The signature transformation algorithm "
 operator|+
 name|event
@@ -2099,6 +2133,7 @@ name|getAlgorithmURI
 argument_list|()
 operator|+
 literal|" is not allowed"
+block|}
 argument_list|)
 throw|;
 block|}
@@ -2214,6 +2249,10 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"Error during Signature Trust "
 operator|+
 literal|"validation: "
@@ -2222,6 +2261,7 @@ name|e
 operator|.
 name|getMessage
 argument_list|()
+block|}
 argument_list|)
 throw|;
 block|}
@@ -2733,7 +2773,12 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The request was not signed or encrypted"
+block|}
 argument_list|)
 decl_stmt|;
 name|throwFault
@@ -2785,7 +2830,12 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The request was not signed"
+block|}
 argument_list|)
 decl_stmt|;
 name|throwFault
@@ -2838,7 +2888,12 @@ name|XMLSecurityException
 argument_list|(
 literal|"empty"
 argument_list|,
+operator|new
+name|Object
+index|[]
+block|{
 literal|"The request was not encrypted"
+block|}
 argument_list|)
 decl_stmt|;
 name|throwFault
