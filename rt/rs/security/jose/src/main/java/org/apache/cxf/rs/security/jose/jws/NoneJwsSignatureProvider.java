@@ -58,7 +58,7 @@ block|{
 return|return
 name|SignatureAlgorithm
 operator|.
-name|PLAIN
+name|NONE
 return|;
 block|}
 annotation|@

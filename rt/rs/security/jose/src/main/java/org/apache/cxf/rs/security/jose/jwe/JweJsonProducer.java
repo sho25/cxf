@@ -143,13 +143,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|jaxrs
 operator|.
-name|security
+name|provider
 operator|.
-name|jose
+name|json
 operator|.
-name|JoseConstants
+name|JsonMapObjectReaderWriter
 import|;
 end_import
 
@@ -167,7 +167,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseHeadersReaderWriter
+name|JoseConstants
 import|;
 end_import
 
@@ -192,11 +192,11 @@ name|class
 argument_list|)
 decl_stmt|;
 specifier|private
-name|JoseHeadersReaderWriter
+name|JsonMapObjectReaderWriter
 name|writer
 init|=
 operator|new
-name|JoseHeadersReaderWriter
+name|JsonMapObjectReaderWriter
 argument_list|()
 decl_stmt|;
 specifier|private

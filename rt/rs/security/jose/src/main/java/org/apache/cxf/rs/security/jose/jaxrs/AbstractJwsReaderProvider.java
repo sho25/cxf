@@ -35,7 +35,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseHeaders
+name|jws
+operator|.
+name|JwsHeaders
 import|;
 end_import
 
@@ -111,7 +113,7 @@ specifier|protected
 name|JwsSignatureVerifier
 name|getInitializedSigVerifier
 parameter_list|(
-name|JoseHeaders
+name|JwsHeaders
 name|headers
 parameter_list|)
 block|{

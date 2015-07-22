@@ -93,6 +93,7 @@ end_import
 
 begin_class
 specifier|public
+specifier|abstract
 class|class
 name|JoseHeaders
 extends|extends
@@ -252,7 +253,7 @@ name|HEADER_CONTENT_TYPE
 argument_list|)
 return|;
 block|}
-specifier|public
+specifier|protected
 name|void
 name|setAlgorithm
 parameter_list|(
@@ -270,7 +271,7 @@ name|algo
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
+specifier|protected
 name|String
 name|getAlgorithm
 parameter_list|()

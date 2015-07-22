@@ -314,7 +314,10 @@ name|keyAlgoJwt
 init|=
 name|jweHeaders
 operator|.
-name|getAlgorithm
+name|getKeyEncryptionAlgorithm
+argument_list|()
+operator|.
+name|getJwaName
 argument_list|()
 decl_stmt|;
 name|int

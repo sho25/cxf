@@ -175,7 +175,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseHeaders
+name|JoseUtils
 import|;
 end_import
 
@@ -193,7 +193,9 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseUtils
+name|jwe
+operator|.
+name|JweHeaders
 import|;
 end_import
 
@@ -408,7 +410,7 @@ operator|new
 name|JwtToken
 argument_list|(
 operator|new
-name|JoseHeaders
+name|JweHeaders
 argument_list|()
 argument_list|,
 name|claims

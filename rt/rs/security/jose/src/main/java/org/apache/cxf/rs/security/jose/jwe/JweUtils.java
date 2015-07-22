@@ -3987,9 +3987,14 @@ condition|)
 block|{
 name|headers
 operator|.
-name|setAlgorithm
+name|setKeyEncryptionAlgorithm
+argument_list|(
+name|KeyAlgorithm
+operator|.
+name|getAlgorithm
 argument_list|(
 name|keyEncryptionAlgo
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

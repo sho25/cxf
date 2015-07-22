@@ -240,7 +240,7 @@ name|getInitializedSigVerifier
 argument_list|(
 name|p
 operator|.
-name|getJoseHeaders
+name|getJwsHeaders
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -315,7 +315,7 @@ name|checkContentType
 argument_list|(
 name|p
 operator|.
-name|getJoseHeaders
+name|getJwsHeaders
 argument_list|()
 operator|.
 name|getContentType

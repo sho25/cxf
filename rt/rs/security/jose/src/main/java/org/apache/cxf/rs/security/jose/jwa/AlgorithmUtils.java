@@ -423,7 +423,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|PLAIN_TEXT_ALGO
+name|NONE_TEXT_ALGO
 init|=
 literal|"none"
 decl_stmt|;

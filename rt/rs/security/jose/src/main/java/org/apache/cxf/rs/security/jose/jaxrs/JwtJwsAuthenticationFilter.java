@@ -355,7 +355,7 @@ name|getInitializedSigVerifier
 argument_list|(
 name|p
 operator|.
-name|getJoseHeaders
+name|getJwsHeaders
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -439,7 +439,7 @@ name|headerContext
 init|=
 name|c
 operator|.
-name|getJoseHeaders
+name|getJwsHeaders
 argument_list|()
 operator|.
 name|getHeader

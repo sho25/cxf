@@ -81,13 +81,13 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|rs
+name|jaxrs
 operator|.
-name|security
+name|provider
 operator|.
-name|jose
+name|json
 operator|.
-name|JoseHeadersReaderWriter
+name|JsonMapObjectReaderWriter
 import|;
 end_import
 
@@ -373,10 +373,10 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|JoseHeadersReaderWriter
+name|JsonMapObjectReaderWriter
 argument_list|()
 operator|.
-name|headersToJson
+name|toJson
 argument_list|(
 name|headers
 argument_list|)
