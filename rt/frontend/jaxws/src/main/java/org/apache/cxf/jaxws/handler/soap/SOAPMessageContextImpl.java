@@ -851,6 +851,7 @@ condition|(
 name|isRequestor
 argument_list|()
 operator|&&
+operator|!
 name|isOutbound
 argument_list|()
 operator|&&
