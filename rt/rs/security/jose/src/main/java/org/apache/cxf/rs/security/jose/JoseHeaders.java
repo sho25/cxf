@@ -253,7 +253,7 @@ name|HEADER_CONTENT_TYPE
 argument_list|)
 return|;
 block|}
-specifier|protected
+specifier|public
 name|void
 name|setAlgorithm
 parameter_list|(
@@ -271,7 +271,7 @@ name|algo
 argument_list|)
 expr_stmt|;
 block|}
-specifier|protected
+specifier|public
 name|String
 name|getAlgorithm
 parameter_list|()
