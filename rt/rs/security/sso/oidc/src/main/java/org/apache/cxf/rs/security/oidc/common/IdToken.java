@@ -80,7 +80,7 @@ specifier|public
 class|class
 name|IdToken
 extends|extends
-name|JwtClaims
+name|UserInfo
 block|{
 specifier|public
 specifier|static
