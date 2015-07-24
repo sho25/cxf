@@ -1382,6 +1382,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|resolved
+operator|!=
+literal|null
+operator|&&
 name|smp
 operator|.
 name|containsKey
