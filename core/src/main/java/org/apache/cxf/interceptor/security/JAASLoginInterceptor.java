@@ -408,8 +408,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|allowNamedPrincipals
-init|=
-literal|true
 decl_stmt|;
 specifier|public
 name|JAASLoginInterceptor
