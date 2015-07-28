@@ -353,9 +353,14 @@ end_import
 
 begin_class
 specifier|public
+specifier|final
 class|class
 name|BigQueryServer
 block|{
+specifier|private
+name|BigQueryServer
+parameter_list|()
+block|{     }
 specifier|public
 specifier|static
 name|void
