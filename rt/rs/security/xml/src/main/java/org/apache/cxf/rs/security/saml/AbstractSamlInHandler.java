@@ -1731,6 +1731,15 @@ operator|.
 name|warning
 argument_list|(
 name|error
+operator|+
+literal|": "
+operator|+
+name|ExceptionUtils
+operator|.
+name|getStackTrace
+argument_list|(
+name|ex
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|Response
