@@ -238,8 +238,6 @@ init|=
 name|getJwtToken
 argument_list|(
 name|idJwtToken
-argument_list|,
-literal|false
 argument_list|)
 decl_stmt|;
 name|validateJwtClaims

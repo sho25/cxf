@@ -170,8 +170,6 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|jweRequired
-init|=
-literal|true
 decl_stmt|;
 specifier|protected
 name|String
