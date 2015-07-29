@@ -105,26 +105,6 @@ name|rs
 operator|.
 name|security
 operator|.
-name|jose
-operator|.
-name|jwt
-operator|.
-name|JwtToken
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
 name|oauth2
 operator|.
 name|common
@@ -282,9 +262,6 @@ argument_list|(
 name|authSchemeData
 argument_list|)
 decl_stmt|;
-name|JwtToken
-name|token
-init|=
 name|super
 operator|.
 name|getJwtToken
@@ -293,13 +270,6 @@ name|at
 operator|.
 name|getTokenKey
 argument_list|()
-argument_list|,
-literal|false
-argument_list|)
-decl_stmt|;
-name|validateToken
-argument_list|(
-name|token
 argument_list|)
 expr_stmt|;
 return|return
@@ -325,14 +295,6 @@ operator|=
 name|dataProvider
 expr_stmt|;
 block|}
-specifier|protected
-name|void
-name|validateToken
-parameter_list|(
-name|JwtToken
-name|jwt
-parameter_list|)
-block|{              }
 block|}
 end_class
 

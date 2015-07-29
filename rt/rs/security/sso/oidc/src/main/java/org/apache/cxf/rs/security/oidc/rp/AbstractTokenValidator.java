@@ -441,7 +441,7 @@ decl_stmt|;
 name|JwsSignatureVerifier
 name|theSigVerifier
 init|=
-name|getInitializedSigVerifier
+name|getInitializedSignatureVerifier
 argument_list|(
 name|jwt
 argument_list|)
@@ -670,7 +670,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setJweVerifier
+name|setJwsVerifier
 parameter_list|(
 name|JwsSignatureVerifier
 name|theJwsVerifier
@@ -758,7 +758,7 @@ return|;
 block|}
 specifier|protected
 name|JwsSignatureVerifier
-name|getInitializedSigVerifier
+name|getInitializedSignatureVerifier
 parameter_list|(
 name|JwtToken
 name|jwt
