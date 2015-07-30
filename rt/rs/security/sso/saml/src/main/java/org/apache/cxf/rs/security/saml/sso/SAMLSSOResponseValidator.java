@@ -683,7 +683,6 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|// the assumption for now is that SAMLResponse will contain only a single assertion
 name|Element
 name|assertionElement
 init|=
