@@ -385,10 +385,20 @@ argument_list|)
 throw|;
 block|}
 comment|// Validate Assertions
-name|boolean
-name|foundValidSubject
+name|org
+operator|.
+name|opensaml
+operator|.
+name|saml
+operator|.
+name|saml2
+operator|.
+name|core
+operator|.
+name|Assertion
+name|validAssertion
 init|=
-literal|false
+literal|null
 decl_stmt|;
 name|Date
 name|sessionNotOnOrAfter
@@ -554,9 +564,9 @@ name|getConditions
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|foundValidSubject
+name|validAssertion
 operator|=
-literal|true
+name|assertion
 expr_stmt|;
 comment|// Store Session NotOnOrAfter
 for|for
@@ -597,8 +607,9 @@ block|}
 block|}
 if|if
 condition|(
-operator|!
-name|foundValidSubject
+name|validAssertion
+operator|==
+literal|null
 condition|)
 block|{
 name|LOG
@@ -676,15 +687,7 @@ comment|// the assumption for now is that SAMLResponse will contain only a singl
 name|Element
 name|assertionElement
 init|=
-name|samlResponse
-operator|.
-name|getAssertions
-argument_list|()
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
+name|validAssertion
 operator|.
 name|getDOM
 argument_list|()
