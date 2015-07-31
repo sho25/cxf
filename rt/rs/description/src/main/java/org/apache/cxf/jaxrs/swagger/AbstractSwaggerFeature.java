@@ -114,6 +114,7 @@ name|version
 init|=
 literal|"1.0.0"
 decl_stmt|;
+comment|// depending on swagger version basePath is set differently
 specifier|private
 name|String
 name|basePath
