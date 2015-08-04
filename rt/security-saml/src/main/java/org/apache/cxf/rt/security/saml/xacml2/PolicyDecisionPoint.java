@@ -65,6 +65,8 @@ parameter_list|(
 name|RequestType
 name|request
 parameter_list|)
+throws|throws
+name|Exception
 function_decl|;
 block|}
 end_interface
