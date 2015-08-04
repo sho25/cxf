@@ -377,6 +377,13 @@ argument_list|()
 decl_stmt|;
 name|feature
 operator|.
+name|setIgnoreHostPort
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|feature
+operator|.
 name|setRunAsFilter
 argument_list|(
 name|runAsFilter
