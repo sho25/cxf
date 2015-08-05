@@ -627,6 +627,14 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|String
+name|TOKEN_ELEMENT
+init|=
+literal|"ws-security.token.element"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|Set
 argument_list|<
 name|String

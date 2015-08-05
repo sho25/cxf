@@ -38,6 +38,14 @@ name|SAML_TOKEN_ELEMENT
 init|=
 literal|"rs-security.saml.token.element"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|WS_SAML_TOKEN_ELEMENT
+init|=
+literal|"ws-security.token.element"
+decl_stmt|;
 specifier|private
 name|SAMLConstants
 parameter_list|()
