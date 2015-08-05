@@ -3102,6 +3102,16 @@ argument_list|)
 expr_stmt|;
 name|encr
 operator|.
+name|setMGFAlgorithm
+argument_list|(
+name|algType
+operator|.
+name|getMGFAlgo
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|encr
+operator|.
 name|prepare
 argument_list|(
 name|saaj
