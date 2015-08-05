@@ -201,7 +201,7 @@ operator|.
 name|getIdToken
 argument_list|()
 operator|.
-name|getSubject
+name|getEmail
 argument_list|()
 return|;
 block|}
