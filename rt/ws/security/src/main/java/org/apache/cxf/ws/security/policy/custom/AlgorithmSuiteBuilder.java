@@ -339,6 +339,13 @@ condition|(
 name|algorithmSuite
 operator|==
 literal|null
+operator|||
+name|algorithmSuite
+operator|.
+name|getAlgorithmSuiteType
+argument_list|()
+operator|==
+literal|null
 condition|)
 block|{
 name|String
