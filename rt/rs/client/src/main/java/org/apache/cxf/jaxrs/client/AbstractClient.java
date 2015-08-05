@@ -3124,9 +3124,6 @@ specifier|protected
 name|void
 name|completeExchange
 parameter_list|(
-name|Object
-name|response
-parameter_list|,
 name|Exchange
 name|exchange
 parameter_list|,
