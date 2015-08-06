@@ -4480,9 +4480,9 @@ if|if
 condition|(
 name|reportPublicKey
 operator|&&
-name|JsonWebKey
+name|KeyType
 operator|.
-name|KEY_TYPE_RSA
+name|RSA
 operator|.
 name|equals
 argument_list|(
