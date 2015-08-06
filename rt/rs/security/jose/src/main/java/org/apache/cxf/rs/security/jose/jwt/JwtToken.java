@@ -64,6 +64,7 @@ argument_list|(
 operator|new
 name|JoseHeaders
 argument_list|()
+block|{ }
 argument_list|,
 name|claims
 argument_list|)
