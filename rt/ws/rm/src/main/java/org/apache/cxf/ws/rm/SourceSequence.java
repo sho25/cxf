@@ -714,6 +714,25 @@ operator|.
 name|getProxy
 argument_list|()
 decl_stmt|;
+comment|// REVIST for rm 1.1, provide an option to how the close and terminate messages are sent
+if|if
+condition|(
+name|ProtocolVariation
+operator|.
+name|RM11WSA200508
+operator|==
+name|getProtocol
+argument_list|()
+condition|)
+block|{
+name|proxy
+operator|.
+name|lastMessage
+argument_list|(
+name|this
+argument_list|)
+expr_stmt|;
+block|}
 name|proxy
 operator|.
 name|terminate
