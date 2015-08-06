@@ -275,7 +275,7 @@ name|signWithClientSecret
 decl_stmt|;
 specifier|protected
 name|JwsSignatureProvider
-name|getInitializedSigProvider
+name|getInitializedSignatureProvider
 parameter_list|(
 name|Client
 name|c
