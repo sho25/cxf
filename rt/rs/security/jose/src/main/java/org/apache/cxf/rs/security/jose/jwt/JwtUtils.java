@@ -159,7 +159,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwtException
 argument_list|(
 literal|"The token expired"
 argument_list|)
@@ -218,7 +218,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwtException
 argument_list|(
 literal|"Invalid issuedAt"
 argument_list|)

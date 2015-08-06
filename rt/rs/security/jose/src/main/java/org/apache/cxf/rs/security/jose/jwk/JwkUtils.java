@@ -2613,7 +2613,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwkException
 argument_list|(
 literal|"Error in loading keystore location: "
 operator|+
@@ -2639,7 +2639,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwkException
 argument_list|(
 name|ex
 argument_list|)
@@ -4186,7 +4186,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwkException
 argument_list|(
 literal|"Invalid algorithm"
 argument_list|)
@@ -4330,7 +4330,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwkException
 argument_list|(
 literal|"Invalid algorithm"
 argument_list|)

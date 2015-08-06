@@ -53,24 +53,6 @@ name|security
 operator|.
 name|jose
 operator|.
-name|JoseException
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|jose
-operator|.
 name|jwe
 operator|.
 name|JweDecryptionProvider
@@ -176,7 +158,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|JoseException
+name|JwtException
 argument_list|(
 literal|"Unable to process JWT"
 argument_list|)
@@ -269,7 +251,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|JwtException
 argument_list|(
 literal|"Invalid Signature"
 argument_list|)
