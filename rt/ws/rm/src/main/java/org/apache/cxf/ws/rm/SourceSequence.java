@@ -714,6 +714,7 @@ operator|.
 name|getProxy
 argument_list|()
 decl_stmt|;
+comment|// REVIST for rm 1.1, provide an option to how the close and terminate messages are sent
 name|proxy
 operator|.
 name|terminate

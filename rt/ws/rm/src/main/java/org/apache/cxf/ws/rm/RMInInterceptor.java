@@ -1048,17 +1048,9 @@ name|equals
 argument_list|(
 name|action
 argument_list|)
-operator|||
-name|RM11Constants
-operator|.
-name|SEQUENCE_ACKNOWLEDGMENT_ACTION
-operator|.
-name|equals
-argument_list|(
-name|action
-argument_list|)
 condition|)
 block|{
+comment|// RM10 out-of-band CloseSequence/lastMessage is a special case; RM11 needs no special handling
 name|processSequence
 argument_list|(
 name|destination
