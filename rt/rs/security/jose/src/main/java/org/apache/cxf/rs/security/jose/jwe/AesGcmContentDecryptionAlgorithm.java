@@ -68,7 +68,7 @@ name|AesGcmContentDecryptionAlgorithm
 extends|extends
 name|AbstractContentEncryptionCipherProperties
 implements|implements
-name|ContentDecryptionAlgorithm
+name|ContentDecryptionProvider
 block|{
 specifier|public
 name|AesGcmContentDecryptionAlgorithm

@@ -109,7 +109,7 @@ decl_stmt|;
 specifier|public
 name|AesCbcHmacJweDecryption
 parameter_list|(
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionAlgo
 parameter_list|)
 block|{
@@ -124,7 +124,7 @@ block|}
 specifier|public
 name|AesCbcHmacJweDecryption
 parameter_list|(
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionAlgo
 parameter_list|,
 name|ContentAlgorithm
@@ -336,7 +336,7 @@ name|AesCbcContentDecryptionAlgorithm
 extends|extends
 name|AbstractContentEncryptionCipherProperties
 implements|implements
-name|ContentDecryptionAlgorithm
+name|ContentDecryptionProvider
 block|{
 specifier|public
 name|AesCbcContentDecryptionAlgorithm

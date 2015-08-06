@@ -31,10 +31,10 @@ block|{
 specifier|public
 name|JweDecryption
 parameter_list|(
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionAlgo
 parameter_list|,
-name|ContentDecryptionAlgorithm
+name|ContentDecryptionProvider
 name|cipherProps
 parameter_list|)
 block|{

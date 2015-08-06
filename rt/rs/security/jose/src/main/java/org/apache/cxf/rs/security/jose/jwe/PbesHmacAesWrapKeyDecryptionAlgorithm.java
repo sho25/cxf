@@ -100,7 +100,7 @@ specifier|public
 class|class
 name|PbesHmacAesWrapKeyDecryptionAlgorithm
 implements|implements
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 block|{
 specifier|private
 name|byte
@@ -349,7 +349,7 @@ argument_list|,
 name|pbesCount
 argument_list|)
 decl_stmt|;
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|aesWrap
 init|=
 operator|new

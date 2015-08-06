@@ -152,7 +152,7 @@ specifier|public
 class|class
 name|WrappedKeyDecryptionAlgorithm
 implements|implements
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 block|{
 specifier|protected
 specifier|static

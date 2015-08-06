@@ -657,7 +657,7 @@ name|jose
 operator|.
 name|jwe
 operator|.
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 import|;
 end_import
 
@@ -4288,7 +4288,7 @@ index|[]
 name|password
 parameter_list|)
 block|{
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryption
 init|=
 operator|new

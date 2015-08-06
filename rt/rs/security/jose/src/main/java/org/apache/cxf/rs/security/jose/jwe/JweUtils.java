@@ -920,10 +920,10 @@ name|String
 name|content
 parameter_list|)
 block|{
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 init|=
-name|getPrivateKeyDecryptionAlgorithm
+name|getPrivateKeyDecryptionProvider
 argument_list|(
 name|key
 argument_list|,
@@ -967,10 +967,10 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 init|=
-name|getSecretKeyDecryptionAlgorithm
+name|getSecretKeyDecryptionProvider
 argument_list|(
 name|key
 argument_list|,
@@ -1018,10 +1018,10 @@ name|String
 name|content
 parameter_list|)
 block|{
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 init|=
-name|getKeyDecryptionAlgorithm
+name|getKeyDecryptionProvider
 argument_list|(
 name|key
 argument_list|)
@@ -1342,15 +1342,15 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|KeyDecryptionAlgorithm
-name|getKeyDecryptionAlgorithm
+name|KeyDecryptionProvider
+name|getKeyDecryptionProvider
 parameter_list|(
 name|JsonWebKey
 name|jwk
 parameter_list|)
 block|{
 return|return
-name|getKeyDecryptionAlgorithm
+name|getKeyDecryptionProvider
 argument_list|(
 name|jwk
 argument_list|,
@@ -1360,8 +1360,8 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|KeyDecryptionAlgorithm
-name|getKeyDecryptionAlgorithm
+name|KeyDecryptionProvider
+name|getKeyDecryptionProvider
 parameter_list|(
 name|JsonWebKey
 name|jwk
@@ -1392,7 +1392,7 @@ name|getAlgorithm
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 init|=
 literal|null
@@ -1416,7 +1416,7 @@ condition|)
 block|{
 name|keyDecryptionProvider
 operator|=
-name|getPrivateKeyDecryptionAlgorithm
+name|getPrivateKeyDecryptionProvider
 argument_list|(
 name|JwkUtils
 operator|.
@@ -1441,7 +1441,7 @@ condition|)
 block|{
 name|keyDecryptionProvider
 operator|=
-name|getSecretKeyDecryptionAlgorithm
+name|getSecretKeyDecryptionProvider
 argument_list|(
 name|JwkUtils
 operator|.
@@ -1458,7 +1458,7 @@ else|else
 block|{
 name|keyDecryptionProvider
 operator|=
-name|getPrivateKeyDecryptionAlgorithm
+name|getPrivateKeyDecryptionProvider
 argument_list|(
 name|JwkUtils
 operator|.
@@ -1477,8 +1477,8 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|KeyDecryptionAlgorithm
-name|getPrivateKeyDecryptionAlgorithm
+name|KeyDecryptionProvider
+name|getPrivateKeyDecryptionProvider
 parameter_list|(
 name|PrivateKey
 name|key
@@ -1525,8 +1525,8 @@ block|}
 block|}
 specifier|public
 specifier|static
-name|KeyDecryptionAlgorithm
-name|getSecretKeyDecryptionAlgorithm
+name|KeyDecryptionProvider
+name|getSecretKeyDecryptionProvider
 parameter_list|(
 name|SecretKey
 name|key
@@ -1753,8 +1753,8 @@ return|;
 block|}
 specifier|public
 specifier|static
-name|ContentDecryptionAlgorithm
-name|getContentDecryptionAlgorithm
+name|ContentDecryptionProvider
+name|getContentDecryptionProvider
 parameter_list|(
 name|ContentAlgorithm
 name|algorithm
@@ -2060,7 +2060,7 @@ argument_list|(
 name|key
 argument_list|)
 argument_list|,
-name|getContentDecryptionAlgorithm
+name|getContentDecryptionProvider
 argument_list|(
 name|algorithm
 argument_list|)
@@ -2478,7 +2478,7 @@ return|return
 literal|null
 return|;
 block|}
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 init|=
 literal|null
@@ -2590,7 +2590,7 @@ argument_list|()
 expr_stmt|;
 name|keyDecryptionProvider
 operator|=
-name|getPrivateKeyDecryptionAlgorithm
+name|getPrivateKeyDecryptionProvider
 argument_list|(
 name|privateKey
 argument_list|,
@@ -2695,7 +2695,7 @@ argument_list|)
 expr_stmt|;
 name|keyDecryptionProvider
 operator|=
-name|getKeyDecryptionAlgorithm
+name|getKeyDecryptionProvider
 argument_list|(
 name|jwk
 argument_list|,
@@ -2713,7 +2713,7 @@ else|else
 block|{
 name|keyDecryptionProvider
 operator|=
-name|getPrivateKeyDecryptionAlgorithm
+name|getPrivateKeyDecryptionProvider
 argument_list|(
 name|KeyManagementUtils
 operator|.
@@ -3092,7 +3092,7 @@ block|{
 return|return
 name|createJweDecryptionProvider
 argument_list|(
-name|getPrivateKeyDecryptionAlgorithm
+name|getPrivateKeyDecryptionProvider
 argument_list|(
 name|key
 argument_list|,
@@ -3121,7 +3121,7 @@ block|{
 return|return
 name|createJweDecryptionProvider
 argument_list|(
-name|getSecretKeyDecryptionAlgorithm
+name|getSecretKeyDecryptionProvider
 argument_list|(
 name|key
 argument_list|,
@@ -3147,7 +3147,7 @@ block|{
 return|return
 name|createJweDecryptionProvider
 argument_list|(
-name|getKeyDecryptionAlgorithm
+name|getKeyDecryptionProvider
 argument_list|(
 name|key
 argument_list|)
@@ -3161,7 +3161,7 @@ specifier|static
 name|JweDecryptionProvider
 name|createJweDecryptionProvider
 parameter_list|(
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 parameter_list|,
 name|ContentAlgorithm
@@ -3199,7 +3199,7 @@ name|JweDecryption
 argument_list|(
 name|keyDecryptionProvider
 argument_list|,
-name|getContentDecryptionAlgorithm
+name|getContentDecryptionProvider
 argument_list|(
 name|contentDecryptionAlgo
 argument_list|)
@@ -4137,7 +4137,7 @@ specifier|static
 name|JweDecryptionProvider
 name|createJweDecryptionProvider
 parameter_list|(
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 parameter_list|,
 name|SecretKey
@@ -4398,7 +4398,7 @@ name|byte
 index|[]
 name|decrypt
 parameter_list|(
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryptionProvider
 parameter_list|,
 name|ContentAlgorithm

@@ -78,7 +78,7 @@ specifier|public
 class|class
 name|EcdhAesWrapKeyDecryptionAlgorithm
 implements|implements
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 block|{
 specifier|private
 name|ECPrivateKey
@@ -155,7 +155,7 @@ argument_list|,
 name|key
 argument_list|)
 decl_stmt|;
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|aesWrap
 init|=
 operator|new

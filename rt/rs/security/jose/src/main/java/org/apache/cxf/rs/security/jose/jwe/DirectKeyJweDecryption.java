@@ -34,7 +34,7 @@ parameter_list|(
 name|String
 name|encodedKey
 parameter_list|,
-name|ContentDecryptionAlgorithm
+name|ContentDecryptionProvider
 name|ctAlgo
 parameter_list|)
 block|{
@@ -57,7 +57,7 @@ name|byte
 index|[]
 name|key
 parameter_list|,
-name|ContentDecryptionAlgorithm
+name|ContentDecryptionProvider
 name|ctAlgo
 parameter_list|)
 block|{

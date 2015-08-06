@@ -1080,7 +1080,7 @@ argument_list|,
 name|RSA_PRIVATE_EXPONENT_ENCODED_A1
 argument_list|)
 decl_stmt|;
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 name|keyDecryption
 init|=
 operator|new

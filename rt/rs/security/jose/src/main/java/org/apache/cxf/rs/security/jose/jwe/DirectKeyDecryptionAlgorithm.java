@@ -102,7 +102,7 @@ specifier|public
 class|class
 name|DirectKeyDecryptionAlgorithm
 implements|implements
-name|KeyDecryptionAlgorithm
+name|KeyDecryptionProvider
 block|{
 specifier|private
 specifier|static
