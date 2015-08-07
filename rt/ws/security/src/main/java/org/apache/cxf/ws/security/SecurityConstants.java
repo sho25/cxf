@@ -188,6 +188,15 @@ name|STORE_BYTES_IN_ATTACHMENT
 init|=
 literal|"ws-security.store.bytes.in.attachment"
 decl_stmt|;
+comment|/**      * This configuration flag allows the user to decide whether the default Attachment-Complete       * transform or the Attachment-Content-Only transform should be used when an Attachment is encrypted       * via a WS-SecurityPolicy expression. The default is "false", meaning that the "complete"       * transformation is used.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|USE_ATTACHMENT_ENCRYPTION_CONTENT_ONLY_TRANSFORM
+init|=
+literal|"ws-security.swa.encryption.attachment.transform.content"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -772,6 +781,8 @@ block|,
 name|POLICY_VALIDATOR_MAP
 block|,
 name|STORE_BYTES_IN_ATTACHMENT
+block|,
+name|USE_ATTACHMENT_ENCRYPTION_CONTENT_ONLY_TRANSFORM
 block|}
 argument_list|)
 argument_list|)
