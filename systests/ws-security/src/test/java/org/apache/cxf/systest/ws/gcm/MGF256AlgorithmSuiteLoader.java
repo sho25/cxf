@@ -497,9 +497,9 @@ name|SPConstants
 operator|.
 name|KW_AES256
 argument_list|,
-name|SPConstants
+name|WSConstants
 operator|.
-name|KW_RSA_OAEP
+name|KEYTRANSPORT_RSAOEP_XENC11
 argument_list|,
 name|SPConstants
 operator|.
