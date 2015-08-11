@@ -135,7 +135,7 @@ specifier|private
 name|String
 name|contact
 init|=
-literal|"committer@apache.org"
+literal|"users@cxf.apache.org"
 decl_stmt|;
 specifier|private
 name|String
