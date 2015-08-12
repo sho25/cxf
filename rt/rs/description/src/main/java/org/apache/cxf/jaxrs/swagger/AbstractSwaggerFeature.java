@@ -88,6 +88,7 @@ import|;
 end_import
 
 begin_class
+specifier|public
 specifier|abstract
 class|class
 name|AbstractSwaggerFeature
