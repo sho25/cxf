@@ -403,6 +403,9 @@ parameter_list|(
 name|boolean
 name|custom
 parameter_list|,
+name|boolean
+name|busGlobal
+parameter_list|,
 name|Object
 modifier|...
 name|providers
@@ -422,6 +425,8 @@ init|=
 name|prepareProviders
 argument_list|(
 name|custom
+argument_list|,
+name|busGlobal
 argument_list|,
 operator|(
 name|Object
