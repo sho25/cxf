@@ -437,9 +437,9 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|USE_ASYNC_PROPERTY
+name|SET_EMPTY_REQUEST_CT_PROPERTY
 init|=
-literal|"use.async.http.conduit"
+literal|"set.content.type.for.empty.request"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -1591,6 +1591,14 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+comment|// If no Content-Type is set for empty requests then HttpUrlConnection:
+comment|// - sets a form Content-Type for empty POST
+comment|// - replaces custom Accept value with */* if HTTP proxy is used
+name|boolean
+name|dropContentType
+init|=
+literal|false
+decl_stmt|;
 name|boolean
 name|emptyRequest
 init|=
@@ -1606,30 +1614,31 @@ name|EMPTY_REQUEST_PROPERTY
 argument_list|)
 argument_list|)
 decl_stmt|;
-comment|// HttpUrlConnection sets a form Content-Type and completely loses custom Accept
-comment|// if HTTP proxies are used if no Content-Type is set for empty requests
-name|boolean
-name|asyncConduitUsed
-init|=
-name|PropertyUtils
+if|if
+condition|(
+name|emptyRequest
+condition|)
+block|{
+comment|// drop only if a user explicitly requested it by setting the property to false
+name|dropContentType
+operator|=
+operator|!
+name|MessageUtils
 operator|.
-name|isTrue
+name|getContextualBoolean
 argument_list|(
 name|message
-operator|.
-name|get
-argument_list|(
-name|USE_ASYNC_PROPERTY
+argument_list|,
+name|SET_EMPTY_REQUEST_CT_PROPERTY
+argument_list|,
+literal|true
 argument_list|)
-argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
 if|if
 condition|(
 operator|!
-name|asyncConduitUsed
-operator|||
-operator|!
-name|emptyRequest
+name|dropContentType
 condition|)
 block|{
 name|String
