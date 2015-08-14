@@ -405,9 +405,6 @@ name|at
 argument_list|,
 name|getConsumer
 argument_list|()
-operator|.
-name|getKey
-argument_list|()
 argument_list|)
 decl_stmt|;
 comment|// Validate the properties set up at the redirection time.
@@ -445,6 +442,9 @@ argument_list|,
 name|ctx
 operator|.
 name|getIdToken
+argument_list|()
+argument_list|,
+name|getConsumer
 argument_list|()
 argument_list|)
 argument_list|)
