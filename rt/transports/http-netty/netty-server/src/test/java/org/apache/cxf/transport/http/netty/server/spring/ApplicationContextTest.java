@@ -421,6 +421,9 @@ block|,
 name|s4
 block|}
 argument_list|)
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 name|fail
 argument_list|(

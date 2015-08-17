@@ -978,6 +978,9 @@ argument_list|(
 name|serviceFactory
 argument_list|)
 argument_list|)
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 catch|catch

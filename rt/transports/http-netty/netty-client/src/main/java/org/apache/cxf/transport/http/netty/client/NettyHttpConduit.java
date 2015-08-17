@@ -3047,11 +3047,6 @@ block|{
 comment|// ensure chunked or EOF-terminated response is non-empty
 try|try
 block|{
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"resource"
-argument_list|)
 name|PushbackInputStream
 name|pin
 init|=

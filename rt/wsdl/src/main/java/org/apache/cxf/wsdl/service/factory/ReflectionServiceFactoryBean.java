@@ -14454,7 +14454,7 @@ literal|null
 return|;
 block|}
 specifier|public
-name|boolean
+name|Boolean
 name|isWrapperPartQualified
 parameter_list|(
 name|MessagePartInfo
@@ -14492,7 +14492,7 @@ return|;
 block|}
 block|}
 return|return
-literal|false
+literal|null
 return|;
 block|}
 specifier|public

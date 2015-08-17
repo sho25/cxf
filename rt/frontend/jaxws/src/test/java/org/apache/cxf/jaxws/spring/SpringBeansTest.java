@@ -2799,6 +2799,9 @@ name|ClassPathXmlApplicationContext
 argument_list|(
 literal|"/org/apache/cxf/jaxws/spring/endpoints3.xml"
 argument_list|)
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 name|fail
 argument_list|(
