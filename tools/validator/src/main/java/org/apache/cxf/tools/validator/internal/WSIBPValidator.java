@@ -2316,7 +2316,7 @@ name|getIgnorableParts
 argument_list|(
 name|bop
 operator|.
-name|getBindingInput
+name|getBindingOutput
 argument_list|()
 argument_list|)
 decl_stmt|;
