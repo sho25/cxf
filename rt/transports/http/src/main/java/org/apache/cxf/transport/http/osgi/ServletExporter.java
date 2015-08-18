@@ -278,13 +278,13 @@ name|sprops
 operator|.
 name|put
 argument_list|(
-literal|"init-param"
+literal|"init-prefix"
 argument_list|,
 name|getProp
 argument_list|(
 name|properties
 argument_list|,
-literal|"org.apache.cxf.servlet.init-param"
+literal|"org.apache.cxf.servlet.init-prefix"
 argument_list|,
 literal|""
 argument_list|)
