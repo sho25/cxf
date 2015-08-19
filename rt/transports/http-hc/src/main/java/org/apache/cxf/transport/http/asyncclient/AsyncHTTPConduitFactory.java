@@ -1108,6 +1108,17 @@ name|s
 parameter_list|)
 block|{
 comment|//properties that can be updated "live"
+if|if
+condition|(
+name|s
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 name|Object
 name|st
 init|=
