@@ -1645,6 +1645,16 @@ name|String
 name|ct
 init|=
 name|emptyRequest
+operator|&&
+operator|!
+name|headers
+operator|.
+name|containsKey
+argument_list|(
+name|Message
+operator|.
+name|CONTENT_TYPE
+argument_list|)
 condition|?
 literal|"*/*"
 else|:
