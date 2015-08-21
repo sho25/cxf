@@ -595,6 +595,9 @@ argument_list|(
 name|address
 argument_list|)
 decl_stmt|;
+comment|// Setting this property is not needed given that
+comment|// we have the async conduit loaded in the test module:
+comment|// WebClient.getConfig(wc).getRequestContext().put("use.async.http.conduit", true);
 name|wc
 operator|.
 name|type
@@ -605,23 +608,6 @@ operator|.
 name|accept
 argument_list|(
 literal|"application/xml"
-argument_list|)
-expr_stmt|;
-name|WebClient
-operator|.
-name|getConfig
-argument_list|(
-name|wc
-argument_list|)
-operator|.
-name|getRequestContext
-argument_list|()
-operator|.
-name|put
-argument_list|(
-literal|"use.async.http.conduit"
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 name|Book

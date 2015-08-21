@@ -950,6 +950,26 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
+comment|// CXF RS Client code will set this property to true if the http verb is unknown
+comment|// and this property is not already set. The async conduit is loaded in the tests module
+comment|// but we do want to test HTTPUrlConnection reflection hence we set this property to false
+name|WebClient
+operator|.
+name|getConfig
+argument_list|(
+name|wc
+argument_list|)
+operator|.
+name|getRequestContext
+argument_list|()
+operator|.
+name|put
+argument_list|(
+literal|"use.async.http.conduit"
+argument_list|,
+literal|false
+argument_list|)
+expr_stmt|;
 return|return
 name|wc
 operator|.
