@@ -1112,17 +1112,7 @@ operator|+
 literal|"'"
 argument_list|)
 expr_stmt|;
-throw|throw
-operator|new
-name|STSException
-argument_list|(
-literal|"Failed to map user for claims handler"
-argument_list|,
-name|STSException
-operator|.
-name|REQUEST_FAILED
-argument_list|)
-throw|;
+continue|continue;
 block|}
 if|if
 condition|(
