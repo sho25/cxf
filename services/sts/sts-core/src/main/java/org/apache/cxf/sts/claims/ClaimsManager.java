@@ -1075,6 +1075,13 @@ condition|(
 name|targetPrincipal
 operator|==
 literal|null
+operator|||
+name|targetPrincipal
+operator|.
+name|getName
+argument_list|()
+operator|==
+literal|null
 condition|)
 block|{
 name|LOG
