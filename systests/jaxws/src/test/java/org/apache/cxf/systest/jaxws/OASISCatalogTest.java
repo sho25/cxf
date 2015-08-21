@@ -502,7 +502,7 @@ name|PORT
 operator|+
 literal|"/SoapContext/SoapPort"
 operator|+
-literal|"?wsdl=testutils/others/hello_world_messages_catalog.wsdl"
+literal|"?wsdl=hello_world_messages_catalog.wsdl"
 argument_list|)
 expr_stmt|;
 name|assertTrue
