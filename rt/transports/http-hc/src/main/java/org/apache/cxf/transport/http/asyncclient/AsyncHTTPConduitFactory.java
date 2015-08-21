@@ -1684,6 +1684,9 @@ name|Bus
 name|b
 parameter_list|)
 block|{
+name|BusLifeCycleManager
+name|manager
+init|=
 name|b
 operator|.
 name|getExtension
@@ -1692,6 +1695,15 @@ name|BusLifeCycleManager
 operator|.
 name|class
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|manager
+operator|!=
+literal|null
+condition|)
+block|{
+name|manager
 operator|.
 name|registerLifeCycleListener
 argument_list|(
@@ -1703,7 +1715,7 @@ specifier|public
 name|void
 name|initComplete
 parameter_list|()
-block|{             }
+block|{                 }
 specifier|public
 name|void
 name|preShutdown
@@ -1717,10 +1729,11 @@ specifier|public
 name|void
 name|postShutdown
 parameter_list|()
-block|{             }
+block|{                 }
 block|}
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|synchronized
