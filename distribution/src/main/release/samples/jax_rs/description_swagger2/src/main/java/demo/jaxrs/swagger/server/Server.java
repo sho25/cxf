@@ -334,6 +334,13 @@ name|class
 operator|.
 name|getName
 argument_list|()
+block|,
+name|ApiOriginFilter
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
 block|}
 argument_list|,
 literal|","
