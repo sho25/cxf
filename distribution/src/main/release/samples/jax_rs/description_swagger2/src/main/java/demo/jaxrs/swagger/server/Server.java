@@ -255,7 +255,7 @@ name|setInitParameter
 argument_list|(
 literal|"redirects-list"
 argument_list|,
-literal|"/ /index.html /.*[.]js /css/.* /images/.* lib/.* .*ico"
+literal|"/ /index.html /.*[.]js /css/.* /images/.* lib/.* .*ico /fonts/.*"
 argument_list|)
 expr_stmt|;
 name|servletHolder
