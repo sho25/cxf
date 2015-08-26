@@ -312,6 +312,17 @@ argument_list|)
 return|;
 block|}
 specifier|public
+name|ResourceOwnerLoginHandler
+name|getLoginHandler
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|loginHandler
+return|;
+block|}
+specifier|public
 name|void
 name|setLoginHandler
 parameter_list|(
