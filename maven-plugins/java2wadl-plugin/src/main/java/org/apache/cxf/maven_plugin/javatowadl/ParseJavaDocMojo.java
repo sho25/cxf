@@ -978,7 +978,7 @@ name|AbstractJavadocMojo
 operator|.
 name|class
 operator|.
-name|getMethod
+name|getDeclaredMethod
 argument_list|(
 literal|"executeReport"
 argument_list|,

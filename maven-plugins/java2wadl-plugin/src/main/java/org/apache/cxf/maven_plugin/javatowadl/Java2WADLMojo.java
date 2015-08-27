@@ -456,6 +456,41 @@ specifier|private
 name|boolean
 name|ignoreOverloadedMethods
 decl_stmt|;
+comment|/**      * @parameter default-value="false"      */
+specifier|private
+name|boolean
+name|useJaxbContextForQnames
+decl_stmt|;
+comment|/**      * @parameter default-value="false"      */
+specifier|private
+name|boolean
+name|ignoreMessageWriters
+decl_stmt|;
+comment|/**      * @parameter default-value="true"      */
+specifier|private
+name|boolean
+name|usePathParamsToCompareOperations
+decl_stmt|;
+comment|/**      * @parameter default-value="false"      */
+specifier|private
+name|boolean
+name|ignoreRequests
+decl_stmt|;
+comment|/**      * @parameter default-value="true"      */
+specifier|private
+name|boolean
+name|supportCollections
+decl_stmt|;
+comment|/**      * @parameter default-value="true"      */
+specifier|private
+name|boolean
+name|supportJaxbXmlType
+decl_stmt|;
+comment|/**      * @parameter default-value="true"      */
+specifier|private
+name|boolean
+name|supportJaxbSubstitutions
+decl_stmt|;
 comment|/**      * @parameter      */
 specifier|private
 name|String
@@ -705,6 +740,55 @@ operator|.
 name|setIgnoreOverloadedMethods
 argument_list|(
 name|ignoreOverloadedMethods
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setUseJaxbContextForQnames
+argument_list|(
+name|useJaxbContextForQnames
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setIgnoreMessageWriters
+argument_list|(
+name|ignoreMessageWriters
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setUsePathParamsToCompareOperations
+argument_list|(
+name|usePathParamsToCompareOperations
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setIgnoreRequests
+argument_list|(
+name|ignoreRequests
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setSupportCollections
+argument_list|(
+name|supportCollections
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setSupportJaxbXmlType
+argument_list|(
+name|supportJaxbXmlType
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setSupportJaxbSubstitutions
+argument_list|(
+name|supportJaxbSubstitutions
 argument_list|)
 expr_stmt|;
 if|if
