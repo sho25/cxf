@@ -421,7 +421,7 @@ specifier|private
 name|boolean
 name|useJson
 decl_stmt|;
-comment|/**      * @parameter default-value="false"      */
+comment|/**      * @parameter default-value="true"      */
 specifier|private
 name|boolean
 name|singleResourceMultipleMethods
@@ -456,25 +456,15 @@ specifier|private
 name|boolean
 name|ignoreOverloadedMethods
 decl_stmt|;
-comment|/**      * @parameter default-value="false"      */
+comment|/**      * @parameter default-value="true"      */
 specifier|private
 name|boolean
 name|useJaxbContextForQnames
-decl_stmt|;
-comment|/**      * @parameter default-value="false"      */
-specifier|private
-name|boolean
-name|ignoreMessageWriters
 decl_stmt|;
 comment|/**      * @parameter default-value="true"      */
 specifier|private
 name|boolean
 name|usePathParamsToCompareOperations
-decl_stmt|;
-comment|/**      * @parameter default-value="false"      */
-specifier|private
-name|boolean
-name|ignoreRequests
 decl_stmt|;
 comment|/**      * @parameter default-value="true"      */
 specifier|private
@@ -751,23 +741,9 @@ argument_list|)
 expr_stmt|;
 name|wg
 operator|.
-name|setIgnoreMessageWriters
-argument_list|(
-name|ignoreMessageWriters
-argument_list|)
-expr_stmt|;
-name|wg
-operator|.
 name|setUsePathParamsToCompareOperations
 argument_list|(
 name|usePathParamsToCompareOperations
-argument_list|)
-expr_stmt|;
-name|wg
-operator|.
-name|setIgnoreRequests
-argument_list|(
-name|ignoreRequests
 argument_list|)
 expr_stmt|;
 name|wg
