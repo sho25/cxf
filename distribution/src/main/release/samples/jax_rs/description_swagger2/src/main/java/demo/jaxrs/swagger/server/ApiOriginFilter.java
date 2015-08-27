@@ -81,6 +81,10 @@ name|MultivaluedMap
 import|;
 end_import
 
+begin_comment
+comment|/**  * This is a simple optional CORS filter used for this demo to make the resources accessible  * from other origins. You may omit using this filter or use CXF's advanced CORS filter   * org.apache.cxf.rs.security.cors.CrossOriginResourceSharingFilter    * included in cxf-rt-rs-security-cors if you need a more comprehensive accessibility rules.  */
+end_comment
+
 begin_class
 specifier|public
 class|class
