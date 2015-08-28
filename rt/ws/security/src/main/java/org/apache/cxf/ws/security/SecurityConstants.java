@@ -420,144 +420,6 @@ init|=
 literal|"ws-security.policy.validator.map"
 decl_stmt|;
 comment|//
-comment|// STS Client Configuration tags
-comment|//
-comment|/**      * A reference to the STSClient class used to communicate with the STS.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_CLIENT
-init|=
-literal|"ws-security.sts.client"
-decl_stmt|;
-comment|/**      * The "AppliesTo" address to send to the STS. The default is the endpoint address of the       * service provider.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_APPLIES_TO
-init|=
-literal|"ws-security.sts.applies-to"
-decl_stmt|;
-comment|/**      * Whether to write out an X509Certificate structure in UseKey/KeyInfo, or whether to write      * out a KeyValue structure. The default value is "false".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_USE_CERT_FOR_KEYINFO
-init|=
-literal|"ws-security.sts.token.usecert"
-decl_stmt|;
-comment|/**      * Whether to cancel a token when using SecureConversation after successful invocation. The      * default is "false".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_DO_CANCEL
-init|=
-literal|"ws-security.sts.token.do.cancel"
-decl_stmt|;
-comment|/**      * Whether to fall back to calling "issue" after failing to renew an expired token. Some      * STSs do not support the renew binding, and so we should just issue a new token after expiry.      * The default is true.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_ISSUE_AFTER_FAILED_RENEW
-init|=
-literal|"ws-security.issue.after.failed.renew"
-decl_stmt|;
-comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
-init|=
-literal|"ws-security.cache.issued.token.in.endpoint"
-decl_stmt|;
-comment|/**      * Whether to avoid STS client trying send WS-MetadataExchange call using      * STS EPR WSA address when the endpoint contract contains no WS-MetadataExchange info.      * The default value is "false".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
-init|=
-literal|"ws-security.sts.disable-wsmex-call-using-epr-address"
-decl_stmt|;
-comment|/**      * Whether to prefer to use WS-MEX over a STSClient's location/wsdlLocation properties      * when making an STS RequestSecurityToken call. This can be set to true for the scenario      * of making a WS-MEX call to an initial STS, and using the returned token to make another      * call to an STS (which is configured using the STSClient configuration). Default is       * "false".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
-init|=
-literal|"ws-security.sts.prefer-wsmex"
-decl_stmt|;
-comment|/**      * Switch STS client to send Soap 1.2 messages      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_CLIENT_SOAP12_BINDING
-init|=
-literal|"ws-security.sts.client-soap12-binding"
-decl_stmt|;
-comment|/**      *       * A Crypto object to be used for the STS. If this is not defined then the       * {@link STS_TOKEN_PROPERTIES} is used instead.      *       * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response.      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_CRYPTO
-init|=
-literal|"ws-security.sts.token.crypto"
-decl_stmt|;
-comment|/**      * The Crypto property configuration to use for the STS, if {@link STS_TOKEN_CRYPTO} is not      * set instead.      * The value of this tag must be either:      * a) A Java Properties object that contains the Crypto configuration.      * b) The path of the Crypto property file that contains the Crypto configuration.      * c) A URL that points to the Crypto property file that contains the Crypto configuration.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_PROPERTIES
-init|=
-literal|"ws-security.sts.token.properties"
-decl_stmt|;
-comment|/**      * The alias name in the keystore to get the user's public key to send to the STS for the      * PublicKey KeyType case.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_USERNAME
-init|=
-literal|"ws-security.sts.token.username"
-decl_stmt|;
-comment|/**      * The token to be sent to the STS in an "ActAs" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *       * In the case of a CallbackHandler, it must be able to handle a       * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a       * reference to the current Message. The CallbackHandler implementation is required to set       * the token Element to be sent in the request on the Callback.      *       * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_ACT_AS
-init|=
-literal|"ws-security.sts.token.act-as"
-decl_stmt|;
-comment|/**      * The token to be sent to the STS in an "OnBehalfOf" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *       * In the case of a CallbackHandler, it must be able to handle a       * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a       * reference to the current Message. The CallbackHandler implementation is required to set       * the token Element to be sent in the request on the Callback.      *       * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_ON_BEHALF_OF
-init|=
-literal|"ws-security.sts.token.on-behalf-of"
-decl_stmt|;
-comment|/**      * This is the value in seconds within which a token is considered to be expired by the      * client. When a cached token (from a STS) is retrieved by the client, it is considered      * to be expired if it will expire in a time less than the value specified by this tag.      * This prevents token expiry when the message is en route / being processed by the      * service. When the token is found to be expired then it will be renewed via the STS.      *       * The default value is 10 (seconds). Specify 0 to avoid this check.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
-init|=
-literal|"ws-security.sts.token.imminent-expiry-value"
-decl_stmt|;
-comment|//
 comment|// Kerberos Configuration tags
 comment|//
 comment|/**      * Whether to request credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a kerberos service ticket that can be used for delegation. The default      * is "false".      */
@@ -718,28 +580,6 @@ name|BST_TOKEN_VALIDATOR
 block|,
 name|SCT_TOKEN_VALIDATOR
 block|,
-name|STS_CLIENT
-block|,
-name|STS_APPLIES_TO
-block|,
-name|STS_TOKEN_USE_CERT_FOR_KEYINFO
-block|,
-name|STS_TOKEN_DO_CANCEL
-block|,
-name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
-block|,
-name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
-block|,
-name|STS_TOKEN_CRYPTO
-block|,
-name|STS_TOKEN_PROPERTIES
-block|,
-name|STS_TOKEN_USERNAME
-block|,
-name|STS_TOKEN_ACT_AS
-block|,
-name|STS_TOKEN_ON_BEHALF_OF
-block|,
 name|TOKEN
 block|,
 name|TOKEN_ID
@@ -764,17 +604,11 @@ name|RETURN_SECURITY_ERROR
 block|,
 name|CACHE_IDENTIFIER
 block|,
-name|CACHE_ISSUED_TOKEN_IN_ENDPOINT
-block|,
-name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
-block|,
 name|DELEGATED_CREDENTIAL
 block|,
 name|KERBEROS_USE_CREDENTIAL_DELEGATION
 block|,
 name|KERBEROS_IS_USERNAME_IN_SERVICENAME_FORM
-block|,
-name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
 block|,
 name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
 block|,
