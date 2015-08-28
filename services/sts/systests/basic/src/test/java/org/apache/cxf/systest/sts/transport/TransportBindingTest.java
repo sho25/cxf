@@ -1941,7 +1941,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1953,7 +1955,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.sts.client"
+name|SecurityConstants
+operator|.
+name|STS_CLIENT
 argument_list|,
 name|stsClient
 argument_list|)
@@ -2211,7 +2215,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -2223,7 +2229,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.sts.client"
+name|SecurityConstants
+operator|.
+name|STS_CLIENT
 argument_list|,
 name|stsClient
 argument_list|)
