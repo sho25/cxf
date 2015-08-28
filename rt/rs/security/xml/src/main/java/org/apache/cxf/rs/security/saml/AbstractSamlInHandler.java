@@ -1726,12 +1726,20 @@ parameter_list|)
 block|{
 comment|// TODO: get bundle resource message once this filter is moved
 comment|// to rt/rs/security
-name|LOG
-operator|.
-name|warning
-argument_list|(
+name|String
+name|errorMsg
+init|=
 name|error
-operator|+
+decl_stmt|;
+if|if
+condition|(
+name|ex
+operator|!=
+literal|null
+condition|)
+block|{
+name|errorMsg
+operator|+=
 literal|": "
 operator|+
 name|ExceptionUtils
@@ -1740,6 +1748,13 @@ name|getStackTrace
 argument_list|(
 name|ex
 argument_list|)
+expr_stmt|;
+block|}
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|errorMsg
 argument_list|)
 expr_stmt|;
 name|Response
