@@ -682,7 +682,7 @@ specifier|final
 name|String
 name|MAKE_DEFAULT_WAE_LEAST_SPECIFIC
 init|=
-literal|"make.default.wae.least.specific"
+literal|"default.wae.mapper.least.specific"
 decl_stmt|;
 specifier|private
 name|List

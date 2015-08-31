@@ -2760,7 +2760,7 @@ name|m
 operator|.
 name|put
 argument_list|(
-literal|"make.default.wae.least.specific"
+literal|"default.wae.mapper.least.specific"
 argument_list|,
 literal|true
 argument_list|)
@@ -2894,7 +2894,7 @@ name|m
 operator|.
 name|put
 argument_list|(
-literal|"make.default.wae.least.specific"
+literal|"default.wae.mapper.least.specific"
 argument_list|,
 literal|true
 argument_list|)
