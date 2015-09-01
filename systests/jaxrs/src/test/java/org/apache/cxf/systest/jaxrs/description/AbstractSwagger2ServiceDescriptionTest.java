@@ -295,12 +295,12 @@ name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
-specifier|private
+specifier|protected
 specifier|final
 name|String
 name|port
 decl_stmt|;
-specifier|private
+specifier|protected
 specifier|final
 name|boolean
 name|runAsFilter
@@ -518,6 +518,18 @@ name|String
 name|getPort
 parameter_list|()
 function_decl|;
+specifier|protected
+specifier|abstract
+name|String
+name|getExpectedFileJson
+parameter_list|()
+function_decl|;
+specifier|protected
+specifier|abstract
+name|String
+name|getExpectedFileYaml
+parameter_list|()
+function_decl|;
 annotation|@
 name|Test
 specifier|public
@@ -568,7 +580,8 @@ name|assertEquals
 argument_list|(
 name|getExpectedValue
 argument_list|(
-literal|"swagger2-json.txt"
+name|getExpectedFileJson
+argument_list|()
 argument_list|,
 name|getPort
 argument_list|()
@@ -644,6 +657,10 @@ name|getStatus
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|//REVISIT find a better way of reliably comparing two yaml instances.
+comment|// I noticed that yaml.load instantiates a Map and
+comment|// for an integer valued key, an Integer or a String is arbitrarily instantiated,
+comment|// which leads to the assertion error. So, we serilialize the yamls and compare the re-serialized texts.
 name|Yaml
 name|yaml
 init|=
@@ -659,12 +676,16 @@ name|load
 argument_list|(
 name|getExpectedValue
 argument_list|(
-literal|"swagger2-yaml.txt"
+name|getExpectedFileYaml
+argument_list|()
 argument_list|,
 name|getPort
 argument_list|()
 argument_list|)
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 name|yaml
 operator|.
@@ -683,6 +704,9 @@ name|getEntity
 argument_list|()
 argument_list|)
 argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
