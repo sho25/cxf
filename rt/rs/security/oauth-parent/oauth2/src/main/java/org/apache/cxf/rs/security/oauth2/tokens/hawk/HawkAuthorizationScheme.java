@@ -179,6 +179,14 @@ init|=
 literal|"\n"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|HAWK_1_HEADER
+init|=
+literal|"hawk.1.header"
+decl_stmt|;
+specifier|private
 name|HttpRequestProperties
 name|props
 decl_stmt|;
@@ -551,6 +559,10 @@ block|}
 name|String
 name|value
 init|=
+name|HAWK_1_HEADER
+operator|+
+name|SEPARATOR
+operator|+
 name|timestamp
 operator|+
 name|SEPARATOR
