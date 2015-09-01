@@ -214,7 +214,7 @@ name|writer
 operator|.
 name|write
 argument_list|(
-literal|"<meta http-equiv=content-type content=\"text/html; charset=UTF-8\">"
+literal|"<meta http-equiv=\"content-type\" content=\"text/html; charset=UTF-8\">"
 argument_list|)
 expr_stmt|;
 if|if
