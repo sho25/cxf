@@ -9943,7 +9943,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"text/plain"
+literal|"text/custom+plain"
 argument_list|,
 name|r
 operator|.
