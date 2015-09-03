@@ -5735,6 +5735,11 @@ name|HttpURLConnection
 operator|.
 name|HTTP_UNAUTHORIZED
 case|:
+case|case
+name|HttpURLConnection
+operator|.
+name|HTTP_PROXY_AUTH
+case|:
 return|return
 name|authorizationRetransmit
 argument_list|()
