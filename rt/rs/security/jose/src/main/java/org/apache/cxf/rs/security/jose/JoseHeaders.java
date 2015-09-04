@@ -799,6 +799,21 @@ name|name
 argument_list|)
 return|;
 block|}
+specifier|public
+name|boolean
+name|containsHeader
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+block|{
+return|return
+name|containsProperty
+argument_list|(
+name|name
+argument_list|)
+return|;
+block|}
 block|}
 end_class
 

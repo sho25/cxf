@@ -1415,7 +1415,7 @@ block|{
 return|return
 name|JoseConstants
 operator|.
-name|DEFLATE_ZIP_ALGORITHM
+name|JWE_DEFLATE_ZIP_ALGORITHM
 operator|.
 name|equals
 argument_list|(

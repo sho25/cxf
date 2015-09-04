@@ -358,7 +358,7 @@ name|setZipAlgorithm
 argument_list|(
 name|JoseConstants
 operator|.
-name|DEFLATE_ZIP_ALGORITHM
+name|JWE_DEFLATE_ZIP_ALGORITHM
 argument_list|)
 expr_stmt|;
 block|}

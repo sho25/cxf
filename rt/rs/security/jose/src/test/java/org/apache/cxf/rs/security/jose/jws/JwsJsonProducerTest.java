@@ -57,16 +57,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -168,7 +158,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|SIGNED_JWS_JSON_FLAT_DOCUMENT_2
+name|SIGNED_JWS_JSON_FLAT_UNENCODED_DOCUMENT
 init|=
 literal|"{"
 operator|+
@@ -293,8 +283,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testSignWithProtectedHeaderOnlyUnencodedPayload
@@ -353,7 +341,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-name|SIGNED_JWS_JSON_FLAT_DOCUMENT_2
+name|SIGNED_JWS_JSON_FLAT_UNENCODED_DOCUMENT
 argument_list|,
 name|producer
 operator|.
