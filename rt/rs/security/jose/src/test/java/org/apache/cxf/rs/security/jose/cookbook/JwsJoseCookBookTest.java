@@ -2793,6 +2793,8 @@ operator|new
 name|JwsCompactProducer
 argument_list|(
 name|PAYLOAD
+argument_list|,
+literal|true
 argument_list|)
 decl_stmt|;
 name|compactProducer
@@ -2852,8 +2854,6 @@ argument_list|,
 name|HMAC_SIGNATURE_PROTECTED_HEADER
 operator|+
 literal|"."
-operator|+
-name|ENCODED_PAYLOAD
 argument_list|)
 expr_stmt|;
 name|JsonWebKeys
@@ -2897,9 +2897,7 @@ argument_list|(
 name|compactProducer
 operator|.
 name|getSignedEncodedJws
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 argument_list|,
 name|DETACHED_HMAC_JWS
 argument_list|)
@@ -2913,9 +2911,7 @@ argument_list|(
 name|compactProducer
 operator|.
 name|getSignedEncodedJws
-argument_list|(
-literal|true
-argument_list|)
+argument_list|()
 argument_list|,
 name|ENCODED_PAYLOAD
 argument_list|)

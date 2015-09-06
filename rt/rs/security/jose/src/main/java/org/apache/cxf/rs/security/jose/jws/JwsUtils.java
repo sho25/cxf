@@ -2910,6 +2910,26 @@ name|certs
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
+specifier|static
+name|boolean
+name|isPayloadUnencoded
+parameter_list|(
+name|JwsHeaders
+name|jwsHeaders
+parameter_list|)
+block|{
+return|return
+name|jwsHeaders
+operator|.
+name|getPayloadEncodingStatus
+argument_list|()
+operator|==
+name|Boolean
+operator|.
+name|FALSE
+return|;
+block|}
 block|}
 end_class
 
