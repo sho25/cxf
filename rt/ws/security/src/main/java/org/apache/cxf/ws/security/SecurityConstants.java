@@ -326,6 +326,15 @@ name|ASYMMETRIC_SIGNATURE_ALGORITHM
 init|=
 literal|"ws-security.asymmetric.signature.algorithm"
 decl_stmt|;
+comment|/**      * This configuration tag allows the user to override the default Symmetric Signature       * algorithm (HMAC-SHA1) for use in WS-SecurityPolicy, as the WS-SecurityPolicy specification      * does not allow the use of other algorithms at present.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SYMMETRIC_SIGNATURE_ALGORITHM
+init|=
+literal|"ws-security.symmetric.signature.algorithm"
+decl_stmt|;
 comment|/**      * This holds a reference to a PasswordEncryptor instance, which is used to encrypt or       * decrypt passwords in the Merlin Crypto implementation (or any custom Crypto implementations).      *       * By default, WSS4J uses the JasyptPasswordEncryptor, which must be instantiated with a       * master password to use to decrypt keystore passwords in the Merlin Crypto properties file.      * This master password is obtained via the CallbackHandler defined via PW_CALLBACK_CLASS      * or PW_CALLBACK_REF.      *       * The encrypted passwords must be stored in the format "ENC(encoded encrypted password)".      */
 specifier|public
 specifier|static
@@ -617,6 +626,8 @@ block|,
 name|STORE_BYTES_IN_ATTACHMENT
 block|,
 name|USE_ATTACHMENT_ENCRYPTION_CONTENT_ONLY_TRANSFORM
+block|,
+name|SYMMETRIC_SIGNATURE_ALGORITHM
 block|}
 argument_list|)
 argument_list|)
