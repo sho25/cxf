@@ -714,7 +714,7 @@ name|dlq
 argument_list|,
 literal|1
 argument_list|,
-literal|1000
+literal|2500
 argument_list|)
 expr_stmt|;
 block|}
