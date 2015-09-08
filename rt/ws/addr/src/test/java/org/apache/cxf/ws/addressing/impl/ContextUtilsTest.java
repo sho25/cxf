@@ -1667,7 +1667,16 @@ class|class
 name|TestFault
 extends|extends
 name|Exception
-block|{     }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+block|}
 block|}
 end_class
 
