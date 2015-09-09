@@ -937,6 +937,14 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|assertToken
+argument_list|(
+name|tokenWrapper
+operator|.
+name|getToken
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 specifier|protected
 name|void
