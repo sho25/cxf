@@ -4608,14 +4608,7 @@ operator|.
 name|getSourceURI
 argument_list|()
 decl_stmt|;
-name|String
-name|tns
-init|=
-name|schema
-operator|.
-name|getTargetNamespace
-argument_list|()
-decl_stmt|;
+comment|// accepting also a null tns (e.g., reported by apache.ws.xmlschema for no-namespace)
 if|if
 condition|(
 name|ids
@@ -4624,10 +4617,6 @@ name|contains
 argument_list|(
 name|key
 argument_list|)
-operator|||
-name|tns
-operator|==
-literal|null
 condition|)
 block|{
 continue|continue;
