@@ -378,10 +378,6 @@ name|token
 operator|.
 name|getBytes
 argument_list|()
-argument_list|,
-literal|0
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 name|String
