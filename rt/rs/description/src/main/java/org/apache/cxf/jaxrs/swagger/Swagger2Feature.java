@@ -637,7 +637,7 @@ name|beanConfig
 operator|.
 name|setTermsOfServiceUrl
 argument_list|(
-name|getTermOfServiceUrl
+name|getTermsOfServiceUrl
 argument_list|()
 argument_list|)
 expr_stmt|;
