@@ -3188,6 +3188,13 @@ operator|!=
 literal|null
 condition|)
 block|{
+if|if
+condition|(
+name|ai
+operator|!=
+literal|null
+condition|)
+block|{
 name|ai
 operator|.
 name|setAsserted
@@ -3195,6 +3202,7 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+block|}
 name|addTopDownElement
 argument_list|(
 name|timestampEl
@@ -3204,7 +3212,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|ai
+operator|!=
+literal|null
+condition|)
 block|{
 name|ai
 operator|.
