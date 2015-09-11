@@ -3227,6 +3227,8 @@ argument_list|,
 name|genericType
 argument_list|,
 name|anns
+argument_list|,
+name|message
 argument_list|)
 decl_stmt|;
 if|if

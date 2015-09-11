@@ -7762,11 +7762,10 @@ name|contextMessage
 operator|==
 literal|null
 operator|&&
-name|Boolean
+operator|!
+name|PropertyUtils
 operator|.
-name|FALSE
-operator|.
-name|equals
+name|isTrue
 argument_list|(
 name|m
 operator|.
