@@ -287,6 +287,9 @@ name|requestHeaders
 parameter_list|,
 name|String
 name|path
+parameter_list|,
+name|String
+name|method
 parameter_list|)
 block|{
 comment|// Try to extract the Trace Id value from the request header
@@ -357,7 +360,12 @@ name|Trace
 operator|.
 name|startSpan
 argument_list|(
+name|buildSpanDescription
+argument_list|(
 name|path
+argument_list|,
+name|method
+argument_list|)
 argument_list|,
 operator|(
 name|Sampler
@@ -377,7 +385,12 @@ name|Trace
 operator|.
 name|startSpan
 argument_list|(
+name|buildSpanDescription
+argument_list|(
 name|path
+argument_list|,
+name|method
+argument_list|)
 argument_list|,
 operator|new
 name|MilliSpan

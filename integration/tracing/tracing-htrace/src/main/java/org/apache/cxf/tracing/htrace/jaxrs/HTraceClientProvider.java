@@ -284,6 +284,8 @@ name|Trace
 operator|.
 name|startSpan
 argument_list|(
+name|buildSpanDescription
+argument_list|(
 name|requestContext
 operator|.
 name|getUri
@@ -291,6 +293,12 @@ argument_list|()
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|requestContext
+operator|.
+name|getMethod
+argument_list|()
+argument_list|)
 argument_list|,
 name|sampler
 argument_list|)

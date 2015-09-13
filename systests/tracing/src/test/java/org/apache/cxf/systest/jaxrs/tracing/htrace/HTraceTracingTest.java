@@ -784,7 +784,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-literal|"bookstore/books"
+literal|"GET bookstore/books"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -920,7 +920,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-literal|"bookstore/book/1"
+literal|"GET bookstore/book/1"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1082,7 +1082,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-literal|"bookstore/process"
+literal|"PUT bookstore/process"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1414,7 +1414,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-literal|"bookstore/books/async"
+literal|"GET bookstore/books/async"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1571,7 +1571,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-literal|"bookstore/books/async/notrace"
+literal|"GET bookstore/books/async/notrace"
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1689,7 +1689,7 @@ argument_list|()
 argument_list|,
 name|equalTo
 argument_list|(
-literal|"bookstore/books/async"
+literal|"GET bookstore/books/async"
 argument_list|)
 argument_list|)
 expr_stmt|;

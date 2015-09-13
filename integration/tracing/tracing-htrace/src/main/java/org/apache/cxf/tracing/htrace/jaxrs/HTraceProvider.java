@@ -287,6 +287,11 @@ argument_list|()
 operator|.
 name|getPath
 argument_list|()
+argument_list|,
+name|requestContext
+operator|.
+name|getMethod
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if

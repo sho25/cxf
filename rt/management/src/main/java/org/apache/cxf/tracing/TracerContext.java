@@ -32,6 +32,7 @@ specifier|public
 interface|interface
 name|TracerContext
 block|{
+comment|/**      * Picks up an currently detached span from another thread. This method is intended      * to be used in the context of JAX-RS asynchronous invocations, where request and       * response are effectively executed by different threads.      * @param traceable traceable implementation to be executed      * @return the result of the execution       * @throws Exception any exception being thrown by the traceable implementation       */
 parameter_list|<
 name|T
 parameter_list|>
@@ -48,6 +49,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
+comment|/**      * Starts a new span in the current thread.      * @param desription span description      * @return span instance object      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -59,6 +61,7 @@ name|String
 name|desription
 parameter_list|)
 function_decl|;
+comment|/**      * Wraps the traceable into a new span, preserving the current span as a parent.      * @param desription span description      * @param traceable  traceable implementation to be wrapped      * @return callable to be executed (in current thread or any other thread pool)      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -80,6 +83,7 @@ argument_list|>
 name|traceable
 parameter_list|)
 function_decl|;
+comment|/**      * Adds a key/value pair to the currently active span.      * @param key key to add      * @param value value to add      */
 name|void
 name|annotate
 parameter_list|(
@@ -92,6 +96,7 @@ index|[]
 name|value
 parameter_list|)
 function_decl|;
+comment|/**      * Adds a key/value pair to the currently active span.      * @param key key to add      * @param value value to add      */
 name|void
 name|annotate
 parameter_list|(
@@ -102,6 +107,7 @@ name|String
 name|value
 parameter_list|)
 function_decl|;
+comment|/**      * Adds a timeline to the currently active span.      * @param message timeline message      */
 name|void
 name|timeline
 parameter_list|(
