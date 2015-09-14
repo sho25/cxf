@@ -12220,7 +12220,7 @@ name|WSEncryptionPart
 argument_list|(
 name|dkSign
 operator|.
-name|getId
+name|getSignatureId
 argument_list|()
 argument_list|,
 literal|"Element"
