@@ -87,19 +87,6 @@ comment|/**      * Adds a key/value pair to the currently active span.      * @p
 name|void
 name|annotate
 parameter_list|(
-name|byte
-index|[]
-name|key
-parameter_list|,
-name|byte
-index|[]
-name|value
-parameter_list|)
-function_decl|;
-comment|/**      * Adds a key/value pair to the currently active span.      * @param key key to add      * @param value value to add      */
-name|void
-name|annotate
-parameter_list|(
 name|String
 name|key
 parameter_list|,
