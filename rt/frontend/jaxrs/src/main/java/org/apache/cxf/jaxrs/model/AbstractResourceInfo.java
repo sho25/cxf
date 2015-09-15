@@ -1310,12 +1310,6 @@ argument_list|>
 argument_list|>
 name|getProxyMap
 parameter_list|(
-name|Class
-argument_list|<
-name|T
-argument_list|>
-name|keyCls
-parameter_list|,
 name|String
 name|prop
 parameter_list|,
@@ -1643,10 +1637,6 @@ block|{
 return|return
 name|getProxyMap
 argument_list|(
-name|Field
-operator|.
-name|class
-argument_list|,
 name|FIELD_PROXY_MAP
 argument_list|,
 name|create
@@ -1680,10 +1670,6 @@ block|{
 return|return
 name|getProxyMap
 argument_list|(
-name|Method
-operator|.
-name|class
-argument_list|,
 name|SETTER_PROXY_MAP
 argument_list|,
 name|create
