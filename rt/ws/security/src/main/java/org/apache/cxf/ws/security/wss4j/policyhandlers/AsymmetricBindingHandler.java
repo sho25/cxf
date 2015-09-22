@@ -3945,6 +3945,16 @@ argument_list|()
 decl_stmt|;
 name|dkSign
 operator|.
+name|setDigestAlgorithm
+argument_list|(
+name|algType
+operator|.
+name|getDigest
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|dkSign
+operator|.
 name|setDerivedKeyLength
 argument_list|(
 name|algType
