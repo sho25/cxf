@@ -12,10 +12,6 @@ operator|.
 name|cxf
 operator|.
 name|systest
-operator|.
-name|jaxrs
-operator|.
-name|tracing
 package|;
 end_package
 
