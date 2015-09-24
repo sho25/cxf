@@ -973,9 +973,24 @@ decl_stmt|;
 if|if
 condition|(
 name|secToken
-operator|==
+operator|!=
 literal|null
 condition|)
+block|{
+comment|// Check to see whether the delegated token needs to be renewed
+name|secToken
+operator|=
+name|renewToken
+argument_list|(
+name|message
+argument_list|,
+name|secToken
+argument_list|,
+name|params
+argument_list|)
+expr_stmt|;
+block|}
+else|else
 block|{
 name|secToken
 operator|=
