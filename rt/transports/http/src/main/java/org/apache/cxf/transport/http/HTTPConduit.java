@@ -1156,11 +1156,13 @@ name|trustDecider
 decl_stmt|;
 comment|/**      * Implements the authentication handling when talking to a server. If it is not set      * it will be created from the authorizationPolicy.authType      */
 specifier|protected
+specifier|volatile
 name|HttpAuthSupplier
 name|authSupplier
 decl_stmt|;
 comment|/**      * Implements the proxy authentication handling. If it is not set      * it will be created from the proxyAuthorizationPolicy.authType      */
 specifier|protected
+specifier|volatile
 name|HttpAuthSupplier
 name|proxyAuthSupplier
 decl_stmt|;
