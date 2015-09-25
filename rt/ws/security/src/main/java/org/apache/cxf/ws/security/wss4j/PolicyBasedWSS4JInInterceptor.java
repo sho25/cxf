@@ -2568,11 +2568,13 @@ name|AssertionInfo
 argument_list|>
 name|algorithmSuites
 init|=
-name|aim
+name|PolicyUtils
 operator|.
-name|get
+name|getAllAssertionsByLocalname
 argument_list|(
-name|SP12Constants
+name|aim
+argument_list|,
+name|SPConstants
 operator|.
 name|ALGORITHM_SUITE
 argument_list|)
