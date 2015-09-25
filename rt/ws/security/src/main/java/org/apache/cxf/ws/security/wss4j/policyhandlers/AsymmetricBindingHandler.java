@@ -1077,8 +1077,7 @@ argument_list|)
 expr_stmt|;
 return|return;
 block|}
-else|else
-block|{
+elseif|else
 if|if
 condition|(
 name|isTokenRequired
@@ -1112,7 +1111,6 @@ name|attached
 operator|=
 literal|true
 expr_stmt|;
-block|}
 block|}
 block|}
 elseif|else
