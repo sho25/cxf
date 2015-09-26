@@ -231,7 +231,7 @@ name|get
 argument_list|(
 name|Message
 operator|.
-name|REQUEST_URI
+name|ENDPOINT_ADDRESS
 argument_list|)
 argument_list|,
 operator|(
