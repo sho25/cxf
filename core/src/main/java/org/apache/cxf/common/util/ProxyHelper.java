@@ -343,7 +343,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|returnType
+name|p
 operator|.
 name|isPrimitive
 argument_list|()
