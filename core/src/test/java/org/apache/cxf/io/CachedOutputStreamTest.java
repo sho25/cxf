@@ -259,6 +259,14 @@ operator|.
 name|flush
 argument_list|()
 expr_stmt|;
+name|cos
+operator|.
+name|getOut
+argument_list|()
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 return|return
 name|cos
 operator|.
