@@ -658,6 +658,20 @@ name|CertificateException
 argument_list|(
 literal|"Unsupported certificate type encountered: "
 operator|+
+operator|(
+operator|(
+name|certificate
+operator|!=
+literal|null
+operator|&&
+name|certificate
+operator|.
+name|getClass
+argument_list|()
+operator|!=
+literal|null
+operator|)
+condition|?
 name|certificate
 operator|.
 name|getClass
@@ -665,6 +679,9 @@ argument_list|()
 operator|.
 name|getName
 argument_list|()
+else|:
+literal|"Null"
+operator|)
 argument_list|)
 throw|;
 block|}
