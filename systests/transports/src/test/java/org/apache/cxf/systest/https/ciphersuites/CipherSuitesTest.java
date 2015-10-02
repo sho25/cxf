@@ -851,6 +851,24 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Doesn't work with IBM JDK
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 if|if
 condition|(
 operator|!
@@ -2599,6 +2617,24 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Doesn't work with IBM JDK
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -2743,6 +2779,24 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Doesn't work with IBM JDK
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=
@@ -2979,6 +3033,24 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+comment|// Doesn't work with IBM JDK
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|SpringBusFactory
 name|bf
 init|=

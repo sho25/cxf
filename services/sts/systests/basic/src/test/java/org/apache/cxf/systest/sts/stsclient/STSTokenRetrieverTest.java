@@ -1582,6 +1582,32 @@ name|getSocketFactory
 argument_list|()
 argument_list|)
 expr_stmt|;
+comment|// Needed to prevent test failure using IBM JDK
+if|if
+condition|(
+literal|"IBM Corporation"
+operator|.
+name|equals
+argument_list|(
+name|System
+operator|.
+name|getProperty
+argument_list|(
+literal|"java.vendor"
+argument_list|)
+argument_list|)
+condition|)
+block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"https.protocols"
+argument_list|,
+literal|"TLSv1"
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 specifier|private
 name|TLSClientParameters
