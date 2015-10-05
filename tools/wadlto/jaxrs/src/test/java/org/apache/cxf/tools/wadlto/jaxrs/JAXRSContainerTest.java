@@ -1336,7 +1336,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|7
+literal|8
 argument_list|,
 name|files
 operator|.
@@ -1353,6 +1353,18 @@ argument_list|,
 literal|"org.apache.cxf.jaxrs.model.wadl"
 operator|+
 literal|".BookStore.class"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertTrue
+argument_list|(
+name|checkContains
+argument_list|(
+name|files
+argument_list|,
+literal|"org.apache.cxf.jaxrs.model.wadl"
+operator|+
+literal|".PATCH.class"
 argument_list|)
 argument_list|)
 expr_stmt|;
