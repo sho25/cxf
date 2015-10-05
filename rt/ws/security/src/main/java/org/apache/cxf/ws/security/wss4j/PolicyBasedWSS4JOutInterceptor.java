@@ -942,9 +942,9 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"MTOM is enabled with WS-Security. Please note that if an attachment is"
+literal|"MTOM is enabled with WS-Security. Please note that if an attachment is "
 operator|+
-literal|"referenced in the SOAP Body, only the reference will be signed and not the"
+literal|"referenced in the SOAP Body, only the reference will be signed and not the "
 operator|+
 literal|"SOAP Body!"
 argument_list|)
