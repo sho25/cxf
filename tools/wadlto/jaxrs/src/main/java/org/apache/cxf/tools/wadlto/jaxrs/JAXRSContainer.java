@@ -803,6 +803,20 @@ name|CFG_MULTIPLE_XML_REPS
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|sg
+operator|.
+name|setCreateJavaDocs
+argument_list|(
+name|context
+operator|.
+name|optionSet
+argument_list|(
+name|WadlToolConstants
+operator|.
+name|CFG_CREATE_JAVA_DOCS
+argument_list|)
+argument_list|)
+expr_stmt|;
 comment|// set the base path
 name|sg
 operator|.

@@ -581,6 +581,17 @@ argument_list|,
 literal|"last"
 argument_list|)
 expr_stmt|;
+name|context
+operator|.
+name|put
+argument_list|(
+name|WadlToolConstants
+operator|.
+name|CFG_CREATE_JAVA_DOCS
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 name|container
 operator|.
 name|setContext
