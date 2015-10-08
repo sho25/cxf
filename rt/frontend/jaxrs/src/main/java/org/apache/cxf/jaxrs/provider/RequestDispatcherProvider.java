@@ -2145,7 +2145,7 @@ literal|null
 condition|)
 block|{
 return|return
-literal|null
+name|name
 return|;
 block|}
 name|Class
