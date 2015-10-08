@@ -293,6 +293,20 @@ name|AbstractJoseJwtProducer
 implements|implements
 name|ClientRequestFilter
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|DEFAULT_AUTH_SCHEME
+init|=
+literal|"JWT"
+decl_stmt|;
+specifier|private
+name|String
+name|authScheme
+init|=
+name|DEFAULT_AUTH_SCHEME
+decl_stmt|;
 annotation|@
 name|Override
 specifier|public
@@ -467,7 +481,9 @@ name|HttpHeaders
 operator|.
 name|AUTHORIZATION
 argument_list|,
-literal|"JWT "
+name|authScheme
+operator|+
+literal|" "
 operator|+
 name|data
 argument_list|)
@@ -511,6 +527,21 @@ literal|16
 argument_list|)
 argument_list|)
 return|;
+block|}
+specifier|public
+name|void
+name|setAuthScheme
+parameter_list|(
+name|String
+name|authScheme
+parameter_list|)
+block|{
+name|this
+operator|.
+name|authScheme
+operator|=
+name|authScheme
+expr_stmt|;
 block|}
 block|}
 end_class

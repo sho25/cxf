@@ -308,6 +308,20 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|DEFAULT_AUTH_SCHEME
+init|=
+literal|"JWT"
+decl_stmt|;
+specifier|private
+name|String
+name|expectedAuthScheme
+init|=
+name|DEFAULT_AUTH_SCHEME
+decl_stmt|;
 annotation|@
 name|Override
 specifier|public
@@ -356,7 +370,7 @@ operator|==
 literal|null
 operator|||
 operator|!
-literal|"JWT"
+name|expectedAuthScheme
 operator|.
 name|equals
 argument_list|(
@@ -377,7 +391,9 @@ throw|throw
 operator|new
 name|JoseException
 argument_list|(
-literal|"JWT scheme is expected"
+name|expectedAuthScheme
+operator|+
+literal|" scheme is expected"
 argument_list|)
 throw|;
 block|}
@@ -425,6 +441,21 @@ name|jwt
 argument_list|)
 argument_list|)
 argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setExpectedAuthScheme
+parameter_list|(
+name|String
+name|expectedAuthScheme
+parameter_list|)
+block|{
+name|this
+operator|.
+name|expectedAuthScheme
+operator|=
+name|expectedAuthScheme
 expr_stmt|;
 block|}
 specifier|public
