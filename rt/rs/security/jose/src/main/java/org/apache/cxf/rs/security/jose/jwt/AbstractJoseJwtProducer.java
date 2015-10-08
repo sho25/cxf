@@ -212,6 +212,9 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
+name|isJweRequired
+argument_list|()
+operator|&&
 name|theEncProvider
 operator|==
 literal|null
@@ -222,15 +225,11 @@ operator|=
 name|getInitializedEncryptionProvider
 argument_list|()
 expr_stmt|;
-block|}
 if|if
 condition|(
 name|theEncProvider
 operator|==
 literal|null
-operator|&&
-name|isJweRequired
-argument_list|()
 condition|)
 block|{
 throw|throw
@@ -240,6 +239,7 @@ argument_list|(
 literal|"Unable to encrypt JWT"
 argument_list|)
 throw|;
+block|}
 block|}
 if|if
 condition|(
