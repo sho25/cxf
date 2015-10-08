@@ -129,16 +129,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|WeakHashMap
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|logging
 operator|.
 name|Logger
@@ -1369,7 +1359,7 @@ operator|.
 name|synchronizedMap
 argument_list|(
 operator|new
-name|WeakHashMap
+name|HashMap
 argument_list|<
 name|Class
 argument_list|<
@@ -1545,7 +1535,7 @@ operator|.
 name|synchronizedMap
 argument_list|(
 operator|new
-name|WeakHashMap
+name|HashMap
 argument_list|<
 name|Class
 argument_list|<
@@ -2571,7 +2561,7 @@ operator|.
 name|synchronizedMap
 argument_list|(
 operator|new
-name|WeakHashMap
+name|HashMap
 argument_list|<
 name|T
 argument_list|,
