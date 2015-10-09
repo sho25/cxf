@@ -319,8 +319,6 @@ decl_stmt|;
 specifier|private
 name|int
 name|futureTTL
-init|=
-literal|0
 decl_stmt|;
 annotation|@
 name|Override
@@ -518,6 +516,11 @@ argument_list|()
 operator|==
 literal|null
 decl_stmt|;
+if|if
+condition|(
+name|issuedAtRequired
+condition|)
+block|{
 name|JwtUtils
 operator|.
 name|validateJwtTTL
@@ -532,6 +535,7 @@ argument_list|,
 name|issuedAtRequired
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|int
