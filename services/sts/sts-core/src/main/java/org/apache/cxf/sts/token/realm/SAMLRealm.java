@@ -37,6 +37,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -306,6 +318,18 @@ name|signaturePropertiesFile
 operator|=
 name|signaturePropertiesFile
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -315,6 +339,7 @@ operator|+
 name|signaturePropertiesFile
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Set the SignatureProperties to use.      * @param signatureProperties the SignatureProperties to use.      */
 specifier|public
@@ -454,6 +479,18 @@ name|callbackHandler
 operator|=
 name|callbackHandler
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -463,6 +500,7 @@ operator|+
 name|callbackHandler
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Set the String corresponding to the CallbackHandler class.       * @param callbackHandlerClass the String corresponding to the CallbackHandler class.       */
 specifier|public
@@ -479,6 +517,18 @@ name|callbackHandlerClass
 operator|=
 name|callbackHandlerClass
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -488,6 +538,7 @@ operator|+
 name|callbackHandlerClass
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the CallbackHandler object.      * @return the CallbackHandler object.      */
 specifier|public

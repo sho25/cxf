@@ -1194,6 +1194,42 @@ argument_list|>
 operator|)
 name|requestObject
 decl_stmt|;
+if|if
+condition|(
+name|jaxbElement
+operator|!=
+literal|null
+operator|&&
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Found "
+operator|+
+name|jaxbElement
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|": "
+operator|+
+name|jaxbElement
+operator|.
+name|getValue
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 try|try
 block|{
 name|boolean
@@ -1500,6 +1536,18 @@ parameter_list|(
 name|context
 parameter_list|)
 constructor_decl|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -1509,6 +1557,7 @@ operator|+
 name|context
 argument_list|)
 expr_stmt|;
+block|}
 name|RequestRequirements
 name|requestRequirements
 init|=
@@ -1595,15 +1644,6 @@ argument_list|(
 name|authenticationType
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found AuthenticationType: "
-operator|+
-name|authenticationType
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1636,15 +1676,6 @@ name|keyRequirements
 operator|.
 name|setKeyType
 argument_list|(
-name|keyType
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found KeyType: "
-operator|+
 name|keyType
 argument_list|)
 expr_stmt|;
@@ -1688,15 +1719,6 @@ argument_list|(
 name|keySize
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found KeySize: "
-operator|+
-name|keySize
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1729,15 +1751,6 @@ name|keyRequirements
 operator|.
 name|setSignatureAlgorithm
 argument_list|(
-name|signatureAlgorithm
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Signature Algorithm: "
-operator|+
 name|signatureAlgorithm
 argument_list|)
 expr_stmt|;
@@ -1776,15 +1789,6 @@ argument_list|(
 name|encryptionAlgorithm
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Encryption Algorithm: "
-operator|+
-name|encryptionAlgorithm
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1817,15 +1821,6 @@ name|keyRequirements
 operator|.
 name|setC14nAlgorithm
 argument_list|(
-name|c14nAlgorithm
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found C14n Algorithm: "
-operator|+
 name|c14nAlgorithm
 argument_list|)
 expr_stmt|;
@@ -1864,15 +1859,6 @@ argument_list|(
 name|computedKeyAlgorithm
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found ComputedKeyAlgorithm: "
-operator|+
-name|computedKeyAlgorithm
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1905,15 +1891,6 @@ name|keyRequirements
 operator|.
 name|setKeywrapAlgorithm
 argument_list|(
-name|keywrapAlgorithm
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found KeyWrapAlgorithm: "
-operator|+
 name|keywrapAlgorithm
 argument_list|)
 expr_stmt|;
@@ -2042,15 +2019,6 @@ argument_list|(
 name|signWith
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found SignWith: "
-operator|+
-name|signWith
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2083,15 +2051,6 @@ name|keyRequirements
 operator|.
 name|setEncryptWith
 argument_list|(
-name|encryptWith
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found EncryptWith: "
-operator|+
 name|encryptWith
 argument_list|)
 expr_stmt|;
@@ -2189,15 +2148,6 @@ argument_list|(
 name|tokenType
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found TokenType: "
-operator|+
-name|tokenType
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2245,13 +2195,6 @@ argument_list|(
 name|onBehalfOf
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found OnBehalfOf token"
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2297,13 +2240,6 @@ operator|.
 name|setActAs
 argument_list|(
 name|actAs
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found ActAs token"
 argument_list|)
 expr_stmt|;
 block|}
@@ -2396,13 +2332,6 @@ argument_list|(
 name|lifetime
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Lifetime element"
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2481,13 +2410,6 @@ operator|.
 name|setValidateTarget
 argument_list|(
 name|validateTarget
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found ValidateTarget token"
 argument_list|)
 expr_stmt|;
 block|}
@@ -2570,13 +2492,6 @@ argument_list|(
 name|cancelTarget
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found CancelTarget token"
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2657,13 +2572,6 @@ argument_list|(
 name|renewTarget
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found CancelTarget token"
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2707,13 +2615,6 @@ operator|.
 name|setPrimaryClaims
 argument_list|(
 name|requestedClaims
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Primary Claims token"
 argument_list|)
 expr_stmt|;
 block|}
@@ -2800,13 +2701,6 @@ argument_list|(
 name|renewing
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Renewing token"
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -2848,13 +2742,6 @@ operator|.
 name|setParticipants
 argument_list|(
 name|participants
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Participants"
 argument_list|)
 expr_stmt|;
 block|}
@@ -4207,7 +4094,18 @@ return|return
 name|entropy
 return|;
 block|}
-else|else
+elseif|else
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
 block|{
 name|LOG
 operator|.
@@ -4497,6 +4395,38 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Found "
+operator|+
+name|localName
+operator|+
+literal|": "
+operator|+
+name|child
+operator|.
+name|getTextContent
+argument_list|()
+operator|.
+name|trim
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+if|if
+condition|(
 name|keyRequirements
 operator|.
 name|getKeySize
@@ -4541,15 +4471,6 @@ name|keyRequirements
 operator|.
 name|setKeySize
 argument_list|(
-name|keySize
-argument_list|)
-expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found KeySize: "
-operator|+
 name|keySize
 argument_list|)
 expr_stmt|;
@@ -4599,15 +4520,6 @@ argument_list|(
 name|tokenType
 argument_list|)
 expr_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found TokenType: "
-operator|+
-name|tokenType
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -4647,15 +4559,6 @@ operator|.
 name|trim
 argument_list|()
 decl_stmt|;
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found KeyType: "
-operator|+
-name|keyType
-argument_list|)
-expr_stmt|;
 name|keyRequirements
 operator|.
 name|setKeyType
@@ -4684,13 +4587,6 @@ name|namespace
 argument_list|)
 condition|)
 block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Found Secondary Claims element"
-argument_list|)
-expr_stmt|;
 name|ClaimCollection
 name|requestedClaims
 init|=
@@ -5409,6 +5305,18 @@ expr_stmt|;
 block|}
 block|}
 block|}
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -5418,6 +5326,7 @@ operator|+
 name|referenceURI
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|referenceURI

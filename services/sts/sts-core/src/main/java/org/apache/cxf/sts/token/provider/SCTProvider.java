@@ -440,6 +440,18 @@ operator|.
 name|getTokenRequirements
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -452,6 +464,7 @@ name|getTokenType
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|tokenParameters

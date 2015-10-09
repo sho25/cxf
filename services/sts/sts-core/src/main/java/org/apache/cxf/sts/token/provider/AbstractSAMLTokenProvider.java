@@ -37,6 +37,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -382,6 +394,18 @@ operator|.
 name|getSignatureAlgorithm
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -391,6 +415,7 @@ operator|+
 name|signatureAlgorithm
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|// Get the c14n algorithm to use
@@ -449,6 +474,18 @@ operator|.
 name|getC14nAlgorithm
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -458,6 +495,7 @@ operator|+
 name|c14nAlgorithm
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 comment|// If alias not defined, get the default of the SignatureCrypto
@@ -490,6 +528,18 @@ operator|.
 name|getDefaultX509Identifier
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -499,6 +549,7 @@ operator|+
 name|alias
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// Get the password
 name|WSPasswordCallback

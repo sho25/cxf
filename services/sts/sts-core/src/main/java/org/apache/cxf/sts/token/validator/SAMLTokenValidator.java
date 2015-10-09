@@ -1141,6 +1141,18 @@ name|isExpired
 argument_list|()
 condition|)
 block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -1155,6 +1167,7 @@ operator|+
 literal|" is in the cache but expired - revalidating"
 argument_list|)
 expr_stmt|;
+block|}
 name|secToken
 operator|=
 literal|null

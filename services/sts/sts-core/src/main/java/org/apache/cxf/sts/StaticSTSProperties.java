@@ -53,6 +53,18 @@ name|util
 operator|.
 name|logging
 operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
 name|Logger
 import|;
 end_import
@@ -758,6 +770,18 @@ name|callbackHandler
 operator|=
 name|callbackHandler
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -767,6 +791,7 @@ operator|+
 name|callbackHandler
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Set the String corresponding to the CallbackHandler class.       * @param callbackHandlerClass the String corresponding to the CallbackHandler class.       */
 specifier|public
@@ -783,6 +808,18 @@ name|callbackHandlerClass
 operator|=
 name|callbackHandlerClass
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -792,6 +829,7 @@ operator|+
 name|callbackHandlerClass
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the CallbackHandler object.      * @return the CallbackHandler object.      */
 specifier|public
@@ -851,6 +889,18 @@ name|signatureCryptoProperties
 operator|=
 name|signatureCryptoProperties
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -860,6 +910,7 @@ operator|+
 name|signatureCryptoProperties
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the signature Crypto object      * @return the signature Crypto object      */
 specifier|public
@@ -886,6 +937,18 @@ name|signatureUsername
 operator|=
 name|signatureUsername
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -895,6 +958,7 @@ operator|+
 name|signatureUsername
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the username/alias to use to sign any issued tokens      * @return the username/alias to use to sign any issued tokens      */
 specifier|public
@@ -954,6 +1018,18 @@ name|encryptionCryptoProperties
 operator|=
 name|encryptionCryptoProperties
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -963,6 +1039,7 @@ operator|+
 name|encryptionCryptoProperties
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the encryption Crypto object      * @return the encryption Crypto object      */
 specifier|public
@@ -989,6 +1066,18 @@ name|encryptionUsername
 operator|=
 name|encryptionUsername
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -998,6 +1087,7 @@ operator|+
 name|encryptionUsername
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the username/alias to use to encrypt any issued tokens. This is a default value - it      * can be configured per Service in the ServiceMBean      * @return the username/alias to use to encrypt any issued tokens      */
 specifier|public
@@ -1050,6 +1140,18 @@ name|issuer
 operator|=
 name|issuer
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -1059,6 +1161,7 @@ operator|+
 name|issuer
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get the STS issuer name      * @return the STS issuer name      */
 specifier|public

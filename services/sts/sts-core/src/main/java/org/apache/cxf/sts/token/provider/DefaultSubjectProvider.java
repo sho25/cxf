@@ -558,6 +558,18 @@ name|subjectNameQualifier
 operator|=
 name|subjectNameQualifier
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -567,6 +579,7 @@ operator|+
 name|subjectNameQualifier
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Set the SubjectNameIDFormat.      */
 specifier|public
@@ -583,6 +596,18 @@ name|subjectNameIDFormat
 operator|=
 name|subjectNameIDFormat
 expr_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -592,6 +617,7 @@ operator|+
 name|subjectNameIDFormat
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|/**      * Get a SubjectBean object.      */
 specifier|public
@@ -1093,6 +1119,18 @@ argument_list|,
 name|confirmationMethod
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|fine
@@ -1105,6 +1143,7 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 name|subjectBean
 operator|.
 name|setSubjectNameIDFormat

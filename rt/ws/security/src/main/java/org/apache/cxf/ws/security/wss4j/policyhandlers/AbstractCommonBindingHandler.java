@@ -657,6 +657,18 @@ condition|)
 block|{
 return|return;
 block|}
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
 name|LOG
 operator|.
 name|log
@@ -677,6 +689,7 @@ operator|+
 name|reason
 argument_list|)
 expr_stmt|;
+block|}
 name|AssertionInfoMap
 name|aim
 init|=
