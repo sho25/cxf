@@ -2709,6 +2709,11 @@ name|GeneralSecurityException
 name|e
 parameter_list|)
 block|{
+name|out
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 throw|throw
 operator|new
 name|IOException
