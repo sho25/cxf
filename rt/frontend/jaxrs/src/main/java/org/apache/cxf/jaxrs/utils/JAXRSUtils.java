@@ -2510,10 +2510,6 @@ operator|==
 name|ParameterType
 operator|.
 name|BEAN
-operator|&&
-name|bri
-operator|instanceof
-name|ClassResourceInfo
 condition|)
 block|{
 name|o
@@ -2635,10 +2631,6 @@ operator|==
 name|ParameterType
 operator|.
 name|BEAN
-operator|&&
-name|bri
-operator|instanceof
-name|ClassResourceInfo
 condition|)
 block|{
 name|o
