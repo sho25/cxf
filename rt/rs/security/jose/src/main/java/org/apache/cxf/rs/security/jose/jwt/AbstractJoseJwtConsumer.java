@@ -191,6 +191,12 @@ throw|;
 block|}
 if|if
 condition|(
+name|isJweRequired
+argument_list|()
+condition|)
+block|{
+if|if
+condition|(
 name|jweDecryptor
 operator|==
 literal|null
@@ -205,10 +211,18 @@ block|}
 if|if
 condition|(
 name|jweDecryptor
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
+throw|throw
+operator|new
+name|JwtException
+argument_list|(
+literal|"Unable to decrypt JWT"
+argument_list|)
+throw|;
+block|}
 if|if
 condition|(
 operator|!
@@ -242,21 +256,6 @@ name|getContentText
 argument_list|()
 expr_stmt|;
 block|}
-elseif|else
-if|if
-condition|(
-name|isJweRequired
-argument_list|()
-condition|)
-block|{
-throw|throw
-operator|new
-name|JwtException
-argument_list|(
-literal|"Unable to decrypt JWT"
-argument_list|)
-throw|;
-block|}
 name|JwsJwtCompactConsumer
 name|jwtConsumer
 init|=
@@ -274,6 +273,12 @@ operator|.
 name|getJwtToken
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|isJwsRequired
+argument_list|()
+condition|)
+block|{
 if|if
 condition|(
 name|theSigVerifier
@@ -294,9 +299,6 @@ condition|(
 name|theSigVerifier
 operator|==
 literal|null
-operator|&&
-name|isJwsRequired
-argument_list|()
 condition|)
 block|{
 throw|throw
@@ -325,6 +327,7 @@ argument_list|(
 literal|"Invalid Signature"
 argument_list|)
 throw|;
+block|}
 block|}
 name|validateToken
 argument_list|(
