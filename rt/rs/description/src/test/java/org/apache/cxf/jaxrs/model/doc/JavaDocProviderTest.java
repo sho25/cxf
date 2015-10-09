@@ -15,7 +15,7 @@ name|jaxrs
 operator|.
 name|model
 operator|.
-name|wadl
+name|doc
 package|;
 end_package
 

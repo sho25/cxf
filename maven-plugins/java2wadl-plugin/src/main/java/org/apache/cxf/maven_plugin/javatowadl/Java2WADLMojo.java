@@ -223,7 +223,7 @@ name|jaxrs
 operator|.
 name|model
 operator|.
-name|wadl
+name|doc
 operator|.
 name|DocumentationProvider
 import|;
