@@ -6127,7 +6127,6 @@ name|BindingFaultInfo
 argument_list|>
 name|faults
 decl_stmt|;
-specifier|public
 name|TestBindingOperationInfo
 parameter_list|(
 name|OperationInfo

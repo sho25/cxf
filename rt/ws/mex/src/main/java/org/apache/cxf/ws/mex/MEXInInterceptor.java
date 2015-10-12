@@ -616,7 +616,6 @@ name|MEXJaxWsServerFactoryBean
 extends|extends
 name|JaxWsServerFactoryBean
 block|{
-specifier|public
 name|MEXJaxWsServerFactoryBean
 parameter_list|(
 name|Bus

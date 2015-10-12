@@ -5937,7 +5937,6 @@ decl_stmt|;
 name|String
 name|fragment
 decl_stmt|;
-specifier|public
 name|UriParts
 parameter_list|(
 name|String

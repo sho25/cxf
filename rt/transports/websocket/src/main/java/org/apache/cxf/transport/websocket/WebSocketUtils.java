@@ -1082,7 +1082,6 @@ specifier|private
 name|ByteArrayOutputStream
 name|baos
 decl_stmt|;
-specifier|public
 name|ByteArrayBuilder
 parameter_list|()
 block|{

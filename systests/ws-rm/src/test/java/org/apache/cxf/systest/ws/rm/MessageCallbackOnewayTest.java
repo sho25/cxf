@@ -2241,7 +2241,6 @@ specifier|final
 name|long
 name|msgNumber
 decl_stmt|;
-specifier|public
 name|Callback
 parameter_list|(
 name|boolean

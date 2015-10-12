@@ -298,7 +298,6 @@ decl_stmt|;
 name|long
 name|total
 decl_stmt|;
-specifier|public
 name|TestRunnable
 parameter_list|(
 name|int

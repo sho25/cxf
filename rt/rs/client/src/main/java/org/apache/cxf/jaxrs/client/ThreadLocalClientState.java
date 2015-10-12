@@ -667,7 +667,6 @@ specifier|private
 name|long
 name|originalTime
 decl_stmt|;
-specifier|public
 name|CleanupThread
 parameter_list|(
 name|Thread

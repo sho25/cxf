@@ -13616,7 +13616,6 @@ name|String
 argument_list|>
 name|theSchemas
 decl_stmt|;
-specifier|public
 name|StringSchemaWriter
 parameter_list|(
 name|List
@@ -14110,7 +14109,6 @@ specifier|private
 name|SchemaCollection
 name|coll
 decl_stmt|;
-specifier|public
 name|SchemaCollectionWriter
 parameter_list|(
 name|SchemaCollection
@@ -14212,7 +14210,6 @@ specifier|private
 name|UriInfo
 name|uriInfo
 decl_stmt|;
-specifier|public
 name|ExternalSchemaWriter
 parameter_list|(
 name|List
@@ -14335,7 +14332,6 @@ specifier|private
 name|JAXBContextProxy
 name|proxy
 decl_stmt|;
-specifier|public
 name|JaxbContextQNameResolver
 parameter_list|(
 name|JAXBContextProxy
@@ -14661,7 +14657,6 @@ argument_list|>
 argument_list|>
 name|map
 decl_stmt|;
-specifier|public
 name|SchemaQNameResolver
 parameter_list|(
 name|Map
@@ -15271,7 +15266,6 @@ name|String
 argument_list|>
 name|locsMap
 decl_stmt|;
-specifier|public
 name|SchemaConverter
 parameter_list|(
 name|XMLStreamWriter

@@ -2665,7 +2665,6 @@ specifier|final
 name|boolean
 name|encryptionRequired
 decl_stmt|;
-specifier|public
 name|StaxActionInInterceptor
 parameter_list|(
 name|boolean

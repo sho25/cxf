@@ -1313,7 +1313,6 @@ name|ScrollMarker
 extends|extends
 name|UIObject
 block|{
-specifier|public
 name|ScrollMarker
 parameter_list|(
 name|Element

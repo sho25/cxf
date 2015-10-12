@@ -1339,7 +1339,6 @@ specifier|final
 name|Element
 name|tokenElement
 decl_stmt|;
-specifier|public
 name|ElementCallbackHandler
 parameter_list|(
 name|Element

@@ -369,7 +369,6 @@ operator|new
 name|Soap11FaultOutInterceptorInternal
 argument_list|()
 decl_stmt|;
-specifier|public
 name|Soap11FaultOutInterceptorInternal
 parameter_list|()
 block|{

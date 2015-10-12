@@ -13677,11 +13677,9 @@ specifier|private
 name|boolean
 name|noTargetNamespace
 decl_stmt|;
-specifier|public
 name|GrammarInfo
 parameter_list|()
 block|{                      }
-specifier|public
 name|GrammarInfo
 parameter_list|(
 name|Map
@@ -13932,7 +13930,6 @@ specifier|private
 name|String
 name|wadlPath
 decl_stmt|;
-specifier|public
 name|Application
 parameter_list|(
 name|Element
@@ -14030,7 +14027,6 @@ name|Element
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|ContextInfo
 parameter_list|(
 name|Application

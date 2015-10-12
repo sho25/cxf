@@ -885,7 +885,6 @@ decl_stmt|;
 name|Attachment
 name|att
 decl_stmt|;
-specifier|public
 name|MultiPartDataSource
 parameter_list|(
 name|Message

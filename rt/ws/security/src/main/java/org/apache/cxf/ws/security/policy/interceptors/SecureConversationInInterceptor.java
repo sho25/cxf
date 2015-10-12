@@ -868,7 +868,6 @@ argument_list|<
 name|SoapMessage
 argument_list|>
 block|{
-specifier|public
 name|SecureConversationInInterceptor
 parameter_list|()
 block|{
@@ -3242,7 +3241,6 @@ operator|new
 name|SecureConversationCancelInterceptor
 argument_list|()
 decl_stmt|;
-specifier|public
 name|SecureConversationCancelInterceptor
 parameter_list|()
 block|{

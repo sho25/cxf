@@ -264,7 +264,6 @@ specifier|private
 name|String
 name|color
 decl_stmt|;
-specifier|public
 name|Color
 parameter_list|(
 name|String

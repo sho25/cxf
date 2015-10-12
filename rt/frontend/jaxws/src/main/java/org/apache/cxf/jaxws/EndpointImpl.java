@@ -3166,7 +3166,6 @@ argument_list|>
 argument_list|>
 name|other
 decl_stmt|;
-specifier|public
 name|DoubleAddInterceptorList
 parameter_list|(
 name|List

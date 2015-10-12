@@ -2020,7 +2020,6 @@ specifier|private
 name|TypeInfoObject
 name|tvalue
 decl_stmt|;
-specifier|public
 name|Comparison
 parameter_list|(
 name|String

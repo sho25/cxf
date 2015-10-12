@@ -508,7 +508,6 @@ specifier|private
 name|String
 name|location
 decl_stmt|;
-specifier|public
 name|TestStore
 parameter_list|()
 block|{

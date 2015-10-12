@@ -2077,7 +2077,6 @@ specifier|private
 name|String
 name|foo
 decl_stmt|;
-specifier|public
 name|SingleAttr
 parameter_list|(
 name|String
@@ -2128,7 +2127,6 @@ specifier|private
 name|String
 name|bar
 decl_stmt|;
-specifier|public
 name|DoubleAttr
 parameter_list|(
 name|String

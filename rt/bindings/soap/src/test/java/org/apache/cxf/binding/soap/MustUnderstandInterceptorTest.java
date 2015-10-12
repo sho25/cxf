@@ -1026,7 +1026,6 @@ name|QName
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|DummySoapInterceptor
 parameter_list|(
 name|String

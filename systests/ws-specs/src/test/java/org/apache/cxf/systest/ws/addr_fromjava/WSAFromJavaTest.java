@@ -1171,7 +1171,6 @@ name|RemoveRelatesToHeaderInterceptor
 extends|extends
 name|AbstractSoapInterceptor
 block|{
-specifier|public
 name|RemoveRelatesToHeaderInterceptor
 parameter_list|()
 block|{

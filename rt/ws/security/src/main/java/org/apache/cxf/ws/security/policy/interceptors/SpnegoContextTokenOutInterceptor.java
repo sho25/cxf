@@ -378,7 +378,6 @@ argument_list|<
 name|SoapMessage
 argument_list|>
 block|{
-specifier|public
 name|SpnegoContextTokenOutInterceptor
 parameter_list|()
 block|{

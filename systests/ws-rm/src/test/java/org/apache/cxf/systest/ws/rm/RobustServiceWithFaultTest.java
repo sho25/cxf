@@ -858,7 +858,6 @@ specifier|private
 name|boolean
 name|robust
 decl_stmt|;
-specifier|public
 name|RobustOneWayPropertySetter
 parameter_list|()
 block|{

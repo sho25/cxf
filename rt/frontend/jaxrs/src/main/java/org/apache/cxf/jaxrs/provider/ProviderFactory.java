@@ -6532,7 +6532,6 @@ argument_list|>
 argument_list|>
 name|candidates
 decl_stmt|;
-specifier|public
 name|ContextResolverProxy
 parameter_list|(
 name|List

@@ -127,7 +127,6 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|NSManager
 parameter_list|()
 block|{

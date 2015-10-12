@@ -3009,7 +3009,6 @@ block|{
 name|JAXBContext
 name|context
 decl_stmt|;
-specifier|public
 name|WSDiscoveryProvider
 parameter_list|()
 block|{

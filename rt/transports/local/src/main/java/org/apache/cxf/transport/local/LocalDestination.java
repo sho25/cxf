@@ -727,7 +727,6 @@ specifier|private
 name|LocalConduit
 name|conduit
 decl_stmt|;
-specifier|public
 name|SynchronousConduit
 parameter_list|(
 name|LocalConduit

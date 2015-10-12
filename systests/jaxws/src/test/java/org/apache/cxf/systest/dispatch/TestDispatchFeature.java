@@ -234,7 +234,6 @@ specifier|static
 name|int
 name|count
 decl_stmt|;
-specifier|public
 name|TestInInterceptor
 parameter_list|()
 block|{
@@ -275,7 +274,6 @@ specifier|static
 name|int
 name|count
 decl_stmt|;
-specifier|public
 name|TestOutInterceptor
 parameter_list|()
 block|{

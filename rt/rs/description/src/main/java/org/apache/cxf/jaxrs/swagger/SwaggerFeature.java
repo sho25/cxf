@@ -582,7 +582,6 @@ specifier|private
 name|MessageContext
 name|mc
 decl_stmt|;
-specifier|public
 name|SwaggerContainerRequestFilter
 parameter_list|(
 name|ApiListingResourceJSON

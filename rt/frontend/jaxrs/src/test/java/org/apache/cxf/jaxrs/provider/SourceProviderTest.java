@@ -1224,7 +1224,6 @@ operator|new
 name|MessageImpl
 argument_list|()
 decl_stmt|;
-specifier|public
 name|TestSourceProvider
 parameter_list|()
 block|{         }

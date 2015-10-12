@@ -478,7 +478,6 @@ name|SimpleGrantHandler
 extends|extends
 name|AbstractGrantHandler
 block|{
-specifier|public
 name|SimpleGrantHandler
 parameter_list|()
 block|{
@@ -488,7 +487,6 @@ literal|"a"
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|SimpleGrantHandler
 parameter_list|(
 name|List
@@ -548,7 +546,6 @@ name|ComplexGrantHandler
 extends|extends
 name|AbstractGrantHandler
 block|{
-specifier|public
 name|ComplexGrantHandler
 parameter_list|(
 name|List

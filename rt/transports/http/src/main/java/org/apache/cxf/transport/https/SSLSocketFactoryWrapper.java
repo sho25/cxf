@@ -187,7 +187,6 @@ specifier|private
 name|String
 name|protocol
 decl_stmt|;
-specifier|public
 name|SSLSocketFactoryWrapper
 parameter_list|(
 name|SSLSocketFactory

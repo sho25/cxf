@@ -2318,7 +2318,6 @@ name|boolean
 name|alwaysValidateToSts
 decl_stmt|;
 comment|/**          * Construct a new instance.          * @param alwaysValidateToSts whether to always validate the token to the STS          */
-specifier|public
 name|STSStaxBSTValidator
 parameter_list|(
 name|boolean

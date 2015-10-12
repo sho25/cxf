@@ -122,6 +122,7 @@ operator|=
 name|customerTitle
 expr_stmt|;
 block|}
+specifier|public
 enum|enum
 name|Title
 block|{

@@ -1509,7 +1509,6 @@ specifier|private
 name|Node
 name|targetNode
 decl_stmt|;
-specifier|public
 name|ContextImpl
 parameter_list|(
 name|Node

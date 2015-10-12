@@ -443,7 +443,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-specifier|public
 name|SecureConversationOutInterceptor
 parameter_list|()
 block|{

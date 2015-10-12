@@ -140,7 +140,6 @@ specifier|private
 name|XercesSchemaValidationUtils
 name|utils
 decl_stmt|;
-specifier|public
 name|XercesXsdValidationImpl
 parameter_list|()
 block|{

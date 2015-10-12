@@ -1033,7 +1033,6 @@ block|{
 name|HttpURLConnection
 name|connection
 decl_stmt|;
-specifier|public
 name|URLConnectionWrappedOutputStream
 parameter_list|(
 name|Message

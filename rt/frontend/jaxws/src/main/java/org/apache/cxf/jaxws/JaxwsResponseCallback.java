@@ -102,7 +102,6 @@ block|{
 name|ClientCallback
 name|callback
 decl_stmt|;
-specifier|public
 name|JaxwsResponseCallback
 parameter_list|(
 name|ClientCallback

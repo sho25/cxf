@@ -3341,7 +3341,6 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|TestRetransmissionQueue
 parameter_list|()
 block|{

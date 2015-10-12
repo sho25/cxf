@@ -3359,7 +3359,6 @@ specifier|private
 name|MediaType
 name|contentType
 decl_stmt|;
-specifier|public
 name|MessageBodyWriterDataHandler
 parameter_list|(
 name|MessageBodyWriter

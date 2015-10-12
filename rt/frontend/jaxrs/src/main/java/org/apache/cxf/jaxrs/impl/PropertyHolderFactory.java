@@ -189,7 +189,6 @@ name|Object
 argument_list|>
 name|props
 decl_stmt|;
-specifier|public
 name|MessagePropertyHolder
 parameter_list|(
 name|Message

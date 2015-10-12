@@ -2358,7 +2358,6 @@ specifier|private
 name|int
 name|tokenIdx
 decl_stmt|;
-specifier|public
 name|CurlyBraceTokenizer
 parameter_list|(
 name|String

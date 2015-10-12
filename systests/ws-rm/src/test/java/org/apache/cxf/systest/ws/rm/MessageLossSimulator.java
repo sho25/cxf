@@ -750,7 +750,6 @@ specifier|private
 name|Message
 name|outMessage
 decl_stmt|;
-specifier|public
 name|WrappedOutputStream
 parameter_list|(
 name|Message

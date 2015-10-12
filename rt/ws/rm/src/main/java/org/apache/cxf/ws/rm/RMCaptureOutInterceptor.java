@@ -1508,7 +1508,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|CaptureStart
 parameter_list|()
 block|{
@@ -1605,7 +1604,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|CaptureEnd
 parameter_list|()
 block|{

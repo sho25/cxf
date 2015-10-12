@@ -2439,7 +2439,6 @@ specifier|final
 name|long
 name|expectedEndTime
 decl_stmt|;
-specifier|public
 name|TimeoutCounter
 parameter_list|(
 name|long

@@ -1532,7 +1532,6 @@ name|Boolean
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|IgnoreMixedContentWriter
 parameter_list|(
 name|XMLStreamWriter

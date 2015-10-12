@@ -422,7 +422,6 @@ specifier|private
 name|OutputStream
 name|os
 decl_stmt|;
-specifier|public
 name|StreamingResponseWriter
 parameter_list|(
 name|Class

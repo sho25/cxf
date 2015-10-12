@@ -1886,7 +1886,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|WSS4JStaxOutInterceptorInternal
 parameter_list|()
 block|{

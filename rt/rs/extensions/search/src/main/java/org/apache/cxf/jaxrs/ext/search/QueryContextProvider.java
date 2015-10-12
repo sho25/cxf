@@ -106,7 +106,6 @@ specifier|private
 name|Message
 name|message
 decl_stmt|;
-specifier|public
 name|QueryContextImpl
 parameter_list|(
 name|Message

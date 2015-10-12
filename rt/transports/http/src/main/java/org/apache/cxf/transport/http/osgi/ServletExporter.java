@@ -194,7 +194,6 @@ specifier|private
 name|HttpService
 name|httpService
 decl_stmt|;
-specifier|public
 name|ServletExporter
 parameter_list|(
 name|Servlet

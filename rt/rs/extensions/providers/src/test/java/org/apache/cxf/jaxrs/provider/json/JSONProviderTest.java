@@ -13258,7 +13258,6 @@ specifier|private
 name|int
 name|count
 decl_stmt|;
-specifier|public
 name|EmptyListWriter
 parameter_list|(
 name|XMLStreamWriter

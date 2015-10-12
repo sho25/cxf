@@ -381,7 +381,6 @@ operator|new
 name|Soap12FaultOutInterceptorInternal
 argument_list|()
 decl_stmt|;
-specifier|public
 name|Soap12FaultOutInterceptorInternal
 parameter_list|()
 block|{

@@ -205,7 +205,6 @@ specifier|private
 name|int
 name|status
 decl_stmt|;
-specifier|public
 name|HttpServletResponseAdapter
 parameter_list|(
 name|HttpExchange

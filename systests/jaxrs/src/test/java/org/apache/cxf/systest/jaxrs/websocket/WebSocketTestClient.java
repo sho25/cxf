@@ -290,7 +290,6 @@ specifier|private
 name|String
 name|url
 decl_stmt|;
-specifier|public
 name|WebSocketTestClient
 parameter_list|(
 name|String
@@ -1289,7 +1288,6 @@ specifier|private
 name|Object
 name|entity
 decl_stmt|;
-specifier|public
 name|Response
 parameter_list|(
 name|Object

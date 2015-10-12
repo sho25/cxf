@@ -292,7 +292,6 @@ name|ResponseTimeMessageInvokerEndingInteceptor
 extends|extends
 name|AbstractMessageResponseTimeInterceptor
 block|{
-specifier|public
 name|ResponseTimeMessageInvokerEndingInteceptor
 parameter_list|()
 block|{

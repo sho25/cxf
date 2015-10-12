@@ -1537,7 +1537,6 @@ specifier|final
 name|InputStream
 name|in
 decl_stmt|;
-specifier|public
 name|UDPConnectionInfo
 parameter_list|(
 name|IoSession
@@ -2004,7 +2003,6 @@ name|serialVersionUID
 init|=
 literal|3976736960742503222L
 decl_stmt|;
-specifier|public
 name|StreamIoException
 parameter_list|(
 name|IOException

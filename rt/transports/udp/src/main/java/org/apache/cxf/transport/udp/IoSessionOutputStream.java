@@ -100,7 +100,6 @@ specifier|private
 name|WriteFuture
 name|lastWriteFuture
 decl_stmt|;
-specifier|public
 name|IoSessionOutputStream
 parameter_list|(
 name|IoSession

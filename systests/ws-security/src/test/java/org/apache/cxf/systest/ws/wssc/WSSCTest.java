@@ -495,7 +495,6 @@ specifier|final
 name|boolean
 name|clearAction
 decl_stmt|;
-specifier|public
 name|TestParam
 parameter_list|(
 name|String
@@ -527,7 +526,6 @@ operator|=
 literal|false
 expr_stmt|;
 block|}
-specifier|public
 name|TestParam
 parameter_list|(
 name|String

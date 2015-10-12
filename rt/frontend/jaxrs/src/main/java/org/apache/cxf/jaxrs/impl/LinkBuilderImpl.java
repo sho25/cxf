@@ -838,7 +838,6 @@ name|String
 argument_list|>
 name|params
 decl_stmt|;
-specifier|public
 name|LinkImpl
 parameter_list|(
 name|URI

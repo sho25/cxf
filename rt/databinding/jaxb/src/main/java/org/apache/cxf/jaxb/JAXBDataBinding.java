@@ -1098,7 +1098,6 @@ specifier|final
 name|String
 name|publicId
 decl_stmt|;
-specifier|public
 name|DelayedDOMResult
 parameter_list|(
 name|URL

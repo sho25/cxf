@@ -582,7 +582,6 @@ specifier|private
 name|boolean
 name|completed
 decl_stmt|;
-specifier|public
 name|EchoBookIdRunner
 parameter_list|(
 name|BookStoreWebSocket

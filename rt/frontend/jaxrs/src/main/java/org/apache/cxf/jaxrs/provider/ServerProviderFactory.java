@@ -2363,7 +2363,6 @@ specifier|private
 name|String
 name|nameBinding
 decl_stmt|;
-specifier|public
 name|MethodFeatureContextImpl
 parameter_list|(
 name|OperationResourceInfo
@@ -3160,7 +3159,6 @@ name|ServerConfigurationImpl
 implements|implements
 name|Configuration
 block|{
-specifier|public
 name|ServerConfigurationImpl
 parameter_list|()
 block|{                      }

@@ -4504,7 +4504,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|MessageNumberInterceptor
 parameter_list|()
 block|{
@@ -4937,7 +4936,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|SequenceIdInterceptor
 parameter_list|()
 block|{

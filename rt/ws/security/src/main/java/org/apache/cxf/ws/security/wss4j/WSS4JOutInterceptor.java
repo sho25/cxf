@@ -723,7 +723,6 @@ argument_list|<
 name|SoapMessage
 argument_list|>
 block|{
-specifier|public
 name|WSS4JOutInterceptorInternal
 parameter_list|()
 block|{

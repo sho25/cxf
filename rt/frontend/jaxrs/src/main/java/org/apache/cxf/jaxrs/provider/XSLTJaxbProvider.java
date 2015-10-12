@@ -3539,7 +3539,6 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|TemplatesImpl
 parameter_list|(
 name|Templates

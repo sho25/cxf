@@ -469,7 +469,6 @@ specifier|final
 name|Date
 name|expires
 decl_stmt|;
-specifier|public
 name|CacheEntry
 parameter_list|(
 name|SecurityToken

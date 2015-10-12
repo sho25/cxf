@@ -269,7 +269,6 @@ specifier|final
 name|String
 name|port
 decl_stmt|;
-specifier|public
 name|TestParam
 parameter_list|(
 name|String
