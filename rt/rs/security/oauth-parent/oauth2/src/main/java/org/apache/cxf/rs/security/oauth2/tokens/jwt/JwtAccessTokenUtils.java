@@ -859,7 +859,7 @@ name|int
 name|ttl
 parameter_list|,
 name|int
-name|futureTTL
+name|clockOffset
 parameter_list|,
 name|Client
 name|c
@@ -889,6 +889,8 @@ name|validateJwtExpiry
 argument_list|(
 name|claims
 argument_list|,
+name|clockOffset
+argument_list|,
 name|expiredRequired
 argument_list|)
 expr_stmt|;
@@ -898,7 +900,7 @@ name|validateJwtNotBefore
 argument_list|(
 name|claims
 argument_list|,
-name|futureTTL
+name|clockOffset
 argument_list|,
 literal|false
 argument_list|)
@@ -921,11 +923,13 @@ condition|)
 block|{
 name|JwtUtils
 operator|.
-name|validateJwtTTL
+name|validateJwtIssuedAt
 argument_list|(
 name|claims
 argument_list|,
 name|ttl
+argument_list|,
+name|clockOffset
 argument_list|,
 name|issuedAtRequired
 argument_list|)
