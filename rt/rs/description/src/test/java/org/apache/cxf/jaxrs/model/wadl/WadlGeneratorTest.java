@@ -6847,7 +6847,6 @@ name|String
 argument_list|>
 name|options
 decl_stmt|;
-specifier|public
 name|Param
 parameter_list|(
 name|String
@@ -6872,7 +6871,6 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|Param
 parameter_list|(
 name|String
@@ -6916,7 +6914,6 @@ operator|=
 name|opts
 expr_stmt|;
 block|}
-specifier|public
 name|Param
 parameter_list|(
 name|String
@@ -6946,7 +6943,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|Param
 parameter_list|(
 name|String
@@ -6976,7 +6972,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|Param
 parameter_list|(
 name|String
@@ -7026,7 +7021,6 @@ operator|=
 name|repeating
 expr_stmt|;
 block|}
-specifier|public
 name|Param
 parameter_list|(
 name|String

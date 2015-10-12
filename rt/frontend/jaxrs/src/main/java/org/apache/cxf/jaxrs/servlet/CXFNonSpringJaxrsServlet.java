@@ -4168,7 +4168,6 @@ name|Object
 argument_list|>
 name|applicationSingletons
 decl_stmt|;
-specifier|public
 name|ApplicationImpl
 parameter_list|(
 name|Set

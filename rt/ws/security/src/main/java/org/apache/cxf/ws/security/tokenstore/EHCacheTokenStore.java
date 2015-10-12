@@ -439,7 +439,6 @@ operator|new
 name|AtomicInteger
 argument_list|()
 decl_stmt|;
-specifier|public
 name|RefCountCache
 parameter_list|(
 name|CacheConfiguration

@@ -3492,10 +3492,9 @@ name|NoOpX509TrustManager
 implements|implements
 name|X509TrustManager
 block|{
-specifier|public
 name|NoOpX509TrustManager
 parameter_list|()
-block|{          }
+block|{         }
 annotation|@
 name|Override
 specifier|public

@@ -767,7 +767,6 @@ specifier|final
 name|boolean
 name|qualifiedSchemas
 decl_stmt|;
-specifier|public
 name|JAXBSchemaInitializer
 parameter_list|(
 name|ServiceInfo

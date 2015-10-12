@@ -161,7 +161,6 @@ specifier|private
 name|String
 name|query
 decl_stmt|;
-specifier|public
 name|JMSURIParser
 parameter_list|(
 name|String

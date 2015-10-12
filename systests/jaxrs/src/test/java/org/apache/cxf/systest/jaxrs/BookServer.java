@@ -2084,7 +2084,6 @@ name|Book
 argument_list|>
 name|mbw
 decl_stmt|;
-specifier|public
 name|XmlParamConverter
 parameter_list|(
 name|MessageBodyReader

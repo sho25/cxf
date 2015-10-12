@@ -407,7 +407,6 @@ specifier|private
 name|boolean
 name|validated
 decl_stmt|;
-specifier|public
 name|TestSTSTokenValidator
 parameter_list|()
 block|{

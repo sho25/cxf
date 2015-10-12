@@ -1758,7 +1758,6 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|SubExpression
 parameter_list|(
 name|String
@@ -2332,7 +2331,6 @@ specifier|private
 name|TypeInfo
 name|typeInfo
 decl_stmt|;
-specifier|public
 name|TypeInfoObject
 parameter_list|(
 name|Object

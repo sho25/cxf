@@ -158,7 +158,6 @@ name|Attachment
 argument_list|>
 name|cache
 decl_stmt|;
-specifier|public
 name|WrappedAttachments
 parameter_list|(
 name|Map
@@ -1027,7 +1026,6 @@ specifier|private
 name|String
 name|key
 decl_stmt|;
-specifier|public
 name|WrappedAttachmentsIterator
 parameter_list|(
 name|Iterator

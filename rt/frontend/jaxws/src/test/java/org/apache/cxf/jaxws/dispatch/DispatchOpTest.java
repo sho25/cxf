@@ -812,7 +812,6 @@ block|{
 name|BindingOperationInfo
 name|boi
 decl_stmt|;
-specifier|public
 name|BindingOperationVerifier
 parameter_list|()
 block|{

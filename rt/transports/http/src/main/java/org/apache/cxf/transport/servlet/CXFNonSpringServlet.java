@@ -1070,7 +1070,6 @@ specifier|private
 name|String
 name|pathInfo
 decl_stmt|;
-specifier|public
 name|HttpServletRequestFilter
 parameter_list|(
 name|HttpServletRequest

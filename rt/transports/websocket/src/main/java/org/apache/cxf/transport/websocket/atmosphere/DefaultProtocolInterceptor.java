@@ -1700,7 +1700,6 @@ name|WrappedAtmosphereResponse
 extends|extends
 name|AtmosphereResponse
 block|{
-specifier|public
 name|WrappedAtmosphereResponse
 parameter_list|(
 name|AtmosphereResponse

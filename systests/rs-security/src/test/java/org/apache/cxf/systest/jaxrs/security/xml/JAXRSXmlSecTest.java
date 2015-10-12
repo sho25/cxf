@@ -3944,7 +3944,6 @@ specifier|final
 name|boolean
 name|streaming
 decl_stmt|;
-specifier|public
 name|TestParam
 parameter_list|(
 name|String

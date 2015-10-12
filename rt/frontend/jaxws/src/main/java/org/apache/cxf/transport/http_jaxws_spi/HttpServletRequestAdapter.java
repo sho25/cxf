@@ -369,7 +369,6 @@ specifier|private
 name|BufferedReader
 name|reader
 decl_stmt|;
-specifier|public
 name|HttpServletRequestAdapter
 parameter_list|(
 name|HttpExchange

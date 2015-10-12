@@ -3417,7 +3417,6 @@ specifier|private
 name|LogRecord
 name|template
 decl_stmt|;
-specifier|public
 name|SearchConditionImpl
 parameter_list|(
 name|LogRecord

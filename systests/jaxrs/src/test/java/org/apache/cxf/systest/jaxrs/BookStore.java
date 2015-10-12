@@ -9022,11 +9022,9 @@ specifier|private
 name|long
 name|id
 decl_stmt|;
-specifier|public
 name|BookInfo
 parameter_list|()
 block|{                      }
-specifier|public
 name|BookInfo
 parameter_list|(
 name|Book
@@ -9121,11 +9119,9 @@ name|BookInfo
 implements|implements
 name|BookInfoInterface
 block|{
-specifier|public
 name|BookInfo2
 parameter_list|()
 block|{                      }
-specifier|public
 name|BookInfo2
 parameter_list|(
 name|Book
@@ -9265,7 +9261,6 @@ specifier|static
 class|class
 name|BadBook
 block|{
-specifier|public
 name|BadBook
 parameter_list|(
 name|String
@@ -9292,7 +9287,6 @@ specifier|private
 name|boolean
 name|failEarly
 decl_stmt|;
-specifier|public
 name|StreamingOutputImpl
 parameter_list|(
 name|boolean

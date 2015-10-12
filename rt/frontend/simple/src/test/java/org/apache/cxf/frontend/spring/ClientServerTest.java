@@ -383,7 +383,6 @@ block|{
 name|boolean
 name|called
 decl_stmt|;
-specifier|public
 name|TestInterceptor
 parameter_list|()
 block|{

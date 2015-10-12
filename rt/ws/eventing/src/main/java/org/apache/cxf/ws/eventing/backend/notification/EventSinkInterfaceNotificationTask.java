@@ -260,7 +260,6 @@ name|?
 argument_list|>
 name|endpointInterface
 decl_stmt|;
-specifier|public
 name|EventSinkInterfaceNotificationTask
 parameter_list|(
 name|SubscriptionTicket

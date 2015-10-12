@@ -141,7 +141,6 @@ name|namespace
 operator|=
 literal|"http://wo.rtf2pdf.doc.ws.daisy.marbes.cz"
 argument_list|)
-specifier|public
 class|class
 name|VO
 block|{

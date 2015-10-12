@@ -282,7 +282,6 @@ specifier|private
 name|LoggingFeature
 name|logging
 decl_stmt|;
-specifier|public
 name|ConfigUpdater
 parameter_list|(
 name|BundleContext

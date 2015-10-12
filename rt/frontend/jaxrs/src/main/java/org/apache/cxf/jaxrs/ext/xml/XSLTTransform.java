@@ -96,7 +96,6 @@ specifier|public
 annotation_defn|@interface
 name|XSLTTransform
 block|{
-specifier|public
 enum|enum
 name|TransformType
 block|{

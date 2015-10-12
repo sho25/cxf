@@ -462,7 +462,6 @@ specifier|final
 name|Node
 name|entryNode
 decl_stmt|;
-specifier|public
 name|LazyXmlParser
 parameter_list|(
 annotation|@

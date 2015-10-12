@@ -1377,7 +1377,6 @@ specifier|private
 name|Scope
 name|fullyQualifiedName
 decl_stmt|;
-specifier|public
 name|Types
 parameter_list|()
 block|{
@@ -1390,7 +1389,6 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-specifier|public
 name|Types
 parameter_list|(
 name|XmlSchemaType

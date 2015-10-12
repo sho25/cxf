@@ -255,8 +255,6 @@ parameter_list|()
 throws|throws
 name|BookNotFoundFault
 function_decl|;
-specifier|public
-specifier|static
 class|class
 name|BookNotReturnedException
 extends|extends

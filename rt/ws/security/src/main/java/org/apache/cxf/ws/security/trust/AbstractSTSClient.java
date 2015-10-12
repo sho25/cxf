@@ -7371,7 +7371,6 @@ name|InternalProtectionToken
 extends|extends
 name|ProtectionToken
 block|{
-specifier|public
 name|InternalProtectionToken
 parameter_list|(
 name|SPVersion

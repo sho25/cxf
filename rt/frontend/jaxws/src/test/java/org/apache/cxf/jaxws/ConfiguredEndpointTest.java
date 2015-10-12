@@ -2451,7 +2451,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|TestInterceptor
 parameter_list|(
 name|String

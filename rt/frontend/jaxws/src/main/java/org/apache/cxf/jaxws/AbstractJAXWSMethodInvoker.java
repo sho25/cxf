@@ -1197,7 +1197,6 @@ decl_stmt|;
 name|boolean
 name|done
 decl_stmt|;
-specifier|public
 name|JaxwsServerHandler
 parameter_list|(
 name|Continuation

@@ -1034,7 +1034,6 @@ specifier|final
 name|String
 name|address
 decl_stmt|;
-specifier|public
 name|CorbaAddressEventProducer
 parameter_list|(
 name|String
@@ -1569,7 +1568,6 @@ name|Namespace
 argument_list|>
 name|namespaces
 decl_stmt|;
-specifier|public
 name|CorbaInterfaceNameEventProducer
 parameter_list|(
 name|QName

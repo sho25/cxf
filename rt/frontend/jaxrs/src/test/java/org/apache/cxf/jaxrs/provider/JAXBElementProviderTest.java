@@ -11688,7 +11688,6 @@ name|Object
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|TestMarshaller
 parameter_list|()
 block|{                      }

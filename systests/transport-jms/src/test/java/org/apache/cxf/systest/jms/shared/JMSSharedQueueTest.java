@@ -456,7 +456,6 @@ operator|=
 name|prefix
 expr_stmt|;
 block|}
-specifier|public
 name|ClientRunnable
 parameter_list|(
 name|HelloWorldPortType

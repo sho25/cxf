@@ -13371,7 +13371,6 @@ name|NullWriter
 extends|extends
 name|DelegatingXMLStreamWriter
 block|{
-specifier|public
 name|NullWriter
 parameter_list|(
 name|XMLStreamWriter

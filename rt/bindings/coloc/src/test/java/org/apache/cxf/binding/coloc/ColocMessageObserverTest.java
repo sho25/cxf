@@ -1022,7 +1022,6 @@ name|TestColocMessageObserver
 extends|extends
 name|ColocMessageObserver
 block|{
-specifier|public
 name|TestColocMessageObserver
 parameter_list|(
 name|Endpoint

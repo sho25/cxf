@@ -851,7 +851,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|IssuedTokenOutInterceptor
 parameter_list|()
 block|{
@@ -1130,7 +1129,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|IssuedTokenInInterceptor
 parameter_list|()
 block|{

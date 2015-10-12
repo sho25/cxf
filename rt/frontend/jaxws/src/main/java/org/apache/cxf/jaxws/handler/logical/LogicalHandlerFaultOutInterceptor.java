@@ -494,7 +494,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|LogicalHandlerFaultOutEndingInterceptor
 parameter_list|(
 name|Binding

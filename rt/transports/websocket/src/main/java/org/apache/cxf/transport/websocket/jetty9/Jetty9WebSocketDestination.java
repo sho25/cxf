@@ -1348,7 +1348,6 @@ specifier|final
 name|Session
 name|session
 decl_stmt|;
-specifier|public
 name|Jetty9WebSocketHolder
 parameter_list|(
 name|Session

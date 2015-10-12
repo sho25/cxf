@@ -2033,7 +2033,6 @@ specifier|private
 name|Object
 name|entity
 decl_stmt|;
-specifier|public
 name|Response
 parameter_list|(
 name|String
@@ -2598,7 +2597,6 @@ specifier|private
 name|Response
 name|response
 decl_stmt|;
-specifier|public
 name|RequestResponse
 parameter_list|(
 name|AhcWebSocketConduitRequest

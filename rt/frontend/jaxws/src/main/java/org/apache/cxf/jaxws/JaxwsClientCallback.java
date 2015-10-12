@@ -119,7 +119,6 @@ specifier|final
 name|Object
 name|proxy
 decl_stmt|;
-specifier|public
 name|JaxwsClientCallback
 parameter_list|(
 specifier|final

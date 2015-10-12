@@ -761,7 +761,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|HttpsTokenOutInterceptor
 parameter_list|()
 block|{
@@ -1316,7 +1315,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|HttpsTokenInInterceptor
 parameter_list|()
 block|{

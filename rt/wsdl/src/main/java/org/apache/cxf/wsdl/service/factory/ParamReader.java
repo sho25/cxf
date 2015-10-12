@@ -771,7 +771,6 @@ name|String
 index|[]
 name|names
 decl_stmt|;
-specifier|public
 name|MethodInfo
 parameter_list|(
 name|int

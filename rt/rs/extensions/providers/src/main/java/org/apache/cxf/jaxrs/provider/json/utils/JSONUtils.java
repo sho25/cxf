@@ -1308,7 +1308,6 @@ specifier|private
 name|int
 name|index
 decl_stmt|;
-specifier|public
 name|IgnoreContentJettisonWriter
 parameter_list|(
 name|XMLStreamWriter

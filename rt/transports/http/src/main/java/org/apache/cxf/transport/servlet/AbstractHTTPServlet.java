@@ -2570,7 +2570,6 @@ specifier|private
 name|String
 name|originalClientIp
 decl_stmt|;
-specifier|public
 name|HttpServletRequestXForwardedFilter
 parameter_list|(
 name|HttpServletRequest

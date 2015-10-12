@@ -195,7 +195,6 @@ specifier|final
 name|int
 name|order
 decl_stmt|;
-specifier|public
 name|PidInfo
 parameter_list|(
 name|Dictionary

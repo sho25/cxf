@@ -1180,8 +1180,6 @@ block|{
 literal|"dbReves"
 block|}
 argument_list|)
-specifier|public
-specifier|static
 class|class
 name|DoFooListRequest
 block|{
@@ -1230,7 +1228,6 @@ argument_list|>
 name|doCXF2411
 parameter_list|()
 function_decl|;
-specifier|public
 class|class
 name|CXF2411Result
 parameter_list|<
@@ -1271,11 +1268,9 @@ name|content
 expr_stmt|;
 block|}
 block|}
-specifier|public
 class|class
 name|CXF2411Base
 block|{     }
-specifier|public
 class|class
 name|CXF2411SubClass
 extends|extends

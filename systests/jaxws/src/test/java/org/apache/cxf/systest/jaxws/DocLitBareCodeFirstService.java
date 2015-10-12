@@ -575,7 +575,6 @@ block|{
 literal|"value"
 block|}
 argument_list|)
-specifier|public
 class|class
 name|GMonthTest
 block|{

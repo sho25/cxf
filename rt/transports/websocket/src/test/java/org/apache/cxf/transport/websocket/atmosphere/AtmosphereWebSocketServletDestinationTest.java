@@ -707,7 +707,6 @@ name|TestAtmosphereWebSocketServletDestination
 extends|extends
 name|AtmosphereWebSocketServletDestination
 block|{
-specifier|public
 name|TestAtmosphereWebSocketServletDestination
 parameter_list|(
 name|Bus

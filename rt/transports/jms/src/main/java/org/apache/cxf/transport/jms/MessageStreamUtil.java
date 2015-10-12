@@ -274,7 +274,6 @@ specifier|private
 name|Exchange
 name|exchange
 decl_stmt|;
-specifier|public
 name|SendingOutputStream
 parameter_list|(
 name|JMSExchangeSender

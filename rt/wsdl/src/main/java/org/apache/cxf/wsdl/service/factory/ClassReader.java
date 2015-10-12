@@ -2132,7 +2132,6 @@ decl_stmt|;
 name|String
 name|type
 decl_stmt|;
-specifier|public
 name|NameAndType
 parameter_list|(
 name|String

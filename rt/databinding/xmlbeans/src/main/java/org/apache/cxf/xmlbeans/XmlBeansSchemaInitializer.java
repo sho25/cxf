@@ -1002,7 +1002,6 @@ name|class
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|XmlBeansSchemaInitializer
 parameter_list|(
 name|ServiceInfo
@@ -1052,7 +1051,6 @@ specifier|final
 name|SchemaTypeSystem
 name|sts
 decl_stmt|;
-specifier|public
 name|XMLSchemaResolver
 parameter_list|(
 name|SchemaTypeSystem

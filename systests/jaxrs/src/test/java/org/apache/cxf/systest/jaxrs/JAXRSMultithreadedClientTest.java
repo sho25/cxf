@@ -988,7 +988,6 @@ specifier|private
 name|boolean
 name|stateCanBeChanged
 decl_stmt|;
-specifier|public
 name|WebClientWorker
 parameter_list|(
 name|WebClient
@@ -1320,7 +1319,6 @@ specifier|private
 name|boolean
 name|stateCanBeChanged
 decl_stmt|;
-specifier|public
 name|RootProxyWorker
 parameter_list|(
 name|BookStore

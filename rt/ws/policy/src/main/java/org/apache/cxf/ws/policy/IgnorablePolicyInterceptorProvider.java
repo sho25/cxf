@@ -264,7 +264,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|IgnorableAssertionsInterceptor
 parameter_list|()
 block|{

@@ -1832,7 +1832,6 @@ name|MethodDocs
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|ClassDocs
 parameter_list|(
 name|String
@@ -1939,7 +1938,6 @@ specifier|private
 name|String
 name|responseInfo
 decl_stmt|;
-specifier|public
 name|MethodDocs
 parameter_list|(
 name|String

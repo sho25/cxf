@@ -1128,7 +1128,6 @@ operator|new
 name|AtomicInteger
 argument_list|()
 decl_stmt|;
-specifier|public
 name|TimeoutHandlerImpl
 parameter_list|(
 name|String

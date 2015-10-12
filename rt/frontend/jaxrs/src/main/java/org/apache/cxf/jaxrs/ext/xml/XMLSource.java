@@ -1429,7 +1429,6 @@ name|String
 argument_list|>
 name|namespaces
 decl_stmt|;
-specifier|public
 name|NamespaceContextImpl
 parameter_list|(
 name|Map

@@ -2761,7 +2761,6 @@ specifier|private
 name|boolean
 name|completed
 decl_stmt|;
-specifier|public
 name|EventCreatorRunner
 parameter_list|(
 name|WebSocketTestClient
