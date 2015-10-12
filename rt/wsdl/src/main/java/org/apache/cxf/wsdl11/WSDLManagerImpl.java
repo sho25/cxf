@@ -1004,6 +1004,19 @@ argument_list|(
 name|registry
 argument_list|)
 expr_stmt|;
+comment|//we'll create a new String here to make sure the passed in key is not referenced in the loading of
+comment|//the wsdl and thus would be held onto from the cached map from both the weak reference (key) and
+comment|//from the strong reference (Definition).  For example, the Definition sometimes keeps the original
+comment|//string as the documentBaseLocation which would result in it being held onto strongly
+comment|//from the definition.  With this, the String the definition holds onto would be unique
+name|url
+operator|=
+operator|new
+name|String
+argument_list|(
+name|url
+argument_list|)
+expr_stmt|;
 name|CatalogWSDLLocator
 name|catLocator
 init|=
