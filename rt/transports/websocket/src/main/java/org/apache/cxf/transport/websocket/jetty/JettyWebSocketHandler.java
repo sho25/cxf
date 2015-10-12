@@ -138,7 +138,6 @@ name|WebSocketFactory
 name|webSocketFactory
 decl_stmt|;
 empty_stmt|;
-specifier|public
 name|JettyWebSocketHandler
 parameter_list|(
 name|JettyHTTPDestination

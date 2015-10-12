@@ -1573,7 +1573,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|TestFaultInInterceptor
 parameter_list|()
 block|{
@@ -1585,7 +1584,6 @@ name|PRE_STREAM
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|TestFaultInInterceptor
 parameter_list|(
 name|String

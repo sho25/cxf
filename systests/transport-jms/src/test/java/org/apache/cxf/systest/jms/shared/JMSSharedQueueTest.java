@@ -421,7 +421,6 @@ specifier|volatile
 name|Throwable
 name|ex
 decl_stmt|;
-specifier|public
 name|ClientRunnable
 parameter_list|(
 name|HelloWorldPortType
@@ -435,7 +434,6 @@ operator|=
 name|port
 expr_stmt|;
 block|}
-specifier|public
 name|ClientRunnable
 parameter_list|(
 name|HelloWorldPortType

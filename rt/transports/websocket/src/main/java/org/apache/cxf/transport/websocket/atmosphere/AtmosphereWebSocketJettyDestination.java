@@ -686,7 +686,6 @@ name|AtmosphereJettyWebSocketHandler
 extends|extends
 name|JettyHTTPHandler
 block|{
-specifier|public
 name|AtmosphereJettyWebSocketHandler
 parameter_list|(
 name|JettyHTTPDestination

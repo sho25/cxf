@@ -3521,7 +3521,6 @@ argument_list|>
 argument_list|>
 name|holder
 decl_stmt|;
-specifier|public
 name|CustomInvocationCallback
 parameter_list|(
 name|Holder
@@ -3594,7 +3593,6 @@ name|T
 argument_list|>
 name|holder
 decl_stmt|;
-specifier|public
 name|GenericInvocationCallback
 parameter_list|(
 name|Holder

@@ -351,7 +351,6 @@ specifier|private
 name|ServiceRegistration
 name|reg
 decl_stmt|;
-specifier|public
 name|ConduitConfigurer
 parameter_list|(
 name|BundleContext

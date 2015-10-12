@@ -2372,7 +2372,6 @@ specifier|private
 name|String
 name|servletPath
 decl_stmt|;
-specifier|public
 name|HttpServletRequestRedirectFilter
 parameter_list|(
 name|HttpServletRequest

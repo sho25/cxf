@@ -61,7 +61,6 @@ specifier|private
 name|int
 name|receiveTimeout
 decl_stmt|;
-specifier|public
 name|AhcWebSocketConduitRequest
 parameter_list|(
 name|URI

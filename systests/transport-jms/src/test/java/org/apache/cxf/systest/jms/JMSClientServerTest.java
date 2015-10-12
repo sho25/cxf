@@ -1336,7 +1336,6 @@ block|{
 name|String
 name|expected
 decl_stmt|;
-specifier|public
 name|TestAsyncHandler
 parameter_list|(
 name|String

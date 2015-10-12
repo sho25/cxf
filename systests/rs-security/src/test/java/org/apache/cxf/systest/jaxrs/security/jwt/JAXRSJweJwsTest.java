@@ -3200,11 +3200,9 @@ name|password
 init|=
 literal|"password"
 decl_stmt|;
-specifier|public
 name|PrivateKeyPasswordProviderImpl
 parameter_list|()
 block|{                      }
-specifier|public
 name|PrivateKeyPasswordProviderImpl
 parameter_list|(
 name|String

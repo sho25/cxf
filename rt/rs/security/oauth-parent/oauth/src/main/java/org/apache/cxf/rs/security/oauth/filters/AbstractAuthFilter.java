@@ -1586,7 +1586,6 @@ name|CustomHttpServletWrapper
 extends|extends
 name|HttpServletRequestWrapper
 block|{
-specifier|public
 name|CustomHttpServletWrapper
 parameter_list|(
 name|HttpServletRequest

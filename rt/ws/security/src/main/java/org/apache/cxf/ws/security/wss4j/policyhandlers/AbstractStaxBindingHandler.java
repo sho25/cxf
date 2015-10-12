@@ -1605,7 +1605,6 @@ specifier|final
 name|String
 name|password
 decl_stmt|;
-specifier|public
 name|UTCallbackHandler
 parameter_list|(
 name|String

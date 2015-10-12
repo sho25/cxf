@@ -816,7 +816,6 @@ name|WebSocketServletHolder
 name|webSocketHolder
 decl_stmt|;
 comment|//        private String protocol;
-specifier|public
 name|JettyWebSocket
 parameter_list|(
 name|HttpServletRequest
@@ -1473,7 +1472,6 @@ name|Object
 argument_list|>
 name|requestAttributes
 decl_stmt|;
-specifier|public
 name|JettyWebSocketServletHolder
 parameter_list|(
 name|JettyWebSocket

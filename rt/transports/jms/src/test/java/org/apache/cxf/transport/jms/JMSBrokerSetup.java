@@ -158,7 +158,6 @@ decl_stmt|;
 name|Exception
 name|exception
 decl_stmt|;
-specifier|public
 name|JMSEmbeddedBroker
 parameter_list|(
 name|String

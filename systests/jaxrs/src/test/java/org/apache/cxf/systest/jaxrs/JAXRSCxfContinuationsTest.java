@@ -466,7 +466,6 @@ specifier|private
 name|CountDownLatch
 name|doneSignal
 decl_stmt|;
-specifier|public
 name|BookWorker
 parameter_list|(
 name|String

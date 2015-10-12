@@ -154,7 +154,6 @@ index|[]
 name|paramTypes
 decl_stmt|;
 comment|/**      * process a class file, given it's class. We'll use the defining      * classloader to locate the bytecode.      *       * @param c      * @throws IOException      */
-specifier|public
 name|ParamReader
 parameter_list|(
 name|Class
@@ -176,7 +175,6 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|/**      * process the given class bytes directly.      *       * @param b      * @throws IOException      */
-specifier|public
 name|ParamReader
 parameter_list|(
 name|byte
@@ -368,7 +366,6 @@ comment|// method attributes
 block|}
 block|}
 comment|/**      * Retrieve a list of function parameter names from a method Returns null if      * unable to read parameter names (i.e. bytecode not built with debug).      */
-specifier|public
 specifier|static
 name|String
 index|[]

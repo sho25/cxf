@@ -930,7 +930,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|KerberosTokenOutInterceptor
 parameter_list|()
 block|{
@@ -1217,7 +1216,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|KerberosTokenDOMInInterceptor
 parameter_list|()
 block|{
@@ -1571,7 +1569,6 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-specifier|public
 name|KerberosTokenStaxInInterceptor
 parameter_list|()
 block|{

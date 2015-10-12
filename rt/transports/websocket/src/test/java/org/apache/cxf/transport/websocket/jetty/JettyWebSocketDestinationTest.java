@@ -370,7 +370,6 @@ name|TestJettyWebSocketDestination
 extends|extends
 name|JettyWebSocketDestination
 block|{
-specifier|public
 name|TestJettyWebSocketDestination
 parameter_list|(
 name|Bus

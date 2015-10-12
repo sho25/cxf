@@ -1049,7 +1049,6 @@ specifier|private
 name|Exception
 name|error
 decl_stmt|;
-specifier|public
 name|BookWorker
 parameter_list|(
 name|String

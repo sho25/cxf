@@ -1874,7 +1874,6 @@ specifier|private
 name|JsonMapObject
 name|obj
 decl_stmt|;
-specifier|public
 name|JsonObjectSettable
 parameter_list|(
 name|JsonMapObject
@@ -1932,7 +1931,6 @@ specifier|private
 name|StringBuilder
 name|sb
 decl_stmt|;
-specifier|public
 name|StringBuilderOutput
 parameter_list|(
 name|StringBuilder
@@ -1978,7 +1976,6 @@ specifier|private
 name|OutputStream
 name|os
 decl_stmt|;
-specifier|public
 name|StreamOutput
 parameter_list|(
 name|OutputStream

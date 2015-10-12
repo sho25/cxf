@@ -921,7 +921,6 @@ name|AesCbcContentEncryptionAlgorithm
 extends|extends
 name|AbstractContentEncryptionAlgorithm
 block|{
-specifier|public
 name|AesCbcContentEncryptionAlgorithm
 parameter_list|(
 name|byte

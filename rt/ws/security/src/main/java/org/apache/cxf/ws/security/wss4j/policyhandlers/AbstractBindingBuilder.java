@@ -13670,7 +13670,6 @@ name|WSEncryptionPart
 argument_list|>
 name|signedParts
 decl_stmt|;
-specifier|public
 name|SupportingToken
 parameter_list|(
 name|AbstractToken

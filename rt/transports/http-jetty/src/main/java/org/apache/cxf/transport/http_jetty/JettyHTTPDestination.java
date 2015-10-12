@@ -1309,7 +1309,6 @@ decl_stmt|;
 name|boolean
 name|written
 decl_stmt|;
-specifier|public
 name|JettyOutputStream
 parameter_list|(
 name|HttpOutput
@@ -1567,7 +1566,6 @@ block|{
 name|int
 name|count
 decl_stmt|;
-specifier|public
 name|CountingInputStream
 parameter_list|(
 name|InputStream

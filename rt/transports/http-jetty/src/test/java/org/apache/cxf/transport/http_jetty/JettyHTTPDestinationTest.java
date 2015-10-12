@@ -915,7 +915,6 @@ name|EasyMockJettyHTTPDestination
 extends|extends
 name|JettyHTTPDestination
 block|{
-specifier|public
 name|EasyMockJettyHTTPDestination
 parameter_list|(
 name|Bus
@@ -5289,7 +5288,6 @@ name|TestJettyDestination
 extends|extends
 name|JettyHTTPDestination
 block|{
-specifier|public
 name|TestJettyDestination
 parameter_list|(
 name|Bus
