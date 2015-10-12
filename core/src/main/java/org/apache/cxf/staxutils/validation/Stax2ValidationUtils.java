@@ -395,7 +395,6 @@ operator|=
 name|hasw
 expr_stmt|;
 block|}
-specifier|public
 name|Stax2ValidationUtils
 parameter_list|()
 block|{

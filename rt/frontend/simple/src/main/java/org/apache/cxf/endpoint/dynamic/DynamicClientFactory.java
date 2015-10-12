@@ -4668,7 +4668,6 @@ specifier|private
 name|String
 name|baseURI
 decl_stmt|;
-specifier|public
 name|RelativeEntityResolver
 parameter_list|(
 name|String

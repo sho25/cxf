@@ -996,7 +996,6 @@ specifier|private
 name|OutputStream
 name|delegate
 decl_stmt|;
-specifier|public
 name|ServletOutputStreamAdapter
 parameter_list|(
 name|OutputStream

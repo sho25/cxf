@@ -432,6 +432,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
+specifier|public
 specifier|static
 class|class
 name|MyServiceConstructorThrowsException

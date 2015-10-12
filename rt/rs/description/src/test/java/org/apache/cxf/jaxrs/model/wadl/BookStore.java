@@ -1340,7 +1340,6 @@ return|;
 block|}
 block|}
 specifier|public
-specifier|static
 enum|enum
 name|TestEnum
 block|{

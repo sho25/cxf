@@ -173,7 +173,6 @@ specifier|private
 name|CXFInvocationHandlerData
 name|data
 decl_stmt|;
-specifier|public
 name|CXFInvocationHandlerBase
 parameter_list|(
 name|CXFInvocationHandlerData

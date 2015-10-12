@@ -72,39 +72,34 @@ name|constants
 decl_stmt|;
 end_decl_stmt
 
-begin_constructor
-specifier|private
+begin_expr_stmt
 name|ProtocolVariation
-parameter_list|(
+argument_list|(
 name|EncoderDecoder
 name|ed
-parameter_list|,
+argument_list|,
 name|RMConstants
 name|rmc
-parameter_list|)
+argument_list|)
 block|{
 name|codec
 operator|=
 name|ed
-expr_stmt|;
+block|;
 name|constants
 operator|=
 name|rmc
-expr_stmt|;
-block|}
-end_constructor
-
-begin_function
+block|;     }
 specifier|public
 name|EncoderDecoder
 name|getCodec
-parameter_list|()
+argument_list|()
 block|{
 return|return
 name|codec
 return|;
 block|}
-end_function
+end_expr_stmt
 
 begin_function
 specifier|public

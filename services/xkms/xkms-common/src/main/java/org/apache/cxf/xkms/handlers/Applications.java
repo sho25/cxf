@@ -68,7 +68,6 @@ specifier|private
 name|String
 name|uri
 decl_stmt|;
-specifier|private
 name|Applications
 parameter_list|(
 name|String

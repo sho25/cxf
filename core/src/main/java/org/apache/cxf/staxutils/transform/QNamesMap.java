@@ -47,7 +47,6 @@ specifier|private
 name|int
 name|index
 decl_stmt|;
-specifier|public
 name|QNamesMap
 parameter_list|(
 name|int

@@ -1024,7 +1024,6 @@ name|String
 name|val
 parameter_list|)
 function_decl|;
-specifier|static
 class|class
 name|Foo
 block|{

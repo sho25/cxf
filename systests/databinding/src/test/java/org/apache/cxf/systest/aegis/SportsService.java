@@ -97,7 +97,6 @@ name|BeanWithCharacter
 name|getCharBean
 parameter_list|()
 function_decl|;
-specifier|public
 class|class
 name|CustomerMap
 extends|extends
@@ -122,8 +121,6 @@ init|=
 literal|6235169270166551322L
 decl_stmt|;
 block|}
-specifier|public
-specifier|static
 class|class
 name|Pair
 parameter_list|<
@@ -233,7 +230,6 @@ argument_list|()
 return|;
 block|}
 block|}
-specifier|public
 class|class
 name|SimpleMapResult
 extends|extends

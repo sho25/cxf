@@ -466,7 +466,6 @@ operator|new
 name|RemoveStaxInEndingInterceptor
 argument_list|()
 decl_stmt|;
-specifier|public
 name|RemoveStaxInEndingInterceptor
 parameter_list|()
 block|{

@@ -523,7 +523,6 @@ name|stsClient
 return|;
 block|}
 specifier|public
-specifier|static
 enum|enum
 name|AuthMode
 block|{
@@ -549,7 +548,6 @@ specifier|final
 name|String
 name|keyType
 decl_stmt|;
-specifier|private
 name|AuthMode
 parameter_list|(
 name|QName

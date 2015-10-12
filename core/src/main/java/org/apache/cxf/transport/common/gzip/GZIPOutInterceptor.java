@@ -336,8 +336,6 @@ name|Message
 argument_list|>
 block|{
 comment|/**      * Enum giving the possible values for whether we should gzip a particular      * message.      */
-specifier|public
-specifier|static
 enum|enum
 name|UseGzip
 block|{
@@ -1360,7 +1358,6 @@ block|{
 name|Message
 name|message
 decl_stmt|;
-specifier|public
 name|GZipThresholdOutputStream
 parameter_list|(
 name|int

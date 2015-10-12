@@ -2312,7 +2312,6 @@ specifier|final
 name|int
 name|index
 decl_stmt|;
-specifier|public
 name|SetArrayAction
 parameter_list|(
 name|Object

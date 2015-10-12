@@ -871,7 +871,6 @@ specifier|final
 name|int
 name|lim
 decl_stmt|;
-specifier|public
 name|LogWriter
 parameter_list|(
 name|Logger
@@ -1247,7 +1246,6 @@ specifier|final
 name|int
 name|lim
 decl_stmt|;
-specifier|public
 name|LoggingCallback
 parameter_list|(
 specifier|final

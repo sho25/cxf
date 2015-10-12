@@ -343,7 +343,6 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-specifier|public
 name|RecursiveAllowedXMLSchemaReader
 parameter_list|(
 name|GrammarReaderController

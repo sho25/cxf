@@ -307,7 +307,6 @@ specifier|private
 name|boolean
 name|invoked
 decl_stmt|;
-specifier|public
 name|TestChain
 parameter_list|(
 name|SortedSet

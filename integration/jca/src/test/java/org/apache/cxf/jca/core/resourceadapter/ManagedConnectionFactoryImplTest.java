@@ -806,11 +806,9 @@ init|=
 operator|-
 literal|218445259745278972L
 decl_stmt|;
-specifier|public
 name|DummyManagedConnectionFactoryImpl
 parameter_list|()
 block|{     }
-specifier|public
 name|DummyManagedConnectionFactoryImpl
 parameter_list|(
 name|Properties

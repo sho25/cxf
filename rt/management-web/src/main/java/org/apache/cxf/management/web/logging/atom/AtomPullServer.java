@@ -3648,7 +3648,6 @@ specifier|private
 name|int
 name|page
 decl_stmt|;
-specifier|public
 name|CustomFeedConverter
 parameter_list|(
 name|int
@@ -3808,7 +3807,6 @@ specifier|private
 name|String
 name|altFragment
 decl_stmt|;
-specifier|public
 name|CustomEntryConverter
 parameter_list|(
 name|int

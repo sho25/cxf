@@ -351,7 +351,6 @@ specifier|final
 name|ExchangeData
 name|exchange
 decl_stmt|;
-specifier|public
 name|PersistOutInterceptorCallback
 parameter_list|(
 specifier|final

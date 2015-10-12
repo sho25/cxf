@@ -221,7 +221,6 @@ specifier|final
 name|int
 name|keySizeBits
 decl_stmt|;
-specifier|private
 name|KeyAlgorithm
 parameter_list|(
 name|String

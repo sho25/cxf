@@ -382,7 +382,6 @@ specifier|private
 name|int
 name|pause
 decl_stmt|;
-specifier|public
 name|ConstantPause
 parameter_list|(
 name|int
@@ -426,7 +425,6 @@ specifier|private
 name|int
 name|current
 decl_stmt|;
-specifier|public
 name|ExponentialPause
 parameter_list|(
 name|int

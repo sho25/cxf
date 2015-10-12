@@ -690,7 +690,6 @@ specifier|final
 name|RemoteStorageProxy
 name|remoteStorage
 decl_stmt|;
-specifier|public
 name|RemoteStorageLayer
 parameter_list|(
 annotation|@

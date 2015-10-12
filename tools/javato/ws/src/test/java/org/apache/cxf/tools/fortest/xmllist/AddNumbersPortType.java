@@ -272,7 +272,6 @@ name|String
 name|fileName
 parameter_list|)
 function_decl|;
-specifier|static
 class|class
 name|UserObject
 block|{

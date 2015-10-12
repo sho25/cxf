@@ -1094,7 +1094,6 @@ block|{
 name|Object
 name|obj
 decl_stmt|;
-specifier|public
 name|ProxyClass
 parameter_list|(
 name|Object

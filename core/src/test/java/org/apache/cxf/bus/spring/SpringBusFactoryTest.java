@@ -1361,7 +1361,6 @@ specifier|private
 name|String
 name|name
 decl_stmt|;
-specifier|public
 name|TestInterceptor
 parameter_list|()
 block|{                     }
@@ -1428,7 +1427,6 @@ decl_stmt|;
 name|boolean
 name|preDestroyMethodCalled
 decl_stmt|;
-specifier|public
 name|TestExtension
 parameter_list|(
 name|Bus
@@ -1479,7 +1477,6 @@ block|{
 name|boolean
 name|initialised
 decl_stmt|;
-specifier|public
 name|TestFeature
 parameter_list|()
 block|{

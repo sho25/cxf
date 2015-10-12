@@ -72,7 +72,6 @@ name|Bus
 extends|extends
 name|InterceptorProvider
 block|{
-specifier|public
 enum|enum
 name|BusState
 block|{

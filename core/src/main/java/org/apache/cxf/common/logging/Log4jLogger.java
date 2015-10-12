@@ -919,7 +919,6 @@ block|{
 name|Handler
 name|handler
 decl_stmt|;
-specifier|public
 name|HandlerWrapper
 parameter_list|(
 name|Handler

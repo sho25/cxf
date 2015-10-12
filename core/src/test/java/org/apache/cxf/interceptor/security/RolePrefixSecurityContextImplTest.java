@@ -476,7 +476,6 @@ specifier|private
 name|String
 name|roleName
 decl_stmt|;
-specifier|public
 name|RolePrincipal
 parameter_list|(
 name|String

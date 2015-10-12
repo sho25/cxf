@@ -88,32 +88,27 @@ name|oper
 decl_stmt|;
 end_decl_stmt
 
-begin_constructor
-specifier|private
+begin_expr_stmt
 name|KeyOperation
-parameter_list|(
+argument_list|(
 name|String
 name|oper
-parameter_list|)
+argument_list|)
 block|{
 name|this
 operator|.
 name|oper
 operator|=
 name|oper
-expr_stmt|;
-block|}
-end_constructor
-
-begin_function
+block|;     }
 specifier|public
 specifier|static
 name|KeyOperation
 name|getKeyOperation
-parameter_list|(
+argument_list|(
 name|String
 name|oper
-parameter_list|)
+argument_list|)
 block|{
 if|if
 condition|(
@@ -126,6 +121,9 @@ return|return
 literal|null
 return|;
 block|}
+end_expr_stmt
+
+begin_return
 return|return
 name|valueOf
 argument_list|(
@@ -135,11 +133,10 @@ name|toUpperCase
 argument_list|()
 argument_list|)
 return|;
-block|}
-end_function
+end_return
 
 begin_function
-specifier|public
+unit|}     public
 name|String
 name|toString
 parameter_list|()

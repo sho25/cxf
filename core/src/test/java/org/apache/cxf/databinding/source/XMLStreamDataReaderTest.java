@@ -285,7 +285,6 @@ specifier|private
 name|boolean
 name|closed
 decl_stmt|;
-specifier|public
 name|TestInputStream
 parameter_list|(
 name|byte

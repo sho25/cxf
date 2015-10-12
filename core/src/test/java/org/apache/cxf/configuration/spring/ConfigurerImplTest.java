@@ -1490,7 +1490,6 @@ operator|)
 literal|11
 argument_list|)
 decl_stmt|;
-specifier|public
 name|SimpleBean
 parameter_list|(
 name|String
@@ -1920,7 +1919,6 @@ name|ChildBean
 extends|extends
 name|SimpleBean
 block|{
-specifier|public
 name|ChildBean
 parameter_list|(
 name|String

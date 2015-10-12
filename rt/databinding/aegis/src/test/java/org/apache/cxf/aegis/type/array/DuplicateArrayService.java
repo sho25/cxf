@@ -106,7 +106,6 @@ argument_list|>
 name|foo
 parameter_list|)
 function_decl|;
-specifier|static
 class|class
 name|Foo
 parameter_list|<

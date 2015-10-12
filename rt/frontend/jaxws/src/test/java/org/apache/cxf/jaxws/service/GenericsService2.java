@@ -68,8 +68,6 @@ argument_list|>
 name|in
 parameter_list|)
 function_decl|;
-specifier|public
-specifier|static
 class|class
 name|Value
 parameter_list|<

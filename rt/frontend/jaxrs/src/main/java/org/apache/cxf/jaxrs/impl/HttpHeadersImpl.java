@@ -1834,7 +1834,6 @@ name|Float
 argument_list|>
 name|prefs
 decl_stmt|;
-specifier|public
 name|AcceptLanguageComparator
 parameter_list|(
 name|Map

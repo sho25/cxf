@@ -49,7 +49,6 @@ specifier|private
 name|boolean
 name|child
 decl_stmt|;
-specifier|public
 name|ElementProperty
 parameter_list|(
 name|QName

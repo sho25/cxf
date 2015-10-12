@@ -53,32 +53,27 @@ name|type
 decl_stmt|;
 end_decl_stmt
 
-begin_constructor
-specifier|private
+begin_expr_stmt
 name|KeyType
-parameter_list|(
+argument_list|(
 name|String
 name|type
-parameter_list|)
+argument_list|)
 block|{
 name|this
 operator|.
 name|type
 operator|=
 name|type
-expr_stmt|;
-block|}
-end_constructor
-
-begin_function
+block|;     }
 specifier|public
 specifier|static
 name|KeyType
 name|getKeyType
-parameter_list|(
+argument_list|(
 name|String
 name|type
-parameter_list|)
+argument_list|)
 block|{
 if|if
 condition|(
@@ -91,6 +86,9 @@ return|return
 literal|null
 return|;
 block|}
+end_expr_stmt
+
+begin_elseif
 elseif|else
 if|if
 condition|(
@@ -108,6 +106,9 @@ return|return
 name|OCTET
 return|;
 block|}
+end_elseif
+
+begin_else
 else|else
 block|{
 return|return
@@ -117,11 +118,10 @@ name|type
 argument_list|)
 return|;
 block|}
-block|}
-end_function
+end_else
 
 begin_function
-specifier|public
+unit|}     public
 name|String
 name|toString
 parameter_list|()

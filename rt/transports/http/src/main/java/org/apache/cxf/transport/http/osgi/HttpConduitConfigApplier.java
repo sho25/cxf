@@ -353,7 +353,6 @@ name|SECURE_HTTP_PREFIX
 init|=
 literal|"https"
 decl_stmt|;
-specifier|public
 name|HttpConduitConfigApplier
 parameter_list|()
 block|{     }

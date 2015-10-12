@@ -641,7 +641,6 @@ decl_stmt|;
 name|JAXBAttachmentMarshaller
 name|marshaller
 decl_stmt|;
-specifier|public
 name|MtomValidationHandler
 parameter_list|(
 name|ValidationEventHandler

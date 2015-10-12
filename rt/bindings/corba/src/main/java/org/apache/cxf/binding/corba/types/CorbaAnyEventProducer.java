@@ -855,7 +855,6 @@ decl_stmt|;
 name|String
 name|value
 decl_stmt|;
-specifier|public
 name|CorbaSimpleAnyContainedTypeEventProducer
 parameter_list|(
 name|String

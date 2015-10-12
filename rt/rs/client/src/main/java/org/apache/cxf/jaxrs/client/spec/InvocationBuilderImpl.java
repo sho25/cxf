@@ -1677,7 +1677,6 @@ name|?
 argument_list|>
 name|entity
 decl_stmt|;
-specifier|public
 name|InvocationImpl
 parameter_list|(
 name|String
@@ -1692,7 +1691,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|InvocationImpl
 parameter_list|(
 name|String

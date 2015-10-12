@@ -1377,7 +1377,6 @@ specifier|private
 name|boolean
 name|isInitialized
 decl_stmt|;
-specifier|public
 name|TestInterceptor
 parameter_list|()
 block|{
@@ -1389,7 +1388,6 @@ name|PRE_STREAM
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|TestInterceptor
 parameter_list|(
 name|String

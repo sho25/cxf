@@ -2118,7 +2118,6 @@ specifier|private
 name|QName
 name|lastStartElementQName
 decl_stmt|;
-specifier|public
 name|HeadersProcessor
 parameter_list|(
 name|SoapVersion

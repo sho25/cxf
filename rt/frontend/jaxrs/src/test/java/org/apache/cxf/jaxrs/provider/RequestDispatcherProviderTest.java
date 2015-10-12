@@ -210,7 +210,6 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
-specifier|static
 enum|enum
 name|TestEnum
 block|{

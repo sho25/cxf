@@ -433,7 +433,6 @@ name|DummyClassLoader
 extends|extends
 name|ClassLoader
 block|{
-specifier|public
 name|DummyClassLoader
 parameter_list|()
 block|{

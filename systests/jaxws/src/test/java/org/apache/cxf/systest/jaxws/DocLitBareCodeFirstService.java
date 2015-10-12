@@ -335,7 +335,6 @@ name|name
 operator|=
 literal|"SayTestObject"
 argument_list|)
-specifier|static
 class|class
 name|SayTestRequest
 block|{
@@ -416,7 +415,6 @@ name|name
 operator|=
 literal|"GreetMeObject"
 argument_list|)
-specifier|static
 class|class
 name|GreetMeRequest
 block|{
@@ -485,7 +483,6 @@ name|name
 operator|=
 literal|"GreetMeResponseObject"
 argument_list|)
-specifier|static
 class|class
 name|GreetMeResponse
 block|{

@@ -988,7 +988,6 @@ specifier|private
 name|DocumentDepthProperties
 name|depthProps
 decl_stmt|;
-specifier|public
 name|JettisonMappedReaderFactory
 parameter_list|(
 name|Configuration
@@ -1048,7 +1047,6 @@ name|String
 argument_list|>
 name|namespaceMap
 decl_stmt|;
-specifier|public
 name|JettisonReader
 parameter_list|(
 name|Map

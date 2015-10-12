@@ -120,7 +120,6 @@ specifier|public
 annotation_defn|@interface
 name|SchemaValidation
 block|{
-specifier|public
 enum|enum
 name|SchemaValidationType
 block|{

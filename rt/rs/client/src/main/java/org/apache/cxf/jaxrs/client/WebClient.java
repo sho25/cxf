@@ -6278,7 +6278,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|ClientAsyncResponseInterceptor
 parameter_list|()
 block|{

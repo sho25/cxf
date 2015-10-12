@@ -578,7 +578,6 @@ name|IIOPMessage
 extends|extends
 name|AbstractWrappedMessage
 block|{
-specifier|public
 name|IIOPMessage
 parameter_list|(
 name|Message

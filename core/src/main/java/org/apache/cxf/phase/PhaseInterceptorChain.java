@@ -3796,7 +3796,6 @@ decl_stmt|;
 name|InterceptorHolder
 name|first
 decl_stmt|;
-specifier|public
 name|PhaseInterceptorIterator
 parameter_list|(
 name|InterceptorHolder

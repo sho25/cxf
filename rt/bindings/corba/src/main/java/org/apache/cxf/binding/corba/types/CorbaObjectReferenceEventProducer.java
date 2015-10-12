@@ -1146,7 +1146,6 @@ name|Attribute
 argument_list|>
 name|metaAttrs
 decl_stmt|;
-specifier|public
 name|CorbaMetaDataEventProducer
 parameter_list|(
 name|CorbaServiceNameEventProducer
@@ -1163,7 +1162,6 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-specifier|public
 name|CorbaMetaDataEventProducer
 parameter_list|(
 name|String
@@ -1353,7 +1351,6 @@ name|Namespace
 argument_list|>
 name|namespaces
 decl_stmt|;
-specifier|public
 name|CorbaServiceNameEventProducer
 parameter_list|(
 name|QName

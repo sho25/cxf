@@ -210,7 +210,6 @@ init|=
 literal|"org.apache.cxf.transport.http.netty.usePolicy"
 decl_stmt|;
 specifier|public
-specifier|static
 enum|enum
 name|UseAsyncPolicy
 block|{

@@ -1790,7 +1790,6 @@ expr_stmt|;
 block|}
 block|}
 specifier|public
-specifier|static
 enum|enum
 name|CarType
 block|{

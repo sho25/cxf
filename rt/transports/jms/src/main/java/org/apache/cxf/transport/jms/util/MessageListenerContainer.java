@@ -332,7 +332,6 @@ specifier|private
 name|Session
 name|session
 decl_stmt|;
-specifier|public
 name|LocalTransactionalMessageListener
 parameter_list|(
 name|Session

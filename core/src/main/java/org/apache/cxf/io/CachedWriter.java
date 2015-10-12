@@ -497,7 +497,6 @@ name|LoadingCharArrayWriter
 extends|extends
 name|CharArrayWriter
 block|{
-specifier|public
 name|LoadingCharArrayWriter
 parameter_list|()
 block|{

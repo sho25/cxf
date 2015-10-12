@@ -6362,7 +6362,6 @@ name|Annotation
 index|[]
 name|anns
 decl_stmt|;
-specifier|public
 name|BeanPair
 parameter_list|(
 name|Object

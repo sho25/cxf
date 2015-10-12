@@ -1678,7 +1678,6 @@ specifier|private
 name|InputStream
 name|delegate
 decl_stmt|;
-specifier|public
 name|ServletInputStreamAdapter
 parameter_list|(
 name|InputStream

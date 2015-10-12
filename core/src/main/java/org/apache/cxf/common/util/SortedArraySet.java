@@ -1052,7 +1052,6 @@ decl_stmt|;
 name|int
 name|idx
 decl_stmt|;
-specifier|public
 name|SASIterator
 parameter_list|(
 name|X

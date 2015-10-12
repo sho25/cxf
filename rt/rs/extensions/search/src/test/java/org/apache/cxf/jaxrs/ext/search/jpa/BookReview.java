@@ -223,7 +223,6 @@ name|authors
 expr_stmt|;
 block|}
 specifier|public
-specifier|static
 enum|enum
 name|Review
 block|{

@@ -83,7 +83,6 @@ extends|extends
 name|AbstractFeature
 block|{
 specifier|public
-specifier|static
 enum|enum
 name|AddressingResponses
 block|{

@@ -87,7 +87,6 @@ name|HandlerUrlConnection
 extends|extends
 name|URLConnection
 block|{
-specifier|public
 name|HandlerUrlConnection
 parameter_list|(
 name|URL

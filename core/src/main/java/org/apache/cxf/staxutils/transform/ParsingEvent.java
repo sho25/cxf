@@ -49,7 +49,6 @@ specifier|private
 name|String
 name|value
 decl_stmt|;
-specifier|public
 name|ParsingEvent
 parameter_list|(
 name|int

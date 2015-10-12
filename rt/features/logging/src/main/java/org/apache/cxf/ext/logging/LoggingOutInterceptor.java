@@ -496,7 +496,6 @@ specifier|private
 name|LogEventSender
 name|sender
 decl_stmt|;
-specifier|public
 name|LogEventSendingWriter
 parameter_list|(
 name|LogEventSender

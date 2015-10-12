@@ -144,7 +144,6 @@ name|ByteArrayInputStream
 implements|implements
 name|Transferable
 block|{
-specifier|public
 name|LoadedByteArrayInputStream
 parameter_list|(
 name|byte

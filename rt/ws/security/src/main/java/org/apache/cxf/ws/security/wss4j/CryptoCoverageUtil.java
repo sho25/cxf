@@ -1367,7 +1367,6 @@ return|;
 block|}
 comment|/**      * Differentiates which type of cryptographic coverage to check for.      */
 specifier|public
-specifier|static
 enum|enum
 name|CoverageType
 block|{
@@ -1379,7 +1378,6 @@ name|SIGNED
 block|}
 comment|/**      * Differentiates which part of an element to check for cryptographic coverage.      */
 specifier|public
-specifier|static
 enum|enum
 name|CoverageScope
 block|{

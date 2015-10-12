@@ -735,7 +735,6 @@ init|=
 literal|"org.apache.cxf.transport.http.async.usePolicy"
 decl_stmt|;
 specifier|public
-specifier|static
 enum|enum
 name|UseAsyncPolicy
 block|{

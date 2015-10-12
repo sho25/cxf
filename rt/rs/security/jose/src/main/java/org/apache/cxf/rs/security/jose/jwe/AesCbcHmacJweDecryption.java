@@ -338,7 +338,6 @@ name|AbstractContentEncryptionCipherProperties
 implements|implements
 name|ContentDecryptionProvider
 block|{
-specifier|public
 name|AesCbcContentDecryptionAlgorithm
 parameter_list|(
 name|ContentAlgorithm

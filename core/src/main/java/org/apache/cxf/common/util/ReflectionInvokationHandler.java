@@ -1106,7 +1106,6 @@ name|?
 argument_list|>
 name|internal
 decl_stmt|;
-specifier|public
 name|WrapperIterator
 parameter_list|(
 name|Class

@@ -1452,7 +1452,6 @@ specifier|final
 name|Message
 name|message
 decl_stmt|;
-specifier|public
 name|ContextualBooleanGetter
 parameter_list|(
 name|Message

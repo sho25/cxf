@@ -7040,7 +7040,6 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
 name|ConnectionFaultInterceptor
 parameter_list|()
 block|{

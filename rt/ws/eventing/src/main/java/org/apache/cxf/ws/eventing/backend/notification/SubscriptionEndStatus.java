@@ -70,36 +70,31 @@ name|namespace
 decl_stmt|;
 end_decl_stmt
 
-begin_constructor
-specifier|private
+begin_expr_stmt
 name|SubscriptionEndStatus
-parameter_list|(
+argument_list|(
 name|String
 name|namespace
-parameter_list|)
+argument_list|)
 block|{
 name|this
 operator|.
 name|namespace
 operator|=
 name|namespace
-expr_stmt|;
-block|}
-end_constructor
-
-begin_function
-annotation|@
+block|;     }
+expr|@
 name|Override
 specifier|public
 name|String
 name|toString
-parameter_list|()
+argument_list|()
 block|{
 return|return
 name|namespace
 return|;
 block|}
-end_function
+end_expr_stmt
 
 unit|}
 end_unit

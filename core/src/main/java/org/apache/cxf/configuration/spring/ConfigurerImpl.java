@@ -492,7 +492,6 @@ decl_stmt|;
 name|String
 name|wildCardId
 decl_stmt|;
-specifier|public
 name|MatcherHolder
 parameter_list|(
 name|String

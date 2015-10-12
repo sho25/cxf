@@ -109,7 +109,6 @@ specifier|final
 name|int
 name|keySizeBits
 decl_stmt|;
-specifier|private
 name|ContentAlgorithm
 parameter_list|(
 name|String

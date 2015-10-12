@@ -68,34 +68,29 @@ name|oauthName
 decl_stmt|;
 end_decl_stmt
 
-begin_constructor
-specifier|private
+begin_expr_stmt
 name|HmacAlgorithm
-parameter_list|(
+argument_list|(
 name|String
 name|oauthName
-parameter_list|)
+argument_list|)
 block|{
 name|this
 operator|.
 name|oauthName
 operator|=
 name|oauthName
-expr_stmt|;
-block|}
-end_constructor
-
-begin_function
+block|;     }
 specifier|public
 name|String
 name|getOAuthName
-parameter_list|()
+argument_list|()
 block|{
 return|return
 name|oauthName
 return|;
 block|}
-end_function
+end_expr_stmt
 
 begin_function
 specifier|public

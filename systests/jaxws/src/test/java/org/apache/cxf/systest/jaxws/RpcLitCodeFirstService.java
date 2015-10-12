@@ -516,7 +516,6 @@ argument_list|>
 name|listObjectArrayOutput
 parameter_list|()
 function_decl|;
-specifier|static
 class|class
 name|Foo
 block|{

@@ -131,7 +131,6 @@ specifier|private
 name|ClassLoader
 name|loader
 decl_stmt|;
-specifier|public
 name|ClientMessageObserver
 parameter_list|(
 name|ClientConfiguration

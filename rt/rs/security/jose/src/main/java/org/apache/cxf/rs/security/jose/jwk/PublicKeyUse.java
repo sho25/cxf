@@ -46,32 +46,27 @@ name|use
 decl_stmt|;
 end_decl_stmt
 
-begin_constructor
-specifier|private
+begin_expr_stmt
 name|PublicKeyUse
-parameter_list|(
+argument_list|(
 name|String
 name|use
-parameter_list|)
+argument_list|)
 block|{
 name|this
 operator|.
 name|use
 operator|=
 name|use
-expr_stmt|;
-block|}
-end_constructor
-
-begin_function
+block|;     }
 specifier|public
 specifier|static
 name|PublicKeyUse
 name|getPublicKeyUse
-parameter_list|(
+argument_list|(
 name|String
 name|use
-parameter_list|)
+argument_list|)
 block|{
 if|if
 condition|(
@@ -84,6 +79,9 @@ return|return
 literal|null
 return|;
 block|}
+end_expr_stmt
+
+begin_if
 if|if
 condition|(
 name|JsonWebKey
@@ -126,11 +124,10 @@ name|use
 argument_list|)
 return|;
 block|}
-block|}
-end_function
+end_if
 
 begin_function
-specifier|public
+unit|}     public
 name|String
 name|toString
 parameter_list|()

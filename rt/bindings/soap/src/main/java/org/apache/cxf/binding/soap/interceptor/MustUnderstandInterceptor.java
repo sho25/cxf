@@ -1410,7 +1410,6 @@ name|QName
 argument_list|>
 name|knownHeaders
 decl_stmt|;
-specifier|public
 name|UltimateReceiverMustUnderstandInterceptor
 parameter_list|(
 name|Set

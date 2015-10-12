@@ -89,7 +89,6 @@ class|class
 name|JavaType
 block|{
 specifier|public
-specifier|static
 enum|enum
 name|Style
 block|{

@@ -188,7 +188,6 @@ comment|//args[0] is the size of the pool
 name|PerRequest
 block|}
 empty_stmt|;
-specifier|static
 specifier|final
 class|class
 name|DEFAULT

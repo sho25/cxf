@@ -181,7 +181,6 @@ block|,
 name|SERVICE_PORT
 block|,     }
 empty_stmt|;
-specifier|static
 specifier|final
 class|class
 name|DEFAULT

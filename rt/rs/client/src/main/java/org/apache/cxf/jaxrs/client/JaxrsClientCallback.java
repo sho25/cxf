@@ -157,7 +157,6 @@ name|?
 argument_list|>
 name|responseClass
 decl_stmt|;
-specifier|public
 name|JaxrsClientCallback
 parameter_list|(
 specifier|final
@@ -430,7 +429,6 @@ name|T
 argument_list|>
 name|callback
 decl_stmt|;
-specifier|public
 name|JaxrsResponseCallback
 parameter_list|(
 name|JaxrsClientCallback

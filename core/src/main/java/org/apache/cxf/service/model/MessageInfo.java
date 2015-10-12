@@ -97,7 +97,6 @@ extends|extends
 name|AbstractMessageContainer
 block|{
 specifier|public
-specifier|static
 enum|enum
 name|Type
 block|{

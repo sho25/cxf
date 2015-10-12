@@ -1528,7 +1528,6 @@ name|Attachment
 argument_list|>
 name|list
 decl_stmt|;
-specifier|public
 name|DHMap
 parameter_list|(
 name|Collection

@@ -668,7 +668,6 @@ name|Object
 argument_list|>
 name|unmarshallerProperties
 decl_stmt|;
-specifier|public
 name|JAXBContextInitializer
 parameter_list|(
 name|ServiceInfo

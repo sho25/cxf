@@ -105,7 +105,6 @@ name|status
 return|;
 block|}
 specifier|public
-specifier|static
 enum|enum
 name|Error
 block|{
