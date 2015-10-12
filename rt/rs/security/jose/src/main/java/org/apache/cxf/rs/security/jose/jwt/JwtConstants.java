@@ -83,6 +83,14 @@ name|CLAIM_JWT_ID
 init|=
 literal|"jti"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JWT_TOKEN
+init|=
+literal|"jwt.token"
+decl_stmt|;
 specifier|private
 name|JwtConstants
 parameter_list|()
