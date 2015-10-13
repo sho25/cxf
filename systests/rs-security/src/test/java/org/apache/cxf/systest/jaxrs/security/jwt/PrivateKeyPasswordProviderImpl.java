@@ -45,7 +45,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jaxrs
+name|common
 operator|.
 name|PrivateKeyPasswordProvider
 import|;
