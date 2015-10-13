@@ -123,6 +123,8 @@ name|security
 operator|.
 name|jose
 operator|.
+name|common
+operator|.
 name|JoseConstants
 import|;
 end_import
@@ -140,6 +142,8 @@ operator|.
 name|security
 operator|.
 name|jose
+operator|.
+name|common
 operator|.
 name|JoseUtils
 import|;

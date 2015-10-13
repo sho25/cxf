@@ -16,6 +16,8 @@ operator|.
 name|security
 operator|.
 name|jose
+operator|.
+name|common
 package|;
 end_package
 

@@ -51,6 +51,8 @@ name|security
 operator|.
 name|jose
 operator|.
+name|common
+operator|.
 name|AbstractJoseProducer
 import|;
 end_import
