@@ -1046,9 +1046,9 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|HTTP_PUT_METHOD
+name|HTTP_GET_METHOD
 init|=
-literal|"PUT"
+literal|"GET"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -2303,9 +2303,11 @@ return|return
 literal|true
 return|;
 block|}
+elseif|else
 if|if
 condition|(
-name|HTTP_PUT_METHOD
+operator|!
+name|HTTP_GET_METHOD
 operator|.
 name|equals
 argument_list|(
