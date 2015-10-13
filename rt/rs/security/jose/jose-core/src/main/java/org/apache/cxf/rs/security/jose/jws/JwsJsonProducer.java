@@ -95,20 +95,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|MultivaluedMap
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -587,25 +573,7 @@ return|return
 name|signatures
 return|;
 block|}
-specifier|public
-name|MultivaluedMap
-argument_list|<
-name|SignatureAlgorithm
-argument_list|,
-name|JwsJsonSignatureEntry
-argument_list|>
-name|getSignatureEntryMap
-parameter_list|()
-block|{
-return|return
-name|JwsUtils
-operator|.
-name|getJwsJsonSignatureMap
-argument_list|(
-name|signatures
-argument_list|)
-return|;
-block|}
+comment|/*      * TODO     public MultivaluedMap<SignatureAlgorithm, JwsJsonSignatureEntry> getSignatureEntryMap() {         return JwsUtils.getJwsJsonSignatureMap(signatures);     }     */
 specifier|public
 name|String
 name|signWith

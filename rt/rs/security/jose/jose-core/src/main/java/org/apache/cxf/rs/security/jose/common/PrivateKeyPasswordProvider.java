@@ -17,7 +17,7 @@ name|security
 operator|.
 name|jose
 operator|.
-name|jaxrs
+name|common
 package|;
 end_package
 

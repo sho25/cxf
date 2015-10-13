@@ -85,20 +85,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|core
-operator|.
-name|MultivaluedMap
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -759,11 +745,14 @@ argument_list|)
 return|;
 block|}
 specifier|public
-name|MultivaluedMap
+name|Map
 argument_list|<
 name|SignatureAlgorithm
 argument_list|,
+name|List
+argument_list|<
 name|JwsJsonSignatureEntry
+argument_list|>
 argument_list|>
 name|getSignatureEntryMap
 parameter_list|()
