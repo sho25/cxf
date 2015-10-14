@@ -91,6 +91,14 @@ name|JWT_TOKEN
 init|=
 literal|"jwt.token"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JWT_CLAIMS
+init|=
+literal|"jwt.claims"
+decl_stmt|;
 specifier|private
 name|JwtConstants
 parameter_list|()
