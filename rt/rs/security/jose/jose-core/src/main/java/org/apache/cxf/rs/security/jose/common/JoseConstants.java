@@ -203,6 +203,325 @@ name|JOSE_CONTEXT_PROPERTY
 init|=
 literal|"org.apache.cxf.jose.context"
 decl_stmt|;
+comment|//
+comment|// JOSE Configuration constants
+comment|//
+comment|//
+comment|// Keys/keystore configuration
+comment|//
+comment|/**      * The keystore type. Suitable values are "jks" or "jwk".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_TYPE
+init|=
+literal|"rs.security.keystore.type"
+decl_stmt|;
+comment|/**      * The password required to access the keystore.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_PSWD
+init|=
+literal|"rs.security.keystore.password"
+decl_stmt|;
+comment|/**      * The password required to access the private key (in the keystore).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_PSWD
+init|=
+literal|"rs.security.key.password"
+decl_stmt|;
+comment|/**      * The keystore alias corresponding to the key to use      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_ALIAS
+init|=
+literal|"rs.security.keystore.alias"
+decl_stmt|;
+comment|/**      * The keystore aliases corresponding to the keys to use, when using the JSON serialization form.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_ALIASES
+init|=
+literal|"rs.security.keystore.aliases"
+decl_stmt|;
+comment|/**      * The path to the keystore file.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_FILE
+init|=
+literal|"rs.security.keystore.file"
+decl_stmt|;
+comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_PSWD_PROVIDER
+init|=
+literal|"rs.security.key.password.provider"
+decl_stmt|;
+comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys      * for signature.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIG_KEY_PSWD_PROVIDER
+init|=
+literal|"rs.security.signature.key.password.provider"
+decl_stmt|;
+comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys      * for decryption.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_DECRYPT_KEY_PSWD_PROVIDER
+init|=
+literal|"rs.security.decryption.key.password.provider"
+decl_stmt|;
+comment|/**      * TODO documentation for these      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_DEFAULT_ALGORITHMS
+init|=
+literal|"rs.security.default.algorithms"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_REPORT_KEY_PROP
+init|=
+literal|"rs.security.report.public.key"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_REPORT_KEY_ID_PROP
+init|=
+literal|"rs.security.report.public.key.id"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ACCEPT_PUBLIC_KEY_PROP
+init|=
+literal|"rs.security.accept.public.key.properties"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_JWKSET
+init|=
+literal|"rs.security.keystore.jwkset"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE_JWKKEY
+init|=
+literal|"rs.security.keystore.jwkkey"
+decl_stmt|;
+comment|//
+comment|// JWS specific Configuration
+comment|//
+comment|/**      * The signature algorithm to use. For example 'RS256'.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_ALGORITHM
+init|=
+literal|"rs.security.signature.algorithm"
+decl_stmt|;
+comment|/**      * The OLD signature algorithm identifier. Use RSSEC_SIGNATURE_ALGORITHM instead.      */
+annotation|@
+name|Deprecated
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DEPR_RSSEC_SIGNATURE_ALGORITHM
+init|=
+literal|"rs.security.jws.content.signature.algorithm"
+decl_stmt|;
+comment|/**      * The signature properties file for signature creation.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_OUT_PROPS
+init|=
+literal|"rs.security.signature.out.properties"
+decl_stmt|;
+comment|/**      * The signature properties file for signature verification.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_IN_PROPS
+init|=
+literal|"rs.security.signature.in.properties"
+decl_stmt|;
+comment|/**      * The signature properties file for signature creation/verification.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_PROPS
+init|=
+literal|"rs.security.signature.properties"
+decl_stmt|;
+comment|/**      * Whether a "none" signature is allowed or not. The default is "false".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_ALLOW_NONE_SIGNATURE
+init|=
+literal|"rs.security.signature.allow.none"
+decl_stmt|;
+comment|/**      * TODO documentation for these      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_REPORT_KEY_PROP
+init|=
+literal|"rs.security.signature.report.public.key"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_REPORT_KEY_ID_PROP
+init|=
+literal|"rs.security.signature.report.public.key.id"
+decl_stmt|;
+comment|//
+comment|// JWE specific Configuration
+comment|//
+comment|/**      * The encryption content algorithm to use.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_CONTENT_ALGORITHM
+init|=
+literal|"rs.security.encryption.content.algorithm"
+decl_stmt|;
+comment|/**      * The OLD encryption content algorithm to use. Use RSSEC_ENCRYPTION_CONTENT_ALGORITHM instead.      */
+annotation|@
+name|Deprecated
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DEPR_RSSEC_ENCRYPTION_CONTENT_ALGORITHM
+init|=
+literal|"rs.security.jwe.content.encryption.algorithm"
+decl_stmt|;
+comment|/**      * The encryption key algorithm to use.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_KEY_ALGORITHM
+init|=
+literal|"rs.security.encryption.key.algorithm"
+decl_stmt|;
+comment|/**      * The OLD encryption key algorithm to use. Use RSSEC_ENCRYPTION_KEY_ALGORITHM instead.      */
+annotation|@
+name|Deprecated
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DEPR_RSSEC_ENCRYPTION_KEY_ALGORITHM
+init|=
+literal|"rs.security.jwe.key.encryption.algorithm"
+decl_stmt|;
+comment|/**      * The encryption zip algorithm to use.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_ZIP_ALGORITHM
+init|=
+literal|"rs.security.encryption.zip.algorithm"
+decl_stmt|;
+comment|/**      * The OLD encryption zip algorithm to use. Use RSSEC_ENCRYPTION_ZIP_ALGORITHM instead.      */
+annotation|@
+name|Deprecated
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DEPR_RSSEC_ENCRYPTION_ZIP_ALGORITHM
+init|=
+literal|"rs.security.jwe.zip.algorithm"
+decl_stmt|;
+comment|/**      * The encryption properties file      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_OUT_PROPS
+init|=
+literal|"rs.security.encryption.out.properties"
+decl_stmt|;
+comment|/**      * The decryption properties file      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_IN_PROPS
+init|=
+literal|"rs.security.encryption.in.properties"
+decl_stmt|;
+comment|/**      * The encryption/decryption properties file      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_PROPS
+init|=
+literal|"rs.security.encryption.properties"
+decl_stmt|;
+comment|/**      * TODO documentation for these      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_REPORT_KEY_PROP
+init|=
+literal|"rs.security.encryption.report.public.key"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_REPORT_KEY_ID_PROP
+init|=
+literal|"rs.security.encryption.report.public.key.id"
+decl_stmt|;
 specifier|private
 name|JoseConstants
 parameter_list|()
