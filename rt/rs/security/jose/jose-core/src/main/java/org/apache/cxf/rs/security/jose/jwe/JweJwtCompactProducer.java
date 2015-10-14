@@ -27,9 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|interfaces
-operator|.
-name|RSAPublicKey
+name|PublicKey
 import|;
 end_import
 
@@ -253,7 +251,7 @@ specifier|public
 name|String
 name|encryptWith
 parameter_list|(
-name|RSAPublicKey
+name|PublicKey
 name|key
 parameter_list|)
 block|{
