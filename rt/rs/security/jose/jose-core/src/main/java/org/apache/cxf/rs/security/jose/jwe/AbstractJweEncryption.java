@@ -795,6 +795,16 @@ name|SecurityException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+name|ex
+operator|.
+name|getMessage
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|ex

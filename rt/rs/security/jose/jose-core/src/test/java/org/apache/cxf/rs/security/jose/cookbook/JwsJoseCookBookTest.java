@@ -2180,10 +2180,7 @@ name|removeProvider
 argument_list|(
 name|BouncyCastleProvider
 operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
+name|PROVIDER_NAME
 argument_list|)
 expr_stmt|;
 block|}
@@ -2440,10 +2437,7 @@ name|removeProvider
 argument_list|(
 name|BouncyCastleProvider
 operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
+name|PROVIDER_NAME
 argument_list|)
 expr_stmt|;
 block|}
@@ -4016,10 +4010,7 @@ name|removeProvider
 argument_list|(
 name|BouncyCastleProvider
 operator|.
-name|class
-operator|.
-name|getName
-argument_list|()
+name|PROVIDER_NAME
 argument_list|)
 expr_stmt|;
 block|}
