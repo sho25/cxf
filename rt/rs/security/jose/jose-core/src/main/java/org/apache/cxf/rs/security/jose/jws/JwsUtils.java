@@ -2670,7 +2670,7 @@ name|SuppressWarnings
 argument_list|(
 literal|"deprecation"
 argument_list|)
-specifier|private
+specifier|public
 specifier|static
 name|String
 name|getSignatureAlgo
