@@ -87,7 +87,9 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|Sampler
+name|core
+operator|.
+name|TraceScope
 import|;
 end_import
 
@@ -99,7 +101,9 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|TraceScope
+name|core
+operator|.
+name|Tracer
 import|;
 end_import
 
@@ -118,18 +122,15 @@ name|String
 name|phase
 parameter_list|,
 specifier|final
-name|Sampler
-argument_list|<
-name|?
-argument_list|>
-name|sampler
+name|Tracer
+name|tracer
 parameter_list|)
 block|{
 name|super
 argument_list|(
 name|phase
 argument_list|,
-name|sampler
+name|tracer
 argument_list|)
 expr_stmt|;
 block|}
@@ -145,6 +146,7 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
+specifier|final
 name|Map
 argument_list|<
 name|String
@@ -178,8 +180,12 @@ name|PROTOCOL_HEADERS
 argument_list|)
 argument_list|)
 decl_stmt|;
+specifier|final
+name|TraceScopeHolder
+argument_list|<
 name|TraceScope
-name|scope
+argument_list|>
+name|holder
 init|=
 name|super
 operator|.
@@ -212,6 +218,13 @@ name|HTTP_REQUEST_METHOD
 argument_list|)
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|holder
+operator|!=
+literal|null
+condition|)
+block|{
 name|message
 operator|.
 name|getExchange
@@ -221,9 +234,10 @@ name|put
 argument_list|(
 name|TRACE_SPAN
 argument_list|,
-name|scope
+name|holder
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

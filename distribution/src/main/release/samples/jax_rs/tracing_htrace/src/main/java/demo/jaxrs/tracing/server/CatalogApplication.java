@@ -145,6 +145,22 @@ name|apache
 operator|.
 name|htrace
 operator|.
+name|core
+operator|.
+name|AlwaysSampler
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|htrace
+operator|.
+name|core
+operator|.
 name|HTraceConfiguration
 import|;
 end_import
@@ -157,9 +173,9 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|impl
+name|core
 operator|.
-name|AlwaysSampler
+name|Tracer
 import|;
 end_import
 
@@ -226,6 +242,8 @@ argument_list|(
 name|getTracingProperties
 argument_list|()
 argument_list|)
+argument_list|,
+literal|"catalog-server"
 argument_list|)
 argument_list|,
 operator|new
@@ -286,7 +304,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"span.receiver"
+name|Tracer
+operator|.
+name|SPAN_RECEIVER_CLASSES_KEY
 argument_list|,
 name|TracingConfiguration
 operator|.
@@ -300,7 +320,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"sampler"
+name|Tracer
+operator|.
+name|SAMPLER_CLASSES_KEY
 argument_list|,
 name|AlwaysSampler
 operator|.

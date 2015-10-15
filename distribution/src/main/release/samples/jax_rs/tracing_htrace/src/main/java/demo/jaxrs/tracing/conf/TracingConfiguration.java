@@ -23,6 +23,8 @@ name|apache
 operator|.
 name|htrace
 operator|.
+name|core
+operator|.
 name|SpanReceiver
 import|;
 end_import
@@ -35,7 +37,7 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|impl
+name|core
 operator|.
 name|StandardOutSpanReceiver
 import|;

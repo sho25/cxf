@@ -91,7 +91,9 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|Trace
+name|core
+operator|.
+name|TraceScope
 import|;
 end_import
 
@@ -103,7 +105,9 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|TraceScope
+name|core
+operator|.
+name|Tracer
 import|;
 end_import
 
@@ -141,9 +145,12 @@ specifier|final
 name|TraceScope
 name|span
 init|=
-name|Trace
+name|Tracer
 operator|.
-name|startSpan
+name|curThreadTracer
+argument_list|()
+operator|.
+name|newScope
 argument_list|(
 literal|"Get Books"
 argument_list|)

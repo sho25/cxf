@@ -265,6 +265,8 @@ name|apache
 operator|.
 name|htrace
 operator|.
+name|core
+operator|.
 name|TraceScope
 import|;
 end_import

@@ -83,7 +83,9 @@ name|apache
 operator|.
 name|htrace
 operator|.
-name|Sampler
+name|core
+operator|.
+name|Tracer
 import|;
 end_import
 
@@ -112,16 +114,13 @@ name|String
 name|phase
 parameter_list|,
 specifier|final
-name|Sampler
-argument_list|<
-name|?
-argument_list|>
-name|sampler
+name|Tracer
+name|tracer
 parameter_list|)
 block|{
 name|super
 argument_list|(
-name|sampler
+name|tracer
 argument_list|)
 expr_stmt|;
 name|this

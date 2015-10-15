@@ -49,7 +49,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Starts a new span in the current thread.      * @param desription span description      * @return span instance object      */
+comment|/**      * Starts a new span in the current thread.      * @param description span description      * @return span instance object      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -58,10 +58,10 @@ name|startSpan
 parameter_list|(
 specifier|final
 name|String
-name|desription
+name|description
 parameter_list|)
 function_decl|;
-comment|/**      * Wraps the traceable into a new span, preserving the current span as a parent.      * @param desription span description      * @param traceable  traceable implementation to be wrapped      * @return callable to be executed (in current thread or any other thread pool)      */
+comment|/**      * Wraps the traceable into a new span, preserving the current span as a parent.      * @param description span description      * @param traceable  traceable implementation to be wrapped      * @return callable to be executed (in current thread or any other thread pool)      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -73,7 +73,7 @@ name|wrap
 parameter_list|(
 specifier|final
 name|String
-name|desription
+name|description
 parameter_list|,
 specifier|final
 name|Traceable
