@@ -207,7 +207,7 @@ comment|//
 comment|// JOSE Configuration constants
 comment|//
 comment|//
-comment|// Keys/keystore configuration
+comment|// Shared Keys/keystore configuration
 comment|//
 comment|/**      * The keystore type. Suitable values are "jks" or "jwk".      */
 specifier|public
@@ -272,24 +272,6 @@ name|RSSEC_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.key.password.provider"
 decl_stmt|;
-comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys      * for signature.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIG_KEY_PSWD_PROVIDER
-init|=
-literal|"rs.security.signature.key.password.provider"
-decl_stmt|;
-comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys      * for decryption.      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_DECRYPT_KEY_PSWD_PROVIDER
-init|=
-literal|"rs.security.decryption.key.password.provider"
-decl_stmt|;
 comment|/**      * TODO documentation for these      */
 specifier|public
 specifier|static
@@ -342,6 +324,15 @@ decl_stmt|;
 comment|//
 comment|// JWS specific Configuration
 comment|//
+comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys      * for signature. If this is not specified it falls back to use the RSSEC_KEY_PSWD_PROVIDER.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_KEY_PSWD_PROVIDER
+init|=
+literal|"rs.security.signature.key.password.provider"
+decl_stmt|;
 comment|/**      * The signature algorithm to use. For example 'RS256'.      */
 specifier|public
 specifier|static
@@ -418,6 +409,15 @@ decl_stmt|;
 comment|//
 comment|// JWE specific Configuration
 comment|//
+comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys      * for decryption. If this is not specified it falls back to use the RSSEC_KEY_PSWD_PROVIDER.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_DECRYPTION_KEY_PSWD_PROVIDER
+init|=
+literal|"rs.security.decryption.key.password.provider"
+decl_stmt|;
 comment|/**      * The encryption content algorithm to use.      */
 specifier|public
 specifier|static
