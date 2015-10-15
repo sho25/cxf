@@ -3208,7 +3208,7 @@ name|HttpHeaders
 operator|.
 name|ACCEPT_LANGUAGE
 argument_list|,
-literal|"en;q=0.7, en-gb;q=0.8, da"
+literal|"en;q=0.7, en-gb;q=0.8, da, zh-Hans-SG;q=0.9"
 argument_list|)
 decl_stmt|;
 name|EasyMock
@@ -3248,7 +3248,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|3
+literal|4
 argument_list|,
 name|languages
 operator|.
@@ -3277,9 +3277,9 @@ argument_list|(
 operator|new
 name|Locale
 argument_list|(
-literal|"en"
+literal|"zh"
 argument_list|,
-literal|"GB"
+literal|"Hans-SG"
 argument_list|)
 argument_list|,
 name|languages
@@ -3296,6 +3296,8 @@ operator|new
 name|Locale
 argument_list|(
 literal|"en"
+argument_list|,
+literal|"GB"
 argument_list|)
 argument_list|,
 name|languages
@@ -3303,6 +3305,22 @@ operator|.
 name|get
 argument_list|(
 literal|2
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+operator|new
+name|Locale
+argument_list|(
+literal|"en"
+argument_list|)
+argument_list|,
+name|languages
+operator|.
+name|get
+argument_list|(
+literal|3
 argument_list|)
 argument_list|)
 expr_stmt|;
