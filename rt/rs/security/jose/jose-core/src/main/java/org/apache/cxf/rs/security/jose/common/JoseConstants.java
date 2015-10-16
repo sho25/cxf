@@ -277,14 +277,6 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_DEFAULT_ALGORITHMS
-init|=
-literal|"rs.security.default.algorithms"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
 name|RSSEC_REPORT_KEY_PROP
 init|=
 literal|"rs.security.report.public.key"
