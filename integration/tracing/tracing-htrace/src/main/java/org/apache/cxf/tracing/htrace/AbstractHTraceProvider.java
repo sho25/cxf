@@ -606,7 +606,7 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"Unable to parse '%s' header value to long number"
+literal|"Unable to parse '%s' header value to Span Id"
 argument_list|,
 name|header
 argument_list|)
