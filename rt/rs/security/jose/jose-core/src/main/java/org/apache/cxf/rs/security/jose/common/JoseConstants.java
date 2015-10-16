@@ -345,7 +345,7 @@ name|DEPR_RSSEC_SIGNATURE_ALGORITHM
 init|=
 literal|"rs.security.jws.content.signature.algorithm"
 decl_stmt|;
-comment|/**      * The signature properties file for signature creation.      */
+comment|/**      * The signature properties file for signature creation. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -354,7 +354,7 @@ name|RSSEC_SIGNATURE_OUT_PROPS
 init|=
 literal|"rs.security.signature.out.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for signature verification.      */
+comment|/**      * The signature properties file for signature verification. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -470,7 +470,7 @@ name|DEPR_RSSEC_ENCRYPTION_ZIP_ALGORITHM
 init|=
 literal|"rs.security.jwe.zip.algorithm"
 decl_stmt|;
-comment|/**      * The encryption properties file      */
+comment|/**      * The encryption properties file for encryption creation. If not specified then it falls back to       * RSSEC_ENCRYPTION_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -479,7 +479,7 @@ name|RSSEC_ENCRYPTION_OUT_PROPS
 init|=
 literal|"rs.security.encryption.out.properties"
 decl_stmt|;
-comment|/**      * The decryption properties file      */
+comment|/**      * The decryption properties file for decryption. If not specified then it falls back to       * RSSEC_ENCRYPTION_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
