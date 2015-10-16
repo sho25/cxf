@@ -41,9 +41,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
-operator|.
 name|json
+operator|.
+name|basic
 operator|.
 name|JsonMapObject
 import|;
