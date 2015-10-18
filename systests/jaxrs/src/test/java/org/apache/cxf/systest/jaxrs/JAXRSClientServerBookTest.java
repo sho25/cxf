@@ -3394,7 +3394,7 @@ name|book
 init|=
 name|store
 operator|.
-name|getBeanParamBook2
+name|getTwoBeanParamsBook
 argument_list|(
 name|bean
 argument_list|,

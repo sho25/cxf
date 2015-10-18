@@ -2262,7 +2262,7 @@ name|GET
 annotation|@
 name|Path
 argument_list|(
-literal|"/beanparam2/{id}"
+literal|"/twoBeanParams/{id}"
 argument_list|)
 annotation|@
 name|Produces
@@ -2271,7 +2271,7 @@ literal|"application/xml"
 argument_list|)
 specifier|public
 name|Book
-name|getBeanParamBook2
+name|getTwoBeanParamsBook
 parameter_list|(
 annotation|@
 name|BeanParam
