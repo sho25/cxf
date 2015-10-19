@@ -325,7 +325,7 @@ name|RSSEC_SIGNATURE_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.signature.key.password.provider"
 decl_stmt|;
-comment|/**      * The signature algorithm to use. For example 'RS256'.      */
+comment|/**      * The signature algorithm to use. The default algorithm if not specified is 'RS256'.      */
 specifier|public
 specifier|static
 specifier|final
@@ -410,7 +410,7 @@ name|RSSEC_DECRYPTION_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.decryption.key.password.provider"
 decl_stmt|;
-comment|/**      * The encryption content algorithm to use.      */
+comment|/**      * The encryption content algorithm to use. The default algorithm if not specified is 'A128GCM'.      */
 specifier|public
 specifier|static
 specifier|final
@@ -430,7 +430,7 @@ name|DEPR_RSSEC_ENCRYPTION_CONTENT_ALGORITHM
 init|=
 literal|"rs.security.jwe.content.encryption.algorithm"
 decl_stmt|;
-comment|/**      * The encryption key algorithm to use.      */
+comment|/**      * The encryption key algorithm to use. The default algorithm if not specified is 'RSA-OAEP' if the key is an      * RSA key, and 'A128GCMKW' if it is an octet sequence.      */
 specifier|public
 specifier|static
 specifier|final
