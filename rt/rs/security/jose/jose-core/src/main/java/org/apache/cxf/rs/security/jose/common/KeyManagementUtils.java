@@ -2378,7 +2378,10 @@ condition|(
 name|props
 operator|==
 literal|null
-operator|&&
+condition|)
+block|{
+if|if
+condition|(
 name|required
 condition|)
 block|{
@@ -2394,6 +2397,13 @@ operator|new
 name|JoseException
 argument_list|()
 throw|;
+block|}
+name|props
+operator|=
+operator|new
+name|Properties
+argument_list|()
+expr_stmt|;
 block|}
 return|return
 name|props

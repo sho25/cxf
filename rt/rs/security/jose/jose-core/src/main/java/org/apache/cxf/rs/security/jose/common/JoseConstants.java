@@ -372,15 +372,6 @@ name|RSSEC_SIGNATURE_PROPS
 init|=
 literal|"rs.security.signature.properties"
 decl_stmt|;
-comment|/**      * Whether a "none" signature is allowed or not. The default is "false".      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_SIGNATURE_ALLOW_NONE_SIGNATURE
-init|=
-literal|"rs.security.signature.allow.none"
-decl_stmt|;
 comment|/**      * TODO documentation for these      */
 specifier|public
 specifier|static
