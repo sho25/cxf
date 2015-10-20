@@ -505,6 +505,18 @@ name|RSSEC_ENCRYPTION_REPORT_KEY_ID_PROP
 init|=
 literal|"rs.security.encryption.report.public.key.id"
 decl_stmt|;
+comment|//
+comment|// JWT specific configuration
+comment|//
+comment|/**      * Whether to allow unsigned JWT tokens as SecurityContext Principals. The default is false.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_UNSIGNED_JWT_PRINCIPAL
+init|=
+literal|"rs.security.enable.unsigned-jwt.principal"
+decl_stmt|;
 specifier|private
 name|JoseConstants
 parameter_list|()
