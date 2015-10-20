@@ -230,6 +230,13 @@ name|supportedAlgo
 operator|=
 name|supportedAlgo
 expr_stmt|;
+name|JwsUtils
+operator|.
+name|checkSignatureKeySize
+argument_list|(
+name|key
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Override

@@ -139,6 +139,13 @@ argument_list|,
 name|unwrap
 argument_list|)
 expr_stmt|;
+name|JweUtils
+operator|.
+name|checkEncryptionKeySize
+argument_list|(
+name|privateKey
+argument_list|)
+expr_stmt|;
 block|}
 specifier|protected
 name|int
