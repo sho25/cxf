@@ -940,11 +940,18 @@ argument_list|)
 decl_stmt|;
 specifier|final
 name|boolean
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 init|=
 name|preAuthorizedToken
 operator|!=
 literal|null
+operator|||
+name|canAuthorizationBeSkipped
+argument_list|(
+name|client
+argument_list|,
+name|permissions
+argument_list|)
 decl_stmt|;
 comment|// Populate the authorization challenge data
 name|OAuthAuthorizationData
@@ -962,12 +969,12 @@ name|userSubject
 argument_list|,
 name|permissions
 argument_list|,
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 condition|)
 block|{
 return|return
@@ -1007,6 +1014,24 @@ name|build
 argument_list|()
 return|;
 block|}
+specifier|protected
+name|boolean
+name|canAuthorizationBeSkipped
+parameter_list|(
+name|Client
+name|client
+parameter_list|,
+name|List
+argument_list|<
+name|OAuthPermission
+argument_list|>
+name|permissions
+parameter_list|)
+block|{
+return|return
+literal|false
+return|;
+block|}
 comment|/**      * Create the authorization challenge data       */
 specifier|protected
 name|OAuthAuthorizationData
@@ -1036,7 +1061,7 @@ argument_list|>
 name|perms
 parameter_list|,
 name|boolean
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 parameter_list|)
 block|{
 name|OAuthAuthorizationData
@@ -1108,7 +1133,7 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 condition|)
 block|{
 name|secData

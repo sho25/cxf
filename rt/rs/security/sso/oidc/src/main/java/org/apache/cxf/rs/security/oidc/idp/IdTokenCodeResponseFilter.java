@@ -191,6 +191,7 @@ name|ServerAccessToken
 name|st
 parameter_list|)
 block|{
+comment|// This may also be done directly inside a data provider code creating the server token
 name|IdToken
 name|token
 init|=

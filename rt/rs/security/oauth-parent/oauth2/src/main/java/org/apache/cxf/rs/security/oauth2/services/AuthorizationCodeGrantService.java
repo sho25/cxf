@@ -495,7 +495,7 @@ argument_list|>
 name|perms
 parameter_list|,
 name|boolean
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 parameter_list|)
 block|{
 name|OAuthAuthorizationData
@@ -515,7 +515,7 @@ name|subject
 argument_list|,
 name|perms
 argument_list|,
-name|preAuthorizedTokenAvailable
+name|authorizationCanBeSkipped
 argument_list|)
 decl_stmt|;
 name|setCodeQualifier
