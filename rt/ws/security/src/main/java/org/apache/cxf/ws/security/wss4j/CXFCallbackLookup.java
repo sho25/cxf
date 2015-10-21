@@ -111,6 +111,12 @@ argument_list|)
 expr_stmt|;
 name|this
 operator|.
+name|doc
+operator|=
+name|doc
+expr_stmt|;
+name|this
+operator|.
 name|soapBody
 operator|=
 name|soapBody
