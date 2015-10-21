@@ -236,7 +236,7 @@ name|RSSEC_KEY_PSWD
 init|=
 literal|"rs.security.key.password"
 decl_stmt|;
-comment|/**      * The keystore alias corresponding to the key to use      */
+comment|/**      * The keystore alias corresponding to the key to use. You can append one of the following to this tag to      * get the alias for more specific operations:      *  - jwe.out      *  - jwe.in      *  - jws.out      *  - jws.in      */
 specifier|public
 specifier|static
 specifier|final
@@ -245,7 +245,7 @@ name|RSSEC_KEY_STORE_ALIAS
 init|=
 literal|"rs.security.keystore.alias"
 decl_stmt|;
-comment|/**      * The keystore aliases corresponding to the keys to use, when using the JSON serialization form.      */
+comment|/**      * The keystore aliases corresponding to the keys to use, when using the JSON serialization form. You can       * append one of the following to this tag to get the alias for more specific operations:      *  - jws.out      *  - jws.in      */
 specifier|public
 specifier|static
 specifier|final
