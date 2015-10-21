@@ -264,11 +264,14 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|spanId
-operator|==
 name|SpanId
 operator|.
 name|INVALID
+operator|.
+name|equals
+argument_list|(
+name|spanId
+argument_list|)
 condition|)
 block|{
 name|traceScope
