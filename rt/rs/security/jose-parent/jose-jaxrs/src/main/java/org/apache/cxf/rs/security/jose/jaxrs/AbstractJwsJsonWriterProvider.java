@@ -409,7 +409,7 @@ name|m
 argument_list|,
 name|JoseConstants
 operator|.
-name|RSSEC_SIGNATURE_LIST_OUT_PROPS
+name|RSSEC_SIGNATURE_OUT_LIST_PROPS
 argument_list|,
 name|JoseConstants
 operator|.

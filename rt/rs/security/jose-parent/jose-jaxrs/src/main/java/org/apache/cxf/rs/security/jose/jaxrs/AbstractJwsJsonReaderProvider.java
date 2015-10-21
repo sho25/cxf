@@ -337,7 +337,7 @@ name|m
 argument_list|,
 name|JoseConstants
 operator|.
-name|RSSEC_SIGNATURE_LIST_IN_PROPS
+name|RSSEC_SIGNATURE_IN_LIST_PROPS
 argument_list|,
 name|JoseConstants
 operator|.
