@@ -345,7 +345,7 @@ name|DEPR_RSSEC_SIGNATURE_ALGORITHM
 init|=
 literal|"rs.security.jws.content.signature.algorithm"
 decl_stmt|;
-comment|/**      * The signature properties file for signature creation. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
+comment|/**      * The signature properties file for compact signature creation. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -354,7 +354,7 @@ name|RSSEC_SIGNATURE_OUT_PROPS
 init|=
 literal|"rs.security.signature.out.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for signature verification. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
+comment|/**      * The signature properties file for compact signature verification. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -363,7 +363,7 @@ name|RSSEC_SIGNATURE_IN_PROPS
 init|=
 literal|"rs.security.signature.in.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for signature creation/verification.      */
+comment|/**      * The signature properties file for compact signature creation/verification.      */
 specifier|public
 specifier|static
 specifier|final
@@ -371,6 +371,33 @@ name|String
 name|RSSEC_SIGNATURE_PROPS
 init|=
 literal|"rs.security.signature.properties"
+decl_stmt|;
+comment|/**      * The signature properties file for JSON Serialization signature creation. If not specified then it       * falls back to RSSEC_SIGNATURE_LIST_PROPS.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_LIST_OUT_PROPS
+init|=
+literal|"rs.security.signature.list.out.properties"
+decl_stmt|;
+comment|/**      * The signature properties file for JSON Serialization signature verification. If not specified then it       * falls back to RSSEC_SIGNATURE_LIST_PROPS.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_LIST_IN_PROPS
+init|=
+literal|"rs.security.signature.list.in.properties"
+decl_stmt|;
+comment|/**      * The signature properties file for JSON Serialization signature creation/verification.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_LIST_PROPS
+init|=
+literal|"rs.security.signature.list.properties"
 decl_stmt|;
 comment|/**      * TODO documentation for these      */
 specifier|public
