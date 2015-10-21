@@ -1802,9 +1802,6 @@ operator|new
 name|Tracer
 operator|.
 name|Builder
-argument_list|()
-operator|.
-name|name
 argument_list|(
 literal|"tracer"
 argument_list|)

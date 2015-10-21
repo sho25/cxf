@@ -427,7 +427,7 @@ name|SPAN_RECEIVERS_CONF_KEY
 argument_list|,
 name|TracingConfiguration
 operator|.
-name|SPAN_RECEIVER
+name|HBASE_SPAN_RECEIVER
 operator|.
 name|getName
 argument_list|()
