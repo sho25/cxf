@@ -609,10 +609,8 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|assertEquals
+name|assertNull
 argument_list|(
-literal|"*/*"
-argument_list|,
 name|requestIn
 operator|.
 name|getContentType
