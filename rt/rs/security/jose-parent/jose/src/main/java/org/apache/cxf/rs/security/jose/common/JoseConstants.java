@@ -207,7 +207,7 @@ comment|//
 comment|// JOSE Configuration constants
 comment|//
 comment|//
-comment|// Shared Keys/keystore configuration
+comment|// Shared configuration
 comment|//
 comment|/**      * The keystore type. Suitable values are "jks" or "jwk".      */
 specifier|public
@@ -272,23 +272,43 @@ name|RSSEC_KEY_PSWD_PROVIDER
 init|=
 literal|"rs.security.key.password.provider"
 decl_stmt|;
+comment|/**      * Include the JWK public key (for signature or encryption) in the "jwk" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_INCLUDE_PUBLIC_KEY
+init|=
+literal|"rs.security.include.public.key"
+decl_stmt|;
+comment|/**      * Include the X.509 certificate (for signature or encryption) in the "x5c" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_INCLUDE_CERT
+init|=
+literal|"rs.security.include.cert"
+decl_stmt|;
+comment|/**      * Include the JWK key id (for signature or encryption) in the "kid" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_INCLUDE_KEY_ID
+init|=
+literal|"rs.security.include.key.id"
+decl_stmt|;
+comment|/**      * Include the X.509 certificate SHA-1 digest (for signature or encryption) in the "x5t" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_INCLUDE_CERT_SHA1
+init|=
+literal|"rs.security.include.cert.sha1"
+decl_stmt|;
 comment|/**      * TODO documentation for these      */
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_REPORT_KEY_PROP
-init|=
-literal|"rs.security.report.public.key"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|RSSEC_REPORT_KEY_ID_PROP
-init|=
-literal|"rs.security.report.public.key.id"
-decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -399,22 +419,41 @@ name|RSSEC_SIGNATURE_LIST_PROPS
 init|=
 literal|"rs.security.signature.list.properties"
 decl_stmt|;
-comment|/**      * TODO documentation for these      */
+comment|/**      * Include the JWK public key for signature in the "jwk" header.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_REPORT_KEY_PROP
+name|RSSEC_SIGNATURE_INCLUDE_PUBLIC_KEY
 init|=
-literal|"rs.security.signature.report.public.key"
+literal|"rs.security.signature.include.public.key"
 decl_stmt|;
+comment|/**      * Include the X.509 certificate for signaturein the "x5c" header.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_REPORT_KEY_ID_PROP
+name|RSSEC_SIGNATURE_INCLUDE_CERT
 init|=
-literal|"rs.security.signature.report.public.key.id"
+literal|"rs.security.signature.include.cert"
+decl_stmt|;
+comment|/**      * Include the JWK key id for signature in the "kid" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_INCLUDE_KEY_ID
+init|=
+literal|"rs.security.signature.include.key.id"
+decl_stmt|;
+comment|/**      * Include the X.509 certificate SHA-1 digest for signature in the "x5t" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_SIGNATURE_INCLUDE_CERT_SHA1
+init|=
+literal|"rs.security.signature.include.cert.sha1"
 decl_stmt|;
 comment|//
 comment|// JWE specific Configuration
@@ -515,22 +554,41 @@ name|RSSEC_ENCRYPTION_PROPS
 init|=
 literal|"rs.security.encryption.properties"
 decl_stmt|;
-comment|/**      * TODO documentation for these      */
+comment|/**      * Include the JWK public key for encryption in the "jwk" header.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_ENCRYPTION_REPORT_KEY_PROP
+name|RSSEC_ENCRYPTION_INCLUDE_PUBLIC_KEY
 init|=
-literal|"rs.security.encryption.report.public.key"
+literal|"rs.security.encryption.include.public.key"
 decl_stmt|;
+comment|/**      * Include the X.509 certificate for encryption the "x5c" header.      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_ENCRYPTION_REPORT_KEY_ID_PROP
+name|RSSEC_ENCRYPTION_INCLUDE_CERT
 init|=
-literal|"rs.security.encryption.report.public.key.id"
+literal|"rs.security.encryption.include.cert"
+decl_stmt|;
+comment|/**      * Include the JWK key id for encryption in the "kid" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_INCLUDE_KEY_ID
+init|=
+literal|"rs.security.encryption.include.key.id"
+decl_stmt|;
+comment|/**      * Include the X.509 certificate SHA-1 digest for encryption in the "x5t" header.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_ENCRYPTION_INCLUDE_CERT_SHA1
+init|=
+literal|"rs.security.encryption.include.cert.sha1"
 decl_stmt|;
 comment|//
 comment|// JWT specific configuration

@@ -1718,7 +1718,7 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"rs.security.report.public.key"
+literal|"rs.security.include.cert"
 argument_list|,
 literal|"true"
 argument_list|)
@@ -2440,10 +2440,10 @@ name|String
 name|address
 parameter_list|,
 name|boolean
-name|reportPublicKey
+name|includePublicKey
 parameter_list|,
 name|boolean
-name|reportPublicKeyId
+name|includeKeyId
 parameter_list|)
 throws|throws
 name|Exception
@@ -2590,7 +2590,7 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|reportPublicKey
+name|includePublicKey
 condition|)
 block|{
 name|bean
@@ -2602,7 +2602,7 @@ argument_list|)
 operator|.
 name|put
 argument_list|(
-literal|"rs.security.report.public.key"
+literal|"rs.security.include.public.key"
 argument_list|,
 literal|true
 argument_list|)
@@ -2610,7 +2610,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-name|reportPublicKeyId
+name|includeKeyId
 condition|)
 block|{
 name|bean
@@ -2622,7 +2622,7 @@ argument_list|)
 operator|.
 name|put
 argument_list|(
-literal|"rs.security.report.public.key.id"
+literal|"rs.security.include.key.id"
 argument_list|,
 literal|true
 argument_list|)
