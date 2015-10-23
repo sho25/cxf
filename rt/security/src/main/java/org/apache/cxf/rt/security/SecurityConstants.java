@@ -183,7 +183,7 @@ name|ENABLE_REVOCATION
 init|=
 literal|"security.enableRevocation"
 decl_stmt|;
-comment|/**      * Whether to allow unsigned saml assertions as SecurityContext Principals. The default is false.      */
+comment|/**      * Whether to allow unsigned saml assertions as SecurityContext Principals. The default is false.      * Note that "unsigned" refers to an internal signature. Even if the token is signed by an      * external signature (as per the "sender-vouches" requirement), this boolean must still be      * configured if you want to use the token to set up the security context.      */
 specifier|public
 specifier|static
 specifier|final
