@@ -2875,9 +2875,9 @@ name|m
 argument_list|,
 name|JoseConstants
 operator|.
-name|RSSEC_ACCEPT_PUBLIC_KEY_PROP
+name|RSSEC_ACCEPT_PUBLIC_KEY
 argument_list|,
-literal|true
+literal|false
 argument_list|)
 condition|)
 block|{

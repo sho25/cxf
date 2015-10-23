@@ -308,15 +308,16 @@ name|RSSEC_INCLUDE_CERT_SHA1
 init|=
 literal|"rs.security.include.cert.sha1"
 decl_stmt|;
-comment|/**      * TODO documentation for these      */
+comment|/**      * Whether to allow using a JWK received in the header for signature validation. The default      * is "false".      */
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_ACCEPT_PUBLIC_KEY_PROP
+name|RSSEC_ACCEPT_PUBLIC_KEY
 init|=
-literal|"rs.security.accept.public.key.properties"
+literal|"rs.security.accept.public.key"
 decl_stmt|;
+comment|/**      * TODO documentation for these      */
 specifier|public
 specifier|static
 specifier|final
@@ -428,7 +429,7 @@ name|RSSEC_SIGNATURE_INCLUDE_PUBLIC_KEY
 init|=
 literal|"rs.security.signature.include.public.key"
 decl_stmt|;
-comment|/**      * Include the X.509 certificate for signaturein the "x5c" header.      */
+comment|/**      * Include the X.509 certificate for signature in the "x5c" header.      */
 specifier|public
 specifier|static
 specifier|final
