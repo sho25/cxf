@@ -40,6 +40,9 @@ name|char
 index|[]
 name|getPassword
 parameter_list|(
+name|String
+name|alias
+parameter_list|,
 name|Properties
 name|storeProperties
 parameter_list|)

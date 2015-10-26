@@ -2514,6 +2514,8 @@ name|cb
 operator|.
 name|getPassword
 argument_list|(
+literal|null
+argument_list|,
 name|props
 argument_list|)
 argument_list|)

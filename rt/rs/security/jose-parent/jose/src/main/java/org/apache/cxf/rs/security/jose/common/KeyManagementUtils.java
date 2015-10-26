@@ -1054,6 +1054,8 @@ name|provider
 operator|.
 name|getPassword
 argument_list|(
+name|theAlias
+argument_list|,
 name|props
 argument_list|)
 else|:
