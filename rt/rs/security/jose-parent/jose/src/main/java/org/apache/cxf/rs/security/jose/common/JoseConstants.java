@@ -420,7 +420,7 @@ name|RSSEC_SIGNATURE_LIST_PROPS
 init|=
 literal|"rs.security.signature.list.properties"
 decl_stmt|;
-comment|/**      * Include the JWK public key for signature in the "jwk" header.      */
+comment|/**      * Include the JWK public key for signature in the "jwk" header. If not configured then it      * falls back to RSSEC_INCLUDE_PUBLIC_KEY.      */
 specifier|public
 specifier|static
 specifier|final
@@ -429,7 +429,7 @@ name|RSSEC_SIGNATURE_INCLUDE_PUBLIC_KEY
 init|=
 literal|"rs.security.signature.include.public.key"
 decl_stmt|;
-comment|/**      * Include the X.509 certificate for signature in the "x5c" header.      */
+comment|/**      * Include the X.509 certificate for signature in the "x5c" header. If not configured then it      * falls back to RSSEC_INCLUDE_CERT.      */
 specifier|public
 specifier|static
 specifier|final
@@ -438,7 +438,7 @@ name|RSSEC_SIGNATURE_INCLUDE_CERT
 init|=
 literal|"rs.security.signature.include.cert"
 decl_stmt|;
-comment|/**      * Include the JWK key id for signature in the "kid" header.      */
+comment|/**      * Include the JWK key id for signature in the "kid" header. If not configured then it      * falls back to RSSEC_INCLUDE_KEY_ID.      */
 specifier|public
 specifier|static
 specifier|final
@@ -447,7 +447,7 @@ name|RSSEC_SIGNATURE_INCLUDE_KEY_ID
 init|=
 literal|"rs.security.signature.include.key.id"
 decl_stmt|;
-comment|/**      * Include the X.509 certificate SHA-1 digest for signature in the "x5t" header.      */
+comment|/**      * Include the X.509 certificate SHA-1 digest for signature in the "x5t" header. If not configured then it      * falls back to RSSEC_INCLUDE_CERT_SHA1.      */
 specifier|public
 specifier|static
 specifier|final
