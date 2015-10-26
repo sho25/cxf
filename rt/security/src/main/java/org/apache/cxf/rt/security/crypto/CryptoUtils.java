@@ -4302,6 +4302,29 @@ name|alias
 argument_list|)
 throw|;
 block|}
+if|if
+condition|(
+operator|!
+name|keyStore
+operator|.
+name|isKeyEntry
+argument_list|(
+name|alias
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|SecurityException
+argument_list|(
+literal|"The given alias "
+operator|+
+name|alias
+operator|+
+literal|" is not a private key in the keystore."
+argument_list|)
+throw|;
+block|}
 name|KeyStore
 operator|.
 name|PrivateKeyEntry
