@@ -2643,11 +2643,8 @@ parameter_list|,
 name|Properties
 name|props
 parameter_list|,
-name|List
-argument_list|<
 name|X509Certificate
-argument_list|>
-name|inCerts
+name|inCert
 parameter_list|,
 name|KeyOperation
 name|keyOper
@@ -2672,12 +2669,7 @@ name|ks
 operator|.
 name|getCertificateAlias
 argument_list|(
-name|inCerts
-operator|.
-name|get
-argument_list|(
-literal|0
-argument_list|)
+name|inCert
 argument_list|)
 decl_stmt|;
 return|return
