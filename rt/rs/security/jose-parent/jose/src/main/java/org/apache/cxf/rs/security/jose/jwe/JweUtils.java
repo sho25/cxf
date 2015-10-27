@@ -2726,7 +2726,6 @@ operator|!=
 literal|null
 condition|)
 block|{
-comment|//TODO: optionally validate inHeaders.getAlgorithm against a property in props
 comment|// Supporting loading a private key via a certificate for now
 name|List
 argument_list|<
