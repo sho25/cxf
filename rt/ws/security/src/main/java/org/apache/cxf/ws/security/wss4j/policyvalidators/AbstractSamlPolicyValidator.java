@@ -85,6 +85,8 @@ name|wss4j
 operator|.
 name|dom
 operator|.
+name|engine
+operator|.
 name|WSSecurityEngineResult
 import|;
 end_import

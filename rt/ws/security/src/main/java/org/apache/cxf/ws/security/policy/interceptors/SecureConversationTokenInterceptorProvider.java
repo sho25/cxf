@@ -585,9 +585,7 @@ name|SP12
 argument_list|,
 name|SP12Constants
 operator|.
-name|SupportingTokenTypes
-operator|.
-name|EndorsingSupportingTokens
+name|ENDORSING_SUPPORTING_TOKENS
 argument_list|,
 operator|new
 name|Policy

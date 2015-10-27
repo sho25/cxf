@@ -393,7 +393,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|WSSecurityEngine
+name|WSConstants
 import|;
 end_import
 
@@ -557,7 +557,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -568,7 +568,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -824,7 +824,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -835,7 +835,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -1102,7 +1102,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -1113,7 +1113,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -1382,7 +1382,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -1393,7 +1393,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -1652,7 +1652,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -1663,7 +1663,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -1926,7 +1926,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -1937,7 +1937,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -2211,7 +2211,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -2222,7 +2222,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -2498,7 +2498,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -2509,7 +2509,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -2778,7 +2778,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -2789,7 +2789,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -3149,7 +3149,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -3160,7 +3160,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -3523,7 +3523,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -3534,7 +3534,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -3932,7 +3932,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -3943,7 +3943,7 @@ name|customMap
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,

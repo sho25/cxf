@@ -53,7 +53,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|message
+name|callback
 operator|.
 name|DOMCallbackLookup
 import|;

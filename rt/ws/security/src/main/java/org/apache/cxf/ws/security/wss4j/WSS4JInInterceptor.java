@@ -801,6 +801,8 @@ name|wss4j
 operator|.
 name|dom
 operator|.
+name|engine
+operator|.
 name|WSSConfig
 import|;
 end_import
@@ -815,6 +817,8 @@ name|wss4j
 operator|.
 name|dom
 operator|.
+name|engine
+operator|.
 name|WSSecurityEngine
 import|;
 end_import
@@ -828,6 +832,8 @@ operator|.
 name|wss4j
 operator|.
 name|dom
+operator|.
+name|engine
 operator|.
 name|WSSecurityEngineResult
 import|;
@@ -4253,7 +4259,7 @@ name|profiles
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|USERNAME_TOKEN
 argument_list|,

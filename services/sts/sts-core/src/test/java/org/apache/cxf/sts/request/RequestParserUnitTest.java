@@ -331,6 +331,8 @@ name|wss4j
 operator|.
 name|dom
 operator|.
+name|engine
+operator|.
 name|WSSecurityEngine
 import|;
 end_import

@@ -125,7 +125,7 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|WSSecurityEngine
+name|WSConstants
 import|;
 end_import
 
@@ -189,7 +189,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML_TOKEN
 argument_list|,
@@ -202,7 +202,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SAML2_TOKEN
 argument_list|,
@@ -215,7 +215,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|USERNAME_TOKEN
 argument_list|,
@@ -228,7 +228,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SIGNATURE
 argument_list|,
@@ -241,7 +241,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|TIMESTAMP
 argument_list|,
@@ -254,7 +254,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|BINARY_TOKEN
 argument_list|,
@@ -267,7 +267,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SECURITY_CONTEXT_TOKEN_05_02
 argument_list|,
@@ -280,7 +280,7 @@ name|validatorKeys
 operator|.
 name|put
 argument_list|(
-name|WSSecurityEngine
+name|WSConstants
 operator|.
 name|SECURITY_CONTEXT_TOKEN_05_12
 argument_list|,

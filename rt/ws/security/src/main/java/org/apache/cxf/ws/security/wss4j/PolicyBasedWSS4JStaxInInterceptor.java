@@ -507,6 +507,8 @@ name|policy
 operator|.
 name|stax
 operator|.
+name|enforcer
+operator|.
 name|PolicyEnforcer
 import|;
 end_import
@@ -522,6 +524,8 @@ operator|.
 name|policy
 operator|.
 name|stax
+operator|.
+name|enforcer
 operator|.
 name|PolicyInputProcessor
 import|;

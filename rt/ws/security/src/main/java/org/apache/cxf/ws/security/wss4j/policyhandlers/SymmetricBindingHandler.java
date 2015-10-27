@@ -435,6 +435,8 @@ name|wss4j
 operator|.
 name|dom
 operator|.
+name|engine
+operator|.
 name|WSSConfig
 import|;
 end_import
@@ -448,6 +450,8 @@ operator|.
 name|wss4j
 operator|.
 name|dom
+operator|.
+name|engine
 operator|.
 name|WSSecurityEngineResult
 import|;

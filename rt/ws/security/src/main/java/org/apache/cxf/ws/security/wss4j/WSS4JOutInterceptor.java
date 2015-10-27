@@ -351,7 +351,9 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|WSSConfig
+name|action
+operator|.
+name|Action
 import|;
 end_import
 
@@ -365,9 +367,9 @@ name|wss4j
 operator|.
 name|dom
 operator|.
-name|action
+name|engine
 operator|.
-name|Action
+name|WSSConfig
 import|;
 end_import
 
