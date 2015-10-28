@@ -567,6 +567,15 @@ name|ENABLE_UNSIGNED_JWT_PRINCIPAL
 init|=
 literal|"rs.security.enable.unsigned-jwt.principal"
 decl_stmt|;
+comment|/**      * Whether to trace JOSE headers.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|JOSE_DEBUG
+init|=
+literal|"jose.debug"
+decl_stmt|;
 specifier|private
 name|JoseConstants
 parameter_list|()

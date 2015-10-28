@@ -299,6 +299,16 @@ argument_list|(
 name|theSigProvider
 argument_list|)
 expr_stmt|;
+name|JoseUtils
+operator|.
+name|traceHeaders
+argument_list|(
+name|p
+operator|.
+name|getJwsHeaders
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|byte
 index|[]
 name|bytes
