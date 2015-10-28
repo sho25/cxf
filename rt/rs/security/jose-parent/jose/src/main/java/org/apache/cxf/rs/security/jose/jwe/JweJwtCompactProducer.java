@@ -204,11 +204,7 @@ parameter_list|)
 block|{
 name|headers
 operator|=
-operator|new
-name|JweHeaders
-argument_list|(
 name|joseHeaders
-argument_list|)
 expr_stmt|;
 name|claimsJson
 operator|=
