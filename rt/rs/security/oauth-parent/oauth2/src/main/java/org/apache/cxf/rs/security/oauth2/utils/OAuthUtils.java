@@ -941,6 +941,10 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|grantType
+operator|==
+literal|null
+operator|||
 operator|!
 name|client
 operator|.
