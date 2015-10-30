@@ -593,6 +593,11 @@ name|boolean
 name|required
 parameter_list|)
 block|{
+if|if
+condition|(
+name|required
+condition|)
+block|{
 name|validateHash
 argument_list|(
 name|at
@@ -620,10 +625,9 @@ argument_list|()
 operator|.
 name|getAlgorithm
 argument_list|()
-argument_list|,
-name|required
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 specifier|static
@@ -662,6 +666,11 @@ name|boolean
 name|required
 parameter_list|)
 block|{
+if|if
+condition|(
+name|required
+condition|)
+block|{
 name|validateHash
 argument_list|(
 name|code
@@ -686,10 +695,9 @@ argument_list|()
 operator|.
 name|getAlgorithm
 argument_list|()
-argument_list|,
-name|required
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 specifier|static
@@ -704,9 +712,6 @@ name|theHash
 parameter_list|,
 name|String
 name|joseAlgo
-parameter_list|,
-name|boolean
-name|required
 parameter_list|)
 block|{
 name|String
