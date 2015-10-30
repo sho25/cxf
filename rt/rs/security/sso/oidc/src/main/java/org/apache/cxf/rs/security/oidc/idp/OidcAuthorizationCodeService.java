@@ -160,6 +160,13 @@ argument_list|()
 operator|==
 literal|1
 operator|&&
+name|permissions
+operator|.
+name|size
+argument_list|()
+operator|==
+literal|1
+operator|&&
 name|skipAuthorizationWithOidcScope
 operator|&&
 name|OPEN_ID_CONNECT_SCOPE
