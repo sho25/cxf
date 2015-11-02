@@ -667,6 +667,27 @@ name|realm
 argument_list|)
 expr_stmt|;
 block|}
+catch|catch
+parameter_list|(
+name|RuntimeException
+name|ex
+parameter_list|)
+block|{
+name|AuthorizationUtils
+operator|.
+name|throwAuthorizationFailure
+argument_list|(
+name|Collections
+operator|.
+name|singleton
+argument_list|(
+name|authScheme
+argument_list|)
+argument_list|,
+name|realm
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 comment|// Default processing if no registered providers available
 name|ServerAccessToken
