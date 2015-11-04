@@ -537,6 +537,8 @@ operator|=
 name|jwkSetClient
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|JwsSignatureVerifier
 name|getInitializedSignatureVerifier
