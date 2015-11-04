@@ -17,7 +17,9 @@ name|jaxrs
 operator|.
 name|security
 operator|.
-name|jwt
+name|jose
+operator|.
+name|jwejws
 package|;
 end_package
 
@@ -452,6 +454,26 @@ operator|.
 name|security
 operator|.
 name|Book
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|BookStore
 import|;
 end_import
 

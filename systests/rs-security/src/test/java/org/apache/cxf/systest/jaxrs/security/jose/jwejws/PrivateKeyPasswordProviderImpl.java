@@ -17,7 +17,9 @@ name|jaxrs
 operator|.
 name|security
 operator|.
-name|jwt
+name|jose
+operator|.
+name|jwejws
 package|;
 end_package
 

@@ -23,6 +23,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|net
+operator|.
+name|URL
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -116,10 +126,17 @@ decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
-name|String
+name|URL
 name|SERVER_CONFIG_FILE
 init|=
-literal|"org/apache/cxf/systest/jaxrs/security/samlsso/metadata-server.xml"
+name|MetadataServer
+operator|.
+name|class
+operator|.
+name|getResource
+argument_list|(
+literal|"metadata-server.xml"
+argument_list|)
 decl_stmt|;
 specifier|protected
 name|void
