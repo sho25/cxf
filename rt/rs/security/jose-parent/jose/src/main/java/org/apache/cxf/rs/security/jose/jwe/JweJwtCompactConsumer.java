@@ -291,6 +291,15 @@ name|claims
 argument_list|)
 return|;
 block|}
+specifier|public
+name|JweHeaders
+name|getHeaders
+parameter_list|()
+block|{
+return|return
+name|headers
+return|;
+block|}
 specifier|private
 specifier|static
 name|String
