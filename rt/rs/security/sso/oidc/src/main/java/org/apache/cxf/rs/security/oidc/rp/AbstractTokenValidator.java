@@ -653,7 +653,7 @@ name|keyId
 init|=
 name|jwt
 operator|.
-name|getHeaders
+name|getJwsHeaders
 argument_list|()
 operator|.
 name|getKeyId

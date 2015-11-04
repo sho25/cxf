@@ -181,7 +181,7 @@ name|JwsHeaders
 argument_list|(
 name|token
 operator|.
-name|getHeaders
+name|getJwsHeaders
 argument_list|()
 argument_list|)
 argument_list|,

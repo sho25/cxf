@@ -164,7 +164,7 @@ name|JweHeaders
 argument_list|(
 name|token
 operator|.
-name|getHeaders
+name|getJweHeaders
 argument_list|()
 argument_list|)
 argument_list|,

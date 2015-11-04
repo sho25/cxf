@@ -372,7 +372,7 @@ name|JwsHeaders
 argument_list|(
 name|jwtToken
 operator|.
-name|getHeaders
+name|getJwsHeaders
 argument_list|()
 argument_list|)
 argument_list|,

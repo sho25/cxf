@@ -620,7 +620,7 @@ argument_list|)
 argument_list|,
 name|jwt
 operator|.
-name|getHeaders
+name|getJwsHeaders
 argument_list|()
 operator|.
 name|getAlgorithm
@@ -690,7 +690,7 @@ argument_list|)
 argument_list|,
 name|jwt
 operator|.
-name|getHeaders
+name|getJwsHeaders
 argument_list|()
 operator|.
 name|getAlgorithm
