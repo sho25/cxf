@@ -2183,10 +2183,6 @@ block|}
 if|if
 condition|(
 name|includeCertSha1
-operator|&&
-name|headers
-operator|!=
-literal|null
 condition|)
 block|{
 name|String
@@ -2312,10 +2308,6 @@ expr_stmt|;
 if|if
 condition|(
 name|includeCert
-operator|&&
-name|headers
-operator|!=
-literal|null
 condition|)
 block|{
 name|headers
@@ -2336,10 +2328,6 @@ block|}
 if|if
 condition|(
 name|includeCertSha1
-operator|&&
-name|headers
-operator|!=
-literal|null
 condition|)
 block|{
 name|String

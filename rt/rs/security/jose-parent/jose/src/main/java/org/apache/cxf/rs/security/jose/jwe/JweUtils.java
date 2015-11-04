@@ -2514,10 +2514,6 @@ block|}
 if|if
 condition|(
 name|includeCertSha1
-operator|&&
-name|headers
-operator|!=
-literal|null
 condition|)
 block|{
 name|String
@@ -2635,10 +2631,6 @@ block|}
 if|if
 condition|(
 name|includeCertSha1
-operator|&&
-name|headers
-operator|!=
-literal|null
 condition|)
 block|{
 name|String
