@@ -537,8 +537,6 @@ operator|=
 name|jwkSetClient
 expr_stmt|;
 block|}
-annotation|@
-name|Override
 specifier|protected
 name|JwsSignatureVerifier
 name|getInitializedSignatureVerifier
@@ -784,6 +782,9 @@ operator|.
 name|getInitializedSignatureVerifier
 argument_list|(
 name|jwt
+operator|.
+name|getJwsHeaders
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
