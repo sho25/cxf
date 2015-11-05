@@ -2613,7 +2613,7 @@ name|HttpHeaders
 operator|.
 name|LINK
 argument_list|,
-literal|"<http://next>;rel=next"
+literal|"<http://localhost:8080/next;a=b>;rel=next"
 argument_list|)
 expr_stmt|;
 name|meta
@@ -2710,7 +2710,7 @@ argument_list|)
 expr_stmt|;
 name|assertEquals
 argument_list|(
-literal|"http://next"
+literal|"http://localhost:8080/next;a=b"
 argument_list|,
 name|next
 operator|.
