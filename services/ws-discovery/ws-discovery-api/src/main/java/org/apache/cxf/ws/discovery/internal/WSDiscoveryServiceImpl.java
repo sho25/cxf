@@ -1912,6 +1912,13 @@ argument_list|,
 literal|"true"
 argument_list|)
 expr_stmt|;
+name|udpEndpoint
+operator|.
+name|setProperties
+argument_list|(
+name|props
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 literal|"true"
