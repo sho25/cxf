@@ -179,7 +179,7 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testbBuildObjects
+name|testBuildObjects
 parameter_list|()
 throws|throws
 name|Exception
