@@ -4497,7 +4497,9 @@ name|jwk
 operator|.
 name|getProperty
 argument_list|(
-literal|"x5c"
+name|JsonWebKey
+operator|.
+name|X509_CHAIN
 argument_list|)
 argument_list|)
 decl_stmt|;
