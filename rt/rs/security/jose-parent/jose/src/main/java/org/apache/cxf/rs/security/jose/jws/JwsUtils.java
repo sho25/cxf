@@ -1982,7 +1982,7 @@ name|headers
 argument_list|)
 return|;
 block|}
-specifier|private
+specifier|public
 specifier|static
 name|JwsSignatureProvider
 name|loadSignatureProvider

@@ -263,6 +263,15 @@ name|RSSEC_KEY_STORE_FILE
 init|=
 literal|"rs.security.keystore.file"
 decl_stmt|;
+comment|/**      * The KeyStore Object.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_KEY_STORE
+init|=
+literal|"rs.security.keystore"
+decl_stmt|;
 comment|/**      * A reference to a PrivateKeyPasswordProvider instance used to retrieve passwords to access keys.      */
 specifier|public
 specifier|static

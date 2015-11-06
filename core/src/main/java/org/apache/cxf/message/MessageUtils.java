@@ -340,6 +340,13 @@ name|boolean
 name|defaultValue
 parameter_list|)
 block|{
+if|if
+condition|(
+name|m
+operator|!=
+literal|null
+condition|)
+block|{
 name|Object
 name|o
 init|=
@@ -365,6 +372,7 @@ argument_list|(
 name|o
 argument_list|)
 return|;
+block|}
 block|}
 return|return
 name|defaultValue
