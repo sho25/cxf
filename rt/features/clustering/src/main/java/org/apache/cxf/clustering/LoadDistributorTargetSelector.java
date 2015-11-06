@@ -771,6 +771,9 @@ name|requiresFailover
 parameter_list|(
 name|Exchange
 name|exchange
+parameter_list|,
+name|Exception
+name|ex
 parameter_list|)
 block|{
 return|return
@@ -781,6 +784,8 @@ operator|.
 name|requiresFailover
 argument_list|(
 name|exchange
+argument_list|,
+name|ex
 argument_list|)
 return|;
 block|}
