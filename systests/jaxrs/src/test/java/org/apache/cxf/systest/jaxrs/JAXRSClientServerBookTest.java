@@ -1098,7 +1098,7 @@ argument_list|(
 operator|new
 name|BookServer
 operator|.
-name|XmlBookParamConverter
+name|ParamConverterImpl
 argument_list|()
 argument_list|)
 argument_list|)
@@ -1117,6 +1117,11 @@ literal|"query"
 argument_list|,
 literal|125L
 argument_list|)
+argument_list|,
+operator|(
+name|byte
+operator|)
+literal|125
 argument_list|)
 decl_stmt|;
 name|assertEquals
