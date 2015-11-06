@@ -2288,6 +2288,10 @@ condition|(
 name|algo
 operator|==
 literal|null
+operator|&&
+name|m
+operator|!=
+literal|null
 condition|)
 block|{
 name|algo
