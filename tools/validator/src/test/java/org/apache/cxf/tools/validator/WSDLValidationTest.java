@@ -556,6 +556,11 @@ literal|"Is not valid wsdl!: "
 operator|+
 name|getStdOut
 argument_list|()
+operator|+
+literal|"\n"
+operator|+
+name|getStdErr
+argument_list|()
 argument_list|,
 name|getStdOut
 argument_list|()
