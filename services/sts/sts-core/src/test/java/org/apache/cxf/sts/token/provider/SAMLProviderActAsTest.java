@@ -590,6 +590,9 @@ expr_stmt|;
 name|Element
 name|token
 init|=
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken
@@ -764,6 +767,9 @@ expr_stmt|;
 name|Element
 name|token
 init|=
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken
@@ -971,6 +977,9 @@ expr_stmt|;
 name|Element
 name|token
 init|=
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken
@@ -1114,6 +1123,9 @@ argument_list|)
 expr_stmt|;
 name|token
 operator|=
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken
@@ -1216,6 +1228,9 @@ literal|null
 argument_list|)
 expr_stmt|;
 return|return
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken

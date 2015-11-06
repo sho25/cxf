@@ -838,6 +838,9 @@ decl_stmt|;
 name|Element
 name|sct
 init|=
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken

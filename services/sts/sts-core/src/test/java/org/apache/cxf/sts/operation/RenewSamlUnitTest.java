@@ -3202,6 +3202,9 @@ literal|null
 argument_list|)
 expr_stmt|;
 return|return
+operator|(
+name|Element
+operator|)
 name|providerResponse
 operator|.
 name|getToken

@@ -29,18 +29,6 @@ name|Date
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|w3c
-operator|.
-name|dom
-operator|.
-name|Element
-import|;
-end_import
-
 begin_comment
 comment|/**  * This class encapsulates the response from a TokenProvider instance after creating a token.  */
 end_comment
@@ -51,7 +39,7 @@ class|class
 name|TokenProviderResponse
 block|{
 specifier|private
-name|Element
+name|Object
 name|token
 decl_stmt|;
 specifier|private
@@ -144,7 +132,7 @@ specifier|public
 name|void
 name|setToken
 parameter_list|(
-name|Element
+name|Object
 name|token
 parameter_list|)
 block|{
@@ -157,7 +145,7 @@ expr_stmt|;
 block|}
 comment|/**      * Get the token      * @return the token to set      */
 specifier|public
-name|Element
+name|Object
 name|getToken
 parameter_list|()
 block|{
