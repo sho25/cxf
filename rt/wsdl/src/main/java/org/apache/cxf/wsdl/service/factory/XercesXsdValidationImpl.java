@@ -235,6 +235,26 @@ name|e
 argument_list|)
 expr_stmt|;
 block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|SEVERE
+argument_list|,
+literal|"XML failure"
+argument_list|,
+name|e
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 block|}
 end_class

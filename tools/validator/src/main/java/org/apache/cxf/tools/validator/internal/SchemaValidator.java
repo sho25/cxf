@@ -2042,6 +2042,15 @@ argument_list|(
 name|path
 argument_list|)
 decl_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+name|url
+argument_list|)
+expr_stmt|;
 name|LSInput
 name|lsin
 init|=
