@@ -1444,6 +1444,9 @@ operator|.
 name|scopes
 operator|=
 name|scopes
+operator|.
+name|trim
+argument_list|()
 expr_stmt|;
 block|}
 specifier|public
