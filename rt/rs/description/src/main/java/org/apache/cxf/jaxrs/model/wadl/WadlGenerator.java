@@ -15236,7 +15236,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setIncludeWadlSchemaLocation
+name|setWadlSchemaLocation
 parameter_list|(
 name|String
 name|loc
@@ -15262,7 +15262,7 @@ condition|(
 name|inc
 condition|)
 block|{
-name|setIncludeWadlSchemaLocation
+name|setWadlSchemaLocation
 argument_list|(
 name|DEFAULT_WADL_SCHEMA_LOC
 argument_list|)
