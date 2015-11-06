@@ -434,6 +434,11 @@ decl_stmt|;
 comment|/**      * @parameter default-value="false"      */
 specifier|private
 name|boolean
+name|includeDefaultWadlSchemaLocation
+decl_stmt|;
+comment|/**      * @parameter default-value="false"      */
+specifier|private
+name|boolean
 name|ignoreForwardSlash
 decl_stmt|;
 comment|/**      * @parameter default-value="false"      */
@@ -695,6 +700,13 @@ operator|.
 name|setUseSingleSlashResource
 argument_list|(
 name|useSingleSlashResource
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setIncludeDefaultWadlSchemaLocation
+argument_list|(
+name|includeDefaultWadlSchemaLocation
 argument_list|)
 expr_stmt|;
 name|wg
