@@ -805,7 +805,7 @@ name|equals
 argument_list|(
 name|requestParams
 operator|.
-name|get
+name|getFirst
 argument_list|(
 name|OAuthConstants
 operator|.
