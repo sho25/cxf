@@ -379,7 +379,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 import|;
 end_import
 
@@ -3585,7 +3585,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|realms
 parameter_list|,

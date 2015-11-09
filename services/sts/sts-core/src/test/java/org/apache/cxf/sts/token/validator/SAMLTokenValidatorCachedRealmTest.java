@@ -361,7 +361,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 import|;
 end_import
 
@@ -1136,7 +1136,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|samlRealms
 init|=
@@ -1204,7 +1204,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|getSamlRealms
 parameter_list|()
@@ -1214,7 +1214,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|samlRealms
 init|=
@@ -1223,15 +1223,15 @@ name|HashMap
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 argument_list|()
 decl_stmt|;
-name|SAMLRealm
+name|RealmProperties
 name|samlRealm
 init|=
 operator|new
-name|SAMLRealm
+name|RealmProperties
 argument_list|()
 decl_stmt|;
 name|samlRealm
@@ -1253,7 +1253,7 @@ expr_stmt|;
 name|samlRealm
 operator|=
 operator|new
-name|SAMLRealm
+name|RealmProperties
 argument_list|()
 expr_stmt|;
 name|samlRealm

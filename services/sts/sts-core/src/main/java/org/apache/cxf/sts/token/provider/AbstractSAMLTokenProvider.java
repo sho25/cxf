@@ -141,7 +141,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 import|;
 end_import
 
@@ -225,7 +225,7 @@ parameter_list|(
 name|SamlAssertionWrapper
 name|assertion
 parameter_list|,
-name|SAMLRealm
+name|RealmProperties
 name|samlRealm
 parameter_list|,
 name|STSPropertiesMBean

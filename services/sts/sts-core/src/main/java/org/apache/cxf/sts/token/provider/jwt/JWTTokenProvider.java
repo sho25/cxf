@@ -37,6 +37,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Date
 import|;
 end_import
@@ -405,7 +415,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 import|;
 end_import
 
@@ -522,7 +532,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|realmMap
 init|=
@@ -851,7 +861,7 @@ operator|=
 name|signToken
 expr_stmt|;
 block|}
-comment|/**      * Set the map of realm->SAMLRealm for this token provider      * @param realms the map of realm->SAMLRealm for this token provider      */
+comment|/**      * Set the map of realm->RealmProperties for this token provider      * @param realms the map of realm->RealmProperties for this token provider      */
 specifier|public
 name|void
 name|setRealmMap
@@ -860,7 +870,9 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|?
+extends|extends
+name|RealmProperties
 argument_list|>
 name|realms
 parameter_list|)
@@ -868,23 +880,38 @@ block|{
 name|this
 operator|.
 name|realmMap
-operator|=
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+name|this
+operator|.
+name|realmMap
+operator|.
+name|putAll
+argument_list|(
 name|realms
+argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the map of realm->SAMLRealm for this token provider      * @return the map of realm->SAMLRealm for this token provider      */
+comment|/**      * Get the map of realm->RealmProperties for this token provider      * @return the map of realm->RealmProperties for this token provider      */
 specifier|public
 name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|getRealmMap
 parameter_list|()
 block|{
 return|return
+name|Collections
+operator|.
+name|unmodifiableMap
+argument_list|(
 name|realmMap
+argument_list|)
 return|;
 block|}
 specifier|public
@@ -918,8 +945,8 @@ parameter_list|(
 name|JwtToken
 name|token
 parameter_list|,
-name|SAMLRealm
-name|samlRealm
+name|RealmProperties
+name|jwtRealm
 parameter_list|,
 name|STSPropertiesMBean
 name|stsProperties
@@ -977,7 +1004,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|samlRealm
+name|jwtRealm
 operator|!=
 literal|null
 condition|)
@@ -986,7 +1013,7 @@ comment|// If SignatureCrypto configured in realm then
 comment|// callbackhandler and alias of STSPropertiesMBean is ignored
 if|if
 condition|(
-name|samlRealm
+name|jwtRealm
 operator|.
 name|getSignatureCrypto
 argument_list|()
@@ -1003,21 +1030,21 @@ argument_list|)
 expr_stmt|;
 name|signatureCrypto
 operator|=
-name|samlRealm
+name|jwtRealm
 operator|.
 name|getSignatureCrypto
 argument_list|()
 expr_stmt|;
 name|callbackHandler
 operator|=
-name|samlRealm
+name|jwtRealm
 operator|.
 name|getCallbackHandler
 argument_list|()
 expr_stmt|;
 name|alias
 operator|=
-name|samlRealm
+name|jwtRealm
 operator|.
 name|getSignatureAlias
 argument_list|()
@@ -1026,7 +1053,7 @@ block|}
 comment|// SignatureProperties can be defined independently of SignatureCrypto
 if|if
 condition|(
-name|samlRealm
+name|jwtRealm
 operator|.
 name|getSignatureProperties
 argument_list|()
@@ -1036,7 +1063,7 @@ condition|)
 block|{
 name|signatureProperties
 operator|=
-name|samlRealm
+name|jwtRealm
 operator|.
 name|getSignatureProperties
 argument_list|()

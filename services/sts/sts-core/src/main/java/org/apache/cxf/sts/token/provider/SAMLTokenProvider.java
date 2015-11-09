@@ -35,6 +35,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|HashMap
 import|;
 end_import
@@ -243,7 +253,7 @@ name|token
 operator|.
 name|realm
 operator|.
-name|SAMLRealm
+name|RealmProperties
 import|;
 end_import
 
@@ -539,7 +549,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|realmMap
 init|=
@@ -1363,7 +1373,7 @@ operator|=
 name|signToken
 expr_stmt|;
 block|}
-comment|/**      * Set the map of realm->SAMLRealm for this token provider      * @param realms the map of realm->SAMLRealm for this token provider      */
+comment|/**      * Set the map of realm->RealmProperties for this token provider      * @param realms the map of realm->RealmProperties for this token provider      */
 specifier|public
 name|void
 name|setRealmMap
@@ -1372,7 +1382,9 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|?
+extends|extends
+name|RealmProperties
 argument_list|>
 name|realms
 parameter_list|)
@@ -1380,23 +1392,46 @@ block|{
 name|this
 operator|.
 name|realmMap
-operator|=
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
+if|if
+condition|(
 name|realms
+operator|!=
+literal|null
+condition|)
+block|{
+name|this
+operator|.
+name|realmMap
+operator|.
+name|putAll
+argument_list|(
+name|realms
+argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the map of realm->SAMLRealm for this token provider      * @return the map of realm->SAMLRealm for this token provider      */
+block|}
+comment|/**      * Get the map of realm->RealmProperties for this token provider      * @return the map of realm->RealmProperties for this token provider      */
 specifier|public
 name|Map
 argument_list|<
 name|String
 argument_list|,
-name|SAMLRealm
+name|RealmProperties
 argument_list|>
 name|getRealmMap
 parameter_list|()
 block|{
 return|return
+name|Collections
+operator|.
+name|unmodifiableMap
+argument_list|(
 name|realmMap
+argument_list|)
 return|;
 block|}
 specifier|public
@@ -1439,7 +1474,7 @@ operator|.
 name|getRealm
 argument_list|()
 decl_stmt|;
-name|SAMLRealm
+name|RealmProperties
 name|samlRealm
 init|=
 literal|null
@@ -1567,7 +1602,7 @@ name|byte
 index|[]
 name|secret
 parameter_list|,
-name|SAMLRealm
+name|RealmProperties
 name|samlRealm
 parameter_list|,
 name|Document
