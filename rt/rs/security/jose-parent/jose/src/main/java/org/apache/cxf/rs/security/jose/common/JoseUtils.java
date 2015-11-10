@@ -45,9 +45,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
+name|net
 operator|.
-name|UnsupportedEncodingException
+name|URL
 import|;
 end_import
 
@@ -55,9 +55,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
+name|nio
 operator|.
-name|URL
+name|charset
+operator|.
+name|StandardCharsets
 import|;
 end_import
 
@@ -786,8 +788,6 @@ name|String
 name|encoded
 parameter_list|)
 block|{
-try|try
-block|{
 return|return
 operator|new
 name|String
@@ -797,24 +797,11 @@ argument_list|(
 name|encoded
 argument_list|)
 argument_list|,
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
 return|;
-block|}
-catch|catch
-parameter_list|(
-name|UnsupportedEncodingException
-name|ex
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|JoseException
-argument_list|(
-name|ex
-argument_list|)
-throw|;
-block|}
 block|}
 specifier|public
 specifier|static

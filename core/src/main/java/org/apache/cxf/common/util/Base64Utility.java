@@ -73,7 +73,7 @@ name|nio
 operator|.
 name|charset
 operator|.
-name|Charset
+name|StandardCharsets
 import|;
 end_import
 
@@ -368,19 +368,6 @@ name|int
 name|PAD_SIZE8
 init|=
 literal|3
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|Charset
-name|CHARSET_UTF8
-init|=
-name|Charset
-operator|.
-name|forName
-argument_list|(
-literal|"UTF-8"
-argument_list|)
 decl_stmt|;
 comment|// class static initializer for building decode table
 static|static
@@ -1996,7 +1983,9 @@ name|byte
 index|[]
 name|bytes
 init|=
-name|CHARSET_UTF8
+name|StandardCharsets
+operator|.
+name|UTF_8
 operator|.
 name|encode
 argument_list|(

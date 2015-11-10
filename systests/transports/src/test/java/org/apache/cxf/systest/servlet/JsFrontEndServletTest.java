@@ -156,7 +156,7 @@ name|getContentType
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|//assertEquals("UTF-8", response.getCharacterSet());
+comment|//assertEquals(StandardCharsets.UTF_8, response.getCharacterSet());
 name|Document
 name|doc
 init|=

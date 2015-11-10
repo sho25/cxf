@@ -29,6 +29,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -369,7 +381,12 @@ condition|)
 block|{
 name|encoding
 operator|=
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
+operator|.
+name|name
+argument_list|()
 expr_stmt|;
 block|}
 name|StringBuilder

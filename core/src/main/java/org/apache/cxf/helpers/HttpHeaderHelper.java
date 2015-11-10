@@ -625,7 +625,7 @@ name|deflt
 return|;
 block|}
 comment|//older versions of tomcat don't properly parse ContentType headers with stuff
-comment|//after charset="UTF-8"
+comment|//after charset=StandardCharsets.UTF_8
 name|int
 name|idx
 init|=

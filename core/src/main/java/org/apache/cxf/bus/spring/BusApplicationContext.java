@@ -81,6 +81,18 @@ begin_import
 import|import
 name|java
 operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|security
 operator|.
 name|AccessControlException
@@ -1050,7 +1062,7 @@ name|getInputStream
 argument_list|()
 init|;                         BufferedReader rd = new BufferedReader(new InputStreamReader(is
 operator|,
-init|"UTF-8")
+init|StandardCharsets.UTF_8)
 block|)
 block|)
 block|{

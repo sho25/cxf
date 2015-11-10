@@ -49,7 +49,7 @@ name|nio
 operator|.
 name|charset
 operator|.
-name|Charset
+name|StandardCharsets
 import|;
 end_import
 
@@ -1320,12 +1320,9 @@ block|{
 name|ByteBuffer
 name|bb
 init|=
-name|Charset
+name|StandardCharsets
 operator|.
-name|forName
-argument_list|(
-literal|"UTF-8"
-argument_list|)
+name|UTF_8
 operator|.
 name|encode
 argument_list|(

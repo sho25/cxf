@@ -33,9 +33,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
+name|nio
 operator|.
-name|UnsupportedEncodingException
+name|charset
+operator|.
+name|StandardCharsets
 import|;
 end_import
 
@@ -229,28 +231,15 @@ name|byte
 index|[]
 name|tokenBytes
 init|=
-literal|null
-decl_stmt|;
-try|try
-block|{
-name|tokenBytes
-operator|=
 name|assertion
 operator|.
 name|getBytes
 argument_list|(
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|UnsupportedEncodingException
-name|ex
-parameter_list|)
-block|{
-comment|// won't happen
-block|}
+decl_stmt|;
 if|if
 condition|(
 name|useDeflateEncoding

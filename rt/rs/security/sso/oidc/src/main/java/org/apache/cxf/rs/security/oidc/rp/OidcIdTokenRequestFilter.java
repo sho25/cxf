@@ -33,6 +33,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -364,7 +376,12 @@ operator|.
 name|getEntityStream
 argument_list|()
 argument_list|,
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
+operator|.
+name|name
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|FormUtils
@@ -380,7 +397,12 @@ argument_list|()
 argument_list|,
 name|body
 argument_list|,
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
+operator|.
+name|name
+argument_list|()
 argument_list|,
 literal|false
 argument_list|)

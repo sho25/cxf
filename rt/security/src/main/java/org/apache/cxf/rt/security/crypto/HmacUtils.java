@@ -23,9 +23,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
+name|nio
 operator|.
-name|UnsupportedEncodingException
+name|charset
+operator|.
+name|StandardCharsets
 import|;
 end_import
 
@@ -512,8 +514,6 @@ name|String
 name|data
 parameter_list|)
 block|{
-try|try
-block|{
 return|return
 name|computeHmac
 argument_list|(
@@ -521,7 +521,9 @@ name|key
 operator|.
 name|getBytes
 argument_list|(
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
 argument_list|,
 name|hmac
@@ -529,21 +531,6 @@ argument_list|,
 name|data
 argument_list|)
 return|;
-block|}
-catch|catch
-parameter_list|(
-name|UnsupportedEncodingException
-name|e
-parameter_list|)
-block|{
-throw|throw
-operator|new
-name|SecurityException
-argument_list|(
-name|e
-argument_list|)
-throw|;
-block|}
 block|}
 specifier|public
 specifier|static

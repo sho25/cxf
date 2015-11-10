@@ -31,16 +31,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
-operator|.
-name|UnsupportedEncodingException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|net
 operator|.
 name|MalformedURLException
@@ -74,6 +64,18 @@ operator|.
 name|net
 operator|.
 name|URL
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
 import|;
 end_import
 
@@ -1322,8 +1324,6 @@ name|ch
 argument_list|)
 condition|)
 block|{
-try|try
-block|{
 name|byte
 index|[]
 name|bytes
@@ -1337,7 +1337,9 @@ argument_list|)
 operator|.
 name|getBytes
 argument_list|(
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
 decl_stmt|;
 for|for
@@ -1402,15 +1404,6 @@ literal|0x0F
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-block|}
-catch|catch
-parameter_list|(
-name|UnsupportedEncodingException
-name|e
-parameter_list|)
-block|{
-comment|//should not happen
 block|}
 block|}
 else|else

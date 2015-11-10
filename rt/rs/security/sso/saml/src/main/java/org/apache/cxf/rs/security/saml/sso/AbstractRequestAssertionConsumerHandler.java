@@ -65,9 +65,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
+name|net
 operator|.
-name|UnsupportedEncodingException
+name|URI
 import|;
 end_import
 
@@ -75,9 +75,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|net
+name|nio
 operator|.
-name|URI
+name|charset
+operator|.
+name|StandardCharsets
 import|;
 end_import
 
@@ -1252,7 +1254,7 @@ name|samlResponseDecoded
 init|=
 name|samlResponse
 decl_stmt|;
-comment|/*         // URL Decoding only applies for the re-direct binding         if (!postBinding) {             try {                 samlResponseDecoded = URLDecoder.decode(samlResponse, "UTF-8");             } catch (UnsupportedEncodingException e) {                 throw ExceptionUtils.toBadRequestException(null, null);             }         }         */
+comment|/*         // URL Decoding only applies for the re-direct binding         if (!postBinding) {             try {                 samlResponseDecoded = URLDecoder.decode(samlResponse, StandardCharsets.UTF_8);             } catch (UnsupportedEncodingException e) {                 throw ExceptionUtils.toBadRequestException(null, null);             }         }         */
 name|InputStream
 name|tokenStream
 init|=
@@ -1338,8 +1340,6 @@ block|}
 block|}
 else|else
 block|{
-try|try
-block|{
 name|tokenStream
 operator|=
 operator|new
@@ -1349,28 +1349,12 @@ name|samlResponseDecoded
 operator|.
 name|getBytes
 argument_list|(
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|UnsupportedEncodingException
-name|ex
-parameter_list|)
-block|{
-throw|throw
-name|ExceptionUtils
-operator|.
-name|toBadRequestException
-argument_list|(
-name|ex
-argument_list|,
-literal|null
-argument_list|)
-throw|;
-block|}
 block|}
 name|Document
 name|responseDoc
@@ -1390,7 +1374,9 @@ name|InputStreamReader
 argument_list|(
 name|tokenStream
 argument_list|,
-literal|"UTF-8"
+name|StandardCharsets
+operator|.
+name|UTF_8
 argument_list|)
 argument_list|)
 expr_stmt|;
