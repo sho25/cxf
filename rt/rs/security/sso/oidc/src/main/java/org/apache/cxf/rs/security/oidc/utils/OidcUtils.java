@@ -199,9 +199,9 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 init|=
-literal|"oidc"
+literal|"openid"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -389,11 +389,11 @@ block|{              }
 specifier|public
 specifier|static
 name|String
-name|getOidcScope
+name|getOpenIdScope
 parameter_list|()
 block|{
 return|return
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 return|;
 block|}
 specifier|public
@@ -405,7 +405,7 @@ block|{
 return|return
 name|getScope
 argument_list|(
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 argument_list|,
 name|PROFILE_SCOPE
 argument_list|)
@@ -420,7 +420,7 @@ block|{
 return|return
 name|getScope
 argument_list|(
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 argument_list|,
 name|EMAIL_SCOPE
 argument_list|)
@@ -435,7 +435,7 @@ block|{
 return|return
 name|getScope
 argument_list|(
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 argument_list|,
 name|ADDRESS_SCOPE
 argument_list|)
@@ -450,7 +450,7 @@ block|{
 return|return
 name|getScope
 argument_list|(
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 argument_list|,
 name|PHONE_SCOPE
 argument_list|)
@@ -465,7 +465,7 @@ block|{
 return|return
 name|getScope
 argument_list|(
-name|OIDC_SCOPE
+name|OPENID_SCOPE
 argument_list|,
 name|PROFILE_SCOPE
 argument_list|,
