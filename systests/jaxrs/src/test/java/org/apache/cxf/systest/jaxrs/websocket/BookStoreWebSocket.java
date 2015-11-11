@@ -730,6 +730,14 @@ name|i
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|out
+operator|.
+name|getEntityStream
+argument_list|()
+operator|.
+name|flush
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 catch|catch
@@ -981,6 +989,11 @@ operator|.
 name|getBytes
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|out
+operator|.
+name|flush
+argument_list|()
 expr_stmt|;
 block|}
 catch|catch
