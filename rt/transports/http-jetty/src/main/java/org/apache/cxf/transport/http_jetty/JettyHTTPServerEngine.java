@@ -2697,6 +2697,9 @@ operator|.
 name|doStart
 argument_list|()
 expr_stmt|;
+name|checkKeyStore
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -3168,7 +3171,7 @@ operator|)
 condition|?
 literal|"SSL"
 else|:
-literal|"SSL-HTTP"
+literal|"SSL-HTTP/1.1"
 decl_stmt|;
 name|result
 operator|.
@@ -3189,8 +3192,6 @@ argument_list|(
 name|result
 argument_list|,
 name|proto
-operator|+
-literal|"/1.1"
 argument_list|)
 expr_stmt|;
 block|}
