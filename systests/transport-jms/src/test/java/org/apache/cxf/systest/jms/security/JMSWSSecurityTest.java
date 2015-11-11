@@ -713,12 +713,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testUnsignedSAML2AudienceRestrictionToken
@@ -842,7 +836,7 @@ name|audiences
 operator|.
 name|add
 argument_list|(
-literal|"http://apache.org/one"
+literal|"jms:jndi:dynamicQueues/test.jmstransport.text"
 argument_list|)
 expr_stmt|;
 name|AudienceRestrictionBean

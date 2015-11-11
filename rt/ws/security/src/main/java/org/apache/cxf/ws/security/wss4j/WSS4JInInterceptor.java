@@ -2377,7 +2377,7 @@ name|message
 operator|.
 name|Message
 operator|.
-name|REQUEST_URL
+name|REQUEST_URI
 argument_list|)
 argument_list|)
 expr_stmt|;
