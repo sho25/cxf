@@ -903,12 +903,22 @@ name|Assert
 operator|.
 name|assertEquals
 argument_list|(
-literal|"text/xml; charset=UTF-8"
+literal|"text/xml;charset=utf-8"
 argument_list|,
 name|responseIn
 operator|.
 name|getContentType
 argument_list|()
+operator|.
+name|toLowerCase
+argument_list|()
+operator|.
+name|replace
+argument_list|(
+literal|" "
+argument_list|,
+literal|""
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|Assert
