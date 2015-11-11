@@ -2283,11 +2283,17 @@ name|String
 name|algo
 init|=
 name|props
+operator|!=
+literal|null
+condition|?
+name|props
 operator|.
 name|getProperty
 argument_list|(
 name|propName
 argument_list|)
+else|:
+literal|null
 decl_stmt|;
 if|if
 condition|(
