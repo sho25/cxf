@@ -791,7 +791,7 @@ operator|.
 name|getCurrentMessage
 argument_list|()
 decl_stmt|;
-name|String
+name|SignatureAlgorithm
 name|signatureAlgo
 init|=
 name|JwsUtils
@@ -819,12 +819,7 @@ argument_list|()
 operator|.
 name|setSignatureAlgorithm
 argument_list|(
-name|SignatureAlgorithm
-operator|.
-name|getAlgorithm
-argument_list|(
 name|signatureAlgo
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
