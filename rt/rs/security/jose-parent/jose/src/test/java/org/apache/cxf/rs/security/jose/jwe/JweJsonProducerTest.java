@@ -1392,7 +1392,7 @@ name|contentEncryption
 init|=
 name|JweUtils
 operator|.
-name|getContentEncryptionAlgorithm
+name|getContentEncryptionProvider
 argument_list|(
 name|AlgorithmUtils
 operator|.

@@ -205,6 +205,16 @@ argument_list|,
 operator|-
 literal|1
 argument_list|)
+block|,
+name|DIRECT
+argument_list|(
+literal|"direct"
+argument_list|,
+literal|null
+argument_list|,
+operator|-
+literal|1
+argument_list|)
 block|;
 specifier|private
 specifier|final
