@@ -371,6 +371,11 @@ argument_list|>
 name|endpoints
 parameter_list|)
 block|{
+name|endpointPatterns
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 if|if
 condition|(
 name|endpoints
