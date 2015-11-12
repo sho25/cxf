@@ -578,7 +578,7 @@ name|Application
 name|app
 parameter_list|)
 block|{
-name|setApplication
+name|setApplicationInfo
 argument_list|(
 operator|new
 name|ApplicationInfo
@@ -593,7 +593,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setApplication
+name|setApplicationInfo
 parameter_list|(
 name|ApplicationInfo
 name|provider

@@ -3661,7 +3661,7 @@ argument_list|)
 expr_stmt|;
 name|bean
 operator|.
-name|setApplication
+name|setApplicationInfo
 argument_list|(
 name|providerApp
 argument_list|)
