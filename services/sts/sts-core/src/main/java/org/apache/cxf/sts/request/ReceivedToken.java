@@ -148,7 +148,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class contains values that have been extracted from a received Token. The Token can be a  * JAXB UsernameTokenType/BinarySecurityTokenType or a DOM Element.  */
+comment|/**  * This class contains values that have been extracted from a received Token. The Token can be a  * JAXB UsernameTokenType/BinarySecurityTokenType, a DOM Element or a String.  */
 end_comment
 
 begin_class
@@ -417,6 +417,41 @@ expr_stmt|;
 name|isDOMElement
 operator|=
 literal|true
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|receivedToken
+operator|instanceof
+name|String
+condition|)
+block|{
+if|if
+condition|(
+name|LOG
+operator|.
+name|isLoggable
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|)
+condition|)
+block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Found ValidateTarget String"
+argument_list|)
+expr_stmt|;
+block|}
+name|this
+operator|.
+name|token
+operator|=
+name|receivedToken
 expr_stmt|;
 block|}
 else|else
