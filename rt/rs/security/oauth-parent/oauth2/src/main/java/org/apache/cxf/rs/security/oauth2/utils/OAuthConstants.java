@@ -579,6 +579,25 @@ name|REFRESH_TOKEN_SCOPE
 init|=
 literal|"refreshToken"
 decl_stmt|;
+comment|// Client Secret (JWS) Signature Algorithm
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CLIENT_SECRET_SIGNATURE_ALGORITHM
+init|=
+literal|"client.secret.signature.algorithm"
+decl_stmt|;
+comment|// Client Secret (JWE) Encryption Algorithm
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CLIENT_SECRET_ENCRYPTION_ALGORITHM
+init|=
+literal|"client.secret.encryption.algorithm"
+decl_stmt|;
+comment|// Client Secret Encrypting Algorithm
 specifier|private
 name|OAuthConstants
 parameter_list|()
