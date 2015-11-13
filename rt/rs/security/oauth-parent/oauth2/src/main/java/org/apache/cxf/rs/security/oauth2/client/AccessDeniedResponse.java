@@ -25,7 +25,35 @@ begin_class
 specifier|public
 class|class
 name|AccessDeniedResponse
-block|{  }
+block|{
+specifier|private
+name|String
+name|error
+decl_stmt|;
+specifier|public
+name|AccessDeniedResponse
+parameter_list|(
+name|String
+name|error
+parameter_list|)
+block|{
+name|this
+operator|.
+name|error
+operator|=
+name|error
+expr_stmt|;
+block|}
+specifier|public
+name|String
+name|getError
+parameter_list|()
+block|{
+return|return
+name|error
+return|;
+block|}
+block|}
 end_class
 
 end_unit
