@@ -893,6 +893,16 @@ argument_list|)
 expr_stmt|;
 name|oobResponse
 operator|.
+name|setClientDescription
+argument_list|(
+name|client
+operator|.
+name|getApplicationDescription
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|oobResponse
+operator|.
 name|setAuthorizationCode
 argument_list|(
 name|grant
