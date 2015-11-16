@@ -588,14 +588,14 @@ name|CLIENT_SECRET_SIGNATURE_ALGORITHM
 init|=
 literal|"client.secret.signature.algorithm"
 decl_stmt|;
-comment|// Client Secret (JWE) Encryption Algorithm
+comment|// Client Secret (JWE) Content Encryption Algorithm
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|CLIENT_SECRET_ENCRYPTION_ALGORITHM
+name|CLIENT_SECRET_CONTENT_ENCRYPTION_ALGORITHM
 init|=
-literal|"client.secret.encryption.algorithm"
+literal|"client.secret.content.encryption.algorithm"
 decl_stmt|;
 comment|// Client Secret Encrypting Algorithm
 specifier|private

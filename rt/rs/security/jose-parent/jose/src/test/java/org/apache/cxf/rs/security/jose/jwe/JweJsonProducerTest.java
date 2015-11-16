@@ -1394,9 +1394,9 @@ name|JweUtils
 operator|.
 name|getContentEncryptionProvider
 argument_list|(
-name|AlgorithmUtils
+name|ContentAlgorithm
 operator|.
-name|A128GCM_ALGO
+name|A128GCM
 argument_list|)
 decl_stmt|;
 name|JweEncryptionProvider
