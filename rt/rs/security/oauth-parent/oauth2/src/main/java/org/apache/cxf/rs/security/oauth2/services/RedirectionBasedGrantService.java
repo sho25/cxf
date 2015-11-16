@@ -2076,15 +2076,22 @@ condition|(
 operator|!
 name|uris
 operator|.
+name|isEmpty
+argument_list|()
+operator|&&
+operator|!
+name|uris
+operator|.
 name|contains
 argument_list|(
 name|redirectUri
 argument_list|)
 condition|)
 block|{
-name|redirectUri
-operator|=
-literal|null
+name|reportInvalidRequestError
+argument_list|(
+literal|"Client Redirect Uri is invalid"
+argument_list|)
 expr_stmt|;
 block|}
 block|}
