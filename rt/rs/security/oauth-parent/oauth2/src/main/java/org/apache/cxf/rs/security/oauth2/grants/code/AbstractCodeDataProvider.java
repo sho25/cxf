@@ -77,7 +77,9 @@ specifier|private
 name|long
 name|codeLifetime
 init|=
-literal|3600L
+literal|10
+operator|*
+literal|60
 decl_stmt|;
 specifier|protected
 name|AbstractCodeDataProvider
