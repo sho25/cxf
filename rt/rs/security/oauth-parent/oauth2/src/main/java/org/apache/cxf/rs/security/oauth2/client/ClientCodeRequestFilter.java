@@ -1034,6 +1034,13 @@ argument_list|,
 name|redirectState
 argument_list|)
 expr_stmt|;
+name|setCodeVerifier
+argument_list|(
+name|ub
+argument_list|,
+name|redirectState
+argument_list|)
+expr_stmt|;
 name|setAdditionalCodeRequestParams
 argument_list|(
 name|ub
