@@ -221,7 +221,7 @@ name|HAWK_TOKEN_TYPE
 init|=
 literal|"hawk"
 decl_stmt|;
-comment|// http://datatracker.ietf.org/doc/draft-sakimura-oauth-tcse
+comment|// https://tools.ietf.org/html/rfc7636
 specifier|public
 specifier|static
 specifier|final
@@ -237,6 +237,14 @@ name|String
 name|AUTHORIZATION_CODE_CHALLENGE
 init|=
 literal|"code_challenge"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|AUTHORIZATION_CODE_CHALLENGE_METHOD
+init|=
+literal|"code_challenge_method"
 decl_stmt|;
 comment|// CXF-specific
 specifier|public

@@ -23,24 +23,38 @@ name|code
 package|;
 end_package
 
-begin_interface
+begin_class
 specifier|public
-interface|interface
+class|class
+name|PlainCodeVerifier
+implements|implements
 name|CodeVerifierTransformer
 block|{
+specifier|public
 name|String
 name|transformCodeVerifier
 parameter_list|(
 name|String
 name|codeVerifier
 parameter_list|)
-function_decl|;
+block|{
+return|return
+name|codeVerifier
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
 name|String
 name|getChallengeMethod
 parameter_list|()
-function_decl|;
+block|{
+return|return
+literal|"plain"
+return|;
 block|}
-end_interface
+block|}
+end_class
 
 end_unit
 
