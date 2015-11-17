@@ -6863,6 +6863,13 @@ operator|.
 name|getToken
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|el
+operator|!=
+literal|null
+condition|)
+block|{
 name|StaxUtils
 operator|.
 name|copy
@@ -6872,6 +6879,7 @@ argument_list|,
 name|writer
 argument_list|)
 expr_stmt|;
+block|}
 name|writer
 operator|.
 name|writeEndElement
