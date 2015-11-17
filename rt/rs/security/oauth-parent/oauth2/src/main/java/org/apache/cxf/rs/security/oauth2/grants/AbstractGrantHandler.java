@@ -486,7 +486,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|String
 name|getSingleGrantType
 parameter_list|()
@@ -615,6 +615,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
@@ -659,6 +661,8 @@ argument_list|,
 name|approvedScope
 argument_list|,
 name|audience
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
@@ -696,6 +700,8 @@ argument_list|,
 literal|null
 argument_list|,
 literal|null
+argument_list|,
+literal|null
 argument_list|)
 return|;
 block|}
@@ -726,6 +732,9 @@ name|approvedScope
 parameter_list|,
 name|String
 name|audience
+parameter_list|,
+name|String
+name|codeVerifier
 parameter_list|)
 block|{
 if|if
@@ -881,6 +890,13 @@ operator|.
 name|setAudience
 argument_list|(
 name|audience
+argument_list|)
+expr_stmt|;
+name|reg
+operator|.
+name|setClientCodeVerifier
+argument_list|(
+name|codeVerifier
 argument_list|)
 expr_stmt|;
 return|return

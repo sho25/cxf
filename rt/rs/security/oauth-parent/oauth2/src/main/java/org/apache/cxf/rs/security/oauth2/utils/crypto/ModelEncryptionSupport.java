@@ -1568,6 +1568,17 @@ name|perms
 argument_list|)
 expr_stmt|;
 block|}
+comment|//Client verifier:
+name|newToken
+operator|.
+name|setClientCodeVerifier
+argument_list|(
+name|parts
+index|[
+literal|10
+index|]
+argument_list|)
+expr_stmt|;
 comment|//UserSubject:
 name|newToken
 operator|.
@@ -1577,7 +1588,7 @@ name|recreateUserSubject
 argument_list|(
 name|parts
 index|[
-literal|10
+literal|11
 index|]
 argument_list|)
 argument_list|)
@@ -1957,7 +1968,28 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 10: user subject
+comment|// 10: code verifier
+name|state
+operator|.
+name|append
+argument_list|(
+name|tokenizeString
+argument_list|(
+name|token
+operator|.
+name|getClientCodeVerifier
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|state
+operator|.
+name|append
+argument_list|(
+name|SEP
+argument_list|)
+expr_stmt|;
+comment|// 11: user subject
 name|tokenizeUserSubject
 argument_list|(
 name|state
@@ -2726,7 +2758,7 @@ argument_list|(
 name|SEP
 argument_list|)
 expr_stmt|;
-comment|// 6: code verifier
+comment|// 6: code challenge
 name|state
 operator|.
 name|append
