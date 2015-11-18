@@ -1771,6 +1771,7 @@ return|;
 block|}
 comment|/**      * This class returns a realm associated with a JWTToken depending on the issuer.      */
 specifier|private
+specifier|static
 class|class
 name|IssuerJWTRealmCodec
 implements|implements
