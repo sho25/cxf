@@ -201,6 +201,10 @@ decl_stmt|;
 specifier|private
 name|UriBuilder
 name|ub
+init|=
+operator|new
+name|UriBuilderImpl
+argument_list|()
 decl_stmt|;
 specifier|private
 name|URI
