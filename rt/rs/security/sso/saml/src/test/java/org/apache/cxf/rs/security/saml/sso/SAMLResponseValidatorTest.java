@@ -2698,6 +2698,13 @@ argument_list|(
 name|keyStore
 argument_list|)
 expr_stmt|;
+name|issuerCrypto
+operator|.
+name|setDefaultX509Identifier
+argument_list|(
+literal|"alice"
+argument_list|)
+expr_stmt|;
 name|response
 operator|.
 name|getAssertions
