@@ -980,7 +980,7 @@ literal|"https://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/doubleit/services/doubleitbadtransportsaml1"
+literal|"/doubleit/services/baddoubleittransportsaml1"
 decl_stmt|;
 name|requestSecurityToken
 argument_list|(
