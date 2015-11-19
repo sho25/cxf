@@ -60,6 +60,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|NONCE
+init|=
+literal|"nonce"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|REDIRECT_URI
 init|=
 literal|"redirect_uri"

@@ -770,6 +770,16 @@ argument_list|)
 expr_stmt|;
 name|codeReg
 operator|.
+name|setNonce
+argument_list|(
+name|state
+operator|.
+name|getNonce
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|codeReg
+operator|.
 name|setClientCodeChallenge
 argument_list|(
 name|state

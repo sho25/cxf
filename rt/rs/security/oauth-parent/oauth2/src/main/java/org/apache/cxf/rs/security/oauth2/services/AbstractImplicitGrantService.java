@@ -504,6 +504,16 @@ name|getAudience
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|reg
+operator|.
+name|setNonce
+argument_list|(
+name|state
+operator|.
+name|getNonce
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|token
 operator|=
 name|getDataProvider
