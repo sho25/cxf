@@ -555,7 +555,9 @@ name|state
 operator|.
 name|getFirst
 argument_list|(
-literal|"nonce"
+name|IdToken
+operator|.
+name|NONCE_CLAIM
 argument_list|)
 decl_stmt|;
 name|String

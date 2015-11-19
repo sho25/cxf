@@ -75,6 +75,26 @@ name|JwtClaims
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|utils
+operator|.
+name|OAuthConstants
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -96,7 +116,9 @@ specifier|final
 name|String
 name|NONCE_CLAIM
 init|=
-literal|"nonce"
+name|OAuthConstants
+operator|.
+name|NONCE
 decl_stmt|;
 specifier|public
 specifier|static

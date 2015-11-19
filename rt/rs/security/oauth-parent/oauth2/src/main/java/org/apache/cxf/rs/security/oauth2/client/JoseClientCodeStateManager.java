@@ -505,7 +505,9 @@ name|requestState
 operator|.
 name|putSingle
 argument_list|(
-literal|"nonce"
+name|OAuthConstants
+operator|.
+name|NONCE
 argument_list|,
 name|nonceParam
 argument_list|)
