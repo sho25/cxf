@@ -53,18 +53,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|Path
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -124,11 +112,6 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|Path
-argument_list|(
-literal|"/login"
-argument_list|)
 specifier|public
 class|class
 name|OidcImplicitService
