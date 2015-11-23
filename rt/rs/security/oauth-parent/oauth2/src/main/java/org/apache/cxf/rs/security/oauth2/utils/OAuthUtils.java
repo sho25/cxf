@@ -1030,7 +1030,7 @@ condition|)
 block|{
 name|subject
 operator|.
-name|setAthenticationMethod
+name|setAuthenticationMethod
 argument_list|(
 name|m
 operator|.
