@@ -1378,8 +1378,7 @@ block|{
 return|return
 name|lifetime
 operator|!=
-operator|-
-literal|1
+literal|0L
 operator|&&
 name|issuedAt
 operator|+
