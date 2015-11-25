@@ -741,6 +741,12 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
+comment|//jwkSetClient returns the most up-to-date keys
+name|keyMap
+operator|.
+name|clear
+argument_list|()
+expr_stmt|;
 name|keyMap
 operator|.
 name|putAll

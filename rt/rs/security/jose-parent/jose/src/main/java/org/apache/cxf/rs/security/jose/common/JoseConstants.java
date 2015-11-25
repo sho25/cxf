@@ -328,6 +328,15 @@ name|RSSEC_SIGNATURE_ALGORITHM
 init|=
 literal|"rs.security.signature.algorithm"
 decl_stmt|;
+comment|/**      * The EC Curve to use with EC keys loaded from Java Key Store.       * JWK EC Keys are expected to use a standard "crv" property instead.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RSSEC_EC_CURVE
+init|=
+literal|"rs.security.elliptic.curve"
+decl_stmt|;
 comment|/**      * The OLD signature algorithm identifier. Use RSSEC_SIGNATURE_ALGORITHM instead.      */
 annotation|@
 name|Deprecated
