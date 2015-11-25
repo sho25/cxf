@@ -3284,8 +3284,6 @@ name|String
 name|algoProp
 parameter_list|)
 block|{
-comment|// EC keys can  be supported once we figure out how to get a curve name
-comment|// from an EC key instance or if a curve property is introduced
 if|if
 condition|(
 name|key
