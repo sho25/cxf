@@ -150,6 +150,13 @@ name|JsonWebKeys
 name|getPublicVerificationKeys
 parameter_list|()
 block|{
+if|if
+condition|(
+name|keySet
+operator|==
+literal|null
+condition|)
+block|{
 name|Properties
 name|props
 init|=
@@ -160,13 +167,6 @@ argument_list|(
 literal|true
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|keySet
-operator|==
-literal|null
-condition|)
-block|{
 name|keySet
 operator|=
 name|JwsUtils
