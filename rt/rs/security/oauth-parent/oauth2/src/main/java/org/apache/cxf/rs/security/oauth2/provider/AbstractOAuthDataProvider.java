@@ -242,10 +242,8 @@ decl_stmt|;
 specifier|private
 name|long
 name|refreshTokenLifetime
-init|=
-operator|-
-literal|1
 decl_stmt|;
+comment|// refresh tokens are eternal by default
 specifier|protected
 name|AbstractOAuthDataProvider
 parameter_list|()
