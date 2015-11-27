@@ -701,6 +701,26 @@ argument_list|,
 literal|null
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|accessTokenV
+operator|.
+name|isInitialValidationSuccessful
+argument_list|()
+condition|)
+block|{
+throw|throw
+name|ExceptionUtils
+operator|.
+name|toNotAuthorizedException
+argument_list|(
+literal|null
+argument_list|,
+literal|null
+argument_list|)
+throw|;
+block|}
 comment|// Find the scopes which match the current request
 name|List
 argument_list|<
