@@ -704,21 +704,22 @@ name|Subject
 name|subject
 parameter_list|)
 block|{
+comment|// We need to find a Bearer Subject Confirmation method
+name|boolean
+name|bearerSubjectConfFound
+init|=
+literal|false
+decl_stmt|;
 if|if
 condition|(
 name|subject
 operator|.
 name|getSubjectConfirmations
 argument_list|()
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{
-return|return
-literal|false
-return|;
-block|}
-comment|// We need to find a Bearer Subject Confirmation method
 for|for
 control|(
 name|SubjectConfirmation
@@ -757,10 +758,15 @@ name|getSubjectConfirmationData
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|bearerSubjectConfFound
+operator|=
+literal|true
+expr_stmt|;
+block|}
 block|}
 block|}
 return|return
-literal|true
+name|bearerSubjectConfFound
 return|;
 block|}
 comment|/**        * Validate a (Bearer) Subject Confirmation        */
