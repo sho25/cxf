@@ -307,8 +307,6 @@ class|class
 name|DefaultEHCacheOAuthDataProvider
 extends|extends
 name|AbstractOAuthDataProvider
-implements|implements
-name|ClientRegistrationProvider
 block|{
 specifier|public
 specifier|static

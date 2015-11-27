@@ -239,8 +239,6 @@ class|class
 name|DefaultEncryptingOAuthDataProvider
 extends|extends
 name|AbstractOAuthDataProvider
-implements|implements
-name|ClientRegistrationProvider
 block|{
 specifier|protected
 name|SecretKey

@@ -232,6 +232,8 @@ class|class
 name|AbstractOAuthDataProvider
 implements|implements
 name|OAuthDataProvider
+implements|,
+name|ClientRegistrationProvider
 block|{
 specifier|private
 name|long
