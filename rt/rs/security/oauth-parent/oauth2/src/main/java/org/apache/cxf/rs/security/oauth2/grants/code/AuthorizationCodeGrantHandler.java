@@ -480,11 +480,6 @@ name|getAudience
 argument_list|()
 argument_list|,
 name|clientCodeVerifier
-argument_list|,
-name|grant
-operator|.
-name|getNonce
-argument_list|()
 argument_list|)
 return|;
 block|}
