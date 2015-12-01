@@ -1091,7 +1091,7 @@ name|isEmpty
 argument_list|(
 name|consumer
 operator|.
-name|getSecret
+name|getClientSecret
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -1123,14 +1123,14 @@ name|data
 init|=
 name|consumer
 operator|.
-name|getKey
+name|getClientId
 argument_list|()
 operator|+
 literal|":"
 operator|+
 name|consumer
 operator|.
-name|getSecret
+name|getClientSecret
 argument_list|()
 decl_stmt|;
 name|sb
@@ -1192,7 +1192,7 @@ name|CLIENT_ID
 argument_list|,
 name|consumer
 operator|.
-name|getKey
+name|getClientId
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1211,7 +1211,7 @@ name|CLIENT_SECRET
 argument_list|,
 name|consumer
 operator|.
-name|getSecret
+name|getClientSecret
 argument_list|()
 argument_list|)
 expr_stmt|;

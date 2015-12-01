@@ -991,7 +991,7 @@ name|authorizationServiceUri
 argument_list|,
 name|consumer
 operator|.
-name|getKey
+name|getClientId
 argument_list|()
 argument_list|,
 name|getAbsoluteRedirectUri
