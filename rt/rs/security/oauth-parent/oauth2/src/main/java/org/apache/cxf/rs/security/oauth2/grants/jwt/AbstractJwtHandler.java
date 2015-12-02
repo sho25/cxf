@@ -309,7 +309,9 @@ name|JwsSignatureVerifier
 name|theSigVerifier
 init|=
 name|getInitializedSigVerifier
-argument_list|()
+argument_list|(
+name|headers
+argument_list|)
 decl_stmt|;
 if|if
 condition|(
@@ -427,6 +429,11 @@ name|issuer
 operator|==
 literal|null
 operator|||
+operator|(
+name|supportedIssuers
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|supportedIssuers
 operator|.
@@ -434,6 +441,7 @@ name|contains
 argument_list|(
 name|issuer
 argument_list|)
+operator|)
 condition|)
 block|{
 throw|throw
@@ -524,7 +532,10 @@ block|}
 specifier|protected
 name|JwsSignatureVerifier
 name|getInitializedSigVerifier
-parameter_list|()
+parameter_list|(
+name|JwsHeaders
+name|headers
+parameter_list|)
 block|{
 if|if
 condition|(
@@ -542,6 +553,8 @@ name|JwsUtils
 operator|.
 name|loadSignatureVerifier
 argument_list|(
+name|headers
+argument_list|,
 literal|true
 argument_list|)
 return|;
