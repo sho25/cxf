@@ -2895,6 +2895,13 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|result
+operator|=
+name|defaultAddress
+operator|.
+name|getString
+argument_list|()
+expr_stmt|;
 name|message
 operator|.
 name|put
@@ -2903,10 +2910,7 @@ name|Message
 operator|.
 name|ENDPOINT_ADDRESS
 argument_list|,
-name|defaultAddress
-operator|.
-name|getString
-argument_list|()
+name|result
 argument_list|)
 expr_stmt|;
 block|}
