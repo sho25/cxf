@@ -441,14 +441,14 @@ decl_stmt|;
 if|if
 condition|(
 name|currentPrincipal
-operator|!=
+operator|==
 literal|null
-operator|&&
+operator|||
 name|currentPrincipal
 operator|.
 name|getName
 argument_list|()
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
