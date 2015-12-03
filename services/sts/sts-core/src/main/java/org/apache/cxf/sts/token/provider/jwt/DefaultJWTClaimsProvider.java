@@ -1545,6 +1545,15 @@ block|}
 block|}
 block|}
 block|}
+if|if
+condition|(
+operator|!
+name|audiences
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 name|claims
 operator|.
 name|setAudiences
@@ -1552,6 +1561,7 @@ argument_list|(
 name|audiences
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|boolean
