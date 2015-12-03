@@ -266,6 +266,8 @@ argument_list|(
 name|profile
 argument_list|,
 name|idToken
+argument_list|,
+name|client
 argument_list|)
 expr_stmt|;
 return|return
@@ -349,6 +351,8 @@ argument_list|(
 name|profile
 argument_list|,
 name|idToken
+argument_list|,
+name|client
 argument_list|)
 expr_stmt|;
 return|return
@@ -387,6 +391,8 @@ argument_list|(
 name|jwt
 argument_list|,
 name|idToken
+argument_list|,
+name|client
 argument_list|)
 return|;
 block|}
@@ -399,6 +405,9 @@ name|jwt
 parameter_list|,
 name|IdToken
 name|idToken
+parameter_list|,
+name|Consumer
+name|client
 parameter_list|)
 block|{
 name|UserInfo
@@ -421,6 +430,8 @@ argument_list|(
 name|profile
 argument_list|,
 name|idToken
+argument_list|,
+name|client
 argument_list|)
 expr_stmt|;
 return|return
@@ -454,15 +465,18 @@ name|profile
 parameter_list|,
 name|IdToken
 name|idToken
+parameter_list|,
+name|Consumer
+name|client
 parameter_list|)
 block|{
 name|validateJwtClaims
 argument_list|(
 name|profile
 argument_list|,
-name|idToken
+name|client
 operator|.
-name|getAudience
+name|getClientId
 argument_list|()
 argument_list|,
 literal|false

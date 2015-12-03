@@ -640,6 +640,8 @@ argument_list|,
 name|ttl
 argument_list|,
 name|clockOffset
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}

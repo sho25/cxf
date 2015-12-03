@@ -359,6 +359,8 @@ argument_list|,
 name|ttl
 argument_list|,
 name|clockOffset
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 name|validateIssuer
@@ -376,16 +378,6 @@ argument_list|,
 name|claims
 operator|.
 name|getSubject
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|validateAudience
-argument_list|(
-name|client
-argument_list|,
-name|claims
-operator|.
-name|getAudience
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -485,17 +477,6 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|protected
-name|void
-name|validateAudience
-parameter_list|(
-name|Client
-name|client
-parameter_list|,
-name|String
-name|audience
-parameter_list|)
-block|{     }
 specifier|public
 name|void
 name|setSupportedIssuers
