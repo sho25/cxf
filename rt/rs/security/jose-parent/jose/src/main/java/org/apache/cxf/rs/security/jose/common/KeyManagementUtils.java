@@ -693,6 +693,21 @@ name|String
 name|alias
 parameter_list|)
 block|{
+if|if
+condition|(
+name|alias
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|JoseException
+argument_list|(
+literal|"No alias supplied"
+argument_list|)
+throw|;
+block|}
 try|try
 block|{
 name|Certificate
