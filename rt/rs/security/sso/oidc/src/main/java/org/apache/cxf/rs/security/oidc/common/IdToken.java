@@ -100,7 +100,7 @@ specifier|public
 class|class
 name|IdToken
 extends|extends
-name|UserInfo
+name|AbstractUserInfo
 block|{
 specifier|public
 specifier|static
