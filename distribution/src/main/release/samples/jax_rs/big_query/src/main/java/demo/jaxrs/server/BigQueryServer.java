@@ -584,9 +584,14 @@ argument_list|)
 expr_stmt|;
 name|claims
 operator|.
-name|setAudience
+name|setAudiences
+argument_list|(
+name|Collections
+operator|.
+name|singletonList
 argument_list|(
 literal|"https://www.googleapis.com/oauth2/v3/token"
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|long
