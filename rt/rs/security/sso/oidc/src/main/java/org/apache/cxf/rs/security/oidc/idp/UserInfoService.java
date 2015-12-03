@@ -23,6 +23,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Collections
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -317,12 +327,17 @@ expr_stmt|;
 block|}
 name|userInfo
 operator|.
-name|setAudience
+name|setAudiences
+argument_list|(
+name|Collections
+operator|.
+name|singletonList
 argument_list|(
 name|oauth
 operator|.
 name|getClientId
 argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|Object
