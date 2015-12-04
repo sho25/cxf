@@ -492,6 +492,12 @@ name|subject
 parameter_list|,
 name|List
 argument_list|<
+name|String
+argument_list|>
+name|requestedScopes
+parameter_list|,
+name|List
+argument_list|<
 name|OAuthPermission
 argument_list|>
 name|perms
@@ -514,6 +520,8 @@ argument_list|,
 name|redirectUri
 argument_list|,
 name|subject
+argument_list|,
+name|requestedScopes
 argument_list|,
 name|perms
 argument_list|,
@@ -725,9 +733,9 @@ expr_stmt|;
 if|if
 condition|(
 name|approvedScope
-operator|!=
+operator|==
 literal|null
-operator|&&
+operator|||
 name|approvedScope
 operator|.
 name|isEmpty

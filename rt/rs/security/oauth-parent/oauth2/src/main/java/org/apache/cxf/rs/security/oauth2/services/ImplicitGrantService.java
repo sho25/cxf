@@ -244,6 +244,12 @@ name|subject
 parameter_list|,
 name|List
 argument_list|<
+name|String
+argument_list|>
+name|requestedScopes
+parameter_list|,
+name|List
+argument_list|<
 name|OAuthPermission
 argument_list|>
 name|perms
@@ -266,6 +272,8 @@ argument_list|,
 name|redirectUri
 argument_list|,
 name|subject
+argument_list|,
+name|requestedScopes
 argument_list|,
 name|perms
 argument_list|,
