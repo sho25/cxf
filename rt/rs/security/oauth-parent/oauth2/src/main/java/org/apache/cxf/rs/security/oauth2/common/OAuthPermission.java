@@ -561,14 +561,7 @@ operator|!=
 name|that
 operator|.
 name|invisibleToClient
-condition|)
-block|{
-return|return
-literal|false
-return|;
-block|}
-if|if
-condition|(
+operator|||
 name|this
 operator|.
 name|isDefault
@@ -578,6 +571,7 @@ operator|.
 name|isDefault
 condition|)
 block|{
+comment|//NOPMD
 return|return
 literal|false
 return|;
