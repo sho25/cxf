@@ -466,9 +466,9 @@ expr_stmt|;
 if|if
 condition|(
 name|approvedScope
-operator|!=
+operator|==
 literal|null
-operator|&&
+operator|||
 name|approvedScope
 operator|.
 name|isEmpty
