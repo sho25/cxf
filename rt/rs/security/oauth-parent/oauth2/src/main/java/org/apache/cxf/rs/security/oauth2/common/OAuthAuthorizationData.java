@@ -187,7 +187,7 @@ name|List
 argument_list|<
 name|?
 extends|extends
-name|Permission
+name|OAuthPermission
 argument_list|>
 name|permissions
 decl_stmt|;
@@ -227,7 +227,7 @@ name|List
 argument_list|<
 name|?
 extends|extends
-name|Permission
+name|OAuthPermission
 argument_list|>
 name|getPermissions
 parameter_list|()
@@ -236,7 +236,7 @@ return|return
 name|permissions
 return|;
 block|}
-comment|/**      * Gets the list of scopes translated to {@link Permission} instances      * @return the list of scopses      **/
+comment|/**      * Gets the list of scopes translated to {@link OAuthPermission} instances      * @return the list of scopes      **/
 specifier|public
 name|void
 name|setPermissions
@@ -245,7 +245,7 @@ name|List
 argument_list|<
 name|?
 extends|extends
-name|Permission
+name|OAuthPermission
 argument_list|>
 name|permissions
 parameter_list|)
