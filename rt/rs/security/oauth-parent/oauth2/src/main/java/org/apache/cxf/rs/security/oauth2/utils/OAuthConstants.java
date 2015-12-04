@@ -219,7 +219,7 @@ specifier|final
 name|String
 name|BEARER_TOKEN_TYPE
 init|=
-literal|"bearer"
+literal|"Bearer"
 decl_stmt|;
 specifier|public
 specifier|static

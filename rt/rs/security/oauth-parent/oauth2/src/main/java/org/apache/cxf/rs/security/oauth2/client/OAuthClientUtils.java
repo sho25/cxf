@@ -1792,7 +1792,7 @@ name|OAuthConstants
 operator|.
 name|BEARER_TOKEN_TYPE
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|tokenType
 argument_list|)
@@ -1832,7 +1832,7 @@ name|OAuthConstants
 operator|.
 name|HAWK_TOKEN_TYPE
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|tokenType
 argument_list|)
