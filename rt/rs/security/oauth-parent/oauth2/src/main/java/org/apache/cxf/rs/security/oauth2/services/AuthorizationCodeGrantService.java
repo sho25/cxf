@@ -424,10 +424,12 @@ block|{
 specifier|private
 specifier|static
 specifier|final
-name|Integer
-name|RECOMMENDED_CODE_EXPIRY_TIME_MINS
+name|long
+name|RECOMMENDED_CODE_EXPIRY_TIME_SECS
 init|=
-literal|10
+literal|10L
+operator|*
+literal|60L
 decl_stmt|;
 specifier|private
 name|boolean
@@ -842,10 +844,8 @@ name|grant
 operator|.
 name|getExpiresIn
 argument_list|()
-operator|/
-literal|60
 operator|>
-name|RECOMMENDED_CODE_EXPIRY_TIME_MINS
+name|RECOMMENDED_CODE_EXPIRY_TIME_SECS
 condition|)
 block|{
 name|LOG

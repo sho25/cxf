@@ -820,12 +820,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|permissions
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|matchingPermissions
 operator|.

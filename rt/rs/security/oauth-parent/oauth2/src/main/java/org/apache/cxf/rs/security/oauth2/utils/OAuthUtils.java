@@ -1370,7 +1370,7 @@ operator|.
 name|currentTimeMillis
 argument_list|()
 operator|/
-literal|1000
+literal|1000L
 return|;
 block|}
 specifier|public
@@ -1399,7 +1399,7 @@ operator|.
 name|currentTimeMillis
 argument_list|()
 operator|/
-literal|1000
+literal|1000L
 return|;
 block|}
 specifier|public
