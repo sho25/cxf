@@ -529,12 +529,24 @@ comment|// The token must be signed/verified with a public key to set up the sec
 comment|// unless we directly configure otherwise
 if|if
 condition|(
+name|jwt
+operator|.
+name|getClaims
+argument_list|()
+operator|.
+name|getSubject
+argument_list|()
+operator|!=
+literal|null
+operator|&&
+operator|(
 name|isVerifiedWithAPublicKey
 argument_list|(
 name|jwt
 argument_list|)
 operator|||
 name|enableUnsignedJwt
+operator|)
 condition|)
 block|{
 return|return
