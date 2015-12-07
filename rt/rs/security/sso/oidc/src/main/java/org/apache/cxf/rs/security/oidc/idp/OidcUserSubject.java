@@ -81,6 +81,23 @@ name|IdToken
 name|idToken
 decl_stmt|;
 specifier|public
+name|OidcUserSubject
+parameter_list|()
+block|{              }
+specifier|public
+name|OidcUserSubject
+parameter_list|(
+name|UserSubject
+name|sub
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|sub
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
 name|IdToken
 name|getIdToken
 parameter_list|()
