@@ -220,7 +220,7 @@ name|UserSubject
 name|resourceOwnerSubject
 decl_stmt|;
 specifier|private
-name|boolean
+name|long
 name|registeredAt
 decl_stmt|;
 specifier|public
@@ -775,8 +775,8 @@ name|clientIpAddress
 expr_stmt|;
 block|}
 specifier|public
-name|boolean
-name|isRegisteredAt
+name|long
+name|getRegisteredAt
 parameter_list|()
 block|{
 return|return
@@ -787,7 +787,7 @@ specifier|public
 name|void
 name|setRegisteredAt
 parameter_list|(
-name|boolean
+name|long
 name|registeredAt
 parameter_list|)
 block|{
