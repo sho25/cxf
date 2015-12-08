@@ -362,6 +362,16 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
+literal|"urn:ietf:params:oauth:grant-type:jwt-bearer"
+argument_list|)
+expr_stmt|;
+name|client
+operator|.
+name|getAllowedGrantTypes
+argument_list|()
+operator|.
+name|add
+argument_list|(
 literal|"custom_grant"
 argument_list|)
 expr_stmt|;
