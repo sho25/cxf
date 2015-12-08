@@ -813,12 +813,12 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|requestedScope
+name|requestedScopes
 parameter_list|)
 block|{
 if|if
 condition|(
-name|requestedScope
+name|requestedScopes
 operator|.
 name|isEmpty
 argument_list|()

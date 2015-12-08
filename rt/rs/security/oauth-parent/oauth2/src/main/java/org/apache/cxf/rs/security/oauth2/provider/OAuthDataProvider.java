@@ -237,7 +237,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Converts the requested scope to the list of permissions        * @param requestedScope      * @return list of permissions      */
+comment|/**      * Converts the requested scope to the list of permissions        * @param requestedScopes      * @return list of permissions      */
 name|List
 argument_list|<
 name|OAuthPermission
@@ -251,7 +251,7 @@ name|List
 argument_list|<
 name|String
 argument_list|>
-name|requestedScope
+name|requestedScopes
 parameter_list|)
 function_decl|;
 block|}
