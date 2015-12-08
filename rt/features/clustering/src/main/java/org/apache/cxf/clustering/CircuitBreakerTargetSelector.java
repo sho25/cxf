@@ -1214,7 +1214,7 @@ block|{
 name|CircuitBreaker
 name|circuitBreaker
 init|=
-name|NOOP_CIRCUIT_BREAKER
+literal|null
 decl_stmt|;
 if|if
 condition|(
@@ -1295,6 +1295,18 @@ name|circuitBreaker
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+if|if
+condition|(
+name|circuitBreaker
+operator|==
+literal|null
+condition|)
+block|{
+name|circuitBreaker
+operator|=
+name|NOOP_CIRCUIT_BREAKER
+expr_stmt|;
 block|}
 return|return
 name|circuitBreaker
