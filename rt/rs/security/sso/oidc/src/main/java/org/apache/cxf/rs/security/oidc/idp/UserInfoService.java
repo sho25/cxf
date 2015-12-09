@@ -474,6 +474,14 @@ name|getSubject
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|super
+operator|.
+name|isJwsRequired
+argument_list|()
+condition|)
+block|{
 name|userInfo
 operator|.
 name|setIssuer
@@ -494,6 +502,7 @@ name|getAudience
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 if|if
 condition|(
 name|idToken
