@@ -2020,8 +2020,6 @@ argument_list|(
 name|address
 operator|+
 literal|"token"
-argument_list|,
-literal|true
 argument_list|)
 decl_stmt|;
 comment|// Get Access Token
@@ -2696,9 +2694,6 @@ name|createToken
 parameter_list|(
 name|String
 name|audRestr
-parameter_list|,
-name|boolean
-name|sign
 parameter_list|)
 throws|throws
 name|WSSecurityException
