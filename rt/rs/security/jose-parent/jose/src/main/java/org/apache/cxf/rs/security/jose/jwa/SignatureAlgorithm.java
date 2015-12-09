@@ -75,7 +75,8 @@ name|AlgorithmUtils
 operator|.
 name|RS_SHA_256_JAVA
 argument_list|,
-literal|256
+operator|-
+literal|1
 argument_list|)
 block|,
 name|RS384
@@ -88,7 +89,8 @@ name|AlgorithmUtils
 operator|.
 name|RS_SHA_384_JAVA
 argument_list|,
-literal|384
+operator|-
+literal|1
 argument_list|)
 block|,
 name|RS512
@@ -101,7 +103,8 @@ name|AlgorithmUtils
 operator|.
 name|RS_SHA_512_JAVA
 argument_list|,
-literal|512
+operator|-
+literal|1
 argument_list|)
 block|,
 name|PS256
@@ -114,7 +117,8 @@ name|AlgorithmUtils
 operator|.
 name|PS_SHA_256_JAVA
 argument_list|,
-literal|256
+operator|-
+literal|1
 argument_list|)
 block|,
 name|PS384
@@ -127,7 +131,8 @@ name|AlgorithmUtils
 operator|.
 name|PS_SHA_384_JAVA
 argument_list|,
-literal|384
+operator|-
+literal|1
 argument_list|)
 block|,
 name|PS512
@@ -140,7 +145,8 @@ name|AlgorithmUtils
 operator|.
 name|PS_SHA_512_JAVA
 argument_list|,
-literal|512
+operator|-
+literal|1
 argument_list|)
 block|,
 name|ES256
@@ -153,7 +159,8 @@ name|AlgorithmUtils
 operator|.
 name|ES_SHA_256_JAVA
 argument_list|,
-literal|256
+operator|-
+literal|1
 argument_list|)
 block|,
 name|ES384
@@ -166,7 +173,8 @@ name|AlgorithmUtils
 operator|.
 name|ES_SHA_384_JAVA
 argument_list|,
-literal|384
+operator|-
+literal|1
 argument_list|)
 block|,
 name|ES512
@@ -179,7 +187,8 @@ name|AlgorithmUtils
 operator|.
 name|ES_SHA_512_JAVA
 argument_list|,
-literal|512
+operator|-
+literal|1
 argument_list|)
 block|,
 name|NONE
