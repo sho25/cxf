@@ -1122,6 +1122,16 @@ literal|" "
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|perm
+operator|.
+name|getPermission
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|sb
 operator|.
 name|append
@@ -1132,6 +1142,7 @@ name|getPermission
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|sb
