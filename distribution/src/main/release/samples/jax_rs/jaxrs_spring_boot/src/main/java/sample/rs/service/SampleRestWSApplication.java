@@ -336,10 +336,6 @@ name|create
 argument_list|()
 return|;
 block|}
-comment|//@Override
-comment|//protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
-comment|//    return application.sources(SampleRestWSApplication.class);
-comment|//}
 block|}
 end_class
 
