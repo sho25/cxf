@@ -123,7 +123,7 @@ name|boot
 operator|.
 name|autoconfigure
 operator|.
-name|EnableAutoConfiguration
+name|SpringBootApplication
 import|;
 end_import
 
@@ -215,7 +215,7 @@ end_import
 
 begin_class
 annotation|@
-name|EnableAutoConfiguration
+name|SpringBootApplication
 annotation|@
 name|Import
 argument_list|(
@@ -226,8 +226,6 @@ argument_list|)
 specifier|public
 class|class
 name|SampleRestWSApplication
-extends|extends
-name|SpringBootServletInitializer
 block|{
 annotation|@
 name|Autowired
@@ -338,27 +336,10 @@ name|create
 argument_list|()
 return|;
 block|}
-annotation|@
-name|Override
-specifier|protected
-name|SpringApplicationBuilder
-name|configure
-parameter_list|(
-name|SpringApplicationBuilder
-name|application
-parameter_list|)
-block|{
-return|return
-name|application
-operator|.
-name|sources
-argument_list|(
-name|SampleRestWSApplication
-operator|.
-name|class
-argument_list|)
-return|;
-block|}
+comment|//@Override
+comment|//protected SpringApplicationBuilder configure(SpringApplicationBuilder application) {
+comment|//    return application.sources(SampleRestWSApplication.class);
+comment|//}
 block|}
 end_class
 

@@ -68,7 +68,7 @@ name|JAXRSClientFactory
 operator|.
 name|create
 argument_list|(
-literal|"http://locahost:8080/helloservice/"
+literal|"http://localhost:8080/services/helloservice/"
 argument_list|,
 name|HelloService
 operator|.
