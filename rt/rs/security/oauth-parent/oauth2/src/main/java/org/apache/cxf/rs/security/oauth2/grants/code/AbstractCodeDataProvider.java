@@ -245,6 +245,16 @@ name|getClientCodeChallenge
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|grant
+operator|.
+name|setNonce
+argument_list|(
+name|reg
+operator|.
+name|getNonce
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|grant
 return|;
