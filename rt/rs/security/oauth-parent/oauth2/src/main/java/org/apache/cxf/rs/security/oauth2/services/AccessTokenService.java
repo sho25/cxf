@@ -699,6 +699,15 @@ argument_list|,
 name|OAuthConstants
 operator|.
 name|INVALID_GRANT
+argument_list|,
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|STATE
+argument_list|)
 argument_list|)
 return|;
 block|}
