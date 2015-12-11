@@ -2844,7 +2844,6 @@ specifier|private
 name|String
 name|role
 decl_stmt|;
-specifier|public
 name|RoleJWTClaimsProvider
 parameter_list|(
 name|String
