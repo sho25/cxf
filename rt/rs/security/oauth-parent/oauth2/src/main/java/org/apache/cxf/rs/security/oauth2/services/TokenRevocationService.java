@@ -279,6 +279,15 @@ argument_list|,
 name|OAuthConstants
 operator|.
 name|UNSUPPORTED_TOKEN_TYPE
+argument_list|,
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|STATE
+argument_list|)
 argument_list|)
 return|;
 block|}

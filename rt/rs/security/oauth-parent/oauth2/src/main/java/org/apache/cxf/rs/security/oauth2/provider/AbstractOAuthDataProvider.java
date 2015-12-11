@@ -463,6 +463,16 @@ name|getClientCodeVerifier
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|at
+operator|.
+name|setNonce
+argument_list|(
+name|accessToken
+operator|.
+name|getNonce
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|at
 return|;
