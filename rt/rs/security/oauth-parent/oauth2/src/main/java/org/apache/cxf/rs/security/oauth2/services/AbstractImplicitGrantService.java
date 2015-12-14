@@ -415,6 +415,8 @@ name|tokenCanBeReturned
 operator|=
 name|canAccessTokenBeReturned
 argument_list|(
+name|state
+argument_list|,
 name|requestedScope
 argument_list|,
 name|approvedScope
@@ -911,6 +913,9 @@ specifier|protected
 name|boolean
 name|canAccessTokenBeReturned
 parameter_list|(
+name|OAuthRedirectionState
+name|state
+parameter_list|,
 name|List
 argument_list|<
 name|String
