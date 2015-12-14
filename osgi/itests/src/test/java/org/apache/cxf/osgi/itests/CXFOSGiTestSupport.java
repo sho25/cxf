@@ -885,6 +885,7 @@ argument_list|)
 argument_list|,
 comment|//DO NOT COMMIT WITH THIS LINE ENABLED!!!
 comment|//KarafDistributionOption.keepRuntimeFolder(),
+comment|//debugConfiguration(), // nor this
 name|systemProperty
 argument_list|(
 literal|"java.awt.headless"
