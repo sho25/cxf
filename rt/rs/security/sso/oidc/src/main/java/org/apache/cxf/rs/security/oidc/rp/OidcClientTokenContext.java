@@ -48,8 +48,6 @@ name|OidcClientTokenContext
 extends|extends
 name|ClientTokenContext
 extends|,
-name|IdTokenContext
-extends|,
 name|UserInfoContext
 block|{ }
 end_interface

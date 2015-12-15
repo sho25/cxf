@@ -45,6 +45,8 @@ begin_interface
 specifier|public
 interface|interface
 name|UserInfoContext
+extends|extends
+name|IdTokenContext
 block|{
 name|UserInfo
 name|getUserInfo
