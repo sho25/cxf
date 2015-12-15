@@ -33,25 +33,24 @@ name|rs
 operator|.
 name|security
 operator|.
-name|oauth2
+name|oidc
 operator|.
-name|client
+name|common
 operator|.
-name|ClientTokenContext
+name|IdToken
 import|;
 end_import
 
 begin_interface
 specifier|public
 interface|interface
-name|OidcClientTokenContext
-extends|extends
-name|ClientTokenContext
-extends|,
 name|IdTokenContext
-extends|,
-name|UserInfoContext
-block|{ }
+block|{
+name|IdToken
+name|getIdToken
+parameter_list|()
+function_decl|;
+block|}
 end_interface
 
 end_unit
