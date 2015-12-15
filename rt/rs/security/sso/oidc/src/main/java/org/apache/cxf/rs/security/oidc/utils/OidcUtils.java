@@ -195,6 +195,26 @@ name|rs
 operator|.
 name|security
 operator|.
+name|oauth2
+operator|.
+name|provider
+operator|.
+name|OAuthServiceException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
 name|oidc
 operator|.
 name|common
@@ -801,7 +821,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|OAuthServiceException
 argument_list|(
 literal|"Invalid hash"
 argument_list|)
@@ -971,7 +991,7 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|OAuthServiceException
 argument_list|(
 name|ex
 argument_list|)

@@ -211,6 +211,26 @@ name|jose
 operator|.
 name|jwt
 operator|.
+name|JwtException
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|jose
+operator|.
+name|jwt
+operator|.
 name|JwtToken
 import|;
 end_import
@@ -252,6 +272,26 @@ operator|.
 name|provider
 operator|.
 name|AbstractOAuthJoseJwtConsumer
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|provider
+operator|.
+name|OAuthServiceException
 import|;
 end_import
 
@@ -348,9 +388,9 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|OAuthServiceException
 argument_list|(
-literal|"Invalid provider"
+literal|"Invalid issuer"
 argument_list|)
 throw|;
 block|}
@@ -374,7 +414,15 @@ name|issuer
 argument_list|)
 condition|)
 block|{
-comment|//TODO: self-issued provider token validation
+name|validateSelfIssuedProvider
+argument_list|(
+name|claims
+argument_list|,
+name|clientId
+argument_list|,
+name|validateClaimsAlways
+argument_list|)
+expr_stmt|;
 block|}
 else|else
 block|{
@@ -395,9 +443,9 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|OAuthServiceException
 argument_list|(
-literal|"Invalid provider"
+literal|"Invalid issuer"
 argument_list|)
 throw|;
 block|}
@@ -414,7 +462,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|OAuthServiceException
 argument_list|(
 literal|"Invalid subject"
 argument_list|)
@@ -462,7 +510,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|SecurityException
+name|OAuthServiceException
 argument_list|(
 literal|"Invalid audience"
 argument_list|)
@@ -484,6 +532,8 @@ argument_list|()
 operator|==
 literal|null
 decl_stmt|;
+try|try
+block|{
 name|JwtUtils
 operator|.
 name|validateJwtExpiry
@@ -495,6 +545,23 @@ argument_list|,
 name|expiredRequired
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|JwtException
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|OAuthServiceException
+argument_list|(
+literal|"ID Token has expired"
+argument_list|,
+name|ex
+argument_list|)
+throw|;
+block|}
 comment|// If strict time validation: If no expiresAt claim is set then an issuedAt claim must be set
 comment|// Otherwise: validate only if issuedAt claim is set
 name|boolean
@@ -511,6 +578,8 @@ argument_list|()
 operator|==
 literal|null
 decl_stmt|;
+try|try
+block|{
 name|JwtUtils
 operator|.
 name|validateJwtIssuedAt
@@ -524,10 +593,29 @@ argument_list|,
 name|issuedAtRequired
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|JwtException
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|OAuthServiceException
+argument_list|(
+literal|"Invalid issuedAt claim"
+argument_list|,
+name|ex
+argument_list|)
+throw|;
+block|}
 if|if
 condition|(
 name|strictTimeValidation
 condition|)
+block|{
+try|try
 block|{
 name|JwtUtils
 operator|.
@@ -541,8 +629,39 @@ name|strictTimeValidation
 argument_list|)
 expr_stmt|;
 block|}
+catch|catch
+parameter_list|(
+name|JwtException
+name|ex
+parameter_list|)
+block|{
+throw|throw
+operator|new
+name|OAuthServiceException
+argument_list|(
+literal|"ID Token can not be used yet"
+argument_list|,
+name|ex
+argument_list|)
+throw|;
 block|}
 block|}
+block|}
+block|}
+specifier|private
+name|void
+name|validateSelfIssuedProvider
+parameter_list|(
+name|JwtClaims
+name|claims
+parameter_list|,
+name|String
+name|clientId
+parameter_list|,
+name|boolean
+name|validateClaimsAlways
+parameter_list|)
+block|{     }
 specifier|public
 name|void
 name|setIssuerId
