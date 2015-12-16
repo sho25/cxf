@@ -103,9 +103,9 @@ name|security
 operator|.
 name|oidc
 operator|.
-name|common
+name|rp
 operator|.
-name|IdToken
+name|IdTokenContext
 import|;
 end_import
 
@@ -137,14 +137,14 @@ name|getIdTokenFromForm
 parameter_list|(
 annotation|@
 name|Context
-name|IdToken
-name|idToken
+name|IdTokenContext
+name|idTokenContext
 parameter_list|)
 block|{
 return|return
 name|getIdToken
 argument_list|(
-name|idToken
+name|idTokenContext
 argument_list|)
 return|;
 block|}
@@ -166,8 +166,8 @@ name|getIdToken
 parameter_list|(
 annotation|@
 name|Context
-name|IdToken
-name|idToken
+name|IdTokenContext
+name|idTokenContext
 parameter_list|)
 block|{
 return|return
@@ -175,7 +175,10 @@ name|Response
 operator|.
 name|ok
 argument_list|(
-name|idToken
+name|idTokenContext
+operator|.
+name|getIdToken
+argument_list|()
 argument_list|)
 operator|.
 name|build
