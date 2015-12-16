@@ -264,6 +264,11 @@ name|ParseJavaDocMojo
 extends|extends
 name|AbstractMojo
 block|{
+comment|/**      * The source encoding.      *       * @parameter defaultValue = "${project.build.sourceEncoding}"      * @required      */
+specifier|private
+name|String
+name|encoding
+decl_stmt|;
 comment|/**      * @parameter expression="${project}"      * @required      */
 specifier|private
 name|MavenProject
@@ -419,6 +424,33 @@ argument_list|(
 name|mojo
 argument_list|,
 literal|"org.apache.cxf.maven_plugin.javatowadl.DumpJavaDoc"
+argument_list|)
+expr_stmt|;
+name|f
+operator|=
+name|AbstractJavadocMojo
+operator|.
+name|class
+operator|.
+name|getDeclaredField
+argument_list|(
+literal|"encoding"
+argument_list|)
+expr_stmt|;
+name|f
+operator|.
+name|setAccessible
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
+name|f
+operator|.
+name|set
+argument_list|(
+name|mojo
+argument_list|,
+name|encoding
 argument_list|)
 expr_stmt|;
 name|f
