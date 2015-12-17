@@ -181,13 +181,6 @@ argument_list|(
 literal|false
 argument_list|)
 expr_stmt|;
-name|objectType
-operator|.
-name|setSerializedWhenUnknown
-argument_list|(
-literal|false
-argument_list|)
-expr_stmt|;
 block|}
 specifier|public
 name|TrailingBlocks
