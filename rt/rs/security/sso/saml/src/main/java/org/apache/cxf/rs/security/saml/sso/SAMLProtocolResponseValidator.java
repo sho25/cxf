@@ -696,7 +696,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Validate a SAML (1.1 or 2.0) Protocol Response. It validates the Response against the specs,  * the signature of the Response (if it exists), and any internal Assertion stored in the Response   * - including any signature. It validates the status code of the Response as well.  */
+comment|/**  * Validate a SAML (1.1 or 2.0) Protocol Response. It validates the Response against the specs,  * the signature of the Response (if it exists), and any internal Assertion stored in the Response  * - including any signature. It validates the status code of the Response as well.  */
 end_comment
 
 begin_class
@@ -757,7 +757,7 @@ name|keyInfoMustBeAvailable
 init|=
 literal|true
 decl_stmt|;
-comment|/**      * The time in seconds in the future within which the NotBefore time of an incoming       * Assertion is valid. The default is 60 seconds.      */
+comment|/**      * The time in seconds in the future within which the NotBefore time of an incoming      * Assertion is valid. The default is 60 seconds.      */
 specifier|private
 name|int
 name|futureTTL
@@ -3167,6 +3167,85 @@ argument_list|,
 name|certNode
 argument_list|)
 return|;
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|ex
+parameter_list|)
+block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"X509Certificate can not be created"
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
+throw|throw
+operator|new
+name|WSSecurityException
+argument_list|(
+name|WSSecurityException
+operator|.
+name|ErrorCode
+operator|.
+name|FAILURE
+argument_list|,
+literal|"invalidSAMLsecurity"
+argument_list|)
+throw|;
+block|}
+block|}
+if|if
+condition|(
+name|crypto
+operator|.
+name|getDefaultX509Identifier
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+try|try
+block|{
+name|X509Certificate
+index|[]
+name|certs
+init|=
+name|RSSecurityUtils
+operator|.
+name|getCertificates
+argument_list|(
+name|crypto
+argument_list|,
+name|crypto
+operator|.
+name|getDefaultX509Identifier
+argument_list|()
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|certs
+operator|.
+name|length
+operator|>
+literal|0
+condition|)
+block|{
+return|return
+name|certs
+index|[
+literal|0
+index|]
+return|;
+block|}
 block|}
 catch|catch
 parameter_list|(
