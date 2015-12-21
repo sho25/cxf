@@ -51,18 +51,6 @@ name|ws
 operator|.
 name|rs
 operator|.
-name|GET
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
 name|Consumes
 import|;
 end_import
@@ -76,6 +64,18 @@ operator|.
 name|rs
 operator|.
 name|FormParam
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|GET
 import|;
 end_import
 
