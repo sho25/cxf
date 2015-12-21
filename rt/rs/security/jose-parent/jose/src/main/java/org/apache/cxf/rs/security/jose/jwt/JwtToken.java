@@ -90,12 +90,10 @@ argument_list|(
 operator|new
 name|JwsHeaders
 argument_list|()
-block|{ }
 argument_list|,
 operator|new
 name|JweHeaders
 argument_list|()
-block|{ }
 argument_list|,
 name|claims
 argument_list|)
@@ -118,7 +116,6 @@ argument_list|,
 operator|new
 name|JweHeaders
 argument_list|()
-block|{ }
 argument_list|,
 name|claims
 argument_list|)
@@ -139,7 +136,6 @@ argument_list|(
 operator|new
 name|JwsHeaders
 argument_list|()
-block|{ }
 argument_list|,
 name|jweHeaders
 argument_list|,

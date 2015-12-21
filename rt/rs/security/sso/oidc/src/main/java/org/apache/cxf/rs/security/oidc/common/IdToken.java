@@ -170,6 +170,15 @@ name|AUTH_CODE_HASH_CLAIM
 init|=
 literal|"c_hash"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|2243170791872714855L
+decl_stmt|;
 specifier|public
 name|IdToken
 parameter_list|()

@@ -106,6 +106,14 @@ name|JwtClaims
 extends|extends
 name|JsonMapObject
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6274136637301800283L
+decl_stmt|;
 specifier|public
 name|JwtClaims
 parameter_list|()

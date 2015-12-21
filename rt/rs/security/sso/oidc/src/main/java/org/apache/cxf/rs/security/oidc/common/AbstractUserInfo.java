@@ -225,6 +225,14 @@ name|UPDATED_AT_CLAIM
 init|=
 literal|"updated_at"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|4554501320190745304L
+decl_stmt|;
 specifier|public
 name|AbstractUserInfo
 parameter_list|()

@@ -104,6 +104,15 @@ name|FORMATTED
 init|=
 literal|"formatted"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|6065703167243134105L
+decl_stmt|;
 specifier|public
 name|UserAddress
 parameter_list|()

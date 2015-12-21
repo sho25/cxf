@@ -426,6 +426,14 @@ name|KEY_OPER_DERIVE_BITS
 init|=
 literal|"deriveBits"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3201315996547826368L
+decl_stmt|;
 specifier|public
 name|JsonWebKey
 parameter_list|()

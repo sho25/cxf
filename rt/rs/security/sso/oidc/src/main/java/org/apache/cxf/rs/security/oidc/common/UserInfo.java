@@ -68,6 +68,14 @@ name|UserInfo
 extends|extends
 name|AbstractUserInfo
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|6712696583010801033L
+decl_stmt|;
 specifier|public
 name|UserInfo
 parameter_list|()

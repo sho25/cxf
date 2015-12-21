@@ -128,6 +128,14 @@ name|JwsHeaders
 extends|extends
 name|JoseHeaders
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|3422779299093961672L
+decl_stmt|;
 specifier|public
 name|JwsHeaders
 parameter_list|()

@@ -101,6 +101,14 @@ name|JoseHeaders
 extends|extends
 name|JsonMapObject
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1101185302425283553L
+decl_stmt|;
 specifier|public
 name|JoseHeaders
 parameter_list|()

@@ -118,6 +118,15 @@ name|KEYS_PROPERTY
 init|=
 literal|"keys"
 decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+operator|-
+literal|8002543601655429723L
+decl_stmt|;
 specifier|public
 name|JsonWebKeys
 parameter_list|()

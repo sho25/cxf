@@ -189,6 +189,14 @@ extends|extends
 name|JoseHeaders
 block|{
 specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+specifier|private
 name|JweHeaders
 name|protectedHeaders
 decl_stmt|;
