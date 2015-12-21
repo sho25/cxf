@@ -194,7 +194,7 @@ specifier|final
 name|long
 name|serialVersionUID
 init|=
-literal|1L
+literal|2405157132884168551L
 decl_stmt|;
 specifier|private
 name|JweHeaders
