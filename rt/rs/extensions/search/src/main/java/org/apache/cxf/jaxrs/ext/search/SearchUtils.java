@@ -223,6 +223,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|BEAN_PROPERTY_CONVERTER
+init|=
+literal|"search.bean.property.converter"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|SEARCH_VISITOR_PROPERTY
 init|=
 literal|"search.visitor"
