@@ -336,6 +336,7 @@ name|Message
 argument_list|>
 block|{
 comment|/**      * Enum giving the possible values for whether we should gzip a particular      * message.      */
+specifier|public
 enum|enum
 name|UseGzip
 block|{
