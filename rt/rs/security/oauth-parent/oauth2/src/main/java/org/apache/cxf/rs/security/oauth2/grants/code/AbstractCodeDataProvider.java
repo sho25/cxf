@@ -25,6 +25,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|List
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -150,15 +160,6 @@ operator|=
 name|codeLifetime
 expr_stmt|;
 block|}
-specifier|protected
-specifier|abstract
-name|void
-name|saveCodeGrant
-parameter_list|(
-name|ServerAuthorizationCodeGrant
-name|grant
-parameter_list|)
-function_decl|;
 specifier|public
 specifier|static
 name|ServerAuthorizationCodeGrant
@@ -259,6 +260,24 @@ return|return
 name|grant
 return|;
 block|}
+specifier|protected
+specifier|abstract
+name|void
+name|saveCodeGrant
+parameter_list|(
+name|ServerAuthorizationCodeGrant
+name|grant
+parameter_list|)
+function_decl|;
+specifier|public
+specifier|abstract
+name|List
+argument_list|<
+name|ServerAuthorizationCodeGrant
+argument_list|>
+name|getCodeGrants
+parameter_list|()
+function_decl|;
 block|}
 end_class
 
