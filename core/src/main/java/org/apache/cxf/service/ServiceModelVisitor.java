@@ -607,7 +607,7 @@ name|EndpointInfo
 name|endpointInfo
 parameter_list|)
 block|{     }
-specifier|private
+specifier|public
 name|void
 name|begin
 parameter_list|(
@@ -615,7 +615,7 @@ name|BindingInfo
 name|bindingInfo
 parameter_list|)
 block|{     }
-specifier|private
+specifier|public
 name|void
 name|end
 parameter_list|(

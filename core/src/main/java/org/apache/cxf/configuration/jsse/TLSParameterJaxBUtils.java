@@ -729,10 +729,6 @@ argument_list|()
 condition|)
 block|{
 specifier|final
-name|java
-operator|.
-name|io
-operator|.
 name|InputStream
 name|is
 init|=
@@ -771,10 +767,6 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 argument_list|(
 name|msg
@@ -930,10 +922,6 @@ argument_list|()
 condition|)
 block|{
 specifier|final
-name|java
-operator|.
-name|io
-operator|.
 name|InputStream
 name|is
 init|=
@@ -972,10 +960,6 @@ argument_list|)
 expr_stmt|;
 throw|throw
 operator|new
-name|java
-operator|.
-name|io
-operator|.
 name|IOException
 argument_list|(
 name|msg
@@ -1100,10 +1084,6 @@ name|KeyStore
 name|createTrustStore
 parameter_list|(
 specifier|final
-name|java
-operator|.
-name|io
-operator|.
 name|InputStream
 name|is
 parameter_list|)
@@ -1202,10 +1182,6 @@ argument_list|>
 name|loadCertificates
 parameter_list|(
 specifier|final
-name|java
-operator|.
-name|io
-operator|.
 name|InputStream
 name|is
 parameter_list|)

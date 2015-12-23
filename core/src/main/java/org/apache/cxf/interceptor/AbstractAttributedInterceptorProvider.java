@@ -400,6 +400,7 @@ name|int
 name|hashCode
 parameter_list|()
 block|{
+comment|//NOPMD
 return|return
 name|super
 operator|.

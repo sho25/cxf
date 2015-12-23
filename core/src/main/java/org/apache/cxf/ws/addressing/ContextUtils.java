@@ -327,38 +327,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|message
-operator|.
-name|Message
-operator|.
-name|ASYNC_POST_RESPONSE_DISPATCH
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|message
-operator|.
-name|Message
-operator|.
-name|REQUESTOR_ROLE
-import|;
-end_import
-
-begin_import
-import|import static
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|ws
 operator|.
 name|addressing
@@ -637,6 +605,8 @@ name|message
 operator|.
 name|get
 argument_list|(
+name|Message
+operator|.
 name|REQUESTOR_ROLE
 argument_list|)
 decl_stmt|;
@@ -1702,6 +1672,8 @@ name|message
 operator|.
 name|get
 argument_list|(
+name|Message
+operator|.
 name|ASYNC_POST_RESPONSE_DISPATCH
 argument_list|)
 decl_stmt|;

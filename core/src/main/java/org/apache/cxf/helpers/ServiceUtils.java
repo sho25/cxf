@@ -536,8 +536,6 @@ name|validationType
 operator|=
 name|getSchemaValidationTypeFromModel
 argument_list|(
-name|message
-argument_list|,
 name|opInfo
 argument_list|)
 expr_stmt|;
@@ -556,8 +554,6 @@ name|validationType
 operator|=
 name|getSchemaValidationTypeFromModel
 argument_list|(
-name|message
-argument_list|,
 name|ep
 argument_list|)
 expr_stmt|;
@@ -578,9 +574,6 @@ specifier|static
 name|SchemaValidationType
 name|getSchemaValidationTypeFromModel
 parameter_list|(
-name|Message
-name|message
-parameter_list|,
 name|AbstractPropertiesHolder
 name|properties
 parameter_list|)

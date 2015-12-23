@@ -128,7 +128,6 @@ name|String
 name|value
 parameter_list|)
 function_decl|;
-specifier|public
 interface|interface
 name|BeanLoaderListener
 parameter_list|<

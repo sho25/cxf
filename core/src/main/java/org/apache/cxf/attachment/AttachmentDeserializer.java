@@ -1004,8 +1004,6 @@ operator|(
 name|DelegatingInputStream
 operator|)
 name|body
-argument_list|,
-literal|true
 argument_list|)
 expr_stmt|;
 block|}
@@ -1099,8 +1097,6 @@ name|s
 operator|.
 name|getInputStream
 argument_list|()
-argument_list|,
-literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1116,9 +1112,6 @@ name|cache
 parameter_list|(
 name|DelegatingInputStream
 name|input
-parameter_list|,
-name|boolean
-name|deleteOnClose
 parameter_list|)
 throws|throws
 name|IOException

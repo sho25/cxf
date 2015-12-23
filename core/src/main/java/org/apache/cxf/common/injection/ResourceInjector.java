@@ -770,6 +770,7 @@ name|Annotation
 name|annotation
 parameter_list|)
 block|{
+comment|//NOPMD
 assert|assert
 name|annotation
 operator|instanceof
@@ -790,8 +791,6 @@ condition|)
 block|{
 name|injectResourceClassLevel
 argument_list|(
-name|clz
-argument_list|,
 operator|(
 name|Resource
 operator|)
@@ -828,8 +827,6 @@ control|)
 block|{
 name|injectResourceClassLevel
 argument_list|(
-name|clz
-argument_list|,
 name|resource
 argument_list|)
 expr_stmt|;
@@ -840,12 +837,6 @@ specifier|private
 name|void
 name|injectResourceClassLevel
 parameter_list|(
-name|Class
-argument_list|<
-name|?
-argument_list|>
-name|clz
-parameter_list|,
 name|Resource
 name|res
 parameter_list|)

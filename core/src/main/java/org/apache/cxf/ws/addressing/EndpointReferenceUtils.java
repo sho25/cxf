@@ -5173,12 +5173,6 @@ parameter_list|)
 block|{
 try|try
 block|{
-name|javax
-operator|.
-name|xml
-operator|.
-name|bind
-operator|.
 name|Marshaller
 name|jm
 init|=

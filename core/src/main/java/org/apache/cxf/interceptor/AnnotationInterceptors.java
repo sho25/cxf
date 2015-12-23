@@ -360,6 +360,7 @@ argument_list|>
 name|type
 parameter_list|)
 block|{
+comment|//NOPMD
 if|if
 condition|(
 name|ann

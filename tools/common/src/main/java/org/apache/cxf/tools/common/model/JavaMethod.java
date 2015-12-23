@@ -881,11 +881,11 @@ name|s
 operator|!=
 literal|null
 operator|&&
-name|c1
+name|s
 operator|.
 name|equals
 argument_list|(
-name|s
+name|c1
 argument_list|)
 condition|)
 block|{

@@ -1276,10 +1276,6 @@ name|printStackTrace
 argument_list|()
 expr_stmt|;
 block|}
-finally|finally
-block|{
-comment|// Do something after the method is called ...
-block|}
 return|return
 name|result
 return|;

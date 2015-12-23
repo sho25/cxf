@@ -481,8 +481,6 @@ name|os
 operator|=
 name|setupOutputStream
 argument_list|(
-name|message
-argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
@@ -529,8 +527,6 @@ name|os
 operator|=
 name|setupOutputStream
 argument_list|(
-name|message
-argument_list|,
 name|os
 argument_list|)
 expr_stmt|;
@@ -680,9 +676,6 @@ specifier|private
 name|OutputStream
 name|setupOutputStream
 parameter_list|(
-name|Message
-name|message
-parameter_list|,
 name|OutputStream
 name|os
 parameter_list|)

@@ -573,8 +573,6 @@ block|,
 literal|null
 block|}
 argument_list|,
-literal|null
-argument_list|,
 name|lst
 argument_list|)
 expr_stmt|;
@@ -692,8 +690,6 @@ literal|null
 block|,
 literal|null
 block|}
-argument_list|,
-name|EXCLUDES
 argument_list|,
 name|lst
 argument_list|)
@@ -830,8 +826,6 @@ block|,
 literal|null
 block|}
 argument_list|,
-name|EXCLUDES
-argument_list|,
 name|lst
 argument_list|)
 expr_stmt|;
@@ -1261,9 +1255,6 @@ parameter_list|,
 name|String
 index|[]
 name|restricted
-parameter_list|,
-name|String
-name|excludes
 parameter_list|,
 name|Collection
 argument_list|<

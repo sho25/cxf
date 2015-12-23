@@ -906,14 +906,6 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|message
-operator|.
 name|Message
 operator|.
 name|MTOM_ENABLED
@@ -1651,10 +1643,6 @@ argument_list|()
 return|;
 block|}
 specifier|public
-name|java
-operator|.
-name|util
-operator|.
 name|Map
 operator|.
 name|Entry

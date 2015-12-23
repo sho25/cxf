@@ -909,8 +909,6 @@ block|{
 comment|// handle one of the four append modes
 name|handleAppendMode
 argument_list|(
-name|theName
-argument_list|,
 name|expected
 argument_list|,
 name|appendProp
@@ -1230,9 +1228,6 @@ specifier|private
 name|void
 name|handleAppendMode
 parameter_list|(
-name|QName
-name|name
-parameter_list|,
 name|QName
 name|expected
 parameter_list|,

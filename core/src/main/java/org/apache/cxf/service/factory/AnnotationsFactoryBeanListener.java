@@ -1265,8 +1265,6 @@ expr_stmt|;
 block|}
 name|setScope
 argument_list|(
-name|factory
-argument_list|,
 name|server
 argument_list|,
 name|cls
@@ -1406,9 +1404,6 @@ specifier|private
 name|void
 name|setScope
 parameter_list|(
-name|AbstractServiceFactoryBean
-name|factory
-parameter_list|,
 name|Server
 name|server
 parameter_list|,

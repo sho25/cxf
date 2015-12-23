@@ -176,17 +176,6 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|loadAdditionalFeatures
-parameter_list|()
-block|{
-name|super
-operator|.
-name|loadAdditionalFeatures
-argument_list|()
-expr_stmt|;
-block|}
-specifier|public
-name|void
 name|setBundleContext
 parameter_list|(
 specifier|final

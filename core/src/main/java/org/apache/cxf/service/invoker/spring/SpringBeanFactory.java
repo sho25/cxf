@@ -132,6 +132,7 @@ index|[]
 name|args
 parameter_list|)
 block|{
+comment|//NOPMD
 name|beanName
 operator|=
 name|args

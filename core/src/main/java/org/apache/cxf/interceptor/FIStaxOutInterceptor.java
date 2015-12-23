@@ -657,8 +657,6 @@ name|serializer
 init|=
 name|getOutput
 argument_list|(
-name|message
-argument_list|,
 name|out
 argument_list|)
 decl_stmt|;
@@ -808,9 +806,6 @@ specifier|private
 name|StAXDocumentSerializer
 name|getOutput
 parameter_list|(
-name|Message
-name|m
-parameter_list|,
 name|OutputStream
 name|out
 parameter_list|)

@@ -308,12 +308,6 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|org
-operator|.
-name|xml
-operator|.
-name|sax
-operator|.
 name|SAXException
 name|e
 parameter_list|)
@@ -464,12 +458,6 @@ return|;
 block|}
 catch|catch
 parameter_list|(
-name|javax
-operator|.
-name|xml
-operator|.
-name|parsers
-operator|.
 name|ParserConfigurationException
 name|e
 parameter_list|)

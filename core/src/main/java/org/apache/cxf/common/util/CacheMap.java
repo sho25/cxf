@@ -251,10 +251,6 @@ block|}
 specifier|public
 name|Set
 argument_list|<
-name|java
-operator|.
-name|util
-operator|.
 name|Map
 operator|.
 name|Entry

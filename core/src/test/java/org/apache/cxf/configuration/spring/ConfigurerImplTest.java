@@ -350,8 +350,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute intAttr"
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|2
 argument_list|)
@@ -366,8 +367,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute longAttr"
 argument_list|,
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|3L
 argument_list|)
@@ -382,8 +384,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute shortAttr"
 argument_list|,
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -433,10 +436,11 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute doubleAttr"
 argument_list|,
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
-literal|7D
+literal|7.0D
 argument_list|)
 argument_list|,
 name|sb
@@ -449,8 +453,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute byteAttr"
 argument_list|,
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -630,8 +635,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedIntAttrNoDefault"
 argument_list|,
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|9L
 argument_list|)
@@ -646,8 +652,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedShortAttrNoDefault"
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)
@@ -662,8 +669,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedByteAttrNoDefault"
 argument_list|,
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -788,8 +796,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute intAttr"
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|12
 argument_list|)
@@ -804,8 +813,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute longAttr"
 argument_list|,
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|13L
 argument_list|)
@@ -820,8 +830,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute shortAttr"
 argument_list|,
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -871,8 +882,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute doubleAttr"
 argument_list|,
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 literal|17D
 argument_list|)
@@ -887,8 +899,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute byteAttr"
 argument_list|,
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -906,8 +919,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedIntAttrNoDefault"
 argument_list|,
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|19L
 argument_list|)
@@ -922,8 +936,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedShortAttrNoDefault"
 argument_list|,
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|20
 argument_list|)
@@ -938,8 +953,9 @@ name|assertEquals
 argument_list|(
 literal|"Unexpected value for attribute unsignedByteAttrNoDefault"
 argument_list|,
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -1345,8 +1361,9 @@ specifier|private
 name|Integer
 name|intAttr
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|2
 argument_list|)
@@ -1355,8 +1372,9 @@ specifier|private
 name|Long
 name|longAttr
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|3
 argument_list|)
@@ -1365,8 +1383,9 @@ specifier|private
 name|Short
 name|shortAttr
 init|=
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short
@@ -1398,8 +1417,9 @@ specifier|private
 name|Double
 name|doubleAttr
 init|=
-operator|new
 name|Double
+operator|.
+name|valueOf
 argument_list|(
 literal|7D
 argument_list|)
@@ -1408,8 +1428,9 @@ specifier|private
 name|Byte
 name|byteAttr
 init|=
-operator|new
 name|Byte
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|byte
@@ -1461,8 +1482,9 @@ specifier|private
 name|Long
 name|unsignedIntAttr
 init|=
-operator|new
 name|Long
+operator|.
+name|valueOf
 argument_list|(
 literal|9
 argument_list|)
@@ -1471,8 +1493,9 @@ specifier|private
 name|Integer
 name|unsignedShortAttr
 init|=
-operator|new
 name|Integer
+operator|.
+name|valueOf
 argument_list|(
 literal|10
 argument_list|)
@@ -1481,8 +1504,9 @@ specifier|private
 name|Short
 name|unsignedByteAttr
 init|=
-operator|new
 name|Short
+operator|.
+name|valueOf
 argument_list|(
 operator|(
 name|short

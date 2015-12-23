@@ -458,8 +458,6 @@ name|singleTest
 argument_list|(
 literal|"gzip"
 argument_list|,
-literal|true
-argument_list|,
 name|YES
 argument_list|,
 literal|"gzip"
@@ -478,8 +476,6 @@ block|{
 name|singleTest
 argument_list|(
 literal|"x-gzip, x-compress"
-argument_list|,
-literal|true
 argument_list|,
 name|YES
 argument_list|,
@@ -500,8 +496,6 @@ name|singleTest
 argument_list|(
 literal|"*"
 argument_list|,
-literal|true
-argument_list|,
 name|YES
 argument_list|,
 literal|"gzip"
@@ -520,8 +514,6 @@ block|{
 name|singleTest
 argument_list|(
 literal|"gzip, identity; q=0"
-argument_list|,
-literal|true
 argument_list|,
 name|FORCE
 argument_list|,
@@ -542,8 +534,6 @@ name|singleTest
 argument_list|(
 literal|"deflate"
 argument_list|,
-literal|false
-argument_list|,
 literal|null
 argument_list|,
 literal|null
@@ -562,8 +552,6 @@ block|{
 name|singleTest
 argument_list|(
 literal|"gzip; q=0.00"
-argument_list|,
-literal|false
 argument_list|,
 literal|null
 argument_list|,
@@ -611,9 +599,6 @@ name|singleTest
 parameter_list|(
 name|String
 name|encoding
-parameter_list|,
-name|boolean
-name|expectEndingInterceptor
 parameter_list|,
 name|GZIPOutInterceptor
 operator|.

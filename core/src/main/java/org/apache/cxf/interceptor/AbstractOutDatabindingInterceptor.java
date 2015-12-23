@@ -1164,14 +1164,6 @@ name|message
 operator|.
 name|getContextualProperty
 argument_list|(
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|message
-operator|.
 name|Message
 operator|.
 name|MTOM_ENABLED
