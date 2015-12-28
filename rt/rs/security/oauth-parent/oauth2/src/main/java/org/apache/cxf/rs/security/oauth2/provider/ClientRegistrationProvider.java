@@ -51,11 +51,32 @@ name|Client
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|common
+operator|.
+name|UserSubject
+import|;
+end_import
+
 begin_interface
 specifier|public
 interface|interface
 name|ClientRegistrationProvider
 block|{
+comment|/**      * Get a Client with the given id      * @param clientId the client id      * @return Client      */
 name|Client
 name|getClient
 parameter_list|(
@@ -63,6 +84,7 @@ name|String
 name|clientId
 parameter_list|)
 function_decl|;
+comment|/**      * Set a Client      * @param client the client      */
 name|void
 name|setClient
 parameter_list|(
@@ -70,6 +92,7 @@ name|Client
 name|client
 parameter_list|)
 function_decl|;
+comment|/**      * Remove a Client with the given id      * @param clientId the client id      * @return Client      */
 name|Client
 name|removeClient
 parameter_list|(
@@ -77,12 +100,16 @@ name|String
 name|clientId
 parameter_list|)
 function_decl|;
+comment|/**      * Get a list of clients registered by a resource owner.      *        * @param resourceOwner the resource owner, can be null      * @return the list of clients      */
 name|List
 argument_list|<
 name|Client
 argument_list|>
 name|getClients
-parameter_list|()
+parameter_list|(
+name|UserSubject
+name|resourceOwner
+parameter_list|)
 function_decl|;
 block|}
 end_interface

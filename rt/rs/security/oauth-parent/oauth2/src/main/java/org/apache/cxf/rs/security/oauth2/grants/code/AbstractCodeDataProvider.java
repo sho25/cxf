@@ -25,16 +25,6 @@ end_package
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -316,18 +306,6 @@ name|saveCodeGrant
 parameter_list|(
 name|ServerAuthorizationCodeGrant
 name|grant
-parameter_list|)
-function_decl|;
-specifier|public
-specifier|abstract
-name|List
-argument_list|<
-name|ServerAuthorizationCodeGrant
-argument_list|>
-name|getCodeGrants
-parameter_list|(
-name|Client
-name|c
 parameter_list|)
 function_decl|;
 block|}

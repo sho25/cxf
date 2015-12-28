@@ -131,6 +131,28 @@ name|UserSubject
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
+name|tokens
+operator|.
+name|refresh
+operator|.
+name|RefreshToken
+import|;
+end_import
+
 begin_comment
 comment|/**  * OAuth provider responsible for persisting the information about   * OAuth consumers, request and access tokens.  */
 end_comment
@@ -212,6 +234,8 @@ throws|throws
 name|OAuthServiceException
 function_decl|;
 comment|/**      * Removes the access token      * The runtime will call this method if it finds that a token has expired      * @param accessToken the token      * @throws OAuthServiceException      */
+annotation|@
+name|Deprecated
 name|void
 name|removeAccessToken
 parameter_list|(
@@ -221,7 +245,33 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Revokes a refresh or access token      * @param token token identifier      * @param tokenTypeHint       * @throws OAuthServiceException      */
+comment|/**      * Return all access tokens associated with a given client      * @param client the client      * @return list of access tokens      * @throws OAuthServiceException      */
+name|List
+argument_list|<
+name|ServerAccessToken
+argument_list|>
+name|getAccessTokens
+parameter_list|(
+name|Client
+name|client
+parameter_list|)
+throws|throws
+name|OAuthServiceException
+function_decl|;
+comment|/**      * Return all refresh tokens associated with a given client      * @param client the client      * @return list of refresh tokens      * @throws OAuthServiceException      */
+name|List
+argument_list|<
+name|RefreshToken
+argument_list|>
+name|getRefreshTokens
+parameter_list|(
+name|Client
+name|client
+parameter_list|)
+throws|throws
+name|OAuthServiceException
+function_decl|;
+comment|/**      * Revokes a refresh or access token      * @param token token identifier      * @param tokenTypeHint can be access_token or refresh_token or null      * @throws OAuthServiceException      */
 name|void
 name|revokeToken
 parameter_list|(
@@ -229,7 +279,7 @@ name|Client
 name|client
 parameter_list|,
 name|String
-name|token
+name|tokenId
 parameter_list|,
 name|String
 name|tokenTypeHint
@@ -237,7 +287,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Converts the requested scope to the list of permissions        * @param requestedScopes      * @return list of permissions      */
+comment|/**      * Converts the requested scopes to the list of permissions.      * The scopes are extracted from OAuth2 'scope' property which      * if set may contain one or more space separated scope values      *         * @param requestedScopes the scopes      * @return list of permissions      */
 name|List
 argument_list|<
 name|OAuthPermission

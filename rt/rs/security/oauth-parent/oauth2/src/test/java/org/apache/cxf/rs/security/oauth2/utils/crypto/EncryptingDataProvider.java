@@ -879,6 +879,46 @@ name|encryptedRefreshToken
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|List
+argument_list|<
+name|ServerAccessToken
+argument_list|>
+name|getAccessTokens
+parameter_list|(
+name|Client
+name|client
+parameter_list|)
+throws|throws
+name|OAuthServiceException
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|List
+argument_list|<
+name|RefreshToken
+argument_list|>
+name|getRefreshTokens
+parameter_list|(
+name|Client
+name|client
+parameter_list|)
+throws|throws
+name|OAuthServiceException
+block|{
+comment|// TODO Auto-generated method stub
+return|return
+literal|null
+return|;
+block|}
 block|}
 end_class
 
