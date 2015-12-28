@@ -233,18 +233,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Removes the access token      * The runtime will call this method if it finds that a token has expired      * @param accessToken the token      * @throws OAuthServiceException      */
-annotation|@
-name|Deprecated
-name|void
-name|removeAccessToken
-parameter_list|(
-name|ServerAccessToken
-name|accessToken
-parameter_list|)
-throws|throws
-name|OAuthServiceException
-function_decl|;
 comment|/**      * Return all access tokens associated with a given client      * @param client the client      * @return list of access tokens      * @throws OAuthServiceException      */
 name|List
 argument_list|<

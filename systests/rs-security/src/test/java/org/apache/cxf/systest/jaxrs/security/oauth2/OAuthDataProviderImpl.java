@@ -655,20 +655,6 @@ block|}
 annotation|@
 name|Override
 specifier|public
-name|void
-name|removeAccessToken
-parameter_list|(
-name|ServerAccessToken
-name|accessToken
-parameter_list|)
-throws|throws
-name|OAuthServiceException
-block|{
-comment|// TODO Auto-generated method stub
-block|}
-annotation|@
-name|Override
-specifier|public
 name|List
 argument_list|<
 name|OAuthPermission
