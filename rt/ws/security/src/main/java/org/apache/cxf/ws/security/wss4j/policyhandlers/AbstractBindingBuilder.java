@@ -2118,7 +2118,6 @@ operator|)
 operator|.
 name|getProtectionOrder
 argument_list|()
-operator|)
 operator|||
 operator|(
 operator|(
@@ -2129,6 +2128,7 @@ operator|)
 operator|.
 name|isProtectTokens
 argument_list|()
+operator|)
 condition|)
 block|{
 name|LOG
