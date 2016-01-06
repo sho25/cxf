@@ -594,19 +594,6 @@ name|reqHeaders
 argument_list|)
 expr_stmt|;
 block|}
-if|if
-condition|(
-operator|!
-name|reqHeaders
-operator|.
-name|containsKey
-argument_list|(
-name|SoapBindingConstants
-operator|.
-name|SOAP_ACTION
-argument_list|)
-condition|)
-block|{
 name|reqHeaders
 operator|.
 name|put
@@ -623,7 +610,6 @@ name|action
 argument_list|)
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 elseif|else
 if|if
