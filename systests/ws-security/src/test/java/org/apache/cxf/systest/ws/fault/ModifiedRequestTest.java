@@ -1838,7 +1838,7 @@ name|createdCalendar
 init|=
 name|WSSConfig
 operator|.
-name|datatypeFactory
+name|DATATYPE_FACTORY
 operator|.
 name|newXMLGregorianCalendar
 argument_list|(
@@ -1854,7 +1854,7 @@ name|duration
 init|=
 name|WSSConfig
 operator|.
-name|datatypeFactory
+name|DATATYPE_FACTORY
 operator|.
 name|newDuration
 argument_list|(

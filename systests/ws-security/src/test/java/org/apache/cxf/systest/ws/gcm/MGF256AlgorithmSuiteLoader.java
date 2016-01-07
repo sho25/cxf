@@ -476,7 +476,7 @@ name|AlgorithmSuite
 block|{
 static|static
 block|{
-name|algorithmSuiteTypes
+name|ALGORITHM_SUITE_TYPES
 operator|.
 name|put
 argument_list|(
@@ -523,7 +523,7 @@ literal|4096
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|algorithmSuiteTypes
+name|ALGORITHM_SUITE_TYPES
 operator|.
 name|get
 argument_list|(
@@ -635,7 +635,7 @@ condition|)
 block|{
 name|setAlgorithmSuiteType
 argument_list|(
-name|algorithmSuiteTypes
+name|ALGORITHM_SUITE_TYPES
 operator|.
 name|get
 argument_list|(

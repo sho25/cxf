@@ -195,7 +195,7 @@ control|(
 name|String
 name|key
 range|:
-name|algorithmSuiteTypes
+name|ALGORITHM_SUITE_TYPES
 operator|.
 name|keySet
 argument_list|()
@@ -204,7 +204,7 @@ block|{
 name|AlgorithmSuiteType
 name|algSuite
 init|=
-name|algorithmSuiteTypes
+name|ALGORITHM_SUITE_TYPES
 operator|.
 name|get
 argument_list|(
@@ -280,7 +280,7 @@ name|getMaximumAsymmetricKeyLength
 argument_list|()
 argument_list|)
 decl_stmt|;
-name|algorithmSuiteTypes
+name|ALGORITHM_SUITE_TYPES
 operator|.
 name|put
 argument_list|(
