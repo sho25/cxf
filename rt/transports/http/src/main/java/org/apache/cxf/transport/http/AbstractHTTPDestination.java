@@ -4422,14 +4422,10 @@ operator|!=
 literal|null
 condition|)
 block|{
+comment|// closing the stream should indirectly call the servlet response's flushBuffer
 name|wrappedStream
 operator|.
 name|close
-argument_list|()
-expr_stmt|;
-name|response
-operator|.
-name|flushBuffer
 argument_list|()
 expr_stmt|;
 block|}
