@@ -366,16 +366,10 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class tests starting up and shutting down the embedded server when there  * is extra jetty configuration.  * This test is ignored by default as it is continually failing on Jenkins.  */
+comment|/**  * This class tests starting up and shutting down the embedded server when there  * is extra jetty configuration.  */
 end_comment
 
 begin_class
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 class|class
 name|EngineLifecycleTest
@@ -1101,7 +1095,10 @@ name|Socket
 argument_list|(
 name|InetAddress
 operator|.
-name|getLocalHost
+name|getLoopbackAddress
+argument_list|()
+operator|.
+name|getHostName
 argument_list|()
 argument_list|,
 name|Integer
