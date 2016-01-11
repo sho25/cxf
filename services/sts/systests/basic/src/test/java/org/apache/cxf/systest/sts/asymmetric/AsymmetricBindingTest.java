@@ -1110,11 +1110,6 @@ block|{
 comment|// TODO
 if|if
 condition|(
-name|test
-operator|.
-name|isStreaming
-argument_list|()
-operator|||
 name|STAX_PORT
 operator|.
 name|equals
