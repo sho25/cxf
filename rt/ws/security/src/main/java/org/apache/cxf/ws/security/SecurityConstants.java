@@ -197,6 +197,15 @@ name|USE_ATTACHMENT_ENCRYPTION_CONTENT_ONLY_TRANSFORM
 init|=
 literal|"ws-security.swa.encryption.attachment.transform.content"
 decl_stmt|;
+comment|/**      * Whether to use the STR (Security Token Reference) Transform when (externally) signing a SAML Token.      * The default is true. Some frameworks cannot handle processing the SecurityTokenReference is created,      * hence set this configuration option to "false" in this case.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|USE_STR_TRANSFORM
+init|=
+literal|"ws-security.use.str.transform"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
