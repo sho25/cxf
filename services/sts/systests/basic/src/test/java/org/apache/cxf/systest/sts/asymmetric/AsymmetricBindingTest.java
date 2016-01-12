@@ -1107,22 +1107,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|// TODO
-if|if
-condition|(
-name|STAX_PORT
-operator|.
-name|equals
-argument_list|(
-name|test
-operator|.
-name|getPort
-argument_list|()
-argument_list|)
-condition|)
-block|{
-return|return;
-block|}
 name|SpringBusFactory
 name|bf
 init|=
