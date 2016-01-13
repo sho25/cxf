@@ -1327,7 +1327,7 @@ name|findInboundSecurityToken
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 argument_list|)
 decl_stmt|;
 name|tokenId
@@ -1428,7 +1428,7 @@ name|findInboundSecurityToken
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SecurityContextToken
+name|SECURITY_CONTEXT_TOKEN
 argument_list|)
 decl_stmt|;
 name|tokenId
@@ -2037,7 +2037,7 @@ name|findInboundSecurityToken
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 argument_list|)
 decl_stmt|;
 name|sigTokId
@@ -2138,7 +2138,7 @@ name|findInboundSecurityToken
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SecurityContextToken
+name|SECURITY_CONTEXT_TOKEN
 argument_list|)
 decl_stmt|;
 name|sigTokId
@@ -3878,7 +3878,7 @@ if|if
 condition|(
 name|WSSecurityEventConstants
 operator|.
-name|EncryptedPart
+name|ENCRYPTED_PART
 operator|==
 name|incomingEvent
 operator|.
@@ -4002,7 +4002,7 @@ if|if
 condition|(
 name|WSSecurityEventConstants
 operator|.
-name|SignedPart
+name|SIGNED_PART
 operator|==
 name|incomingEvent
 operator|.

@@ -1601,7 +1601,7 @@ if|if
 condition|(
 name|WSSecurityEventConstants
 operator|.
-name|SecurityContextToken
+name|SECURITY_CONTEXT_TOKEN
 operator|==
 name|incomingEvent
 operator|.

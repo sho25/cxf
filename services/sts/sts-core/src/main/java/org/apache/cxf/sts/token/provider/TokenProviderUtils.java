@@ -1224,7 +1224,7 @@ if|if
 condition|(
 name|WSSecurityEventConstants
 operator|.
-name|SignedPart
+name|SIGNED_PART
 operator|==
 name|incomingEvent
 operator|.

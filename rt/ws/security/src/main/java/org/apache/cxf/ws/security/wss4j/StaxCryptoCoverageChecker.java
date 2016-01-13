@@ -470,7 +470,7 @@ name|getEventFromResults
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SignedPart
+name|SIGNED_PART
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)
@@ -505,7 +505,7 @@ name|getEventFromResults
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|EncryptedPart
+name|ENCRYPTED_PART
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)
@@ -555,7 +555,7 @@ name|getEventFromResults
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|Timestamp
+name|TIMESTAMP
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)
@@ -621,7 +621,7 @@ name|getEventFromResults
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|UsernameToken
+name|USERNAME_TOKEN
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)

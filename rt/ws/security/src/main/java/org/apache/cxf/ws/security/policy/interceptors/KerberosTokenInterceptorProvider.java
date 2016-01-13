@@ -1971,7 +1971,7 @@ if|if
 condition|(
 name|WSSecurityEventConstants
 operator|.
-name|KerberosToken
+name|KERBEROS_TOKEN
 operator|==
 name|incomingEvent
 operator|.

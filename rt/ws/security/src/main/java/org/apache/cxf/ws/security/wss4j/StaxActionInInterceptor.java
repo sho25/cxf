@@ -446,7 +446,7 @@ name|isEventInResults
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|NoSecurity
+name|NO_SECURITY
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)
@@ -462,7 +462,7 @@ name|findEvent
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|Operation
+name|OPERATION
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)
@@ -531,7 +531,7 @@ name|requiredEvent
 operator|=
 name|WSSecurityEventConstants
 operator|.
-name|Timestamp
+name|TIMESTAMP
 expr_stmt|;
 block|}
 elseif|else
@@ -551,7 +551,7 @@ name|requiredEvent
 operator|=
 name|WSSecurityEventConstants
 operator|.
-name|UsernameToken
+name|USERNAME_TOKEN
 expr_stmt|;
 block|}
 elseif|else
@@ -600,7 +600,7 @@ name|requiredEvent
 operator|=
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 expr_stmt|;
 block|}
 if|if
@@ -673,7 +673,7 @@ name|isEventInResults
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|EncryptedPart
+name|ENCRYPTED_PART
 argument_list|,
 name|incomingSecurityEventList
 argument_list|)
