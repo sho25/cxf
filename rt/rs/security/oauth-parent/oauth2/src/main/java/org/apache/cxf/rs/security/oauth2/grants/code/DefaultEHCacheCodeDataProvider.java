@@ -441,6 +441,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|c
+operator|==
+literal|null
+operator|||
 name|grant
 operator|.
 name|getClient
