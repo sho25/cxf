@@ -683,7 +683,7 @@ name|add
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 argument_list|)
 expr_stmt|;
 name|desiredSecurityEvents
@@ -692,7 +692,7 @@ name|add
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|UsernameToken
+name|USERNAME_TOKEN
 argument_list|)
 expr_stmt|;
 name|desiredSecurityEvents
@@ -701,7 +701,7 @@ name|add
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|KerberosToken
+name|KERBEROS_TOKEN
 argument_list|)
 expr_stmt|;
 name|desiredSecurityEvents
@@ -908,7 +908,7 @@ name|desiredEvent
 operator|==
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 condition|)
 block|{
 name|String
@@ -1090,7 +1090,7 @@ argument_list|()
 operator|==
 name|WSSecurityEventConstants
 operator|.
-name|UsernameToken
+name|USERNAME_TOKEN
 condition|)
 block|{
 return|return
@@ -1115,7 +1115,7 @@ argument_list|()
 operator|==
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 operator|&&
 name|isSamlEventSigned
 argument_list|(
@@ -1224,7 +1224,7 @@ argument_list|()
 operator|==
 name|WSSecurityEventConstants
 operator|.
-name|KerberosToken
+name|KERBEROS_TOKEN
 condition|)
 block|{
 return|return

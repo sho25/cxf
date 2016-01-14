@@ -1453,12 +1453,6 @@ condition|(
 name|asyncResponse
 operator|!=
 literal|null
-operator|&&
-operator|!
-name|asyncResponse
-operator|.
-name|suspendContinuationIfNeeded
-argument_list|()
 condition|)
 block|{
 name|faultResponse

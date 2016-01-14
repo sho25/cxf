@@ -705,6 +705,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|c
+operator|==
+literal|null
+operator|||
 name|token
 operator|.
 name|getClient
@@ -800,6 +804,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|c
+operator|==
+literal|null
+operator|||
 name|token
 operator|.
 name|getClient

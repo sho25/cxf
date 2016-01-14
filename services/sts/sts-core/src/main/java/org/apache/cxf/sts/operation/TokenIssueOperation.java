@@ -2732,7 +2732,7 @@ name|findInboundSecurityToken
 argument_list|(
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 argument_list|,
 name|messageContext
 argument_list|)

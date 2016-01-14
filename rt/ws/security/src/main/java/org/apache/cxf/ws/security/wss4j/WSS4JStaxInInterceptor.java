@@ -1379,7 +1379,7 @@ argument_list|()
 operator|==
 name|WSSecurityEventConstants
 operator|.
-name|Timestamp
+name|TIMESTAMP
 operator|||
 name|securityEvent
 operator|.

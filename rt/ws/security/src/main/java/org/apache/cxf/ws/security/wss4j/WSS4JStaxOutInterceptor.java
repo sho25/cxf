@@ -1285,7 +1285,7 @@ argument_list|()
 operator|==
 name|WSSecurityEventConstants
 operator|.
-name|SamlToken
+name|SAML_TOKEN
 condition|)
 block|{
 comment|// Store SAML keys in case we need them on the inbound side
