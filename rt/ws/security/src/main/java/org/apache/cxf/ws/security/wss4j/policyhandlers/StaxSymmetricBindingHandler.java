@@ -1706,7 +1706,7 @@ name|SecurePart
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse11_SignatureConfirmation
+name|TAG_WSSE11_SIG_CONF
 argument_list|,
 name|Modifier
 operator|.
@@ -2474,7 +2474,7 @@ name|SecurePart
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse11_SignatureConfirmation
+name|TAG_WSSE11_SIG_CONF
 argument_list|,
 name|Modifier
 operator|.

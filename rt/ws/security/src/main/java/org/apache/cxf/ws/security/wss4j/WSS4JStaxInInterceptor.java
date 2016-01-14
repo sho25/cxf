@@ -2230,7 +2230,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_saml_Assertion
+name|TAG_SAML_ASSERTION
 argument_list|,
 name|validator
 argument_list|)
@@ -2260,7 +2260,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_saml2_Assertion
+name|TAG_SAML2_ASSERTION
 argument_list|,
 name|validator
 argument_list|)
@@ -2290,7 +2290,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse_UsernameToken
+name|TAG_WSSE_USERNAME_TOKEN
 argument_list|,
 name|validator
 argument_list|)
@@ -2350,7 +2350,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsu_Timestamp
+name|TAG_WSU_TIMESTAMP
 argument_list|,
 name|validator
 argument_list|)
@@ -2380,7 +2380,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse_BinarySecurityToken
+name|TAG_WSSE_BINARY_SECURITY_TOKEN
 argument_list|,
 name|validator
 argument_list|)
@@ -2410,7 +2410,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsc0502_SecurityContextToken
+name|TAG_WSC0502_SCT
 argument_list|,
 name|validator
 argument_list|)
@@ -2421,7 +2421,7 @@ name|addValidator
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsc0512_SecurityContextToken
+name|TAG_WSC0512_SCT
 argument_list|,
 name|validator
 argument_list|)

@@ -1580,7 +1580,7 @@ name|SecurePart
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse_UsernameToken
+name|TAG_WSSE_USERNAME_TOKEN
 argument_list|,
 name|Modifier
 operator|.
@@ -1976,7 +1976,7 @@ name|SecurePart
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse_BinarySecurityToken
+name|TAG_WSSE_BINARY_SECURITY_TOKEN
 argument_list|,
 name|Modifier
 operator|.
@@ -2150,7 +2150,7 @@ name|qname
 init|=
 name|WSSConstants
 operator|.
-name|TAG_saml2_Assertion
+name|TAG_SAML2_ASSERTION
 decl_stmt|;
 name|SamlTokenType
 name|tokenType
@@ -2179,7 +2179,7 @@ name|qname
 operator|=
 name|WSSConstants
 operator|.
-name|TAG_saml_Assertion
+name|TAG_SAML_ASSERTION
 expr_stmt|;
 block|}
 return|return
@@ -2482,7 +2482,7 @@ name|qname
 init|=
 name|WSSConstants
 operator|.
-name|TAG_saml2_Assertion
+name|TAG_SAML2_ASSERTION
 decl_stmt|;
 if|if
 condition|(
@@ -2503,7 +2503,7 @@ name|qname
 operator|=
 name|WSSConstants
 operator|.
-name|TAG_saml_Assertion
+name|TAG_SAML_ASSERTION
 expr_stmt|;
 block|}
 return|return
@@ -4180,7 +4180,7 @@ name|SecurePart
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse_BinarySecurityToken
+name|TAG_WSSE_BINARY_SECURITY_TOKEN
 argument_list|,
 name|Modifier
 operator|.
@@ -4771,7 +4771,7 @@ operator|(
 operator|(
 name|WSSConstants
 operator|.
-name|TAG_saml_Assertion
+name|TAG_SAML_ASSERTION
 operator|.
 name|equals
 argument_list|(
@@ -4780,7 +4780,7 @@ argument_list|)
 operator|||
 name|WSSConstants
 operator|.
-name|TAG_saml2_Assertion
+name|TAG_SAML2_ASSERTION
 operator|.
 name|equals
 argument_list|(
@@ -4900,7 +4900,7 @@ name|SecurePart
 argument_list|(
 name|WSSConstants
 operator|.
-name|TAG_wsse11_SignatureConfirmation
+name|TAG_WSSE11_SIG_CONF
 argument_list|,
 name|Modifier
 operator|.

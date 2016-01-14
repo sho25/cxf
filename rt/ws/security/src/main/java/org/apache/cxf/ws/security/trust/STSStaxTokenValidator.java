@@ -1023,7 +1023,7 @@ argument_list|()
 argument_list|,
 name|WSSConstants
 operator|.
-name|TAG_wsse11_Salt
+name|TAG_WSSE11_SALT
 argument_list|)
 decl_stmt|;
 name|PasswordString
@@ -1040,7 +1040,7 @@ argument_list|()
 argument_list|,
 name|WSSConstants
 operator|.
-name|TAG_wsse_Password
+name|TAG_WSSE_PASSWORD
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1058,7 +1058,7 @@ argument_list|()
 argument_list|,
 name|WSSConstants
 operator|.
-name|TAG_wsse11_Iteration
+name|TAG_WSSE11_ITERATION
 argument_list|)
 decl_stmt|;
 if|if
@@ -1303,7 +1303,7 @@ argument_list|()
 argument_list|,
 name|WSSConstants
 operator|.
-name|TAG_wsse_Nonce
+name|TAG_WSSE_NONCE
 argument_list|)
 decl_stmt|;
 name|byte
@@ -1354,7 +1354,7 @@ argument_list|()
 argument_list|,
 name|WSSConstants
 operator|.
-name|TAG_wsu_Created
+name|TAG_WSU_CREATED
 argument_list|)
 decl_stmt|;
 name|String
@@ -2742,7 +2742,7 @@ if|if
 condition|(
 name|WSSConstants
 operator|.
-name|NS_GSS_Kerberos5_AP_REQ
+name|NS_GSS_KERBEROS5_AP_REQ
 operator|.
 name|equals
 argument_list|(
@@ -2995,7 +2995,7 @@ if|if
 condition|(
 name|WSSConstants
 operator|.
-name|NS_GSS_Kerberos5_AP_REQ
+name|NS_GSS_KERBEROS5_AP_REQ
 operator|.
 name|equals
 argument_list|(

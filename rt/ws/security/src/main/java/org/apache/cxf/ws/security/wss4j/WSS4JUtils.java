@@ -1085,7 +1085,7 @@ name|setTokenType
 argument_list|(
 name|WSSConstants
 operator|.
-name|NS_GSS_Kerberos5_AP_REQ
+name|NS_GSS_KERBEROS5_AP_REQ
 argument_list|)
 expr_stmt|;
 block|}
