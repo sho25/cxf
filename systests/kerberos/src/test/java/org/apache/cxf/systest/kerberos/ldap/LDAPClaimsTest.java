@@ -619,6 +619,10 @@ argument_list|(
 name|protocol
 operator|=
 literal|"LDAP"
+argument_list|,
+name|address
+operator|=
+literal|"127.0.0.1"
 argument_list|)
 block|}
 argument_list|)
