@@ -1215,10 +1215,6 @@ name|Throwable
 name|t
 parameter_list|)
 block|{
-comment|//probably wss4j isn't found or something. We'll ignore this
-comment|//as the policy framework will then not find the providers
-comment|//and error out at that point.  If nothing uses ws-securitypolicy
-comment|//no warnings/errors will display
 name|String
 name|error
 init|=
@@ -1226,6 +1222,24 @@ literal|"Could not load or register WS-SecurityPolicy related classes. "
 operator|+
 literal|"Please check that (the correct version of) Apache WSS4J is on the classpath"
 decl_stmt|;
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|WARNING
+argument_list|,
+name|error
+operator|+
+literal|": "
+operator|+
+name|t
+operator|.
+name|getMessage
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|LOG
 operator|.
 name|log
