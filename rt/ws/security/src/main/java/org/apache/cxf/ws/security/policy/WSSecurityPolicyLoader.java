@@ -1219,6 +1219,13 @@ comment|//probably wss4j isn't found or something. We'll ignore this
 comment|//as the policy framework will then not find the providers
 comment|//and error out at that point.  If nothing uses ws-securitypolicy
 comment|//no warnings/errors will display
+name|String
+name|error
+init|=
+literal|"Could not load or register WS-SecurityPolicy related classes. "
+operator|+
+literal|"Please check that (the correct version of) Apache WSS4J is on the classpath"
+decl_stmt|;
 name|LOG
 operator|.
 name|log
@@ -1227,7 +1234,7 @@ name|Level
 operator|.
 name|FINE
 argument_list|,
-literal|"Could not load or register WS-SecurityPolicy related classes."
+name|error
 argument_list|,
 name|t
 argument_list|)
