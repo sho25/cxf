@@ -569,6 +569,14 @@ if|if
 condition|(
 name|obj
 operator|.
+name|isActive
+argument_list|()
+condition|)
+block|{
+if|if
+condition|(
+name|obj
+operator|.
 name|getClientId
 argument_list|()
 operator|!=
@@ -763,6 +771,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
+block|}
 name|sb
 operator|.
 name|append
@@ -1496,6 +1505,14 @@ argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|resp
+operator|.
+name|isActive
+argument_list|()
+condition|)
+block|{
 name|String
 name|clientId
 init|=
@@ -1686,6 +1703,7 @@ name|exp
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 return|return
 name|resp
