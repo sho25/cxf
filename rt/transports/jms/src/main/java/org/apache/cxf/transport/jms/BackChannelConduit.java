@@ -389,7 +389,7 @@ name|LogUtils
 operator|.
 name|getL7dLogger
 argument_list|(
-name|JMSDestination
+name|BackChannelConduit
 operator|.
 name|class
 argument_list|)
