@@ -1062,7 +1062,7 @@ name|addTokenUsage
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|TokenUsage_MainSignature
+name|TOKENUSAGE_MAIN_SIGNATURE
 argument_list|)
 expr_stmt|;
 block|}

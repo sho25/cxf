@@ -2238,7 +2238,7 @@ argument_list|)
 operator|||
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_ThumbprintIdentifier
+name|KEYIDENTIFIER_THUMBPRINT_IDENTIFIER
 operator|.
 name|equals
 argument_list|(
@@ -2247,7 +2247,7 @@ argument_list|)
 operator|||
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 operator|.
 name|equals
 argument_list|(

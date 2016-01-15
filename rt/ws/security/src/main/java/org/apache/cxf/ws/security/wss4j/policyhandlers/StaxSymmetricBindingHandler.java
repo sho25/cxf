@@ -2773,7 +2773,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -2798,7 +2798,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_KerberosSha1Identifier
+name|KEYIDENTIFIER_KERBEROS_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 name|properties
@@ -2807,7 +2807,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_KerberosSha1Identifier
+name|KEYIDENTIFIER_KERBEROS_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 if|if
@@ -2831,7 +2831,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -2873,7 +2873,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -2885,7 +2885,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_EncryptedKeySha1Identifier
+name|KEYIDENTIFIER_ENCRYPTED_KEY_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 if|if
@@ -2909,7 +2909,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_EncryptedKeySha1Identifier
+name|KEYIDENTIFIER_ENCRYPTED_KEY_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 name|properties
@@ -2918,7 +2918,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 name|properties
@@ -2967,7 +2967,7 @@ argument_list|)
 operator|||
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_ThumbprintIdentifier
+name|KEYIDENTIFIER_THUMBPRINT_IDENTIFIER
 operator|.
 name|equals
 argument_list|(
@@ -2976,7 +2976,7 @@ argument_list|)
 operator|||
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 operator|.
 name|equals
 argument_list|(
@@ -3490,7 +3490,7 @@ name|setSignatureKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_EncryptedKeySha1Identifier
+name|KEYIDENTIFIER_ENCRYPTED_KEY_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 if|if
@@ -3514,7 +3514,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_EncryptedKeySha1Identifier
+name|KEYIDENTIFIER_ENCRYPTED_KEY_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 name|properties
@@ -3523,7 +3523,7 @@ name|setSignatureKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -3549,7 +3549,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -3576,7 +3576,7 @@ name|setSignatureKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}
@@ -3588,7 +3588,7 @@ name|setSignatureKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_KerberosSha1Identifier
+name|KEYIDENTIFIER_KERBEROS_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 block|}
@@ -3598,7 +3598,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_KerberosSha1Identifier
+name|KEYIDENTIFIER_KERBEROS_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 block|}
@@ -3654,7 +3654,7 @@ name|setDerivedKeyKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 block|}

@@ -1816,7 +1816,7 @@ argument_list|()
 argument_list|,
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 decl_stmt|;
 name|usernameSecurityToken
@@ -2601,7 +2601,7 @@ if|if
 condition|(
 name|WSSConstants
 operator|.
-name|NS_X509PKIPathv1
+name|NS_X509_PKIPATH_V1
 operator|.
 name|equals
 argument_list|(
@@ -2653,7 +2653,7 @@ argument_list|()
 argument_list|,
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|,
 name|tokenContext
 operator|.
@@ -2786,7 +2786,7 @@ argument_list|()
 argument_list|,
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 block|{
 annotation|@
@@ -2970,7 +2970,7 @@ if|if
 condition|(
 name|WSSConstants
 operator|.
-name|NS_X509PKIPathv1
+name|NS_X509_PKIPATH_V1
 operator|.
 name|equals
 argument_list|(

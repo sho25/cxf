@@ -1076,7 +1076,7 @@ argument_list|()
 operator|==
 name|WSSecurityTokenConstants
 operator|.
-name|KerberosToken
+name|KERBEROS_TOKEN
 condition|)
 block|{
 name|cachedTok
@@ -1099,7 +1099,7 @@ argument_list|()
 operator|==
 name|WSSecurityTokenConstants
 operator|.
-name|Saml11Token
+name|SAML_11_TOKEN
 condition|)
 block|{
 name|cachedTok
@@ -1122,7 +1122,7 @@ argument_list|()
 operator|==
 name|WSSecurityTokenConstants
 operator|.
-name|Saml20Token
+name|SAML_20_TOKEN
 condition|)
 block|{
 name|cachedTok
@@ -1145,7 +1145,7 @@ argument_list|()
 operator|==
 name|WSSecurityTokenConstants
 operator|.
-name|SecureConversationToken
+name|SECURE_CONVERSATION_TOKEN
 operator|||
 name|securityToken
 operator|.
@@ -1154,7 +1154,7 @@ argument_list|()
 operator|==
 name|WSSecurityTokenConstants
 operator|.
-name|SecurityContextToken
+name|SECURITY_CONTEXT_TOKEN
 condition|)
 block|{
 name|cachedTok

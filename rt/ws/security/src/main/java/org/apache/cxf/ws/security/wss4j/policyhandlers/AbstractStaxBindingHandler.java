@@ -2590,7 +2590,7 @@ name|tokenType
 operator|=
 name|WSSecurityTokenConstants
 operator|.
-name|KerberosToken
+name|KERBEROS_TOKEN
 expr_stmt|;
 block|}
 elseif|else
@@ -2625,7 +2625,7 @@ name|tokenType
 operator|=
 name|WSSecurityTokenConstants
 operator|.
-name|Saml11Token
+name|SAML_11_TOKEN
 expr_stmt|;
 block|}
 elseif|else
@@ -2660,7 +2660,7 @@ name|tokenType
 operator|=
 name|WSSecurityTokenConstants
 operator|.
-name|SecureConversationToken
+name|SECURE_CONVERSATION_TOKEN
 expr_stmt|;
 block|}
 block|}
@@ -3327,7 +3327,7 @@ argument_list|)
 operator|||
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_ThumbprintIdentifier
+name|KEYIDENTIFIER_THUMBPRINT_IDENTIFIER
 operator|.
 name|equals
 argument_list|(
@@ -3336,7 +3336,7 @@ argument_list|)
 operator|||
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 operator|.
 name|equals
 argument_list|(
@@ -3589,7 +3589,7 @@ name|identifier
 operator|=
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_ThumbprintIdentifier
+name|KEYIDENTIFIER_THUMBPRINT_IDENTIFIER
 expr_stmt|;
 block|}
 block|}
@@ -3694,7 +3694,7 @@ name|identifier
 operator|=
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_ThumbprintIdentifier
+name|KEYIDENTIFIER_THUMBPRINT_IDENTIFIER
 expr_stmt|;
 block|}
 block|}
@@ -3767,7 +3767,7 @@ block|}
 return|return
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 return|;
 block|}
 specifier|protected

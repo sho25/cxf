@@ -481,7 +481,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 name|properties
@@ -1003,7 +1003,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_ThumbprintIdentifier
+name|KEYIDENTIFIER_THUMBPRINT_IDENTIFIER
 argument_list|)
 expr_stmt|;
 name|properties
@@ -1536,7 +1536,7 @@ name|setEncryptionKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_EncryptedKeySha1Identifier
+name|KEYIDENTIFIER_ENCRYPTED_KEY_SHA1_IDENTIFIER
 argument_list|)
 expr_stmt|;
 name|properties
