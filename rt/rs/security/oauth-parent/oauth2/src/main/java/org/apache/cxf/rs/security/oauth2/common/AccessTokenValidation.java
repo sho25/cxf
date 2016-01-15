@@ -80,6 +80,22 @@ comment|// Represents the information about the validated ServerAccessToken.
 end_comment
 
 begin_comment
+comment|// It is returned by AccessTokenValidatorService and is checked by CXF OAuthRequestFilter
+end_comment
+
+begin_comment
+comment|// protecting the service resources.
+end_comment
+
+begin_comment
+comment|// If the protected resources are not CXF based then use TokenIntrospectionService which
+end_comment
+
+begin_comment
+comment|// returns RFC 7622 compliant TokenIntrospection response.
+end_comment
+
+begin_comment
 comment|// The problem with reading specific ServerAccessToken instances is that
 end_comment
 

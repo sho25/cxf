@@ -544,12 +544,12 @@ name|ACCESS_DENIED
 init|=
 literal|"access_denied"
 decl_stmt|;
-comment|// Token Revocation
+comment|// Token Revocation, Introspection
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|REVOKED_TOKEN_ID
+name|TOKEN_ID
 init|=
 literal|"token"
 decl_stmt|;
@@ -557,7 +557,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|REVOKED_TOKEN_TYPE_HINT
+name|TOKEN_TYPE_HINT
 init|=
 literal|"token_type_hint"
 decl_stmt|;

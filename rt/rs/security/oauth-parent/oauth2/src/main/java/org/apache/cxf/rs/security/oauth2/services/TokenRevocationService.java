@@ -217,7 +217,7 @@ name|getFirst
 argument_list|(
 name|OAuthConstants
 operator|.
-name|REVOKED_TOKEN_ID
+name|TOKEN_ID
 argument_list|)
 decl_stmt|;
 if|if
@@ -247,7 +247,7 @@ name|getFirst
 argument_list|(
 name|OAuthConstants
 operator|.
-name|REVOKED_TOKEN_TYPE_HINT
+name|TOKEN_TYPE_HINT
 argument_list|)
 decl_stmt|;
 if|if
