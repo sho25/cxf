@@ -909,6 +909,16 @@ expr_stmt|;
 block|}
 name|container
 operator|.
+name|setJndiEnvironment
+argument_list|(
+name|jmsConfig
+operator|.
+name|getJndiEnvironment
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|container
+operator|.
 name|start
 argument_list|()
 expr_stmt|;

@@ -1327,6 +1327,7 @@ argument_list|(
 name|inMessage
 argument_list|)
 expr_stmt|;
+comment|// wait for a while for the jms session recycling
 name|Thread
 operator|.
 name|sleep

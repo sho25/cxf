@@ -1370,6 +1370,8 @@ operator|&&
 name|waitTime
 operator|<
 name|MAX_RECEIVE_TIME
+operator|*
+literal|10
 condition|)
 block|{
 try|try
