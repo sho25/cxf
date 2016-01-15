@@ -721,6 +721,13 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|sb
+operator|.
+name|append
+argument_list|(
+literal|","
+argument_list|)
+expr_stmt|;
 name|appendJsonPair
 argument_list|(
 name|sb
@@ -733,6 +740,13 @@ name|getIat
 argument_list|()
 argument_list|,
 literal|false
+argument_list|)
+expr_stmt|;
+name|sb
+operator|.
+name|append
+argument_list|(
+literal|","
 argument_list|)
 expr_stmt|;
 name|appendJsonPair
