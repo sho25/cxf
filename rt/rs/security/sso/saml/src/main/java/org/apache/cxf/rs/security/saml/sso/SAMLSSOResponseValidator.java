@@ -230,7 +230,7 @@ name|String
 argument_list|>
 name|replayCache
 decl_stmt|;
-comment|/**      * Enforce that Assertions must be signed if the POST binding was used. The default is true.      */
+comment|/**      * Enforce that Assertions contained in the Response must be signed (if the Response itself is not      * signed). The default is true.      */
 specifier|public
 name|void
 name|setEnforceAssertionsSigned
@@ -504,9 +504,10 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
-name|enforceAssertionsSigned
+operator|!
+name|enforceResponseSigned
 operator|&&
-name|postBinding
+name|enforceAssertionsSigned
 operator|&&
 name|assertion
 operator|.
@@ -520,9 +521,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"If the HTTP Post binding is used to deliver the Response, "
-operator|+
-literal|"the enclosed assertions must be signed"
+literal|"The enclosed assertions in the SAML Response must be signed"
 argument_list|)
 expr_stmt|;
 throw|throw

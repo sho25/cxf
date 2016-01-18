@@ -1155,6 +1155,13 @@ argument_list|()
 decl_stmt|;
 name|ssoValidator
 operator|.
+name|setEnforceAssertionsSigned
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+name|ssoValidator
+operator|.
 name|setIssuerIDP
 argument_list|(
 literal|"http://cxf.apache.org/issuer"
