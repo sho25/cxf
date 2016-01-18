@@ -1064,6 +1064,11 @@ block|}
 name|destroyBus
 argument_list|()
 expr_stmt|;
+name|super
+operator|.
+name|destroy
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 name|void
