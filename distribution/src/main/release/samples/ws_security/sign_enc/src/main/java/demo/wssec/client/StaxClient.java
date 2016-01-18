@@ -545,7 +545,7 @@ name|setSignatureKeyIdentifier
 argument_list|(
 name|WSSecurityTokenConstants
 operator|.
-name|KeyIdentifier_SecurityTokenDirectReference
+name|KEYIDENTIFIER_SECURITY_TOKEN_DIRECT_REFERENCE
 argument_list|)
 expr_stmt|;
 name|properties
