@@ -490,6 +490,10 @@ name|supportedGrantType
 decl_stmt|;
 specifier|private
 name|boolean
+name|useAllClientScopes
+decl_stmt|;
+specifier|private
+name|boolean
 name|partialMatchScopeValidation
 decl_stmt|;
 specifier|private
@@ -864,6 +868,8 @@ argument_list|(
 name|client
 argument_list|,
 name|providedScope
+argument_list|,
+name|useAllClientScopes
 argument_list|,
 name|partialMatchScopeValidation
 argument_list|)
@@ -2574,6 +2580,21 @@ operator|.
 name|partialMatchScopeValidation
 operator|=
 name|partialMatchScopeValidation
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setUseAllClientScopes
+parameter_list|(
+name|boolean
+name|useAllClientScopes
+parameter_list|)
+block|{
+name|this
+operator|.
+name|useAllClientScopes
+operator|=
+name|useAllClientScopes
 expr_stmt|;
 block|}
 comment|/**      * If a client does not include a redirect_uri parameter but has an exactly one      * pre-registered redirect_uri then use that redirect_uri      * @param use allows to use a single registered redirect_uri if set to true (default)      */
