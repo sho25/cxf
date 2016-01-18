@@ -4141,8 +4141,6 @@ operator|new
 name|WrappedOutputStream
 argument_list|(
 name|message
-argument_list|,
-name|response
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4255,10 +4253,6 @@ name|AbstractWrappedOutputStream
 implements|implements
 name|CopyingOutputStream
 block|{
-specifier|protected
-name|HttpServletResponse
-name|response
-decl_stmt|;
 specifier|private
 name|Message
 name|outMessage
@@ -4267,9 +4261,6 @@ name|WrappedOutputStream
 parameter_list|(
 name|Message
 name|m
-parameter_list|,
-name|HttpServletResponse
-name|resp
 parameter_list|)
 block|{
 name|super
@@ -4280,10 +4271,6 @@ operator|.
 name|outMessage
 operator|=
 name|m
-expr_stmt|;
-name|response
-operator|=
-name|resp
 expr_stmt|;
 block|}
 annotation|@
