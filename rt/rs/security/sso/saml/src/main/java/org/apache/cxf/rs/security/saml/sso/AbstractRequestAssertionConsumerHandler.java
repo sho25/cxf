@@ -1699,6 +1699,11 @@ argument_list|(
 name|enforceKnownIssuer
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|postBinding
+condition|)
+block|{
 name|ssoResponseValidator
 operator|.
 name|setReplayCache
@@ -1707,6 +1712,7 @@ name|getReplayCache
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|ssoResponseValidator
 operator|.
