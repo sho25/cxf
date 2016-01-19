@@ -1573,7 +1573,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|void
-name|setScopes
+name|setSupportedScopes
 parameter_list|(
 name|Map
 argument_list|<
