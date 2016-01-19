@@ -681,7 +681,7 @@ name|clientCodeChallenge
 operator|==
 literal|null
 operator|&&
-name|clientCodeChallenge
+name|clientCodeVerifier
 operator|==
 literal|null
 operator|&&
@@ -707,7 +707,7 @@ name|clientCodeChallenge
 operator|!=
 literal|null
 operator|&&
-name|clientCodeChallenge
+name|clientCodeVerifier
 operator|==
 literal|null
 operator|||
@@ -715,7 +715,7 @@ name|clientCodeChallenge
 operator|==
 literal|null
 operator|&&
-name|clientCodeChallenge
+name|clientCodeVerifier
 operator|!=
 literal|null
 condition|)
