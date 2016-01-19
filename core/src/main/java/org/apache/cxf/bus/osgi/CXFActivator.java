@@ -236,10 +236,6 @@ decl_stmt|;
 specifier|private
 name|ManagedWorkQueueList
 name|workQueues
-init|=
-operator|new
-name|ManagedWorkQueueList
-argument_list|()
 decl_stmt|;
 specifier|private
 name|ServiceTracker
@@ -264,6 +260,12 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+name|workQueues
+operator|=
+operator|new
+name|ManagedWorkQueueList
+argument_list|()
+expr_stmt|;
 name|cxfBundleListener
 operator|=
 operator|new
