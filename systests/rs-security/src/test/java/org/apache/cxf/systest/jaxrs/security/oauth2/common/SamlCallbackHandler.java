@@ -18,6 +18,8 @@ operator|.
 name|security
 operator|.
 name|oauth2
+operator|.
+name|common
 package|;
 end_package
 
@@ -452,16 +454,6 @@ name|SamlCallbackHandler
 implements|implements
 name|CallbackHandler
 block|{
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|PORT
-init|=
-name|BookServerOAuth2
-operator|.
-name|PORT
-decl_stmt|;
 specifier|private
 name|String
 name|confirmationMethod
@@ -485,12 +477,6 @@ decl_stmt|;
 specifier|private
 name|String
 name|audience
-init|=
-literal|"https://localhost:"
-operator|+
-name|PORT
-operator|+
-literal|"/oauth2/token"
 decl_stmt|;
 specifier|private
 name|boolean

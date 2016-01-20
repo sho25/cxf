@@ -18,6 +18,8 @@ operator|.
 name|security
 operator|.
 name|oauth2
+operator|.
+name|grants
 package|;
 end_package
 

@@ -19,7 +19,7 @@ name|security
 operator|.
 name|oauth2
 operator|.
-name|grants
+name|common
 package|;
 end_package
 
