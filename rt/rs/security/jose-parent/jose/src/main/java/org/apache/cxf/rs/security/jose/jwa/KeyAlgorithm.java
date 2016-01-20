@@ -208,7 +208,7 @@ argument_list|)
 block|,
 name|DIRECT
 argument_list|(
-literal|"direct"
+literal|"dir"
 argument_list|,
 literal|null
 argument_list|,
