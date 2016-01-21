@@ -737,6 +737,7 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|StringUtils
 operator|.
 name|isEmpty
