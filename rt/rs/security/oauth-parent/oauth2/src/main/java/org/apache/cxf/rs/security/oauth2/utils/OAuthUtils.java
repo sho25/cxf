@@ -1497,7 +1497,7 @@ argument_list|)
 operator|||
 name|allowedAudiences
 operator|.
-name|contains
+name|containsAll
 argument_list|(
 name|providedAudiences
 argument_list|)
