@@ -273,18 +273,6 @@ name|issuedAt
 expr_stmt|;
 block|}
 comment|/**      * Returns the number of seconds this grant can be valid after it was issued      * @return the seconds this grant will be valid for      */
-annotation|@
-name|Deprecated
-specifier|public
-name|long
-name|getLifetime
-parameter_list|()
-block|{
-return|return
-name|expiresIn
-return|;
-block|}
-comment|/**      * Returns the number of seconds this grant can be valid after it was issued      * @return the seconds this grant will be valid for      */
 specifier|public
 name|long
 name|getExpiresIn

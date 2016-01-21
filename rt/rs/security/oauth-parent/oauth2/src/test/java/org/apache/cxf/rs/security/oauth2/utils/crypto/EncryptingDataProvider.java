@@ -716,11 +716,11 @@ argument_list|)
 expr_stmt|;
 name|token
 operator|.
-name|setAudience
+name|setAudiences
 argument_list|(
 name|accessTokenReg
 operator|.
-name|getAudience
+name|getAudiences
 argument_list|()
 argument_list|)
 expr_stmt|;

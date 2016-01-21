@@ -468,7 +468,7 @@ argument_list|)
 expr_stmt|;
 name|atv
 operator|.
-name|setAudience
+name|setAudiences
 argument_list|(
 name|response
 operator|.

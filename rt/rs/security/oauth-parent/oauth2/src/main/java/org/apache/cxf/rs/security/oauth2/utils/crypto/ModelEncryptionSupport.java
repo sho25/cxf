@@ -1397,9 +1397,9 @@ argument_list|)
 expr_stmt|;
 name|newToken
 operator|.
-name|setAudience
+name|setAudiences
 argument_list|(
-name|getStringPart
+name|parseSimpleList
 argument_list|(
 name|parts
 index|[
@@ -1793,13 +1793,13 @@ name|state
 operator|.
 name|append
 argument_list|(
-name|tokenizeString
-argument_list|(
 name|token
 operator|.
-name|getAudience
+name|getAudiences
 argument_list|()
-argument_list|)
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// 8: other parameters

@@ -938,13 +938,9 @@ argument_list|)
 return|;
 block|}
 comment|// Validate the audience
-if|if
-condition|(
-operator|!
-name|OAuthUtils
-operator|.
-name|validateAudience
-argument_list|(
+name|String
+name|clientAudience
+init|=
 name|params
 operator|.
 name|getFirst
@@ -953,6 +949,17 @@ name|OAuthConstants
 operator|.
 name|CLIENT_AUDIENCE
 argument_list|)
+decl_stmt|;
+comment|// Right now if the audience parameter is set it is expected to be contained
+comment|// in the list of Client audiences set at the Client registration time.
+if|if
+condition|(
+operator|!
+name|OAuthUtils
+operator|.
+name|validateAudience
+argument_list|(
+name|clientAudience
 argument_list|,
 name|client
 operator|.
@@ -1518,6 +1525,8 @@ name|CLIENT_AUDIENCE
 argument_list|)
 argument_list|)
 expr_stmt|;
+comment|// or if no audience parameter is available, set the list of client
+comment|// audiences for the users to see ?
 name|state
 operator|.
 name|setProposedScope
