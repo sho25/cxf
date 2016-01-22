@@ -789,6 +789,7 @@ name|issuer
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|issuer
 operator|.
 name|equals
