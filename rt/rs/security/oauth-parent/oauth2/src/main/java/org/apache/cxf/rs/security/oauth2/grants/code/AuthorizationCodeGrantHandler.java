@@ -695,6 +695,28 @@ return|return
 name|token
 return|;
 block|}
+elseif|else
+if|if
+condition|(
+name|grant
+operator|.
+name|isPreauthorizedTokenAvailable
+argument_list|()
+condition|)
+block|{
+comment|// the grant was issued based on the authorization time check confirming the
+comment|// token was available but it has expired by now or been removed then
+comment|// creating a completely new token can be wrong - though this needs to be reviewed
+throw|throw
+operator|new
+name|OAuthServiceException
+argument_list|(
+name|OAuthConstants
+operator|.
+name|INVALID_GRANT
+argument_list|)
+throw|;
+block|}
 comment|// Delegate to the data provider to create the one
 name|AccessTokenRegistration
 name|reg

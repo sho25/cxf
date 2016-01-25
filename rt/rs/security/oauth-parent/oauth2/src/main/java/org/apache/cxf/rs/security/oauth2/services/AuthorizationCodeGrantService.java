@@ -708,6 +708,15 @@ argument_list|()
 decl_stmt|;
 name|codeReg
 operator|.
+name|setPreauthorizedTokenAvailable
+argument_list|(
+name|preauthorizedToken
+operator|!=
+literal|null
+argument_list|)
+expr_stmt|;
+name|codeReg
+operator|.
 name|setClient
 argument_list|(
 name|client

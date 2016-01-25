@@ -249,6 +249,16 @@ argument_list|)
 expr_stmt|;
 name|grant
 operator|.
+name|setPreauthorizedTokenAvailable
+argument_list|(
+name|reg
+operator|.
+name|isPreauthorizedTokenAvailable
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|grant
+operator|.
 name|setRequestedScopes
 argument_list|(
 name|reg
