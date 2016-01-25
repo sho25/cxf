@@ -398,6 +398,9 @@ name|getAccessTokens
 parameter_list|(
 name|Client
 name|client
+parameter_list|,
+name|UserSubject
+name|sub
 parameter_list|)
 throws|throws
 name|OAuthServiceException
@@ -418,6 +421,9 @@ name|getRefreshTokens
 parameter_list|(
 name|Client
 name|client
+parameter_list|,
+name|UserSubject
+name|sub
 parameter_list|)
 throws|throws
 name|OAuthServiceException

@@ -411,6 +411,9 @@ parameter_list|(
 name|Client
 name|client
 parameter_list|,
+name|UserSubject
+name|userSubject
+parameter_list|,
 name|List
 argument_list|<
 name|String

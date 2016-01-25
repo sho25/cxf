@@ -67,6 +67,26 @@ name|security
 operator|.
 name|oauth2
 operator|.
+name|common
+operator|.
+name|UserSubject
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|rs
+operator|.
+name|security
+operator|.
+name|oauth2
+operator|.
 name|provider
 operator|.
 name|OAuthDataProvider
@@ -124,7 +144,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Return the list of code grants associated with a given client      * @param client the client      * @return the list of grants      * @throws OAuthServiceException      * @see ServerAuthorizationCodeGrant      */
+comment|/**      * Return the list of code grants associated with a given client      * @param client the client      * @param subject the user subject, can be null      * @return the list of grants      * @throws OAuthServiceException      * @see ServerAuthorizationCodeGrant      */
 name|List
 argument_list|<
 name|ServerAuthorizationCodeGrant
@@ -133,6 +153,9 @@ name|getCodeGrants
 parameter_list|(
 name|Client
 name|c
+parameter_list|,
+name|UserSubject
+name|subject
 parameter_list|)
 throws|throws
 name|OAuthServiceException

@@ -1012,6 +1012,8 @@ name|canAuthorizationBeSkipped
 argument_list|(
 name|client
 argument_list|,
+name|userSubject
+argument_list|,
 name|requestedScope
 argument_list|,
 name|requestedPermissions
@@ -1100,6 +1102,9 @@ name|canAuthorizationBeSkipped
 parameter_list|(
 name|Client
 name|client
+parameter_list|,
+name|UserSubject
+name|userSubject
 parameter_list|,
 name|List
 argument_list|<

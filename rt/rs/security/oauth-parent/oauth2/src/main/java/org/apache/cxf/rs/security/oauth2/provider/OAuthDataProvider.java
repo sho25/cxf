@@ -233,7 +233,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Return all access tokens associated with a given client      * @param client the client      * @return list of access tokens      * @throws OAuthServiceException      */
+comment|/**      * Return all access tokens associated with a given client      * @param client the client      * @param subject the user subject, can be null      * @return list of access tokens      * @throws OAuthServiceException      */
 name|List
 argument_list|<
 name|ServerAccessToken
@@ -242,11 +242,14 @@ name|getAccessTokens
 parameter_list|(
 name|Client
 name|client
+parameter_list|,
+name|UserSubject
+name|subject
 parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Return all refresh tokens associated with a given client      * @param client the client      * @return list of refresh tokens      * @throws OAuthServiceException      */
+comment|/**      * Return all refresh tokens associated with a given client      * @param client the client      * @param subject the user subject, can be null      * @return list of refresh tokens      * @throws OAuthServiceException      */
 name|List
 argument_list|<
 name|RefreshToken
@@ -255,6 +258,9 @@ name|getRefreshTokens
 parameter_list|(
 name|Client
 name|client
+parameter_list|,
+name|UserSubject
+name|subject
 parameter_list|)
 throws|throws
 name|OAuthServiceException

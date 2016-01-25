@@ -1673,6 +1673,8 @@ range|:
 name|getRefreshTokens
 argument_list|(
 name|c
+argument_list|,
+literal|null
 argument_list|)
 control|)
 block|{
@@ -1693,6 +1695,8 @@ range|:
 name|getAccessTokens
 argument_list|(
 name|c
+argument_list|,
+literal|null
 argument_list|)
 control|)
 block|{
