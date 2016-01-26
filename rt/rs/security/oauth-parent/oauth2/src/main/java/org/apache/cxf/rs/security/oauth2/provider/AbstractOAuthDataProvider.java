@@ -1219,7 +1219,7 @@ argument_list|)
 expr_stmt|;
 block|}
 return|return
-literal|null
+name|token
 return|;
 block|}
 specifier|protected
