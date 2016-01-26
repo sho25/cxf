@@ -654,6 +654,14 @@ argument_list|>
 name|audiences
 parameter_list|)
 block|{
+if|if
+condition|(
+name|grant
+operator|.
+name|isPreauthorizedTokenAvailable
+argument_list|()
+condition|)
+block|{
 name|ServerAccessToken
 name|token
 init|=
@@ -695,14 +703,7 @@ return|return
 name|token
 return|;
 block|}
-elseif|else
-if|if
-condition|(
-name|grant
-operator|.
-name|isPreauthorizedTokenAvailable
-argument_list|()
-condition|)
+else|else
 block|{
 comment|// the grant was issued based on the authorization time check confirming the
 comment|// token was available but it has expired by now or been removed then
@@ -716,6 +717,7 @@ operator|.
 name|INVALID_GRANT
 argument_list|)
 throw|;
+block|}
 block|}
 comment|// Delegate to the data provider to create the one
 name|AccessTokenRegistration
