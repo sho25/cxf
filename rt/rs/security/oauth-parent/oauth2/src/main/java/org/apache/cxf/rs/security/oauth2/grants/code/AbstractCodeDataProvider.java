@@ -152,6 +152,10 @@ argument_list|(
 name|reg
 argument_list|,
 name|codeLifetime
+argument_list|,
+operator|!
+name|isSupportPreauthorizedTokens
+argument_list|()
 argument_list|)
 return|;
 block|}
@@ -211,6 +215,9 @@ name|reg
 parameter_list|,
 name|long
 name|lifetime
+parameter_list|,
+name|boolean
+name|useNonce
 parameter_list|)
 block|{
 name|ServerAuthorizationCodeGrant
@@ -297,6 +304,11 @@ name|getClientCodeChallenge
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|useNonce
+condition|)
+block|{
 name|grant
 operator|.
 name|setNonce
@@ -307,6 +319,7 @@ name|getNonce
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|grant
 return|;

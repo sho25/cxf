@@ -400,7 +400,7 @@ name|ServerAccessToken
 name|doCreateAccessToken
 parameter_list|(
 name|AccessTokenRegistration
-name|accessToken
+name|atReg
 parameter_list|)
 block|{
 name|ServerAccessToken
@@ -408,7 +408,7 @@ name|at
 init|=
 name|createNewAccessToken
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getClient
 argument_list|()
@@ -418,7 +418,7 @@ name|at
 operator|.
 name|setAudiences
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getAudiences
 argument_list|()
@@ -428,7 +428,7 @@ name|at
 operator|.
 name|setGrantType
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getGrantType
 argument_list|()
@@ -440,7 +440,7 @@ name|String
 argument_list|>
 name|theScopes
 init|=
-name|accessToken
+name|atReg
 operator|.
 name|getApprovedScope
 argument_list|()
@@ -453,7 +453,7 @@ name|thePermissions
 init|=
 name|convertScopeToPermissions
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getClient
 argument_list|()
@@ -472,7 +472,7 @@ name|at
 operator|.
 name|setSubject
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getSubject
 argument_list|()
@@ -482,22 +482,33 @@ name|at
 operator|.
 name|setClientCodeVerifier
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getClientCodeVerifier
 argument_list|()
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|isSupportPreauthorizedTokens
+argument_list|()
+condition|)
+block|{
+comment|// if the nonce is persisted and the same token is reused then in some cases
+comment|// (when ID token is returned) the old nonce will be copied to ID token which
+comment|// may cause the validation failure at the cliend side
 name|at
 operator|.
 name|setNonce
 argument_list|(
-name|accessToken
+name|atReg
 operator|.
 name|getNonce
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|at
 return|;
@@ -1083,7 +1094,8 @@ block|{
 if|if
 condition|(
 operator|!
-name|supportPreauthorizedTokens
+name|isSupportPreauthorizedTokens
+argument_list|()
 condition|)
 block|{
 return|return
@@ -1201,6 +1213,10 @@ name|OAuthConstants
 operator|.
 name|ACCESS_TOKEN
 argument_list|)
+expr_stmt|;
+name|token
+operator|=
+literal|null
 expr_stmt|;
 block|}
 return|return
@@ -1976,6 +1992,15 @@ name|invisibleToClientScopes
 expr_stmt|;
 block|}
 specifier|public
+name|boolean
+name|isSupportPreauthorizedTokens
+parameter_list|()
+block|{
+return|return
+name|supportPreauthorizedTokens
+return|;
+block|}
+specifier|public
 name|void
 name|setSupportPreauthorizedTokens
 parameter_list|(
@@ -1983,10 +2008,6 @@ name|boolean
 name|supportPreauthorizedTokens
 parameter_list|)
 block|{
-comment|// This property can be enabled by default as it is generally a good thing to check
-comment|// if a token for a given client (+ user) pair exists but doing the queries on every
-comment|// authorization request for all the client-user combinations might be not cheap,
-comment|// hence this property is currently disabled by default
 name|this
 operator|.
 name|supportPreauthorizedTokens
