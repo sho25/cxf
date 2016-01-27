@@ -488,16 +488,6 @@ name|getClientCodeVerifier
 argument_list|()
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-operator|!
-name|isSupportPreauthorizedTokens
-argument_list|()
-condition|)
-block|{
-comment|// if the nonce is persisted and the same token is reused then in some cases
-comment|// (when ID token is returned) the old nonce will be copied to ID token which
-comment|// may cause the validation failure at the cliend side
 name|at
 operator|.
 name|setNonce
@@ -508,7 +498,6 @@ name|getNonce
 argument_list|()
 argument_list|)
 expr_stmt|;
-block|}
 return|return
 name|at
 return|;

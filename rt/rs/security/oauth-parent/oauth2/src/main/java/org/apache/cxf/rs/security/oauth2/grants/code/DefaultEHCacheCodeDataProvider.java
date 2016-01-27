@@ -392,10 +392,6 @@ argument_list|(
 name|reg
 argument_list|,
 name|codeLifetime
-argument_list|,
-operator|!
-name|isSupportPreauthorizedTokens
-argument_list|()
 argument_list|)
 return|;
 block|}

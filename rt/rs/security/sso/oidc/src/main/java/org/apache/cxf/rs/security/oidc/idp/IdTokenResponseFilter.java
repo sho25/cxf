@@ -499,7 +499,7 @@ name|idToken
 operator|.
 name|getAccessTokenHash
 argument_list|()
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
