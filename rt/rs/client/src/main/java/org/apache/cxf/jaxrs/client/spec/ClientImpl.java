@@ -1573,6 +1573,13 @@ name|getTrustManagers
 argument_list|()
 operator|!=
 literal|null
+operator|||
+name|tlsParams
+operator|.
+name|getHostnameVerifier
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 name|clientCfg
