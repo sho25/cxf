@@ -793,7 +793,9 @@ name|permission
 init|=
 operator|new
 name|OAuthPermission
-argument_list|()
+argument_list|(
+literal|"read_book"
+argument_list|)
 decl_stmt|;
 name|permission
 operator|.
@@ -861,7 +863,9 @@ name|permission
 init|=
 operator|new
 name|OAuthPermission
-argument_list|()
+argument_list|(
+literal|"create_book"
+argument_list|)
 decl_stmt|;
 name|permission
 operator|.
@@ -929,7 +933,9 @@ name|permission
 init|=
 operator|new
 name|OAuthPermission
-argument_list|()
+argument_list|(
+literal|"create_image"
+argument_list|)
 decl_stmt|;
 name|permission
 operator|.
@@ -997,7 +1003,9 @@ name|permission
 init|=
 operator|new
 name|OAuthPermission
-argument_list|()
+argument_list|(
+literal|"read_balance"
+argument_list|)
 decl_stmt|;
 name|permission
 operator|.
@@ -1065,7 +1073,9 @@ name|permission
 init|=
 operator|new
 name|OAuthPermission
-argument_list|()
+argument_list|(
+literal|"create_balance"
+argument_list|)
 decl_stmt|;
 name|permission
 operator|.
@@ -1133,7 +1143,9 @@ name|permission
 init|=
 operator|new
 name|OAuthPermission
-argument_list|()
+argument_list|(
+literal|"read_data"
+argument_list|)
 decl_stmt|;
 name|permission
 operator|.
