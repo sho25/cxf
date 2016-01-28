@@ -185,17 +185,22 @@ decl_stmt|;
 specifier|private
 name|List
 argument_list|<
-name|?
-extends|extends
 name|OAuthPermission
 argument_list|>
 name|permissions
+decl_stmt|;
+specifier|private
+name|List
+argument_list|<
+name|OAuthPermission
+argument_list|>
+name|alreadyAuthorizedPermissions
 decl_stmt|;
 specifier|public
 name|OAuthAuthorizationData
 parameter_list|()
 block|{     }
-comment|/**      * Sets the client application name      * @return application name      */
+comment|/**      * Get the client application name      * @return application name      */
 specifier|public
 name|String
 name|getApplicationName
@@ -205,7 +210,7 @@ return|return
 name|applicationName
 return|;
 block|}
-comment|/**      * Sets the client application name      * @param applicationName application name      */
+comment|/**      * Set the client application name      * @param applicationName application name      */
 specifier|public
 name|void
 name|setApplicationName
@@ -221,12 +226,10 @@ operator|=
 name|applicationName
 expr_stmt|;
 block|}
-comment|/**      * Gets the list of scopes translated to {@link Permission} instances      * requested by the client application      * @return the list of scopes      */
+comment|/**      * Get the list of scopes translated to {@link Permission} instances      * requested by the client application      * @return the list of scopes      */
 specifier|public
 name|List
 argument_list|<
-name|?
-extends|extends
 name|OAuthPermission
 argument_list|>
 name|getPermissions
@@ -236,15 +239,13 @@ return|return
 name|permissions
 return|;
 block|}
-comment|/**      * Gets the list of scopes translated to {@link OAuthPermission} instances      * @return the list of scopes      **/
+comment|/**      * Set the list of scopes translated to {@link OAuthPermission} instances      * @return the list of scopes      **/
 specifier|public
 name|void
 name|setPermissions
 parameter_list|(
 name|List
 argument_list|<
-name|?
-extends|extends
 name|OAuthPermission
 argument_list|>
 name|permissions
@@ -257,7 +258,39 @@ operator|=
 name|permissions
 expr_stmt|;
 block|}
-comment|/**      * Sets the authenticity token linking the authorization       * challenge to the current end user session      *       * @param authenticityToken the session authenticity token       */
+comment|/**       * Get the list of scopes already approved by a user      * @return the list of approved scopes      */
+specifier|public
+name|List
+argument_list|<
+name|OAuthPermission
+argument_list|>
+name|getAlreadyAuthorizedPermissions
+parameter_list|()
+block|{
+return|return
+name|alreadyAuthorizedPermissions
+return|;
+block|}
+comment|/**      * Set the list of scopes already approved by a user      * @param permissions the list of approved scopes      */
+specifier|public
+name|void
+name|setAlreadyAuthorizedPermissions
+parameter_list|(
+name|List
+argument_list|<
+name|OAuthPermission
+argument_list|>
+name|perms
+parameter_list|)
+block|{
+name|this
+operator|.
+name|alreadyAuthorizedPermissions
+operator|=
+name|perms
+expr_stmt|;
+block|}
+comment|/**      * Set the authenticity token linking the authorization       * challenge to the current end user session      *       * @param authenticityToken the session authenticity token       */
 specifier|public
 name|void
 name|setAuthenticityToken
@@ -273,7 +306,7 @@ operator|=
 name|authenticityToken
 expr_stmt|;
 block|}
-comment|/**      * Gets the authenticity token linking the authorization       * challenge to the current end user session      * @return the session authenticity token      */
+comment|/**      * Get the authenticity token linking the authorization       * challenge to the current end user session      * @return the session authenticity token      */
 specifier|public
 name|String
 name|getAuthenticityToken
@@ -283,7 +316,7 @@ return|return
 name|authenticityToken
 return|;
 block|}
-comment|/**      * Sets the application description      * @param applicationDescription the description      */
+comment|/**      * Set the application description      * @param applicationDescription the description      */
 specifier|public
 name|void
 name|setApplicationDescription
@@ -299,7 +332,7 @@ operator|=
 name|applicationDescription
 expr_stmt|;
 block|}
-comment|/**      * Gets the application description      * @return the description      */
+comment|/**      * Get the application description      * @return the description      */
 specifier|public
 name|String
 name|getApplicationDescription
@@ -309,7 +342,7 @@ return|return
 name|applicationDescription
 return|;
 block|}
-comment|/**      * Sets the application web URI      * @param applicationWebUri the application URI      */
+comment|/**      * Set the application web URI      * @param applicationWebUri the application URI      */
 specifier|public
 name|void
 name|setApplicationWebUri
@@ -325,7 +358,7 @@ operator|=
 name|applicationWebUri
 expr_stmt|;
 block|}
-comment|/**      * Gets the application web URI      * @return the application URI      */
+comment|/**      * Get the application web URI      * @return the application URI      */
 specifier|public
 name|String
 name|getApplicationWebUri
@@ -335,7 +368,7 @@ return|return
 name|applicationWebUri
 return|;
 block|}
-comment|/**      * Sets the application logo URI      * @param applicationLogoUri the logo URI      */
+comment|/**      * Set the application logo URI      * @param applicationLogoUri the logo URI      */
 specifier|public
 name|void
 name|setApplicationLogoUri
@@ -351,7 +384,7 @@ operator|=
 name|applicationLogoUri
 expr_stmt|;
 block|}
-comment|/**      * Gets the application logo URI      * @return the logo URI      */
+comment|/**      * Get the application logo URI      * @return the logo URI      */
 specifier|public
 name|String
 name|getApplicationLogoUri
@@ -361,7 +394,7 @@ return|return
 name|applicationLogoUri
 return|;
 block|}
-comment|/**      * Sets the absolute URI where the authorization decision data       * will need to be sent to      * @param replyTo authorization decision handler URI      */
+comment|/**      * Set the absolute URI where the authorization decision data       * will need to be sent to      * @param replyTo authorization decision handler URI      */
 specifier|public
 name|void
 name|setReplyTo
@@ -377,7 +410,7 @@ operator|=
 name|replyTo
 expr_stmt|;
 block|}
-comment|/**      * Gets the absolute URI where the authorization decision data       * will need to be sent to      * @return authorization decision handler URI      */
+comment|/**      * Get the absolute URI where the authorization decision data       * will need to be sent to      * @return authorization decision handler URI      */
 specifier|public
 name|String
 name|getReplyTo
