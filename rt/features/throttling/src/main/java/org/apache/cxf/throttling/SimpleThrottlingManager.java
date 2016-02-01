@@ -146,6 +146,9 @@ return|;
 block|}
 name|m
 operator|.
+name|getExchange
+argument_list|()
+operator|.
 name|put
 argument_list|(
 name|ThrottlingCounter
@@ -166,9 +169,6 @@ name|threshold
 condition|)
 block|{
 name|m
-operator|.
-name|getExchange
-argument_list|()
 operator|.
 name|put
 argument_list|(
