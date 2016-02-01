@@ -505,7 +505,10 @@ expr_stmt|;
 if|if
 condition|(
 operator|!
-name|enforceResponseSigned
+name|samlResponse
+operator|.
+name|isSigned
+argument_list|()
 operator|&&
 name|enforceAssertionsSigned
 operator|&&
