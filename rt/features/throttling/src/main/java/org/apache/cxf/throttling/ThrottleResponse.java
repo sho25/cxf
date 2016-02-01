@@ -74,6 +74,46 @@ name|String
 name|errorMessage
 decl_stmt|;
 specifier|public
+name|ThrottleResponse
+parameter_list|()
+block|{              }
+specifier|public
+name|ThrottleResponse
+parameter_list|(
+name|int
+name|responceCode
+parameter_list|)
+block|{
+name|this
+operator|.
+name|responseCode
+operator|=
+name|responceCode
+expr_stmt|;
+block|}
+specifier|public
+name|ThrottleResponse
+parameter_list|(
+name|int
+name|responceCode
+parameter_list|,
+name|long
+name|delay
+parameter_list|)
+block|{
+name|this
+argument_list|(
+name|responceCode
+argument_list|)
+expr_stmt|;
+name|this
+operator|.
+name|delay
+operator|=
+name|delay
+expr_stmt|;
+block|}
+specifier|public
 name|Map
 argument_list|<
 name|String
@@ -174,7 +214,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Delay processing for specified milliseconds.  Should be "small" to prevent the client from timing out.      * @return      */
+comment|/**      * Delay processing for specified milliseconds.        * Should be "small" to prevent the client from timing out unless the client request is      * aborted with the HTTP error code.      * @return      */
 specifier|public
 name|long
 name|getDelay
