@@ -73,22 +73,6 @@ name|jaxws
 operator|.
 name|context
 operator|.
-name|WebServiceContextImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxws
-operator|.
-name|context
-operator|.
 name|WrappedMessageContext
 import|;
 end_import
@@ -572,15 +556,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Validate a token
 name|RequestSecurityTokenResponseType
 name|response
@@ -591,7 +566,9 @@ name|validate
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -904,15 +881,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Validate a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -923,7 +891,9 @@ name|requestCollection
 argument_list|(
 name|requestCollection
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -1100,15 +1070,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Validate a token
 try|try
 block|{
@@ -1118,7 +1079,9 @@ name|validate
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -1316,15 +1279,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Validate a token - failure expected on an unknown token type
 try|try
 block|{
@@ -1334,7 +1288,9 @@ name|validate
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -1371,7 +1327,9 @@ name|validate
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|assertTrue
@@ -1572,15 +1530,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Validate a token
 name|RequestSecurityTokenResponseType
 name|response
@@ -1591,7 +1540,9 @@ name|validate
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|assertTrue

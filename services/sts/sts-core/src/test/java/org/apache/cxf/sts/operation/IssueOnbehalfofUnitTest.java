@@ -187,22 +187,6 @@ name|jaxws
 operator|.
 name|context
 operator|.
-name|WebServiceContextImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxws
-operator|.
-name|context
-operator|.
 name|WrappedMessageContext
 import|;
 end_import
@@ -1489,15 +1473,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -1508,7 +1483,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -1885,15 +1862,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -1904,7 +1872,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -2268,15 +2238,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 comment|// This should fail as the default DelegationHandler does not allow HolderOfKey
 try|try
@@ -2287,7 +2248,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -2332,7 +2295,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -2696,15 +2661,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 comment|// This should fail as the default DelegationHandler does not allow HolderOfKey
 try|try
@@ -2715,7 +2671,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -2760,7 +2718,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -3124,15 +3084,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 comment|// This should fail as the default DelegationHandler does not allow HolderOfKey
 try|try
@@ -3143,7 +3094,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -3188,7 +3141,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -3552,15 +3507,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 comment|// This should fail as the default DelegationHandler does not allow HolderOfKey
 try|try
@@ -3571,7 +3517,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -3616,7 +3564,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -3993,15 +3943,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token - this should work
 name|issueOperation
 operator|.
@@ -4009,7 +3950,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|request
@@ -4034,7 +3977,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -4405,15 +4350,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token - this should work
 name|issueOperation
 operator|.
@@ -4421,7 +4357,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|request
@@ -4446,7 +4384,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -4768,15 +4708,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 comment|// This should fail as the default DelegationHandler does not allow UsernameTokens
 try|try
@@ -4787,7 +4718,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -4832,7 +4765,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -5160,15 +5095,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 name|TokenDelegationHandler
 name|delegationHandler
 init|=
@@ -5197,7 +5123,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -5631,19 +5559,10 @@ argument_list|,
 literal|"https"
 argument_list|)
 expr_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Validate a token - this will fail as the tokenProvider doesn't understand how to handle
 comment|// realm "B"
 comment|//try {
-comment|//    issueOperation.issue(request, webServiceContext);
+comment|//    issueOperation.issue(request, msgCtx);
 comment|//} catch (STSException ex) {
 comment|//    // expected
 comment|//}
@@ -5663,7 +5582,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -6174,6 +6095,15 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
+name|Principal
+name|principal
+init|=
+operator|new
+name|CustomTokenPrincipal
+argument_list|(
+literal|"bob"
+argument_list|)
+decl_stmt|;
 name|msgCtx
 operator|.
 name|put
@@ -6187,23 +6117,10 @@ argument_list|()
 argument_list|,
 name|createSecurityContext
 argument_list|(
-operator|new
-name|CustomTokenPrincipal
-argument_list|(
-literal|"bob"
-argument_list|)
+name|principal
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -6214,7 +6131,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+name|principal
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -6885,6 +6804,15 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
+name|Principal
+name|principal
+init|=
+operator|new
+name|CustomTokenPrincipal
+argument_list|(
+literal|"bob"
+argument_list|)
+decl_stmt|;
 name|msgCtx
 operator|.
 name|put
@@ -6898,23 +6826,10 @@ argument_list|()
 argument_list|,
 name|createSecurityContext
 argument_list|(
-operator|new
-name|CustomTokenPrincipal
-argument_list|(
-literal|"bob"
-argument_list|)
+name|principal
 argument_list|)
 argument_list|)
 expr_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -6925,7 +6840,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+name|principal
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List

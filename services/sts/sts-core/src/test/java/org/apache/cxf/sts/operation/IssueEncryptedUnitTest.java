@@ -119,22 +119,6 @@ name|jaxws
 operator|.
 name|context
 operator|.
-name|WebServiceContextImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxws
-operator|.
-name|context
-operator|.
 name|WrappedMessageContext
 import|;
 end_import
@@ -698,15 +682,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -717,7 +692,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -976,15 +953,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token - as no encryption name has been specified the token will not be encrypted
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -995,7 +963,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -1041,7 +1011,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|securityTokenResponse
@@ -1296,15 +1268,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token - this should use a (new) default encryption algorithm as configured
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -1315,7 +1278,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -1355,7 +1320,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -1634,15 +1601,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -1653,7 +1611,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -1756,7 +1716,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -2046,15 +2008,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token - this should use a (new) default key-wrap algorithm as configured
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -2065,7 +2018,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -2105,7 +2060,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -2421,15 +2378,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -2440,7 +2388,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -2544,7 +2494,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail
@@ -2813,15 +2765,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|webServiceContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgCtx
-argument_list|)
-decl_stmt|;
 comment|// Issue a token - use various KeyIdentifiers
 name|RequestSecurityTokenResponseCollectionType
 name|response
@@ -2832,7 +2775,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 decl_stmt|;
 name|List
@@ -2870,7 +2815,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|encryptionProperties
@@ -2888,7 +2835,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|encryptionProperties
@@ -2906,7 +2855,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 try|try
@@ -2926,7 +2877,9 @@ name|issue
 argument_list|(
 name|request
 argument_list|,
-name|webServiceContext
+literal|null
+argument_list|,
+name|msgCtx
 argument_list|)
 expr_stmt|;
 name|fail

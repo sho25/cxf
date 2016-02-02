@@ -25,13 +25,21 @@ end_package
 
 begin_import
 import|import
-name|javax
+name|java
 operator|.
-name|xml
+name|security
 operator|.
-name|ws
+name|Principal
+import|;
+end_import
+
+begin_import
+import|import
+name|java
 operator|.
-name|WebServiceContext
+name|util
+operator|.
+name|Map
 import|;
 end_import
 
@@ -90,8 +98,16 @@ parameter_list|(
 name|RequestSecurityTokenCollectionType
 name|requestCollection
 parameter_list|,
-name|WebServiceContext
-name|context
+name|Principal
+name|principal
+parameter_list|,
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|)
 function_decl|;
 block|}
