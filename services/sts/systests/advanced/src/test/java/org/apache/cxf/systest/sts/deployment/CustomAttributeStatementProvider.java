@@ -372,11 +372,11 @@ argument_list|)
 expr_stmt|;
 name|params
 operator|.
-name|setWebServiceContext
+name|setMessageContext
 argument_list|(
 name|providerParameters
 operator|.
-name|getWebServiceContext
+name|getMessageContext
 argument_list|()
 argument_list|)
 expr_stmt|;

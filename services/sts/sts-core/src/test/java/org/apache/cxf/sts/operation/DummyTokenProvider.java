@@ -383,7 +383,7 @@ argument_list|()
 argument_list|,
 name|tokenParameters
 operator|.
-name|getWebServiceContext
+name|getMessageContext
 argument_list|()
 argument_list|)
 decl_stmt|;

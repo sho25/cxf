@@ -661,9 +661,6 @@ name|HttpServletRequest
 operator|)
 name|params
 operator|.
-name|getWebServiceContext
-argument_list|()
-operator|.
 name|getMessageContext
 argument_list|()
 operator|.
@@ -728,9 +725,6 @@ operator|(
 name|String
 operator|)
 name|params
-operator|.
-name|getWebServiceContext
-argument_list|()
 operator|.
 name|getMessageContext
 argument_list|()
@@ -1159,9 +1153,6 @@ name|HttpServletRequest
 operator|)
 name|params
 operator|.
-name|getWebServiceContext
-argument_list|()
-operator|.
 name|getMessageContext
 argument_list|()
 operator|.
@@ -1226,9 +1217,6 @@ operator|(
 name|String
 operator|)
 name|params
-operator|.
-name|getWebServiceContext
-argument_list|()
 operator|.
 name|getMessageContext
 argument_list|()
@@ -1411,9 +1399,6 @@ name|HttpServletRequest
 operator|)
 name|params
 operator|.
-name|getWebServiceContext
-argument_list|()
-operator|.
 name|getMessageContext
 argument_list|()
 operator|.
@@ -1478,9 +1463,6 @@ operator|(
 name|String
 operator|)
 name|params
-operator|.
-name|getWebServiceContext
-argument_list|()
 operator|.
 name|getMessageContext
 argument_list|()
@@ -1646,9 +1628,6 @@ name|HttpServletRequest
 operator|)
 name|params
 operator|.
-name|getWebServiceContext
-argument_list|()
-operator|.
 name|getMessageContext
 argument_list|()
 operator|.
@@ -1713,9 +1692,6 @@ operator|(
 name|String
 operator|)
 name|params
-operator|.
-name|getWebServiceContext
-argument_list|()
 operator|.
 name|getMessageContext
 argument_list|()

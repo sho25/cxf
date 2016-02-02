@@ -808,9 +808,6 @@ name|setMsgContext
 argument_list|(
 name|tokenParameters
 operator|.
-name|getWebServiceContext
-argument_list|()
-operator|.
 name|getMessageContext
 argument_list|()
 argument_list|)

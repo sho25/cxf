@@ -660,9 +660,12 @@ argument_list|)
 expr_stmt|;
 name|validatorParameters
 operator|.
-name|setWebServiceContext
+name|setMessageContext
 argument_list|(
 name|context
+operator|.
+name|getMessageContext
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|validatorParameters
