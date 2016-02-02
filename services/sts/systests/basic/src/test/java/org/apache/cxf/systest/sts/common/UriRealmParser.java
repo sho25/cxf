@@ -25,19 +25,17 @@ name|java
 operator|.
 name|util
 operator|.
-name|StringTokenizer
+name|Map
 import|;
 end_import
 
 begin_import
 import|import
-name|javax
+name|java
 operator|.
-name|xml
+name|util
 operator|.
-name|ws
-operator|.
-name|WebServiceContext
+name|StringTokenizer
 import|;
 end_import
 
@@ -88,8 +86,13 @@ specifier|public
 name|String
 name|parseRealm
 parameter_list|(
-name|WebServiceContext
-name|context
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|)
 throws|throws
 name|STSException
@@ -107,10 +110,7 @@ init|=
 operator|(
 name|String
 operator|)
-name|context
-operator|.
-name|getMessageContext
-argument_list|()
+name|messageContext
 operator|.
 name|get
 argument_list|(

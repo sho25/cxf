@@ -165,22 +165,6 @@ name|jaxws
 operator|.
 name|context
 operator|.
-name|WebServiceContextImpl
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxws
-operator|.
-name|context
-operator|.
 name|WrappedMessageContext
 import|;
 end_import
@@ -622,15 +606,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|wsContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgContext
-argument_list|)
-decl_stmt|;
 comment|// Process the security header and store the results in the message context
 name|WSSecurityEngine
 name|securityEngine
@@ -705,7 +680,7 @@ name|parseRequest
 argument_list|(
 name|request
 argument_list|,
-name|wsContext
+name|msgContext
 argument_list|,
 literal|null
 argument_list|,
@@ -796,15 +771,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|wsContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgContext
-argument_list|)
-decl_stmt|;
 comment|// Process the security header and store the results in the message context
 name|WSSecurityEngine
 name|securityEngine
@@ -879,7 +845,7 @@ name|parseRequest
 argument_list|(
 name|request
 argument_list|,
-name|wsContext
+name|msgContext
 argument_list|,
 literal|null
 argument_list|,
@@ -970,15 +936,6 @@ argument_list|(
 name|msg
 argument_list|)
 decl_stmt|;
-name|WebServiceContextImpl
-name|wsContext
-init|=
-operator|new
-name|WebServiceContextImpl
-argument_list|(
-name|msgContext
-argument_list|)
-decl_stmt|;
 comment|// Process the security header and store the results in the message context
 name|WSSecurityEngine
 name|securityEngine
@@ -1061,7 +1018,7 @@ name|parseRequest
 argument_list|(
 name|request
 argument_list|,
-name|wsContext
+name|msgContext
 argument_list|,
 literal|null
 argument_list|,

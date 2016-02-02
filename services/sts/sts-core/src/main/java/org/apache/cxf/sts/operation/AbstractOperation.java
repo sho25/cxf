@@ -1406,6 +1406,9 @@ argument_list|(
 name|request
 argument_list|,
 name|context
+operator|.
+name|getMessageContext
+argument_list|()
 argument_list|,
 name|stsProperties
 argument_list|,
@@ -2562,6 +2565,9 @@ operator|.
 name|parseRealm
 argument_list|(
 name|context
+operator|.
+name|getMessageContext
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|providerParameters

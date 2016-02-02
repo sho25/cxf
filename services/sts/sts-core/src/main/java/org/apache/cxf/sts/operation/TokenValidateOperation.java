@@ -787,6 +787,9 @@ operator|.
 name|parseRealm
 argument_list|(
 name|context
+operator|.
+name|getMessageContext
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

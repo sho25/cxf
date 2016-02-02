@@ -139,6 +139,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Map
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|logging
 operator|.
 name|Level
@@ -256,32 +266,6 @@ operator|.
 name|keyinfo
 operator|.
 name|X509Data
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|WebServiceContext
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|ws
-operator|.
-name|handler
-operator|.
-name|MessageContext
 import|;
 end_import
 
@@ -1126,8 +1110,13 @@ parameter_list|(
 name|RequestSecurityTokenType
 name|request
 parameter_list|,
-name|WebServiceContext
-name|wsContext
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|,
 name|STSPropertiesMBean
 name|stsProperties
@@ -1245,7 +1234,7 @@ name|jaxbElement
 argument_list|,
 name|tokenRequirements
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|,
 name|claimsParsers
 argument_list|)
@@ -1264,7 +1253,7 @@ name|jaxbElement
 argument_list|,
 name|keyRequirements
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|,
 name|stsProperties
 argument_list|)
@@ -1608,8 +1597,13 @@ parameter_list|,
 name|KeyRequirements
 name|keyRequirements
 parameter_list|,
-name|WebServiceContext
-name|wsContext
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|,
 name|STSPropertiesMBean
 name|stsProperties
@@ -1933,7 +1927,7 @@ name|parseUseKey
 argument_list|(
 name|useKey
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|)
 decl_stmt|;
 name|keyRequirements
@@ -2109,8 +2103,13 @@ parameter_list|,
 name|TokenRequirements
 name|tokenRequirements
 parameter_list|,
-name|WebServiceContext
-name|wsContext
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|,
 name|List
 argument_list|<
@@ -2397,7 +2396,7 @@ operator|.
 name|getToken
 argument_list|()
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|)
 decl_stmt|;
 name|validateTarget
@@ -2477,7 +2476,7 @@ operator|.
 name|getToken
 argument_list|()
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|)
 decl_stmt|;
 name|cancelTarget
@@ -2557,7 +2556,7 @@ operator|.
 name|getToken
 argument_list|()
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|)
 decl_stmt|;
 name|renewTarget
@@ -2762,7 +2761,7 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Parse the UseKey structure to get a ReceivedKey containing a cert/public-key/secret-key.      * @param useKey The UseKey object      * @param wsContext The WebServiceContext object      * @return the ReceivedKey that has been parsed      * @throws STSException      */
+comment|/**      * Parse the UseKey structure to get a ReceivedKey containing a cert/public-key/secret-key.      * @param useKey The UseKey object      * @param messageContext The message context object      * @return the ReceivedKey that has been parsed      * @throws STSException      */
 end_comment
 
 begin_function
@@ -2774,8 +2773,13 @@ parameter_list|(
 name|UseKeyType
 name|useKey
 parameter_list|,
-name|WebServiceContext
-name|wsContext
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|)
 throws|throws
 name|STSException
@@ -2981,7 +2985,7 @@ name|fetchTokenElementFromReference
 argument_list|(
 name|strType
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|)
 decl_stmt|;
 try|try
@@ -3082,7 +3086,7 @@ operator|.
 name|getAny
 argument_list|()
 argument_list|,
-name|wsContext
+name|messageContext
 argument_list|)
 decl_stmt|;
 try|try
@@ -5155,8 +5159,13 @@ parameter_list|(
 name|Object
 name|targetToken
 parameter_list|,
-name|WebServiceContext
-name|wsContext
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|messageContext
 parameter_list|)
 block|{
 comment|// Get the reference URI
@@ -5371,14 +5380,6 @@ argument_list|(
 name|referenceURI
 argument_list|)
 expr_stmt|;
-name|MessageContext
-name|messageContext
-init|=
-name|wsContext
-operator|.
-name|getMessageContext
-argument_list|()
-decl_stmt|;
 specifier|final
 name|List
 argument_list|<
