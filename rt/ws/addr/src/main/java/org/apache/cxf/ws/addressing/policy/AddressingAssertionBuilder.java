@@ -464,20 +464,18 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|MetadataConstants
-operator|.
-name|ADDRESSING_ASSERTION_QNAME
-operator|.
-name|equals
-argument_list|(
+operator|(
 name|nap
-operator|.
-name|getName
-argument_list|()
-argument_list|)
+operator|instanceof
+name|PolicyContainingPrimitiveAssertion
+operator|||
+name|nap
+operator|instanceof
+name|PrimitiveAssertion
+operator|)
 condition|)
 block|{
-comment|// this happens when neethi fails to recognize the specified addressing policy
+comment|// this happens when neethi fails to recognize the specified addressing policy element
 name|LOG
 operator|.
 name|warning
