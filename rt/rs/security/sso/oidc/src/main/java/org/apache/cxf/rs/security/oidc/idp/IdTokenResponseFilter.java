@@ -500,6 +500,8 @@ name|getIdToken
 argument_list|()
 argument_list|)
 decl_stmt|;
+comment|// if this token was refreshed then the cloned IDToken might need to have its
+comment|// issuedAt and expiry time properties adjusted if it proves to be necessary
 name|setAtHashAndNonce
 argument_list|(
 name|idToken
