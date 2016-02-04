@@ -210,7 +210,6 @@ specifier|private
 name|String
 name|value
 decl_stmt|;
-specifier|private
 name|Action
 parameter_list|(
 name|String
