@@ -803,7 +803,7 @@ operator|new
 name|JoseJwtProducer
 argument_list|()
 else|:
-literal|null
+name|idTokenHandler
 decl_stmt|;
 return|return
 name|processor
