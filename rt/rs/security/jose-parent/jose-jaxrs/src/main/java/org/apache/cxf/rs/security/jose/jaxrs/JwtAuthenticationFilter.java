@@ -257,7 +257,7 @@ name|jose
 operator|.
 name|jwt
 operator|.
-name|AbstractJoseJwtConsumer
+name|JoseJwtConsumer
 import|;
 end_import
 
@@ -329,7 +329,7 @@ specifier|public
 class|class
 name|JwtAuthenticationFilter
 extends|extends
-name|AbstractJoseJwtConsumer
+name|JoseJwtConsumer
 implements|implements
 name|ContainerRequestFilter
 block|{

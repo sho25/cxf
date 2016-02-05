@@ -227,7 +227,7 @@ name|jose
 operator|.
 name|jwt
 operator|.
-name|AbstractJoseJwtProducer
+name|JoseJwtProducer
 import|;
 end_import
 
@@ -321,7 +321,7 @@ specifier|public
 class|class
 name|JwtAuthenticationClientFilter
 extends|extends
-name|AbstractJoseJwtProducer
+name|JoseJwtProducer
 implements|implements
 name|ClientRequestFilter
 block|{

@@ -309,7 +309,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|AbstractOAuthJoseJwtConsumer
+name|AuthorizationCodeRequestFilter
 import|;
 end_import
 
@@ -329,7 +329,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|AuthorizationCodeRequestFilter
+name|OAuthJoseJwtConsumer
 import|;
 end_import
 
@@ -376,7 +376,7 @@ specifier|public
 class|class
 name|JwtRequestCodeFilter
 extends|extends
-name|AbstractOAuthJoseJwtConsumer
+name|OAuthJoseJwtConsumer
 implements|implements
 name|AuthorizationCodeRequestFilter
 block|{

@@ -177,7 +177,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|AbstractOAuthServerJoseJwtProducer
+name|AccessTokenResponseFilter
 import|;
 end_import
 
@@ -197,7 +197,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|AccessTokenResponseFilter
+name|OAuthServerJoseJwtProducer
 import|;
 end_import
 
@@ -286,7 +286,7 @@ specifier|public
 class|class
 name|IdTokenResponseFilter
 extends|extends
-name|AbstractOAuthServerJoseJwtProducer
+name|OAuthServerJoseJwtProducer
 implements|implements
 name|AccessTokenResponseFilter
 block|{

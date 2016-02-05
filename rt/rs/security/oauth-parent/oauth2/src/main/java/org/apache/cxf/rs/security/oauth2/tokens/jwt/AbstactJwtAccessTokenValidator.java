@@ -89,7 +89,7 @@ name|jose
 operator|.
 name|jwt
 operator|.
-name|AbstractJoseJwtConsumer
+name|JoseJwtConsumer
 import|;
 end_import
 
@@ -199,7 +199,7 @@ specifier|abstract
 class|class
 name|AbstactJwtAccessTokenValidator
 extends|extends
-name|AbstractJoseJwtConsumer
+name|JoseJwtConsumer
 implements|implements
 name|AccessTokenValidator
 block|{

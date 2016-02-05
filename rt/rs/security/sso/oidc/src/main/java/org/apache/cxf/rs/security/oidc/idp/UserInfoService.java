@@ -157,7 +157,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|AbstractOAuthServerJoseJwtProducer
+name|OAuthDataProvider
 import|;
 end_import
 
@@ -177,7 +177,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|OAuthDataProvider
+name|OAuthServerJoseJwtProducer
 import|;
 end_import
 
@@ -251,7 +251,7 @@ specifier|public
 class|class
 name|UserInfoService
 extends|extends
-name|AbstractOAuthServerJoseJwtProducer
+name|OAuthServerJoseJwtProducer
 block|{
 specifier|private
 name|UserInfoProvider

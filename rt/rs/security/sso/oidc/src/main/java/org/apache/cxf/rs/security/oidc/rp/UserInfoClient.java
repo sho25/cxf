@@ -196,7 +196,7 @@ specifier|public
 class|class
 name|UserInfoClient
 extends|extends
-name|AbstractTokenValidator
+name|OidcClaimsValidator
 block|{
 specifier|private
 name|boolean

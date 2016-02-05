@@ -126,7 +126,7 @@ specifier|public
 class|class
 name|IdTokenReader
 extends|extends
-name|AbstractTokenValidator
+name|OidcClaimsValidator
 block|{
 specifier|private
 name|boolean
