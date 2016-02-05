@@ -15,7 +15,7 @@ name|systest
 operator|.
 name|sts
 operator|.
-name|restunit
+name|rest
 package|;
 end_package
 
