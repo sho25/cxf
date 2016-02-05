@@ -499,10 +499,6 @@ name|create
 argument_list|(
 name|address
 argument_list|,
-literal|"alice"
-argument_list|,
-literal|"clarinet"
-argument_list|,
 name|busFile
 operator|.
 name|toString
