@@ -1423,7 +1423,7 @@ name|processRequest
 argument_list|(
 name|Action
 operator|.
-name|ISSUE
+name|issue
 argument_list|,
 name|request
 argument_list|)
@@ -1502,7 +1502,7 @@ name|action
 condition|)
 block|{
 case|case
-name|VALIDATE
+name|validate
 case|:
 return|return
 name|validate
@@ -1511,7 +1511,7 @@ name|request
 argument_list|)
 return|;
 case|case
-name|RENEW
+name|renew
 case|:
 return|return
 name|renew
@@ -1520,7 +1520,7 @@ name|request
 argument_list|)
 return|;
 case|case
-name|CANCEL
+name|cancel
 case|:
 return|return
 name|cancel
@@ -1529,7 +1529,7 @@ name|request
 argument_list|)
 return|;
 case|case
-name|ISSUE
+name|issue
 case|:
 default|default:
 return|return
