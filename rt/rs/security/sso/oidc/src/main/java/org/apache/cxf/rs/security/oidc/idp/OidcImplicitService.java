@@ -710,6 +710,8 @@ name|finalizeResponse
 argument_list|(
 name|sb
 argument_list|,
+name|client
+argument_list|,
 name|state
 argument_list|)
 return|;

@@ -374,6 +374,14 @@ argument_list|(
 name|params
 argument_list|)
 decl_stmt|;
+name|Client
+name|client
+init|=
+name|getClient
+argument_list|(
+name|params
+argument_list|)
+decl_stmt|;
 comment|// Create a UserSubject representing the end user
 name|UserSubject
 name|userSubject
@@ -381,14 +389,8 @@ init|=
 name|createUserSubject
 argument_list|(
 name|sc
-argument_list|)
-decl_stmt|;
-name|Client
+argument_list|,
 name|client
-init|=
-name|getClient
-argument_list|(
-name|params
 argument_list|)
 decl_stmt|;
 name|AccessTokenRegistration
@@ -572,6 +574,9 @@ name|createUserSubject
 parameter_list|(
 name|SecurityContext
 name|securityContext
+parameter_list|,
+name|Client
+name|client
 parameter_list|)
 block|{
 name|UserSubject
@@ -594,6 +599,8 @@ name|createUserSubject
 argument_list|(
 name|getMessageContext
 argument_list|()
+argument_list|,
+name|client
 argument_list|)
 expr_stmt|;
 if|if
