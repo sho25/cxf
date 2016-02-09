@@ -1574,6 +1574,38 @@ argument_list|,
 name|subject
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+operator|!
+name|state
+operator|.
+name|getClientId
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|CLIENT_ID
+argument_list|)
+argument_list|)
+condition|)
+block|{
+throw|throw
+name|ExceptionUtils
+operator|.
+name|toBadRequestException
+argument_list|(
+literal|null
+argument_list|,
+literal|null
+argument_list|)
+throw|;
+block|}
 block|}
 if|if
 condition|(
@@ -1587,6 +1619,20 @@ operator|=
 operator|new
 name|OAuthRedirectionState
 argument_list|()
+expr_stmt|;
+name|state
+operator|.
+name|setClientId
+argument_list|(
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|CLIENT_ID
+argument_list|)
+argument_list|)
 expr_stmt|;
 name|state
 operator|.
@@ -1616,8 +1662,6 @@ name|CLIENT_AUDIENCE
 argument_list|)
 argument_list|)
 expr_stmt|;
-comment|// or if no audience parameter is available, set the list of client
-comment|// audiences for the users to see ?
 name|state
 operator|.
 name|setProposedScope
@@ -1776,6 +1820,8 @@ argument_list|(
 name|params
 argument_list|)
 decl_stmt|;
+comment|// Client id may also be preserved in a session but it must be set
+comment|// as a authorization form parameter
 name|Client
 name|client
 init|=

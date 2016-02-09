@@ -49,6 +49,10 @@ literal|661649302262699347L
 decl_stmt|;
 specifier|private
 name|String
+name|clientId
+decl_stmt|;
+specifier|private
+name|String
 name|redirectUri
 decl_stmt|;
 specifier|private
@@ -79,6 +83,32 @@ specifier|public
 name|OAuthRedirectionState
 parameter_list|()
 block|{     }
+comment|/**      * Sets the client id which needs to be retained in a hidden form field      * @param clientId the client id      */
+specifier|public
+name|void
+name|setClientId
+parameter_list|(
+name|String
+name|clientId
+parameter_list|)
+block|{
+name|this
+operator|.
+name|clientId
+operator|=
+name|clientId
+expr_stmt|;
+block|}
+comment|/**      * Gets the client id which needs to be retained in a hidden form field      * @return the client id      */
+specifier|public
+name|String
+name|getClientId
+parameter_list|()
+block|{
+return|return
+name|clientId
+return|;
+block|}
 comment|/**      * Sets the redirect uri which needs to be retained in a hidden form field      * @param redirectUri the redirect uri      */
 specifier|public
 name|void
