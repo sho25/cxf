@@ -500,6 +500,32 @@ name|getIdToken
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|idToken
+operator|.
+name|setAudience
+argument_list|(
+name|st
+operator|.
+name|getClient
+argument_list|()
+operator|.
+name|getClientId
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|idToken
+operator|.
+name|setAuthorizedParty
+argument_list|(
+name|st
+operator|.
+name|getClient
+argument_list|()
+operator|.
+name|getClientId
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// if this token was refreshed then the cloned IDToken might need to have its
 comment|// issuedAt and expiry time properties adjusted if it proves to be necessary
 name|setAtHashAndNonce

@@ -799,8 +799,6 @@ name|finalizeResponse
 argument_list|(
 name|sb
 argument_list|,
-name|client
-argument_list|,
 name|state
 argument_list|)
 return|;
@@ -811,9 +809,6 @@ name|finalizeResponse
 parameter_list|(
 name|StringBuilder
 name|sb
-parameter_list|,
-name|Client
-name|client
 parameter_list|,
 name|OAuthRedirectionState
 name|state
@@ -885,7 +880,7 @@ argument_list|)
 operator|.
 name|append
 argument_list|(
-name|client
+name|state
 operator|.
 name|getClientId
 argument_list|()

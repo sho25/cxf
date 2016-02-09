@@ -67,26 +67,6 @@ name|oauth2
 operator|.
 name|common
 operator|.
-name|Client
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|rs
-operator|.
-name|security
-operator|.
-name|oauth2
-operator|.
-name|common
-operator|.
 name|UserSubject
 import|;
 end_import
@@ -100,15 +80,12 @@ specifier|public
 interface|interface
 name|SubjectCreator
 block|{
-comment|/**      * Create a {@link UserSubject}       * @param mc the {@link MessageContext} of this request      * @param client the client      * @param params the request parameters      * @return {@link UserSubject}      * @throws OAuthServiceException      */
+comment|/**      * Create a {@link UserSubject}       * @param mc the {@link MessageContext} of this request      * @param params the request parameters      * @return {@link UserSubject}      * @throws OAuthServiceException      */
 name|UserSubject
 name|createUserSubject
 parameter_list|(
 name|MessageContext
 name|mc
-parameter_list|,
-name|Client
-name|client
 parameter_list|,
 name|MultivaluedMap
 argument_list|<

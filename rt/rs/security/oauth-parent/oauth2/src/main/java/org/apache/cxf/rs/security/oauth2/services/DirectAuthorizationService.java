@@ -390,8 +390,6 @@ name|createUserSubject
 argument_list|(
 name|sc
 argument_list|,
-name|client
-argument_list|,
 name|params
 argument_list|)
 decl_stmt|;
@@ -577,9 +575,6 @@ parameter_list|(
 name|SecurityContext
 name|securityContext
 parameter_list|,
-name|Client
-name|client
-parameter_list|,
 name|MultivaluedMap
 argument_list|<
 name|String
@@ -609,8 +604,6 @@ name|createUserSubject
 argument_list|(
 name|getMessageContext
 argument_list|()
-argument_list|,
-name|client
 argument_list|,
 name|params
 argument_list|)
