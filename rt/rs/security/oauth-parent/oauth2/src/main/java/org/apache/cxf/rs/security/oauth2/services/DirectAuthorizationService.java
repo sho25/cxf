@@ -391,6 +391,8 @@ argument_list|(
 name|sc
 argument_list|,
 name|client
+argument_list|,
+name|params
 argument_list|)
 decl_stmt|;
 name|AccessTokenRegistration
@@ -577,6 +579,14 @@ name|securityContext
 parameter_list|,
 name|Client
 name|client
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|params
 parameter_list|)
 block|{
 name|UserSubject
@@ -601,6 +611,8 @@ name|getMessageContext
 argument_list|()
 argument_list|,
 name|client
+argument_list|,
+name|params
 argument_list|)
 expr_stmt|;
 if|if
