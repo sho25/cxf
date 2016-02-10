@@ -714,13 +714,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Some unit tests for the REST interface of the CXF STS.  */
+comment|/**  * Some tests for the REST interface of the CXF STS.  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|RESTUnitTest
+name|STSRESTTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -857,7 +857,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -1073,7 +1073,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -1289,7 +1289,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -1582,7 +1582,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -1875,7 +1875,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -2150,7 +2150,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -2375,7 +2375,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -2527,7 +2527,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -2957,7 +2957,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -3094,7 +3094,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -3324,7 +3324,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -3563,7 +3563,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -3802,7 +3802,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -4222,7 +4222,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -4623,7 +4623,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -4761,7 +4761,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
@@ -4908,7 +4908,7 @@ decl_stmt|;
 name|URL
 name|busFile
 init|=
-name|RESTUnitTest
+name|STSRESTTest
 operator|.
 name|class
 operator|.
