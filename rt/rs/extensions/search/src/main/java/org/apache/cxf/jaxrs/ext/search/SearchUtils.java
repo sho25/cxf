@@ -261,7 +261,7 @@ specifier|public
 specifier|static
 specifier|final
 name|String
-name|ESCAPE_UNDESCORE_CHAR
+name|ESCAPE_UNDERSCORE_CHAR
 init|=
 literal|"search.escape.underscore.char"
 decl_stmt|;
@@ -345,7 +345,7 @@ name|getContextualBoolean
 argument_list|(
 name|m
 argument_list|,
-name|ESCAPE_UNDESCORE_CHAR
+name|ESCAPE_UNDERSCORE_CHAR
 argument_list|,
 literal|true
 argument_list|)
