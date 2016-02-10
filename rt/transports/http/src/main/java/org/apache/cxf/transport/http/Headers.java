@@ -964,7 +964,7 @@ name|headers
 operator|.
 name|put
 argument_list|(
-literal|"BrowserType"
+literal|"User-Agent"
 argument_list|,
 name|createMutableList
 argument_list|(
