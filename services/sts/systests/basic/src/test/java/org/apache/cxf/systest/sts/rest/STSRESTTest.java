@@ -3000,7 +3000,7 @@ literal|"https://localhost:"
 operator|+
 name|STSPORT
 operator|+
-literal|"/SecurityTokenService/token/ws-trust"
+literal|"/SecurityTokenService/token"
 decl_stmt|;
 name|WebClient
 name|client
@@ -3034,6 +3034,15 @@ operator|.
 name|path
 argument_list|(
 literal|"saml2.0"
+argument_list|)
+expr_stmt|;
+name|client
+operator|.
+name|query
+argument_list|(
+literal|"wstrustResponse"
+argument_list|,
+literal|"true"
 argument_list|)
 expr_stmt|;
 name|Response
