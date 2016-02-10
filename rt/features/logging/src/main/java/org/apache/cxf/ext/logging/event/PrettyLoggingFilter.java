@@ -337,6 +337,16 @@ argument_list|,
 literal|2
 argument_list|)
 expr_stmt|;
+name|encoding
+operator|=
+name|encoding
+operator|==
+literal|null
+condition|?
+literal|"UTF-8"
+else|:
+name|encoding
+expr_stmt|;
 name|InputStream
 name|in
 init|=
