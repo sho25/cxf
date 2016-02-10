@@ -920,8 +920,7 @@ block|{
 name|Message
 name|m
 init|=
-operator|new
-name|MessageImpl
+name|createMessage
 argument_list|()
 decl_stmt|;
 name|MessageContext
@@ -1019,8 +1018,7 @@ block|{
 name|Message
 name|m
 init|=
-operator|new
-name|MessageImpl
+name|createMessage
 argument_list|()
 decl_stmt|;
 name|MessageContext
@@ -1123,8 +1121,7 @@ block|{
 name|Message
 name|m
 init|=
-operator|new
-name|MessageImpl
+name|createMessage
 argument_list|()
 decl_stmt|;
 name|MessageContext
@@ -1206,8 +1203,7 @@ block|{
 name|Message
 name|m
 init|=
-operator|new
-name|MessageImpl
+name|createMessage
 argument_list|()
 decl_stmt|;
 name|MessageContext

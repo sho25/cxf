@@ -13338,8 +13338,7 @@ expr_stmt|;
 name|Message
 name|m
 init|=
-operator|new
-name|MessageImpl
+name|createMessage
 argument_list|()
 decl_stmt|;
 name|m
