@@ -67,17 +67,17 @@ name|oidc
 operator|.
 name|common
 operator|.
-name|UserInfo
+name|IdToken
 import|;
 end_import
 
 begin_interface
 specifier|public
 interface|interface
-name|UserInfoProvider
+name|IdTokenProvider
 block|{
-name|UserInfo
-name|getUserInfo
+name|IdToken
+name|getIdToken
 parameter_list|(
 name|String
 name|clientId
