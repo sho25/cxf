@@ -176,6 +176,10 @@ name|userInput
 init|=
 literal|null
 decl_stmt|;
+comment|// Receiver is meant to be serializable, but it would be
+comment|// great if if we could avoid copying InputStream
+comment|// TODO: submit Spark enhancement request so that it can keep streaming from
+comment|// the incoming InputStream to its processing nodes ?
 while|while
 condition|(
 operator|(

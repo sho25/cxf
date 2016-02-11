@@ -454,6 +454,8 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+comment|// This dedicated class was introduced to validate that when Spark is running it does not
+comment|// fail the processing due to OutputStream being one of the fields in the serializable class,
 specifier|private
 class|class
 name|OutputFunction
@@ -578,6 +580,8 @@ argument_list|()
 throw|;
 block|}
 block|}
+comment|// Right now we assume by the time we call it the batch the whole InputStream has been
+comment|// processed
 name|releaseStreamingContext
 argument_list|()
 expr_stmt|;
@@ -599,6 +603,9 @@ name|StreamingListenerBatchCompleted
 name|event
 parameter_list|)
 block|{
+comment|// as soon as the batch is finished we let the streaming context go
+comment|// but this may need to be revisited if a given InputStream happens to be processed in
+comment|// multiple batches ?
 name|setBatchCompleted
 argument_list|()
 expr_stmt|;
