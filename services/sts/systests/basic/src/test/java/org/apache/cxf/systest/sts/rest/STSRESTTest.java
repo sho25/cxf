@@ -5903,12 +5903,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testValidateJWTAndIssueSAML
@@ -6306,8 +6300,43 @@ expr_stmt|;
 end_expr_stmt
 
 begin_comment
-comment|/*         // Check the token was valid         String validCode = "http://docs.oasis-open.org/ws-sx/ws-trust/200512/status/valid";         assertEquals(validCode, status.getCode());                  // Check the token         RequestedSecurityTokenType requestedSecurityToken = getRequestedSecurityToken(securityResponse);         assertNotNull(requestedSecurityToken);                  String token = ((Element)requestedSecurityToken.getAny()).getTextContent();         assertNotNull(token);                  validateJWTToken(token, null);         */
+comment|// Check the token was valid
 end_comment
+
+begin_decl_stmt
+name|String
+name|validCode
+init|=
+literal|"http://docs.oasis-open.org/ws-sx/ws-trust/200512/status/valid"
+decl_stmt|;
+end_decl_stmt
+
+begin_expr_stmt
+name|assertEquals
+argument_list|(
+name|validCode
+argument_list|,
+name|status
+operator|.
+name|getCode
+argument_list|()
+argument_list|)
+expr_stmt|;
+end_expr_stmt
+
+begin_comment
+comment|// Check the token
+end_comment
+
+begin_expr_stmt
+name|validateSAMLSecurityTokenResponse
+argument_list|(
+name|securityResponse
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
+end_expr_stmt
 
 begin_expr_stmt
 name|bus
