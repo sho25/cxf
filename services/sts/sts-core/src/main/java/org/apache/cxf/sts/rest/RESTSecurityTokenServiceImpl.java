@@ -1594,6 +1594,11 @@ condition|(
 name|requestedClaims
 operator|==
 literal|null
+operator|||
+name|requestedClaims
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|requestedClaims
@@ -1606,6 +1611,12 @@ condition|(
 name|requestedClaims
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|requestedClaims
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|ClaimsType
@@ -2540,6 +2551,11 @@ operator|=
 name|token
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"unused"
+argument_list|)
 specifier|public
 name|String
 name|getToken
