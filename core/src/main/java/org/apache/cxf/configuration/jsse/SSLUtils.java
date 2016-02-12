@@ -512,19 +512,14 @@ comment|//TODO for performance reasons we should cache
 comment|// the KeymanagerFactory and TrustManagerFactory
 if|if
 condition|(
-operator|(
 name|keyStorePassword
 operator|!=
 literal|null
-operator|)
 operator|&&
-operator|(
 name|keyPassword
 operator|!=
 literal|null
-operator|)
 operator|&&
-operator|(
 operator|!
 name|keyStorePassword
 operator|.
@@ -532,7 +527,6 @@ name|equals
 argument_list|(
 name|keyPassword
 argument_list|)
-operator|)
 condition|)
 block|{
 name|LogUtils
@@ -609,6 +603,8 @@ argument_list|(
 name|path
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|ByteArrayInputStream
 name|bin
 init|=
@@ -617,7 +613,8 @@ name|ByteArrayInputStream
 argument_list|(
 name|bytes
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 if|if
 condition|(
 name|keyStorePassword
@@ -642,6 +639,7 @@ argument_list|,
 name|log
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 else|else
@@ -672,6 +670,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+init|(
 name|ByteArrayInputStream
 name|bin
 init|=
@@ -680,7 +680,8 @@ name|ByteArrayInputStream
 argument_list|(
 name|sslCert
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|keystoreManagers
 operator|=
 name|loadKeyStore
@@ -700,19 +701,16 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
 if|if
 condition|(
-operator|(
 name|keyStorePassword
 operator|==
 literal|null
-operator|)
 operator|&&
-operator|(
 name|keyStoreLocation
 operator|!=
 literal|null
-operator|)
 condition|)
 block|{
 name|LogUtils
@@ -1224,6 +1222,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+init|(
 name|ByteArrayInputStream
 name|cabin
 init|=
@@ -1232,7 +1232,8 @@ name|ByteArrayInputStream
 argument_list|(
 name|caCert
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|X509Certificate
 name|cert
 init|=
@@ -1261,11 +1262,7 @@ argument_list|,
 name|cert
 argument_list|)
 expr_stmt|;
-name|cabin
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 block|}
 catch|catch
