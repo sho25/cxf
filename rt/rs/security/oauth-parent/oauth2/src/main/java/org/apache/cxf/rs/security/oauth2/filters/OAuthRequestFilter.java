@@ -1219,6 +1219,16 @@ argument_list|(
 name|authParts
 argument_list|)
 expr_stmt|;
+name|oauthContext
+operator|.
+name|setTokenExtraProperties
+argument_list|(
+name|accessTokenV
+operator|.
+name|getExtraProps
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|m
 operator|.
 name|setContent
