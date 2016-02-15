@@ -15,7 +15,7 @@ name|systest
 operator|.
 name|sts
 operator|.
-name|x509_symmetric
+name|x509
 package|;
 end_package
 

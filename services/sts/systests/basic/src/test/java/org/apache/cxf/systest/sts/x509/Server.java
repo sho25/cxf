@@ -15,7 +15,7 @@ name|systest
 operator|.
 name|sts
 operator|.
-name|x509_symmetric
+name|x509
 package|;
 end_package
 
@@ -88,12 +88,12 @@ end_import
 begin_class
 specifier|public
 class|class
-name|StaxServer
+name|Server
 extends|extends
 name|AbstractBusTestServerBase
 block|{
 specifier|public
-name|StaxServer
+name|Server
 parameter_list|()
 block|{      }
 specifier|protected
@@ -104,13 +104,13 @@ block|{
 name|URL
 name|busFile
 init|=
-name|StaxServer
+name|Server
 operator|.
 name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"cxf-stax-service.xml"
+literal|"cxf-service.xml"
 argument_list|)
 decl_stmt|;
 name|Bus
@@ -140,7 +140,7 @@ expr_stmt|;
 try|try
 block|{
 operator|new
-name|StaxServer
+name|Server
 argument_list|()
 expr_stmt|;
 block|}
@@ -168,7 +168,7 @@ index|[]
 parameter_list|)
 block|{
 operator|new
-name|StaxServer
+name|Server
 argument_list|()
 operator|.
 name|run
