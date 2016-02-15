@@ -970,6 +970,17 @@ operator|.
 name|getPrincipal
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|claimHandlers
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+name|returnCollection
+return|;
+block|}
 for|for
 control|(
 name|ClaimsHandler
