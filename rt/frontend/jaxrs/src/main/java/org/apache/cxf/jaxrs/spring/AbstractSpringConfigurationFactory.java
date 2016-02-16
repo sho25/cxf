@@ -312,7 +312,7 @@ name|emptyList
 argument_list|()
 return|;
 block|}
-specifier|protected
+specifier|public
 name|List
 argument_list|<
 name|Feature
