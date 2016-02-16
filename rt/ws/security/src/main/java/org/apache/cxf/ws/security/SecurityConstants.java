@@ -362,6 +362,15 @@ name|DELEGATED_CREDENTIAL
 init|=
 literal|"ws-security.delegated.credential"
 decl_stmt|;
+comment|/**      * A WSS4JSecurityContextCreator implementation that is used to create a CXF SecurityContext      * from the set of WSS4J processing results. The default implementation is the      * DefaultWSS4JSecurityContextCreator. This configuration tag allows the user to plug in      * a custom way of setting up the CXF SecurityContext.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SECURITY_CONTEXT_CREATOR
+init|=
+literal|"ws-security.security.context.creator"
+decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
 comment|//
@@ -637,6 +646,8 @@ block|,
 name|USE_ATTACHMENT_ENCRYPTION_CONTENT_ONLY_TRANSFORM
 block|,
 name|SYMMETRIC_SIGNATURE_ALGORITHM
+block|,
+name|SECURITY_CONTEXT_CREATOR
 block|}
 argument_list|)
 argument_list|)
