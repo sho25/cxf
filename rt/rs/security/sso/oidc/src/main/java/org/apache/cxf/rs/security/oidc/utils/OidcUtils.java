@@ -443,7 +443,7 @@ specifier|final
 name|String
 name|CLAIM_NAMES_PROPERTY
 init|=
-literal|"_claims_names"
+literal|"_claim_names"
 decl_stmt|;
 specifier|public
 specifier|static
@@ -451,7 +451,7 @@ specifier|final
 name|String
 name|CLAIM_SOURCES_PROPERTY
 init|=
-literal|"_claims_sources"
+literal|"_claim_sources"
 decl_stmt|;
 specifier|public
 specifier|static
