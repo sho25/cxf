@@ -39,9 +39,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|interfaces
-operator|.
-name|RSAPrivateKey
+name|PrivateKey
 import|;
 end_import
 
@@ -200,7 +198,7 @@ specifier|public
 name|JwtToken
 name|decryptWith
 parameter_list|(
-name|RSAPrivateKey
+name|PrivateKey
 name|key
 parameter_list|)
 block|{
