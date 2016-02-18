@@ -443,10 +443,12 @@ block|}
 try|try
 block|{
 return|return
-name|cls
+name|ReflectionUtil
 operator|.
 name|getDeclaredField
 argument_list|(
+name|cls
+argument_list|,
 name|name
 argument_list|)
 return|;
