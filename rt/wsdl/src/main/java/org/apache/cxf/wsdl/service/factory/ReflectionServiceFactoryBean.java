@@ -8449,6 +8449,12 @@ argument_list|(
 name|el
 argument_list|)
 expr_stmt|;
+name|boolean
+name|anonymousType
+init|=
+name|isAnonymousWrapperTypes
+argument_list|()
+decl_stmt|;
 name|XmlSchemaComplexType
 name|ct
 init|=
@@ -8457,14 +8463,15 @@ name|XmlSchemaComplexType
 argument_list|(
 name|schema
 argument_list|,
-literal|true
+comment|/*CXF-6783: don't create anonymous top-level types*/
+operator|!
+name|anonymousType
 argument_list|)
 decl_stmt|;
 if|if
 condition|(
 operator|!
-name|isAnonymousWrapperTypes
-argument_list|()
+name|anonymousType
 condition|)
 block|{
 name|ct
