@@ -878,6 +878,23 @@ name|address
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|destinationFactory
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+literal|"Could not find destination factory for transport "
+operator|+
+name|transId
+argument_list|)
+throw|;
+block|}
 return|return
 name|destinationFactory
 operator|.
