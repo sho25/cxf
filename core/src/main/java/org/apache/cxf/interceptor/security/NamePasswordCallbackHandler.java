@@ -450,7 +450,7 @@ argument_list|)
 decl_stmt|;
 name|LOG
 operator|.
-name|severe
+name|info
 argument_list|(
 name|errorMsg
 operator|.
