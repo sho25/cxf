@@ -240,6 +240,13 @@ operator|.
 name|junit
 operator|.
 name|Test
+argument_list|(
+name|expected
+operator|=
+name|RuntimeException
+operator|.
+name|class
+argument_list|)
 specifier|public
 name|void
 name|testBadBasicAuth
@@ -263,6 +270,13 @@ operator|.
 name|junit
 operator|.
 name|Test
+argument_list|(
+name|expected
+operator|=
+name|RuntimeException
+operator|.
+name|class
+argument_list|)
 specifier|public
 name|void
 name|testNoBasicAuth
