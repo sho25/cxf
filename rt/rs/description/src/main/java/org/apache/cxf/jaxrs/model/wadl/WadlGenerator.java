@@ -2907,7 +2907,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|String
 name|getBaseURI
 parameter_list|(
