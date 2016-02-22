@@ -1738,6 +1738,11 @@ argument_list|()
 expr_stmt|;
 block|}
 annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+annotation|@
 name|Test
 specifier|public
 name|void
@@ -1826,6 +1831,15 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+block|{
+literal|"unchecked"
+block|,
+literal|"rawtypes"
+block|}
+argument_list|)
 specifier|private
 specifier|static
 parameter_list|<
