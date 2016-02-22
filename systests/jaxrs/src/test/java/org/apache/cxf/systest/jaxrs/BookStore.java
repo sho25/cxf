@@ -3158,7 +3158,7 @@ argument_list|)
 annotation|@
 name|Produces
 argument_list|(
-literal|"text/plain"
+literal|"text/plain,text/boolean"
 argument_list|)
 specifier|public
 name|boolean
