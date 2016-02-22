@@ -1155,6 +1155,13 @@ argument_list|)
 expr_stmt|;
 name|socket
 operator|.
+name|setLoopbackMode
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+name|socket
+operator|.
 name|bind
 argument_list|(
 operator|new
