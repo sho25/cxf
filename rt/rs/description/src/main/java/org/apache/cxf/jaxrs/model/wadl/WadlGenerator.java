@@ -1907,6 +1907,15 @@ operator|.
 name|getCurrentMessage
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|m
+operator|==
+literal|null
+condition|)
+block|{
+return|return;
+block|}
 name|doFilter
 argument_list|(
 name|context
