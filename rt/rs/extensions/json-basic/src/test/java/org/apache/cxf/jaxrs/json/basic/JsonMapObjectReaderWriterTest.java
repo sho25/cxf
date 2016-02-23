@@ -166,7 +166,7 @@ block|{
 name|String
 name|json
 init|=
-literal|"{\"a\":\"aValue\",\"b\":123,\"c\":[\"cValue\"]}"
+literal|"{\"a\":\"aValue\",\"b\":123,\"c\":[\"cValue\"],\"f\":null}"
 decl_stmt|;
 name|Map
 argument_list|<
@@ -187,7 +187,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|3
+literal|4
 argument_list|,
 name|map
 operator|.
@@ -233,6 +233,16 @@ operator|.
 name|get
 argument_list|(
 literal|"c"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertNull
+argument_list|(
+name|map
+operator|.
+name|get
+argument_list|(
+literal|"f"
 argument_list|)
 argument_list|)
 expr_stmt|;
