@@ -468,8 +468,7 @@ name|StringUtils
 operator|.
 name|isEmpty
 argument_list|(
-name|getResourcePackage
-argument_list|()
+name|sharedPackage
 argument_list|)
 condition|)
 block|{

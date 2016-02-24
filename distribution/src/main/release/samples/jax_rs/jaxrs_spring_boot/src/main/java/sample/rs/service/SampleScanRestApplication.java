@@ -220,13 +220,7 @@ operator|new
 name|Swagger2Feature
 argument_list|()
 decl_stmt|;
-name|feature
-operator|.
-name|setRunAsFilter
-argument_list|(
-literal|true
-argument_list|)
-expr_stmt|;
+comment|//feature.setRunAsFilter(true);
 return|return
 name|feature
 return|;
