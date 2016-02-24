@@ -113,7 +113,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|>
 name|claims
 parameter_list|)
@@ -131,7 +131,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|>
 name|getIdTokenClaims
 parameter_list|()
@@ -151,7 +151,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|>
 name|claims
 parameter_list|)
@@ -169,7 +169,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|>
 name|getClaims
 parameter_list|(
@@ -237,7 +237,7 @@ operator|.
 name|next
 argument_list|()
 operator|instanceof
-name|ClaimPreference
+name|ClaimRequirement
 condition|)
 block|{
 return|return
@@ -261,7 +261,7 @@ name|Map
 argument_list|<
 name|String
 argument_list|,
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|>
 name|claims
 init|=
@@ -270,7 +270,7 @@ name|LinkedHashMap
 argument_list|<
 name|String
 argument_list|,
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -325,11 +325,11 @@ name|entrySet
 argument_list|()
 control|)
 block|{
-name|ClaimPreference
+name|ClaimRequirement
 name|pref
 init|=
 operator|new
-name|ClaimPreference
+name|ClaimRequirement
 argument_list|()
 decl_stmt|;
 name|Object
@@ -342,7 +342,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|ClaimPreference
+name|ClaimRequirement
 operator|.
 name|ESSENTIAL_PROPERTY
 argument_list|)
@@ -358,7 +358,7 @@ name|pref
 operator|.
 name|setProperty
 argument_list|(
-name|ClaimPreference
+name|ClaimRequirement
 operator|.
 name|ESSENTIAL_PROPERTY
 argument_list|,
@@ -376,7 +376,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|ClaimPreference
+name|ClaimRequirement
 operator|.
 name|VALUE_PROPERTY
 argument_list|)
@@ -392,7 +392,7 @@ name|pref
 operator|.
 name|setProperty
 argument_list|(
-name|ClaimPreference
+name|ClaimRequirement
 operator|.
 name|VALUE_PROPERTY
 argument_list|,
@@ -410,7 +410,7 @@ argument_list|()
 operator|.
 name|get
 argument_list|(
-name|ClaimPreference
+name|ClaimRequirement
 operator|.
 name|VALUES_PROPERTY
 argument_list|)
@@ -426,7 +426,7 @@ name|pref
 operator|.
 name|setProperty
 argument_list|(
-name|ClaimPreference
+name|ClaimRequirement
 operator|.
 name|VALUES_PROPERTY
 argument_list|,

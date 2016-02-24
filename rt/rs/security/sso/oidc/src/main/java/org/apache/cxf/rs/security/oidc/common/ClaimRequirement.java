@@ -66,7 +66,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ClaimPreference
+name|ClaimRequirement
 extends|extends
 name|JsonMapObject
 block|{
