@@ -10,6 +10,8 @@ operator|.
 name|rs
 operator|.
 name|service
+operator|.
+name|hello2
 package|;
 end_package
 
@@ -103,18 +105,18 @@ begin_class
 annotation|@
 name|Path
 argument_list|(
-literal|"/sayHello"
+literal|"/sayHello2"
 argument_list|)
 annotation|@
 name|Service
 annotation|@
 name|Api
 argument_list|(
-literal|"/sayHello"
+literal|"/sayHello2"
 argument_list|)
 specifier|public
 class|class
-name|HelloService
+name|HelloService2
 block|{
 annotation|@
 name|GET
@@ -144,7 +146,7 @@ name|a
 parameter_list|)
 block|{
 return|return
-literal|"Hello "
+literal|"Hello2 "
 operator|+
 name|a
 operator|+

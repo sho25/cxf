@@ -213,16 +213,10 @@ parameter_list|)
 block|{
 comment|// Or create a simple Swagger2Feature @Component-annotated extension
 comment|// and drop this method if a default feature setup is OK
-name|Swagger2Feature
-name|feature
-init|=
+return|return
 operator|new
 name|Swagger2Feature
 argument_list|()
-decl_stmt|;
-comment|//feature.setRunAsFilter(true);
-return|return
-name|feature
 return|;
 block|}
 block|}

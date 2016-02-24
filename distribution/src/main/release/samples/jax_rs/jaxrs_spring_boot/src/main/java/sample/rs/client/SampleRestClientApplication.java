@@ -37,6 +37,8 @@ name|rs
 operator|.
 name|service
 operator|.
+name|hello1
+operator|.
 name|HelloService
 import|;
 end_import
