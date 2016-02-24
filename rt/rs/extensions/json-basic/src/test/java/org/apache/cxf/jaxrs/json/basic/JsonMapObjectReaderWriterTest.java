@@ -134,6 +134,15 @@ literal|"cValue"
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|map
+operator|.
+name|put
+argument_list|(
+literal|"claim"
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
 name|String
 name|json
 init|=
@@ -148,7 +157,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"{\"a\":\"aValue\",\"b\":123,\"c\":[\"cValue\"]}"
+literal|"{\"a\":\"aValue\",\"b\":123,\"c\":[\"cValue\"],\"claim\":null}"
 argument_list|,
 name|json
 argument_list|)
