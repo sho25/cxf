@@ -243,6 +243,7 @@ name|build
 argument_list|()
 argument_list|)
 expr_stmt|;
+return|return;
 block|}
 try|try
 block|{
