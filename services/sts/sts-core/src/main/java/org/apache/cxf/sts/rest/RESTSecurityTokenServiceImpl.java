@@ -2537,7 +2537,6 @@ specifier|private
 name|String
 name|token
 decl_stmt|;
-specifier|public
 name|JSONWrapper
 parameter_list|(
 name|String
