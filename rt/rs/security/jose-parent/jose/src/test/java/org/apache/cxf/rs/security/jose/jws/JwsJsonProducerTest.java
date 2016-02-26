@@ -168,11 +168,11 @@ name|UNSIGNED_PLAIN_DOCUMENT
 operator|+
 literal|"\","
 operator|+
-literal|"\"protected\":\"eyJhbGciOiJIUzI1NiIsImI2NCI6ZmFsc2V9\","
+literal|"\"protected\":\"eyJhbGciOiJIUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19\","
 operator|+
 literal|"\"signature\":"
 operator|+
-literal|"\"GsyM6AQJbQHY8aQKCbZSPJHzMRWo3HKIlcDuXof7nqs\"}"
+literal|"\"A5dxf2s96_n5FLueVuW1Z_vh161FwXZC4YLPff6dmDY\"}"
 decl_stmt|;
 specifier|public
 specifier|static
