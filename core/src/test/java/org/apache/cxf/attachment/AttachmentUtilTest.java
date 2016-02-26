@@ -222,6 +222,26 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testContendDispositionFileNameNoRfc5987
+parameter_list|()
+block|{
+name|assertEquals
+argument_list|(
+literal|"демо-сервис.zip"
+argument_list|,
+name|AttachmentUtil
+operator|.
+name|getContentDispositionFileName
+argument_list|(
+literal|"filename=\"&#1076;&#1077;&#1084;&#1086;-&#1089;&#1077;&#1088;&#1074;&#1080;&#1089;.zip\""
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
