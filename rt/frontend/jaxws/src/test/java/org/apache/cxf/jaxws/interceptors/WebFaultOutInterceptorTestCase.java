@@ -322,7 +322,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test case for https://bugzilla.redhat.com/show_bug.cgi?id=1177704  *  * Scenario:  *  * Let WebFaultOutInterceptor process a message containing a SoapFault.  *  * If SoapFault's exception or its' cause is instance of SOAPFaultException, values of SOAPFaultException.subCodes  * should be copied to SoapFault.subCodes.  *  * @author Tomas Hofman (thofman@redhat.com)  */
+comment|/**  * Let WebFaultOutInterceptor process a message containing a SoapFault.  *  * If SoapFault's exception or its' cause is instance of SOAPFaultException, values of SOAPFaultException.subCodes  * should be copied to SoapFault.subCodes.  */
 end_comment
 
 begin_class
@@ -362,6 +362,9 @@ specifier|private
 specifier|static
 specifier|final
 name|List
+argument_list|<
+name|QName
+argument_list|>
 name|SUBCODES
 init|=
 name|Collections
@@ -808,6 +811,12 @@ return|return
 name|message
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
+comment|// old SAAJ API doesn't have generics
 specifier|private
 class|class
 name|SOAPFaultStub
@@ -876,6 +885,9 @@ annotation|@
 name|Override
 specifier|public
 name|Iterator
+argument_list|<
+name|QName
+argument_list|>
 name|getFaultSubcodes
 parameter_list|()
 block|{
