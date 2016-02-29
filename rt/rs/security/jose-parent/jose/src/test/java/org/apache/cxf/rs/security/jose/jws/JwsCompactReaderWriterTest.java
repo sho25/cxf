@@ -372,7 +372,7 @@ specifier|final
 name|String
 name|TOKEN_WITH_DETACHED_UNENCODED_PAYLOAD
 init|=
-literal|"eyJhbGciOiJIUzI1NiIsImI2NCI6ZmFsc2V9..GsyM6AQJbQHY8aQKCbZSPJHzMRWo3HKIlcDuXof7nqs"
+literal|"eyJhbGciOiJIUzI1NiIsImI2NCI6ZmFsc2UsImNyaXQiOlsiYjY0Il19..A5dxf2s96_n5FLueVuW1Z_vh161FwXZC4YLPff6dmDY"
 decl_stmt|;
 specifier|public
 specifier|static
