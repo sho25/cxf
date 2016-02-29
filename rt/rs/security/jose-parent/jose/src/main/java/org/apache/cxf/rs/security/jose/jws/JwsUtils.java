@@ -2693,7 +2693,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-specifier|public
+specifier|private
 specifier|static
 name|JwsSignatureVerifier
 name|loadSignatureVerifier
