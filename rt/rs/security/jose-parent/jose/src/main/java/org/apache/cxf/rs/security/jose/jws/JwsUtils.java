@@ -2235,7 +2235,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-specifier|public
+specifier|private
 specifier|static
 name|JwsSignatureProvider
 name|loadSignatureProvider

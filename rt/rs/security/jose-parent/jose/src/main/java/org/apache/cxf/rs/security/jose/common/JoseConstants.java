@@ -375,30 +375,36 @@ name|RSSEC_SIGNATURE_PROPS
 init|=
 literal|"rs.security.signature.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for JSON Serialization signature creation. If not specified then it       * falls back to RSSEC_SIGNATURE_LIST_PROPS.      */
+comment|/**      * The OLD signature properties file for JSON Serialization signature creation.       * If not specified then it falls back to RSSEC_SIGNATURE_LIST_PROPS.      * Use RSSEC_SIGNATURE_OUT_PROPS instead      */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_OUT_LIST_PROPS
+name|DEP_RSSEC_SIGNATURE_OUT_LIST_PROPS
 init|=
 literal|"rs.security.signature.out.list.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for JSON Serialization signature verification. If not specified then it       * falls back to RSSEC_SIGNATURE_LIST_PROPS.      */
+comment|/**      * The OLD signature properties file for JSON Serialization signature verification.       * If not specified then it falls back to RSSEC_SIGNATURE_LIST_PROPS.      * Use RSSEC_SIGNATURE_IN_PROPS instead      */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_IN_LIST_PROPS
+name|DEP_RSSEC_SIGNATURE_IN_LIST_PROPS
 init|=
 literal|"rs.security.signature.in.list.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for JSON Serialization signature creation/verification.      */
+comment|/**      * The OLD signature properties file for JSON Serialization signature creation/verification.      * Use RSSEC_SIGNATURE_PROPS instead      */
+annotation|@
+name|Deprecated
 specifier|public
 specifier|static
 specifier|final
 name|String
-name|RSSEC_SIGNATURE_LIST_PROPS
+name|DEP_RSSEC_SIGNATURE_LIST_PROPS
 init|=
 literal|"rs.security.signature.list.properties"
 decl_stmt|;
