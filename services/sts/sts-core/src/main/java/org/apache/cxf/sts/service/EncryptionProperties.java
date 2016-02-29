@@ -74,7 +74,7 @@ name|keyWrapAlgorithm
 init|=
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSAOEP
+name|KEYTRANSPORT_RSAOAEP
 decl_stmt|;
 specifier|private
 name|int
@@ -196,7 +196,7 @@ name|add
 argument_list|(
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSAOEP
+name|KEYTRANSPORT_RSAOAEP
 argument_list|)
 expr_stmt|;
 block|}
