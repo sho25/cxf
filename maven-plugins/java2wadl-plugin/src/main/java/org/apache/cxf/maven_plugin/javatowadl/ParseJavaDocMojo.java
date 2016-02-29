@@ -264,7 +264,7 @@ name|ParseJavaDocMojo
 extends|extends
 name|AbstractMojo
 block|{
-comment|/**      * The source encoding.      *       * @parameter defaultValue = "${project.build.sourceEncoding}"      * @required      */
+comment|/**      * The source encoding.      *       * @parameter defaultValue = "${project.build.sourceEncoding}"      */
 specifier|private
 name|String
 name|encoding
