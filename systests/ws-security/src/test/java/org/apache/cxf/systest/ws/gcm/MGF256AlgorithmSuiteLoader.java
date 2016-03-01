@@ -499,7 +499,7 @@ name|KW_AES256
 argument_list|,
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSAOEP_XENC11
+name|KEYTRANSPORT_RSAOAEP_XENC11
 argument_list|,
 name|SPConstants
 operator|.
