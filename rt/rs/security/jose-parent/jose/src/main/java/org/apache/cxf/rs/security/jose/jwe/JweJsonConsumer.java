@@ -459,7 +459,7 @@ return|return
 name|input
 return|;
 block|}
-specifier|private
+specifier|public
 name|JweJsonEncryptionEntry
 name|getJweDecryptionEntry
 parameter_list|(
@@ -467,6 +467,8 @@ name|JweDecryptionProvider
 name|jwe
 parameter_list|)
 block|{
+comment|//TODO: support a similar method that will check per-recipient unprotected headers
+comment|// which will be needed if we have multiple entries with the same key encryption algorithm
 for|for
 control|(
 name|Map

@@ -577,7 +577,6 @@ return|return
 name|signatures
 return|;
 block|}
-comment|/*      * TODO     public MultivaluedMap<SignatureAlgorithm, JwsJsonSignatureEntry> getSignatureEntryMap() {         return JwsUtils.getJwsJsonSignatureMap(signatures);     }     */
 specifier|public
 name|String
 name|signWith
