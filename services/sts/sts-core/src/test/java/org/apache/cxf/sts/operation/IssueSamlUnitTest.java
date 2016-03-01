@@ -5336,7 +5336,7 @@ name|setKeyEncAlgo
 argument_list|(
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSAOEP
+name|KEYTRANSPORT_RSAOAEP
 argument_list|)
 expr_stmt|;
 name|Document

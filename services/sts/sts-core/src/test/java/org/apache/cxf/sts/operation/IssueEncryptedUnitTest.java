@@ -1871,7 +1871,7 @@ name|setKeyWrapAlgorithm
 argument_list|(
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSAOEP
+name|KEYTRANSPORT_RSAOAEP
 argument_list|)
 expr_stmt|;
 name|service
@@ -2348,7 +2348,7 @@ name|class
 argument_list|,
 name|WSConstants
 operator|.
-name|KEYTRANSPORT_RSAOEP
+name|KEYTRANSPORT_RSAOAEP
 argument_list|)
 decl_stmt|;
 name|request
