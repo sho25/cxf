@@ -654,10 +654,6 @@ name|JweWriterInterceptor
 argument_list|()
 argument_list|,
 operator|new
-name|JwsJsonWriterInterceptor
-argument_list|()
-argument_list|,
-operator|new
 name|JweClientResponseFilter
 argument_list|()
 argument_list|)
