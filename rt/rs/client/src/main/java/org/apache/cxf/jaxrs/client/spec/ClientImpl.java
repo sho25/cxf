@@ -855,7 +855,9 @@ block|{
 throw|throw
 operator|new
 name|IllegalStateException
-argument_list|()
+argument_list|(
+literal|"client is closed"
+argument_list|)
 throw|;
 block|}
 block|}
@@ -2048,6 +2050,9 @@ name|String
 name|path
 parameter_list|)
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|checkNull
 argument_list|(
 name|path
@@ -2080,6 +2085,9 @@ modifier|...
 name|values
 parameter_list|)
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|checkNullValues
 argument_list|(
 name|name
@@ -2160,6 +2168,9 @@ modifier|...
 name|values
 parameter_list|)
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|checkNullValues
 argument_list|(
 name|name
@@ -2266,6 +2277,9 @@ name|boolean
 name|encodeSlash
 parameter_list|)
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|checkNull
 argument_list|(
 name|name
@@ -2367,6 +2381,9 @@ name|boolean
 name|encodeSlash
 parameter_list|)
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|checkNullMap
 argument_list|(
 name|templatesMap
@@ -2414,6 +2431,9 @@ argument_list|>
 name|templatesMap
 parameter_list|)
 block|{
+name|checkClosed
+argument_list|()
+expr_stmt|;
 name|checkNullMap
 argument_list|(
 name|templatesMap
@@ -2452,9 +2472,6 @@ name|UriBuilder
 name|newBuilder
 parameter_list|)
 block|{
-name|checkClosed
-argument_list|()
-expr_stmt|;
 name|boolean
 name|complete
 init|=
