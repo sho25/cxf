@@ -43,16 +43,6 @@ end_import
 
 begin_import
 import|import
-name|java
-operator|.
-name|util
-operator|.
-name|List
-import|;
-end_import
-
-begin_import
-import|import
 name|javax
 operator|.
 name|annotation
@@ -228,13 +218,10 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
-name|List
-argument_list|<
 name|JwsSignatureVerifier
-argument_list|>
-name|theSigVerifiers
+name|theSigVerifier
 init|=
-name|getInitializedSigVerifiers
+name|getInitializedSigVerifier
 argument_list|()
 decl_stmt|;
 name|JwsJsonConsumer
@@ -258,7 +245,7 @@ name|validate
 argument_list|(
 name|c
 argument_list|,
-name|theSigVerifiers
+name|theSigVerifier
 argument_list|)
 expr_stmt|;
 name|byte
