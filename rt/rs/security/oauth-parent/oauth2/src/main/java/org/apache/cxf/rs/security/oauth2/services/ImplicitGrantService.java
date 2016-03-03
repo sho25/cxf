@@ -168,7 +168,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Redirection-based Implicit Grant Service  *   * This resource handles the End User authorising  * or denying the Client embedded in the Web agent.  *   * We can consider having a single authorization service dealing with either  * authorization code or implicit grant.  */
+comment|/**  * Redirection-based Implicit Grant Service  *   * This resource handles the End User authorizing  * or denying the Client embedded in the Web agent.  *   */
 end_comment
 
 begin_class
