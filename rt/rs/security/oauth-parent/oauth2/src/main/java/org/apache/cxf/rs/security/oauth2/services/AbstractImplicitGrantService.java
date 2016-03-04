@@ -456,7 +456,7 @@ name|build
 argument_list|()
 return|;
 block|}
-specifier|public
+specifier|protected
 name|StringBuilder
 name|prepareGrant
 parameter_list|(
