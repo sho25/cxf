@@ -483,11 +483,14 @@ name|index
 init|=
 name|link
 operator|.
-name|indexOf
+name|lastIndexOf
 argument_list|(
 literal|">"
 argument_list|,
-literal|1
+name|link
+operator|.
+name|length
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
