@@ -434,14 +434,9 @@ argument_list|(
 name|responseType
 argument_list|)
 operator|||
-name|CODE_AT_RESPONSE_TYPE
+name|OAuthConstants
 operator|.
-name|equals
-argument_list|(
-name|responseType
-argument_list|)
-operator|||
-name|CODE_ID_TOKEN_AT_RESPONSE_TYPE
+name|TOKEN_RESPONSE_TYPE
 operator|.
 name|equals
 argument_list|(
