@@ -363,7 +363,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|AttachmentSerializer
+name|serializer
 operator|.
 name|setContentTransferEncoding
 argument_list|(

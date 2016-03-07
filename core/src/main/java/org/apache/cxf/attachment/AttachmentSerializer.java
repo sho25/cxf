@@ -220,7 +220,6 @@ init|=
 literal|"multipart/related"
 decl_stmt|;
 specifier|private
-specifier|static
 name|String
 name|contentTransferEncoding
 init|=
@@ -888,7 +887,6 @@ name|s
 return|;
 block|}
 specifier|public
-specifier|static
 name|void
 name|setContentTransferEncoding
 parameter_list|(
@@ -1007,7 +1005,6 @@ argument_list|()
 return|;
 block|}
 specifier|private
-specifier|static
 name|void
 name|writeHeaders
 parameter_list|(
