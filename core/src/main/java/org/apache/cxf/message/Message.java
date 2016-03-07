@@ -456,6 +456,19 @@ argument_list|()
 operator|+
 literal|".INTERCEPTOR_PROVIDER"
 decl_stmt|;
+comment|/**      * Content-Transfer-Encoding used for MTOM attachment      * binary, base64, etc      */
+name|String
+name|CONTENT_TRANSFER_ENCODING
+init|=
+name|Message
+operator|.
+name|class
+operator|.
+name|getName
+argument_list|()
+operator|+
+literal|".CONTENT_TRANSFER_ENCODING"
+decl_stmt|;
 comment|/*      * The properties to allow configure the client timeout      */
 name|String
 name|CONNECTION_TIMEOUT

@@ -1426,7 +1426,7 @@ name|client
 operator|.
 name|target
 argument_list|(
-literal|"http://test.test/"
+literal|"http://test-test/"
 argument_list|)
 decl_stmt|;
 name|Invocation
