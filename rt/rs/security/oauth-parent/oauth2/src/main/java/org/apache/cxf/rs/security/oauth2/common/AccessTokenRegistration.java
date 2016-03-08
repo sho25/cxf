@@ -133,6 +133,10 @@ name|String
 name|clientCodeVerifier
 decl_stmt|;
 specifier|private
+name|String
+name|responseType
+decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -369,6 +373,32 @@ name|nonce
 operator|=
 name|nonce
 expr_stmt|;
+block|}
+comment|/**      * Set the response type      * @param responseType the response type      */
+specifier|public
+name|void
+name|setResponseType
+parameter_list|(
+name|String
+name|responseType
+parameter_list|)
+block|{
+name|this
+operator|.
+name|responseType
+operator|=
+name|responseType
+expr_stmt|;
+block|}
+comment|/**      * Get the response type      * @return the response type, null if no redirection flow was used      */
+specifier|public
+name|String
+name|getResponseType
+parameter_list|()
+block|{
+return|return
+name|responseType
+return|;
 block|}
 specifier|public
 name|Map

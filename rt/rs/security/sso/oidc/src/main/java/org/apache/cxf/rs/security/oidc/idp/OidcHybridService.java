@@ -523,7 +523,7 @@ name|startsWith
 argument_list|(
 name|OAuthConstants
 operator|.
-name|AUTHORIZATION_CODE_VALUE
+name|CODE_RESPONSE_TYPE
 argument_list|)
 condition|)
 block|{

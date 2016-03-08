@@ -865,6 +865,16 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
+name|setResponseType
+argument_list|(
+name|state
+operator|.
+name|getResponseType
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|reg
+operator|.
 name|setSubject
 argument_list|(
 name|userSubject
