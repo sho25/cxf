@@ -211,7 +211,6 @@ index|[]
 argument_list|>
 name|users
 decl_stmt|;
-specifier|public
 name|MapIdentityManager
 parameter_list|(
 specifier|final
