@@ -305,6 +305,46 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|ID_TOKEN_RESPONSE_TYPE
+init|=
+literal|"id_token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ID_TOKEN_AT_RESPONSE_TYPE
+init|=
+literal|"id_token token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CODE_AT_RESPONSE_TYPE
+init|=
+literal|"code token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CODE_ID_TOKEN_RESPONSE_TYPE
+init|=
+literal|"code id_token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|CODE_ID_TOKEN_AT_RESPONSE_TYPE
+init|=
+literal|"code id_token token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|ID_TOKEN
 init|=
 literal|"id_token"

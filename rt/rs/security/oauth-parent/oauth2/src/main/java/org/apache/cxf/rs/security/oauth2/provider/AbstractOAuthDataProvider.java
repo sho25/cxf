@@ -510,6 +510,16 @@ argument_list|)
 expr_stmt|;
 name|at
 operator|.
+name|setGrantCode
+argument_list|(
+name|atReg
+operator|.
+name|getGrantCode
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|at
+operator|.
 name|getExtraProperties
 argument_list|()
 operator|.

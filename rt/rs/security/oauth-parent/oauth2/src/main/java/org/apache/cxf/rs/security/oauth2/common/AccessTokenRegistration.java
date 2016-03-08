@@ -137,6 +137,10 @@ name|String
 name|responseType
 decl_stmt|;
 specifier|private
+name|String
+name|grantCode
+decl_stmt|;
+specifier|private
 name|Map
 argument_list|<
 name|String
@@ -398,6 +402,32 @@ parameter_list|()
 block|{
 return|return
 name|responseType
+return|;
+block|}
+comment|/**      * Set the grant code which was used to request the token      * @param grantCode the grant code      */
+specifier|public
+name|void
+name|setGrantCode
+parameter_list|(
+name|String
+name|grantCode
+parameter_list|)
+block|{
+name|this
+operator|.
+name|grantCode
+operator|=
+name|grantCode
+expr_stmt|;
+block|}
+comment|/**      * Get the grant code      * @return the grant code, null if no authorization code grant was used      */
+specifier|public
+name|String
+name|getGrantCode
+parameter_list|()
+block|{
+return|return
+name|grantCode
 return|;
 block|}
 specifier|public

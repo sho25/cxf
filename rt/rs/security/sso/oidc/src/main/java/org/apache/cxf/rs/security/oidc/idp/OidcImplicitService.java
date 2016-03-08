@@ -376,22 +376,6 @@ name|OidcImplicitService
 extends|extends
 name|ImplicitGrantService
 block|{
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ID_TOKEN_RESPONSE_TYPE
-init|=
-literal|"id_token"
-decl_stmt|;
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ID_TOKEN_AT_RESPONSE_TYPE
-init|=
-literal|"id_token token"
-decl_stmt|;
 specifier|private
 name|boolean
 name|skipAuthorizationWithOidcScope
@@ -420,8 +404,12 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
+name|OidcUtils
+operator|.
 name|ID_TOKEN_RESPONSE_TYPE
 argument_list|,
+name|OidcUtils
+operator|.
 name|ID_TOKEN_AT_RESPONSE_TYPE
 argument_list|)
 argument_list|)
@@ -460,6 +448,8 @@ name|responseType
 parameter_list|)
 block|{
 return|return
+name|OidcUtils
+operator|.
 name|ID_TOKEN_AT_RESPONSE_TYPE
 operator|.
 name|equals

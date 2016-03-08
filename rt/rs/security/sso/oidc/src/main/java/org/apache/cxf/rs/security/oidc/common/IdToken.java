@@ -425,7 +425,7 @@ return|;
 block|}
 specifier|public
 name|void
-name|setAuthCodeHash
+name|setAuthorizationCodeHash
 parameter_list|(
 name|String
 name|at
@@ -441,7 +441,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|String
-name|getAuthCodeHash
+name|getAuthorizationCodeHash
 parameter_list|()
 block|{
 return|return

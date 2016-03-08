@@ -776,6 +776,16 @@ argument_list|()
 decl_stmt|;
 name|reg
 operator|.
+name|setGrantCode
+argument_list|(
+name|grant
+operator|.
+name|getCode
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|reg
+operator|.
 name|setClient
 argument_list|(
 name|client
