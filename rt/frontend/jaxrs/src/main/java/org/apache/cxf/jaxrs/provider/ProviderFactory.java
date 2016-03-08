@@ -1048,7 +1048,7 @@ argument_list|>
 name|injectedProviders
 init|=
 operator|new
-name|LinkedList
+name|HashSet
 argument_list|<
 name|ProviderInfo
 argument_list|<
