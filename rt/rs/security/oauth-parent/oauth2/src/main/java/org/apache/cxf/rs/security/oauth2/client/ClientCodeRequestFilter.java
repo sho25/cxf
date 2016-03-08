@@ -1431,6 +1431,8 @@ name|rc
 argument_list|,
 name|at
 argument_list|,
+name|requestParams
+argument_list|,
 name|state
 argument_list|)
 decl_stmt|;
@@ -1545,6 +1547,14 @@ name|String
 argument_list|,
 name|String
 argument_list|>
+name|requestParams
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
 name|state
 parameter_list|)
 block|{
@@ -1556,6 +1566,8 @@ argument_list|(
 name|rc
 argument_list|,
 name|at
+argument_list|,
+name|requestParams
 argument_list|,
 name|state
 argument_list|)
@@ -1597,6 +1609,14 @@ name|rc
 parameter_list|,
 name|ClientAccessToken
 name|at
+parameter_list|,
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|requestParams
 parameter_list|,
 name|MultivaluedMap
 argument_list|<
