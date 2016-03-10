@@ -287,7 +287,7 @@ name|OAuthConstants
 operator|.
 name|CLIENT_AUDIENCE
 argument_list|,
-name|scope
+name|audience
 argument_list|)
 expr_stmt|;
 block|}
