@@ -343,7 +343,7 @@ operator|.
 name|getName
 argument_list|()
 operator|+
-literal|"FIXED_PARAMETER_ORDER"
+literal|".FIXED_PARAMETER_ORDER"
 decl_stmt|;
 name|String
 name|MAINTAIN_SESSION
