@@ -73,9 +73,25 @@ name|weld
 operator|.
 name|environment
 operator|.
-name|tomcat7
+name|tomcat
 operator|.
-name|Tomcat7Container
+name|TomcatContainer
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|jboss
+operator|.
+name|weld
+operator|.
+name|resources
+operator|.
+name|spi
+operator|.
+name|ResourceLoader
 import|;
 end_import
 
@@ -135,7 +151,7 @@ else|else
 block|{
 name|delegate
 operator|=
-name|Tomcat7Container
+name|TomcatContainer
 operator|.
 name|INSTANCE
 expr_stmt|;
@@ -147,6 +163,9 @@ specifier|public
 name|boolean
 name|touch
 parameter_list|(
+name|ResourceLoader
+name|loader
+parameter_list|,
 name|ContainerContext
 name|context
 parameter_list|)
@@ -158,6 +177,8 @@ name|delegate
 operator|.
 name|touch
 argument_list|(
+name|loader
+argument_list|,
 name|context
 argument_list|)
 return|;

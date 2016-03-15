@@ -95,9 +95,9 @@ name|weld
 operator|.
 name|environment
 operator|.
-name|tomcat7
+name|tomcat
 operator|.
-name|Tomcat7Container
+name|TomcatContainer
 import|;
 end_import
 
@@ -196,7 +196,7 @@ operator|.
 name|getName
 argument_list|()
 argument_list|,
-name|Tomcat7Container
+name|TomcatContainer
 operator|.
 name|class
 operator|.
