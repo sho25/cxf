@@ -199,6 +199,45 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testContentDispositionWithCreationDate
+parameter_list|()
+block|{
+name|ContentDisposition
+name|cd
+init|=
+operator|new
+name|ContentDisposition
+argument_list|(
+literal|" attachment ; creation-date=\"21:08:08 14:00:00\""
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|"attachment"
+argument_list|,
+name|cd
+operator|.
+name|getType
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"21:08:08 14:00:00"
+argument_list|,
+name|cd
+operator|.
+name|getParameter
+argument_list|(
+literal|"creation-date"
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
