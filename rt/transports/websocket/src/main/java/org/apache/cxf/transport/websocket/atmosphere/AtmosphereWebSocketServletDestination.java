@@ -271,18 +271,6 @@ name|AbstractReflectorAtmosphereHandler
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|atmosphere
-operator|.
-name|util
-operator|.
-name|Utils
-import|;
-end_import
-
 begin_comment
 comment|/**  *   */
 end_comment
@@ -454,9 +442,9 @@ name|IOException
 block|{
 if|if
 condition|(
-name|Utils
+name|AtmosphereUtils
 operator|.
-name|webSocketEnabled
+name|useAtmosphere
 argument_list|(
 name|req
 argument_list|)
