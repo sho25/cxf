@@ -1234,6 +1234,12 @@ name|increment
 argument_list|()
 condition|)
 block|{
+comment|// the max error count reached; purging the output resource
+name|e
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 try|try
 block|{
 name|wh
@@ -1382,6 +1388,12 @@ name|increment
 argument_list|()
 condition|)
 block|{
+comment|// the max error count reached; purging the output resource
+name|e
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
 try|try
 block|{
 name|wh
