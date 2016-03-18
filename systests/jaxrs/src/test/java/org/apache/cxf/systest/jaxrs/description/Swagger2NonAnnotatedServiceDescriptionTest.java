@@ -337,7 +337,7 @@ name|getExpectedFileYaml
 parameter_list|()
 block|{
 return|return
-literal|"swagger2-noano-json.txt"
+literal|"swagger2-noano-yaml.txt"
 return|;
 block|}
 block|}
