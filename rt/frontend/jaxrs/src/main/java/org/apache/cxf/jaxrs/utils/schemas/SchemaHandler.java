@@ -771,6 +771,12 @@ operator|.
 name|resolvePublic
 argument_list|(
 name|publicId
+operator|!=
+literal|null
+condition|?
+name|publicId
+else|:
+name|namespaceURI
 argument_list|,
 name|systemId
 argument_list|)
