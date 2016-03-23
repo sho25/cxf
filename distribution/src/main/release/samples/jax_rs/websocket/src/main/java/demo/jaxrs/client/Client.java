@@ -15,6 +15,18 @@ end_package
 
 begin_import
 import|import
+name|demo
+operator|.
+name|jaxrs
+operator|.
+name|server
+operator|.
+name|Server
+import|;
+end_import
+
+begin_import
+import|import
 name|java
 operator|.
 name|io
@@ -83,8 +95,6 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-comment|// Sent HTTP GET request to query all customer info
-comment|/*          * URL url = new URL("http://localhost:9000/customers");          * System.out.println("Invoking server through HTTP GET to query all          * customer info"); InputStream in = url.openStream(); StreamSource          * source = new StreamSource(in); printSource(source);          */
 comment|// Create a websocket client and connect to the target service
 name|WebSocketTestClient
 name|client
@@ -92,7 +102,13 @@ init|=
 operator|new
 name|WebSocketTestClient
 argument_list|(
-literal|"ws://localhost:9000/"
+name|Server
+operator|.
+name|HOST_URL
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
 argument_list|)
 decl_stmt|;
 name|client
@@ -114,7 +130,13 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /customerservice/customers/123"
+literal|"GET "
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/customers/123"
 argument_list|)
 expr_stmt|;
 name|client
@@ -172,7 +194,13 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /customerservice/orders/223/products/323"
+literal|"GET "
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/orders/223/products/323"
 argument_list|)
 expr_stmt|;
 name|client
@@ -239,9 +267,15 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"PUT /customerservice/customers\r\nContent-Type: text/xml;"
+literal|"PUT "
 operator|+
-literal|" charset=ISO-8859-1\r\n\r\n"
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/customers\r\n"
+operator|+
+literal|"Content-Type: text/xml; charset=ISO-8859-1\r\n\r\n"
 operator|+
 name|inputData
 argument_list|)
@@ -309,7 +343,13 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"POST /customerservice/customers\r\nContent-Type: text/xml; "
+literal|"POST "
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/customers\r\nContent-Type: text/xml; "
 operator|+
 literal|"charset=ISO-8859-1\r\nAccept: text/xml\r\n\r\n"
 operator|+
@@ -351,7 +391,13 @@ init|=
 operator|new
 name|WebSocketTestClient
 argument_list|(
-literal|"ws://localhost:9000/"
+name|Server
+operator|.
+name|HOST_URL
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
 argument_list|)
 decl_stmt|;
 name|client2
@@ -380,7 +426,13 @@ name|client2
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /customerservice/monitor"
+literal|"GET "
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/monitor"
 argument_list|)
 expr_stmt|;
 name|client2
@@ -430,14 +482,26 @@ name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"GET /customerservice/customers/123"
+literal|"GET "
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/customers/123"
 argument_list|)
 expr_stmt|;
 name|client
 operator|.
 name|sendTextMessage
 argument_list|(
-literal|"DELETE /customerservice/customers/235"
+literal|"DELETE "
+operator|+
+name|Server
+operator|.
+name|CONTEXT_PATH
+operator|+
+literal|"/customerservice/customers/235"
 argument_list|)
 expr_stmt|;
 name|client2
