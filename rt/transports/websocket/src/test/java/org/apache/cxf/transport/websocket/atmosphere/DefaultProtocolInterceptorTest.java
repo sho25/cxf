@@ -85,6 +85,18 @@ name|atmosphere
 operator|.
 name|cpr
 operator|.
+name|AtmosphereRequestImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|atmosphere
+operator|.
+name|cpr
+operator|.
 name|AtmosphereResource
 import|;
 end_import
@@ -110,6 +122,18 @@ operator|.
 name|cpr
 operator|.
 name|AtmosphereResponse
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|atmosphere
+operator|.
+name|cpr
+operator|.
+name|AtmosphereResponseImpl
 import|;
 end_import
 
@@ -175,7 +199,7 @@ decl_stmt|;
 name|AtmosphereRequest
 name|request
 init|=
-name|AtmosphereRequest
+name|AtmosphereRequestImpl
 operator|.
 name|newInstance
 argument_list|()
@@ -183,7 +207,7 @@ decl_stmt|;
 name|AtmosphereResponse
 name|response
 init|=
-name|AtmosphereResponse
+name|AtmosphereResponseImpl
 operator|.
 name|newInstance
 argument_list|()

@@ -231,7 +231,7 @@ name|atmosphere
 operator|.
 name|cpr
 operator|.
-name|AtmosphereRequest
+name|AtmosphereRequestImpl
 import|;
 end_import
 
@@ -255,7 +255,7 @@ name|atmosphere
 operator|.
 name|cpr
 operator|.
-name|AtmosphereResponse
+name|AtmosphereResponseImpl
 import|;
 end_import
 
@@ -393,6 +393,18 @@ argument_list|,
 literal|"true"
 argument_list|)
 expr_stmt|;
+comment|// workaround for atmosphere's jsr356 initialization requiring servletConfig
+name|framework
+operator|.
+name|addInitParameter
+argument_list|(
+name|ApplicationConfig
+operator|.
+name|WEBSOCKET_SUPPRESS_JSR356
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 name|AtmosphereUtils
 operator|.
 name|addInterceptors
@@ -456,14 +468,14 @@ name|framework
 operator|.
 name|doCometSupport
 argument_list|(
-name|AtmosphereRequest
+name|AtmosphereRequestImpl
 operator|.
 name|wrap
 argument_list|(
 name|req
 argument_list|)
 argument_list|,
-name|AtmosphereResponse
+name|AtmosphereResponseImpl
 operator|.
 name|wrap
 argument_list|(

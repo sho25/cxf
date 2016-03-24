@@ -343,6 +343,18 @@ name|atmosphere
 operator|.
 name|cpr
 operator|.
+name|AtmosphereRequestImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|atmosphere
+operator|.
+name|cpr
+operator|.
 name|AtmosphereResource
 import|;
 end_import
@@ -380,6 +392,18 @@ operator|.
 name|cpr
 operator|.
 name|AtmosphereResponse
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|atmosphere
+operator|.
+name|cpr
+operator|.
+name|AtmosphereResponseImpl
 import|;
 end_import
 
@@ -1606,7 +1630,7 @@ name|Builder
 name|b
 init|=
 operator|new
-name|AtmosphereRequest
+name|AtmosphereRequestImpl
 operator|.
 name|Builder
 argument_list|()
@@ -2301,7 +2325,7 @@ specifier|private
 class|class
 name|WrappedAtmosphereResponse
 extends|extends
-name|AtmosphereResponse
+name|AtmosphereResponseImpl
 block|{
 specifier|final
 name|AtmosphereResponse
