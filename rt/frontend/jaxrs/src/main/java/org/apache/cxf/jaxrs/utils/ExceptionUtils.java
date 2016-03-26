@@ -497,12 +497,13 @@ name|WebApplicationException
 operator|)
 name|unwrappedException
 decl_stmt|;
-return|return
+name|response
+operator|=
 name|webEx
 operator|.
 name|getResponse
 argument_list|()
-return|;
+expr_stmt|;
 block|}
 block|}
 name|JAXRSUtils
