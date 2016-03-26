@@ -3141,7 +3141,7 @@ name|ex
 parameter_list|)
 block|{
 comment|//
-comment|//  For path& matrix parameters this is 404, for query is 406
+comment|//  For path, query& matrix parameters this is 404,
 comment|//  for others 400...
 comment|//
 if|if
@@ -3150,28 +3150,13 @@ name|pType
 operator|==
 name|ParameterType
 operator|.
-name|QUERY
-condition|)
-block|{
-return|return
-name|ExceptionUtils
-operator|.
-name|toNotAcceptableException
-argument_list|(
-name|ex
-argument_list|,
-literal|null
-argument_list|)
-return|;
-block|}
-elseif|else
-if|if
-condition|(
+name|PATH
+operator|||
 name|pType
 operator|==
 name|ParameterType
 operator|.
-name|PATH
+name|QUERY
 operator|||
 name|pType
 operator|==
