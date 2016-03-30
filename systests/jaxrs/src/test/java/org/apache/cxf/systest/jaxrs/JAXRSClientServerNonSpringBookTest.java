@@ -956,7 +956,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/application6/thebooks2/bookstore2/bookheaders"
+literal|"/application6/the%20books2/bookstore2/book%20headers"
 argument_list|)
 expr_stmt|;
 block|}
