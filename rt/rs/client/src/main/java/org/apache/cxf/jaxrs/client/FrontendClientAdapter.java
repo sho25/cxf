@@ -894,6 +894,19 @@ name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|close
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|destroy
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 end_class
 

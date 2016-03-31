@@ -143,6 +143,8 @@ extends|,
 name|MessageObserver
 extends|,
 name|ConduitSelectorHolder
+extends|,
+name|AutoCloseable
 block|{
 name|String
 name|REQUEST_CONTEXT
