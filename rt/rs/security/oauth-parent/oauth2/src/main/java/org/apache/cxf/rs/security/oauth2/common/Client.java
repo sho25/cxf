@@ -71,11 +71,53 @@ name|Map
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|ElementCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Entity
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Id
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MapKeyColumn
+import|;
+end_import
+
 begin_comment
 comment|/**  * Represents a registered third-party Client application  */
 end_comment
 
 begin_class
+annotation|@
+name|Entity
 specifier|public
 class|class
 name|Client
@@ -333,6 +375,8 @@ name|applicationWebUri
 expr_stmt|;
 block|}
 comment|/**      * Get the client registration id      * @return the consumer key      */
+annotation|@
+name|Id
 specifier|public
 name|String
 name|getClientId
@@ -528,6 +572,8 @@ name|redirectUris
 expr_stmt|;
 block|}
 comment|/**      * Get a list of URIs the AuthorizationService      * may return the authorization code to      * @return the redirect uris      */
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -560,6 +606,8 @@ name|allowedGrantTypes
 expr_stmt|;
 block|}
 comment|/**      * Get the list of access token grant types this client      * can use to obtain the access tokens.      * @return the list of grant types      */
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -625,6 +673,15 @@ name|resourceOwnerSubject
 return|;
 block|}
 comment|/**      * Get the list of additional client properties      * @return the list of properties      */
+annotation|@
+name|ElementCollection
+annotation|@
+name|MapKeyColumn
+argument_list|(
+name|name
+operator|=
+literal|"name"
+argument_list|)
 specifier|public
 name|Map
 argument_list|<
@@ -661,6 +718,8 @@ name|properties
 expr_stmt|;
 block|}
 comment|/**      * Get the list of registered scopes      * @return scopes      */
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -692,6 +751,8 @@ operator|=
 name|registeredScopes
 expr_stmt|;
 block|}
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -723,6 +784,8 @@ operator|=
 name|registeredAudiences
 expr_stmt|;
 block|}
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<

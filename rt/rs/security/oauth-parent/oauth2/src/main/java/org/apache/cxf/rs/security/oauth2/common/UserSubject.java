@@ -75,6 +75,26 @@ begin_import
 import|import
 name|javax
 operator|.
+name|persistence
+operator|.
+name|ElementCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MapKeyColumn
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|xml
 operator|.
 name|bind
@@ -324,6 +344,8 @@ name|login
 expr_stmt|;
 block|}
 comment|/**      * Return the optional list of user roles which may have       * been captured during the authentication process       * @return the list of roles      */
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -356,6 +378,15 @@ name|roles
 expr_stmt|;
 block|}
 comment|/**      * Get the list of additional user subject properties      * @return the list of properties      */
+annotation|@
+name|ElementCollection
+annotation|@
+name|MapKeyColumn
+argument_list|(
+name|name
+operator|=
+literal|"name"
+argument_list|)
 specifier|public
 name|Map
 argument_list|<
