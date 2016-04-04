@@ -111,6 +111,16 @@ name|MapKeyColumn
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OneToOne
+import|;
+end_import
+
 begin_comment
 comment|/**  * Represents a registered third-party Client application  */
 end_comment
@@ -637,6 +647,8 @@ name|subject
 expr_stmt|;
 block|}
 comment|/**      * Get the {@link UserSubject} representing this Client       * authentication      * @return the user subject      */
+annotation|@
+name|OneToOne
 specifier|public
 name|UserSubject
 name|getSubject
@@ -663,6 +675,8 @@ name|resourceOwnerSubject
 expr_stmt|;
 block|}
 comment|/**      * Get the {@link UserSubject} representing the resource owner       * who has registered this client      * @return the resource owner user subject      */
+annotation|@
+name|OneToOne
 specifier|public
 name|UserSubject
 name|getResourceOwnerSubject

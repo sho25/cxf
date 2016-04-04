@@ -87,6 +87,26 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|Entity
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Id
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|MapKeyColumn
 import|;
 end_import
@@ -112,6 +132,8 @@ end_comment
 begin_class
 annotation|@
 name|XmlRootElement
+annotation|@
+name|Entity
 specifier|public
 class|class
 name|UserSubject
@@ -318,6 +340,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/**      * Return the user login name      * @return the login name      */
+annotation|@
+name|Id
 specifier|public
 name|String
 name|getLogin
