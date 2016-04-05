@@ -63,6 +63,46 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|ElementCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MapKeyColumn
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MappedSuperclass
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OneToOne
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -126,6 +166,8 @@ comment|/**  * Server Access Token representation  */
 end_comment
 
 begin_class
+annotation|@
+name|MappedSuperclass
 specifier|public
 specifier|abstract
 class|class
@@ -412,6 +454,8 @@ argument_list|()
 expr_stmt|;
 block|}
 comment|/**      * Returns the Client associated with this token      * @return the client      */
+annotation|@
+name|OneToOne
 specifier|public
 name|Client
 name|getClient
@@ -437,6 +481,8 @@ name|c
 expr_stmt|;
 block|}
 comment|/**      * Returns a list of opaque permissions/scopes      * @return the scopes      */
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -485,6 +531,8 @@ name|subject
 expr_stmt|;
 block|}
 comment|/**      * Returns a subject capturing the login name       * the end user used to login to the resource server      * when authorizing a given client request      * @return UserSubject      */
+annotation|@
+name|OneToOne
 specifier|public
 name|UserSubject
 name|getSubject
@@ -546,6 +594,8 @@ return|return
 name|responseType
 return|;
 block|}
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -664,6 +714,15 @@ operator|=
 name|nonce
 expr_stmt|;
 block|}
+annotation|@
+name|ElementCollection
+annotation|@
+name|MapKeyColumn
+argument_list|(
+name|name
+operator|=
+literal|"extraPropName"
+argument_list|)
 specifier|public
 name|Map
 argument_list|<

@@ -25,6 +25,16 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Entity
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -108,6 +118,8 @@ comment|/**  * Simple Bearer Access Token implementations  */
 end_comment
 
 begin_class
+annotation|@
+name|Entity
 specifier|public
 class|class
 name|BearerAccessToken

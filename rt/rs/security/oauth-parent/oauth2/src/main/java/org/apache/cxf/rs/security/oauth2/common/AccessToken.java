@@ -51,11 +51,53 @@ name|Map
 import|;
 end_import
 
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|ElementCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Id
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MapKeyColumn
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MappedSuperclass
+import|;
+end_import
+
 begin_comment
 comment|/**  * Base Access Token representation  */
 end_comment
 
 begin_class
+annotation|@
+name|MappedSuperclass
 specifier|public
 specifier|abstract
 class|class
@@ -260,6 +302,8 @@ name|type
 expr_stmt|;
 block|}
 comment|/**      * Returns the token key      * @return the key      */
+annotation|@
+name|Id
 specifier|public
 name|String
 name|getTokenKey
@@ -311,6 +355,15 @@ name|refreshToken
 return|;
 block|}
 comment|/**      * Gets token parameters       * @return      */
+annotation|@
+name|ElementCollection
+annotation|@
+name|MapKeyColumn
+argument_list|(
+name|name
+operator|=
+literal|"propName"
+argument_list|)
 specifier|public
 name|Map
 argument_list|<
