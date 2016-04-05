@@ -206,6 +206,15 @@ name|USE_STR_TRANSFORM
 init|=
 literal|"ws-security.use.str.transform"
 decl_stmt|;
+comment|/**      * Whether to add an InclusiveNamespaces PrefixList as a CanonicalizationMethod child when generating       * Signatures using WSConstants.C14N_EXCL_OMIT_COMMENTS. Default is "true".      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ADD_INCLUSIVE_PREFIXES
+init|=
+literal|"ws-security.add.inclusive.prefixes"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
