@@ -55,16 +55,6 @@ name|java
 operator|.
 name|util
 operator|.
-name|Deque
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
 name|HashMap
 import|;
 end_import
@@ -1556,14 +1546,6 @@ operator|instanceof
 name|AtmosphereInterceptorWriter
 condition|)
 block|{
-comment|//REVIST need a better way to add a custom filter at the first entry and not at the last as
-comment|// e.g. interceptor(AsyncIOInterceptor interceptor, int position)
-name|Deque
-argument_list|<
-name|AsyncIOInterceptor
-argument_list|>
-name|filters
-init|=
 name|AtmosphereInterceptorWriter
 operator|.
 name|class
@@ -1573,28 +1555,13 @@ argument_list|(
 name|writer
 argument_list|)
 operator|.
-name|filters
-argument_list|()
-decl_stmt|;
-if|if
-condition|(
-operator|!
-name|filters
-operator|.
-name|contains
+name|interceptor
 argument_list|(
 name|interceptor
-argument_list|)
-condition|)
-block|{
-name|filters
-operator|.
-name|addFirst
-argument_list|(
-name|interceptor
+argument_list|,
+literal|0
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 comment|/**      * Creates a virtual request using the specified parent request and the actual data.      *       * @param r      * @param data      * @return      * @throws IOException      */
