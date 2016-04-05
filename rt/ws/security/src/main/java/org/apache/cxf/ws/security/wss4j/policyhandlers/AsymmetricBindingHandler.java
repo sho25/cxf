@@ -3129,6 +3129,16 @@ argument_list|)
 expr_stmt|;
 name|encr
 operator|.
+name|setDigestAlgorithm
+argument_list|(
+name|algType
+operator|.
+name|getEncryptionDigest
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|encr
+operator|.
 name|prepare
 argument_list|(
 name|saaj
