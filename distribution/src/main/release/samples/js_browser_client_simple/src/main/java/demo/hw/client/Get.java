@@ -542,14 +542,14 @@ argument_list|,
 literal|"yes"
 argument_list|)
 expr_stmt|;
-name|trans
+name|transformer
 operator|.
 name|setOutputProperties
 argument_list|(
 name|oprops
 argument_list|)
 expr_stmt|;
-name|trans
+name|transformer
 operator|.
 name|transform
 argument_list|(
