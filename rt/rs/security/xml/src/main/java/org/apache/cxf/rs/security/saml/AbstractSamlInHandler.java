@@ -945,6 +945,13 @@ operator|new
 name|RequestData
 argument_list|()
 decl_stmt|;
+name|data
+operator|.
+name|setMsgContext
+argument_list|(
+name|message
+argument_list|)
+expr_stmt|;
 comment|// Add Audience Restrictions for SAML
 name|configureAudienceRestriction
 argument_list|(
