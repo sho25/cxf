@@ -65,6 +65,46 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|ElementCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Entity
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MapKeyColumn
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OneToOne
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -128,6 +168,8 @@ comment|/**  * The Authorization Code Grant representation visible to the server
 end_comment
 
 begin_class
+annotation|@
+name|Entity
 specifier|public
 class|class
 name|ServerAuthorizationCodeGrant
@@ -340,6 +382,8 @@ name|expiresIn
 expr_stmt|;
 block|}
 comment|/**      * Returns the reference to {@link Client}      * @return the client      */
+annotation|@
+name|OneToOne
 specifier|public
 name|Client
 name|getClient
@@ -384,6 +428,8 @@ name|scopes
 expr_stmt|;
 block|}
 comment|/**      * Gets the scopes explicitly approved by the end user      * @return the approved scopes      */
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -413,6 +459,8 @@ name|subject
 expr_stmt|;
 block|}
 comment|/**      * Gets the user subject representing the end user      * @return the subject      */
+annotation|@
+name|OneToOne
 specifier|public
 name|UserSubject
 name|getSubject
@@ -470,6 +518,8 @@ operator|=
 name|clientCodeChallenge
 expr_stmt|;
 block|}
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
@@ -548,6 +598,15 @@ operator|=
 name|preauthorizedTokenAvailable
 expr_stmt|;
 block|}
+annotation|@
+name|ElementCollection
+annotation|@
+name|MapKeyColumn
+argument_list|(
+name|name
+operator|=
+literal|"extraPropName"
+argument_list|)
 specifier|public
 name|Map
 argument_list|<

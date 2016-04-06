@@ -37,6 +37,36 @@ begin_import
 import|import
 name|javax
 operator|.
+name|persistence
+operator|.
+name|Id
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|MappedSuperclass
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Transient
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|ws
 operator|.
 name|rs
@@ -108,6 +138,8 @@ comment|/**  * Base Authorization Code Grant representation, captures the code  
 end_comment
 
 begin_class
+annotation|@
+name|MappedSuperclass
 specifier|public
 class|class
 name|AuthorizationCodeGrant
@@ -204,6 +236,8 @@ name|redirectUri
 return|;
 block|}
 comment|/**      * Gets the authorization code      * @return the code      */
+annotation|@
+name|Id
 specifier|public
 name|String
 name|getCode
@@ -229,6 +263,8 @@ name|c
 expr_stmt|;
 block|}
 comment|/**      * {@inheritDoc}      */
+annotation|@
+name|Transient
 specifier|public
 name|String
 name|getType

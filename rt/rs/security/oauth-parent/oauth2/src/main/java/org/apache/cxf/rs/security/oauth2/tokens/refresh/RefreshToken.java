@@ -45,6 +45,26 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|ElementCollection
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Entity
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -128,6 +148,8 @@ comment|/**  * Simple Refresh Token implementation  */
 end_comment
 
 begin_class
+annotation|@
+name|Entity
 specifier|public
 class|class
 name|RefreshToken
@@ -261,6 +283,8 @@ specifier|public
 name|RefreshToken
 parameter_list|()
 block|{              }
+annotation|@
+name|ElementCollection
 specifier|public
 name|List
 argument_list|<
