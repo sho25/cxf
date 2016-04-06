@@ -499,9 +499,6 @@ specifier|protected
 name|void
 name|saveRefreshToken
 parameter_list|(
-name|ServerAccessToken
-name|at
-parameter_list|,
 name|RefreshToken
 name|refreshToken
 parameter_list|)
