@@ -255,7 +255,7 @@ name|request
 parameter_list|)
 block|{
 name|TransformerFactory
-name|tfactory
+name|transformerFactory
 init|=
 name|TransformerFactory
 operator|.
@@ -264,11 +264,26 @@ argument_list|()
 decl_stmt|;
 try|try
 block|{
+name|transformerFactory
+operator|.
+name|setFeature
+argument_list|(
+name|javax
+operator|.
+name|xml
+operator|.
+name|XMLConstants
+operator|.
+name|FEATURE_SECURE_PROCESSING
+argument_list|,
+literal|true
+argument_list|)
+expr_stmt|;
 comment|/*             tfactory.setAttribute("indent-number", "2");              */
 name|Transformer
 name|serializer
 init|=
-name|tfactory
+name|transformerFactory
 operator|.
 name|newTransformer
 argument_list|()
