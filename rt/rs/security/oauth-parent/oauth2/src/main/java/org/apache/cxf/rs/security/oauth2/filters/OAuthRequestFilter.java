@@ -1008,7 +1008,7 @@ operator|.
 name|getClientIpAddress
 argument_list|()
 operator|.
-name|matches
+name|equals
 argument_list|(
 name|remoteAddress
 argument_list|)
