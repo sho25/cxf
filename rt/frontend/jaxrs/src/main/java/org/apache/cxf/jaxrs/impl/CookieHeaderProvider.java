@@ -440,7 +440,7 @@ name|append
 argument_list|(
 name|NewCookieHeaderProvider
 operator|.
-name|maybeQuote
+name|maybeQuoteAll
 argument_list|(
 name|c
 operator|.
@@ -480,7 +480,7 @@ name|append
 argument_list|(
 name|NewCookieHeaderProvider
 operator|.
-name|maybeQuote
+name|maybeQuotePath
 argument_list|(
 name|c
 operator|.
@@ -521,7 +521,7 @@ name|append
 argument_list|(
 name|NewCookieHeaderProvider
 operator|.
-name|maybeQuote
+name|maybeQuoteAll
 argument_list|(
 name|c
 operator|.

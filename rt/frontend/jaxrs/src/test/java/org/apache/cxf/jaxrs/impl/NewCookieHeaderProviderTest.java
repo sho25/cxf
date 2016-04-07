@@ -737,6 +737,47 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testToStringWithPathSlalshOnly
+parameter_list|()
+block|{
+name|NewCookie
+name|c
+init|=
+operator|new
+name|NewCookie
+argument_list|(
+literal|"foo"
+argument_list|,
+literal|"bar (space)<>[]"
+argument_list|,
+literal|"/path"
+argument_list|,
+literal|"domain.com"
+argument_list|,
+literal|"comment@comment:,"
+argument_list|,
+literal|2
+argument_list|,
+literal|true
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|"foo=\"bar (space)<>[]\";Comment=\"comment@comment:,\";Domain=domain.com;Max-Age=2;"
+operator|+
+literal|"Path=/path;Secure;Version=1"
+argument_list|,
+name|c
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
