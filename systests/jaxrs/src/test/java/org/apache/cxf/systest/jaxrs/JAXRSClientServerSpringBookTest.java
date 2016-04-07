@@ -5348,6 +5348,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|Socket
 name|s
 init|=
@@ -5363,10 +5365,10 @@ argument_list|(
 name|PORT
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|;
 name|InputStream
 name|is
-init|=
+operator|=
 name|this
 operator|.
 name|getClass
@@ -5376,7 +5378,8 @@ name|getResourceAsStream
 argument_list|(
 literal|"resources/retrieveRequest.txt"
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|byte
 index|[]
 name|bytes
@@ -5487,6 +5490,7 @@ literal|"CXF in Action - 2"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Test
