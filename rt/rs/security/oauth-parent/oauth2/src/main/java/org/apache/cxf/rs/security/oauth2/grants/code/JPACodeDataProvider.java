@@ -444,7 +444,7 @@ literal|"SELECT code FROM "
 operator|+
 name|CODE_TABLE_NAME
 operator|+
-literal|" code JOIN code.cliednt c WHERE c.clientId = '"
+literal|" code JOIN code.client c WHERE c.clientId = '"
 operator|+
 name|c
 operator|.
