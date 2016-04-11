@@ -57,7 +57,7 @@ begin_class
 annotation|@
 name|ApplicationPath
 argument_list|(
-literal|"/thebooks2%21"
+literal|"/the%20books2"
 argument_list|)
 specifier|public
 class|class

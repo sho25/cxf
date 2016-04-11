@@ -253,16 +253,6 @@ name|org
 operator|.
 name|junit
 operator|.
-name|Ignore
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|junit
-operator|.
 name|Test
 import|;
 end_import
@@ -943,7 +933,7 @@ argument_list|)
 expr_stmt|;
 block|}
 annotation|@
-name|Ignore
+name|Test
 specifier|public
 name|void
 name|testGetBook123TwoApplications
@@ -966,7 +956,7 @@ literal|"http://localhost:"
 operator|+
 name|PORT
 operator|+
-literal|"/application6/thebooks2!/bookstore2/book%20headers"
+literal|"/application6/the%20books2/bookstore2/book%20headers"
 argument_list|)
 expr_stmt|;
 block|}
