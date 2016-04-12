@@ -246,7 +246,7 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-literal|"Trust verification of SAML assertion failed: "
+literal|"Local trust verification of SAML assertion failed: "
 operator|+
 name|ex
 operator|.
