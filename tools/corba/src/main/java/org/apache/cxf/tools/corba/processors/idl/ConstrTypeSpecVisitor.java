@@ -234,6 +234,13 @@ name|wsdlVisitor
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|visitor
+operator|!=
+literal|null
+condition|)
+block|{
 name|visitor
 operator|.
 name|visit
@@ -257,6 +264,7 @@ name|getCorbaType
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

@@ -4323,6 +4323,21 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+if|if
+condition|(
+name|ctx
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|JAXBException
+argument_list|(
+literal|"No ctx found"
+argument_list|)
+throw|;
+block|}
 name|Object
 name|bridge
 init|=

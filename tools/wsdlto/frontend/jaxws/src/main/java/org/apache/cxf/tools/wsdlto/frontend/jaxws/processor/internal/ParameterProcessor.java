@@ -2780,6 +2780,10 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+name|jpIn
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|jpIn
 operator|.
@@ -3102,6 +3106,10 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+name|jpIn
+operator|!=
+literal|null
+operator|&&
 operator|!
 name|jpIn
 operator|.

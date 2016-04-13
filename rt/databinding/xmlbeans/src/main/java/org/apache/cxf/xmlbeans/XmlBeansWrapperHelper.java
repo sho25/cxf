@@ -268,6 +268,13 @@ name|NO_PARAMS
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|newType
+operator|!=
+literal|null
+condition|)
+block|{
 comment|// create the value object
 name|obj
 operator|=
@@ -280,6 +287,7 @@ argument_list|,
 name|NO_PARAMS
 argument_list|)
 expr_stmt|;
+block|}
 break|break;
 block|}
 block|}

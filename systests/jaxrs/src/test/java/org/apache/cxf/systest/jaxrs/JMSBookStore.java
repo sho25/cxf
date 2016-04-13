@@ -856,6 +856,13 @@ finally|finally
 block|{
 try|try
 block|{
+if|if
+condition|(
+name|connection
+operator|!=
+literal|null
+condition|)
+block|{
 name|connection
 operator|.
 name|stop
@@ -866,6 +873,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(

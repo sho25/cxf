@@ -1186,6 +1186,11 @@ argument_list|(
 name|methodSame
 argument_list|)
 expr_stmt|;
+name|assertNotNull
+argument_list|(
+name|m1
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|2

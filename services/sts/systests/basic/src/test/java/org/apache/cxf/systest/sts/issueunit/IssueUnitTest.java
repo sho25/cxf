@@ -1835,6 +1835,10 @@ block|}
 name|assertTrue
 argument_list|(
 name|confirmMethod
+operator|!=
+literal|null
+operator|&&
+name|confirmMethod
 operator|.
 name|contains
 argument_list|(
@@ -2406,6 +2410,10 @@ block|}
 name|assertTrue
 argument_list|(
 name|confirmMethod
+operator|!=
+literal|null
+operator|&&
+name|confirmMethod
 operator|.
 name|contains
 argument_list|(
@@ -2639,6 +2647,10 @@ expr_stmt|;
 block|}
 name|assertTrue
 argument_list|(
+name|confirmMethod
+operator|!=
+literal|null
+operator|&&
 name|confirmMethod
 operator|.
 name|contains
@@ -3079,6 +3091,10 @@ expr_stmt|;
 block|}
 name|assertTrue
 argument_list|(
+name|confirmMethod
+operator|!=
+literal|null
+operator|&&
 name|confirmMethod
 operator|.
 name|contains

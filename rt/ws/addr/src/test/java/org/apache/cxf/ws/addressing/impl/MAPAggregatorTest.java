@@ -4413,6 +4413,10 @@ decl_stmt|;
 if|if
 condition|(
 name|zeroLengthAction
+operator|&&
+name|maps
+operator|!=
+literal|null
 condition|)
 block|{
 name|maps

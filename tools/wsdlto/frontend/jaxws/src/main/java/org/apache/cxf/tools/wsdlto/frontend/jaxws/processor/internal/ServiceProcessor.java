@@ -2441,6 +2441,21 @@ block|}
 block|}
 if|if
 condition|(
+name|jf
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|ToolException
+argument_list|(
+literal|"No Java Interface available"
+argument_list|)
+throw|;
+block|}
+if|if
+condition|(
 name|isSoapBinding
 argument_list|()
 condition|)
