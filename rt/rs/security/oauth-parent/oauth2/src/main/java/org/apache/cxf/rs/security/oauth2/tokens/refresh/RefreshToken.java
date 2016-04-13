@@ -323,7 +323,8 @@ name|String
 name|token
 parameter_list|)
 block|{
-name|accessTokens
+name|getAccessTokens
+argument_list|()
 operator|.
 name|add
 argument_list|(
@@ -340,7 +341,8 @@ name|token
 parameter_list|)
 block|{
 return|return
-name|accessTokens
+name|getAccessTokens
+argument_list|()
 operator|.
 name|remove
 argument_list|(

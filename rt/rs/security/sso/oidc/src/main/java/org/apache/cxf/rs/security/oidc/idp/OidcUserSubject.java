@@ -23,6 +23,16 @@ end_package
 
 begin_import
 import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|Entity
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -82,6 +92,8 @@ import|;
 end_import
 
 begin_class
+annotation|@
+name|Entity
 specifier|public
 class|class
 name|OidcUserSubject
@@ -108,6 +120,37 @@ specifier|public
 name|OidcUserSubject
 parameter_list|()
 block|{              }
+specifier|public
+name|OidcUserSubject
+parameter_list|(
+name|String
+name|login
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|login
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|OidcUserSubject
+parameter_list|(
+name|String
+name|login
+parameter_list|,
+name|String
+name|id
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|login
+argument_list|,
+name|id
+argument_list|)
+expr_stmt|;
+block|}
 specifier|public
 name|OidcUserSubject
 parameter_list|(
