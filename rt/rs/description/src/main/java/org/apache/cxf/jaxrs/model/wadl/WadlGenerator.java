@@ -2486,7 +2486,7 @@ argument_list|(
 name|m
 argument_list|)
 operator|.
-name|getRegisteredJaxbWriter
+name|getDefaultJaxbWriter
 argument_list|()
 else|:
 literal|null
