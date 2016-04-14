@@ -292,6 +292,16 @@ name|Client
 name|client
 parameter_list|)
 block|{
+if|if
+condition|(
+name|client
+operator|.
+name|getResourceOwnerSubject
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
 name|UserSubject
 name|sub
 init|=
@@ -338,6 +348,7 @@ argument_list|(
 name|sub
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 name|persistEntity
 argument_list|(

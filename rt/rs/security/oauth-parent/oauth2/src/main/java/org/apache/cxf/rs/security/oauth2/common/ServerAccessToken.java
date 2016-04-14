@@ -77,6 +77,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|ManyToMany
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|MapKeyColumn
 import|;
 end_import
@@ -88,16 +98,6 @@ operator|.
 name|persistence
 operator|.
 name|MappedSuperclass
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|persistence
-operator|.
-name|OneToMany
 import|;
 end_import
 
@@ -492,7 +492,7 @@ expr_stmt|;
 block|}
 comment|/**      * Returns a list of opaque permissions/scopes      * @return the scopes      */
 annotation|@
-name|OneToMany
+name|ManyToMany
 specifier|public
 name|List
 argument_list|<
