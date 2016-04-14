@@ -770,13 +770,16 @@ argument_list|,
 literal|"xml"
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|Writer
 name|out
 init|=
 operator|new
 name|StringWriter
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|StreamResult
 name|streamResult
 init|=
@@ -809,6 +812,7 @@ operator|.
 name|toString
 argument_list|()
 return|;
+block|}
 block|}
 catch|catch
 parameter_list|(

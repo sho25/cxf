@@ -251,6 +251,11 @@ argument_list|(
 literal|true
 argument_list|)
 expr_stmt|;
+name|configurationStream
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|After

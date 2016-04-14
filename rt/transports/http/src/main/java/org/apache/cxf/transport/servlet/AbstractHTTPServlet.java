@@ -970,6 +970,11 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
@@ -2100,7 +2105,7 @@ argument_list|()
 decl_stmt|;
 name|IOUtils
 operator|.
-name|copy
+name|copyAndCloseInput
 argument_list|(
 name|is
 argument_list|,
