@@ -478,7 +478,7 @@ name|provider
 operator|.
 name|setClient
 argument_list|(
-name|c
+name|c2
 argument_list|)
 expr_stmt|;
 name|Client
