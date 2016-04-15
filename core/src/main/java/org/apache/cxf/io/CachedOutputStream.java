@@ -1249,6 +1249,8 @@ block|}
 else|else
 block|{
 comment|// read the file
+try|try
+init|(
 name|InputStream
 name|fin
 init|=
@@ -1256,7 +1258,8 @@ name|createInputStream
 argument_list|(
 name|tempFile
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 return|return
 name|IOUtils
 operator|.
@@ -1265,6 +1268,7 @@ argument_list|(
 name|fin
 argument_list|)
 return|;
+block|}
 block|}
 block|}
 specifier|public

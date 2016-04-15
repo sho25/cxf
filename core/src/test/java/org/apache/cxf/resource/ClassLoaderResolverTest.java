@@ -378,6 +378,11 @@ argument_list|,
 name|content
 argument_list|)
 expr_stmt|;
+name|reader
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 block|}
 end_class

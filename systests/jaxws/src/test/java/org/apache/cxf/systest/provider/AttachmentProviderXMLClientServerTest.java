@@ -352,6 +352,14 @@ name|getInputStream
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|connection
+operator|.
+name|getInputStream
+argument_list|()
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|int
 name|idx
 init|=

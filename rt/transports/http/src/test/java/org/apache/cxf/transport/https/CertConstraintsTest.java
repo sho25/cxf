@@ -538,6 +538,8 @@ argument_list|(
 name|path
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|ByteArrayInputStream
 name|bin
 init|=
@@ -546,7 +548,8 @@ name|ByteArrayInputStream
 argument_list|(
 name|bytes
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|store
 operator|.
 name|load
@@ -613,6 +616,7 @@ argument_list|(
 name|alias
 argument_list|)
 return|;
+block|}
 block|}
 block|}
 assert|assert
@@ -845,7 +849,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
-specifier|final
+try|try
+init|(
 name|java
 operator|.
 name|io
@@ -861,7 +866,8 @@ name|getResourceAsStream
 argument_list|(
 name|name
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 return|return
 name|StaxUtils
 operator|.
@@ -870,6 +876,7 @@ argument_list|(
 name|inStream
 argument_list|)
 return|;
+block|}
 block|}
 specifier|private
 specifier|static

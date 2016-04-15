@@ -740,6 +740,11 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -894,13 +899,16 @@ name|getInputStream
 argument_list|()
 decl_stmt|;
 comment|// check the cached output stream
+try|try
+init|(
 name|ByteArrayOutputStream
 name|out
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -923,6 +931,7 @@ literal|"<env:Envelope"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 comment|// try streaming a character off the wire
 name|assertEquals
 argument_list|(
@@ -951,6 +960,11 @@ comment|//        Attachment invalid = atts.get("INVALID");
 comment|//        assertNull(invalid.getDataHandler().getInputStream());
 comment|//
 comment|//        assertTrue(attIs instanceof ByteArrayInputStream);
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -1105,13 +1119,16 @@ name|getInputStream
 argument_list|()
 decl_stmt|;
 comment|// check the cached output stream
+try|try
+init|(
 name|ByteArrayOutputStream
 name|out
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -1134,6 +1151,7 @@ literal|"<env:Envelope"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 comment|// try streaming a character off the wire
 name|assertEquals
 argument_list|(
@@ -1159,6 +1177,11 @@ comment|//        Attachment invalid = atts.get("INVALID");
 comment|//        assertNull(invalid.getDataHandler().getInputStream());
 comment|//
 comment|//        assertTrue(attIs instanceof ByteArrayInputStream);
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -1311,13 +1334,16 @@ name|getInputStream
 argument_list|()
 decl_stmt|;
 comment|// check the cached output stream
+try|try
+init|(
 name|ByteArrayOutputStream
 name|out
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -1340,6 +1366,7 @@ literal|"<?xml"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 comment|// try streaming a character off the wire
 name|assertTrue
 argument_list|(
@@ -1411,6 +1438,11 @@ operator|==
 operator|-
 literal|1
 argument_list|)
+expr_stmt|;
+name|is
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
@@ -1560,13 +1592,16 @@ name|getInputStream
 argument_list|()
 decl_stmt|;
 comment|// check the cached output stream
+try|try
+init|(
 name|ByteArrayOutputStream
 name|out
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -1589,6 +1624,7 @@ literal|"<?xml"
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 comment|// try streaming a character off the wire
 name|assertTrue
 argument_list|(
@@ -1668,6 +1704,11 @@ operator|.
 name|hasNext
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|is
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
@@ -1841,13 +1882,16 @@ name|hasNext
 argument_list|()
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|ByteArrayOutputStream
 name|out
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -1866,6 +1910,12 @@ argument_list|()
 operator|>
 literal|1000
 argument_list|)
+expr_stmt|;
+block|}
+name|is
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
@@ -2174,6 +2224,16 @@ name|DefaultHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|inputStreamWithoutAttachments
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+name|rawInputStream
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -2304,6 +2364,11 @@ name|getAttachments
 argument_list|()
 operator|.
 name|size
+argument_list|()
+expr_stmt|;
+name|inputStream
+operator|.
+name|close
 argument_list|()
 expr_stmt|;
 block|}
@@ -2552,6 +2617,11 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
+name|in
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 specifier|private
 name|String
@@ -2563,6 +2633,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|ByteArrayOutputStream
 name|bout
 init|=
@@ -2571,7 +2643,8 @@ name|ByteArrayOutputStream
 argument_list|(
 literal|100
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|byte
 name|b
 index|[]
@@ -2641,6 +2714,7 @@ operator|.
 name|toString
 argument_list|()
 return|;
+block|}
 block|}
 annotation|@
 name|Test
@@ -2876,6 +2950,11 @@ literal|1
 argument_list|,
 name|count
 argument_list|)
+expr_stmt|;
+name|ins
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 block|}
@@ -3165,6 +3244,11 @@ literal|500
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|ins
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 annotation|@
 name|Test
@@ -3385,6 +3469,11 @@ literal|500
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|ins
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|cid
 operator|=
 literal|"1a66bb35-67fc-4e89-9f33-48af417bf9fe-2@apache.org"
@@ -3488,6 +3577,11 @@ argument_list|,
 literal|500
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|ins
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
@@ -3709,6 +3803,11 @@ literal|600
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|ins
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|cid
 operator|=
 literal|"1a66bb35-67fc-4e89-9f33-48af417bf9fe-2@apache.org"
@@ -3812,6 +3911,11 @@ argument_list|,
 literal|600
 argument_list|)
 argument_list|)
+expr_stmt|;
+name|ins
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 block|}

@@ -746,6 +746,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -754,7 +756,8 @@ name|FileInputStream
 argument_list|(
 name|p12File
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|KeyStore
 name|store
 init|=
@@ -793,6 +796,7 @@ name|toCharArray
 argument_list|()
 argument_list|)
 return|;
+block|}
 block|}
 block|}
 end_class
