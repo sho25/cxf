@@ -471,6 +471,8 @@ name|parseCommandLine
 parameter_list|()
 throws|throws
 name|BadUsageException
+throws|,
+name|IOException
 block|{
 if|if
 condition|(
@@ -859,14 +861,16 @@ block|}
 catch|catch
 parameter_list|(
 name|BadUsageException
-name|bue
+decl||
+name|IOException
+name|e
 parameter_list|)
 block|{
 throw|throw
 operator|new
 name|ToolException
 argument_list|(
-name|bue
+name|e
 argument_list|)
 throw|;
 block|}

@@ -37,6 +37,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|InputStream
 import|;
 end_import
@@ -426,6 +436,8 @@ name|args
 parameter_list|)
 throws|throws
 name|BadUsageException
+throws|,
+name|IOException
 block|{
 return|return
 name|parseArguments
@@ -447,6 +459,8 @@ name|args
 parameter_list|)
 throws|throws
 name|BadUsageException
+throws|,
+name|IOException
 block|{
 if|if
 condition|(
@@ -926,13 +940,16 @@ argument_list|)
 argument_list|)
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|OutputStream
 name|os
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|serializer
 operator|.
 name|transform
@@ -960,6 +977,7 @@ name|toString
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -1001,6 +1019,8 @@ name|errors
 parameter_list|)
 throws|throws
 name|BadUsageException
+throws|,
+name|IOException
 block|{
 try|try
 block|{
@@ -1049,16 +1069,21 @@ name|getUsage
 parameter_list|()
 throws|throws
 name|TransformerException
+throws|,
+name|IOException
 block|{
 comment|// REVISIT: style usage document into a form more readily output as a
 comment|// usage message
+try|try
+init|(
 name|ByteArrayOutputStream
 name|baos
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|InputStream
 name|in
 init|=
@@ -1086,22 +1111,28 @@ name|toString
 argument_list|()
 return|;
 block|}
+block|}
 specifier|public
 name|String
 name|getDetailedUsage
 parameter_list|()
 throws|throws
 name|TransformerException
+throws|,
+name|IOException
 block|{
 comment|// REVISIT: style usage document into a form more readily output as a
 comment|// usage message
+try|try
+init|(
 name|ByteArrayOutputStream
 name|baos
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|toolspec
 operator|.
 name|transform
@@ -1124,20 +1155,31 @@ name|toString
 argument_list|()
 return|;
 block|}
+block|}
 specifier|public
 name|String
 name|getFormattedDetailedUsage
 parameter_list|()
 throws|throws
 name|TransformerException
+throws|,
+name|IOException
 block|{
+name|String
+name|usage
+init|=
+literal|null
+decl_stmt|;
+try|try
+init|(
 name|ByteArrayOutputStream
 name|baos
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|toolspec
 operator|.
 name|transform
@@ -1153,14 +1195,14 @@ argument_list|,
 name|baos
 argument_list|)
 expr_stmt|;
-name|String
 name|usage
-init|=
+operator|=
 name|baos
 operator|.
 name|toString
 argument_list|()
-decl_stmt|;
+expr_stmt|;
+block|}
 comment|// we use the following pattern to format usage
 comment|// |-------|-options|------|description-----------------|
 comment|// before option white space size is 7

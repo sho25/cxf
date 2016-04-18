@@ -25,6 +25,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|StringTokenizer
@@ -537,6 +547,8 @@ specifier|public
 name|void
 name|testInvalidOption
 parameter_list|()
+throws|throws
+name|IOException
 block|{
 try|try
 block|{
@@ -663,6 +675,8 @@ specifier|public
 name|void
 name|testMissingOption
 parameter_list|()
+throws|throws
+name|IOException
 block|{
 try|try
 block|{
@@ -777,6 +791,8 @@ specifier|public
 name|void
 name|testMissingArgument
 parameter_list|()
+throws|throws
+name|IOException
 block|{
 try|try
 block|{
@@ -891,6 +907,8 @@ specifier|public
 name|void
 name|testDuplicateArgument
 parameter_list|()
+throws|throws
+name|IOException
 block|{
 try|try
 block|{
@@ -985,6 +1003,8 @@ specifier|public
 name|void
 name|testUnexpectedOption
 parameter_list|()
+throws|throws
+name|IOException
 block|{
 try|try
 block|{
@@ -1101,6 +1121,8 @@ specifier|public
 name|void
 name|testInvalidPackageName
 parameter_list|()
+throws|throws
+name|IOException
 block|{
 try|try
 block|{
