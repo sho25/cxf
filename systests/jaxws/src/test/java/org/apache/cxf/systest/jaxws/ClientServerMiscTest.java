@@ -5791,6 +5791,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 comment|//Check to make sure SESSIONID is a string
+try|try
+init|(
 name|BufferedReader
 name|reader
 init|=
@@ -5803,7 +5805,8 @@ argument_list|(
 name|str
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|String
 name|s
 init|=
@@ -5864,6 +5867,7 @@ operator|.
 name|readLine
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 comment|//wsdl is correct, now make sure we can actually invoke it
 name|QName

@@ -1296,10 +1296,6 @@ expr_stmt|;
 name|InputStream
 name|bis
 init|=
-literal|null
-decl_stmt|;
-name|bis
-operator|=
 name|handler
 operator|.
 name|getDataSource
@@ -1307,7 +1303,7 @@ argument_list|()
 operator|.
 name|getInputStream
 argument_list|()
-expr_stmt|;
+decl_stmt|;
 name|byte
 name|b
 index|[]
@@ -1345,6 +1341,11 @@ literal|"testfoobar"
 argument_list|,
 name|string
 argument_list|)
+expr_stmt|;
+name|bis
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@
