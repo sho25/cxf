@@ -1412,9 +1412,23 @@ name|Long
 name|lifetime
 parameter_list|)
 block|{
+comment|// At some point -1 was used to indicate an unlimited lifetime
+comment|// with 0 being introduced instead at a later stage.
+comment|// In theory there still could be a code around initializing the tokens with -1.
+comment|// Treating -1 and 0 the same way is reasonable and it also makes it easier to
+comment|// deal with the token introspection responses with no issuedAt time reported
 return|return
 name|lifetime
-operator|!=
+operator|==
+literal|null
+operator|||
+name|lifetime
+argument_list|<
+operator|-
+literal|1
+operator|||
+name|lifetime
+argument_list|>
 literal|0L
 operator|&&
 name|issuedAt
