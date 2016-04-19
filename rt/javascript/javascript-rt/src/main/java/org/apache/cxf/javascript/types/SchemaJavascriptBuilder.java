@@ -1942,7 +1942,7 @@ name|utils
 operator|.
 name|startIf
 argument_list|(
-literal|"elementName != null"
+literal|"elementName !== null"
 argument_list|)
 expr_stmt|;
 name|utils
@@ -2043,7 +2043,7 @@ name|utils
 operator|.
 name|startIf
 argument_list|(
-literal|"elementName != null"
+literal|"elementName !== null"
 argument_list|)
 expr_stmt|;
 name|utils
