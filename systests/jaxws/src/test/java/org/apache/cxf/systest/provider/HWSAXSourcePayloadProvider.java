@@ -709,6 +709,8 @@ argument_list|,
 literal|"xml"
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|FileOutputStream
 name|out
 init|=
@@ -717,7 +719,8 @@ name|FileOutputStream
 argument_list|(
 name|file
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|XMLStreamWriter
 name|writer
 init|=
@@ -747,6 +750,7 @@ expr_stmt|;
 return|return
 name|file
 return|;
+block|}
 block|}
 block|}
 end_class

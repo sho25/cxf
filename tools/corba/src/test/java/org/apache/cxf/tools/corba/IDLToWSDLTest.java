@@ -1067,6 +1067,8 @@ argument_list|,
 name|actual
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|actualFileStream
 init|=
@@ -1075,16 +1077,17 @@ name|FileInputStream
 argument_list|(
 name|actualWsdlFile
 argument_list|)
-decl_stmt|;
+init|;
 name|InputStream
 name|expectedFileStream
-init|=
+operator|=
 operator|new
 name|FileInputStream
 argument_list|(
 name|expectedWsdlFile
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|XMLInputFactory
 name|factory
 init|=
@@ -1122,6 +1125,7 @@ argument_list|,
 name|actualStream
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 comment|// test "-x<schema-namespace>"
 specifier|public
