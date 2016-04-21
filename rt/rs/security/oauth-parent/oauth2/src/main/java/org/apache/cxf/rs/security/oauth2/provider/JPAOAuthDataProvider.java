@@ -69,6 +69,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|helpers
+operator|.
+name|CastUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|rs
 operator|.
 name|security
@@ -417,6 +431,10 @@ name|sub
 parameter_list|)
 block|{
 return|return
+name|CastUtils
+operator|.
+name|cast
+argument_list|(
 name|getTokensQuery
 argument_list|(
 name|c
@@ -426,6 +444,7 @@ argument_list|)
 operator|.
 name|getResultList
 argument_list|()
+argument_list|)
 return|;
 block|}
 annotation|@
@@ -862,7 +881,7 @@ block|}
 specifier|protected
 name|TypedQuery
 argument_list|<
-name|ServerAccessToken
+name|BearerAccessToken
 argument_list|>
 name|getTokensQuery
 parameter_list|(
@@ -895,7 +914,7 @@ name|BEARER_TOKEN_TABLE_NAME
 operator|+
 literal|" t"
 argument_list|,
-name|ServerAccessToken
+name|BearerAccessToken
 operator|.
 name|class
 argument_list|)
@@ -927,7 +946,7 @@ argument_list|()
 operator|+
 literal|"'"
 argument_list|,
-name|ServerAccessToken
+name|BearerAccessToken
 operator|.
 name|class
 argument_list|)
@@ -959,7 +978,7 @@ argument_list|()
 operator|+
 literal|"'"
 argument_list|,
-name|ServerAccessToken
+name|BearerAccessToken
 operator|.
 name|class
 argument_list|)
@@ -992,7 +1011,7 @@ argument_list|()
 operator|+
 literal|"'"
 argument_list|,
-name|ServerAccessToken
+name|BearerAccessToken
 operator|.
 name|class
 argument_list|)
