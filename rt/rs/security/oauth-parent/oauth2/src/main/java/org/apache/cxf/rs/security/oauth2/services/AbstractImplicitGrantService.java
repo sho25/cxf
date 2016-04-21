@@ -418,6 +418,21 @@ name|ServerAccessToken
 name|preAuthorizedToken
 parameter_list|)
 block|{
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"STATE: "
+operator|+
+operator|(
+name|state
+operator|==
+literal|null
+operator|)
+argument_list|)
+expr_stmt|;
 name|StringBuilder
 name|sb
 init|=
