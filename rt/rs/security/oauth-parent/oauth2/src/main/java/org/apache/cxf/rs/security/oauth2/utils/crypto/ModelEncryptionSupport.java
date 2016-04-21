@@ -1507,7 +1507,7 @@ argument_list|)
 decl_stmt|;
 name|perm
 operator|.
-name|setDefault
+name|setDefaultPermission
 argument_list|(
 name|Boolean
 operator|.
@@ -1926,7 +1926,7 @@ name|append
 argument_list|(
 name|p
 operator|.
-name|isDefault
+name|isDefaultPermission
 argument_list|()
 argument_list|)
 expr_stmt|;

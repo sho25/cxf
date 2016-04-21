@@ -1742,7 +1742,7 @@ condition|)
 block|{
 name|perm
 operator|.
-name|setDefault
+name|setDefaultPermission
 argument_list|(
 literal|true
 argument_list|)
