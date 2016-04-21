@@ -43,6 +43,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -537,6 +549,26 @@ argument_list|)
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"The grant type {} is not supported for the client"
+argument_list|,
+name|params
+operator|.
+name|getFirst
+argument_list|(
+name|OAuthConstants
+operator|.
+name|GRANT_TYPE
+argument_list|)
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -592,6 +624,13 @@ operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"No Grant Handler found"
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -677,6 +716,13 @@ operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"No access token was created"
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -812,6 +858,13 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Error validating the audience parameter"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthServiceException

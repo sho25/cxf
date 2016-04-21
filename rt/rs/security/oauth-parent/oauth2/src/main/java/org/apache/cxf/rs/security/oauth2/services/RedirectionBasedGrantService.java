@@ -73,6 +73,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|logging
+operator|.
+name|Level
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -606,17 +618,6 @@ name|supportedGrantType
 operator|=
 name|supportedGrantType
 expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"SUPP: "
-operator|+
-name|supportedGrantType
-argument_list|)
-expr_stmt|;
 block|}
 comment|/**      * Handles the initial authorization request by preparing       * the authorization challenge data and returning it to the user.      * Typically the data are expected to be presented in the HTML form       * @return the authorization data      */
 annotation|@
@@ -752,15 +753,6 @@ argument_list|(
 name|params
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"HERE1"
-argument_list|)
-expr_stmt|;
 comment|// Create a UserSubject representing the end user
 name|UserSubject
 name|userSubject
@@ -825,15 +817,6 @@ expr_stmt|;
 block|}
 comment|// Validate the provided request URI, if any, against the ones Client provided
 comment|// during the registration
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"HERE2"
-argument_list|)
-expr_stmt|;
 name|String
 name|redirectUri
 init|=
@@ -851,15 +834,6 @@ name|REDIRECT_URI
 argument_list|)
 argument_list|)
 decl_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"HERE3"
-argument_list|)
-expr_stmt|;
 comment|// Enforce the client confidentiality requirements
 if|if
 condition|(
@@ -879,6 +853,13 @@ name|supportedGrantType
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"The grant type is not supported"
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -892,15 +873,6 @@ name|UNAUTHORIZED_CLIENT
 argument_list|)
 return|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"HERE4"
-argument_list|)
-expr_stmt|;
 comment|// Check response_type
 name|String
 name|responseType
@@ -930,6 +902,13 @@ name|responseType
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"The response type is null or not supported"
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -943,15 +922,6 @@ name|UNSUPPORTED_RESPONSE_TYPE
 argument_list|)
 return|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"HERE5"
-argument_list|)
-expr_stmt|;
 comment|// Get the requested scopes
 name|String
 name|providedScope
@@ -997,6 +967,19 @@ name|OAuthServiceException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"Error parsing scopes"
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -1010,15 +993,6 @@ name|INVALID_SCOPE
 argument_list|)
 return|;
 block|}
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"HERE6"
-argument_list|)
-expr_stmt|;
 comment|// Convert the requested scopes to OAuthPermission instances
 name|List
 argument_list|<
@@ -1049,6 +1023,19 @@ name|OAuthServiceException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINE
+argument_list|,
+literal|"Error converting scopes into OAuthPermissions"
+argument_list|,
+name|ex
+argument_list|)
+expr_stmt|;
 return|return
 name|createErrorResponse
 argument_list|(
@@ -1093,6 +1080,13 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"Error validating audience parameter"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthServiceException

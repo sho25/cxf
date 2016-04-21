@@ -516,11 +516,6 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 block|{
-name|Client
-name|client
-init|=
-literal|null
-decl_stmt|;
 if|if
 condition|(
 name|clientId
@@ -528,18 +523,24 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|client
-operator|=
+return|return
 name|dataProvider
 operator|.
 name|getClient
 argument_list|(
 name|clientId
 argument_list|)
-expr_stmt|;
+return|;
 block|}
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"No valid client found as the given clientId is null"
+argument_list|)
+expr_stmt|;
 return|return
-name|client
+literal|null
 return|;
 block|}
 comment|/**      * HTTPS is the default transport for OAuth 2.0 services.      * By default this method will issue a warning for open       * endpoints      */

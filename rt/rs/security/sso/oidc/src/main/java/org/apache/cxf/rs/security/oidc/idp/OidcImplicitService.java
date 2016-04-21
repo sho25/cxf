@@ -494,6 +494,13 @@ operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|fine
+argument_list|(
+literal|"A nonce is required for the Implicit flow"
+argument_list|)
+expr_stmt|;
 throw|throw
 operator|new
 name|OAuthServiceException
