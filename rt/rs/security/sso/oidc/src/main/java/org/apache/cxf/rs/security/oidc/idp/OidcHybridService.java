@@ -426,6 +426,13 @@ name|state
 operator|.
 name|getResponseType
 argument_list|()
+operator|!=
+literal|null
+operator|&&
+name|state
+operator|.
+name|getResponseType
+argument_list|()
 operator|.
 name|startsWith
 argument_list|(
