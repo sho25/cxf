@@ -392,6 +392,24 @@ argument_list|(
 name|e
 argument_list|)
 expr_stmt|;
+try|try
+block|{
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|1000
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e1
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
 block|}
 block|}
 block|}
