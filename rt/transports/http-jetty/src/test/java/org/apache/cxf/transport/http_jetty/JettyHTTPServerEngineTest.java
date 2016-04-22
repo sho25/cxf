@@ -2582,13 +2582,16 @@ operator|.
 name|getInputStream
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|ByteArrayOutputStream
 name|buffer
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -2604,6 +2607,7 @@ operator|.
 name|toString
 argument_list|()
 return|;
+block|}
 block|}
 block|}
 end_class

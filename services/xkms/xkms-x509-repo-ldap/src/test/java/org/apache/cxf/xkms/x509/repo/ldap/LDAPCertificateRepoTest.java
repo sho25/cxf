@@ -55,6 +55,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|IOException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|net
 operator|.
 name|URISyntaxException
@@ -468,6 +478,11 @@ argument_list|(
 name|fis
 argument_list|)
 decl_stmt|;
+name|fis
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 name|UseKeyWithType
 name|key
 init|=
@@ -841,6 +856,8 @@ throws|throws
 name|FileNotFoundException
 throws|,
 name|CertificateException
+throws|,
+name|IOException
 block|{
 name|File
 name|certFile
@@ -861,6 +878,8 @@ name|exists
 argument_list|()
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|FileInputStream
 name|fis
 init|=
@@ -869,7 +888,8 @@ name|FileInputStream
 argument_list|(
 name|certFile
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|CertificateFactory
 name|factory
 init|=
@@ -891,6 +911,7 @@ argument_list|(
 name|fis
 argument_list|)
 return|;
+block|}
 block|}
 block|}
 end_class

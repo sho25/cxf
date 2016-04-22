@@ -1339,6 +1339,8 @@ operator|new
 name|Properties
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -1348,7 +1350,8 @@ name|propertiesLocation
 argument_list|,
 name|bus
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|props
 operator|.
 name|load
@@ -1356,6 +1359,7 @@ argument_list|(
 name|is
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|props
 return|;
