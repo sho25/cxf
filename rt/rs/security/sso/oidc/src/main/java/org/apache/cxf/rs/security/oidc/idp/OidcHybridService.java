@@ -243,7 +243,7 @@ argument_list|(
 name|hybridOnly
 argument_list|)
 argument_list|,
-literal|"Hybrid"
+literal|"hybrid"
 argument_list|)
 expr_stmt|;
 block|}
