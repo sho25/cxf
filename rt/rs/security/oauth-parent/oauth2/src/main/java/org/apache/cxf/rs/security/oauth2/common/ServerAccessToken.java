@@ -113,16 +113,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|persistence
-operator|.
-name|OneToOne
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -552,7 +542,7 @@ expr_stmt|;
 block|}
 comment|/**      * Returns a subject capturing the login name       * the end user used to login to the resource server      * when authorizing a given client request      * @return UserSubject      */
 annotation|@
-name|OneToOne
+name|ManyToOne
 specifier|public
 name|UserSubject
 name|getSubject

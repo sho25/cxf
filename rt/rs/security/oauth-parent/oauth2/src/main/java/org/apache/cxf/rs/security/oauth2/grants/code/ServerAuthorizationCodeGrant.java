@@ -105,16 +105,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|persistence
-operator|.
-name|OneToOne
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|apache
@@ -474,7 +464,7 @@ expr_stmt|;
 block|}
 comment|/**      * Gets the user subject representing the end user      * @return the subject      */
 annotation|@
-name|OneToOne
+name|ManyToOne
 specifier|public
 name|UserSubject
 name|getSubject

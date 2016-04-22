@@ -107,6 +107,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|ManyToOne
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|MapKeyColumn
 import|;
 end_import
@@ -676,7 +686,7 @@ expr_stmt|;
 block|}
 comment|/**      * Get the {@link UserSubject} representing the resource owner       * who has registered this client      * @return the resource owner user subject      */
 annotation|@
-name|OneToOne
+name|ManyToOne
 specifier|public
 name|UserSubject
 name|getResourceOwnerSubject
