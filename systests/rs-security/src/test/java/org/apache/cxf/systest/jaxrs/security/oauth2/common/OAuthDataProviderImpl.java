@@ -294,6 +294,16 @@ argument_list|()
 operator|.
 name|add
 argument_list|(
+literal|"hybrid"
+argument_list|)
+expr_stmt|;
+name|client
+operator|.
+name|getAllowedGrantTypes
+argument_list|()
+operator|.
+name|add
+argument_list|(
 literal|"password"
 argument_list|)
 expr_stmt|;
