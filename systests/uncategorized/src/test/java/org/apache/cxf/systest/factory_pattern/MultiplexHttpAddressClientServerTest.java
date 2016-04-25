@@ -941,6 +941,8 @@ operator|.
 name|openConnection
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|BufferedReader
 name|br
 init|=
@@ -956,7 +958,8 @@ name|getInputStream
 argument_list|()
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 while|while
 condition|(
 name|br
@@ -999,6 +1002,7 @@ block|{
 return|return
 literal|true
 return|;
+block|}
 block|}
 block|}
 return|return

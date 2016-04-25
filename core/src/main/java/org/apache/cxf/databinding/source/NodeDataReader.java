@@ -396,14 +396,15 @@ argument_list|)
 condition|)
 block|{
 try|try
-block|{
+init|(
 name|CachedOutputStream
 name|out
 init|=
 operator|new
 name|CachedOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|StaxUtils
 operator|.
 name|writeTo

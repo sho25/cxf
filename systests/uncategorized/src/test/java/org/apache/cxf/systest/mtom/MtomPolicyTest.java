@@ -1070,13 +1070,16 @@ operator|.
 name|next
 argument_list|()
 decl_stmt|;
+try|try
+init|(
 name|ByteArrayOutputStream
 name|out
 init|=
 operator|new
 name|ByteArrayOutputStream
 argument_list|()
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -1092,11 +1095,6 @@ argument_list|,
 name|out
 argument_list|)
 expr_stmt|;
-name|out
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|27364
@@ -1107,6 +1105,7 @@ name|size
 argument_list|()
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

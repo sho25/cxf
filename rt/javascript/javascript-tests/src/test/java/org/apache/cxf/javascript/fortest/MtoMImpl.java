@@ -189,14 +189,15 @@ argument_list|(
 literal|"org/apache/cxf/javascript/cxf-utils.js"
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|StringWriter
 name|sw
 init|=
 operator|new
 name|StringWriter
 argument_list|()
-decl_stmt|;
-try|try
+init|)
 block|{
 name|InputStreamReader
 name|isr
