@@ -3237,6 +3237,25 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+if|if
+condition|(
+name|refList
+operator|!=
+literal|null
+operator|||
+operator|(
+name|attachments
+operator|!=
+literal|null
+operator|&&
+operator|!
+name|attachments
+operator|.
+name|isEmpty
+argument_list|()
+operator|)
+condition|)
+block|{
 name|this
 operator|.
 name|addEncryptedKeyElement
@@ -3244,6 +3263,7 @@ argument_list|(
 name|encryptedKeyElement
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{
@@ -3259,6 +3279,25 @@ argument_list|,
 name|encrParts
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+name|refList
+operator|!=
+literal|null
+operator|||
+operator|(
+name|attachments
+operator|!=
+literal|null
+operator|&&
+operator|!
+name|attachments
+operator|.
+name|isEmpty
+argument_list|()
+operator|)
+condition|)
+block|{
 name|this
 operator|.
 name|addEncryptedKeyElement
@@ -3266,6 +3305,7 @@ argument_list|(
 name|encryptedKeyElement
 argument_list|)
 expr_stmt|;
+block|}
 comment|// Add internal refs
 if|if
 condition|(
@@ -4218,6 +4258,15 @@ argument_list|,
 name|secHeader
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|referenceList
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 comment|// Add elements to header
 name|addDerivedKeyElement
 argument_list|(
@@ -4283,6 +4332,7 @@ operator|.
 name|getSignatureId
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
@@ -4420,6 +4470,15 @@ argument_list|,
 name|secHeader
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|referenceList
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 comment|//Do signature
 if|if
 condition|(
@@ -4514,6 +4573,7 @@ operator|.
 name|getId
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 block|}
 specifier|private

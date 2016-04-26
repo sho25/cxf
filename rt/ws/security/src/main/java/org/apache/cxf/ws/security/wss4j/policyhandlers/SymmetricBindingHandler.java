@@ -4737,6 +4737,15 @@ argument_list|,
 name|secHeader
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|referenceList
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 comment|//Add elements to header
 name|Element
 name|el
@@ -4806,6 +4815,10 @@ name|dkSign
 operator|.
 name|getSignatureValue
 argument_list|()
+return|;
+block|}
+return|return
+literal|null
 return|;
 block|}
 specifier|private
@@ -5541,6 +5554,15 @@ argument_list|,
 name|secHeader
 argument_list|)
 decl_stmt|;
+if|if
+condition|(
+operator|!
+name|referenceList
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
 comment|//Do signature
 if|if
 condition|(
@@ -5596,6 +5618,10 @@ name|sig
 operator|.
 name|getSignatureValue
 argument_list|()
+return|;
+block|}
+return|return
+literal|null
 return|;
 block|}
 block|}
