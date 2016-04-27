@@ -397,6 +397,8 @@ argument_list|,
 literal|".wsdl"
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|FileOutputStream
 name|output
 init|=
@@ -405,7 +407,8 @@ name|FileOutputStream
 argument_list|(
 name|tempFile
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copyAndCloseInput
@@ -419,11 +422,7 @@ argument_list|,
 name|output
 argument_list|)
 expr_stmt|;
-name|output
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 return|return
 name|tempFile
 return|;

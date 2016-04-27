@@ -147,6 +147,8 @@ parameter_list|)
 throws|throws
 name|IOException
 block|{
+try|try
+init|(
 name|BufferedReader
 name|br
 init|=
@@ -159,7 +161,8 @@ argument_list|(
 name|is
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|String
 name|line
 init|=
@@ -255,11 +258,7 @@ name|readLine
 argument_list|()
 expr_stmt|;
 block|}
-name|br
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 specifier|public
 name|void

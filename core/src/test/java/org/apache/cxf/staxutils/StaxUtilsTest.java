@@ -678,6 +678,11 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
+name|baos
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 comment|// re-read the input xml doc to a string
 name|InputStreamReader
 name|inputStreamReader
@@ -758,6 +763,11 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
+name|stringWriter
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 comment|// seach for the first begin of "<soap:Envelope" to escape the apache licenses header
 name|int
 name|beginIndex
