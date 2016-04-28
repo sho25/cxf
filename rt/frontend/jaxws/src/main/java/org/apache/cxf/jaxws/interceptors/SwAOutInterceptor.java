@@ -1316,15 +1316,6 @@ block|{
 comment|// TODO: make this streamable. This is one of my pet
 comment|// peeves in JAXB RI as well, so if you fix this, submit the
 comment|// code to the JAXB RI as well (see RuntimeBuiltinLeafInfoImpl)! - DD
-name|ByteArrayOutputStream
-name|bos
-init|=
-operator|new
-name|ByteArrayOutputStream
-argument_list|(
-literal|2048
-argument_list|)
-decl_stmt|;
 name|Iterator
 argument_list|<
 name|ImageWriter
@@ -1355,6 +1346,16 @@ name|next
 argument_list|()
 decl_stmt|;
 try|try
+init|(
+name|ByteArrayOutputStream
+name|bos
+init|=
+operator|new
+name|ByteArrayOutputStream
+argument_list|(
+literal|2048
+argument_list|)
+init|)
 block|{
 name|BufferedImage
 name|bimg
@@ -1406,10 +1407,22 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+name|dh
+operator|=
+operator|new
+name|DataHandler
+argument_list|(
+operator|new
+name|ByteDataSource
+argument_list|(
 name|bos
 operator|.
-name|close
+name|toByteArray
 argument_list|()
+argument_list|,
+name|ct
+argument_list|)
+argument_list|)
 expr_stmt|;
 block|}
 catch|catch
@@ -1455,23 +1468,6 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-name|dh
-operator|=
-operator|new
-name|DataHandler
-argument_list|(
-operator|new
-name|ByteDataSource
-argument_list|(
-name|bos
-operator|.
-name|toByteArray
-argument_list|()
-argument_list|,
-name|ct
-argument_list|)
-argument_list|)
-expr_stmt|;
 block|}
 elseif|else
 if|if
@@ -1775,6 +1771,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+init|(
 name|ByteArrayOutputStream
 name|bos
 init|=
@@ -1783,7 +1781,8 @@ name|ByteArrayOutputStream
 argument_list|(
 literal|2048
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|IOUtils
 operator|.
 name|copy
@@ -1811,6 +1810,7 @@ argument_list|,
 name|ct
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 else|else
 block|{

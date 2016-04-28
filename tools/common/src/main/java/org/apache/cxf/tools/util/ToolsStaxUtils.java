@@ -227,6 +227,8 @@ literal|"sequence"
 block|}
 argument_list|)
 decl_stmt|;
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -239,7 +241,8 @@ argument_list|(
 name|source
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|XMLStreamReader
 name|reader
 init|=
@@ -499,6 +502,7 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+block|}
 return|return
 name|tags
 return|;
@@ -548,6 +552,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -560,7 +566,8 @@ argument_list|(
 name|source
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 return|return
 name|getTagTree
 argument_list|(
@@ -571,6 +578,7 @@ argument_list|,
 literal|null
 argument_list|)
 return|;
+block|}
 block|}
 specifier|public
 specifier|static
@@ -602,6 +610,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|InputStream
 name|is
 init|=
@@ -614,7 +624,8 @@ argument_list|(
 name|source
 argument_list|)
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 return|return
 name|getTagTree
 argument_list|(
@@ -625,6 +636,7 @@ argument_list|,
 name|types
 argument_list|)
 return|;
+block|}
 block|}
 specifier|public
 specifier|static

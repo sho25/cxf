@@ -344,6 +344,8 @@ operator|+
 literal|"]"
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|ByteArrayInputStream
 name|bais
 init|=
@@ -355,7 +357,8 @@ operator|.
 name|toByteArray
 argument_list|()
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|msg
 operator|=
 literal|"<ok/>"
@@ -389,6 +392,7 @@ operator|+
 literal|" parts"
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 operator|new
 name|ByteArrayDataSource

@@ -13418,6 +13418,8 @@ condition|)
 block|{
 return|return;
 block|}
+try|try
+init|(
 name|ByteArrayInputStream
 name|bis
 init|=
@@ -13427,7 +13429,8 @@ name|loadIntoBAIS
 argument_list|(
 name|is
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|XMLSource
 name|source
 init|=
@@ -13521,6 +13524,7 @@ argument_list|(
 name|schemaValue
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 end_function
 
