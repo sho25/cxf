@@ -206,7 +206,7 @@ argument_list|)
 expr_stmt|;
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Registered blueprint namespace handler for "
 operator|+
