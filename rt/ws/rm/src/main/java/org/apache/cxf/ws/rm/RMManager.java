@@ -651,6 +651,24 @@ name|rm
 operator|.
 name|persistence
 operator|.
+name|PersistenceUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|rm
+operator|.
+name|persistence
+operator|.
 name|RMMessage
 import|;
 end_import
@@ -3820,23 +3838,16 @@ expr_stmt|;
 block|}
 try|try
 block|{
-name|message
+comment|// RMMessage is stored in a serialized way, therefore
+comment|// RMMessage content must be splitted into soap root message
+comment|// and attachments
+name|PersistenceUtils
 operator|.
-name|put
-argument_list|(
-name|RMMessageConstants
-operator|.
-name|SAVED_CONTENT
-argument_list|,
-name|RewindableInputStream
-operator|.
-name|makeRewindable
+name|decodeRMContent
 argument_list|(
 name|m
-operator|.
-name|getContent
-argument_list|()
-argument_list|)
+argument_list|,
+name|message
 argument_list|)
 expr_stmt|;
 name|RMContextUtils

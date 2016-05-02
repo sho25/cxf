@@ -481,6 +481,24 @@ name|rm
 operator|.
 name|persistence
 operator|.
+name|PersistenceUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ws
+operator|.
+name|rm
+operator|.
+name|persistence
+operator|.
 name|RMMessage
 import|;
 end_import
@@ -1950,10 +1968,16 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|msg
+comment|// serializes the message content and the attachments into
+comment|// the RMMessage content
+name|PersistenceUtils
 operator|.
-name|setContent
+name|encodeRMContent
 argument_list|(
+name|msg
+argument_list|,
+name|message
+argument_list|,
 name|bis
 argument_list|)
 expr_stmt|;

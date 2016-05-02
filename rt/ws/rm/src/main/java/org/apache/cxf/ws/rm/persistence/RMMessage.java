@@ -58,6 +58,7 @@ specifier|private
 name|InputStream
 name|content
 decl_stmt|;
+comment|//TODO remove attachments when we remove the deprecated attachments related methods
 specifier|private
 name|List
 argument_list|<
@@ -69,6 +70,10 @@ name|Collections
 operator|.
 name|emptyList
 argument_list|()
+decl_stmt|;
+specifier|private
+name|String
+name|contentType
 decl_stmt|;
 specifier|private
 name|long
@@ -150,7 +155,9 @@ return|return
 name|content
 return|;
 block|}
-comment|/**      * Returns the list of attachments.      * @return list (non-null)      */
+comment|/**      * Returns the list of attachments.      * @return list (non-null)      * @deprecated not used as the optional attachments are stored in the content      */
+annotation|@
+name|Deprecated
 specifier|public
 name|List
 argument_list|<
@@ -163,7 +170,9 @@ return|return
 name|attachments
 return|;
 block|}
-comment|/**      * Set the list of attachments.      * @param attaches (non-null)      */
+comment|/**      * Set the list of attachments.      * @param attaches (non-null)      * @deprecated not used as the optional attachments are stored in the content      */
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setAttachments
@@ -183,6 +192,32 @@ assert|;
 name|attachments
 operator|=
 name|attaches
+expr_stmt|;
+block|}
+comment|/**      * Returns the content type of the message content      * @return      */
+specifier|public
+name|String
+name|getContentType
+parameter_list|()
+block|{
+return|return
+name|contentType
+return|;
+block|}
+comment|/**      * Set the content type of the RMMessage      * @param contentType      */
+specifier|public
+name|void
+name|setContentType
+parameter_list|(
+name|String
+name|contentType
+parameter_list|)
+block|{
+name|this
+operator|.
+name|contentType
+operator|=
+name|contentType
 expr_stmt|;
 block|}
 block|}
