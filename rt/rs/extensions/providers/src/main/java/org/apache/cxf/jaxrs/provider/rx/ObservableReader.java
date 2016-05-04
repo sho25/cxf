@@ -11,11 +11,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|systest
-operator|.
 name|jaxrs
 operator|.
-name|reactive
+name|provider
+operator|.
+name|rx
 package|;
 end_package
 
