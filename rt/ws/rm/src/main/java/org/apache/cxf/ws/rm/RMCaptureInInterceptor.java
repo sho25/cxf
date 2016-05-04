@@ -285,19 +285,7 @@ argument_list|(
 literal|"Capturing the original RM message"
 argument_list|)
 expr_stmt|;
-name|RewindableInputStream
-name|ris
-init|=
-name|RewindableInputStream
-operator|.
-name|makeRewindable
-argument_list|(
-name|saved
-operator|.
-name|getInputStream
-argument_list|()
-argument_list|)
-decl_stmt|;
+comment|//RewindableInputStream ris = RewindableInputStream.makeRewindable(saved.getInputStream());
 name|message
 operator|.
 name|setContent
@@ -306,7 +294,10 @@ name|InputStream
 operator|.
 name|class
 argument_list|,
-name|ris
+name|saved
+operator|.
+name|getInputStream
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|message
@@ -317,7 +308,7 @@ name|RMMessageConstants
 operator|.
 name|SAVED_CONTENT
 argument_list|,
-name|ris
+name|saved
 argument_list|)
 expr_stmt|;
 block|}

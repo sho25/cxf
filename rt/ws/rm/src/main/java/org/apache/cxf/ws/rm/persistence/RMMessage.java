@@ -49,13 +49,27 @@ name|List
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|io
+operator|.
+name|CachedOutputStream
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
 name|RMMessage
 block|{
 specifier|private
-name|InputStream
+name|CachedOutputStream
 name|content
 decl_stmt|;
 comment|//TODO remove attachments when we remove the deprecated attachments related methods
@@ -107,18 +121,18 @@ operator|=
 name|mn
 expr_stmt|;
 block|}
-comment|/**      * Sets the message content using the input stream.      * @param in      */
+comment|/**      * Sets the message content using the CachedOutputStream.class.      * @param in      */
 specifier|public
 name|void
 name|setContent
 parameter_list|(
-name|InputStream
-name|in
+name|CachedOutputStream
+name|cos
 parameter_list|)
 block|{
 name|content
 operator|=
-name|in
+name|cos
 expr_stmt|;
 block|}
 comment|/**      * Returns the to address of this message.      * @return the to address      */
@@ -145,9 +159,9 @@ operator|=
 name|t
 expr_stmt|;
 block|}
-comment|/**      * Returns the input stream of this message content.      * @return      * @throws IOException      */
+comment|/**      * Returns the CachedOutputStream of this message content.      * @return      * @throws IOException      */
 specifier|public
-name|InputStream
+name|CachedOutputStream
 name|getContent
 parameter_list|()
 block|{

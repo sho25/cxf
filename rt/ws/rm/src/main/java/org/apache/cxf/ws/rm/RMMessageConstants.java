@@ -53,7 +53,7 @@ name|ORIGINAL_REQUESTOR_ROLE
 init|=
 literal|"org.apache.cxf.client.original"
 decl_stmt|;
-comment|/** Message content (must be an instance of {@link RewindableInputStream}. */
+comment|/** Message content must be an instance of {@link CachedOutputStream}. */
 specifier|public
 specifier|static
 specifier|final
@@ -61,6 +61,15 @@ name|String
 name|SAVED_CONTENT
 init|=
 literal|"org.apache.cxf.ws.rm.content"
+decl_stmt|;
+comment|/** Variable holds reference to source streams of the attachments.      * It must be an instance of {@link Closeable}. */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ATTACHMENTS_CLOSEABLE
+init|=
+literal|"org.apache.cxf.ws.rm.attachment.closeable"
 decl_stmt|;
 comment|/** Retransmission in progress flag (Boolean.TRUE if in progress). */
 specifier|public
