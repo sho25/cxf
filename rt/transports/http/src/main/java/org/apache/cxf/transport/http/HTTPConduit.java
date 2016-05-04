@@ -7422,7 +7422,7 @@ literal|"No Trust Decider for Conduit '"
 operator|+
 name|conduitName
 operator|+
-literal|"'. An afirmative Trust Decision is assumed."
+literal|"'. An affirmative Trust Decision is assumed."
 argument_list|)
 expr_stmt|;
 block|}
