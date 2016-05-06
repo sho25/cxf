@@ -560,6 +560,17 @@ name|IOException
 block|{
 if|if
 condition|(
+name|input
+operator|==
+literal|null
+condition|)
+block|{
+return|return
+literal|0
+return|;
+block|}
+if|if
+condition|(
 name|output
 operator|instanceof
 name|CopyingOutputStream
