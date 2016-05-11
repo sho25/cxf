@@ -556,7 +556,11 @@ throw|throw
 operator|new
 name|IllegalArgumentException
 argument_list|(
-literal|"Template parameter value is set to null"
+literal|"Template parameter value at position "
+operator|+
+name|i
+operator|+
+literal|" is set to null"
 argument_list|)
 throw|;
 block|}
