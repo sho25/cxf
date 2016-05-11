@@ -482,7 +482,6 @@ specifier|private
 name|OutputStream
 name|os
 decl_stmt|;
-specifier|public
 name|OutputFunction
 parameter_list|(
 name|OutputStream

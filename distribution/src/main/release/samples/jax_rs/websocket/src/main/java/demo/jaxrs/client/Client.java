@@ -15,18 +15,6 @@ end_package
 
 begin_import
 import|import
-name|demo
-operator|.
-name|jaxrs
-operator|.
-name|server
-operator|.
-name|Server
-import|;
-end_import
-
-begin_import
-import|import
 name|java
 operator|.
 name|io
@@ -70,6 +58,18 @@ operator|.
 name|io
 operator|.
 name|CachedOutputStream
+import|;
+end_import
+
+begin_import
+import|import
+name|demo
+operator|.
+name|jaxrs
+operator|.
+name|server
+operator|.
+name|Server
 import|;
 end_import
 

@@ -797,7 +797,6 @@ decl_stmt|;
 name|boolean
 name|recording
 decl_stmt|;
-specifier|public
 name|ContentHandler
 parameter_list|(
 name|String
