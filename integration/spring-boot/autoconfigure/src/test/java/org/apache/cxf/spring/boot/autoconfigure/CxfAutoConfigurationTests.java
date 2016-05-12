@@ -316,7 +316,7 @@ name|CxfAutoConfiguration
 operator|.
 name|class
 argument_list|,
-literal|"spring.cxf.path=invalid"
+literal|"cxf.path=invalid"
 argument_list|)
 expr_stmt|;
 block|}
@@ -333,7 +333,7 @@ name|CxfAutoConfiguration
 operator|.
 name|class
 argument_list|,
-literal|"spring.cxf.path=/valid/"
+literal|"cxf.path=/valid/"
 argument_list|)
 expr_stmt|;
 name|assertThat
@@ -372,7 +372,7 @@ name|CxfAutoConfiguration
 operator|.
 name|class
 argument_list|,
-literal|"spring.cxf.path=/valid"
+literal|"cxf.path=/valid"
 argument_list|)
 expr_stmt|;
 name|assertThat
@@ -433,7 +433,7 @@ name|CxfAutoConfiguration
 operator|.
 name|class
 argument_list|,
-literal|"spring.cxf.servlet.load-on-startup=1"
+literal|"cxf.servlet.load-on-startup=1"
 argument_list|)
 expr_stmt|;
 name|ServletRegistrationBean
@@ -481,7 +481,7 @@ name|CxfAutoConfiguration
 operator|.
 name|class
 argument_list|,
-literal|"spring.cxf.servlet.init.key1=value1"
+literal|"cxf.servlet.init.key1=value1"
 argument_list|,
 literal|"spring.cxf.servlet.init.key2=value2"
 argument_list|)
