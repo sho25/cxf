@@ -1842,9 +1842,6 @@ block|{
 name|boolean
 name|resolvedPathVarHasToBeEncoded
 init|=
-operator|!
-name|isQuery
-operator|&&
 name|alreadyResolvedTsPathEnc
 operator|.
 name|containsKey
