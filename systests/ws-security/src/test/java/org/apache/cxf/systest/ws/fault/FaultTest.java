@@ -1161,6 +1161,13 @@ operator|.
 name|newInstance
 argument_list|()
 decl_stmt|;
+name|dbf
+operator|.
+name|setNamespaceAware
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 name|DocumentBuilder
 name|db
 init|=
