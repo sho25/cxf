@@ -1181,10 +1181,10 @@ name|log
 argument_list|(
 name|logger
 argument_list|,
+name|formatLoggingMessage
+argument_list|(
 name|buffer
-operator|.
-name|toString
-argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|message
@@ -1404,10 +1404,10 @@ name|log
 argument_list|(
 name|logger
 argument_list|,
+name|formatLoggingMessage
+argument_list|(
 name|buffer
-operator|.
-name|toString
-argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return;
