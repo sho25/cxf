@@ -153,6 +153,18 @@ name|xml
 operator|.
 name|transform
 operator|.
+name|Source
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|transform
+operator|.
 name|dom
 operator|.
 name|DOMSource
@@ -242,6 +254,20 @@ operator|.
 name|message
 operator|.
 name|MessageImpl
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|staxutils
+operator|.
+name|StaxSource
 import|;
 end_import
 
@@ -441,12 +467,6 @@ block|}
 comment|// TODO - See CXF-6900
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testReadSOAPFault
@@ -523,17 +543,26 @@ operator|.
 name|getSOAPPart
 argument_list|()
 decl_stmt|;
-name|part
-operator|.
-name|setContent
-argument_list|(
+name|SAAJStreamWriter
+name|writer
+init|=
 operator|new
-name|DOMSource
+name|SAAJStreamWriter
+argument_list|(
+name|part
+argument_list|)
+decl_stmt|;
+name|StaxUtils
+operator|.
+name|copy
 argument_list|(
 name|doc
-argument_list|)
+argument_list|,
+name|writer
 argument_list|)
 expr_stmt|;
+comment|//Source s = new StaxSource(StaxUtils.createXMLStreamReader(doc));
+comment|//part.setContent(s);
 name|saajMsg
 operator|.
 name|saveChanges
@@ -564,6 +593,7 @@ argument_list|(
 name|doc
 argument_list|)
 decl_stmt|;
+comment|// System.out.println("OUTPUT: " + new String(docbytes));
 name|XMLStreamReader
 name|reader
 init|=
