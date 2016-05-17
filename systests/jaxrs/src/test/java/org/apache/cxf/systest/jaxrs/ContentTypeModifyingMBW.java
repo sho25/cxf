@@ -246,6 +246,15 @@ operator|+
 literal|";charset=us-ascii"
 argument_list|)
 expr_stmt|;
+name|headers
+operator|.
+name|putSingle
+argument_list|(
+literal|"CustomHeader"
+argument_list|,
+literal|"CustomValue"
+argument_list|)
+expr_stmt|;
 name|os
 operator|.
 name|write
