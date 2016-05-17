@@ -697,9 +697,11 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SAML_CALLBACK_CLASS
+name|SAML_CALLBACK_REF
 argument_list|,
-literal|"org.apache.cxf.ws.security.wss4j.saml.SAML1CallbackHandler"
+operator|new
+name|SAML1CallbackHandler
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|properties
@@ -1089,9 +1091,11 @@ name|put
 argument_list|(
 name|WSHandlerConstants
 operator|.
-name|SAML_CALLBACK_CLASS
+name|SAML_CALLBACK_REF
 argument_list|,
-literal|"org.apache.cxf.ws.security.wss4j.saml.SAML2CallbackHandler"
+operator|new
+name|SAML2CallbackHandler
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|properties
