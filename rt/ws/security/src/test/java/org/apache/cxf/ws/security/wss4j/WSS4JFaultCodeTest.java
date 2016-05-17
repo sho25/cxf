@@ -293,12 +293,6 @@ block|{     }
 comment|/**      * Test for WSS4JInInterceptor when it receives a message with no security header.       */
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testNoSecurity
@@ -591,12 +585,6 @@ block|}
 comment|/**      * Test that an invalid Timestamp gets mapped to a proper fault code       */
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testInvalidTimestamp
@@ -939,12 +927,6 @@ block|}
 comment|/**      * Test that an action mismatch gets mapped to a proper fault code       */
 annotation|@
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testActionMismatch
