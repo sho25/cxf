@@ -145,18 +145,6 @@ name|xml
 operator|.
 name|soap
 operator|.
-name|SOAPException
-import|;
-end_import
-
-begin_import
-import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|soap
-operator|.
 name|SOAPMessage
 import|;
 end_import
@@ -2289,7 +2277,7 @@ name|AssertionInfoMap
 name|aim
 parameter_list|)
 throws|throws
-name|SOAPException
+name|Exception
 block|{
 name|SoapMessage
 name|msg
@@ -2418,7 +2406,7 @@ name|AssertionInfoMap
 name|aim
 parameter_list|)
 throws|throws
-name|SOAPException
+name|Exception
 block|{
 name|SoapMessage
 name|msg

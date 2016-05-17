@@ -122,6 +122,12 @@ name|OverlayW3CDOMStreamWriter
 extends|extends
 name|W3CDOMStreamWriter
 block|{
+specifier|protected
+name|boolean
+name|isOverlaid
+init|=
+literal|true
+decl_stmt|;
 name|List
 argument_list|<
 name|Boolean
@@ -134,11 +140,6 @@ argument_list|<
 name|Boolean
 argument_list|>
 argument_list|()
-decl_stmt|;
-name|boolean
-name|isOverlaid
-init|=
-literal|true
 decl_stmt|;
 name|Boolean
 name|textOverlay
