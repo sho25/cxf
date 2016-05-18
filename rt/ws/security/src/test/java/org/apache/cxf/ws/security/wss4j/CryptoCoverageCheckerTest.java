@@ -91,18 +91,6 @@ end_import
 
 begin_import
 import|import
-name|javax
-operator|.
-name|xml
-operator|.
-name|soap
-operator|.
-name|SOAPMessage
-import|;
-end_import
-
-begin_import
-import|import
 name|org
 operator|.
 name|w3c
@@ -246,20 +234,6 @@ operator|.
 name|phase
 operator|.
 name|PhaseInterceptorChain
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|staxutils
-operator|.
-name|StaxUtils
 import|;
 end_import
 
