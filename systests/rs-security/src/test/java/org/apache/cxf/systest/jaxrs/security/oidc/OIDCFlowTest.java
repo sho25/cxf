@@ -3338,7 +3338,6 @@ expr_stmt|;
 comment|// JwsJwtCompactConsumer jwtConsumer = new JwsJwtCompactConsumer(idToken);
 comment|// JwtToken jwt = jwtConsumer.getJwtToken();
 comment|// TODO Assert.assertNotNull(jwt.getClaims().getClaim(IdToken.AUTH_CODE_HASH_CLAIM));
-comment|// TODO Assert.assertNull(jwt.getClaims().getClaim(IdToken.ACCESS_TOKEN_HASH_CLAIM));
 block|}
 annotation|@
 name|org
