@@ -3335,6 +3335,10 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+comment|// JwsJwtCompactConsumer jwtConsumer = new JwsJwtCompactConsumer(idToken);
+comment|// JwtToken jwt = jwtConsumer.getJwtToken();
+comment|// TODO Assert.assertNotNull(jwt.getClaims().getClaim(IdToken.AUTH_CODE_HASH_CLAIM));
+comment|// TODO Assert.assertNull(jwt.getClaims().getClaim(IdToken.ACCESS_TOKEN_HASH_CLAIM));
 block|}
 annotation|@
 name|org
@@ -3730,6 +3734,41 @@ argument_list|(
 name|accessToken
 argument_list|)
 expr_stmt|;
+name|JwsJwtCompactConsumer
+name|jwtConsumer
+init|=
+operator|new
+name|JwsJwtCompactConsumer
+argument_list|(
+name|idToken
+argument_list|)
+decl_stmt|;
+name|JwtToken
+name|jwt
+init|=
+name|jwtConsumer
+operator|.
+name|getJwtToken
+argument_list|()
+decl_stmt|;
+name|Assert
+operator|.
+name|assertNotNull
+argument_list|(
+name|jwt
+operator|.
+name|getClaims
+argument_list|()
+operator|.
+name|getClaim
+argument_list|(
+name|IdToken
+operator|.
+name|ACCESS_TOKEN_HASH_CLAIM
+argument_list|)
+argument_list|)
+expr_stmt|;
+comment|// TODO Assert.assertNotNull(jwt.getClaims().getClaim(IdToken.AUTH_CODE_HASH_CLAIM));
 block|}
 annotation|@
 name|org
