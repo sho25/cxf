@@ -1606,17 +1606,6 @@ operator|.
 name|custom
 argument_list|()
 operator|.
-name|setSocketTimeout
-argument_list|(
-operator|(
-name|int
-operator|)
-name|csPolicy
-operator|.
-name|getReceiveTimeout
-argument_list|()
-argument_list|)
-operator|.
 name|setConnectTimeout
 argument_list|(
 operator|(
