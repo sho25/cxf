@@ -1394,7 +1394,15 @@ argument_list|(
 name|config
 argument_list|)
 expr_stmt|;
-comment|// reqData.setEncryptionSerializer(new StaxSerializer());
+name|reqData
+operator|.
+name|setEncryptionSerializer
+argument_list|(
+operator|new
+name|StaxSerializer
+argument_list|()
+argument_list|)
+expr_stmt|;
 comment|// Add Audience Restrictions for SAML
 name|configureAudienceRestriction
 argument_list|(

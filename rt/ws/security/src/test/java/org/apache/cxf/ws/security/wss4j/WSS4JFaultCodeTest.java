@@ -1545,6 +1545,16 @@ argument_list|(
 name|inmsg
 argument_list|)
 expr_stmt|;
+name|StaxUtils
+operator|.
+name|print
+argument_list|(
+name|saajMsg
+operator|.
+name|getSOAPPart
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|fail
 argument_list|(
 literal|"Expected failure on a SOAP Fault"
