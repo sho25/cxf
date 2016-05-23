@@ -691,11 +691,7 @@ name|Throwable
 name|t
 parameter_list|)
 block|{
-name|t
-operator|.
-name|printStackTrace
-argument_list|()
-expr_stmt|;
+comment|//ignore, not much we can do but hope the decrypted XML is stand alone ok
 block|}
 return|return
 literal|false
