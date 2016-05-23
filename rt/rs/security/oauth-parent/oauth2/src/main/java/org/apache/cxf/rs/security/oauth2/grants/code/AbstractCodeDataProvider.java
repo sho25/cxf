@@ -309,6 +309,16 @@ argument_list|)
 expr_stmt|;
 name|grant
 operator|.
+name|setResponseType
+argument_list|(
+name|reg
+operator|.
+name|getResponseType
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|grant
+operator|.
 name|setClientCodeChallenge
 argument_list|(
 name|reg

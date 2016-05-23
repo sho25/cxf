@@ -871,6 +871,16 @@ argument_list|)
 expr_stmt|;
 name|reg
 operator|.
+name|setResponseType
+argument_list|(
+name|grant
+operator|.
+name|getResponseType
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|reg
+operator|.
 name|setClientCodeVerifier
 argument_list|(
 name|codeVerifier

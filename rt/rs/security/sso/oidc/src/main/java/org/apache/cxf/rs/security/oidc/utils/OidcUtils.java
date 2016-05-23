@@ -345,6 +345,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|HYBRID_FLOW
+init|=
+literal|"hybrid"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|ID_TOKEN
 init|=
 literal|"id_token"

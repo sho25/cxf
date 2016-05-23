@@ -407,8 +407,23 @@ operator|.
 name|getResponseType
 argument_list|()
 argument_list|)
+operator|&&
+name|OidcUtils
+operator|.
+name|HYBRID_FLOW
+operator|.
+name|equals
+argument_list|(
+name|st
+operator|.
+name|getGrantType
+argument_list|()
+argument_list|)
 condition|)
 block|{
+comment|// token post-processing as part of the current hybrid (implicit) flow
+comment|// so no id_token is returned now - however when the code gets exchanged later on
+comment|// this filter will add id_token to the returned access token
 return|return;
 block|}
 comment|// Only add an IdToken if the client has the "openid" scope
@@ -718,13 +733,6 @@ operator|.
 name|getAuthorizationCodeHash
 argument_list|()
 operator|==
-literal|null
-operator|&&
-name|st
-operator|.
-name|getGrantCode
-argument_list|()
-operator|!=
 literal|null
 operator|&&
 name|rType
