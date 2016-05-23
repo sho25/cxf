@@ -391,6 +391,10 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|sessionToken
+operator|==
+literal|null
+operator|||
 operator|!
 name|sessionToken
 operator|.
