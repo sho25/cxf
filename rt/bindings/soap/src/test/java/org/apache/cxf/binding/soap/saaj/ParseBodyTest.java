@@ -438,7 +438,6 @@ literal|2
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - See CXF-6900
 annotation|@
 name|Test
 specifier|public
