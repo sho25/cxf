@@ -129,6 +129,14 @@ name|serviceName
 operator|=
 literal|"DoubleItService"
 argument_list|,
+name|portName
+operator|=
+literal|"DoubleItSoap11NoPolicyBinding"
+argument_list|,
+name|name
+operator|=
+literal|"DoubleItSoap11NoPolicyBinding"
+argument_list|,
 name|endpointInterface
 operator|=
 literal|"org.example.contract.doubleit.DoubleItPortType"

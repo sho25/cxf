@@ -1637,7 +1637,6 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|// TODO - There seems to be a bug when a security policy is applied to a method as opposed to the class
 comment|// See DoubleItPortTypeImplJavaFirst
 annotation|@
 name|org
@@ -1645,12 +1644,6 @@ operator|.
 name|junit
 operator|.
 name|Test
-annotation|@
-name|org
-operator|.
-name|junit
-operator|.
-name|Ignore
 specifier|public
 name|void
 name|testJavaFirst

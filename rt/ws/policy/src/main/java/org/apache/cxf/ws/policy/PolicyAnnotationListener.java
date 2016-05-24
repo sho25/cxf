@@ -724,9 +724,8 @@ argument_list|,
 name|cls
 argument_list|)
 expr_stmt|;
-comment|// this will allow us to support annotations in Implementations, but only for
-comment|// class level annotations.  Method level annotations are not currently supported
-comment|// for implementations.  The call has been moved here so that the ServiceInfo
+comment|// this will allow us to support annotations in Implementations.
+comment|// The call has been moved here so that the ServiceInfo
 comment|// policy stuff is loaded before jaxws factory calls the PolicyEngineImpl
 name|addEndpointImplPolicies
 argument_list|(
