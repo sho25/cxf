@@ -1200,6 +1200,8 @@ name|preAuthorizationComplete
 operator|||
 name|canAuthorizationBeSkipped
 argument_list|(
+name|params
+argument_list|,
 name|client
 argument_list|,
 name|userSubject
@@ -1310,6 +1312,14 @@ specifier|protected
 name|boolean
 name|canAuthorizationBeSkipped
 parameter_list|(
+name|MultivaluedMap
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|params
+parameter_list|,
 name|Client
 name|client
 parameter_list|,
