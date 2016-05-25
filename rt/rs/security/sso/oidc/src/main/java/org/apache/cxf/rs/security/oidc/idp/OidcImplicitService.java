@@ -561,6 +561,9 @@ name|userSubject
 parameter_list|,
 name|Client
 name|client
+parameter_list|,
+name|String
+name|redirectUri
 parameter_list|)
 block|{
 comment|// Validate the nonce, it must be present for the Implicit flow
@@ -585,19 +588,18 @@ argument_list|(
 literal|"A nonce is required for the Implicit flow"
 argument_list|)
 expr_stmt|;
-throw|throw
-operator|new
-name|OAuthServiceException
+return|return
+name|createErrorResponse
 argument_list|(
-operator|new
-name|OAuthError
-argument_list|(
+name|params
+argument_list|,
+name|redirectUri
+argument_list|,
 name|OAuthConstants
 operator|.
 name|INVALID_REQUEST
 argument_list|)
-argument_list|)
-throw|;
+return|;
 block|}
 comment|// Validate the prompt - if it contains "none" then an error is returned with any other value
 name|List
@@ -652,19 +654,18 @@ name|PROMPT_PARAMETER
 argument_list|)
 argument_list|)
 expr_stmt|;
-throw|throw
-operator|new
-name|OAuthServiceException
+return|return
+name|createErrorResponse
 argument_list|(
-operator|new
-name|OAuthError
-argument_list|(
+name|params
+argument_list|,
+name|redirectUri
+argument_list|,
 name|OAuthConstants
 operator|.
 name|INVALID_REQUEST
 argument_list|)
-argument_list|)
-throw|;
+return|;
 block|}
 return|return
 name|super
@@ -676,6 +677,8 @@ argument_list|,
 name|userSubject
 argument_list|,
 name|client
+argument_list|,
+name|redirectUri
 argument_list|)
 return|;
 block|}
