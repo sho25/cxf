@@ -71,7 +71,37 @@ name|cxf
 operator|.
 name|annotations
 operator|.
+name|Policies
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
 name|Policy
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|annotations
+operator|.
+name|Policy
+operator|.
+name|Placement
 import|;
 end_import
 
@@ -148,7 +178,6 @@ name|features
 operator|=
 literal|"org.apache.cxf.feature.LoggingFeature"
 argument_list|)
-comment|// @Policy(uri = "classpath:/org/apache/cxf/systest/ws/fault/SymmetricUTPolicy.xml")
 specifier|public
 class|class
 name|DoubleItPortTypeImplJavaFirst
@@ -160,17 +189,32 @@ name|Resource
 name|WebServiceContext
 name|wsContext
 decl_stmt|;
-comment|//@Policies({
-comment|// @Policy(uri = "classpath:/org/apache/cxf/systest/ws/fault/SymmetricUTPolicy.xml")
-comment|//@Policy(uri = "classpath:/org/apache/cxf/systest/ws/fault/SignedEncryptedPolicy.xml",
-comment|//       placement = Placement.BINDING_OPERATION)
-comment|//})
+annotation|@
+name|Policies
+argument_list|(
+block|{
 annotation|@
 name|Policy
 argument_list|(
 name|uri
 operator|=
 literal|"classpath:/org/apache/cxf/systest/ws/fault/SymmetricUTPolicy.xml"
+argument_list|)
+block|,
+annotation|@
+name|Policy
+argument_list|(
+name|uri
+operator|=
+literal|"classpath:/org/apache/cxf/systest/ws/fault/SignedEncryptedPolicy.xml"
+argument_list|,
+name|placement
+operator|=
+name|Placement
+operator|.
+name|BINDING_OPERATION_OUTPUT
+argument_list|)
+block|}
 argument_list|)
 specifier|public
 name|int
@@ -192,10 +236,6 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|pr
-operator|==
-literal|null
-operator|||
 literal|"alice"
 operator|.
 name|equals
