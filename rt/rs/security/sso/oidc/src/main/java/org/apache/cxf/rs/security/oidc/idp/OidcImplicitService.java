@@ -761,9 +761,11 @@ argument_list|,
 name|permissions
 argument_list|)
 decl_stmt|;
-name|boolean
-name|nonePromptRequested
-init|=
+if|if
+condition|(
+operator|!
+name|preConfiguredConsentForScopes
+operator|&&
 name|promptValues
 operator|.
 name|contains
@@ -772,13 +774,6 @@ name|OidcUtils
 operator|.
 name|PROMPT_NONE_VALUE
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|nonePromptRequested
-operator|&&
-operator|!
-name|preConfiguredConsentForScopes
 condition|)
 block|{
 comment|// An error is returned if client does not have pre-configured consent for the requested scopes/claims
@@ -808,9 +803,6 @@ argument_list|)
 throw|;
 block|}
 return|return
-operator|!
-name|nonePromptRequested
-operator|&&
 name|preConfiguredConsentForScopes
 return|;
 block|}
