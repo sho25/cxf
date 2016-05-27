@@ -61,9 +61,9 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|spring
+name|swagger
 operator|.
-name|JaxRsConfig
+name|Swagger2Feature
 import|;
 end_import
 
@@ -153,20 +153,6 @@ end_import
 
 begin_import
 import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|annotation
-operator|.
-name|Import
-import|;
-end_import
-
-begin_import
-import|import
 name|sample
 operator|.
 name|rs
@@ -196,13 +182,6 @@ end_import
 begin_class
 annotation|@
 name|SpringBootApplication
-annotation|@
-name|Import
-argument_list|(
-name|JaxRsConfig
-operator|.
-name|class
-argument_list|)
 specifier|public
 class|class
 name|SampleRestApplication
@@ -288,6 +267,20 @@ operator|.
 name|setAddress
 argument_list|(
 literal|"/helloservice"
+argument_list|)
+expr_stmt|;
+name|endpoint
+operator|.
+name|setFeatures
+argument_list|(
+name|Arrays
+operator|.
+name|asList
+argument_list|(
+operator|new
+name|Swagger2Feature
+argument_list|()
+argument_list|)
 argument_list|)
 expr_stmt|;
 return|return
