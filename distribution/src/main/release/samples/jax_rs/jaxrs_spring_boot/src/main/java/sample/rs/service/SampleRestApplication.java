@@ -200,7 +200,7 @@ name|endpoint
 operator|.
 name|setAddress
 argument_list|(
-literal|"/helloservice"
+literal|"/"
 argument_list|)
 expr_stmt|;
 name|endpoint
