@@ -27,27 +27,11 @@ name|context
 operator|.
 name|annotation
 operator|.
-name|Configuration
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|annotation
-operator|.
 name|ImportResource
 import|;
 end_import
 
 begin_class
-annotation|@
-name|Configuration
 annotation|@
 name|ImportResource
 argument_list|(
