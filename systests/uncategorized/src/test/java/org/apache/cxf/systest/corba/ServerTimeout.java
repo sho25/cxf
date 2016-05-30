@@ -132,7 +132,7 @@ decl_stmt|;
 name|String
 name|address
 init|=
-literal|"file:./HelloWorld.ref"
+literal|"file:./HelloWorldTimeout.ref"
 decl_stmt|;
 name|Endpoint
 operator|.
