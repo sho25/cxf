@@ -1241,7 +1241,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"AppliesTo matchs with scope: "
+literal|"AppliesTo matches with scope: "
 operator|+
 name|scope
 argument_list|)

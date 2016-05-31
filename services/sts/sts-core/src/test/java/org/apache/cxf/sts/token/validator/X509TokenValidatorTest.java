@@ -47,6 +47,16 @@ name|java
 operator|.
 name|util
 operator|.
+name|Base64
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|util
+operator|.
 name|Properties
 import|;
 end_import
@@ -335,22 +345,6 @@ name|WSConstants
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|security
-operator|.
-name|utils
-operator|.
-name|Base64
-import|;
-end_import
-
 begin_comment
 comment|/**  * Some unit tests for validating an X.509 Token via the X509TokenValidator.  */
 end_comment
@@ -493,7 +487,10 @@ name|setValue
 argument_list|(
 name|Base64
 operator|.
-name|encode
+name|getMimeEncoder
+argument_list|()
+operator|.
+name|encodeToString
 argument_list|(
 name|certs
 index|[
@@ -800,7 +797,10 @@ name|setValue
 argument_list|(
 name|Base64
 operator|.
-name|encode
+name|getMimeEncoder
+argument_list|()
+operator|.
+name|encodeToString
 argument_list|(
 name|certs
 index|[

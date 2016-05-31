@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Base64
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -144,22 +154,6 @@ operator|.
 name|principal
 operator|.
 name|CustomTokenPrincipal
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|xml
-operator|.
-name|security
-operator|.
-name|utils
-operator|.
-name|Base64
 import|;
 end_import
 
@@ -309,7 +303,10 @@ if|if
 condition|(
 name|Base64
 operator|.
-name|encode
+name|getMimeEncoder
+argument_list|()
+operator|.
+name|encodeToString
 argument_list|(
 literal|"12345678"
 operator|.
