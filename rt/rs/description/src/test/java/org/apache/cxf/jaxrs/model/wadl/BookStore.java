@@ -1121,6 +1121,11 @@ specifier|private
 name|int
 name|a
 decl_stmt|;
+annotation|@
+name|QueryParam
+argument_list|(
+literal|"b"
+argument_list|)
 specifier|private
 name|int
 name|b
@@ -1163,11 +1168,6 @@ return|return
 name|b
 return|;
 block|}
-annotation|@
-name|QueryParam
-argument_list|(
-literal|"b"
-argument_list|)
 specifier|public
 name|void
 name|setB
