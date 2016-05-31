@@ -373,6 +373,15 @@ decl_stmt|;
 try|try
 block|{
 operator|new
+name|ResolvingGrammarReaderController
+argument_list|(
+literal|null
+argument_list|,
+literal|null
+argument_list|)
+expr_stmt|;
+comment|// will throw if msv isn't available
+operator|new
 name|W3CMultiSchemaFactory
 argument_list|()
 expr_stmt|;
