@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Use RealmProperties intead  */
+comment|/**  * Use RealmProperties instead  */
 end_comment
 
 begin_class

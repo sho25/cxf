@@ -224,8 +224,8 @@ name|SignatureProperties
 name|signatureProperties
 decl_stmt|;
 specifier|private
-name|String
-name|signaturePropertiesFile
+name|Object
+name|signatureCryptoProperties
 decl_stmt|;
 specifier|private
 name|String
@@ -304,6 +304,8 @@ name|signatureCrypto
 expr_stmt|;
 block|}
 comment|/**      * Set the String corresponding to the signature Properties class      * @param signaturePropertiesFile the String corresponding to the signature properties file      */
+annotation|@
+name|Deprecated
 specifier|public
 name|void
 name|setSignaturePropertiesFile
@@ -312,11 +314,26 @@ name|String
 name|signaturePropertiesFile
 parameter_list|)
 block|{
+name|setSignatureCryptoProperties
+argument_list|(
+name|signaturePropertiesFile
+argument_list|)
+expr_stmt|;
+block|}
+comment|/**      * Set the Object corresponding to the signature Properties class. It can be a String      * corresponding to a filename, a Properties object, or a URL.      * @param signatureCryptoProperties the object corresponding to the signature properties      */
+specifier|public
+name|void
+name|setSignatureCryptoProperties
+parameter_list|(
+name|Object
+name|signatureCryptoProperties
+parameter_list|)
+block|{
 name|this
 operator|.
-name|signaturePropertiesFile
+name|signatureCryptoProperties
 operator|=
-name|signaturePropertiesFile
+name|signatureCryptoProperties
 expr_stmt|;
 if|if
 condition|(
@@ -334,9 +351,9 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Setting signature properties: "
+literal|"Setting signature crypto properties: "
 operator|+
-name|signaturePropertiesFile
+name|signatureCryptoProperties
 argument_list|)
 expr_stmt|;
 block|}
@@ -379,7 +396,7 @@ name|signatureCrypto
 operator|==
 literal|null
 operator|&&
-name|signaturePropertiesFile
+name|signatureCryptoProperties
 operator|!=
 literal|null
 condition|)
@@ -391,7 +408,7 @@ name|SecurityUtils
 operator|.
 name|loadProperties
 argument_list|(
-name|signaturePropertiesFile
+name|signatureCryptoProperties
 argument_list|)
 decl_stmt|;
 if|if
@@ -407,7 +424,7 @@ name|fine
 argument_list|(
 literal|"Cannot load signature properties using: "
 operator|+
-name|signaturePropertiesFile
+name|signatureCryptoProperties
 argument_list|)
 expr_stmt|;
 throw|throw
