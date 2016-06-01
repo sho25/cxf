@@ -768,6 +768,28 @@ argument_list|,
 name|registry
 argument_list|)
 expr_stmt|;
+if|if
+condition|(
+name|d
+operator|==
+literal|null
+condition|)
+block|{
+name|String
+name|error
+init|=
+literal|"No destination available. The CXF websocket transport needs either the "
+operator|+
+literal|"Jetty WebSocket or Atmosphere dependencies to be available"
+decl_stmt|;
+throw|throw
+operator|new
+name|IOException
+argument_list|(
+name|error
+argument_list|)
+throw|;
+block|}
 name|registry
 operator|.
 name|addDestination
