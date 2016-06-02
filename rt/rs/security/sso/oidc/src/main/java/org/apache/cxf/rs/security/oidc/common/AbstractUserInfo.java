@@ -760,7 +760,7 @@ expr_stmt|;
 block|}
 specifier|public
 name|String
-name|getBirthdate
+name|getBirthDate
 parameter_list|()
 block|{
 return|return
@@ -907,7 +907,7 @@ block|}
 block|}
 specifier|public
 name|void
-name|setUserAddressNumber
+name|setUserAddress
 parameter_list|(
 name|UserAddress
 name|address
