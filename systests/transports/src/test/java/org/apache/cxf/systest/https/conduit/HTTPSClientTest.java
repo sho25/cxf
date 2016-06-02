@@ -866,9 +866,9 @@ argument_list|()
 decl_stmt|;
 name|kst
 operator|.
-name|setFile
+name|setResource
 argument_list|(
-literal|"src/test/resources/keys/Bethal.jks"
+literal|"keys/Bethal.jks"
 argument_list|)
 expr_stmt|;
 name|kst
@@ -950,9 +950,9 @@ argument_list|()
 decl_stmt|;
 name|kst
 operator|.
-name|setFile
+name|setResource
 argument_list|(
-literal|"src/test/resources/keys/Truststore.jks"
+literal|"keys/Truststore.jks"
 argument_list|)
 expr_stmt|;
 name|kst
@@ -1033,9 +1033,9 @@ argument_list|()
 decl_stmt|;
 name|kst
 operator|.
-name|setFile
+name|setResource
 argument_list|(
-literal|"src/test/resources/keys/Morpit.jks"
+literal|"keys/Morpit.jks"
 argument_list|)
 expr_stmt|;
 name|kst
@@ -1117,9 +1117,9 @@ argument_list|()
 decl_stmt|;
 name|kst
 operator|.
-name|setFile
+name|setResource
 argument_list|(
-literal|"src/test/resources/keys/Truststore.jks"
+literal|"keys/Truststore.jks"
 argument_list|)
 expr_stmt|;
 name|kst

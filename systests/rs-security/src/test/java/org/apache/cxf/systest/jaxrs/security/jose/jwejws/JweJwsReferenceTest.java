@@ -695,7 +695,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/bob.jks"
+literal|"keys/bob.jks"
 argument_list|)
 expr_stmt|;
 name|properties
@@ -963,7 +963,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/alice.jks"
+literal|"keys/alice.jks"
 argument_list|)
 expr_stmt|;
 name|properties
@@ -1189,7 +1189,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/bob.jks"
+literal|"keys/bob.jks"
 argument_list|)
 expr_stmt|;
 name|properties
@@ -1457,7 +1457,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/alice.jks"
+literal|"keys/alice.jks"
 argument_list|)
 expr_stmt|;
 name|properties
@@ -1686,7 +1686,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/alice.jks"
+literal|"keys/alice.jks"
 argument_list|)
 expr_stmt|;
 name|WebClient
@@ -1936,7 +1936,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/Morpit.jks"
+literal|"keys/Morpit.jks"
 argument_list|)
 expr_stmt|;
 name|properties
@@ -2144,7 +2144,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/alice.jks"
+literal|"keys/alice.jks"
 argument_list|)
 expr_stmt|;
 name|WebClient
@@ -2394,7 +2394,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/Morpit.jks"
+literal|"keys/Morpit.jks"
 argument_list|)
 expr_stmt|;
 name|properties

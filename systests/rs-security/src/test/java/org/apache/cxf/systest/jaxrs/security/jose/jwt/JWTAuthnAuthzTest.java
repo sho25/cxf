@@ -880,7 +880,7 @@ name|put
 argument_list|(
 literal|"rs.security.keystore.file"
 argument_list|,
-literal|"org/apache/cxf/systest/jaxrs/security/certs/alice.jks"
+literal|"keys/alice.jks"
 argument_list|)
 expr_stmt|;
 name|properties
