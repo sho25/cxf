@@ -129,7 +129,7 @@ name|jose
 operator|.
 name|jwt
 operator|.
-name|JwtTokenReaderWriter
+name|JwtUtils
 import|;
 end_import
 
@@ -279,11 +279,9 @@ decl_stmt|;
 name|JwtClaims
 name|claims
 init|=
-operator|new
-name|JwtTokenReaderWriter
-argument_list|()
+name|JwtUtils
 operator|.
-name|fromJsonClaims
+name|jsonToClaims
 argument_list|(
 name|toString
 argument_list|(
