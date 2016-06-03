@@ -3862,6 +3862,11 @@ name|SoapMessage
 name|message
 parameter_list|)
 block|{
+name|InputStream
+name|is
+init|=
+literal|null
+decl_stmt|;
 try|try
 block|{
 comment|// initialize copied interceptor chain for message
@@ -4082,14 +4087,13 @@ name|holdTempFile
 argument_list|()
 expr_stmt|;
 comment|// CachedOutputStream is hold until delivering was successful
-name|InputStream
 name|is
-init|=
+operator|=
 name|cos
 operator|.
 name|getInputStream
 argument_list|()
-decl_stmt|;
+expr_stmt|;
 comment|// instance is needed to close input stream later on
 name|XMLStreamReader
 name|reader
@@ -4440,8 +4444,6 @@ operator|new
 name|CopyOutInterceptor
 argument_list|(
 name|reader
-argument_list|,
-name|is
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -4659,6 +4661,34 @@ argument_list|,
 name|ex
 argument_list|)
 expr_stmt|;
+block|}
+finally|finally
+block|{
+comment|// make sure to always close InputStreams of the CachedOutputStream to avoid leaving temp files undeleted
+if|if
+condition|(
+literal|null
+operator|!=
+name|is
+condition|)
+block|{
+try|try
+block|{
+name|is
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|IOException
+name|e
+parameter_list|)
+block|{
+comment|// Ignore
+block|}
+block|}
 block|}
 block|}
 comment|/**      * @param message      * @param endpoint      * @param to      * @return      */
@@ -5028,18 +5058,11 @@ specifier|final
 name|XMLStreamReader
 name|reader
 decl_stmt|;
-specifier|private
-name|InputStream
-name|is
-decl_stmt|;
 specifier|public
 name|CopyOutInterceptor
 parameter_list|(
 name|XMLStreamReader
 name|rdr
-parameter_list|,
-name|InputStream
-name|is
 parameter_list|)
 block|{
 name|super
@@ -5052,12 +5075,6 @@ expr_stmt|;
 name|reader
 operator|=
 name|rdr
-expr_stmt|;
-name|this
-operator|.
-name|is
-operator|=
-name|is
 expr_stmt|;
 block|}
 annotation|@
@@ -5095,30 +5112,6 @@ argument_list|,
 name|writer
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|is
-operator|!=
-literal|null
-condition|)
-block|{
-try|try
-block|{
-name|is
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|IOException
-name|e
-parameter_list|)
-block|{
-comment|// ignore
-block|}
-block|}
 block|}
 catch|catch
 parameter_list|(

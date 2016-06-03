@@ -1109,6 +1109,8 @@ block|}
 else|else
 block|{
 comment|// read the file
+try|try
+block|{
 name|currentStream
 operator|.
 name|close
@@ -1137,6 +1139,9 @@ name|out
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+finally|finally
+block|{
 name|streamList
 operator|.
 name|remove
@@ -1151,6 +1156,7 @@ name|inmem
 operator|=
 literal|true
 expr_stmt|;
+block|}
 block|}
 block|}
 name|currentStream
