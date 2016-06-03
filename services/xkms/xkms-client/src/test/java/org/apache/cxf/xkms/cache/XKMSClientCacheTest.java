@@ -128,7 +128,7 @@ name|ClassLoaderUtils
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"certs/alice.jks"
+literal|"keys/alice.jks"
 argument_list|,
 name|XKMSClientCacheTest
 operator|.
@@ -173,7 +173,7 @@ name|ClassLoaderUtils
 operator|.
 name|getResourceAsStream
 argument_list|(
-literal|"certs/bob.jks"
+literal|"keys/bob.jks"
 argument_list|,
 name|XKMSClientCacheTest
 operator|.
