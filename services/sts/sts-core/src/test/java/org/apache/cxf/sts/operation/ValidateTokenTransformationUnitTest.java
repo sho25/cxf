@@ -4587,7 +4587,7 @@ name|put
 argument_list|(
 literal|"org.apache.wss4j.crypto.merlin.keystore.file"
 argument_list|,
-literal|"stsstore.jks"
+literal|"keys/stsstore.jks"
 argument_list|)
 expr_stmt|;
 return|return

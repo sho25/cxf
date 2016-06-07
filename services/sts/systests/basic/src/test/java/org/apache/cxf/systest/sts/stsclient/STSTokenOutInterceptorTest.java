@@ -784,7 +784,7 @@ specifier|final
 name|String
 name|CLIENTSTORE
 init|=
-literal|"/clientstore.jks"
+literal|"/keys/clientstore.jks"
 decl_stmt|;
 specifier|private
 specifier|static

@@ -2209,7 +2209,7 @@ name|put
 argument_list|(
 literal|"org.apache.ws.security.crypto.merlin.keystore.file"
 argument_list|,
-literal|"stsstore.jks"
+literal|"keys/stsstore.jks"
 argument_list|)
 expr_stmt|;
 return|return

@@ -7742,7 +7742,7 @@ name|Loader
 operator|.
 name|getResource
 argument_list|(
-literal|"servicestore.jks"
+literal|"keys/servicestore.jks"
 argument_list|)
 operator|.
 name|openStream
