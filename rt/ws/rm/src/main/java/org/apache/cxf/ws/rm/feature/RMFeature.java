@@ -709,13 +709,6 @@ argument_list|(
 name|rmDelivery
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-literal|null
-operator|!=
-name|store
-condition|)
-block|{
 name|provider
 operator|.
 name|getInInterceptors
@@ -726,7 +719,6 @@ argument_list|(
 name|rmCaptureIn
 argument_list|)
 expr_stmt|;
-block|}
 name|provider
 operator|.
 name|getOutInterceptors

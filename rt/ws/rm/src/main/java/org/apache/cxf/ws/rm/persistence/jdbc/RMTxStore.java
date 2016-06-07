@@ -632,6 +632,12 @@ literal|"BLOB"
 block|}
 block|,
 block|{
+literal|"TERMINATED"
+block|,
+literal|"CHAR(1)"
+block|}
+block|,
+block|{
 literal|"PROTOCOL_VERSION"
 block|,
 literal|"VARCHAR(256)"
@@ -737,6 +743,12 @@ block|{
 literal|"SEND_TO"
 block|,
 literal|"VARCHAR(256)"
+block|}
+block|,
+block|{
+literal|"CREATED_TIME"
+block|,
+literal|"DECIMAL(19, 0)"
 block|}
 block|,
 block|{
@@ -888,7 +900,7 @@ specifier|final
 name|String
 name|UPDATE_DEST_SEQUENCE_STMT_STR
 init|=
-literal|"UPDATE CXF_RM_DEST_SEQUENCES SET LAST_MSG_NO = ?, ACKNOWLEDGED = ? WHERE SEQ_ID = ?"
+literal|"UPDATE CXF_RM_DEST_SEQUENCES SET LAST_MSG_NO = ?, TERMINATED = ?, ACKNOWLEDGED = ? WHERE SEQ_ID = ?"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -904,7 +916,7 @@ specifier|final
 name|String
 name|CREATE_MESSAGE_STMT_STR
 init|=
-literal|"INSERT INTO {0} (SEQ_ID, MSG_NO, SEND_TO, CONTENT, CONTENT_TYPE) VALUES(?, ?, ?, ?, ?)"
+literal|"INSERT INTO {0} (SEQ_ID, MSG_NO, SEND_TO, CREATED_TIME, CONTENT, CONTENT_TYPE) VALUES(?, ?, ?, ?, ?, ?)"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -920,7 +932,7 @@ specifier|final
 name|String
 name|SELECT_DEST_SEQUENCE_STMT_STR
 init|=
-literal|"SELECT ACKS_TO, LAST_MSG_NO, PROTOCOL_VERSION, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
+literal|"SELECT ACKS_TO, LAST_MSG_NO, PROTOCOL_VERSION, TERMINATED, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
 operator|+
 literal|"WHERE SEQ_ID = ?"
 decl_stmt|;
@@ -940,7 +952,7 @@ specifier|final
 name|String
 name|SELECT_DEST_SEQUENCES_STMT_STR
 init|=
-literal|"SELECT SEQ_ID, ACKS_TO, LAST_MSG_NO, PROTOCOL_VERSION, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
+literal|"SELECT SEQ_ID, ACKS_TO, LAST_MSG_NO, PROTOCOL_VERSION, TERMINATED, ACKNOWLEDGED FROM CXF_RM_DEST_SEQUENCES "
 operator|+
 literal|"WHERE ENDPOINT_ID = ?"
 decl_stmt|;
@@ -960,7 +972,7 @@ specifier|final
 name|String
 name|SELECT_MESSAGES_STMT_STR
 init|=
-literal|"SELECT MSG_NO, SEND_TO, CONTENT, CONTENT_TYPE FROM {0} WHERE SEQ_ID = ?"
+literal|"SELECT MSG_NO, SEND_TO, CREATED_TIME, CONTENT, CONTENT_TYPE FROM {0} WHERE SEQ_ID = ?"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -2120,6 +2132,16 @@ literal|3
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|boolean
+name|t
+init|=
+name|res
+operator|.
+name|getBoolean
+argument_list|(
+literal|4
+argument_list|)
+decl_stmt|;
 name|InputStream
 name|is
 init|=
@@ -2127,7 +2149,7 @@ name|res
 operator|.
 name|getBinaryStream
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 decl_stmt|;
 name|SequenceAcknowledgement
@@ -2164,6 +2186,8 @@ argument_list|,
 name|acksTo
 argument_list|,
 name|lm
+argument_list|,
+name|t
 argument_list|,
 name|ack
 argument_list|,
@@ -2850,6 +2874,16 @@ literal|4
 argument_list|)
 argument_list|)
 decl_stmt|;
+name|boolean
+name|t
+init|=
+name|res
+operator|.
+name|getBoolean
+argument_list|(
+literal|5
+argument_list|)
+decl_stmt|;
 name|InputStream
 name|is
 init|=
@@ -2857,7 +2891,7 @@ name|res
 operator|.
 name|getBinaryStream
 argument_list|(
-literal|5
+literal|6
 argument_list|)
 decl_stmt|;
 name|SequenceAcknowledgement
@@ -2896,6 +2930,8 @@ argument_list|,
 name|acksTo
 argument_list|,
 name|lm
+argument_list|,
+name|t
 argument_list|,
 name|ack
 argument_list|,
@@ -3373,6 +3409,16 @@ argument_list|(
 literal|2
 argument_list|)
 decl_stmt|;
+name|long
+name|ct
+init|=
+name|res
+operator|.
+name|getLong
+argument_list|(
+literal|3
+argument_list|)
+decl_stmt|;
 name|Blob
 name|blob
 init|=
@@ -3380,7 +3426,7 @@ name|res
 operator|.
 name|getBlob
 argument_list|(
-literal|3
+literal|4
 argument_list|)
 decl_stmt|;
 name|String
@@ -3390,7 +3436,7 @@ name|res
 operator|.
 name|getString
 argument_list|(
-literal|4
+literal|5
 argument_list|)
 decl_stmt|;
 name|RMMessage
@@ -3412,6 +3458,13 @@ operator|.
 name|setTo
 argument_list|(
 name|to
+argument_list|)
+expr_stmt|;
+name|msg
+operator|.
+name|setCreatedTime
+argument_list|(
+name|ct
 argument_list|)
 expr_stmt|;
 name|CachedOutputStream
@@ -4166,9 +4219,21 @@ argument_list|)
 expr_stmt|;
 name|stmt
 operator|.
-name|setBinaryStream
+name|setLong
 argument_list|(
 literal|4
+argument_list|,
+name|msg
+operator|.
+name|getCreatedTime
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|stmt
+operator|.
+name|setBinaryStream
+argument_list|(
+literal|5
 argument_list|,
 name|msgin
 argument_list|)
@@ -4177,7 +4242,7 @@ name|stmt
 operator|.
 name|setString
 argument_list|(
-literal|5
+literal|6
 argument_list|,
 name|contentType
 argument_list|)
@@ -4444,6 +4509,22 @@ argument_list|,
 name|lastMessageNr
 argument_list|)
 expr_stmt|;
+name|stmt
+operator|.
+name|setString
+argument_list|(
+literal|2
+argument_list|,
+name|seq
+operator|.
+name|isTerminated
+argument_list|()
+condition|?
+literal|"1"
+else|:
+literal|"0"
+argument_list|)
+expr_stmt|;
 name|InputStream
 name|is
 init|=
@@ -4464,7 +4545,7 @@ name|stmt
 operator|.
 name|setBinaryStream
 argument_list|(
-literal|2
+literal|3
 argument_list|,
 name|is
 argument_list|,
@@ -4478,7 +4559,7 @@ name|stmt
 operator|.
 name|setString
 argument_list|(
-literal|3
+literal|4
 argument_list|,
 name|seq
 operator|.
@@ -4831,26 +4912,6 @@ index|[]
 name|tableCols
 parameter_list|)
 block|{
-name|List
-argument_list|<
-name|String
-index|[]
-argument_list|>
-name|newCols
-init|=
-operator|new
-name|ArrayList
-argument_list|<
-name|String
-index|[]
-argument_list|>
-argument_list|()
-decl_stmt|;
-name|ResultSet
-name|rs
-init|=
-literal|null
-decl_stmt|;
 try|try
 block|{
 name|DatabaseMetaData
@@ -4861,8 +4922,9 @@ operator|.
 name|getMetaData
 argument_list|()
 decl_stmt|;
+name|ResultSet
 name|rs
-operator|=
+init|=
 name|metadata
 operator|.
 name|getColumns
@@ -4875,7 +4937,7 @@ name|tableName
 argument_list|,
 literal|"%"
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|Set
 argument_list|<
 name|String
@@ -4886,6 +4948,21 @@ operator|new
 name|HashSet
 argument_list|<
 name|String
+argument_list|>
+argument_list|()
+decl_stmt|;
+name|List
+argument_list|<
+name|String
+index|[]
+argument_list|>
+name|newCols
+init|=
+operator|new
+name|ArrayList
+argument_list|<
+name|String
+index|[]
 argument_list|>
 argument_list|()
 decl_stmt|;
@@ -4942,65 +5019,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-block|}
-catch|catch
-parameter_list|(
-name|SQLException
-name|ex
-parameter_list|)
-block|{
-if|if
-condition|(
-name|LOG
-operator|.
-name|isLoggable
-argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|)
-condition|)
-block|{
-name|LOG
-operator|.
-name|fine
-argument_list|(
-literal|"Table "
-operator|+
-name|tableName
-operator|+
-literal|" cannot be verified."
-argument_list|)
-expr_stmt|;
-block|}
-block|}
-finally|finally
-block|{
-if|if
-condition|(
-name|rs
-operator|!=
-literal|null
-condition|)
-block|{
-try|try
-block|{
-name|rs
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
-block|}
-catch|catch
-parameter_list|(
-name|SQLException
-name|e
-parameter_list|)
-block|{
-comment|// ignore
-block|}
-block|}
-block|}
 if|if
 condition|(
 name|newCols
@@ -5040,8 +5058,6 @@ literal|" needs additional columns"
 argument_list|)
 expr_stmt|;
 block|}
-try|try
-block|{
 for|for
 control|(
 name|String
@@ -5132,6 +5148,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
+block|}
 catch|catch
 parameter_list|(
 name|SQLException
@@ -5155,7 +5172,6 @@ argument_list|,
 name|ex
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 block|}
 specifier|protected
@@ -5291,10 +5307,6 @@ argument_list|,
 name|schemaName
 argument_list|)
 argument_list|)
-expr_stmt|;
-name|ex0
-operator|=
-literal|null
 expr_stmt|;
 break|break;
 block|}

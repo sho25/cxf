@@ -1709,7 +1709,7 @@ return|;
 block|}
 name|destination
 operator|.
-name|removeSequence
+name|terminateSequence
 argument_list|(
 name|terminatedSeq
 argument_list|)

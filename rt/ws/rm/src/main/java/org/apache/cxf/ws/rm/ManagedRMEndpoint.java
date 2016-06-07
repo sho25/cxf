@@ -797,9 +797,17 @@ return|;
 block|}
 else|else
 block|{
-comment|//            return endpoint.getManager().getRedeliveryQueue().countUndelivered();
 return|return
-literal|0
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+operator|.
+name|countUndelivered
+argument_list|()
 return|;
 block|}
 block|}
@@ -900,13 +908,39 @@ return|;
 block|}
 else|else
 block|{
-comment|//            DestinationSequence ds = getDestinationSeq(sid);
-comment|//            if (null == ds) {
-comment|//                throw new IllegalArgumentException("no sequence");
-comment|//            }
-comment|//            return manager.getRedeliveryQueue().countUndelivered(ds);
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
 return|return
-literal|0
+name|manager
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+operator|.
+name|countUndelivered
+argument_list|(
+name|ds
+argument_list|)
 return|;
 block|}
 block|}
@@ -1626,53 +1660,350 @@ return|return
 name|rsps
 return|;
 block|}
-comment|//     @ManagedOperation(description = "Redelivery Status")
-comment|//     @ManagedOperationParameters({
-comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier"),
-comment|//         @ManagedOperationParameter(name = "messageNumber", description = "The message number")
-comment|//     })
-comment|//     public CompositeData getRedeliveryStatus(String sid, long num) throws JMException {
-comment|//         DestinationSequence ds = getDestinationSeq(sid);
-comment|//         if (null == ds) {
-comment|//             throw new IllegalArgumentException("no sequence");
-comment|//         }
-comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
-comment|//         RetryStatus rs = rq.getRedeliveryStatus(ds, num);
-comment|//         return getRetryStatusProperties(num, rs);
-comment|//     }
-comment|//    @ManagedOperation(description = "Redelivery Statuses")
-comment|//     @ManagedOperationParameters({
-comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
-comment|//     })
-comment|//     public CompositeData[] getRedeliveryStatuses(String sid) throws JMException {
-comment|//         DestinationSequence ds = getDestinationSeq(sid);
-comment|//         if (null == ds) {
-comment|//             throw new IllegalArgumentException("no sequence");
-comment|//         }
-comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
-comment|//         Map<Long, RetryStatus> rsmap = rq.getRedeliveryStatuses(ds);
-comment|//
-comment|//         CompositeData[] rsps = new CompositeData[rsmap.size()];
-comment|//         int i = 0;
-comment|//         for (Map.Entry<Long, RetryStatus> rs : rsmap.entrySet()) {
-comment|//             rsps[i++] = getRetryStatusProperties(rs.getKey(), rs.getValue());
-comment|//         }
-comment|//         return rsps;
-comment|//     }
-comment|//     @ManagedOperation(description = "List of UnDelivered Message Numbers")
-comment|//     @ManagedOperationParameters({
-comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
-comment|//     })
-comment|//     public Long[] getUnDeliveredMessageIdentifiers(String sid) {
-comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
-comment|//         DestinationSequence ds = getDestinationSeq(sid);
-comment|//         if (null == ds) {
-comment|//             throw new IllegalArgumentException("no sequence");
-comment|//         }
-comment|//
-comment|//         List<Long> numbers = rq.getUndeliveredMessageNumbers(ds);
-comment|//         return numbers.toArray(new Long[numbers.size()]);
-comment|//     }
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Redelivery Status"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|,
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"messageNumber"
+argument_list|,
+name|description
+operator|=
+literal|"The message number"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|CompositeData
+name|getRedeliveryStatus
+parameter_list|(
+name|String
+name|sid
+parameter_list|,
+name|long
+name|num
+parameter_list|)
+throws|throws
+name|JMException
+block|{
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+name|RetryStatus
+name|rs
+init|=
+name|rq
+operator|.
+name|getRedeliveryStatus
+argument_list|(
+name|ds
+argument_list|,
+name|num
+argument_list|)
+decl_stmt|;
+return|return
+name|getRetryStatusProperties
+argument_list|(
+name|num
+argument_list|,
+name|rs
+argument_list|)
+return|;
+block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Redelivery Statuses"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|CompositeData
+index|[]
+name|getRedeliveryStatuses
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+throws|throws
+name|JMException
+block|{
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+name|Map
+argument_list|<
+name|Long
+argument_list|,
+name|RetryStatus
+argument_list|>
+name|rsmap
+init|=
+name|rq
+operator|.
+name|getRedeliveryStatuses
+argument_list|(
+name|ds
+argument_list|)
+decl_stmt|;
+name|CompositeData
+index|[]
+name|rsps
+init|=
+operator|new
+name|CompositeData
+index|[
+name|rsmap
+operator|.
+name|size
+argument_list|()
+index|]
+decl_stmt|;
+name|int
+name|i
+init|=
+literal|0
+decl_stmt|;
+for|for
+control|(
+name|Map
+operator|.
+name|Entry
+argument_list|<
+name|Long
+argument_list|,
+name|RetryStatus
+argument_list|>
+name|rs
+range|:
+name|rsmap
+operator|.
+name|entrySet
+argument_list|()
+control|)
+block|{
+name|rsps
+index|[
+name|i
+operator|++
+index|]
+operator|=
+name|getRetryStatusProperties
+argument_list|(
+name|rs
+operator|.
+name|getKey
+argument_list|()
+argument_list|,
+name|rs
+operator|.
+name|getValue
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+return|return
+name|rsps
+return|;
+block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"List of UnDelivered Message Numbers"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|Long
+index|[]
+name|getUnDeliveredMessageIdentifiers
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+block|{
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
+name|List
+argument_list|<
+name|Long
+argument_list|>
+name|numbers
+init|=
+name|rq
+operator|.
+name|getUndeliveredMessageNumbers
+argument_list|(
+name|ds
+argument_list|)
+decl_stmt|;
+return|return
+name|numbers
+operator|.
+name|toArray
+argument_list|(
+operator|new
+name|Long
+index|[
+name|numbers
+operator|.
+name|size
+argument_list|()
+index|]
+argument_list|)
+return|;
+block|}
 annotation|@
 name|ManagedOperation
 argument_list|(
@@ -2007,30 +2338,158 @@ name|ss
 argument_list|)
 expr_stmt|;
 block|}
-comment|//     @ManagedOperation(description = "Suspend Redelivery Queue")
-comment|//     @ManagedOperationParameters({
-comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
-comment|//     })
-comment|//     public void suspendDestinationQueue(String sid) throws JMException {
-comment|//         DestinationSequence ds = getDestinationSeq(sid);
-comment|//         if (null == ds) {
-comment|//             throw new IllegalArgumentException("no sequence");
-comment|//         }
-comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
-comment|//         rq.suspend(ds);
-comment|//     }
-comment|//     @ManagedOperation(description = "Resume Redelivery Queue")
-comment|//     @ManagedOperationParameters({
-comment|//         @ManagedOperationParameter(name = "sequenceId", description = "The sequence identifier")
-comment|//     })
-comment|//     public void resumeDestinationQueue(String sid) throws JMException {
-comment|//         DestinationSequence ds = getDestinationSeq(sid);
-comment|//         if (null == ds) {
-comment|//             throw new JMException("no source sequence");
-comment|//         }
-comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
-comment|//         rq.resume(ds);
-comment|//     }
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Suspend Redelivery Queue"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|void
+name|suspendDestinationQueue
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+throws|throws
+name|JMException
+block|{
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+name|rq
+operator|.
+name|suspend
+argument_list|(
+name|ds
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Resume Redelivery Queue"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|void
+name|resumeDestinationQueue
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+throws|throws
+name|JMException
+block|{
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|JMException
+argument_list|(
+literal|"no source sequence"
+argument_list|)
+throw|;
+block|}
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+name|rq
+operator|.
+name|resume
+argument_list|(
+name|ds
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|ManagedOperation
 argument_list|(
@@ -2974,12 +3433,48 @@ throw|throw
 operator|new
 name|JMException
 argument_list|(
-literal|"no source sequence"
+literal|"no destination sequence"
 argument_list|)
 throw|;
 block|}
-comment|//         RedeliveryQueue rq = endpoint.getManager().getRedeliveryQueue();
-comment|//         rq.suspend(ds);
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+if|if
+condition|(
+name|rq
+operator|.
+name|countUndelivered
+argument_list|(
+name|ds
+argument_list|)
+operator|>
+literal|0
+condition|)
+block|{
+throw|throw
+operator|new
+name|JMException
+argument_list|(
+literal|"sequence not empty"
+argument_list|)
+throw|;
+block|}
+name|rq
+operator|.
+name|stop
+argument_list|(
+name|ds
+argument_list|)
+expr_stmt|;
 name|ds
 operator|.
 name|getDestination
@@ -3062,6 +3557,80 @@ operator|.
 name|purgeAll
 argument_list|(
 name|ss
+argument_list|)
+expr_stmt|;
+block|}
+annotation|@
+name|ManagedOperation
+argument_list|(
+name|description
+operator|=
+literal|"Purge UnDelivered Messages"
+argument_list|)
+annotation|@
+name|ManagedOperationParameters
+argument_list|(
+block|{
+annotation|@
+name|ManagedOperationParameter
+argument_list|(
+name|name
+operator|=
+literal|"sequenceId"
+argument_list|,
+name|description
+operator|=
+literal|"The sequence identifier"
+argument_list|)
+block|}
+argument_list|)
+specifier|public
+name|void
+name|purgeUnDeliverededMessages
+parameter_list|(
+name|String
+name|sid
+parameter_list|)
+block|{
+name|DestinationSequence
+name|ds
+init|=
+name|getDestinationSeq
+argument_list|(
+name|sid
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+literal|null
+operator|==
+name|ds
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalArgumentException
+argument_list|(
+literal|"no sequence"
+argument_list|)
+throw|;
+block|}
+name|RedeliveryQueue
+name|rq
+init|=
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+decl_stmt|;
+name|rq
+operator|.
+name|purgeAll
+argument_list|(
+name|ds
 argument_list|)
 expr_stmt|;
 block|}
@@ -3543,10 +4112,35 @@ comment|//    @ManagedAttribute(description = "Number of Outbound Completed Mess
 comment|//    public int getCompletedMessagesOutboundCount() {
 comment|//        return endpoint.getManager().countCompleted();
 comment|//    }
-comment|//    @ManagedAttribute(description = "Number of Inbound Queued Messages", currencyTimeLimit = 10)
-comment|//    public int getQueuedMessagesInboundCount() {
-comment|//        return endpoint.getManager().getRedeliveryQueue().countUndelivered();
-comment|//    }
+annotation|@
+name|ManagedAttribute
+argument_list|(
+name|description
+operator|=
+literal|"Number of Inbound Queued Messages"
+argument_list|,
+name|currencyTimeLimit
+operator|=
+literal|10
+argument_list|)
+specifier|public
+name|int
+name|getQueuedMessagesInboundCount
+parameter_list|()
+block|{
+return|return
+name|endpoint
+operator|.
+name|getManager
+argument_list|()
+operator|.
+name|getRedeliveryQueue
+argument_list|()
+operator|.
+name|countUndelivered
+argument_list|()
+return|;
+block|}
 comment|//    @ManagedAttribute(description = "Number of Inbound Completed Messages", currencyTimeLimit = 10)
 comment|//    public int getCompletedMessagesInboundCount() {
 comment|//        return endpoint.getManager().countCompleted();

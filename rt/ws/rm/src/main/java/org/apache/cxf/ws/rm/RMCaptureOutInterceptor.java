@@ -2090,6 +2090,16 @@ block|}
 block|}
 comment|// serializes the message content and the attachments into
 comment|// the RMMessage content
+name|msg
+operator|.
+name|setCreatedTime
+argument_list|(
+name|rmps
+operator|.
+name|getCreatedTime
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|PersistenceUtils
 operator|.
 name|encodeRMContent

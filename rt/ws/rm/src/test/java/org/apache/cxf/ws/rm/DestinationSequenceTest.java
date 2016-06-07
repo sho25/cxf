@@ -3530,7 +3530,7 @@ argument_list|)
 decl_stmt|;
 name|destination
 operator|.
-name|removeSequence
+name|terminateSequence
 argument_list|(
 name|seq
 argument_list|)
@@ -3740,7 +3740,7 @@ argument_list|)
 expr_stmt|;
 name|destination
 operator|.
-name|removeSequence
+name|terminateSequence
 argument_list|(
 name|seq
 argument_list|)
