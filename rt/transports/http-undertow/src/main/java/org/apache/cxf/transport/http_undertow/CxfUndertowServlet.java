@@ -122,7 +122,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|CxfUndertwoServlet
+name|CxfUndertowServlet
 extends|extends
 name|AbstractHTTPServlet
 block|{

@@ -1019,7 +1019,7 @@ name|ServletPathMatches
 operator|.
 name|DEFAULT_SERVLET_NAME
 argument_list|,
-name|CxfUndertwoServlet
+name|CxfUndertowServlet
 operator|.
 name|class
 argument_list|)
