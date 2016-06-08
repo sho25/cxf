@@ -1116,6 +1116,21 @@ operator|.
 name|getSystemJavaCompiler
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|compiler
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|IllegalStateException
+argument_list|(
+literal|"No compiler detected, make sure you are running on top of a JDK instead of a JRE."
+argument_list|)
+throw|;
+block|}
 name|StandardJavaFileManager
 name|fileManager
 init|=
