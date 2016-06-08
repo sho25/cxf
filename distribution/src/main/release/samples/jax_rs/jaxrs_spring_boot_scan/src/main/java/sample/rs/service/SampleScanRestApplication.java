@@ -81,20 +81,6 @@ name|Bean
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|context
-operator|.
-name|annotation
-operator|.
-name|Import
-import|;
-end_import
-
 begin_class
 annotation|@
 name|SpringBootApplication

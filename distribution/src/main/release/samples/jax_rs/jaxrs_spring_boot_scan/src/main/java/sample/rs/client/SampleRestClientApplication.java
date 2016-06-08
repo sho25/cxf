@@ -39,7 +39,7 @@ name|service
 operator|.
 name|hello1
 operator|.
-name|HelloService
+name|HelloServiceImpl1
 import|;
 end_import
 
@@ -63,7 +63,7 @@ index|[]
 name|args
 parameter_list|)
 block|{
-name|HelloService
+name|HelloServiceImpl1
 name|service
 init|=
 name|JAXRSClientFactory
@@ -72,7 +72,7 @@ name|create
 argument_list|(
 literal|"http://localhost:8080/services/helloservice/"
 argument_list|,
-name|HelloService
+name|HelloServiceImpl1
 operator|.
 name|class
 argument_list|)
