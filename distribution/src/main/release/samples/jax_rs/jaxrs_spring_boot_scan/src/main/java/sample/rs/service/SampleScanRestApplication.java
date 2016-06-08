@@ -23,22 +23,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|spring
-operator|.
-name|SpringComponentScanServer
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|jaxrs
-operator|.
 name|swagger
 operator|.
 name|Swagger2Feature
@@ -114,13 +98,6 @@ end_import
 begin_class
 annotation|@
 name|SpringBootApplication
-annotation|@
-name|Import
-argument_list|(
-name|SpringComponentScanServer
-operator|.
-name|class
-argument_list|)
 specifier|public
 class|class
 name|SampleScanRestApplication
@@ -157,8 +134,6 @@ name|ApplicationContext
 name|context
 parameter_list|)
 block|{
-comment|// Or create a simple Swagger2Feature @Component-annotated extension
-comment|// and drop this method if a default feature setup is OK
 return|return
 operator|new
 name|Swagger2Feature
