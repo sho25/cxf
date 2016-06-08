@@ -145,7 +145,7 @@ name|service
 operator|.
 name|hello1
 operator|.
-name|HelloService
+name|HelloServiceImpl1
 import|;
 end_import
 
@@ -159,7 +159,7 @@ name|service
 operator|.
 name|hello2
 operator|.
-name|HelloService2
+name|HelloServiceImpl2
 import|;
 end_import
 
@@ -225,14 +225,17 @@ name|setServiceBeans
 argument_list|(
 name|Arrays
 operator|.
+expr|<
+name|Object
+operator|>
 name|asList
 argument_list|(
 operator|new
-name|HelloService
+name|HelloServiceImpl1
 argument_list|()
 argument_list|,
 operator|new
-name|HelloService2
+name|HelloServiceImpl2
 argument_list|()
 argument_list|)
 argument_list|)

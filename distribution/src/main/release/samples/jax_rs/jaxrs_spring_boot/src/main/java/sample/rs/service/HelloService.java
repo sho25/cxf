@@ -10,8 +10,6 @@ operator|.
 name|rs
 operator|.
 name|service
-operator|.
-name|hello2
 package|;
 end_package
 
@@ -89,34 +87,17 @@ name|Service
 import|;
 end_import
 
-begin_import
-import|import
-name|io
-operator|.
-name|swagger
-operator|.
-name|annotations
-operator|.
-name|Api
-import|;
-end_import
-
-begin_class
+begin_interface
 annotation|@
 name|Path
 argument_list|(
-literal|"/sayHello2"
+literal|"/sayHello"
 argument_list|)
 annotation|@
 name|Service
-annotation|@
-name|Api
-argument_list|(
-literal|"/sayHello2"
-argument_list|)
 specifier|public
-class|class
-name|HelloService2
+interface|interface
+name|HelloService
 block|{
 annotation|@
 name|GET
@@ -132,7 +113,6 @@ name|MediaType
 operator|.
 name|TEXT_PLAIN
 argument_list|)
-specifier|public
 name|String
 name|sayHello
 parameter_list|(
@@ -144,17 +124,9 @@ argument_list|)
 name|String
 name|a
 parameter_list|)
-block|{
-return|return
-literal|"Hello2 "
-operator|+
-name|a
-operator|+
-literal|", Welcome to CXF RS Spring Boot World!!!"
-return|;
+function_decl|;
 block|}
-block|}
-end_class
+end_interface
 
 end_unit
 
