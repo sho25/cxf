@@ -1086,6 +1086,7 @@ operator|+
 name|key
 return|;
 block|}
+comment|// CHECKSTYLE:OFF
 specifier|private
 name|void
 name|sendCustomerEvent
@@ -1456,6 +1457,7 @@ block|}
 argument_list|)
 expr_stmt|;
 block|}
+comment|// CHECKSTYLE:ON
 specifier|final
 name|void
 name|init

@@ -404,7 +404,6 @@ name|CachedStream
 extends|extends
 name|CachedOutputStream
 block|{
-specifier|public
 name|CachedStream
 parameter_list|()
 block|{
