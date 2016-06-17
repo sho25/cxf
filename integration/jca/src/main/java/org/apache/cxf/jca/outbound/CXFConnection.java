@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A CXFConnection is obtains from {@link CXFConnectionFactory}.  It provides  * access to a CXF web service for client to invoke.  The client should close  * the CxfConnection when the web service is no longer needed.  */
+comment|/**  * A CXFConnection is obtains from {@link CXFConnectionFactory}.  It provides  * access to a CXF web service for client to invoke.  The client should close  * the CXFConnection when the web service is no longer needed.  */
 end_comment
 
 begin_interface
@@ -26,7 +26,7 @@ specifier|public
 interface|interface
 name|CXFConnection
 block|{
-comment|/**      * Retrieves a service object to invoke.  The serviceInterface class must      * match the serviceClass in the CXFConnectionSpec that is used to      * obtain this CXFConnection.  Application can continue to use the service      * object after the the connection has been closed by calling {@link #close()}.      *       * @param<T>      * @param serviceClass      * @return service object      * @throws Exception      */
+comment|/**      * Retrieves a service object to invoke.  The serviceInterface class must      * match the serviceClass in the CXFConnectionSpec that is used to      * obtain this CXFConnection.  Application should not continue to use the service      * object after the the connection has been closed by calling {@link #close()}.      *       * @param<T>      * @param serviceClass      * @return service object      * @throws Exception      */
 parameter_list|<
 name|T
 parameter_list|>
