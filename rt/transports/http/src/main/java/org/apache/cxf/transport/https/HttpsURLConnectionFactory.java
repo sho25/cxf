@@ -256,7 +256,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This HttpsURLConnectionFactory implements the HttpURLConnectionFactory  * for using the given SSL Policy to configure TLS connections for "https:"  * URLs.  *   */
+comment|/**  * This HttpsURLConnectionFactory implements the HttpURLConnectionFactory  * for using the given SSL Policy to configure TLS connections for "https:"  * URLs.  */
 end_comment
 
 begin_class
@@ -305,7 +305,7 @@ specifier|public
 name|HttpsURLConnectionFactory
 parameter_list|()
 block|{     }
-comment|/**      * Create a HttpURLConnection, proxified if necessary.      *       *       * @param proxy This parameter is non-null if connection should be proxied.      * @param url   The target URL. This parameter must be an https url.      *       * @return The HttpsURLConnection for the given URL.      * @throws IOException This exception is thrown if       *         the "url" is not "https" or other IOException      *         is thrown.       *                           */
+comment|/**      * Create a HttpURLConnection, proxified if necessary.      *       *       * @param proxy This parameter is non-null if connection should be proxied.      * @param url   The target URL.      *       * @return The HttpURLConnection for the given URL.      * @throws IOException      */
 specifier|public
 name|HttpURLConnection
 name|createConnection
@@ -373,11 +373,6 @@ name|TLSClientParameters
 argument_list|()
 expr_stmt|;
 block|}
-name|Exception
-name|ex
-init|=
-literal|null
-decl_stmt|;
 try|try
 block|{
 name|decorateWithTLS
@@ -390,23 +385,9 @@ expr_stmt|;
 block|}
 catch|catch
 parameter_list|(
-name|Exception
-name|e
+name|Throwable
+name|ex
 parameter_list|)
-block|{
-name|ex
-operator|=
-name|e
-expr_stmt|;
-block|}
-finally|finally
-block|{
-if|if
-condition|(
-name|ex
-operator|!=
-literal|null
-condition|)
 block|{
 if|if
 condition|(
@@ -422,7 +403,6 @@ operator|)
 name|ex
 throw|;
 block|}
-comment|// use exception.initCause(ex) to be java 5 compatible
 name|IOException
 name|ioException
 init|=
@@ -430,19 +410,13 @@ operator|new
 name|IOException
 argument_list|(
 literal|"Error while initializing secure socket"
-argument_list|)
-decl_stmt|;
-name|ioException
-operator|.
-name|initCause
-argument_list|(
+argument_list|,
 name|ex
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 throw|throw
 name|ioException
 throw|;
-block|}
 block|}
 block|}
 return|return
@@ -980,7 +954,7 @@ expr_stmt|;
 block|}
 return|return;
 block|}
-comment|//if we cannot set the SSLSocketFactor, we're in serious trouble.
+comment|//if we cannot set the SSLSocketFactory, we're in serious trouble.
 throw|throw
 operator|new
 name|IllegalArgumentException
