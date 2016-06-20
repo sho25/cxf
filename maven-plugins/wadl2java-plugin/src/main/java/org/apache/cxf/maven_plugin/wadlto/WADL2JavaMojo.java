@@ -254,7 +254,7 @@ literal|"cxf.wadlRoot"
 argument_list|,
 name|defaultValue
 operator|=
-literal|"${basedir}/src/main/resources/wad"
+literal|"${basedir}/src/main/resources/wadl"
 argument_list|)
 name|File
 name|wadlRoot
