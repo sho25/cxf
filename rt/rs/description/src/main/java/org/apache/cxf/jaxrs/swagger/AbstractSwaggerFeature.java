@@ -302,6 +302,15 @@ argument_list|,
 name|bus
 argument_list|)
 expr_stmt|;
+name|bus
+operator|.
+name|setProperty
+argument_list|(
+literal|"swagger.service.descrition.available"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|protected

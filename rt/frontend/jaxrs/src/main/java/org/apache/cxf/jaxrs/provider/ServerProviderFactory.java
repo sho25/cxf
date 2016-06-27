@@ -925,6 +925,8 @@ init|=
 name|createProvider
 argument_list|(
 name|WADL_PROVIDER_NAME
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 if|if

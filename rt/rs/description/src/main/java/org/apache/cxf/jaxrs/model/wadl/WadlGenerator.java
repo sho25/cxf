@@ -1912,6 +1912,17 @@ name|bus
 operator|=
 name|bus
 expr_stmt|;
+name|this
+operator|.
+name|bus
+operator|.
+name|setProperty
+argument_list|(
+literal|"wadl.service.descrition.available"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 block|}
 annotation|@
 name|Override
