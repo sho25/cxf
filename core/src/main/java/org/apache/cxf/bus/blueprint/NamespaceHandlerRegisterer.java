@@ -221,21 +221,11 @@ name|Throwable
 name|e
 parameter_list|)
 block|{
-name|String
-name|msg
-init|=
-literal|"Aries Blueprint packages not available. So namespaces will not be registered"
-decl_stmt|;
 if|if
 condition|(
-name|LOG
-operator|.
-name|isLoggable
-argument_list|(
-name|Level
-operator|.
-name|FINE
-argument_list|)
+name|e
+operator|instanceof
+name|NoClassDefFoundError
 condition|)
 block|{
 name|LOG
@@ -244,11 +234,9 @@ name|log
 argument_list|(
 name|Level
 operator|.
-name|WARNING
+name|INFO
 argument_list|,
-name|msg
-argument_list|,
-name|e
+literal|"Aries Blueprint packages not available. So namespaces will not be registered"
 argument_list|)
 expr_stmt|;
 block|}
@@ -262,7 +250,9 @@ name|Level
 operator|.
 name|WARNING
 argument_list|,
-name|msg
+literal|"Unexpected exception when trying to install Aries Blueprint namespaces"
+argument_list|,
+name|e
 argument_list|)
 expr_stmt|;
 block|}
