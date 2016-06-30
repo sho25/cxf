@@ -572,15 +572,6 @@ name|scanAllPackages
 condition|?
 literal|""
 else|:
-name|basePackage
-operator|.
-name|contains
-argument_list|(
-name|WILDCARD
-argument_list|)
-condition|?
-name|basePackage
-else|:
 name|ClassUtils
 operator|.
 name|convertClassNameToResourcePath

@@ -307,9 +307,7 @@ block|{
 return|return
 name|findClasses
 argument_list|(
-name|Collections
-operator|.
-name|singletonList
+name|parsePackages
 argument_list|(
 name|basePackage
 argument_list|)
