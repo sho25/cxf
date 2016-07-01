@@ -83,6 +83,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|jaxrs
+operator|.
+name|spring
+operator|.
+name|SpringJaxrsClassesScanServer
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|transport
 operator|.
 name|servlet
@@ -149,7 +165,7 @@ name|autoconfigure
 operator|.
 name|condition
 operator|.
-name|ConditionalOnMissingBean
+name|ConditionalOnExpression
 import|;
 end_import
 
@@ -165,7 +181,7 @@ name|autoconfigure
 operator|.
 name|condition
 operator|.
-name|ConditionalOnProperty
+name|ConditionalOnMissingBean
 import|;
 end_import
 
@@ -482,19 +498,9 @@ operator|.
 name|class
 argument_list|)
 annotation|@
-name|ConditionalOnProperty
+name|ConditionalOnExpression
 argument_list|(
-name|prefix
-operator|=
-literal|"cxf"
-argument_list|,
-name|name
-operator|=
-literal|"jaxrs.component-scan"
-argument_list|,
-name|havingValue
-operator|=
-literal|"true"
+literal|"'${cxf.jaxrs.component-scan}'=='true'&& '${cxf.jaxrs.classes-scan}'!='true'"
 argument_list|)
 annotation|@
 name|Import
@@ -506,7 +512,33 @@ argument_list|)
 specifier|protected
 specifier|static
 class|class
-name|JaxRsConfiguration
+name|JaxRsComponentConfiguration
+block|{           }
+annotation|@
+name|Configuration
+annotation|@
+name|ConditionalOnClass
+argument_list|(
+name|JAXRSServerFactoryBean
+operator|.
+name|class
+argument_list|)
+annotation|@
+name|ConditionalOnExpression
+argument_list|(
+literal|"'${cxf.jaxrs.classes-scan}'=='true'&& '${cxf.jaxrs.component-scan}'!='true'"
+argument_list|)
+annotation|@
+name|Import
+argument_list|(
+name|SpringJaxrsClassesScanServer
+operator|.
+name|class
+argument_list|)
+specifier|protected
+specifier|static
+class|class
+name|JaxRsClassesConfiguration
 block|{           }
 block|}
 end_class
