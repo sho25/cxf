@@ -61,14 +61,9 @@ name|SpringBootApplication
 annotation|@
 name|EnableEurekaServer
 specifier|public
-specifier|final
 class|class
 name|RegistryApplication
 block|{
-specifier|private
-name|RegistryApplication
-parameter_list|()
-block|{     }
 specifier|public
 specifier|static
 name|void
