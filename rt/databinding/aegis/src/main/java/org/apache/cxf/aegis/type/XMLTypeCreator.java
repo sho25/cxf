@@ -664,6 +664,8 @@ operator|!=
 literal|null
 condition|)
 block|{
+try|try
+block|{
 name|SchemaFactory
 name|schemaFactory
 init|=
@@ -676,8 +678,6 @@ operator|.
 name|W3C_XML_SCHEMA_NS_URI
 argument_list|)
 decl_stmt|;
-try|try
-block|{
 name|Schema
 name|aegisSchema
 init|=
