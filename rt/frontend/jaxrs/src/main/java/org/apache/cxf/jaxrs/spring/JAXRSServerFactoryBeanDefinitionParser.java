@@ -1543,6 +1543,8 @@ name|setServiceBeans
 argument_list|(
 name|createBeansFromDiscoveredClasses
 argument_list|(
+name|context
+argument_list|,
 name|classes
 operator|.
 name|get
@@ -1562,6 +1564,8 @@ name|setProviders
 argument_list|(
 name|createBeansFromDiscoveredClasses
 argument_list|(
+name|context
+argument_list|,
 name|classes
 operator|.
 name|get
@@ -1754,13 +1758,17 @@ return|return
 literal|null
 return|;
 block|}
-specifier|private
+block|}
+specifier|static
 name|List
 argument_list|<
 name|Object
 argument_list|>
 name|createBeansFromDiscoveredClasses
 parameter_list|(
+name|ApplicationContext
+name|context
+parameter_list|,
 name|Collection
 argument_list|<
 name|Class
@@ -1881,7 +1889,6 @@ block|}
 return|return
 name|providers
 return|;
-block|}
 block|}
 block|}
 end_class
