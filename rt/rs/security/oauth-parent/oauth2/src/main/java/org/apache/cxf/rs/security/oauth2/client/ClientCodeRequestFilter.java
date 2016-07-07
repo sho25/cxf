@@ -905,6 +905,11 @@ argument_list|(
 name|WILDCARD
 argument_list|)
 operator|&&
+operator|(
+name|completeUri
+operator|==
+literal|null
+operator|||
 operator|!
 name|absoluteRequestUri
 operator|.
@@ -912,6 +917,7 @@ name|endsWith
 argument_list|(
 name|completeUri
 argument_list|)
+operator|)
 operator|||
 name|absoluteRequestUri
 operator|.
