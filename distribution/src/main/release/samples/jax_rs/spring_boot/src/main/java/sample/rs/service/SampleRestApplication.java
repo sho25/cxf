@@ -372,11 +372,6 @@ name|println
 argument_list|(
 name|webClient
 operator|.
-name|accept
-argument_list|(
-literal|"text/plain"
-argument_list|)
-operator|.
 name|path
 argument_list|(
 literal|"sayHello/ApacheCxfWebClientUser"
