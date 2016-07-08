@@ -99,7 +99,7 @@ argument_list|)
 annotation|@
 name|Import
 argument_list|(
-name|WebClientConfiguration
+name|JaxRsWebClientConfiguration
 operator|.
 name|class
 argument_list|)

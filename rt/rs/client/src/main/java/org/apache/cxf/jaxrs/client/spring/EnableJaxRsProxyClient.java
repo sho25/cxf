@@ -99,7 +99,7 @@ argument_list|)
 annotation|@
 name|Import
 argument_list|(
-name|JaxRsClientClassesScanConfiguration
+name|JaxRsProxyClientConfiguration
 operator|.
 name|class
 argument_list|)
