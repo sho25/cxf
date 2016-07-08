@@ -1347,6 +1347,15 @@ name|OAuthServiceException
 name|ex
 parameter_list|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"No valid client found for clientId: "
+operator|+
+name|clientId
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|ex
@@ -1377,6 +1386,15 @@ operator|==
 literal|null
 condition|)
 block|{
+name|LOG
+operator|.
+name|warning
+argument_list|(
+literal|"No valid client found for clientId: "
+operator|+
+name|clientId
+argument_list|)
+expr_stmt|;
 name|reportInvalidClient
 argument_list|()
 expr_stmt|;

@@ -209,7 +209,7 @@ comment|//
 comment|//
 comment|// Shared configuration
 comment|//
-comment|/**      * The keystore type. Suitable values are "jks" or "jwk".      */
+comment|/**      * The keystore type. Suitable values are "jks" or "jwk". The default value is "jwk".      */
 specifier|public
 specifier|static
 specifier|final
