@@ -111,7 +111,7 @@ specifier|final
 name|String
 name|CD_HEADER_EXT_PARAMS_EXPRESSION
 init|=
-literal|"(UTF-8|ISO-8859-1)''((?:%[0-9a-f]{2}|\\S)+)"
+literal|"(?i)(UTF-8|ISO-8859-1)''((?:%[0-9a-f]{2}|\\S)+)"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -323,7 +323,7 @@ if|if
 condition|(
 literal|"filename*"
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|paramName
 argument_list|)
@@ -401,7 +401,7 @@ if|if
 condition|(
 literal|"filename"
 operator|.
-name|equals
+name|equalsIgnoreCase
 argument_list|(
 name|paramName
 argument_list|)
@@ -527,6 +527,9 @@ operator|.
 name|put
 argument_list|(
 name|paramName
+operator|.
+name|toLowerCase
+argument_list|()
 argument_list|,
 name|paramValue
 argument_list|)
