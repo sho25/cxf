@@ -2788,7 +2788,7 @@ block|}
 block|}
 name|response
 operator|.
-name|addHeader
+name|setHeader
 argument_list|(
 name|header
 argument_list|,
