@@ -406,6 +406,8 @@ argument_list|(
 name|Priorities
 operator|.
 name|AUTHENTICATION
+operator|+
+literal|2
 argument_list|)
 specifier|public
 class|class
