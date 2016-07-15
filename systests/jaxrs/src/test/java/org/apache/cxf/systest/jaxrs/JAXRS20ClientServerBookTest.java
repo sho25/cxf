@@ -1169,8 +1169,6 @@ name|request
 argument_list|(
 literal|"application/xml"
 argument_list|)
-decl_stmt|;
-name|builder
 operator|.
 name|header
 argument_list|(
@@ -1178,7 +1176,7 @@ literal|"a"
 argument_list|,
 literal|"b"
 argument_list|)
-expr_stmt|;
+decl_stmt|;
 name|Response
 name|r
 init|=
