@@ -44,6 +44,23 @@ name|LoadDistributorFeature
 extends|extends
 name|FailoverFeature
 block|{
+specifier|public
+name|LoadDistributorFeature
+parameter_list|()
+block|{              }
+specifier|public
+name|LoadDistributorFeature
+parameter_list|(
+name|String
+name|clientBootstrapAddress
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|clientBootstrapAddress
+argument_list|)
+expr_stmt|;
+block|}
 annotation|@
 name|Override
 specifier|public
@@ -54,7 +71,10 @@ block|{
 return|return
 operator|new
 name|LoadDistributorTargetSelector
+argument_list|(
+name|getClientBootstrapAddress
 argument_list|()
+argument_list|)
 return|;
 block|}
 block|}

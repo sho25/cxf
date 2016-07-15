@@ -201,7 +201,7 @@ block|{
 annotation|@
 name|Value
 argument_list|(
-literal|"${cxf.jaxrs.client.classes-scan-packages:''}"
+literal|"${cxf.jaxrs.client.classes-scan-packages:}"
 argument_list|)
 specifier|private
 name|String

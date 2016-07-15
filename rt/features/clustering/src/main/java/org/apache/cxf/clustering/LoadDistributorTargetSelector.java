@@ -165,6 +165,19 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
+specifier|public
+name|LoadDistributorTargetSelector
+parameter_list|(
+name|String
+name|clientBootstrapAddress
+parameter_list|)
+block|{
+name|super
+argument_list|(
+name|clientBootstrapAddress
+argument_list|)
+expr_stmt|;
+block|}
 comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *      * @param c specific conduit      */
 specifier|public
 name|LoadDistributorTargetSelector
