@@ -939,9 +939,9 @@ block|}
 comment|// Finally compare start URI with the request URI
 return|return
 name|startUri
-operator|==
+operator|!=
 literal|null
-operator|||
+operator|&&
 name|absoluteRequestUri
 operator|.
 name|endsWith
