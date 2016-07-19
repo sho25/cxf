@@ -668,6 +668,11 @@ operator|.
 name|toString
 argument_list|()
 decl_stmt|;
+name|boolean
+name|sameRedirectUri
+init|=
+literal|false
+decl_stmt|;
 if|if
 condition|(
 name|completeUri
@@ -703,6 +708,10 @@ name|completeUri
 operator|=
 name|absoluteRequestUri
 expr_stmt|;
+name|sameRedirectUri
+operator|=
+literal|true
+expr_stmt|;
 block|}
 block|}
 if|if
@@ -712,6 +721,8 @@ argument_list|(
 name|ui
 argument_list|,
 name|absoluteRequestUri
+argument_list|,
+name|sameRedirectUri
 argument_list|)
 condition|)
 block|{
@@ -863,6 +874,9 @@ name|ui
 parameter_list|,
 name|String
 name|absoluteRequestUri
+parameter_list|,
+name|boolean
+name|sameRedirectUri
 parameter_list|)
 block|{
 comment|// If all request URIs can initiate a code flow then it is a match
@@ -873,6 +887,7 @@ name|startUri
 operator|==
 literal|null
 operator|&&
+operator|(
 name|completeUri
 operator|!=
 literal|null
@@ -884,6 +899,10 @@ name|endsWith
 argument_list|(
 name|completeUri
 argument_list|)
+operator|||
+operator|!
+name|sameRedirectUri
+operator|)
 condition|)
 block|{
 return|return
