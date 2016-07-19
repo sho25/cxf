@@ -887,7 +887,6 @@ name|startUri
 operator|==
 literal|null
 operator|&&
-operator|(
 name|completeUri
 operator|!=
 literal|null
@@ -899,10 +898,6 @@ name|endsWith
 argument_list|(
 name|completeUri
 argument_list|)
-operator|||
-operator|!
-name|sameRedirectUri
-operator|)
 condition|)
 block|{
 return|return
@@ -957,6 +952,13 @@ block|}
 block|}
 comment|// Finally compare start URI with the request URI
 return|return
+name|startUri
+operator|==
+literal|null
+operator|&&
+operator|!
+name|sameRedirectUri
+operator|||
 name|startUri
 operator|!=
 literal|null
