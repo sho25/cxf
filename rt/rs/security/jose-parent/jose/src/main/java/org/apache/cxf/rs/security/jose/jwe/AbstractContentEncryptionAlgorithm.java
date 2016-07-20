@@ -219,7 +219,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Custom IV is recommeded to be used once"
+literal|"Custom IV is recommended to be used once"
 argument_list|)
 expr_stmt|;
 throw|throw
