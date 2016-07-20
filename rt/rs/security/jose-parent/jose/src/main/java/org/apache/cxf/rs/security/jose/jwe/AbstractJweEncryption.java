@@ -659,12 +659,21 @@ if|if
 condition|(
 name|jweInput
 operator|.
+name|isContentEncryptionRequired
+argument_list|()
+condition|)
+block|{
+if|if
+condition|(
+name|jweInput
+operator|.
 name|getContent
 argument_list|()
 operator|==
 literal|null
 condition|)
 block|{
+comment|// Streaming
 name|c
 operator|=
 name|CryptoUtils
@@ -726,6 +735,8 @@ name|encryptedContent
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+comment|// else only CEK is encrypted
 return|return
 operator|new
 name|JweEncryptionOutput
