@@ -71,26 +71,6 @@ name|Conduit
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|Logger
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|slf4j
-operator|.
-name|LoggerFactory
-import|;
-end_import
-
 begin_comment
 comment|/**  * Programmatically configure a http conduit. This can also be used as a DOSGi  * intent.  */
 end_comment
@@ -102,20 +82,6 @@ name|HttpConduitFeature
 extends|extends
 name|AbstractFeature
 block|{
-specifier|static
-specifier|final
-name|Logger
-name|LOG
-init|=
-name|LoggerFactory
-operator|.
-name|getLogger
-argument_list|(
-name|HttpConduitFeature
-operator|.
-name|class
-argument_list|)
-decl_stmt|;
 specifier|private
 name|HttpConduitConfig
 name|conduitConfig
