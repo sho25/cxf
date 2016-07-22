@@ -3079,7 +3079,7 @@ name|put
 argument_list|(
 literal|"org.apache.wss4j.crypto.merlin.keystore.file"
 argument_list|,
-literal|"restricted/keys/stsstore.jks"
+literal|"restricted/stsstore.jks"
 argument_list|)
 expr_stmt|;
 block|}
