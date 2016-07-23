@@ -3494,7 +3494,12 @@ block|{
 name|exchange
 operator|.
 name|wait
+argument_list|(
+name|cfg
+operator|.
+name|getSynchronousTimeout
 argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 block|}
