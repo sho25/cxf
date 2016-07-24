@@ -1918,7 +1918,7 @@ name|bus
 operator|.
 name|setProperty
 argument_list|(
-literal|"wadl.service.descrition.available"
+literal|"wadl.service.description.available"
 argument_list|,
 literal|"true"
 argument_list|)
