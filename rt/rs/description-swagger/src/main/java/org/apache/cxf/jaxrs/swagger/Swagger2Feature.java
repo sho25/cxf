@@ -1729,9 +1729,9 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|FAVICON_ICO
+name|FAVICON
 init|=
-literal|"favicon.ico"
+literal|"favicon"
 decl_stmt|;
 annotation|@
 name|GET
@@ -1760,11 +1760,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
-name|FAVICON_ICO
-operator|.
-name|equals
-argument_list|(
 name|resourcePath
+operator|.
+name|contains
+argument_list|(
+name|FAVICON
 argument_list|)
 condition|)
 block|{
