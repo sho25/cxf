@@ -1070,6 +1070,13 @@ condition|(
 name|d
 operator|!=
 literal|null
+operator|&&
+name|d
+operator|.
+name|getMessageObserver
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 name|Bus
