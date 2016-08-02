@@ -926,7 +926,7 @@ literal|"iss"
 argument_list|,
 name|obj
 operator|.
-name|getExp
+name|getIss
 argument_list|()
 argument_list|,
 literal|false
