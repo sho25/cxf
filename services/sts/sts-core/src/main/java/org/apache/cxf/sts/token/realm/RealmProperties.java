@@ -209,6 +209,10 @@ argument_list|)
 decl_stmt|;
 specifier|private
 name|String
+name|name
+decl_stmt|;
+specifier|private
+name|String
 name|issuer
 decl_stmt|;
 specifier|private
@@ -244,6 +248,32 @@ block|{
 return|return
 name|issuer
 return|;
+block|}
+comment|/**      * Get the name of this realm      * @return realmA      */
+specifier|public
+name|String
+name|getName
+parameter_list|()
+block|{
+return|return
+name|name
+return|;
+block|}
+comment|/**      * Set the name of this realm      * @param name the name of this realm      */
+specifier|public
+name|void
+name|setName
+parameter_list|(
+name|String
+name|name
+parameter_list|)
+block|{
+name|this
+operator|.
+name|name
+operator|=
+name|name
+expr_stmt|;
 block|}
 comment|/**      * Set the issuer of this realm      * @param issuer the issuer of this realm      */
 specifier|public
