@@ -110,7 +110,7 @@ name|class
 operator|.
 name|getResource
 argument_list|(
-literal|"cxf-sts-transport.xml"
+literal|"cxf-issuer-sts-transport.xml"
 argument_list|)
 decl_stmt|;
 name|Bus

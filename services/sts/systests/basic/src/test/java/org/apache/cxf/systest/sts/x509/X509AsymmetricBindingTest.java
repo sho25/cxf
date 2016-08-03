@@ -285,19 +285,25 @@ literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|STSServer
+name|stsServer
+init|=
+operator|new
+name|STSServer
+argument_list|()
+decl_stmt|;
+name|stsServer
+operator|.
+name|setContext
+argument_list|(
+literal|"cxf-x509.xml"
+argument_list|)
+expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Server failed to launch"
-argument_list|,
-comment|// run the server in the same process
-comment|// set this to false to fork
 name|launchServer
 argument_list|(
-name|STSServer
-operator|.
-name|class
-argument_list|,
-literal|true
+name|stsServer
 argument_list|)
 argument_list|)
 expr_stmt|;
