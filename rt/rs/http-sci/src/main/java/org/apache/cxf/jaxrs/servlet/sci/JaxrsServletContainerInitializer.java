@@ -251,6 +251,22 @@ name|CXFNonSpringJaxrsServlet
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|jaxrs
+operator|.
+name|utils
+operator|.
+name|ResourceUtils
+import|;
+end_import
+
 begin_class
 annotation|@
 name|HandlesTypes
@@ -439,13 +455,11 @@ expr_stmt|;
 name|ApplicationPath
 name|appPath
 init|=
-name|appClass
+name|ResourceUtils
 operator|.
-name|getAnnotation
+name|locateApplicationPath
 argument_list|(
-name|ApplicationPath
-operator|.
-name|class
+name|appClass
 argument_list|)
 decl_stmt|;
 comment|// If ApplicationPath is available - use its value as a mapping otherwise get it from
