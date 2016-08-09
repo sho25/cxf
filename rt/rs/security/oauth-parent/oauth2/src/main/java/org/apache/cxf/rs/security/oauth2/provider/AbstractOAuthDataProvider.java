@@ -815,6 +815,7 @@ block|}
 comment|// OAuth2 resource indicators (resource server audience)
 if|if
 condition|(
+operator|!
 name|at
 operator|.
 name|getAudiences
