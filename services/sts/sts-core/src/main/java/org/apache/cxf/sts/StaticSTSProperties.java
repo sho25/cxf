@@ -424,7 +424,8 @@ name|signatureCrypto
 operator|==
 literal|null
 operator|&&
-name|signatureCryptoProperties
+name|getSignatureCryptoProperties
+argument_list|()
 operator|!=
 literal|null
 condition|)
@@ -444,7 +445,8 @@ name|loadProperties
 argument_list|(
 name|resourceManager
 argument_list|,
-name|signatureCryptoProperties
+name|getSignatureCryptoProperties
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -460,7 +462,8 @@ name|fine
 argument_list|(
 literal|"Cannot load signature properties using: "
 operator|+
-name|signatureCryptoProperties
+name|getSignatureCryptoProperties
+argument_list|()
 argument_list|)
 expr_stmt|;
 throw|throw
@@ -519,7 +522,8 @@ name|encryptionCrypto
 operator|==
 literal|null
 operator|&&
-name|encryptionCryptoProperties
+name|getEncryptionCryptoProperties
+argument_list|()
 operator|!=
 literal|null
 condition|)
@@ -539,7 +543,8 @@ name|loadProperties
 argument_list|(
 name|resourceManager
 argument_list|,
-name|encryptionCryptoProperties
+name|getEncryptionCryptoProperties
+argument_list|()
 argument_list|)
 decl_stmt|;
 if|if
@@ -555,7 +560,8 @@ name|fine
 argument_list|(
 literal|"Cannot load encryption properties using: "
 operator|+
-name|encryptionCryptoProperties
+name|getEncryptionCryptoProperties
+argument_list|()
 argument_list|)
 expr_stmt|;
 throw|throw
@@ -614,7 +620,8 @@ name|callbackHandler
 operator|==
 literal|null
 operator|&&
-name|callbackHandlerClass
+name|getCallbackHandlerClass
+argument_list|()
 operator|!=
 literal|null
 condition|)
@@ -627,7 +634,8 @@ name|SecurityUtils
 operator|.
 name|getCallbackHandler
 argument_list|(
-name|callbackHandlerClass
+name|getCallbackHandlerClass
+argument_list|()
 argument_list|)
 expr_stmt|;
 if|if
@@ -643,7 +651,8 @@ name|fine
 argument_list|(
 literal|"Cannot load CallbackHandler using: "
 operator|+
-name|callbackHandlerClass
+name|getCallbackHandlerClass
+argument_list|()
 argument_list|)
 expr_stmt|;
 throw|throw
@@ -803,6 +812,17 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|public
+name|String
+name|getCallbackHandlerClass
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|callbackHandlerClass
+return|;
+block|}
 comment|/**      * Get the CallbackHandler object.      * @return the CallbackHandler object.      */
 specifier|public
 name|CallbackHandler
@@ -883,6 +903,17 @@ name|signatureCryptoProperties
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|public
+name|Object
+name|getSignatureCryptoProperties
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|signatureCryptoProperties
+return|;
 block|}
 comment|/**      * Get the signature Crypto object      * @return the signature Crypto object      */
 specifier|public
@@ -1012,6 +1043,17 @@ name|encryptionCryptoProperties
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|public
+name|Object
+name|getEncryptionCryptoProperties
+parameter_list|()
+block|{
+return|return
+name|this
+operator|.
+name|encryptionCryptoProperties
+return|;
 block|}
 comment|/**      * Get the encryption Crypto object      * @return the encryption Crypto object      */
 specifier|public
