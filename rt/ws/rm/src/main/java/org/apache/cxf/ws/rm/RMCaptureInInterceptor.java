@@ -405,6 +405,12 @@ comment|// Non application messages temp files are released (cos.releaseTempFile
 if|if
 condition|(
 operator|!
+name|isGET
+argument_list|(
+name|message
+argument_list|)
+operator|&&
+operator|!
 name|MessageUtils
 operator|.
 name|isTrue
