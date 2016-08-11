@@ -976,15 +976,7 @@ expr_stmt|;
 block|}
 comment|// ServerAccessToken 'nonce' property, if available, can be ignored for the purpose for persisting it
 comment|// further as a JWT claim - as it is only used once by (OIDC) IdTokenResponseFilter
-comment|// to set IdToken nonce property with the filter havinh an access to the current ServerAccessToken instance
-comment|//TODO: consider auto-setting all the remaining token properties as claims either optionally
-comment|// or if JWE encryption is enabled for the providers be able to choose if they
-comment|// want to save JOSE token representations only - though the providers can always override
-comment|// this method too and set the extra claims. If all ServerAccessToken properties are set as claims
-comment|// then the providers will only have to save ServerAccessToken.getTokenKey() in
-comment|// saveAccessToken(ServerAccessToken) which will be a JOSE representation of a given ServerAccessToken
-comment|// instance but will have to restore ServerAccessToken from it when the runtime requests ServerAccessToken
-comment|// for the validation purposes.
+comment|// to set IdToken nonce property with the filter having an access to the current ServerAccessToken instance
 return|return
 name|claims
 return|;
