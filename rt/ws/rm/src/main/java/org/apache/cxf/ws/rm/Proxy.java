@@ -568,6 +568,16 @@ specifier|private
 name|Identifier
 name|offeredIdentifier
 decl_stmt|;
+comment|//hold the sequence message context
+specifier|private
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|sequenceContext
+decl_stmt|;
 specifier|public
 name|Proxy
 parameter_list|(
@@ -696,6 +706,10 @@ index|[]
 block|{
 name|ds
 block|}
+argument_list|,
+name|this
+operator|.
+name|sequenceContext
 argument_list|)
 expr_stmt|;
 block|}
@@ -803,6 +817,10 @@ argument_list|(
 name|ts
 argument_list|)
 block|}
+argument_list|,
+name|this
+operator|.
+name|sequenceContext
 argument_list|)
 expr_stmt|;
 block|}
@@ -910,6 +928,10 @@ argument_list|(
 name|ts
 argument_list|)
 block|}
+argument_list|,
+name|this
+operator|.
+name|sequenceContext
 argument_list|)
 expr_stmt|;
 block|}
@@ -1017,6 +1039,12 @@ parameter_list|)
 throws|throws
 name|RMException
 block|{
+name|this
+operator|.
+name|sequenceContext
+operator|=
+name|context
+expr_stmt|;
 name|SourcePolicyType
 name|sp
 init|=
