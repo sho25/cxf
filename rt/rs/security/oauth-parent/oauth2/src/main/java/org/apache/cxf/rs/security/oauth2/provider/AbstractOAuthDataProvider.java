@@ -860,6 +860,123 @@ name|resourceAudiences
 argument_list|)
 expr_stmt|;
 block|}
+for|for
+control|(
+name|Map
+operator|.
+name|Entry
+argument_list|<
+name|String
+argument_list|,
+name|String
+argument_list|>
+name|entry
+range|:
+name|at
+operator|.
+name|getExtraProperties
+argument_list|()
+operator|.
+name|entrySet
+argument_list|()
+control|)
+block|{
+name|claims
+operator|.
+name|setClaim
+argument_list|(
+name|entry
+operator|.
+name|getKey
+argument_list|()
+argument_list|,
+name|entry
+operator|.
+name|getValue
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+comment|// Can be used to check at RS/etc which grant was used to get this token issued
+if|if
+condition|(
+name|at
+operator|.
+name|getGrantType
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|claims
+operator|.
+name|setClaim
+argument_list|(
+name|OAuthConstants
+operator|.
+name|GRANT_TYPE
+argument_list|,
+name|at
+operator|.
+name|getGrantType
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+comment|// Can be used to check the original code grant value which was removed from the storage
+comment|// (and is no longer valid) when this token was issued; relevant only if the authorization
+comment|// code flow was used
+if|if
+condition|(
+name|at
+operator|.
+name|getGrantCode
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|claims
+operator|.
+name|setClaim
+argument_list|(
+literal|"grant_code"
+argument_list|,
+name|at
+operator|.
+name|getGrantType
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+comment|// Can be used to link the clients (especially public ones) to this token
+comment|// to have a knowledge which client instance is using this token - might be handy at the RS/etc
+if|if
+condition|(
+name|at
+operator|.
+name|getClientCodeVerifier
+argument_list|()
+operator|!=
+literal|null
+condition|)
+block|{
+name|claims
+operator|.
+name|setClaim
+argument_list|(
+literal|"code_verifier"
+argument_list|,
+name|at
+operator|.
+name|getClientCodeVerifier
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+comment|// ServerAccessToken 'nonce' property, if available, can be ignored for the purpose for persisting it
+comment|// further as a JWT claim - as it is only used once by (OIDC) IdTokenResponseFilter
+comment|// to set IdToken nonce property with the filter havinh an access to the current ServerAccessToken instance
 comment|//TODO: consider auto-setting all the remaining token properties as claims either optionally
 comment|// or if JWE encryption is enabled for the providers be able to choose if they
 comment|// want to save JOSE token representations only - though the providers can always override
