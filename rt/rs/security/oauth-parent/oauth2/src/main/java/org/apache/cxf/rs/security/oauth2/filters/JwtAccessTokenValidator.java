@@ -304,7 +304,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|LocalJwtAccessTokenValidator
+name|JwtAccessTokenValidator
 extends|extends
 name|JoseJwtConsumer
 implements|implements
@@ -502,7 +502,9 @@ name|claims
 operator|.
 name|getClaim
 argument_list|(
-literal|"resource"
+name|OAuthConstants
+operator|.
+name|RESOURCE_INDICATOR
 argument_list|)
 decl_stmt|;
 if|if
@@ -594,7 +596,9 @@ name|claims
 operator|.
 name|getClaim
 argument_list|(
-literal|"scope"
+name|OAuthConstants
+operator|.
+name|SCOPE
 argument_list|)
 decl_stmt|;
 if|if

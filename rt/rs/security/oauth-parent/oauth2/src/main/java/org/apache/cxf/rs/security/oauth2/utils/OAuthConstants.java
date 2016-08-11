@@ -60,6 +60,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|RESOURCE_INDICATOR
+init|=
+literal|"resource"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|NONCE
 init|=
 literal|"nonce"
