@@ -322,6 +322,26 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testContentDispositionFnEquals
+parameter_list|()
+block|{
+name|assertEquals
+argument_list|(
+literal|"a=b.txt"
+argument_list|,
+name|AttachmentUtil
+operator|.
+name|getContentDispositionFileName
+argument_list|(
+literal|"filename=\"a=b.txt\""
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 end_class
 
