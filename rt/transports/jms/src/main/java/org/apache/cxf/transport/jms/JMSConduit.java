@@ -1200,6 +1200,7 @@ name|isPubSubDomain
 argument_list|()
 operator|)
 operator|||
+operator|(
 operator|!
 name|replyToDestination
 operator|.
@@ -1207,6 +1208,14 @@ name|equals
 argument_list|(
 name|staticReplyDestination
 argument_list|)
+operator|&&
+name|headers
+operator|.
+name|getJMSReplyTo
+argument_list|()
+operator|!=
+literal|null
+operator|)
 decl_stmt|;
 if|if
 condition|(
