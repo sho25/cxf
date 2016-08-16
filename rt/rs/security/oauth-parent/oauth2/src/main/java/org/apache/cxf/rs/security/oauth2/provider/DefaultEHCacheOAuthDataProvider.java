@@ -357,7 +357,7 @@ name|oauth2
 operator|.
 name|utils
 operator|.
-name|JwtAccessTokenUtils
+name|JwtTokenUtils
 import|;
 end_import
 
@@ -897,7 +897,7 @@ name|jwtTokenConsumer
 decl_stmt|;
 name|at
 operator|=
-name|JwtAccessTokenUtils
+name|JwtTokenUtils
 operator|.
 name|createAccessTokenFromJwt
 argument_list|(
@@ -906,6 +906,11 @@ argument_list|,
 name|jose
 argument_list|,
 name|this
+argument_list|,
+name|super
+operator|.
+name|getJwtAccessTokenClaimMap
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

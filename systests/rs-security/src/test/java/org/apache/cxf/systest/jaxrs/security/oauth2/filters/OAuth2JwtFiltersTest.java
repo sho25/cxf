@@ -728,12 +728,12 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
+literal|200
+argument_list|,
 name|response
 operator|.
 name|getStatus
 argument_list|()
-argument_list|,
-literal|200
 argument_list|)
 expr_stmt|;
 name|Book
