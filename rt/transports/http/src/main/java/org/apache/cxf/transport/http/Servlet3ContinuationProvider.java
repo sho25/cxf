@@ -768,6 +768,10 @@ name|isResumed
 operator|=
 literal|false
 expr_stmt|;
+name|isPending
+operator|=
+literal|false
+expr_stmt|;
 block|}
 specifier|public
 name|void

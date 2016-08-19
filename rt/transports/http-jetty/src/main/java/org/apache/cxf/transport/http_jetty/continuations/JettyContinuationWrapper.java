@@ -525,7 +525,10 @@ name|pendingTimeout
 operator|=
 literal|0
 expr_stmt|;
-comment|//REVISIT: isResumed = false;
+name|isResumed
+operator|=
+literal|false
+expr_stmt|;
 if|if
 condition|(
 name|callback
@@ -564,7 +567,10 @@ name|pendingTimeout
 operator|=
 literal|0
 expr_stmt|;
-comment|//isResumed = true;
+name|isResumed
+operator|=
+literal|true
+expr_stmt|;
 block|}
 block|}
 end_class
