@@ -764,6 +764,10 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+name|isResumed
+operator|=
+literal|false
+expr_stmt|;
 block|}
 specifier|public
 name|void
