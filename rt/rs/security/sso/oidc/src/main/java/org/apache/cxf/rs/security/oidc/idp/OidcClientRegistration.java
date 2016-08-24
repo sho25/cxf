@@ -37,16 +37,16 @@ name|oauth2
 operator|.
 name|services
 operator|.
-name|ClientRegistrationRequest
+name|ClientRegistration
 import|;
 end_import
 
 begin_class
 specifier|public
 class|class
-name|OidcClientRegistrationRequest
+name|OidcClientRegistration
 extends|extends
-name|ClientRegistrationRequest
+name|ClientRegistration
 block|{
 specifier|private
 specifier|static

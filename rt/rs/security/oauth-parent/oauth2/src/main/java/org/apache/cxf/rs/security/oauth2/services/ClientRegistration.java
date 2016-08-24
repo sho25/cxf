@@ -92,7 +92,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ClientRegistrationRequest
+name|ClientRegistration
 extends|extends
 name|JsonMapObject
 block|{
@@ -203,11 +203,11 @@ init|=
 literal|7903976943604132150L
 decl_stmt|;
 specifier|public
-name|ClientRegistrationRequest
+name|ClientRegistration
 parameter_list|()
 block|{     }
 specifier|public
-name|ClientRegistrationRequest
+name|ClientRegistration
 parameter_list|(
 name|Map
 argument_list|<
