@@ -153,6 +153,18 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|concurrent
+operator|.
+name|ConcurrentHashMap
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -869,7 +881,7 @@ argument_list|>
 name|beanParams
 init|=
 operator|new
-name|HashMap
+name|ConcurrentHashMap
 argument_list|<
 name|Class
 argument_list|<
