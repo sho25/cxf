@@ -1336,6 +1336,8 @@ argument_list|(
 name|mbs
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|cls
 operator|.
 name|getMethod
@@ -1363,6 +1365,15 @@ operator|)
 literal|null
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|NoSuchMethodException
+name|mex
+parameter_list|)
+block|{
+comment|//ignore, Jetty 9.1 removed this methods and it's not needed anymore
+block|}
 block|}
 catch|catch
 parameter_list|(
