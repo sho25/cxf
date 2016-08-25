@@ -424,6 +424,11 @@ decl_stmt|;
 comment|/**      * @parameter default-value="true"      */
 specifier|private
 name|boolean
+name|incrementNamespacePrefix
+decl_stmt|;
+comment|/**      * @parameter default-value="true"      */
+specifier|private
+name|boolean
 name|singleResourceMultipleMethods
 decl_stmt|;
 comment|/**      * @parameter default-value="false"      */
@@ -693,6 +698,13 @@ operator|.
 name|setSingleResourceMultipleMethods
 argument_list|(
 name|singleResourceMultipleMethods
+argument_list|)
+expr_stmt|;
+name|wg
+operator|.
+name|setIncrementNamespacePrefix
+argument_list|(
+name|incrementNamespacePrefix
 argument_list|)
 expr_stmt|;
 name|wg
