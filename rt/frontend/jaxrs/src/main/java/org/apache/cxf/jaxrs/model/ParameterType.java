@@ -39,8 +39,6 @@ block|,
 name|REQUEST_BODY
 block|,
 name|CONTEXT
-block|,
-name|UNKNOWN
 block|}
 end_enum
 

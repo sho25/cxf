@@ -4582,6 +4582,11 @@ operator|==
 name|Response
 operator|.
 name|class
+operator|||
+name|ori
+operator|.
+name|isAsync
+argument_list|()
 condition|)
 block|{
 name|cls
@@ -4623,6 +4628,11 @@ operator|==
 name|Response
 operator|.
 name|class
+operator|||
+name|ori
+operator|.
+name|isAsync
+argument_list|()
 condition|?
 name|cls
 else|:
@@ -4694,6 +4704,15 @@ name|getIndex
 argument_list|()
 index|]
 decl_stmt|;
+if|if
+condition|(
+name|inType
+operator|!=
+name|AsyncResponse
+operator|.
+name|class
+condition|)
+block|{
 name|Type
 name|paramType
 init|=
@@ -4755,6 +4774,7 @@ argument_list|,
 name|paramType
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
