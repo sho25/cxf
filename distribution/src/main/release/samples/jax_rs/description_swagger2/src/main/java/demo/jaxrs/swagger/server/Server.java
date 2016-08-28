@@ -219,6 +219,8 @@ name|class
 operator|.
 name|getName
 argument_list|()
+operator|+
+literal|"(basePath=/ usePathBasedConfig=true)"
 argument_list|)
 expr_stmt|;
 name|servletHolder
