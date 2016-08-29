@@ -361,7 +361,7 @@ name|servProps
 argument_list|)
 expr_stmt|;
 return|return
-literal|null
+name|httpService
 return|;
 block|}
 block|}
