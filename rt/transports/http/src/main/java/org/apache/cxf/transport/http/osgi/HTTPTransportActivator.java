@@ -511,7 +511,13 @@ name|context
 parameter_list|)
 throws|throws
 name|Exception
-block|{     }
+block|{
+name|httpServiceTracker
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 end_class
 
