@@ -194,6 +194,8 @@ name|StreamingResponseProvider
 parameter_list|<
 name|T
 parameter_list|>
+extends|extends
+name|AbstractConfigurableProvider
 implements|implements
 name|MessageBodyWriter
 argument_list|<
