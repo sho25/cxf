@@ -494,7 +494,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|private
+specifier|protected
 name|void
 name|calculateDefaultBasePath
 parameter_list|(
