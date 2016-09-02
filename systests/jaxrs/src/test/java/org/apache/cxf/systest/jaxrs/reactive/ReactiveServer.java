@@ -141,6 +141,8 @@ name|jaxrs
 operator|.
 name|rx
 operator|.
+name|provider
+operator|.
 name|ObservableWriter
 import|;
 end_import

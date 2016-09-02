@@ -115,6 +115,8 @@ name|jaxrs
 operator|.
 name|rx
 operator|.
+name|server
+operator|.
 name|AbstractAsyncSubscriber
 import|;
 end_import
@@ -131,6 +133,8 @@ name|jaxrs
 operator|.
 name|rx
 operator|.
+name|server
+operator|.
 name|JsonStreamingAsyncSubscriber
 import|;
 end_import
@@ -146,6 +150,8 @@ operator|.
 name|jaxrs
 operator|.
 name|rx
+operator|.
+name|server
 operator|.
 name|ListAsyncSubscriber
 import|;

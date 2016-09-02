@@ -14,6 +14,8 @@ operator|.
 name|jaxrs
 operator|.
 name|rx
+operator|.
+name|provider
 package|;
 end_package
 

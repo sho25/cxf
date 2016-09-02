@@ -125,6 +125,8 @@ name|jaxrs
 operator|.
 name|rx
 operator|.
+name|provider
+operator|.
 name|ObservableReader
 import|;
 end_import
