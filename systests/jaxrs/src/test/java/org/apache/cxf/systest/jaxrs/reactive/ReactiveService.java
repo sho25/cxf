@@ -113,8 +113,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
-operator|.
 name|rx
 operator|.
 name|AbstractAsyncSubscriber
@@ -131,8 +129,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
-operator|.
 name|rx
 operator|.
 name|JsonStreamingAsyncSubscriber
@@ -148,8 +144,6 @@ operator|.
 name|cxf
 operator|.
 name|jaxrs
-operator|.
-name|provider
 operator|.
 name|rx
 operator|.

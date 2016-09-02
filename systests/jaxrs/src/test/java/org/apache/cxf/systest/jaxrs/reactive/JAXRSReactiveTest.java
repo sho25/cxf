@@ -123,8 +123,6 @@ name|cxf
 operator|.
 name|jaxrs
 operator|.
-name|provider
-operator|.
 name|rx
 operator|.
 name|ObservableReader
