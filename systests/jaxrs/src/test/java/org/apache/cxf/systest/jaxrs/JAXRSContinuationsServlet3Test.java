@@ -796,6 +796,15 @@ return|;
 block|}
 specifier|protected
 name|String
+name|getBaseAddress2
+parameter_list|()
+block|{
+return|return
+literal|"/async2/bookstore"
+return|;
+block|}
+specifier|protected
+name|String
 name|getPort
 parameter_list|()
 block|{

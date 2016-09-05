@@ -325,10 +325,16 @@ name|Message
 name|inMessage
 decl_stmt|;
 specifier|private
+name|TimeoutHandler
+name|timeoutHandler
+decl_stmt|;
+specifier|private
+specifier|volatile
 name|boolean
 name|initialSuspend
 decl_stmt|;
 specifier|private
+specifier|volatile
 name|boolean
 name|cancelled
 decl_stmt|;
@@ -338,14 +344,12 @@ name|boolean
 name|done
 decl_stmt|;
 specifier|private
+specifier|volatile
 name|boolean
 name|resumedByApplication
 decl_stmt|;
 specifier|private
-name|TimeoutHandler
-name|timeoutHandler
-decl_stmt|;
-specifier|private
+specifier|volatile
 name|Long
 name|pendingTimeout
 decl_stmt|;
@@ -472,7 +476,6 @@ argument_list|()
 return|;
 block|}
 specifier|private
-specifier|synchronized
 name|boolean
 name|doResume
 parameter_list|(
@@ -498,7 +501,6 @@ argument_list|)
 return|;
 block|}
 specifier|private
-specifier|synchronized
 name|boolean
 name|doResumeFinal
 parameter_list|(
@@ -616,7 +618,6 @@ argument_list|)
 return|;
 block|}
 specifier|private
-specifier|synchronized
 name|boolean
 name|doCancel
 parameter_list|(
@@ -624,15 +625,6 @@ name|String
 name|retryAfterHeader
 parameter_list|)
 block|{
-if|if
-condition|(
-name|cancelled
-condition|)
-block|{
-return|return
-literal|true
-return|;
-block|}
 if|if
 condition|(
 operator|!
@@ -644,6 +636,19 @@ return|return
 literal|false
 return|;
 block|}
+if|if
+condition|(
+name|cancelled
+condition|)
+block|{
+return|return
+literal|true
+return|;
+block|}
+name|cancelled
+operator|=
+literal|true
+expr_stmt|;
 name|ResponseBuilder
 name|rb
 init|=
@@ -673,10 +678,6 @@ name|retryAfterHeader
 argument_list|)
 expr_stmt|;
 block|}
-name|cancelled
-operator|=
-literal|true
-expr_stmt|;
 name|doResumeFinal
 argument_list|(
 name|rb
@@ -692,7 +693,6 @@ block|}
 annotation|@
 name|Override
 specifier|public
-specifier|synchronized
 name|boolean
 name|isSuspended
 parameter_list|()
@@ -743,7 +743,6 @@ block|}
 annotation|@
 name|Override
 specifier|public
-specifier|synchronized
 name|boolean
 name|setTimeout
 parameter_list|(
@@ -1443,7 +1442,6 @@ end_function
 
 begin_function
 specifier|public
-specifier|synchronized
 name|boolean
 name|suspendContinuationIfNeeded
 parameter_list|()
@@ -1451,19 +1449,21 @@ block|{
 if|if
 condition|(
 operator|!
+name|resumedByApplication
+operator|&&
+operator|!
 name|cont
 operator|.
 name|isPending
 argument_list|()
 operator|&&
 operator|!
-name|resumedByApplication
+name|cont
+operator|.
+name|isResumed
+argument_list|()
 condition|)
 block|{
-name|initialSuspend
-operator|=
-literal|false
-expr_stmt|;
 name|cont
 operator|.
 name|suspend
@@ -1472,6 +1472,10 @@ name|AsyncResponse
 operator|.
 name|NO_TIMEOUT
 argument_list|)
+expr_stmt|;
+name|initialSuspend
+operator|=
+literal|false
 expr_stmt|;
 return|return
 literal|true
@@ -1488,7 +1492,6 @@ end_function
 
 begin_function
 specifier|public
-specifier|synchronized
 name|Object
 name|getResponseObject
 parameter_list|()
@@ -1563,7 +1566,6 @@ end_function
 
 begin_function
 specifier|public
-specifier|synchronized
 name|boolean
 name|isResumedByApplication
 parameter_list|()
