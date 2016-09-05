@@ -1318,11 +1318,14 @@ parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|JMSException
 argument_list|(
-literal|"Interrupted while correlating"
-argument_list|,
+literal|"Interrupted while correlating "
+operator|+
 name|e
+operator|.
+name|getMessage
+argument_list|()
 argument_list|)
 throw|;
 block|}
@@ -1342,7 +1345,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|JMSException
 argument_list|(
 literal|"Timeout receiving message with correlationId "
 operator|+
