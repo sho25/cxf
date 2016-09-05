@@ -147,6 +147,15 @@ operator|new
 name|Server
 argument_list|()
 expr_stmt|;
+name|System
+operator|.
+name|out
+operator|.
+name|println
+argument_list|(
+literal|"Server ready..."
+argument_list|)
+expr_stmt|;
 name|Thread
 operator|.
 name|sleep
@@ -156,15 +165,6 @@ operator|*
 literal|60
 operator|*
 literal|1000
-argument_list|)
-expr_stmt|;
-name|System
-operator|.
-name|out
-operator|.
-name|println
-argument_list|(
-literal|"Server ready..."
 argument_list|)
 expr_stmt|;
 name|System

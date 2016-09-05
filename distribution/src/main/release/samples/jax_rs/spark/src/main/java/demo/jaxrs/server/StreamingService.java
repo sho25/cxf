@@ -35,6 +35,16 @@ end_import
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|Iterator
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -488,7 +498,7 @@ block|{
 annotation|@
 name|Override
 specifier|public
-name|Iterable
+name|Iterator
 argument_list|<
 name|String
 argument_list|>
@@ -510,6 +520,9 @@ argument_list|(
 literal|" "
 argument_list|)
 argument_list|)
+operator|.
+name|iterator
+argument_list|()
 return|;
 block|}
 block|}
