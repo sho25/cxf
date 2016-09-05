@@ -383,6 +383,20 @@ name|Tag
 import|;
 end_import
 
+begin_import
+import|import
+name|io
+operator|.
+name|swagger
+operator|.
+name|models
+operator|.
+name|parameters
+operator|.
+name|Parameter
+import|;
+end_import
+
 begin_class
 specifier|public
 class|class
@@ -971,6 +985,17 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+name|addParameters
+argument_list|(
+name|subentry
+operator|.
+name|getValue
+argument_list|()
+operator|.
+name|getParameters
+argument_list|()
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|subentry
@@ -1234,6 +1259,21 @@ name|toString
 argument_list|()
 return|;
 block|}
+comment|/**      * Allows to add parameters to the list, related to an {@link Operation} instance; the method is invoked      * for all instances available.      *      * @param parameters list of parameters defined for an {@link Operation}      * @see io.swagger.models.parameters.HeaderParameter      * @see io.swagger.models.parameters.CookieParameter      * @see io.swagger.models.parameters.PathParameter      * @see io.swagger.models.parameters.BodyParameter      * @see io.swagger.models.parameters.QueryParameter      * @see io.swagger.models.parameters.RefParameter      */
+specifier|protected
+name|void
+name|addParameters
+parameter_list|(
+specifier|final
+name|List
+argument_list|<
+name|Parameter
+argument_list|>
+name|parameters
+parameter_list|)
+block|{
+comment|// does nothing by default
+block|}
 annotation|@
 name|Override
 specifier|public
@@ -1284,6 +1324,8 @@ operator|=
 name|javadocProvider
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|setClassResourceInfos
