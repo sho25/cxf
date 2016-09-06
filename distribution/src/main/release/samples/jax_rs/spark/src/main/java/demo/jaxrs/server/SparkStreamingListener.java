@@ -1,4 +1,8 @@
 begin_unit|revision:0.9.5;language:Java;cregit-version:0.0.1
+begin_comment
+comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or more contributor license agreements. See the NOTICE file  * distributed with this work for additional information  * regarding copyright ownership. The ASF licenses this file  * to you under the Apache License, Version 2.0 (the  * "License"); you may not use this file except in compliance  * with the License. You may obtain a copy of the License at  *  * http://www.apache.org/licenses/LICENSE-2.0  *  * Unless required by applicable law or agreed to in writing,  * software distributed under the License is distributed on an  * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY  * KIND, either express or implied. See the License for the  * specific language governing permissions and limitations  * under the License.  */
+end_comment
+
 begin_package
 package|package
 name|demo
@@ -164,6 +168,10 @@ specifier|private
 name|SparkStreamingOutput
 name|streamOutput
 decl_stmt|;
+specifier|private
+name|boolean
+name|batchStarted
+decl_stmt|;
 specifier|public
 name|SparkStreamingListener
 parameter_list|(
@@ -197,13 +205,22 @@ block|}
 annotation|@
 name|Override
 specifier|public
+specifier|synchronized
 name|void
 name|onBatchStarted
 parameter_list|(
 name|StreamingListenerBatchStarted
 name|event
 parameter_list|)
-block|{     }
+block|{
+name|batchStarted
+operator|=
+literal|true
+expr_stmt|;
+name|notify
+argument_list|()
+expr_stmt|;
+block|}
 annotation|@
 name|Override
 specifier|public
@@ -264,6 +281,45 @@ name|StreamingListenerReceiverStopped
 name|arg0
 parameter_list|)
 block|{     }
+specifier|public
+name|SparkStreamingOutput
+name|getStreamOut
+parameter_list|()
+block|{
+return|return
+name|streamOutput
+return|;
+block|}
+specifier|public
+specifier|synchronized
+name|void
+name|waitForBatchStarted
+parameter_list|()
+block|{
+while|while
+condition|(
+operator|!
+name|batchStarted
+condition|)
+block|{
+try|try
+block|{
+name|this
+operator|.
+name|wait
+argument_list|()
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|ex
+parameter_list|)
+block|{
+comment|// continue
+block|}
+block|}
+block|}
 block|}
 end_class
 
