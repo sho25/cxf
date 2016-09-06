@@ -162,20 +162,20 @@ name|StreamingListener
 block|{
 specifier|private
 name|SparkStreamingOutput
-name|sparkStreamingOutput
+name|streamOutput
 decl_stmt|;
 specifier|public
 name|SparkStreamingListener
 parameter_list|(
 name|SparkStreamingOutput
-name|sparkStreamingOutput
+name|streamOutput
 parameter_list|)
 block|{
 name|this
 operator|.
-name|sparkStreamingOutput
+name|streamOutput
 operator|=
-name|sparkStreamingOutput
+name|streamOutput
 expr_stmt|;
 block|}
 annotation|@
@@ -187,7 +187,13 @@ parameter_list|(
 name|StreamingListenerBatchCompleted
 name|event
 parameter_list|)
-block|{     }
+block|{
+name|streamOutput
+operator|.
+name|setSparkBatchCompleted
+argument_list|()
+expr_stmt|;
+block|}
 annotation|@
 name|Override
 specifier|public
@@ -217,13 +223,7 @@ parameter_list|(
 name|StreamingListenerOutputOperationCompleted
 name|event
 parameter_list|)
-block|{
-name|sparkStreamingOutput
-operator|.
-name|setOperationCompleted
-argument_list|()
-expr_stmt|;
-block|}
+block|{     }
 annotation|@
 name|Override
 specifier|public
