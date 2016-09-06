@@ -43,18 +43,6 @@ name|SingletonResourceProvider
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|spark
-operator|.
-name|SparkConf
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
@@ -66,23 +54,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|SparkConf
-name|sparkConf
-init|=
-operator|new
-name|SparkConf
-argument_list|()
-operator|.
-name|setMaster
-argument_list|(
-literal|"local[*]"
-argument_list|)
-operator|.
-name|setAppName
-argument_list|(
-literal|"JAX-RS Spark Connect"
-argument_list|)
-decl_stmt|;
 name|JAXRSServerFactoryBean
 name|sf
 init|=
@@ -112,9 +83,7 @@ name|SingletonResourceProvider
 argument_list|(
 operator|new
 name|StreamingService
-argument_list|(
-name|sparkConf
-argument_list|)
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
