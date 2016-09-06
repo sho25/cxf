@@ -579,7 +579,7 @@ argument_list|()
 throw|;
 block|}
 block|}
-comment|// Right now we assume by the time we call it the batch the whole InputStream has been
+comment|// Right now we assume by the time we call it the whole InputStream has been
 comment|// processed
 name|releaseStreamingContext
 argument_list|()
@@ -616,7 +616,7 @@ name|void
 name|onBatchStarted
 parameter_list|(
 name|StreamingListenerBatchStarted
-name|arg0
+name|event
 parameter_list|)
 block|{         }
 annotation|@
@@ -626,7 +626,7 @@ name|void
 name|onBatchSubmitted
 parameter_list|(
 name|StreamingListenerBatchSubmitted
-name|arg0
+name|event
 parameter_list|)
 block|{         }
 annotation|@
@@ -636,7 +636,7 @@ name|void
 name|onOutputOperationCompleted
 parameter_list|(
 name|StreamingListenerOutputOperationCompleted
-name|arg0
+name|event
 parameter_list|)
 block|{         }
 annotation|@
@@ -646,7 +646,7 @@ name|void
 name|onOutputOperationStarted
 parameter_list|(
 name|StreamingListenerOutputOperationStarted
-name|arg0
+name|event
 parameter_list|)
 block|{         }
 annotation|@
@@ -656,7 +656,7 @@ name|void
 name|onReceiverError
 parameter_list|(
 name|StreamingListenerReceiverError
-name|arg0
+name|event
 parameter_list|)
 block|{         }
 annotation|@
@@ -666,7 +666,7 @@ name|void
 name|onReceiverStarted
 parameter_list|(
 name|StreamingListenerReceiverStarted
-name|arg0
+name|event
 parameter_list|)
 block|{         }
 annotation|@
