@@ -187,16 +187,7 @@ parameter_list|(
 name|StreamingListenerBatchCompleted
 name|event
 parameter_list|)
-block|{
-comment|// as soon as the batch is finished we let the streaming context go
-comment|// but this may need to be revisited if a given InputStream happens to be processed in
-comment|// multiple batches ?
-name|sparkStreamingOutput
-operator|.
-name|setBatchCompleted
-argument_list|()
-expr_stmt|;
-block|}
+block|{     }
 annotation|@
 name|Override
 specifier|public
@@ -226,7 +217,13 @@ parameter_list|(
 name|StreamingListenerOutputOperationCompleted
 name|event
 parameter_list|)
-block|{     }
+block|{
+name|sparkStreamingOutput
+operator|.
+name|setOperationCompleted
+argument_list|()
+expr_stmt|;
+block|}
 annotation|@
 name|Override
 specifier|public
