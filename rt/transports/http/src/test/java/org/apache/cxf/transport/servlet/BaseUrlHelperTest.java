@@ -14,8 +14,6 @@ operator|.
 name|transport
 operator|.
 name|servlet
-operator|.
-name|servicelist
 package|;
 end_package
 
@@ -28,22 +26,6 @@ operator|.
 name|http
 operator|.
 name|HttpServletRequest
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|transport
-operator|.
-name|servlet
-operator|.
-name|BaseUrlHelper
 import|;
 end_import
 
@@ -144,6 +126,9 @@ name|andReturn
 argument_list|(
 name|contextPath
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|req
 operator|.
@@ -159,6 +144,9 @@ name|andReturn
 argument_list|(
 name|servletPath
 argument_list|)
+operator|.
+name|anyTimes
+argument_list|()
 expr_stmt|;
 name|req
 operator|.

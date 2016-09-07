@@ -856,6 +856,15 @@ argument_list|,
 literal|"CXF in Action5"
 argument_list|)
 expr_stmt|;
+name|books
+operator|.
+name|put
+argument_list|(
+literal|"A B C"
+argument_list|,
+literal|"CXF in Action A B C"
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 end_class

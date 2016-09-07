@@ -2571,7 +2571,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Propogate in the message a TLSSessionInfo instance representative        * of the TLS-specific information in the HTTP request.      *       * @param req the Jetty request      * @param message the Message      */
+comment|/**      * Propogate in the message a TLSSessionInfo instance representative        * of the TLS-specific information in the HTTP request.      *       * @param request the Jetty request      * @param message the Message      */
 specifier|private
 specifier|static
 name|void

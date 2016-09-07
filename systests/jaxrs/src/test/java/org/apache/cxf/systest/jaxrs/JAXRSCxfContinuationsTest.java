@@ -573,6 +573,95 @@ expr_stmt|;
 block|}
 block|}
 block|}
+annotation|@
+name|Test
+specifier|public
+name|void
+name|testEncodedURL
+parameter_list|()
+throws|throws
+name|Exception
+block|{
+name|String
+name|id
+init|=
+literal|"A%20B%20C"
+decl_stmt|;
+comment|// "A B C"
+name|GetMethod
+name|get
+init|=
+operator|new
+name|GetMethod
+argument_list|(
+literal|"http://localhost:"
+operator|+
+name|PORT
+operator|+
+literal|"/bookstore/books/"
+operator|+
+name|id
+argument_list|)
+decl_stmt|;
+name|HttpClient
+name|httpclient
+init|=
+operator|new
+name|HttpClient
+argument_list|()
+decl_stmt|;
+try|try
+block|{
+name|int
+name|result
+init|=
+name|httpclient
+operator|.
+name|executeMethod
+argument_list|(
+name|get
+argument_list|)
+decl_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Encoded path '/"
+operator|+
+name|id
+operator|+
+literal|"' is not handled successfully"
+argument_list|,
+literal|200
+argument_list|,
+name|result
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"Book description for id "
+operator|+
+name|id
+operator|+
+literal|" is wrong"
+argument_list|,
+literal|"CXF in Action A B C"
+argument_list|,
+name|get
+operator|.
+name|getResponseBodyAsString
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+finally|finally
+block|{
+comment|// Release current connection to the connection pool once you are done
+name|get
+operator|.
+name|releaseConnection
+argument_list|()
+expr_stmt|;
+block|}
+block|}
 block|}
 end_class
 

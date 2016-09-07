@@ -381,11 +381,7 @@ operator|=
 name|req
 operator|.
 name|startAsync
-argument_list|(
-name|req
-argument_list|,
-name|resp
-argument_list|)
+argument_list|()
 expr_stmt|;
 name|context
 operator|.
