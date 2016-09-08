@@ -159,6 +159,11 @@ specifier|volatile
 name|boolean
 name|sparkBatchCompleted
 decl_stmt|;
+specifier|private
+specifier|volatile
+name|boolean
+name|outputWriteDone
+decl_stmt|;
 specifier|public
 name|SparkStreamingOutput
 parameter_list|(
@@ -194,6 +199,9 @@ operator|!
 name|sparkBatchCompleted
 operator|||
 operator|!
+name|outputWriteDone
+operator|||
+operator|!
 name|responseQueue
 operator|.
 name|isEmpty
@@ -223,6 +231,10 @@ operator|!=
 literal|null
 condition|)
 block|{
+name|outputWriteDone
+operator|=
+literal|true
+expr_stmt|;
 name|output
 operator|.
 name|write
