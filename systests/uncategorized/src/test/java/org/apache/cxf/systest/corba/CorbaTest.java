@@ -428,6 +428,19 @@ parameter_list|)
 block|{
 return|return;
 block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+name|e
+operator|.
+name|printStackTrace
+argument_list|()
+expr_stmt|;
+return|return;
+block|}
 name|fail
 argument_list|(
 literal|"Didn't catch an exception"

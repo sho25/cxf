@@ -1281,7 +1281,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhostt/bookstore"
+literal|"http://168.168.168.168/bookstore"
 decl_stmt|;
 name|WebClient
 name|wc

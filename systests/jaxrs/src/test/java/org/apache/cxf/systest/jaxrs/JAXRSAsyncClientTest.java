@@ -1192,7 +1192,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhostt/bookstore"
+literal|"http://168.168.168.168/bookstore"
 decl_stmt|;
 name|List
 argument_list|<
@@ -1315,7 +1315,7 @@ block|{
 name|String
 name|address
 init|=
-literal|"http://localhostt/bookstore"
+literal|"http://168.168.168.168/bookstore"
 decl_stmt|;
 name|Client
 name|c
@@ -1442,7 +1442,7 @@ name|client
 operator|.
 name|target
 argument_list|(
-literal|"http://test.test/"
+literal|"http://168.168.168.168/"
 argument_list|)
 decl_stmt|;
 name|Invocation

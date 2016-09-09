@@ -1373,6 +1373,8 @@ argument_list|(
 literal|"java.version"
 argument_list|)
 decl_stmt|;
+try|try
+block|{
 if|if
 condition|(
 literal|1.8D
@@ -1394,6 +1396,16 @@ condition|)
 block|{
 comment|// RC4 not supported in JDK8
 return|return;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+return|return;
+comment|//java9
 block|}
 name|SpringBusFactory
 name|bf
@@ -1549,6 +1561,8 @@ argument_list|(
 literal|"java.version"
 argument_list|)
 decl_stmt|;
+try|try
+block|{
 if|if
 condition|(
 literal|1.8D
@@ -1570,6 +1584,16 @@ condition|)
 block|{
 comment|// RC4 not supported in JDK8
 return|return;
+block|}
+block|}
+catch|catch
+parameter_list|(
+name|Exception
+name|e
+parameter_list|)
+block|{
+return|return;
+comment|//java9
 block|}
 name|SpringBusFactory
 name|bf
