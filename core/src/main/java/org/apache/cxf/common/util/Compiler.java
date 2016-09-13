@@ -1086,7 +1086,7 @@ name|list
 operator|.
 name|add
 argument_list|(
-literal|"-addmods"
+literal|"--add-modules"
 argument_list|)
 expr_stmt|;
 name|list
