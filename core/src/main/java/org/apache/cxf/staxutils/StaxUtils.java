@@ -929,6 +929,14 @@ specifier|public
 specifier|static
 specifier|final
 name|String
+name|MIN_TEXT_SEGMENT
+init|=
+literal|"org.apache.cxf.stax.minTextSegment"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
 name|MAX_ELEMENT_COUNT
 init|=
 literal|"org.apache.cxf.stax.maxElementCount"
@@ -1120,6 +1128,14 @@ decl_stmt|;
 comment|//128M - more than this should DEFINITLEY use MTOM
 specifier|private
 specifier|static
+name|int
+name|minTextSegment
+init|=
+literal|64
+decl_stmt|;
+comment|// Same default as woodstox
+specifier|private
+specifier|static
 name|long
 name|maxElementCount
 init|=
@@ -1238,6 +1254,15 @@ argument_list|(
 name|MAX_TEXT_LENGTH
 argument_list|,
 name|maxTextLength
+argument_list|)
+expr_stmt|;
+name|minTextSegment
+operator|=
+name|getInteger
+argument_list|(
+name|MIN_TEXT_SEGMENT
+argument_list|,
+name|minTextSegment
 argument_list|)
 expr_stmt|;
 name|maxElementCount
@@ -2165,7 +2190,10 @@ parameter_list|)
 block|{
 comment|//For now, we can only support Woodstox 4.2.x and newer as none of the other
 comment|//stax parsers support these settings
-return|return
+specifier|final
+name|boolean
+name|wstxMaxs
+init|=
 name|setProperty
 argument_list|(
 name|factory
@@ -2227,6 +2255,18 @@ argument_list|,
 literal|"com.ctc.wstx.maxTextLength"
 argument_list|,
 name|maxTextLength
+argument_list|)
+decl_stmt|;
+return|return
+name|wstxMaxs
+operator|&&
+name|setProperty
+argument_list|(
+name|factory
+argument_list|,
+literal|"com.ctc.wstx.minTextSegment"
+argument_list|,
+name|minTextSegment
 argument_list|)
 return|;
 block|}
