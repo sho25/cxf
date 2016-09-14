@@ -349,6 +349,11 @@ argument_list|(
 literal|"{"
 argument_list|)
 expr_stmt|;
+name|formatIfNeeded
+argument_list|(
+name|out
+argument_list|)
+expr_stmt|;
 for|for
 control|(
 name|Iterator
@@ -437,6 +442,11 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
+name|formatIfNeeded
+argument_list|(
+name|out
+argument_list|)
+expr_stmt|;
 name|out
 operator|.
 name|append
