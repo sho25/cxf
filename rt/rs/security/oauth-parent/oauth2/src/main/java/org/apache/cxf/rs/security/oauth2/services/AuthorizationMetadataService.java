@@ -209,6 +209,13 @@ operator|new
 name|JsonMapObjectReaderWriter
 argument_list|()
 decl_stmt|;
+name|writer
+operator|.
+name|setFormat
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 return|return
 name|writer
 operator|.
@@ -357,7 +364,7 @@ block|{
 name|endpointAddress
 operator|=
 name|endpointAddress
-operator|==
+operator|!=
 literal|null
 condition|?
 name|endpointAddress
