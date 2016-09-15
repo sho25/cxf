@@ -3118,7 +3118,7 @@ name|o
 else|:
 name|o
 operator|instanceof
-name|Boolean
+name|String
 condition|?
 name|Boolean
 operator|.
