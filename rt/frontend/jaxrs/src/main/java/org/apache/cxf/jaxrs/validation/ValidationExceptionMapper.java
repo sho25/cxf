@@ -350,6 +350,9 @@ operator|.
 name|entity
 argument_list|(
 name|responseBody
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -384,6 +387,33 @@ name|violation
 parameter_list|)
 block|{
 return|return
+literal|"Value "
+operator|+
+operator|(
+name|violation
+operator|.
+name|getInvalidValue
+argument_list|()
+operator|!=
+literal|null
+condition|?
+literal|"'"
+operator|+
+name|violation
+operator|.
+name|getInvalidValue
+argument_list|()
+operator|.
+name|toString
+argument_list|()
+operator|+
+literal|"'"
+else|:
+literal|"(null)"
+operator|)
+operator|+
+literal|" of "
+operator|+
 name|violation
 operator|.
 name|getRootBeanClass
