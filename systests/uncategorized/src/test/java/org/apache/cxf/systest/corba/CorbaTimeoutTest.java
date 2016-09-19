@@ -456,6 +456,15 @@ argument_list|(
 literal|"org.omg.CORBA.ORBSingletonClass"
 argument_list|)
 expr_stmt|;
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"org.omg.CORBA.ORBClass"
+argument_list|,
+literal|"com.sun.corba.se.impl.orb.ORBImpl"
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 specifier|private
