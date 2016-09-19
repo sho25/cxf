@@ -244,8 +244,6 @@ specifier|private
 specifier|volatile
 name|boolean
 name|closed
-init|=
-literal|false
 decl_stmt|;
 specifier|public
 name|SseAtmosphereEventOutputImpl
