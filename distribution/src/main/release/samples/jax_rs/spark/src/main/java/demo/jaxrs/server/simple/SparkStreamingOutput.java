@@ -10,6 +10,8 @@ operator|.
 name|jaxrs
 operator|.
 name|server
+operator|.
+name|simple
 package|;
 end_package
 
