@@ -601,6 +601,8 @@ argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 name|BlueprintNameSpaceHandlerFactory
 name|nsHandlerFactory
 init|=
@@ -634,6 +636,15 @@ argument_list|,
 literal|"http://cxf.apache.org/transports/http-jetty/configuration"
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|NoClassDefFoundError
+name|e
+parameter_list|)
+block|{
+comment|// Blueprint not available, ignore
+block|}
 block|}
 specifier|public
 name|void
