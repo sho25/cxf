@@ -147,6 +147,13 @@ argument_list|(
 name|signatureAlgorithm
 argument_list|)
 expr_stmt|;
+name|acceptedSignatureAlgorithms
+operator|.
+name|add
+argument_list|(
+literal|"http://www.w3.org/2001/04/xmldsig-more#rsa-sha512"
+argument_list|)
+expr_stmt|;
 comment|// Default c14n algorithms
 name|acceptedC14nAlgorithms
 operator|.
