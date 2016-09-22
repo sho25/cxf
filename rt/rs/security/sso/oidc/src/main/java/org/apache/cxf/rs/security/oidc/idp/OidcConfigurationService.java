@@ -135,6 +135,11 @@ name|OidcConfigurationService
 extends|extends
 name|AuthorizationMetadataService
 block|{
+comment|// Recommended - but optional
+specifier|private
+name|boolean
+name|userInfoEndpointNotAvailable
+decl_stmt|;
 specifier|private
 name|String
 name|userInfoEndpointAddress
@@ -167,6 +172,13 @@ name|baseUri
 argument_list|)
 expr_stmt|;
 comment|// UriInfo Endpoint
+if|if
+condition|(
+operator|!
+name|isUserInfoEndpointNotAvailable
+argument_list|()
+condition|)
+block|{
 name|String
 name|theUserInfoEndpointAddress
 init|=
@@ -188,6 +200,7 @@ argument_list|,
 name|theUserInfoEndpointAddress
 argument_list|)
 expr_stmt|;
+block|}
 name|Properties
 name|sigProps
 init|=
@@ -236,6 +249,30 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|public
+name|boolean
+name|isUserInfoEndpointNotAvailable
+parameter_list|()
+block|{
+return|return
+name|userInfoEndpointNotAvailable
+return|;
+block|}
+specifier|public
+name|void
+name|setUserInfoEndpointNotAvailable
+parameter_list|(
+name|boolean
+name|userInfoEndpointNotAvailable
+parameter_list|)
+block|{
+name|this
+operator|.
+name|userInfoEndpointNotAvailable
+operator|=
+name|userInfoEndpointNotAvailable
+expr_stmt|;
 block|}
 block|}
 end_class
