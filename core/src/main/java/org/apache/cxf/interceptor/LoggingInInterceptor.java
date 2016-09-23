@@ -196,12 +196,14 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A simple logging handler which outputs the bytes of the message to the  * Logger.  */
+comment|/**  * A simple logging handler which outputs the bytes of the message to the  * Logger.  * @deprecated use the logging module rt/features/logging instead  */
 end_comment
 
 begin_class
 annotation|@
 name|NoJSR250Annotations
+annotation|@
+name|Deprecated
 specifier|public
 class|class
 name|LoggingInInterceptor

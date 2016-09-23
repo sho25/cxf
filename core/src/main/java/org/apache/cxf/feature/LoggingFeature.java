@@ -144,12 +144,14 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is used to control message-on-the-wire logging.   * By attaching this feature to an endpoint, you  * can specify logging. If this feature is present, an endpoint will log input  * and output of ordinary and log messages.  *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.feature.LoggingFeature"/></jaxws:features></jaxws:endpoint>   ]]></pre>  */
+comment|/**  * This class is used to control message-on-the-wire logging.   * By attaching this feature to an endpoint, you  * can specify logging. If this feature is present, an endpoint will log input  * and output of ordinary and log messages.  *   *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.feature.LoggingFeature"/></jaxws:features></jaxws:endpoint>   ]]></pre>  *   * @deprecated use the logging module rt/features/logging instead   */
 end_comment
 
 begin_class
 annotation|@
 name|NoJSR250Annotations
+annotation|@
+name|Deprecated
 annotation|@
 name|Provider
 argument_list|(

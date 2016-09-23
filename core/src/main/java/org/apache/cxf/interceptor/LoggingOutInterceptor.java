@@ -202,12 +202,14 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * @deprecated use the logging module rt/features/logging instead  */
 end_comment
 
 begin_class
 annotation|@
 name|NoJSR250Annotations
+annotation|@
+name|Deprecated
 specifier|public
 class|class
 name|LoggingOutInterceptor
