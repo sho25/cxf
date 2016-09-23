@@ -97,6 +97,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|FetchType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|Id
 import|;
 end_import
@@ -108,6 +118,16 @@ operator|.
 name|persistence
 operator|.
 name|MapKeyColumn
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OrderColumn
 import|;
 end_import
 
@@ -196,7 +216,7 @@ decl_stmt|;
 specifier|public
 name|UserSubject
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|UserSubject
 parameter_list|(
@@ -339,7 +359,7 @@ name|getAuthenticationMethod
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Return the user login name      * @return the login name      */
+comment|/**      * Return the user login name      *      * @return the login name      */
 annotation|@
 name|Id
 specifier|public
@@ -351,7 +371,7 @@ return|return
 name|login
 return|;
 block|}
-comment|/**      * Set the user login name      * @param login the login name      */
+comment|/**      * Set the user login name      *      * @param login the login name      */
 specifier|public
 name|void
 name|setLogin
@@ -367,9 +387,18 @@ operator|=
 name|login
 expr_stmt|;
 block|}
-comment|/**      * Return the optional list of user roles which may have       * been captured during the authentication process       * @return the list of roles      */
+comment|/**      * Return the optional list of user roles which may have      * been captured during the authentication process      *      * @return the list of roles      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
@@ -382,7 +411,7 @@ return|return
 name|roles
 return|;
 block|}
-comment|/**      * Set the optional list of user roles which may have       * been captured during the authentication process       * @param roles the list of roles      */
+comment|/**      * Set the optional list of user roles which may have      * been captured during the authentication process      *      * @param roles the list of roles      */
 specifier|public
 name|void
 name|setRoles
@@ -401,9 +430,16 @@ operator|=
 name|roles
 expr_stmt|;
 block|}
-comment|/**      * Get the list of additional user subject properties      * @return the list of properties      */
+comment|/**      * Get the list of additional user subject properties      *      * @return the list of properties      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
 annotation|@
 name|MapKeyColumn
 argument_list|(
@@ -425,7 +461,7 @@ return|return
 name|properties
 return|;
 block|}
-comment|/**      * Set the list of additional user subject properties      * @param properties the properties      */
+comment|/**      * Set the list of additional user subject properties      *      * @param properties the properties      */
 specifier|public
 name|void
 name|setProperties
@@ -446,7 +482,7 @@ operator|=
 name|properties
 expr_stmt|;
 block|}
-comment|/**      * Get the user's unique id      * @return the user's id     */
+comment|/**      * Get the user's unique id      *      * @return the user's id      */
 specifier|public
 name|String
 name|getId
@@ -458,7 +494,7 @@ operator|.
 name|id
 return|;
 block|}
-comment|/**      * Set the users unique id      * @param id the user's id      */
+comment|/**      * Set the users unique id      *      * @param id the user's id      */
 specifier|public
 name|void
 name|setId

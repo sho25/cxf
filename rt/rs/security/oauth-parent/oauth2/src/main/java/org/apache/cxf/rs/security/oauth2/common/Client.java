@@ -97,6 +97,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|FetchType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|Id
 import|;
 end_import
@@ -128,6 +138,16 @@ operator|.
 name|persistence
 operator|.
 name|OneToOne
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OrderColumn
 import|;
 end_import
 
@@ -292,7 +312,7 @@ decl_stmt|;
 specifier|public
 name|Client
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Client
 parameter_list|(
@@ -494,6 +514,16 @@ operator|=
 name|applicationWebUri
 expr_stmt|;
 block|}
+comment|/**      * Get the description of the third-party application.      * @return the application description      */
+specifier|public
+name|String
+name|getApplicationDescription
+parameter_list|()
+block|{
+return|return
+name|applicationDescription
+return|;
+block|}
 comment|/**      * Set the description of the third-party application.      * @param applicationDescription the description      */
 specifier|public
 name|void
@@ -510,14 +540,14 @@ operator|=
 name|applicationDescription
 expr_stmt|;
 block|}
-comment|/**      * Get the description of the third-party application.      * @return the application description      */
+comment|/**      * Get the URI pointing to a logo image of the client application      * @return the logo URI      */
 specifier|public
 name|String
-name|getApplicationDescription
+name|getApplicationLogoUri
 parameter_list|()
 block|{
 return|return
-name|applicationDescription
+name|applicationLogoUri
 return|;
 block|}
 comment|/**      * Set the URI pointing to a logo image of the client application      * @param logoPath the logo URI      */
@@ -536,17 +566,17 @@ operator|=
 name|logoPath
 expr_stmt|;
 block|}
-comment|/**      * Get the URI pointing to a logo image of the client application      * @return the logo URI      */
+comment|/**      * Get the confidentiality status of this client application.      * @return the confidentiality status      */
 specifier|public
-name|String
-name|getApplicationLogoUri
+name|boolean
+name|isConfidential
 parameter_list|()
 block|{
 return|return
-name|applicationLogoUri
+name|isConfidential
 return|;
 block|}
-comment|/**      * Set the confidentiality status of this client application.      * This can be used to restrict which OAuth2 flows this client      * can participate in.      *       * @param isConf true if the client is confidential      */
+comment|/**      * Set the confidentiality status of this client application.      * This can be used to restrict which OAuth2 flows this client      * can participate in.      *      * @param isConf true if the client is confidential      */
 specifier|public
 name|void
 name|setConfidential
@@ -562,14 +592,28 @@ operator|=
 name|isConf
 expr_stmt|;
 block|}
-comment|/**      * Get the confidentiality status of this client application.      * @return the confidentiality status      */
+comment|/**      * Get a list of URIs the AuthorizationService      * may return the authorization code to      * @return the redirect uris      */
+annotation|@
+name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
-name|boolean
-name|isConfidential
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getRedirectUris
 parameter_list|()
 block|{
 return|return
-name|isConfidential
+name|redirectUris
 return|;
 block|}
 comment|/**      * Sets a list of URIs the AuthorizationService      * may return the authorization code to.      * @param redirectUris the redirect uris      */
@@ -591,19 +635,28 @@ operator|=
 name|redirectUris
 expr_stmt|;
 block|}
-comment|/**      * Get a list of URIs the AuthorizationService      * may return the authorization code to      * @return the redirect uris      */
+comment|/**      * Get the list of access token grant types this client      * can use to obtain the access tokens.      * @return the list of grant types      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
 name|String
 argument_list|>
-name|getRedirectUris
+name|getAllowedGrantTypes
 parameter_list|()
 block|{
 return|return
-name|redirectUris
+name|allowedGrantTypes
 return|;
 block|}
 comment|/**      * Set the list of access token grant types this client      * can use to obtain the access tokens.      * @param allowedGrantTypes the list of grant types      */
@@ -625,22 +678,19 @@ operator|=
 name|allowedGrantTypes
 expr_stmt|;
 block|}
-comment|/**      * Get the list of access token grant types this client      * can use to obtain the access tokens.      * @return the list of grant types      */
+comment|/**      * Get the {@link UserSubject} representing this Client      * authentication      * @return the user subject      */
 annotation|@
-name|ElementCollection
+name|OneToOne
 specifier|public
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getAllowedGrantTypes
+name|UserSubject
+name|getSubject
 parameter_list|()
 block|{
 return|return
-name|allowedGrantTypes
+name|subject
 return|;
 block|}
-comment|/**      * Set the {@link UserSubject} representing this Client       * authentication. This property may be set during the registration      * in cases where a 3rd party client needs to authenticate first before      * registering as OAuth2 client. This property may also wrap a clientId      * in cases where a client credentials flow is used         *      * @param subject the user subject      */
+comment|/**      * Set the {@link UserSubject} representing this Client      * authentication. This property may be set during the registration      * in cases where a 3rd party client needs to authenticate first before      * registering as OAuth2 client. This property may also wrap a clientId      * in cases where a client credentials flow is used      *      * @param subject the user subject      */
 specifier|public
 name|void
 name|setSubject
@@ -656,19 +706,19 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
-comment|/**      * Get the {@link UserSubject} representing this Client       * authentication      * @return the user subject      */
+comment|/**      * Get the {@link UserSubject} representing the resource owner      * who has registered this client      * @return the resource owner user subject      */
 annotation|@
-name|OneToOne
+name|ManyToOne
 specifier|public
 name|UserSubject
-name|getSubject
+name|getResourceOwnerSubject
 parameter_list|()
 block|{
 return|return
-name|subject
+name|resourceOwnerSubject
 return|;
 block|}
-comment|/**      * Set the {@link UserSubject} representing the resource owner       * who has registered this client. This property may be set in cases where      * each account (resource) owner registers account specific Clients      *      * @param subject the resource owner user subject      */
+comment|/**      * Set the {@link UserSubject} representing the resource owner      * who has registered this client. This property may be set in cases where      * each account (resource) owner registers account specific Clients      *      * @param resourceOwnerSubject the resource owner user subject      */
 specifier|public
 name|void
 name|setResourceOwnerSubject
@@ -684,21 +734,16 @@ operator|=
 name|resourceOwnerSubject
 expr_stmt|;
 block|}
-comment|/**      * Get the {@link UserSubject} representing the resource owner       * who has registered this client      * @return the resource owner user subject      */
-annotation|@
-name|ManyToOne
-specifier|public
-name|UserSubject
-name|getResourceOwnerSubject
-parameter_list|()
-block|{
-return|return
-name|resourceOwnerSubject
-return|;
-block|}
 comment|/**      * Get the list of additional client properties      * @return the list of properties      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
 annotation|@
 name|MapKeyColumn
 argument_list|(
@@ -744,6 +789,15 @@ block|}
 comment|/**      * Get the list of registered scopes      * @return scopes      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
@@ -756,7 +810,7 @@ return|return
 name|registeredScopes
 return|;
 block|}
-comment|/**      * Set the list of registered scopes.       * Registering the scopes will allow the clients not to include the scopes      * and delegate to the runtime to enforce that the current request scopes are      * a subset of the pre-registered scopes.      *       * Client Registration service is expected to reject unknown scopes.       * @param registeredScopes the scopes      */
+comment|/**      * Set the list of registered scopes.       * Registering the scopes will allow the clients not to include the scopes      * and delegate to the runtime to enforce that the current request scopes are      * a subset of the pre-registered scopes.      *      * Client Registration service is expected to reject unknown scopes.       * @param registeredScopes the scopes      */
 specifier|public
 name|void
 name|setRegisteredScopes
@@ -777,6 +831,15 @@ expr_stmt|;
 block|}
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
@@ -810,6 +873,15 @@ expr_stmt|;
 block|}
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<

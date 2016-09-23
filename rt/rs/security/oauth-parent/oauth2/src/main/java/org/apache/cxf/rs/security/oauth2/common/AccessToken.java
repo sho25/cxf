@@ -67,6 +67,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|FetchType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|Id
 import|;
 end_import
@@ -357,6 +367,13 @@ block|}
 comment|/**      * Gets token parameters       * @return      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
 annotation|@
 name|MapKeyColumn
 argument_list|(

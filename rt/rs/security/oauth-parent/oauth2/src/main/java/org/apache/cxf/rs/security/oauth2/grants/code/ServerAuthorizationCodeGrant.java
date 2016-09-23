@@ -89,6 +89,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|FetchType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|ManyToOne
 import|;
 end_import
@@ -100,6 +110,16 @@ operator|.
 name|persistence
 operator|.
 name|MapKeyColumn
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OrderColumn
 import|;
 end_import
 
@@ -270,7 +290,7 @@ decl_stmt|;
 specifier|public
 name|ServerAuthorizationCodeGrant
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ServerAuthorizationCodeGrant
 parameter_list|(
@@ -416,7 +436,31 @@ operator|=
 name|c
 expr_stmt|;
 block|}
-comment|/**      * Sets the scopes explicitly approved by the end user.      * If this list is empty then the end user had no way to down-scope.       * @param approvedScope the approved scopes      */
+comment|/**      * Gets the scopes explicitly approved by the end user      * @return the approved scopes      */
+annotation|@
+name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
+specifier|public
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getApprovedScopes
+parameter_list|()
+block|{
+return|return
+name|approvedScopes
+return|;
+block|}
+comment|/**      * Sets the scopes explicitly approved by the end user.      * If this list is empty then the end user had no way to down-scope.      * @param scopes the approved scopes      */
 specifier|public
 name|void
 name|setApprovedScopes
@@ -435,19 +479,16 @@ operator|=
 name|scopes
 expr_stmt|;
 block|}
-comment|/**      * Gets the scopes explicitly approved by the end user      * @return the approved scopes      */
+comment|/**      * Gets the user subject representing the end user      * @return the subject      */
 annotation|@
-name|ElementCollection
+name|ManyToOne
 specifier|public
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getApprovedScopes
+name|UserSubject
+name|getSubject
 parameter_list|()
 block|{
 return|return
-name|approvedScopes
+name|subject
 return|;
 block|}
 comment|/**      * Sets the user subject representing the end user      * @param subject the subject      */
@@ -465,18 +506,6 @@ name|subject
 operator|=
 name|subject
 expr_stmt|;
-block|}
-comment|/**      * Gets the user subject representing the end user      * @return the subject      */
-annotation|@
-name|ManyToOne
-specifier|public
-name|UserSubject
-name|getSubject
-parameter_list|()
-block|{
-return|return
-name|subject
-return|;
 block|}
 specifier|public
 name|String
@@ -528,6 +557,15 @@ expr_stmt|;
 block|}
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
@@ -608,6 +646,13 @@ expr_stmt|;
 block|}
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
 annotation|@
 name|MapKeyColumn
 argument_list|(

@@ -57,6 +57,16 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|Cacheable
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|ElementCollection
 import|;
 end_import
@@ -77,7 +87,27 @@ name|javax
 operator|.
 name|persistence
 operator|.
+name|FetchType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
 name|Id
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OrderColumn
 import|;
 end_import
 
@@ -114,6 +144,8 @@ annotation|@
 name|XmlRootElement
 annotation|@
 name|Entity
+annotation|@
+name|Cacheable
 specifier|public
 class|class
 name|OAuthPermission
@@ -176,7 +208,7 @@ decl_stmt|;
 specifier|public
 name|OAuthPermission
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|OAuthPermission
 parameter_list|(
@@ -214,6 +246,30 @@ operator|=
 name|permission
 expr_stmt|;
 block|}
+comment|/**      * Gets the optional list of HTTP verbs      * @return the list of HTTP verbs      */
+annotation|@
+name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
+specifier|public
+name|List
+argument_list|<
+name|String
+argument_list|>
+name|getHttpVerbs
+parameter_list|()
+block|{
+return|return
+name|httpVerbs
+return|;
+block|}
 comment|/**      * Sets the optional list of HTTP verbs, example,      * "GET" and "POST", etc      * @param httpVerbs the list of HTTP verbs      */
 specifier|public
 name|void
@@ -233,19 +289,28 @@ operator|=
 name|httpVerbs
 expr_stmt|;
 block|}
-comment|/**      * Gets the optional list of HTTP verbs      * @return the list of HTTP verbs      */
+comment|/**      * Gets the optional list of relative request URIs      * @return the list of URIs      */
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
 name|String
 argument_list|>
-name|getHttpVerbs
+name|getUris
 parameter_list|()
 block|{
 return|return
-name|httpVerbs
+name|uris
 return|;
 block|}
 comment|/**      * Sets the optional list of relative request URIs      * @param uri the list of URIs      */
@@ -266,21 +331,6 @@ name|uris
 operator|=
 name|uri
 expr_stmt|;
-block|}
-comment|/**      * Gets the optional list of relative request URIs      * @return the list of URIs      */
-annotation|@
-name|ElementCollection
-specifier|public
-name|List
-argument_list|<
-name|String
-argument_list|>
-name|getUris
-parameter_list|()
-block|{
-return|return
-name|uris
-return|;
 block|}
 comment|/**      * Gets the permission description      * @return the description      */
 specifier|public

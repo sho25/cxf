@@ -65,6 +65,26 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|FetchType
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
+name|persistence
+operator|.
+name|OrderColumn
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -282,9 +302,18 @@ block|}
 specifier|public
 name|RefreshToken
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|ElementCollection
+argument_list|(
+name|fetch
+operator|=
+name|FetchType
+operator|.
+name|EAGER
+argument_list|)
+annotation|@
+name|OrderColumn
 specifier|public
 name|List
 argument_list|<
