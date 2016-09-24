@@ -243,7 +243,7 @@ argument_list|()
 operator|.
 name|setReceiveTimeout
 argument_list|(
-literal|5000L
+literal|8000L
 argument_list|)
 expr_stmt|;
 return|return
