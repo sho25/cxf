@@ -274,7 +274,7 @@ name|result
 operator|.
 name|get
 argument_list|(
-literal|1
+literal|3
 argument_list|,
 name|TimeUnit
 operator|.
