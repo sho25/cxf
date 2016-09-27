@@ -2017,9 +2017,11 @@ name|CompletionStageRxInvoker
 name|rx
 parameter_list|()
 block|{
-comment|// TODO: Implementation required (JAX-RS 2.1)
 return|return
-literal|null
+name|webClient
+operator|.
+name|rx
+argument_list|()
 return|;
 block|}
 annotation|@
