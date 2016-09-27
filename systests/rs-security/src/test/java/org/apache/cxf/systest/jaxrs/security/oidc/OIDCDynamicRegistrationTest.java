@@ -668,13 +668,66 @@ argument_list|(
 name|clientRegResp
 argument_list|)
 expr_stmt|;
-comment|//        assertEquals("web", clientRegResp.getApplicationType());
-comment|//        assertEquals("dynamic_client", clientRegResp.getClientName());
-comment|//        assertEquals("openid", clientRegResp.getScope());
-comment|//        assertEquals(Collections.singletonList("authorization_code"),
-comment|//                     clientRegResp.getGrantTypes());
-comment|//        assertEquals(Collections.singletonList("https://a/b/c"),
-comment|//                     clientRegResp.getRedirectUris());
+name|assertEquals
+argument_list|(
+literal|"web"
+argument_list|,
+name|clientRegResp
+operator|.
+name|getApplicationType
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"dynamic_client"
+argument_list|,
+name|clientRegResp
+operator|.
+name|getClientName
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"openid"
+argument_list|,
+name|clientRegResp
+operator|.
+name|getScope
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
+literal|"authorization_code"
+argument_list|)
+argument_list|,
+name|clientRegResp
+operator|.
+name|getGrantTypes
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
+literal|"https://a/b/c"
+argument_list|)
+argument_list|,
+name|clientRegResp
+operator|.
+name|getRedirectUris
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|assertEquals
 argument_list|(
 literal|200
