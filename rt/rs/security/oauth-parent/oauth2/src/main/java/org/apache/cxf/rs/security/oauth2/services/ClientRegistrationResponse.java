@@ -279,7 +279,7 @@ name|super
 operator|.
 name|setProperty
 argument_list|(
-name|REG_ACCESS_TOKEN
+name|REG_CLIENT_URI
 argument_list|,
 name|at
 argument_list|)

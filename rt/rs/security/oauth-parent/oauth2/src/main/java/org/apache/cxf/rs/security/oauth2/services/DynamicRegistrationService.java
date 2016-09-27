@@ -928,17 +928,17 @@ return|;
 block|}
 specifier|public
 name|void
-name|setRegistrationAccessToken
+name|setInitialAccessToken
 parameter_list|(
 name|String
-name|registrationAccessToken
+name|initialAccessToken
 parameter_list|)
 block|{
 name|this
 operator|.
 name|initialAccessToken
 operator|=
-name|registrationAccessToken
+name|initialAccessToken
 expr_stmt|;
 block|}
 specifier|protected
@@ -991,6 +991,23 @@ operator|.
 name|getGrantTypes
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|grantTypes
+operator|==
+literal|null
+condition|)
+block|{
+name|grantTypes
+operator|=
+name|Collections
+operator|.
+name|singletonList
+argument_list|(
+literal|"authorization_code"
+argument_list|)
+expr_stmt|;
+block|}
 comment|// Client Type
 comment|// https://tools.ietf.org/html/rfc7591 has no this property but
 comment|// but http://openid.net/specs/openid-connect-registration-1_0.html#ClientMetadata does
@@ -1023,10 +1040,6 @@ name|equals
 argument_list|(
 name|appType
 argument_list|)
-operator|&&
-name|grantTypes
-operator|!=
-literal|null
 operator|&&
 name|grantTypes
 operator|.
@@ -1065,13 +1078,6 @@ argument_list|,
 name|clientName
 argument_list|)
 decl_stmt|;
-if|if
-condition|(
-name|grantTypes
-operator|!=
-literal|null
-condition|)
-block|{
 name|newClient
 operator|.
 name|setAllowedGrantTypes
@@ -1079,7 +1085,6 @@ argument_list|(
 name|grantTypes
 argument_list|)
 expr_stmt|;
-block|}
 comment|// Client Registration Time
 name|newClient
 operator|.
