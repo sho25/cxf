@@ -417,6 +417,12 @@ specifier|private
 name|MessageContext
 name|mc
 decl_stmt|;
+specifier|private
+name|boolean
+name|supportRegistrationAccessTokens
+init|=
+literal|true
+decl_stmt|;
 annotation|@
 name|POST
 annotation|@
@@ -817,6 +823,12 @@ operator|.
 name|getAbsolutePathBuilder
 argument_list|()
 decl_stmt|;
+if|if
+condition|(
+name|supportRegistrationAccessTokens
+condition|)
+block|{
+comment|// both registration access token and uri are either included or excluded
 name|response
 operator|.
 name|setRegistrationClientUri
@@ -855,6 +867,7 @@ name|REG_ACCESS_TOKEN
 argument_list|)
 argument_list|)
 expr_stmt|;
+block|}
 return|return
 name|response
 return|;
@@ -1539,6 +1552,21 @@ block|{
 return|return
 name|mc
 return|;
+block|}
+specifier|public
+name|void
+name|setSupportRegistrationAccessTokens
+parameter_list|(
+name|boolean
+name|supportRegistrationAccessTokens
+parameter_list|)
+block|{
+name|this
+operator|.
+name|supportRegistrationAccessTokens
+operator|=
+name|supportRegistrationAccessTokens
+expr_stmt|;
 block|}
 block|}
 end_class
