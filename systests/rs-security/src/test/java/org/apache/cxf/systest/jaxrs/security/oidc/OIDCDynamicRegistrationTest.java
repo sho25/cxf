@@ -175,10 +175,6 @@ name|BeforeClass
 import|;
 end_import
 
-begin_comment
-comment|/**  * Some tests for the OAuth 2.0 filters  */
-end_comment
-
 begin_class
 specifier|public
 class|class
@@ -321,7 +317,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|doRestRegisterClient
+name|doTestRegisterClient
 argument_list|(
 literal|null
 argument_list|)
@@ -340,7 +336,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-name|doRestRegisterClient
+name|doTestRegisterClient
 argument_list|(
 literal|"123456789"
 argument_list|)
@@ -348,7 +344,7 @@ expr_stmt|;
 block|}
 specifier|private
 name|void
-name|doRestRegisterClient
+name|doTestRegisterClient
 parameter_list|(
 name|String
 name|initialAccessToken
