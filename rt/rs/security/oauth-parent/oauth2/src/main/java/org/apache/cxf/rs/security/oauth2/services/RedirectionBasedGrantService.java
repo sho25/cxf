@@ -1680,6 +1680,16 @@ argument_list|(
 name|extraProperties
 argument_list|)
 expr_stmt|;
+name|secData
+operator|.
+name|setApplicationRegisteredDynamically
+argument_list|(
+name|client
+operator|.
+name|isRegisteredDynamically
+argument_list|()
+argument_list|)
+expr_stmt|;
 name|String
 name|replyTo
 init|=

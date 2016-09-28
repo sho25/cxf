@@ -1379,6 +1379,13 @@ block|}
 comment|//TODO: check other properties
 comment|// Add more typed properties like tosUri, policyUri, etc to Client
 comment|// or set them as Client extra properties
+name|newClient
+operator|.
+name|setRegisteredDynamically
+argument_list|(
+literal|true
+argument_list|)
+expr_stmt|;
 return|return
 name|newClient
 return|;
