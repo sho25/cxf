@@ -1163,7 +1163,6 @@ argument_list|(
 name|address
 argument_list|)
 decl_stmt|;
-comment|//WebClient.getConfig(webTarget);
 name|Invocation
 operator|.
 name|Builder
@@ -1183,13 +1182,6 @@ argument_list|,
 literal|"b"
 argument_list|)
 decl_stmt|;
-name|WebClient
-operator|.
-name|getConfig
-argument_list|(
-name|builder
-argument_list|)
-expr_stmt|;
 name|Response
 name|r
 init|=
