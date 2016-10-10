@@ -341,9 +341,9 @@ argument_list|)
 block|,
 name|mvnBundle
 argument_list|(
-literal|"org.apache.geronimo.specs"
+literal|"javax.servlet"
 argument_list|,
-literal|"geronimo-servlet_3.0_spec"
+literal|"javax.servlet-api"
 argument_list|)
 block|,
 name|mvnBundle
