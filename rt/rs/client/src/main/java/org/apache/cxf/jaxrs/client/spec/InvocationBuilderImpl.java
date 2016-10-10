@@ -2034,11 +2034,20 @@ name|ExecutorService
 name|executorService
 parameter_list|)
 block|{
-comment|// TODO: Implementation required (JAX-RS 2.1)
 return|return
-literal|null
+name|webClient
+operator|.
+name|rx
+argument_list|(
+name|executorService
+argument_list|)
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 annotation|@
 name|Override
 specifier|public
@@ -2062,6 +2071,11 @@ return|return
 literal|null
 return|;
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"rawtypes"
+argument_list|)
 annotation|@
 name|Override
 specifier|public
