@@ -47,18 +47,6 @@ name|util
 operator|.
 name|concurrent
 operator|.
-name|CancellationException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|util
-operator|.
-name|concurrent
-operator|.
 name|CompletableFuture
 import|;
 end_import
@@ -100,6 +88,7 @@ import|;
 end_import
 
 begin_class
+specifier|public
 class|class
 name|JaxrsClientStageCallback
 parameter_list|<
@@ -118,6 +107,7 @@ name|T
 argument_list|>
 name|cf
 decl_stmt|;
+specifier|public
 name|JaxrsClientStageCallback
 parameter_list|(
 name|Class
@@ -303,11 +293,9 @@ condition|)
 block|{
 name|cf
 operator|.
-name|completeExceptionally
+name|cancel
 argument_list|(
-operator|new
-name|CancellationException
-argument_list|()
+name|mayInterruptIfRunning
 argument_list|)
 expr_stmt|;
 block|}
@@ -359,8 +347,13 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
-comment|//handler.failed((InterruptedException)ex);
-comment|//throw ex;
+name|cf
+operator|.
+name|completeExceptionally
+argument_list|(
+name|ex
+argument_list|)
+expr_stmt|;
 return|return
 literal|null
 return|;

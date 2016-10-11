@@ -128,6 +128,7 @@ import|;
 end_import
 
 begin_class
+specifier|public
 class|class
 name|JaxrsClientCallback
 parameter_list|<
@@ -157,6 +158,7 @@ name|?
 argument_list|>
 name|responseClass
 decl_stmt|;
+specifier|public
 name|JaxrsClientCallback
 parameter_list|(
 specifier|final

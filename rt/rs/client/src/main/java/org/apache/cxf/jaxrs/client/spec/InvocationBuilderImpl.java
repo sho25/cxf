@@ -2018,10 +2018,13 @@ name|rx
 parameter_list|()
 block|{
 return|return
-name|webClient
-operator|.
 name|rx
-argument_list|()
+argument_list|(
+operator|(
+name|ExecutorService
+operator|)
+literal|null
+argument_list|)
 return|;
 block|}
 annotation|@
@@ -2066,9 +2069,16 @@ argument_list|>
 name|clazz
 parameter_list|)
 block|{
-comment|// TODO: Implementation required (JAX-RS 2.1)
 return|return
+name|rx
+argument_list|(
+name|clazz
+argument_list|,
+operator|(
+name|ExecutorService
+operator|)
 literal|null
+argument_list|)
 return|;
 block|}
 annotation|@
@@ -2097,9 +2107,15 @@ name|ExecutorService
 name|executorService
 parameter_list|)
 block|{
-comment|// TODO: Implementation required (JAX-RS 2.1)
 return|return
-literal|null
+name|webClient
+operator|.
+name|rx
+argument_list|(
+name|clazz
+argument_list|,
+name|executorService
+argument_list|)
 return|;
 block|}
 annotation|@
