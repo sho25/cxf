@@ -3321,6 +3321,17 @@ name|getIndex
 argument_list|()
 index|]
 argument_list|,
+name|m
+operator|.
+name|getParameterTypes
+argument_list|()
+index|[
+name|p
+operator|.
+name|getIndex
+argument_list|()
+index|]
+argument_list|,
 name|getParamAnnotations
 argument_list|(
 name|m
