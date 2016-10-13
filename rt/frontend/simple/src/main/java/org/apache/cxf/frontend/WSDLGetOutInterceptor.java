@@ -279,8 +279,6 @@ name|doc
 argument_list|,
 name|writer
 argument_list|,
-literal|true
-argument_list|,
 operator|!
 name|MessageUtils
 operator|.
@@ -294,6 +292,8 @@ name|FORCE_START_DOCUMENT
 argument_list|,
 literal|false
 argument_list|)
+argument_list|,
+literal|true
 argument_list|)
 expr_stmt|;
 block|}
