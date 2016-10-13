@@ -931,14 +931,19 @@ operator|.
 name|close
 argument_list|()
 expr_stmt|;
+if|if
+condition|(
+operator|!
 name|maybeDeleteTempFile
 argument_list|(
 name|currentStream
 argument_list|)
-expr_stmt|;
+condition|)
+block|{
 name|postClose
 argument_list|()
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|boolean
@@ -2472,13 +2477,18 @@ end_function
 
 begin_function
 specifier|private
-name|void
+name|boolean
 name|maybeDeleteTempFile
 parameter_list|(
 name|Object
 name|stream
 parameter_list|)
 block|{
+name|boolean
+name|postClosedInvoked
+init|=
+literal|false
+decl_stmt|;
 name|streamList
 operator|.
 name|remove
@@ -2529,6 +2539,10 @@ parameter_list|)
 block|{
 comment|//ignore
 block|}
+name|postClosedInvoked
+operator|=
+literal|true
+expr_stmt|;
 block|}
 name|deleteTempFile
 argument_list|()
@@ -2546,6 +2560,9 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
+return|return
+name|postClosedInvoked
+return|;
 block|}
 end_function
 
