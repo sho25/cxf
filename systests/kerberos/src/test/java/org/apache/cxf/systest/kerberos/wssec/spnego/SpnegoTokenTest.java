@@ -520,7 +520,7 @@ literal|"KRB"
 argument_list|,
 name|address
 operator|=
-literal|"127.0.0.1"
+literal|"localhost"
 argument_list|)
 block|}
 argument_list|,
