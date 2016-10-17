@@ -1628,16 +1628,6 @@ operator|=
 name|swaggerUiMediaTypes
 expr_stmt|;
 block|}
-annotation|@
-name|javax
-operator|.
-name|ws
-operator|.
-name|rs
-operator|.
-name|ext
-operator|.
-name|Provider
 specifier|private
 class|class
 name|ServletConfigProvider
