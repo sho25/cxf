@@ -60,10 +60,12 @@ annotation|@
 name|SpringBootApplication
 annotation|@
 name|EnableEurekaServer
+comment|//CHECKSTYLE:OFF
 specifier|public
 class|class
 name|RegistryApplication
 block|{
+comment|//CHECKSTYLE:ON
 specifier|public
 specifier|static
 name|void
