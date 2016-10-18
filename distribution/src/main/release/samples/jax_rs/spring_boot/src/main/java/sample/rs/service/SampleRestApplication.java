@@ -244,7 +244,7 @@ name|endpoint
 operator|.
 name|setAddress
 argument_list|(
-literal|"/a"
+literal|"/"
 argument_list|)
 expr_stmt|;
 name|endpoint
