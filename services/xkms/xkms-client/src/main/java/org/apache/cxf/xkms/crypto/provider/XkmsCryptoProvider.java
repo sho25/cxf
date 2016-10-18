@@ -728,6 +728,12 @@ argument_list|<
 name|Pattern
 argument_list|>
 name|subjectCertConstraints
+parameter_list|,
+name|Collection
+argument_list|<
+name|Pattern
+argument_list|>
+name|issuerCertConstraints
 parameter_list|)
 throws|throws
 name|WSSecurityException
