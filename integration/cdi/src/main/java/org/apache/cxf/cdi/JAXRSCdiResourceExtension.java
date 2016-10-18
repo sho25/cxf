@@ -1007,6 +1007,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|false
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 name|instance
@@ -1043,13 +1045,6 @@ argument_list|(
 name|features
 argument_list|)
 expr_stmt|;
-name|instance
-operator|.
-name|setBus
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 return|return
 name|instance
 return|;
@@ -1081,6 +1076,8 @@ argument_list|,
 literal|false
 argument_list|,
 literal|false
+argument_list|,
+name|bus
 argument_list|)
 decl_stmt|;
 specifier|final
@@ -1157,13 +1154,6 @@ name|Feature
 operator|.
 name|class
 argument_list|)
-argument_list|)
-expr_stmt|;
-name|instance
-operator|.
-name|setBus
-argument_list|(
-name|bus
 argument_list|)
 expr_stmt|;
 return|return
