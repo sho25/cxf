@@ -307,7 +307,7 @@ argument_list|()
 operator|.
 name|contains
 argument_list|(
-literal|"CN=www.client.com"
+literal|"www.client.com"
 argument_list|)
 condition|)
 block|{
