@@ -970,6 +970,24 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+if|if
+condition|(
+name|applicationBeans
+operator|.
+name|isEmpty
+argument_list|()
+condition|)
+block|{
+name|event
+operator|.
+name|addBean
+argument_list|(
+operator|new
+name|DefaultApplicationBean
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 comment|/**      * Create the JAXRSServerFactoryBean from the application and all discovered service and provider instances.      * @param application application instance      * @param services all discovered services      * @param providers all discovered providers      * @return JAXRSServerFactoryBean instance      */
 specifier|private
