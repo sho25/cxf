@@ -287,14 +287,9 @@ name|EnableEurekaClient
 annotation|@
 name|EnableJaxRsProxyClient
 specifier|public
-specifier|final
 class|class
 name|SampleRestClientApplication
 block|{
-specifier|private
-name|SampleRestClientApplication
-parameter_list|()
-block|{     }
 specifier|public
 specifier|static
 name|void
