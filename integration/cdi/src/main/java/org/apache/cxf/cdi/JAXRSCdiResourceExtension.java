@@ -976,6 +976,12 @@ name|applicationBeans
 operator|.
 name|isEmpty
 argument_list|()
+operator|&&
+operator|!
+name|serviceBeans
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|event
