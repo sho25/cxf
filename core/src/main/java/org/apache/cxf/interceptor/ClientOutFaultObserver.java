@@ -219,6 +219,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+comment|// remove callback so that it won't be invoked twice
 name|ClientCallback
 name|callback
 init|=
@@ -227,7 +228,7 @@ operator|.
 name|getExchange
 argument_list|()
 operator|.
-name|get
+name|remove
 argument_list|(
 name|ClientCallback
 operator|.

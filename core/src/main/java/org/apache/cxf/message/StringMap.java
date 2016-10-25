@@ -68,6 +68,20 @@ name|T
 name|value
 parameter_list|)
 function_decl|;
+comment|/**      * Convenience method for removing typed objects from the map.      * equivalent to:  (T)remove(key.getName());      * @param key the key      */
+parameter_list|<
+name|T
+parameter_list|>
+name|T
+name|remove
+parameter_list|(
+name|Class
+argument_list|<
+name|T
+argument_list|>
+name|key
+parameter_list|)
+function_decl|;
 block|}
 end_interface
 
