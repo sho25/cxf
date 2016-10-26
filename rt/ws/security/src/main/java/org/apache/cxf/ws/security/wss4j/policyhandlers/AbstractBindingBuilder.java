@@ -11701,7 +11701,12 @@ operator|.
 name|getTime
 argument_list|()
 operator|+
-literal|300000
+name|WSS4JUtils
+operator|.
+name|getSecurityTokenLifetime
+argument_list|(
+name|message
+argument_list|)
 argument_list|)
 expr_stmt|;
 name|SecurityToken

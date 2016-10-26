@@ -380,6 +380,15 @@ name|SECURITY_CONTEXT_CREATOR
 init|=
 literal|"ws-security.security.context.creator"
 decl_stmt|;
+comment|/**      * The security token lifetime value (in milliseconds). The default is "300000" (5 minutes).      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|SECURITY_TOKEN_LIFETIME
+init|=
+literal|"ws-security.security.token.lifetime"
+decl_stmt|;
 comment|//
 comment|// Validator implementations for validating received security tokens
 comment|//
@@ -657,6 +666,8 @@ block|,
 name|SYMMETRIC_SIGNATURE_ALGORITHM
 block|,
 name|SECURITY_CONTEXT_CREATOR
+block|,
+name|SECURITY_TOKEN_LIFETIME
 block|}
 argument_list|)
 argument_list|)
