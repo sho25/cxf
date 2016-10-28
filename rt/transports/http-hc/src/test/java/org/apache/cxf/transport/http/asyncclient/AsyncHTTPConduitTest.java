@@ -842,21 +842,6 @@ argument_list|)
 expr_stmt|;
 try|try
 block|{
-name|assertEquals
-argument_list|(
-literal|"Hello "
-operator|+
-name|request
-argument_list|,
-name|g
-operator|.
-name|greetMeLater
-argument_list|(
-operator|-
-literal|5000
-argument_list|)
-argument_list|)
-expr_stmt|;
 name|Response
 argument_list|<
 name|GreetMeLaterResponse
