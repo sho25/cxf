@@ -5010,12 +5010,13 @@ operator|.
 name|getExchange
 argument_list|()
 decl_stmt|;
+comment|// remove callback so that it won't be invoked twice
 name|ClientCallback
 name|cc
 init|=
 name|exchange
 operator|.
-name|get
+name|remove
 argument_list|(
 name|ClientCallback
 operator|.
