@@ -3673,9 +3673,26 @@ block|{
 comment|//already have an exception, skip waiting
 try|try
 block|{
+if|if
+condition|(
+name|isAsync
+condition|)
+block|{
 name|wait
 argument_list|()
 expr_stmt|;
+block|}
+else|else
+block|{
+name|wait
+argument_list|(
+name|csPolicy
+operator|.
+name|getReceiveTimeout
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
 block|}
 catch|catch
 parameter_list|(
