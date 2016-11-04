@@ -1442,6 +1442,7 @@ end_function
 
 begin_function
 specifier|public
+specifier|synchronized
 name|boolean
 name|suspendContinuationIfNeeded
 parameter_list|()
