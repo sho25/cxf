@@ -6709,6 +6709,17 @@ block|}
 block|}
 name|exchange
 operator|.
+name|put
+argument_list|(
+literal|"IN_CHAIN_COMPLETE"
+argument_list|,
+name|Boolean
+operator|.
+name|TRUE
+argument_list|)
+expr_stmt|;
+name|exchange
+operator|.
 name|setInMessage
 argument_list|(
 name|inMessage
