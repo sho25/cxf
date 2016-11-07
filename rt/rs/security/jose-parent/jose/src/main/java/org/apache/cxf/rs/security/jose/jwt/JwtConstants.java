@@ -99,6 +99,14 @@ name|JWT_CLAIMS
 init|=
 literal|"jwt.claims"
 decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|EXPECTED_CLAIM_AUDIENCE
+init|=
+literal|"expected.claim.audience"
+decl_stmt|;
 specifier|private
 name|JwtConstants
 parameter_list|()
