@@ -169,7 +169,10 @@ name|r
 init|=
 name|createWebClient
 argument_list|(
-literal|"/rest/bookstore/version"
+name|getBasePath
+argument_list|()
+operator|+
+literal|"/version"
 argument_list|,
 name|MediaType
 operator|.
