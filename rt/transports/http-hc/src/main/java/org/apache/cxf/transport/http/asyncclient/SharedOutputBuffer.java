@@ -444,11 +444,6 @@ operator|.
 name|shutdown
 condition|)
 block|{
-name|encoder
-operator|.
-name|complete
-argument_list|()
-expr_stmt|;
 return|return
 operator|-
 literal|1
