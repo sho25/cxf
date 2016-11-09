@@ -120,15 +120,6 @@ name|ACCESS_TOKEN_EXPIRES_IN
 init|=
 literal|"expires_in"
 decl_stmt|;
-comment|// CXF-Specific
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|ACCESS_TOKEN_ISSUED_AT
-init|=
-literal|"issued_at"
-decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -160,6 +151,31 @@ name|String
 name|REFRESH_TOKEN
 init|=
 literal|"refresh_token"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|RESPONSE_MODE
+init|=
+literal|"response_mode"
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|FORM_RESPONSE_MODE
+init|=
+literal|"form_post"
+decl_stmt|;
+comment|// CXF-Specific
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ACCESS_TOKEN_ISSUED_AT
+init|=
+literal|"issued_at"
 decl_stmt|;
 comment|// Well-known grant types
 specifier|public
