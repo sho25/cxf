@@ -5978,6 +5978,12 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+name|Response
+operator|.
+name|class
+operator|==
+name|callbackRespClass
+operator|||
 name|callbackRespClass
 operator|.
 name|isAssignableFrom
