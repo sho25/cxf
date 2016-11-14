@@ -931,6 +931,22 @@ init|=
 literal|"buffer.proxy.response"
 decl_stmt|;
 specifier|private
+specifier|static
+specifier|final
+name|String
+name|METHOD_PARAM_BODY_INDEX
+init|=
+literal|"method.parameter.body.index"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
+name|String
+name|METHOD_PARAMS
+init|=
+literal|"method.parameters"
+decl_stmt|;
+specifier|private
 name|ClassResourceInfo
 name|cri
 decl_stmt|;
@@ -1821,6 +1837,8 @@ argument_list|,
 name|headers
 argument_list|,
 name|ori
+argument_list|,
+name|params
 argument_list|,
 name|body
 argument_list|,
@@ -5362,6 +5380,10 @@ block|}
 block|}
 end_function
 
+begin_comment
+comment|//CHECKSTYLE:OFF
+end_comment
+
 begin_function
 specifier|private
 name|Object
@@ -5380,6 +5402,10 @@ name|headers
 parameter_list|,
 name|OperationResourceInfo
 name|ori
+parameter_list|,
+name|Object
+index|[]
+name|methodParams
 parameter_list|,
 name|Object
 name|body
@@ -5401,6 +5427,7 @@ parameter_list|)
 throws|throws
 name|Throwable
 block|{
+comment|//CHECKSTYLE:ON
 name|Bus
 name|configuredBus
 init|=
@@ -5589,6 +5616,15 @@ name|bodyIndex
 argument_list|)
 argument_list|)
 expr_stmt|;
+name|outMessage
+operator|.
+name|put
+argument_list|(
+name|METHOD_PARAMS
+argument_list|,
+name|methodParams
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|body
@@ -5600,7 +5636,7 @@ name|outMessage
 operator|.
 name|put
 argument_list|(
-literal|"BODY_INDEX"
+name|METHOD_PARAM_BODY_INDEX
 argument_list|,
 name|bodyIndex
 argument_list|)
@@ -5647,7 +5683,7 @@ name|reqContext
 operator|.
 name|put
 argument_list|(
-literal|"BODY_INDEX"
+name|METHOD_PARAM_BODY_INDEX
 argument_list|,
 name|bodyIndex
 argument_list|)
@@ -6172,7 +6208,7 @@ name|reqContext
 operator|.
 name|get
 argument_list|(
-literal|"BODY_INDEX"
+name|METHOD_PARAM_BODY_INDEX
 argument_list|)
 else|:
 operator|-
@@ -6204,6 +6240,8 @@ argument_list|,
 name|headers
 argument_list|,
 name|ori
+argument_list|,
+literal|null
 argument_list|,
 name|body
 argument_list|,
@@ -6678,7 +6716,7 @@ name|outMessage
 operator|.
 name|get
 argument_list|(
-literal|"BODY_INDEX"
+name|METHOD_PARAM_BODY_INDEX
 argument_list|)
 decl_stmt|;
 name|Annotation
