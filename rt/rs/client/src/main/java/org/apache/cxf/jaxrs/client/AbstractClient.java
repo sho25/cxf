@@ -3689,7 +3689,10 @@ name|ProcessingException
 condition|)
 block|{
 throw|throw
-name|ex
+operator|(
+name|ProcessingException
+operator|)
+name|actualEx
 throw|;
 block|}
 elseif|else
