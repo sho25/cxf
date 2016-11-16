@@ -19,6 +19,18 @@ begin_import
 import|import
 name|javax
 operator|.
+name|enterprise
+operator|.
+name|inject
+operator|.
+name|Vetoed
+import|;
+end_import
+
+begin_import
+import|import
+name|javax
+operator|.
 name|ws
 operator|.
 name|rs
@@ -47,6 +59,8 @@ name|ApplicationPath
 argument_list|(
 literal|"/"
 argument_list|)
+annotation|@
+name|Vetoed
 specifier|public
 class|class
 name|DefaultApplication
