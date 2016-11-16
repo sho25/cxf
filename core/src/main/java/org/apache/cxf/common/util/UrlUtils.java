@@ -375,9 +375,13 @@ operator|.
 name|capacity
 argument_list|()
 operator|-
+operator|(
 literal|2
 operator|*
 name|escapesCount
+operator|)
+operator|+
+literal|1
 argument_list|)
 decl_stmt|;
 while|while
