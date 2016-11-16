@@ -43,6 +43,16 @@ name|java
 operator|.
 name|nio
 operator|.
+name|BufferUnderflowException
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|nio
+operator|.
 name|ByteBuffer
 import|;
 end_import
@@ -470,17 +480,15 @@ block|}
 catch|catch
 parameter_list|(
 specifier|final
-name|ArrayIndexOutOfBoundsException
+name|BufferUnderflowException
 name|e
 parameter_list|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
-literal|"Invalid URL encoding: "
-argument_list|,
-name|e
+literal|"Invalid URL encoding: Incomplete trailing escape (%) pattern"
 argument_list|)
 throw|;
 block|}
@@ -564,7 +572,7 @@ condition|)
 block|{
 throw|throw
 operator|new
-name|RuntimeException
+name|IllegalArgumentException
 argument_list|(
 literal|"Invalid URL encoding: not a valid digit (radix "
 operator|+
