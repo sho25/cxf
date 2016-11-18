@@ -326,6 +326,15 @@ name|void
 name|startProxy
 parameter_list|()
 block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"jdk.http.auth.tunneling.disabledSchemes"
+argument_list|,
+literal|""
+argument_list|)
+expr_stmt|;
 name|proxy
 operator|=
 operator|new
