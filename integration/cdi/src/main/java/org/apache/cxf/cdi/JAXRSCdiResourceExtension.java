@@ -1761,10 +1761,10 @@ operator|.
 name|getBeanClass
 argument_list|()
 argument_list|,
-name|beanManager
-operator|.
 name|createCreationalContext
 argument_list|(
+name|beanManager
+argument_list|,
 name|bean
 argument_list|)
 argument_list|)
@@ -1803,7 +1803,7 @@ name|List
 argument_list|<
 name|Feature
 argument_list|>
-name|services
+name|features
 init|=
 operator|new
 name|ArrayList
@@ -1842,7 +1842,7 @@ argument_list|()
 argument_list|)
 condition|)
 block|{
-name|services
+name|features
 operator|.
 name|add
 argument_list|(
@@ -1860,10 +1860,10 @@ operator|.
 name|getBeanClass
 argument_list|()
 argument_list|,
-name|beanManager
-operator|.
 name|createCreationalContext
 argument_list|(
+name|beanManager
+argument_list|,
 name|bean
 argument_list|)
 argument_list|)
@@ -1872,7 +1872,7 @@ expr_stmt|;
 block|}
 block|}
 return|return
-name|services
+name|features
 return|;
 block|}
 comment|/**      * Look and apply the available JAXRSServerFactoryBean extensions to customize its      * creation (f.e. add features, providers, assign transport, ...)      * @param beanManager bean manager      * @param bean JAX-RS server factory bean about to be created      */
