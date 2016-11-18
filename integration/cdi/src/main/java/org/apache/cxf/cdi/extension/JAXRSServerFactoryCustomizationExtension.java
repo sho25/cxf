@@ -44,7 +44,6 @@ comment|/**      * Customize JAX-RS server factory bean before it is being initi
 name|void
 name|customize
 parameter_list|(
-specifier|final
 name|JAXRSServerFactoryBean
 name|bean
 parameter_list|)

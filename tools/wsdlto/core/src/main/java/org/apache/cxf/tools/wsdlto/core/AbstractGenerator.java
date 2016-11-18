@@ -640,7 +640,6 @@ specifier|abstract
 name|void
 name|register
 parameter_list|(
-specifier|final
 name|ClassCollector
 name|collector
 parameter_list|,

@@ -46,7 +46,6 @@ block|{
 name|String
 name|echo
 parameter_list|(
-specifier|final
 name|String
 name|message
 parameter_list|)

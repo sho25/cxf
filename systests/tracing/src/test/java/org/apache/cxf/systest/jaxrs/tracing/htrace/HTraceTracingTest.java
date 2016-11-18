@@ -1980,7 +1980,6 @@ name|MalformedURLException
 block|{
 try|try
 init|(
-specifier|final
 name|TraceScope
 name|scope
 init|=
@@ -2178,7 +2177,6 @@ argument_list|)
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|TraceScope
 name|scope
 init|=

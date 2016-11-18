@@ -1061,7 +1061,6 @@ block|{
 name|void
 name|setResource1
 parameter_list|(
-specifier|final
 name|String
 name|argResource1
 parameter_list|)
@@ -1069,7 +1068,6 @@ function_decl|;
 name|void
 name|setResource2
 parameter_list|(
-specifier|final
 name|String
 name|argResource2
 parameter_list|)
@@ -1077,7 +1075,6 @@ function_decl|;
 name|void
 name|setResource3
 parameter_list|(
-specifier|final
 name|CharSequence
 name|argResource3
 parameter_list|)

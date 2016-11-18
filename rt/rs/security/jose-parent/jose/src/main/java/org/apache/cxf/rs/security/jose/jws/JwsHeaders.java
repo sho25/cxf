@@ -234,6 +234,9 @@ name|JoseConstants
 operator|.
 name|HEADER_KEY_ID
 argument_list|,
+operator|(
+name|Object
+operator|)
 name|kid
 argument_list|)
 argument_list|)

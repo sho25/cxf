@@ -39,7 +39,6 @@ parameter_list|>
 name|T
 name|continueSpan
 parameter_list|(
-specifier|final
 name|Traceable
 argument_list|<
 name|T
@@ -56,7 +55,6 @@ parameter_list|>
 name|T
 name|startSpan
 parameter_list|(
-specifier|final
 name|String
 name|description
 parameter_list|)
@@ -71,11 +69,9 @@ name|T
 argument_list|>
 name|wrap
 parameter_list|(
-specifier|final
 name|String
 name|description
 parameter_list|,
-specifier|final
 name|Traceable
 argument_list|<
 name|T

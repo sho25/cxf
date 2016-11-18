@@ -260,7 +260,6 @@ throw|;
 block|}
 try|try
 init|(
-specifier|final
 name|InputStream
 name|in
 init|=
@@ -307,7 +306,6 @@ throw|;
 block|}
 try|try
 init|(
-specifier|final
 name|InputStream
 name|in
 init|=

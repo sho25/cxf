@@ -65,7 +65,6 @@ name|Object
 argument_list|>
 name|buildAddressArguments
 parameter_list|(
-specifier|final
 name|ToolContext
 name|context
 parameter_list|)
@@ -78,7 +77,6 @@ name|String
 argument_list|>
 name|getNamespaces
 parameter_list|(
-specifier|final
 name|ToolContext
 name|context
 parameter_list|)

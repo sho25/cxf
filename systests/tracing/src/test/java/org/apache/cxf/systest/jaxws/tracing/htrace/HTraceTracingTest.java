@@ -630,7 +630,6 @@ block|{
 name|void
 name|configure
 parameter_list|(
-specifier|final
 name|JaxWsProxyFactoryBean
 name|factory
 parameter_list|)
@@ -1277,7 +1276,6 @@ argument_list|)
 decl_stmt|;
 try|try
 init|(
-specifier|final
 name|TraceScope
 name|scope
 init|=

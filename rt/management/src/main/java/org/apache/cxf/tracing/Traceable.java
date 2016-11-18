@@ -26,7 +26,6 @@ block|{
 name|T
 name|call
 parameter_list|(
-specifier|final
 name|TracerContext
 name|context
 parameter_list|)

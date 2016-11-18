@@ -657,7 +657,6 @@ name|setId
 parameter_list|(
 annotation|@
 name|Nullable
-specifier|final
 name|String
 name|id
 parameter_list|)
@@ -681,7 +680,6 @@ name|setUrl
 parameter_list|(
 annotation|@
 name|Nullable
-specifier|final
 name|String
 name|url
 parameter_list|)
@@ -705,7 +703,6 @@ name|setName
 parameter_list|(
 annotation|@
 name|Nullable
-specifier|final
 name|String
 name|name
 parameter_list|)

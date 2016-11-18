@@ -1219,7 +1219,6 @@ specifier|abstract
 name|Object
 name|getServiceObject
 parameter_list|(
-specifier|final
 name|Exchange
 name|context
 parameter_list|)

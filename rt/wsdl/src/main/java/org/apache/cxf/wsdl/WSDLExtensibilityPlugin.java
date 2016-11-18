@@ -67,7 +67,6 @@ block|{
 name|void
 name|setExtensionRegistry
 parameter_list|(
-specifier|final
 name|ExtensionRegistry
 name|registry
 parameter_list|)
@@ -75,7 +74,6 @@ function_decl|;
 name|ExtensibilityElement
 name|createExtension
 parameter_list|(
-specifier|final
 name|Map
 argument_list|<
 name|String
