@@ -453,7 +453,6 @@ condition|)
 block|{
 try|try
 init|(
-specifier|final
 name|ByteArrayOutputStream
 name|os
 init|=
