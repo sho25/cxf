@@ -635,6 +635,8 @@ decl_stmt|;
 specifier|private
 name|boolean
 name|useAuthorizationHeader
+init|=
+literal|true
 decl_stmt|;
 annotation|@
 name|Override
