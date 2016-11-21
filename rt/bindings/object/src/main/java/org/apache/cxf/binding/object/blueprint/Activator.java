@@ -94,6 +94,8 @@ parameter_list|)
 throws|throws
 name|Exception
 block|{
+try|try
+block|{
 name|BlueprintNameSpaceHandlerFactory
 name|factory
 init|=
@@ -127,6 +129,15 @@ argument_list|,
 literal|"http://cxf.apache.org/blueprint/binding/object"
 argument_list|)
 expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|NoClassDefFoundError
+name|error
+parameter_list|)
+block|{
+comment|// No Blueprint is available
+block|}
 block|}
 annotation|@
 name|Override
