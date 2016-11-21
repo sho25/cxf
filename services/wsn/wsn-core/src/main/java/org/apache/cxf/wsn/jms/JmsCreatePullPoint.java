@@ -69,6 +69,22 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|wsn
+operator|.
+name|client
+operator|.
+name|NotificationBroker
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|oasis_open
 operator|.
 name|docs
@@ -200,18 +216,60 @@ name|CreatePullPoint
 name|createPullPointRequest
 parameter_list|)
 block|{
-comment|// For JMS, avoid using dashes in the pullpoint name (which is also the queue name,
-comment|// as it will lead to problems with some JMS providers
 name|String
 name|name
 init|=
+literal|null
+decl_stmt|;
+if|if
+condition|(
+name|createPullPointRequest
+operator|.
+name|getOtherAttributes
+argument_list|()
+operator|.
+name|get
+argument_list|(
+name|NotificationBroker
+operator|.
+name|QNAME_PULLPOINT_QUEUE_NAME
+argument_list|)
+operator|!=
+literal|null
+condition|)
+block|{
+comment|//try use the sepcified pullpoint queue instead a generated one
+comment|//so that we can reuse this durable pullpoint queue between the
+comment|//broker restarts
+name|name
+operator|=
+name|createPullPointRequest
+operator|.
+name|getOtherAttributes
+argument_list|()
+operator|.
+name|get
+argument_list|(
+name|NotificationBroker
+operator|.
+name|QNAME_PULLPOINT_QUEUE_NAME
+argument_list|)
+expr_stmt|;
+block|}
+else|else
+block|{
+name|name
+operator|=
 name|super
 operator|.
 name|createPullPointName
 argument_list|(
 name|createPullPointRequest
 argument_list|)
-decl_stmt|;
+expr_stmt|;
+block|}
+comment|// For JMS, avoid using dashes in the pullpoint name (which is also the queue name,
+comment|// as it will lead to problems with some JMS providers
 name|name
 operator|=
 name|name
