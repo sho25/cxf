@@ -1780,6 +1780,8 @@ argument_list|(
 literal|null
 argument_list|,
 name|secondEncrParts
+argument_list|,
+name|secHeader
 argument_list|)
 expr_stmt|;
 block|}
@@ -1808,6 +1810,8 @@ argument_list|(
 literal|null
 argument_list|,
 name|secondEncrParts
+argument_list|,
+name|secHeader
 argument_list|)
 expr_stmt|;
 block|}
@@ -3137,6 +3141,8 @@ argument_list|(
 literal|null
 argument_list|,
 name|encrParts
+argument_list|,
+name|secHeader
 argument_list|)
 decl_stmt|;
 name|List
@@ -3878,6 +3884,8 @@ argument_list|(
 literal|null
 argument_list|,
 name|encrParts
+argument_list|,
+name|secHeader
 argument_list|)
 decl_stmt|;
 name|List
