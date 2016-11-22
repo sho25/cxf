@@ -589,6 +589,13 @@ argument_list|(
 name|autodetectCharset
 argument_list|)
 expr_stmt|;
+name|options
+operator|.
+name|setResolveEntities
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
 block|}
 block|}
 name|Document
