@@ -437,11 +437,7 @@ name|OPERATORS_MAP
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|ConditionType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|OPERATORS_MAP
@@ -514,11 +510,7 @@ name|CONDITION_MAP
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|ConditionType
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|CONDITION_MAP
@@ -654,7 +646,7 @@ name|s2
 argument_list|)
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|Map
 argument_list|<
 name|String
@@ -665,7 +657,7 @@ name|operatorsMap
 init|=
 name|OPERATORS_MAP
 decl_stmt|;
-specifier|private
+specifier|protected
 name|Pattern
 name|comparatorsPattern
 init|=
@@ -727,7 +719,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates FIQL parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      * @param contextProperties                  */
+comment|/**      * Creates FIQL parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      * @param contextProperties      * @param beanProperties       */
 specifier|public
 name|FiqlParser
 parameter_list|(
@@ -784,11 +776,7 @@ name|operatorsMap
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|ConditionType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|operatorsMap
 argument_list|)
@@ -811,6 +799,8 @@ expr_stmt|;
 block|}
 block|}
 comment|/**      * Parses expression and builds search filter. Names used in FIQL expression are names of getters/setters      * in type T.      *<p>      * Example:      *       *<pre>      * class Condition {      *   public String getFoo() {...}      *   public void setFoo(String foo) {...}      *   public int getBar() {...}      *   public void setBar(int bar) {...}      * }      *       * FiqlParser&lt;Condition> parser = new FiqlParser&lt;Condition&gt;(Condition.class);      * parser.parse("foo==mystery*;bar=ge=10");      *</pre>      *       * @param fiqlExpression expression of filter.      * @return tree of {@link SearchCondition} objects representing runtime search structure.      * @throws SearchParseException when expression does not follow FIQL grammar      */
+annotation|@
+name|Override
 specifier|public
 name|SearchCondition
 argument_list|<
@@ -863,9 +853,7 @@ name|subexpressions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -876,9 +864,7 @@ name|operators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -891,15 +877,11 @@ name|lastIdx
 init|=
 literal|0
 decl_stmt|;
+for|for
+control|(
 name|int
 name|idx
 init|=
-literal|0
-decl_stmt|;
-for|for
-control|(
-name|idx
-operator|=
 literal|0
 init|;
 name|idx
@@ -1278,8 +1260,6 @@ argument_list|<
 name|T
 argument_list|>
 name|node
-init|=
-literal|null
 decl_stmt|;
 if|if
 condition|(
@@ -1413,8 +1393,11 @@ name|ors
 return|;
 block|}
 block|}
-specifier|private
-name|Comparison
+specifier|protected
+name|ASTNode
+argument_list|<
+name|T
+argument_list|>
 name|parseComparison
 parameter_list|(
 name|String
@@ -1569,7 +1552,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-specifier|private
+specifier|protected
 name|TypeInfoObject
 name|parseType
 parameter_list|(
@@ -1639,6 +1622,8 @@ name|typeInfo
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|protected
 name|boolean
 name|isCount
@@ -1656,7 +1641,7 @@ name|EXTENSION_COUNT_OPEN
 argument_list|)
 return|;
 block|}
-specifier|private
+specifier|protected
 name|String
 name|unwrapSetter
 parameter_list|(
@@ -1708,7 +1693,7 @@ return|;
 block|}
 block|}
 comment|// node of abstract syntax tree
-specifier|private
+specifier|protected
 interface|interface
 name|ASTNode
 parameter_list|<
@@ -1735,10 +1720,12 @@ name|T
 argument_list|>
 block|{
 specifier|private
+specifier|final
 name|String
 name|operator
 decl_stmt|;
 specifier|private
+specifier|final
 name|List
 argument_list|<
 name|ASTNode
@@ -1750,12 +1737,7 @@ name|subnodes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ASTNode
-argument_list|<
-name|T
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SubExpression
@@ -1912,6 +1894,8 @@ name|toString
 argument_list|()
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|SearchCondition
 argument_list|<
@@ -1933,12 +1917,7 @@ name|scNodes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SearchCondition
-argument_list|<
-name|T
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1976,9 +1955,7 @@ block|{
 return|return
 operator|new
 name|OrSearchCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|scNodes
 argument_list|)
@@ -1989,9 +1966,7 @@ block|{
 return|return
 operator|new
 name|AndSearchCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|scNodes
 argument_list|)
@@ -2009,14 +1984,17 @@ name|T
 argument_list|>
 block|{
 specifier|private
+specifier|final
 name|String
 name|name
 decl_stmt|;
 specifier|private
+specifier|final
 name|String
 name|operator
 decl_stmt|;
 specifier|private
+specifier|final
 name|TypeInfoObject
 name|tvalue
 decl_stmt|;
@@ -2088,6 +2066,8 @@ operator|+
 literal|")"
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|SearchCondition
 argument_list|<
@@ -2135,9 +2115,7 @@ block|{
 return|return
 operator|new
 name|SimpleSearchCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|ct
 argument_list|,
@@ -2158,9 +2136,7 @@ decl_stmt|;
 return|return
 operator|new
 name|SimpleSearchCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Collections
 operator|.
@@ -2318,15 +2294,18 @@ throw|;
 block|}
 block|}
 block|}
+specifier|protected
 specifier|static
 class|class
 name|TypeInfoObject
 block|{
 specifier|private
+specifier|final
 name|Object
 name|object
 decl_stmt|;
 specifier|private
+specifier|final
 name|TypeInfo
 name|typeInfo
 decl_stmt|;

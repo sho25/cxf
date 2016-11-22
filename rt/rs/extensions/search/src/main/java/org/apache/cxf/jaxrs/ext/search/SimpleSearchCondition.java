@@ -67,7 +67,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashMap
+name|EnumSet
 import|;
 end_import
 
@@ -77,7 +77,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|HashSet
+name|HashMap
 import|;
 end_import
 
@@ -188,24 +188,27 @@ argument_list|<
 name|T
 argument_list|>
 block|{
-specifier|private
+specifier|protected
 specifier|static
+specifier|final
 name|Set
 argument_list|<
 name|ConditionType
 argument_list|>
-name|supportedTypes
+name|SUPPORTED_TYPES
 init|=
-operator|new
-name|HashSet
-argument_list|<
+name|EnumSet
+operator|.
+name|noneOf
+argument_list|(
 name|ConditionType
-argument_list|>
-argument_list|()
+operator|.
+name|class
+argument_list|)
 decl_stmt|;
 static|static
 block|{
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|add
 argument_list|(
@@ -214,7 +217,7 @@ operator|.
 name|EQUALS
 argument_list|)
 expr_stmt|;
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|add
 argument_list|(
@@ -223,7 +226,7 @@ operator|.
 name|NOT_EQUALS
 argument_list|)
 expr_stmt|;
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|add
 argument_list|(
@@ -232,7 +235,7 @@ operator|.
 name|GREATER_THAN
 argument_list|)
 expr_stmt|;
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|add
 argument_list|(
@@ -241,7 +244,7 @@ operator|.
 name|GREATER_OR_EQUALS
 argument_list|)
 expr_stmt|;
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|add
 argument_list|(
@@ -250,7 +253,7 @@ operator|.
 name|LESS_THAN
 argument_list|)
 expr_stmt|;
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|add
 argument_list|(
@@ -261,6 +264,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|final
 name|ConditionType
 name|joiningType
 init|=
@@ -326,7 +330,7 @@ block|}
 if|if
 condition|(
 operator|!
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|contains
 argument_list|(
@@ -367,7 +371,7 @@ name|cType
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates search condition with different operators (equality, inequality etc) specified for each getter;      * see {@link #isMet(Object)} for details of comparison. Cannot be used for primitive T type due to      * per-getter comparison strategy.      *       * @param getters2operators getters names and operators to be used with them during comparison      * @param condition template object      */
+comment|/**      * Creates search condition with different operators (equality, inequality etc) specified for each getter;      * see {@link #isMet(Object)} for details of comparison. Cannot be used for primitive T type due to      * per-getter comparison strategy.      *       * @param getters2operators getters names and operators to be used with them during comparison      * @param realGetters       * @param propertyTypeInfo       * @param condition template object      */
 specifier|public
 name|SimpleSearchCondition
 parameter_list|(
@@ -475,7 +479,7 @@ block|{
 if|if
 condition|(
 operator|!
-name|supportedTypes
+name|SUPPORTED_TYPES
 operator|.
 name|contains
 argument_list|(
@@ -538,6 +542,8 @@ name|condition
 argument_list|)
 expr_stmt|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|T
 name|getCondition
@@ -548,6 +554,8 @@ name|condition
 return|;
 block|}
 comment|/**      * {@inheritDoc}      *<p>      * When constructor with map is used it returns null.      */
+annotation|@
+name|Override
 specifier|public
 name|ConditionType
 name|getConditionType
@@ -585,6 +593,8 @@ argument_list|()
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|List
 argument_list|<
@@ -681,9 +691,7 @@ argument_list|>
 operator|)
 operator|new
 name|PrimitiveSearchCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|null
 argument_list|,
@@ -711,12 +719,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SearchCondition
-argument_list|<
-name|T
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -908,9 +911,7 @@ literal|null
 condition|?
 operator|new
 name|PrimitiveSearchCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|realGetter
 argument_list|,
@@ -925,9 +926,7 @@ argument_list|)
 else|:
 operator|new
 name|CollectionCheckCondition
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|realGetter
 argument_list|,
@@ -972,6 +971,8 @@ return|;
 block|}
 block|}
 comment|/**      * Compares given object against template condition object.      *<p>      * For built-in type T like String, Number (precisely, from type T located in subpackage of "java.lang.*")      * given object is directly compared with template object. Comparison for {@link ConditionType#EQUALS}      * requires correct implementation of {@link Object#equals(Object)}, using inequalities requires type T      * implementing {@link Comparable}.      *<p>      * For other types the comparison of given object against template object is done using its      *<b>getters</b>; Value returned by {@linkplain #isMet(Object)} operation is<b>conjunction ('and'      * operator)</b> of comparisons of each getter accessible in object of type T. Getters of template object      * that return null or throw exception are not used in comparison. Finally, if all getters      * return nulls (are excluded) it is interpreted as no filter (match every pojo).      *<p>      * If {@link #SimpleSearchCondition(ConditionType, Object) constructor with shared operator} was used,      * then getters are compared using the same operator. If {@link #SimpleSearchCondition(Map, Object)      * constructor with map of operators} was used then for every getter specified operator is used (getters      * for missing mapping are ignored). The way that comparison per-getter is done depending on operator type      * per getter - comparison for {@link ConditionType#EQUALS} requires correct implementation of      * {@link Object#equals(Object)}, using inequalities requires that getter type implements      * {@link Comparable}.      *<p>      * For equality comparison and String type in template object (either being built-in or getter from client      * provided type) it is allowed to used asterisk at the beginning or at the end of text as wild card (zero      * or more of any characters) e.g. "foo*", "*foo" or "*foo*". Inner asterisks are not interpreted as wild      * cards.      *<p>      *<b>Example:</b>      *       *<pre>      * SimpleSearchCondition&lt;Integer&gt; ssc = new SimpleSearchCondition&lt;Integer&gt;(      *   ConditionType.GREATER_THAN, 10);          * ssc.isMet(20);      * // true since 20&gt;10       *       * class Entity {      *   public String getName() {...      *   public int getLevel() {...      *   public String getMessage() {...      * }      *       * Entity template = new Entity("bbb", 10, null);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);          *       * ssc.isMet(new Entity("aaa", 20, "some mesage"));       * // false: is not met, expression '"aaa"&gt;"bbb" and 20&gt;10' is not true        * // since "aaa" is not greater than "bbb"; not that message is null in template hence ingored      *       * ssc.isMet(new Entity("ccc", 30, "other message"));      * // true: is met, expression '"ccc"&gt;"bbb" and 30&gt;10' is true      *       * Map&lt;String,ConditionType&gt; map;      * map.put("name", ConditionType.EQUALS);      * map.put("level", ConditionType.GREATER_THAN);      * ssc = new SimpleSearchCondition&lt;Entity&gt;(      *   ConditionType.GREATER_THAN, template);      *         * ssc.isMet(new Entity("ccc", 30, "other message"));      * // false due to expression '"aaa"=="ccc" and 30&gt;10"' (note different operators)      *       *</pre>      *       * @throws IllegalAccessException when security manager disallows reflective call of getters.      */
+annotation|@
+name|Override
 specifier|public
 name|boolean
 name|isMet
@@ -1048,11 +1049,7 @@ name|getters2values
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Beanspector
@@ -1063,9 +1060,7 @@ name|beanspector
 init|=
 operator|new
 name|Beanspector
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|condition
 argument_list|)
@@ -1192,6 +1187,8 @@ literal|"java.lang"
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|List
 argument_list|<
@@ -1214,9 +1211,7 @@ name|result
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1273,6 +1268,8 @@ name|columns
 argument_list|)
 return|;
 block|}
+annotation|@
+name|Override
 specifier|public
 name|PrimitiveStatement
 name|getStatement
@@ -1307,6 +1304,8 @@ literal|null
 return|;
 block|}
 block|}
+annotation|@
+name|Override
 specifier|public
 name|void
 name|accept
