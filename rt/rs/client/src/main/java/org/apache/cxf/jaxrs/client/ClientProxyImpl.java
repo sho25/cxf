@@ -6014,7 +6014,7 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
-name|Response
+name|Object
 operator|.
 name|class
 operator|==
