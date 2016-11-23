@@ -25,6 +25,18 @@ end_import
 
 begin_import
 import|import
+name|com
+operator|.
+name|codahale
+operator|.
+name|metrics
+operator|.
+name|MetricRegistry
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|springframework
@@ -126,18 +138,6 @@ operator|.
 name|annotation
 operator|.
 name|Bean
-import|;
-end_import
-
-begin_import
-import|import
-name|com
-operator|.
-name|codahale
-operator|.
-name|metrics
-operator|.
-name|MetricRegistry
 import|;
 end_import
 

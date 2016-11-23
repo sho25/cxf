@@ -55,17 +55,19 @@ name|EnableEurekaServer
 import|;
 end_import
 
+begin_comment
+comment|//CHECKSTYLE:OFF
+end_comment
+
 begin_class
 annotation|@
 name|SpringBootApplication
 annotation|@
 name|EnableEurekaServer
-comment|//CHECKSTYLE:OFF
 specifier|public
 class|class
 name|RegistryApplication
 block|{
-comment|//CHECKSTYLE:ON
 specifier|public
 specifier|static
 name|void
@@ -90,6 +92,10 @@ expr_stmt|;
 block|}
 block|}
 end_class
+
+begin_comment
+comment|//CHECKSTYLE:ON
+end_comment
 
 end_unit
 

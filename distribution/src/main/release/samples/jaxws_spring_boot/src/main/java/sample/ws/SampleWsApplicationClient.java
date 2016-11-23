@@ -49,6 +49,10 @@ name|StreamSource
 import|;
 end_import
 
+begin_comment
+comment|//CHECKSTYLE:OFF
+end_comment
+
 begin_class
 specifier|public
 class|class
@@ -108,6 +112,10 @@ comment|//                          + "</ns2:sayHelloResponse>"));
 block|}
 block|}
 end_class
+
+begin_comment
+comment|//CHECKSTYLE:ON
+end_comment
 
 end_unit
 

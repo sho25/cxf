@@ -228,7 +228,6 @@ name|flatMap
 argument_list|(
 name|x
 lambda|->
-operator|(
 name|withId
 condition|?
 name|splitInputStringWithId
@@ -240,7 +239,6 @@ name|splitInputString
 argument_list|(
 name|x
 argument_list|)
-operator|)
 argument_list|)
 decl_stmt|;
 specifier|final
