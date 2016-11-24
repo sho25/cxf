@@ -1034,7 +1034,7 @@ name|setThreshold
 argument_list|(
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 operator|(
 name|String
@@ -1102,7 +1102,7 @@ name|setMaxSize
 argument_list|(
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 operator|(
 name|String

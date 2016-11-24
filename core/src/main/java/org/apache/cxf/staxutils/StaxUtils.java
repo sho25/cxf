@@ -4548,10 +4548,6 @@ block|}
 while|while
 condition|(
 name|it
-operator|!=
-literal|null
-operator|&&
-name|it
 operator|.
 name|hasNext
 argument_list|()
@@ -6532,9 +6528,6 @@ name|doc
 operator|.
 name|setDocumentURI
 argument_list|(
-operator|new
-name|String
-argument_list|(
 name|reader
 operator|.
 name|getLocation
@@ -6542,7 +6535,6 @@ argument_list|()
 operator|.
 name|getSystemId
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -6625,9 +6617,6 @@ name|doc
 operator|.
 name|setDocumentURI
 argument_list|(
-operator|new
-name|String
-argument_list|(
 name|reader
 operator|.
 name|getLocation
@@ -6635,7 +6624,6 @@ argument_list|()
 operator|.
 name|getSystemId
 argument_list|()
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -9491,14 +9479,10 @@ literal|null
 condition|?
 literal|null
 else|:
-operator|new
-name|String
-argument_list|(
 name|src
 operator|.
 name|getSystemId
 argument_list|()
-argument_list|)
 decl_stmt|;
 name|String
 name|pubId
@@ -9512,14 +9496,10 @@ literal|null
 condition|?
 literal|null
 else|:
-operator|new
-name|String
-argument_list|(
 name|src
 operator|.
 name|getPublicId
 argument_list|()
-argument_list|)
 decl_stmt|;
 if|if
 condition|(

@@ -2011,6 +2011,7 @@ name|value
 expr_stmt|;
 block|}
 block|}
+specifier|static
 class|class
 name|NUllOutputStream
 extends|extends

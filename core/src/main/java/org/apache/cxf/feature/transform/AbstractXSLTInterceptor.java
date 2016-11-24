@@ -374,14 +374,9 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"Cannot create XSLT template from path: %s, error: "
+literal|"Cannot create XSLT template from path: %s"
 argument_list|,
 name|xsltPath
-argument_list|,
-name|e
-operator|.
-name|getException
-argument_list|()
 argument_list|)
 argument_list|,
 name|e
@@ -402,14 +397,9 @@ name|String
 operator|.
 name|format
 argument_list|(
-literal|"Cannot create XSLT template from path: %s, error: "
+literal|"Cannot create XSLT template from path: %s"
 argument_list|,
 name|xsltPath
-argument_list|,
-name|e
-operator|.
-name|getNestedException
-argument_list|()
 argument_list|)
 argument_list|,
 name|e

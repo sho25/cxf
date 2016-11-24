@@ -183,9 +183,6 @@ operator|.
 name|setSerializerAttributeValueMapMemoryLimit
 argument_list|(
 name|serializerAttributeValueMapMemoryLimit
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -208,9 +205,6 @@ operator|.
 name|setSerializerMinAttributeValueSize
 argument_list|(
 name|serializerMinAttributeValueSize
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -233,9 +227,6 @@ operator|.
 name|setSerializerMaxAttributeValueSize
 argument_list|(
 name|serializerMaxAttributeValueSize
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -258,9 +249,6 @@ operator|.
 name|setSerializerCharacterContentChunkMapMemoryLimit
 argument_list|(
 name|serializerCharacterContentChunkMapMemoryLimit
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -283,9 +271,6 @@ operator|.
 name|setSerializerMinCharacterContentChunkSize
 argument_list|(
 name|serializerMinCharacterContentChunkSize
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -308,9 +293,6 @@ operator|.
 name|setSerializerMaxCharacterContentChunkSize
 argument_list|(
 name|serializerMaxCharacterContentChunkSize
-operator|.
-name|intValue
-argument_list|()
 argument_list|)
 expr_stmt|;
 block|}

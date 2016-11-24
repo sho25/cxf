@@ -502,7 +502,7 @@ name|codePoint
 init|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|matched
 operator|.
