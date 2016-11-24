@@ -5020,7 +5020,7 @@ name|JAXRSUtils
 operator|.
 name|logMessageHandlerProblem
 argument_list|(
-literal|"NO_MSG_WRITER"
+name|name
 argument_list|,
 name|cls
 argument_list|,
