@@ -1433,9 +1433,6 @@ parameter_list|,
 name|SecurityActionToken
 name|actionToken
 parameter_list|,
-name|Document
-name|doc
-parameter_list|,
 name|RequestData
 name|reqData
 parameter_list|)
@@ -1463,8 +1460,6 @@ argument_list|(
 name|handler
 argument_list|,
 name|actionToken
-argument_list|,
-name|doc
 argument_list|,
 name|reqData
 argument_list|)

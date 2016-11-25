@@ -1134,7 +1134,9 @@ name|encrKey
 init|=
 operator|new
 name|WSSecEncryptedKey
-argument_list|()
+argument_list|(
+name|doc
+argument_list|)
 decl_stmt|;
 name|encrKey
 operator|.
@@ -1159,8 +1161,6 @@ name|encrKey
 operator|.
 name|prepare
 argument_list|(
-name|doc
-argument_list|,
 literal|null
 argument_list|)
 expr_stmt|;

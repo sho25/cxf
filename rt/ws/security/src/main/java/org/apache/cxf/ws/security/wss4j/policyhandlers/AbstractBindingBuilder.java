@@ -2208,7 +2208,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -2221,7 +2221,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2296,7 +2296,7 @@ if|if
 condition|(
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -2307,7 +2307,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2316,7 +2316,7 @@ name|el
 argument_list|,
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -2328,7 +2328,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -2375,7 +2375,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2407,7 +2407,7 @@ if|if
 condition|(
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -2418,7 +2418,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2427,7 +2427,7 @@ name|el
 argument_list|,
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -2439,7 +2439,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -2534,7 +2534,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2549,7 +2549,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -2580,7 +2580,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -2593,7 +2593,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2628,7 +2628,7 @@ if|if
 condition|(
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -2639,7 +2639,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -2652,7 +2652,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -2661,7 +2661,7 @@ name|el
 argument_list|,
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -2905,7 +2905,9 @@ name|timestampEl
 operator|=
 operator|new
 name|WSSecTimestamp
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 expr_stmt|;
 name|timestampEl
 operator|.
@@ -2937,12 +2939,7 @@ expr_stmt|;
 name|timestampEl
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|String
 name|namespace
@@ -3084,7 +3081,7 @@ argument_list|()
 decl_stmt|;
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -3332,7 +3329,7 @@ name|LaxTsFirst
 operator|&&
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -3349,7 +3346,7 @@ name|firstChild
 init|=
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getFirstChild
@@ -3395,7 +3392,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -3427,7 +3424,7 @@ name|LaxTsLast
 operator|&&
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getLastChild
@@ -3441,7 +3438,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -3797,6 +3794,8 @@ operator|new
 name|WSSecurityTokenHolder
 argument_list|(
 name|secToken
+argument_list|,
+name|secHeader
 argument_list|)
 argument_list|,
 name|getSignedParts
@@ -3814,7 +3813,9 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|sig
 operator|.
@@ -4074,17 +4075,10 @@ name|sig
 operator|.
 name|prepare
 argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
-argument_list|()
-argument_list|,
 name|secToken
 operator|.
 name|getCrypto
 argument_list|()
-argument_list|,
-name|secHeader
 argument_list|)
 expr_stmt|;
 block|}
@@ -4198,7 +4192,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -4216,7 +4210,7 @@ else|else
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|appendChild
@@ -4231,9 +4225,7 @@ block|{
 name|sig
 operator|.
 name|prependBSTElementToHeader
-argument_list|(
-name|secHeader
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 if|if
@@ -4520,12 +4512,7 @@ block|{
 name|utBuilder
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|addSupportingElement
 argument_list|(
@@ -4609,12 +4596,7 @@ block|{
 name|utBuilder
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|addSupportingElement
 argument_list|(
@@ -4708,7 +4690,7 @@ condition|(
 operator|!
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getOwnerDocument
@@ -4729,7 +4711,7 @@ name|Element
 operator|)
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|getOwnerDocument
@@ -5755,7 +5737,9 @@ name|utBuilder
 init|=
 operator|new
 name|WSSecUsernameToken
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|utBuilder
 operator|.
@@ -6057,7 +6041,9 @@ name|utBuilder
 init|=
 operator|new
 name|WSSecUsernameToken
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|utBuilder
 operator|.
@@ -6155,12 +6141,7 @@ expr_stmt|;
 name|utBuilder
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 block|}
 else|else
@@ -8959,7 +8940,9 @@ name|encrKey
 init|=
 operator|new
 name|WSSecEncryptedKey
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|encrKey
 operator|.
@@ -9118,11 +9101,6 @@ name|encrKey
 operator|.
 name|prepare
 argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
-argument_list|()
-argument_list|,
 name|crypto
 argument_list|)
 expr_stmt|;
@@ -9193,7 +9171,7 @@ name|prependChildElement
 argument_list|(
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 argument_list|,
 name|bstToken
@@ -10543,7 +10521,9 @@ name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|sig
 operator|.
@@ -11254,14 +11234,7 @@ name|sig
 operator|.
 name|prepare
 argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
-argument_list|()
-argument_list|,
 name|crypto
-argument_list|,
-name|secHeader
 argument_list|)
 expr_stmt|;
 block|}
@@ -11466,8 +11439,6 @@ operator|.
 name|addReferencesToSign
 argument_list|(
 name|sigParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 name|sig
@@ -11881,7 +11852,9 @@ name|dkSign
 init|=
 operator|new
 name|WSSecDKSign
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|dkSign
 operator|.
@@ -12195,11 +12168,7 @@ block|}
 name|dkSign
 operator|.
 name|prepare
-argument_list|(
-name|doc
-argument_list|,
-name|secHeader
-argument_list|)
+argument_list|()
 expr_stmt|;
 if|if
 condition|(
@@ -12252,8 +12221,6 @@ operator|.
 name|addReferencesToSign
 argument_list|(
 name|sigParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 comment|//Add elements to header
@@ -12338,20 +12305,14 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
-name|Document
-name|doc
-init|=
-name|saaj
-operator|.
-name|getSOAPPart
-argument_list|()
-decl_stmt|;
 name|WSSecSignature
 name|sig
 init|=
 operator|new
 name|WSSecSignature
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|sig
 operator|.
@@ -12667,12 +12628,8 @@ name|sig
 operator|.
 name|prepare
 argument_list|(
-name|doc
-argument_list|,
 name|getSignatureCrypto
 argument_list|()
-argument_list|,
-name|secHeader
 argument_list|)
 expr_stmt|;
 name|sig
@@ -12696,8 +12653,6 @@ operator|.
 name|addReferencesToSign
 argument_list|(
 name|sigParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 comment|//Do signature
@@ -13292,7 +13247,9 @@ name|wsc
 init|=
 operator|new
 name|WSSecSignatureConfirmation
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|wsc
 operator|.
@@ -13349,12 +13306,7 @@ expr_stmt|;
 name|wsc
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|addSupportingElement
 argument_list|(
@@ -13418,12 +13370,7 @@ comment|//No Sig value
 name|wsc
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|addSupportingElement
 argument_list|(

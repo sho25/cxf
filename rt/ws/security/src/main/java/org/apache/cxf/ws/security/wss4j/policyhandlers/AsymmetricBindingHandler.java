@@ -2555,8 +2555,6 @@ argument_list|(
 literal|null
 argument_list|,
 name|secondEncrParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 if|if
@@ -2576,8 +2574,6 @@ operator|.
 name|addExternalRefElement
 argument_list|(
 name|secondRefList
-argument_list|,
-name|secHeader
 argument_list|)
 expr_stmt|;
 block|}
@@ -2682,8 +2678,6 @@ argument_list|(
 name|secondRefList
 argument_list|,
 name|secondEncrParts
-argument_list|,
-name|secHeader
 argument_list|)
 expr_stmt|;
 block|}
@@ -2818,7 +2812,9 @@ name|encr
 init|=
 operator|new
 name|WSSecEncrypt
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|encr
 operator|.
@@ -2862,16 +2858,6 @@ operator|.
 name|setStoreBytesInAttachment
 argument_list|(
 name|storeBytesInAttachment
-argument_list|)
-expr_stmt|;
-name|encr
-operator|.
-name|setDocument
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
-argument_list|()
 argument_list|)
 expr_stmt|;
 name|Crypto
@@ -3204,11 +3190,6 @@ name|encr
 operator|.
 name|prepare
 argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
-argument_list|()
-argument_list|,
 name|crypto
 argument_list|)
 expr_stmt|;
@@ -3247,8 +3228,6 @@ argument_list|(
 literal|null
 argument_list|,
 name|encrParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 if|if
@@ -3328,8 +3307,6 @@ argument_list|(
 literal|null
 argument_list|,
 name|encrParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 if|if
@@ -3414,9 +3391,7 @@ block|{
 name|encr
 operator|.
 name|prependBSTElementToHeader
-argument_list|(
-name|secHeader
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 return|return
@@ -3486,7 +3461,9 @@ name|dkEncr
 init|=
 operator|new
 name|WSSecDKEncrypt
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|dkEncr
 operator|.
@@ -3645,12 +3622,7 @@ expr_stmt|;
 name|dkEncr
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|addDerivedKeyElement
 argument_list|(
@@ -3670,8 +3642,6 @@ argument_list|(
 literal|null
 argument_list|,
 name|encrParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 if|if
@@ -3973,9 +3943,7 @@ decl_stmt|;
 name|sig
 operator|.
 name|appendBSTElementToHeader
-argument_list|(
-name|secHeader
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 return|return;
@@ -4005,7 +3973,9 @@ name|dkSign
 init|=
 operator|new
 name|WSSecDKSign
-argument_list|()
+argument_list|(
+name|secHeader
+argument_list|)
 decl_stmt|;
 name|dkSign
 operator|.
@@ -4188,14 +4158,7 @@ block|{
 name|dkSign
 operator|.
 name|prepare
-argument_list|(
-name|saaj
-operator|.
-name|getSOAPPart
 argument_list|()
-argument_list|,
-name|secHeader
-argument_list|)
 expr_stmt|;
 if|if
 condition|(
@@ -4318,8 +4281,6 @@ operator|.
 name|addReferencesToSign
 argument_list|(
 name|sigParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 if|if
@@ -4514,9 +4475,7 @@ block|}
 name|sig
 operator|.
 name|prependBSTElementToHeader
-argument_list|(
-name|secHeader
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 name|List
@@ -4530,8 +4489,6 @@ operator|.
 name|addReferencesToSign
 argument_list|(
 name|sigParts
-argument_list|,
-name|secHeader
 argument_list|)
 decl_stmt|;
 if|if
@@ -4610,7 +4567,7 @@ condition|)
 block|{
 name|secHeader
 operator|.
-name|getSecurityHeader
+name|getSecurityHeaderElement
 argument_list|()
 operator|.
 name|insertBefore
@@ -4855,9 +4812,7 @@ comment|// If a BST is available then use it
 name|encrKey
 operator|.
 name|prependBSTElementToHeader
-argument_list|(
-name|secHeader
-argument_list|)
+argument_list|()
 expr_stmt|;
 block|}
 comment|// Add the EncryptedKey

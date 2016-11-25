@@ -55,6 +55,22 @@ name|WSSecBase
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|dom
+operator|.
+name|message
+operator|.
+name|WSSecHeader
+import|;
+end_import
+
 begin_comment
 comment|/**  *   */
 end_comment
@@ -74,10 +90,15 @@ name|WSSecurityTokenHolder
 parameter_list|(
 name|SecurityToken
 name|t
+parameter_list|,
+name|WSSecHeader
+name|securityHeader
 parameter_list|)
 block|{
 name|super
-argument_list|()
+argument_list|(
+name|securityHeader
+argument_list|)
 expr_stmt|;
 name|token
 operator|=
