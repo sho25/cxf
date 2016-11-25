@@ -377,6 +377,10 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
+break|break;
+block|}
 block|}
 name|StringBuilder
 name|sb
