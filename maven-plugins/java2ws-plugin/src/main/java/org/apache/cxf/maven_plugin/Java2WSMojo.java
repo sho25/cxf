@@ -371,6 +371,11 @@ specifier|private
 name|Boolean
 name|genWrapperbean
 decl_stmt|;
+comment|/**      * @parameter      */
+specifier|private
+name|String
+name|portName
+decl_stmt|;
 comment|/**      * Attach the generated wsdl file to the list of files to be deployed      * on install. This means the wsdl file will be copied to the repository      * with groupId, artifactId and version of the project and type "wsdl".      *      * With this option you can use the maven repository as a Service Repository.      *      * @parameter default-value="true"      */
 specifier|private
 name|Boolean
@@ -802,9 +807,13 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|frontend
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|args
@@ -824,9 +833,13 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|databinding
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|args
@@ -920,9 +933,13 @@ block|}
 comment|// target namespace arg
 if|if
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|targetNamespace
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|args
@@ -943,9 +960,13 @@ block|}
 comment|// servicename arg
 if|if
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|serviceName
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|args
@@ -1008,9 +1029,13 @@ block|}
 comment|// address arg
 if|if
 condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
 name|address
-operator|!=
-literal|null
+argument_list|)
 condition|)
 block|{
 name|args
@@ -1025,6 +1050,33 @@ operator|.
 name|add
 argument_list|(
 name|address
+argument_list|)
+expr_stmt|;
+block|}
+comment|// portname arg
+if|if
+condition|(
+operator|!
+name|StringUtils
+operator|.
+name|isEmpty
+argument_list|(
+name|portName
+argument_list|)
+condition|)
+block|{
+name|args
+operator|.
+name|add
+argument_list|(
+literal|"-portname"
+argument_list|)
+expr_stmt|;
+name|args
+operator|.
+name|add
+argument_list|(
+name|portName
 argument_list|)
 expr_stmt|;
 block|}
