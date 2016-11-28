@@ -655,7 +655,7 @@ name|setBound
 argument_list|(
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|boundNode
 operator|.
@@ -725,7 +725,7 @@ name|setBound
 argument_list|(
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|boundNode
 operator|.

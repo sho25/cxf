@@ -370,6 +370,7 @@ name|OutputStream
 name|errOutputStream
 decl_stmt|;
 specifier|public
+specifier|static
 class|class
 name|GenericOutputStream
 extends|extends

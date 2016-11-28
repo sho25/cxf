@@ -89,6 +89,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+specifier|static
 class|class
 name|ErrorInfo
 block|{

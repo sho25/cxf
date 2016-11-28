@@ -195,11 +195,7 @@ name|this
 operator|.
 name|wsdlName
 operator|=
-operator|new
-name|String
-argument_list|(
 name|wsdlFileName
-argument_list|)
 expr_stmt|;
 name|this
 operator|.

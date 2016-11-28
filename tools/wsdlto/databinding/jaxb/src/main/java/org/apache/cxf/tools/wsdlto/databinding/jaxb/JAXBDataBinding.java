@@ -1577,6 +1577,7 @@ block|}
 block|}
 block|}
 specifier|public
+specifier|static
 class|class
 name|LocationFilterReader
 extends|extends

@@ -79,11 +79,7 @@ name|this
 operator|.
 name|kind
 operator|=
-operator|new
-name|String
-argument_list|(
 name|type
-argument_list|)
 expr_stmt|;
 block|}
 name|void

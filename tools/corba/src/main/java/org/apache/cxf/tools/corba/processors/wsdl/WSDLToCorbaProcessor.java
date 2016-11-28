@@ -375,13 +375,9 @@ condition|)
 block|{
 name|wsdlOutput
 operator|=
-operator|new
-name|String
-argument_list|(
 name|filename
 operator|+
 literal|"-corba.wsdl"
-argument_list|)
 expr_stmt|;
 block|}
 if|if
@@ -401,13 +397,9 @@ condition|)
 block|{
 name|idlOutput
 operator|=
-operator|new
-name|String
-argument_list|(
 name|filename
 operator|+
 literal|".idl"
-argument_list|)
 expr_stmt|;
 block|}
 if|if
@@ -1277,9 +1269,6 @@ condition|)
 block|{
 name|fileBase
 operator|=
-operator|new
-name|String
-argument_list|(
 name|fileBase
 operator|.
 name|substring
@@ -1292,7 +1281,6 @@ name|length
 argument_list|()
 operator|-
 literal|5
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}

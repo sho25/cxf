@@ -1500,6 +1500,7 @@ return|return
 name|rnode
 return|;
 block|}
+specifier|static
 class|class
 name|ContextImpl
 implements|implements

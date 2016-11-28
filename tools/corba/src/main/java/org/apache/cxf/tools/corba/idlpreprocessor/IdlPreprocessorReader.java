@@ -1155,7 +1155,7 @@ name|value
 init|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|symbol
 argument_list|)

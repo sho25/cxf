@@ -545,6 +545,13 @@ name|file
 operator|.
 name|isDirectory
 argument_list|()
+operator|&&
+name|file
+operator|.
+name|list
+argument_list|()
+operator|!=
+literal|null
 condition|)
 block|{
 for|for

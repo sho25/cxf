@@ -75,9 +75,6 @@ condition|)
 block|{
 name|fullName
 operator|=
-operator|new
-name|String
-argument_list|(
 name|parent
 operator|.
 name|fullName
@@ -88,7 +85,6 @@ operator|.
 name|MODULE_SEPARATOR
 operator|+
 name|name
-argument_list|)
 expr_stmt|;
 name|parentNames
 operator|=

@@ -145,11 +145,7 @@ name|this
 operator|.
 name|mode
 operator|=
-operator|new
-name|String
-argument_list|(
 name|modeValue
-argument_list|)
 expr_stmt|;
 block|}
 specifier|public

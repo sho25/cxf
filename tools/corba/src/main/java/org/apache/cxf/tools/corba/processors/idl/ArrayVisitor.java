@@ -1362,6 +1362,7 @@ return|return
 name|anonarray
 return|;
 block|}
+specifier|static
 class|class
 name|Types
 block|{
