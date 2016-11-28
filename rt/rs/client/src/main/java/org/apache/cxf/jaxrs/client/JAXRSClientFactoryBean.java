@@ -1407,6 +1407,13 @@ argument_list|,
 name|proxyImpl
 argument_list|)
 decl_stmt|;
+name|proxyImpl
+operator|.
+name|setProxyClient
+argument_list|(
+name|actualClient
+argument_list|)
+expr_stmt|;
 name|notifyLifecycleManager
 argument_list|(
 name|actualClient
