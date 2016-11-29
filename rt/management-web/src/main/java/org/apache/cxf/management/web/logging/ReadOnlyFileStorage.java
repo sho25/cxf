@@ -2741,7 +2741,7 @@ block|{
 return|return
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|name
 operator|.

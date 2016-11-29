@@ -638,6 +638,7 @@ return|return
 name|result
 return|;
 block|}
+specifier|static
 class|class
 name|ManagedAttributeInfo
 block|{

@@ -61,11 +61,6 @@ name|BookServiceWrappedImpl
 implements|implements
 name|BookServiceWrapped
 block|{
-name|long
-name|currentId
-init|=
-literal|1
-decl_stmt|;
 name|Map
 argument_list|<
 name|Long

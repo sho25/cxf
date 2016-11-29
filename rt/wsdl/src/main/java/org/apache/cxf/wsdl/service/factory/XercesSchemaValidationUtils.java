@@ -285,6 +285,7 @@ begin_class
 class|class
 name|XercesSchemaValidationUtils
 block|{
+specifier|static
 class|class
 name|DOMLSInput
 implements|implements
@@ -541,8 +542,18 @@ name|m
 operator|.
 name|getName
 argument_list|()
-operator|==
+operator|!=
+literal|null
+operator|&&
+name|m
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
 name|name
+argument_list|)
 condition|)
 block|{
 name|m
