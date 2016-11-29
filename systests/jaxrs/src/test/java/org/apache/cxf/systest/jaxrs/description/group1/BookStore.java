@@ -143,6 +143,22 @@ name|Response
 import|;
 end_import
 
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|systest
+operator|.
+name|jaxrs
+operator|.
+name|Book
+import|;
+end_import
+
 begin_comment
 comment|//FIXME swagger-jaxrs 1.5.3 can't handle a self-recursive sub resource like Book. so hide Book for now
 end_comment
@@ -161,24 +177,6 @@ specifier|public
 class|class
 name|BookStore
 block|{
-comment|//    @Produces({ MediaType.APPLICATION_JSON })
-comment|//    @GET
-comment|//    public Response getBooks(
-comment|//        @QueryParam("page") @DefaultValue("1") int page) {
-comment|//        return Response.ok(
-comment|//            Arrays.asList(
-comment|//                new Book("Book 1", 1),
-comment|//                new Book("Book 2", 2)
-comment|//            )
-comment|//        ).build();
-comment|//    }
-comment|//
-comment|//    @Produces({ MediaType.APPLICATION_JSON })
-comment|//    @Path("/{id}")
-comment|//    @GET
-comment|//    public Book getBook(@PathParam("id") Long id) {
-comment|//        return new Book("Book", id);
-comment|//    }
 annotation|@
 name|Produces
 argument_list|(
@@ -190,14 +188,9 @@ block|}
 argument_list|)
 annotation|@
 name|GET
-annotation|@
-name|Path
-argument_list|(
-literal|"/names"
-argument_list|)
 specifier|public
 name|Response
-name|getBookNames
+name|getBooks
 parameter_list|(
 annotation|@
 name|QueryParam
@@ -222,9 +215,21 @@ name|Arrays
 operator|.
 name|asList
 argument_list|(
+operator|new
+name|Book
+argument_list|(
 literal|"Book 1"
 argument_list|,
+literal|1
+argument_list|)
+argument_list|,
+operator|new
+name|Book
+argument_list|(
 literal|"Book 2"
+argument_list|,
+literal|2
+argument_list|)
 argument_list|)
 argument_list|)
 operator|.
@@ -233,29 +238,42 @@ argument_list|()
 return|;
 block|}
 annotation|@
+name|Produces
+argument_list|(
+block|{
+name|MediaType
+operator|.
+name|APPLICATION_JSON
+block|}
+argument_list|)
+annotation|@
 name|Path
 argument_list|(
-literal|"/name/{id}"
+literal|"/{id}"
 argument_list|)
 annotation|@
 name|GET
 specifier|public
-name|String
-name|getBookName
+name|Book
+name|getBook
 parameter_list|(
 annotation|@
 name|PathParam
 argument_list|(
 literal|"id"
 argument_list|)
-name|String
+name|Long
 name|id
 parameter_list|)
 block|{
 return|return
-literal|"Book of "
-operator|+
+operator|new
+name|Book
+argument_list|(
+literal|"Book"
+argument_list|,
 name|id
+argument_list|)
 return|;
 block|}
 annotation|@
