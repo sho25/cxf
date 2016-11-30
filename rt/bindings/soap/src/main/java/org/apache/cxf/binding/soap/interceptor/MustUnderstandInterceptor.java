@@ -1399,6 +1399,7 @@ block|}
 block|}
 comment|/**      *       */
 specifier|private
+specifier|static
 class|class
 name|UltimateReceiverMustUnderstandInterceptor
 extends|extends
@@ -1609,6 +1610,7 @@ block|}
 block|}
 block|}
 specifier|public
+specifier|static
 class|class
 name|MustUnderstandEndingInterceptor
 extends|extends

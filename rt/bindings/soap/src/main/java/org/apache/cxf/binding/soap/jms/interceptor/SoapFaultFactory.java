@@ -417,16 +417,8 @@ name|Fault
 name|f
 parameter_list|)
 block|{
-name|SoapFault
-name|sf
-init|=
-operator|(
-name|SoapFault
-operator|)
-name|f
-decl_stmt|;
 return|return
-name|sf
+name|f
 operator|.
 name|toString
 argument_list|()

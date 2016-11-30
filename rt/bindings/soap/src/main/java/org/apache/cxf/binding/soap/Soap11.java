@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Singleton object that represents the SOAP 1.1 version.  *   */
+comment|/**  * Singleton object that represents the SOAP 1.1 VERSION.  *   */
 end_comment
 
 begin_class
@@ -237,48 +237,46 @@ name|Soap11
 argument_list|()
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|double
-name|version
+name|VERSION
 init|=
 literal|1.1
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|namespace
+name|NONE_ROLE
 init|=
 name|SOAP_NAMESPACE
-decl_stmt|;
-specifier|private
-specifier|final
-name|String
-name|noneRole
-init|=
-name|namespace
 operator|+
 literal|"/role/none"
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|ultimateReceiverRole
+name|ULTIMATE_RECEIVER_ROLE
 init|=
-name|namespace
+name|SOAP_NAMESPACE
 operator|+
 literal|"/role/ultimateReceiver"
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|nextRole
+name|NEXT_ROLE
 init|=
 literal|"http://schemas.xmlsoap.org/soap/actor/next"
 decl_stmt|;
 specifier|private
+specifier|static
 specifier|final
 name|String
-name|soapEncodingStyle
+name|SOAP_ENCODING_STYLE
 init|=
 name|SOAP_ENCODING_URI
 decl_stmt|;
@@ -290,7 +288,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|namespace
+name|SOAP_NAMESPACE
 argument_list|,
 literal|"Envelope"
 argument_list|)
@@ -303,7 +301,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|namespace
+name|SOAP_NAMESPACE
 argument_list|,
 literal|"Header"
 argument_list|)
@@ -316,7 +314,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|namespace
+name|SOAP_NAMESPACE
 argument_list|,
 literal|"Body"
 argument_list|)
@@ -329,7 +327,7 @@ init|=
 operator|new
 name|QName
 argument_list|(
-name|namespace
+name|SOAP_NAMESPACE
 argument_list|,
 literal|"Fault"
 argument_list|)
@@ -367,7 +365,7 @@ name|getVersion
 parameter_list|()
 block|{
 return|return
-name|version
+name|VERSION
 return|;
 block|}
 specifier|public
@@ -376,7 +374,7 @@ name|getNamespace
 parameter_list|()
 block|{
 return|return
-name|namespace
+name|SOAP_NAMESPACE
 return|;
 block|}
 specifier|public
@@ -421,7 +419,7 @@ name|getSoapEncodingStyle
 parameter_list|()
 block|{
 return|return
-name|soapEncodingStyle
+name|SOAP_ENCODING_STYLE
 return|;
 block|}
 comment|// Role URIs
@@ -432,7 +430,7 @@ name|getNoneRole
 parameter_list|()
 block|{
 return|return
-name|noneRole
+name|NONE_ROLE
 return|;
 block|}
 specifier|public
@@ -441,7 +439,7 @@ name|getUltimateReceiverRole
 parameter_list|()
 block|{
 return|return
-name|ultimateReceiverRole
+name|ULTIMATE_RECEIVER_ROLE
 return|;
 block|}
 specifier|public
@@ -450,7 +448,7 @@ name|getNextRole
 parameter_list|()
 block|{
 return|return
-name|nextRole
+name|NEXT_ROLE
 return|;
 block|}
 specifier|public
