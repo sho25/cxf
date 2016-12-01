@@ -159,6 +159,18 @@ name|Book
 import|;
 end_import
 
+begin_import
+import|import
+name|io
+operator|.
+name|swagger
+operator|.
+name|annotations
+operator|.
+name|Api
+import|;
+end_import
+
 begin_comment
 comment|//FIXME swagger-jaxrs 1.5.3 can't handle a self-recursive sub resource like Book. so hide Book for now
 end_comment
@@ -170,6 +182,11 @@ end_comment
 begin_class
 annotation|@
 name|Path
+argument_list|(
+literal|"/bookstore"
+argument_list|)
+annotation|@
+name|Api
 argument_list|(
 literal|"/bookstore"
 argument_list|)
