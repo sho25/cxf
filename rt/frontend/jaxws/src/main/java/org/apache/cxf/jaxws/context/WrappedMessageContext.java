@@ -2689,15 +2689,6 @@ name|equals
 argument_list|(
 name|key
 argument_list|)
-operator|||
-name|MessageContext
-operator|.
-name|HTTP_RESPONSE_CODE
-operator|.
-name|equals
-argument_list|(
-name|key
-argument_list|)
 operator|)
 operator|&&
 operator|!

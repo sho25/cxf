@@ -4423,6 +4423,7 @@ argument_list|)
 throw|;
 block|}
 block|}
+specifier|static
 class|class
 name|InnerErrorListener
 block|{
@@ -5952,6 +5953,7 @@ name|clone
 return|;
 block|}
 specifier|public
+specifier|static
 class|class
 name|LocationFilterReader
 extends|extends

@@ -1928,7 +1928,7 @@ name|len
 init|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|value
 argument_list|)

@@ -278,6 +278,7 @@ throws|throws
 name|Exception
 block|{      }
 specifier|private
+specifier|static
 specifier|final
 class|class
 name|ConfigUpdater

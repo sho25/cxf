@@ -1175,7 +1175,7 @@ literal|null
 condition|?
 name|Long
 operator|.
-name|valueOf
+name|parseLong
 argument_list|(
 name|s
 argument_list|)
@@ -1290,7 +1290,7 @@ literal|null
 condition|?
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|s
 argument_list|)
@@ -1690,6 +1690,7 @@ argument_list|()
 throw|;
 block|}
 specifier|private
+specifier|static
 class|class
 name|ServletInputStreamAdapter
 extends|extends

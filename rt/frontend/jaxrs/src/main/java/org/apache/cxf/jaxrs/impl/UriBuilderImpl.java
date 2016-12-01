@@ -5471,7 +5471,7 @@ literal|2
 condition|?
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|schemePair
 index|[
@@ -5994,6 +5994,7 @@ name|map
 return|;
 block|}
 specifier|private
+specifier|static
 class|class
 name|UriParts
 block|{

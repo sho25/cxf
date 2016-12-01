@@ -1076,6 +1076,7 @@ literal|false
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 class|class
 name|ExceptionCreator
 extends|extends

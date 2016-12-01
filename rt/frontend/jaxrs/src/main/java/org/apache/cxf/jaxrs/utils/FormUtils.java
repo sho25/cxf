@@ -1914,7 +1914,7 @@ name|maxPartsCount
 init|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|maxPartsCountProp
 argument_list|)

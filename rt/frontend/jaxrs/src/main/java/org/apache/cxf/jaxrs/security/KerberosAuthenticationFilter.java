@@ -1253,6 +1253,7 @@ name|callbackHandler
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 specifier|final
 class|class
 name|ValidateServiceTicketAction

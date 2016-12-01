@@ -1066,7 +1066,7 @@ name|charAt
 argument_list|(
 literal|0
 argument_list|)
-operator|&
+operator|&&
 literal|'"'
 operator|==
 name|value
