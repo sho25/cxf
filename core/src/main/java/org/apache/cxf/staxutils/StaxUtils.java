@@ -883,7 +883,7 @@ specifier|final
 class|class
 name|StaxUtils
 block|{
-comment|// System properies for defaults, but also contextual properties usable
+comment|// System properties for defaults, but also contextual properties usable
 comment|// for StaxInInterceptor
 specifier|public
 specifier|static
