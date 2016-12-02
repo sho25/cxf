@@ -492,7 +492,7 @@ name|order
 operator|=
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|p
 argument_list|)

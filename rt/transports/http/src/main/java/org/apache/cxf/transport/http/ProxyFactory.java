@@ -277,7 +277,7 @@ name|setProxyServerPort
 argument_list|(
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|proxyPort
 argument_list|)

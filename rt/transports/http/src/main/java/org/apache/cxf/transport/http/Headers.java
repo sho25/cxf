@@ -2710,7 +2710,7 @@ if|if
 condition|(
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|ctLen
 operator|.

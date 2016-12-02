@@ -1082,6 +1082,7 @@ name|realm
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 specifier|final
 class|class
 name|CreateServiceTicketAction

@@ -2303,8 +2303,8 @@ argument_list|()
 argument_list|)
 decl_stmt|;
 name|KeyManager
-name|keyManagers
 index|[]
+name|keyManagers
 init|=
 name|tlsServerParameters
 operator|.
@@ -2333,10 +2333,7 @@ name|context
 operator|.
 name|init
 argument_list|(
-name|tlsServerParameters
-operator|.
-name|getKeyManagers
-argument_list|()
+name|keyManagers
 argument_list|,
 name|tlsServerParameters
 operator|.

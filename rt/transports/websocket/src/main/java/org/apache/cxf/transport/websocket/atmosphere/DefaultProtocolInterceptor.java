@@ -2287,6 +2287,7 @@ block|}
 block|}
 comment|// a workaround to flush the header data upon close when no write operation occurs
 specifier|private
+specifier|static
 class|class
 name|WrappedAtmosphereResponse
 extends|extends
