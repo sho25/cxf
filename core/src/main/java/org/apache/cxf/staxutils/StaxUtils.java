@@ -4326,6 +4326,11 @@ name|XMLStreamConstants
 operator|.
 name|CHARACTERS
 case|:
+case|case
+name|XMLStreamConstants
+operator|.
+name|SPACE
+case|:
 name|String
 name|s
 init|=
