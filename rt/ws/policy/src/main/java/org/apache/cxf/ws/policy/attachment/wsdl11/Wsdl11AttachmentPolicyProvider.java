@@ -1859,6 +1859,7 @@ literal|null
 return|;
 block|}
 specifier|private
+specifier|static
 class|class
 name|ExtensibleInfo
 implements|implements

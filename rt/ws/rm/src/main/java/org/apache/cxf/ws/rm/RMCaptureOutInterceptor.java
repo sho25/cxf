@@ -1666,6 +1666,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|private
+specifier|static
 class|class
 name|CaptureStart
 extends|extends
@@ -2248,6 +2249,7 @@ operator|==
 literal|null
 condition|)
 block|{
+return|return
 name|getManager
 argument_list|()
 operator|.
@@ -2256,7 +2258,7 @@ argument_list|()
 operator|.
 name|getAddressingNamespace
 argument_list|()
-expr_stmt|;
+return|;
 block|}
 return|return
 name|wsaNamespace

@@ -742,11 +742,12 @@ operator|==
 name|headers
 condition|)
 block|{
+return|return
 name|Collections
 operator|.
 name|emptyMap
 argument_list|()
-expr_stmt|;
+return|;
 block|}
 return|return
 name|headers
