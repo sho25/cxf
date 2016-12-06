@@ -824,7 +824,7 @@ block|{
 return|return
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|address
 operator|.
@@ -835,15 +835,12 @@ operator|+
 literal|1
 argument_list|)
 argument_list|)
-operator|.
-name|intValue
-argument_list|()
 return|;
 block|}
 return|return
 name|Integer
 operator|.
-name|valueOf
+name|parseInt
 argument_list|(
 name|address
 operator|.
@@ -856,9 +853,6 @@ argument_list|,
 name|end
 argument_list|)
 argument_list|)
-operator|.
-name|intValue
-argument_list|()
 return|;
 block|}
 specifier|private
