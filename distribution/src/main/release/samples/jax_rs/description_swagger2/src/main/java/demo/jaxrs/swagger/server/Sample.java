@@ -406,11 +406,11 @@ name|ApiOperation
 argument_list|(
 name|value
 operator|=
-literal|"Get operation with Response and @Default value<script>alert(\"TEST\");</script>"
+literal|"Get operation with Response and @Default value"
 argument_list|,
 name|notes
 operator|=
-literal|"Get operation with Response and @Default value<script>alert(\"TEST\");</script>"
+literal|"Get operation with Response and @Default value"
 argument_list|,
 name|response
 operator|=
