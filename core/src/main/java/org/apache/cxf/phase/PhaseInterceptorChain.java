@@ -159,6 +159,22 @@ name|common
 operator|.
 name|util
 operator|.
+name|PropertyUtils
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
 name|StringUtils
 import|;
 end_import
@@ -1548,9 +1564,37 @@ name|SuspendedInvocationException
 name|ex
 parameter_list|)
 block|{
-comment|// we need to resume from the same interceptor the exception got originated from
+comment|// Moving the chain iterator to the previous interceptor is needed
+comment|// for the invocation to be resumed from the same interceptor which
+comment|// suspended the invocation.
+comment|// If "suspend.chain.on.current.interceptor" is set to true then
+comment|// the chain will be resumed from the interceptor which follows
+comment|// the interceptor which suspended the invocation.
+name|Object
+name|suspendProp
+init|=
+name|message
+operator|.
+name|remove
+argument_list|(
+literal|"suspend.chain.on.current.interceptor"
+argument_list|)
+decl_stmt|;
 if|if
 condition|(
+operator|(
+name|suspendProp
+operator|==
+literal|null
+operator|||
+name|PropertyUtils
+operator|.
+name|isFalse
+argument_list|(
+name|suspendProp
+argument_list|)
+operator|)
+operator|&&
 name|iterator
 operator|.
 name|hasPrevious

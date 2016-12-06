@@ -943,7 +943,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|9
+literal|10
 argument_list|,
 name|writers
 operator|.
@@ -958,7 +958,7 @@ name|writers
 operator|.
 name|get
 argument_list|(
-literal|8
+literal|9
 argument_list|)
 operator|.
 name|getProvider
@@ -1121,7 +1121,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|9
+literal|10
 argument_list|,
 name|writers
 operator|.
@@ -1136,7 +1136,7 @@ name|writers
 operator|.
 name|get
 argument_list|(
-literal|8
+literal|9
 argument_list|)
 operator|.
 name|getProvider
@@ -1338,7 +1338,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|9
+literal|10
 argument_list|,
 name|writers
 operator|.
@@ -1562,7 +1562,7 @@ argument_list|()
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|9
+literal|10
 argument_list|,
 name|writers
 operator|.
@@ -1577,7 +1577,7 @@ name|writers
 operator|.
 name|get
 argument_list|(
-literal|8
+literal|9
 argument_list|)
 operator|.
 name|getProvider

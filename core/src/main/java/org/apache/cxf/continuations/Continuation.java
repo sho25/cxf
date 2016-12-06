@@ -70,6 +70,10 @@ name|Object
 name|o
 parameter_list|)
 function_decl|;
+name|boolean
+name|isReadyForWrite
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
