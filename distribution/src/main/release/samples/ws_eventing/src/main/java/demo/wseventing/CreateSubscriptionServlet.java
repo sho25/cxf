@@ -145,7 +145,7 @@ name|apache
 operator|.
 name|commons
 operator|.
-name|lang
+name|lang3
 operator|.
 name|StringEscapeUtils
 import|;
@@ -783,7 +783,7 @@ decl_stmt|;
 return|return
 name|StringEscapeUtils
 operator|.
-name|escapeHtml
+name|escapeHtml4
 argument_list|(
 name|unescaped
 argument_list|)
