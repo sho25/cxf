@@ -14,8 +14,6 @@ operator|.
 name|tracing
 operator|.
 name|brave
-operator|.
-name|soap
 package|;
 end_package
 

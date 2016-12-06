@@ -14,8 +14,6 @@ operator|.
 name|tracing
 operator|.
 name|brave
-operator|.
-name|soap
 package|;
 end_package
 
@@ -62,7 +60,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|CxfHttpClientRequest
+name|CxfClientRequest
 implements|implements
 name|HttpClientRequest
 block|{
@@ -71,7 +69,7 @@ name|ParsedMessage
 name|message
 decl_stmt|;
 specifier|public
-name|CxfHttpClientRequest
+name|CxfClientRequest
 parameter_list|(
 name|Message
 name|message
