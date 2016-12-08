@@ -2649,11 +2649,13 @@ condition|(
 operator|!
 name|entityBufferred
 operator|&&
-name|cls
-operator|!=
-name|InputStream
+operator|!
+name|JAXRSUtils
 operator|.
-name|class
+name|isStreamingOutType
+argument_list|(
+name|cls
+argument_list|)
 operator|&&
 operator|(
 name|exception

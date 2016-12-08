@@ -3240,11 +3240,13 @@ name|cls
 parameter_list|)
 block|{
 return|return
-name|cls
-operator|!=
-name|InputStream
+operator|!
+name|JAXRSUtils
 operator|.
-name|class
+name|isStreamingOutType
+argument_list|(
+name|cls
+argument_list|)
 operator|&&
 name|MessageUtils
 operator|.
