@@ -135,7 +135,7 @@ name|cxf
 operator|.
 name|annotations
 operator|.
-name|UseNioWrite
+name|UseNio
 import|;
 end_import
 
@@ -321,7 +321,7 @@ argument_list|(
 literal|"/is"
 argument_list|)
 annotation|@
-name|UseNioWrite
+name|UseNio
 specifier|public
 name|InputStream
 name|readBooksFromInputStream

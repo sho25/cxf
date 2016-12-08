@@ -349,7 +349,7 @@ name|cxf
 operator|.
 name|annotations
 operator|.
-name|UseNioWrite
+name|UseNio
 import|;
 end_import
 
@@ -1604,7 +1604,7 @@ name|getAnnotation
 argument_list|(
 name|anns
 argument_list|,
-name|UseNioWrite
+name|UseNio
 operator|.
 name|class
 argument_list|)
@@ -1734,19 +1734,6 @@ operator|.
 name|class
 argument_list|,
 name|listener
-argument_list|)
-expr_stmt|;
-comment|// After this MBW registers the listener, JAXRSOutInterceptor is done, and the
-comment|// out chain will need to be resumed from the interceptor which follows it
-name|m
-operator|.
-name|put
-argument_list|(
-literal|"suspend.chain.on.current.interceptor"
-argument_list|,
-name|Boolean
-operator|.
-name|TRUE
 argument_list|)
 expr_stmt|;
 name|cont

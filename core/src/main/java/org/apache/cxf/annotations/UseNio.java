@@ -114,7 +114,7 @@ annotation|@
 name|Inherited
 specifier|public
 annotation_defn|@interface
-name|UseNioWrite
+name|UseNio
 block|{ }
 end_annotation_defn
 

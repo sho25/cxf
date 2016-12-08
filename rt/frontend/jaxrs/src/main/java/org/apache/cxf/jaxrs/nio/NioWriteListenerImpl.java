@@ -209,14 +209,9 @@ name|out
 argument_list|)
 condition|)
 block|{
-comment|// REVISIT:
-comment|// Immediately closing the async context with cont.resume() works better
-comment|// at the moment - with cont.resume() Jetty throws NPE in its internal code
-comment|// which is quite possibly a Jetty bug.
-comment|// Do we really need to complete the out chain after the response has been written out ?
 name|cont
 operator|.
-name|resume
+name|reset
 argument_list|()
 expr_stmt|;
 return|return;
