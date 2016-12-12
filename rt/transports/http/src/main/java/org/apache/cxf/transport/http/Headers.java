@@ -2043,6 +2043,15 @@ name|size
 argument_list|()
 operator|==
 literal|1
+operator|&&
+name|ctList
+operator|.
+name|get
+argument_list|(
+literal|0
+argument_list|)
+operator|!=
+literal|null
 condition|)
 block|{
 name|ct
