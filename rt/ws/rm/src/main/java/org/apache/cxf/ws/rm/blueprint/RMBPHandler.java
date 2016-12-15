@@ -73,7 +73,7 @@ name|aries
 operator|.
 name|blueprint
 operator|.
-name|NamespaceHandler
+name|ParserContext
 import|;
 end_import
 
@@ -83,11 +83,11 @@ name|org
 operator|.
 name|apache
 operator|.
-name|aries
+name|cxf
 operator|.
-name|blueprint
+name|helpers
 operator|.
-name|ParserContext
+name|BaseNamespaceHandler
 import|;
 end_import
 
@@ -161,8 +161,8 @@ begin_class
 specifier|public
 class|class
 name|RMBPHandler
-implements|implements
-name|NamespaceHandler
+extends|extends
+name|BaseNamespaceHandler
 block|{
 specifier|public
 name|URL
@@ -244,7 +244,12 @@ argument_list|)
 return|;
 block|}
 return|return
-literal|null
+name|super
+operator|.
+name|findCoreSchemaLocation
+argument_list|(
+name|s
+argument_list|)
 return|;
 block|}
 annotation|@

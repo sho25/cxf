@@ -170,6 +170,16 @@ name|String
 name|s
 parameter_list|)
 block|{
+if|if
+condition|(
+literal|"http://cxf.apache.org/blueprint/binding/object"
+operator|.
+name|equals
+argument_list|(
+name|s
+argument_list|)
+condition|)
+block|{
 return|return
 name|getClass
 argument_list|()
@@ -181,6 +191,11 @@ name|getResource
 argument_list|(
 literal|"schemas/bindings/blueprint/object.xsd"
 argument_list|)
+return|;
+block|}
+comment|// no imported XSDs, so we don't have to delegate to cxf-core namespace handler
+return|return
+literal|null
 return|;
 block|}
 annotation|@
