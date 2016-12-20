@@ -301,9 +301,9 @@ argument_list|(
 name|hybridOnly
 argument_list|)
 argument_list|,
-name|OidcUtils
+name|OAuthConstants
 operator|.
-name|HYBRID_FLOW
+name|IMPLICIT_GRANT
 argument_list|)
 expr_stmt|;
 block|}

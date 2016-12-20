@@ -766,6 +766,41 @@ argument_list|)
 throw|;
 block|}
 block|}
+comment|// Make sure the client supports the authorization code in cases where
+comment|// the implicit/hybrid service was initiating the code grant processing flow
+if|if
+condition|(
+operator|!
+name|client
+operator|.
+name|getAllowedGrantTypes
+argument_list|()
+operator|.
+name|isEmpty
+argument_list|()
+operator|&&
+operator|!
+name|client
+operator|.
+name|getAllowedGrantTypes
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|requestedGrant
+argument_list|)
+condition|)
+block|{
+throw|throw
+operator|new
+name|OAuthServiceException
+argument_list|(
+name|OAuthConstants
+operator|.
+name|INVALID_GRANT
+argument_list|)
+throw|;
+block|}
 comment|// Delegate to the data provider to create the one
 name|AccessTokenRegistration
 name|reg
