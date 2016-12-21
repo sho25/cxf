@@ -309,7 +309,7 @@ name|oauth2
 operator|.
 name|provider
 operator|.
-name|OAuthJoseJwtConsumer
+name|OAuthServerJoseJwtConsumer
 import|;
 end_import
 
@@ -372,7 +372,7 @@ specifier|public
 class|class
 name|JwtBearerAuthHandler
 extends|extends
-name|OAuthJoseJwtConsumer
+name|OAuthServerJoseJwtConsumer
 implements|implements
 name|ContainerRequestFilter
 block|{
@@ -611,15 +611,6 @@ argument_list|(
 name|assertion
 argument_list|,
 name|client
-operator|==
-literal|null
-condition|?
-literal|null
-else|:
-name|client
-operator|.
-name|getClientSecret
-argument_list|()
 argument_list|)
 decl_stmt|;
 name|String
