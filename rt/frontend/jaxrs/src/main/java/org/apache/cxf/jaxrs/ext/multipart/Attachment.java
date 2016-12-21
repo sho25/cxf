@@ -861,6 +861,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+throw|throw
 name|ExceptionUtils
 operator|.
 name|toInternalServerErrorException
@@ -869,7 +870,7 @@ name|ex
 argument_list|,
 literal|null
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 block|}
