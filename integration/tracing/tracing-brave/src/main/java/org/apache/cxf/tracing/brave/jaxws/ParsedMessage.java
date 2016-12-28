@@ -14,6 +14,8 @@ operator|.
 name|tracing
 operator|.
 name|brave
+operator|.
+name|jaxws
 package|;
 end_package
 

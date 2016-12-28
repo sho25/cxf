@@ -14,6 +14,8 @@ operator|.
 name|tracing
 operator|.
 name|brave
+operator|.
+name|jaxws
 package|;
 end_package
 
@@ -72,22 +74,6 @@ operator|.
 name|endpoint
 operator|.
 name|Server
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|ext
-operator|.
-name|logging
-operator|.
-name|LoggingFeature
 import|;
 end_import
 
@@ -209,7 +195,7 @@ name|Server
 name|server
 decl_stmt|;
 specifier|private
-name|TraceFeature
+name|BraveFeature
 name|logging
 decl_stmt|;
 specifier|private
@@ -406,10 +392,6 @@ operator|.
 name|asList
 argument_list|(
 name|trace
-argument_list|,
-operator|new
-name|LoggingFeature
-argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -425,7 +407,7 @@ return|;
 block|}
 specifier|private
 specifier|static
-name|TraceFeature
+name|BraveFeature
 name|createLoggingFeature
 parameter_list|(
 name|Reporter
@@ -456,7 +438,7 @@ argument_list|()
 decl_stmt|;
 return|return
 operator|new
-name|TraceFeature
+name|BraveFeature
 argument_list|(
 name|brave
 argument_list|)

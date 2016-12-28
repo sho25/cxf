@@ -14,6 +14,8 @@ operator|.
 name|tracing
 operator|.
 name|brave
+operator|.
+name|jaxws
 package|;
 end_package
 
@@ -190,7 +192,7 @@ annotation|@
 name|NoJSR250Annotations
 specifier|public
 class|class
-name|TraceOutInterceptor
+name|BraveOutInterceptor
 extends|extends
 name|AbstractPhaseInterceptor
 argument_list|<
@@ -206,7 +208,7 @@ name|SpanNameProvider
 name|spanNameProvider
 decl_stmt|;
 specifier|public
-name|TraceOutInterceptor
+name|BraveOutInterceptor
 parameter_list|(
 name|Brave
 name|brave
