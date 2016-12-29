@@ -14,8 +14,6 @@ operator|.
 name|tracing
 operator|.
 name|brave
-operator|.
-name|jaxws
 package|;
 end_package
 
@@ -116,6 +114,24 @@ operator|.
 name|jaxws
 operator|.
 name|JaxWsServerFactoryBean
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|tracing
+operator|.
+name|brave
+operator|.
+name|jaxws
+operator|.
+name|BraveFeature
 import|;
 end_import
 
