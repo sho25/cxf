@@ -227,9 +227,9 @@ name|boot
 operator|.
 name|context
 operator|.
-name|embedded
+name|properties
 operator|.
-name|ServletRegistrationBean
+name|EnableConfigurationProperties
 import|;
 end_import
 
@@ -241,11 +241,11 @@ name|springframework
 operator|.
 name|boot
 operator|.
-name|context
+name|web
 operator|.
-name|properties
+name|servlet
 operator|.
-name|EnableConfigurationProperties
+name|ServletRegistrationBean
 import|;
 end_import
 
