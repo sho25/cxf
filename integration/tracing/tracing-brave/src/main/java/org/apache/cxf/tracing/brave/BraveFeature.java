@@ -14,8 +14,6 @@ operator|.
 name|tracing
 operator|.
 name|brave
-operator|.
-name|jaxws
 package|;
 end_package
 
@@ -132,38 +130,6 @@ operator|.
 name|interceptor
 operator|.
 name|InterceptorProvider
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|tracing
-operator|.
-name|brave
-operator|.
-name|BraveStartInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|tracing
-operator|.
-name|brave
-operator|.
-name|BraveStopInterceptor
 import|;
 end_import
 
