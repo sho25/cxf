@@ -27,9 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|spec
-operator|.
-name|AlgorithmParameterSpec
+name|MessageDigest
 import|;
 end_import
 
@@ -37,9 +35,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|security
 operator|.
-name|Arrays
+name|spec
+operator|.
+name|AlgorithmParameterSpec
 import|;
 end_import
 
@@ -312,9 +312,9 @@ name|unsignedText
 argument_list|)
 decl_stmt|;
 return|return
-name|Arrays
+name|MessageDigest
 operator|.
-name|equals
+name|isEqual
 argument_list|(
 name|expected
 argument_list|,
