@@ -474,7 +474,7 @@ block|}
 name|Object
 name|responseEntity
 init|=
-name|userInfo
+literal|null
 decl_stmt|;
 comment|// UserInfo may be returned in a clear form as JSON
 if|if
@@ -531,6 +531,16 @@ name|client
 argument_list|)
 expr_stmt|;
 block|}
+else|else
+block|{
+name|responseEntity
+operator|=
+name|convertUserInfoToResponseEntity
+argument_list|(
+name|userInfo
+argument_list|)
+expr_stmt|;
+block|}
 return|return
 name|Response
 operator|.
@@ -541,6 +551,21 @@ argument_list|)
 operator|.
 name|build
 argument_list|()
+return|;
+block|}
+specifier|protected
+name|Object
+name|convertUserInfoToResponseEntity
+parameter_list|(
+name|UserInfo
+name|userInfo
+parameter_list|)
+block|{
+comment|// By default a JAX-RS MessageBodyWriter is expected to serialize UserInfo.
+comment|// Custom implementations of this method may further augment UserInfo or
+comment|// convert it to String: JwtUtils.claimsToJson(userInfo);
+return|return
+name|userInfo
 return|;
 block|}
 specifier|protected
