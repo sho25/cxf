@@ -67,6 +67,10 @@ argument_list|>
 name|getBooks
 parameter_list|()
 function_decl|;
+name|int
+name|removeBooks
+parameter_list|()
+function_decl|;
 block|}
 end_interface
 
