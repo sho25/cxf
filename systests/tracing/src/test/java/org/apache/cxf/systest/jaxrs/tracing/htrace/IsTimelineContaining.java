@@ -17,9 +17,23 @@ name|jaxrs
 operator|.
 name|tracing
 operator|.
-name|brave
+name|htrace
 package|;
 end_package
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|htrace
+operator|.
+name|core
+operator|.
+name|TimelineAnnotation
+import|;
+end_import
 
 begin_import
 import|import
@@ -53,26 +67,18 @@ name|IsCollectionContaining
 import|;
 end_import
 
-begin_import
-import|import
-name|zipkin
-operator|.
-name|Annotation
-import|;
-end_import
-
 begin_class
 specifier|public
 class|class
-name|IsAnnotationContaining
+name|IsTimelineContaining
 extends|extends
 name|IsCollectionContaining
 argument_list|<
-name|Annotation
+name|TimelineAnnotation
 argument_list|>
 block|{
 specifier|public
-name|IsAnnotationContaining
+name|IsTimelineContaining
 parameter_list|(
 specifier|final
 name|String
@@ -84,7 +90,7 @@ argument_list|(
 operator|new
 name|TypeSafeMatcher
 argument_list|<
-name|Annotation
+name|TimelineAnnotation
 argument_list|>
 argument_list|()
 block|{
@@ -102,7 +108,7 @@ name|description
 operator|.
 name|appendText
 argument_list|(
-literal|"annotation with name "
+literal|"timeline with name "
 argument_list|)
 operator|.
 name|appendValue
@@ -117,7 +123,7 @@ specifier|protected
 name|boolean
 name|matchesSafely
 parameter_list|(
-name|Annotation
+name|TimelineAnnotation
 name|item
 parameter_list|)
 block|{
@@ -128,7 +134,8 @@ name|equals
 argument_list|(
 name|item
 operator|.
-name|value
+name|getMessage
+argument_list|()
 argument_list|)
 return|;
 block|}
@@ -138,7 +145,7 @@ expr_stmt|;
 block|}
 specifier|public
 specifier|static
-name|IsAnnotationContaining
+name|IsTimelineContaining
 name|hasItem
 parameter_list|(
 specifier|final
@@ -148,7 +155,7 @@ parameter_list|)
 block|{
 return|return
 operator|new
-name|IsAnnotationContaining
+name|IsTimelineContaining
 argument_list|(
 name|value
 argument_list|)
