@@ -74,9 +74,14 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|LOCATION
+name|LOCATIONS
+index|[]
 init|=
+block|{
 literal|"mvn:org.webjars/swagger-ui/"
+block|,
+literal|"wrap:mvn:org.webjars/swagger-ui/"
+block|}
 decl_stmt|;
 name|OsgiSwaggerUiResolver
 parameter_list|()
@@ -146,6 +151,14 @@ operator|.
 name|getLocation
 argument_list|()
 decl_stmt|;
+for|for
+control|(
+name|String
+name|pattern
+range|:
+name|LOCATIONS
+control|)
+block|{
 if|if
 condition|(
 name|swaggerUiVersion
@@ -159,7 +172,7 @@ name|location
 operator|.
 name|equals
 argument_list|(
-name|LOCATION
+name|pattern
 operator|+
 name|swaggerUiVersion
 argument_list|)
@@ -182,7 +195,7 @@ name|location
 operator|.
 name|startsWith
 argument_list|(
-name|LOCATION
+name|pattern
 argument_list|)
 condition|)
 block|{
@@ -192,7 +205,7 @@ name|location
 operator|.
 name|substring
 argument_list|(
-name|LOCATION
+name|pattern
 operator|.
 name|length
 argument_list|()
@@ -206,6 +219,7 @@ argument_list|,
 name|swaggerUiVersion
 argument_list|)
 return|;
+block|}
 block|}
 block|}
 block|}
