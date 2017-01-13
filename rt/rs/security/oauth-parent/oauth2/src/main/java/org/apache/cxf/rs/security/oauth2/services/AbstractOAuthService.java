@@ -582,7 +582,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Unsecure HTTP, Transport Layer Security is recommended"
+literal|"Unsecure HTTP, HTTPS is recommended"
 argument_list|)
 expr_stmt|;
 if|if
