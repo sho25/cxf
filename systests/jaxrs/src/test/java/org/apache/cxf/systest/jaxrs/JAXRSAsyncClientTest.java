@@ -882,14 +882,14 @@ name|clientPolicy
 operator|.
 name|setReceiveTimeout
 argument_list|(
-literal|2000
+literal|500
 argument_list|)
 expr_stmt|;
 name|clientPolicy
 operator|.
 name|setConnectionTimeout
 argument_list|(
-literal|2000
+literal|500
 argument_list|)
 expr_stmt|;
 try|try
