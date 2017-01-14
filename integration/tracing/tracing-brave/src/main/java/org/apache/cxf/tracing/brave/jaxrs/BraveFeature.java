@@ -21,6 +21,16 @@ end_package
 
 begin_import
 import|import
+name|java
+operator|.
+name|util
+operator|.
+name|UUID
+import|;
+end_import
+
+begin_import
+import|import
 name|javax
 operator|.
 name|ws
@@ -79,7 +89,15 @@ parameter_list|()
 block|{
 name|this
 argument_list|(
-literal|""
+literal|"cxf-svc-"
+operator|+
+name|UUID
+operator|.
+name|randomUUID
+argument_list|()
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
