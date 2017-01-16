@@ -561,6 +561,8 @@ operator|new
 name|WadlGenerator
 argument_list|()
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|filter
