@@ -729,6 +729,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Ignore
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Test
 import|;
 end_import
@@ -3113,7 +3123,7 @@ return|;
 block|}
 block|}
 annotation|@
-name|Test
+name|Ignore
 specifier|public
 name|void
 name|testCXF1510
