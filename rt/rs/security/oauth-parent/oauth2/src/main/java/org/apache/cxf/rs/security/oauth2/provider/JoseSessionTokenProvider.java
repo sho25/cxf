@@ -691,7 +691,7 @@ argument_list|,
 name|stateString
 argument_list|)
 operator|.
-name|getUnsignedEncodedSequence
+name|getDecodedJwsPayload
 argument_list|()
 expr_stmt|;
 block|}

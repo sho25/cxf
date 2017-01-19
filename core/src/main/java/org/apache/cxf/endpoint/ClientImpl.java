@@ -4567,7 +4567,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Interceptors contributed by databinging: "
+literal|"Interceptors contributed by databinding: "
 operator|+
 name|p
 operator|.
