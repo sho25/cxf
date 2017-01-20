@@ -55,6 +55,20 @@ end_import
 
 begin_import
 import|import
+name|com
+operator|.
+name|github
+operator|.
+name|kristofa
+operator|.
+name|brave
+operator|.
+name|Brave
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -84,20 +98,6 @@ operator|.
 name|jaxrs
 operator|.
 name|BraveClientProvider
-import|;
-end_import
-
-begin_import
-import|import
-name|com
-operator|.
-name|github
-operator|.
-name|kristofa
-operator|.
-name|brave
-operator|.
-name|Brave
 import|;
 end_import
 

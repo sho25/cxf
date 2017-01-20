@@ -123,7 +123,6 @@ throws|throws
 name|IOException
 block|{
 return|return
-operator|(
 name|books
 operator|.
 name|remove
@@ -132,7 +131,6 @@ name|key
 argument_list|)
 operator|!=
 literal|null
-operator|)
 return|;
 block|}
 specifier|public
