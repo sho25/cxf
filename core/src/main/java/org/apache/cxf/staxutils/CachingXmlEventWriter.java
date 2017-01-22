@@ -943,6 +943,17 @@ name|lastStart
 argument_list|,
 name|Collections
 operator|.
+expr|<
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
+name|events
+operator|.
+name|Namespace
+operator|>
 name|emptyList
 argument_list|()
 operator|.

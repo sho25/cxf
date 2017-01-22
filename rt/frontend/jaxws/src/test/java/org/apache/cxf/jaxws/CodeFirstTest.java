@@ -3121,24 +3121,6 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-if|if
-condition|(
-name|System
-operator|.
-name|getProperty
-argument_list|(
-literal|"java.version"
-argument_list|)
-operator|.
-name|startsWith
-argument_list|(
-literal|"9"
-argument_list|)
-condition|)
-block|{
-comment|//can't pass with java9 so far
-return|return;
-block|}
 name|JaxWsServerFactoryBean
 name|factory
 init|=
