@@ -370,6 +370,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+name|logger
+operator|!=
+literal|null
+operator|&&
+operator|(
 name|writer
 operator|!=
 literal|null
@@ -382,6 +387,7 @@ name|Level
 operator|.
 name|INFO
 argument_list|)
+operator|)
 condition|)
 block|{
 name|logging

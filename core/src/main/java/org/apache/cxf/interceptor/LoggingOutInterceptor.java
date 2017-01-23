@@ -373,6 +373,11 @@ decl_stmt|;
 if|if
 condition|(
 name|logger
+operator|!=
+literal|null
+operator|&&
+operator|(
+name|logger
 operator|.
 name|isLoggable
 argument_list|(
@@ -384,6 +389,7 @@ operator|||
 name|writer
 operator|!=
 literal|null
+operator|)
 condition|)
 block|{
 comment|// Write the output while caching it for the log message
