@@ -936,6 +936,13 @@ name|transportClaimsPort
 argument_list|)
 expr_stmt|;
 block|}
+name|doubleIt
+argument_list|(
+name|transportClaimsPort
+argument_list|,
+literal|25
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|java
