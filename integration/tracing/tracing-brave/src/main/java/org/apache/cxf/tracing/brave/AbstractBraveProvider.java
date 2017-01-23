@@ -324,9 +324,7 @@ name|this
 operator|.
 name|spanNameProvider
 operator|=
-operator|new
-name|ServerSpanNameProvider
-argument_list|()
+name|spanNameProvider
 expr_stmt|;
 block|}
 specifier|protected
