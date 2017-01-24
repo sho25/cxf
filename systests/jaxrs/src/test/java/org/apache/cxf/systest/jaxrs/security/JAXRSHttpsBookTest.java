@@ -662,8 +662,6 @@ expr_stmt|;
 block|}
 annotation|@
 name|Test
-annotation|@
-name|Ignore
 specifier|public
 name|void
 name|testCustomVerbProxyFromSpringWildcard
@@ -681,7 +679,7 @@ operator|new
 name|String
 index|[]
 block|{
-name|CLIENT_CONFIG_FILE4
+name|CLIENT_CONFIG_FILE3
 block|}
 argument_list|)
 decl_stmt|;

@@ -813,11 +813,6 @@ condition|)
 block|{
 try|try
 block|{
-name|boolean
-name|set
-init|=
-literal|false
-decl_stmt|;
 name|java
 operator|.
 name|lang
