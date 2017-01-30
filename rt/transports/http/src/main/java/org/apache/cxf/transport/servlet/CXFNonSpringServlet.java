@@ -737,7 +737,7 @@ name|createBus
 argument_list|()
 expr_stmt|;
 block|}
-specifier|private
+specifier|protected
 name|ServletController
 name|createServletController
 parameter_list|(
