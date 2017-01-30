@@ -2082,6 +2082,11 @@ name|values
 operator|==
 literal|null
 operator|||
+name|values
+operator|.
+name|isEmpty
+argument_list|()
+operator|||
 name|StringUtils
 operator|.
 name|isEmpty
