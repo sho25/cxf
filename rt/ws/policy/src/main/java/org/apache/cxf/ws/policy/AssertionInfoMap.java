@@ -640,6 +640,16 @@ name|equal
 argument_list|(
 name|ass
 argument_list|)
+operator|||
+name|ai
+operator|.
+name|getAssertion
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+name|ass
+argument_list|)
 condition|)
 block|{
 name|found
