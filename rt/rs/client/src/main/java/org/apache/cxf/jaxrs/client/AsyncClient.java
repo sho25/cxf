@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|//Work in progress
+comment|//Work in progress. May be removed once the Rx client work is finalized
 end_comment
 
 begin_interface

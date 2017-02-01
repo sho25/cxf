@@ -41,7 +41,7 @@ name|rs
 operator|.
 name|client
 operator|.
-name|Invocation
+name|RxInvokerProvider
 import|;
 end_import
 
@@ -55,7 +55,7 @@ name|rs
 operator|.
 name|client
 operator|.
-name|RxInvokerProvider
+name|SyncInvoker
 import|;
 end_import
 
@@ -71,9 +71,7 @@ name|jaxrs
 operator|.
 name|client
 operator|.
-name|spec
-operator|.
-name|InvocationBuilderImpl
+name|SyncInvokerImpl
 import|;
 end_import
 
@@ -93,31 +91,53 @@ specifier|public
 name|ObservableRxInvoker
 name|getRxInvoker
 parameter_list|(
-name|Invocation
-operator|.
-name|Builder
-name|builder
+name|SyncInvoker
+name|syncInvoker
 parameter_list|,
 name|ExecutorService
-name|execService
+name|executorService
 parameter_list|)
 block|{
+comment|// TODO: At the moment we still delegate if possible to the async HTTP conduit.
+comment|// Investigate if letting the RxJava thread pool deal with the sync invocation
+comment|// is indeed more effective
 return|return
 operator|new
 name|ObservableRxInvokerImpl
 argument_list|(
 operator|(
 operator|(
-name|InvocationBuilderImpl
+name|SyncInvokerImpl
 operator|)
-name|builder
+name|syncInvoker
 operator|)
 operator|.
 name|getWebClient
 argument_list|()
 argument_list|,
-name|execService
+name|executorService
 argument_list|)
+return|;
+block|}
+annotation|@
+name|Override
+specifier|public
+name|boolean
+name|isProviderFor
+parameter_list|(
+name|Class
+argument_list|<
+name|?
+argument_list|>
+name|rxCls
+parameter_list|)
+block|{
+return|return
+name|ObservableRxInvoker
+operator|.
+name|class
+operator|==
+name|rxCls
 return|;
 block|}
 block|}
