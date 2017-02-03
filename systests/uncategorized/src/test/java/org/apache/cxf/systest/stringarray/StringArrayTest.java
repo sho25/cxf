@@ -75,7 +75,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingInInterceptor
 import|;
@@ -89,9 +91,29 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingOutInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|event
+operator|.
+name|PrintWriterEventSender
 import|;
 end_import
 
@@ -287,7 +309,11 @@ init|=
 operator|new
 name|LoggingInInterceptor
 argument_list|(
+operator|new
+name|PrintWriterEventSender
+argument_list|(
 name|pwin
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|StringWriter
@@ -324,7 +350,11 @@ init|=
 operator|new
 name|LoggingOutInterceptor
 argument_list|(
+operator|new
+name|PrintWriterEventSender
+argument_list|(
 name|pwout
+argument_list|)
 argument_list|)
 decl_stmt|;
 name|getBus
@@ -406,7 +436,12 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Request message is not marshalled correctly and @XmlList does not take effect"
+literal|"Request message is not marshalled correctly and @XmlList does not take effect:\n"
+operator|+
+name|swout
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 name|swout
 operator|.
@@ -424,7 +459,12 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-literal|"Response message is not marshalled correctly and @XmlList does not take effect"
+literal|"Response message is not marshalled correctly and @XmlList does not take effect\n"
+operator|+
+name|swin
+operator|.
+name|toString
+argument_list|()
 argument_list|,
 name|swin
 operator|.
