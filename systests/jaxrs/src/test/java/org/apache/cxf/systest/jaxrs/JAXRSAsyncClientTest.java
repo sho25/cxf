@@ -918,7 +918,9 @@ argument_list|)
 decl_stmt|;
 name|fail
 argument_list|(
-literal|"should throw an exception due to timeout"
+literal|"should throw an exception due to timeout, instead got "
+operator|+
+name|book
 argument_list|)
 expr_stmt|;
 block|}

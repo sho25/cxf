@@ -921,9 +921,6 @@ name|serializer
 init|=
 name|transformerFactory
 operator|.
-name|newInstance
-argument_list|()
-operator|.
 name|newTransformer
 argument_list|(
 operator|new

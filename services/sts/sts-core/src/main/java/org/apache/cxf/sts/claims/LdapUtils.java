@@ -655,10 +655,16 @@ init|=
 literal|null
 decl_stmt|;
 name|AttributesMapper
+argument_list|<
+name|Object
+argument_list|>
 name|mapper
 init|=
 operator|new
 name|AttributesMapper
+argument_list|<
+name|Object
+argument_list|>
 argument_list|()
 block|{
 specifier|public
