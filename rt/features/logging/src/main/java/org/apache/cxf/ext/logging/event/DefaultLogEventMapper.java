@@ -1784,7 +1784,7 @@ literal|null
 return|;
 block|}
 comment|/**      * Gets the event type from message.      *      * @param message the message      * @return the event type      */
-specifier|private
+specifier|public
 name|EventType
 name|getEventType
 parameter_list|(
@@ -1967,7 +1967,7 @@ operator|)
 return|;
 block|}
 block|}
-specifier|private
+specifier|public
 name|void
 name|setEpInfo
 parameter_list|(
