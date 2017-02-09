@@ -1004,6 +1004,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
+specifier|final
 name|String
 name|getAddress
 parameter_list|(

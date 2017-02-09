@@ -74,7 +74,7 @@ name|Exception
 block|{
 name|exchange
 operator|.
-name|setResponseCode
+name|setStatusCode
 argument_list|(
 literal|404
 argument_list|)

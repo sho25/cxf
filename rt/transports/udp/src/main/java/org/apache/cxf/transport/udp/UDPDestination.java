@@ -1954,10 +1954,11 @@ else|else
 block|{
 name|session
 operator|.
-name|close
-argument_list|(
-literal|true
-argument_list|)
+name|closeOnFlush
+argument_list|()
+operator|.
+name|awaitUninterruptibly
+argument_list|()
 expr_stmt|;
 block|}
 block|}

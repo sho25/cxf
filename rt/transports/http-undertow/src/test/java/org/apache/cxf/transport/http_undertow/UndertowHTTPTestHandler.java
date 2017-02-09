@@ -277,7 +277,7 @@ condition|)
 block|{
 name|undertowExchange
 operator|.
-name|setResponseCode
+name|setStatusCode
 argument_list|(
 literal|500
 argument_list|)

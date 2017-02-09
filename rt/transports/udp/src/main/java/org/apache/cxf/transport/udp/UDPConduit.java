@@ -1144,10 +1144,8 @@ operator|.
 name|getSession
 argument_list|()
 operator|.
-name|close
-argument_list|(
-literal|false
-argument_list|)
+name|closeOnFlush
+argument_list|()
 expr_stmt|;
 block|}
 block|}
@@ -1190,10 +1188,8 @@ operator|.
 name|getSession
 argument_list|()
 operator|.
-name|close
-argument_list|(
-literal|false
-argument_list|)
+name|closeOnFlush
+argument_list|()
 expr_stmt|;
 block|}
 block|}
