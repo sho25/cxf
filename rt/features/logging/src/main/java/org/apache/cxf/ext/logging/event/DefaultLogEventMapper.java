@@ -1747,6 +1747,10 @@ parameter_list|)
 block|{
 if|if
 condition|(
+name|message
+operator|==
+literal|null
+operator|||
 operator|!
 name|message
 operator|.
