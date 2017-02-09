@@ -159,9 +159,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|feature
+name|ext
 operator|.
-name|Feature
+name|logging
+operator|.
+name|LoggingFeature
 import|;
 end_import
 
@@ -175,7 +177,7 @@ name|cxf
 operator|.
 name|feature
 operator|.
-name|LoggingFeature
+name|Feature
 import|;
 end_import
 

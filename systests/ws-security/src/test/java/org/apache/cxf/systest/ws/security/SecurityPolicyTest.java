@@ -369,9 +369,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|ext
 operator|.
-name|XPathUtils
+name|logging
+operator|.
+name|LoggingOutInterceptor
 import|;
 end_import
 
@@ -383,9 +385,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|helpers
 operator|.
-name|LoggingOutInterceptor
+name|XPathUtils
 import|;
 end_import
 

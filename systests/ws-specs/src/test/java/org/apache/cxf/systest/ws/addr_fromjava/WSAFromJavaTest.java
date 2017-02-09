@@ -149,7 +149,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|feature
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingFeature
 import|;
@@ -884,10 +886,15 @@ name|output
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|output
+operator|.
+name|toString
+argument_list|()
 operator|.
 name|indexOf
 argument_list|(
-literal|"SOAPAction=[\"cxf\"]"
+literal|"SOAPAction=\"cxf\""
 argument_list|)
 operator|!=
 operator|-
