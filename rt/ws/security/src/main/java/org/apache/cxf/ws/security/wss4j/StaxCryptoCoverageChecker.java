@@ -2204,6 +2204,7 @@ name|encryptUsernameToken
 return|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setEncryptUsernameToken
 parameter_list|(

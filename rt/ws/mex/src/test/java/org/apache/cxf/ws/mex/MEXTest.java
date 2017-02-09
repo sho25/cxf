@@ -59,7 +59,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|feature
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingFeature
 import|;
