@@ -467,6 +467,7 @@ name|script
 return|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setScript
 parameter_list|(
@@ -482,6 +483,7 @@ name|script
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setScript
 parameter_list|(
