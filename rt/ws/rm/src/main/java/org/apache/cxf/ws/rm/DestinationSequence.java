@@ -540,9 +540,7 @@ name|deliveringMessageNumbers
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -2469,9 +2467,7 @@ name|deferredAcknowledgments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DeferredAcknowledgment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

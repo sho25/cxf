@@ -2140,9 +2140,7 @@ name|bodyParts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
@@ -2398,9 +2396,7 @@ name|bodyParts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
@@ -2620,9 +2616,7 @@ name|parts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3972,9 +3966,7 @@ name|def
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|Definition
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -5154,9 +5146,7 @@ name|messageParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|messageParts
@@ -5523,9 +5513,7 @@ name|bodyParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -2616,9 +2616,7 @@ name|allFeatures
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|(
 name|endpointFeatures
 operator|.

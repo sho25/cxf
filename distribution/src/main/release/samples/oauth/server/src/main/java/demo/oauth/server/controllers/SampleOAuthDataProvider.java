@@ -164,9 +164,7 @@ name|apps
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -229,9 +227,7 @@ name|apps
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set

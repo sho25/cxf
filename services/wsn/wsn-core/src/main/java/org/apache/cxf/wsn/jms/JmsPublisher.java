@@ -896,9 +896,7 @@ name|advisories
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ConsumerEventSource
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

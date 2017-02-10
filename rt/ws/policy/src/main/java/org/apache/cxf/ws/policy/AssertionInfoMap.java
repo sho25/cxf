@@ -369,9 +369,7 @@ name|pcs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|getAssertions
@@ -431,9 +429,7 @@ name|ail
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|put
@@ -883,9 +879,7 @@ name|errors
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Iterator
@@ -1202,9 +1196,7 @@ name|assertions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|getAssertions

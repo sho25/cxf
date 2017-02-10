@@ -706,9 +706,7 @@ name|acks
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SequenceAcknowledgement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|acks
@@ -827,9 +825,7 @@ name|requested
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AckRequestedType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|requested

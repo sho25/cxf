@@ -820,9 +820,7 @@ name|sources
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1571,9 +1569,7 @@ name|xsdUrls
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|files
 operator|.
@@ -1717,9 +1713,7 @@ name|errors
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SAXParseException
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

@@ -1481,9 +1481,7 @@ name|deps
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|AegisType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2465,9 +2463,7 @@ name|types
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|AegisType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|tns2Type

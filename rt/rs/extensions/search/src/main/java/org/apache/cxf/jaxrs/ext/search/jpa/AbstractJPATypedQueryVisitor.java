@@ -707,9 +707,7 @@ literal|null
 else|:
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|joinProps
 argument_list|)
@@ -818,9 +816,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Predicate
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -860,9 +856,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Predicate
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

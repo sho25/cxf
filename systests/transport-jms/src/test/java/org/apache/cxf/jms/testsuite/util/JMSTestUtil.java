@@ -319,9 +319,7 @@ block|}
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|TestCaseType
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}

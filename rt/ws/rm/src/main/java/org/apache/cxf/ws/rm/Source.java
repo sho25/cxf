@@ -473,9 +473,7 @@ name|seqs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

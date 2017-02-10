@@ -1167,9 +1167,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenProvider
@@ -1194,9 +1192,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -1257,9 +1253,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -1306,9 +1300,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -2401,9 +2393,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList

@@ -498,9 +498,7 @@ name|streamList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|static
@@ -757,9 +755,7 @@ name|callbacks
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CachedWriterCallback
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

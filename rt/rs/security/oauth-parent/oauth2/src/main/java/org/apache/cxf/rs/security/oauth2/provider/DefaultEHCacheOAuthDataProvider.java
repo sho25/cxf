@@ -604,9 +604,7 @@ name|clients
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|(
 name|keys
 operator|.
@@ -693,9 +691,7 @@ name|tokens
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ServerAccessToken
-argument_list|>
+argument_list|<>
 argument_list|(
 name|keys
 operator|.
@@ -784,9 +780,7 @@ name|tokens
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RefreshToken
-argument_list|>
+argument_list|<>
 argument_list|(
 name|keys
 operator|.

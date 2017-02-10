@@ -1152,9 +1152,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JettyHTTPServerEngine
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -2167,9 +2165,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|handlers
@@ -2759,9 +2755,7 @@ name|connectionFactories
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ConnectionFactory
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|connectionFactories
@@ -2793,9 +2787,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|handlers

@@ -1180,9 +1180,7 @@ name|features
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WebServiceFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|MTOM
@@ -2102,9 +2100,7 @@ name|enames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

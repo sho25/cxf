@@ -1196,9 +1196,7 @@ name|wf
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|,
 literal|true
@@ -1261,9 +1259,7 @@ name|wsFeatures
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WebServiceFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if
@@ -1289,9 +1285,7 @@ name|features
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

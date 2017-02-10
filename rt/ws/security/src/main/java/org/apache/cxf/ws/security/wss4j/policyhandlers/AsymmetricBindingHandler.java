@@ -2407,9 +2407,7 @@ name|secondEncrParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// Check for signature protection

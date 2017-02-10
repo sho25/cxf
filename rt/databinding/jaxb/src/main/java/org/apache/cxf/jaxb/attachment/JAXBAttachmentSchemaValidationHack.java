@@ -277,9 +277,7 @@ name|dss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttachmentDataSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

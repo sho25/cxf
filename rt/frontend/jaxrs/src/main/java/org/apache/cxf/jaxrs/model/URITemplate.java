@@ -250,9 +250,7 @@ name|variables
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -265,9 +263,7 @@ name|customVariables
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -326,9 +322,7 @@ name|uriChunks
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|UriChunk
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 while|while
@@ -2349,9 +2343,7 @@ name|tokens
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

@@ -340,9 +340,7 @@ name|busCache
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Bus
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

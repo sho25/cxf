@@ -208,9 +208,7 @@ name|events
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XMLEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1000
 argument_list|)
@@ -1465,9 +1463,7 @@ name|l
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

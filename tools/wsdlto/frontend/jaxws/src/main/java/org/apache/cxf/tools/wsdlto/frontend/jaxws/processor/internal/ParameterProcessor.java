@@ -1862,9 +1862,7 @@ literal|null
 condition|?
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 else|:
 name|outputMessage
@@ -1881,9 +1879,7 @@ name|outParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -4287,9 +4283,7 @@ name|outputParts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -4301,9 +4295,7 @@ name|inputUnlistedParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -4314,9 +4306,7 @@ name|outputUnlistedParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -4872,9 +4862,7 @@ name|outputParts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

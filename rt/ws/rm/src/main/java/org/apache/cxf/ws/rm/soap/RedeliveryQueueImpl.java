@@ -833,9 +833,7 @@ name|purged
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 synchronized|synchronized
@@ -1021,9 +1019,7 @@ name|undelivered
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -1798,9 +1794,7 @@ name|sequenceCandidates
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RedeliverCandidate
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|candidates

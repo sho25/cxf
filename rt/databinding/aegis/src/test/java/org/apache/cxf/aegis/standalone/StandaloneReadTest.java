@@ -455,9 +455,7 @@ name|correctAnswer
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|correctAnswer
@@ -609,9 +607,7 @@ name|correctAnswer
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|correctAnswer

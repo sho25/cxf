@@ -3494,9 +3494,7 @@ name|theEncProviders
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JweEncryptionProvider
-argument_list|>
+argument_list|<>
 argument_list|(
 name|jwks
 operator|.
@@ -3665,9 +3663,7 @@ name|theDecProviders
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JweDecryptionProvider
-argument_list|>
+argument_list|<>
 argument_list|(
 name|jwks
 operator|.

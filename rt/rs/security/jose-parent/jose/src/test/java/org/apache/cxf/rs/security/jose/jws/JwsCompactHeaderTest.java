@@ -440,9 +440,7 @@ name|criticalHeader
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|criticalHeader
@@ -624,9 +622,7 @@ name|criticalHeader
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|criticalHeader

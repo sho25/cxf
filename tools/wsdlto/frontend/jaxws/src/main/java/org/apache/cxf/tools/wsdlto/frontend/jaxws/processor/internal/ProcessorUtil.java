@@ -2195,9 +2195,7 @@ name|qnames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -2262,9 +2260,7 @@ name|qnames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WrapperElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ServiceInfo
@@ -2499,9 +2495,7 @@ name|qnames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WrapperElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

@@ -2256,9 +2256,7 @@ name|encodedChain
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|chain
 operator|.
@@ -2345,9 +2343,7 @@ name|certs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|X509Certificate
-argument_list|>
+argument_list|<>
 argument_list|(
 name|base64EncodedChain
 operator|.

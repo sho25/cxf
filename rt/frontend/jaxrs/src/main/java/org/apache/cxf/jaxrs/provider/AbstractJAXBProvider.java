@@ -5287,9 +5287,7 @@ name|l
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -5382,9 +5380,7 @@ name|newList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|theList
 operator|.
@@ -5502,9 +5498,7 @@ name|newList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|theList
 operator|.
@@ -5584,9 +5578,7 @@ name|newList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|theList
 operator|.
@@ -5776,9 +5768,7 @@ name|newList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|theList
 operator|.
@@ -5838,9 +5828,7 @@ block|{
 return|return
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|theList
 argument_list|)

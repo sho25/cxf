@@ -986,9 +986,7 @@ name|newAtts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Attachment
@@ -2641,9 +2639,7 @@ name|books2
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|books2

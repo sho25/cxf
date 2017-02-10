@@ -191,9 +191,7 @@ name|rNames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|(
 name|r
 operator|.

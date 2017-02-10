@@ -314,9 +314,7 @@ name|attributes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -328,9 +326,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1449,9 +1445,7 @@ name|pds
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PropertyDescriptor
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|getInterfacePropertyDescriptors

@@ -258,9 +258,7 @@ literal|null
 condition|?
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|alternateAddresses
 argument_list|)
@@ -529,9 +527,7 @@ name|alternates
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Endpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

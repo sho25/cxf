@@ -2772,9 +2772,7 @@ name|seqs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DestinationSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ResultSet
@@ -3058,9 +3056,7 @@ name|seqs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ResultSet
@@ -3337,9 +3333,7 @@ name|msgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RMMessage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ResultSet
@@ -4946,9 +4940,7 @@ name|dbCols
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

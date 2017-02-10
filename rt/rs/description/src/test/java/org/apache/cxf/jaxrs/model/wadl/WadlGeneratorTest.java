@@ -2655,9 +2655,7 @@ name|cris
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ClassResourceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|cris
@@ -4390,9 +4388,7 @@ literal|"xs:string"
 argument_list|,
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -6476,9 +6472,7 @@ name|actualOptions
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

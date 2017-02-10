@@ -555,9 +555,7 @@ name|rootTypeQNames
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1128,9 +1126,7 @@ name|rootTypes
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|AegisType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 comment|// app may have already supplied classes.
@@ -1161,9 +1157,7 @@ name|rootTypeQNames
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if

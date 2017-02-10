@@ -555,9 +555,7 @@ name|privateEndpoints
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -877,9 +875,7 @@ name|soapEndpoints
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractDestination
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -973,9 +969,7 @@ name|restfulDests
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractDestination
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

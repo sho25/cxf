@@ -1124,9 +1124,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PortComponentHandlerType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|PortComponentHandlerType

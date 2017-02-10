@@ -250,9 +250,7 @@ name|ASSERTION_NAMES
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|ASSERTION_NAMES
@@ -462,9 +460,7 @@ name|mergedAsserts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

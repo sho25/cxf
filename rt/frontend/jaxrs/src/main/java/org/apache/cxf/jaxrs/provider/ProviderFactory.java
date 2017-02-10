@@ -2681,9 +2681,7 @@ name|interceptors
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ReaderInterceptor
-argument_list|>
+argument_list|<>
 argument_list|(
 name|size
 operator|+
@@ -2882,9 +2880,7 @@ name|interceptors
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WriterInterceptor
-argument_list|>
+argument_list|<>
 argument_list|(
 name|size
 operator|+
@@ -6324,9 +6320,7 @@ name|set
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|set

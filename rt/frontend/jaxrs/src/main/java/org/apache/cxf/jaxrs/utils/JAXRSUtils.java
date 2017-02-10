@@ -2047,9 +2047,7 @@ name|theList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2402,9 +2400,7 @@ name|supportedMimeTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|values
 operator|.
@@ -4902,9 +4898,7 @@ name|allowedMethods
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -6089,9 +6083,7 @@ name|params
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|parameterTypesLengh
 argument_list|)
@@ -10058,9 +10050,7 @@ name|acceptValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -10595,9 +10585,7 @@ block|}
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|supportedMimeTypeList
 argument_list|)
@@ -12337,9 +12325,7 @@ name|values
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|params
 operator|.

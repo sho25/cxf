@@ -3652,9 +3652,7 @@ name|books
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|books
@@ -3968,9 +3966,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providers
@@ -4018,9 +4014,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providers
@@ -4691,9 +4685,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providers

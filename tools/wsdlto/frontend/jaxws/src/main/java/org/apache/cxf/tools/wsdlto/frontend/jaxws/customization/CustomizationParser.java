@@ -555,9 +555,7 @@ name|jaxbBindings
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -2915,9 +2913,7 @@ name|a
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

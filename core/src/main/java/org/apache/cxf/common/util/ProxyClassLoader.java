@@ -77,9 +77,7 @@ name|loaders
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|ClassLoader
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

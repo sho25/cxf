@@ -551,9 +551,7 @@ name|enumeration
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|URL
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 return|;

@@ -1146,9 +1146,7 @@ name|SERVER_PROVIDER_CLASS_NAMES
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|SERVER_PROVIDER_CLASS_NAMES
@@ -3086,9 +3084,7 @@ name|params
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Parameter
-argument_list|>
+argument_list|<>
 argument_list|(
 name|paramAnns
 operator|.
@@ -4305,9 +4301,7 @@ name|resources
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|UserResource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -5314,9 +5308,7 @@ name|opers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|UserOperation
-argument_list|>
+argument_list|<>
 argument_list|(
 name|operEls
 operator|.
@@ -5475,9 +5467,7 @@ name|params
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Parameter
-argument_list|>
+argument_list|<>
 argument_list|(
 name|paramEls
 operator|.
@@ -6095,9 +6085,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -6108,9 +6096,7 @@ name|features
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -6804,9 +6790,7 @@ name|map
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

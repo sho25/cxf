@@ -270,9 +270,7 @@ name|received
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|this
@@ -281,9 +279,7 @@ name|fragments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|this
@@ -469,9 +465,7 @@ name|responses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Response
-argument_list|>
+argument_list|<>
 argument_list|(
 name|objs
 operator|.

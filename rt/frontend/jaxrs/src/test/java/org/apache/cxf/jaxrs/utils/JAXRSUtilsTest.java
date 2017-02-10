@@ -4830,9 +4830,7 @@ name|methodMimeTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|JAXRSUtils
 operator|.
@@ -6125,9 +6123,7 @@ name|sortedList1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|sortedList1
@@ -6152,9 +6148,7 @@ name|sortedList2
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|sortedList2

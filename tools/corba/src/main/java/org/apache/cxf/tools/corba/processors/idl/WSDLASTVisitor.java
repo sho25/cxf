@@ -1125,9 +1125,7 @@ name|result
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Binding
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map

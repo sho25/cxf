@@ -342,9 +342,7 @@ name|atts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AttachmentImpl
@@ -981,9 +979,7 @@ name|atts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AttachmentImpl

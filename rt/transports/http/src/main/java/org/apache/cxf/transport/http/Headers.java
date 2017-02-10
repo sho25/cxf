@@ -533,9 +533,7 @@ name|HTTP_HEADERS_SINGLE_VALUE_ONLY
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|HTTP_HEADERS_SINGLE_VALUE_ONLY
@@ -856,9 +854,7 @@ name|cookies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -868,9 +864,7 @@ name|cookies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|cookies
 argument_list|)
@@ -1667,9 +1661,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -2451,9 +2443,7 @@ name|values
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|headers

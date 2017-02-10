@@ -2544,9 +2544,7 @@ name|handlers
 else|:
 operator|new
 name|ArrayList
-argument_list|<
-name|CXFUndertowHttpHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}

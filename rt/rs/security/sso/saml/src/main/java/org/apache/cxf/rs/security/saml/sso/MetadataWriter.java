@@ -1162,9 +1162,7 @@ name|transformList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Transform
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|transformList
@@ -1294,9 +1292,7 @@ name|x509Content
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|x509Content

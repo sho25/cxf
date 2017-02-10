@@ -2822,9 +2822,7 @@ name|assertions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -2922,9 +2920,7 @@ name|assertions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3161,9 +3157,7 @@ name|vocabulary
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

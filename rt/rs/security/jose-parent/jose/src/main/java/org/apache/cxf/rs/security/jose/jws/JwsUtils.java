@@ -2090,9 +2090,7 @@ name|theSigProviders
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JwsSignatureProvider
-argument_list|>
+argument_list|<>
 argument_list|(
 name|jwks
 operator|.
@@ -2265,9 +2263,7 @@ name|theVerifiers
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JwsSignatureVerifier
-argument_list|>
+argument_list|<>
 argument_list|(
 name|jwks
 operator|.

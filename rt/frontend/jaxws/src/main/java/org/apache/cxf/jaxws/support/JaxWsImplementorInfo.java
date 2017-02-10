@@ -351,9 +351,7 @@ name|wsAnnotations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WebService
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|2
 argument_list|)

@@ -54,9 +54,7 @@ name|expressions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JavaExpression
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Get the<code>Expressions</code> value.      *      * @return a<code>List<JavaExpression></code> value      */

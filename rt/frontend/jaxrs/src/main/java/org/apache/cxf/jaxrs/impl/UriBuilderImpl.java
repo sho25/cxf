@@ -318,9 +318,7 @@ name|paths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1826,9 +1824,7 @@ argument_list|()
 else|:
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2115,9 +2111,7 @@ name|uniqueVars
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|templ
 operator|.
@@ -2199,9 +2193,7 @@ argument_list|()
 else|:
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -2690,9 +2682,7 @@ name|paths
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|(
 name|paths
 argument_list|)
@@ -3478,9 +3468,7 @@ name|segments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|path
@@ -4807,9 +4795,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

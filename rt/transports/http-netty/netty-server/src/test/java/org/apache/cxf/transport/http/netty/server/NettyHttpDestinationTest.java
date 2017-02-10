@@ -2948,9 +2948,7 @@ block|{
 return|return
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Collections
 operator|.
@@ -3997,9 +3995,7 @@ name|contentType
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|contentType
@@ -4024,9 +4020,7 @@ name|authHeader
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|authHeader
@@ -4044,9 +4038,7 @@ name|headerNames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|headerNames
@@ -4519,9 +4511,7 @@ name|challenges
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|challenges
@@ -5040,7 +5030,7 @@ name|responseHeaders
 argument_list|)
 expr_stmt|;
 comment|//REVISIT CHALLENGE_HEADER's mean
-comment|/*assertEquals("expected addField",                      3,                      response.getAddFieldCallCount());         Enumeration e = response.getFieldValues(CHALLENGE_HEADER);         List<String> challenges = new ArrayList<String>();         while (e.hasMoreElements()) {             challenges.add((String)e.nextElement());         }         assertTrue("expected challenge",                    challenges.contains(BASIC_CHALLENGE));         assertTrue("expected challenge",                    challenges.contains(DIGEST_CHALLENGE));         assertTrue("expected challenge",                    challenges.contains(CUSTOM_CHALLENGE));*/
+comment|/*assertEquals("expected addField",                      3,                      response.getAddFieldCallCount());         Enumeration e = response.getFieldValues(CHALLENGE_HEADER);         List<String> challenges = new ArrayList<>();         while (e.hasMoreElements()) {             challenges.add((String)e.nextElement());         }         assertTrue("expected challenge",                    challenges.contains(BASIC_CHALLENGE));         assertTrue("expected challenge",                    challenges.contains(DIGEST_CHALLENGE));         assertTrue("expected challenge",                    challenges.contains(CUSTOM_CHALLENGE));*/
 block|}
 specifier|private
 name|void

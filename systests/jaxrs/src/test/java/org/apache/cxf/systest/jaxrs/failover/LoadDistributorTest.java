@@ -467,9 +467,7 @@ name|alternateAddresses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|alternateAddresses
@@ -582,9 +580,7 @@ name|alternateAddresses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -725,9 +721,7 @@ name|features
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|features

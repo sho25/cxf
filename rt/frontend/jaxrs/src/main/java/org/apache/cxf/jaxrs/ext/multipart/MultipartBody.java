@@ -203,9 +203,7 @@ name|atts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|atts
@@ -257,9 +255,7 @@ name|this
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|,
 name|MULTIPART_RELATED_TYPE
@@ -314,9 +310,7 @@ name|childAtts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -1902,9 +1902,7 @@ name|supportedClaims
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|supportedClaims
@@ -2315,9 +2313,7 @@ name|supportedClaims
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|supportedClaims

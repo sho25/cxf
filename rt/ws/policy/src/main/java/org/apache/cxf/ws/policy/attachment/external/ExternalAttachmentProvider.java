@@ -842,9 +842,7 @@ name|attachments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PolicyAttachment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Document
@@ -1384,9 +1382,7 @@ name|des
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DomainExpression
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -1479,9 +1479,7 @@ name|inheritedScopes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Scope
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while

@@ -3831,9 +3831,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -4241,9 +4239,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|(
 name|books
 operator|.
@@ -7091,9 +7087,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BookInfoInterface
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -7148,9 +7142,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BookInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list

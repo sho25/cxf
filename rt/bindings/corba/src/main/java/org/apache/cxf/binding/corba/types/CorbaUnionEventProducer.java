@@ -140,9 +140,7 @@ name|IS_NIL_ATTRIBUTE_LIST
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 static|static
@@ -304,9 +302,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaObjectHandler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list

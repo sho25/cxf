@@ -1026,9 +1026,7 @@ name|stringValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|values
 operator|.
@@ -1141,9 +1139,7 @@ name|methods
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1725,9 +1721,7 @@ block|{
 return|return
 operator|new
 name|HashSet
-argument_list|<
-name|Link
-argument_list|>
+argument_list|<>
 argument_list|(
 name|getAllLinks
 argument_list|()

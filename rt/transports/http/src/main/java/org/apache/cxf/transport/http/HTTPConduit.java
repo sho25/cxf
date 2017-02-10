@@ -1081,9 +1081,7 @@ name|KNOWN_HTTP_VERBS_WITH_NO_CONTENT
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -8096,9 +8094,7 @@ name|authURLs
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|message

@@ -289,9 +289,7 @@ name|extensions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|UnknownExtensibilityElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|EasyMock

@@ -540,9 +540,7 @@ name|requestList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BatchRequest
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|BatchRequest

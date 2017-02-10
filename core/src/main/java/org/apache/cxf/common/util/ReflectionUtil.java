@@ -1158,9 +1158,7 @@ name|descriptors
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PropertyDescriptor
-argument_list|>
+argument_list|<>
 argument_list|(
 name|propertyDescriptors
 operator|.

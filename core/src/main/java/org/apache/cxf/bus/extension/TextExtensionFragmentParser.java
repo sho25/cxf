@@ -259,9 +259,7 @@ expr_stmt|;
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}
@@ -315,9 +313,7 @@ name|extensions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|BufferedReader

@@ -3060,9 +3060,7 @@ name|referenceParameterHeaders
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

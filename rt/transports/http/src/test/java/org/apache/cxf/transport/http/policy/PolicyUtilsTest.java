@@ -454,9 +454,7 @@ name|as
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PolicyAssertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AssertionInfoMap
@@ -710,9 +708,7 @@ name|ais
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ais
@@ -1083,9 +1079,7 @@ name|ais
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ais

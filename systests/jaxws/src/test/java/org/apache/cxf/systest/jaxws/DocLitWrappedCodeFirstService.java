@@ -1203,9 +1203,7 @@ name|dbReves
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Foo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

@@ -224,9 +224,7 @@ name|options
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|GenericWsdlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -411,9 +409,7 @@ name|wsdlOptions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|GenericWsdlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

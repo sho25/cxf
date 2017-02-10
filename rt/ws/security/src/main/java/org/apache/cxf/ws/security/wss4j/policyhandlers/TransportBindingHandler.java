@@ -1647,9 +1647,7 @@ literal|false
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|SupportingToken
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

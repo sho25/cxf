@@ -1370,9 +1370,7 @@ name|attrBeanList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementBean
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
@@ -1449,9 +1447,7 @@ name|attrBeanList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementBean
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|AttributeStatementProvider

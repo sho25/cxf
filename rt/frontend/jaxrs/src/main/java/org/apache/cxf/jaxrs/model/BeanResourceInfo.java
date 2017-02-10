@@ -326,9 +326,7 @@ name|paramFields
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Field
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -484,9 +482,7 @@ name|paramMethods
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

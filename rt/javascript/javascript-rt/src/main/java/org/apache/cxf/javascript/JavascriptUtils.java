@@ -781,9 +781,7 @@ name|nonStringSimpleTypes
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|nonStringSimpleTypes
@@ -832,9 +830,7 @@ name|intTypes
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|intTypes
@@ -869,9 +865,7 @@ name|floatTypes
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|floatTypes
@@ -3329,9 +3323,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XmlSchemaObject
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|QName

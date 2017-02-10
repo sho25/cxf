@@ -2240,9 +2240,7 @@ name|scopeList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Scope
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2324,9 +2322,7 @@ name|inheritedList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Scope
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|boolean
@@ -2467,9 +2463,7 @@ name|baseList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Scope
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

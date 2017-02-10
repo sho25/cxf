@@ -524,9 +524,7 @@ name|locationList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -1958,9 +1956,7 @@ name|da
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Double
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -2237,9 +2233,7 @@ name|ia
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -2525,9 +2519,7 @@ name|sa
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -2843,9 +2835,7 @@ name|ma
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MeshInterfaceObject
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -3167,9 +3157,7 @@ name|ea
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SimpleEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new

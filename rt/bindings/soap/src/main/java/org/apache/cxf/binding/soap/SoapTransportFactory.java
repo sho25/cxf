@@ -537,9 +537,7 @@ name|unmodifiableSet
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -1519,9 +1517,7 @@ name|setTransportIds
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|ans
 argument_list|)

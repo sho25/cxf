@@ -893,9 +893,7 @@ name|alternatives
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1030,9 +1028,7 @@ name|v
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -1052,9 +1048,7 @@ name|fv
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1349,9 +1343,7 @@ name|alternatives
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

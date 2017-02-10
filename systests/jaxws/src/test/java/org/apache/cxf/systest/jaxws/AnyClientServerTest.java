@@ -447,9 +447,7 @@ name|any
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Port
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Port

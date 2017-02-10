@@ -117,9 +117,7 @@ name|encodings
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -131,9 +129,7 @@ name|languages
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Locale
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -145,9 +141,7 @@ name|mediaTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -159,9 +153,7 @@ name|variants
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Variant
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -203,9 +195,7 @@ name|vs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Variant
-argument_list|>
+argument_list|<>
 argument_list|(
 name|variants
 argument_list|)

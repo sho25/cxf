@@ -470,9 +470,7 @@ name|streamList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -699,9 +697,7 @@ name|callbacks
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CachedOutputStreamCallback
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

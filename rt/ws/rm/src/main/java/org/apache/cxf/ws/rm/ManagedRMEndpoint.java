@@ -1236,9 +1236,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1356,9 +1354,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2053,9 +2049,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2140,9 +2134,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2674,9 +2666,7 @@ name|sps
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CompositeData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Source
@@ -2809,9 +2799,7 @@ name|sps
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CompositeData
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Destination

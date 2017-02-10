@@ -916,9 +916,7 @@ name|inputSet
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|list
 argument_list|)

@@ -555,9 +555,7 @@ name|perRecipientUnprotectedHeaders
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JweHeaders
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

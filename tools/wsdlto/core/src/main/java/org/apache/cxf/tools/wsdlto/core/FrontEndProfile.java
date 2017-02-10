@@ -102,9 +102,7 @@ name|generators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|FrontEndGenerator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Processor

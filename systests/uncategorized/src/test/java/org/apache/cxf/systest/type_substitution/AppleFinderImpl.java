@@ -94,9 +94,7 @@ name|apples
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Apple
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|apples

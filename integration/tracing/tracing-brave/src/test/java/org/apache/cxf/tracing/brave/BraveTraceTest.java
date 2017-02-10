@@ -510,9 +510,7 @@ name|spans
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Span
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

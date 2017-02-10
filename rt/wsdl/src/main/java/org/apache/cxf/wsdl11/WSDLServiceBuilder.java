@@ -1437,9 +1437,7 @@ name|serviceList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ServiceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1730,9 +1728,7 @@ name|serviceList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ServiceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -1743,9 +1739,7 @@ name|defList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Definition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|defList
@@ -2287,9 +2281,7 @@ name|done
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Definition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|done
@@ -2738,9 +2730,7 @@ block|}
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|ServiceInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 name|services
 operator|.
@@ -2919,9 +2909,7 @@ name|importList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Import
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection

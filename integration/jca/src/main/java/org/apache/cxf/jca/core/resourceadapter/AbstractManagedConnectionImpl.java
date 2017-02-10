@@ -239,9 +239,7 @@ name|connectionEventListeners
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|ConnectionEventListener
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -464,9 +462,7 @@ name|connectionEventListeners
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|ConnectionEventListener
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|LoggerHelper

@@ -520,9 +520,7 @@ name|params
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ArgType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -675,9 +673,7 @@ name|params
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ArgType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

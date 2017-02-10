@@ -2093,9 +2093,7 @@ name|collection
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ProcessedClaim
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

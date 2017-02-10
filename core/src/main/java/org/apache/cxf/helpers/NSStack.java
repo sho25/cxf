@@ -106,9 +106,7 @@ name|top
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|NSDecl
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|stack

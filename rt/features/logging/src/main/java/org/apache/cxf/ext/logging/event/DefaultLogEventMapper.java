@@ -339,9 +339,7 @@ name|BINARY_CONTENT_MEDIA_TYPES
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|BINARY_CONTENT_MEDIA_TYPES

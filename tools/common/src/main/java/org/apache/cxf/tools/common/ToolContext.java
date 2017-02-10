@@ -226,9 +226,7 @@ name|jaxbBindingFiles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -240,9 +238,7 @@ name|excludePkgList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -254,9 +250,7 @@ name|excludeFileList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1637,9 +1631,7 @@ name|jaxbBindingFiles
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|(
 name|jaxbBindingFiles
 argument_list|)
@@ -1650,9 +1642,7 @@ name|excludePkgList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|excludePkgList
 argument_list|)
@@ -1663,9 +1653,7 @@ name|excludeFileList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|excludeFileList
 argument_list|)

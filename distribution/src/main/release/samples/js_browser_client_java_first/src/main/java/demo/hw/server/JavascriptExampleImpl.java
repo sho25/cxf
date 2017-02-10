@@ -114,9 +114,7 @@ name|beverages
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Beverage
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Ingredient
@@ -405,9 +403,7 @@ name|matches
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Beverage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -483,9 +479,7 @@ name|matches
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Beverage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -558,9 +552,7 @@ name|matches
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Beverage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

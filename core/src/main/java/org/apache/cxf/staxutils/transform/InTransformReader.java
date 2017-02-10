@@ -286,9 +286,7 @@ name|inDropSet
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|5
 argument_list|)
@@ -364,9 +362,7 @@ name|attributesIndexes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1302,9 +1298,7 @@ name|pe
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParsingEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|2
 argument_list|)
@@ -1366,9 +1360,7 @@ name|pe
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParsingEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|)
@@ -1489,9 +1481,7 @@ name|pe
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParsingEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|2
 argument_list|)
@@ -1672,9 +1662,7 @@ name|pe
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParsingEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1
 argument_list|)

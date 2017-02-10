@@ -262,9 +262,7 @@ name|parameters
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JavaParameter
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -277,9 +275,7 @@ name|exceptions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JavaException
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1602,9 +1598,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StringBuilder

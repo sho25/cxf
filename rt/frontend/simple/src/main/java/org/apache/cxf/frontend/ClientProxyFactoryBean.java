@@ -380,9 +380,7 @@ name|features
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

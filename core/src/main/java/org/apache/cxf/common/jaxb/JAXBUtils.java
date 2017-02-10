@@ -2609,9 +2609,7 @@ name|words
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StringTokenizer
@@ -4180,9 +4178,7 @@ name|typeRefs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|typeRefs
@@ -4811,9 +4807,7 @@ name|classes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -5151,9 +5145,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DOMResult
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|context
@@ -6010,9 +6002,7 @@ name|this
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -6767,7 +6757,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/*     // This is the "prototype" for the ASM generated class below     public static class MapNamespacePrefixMapper2          extends org.eclipse.persistence.internal.oxm.record.namespaces.MapNamespacePrefixMapper {                  String nsctxt[];                  public MapNamespacePrefixMapper2(Map<String, String> foo) {             super(foo);         }         public String[] getPreDeclaredNamespaceUris() {             String sup[] = super.getPreDeclaredNamespaceUris();             if (nsctxt == null) {                 return sup;             }             List<String> s = new ArrayList<String>(Arrays.asList(sup));             for (int x = 1; x< nsctxt.length; x = x + 2) {                 s.remove(nsctxt[x]);             }             return s.toArray(new String[s.size()]);         }         public void setContextualNamespaceDecls(String f[]) {             nsctxt = f;         }         public String[] getContextualNamespaceDecls() {             return nsctxt;         }     }     */
+comment|/*     // This is the "prototype" for the ASM generated class below     public static class MapNamespacePrefixMapper2          extends org.eclipse.persistence.internal.oxm.record.namespaces.MapNamespacePrefixMapper {                  String nsctxt[];                  public MapNamespacePrefixMapper2(Map<String, String> foo) {             super(foo);         }         public String[] getPreDeclaredNamespaceUris() {             String sup[] = super.getPreDeclaredNamespaceUris();             if (nsctxt == null) {                 return sup;             }             List<String> s = new ArrayList<>(Arrays.asList(sup));             for (int x = 1; x< nsctxt.length; x = x + 2) {                 s.remove(nsctxt[x]);             }             return s.toArray(new String[s.size()]);         }         public void setContextualNamespaceDecls(String f[]) {             nsctxt = f;         }         public String[] getContextualNamespaceDecls() {             return nsctxt;         }     }     */
 comment|//CHECKSTYLE:OFF
 comment|//bunch of really long ASM based methods that cannot be shortened easily
 specifier|private

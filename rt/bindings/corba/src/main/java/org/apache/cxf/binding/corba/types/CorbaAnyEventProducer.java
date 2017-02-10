@@ -405,9 +405,7 @@ name|attributes
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|attributes
@@ -443,9 +441,7 @@ name|namespaces
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Namespace
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|namespaces
@@ -510,9 +506,7 @@ name|prods
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaTypeEventProducer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|CorbaSimpleAnyContainedTypeEventProducer

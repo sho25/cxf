@@ -837,9 +837,7 @@ name|renewerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenRenewer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|TokenRenewer
@@ -879,9 +877,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|validatorList
@@ -1353,9 +1349,7 @@ name|renewerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenRenewer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|TokenRenewer
@@ -1402,9 +1396,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|validatorList
@@ -1884,9 +1876,7 @@ name|renewerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenRenewer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|TokenRenewer
@@ -1933,9 +1923,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|validatorList
@@ -2415,9 +2403,7 @@ name|renewerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenRenewer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|TokenRenewer
@@ -2464,9 +2450,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|validatorList

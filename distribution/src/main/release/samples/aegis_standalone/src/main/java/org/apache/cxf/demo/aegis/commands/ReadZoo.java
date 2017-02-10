@@ -213,9 +213,7 @@ name|rootClasses
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Type
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|rootClasses

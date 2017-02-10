@@ -3392,9 +3392,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaObjectHandler
-argument_list|>
+argument_list|<>
 argument_list|(
 name|length
 argument_list|)

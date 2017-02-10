@@ -469,9 +469,7 @@ name|policies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Collections
@@ -918,9 +916,7 @@ name|loadedPolicies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|PolicyBuilder
@@ -1103,9 +1099,7 @@ name|policies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1150,9 +1144,7 @@ name|policyElements
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1195,9 +1187,7 @@ name|policyReferenceElements
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

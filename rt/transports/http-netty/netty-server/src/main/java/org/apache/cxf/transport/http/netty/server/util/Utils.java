@@ -602,9 +602,7 @@ name|foundCookie
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Cookie
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -701,9 +699,7 @@ name|foundCookie
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Cookie
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -944,9 +940,7 @@ name|locales
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Locale
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

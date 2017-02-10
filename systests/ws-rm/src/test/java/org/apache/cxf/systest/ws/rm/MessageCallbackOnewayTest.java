@@ -640,9 +640,7 @@ name|acks
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|long
@@ -1765,9 +1763,7 @@ name|CALL_ARGS
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1993,9 +1989,7 @@ name|callbacks
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Callback
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

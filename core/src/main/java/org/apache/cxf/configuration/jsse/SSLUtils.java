@@ -2243,9 +2243,7 @@ name|filteredCipherSuites
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -2256,9 +2254,7 @@ name|excludedCipherSuites
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -2582,9 +2578,7 @@ name|patterns
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Pattern
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

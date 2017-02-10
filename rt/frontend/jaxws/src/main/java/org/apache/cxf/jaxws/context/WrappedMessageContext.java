@@ -2301,9 +2301,7 @@ name|attachments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|mc
@@ -2383,9 +2381,7 @@ name|set
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

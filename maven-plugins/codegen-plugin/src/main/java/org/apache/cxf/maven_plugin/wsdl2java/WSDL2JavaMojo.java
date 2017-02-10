@@ -924,9 +924,7 @@ name|newList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|GenericWsdlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2206,9 +2204,7 @@ name|files
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|File
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final
@@ -2220,9 +2216,7 @@ name|errorfiles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|File
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ctx
@@ -2593,9 +2587,7 @@ name|effectiveWsdlOptions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|GenericWsdlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

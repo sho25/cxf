@@ -452,9 +452,7 @@ name|messages
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Message
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -466,9 +464,7 @@ name|properties
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RMProperties
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -480,9 +476,7 @@ name|sequences
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SequenceType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -494,9 +488,7 @@ name|identifiers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Identifier
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -508,9 +500,7 @@ name|mocks
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

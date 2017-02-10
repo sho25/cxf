@@ -452,9 +452,7 @@ name|HEADERS_WITH_POSSIBLE_QUOTES
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|HEADERS_WITH_POSSIBLE_QUOTES
@@ -1247,9 +1245,7 @@ name|newLs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Locale
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -1764,9 +1760,7 @@ name|newValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1853,9 +1847,7 @@ name|values
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|4
 argument_list|)

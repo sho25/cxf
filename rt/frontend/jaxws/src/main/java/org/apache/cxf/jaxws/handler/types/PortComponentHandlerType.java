@@ -337,9 +337,7 @@ name|description
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DescriptionType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -369,9 +367,7 @@ name|displayName
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DisplayNameType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -401,9 +397,7 @@ name|icon
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|IconType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -506,9 +500,7 @@ name|initParam
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParamValueType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -538,9 +530,7 @@ name|soapHeader
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XsdQNameType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -570,9 +560,7 @@ name|soapRole
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CString
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

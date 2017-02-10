@@ -1289,9 +1289,7 @@ name|fil1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|FaultInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|match
@@ -1342,9 +1340,7 @@ name|fil2
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|FaultInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|match

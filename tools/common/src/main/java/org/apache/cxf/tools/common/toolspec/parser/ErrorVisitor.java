@@ -129,9 +129,7 @@ name|errors
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|CommandLineError
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

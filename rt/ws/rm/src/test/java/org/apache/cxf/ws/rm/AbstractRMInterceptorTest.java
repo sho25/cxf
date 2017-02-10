@@ -986,9 +986,7 @@ name|ais
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|EasyMock

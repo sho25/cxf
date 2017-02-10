@@ -1520,9 +1520,7 @@ name|RESOURCE_LEVEL_PARAMS
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|RESOURCE_LEVEL_PARAMS
@@ -1965,9 +1963,7 @@ name|generatedServiceClasses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1979,9 +1975,7 @@ name|generatedTypeClasses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -2017,9 +2011,7 @@ name|compilerArgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -2441,9 +2433,7 @@ name|typeClassNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|GrammarInfo
@@ -7342,9 +7332,7 @@ name|elementRefs
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -12634,9 +12622,7 @@ name|schemas
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SchemaInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -14362,9 +14348,7 @@ name|resourceClassNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

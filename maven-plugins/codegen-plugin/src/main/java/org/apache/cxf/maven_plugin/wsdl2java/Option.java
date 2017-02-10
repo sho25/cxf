@@ -142,9 +142,7 @@ name|packagenames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Extra arguments to pass to the command-line code generator. For compatibility as well as to      * specify any extra flags not addressed by other parameters      */
@@ -157,9 +155,7 @@ name|extraargs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Extra arguments to pass to the XJC compiler command-line code generator.      * For compatibility as well as to specify any extra flags not addressed by other parameters      */
@@ -172,9 +168,7 @@ name|xjcargs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -206,9 +200,7 @@ name|namespaceExcludes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Enables or disables the loading of the default excludes namespace mapping. Default is true.      */
@@ -238,9 +230,7 @@ name|bindingFiles
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Specifies the value of the @WebServiceClient annotation's wsdlLocation property.       */
@@ -298,9 +288,7 @@ name|seiSuper
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Uses @Generated annotation in all generated java classes if the flag is set to true.      */

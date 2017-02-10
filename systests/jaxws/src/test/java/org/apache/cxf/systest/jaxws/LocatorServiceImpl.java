@@ -543,9 +543,7 @@ expr_stmt|;
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Endpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}

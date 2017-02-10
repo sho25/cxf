@@ -432,9 +432,7 @@ name|grants
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ServerAuthorizationCodeGrant
-argument_list|>
+argument_list|<>
 argument_list|(
 name|keys
 operator|.

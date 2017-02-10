@@ -451,9 +451,7 @@ name|ais
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AssertionInfo
@@ -694,9 +692,7 @@ name|alt1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|alt1
@@ -721,9 +717,7 @@ name|alt2
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|alt2
@@ -756,9 +750,7 @@ name|alt1
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 argument_list|)
@@ -773,9 +765,7 @@ name|alt2
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 argument_list|)
@@ -1094,9 +1084,7 @@ name|assertions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertions

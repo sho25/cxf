@@ -1417,9 +1417,7 @@ name|xmlTypesCheckedForCrossImports
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|XmlSchemaType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|xmlTypesCheckedForCrossImportsPerSchema

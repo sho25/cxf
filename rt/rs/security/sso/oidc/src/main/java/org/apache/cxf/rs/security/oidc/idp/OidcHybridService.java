@@ -327,9 +327,7 @@ name|types
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|types
@@ -382,9 +380,7 @@ block|}
 return|return
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|types
 argument_list|)

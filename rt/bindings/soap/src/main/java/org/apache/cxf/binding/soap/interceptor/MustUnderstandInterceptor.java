@@ -464,9 +464,7 @@ name|mustUnderstandHeaders
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Header
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -477,9 +475,7 @@ name|serviceRoles
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -490,9 +486,7 @@ name|notUnderstandHeaders
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -503,9 +497,7 @@ name|ultimateReceiverHeaders
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Header
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -516,9 +508,7 @@ name|mustUnderstandQNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|initServiceSideInfo
@@ -942,9 +932,7 @@ name|notFound
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1460,9 +1448,7 @@ name|notFound
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

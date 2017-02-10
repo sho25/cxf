@@ -3163,9 +3163,7 @@ name|doFooList
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Foo
-argument_list|>
+argument_list|<>
 argument_list|(
 name|fooSet
 argument_list|)
@@ -3209,9 +3207,7 @@ name|rev
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -3428,9 +3424,7 @@ name|listInput
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -4399,9 +4393,7 @@ name|rev
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -4618,9 +4610,7 @@ name|listInput
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

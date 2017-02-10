@@ -843,9 +843,7 @@ name|genericArgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ValueHolder
-argument_list|>
+argument_list|<>
 argument_list|(
 name|CastUtils
 operator|.

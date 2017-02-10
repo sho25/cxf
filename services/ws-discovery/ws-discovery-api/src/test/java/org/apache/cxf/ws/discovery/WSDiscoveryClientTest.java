@@ -426,9 +426,7 @@ name|possibles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|NetworkInterface
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while

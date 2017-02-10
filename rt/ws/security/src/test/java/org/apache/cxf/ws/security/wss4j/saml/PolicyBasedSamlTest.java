@@ -255,9 +255,7 @@ argument_list|)
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|CoverageType
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -285,9 +283,7 @@ literal|null
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|CoverageType
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -316,9 +312,7 @@ argument_list|)
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|CoverageType
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -360,9 +354,7 @@ argument_list|)
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|CoverageType
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -390,9 +382,7 @@ literal|null
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|CoverageType
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -421,9 +411,7 @@ argument_list|)
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|CoverageType
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

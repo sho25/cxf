@@ -739,9 +739,7 @@ name|children
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JsSimpleDomNode
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Node
@@ -847,9 +845,7 @@ name|children
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JsSimpleDomNode
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

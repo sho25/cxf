@@ -520,9 +520,7 @@ name|chain
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -676,9 +674,7 @@ name|chain
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Node

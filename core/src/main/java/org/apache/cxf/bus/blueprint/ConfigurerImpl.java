@@ -585,9 +585,7 @@ name|m
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MatcherHolder
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|wildCardBeanDefinitions

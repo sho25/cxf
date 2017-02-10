@@ -389,9 +389,7 @@ name|STANDARD_CONTEXT_CLASSES
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 static|static
@@ -2464,9 +2462,7 @@ name|fields
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Field
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|theFields

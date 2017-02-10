@@ -2709,9 +2709,7 @@ name|createSchemaCompilerWithDefaultAllocator
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -5552,9 +5550,7 @@ name|ns
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Node
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|impElemList

@@ -90,9 +90,7 @@ name|events
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|LogEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

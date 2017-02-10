@@ -201,9 +201,7 @@ name|busses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Bus
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try

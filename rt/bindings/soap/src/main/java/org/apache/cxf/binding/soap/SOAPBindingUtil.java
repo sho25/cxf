@@ -1253,9 +1253,7 @@ name|headers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SoapHeader
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1461,9 +1459,7 @@ name|headers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SoapHeader
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|BindingInput
@@ -1601,9 +1597,7 @@ name|headers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SoapHeader
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|BindingOutput
@@ -1772,9 +1766,7 @@ name|faults
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SoapFault
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -1369,9 +1369,7 @@ name|purged
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection
@@ -1382,9 +1380,7 @@ name|resends
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ResendCandidate
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Identifier
@@ -1632,9 +1628,7 @@ name|unacknowledged
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -2305,9 +2299,7 @@ name|sequenceCandidates
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ResendCandidate
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|candidates

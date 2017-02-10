@@ -121,9 +121,7 @@ name|scope
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|parent
@@ -234,9 +232,7 @@ name|scope
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|containingScope
 operator|.
@@ -275,9 +271,7 @@ name|scope
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|containingScope
 operator|.
@@ -324,9 +318,7 @@ name|scope
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|containingScope
 operator|.
@@ -378,9 +370,7 @@ name|scope
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|containingScope
 operator|.

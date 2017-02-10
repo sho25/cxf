@@ -613,9 +613,7 @@ name|contexts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MetricsContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1102,9 +1100,7 @@ name|contexts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MetricsContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1282,9 +1278,7 @@ name|contexts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MetricsContext
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

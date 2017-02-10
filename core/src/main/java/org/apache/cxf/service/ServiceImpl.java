@@ -296,9 +296,7 @@ name|serviceInfos
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ServiceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if
