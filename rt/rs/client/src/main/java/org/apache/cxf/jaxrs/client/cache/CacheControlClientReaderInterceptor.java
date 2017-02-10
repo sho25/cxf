@@ -319,10 +319,11 @@ argument_list|>
 name|cache
 parameter_list|)
 block|{
-name|setCache
-argument_list|(
+name|this
+operator|.
 name|cache
-argument_list|)
+operator|=
+name|cache
 expr_stmt|;
 block|}
 specifier|public

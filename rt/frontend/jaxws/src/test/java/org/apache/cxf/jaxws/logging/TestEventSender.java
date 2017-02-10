@@ -11,7 +11,7 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|ext
+name|jaxws
 operator|.
 name|logging
 package|;

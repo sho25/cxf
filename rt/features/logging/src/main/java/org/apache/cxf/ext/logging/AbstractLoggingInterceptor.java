@@ -144,7 +144,7 @@ literal|48
 operator|*
 literal|1024
 decl_stmt|;
-specifier|protected
+specifier|public
 specifier|static
 specifier|final
 name|String

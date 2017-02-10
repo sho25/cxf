@@ -363,13 +363,12 @@ argument_list|()
 expr_stmt|;
 name|this
 operator|.
-name|setAudiences
-argument_list|(
+name|audiences
+operator|=
 name|token
 operator|.
 name|getAudiences
 argument_list|()
-argument_list|)
 expr_stmt|;
 name|this
 operator|.

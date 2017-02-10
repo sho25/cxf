@@ -599,11 +599,6 @@ expr_stmt|;
 comment|/*                 payload = new DOMSource();         message.setContent(Source.class, payload);*/
 block|}
 annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"rawtypes"
-argument_list|)
-annotation|@
 name|Test
 specifier|public
 name|void

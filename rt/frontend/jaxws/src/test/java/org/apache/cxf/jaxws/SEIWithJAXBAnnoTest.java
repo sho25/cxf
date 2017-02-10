@@ -91,9 +91,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|frontend
+name|ext
 operator|.
-name|ClientProxy
+name|logging
+operator|.
+name|LoggingOutInterceptor
 import|;
 end_import
 
@@ -105,9 +107,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|frontend
 operator|.
-name|LoggingOutInterceptor
+name|ClientProxy
 import|;
 end_import
 

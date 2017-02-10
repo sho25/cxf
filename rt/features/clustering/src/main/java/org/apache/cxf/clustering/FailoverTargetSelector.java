@@ -318,10 +318,9 @@ argument_list|()
 expr_stmt|;
 name|this
 operator|.
-name|setClientBootstrapAddress
-argument_list|(
 name|clientBootstrapAddress
-argument_list|)
+operator|=
+name|clientBootstrapAddress
 expr_stmt|;
 block|}
 comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *       * @param c specific conduit      */
