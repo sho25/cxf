@@ -9684,6 +9684,13 @@ name|createHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|data
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|docInfo
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|WSSecurityEngineResult
@@ -9697,8 +9704,6 @@ argument_list|(
 name|child
 argument_list|,
 name|data
-argument_list|,
-name|docInfo
 argument_list|)
 decl_stmt|;
 return|return

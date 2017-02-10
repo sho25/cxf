@@ -988,9 +988,10 @@ name|getCompiledSubjectContraints
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|WSDocInfo
-name|docInfo
-init|=
+name|requestData
+operator|.
+name|setWsDocInfo
+argument_list|(
 operator|new
 name|WSDocInfo
 argument_list|(
@@ -999,7 +1000,8 @@ operator|.
 name|getOwnerDocument
 argument_list|()
 argument_list|)
-decl_stmt|;
+argument_list|)
+expr_stmt|;
 comment|// Verify the signature
 name|Signature
 name|sig
@@ -1033,8 +1035,6 @@ operator|new
 name|WSSSAMLKeyInfoProcessor
 argument_list|(
 name|requestData
-argument_list|,
-name|docInfo
 argument_list|)
 argument_list|,
 name|sigCrypto

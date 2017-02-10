@@ -1461,6 +1461,13 @@ name|getOwnerDocument
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|data
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|docInfo
+argument_list|)
+expr_stmt|;
 name|KeyInfo
 name|keyInfo
 init|=
@@ -1485,8 +1492,6 @@ operator|new
 name|WSSSAMLKeyInfoProcessor
 argument_list|(
 name|data
-argument_list|,
-name|docInfo
 argument_list|)
 argument_list|,
 name|data
@@ -1510,8 +1515,6 @@ operator|new
 name|WSSSAMLKeyInfoProcessor
 argument_list|(
 name|data
-argument_list|,
-literal|null
 argument_list|)
 argument_list|,
 name|data

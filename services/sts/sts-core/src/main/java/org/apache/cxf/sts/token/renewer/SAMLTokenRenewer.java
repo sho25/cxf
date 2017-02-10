@@ -1998,14 +1998,6 @@ argument_list|(
 name|wssConfig
 argument_list|)
 expr_stmt|;
-name|requestData
-operator|.
-name|setCallbackHandler
-argument_list|(
-name|callbackHandler
-argument_list|)
-expr_stmt|;
-comment|// Parse the HOK subject if it exists
 name|WSDocInfo
 name|docInfo
 init|=
@@ -2026,6 +2018,14 @@ name|getOwnerDocument
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|requestData
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|docInfo
+argument_list|)
+expr_stmt|;
+comment|// Parse the HOK subject if it exists
 name|assertion
 operator|.
 name|parseSubject
@@ -2034,8 +2034,6 @@ operator|new
 name|WSSSAMLKeyInfoProcessor
 argument_list|(
 name|requestData
-argument_list|,
-name|docInfo
 argument_list|)
 argument_list|,
 name|sigCrypto
