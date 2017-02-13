@@ -43,7 +43,7 @@ name|rs
 operator|.
 name|sse
 operator|.
-name|SseBroadcaster
+name|Sse
 import|;
 end_import
 
@@ -57,7 +57,7 @@ name|rs
 operator|.
 name|sse
 operator|.
-name|Sse
+name|SseBroadcaster
 import|;
 end_import
 
