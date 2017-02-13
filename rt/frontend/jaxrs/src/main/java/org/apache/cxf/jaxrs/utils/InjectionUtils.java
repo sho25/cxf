@@ -7322,7 +7322,7 @@ block|{
 return|return
 name|setter
 operator|.
-name|getClass
+name|getDeclaringClass
 argument_list|()
 operator|.
 name|getMethod
@@ -7338,11 +7338,6 @@ name|substring
 argument_list|(
 literal|3
 argument_list|)
-argument_list|,
-operator|new
-name|Class
-index|[]
-block|{}
 argument_list|)
 return|;
 block|}
