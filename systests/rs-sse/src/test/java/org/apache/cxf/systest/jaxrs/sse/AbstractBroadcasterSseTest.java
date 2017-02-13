@@ -244,7 +244,7 @@ argument_list|)
 operator|.
 name|get
 argument_list|(
-literal|5
+literal|10
 argument_list|,
 name|TimeUnit
 operator|.

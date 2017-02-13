@@ -107,7 +107,7 @@ name|sse
 operator|.
 name|atmosphere
 operator|.
-name|SseAtmosphereContextProvider
+name|SseAtmosphereEventSinkContextProvider
 import|;
 end_import
 
@@ -148,16 +148,7 @@ operator|.
 name|add
 argument_list|(
 operator|new
-name|SseAtmosphereContextProvider
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|providers
-operator|.
-name|add
-argument_list|(
-operator|new
-name|SseEventOutputProvider
+name|SseAtmosphereEventSinkContextProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
