@@ -1290,6 +1290,11 @@ expr_stmt|;
 block|}
 block|}
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|private
 name|void
 name|handleMessageInternal
@@ -1634,9 +1639,8 @@ argument_list|)
 expr_stmt|;
 comment|// Only search for and expand (Signed) XOP Elements if MTOM is enabled (and not
 comment|// explicitly specified by the user)
-name|String
-name|expandXOP
-init|=
+if|if
+condition|(
 name|getString
 argument_list|(
 name|WSHandlerConstants
@@ -1645,17 +1649,24 @@ name|EXPAND_XOP_INCLUDE_FOR_SIGNATURE
 argument_list|,
 name|msg
 argument_list|)
-decl_stmt|;
-if|if
-condition|(
-name|expandXOP
+operator|==
+literal|null
+operator|&&
+name|getString
+argument_list|(
+name|WSHandlerConstants
+operator|.
+name|EXPAND_XOP_INCLUDE
+argument_list|,
+name|msg
+argument_list|)
 operator|==
 literal|null
 condition|)
 block|{
 name|reqData
 operator|.
-name|setExpandXopIncludeForSignature
+name|setExpandXopInclude
 argument_list|(
 name|AttachmentUtil
 operator|.
