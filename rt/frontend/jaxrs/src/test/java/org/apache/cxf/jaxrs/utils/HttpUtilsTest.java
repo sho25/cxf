@@ -405,10 +405,10 @@ name|testPathEncode
 parameter_list|()
 block|{
 comment|// rfc3986.txt 3.3
-comment|//segment-nz = 1*pchar
-comment|//pchar = unreserved / pct-encoded / sub-delims / ":" / "@"
-comment|// sub-delims = "!" / "$" / "&" / "'" / "(" / ")" / "*" / "+" / "," / ";" / "="
-comment|// unreserved = ALPHA / DIGIT / "-" / "." / "_" / "~"
+comment|//segment-nz    = 1*pchar
+comment|//pchar         = unreserved / pct-encoded / sub-delims / ":" / "@"
+comment|// sub-delims  = "!" / "$" / "&" / "'" / "(" / ")" / "*" / "+" / "," / ";" / "="
+comment|// unreserved  = ALPHA / DIGIT / "-" / "." / "_" / "~"
 comment|// '&' has to be represented as&amp; in WADL
 name|String
 name|pathChars

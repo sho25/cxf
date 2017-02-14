@@ -3814,9 +3814,9 @@ name|results
 operator|.
 name|indexOf
 argument_list|(
-literal|"@WebResult(name = \"return\",  "
+literal|"@WebResult(name  =  \"return\",  "
 operator|+
-literal|"targetNamespace = \"http://apache.org/sayHi\")"
+literal|"targetNamespace  =  \"http://apache.org/sayHi\")"
 argument_list|)
 operator|!=
 operator|-
@@ -3829,7 +3829,7 @@ name|results
 operator|.
 name|indexOf
 argument_list|(
-literal|"@WebResult(name = \"return\",  targetNamespace  =  \"\")"
+literal|"@WebResult(name  =  \"return\",  targetNamespace  =  \"\")"
 argument_list|)
 operator|!=
 operator|-
@@ -5036,7 +5036,7 @@ name|results
 operator|.
 name|indexOf
 argument_list|(
-literal|"@WebParam(partName = \"inInt\",  name  =  \"inInt\")"
+literal|"@WebParam(partName  =  \"inInt\",  name  =  \"inInt\")"
 argument_list|)
 operator|!=
 operator|-
@@ -5318,7 +5318,7 @@ name|results
 operator|.
 name|indexOf
 argument_list|(
-literal|"name = \"MessengerHeader"
+literal|"name  =  \"MessengerHeader"
 argument_list|)
 operator|!=
 operator|-
@@ -5331,7 +5331,7 @@ name|results
 operator|.
 name|indexOf
 argument_list|(
-literal|"header = true"
+literal|"header  =  true"
 argument_list|)
 operator|!=
 operator|-

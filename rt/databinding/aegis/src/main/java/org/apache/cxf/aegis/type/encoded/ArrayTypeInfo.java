@@ -653,10 +653,10 @@ argument_list|)
 throw|;
 block|}
 comment|// arrayTypeValue = atype , asize ;
-comment|// atype = QName , [ rank ] ;
-comment|// rank = "[" , { "," } , "]" ;
-comment|// asize = "[" , length , { ","  length} , "]" ;
-comment|// length = DIGIT , { DIGIT } ;
+comment|// atype          = QName , [ rank ] ;
+comment|// rank           = "[" , { "," } , "]" ;
+comment|// asize          = "[" , length , { ","  length} , "]" ;
+comment|// length         = DIGIT , { DIGIT } ;
 comment|//
 comment|// x:foo[,,,][1,2,3,4]
 name|StringTokenizer
