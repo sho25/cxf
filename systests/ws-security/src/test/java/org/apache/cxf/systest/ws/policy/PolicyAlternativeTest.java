@@ -204,7 +204,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for policy alternatives. The endpoint requires either a UsernameToken (insecured) OR  * a message signature using the Asymmetric binding.   */
+comment|/**  * This is a test for policy alternatives. The endpoint requires either a UsernameToken (insecured) OR  * a message signature using the Asymmetric binding.  */
 end_comment
 
 begin_class
@@ -911,7 +911,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * The client does not require a client cert so invocation should fail      *       * @throws Exception      */
+comment|/**      * The client does not require a client cert so invocation should fail      *      * @throws Exception      */
 annotation|@
 name|org
 operator|.
@@ -1303,7 +1303,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * The client uses a Transport binding policy with a Endorsing Supporting X509 Token as well as a       * Signed Endorsing UsernameToken. Here the client is trying to trick the Service Provider as       * the UsernameToken signs the wsa:To Header, not the X.509 Token.      */
+comment|/**      * The client uses a Transport binding policy with a Endorsing Supporting X509 Token as well as a      * Signed Endorsing UsernameToken. Here the client is trying to trick the Service Provider as      * the UsernameToken signs the wsa:To Header, not the X.509 Token.      */
 annotation|@
 name|org
 operator|.

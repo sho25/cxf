@@ -173,7 +173,7 @@ argument_list|>
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**      * Date type converter.       */
+comment|/**      * Date type converter.      */
 specifier|private
 specifier|static
 class|class
@@ -235,7 +235,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Long type converter.       */
+comment|/**      * Long type converter.      */
 specifier|private
 specifier|static
 class|class
@@ -287,7 +287,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Double type converter.       */
+comment|/**      * Double type converter.      */
 specifier|private
 specifier|static
 class|class
@@ -339,7 +339,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Float type converter.       */
+comment|/**      * Float type converter.      */
 specifier|private
 specifier|static
 class|class
@@ -391,7 +391,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Integer type converter.       */
+comment|/**      * Integer type converter.      */
 specifier|private
 specifier|static
 class|class

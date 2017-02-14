@@ -246,7 +246,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the decoupling the soap fault handling if the fault occurs after   * the message is queued and retransmission is scheduled.  */
+comment|/**  * Tests the decoupling the soap fault handling if the fault occurs after  * the message is queued and retransmission is scheduled.  */
 end_comment
 
 begin_class

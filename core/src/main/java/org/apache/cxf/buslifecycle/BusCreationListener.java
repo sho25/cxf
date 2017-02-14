@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The listener interface for receiving notification of when<code>Bus</code>  * objects are created.  *  * It's a simplified form of BusLifeCycleListener that takes the   * target Bus as a parameter which is appropriate if the listener needs   * to be a singleton that works with multiple Bus objects.     *   * A common pattern would be to register a full BusLifeCycleListener on the  * target Bus to receive full Bus events  */
+comment|/**  * The listener interface for receiving notification of when<code>Bus</code>  * objects are created.  *  * It's a simplified form of BusLifeCycleListener that takes the  * target Bus as a parameter which is appropriate if the listener needs  * to be a singleton that works with multiple Bus objects.  *  * A common pattern would be to register a full BusLifeCycleListener on the  * target Bus to receive full Bus events  */
 end_comment
 
 begin_interface
@@ -36,7 +36,7 @@ specifier|public
 interface|interface
 name|BusCreationListener
 block|{
-comment|/**      * Invoked to create a BusLifeCycleListener.         */
+comment|/**      * Invoked to create a BusLifeCycleListener.      */
 name|void
 name|busCreated
 parameter_list|(

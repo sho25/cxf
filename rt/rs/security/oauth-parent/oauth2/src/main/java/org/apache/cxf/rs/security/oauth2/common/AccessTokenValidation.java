@@ -233,7 +233,7 @@ decl_stmt|;
 specifier|public
 name|AccessTokenValidation
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|AccessTokenValidation
 parameter_list|(

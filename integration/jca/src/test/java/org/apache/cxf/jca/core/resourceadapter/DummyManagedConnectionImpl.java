@@ -259,7 +259,7 @@ operator|=
 name|o
 expr_stmt|;
 block|}
-comment|/*     public CXFManagedConnectionFactory getManagedConnectionFactory() {          return (CXFManagedConnectionFactory)theManagedConnectionFactory();     } */
+comment|/*     public CXFManagedConnectionFactory getManagedConnectionFactory() {         return (CXFManagedConnectionFactory)theManagedConnectionFactory();     } */
 block|}
 end_class
 

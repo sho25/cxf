@@ -27,7 +27,7 @@ class|class
 name|WSDLToTypeProcessor
 extends|extends
 name|WSDLToProcessor
-block|{     }
+block|{ }
 end_class
 
 end_unit

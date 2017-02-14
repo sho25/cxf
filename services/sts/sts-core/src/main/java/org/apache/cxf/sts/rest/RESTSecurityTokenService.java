@@ -442,7 +442,7 @@ name|RequestSecurityTokenType
 name|request
 parameter_list|)
 function_decl|;
-comment|/**      * Same as {@link #getToken(Action, RequestSecurityTokenType)} with 'cancel' action.      *       * @param request      * @return      */
+comment|/**      * Same as {@link #getToken(Action, RequestSecurityTokenType)} with 'cancel' action.      *      * @param request      * @return      */
 annotation|@
 name|DELETE
 annotation|@

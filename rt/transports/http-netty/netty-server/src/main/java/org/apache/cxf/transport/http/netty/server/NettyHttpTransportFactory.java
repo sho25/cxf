@@ -392,7 +392,7 @@ return|return
 name|URI_PREFIXES
 return|;
 block|}
-comment|/**      * This call uses the Configurer from the bus to configure      * a bean.      *       * @param bean      */
+comment|/**      * This call uses the Configurer from the bus to configure      * a bean.      *      * @param bean      */
 specifier|protected
 name|void
 name|configure

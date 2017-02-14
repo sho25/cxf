@@ -82,7 +82,7 @@ specifier|public
 interface|interface
 name|DestinationFactory
 block|{
-comment|/**      * Create a destination.      *       * @param ei the endpoint info of the destination.      * @return the created Destination.      */
+comment|/**      * Create a destination.      *      * @param ei the endpoint info of the destination.      * @return the created Destination.      */
 name|Destination
 name|getDestination
 parameter_list|(

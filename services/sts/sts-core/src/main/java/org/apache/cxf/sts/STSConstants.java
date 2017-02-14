@@ -239,7 +239,7 @@ name|TOKEN_RENEWING_ALLOW
 init|=
 literal|"org.apache.cxf.sts.token.renewing.allow"
 decl_stmt|;
-comment|/**      * Constant to store whether the token is allowed to be renewed after it has expired or not       * in the cached Security Token properties.      */
+comment|/**      * Constant to store whether the token is allowed to be renewed after it has expired or not      * in the cached Security Token properties.      */
 specifier|public
 specifier|static
 specifier|final
@@ -248,7 +248,7 @@ name|TOKEN_RENEWING_ALLOW_AFTER_EXPIRY
 init|=
 literal|"org.apache.cxf.sts.token.renewing.allow.after.expiry"
 decl_stmt|;
-comment|/**      * Constant to specify service endpoint as certificate alias for encryption.      * Constant is recognized by STS encryption alias is replaced with AppliesTo() address.       * This address will be used in WSS4J crypto to search service certificate      */
+comment|/**      * Constant to specify service endpoint as certificate alias for encryption.      * Constant is recognized by STS encryption alias is replaced with AppliesTo() address.      * This address will be used in WSS4J crypto to search service certificate      */
 specifier|public
 specifier|static
 specifier|final

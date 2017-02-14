@@ -862,7 +862,7 @@ return|return
 name|URI_PREFIXES
 return|;
 block|}
-comment|/**      * This call uses the Configurer from the bus to configure      * a bean.      *       * @param bean      */
+comment|/**      * This call uses the Configurer from the bus to configure      * a bean.      *      * @param bean      */
 specifier|protected
 name|void
 name|configure
@@ -1068,7 +1068,7 @@ name|bus
 argument_list|)
 return|;
 block|}
-comment|/**      * This call creates a new HTTP Conduit based on the EndpointInfo and      * EndpointReferenceType.      * TODO: What are the formal constraints on EndpointInfo and       * EndpointReferenceType values?      */
+comment|/**      * This call creates a new HTTP Conduit based on the EndpointInfo and      * EndpointReferenceType.      * TODO: What are the formal constraints on EndpointInfo and      * EndpointReferenceType values?      */
 specifier|public
 name|Conduit
 name|getConduit

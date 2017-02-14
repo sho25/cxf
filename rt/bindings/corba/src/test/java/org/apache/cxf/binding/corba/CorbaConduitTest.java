@@ -2541,7 +2541,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|/*String opName = "GreetMe";         NVList nvlist = (NVList)orb.create_list(0);                  Request request = conduit.getRequest(message, "GreetMe", nvlist, null, null);         request.invoke();         */
+comment|/*String opName = "GreetMe";         NVList nvlist = (NVList)orb.create_list(0);          Request request = conduit.getRequest(message, "GreetMe", nvlist, null, null);         request.invoke();         */
 name|org
 operator|.
 name|omg

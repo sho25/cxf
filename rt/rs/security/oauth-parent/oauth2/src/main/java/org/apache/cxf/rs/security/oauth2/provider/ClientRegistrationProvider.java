@@ -100,7 +100,7 @@ name|String
 name|clientId
 parameter_list|)
 function_decl|;
-comment|/**      * Get a list of clients registered by a resource owner.      *        * @param resourceOwner the resource owner, can be null      * @return the list of clients      */
+comment|/**      * Get a list of clients registered by a resource owner.      *      * @param resourceOwner the resource owner, can be null      * @return the list of clients      */
 name|List
 argument_list|<
 name|Client

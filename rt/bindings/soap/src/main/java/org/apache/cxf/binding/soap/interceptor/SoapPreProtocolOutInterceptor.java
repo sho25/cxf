@@ -278,7 +278,7 @@ name|POST_LOGICAL
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Mediate a message dispatch.      *       * @param message the current message      * @throws Fault      */
+comment|/**      * Mediate a message dispatch.      *      * @param message the current message      * @throws Fault      */
 specifier|public
 name|void
 name|handleMessage
@@ -314,7 +314,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Ensure the SOAP version is set for this message.      *       * @param message the current message      */
+comment|/**      * Ensure the SOAP version is set for this message.      *      * @param message the current message      */
 specifier|private
 name|void
 name|ensureVersion
@@ -411,7 +411,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Ensure the SOAP header is set for this message.      *       * @param message the current message      */
+comment|/**      * Ensure the SOAP header is set for this message.      *      * @param message the current message      */
 specifier|private
 name|void
 name|ensureMimeHeaders

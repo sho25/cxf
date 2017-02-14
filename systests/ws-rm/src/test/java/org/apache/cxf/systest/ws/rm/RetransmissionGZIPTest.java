@@ -246,7 +246,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the gzip feature does not interfere with the ws-rm retransmission.  * Note that the current retransmission logic isn't optimal (in some sense, wrong)  * and stores the wire-message and retransmits this wire-message directly. This    * approach is not practical when ws-security is enabled and each message needs to be  * timestamped and signed. Therefore, the current retransmission logic needs to be  * changed one day.  *    * Independently of this fix, this test verifies the gzip feature does not interfere  * with retransmission.  */
+comment|/**  * Tests the gzip feature does not interfere with the ws-rm retransmission.  * Note that the current retransmission logic isn't optimal (in some sense, wrong)  * and stores the wire-message and retransmits this wire-message directly. This  * approach is not practical when ws-security is enabled and each message needs to be  * timestamped and signed. Therefore, the current retransmission logic needs to be  * changed one day.  *  * Independently of this fix, this test verifies the gzip feature does not interfere  * with retransmission.  */
 end_comment
 
 begin_class

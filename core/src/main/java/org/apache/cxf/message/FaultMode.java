@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_enum
@@ -31,7 +31,7 @@ block|,
 name|CHECKED_APPLICATION_FAULT
 block|,
 name|UNCHECKED_APPLICATION_FAULT
-block|,      }
+block|,  }
 end_enum
 
 end_unit

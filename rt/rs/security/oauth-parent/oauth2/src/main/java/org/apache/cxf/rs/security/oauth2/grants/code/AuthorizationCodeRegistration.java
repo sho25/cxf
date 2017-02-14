@@ -104,7 +104,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Captures the information associated with the code grant registration request.  * @see ServerAuthorizationCodeGrant    */
+comment|/**  * Captures the information associated with the code grant registration request.  * @see ServerAuthorizationCodeGrant  */
 end_comment
 
 begin_class
@@ -270,7 +270,7 @@ return|return
 name|requestedScope
 return|;
 block|}
-comment|/**      * Sets the scopes explicitly approved by the end user.      * If this list is empty then the end user had no way to down-scope.       * @param approvedScope the approved scopes      */
+comment|/**      * Sets the scopes explicitly approved by the end user.      * If this list is empty then the end user had no way to down-scope.      * @param approvedScope the approved scopes      */
 specifier|public
 name|void
 name|setApprovedScope

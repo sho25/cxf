@@ -575,7 +575,7 @@ name|stop
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Request reply should not cause roll backs      *       * @throws Exception      */
+comment|/**      * Request reply should not cause roll backs      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

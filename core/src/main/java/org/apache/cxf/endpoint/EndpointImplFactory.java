@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface defines an object that can create EndpointImpl  * objects.   */
+comment|/**  * This interface defines an object that can create EndpointImpl  * objects.  */
 end_comment
 
 begin_interface

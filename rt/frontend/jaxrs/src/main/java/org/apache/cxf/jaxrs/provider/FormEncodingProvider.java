@@ -476,7 +476,7 @@ decl_stmt|;
 specifier|public
 name|FormEncodingProvider
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|FormEncodingProvider
 parameter_list|(

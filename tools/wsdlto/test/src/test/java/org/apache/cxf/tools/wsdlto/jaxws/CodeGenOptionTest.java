@@ -767,7 +767,7 @@ name|fail
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Performs the WSDLList option test for the specified list of parameters.      *       * @param wsdlURL The url of the wsdlList. Can be null.      * @param wsdls      * @throws IOException      * @throws ToolException      */
+comment|/**      * Performs the WSDLList option test for the specified list of parameters.      *      * @param wsdlURL The url of the wsdlList. Can be null.      * @param wsdls      * @throws IOException      * @throws ToolException      */
 specifier|private
 name|void
 name|doWSDLListOptionTest

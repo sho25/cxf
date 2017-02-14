@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This resource issues a temporary request token to the Client  * which will be later authorised and exchanged for the access token   */
+comment|/**  * This resource issues a temporary request token to the Client  * which will be later authorised and exchanged for the access token  */
 end_comment
 
 begin_class

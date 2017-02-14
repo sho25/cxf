@@ -82,7 +82,7 @@ specifier|public
 interface|interface
 name|BindingFactory
 block|{
-comment|/**      * Create a Binding from the BindingInfo metadata.      *       * @param binding      * @return the Binding object      */
+comment|/**      * Create a Binding from the BindingInfo metadata.      *      * @param binding      * @return the Binding object      */
 name|Binding
 name|createBinding
 parameter_list|(
@@ -90,7 +90,7 @@ name|BindingInfo
 name|binding
 parameter_list|)
 function_decl|;
-comment|/**      * Create a "default" BindingInfo object for the service. Can return a subclass.       * @param service      * @param namespace      * @param configObject - binding specific configuration object      * @return the BindingInfo object      */
+comment|/**      * Create a "default" BindingInfo object for the service. Can return a subclass.      * @param service      * @param namespace      * @param configObject - binding specific configuration object      * @return the BindingInfo object      */
 name|BindingInfo
 name|createBindingInfo
 parameter_list|(
@@ -104,7 +104,7 @@ name|Object
 name|configObject
 parameter_list|)
 function_decl|;
-comment|/**      * Set the destination's message observer which is created by using the endpoint to      * listen the incoming message      * @param d the destination that will be set the MessageObserver       * @param e the endpoint to build up the MessageObserver            */
+comment|/**      * Set the destination's message observer which is created by using the endpoint to      * listen the incoming message      * @param d the destination that will be set the MessageObserver      * @param e the endpoint to build up the MessageObserver      */
 name|void
 name|addListener
 parameter_list|(

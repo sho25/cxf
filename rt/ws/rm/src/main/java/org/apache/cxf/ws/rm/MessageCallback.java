@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Called by RM code when messages accepted for sending and when acknowledged.   */
+comment|/**  * Called by RM code when messages accepted for sending and when acknowledged.  */
 end_comment
 
 begin_interface

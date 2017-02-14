@@ -791,7 +791,7 @@ return|return
 name|list
 return|;
 block|}
-comment|/*      * We do not require an id from the configuration.      *       * (non-Javadoc)      * @see org.springframework.beans.factory.xml.AbstractBeanDefinitionParser#shouldGenerateId()      */
+comment|/*      * We do not require an id from the configuration.      *      * (non-Javadoc)      * @see org.springframework.beans.factory.xml.AbstractBeanDefinitionParser#shouldGenerateId()      */
 annotation|@
 name|Override
 specifier|protected

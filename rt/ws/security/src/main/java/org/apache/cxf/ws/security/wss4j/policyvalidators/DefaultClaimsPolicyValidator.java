@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Validate a WS-SecurityPolicy Claims policy for the   * "http://schemas.xmlsoap.org/ws/2005/05/identity" namespace.  */
+comment|/**  * Validate a WS-SecurityPolicy Claims policy for the  * "http://schemas.xmlsoap.org/ws/2005/05/identity" namespace.  */
 end_comment
 
 begin_class
@@ -102,7 +102,7 @@ name|DEFAULT_CLAIMS_NAMESPACE
 init|=
 literal|"http://schemas.xmlsoap.org/ws/2005/05/identity"
 decl_stmt|;
-comment|/**      * Validate a particular Claims policy against a received SAML Assertion.       * Return true if the policy is valid.      */
+comment|/**      * Validate a particular Claims policy against a received SAML Assertion.      * Return true if the policy is valid.      */
 specifier|public
 name|boolean
 name|validatePolicy

@@ -278,7 +278,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * injects references specified using @Resource annotation   *   */
+comment|/**  * injects references specified using @Resource annotation  *  */
 end_comment
 
 begin_class

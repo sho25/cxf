@@ -480,7 +480,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Unit test for testing DocLiteralInInterceptor to use Source Data Binding   *   */
+comment|/**  * Unit test for testing DocLiteralInInterceptor to use Source Data Binding  *  */
 end_comment
 
 begin_class

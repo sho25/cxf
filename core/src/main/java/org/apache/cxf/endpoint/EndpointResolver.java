@@ -71,7 +71,7 @@ name|EndpointReferenceType
 name|physical
 parameter_list|)
 function_decl|;
-comment|/**      * Mint a new abstract EPR for a given service name.      *       * @param serviceName      * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Mint a new abstract EPR for a given service name.      *      * @param serviceName      * @return the newly minted EPR if appropriate, null otherwise      */
 name|EndpointReferenceType
 name|mint
 parameter_list|(
@@ -79,7 +79,7 @@ name|QName
 name|serviceName
 parameter_list|)
 function_decl|;
-comment|/**      * Mint a new abstract EPR for a given concrete EPR      *       * @param physical      * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Mint a new abstract EPR for a given concrete EPR      *      * @param physical      * @return the newly minted EPR if appropriate, null otherwise      */
 name|EndpointReferenceType
 name|mint
 parameter_list|(

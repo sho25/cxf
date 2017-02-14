@@ -382,7 +382,7 @@ name|endpointUri
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object       * @param target       */
+comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object      * @param target      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
@@ -810,7 +810,7 @@ operator|+
 name|rest
 return|;
 block|}
-comment|/**      * Configure properties form map.      * For each key of the map first a property with the same name in the endpoint is tried.      * If that does not match then the value is either stored in the jndiParameters or the parameters      * depending on the prefix of the key. If it matches JNDI_PARAMETER_NAME_PREFIX it is stored in the       * jndiParameters else in the parameters      *       * @param endpoint      * @param params      */
+comment|/**      * Configure properties form map.      * For each key of the map first a property with the same name in the endpoint is tried.      * If that does not match then the value is either stored in the jndiParameters or the parameters      * depending on the prefix of the key. If it matches JNDI_PARAMETER_NAME_PREFIX it is stored in the      * jndiParameters else in the parameters      *      * @param endpoint      * @param params      */
 specifier|private
 name|void
 name|configureProperties

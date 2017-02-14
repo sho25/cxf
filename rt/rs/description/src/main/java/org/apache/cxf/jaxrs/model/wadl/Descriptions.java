@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Collection of categorized {@link Description} annotations.  *   */
+comment|/**  * Collection of categorized {@link Description} annotations.  *  */
 end_comment
 
 begin_annotation_defn

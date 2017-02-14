@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_comment
@@ -267,7 +267,7 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-comment|/**      * *      *       * @return Returns the any1value.      */
+comment|/**      * *      *      * @return Returns the any1value.      */
 specifier|public
 name|Object
 name|getAny1value
@@ -277,7 +277,7 @@ return|return
 name|any1value
 return|;
 block|}
-comment|/**      * *      *       * @return Returns the anyNvalue.      */
+comment|/**      * *      *      * @return Returns the anyNvalue.      */
 specifier|public
 name|Object
 index|[]
@@ -288,7 +288,7 @@ return|return
 name|anyNvalue
 return|;
 block|}
-comment|/**      * *      *       * @return Returns the anyOptionalValue.      */
+comment|/**      * *      *      * @return Returns the anyOptionalValue.      */
 specifier|public
 name|Object
 name|getAnyOptionalValue
@@ -298,7 +298,7 @@ return|return
 name|anyOptionalValue
 return|;
 block|}
-comment|/**      * *      *       * @return Returns the before.      */
+comment|/**      * *      *      * @return Returns the before.      */
 specifier|public
 name|String
 name|getBefore
@@ -308,7 +308,7 @@ return|return
 name|before
 return|;
 block|}
-comment|/**      * *      *       * @return Returns the after.      */
+comment|/**      * *      *      * @return Returns the after.      */
 specifier|public
 name|String
 name|getAfter

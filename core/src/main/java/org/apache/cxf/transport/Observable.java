@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|Observable
 block|{
-comment|/**      * Register a message observer for incoming messages.      *       * @param observer the observer to notify on receipt of incoming      */
+comment|/**      * Register a message observer for incoming messages.      *      * @param observer the observer to notify on receipt of incoming      */
 name|void
 name|setMessageObserver
 parameter_list|(

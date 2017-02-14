@@ -128,7 +128,7 @@ specifier|private
 name|String
 name|documentation
 decl_stmt|;
-comment|/**      * Initializes a new instance of the<code>MessagePartContainer</code>.      * @param operation the operation.      * @param nm       */
+comment|/**      * Initializes a new instance of the<code>MessagePartContainer</code>.      * @param operation the operation.      * @param nm      */
 name|AbstractMessageContainer
 parameter_list|(
 name|OperationInfo

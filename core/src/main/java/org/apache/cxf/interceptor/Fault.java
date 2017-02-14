@@ -656,7 +656,7 @@ return|return
 name|detail
 return|;
 block|}
-comment|/**      * Sets a details<code>Node</code> on this fault.      *       * @param details the detail node.      */
+comment|/**      * Sets a details<code>Node</code> on this fault.      *      * @param details the detail node.      */
 specifier|public
 name|void
 name|setDetail
@@ -670,7 +670,7 @@ operator|=
 name|details
 expr_stmt|;
 block|}
-comment|/**      * Indicates whether this fault has a detail message.      *       * @return<code>true</code> if this fault has a detail message;      *<code>false</code> otherwise.      */
+comment|/**      * Indicates whether this fault has a detail message.      *      * @return<code>true</code> if this fault has a detail message;      *<code>false</code> otherwise.      */
 specifier|public
 name|boolean
 name|hasDetails
@@ -684,7 +684,7 @@ operator|!=
 literal|null
 return|;
 block|}
-comment|/**      * Returns the detail node. If no detail node has been set, an empty      *<code>&lt;detail&gt;</code> is created.      *       * @return the detail node.      */
+comment|/**      * Returns the detail node. If no detail node has been set, an empty      *<code>&lt;detail&gt;</code> is created.      *      * @return the detail node.      */
 specifier|public
 name|Element
 name|getOrCreateDetail
@@ -726,7 +726,7 @@ operator|.
 name|statusCode
 return|;
 block|}
-comment|/**      * Set http header status code on this fault.      *       * @param statusCode      */
+comment|/**      * Set http header status code on this fault.      *      * @param statusCode      */
 specifier|public
 name|void
 name|setStatusCode

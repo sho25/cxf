@@ -50,7 +50,7 @@ decl_stmt|;
 specifier|public
 name|ManyTags
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|setTags

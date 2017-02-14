@@ -60,7 +60,7 @@ specifier|public
 interface|interface
 name|SubjectRoleParser
 block|{
-comment|/**      * Return the set of User/Principal roles from the Subject.      * @param principal the optional Principal       * @param subject the JAAS Subject      * @return the set of User/Principal roles from the Subject.      */
+comment|/**      * Return the set of User/Principal roles from the Subject.      * @param principal the optional Principal      * @param subject the JAAS Subject      * @return the set of User/Principal roles from the Subject.      */
 name|Set
 argument_list|<
 name|Principal

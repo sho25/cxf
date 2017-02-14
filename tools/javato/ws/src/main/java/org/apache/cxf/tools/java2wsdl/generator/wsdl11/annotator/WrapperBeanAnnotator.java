@@ -243,7 +243,7 @@ decl_stmt|;
 specifier|public
 name|WrapperBeanAnnotator
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|WrapperBeanAnnotator
 parameter_list|(

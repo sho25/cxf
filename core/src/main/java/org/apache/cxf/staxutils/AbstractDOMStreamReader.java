@@ -141,7 +141,7 @@ name|I
 argument_list|>
 name|frame
 decl_stmt|;
-comment|/**      *           */
+comment|/**      *      */
 specifier|public
 specifier|static
 class|class
@@ -410,7 +410,7 @@ return|return
 name|frame
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#getProperty(java.lang.String)      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#getProperty(java.lang.String)      */
 specifier|public
 name|Object
 name|getProperty
@@ -425,7 +425,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#next()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#next()      */
 specifier|public
 name|int
 name|next
@@ -636,7 +636,7 @@ argument_list|>
 name|getChildFrame
 parameter_list|()
 function_decl|;
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#require(int, java.lang.String,      *      java.lang.String)      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#require(int, java.lang.String,      *      java.lang.String)      */
 specifier|public
 name|void
 name|require
@@ -659,7 +659,7 @@ name|UnsupportedOperationException
 argument_list|()
 throw|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#getElementText()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#getElementText()      */
 specifier|public
 specifier|abstract
 name|String
@@ -709,7 +709,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#nextTag()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#nextTag()      */
 specifier|public
 name|int
 name|nextTag
@@ -740,7 +740,7 @@ return|return
 name|currentEvent
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#hasNext()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#hasNext()      */
 specifier|public
 name|boolean
 name|hasNext
@@ -771,7 +771,7 @@ operator|)
 operator|)
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#close()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#close()      */
 specifier|public
 name|void
 name|close
@@ -779,7 +779,7 @@ parameter_list|()
 throws|throws
 name|XMLStreamException
 block|{     }
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#getNamespaceURI(java.lang.String)      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#getNamespaceURI(java.lang.String)      */
 specifier|public
 specifier|abstract
 name|String
@@ -789,7 +789,7 @@ name|String
 name|prefix
 parameter_list|)
 function_decl|;
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#isStartElement()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#isStartElement()      */
 specifier|public
 name|boolean
 name|isStartElement
@@ -801,7 +801,7 @@ operator|==
 name|START_ELEMENT
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#isEndElement()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#isEndElement()      */
 specifier|public
 name|boolean
 name|isEndElement
@@ -813,7 +813,7 @@ operator|==
 name|END_ELEMENT
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#isCharacters()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#isCharacters()      */
 specifier|public
 name|boolean
 name|isCharacters
@@ -825,7 +825,7 @@ operator|==
 name|CHARACTERS
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see javax.xml.stream.XMLStreamReader#isWhiteSpace()      */
+comment|/*      * (non-Javadoc)      *      * @see javax.xml.stream.XMLStreamReader#isWhiteSpace()      */
 specifier|public
 name|boolean
 name|isWhiteSpace

@@ -189,7 +189,7 @@ literal|"password"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Here, we attempt to get the password from the private       * alias/passwords map.      */
+comment|/**      * Here, we attempt to get the password from the private      * alias/passwords map.      */
 specifier|public
 name|void
 name|handle

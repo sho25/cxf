@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Composite 'and' search condition     */
+comment|/**  * Composite 'and' search condition  */
 end_comment
 
 begin_class

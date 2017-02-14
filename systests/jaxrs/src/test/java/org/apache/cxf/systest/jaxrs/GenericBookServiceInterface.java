@@ -26,7 +26,7 @@ name|GenericBookInterface
 argument_list|<
 name|SuperBook
 argument_list|>
-block|{      }
+block|{  }
 end_interface
 
 end_unit

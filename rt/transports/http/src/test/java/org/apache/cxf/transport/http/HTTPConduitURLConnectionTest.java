@@ -323,7 +323,7 @@ return|return
 name|message
 return|;
 block|}
-comment|/**      * This test verifies that the "prepare" call places an HttpURLConnection on       * the Message and that its URL matches the endpoint.      */
+comment|/**      * This test verifies that the "prepare" call places an HttpURLConnection on      * the Message and that its URL matches the endpoint.      */
 annotation|@
 name|Test
 specifier|public
@@ -417,7 +417,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This test verifies that URL used is overridden by having the       * ENDPOINT_ADDRESS set on the Message.      */
+comment|/**      * This test verifies that URL used is overridden by having the      * ENDPOINT_ADDRESS set on the Message.      */
 annotation|@
 name|Test
 specifier|public

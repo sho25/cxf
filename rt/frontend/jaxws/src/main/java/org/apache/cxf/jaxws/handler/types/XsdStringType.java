@@ -136,7 +136,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This type adds an "id" attribute to xsd:string.  *<p>  * Java class for xsdStringType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="xsdStringType">  *&lt;simpleContent>  *&lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/extension>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * This type adds an "id" attribute to xsd:string.  *<p>  * Java class for xsdStringType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="xsdStringType">  *&lt;simpleContent>  *&lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/extension>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class
@@ -193,7 +193,7 @@ operator|.
 name|String
 name|id
 decl_stmt|;
-comment|/**      * Gets the value of the value property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the value property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -207,7 +207,7 @@ return|return
 name|value
 return|;
 block|}
-comment|/**      * Sets the value of the value property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the value property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setValue
@@ -227,7 +227,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the id property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the id property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -241,7 +241,7 @@ return|return
 name|id
 return|;
 block|}
-comment|/**      * Sets the value of the id property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the id property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setId

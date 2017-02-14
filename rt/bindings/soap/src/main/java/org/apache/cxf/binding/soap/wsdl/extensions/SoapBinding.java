@@ -57,7 +57,7 @@ extends|extends
 name|SOAPBinding
 extends|,
 name|SOAP12Binding
-block|{      }
+block|{  }
 end_interface
 
 end_unit

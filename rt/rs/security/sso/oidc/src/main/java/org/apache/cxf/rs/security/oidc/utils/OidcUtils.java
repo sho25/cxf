@@ -629,7 +629,7 @@ block|}
 specifier|private
 name|OidcUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|List

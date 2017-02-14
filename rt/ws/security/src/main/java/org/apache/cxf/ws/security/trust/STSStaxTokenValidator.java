@@ -654,7 +654,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Streaming SAML Token Validator implementation to validate a received Token to a   * SecurityTokenService (STS).  *   * TODO Refactor this class a bit better...  */
+comment|/**  * A Streaming SAML Token Validator implementation to validate a received Token to a  * SecurityTokenService (STS).  *  * TODO Refactor this class a bit better...  */
 end_comment
 
 begin_class
@@ -2305,7 +2305,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * A Streaming SAML Token Validator implementation to validate a BinarySecurityToken to a       * SecurityTokenService (STS).      */
+comment|/**      * A Streaming SAML Token Validator implementation to validate a BinarySecurityToken to a      * SecurityTokenService (STS).      */
 specifier|private
 specifier|static
 class|class

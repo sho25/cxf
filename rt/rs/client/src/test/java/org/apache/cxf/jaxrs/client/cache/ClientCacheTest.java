@@ -1394,7 +1394,7 @@ decl_stmt|;
 specifier|public
 name|Book
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|Book
 parameter_list|(

@@ -635,7 +635,7 @@ operator|new
 name|DefaultSAMLRoleParser
 argument_list|()
 decl_stmt|;
-comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the       * relevant profile. Default is true.      */
+comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the      * relevant profile. Default is true.      */
 specifier|private
 name|boolean
 name|validateSignatureAgainstProfile
@@ -1965,7 +1965,7 @@ operator|=
 name|samlRoleParser
 expr_stmt|;
 block|}
-comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the       * relevant profile. Default is true.      */
+comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the      * relevant profile. Default is true.      */
 specifier|public
 name|boolean
 name|isValidateSignatureAgainstProfile
@@ -1975,7 +1975,7 @@ return|return
 name|validateSignatureAgainstProfile
 return|;
 block|}
-comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the       * relevant profile. Default is true.      */
+comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the      * relevant profile. Default is true.      */
 specifier|public
 name|void
 name|setValidateSignatureAgainstProfile

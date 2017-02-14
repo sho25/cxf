@@ -56,7 +56,7 @@ block|{
 specifier|private
 name|CollectionUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 parameter_list|<

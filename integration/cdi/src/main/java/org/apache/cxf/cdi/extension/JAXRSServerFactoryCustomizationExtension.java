@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Serves as an extension point in order to allow to customize JAX-RS server   * factory bean creation (f.e. add features, providers, assign transport, ...)   * during the CDI beans discovery and initialization.  */
+comment|/**  * Serves as an extension point in order to allow to customize JAX-RS server  * factory bean creation (f.e. add features, providers, assign transport, ...)  * during the CDI beans discovery and initialization.  */
 end_comment
 
 begin_interface

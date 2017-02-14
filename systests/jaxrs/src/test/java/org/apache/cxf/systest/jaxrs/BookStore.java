@@ -9295,7 +9295,7 @@ name|id
 decl_stmt|;
 name|BookInfo
 parameter_list|()
-block|{                      }
+block|{          }
 name|BookInfo
 parameter_list|(
 name|Book
@@ -9392,7 +9392,7 @@ name|BookInfoInterface
 block|{
 name|BookInfo2
 parameter_list|()
-block|{                      }
+block|{          }
 name|BookInfo2
 parameter_list|(
 name|Book
@@ -10008,7 +10008,7 @@ class|class
 name|BookBeanExtended
 extends|extends
 name|BookBean
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

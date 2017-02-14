@@ -3240,7 +3240,7 @@ name|Book
 argument_list|>
 argument_list|>
 argument_list|()
-block|{                 }
+block|{         }
 decl_stmt|;
 name|Future
 argument_list|<
@@ -3458,7 +3458,7 @@ name|Book
 argument_list|>
 argument_list|>
 argument_list|()
-block|{                 }
+block|{         }
 decl_stmt|;
 name|Future
 argument_list|<
@@ -6048,7 +6048,7 @@ name|local
 decl_stmt|;
 name|ClientHeaderResponseFilter
 parameter_list|()
-block|{                      }
+block|{          }
 name|ClientHeaderResponseFilter
 parameter_list|(
 name|boolean

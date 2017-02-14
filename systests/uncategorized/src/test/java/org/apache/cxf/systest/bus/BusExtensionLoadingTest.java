@@ -210,7 +210,7 @@ name|BusExtensionLoadingTest
 extends|extends
 name|Assert
 block|{
-comment|/**      * Tests the ExtensionManagerBus can be built using a given classloader      *       * @throws Exception      */
+comment|/**      * Tests the ExtensionManagerBus can be built using a given classloader      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public
@@ -331,7 +331,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Test for checking the ExtensionManagerBus is built using the TCCL by default      *       * @throws Exception      */
+comment|/**      * Test for checking the ExtensionManagerBus is built using the TCCL by default      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

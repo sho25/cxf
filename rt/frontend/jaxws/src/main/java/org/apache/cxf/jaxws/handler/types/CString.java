@@ -136,7 +136,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a special string datatype that is defined by Java EE as a base type for defining collapsed strings.  * When schemas require trailing/leading space elimination as well as collapsing the existing whitespace, this  * base type may be used.  *<p>  * Java class for string complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="string">  *&lt;simpleContent>  *&lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>token">  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/extension>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * This is a special string datatype that is defined by Java EE as a base type for defining collapsed strings.  * When schemas require trailing/leading space elimination as well as collapsing the existing whitespace, this  * base type may be used.  *<p>  * Java class for string complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="string">  *&lt;simpleContent>  *&lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>token">  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/extension>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class
@@ -200,7 +200,7 @@ operator|.
 name|String
 name|id
 decl_stmt|;
-comment|/**      * Gets the value of the value property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the value property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -214,7 +214,7 @@ return|return
 name|value
 return|;
 block|}
-comment|/**      * Sets the value of the value property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the value property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setValue
@@ -234,7 +234,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the id property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the id property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -248,7 +248,7 @@ return|return
 name|id
 return|;
 block|}
-comment|/**      * Sets the value of the id property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the id property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setId

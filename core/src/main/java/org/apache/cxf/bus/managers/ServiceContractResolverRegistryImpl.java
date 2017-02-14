@@ -156,7 +156,7 @@ decl_stmt|;
 specifier|public
 name|ServiceContractResolverRegistryImpl
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ServiceContractResolverRegistryImpl
 parameter_list|(
@@ -206,7 +206,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Calls each of the registered<code>ServiceContractResolver</code> instances      * to resolve the location of the service's contract. It returns the location       * from the first resolver that matches the QName to a location.      *      * @param qname QName to be resolved into a contract location      * @return URI representing the location of the contract     */
+comment|/**      * Calls each of the registered<code>ServiceContractResolver</code> instances      * to resolve the location of the service's contract. It returns the location      * from the first resolver that matches the QName to a location.      *      * @param qname QName to be resolved into a contract location      * @return URI representing the location of the contract     */
 specifier|public
 name|URI
 name|getContractLocation

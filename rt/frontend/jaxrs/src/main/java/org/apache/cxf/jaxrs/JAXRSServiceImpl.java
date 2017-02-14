@@ -422,7 +422,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The CXF Service implementation which is used   * to register the JAX-RS endpoint with the runtime.  */
+comment|/**  * The CXF Service implementation which is used  * to register the JAX-RS endpoint with the runtime.  */
 end_comment
 
 begin_class

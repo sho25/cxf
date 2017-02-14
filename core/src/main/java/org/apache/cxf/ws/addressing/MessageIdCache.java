@@ -26,7 +26,7 @@ specifier|public
 interface|interface
 name|MessageIdCache
 block|{
-comment|/**      * Check {@code messageId} for uniqueness against previously      * encountered values and cache the ID.  Note that the retention      * policy for previously encountered values is implementation specific.      *       * @param messageId the message ID to check for uniqueness and cache for      *                  future comparison      *      * @return true if and only if {@code messageId} is not already in the      *         cache      */
+comment|/**      * Check {@code messageId} for uniqueness against previously      * encountered values and cache the ID.  Note that the retention      * policy for previously encountered values is implementation specific.      *      * @param messageId the message ID to check for uniqueness and cache for      *                  future comparison      *      * @return true if and only if {@code messageId} is not already in the      *         cache      */
 name|boolean
 name|checkUniquenessAndCacheId
 parameter_list|(

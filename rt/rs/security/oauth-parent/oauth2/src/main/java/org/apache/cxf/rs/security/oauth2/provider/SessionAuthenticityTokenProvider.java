@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * SessionAuthenticityTokenProvider responsible for storing and retrieving tokens   * to validate the authenticity of request sessions  */
+comment|/**  * SessionAuthenticityTokenProvider responsible for storing and retrieving tokens  * to validate the authenticity of request sessions  */
 end_comment
 
 begin_interface
@@ -100,7 +100,7 @@ specifier|public
 interface|interface
 name|SessionAuthenticityTokenProvider
 block|{
-comment|/**      * Create a new session token and stores it      *       * @param mc the {@link MessageContext} of this request      * @param params redirection-based grant request parameters      * @param subject authenticated end user      * @param secData       * @return the created session token      */
+comment|/**      * Create a new session token and stores it      *      * @param mc the {@link MessageContext} of this request      * @param params redirection-based grant request parameters      * @param subject authenticated end user      * @param secData      * @return the created session token      */
 name|String
 name|createSessionToken
 parameter_list|(
@@ -122,7 +122,7 @@ name|OAuthRedirectionState
 name|secData
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve the stored session token      *       * @param mc the {@link MessageContext} of this request         * @param params grant authorization parameters      * @param subject authenticated end user      * @return the stored token      */
+comment|/**      * Retrieve the stored session token      *      * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      * @return the stored token      */
 name|String
 name|getSessionToken
 parameter_list|(
@@ -141,7 +141,7 @@ name|UserSubject
 name|subject
 parameter_list|)
 function_decl|;
-comment|/**      * Remove the stored session token      *       * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      */
+comment|/**      * Remove the stored session token      *      * @param mc the {@link MessageContext} of this request      * @param params grant authorization parameters      * @param subject authenticated end user      */
 name|String
 name|removeSessionToken
 parameter_list|(
@@ -160,7 +160,7 @@ name|UserSubject
 name|subject
 parameter_list|)
 function_decl|;
-comment|/**      * Expand the session token      *       * @param mc the {@link MessageContext} of this request      * @param sessionToken the token      * @param subject authenticated end user      * @return the expanded token or null      */
+comment|/**      * Expand the session token      *      * @param mc the {@link MessageContext} of this request      * @param sessionToken the token      * @param subject authenticated end user      * @return the expanded token or null      */
 name|OAuthRedirectionState
 name|getSessionState
 parameter_list|(

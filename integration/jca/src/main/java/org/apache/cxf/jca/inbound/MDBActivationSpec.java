@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * MDBActivationSpec is an {@link javax.resource.spi.ActivationSpec} that  * activates a CXF service endpoint facade.  All resource locations are   * relative to the message driven bean jar.  *  */
+comment|/**  * MDBActivationSpec is an {@link javax.resource.spi.ActivationSpec} that  * activates a CXF service endpoint facade.  All resource locations are  * relative to the message driven bean jar.  *  */
 end_comment
 
 begin_class
@@ -110,7 +110,7 @@ specifier|private
 name|String
 name|displayName
 decl_stmt|;
-comment|/**      * Gets the transport address used by       * {@link org.apache.cxf.frontend.ServerFactoryBean}.      *       * @return the address      */
+comment|/**      * Gets the transport address used by      * {@link org.apache.cxf.frontend.ServerFactoryBean}.      *      * @return the address      */
 specifier|public
 name|String
 name|getAddress
@@ -120,7 +120,7 @@ return|return
 name|address
 return|;
 block|}
-comment|/**            * @return the busConfigLocation      */
+comment|/**      * @return the busConfigLocation      */
 specifier|public
 name|String
 name|getBusConfigLocation
@@ -140,7 +140,7 @@ return|return
 name|displayName
 return|;
 block|}
-comment|/**      *        * @return the endpointName      */
+comment|/**      *      * @return the endpointName      */
 specifier|public
 name|String
 name|getEndpointName
@@ -159,7 +159,7 @@ return|return
 name|resouceAdapter
 return|;
 block|}
-comment|/**      * Comma separated schema locations      *       * @return the schemaLocations      */
+comment|/**      * Comma separated schema locations      *      * @return the schemaLocations      */
 specifier|public
 name|String
 name|getSchemaLocations
@@ -169,7 +169,7 @@ return|return
 name|schemaLocations
 return|;
 block|}
-comment|/**      * Gets the service endpoint interface classname.        *       * The class should be available in the Message Driven Bean jar.      *       * @return the serviceInterfaceClass      */
+comment|/**      * Gets the service endpoint interface classname.      *      * The class should be available in the Message Driven Bean jar.      *      * @return the serviceInterfaceClass      */
 specifier|public
 name|String
 name|getServiceInterfaceClass
@@ -189,7 +189,7 @@ return|return
 name|serviceName
 return|;
 block|}
-comment|/**      *       * @return the wsdlLocation      */
+comment|/**      *      * @return the wsdlLocation      */
 specifier|public
 name|String
 name|getWsdlLocation
@@ -199,7 +199,7 @@ return|return
 name|wsdlLocation
 return|;
 block|}
-comment|/**      * Sets the transport address used by       * {@link org.apache.cxf.frontend.ServerFactoryBean}.      *       * @param address the address to set      */
+comment|/**      * Sets the transport address used by      * {@link org.apache.cxf.frontend.ServerFactoryBean}.      *      * @param address the address to set      */
 specifier|public
 name|void
 name|setAddress
@@ -215,7 +215,7 @@ operator|=
 name|address
 expr_stmt|;
 block|}
-comment|/**      *            * @param busConfigLocation the busConfigLocation to set      */
+comment|/**      *      * @param busConfigLocation the busConfigLocation to set      */
 specifier|public
 name|void
 name|setBusConfigLocation
@@ -231,7 +231,7 @@ operator|=
 name|busConfigLocation
 expr_stmt|;
 block|}
-comment|/**      * A unique name that is readable to human and it is to      * identify an inbound endpoint within a application server.      *       * @param displayName the displayName to set      */
+comment|/**      * A unique name that is readable to human and it is to      * identify an inbound endpoint within a application server.      *      * @param displayName the displayName to set      */
 specifier|public
 name|void
 name|setDisplayName
@@ -278,7 +278,7 @@ operator|=
 name|ra
 expr_stmt|;
 block|}
-comment|/**      * Comma separated schema locations      *       * @param schemaLocations the schemaLocations to set      */
+comment|/**      * Comma separated schema locations      *      * @param schemaLocations the schemaLocations to set      */
 specifier|public
 name|void
 name|setSchemaLocations
@@ -326,7 +326,7 @@ operator|=
 name|serviceName
 expr_stmt|;
 block|}
-comment|/**      *       * @param wsdlLocation the wsdlLocation to set      */
+comment|/**      *      * @param wsdlLocation the wsdlLocation to set      */
 specifier|public
 name|void
 name|setWsdlLocation

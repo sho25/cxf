@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The base interface for all all message implementations.   * All message objects passed to interceptors use this interface.  */
+comment|/**  * The base interface for all all message implementations.  * All message objects passed to interceptors use this interface.  */
 end_comment
 
 begin_interface
@@ -97,7 +97,7 @@ name|INBOUND_MESSAGE
 init|=
 literal|"org.apache.cxf.message.inbound"
 decl_stmt|;
-comment|/**      * A Map keyed by a string that stores optional context information       * associated with the invocation that spawned the message.      */
+comment|/**      * A Map keyed by a string that stores optional context information      * associated with the invocation that spawned the message.      */
 name|String
 name|INVOCATION_CONTEXT
 init|=
@@ -115,13 +115,13 @@ name|MIME_HEADERS
 init|=
 literal|"org.apache.cxf.mime.headers"
 decl_stmt|;
-comment|/**      * Boolean property specifying if the server should send the response       * asynchronously.      */
+comment|/**      * Boolean property specifying if the server should send the response      * asynchronously.      */
 name|String
 name|ASYNC_POST_RESPONSE_DISPATCH
 init|=
 literal|"org.apache.cxf.async.post.response.dispatch"
 decl_stmt|;
-comment|/**      * Boolean property specifying if this message arrived via a       * decoupled endpoint.      */
+comment|/**      * Boolean property specifying if this message arrived via a      * decoupled endpoint.      */
 name|String
 name|DECOUPLED_CHANNEL_MESSAGE
 init|=
@@ -148,7 +148,7 @@ name|PROCESS_ONEWAY_RESPONSE
 init|=
 literal|"org.apache.cxf.transport.processOneWayResponse"
 decl_stmt|;
-comment|/**      * Boolean property specifying if the thread which runs a request is       * different to the thread which created this Message.      */
+comment|/**      * Boolean property specifying if the thread which runs a request is      * different to the thread which created this Message.      */
 name|String
 name|THREAD_CONTEXT_SWITCHED
 init|=
@@ -258,7 +258,7 @@ argument_list|()
 operator|+
 literal|".PROPOGATE_EXCEPTION"
 decl_stmt|;
-comment|/**      * Boolean property specifying in the runtime is configured to process       * MTOM attachments.      */
+comment|/**      * Boolean property specifying in the runtime is configured to process      * MTOM attachments.      */
 name|String
 name|MTOM_ENABLED
 init|=
@@ -281,19 +281,19 @@ name|SCHEMA_VALIDATION_TYPE
 init|=
 literal|"schema-validation-type"
 decl_stmt|;
-comment|/**      * Boolean property specifying if the Java stack trace is returned as a        * SOAP fault message.      */
+comment|/**      * Boolean property specifying if the Java stack trace is returned as a      * SOAP fault message.      */
 name|String
 name|FAULT_STACKTRACE_ENABLED
 init|=
 literal|"faultStackTraceEnabled"
 decl_stmt|;
-comment|/**      * Boolean property specifying if the name of the exception that caused       * the Java stack trace is returned.      */
+comment|/**      * Boolean property specifying if the name of the exception that caused      * the Java stack trace is returned.      */
 name|String
 name|EXCEPTION_MESSAGE_CAUSE_ENABLED
 init|=
 literal|"exceptionMessageCauseEnabled"
 decl_stmt|;
-comment|/**      * A very unique delimiter used for exception with FAULT_STACKTRACE_ENABLED enable,       * which is easy for client to differentiate the cause and stacktrace when unmarsall       * a fault message       */
+comment|/**      * A very unique delimiter used for exception with FAULT_STACKTRACE_ENABLED enable,      * which is easy for client to differentiate the cause and stacktrace when unmarsall      * a fault message      */
 name|String
 name|EXCEPTION_CAUSE_SUFFIX
 init|=
@@ -394,7 +394,7 @@ name|WSDL_OPERATION
 init|=
 literal|"javax.xml.ws.wsdl.operation"
 decl_stmt|;
-comment|/**      * Some properties to allow adding interceptors to the chain      * on a per-request basis.  All are a Collection<Interceptor>       * These are NOT contextual properties (ie: not searched outside the message).      * They must exist on the message itself at time of Chain creation      */
+comment|/**      * Some properties to allow adding interceptors to the chain      * on a per-request basis.  All are a Collection<Interceptor>      * These are NOT contextual properties (ie: not searched outside the message).      * They must exist on the message itself at time of Chain creation      */
 name|String
 name|IN_INTERCEPTORS
 init|=
@@ -443,7 +443,7 @@ argument_list|()
 operator|+
 literal|".FAULT_OUT_INTERCEPTORS"
 decl_stmt|;
-comment|/**      * As above, but Collection<InterceptorProvider>       */
+comment|/**      * As above, but Collection<InterceptorProvider>      */
 name|String
 name|INTERCEPTOR_PROVIDERS
 init|=
@@ -491,7 +491,7 @@ name|String
 name|id
 parameter_list|)
 function_decl|;
-comment|/**      * Returns a live copy of the messages interceptor chain. This is       * useful when an interceptor wants to modify the interceptor chain on the       * fly.      *       * @return the interceptor chain used to process the message      */
+comment|/**      * Returns a live copy of the messages interceptor chain. This is      * useful when an interceptor wants to modify the interceptor chain on the      * fly.      *      * @return the interceptor chain used to process the message      */
 name|InterceptorChain
 name|getInterceptorChain
 parameter_list|()
@@ -519,7 +519,7 @@ name|Exchange
 name|exchange
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve any binary attachments associated with the message.      *        * @return a collection containing the attachments      */
+comment|/**      * Retrieve any binary attachments associated with the message.      *      * @return a collection containing the attachments      */
 name|Collection
 argument_list|<
 name|Attachment
@@ -537,7 +537,7 @@ argument_list|>
 name|attachments
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve the encapsulated content as a particular type. The content is       * available as a result type if the message is outbound. The content       * is available as a source type if message is inbound. If the content is       * not available as the specified type null is returned.      *       * @param format the expected content format       * @return the encapsulated content      */
+comment|/**      * Retrieve the encapsulated content as a particular type. The content is      * available as a result type if the message is outbound. The content      * is available as a source type if message is inbound. If the content is      * not available as the specified type null is returned.      *      * @param format the expected content format      * @return the encapsulated content      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -551,7 +551,7 @@ argument_list|>
 name|format
 parameter_list|)
 function_decl|;
-comment|/**      * Provide the encapsulated content as a particular type (a result type      * if message is outbound, a source type if message is inbound)      *       * @param format the provided content format       * @param content the content to be encapsulated      */
+comment|/**      * Provide the encapsulated content as a particular type (a result type      * if message is outbound, a source type if message is inbound)      *      * @param format the provided content format      * @param content the content to be encapsulated      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -593,7 +593,7 @@ argument_list|>
 name|format
 parameter_list|)
 function_decl|;
-comment|/**      * Queries the Message object's metadata for a specific property.      *       * @param key the Message interface's property strings that       * correlates to the desired property       * @return the property's value      */
+comment|/**      * Queries the Message object's metadata for a specific property.      *      * @param key the Message interface's property strings that      * correlates to the desired property      * @return the property's value      */
 name|Object
 name|getContextualProperty
 parameter_list|(

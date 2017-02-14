@@ -513,7 +513,7 @@ parameter_list|(
 name|MultipartBody
 name|body
 parameter_list|)
-block|{              }
+block|{      }
 annotation|@
 name|GET
 annotation|@
@@ -1381,7 +1381,7 @@ enum|enum
 name|TestEnum
 block|{
 name|A
-block|;             }
+block|;     }
 block|}
 end_class
 

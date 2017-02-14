@@ -649,7 +649,7 @@ operator|=
 name|validator
 expr_stmt|;
 block|}
-comment|/**      * Set the UsernameTokenRealmCodec instance to use to return a realm from a validated token      * @param usernameTokenRealmCodec the UsernameTokenRealmCodec instance to use to return a       *                                realm from a validated token      */
+comment|/**      * Set the UsernameTokenRealmCodec instance to use to return a realm from a validated token      * @param usernameTokenRealmCodec the UsernameTokenRealmCodec instance to use to return a      *                                realm from a validated token      */
 specifier|public
 name|void
 name|setUsernameTokenRealmCodec
@@ -1485,7 +1485,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      * Create a principal based on the authenticated UsernameToken.      * @throws Base64DecodingException       */
+comment|/**      * Create a principal based on the authenticated UsernameToken.      * @throws Base64DecodingException      */
 specifier|private
 name|Principal
 name|createPrincipal

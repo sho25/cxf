@@ -1070,7 +1070,7 @@ literal|"\\'"
 argument_list|)
 return|;
 block|}
-comment|/**      * emit javascript to append a value to the accumulator.      *       * @param value      */
+comment|/**      * emit javascript to append a value to the accumulator.      *      * @param value      */
 specifier|public
 name|void
 name|appendString
@@ -1955,7 +1955,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Given an element, generate the serialization code.      *       * @param elementInfo description of the element we are serializing      * @param referencePrefix prefix to the Javascript variable. Nothing for      *                args, this._ for members.      * @param schemaCollection caller's schema collection.      */
+comment|/**      * Given an element, generate the serialization code.      *      * @param elementInfo description of the element we are serializing      * @param referencePrefix prefix to the Javascript variable. Nothing for      *                args, this._ for members.      * @param schemaCollection caller's schema collection.      */
 specifier|public
 name|void
 name|generateCodeToSerializeElement
@@ -2539,7 +2539,7 @@ name|endBlock
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Generate code to serialize an xs:any. There is too much duplicate code      * with the element serializer; fix that some day.      *       * @param elementInfo      * @param schemaCollection      */
+comment|/**      * Generate code to serialize an xs:any. There is too much duplicate code      * with the element serializer; fix that some day.      *      * @param elementInfo      * @param schemaCollection      */
 specifier|public
 name|void
 name|generateCodeToSerializeAny

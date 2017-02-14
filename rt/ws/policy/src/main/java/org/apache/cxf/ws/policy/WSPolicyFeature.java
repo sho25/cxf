@@ -384,7 +384,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Configures a Server, Client, Bus with the specified policies. If a series of   * Policy<code>Element</code>s are supplied, these will be loaded into a Policy  * class using the<code>PolicyBuilder</code> extension on the bus. If the   * PolicyEngine has not been started, this feature will start it.  *  * @see PolicyBuilder  * @see AbstractFeature  */
+comment|/**  * Configures a Server, Client, Bus with the specified policies. If a series of  * Policy<code>Element</code>s are supplied, these will be loaded into a Policy  * class using the<code>PolicyBuilder</code> extension on the bus. If the  * PolicyEngine has not been started, this feature will start it.  *  * @see PolicyBuilder  * @see AbstractFeature  */
 end_comment
 
 begin_class

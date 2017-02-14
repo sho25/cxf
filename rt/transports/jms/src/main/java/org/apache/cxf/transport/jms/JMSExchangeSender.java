@@ -39,7 +39,7 @@ begin_interface
 interface|interface
 name|JMSExchangeSender
 block|{
-comment|/**      * Sends the outMessage of the given exchange with the given payload.      * If the exchange is not oneway a reply should be recieved      * and set as inMessage      *       * @param exchange      * @param payload      */
+comment|/**      * Sends the outMessage of the given exchange with the given payload.      * If the exchange is not oneway a reply should be recieved      * and set as inMessage      *      * @param exchange      * @param payload      */
 name|void
 name|sendExchange
 parameter_list|(

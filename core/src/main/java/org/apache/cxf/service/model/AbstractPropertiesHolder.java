@@ -1297,7 +1297,7 @@ operator|=
 name|attrs
 expr_stmt|;
 block|}
-comment|/**      * Lookup a configuration value. This may be found in the properties holder supplied      * (i.e. an EndpointInfo or ServiceInfo), or it may be a property on the Bus itself.      * If no value is found, the defaultValue is returned.      *       * @param defaultValue the default value      * @param type the extensor type      * @return the configuration value or the default      */
+comment|/**      * Lookup a configuration value. This may be found in the properties holder supplied      * (i.e. an EndpointInfo or ServiceInfo), or it may be a property on the Bus itself.      * If no value is found, the defaultValue is returned.      *      * @param defaultValue the default value      * @param type the extensor type      * @return the configuration value or the default      */
 specifier|public
 parameter_list|<
 name|T

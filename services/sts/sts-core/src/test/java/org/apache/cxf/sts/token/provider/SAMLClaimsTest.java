@@ -1112,7 +1112,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test the creation of a SAML2 Assertion with various Attributes set by a ClaimsHandler.      * We have both a primary claim (sent in wst:RequestSecurityToken) and a secondary claim      * (send in wst:RequestSecurityToken/wst:SecondaryParameters), and both have the       * same dialect in this test.      */
+comment|/**      * Test the creation of a SAML2 Assertion with various Attributes set by a ClaimsHandler.      * We have both a primary claim (sent in wst:RequestSecurityToken) and a secondary claim      * (send in wst:RequestSecurityToken/wst:SecondaryParameters), and both have the      * same dialect in this test.      */
 annotation|@
 name|org
 operator|.

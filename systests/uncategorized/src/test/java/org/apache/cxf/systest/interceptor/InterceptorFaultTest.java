@@ -566,7 +566,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -650,7 +650,7 @@ specifier|static
 name|String
 name|decoupledEndpoint
 decl_stmt|;
-comment|/**      * Tests that a fault thrown by a server side interceptor is reported back to      * the client in appropriate form (plain Fault in case of one way requests,       * SoapFault in case of two way requests).      * Also demonstrates how an interceptor on the server out fault chain can       * distinguish different fault modes (the capability to do so is crucial to      * QOS interceptors such as the RM, addressing and policy interceptors).      *      */
+comment|/**      * Tests that a fault thrown by a server side interceptor is reported back to      * the client in appropriate form (plain Fault in case of one way requests,      * SoapFault in case of two way requests).      * Also demonstrates how an interceptor on the server out fault chain can      * distinguish different fault modes (the capability to do so is crucial to      * QOS interceptors such as the RM, addressing and policy interceptors).      *      */
 specifier|public
 specifier|static
 class|class

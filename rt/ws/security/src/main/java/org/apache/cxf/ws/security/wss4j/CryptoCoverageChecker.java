@@ -469,7 +469,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates a new instance that checks for signature coverage over matches to      * the provided XPath expressions making defensive copies of provided arguments.      *       * @param prefixes      *            mapping of namespace prefixes to namespace URIs      * @param xPaths      *            a list of XPath expressions      */
+comment|/**      * Creates a new instance that checks for signature coverage over matches to      * the provided XPath expressions making defensive copies of provided arguments.      *      * @param prefixes      *            mapping of namespace prefixes to namespace URIs      * @param xPaths      *            a list of XPath expressions      */
 specifier|public
 name|CryptoCoverageChecker
 parameter_list|(
@@ -522,7 +522,7 @@ name|xPaths
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Checks that the WSS4J results refer to the required signed/encrypted      * elements as defined by the XPath expressions in {@link #xPaths}.      *       * @param message      *            the SOAP message containing the signature      *       * @throws SoapFault      *             if there is an error evaluating an XPath or an element is not      *             covered by the required cryptographic operation      */
+comment|/**      * Checks that the WSS4J results refer to the required signed/encrypted      * elements as defined by the XPath expressions in {@link #xPaths}.      *      * @param message      *            the SOAP message containing the signature      *      * @throws SoapFault      *             if there is an error evaluating an XPath or an element is not      *             covered by the required cryptographic operation      */
 specifier|public
 name|void
 name|handleMessage
@@ -1260,7 +1260,7 @@ specifier|final
 name|CoverageScope
 name|scope
 decl_stmt|;
-comment|/**          * Create a new expression indicating a cryptographic coverage          * requirement with {@code scope} {@link CoverageScope#ELEMENT}.          *           * @param xPath          *            the XPath expression          * @param type          *            the type of coverage that the expression is meant to          *            enforce          *           * @throws NullPointerException          *             if {@code xPath} or {@code type} is {@code null}          */
+comment|/**          * Create a new expression indicating a cryptographic coverage          * requirement with {@code scope} {@link CoverageScope#ELEMENT}.          *          * @param xPath          *            the XPath expression          * @param type          *            the type of coverage that the expression is meant to          *            enforce          *          * @throws NullPointerException          *             if {@code xPath} or {@code type} is {@code null}          */
 specifier|public
 name|XPathExpression
 parameter_list|(
@@ -1283,7 +1283,7 @@ name|ELEMENT
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**          * Create a new expression indicating a cryptographic coverage          * requirement. If {@code type} is {@link CoverageType#SIGNED}, the          * {@code scope} {@link CoverageScope#CONTENT} does not represent a          * configuration supported in WS-Security.          *           * @param xPath          *            the XPath expression          * @param type          *            the type of coverage that the expression is meant to          *            enforce          * @param scope          *            the scope of coverage that the expression is meant to          *            enforce, defaults to {@link CoverageScope#ELEMENT}          *           * @throws NullPointerException          *             if {@code xPath} or {@code type} is {@code null}          */
+comment|/**          * Create a new expression indicating a cryptographic coverage          * requirement. If {@code type} is {@link CoverageType#SIGNED}, the          * {@code scope} {@link CoverageScope#CONTENT} does not represent a          * configuration supported in WS-Security.          *          * @param xPath          *            the XPath expression          * @param type          *            the type of coverage that the expression is meant to          *            enforce          * @param scope          *            the scope of coverage that the expression is meant to          *            enforce, defaults to {@link CoverageScope#ELEMENT}          *          * @throws NullPointerException          *             if {@code xPath} or {@code type} is {@code null}          */
 specifier|public
 name|XPathExpression
 parameter_list|(

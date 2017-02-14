@@ -204,7 +204,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Validator that checks for a custom "realm" parameter in the RST request and only allows   * authentication if the value is equal to "custom-realm".  */
+comment|/**  * A Validator that checks for a custom "realm" parameter in the RST request and only allows  * authentication if the value is equal to "custom-realm".  */
 end_comment
 
 begin_class

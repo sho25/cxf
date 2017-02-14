@@ -56,7 +56,7 @@ specifier|public
 interface|interface
 name|SecurityPolicyValidator
 block|{
-comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a       * policy defined by the AssertionInfo parameter      */
+comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a      * policy defined by the AssertionInfo parameter      */
 name|boolean
 name|canValidatePolicy
 parameter_list|(

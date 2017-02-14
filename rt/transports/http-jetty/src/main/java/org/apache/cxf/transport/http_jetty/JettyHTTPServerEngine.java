@@ -768,7 +768,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is the Jetty HTTP Server Engine that is configured to  * work off of a designated port. The port will be enabled for   * "http" or "https" depending upon its successful configuration.  */
+comment|/**  * This class is the Jetty HTTP Server Engine that is configured to  * work off of a designated port. The port will be enabled for  * "http" or "https" depending upon its successful configuration.  */
 end_comment
 
 begin_class
@@ -811,7 +811,7 @@ specifier|private
 name|String
 name|host
 decl_stmt|;
-comment|/**      * This field holds the protocol for which this engine is       * enabled, i.e. "http" or "https".      */
+comment|/**      * This field holds the protocol for which this engine is      * enabled, i.e. "http" or "https".      */
 specifier|private
 name|String
 name|protocol
@@ -952,7 +952,7 @@ block|}
 specifier|public
 name|JettyHTTPServerEngine
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|setThreadPool
@@ -1046,7 +1046,7 @@ return|return
 name|host
 return|;
 block|}
-comment|/**      * This method will shut down the server engine and      * remove it from the factory's cache.       */
+comment|/**      * This method will shut down the server engine and      * remove it from the factory's cache.      */
 specifier|public
 name|void
 name|shutdown
@@ -1215,7 +1215,7 @@ return|return
 name|server
 return|;
 block|}
-comment|/**      * Set the jetty server instance       * @param s       */
+comment|/**      * Set the jetty server instance      * @param s      */
 specifier|public
 name|void
 name|setServer
@@ -1734,7 +1734,7 @@ return|return
 name|s
 return|;
 block|}
-comment|/**      * Register a servant.      *       * @param url the URL associated with the servant      * @param handler notified on incoming HTTP requests      */
+comment|/**      * Register a servant.      *      * @param url the URL associated with the servant      * @param handler notified on incoming HTTP requests      */
 specifier|public
 specifier|synchronized
 name|void
@@ -3849,7 +3849,7 @@ return|return
 name|pool
 return|;
 block|}
-comment|/**      * Remove a previously registered servant.      *       * @param url the URL the servant was registered against.      */
+comment|/**      * Remove a previously registered servant.      *      * @param url the URL the servant was registered against.      */
 specifier|public
 specifier|synchronized
 name|void
@@ -4095,7 +4095,7 @@ operator|--
 name|servantCount
 expr_stmt|;
 block|}
-comment|/**      * Get a registered servant.      *       * @param url the associated URL      * @return the HttpHandler if registered      */
+comment|/**      * Get a registered servant.      *      * @param url the associated URL      * @return the HttpHandler if registered      */
 specifier|public
 specifier|synchronized
 name|Handler
@@ -4196,7 +4196,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Get a registered context handler.      *       * @param url the associated URL      * @return the HttpHandler if registered      */
+comment|/**      * Get a registered context handler.      *      * @param url the associated URL      * @return the HttpHandler if registered      */
 specifier|public
 specifier|synchronized
 name|ContextHandler
@@ -4522,7 +4522,7 @@ block|{
 comment|//ignore...
 block|}
 block|}
-comment|/**      * This method is called by the ServerEngine Factory to destroy the       * listener.      *      */
+comment|/**      * This method is called by the ServerEngine Factory to destroy the      * listener.      *      */
 specifier|protected
 name|void
 name|stop
@@ -4653,7 +4653,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * This method is used to programmatically set the TLSServerParameters.      * This method may only be called by the factory.      * @throws IOException       */
+comment|/**      * This method is used to programmatically set the TLSServerParameters.      * This method may only be called by the factory.      * @throws IOException      */
 specifier|public
 name|void
 name|setTlsServerParameters
@@ -4680,7 +4680,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used       * in SpringConfiguration.      * @return      */
+comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used      * in SpringConfiguration.      * @return      */
 specifier|public
 name|TLSServerParameters
 name|getTlsServerParameters
@@ -4690,7 +4690,7 @@ return|return
 name|tlsServerParameters
 return|;
 block|}
-comment|/**      * This method sets the threading parameters for this particular       * server engine.      * This method may only be called by the factory.      */
+comment|/**      * This method sets the threading parameters for this particular      * server engine.      * This method may only be called by the factory.      */
 specifier|public
 name|void
 name|setThreadingParameters

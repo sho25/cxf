@@ -206,7 +206,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -628,7 +628,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Verifies the two stream events are equivalent and throws an assertion       * exception at the first mismatch.      * @param teacher      * @param reader      * @param eec      * @throws XMLStreamException      */
+comment|/**      * Verifies the two stream events are equivalent and throws an assertion      * exception at the first mismatch.      * @param teacher      * @param reader      * @param eec      * @throws XMLStreamException      */
 specifier|static
 name|void
 name|verifyReaders
@@ -1118,7 +1118,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Returns the next relevant reader event.      *        * @param reader      * @return      * @throws XMLStreamException      */
+comment|/**      * Returns the next relevant reader event.      *      * @param reader      * @return      * @throws XMLStreamException      */
 specifier|private
 specifier|static
 name|int

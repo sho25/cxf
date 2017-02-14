@@ -2548,7 +2548,7 @@ operator|&&
 name|enabledOut
 return|;
 block|}
-comment|/**      * Exchange the port number in all service addresses on the bus.        * @param port1 current port      * @param port2 new port      */
+comment|/**      * Exchange the port number in all service addresses on the bus.      * @param port1 current port      * @param port2 new port      */
 specifier|private
 name|void
 name|updateWsdlExtensors

@@ -132,7 +132,7 @@ decl_stmt|;
 specifier|public
 name|TokenIntrospection
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|TokenIntrospection
 parameter_list|(

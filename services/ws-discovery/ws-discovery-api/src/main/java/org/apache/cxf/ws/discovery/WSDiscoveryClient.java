@@ -710,7 +710,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -954,7 +954,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * By default, CXF's WS-Discovery implementation is based on WS-Discovery 1.1.  Some devices will      * not respond to 1.1 probes.  This allows CXF to use the WS-Discovery 1.0 namespaces and actions      * which will allow older devices to be discovered.         */
+comment|/**      * By default, CXF's WS-Discovery implementation is based on WS-Discovery 1.1.  Some devices will      * not respond to 1.1 probes.  This allows CXF to use the WS-Discovery 1.0 namespaces and actions      * which will allow older devices to be discovered.      */
 specifier|public
 name|void
 name|setVersion10
@@ -1003,7 +1003,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * WS-Discovery will use SOAP 1.2 by default.  This allows forcing the use of SOAP 1.1.       * @param do11      */
+comment|/**      * WS-Discovery will use SOAP 1.2 by default.  This allows forcing the use of SOAP 1.1.      * @param do11      */
 specifier|public
 name|void
 name|setSoapVersion11

@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class extends {@link TLSParameterBase} with client-specific  * SSL/TLS parameters.  *   */
+comment|/**  * This class extends {@link TLSParameterBase} with client-specific  * SSL/TLS parameters.  *  */
 end_comment
 
 begin_class
@@ -112,7 +112,7 @@ return|return
 name|hostnameVerifier
 return|;
 block|}
-comment|/**      * Set whether or not JSEE should omit checking if the host name      * specified in the URL matches that of the Common Name      * (CN) on the server's certificate. Default is false;        * this attribute should not be set to true during production use.      */
+comment|/**      * Set whether or not JSEE should omit checking if the host name      * specified in the URL matches that of the Common Name      * (CN) on the server's certificate. Default is false;      * this attribute should not be set to true during production use.      */
 specifier|public
 name|void
 name|setDisableCNCheck
@@ -200,7 +200,7 @@ return|return
 name|useHttpsURLConnectionDefaultSslSocketFactory
 return|;
 block|}
-comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()} should be      * used to create https connections.      *       * @see #isUseHttpsURLConnectionDefaultSslSocketFactory()      */
+comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultSSLSocketFactory()} should be      * used to create https connections.      *      * @see #isUseHttpsURLConnectionDefaultSslSocketFactory()      */
 specifier|public
 name|void
 name|setUseHttpsURLConnectionDefaultSslSocketFactory
@@ -226,7 +226,7 @@ return|return
 name|useHttpsURLConnectionDefaultHostnameVerifier
 return|;
 block|}
-comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultHostnameVerifier()} should be      * used to create https connections.      *       * @see #isUseHttpsURLConnectionDefaultHostnameVerifier()      */
+comment|/**      * Sets whether or not {@link javax.net.ssl.HttpsURLConnection#getDefaultHostnameVerifier()} should be      * used to create https connections.      *      * @see #isUseHttpsURLConnectionDefaultHostnameVerifier()      */
 specifier|public
 name|void
 name|setUseHttpsURLConnectionDefaultHostnameVerifier

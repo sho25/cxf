@@ -114,7 +114,7 @@ name|roleClassifierType
 init|=
 literal|"prefix"
 decl_stmt|;
-comment|/**      * Return the set of User/Principal roles from the Subject.      * @param principal the optional Principal       * @param subject the JAAS Subject      * @return the set of User/Principal roles from the Subject.      */
+comment|/**      * Return the set of User/Principal roles from the Subject.      * @param principal the optional Principal      * @param subject the JAAS Subject      * @return the set of User/Principal roles from the Subject.      */
 specifier|public
 name|Set
 argument_list|<
@@ -203,7 +203,7 @@ return|return
 name|roleClassifier
 return|;
 block|}
-comment|/**      * Set the Subject Role Classifier to use. If this value is not specified, then it tries to      * get roles from the supplied JAAS Subject (if not null) using the DefaultSecurityContext       * in cxf-rt-core. Otherwise it uses this value in combination with the       * SUBJECT_ROLE_CLASSIFIER_TYPE to get the roles from the Subject.      * @param roleClassifier the Subject Role Classifier to use      */
+comment|/**      * Set the Subject Role Classifier to use. If this value is not specified, then it tries to      * get roles from the supplied JAAS Subject (if not null) using the DefaultSecurityContext      * in cxf-rt-core. Otherwise it uses this value in combination with the      * SUBJECT_ROLE_CLASSIFIER_TYPE to get the roles from the Subject.      * @param roleClassifier the Subject Role Classifier to use      */
 specifier|public
 name|void
 name|setRoleClassifier
@@ -228,7 +228,7 @@ return|return
 name|roleClassifierType
 return|;
 block|}
-comment|/**      * Set the Subject Role Classifier Type to use. Currently accepted values are "prefix" or       * "classname". Must be used in conjunction with the SUBJECT_ROLE_CLASSIFIER. The default       * value is "prefix".      * @param roleClassifierType the Subject Role Classifier Type to use      */
+comment|/**      * Set the Subject Role Classifier Type to use. Currently accepted values are "prefix" or      * "classname". Must be used in conjunction with the SUBJECT_ROLE_CLASSIFIER. The default      * value is "prefix".      * @param roleClassifierType the Subject Role Classifier Type to use      */
 specifier|public
 name|void
 name|setRoleClassifierType

@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   *  InstrumentationManager interface for the instrumentations query, register   *  and unregister  */
+comment|/**  *  InstrumentationManager interface for the instrumentations query, register  *  and unregister  */
 end_comment
 
 begin_interface
@@ -77,7 +77,7 @@ parameter_list|)
 throws|throws
 name|JMException
 function_decl|;
-comment|/**      * Registers object with management infrastructure with a specific name. Object must be annotated or       * implement standard MBean interface.      * @param obj      * @param name      * @throws JMException      */
+comment|/**      * Registers object with management infrastructure with a specific name. Object must be annotated or      * implement standard MBean interface.      * @param obj      * @param name      * @throws JMException      */
 name|void
 name|register
 parameter_list|(
@@ -90,7 +90,7 @@ parameter_list|)
 throws|throws
 name|JMException
 function_decl|;
-comment|/**      * Registers object with management infrastructure with a specific name. Object must be annotated or       * implement standard MBean interface.      * @param obj      * @param name      * @param forceRegistration if set to true, then component will be registered despite existing component.      * @throws JMException      */
+comment|/**      * Registers object with management infrastructure with a specific name. Object must be annotated or      * implement standard MBean interface.      * @param obj      * @param name      * @param forceRegistration if set to true, then component will be registered despite existing component.      * @throws JMException      */
 name|void
 name|register
 parameter_list|(
@@ -131,7 +131,7 @@ name|void
 name|shutdown
 parameter_list|()
 function_decl|;
-comment|/**      * Get the MBeanServer which hosts managed components      * NOTE: if the configuration is not set the JMXEnabled to be true, this method      * will return null      * @return the MBeanServer       */
+comment|/**      * Get the MBeanServer which hosts managed components      * NOTE: if the configuration is not set the JMXEnabled to be true, this method      * will return null      * @return the MBeanServer      */
 name|MBeanServer
 name|getMBeanServer
 parameter_list|()

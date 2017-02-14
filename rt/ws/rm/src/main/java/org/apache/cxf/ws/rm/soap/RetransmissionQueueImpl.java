@@ -1124,7 +1124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1316,7 +1316,7 @@ name|size
 argument_list|()
 return|;
 block|}
-comment|/**      * Purge all candidates for the given sequence that have been acknowledged.      *       * @param seq the sequence object.      */
+comment|/**      * Purge all candidates for the given sequence that have been acknowledged.      *      * @param seq the sequence object.      */
 specifier|public
 name|void
 name|purgeAcknowledged
@@ -1333,7 +1333,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Purge all candidates for the given sequence. This method is used to       * terminate the sequence by force and release the resource associated      * with the sequence.      *        * @param seq the sequence object.      */
+comment|/**      * Purge all candidates for the given sequence. This method is used to      * terminate the sequence by force and release the resource associated      * with the sequence.      *      * @param seq the sequence object.      */
 specifier|public
 name|void
 name|purgeAll
@@ -1986,7 +1986,7 @@ block|}
 name|void
 name|stop
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|suspend
@@ -2222,7 +2222,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Accepts a new resend candidate.      *       * @param ctx the message context.      * @return ResendCandidate      */
+comment|/**      * Accepts a new resend candidate.      *      * @param ctx the message context.      * @return ResendCandidate      */
 specifier|protected
 name|ResendCandidate
 name|cacheUnacknowledged
@@ -2783,7 +2783,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**          * Initiate resend asynchronsly.          *           * @param requestAcknowledge true if a AckRequest header is to be sent          *            with resend          */
+comment|/**          * Initiate resend asynchronsly.          *          * @param requestAcknowledge true if a AckRequest header is to be sent          *            with resend          */
 specifier|protected
 name|void
 name|initiate
@@ -3003,7 +3003,7 @@ return|return
 name|next
 return|;
 block|}
-comment|/**          * @return date of previous resend or null if no attempt is yet taken           */
+comment|/**          * @return date of previous resend or null if no attempt is yet taken          */
 specifier|public
 name|Date
 name|getPrevious
@@ -3445,7 +3445,7 @@ specifier|public
 interface|interface
 name|Resender
 block|{
-comment|/**          * Resend mechanics.          *           * @param message          * @param if a AckRequest should be included          */
+comment|/**          * Resend mechanics.          *          * @param message          * @param if a AckRequest should be included          */
 name|void
 name|resend
 parameter_list|(
@@ -3457,7 +3457,7 @@ name|requestAcknowledge
 parameter_list|)
 function_decl|;
 block|}
-comment|/**      * Create default Resender logic.      *       * @return default Resender      */
+comment|/**      * Create default Resender logic.      *      * @return default Resender      */
 specifier|protected
 specifier|final
 name|Resender
@@ -3556,7 +3556,7 @@ block|}
 block|}
 return|;
 block|}
-comment|/**      * Plug in replacement resend logic (facilitates unit testing).      *       * @param replacement resend logic      */
+comment|/**      * Plug in replacement resend logic (facilitates unit testing).      *      * @param replacement resend logic      */
 specifier|protected
 name|void
 name|replaceResender

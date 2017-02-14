@@ -46,7 +46,7 @@ specifier|private
 name|Element
 name|schemaElement
 decl_stmt|;
-comment|/**      * Create object to represent one of the schemas in a WSDL      *       * @param systemId schema system Id.      * @param schemaElement Element for the schema.      */
+comment|/**      * Create object to represent one of the schemas in a WSDL      *      * @param systemId schema system Id.      * @param schemaElement Element for the schema.      */
 specifier|public
 name|EmbeddedSchema
 parameter_list|(

@@ -218,7 +218,7 @@ decl_stmt|;
 specifier|public
 name|ManagedConnectionTestBase
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|Before
 specifier|public

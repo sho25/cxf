@@ -44,7 +44,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This exception is thrown when the Javascript client generator hits a schema  * construct that it cannot handle.   */
+comment|/**  * This exception is thrown when the Javascript client generator hits a schema  * construct that it cannot handle.  */
 end_comment
 
 begin_class

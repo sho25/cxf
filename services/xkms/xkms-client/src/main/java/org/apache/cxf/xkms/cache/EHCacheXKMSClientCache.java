@@ -210,7 +210,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An in-memory EHCache implementation of the XKMSClientCache interface.   */
+comment|/**  * An in-memory EHCache implementation of the XKMSClientCache interface.  */
 end_comment
 
 begin_class

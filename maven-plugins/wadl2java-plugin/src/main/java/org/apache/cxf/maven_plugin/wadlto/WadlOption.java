@@ -209,7 +209,7 @@ operator|=
 name|wadlArtifact
 expr_stmt|;
 block|}
-comment|/**      * Try to find a file matching the wadl path (either absolutely, relatively to the current dir or to      * the project base dir)      *       * @return wadl file      */
+comment|/**      * Try to find a file matching the wadl path (either absolutely, relatively to the current dir or to      * the project base dir)      *      * @return wadl file      */
 specifier|public
 name|File
 name|getDocumentFile

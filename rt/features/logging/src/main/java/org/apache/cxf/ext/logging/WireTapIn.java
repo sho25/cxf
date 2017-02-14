@@ -194,7 +194,7 @@ name|AbstractLoggingInterceptor
 operator|.
 name|DEFAULT_LIMIT
 decl_stmt|;
-comment|/**      * Instantiates a new WireTapIn      * @param limit       *      * @param logMessageContent the log message content      */
+comment|/**      * Instantiates a new WireTapIn      * @param limit      *      * @param logMessageContent the log message content      */
 specifier|public
 name|WireTapIn
 parameter_list|()

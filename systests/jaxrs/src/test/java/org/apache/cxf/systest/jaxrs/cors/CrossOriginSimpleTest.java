@@ -356,7 +356,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Unit tests for CORS. This isn't precisely simple as it's turned out.   *   * Note that it's not the server's job to detect invalid CORS requests. If a client  * fails to preflight, it's just not our job. However, also note that all 'actual'   * requests are treated as simple requests. In other words, a DELETE gets the same  * treatment as a simple request. The 'hey, this is complex' test happens on the client,  * which thus decides to do a preflight.  *   */
+comment|/**  * Unit tests for CORS. This isn't precisely simple as it's turned out.  *  * Note that it's not the server's job to detect invalid CORS requests. If a client  * fails to preflight, it's just not our job. However, also note that all 'actual'  * requests are treated as simple requests. In other words, a DELETE gets the same  * treatment as a simple request. The 'hey, this is complex' test happens on the client,  * which thus decides to do a preflight.  *  */
 end_comment
 
 begin_class

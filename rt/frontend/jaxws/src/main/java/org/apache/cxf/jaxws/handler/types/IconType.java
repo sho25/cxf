@@ -136,7 +136,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The icon type contains small-icon and large-icon elements that specify the file names for small and large  * GIF, JPEG, or PNG icon images used to represent the parent element in a GUI tool. The xml:lang attribute  * defines the language that the icon file names are provided in. Its value is "en" (English) by default.  *<p>  * Java class for iconType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="iconType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="small-icon" type="{http://java.sun.com/xml/ns/javaee}pathType" minOccurs="0"/>  *&lt;element name="large-icon" type="{http://java.sun.com/xml/ns/javaee}pathType" minOccurs="0"/>  *&lt;/sequence>  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * The icon type contains small-icon and large-icon elements that specify the file names for small and large  * GIF, JPEG, or PNG icon images used to represent the parent element in a GUI tool. The xml:lang attribute  * defines the language that the icon file names are provided in. Its value is "en" (English) by default.  *<p>  * Java class for iconType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="iconType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="small-icon" type="{http://java.sun.com/xml/ns/javaee}pathType" minOccurs="0"/>  *&lt;element name="large-icon" type="{http://java.sun.com/xml/ns/javaee}pathType" minOccurs="0"/>  *&lt;/sequence>  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class
@@ -222,7 +222,7 @@ operator|.
 name|String
 name|lang
 decl_stmt|;
-comment|/**      * Gets the value of the smallIcon property.      *       * @return possible object is {@link PathType }      */
+comment|/**      * Gets the value of the smallIcon property.      *      * @return possible object is {@link PathType }      */
 specifier|public
 name|PathType
 name|getSmallIcon
@@ -232,7 +232,7 @@ return|return
 name|smallIcon
 return|;
 block|}
-comment|/**      * Sets the value of the smallIcon property.      *       * @param value allowed object is {@link PathType }      */
+comment|/**      * Sets the value of the smallIcon property.      *      * @param value allowed object is {@link PathType }      */
 specifier|public
 name|void
 name|setSmallIcon
@@ -248,7 +248,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the largeIcon property.      *       * @return possible object is {@link PathType }      */
+comment|/**      * Gets the value of the largeIcon property.      *      * @return possible object is {@link PathType }      */
 specifier|public
 name|PathType
 name|getLargeIcon
@@ -258,7 +258,7 @@ return|return
 name|largeIcon
 return|;
 block|}
-comment|/**      * Sets the value of the largeIcon property.      *       * @param value allowed object is {@link PathType }      */
+comment|/**      * Sets the value of the largeIcon property.      *      * @param value allowed object is {@link PathType }      */
 specifier|public
 name|void
 name|setLargeIcon
@@ -274,7 +274,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the id property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the id property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -288,7 +288,7 @@ return|return
 name|id
 return|;
 block|}
-comment|/**      * Sets the value of the id property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the id property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setId
@@ -308,7 +308,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the lang property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the lang property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -322,7 +322,7 @@ return|return
 name|lang
 return|;
 block|}
-comment|/**      * Sets the value of the lang property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the lang property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setLang

@@ -2053,7 +2053,7 @@ operator|.
 name|toByteArray
 argument_list|()
 decl_stmt|;
-comment|/* We need all the text in a string, independent of the              * XML parse.               */
+comment|/* We need all the text in a string, independent of the              * XML parse.              */
 name|Charset
 name|contentCharset
 init|=

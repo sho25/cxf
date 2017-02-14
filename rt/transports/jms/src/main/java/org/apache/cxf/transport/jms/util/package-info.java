@@ -4,7 +4,7 @@ comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or 
 end_comment
 
 begin_comment
-comment|/**  * Utility classes to make it easier to work with the JMS API.  *   * This package might later be moved to a jms library independent of cxf.  * So any classes in this package should only depend on the jms API.   */
+comment|/**  * Utility classes to make it easier to work with the JMS API.  *  * This package might later be moved to a jms library independent of cxf.  * So any classes in this package should only depend on the jms API.  */
 end_comment
 
 begin_package

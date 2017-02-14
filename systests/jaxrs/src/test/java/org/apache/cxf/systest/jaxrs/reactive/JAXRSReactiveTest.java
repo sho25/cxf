@@ -465,7 +465,7 @@ name|String
 argument_list|>
 argument_list|>
 argument_list|()
-block|{                     }
+block|{             }
 decl_stmt|;
 name|Observable
 argument_list|<
@@ -750,7 +750,7 @@ name|HelloWorldBean
 argument_list|>
 argument_list|>
 argument_list|()
-block|{                 }
+block|{         }
 decl_stmt|;
 name|List
 argument_list|<

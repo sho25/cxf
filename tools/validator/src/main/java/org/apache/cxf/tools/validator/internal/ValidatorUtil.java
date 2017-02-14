@@ -457,7 +457,7 @@ name|getXmlSchemaCollection
 argument_list|()
 return|;
 block|}
-comment|/**      * Get a list of schemas found in a wsdl Document.      * The list will include any schemas from imported wsdls.      *       * @param document The wsdl Document.      * @param baseURI The URI of the wsdl. Allows schemas with relative      *                paths to be resolved.       * @return XmlSchemaCollection list      * @throws IOException      * @throws SAXException      */
+comment|/**      * Get a list of schemas found in a wsdl Document.      * The list will include any schemas from imported wsdls.      *      * @param document The wsdl Document.      * @param baseURI The URI of the wsdl. Allows schemas with relative      *                paths to be resolved.      * @return XmlSchemaCollection list      * @throws IOException      * @throws SAXException      */
 specifier|public
 specifier|static
 name|List
@@ -694,7 +694,7 @@ return|return
 name|schemaList
 return|;
 block|}
-comment|/**      * Get a map of wsdls imported by the given wsdl.  Keys in the      * map are the imported namespaces.  Values are the imported      * wsdl Documents.      *       * @param document The wsdl Document      * @param basePath The path of the wsdl      * @return map of imported wsdls      * @throws IOException      * @throws SAXException      */
+comment|/**      * Get a map of wsdls imported by the given wsdl.  Keys in the      * map are the imported namespaces.  Values are the imported      * wsdl Documents.      *      * @param document The wsdl Document      * @param basePath The path of the wsdl      * @return map of imported wsdls      * @throws IOException      * @throws SAXException      */
 specifier|public
 specifier|static
 name|Map

@@ -461,7 +461,7 @@ decl_stmt|;
 specifier|private
 name|FormUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

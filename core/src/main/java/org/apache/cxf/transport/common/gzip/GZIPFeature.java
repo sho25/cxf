@@ -114,7 +114,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is used to control GZIP compression of messages.  * Attaching this feature to an endpoint will allow the endpoint to handle  * compressed requests, and will cause outgoing responses to be compressed if  * the client indicates (via the Accept-Encoding header) that it can handle  * them.  *<pre>  *<![CDATA[  *<jaxws:endpoint ...>  *<jaxws:features>  *<bean class="org.apache.cxf.transport.common.gzip.GZIPFeature"/>  *</jaxws:features>  *</jaxws:endpoint>  * ]]>  *</pre>  * Attaching this feature to a client will cause outgoing request messages   * to be compressed and incoming compressed responses to be uncompressed.   * Accept-Encoding header is sent to let the service know   * that your client can accept compressed responses.   */
+comment|/**  * This class is used to control GZIP compression of messages.  * Attaching this feature to an endpoint will allow the endpoint to handle  * compressed requests, and will cause outgoing responses to be compressed if  * the client indicates (via the Accept-Encoding header) that it can handle  * them.  *<pre>  *<![CDATA[  *<jaxws:endpoint ...>  *<jaxws:features>  *<bean class="org.apache.cxf.transport.common.gzip.GZIPFeature"/>  *</jaxws:features>  *</jaxws:endpoint>  * ]]>  *</pre>  * Attaching this feature to a client will cause outgoing request messages  * to be compressed and incoming compressed responses to be uncompressed.  * Accept-Encoding header is sent to let the service know  * that your client can accept compressed responses.  */
 end_comment
 
 begin_class
@@ -353,7 +353,7 @@ return|return
 name|threshold
 return|;
 block|}
-comment|/**      * Set if GZIP is always used without negotiation       * @param b      */
+comment|/**      * Set if GZIP is always used without negotiation      * @param b      */
 specifier|public
 name|void
 name|setForce

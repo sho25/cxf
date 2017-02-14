@@ -296,7 +296,7 @@ operator|=
 name|permissions
 expr_stmt|;
 block|}
-comment|/**       * Get the list of scopes already approved by a user      * @return the list of approved scopes      */
+comment|/**      * Get the list of scopes already approved by a user      * @return the list of approved scopes      */
 specifier|public
 name|List
 argument_list|<
@@ -328,7 +328,7 @@ operator|=
 name|perms
 expr_stmt|;
 block|}
-comment|/**      * Set the authenticity token linking the authorization       * challenge to the current end user session      *       * @param authenticityToken the session authenticity token       */
+comment|/**      * Set the authenticity token linking the authorization      * challenge to the current end user session      *      * @param authenticityToken the session authenticity token      */
 specifier|public
 name|void
 name|setAuthenticityToken
@@ -344,7 +344,7 @@ operator|=
 name|authenticityToken
 expr_stmt|;
 block|}
-comment|/**      * Get the authenticity token linking the authorization       * challenge to the current end user session      * @return the session authenticity token      */
+comment|/**      * Get the authenticity token linking the authorization      * challenge to the current end user session      * @return the session authenticity token      */
 specifier|public
 name|String
 name|getAuthenticityToken
@@ -432,7 +432,7 @@ return|return
 name|applicationLogoUri
 return|;
 block|}
-comment|/**      * Set the absolute URI where the authorization decision data       * will need to be sent to      * @param replyTo authorization decision handler URI      */
+comment|/**      * Set the absolute URI where the authorization decision data      * will need to be sent to      * @param replyTo authorization decision handler URI      */
 specifier|public
 name|void
 name|setReplyTo
@@ -448,7 +448,7 @@ operator|=
 name|replyTo
 expr_stmt|;
 block|}
-comment|/**      * Get the absolute URI where the authorization decision data       * will need to be sent to      * @return authorization decision handler URI      */
+comment|/**      * Get the absolute URI where the authorization decision data      * will need to be sent to      * @return authorization decision handler URI      */
 specifier|public
 name|String
 name|getReplyTo

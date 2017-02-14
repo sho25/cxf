@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the automatic table updating of RMTxStore that allows compatible changes   * in the database tables.   */
+comment|/**  * Tests the automatic table updating of RMTxStore that allows compatible changes  * in the database tables.  */
 end_comment
 
 begin_class

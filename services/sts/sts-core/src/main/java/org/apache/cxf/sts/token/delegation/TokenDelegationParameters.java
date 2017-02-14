@@ -130,7 +130,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class encapsulates the parameters that will be passed to a TokenDelegationHandler instance to.   * It consists of both parameters that have been extracted from the request, as well as   * configuration specific to the Operation itself (STSPropertiesMBean etc.)  */
+comment|/**  * This class encapsulates the parameters that will be passed to a TokenDelegationHandler instance to.  * It consists of both parameters that have been extracted from the request, as well as  * configuration specific to the Operation itself (STSPropertiesMBean etc.)  */
 end_comment
 
 begin_class

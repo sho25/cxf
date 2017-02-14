@@ -5142,7 +5142,7 @@ name|reply
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*     @Test     public void testDynamicClientFactory2() throws Exception {         String wsdlUrl = "http://sdpwsparam.strikeiron.com/sdpNFLTeams?WSDL";          //TODO test fault exceptions          DynamicClientFactory dcf = DynamicClientFactory.newInstance();         Client client = dcf.createClient(wsdlUrl);         Object o = Class.forName("com.strikeiron.GetTeamInfoByCity", true,                                   Thread.currentThread().getContextClassLoader()).newInstance();         Object[] result = client.invoke("GetTeamInfoByCity", "a", "b", "New England");                           //System.out.println(Arrays.asList(result));              }     */
+comment|/*     @Test     public void testDynamicClientFactory2() throws Exception {         String wsdlUrl = "http://sdpwsparam.strikeiron.com/sdpNFLTeams?WSDL";          //TODO test fault exceptions         DynamicClientFactory dcf = DynamicClientFactory.newInstance();         Client client = dcf.createClient(wsdlUrl);         Object o = Class.forName("com.strikeiron.GetTeamInfoByCity", true,                                  Thread.currentThread().getContextClassLoader()).newInstance();         Object[] result = client.invoke("GetTeamInfoByCity", "a", "b", "New England");           //System.out.println(Arrays.asList(result));      }     */
 annotation|@
 name|Test
 specifier|public

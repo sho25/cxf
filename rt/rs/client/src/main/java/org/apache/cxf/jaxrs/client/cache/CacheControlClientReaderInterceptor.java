@@ -1016,7 +1016,7 @@ return|return
 name|cacheResponseInputStream
 return|;
 block|}
-comment|/**      * Enforce the caching of the response stream.       * This is not recommended if the client code expects Serializable data,      * example, String or custom JAXB beans marked as Serializable,       * which can be stored in the cache directly.      * Use this property only if returning a cached entity does require a       * repeated stream parsing.      *       * @param cacheInputStream      */
+comment|/**      * Enforce the caching of the response stream.      * This is not recommended if the client code expects Serializable data,      * example, String or custom JAXB beans marked as Serializable,      * which can be stored in the cache directly.      * Use this property only if returning a cached entity does require a      * repeated stream parsing.      *      * @param cacheInputStream      */
 specifier|public
 name|void
 name|setCacheResponseInputStream

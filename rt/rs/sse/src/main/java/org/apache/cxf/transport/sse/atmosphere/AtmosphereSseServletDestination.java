@@ -794,7 +794,7 @@ name|outMessage
 argument_list|)
 return|;
 block|}
-comment|/**      * It has been noticed that Jetty checks the "Content-Length" header and completes the       * response if its value is 0 (or matches the number of bytes written). However, in case      * of SSE the content length is unknown so we are setting it to -1 before flushing the       * response. Otherwise, only the first event is going to be sent and response is going to      * be closed.      */
+comment|/**      * It has been noticed that Jetty checks the "Content-Length" header and completes the      * response if its value is 0 (or matches the number of bytes written). However, in case      * of SSE the content length is unknown so we are setting it to -1 before flushing the      * response. Otherwise, only the first event is going to be sent and response is going to      * be closed.      */
 specifier|private
 name|void
 name|adjustContentLength

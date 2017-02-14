@@ -3317,7 +3317,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * The TypeReference class is a sun specific class that is found in two different      * locations depending on environment. In IBM JDK the class is not available at all.      * So we have to load it at runtime.      *       * @param n      * @param cls      * @return initiated TypeReference      */
+comment|/**      * The TypeReference class is a sun specific class that is found in two different      * locations depending on environment. In IBM JDK the class is not available at all.      * So we have to load it at runtime.      *      * @param n      * @param cls      * @return initiated TypeReference      */
 specifier|private
 specifier|static
 name|Object

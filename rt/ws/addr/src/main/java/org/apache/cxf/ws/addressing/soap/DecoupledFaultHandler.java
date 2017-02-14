@@ -198,7 +198,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility interceptor for dealing with faults occurred during processing   * the one way requests with WSA FaultTo EPR pointing to a decoupled destination.  *   * Note that this interceptor is not currently installed by default.   * It can be installed using @InInterceptors and @OutInterceptors  * annotations or explicitly added to the list of interceptors.   */
+comment|/**  * Utility interceptor for dealing with faults occurred during processing  * the one way requests with WSA FaultTo EPR pointing to a decoupled destination.  *  * Note that this interceptor is not currently installed by default.  * It can be installed using @InInterceptors and @OutInterceptors  * annotations or explicitly added to the list of interceptors.  */
 end_comment
 
 begin_class

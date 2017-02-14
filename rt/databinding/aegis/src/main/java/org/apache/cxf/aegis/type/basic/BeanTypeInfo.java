@@ -414,7 +414,7 @@ name|initializeProperties
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Create a BeanTypeInfo class.      *       * @param typeClass      * @param defaultNamespace      * @param initiallize If true attempt default property/xml mappings.      */
+comment|/**      * Create a BeanTypeInfo class.      *      * @param typeClass      * @param defaultNamespace      * @param initiallize If true attempt default property/xml mappings.      */
 specifier|public
 name|BeanTypeInfo
 parameter_list|(
@@ -1013,7 +1013,7 @@ operator|=
 name|typeMapping
 expr_stmt|;
 block|}
-comment|/**      * Specifies the name of the property as it shows up in the xml schema. This      * method just returns<code>propertyDescriptor.getName();</code>      *       * @param desc      * @return      */
+comment|/**      * Specifies the name of the property as it shows up in the xml schema. This      * method just returns<code>propertyDescriptor.getName();</code>      *      * @param desc      * @return      */
 specifier|protected
 name|QName
 name|createMappedName
@@ -1116,7 +1116,7 @@ name|mappedName
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Specifies the SchemaType for a particular class.      *       * @param mappedName      * @param type      */
+comment|/**      * Specifies the SchemaType for a particular class.      *      * @param mappedName      * @param type      */
 specifier|public
 name|void
 name|mapTypeName
@@ -1776,7 +1776,7 @@ return|return
 name|beanClass
 return|;
 block|}
-comment|/**      * Nillable is only allowed if the actual property is Nullable      *       * @param name      * @return      */
+comment|/**      * Nillable is only allowed if the actual property is Nullable      *      * @param name      * @return      */
 specifier|public
 name|boolean
 name|isNillable
@@ -1810,7 +1810,7 @@ return|return
 name|nillable
 return|;
 block|}
-comment|/**      * Return the minOccurs value. When there is no XML file or annotation (the situation      * if we are running from the base class here), there is no source for the       * minOccurs parameter except the default, which is supplied from the overall Aegis options.      * @param name Element QName      * @return      */
+comment|/**      * Return the minOccurs value. When there is no XML file or annotation (the situation      * if we are running from the base class here), there is no source for the      * minOccurs parameter except the default, which is supplied from the overall Aegis options.      * @param name Element QName      * @return      */
 specifier|public
 name|int
 name|getMinOccurs

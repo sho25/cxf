@@ -505,7 +505,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * This function is much like getAttribute, but returns null, not "", for a nonexistent attribute.      *       * @param e      * @param attributeName      */
+comment|/**      * This function is much like getAttribute, but returns null, not "", for a nonexistent attribute.      *      * @param e      * @param attributeName      */
 specifier|public
 specifier|static
 name|String
@@ -856,7 +856,7 @@ return|return
 name|s
 return|;
 block|}
-comment|/**      * Get the first element child.      *       * @param parent lookup direct childs      * @param name name of the element. If null return the first element.      */
+comment|/**      * Get the first element child.      *      * @param parent lookup direct childs      * @param name name of the element. If null return the first element.      */
 specifier|public
 specifier|static
 name|Node
@@ -1320,7 +1320,7 @@ name|val
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Find the first direct child with a given attribute.      *       * @param parent      * @param elemName name of the element, or null for any      * @param attName attribute we're looking for      * @param attVal attribute value or null if we just want any      */
+comment|/**      * Find the first direct child with a given attribute.      *      * @param parent      * @param elemName name of the element, or null for any      * @param attName attribute we're looking for      * @param attVal attribute value or null if we just want any      */
 specifier|public
 specifier|static
 name|Element
@@ -2006,7 +2006,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return the first element child with the specified qualified name.      *       * @param parent      * @param q      */
+comment|/**      * Return the first element child with the specified qualified name.      *      * @param parent      * @param q      */
 specifier|public
 specifier|static
 name|Element
@@ -2046,7 +2046,7 @@ name|lp
 argument_list|)
 return|;
 block|}
-comment|/**      * Return the first element child with the specified qualified name.      *       * @param parent      * @param ns      * @param lp      */
+comment|/**      * Return the first element child with the specified qualified name.      *      * @param parent      * @param ns      * @param lp      */
 specifier|public
 specifier|static
 name|Element
@@ -2148,7 +2148,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Return child elements with specified name.      *       * @param parent      * @param ns      * @param localName      */
+comment|/**      * Return child elements with specified name.      *      * @param parent      * @param ns      * @param localName      */
 specifier|public
 specifier|static
 name|List
@@ -2268,7 +2268,7 @@ return|return
 name|r
 return|;
 block|}
-comment|/**      * Returns all child elements with specified namespace.      *       * @param parent the element to search under      * @param ns the namespace to find elements in      * @return all child elements with specified namespace      */
+comment|/**      * Returns all child elements with specified namespace.      *      * @param parent the element to search under      * @param ns the namespace to find elements in      * @return all child elements with specified namespace      */
 specifier|public
 specifier|static
 name|List
@@ -2375,7 +2375,7 @@ return|return
 name|r
 return|;
 block|}
-comment|/**      * Get the first child of the specified type.      *       * @param parent      * @param type      */
+comment|/**      * Get the first child of the specified type.      *      * @param parent      * @param type      */
 specifier|public
 specifier|static
 name|Node
@@ -2769,7 +2769,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Get all prefixes defined, up to the root, for a namespace URI.      *       * @param element      * @param namespaceUri      * @param prefixes      */
+comment|/**      * Get all prefixes defined, up to the root, for a namespace URI.      *      * @param element      * @param namespaceUri      * @param prefixes      */
 specifier|public
 specifier|static
 name|void
@@ -2826,7 +2826,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Get all prefixes defined on this element for the specified namespace.      *       * @param element      * @param namespaceUri      * @param prefixes      */
+comment|/**      * Get all prefixes defined on this element for the specified namespace.      *      * @param element      * @param namespaceUri      * @param prefixes      */
 specifier|public
 specifier|static
 name|void
@@ -2996,7 +2996,7 @@ return|return
 name|p
 return|;
 block|}
-comment|/**      * Starting from a node, find the namespace declaration for a prefix. for a matching namespace      * declaration.      *       * @param node search up from here to search for namespace definitions      * @param searchPrefix the prefix we are searching for      * @return the namespace if found.      */
+comment|/**      * Starting from a node, find the namespace declaration for a prefix. for a matching namespace      * declaration.      *      * @param node search up from here to search for namespace definitions      * @param searchPrefix the prefix we are searching for      * @return the namespace if found.      */
 specifier|public
 specifier|static
 name|String
@@ -3589,7 +3589,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Set a namespace/prefix on an element if it is not set already. First off, it searches for the element      * for the prefix associated with the specified namespace. If the prefix isn't null, then this is      * returned. Otherwise, it creates a new attribute using the namespace/prefix passed as parameters.      *       * @param element      * @param namespace      * @param prefix      * @return the prefix associated with the set namespace      */
+comment|/**      * Set a namespace/prefix on an element if it is not set already. First off, it searches for the element      * for the prefix associated with the specified namespace. If the prefix isn't null, then this is      * returned. Otherwise, it creates a new attribute using the namespace/prefix passed as parameters.      *      * @param element      * @param namespace      * @param prefix      * @return the prefix associated with the set namespace      */
 specifier|public
 specifier|static
 name|String
@@ -3645,7 +3645,7 @@ return|return
 name|prefix
 return|;
 block|}
-comment|/**      * Add a namespace prefix definition to an element.      *       * @param element      * @param namespaceUri      * @param prefix      */
+comment|/**      * Add a namespace prefix definition to an element.      *      * @param element      * @param namespaceUri      * @param prefix      */
 specifier|public
 specifier|static
 name|void

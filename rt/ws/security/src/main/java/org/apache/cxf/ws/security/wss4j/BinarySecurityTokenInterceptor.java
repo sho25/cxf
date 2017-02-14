@@ -386,7 +386,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interceptor to add a BinarySecurityToken token to the security header of an outbound request, and to  * process a BinarySecurityToken on an inbound request. It takes the BinarySecurityToken from the message   * context on the outbound side.  */
+comment|/**  * An interceptor to add a BinarySecurityToken token to the security header of an outbound request, and to  * process a BinarySecurityToken on an inbound request. It takes the BinarySecurityToken from the message  * context on the outbound side.  */
 end_comment
 
 begin_class

@@ -252,7 +252,7 @@ specifier|private
 name|VersionTransformer
 parameter_list|()
 block|{     }
-comment|/**      * Check if a namespace URI represents a supported version of WS-ReliableMessaging.      *       * @param uri      * @return<code>true</code> if supported,<code>false</code> if not      */
+comment|/**      * Check if a namespace URI represents a supported version of WS-ReliableMessaging.      *      * @param uri      * @return<code>true</code> if supported,<code>false</code> if not      */
 specifier|public
 specifier|static
 name|boolean
@@ -282,7 +282,7 @@ name|uri
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert CreateSequenceType to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert CreateSequenceType to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -393,7 +393,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert CreateSequenceType to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert CreateSequenceType to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -519,7 +519,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:Expires to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:Expires to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|private
 specifier|static
 name|org
@@ -602,7 +602,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:Expires to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:Expires to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|private
 specifier|static
 name|org
@@ -685,7 +685,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:Identifier to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:Identifier to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|org
@@ -768,7 +768,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:Identifier to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:Identifier to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|org
@@ -851,7 +851,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:Identifier with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
+comment|/**      * Convert 200502 wsrm:Identifier with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
 specifier|public
 specifier|static
 name|Identifier
@@ -918,7 +918,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:Identifier with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
+comment|/**      * Convert 200502 wsrm:Identifier with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
 specifier|public
 specifier|static
 name|Identifier
@@ -985,7 +985,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:CreateSequenceType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
+comment|/**      * Convert 200502 wsrm:CreateSequenceType with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
 specifier|public
 specifier|static
 name|CreateSequenceType
@@ -1091,7 +1091,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:CreateSequenceType with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
+comment|/**      * Convert 200502 wsrm:CreateSequenceType with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
 specifier|public
 specifier|static
 name|CreateSequenceType
@@ -1212,7 +1212,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:CreateSequenceResponseType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
+comment|/**      * Convert 200502 wsrm:CreateSequenceResponseType with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
 specifier|public
 specifier|static
 name|CreateSequenceResponseType
@@ -1321,7 +1321,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:CreateSequenceResponseType with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
+comment|/**      * Convert 200502 wsrm:CreateSequenceResponseType with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if exposed is<code>null</code>)      */
 specifier|public
 specifier|static
 name|CreateSequenceResponseType
@@ -1430,7 +1430,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert wsrm:Offer to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:Offer to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|private
 specifier|static
 name|org
@@ -1542,7 +1542,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:Offer to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:Offer to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|private
 specifier|static
 name|org
@@ -1654,7 +1654,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:CreateSequenceResponseType to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:CreateSequenceResponseType to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -1768,7 +1768,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:CreateSequenceResponseType to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:CreateSequenceResponseType to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -1882,7 +1882,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:AcceptType to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:AcceptType to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|private
 specifier|static
 name|org
@@ -1978,7 +1978,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:AcceptType to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert wsrm:AcceptType to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|private
 specifier|static
 name|org
@@ -2089,7 +2089,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:SequenceType to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:SequenceType to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -2187,7 +2187,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:SequenceType with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 wsrm:SequenceType with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|SequenceType
@@ -2269,7 +2269,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:SequenceType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 wsrm:SequenceType with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|SequenceType
@@ -2351,7 +2351,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 Expires with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 Expires with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|Expires
@@ -2405,7 +2405,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 Expires with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 Expires with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|Expires
@@ -2459,7 +2459,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 AcceptType with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 AcceptType with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|AcceptType
@@ -2528,7 +2528,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 AcceptType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 AcceptType with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|AcceptType
@@ -2582,7 +2582,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 OfferType with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 OfferType with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|OfferType
@@ -2652,7 +2652,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 OfferType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
+comment|/**      * Convert 200502 OfferType with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (may be<code>null</code>)      * @return converted (<code>null</code> if internal is<code>null</code>)      */
 specifier|public
 specifier|static
 name|OfferType
@@ -2722,7 +2722,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert wsrm:SequenceType to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:SequenceType to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -2820,7 +2820,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert TerminateSequenceType to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert TerminateSequenceType to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -2916,7 +2916,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert TerminateSequenceType to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert TerminateSequenceType to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -3012,7 +3012,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -3214,7 +3214,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -3416,7 +3416,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|SequenceAcknowledgement
@@ -3578,7 +3578,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|SequenceAcknowledgement
@@ -3740,7 +3740,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200508 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200508 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -3828,7 +3828,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200408 WS-Addressing namespace.      *       * @param internal (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert wsrm:SequenceAcknowledgement to 200502 version with 200408 WS-Addressing namespace.      *      * @param internal (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|org
@@ -3916,7 +3916,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|AckRequestedType
@@ -3988,7 +3988,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 wsrm:SequenceAcknowledgement with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|AckRequestedType
@@ -4060,7 +4060,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 TerminateSequenceType with 200508 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 TerminateSequenceType with 200508 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|TerminateSequenceType
@@ -4132,7 +4132,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert 200502 TerminateSequenceType with 200408 WS-Addressing namespace to internal form.      *       * @param exposed (non-<code>null</code>)      * @return converted      */
+comment|/**      * Convert 200502 TerminateSequenceType with 200408 WS-Addressing namespace to internal form.      *      * @param exposed (non-<code>null</code>)      * @return converted      */
 specifier|public
 specifier|static
 name|TerminateSequenceType

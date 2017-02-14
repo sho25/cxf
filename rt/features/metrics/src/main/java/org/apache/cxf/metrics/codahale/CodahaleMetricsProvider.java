@@ -202,7 +202,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -238,7 +238,7 @@ specifier|protected
 name|MetricRegistry
 name|registry
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|CodahaleMetricsProvider
 parameter_list|(

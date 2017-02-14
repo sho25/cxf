@@ -1998,7 +1998,7 @@ name|int
 name|index
 parameter_list|)
 function_decl|;
-comment|/**      * Create a AegisType for a Method parameter.      *       * @param m the method to create a type for      * @param index The parameter index. If the index is less than zero, the      *            return type is used.      */
+comment|/**      * Create a AegisType for a Method parameter.      *      * @param m the method to create a type for      * @param index The parameter index. If the index is less than zero, the      *            return type is used.      */
 specifier|public
 name|AegisType
 name|createType
@@ -2087,7 +2087,7 @@ name|getMappedName
 argument_list|()
 return|;
 block|}
-comment|/**      * Create type information for a PropertyDescriptor.      *       * @param pd the propertydescriptor      */
+comment|/**      * Create type information for a PropertyDescriptor.      *      * @param pd the propertydescriptor      */
 specifier|public
 name|AegisType
 name|createType
@@ -2123,7 +2123,7 @@ name|info
 argument_list|)
 return|;
 block|}
-comment|/**      * Create type information for a<code>Field</code>.      *       * @param f the field to create a type from      */
+comment|/**      * Create type information for a<code>Field</code>.      *      * @param f the field to create a type from      */
 specifier|public
 name|AegisType
 name|createType
@@ -2166,7 +2166,7 @@ name|info
 argument_list|)
 return|;
 block|}
-comment|/**      * Create an Aegis type from a reflected type description.      * This will only work for the restricted set of collection      * types supported by Aegis.       * @param t the reflected type.      * @return the type      */
+comment|/**      * Create an Aegis type from a reflected type description.      * This will only work for the restricted set of collection      * types supported by Aegis.      * @param t the reflected type.      * @return the type      */
 specifier|public
 name|AegisType
 name|createType

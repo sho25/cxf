@@ -1275,7 +1275,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Updates the current state if Client method is invoked, otherwise       * does the remote invocation or returns a new proxy if subresource       * method is invoked. Can throw an expected exception if ResponseExceptionMapper      * is registered           */
+comment|/**      * Updates the current state if Client method is invoked, otherwise      * does the remote invocation or returns a new proxy if subresource      * method is invoked. Can throw an expected exception if ResponseExceptionMapper      * is registered      */
 specifier|public
 name|Object
 name|invoke

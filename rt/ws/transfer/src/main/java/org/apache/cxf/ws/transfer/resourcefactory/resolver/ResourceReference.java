@@ -59,7 +59,7 @@ decl_stmt|;
 specifier|public
 name|ResourceReference
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ResourceReference
 parameter_list|(

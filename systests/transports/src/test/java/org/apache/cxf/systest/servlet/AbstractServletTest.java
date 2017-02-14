@@ -302,7 +302,7 @@ name|newClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Here we expect an errorCode other than 200, and look for it checking for      * text is omitted as it doesnt work. It would never work on java1.3, but      * one may have expected java1.4+ to have access to the error stream in      * responses. Clearly not.      *       * @param request      * @param errorCode      * @param errorText optional text string to search for      * @throws MalformedURLException      * @throws IOException      * @throws SAXException      */
+comment|/**      * Here we expect an errorCode other than 200, and look for it checking for      * text is omitted as it doesnt work. It would never work on java1.3, but      * one may have expected java1.4+ to have access to the error stream in      * responses. Clearly not.      *      * @param request      * @param errorCode      * @param errorText optional text string to search for      * @throws MalformedURLException      * @throws IOException      * @throws SAXException      */
 specifier|protected
 name|void
 name|expectErrorCode

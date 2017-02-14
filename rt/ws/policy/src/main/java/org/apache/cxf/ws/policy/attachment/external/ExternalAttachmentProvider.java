@@ -402,7 +402,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -444,7 +444,7 @@ name|attachments
 decl_stmt|;
 name|ExternalAttachmentProvider
 parameter_list|()
-block|{             }
+block|{     }
 name|ExternalAttachmentProvider
 parameter_list|(
 name|Bus

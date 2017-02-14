@@ -1020,7 +1020,7 @@ name|Service
 name|s
 parameter_list|)
 block|{
-comment|/**          * Yes, all this code is EXTREMELY ugly. But it gives about a 60-70% performance          * boost with the JAXB RI, so its worth it.           */
+comment|/**          * Yes, all this code is EXTREMELY ugly. But it gives about a 60-70% performance          * boost with the JAXB RI, so its worth it.          */
 if|if
 condition|(
 name|s

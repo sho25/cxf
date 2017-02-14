@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents the user approval of the client RequestToken.  * It also contains the set of approved scopes which may be   * more restricted than the original list requested by the client  */
+comment|/**  * Represents the user approval of the client RequestToken.  * It also contains the set of approved scopes which may be  * more restricted than the original list requested by the client  */
 end_comment
 
 begin_class

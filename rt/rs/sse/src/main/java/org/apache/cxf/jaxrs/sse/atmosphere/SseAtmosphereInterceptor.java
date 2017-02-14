@@ -296,7 +296,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Most of this class implementation is borrowed from SSEAtmosphereInterceptor. The original  * implementation does two things which do not fit well into SSE support:  *  - closes the response stream (overridden by SseAtmosphereInterceptorWriter)  *  - wraps the whatever object is being written to SSE payload (overridden using   *    the complete SSE protocol)   */
+comment|/**  * Most of this class implementation is borrowed from SSEAtmosphereInterceptor. The original  * implementation does two things which do not fit well into SSE support:  *  - closes the response stream (overridden by SseAtmosphereInterceptorWriter)  *  - wraps the whatever object is being written to SSE payload (overridden using  *    the complete SSE protocol)  */
 end_comment
 
 begin_class

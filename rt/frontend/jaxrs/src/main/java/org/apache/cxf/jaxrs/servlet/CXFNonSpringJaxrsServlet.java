@@ -723,7 +723,7 @@ decl_stmt|;
 specifier|public
 name|CXFNonSpringJaxrsServlet
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|CXFNonSpringJaxrsServlet
 parameter_list|(
@@ -3503,7 +3503,7 @@ parameter_list|(
 name|Object
 name|instance
 parameter_list|)
-block|{              }
+block|{      }
 specifier|protected
 name|void
 name|createServerFromApplication

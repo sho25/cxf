@@ -470,7 +470,7 @@ return|return
 name|handlerInitEnabled
 return|;
 block|}
-comment|/**      * sorts the handlers into correct order. All of the logical handlers first      * followed by the protocol handlers      *       * @param handlers      * @return sorted list of handlers      */
+comment|/**      * sorts the handlers into correct order. All of the logical handlers first      * followed by the protocol handlers      *      * @param handlers      * @return sorted list of handlers      */
 specifier|public
 name|List
 argument_list|<
@@ -767,7 +767,7 @@ return|return
 name|handlerChain
 return|;
 block|}
-comment|/**      * Resolve handler chain configuration file associated with the given class      *       * @param clz      * @param filename      * @return A URL object or null if no resource with this name is found      */
+comment|/**      * Resolve handler chain configuration file associated with the given class      *      * @param clz      * @param filename      * @return A URL object or null if no resource with this name is found      */
 specifier|protected
 name|URL
 name|resolveHandlerChainFile

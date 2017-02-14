@@ -350,7 +350,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -393,7 +393,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This field holds the connection factory, which primarily is used to       * factor out SSL specific code from this implementation.      *<p>      * This field is "protected" to facilitate some contrived UnitTesting so      * that an extended class may alter its value with an EasyMock URLConnection      * Factory.       */
+comment|/**      * This field holds the connection factory, which primarily is used to      * factor out SSL specific code from this implementation.      *<p>      * This field is "protected" to facilitate some contrived UnitTesting so      * that an extended class may alter its value with an EasyMock URLConnection      * Factory.      */
 specifier|protected
 name|HttpsURLConnectionFactory
 name|connectionFactory

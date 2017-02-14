@@ -250,7 +250,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The CXF BindingFactory implementation which is used to register   * CXF JAX-RS interceptors with the runtime.  */
+comment|/**  * The CXF BindingFactory implementation which is used to register  * CXF JAX-RS interceptors with the runtime.  */
 end_comment
 
 begin_class

@@ -272,7 +272,7 @@ operator|=
 name|c
 expr_stmt|;
 block|}
-comment|/**      * Return the databinding name.      *       * @return      */
+comment|/**      * Return the databinding name.      *      * @return      */
 specifier|public
 name|String
 name|getDatabindingName
@@ -282,7 +282,7 @@ return|return
 name|databindingName
 return|;
 block|}
-comment|/**      * Set the databinding name      *       * @param databindingName      */
+comment|/**      * Set the databinding name      *      * @param databindingName      */
 specifier|public
 name|void
 name|setDatabindingName

@@ -190,7 +190,7 @@ name|SERVICE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *       * @return      *     returns AddNumbers      */
+comment|/**      *      * @return      *     returns AddNumbers      */
 annotation|@
 name|WebEndpoint
 argument_list|(
@@ -216,7 +216,7 @@ name|class
 argument_list|)
 return|;
 block|}
-comment|/**      *       * @param features      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the       *     proxy.  Supported features not in the<code>features</code> parameter       *     will have their default values.      * @return      *     returns AddNumbers      */
+comment|/**      *      * @param features      *     A list of {@link javax.xml.ws.WebServiceFeature} to configure on the      *     proxy.  Supported features not in the<code>features</code> parameter      *     will have their default values.      * @return      *     returns AddNumbers      */
 annotation|@
 name|WebEndpoint
 argument_list|(

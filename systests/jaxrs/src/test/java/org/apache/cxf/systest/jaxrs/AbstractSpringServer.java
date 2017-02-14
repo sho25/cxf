@@ -332,7 +332,7 @@ name|theserver
 parameter_list|)
 throws|throws
 name|Exception
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|tearDown

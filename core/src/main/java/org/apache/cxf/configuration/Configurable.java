@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A configurable interface for obtaining a bean's name  *   * A class which implements this interface should return the   * unique bean name for configuration to use   */
+comment|/**  * A configurable interface for obtaining a bean's name  *  * A class which implements this interface should return the  * unique bean name for configuration to use  */
 end_comment
 
 begin_interface
@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|Configurable
 block|{
-comment|/**      * Get the configurable object's Bean name      * @return the bean name       */
+comment|/**      * Get the configurable object's Bean name      * @return the bean name      */
 name|String
 name|getBeanName
 parameter_list|()

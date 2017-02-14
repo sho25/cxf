@@ -346,7 +346,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests whether the stax transformer is correctly engaged and it does not interfere with logging.  * This test uses a simple transformation. More complex transformation tests are found in the api package.  *    */
+comment|/**  * Tests whether the stax transformer is correctly engaged and it does not interfere with logging.  * This test uses a simple transformation. More complex transformation tests are found in the api package.  *  */
 end_comment
 
 begin_class

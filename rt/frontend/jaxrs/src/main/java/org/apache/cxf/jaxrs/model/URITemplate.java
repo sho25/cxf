@@ -586,7 +586,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * List of all variables in order of appearance in template.      *       * @return unmodifiable list of variable names w/o patterns, e.g. for "/foo/{v1:\\d}/{v2}" returned list      *         is ["v1","v2"].      */
+comment|/**      * List of all variables in order of appearance in template.      *      * @return unmodifiable list of variable names w/o patterns, e.g. for "/foo/{v1:\\d}/{v2}" returned list      *         is ["v1","v2"].      */
 specifier|public
 name|List
 argument_list|<
@@ -604,7 +604,7 @@ name|variables
 argument_list|)
 return|;
 block|}
-comment|/**      * List of variables with patterns (regexps). List is subset of elements from {@link #getVariables()}.      *       * @return unmodifiable list of variables names w/o patterns.      */
+comment|/**      * List of variables with patterns (regexps). List is subset of elements from {@link #getVariables()}.      *      * @return unmodifiable list of variables names w/o patterns.      */
 specifier|public
 name|List
 argument_list|<
@@ -1132,7 +1132,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Substitutes template variables with listed values. List of values is counterpart for      * {@link #getVariables() list of variables}. When list of value is shorter than variables substitution      * is partial. When variable has pattern, value must fit to pattern, otherwise      * {@link IllegalArgumentException} is thrown.      *<p>      * Example1: for template "/{a}/{b}/{a}" {@link #getVariables()} returns "[a, b, a]"; providing here list      * of value "[foo, bar, baz]" results with "/foo/bar/baz".      *<p>      * Example2: for template "/{a}/{b}/{a}" providing list of values "[foo]" results with "/foo/{b}/{a}".      *       * @param values values for variables      * @return template with bound variables.      * @throws IllegalArgumentException when values is null, any value does not match pattern etc.      */
+comment|/**      * Substitutes template variables with listed values. List of values is counterpart for      * {@link #getVariables() list of variables}. When list of value is shorter than variables substitution      * is partial. When variable has pattern, value must fit to pattern, otherwise      * {@link IllegalArgumentException} is thrown.      *<p>      * Example1: for template "/{a}/{b}/{a}" {@link #getVariables()} returns "[a, b, a]"; providing here list      * of value "[foo, bar, baz]" results with "/foo/bar/baz".      *<p>      * Example2: for template "/{a}/{b}/{a}" providing list of values "[foo]" results with "/foo/{b}/{a}".      *      * @param values values for variables      * @return template with bound variables.      * @throws IllegalArgumentException when values is null, any value does not match pattern etc.      */
 specifier|public
 name|String
 name|substitute
@@ -1325,7 +1325,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Substitutes template variables with mapped values. Variables are mapped to values; if not all variables      * are bound result will still contain variables. Note that all variables with the same name are replaced      * by one value.      *<p>      * Example: for template "/{a}/{b}/{a}" {@link #getVariables()} returns "[a, b, a]"; providing here      * mapping "[a: foo, b: bar]" results with "/foo/bar/foo" (full substitution) and for mapping "[b: baz]"      * result is "{a}/baz/{a}" (partial substitution).      *       * @param valuesMap map variables to their values; on each value Object.toString() is called.      * @return template with bound variables.      */
+comment|/**      * Substitutes template variables with mapped values. Variables are mapped to values; if not all variables      * are bound result will still contain variables. Note that all variables with the same name are replaced      * by one value.      *<p>      * Example: for template "/{a}/{b}/{a}" {@link #getVariables()} returns "[a, b, a]"; providing here      * mapping "[a: foo, b: bar]" results with "/foo/bar/foo" (full substitution) and for mapping "[b: baz]"      * result is "{a}/baz/{a}" (partial substitution).      *      * @param valuesMap map variables to their values; on each value Object.toString() is called.      * @return template with bound variables.      */
 specifier|public
 name|String
 name|substitute
@@ -1543,7 +1543,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Encoded literal characters surrounding template variables,       * ex. "a {id} b" will be encoded to "a%20{id}%20b"       * @return encoded value      */
+comment|/**      * Encoded literal characters surrounding template variables,      * ex. "a {id} b" will be encoded to "a%20{id}%20b"      * @return encoded value      */
 specifier|public
 name|String
 name|encodeLiteralCharacters
@@ -1889,7 +1889,7 @@ specifier|static
 class|class
 name|UriChunk
 block|{
-comment|/**          * Creates object form string.          *           * @param uriChunk stringified uri chunk          * @return If param has variable form then {@link Variable} instance is created, otherwise chunk is          *         treated as {@link Literal}.          */
+comment|/**          * Creates object form string.          *          * @param uriChunk stringified uri chunk          * @return If param has variable form then {@link Variable} instance is created, otherwise chunk is          *         treated as {@link Literal}.          */
 specifier|public
 specifier|static
 name|UriChunk
@@ -2256,7 +2256,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**          * Checks whether value matches variable. If variable has pattern its checked against, otherwise true          * is returned.          *           * @param value value of variable          * @return true if value is valid for variable, false otherwise.          */
+comment|/**          * Checks whether value matches variable. If variable has pattern its checked against, otherwise true          * is returned.          *          * @param value value of variable          * @return true if value is valid for variable, false otherwise.          */
 specifier|public
 name|boolean
 name|matches
@@ -2535,7 +2535,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**          * Token is enclosed by curly braces.          *           * @param token          *            text to verify          * @return true if enclosed, false otherwise.          */
+comment|/**          * Token is enclosed by curly braces.          *          * @param token          *            text to verify          * @return true if enclosed, false otherwise.          */
 specifier|public
 specifier|static
 name|boolean
@@ -2570,7 +2570,7 @@ operator|==
 literal|'}'
 return|;
 block|}
-comment|/**          * Strips token from enclosed curly braces. If token is not enclosed method          * has no side effect.          *           * @param token          *            text to verify          * @return text stripped from curly brace begin-end pair.          */
+comment|/**          * Strips token from enclosed curly braces. If token is not enclosed method          * has no side effect.          *          * @param token          *            text to verify          * @return text stripped from curly brace begin-end pair.          */
 specifier|public
 specifier|static
 name|String

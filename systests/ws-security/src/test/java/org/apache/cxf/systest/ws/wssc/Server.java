@@ -187,7 +187,7 @@ name|Server
 parameter_list|()
 throws|throws
 name|Exception
-block|{              }
+block|{      }
 specifier|protected
 name|Server
 parameter_list|(

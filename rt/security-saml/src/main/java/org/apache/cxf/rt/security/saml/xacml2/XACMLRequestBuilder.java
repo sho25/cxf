@@ -78,7 +78,7 @@ specifier|public
 interface|interface
 name|XACMLRequestBuilder
 block|{
-comment|/**      * Create an XACML Request given a Principal, list of roles and Message.      *       * @param principal The principal to insert into the Subject of the Request      * @param roles The list of roles associated with the principal      * @param message The Message from which to retrieve the resource      * @return An OpenSAML RequestType object      * @throws Exception      */
+comment|/**      * Create an XACML Request given a Principal, list of roles and Message.      *      * @param principal The principal to insert into the Subject of the Request      * @param roles The list of roles associated with the principal      * @param message The Message from which to retrieve the resource      * @return An OpenSAML RequestType object      * @throws Exception      */
 name|RequestType
 name|createRequest
 parameter_list|(

@@ -1836,7 +1836,7 @@ condition|(
 name|searchSEI
 condition|)
 block|{
-comment|/* HandlerChain annotation can be specified on the SEI                  * but the implementation bean might not implement the SEI.                            */
+comment|/* HandlerChain annotation can be specified on the SEI                  * but the implementation bean might not implement the SEI.                  */
 name|WebService
 name|ws
 init|=

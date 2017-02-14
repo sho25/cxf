@@ -106,7 +106,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A default AttributeStatementProvider implementation. It simply creates a default attribute with  * value "authenticated".   */
+comment|/**  * A default AttributeStatementProvider implementation. It simply creates a default attribute with  * value "authenticated".  */
 end_comment
 
 begin_class

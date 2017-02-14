@@ -2080,7 +2080,7 @@ return|return
 name|callbacks
 return|;
 block|}
-comment|/**          * Wait for expected number of callbacks.          *           * @param count expected number of callbacks          * @param delay extra time to wait after expected number received (in case more are coming)          * @param timeout maximum time to wait, in milliseconds          */
+comment|/**          * Wait for expected number of callbacks.          *          * @param count expected number of callbacks          * @param delay extra time to wait after expected number received (in case more are coming)          * @param timeout maximum time to wait, in milliseconds          */
 specifier|public
 name|void
 name|waitDone

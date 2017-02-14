@@ -1886,7 +1886,7 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
-comment|/* 1. Test that replyTo destination set in WSDL is NOT used           * in spec compliant mode */
+comment|/* 1. Test that replyTo destination set in WSDL is NOT used          * in spec compliant mode */
 name|destMessage
 operator|=
 literal|null
@@ -1966,7 +1966,7 @@ name|destMessage
 operator|=
 literal|null
 expr_stmt|;
-comment|/* 2. Test that replyTo destination set in WSDL IS used           * in spec non-compliant mode */
+comment|/* 2. Test that replyTo destination set in WSDL IS used          * in spec non-compliant mode */
 name|sendOneWayMessage
 argument_list|(
 name|conduit
@@ -2015,7 +2015,7 @@ name|destMessage
 operator|=
 literal|null
 expr_stmt|;
-comment|/* 3. Test that replyTo destination provided via invocation context           * overrides the value set in WSDL and IS used in spec non-compliant mode */
+comment|/* 3. Test that replyTo destination provided via invocation context          * overrides the value set in WSDL and IS used in spec non-compliant mode */
 name|String
 name|contextReplyTo
 init|=
@@ -2076,7 +2076,7 @@ name|destMessage
 operator|=
 literal|null
 expr_stmt|;
-comment|/* 4. Test that replyTo destination provided via invocation context           * and the value set in WSDL are NOT used in spec non-compliant mode           * when JMSConstants.JMS_SET_REPLY_TO == false */
+comment|/* 4. Test that replyTo destination provided via invocation context          * and the value set in WSDL are NOT used in spec non-compliant mode          * when JMSConstants.JMS_SET_REPLY_TO == false */
 name|setupMessageHeader
 argument_list|(
 name|outMessage
@@ -2123,7 +2123,7 @@ name|destMessage
 operator|=
 literal|null
 expr_stmt|;
-comment|/* 5. Test that replyTo destination set in WSDL IS used in spec non-compliant           * mode when JMSConstants.JMS_SET_REPLY_TO == true */
+comment|/* 5. Test that replyTo destination set in WSDL IS used in spec non-compliant          * mode when JMSConstants.JMS_SET_REPLY_TO == true */
 name|setupMessageHeader
 argument_list|(
 name|outMessage

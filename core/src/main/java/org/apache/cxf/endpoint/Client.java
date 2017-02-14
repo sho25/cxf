@@ -159,7 +159,7 @@ name|KEEP_CONDUIT_ALIVE
 init|=
 literal|"KeepConduitAlive"
 decl_stmt|;
-comment|/**      * Invokes an operation synchronously      * @param operationName The name of the operation to be invoked. The service namespace will be used      * when looking up the BindingOperationInfo.      * @param params  The params that matches the parts of the input message of the operation.  If the       * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If       * params are in the wrapped form, use invokeWrapped      * @return The return values that matche the parts of the output message of the operation      */
+comment|/**      * Invokes an operation synchronously      * @param operationName The name of the operation to be invoked. The service namespace will be used      * when looking up the BindingOperationInfo.      * @param params  The params that matches the parts of the input message of the operation.  If the      * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If      * params are in the wrapped form, use invokeWrapped      * @return The return values that matche the parts of the output message of the operation      */
 name|Object
 index|[]
 name|invoke
@@ -174,7 +174,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation synchronously      * @param operationName The name of the operation to be invoked      * @param params  The params that matches the parts of the input message of the operation.  If the       * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If       * params are in the wrapped form, use invokeWrapped      * @return The return values that matche the parts of the output message of the operation      */
+comment|/**      * Invokes an operation synchronously      * @param operationName The name of the operation to be invoked      * @param params  The params that matches the parts of the input message of the operation.  If the      * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If      * params are in the wrapped form, use invokeWrapped      * @return The return values that matche the parts of the output message of the operation      */
 name|Object
 index|[]
 name|invoke
@@ -234,7 +234,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation synchronously      * @param oi  The operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      * @param context  Optional (can be null) contextual information for the invocation           * @return The return values that matche the parts of the output message of the operation      */
+comment|/**      * Invokes an operation synchronously      * @param oi  The operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      * @param context  Optional (can be null) contextual information for the invocation      * @return The return values that matche the parts of the output message of the operation      */
 name|Object
 index|[]
 name|invoke
@@ -257,7 +257,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation synchronously      * @param oi  The operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      * @param context  Optional (can be null) contextual information for the invocation      * @param exchange The Exchange to be used for the invocation           * @return The return values that matche the parts of the output message of the operation      */
+comment|/**      * Invokes an operation synchronously      * @param oi  The operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      * @param context  Optional (can be null) contextual information for the invocation      * @param exchange The Exchange to be used for the invocation      * @return The return values that matche the parts of the output message of the operation      */
 name|Object
 index|[]
 name|invoke
@@ -283,7 +283,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param operationName The name of the operation to be invoked. The service namespace will be used      * when looking up the BindingOperationInfo.      * @param params  The params that matches the parts of the input message of the operation.  If the       * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If       * params are in the wrapped form, use invokeWrapped      *       */
+comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param operationName The name of the operation to be invoked. The service namespace will be used      * when looking up the BindingOperationInfo.      * @param params  The params that matches the parts of the input message of the operation.  If the      * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If      * params are in the wrapped form, use invokeWrapped      *      */
 name|void
 name|invoke
 parameter_list|(
@@ -300,7 +300,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param operationName The name of the operation to be invoked      * @param params  The params that matches the parts of the input message of the operation.  If the       * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If       * params are in the wrapped form, use invokeWrapped      *       */
+comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param operationName The name of the operation to be invoked      * @param params  The params that matches the parts of the input message of the operation.  If the      * BindingOperationInfo supports unwrapping, it assumes the params are in the "unwrapped" form.  If      * params are in the wrapped form, use invokeWrapped      *      */
 name|void
 name|invoke
 parameter_list|(
@@ -334,7 +334,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param operationName The name of the operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      *       */
+comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param operationName The name of the operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      *      */
 name|void
 name|invokeWrapped
 parameter_list|(
@@ -413,7 +413,7 @@ parameter_list|)
 throws|throws
 name|Exception
 function_decl|;
-comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param oi  The operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      * @param context  Optional (can be null) contextual information for the invocation      * @param exchange Optional (can be null) The Exchange to be used for the invocation        */
+comment|/**      * Invokes an operation asynchronously      * @param callback The callback that is called when the response is ready      * @param oi  The operation to be invoked      * @param params  The params that matches the parts of the input message of the operation      * @param context  Optional (can be null) contextual information for the invocation      * @param exchange Optional (can be null) The Exchange to be used for the invocation      */
 name|void
 name|invoke
 parameter_list|(
@@ -461,7 +461,7 @@ argument_list|>
 name|getResponseContext
 parameter_list|()
 function_decl|;
-comment|/**      * Sets whether the request context is thread local or global to this client.  By       * default, the request context is "global" in that any values set in the context      * are seen by all threads using this client.  If set to true, the context is changed       * to be a ThreadLocal and values set are not seen by other threads.      * @param b      */
+comment|/**      * Sets whether the request context is thread local or global to this client.  By      * default, the request context is "global" in that any values set in the context      * are seen by all threads using this client.  If set to true, the context is changed      * to be a ThreadLocal and values set are not seen by other threads.      * @param b      */
 name|void
 name|setThreadLocalRequestContext
 parameter_list|(
@@ -483,12 +483,12 @@ name|Conduit
 name|getConduit
 parameter_list|()
 function_decl|;
-comment|/**      * Get the ConduitSelector responsible for retreiving the Conduit.      *       * @return the current ConduitSelector      */
+comment|/**      * Get the ConduitSelector responsible for retreiving the Conduit.      *      * @return the current ConduitSelector      */
 name|ConduitSelector
 name|getConduitSelector
 parameter_list|()
 function_decl|;
-comment|/**      * Set the ConduitSelector responsible for retreiving the Conduit.      *       * @param selector the ConduitSelector to use      */
+comment|/**      * Set the ConduitSelector responsible for retreiving the Conduit.      *      * @param selector the ConduitSelector to use      */
 name|void
 name|setConduitSelector
 parameter_list|(
@@ -501,7 +501,7 @@ name|void
 name|destroy
 parameter_list|()
 function_decl|;
-comment|/**      * Sets the executor which is used to process Asynchronous responses.  The default      * is to use the threads provided by the transport.  (example: the JMS listener threads)       * @param executor      */
+comment|/**      * Sets the executor which is used to process Asynchronous responses.  The default      * is to use the threads provided by the transport.  (example: the JMS listener threads)      * @param executor      */
 name|void
 name|setExecutor
 parameter_list|(

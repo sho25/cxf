@@ -26,7 +26,7 @@ name|AbstractRestController
 argument_list|<
 name|ConcreteRestResource
 argument_list|>
-block|{      }
+block|{  }
 end_class
 
 end_unit

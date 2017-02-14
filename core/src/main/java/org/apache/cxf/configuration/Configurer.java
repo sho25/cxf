@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * The configurer's interface  *   * A class that implements this interface will perform a   * bean's configuration work  */
+comment|/**  * The configurer's interface  *  * A class that implements this interface will perform a  * bean's configuration work  */
 end_comment
 
 begin_interface

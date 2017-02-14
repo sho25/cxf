@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Describes the policy of an inbound message. As the underlying message  * type is not known, only the effective endpoint policy is calculated.   * The total of all assertions that may apply to an inbound message for an endpoint  * (and hence the required interceptors) are available as vocabulary.  */
+comment|/**  * Describes the policy of an inbound message. As the underlying message  * type is not known, only the effective endpoint policy is calculated.  * The total of all assertions that may apply to an inbound message for an endpoint  * (and hence the required interceptors) are available as vocabulary.  */
 end_comment
 
 begin_interface

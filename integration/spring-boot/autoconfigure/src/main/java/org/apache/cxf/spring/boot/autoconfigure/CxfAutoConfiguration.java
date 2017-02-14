@@ -513,7 +513,7 @@ specifier|protected
 specifier|static
 class|class
 name|JaxRsComponentConfiguration
-block|{           }
+block|{      }
 annotation|@
 name|Configuration
 annotation|@
@@ -539,7 +539,7 @@ specifier|protected
 specifier|static
 class|class
 name|JaxRsClassesConfiguration
-block|{           }
+block|{      }
 block|}
 end_class
 

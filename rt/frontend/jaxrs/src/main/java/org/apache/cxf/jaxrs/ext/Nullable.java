@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Some JAX-RS providers, notably JAXB-based ones  * return 400 when the incoming payload is empty.  * This annotation can be attached to a method parameter  * identifying a request body in order to get a null   * injected instead    *   */
+comment|/**  * Some JAX-RS providers, notably JAXB-based ones  * return 400 when the incoming payload is empty.  * This annotation can be attached to a method parameter  * identifying a request body in order to get a null  * injected instead  *  */
 end_comment
 
 begin_annotation_defn

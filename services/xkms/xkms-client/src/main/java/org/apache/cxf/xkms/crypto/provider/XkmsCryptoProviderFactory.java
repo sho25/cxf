@@ -174,7 +174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * For usage in OSGi this factory will be published as a service.  * Outside OSGi it can be used directly   */
+comment|/**  * For usage in OSGi this factory will be published as a service.  * Outside OSGi it can be used directly  */
 end_comment
 
 begin_class

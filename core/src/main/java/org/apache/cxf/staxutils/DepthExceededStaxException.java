@@ -33,7 +33,7 @@ decl_stmt|;
 specifier|public
 name|DepthExceededStaxException
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|DepthExceededStaxException
 parameter_list|(

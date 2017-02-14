@@ -549,7 +549,7 @@ specifier|private
 name|String
 name|host
 decl_stmt|;
-comment|/**      * This field holds the protocol for which this engine is       * enabled, i.e. "http" or "https".      */
+comment|/**      * This field holds the protocol for which this engine is      * enabled, i.e. "http" or "https".      */
 specifier|private
 name|String
 name|protocol
@@ -2047,7 +2047,7 @@ operator|=
 literal|true
 expr_stmt|;
 block|}
-comment|/**      * This method is used to programmatically set the TLSServerParameters.      * This method may only be called by the factory.      * @throws IOException       */
+comment|/**      * This method is used to programmatically set the TLSServerParameters.      * This method may only be called by the factory.      * @throws IOException      */
 specifier|public
 name|void
 name|setTlsServerParameters
@@ -2114,7 +2114,7 @@ literal|"\"."
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used       * in SpringConfiguration.      * @return      */
+comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used      * in SpringConfiguration.      * @return      */
 specifier|public
 name|TLSServerParameters
 name|getTlsServerParameters
@@ -2147,7 +2147,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This method will shut down the server engine and      * remove it from the factory's cache.       */
+comment|/**      * This method will shut down the server engine and      * remove it from the factory's cache.      */
 specifier|public
 name|void
 name|shutdown
@@ -2428,7 +2428,7 @@ return|return
 name|keyManagers
 return|;
 block|}
-comment|/**      * This method sets the threading parameters for this particular       * server engine.      * This method may only be called by the factory.      */
+comment|/**      * This method sets the threading parameters for this particular      * server engine.      * This method may only be called by the factory.      */
 specifier|public
 name|void
 name|setThreadingParameters

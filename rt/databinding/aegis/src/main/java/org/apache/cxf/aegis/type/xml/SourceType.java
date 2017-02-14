@@ -252,7 +252,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Reads and writes<code>javax.xml.transform.Source</code> types.  *<p>  * The XML stream is converted DOMSource and sent off.  *   * @see javanet.staxutils.StAXSource  * @see javax.xml.stream.XMLInputFactory  * @see org.apache.cxf.aegis.util.STAXUtils  */
+comment|/**  * Reads and writes<code>javax.xml.transform.Source</code> types.  *<p>  * The XML stream is converted DOMSource and sent off.  *  * @see javanet.staxutils.StAXSource  * @see javax.xml.stream.XMLInputFactory  * @see org.apache.cxf.aegis.util.STAXUtils  */
 end_comment
 
 begin_class

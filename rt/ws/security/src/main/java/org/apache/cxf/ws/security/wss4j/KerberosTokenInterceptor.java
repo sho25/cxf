@@ -100,7 +100,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interceptor to add a Kerberos token to the security header of an outbound request, and to  * process a Kerberos Token on an inbound request. It takes the Kerberos Token from the message   * context on the outbound side, where it was previously placed by the   * KerberosTokenInterceptorProvider.  */
+comment|/**  * An interceptor to add a Kerberos token to the security header of an outbound request, and to  * process a Kerberos Token on an inbound request. It takes the Kerberos Token from the message  * context on the outbound side, where it was previously placed by the  * KerberosTokenInterceptorProvider.  */
 end_comment
 
 begin_class

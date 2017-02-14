@@ -491,7 +491,7 @@ name|responseHandler
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Processes an access token request      * @param params the form parameters representing the access token grant       * @return Access Token or the error       */
+comment|/**      * Processes an access token request      * @param params the form parameters representing the access token grant      * @return Access Token or the error      */
 annotation|@
 name|POST
 annotation|@

@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Optional provider responsible for creating   * resource owner subject representations  */
+comment|/**  * Optional provider responsible for creating  * resource owner subject representations  */
 end_comment
 
 begin_interface
@@ -80,7 +80,7 @@ specifier|public
 interface|interface
 name|SubjectCreator
 block|{
-comment|/**      * Create a {@link UserSubject}       * @param mc the {@link MessageContext} of this request      * @param params the request parameters      * @return {@link UserSubject}      * @throws OAuthServiceException      */
+comment|/**      * Create a {@link UserSubject}      * @param mc the {@link MessageContext} of this request      * @param params the request parameters      * @return {@link UserSubject}      * @throws OAuthServiceException      */
 name|UserSubject
 name|createUserSubject
 parameter_list|(

@@ -176,7 +176,7 @@ decl_stmt|;
 specifier|public
 name|GenericHandlerWriter
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|long
 name|getSize

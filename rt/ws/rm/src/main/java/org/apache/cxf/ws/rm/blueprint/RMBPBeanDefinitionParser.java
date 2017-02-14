@@ -210,7 +210,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class provides some common functions used by the two BP bean definition parsers  * in this package.   *   */
+comment|/**  * This class provides some common functions used by the two BP bean definition parsers  * in this package.  *  */
 end_comment
 
 begin_class

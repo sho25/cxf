@@ -34,7 +34,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A callback-style interface which can be used to map an object to an Atom Feed or Entry  * without having to introduce direct dependencies on Abdera API in the 'main' service code    *   * @param<T> Type of Atom element, Feed or Entry  * @param<E> Type of objects which will be mapped to feed or entry  *    */
+comment|/**  * A callback-style interface which can be used to map an object to an Atom Feed or Entry  * without having to introduce direct dependencies on Abdera API in the 'main' service code  *  * @param<T> Type of Atom element, Feed or Entry  * @param<E> Type of objects which will be mapped to feed or entry  *  */
 end_comment
 
 begin_interface
@@ -49,7 +49,7 @@ parameter_list|,
 name|E
 parameter_list|>
 block|{
-comment|/**      * @param element Feed or Entry instance       * @param pojoElement An object which needs to be mapped to the feed or entry      */
+comment|/**      * @param element Feed or Entry instance      * @param pojoElement An object which needs to be mapped to the feed or entry      */
 name|void
 name|writeTo
 parameter_list|(

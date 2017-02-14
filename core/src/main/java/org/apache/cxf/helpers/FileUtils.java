@@ -261,7 +261,7 @@ decl_stmt|;
 specifier|private
 name|FileUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|boolean
 name|isValidFileName

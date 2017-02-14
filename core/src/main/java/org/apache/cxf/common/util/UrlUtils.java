@@ -148,7 +148,7 @@ decl_stmt|;
 specifier|private
 name|UrlUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String
@@ -765,7 +765,7 @@ return|return
 name|ht
 return|;
 block|}
-comment|/**      * Return everything in the path up to the last slash in a URI.      * @param baseURI      * @return the trailing       */
+comment|/**      * Return everything in the path up to the last slash in a URI.      * @param baseURI      * @return the trailing      */
 specifier|public
 specifier|static
 name|String

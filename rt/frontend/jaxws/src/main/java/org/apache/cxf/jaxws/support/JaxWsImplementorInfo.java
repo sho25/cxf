@@ -509,7 +509,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * See use of targetNamespace in {@link WebService}.      *       * @return the qualified name of the service.      */
+comment|/**      * See use of targetNamespace in {@link WebService}.      *      * @return the qualified name of the service.      */
 specifier|public
 name|QName
 name|getServiceName
@@ -703,7 +703,7 @@ name|serviceName
 argument_list|)
 return|;
 block|}
-comment|/**      * See use of targetNamespace in {@link WebService}.      *       * @return the qualified name of the endpoint.      */
+comment|/**      * See use of targetNamespace in {@link WebService}.      *      * @return the qualified name of the endpoint.      */
 specifier|public
 name|QName
 name|getEndpointName

@@ -543,7 +543,7 @@ decl_stmt|;
 specifier|private
 name|JwsUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

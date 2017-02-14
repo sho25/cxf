@@ -311,7 +311,7 @@ specifier|public
 name|AbstractConduitSelector
 parameter_list|()
 block|{     }
-comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *       * @param c specific conduit      */
+comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *      * @param c specific conduit      */
 specifier|public
 name|AbstractConduitSelector
 parameter_list|(
@@ -389,7 +389,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Mechanics to actually get the Conduit from the ConduitInitiator      * if necessary.      *       * @param message the current Message      */
+comment|/**      * Mechanics to actually get the Conduit from the ConduitInitiator      * if necessary.      *      * @param message the current Message      */
 specifier|protected
 name|Conduit
 name|getSelectedConduit
@@ -900,7 +900,7 @@ operator|=
 name|ep
 expr_stmt|;
 block|}
-comment|/**      * Called on completion of the MEP for which the Conduit was required.      *       * @param exchange represents the completed MEP      */
+comment|/**      * Called on completion of the MEP for which the Conduit was required.      *      * @param exchange represents the completed MEP      */
 specifier|public
 name|void
 name|complete
@@ -1011,7 +1011,7 @@ name|Logger
 name|getLogger
 parameter_list|()
 function_decl|;
-comment|/**      * If address protocol was changed, conduit should be re-initialised      *       * @param message the current Message      */
+comment|/**      * If address protocol was changed, conduit should be re-initialised      *      * @param message the current Message      */
 specifier|protected
 name|Conduit
 name|findCompatibleConduit

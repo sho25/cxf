@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Attach<a href="http://www.w3.org/TR/cors/">CORS</a> information  * to a resource. This annotation is read by {@link CrossOriginResourceSharingFilter}.  * If this annotation is present on a method, or   * on the method's class (or its superclasses), then it completely  * overrides any parameters set in {@link CrossOriginResourceSharingFilter}.   * If a particular parameter of this annotation is not specified, then the  * default value is used,<em>not</em> the parameters of the filter.   *   * Note that the CORS specification censors the headers on a   * preflight OPTIONS request. As a result, the filter cannot determine  * exactly which method corresponds to the request, and so uses only   * class-level annotations to set policies.  */
+comment|/**  * Attach<a href="http://www.w3.org/TR/cors/">CORS</a> information  * to a resource. This annotation is read by {@link CrossOriginResourceSharingFilter}.  * If this annotation is present on a method, or  * on the method's class (or its superclasses), then it completely  * overrides any parameters set in {@link CrossOriginResourceSharingFilter}.  * If a particular parameter of this annotation is not specified, then the  * default value is used,<em>not</em> the parameters of the filter.  *  * Note that the CORS specification censors the headers on a  * preflight OPTIONS request. As a result, the filter cannot determine  * exactly which method corresponds to the request, and so uses only  * class-level annotations to set policies.  */
 end_comment
 
 begin_annotation_defn
@@ -110,7 +110,7 @@ specifier|public
 annotation_defn|@interface
 name|CrossOriginResourceSharing
 block|{
-comment|/**      * If true, this resource will return       *<pre>Access-Control-Allow-Origin: *</pre>      * for a valid request       */
+comment|/**      * If true, this resource will return      *<pre>Access-Control-Allow-Origin: *</pre>      * for a valid request      */
 name|boolean
 name|allowAllOrigins
 parameter_list|()
@@ -125,7 +125,7 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
-comment|/**      * A list of headers that the client may include      * in an actual request. All the headers listed in       * the Access-Control-Request-Headers will be allowed if      * the list is empty      */
+comment|/**      * A list of headers that the client may include      * in an actual request. All the headers listed in      * the Access-Control-Request-Headers will be allowed if      * the list is empty      */
 name|String
 index|[]
 name|allowHeaders
@@ -133,14 +133,14 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
-comment|/**      * If true, this resource will return       *<pre>Access-Control-Allow-Credentials: true</pre>      */
+comment|/**      * If true, this resource will return      *<pre>Access-Control-Allow-Credentials: true</pre>      */
 name|boolean
 name|allowCredentials
 parameter_list|()
 default|default
 literal|false
 function_decl|;
-comment|/**      * A list of headers to return in<tt>      * Access-Control-Expose-Headers</tt>.       */
+comment|/**      * A list of headers to return in<tt>      * Access-Control-Expose-Headers</tt>.      */
 name|String
 index|[]
 name|exposeHeaders

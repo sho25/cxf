@@ -1310,7 +1310,7 @@ parameter_list|(
 name|CachedOutputStream
 name|cos
 parameter_list|)
-block|{                        }
+block|{          }
 specifier|public
 name|void
 name|onClose

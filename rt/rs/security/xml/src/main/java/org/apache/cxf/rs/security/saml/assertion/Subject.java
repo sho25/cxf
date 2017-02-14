@@ -49,7 +49,7 @@ decl_stmt|;
 specifier|public
 name|Subject
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Subject
 parameter_list|(

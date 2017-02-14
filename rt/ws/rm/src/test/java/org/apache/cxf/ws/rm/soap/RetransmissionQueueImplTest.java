@@ -2833,7 +2833,7 @@ return|return
 name|sequence
 return|;
 block|}
-comment|/**      * Creates a mock object ensuring it remains referenced, so as to      * avoid garbage collection and attendant issues with finalizer      * calls on mocks.      *       * @param toMock the class to mock up      * @return the mock object      */
+comment|/**      * Creates a mock object ensuring it remains referenced, so as to      * avoid garbage collection and attendant issues with finalizer      * calls on mocks.      *      * @param toMock the class to mock up      * @return the mock object      */
 parameter_list|<
 name|T
 parameter_list|>

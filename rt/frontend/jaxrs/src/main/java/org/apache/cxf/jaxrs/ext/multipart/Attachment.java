@@ -234,7 +234,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an attachment; generally a multipart part.   * Some constructors in here are intended only for  * internal use in CXF, others are suitable or preparing   * attachments to pass to the {@link org.apache.cxf.jaxrs.client.WebClient} API.   * See the {@link AttachmentBuilder} for a convenient   * way to create attachments for use with {@link org.apache.cxf.jaxrs.client.WebClient}.  */
+comment|/**  * This class represents an attachment; generally a multipart part.  * Some constructors in here are intended only for  * internal use in CXF, others are suitable or preparing  * attachments to pass to the {@link org.apache.cxf.jaxrs.client.WebClient} API.  * See the {@link AttachmentBuilder} for a convenient  * way to create attachments for use with {@link org.apache.cxf.jaxrs.client.WebClient}.  */
 end_comment
 
 begin_class

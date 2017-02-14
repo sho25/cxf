@@ -902,7 +902,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Append the input value string to the given buffer, wrapping it with      * quotes if need be.      *       * @param value      * @return String      */
+comment|/**      * Append the input value string to the given buffer, wrapping it with      * quotes if need be.      *      * @param value      * @return String      */
 specifier|static
 name|String
 name|maybeQuote
@@ -1014,7 +1014,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/**      * Return true iff the string contains special characters that need to be      * quoted.      *       * @param value      * @return boolean      */
+comment|/**      * Return true iff the string contains special characters that need to be      * quoted.      *      * @param value      * @return boolean      */
 specifier|static
 name|boolean
 name|needsQuote

@@ -112,7 +112,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract base class factoring out common Destination logic,   * allowing non-decoupled transports to be written without any  * regard for the decoupled back-channel or partial response logic.  */
+comment|/**  * Abstract base class factoring out common Destination logic,  * allowing non-decoupled transports to be written without any  * regard for the decoupled back-channel or partial response logic.  */
 end_comment
 
 begin_class
@@ -198,7 +198,7 @@ return|return
 name|reference
 return|;
 block|}
-comment|/**      * Retrieve a back-channel Conduit, which must be policy-compatible      * with the current Message and associated Destination. For example      * compatible Quality of Protection must be asserted on the back-channel.      * This would generally only be an issue if the back-channel is decoupled.      *       * @param inMessage the current inbound message (null to indicate a       * disassociated back-channel)      * @return a suitable Conduit      */
+comment|/**      * Retrieve a back-channel Conduit, which must be policy-compatible      * with the current Message and associated Destination. For example      * compatible Quality of Protection must be asserted on the back-channel.      * This would generally only be an issue if the back-channel is decoupled.      *      * @param inMessage the current inbound message (null to indicate a      * disassociated back-channel)      * @return a suitable Conduit      */
 specifier|public
 name|Conduit
 name|getBackChannel
@@ -255,7 +255,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**          * Register a message observer for incoming messages.          *           * @param observer the observer to notify on receipt of incoming          */
+comment|/**          * Register a message observer for incoming messages.          *          * @param observer the observer to notify on receipt of incoming          */
 specifier|public
 name|void
 name|setMessageObserver

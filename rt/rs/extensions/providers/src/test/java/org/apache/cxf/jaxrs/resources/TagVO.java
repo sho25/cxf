@@ -67,7 +67,7 @@ decl_stmt|;
 specifier|public
 name|TagVO
 parameter_list|()
-block|{               }
+block|{      }
 specifier|public
 name|TagVO
 parameter_list|(

@@ -290,7 +290,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -815,7 +815,7 @@ name|msg
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add AcknowledgementRequested to message if needed. The AckRequest mode set either in the message      * properties or in the source policy is used to determine whether AcknowledgementRequested is always      * added, never added, or added only when we're waiting for the acknowledgement to a previously-sent      * message.      *        * @param msg      * @param rmpsIn      * @param seq      * @param sequence      */
+comment|/**      * Add AcknowledgementRequested to message if needed. The AckRequest mode set either in the message      * properties or in the source policy is used to determine whether AcknowledgementRequested is always      * added, never added, or added only when we're waiting for the acknowledgement to a previously-sent      * message.      *      * @param msg      * @param rmpsIn      * @param seq      * @param sequence      */
 specifier|protected
 name|void
 name|addAckRequest

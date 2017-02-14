@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a series of tests of the distributed caching abilities of the STS. In these test-cases,  * a CXF client invokes on an STS and obtains a security token, which is sent to a service provider.  * The service provider is configured to validate the received token against a second STS instance.  * Both STS instances must have a shared distributed cache, and enough time must have elapsed for  * the first STS instance to replicate the credential to the second STS instance for the test to   * work.  */
+comment|/**  * This is a series of tests of the distributed caching abilities of the STS. In these test-cases,  * a CXF client invokes on an STS and obtains a security token, which is sent to a service provider.  * The service provider is configured to validate the received token against a second STS instance.  * Both STS instances must have a shared distributed cache, and enough time must have elapsed for  * the first STS instance to replicate the credential to the second STS instance for the test to  * work.  */
 end_comment
 
 begin_class

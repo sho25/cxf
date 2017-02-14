@@ -299,7 +299,7 @@ literal|null
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This test makes sure that a default Spring initialized bus will       * have the JettyHTTPServerEngineFactory (absent of<httpj:engine-factory>      * configuration.      */
+comment|/**      * This test makes sure that a default Spring initialized bus will      * have the JettyHTTPServerEngineFactory (absent of<httpj:engine-factory>      * configuration.      */
 annotation|@
 name|Test
 specifier|public

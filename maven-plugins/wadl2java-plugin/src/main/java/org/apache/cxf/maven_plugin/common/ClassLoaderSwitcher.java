@@ -239,7 +239,7 @@ operator|=
 name|log
 expr_stmt|;
 block|}
-comment|/**      * Create and set the classloader that is needed for creating the java sources from wsdl      *       * @param project      * @param useCompileClasspath      * @param classesDir      */
+comment|/**      * Create and set the classloader that is needed for creating the java sources from wsdl      *      * @param project      * @param useCompileClasspath      * @param classesDir      */
 specifier|public
 name|Set
 argument_list|<

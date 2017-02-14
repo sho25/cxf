@@ -124,7 +124,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base Authorization Code Grant representation, captures the code   * and the redirect URI this code has been returned to, visible to the client  */
+comment|/**  * Base Authorization Code Grant representation, captures the code  * and the redirect URI this code has been returned to, visible to the client  */
 end_comment
 
 begin_class

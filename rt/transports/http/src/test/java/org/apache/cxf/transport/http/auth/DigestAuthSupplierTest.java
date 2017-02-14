@@ -150,7 +150,7 @@ specifier|public
 class|class
 name|DigestAuthSupplierTest
 block|{
-comment|/**      * Tests that parseHeader correctly parses parameters that contain ==      *       * @throws Exception      */
+comment|/**      * Tests that parseHeader correctly parses parameters that contain ==      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

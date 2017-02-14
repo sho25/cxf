@@ -239,7 +239,7 @@ name|getSupportedCipherSuites
 argument_list|()
 return|;
 block|}
-comment|/*     public Socket createSocket() throws IOException {         return enableCipherSuites(sslSocketFactory.createSocket(),                                    new Object[] {"unconnected", "unconnected"});     }     */
+comment|/*     public Socket createSocket() throws IOException {         return enableCipherSuites(sslSocketFactory.createSocket(),                                   new Object[] {"unconnected", "unconnected"});     }     */
 specifier|public
 name|Socket
 name|createSocket

@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Allow all hostnames. This is only suitable for use in testing, and NOT in production!   */
+comment|/**  * Allow all hostnames. This is only suitable for use in testing, and NOT in production!  */
 end_comment
 
 begin_class

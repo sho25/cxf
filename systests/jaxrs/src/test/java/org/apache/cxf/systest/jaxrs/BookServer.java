@@ -1672,7 +1672,7 @@ class|class
 name|BlockedException
 extends|extends
 name|RuntimeException
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

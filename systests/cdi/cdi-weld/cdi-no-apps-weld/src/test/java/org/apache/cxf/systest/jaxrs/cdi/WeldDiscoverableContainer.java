@@ -96,7 +96,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Because we are mixing several Servlet Containers in the same project, JBoss Weld  * needs some help to figure out the correct one we are running right now.   */
+comment|/**  * Because we are mixing several Servlet Containers in the same project, JBoss Weld  * needs some help to figure out the correct one we are running right now.  */
 end_comment
 
 begin_class

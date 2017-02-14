@@ -314,7 +314,7 @@ specifier|protected
 name|MAPCodec
 name|codec
 decl_stmt|;
-comment|/**      * Constructor.      *       * @param mapCodec the MAPCodec to use      */
+comment|/**      * Constructor.      *      * @param mapCodec the MAPCodec to use      */
 specifier|public
 name|VersionTransformer
 parameter_list|(
@@ -327,7 +327,7 @@ operator|=
 name|mapCodec
 expr_stmt|;
 block|}
-comment|/**      * Encode message in exposed version.      *       * @param exposeAs specifies the WS-Addressing version to expose      * @param value the value to encode      * @param localName the localName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
+comment|/**      * Encode message in exposed version.      *      * @param exposeAs specifies the WS-Addressing version to expose      * @param value the value to encode      * @param localName the localName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
 specifier|public
 parameter_list|<
 name|T
@@ -725,7 +725,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Decodes a MAP from a exposed version.      *       * @param encodedAs specifies the encoded version      * @param clz the class      * @param headerElement the SOAP header element      * @param marshaller the JAXB marshaller to use      * @return the decoded value      */
+comment|/**      * Decodes a MAP from a exposed version.      *      * @param encodedAs specifies the encoded version      * @param clz the class      * @param headerElement the SOAP header element      * @param marshaller the JAXB marshaller to use      * @return the decoded value      */
 specifier|public
 parameter_list|<
 name|T
@@ -1162,7 +1162,7 @@ specifier|protected
 name|Names200408
 parameter_list|()
 block|{         }
-comment|/**          * Adds 2004/08 headers to set.          *           * @param headers set of headers          */
+comment|/**          * Adds 2004/08 headers to set.          *          * @param headers set of headers          */
 specifier|private
 specifier|static
 name|void
@@ -1267,7 +1267,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Adds 2004/03 headers to set.      *       * @param headers set of headers      */
+comment|/**      * Adds 2004/03 headers to set.      *      * @param headers set of headers      */
 specifier|public
 specifier|static
 specifier|final
@@ -1292,7 +1292,7 @@ specifier|protected
 name|Names200403
 parameter_list|()
 block|{         }
-comment|/**          * Adds 2004/08 headers to set.          *           * @param headers set of headers          */
+comment|/**          * Adds 2004/08 headers to set.          *          * @param headers set of headers          */
 specifier|private
 specifier|static
 name|void

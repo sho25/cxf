@@ -894,7 +894,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Logical Handler responsible for aggregating the Message Addressing   * Properties for outgoing messages.  */
+comment|/**  * Logical Handler responsible for aggregating the Message Addressing  * Properties for outgoing messages.  */
 end_comment
 
 begin_class
@@ -1508,7 +1508,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Determine if the use of addressing is indicated by an Addressing assertion in the      * alternative chosen for the current message.      *       * @param message the current message      * @pre message is outbound      * @pre requestor role      */
+comment|/**      * Determine if the use of addressing is indicated by an Addressing assertion in the      * alternative chosen for the current message.      *      * @param message the current message      * @pre message is outbound      * @pre requestor role      */
 specifier|private
 name|boolean
 name|hasAddressingAssertion
@@ -1553,7 +1553,7 @@ name|ADDRESSING_ASSERTION_QNAME
 argument_list|)
 return|;
 block|}
-comment|/**      * Determine if the use of addressing is indicated by a UsingAddressing in the      * alternative chosen for the current message.      *       * @param message the current message      * @pre message is outbound      * @pre requestor role      */
+comment|/**      * Determine if the use of addressing is indicated by a UsingAddressing in the      * alternative chosen for the current message.      *      * @param message the current message      * @pre message is outbound      * @pre requestor role      */
 specifier|private
 name|boolean
 name|hasUsingAddressingAssertion
@@ -1715,7 +1715,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * If the isRequestor(message) == true and isAddressRequired() == false      * Assert all the wsa related assertion to true      *       * @param message the current message      */
+comment|/**      * If the isRequestor(message) == true and isAddressRequired() == false      * Assert all the wsa related assertion to true      *      * @param message the current message      */
 specifier|private
 name|void
 name|assertAddressing
@@ -1819,7 +1819,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Asserts all Addressing assertions for the current message, regardless their nested       * Policies.      * @param message the current message      */
+comment|/**      * Asserts all Addressing assertions for the current message, regardless their nested      * Policies.      * @param message the current message      */
 specifier|private
 name|void
 name|assertAddressing
@@ -2411,7 +2411,7 @@ return|return
 name|found
 return|;
 block|}
-comment|/**      * Mediate message flow.      *      * @param message the current message      * @param isFault true if a fault is being mediated      * @return true if processing should continue on dispatch path       */
+comment|/**      * Mediate message flow.      *      * @param message the current message      * @param isFault true if a fault is being mediated      * @return true if processing should continue on dispatch path      */
 specifier|protected
 name|boolean
 name|mediate
@@ -4491,7 +4491,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Add MAPs which are specific to the requestor or responder role.      *      * @param maps the MAPs being assembled      * @param message the current message      * @param isRequestor true iff the current messaging role is that of       * requestor       * @param isFault true if a fault is being mediated      */
+comment|/**      * Add MAPs which are specific to the requestor or responder role.      *      * @param maps the MAPs being assembled      * @param message the current message      * @param isRequestor true iff the current messaging role is that of      * requestor      * @param isFault true if a fault is being mediated      */
 specifier|private
 name|void
 name|addRoleSpecific
@@ -5674,7 +5674,7 @@ operator|=
 name|o
 expr_stmt|;
 block|}
-comment|/**          * Called for an incoming message.          *           * @param inMessage          */
+comment|/**          * Called for an incoming message.          *          * @param inMessage          */
 specifier|public
 name|void
 name|onMessage

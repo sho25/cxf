@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A StreamReaderDelegate that expands property references in element and attribute values.  *   */
+comment|/**  * A StreamReaderDelegate that expands property references in element and attribute values.  *  */
 end_comment
 
 begin_class

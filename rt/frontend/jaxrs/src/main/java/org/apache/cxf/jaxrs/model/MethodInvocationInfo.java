@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A triple of {@link OperationResourceInfo} representing a resource method being invoked,   * actual {@link Class} of the object this method is invoked upon, and a list of template variable values  * matched during the selection of this method  */
+comment|/**  * A triple of {@link OperationResourceInfo} representing a resource method being invoked,  * actual {@link Class} of the object this method is invoked upon, and a list of template variable values  * matched during the selection of this method  */
 end_comment
 
 begin_class

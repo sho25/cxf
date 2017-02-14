@@ -98,7 +98,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for hello complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="hello">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>  *&lt;element name="file" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for hello complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="hello">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>  *&lt;element name="file" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -148,7 +148,7 @@ specifier|protected
 name|DataHandler
 name|file
 decl_stmt|;
-comment|/**      * Gets the value of the arg0 property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the arg0 property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getArg0
@@ -158,7 +158,7 @@ return|return
 name|arg0
 return|;
 block|}
-comment|/**      * Sets the value of the arg0 property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the arg0 property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setArg0
@@ -174,7 +174,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the file property.      *       * @return      *     possible object is      *     {@link DataHandler }      *           */
+comment|/**      * Gets the value of the file property.      *      * @return      *     possible object is      *     {@link DataHandler }      *      */
 specifier|public
 name|DataHandler
 name|getFile
@@ -184,7 +184,7 @@ return|return
 name|file
 return|;
 block|}
-comment|/**      * Sets the value of the file property.      *       * @param value      *     allowed object is      *     {@link DataHandler }      *           */
+comment|/**      * Sets the value of the file property.      *      * @param value      *     allowed object is      *     {@link DataHandler }      *      */
 specifier|public
 name|void
 name|setFile

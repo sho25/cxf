@@ -957,7 +957,7 @@ block|}
 specifier|private
 name|JwkUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

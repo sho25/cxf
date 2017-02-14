@@ -577,7 +577,7 @@ name|getMessage
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the fault actor.      *       * @return the fault actor.      */
+comment|/**      * Returns the fault actor.      *      * @return the fault actor.      */
 specifier|public
 name|String
 name|getRole
@@ -587,7 +587,7 @@ return|return
 name|role
 return|;
 block|}
-comment|/**      * Sets the fault actor.      *       * @param actor the actor.      */
+comment|/**      * Sets the fault actor.      *      * @param actor the actor.      */
 specifier|public
 name|void
 name|setRole
@@ -627,7 +627,7 @@ operator|=
 name|n
 expr_stmt|;
 block|}
-comment|/**      * Returns the SubCode for the Fault Code. If there are more than one Subcode entries       * in this fault, the first Subcode is returned.      *       * @return The SubCode element as detailed by the SOAP 1.2 spec.      */
+comment|/**      * Returns the SubCode for the Fault Code. If there are more than one Subcode entries      * in this fault, the first Subcode is returned.      *      * @return The SubCode element as detailed by the SOAP 1.2 spec.      */
 specifier|public
 name|QName
 name|getSubCode
@@ -638,7 +638,7 @@ name|getRootSubCode
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns the SubCode list for the Fault Code.      *       * @return The SubCode element list as detailed by the SOAP 1.2 spec.      */
+comment|/**      * Returns the SubCode list for the Fault Code.      *      * @return The SubCode element list as detailed by the SOAP 1.2 spec.      */
 specifier|public
 name|List
 argument_list|<
@@ -651,7 +651,7 @@ return|return
 name|subCodes
 return|;
 block|}
-comment|/**      * Sets the SubCode for the Fault Code. If there are more than one Subcode entries       * in this fault, the first Subcode is set while the other entries are removed.      *       * @param subCode The SubCode element as detailed by the SOAP 1.2 spec.      */
+comment|/**      * Sets the SubCode for the Fault Code. If there are more than one Subcode entries      * in this fault, the first Subcode is set while the other entries are removed.      *      * @param subCode The SubCode element as detailed by the SOAP 1.2 spec.      */
 specifier|public
 name|void
 name|setSubCode
@@ -666,7 +666,7 @@ name|subCode
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the SubCode list for the Fault Code.      *       * @param subCode The SubCode element list as detailed by the SOAP 1.2 spec.      */
+comment|/**      * Sets the SubCode list for the Fault Code.      *      * @param subCode The SubCode element list as detailed by the SOAP 1.2 spec.      */
 specifier|public
 name|void
 name|setSubCodes
@@ -685,7 +685,7 @@ operator|=
 name|subCodes
 expr_stmt|;
 block|}
-comment|/**      * Appends the SubCode to the SubCode list.      *       * @param subCode The SubCode element as detailed by the SOAP 1.2 spec.       */
+comment|/**      * Appends the SubCode to the SubCode list.      *      * @param subCode The SubCode element as detailed by the SOAP 1.2 spec.      */
 specifier|public
 name|void
 name|addSubCode

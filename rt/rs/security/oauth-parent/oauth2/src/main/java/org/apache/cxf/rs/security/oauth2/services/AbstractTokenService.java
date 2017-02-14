@@ -1427,7 +1427,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference       * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found      */
+comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference      * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found      */
 specifier|protected
 name|Client
 name|getClient

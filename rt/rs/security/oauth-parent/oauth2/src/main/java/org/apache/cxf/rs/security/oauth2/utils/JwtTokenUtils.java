@@ -252,7 +252,7 @@ block|{
 specifier|private
 name|JwtTokenUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

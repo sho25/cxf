@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface defines a pluggable way of "wrapping" tokens that are issued by the STS. Some Tokens may be issued   * in a format that needs to be wrapped as part of the JAXB response.  */
+comment|/**  * This interface defines a pluggable way of "wrapping" tokens that are issued by the STS. Some Tokens may be issued  * in a format that needs to be wrapped as part of the JAXB response.  */
 end_comment
 
 begin_interface

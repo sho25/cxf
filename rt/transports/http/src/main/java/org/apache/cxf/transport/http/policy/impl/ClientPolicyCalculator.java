@@ -121,7 +121,7 @@ argument_list|<
 name|HTTPClientPolicy
 argument_list|>
 block|{
-comment|/**      * Determines if two HTTPClientPolicy objects are equal. REVISIT: Check if      * this can be replaced by a generated equals method.      *       * @param p1 one client policy      * @param p2 another client policy      * @return true iff the two policies are equal      */
+comment|/**      * Determines if two HTTPClientPolicy objects are equal. REVISIT: Check if      * this can be replaced by a generated equals method.      *      * @param p1 one client policy      * @param p2 another client policy      * @return true iff the two policies are equal      */
 specifier|public
 name|boolean
 name|equals
@@ -467,7 +467,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Returns a new HTTPClientPolicy that is compatible with the two specified      * policies or null if no compatible policy can be determined.      *       * @param p1 one policy      * @param p2 another policy      * @return the compatible policy      */
+comment|/**      * Returns a new HTTPClientPolicy that is compatible with the two specified      * policies or null if no compatible policy can be determined.      *      * @param p1 one policy      * @param p2 another policy      * @return the compatible policy      */
 specifier|public
 name|HTTPClientPolicy
 name|intersect
@@ -1038,7 +1038,7 @@ return|return
 name|p
 return|;
 block|}
-comment|/**      * Checks if two HTTPClientPolicy objects are compatible.      *       * @param p1 one client policy      * @param p2 another client policy      * @return true iff policies are compatible      */
+comment|/**      * Checks if two HTTPClientPolicy objects are compatible.      *      * @param p1 one client policy      * @param p2 another client policy      * @return true iff policies are compatible      */
 specifier|public
 name|boolean
 name|compatible

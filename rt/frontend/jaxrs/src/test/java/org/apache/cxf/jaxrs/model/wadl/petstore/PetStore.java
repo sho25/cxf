@@ -128,7 +128,7 @@ name|Produces
 argument_list|(
 literal|"text/plain"
 argument_list|)
-comment|/**      * Return Pet Status with no params      *       * @return status       * @throws Exception      */
+comment|/**      * Return Pet Status with no params      *      * @return status      * @throws Exception      */
 specifier|public
 name|Response
 name|getBaseStatus
@@ -148,7 +148,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Return Pet Status with 2 params      * @param petId the pet id      * @param query the query      * @return status       * @throws Exception      */
+comment|/**      * Return Pet Status with 2 params      * @param petId the pet id      * @param query the query      * @return status      * @throws Exception      */
 annotation|@
 name|GET
 annotation|@
@@ -196,7 +196,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Return Pet Status With 1 Param      * @param petId the pet id      * @return status       * @throws Exception      */
+comment|/**      * Return Pet Status With 1 Param      * @param petId the pet id      * @return status      * @throws Exception      */
 annotation|@
 name|GET
 annotation|@
@@ -236,7 +236,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Return Pet Status With 3 Params      * @param petId the pet id      * @param query the query      * @param query2 the query2      * @return status       * @throws Exception      */
+comment|/**      * Return Pet Status With 3 Params      * @param petId the pet id      * @param query the query      * @param query2 the query2      * @return status      * @throws Exception      */
 annotation|@
 name|GET
 annotation|@

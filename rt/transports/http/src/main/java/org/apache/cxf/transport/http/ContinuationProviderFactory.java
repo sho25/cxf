@@ -74,7 +74,7 @@ specifier|public
 interface|interface
 name|ContinuationProviderFactory
 block|{
-comment|/**      * If this factory can support the given req/resp and       * provide a ContinuationProvider, it should create one      * and return it.      *       * @param inMessage      * @param req      * @param resp      * @return      */
+comment|/**      * If this factory can support the given req/resp and      * provide a ContinuationProvider, it should create one      * and return it.      *      * @param inMessage      * @param req      * @param resp      * @return      */
 name|ContinuationProvider
 name|createContinuationProvider
 parameter_list|(

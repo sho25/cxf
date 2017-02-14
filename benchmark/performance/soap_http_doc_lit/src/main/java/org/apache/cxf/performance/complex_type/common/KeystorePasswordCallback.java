@@ -157,7 +157,7 @@ literal|"skpass"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * It attempts to get the password from the private       * alias/passwords map.      */
+comment|/**      * It attempts to get the password from the private      * alias/passwords map.      */
 specifier|public
 name|void
 name|handle

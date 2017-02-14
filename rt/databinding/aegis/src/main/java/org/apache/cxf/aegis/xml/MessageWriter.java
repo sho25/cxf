@@ -156,7 +156,7 @@ name|String
 name|namespace
 parameter_list|)
 function_decl|;
-comment|/**      * Get a prefix for a namespace. After calling this, the prefix returned is      * registered with the namespace.<p/> This method will make an attempt to      * use the hint prefix if possible. If the namespace is already registered      * or the hint is already registered with a different namespace then the      * behavior will be the same as the non-hint version.      *       * @param namespace the namespace to retrieve the prefix for      * @param hint the hint for the prefix.      * @return the prefix associated with the namespace      */
+comment|/**      * Get a prefix for a namespace. After calling this, the prefix returned is      * registered with the namespace.<p/> This method will make an attempt to      * use the hint prefix if possible. If the namespace is already registered      * or the hint is already registered with a different namespace then the      * behavior will be the same as the non-hint version.      *      * @param namespace the namespace to retrieve the prefix for      * @param hint the hint for the prefix.      * @return the prefix associated with the namespace      */
 name|String
 name|getPrefixForNamespace
 parameter_list|(
@@ -172,7 +172,7 @@ name|void
 name|close
 parameter_list|()
 function_decl|;
-comment|/**      * As per<a href="http://www.w3.org/TR/xmlschema-1/#xsi_type">2.6.1</a> in      * XML Schema Part 1: "An element information item in an instance may,      * however, explicitly assert its type using the attribute      *<code>xsi:type</code>."      *       * @param type the QName of the type being referenced.      */
+comment|/**      * As per<a href="http://www.w3.org/TR/xmlschema-1/#xsi_type">2.6.1</a> in      * XML Schema Part 1: "An element information item in an instance may,      * however, explicitly assert its type using the attribute      *<code>xsi:type</code>."      *      * @param type the QName of the type being referenced.      */
 name|void
 name|writeXsiType
 parameter_list|(

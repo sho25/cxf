@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This object contains factory methods for each   * Java content interface and Java element interface   * generated in the org.apache.cxf.configuration.foo package.   *<p>An ObjectFactory allows you to programatically   * construct new instances of the Java representation   * for XML content. The Java representation of XML   * content can consist of schema derived interfaces   * and classes representing the binding of schema   * type definitions, element declarations and model   * groups.  Factory methods for each of these are   * provided in this class.  *   */
+comment|/**  * This object contains factory methods for each  * Java content interface and Java element interface  * generated in the org.apache.cxf.configuration.foo package.  *<p>An ObjectFactory allows you to programatically  * construct new instances of the Java representation  * for XML content. The Java representation of XML  * content can consist of schema derived interfaces  * and classes representing the binding of schema  * type definitions, element declarations and model  * groups.  Factory methods for each of these are  * provided in this class.  *  */
 end_comment
 
 begin_class
@@ -122,12 +122,12 @@ argument_list|,
 literal|"foo"
 argument_list|)
 decl_stmt|;
-comment|/**      * Create a new ObjectFactory that can be used to create new instances of schema derived      * classes for package: org.apache.cxf.configuration.foo      *       */
+comment|/**      * Create a new ObjectFactory that can be used to create new instances of schema derived      * classes for package: org.apache.cxf.configuration.foo      *      */
 specifier|public
 name|ObjectFactory
 parameter_list|()
 block|{     }
-comment|/**      * Create an instance of {@link Address }      *       */
+comment|/**      * Create an instance of {@link Address }      *      */
 specifier|public
 name|Address
 name|createAddress
@@ -139,7 +139,7 @@ name|Address
 argument_list|()
 return|;
 block|}
-comment|/**      * Create an instance of {@link Foo }      *       */
+comment|/**      * Create an instance of {@link Foo }      *      */
 specifier|public
 name|Foo
 name|createFoo
@@ -151,7 +151,7 @@ name|Foo
 argument_list|()
 return|;
 block|}
-comment|/**      * Create an instance of {@link Point }      *       */
+comment|/**      * Create an instance of {@link Point }      *      */
 specifier|public
 name|Point
 name|createPoint
@@ -163,7 +163,7 @@ name|Point
 argument_list|()
 return|;
 block|}
-comment|/**      * Create an instance of {@link JAXBElement }{@code<}{@link Point }{@code>}}      *       */
+comment|/**      * Create an instance of {@link JAXBElement }{@code<}{@link Point }{@code>}}      *      */
 annotation|@
 name|XmlElementDecl
 argument_list|(
@@ -205,7 +205,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/**      * Create an instance of {@link JAXBElement }{@code<}{@link Address }{@code>}}      *       */
+comment|/**      * Create an instance of {@link JAXBElement }{@code<}{@link Address }{@code>}}      *      */
 annotation|@
 name|XmlElementDecl
 argument_list|(
@@ -247,7 +247,7 @@ name|value
 argument_list|)
 return|;
 block|}
-comment|/**      * Create an instance of {@link JAXBElement }{@code<}{@link Foo }{@code>}}      *       */
+comment|/**      * Create an instance of {@link JAXBElement }{@code<}{@link Foo }{@code>}}      *      */
 annotation|@
 name|XmlElementDecl
 argument_list|(

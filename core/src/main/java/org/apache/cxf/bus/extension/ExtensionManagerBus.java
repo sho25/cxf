@@ -1813,7 +1813,7 @@ specifier|protected
 name|void
 name|loadAdditionalFeatures
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 name|void
 name|initializeFeatures

@@ -364,7 +364,7 @@ name|JsonWebKey
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**      * Validate core JWT claims      * @param claims the claims      * @param clientId OAuth2 client id      * @param validateClaimsAlways if set to true then enforce that the claims       *                             to be validated must be set      */
+comment|/**      * Validate core JWT claims      * @param claims the claims      * @param clientId OAuth2 client id      * @param validateClaimsAlways if set to true then enforce that the claims      *                             to be validated must be set      */
 specifier|public
 name|void
 name|validateJwtClaims

@@ -77,7 +77,7 @@ decl_stmt|;
 specifier|public
 name|SimpleResourceResolver
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|SimpleResourceResolver
 parameter_list|(

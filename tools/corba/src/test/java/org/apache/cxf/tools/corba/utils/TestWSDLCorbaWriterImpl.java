@@ -110,7 +110,7 @@ import|;
 end_import
 
 begin_comment
-comment|/*   * This class is extending the wsdl4j RI class to print out the    * maps in a particular order   *    */
+comment|/*   * This class is extending the wsdl4j RI class to print out the   * maps in a particular order   *   */
 end_comment
 
 begin_class

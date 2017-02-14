@@ -316,7 +316,7 @@ block|{
 specifier|public
 name|NettySpringTypesFactory
 parameter_list|()
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 name|Map

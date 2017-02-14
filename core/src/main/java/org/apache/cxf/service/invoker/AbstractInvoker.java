@@ -1236,7 +1236,7 @@ name|Object
 name|obj
 parameter_list|)
 block|{     }
-comment|/**      * Returns a Method that has the same declaring class as the class of      * targetObject to avoid the IllegalArgumentException when invoking the      * method on the target object. The methodToMatch will be returned if the      * targetObject doesn't have a similar method.      *       * @param methodToMatch The method to be used when finding a matching method      *            in targetObject      * @param targetObject The object to search in for the method.      * @return The methodToMatch if no such method exist in the class of      *         targetObject; otherwise, a method from the class of targetObject      *         matching the matchToMethod method.      */
+comment|/**      * Returns a Method that has the same declaring class as the class of      * targetObject to avoid the IllegalArgumentException when invoking the      * method on the target object. The methodToMatch will be returned if the      * targetObject doesn't have a similar method.      *      * @param methodToMatch The method to be used when finding a matching method      *            in targetObject      * @param targetObject The object to search in for the method.      * @return The methodToMatch if no such method exist in the class of      *         targetObject; otherwise, a method from the class of targetObject      *         matching the matchToMethod method.      */
 specifier|private
 specifier|static
 name|Method
@@ -1323,7 +1323,7 @@ return|return
 name|methodToMatch
 return|;
 block|}
-comment|/**      * Return whether the given object is a J2SE dynamic proxy.      *       * @param object the object to check      * @see java.lang.reflect.Proxy#isProxyClass      */
+comment|/**      * Return whether the given object is a J2SE dynamic proxy.      *      * @param object the object to check      * @see java.lang.reflect.Proxy#isProxyClass      */
 specifier|public
 specifier|static
 name|boolean
@@ -1349,7 +1349,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Given a method, which may come from an interface, and a targetClass used      * in the current AOP invocation, find the most specific method if there is      * one. E.g. the method may be IFoo.bar() and the target class may be      * DefaultFoo. In this case, the method may be DefaultFoo.bar(). This      * enables attributes on that method to be found.      *       * @param method method to be invoked, which may come from an interface      * @param targetClass target class for the current invocation. May be      *<code>null</code> or may not even implement the method.      * @return the more specific method, or the original method if the      *         targetClass doesn't specialize it or implement it or is null      */
+comment|/**      * Given a method, which may come from an interface, and a targetClass used      * in the current AOP invocation, find the most specific method if there is      * one. E.g. the method may be IFoo.bar() and the target class may be      * DefaultFoo. In this case, the method may be DefaultFoo.bar(). This      * enables attributes on that method to be found.      *      * @param method method to be invoked, which may come from an interface      * @param targetClass target class for the current invocation. May be      *<code>null</code> or may not even implement the method.      * @return the more specific method, or the original method if the      *         targetClass doesn't specialize it or implement it or is null      */
 specifier|public
 specifier|static
 name|Method

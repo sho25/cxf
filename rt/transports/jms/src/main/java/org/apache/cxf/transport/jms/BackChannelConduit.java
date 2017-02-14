@@ -472,7 +472,7 @@ name|msg
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Register a message observer for incoming messages.      *       * @param observer the observer to notify on receipt of incoming      */
+comment|/**      * Register a message observer for incoming messages.      *      * @param observer the observer to notify on receipt of incoming      */
 specifier|public
 name|void
 name|setMessageObserver
@@ -483,7 +483,7 @@ parameter_list|)
 block|{
 comment|// shouldn't be called for a back channel conduit
 block|}
-comment|/**      * Send an outbound message, assumed to contain all the name-value mappings of the corresponding input      * message (if any).      *       * @param message the message to be sent.      */
+comment|/**      * Send an outbound message, assumed to contain all the name-value mappings of the corresponding input      * message (if any).      *      * @param message the message to be sent.      */
 specifier|public
 name|void
 name|prepare
@@ -1266,7 +1266,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Decides what correlationId to use for the reply by looking at the request headers      *       * @param request jms request message      * @return correlation id of request if set else message id from request      * @throws JMSException      */
+comment|/**      * Decides what correlationId to use for the reply by looking at the request headers      *      * @param request jms request message      * @return correlation id of request if set else message id from request      * @throws JMSException      */
 specifier|public
 name|String
 name|determineCorrelationID

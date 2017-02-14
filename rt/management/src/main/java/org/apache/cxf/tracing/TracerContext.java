@@ -32,7 +32,7 @@ specifier|public
 interface|interface
 name|TracerContext
 block|{
-comment|/**      * Picks up an currently detached span from another thread. This method is intended      * to be used in the context of JAX-RS asynchronous invocations, where request and       * response are effectively executed by different threads.      * @param traceable traceable implementation to be executed      * @return the result of the execution       * @throws Exception any exception being thrown by the traceable implementation       */
+comment|/**      * Picks up an currently detached span from another thread. This method is intended      * to be used in the context of JAX-RS asynchronous invocations, where request and      * response are effectively executed by different threads.      * @param traceable traceable implementation to be executed      * @return the result of the execution      * @throws Exception any exception being thrown by the traceable implementation      */
 parameter_list|<
 name|T
 parameter_list|>

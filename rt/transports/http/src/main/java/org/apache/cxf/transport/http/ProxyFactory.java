@@ -318,7 +318,7 @@ return|return
 name|systemProxyConfiguration
 return|;
 block|}
-comment|/**      * This method returns the Proxy server should it be set on the       * Client Side Policy.      *       * @return The proxy server or null, if not set.      */
+comment|/**      * This method returns the Proxy server should it be set on the      * Client Side Policy.      *      * @return The proxy server or null, if not set.      */
 specifier|public
 name|Proxy
 name|createProxy

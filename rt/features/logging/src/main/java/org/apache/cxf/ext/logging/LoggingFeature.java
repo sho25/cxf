@@ -158,7 +158,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is used to control message-on-the-wire logging.   * By attaching this feature to an endpoint, you  * can specify logging. If this feature is present, an endpoint will log input  * and output of ordinary and log messages.  *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.ext.logging.LoggingFeature"/></jaxws:features></jaxws:endpoint>   ]]></pre>  */
+comment|/**  * This class is used to control message-on-the-wire logging.  * By attaching this feature to an endpoint, you  * can specify logging. If this feature is present, an endpoint will log input  * and output of ordinary and log messages.  *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.ext.logging.LoggingFeature"/></jaxws:features></jaxws:endpoint>   ]]></pre>  */
 end_comment
 
 begin_class
@@ -402,7 +402,7 @@ name|prettyLogging
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Log binary content?      * @param logBinary defaults to false       */
+comment|/**      * Log binary content?      * @param logBinary defaults to false      */
 specifier|public
 name|void
 name|setLogBinary
@@ -426,7 +426,7 @@ name|logBinary
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Log multipart content?       * @param logMultipart defaults to true      */
+comment|/**      * Log multipart content?      * @param logMultipart defaults to true      */
 specifier|public
 name|void
 name|setLogMultipart

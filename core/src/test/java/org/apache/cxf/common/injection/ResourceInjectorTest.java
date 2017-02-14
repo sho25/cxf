@@ -1047,7 +1047,7 @@ class|class
 name|SubSetterTarget
 extends|extends
 name|SetterTarget
-block|{      }
+block|{  }
 end_class
 
 begin_interface

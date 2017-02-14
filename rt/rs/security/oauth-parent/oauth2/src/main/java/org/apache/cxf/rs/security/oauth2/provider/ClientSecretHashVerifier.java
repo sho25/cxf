@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ClientSecretVerifier which checks the passwords against hashes    */
+comment|/**  * ClientSecretVerifier which checks the passwords against hashes  */
 end_comment
 
 begin_class

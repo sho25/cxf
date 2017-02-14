@@ -232,7 +232,7 @@ decl_stmt|;
 specifier|public
 name|FailoverFeature
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|FailoverFeature
 parameter_list|(

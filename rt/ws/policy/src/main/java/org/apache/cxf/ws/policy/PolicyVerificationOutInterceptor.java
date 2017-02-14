@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -135,7 +135,7 @@ name|POST_STREAM
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**       * Checks if all assertions in the chosen alternative have been asserted.      * Note that although the alternative was chosen in such a way that at least all      * interceptors necessary to assert the assertions are present, it is not possible      * to predict if these interceptors actually have asserted their assertions.        * @param message      * @throws PolicyException if none of the alternatives is supported      */
+comment|/**      * Checks if all assertions in the chosen alternative have been asserted.      * Note that although the alternative was chosen in such a way that at least all      * interceptors necessary to assert the assertions are present, it is not possible      * to predict if these interceptors actually have asserted their assertions.      * @param message      * @throws PolicyException if none of the alternatives is supported      */
 specifier|protected
 name|void
 name|handle

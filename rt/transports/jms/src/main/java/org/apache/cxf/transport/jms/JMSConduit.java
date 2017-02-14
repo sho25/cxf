@@ -428,7 +428,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with "jms:". JMSConduit converts CXF Messages to JMS Messages and sends the request  * over a queue or a topic.  * If the Exchange is not one way it then receives the response and converts it to   * a CXF Message. This is then provided in the Exchange and also sent to the IncomingObserver.  */
+comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with "jms:". JMSConduit converts CXF Messages to JMS Messages and sends the request  * over a queue or a topic.  * If the Exchange is not one way it then receives the response and converts it to  * a CXF Message. This is then provided in the Exchange and also sent to the IncomingObserver.  */
 end_comment
 
 begin_class
@@ -702,7 +702,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Send the JMS message and if the MEP is not oneway receive the response.      *       * @param exchange the Exchange containing the outgoing message      * @param request  the payload of the outgoing JMS message      */
+comment|/**      * Send the JMS message and if the MEP is not oneway receive the response.      *      * @param exchange the Exchange containing the outgoing message      * @param request  the payload of the outgoing JMS message      */
 specifier|public
 name|void
 name|sendExchange
@@ -2120,7 +2120,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Process the reply message      * @throws JMSException       */
+comment|/**      * Process the reply message      * @throws JMSException      */
 specifier|protected
 name|void
 name|processReplyMessage

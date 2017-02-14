@@ -250,7 +250,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is responsible for transforming between the native   * WS-Addressing schema version (i.e. 2005/08) and exposed  * version (currently may be 2005/08 or 2004/08).  *<p>  * The native version is that used throughout the stack, were the  * WS-A types are represented via the JAXB generated types for the  * 2005/08 schema.  *<p>  * The exposed version is that used when the WS-A types are   * externalized, i.e. are encoded in the headers of outgoing   * messages. For outgoing requests, the exposed version is   * determined from configuration. For outgoing responses, the  * exposed version is determined by the exposed version of  * the corresponding request.  *<p>  * The motivation for using different native and exposed types  * is usually to facilitate a WS-* standard based on an earlier   * version of WS-Adressing (for example WS-RM depends on the  * 2004/08 version).  */
+comment|/**  * This class is responsible for transforming between the native  * WS-Addressing schema version (i.e. 2005/08) and exposed  * version (currently may be 2005/08 or 2004/08).  *<p>  * The native version is that used throughout the stack, were the  * WS-A types are represented via the JAXB generated types for the  * 2005/08 schema.  *<p>  * The exposed version is that used when the WS-A types are  * externalized, i.e. are encoded in the headers of outgoing  * messages. For outgoing requests, the exposed version is  * determined from configuration. For outgoing responses, the  * exposed version is determined by the exposed version of  * the corresponding request.  *<p>  * The motivation for using different native and exposed types  * is usually to facilitate a WS-* standard based on an earlier  * version of WS-Adressing (for example WS-RM depends on the  * 2004/08 version).  */
 end_comment
 
 begin_class
@@ -273,7 +273,7 @@ specifier|protected
 name|VersionTransformer
 parameter_list|()
 block|{     }
-comment|/**      * @param namespace a namspace URI to consider      * @return true if th WS-Addressing version specified by the namespace       * URI is supported      */
+comment|/**      * @param namespace a namspace URI to consider      * @return true if th WS-Addressing version specified by the namespace      * URI is supported      */
 specifier|public
 specifier|static
 name|boolean
@@ -310,7 +310,7 @@ name|namespace
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert from 2005/08 AttributedURI to 2004/08 AttributedURI.      *       * @param internal the 2005/08 AttributedURIType      * @return an equivalent 2004/08 AttributedURI      */
+comment|/**      * Convert from 2005/08 AttributedURI to 2004/08 AttributedURI.      *      * @param internal the 2005/08 AttributedURIType      * @return an equivalent 2004/08 AttributedURI      */
 specifier|public
 specifier|static
 name|AttributedURI
@@ -394,7 +394,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert from 2005/08 AttributedURI to 2004/03 AttributedURI.      *       * @param internal the 2005/08 AttributedURIType      * @return an equivalent 2004/08 or 2004/03 AttributedURI      */
+comment|/**      * Convert from 2005/08 AttributedURI to 2004/03 AttributedURI.      *      * @param internal the 2005/08 AttributedURIType      * @return an equivalent 2004/08 or 2004/03 AttributedURI      */
 specifier|public
 specifier|static
 name|org
@@ -502,7 +502,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert from 2004/08 AttributedURI to 2005/08 AttributedURI.      *       * @param exposed the 2004/08 AttributedURI      * @return an equivalent 2005/08 AttributedURIType      */
+comment|/**      * Convert from 2004/08 AttributedURI to 2005/08 AttributedURI.      *      * @param exposed the 2004/08 AttributedURI      * @return an equivalent 2005/08 AttributedURIType      */
 specifier|public
 specifier|static
 name|AttributedURIType
@@ -586,7 +586,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert from 2004/03 AttributedURI to 2005/08 AttributedURI.      *       * @param exposed the 2004/03 AttributedURI      * @return an equivalent 2005/08 AttributedURIType      */
+comment|/**      * Convert from 2004/03 AttributedURI to 2005/08 AttributedURI.      *      * @param exposed the 2004/03 AttributedURI      * @return an equivalent 2005/08 AttributedURIType      */
 specifier|public
 specifier|static
 name|AttributedURIType
@@ -682,7 +682,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert from 2005/08 EndpointReferenceType to 2004/08       * EndpointReferenceType.      *       * @param internal the 2005/08 EndpointReferenceType      * @return an equivalent 2004/08 EndpointReferenceType      */
+comment|/**      * Convert from 2005/08 EndpointReferenceType to 2004/08      * EndpointReferenceType.      *      * @param internal the 2005/08 EndpointReferenceType      * @return an equivalent 2004/08 EndpointReferenceType      */
 specifier|public
 specifier|static
 name|org
@@ -899,7 +899,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert from 2005/08 EndpointReferenceType to 2004/03 EndpointReferenceType.      *       * @param internal the 2005/08 EndpointReferenceType      * @return an equivalent 2004/03 EndpointReferenceType      */
+comment|/**      * Convert from 2005/08 EndpointReferenceType to 2004/03 EndpointReferenceType.      *      * @param internal the 2005/08 EndpointReferenceType      * @return an equivalent 2004/03 EndpointReferenceType      */
 specifier|public
 specifier|static
 name|org
@@ -1127,7 +1127,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert from 2004/08 EndpointReferenceType to 2005/08       * EndpointReferenceType.      *       * @param exposed the 2004/08 EndpointReferenceType      * @return an equivalent 2005/08 EndpointReferenceType      */
+comment|/**      * Convert from 2004/08 EndpointReferenceType to 2005/08      * EndpointReferenceType.      *      * @param exposed the 2004/08 EndpointReferenceType      * @return an equivalent 2005/08 EndpointReferenceType      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -1264,7 +1264,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert from 2004/03 EndpointReferenceType to 2005/08 EndpointReferenceType.      *       * @param exposed the 2004/03 EndpointReferenceType      * @return an equivalent 2005/08 EndpointReferenceType      */
+comment|/**      * Convert from 2004/03 EndpointReferenceType to 2005/08 EndpointReferenceType.      *      * @param exposed the 2004/03 EndpointReferenceType      * @return an equivalent 2005/08 EndpointReferenceType      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -1415,7 +1415,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert from 2005/08 ReferenceParametersType to 2004/08      * ReferenceParametersType.      *       * @param internal the 2005/08 ReferenceParametersType      * @return an equivalent 2004/08 ReferenceParametersType      */
+comment|/**      * Convert from 2005/08 ReferenceParametersType to 2004/08      * ReferenceParametersType.      *      * @param internal the 2005/08 ReferenceParametersType      * @return an equivalent 2004/08 ReferenceParametersType      */
 specifier|public
 specifier|static
 name|org
@@ -1488,7 +1488,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert from 2004/08 ReferenceParametersType to 2005/08      * ReferenceParametersType.      *       * @param exposed the 2004/08 ReferenceParametersType      * @return an equivalent 2005/08 ReferenceParametersType      */
+comment|/**      * Convert from 2004/08 ReferenceParametersType to 2005/08      * ReferenceParametersType.      *      * @param exposed the 2004/08 ReferenceParametersType      * @return an equivalent 2005/08 ReferenceParametersType      */
 specifier|public
 specifier|static
 name|ReferenceParametersType
@@ -1550,7 +1550,7 @@ name|internal
 return|;
 block|}
 comment|// THERE IS NO ReferenceParametersType for 2004/03
-comment|/**      * Convert from 2005/08 RelatesToType to 2004/08 Relationship.      *       * @param internal the 2005/08 RelatesToType      * @return an equivalent 2004/08 Relationship      */
+comment|/**      * Convert from 2005/08 RelatesToType to 2004/08 Relationship.      *      * @param internal the 2005/08 RelatesToType      * @return an equivalent 2004/08 Relationship      */
 specifier|public
 specifier|static
 name|Relationship
@@ -1659,7 +1659,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/**      * Convert from 2005/08 RelatesToType to 2004/03 Relationship.      *       * @param internal the 2005/08 RelatesToType      * @return an equivalent 2004/03 Relationship      */
+comment|/**      * Convert from 2005/08 RelatesToType to 2004/03 Relationship.      *      * @param internal the 2005/08 RelatesToType      * @return an equivalent 2004/03 Relationship      */
 specifier|public
 specifier|static
 name|org
@@ -1792,7 +1792,7 @@ return|return
 name|exposed
 return|;
 block|}
-comment|/** Convert from 2004/08 Relationship to 2005/08 RelatesToType.      *       * @param exposed the 2004/08 Relationship      * @return an equivalent 2005/08 RelatesToType      */
+comment|/** Convert from 2004/08 Relationship to 2005/08 RelatesToType.      *      * @param exposed the 2004/08 Relationship      * @return an equivalent 2005/08 RelatesToType      */
 specifier|public
 specifier|static
 name|RelatesToType
@@ -1898,7 +1898,7 @@ return|return
 name|internal
 return|;
 block|}
-comment|/**      * Convert from 2004/03 Relationship to 2005/08 RelatesToType.      *       * @param exposed the 2004/03 Relationship      * @return an equivalent 2005/08 RelatesToType      */
+comment|/**      * Convert from 2004/03 Relationship to 2005/08 RelatesToType.      *      * @param exposed the 2004/03 Relationship      * @return an equivalent 2005/08 RelatesToType      */
 specifier|public
 specifier|static
 name|RelatesToType
@@ -2385,7 +2385,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**      * Put all entries from one map into another.      *       * @param to target map      * @param from source map      */
+comment|/**      * Put all entries from one map into another.      *      * @param to target map      * @param from source map      */
 specifier|private
 specifier|static
 name|void
@@ -2424,7 +2424,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Add all entries from one list into another.      *       * @param to target list      * @param from source list      */
+comment|/**      * Add all entries from one list into another.      *      * @param to target list      * @param from source list      */
 specifier|private
 specifier|static
 name|void
@@ -2549,7 +2549,7 @@ specifier|protected
 name|Names200408
 parameter_list|()
 block|{         }
-comment|/**          * Retrieve a JAXBContext for marshalling and unmarshalling JAXB generated          * types for the 2004/08 version.          *          * @return a JAXBContext           */
+comment|/**          * Retrieve a JAXBContext for marshalling and unmarshalling JAXB generated          * types for the 2004/08 version.          *          * @return a JAXBContext          */
 specifier|public
 specifier|static
 name|JAXBContext
@@ -2589,7 +2589,7 @@ return|return
 name|jaxbContext
 return|;
 block|}
-comment|/**          * Set the encapsulated JAXBContext (used by unit tests).          *           * @param ctx JAXBContext           */
+comment|/**          * Set the encapsulated JAXBContext (used by unit tests).          *          * @param ctx JAXBContext          */
 specifier|public
 specifier|static
 name|void
@@ -2729,7 +2729,7 @@ specifier|protected
 name|Names200403
 parameter_list|()
 block|{         }
-comment|/**          * Retrieve a JAXBContext for marshalling and unmarshalling JAXB generated types for the 2004/08          * version.          *           * @return a JAXBContext          */
+comment|/**          * Retrieve a JAXBContext for marshalling and unmarshalling JAXB generated types for the 2004/08          * version.          *          * @return a JAXBContext          */
 specifier|public
 specifier|static
 name|JAXBContext
@@ -2781,7 +2781,7 @@ return|return
 name|jaxbContext
 return|;
 block|}
-comment|/**          * Set the encapsulated JAXBContext (used by unit tests).          *           * @param ctx JAXBContext          */
+comment|/**          * Set the encapsulated JAXBContext (used by unit tests).          *          * @param ctx JAXBContext          */
 specifier|public
 specifier|static
 name|void

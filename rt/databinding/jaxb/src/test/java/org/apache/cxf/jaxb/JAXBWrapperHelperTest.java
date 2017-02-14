@@ -600,7 +600,7 @@ name|ArrayList
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**          * Gets the value of the parameter1 property.          *           */
+comment|/**          * Gets the value of the parameter1 property.          *          */
 specifier|public
 name|boolean
 name|isParameter1
@@ -610,7 +610,7 @@ return|return
 name|parameter1
 return|;
 block|}
-comment|/**          * Sets the value of the parameter1 property.          *           */
+comment|/**          * Sets the value of the parameter1 property.          *          */
 specifier|public
 name|void
 name|setParameter1
@@ -626,7 +626,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**          * Gets the value of the parameter2 property.          *           */
+comment|/**          * Gets the value of the parameter2 property.          *          */
 specifier|public
 name|int
 name|getParameter2
@@ -636,7 +636,7 @@ return|return
 name|parameter2
 return|;
 block|}
-comment|/**          * Sets the value of the parameter2 property.          *           */
+comment|/**          * Sets the value of the parameter2 property.          *          */
 specifier|public
 name|void
 name|setParameter2
@@ -652,7 +652,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**          * Gets the value of the parameter2 property.          *           */
+comment|/**          * Gets the value of the parameter2 property.          *          */
 specifier|public
 name|boolean
 index|[]
@@ -663,7 +663,7 @@ return|return
 name|parameter3
 return|;
 block|}
-comment|/**          * Sets the value of the parameter2 property.          *           */
+comment|/**          * Sets the value of the parameter2 property.          *          */
 specifier|public
 name|void
 name|setParameter3

@@ -788,7 +788,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Consume a set of service definitions and produce a WSDL model. The ServiceInfo objects  * contain the bindings, operations, and ports, plus XMLSchema schemas.   *   * Each wsdl:definition has to have a single target namespace. The first service in the list  * defines the TNS of the overall WSDL. If a subsequent service has a divergent TNS, then  * the code creates a new definition element (i.e., Definition object), and imports it into  * the top-level object.  */
+comment|/**  * Consume a set of service definitions and produce a WSDL model. The ServiceInfo objects  * contain the bindings, operations, and ports, plus XMLSchema schemas.  *  * Each wsdl:definition has to have a single target namespace. The first service in the list  * defines the TNS of the overall WSDL. If a subsequent service has a divergent TNS, then  * the code creates a new definition element (i.e., Definition object), and imports it into  * the top-level object.  */
 end_comment
 
 begin_class
@@ -882,7 +882,7 @@ name|NSManager
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * For callers who prefer varargs, an inline list of ServiceInfo objects instead of       * a List. Primarily used for tests or other callers with only one service in hand.       * @param b the bus.      * @param services the services.      */
+comment|/**      * For callers who prefer varargs, an inline list of ServiceInfo objects instead of      * a List. Primarily used for tests or other callers with only one service in hand.      * @param b the bus.      * @param services the services.      */
 specifier|public
 name|ServiceWSDLBuilder
 parameter_list|(
@@ -907,7 +907,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set whether to emit references to imported schema files.      * This is only effective for {@link #build(Map)}, which is passed additional schemas for       * import. {@link #build()} resets this flag to false.      * @param b true to use imports.      */
+comment|/**      * Set whether to emit references to imported schema files.      * This is only effective for {@link #build(Map)}, which is passed additional schemas for      * import. {@link #build()} resets this flag to false.      * @param b true to use imports.      */
 specifier|public
 name|void
 name|setUseSchemaImports
@@ -954,7 +954,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Create the WSDL Definition object and return it. This function respects the       * setting of {@link #setUseSchemaImports(boolean)}.      * @param imports A set of schema imports to either reference as imports or read and       * then inline.      * @return the WSDL definition      * @throws WSDLException      */
+comment|/**      * Create the WSDL Definition object and return it. This function respects the      * setting of {@link #setUseSchemaImports(boolean)}.      * @param imports A set of schema imports to either reference as imports or read and      * then inline.      * @return the WSDL definition      * @throws WSDLException      */
 specifier|public
 name|Definition
 name|build
@@ -1426,7 +1426,7 @@ return|return
 name|d
 return|;
 block|}
-comment|/**       * Return a list of ExtensibilityElements for a particular component, such as a BindingFaultInfo.      * This perhaps should be protected.      * @param holder The item containing the extensibility elements.      * @return the extensibility elements.      */
+comment|/**      * Return a list of ExtensibilityElements for a particular component, such as a BindingFaultInfo.      * This perhaps should be protected.      * @param holder The item containing the extensibility elements.      * @return the extensibility elements.      */
 specifier|public
 name|List
 argument_list|<

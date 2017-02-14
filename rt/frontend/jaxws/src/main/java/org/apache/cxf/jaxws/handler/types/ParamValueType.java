@@ -156,7 +156,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This type is a general type that can be used to declare parameter/value lists.  *<p>  * Java class for param-valueType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="param-valueType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="description" type="{http://java.sun.com/xml/ns/javaee}descriptionType"   *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;element name="param-name" type="{http://java.sun.com/xml/ns/javaee}string"/>  *&lt;element name="param-value" type="{http://java.sun.com/xml/ns/javaee}xsdStringType"/>  *&lt;/sequence>  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * This type is a general type that can be used to declare parameter/value lists.  *<p>  * Java class for param-valueType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="param-valueType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="description" type="{http://java.sun.com/xml/ns/javaee}descriptionType"  *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;element name="param-name" type="{http://java.sun.com/xml/ns/javaee}string"/>  *&lt;element name="param-value" type="{http://java.sun.com/xml/ns/javaee}xsdStringType"/>  *&lt;/sequence>  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class
@@ -244,7 +244,7 @@ operator|.
 name|String
 name|id
 decl_stmt|;
-comment|/**      * Gets the value of the description property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the description property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getDescription().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link DescriptionType }      */
+comment|/**      * Gets the value of the description property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the description property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getDescription().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link DescriptionType }      */
 specifier|public
 name|List
 argument_list|<
@@ -274,7 +274,7 @@ operator|.
 name|description
 return|;
 block|}
-comment|/**      * Gets the value of the paramName property.      *       * @return possible object is {@link CString }      */
+comment|/**      * Gets the value of the paramName property.      *      * @return possible object is {@link CString }      */
 specifier|public
 name|CString
 name|getParamName
@@ -284,7 +284,7 @@ return|return
 name|paramName
 return|;
 block|}
-comment|/**      * Sets the value of the paramName property.      *       * @param value allowed object is {@link CString }      */
+comment|/**      * Sets the value of the paramName property.      *      * @param value allowed object is {@link CString }      */
 specifier|public
 name|void
 name|setParamName
@@ -300,7 +300,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the paramValue property.      *       * @return possible object is {@link XsdStringType }      */
+comment|/**      * Gets the value of the paramValue property.      *      * @return possible object is {@link XsdStringType }      */
 specifier|public
 name|XsdStringType
 name|getParamValue
@@ -310,7 +310,7 @@ return|return
 name|paramValue
 return|;
 block|}
-comment|/**      * Sets the value of the paramValue property.      *       * @param value allowed object is {@link XsdStringType }      */
+comment|/**      * Sets the value of the paramValue property.      *      * @param value allowed object is {@link XsdStringType }      */
 specifier|public
 name|void
 name|setParamValue
@@ -326,7 +326,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the id property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the id property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -340,7 +340,7 @@ return|return
 name|id
 return|;
 block|}
-comment|/**      * Sets the value of the id property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the id property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setId

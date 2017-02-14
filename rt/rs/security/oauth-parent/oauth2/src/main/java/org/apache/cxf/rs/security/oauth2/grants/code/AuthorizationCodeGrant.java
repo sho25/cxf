@@ -134,7 +134,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base Authorization Code Grant representation, captures the code   * and the redirect URI this code has been returned to, visible to the client  */
+comment|/**  * Base Authorization Code Grant representation, captures the code  * and the redirect URI this code has been returned to, visible to the client  */
 end_comment
 
 begin_class
@@ -170,7 +170,7 @@ decl_stmt|;
 specifier|public
 name|AuthorizationCodeGrant
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|AuthorizationCodeGrant
 parameter_list|(
@@ -209,7 +209,7 @@ name|toString
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Sets the redirect URI, if set then the client is expected to       * include the same URI during the access token request      * @param redirectUri redirect URI      */
+comment|/**      * Sets the redirect URI, if set then the client is expected to      * include the same URI during the access token request      * @param redirectUri redirect URI      */
 specifier|public
 name|void
 name|setRedirectUri

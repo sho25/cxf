@@ -60,7 +60,7 @@ name|Element
 name|claim
 parameter_list|)
 function_decl|;
-comment|/**      * This method indicates the claims dialect this Parser can handle.      *       * @return Name of supported Dialect      */
+comment|/**      * This method indicates the claims dialect this Parser can handle.      *      * @return Name of supported Dialect      */
 name|String
 name|getSupportedDialect
 parameter_list|()

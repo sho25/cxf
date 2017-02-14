@@ -408,7 +408,7 @@ decl_stmt|;
 specifier|private
 name|TestUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 specifier|static
 name|ResourceFactory

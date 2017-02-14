@@ -480,7 +480,7 @@ argument_list|()
 throw|;
 block|}
 block|}
-comment|/**      * Get XPath from the Expression element.      * @param expression      * @return       */
+comment|/**      * Get XPath from the Expression element.      * @param expression      * @return      */
 specifier|private
 name|String
 name|getXPathFromExpression
@@ -718,7 +718,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Helper method for equation two strings, which can be nullable.      * @param str1      * @param str2      * @return       */
+comment|/**      * Helper method for equation two strings, which can be nullable.      * @param str1      * @param str2      * @return      */
 specifier|private
 name|boolean
 name|stringEquals

@@ -92,7 +92,7 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Purge all candiates for the given sequence.      *       * @param seq the sequence object      */
+comment|/**      * Purge all candiates for the given sequence.      *      * @param seq the sequence object      */
 name|void
 name|purgeAll
 parameter_list|(
@@ -100,7 +100,7 @@ name|DestinationSequence
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      *       * @param seq      * @return      */
+comment|/**      *      * @param seq      * @return      */
 name|List
 argument_list|<
 name|Long

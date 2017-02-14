@@ -270,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test sending claims that are defined in the policy of the WSDL to the STS for evaluation.  * The SAML token is tested on the service side for the correct claims (role) information via a   * custom validator.  */
+comment|/**  * Test sending claims that are defined in the policy of the WSDL to the STS for evaluation.  * The SAML token is tested on the service side for the correct claims (role) information via a  * custom validator.  */
 end_comment
 
 begin_class

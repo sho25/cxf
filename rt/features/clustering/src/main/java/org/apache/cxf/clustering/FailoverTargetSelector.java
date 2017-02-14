@@ -232,7 +232,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Implements a target selection strategy based on failover to an   * alternate target endpoint when a transport level failure is   * encountered.  * Note that this feature changes the conduit on the fly and thus makes  * the Client not thread safe.  */
+comment|/**  * Implements a target selection strategy based on failover to an  * alternate target endpoint when a transport level failure is  * encountered.  * Note that this feature changes the conduit on the fly and thus makes  * the Client not thread safe.  */
 end_comment
 
 begin_class
@@ -323,7 +323,7 @@ operator|=
 name|clientBootstrapAddress
 expr_stmt|;
 block|}
-comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *       * @param c specific conduit      */
+comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *      * @param c specific conduit      */
 specifier|public
 name|FailoverTargetSelector
 parameter_list|(
@@ -337,7 +337,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called prior to the interceptor chain being traversed.      *       * @param message the current Message      */
+comment|/**      * Called prior to the interceptor chain being traversed.      *      * @param message the current Message      */
 specifier|public
 name|void
 name|prepare
@@ -598,7 +598,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called when a Conduit is actually required.      *       * @param message      * @return the Conduit to use for mediation of the message      */
+comment|/**      * Called when a Conduit is actually required.      *      * @param message      * @return the Conduit to use for mediation of the message      */
 specifier|public
 name|Conduit
 name|selectConduit
@@ -654,7 +654,7 @@ name|key
 argument_list|)
 return|;
 block|}
-comment|/**      * Called on completion of the MEP for which the Conduit was required.      *       * @param exchange represents the completed MEP      */
+comment|/**      * Called on completion of the MEP for which the Conduit was required.      *      * @param exchange represents the completed MEP      */
 specifier|public
 name|void
 name|complete
@@ -1234,7 +1234,7 @@ return|return
 literal|0
 return|;
 block|}
-comment|/**      * Check if the exchange is suitable for a failover.      *       * @param exchange the current Exchange      * @return boolean true if a failover should be attempted      */
+comment|/**      * Check if the exchange is suitable for a failover.      *      * @param exchange the current Exchange      * @return boolean true if a failover should be attempted      */
 specifier|protected
 name|boolean
 name|requiresFailover
@@ -1419,7 +1419,7 @@ return|return
 name|ex
 return|;
 block|}
-comment|/**      * Get the failover target endpoint, if a suitable one is available.      *       * @param exchange the current Exchange      * @param invocation the current InvocationContext      * @return a failover endpoint if one is available      */
+comment|/**      * Get the failover target endpoint, if a suitable one is available.      *      * @param exchange the current Exchange      * @param invocation the current InvocationContext      * @return a failover endpoint if one is available      */
 specifier|protected
 name|Endpoint
 name|getFailoverTarget
@@ -1513,7 +1513,7 @@ return|return
 name|failoverTarget
 return|;
 block|}
-comment|/**      * Fetches and updates the alternative address or/and alternative endpoints       * (depending on the strategy) for current invocation context.      * @param exchange the current Exchange      * @param invocation the current InvocationContext      * @return alternative addresses      */
+comment|/**      * Fetches and updates the alternative address or/and alternative endpoints      * (depending on the strategy) for current invocation context.      * @param exchange the current Exchange      * @param invocation the current InvocationContext      * @return alternative addresses      */
 specifier|protected
 name|List
 argument_list|<
@@ -1603,7 +1603,7 @@ return|return
 name|alternateAddresses
 return|;
 block|}
-comment|/**      * Override the ENDPOINT_ADDRESS property in the request context      *       * @param context the request context      */
+comment|/**      * Override the ENDPOINT_ADDRESS property in the request context      *      * @param context the request context      */
 specifier|protected
 name|void
 name|overrideAddressProperty

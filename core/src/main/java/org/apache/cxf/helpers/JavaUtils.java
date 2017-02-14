@@ -189,7 +189,7 @@ specifier|private
 name|JavaUtils
 parameter_list|()
 block|{     }
-comment|/**      * checks if the input string is a valid java keyword.      *       * @return boolean true/false      */
+comment|/**      * checks if the input string is a valid java keyword.      *      * @return boolean true/false      */
 specifier|public
 specifier|static
 name|boolean

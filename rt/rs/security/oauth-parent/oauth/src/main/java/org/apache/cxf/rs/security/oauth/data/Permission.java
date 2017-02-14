@@ -22,7 +22,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Base permission description which is visible to   * authorization handlers  * @see OAuthAuthorizationData  */
+comment|/**  * Base permission description which is visible to  * authorization handlers  * @see OAuthAuthorizationData  */
 end_comment
 
 begin_class
@@ -45,7 +45,7 @@ decl_stmt|;
 specifier|public
 name|Permission
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Permission
 parameter_list|(

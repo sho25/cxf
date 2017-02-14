@@ -418,7 +418,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base class providing an extensibility point for populating   * javax.security.auth.Subject from a current UsernameToken.  *   * WSS4J requires a password for validating digests which may not be available  * when external security systems provide for the authentication. This class  * implements WSS4J Processor interface so that it can delegate a UsernameToken  * validation to an external system.  *   * In order to handle digests, this class currently creates a new WSS4J Security Engine for  * every request. If clear text passwords are expected then a supportDigestPasswords boolean  * property with a false value can be used to disable creating security engines.  *   * Note that if a UsernameToken containing a clear text password has been encrypted then  * an application is expected to provide a password callback handler for decrypting the token only.       *  */
+comment|/**  * Base class providing an extensibility point for populating  * javax.security.auth.Subject from a current UsernameToken.  *  * WSS4J requires a password for validating digests which may not be available  * when external security systems provide for the authentication. This class  * implements WSS4J Processor interface so that it can delegate a UsernameToken  * validation to an external system.  *  * In order to handle digests, this class currently creates a new WSS4J Security Engine for  * every request. If clear text passwords are expected then a supportDigestPasswords boolean  * property with a false value can be used to disable creating security engines.  *  * Note that if a UsernameToken containing a clear text password has been encrypted then  * an application is expected to provide a password callback handler for decrypting the token only.  *  */
 end_comment
 
 begin_class
@@ -750,7 +750,7 @@ name|wsResult
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates default SecurityContext which implements isUserInRole using the      * following approach : skip the first Subject principal, and then check optional      * Groups the principal is a member of. Subclasses can override this method and implement      * a custom strategy instead      *         * @param p principal      * @param subject subject       * @return security context      */
+comment|/**      * Creates default SecurityContext which implements isUserInRole using the      * following approach : skip the first Subject principal, and then check optional      * Groups the principal is a member of. Subclasses can override this method and implement      * a custom strategy instead      *      * @param p principal      * @param subject subject      * @return security context      */
 specifier|protected
 name|SecurityContext
 name|doCreateSecurityContext
@@ -953,7 +953,7 @@ name|subject
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create a Subject representing a current user and its roles.       * This Subject is expected to contain at least one Principal representing a user      * and optionally followed by one or more principal Groups this user is a member of.      * It will also be available in doCreateSecurityContext.         * @param name username      * @param password password      * @param isDigest true if a password digest is used      * @param nonce optional nonce      * @param created optional timestamp      * @return subject      * @throws SecurityException      */
+comment|/**      * Create a Subject representing a current user and its roles.      * This Subject is expected to contain at least one Principal representing a user      * and optionally followed by one or more principal Groups this user is a member of.      * It will also be available in doCreateSecurityContext.      * @param name username      * @param password password      * @param isDigest true if a password digest is used      * @param nonce optional nonce      * @param created optional timestamp      * @return subject      * @throws SecurityException      */
 specifier|protected
 specifier|abstract
 name|Subject

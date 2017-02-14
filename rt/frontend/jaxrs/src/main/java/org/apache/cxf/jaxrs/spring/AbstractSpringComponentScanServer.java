@@ -494,7 +494,7 @@ decl_stmt|;
 specifier|protected
 name|AbstractSpringComponentScanServer
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 name|AbstractSpringComponentScanServer
 parameter_list|(

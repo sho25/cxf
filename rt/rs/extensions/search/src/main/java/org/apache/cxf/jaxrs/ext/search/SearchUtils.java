@@ -283,7 +283,7 @@ decl_stmt|;
 specifier|private
 name|SearchUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|SimpleDateFormat

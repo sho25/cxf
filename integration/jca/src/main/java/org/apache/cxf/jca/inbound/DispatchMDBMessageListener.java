@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * The DispatchMDBMessageListener is intended to be used as the   *<messagelistener-type> of an<inbound-resourcesadapter>  in the resource   * adapter's deployment descriptor (ra.xml).  The default implementation   * class is {@link DispatchMDBMessageListenerImpl}.  * The benefit of using DispatchMDBMessageListener is that users  * are not required to put the Service Endpoint Interface (SEI) in the resource  * adaptor's deployment descriptor.  Thus, users can leave the<messagelistener-type>  * as org.apache.cxf.jca.inbound.DispatchMDBMessageListener for any their endpoints.  */
+comment|/**  * The DispatchMDBMessageListener is intended to be used as the  *<messagelistener-type> of an<inbound-resourcesadapter>  in the resource  * adapter's deployment descriptor (ra.xml).  The default implementation  * class is {@link DispatchMDBMessageListenerImpl}.  * The benefit of using DispatchMDBMessageListener is that users  * are not required to put the Service Endpoint Interface (SEI) in the resource  * adaptor's deployment descriptor.  Thus, users can leave the<messagelistener-type>  * as org.apache.cxf.jca.inbound.DispatchMDBMessageListener for any their endpoints.  */
 end_comment
 
 begin_interface
@@ -26,7 +26,7 @@ specifier|public
 interface|interface
 name|DispatchMDBMessageListener
 block|{
-comment|/**      * Looks up the target object by JNDI name.      *       * @param targetJndiName      * @return      */
+comment|/**      * Looks up the target object by JNDI name.      *      * @param targetJndiName      * @return      */
 name|Object
 name|lookupTargetObject
 parameter_list|(

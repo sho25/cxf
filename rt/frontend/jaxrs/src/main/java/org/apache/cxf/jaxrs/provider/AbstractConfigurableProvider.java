@@ -263,7 +263,7 @@ name|b
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Gets the Bus.       * Providers may use the bus to resolve resource references.      * Example:      * ResourceUtils.getResourceStream(reference, this.getBus())      *       * @return      */
+comment|/**      * Gets the Bus.      * Providers may use the bus to resolve resource references.      * Example:      * ResourceUtils.getResourceStream(reference, this.getBus())      *      * @return      */
 specifier|public
 name|Bus
 name|getBus
@@ -342,7 +342,7 @@ return|return
 name|produceMediaTypes
 return|;
 block|}
-comment|/**      * Enables the buffering mode. If set to true then the runtime will ensure      * that the provider writes to a cached stream.      *        * For example, the JAXB marshalling process may fail after the initial XML      * tags have already been written out to the HTTP output stream. Enabling      * the buffering ensures no incomplete payloads are sent back to clients      * in case of marshalling errors at the cost of the initial buffering - which      * might be negligible for small payloads.      *       * @param enableBuf the value of the buffering mode, false is default.      */
+comment|/**      * Enables the buffering mode. If set to true then the runtime will ensure      * that the provider writes to a cached stream.      *      * For example, the JAXB marshalling process may fail after the initial XML      * tags have already been written out to the HTTP output stream. Enabling      * the buffering ensures no incomplete payloads are sent back to clients      * in case of marshalling errors at the cost of the initial buffering - which      * might be negligible for small payloads.      *      * @param enableBuf the value of the buffering mode, false is default.      */
 specifier|public
 name|void
 name|setEnableBuffering
@@ -366,7 +366,7 @@ return|return
 name|enableBuffering
 return|;
 block|}
-comment|/**      * Enables the support for streaming. XML-aware providers which prefer       * writing to Stax XMLStreamWriter can set this value to true. Additionally,      * if the streaming and the buffering modes are enabled, the runtime will      * ensure the XMLStreamWriter events are cached properly.       * @param enableStream the value of the streaming mode, false is default.      */
+comment|/**      * Enables the support for streaming. XML-aware providers which prefer      * writing to Stax XMLStreamWriter can set this value to true. Additionally,      * if the streaming and the buffering modes are enabled, the runtime will      * ensure the XMLStreamWriter events are cached properly.      * @param enableStream the value of the streaming mode, false is default.      */
 specifier|public
 name|void
 name|setEnableStreaming
@@ -390,7 +390,7 @@ return|return
 name|enableStreaming
 return|;
 block|}
-comment|/**      * Gives providers a chance to introspect the JAX-RS model classes.      * For example, the JAXB provider may use the model classes to create      * a single composite JAXBContext supporting all the JAXB-annotated       * root resource classes/types.      *       * @param resources      */
+comment|/**      * Gives providers a chance to introspect the JAX-RS model classes.      * For example, the JAXB provider may use the model classes to create      * a single composite JAXBContext supporting all the JAXB-annotated      * root resource classes/types.      *      * @param resources      */
 specifier|public
 name|void
 name|init

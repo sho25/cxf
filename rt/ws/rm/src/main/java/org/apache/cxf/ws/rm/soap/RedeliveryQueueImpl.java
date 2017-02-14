@@ -630,7 +630,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1717,7 +1717,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Accepts a new resend candidate.      *       * @param ctx the message context.      * @return ResendCandidate      */
+comment|/**      * Accepts a new resend candidate.      *      * @param ctx the message context.      * @return ResendCandidate      */
 specifier|protected
 name|RedeliverCandidate
 name|cacheUndelivered
@@ -2580,7 +2580,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**          * Initiate redelivery asynchronsly.          *           */
+comment|/**          * Initiate redelivery asynchronsly.          *          */
 specifier|protected
 name|void
 name|initiate

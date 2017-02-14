@@ -749,7 +749,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Sets reference to the specified MessageContext and returns the previous reference, if any.      *       * @param ctx       The MessageContext to set      * @return          The former MessageContext reference, if any.      */
+comment|/**      * Sets reference to the specified MessageContext and returns the previous reference, if any.      *      * @param ctx       The MessageContext to set      * @return          The former MessageContext reference, if any.      */
 specifier|public
 specifier|static
 name|MessageContext

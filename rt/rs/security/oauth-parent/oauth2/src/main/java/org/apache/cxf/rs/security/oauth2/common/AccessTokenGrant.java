@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Access Token Grant    */
+comment|/**  * Access Token Grant  */
 end_comment
 
 begin_interface
@@ -61,7 +61,7 @@ name|String
 name|getType
 parameter_list|()
 function_decl|;
-comment|/**      * Returns the map containing public grant parameters;      * can be used by clients requesting the access tokens.      *        * @return the grant parameters      */
+comment|/**      * Returns the map containing public grant parameters;      * can be used by clients requesting the access tokens.      *      * @return the grant parameters      */
 name|MultivaluedMap
 argument_list|<
 name|String

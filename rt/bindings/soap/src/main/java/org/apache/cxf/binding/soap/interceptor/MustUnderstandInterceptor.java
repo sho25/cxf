@@ -1385,7 +1385,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      *       */
+comment|/**      *      */
 specifier|private
 specifier|static
 class|class

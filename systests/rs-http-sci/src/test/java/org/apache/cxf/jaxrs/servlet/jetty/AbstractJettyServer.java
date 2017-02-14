@@ -315,7 +315,7 @@ name|theserver
 parameter_list|)
 throws|throws
 name|Exception
-block|{             }
+block|{     }
 specifier|protected
 name|void
 name|configureContext
@@ -326,7 +326,7 @@ name|context
 parameter_list|)
 throws|throws
 name|Exception
-block|{             }
+block|{     }
 specifier|public
 name|void
 name|tearDown

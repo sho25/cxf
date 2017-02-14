@@ -146,7 +146,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This MBean represents the properties associated with the STS. It contains a single operation  * "configureProperties()" which allows subclasses to perform any custom loading/processing of the   * properties.  */
+comment|/**  * This MBean represents the properties associated with the STS. It contains a single operation  * "configureProperties()" which allows subclasses to perform any custom loading/processing of the  * properties.  */
 end_comment
 
 begin_interface
@@ -161,7 +161,7 @@ parameter_list|()
 throws|throws
 name|STSException
 function_decl|;
-comment|/**      * Set the CallbackHandler object.       * @param callbackHandler the CallbackHandler object.       */
+comment|/**      * Set the CallbackHandler object.      * @param callbackHandler the CallbackHandler object.      */
 name|void
 name|setCallbackHandler
 parameter_list|(
@@ -328,12 +328,12 @@ name|SAMLRealmCodec
 name|samlRealmCodec
 parameter_list|)
 function_decl|;
-comment|/**      * Get whether to validate a client Public Key or Certificate presented as part of a       * UseKey element. This is true by default.      */
+comment|/**      * Get whether to validate a client Public Key or Certificate presented as part of a      * UseKey element. This is true by default.      */
 name|boolean
 name|isValidateUseKey
 parameter_list|()
 function_decl|;
-comment|/**      * Set whether to validate a client Public Key or Certificate presented as part of a       * UseKey element. If this is set to true (the default), the public key must be trusted      * by the Signature Crypto of the STS.      *       * @param validateUseKey whether to validate a client UseKey or not.      */
+comment|/**      * Set whether to validate a client Public Key or Certificate presented as part of a      * UseKey element. If this is set to true (the default), the public key must be trusted      * by the Signature Crypto of the STS.      *      * @param validateUseKey whether to validate a client UseKey or not.      */
 name|void
 name|setValidateUseKey
 parameter_list|(

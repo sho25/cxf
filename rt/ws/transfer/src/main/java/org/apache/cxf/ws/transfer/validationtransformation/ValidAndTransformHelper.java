@@ -78,7 +78,7 @@ block|{
 specifier|private
 name|ValidAndTransformHelper
 parameter_list|()
-block|{              }
+block|{      }
 comment|/**      * Validation and transformation process.      * @param resourceTypeIdentifiers List of resourceTypeIdentifiers.      * @param newRepresentation Incoming representation.      * @param oldRepresentation Representation stored in the ResourceManager.      */
 specifier|public
 specifier|static

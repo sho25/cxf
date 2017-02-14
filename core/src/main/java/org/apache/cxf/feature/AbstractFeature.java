@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Feature is something that is able to customize a Server, Client, or Bus, typically  * adding capabilities. For instance, there may be a LoggingFeature which configures  * one of the above to log each of their messages.  *<p>  * By default the initialize methods all delegate to initializeProvider(InterceptorProvider).   * If you're simply adding interceptors to a Server, Client, or Bus, this allows you to add  * them easily.  */
+comment|/**  * A Feature is something that is able to customize a Server, Client, or Bus, typically  * adding capabilities. For instance, there may be a LoggingFeature which configures  * one of the above to log each of their messages.  *<p>  * By default the initialize methods all delegate to initializeProvider(InterceptorProvider).  * If you're simply adding interceptors to a Server, Client, or Bus, this allows you to add  * them easily.  */
 end_comment
 
 begin_class
@@ -204,8 +204,8 @@ parameter_list|,
 name|Bus
 name|bus
 parameter_list|)
-block|{              }
-comment|/**      * Convenience method to extract a feature by type from an active list.      *       * @param features the given feature list      * @param type the feature type required      * @return the feature of the specified type if active      */
+block|{      }
+comment|/**      * Convenience method to extract a feature by type from an active list.      *      * @param features the given feature list      * @param type the feature type required      * @return the feature of the specified type if active      */
 specifier|public
 specifier|static
 parameter_list|<

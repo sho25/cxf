@@ -212,7 +212,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -459,7 +459,7 @@ name|getValue
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * @param testcase      * @param session      * @param rtd      * @return      * @throws JMSException       */
+comment|/**      * @param testcase      * @param session      * @param rtd      * @return      * @throws JMSException      */
 specifier|public
 specifier|static
 name|Message

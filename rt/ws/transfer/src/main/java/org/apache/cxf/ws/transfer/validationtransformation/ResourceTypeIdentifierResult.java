@@ -39,7 +39,7 @@ decl_stmt|;
 specifier|public
 name|ResourceTypeIdentifierResult
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ResourceTypeIdentifierResult
 parameter_list|(

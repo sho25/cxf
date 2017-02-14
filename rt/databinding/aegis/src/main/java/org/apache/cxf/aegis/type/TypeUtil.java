@@ -859,7 +859,7 @@ name|ns
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Utility function to cast a Type to a Class. This throws an unchecked exception if the Type is      * not a Class. The idea here is that these Type references should have been checked for       * reasonableness before the point of calls to this function.      * @param type Reflection type.      * @param throwForNonClass whether to throw (true) or return null (false) if the Type      * is not a class.      * @return the Class      */
+comment|/**      * Utility function to cast a Type to a Class. This throws an unchecked exception if the Type is      * not a Class. The idea here is that these Type references should have been checked for      * reasonableness before the point of calls to this function.      * @param type Reflection type.      * @param throwForNonClass whether to throw (true) or return null (false) if the Type      * is not a class.      * @return the Class      */
 specifier|public
 specifier|static
 name|Class

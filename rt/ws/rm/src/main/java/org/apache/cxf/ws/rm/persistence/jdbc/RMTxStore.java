@@ -4436,7 +4436,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @throws SQLException       */
+comment|/**      * @throws SQLException      */
 specifier|protected
 name|void
 name|updateSourceSequence
@@ -4581,7 +4581,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @throws IOException       * @throws SQLException      */
+comment|/**      * @throws IOException      * @throws SQLException      */
 specifier|protected
 name|void
 name|updateDestinationSequence
@@ -5363,7 +5363,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Returns either the locally cached statement or the one from the specified connection       * depending on whether the connection is held by this store. If the statement retrieved from      * the local cache, it is locked until it is released. The retrieved statement must be       * released using releaseResources(PreparedStatement stmt, ResultSet rs).      *       * @param con      * @param sql      * @return      * @throws SQLException      */
+comment|/**      * Returns either the locally cached statement or the one from the specified connection      * depending on whether the connection is held by this store. If the statement retrieved from      * the local cache, it is locked until it is released. The retrieved statement must be      * released using releaseResources(PreparedStatement stmt, ResultSet rs).      *      * @param con      * @param sql      * @return      * @throws SQLException      */
 specifier|protected
 name|PreparedStatement
 name|getStatement
@@ -5420,7 +5420,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Releases the statement and any result set.       *        * @param stmt      * @param rs      */
+comment|/**      * Releases the statement and any result set.      *      * @param stmt      * @param rs      */
 specifier|protected
 name|void
 name|releaseResources

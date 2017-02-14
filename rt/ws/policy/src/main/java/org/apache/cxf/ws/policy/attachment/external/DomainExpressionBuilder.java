@@ -56,7 +56,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -64,7 +64,7 @@ specifier|public
 interface|interface
 name|DomainExpressionBuilder
 block|{
-comment|/**      * Builds a domain expression from the given element.      *       * @param e the element      * @return the domin expression      */
+comment|/**      * Builds a domain expression from the given element.      *      * @param e the element      * @return the domin expression      */
 name|DomainExpression
 name|build
 parameter_list|(
@@ -72,7 +72,7 @@ name|Element
 name|e
 parameter_list|)
 function_decl|;
-comment|/**      * Returns a collection of QNames describing the xml schema types for which this      * builder can build domain expressions.      *       * @return collection of supported types      */
+comment|/**      * Returns a collection of QNames describing the xml schema types for which this      * builder can build domain expressions.      *      * @return collection of supported types      */
 name|Collection
 argument_list|<
 name|QName

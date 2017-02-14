@@ -190,7 +190,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -300,7 +300,7 @@ specifier|private
 name|PolicyUtils
 parameter_list|()
 block|{     }
-comment|/**      * Checks if a given policy contains no policy components       * or if it has only empty ExactlyOne or All components       * containing no assertions       *       * @param p the policy      * @return true if the policy is empty      */
+comment|/**      * Checks if a given policy contains no policy components      * or if it has only empty ExactlyOne or All components      * containing no assertions      *      * @param p the policy      * @return true if the policy is empty      */
 specifier|public
 specifier|static
 name|boolean
@@ -317,7 +317,7 @@ name|p
 argument_list|)
 return|;
 block|}
-comment|/**      * Checks if a given policy operator has no policy components       * or if it has only empty ExactlyOne or All components       * containing no assertions       *       * @param p the policy operator      * @return true if this policy operator is empty      */
+comment|/**      * Checks if a given policy operator has no policy components      * or if it has only empty ExactlyOne or All components      * containing no assertions      *      * @param p the policy operator      * @return true if this policy operator is empty      */
 specifier|public
 specifier|static
 name|boolean
@@ -378,7 +378,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Determine if a collection of assertions contains a given assertion, using      * the equal method from the Assertion interface.      *       * @param assertions a collection of assertions      * @param candidate the assertion to test      * @return true iff candidate is equal to one of the assertions in the collection      */
+comment|/**      * Determine if a collection of assertions contains a given assertion, using      * the equal method from the Assertion interface.      *      * @param assertions a collection of assertions      * @param candidate the assertion to test      * @return true iff candidate is equal to one of the assertions in the collection      */
 specifier|public
 specifier|static
 name|boolean
@@ -421,7 +421,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Determine if one collection of assertions contains another collection of assertion, using      * the equal method from the Assertion interface.      *       * @param assertions a collection of assertions      * @param candidates the collections of assertion to test      * @return true iff each candidate is equal to one of the assertions in the collection      */
+comment|/**      * Determine if one collection of assertions contains another collection of assertion, using      * the equal method from the Assertion interface.      *      * @param assertions a collection of assertions      * @param candidates the collections of assertion to test      * @return true iff each candidate is equal to one of the assertions in the collection      */
 specifier|public
 specifier|static
 name|boolean

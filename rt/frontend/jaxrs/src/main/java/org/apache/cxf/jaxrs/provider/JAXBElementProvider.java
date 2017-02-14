@@ -888,7 +888,7 @@ decl_stmt|;
 specifier|public
 name|JAXBElementProvider
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 name|boolean
 name|objectFactoryOrIndexAvailable

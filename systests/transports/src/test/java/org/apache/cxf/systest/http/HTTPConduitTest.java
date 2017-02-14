@@ -266,7 +266,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class tests several issues and Conduit policies based   * on a set up of redirecting servers.  *<pre>  *   * Http Redirection:  *   * Rethwel(http:9004) ----> Mortimer (http:9000)  *   * Redirect Loop:  *   * Hurlon (http:9006) ----> Abost(http:9007) ----\  *   ^                                            |  *   |-------------------------------------------/  */
+comment|/**  * This class tests several issues and Conduit policies based  * on a set up of redirecting servers.  *<pre>  *  * Http Redirection:  *  * Rethwel(http:9004) ----> Mortimer (http:9000)  *  * Redirect Loop:  *  * Hurlon (http:9006) ----> Abost(http:9007) ----\  *   ^                                            |  *   |-------------------------------------------/  */
 end_comment
 
 begin_class
@@ -912,7 +912,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This methods tests that a conduit that is not configured      * to follow redirects will not. The default is not to       * follow redirects.       * Rethwel redirects to Mortimer.      *       * Note: Unfortunately, the invocation will       * "fail" for any number of other reasons.      */
+comment|/**      * This methods tests that a conduit that is not configured      * to follow redirects will not. The default is not to      * follow redirects.      * Rethwel redirects to Mortimer.      *      * Note: Unfortunately, the invocation will      * "fail" for any number of other reasons.      */
 annotation|@
 name|Test
 specifier|public
@@ -1045,7 +1045,7 @@ literal|1
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * We use this class to reset the default bus.      * Note: This may not always work in the future.      * I was lucky in that "defaultBus" is actually a       * protected static.      */
+comment|/**      * We use this class to reset the default bus.      * Note: This may not always work in the future.      * I was lucky in that "defaultBus" is actually a      * protected static.      */
 class|class
 name|DefaultBusFactory
 extends|extends
@@ -1236,7 +1236,7 @@ literal|2
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This methods tests that a redirection loop will fail.      * Hurlon redirects to Abost, which redirects to Hurlon.      *       * Note: Unfortunately, the invocation may "fail" for any      * number of reasons.      */
+comment|/**      * This methods tests that a redirection loop will fail.      * Hurlon redirects to Abost, which redirects to Hurlon.      *      * Note: Unfortunately, the invocation may "fail" for any      * number of reasons.      */
 annotation|@
 name|Test
 specifier|public

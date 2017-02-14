@@ -370,7 +370,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for invoking on an STS using SOAP 1.2 via the TransportBinding. The CXF client gets a   * token from the STS over TLS, and then sends it to the CXF endpoint over TLS.  */
+comment|/**  * This is a test for invoking on an STS using SOAP 1.2 via the TransportBinding. The CXF client gets a  * token from the STS over TLS, and then sends it to the CXF endpoint over TLS.  */
 end_comment
 
 begin_class

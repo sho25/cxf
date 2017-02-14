@@ -1892,7 +1892,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -7147,7 +7147,7 @@ name|getPassword
 argument_list|()
 return|;
 block|}
-comment|/**      * Generates a wsu:Id attribute for the provided {@code Element} and returns the attribute value      * or finds and returns the value of the attribute if it already exists.      *       * @param element the {@code Element} to check/create the attribute on      *      * @return the generated or discovered wsu:Id attribute value      */
+comment|/**      * Generates a wsu:Id attribute for the provided {@code Element} and returns the attribute value      * or finds and returns the value of the attribute if it already exists.      *      * @param element the {@code Element} to check/create the attribute on      *      * @return the generated or discovered wsu:Id attribute value      */
 specifier|public
 name|String
 name|addWsuIdToElement
@@ -8183,7 +8183,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Identifies the portions of the message to be signed/encrypted.      *       * @param sign      *            whether the matches are to be signed or encrypted      * @param includeBody      *            if the body should be included in the signature/encryption      * @param parts      *            any {@code WSEncryptionPart}s to match for signature or      *            encryption as specified by WS-SP signed parts or encrypted      *            parts. Parts without a name match all elements with the      *            provided namespace.      * @param xpaths      *            any XPath expressions to sign/encrypt matches      * @param contentXpaths      *            any XPath expressions to content encrypt      * @return a configured list of {@code WSEncryptionPart}s suitable for      *         processing by WSS4J      * @throws SOAPException      *             if there is an error extracting SOAP content from the SAAJ      *             model      */
+comment|/**      * Identifies the portions of the message to be signed/encrypted.      *      * @param sign      *            whether the matches are to be signed or encrypted      * @param includeBody      *            if the body should be included in the signature/encryption      * @param parts      *            any {@code WSEncryptionPart}s to match for signature or      *            encryption as specified by WS-SP signed parts or encrypted      *            parts. Parts without a name match all elements with the      *            provided namespace.      * @param xpaths      *            any XPath expressions to sign/encrypt matches      * @param contentXpaths      *            any XPath expressions to content encrypt      * @return a configured list of {@code WSEncryptionPart}s suitable for      *         processing by WSS4J      * @throws SOAPException      *             if there is an error extracting SOAP content from the SAAJ      *             model      */
 specifier|public
 name|List
 argument_list|<
@@ -8328,7 +8328,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Identifies the portions of the message to be signed/encrypted.      *       * @param sign      *            whether the matches are to be signed or encrypted      * @param includeBody      *            if the body should be included in the signature/encryption      * @param parts      *            any {@code WSEncryptionPart}s to match for signature or      *            encryption as specified by WS-SP signed parts or encrypted      *            parts. Parts without a name match all elements with the      *            provided namespace.      * @param found       *            a list of elements that have previously been tagged for      *            signing/encryption. Populated with additional matches found by      *            this method and used to prevent including the same element      *            twice under the same operation.      * @return a configured list of {@code WSEncryptionPart}s suitable for      *         processing by WSS4J      * @throws SOAPException      *             if there is an error extracting SOAP content from the SAAJ      *             model      */
+comment|/**      * Identifies the portions of the message to be signed/encrypted.      *      * @param sign      *            whether the matches are to be signed or encrypted      * @param includeBody      *            if the body should be included in the signature/encryption      * @param parts      *            any {@code WSEncryptionPart}s to match for signature or      *            encryption as specified by WS-SP signed parts or encrypted      *            parts. Parts without a name match all elements with the      *            provided namespace.      * @param found      *            a list of elements that have previously been tagged for      *            signing/encryption. Populated with additional matches found by      *            this method and used to prevent including the same element      *            twice under the same operation.      * @return a configured list of {@code WSEncryptionPart}s suitable for      *         processing by WSS4J      * @throws SOAPException      *             if there is an error extracting SOAP content from the SAAJ      *             model      */
 specifier|protected
 name|List
 argument_list|<
@@ -8677,7 +8677,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Identifies the portions of the message to be signed/encrypted.      *       * @param encryptionModifier      *            indicates the scope of the crypto operation over matched      *            elements. Either "Content" or "Element".      * @param xpaths      *            any XPath expressions to sign/encrypt matches      * @param found      *            a list of elements that have previously been tagged for      *            signing/encryption. Populated with additional matches found by      *            this method and used to prevent including the same element      *            twice under the same operation.      * @param forceId       *         force adding a wsu:Id onto the elements.  Recommended for signatures.      * @return a configured list of {@code WSEncryptionPart}s suitable for      *         processing by WSS4J      * @throws XPathExpressionException      *             if a provided XPath is invalid      * @throws SOAPException      *             if there is an error extracting SOAP content from the SAAJ      *             model      */
+comment|/**      * Identifies the portions of the message to be signed/encrypted.      *      * @param encryptionModifier      *            indicates the scope of the crypto operation over matched      *            elements. Either "Content" or "Element".      * @param xpaths      *            any XPath expressions to sign/encrypt matches      * @param found      *            a list of elements that have previously been tagged for      *            signing/encryption. Populated with additional matches found by      *            this method and used to prevent including the same element      *            twice under the same operation.      * @param forceId      *         force adding a wsu:Id onto the elements.  Recommended for signatures.      * @return a configured list of {@code WSEncryptionPart}s suitable for      *         processing by WSS4J      * @throws XPathExpressionException      *             if a provided XPath is invalid      * @throws SOAPException      *             if there is an error extracting SOAP content from the SAAJ      *             model      */
 specifier|protected
 name|List
 argument_list|<
@@ -10344,7 +10344,7 @@ return|return
 name|encrUser
 return|;
 block|}
-comment|/**      * Scan through<code>WSHandlerResult<code> list for a Username token and return      * the username if a Username Token found       * @param results      * @return      */
+comment|/**      * Scan through<code>WSHandlerResult<code> list for a Username token and return      * the username if a Username Token found      * @param results      * @return      */
 specifier|public
 specifier|static
 name|String
@@ -13565,7 +13565,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Processes the parts to be signed and reconfigures those parts that have      * already been encrypted.      *       * @param encryptedParts      *            the parts that have been encrypted      * @param signedParts      *            the parts that are to be signed      *       * @throws IllegalArgumentException      *             if an element in {@code signedParts} contains a {@code      *             WSEncryptionPart} with a {@code null} {@code id} value      *             and the {@code WSEncryptionPart} {@code name} value is not      *             "Token"      */
+comment|/**      * Processes the parts to be signed and reconfigures those parts that have      * already been encrypted.      *      * @param encryptedParts      *            the parts that have been encrypted      * @param signedParts      *            the parts that are to be signed      *      * @throws IllegalArgumentException      *             if an element in {@code signedParts} contains a {@code      *             WSEncryptionPart} with a {@code null} {@code id} value      *             and the {@code WSEncryptionPart} {@code name} value is not      *             "Token"      */
 specifier|public
 name|void
 name|handleEncryptedSignedHeaders

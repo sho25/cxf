@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Singleton object that represents the SOAP 1.1 VERSION.  *   */
+comment|/**  * Singleton object that represents the SOAP 1.1 VERSION.  *  */
 end_comment
 
 begin_class

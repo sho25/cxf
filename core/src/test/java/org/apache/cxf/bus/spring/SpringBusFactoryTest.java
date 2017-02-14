@@ -1363,7 +1363,7 @@ name|name
 decl_stmt|;
 name|TestInterceptor
 parameter_list|()
-block|{                     }
+block|{         }
 specifier|public
 name|void
 name|setName
@@ -1395,7 +1395,7 @@ parameter_list|(
 name|Message
 name|message
 parameter_list|)
-block|{           }
+block|{         }
 specifier|public
 name|void
 name|handleMessage
@@ -1405,7 +1405,7 @@ name|message
 parameter_list|)
 throws|throws
 name|Fault
-block|{            }
+block|{         }
 specifier|public
 name|void
 name|postHandleMessage
@@ -1415,7 +1415,7 @@ name|message
 parameter_list|)
 throws|throws
 name|Fault
-block|{                     }
+block|{         }
 block|}
 specifier|static
 class|class

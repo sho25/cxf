@@ -1230,7 +1230,7 @@ block|}
 specifier|private
 name|ResourceUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|Method

@@ -297,7 +297,7 @@ operator|=
 name|attrMethods
 expr_stmt|;
 block|}
-comment|/**      * load the bytecode for a given class, by using the class's defining      * classloader and assuming that for a class named P.C, the bytecodes are in      * a resource named /P/C.class.      *       * @param c the class of interest      * @return a byte array containing the bytecode      * @throws IOException      */
+comment|/**      * load the bytecode for a given class, by using the class's defining      * classloader and assuming that for a class named P.C, the bytecodes are in      * a resource named /P/C.class.      *      * @param c the class of interest      * @return a byte array containing the bytecode      * @throws IOException      */
 specifier|protected
 specifier|static
 name|byte
@@ -2083,7 +2083,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * read a code attribute      *       * @throws IOException      */
+comment|/**      * read a code attribute      *      * @throws IOException      */
 specifier|public
 name|void
 name|readCode

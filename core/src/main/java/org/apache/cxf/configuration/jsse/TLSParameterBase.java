@@ -173,7 +173,7 @@ operator|=
 name|prov
 expr_stmt|;
 block|}
-comment|/**      * Return the JSSE provider.        */
+comment|/**      * Return the JSSE provider.      */
 specifier|public
 name|String
 name|getJsseProvider
@@ -283,7 +283,7 @@ return|return
 name|ciphersuites
 return|;
 block|}
-comment|/**      * This parameter sets the filter to include and/or exclude the       * cipher suites to use from the set list or system defaults.      */
+comment|/**      * This parameter sets the filter to include and/or exclude the      * cipher suites to use from the set list or system defaults.      */
 specifier|public
 specifier|final
 name|void
@@ -298,7 +298,7 @@ operator|=
 name|filters
 expr_stmt|;
 block|}
-comment|/**      * Returns the cipher suites filter       */
+comment|/**      * Returns the cipher suites filter      */
 specifier|public
 name|FiltersType
 name|getCipherSuitesFilter

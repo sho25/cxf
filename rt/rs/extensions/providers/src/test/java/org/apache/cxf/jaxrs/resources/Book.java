@@ -201,7 +201,7 @@ parameter_list|(
 name|String
 name|s
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|int
 name|hashCode

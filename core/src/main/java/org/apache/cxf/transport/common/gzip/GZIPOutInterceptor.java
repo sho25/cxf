@@ -651,7 +651,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Checks whether we can, cannot or must use gzip compression on this output      * message. Gzip is always permitted if the message is a client request. If      * the message is a server response we check the Accept-Encoding header of      * the corresponding request message - with no Accept-Encoding we assume      * that gzip is not permitted. For the full gory details, see<a      * href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">section      * 14.3 of RFC 2616</a> (HTTP 1.1).      *       * @param message the outgoing message.      * @return whether to attempt gzip compression for this message.      * @throws Fault if the Accept-Encoding header does not allow any encoding      *                 that we can support (identity, gzip or x-gzip).      */
+comment|/**      * Checks whether we can, cannot or must use gzip compression on this output      * message. Gzip is always permitted if the message is a client request. If      * the message is a server response we check the Accept-Encoding header of      * the corresponding request message - with no Accept-Encoding we assume      * that gzip is not permitted. For the full gory details, see<a      * href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3">section      * 14.3 of RFC 2616</a> (HTTP 1.1).      *      * @param message the outgoing message.      * @return whether to attempt gzip compression for this message.      * @throws Fault if the Accept-Encoding header does not allow any encoding      *                 that we can support (identity, gzip or x-gzip).      */
 specifier|public
 specifier|static
 name|UseGzip
@@ -1399,7 +1399,7 @@ specifier|private
 name|void
 name|setupGZip
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|Override
 specifier|public
@@ -1502,7 +1502,7 @@ name|zipOutput
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Adds a value to a header. If the given header name is not currently      * set in the message, an entry is created with the given single value.      * If the header is already set, the value is appended to the first      * element of the list, following a comma.      *       * @param message the message      * @param name the header to set      * @param value the value to add      */
+comment|/**      * Adds a value to a header. If the given header name is not currently      * set in the message, an entry is created with the given single value.      * If the header is already set, the value is appended to the first      * element of the list, following a comma.      *      * @param message the message      * @param name the header to set      * @param value the value to add      */
 specifier|private
 specifier|static
 name|void

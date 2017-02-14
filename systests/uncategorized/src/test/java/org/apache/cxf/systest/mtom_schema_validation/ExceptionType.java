@@ -82,7 +82,7 @@ specifier|protected
 name|String
 name|message
 decl_stmt|;
-comment|/**      * Gets the value of the message property.      *       * @return possible object is {@link String }      */
+comment|/**      * Gets the value of the message property.      *      * @return possible object is {@link String }      */
 specifier|public
 name|String
 name|getMessage
@@ -92,7 +92,7 @@ return|return
 name|message
 return|;
 block|}
-comment|/**      * Sets the value of the message property.      *       * @param value allowed object is {@link String }      */
+comment|/**      * Sets the value of the message property.      *      * @param value allowed object is {@link String }      */
 specifier|public
 name|void
 name|setMessage

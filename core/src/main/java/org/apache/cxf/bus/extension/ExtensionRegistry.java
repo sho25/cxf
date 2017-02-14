@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Static registry of extensions that are loaded in addition to the   * extensions the Bus will automatically detect.  Mostly used by   * the OSGi bundle activator to detect extensions in bundles outside  * the CXF bundle.   */
+comment|/**  * Static registry of extensions that are loaded in addition to the  * extensions the Bus will automatically detect.  Mostly used by  * the OSGi bundle activator to detect extensions in bundles outside  * the CXF bundle.  */
 end_comment
 
 begin_class

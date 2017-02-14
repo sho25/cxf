@@ -2780,7 +2780,7 @@ block|}
 end_class
 
 begin_function
-unit|}          public
+unit|}      public
 specifier|static
 name|void
 name|clearThreadLocalProxies
@@ -2984,7 +2984,7 @@ name|Configuration
 block|{
 name|ServerConfigurationImpl
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|Override
 specifier|public

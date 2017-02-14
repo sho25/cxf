@@ -522,7 +522,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract bean holding functionality common for creating   * JAX-RS Server and Client objects.  */
+comment|/**  * Abstract bean holding functionality common for creating  * JAX-RS Server and Client objects.  */
 end_comment
 
 begin_class
@@ -1125,7 +1125,7 @@ return|return
 name|serviceFactory
 return|;
 block|}
-comment|/**      * Sets the custom service factory which processes       * the registered classes and providers       * @param serviceFactory the factory      */
+comment|/**      * Sets the custom service factory which processes      * the registered classes and providers      * @param serviceFactory the factory      */
 specifier|public
 name|void
 name|setServiceFactory
@@ -1360,7 +1360,7 @@ return|return
 name|ep
 return|;
 block|}
-comment|/**      * Sets the location of the schema which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations       * will be injected with this value.      *       * @param schema the schema location      */
+comment|/**      * Sets the location of the schema which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations      * will be injected with this value.      *      * @param schema the schema location      */
 specifier|public
 name|void
 name|setSchemaLocation
@@ -1380,7 +1380,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the locations of the schemas which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations       * will be injected with this value.      *       * For example, if A.xsd imports B.xsd then both A.xsd and B.xsd need to be referenced.      *       * @param schema the schema locations      */
+comment|/**      * Sets the locations of the schemas which can be used to validate      * the incoming XML or JAXB-driven JSON. JAX-RS MessageBodyReader implementations      * which have the setSchemaLocations method accepting a list of schema locations      * will be injected with this value.      *      * For example, if A.xsd imports B.xsd then both A.xsd and B.xsd need to be referenced.      *      * @param schema the schema locations      */
 specifier|public
 name|void
 name|setSchemaLocations
@@ -1412,7 +1412,7 @@ return|return
 name|entityProviders
 return|;
 block|}
-comment|/**      * Add custom JAX-RS providers to the list of providers      *       * @param entityProviders the entityProviders      */
+comment|/**      * Add custom JAX-RS providers to the list of providers      *      * @param entityProviders the entityProviders      */
 specifier|public
 name|void
 name|setProviders
@@ -1454,7 +1454,7 @@ name|newBeans
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add custom JAX-RS provider to the list of providers      *       * @param provider the custom provider.      */
+comment|/**      * Add custom JAX-RS provider to the list of providers      *      * @param provider the custom provider.      */
 specifier|public
 name|void
 name|setProvider
@@ -1923,7 +1923,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the description of root resources.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations.      *         * @param resources root resource descriptions       */
+comment|/**      * Sets the description of root resources.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations.      *      * @param resources root resource descriptions      */
 specifier|public
 name|void
 name|setModelBeans
@@ -1944,7 +1944,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the description of root resources.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations.      *         * @param resources root resource descriptions       */
+comment|/**      * Sets the description of root resources.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations.      *      * @param resources root resource descriptions      */
 specifier|public
 name|void
 name|setModelBeans
@@ -1964,7 +1964,7 @@ name|resources
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the description of root resources with the list of concrete classes.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations. Some models may only reference      * interfaces, thus providing a list of concrete classes that will be      * instantiated is required in such cases.      *         * @param resources root resource descriptions.      * @param sClasses concrete root resource classes      */
+comment|/**      * Sets the description of root resources with the list of concrete classes.      * Can be used to 'attach' the JAX-RS like description to the application      * classes without adding JAX-RS annotations. Some models may only reference      * interfaces, thus providing a list of concrete classes that will be      * instantiated is required in such cases.      *      * @param resources root resource descriptions.      * @param sClasses concrete root resource classes      */
 specifier|public
 name|void
 name|setModelBeansWithServiceClass
@@ -1993,7 +1993,7 @@ name|sClasses
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets a reference to the external user model,       * Example: "classpath:/model/resources.xml"      *       * @param modelRef the reference to the external model resource.      */
+comment|/**      * Sets a reference to the external user model,      * Example: "classpath:/model/resources.xml"      *      * @param modelRef the reference to the external model resource.      */
 specifier|public
 name|void
 name|setModelRef
@@ -2034,7 +2034,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Sets a reference to the external user model,       * Example: "classpath:/model/resources.xml".      * Some models may only reference interfaces, thus providing a list of       * concrete classes that will be instantiated is required in such cases.      *       * @param modelRef the reference to the external model resource.      * @param sClasses concrete root resource classes      */
+comment|/**      * Sets a reference to the external user model,      * Example: "classpath:/model/resources.xml".      * Some models may only reference interfaces, thus providing a list of      * concrete classes that will be instantiated is required in such cases.      *      * @param modelRef the reference to the external model resource.      * @param sClasses concrete root resource classes      */
 specifier|public
 name|void
 name|setModelRefWithServiceClass

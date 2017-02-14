@@ -387,7 +387,7 @@ name|KEY_HTTP_CONNECTION
 init|=
 literal|"http.connection"
 decl_stmt|;
-comment|/**      * Each header value is added as a separate HTTP header, example, given A header with 'a' and 'b'      * values, two A headers will be added as opposed to a single A header with the "a,b" value.       */
+comment|/**      * Each header value is added as a separate HTTP header, example, given A header with 'a' and 'b'      * values, two A headers will be added as opposed to a single A header with the "a,b" value.      */
 specifier|public
 specifier|static
 specifier|final
@@ -786,7 +786,7 @@ return|return
 name|headers
 return|;
 block|}
-comment|/**      * Write cookie header from given session cookies      *       * @param sessionCookies      */
+comment|/**      * Write cookie header from given session cookies      *      * @param sessionCookies      */
 specifier|public
 name|void
 name|writeSessionCookies
@@ -904,7 +904,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the ClientPolicy that is set on this conduit by configuration.      *       * REVISIT: A cookie is set statically from configuration?       */
+comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the ClientPolicy that is set on this conduit by configuration.      *      * REVISIT: A cookie is set statically from configuration?      */
 name|void
 name|setFromClientPolicy
 parameter_list|(
@@ -1434,7 +1434,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * While extracting the Message.PROTOCOL_HEADERS property from the Message,      * this call ensures that the Message.PROTOCOL_HEADERS property is      * set on the Message. If it is not set, an empty map is placed there, and      * then returned.      *       * @param message The outbound message      * @return The PROTOCOL_HEADERS map      */
+comment|/**      * While extracting the Message.PROTOCOL_HEADERS property from the Message,      * this call ensures that the Message.PROTOCOL_HEADERS property is      * set on the Message. If it is not set, an empty map is placed there, and      * then returned.      *      * @param message The outbound message      * @return The PROTOCOL_HEADERS map      */
 specifier|public
 specifier|static
 name|Map
@@ -1677,7 +1677,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * This procedure logs the PROTOCOL_HEADERS from the       * Message at the specified logging level.      *       * @param logger     The Logger to log to.      * @param level   The Logging Level.      * @param headers The Message protocol headers.      */
+comment|/**      * This procedure logs the PROTOCOL_HEADERS from the      * Message at the specified logging level.      *      * @param logger     The Logger to log to.      * @param level   The Logging Level.      * @param headers The Message protocol headers.      */
 specifier|static
 name|void
 name|logProtocolHeaders
@@ -1806,7 +1806,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Set content type and protocol headers (Message.PROTOCOL_HEADERS) headers into the URL      * connection.       * Note, this does not mean they immediately get written to the output      * stream or the wire. They just just get set on the HTTP request.      *       * @param connection       * @throws IOException      */
+comment|/**      * Set content type and protocol headers (Message.PROTOCOL_HEADERS) headers into the URL      * connection.      * Note, this does not mean they immediately get written to the output      * stream or the wire. They just just get set on the HTTP request.      *      * @param connection      * @throws IOException      */
 specifier|public
 name|void
 name|setProtocolHeadersInConnection
@@ -2371,7 +2371,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Copy the request headers into the message.      *       * @param message the current message      * @param headers the current set of headers      */
+comment|/**      * Copy the request headers into the message.      *      * @param message the current message      * @param headers the current set of headers      */
 specifier|protected
 name|void
 name|copyFromRequest
@@ -2739,7 +2739,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Copy the response headers into the response.      *       * @param message the current message      * @param headers the current set of headers      */
+comment|/**      * Copy the response headers into the response.      *      * @param message the current message      * @param headers the current set of headers      */
 specifier|protected
 name|void
 name|copyToResponse

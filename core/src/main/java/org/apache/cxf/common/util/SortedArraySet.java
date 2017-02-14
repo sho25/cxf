@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class implements most of the<tt>Set</tt> interface, backed by a   * sorted Array.  This makes iterators very fast, lookups are log(n), but  * adds are fairly expensive.  *   * This class is also threadsafe, but without synchronizations.   Lookups  * and iterators will iterate over the state of the Set when the iterator  * was created.  *  * If no data is stored in the Set, it uses very little memory.  The backing  * array is created on demand.  *   * This class is primarly useful for stuff that will be setup at startup, but  * then iterated over MANY times during runtime.  *     * @param<T>  */
+comment|/**  * This class implements most of the<tt>Set</tt> interface, backed by a  * sorted Array.  This makes iterators very fast, lookups are log(n), but  * adds are fairly expensive.  *  * This class is also threadsafe, but without synchronizations.   Lookups  * and iterators will iterate over the state of the Set when the iterator  * was created.  *  * If no data is stored in the Set, it uses very little memory.  The backing  * array is created on demand.  *  * This class is primarly useful for stuff that will be setup at startup, but  * then iterated over MANY times during runtime.  *  * @param<T>  */
 end_comment
 
 begin_class

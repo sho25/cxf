@@ -1565,7 +1565,7 @@ return|;
 end_return
 
 begin_function
-unit|}          public
+unit|}      public
 specifier|static
 name|Resource
 name|findResource

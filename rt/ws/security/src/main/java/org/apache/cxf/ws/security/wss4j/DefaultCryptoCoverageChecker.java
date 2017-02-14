@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This utility extends the CryptoCoverageChecker to provide an easy way to check to see  * if the SOAP (1.1 + 1.2) Body was signed and/or encrypted, if the Timestamp was signed,  * if the WS-Addressing ReplyTo and FaultTo headers were signed, and if the UsernameToken  * was encrypted.  *   * The default configuration is that the SOAP Body, Timestamp must be signed, WS-Addressing  * ReplyTo and FaultTo headers must be signed, and a WSS UsernameToken must be encrypted  * (if they exist in the message payload).  */
+comment|/**  * This utility extends the CryptoCoverageChecker to provide an easy way to check to see  * if the SOAP (1.1 + 1.2) Body was signed and/or encrypted, if the Timestamp was signed,  * if the WS-Addressing ReplyTo and FaultTo headers were signed, and if the UsernameToken  * was encrypted.  *  * The default configuration is that the SOAP Body, Timestamp must be signed, WS-Addressing  * ReplyTo and FaultTo headers must be signed, and a WSS UsernameToken must be encrypted  * (if they exist in the message payload).  */
 end_comment
 
 begin_class

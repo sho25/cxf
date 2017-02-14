@@ -358,7 +358,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An implementation of the RequestCollectionOperation interface. It is composed of the different   * Operation implementations  */
+comment|/**  * An implementation of the RequestCollectionOperation interface. It is composed of the different  * Operation implementations  */
 end_comment
 
 begin_class

@@ -354,7 +354,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A default implementation to create a JWTClaims object. The Subject name is the name  * of the current principal.   */
+comment|/**  * A default implementation to create a JWTClaims object. The Subject name is the name  * of the current principal.  */
 end_comment
 
 begin_class

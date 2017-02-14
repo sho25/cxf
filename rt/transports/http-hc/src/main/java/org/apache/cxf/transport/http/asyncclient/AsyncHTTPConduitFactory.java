@@ -630,7 +630,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -2129,7 +2129,7 @@ parameter_list|(
 name|HttpAsyncClientBuilder
 name|httpAsyncClientBuilder
 parameter_list|)
-block|{         }
+block|{     }
 specifier|public
 name|CloseableHttpAsyncClient
 name|createClient

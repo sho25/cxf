@@ -110,7 +110,7 @@ decl_stmt|;
 specifier|public
 name|Tags
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Tags
 parameter_list|(

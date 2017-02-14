@@ -675,7 +675,7 @@ return|return
 literal|300000L
 return|;
 block|}
-comment|/**      * Get a ReplayCache instance. It first checks to see whether caching has been explicitly       * enabled or disabled via the booleanKey argument. If it has been set to false then no      * replay caching is done (for this booleanKey). If it has not been specified, then caching      * is enabled only if we are not the initiator of the exchange. If it has been specified, then      * caching is enabled.      *       * It tries to get an instance of ReplayCache via the instanceKey argument from a       * contextual property, and failing that the message exchange. If it can't find any, then it      * defaults to using an EH-Cache instance and stores that on the message exchange.      */
+comment|/**      * Get a ReplayCache instance. It first checks to see whether caching has been explicitly      * enabled or disabled via the booleanKey argument. If it has been set to false then no      * replay caching is done (for this booleanKey). If it has not been specified, then caching      * is enabled only if we are not the initiator of the exchange. If it has been specified, then      * caching is enabled.      *      * It tries to get an instance of ReplayCache via the instanceKey argument from a      * contextual property, and failing that the message exchange. If it can't find any, then it      * defaults to using an EH-Cache instance and stores that on the message exchange.      */
 specifier|public
 specifier|static
 name|ReplayCache
@@ -1318,7 +1318,7 @@ name|getId
 argument_list|()
 return|;
 block|}
-comment|/**      * Create a SoapFault from a WSSecurityException, following the SOAP Message Security      * 1.1 specification, chapter 12 "Error Handling".      *       * When the Soap version is 1.1 then set the Fault/Code/Value from the fault code      * specified in the WSSecurityException (if it exists).      *       * Otherwise set the Fault/Code/Value to env:Sender and the Fault/Code/Subcode/Value      * as the fault code from the WSSecurityException.      */
+comment|/**      * Create a SoapFault from a WSSecurityException, following the SOAP Message Security      * 1.1 specification, chapter 12 "Error Handling".      *      * When the Soap version is 1.1 then set the Fault/Code/Value from the fault code      * specified in the WSSecurityException (if it exists).      *      * Otherwise set the Fault/Code/Value to env:Sender and the Fault/Code/Subcode/Value      * as the fault code from the WSSecurityException.      */
 specifier|public
 specifier|static
 name|SoapFault

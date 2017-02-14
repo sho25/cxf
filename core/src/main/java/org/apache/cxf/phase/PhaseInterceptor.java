@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A phase interceptor is an intercetor that participates in a   * PhaseInterceptorChain.  * The phase property controls the phase in which the interceptor is placed.  * The before and after properties allow for fine grained control over where   * the phase the interceptor is placed. They specify the IDs of the   * interceptors that must be placed before and after the interceptor.  *  * @see org.apache.cxf.phase.PhaseInterceptorChain  */
+comment|/**  * A phase interceptor is an intercetor that participates in a  * PhaseInterceptorChain.  * The phase property controls the phase in which the interceptor is placed.  * The before and after properties allow for fine grained control over where  * the phase the interceptor is placed. They specify the IDs of the  * interceptors that must be placed before and after the interceptor.  *  * @see org.apache.cxf.phase.PhaseInterceptorChain  */
 end_comment
 
 begin_interface
@@ -82,7 +82,7 @@ argument_list|<
 name|T
 argument_list|>
 block|{
-comment|/**      * Returns a set containing the IDs of the interceptors that should be       * executed before this interceptor. This interceptor will be placed       * in the chain after the interceptors in the set.      * @return the IDs of the interceptors      */
+comment|/**      * Returns a set containing the IDs of the interceptors that should be      * executed before this interceptor. This interceptor will be placed      * in the chain after the interceptors in the set.      * @return the IDs of the interceptors      */
 name|Set
 argument_list|<
 name|String
@@ -90,7 +90,7 @@ argument_list|>
 name|getAfter
 parameter_list|()
 function_decl|;
-comment|/**      * Returns a set containing the IDs of the interceptors that should be       * executed after this interceptor. This interceptor will be placed in       * the inteceptor chain before the interceptors in the set.      * @return the ids of the interceptors       */
+comment|/**      * Returns a set containing the IDs of the interceptors that should be      * executed after this interceptor. This interceptor will be placed in      * the inteceptor chain before the interceptors in the set.      * @return the ids of the interceptors      */
 name|Set
 argument_list|<
 name|String
@@ -108,7 +108,7 @@ name|String
 name|getPhase
 parameter_list|()
 function_decl|;
-comment|/**      * Returns a collection of Interceptors that should be added to the chain       * whenever this interceptor is added.   May return null.      * @return the collection of interceptors      */
+comment|/**      * Returns a collection of Interceptors that should be added to the chain      * whenever this interceptor is added.   May return null.      * @return the collection of interceptors      */
 name|Collection
 argument_list|<
 name|PhaseInterceptor

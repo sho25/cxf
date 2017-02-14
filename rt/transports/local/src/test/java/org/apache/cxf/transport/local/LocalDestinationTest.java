@@ -148,7 +148,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -158,7 +158,7 @@ name|LocalDestinationTest
 extends|extends
 name|Assert
 block|{
-comment|/**      * Tests if the status code is available after closing the destination so that it can be logged.       * Note that this test verifies the current approach of setting the status code if it is not set earlier.      *       * @throws Exception      */
+comment|/**      * Tests if the status code is available after closing the destination so that it can be logged.      * Note that this test verifies the current approach of setting the status code if it is not set earlier.      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

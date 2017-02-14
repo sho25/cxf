@@ -46,7 +46,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interface defines a pluggable way of defining a realm for the current request.    */
+comment|/**  * This interface defines a pluggable way of defining a realm for the current request.  */
 end_comment
 
 begin_interface

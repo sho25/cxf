@@ -202,7 +202,7 @@ import|;
 end_import
 
 begin_comment
-comment|/* Counters are created and managed by CounterRepository   * If a counter which is queried form the counterRepository is not exist,  * the CounterRepository will create a counter and expose it to the JMX  * Because we can get the instance of the counter object,   * it is not need to qurey the counter object from JMX   * */
+comment|/* Counters are created and managed by CounterRepository  * If a counter which is queried form the counterRepository is not exist,  * the CounterRepository will create a counter and expose it to the JMX  * Because we can get the instance of the counter object,  * it is not need to qurey the counter object from JMX  * */
 end_comment
 
 begin_class

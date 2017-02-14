@@ -422,7 +422,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * {@inheritDoc}      *       * @throws XMLStreamException      */
+comment|/**      * {@inheritDoc}      *      * @throws XMLStreamException      */
 specifier|public
 name|boolean
 name|setupValidation
@@ -641,7 +641,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Create woodstox validator for a schema set.      *       * @param schemas      * @return      * @throws XMLStreamException      */
+comment|/**      * Create woodstox validator for a schema set.      *      * @param schemas      * @return      * @throws XMLStreamException      */
 specifier|private
 name|XMLValidationSchema
 name|getValidator

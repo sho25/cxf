@@ -603,7 +603,7 @@ specifier|private
 name|JaxWsImplementorInfo
 name|implInfo
 decl_stmt|;
-comment|/**      * We retrieve the wrapper methods more than once      * while creating an endpoint. So caching the wrapper      * classes saves CPU time.      *       * It would also be good to cache across creations,      * but Method.equals isn't good enough.      */
+comment|/**      * We retrieve the wrapper methods more than once      * while creating an endpoint. So caching the wrapper      * classes saves CPU time.      *      * It would also be good to cache across creations,      * but Method.equals isn't good enough.      */
 specifier|private
 name|Map
 argument_list|<

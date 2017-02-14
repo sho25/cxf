@@ -97,7 +97,7 @@ specifier|private
 name|BundleUtils
 parameter_list|()
 block|{     }
-comment|/**      * Encapsulates the logic related to naming the default resource bundle      * for a class.       *      * @param cls the Class requiring the bundle      * @return an appropriate ResourceBundle name      */
+comment|/**      * Encapsulates the logic related to naming the default resource bundle      * for a class.      *      * @param cls the Class requiring the bundle      * @return an appropriate ResourceBundle name      */
 specifier|public
 specifier|static
 name|String
@@ -122,7 +122,7 @@ operator|+
 name|MESSAGE_BUNDLE
 return|;
 block|}
-comment|/**      * Encapsulates the logic related to naming the resource bundle      * with the given relative name for a class.       *      * @param cls the Class requiring the bundle      * @return an appropriate ResourceBundle name      */
+comment|/**      * Encapsulates the logic related to naming the resource bundle      * with the given relative name for a class.      *      * @param cls the Class requiring the bundle      * @return an appropriate ResourceBundle name      */
 specifier|public
 specifier|static
 name|String
@@ -151,7 +151,7 @@ operator|+
 name|name
 return|;
 block|}
-comment|/**      * Encapsulates the logic related to locating the default resource bundle      * for a class.       *      * @param cls the Class requiring the bundle      * @return an appropriate ResourceBundle      */
+comment|/**      * Encapsulates the logic related to locating the default resource bundle      * for a class.      *      * @param cls the Class requiring the bundle      * @return an appropriate ResourceBundle      */
 specifier|public
 specifier|static
 name|ResourceBundle
@@ -278,7 +278,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Encapsulates the logic related to locating the resource bundle with the given       * relative name for a class.      *      * @param cls the Class requiring the bundle      * @param name the name of the resource      * @return an appropriate ResourceBundle      */
+comment|/**      * Encapsulates the logic related to locating the resource bundle with the given      * relative name for a class.      *      * @param cls the Class requiring the bundle      * @param name the name of the resource      * @return an appropriate ResourceBundle      */
 specifier|public
 specifier|static
 name|ResourceBundle
@@ -416,7 +416,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Encapsulates the logic to format a string based on the key in the resource bundle      *       * @param b Resource bundle to use      * @param key The key in the bundle to lookup      * @param params the params to expand into the string      * @return the formatted string      */
+comment|/**      * Encapsulates the logic to format a string based on the key in the resource bundle      *      * @param b Resource bundle to use      * @param key The key in the bundle to lookup      * @param params the params to expand into the string      * @return the formatted string      */
 specifier|public
 specifier|static
 name|String

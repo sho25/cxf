@@ -215,7 +215,7 @@ specifier|private
 name|ServiceUtils
 parameter_list|()
 block|{     }
-comment|/**      * A short cut method to be able to test for if Schema Validation should be enabled      * for IN or OUT without having to check BOTH and IN or OUT.      *       * @param message      * @param type      */
+comment|/**      * A short cut method to be able to test for if Schema Validation should be enabled      * for IN or OUT without having to check BOTH and IN or OUT.      *      * @param message      * @param type      */
 specifier|public
 specifier|static
 name|boolean
@@ -355,7 +355,7 @@ argument_list|)
 operator|)
 return|;
 block|}
-comment|/**      * A convenience method to check for schema validation config in the message context, and then in the service model.      * Does not modify the Message context (other than what is done in the getContextualProperty itself)      *       * @param message      */
+comment|/**      * A convenience method to check for schema validation config in the message context, and then in the service model.      * Does not modify the Message context (other than what is done in the getContextualProperty itself)      *      * @param message      */
 specifier|public
 specifier|static
 name|SchemaValidationType
@@ -715,7 +715,7 @@ operator|.
 name|NONE
 return|;
 block|}
-comment|/**      * Generates a suitable service name from a given class. The returned name      * is the simple name of the class, i.e. without the package name.      *       * @param clazz the class.      * @return the name.      */
+comment|/**      * Generates a suitable service name from a given class. The returned name      * is the simple name of the class, i.e. without the package name.      *      * @param clazz the class.      * @return the name.      */
 specifier|public
 specifier|static
 name|String
@@ -980,7 +980,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Generates the name of a XML namespace from a given class name and      * protocol. The returned namespace will take the form      *<code>protocol://domain</code>, where<code>protocol</code> is the      * given protocol, and<code>domain</code> the inversed package name of      * the given class name.<p/> For instance, if the given class name is      *<code>org.codehaus.xfire.services.Echo</code>, and the protocol is      *<code>http</code>, the resulting namespace would be      *<code>http://services.xfire.codehaus.org</code>.      *       * @param className the class name      * @param protocol the protocol (eg.<code>http</code>)      * @return the namespace      */
+comment|/**      * Generates the name of a XML namespace from a given class name and      * protocol. The returned namespace will take the form      *<code>protocol://domain</code>, where<code>protocol</code> is the      * given protocol, and<code>domain</code> the inversed package name of      * the given class name.<p/> For instance, if the given class name is      *<code>org.codehaus.xfire.services.Echo</code>, and the protocol is      *<code>http</code>, the resulting namespace would be      *<code>http://services.xfire.codehaus.org</code>.      *      * @param className the class name      * @param protocol the protocol (eg.<code>http</code>)      * @return the namespace      */
 specifier|public
 specifier|static
 name|String
@@ -1160,7 +1160,7 @@ operator|+
 literal|"/"
 return|;
 block|}
-comment|/**      * Method makePackageName      *       * @param namespace      */
+comment|/**      * Method makePackageName      *      * @param namespace      */
 specifier|public
 specifier|static
 name|String
@@ -1505,7 +1505,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Massage<tt>word</tt> into a form suitable for use in a Java package      * name. Append it to the target string buffer with a<tt>.</tt> delimiter      * iff<tt>word</tt> is not the first word in the package name.      *       * @param sb the buffer to append to      * @param word the word to append      * @param firstWord a flag indicating whether this is the first word      */
+comment|/**      * Massage<tt>word</tt> into a form suitable for use in a Java package      * name. Append it to the target string buffer with a<tt>.</tt> delimiter      * iff<tt>word</tt> is not the first word in the package name.      *      * @param sb the buffer to append to      * @param word the word to append      * @param firstWord a flag indicating whether this is the first word      */
 specifier|private
 specifier|static
 name|void

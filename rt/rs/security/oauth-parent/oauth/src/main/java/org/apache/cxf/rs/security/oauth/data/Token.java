@@ -229,7 +229,7 @@ operator|=
 name|scopes
 expr_stmt|;
 block|}
-comment|/**      * Sets a subject capturing the login name       * the end user used to login to the resource server      * when authorizing a given client request      * @param subject      */
+comment|/**      * Sets a subject capturing the login name      * the end user used to login to the resource server      * when authorizing a given client request      * @param subject      */
 specifier|public
 name|void
 name|setSubject
@@ -245,7 +245,7 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
-comment|/**      * Returns a subject capturing the login name       * the end user used to login to the resource server      * when authorizing a given client request      * @return UserSubject      */
+comment|/**      * Returns a subject capturing the login name      * the end user used to login to the resource server      * when authorizing a given client request      * @return UserSubject      */
 specifier|public
 name|UserSubject
 name|getSubject

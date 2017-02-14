@@ -266,8 +266,8 @@ block|}
 specifier|private
 name|RMUtils
 parameter_list|()
-block|{             }
-comment|/**      * Get the factory for the internal representation of WS-RM data (WS-ReliableMessaging 1.1).      *       * @return factory      */
+block|{     }
+comment|/**      * Get the factory for the internal representation of WS-RM data (WS-ReliableMessaging 1.1).      *      * @return factory      */
 specifier|public
 specifier|static
 name|org
@@ -290,7 +290,7 @@ return|return
 name|WSRM_FACTORY
 return|;
 block|}
-comment|/**      * Get the factory for WS-ReliableMessaging 1.0 using the standard 200408 WS-Addressing namespace.      *       * @return factory      */
+comment|/**      * Get the factory for WS-ReliableMessaging 1.0 using the standard 200408 WS-Addressing namespace.      *      * @return factory      */
 specifier|public
 specifier|static
 name|org
@@ -313,7 +313,7 @@ return|return
 name|WSRM200502_FACTORY
 return|;
 block|}
-comment|/**      * Get the factory for WS-ReliableMessaging 1.0 using the current 200508 WS-Addressing namespace.      *       * @return factory      */
+comment|/**      * Get the factory for WS-ReliableMessaging 1.0 using the current 200508 WS-Addressing namespace.      *      * @return factory      */
 specifier|public
 specifier|static
 name|org
@@ -336,7 +336,7 @@ return|return
 name|WSRM200502_WSA200508_FACTORY
 return|;
 block|}
-comment|/**      * Get the constants for a particular WS-ReliableMessaging namespace.      *       * @param uri      * @return constants      */
+comment|/**      * Get the constants for a particular WS-ReliableMessaging namespace.      *      * @param uri      * @return constants      */
 specifier|public
 specifier|static
 name|RMConstants
@@ -1086,7 +1086,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Utility method to compare two (possibly-null) String values.      *       * @param aval      * @param bval      * @return<code>true</code> if equal,<code>false</code> if not      */
+comment|/**      * Utility method to compare two (possibly-null) String values.      *      * @param aval      * @param bval      * @return<code>true</code> if equal,<code>false</code> if not      */
 specifier|public
 specifier|static
 name|boolean
@@ -1124,7 +1124,7 @@ name|bval
 return|;
 block|}
 block|}
-comment|/**      * Utility method to compare two (possibly-null) Long values.      *       * @param aval      * @param bval      * @return<code>true</code> if equal,<code>false</code> if not      */
+comment|/**      * Utility method to compare two (possibly-null) Long values.      *      * @param aval      * @param bval      * @return<code>true</code> if equal,<code>false</code> if not      */
 specifier|public
 specifier|static
 name|boolean

@@ -244,7 +244,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1656,7 +1656,7 @@ parameter_list|(
 name|RMProperties
 name|rmps
 parameter_list|)
-block|{              }
+block|{      }
 block|}
 end_class
 

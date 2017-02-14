@@ -6469,7 +6469,7 @@ name|AbstractTestExceptionMapper
 argument_list|<
 name|RuntimeException
 argument_list|>
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 class|class
@@ -6479,7 +6479,7 @@ name|AbstractTestExceptionMapper
 argument_list|<
 name|WebApplicationException
 argument_list|>
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 class|class
@@ -7307,7 +7307,7 @@ class|class
 name|CustomBooleanReader2
 extends|extends
 name|CustomBooleanReader
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

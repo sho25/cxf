@@ -1417,7 +1417,7 @@ name|required
 argument_list|()
 condition|)
 block|{
-comment|/*              * Return default value for a missing optional part               */
+comment|/*              * Return default value for a missing optional part              */
 name|Object
 name|defaultValue
 init|=

@@ -40,7 +40,7 @@ specifier|protected
 name|QName
 name|qname
 decl_stmt|;
-comment|/**      * Gets the value of the qname property.      *       * @return      *     possible object is      *     {@link QName }      *           */
+comment|/**      * Gets the value of the qname property.      *      * @return      *     possible object is      *     {@link QName }      *      */
 specifier|public
 name|QName
 name|getQName
@@ -50,7 +50,7 @@ return|return
 name|qname
 return|;
 block|}
-comment|/**      * Sets the value of the name property.      *       * @param value      *     allowed object is      *     {@link QName }      *           */
+comment|/**      * Sets the value of the name property.      *      * @param value      *     allowed object is      *     {@link QName }      *      */
 specifier|public
 name|void
 name|setQName

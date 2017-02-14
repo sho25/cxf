@@ -130,7 +130,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base class for tests that use a Spring bean specification to load up components for testing.  * Unlike the classes that come with Spring, it doesn't drag in the JUnit 3 hierarchy, and it   * doesn't inject into the test itself from the beans.  */
+comment|/**  * Base class for tests that use a Spring bean specification to load up components for testing.  * Unlike the classes that come with Spring, it doesn't drag in the JUnit 3 hierarchy, and it  * doesn't inject into the test itself from the beans.  */
 end_comment
 
 begin_class
@@ -163,7 +163,7 @@ name|AbstractCXFSpringTest
 operator|.
 name|class
 decl_stmt|;
-comment|/**      * Load up all the beans from the XML files returned by the getConfigLocations method.      * @throws Exception       */
+comment|/**      * Load up all the beans from the XML files returned by the getConfigLocations method.      * @throws Exception      */
 specifier|protected
 name|AbstractCXFSpringTest
 parameter_list|()
@@ -306,7 +306,7 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-comment|/**      * Return an array of resource specifications.       * @see org.springframework.core.io.DefaultResourceLoader for the syntax.      * @return array of resource specifications.      */
+comment|/**      * Return an array of resource specifications.      * @see org.springframework.core.io.DefaultResourceLoader for the syntax.      * @return array of resource specifications.      */
 specifier|protected
 specifier|abstract
 name|String
@@ -323,7 +323,7 @@ return|return
 name|applicationContext
 return|;
 block|}
-comment|/**      * subclasses may override this.      * @param context      * @throws Exception       */
+comment|/**      * subclasses may override this.      * @param context      * @throws Exception      */
 specifier|protected
 name|void
 name|additionalSpringConfiguration
@@ -336,7 +336,7 @@ name|Exception
 block|{
 comment|//default - do nothing
 block|}
-comment|/**      * Convenience method for the common case of retrieving a bean from the context.      * One would expect Spring to have this.       * @param<T> Type of the bean object.      * @param type Type of the bean object.      * @param beanName ID of the bean.      * @return The Bean.      */
+comment|/**      * Convenience method for the common case of retrieving a bean from the context.      * One would expect Spring to have this.      * @param<T> Type of the bean object.      * @param type Type of the bean object.      * @param beanName ID of the bean.      * @return The Bean.      */
 specifier|protected
 parameter_list|<
 name|T

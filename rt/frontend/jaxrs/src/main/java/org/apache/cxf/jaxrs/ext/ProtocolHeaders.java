@@ -69,7 +69,7 @@ name|String
 name|name
 parameter_list|)
 function_decl|;
-comment|/**      * Get the values of request headers.       * @return a read-only map of header names and values.      */
+comment|/**      * Get the values of request headers.      * @return a read-only map of header names and values.      */
 name|MultivaluedMap
 argument_list|<
 name|String

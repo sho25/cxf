@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ClientIdProvider is responsible for providing a mapping between  * the authenticated client and its id    */
+comment|/**  * ClientIdProvider is responsible for providing a mapping between  * the authenticated client and its id  */
 end_comment
 
 begin_interface
@@ -46,7 +46,7 @@ specifier|public
 interface|interface
 name|ClientIdProvider
 block|{
-comment|/**      * Get a client id      *       * @param mc the {@link MessageContext} of this request      * @return the client id      */
+comment|/**      * Get a client id      *      * @param mc the {@link MessageContext} of this request      * @return the client id      */
 name|String
 name|getClientId
 parameter_list|(

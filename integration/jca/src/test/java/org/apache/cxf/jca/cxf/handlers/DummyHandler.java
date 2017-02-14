@@ -121,7 +121,7 @@ parameter_list|(
 name|CXFInvocationHandler
 name|next
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|CXFInvocationHandler
 name|getNext

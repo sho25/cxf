@@ -517,7 +517,7 @@ operator|.
 name|begin
 argument_list|()
 expr_stmt|;
-comment|/*                      * Create session inside transaction to give it the                       * chance to enlist itself as a resource                      */
+comment|/*                      * Create session inside transaction to give it the                      * chance to enlist itself as a resource                      */
 name|Session
 name|session
 init|=

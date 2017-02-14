@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility class loader that can be used to create proxies in cases where  * the the client classes are not visible to the loader of the  * service class.      */
+comment|/**  * Utility class loader that can be used to create proxies in cases where  * the the client classes are not visible to the loader of the  * service class.  */
 end_comment
 
 begin_class

@@ -511,7 +511,7 @@ return|return
 name|signatureCrypto
 return|;
 block|}
-comment|/**      * Set the CallbackHandler object.       * @param callbackHandler the CallbackHandler object.       */
+comment|/**      * Set the CallbackHandler object.      * @param callbackHandler the CallbackHandler object.      */
 specifier|public
 name|void
 name|setCallbackHandler
@@ -549,7 +549,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set the String corresponding to the CallbackHandler class.       * @param callbackHandlerClass the String corresponding to the CallbackHandler class.       */
+comment|/**      * Set the String corresponding to the CallbackHandler class.      * @param callbackHandlerClass the String corresponding to the CallbackHandler class.      */
 specifier|public
 name|void
 name|setCallbackHandlerClass

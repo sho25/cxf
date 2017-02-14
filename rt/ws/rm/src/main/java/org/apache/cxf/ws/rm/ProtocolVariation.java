@@ -144,7 +144,7 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Get the information for a supported version of WS-ReliableMessaging and WS-Addressing. If the WS-A      * namespace is not specified this just returns the first match on the WS-RM namespace, which should      * always be the default.      *       * @param wsrm WS-RM namespace URI      * @param wsa WS-A namespace URI (<code>null</code> if not specified)      * @return variant (<code>null</code> if not a supported version)      */
+comment|/**      * Get the information for a supported version of WS-ReliableMessaging and WS-Addressing. If the WS-A      * namespace is not specified this just returns the first match on the WS-RM namespace, which should      * always be the default.      *      * @param wsrm WS-RM namespace URI      * @param wsa WS-A namespace URI (<code>null</code> if not specified)      * @return variant (<code>null</code> if not a supported version)      */
 end_comment
 
 begin_function

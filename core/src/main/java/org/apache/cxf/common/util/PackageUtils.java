@@ -70,7 +70,7 @@ block|{
 specifier|private
 name|PackageUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|static
 name|String
 name|getPackageName

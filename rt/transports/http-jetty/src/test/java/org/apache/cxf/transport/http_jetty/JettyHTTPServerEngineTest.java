@@ -688,7 +688,7 @@ name|bus
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Check that names of threads serving requests for instances of JettyHTTPServerEngine       * can be set with user specified name.      */
+comment|/**      * Check that names of threads serving requests for instances of JettyHTTPServerEngine      * can be set with user specified name.      */
 annotation|@
 name|Test
 specifier|public

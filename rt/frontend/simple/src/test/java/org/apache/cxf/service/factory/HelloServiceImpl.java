@@ -69,7 +69,7 @@ specifier|public
 name|void
 name|ping
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|String
 name|sayHello

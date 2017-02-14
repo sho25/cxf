@@ -119,7 +119,7 @@ name|X509KeyManager
 name|keyManager
 decl_stmt|;
 comment|/* ------------------------------------------------------------ */
-comment|/**      * Construct KeyManager instance      *       * @param keyAlias Alias of the key to be selected      * @param keyManager Instance of KeyManager to be wrapped      * @throws Exception      */
+comment|/**      * Construct KeyManager instance      *      * @param keyAlias Alias of the key to be selected      * @param keyManager Instance of KeyManager to be wrapped      * @throws Exception      */
 specifier|public
 name|AliasedX509ExtendedKeyManager
 parameter_list|(

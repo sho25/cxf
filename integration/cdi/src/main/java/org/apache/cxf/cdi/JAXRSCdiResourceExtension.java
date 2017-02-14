@@ -406,7 +406,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Apache CXF portable CDI extension to support initialization of JAX-RS resources.    */
+comment|/**  * Apache CXF portable CDI extension to support initialization of JAX-RS resources.  */
 end_comment
 
 begin_class
@@ -1221,7 +1221,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Releases created CreationalContext instances       */
+comment|/**      * Releases created CreationalContext instances      */
 specifier|public
 name|void
 name|release
@@ -2001,7 +2001,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Creates and collects the CreationalContext instances for future releasing.       * @param beanManager bean manager instance      * @param bean bean instance to create CreationalContext for      * @return CreationalContext instance      */
+comment|/**      * Creates and collects the CreationalContext instances for future releasing.      * @param beanManager bean manager instance      * @param bean bean instance to create CreationalContext for      * @return CreationalContext instance      */
 specifier|private
 parameter_list|<
 name|T

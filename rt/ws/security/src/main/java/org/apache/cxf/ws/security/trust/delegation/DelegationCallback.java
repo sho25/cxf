@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This Callback class provides a pluggable way of performing delegation. A CallbackHandler  * instance will be supplied with this class, which contains a reference to the current  * Message. The CallbackHandler implementation is required to set the token Element to be  * sent in the request.   */
+comment|/**  * This Callback class provides a pluggable way of performing delegation. A CallbackHandler  * instance will be supplied with this class, which contains a reference to the current  * Message. The CallbackHandler implementation is required to set the token Element to be  * sent in the request.  */
 end_comment
 
 begin_class

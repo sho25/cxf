@@ -201,7 +201,7 @@ parameter_list|()
 block|{
 comment|//utility class
 block|}
-comment|/**      * Create a unique namespace uri/prefix combination.      *       * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      */
+comment|/**      * Create a unique namespace uri/prefix combination.      *      * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      */
 specifier|public
 specifier|static
 name|String
@@ -315,7 +315,7 @@ name|prefixes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create a unique namespace uri/prefix combination.      *       * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
+comment|/**      * Create a unique namespace uri/prefix combination.      *      * @param nsUri      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|String
@@ -484,7 +484,7 @@ return|return
 name|prefix
 return|;
 block|}
-comment|/**      * Generates the name of a XML namespace from a given class name and      * protocol. The returned namespace will take the form      *<code>protocol://domain</code>, where<code>protocol</code> is the      * given protocol, and<code>domain</code> the inversed package name of      * the given class name.<p/> For instance, if the given class name is      *<code>org.codehaus.xfire.services.Echo</code>, and the protocol is      *<code>http</code>, the resulting namespace would be      *<code>http://services.xfire.codehaus.org</code>.      *       * @param className the class name      * @param protocol the protocol (eg.<code>http</code>)      * @return the namespace      */
+comment|/**      * Generates the name of a XML namespace from a given class name and      * protocol. The returned namespace will take the form      *<code>protocol://domain</code>, where<code>protocol</code> is the      * given protocol, and<code>domain</code> the inversed package name of      * the given class name.<p/> For instance, if the given class name is      *<code>org.codehaus.xfire.services.Echo</code>, and the protocol is      *<code>http</code>, the resulting namespace would be      *<code>http://services.xfire.codehaus.org</code>.      *      * @param className the class name      * @param protocol the protocol (eg.<code>http</code>)      * @return the namespace      */
 specifier|public
 specifier|static
 name|String
@@ -662,7 +662,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Method makePackageName      *       * @param namespace      * @return      */
+comment|/**      * Method makePackageName      *      * @param namespace      * @return      */
 specifier|public
 specifier|static
 name|String
@@ -1007,7 +1007,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Massage<tt>word</tt> into a form suitable for use in a Java package      * name. Append it to the target string buffer with a<tt>.</tt> delimiter      * iff<tt>word</tt> is not the first word in the package name.      *       * @param sb the buffer to append to      * @param word the word to append      * @param firstWord a flag indicating whether this is the first word      */
+comment|/**      * Massage<tt>word</tt> into a form suitable for use in a Java package      * name. Append it to the target string buffer with a<tt>.</tt> delimiter      * iff<tt>word</tt> is not the first word in the package name.      *      * @param sb the buffer to append to      * @param word the word to append      * @param firstWord a flag indicating whether this is the first word      */
 specifier|private
 specifier|static
 name|void
@@ -1159,7 +1159,7 @@ name|word
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Reads a QName from the element text. Reader must be positioned at the      * start tag.      *       * @param reader      * @return      * @throws XMLStreamException      */
+comment|/**      * Reads a QName from the element text. Reader must be positioned at the      * start tag.      *      * @param reader      * @return      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|QName

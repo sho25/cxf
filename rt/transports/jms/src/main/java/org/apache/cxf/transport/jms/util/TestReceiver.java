@@ -144,7 +144,7 @@ specifier|private
 name|boolean
 name|forceMessageIdAsCorrelationId
 decl_stmt|;
-comment|/**      *       * @param connectionFactory      * @param receiveQueueName listen on this queue      * @param forceMessageIdAsCorrelationId force the usage of messageId even if correlationId is set      */
+comment|/**      *      * @param connectionFactory      * @param receiveQueueName listen on this queue      * @param forceMessageIdAsCorrelationId force the usage of messageId even if correlationId is set      */
 specifier|public
 name|TestReceiver
 parameter_list|(

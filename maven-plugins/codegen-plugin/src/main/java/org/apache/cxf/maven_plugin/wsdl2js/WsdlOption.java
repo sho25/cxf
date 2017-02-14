@@ -126,7 +126,7 @@ operator|=
 name|wsdl
 expr_stmt|;
 block|}
-comment|/**      * Maven coordinates       * @return      */
+comment|/**      * Maven coordinates      * @return      */
 specifier|public
 name|WsdlArtifact
 name|getArtifact

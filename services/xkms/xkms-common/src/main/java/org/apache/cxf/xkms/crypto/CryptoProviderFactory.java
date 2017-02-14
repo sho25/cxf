@@ -76,12 +76,12 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Create without fallback crypto       *       * @param cryptoProperties      * @return xkms crypto      */
+comment|/**      * Create without fallback crypto      *      * @param cryptoProperties      * @return xkms crypto      */
 name|Crypto
 name|create
 parameter_list|()
 function_decl|;
-comment|/**      * Create with fallback crypto      *       * @param fallbackCrypto      * @return      */
+comment|/**      * Create with fallback crypto      *      * @param fallbackCrypto      * @return      */
 name|Crypto
 name|create
 parameter_list|(
@@ -89,7 +89,7 @@ name|Crypto
 name|fallbackCrypto
 parameter_list|)
 function_decl|;
-comment|/**      * Create with overridden keystoreProperties to create default Crypto      *       * @param xkmsClient      * @param keystoreProperties      * @return      */
+comment|/**      * Create with overridden keystoreProperties to create default Crypto      *      * @param xkmsClient      * @param keystoreProperties      * @return      */
 name|Crypto
 name|create
 parameter_list|(
@@ -97,7 +97,7 @@ name|String
 name|keystoreProperties
 parameter_list|)
 function_decl|;
-comment|/**      * Create with overridden XKMSPortType and fallbackCrypto      *       * @param xkmsClient      * @param fallbackCrypto      * @return      */
+comment|/**      * Create with overridden XKMSPortType and fallbackCrypto      *      * @param xkmsClient      * @param fallbackCrypto      * @return      */
 name|Crypto
 name|create
 parameter_list|(
@@ -108,7 +108,7 @@ name|Crypto
 name|fallbackCrypto
 parameter_list|)
 function_decl|;
-comment|/**      * Create with overridden XKMSPortType, fallbackCrypto and control of getting X509 from local keystore      *       * @param xkmsClient      * @param fallbackCrypto      * @param allowX509FromJKS      * @return      */
+comment|/**      * Create with overridden XKMSPortType, fallbackCrypto and control of getting X509 from local keystore      *      * @param xkmsClient      * @param fallbackCrypto      * @param allowX509FromJKS      * @return      */
 name|Crypto
 name|create
 parameter_list|(

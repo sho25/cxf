@@ -1719,7 +1719,7 @@ name|type
 argument_list|)
 return|;
 block|}
-comment|/**       * Checks if the specified word is a Java keyword (as defined in JavaUtils).      *       * @param word the word to check.      * @return true if the word is a keyword.      * @see org.apache.cxf.helpers.JavaUtils      */
+comment|/**      * Checks if the specified word is a Java keyword (as defined in JavaUtils).      *      * @param word the word to check.      * @return true if the word is a keyword.      * @see org.apache.cxf.helpers.JavaUtils      */
 specifier|protected
 specifier|static
 name|boolean
@@ -1738,7 +1738,7 @@ name|word
 argument_list|)
 return|;
 block|}
-comment|/**      * Generates a Java package name from a URI according to the      * algorithm outlined in JAXB 2.0.      *       * @param namespaceURI the namespace URI.      * @return the package name.      */
+comment|/**      * Generates a Java package name from a URI according to the      * algorithm outlined in JAXB 2.0.      *      * @param namespaceURI the namespace URI.      * @return the package name.      */
 specifier|public
 specifier|static
 name|String
@@ -1772,7 +1772,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Generates a Java package name from a URI according to the      * algorithm outlined in Appendix D of JAXB (2.0+).      *       * @param uri the namespace URI.      * @return the package name.      */
+comment|/**      * Generates a Java package name from a URI according to the      * algorithm outlined in Appendix D of JAXB (2.0+).      *      * @param uri the namespace URI.      * @return the package name.      */
 specifier|public
 specifier|static
 name|String
@@ -2457,7 +2457,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Converts an XML name to a Java identifier according to the mapping      * algorithm outlined in the JAXB specification      *       * @param name the XML name      * @return the Java identifier      */
+comment|/**      * Converts an XML name to a Java identifier according to the mapping      * algorithm outlined in the JAXB specification      *      * @param name the XML name      * @return the Java identifier      */
 specifier|public
 specifier|static
 name|String
@@ -6757,7 +6757,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/*     // This is the "prototype" for the ASM generated class below     public static class MapNamespacePrefixMapper2          extends org.eclipse.persistence.internal.oxm.record.namespaces.MapNamespacePrefixMapper {                  String nsctxt[];                  public MapNamespacePrefixMapper2(Map<String, String> foo) {             super(foo);         }         public String[] getPreDeclaredNamespaceUris() {             String sup[] = super.getPreDeclaredNamespaceUris();             if (nsctxt == null) {                 return sup;             }             List<String> s = new ArrayList<>(Arrays.asList(sup));             for (int x = 1; x< nsctxt.length; x = x + 2) {                 s.remove(nsctxt[x]);             }             return s.toArray(new String[s.size()]);         }         public void setContextualNamespaceDecls(String f[]) {             nsctxt = f;         }         public String[] getContextualNamespaceDecls() {             return nsctxt;         }     }     */
+comment|/*     // This is the "prototype" for the ASM generated class below     public static class MapNamespacePrefixMapper2         extends org.eclipse.persistence.internal.oxm.record.namespaces.MapNamespacePrefixMapper {          String nsctxt[];          public MapNamespacePrefixMapper2(Map<String, String> foo) {             super(foo);         }         public String[] getPreDeclaredNamespaceUris() {             String sup[] = super.getPreDeclaredNamespaceUris();             if (nsctxt == null) {                 return sup;             }             List<String> s = new ArrayList<>(Arrays.asList(sup));             for (int x = 1; x< nsctxt.length; x = x + 2) {                 s.remove(nsctxt[x]);             }             return s.toArray(new String[s.size()]);         }         public void setContextualNamespaceDecls(String f[]) {             nsctxt = f;         }         public String[] getContextualNamespaceDecls() {             return nsctxt;         }     }     */
 comment|//CHECKSTYLE:OFF
 comment|//bunch of really long ASM based methods that cannot be shortened easily
 specifier|private

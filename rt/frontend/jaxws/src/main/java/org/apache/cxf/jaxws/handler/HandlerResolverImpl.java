@@ -361,7 +361,7 @@ return|return
 name|chain
 return|;
 block|}
-comment|/**      * Obtain handler chain from annotations.      *       * @param obj A endpoint implementation class or a SEI, or a generated      *            service class.      */
+comment|/**      * Obtain handler chain from annotations.      *      * @param obj A endpoint implementation class or a SEI, or a generated      *            service class.      */
 specifier|private
 name|List
 argument_list|<

@@ -1847,7 +1847,7 @@ operator|.
 name|getSoapHttpDocLitPort
 argument_list|()
 decl_stmt|;
-comment|/*         org.apache.cxf.endpoint.Client client = ClientProxy.getClient(port);         HTTPConduit http = (HTTPConduit) client.getConduit();          HTTPClientPolicy httpClientPolicy = new HTTPClientPolicy();         //httpClientPolicy.setAllowChunking(false);            http.setClient(httpClientPolicy);         */
+comment|/*         org.apache.cxf.endpoint.Client client = ClientProxy.getClient(port);         HTTPConduit http = (HTTPConduit) client.getConduit();          HTTPClientPolicy httpClientPolicy = new HTTPClientPolicy();         //httpClientPolicy.setAllowChunking(false);          http.setClient(httpClientPolicy);         */
 return|return
 name|port
 return|;

@@ -59,7 +59,7 @@ decl_stmt|;
 specifier|public
 name|JweEncryptionInput
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JweEncryptionInput
 parameter_list|(

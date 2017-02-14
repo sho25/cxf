@@ -2639,7 +2639,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Construct a token containing the secret to return to the client. The secret is returned in a       * BinarySecretType JAXBElement.      */
+comment|/**      * Construct a token containing the secret to return to the client. The secret is returned in a      * BinarySecretType JAXBElement.      */
 specifier|private
 name|Object
 name|constructSecretToken

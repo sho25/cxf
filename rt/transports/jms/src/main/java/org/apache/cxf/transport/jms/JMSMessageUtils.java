@@ -418,7 +418,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Static util methods for converting cxf to jms messages and vice a versa   */
+comment|/**  * Static util methods for converting cxf to jms messages and vice a versa  */
 end_comment
 
 begin_class
@@ -504,7 +504,7 @@ return|return
 name|inMessage
 return|;
 block|}
-comment|/**      * Extract the payload of an incoming JMS message      *       * @param inMessage       * @param message the incoming message      * @throws UnsupportedEncodingException      * @throws JMSException       */
+comment|/**      * Extract the payload of an incoming JMS message      *      * @param inMessage      * @param message the incoming message      * @throws UnsupportedEncodingException      * @throws JMSException      */
 specifier|public
 specifier|static
 name|void
@@ -1230,7 +1230,7 @@ name|messageProperties
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * @param jmsMessage      * @param inMessage      * @param messagePropertiesType      * @throws UnsupportedEncodingException       * @throws JMSException       */
+comment|/**      * @param jmsMessage      * @param inMessage      * @param messagePropertiesType      * @throws UnsupportedEncodingException      * @throws JMSException      */
 specifier|private
 specifier|static
 name|void
@@ -1690,7 +1690,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Extract the property JMSXUserID or JMS_TIBCO_SENDER from the jms message and       * create a SecurityContext from it.       * For more info see Jira Issue CXF-2055      * {@link https://issues.apache.org/jira/browse/CXF-2055}      *       * @param message jms message to retrieve user information from      * @return SecurityContext that contains the user of the producer of the message as the Principal      * @throws JMSException if something goes wrong      */
+comment|/**      * Extract the property JMSXUserID or JMS_TIBCO_SENDER from the jms message and      * create a SecurityContext from it.      * For more info see Jira Issue CXF-2055      * {@link https://issues.apache.org/jira/browse/CXF-2055}      *      * @param message jms message to retrieve user information from      * @return SecurityContext that contains the user of the producer of the message as the Principal      * @throws JMSException if something goes wrong      */
 specifier|public
 specifier|static
 name|SecurityContext

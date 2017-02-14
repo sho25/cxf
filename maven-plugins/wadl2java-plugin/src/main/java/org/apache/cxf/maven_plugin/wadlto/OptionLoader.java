@@ -392,7 +392,7 @@ return|return
 name|option
 return|;
 block|}
-comment|/**      * Scan files in a directory and generate one wadlOption per file found. Extra args for code generation      * can be defined in a file that is named like the wadl file and ends in -options. Binding files can be      * defined in files named like the wadl file and end in -binding-*.xml      *       * @param wadlBasedir      * @param includes file name patterns to include      * @param excludes file name patterns to exclude      * @param defaultOptions options that should be used if no special file is given      * @return list of one WadlOption object for each wadl found      * @throws MojoExecutionException      */
+comment|/**      * Scan files in a directory and generate one wadlOption per file found. Extra args for code generation      * can be defined in a file that is named like the wadl file and ends in -options. Binding files can be      * defined in files named like the wadl file and end in -binding-*.xml      *      * @param wadlBasedir      * @param includes file name patterns to include      * @param excludes file name patterns to exclude      * @param defaultOptions options that should be used if no special file is given      * @return list of one WadlOption object for each wadl found      * @throws MojoExecutionException      */
 specifier|public
 specifier|static
 name|List

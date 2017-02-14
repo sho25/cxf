@@ -57,7 +57,7 @@ extends|extends
 name|SOAPBody
 extends|,
 name|SOAP12Body
-block|{      }
+block|{  }
 end_interface
 
 end_unit

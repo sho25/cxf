@@ -308,7 +308,7 @@ block|{
 specifier|public
 name|JettySpringTypesFactory
 parameter_list|()
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 name|Map

@@ -586,7 +586,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -596,7 +596,7 @@ name|PolicyBasedWSS4JInInterceptor
 extends|extends
 name|WSS4JInInterceptor
 block|{
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|PolicyBasedWSS4JInInterceptor
 parameter_list|()
@@ -1473,7 +1473,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp       */
+comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp      */
 annotation|@
 name|Override
 specifier|protected
@@ -1539,7 +1539,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token       */
+comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token      */
 annotation|@
 name|Override
 specifier|protected

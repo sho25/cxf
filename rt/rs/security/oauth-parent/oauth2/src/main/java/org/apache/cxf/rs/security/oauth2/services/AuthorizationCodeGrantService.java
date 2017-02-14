@@ -392,7 +392,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This resource handles the End User authorizing  * or denying the Client to access its resources.  * If End User approves the access this resource will  * redirect End User back to the Client, supplying   * the authorization code.  */
+comment|/**  * This resource handles the End User authorizing  * or denying the Client to access its resources.  * If End User approves the access this resource will  * redirect End User back to the Client, supplying  * the authorization code.  */
 end_comment
 
 begin_class

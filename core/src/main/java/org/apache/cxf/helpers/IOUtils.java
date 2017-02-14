@@ -386,7 +386,7 @@ operator|-
 literal|1
 return|;
 block|}
-comment|/**      * Use this function instead of new String(byte[], String) to avoid surprises from       * non-standard default encodings.      * @param bytes      * @param charsetName      */
+comment|/**      * Use this function instead of new String(byte[], String) to avoid surprises from      * non-standard default encodings.      * @param bytes      * @param charsetName      */
 specifier|public
 specifier|static
 name|String
@@ -454,7 +454,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Use this function instead of new String(byte[], int, int, String)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param charsetName      * @param start      * @param length      */
+comment|/**      * Use this function instead of new String(byte[], int, int, String)      * to avoid surprises from non-standard default encodings.      * @param bytes      * @param charsetName      * @param start      * @param length      */
 specifier|public
 specifier|static
 name|String
@@ -509,7 +509,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Use this function instead of new String(byte[], int, int)       * to avoid surprises from non-standard default encodings.      * @param bytes      * @param start      * @param length      */
+comment|/**      * Use this function instead of new String(byte[], int, int)      * to avoid surprises from non-standard default encodings.      * @param bytes      * @param start      * @param length      */
 specifier|public
 specifier|static
 name|String
@@ -888,7 +888,7 @@ return|return
 name|total
 return|;
 block|}
-comment|/**      * Copy at least the specified number of bytes from the input to the output      * or until the inputstream is finished.         * @param input      * @param output      * @param atLeast      * @throws IOException      */
+comment|/**      * Copy at least the specified number of bytes from the input to the output      * or until the inputstream is finished.      * @param input      * @param output      * @param atLeast      * @throws IOException      */
 specifier|public
 specifier|static
 name|void
@@ -1589,7 +1589,7 @@ name|in
 argument_list|)
 return|;
 block|}
-comment|/**      * Load the InputStream into memory and return a ByteArrayInputStream that      * represents it. Closes the in stream.      *       * @param in      * @throws IOException      */
+comment|/**      * Load the InputStream into memory and return a ByteArrayInputStream that      * represents it. Closes the in stream.      *      * @param in      * @throws IOException      */
 specifier|public
 specifier|static
 name|ByteArrayInputStream

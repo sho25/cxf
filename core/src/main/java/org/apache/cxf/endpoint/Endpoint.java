@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents an endpoint that receives messages.   *  */
+comment|/**  * Represents an endpoint that receives messages.  *  */
 end_comment
 
 begin_interface
@@ -213,7 +213,7 @@ argument_list|>
 name|getActiveFeatures
 parameter_list|()
 function_decl|;
-comment|/**      * Add a hook that will be called when this end point being terminated.      * This will be called prior to the Server/ClientLifecycleListener.*Destroyed()      * method is called.  This provides an opportunity to cleanup any resources      * that are specific to this Endpoint.       * @param c      */
+comment|/**      * Add a hook that will be called when this end point being terminated.      * This will be called prior to the Server/ClientLifecycleListener.*Destroyed()      * method is called.  This provides an opportunity to cleanup any resources      * that are specific to this Endpoint.      * @param c      */
 name|void
 name|addCleanupHook
 parameter_list|(

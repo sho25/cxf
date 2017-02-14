@@ -2580,7 +2580,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|CustomHeaderAdded
-block|{               }
+block|{      }
 annotation|@
 name|Target
 argument_list|(
@@ -2608,7 +2608,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|CustomHeaderAddedAsync
-block|{               }
+block|{      }
 annotation|@
 name|Target
 argument_list|(
@@ -2636,7 +2636,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|PostMatchMode
-block|{               }
+block|{      }
 annotation|@
 name|Target
 argument_list|(
@@ -2664,7 +2664,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|Faulty
-block|{               }
+block|{      }
 annotation|@
 name|Priority
 argument_list|(

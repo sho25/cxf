@@ -34,7 +34,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A RuntimeException that can be thrown by an STS implementation. If the FaultCode is set, then this   * code/String will be returned to the user, otherwise the Exception message is returned.  */
+comment|/**  * A RuntimeException that can be thrown by an STS implementation. If the FaultCode is set, then this  * code/String will be returned to the user, otherwise the Exception message is returned.  */
 end_comment
 
 begin_class
@@ -339,7 +339,7 @@ literal|"The requested renewal failed"
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *       */
+comment|/**      *      */
 specifier|private
 specifier|static
 specifier|final

@@ -80,7 +80,7 @@ specifier|private
 name|ChunkedUtil
 parameter_list|()
 block|{     }
-comment|/**      * Get an input stream containing the partial response if one is present.      *       * @param connection the connection in question      * @param responseCode the response code      * @return an input stream if a partial response is pending on the connection       */
+comment|/**      * Get an input stream containing the partial response if one is present.      *      * @param connection the connection in question      * @param responseCode the response code      * @return an input stream if a partial response is pending on the connection      */
 specifier|public
 specifier|static
 name|InputStream

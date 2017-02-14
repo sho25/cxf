@@ -1549,7 +1549,7 @@ return|return
 name|packageNameChanged
 return|;
 block|}
-comment|/**      * This method attempts to do a deep copy of items which may change in this ToolContext.      * The intent of this is to be able to take a snapshot of the state of the ToolContext      * after it's initialised so we can run a tool multiple times with the same setup      * while not having the state preserved between multiple runs. I didn't want       * to call this clone() as it neither does a deep nor shallow copy. It does a mix      * based on my best guess at what changes and what doesn't.      */
+comment|/**      * This method attempts to do a deep copy of items which may change in this ToolContext.      * The intent of this is to be able to take a snapshot of the state of the ToolContext      * after it's initialised so we can run a tool multiple times with the same setup      * while not having the state preserved between multiple runs. I didn't want      * to call this clone() as it neither does a deep nor shallow copy. It does a mix      * based on my best guess at what changes and what doesn't.      */
 specifier|public
 name|ToolContext
 name|makeCopy

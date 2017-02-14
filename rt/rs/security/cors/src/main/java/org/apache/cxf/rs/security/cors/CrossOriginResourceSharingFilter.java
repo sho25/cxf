@@ -454,7 +454,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A single class that provides both an input and an output filter for CORS, following  * http://www.w3.org/TR/cors/. The input filter examines the input headers. If the request is valid, it stores the  * information in the Exchange to allow the response handler to add the appropriate headers to the response.  * If you need complex or subtle control of the behavior here (e.g. clearing the prefight cache) you might be  * better off reading the source of this class and implementing this inside your service.  *   * This class will perform preflight processing even if there is a resource method annotated   * to handle @OPTIONS,  *<em>unless</em> that method is annotated as follows:  *<pre>  *   @LocalPreflight  *</pre>  * or unless the<tt>defaultOptionsMethodsHandlePreflight</tt> property of this class is set to<tt>true</tt>.  */
+comment|/**  * A single class that provides both an input and an output filter for CORS, following  * http://www.w3.org/TR/cors/. The input filter examines the input headers. If the request is valid, it stores the  * information in the Exchange to allow the response handler to add the appropriate headers to the response.  * If you need complex or subtle control of the behavior here (e.g. clearing the prefight cache) you might be  * better off reading the source of this class and implementing this inside your service.  *  * This class will perform preflight processing even if there is a resource method annotated  * to handle @OPTIONS,  *<em>unless</em> that method is annotated as follows:  *<pre>  *   @LocalPreflight  *</pre>  * or unless the<tt>defaultOptionsMethodsHandlePreflight</tt> property of this class is set to<tt>true</tt>.  */
 end_comment
 
 begin_class
@@ -922,7 +922,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * handle preflight.      *       * Note that preflight is a bit of a parasite on OPTIONS. The class may still have an options method,      * and, if it does, it will be invoked, and it will respond however it likes. The response will      * have additional headers based on what happens here.      *       * @param m the incoming message.      * @param opResInfo       * @param ann the annotation, if any, derived from a method that matched the OPTIONS request for the      *            preflight. probably completely useless.      * @param resourceClass the resource class passed into the filter.      * @return      */
+comment|/**      * handle preflight.      *      * Note that preflight is a bit of a parasite on OPTIONS. The class may still have an options method,      * and, if it does, it will be invoked, and it will respond however it likes. The response will      * have additional headers based on what happens here.      *      * @param m the incoming message.      * @param opResInfo      * @param ann the annotation, if any, derived from a method that matched the OPTIONS request for the      *            preflight. probably completely useless.      * @param resourceClass the resource class passed into the filter.      * @return      */
 comment|//CHECKSTYLE:OFF
 specifier|private
 name|Response
@@ -1060,7 +1060,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/*          * What to do if the resource class indeed has a method annotated with @OPTIONS           * that is matched by this request? We go ahead and do this job unless the request          * has one of our annotations on it (or its parent class) indicating 'localPreflight' --          * or the defaultOptionsMethodsHandlePreflight flag is true.          */
+comment|/*          * What to do if the resource class indeed has a method annotated with @OPTIONS          * that is matched by this request? We go ahead and do this job unless the request          * has one of our annotations on it (or its parent class) indicating 'localPreflight' --          * or the defaultOptionsMethodsHandlePreflight flag is true.          */
 name|LocalPreflight
 name|preflightAnnotation
 init|=
@@ -2719,7 +2719,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * The origin strings to allow. An empty list allows all origins.      *       * @param allowedOrigins a list of case-sensitive origin strings.      */
+comment|/**      * The origin strings to allow. An empty list allows all origins.      *      * @param allowedOrigins a list of case-sensitive origin strings.      */
 specifier|public
 name|void
 name|setAllowOrigins
@@ -2763,7 +2763,7 @@ return|return
 name|allowHeaders
 return|;
 block|}
-comment|/**      * The list of allowed headers for preflight checks. Section 5.2.6      *       * @param allowedHeaders a list of permitted headers.      */
+comment|/**      * The list of allowed headers for preflight checks. Section 5.2.6      *      * @param allowedHeaders a list of permitted headers.      */
 specifier|public
 name|void
 name|setAllowHeaders
@@ -2812,7 +2812,7 @@ return|return
 name|allowCredentials
 return|;
 block|}
-comment|/**      * The value for the Access-Control-Allow-Credentials header. If false, no header is added. If true, the      * header is added with the value 'true'.      *       * @param allowCredentials      */
+comment|/**      * The value for the Access-Control-Allow-Credentials header. If false, no header is added. If true, the      * header is added with the value 'true'.      *      * @param allowCredentials      */
 specifier|public
 name|void
 name|setAllowCredentials
@@ -2828,7 +2828,7 @@ operator|=
 name|allowCredentials
 expr_stmt|;
 block|}
-comment|/**      * A list of non-simple headers to be exposed via Access-Control-Expose-Headers.      *       * @param exposeHeaders the list of (case-sensitive) header names.      */
+comment|/**      * A list of non-simple headers to be exposed via Access-Control-Expose-Headers.      *      * @param exposeHeaders the list of (case-sensitive) header names.      */
 specifier|public
 name|void
 name|setExposeHeaders
@@ -2847,7 +2847,7 @@ operator|=
 name|exposeHeaders
 expr_stmt|;
 block|}
-comment|/**      * The value for Access-Control-Max-Age.      *       * @param maxAge An integer 'delta-seconds' or null. If null, no header is added.      */
+comment|/**      * The value for Access-Control-Max-Age.      *      * @param maxAge An integer 'delta-seconds' or null. If null, no header is added.      */
 specifier|public
 name|void
 name|setMaxAge
@@ -2863,7 +2863,7 @@ operator|=
 name|maxAge
 expr_stmt|;
 block|}
-comment|/**      * Preflight error response status, default is 200.      *       * @param status HTTP status code.      */
+comment|/**      * Preflight error response status, default is 200.      *      * @param status HTTP status code.      */
 specifier|public
 name|void
 name|setPreflightErrorStatus
@@ -2879,7 +2879,7 @@ operator|=
 name|status
 expr_stmt|;
 block|}
-comment|/**      * What to do when a preflight request comes along for a resource that has a handler method for      * \@OPTIONS and there is no<tt>@{@link CrossResourceSharing}(localPreflight = val)</tt>      * annotation on the method. If this is<tt>true</tt>, then the filter       * defers to the resource class method.      * If this is false, then this filter performs preflight processing.      * @param defaultOptionsMethodsHandlePreflight true to defer to resource methods.      */
+comment|/**      * What to do when a preflight request comes along for a resource that has a handler method for      * \@OPTIONS and there is no<tt>@{@link CrossResourceSharing}(localPreflight = val)</tt>      * annotation on the method. If this is<tt>true</tt>, then the filter      * defers to the resource class method.      * If this is false, then this filter performs preflight processing.      * @param defaultOptionsMethodsHandlePreflight true to defer to resource methods.      */
 specifier|public
 name|void
 name|setDefaultOptionsMethodsHandlePreflight

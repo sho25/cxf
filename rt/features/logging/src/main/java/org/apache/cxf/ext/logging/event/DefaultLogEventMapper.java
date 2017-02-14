@@ -1272,7 +1272,7 @@ literal|"SoapBinding"
 argument_list|)
 return|;
 block|}
-comment|/**      * Get MessageId from WS Addressing properties      *       * @param message      * @return message id      */
+comment|/**      * Get MessageId from WS Addressing properties      *      * @param message      * @return message id      */
 specifier|private
 name|String
 name|getMessageId
@@ -1774,7 +1774,7 @@ return|;
 block|}
 block|}
 block|}
-comment|/**      * For REST we also consider a response to be a fault if the operation is not found or the response code      * is an error      *       * @param message      * @return      */
+comment|/**      * For REST we also consider a response to be a fault if the operation is not found or the response code      * is an error      *      * @param message      * @return      */
 specifier|private
 name|boolean
 name|isRESTFault

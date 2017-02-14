@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * ClientSecretVerifier is responsible for validating a client secret    */
+comment|/**  * ClientSecretVerifier is responsible for validating a client secret  */
 end_comment
 
 begin_interface
@@ -50,7 +50,7 @@ specifier|public
 interface|interface
 name|ClientSecretVerifier
 block|{
-comment|/**      * Validate a client secret      *       * @param client the {@link Client} the Client      * @param clientSecret the secret      * @return true if the secret is valid, false otherwise      */
+comment|/**      * Validate a client secret      *      * @param client the {@link Client} the Client      * @param clientSecret the secret      * @return true if the secret is valid, false otherwise      */
 name|boolean
 name|validateClientSecret
 parameter_list|(

@@ -270,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the WS-RM processing with the cached out message (using temporary files).   */
+comment|/**  * Tests the WS-RM processing with the cached out message (using temporary files).  */
 end_comment
 
 begin_class

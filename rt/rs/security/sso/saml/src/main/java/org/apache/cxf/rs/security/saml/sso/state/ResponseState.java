@@ -127,7 +127,7 @@ decl_stmt|;
 specifier|public
 name|ResponseState
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ResponseState
 parameter_list|(

@@ -107,7 +107,7 @@ decl_stmt|;
 specifier|public
 name|BookBean
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|BookBean
 parameter_list|(

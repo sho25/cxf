@@ -191,7 +191,7 @@ specifier|private
 name|XPathAssert
 parameter_list|()
 block|{     }
-comment|/**      * Assert that the following XPath query selects one or more nodes.      *       * @param xpath      */
+comment|/**      * Assert that the following XPath query selects one or more nodes.      *      * @param xpath      */
 specifier|public
 specifier|static
 name|NodeList
@@ -282,7 +282,7 @@ return|return
 name|nodes
 return|;
 block|}
-comment|/**      * Assert that the following XPath query selects one or more nodes.      *       * @param xpath      */
+comment|/**      * Assert that the following XPath query selects one or more nodes.      *      * @param xpath      */
 specifier|public
 specifier|static
 name|void
@@ -411,7 +411,7 @@ name|node
 argument_list|)
 return|;
 block|}
-comment|/**      * Assert that the following XPath query selects no nodes.      *       * @param xpath      */
+comment|/**      * Assert that the following XPath query selects no nodes.      *      * @param xpath      */
 specifier|public
 specifier|static
 name|NodeList
@@ -507,7 +507,7 @@ return|return
 name|nodes
 return|;
 block|}
-comment|/**      * Asser that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+comment|/**      * Asser that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
 specifier|static
 name|void
@@ -653,7 +653,7 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-comment|/**      * Asser that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+comment|/**      * Asser that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
 specifier|static
 name|void

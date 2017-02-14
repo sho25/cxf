@@ -499,7 +499,7 @@ specifier|private
 name|String
 name|namespacePrefix
 decl_stmt|;
-comment|/**      * @parameter       */
+comment|/**      * @parameter      */
 specifier|private
 name|String
 name|outputFileName

@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents the SOAP 1.2 version  *   */
+comment|/**  * Represents the SOAP 1.2 version  *  */
 end_comment
 
 begin_class

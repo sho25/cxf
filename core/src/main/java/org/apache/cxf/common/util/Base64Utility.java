@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Base64Utility - this static class provides useful base64   *                 encoding utilities.  */
+comment|/**  * Base64Utility - this static class provides useful base64  *                 encoding utilities.  */
 end_comment
 
 begin_comment
@@ -132,7 +132,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class converts to/from base64. The alternative conversions include:  *  * encode:  *    byte[]     into String  *    byte[]     into char[]  *    byte[]     into OutStream  *    byte[]     into Writer  * decode:  *    char[]     into byte[]   *    String     into byte[]  *    char[]     into OutStream  *    String     into OutStream  *   */
+comment|/**  * This class converts to/from base64. The alternative conversions include:  *  * encode:  *    byte[]     into String  *    byte[]     into char[]  *    byte[]     into OutStream  *    byte[]     into Writer  * decode:  *    char[]     into byte[]  *    String     into byte[]  *    char[]     into OutStream  *    String     into OutStream  *  */
 end_comment
 
 begin_class
@@ -449,7 +449,7 @@ parameter_list|()
 block|{
 comment|//utility class, never constructed
 block|}
-comment|/**      * The<code>decode_chunk</code> routine decodes a chunk of data      * into its native encoding.      *      * base64 encodes each 3 octets of data into 4 characters from a      * limited 64 character set. The 3 octets are joined to form      * 24 bits which are then split into 4 x 6bit values. Each 6 bit      * value is then used as an index into the 64 character table of      * base64 chars. If the total data length is not a 3 octet multiple      * the '=' char is used as padding for the final 4 char group,       * either 1 octet + '==' or 2 octets + '='.      *      * @param   id  The input data to be processed      * @param   o   The offset from which to begin processing      * @param   l   The length (bound) at which processing is to end      * @return  The decoded data         * @exception   Base64Exception Thrown is processing fails due to      * formatting exceptions in the encoded data       */
+comment|/**      * The<code>decode_chunk</code> routine decodes a chunk of data      * into its native encoding.      *      * base64 encodes each 3 octets of data into 4 characters from a      * limited 64 character set. The 3 octets are joined to form      * 24 bits which are then split into 4 x 6bit values. Each 6 bit      * value is then used as an index into the 64 character table of      * base64 chars. If the total data length is not a 3 octet multiple      * the '=' char is used as padding for the final 4 char group,      * either 1 octet + '==' or 2 octets + '='.      *      * @param   id  The input data to be processed      * @param   o   The offset from which to begin processing      * @param   l   The length (bound) at which processing is to end      * @return  The decoded data      * @exception   Base64Exception Thrown is processing fails due to      * formatting exceptions in the encoded data      */
 specifier|public
 specifier|static
 name|byte
@@ -2149,7 +2149,7 @@ throw|;
 block|}
 block|}
 comment|//---- Private static methods --------------------------------------
-comment|/**      * The<code>process</code> routine processes an atomic base64      * unit of encoding (encodeme) into its native encoding. This class is      * used by decode routines to do the grunt work of decoding      * base64 encoded information      *      * @param   ib  Input character buffer of encoded bytes      * @param   ob  Output byte buffer of decoded bytes      * @param   p   Pointer to the encodeme of interest      * @return  The decoded encodeme      * @exception   Base64Exception Thrown is processing fails due to      * formatting exceptions in the encoded data       */
+comment|/**      * The<code>process</code> routine processes an atomic base64      * unit of encoding (encodeme) into its native encoding. This class is      * used by decode routines to do the grunt work of decoding      * base64 encoded information      *      * @param   ib  Input character buffer of encoded bytes      * @param   ob  Output byte buffer of decoded bytes      * @param   p   Pointer to the encodeme of interest      * @return  The decoded encodeme      * @exception   Base64Exception Thrown is processing fails due to      * formatting exceptions in the encoded data      */
 specifier|private
 specifier|static
 name|int

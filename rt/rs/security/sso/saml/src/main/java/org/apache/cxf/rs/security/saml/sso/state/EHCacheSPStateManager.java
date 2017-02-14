@@ -218,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An in-memory EHCache implementation of the SPStateManager interface.   * The default TTL is 5 minutes.  */
+comment|/**  * An in-memory EHCache implementation of the SPStateManager interface.  * The default TTL is 5 minutes.  */
 end_comment
 
 begin_class

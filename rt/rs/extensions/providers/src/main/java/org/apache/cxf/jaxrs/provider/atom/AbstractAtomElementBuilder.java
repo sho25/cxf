@@ -56,7 +56,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A callback-style provider which can be used to map an object to Atom Feed or Entry  * without having to deal directly with types representing Atom feeds or entries  *   * @param<T> Type of objects which will be mapped to feeds or entries  */
+comment|/**  * A callback-style provider which can be used to map an object to Atom Feed or Entry  * without having to deal directly with types representing Atom feeds or entries  *  * @param<T> Type of objects which will be mapped to feeds or entries  */
 end_comment
 
 begin_class
@@ -96,7 +96,7 @@ return|return
 name|mc
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return element title      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element title      */
 specifier|public
 name|String
 name|getTitle
@@ -109,7 +109,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return element author      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element author      */
 specifier|public
 name|String
 name|getAuthor
@@ -122,7 +122,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return element id      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element id      */
 specifier|public
 name|String
 name|getId
@@ -135,7 +135,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return base uri      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return base uri      */
 specifier|public
 name|String
 name|getBaseUri
@@ -148,7 +148,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return element updated date      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element updated date      */
 specifier|public
 name|String
 name|getUpdated
@@ -161,7 +161,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return element categories      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element categories      */
 specifier|public
 name|List
 argument_list|<
@@ -178,7 +178,7 @@ literal|null
 return|;
 block|}
 comment|//CHECKSTYLE:OFF
-comment|/**      * Returns a map of link URI to link relations type pairs       * See {@link<a href="http://www.iana.org/assignments/link-relations/link-relations.xml">Atom Link Relations</a>}.      *      * @param pojo Object which is being mapped      * @return the map of link URI to link relations type pairs       */
+comment|/**      * Returns a map of link URI to link relations type pairs      * See {@link<a href="http://www.iana.org/assignments/link-relations/link-relations.xml">Atom Link Relations</a>}.      *      * @param pojo Object which is being mapped      * @return the map of link URI to link relations type pairs      */
 comment|//CHECKSTYLE:ON
 specifier|public
 name|Map

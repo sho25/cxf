@@ -1379,7 +1379,7 @@ specifier|public
 name|void
 name|greetMe
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|String
 index|[]
@@ -1527,7 +1527,7 @@ specifier|public
 name|void
 name|greetMe
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|String
 index|[]

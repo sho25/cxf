@@ -109,7 +109,7 @@ name|QName
 name|getName
 parameter_list|()
 function_decl|;
-comment|/**      * Get the local name of the element this reader represents.      *       * @return Local Name      */
+comment|/**      * Get the local name of the element this reader represents.      *      * @return Local Name      */
 name|String
 name|getLocalName
 parameter_list|()

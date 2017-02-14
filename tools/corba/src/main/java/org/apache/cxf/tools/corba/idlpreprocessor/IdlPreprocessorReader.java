@@ -70,7 +70,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Reader that implements the #include functionality of the preprocessor.  * Starting from one URL, it generates one stream of characters by tracking  * #defines, #ifdefs, etc. and following #includes accordingly.  *   *<p>  * This reader augments the stream with  *<a href="http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html">  * location information</a> when the source URL is switched.  * This improves error reporting (with correct file and linenumber information) in the  * subsequent compilation steps like IDL parsing and also allows the implentation  * of code generation options like the -emitAll flag available in the JDK idlj tool.  *</p>  */
+comment|/**  * A Reader that implements the #include functionality of the preprocessor.  * Starting from one URL, it generates one stream of characters by tracking  * #defines, #ifdefs, etc. and following #includes accordingly.  *  *<p>  * This reader augments the stream with  *<a href="http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html">  * location information</a> when the source URL is switched.  * This improves error reporting (with correct file and linenumber information) in the  * subsequent compilation steps like IDL parsing and also allows the implentation  * of code generation options like the -emitAll flag available in the JDK idlj tool.  *</p>  */
 end_comment
 
 begin_class
@@ -90,7 +90,7 @@ name|MAX_INCLUDE_DEPTH
 init|=
 literal|64
 decl_stmt|;
-comment|/**      * GNU standard preprocessor output flag for signalling a new file.      *       * @see http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html      */
+comment|/**      * GNU standard preprocessor output flag for signalling a new file.      *      * @see http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html      */
 specifier|private
 specifier|static
 specifier|final
@@ -99,7 +99,7 @@ name|PUSH
 init|=
 literal|'1'
 decl_stmt|;
-comment|/**      * GNU standard preprocessor output flag for signalling returning to a file.      *       * @see http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html      */
+comment|/**      * GNU standard preprocessor output flag for signalling returning to a file.      *      * @see http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html      */
 specifier|private
 specifier|static
 specifier|final
@@ -141,7 +141,7 @@ name|IncludeStackEntry
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**      * Stack of Booleans, corresponding to nested 'if' preprocessor directives.      * The top of the stack signals whether the current idl code is skipped.      *       * @see #skips()      */
+comment|/**      * Stack of Booleans, corresponding to nested 'if' preprocessor directives.      * The top of the stack signals whether the current idl code is skipped.      *      * @see #skips()      */
 specifier|private
 specifier|final
 name|Stack
@@ -179,7 +179,7 @@ specifier|private
 name|String
 name|pragmaPrefix
 decl_stmt|;
-comment|/**      * Creates a new IncludeReader.      *       * @param startURL      * @param startLocation      * @param includeResolver      * @param defineState      * @throws IOException      */
+comment|/**      * Creates a new IncludeReader.      *      * @param startURL      * @param startLocation      * @param includeResolver      * @param defineState      * @throws IOException      */
 specifier|public
 name|IdlPreprocessorReader
 parameter_list|(
@@ -856,7 +856,7 @@ return|return
 name|line
 return|;
 block|}
-comment|/**      * TODO: support multiline definitions, functions, etc.       */
+comment|/**      * TODO: support multiline definitions, functions, etc.      */
 specifier|private
 name|void
 name|handleDefine
@@ -1743,7 +1743,7 @@ name|getReader
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates GNU standard preprocessor flag for signalling a file change.      *       * @see http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html      */
+comment|/**      * Creates GNU standard preprocessor flag for signalling a file change.      *      * @see http://gcc.gnu.org/onlinedocs/gcc-3.2.3/cpp/Preprocessor-Output.html      */
 specifier|private
 name|void
 name|signalFileChange

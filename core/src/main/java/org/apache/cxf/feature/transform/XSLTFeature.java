@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class defines a feature is used to transform message using XSLT script.   * If this feature is present and inXSLTPath/outXLSTPath are initialised,  * client and endpoint will transform incoming and outgoing messages correspondingly.   * Attention: actually the feature breaks streaming   * (can be fixed in further versions when XSLT engine supports XML stream).   */
+comment|/**  * This class defines a feature is used to transform message using XSLT script.  * If this feature is present and inXSLTPath/outXLSTPath are initialised,  * client and endpoint will transform incoming and outgoing messages correspondingly.  * Attention: actually the feature breaks streaming  * (can be fixed in further versions when XSLT engine supports XML stream).  */
 end_comment
 
 begin_class

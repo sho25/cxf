@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Controls the implementation of preflight processing   * on an OPTIONS method.  * If the current method is OPTIONS, and this method wants to   * handle the preflight process for itself then have this annotation  * attached to it, otherwise the filter performs it.  */
+comment|/**  * Controls the implementation of preflight processing  * on an OPTIONS method.  * If the current method is OPTIONS, and this method wants to  * handle the preflight process for itself then have this annotation  * attached to it, otherwise the filter performs it.  */
 end_comment
 
 begin_annotation_defn

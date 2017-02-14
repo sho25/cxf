@@ -43,7 +43,7 @@ name|SOAPHeaderServiceImpl
 implements|implements
 name|SOAPHeaderSEI
 block|{
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|SOAPHeaderServiceImpl
 parameter_list|()

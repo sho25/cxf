@@ -1960,7 +1960,7 @@ decl_stmt|;
 specifier|private
 name|JAXRSUtils
 parameter_list|()
-block|{             }
+block|{     }
 specifier|public
 specifier|static
 name|boolean
@@ -10168,7 +10168,7 @@ return|return
 name|acceptValues
 return|;
 block|}
-comment|/**      * intersect two mime types      *       * @param mimeTypesA       * @param mimeTypesB       * @return return a list of intersected mime types      */
+comment|/**      * intersect two mime types      *      * @param mimeTypesA      * @param mimeTypesB      * @return return a list of intersected mime types      */
 specifier|public
 specifier|static
 name|List

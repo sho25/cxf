@@ -439,7 +439,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * In this test, a token is issued by the first STS in the default realm. The second STS is       * configured to trust the signing cert of the default realm (via a cert constraint) and so       * authentication succeeds.      */
+comment|/**      * In this test, a token is issued by the first STS in the default realm. The second STS is      * configured to trust the signing cert of the default realm (via a cert constraint) and so      * authentication succeeds.      */
 annotation|@
 name|org
 operator|.

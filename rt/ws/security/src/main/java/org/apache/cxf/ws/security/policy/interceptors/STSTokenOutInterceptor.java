@@ -569,7 +569,7 @@ parameter_list|,
 name|SecurityToken
 name|tok
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|STSClient
 name|getSTSClient

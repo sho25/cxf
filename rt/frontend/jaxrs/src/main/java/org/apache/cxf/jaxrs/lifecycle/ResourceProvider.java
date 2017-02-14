@@ -40,7 +40,7 @@ specifier|public
 interface|interface
 name|ResourceProvider
 block|{
-comment|/**      * Returns the resource instance which will handle the current request       * @param m the current request message      * @return resource instance      */
+comment|/**      * Returns the resource instance which will handle the current request      * @param m the current request message      * @return resource instance      */
 name|Object
 name|getInstance
 parameter_list|(

@@ -68,7 +68,7 @@ block|{
 specifier|private
 name|Book_
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 specifier|volatile

@@ -405,7 +405,7 @@ specifier|public
 name|UriBuilderImpl
 parameter_list|()
 block|{     }
-comment|/**      * Creates builder initialized with given URI.      *       * @param uri initial value for builder      * @throws IllegalArgumentException when uri is null      */
+comment|/**      * Creates builder initialized with given URI.      *      * @param uri initial value for builder      * @throws IllegalArgumentException when uri is null      */
 specifier|public
 name|UriBuilderImpl
 parameter_list|(
@@ -4769,7 +4769,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Query or matrix params convertion from object values vararg to list of strings. No encoding is      * provided.      *       * @param values entry vararg values      * @return list of strings      * @throws IllegalArgumentException when one of values is null      */
+comment|/**      * Query or matrix params convertion from object values vararg to list of strings. No encoding is      * provided.      *      * @param values entry vararg values      * @return list of strings      * @throws IllegalArgumentException when one of values is null      */
 specifier|private
 name|List
 argument_list|<
@@ -4903,7 +4903,7 @@ return|return
 name|list
 return|;
 block|}
-comment|/**      * Builds param string for query part or matrix part of URI.      *       * @param map query or matrix multivalued map      * @param separator params separator, '&' for query ';' for matrix      * @param fromEncoded if true then values will be decoded       * @return stringified params.      */
+comment|/**      * Builds param string for query part or matrix part of URI.      *      * @param map query or matrix multivalued map      * @param separator params separator, '&' for query ';' for matrix      * @param fromEncoded if true then values will be decoded      * @return stringified params.      */
 specifier|private
 name|String
 name|buildParams
@@ -5157,7 +5157,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**      * Builds param string for matrix part of URI.      *       * @param sb buffer to add the matrix part to, will get ';' added if map is not empty       * @param map matrix multivalued map      */
+comment|/**      * Builds param string for matrix part of URI.      *      * @param sb buffer to add the matrix part to, will get ';' added if map is not empty      * @param map matrix multivalued map      */
 specifier|private
 name|void
 name|buildMatrix

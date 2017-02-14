@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class validates a SAML Assertion by invoking the SamlAssertionValidator in WSS4J. It   * overrides the signature verification, so that if the signature is not trusted, it just sets  * a boolean. The STSTokenValidator can parse this tag and dispatch the Assertion to the STS  * for validation.  */
+comment|/**  * This class validates a SAML Assertion by invoking the SamlAssertionValidator in WSS4J. It  * overrides the signature verification, so that if the signature is not trusted, it just sets  * a boolean. The STSTokenValidator can parse this tag and dispatch the Assertion to the STS  * for validation.  */
 end_comment
 
 begin_class
@@ -169,7 +169,7 @@ specifier|private
 name|boolean
 name|trustVerificationSucceeded
 decl_stmt|;
-comment|/**      * Validate the credential argument. It must contain a non-null AssertionWrapper.       * A Crypto and a CallbackHandler implementation is also required to be set.      *       * @param credential the Credential to be validated      * @param data the RequestData associated with the request      * @throws WSSecurityException on a failed validation      */
+comment|/**      * Validate the credential argument. It must contain a non-null AssertionWrapper.      * A Crypto and a CallbackHandler implementation is also required to be set.      *      * @param credential the Credential to be validated      * @param data the RequestData associated with the request      * @throws WSSecurityException on a failed validation      */
 specifier|public
 name|Credential
 name|validate

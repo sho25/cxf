@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class contains values that have been extracted from a RequestSecurityToken corresponding to   * various token requirements.  */
+comment|/**  * This class contains values that have been extracted from a RequestSecurityToken corresponding to  * various token requirements.  */
 end_comment
 
 begin_class

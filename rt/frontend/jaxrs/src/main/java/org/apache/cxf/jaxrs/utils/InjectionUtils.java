@@ -1130,7 +1130,7 @@ decl_stmt|;
 specifier|private
 name|InjectionUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|Field
@@ -3789,7 +3789,7 @@ return|;
 end_return
 
 begin_function
-unit|}          private
+unit|}      private
 specifier|static
 name|Throwable
 name|getOrThrowActualException
@@ -9464,7 +9464,7 @@ block|}
 end_function
 
 begin_function
-unit|}          private
+unit|}      private
 specifier|static
 name|Object
 name|invokeValueOf

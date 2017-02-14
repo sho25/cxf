@@ -105,7 +105,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|GlobalNameBinding
-block|{       }
+block|{  }
 end_annotation_defn
 
 end_unit

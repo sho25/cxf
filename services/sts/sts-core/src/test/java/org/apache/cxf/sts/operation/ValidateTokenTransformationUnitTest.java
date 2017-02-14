@@ -1534,7 +1534,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully validate a UsernameToken (which was issued in realm "A") and       * transform it into a SAML Assertion in Realm "B".      */
+comment|/**      * Test to successfully validate a UsernameToken (which was issued in realm "A") and      * transform it into a SAML Assertion in Realm "B".      */
 annotation|@
 name|org
 operator|.

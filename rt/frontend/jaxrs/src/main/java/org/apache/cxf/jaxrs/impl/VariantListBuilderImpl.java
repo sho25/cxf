@@ -159,7 +159,7 @@ decl_stmt|;
 specifier|public
 name|VariantListBuilderImpl
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|Override
 specifier|public

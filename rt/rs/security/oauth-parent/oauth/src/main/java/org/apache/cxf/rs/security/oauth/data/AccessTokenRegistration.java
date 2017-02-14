@@ -22,7 +22,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Captures the information associated with the access token registration request.  * @see AccessToken    */
+comment|/**  * Captures the information associated with the access token registration request.  * @see AccessToken  */
 end_comment
 
 begin_class

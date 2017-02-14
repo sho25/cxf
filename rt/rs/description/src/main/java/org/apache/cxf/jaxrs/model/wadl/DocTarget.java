@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * {@link Description} can use one of DocTarget constants to bind  * itself to a specific WADL element.  * {@link Description} annotations documenting WADL 'resource', 'method',  * 'param' and input 'representation' elements do not have use these constants.     */
+comment|/**  * {@link Description} can use one of DocTarget constants to bind  * itself to a specific WADL element.  * {@link Description} annotations documenting WADL 'resource', 'method',  * 'param' and input 'representation' elements do not have use these constants.  */
 end_comment
 
 begin_class
@@ -29,7 +29,7 @@ specifier|final
 class|class
 name|DocTarget
 block|{
-comment|/**      * WADL resource element, in most cases it corresponds       * to the root resource or sub-resource classes      */
+comment|/**      * WADL resource element, in most cases it corresponds      * to the root resource or sub-resource classes      */
 specifier|public
 specifier|static
 specifier|final
@@ -47,7 +47,7 @@ name|METHOD
 init|=
 literal|"method"
 decl_stmt|;
-comment|/**      * WADL request param or representation elements, correspond to       * input parameters of the resource method      */
+comment|/**      * WADL request param or representation elements, correspond to      * input parameters of the resource method      */
 specifier|public
 specifier|static
 specifier|final
@@ -56,7 +56,7 @@ name|PARAM
 init|=
 literal|"param"
 decl_stmt|;
-comment|/**      * WADL response representation element, corresponds to       * the return type of the resource method      */
+comment|/**      * WADL response representation element, corresponds to      * the return type of the resource method      */
 specifier|public
 specifier|static
 specifier|final
@@ -86,7 +86,7 @@ decl_stmt|;
 specifier|private
 name|DocTarget
 parameter_list|()
-block|{              }
+block|{      }
 block|}
 end_class
 

@@ -250,7 +250,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -345,7 +345,7 @@ decl_stmt|;
 specifier|public
 name|EndpointPolicyImpl
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|EndpointPolicyImpl
 parameter_list|(

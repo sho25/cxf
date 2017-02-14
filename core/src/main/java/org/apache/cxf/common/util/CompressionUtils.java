@@ -92,7 +92,7 @@ block|{
 specifier|private
 name|CompressionUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|InputStream

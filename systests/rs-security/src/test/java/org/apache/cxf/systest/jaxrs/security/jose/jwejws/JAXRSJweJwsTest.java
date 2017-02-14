@@ -3385,7 +3385,7 @@ literal|"password"
 decl_stmt|;
 name|PrivateKeyPasswordProviderImpl
 parameter_list|()
-block|{                      }
+block|{          }
 name|PrivateKeyPasswordProviderImpl
 parameter_list|(
 name|String

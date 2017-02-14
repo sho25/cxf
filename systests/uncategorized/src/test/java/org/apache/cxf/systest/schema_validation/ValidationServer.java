@@ -470,7 +470,7 @@ class|class
 name|ValidatingSchemaValidationImpl
 extends|extends
 name|SchemaValidationImpl
-block|{              }
+block|{      }
 annotation|@
 name|WebService
 argument_list|(

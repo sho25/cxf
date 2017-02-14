@@ -146,7 +146,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Deal with the MBeanServer Connections   *  */
+comment|/**  * Deal with the MBeanServer Connections  *  */
 end_comment
 
 begin_class
@@ -251,7 +251,7 @@ block|}
 specifier|private
 name|MBServerConnectorFactory
 parameter_list|()
-block|{              }
+block|{      }
 specifier|private
 name|int
 name|getURLLocalHostPort

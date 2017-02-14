@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for myComplexStruct complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="myComplexStruct">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="elem1" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="elem2" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="elem3" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for myComplexStruct complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="myComplexStruct">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="elem1" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="elem2" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="elem3" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -147,7 +147,7 @@ specifier|protected
 name|int
 name|elem3
 decl_stmt|;
-comment|/**      * Gets the value of the elem1 property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the elem1 property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getElem1
@@ -157,7 +157,7 @@ return|return
 name|elem1
 return|;
 block|}
-comment|/**      * Sets the value of the elem1 property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the elem1 property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setElem1
@@ -173,7 +173,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the elem2 property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the elem2 property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getElem2
@@ -183,7 +183,7 @@ return|return
 name|elem2
 return|;
 block|}
-comment|/**      * Sets the value of the elem2 property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the elem2 property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setElem2
@@ -199,7 +199,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the elem3 property.      *       */
+comment|/**      * Gets the value of the elem3 property.      *      */
 specifier|public
 name|int
 name|getElem3
@@ -209,7 +209,7 @@ return|return
 name|elem3
 return|;
 block|}
-comment|/**      * Sets the value of the elem3 property.      *       */
+comment|/**      * Sets the value of the elem3 property.      *      */
 specifier|public
 name|void
 name|setElem3

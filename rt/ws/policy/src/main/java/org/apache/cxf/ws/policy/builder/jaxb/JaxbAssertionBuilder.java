@@ -397,7 +397,7 @@ name|qn
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructs a JAXBAssertionBuilder from the specified class name and schema type.       * @param className the name of the class to which the schema type is mapped      * @param qn the schema type      * @throws JAXBException      * @throws ClassNotFoundException      */
+comment|/**      * Constructs a JAXBAssertionBuilder from the specified class name and schema type.      * @param className the name of the class to which the schema type is mapped      * @param qn the schema type      * @throws JAXBException      * @throws ClassNotFoundException      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -440,7 +440,7 @@ name|qn
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**     * Constructs a JAXBAssertionBuilder from the specified class and schema type.      * @param type the class to which the schema type is mapped     * @param qn the schema type     * @throws JAXBException     * @throws ClassNotFoundException     */
+comment|/**     * Constructs a JAXBAssertionBuilder from the specified class and schema type.     * @param type the class to which the schema type is mapped     * @param qn the schema type     * @throws JAXBException     * @throws ClassNotFoundException     */
 specifier|public
 name|JaxbAssertionBuilder
 parameter_list|(

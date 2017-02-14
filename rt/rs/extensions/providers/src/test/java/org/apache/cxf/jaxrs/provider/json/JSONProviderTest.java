@@ -1833,7 +1833,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          @
+unit|}      @
 name|Test
 specifier|public
 name|void
@@ -2020,7 +2020,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          @
+unit|}      @
 name|Test
 specifier|public
 name|void
@@ -3022,7 +3022,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}                     @
+unit|}         @
 name|Test
 specifier|public
 name|void
@@ -13437,7 +13437,7 @@ decl_stmt|;
 specifier|public
 name|ReportDefinition
 parameter_list|()
-block|{                 }
+block|{          }
 specifier|public
 name|ReportDefinition
 parameter_list|(
@@ -13745,7 +13745,7 @@ decl_stmt|;
 specifier|public
 name|TestBean
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|String
 name|getName
@@ -13828,7 +13828,7 @@ decl_stmt|;
 specifier|public
 name|BeanA
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|String
 name|getName
@@ -13910,7 +13910,7 @@ decl_stmt|;
 specifier|public
 name|BeanB
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|List
 argument_list|<
@@ -13971,7 +13971,7 @@ decl_stmt|;
 specifier|public
 name|BeanC
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|List
 argument_list|<

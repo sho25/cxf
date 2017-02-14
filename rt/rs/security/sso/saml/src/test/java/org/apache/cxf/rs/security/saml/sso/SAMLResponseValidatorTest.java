@@ -4414,7 +4414,7 @@ block|{
 comment|// expected
 block|}
 block|}
-comment|/**      * Sign a SAML Response      * @throws Exception       */
+comment|/**      * Sign a SAML Response      * @throws Exception      */
 specifier|private
 name|void
 name|signResponse

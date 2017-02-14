@@ -128,7 +128,7 @@ index|[]
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * If set to true then all the values of this scope have to be matched       */
+comment|/**      * If set to true then all the values of this scope have to be matched      */
 name|boolean
 name|matchAll
 parameter_list|()

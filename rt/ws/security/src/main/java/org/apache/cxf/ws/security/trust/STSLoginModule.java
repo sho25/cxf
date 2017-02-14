@@ -682,7 +682,7 @@ name|STSLoginModule
 implements|implements
 name|LoginModule
 block|{
-comment|/**      * Whether we require roles or not from the STS. If this is not set then the       * WS-Trust validate binding is used. If it is set then the issue binding is       * used, where the Username + Password credentials are passed via "OnBehalfOf"      * (unless the DISABLE_ON_BEHALF_OF property is set to "true", see below). In addition,       * claims are added to the request for the standard "role" ClaimType.      */
+comment|/**      * Whether we require roles or not from the STS. If this is not set then the      * WS-Trust validate binding is used. If it is set then the issue binding is      * used, where the Username + Password credentials are passed via "OnBehalfOf"      * (unless the DISABLE_ON_BEHALF_OF property is set to "true", see below). In addition,      * claims are added to the request for the standard "role" ClaimType.      */
 specifier|public
 specifier|static
 specifier|final
@@ -691,7 +691,7 @@ name|REQUIRE_ROLES
 init|=
 literal|"require.roles"
 decl_stmt|;
-comment|/**      * Whether to disable passing Username + Password credentials via "OnBehalfOf". If the      * REQUIRE_ROLES property (see above) is set to "true", then the Issue Binding is used      * and the credentials are passed via OnBehalfOf. If this (DISABLE_ON_BEHALF_OF) property      * is set to "true", then the credentials instead are passed through to the       * WS-SecurityPolicy layer and used depending on the security policy of the STS endpoint.      * For example, if the STS endpoint requires a WS-Security UsernameToken, then the       * credentials are inserted here.      */
+comment|/**      * Whether to disable passing Username + Password credentials via "OnBehalfOf". If the      * REQUIRE_ROLES property (see above) is set to "true", then the Issue Binding is used      * and the credentials are passed via OnBehalfOf. If this (DISABLE_ON_BEHALF_OF) property      * is set to "true", then the credentials instead are passed through to the      * WS-SecurityPolicy layer and used depending on the security policy of the STS endpoint.      * For example, if the STS endpoint requires a WS-Security UsernameToken, then the      * credentials are inserted here.      */
 specifier|public
 specifier|static
 specifier|final

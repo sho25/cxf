@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * This class contains values that have been extracted from a RequestSecurityToken corresponding to   * various key and encryption requirements.  */
+comment|/**  * This class contains values that have been extracted from a RequestSecurityToken corresponding to  * various key and encryption requirements.  */
 end_comment
 
 begin_class

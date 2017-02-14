@@ -2326,7 +2326,7 @@ name|VALID
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Renew an expired SAML2 Assertion. However the issuer does not allow the renewal of expired       * tokens.      */
+comment|/**      * Renew an expired SAML2 Assertion. However the issuer does not allow the renewal of expired      * tokens.      */
 annotation|@
 name|org
 operator|.

@@ -295,7 +295,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Mock up a SAML Assertion by using another SAMLCallbackHandler      * @throws Exception       */
+comment|/**      * Mock up a SAML Assertion by using another SAMLCallbackHandler      * @throws Exception      */
 specifier|private
 name|Element
 name|getSAMLAssertion

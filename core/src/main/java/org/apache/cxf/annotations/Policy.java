@@ -130,7 +130,7 @@ parameter_list|()
 default|default
 literal|true
 function_decl|;
-comment|/**      * The place to put the PolicyReference.  The Default depends on the       * location of the annotation.   On the method in the SEI, it would be      * the binding/operation, on the SEI, it would be the binding, on the       * service impl, the service element.      * @return location      */
+comment|/**      * The place to put the PolicyReference.  The Default depends on the      * location of the annotation.   On the method in the SEI, it would be      * the binding/operation, on the SEI, it would be the binding, on the      * service impl, the service element.      * @return location      */
 name|Placement
 name|placement
 parameter_list|()
@@ -139,7 +139,7 @@ name|Placement
 operator|.
 name|DEFAULT
 function_decl|;
-comment|/**      * If Placement is PORT_TYPE_OPERATION_FAULT, or BINDING_OPERATION_FAULT,      * return the fault class associated with this documentation       * @return the fault class      */
+comment|/**      * If Placement is PORT_TYPE_OPERATION_FAULT, or BINDING_OPERATION_FAULT,      * return the fault class associated with this documentation      * @return the fault class      */
 name|Class
 argument_list|<
 name|?

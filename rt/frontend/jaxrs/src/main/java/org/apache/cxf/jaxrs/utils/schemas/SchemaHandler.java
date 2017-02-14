@@ -330,7 +330,7 @@ decl_stmt|;
 specifier|public
 name|SchemaHandler
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|setBus

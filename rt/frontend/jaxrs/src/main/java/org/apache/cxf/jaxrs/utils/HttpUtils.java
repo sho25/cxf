@@ -1088,7 +1088,7 @@ name|find
 argument_list|()
 return|;
 block|}
-comment|/**      * Encodes partially encoded string. Encode all values but those matching pattern       * "percent char followed by two hexadecimal digits".      *       * @param encoded fully or partially encoded string.      * @return fully encoded string      */
+comment|/**      * Encodes partially encoded string. Encode all values but those matching pattern      * "percent char followed by two hexadecimal digits".      *      * @param encoded fully or partially encoded string.      * @return fully encoded string      */
 specifier|public
 specifier|static
 name|String

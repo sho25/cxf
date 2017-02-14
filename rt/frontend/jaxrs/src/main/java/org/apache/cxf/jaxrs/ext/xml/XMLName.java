@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to assign qualified XML names to arbitrary classes  * for the purpose of matching them with external schema definitions   *   */
+comment|/**  * Can be used to assign qualified XML names to arbitrary classes  * for the purpose of matching them with external schema definitions  *  */
 end_comment
 
 begin_annotation_defn
@@ -107,7 +107,7 @@ parameter_list|()
 default|default
 literal|""
 function_decl|;
-comment|/**      * Optional prefix       **/
+comment|/**      * Optional prefix      **/
 name|String
 name|prefix
 parameter_list|()

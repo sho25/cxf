@@ -276,7 +276,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This interceptor handles parsing the StaX WS-Security results (events) + checks that the  * specified crypto coverage events actually occurred. The default functionality is to enforce   * that the SOAP Body, Timestamp, and WS-Addressing ReplyTo and FaultTo headers must be signed,  * and the UsernameToken must be encrypted (if they exist in the message payload).  *   * Note that this interceptor must be explicitly added to the InInterceptor chain.  */
+comment|/**  * This interceptor handles parsing the StaX WS-Security results (events) + checks that the  * specified crypto coverage events actually occurred. The default functionality is to enforce  * that the SOAP Body, Timestamp, and WS-Addressing ReplyTo and FaultTo headers must be signed,  * and the UsernameToken must be encrypted (if they exist in the message payload).  *  * Note that this interceptor must be explicitly added to the InInterceptor chain.  */
 end_comment
 
 begin_class
@@ -2064,7 +2064,7 @@ operator|=
 name|signAddressingHeaders
 expr_stmt|;
 block|}
-comment|/**      * Create a SoapFault from a WSSecurityException, following the SOAP Message Security      * 1.1 specification, chapter 12 "Error Handling".      *       * When the Soap version is 1.1 then set the Fault/Code/Value from the fault code      * specified in the WSSecurityException (if it exists).      *       * Otherwise set the Fault/Code/Value to env:Sender and the Fault/Code/Subcode/Value      * as the fault code from the WSSecurityException.      */
+comment|/**      * Create a SoapFault from a WSSecurityException, following the SOAP Message Security      * 1.1 specification, chapter 12 "Error Handling".      *      * When the Soap version is 1.1 then set the Fault/Code/Value from the fault code      * specified in the WSSecurityException (if it exists).      *      * Otherwise set the Fault/Code/Value to env:Sender and the Fault/Code/Subcode/Value      * as the fault code from the WSSecurityException.      */
 specifier|private
 name|SoapFault
 name|createSoapFault

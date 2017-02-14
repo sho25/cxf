@@ -174,7 +174,7 @@ name|extended
 init|=
 literal|true
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|ExtendedWidget
 parameter_list|()
@@ -247,7 +247,7 @@ operator|=
 name|extended
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/*      * (non-Javadoc)      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -320,7 +320,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see java.lang.Object#toString()      */
+comment|/*      * (non-Javadoc)      *      * @see java.lang.Object#toString()      */
 annotation|@
 name|Override
 specifier|public

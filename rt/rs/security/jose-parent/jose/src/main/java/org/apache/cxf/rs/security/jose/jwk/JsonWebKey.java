@@ -437,7 +437,7 @@ decl_stmt|;
 specifier|public
 name|JsonWebKey
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JsonWebKey
 parameter_list|(

@@ -74,7 +74,7 @@ class|class
 name|GreeterImplTwoWayJMSAppCorrelationIDStaticPrefixEng
 extends|extends
 name|TwoWayJMSImplBase
-block|{          }
+block|{  }
 end_class
 
 end_unit

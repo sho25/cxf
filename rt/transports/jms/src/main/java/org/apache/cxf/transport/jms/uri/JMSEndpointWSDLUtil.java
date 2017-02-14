@@ -239,7 +239,7 @@ specifier|private
 name|JMSEndpointWSDLUtil
 parameter_list|()
 block|{     }
-comment|/**      * Retrieve JMS spec configs from wsdl and write them to the JMSEndpoint      * If a property is already set on the JMSEndpoint it will not be overwritten       *       * @param endpoint      * @param ei      */
+comment|/**      * Retrieve JMS spec configs from wsdl and write them to the JMSEndpoint      * If a property is already set on the JMSEndpoint it will not be overwritten      *      * @param endpoint      * @param ei      */
 specifier|static
 name|void
 name|retrieveWSDLInformation

@@ -224,8 +224,8 @@ block|{
 specifier|private
 name|OAuthClientUtils
 parameter_list|()
-block|{              }
-comment|/**      * Returns URI of the authorization service with the query parameter containing       * the request token key       * @param authorizationServiceURI the service URI      * @param requestToken the request token key      * @return      */
+block|{      }
+comment|/**      * Returns URI of the authorization service with the query parameter containing      * the request token key      * @param authorizationServiceURI the service URI      * @param requestToken the request token key      * @return      */
 specifier|public
 specifier|static
 name|URI
@@ -257,7 +257,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Returns a simple representation of the Request token      * @param requestTokenService initialized RequestToken service client      * @param consumer Consumer bean containing the consumer key and secret      * @param callback the callback URI where the request token verifier will      *        be returned       * @param extraParams additional parameters such as state, scope, etc      * @return the token      */
+comment|/**      * Returns a simple representation of the Request token      * @param requestTokenService initialized RequestToken service client      * @param consumer Consumer bean containing the consumer key and secret      * @param callback the callback URI where the request token verifier will      *        be returned      * @param extraParams additional parameters such as state, scope, etc      * @return the token      */
 specifier|public
 specifier|static
 name|Token

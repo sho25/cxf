@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -48,7 +48,7 @@ specifier|public
 interface|interface
 name|ThrottlingManager
 block|{
-comment|/**      * Get the list of phases where this manager will expect to have to make throttling decisions.      * For example: using BasicAuth or other protocol based header, it can be a very early in the       * chain, but for WS-Security based authentication, it would be later.       * @return      */
+comment|/**      * Get the list of phases where this manager will expect to have to make throttling decisions.      * For example: using BasicAuth or other protocol based header, it can be a very early in the      * chain, but for WS-Security based authentication, it would be later.      * @return      */
 name|List
 argument_list|<
 name|String

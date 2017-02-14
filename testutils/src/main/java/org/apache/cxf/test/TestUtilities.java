@@ -529,7 +529,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**      * This class provides utilities to several conflicting inheritance stacks      * of test support. Thus, it can't be a base class, and so can't use      * getClass() to find resources. Users should pass getClass() to this      * constructor instead.      *       * @param classpathReference      */
+comment|/**      * This class provides utilities to several conflicting inheritance stacks      * of test support. Thus, it can't be a base class, and so can't use      * getClass() to find resources. Users should pass getClass() to this      * constructor instead.      *      * @param classpathReference      */
 specifier|public
 name|TestUtilities
 parameter_list|(
@@ -768,7 +768,7 @@ return|return
 name|url
 return|;
 block|}
-comment|/**      * Assert that the following XPath query selects one or more nodes.      *       * @param xpath      * @throws Exception      */
+comment|/**      * Assert that the following XPath query selects one or more nodes.      *      * @param xpath      * @throws Exception      */
 specifier|public
 name|NodeList
 name|assertValid
@@ -795,7 +795,7 @@ name|namespaces
 argument_list|)
 return|;
 block|}
-comment|/**      * Assert that the following XPath query selects a boolean value.      *       * @param xpath      * @throws Exception      */
+comment|/**      * Assert that the following XPath query selects a boolean value.      *      * @param xpath      * @throws Exception      */
 specifier|public
 name|void
 name|assertValidBoolean
@@ -821,7 +821,7 @@ name|namespaces
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Assert that the following XPath query selects no nodes.      *       * @param xpath      */
+comment|/**      * Assert that the following XPath query selects no nodes.      *      * @param xpath      */
 specifier|public
 name|NodeList
 name|assertInvalid
@@ -848,7 +848,7 @@ name|namespaces
 argument_list|)
 return|;
 block|}
-comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
 name|void
 name|assertXPathEquals
@@ -879,7 +879,7 @@ name|namespaces
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
 name|void
 name|assertXPathEquals
@@ -910,7 +910,7 @@ name|namespaces
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Assert that this node is not a Soap fault body.      *       * @param node      * @throws Exception      */
+comment|/**      * Assert that this node is not a Soap fault body.      *      * @param node      * @throws Exception      */
 specifier|public
 name|void
 name|assertNoFault
@@ -1471,7 +1471,7 @@ return|return
 name|basedirPath
 return|;
 block|}
-comment|/**      * Return a DOM tree for the WSDL for a server.      *       * @param server the server.      * @return the DOM tree.      * @throws WSDLException      */
+comment|/**      * Return a DOM tree for the WSDL for a server.      *      * @param server the server.      * @return the DOM tree.      * @throws WSDLException      */
 specifier|public
 name|Document
 name|getWSDLDocument
@@ -1510,7 +1510,7 @@ name|definition
 argument_list|)
 return|;
 block|}
-comment|/**      * Return a WSDL definition model for a server.      *       * @param server the server.      * @return the definition.      * @throws WSDLException      */
+comment|/**      * Return a WSDL definition model for a server.      *      * @param server the server.      * @return the definition.      * @throws WSDLException      */
 specifier|public
 name|Definition
 name|getWSDLDefinition
@@ -1839,7 +1839,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Add a namespace that will be used for XPath expressions.      *       * @param ns Namespace name.      * @param uri The namespace uri.      */
+comment|/**      * Add a namespace that will be used for XPath expressions.      *      * @param ns Namespace name.      * @param uri The namespace uri.      */
 specifier|public
 name|void
 name|addNamespace
@@ -1861,7 +1861,7 @@ name|uri
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * retrieve the entire namespace map.      *       * @return      */
+comment|/**      * retrieve the entire namespace map.      *      * @return      */
 specifier|public
 name|Map
 argument_list|<
@@ -1876,7 +1876,7 @@ return|return
 name|namespaces
 return|;
 block|}
-comment|/**      * Return the CXF bus used.      *       * @return      */
+comment|/**      * Return the CXF bus used.      *      * @return      */
 specifier|public
 name|Bus
 name|getBus
@@ -1886,7 +1886,7 @@ return|return
 name|bus
 return|;
 block|}
-comment|/**      * Set the CXF bus.      *       * @param bus      */
+comment|/**      * Set the CXF bus.      *      * @param bus      */
 specifier|public
 name|void
 name|setBus

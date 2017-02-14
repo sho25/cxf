@@ -290,7 +290,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Parses<a href="http://tools.ietf.org/html/draft-nottingham-atompub-fiql-00">FIQL</a> expression to  * construct {@link SearchCondition} structure. Since this class operates on Java type T, not on XML  * structures "selectors" part of specification is not applicable; instead selectors describes getters of type  * T used as search condition type (see {@link SimpleSearchCondition#isMet(Object)} for details.  *   * @param<T> type of search condition.  */
+comment|/**  * Parses<a href="http://tools.ietf.org/html/draft-nottingham-atompub-fiql-00">FIQL</a> expression to  * construct {@link SearchCondition} structure. Since this class operates on Java type T, not on XML  * structures "selectors" part of specification is not applicable; instead selectors describes getters of type  * T used as search condition type (see {@link SimpleSearchCondition#isMet(Object)} for details.  *  * @param<T> type of search condition.  */
 end_comment
 
 begin_class
@@ -663,7 +663,7 @@ name|comparatorsPattern
 init|=
 name|COMPARATORS_PATTERN
 decl_stmt|;
-comment|/**      * Creates FIQL parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      */
+comment|/**      * Creates FIQL parser.      *      * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      */
 specifier|public
 name|FiqlParser
 parameter_list|(
@@ -690,7 +690,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates FIQL parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      * @param contextProperties                  */
+comment|/**      * Creates FIQL parser.      *      * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      * @param contextProperties      */
 specifier|public
 name|FiqlParser
 parameter_list|(
@@ -719,7 +719,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates FIQL parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      * @param contextProperties      * @param beanProperties       */
+comment|/**      * Creates FIQL parser.      *      * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in FIQL expressions.      * @param contextProperties      * @param beanProperties      */
 specifier|public
 name|FiqlParser
 parameter_list|(
@@ -798,7 +798,7 @@ name|COMPARATORS_PATTERN_SINGLE_EQUALS
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Parses expression and builds search filter. Names used in FIQL expression are names of getters/setters      * in type T.      *<p>      * Example:      *       *<pre>      * class Condition {      *   public String getFoo() {...}      *   public void setFoo(String foo) {...}      *   public int getBar() {...}      *   public void setBar(int bar) {...}      * }      *       * FiqlParser&lt;Condition> parser = new FiqlParser&lt;Condition&gt;(Condition.class);      * parser.parse("foo==mystery*;bar=ge=10");      *</pre>      *       * @param fiqlExpression expression of filter.      * @return tree of {@link SearchCondition} objects representing runtime search structure.      * @throws SearchParseException when expression does not follow FIQL grammar      */
+comment|/**      * Parses expression and builds search filter. Names used in FIQL expression are names of getters/setters      * in type T.      *<p>      * Example:      *      *<pre>      * class Condition {      *   public String getFoo() {...}      *   public void setFoo(String foo) {...}      *   public int getBar() {...}      *   public void setBar(int bar) {...}      * }      *      * FiqlParser&lt;Condition> parser = new FiqlParser&lt;Condition&gt;(Condition.class);      * parser.parse("foo==mystery*;bar=ge=10");      *</pre>      *      * @param fiqlExpression expression of filter.      * @return tree of {@link SearchCondition} objects representing runtime search structure.      * @throws SearchParseException when expression does not follow FIQL grammar      */
 annotation|@
 name|Override
 specifier|public

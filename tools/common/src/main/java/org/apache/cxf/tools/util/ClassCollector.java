@@ -259,7 +259,7 @@ decl_stmt|;
 specifier|public
 name|ClassCollector
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|reserveClass

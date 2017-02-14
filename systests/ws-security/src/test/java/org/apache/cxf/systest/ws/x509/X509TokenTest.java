@@ -356,7 +356,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for X.509 Tokens.   */
+comment|/**  * A set of tests for X.509 Tokens.  */
 end_comment
 
 begin_class

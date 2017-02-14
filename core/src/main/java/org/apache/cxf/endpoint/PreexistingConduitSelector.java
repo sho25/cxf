@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Strategy for retreival of a pre-existing Conduit to mediate an   * outbound message.  */
+comment|/**  * Strategy for retreival of a pre-existing Conduit to mediate an  * outbound message.  */
 end_comment
 
 begin_class
@@ -112,7 +112,7 @@ specifier|private
 name|Endpoint
 name|endpoint
 decl_stmt|;
-comment|/**      * Constructor.      *       * @param c the pre-existing Conduit.      */
+comment|/**      * Constructor.      *      * @param c the pre-existing Conduit.      */
 specifier|public
 name|PreexistingConduitSelector
 parameter_list|(
@@ -128,7 +128,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor.      *       * @param c the pre-existing Conduit.      * @param e the target Endpoint      */
+comment|/**      * Constructor.      *      * @param c the pre-existing Conduit.      * @param e the target Endpoint      */
 specifier|public
 name|PreexistingConduitSelector
 parameter_list|(
@@ -148,7 +148,7 @@ operator|=
 name|e
 expr_stmt|;
 block|}
-comment|/**      * Called prior to the interceptor chain being traversed.      *       * @param message the current Message      */
+comment|/**      * Called prior to the interceptor chain being traversed.      *      * @param message the current Message      */
 specifier|public
 name|void
 name|prepare
@@ -188,7 +188,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Called when a Conduit is actually required.      *       * @param message      * @return the Conduit to use for mediation of the message      */
+comment|/**      * Called when a Conduit is actually required.      *      * @param message      * @return the Conduit to use for mediation of the message      */
 specifier|public
 name|Conduit
 name|selectConduit
@@ -201,7 +201,7 @@ return|return
 name|selectedConduit
 return|;
 block|}
-comment|/**      * Called on completion of the MEP for which the Conduit was required.      *       * @param exchange represents the completed MEP      */
+comment|/**      * Called on completion of the MEP for which the Conduit was required.      *      * @param exchange represents the completed MEP      */
 specifier|public
 name|void
 name|complete

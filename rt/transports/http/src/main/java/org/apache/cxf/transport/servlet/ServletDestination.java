@@ -146,7 +146,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|/**      * Constructor, allowing subsititution of configuration.      *       * @param b the associated Bus      * @param ci the associated conduit initiator      * @param ei the endpoint info of the destination       * @param cfg the configuration      * @throws IOException      */
+comment|/**      * Constructor, allowing subsititution of configuration.      *      * @param b the associated Bus      * @param ci the associated conduit initiator      * @param ei the endpoint info of the destination      * @param cfg the configuration      * @throws IOException      */
 specifier|public
 name|ServletDestination
 parameter_list|(

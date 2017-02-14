@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to add custom XML processing   * instructions to out-bound XML messages   */
+comment|/**  * Can be used to add custom XML processing  * instructions to out-bound XML messages  */
 end_comment
 
 begin_annotation_defn

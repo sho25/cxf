@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Captures the information associated with the request token registration request.  * @see RequestToken    */
+comment|/**  * Captures the information associated with the request token registration request.  * @see RequestToken  */
 end_comment
 
 begin_class

@@ -175,7 +175,7 @@ decl_stmt|;
 specifier|public
 name|ClientLifeCycleManagerImpl
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ClientLifeCycleManagerImpl
 parameter_list|(

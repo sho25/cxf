@@ -490,7 +490,7 @@ block|}
 specifier|private
 name|SwaggerUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|UserApplication

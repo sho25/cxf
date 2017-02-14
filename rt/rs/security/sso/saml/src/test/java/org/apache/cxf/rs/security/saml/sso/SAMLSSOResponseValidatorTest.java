@@ -3856,7 +3856,7 @@ name|policyElement
 argument_list|)
 return|;
 block|}
-comment|/**      * Sign a SAML Response      * @throws Exception       */
+comment|/**      * Sign a SAML Response      * @throws Exception      */
 specifier|private
 name|void
 name|signResponse

@@ -1991,7 +1991,7 @@ name|EXPIRED
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test a SAML 1.1 Assertion using Certificate Constraints       */
+comment|/**      * Test a SAML 1.1 Assertion using Certificate Constraints      */
 annotation|@
 name|org
 operator|.

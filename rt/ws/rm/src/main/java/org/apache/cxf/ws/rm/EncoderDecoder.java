@@ -279,7 +279,7 @@ specifier|abstract
 class|class
 name|EncoderDecoder
 block|{
-comment|/**      * Get context for JAXB marshalling/unmarshalling.      *       * @return context      * @throws JAXBException      */
+comment|/**      * Get context for JAXB marshalling/unmarshalling.      *      * @return context      * @throws JAXBException      */
 specifier|protected
 specifier|abstract
 name|JAXBContext
@@ -288,28 +288,28 @@ parameter_list|()
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Get the WS-ReliableMessaging namespace used by this encoder/decoder.      *       * @return URI      */
+comment|/**      * Get the WS-ReliableMessaging namespace used by this encoder/decoder.      *      * @return URI      */
 specifier|public
 specifier|abstract
 name|String
 name|getWSRMNamespace
 parameter_list|()
 function_decl|;
-comment|/**      * Get the WS-Addressing namespace used by this encoder/decoder.      *       * @return URI      */
+comment|/**      * Get the WS-Addressing namespace used by this encoder/decoder.      *      * @return URI      */
 specifier|public
 specifier|abstract
 name|String
 name|getWSANamespace
 parameter_list|()
 function_decl|;
-comment|/**      * Get the WS-ReliableMessaging constants used by this encoder/decoder.      *       * @return      */
+comment|/**      * Get the WS-ReliableMessaging constants used by this encoder/decoder.      *      * @return      */
 specifier|public
 specifier|abstract
 name|RMConstants
 name|getConstants
 parameter_list|()
 function_decl|;
-comment|/**      * Get the class used for the CreateSequenceType.      *       * @return class      */
+comment|/**      * Get the class used for the CreateSequenceType.      *      * @return class      */
 specifier|public
 specifier|abstract
 name|Class
@@ -319,7 +319,7 @@ argument_list|>
 name|getCreateSequenceType
 parameter_list|()
 function_decl|;
-comment|/**      * Get the class used for the CreateSequenceResponseType.      *       * @return class      */
+comment|/**      * Get the class used for the CreateSequenceResponseType.      *      * @return class      */
 specifier|public
 specifier|abstract
 name|Class
@@ -329,7 +329,7 @@ argument_list|>
 name|getCreateSequenceResponseType
 parameter_list|()
 function_decl|;
-comment|/**      * Get the class used for the TerminateSequenceType.      *       * @return class      */
+comment|/**      * Get the class used for the TerminateSequenceType.      *      * @return class      */
 specifier|public
 specifier|abstract
 name|Class
@@ -339,7 +339,7 @@ argument_list|>
 name|getTerminateSequenceType
 parameter_list|()
 function_decl|;
-comment|/**      * Get the class used for the TerminateSequenceResponseType.      *       * @return class      */
+comment|/**      * Get the class used for the TerminateSequenceResponseType.      *      * @return class      */
 specifier|public
 specifier|abstract
 name|Class
@@ -349,7 +349,7 @@ argument_list|>
 name|getTerminateSequenceResponseType
 parameter_list|()
 function_decl|;
-comment|/**      * Builds an element containing WS-RM headers. This adds the appropriate WS-RM namespace declaration to the element,      * and then adds any WS-RM headers set in the supplied properties as child elements.      *       * @param rmps      * @param qname constructed element name      * @return element (<code>null</code> if none)      */
+comment|/**      * Builds an element containing WS-RM headers. This adds the appropriate WS-RM namespace declaration to the element,      * and then adds any WS-RM headers set in the supplied properties as child elements.      *      * @param rmps      * @param qname constructed element name      * @return element (<code>null</code> if none)      */
 specifier|public
 name|Element
 name|buildHeaders
@@ -490,7 +490,7 @@ return|return
 name|header
 return|;
 block|}
-comment|/**      * Add WS-RM namespace declaration to element.      *       * @param element      */
+comment|/**      * Add WS-RM namespace declaration to element.      *      * @param element      */
 specifier|protected
 name|void
 name|addNamespaceDecl
@@ -534,7 +534,7 @@ name|attr
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Builds an element containing a WS-RM Fault. This adds the appropriate WS-RM namespace declaration to      * the element, and then adds the Fault as a child element.      *       * @param sf      * @param qname constructed element name      * @return element      */
+comment|/**      * Builds an element containing a WS-RM Fault. This adds the appropriate WS-RM namespace declaration to      * the element, and then adds the Fault as a child element.      *      * @param sf      * @param qname constructed element name      * @return element      */
 specifier|public
 name|Element
 name|buildHeaderFault
@@ -616,7 +616,7 @@ return|return
 name|header
 return|;
 block|}
-comment|/**      * Build all required headers, using the correct protocol variation.      *       * @param seq      * @param acks      * @param reqs      * @param last      * @param header      * @param marshaller      * @throws JAXBException      */
+comment|/**      * Build all required headers, using the correct protocol variation.      *      * @param seq      * @param acks      * @param reqs      * @param last      * @param header      * @param marshaller      * @throws JAXBException      */
 specifier|protected
 specifier|abstract
 name|void
@@ -649,7 +649,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Build a header fault, using the correct protocol variation.      *       * @param sf      * @param header      * @param marshaller      * @throws JAXBException      */
+comment|/**      * Build a header fault, using the correct protocol variation.      *      * @param sf      * @param header      * @param marshaller      * @throws JAXBException      */
 specifier|protected
 specifier|abstract
 name|void
@@ -667,7 +667,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Marshals a SequenceAcknowledgement to the appropriate external form.      *       * @param ack      * @return element      * @throws JAXBException      */
+comment|/**      * Marshals a SequenceAcknowledgement to the appropriate external form.      *      * @param ack      * @return element      * @throws JAXBException      */
 specifier|public
 specifier|abstract
 name|Element
@@ -679,7 +679,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Marshals an Identifier to the appropriate external form.      *       * @param id      * @return element      * @throws JAXBException      */
+comment|/**      * Marshals an Identifier to the appropriate external form.      *      * @param id      * @return element      * @throws JAXBException      */
 specifier|public
 specifier|abstract
 name|Element
@@ -691,7 +691,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Unmarshals a SequenceType, converting it if necessary to the internal form.      *       * @param elem      * @return      * @throws JAXBException      */
+comment|/**      * Unmarshals a SequenceType, converting it if necessary to the internal form.      *      * @param elem      * @return      * @throws JAXBException      */
 specifier|public
 specifier|abstract
 name|SequenceType
@@ -703,7 +703,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Generates a CloseSequenceType if a SequenceType represents a last message state.      *       * @param elem      * @return CloseSequenceType if last message state, else<code>null</code>      * @throws JAXBException      */
+comment|/**      * Generates a CloseSequenceType if a SequenceType represents a last message state.      *      * @param elem      * @return CloseSequenceType if last message state, else<code>null</code>      * @throws JAXBException      */
 specifier|public
 specifier|abstract
 name|CloseSequenceType
@@ -715,7 +715,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Unmarshals a SequenceAcknowledgement, converting it if necessary to the internal form.      *       * @param elem      * @return      * @throws JAXBException      */
+comment|/**      * Unmarshals a SequenceAcknowledgement, converting it if necessary to the internal form.      *      * @param elem      * @return      * @throws JAXBException      */
 specifier|public
 specifier|abstract
 name|SequenceAcknowledgement
@@ -727,7 +727,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Unmarshals a AckRequestedType, converting it if necessary to the internal form.      *       * @param elem      * @return      * @throws JAXBException      */
+comment|/**      * Unmarshals a AckRequestedType, converting it if necessary to the internal form.      *      * @param elem      * @return      * @throws JAXBException      */
 specifier|public
 specifier|abstract
 name|AckRequestedType
@@ -739,7 +739,7 @@ parameter_list|)
 throws|throws
 name|JAXBException
 function_decl|;
-comment|/**      * Convert a CreateSequence message to the correct format for transmission.      *       * @param create      * @return converted      */
+comment|/**      * Convert a CreateSequence message to the correct format for transmission.      *      * @param create      * @return converted      */
 specifier|public
 specifier|abstract
 name|Object
@@ -749,7 +749,7 @@ name|CreateSequenceType
 name|create
 parameter_list|)
 function_decl|;
-comment|/**      * Convert a CreateSequenceResponse message to the correct format for transmission.      *       * @param create      * @return converted      */
+comment|/**      * Convert a CreateSequenceResponse message to the correct format for transmission.      *      * @param create      * @return converted      */
 specifier|public
 specifier|abstract
 name|Object
@@ -759,7 +759,7 @@ name|CreateSequenceResponseType
 name|create
 parameter_list|)
 function_decl|;
-comment|/**      * Convert a TerminateSequence message to the correct format for transmission.      *       * @param term      * @return converted      */
+comment|/**      * Convert a TerminateSequence message to the correct format for transmission.      *      * @param term      * @return converted      */
 specifier|public
 specifier|abstract
 name|Object
@@ -769,7 +769,7 @@ name|TerminateSequenceType
 name|term
 parameter_list|)
 function_decl|;
-comment|/**      * Convert a received TerminateSequence message to internal form.      *       * @param term      * @return converted      */
+comment|/**      * Convert a received TerminateSequence message to internal form.      *      * @param term      * @return converted      */
 specifier|public
 specifier|abstract
 name|TerminateSequenceType
@@ -779,7 +779,7 @@ name|Object
 name|term
 parameter_list|)
 function_decl|;
-comment|/**      * Convert a received CreateSequence message to internal form.      *       * @param create      * @return converted      */
+comment|/**      * Convert a received CreateSequence message to internal form.      *      * @param create      * @return converted      */
 specifier|public
 specifier|abstract
 name|CreateSequenceType
@@ -789,7 +789,7 @@ name|Object
 name|create
 parameter_list|)
 function_decl|;
-comment|/**      * Convert a received CreateSequenceResponse message to internal form.      *       * @param create      * @return converted      */
+comment|/**      * Convert a received CreateSequenceResponse message to internal form.      *      * @param create      * @return converted      */
 specifier|public
 specifier|abstract
 name|CreateSequenceResponseType

@@ -579,7 +579,7 @@ class|class
 name|QueryBean2
 extends|extends
 name|QueryBean
-block|{              }
+block|{      }
 block|}
 end_class
 

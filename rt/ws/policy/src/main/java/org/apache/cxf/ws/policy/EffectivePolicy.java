@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Describes the effective policy of an outbound message.   */
+comment|/**  * Describes the effective policy of an outbound message.  */
 end_comment
 
 begin_interface

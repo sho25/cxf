@@ -182,7 +182,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is called from LogUtils as LogUtils is almost always one of the VERY  * first classes loaded in CXF so we can try and register to hacks/workarounds  * for various bugs in the JDK.  *   * Much of this is taken from work the Tomcat folks have done to find  * places where memory leaks and jars are locked and such.  * See:  * http://svn.apache.org/viewvc/tomcat/trunk/java/org/apache/catalina/  * core/JreMemoryLeakPreventionListener.java  *   */
+comment|/**  * This is called from LogUtils as LogUtils is almost always one of the VERY  * first classes loaded in CXF so we can try and register to hacks/workarounds  * for various bugs in the JDK.  *  * Much of this is taken from work the Tomcat folks have done to find  * places where memory leaks and jars are locked and such.  * See:  * http://svn.apache.org/viewvc/tomcat/trunk/java/org/apache/catalina/  * core/JreMemoryLeakPreventionListener.java  *  */
 end_comment
 
 begin_class

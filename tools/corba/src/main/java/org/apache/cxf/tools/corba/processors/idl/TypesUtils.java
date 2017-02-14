@@ -161,7 +161,7 @@ parameter_list|()
 block|{
 comment|//complete
 block|}
-comment|/** Returns node corresponding to the name of the CORBA primitive type node.      *       * @param node      * @return      */
+comment|/** Returns node corresponding to the name of the CORBA primitive type node.      *      * @param node      * @return      */
 specifier|public
 specifier|static
 name|AST

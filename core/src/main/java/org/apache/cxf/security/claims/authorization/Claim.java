@@ -109,14 +109,14 @@ index|[]
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * If set to true then all the values of this claim have to be matched       */
+comment|/**      * If set to true then all the values of this claim have to be matched      */
 name|boolean
 name|matchAll
 parameter_list|()
 default|default
 literal|false
 function_decl|;
-comment|/**      * If set to ClaimMode.LAX then the match will fail only if the incoming      * assertion has the same name and format claim with non-matching values        */
+comment|/**      * If set to ClaimMode.LAX then the match will fail only if the incoming      * assertion has the same name and format claim with non-matching values      */
 name|ClaimMode
 name|mode
 parameter_list|()

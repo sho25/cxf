@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *  This wrapper helper will help to create a wrapper object with part elements or   *  get a list of part elements from a wrapper object.  */
+comment|/**  *  This wrapper helper will help to create a wrapper object with part elements or  *  get a list of part elements from a wrapper object.  */
 end_comment
 
 begin_interface

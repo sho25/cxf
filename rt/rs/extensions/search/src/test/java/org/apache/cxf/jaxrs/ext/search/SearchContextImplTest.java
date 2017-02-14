@@ -1714,7 +1714,7 @@ decl_stmt|;
 specifier|public
 name|TheOwnerAddress
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|TheOwnerAddress
 parameter_list|(

@@ -142,7 +142,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class does some trivial validation of a received SAML Assertion. It checks that it is  * a SAML 2 Assertion, and checks the issuer name and that it has an Attribute Statement.   */
+comment|/**  * This class does some trivial validation of a received SAML Assertion. It checks that it is  * a SAML 2 Assertion, and checks the issuer name and that it has an Attribute Statement.  */
 end_comment
 
 begin_class

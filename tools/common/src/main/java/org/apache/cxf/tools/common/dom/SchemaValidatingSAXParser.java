@@ -142,7 +142,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * (not thread safe)  *   */
+comment|/**  * (not thread safe)  *  */
 end_comment
 
 begin_class

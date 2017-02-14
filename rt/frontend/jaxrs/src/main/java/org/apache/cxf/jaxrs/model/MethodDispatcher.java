@@ -133,7 +133,7 @@ decl_stmt|;
 specifier|public
 name|MethodDispatcher
 parameter_list|()
-block|{              }
+block|{      }
 name|MethodDispatcher
 parameter_list|(
 name|MethodDispatcher

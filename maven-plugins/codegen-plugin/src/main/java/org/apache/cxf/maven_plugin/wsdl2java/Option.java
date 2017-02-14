@@ -123,7 +123,7 @@ name|separator
 operator|+
 literal|"defaultBinding.xml"
 decl_stmt|;
-comment|/**      * As maven will set null for an empty parameter we need      * this horrid initial value to tell if it has been       * configured or not yet.      */
+comment|/**      * As maven will set null for an empty parameter we need      * this horrid initial value to tell if it has been      * configured or not yet.      */
 specifier|private
 specifier|static
 specifier|final
@@ -132,7 +132,7 @@ name|DEFAULT_WSDL_LOCATION
 init|=
 literal|"DEFAULTWSDLLOCATION - WORKAROUND"
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|protected
 name|List
 argument_list|<
@@ -191,7 +191,7 @@ specifier|protected
 name|File
 name|outputDir
 decl_stmt|;
-comment|/**      * Ignore the specified WSDL schema namespace when generating code.      * Also, optionally specifies the Java package name used by types described in the excluded       * namespace(s) using schema-namespace[=java-packagename]      */
+comment|/**      * Ignore the specified WSDL schema namespace when generating code.      * Also, optionally specifies the Java package name used by types described in the excluded      * namespace(s) using schema-namespace[=java-packagename]      */
 name|List
 argument_list|<
 name|String
@@ -207,11 +207,11 @@ comment|/**      * Enables or disables the loading of the default excludes names
 name|Boolean
 name|defaultExcludesNamespace
 decl_stmt|;
-comment|/**      * Enables or disables the loading of the default namespace package name mapping. Default is true and       *<a href=""http://www.w3.org/2005/08/addressing">      * http://www.w3.org/2005/08/addressing=org.apache.cxf.ws.addressingnamespace</a>       * package mapping will be enabled.      */
+comment|/**      * Enables or disables the loading of the default namespace package name mapping. Default is true and      *<a href=""http://www.w3.org/2005/08/addressing">      * http://www.w3.org/2005/08/addressing=org.apache.cxf.ws.addressingnamespace</a>      * package mapping will be enabled.      */
 name|Boolean
 name|defaultNamespacePackageMapping
 decl_stmt|;
-comment|/**      * A set of dependent files used to detect that the generator must process WSDL, even       * if generator marker files are up to date.      */
+comment|/**      * A set of dependent files used to detect that the generator must process WSDL, even      * if generator marker files are up to date.      */
 name|String
 name|dependencies
 index|[]
@@ -233,7 +233,7 @@ name|HashSet
 argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|/**      * Specifies the value of the @WebServiceClient annotation's wsdlLocation property.       */
+comment|/**      * Specifies the value of the @WebServiceClient annotation's wsdlLocation property.      */
 name|String
 name|wsdlLocation
 init|=
@@ -259,11 +259,11 @@ comment|/**      * Specify catalog file to map the imported wsdl/schema      */
 name|String
 name|catalog
 decl_stmt|;
-comment|/**      * Enables or disables processing of implicit SOAP headers (i.e. SOAP headers defined in the       * wsdl:binding but not wsdl:portType section.) Default is false.      */
+comment|/**      * Enables or disables processing of implicit SOAP headers (i.e. SOAP headers defined in the      * wsdl:binding but not wsdl:portType section.) Default is false.      */
 name|Boolean
 name|extendedSoapHeaders
 decl_stmt|;
-comment|/**      * Enables validating the WSDL before generating the code.       */
+comment|/**      * Enables validating the WSDL before generating the code.      */
 name|String
 name|validateWsdl
 decl_stmt|;
@@ -307,7 +307,7 @@ comment|/**      * Disable generation of service address binding in the generate
 name|Boolean
 name|noAddressBinding
 decl_stmt|;
-comment|/**      * Allow element references when determining if an operation can be unwrapped or not       */
+comment|/**      * Allow element references when determining if an operation can be unwrapped or not      */
 name|Boolean
 name|allowElementRefs
 decl_stmt|;

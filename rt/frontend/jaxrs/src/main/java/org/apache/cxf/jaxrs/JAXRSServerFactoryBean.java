@@ -470,7 +470,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Bean to help easily create Server endpoints for JAX-RS. Example:  *<pre>  * JAXRSServerFactoryBean sf = JAXRSServerFactoryBean();  * sf.setResourceClasses(Book.class);  * sf.setBindingId(JAXRSBindingFactory.JAXRS_BINDING_ID);  * sf.setAddress("http://localhost:9080/");  * Server myServer = sf.create();  *</pre>  * This will start a server for you and register it with the ServerManager.  Note   * you should explicitly close the {@link org.apache.cxf.endpoint.Server} created  * when finished with it:  *<pre>  * myServer.close();  * myServer.destroy(); // closes first if close() not previously called  *</pre>   */
+comment|/**  * Bean to help easily create Server endpoints for JAX-RS. Example:  *<pre>  * JAXRSServerFactoryBean sf = JAXRSServerFactoryBean();  * sf.setResourceClasses(Book.class);  * sf.setBindingId(JAXRSBindingFactory.JAXRS_BINDING_ID);  * sf.setAddress("http://localhost:9080/");  * Server myServer = sf.create();  *</pre>  * This will start a server for you and register it with the ServerManager.  Note  * you should explicitly close the {@link org.apache.cxf.endpoint.Server} created  * when finished with it:  *<pre>  * myServer.close();  * myServer.destroy(); // closes first if close() not previously called  *</pre>  */
 end_comment
 
 begin_class
@@ -679,7 +679,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Resource comparator which may be used to customize the way       * a root resource or resource method is selected       * @param rcomp comparator      */
+comment|/**      * Resource comparator which may be used to customize the way      * a root resource or resource method is selected      * @param rcomp comparator      */
 specifier|public
 name|void
 name|setResourceComparator
@@ -693,7 +693,7 @@ operator|=
 name|rcomp
 expr_stmt|;
 block|}
-comment|/**      * By default the subresources are resolved dynamically, mainly due to      * the JAX-RS specification allowing Objects being returned from the subresource      * locators. Setting this property to true enables the runtime to do the       * early resolution.      *       * @param enableStatic enabling the static resolution if set to true      */
+comment|/**      * By default the subresources are resolved dynamically, mainly due to      * the JAX-RS specification allowing Objects being returned from the subresource      * locators. Setting this property to true enables the runtime to do the      * early resolution.      *      * @param enableStatic enabling the static resolution if set to true      */
 specifier|public
 name|void
 name|setStaticSubresourceResolution
@@ -1298,7 +1298,7 @@ name|createInvoker
 argument_list|()
 return|;
 block|}
-comment|/**      * Sets the language mappings,       * example, 'en' is the key and 'en-gb' is the value.      *       * @param lMaps the language mappings      */
+comment|/**      * Sets the language mappings,      * example, 'en' is the key and 'en-gb' is the value.      *      * @param lMaps the language mappings      */
 specifier|public
 name|void
 name|setLanguageMappings
@@ -1317,7 +1317,7 @@ operator|=
 name|lMaps
 expr_stmt|;
 block|}
-comment|/**      * Sets the extension mappings,       * example, 'xml' is the key and 'text/xml' is the value.      *       * @param lMaps the extension mappings      */
+comment|/**      * Sets the extension mappings,      * example, 'xml' is the key and 'text/xml' is the value.      *      * @param lMaps the extension mappings      */
 specifier|public
 name|void
 name|setExtensionMappings
@@ -1374,7 +1374,7 @@ name|clazz
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets one or more root resource classes       * @param classes the list of resource classes      */
+comment|/**      * Sets one or more root resource classes      * @param classes the list of resource classes      */
 specifier|public
 name|void
 name|setResourceClasses
@@ -1397,7 +1397,7 @@ name|classes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets one or more root resource classes       * @param classes the array of resource classes      */
+comment|/**      * Sets one or more root resource classes      * @param classes the array of resource classes      */
 specifier|public
 name|void
 name|setResourceClasses
@@ -1418,7 +1418,7 @@ name|classes
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the resource beans. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      *       * @param beans the array of resource instances      */
+comment|/**      * Sets the resource beans. If this is set then the JAX-RS runtime      * will not be responsible for the life-cycle of resource classes.      *      * @param beans the array of resource instances      */
 specifier|public
 name|void
 name|setServiceBeanObjects
@@ -1439,7 +1439,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the single resource bean. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      * Please avoid setting the resource class of this bean explicitly,      * the runtime will determine it itself.        *       * @param bean resource instance      */
+comment|/**      * Sets the single resource bean. If this is set then the JAX-RS runtime      * will not be responsible for the life-cycle of resource classes.      * Please avoid setting the resource class of this bean explicitly,      * the runtime will determine it itself.      *      * @param bean resource instance      */
 specifier|public
 name|void
 name|setServiceBean
@@ -1459,7 +1459,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the resource beans. If this is set then the JAX-RS runtime       * will not be responsible for the life-cycle of resource classes.      *       * @param beans the list of resource instances      */
+comment|/**      * Sets the resource beans. If this is set then the JAX-RS runtime      * will not be responsible for the life-cycle of resource classes.      *      * @param beans the list of resource instances      */
 specifier|public
 name|void
 name|setServiceBeans
@@ -1551,7 +1551,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the list of providers managing the life-cycle of the resource classes      *       * @param rps resource providers      */
+comment|/**      * Sets the list of providers managing the life-cycle of the resource classes      *      * @param rps resource providers      */
 specifier|public
 name|void
 name|setResourceProviders
@@ -1598,7 +1598,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Sets the custom Invoker which can be used to customize the way       * the default JAX-RS invoker calls on the service bean      * @param invoker      */
+comment|/**      * Sets the custom Invoker which can be used to customize the way      * the default JAX-RS invoker calls on the service bean      * @param invoker      */
 specifier|public
 name|void
 name|setInvoker

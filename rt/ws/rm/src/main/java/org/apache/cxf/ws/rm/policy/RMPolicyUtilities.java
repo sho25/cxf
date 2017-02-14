@@ -294,7 +294,7 @@ specifier|private
 name|RMPolicyUtilities
 parameter_list|()
 block|{     }
-comment|/**      * Returns an RMAssertion that is compatible with the default value and all RMAssertions pertaining to the      * message (can never be null).      *       * @param rma the default value (non-<code>null</code>)      * @param message the message      * @return the compatible RMAssertion      */
+comment|/**      * Returns an RMAssertion that is compatible with the default value and all RMAssertions pertaining to the      * message (can never be null).      *      * @param rma the default value (non-<code>null</code>)      * @param message the message      * @return the compatible RMAssertion      */
 specifier|public
 specifier|static
 name|RMConfiguration
@@ -439,7 +439,7 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Collect RMAssertions from map. This checks both namespaces defined for WS-RM policy assertions, along with the      * WS-I RSP namespace.      *       * @param aim map, may be<code>null</code>      * @return merged collection, never<code>null</code>      */
+comment|/**      * Collect RMAssertions from map. This checks both namespaces defined for WS-RM policy assertions, along with the      * WS-I RSP namespace.      *      * @param aim map, may be<code>null</code>      * @return merged collection, never<code>null</code>      */
 specifier|public
 specifier|static
 name|Collection
@@ -1041,7 +1041,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Intersect a policy with a supplied configuration.      *       * @param rma      * @param cfg      * @return result configuration      */
+comment|/**      * Intersect a policy with a supplied configuration.      *      * @param rma      * @param cfg      * @return result configuration      */
 specifier|public
 specifier|static
 name|RMConfiguration
@@ -1329,7 +1329,7 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Check if a policy is compatible with a supplied configuration.      *       * @param asser      * @param cfg      * @return<code>true</code> if compatible,<code>false</code> if not      */
+comment|/**      * Check if a policy is compatible with a supplied configuration.      *      * @param asser      * @param cfg      * @return<code>true</code> if compatible,<code>false</code> if not      */
 specifier|public
 specifier|static
 name|boolean
@@ -1499,7 +1499,7 @@ name|getExponentialBackoff
 argument_list|()
 return|;
 block|}
-comment|/**      * Intersect a policy with a supplied configuration.      *       * @param rma      * @param cfg      * @return result configuration      */
+comment|/**      * Intersect a policy with a supplied configuration.      *      * @param rma      * @param cfg      * @return result configuration      */
 specifier|public
 specifier|static
 name|RMConfiguration
@@ -1704,7 +1704,7 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Check if a policy is compatible with a supplied configuration.      *       * @param rma      * @param cfg      * @return<code>true</code> if compatible,<code>false</code> if not      */
+comment|/**      * Check if a policy is compatible with a supplied configuration.      *      * @param rma      * @param cfg      * @return<code>true</code> if compatible,<code>false</code> if not      */
 specifier|public
 specifier|static
 name|boolean

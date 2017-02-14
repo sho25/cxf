@@ -226,7 +226,7 @@ specifier|private
 name|boolean
 name|broken
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|Widget
 parameter_list|()
@@ -384,7 +384,7 @@ operator|=
 name|broken
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see java.lang.Object#equals(java.lang.Object)      */
+comment|/*      * (non-Javadoc)      *      * @see java.lang.Object#equals(java.lang.Object)      */
 annotation|@
 name|Override
 specifier|public
@@ -479,7 +479,7 @@ name|hashCode
 argument_list|()
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see java.lang.Object#toString()      */
+comment|/*      * (non-Javadoc)      *      * @see java.lang.Object#toString()      */
 annotation|@
 name|Override
 specifier|public

@@ -46,7 +46,7 @@ specifier|public
 interface|interface
 name|ServerEngine
 block|{
-comment|/**      * Register a servant.      *       * @param url the URL associated with the servant      * @param handler notified on incoming HTTP requests      */
+comment|/**      * Register a servant.      *      * @param url the URL associated with the servant      * @param handler notified on incoming HTTP requests      */
 name|void
 name|addServant
 parameter_list|(
@@ -57,7 +57,7 @@ name|JettyHTTPHandler
 name|handler
 parameter_list|)
 function_decl|;
-comment|/**      * Remove a previously registered servant.      *       * @param url the URL the servant was registered against.      */
+comment|/**      * Remove a previously registered servant.      *      * @param url the URL the servant was registered against.      */
 name|void
 name|removeServant
 parameter_list|(
@@ -65,7 +65,7 @@ name|URL
 name|url
 parameter_list|)
 function_decl|;
-comment|/**      * Get a previously  registered servant.      *       * @param url the associated URL      * @return the HttpHandler if registered      */
+comment|/**      * Get a previously  registered servant.      *      * @param url the associated URL      * @return the HttpHandler if registered      */
 name|Handler
 name|getServant
 parameter_list|(

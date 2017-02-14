@@ -763,7 +763,7 @@ name|doFlush
 parameter_list|()
 throws|throws
 name|IOException
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|flush
@@ -811,7 +811,7 @@ name|doClose
 parameter_list|()
 throws|throws
 name|IOException
-block|{              }
+block|{      }
 comment|/**      * Perform any actions required after stream closure (close the other related stream etc.)      */
 specifier|protected
 name|void
@@ -819,7 +819,7 @@ name|postClose
 parameter_list|()
 throws|throws
 name|IOException
-block|{              }
+block|{      }
 comment|/**      * Locks the output stream to prevent additional writes, but maintains      * a pointer to it so an InputStream can be obtained      * @throws IOException      */
 specifier|public
 name|void
@@ -992,7 +992,7 @@ name|obj
 argument_list|)
 return|;
 block|}
-comment|/**      * Replace the original stream with the new one, optionally copying the content of the old one      * into the new one.      * When with Attachment, needs to replace the xml writer stream with the stream used by      * AttachmentSerializer or copy the cached output stream to the "real"      * output stream, i.e. onto the wire.      *       * @param out the new output stream      * @param copyOldContent flag indicating if the old content should be copied      * @throws IOException      */
+comment|/**      * Replace the original stream with the new one, optionally copying the content of the old one      * into the new one.      * When with Attachment, needs to replace the xml writer stream with the stream used by      * AttachmentSerializer or copy the cached output stream to the "real"      * output stream, i.e. onto the wire.      *      * @param out the new output stream      * @param copyOldContent flag indicating if the old content should be copied      * @throws IOException      */
 specifier|public
 name|void
 name|resetOut

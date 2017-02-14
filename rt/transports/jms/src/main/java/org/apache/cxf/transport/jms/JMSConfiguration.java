@@ -314,7 +314,7 @@ specifier|volatile
 name|Destination
 name|replyDestinationDest
 decl_stmt|;
-comment|/**      * Destination name to send out as replyTo address in the message       */
+comment|/**      * Destination name to send out as replyTo address in the message      */
 specifier|private
 name|String
 name|replyToDestination
@@ -1220,7 +1220,7 @@ return|return
 name|factory
 return|;
 block|}
-comment|/**      * Retrieve connection factory from JNDI      *       * @param jmsConfig      * @param jndiConfig      * @return      */
+comment|/**      * Retrieve connection factory from JNDI      *      * @param jmsConfig      * @param jndiConfig      * @return      */
 specifier|private
 name|ConnectionFactory
 name|getConnectionFactoryFromJndi

@@ -102,7 +102,7 @@ name|String
 argument_list|>
 argument_list|()
 decl_stmt|;
-comment|/**      * Constructs a new exception with the specified detail      * message.      *       * @param message the detail message.      */
+comment|/**      * Constructs a new exception with the specified detail      * message.      *      * @param message the detail message.      */
 specifier|public
 name|DatabindingException
 parameter_list|(
@@ -116,7 +116,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructs a new exception with the specified detail      * message and cause.      *       * @param message the detail message.      * @param cause the cause.      */
+comment|/**      * Constructs a new exception with the specified detail      * message and cause.      *      * @param message the detail message.      * @param cause the cause.      */
 specifier|public
 name|DatabindingException
 parameter_list|(
@@ -172,7 +172,7 @@ name|cause
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Return the detail message, including the message from the      * {@link #getCause() nested exception} if there is one.      *       * @return the detail message.      */
+comment|/**      * Return the detail message, including the message from the      * {@link #getCause() nested exception} if there is one.      *      * @return the detail message.      */
 specifier|public
 name|String
 name|getMessage
@@ -290,7 +290,7 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Prints this throwable and its backtrace to the specified print stream.      *       * @param s<code>PrintStream</code> to use for output      */
+comment|/**      * Prints this throwable and its backtrace to the specified print stream.      *      * @param s<code>PrintStream</code> to use for output      */
 annotation|@
 name|Override
 specifier|public
@@ -341,7 +341,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Prints this throwable and its backtrace to the specified print writer.      *       * @param w<code>PrintWriter</code> to use for output      */
+comment|/**      * Prints this throwable and its backtrace to the specified print writer.      *      * @param w<code>PrintWriter</code> to use for output      */
 annotation|@
 name|Override
 specifier|public

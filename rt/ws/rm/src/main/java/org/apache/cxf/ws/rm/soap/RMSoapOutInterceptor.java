@@ -454,7 +454,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Protocol Handler responsible for {en|de}coding the RM   * Properties for {outgo|incom}ing messages.  */
+comment|/**  * Protocol Handler responsible for {en|de}coding the RM  * Properties for {outgo|incom}ing messages.  */
 end_comment
 
 begin_class
@@ -553,7 +553,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// AbstractSoapInterceptor interface
-comment|/**      * @return the set of SOAP headers understood by this handler       */
+comment|/**      * @return the set of SOAP headers understood by this handler      */
 specifier|public
 name|Set
 argument_list|<

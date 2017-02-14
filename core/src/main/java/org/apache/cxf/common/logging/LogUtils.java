@@ -190,7 +190,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A container for static utility methods related to logging.  * By default, CXF logs to java.util.logging. An application can change this. To log to another system, the  * application must provide an object that extends {@link AbstractDelegatingLogger}, and advertise that class  * via one of the following mechanisms:  *<ul>  *<li>Create a file, in the classpath, named META-INF/cxf/org.apache.cxf.Logger.   * This file should contain the fully-qualified name  * of the class, with no comments, on a single line.</li>  *<li>Call {@link #setLoggerClass(Class)} with a Class<?> reference to the logger class.</li>  *</ul>  * CXF provides {@link Log4jLogger} to use log4j instead of java.util.logging.  */
+comment|/**  * A container for static utility methods related to logging.  * By default, CXF logs to java.util.logging. An application can change this. To log to another system, the  * application must provide an object that extends {@link AbstractDelegatingLogger}, and advertise that class  * via one of the following mechanisms:  *<ul>  *<li>Create a file, in the classpath, named META-INF/cxf/org.apache.cxf.Logger.  * This file should contain the fully-qualified name  * of the class, with no comments, on a single line.</li>  *<li>Call {@link #setLoggerClass(Class)} with a Class<?> reference to the logger class.</li>  *</ul>  * CXF provides {@link Log4jLogger} to use log4j instead of java.util.logging.  */
 end_comment
 
 begin_class
@@ -676,7 +676,7 @@ operator|=
 name|cls
 expr_stmt|;
 block|}
-comment|/**      * Get a Logger with the associated default resource bundle for the class.      *      * @param cls the Class to contain the Logger      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with the associated default resource bundle for the class.      *      * @param cls the Class to contain the Logger      * @return an appropriate Logger      */
 specifier|public
 specifier|static
 name|Logger
@@ -703,7 +703,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param resourcename the resource name      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param resourcename the resource name      * @return an appropriate Logger      */
 specifier|public
 specifier|static
 name|Logger
@@ -733,7 +733,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param resourcename the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param resourcename the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger      */
 specifier|public
 specifier|static
 name|Logger
@@ -763,7 +763,7 @@ name|loggerName
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with the associated default resource bundle for the class.      *      * @param cls the Class to contain the Logger      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with the associated default resource bundle for the class.      *      * @param cls the Class to contain the Logger      * @return an appropriate Logger      */
 specifier|public
 specifier|static
 name|Logger
@@ -790,7 +790,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param resourcename the resource name      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger      * @param resourcename the resource name      * @return an appropriate Logger      */
 specifier|public
 specifier|static
 name|Logger
@@ -820,7 +820,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param resourcename the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger       */
+comment|/**      * Get a Logger with an associated resource bundle.      *      * @param cls the Class to contain the Logger (to find resources)      * @param resourcename the resource name      * @param loggerName the full name for the logger      * @return an appropriate Logger      */
 specifier|public
 specifier|static
 name|Logger

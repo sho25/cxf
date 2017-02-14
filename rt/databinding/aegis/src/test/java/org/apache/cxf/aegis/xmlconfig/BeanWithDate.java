@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * class used to test remapping the schema type of date.   */
+comment|/**  * class used to test remapping the schema type of date.  */
 end_comment
 
 begin_class

@@ -1104,7 +1104,7 @@ specifier|public
 name|void
 name|close
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|setMessageObserver

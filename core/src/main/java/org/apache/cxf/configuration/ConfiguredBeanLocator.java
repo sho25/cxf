@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -75,7 +75,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Gets all the configured beans of the specific types.  Causes them      * all to be loaded.       * @param type      * @return The collection of all the configured beans of the given type      */
+comment|/**      * Gets all the configured beans of the specific types.  Causes them      * all to be loaded.      * @param type      * @return The collection of all the configured beans of the given type      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -94,7 +94,7 @@ argument_list|>
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Iterates through the beans of the given type, calling the listener      * to determine if it should be loaded or not.       * @param type      * @param listener      * @return true if beans of the type were loaded      */
+comment|/**      * Iterates through the beans of the given type, calling the listener      * to determine if it should be loaded or not.      * @param type      * @param listener      * @return true if beans of the type were loaded      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -114,7 +114,7 @@ argument_list|>
 name|listener
 parameter_list|)
 function_decl|;
-comment|/**      * For supporting "legacy" config, checks the configured bean to see if      * it has a property configured with the given name/value.  Mostly used       * for supporting things configured with "activationNamespaces" set.       * @param beanName      * @param propertyName      * @param value      * @return true if the bean has the given property/value      */
+comment|/**      * For supporting "legacy" config, checks the configured bean to see if      * it has a property configured with the given name/value.  Mostly used      * for supporting things configured with "activationNamespaces" set.      * @param beanName      * @param propertyName      * @param value      * @return true if the bean has the given property/value      */
 name|boolean
 name|hasConfiguredPropertyValue
 parameter_list|(
@@ -134,7 +134,7 @@ parameter_list|<
 name|T
 parameter_list|>
 block|{
-comment|/**          * Return true to have the loader go ahead and load the bean.  If false,           * the loader will just skip to the next bean          * @param name          * @param type          * @return true if the bean should be loaded           */
+comment|/**          * Return true to have the loader go ahead and load the bean.  If false,          * the loader will just skip to the next bean          * @param name          * @param type          * @return true if the bean should be loaded          */
 name|boolean
 name|loadBean
 parameter_list|(

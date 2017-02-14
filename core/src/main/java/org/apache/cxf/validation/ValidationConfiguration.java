@@ -113,7 +113,7 @@ decl_stmt|;
 specifier|public
 name|ValidationConfiguration
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ValidationConfiguration
 parameter_list|(

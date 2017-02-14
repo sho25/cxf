@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is a copy of the WSDLFactoryImpl from the wsdl4j implementation  * It overwrites the newWSDLWriter method to return a SchemaWriter   */
+comment|/**  * This class is a copy of the WSDLFactoryImpl from the wsdl4j implementation  * It overwrites the newWSDLWriter method to return a SchemaWriter  */
 end_comment
 
 begin_class
@@ -103,7 +103,7 @@ name|newInstance
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Create a new instance of a Definition, with an instance of a      * PopulatedExtensionRegistry as its ExtensionRegistry.      *       */
+comment|/**      * Create a new instance of a Definition, with an instance of a      * PopulatedExtensionRegistry as its ExtensionRegistry.      *      */
 specifier|public
 name|Definition
 name|newDefinition

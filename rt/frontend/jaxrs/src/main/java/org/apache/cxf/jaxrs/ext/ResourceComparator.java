@@ -64,7 +64,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to affect the way the JAXRS selection algorithm chooses  * between multiple matching resource classes and methods   *  */
+comment|/**  * Can be used to affect the way the JAXRS selection algorithm chooses  * between multiple matching resource classes and methods  *  */
 end_comment
 
 begin_interface
@@ -72,7 +72,7 @@ specifier|public
 interface|interface
 name|ResourceComparator
 block|{
-comment|/**      * Compares two resource classes      * @param cri1 First resource class      * @param cri2 Second resource class      * @param message incoming message      * @return -1 if cri1< cri2, 1 if if cri1> cri2, 0 otherwise       */
+comment|/**      * Compares two resource classes      * @param cri1 First resource class      * @param cri2 Second resource class      * @param message incoming message      * @return -1 if cri1< cri2, 1 if if cri1> cri2, 0 otherwise      */
 name|int
 name|compare
 parameter_list|(
@@ -86,7 +86,7 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Compares two resource methods      * @param oper1 First resource method      * @param oper2 Second resource method      * @param message incoming message      * @return -1 if oper1< oper2, 1 if if oper1> oper2, 0 otherwise       */
+comment|/**      * Compares two resource methods      * @param oper1 First resource method      * @param oper2 Second resource method      * @param message incoming message      * @return -1 if oper1< oper2, 1 if if oper1> oper2, 0 otherwise      */
 name|int
 name|compare
 parameter_list|(

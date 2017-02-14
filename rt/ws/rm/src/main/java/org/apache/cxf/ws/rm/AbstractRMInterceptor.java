@@ -214,7 +214,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Interceptor responsible for implementing exchange of RM protocol messages,  * aggregating RM metadata in the application message and processing of   * RM metadata contained in incoming application messages.  * The same interceptor can be used on multiple endpoints.  *  */
+comment|/**  * Interceptor responsible for implementing exchange of RM protocol messages,  * aggregating RM metadata in the application message and processing of  * RM metadata contained in incoming application messages.  * The same interceptor can be used on multiple endpoints.  *  */
 end_comment
 
 begin_class

@@ -256,7 +256,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test, a CXF client gets a token from the STS over the Asymmetric Binding. The STS is configured   * to encrypt the issued token, using the certificate obtained from the received signature.  */
+comment|/**  * In this test, a CXF client gets a token from the STS over the Asymmetric Binding. The STS is configured  * to encrypt the issued token, using the certificate obtained from the received signature.  */
 end_comment
 
 begin_class

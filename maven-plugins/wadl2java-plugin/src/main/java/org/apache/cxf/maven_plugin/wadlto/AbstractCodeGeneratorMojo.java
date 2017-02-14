@@ -3278,7 +3278,7 @@ literal|".DONE"
 argument_list|)
 return|;
 block|}
-comment|/**      * Determine if code should be generated from the given wadl      *       * @param wadlOption      * @param doneFile      * @param wadlURI      * @return      */
+comment|/**      * Determine if code should be generated from the given wadl      *      * @param wadlOption      * @param doneFile      * @param wadlURI      * @return      */
 specifier|private
 name|boolean
 name|shouldRun
@@ -3448,7 +3448,7 @@ return|return
 name|doWork
 return|;
 block|}
-comment|/**      * Recursively delete the given directory      *       * @param f      * @return      */
+comment|/**      * Recursively delete the given directory      *      * @param f      * @return      */
 specifier|protected
 name|boolean
 name|deleteDir

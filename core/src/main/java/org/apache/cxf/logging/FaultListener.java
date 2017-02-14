@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|FaultListener
 block|{
-comment|/**      * Handle the occurred exception.      * @param exception The exception      * @param description A description of where in the service interfaces      * the exception occurred.      * @param message the message processed while the exception occurred.      * @return<code>true</code> if CXF should use default handling for this      * exception which normally is just logging the exception,<code>false</code>       * if CXF not should do any logging.      */
+comment|/**      * Handle the occurred exception.      * @param exception The exception      * @param description A description of where in the service interfaces      * the exception occurred.      * @param message the message processed while the exception occurred.      * @return<code>true</code> if CXF should use default handling for this      * exception which normally is just logging the exception,<code>false</code>      * if CXF not should do any logging.      */
 name|boolean
 name|faultOccurred
 parameter_list|(

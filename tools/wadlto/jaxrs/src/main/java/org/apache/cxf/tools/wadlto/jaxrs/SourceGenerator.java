@@ -3529,7 +3529,7 @@ parameter_list|,
 name|File
 name|src
 parameter_list|)
-block|{              }
+block|{      }
 specifier|private
 name|void
 name|writeResourceClass
@@ -14027,7 +14027,7 @@ name|noTargetNamespace
 decl_stmt|;
 name|GrammarInfo
 parameter_list|()
-block|{                      }
+block|{          }
 name|GrammarInfo
 parameter_list|(
 name|Map

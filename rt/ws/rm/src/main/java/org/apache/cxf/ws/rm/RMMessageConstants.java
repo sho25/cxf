@@ -122,7 +122,7 @@ name|DELIVERING_ROBUST_ONEWAY
 init|=
 literal|"org.apache.cxf.oneway.robust.delivering"
 decl_stmt|;
-comment|/**      * Prevents instantiation.       */
+comment|/**      * Prevents instantiation.      */
 specifier|private
 name|RMMessageConstants
 parameter_list|()

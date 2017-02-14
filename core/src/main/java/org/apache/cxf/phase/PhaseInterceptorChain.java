@@ -380,7 +380,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A PhaseInterceptorChain orders Interceptors according to the phase they  * participate in and also according to the before& after properties on an  * Interceptor.  *<p>  * A List of phases is supplied to the PhaseInterceptorChain in the constructor.  * This class is typically instantiated from the PhaseChainCache class in this  * package. Interceptors that are added to the chain are ordered by phase.  * Within a phase, interceptors can order themselves. Each PhaseInterceptor   * has an ID. PhaseInterceptors can supply a Collection of IDs which they   * should run before or after, supplying fine grained ordering.  *<p>  *    */
+comment|/**  * A PhaseInterceptorChain orders Interceptors according to the phase they  * participate in and also according to the before& after properties on an  * Interceptor.  *<p>  * A List of phases is supplied to the PhaseInterceptorChain in the constructor.  * This class is typically instantiated from the PhaseChainCache class in this  * package. Interceptors that are added to the chain are ordered by phase.  * Within a phase, interceptors can order themselves. Each PhaseInterceptor  * has an ID. PhaseInterceptors can supply a Collection of IDs which they  * should run before or after, supplying fine grained ordering.  *<p>  *  */
 end_comment
 
 begin_class
@@ -1404,7 +1404,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Intercept a message, invoking each phase's handlers in turn.      *       * @param message the message       * @throws Exception      */
+comment|/**      * Intercept a message, invoking each phase's handlers in turn.      *      * @param message the message      * @throws Exception      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -2254,7 +2254,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Intercept a message, invoking each phase's handlers in turn,      * starting after the specified interceptor.      *       * @param message the message      * @param startingAfterInterceptorID the id of the interceptor       * @throws Exception      */
+comment|/**      * Intercept a message, invoking each phase's handlers in turn,      * starting after the specified interceptor.      *      * @param message the message      * @param startingAfterInterceptorID the id of the interceptor      * @throws Exception      */
 specifier|public
 specifier|synchronized
 name|boolean
@@ -2328,7 +2328,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Intercept a message, invoking each phase's handlers in turn,      * starting at the specified interceptor.      *       * @param message the message      * @param startingAtInterceptorID the id of the interceptor       * @throws Exception      */
+comment|/**      * Intercept a message, invoking each phase's handlers in turn,      * starting at the specified interceptor.      *      * @param message the message      * @param startingAtInterceptorID the id of the interceptor      * @throws Exception      */
 specifier|public
 specifier|synchronized
 name|boolean

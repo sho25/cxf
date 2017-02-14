@@ -100,7 +100,7 @@ import|;
 end_import
 
 begin_comment
-comment|/***  * Only public/static/final fields can be resolved  * The prefix MUST ends with _PREFIX  * Namespace MUST starts with NS_  * The value of the _PREFIX is the suffix of NS_    e.g     public static final String WSAW_PREFIX = "wsaw";     public static final String NS_WSAW = "http://www.w3.org/2006/05/addressing/wsdl";  ***/
+comment|/***  * Only public/static/final fields can be resolved  * The prefix MUST ends with _PREFIX  * Namespace MUST starts with NS_  * The value of the _PREFIX is the suffix of NS_   e.g     public static final String WSAW_PREFIX = "wsaw";     public static final String NS_WSAW = "http://www.w3.org/2006/05/addressing/wsdl"; ***/
 end_comment
 
 begin_class

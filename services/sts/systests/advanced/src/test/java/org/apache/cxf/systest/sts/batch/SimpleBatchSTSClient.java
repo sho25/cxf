@@ -2385,7 +2385,7 @@ operator|=
 name|onBehalfOf
 expr_stmt|;
 block|}
-comment|/**      * Indicate whether to use the signer's public X509 certificate for the subject confirmation key info       * when creating a RequestsSecurityToken message. If the property is set to 'false', only the public key       * value will be provided in the request. If the property is set to 'true' the complete certificate will       * be sent in the request.      *       * Note: this setting is only applicable for assertions that use an asymmetric proof key      */
+comment|/**      * Indicate whether to use the signer's public X509 certificate for the subject confirmation key info      * when creating a RequestsSecurityToken message. If the property is set to 'false', only the public key      * value will be provided in the request. If the property is set to 'true' the complete certificate will      * be sent in the request.      *      * Note: this setting is only applicable for assertions that use an asymmetric proof key      */
 specifier|public
 name|void
 name|setUseCertificateForConfirmationKeyInfo

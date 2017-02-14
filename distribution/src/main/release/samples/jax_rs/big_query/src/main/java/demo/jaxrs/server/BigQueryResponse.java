@@ -63,7 +63,7 @@ decl_stmt|;
 specifier|public
 name|BigQueryResponse
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|BigQueryResponse
 parameter_list|(

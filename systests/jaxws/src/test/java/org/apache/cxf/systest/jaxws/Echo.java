@@ -121,7 +121,7 @@ specifier|protected
 name|String
 name|string1
 decl_stmt|;
-comment|/**      * Gets the value of the string1 property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the string1 property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getString1
@@ -131,7 +131,7 @@ return|return
 name|string1
 return|;
 block|}
-comment|/**      * Sets the value of the string1 property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the string1 property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setString1

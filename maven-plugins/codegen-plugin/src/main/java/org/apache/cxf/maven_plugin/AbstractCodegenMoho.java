@@ -2443,7 +2443,7 @@ parameter_list|()
 throws|throws
 name|MojoExecutionException
 function_decl|;
-comment|/**      * Recursively delete the given directory      *       * @param f      * @return      */
+comment|/**      * Recursively delete the given directory      *      * @param f      * @return      */
 specifier|protected
 name|boolean
 name|deleteDir
@@ -3810,7 +3810,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Determine if code should be generated from the given wsdl      *       * @param wsdlOption      * @param doneFile      * @param wsdlURI      * @return      */
+comment|/**      * Determine if code should be generated from the given wsdl      *      * @param wsdlOption      * @param doneFile      * @param wsdlURI      * @return      */
 specifier|protected
 specifier|abstract
 name|boolean
@@ -3976,7 +3976,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Try to find a file matching the wsdl path (either absolutely, relatively to the current dir or to      * the project base dir)      *       * @return wsdl file      */
+comment|/**      * Try to find a file matching the wsdl path (either absolutely, relatively to the current dir or to      * the project base dir)      *      * @return wsdl file      */
 specifier|public
 name|File
 name|getWsdlFile

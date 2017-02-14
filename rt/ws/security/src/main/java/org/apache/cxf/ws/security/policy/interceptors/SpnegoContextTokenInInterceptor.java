@@ -2020,7 +2020,7 @@ name|writeEndElement
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*         private void writeAuthenticator(             W3CDOMStreamWriter writer,             String prefix,              String namespace,             byte[] secret         ) throws Exception {             // Authenticator             writer.writeStartElement(prefix, "Authenticator", namespace);                          // CombinedHash             writer.writeStartElement(prefix, "CombinedHash", namespace);                          P_SHA1 psha1 = new P_SHA1();             byte[] seed = "AUTH-HASH".getBytes();             byte[] digest = psha1.createKey(secret, seed, 0, 32);             writer.writeCharacters(Base64.encode(digest));                          writer.writeEndElement();                          writer.writeEndElement();         }         */
+comment|/*         private void writeAuthenticator(             W3CDOMStreamWriter writer,             String prefix,             String namespace,             byte[] secret         ) throws Exception {             // Authenticator             writer.writeStartElement(prefix, "Authenticator", namespace);              // CombinedHash             writer.writeStartElement(prefix, "CombinedHash", namespace);              P_SHA1 psha1 = new P_SHA1();             byte[] seed = "AUTH-HASH".getBytes();             byte[] digest = psha1.createKey(secret, seed, 0, 32);             writer.writeCharacters(Base64.encode(digest));              writer.writeEndElement();              writer.writeEndElement();         }         */
 block|}
 specifier|static
 specifier|final

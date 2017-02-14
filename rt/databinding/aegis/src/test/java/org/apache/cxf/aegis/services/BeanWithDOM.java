@@ -86,7 +86,7 @@ comment|//import org.w3c.dom.Text;
 end_comment
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class

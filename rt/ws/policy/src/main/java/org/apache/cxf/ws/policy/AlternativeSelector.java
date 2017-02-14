@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Used by the Policy engine to select the Policy alternative to use.  *   * By default, the Policy engine uses a "Minimal" policy alternative selector  * that finds the alternative with the smallest Collection of Assertions to  * assert.  */
+comment|/**  * Used by the Policy engine to select the Policy alternative to use.  *  * By default, the Policy engine uses a "Minimal" policy alternative selector  * that finds the alternative with the smallest Collection of Assertions to  * assert.  */
 end_comment
 
 begin_interface
@@ -84,7 +84,7 @@ specifier|public
 interface|interface
 name|AlternativeSelector
 block|{
-comment|/**      *       * @param policy The full policy to consider       * @param engine The policy engine calling the selector      * @param assertor Additional asserter (such as the transport) that may be       *                 able to handle some of the assertions      * @param request On the server out bound side, this will contain the alternatives      *                from the request that were successfully met by the request.  The      *                selector should use these to help narrow down the alternative to      *                use.      * @return      */
+comment|/**      *      * @param policy The full policy to consider      * @param engine The policy engine calling the selector      * @param assertor Additional asserter (such as the transport) that may be      *                 able to handle some of the assertions      * @param request On the server out bound side, this will contain the alternatives      *                from the request that were successfully met by the request.  The      *                selector should use these to help narrow down the alternative to      *                use.      * @return      */
 name|Collection
 argument_list|<
 name|Assertion

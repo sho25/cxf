@@ -928,7 +928,7 @@ name|Context
 name|context
 parameter_list|)
 function_decl|;
-comment|/**      * If one of these types arrives unoptimized, we need to convert it to the       * desired return type.      * @param bareBytes the bytes pulled out of the base64.      * @param contentType when we support xmime:contentType, this will be passed along.      * @return      */
+comment|/**      * If one of these types arrives unoptimized, we need to convert it to the      * desired return type.      * @param bareBytes the bytes pulled out of the base64.      * @param contentType when we support xmime:contentType, this will be passed along.      * @return      */
 specifier|protected
 specifier|abstract
 name|Object

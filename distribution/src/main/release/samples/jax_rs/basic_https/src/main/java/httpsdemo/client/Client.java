@@ -268,7 +268,7 @@ name|toCharArray
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/*           * Send HTTP GET request to query customer info using portable HttpClient          * object from Apache HttpComponents          */
+comment|/*          * Send HTTP GET request to query customer info using portable HttpClient          * object from Apache HttpComponents          */
 name|SSLSocketFactory
 name|sf
 init|=

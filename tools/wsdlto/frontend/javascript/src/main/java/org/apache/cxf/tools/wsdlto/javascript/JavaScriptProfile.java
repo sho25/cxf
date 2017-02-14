@@ -43,7 +43,7 @@ class|class
 name|JavaScriptProfile
 extends|extends
 name|FrontEndProfile
-block|{      }
+block|{  }
 end_class
 
 end_unit

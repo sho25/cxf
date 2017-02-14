@@ -2858,7 +2858,7 @@ name|getTextLength
 argument_list|()
 return|;
 block|}
-comment|/**      * Checks the index range for the current attributes set.      * If the attributes are not indexed for the current element context, they      * will be indexed.       * @param index      */
+comment|/**      * Checks the index range for the current attributes set.      * If the attributes are not indexed for the current element context, they      * will be indexed.      * @param index      */
 specifier|private
 name|void
 name|checkAttributeIndexRange

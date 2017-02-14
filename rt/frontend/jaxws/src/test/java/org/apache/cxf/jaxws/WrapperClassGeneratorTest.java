@@ -869,6 +869,6 @@ argument_list|)
 expr_stmt|;
 end_expr_stmt
 
-unit|}    }
+unit|}  }
 end_unit
 

@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Default Connection Manager which does not support connection pool.    * Connection will be destroyed upon closing by application.  */
+comment|/**  * Default Connection Manager which does not support connection pool.  * Connection will be destroyed upon closing by application.  */
 end_comment
 
 begin_class

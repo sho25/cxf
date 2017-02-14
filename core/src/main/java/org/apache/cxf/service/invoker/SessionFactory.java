@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Creates a new instance for each session.  *   * This may have restrictions on what the bean can look like.   For example,   * some session implementations require the beans to be Serializable  */
+comment|/**  * Creates a new instance for each session.  *  * This may have restrictions on what the bean can look like.   For example,  * some session implementations require the beans to be Serializable  */
 end_comment
 
 begin_class

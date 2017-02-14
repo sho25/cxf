@@ -1142,7 +1142,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class reads a WSDL and creates a dynamic client from it.  *   * Use {@link #newInstance} to obtain an instance, and then  * {@link #createClient(String)} (or other overloads) to create a client.  *   * It uses the JAXB data binding. It does not set up complex interceptors for   * features such as attachments.   * See {@link org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory}  * for an alternative that sets up JAX-WS endpoints.  *  * This class may be subclassed to allow for other endpoints or behaviors.  */
+comment|/**  * This class reads a WSDL and creates a dynamic client from it.  *  * Use {@link #newInstance} to obtain an instance, and then  * {@link #createClient(String)} (or other overloads) to create a client.  *  * It uses the JAXB data binding. It does not set up complex interceptors for  * features such as attachments.  * See {@link org.apache.cxf.jaxws.endpoint.dynamic.JaxWsDynamicClientFactory}  * for an alternative that sets up JAX-WS endpoints.  *  * This class may be subclassed to allow for other endpoints or behaviors.  */
 end_comment
 
 begin_class
@@ -1272,7 +1272,7 @@ operator|=
 name|options
 expr_stmt|;
 block|}
-comment|/**      * Create a new instance using a specific<tt>Bus</tt>.      *       * @param b the<tt>Bus</tt> to use in subsequent operations with the      *            instance      * @return the new instance      */
+comment|/**      * Create a new instance using a specific<tt>Bus</tt>.      *      * @param b the<tt>Bus</tt> to use in subsequent operations with the      *            instance      * @return the new instance      */
 specifier|public
 specifier|static
 name|DynamicClientFactory
@@ -1290,7 +1290,7 @@ name|b
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new instance using a default<tt>Bus</tt>.      *       * @return the new instance      * @see CXFBusFactory#getDefaultBus()      */
+comment|/**      * Create a new instance using a default<tt>Bus</tt>.      *      * @return the new instance      * @see CXFBusFactory#getDefaultBus()      */
 specifier|public
 specifier|static
 name|DynamicClientFactory
@@ -1313,7 +1313,7 @@ name|bus
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *       * @param wsdlURL the URL to load      * @return      */
+comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *      * @param wsdlURL the URL to load      * @return      */
 specifier|public
 name|Client
 name|createClient
@@ -1372,7 +1372,7 @@ name|bindingFiles
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *       * @param wsdlURL the URL to load      * @return      */
+comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and using the current classloading context.      *      * @param wsdlURL the URL to load      * @return      */
 specifier|public
 name|Client
 name|createClient
@@ -1431,7 +1431,7 @@ name|bindingFiles
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and with the specified<code>ClassLoader</code>      * as parent.      *       * @param wsdlUrl      * @param classLoader      * @return      */
+comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and with the specified<code>ClassLoader</code>      * as parent.      *      * @param wsdlUrl      * @param classLoader      * @return      */
 specifier|public
 name|Client
 name|createClient
@@ -1637,7 +1637,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and with the specified<code>ClassLoader</code>      * as parent.      *       * @param wsdlUrl      * @param classLoader      * @return      */
+comment|/**      * Create a new<code>Client</code> instance using the WSDL to be loaded      * from the specified URL and with the specified<code>ClassLoader</code>      * as parent.      *      * @param wsdlUrl      * @param classLoader      * @return      */
 specifier|public
 name|Client
 name|createClient

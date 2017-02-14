@@ -2211,7 +2211,7 @@ return|;
 end_return
 
 begin_function
-unit|}               public
+unit|}       public
 name|Class
 argument_list|<
 name|?

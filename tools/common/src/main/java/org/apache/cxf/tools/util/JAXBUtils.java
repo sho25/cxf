@@ -552,7 +552,7 @@ name|getParentNode
 argument_list|()
 return|;
 block|}
-comment|/**      * Create the jaxb binding file to customize namespace to package mapping      *       * @param namespace      * @param pkgName      * @return file      */
+comment|/**      * Create the jaxb binding file to customize namespace to package mapping      *      * @param namespace      * @param pkgName      * @return file      */
 specifier|public
 specifier|static
 name|File

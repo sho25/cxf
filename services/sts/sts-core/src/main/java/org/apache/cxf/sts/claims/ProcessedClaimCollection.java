@@ -35,7 +35,7 @@ argument_list|<
 name|ProcessedClaim
 argument_list|>
 block|{
-comment|/**      *       */
+comment|/**      *      */
 specifier|private
 specifier|static
 specifier|final

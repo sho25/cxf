@@ -137,7 +137,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**       * @return Returns the reliableEndpoint.      */
+comment|/**      * @return Returns the reliableEndpoint.      */
 specifier|public
 name|RMEndpoint
 name|getReliableEndpoint
@@ -173,7 +173,7 @@ name|getManager
 argument_list|()
 return|;
 block|}
-comment|/**      * Generates and returns a new sequence identifier.      *       * @return the sequence identifier.      */
+comment|/**      * Generates and returns a new sequence identifier.      *      * @return the sequence identifier.      */
 specifier|public
 name|Identifier
 name|generateSequenceIdentifier

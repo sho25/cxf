@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to enable server-side XSLT transformations   *   */
+comment|/**  * Can be used to enable server-side XSLT transformations  *  */
 end_comment
 
 begin_annotation_defn
@@ -110,7 +110,7 @@ name|String
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * Supported media types       **/
+comment|/**      * Supported media types      **/
 name|String
 index|[]
 name|mediaTypes

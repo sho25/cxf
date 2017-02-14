@@ -443,7 +443,7 @@ argument_list|(
 literal|"truncatable"
 argument_list|)
 expr_stmt|;
-comment|/**          * Well known IDL Definitions                   */
+comment|/**          * Well known IDL Definitions          */
 name|IGNORED_MODULES
 operator|.
 name|add
@@ -457,7 +457,7 @@ block|}
 specifier|protected
 name|CorbaUtils
 parameter_list|()
-block|{             }
+block|{     }
 specifier|public
 specifier|static
 name|String

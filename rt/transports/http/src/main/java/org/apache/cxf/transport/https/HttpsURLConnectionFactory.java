@@ -305,7 +305,7 @@ specifier|public
 name|HttpsURLConnectionFactory
 parameter_list|()
 block|{     }
-comment|/**      * Create a HttpURLConnection, proxified if necessary.      *       *       * @param proxy This parameter is non-null if connection should be proxied.      * @param url   The target URL.      *       * @return The HttpURLConnection for the given URL.      * @throws IOException      */
+comment|/**      * Create a HttpURLConnection, proxified if necessary.      *      *      * @param proxy This parameter is non-null if connection should be proxied.      * @param url   The target URL.      *      * @return The HttpURLConnection for the given URL.      * @throws IOException      */
 specifier|public
 name|HttpURLConnection
 name|createConnection
@@ -423,7 +423,7 @@ return|return
 name|connection
 return|;
 block|}
-comment|/**      * This method assigns the various TLS parameters on the HttpsURLConnection      * from the TLS Client Parameters. Connection parameter is of supertype HttpURLConnection,       * which allows internal cast to potentially divergent subtype (https) implementations.      */
+comment|/**      * This method assigns the various TLS parameters on the HttpsURLConnection      * from the TLS Client Parameters. Connection parameter is of supertype HttpURLConnection,      * which allows internal cast to potentially divergent subtype (https) implementations.      */
 specifier|protected
 specifier|synchronized
 name|void

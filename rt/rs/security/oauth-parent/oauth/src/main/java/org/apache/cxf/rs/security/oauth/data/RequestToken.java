@@ -136,7 +136,7 @@ return|return
 name|oauthVerifier
 return|;
 block|}
-comment|/**      * Sets the callback URI       * @param callback the callback      */
+comment|/**      * Sets the callback URI      * @param callback the callback      */
 specifier|public
 name|void
 name|setCallback
@@ -162,7 +162,7 @@ return|return
 name|callback
 return|;
 block|}
-comment|/**      * Sets the state - it will be reported back to the consumer      * after the authorization decision on this token has been made.       * @param state      */
+comment|/**      * Sets the state - it will be reported back to the consumer      * after the authorization decision on this token has been made.      * @param state      */
 specifier|public
 name|void
 name|setState

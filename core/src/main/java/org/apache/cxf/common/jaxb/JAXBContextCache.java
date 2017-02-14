@@ -304,7 +304,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -313,7 +313,7 @@ specifier|final
 class|class
 name|JAXBContextCache
 block|{
-comment|/**      * Return holder of the context, classes, etc...      * Do NOT hold onto these strongly as that can lock the JAXBContext and Set<Class> objects      * into memory.  It preferred to grab the context and classes (if needed) from this object      * immediately after the call to getCachedContextAndSchemas and then discard it.  The      * main purpose of this class is to hold onto the context/set strongly until the caller       * has a chance to copy those into a place where they can hold onto it strongly as      * needed.      */
+comment|/**      * Return holder of the context, classes, etc...      * Do NOT hold onto these strongly as that can lock the JAXBContext and Set<Class> objects      * into memory.  It preferred to grab the context and classes (if needed) from this object      * immediately after the call to getCachedContextAndSchemas and then discard it.  The      * main purpose of this class is to hold onto the context/set strongly until the caller      * has a chance to copy those into a place where they can hold onto it strongly as      * needed.      */
 specifier|public
 specifier|static
 specifier|final

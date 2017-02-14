@@ -420,7 +420,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * DefaultProtocolInterceptor provides the default CXF's WebSocket protocol that uses.  *   * This interceptor is automatically engaged when no atmosphere interceptor is configured.    */
+comment|/**  * DefaultProtocolInterceptor provides the default CXF's WebSocket protocol that uses.  *  * This interceptor is automatically engaged when no atmosphere interceptor is configured.  */
 end_comment
 
 begin_class
@@ -1574,7 +1574,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Creates a virtual request using the specified parent request and the actual data.      *       * @param r      * @param data      * @return      * @throws IOException      */
+comment|/**      * Creates a virtual request using the specified parent request and the actual data.      *      * @param r      * @param data      * @return      * @throws IOException      */
 specifier|protected
 name|AtmosphereRequest
 name|createAtmosphereRequest
@@ -1802,7 +1802,7 @@ name|build
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates a response data based on the specified payload.      *       * @param response      * @param payload      * @param parent      * @return      */
+comment|/**      * Creates a response data based on the specified payload.      *      * @param response      * @param payload      * @param parent      * @return      */
 specifier|protected
 name|byte
 index|[]

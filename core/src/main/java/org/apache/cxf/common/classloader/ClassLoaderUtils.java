@@ -298,7 +298,7 @@ name|parent
 argument_list|)
 return|;
 block|}
-comment|/**      * Load a given resource.<p/> This method will try to load the resource      * using the following methods (in order):      *<ul>      *<li>From Thread.currentThread().getContextClassLoader()      *<li>From ClassLoaderUtil.class.getClassLoader()      *<li>callingClass.getClassLoader()      *</ul>      *       * @param resourceName The name of the resource to load      * @param callingClass The Class object of the calling object      */
+comment|/**      * Load a given resource.<p/> This method will try to load the resource      * using the following methods (in order):      *<ul>      *<li>From Thread.currentThread().getContextClassLoader()      *<li>From ClassLoaderUtil.class.getClassLoader()      *<li>callingClass.getClassLoader()      *</ul>      *      * @param resourceName The name of the resource to load      * @param callingClass The Class object of the calling object      */
 specifier|public
 specifier|static
 name|URL
@@ -529,7 +529,7 @@ return|return
 name|url
 return|;
 block|}
-comment|/**      * Load a given resources.<p/> This method will try to load the resources      * using the following methods (in order):      *<ul>      *<li>From Thread.currentThread().getContextClassLoader()      *<li>From ClassLoaderUtil.class.getClassLoader()      *<li>callingClass.getClassLoader()      *</ul>      *       * @param resourceName The name of the resource to load      * @param callingClass The Class object of the calling object      */
+comment|/**      * Load a given resources.<p/> This method will try to load the resources      * using the following methods (in order):      *<ul>      *<li>From Thread.currentThread().getContextClassLoader()      *<li>From ClassLoaderUtil.class.getClassLoader()      *<li>callingClass.getClassLoader()      *</ul>      *      * @param resourceName The name of the resource to load      * @param callingClass The Class object of the calling object      */
 specifier|public
 specifier|static
 name|List
@@ -905,7 +905,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * This is a convenience method to load a resource as a stream.<p/> The      * algorithm used to find the resource is given in getResource()      *       * @param resourceName The name of the resource to load      * @param callingClass The Class object of the calling object      */
+comment|/**      * This is a convenience method to load a resource as a stream.<p/> The      * algorithm used to find the resource is given in getResource()      *      * @param resourceName The name of the resource to load      * @param callingClass The Class object of the calling object      */
 specifier|public
 specifier|static
 name|InputStream
@@ -959,7 +959,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * Load a class with a given name.<p/> It will try to load the class in the      * following order:      *<ul>      *<li>From Thread.currentThread().getContextClassLoader()      *<li>Using the basic Class.forName()      *<li>From ClassLoaderUtil.class.getClassLoader()      *<li>From the callingClass.getClassLoader()      *</ul>      *       * @param className The name of the class to load      * @param callingClass The Class object of the calling object      * @throws ClassNotFoundException If the class cannot be found anywhere.      */
+comment|/**      * Load a class with a given name.<p/> It will try to load the class in the      * following order:      *<ul>      *<li>From Thread.currentThread().getContextClassLoader()      *<li>Using the basic Class.forName()      *<li>From ClassLoaderUtil.class.getClassLoader()      *<li>From the callingClass.getClassLoader()      *</ul>      *      * @param className The name of the class to load      * @param callingClass The Class object of the calling object      * @throws ClassNotFoundException If the class cannot be found anywhere.      */
 specifier|public
 specifier|static
 name|Class

@@ -843,7 +843,7 @@ argument_list|)
 name|File
 name|testSourceRoot
 decl_stmt|;
-comment|/**      * Path where the generated sources should be placed      *       */
+comment|/**      * Path where the generated sources should be placed      *      */
 annotation|@
 name|Parameter
 argument_list|(
@@ -862,7 +862,7 @@ argument_list|)
 name|File
 name|sourceRoot
 decl_stmt|;
-comment|/**      * Options that specify WSDLs to process and/or control the processing of wsdls.       * If you have enabled wsdl scanning, these elements attach options to particular wsdls.      * If you have not enabled wsdl scanning, these options call out the wsdls to process.       */
+comment|/**      * Options that specify WSDLs to process and/or control the processing of wsdls.      * If you have enabled wsdl scanning, these elements attach options to particular wsdls.      * If you have not enabled wsdl scanning, these options call out the wsdls to process.      */
 annotation|@
 name|Parameter
 name|WsdlOption
@@ -890,7 +890,7 @@ argument_list|)
 name|String
 name|encoding
 decl_stmt|;
-comment|/**      * Merge WsdlOptions that point to the same file by adding the extraargs to the first option and deleting      * the second from the options list      *       * @param options      */
+comment|/**      * Merge WsdlOptions that point to the same file by adding the extraargs to the first option and deleting      * the second from the options list      *      * @param options      */
 specifier|protected
 name|void
 name|mergeOptions
@@ -1126,7 +1126,7 @@ name|newList
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Determine if code should be generated from the given wsdl      *       * @param wsdlOption      * @param doneFile      * @param wsdlURI      * @return      */
+comment|/**      * Determine if code should be generated from the given wsdl      *      * @param wsdlOption      * @param doneFile      * @param wsdlURI      * @return      */
 specifier|protected
 name|boolean
 name|shouldRun
@@ -1480,7 +1480,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Finds the timestamp for a given URI. Calls {@link #getBaseFileURI(URI)} prior to the timestamp      * check in order to handle "classpath" and "jar" URIs.      *       * @param uri the URI to timestamp      * @return a timestamp      */
+comment|/**      * Finds the timestamp for a given URI. Calls {@link #getBaseFileURI(URI)} prior to the timestamp      * check in order to handle "classpath" and "jar" URIs.      *      * @param uri the URI to timestamp      * @return a timestamp      */
 specifier|protected
 name|long
 name|getTimestamp
@@ -1558,7 +1558,7 @@ return|return
 name|timestamp
 return|;
 block|}
-comment|/**      * Finds the base file URI that 'contains' the given URI. If the URI can not be resolved to a file URI      * then the original URI is returned. This method currently attempts to resolve only "classpath" and      * "jar" URIs.      *       * @param uri the URI to resolve      * @return uri a file URI if the original URI is contained in a file, otherwise the original URI      */
+comment|/**      * Finds the base file URI that 'contains' the given URI. If the URI can not be resolved to a file URI      * then the original URI is returned. This method currently attempts to resolve only "classpath" and      * "jar" URIs.      *      * @param uri the URI to resolve      * @return uri a file URI if the original URI is contained in a file, otherwise the original URI      */
 specifier|protected
 name|URI
 name|getBaseFileURI

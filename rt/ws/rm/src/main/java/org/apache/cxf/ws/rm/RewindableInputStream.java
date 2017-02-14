@@ -149,7 +149,7 @@ specifier|final
 name|CachedOutputStream
 name|cachedStream
 decl_stmt|;
-comment|/**      * Constructs rewindable input stream      *       * @param is stream supporting mark      */
+comment|/**      * Constructs rewindable input stream      *      * @param is stream supporting mark      */
 specifier|public
 name|RewindableInputStream
 parameter_list|(
@@ -172,7 +172,7 @@ operator|=
 literal|null
 expr_stmt|;
 block|}
-comment|/**      * Internal constructor from cached output stream.      *       * @param os      * @throws IOException      */
+comment|/**      * Internal constructor from cached output stream.      *      * @param os      * @throws IOException      */
 specifier|private
 name|RewindableInputStream
 parameter_list|(

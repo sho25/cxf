@@ -118,7 +118,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A test interceptor to check that the Principal is not null + that the name is equal to a   * given name.  */
+comment|/**  * A test interceptor to check that the Principal is not null + that the name is equal to a  * given name.  */
 end_comment
 
 begin_class

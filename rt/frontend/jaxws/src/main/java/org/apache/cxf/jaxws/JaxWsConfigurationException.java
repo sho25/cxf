@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This exception is thrown when CXF discovers inconsistent or unsupported JAX-WS annotations.   */
+comment|/**  * This exception is thrown when CXF discovers inconsistent or unsupported JAX-WS annotations.  */
 end_comment
 
 begin_class

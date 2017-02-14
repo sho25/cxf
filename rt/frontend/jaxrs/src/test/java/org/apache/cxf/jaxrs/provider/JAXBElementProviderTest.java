@@ -11686,7 +11686,7 @@ argument_list|()
 decl_stmt|;
 name|TestMarshaller
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|Map
 argument_list|<

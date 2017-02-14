@@ -2657,7 +2657,7 @@ name|providerList
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully issue a Saml 1.1 token. The claims information is included as a       * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
+comment|/**      * Test to successfully issue a Saml 1.1 token. The claims information is included as a      * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
 annotation|@
 name|org
 operator|.

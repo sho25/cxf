@@ -603,7 +603,7 @@ decl_stmt|;
 specifier|protected
 name|AbstractAuthFilter
 parameter_list|()
-block|{              }
+block|{      }
 comment|/**      * Sets {@link OAuthDataProvider} provider.      * @param provider the provider      */
 specifier|public
 name|void
@@ -642,7 +642,7 @@ return|return
 name|useUserSubject
 return|;
 block|}
-comment|/**      * Authenticates the third-party consumer and returns      * {@link OAuthInfo} bean capturing the information about the request.       * @param req http request      * @return OAuth info      * @see OAuthInfo      * @throws Exception      * @throws OAuthProblemException      */
+comment|/**      * Authenticates the third-party consumer and returns      * {@link OAuthInfo} bean capturing the information about the request.      * @param req http request      * @return OAuth info      * @see OAuthInfo      * @throws Exception      * @throws OAuthProblemException      */
 specifier|protected
 name|OAuthInfo
 name|handleOAuthRequest

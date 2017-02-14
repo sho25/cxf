@@ -490,7 +490,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for SAML Tokens.   */
+comment|/**  * A set of tests for SAML Tokens.  */
 end_comment
 
 begin_class

@@ -169,7 +169,7 @@ name|RECEIVE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Copied from LoggingInInterceptor      *       * @param soapMessage      */
+comment|/**      * Copied from LoggingInInterceptor      *      * @param soapMessage      */
 specifier|private
 name|void
 name|getSoapRequest

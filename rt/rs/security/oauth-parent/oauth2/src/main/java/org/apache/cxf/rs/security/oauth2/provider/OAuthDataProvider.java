@@ -154,7 +154,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * OAuth provider responsible for persisting the information about   * OAuth consumers, request and access tokens.  */
+comment|/**  * OAuth provider responsible for persisting the information about  * OAuth consumers, request and access tokens.  */
 end_comment
 
 begin_interface
@@ -162,7 +162,7 @@ specifier|public
 interface|interface
 name|OAuthDataProvider
 block|{
-comment|/**      * Returns the previously registered third-party {@link Client}       * @param clientId the client id      * @return Client      * @throws OAuthServiceException      */
+comment|/**      * Returns the previously registered third-party {@link Client}      * @param clientId the client id      * @return Client      * @throws OAuthServiceException      */
 name|Client
 name|getClient
 parameter_list|(
@@ -172,7 +172,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Create access token       * @param accessToken the token registration info       * @return AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Create access token      * @param accessToken the token registration info      * @return AccessToken      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|createAccessToken
 parameter_list|(
@@ -182,7 +182,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Get access token       * @param accessToken the token key       * @return AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Get access token      * @param accessToken the token key      * @return AccessToken      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|getAccessToken
 parameter_list|(
@@ -192,7 +192,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Get preauthorized access token       * @param client Client      * @param requestedScopes the scopes requested by the client      * @param subject End User subject       * @return AccessToken access token      * @throws OAuthServiceException      */
+comment|/**      * Get preauthorized access token      * @param client Client      * @param requestedScopes the scopes requested by the client      * @param subject End User subject      * @return AccessToken access token      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|getPreauthorizedToken
 parameter_list|(
@@ -214,7 +214,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Refresh access token       * @param client the client      * @param refreshToken refresh token key       * @param requestedScopes the scopes requested by the client        * @return AccessToken      * @throws OAuthServiceException      */
+comment|/**      * Refresh access token      * @param client the client      * @param refreshToken refresh token key      * @param requestedScopes the scopes requested by the client      * @return AccessToken      * @throws OAuthServiceException      */
 name|ServerAccessToken
 name|refreshAccessToken
 parameter_list|(
@@ -281,7 +281,7 @@ parameter_list|)
 throws|throws
 name|OAuthServiceException
 function_decl|;
-comment|/**      * Converts the requested scopes to the list of permissions.      * The scopes are extracted from OAuth2 'scope' property which      * if set may contain one or more space separated scope values      *         * @param requestedScopes the scopes      * @return list of permissions      */
+comment|/**      * Converts the requested scopes to the list of permissions.      * The scopes are extracted from OAuth2 'scope' property which      * if set may contain one or more space separated scope values      *      * @param requestedScopes the scopes      * @return list of permissions      */
 name|List
 argument_list|<
 name|OAuthPermission

@@ -1135,7 +1135,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates WebClient      * @param baseAddress baseAddress      * @param providers list of providers      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient      * @param baseAddress baseAddress      * @param providers list of providers      * @param configLocation classpath location of the configuration resource, can be null      * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1236,7 +1236,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates WebClient      * @param baseAddress baseAddress      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient      * @param baseAddress baseAddress      * @param configLocation classpath location of the configuration resource, can be null      * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1266,7 +1266,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates WebClient which will do basic authentication      * @param baseAddress baseAddress      * @param username username      * @param password password      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient which will do basic authentication      * @param baseAddress baseAddress      * @param username username      * @param password password      * @param configLocation classpath location of the configuration resource, can be null      * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1316,7 +1316,7 @@ name|createWebClient
 argument_list|()
 return|;
 block|}
-comment|/**      * Creates WebClient which will do basic authentication      * @param baseAddress baseAddress      * @param providers list of providers      * @param username username      * @param password password      * @param configLocation classpath location of the configuration resource, can be null        * @return WebClient instance      */
+comment|/**      * Creates WebClient which will do basic authentication      * @param baseAddress baseAddress      * @param providers list of providers      * @param username username      * @param password password      * @param configLocation classpath location of the configuration resource, can be null      * @return WebClient instance      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1431,7 +1431,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates WebClient, baseURI will be set to Client currentURI      * @param client existing client      * @param inheritHeaders  if existing Client headers can be inherited by new client       */
+comment|/**      * Creates WebClient, baseURI will be set to Client currentURI      * @param client existing client      * @param inheritHeaders  if existing Client headers can be inherited by new client      */
 specifier|public
 specifier|static
 name|WebClient
@@ -1542,7 +1542,7 @@ return|return
 name|webClient
 return|;
 block|}
-comment|/**      * Converts object to Client      * @param object the object      * @return Client object converted to Client       */
+comment|/**      * Converts object to Client      * @param object the object      * @return Client object converted to Client      */
 specifier|public
 specifier|static
 name|Client
@@ -1570,7 +1570,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Retrieves ClientConfiguration      * @param client proxy or http-centric Client      * @return underlying ClientConfiguration instance       */
+comment|/**      * Retrieves ClientConfiguration      * @param client proxy or http-centric Client      * @return underlying ClientConfiguration instance      */
 specifier|public
 specifier|static
 name|ClientConfiguration
@@ -1689,7 +1689,7 @@ literal|"Not a valid Client"
 argument_list|)
 throw|;
 block|}
-comment|/**      * Does HTTP invocation      * @param httpMethod HTTP method      * @param body request body, can be null      * @return JAXRS Response, entity may hold a string representaion of       *         error message if client or server error occured      */
+comment|/**      * Does HTTP invocation      * @param httpMethod HTTP method      * @param body request body, can be null      * @return JAXRS Response, entity may hold a string representaion of      *         error message if client or server error occured      */
 specifier|public
 name|Response
 name|invoke
@@ -1913,7 +1913,7 @@ name|class
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP invocation and returns types response object       * @param httpMethod HTTP method       * @param body request body, can be null      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP invocation and returns types response object      * @param httpMethod HTTP method      * @param body request body, can be null      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -1984,7 +1984,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP invocation and returns types response object       * @param httpMethod HTTP method       * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP invocation and returns types response object      * @param httpMethod HTTP method      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2030,7 +2030,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP invocation and returns types response object       * @param httpMethod HTTP method       * @param body request body, can be null      * @param requestClass request body class      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP invocation and returns types response object      * @param httpMethod HTTP method      * @param body request body, can be null      * @param requestClass request body class      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2126,7 +2126,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP POST invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP POST invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2157,7 +2157,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP POST invocation and returns typed response object      * @param body request body, can be null      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP POST invocation and returns typed response object      * @param body request body, can be null      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2188,7 +2188,7 @@ name|responseType
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP Async POST invocation and returns Future.      * Shortcut for async().post(Entity, InvocationCallback)      * @param callback invocation callback       * @return the future      */
+comment|/**      * Does HTTP Async POST invocation and returns Future.      * Shortcut for async().post(Entity, InvocationCallback)      * @param callback invocation callback      * @return the future      */
 specifier|public
 parameter_list|<
 name|T
@@ -2229,7 +2229,7 @@ name|callback
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP PUT invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP PUT invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2260,7 +2260,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP PUT invocation and returns typed response object      * @param body request body, can be null      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP PUT invocation and returns typed response object      * @param body request body, can be null      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2291,7 +2291,7 @@ name|responseType
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP Async PUT invocation and returns Future.      * Shortcut for async().put(Entity, InvocationCallback)      * @param callback invocation callback       * @return the future      */
+comment|/**      * Does HTTP Async PUT invocation and returns Future.      * Shortcut for async().put(Entity, InvocationCallback)      * @param callback invocation callback      * @return the future      */
 specifier|public
 parameter_list|<
 name|T
@@ -2332,7 +2332,7 @@ name|callback
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP invocation and returns a collection of typed objects       * @param httpMethod HTTP method       * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
+comment|/**      * Does HTTP invocation and returns a collection of typed objects      * @param httpMethod HTTP method      * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
 specifier|public
 parameter_list|<
 name|T
@@ -2400,7 +2400,7 @@ name|memberClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Posts a collection of typed objects       * @param collection request body      * @param memberClass type of collection member class      * @return JAX-RS Response      */
+comment|/**      * Posts a collection of typed objects      * @param collection request body      * @param memberClass type of collection member class      * @return JAX-RS Response      */
 specifier|public
 parameter_list|<
 name|T
@@ -2443,7 +2443,7 @@ name|class
 argument_list|)
 return|;
 block|}
-comment|/**      * Posts a collection of typed objects       * @param collection request body      * @param memberClass type of collection member class      * @param responseClass expected type of response object      * @return JAX-RS Response      */
+comment|/**      * Posts a collection of typed objects      * @param collection request body      * @param memberClass type of collection member class      * @param responseClass expected type of response object      * @return JAX-RS Response      */
 specifier|public
 parameter_list|<
 name|T1
@@ -2657,7 +2657,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Posts request body and returns a collection of typed objects       * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
+comment|/**      * Posts request body and returns a collection of typed objects      * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
 specifier|public
 parameter_list|<
 name|T
@@ -2693,7 +2693,7 @@ name|memberClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP GET invocation and returns a collection of typed objects       * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
+comment|/**      * Does HTTP GET invocation and returns a collection of typed objects      * @param body request body, can be null      * @param memberClass expected type of collection member class      * @return typed collection      */
 specifier|public
 parameter_list|<
 name|T
@@ -2726,7 +2726,7 @@ name|memberClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP GET invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP GET invocation and returns typed response object      * @param body request body, can be null      * @param responseClass expected type of response object      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2754,7 +2754,7 @@ name|responseClass
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP GET invocation and returns typed response object      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers       *         can be obtained too, see Client.getResponse()      */
+comment|/**      * Does HTTP GET invocation and returns typed response object      * @param responseType generic response type      * @return typed object, can be null. Response status code and headers      *         can be obtained too, see Client.getResponse()      */
 specifier|public
 parameter_list|<
 name|T
@@ -2782,7 +2782,7 @@ name|responseType
 argument_list|)
 return|;
 block|}
-comment|/**      * Does HTTP Async GET invocation and returns Future.      * Shortcut for async().get(InvocationCallback)      * @param callback invocation callback       * @return the future      */
+comment|/**      * Does HTTP Async GET invocation and returns Future.      * Shortcut for async().get(InvocationCallback)      * @param callback invocation callback      * @return the future      */
 specifier|public
 parameter_list|<
 name|T
@@ -2997,7 +2997,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Moves WebClient to a new baseURI or forwards to new currentURI        * @param newAddress new URI      * @param forward if true then currentURI will be based on baseURI        * @return updated WebClient      */
+comment|/**      * Moves WebClient to a new baseURI or forwards to new currentURI      * @param newAddress new URI      * @param forward if true then currentURI will be based on baseURI      * @return updated WebClient      */
 specifier|public
 name|WebClient
 name|to
@@ -3081,7 +3081,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Goes back      * @param fast if true then goes back to baseURI otherwise to a previous path segment       * @return updated WebClient      */
+comment|/**      * Goes back      * @param fast if true then goes back to baseURI otherwise to a previous path segment      * @return updated WebClient      */
 specifier|public
 name|WebClient
 name|back
@@ -3206,7 +3206,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Replaces the current path with the new value.      * @param path new path value. If it starts from "/" then all the current      * path starting from the base URI will be replaced, otherwise only the       * last path segment will be replaced. Providing a null value is equivalent      * to calling back(true)        * @return updated WebClient      */
+comment|/**      * Replaces the current path with the new value.      * @param path new path value. If it starts from "/" then all the current      * path starting from the base URI will be replaced, otherwise only the      * last path segment will be replaced. Providing a null value is equivalent      * to calling back(true)      * @return updated WebClient      */
 specifier|public
 name|WebClient
 name|replacePath
@@ -3263,7 +3263,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Replaces the current query with the new value.      * @param queryString the new value, providing a null is      *        equivalent to calling resetQuery().        * @return updated WebClient      */
+comment|/**      * Replaces the current query with the new value.      * @param queryString the new value, providing a null is      *        equivalent to calling resetQuery().      * @return updated WebClient      */
 specifier|public
 name|WebClient
 name|replaceQuery
@@ -3338,7 +3338,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Replaces the current query with the new value.      * @param queryString the new value, providing a null is      *        equivalent to calling resetQuery().        * @return updated WebClient      */
+comment|/**      * Replaces the current query with the new value.      * @param queryString the new value, providing a null is      *        equivalent to calling resetQuery().      * @return updated WebClient      */
 specifier|public
 name|WebClient
 name|replaceQueryParam

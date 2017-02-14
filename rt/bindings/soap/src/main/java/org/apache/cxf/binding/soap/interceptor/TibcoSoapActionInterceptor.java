@@ -128,7 +128,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tibco Business Works uses SoapAction instead of the standard spelling SOAPAction.   * So this interceptor adds a SoapAction header if SOAPAction is set in protocol header  */
+comment|/**  * Tibco Business Works uses SoapAction instead of the standard spelling SOAPAction.  * So this interceptor adds a SoapAction header if SOAPAction is set in protocol header  */
 end_comment
 
 begin_class

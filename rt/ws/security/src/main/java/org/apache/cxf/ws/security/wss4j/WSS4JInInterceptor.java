@@ -2382,7 +2382,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Do whatever is necessary to determine the action for the incoming message and       * do whatever other setup work is necessary.      *       * @param msg      * @param reqData      */
+comment|/**      * Do whatever is necessary to determine the action for the incoming message and      * do whatever other setup work is necessary.      *      * @param msg      * @param reqData      */
 specifier|protected
 name|void
 name|computeAction
@@ -2587,7 +2587,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Is a Nonce Cache required, i.e. are we expecting a UsernameToken       */
+comment|/**      * Is a Nonce Cache required, i.e. are we expecting a UsernameToken      */
 specifier|protected
 name|boolean
 name|isNonceCacheRequired
@@ -2622,7 +2622,7 @@ name|UT_NOPASSWORD
 argument_list|)
 return|;
 block|}
-comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp       */
+comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp      */
 specifier|protected
 name|boolean
 name|isTimestampCacheRequired
@@ -2648,7 +2648,7 @@ name|TS
 argument_list|)
 return|;
 block|}
-comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token       */
+comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token      */
 specifier|protected
 name|boolean
 name|isSamlCacheRequired
@@ -3522,7 +3522,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Get a ReplayCache instance. It first checks to see whether caching has been explicitly       * enabled or disabled via the booleanKey argument. If it has been set to false then no      * replay caching is done (for this booleanKey). If it has not been specified, then caching      * is enabled only if we are not the initiator of the exchange. If it has been specified, then      * caching is enabled.      *       * It tries to get an instance of ReplayCache via the instanceKey argument from a       * contextual property, and failing that the message exchange. If it can't find any, then it      * defaults to using an EH-Cache instance and stores that on the message exchange.      */
+comment|/**      * Get a ReplayCache instance. It first checks to see whether caching has been explicitly      * enabled or disabled via the booleanKey argument. If it has been set to false then no      * replay caching is done (for this booleanKey). If it has not been specified, then caching      * is enabled only if we are not the initiator of the exchange. If it has been specified, then      * caching is enabled.      *      * It tries to get an instance of ReplayCache via the instanceKey argument from a      * contextual property, and failing that the message exchange. If it can't find any, then it      * defaults to using an EH-Cache instance and stores that on the message exchange.      */
 specifier|protected
 name|ReplayCache
 name|getReplayCache

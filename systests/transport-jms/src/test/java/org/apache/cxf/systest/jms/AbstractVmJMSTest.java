@@ -232,7 +232,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Base class for JMS tests that use the an in VM ConnectionFactory.  *   *  The idea is to start the bus and services in the @BeforeClass of the test.  *  In each test method clients are created and marked for removal.  *  The base class then makes sure that all clients are closed after each test method  *  and that the bus is shut down after the whole test class.  */
+comment|/**  * Base class for JMS tests that use the an in VM ConnectionFactory.  *  *  The idea is to start the bus and services in the @BeforeClass of the test.  *  In each test method clients are created and marked for removal.  *  The base class then makes sure that all clients are closed after each test method  *  and that the bus is shut down after the whole test class.  */
 end_comment
 
 begin_class

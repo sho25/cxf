@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Outputstream that will buffer a certain amount before writing anything to the underlying  * stream.   When the threshold is reached, provides a callback point to allow the  * subclass to update headers, replace/set the output stream, etc...  *   * Also provides a callback for when the stream is closed without it reaching the threshold.  */
+comment|/**  * Outputstream that will buffer a certain amount before writing anything to the underlying  * stream.   When the threshold is reached, provides a callback point to allow the  * subclass to update headers, replace/set the output stream, etc...  *  * Also provides a callback for when the stream is closed without it reaching the threshold.  */
 end_comment
 
 begin_class

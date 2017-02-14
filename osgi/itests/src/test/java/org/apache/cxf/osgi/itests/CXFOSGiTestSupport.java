@@ -560,7 +560,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -828,7 +828,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *       * @return      */
+comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *      * @return      */
 specifier|protected
 name|Option
 name|cxfBaseConfig
@@ -1021,7 +1021,7 @@ name|versionAsInProject
 argument_list|()
 return|;
 block|}
-comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *       * @param command      * @return      */
+comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *      * @param command      * @return      */
 specifier|protected
 name|String
 name|executeCommand
@@ -1042,7 +1042,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *       * @param command The command to execute.      * @param timeout The amount of time in millis to wait for the command to execute.      * @param silent Specifies if the command should be displayed in the screen.      * @return      */
+comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *      * @param command The command to execute.      * @param timeout The amount of time in millis to wait for the command to execute.      * @param silent Specifies if the command should be displayed in the screen.      * @return      */
 specifier|protected
 name|String
 name|executeCommand
@@ -1239,7 +1239,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      * Executes multiple commands inside a Single Session. Commands have a default timeout of 10 seconds.      *       * @param commands      * @return      */
+comment|/**      * Executes multiple commands inside a Single Session. Commands have a default timeout of 10 seconds.      *      * @param commands      * @return      */
 specifier|protected
 name|String
 name|executeCommands
@@ -1971,7 +1971,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Finds a free port starting from the give port numner.      *       * @return      */
+comment|/**      * Finds a free port starting from the give port numner.      *      * @return      */
 specifier|protected
 name|int
 name|getFreePort
@@ -1997,7 +1997,7 @@ return|return
 name|port
 return|;
 block|}
-comment|/**      * Returns true if port is available for use.      *       * @param port      * @return      */
+comment|/**      * Returns true if port is available for use.      *      * @param port      * @return      */
 specifier|public
 specifier|static
 name|boolean

@@ -69,7 +69,7 @@ name|FIQL
 init|=
 name|DEFAULT_LANGUAGE
 decl_stmt|;
-comment|/**      * Creates instance of builder.      *       * @return default implementation of builder.      */
+comment|/**      * Creates instance of builder.      *      * @return default implementation of builder.      */
 specifier|public
 specifier|static
 name|SearchConditionBuilder
@@ -107,7 +107,7 @@ name|properties
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates instance of builder for specific language.      *       * @param language alias of language, case insensitive. If alias is unknown, default FIQL implementation      *            is returned.      * @return implementation of expected or default builder.      */
+comment|/**      * Creates instance of builder for specific language.      *      * @param language alias of language, case insensitive. If alias is unknown, default FIQL implementation      *            is returned.      * @return implementation of expected or default builder.      */
 specifier|public
 specifier|static
 name|SearchConditionBuilder

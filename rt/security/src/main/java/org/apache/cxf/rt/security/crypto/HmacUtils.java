@@ -176,7 +176,7 @@ block|{
 specifier|private
 name|HmacUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

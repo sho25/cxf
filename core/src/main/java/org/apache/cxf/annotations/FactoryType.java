@@ -118,7 +118,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Defines the factory used for the service.  *   * Either use the factoryClass attribute to define your own   * factory or use one of the "value" convenience enums.  */
+comment|/**  * Defines the factory used for the service.  *  * Either use the factoryClass attribute to define your own  * factory or use one of the "value" convenience enums.  */
 end_comment
 
 begin_annotation_defn
@@ -161,7 +161,7 @@ argument_list|()
 expr|default
 block|{ }
 expr_stmt|;
-comment|/**      * The class for the factory.  It MUST have a constructor that takes      * two arguments:      *    1) The Class for the service      *    2) String[] of the args from above       */
+comment|/**      * The class for the factory.  It MUST have a constructor that takes      * two arguments:      *    1) The Class for the service      *    2) String[] of the args from above      */
 name|Class
 argument_list|<
 name|?

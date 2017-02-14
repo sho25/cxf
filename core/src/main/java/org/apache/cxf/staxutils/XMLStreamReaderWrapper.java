@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Interface for XMLStreamReader wrappers  *   */
+comment|/**  * Interface for XMLStreamReader wrappers  *  */
 end_comment
 
 begin_interface

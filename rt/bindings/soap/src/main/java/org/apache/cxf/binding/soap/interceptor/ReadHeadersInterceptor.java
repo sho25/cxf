@@ -622,7 +622,7 @@ name|BODY_PREFIX
 init|=
 literal|"body.prefix"
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 specifier|static
 class|class

@@ -88,7 +88,7 @@ name|JwsCompactHeaderTest
 extends|extends
 name|Assert
 block|{
-comment|/**      * JWS string, which lacks the "alg" header field.      *       * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present in the compact serialization.      */
+comment|/**      * JWS string, which lacks the "alg" header field.      *      * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present in the compact serialization.      */
 specifier|public
 specifier|static
 specifier|final
@@ -99,7 +99,7 @@ literal|"eyAiZ2xhIiA6ICJDQU1IIiB9.eyAibXNnIjogIllvdSBjYW4ndCB0b3VjaCB0aGlzISIgfQ
 operator|+
 literal|".Sqd_AuwlPPqv4L1EV4zPuR-HfFJpe9kOfvc597RlcoE"
 decl_stmt|;
-comment|/**      * JWS string, which contains two "alg" header fields. Bogus "alg" header      * field first.      *       * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present once in the compact      * serialization.      */
+comment|/**      * JWS string, which contains two "alg" header fields. Bogus "alg" header      * field first.      *      * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present once in the compact      * serialization.      */
 specifier|public
 specifier|static
 specifier|final
@@ -110,7 +110,7 @@ literal|"eyAiYWxnIjogIkJvZ3VzIiwgImFsZyI6ICJIUzI1NiIgfQ.eyAibXNnIjogIllvdSBjYW4n
 operator|+
 literal|".FIgpDi1Wp9iIxxXfBw8Zce2kiZ8gmqAaVYPduRFR8kU"
 decl_stmt|;
-comment|/**      * JWS string, which contains two "alg" header fields. Bogus "alg" header      * field last.      *       * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present once in the compact      * serialization.      */
+comment|/**      * JWS string, which contains two "alg" header fields. Bogus "alg" header      * field last.      *      * => Must be rejected by verification operation, since the spec declares      * that the "alg" header field must be present once in the compact      * serialization.      */
 specifier|public
 specifier|static
 specifier|final
@@ -121,7 +121,7 @@ literal|"eyAiYWxnIjogIkhTMjU2IiwgImFsZyI6ICJCb2d1cyIgfQ.eyAibXNnIjogIllvdSBjYW4n
 operator|+
 literal|".Ftwla-nAg0Nty8ILVhjlIETOy2Tw1JsD3bBq55AS0PU"
 decl_stmt|;
-comment|/**      * JWS string, which contains an invalid "alg" header field value.      *       * (1): Algorithm not supported/known      *       * => Must be rejected by verification operation, since the spec declares      * that the signature is not valid if the "alg" value does not represent a      * supported algorithm. "alg" values should either be registered in the IANA      * JSON Web Signature and Encryption Algorithms registry defined in JWA or      * be a value that contains a Collision-Resistant Name.      */
+comment|/**      * JWS string, which contains an invalid "alg" header field value.      *      * (1): Algorithm not supported/known      *      * => Must be rejected by verification operation, since the spec declares      * that the signature is not valid if the "alg" value does not represent a      * supported algorithm. "alg" values should either be registered in the IANA      * JSON Web Signature and Encryption Algorithms registry defined in JWA or      * be a value that contains a Collision-Resistant Name.      */
 specifier|public
 specifier|static
 specifier|final
@@ -130,7 +130,7 @@ name|INVALID_ALG_HEADER_VALUE_IN_JWS_1
 init|=
 literal|"tba"
 decl_stmt|;
-comment|/**      * JWS string, which contains an invalid "alg" header field value.      *       * (2): Wrong value encoding      *       * => Must be rejected by verification operation, since the spec declares      * that the "alg" value is a case-sensitive string containing a StringOrURI      * value.      */
+comment|/**      * JWS string, which contains an invalid "alg" header field value.      *      * (2): Wrong value encoding      *      * => Must be rejected by verification operation, since the spec declares      * that the "alg" value is a case-sensitive string containing a StringOrURI      * value.      */
 specifier|public
 specifier|static
 specifier|final
@@ -139,7 +139,7 @@ name|INVALID_ALG_HEADER_VALUE_IN_JWS_2
 init|=
 literal|"tba"
 decl_stmt|;
-comment|/**      * JWS string, which contains a "alg" header field value of "none". The      * signature has been generated with "HS256" and the signed JWS has been      * altered afterwards to the value "none".      *       * => Must be rejected by verification operation, since the "none" algorithm      * is considered harmful.      */
+comment|/**      * JWS string, which contains a "alg" header field value of "none". The      * signature has been generated with "HS256" and the signed JWS has been      * altered afterwards to the value "none".      *      * => Must be rejected by verification operation, since the "none" algorithm      * is considered harmful.      */
 specifier|public
 specifier|static
 specifier|final

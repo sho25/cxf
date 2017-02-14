@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The default singleton resource provider which returns   * the same resource instance per every request  */
+comment|/**  * The default singleton resource provider which returns  * the same resource instance per every request  */
 end_comment
 
 begin_class

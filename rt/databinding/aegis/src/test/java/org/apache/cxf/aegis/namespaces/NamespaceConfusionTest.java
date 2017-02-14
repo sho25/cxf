@@ -256,7 +256,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**   * Regression test for CXF-959. This is a point test for consistent   * use of namespace prefixes in generated WSDL/XMLSchema. This test could   * be made into a more comprehensive functional test by exercising  * cases such as multiple schema.  */
+comment|/**  * Regression test for CXF-959. This is a point test for consistent  * use of namespace prefixes in generated WSDL/XMLSchema. This test could  * be made into a more comprehensive functional test by exercising  * cases such as multiple schema.  */
 end_comment
 
 begin_class

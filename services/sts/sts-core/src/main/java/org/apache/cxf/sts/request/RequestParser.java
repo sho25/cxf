@@ -3448,7 +3448,7 @@ return|;
 end_return
 
 begin_function
-unit|}          private
+unit|}      private
 specifier|static
 name|Participants
 name|parseParticipants
@@ -4363,7 +4363,7 @@ end_return
 
 begin_comment
 unit|}
-comment|/**      * Parse the secondaryParameters element. Precedence goes to values that are specified as      * direct children of the RequestSecurityToken element.       * @param secondaryParameters the secondaryParameters element to parse      */
+comment|/**      * Parse the secondaryParameters element. Precedence goes to values that are specified as      * direct children of the RequestSecurityToken element.      * @param secondaryParameters the secondaryParameters element to parse      */
 end_comment
 
 begin_function

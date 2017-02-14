@@ -1689,7 +1689,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully issue a JWT token. The claims information is included as a       * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
+comment|/**      * Test to successfully issue a JWT token. The claims information is included as a      * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
 annotation|@
 name|org
 operator|.

@@ -190,7 +190,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -390,7 +390,7 @@ parameter_list|(
 name|CachedOutputStream
 name|cos
 parameter_list|)
-block|{            }
+block|{          }
 specifier|public
 name|void
 name|onClose

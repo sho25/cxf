@@ -821,7 +821,7 @@ specifier|public
 name|void
 name|tearDown
 parameter_list|()
-block|{             }
+block|{     }
 specifier|protected
 name|void
 name|setUp

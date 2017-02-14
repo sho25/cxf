@@ -2971,7 +2971,7 @@ argument_list|,
 literal|"Transport_SAML_Port"
 argument_list|)
 decl_stmt|;
-comment|/*         SecurityToken token =                  requestSecurityToken(SAML2_TOKEN_TYPE, BEARER_KEYTYPE, null,                         bus, DEFAULT_ADDRESS, null, properties, "b-issuer", null);                         */
+comment|/*         SecurityToken token =                 requestSecurityToken(SAML2_TOKEN_TYPE, BEARER_KEYTYPE, null,                         bus, DEFAULT_ADDRESS, null, properties, "b-issuer", null);                         */
 name|assertTrue
 argument_list|(
 name|SAML2_TOKEN_TYPE

@@ -204,7 +204,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for GCM algorithms using custom WS-SecurityPolicy expressions.   */
+comment|/**  * A set of tests for GCM algorithms using custom WS-SecurityPolicy expressions.  */
 end_comment
 
 begin_class

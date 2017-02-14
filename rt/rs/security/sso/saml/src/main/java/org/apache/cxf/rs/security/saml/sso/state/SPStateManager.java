@@ -44,7 +44,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * SSO Service Provider State Manager.  *   * TODO: review the possibility of working with the Servlet HTTPSession  * instead; in that case it can be tricky to configure various containers   * (Tomcat, Jetty) to make sure the cookies are shared across multiple   * war contexts which will be needed if RequestAssertionConsumerService  * needs to be run in its own war file instead of having every application   * war on the SP side have a dedicated RequestAssertionConsumerService endpoint     */
+comment|/**  * SSO Service Provider State Manager.  *  * TODO: review the possibility of working with the Servlet HTTPSession  * instead; in that case it can be tricky to configure various containers  * (Tomcat, Jetty) to make sure the cookies are shared across multiple  * war contexts which will be needed if RequestAssertionConsumerService  * needs to be run in its own war file instead of having every application  * war on the SP side have a dedicated RequestAssertionConsumerService endpoint  */
 end_comment
 
 begin_interface

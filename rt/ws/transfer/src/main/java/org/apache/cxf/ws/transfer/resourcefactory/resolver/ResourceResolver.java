@@ -46,7 +46,7 @@ specifier|public
 interface|interface
 name|ResourceResolver
 block|{
-comment|/**      * Method for resolving, where the Resource will be created.      * @param body SOAP body      * @return ResourceReference object. If the Resource should be created locally,      * so the ResourceReference object must contain address and reference to the       * ResourceManager object. Otherwise the ResourceReference must contain only      * the address to the ResourceRemote endpoint.      */
+comment|/**      * Method for resolving, where the Resource will be created.      * @param body SOAP body      * @return ResourceReference object. If the Resource should be created locally,      * so the ResourceReference object must contain address and reference to the      * ResourceManager object. Otherwise the ResourceReference must contain only      * the address to the ResourceRemote endpoint.      */
 name|ResourceReference
 name|resolve
 parameter_list|(

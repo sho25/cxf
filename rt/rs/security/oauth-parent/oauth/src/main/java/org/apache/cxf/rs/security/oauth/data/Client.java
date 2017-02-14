@@ -175,7 +175,7 @@ operator|=
 name|applicationName
 expr_stmt|;
 block|}
-comment|/**      * Gets the public URI of the third-party application.      * For example, this property can be used to validate       * request token callbacks      * @return the application URI      */
+comment|/**      * Gets the public URI of the third-party application.      * For example, this property can be used to validate      * request token callbacks      * @return the application URI      */
 specifier|public
 name|String
 name|getApplicationURI
@@ -252,7 +252,7 @@ return|return
 name|logoUri
 return|;
 block|}
-comment|/**      * Gets the optional login name; can be used       * for enforcing the RBAC rules       * @return the login name      */
+comment|/**      * Gets the optional login name; can be used      * for enforcing the RBAC rules      * @return the login name      */
 specifier|public
 name|String
 name|getLoginName

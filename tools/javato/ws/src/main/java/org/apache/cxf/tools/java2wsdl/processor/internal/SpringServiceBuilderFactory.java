@@ -345,7 +345,7 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Convert a parameter value to the name of a bean we'd use for a data binding.      *       * @param databindingName      * @return      */
+comment|/**      * Convert a parameter value to the name of a bean we'd use for a data binding.      *      * @param databindingName      * @return      */
 specifier|public
 specifier|static
 name|String
@@ -523,7 +523,7 @@ return|return
 name|builder
 return|;
 block|}
-comment|/**      * Return the name of a prototype bean from Spring that can provide the service. The use of a bean allows      * for the possibility of an override.      *       * @param s Style of service      * @return name of bean.      */
+comment|/**      * Return the name of a prototype bean from Spring that can provide the service. The use of a bean allows      * for the possibility of an override.      *      * @param s Style of service      * @return name of bean.      */
 specifier|protected
 name|String
 name|getBuilderBeanName
@@ -540,7 +540,7 @@ operator|+
 literal|"ServiceBuilderBean"
 return|;
 block|}
-comment|/**      * This is factored out to permit use in a unit test.      *       * @param bus      * @return      */
+comment|/**      * This is factored out to permit use in a unit test.      *      * @param bus      * @return      */
 specifier|public
 specifier|static
 name|ApplicationContext

@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A MultiplexDestination is a transport-level endpoint capable of receiving  * unsolicited incoming messages from different peers for multiple targets   * identified by a unique id.  * The disambiguation of targets is handled by higher layers as the target  * address is made available as a context property or as a WS-A-To header  */
+comment|/**  * A MultiplexDestination is a transport-level endpoint capable of receiving  * unsolicited incoming messages from different peers for multiple targets  * identified by a unique id.  * The disambiguation of targets is handled by higher layers as the target  * address is made available as a context property or as a WS-A-To header  */
 end_comment
 
 begin_interface
@@ -52,7 +52,7 @@ name|MultiplexDestination
 extends|extends
 name|Destination
 block|{
-comment|/**      * @return the a reference containing the id that is       * associated with this Destination      */
+comment|/**      * @return the a reference containing the id that is      * associated with this Destination      */
 name|EndpointReferenceType
 name|getAddressWithId
 parameter_list|(
@@ -60,7 +60,7 @@ name|String
 name|id
 parameter_list|)
 function_decl|;
-comment|/**      * @param contextMap for this invocation. Obtained for example from       * JAX-WS WebServiceContext.getMessageContext(). The context will      * either contain the WS-A To content and/or some property that       * identifies the target address, eg MessageContext.PATH_INFO for      * the current invocation      * @return the id associated with the current invocation      */
+comment|/**      * @param contextMap for this invocation. Obtained for example from      * JAX-WS WebServiceContext.getMessageContext(). The context will      * either contain the WS-A To content and/or some property that      * identifies the target address, eg MessageContext.PATH_INFO for      * the current invocation      * @return the id associated with the current invocation      */
 name|String
 name|getId
 parameter_list|(

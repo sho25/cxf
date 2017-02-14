@@ -1919,7 +1919,7 @@ operator|=
 literal|"expected ReplyTo or RelatesTo header"
 expr_stmt|;
 block|}
-comment|/*         if (partial) {              if (!wsaHeaders.contains(Names.WSA_FROM_NAME)) {                 ret = "expected From header";             }         } else {             // REVISIT Action missing from full response             //if (!wsaHeaders.contains(Names.WSA_ACTION_NAME)) {             //    ret = "expected Action header";             //}                     }         */
+comment|/*         if (partial) {             if (!wsaHeaders.contains(Names.WSA_FROM_NAME)) {                 ret = "expected From header";             }         } else {             // REVISIT Action missing from full response             //if (!wsaHeaders.contains(Names.WSA_ACTION_NAME)) {             //    ret = "expected Action header";             //}         }         */
 if|if
 condition|(
 name|requestLeg

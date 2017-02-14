@@ -130,7 +130,7 @@ decl_stmt|;
 specifier|public
 name|JsonWebKeys
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JsonWebKeys
 parameter_list|(

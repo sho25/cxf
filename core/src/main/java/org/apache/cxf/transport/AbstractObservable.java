@@ -127,7 +127,7 @@ specifier|protected
 name|MessageObserver
 name|incomingObserver
 decl_stmt|;
-comment|/**      * Register a message observer for incoming messages.      *       * @param observer the observer to notify on receipt of incoming      * message      */
+comment|/**      * Register a message observer for incoming messages.      *      * @param observer the observer to notify on receipt of incoming      * message      */
 specifier|public
 specifier|synchronized
 name|void
@@ -278,7 +278,7 @@ return|return
 name|incomingObserver
 return|;
 block|}
-comment|/**      * Get the target reference .      *       * @param ei the corresponding EndpointInfo      * @return the actual target      */
+comment|/**      * Get the target reference .      *      * @param ei the corresponding EndpointInfo      * @return the actual target      */
 specifier|protected
 specifier|static
 name|EndpointReferenceType
@@ -302,7 +302,7 @@ name|bus
 argument_list|)
 return|;
 block|}
-comment|/**      * Get the target endpoint reference.      *       * @param ei the corresponding EndpointInfo      * @param t the given target EPR if available      * @param bus the Bus      * @return the actual target      */
+comment|/**      * Get the target endpoint reference.      *      * @param ei the corresponding EndpointInfo      * @param t the given target EPR if available      * @param bus the Bus      * @return the actual target      */
 specifier|protected
 specifier|static
 name|EndpointReferenceType

@@ -1962,7 +1962,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Is a Nonce Cache required, i.e. are we expecting a UsernameToken       */
+comment|/**      * Is a Nonce Cache required, i.e. are we expecting a UsernameToken      */
 specifier|protected
 name|boolean
 name|isNonceCacheRequired
@@ -2020,7 +2020,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp       */
+comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp      */
 specifier|protected
 name|boolean
 name|isTimestampCacheRequired
@@ -2078,7 +2078,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token       */
+comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token      */
 specifier|protected
 name|boolean
 name|isSamlCacheRequired
@@ -2534,7 +2534,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * This interceptor runs after the StartBodyInterceptor. It skips any white space after the SOAP:Body start tag,       * to make sure that the WSS4J OperationInputProcessor is triggered by the first SOAP Body child (if it is not,       * then WS-Security processing does not happen correctly).      */
+comment|/**      * This interceptor runs after the StartBodyInterceptor. It skips any white space after the SOAP:Body start tag,      * to make sure that the WSS4J OperationInputProcessor is triggered by the first SOAP Body child (if it is not,      * then WS-Security processing does not happen correctly).      */
 specifier|private
 class|class
 name|StaxStartBodyInterceptor

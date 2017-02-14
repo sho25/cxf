@@ -56,7 +56,7 @@ class|class
 name|GreeterImplTwoWayJMS
 extends|extends
 name|TwoWayJMSImplBase
-block|{          }
+block|{  }
 end_class
 
 end_unit

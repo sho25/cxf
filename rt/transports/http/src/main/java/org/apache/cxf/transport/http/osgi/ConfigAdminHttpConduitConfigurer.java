@@ -148,7 +148,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Collects configuration information using a ManagedServiceFactory.  *   * Registers a HTTPConduitConfigurer that can configure conduits based on the above  * configuration data.  *   * When used with felix config admin and fileinstall the configuration  * is expected in files named org.apache.cxf.http.conduits-XYZ.cfg  * that has a list of properties like:  *   * url: Regex url to match the configuration  * order: Integer order in which to apply the regex's when multiple regex's match.  * client.*  * tlsClientParameters.*  * proxyAuthorization.*  * authorization.*  *   * Where each of those is a prefix for the attributes that would be on the elements   * of the http:conduit configuration defined at:  *   * http://cxf.apache.org/schemas/configuration/http-conf.xsd  *   * For example:  * client.ReceiveTimeout: 1000  * authorization.Username: Foo  * tlsClientParameters.keyManagers.keyStore.file: mykeys.jks  * etc....  *   */
+comment|/**  * Collects configuration information using a ManagedServiceFactory.  *  * Registers a HTTPConduitConfigurer that can configure conduits based on the above  * configuration data.  *  * When used with felix config admin and fileinstall the configuration  * is expected in files named org.apache.cxf.http.conduits-XYZ.cfg  * that has a list of properties like:  *  * url: Regex url to match the configuration  * order: Integer order in which to apply the regex's when multiple regex's match.  * client.*  * tlsClientParameters.*  * proxyAuthorization.*  * authorization.*  *  * Where each of those is a prefix for the attributes that would be on the elements  * of the http:conduit configuration defined at:  *  * http://cxf.apache.org/schemas/configuration/http-conf.xsd  *  * For example:  * client.ReceiveTimeout: 1000  * authorization.Username: Foo  * tlsClientParameters.keyManagers.keyStore.file: mykeys.jks  * etc....  *  */
 end_comment
 
 begin_class
@@ -167,7 +167,7 @@ name|FACTORY_PID
 init|=
 literal|"org.apache.cxf.http.conduits"
 decl_stmt|;
-comment|/**      * Stores the configuration data index by matcher and sorted by order       */
+comment|/**      * Stores the configuration data index by matcher and sorted by order      */
 specifier|private
 specifier|static
 class|class

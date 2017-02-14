@@ -120,7 +120,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Unit tests for the DefaultHostnameVerifier  *   * Copied from httpclient  */
+comment|/**  * Unit tests for the DefaultHostnameVerifier  *  * Copied from httpclient  */
 end_comment
 
 begin_class

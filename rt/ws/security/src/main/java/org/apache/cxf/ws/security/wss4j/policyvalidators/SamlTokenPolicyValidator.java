@@ -270,7 +270,7 @@ name|SamlTokenPolicyValidator
 extends|extends
 name|AbstractSamlPolicyValidator
 block|{
-comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a       * policy defined by the AssertionInfo parameter      */
+comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a      * policy defined by the AssertionInfo parameter      */
 specifier|public
 name|boolean
 name|canValidatePolicy

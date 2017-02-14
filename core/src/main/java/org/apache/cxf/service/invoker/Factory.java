@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents an object factory.  *   * Used at invoke time to find the object that the invokation will use  */
+comment|/**  * Represents an object factory.  *  * Used at invoke time to find the object that the invokation will use  */
 end_comment
 
 begin_interface
@@ -40,7 +40,7 @@ specifier|public
 interface|interface
 name|Factory
 block|{
-comment|/**      * Creates the object that will be used for the invoke       * @param e       * @throws Throwable      */
+comment|/**      * Creates the object that will be used for the invoke      * @param e      * @throws Throwable      */
 name|Object
 name|create
 parameter_list|(

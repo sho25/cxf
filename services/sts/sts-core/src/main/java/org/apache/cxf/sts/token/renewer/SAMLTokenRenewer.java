@@ -1052,7 +1052,7 @@ operator|=
 name|allowRenewalAfterExpiry
 expr_stmt|;
 block|}
-comment|/**      * Set a new value (in seconds) for how long a token is allowed to be expired for before renewal.       * The default is 30 minutes.      */
+comment|/**      * Set a new value (in seconds) for how long a token is allowed to be expired for before renewal.      * The default is 30 minutes.      */
 specifier|public
 name|void
 name|setMaxExpiry
@@ -1066,7 +1066,7 @@ operator|=
 name|newExpiry
 expr_stmt|;
 block|}
-comment|/**      * Get how long a token is allowed to be expired for before renewal (in seconds). The default is       * 30 minutes.      */
+comment|/**      * Get how long a token is allowed to be expired for before renewal (in seconds). The default is      * 30 minutes.      */
 specifier|public
 name|long
 name|getMaxExpiry

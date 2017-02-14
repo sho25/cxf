@@ -206,7 +206,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test client to do websocket calls.  * @see JAXRSClientServerWebSocketTest  *   * we may put this in test-tools so that other systests can use this code.  * for now keep it here to experiment jaxrs websocket scenarios.  */
+comment|/**  * Test client to do websocket calls.  * @see JAXRSClientServerWebSocketTest  *  * we may put this in test-tools so that other systests can use this code.  * for now keep it here to experiment jaxrs websocket scenarios.  */
 end_comment
 
 begin_class

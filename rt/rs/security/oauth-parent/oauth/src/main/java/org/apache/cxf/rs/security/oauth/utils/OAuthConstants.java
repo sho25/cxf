@@ -22,7 +22,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Miscellaneous constants   */
+comment|/**  * Miscellaneous constants  */
 end_comment
 
 begin_class
@@ -138,7 +138,7 @@ decl_stmt|;
 specifier|private
 name|OAuthConstants
 parameter_list|()
-block|{              }
+block|{      }
 block|}
 end_class
 

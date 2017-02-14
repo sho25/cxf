@@ -191,7 +191,7 @@ block|{
 specifier|public
 name|ResourceAdapterImplTest
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|Test
 specifier|public
