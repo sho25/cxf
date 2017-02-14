@@ -4059,7 +4059,7 @@ name|serverLocation
 operator|=
 name|location
 expr_stmt|;
-comment|//this.direction =  direction;
+comment|//this.direction = direction;
 comment|//this.method = method;
 name|this
 operator|.
