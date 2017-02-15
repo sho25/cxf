@@ -4325,6 +4325,8 @@ name|getProvider
 argument_list|()
 argument_list|,
 name|app
+argument_list|,
+name|this
 argument_list|)
 expr_stmt|;
 name|injectedProviders

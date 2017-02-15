@@ -892,6 +892,11 @@ argument_list|(
 name|ep
 argument_list|)
 decl_stmt|;
+name|injectContexts
+argument_list|(
+name|factory
+argument_list|)
+expr_stmt|;
 name|ep
 operator|.
 name|put
@@ -1634,7 +1639,10 @@ block|}
 specifier|protected
 name|void
 name|injectContexts
-parameter_list|()
+parameter_list|(
+name|ServerProviderFactory
+name|factory
+parameter_list|)
 block|{
 name|Application
 name|application
@@ -1686,6 +1694,8 @@ literal|null
 argument_list|)
 argument_list|,
 name|application
+argument_list|,
+name|factory
 argument_list|)
 expr_stmt|;
 block|}
@@ -1704,6 +1714,8 @@ argument_list|(
 name|appProvider
 argument_list|,
 name|application
+argument_list|,
+literal|null
 argument_list|,
 literal|null
 argument_list|)
@@ -1775,9 +1787,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-name|injectContexts
-argument_list|()
-expr_stmt|;
 block|}
 specifier|protected
 name|void
