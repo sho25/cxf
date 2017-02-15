@@ -2802,11 +2802,11 @@ operator|==
 literal|null
 operator|||
 operator|!
-name|serverRead
+literal|"serverRead"
 operator|.
 name|equals
 argument_list|(
-literal|"serverRead"
+name|serverRead
 argument_list|)
 condition|)
 block|{

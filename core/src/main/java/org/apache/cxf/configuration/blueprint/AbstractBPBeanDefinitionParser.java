@@ -1467,11 +1467,11 @@ operator|==
 literal|null
 operator|||
 operator|!
-name|pre
+literal|"xmlns"
 operator|.
 name|equals
 argument_list|(
-literal|"xmlns"
+name|pre
 argument_list|)
 operator|)
 operator|&&

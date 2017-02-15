@@ -372,15 +372,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|ignore
-operator|!=
-literal|null
-operator|&&
-name|ignore
+literal|"true"
 operator|.
 name|equals
 argument_list|(
-literal|"true"
+name|ignore
 argument_list|)
 condition|)
 block|{
