@@ -283,7 +283,7 @@ name|jaxrs
 operator|.
 name|sse
 operator|.
-name|SseFactory
+name|SseImpl
 import|;
 end_import
 
@@ -337,7 +337,7 @@ specifier|final
 name|Sse
 name|sse
 init|=
-name|SseFactory
+name|SseImpl
 operator|.
 name|create
 argument_list|()

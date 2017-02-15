@@ -152,6 +152,15 @@ name|SseAtmosphereEventSinkContextProvider
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|providers
+operator|.
+name|add
+argument_list|(
+operator|new
+name|SseContextProvider
+argument_list|()
+argument_list|)
+expr_stmt|;
 operator|(
 operator|(
 name|ServerProviderFactory
