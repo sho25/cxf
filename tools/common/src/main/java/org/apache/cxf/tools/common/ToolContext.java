@@ -1334,12 +1334,11 @@ name|isExcludeNamespaceEnabled
 parameter_list|()
 block|{
 return|return
+operator|!
 name|excludeNamespacePackageMap
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 return|;
 block|}
 specifier|public

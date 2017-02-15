@@ -354,12 +354,11 @@ name|getRootAttachment
 parameter_list|()
 block|{
 return|return
+operator|!
 name|atts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 name|atts
 operator|.

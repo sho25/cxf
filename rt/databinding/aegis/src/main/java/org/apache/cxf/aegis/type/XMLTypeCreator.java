@@ -1891,12 +1891,11 @@ name|mapping
 operator|!=
 literal|null
 operator|||
+operator|!
 name|mappings
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String

@@ -528,12 +528,11 @@ decl_stmt|;
 comment|// serviceName cannot be specified on SEI so check impl class only
 if|if
 condition|(
+operator|!
 name|wsAnnotations
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|int
@@ -727,12 +726,11 @@ decl_stmt|;
 comment|// portName cannot be specified on SEI so check impl class only
 if|if
 condition|(
+operator|!
 name|wsAnnotations
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|int

@@ -3017,12 +3017,11 @@ name|aim
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|aim
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|missingWsaHeader

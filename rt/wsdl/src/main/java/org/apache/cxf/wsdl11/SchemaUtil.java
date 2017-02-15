@@ -1340,12 +1340,11 @@ name|imports
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|imports
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

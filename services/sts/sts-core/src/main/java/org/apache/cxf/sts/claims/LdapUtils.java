@@ -523,12 +523,11 @@ name|result
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|result
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|ldapAttributes
@@ -816,12 +815,11 @@ name|result
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|result
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|ldapAttributes
@@ -964,12 +962,11 @@ name|result
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|result
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 comment|//not only the first one....

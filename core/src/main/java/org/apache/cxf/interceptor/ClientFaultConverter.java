@@ -1726,12 +1726,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|stackTraceList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|||
 name|cause
 operator|!=

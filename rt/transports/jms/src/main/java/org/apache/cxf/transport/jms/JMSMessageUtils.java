@@ -3328,12 +3328,11 @@ name|action
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|action
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|soapAction

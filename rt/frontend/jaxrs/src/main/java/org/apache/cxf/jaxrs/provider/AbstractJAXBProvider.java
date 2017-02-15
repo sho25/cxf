@@ -5347,12 +5347,11 @@ literal|false
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|theList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|Object

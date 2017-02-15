@@ -1453,12 +1453,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|features
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|wsFeatures

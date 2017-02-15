@@ -1358,12 +1358,11 @@ name|attributeStatementProviders
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|attributeStatementProviders
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|attrBeanList

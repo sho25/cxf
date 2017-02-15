@@ -5013,12 +5013,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|newCols
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 comment|// need to add the new columns

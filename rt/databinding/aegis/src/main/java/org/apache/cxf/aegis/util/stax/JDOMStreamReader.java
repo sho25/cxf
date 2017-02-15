@@ -812,12 +812,11 @@ parameter_list|()
 block|{
 if|if
 condition|(
+operator|!
 name|namespaceStack
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|prefix2decNs

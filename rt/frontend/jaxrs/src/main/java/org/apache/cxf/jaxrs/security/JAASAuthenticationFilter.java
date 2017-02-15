@@ -870,12 +870,11 @@ name|authHeader
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|authHeader
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 comment|// should HttpHeadersImpl do it ?

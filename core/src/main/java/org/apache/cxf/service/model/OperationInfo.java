@@ -720,12 +720,11 @@ name|faults
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|faults
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 return|;
 block|}
 comment|/**      * Returns all faults for this operation.      *      * @return all faults.      */

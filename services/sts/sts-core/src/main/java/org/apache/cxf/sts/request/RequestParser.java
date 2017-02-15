@@ -5439,12 +5439,11 @@ name|handlerResults
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|handlerResults
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|WSHandlerResult

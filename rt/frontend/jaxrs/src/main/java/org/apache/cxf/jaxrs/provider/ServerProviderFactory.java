@@ -2375,12 +2375,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
 name|dynamicFeatures
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

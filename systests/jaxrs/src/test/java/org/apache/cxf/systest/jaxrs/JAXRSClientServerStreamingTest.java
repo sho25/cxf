@@ -1041,12 +1041,11 @@ name|failHeaders
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|failHeaders
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|os

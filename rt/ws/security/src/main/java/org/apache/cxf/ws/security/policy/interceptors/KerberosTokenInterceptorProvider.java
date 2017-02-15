@@ -1359,12 +1359,11 @@ name|results
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|results
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|parseHandlerResults

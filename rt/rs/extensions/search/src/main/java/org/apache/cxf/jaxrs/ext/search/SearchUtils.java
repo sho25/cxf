@@ -858,12 +858,11 @@ name|columns
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|columns
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

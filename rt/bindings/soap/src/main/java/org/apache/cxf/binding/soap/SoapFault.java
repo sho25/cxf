@@ -509,12 +509,11 @@ name|subCodes
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|subCodes
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 name|subCodes
 operator|.

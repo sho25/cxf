@@ -1757,12 +1757,11 @@ name|metadata
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|metadata
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|)
 condition|)
 block|{

@@ -5360,12 +5360,11 @@ argument_list|()
 decl_stmt|;
 name|assertTrue
 argument_list|(
+operator|!
 name|headers
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 argument_list|)
 expr_stmt|;
 name|Object

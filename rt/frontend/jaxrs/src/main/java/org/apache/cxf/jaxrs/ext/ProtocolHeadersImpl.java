@@ -141,12 +141,11 @@ name|name
 argument_list|)
 decl_stmt|;
 return|return
+operator|!
 name|values
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 name|values
 operator|.

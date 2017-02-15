@@ -1573,12 +1573,11 @@ comment|//Sign the message
 comment|//We should use the same key in the case of EncryptBeforeSig
 if|if
 condition|(
+operator|!
 name|sigParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|addSig
@@ -1620,12 +1619,11 @@ operator|.
 name|isEncryptSignature
 argument_list|()
 operator|||
+operator|!
 name|encryptedTokensList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|isRequestor
 argument_list|()
@@ -3231,12 +3229,11 @@ argument_list|()
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|encrParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|AbstractToken

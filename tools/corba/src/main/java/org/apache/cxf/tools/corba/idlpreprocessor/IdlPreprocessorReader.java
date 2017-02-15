@@ -1618,12 +1618,11 @@ try|try
 block|{
 if|if
 condition|(
+operator|!
 name|includeStack
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 specifier|final

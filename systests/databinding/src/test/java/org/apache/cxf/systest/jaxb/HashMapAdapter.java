@@ -323,12 +323,11 @@ name|arg0
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|arg0
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

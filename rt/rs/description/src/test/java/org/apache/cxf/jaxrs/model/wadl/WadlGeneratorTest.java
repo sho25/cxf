@@ -3233,12 +3233,11 @@ parameter_list|)
 block|{
 name|assertTrue
 argument_list|(
+operator|!
 name|links
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 argument_list|)
 expr_stmt|;
 name|List

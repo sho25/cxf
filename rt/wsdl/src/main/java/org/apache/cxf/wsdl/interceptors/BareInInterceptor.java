@@ -881,12 +881,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|parameters
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|message

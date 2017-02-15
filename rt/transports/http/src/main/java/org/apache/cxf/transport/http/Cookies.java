@@ -215,12 +215,11 @@ if|if
 condition|(
 name|maintainSession
 operator|&&
+operator|!
 name|sessionCookies
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 operator|new
