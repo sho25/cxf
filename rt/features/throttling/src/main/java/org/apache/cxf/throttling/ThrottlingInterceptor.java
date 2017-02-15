@@ -155,7 +155,7 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Logger

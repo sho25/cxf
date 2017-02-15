@@ -867,7 +867,7 @@ specifier|final
 class|class
 name|JAXBUtils
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Logger

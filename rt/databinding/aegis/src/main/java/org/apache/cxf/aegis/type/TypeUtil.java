@@ -207,7 +207,7 @@ specifier|final
 class|class
 name|TypeUtil
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Logger

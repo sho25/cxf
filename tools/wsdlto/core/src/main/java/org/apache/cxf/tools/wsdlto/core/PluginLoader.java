@@ -441,7 +441,7 @@ specifier|final
 class|class
 name|PluginLoader
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Logger

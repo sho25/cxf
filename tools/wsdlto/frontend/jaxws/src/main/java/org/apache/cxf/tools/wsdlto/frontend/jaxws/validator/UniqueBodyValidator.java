@@ -280,7 +280,7 @@ name|UniqueBodyValidator
 extends|extends
 name|ServiceValidator
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Logger
