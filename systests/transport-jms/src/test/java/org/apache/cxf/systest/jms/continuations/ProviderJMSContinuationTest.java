@@ -177,8 +177,6 @@ name|Endpoint
 operator|.
 name|create
 argument_list|(
-name|address
-argument_list|,
 name|implementor
 argument_list|)
 decl_stmt|;
@@ -214,7 +212,9 @@ expr_stmt|;
 name|ep
 operator|.
 name|publish
-argument_list|()
+argument_list|(
+name|address
+argument_list|)
 expr_stmt|;
 block|}
 annotation|@
