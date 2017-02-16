@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * RMStoreException is the type of RuntimeException thrown by the RMStore  * when  encountering problems.  */
+comment|/**  * RMStoreException is the type of RuntimeException thrown by the RMStore  * when encountering problems.  */
 end_comment
 
 begin_class

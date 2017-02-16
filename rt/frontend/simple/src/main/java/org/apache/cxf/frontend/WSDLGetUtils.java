@@ -4876,7 +4876,7 @@ return|return
 name|mp
 return|;
 block|}
-comment|/**      * Retrieve the published endpoint url from the working information set.      *      * @param message      * @param base the request URL      * @param endpointInfo information for a web service 'port' inside of a service      * @return  String or NULL if none found      */
+comment|/**      * Retrieve the published endpoint url from the working information set.      *      * @param message      * @param base the request URL      * @param endpointInfo information for a web service 'port' inside of a service      * @return String or NULL if none found      */
 specifier|protected
 name|String
 name|getPublishedEndpointURL

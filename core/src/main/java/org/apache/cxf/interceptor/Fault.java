@@ -714,7 +714,7 @@ return|return
 name|detail
 return|;
 block|}
-comment|/**      * Returns  http header status code.      * @return status code.      */
+comment|/**      * Returns http header status code.      * @return status code.      */
 specifier|public
 name|int
 name|getStatusCode

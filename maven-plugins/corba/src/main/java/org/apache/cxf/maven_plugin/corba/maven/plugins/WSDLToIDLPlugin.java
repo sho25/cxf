@@ -228,7 +228,7 @@ name|WSDLToIDLPlugin
 extends|extends
 name|AbstractMojo
 block|{
-comment|/**      * @parameter  expression="${project.build.directory}/generated/src/main/java"      * @required      */
+comment|/**      * @parameter expression="${project.build.directory}/generated/src/main/java"      * @required      */
 name|File
 name|outputDir
 decl_stmt|;

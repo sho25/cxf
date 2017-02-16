@@ -4323,7 +4323,7 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-comment|// add  acknowledged undelivered message
+comment|// add acknowledged undelivered message
 name|ds
 operator|.
 name|addDeliveringMessageNumber

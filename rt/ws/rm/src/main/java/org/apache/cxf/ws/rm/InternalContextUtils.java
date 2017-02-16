@@ -724,7 +724,7 @@ name|InternalContextUtils
 parameter_list|()
 block|{     }
 comment|/**      * Rebase response on replyTo      *      * @param reference the replyTo reference      * @param inMAPs the inbound MAPs      * @param inMessage the current message      */
-comment|//CHECKSTYLE:OFF  Max executable statement count limitation
+comment|//CHECKSTYLE:OFF Max executable statement count limitation
 specifier|public
 specifier|static
 name|void

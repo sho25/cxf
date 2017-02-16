@@ -259,7 +259,7 @@ argument_list|>
 name|map
 parameter_list|)
 function_decl|;
-comment|/**      * Reset the headers and response state if any      * @return  the updated Client      */
+comment|/**      * Reset the headers and response state if any      * @return the updated Client      */
 name|Client
 name|reset
 parameter_list|()

@@ -570,7 +570,7 @@ name|opName
 operator|+
 literal|" ] "
 operator|+
-literal|"and  operation [ "
+literal|"and operation [ "
 operator|+
 name|operationName
 operator|+

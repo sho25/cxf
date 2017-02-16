@@ -273,7 +273,7 @@ specifier|private
 name|String
 name|className
 decl_stmt|;
-comment|/**      * @parameter  expression="${project.build.outputDirectory}"      * @required      */
+comment|/**      * @parameter expression="${project.build.outputDirectory}"      * @required      */
 specifier|private
 name|String
 name|classpath
@@ -318,7 +318,7 @@ specifier|private
 name|String
 name|classifier
 decl_stmt|;
-comment|/**      * @parameter  expression="${project.compileClasspathElements}"      * @required      */
+comment|/**      * @parameter expression="${project.compileClasspathElements}"      * @required      */
 specifier|private
 name|List
 argument_list|<
