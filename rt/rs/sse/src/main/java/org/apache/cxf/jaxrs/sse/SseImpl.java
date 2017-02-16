@@ -62,7 +62,6 @@ import|;
 end_import
 
 begin_class
-specifier|public
 class|class
 name|SseImpl
 implements|implements
@@ -71,18 +70,6 @@ block|{
 name|SseImpl
 parameter_list|()
 block|{     }
-specifier|public
-specifier|static
-name|Sse
-name|create
-parameter_list|()
-block|{
-return|return
-operator|new
-name|SseImpl
-argument_list|()
-return|;
-block|}
 annotation|@
 name|Override
 specifier|public
