@@ -754,6 +754,11 @@ name|output
 operator|.
 name|toString
 argument_list|()
+argument_list|,
+name|output
+operator|.
+name|toString
+argument_list|()
 operator|.
 name|indexOf
 argument_list|(
@@ -766,6 +771,11 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
+name|input
+operator|.
+name|toString
+argument_list|()
+argument_list|,
 name|input
 operator|.
 name|toString

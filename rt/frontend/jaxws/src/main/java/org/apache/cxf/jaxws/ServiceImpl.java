@@ -1287,6 +1287,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|void
 name|initialize
 parameter_list|(
