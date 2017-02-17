@@ -3241,7 +3241,7 @@ block|{
 comment|// Before creating module, check to see if a Corba type
 comment|// represent this name aleady exists.
 comment|// For example if type is a.b.c and we are about to create
-comment|// module b,look to see if a.b
+comment|// module b, look to see if a.b
 comment|// is an interface that needs to be processed
 name|QName
 name|qname
