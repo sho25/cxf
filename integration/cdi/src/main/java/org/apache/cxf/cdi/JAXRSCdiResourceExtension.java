@@ -1299,6 +1299,8 @@ literal|false
 argument_list|,
 literal|false
 argument_list|,
+literal|false
+argument_list|,
 name|bus
 argument_list|)
 decl_stmt|;
@@ -1363,6 +1365,8 @@ operator|.
 name|createApplication
 argument_list|(
 name|application
+argument_list|,
+literal|false
 argument_list|,
 literal|false
 argument_list|,
