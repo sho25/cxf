@@ -45,20 +45,6 @@ name|Set
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|helpers
-operator|.
-name|CastUtils
-import|;
-end_import
-
 begin_comment
 comment|/**  * Helper methods for {@link DestinationFactory}s and {@link ConduitInitiator}s.  */
 end_comment
@@ -135,14 +121,10 @@ name|getUriPrefixes
 parameter_list|()
 block|{
 return|return
-name|CastUtils
-operator|.
-name|cast
-argument_list|(
 name|Collections
 operator|.
-name|EMPTY_SET
-argument_list|)
+name|emptySet
+argument_list|()
 return|;
 block|}
 block|}

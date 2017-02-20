@@ -3619,11 +3619,6 @@ block|}
 end_function
 
 begin_function
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 specifier|static
 name|List
@@ -3656,7 +3651,8 @@ literal|null
 condition|?
 name|Collections
 operator|.
-name|EMPTY_LIST
+name|emptyList
+argument_list|()
 else|:
 name|map
 operator|.

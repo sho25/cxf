@@ -1690,11 +1690,6 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|public
 name|Map
 argument_list|<
@@ -1740,7 +1735,8 @@ literal|null
 condition|?
 name|Collections
 operator|.
-name|EMPTY_MAP
+name|emptyMap
+argument_list|()
 else|:
 name|Collections
 operator|.
