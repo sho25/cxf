@@ -1639,6 +1639,13 @@ parameter_list|)
 throws|throws
 name|JMSException
 block|{
+if|if
+condition|(
+name|replyToName
+operator|!=
+literal|null
+condition|)
+block|{
 return|return
 name|destinationResolver
 operator|.
@@ -1649,6 +1656,13 @@ argument_list|,
 name|replyToName
 argument_list|,
 name|replyPubSubDomain
+argument_list|)
+return|;
+block|}
+return|return
+name|getReplyDestination
+argument_list|(
+name|session
 argument_list|)
 return|;
 block|}
