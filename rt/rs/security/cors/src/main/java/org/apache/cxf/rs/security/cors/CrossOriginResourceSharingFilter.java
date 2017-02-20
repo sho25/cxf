@@ -301,6 +301,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|ext
+operator|.
+name|Provider
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -458,6 +472,8 @@ comment|/**  * A single class that provides both an input and an output filter f
 end_comment
 
 begin_class
+annotation|@
+name|Provider
 annotation|@
 name|PreMatching
 annotation|@
@@ -922,7 +938,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * handle preflight.      *      * Note that preflight is a bit of a parasite on OPTIONS. The class may still have an options method,      * and, if it does, it will be invoked, and it will respond however it likes. The response will      * have additional headers based on what happens here.      *      * @param m the incoming message.      * @param opResInfo      * @param ann the annotation, if any, derived from a method that matched the OPTIONS request for the      *            preflight. probably completely useless.      * @param resourceClass the resource class passed into the filter.      * @return      */
+comment|/**      * handle preflight.      *      * Note that preflight is a bit of a parasite on OPTIONS. The class may still have an options method,      * and, if it does, it will be invoked, and it will respond however it likes. The response will      * have additional headers based on what happens here.      *      * @param m the incoming message.      * @return      */
 comment|//CHECKSTYLE:OFF
 specifier|private
 name|Response
@@ -2471,7 +2487,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * CORS uses one header containing space-separated values (Origin) and then      * a raft of #field-name productions, which parse on commas and optional spaces.      * @param m      * @param key      * @return      */
+comment|/**      * CORS uses one header containing space-separated values (Origin) and then      * a raft of #field-name productions, which parse on commas and optional spaces.      * @param key      * @param spaceSeparated      * @return      */
 specifier|private
 name|List
 argument_list|<
