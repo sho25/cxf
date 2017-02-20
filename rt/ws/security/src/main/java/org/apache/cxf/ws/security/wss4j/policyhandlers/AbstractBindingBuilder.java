@@ -6066,13 +6066,9 @@ expr_stmt|;
 block|}
 if|if
 condition|(
-operator|!
-name|StringUtils
-operator|.
-name|isEmpty
-argument_list|(
 name|password
-argument_list|)
+operator|!=
+literal|null
 condition|)
 block|{
 comment|// If the password is available then build the token
