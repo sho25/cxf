@@ -376,6 +376,16 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
+if|if
+condition|(
+name|isLoggingDisabledNow
+argument_list|(
+name|message
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|createExchangeId
 argument_list|(
 name|message
