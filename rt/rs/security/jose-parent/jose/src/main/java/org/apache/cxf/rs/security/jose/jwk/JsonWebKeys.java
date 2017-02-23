@@ -306,6 +306,7 @@ return|;
 block|}
 block|}
 specifier|public
+specifier|final
 name|void
 name|setKey
 parameter_list|(
@@ -325,6 +326,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setKeys
 parameter_list|(

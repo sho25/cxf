@@ -1100,6 +1100,7 @@ return|;
 block|}
 comment|/**      * @param key      * @param value      */
 specifier|public
+specifier|final
 name|void
 name|putJndiParameter
 parameter_list|(
@@ -1121,6 +1122,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|putParameter
 parameter_list|(
@@ -1246,6 +1248,7 @@ name|jmsVariant
 return|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setJmsVariant
 parameter_list|(

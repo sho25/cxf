@@ -574,6 +574,7 @@ argument_list|)
 return|;
 block|}
 specifier|protected
+specifier|final
 name|JwsJsonSignatureEntry
 name|getSignatureObject
 parameter_list|(
