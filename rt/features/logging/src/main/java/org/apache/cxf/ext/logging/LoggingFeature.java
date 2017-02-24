@@ -222,7 +222,7 @@ operator|.
 name|sender
 operator|=
 operator|new
-name|Slf4jEventSender
+name|Slf4jVerboseEventSender
 argument_list|()
 expr_stmt|;
 name|prettyFilter
@@ -442,6 +442,8 @@ name|boolean
 name|verbose
 parameter_list|)
 block|{
+name|this
+operator|.
 name|sender
 operator|=
 name|verbose
