@@ -195,7 +195,7 @@ name|logging
 operator|.
 name|slf4j
 operator|.
-name|Slf4jEventSender
+name|Slf4jNoMdcEventSender
 import|;
 end_import
 
@@ -317,7 +317,7 @@ block|{
 name|this
 argument_list|(
 operator|new
-name|Slf4jEventSender
+name|Slf4jNoMdcEventSender
 argument_list|()
 argument_list|)
 expr_stmt|;
