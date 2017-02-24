@@ -85,7 +85,7 @@ init|)
 block|{
 name|writer
 operator|.
-name|println
+name|print
 argument_list|(
 name|Instant
 operator|.

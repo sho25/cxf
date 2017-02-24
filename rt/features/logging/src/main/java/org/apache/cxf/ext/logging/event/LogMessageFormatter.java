@@ -77,6 +77,14 @@ operator|new
 name|StringBuilder
 argument_list|()
 decl_stmt|;
+comment|// Start from the next line to have the output well-aligned
+name|b
+operator|.
+name|append
+argument_list|(
+literal|'\n'
+argument_list|)
+expr_stmt|;
 name|write
 argument_list|(
 name|b
