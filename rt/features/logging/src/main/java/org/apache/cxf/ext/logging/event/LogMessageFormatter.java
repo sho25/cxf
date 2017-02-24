@@ -64,7 +64,7 @@ block|{     }
 specifier|public
 specifier|static
 name|String
-name|fomat
+name|format
 parameter_list|(
 name|LogEvent
 name|event

@@ -75,7 +75,7 @@ block|{
 return|return
 name|LogMessageFormatter
 operator|.
-name|fomat
+name|format
 argument_list|(
 name|event
 argument_list|)

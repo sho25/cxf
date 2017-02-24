@@ -104,7 +104,7 @@ name|print
 argument_list|(
 name|LogMessageFormatter
 operator|.
-name|fomat
+name|format
 argument_list|(
 name|event
 argument_list|)
