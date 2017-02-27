@@ -95,20 +95,6 @@ name|apache
 operator|.
 name|http
 operator|.
-name|annotation
-operator|.
-name|ThreadSafe
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|http
-operator|.
 name|nio
 operator|.
 name|ContentEncoder
@@ -166,8 +152,6 @@ comment|/**  * Content buffer that can be shared by multiple threads, usually th
 end_comment
 
 begin_class
-annotation|@
-name|ThreadSafe
 specifier|public
 class|class
 name|SharedOutputBuffer
