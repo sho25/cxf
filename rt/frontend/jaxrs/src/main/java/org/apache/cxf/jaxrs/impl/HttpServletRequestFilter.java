@@ -390,6 +390,12 @@ return|return
 name|values
 operator|==
 literal|null
+operator|||
+name|values
+operator|.
+name|length
+operator|==
+literal|0
 condition|?
 literal|null
 else|:
