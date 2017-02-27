@@ -5120,6 +5120,10 @@ name|equals
 argument_list|(
 literal|"GET"
 argument_list|)
+operator|||
+name|cachedStream
+operator|==
+literal|null
 condition|)
 block|{
 name|handleNoOutput
