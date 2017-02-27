@@ -697,6 +697,13 @@ argument_list|)
 argument_list|)
 decl_stmt|;
 comment|// Get all encrypted and signed references
+if|if
+condition|(
+name|results
+operator|!=
+literal|null
+condition|)
+block|{
 for|for
 control|(
 name|WSHandlerResult
@@ -892,6 +899,7 @@ argument_list|(
 name|el
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 block|}
