@@ -702,6 +702,18 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|public
+name|boolean
+name|requiresDestruction
+parameter_list|(
+name|Object
+name|bean
+parameter_list|)
+block|{
+return|return
+name|isProcessing
+return|;
+block|}
 block|}
 end_class
 
