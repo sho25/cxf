@@ -332,7 +332,7 @@ index|[]
 parameter_list|)
 block|{
 comment|// Apache2 Licensed Jose4j code which adapts the Apache Santuario XMLSecurity
-comment|// code and aligns it with JWS/JWS requirements
+comment|// code and aligns it with JWS/JWA requirements
 if|if
 condition|(
 name|jcaDer
