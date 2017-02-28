@@ -95,7 +95,7 @@ operator|.
 name|toString
 argument_list|()
 operator|+
-literal|" - PrintWriterEventSender"
+literal|" - PrintWriterEventSender - "
 argument_list|)
 expr_stmt|;
 name|writer
