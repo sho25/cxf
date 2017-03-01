@@ -1103,6 +1103,10 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
+specifier|private
+name|boolean
+name|allowCustomContent
+decl_stmt|;
 specifier|public
 name|RequestRequirements
 name|parseRequest
@@ -1447,6 +1451,23 @@ operator|.
 name|fine
 argument_list|(
 literal|"Found AppliesTo element"
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|allowCustomContent
+condition|)
+block|{
+name|tokenRequirements
+operator|.
+name|addCustomContent
+argument_list|(
+operator|(
+name|Element
+operator|)
+name|requestObject
 argument_list|)
 expr_stmt|;
 block|}
@@ -3427,7 +3448,7 @@ return|;
 end_return
 
 begin_function
-unit|}          private
+unit|}      private
 specifier|static
 name|Participants
 name|parseParticipants
@@ -4204,6 +4225,20 @@ name|getNewInstance
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|requestData
+operator|.
+name|setWsDocInfo
+argument_list|(
+operator|new
+name|WSDocInfo
+argument_list|(
+name|entropyElement
+operator|.
+name|getOwnerDocument
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|List
@@ -4219,15 +4254,6 @@ argument_list|(
 name|entropyElement
 argument_list|,
 name|requestData
-argument_list|,
-operator|new
-name|WSDocInfo
-argument_list|(
-name|entropyElement
-operator|.
-name|getOwnerDocument
-argument_list|()
-argument_list|)
 argument_list|)
 decl_stmt|;
 name|Entropy
@@ -4337,7 +4363,7 @@ end_return
 
 begin_comment
 unit|}
-comment|/**      * Parse the secondaryParameters element. Precedence goes to values that are specified as      * direct children of the RequestSecurityToken element.       * @param secondaryParameters the secondaryParameters element to parse      */
+comment|/**      * Parse the secondaryParameters element. Precedence goes to values that are specified as      * direct children of the RequestSecurityToken element.      * @param secondaryParameters the secondaryParameters element to parse      */
 end_comment
 
 begin_function
@@ -5413,12 +5439,11 @@ name|handlerResults
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|handlerResults
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|WSHandlerResult
@@ -5588,6 +5613,36 @@ operator|.
 name|REQUEST_FAILED
 argument_list|)
 throw|;
+block|}
+end_function
+
+begin_function
+specifier|public
+name|boolean
+name|isAllowCustomContent
+parameter_list|()
+block|{
+return|return
+name|allowCustomContent
+return|;
+block|}
+end_function
+
+begin_function
+specifier|public
+name|void
+name|setAllowCustomContent
+parameter_list|(
+name|boolean
+name|allowCustomContent
+parameter_list|)
+block|{
+name|this
+operator|.
+name|allowCustomContent
+operator|=
+name|allowCustomContent
+expr_stmt|;
 block|}
 end_function
 

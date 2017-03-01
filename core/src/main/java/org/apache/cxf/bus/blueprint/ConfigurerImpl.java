@@ -242,7 +242,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -585,9 +585,7 @@ name|m
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MatcherHolder
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|wildCardBeanDefinitions

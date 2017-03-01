@@ -132,7 +132,7 @@ block|{
 specifier|private
 name|JAXRSClientFactory
 parameter_list|()
-block|{               }
+block|{      }
 comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
@@ -246,7 +246,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing proxy headers will be inherited by       *        subresource proxies if any      * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseURI baseURI      * @param cls resource class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing proxy headers will be inherited by      *        subresource proxies if any      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -342,7 +342,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls resource class, if not interface then a CGLIB proxy will be created      *        This class is expected to have a root JAXRS Path annotation containing      *        template variables, for ex, "/path/{id1}/{id2}"        * @param configLocation classpath location of the configuration resource      * @param varValues values to replace root Path template variables         * @return typed proxy      */
+comment|/**      * Creates a proxy      * @param baseAddress baseAddress      * @param cls resource class, if not interface then a CGLIB proxy will be created      *        This class is expected to have a root JAXRS Path annotation containing      *        template variables, for ex, "/path/{id1}/{id2}"      * @param configLocation classpath location of the configuration resource      * @param varValues values to replace root Path template variables      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -502,7 +502,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a thread safe proxy and allows to specify time to keep state.      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param providers list of providers      * @param timeToKeepState how long to keep this state       * @return typed proxy      */
+comment|/**      * Creates a thread safe proxy and allows to specify time to keep state.      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param providers list of providers      * @param timeToKeepState how long to keep this state      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -951,7 +951,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a thread safe proxy using user resource model      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param modelRef model location      * @param providers list of providers      * @param threadSafe if true then thread-safe proxy will be created       * @return typed proxy      */
+comment|/**      * Creates a thread safe proxy using user resource model      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param modelRef model location      * @param providers list of providers      * @param threadSafe if true then thread-safe proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -1041,7 +1041,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a thread safe proxy using user resource model and allows to       * specify time to keep state.      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param modelRef model location      * @param providers list of providers      * @param timeToKeepState how long to keep this state      * @return typed proxy      */
+comment|/**      * Creates a thread safe proxy using user resource model and allows to      * specify time to keep state.      * @param baseAddress baseAddress      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param modelRef model location      * @param providers list of providers      * @param timeToKeepState how long to keep this state      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -1249,7 +1249,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      *         * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      *      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<
@@ -1279,7 +1279,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing Client headers will be inherited by new proxy       *        and subresource proxies if any       * @return typed proxy      */
+comment|/**      * Creates a proxy, baseURI will be set to Client currentURI      * @param client Client instance      * @param cls proxy class, if not interface then a CGLIB proxy will be created      * @param inheritHeaders if true then existing Client headers will be inherited by new proxy      *        and subresource proxies if any      * @return typed proxy      */
 specifier|public
 specifier|static
 parameter_list|<

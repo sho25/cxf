@@ -170,7 +170,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Selects the most appropriate endpoint based on the SOAP version used.  *   * @param message  * @param eps  * @return  */
+comment|/**  * Selects the most appropriate endpoint based on the SOAP version used.  *  * @param message  * @param eps  * @return  */
 end_comment
 
 begin_class

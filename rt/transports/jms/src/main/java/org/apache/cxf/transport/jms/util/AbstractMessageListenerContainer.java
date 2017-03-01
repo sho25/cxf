@@ -410,7 +410,7 @@ operator|=
 name|jndiEnvironment
 expr_stmt|;
 block|}
-comment|/**       * Creates a InitialContext if a JNDI environment has been provided.       * This is usefull in e.g. weblogic, where interaction with JNDI JMS resources is secured.      *       * Be careful not to cache the return value in a non thread local scope.      *       * @return an initial context, with the endpoint's JNDI properties,       * or null if none is provided or if an errur occurs      **/
+comment|/**      * Creates a InitialContext if a JNDI environment has been provided.      * This is usefull in e.g. weblogic, where interaction with JNDI JMS resources is secured.      *      * Be careful not to cache the return value in a non thread local scope.      *      * @return an initial context, with the endpoint's JNDI properties,      * or null if none is provided or if an errur occurs      **/
 specifier|public
 name|InitialContext
 name|createInitialContext

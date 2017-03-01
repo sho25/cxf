@@ -81,9 +81,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JAnnotationElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -95,9 +93,7 @@ name|imports
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

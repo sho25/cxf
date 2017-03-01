@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be used to nominate oneway methods  *   */
+comment|/**  * Can be used to nominate oneway methods  *  */
 end_comment
 
 begin_annotation_defn

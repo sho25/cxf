@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Helper class to work with parameter converter providers and parameter converters.   */
+comment|/**  * Helper class to work with parameter converter providers and parameter converters.  */
 end_comment
 
 begin_class
@@ -72,8 +72,8 @@ block|{
 specifier|private
 name|ParamConverterUtils
 parameter_list|()
-block|{             }
-comment|/**      * Converts the string-based representation of the value to the instance of particular type      * using parameter converter provider and available parameter converter.      * @param type type to convert from string-based representation       * @param provider parameter converter provider to use      * @param value the string-based representation to convert      * @return instance of particular type converter from its string representation      */
+block|{     }
+comment|/**      * Converts the string-based representation of the value to the instance of particular type      * using parameter converter provider and available parameter converter.      * @param type type to convert from string-based representation      * @param provider parameter converter provider to use      * @param value the string-based representation to convert      * @return instance of particular type converter from its string representation      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -188,7 +188,7 @@ argument_list|)
 argument_list|)
 throw|;
 block|}
-comment|/**      * Converts the instance of particular type into its string-based representation      * using parameter converter provider and available parameter converter.      * @param type type to convert to string-based representation       * @param provider parameter converter provider to use      * @param value the typed instance to convert to string representation      * @return string-based representation of the instance of particular type       */
+comment|/**      * Converts the instance of particular type into its string-based representation      * using parameter converter provider and available parameter converter.      * @param type type to convert to string-based representation      * @param provider parameter converter provider to use      * @param value the typed instance to convert to string representation      * @return string-based representation of the instance of particular type      */
 specifier|public
 specifier|static
 parameter_list|<

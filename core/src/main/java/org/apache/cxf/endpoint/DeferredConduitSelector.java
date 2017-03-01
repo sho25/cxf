@@ -72,7 +72,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Strategy for lazy deferred retreival of a Conduit to mediate an   * outbound message.  */
+comment|/**  * Strategy for lazy deferred retreival of a Conduit to mediate an  * outbound message.  */
 end_comment
 
 begin_class
@@ -106,7 +106,7 @@ name|super
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *       * @param c specific conduit      */
+comment|/**      * Constructor, allowing a specific conduit to override normal selection.      *      * @param c specific conduit      */
 specifier|public
 name|DeferredConduitSelector
 parameter_list|(
@@ -120,7 +120,7 @@ name|c
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Called prior to the interceptor chain being traversed.      *       * @param message the current Message      */
+comment|/**      * Called prior to the interceptor chain being traversed.      *      * @param message the current Message      */
 specifier|public
 name|void
 name|prepare
@@ -131,7 +131,7 @@ parameter_list|)
 block|{
 comment|// nothing to do
 block|}
-comment|/**      * Called when a Conduit is actually required.      *       * @param message      * @return the Conduit to use for mediation of the message      */
+comment|/**      * Called when a Conduit is actually required.      *      * @param message      * @return the Conduit to use for mediation of the message      */
 specifier|public
 name|Conduit
 name|selectConduit

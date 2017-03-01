@@ -983,7 +983,7 @@ argument_list|,
 literal|false
 argument_list|)
 expr_stmt|;
-comment|/*NettyHttpDestination jd5 =              (NettyHttpDestination)factory.getDestination(                 getEndpointInfo("sna", "foo", "http://localhost:9100"));*/
+comment|/*NettyHttpDestination jd5 =             (NettyHttpDestination)factory.getDestination(                 getEndpointInfo("sna", "foo", "http://localhost:9100"));*/
 comment|/*engine = (NettyHttpServerEngine)jd5.getEngine();         String r = "expected fallback thread parameters configured for port 0";         assertNotNull(r, engine.getThreadingParameters());         assertEquals(r, 21, engine.getThreadingParameters().getMinThreads());         assertEquals(r, 389, engine.getThreadingParameters().getMaxThreads());*/
 block|}
 specifier|private

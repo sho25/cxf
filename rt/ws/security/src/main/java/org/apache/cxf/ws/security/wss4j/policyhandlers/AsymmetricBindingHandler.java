@@ -824,7 +824,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -2166,12 +2166,11 @@ name|encryptionToken
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|encrParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|encrBase
@@ -2210,12 +2209,11 @@ try|try
 block|{
 if|if
 condition|(
+operator|!
 name|sigParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 if|if
@@ -2407,9 +2405,7 @@ name|secondEncrParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WSEncryptionPart
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// Check for signature protection
@@ -2744,12 +2740,11 @@ argument_list|()
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|encrParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|AbstractToken
@@ -2858,6 +2853,21 @@ operator|.
 name|setStoreBytesInAttachment
 argument_list|(
 name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
+name|encr
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|encr
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
 argument_list|)
 expr_stmt|;
 name|Crypto
@@ -3509,6 +3519,21 @@ argument_list|(
 name|storeBytesInAttachment
 argument_list|)
 expr_stmt|;
+name|dkEncr
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|dkEncr
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|recToken
@@ -4010,6 +4035,21 @@ operator|.
 name|setStoreBytesInAttachment
 argument_list|(
 name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
+name|dkSign
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|dkSign
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
 argument_list|)
 expr_stmt|;
 if|if

@@ -130,7 +130,7 @@ specifier|public
 annotation_defn|@interface
 name|Logging
 block|{
-comment|/**      * The size limit at which messages are truncated in the log       */
+comment|/**      * The size limit at which messages are truncated in the log      */
 name|int
 name|limit
 parameter_list|()
@@ -139,7 +139,7 @@ name|AbstractLoggingInterceptor
 operator|.
 name|DEFAULT_LIMIT
 function_decl|;
-comment|/**      * the locations where the messages are logged.   The default is      *<logger> which means to log to the java.util.logging.Logger,       * but<stdout>,<stderr>, and a "file:/.." URI are acceptable.       */
+comment|/**      * the locations where the messages are logged.   The default is      *<logger> which means to log to the java.util.logging.Logger,      * but<stdout>,<stderr>, and a "file:/.." URI are acceptable.      */
 name|String
 name|inLocation
 parameter_list|()
@@ -159,7 +159,7 @@ parameter_list|()
 default|default
 literal|false
 function_decl|;
-comment|/**      * Ignore binary payloads by default       */
+comment|/**      * Ignore binary payloads by default      */
 name|boolean
 name|showBinary
 parameter_list|()

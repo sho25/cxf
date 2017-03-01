@@ -301,7 +301,7 @@ decl_stmt|;
 specifier|public
 name|ModelMBeanInfoSupporter
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|clear

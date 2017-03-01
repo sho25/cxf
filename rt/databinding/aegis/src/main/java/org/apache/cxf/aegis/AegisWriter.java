@@ -57,7 +57,7 @@ parameter_list|>
 extends|extends
 name|AegisIo
 block|{
-comment|/**      * Write an object to the sink.      * @param obj The object.      * @param elementName The element QName.      * @param optional true to omit for null. (minOccurs=0)      * @param output The output sink.      * @param aegisType The aegis type to use. Null is allowed, but only if      * obj is not null.       * @throws Exception      */
+comment|/**      * Write an object to the sink.      * @param obj The object.      * @param elementName The element QName.      * @param optional true to omit for null. (minOccurs=0)      * @param output The output sink.      * @param aegisType The aegis type to use. Null is allowed, but only if      * obj is not null.      * @throws Exception      */
 name|void
 name|write
 parameter_list|(

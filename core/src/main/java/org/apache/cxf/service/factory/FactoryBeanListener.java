@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -85,7 +85,7 @@ block|,
 comment|/**          * Endpoint, Client          */
 name|CLIENT_CREATED
 block|,
-comment|/**          * EndpointInfo, Endpoint, SEI Class, Class           */
+comment|/**          * EndpointInfo, Endpoint, SEI Class, Class          */
 name|ENDPOINT_SELECTED
 block|,
 comment|/**          * EndpointInfo          */

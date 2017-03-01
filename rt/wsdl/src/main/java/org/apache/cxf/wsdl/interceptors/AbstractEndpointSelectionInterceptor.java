@@ -366,7 +366,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Select an Endpoint which will be used for the rest of the invocation.      *       * @param message      * @param eps      */
+comment|/**      * Select an Endpoint which will be used for the rest of the invocation.      *      * @param message      * @param eps      */
 specifier|protected
 specifier|abstract
 name|Endpoint

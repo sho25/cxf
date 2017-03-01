@@ -174,7 +174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class validates a SAML 2 Assertion and checks that it has a Subject with a value   * containing "alice" or bob  */
+comment|/**  * This class validates a SAML 2 Assertion and checks that it has a Subject with a value  * containing "alice" or bob  */
 end_comment
 
 begin_class

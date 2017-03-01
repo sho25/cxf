@@ -503,7 +503,7 @@ argument_list|,
 name|type
 argument_list|)
 expr_stmt|;
-comment|/*           * We arrive here with a 'type' of the inner type if isWriteOuter is null.          * However, in that case, the original type is available.           */
+comment|/*          * We arrive here with a 'type' of the inner type if isWriteOuter is null.          * However, in that case, the original type is available.          */
 name|AegisType
 name|outerType
 init|=

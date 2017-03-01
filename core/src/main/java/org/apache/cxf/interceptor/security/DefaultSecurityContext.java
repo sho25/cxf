@@ -96,7 +96,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * SecurityContext which implements isUserInRole using the  * following approach : skip the first Subject principal, and then checks  * Groups the principal is a member of  *   * TODO : consider moving this class into a rt-core-security module  */
+comment|/**  * SecurityContext which implements isUserInRole using the  * following approach : skip the first Subject principal, and then checks  * Groups the principal is a member of  *  * TODO : consider moving this class into a rt-core-security module  */
 end_comment
 
 begin_class
@@ -517,9 +517,7 @@ name|roles
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Principal
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

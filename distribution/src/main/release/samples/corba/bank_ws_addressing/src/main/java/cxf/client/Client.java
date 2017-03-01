@@ -223,7 +223,7 @@ operator|.
 name|println
 argument_list|()
 expr_stmt|;
-comment|/* Re-enable when we have a utility to manipulate the meta data stored             within the EPR.          // Test the method Bank.createEprAccount()         System.out.println("Creating account called \"Account2\"");         W3CEndpointReference epr2 = port.createEprAccount("Account2");         Account account2 = getAccountFromEPR(epr2);         System.out.println("Depositing 5.00 into account \'Account2\"");         account2.deposit(5.00f);         System.out.println("Current balance of account \"Account2\" is " + account2.getBalance());         System.out.println();         */
+comment|/* Re-enable when we have a utility to manipulate the meta data stored            within the EPR.         // Test the method Bank.createEprAccount()         System.out.println("Creating account called \"Account2\"");         W3CEndpointReference epr2 = port.createEprAccount("Account2");         Account account2 = getAccountFromEPR(epr2);         System.out.println("Depositing 5.00 into account \'Account2\"");         account2.deposit(5.00f);         System.out.println("Current balance of account \"Account2\" is " + account2.getBalance());         System.out.println();         */
 comment|// create two more accounts to use with the getAccount calls
 name|Account
 name|acc3
@@ -344,7 +344,7 @@ operator|.
 name|println
 argument_list|()
 expr_stmt|;
-comment|/* Re-enable when we have a utility to manipulate the meta data stored             within the EPR.          // Test the method Bank.getEprAccount()         System.out.println("Retrieving account called \"Account4\"");         EndpointReferenceType epr4 = port.getEprAccount("Account4");         Account account4 = getAccountFromEPR(epr4);         System.out.println("Current balance for account \"Account4\" is " + account4.getBalance());         System.out.println("Withdrawing 150.00 into account \"Account4\"");         account4.deposit(-150.00f);         System.out.println("New balance for account \"Account4\" is " + account4.getBalance());         System.out.println();         */
+comment|/* Re-enable when we have a utility to manipulate the meta data stored            within the EPR.         // Test the method Bank.getEprAccount()         System.out.println("Retrieving account called \"Account4\"");         EndpointReferenceType epr4 = port.getEprAccount("Account4");         Account account4 = getAccountFromEPR(epr4);         System.out.println("Current balance for account \"Account4\" is " + account4.getBalance());         System.out.println("Withdrawing 150.00 into account \"Account4\"");         account4.deposit(-150.00f);         System.out.println("New balance for account \"Account4\" is " + account4.getBalance());         System.out.println();         */
 name|port
 operator|.
 name|removeAccount

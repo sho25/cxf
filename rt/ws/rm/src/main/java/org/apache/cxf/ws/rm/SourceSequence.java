@@ -433,7 +433,7 @@ return|return
 name|expires
 return|;
 block|}
-comment|/**      * Returns true if this sequence was constructed from an offer for an      * inbound sequence includes in the CreateSequenceRequest in response to      * which the sequence with the specified identifier was created.      *       * @param id the sequence identifier      * @return true if the sequence was constructed from an offer.      */
+comment|/**      * Returns true if this sequence was constructed from an offer for an      * inbound sequence includes in the CreateSequenceRequest in response to      * which the sequence with the specified identifier was created.      *      * @param id the sequence identifier      * @return true if the sequence was constructed from an offer.      */
 specifier|public
 name|boolean
 name|offeredBy
@@ -461,7 +461,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns true if any messages other than the number supplied are waiting for acknowledgment.      *       * @param num message number to check      * @return true if all messages have been acknowledged.      */
+comment|/**      * Returns true if any messages other than the number supplied are waiting for acknowledgment.      *      * @param num message number to check      * @return true if all messages have been acknowledged.      */
 specifier|public
 name|boolean
 name|needAcknowledge
@@ -554,7 +554,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Returns true if a last message had been sent for this sequence and if all      * messages for this sequence have been acknowledged.      *       * @return true if all messages have been acknowledged.      */
+comment|/**      * Returns true if a last message had been sent for this sequence and if all      * messages for this sequence have been acknowledged.      *      * @return true if all messages have been acknowledged.      */
 specifier|public
 name|boolean
 name|allAcknowledged
@@ -622,7 +622,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Used by the RM source to cache received acknowledgements for this      * sequence.      *       * @param acknowledgement an acknowledgement for this sequence      */
+comment|/**      * Used by the RM source to cache received acknowledgements for this      * sequence.      *      * @param acknowledgement an acknowledgement for this sequence      */
 specifier|public
 name|void
 name|setAcknowledged
@@ -750,7 +750,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Returns the source associated with this source sequence.      *       * @return the source.      */
+comment|/**      * Returns the source associated with this source sequence.      *      * @return the source.      */
 specifier|public
 name|Source
 name|getSource
@@ -784,7 +784,7 @@ operator|=
 name|lm
 expr_stmt|;
 block|}
-comment|/**      * Returns true if the sequence is expired.      *       * @return true if the sequence is expired.      */
+comment|/**      * Returns true if the sequence is expired.      *      * @return true if the sequence is expired.      */
 name|boolean
 name|isExpired
 parameter_list|()
@@ -885,7 +885,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Returns the next message number and increases the message number.      *       * @return the next message number.      */
+comment|/**      * Returns the next message number and increases the message number.      *      * @return the next message number.      */
 name|long
 name|nextMessageNumber
 parameter_list|()
@@ -901,7 +901,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Returns the next message number and increases the message number. The      * parameters, if not null, indicate that this message is being sent as a      * response to the message with the specified message number in the sequence      * specified by the by the identifier, and are used to decide if this      * message should be the last in this sequence.      *       * @return the next message number.      */
+comment|/**      * Returns the next message number and increases the message number. The      * parameters, if not null, indicate that this message is being sent as a      * response to the message with the specified message number in the sequence      * specified by the by the identifier, and are used to decide if this      * message should be the last in this sequence.      *      * @return the next message number.      */
 specifier|public
 name|long
 name|nextMessageNumber
@@ -970,7 +970,7 @@ return|return
 name|acknowledgement
 return|;
 block|}
-comment|/**      * The target for the sequence is the first non-anonymous address that a      * message is sent to as part of this sequence. It is subsequently used for      * as the target of out-of-band protocol messages related to that sequence      * that originate from the sequnce source (i.e. TerminateSequence and      * LastMessage, but not AckRequested or SequenceAcknowledgement as these are      * orignate from the sequence destination).      *       * @param to      */
+comment|/**      * The target for the sequence is the first non-anonymous address that a      * message is sent to as part of this sequence. It is subsequently used for      * as the target of out-of-band protocol messages related to that sequence      * that originate from the sequnce source (i.e. TerminateSequence and      * LastMessage, but not AckRequested or SequenceAcknowledgement as these are      * orignate from the sequence destination).      *      * @param to      */
 specifier|synchronized
 name|void
 name|setTarget

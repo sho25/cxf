@@ -108,7 +108,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -243,7 +243,7 @@ name|SERVICE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *       * @return      *     returns AddNumbersPort      */
+comment|/**      *      * @return      *     returns AddNumbersPort      */
 annotation|@
 name|WebEndpoint
 argument_list|(

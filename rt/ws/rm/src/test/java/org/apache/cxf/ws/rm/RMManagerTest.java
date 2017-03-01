@@ -3440,9 +3440,7 @@ name|andReturn
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 operator|.
@@ -5088,9 +5086,7 @@ name|sss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -5142,9 +5138,7 @@ name|dss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DestinationSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -5196,9 +5190,7 @@ name|ms
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RMMessage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -5771,9 +5763,7 @@ name|sss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -5825,9 +5815,7 @@ name|dss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DestinationSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -5879,9 +5867,7 @@ name|ms
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RMMessage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -6465,9 +6451,7 @@ name|mocks
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

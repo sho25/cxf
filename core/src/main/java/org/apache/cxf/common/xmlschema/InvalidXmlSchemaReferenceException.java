@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Exception thrown when we detect an attempt to set an impossible XML Schema reference.   */
+comment|/**  * Exception thrown when we detect an attempt to set an impossible XML Schema reference.  */
 end_comment
 
 begin_class
@@ -37,7 +37,7 @@ init|=
 operator|-
 literal|2053958361555768873L
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|InvalidXmlSchemaReferenceException
 parameter_list|()

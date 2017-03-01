@@ -228,7 +228,7 @@ decl_stmt|;
 specifier|public
 name|KerberosAuthOutInterceptor
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|KerberosAuthOutInterceptor
 parameter_list|(

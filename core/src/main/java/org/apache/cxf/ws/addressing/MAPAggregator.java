@@ -84,7 +84,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Logical Handler responsible for aggregating the Message Addressing   * Properties for outgoing messages.  */
+comment|/**  * Logical Handler responsible for aggregating the Message Addressing  * Properties for outgoing messages.  */
 end_comment
 
 begin_class
@@ -255,7 +255,7 @@ return|return
 name|allowDuplicates
 return|;
 block|}
-comment|/**      * Allows/disallows duplicate messageIdDs.        * @param ad whether duplicate messageIDs are allowed      */
+comment|/**      * Allows/disallows duplicate messageIdDs.      * @param ad whether duplicate messageIDs are allowed      */
 specifier|public
 name|void
 name|setAllowDuplicates
@@ -284,7 +284,7 @@ operator|=
 name|ad
 expr_stmt|;
 block|}
-comment|/**      * Whether the presence of the<wsaw:UsingAddressing> element      * in the WSDL is purely advisory, i.e. its absence doesn't prevent      * the encoding of WS-A headers.      *      * @return true if the presence of the<wsaw:UsingAddressing> element is       * advisory      */
+comment|/**      * Whether the presence of the<wsaw:UsingAddressing> element      * in the WSDL is purely advisory, i.e. its absence doesn't prevent      * the encoding of WS-A headers.      *      * @return true if the presence of the<wsaw:UsingAddressing> element is      * advisory      */
 specifier|public
 name|boolean
 name|isUsingAddressingAdvisory
@@ -389,7 +389,7 @@ operator|=
 name|required
 expr_stmt|;
 block|}
-comment|/**      * Sets Addresing Response       *      */
+comment|/**      * Sets Addresing Response      *      */
 specifier|public
 name|void
 name|setAddressingResponses
@@ -490,7 +490,7 @@ operator|=
 name|messageIdCache
 expr_stmt|;
 block|}
-comment|/**      * Sets Addressing Response       *      */
+comment|/**      * Sets Addressing Response      *      */
 specifier|public
 name|WSAddressingFeature
 operator|.

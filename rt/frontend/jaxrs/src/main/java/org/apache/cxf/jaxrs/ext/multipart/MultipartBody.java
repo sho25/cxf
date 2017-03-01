@@ -203,9 +203,7 @@ name|atts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|atts
@@ -257,9 +255,7 @@ name|this
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|,
 name|MULTIPART_RELATED_TYPE
@@ -314,9 +310,7 @@ name|childAtts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -360,12 +354,11 @@ name|getRootAttachment
 parameter_list|()
 block|{
 return|return
+operator|!
 name|atts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 name|atts
 operator|.

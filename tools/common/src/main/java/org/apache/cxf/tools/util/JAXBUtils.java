@@ -214,12 +214,11 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|annoList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|annotation
@@ -273,12 +272,11 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|appList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|appInfo
@@ -341,12 +339,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|jaxbList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|jaxbBindings
@@ -490,12 +487,11 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|pkgList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|packagename
@@ -552,7 +548,7 @@ name|getParentNode
 argument_list|()
 return|;
 block|}
-comment|/**      * Create the jaxb binding file to customize namespace to package mapping      *       * @param namespace      * @param pkgName      * @return file      */
+comment|/**      * Create the jaxb binding file to customize namespace to package mapping      *      * @param namespace      * @param pkgName      * @return file      */
 specifier|public
 specifier|static
 name|File

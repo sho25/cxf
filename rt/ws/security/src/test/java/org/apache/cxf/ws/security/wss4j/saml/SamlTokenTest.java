@@ -558,7 +558,7 @@ specifier|public
 name|SamlTokenTest
 parameter_list|()
 block|{     }
-comment|/**      * This test creates a SAML1 Assertion and sends it in the security header to the provider.       */
+comment|/**      * This test creates a SAML1 Assertion and sends it in the security header to the provider.      */
 annotation|@
 name|Test
 specifier|public
@@ -754,9 +754,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -1138,9 +1136,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -1433,9 +1429,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -1797,9 +1791,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -1947,7 +1939,7 @@ name|isSigned
 argument_list|()
 assert|;
 block|}
-comment|/**      * This test creates a holder-of-key SAML1 Assertion, and sends it in the security header       * to the provider.      */
+comment|/**      * This test creates a holder-of-key SAML1 Assertion, and sends it in the security header      * to the provider.      */
 annotation|@
 name|Test
 specifier|public
@@ -2176,9 +2168,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -2368,7 +2358,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This test creates a holder-of-key SAML2 Assertion, and sends it in the security header       * to the provider.      */
+comment|/**      * This test creates a holder-of-key SAML2 Assertion, and sends it in the security header      * to the provider.      */
 annotation|@
 name|Test
 specifier|public
@@ -2597,9 +2587,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -3088,9 +3076,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -3540,9 +3526,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths
@@ -3990,9 +3974,7 @@ name|xpaths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|xpaths

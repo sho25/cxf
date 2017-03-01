@@ -47,7 +47,7 @@ argument_list|(
 literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims"
 argument_list|)
 decl_stmt|;
-comment|/**      * (givenName in [RFC 2256]) Preferred name or first name of a Subject.      * According to RFC 2256: This attribute is used to hold the part of a person's name       * which is not their surname nor middle name.      */
+comment|/**      * (givenName in [RFC 2256]) Preferred name or first name of a Subject.      * According to RFC 2256: This attribute is used to hold the part of a person's name      * which is not their surname nor middle name.      */
 specifier|public
 specifier|static
 specifier|final
@@ -131,7 +131,7 @@ argument_list|(
 literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/stateorprovince"
 argument_list|)
 decl_stmt|;
-comment|/**      * (postalCode in X.500) Postal code or zip code component of a Subject's address information.      * According to X.500(2001): The postal code attribute type specifies the postal code of the named       * object.      */
+comment|/**      * (postalCode in X.500) Postal code or zip code component of a Subject's address information.      * According to X.500(2001): The postal code attribute type specifies the postal code of the named      * object.      */
 specifier|public
 specifier|static
 specifier|final
@@ -173,7 +173,7 @@ argument_list|(
 literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/homephone"
 argument_list|)
 decl_stmt|;
-comment|/**      * (telephoneNumber in X.500 Person) Secondary or work telephone number of a Subject.      * According to X.500(2001): This attribute type specifies an office/campus telephone number associated       * with a person.      */
+comment|/**      * (telephoneNumber in X.500 Person) Secondary or work telephone number of a Subject.      * According to X.500(2001): This attribute type specifies an office/campus telephone number associated      * with a person.      */
 specifier|public
 specifier|static
 specifier|final
@@ -187,7 +187,7 @@ argument_list|(
 literal|"http://schemas.xmlsoap.org/ws/2005/05/identity/claims/otherphone"
 argument_list|)
 decl_stmt|;
-comment|/**      * (mobile in inetOrgPerson) Mobile telephone number of a Subject.      * According to inetOrgPerson using [RFC 1274]: This attribute type specifies a mobile telephone number       * associated with a person.      */
+comment|/**      * (mobile in inetOrgPerson) Mobile telephone number of a Subject.      * According to inetOrgPerson using [RFC 1274]: This attribute type specifies a mobile telephone number      * associated with a person.      */
 specifier|public
 specifier|static
 specifier|final

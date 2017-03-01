@@ -173,7 +173,7 @@ name|TokenRevocationService
 extends|extends
 name|AbstractTokenService
 block|{
-comment|/**      * Processes a token revocation request      * @param params the form parameters representing the access token grant       * @return Access Token or the error       */
+comment|/**      * Processes a token revocation request      * @param params the form parameters representing the access token grant      * @return Access Token or the error      */
 annotation|@
 name|POST
 annotation|@

@@ -114,7 +114,7 @@ block|{
 specifier|private
 name|JAXBUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|void

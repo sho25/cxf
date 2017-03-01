@@ -664,9 +664,7 @@ name|setProperties
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|ExchangeDataProperty
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

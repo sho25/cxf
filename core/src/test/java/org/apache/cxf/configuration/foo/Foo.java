@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for foo complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="foo">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="position" type="{http://cxf.apache.org/configuration/foo}point" minOccurs="0"/>  *&lt;element name="address" type="{http://cxf.apache.org/configuration/foo}address" minOccurs="0"/>  *&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>  *&lt;element name="intDefault" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>  *&lt;element name="intNoDefault" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for foo complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="foo">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="position" type="{http://cxf.apache.org/configuration/foo}point" minOccurs="0"/>  *&lt;element name="address" type="{http://cxf.apache.org/configuration/foo}address" minOccurs="0"/>  *&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>  *&lt;element name="intDefault" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>  *&lt;element name="intNoDefault" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -137,7 +137,7 @@ specifier|protected
 name|Integer
 name|intNoDefault
 decl_stmt|;
-comment|/**      * Gets the value of the position property.      *       * @return      *     possible object is      *     {@link Point }      *           */
+comment|/**      * Gets the value of the position property.      *      * @return      *     possible object is      *     {@link Point }      *      */
 specifier|public
 name|Point
 name|getPosition
@@ -147,7 +147,7 @@ return|return
 name|position
 return|;
 block|}
-comment|/**      * Sets the value of the position property.      *       * @param value      *     allowed object is      *     {@link Point }      *           */
+comment|/**      * Sets the value of the position property.      *      * @param value      *     allowed object is      *     {@link Point }      *      */
 specifier|public
 name|void
 name|setPosition
@@ -163,7 +163,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the address property.      *       * @return      *     possible object is      *     {@link Address }      *           */
+comment|/**      * Gets the value of the address property.      *      * @return      *     possible object is      *     {@link Address }      *      */
 specifier|public
 name|Address
 name|getAddress
@@ -173,7 +173,7 @@ return|return
 name|address
 return|;
 block|}
-comment|/**      * Sets the value of the address property.      *       * @param value      *     allowed object is      *     {@link Address }      *           */
+comment|/**      * Sets the value of the address property.      *      * @param value      *     allowed object is      *     {@link Address }      *      */
 specifier|public
 name|void
 name|setAddress
@@ -189,7 +189,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the name property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the name property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getName
@@ -199,7 +199,7 @@ return|return
 name|name
 return|;
 block|}
-comment|/**      * Sets the value of the name property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the name property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setName
@@ -215,7 +215,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the intDefault property.      *       * @return      *     possible object is      *     {@link Integer }      *           */
+comment|/**      * Gets the value of the intDefault property.      *      * @return      *     possible object is      *     {@link Integer }      *      */
 specifier|public
 name|Integer
 name|getIntDefault
@@ -225,7 +225,7 @@ return|return
 name|intDefault
 return|;
 block|}
-comment|/**      * Sets the value of the intDefault property.      *       * @param value      *     allowed object is      *     {@link Integer }      *           */
+comment|/**      * Sets the value of the intDefault property.      *      * @param value      *     allowed object is      *     {@link Integer }      *      */
 specifier|public
 name|void
 name|setIntDefault
@@ -241,7 +241,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the intNoDefault property.      *       * @return      *     possible object is      *     {@link Integer }      *           */
+comment|/**      * Gets the value of the intNoDefault property.      *      * @return      *     possible object is      *     {@link Integer }      *      */
 specifier|public
 name|Integer
 name|getIntNoDefault
@@ -251,7 +251,7 @@ return|return
 name|intNoDefault
 return|;
 block|}
-comment|/**      * Sets the value of the intNoDefault property.      *       * @param value      *     allowed object is      *     {@link Integer }      *           */
+comment|/**      * Sets the value of the intNoDefault property.      *      * @param value      *     allowed object is      *     {@link Integer }      *      */
 specifier|public
 name|void
 name|setIntNoDefault

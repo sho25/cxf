@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A callback-style provider which can be used to map an object to Atom Entry  * without having to deal directly with types representing Atom entries  *   * @param<T> Type of objects which will be mapped to entries  */
+comment|/**  * A callback-style provider which can be used to map an object to Atom Entry  * without having to deal directly with types representing Atom entries  *  * @param<T> Type of objects which will be mapped to entries  */
 end_comment
 
 begin_class
@@ -37,7 +37,7 @@ argument_list|<
 name|T
 argument_list|>
 block|{
-comment|/**      *       * @param pojo Object which is being mapped      * @return element publication date      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element publication date      */
 specifier|public
 name|String
 name|getPublished
@@ -50,7 +50,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return element summary      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return element summary      */
 specifier|public
 name|String
 name|getSummary
@@ -63,7 +63,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return entry content      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return entry content      */
 specifier|public
 name|String
 name|getContent

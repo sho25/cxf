@@ -555,9 +555,7 @@ name|rootTypeQNames
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -654,7 +652,7 @@ return|return
 name|creator
 return|;
 block|}
-comment|/**      * Initialize the context. The encodingStyleURI allows .aegis.xml files to have multiple mappings for,      * say, SOAP 1.1 versus SOAP 1.2. Passing null uses a default URI.      *       * @param mappingNamespaceURI URI to select mappings based on the encoding.      */
+comment|/**      * Initialize the context. The encodingStyleURI allows .aegis.xml files to have multiple mappings for,      * say, SOAP 1.1 versus SOAP 1.2. Passing null uses a default URI.      *      * @param mappingNamespaceURI URI to select mappings based on the encoding.      */
 specifier|public
 name|void
 name|initialize
@@ -822,7 +820,7 @@ name|this
 argument_list|)
 return|;
 block|}
-comment|/**      * If a class was provided as part of the 'root' list, retrieve it's AegisType by Class.      *       * @param clazz      * @return      */
+comment|/**      * If a class was provided as part of the 'root' list, retrieve it's AegisType by Class.      *      * @param clazz      * @return      */
 specifier|public
 name|AegisType
 name|getRootType
@@ -860,7 +858,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * If a class was provided as part of the root list, retrieve it's AegisType by schema type QName.      *       * @param schemaTypeName      * @return      */
+comment|/**      * If a class was provided as part of the root list, retrieve it's AegisType by schema type QName.      *      * @param schemaTypeName      * @return      */
 specifier|public
 name|AegisType
 name|getRootType
@@ -1118,7 +1116,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Examine a list of override classes, and register all of them.      *       * @param tm type manager for this binding      * @param classes list of class names      */
+comment|/**      * Examine a list of override classes, and register all of them.      *      * @param tm type manager for this binding      * @param classes list of class names      */
 specifier|private
 name|void
 name|processRootTypes
@@ -1128,9 +1126,7 @@ name|rootTypes
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|AegisType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 comment|// app may have already supplied classes.
@@ -1161,9 +1157,7 @@ name|rootTypeQNames
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if
@@ -1310,7 +1304,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*          * Second loop: process Class roots, including those derived from           * generic types, creating when not in the default mappings.          */
+comment|/*          * Second loop: process Class roots, including those derived from          * generic types, creating when not in the default mappings.          */
 for|for
 control|(
 name|Class
@@ -1572,7 +1566,7 @@ name|UTILITY_TYPES_SCHEMA_NS
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Retrieve the set of root class names. Note that if the application specifies the root classes by Class      * instead of by name, this will return null.      *       * @return      */
+comment|/**      * Retrieve the set of root class names. Note that if the application specifies the root classes by Class      * instead of by name, this will return null.      *      * @return      */
 specifier|public
 name|Set
 argument_list|<
@@ -1585,7 +1579,7 @@ return|return
 name|rootClassNames
 return|;
 block|}
-comment|/**      * Set the root class names. This function is a convenience for Spring configuration. It sets the same      * underlying collection as {@link #setRootClasses(Set)}.      *       * @param classNames      */
+comment|/**      * Set the root class names. This function is a convenience for Spring configuration. It sets the same      * underlying collection as {@link #setRootClasses(Set)}.      *      * @param classNames      */
 specifier|public
 name|void
 name|setRootClassNames
@@ -1602,7 +1596,7 @@ operator|=
 name|classNames
 expr_stmt|;
 block|}
-comment|/**      * Return the type mapping configuration associated with this context.      *       * @return Returns the configuration.      */
+comment|/**      * Return the type mapping configuration associated with this context.      *      * @return Returns the configuration.      */
 specifier|public
 name|TypeCreationOptions
 name|getTypeCreationOptions
@@ -1612,7 +1606,7 @@ return|return
 name|configuration
 return|;
 block|}
-comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *       * @param configuration The configuration to set.      */
+comment|/**      * Set the configuration object. The configuration specifies default type mapping behaviors.      *      * @param configuration The configuration to set.      */
 specifier|public
 name|void
 name|setTypeCreationOptions
@@ -1646,7 +1640,7 @@ return|return
 name|readXsiTypes
 return|;
 block|}
-comment|/**      * Controls whether Aegis writes xsi:type attributes on all elements. False by default.      *       * @param flag      */
+comment|/**      * Controls whether Aegis writes xsi:type attributes on all elements. False by default.      *      * @param flag      */
 specifier|public
 name|void
 name|setWriteXsiTypes
@@ -1662,7 +1656,7 @@ operator|=
 name|flag
 expr_stmt|;
 block|}
-comment|/**      * Controls the use of xsi:type attributes when reading objects. By default, xsi:type reading is enabled.      * When disabled, Aegis will only map for objects that the application manually maps in the type mapping.      *       * @param flag      */
+comment|/**      * Controls the use of xsi:type attributes when reading objects. By default, xsi:type reading is enabled.      * When disabled, Aegis will only map for objects that the application manually maps in the type mapping.      *      * @param flag      */
 specifier|public
 name|void
 name|setReadXsiTypes
@@ -1678,7 +1672,7 @@ operator|=
 name|flag
 expr_stmt|;
 block|}
-comment|/**      * Return the type mapping object used by this context.      *       * @return      */
+comment|/**      * Return the type mapping object used by this context.      *      * @return      */
 specifier|public
 name|TypeMapping
 name|getTypeMapping
@@ -1688,7 +1682,7 @@ return|return
 name|typeMapping
 return|;
 block|}
-comment|/**      * Set the type mapping object used by this context.      *       * @param typeMapping      */
+comment|/**      * Set the type mapping object used by this context.      *      * @param typeMapping      */
 specifier|public
 name|void
 name|setTypeMapping
@@ -1704,7 +1698,7 @@ operator|=
 name|typeMapping
 expr_stmt|;
 block|}
-comment|/**      * Retrieve the Aegis type objects for the root classes.      *       * @return the set of type objects.      */
+comment|/**      * Retrieve the Aegis type objects for the root classes.      *      * @return the set of type objects.      */
 specifier|public
 name|Set
 argument_list|<
@@ -1717,7 +1711,7 @@ return|return
 name|rootTypes
 return|;
 block|}
-comment|/**      * This property provides support for interfaces. If there is a mapping from an interface's Class<T> to a      * string containing a class name, Aegis will create proxy objects of that class name.      *       * @see org.apache.cxf.aegis.type.basic.BeanType      * @return      */
+comment|/**      * This property provides support for interfaces. If there is a mapping from an interface's Class<T> to a      * string containing a class name, Aegis will create proxy objects of that class name.      *      * @see org.apache.cxf.aegis.type.basic.BeanType      * @return      */
 specifier|public
 name|Map
 argument_list|<
@@ -1776,7 +1770,7 @@ return|return
 name|rootClasses
 return|;
 block|}
-comment|/**      * The list of initial classes.      *       * @param rootClasses      */
+comment|/**      * The list of initial classes.      *      * @param rootClasses      */
 specifier|public
 name|void
 name|setRootClasses
@@ -1801,7 +1795,7 @@ operator|=
 name|rootClasses
 expr_stmt|;
 block|}
-comment|/**      * Is MTOM enabled in this context?      *       * @return      */
+comment|/**      * Is MTOM enabled in this context?      *      * @return      */
 specifier|public
 name|boolean
 name|isMtomEnabled
@@ -1826,7 +1820,7 @@ operator|=
 name|mtomEnabled
 expr_stmt|;
 block|}
-comment|/**      * Should this service use schema for MTOM types xmime:base64Binary instead of xsd:base64Binary?      *       * @return      */
+comment|/**      * Should this service use schema for MTOM types xmime:base64Binary instead of xsd:base64Binary?      *      * @return      */
 specifier|public
 name|boolean
 name|isMtomUseXmime
@@ -1851,7 +1845,7 @@ operator|=
 name|mtomUseXmime
 expr_stmt|;
 block|}
-comment|/**      * What URI identifies the type mapping for this context? When the XMLTypeCreator reads .aegis.xml file,      * it will only read mappings for this URI (or no URI). When the abstract type creator is otherwise at a      * loss for a namespace URI, it will use this URI.      *       * @return      */
+comment|/**      * What URI identifies the type mapping for this context? When the XMLTypeCreator reads .aegis.xml file,      * it will only read mappings for this URI (or no URI). When the abstract type creator is otherwise at a      * loss for a namespace URI, it will use this URI.      *      * @return      */
 specifier|public
 name|String
 name|getMappingNamespaceURI
@@ -1900,7 +1894,7 @@ return|return
 name|enableJDOMMappings
 return|;
 block|}
-comment|/**      * Whether to enable JDOM as a mapping for xsd:anyType if JDOM is in the classpath.       * @param enableJDOMMappings      */
+comment|/**      * Whether to enable JDOM as a mapping for xsd:anyType if JDOM is in the classpath.      * @param enableJDOMMappings      */
 specifier|public
 name|void
 name|setEnableJDOMMappings

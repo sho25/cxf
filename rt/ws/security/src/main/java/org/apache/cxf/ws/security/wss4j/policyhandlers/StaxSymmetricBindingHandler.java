@@ -774,7 +774,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1635,12 +1635,11 @@ name|encryptionToken
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|encrParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 if|if
@@ -1797,12 +1796,11 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+operator|!
 name|sigParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|AbstractTokenWrapper

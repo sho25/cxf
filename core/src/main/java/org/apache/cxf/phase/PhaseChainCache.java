@@ -114,7 +114,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The PhaseChainCache provides default interceptor chains for SOAP requests  * and responses, both from the client and web service side.  The list of  * phases supplied in the get() methods of this class are defined by default  * within org.apache.cxf.phase.PhaseManagerImpl.  For an example of this class   * in use, check the sourcecode of org.apache.cxf.endpoint.ClientImpl.  */
+comment|/**  * The PhaseChainCache provides default interceptor chains for SOAP requests  * and responses, both from the client and web service side.  The list of  * phases supplied in the get() methods of this class are defined by default  * within org.apache.cxf.phase.PhaseManagerImpl.  For an example of this class  * in use, check the sourcecode of org.apache.cxf.endpoint.ClientImpl.  */
 end_comment
 
 begin_class

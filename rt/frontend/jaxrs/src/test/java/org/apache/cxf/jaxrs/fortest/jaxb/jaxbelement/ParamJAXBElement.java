@@ -74,8 +74,8 @@ init|=
 literal|4994571526736505284L
 decl_stmt|;
 specifier|protected
-specifier|final
 specifier|static
+specifier|final
 name|QName
 name|NAME
 init|=

@@ -49,7 +49,7 @@ decl_stmt|;
 specifier|public
 name|OAuthError
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|OAuthError
 parameter_list|(
@@ -103,7 +103,7 @@ operator|=
 name|error
 expr_stmt|;
 block|}
-comment|/**      * Gets the error       * @return error      */
+comment|/**      * Gets the error      * @return error      */
 specifier|public
 name|String
 name|getError
@@ -139,7 +139,7 @@ return|return
 name|errorDescription
 return|;
 block|}
-comment|/**      * Sets the optional link to the page       * describing the error in detail      * @param errorUri error page URI      */
+comment|/**      * Sets the optional link to the page      * describing the error in detail      * @param errorUri error page URI      */
 specifier|public
 name|void
 name|setErrorUri
@@ -155,7 +155,7 @@ operator|=
 name|errorUri
 expr_stmt|;
 block|}
-comment|/**      * Gets the optional link to the page       * describing the error in detail      * @param errorUri error page URI      */
+comment|/**      * Gets the optional link to the page      * describing the error in detail      * @param errorUri error page URI      */
 specifier|public
 name|String
 name|getErrorUri
@@ -165,7 +165,7 @@ return|return
 name|errorUri
 return|;
 block|}
-comment|/**      * Sets the client state token which needs to be returned      * to the client alongside the error information       * if it was provided during the client request      * @param state the client state token      */
+comment|/**      * Sets the client state token which needs to be returned      * to the client alongside the error information      * if it was provided during the client request      * @param state the client state token      */
 specifier|public
 name|void
 name|setState

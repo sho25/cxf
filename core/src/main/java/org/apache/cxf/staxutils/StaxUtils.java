@@ -1710,7 +1710,7 @@ name|i
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * CXF works with multiple STaX parsers. When we can't find any other way to work       * against the different parsers, this can be used to condition code. Note: if you've got      * Woodstox in the class path without being the default provider, this will return      * the wrong answer.      * @return true if Woodstox is in the classpath.       */
+comment|/**      * CXF works with multiple STaX parsers. When we can't find any other way to work      * against the different parsers, this can be used to condition code. Note: if you've got      * Woodstox in the class path without being the default provider, this will return      * the wrong answer.      * @return true if Woodstox is in the classpath.      */
 specifier|public
 specifier|static
 name|boolean
@@ -1884,7 +1884,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Return a new factory so that the caller can set sticky parameters.      * @param nsAware      * @throws XMLStreamException       */
+comment|/**      * Return a new factory so that the caller can set sticky parameters.      * @param nsAware      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|XMLInputFactory
@@ -4068,7 +4068,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Copies the reader to the writer. The start and end document methods must      * be handled on the writer manually. TODO: if the namespace on the reader      * has been declared previously to where we are in the stream, this probably      * won't work.      *       * @param reader      * @param writer      * @throws XMLStreamException      */
+comment|/**      * Copies the reader to the writer. The start and end document methods must      * be handled on the writer manually. TODO: if the namespace on the reader      * has been declared previously to where we are in the stream, this probably      * won't work.      *      * @param reader      * @param writer      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void
@@ -5210,7 +5210,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *       * @param e      * @param writer      * @throws XMLStreamException      */
+comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *      * @param e      * @param writer      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void
@@ -5240,7 +5240,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *       * @param e      * @param writer      * @param endElement true if the element should be ended      * @throws XMLStreamException      */
+comment|/**      * Writes an Element to an XMLStreamWriter. The writer must already have      * started the document (via writeStartDocument()). Also, this probably      * won't work with just a fragment of a document. The Element should be the      * root element of the document.      *      * @param e      * @param writer      * @param endElement true if the element should be ended      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|void
@@ -10450,7 +10450,7 @@ name|prefix
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a unique namespace uri/prefix combination.      *       * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
+comment|/**      * Create a unique namespace uri/prefix combination.      *      * @return The namespace with the specified URI. If one doesn't exist, one      *         is created.      * @throws XMLStreamException      */
 specifier|public
 specifier|static
 name|String

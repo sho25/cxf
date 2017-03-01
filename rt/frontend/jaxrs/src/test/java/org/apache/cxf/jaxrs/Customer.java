@@ -558,7 +558,7 @@ block|}
 specifier|public
 interface|interface
 name|CustomerBeanInterface
-block|{              }
+block|{      }
 annotation|@
 name|XmlRootElement
 argument_list|(
@@ -926,7 +926,7 @@ decl_stmt|;
 specifier|public
 name|Customer
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Customer
 parameter_list|(
@@ -1054,7 +1054,7 @@ argument_list|)
 name|CustomerBean
 name|cb
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testLocaleParam
@@ -1067,7 +1067,7 @@ argument_list|)
 name|Locale
 name|l
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testGenericObjectParam
@@ -1083,7 +1083,7 @@ name|String
 argument_list|>
 name|query
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testXmlAdapter
@@ -1103,7 +1103,7 @@ argument_list|)
 name|CustomerBean
 name|cb
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testXmlAdapter2
@@ -1123,7 +1123,7 @@ argument_list|)
 name|CustomerBean
 name|cb
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testXmlAdapter3
@@ -1143,7 +1143,7 @@ argument_list|)
 name|CustomerBeanInterface
 name|cb
 parameter_list|)
-block|{               }
+block|{      }
 specifier|public
 name|void
 name|testPathBean
@@ -1156,7 +1156,7 @@ argument_list|)
 name|CustomerBean
 name|cb
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testFormBean
@@ -1169,7 +1169,7 @@ argument_list|)
 name|CustomerBean
 name|cb
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testMatrixBean
@@ -1182,7 +1182,7 @@ argument_list|)
 name|CustomerBean
 name|cb
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|Application
 name|getApplication1

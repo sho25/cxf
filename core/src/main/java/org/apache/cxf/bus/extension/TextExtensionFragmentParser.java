@@ -259,9 +259,7 @@ expr_stmt|;
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}
@@ -293,7 +291,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Reads extension definitions from a Text file and instantiates them      * The text file has the following syntax      * classname:interfacename:deferred(true|false):optional(true|false)      *       * @param is stream to read the extension from      * @return list of Extensions      * @throws IOException      */
+comment|/**      * Reads extension definitions from a Text file and instantiates them      * The text file has the following syntax      * classname:interfacename:deferred(true|false):optional(true|false)      *      * @param is stream to read the extension from      * @return list of Extensions      * @throws IOException      */
 specifier|public
 name|List
 argument_list|<
@@ -315,9 +313,7 @@ name|extensions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|BufferedReader

@@ -265,6 +265,22 @@ name|policy
 operator|.
 name|model
 operator|.
+name|AbstractSecuredParts
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|policy
+operator|.
+name|model
+operator|.
 name|Attachments
 import|;
 end_import
@@ -282,22 +298,6 @@ operator|.
 name|model
 operator|.
 name|Header
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|wss4j
-operator|.
-name|policy
-operator|.
-name|model
-operator|.
-name|SignedParts
 import|;
 end_import
 
@@ -320,7 +320,7 @@ name|CoverageType
 operator|.
 name|ENCRYPTED
 decl_stmt|;
-comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a       * policy defined by the AssertionInfo parameter      */
+comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a      * policy defined by the AssertionInfo parameter      */
 specifier|public
 name|boolean
 name|canValidatePolicy
@@ -523,11 +523,11 @@ comment|// Secured Parts could already have been asserted by one of the other va
 comment|// they are a child of a SupportingToken
 continue|continue;
 block|}
-name|SignedParts
+name|AbstractSecuredParts
 name|p
 init|=
 operator|(
-name|SignedParts
+name|AbstractSecuredParts
 operator|)
 name|ai
 operator|.

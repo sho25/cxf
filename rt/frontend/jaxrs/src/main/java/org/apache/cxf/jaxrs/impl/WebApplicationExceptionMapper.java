@@ -186,7 +186,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Default exception mapper for {@link WebApplicationException}.  * This class interacts with {@link FaultListener}.    * If {@link FaultListener} is available and has indicated that it handled the exception then  * no more logging is done, otherwise a message is logged at WARN (default) or FINE level  * which can be controlled with a printStackTrace property    */
+comment|/**  * Default exception mapper for {@link WebApplicationException}.  * This class interacts with {@link FaultListener}.  * If {@link FaultListener} is available and has indicated that it handled the exception then  * no more logging is done, otherwise a message is logged at WARN (default) or FINE level  * which can be controlled with a printStackTrace property  */
 end_comment
 
 begin_class
@@ -402,27 +402,12 @@ argument_list|)
 expr_stmt|;
 name|r
 operator|=
-name|JAXRSUtils
-operator|.
-name|fromResponse
+name|buildResponse
 argument_list|(
 name|r
-argument_list|)
-operator|.
-name|entity
-argument_list|(
+argument_list|,
 name|errorMessage
 argument_list|)
-operator|.
-name|type
-argument_list|(
-name|MediaType
-operator|.
-name|TEXT_PLAIN
-argument_list|)
-operator|.
-name|build
-argument_list|()
 expr_stmt|;
 block|}
 return|return
@@ -538,7 +523,59 @@ name|toString
 argument_list|()
 return|;
 block|}
-comment|/**      * Control whether to log at WARN or FINE level.      * Note this property is ignored if a registered {@link FaultListener}       * has handled the exception      * @param printStackTrace if set to true then WARN level is used (default),      *        otherwise - FINE level.      */
+specifier|protected
+name|Response
+name|buildResponse
+parameter_list|(
+name|Response
+name|response
+parameter_list|,
+name|String
+name|responseText
+parameter_list|)
+block|{
+name|Response
+operator|.
+name|ResponseBuilder
+name|rb
+init|=
+name|JAXRSUtils
+operator|.
+name|fromResponse
+argument_list|(
+name|response
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|responseText
+operator|!=
+literal|null
+condition|)
+block|{
+name|rb
+operator|.
+name|type
+argument_list|(
+name|MediaType
+operator|.
+name|TEXT_PLAIN
+argument_list|)
+operator|.
+name|entity
+argument_list|(
+name|responseText
+argument_list|)
+expr_stmt|;
+block|}
+return|return
+name|rb
+operator|.
+name|build
+argument_list|()
+return|;
+block|}
+comment|/**      * Control whether to log at WARN or FINE level.      * Note this property is ignored if a registered {@link FaultListener}      * has handled the exception      * @param printStackTrace if set to true then WARN level is used (default),      *        otherwise - FINE level.      */
 specifier|public
 name|void
 name|setPrintStackTrace
@@ -554,7 +591,7 @@ operator|=
 name|printStackTrace
 expr_stmt|;
 block|}
-comment|/**      * Controls whether to add an error message to Response or not,      * @param addMessageToResponse add a message to Response, ignored      *        if the captuted WebApplicationException has       *        a Response with a non-null entity      */
+comment|/**      * Controls whether to add an error message to Response or not,      * @param addMessageToResponse add a message to Response, ignored      *        if the captuted WebApplicationException has      *        a Response with a non-null entity      */
 specifier|public
 name|void
 name|setAddMessageToResponse

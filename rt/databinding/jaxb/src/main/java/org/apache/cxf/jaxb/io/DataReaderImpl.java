@@ -492,28 +492,28 @@ name|msg
 operator|.
 name|startsWith
 argument_list|(
-literal|"cvc-type.3.1.1: "
+literal|"cvc-type.3.1.1"
 argument_list|)
 operator|||
 name|msg
 operator|.
 name|startsWith
 argument_list|(
-literal|"cvc-type.3.2.2: "
+literal|"cvc-type.3.2.2"
 argument_list|)
 operator|||
 name|msg
 operator|.
 name|startsWith
 argument_list|(
-literal|"cvc-complex-type.3.1.1: "
+literal|"cvc-complex-type.3.1.1"
 argument_list|)
 operator|||
 name|msg
 operator|.
 name|startsWith
 argument_list|(
-literal|"cvc-complex-type.3.2.2: "
+literal|"cvc-complex-type.3.2.2"
 argument_list|)
 operator|)
 return|;

@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|MessageObserver
 block|{
-comment|/**      * Called for an incoming message, i.e. where the content format(s)      * is/are source(s).      *       * @param message      */
+comment|/**      * Called for an incoming message, i.e. where the content format(s)      * is/are source(s).      *      * @param message      */
 name|void
 name|onMessage
 parameter_list|(

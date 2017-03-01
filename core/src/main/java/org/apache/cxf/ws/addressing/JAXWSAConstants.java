@@ -283,7 +283,7 @@ name|SERVER_ADDRESSING_PROPERTIES_OUTBOUND
 init|=
 name|ADDRESSING_PROPERTIES_OUTBOUND
 decl_stmt|;
-comment|/**      * Prevents instantiation.       */
+comment|/**      * Prevents instantiation.      */
 specifier|private
 name|JAXWSAConstants
 parameter_list|()

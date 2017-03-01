@@ -223,9 +223,7 @@ name|options
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WadlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Set
@@ -394,7 +392,7 @@ return|return
 name|option
 return|;
 block|}
-comment|/**      * Scan files in a directory and generate one wadlOption per file found. Extra args for code generation      * can be defined in a file that is named like the wadl file and ends in -options. Binding files can be      * defined in files named like the wadl file and end in -binding-*.xml      *       * @param wadlBasedir      * @param includes file name patterns to include      * @param excludes file name patterns to exclude      * @param defaultOptions options that should be used if no special file is given      * @return list of one WadlOption object for each wadl found      * @throws MojoExecutionException      */
+comment|/**      * Scan files in a directory and generate one wadlOption per file found. Extra args for code generation      * can be defined in a file that is named like the wadl file and ends in -options. Binding files can be      * defined in files named like the wadl file and end in -binding-*.xml      *      * @param wadlBasedir      * @param includes file name patterns to include      * @param excludes file name patterns to exclude      * @param defaultOptions options that should be used if no special file is given      * @return list of one WadlOption object for each wadl found      * @throws MojoExecutionException      */
 specifier|public
 specifier|static
 name|List
@@ -433,9 +431,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|WadlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}
@@ -481,9 +477,7 @@ name|wadlOptions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WadlOption
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -625,9 +619,7 @@ name|exList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

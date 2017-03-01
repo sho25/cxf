@@ -615,9 +615,7 @@ name|ret
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Enumeration

@@ -262,7 +262,7 @@ specifier|private
 name|Server
 name|server
 decl_stmt|;
-comment|/**          * *          *           * @return Returns the server.          */
+comment|/**          * *          *          * @return Returns the server.          */
 specifier|public
 name|Server
 name|getServer
@@ -288,7 +288,7 @@ operator|=
 name|server
 expr_stmt|;
 block|}
-comment|/**          * *          *           * @return Returns the typeMapping.          */
+comment|/**          * *          *          * @return Returns the typeMapping.          */
 specifier|public
 name|TypeMapping
 name|getTypeMapping
@@ -314,7 +314,7 @@ operator|=
 name|typeMapping
 expr_stmt|;
 block|}
-comment|/**          * *          *           * @return Returns the service.          */
+comment|/**          * *          *          * @return Returns the service.          */
 specifier|public
 name|Service
 name|getService
@@ -440,7 +440,7 @@ return|return
 name|serviceAndMapping
 return|;
 block|}
-comment|/**      * The W3C dom is not helpful in looking at declarations. We could convert      * to JDOM, but this is enough to get the job done.      *       * @param node      * @return      */
+comment|/**      * The W3C dom is not helpful in looking at declarations. We could convert      * to JDOM, but this is enough to get the job done.      *      * @param node      * @return      */
 specifier|private
 name|Map
 argument_list|<

@@ -292,7 +292,7 @@ decl_stmt|;
 specifier|private
 name|SamlpRequestComponentBuilder
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|SuppressWarnings
 argument_list|(

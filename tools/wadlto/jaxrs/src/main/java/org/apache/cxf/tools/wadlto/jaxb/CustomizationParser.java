@@ -396,9 +396,7 @@ name|jaxbBindings
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -411,9 +409,7 @@ name|packageFiles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -426,9 +422,7 @@ name|compilerArgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

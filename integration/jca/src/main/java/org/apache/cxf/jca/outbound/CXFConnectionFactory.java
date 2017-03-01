@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Provides methods to create a {@link CXFConnection} object that provides access  * to a Web Service defined from the supplied specifications.  A CXFConnectionFactory   * is returned from an environment naming context JNDI lookup by the Application   * Server.  */
+comment|/**  * Provides methods to create a {@link CXFConnection} object that provides access  * to a Web Service defined from the supplied specifications.  A CXFConnectionFactory  * is returned from an environment naming context JNDI lookup by the Application  * Server.  */
 end_comment
 
 begin_interface
@@ -60,7 +60,7 @@ name|Serializable
 extends|,
 name|Referenceable
 block|{
-comment|/**      * Creates a CXFConnection object which allows access to CXF web service based on       * the CXFConnectionSpec object.  Required CXFConnectionSpec fields are wsdlURL,       * serviceClass, endpointName, and serviceName.  Each connection returned by this       * method MUST be closed by calling the {@link CXFConnection#close()} when it is no       * longer needed.        *       * @param spec      * @return CXFConnection       * @throws ResourceException      */
+comment|/**      * Creates a CXFConnection object which allows access to CXF web service based on      * the CXFConnectionSpec object.  Required CXFConnectionSpec fields are wsdlURL,      * serviceClass, endpointName, and serviceName.  Each connection returned by this      * method MUST be closed by calling the {@link CXFConnection#close()} when it is no      * longer needed.      *      * @param spec      * @return CXFConnection      * @throws ResourceException      */
 name|CXFConnection
 name|getConnection
 parameter_list|(

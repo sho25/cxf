@@ -383,7 +383,7 @@ name|Service
 name|create
 parameter_list|()
 function_decl|;
-comment|/**      * Returns a map that is useful for ServiceFactoryBeanListener to store state across       * events during processing.         */
+comment|/**      * Returns a map that is useful for ServiceFactoryBeanListener to store state across      * events during processing.      */
 specifier|public
 name|Map
 argument_list|<
@@ -700,9 +700,7 @@ name|schemas
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DOMSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

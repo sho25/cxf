@@ -227,9 +227,9 @@ name|boot
 operator|.
 name|context
 operator|.
-name|embedded
+name|properties
 operator|.
-name|ServletRegistrationBean
+name|EnableConfigurationProperties
 import|;
 end_import
 
@@ -241,11 +241,11 @@ name|springframework
 operator|.
 name|boot
 operator|.
-name|context
+name|web
 operator|.
-name|properties
+name|servlet
 operator|.
-name|EnableConfigurationProperties
+name|ServletRegistrationBean
 import|;
 end_import
 
@@ -513,7 +513,7 @@ specifier|protected
 specifier|static
 class|class
 name|JaxRsComponentConfiguration
-block|{           }
+block|{      }
 annotation|@
 name|Configuration
 annotation|@
@@ -539,7 +539,7 @@ specifier|protected
 specifier|static
 class|class
 name|JaxRsClassesConfiguration
-block|{           }
+block|{      }
 block|}
 end_class
 

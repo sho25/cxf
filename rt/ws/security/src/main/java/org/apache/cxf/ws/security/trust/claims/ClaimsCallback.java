@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This Callback class provides a pluggable way of sending Claims to the STS. A CallbackHandler  * instance will be supplied with this class, which contains a reference to the current  * Message. The CallbackHandler implementation is required to set the claims Object to be  * sent in the request. This object can be either a DOM Element to be written out "as is", or else  * a org.apache.cxf.rt.security.claims.ClaimCollection Object which will be serialized in the   * request.  */
+comment|/**  * This Callback class provides a pluggable way of sending Claims to the STS. A CallbackHandler  * instance will be supplied with this class, which contains a reference to the current  * Message. The CallbackHandler implementation is required to set the claims Object to be  * sent in the request. This object can be either a DOM Element to be written out "as is", or else  * a org.apache.cxf.rt.security.claims.ClaimCollection Object which will be serialized in the  * request.  */
 end_comment
 
 begin_class

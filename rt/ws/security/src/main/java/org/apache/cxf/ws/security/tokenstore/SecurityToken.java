@@ -316,7 +316,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -326,7 +326,7 @@ name|SecurityToken
 implements|implements
 name|Serializable
 block|{
-comment|/**      * This tag holds an ID of a Bootstrap SecurityToken stored in the TokenStore       */
+comment|/**      * This tag holds an ID of a Bootstrap SecurityToken stored in the TokenStore      */
 specifier|public
 specifier|static
 specifier|final
@@ -335,7 +335,7 @@ name|BOOTSTRAP_TOKEN_ID
 init|=
 literal|"bootstrap_security_token_id"
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|private
 specifier|static
 specifier|final
@@ -361,18 +361,18 @@ specifier|transient
 name|Element
 name|token
 decl_stmt|;
-comment|/**      * The String representation of the token (The token can't be serialized as it's a DOM Element)       */
+comment|/**      * The String representation of the token (The token can't be serialized as it's a DOM Element)      */
 specifier|private
 name|String
 name|tokenStr
 decl_stmt|;
-comment|/**      * The RequestedAttachedReference element      * NOTE : The oasis-200401-wss-soap-message-security-1.0 spec allows       * an extensibility mechanism for wsse:SecurityTokenReference and       * wsse:Reference. Hence we cannot limit to the       * wsse:SecurityTokenReference\wsse:Reference case and only hold the URI and       * the ValueType values.      */
+comment|/**      * The RequestedAttachedReference element      * NOTE : The oasis-200401-wss-soap-message-security-1.0 spec allows      * an extensibility mechanism for wsse:SecurityTokenReference and      * wsse:Reference. Hence we cannot limit to the      * wsse:SecurityTokenReference\wsse:Reference case and only hold the URI and      * the ValueType values.      */
 specifier|private
 specifier|transient
 name|Element
 name|attachedReference
 decl_stmt|;
-comment|/**      * The RequestedUnattachedReference element      * NOTE : The oasis-200401-wss-soap-message-security-1.0 spec allows       * an extensibility mechanism for wsse:SecurityTokenReference and       * wsse:Reference. Hence we cannot limit to the       * wsse:SecurityTokenReference\wsse:Reference case and only hold the URI and       * the ValueType values.      */
+comment|/**      * The RequestedUnattachedReference element      * NOTE : The oasis-200401-wss-soap-message-security-1.0 spec allows      * an extensibility mechanism for wsse:SecurityTokenReference and      * wsse:Reference. Hence we cannot limit to the      * wsse:SecurityTokenReference\wsse:Reference case and only hold the URI and      * the ValueType values.      */
 specifier|private
 specifier|transient
 name|Element
@@ -432,7 +432,7 @@ specifier|private
 name|int
 name|tokenHash
 decl_stmt|;
-comment|/**      * This holds the identifier of another SecurityToken which represents a transformed      * version of this token.       */
+comment|/**      * This holds the identifier of another SecurityToken which represents a transformed      * version of this token.      */
 specifier|private
 name|String
 name|transformedTokenIdentifier
@@ -465,7 +465,7 @@ decl_stmt|;
 specifier|public
 name|SecurityToken
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|SecurityToken
 parameter_list|(
@@ -734,7 +734,7 @@ return|return
 name|el
 return|;
 block|}
-comment|/**      * @param lifetimeElem      * @throws TrustException       */
+comment|/**      * @param lifetimeElem      * @throws TrustException      */
 specifier|private
 name|void
 name|processLifeTime
@@ -1297,7 +1297,7 @@ operator|=
 name|sha
 expr_stmt|;
 block|}
-comment|/**       * @return SHA1 value of the encrypted key       */
+comment|/**      * @return SHA1 value of the encrypted key      */
 specifier|public
 name|String
 name|getSHA1

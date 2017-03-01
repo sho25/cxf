@@ -776,7 +776,7 @@ name|Configurable
 implements|,
 name|AutoCloseable
 block|{
-comment|/**      * This property controls whether the 'publishEndpoint' permission is checked       * using only the AccessController (i.e. when SecurityManager is not installed).      * By default this check is not done as the system property is not set.      */
+comment|/**      * This property controls whether the 'publishEndpoint' permission is checked      * using only the AccessController (i.e. when SecurityManager is not installed).      * By default this check is not done as the system property is not set.      */
 specifier|public
 specifier|static
 specifier|final
@@ -1089,7 +1089,7 @@ operator|=
 name|implementor
 expr_stmt|;
 block|}
-comment|/**      *       * @param b      * @param i The implementor object.      * @param bindingUri The URI of the Binding being used. Optional.      * @param wsdl The URL of the WSDL for the service, if different than the URL specified on the      * WebService annotation. Optional.      */
+comment|/**      *      * @param b      * @param i The implementor object.      * @param bindingUri The URI of the Binding being used. Optional.      * @param wsdl The URL of the WSDL for the service, if different than the URL specified on the      * WebService annotation. Optional.      */
 specifier|public
 name|EndpointImpl
 parameter_list|(
@@ -1765,7 +1765,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Performs the publication action by setting up a {@link Server}      * instance based on this endpoint's configuration.      *      * @param addr the optional endpoint address.      *      * @throws IllegalStateException if the endpoint cannot be published/republished      * @throws SecurityException if permission checking is enabled and policy forbids publishing      * @throws WebServiceException if there is an error publishing the endpoint      *       * @see #checkPublishPermission()      * @see #checkPublishable()      * @see #getServer(String)      */
+comment|/**      * Performs the publication action by setting up a {@link Server}      * instance based on this endpoint's configuration.      *      * @param addr the optional endpoint address.      *      * @throws IllegalStateException if the endpoint cannot be published/republished      * @throws SecurityException if permission checking is enabled and policy forbids publishing      * @throws WebServiceException if there is an error publishing the endpoint      *      * @see #checkPublishPermission()      * @see #checkPublishable()      * @see #getServer(String)      */
 specifier|protected
 name|void
 name|doPublish
@@ -2382,12 +2382,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|handlers
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|serverFactory
@@ -3919,9 +3918,7 @@ name|features
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

@@ -149,7 +149,7 @@ operator|=
 name|type
 expr_stmt|;
 block|}
-comment|/**      * Not quite the same as equals: null in version       * matches anything.      * @param artifact      * @return      */
+comment|/**      * Not quite the same as equals: null in version      * matches anything.      * @param artifact      * @return      */
 specifier|public
 name|boolean
 name|doesMatch

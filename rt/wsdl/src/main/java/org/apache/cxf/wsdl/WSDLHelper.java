@@ -436,9 +436,7 @@ name|portTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PortType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection
@@ -507,9 +505,7 @@ name|partsList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Part
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -596,9 +592,7 @@ name|partsList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Part
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

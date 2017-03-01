@@ -1520,9 +1520,7 @@ name|RESOURCE_LEVEL_PARAMS
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|RESOURCE_LEVEL_PARAMS
@@ -1965,9 +1963,7 @@ name|generatedServiceClasses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1979,9 +1975,7 @@ name|generatedTypeClasses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -2017,9 +2011,7 @@ name|compilerArgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -2441,9 +2433,7 @@ name|typeClassNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|GrammarInfo
@@ -3539,7 +3529,7 @@ parameter_list|,
 name|File
 name|src
 parameter_list|)
-block|{              }
+block|{      }
 specifier|private
 name|void
 name|writeResourceClass
@@ -7342,9 +7332,7 @@ name|elementRefs
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -8226,12 +8214,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|outResponseParamElements
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|writeJaxrResponse
@@ -8970,12 +8957,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|options
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|generateEnumClass
@@ -9657,12 +9643,11 @@ condition|)
 block|{
 if|if
 condition|(
+operator|!
 name|inParamEls
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|sbCode
@@ -9749,12 +9734,11 @@ condition|)
 block|{
 if|if
 condition|(
+operator|!
 name|inParamEls
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|||
 name|elementParamType
 operator|!=
@@ -12634,9 +12618,7 @@ name|schemas
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SchemaInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -13260,12 +13242,11 @@ argument_list|)
 expr_stmt|;
 if|if
 condition|(
+operator|!
 name|compilerArgs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|compiler
@@ -14041,7 +14022,7 @@ name|noTargetNamespace
 decl_stmt|;
 name|GrammarInfo
 parameter_list|()
-block|{                      }
+block|{          }
 name|GrammarInfo
 parameter_list|(
 name|Map
@@ -14362,9 +14343,7 @@ name|resourceClassNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

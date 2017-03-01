@@ -156,7 +156,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Declares the handler for a port-component. Handlers can access the init-param name/value pairs using the  * HandlerInfo interface. Used in: port-component  *<p>  * Java class for port-component_handlerType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="port-component_handlerType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;group ref="{http://java.sun.com/xml/ns/javaee}descriptionGroup"/>  *&lt;element name="handler-name" type="{http://java.sun.com/xml/ns/javaee}string"/>  *&lt;element name="handler-class" type="{http://java.sun.com/xml/ns/javaee}fully-qualified-classType"/>  *&lt;element name="init-param" type="{http://java.sun.com/xml/ns/javaee}param-valueType"   *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;element name="soap-header" type="{http://java.sun.com/xml/ns/javaee}xsdQNameType"   *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;element name="soap-role" type="{http://java.sun.com/xml/ns/javaee}string"   *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;/sequence>  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * Declares the handler for a port-component. Handlers can access the init-param name/value pairs using the  * HandlerInfo interface. Used in: port-component  *<p>  * Java class for port-component_handlerType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="port-component_handlerType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;group ref="{http://java.sun.com/xml/ns/javaee}descriptionGroup"/>  *&lt;element name="handler-name" type="{http://java.sun.com/xml/ns/javaee}string"/>  *&lt;element name="handler-class" type="{http://java.sun.com/xml/ns/javaee}fully-qualified-classType"/>  *&lt;element name="init-param" type="{http://java.sun.com/xml/ns/javaee}param-valueType"  *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;element name="soap-header" type="{http://java.sun.com/xml/ns/javaee}xsdQNameType"  *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;element name="soap-role" type="{http://java.sun.com/xml/ns/javaee}string"  *                     maxOccurs="unbounded" minOccurs="0"/>  *&lt;/sequence>  *&lt;attribute name="id" type="{http://www.w3.org/2001/XMLSchema}ID" />  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class
@@ -317,7 +317,7 @@ operator|.
 name|String
 name|id
 decl_stmt|;
-comment|/**      * Gets the value of the description property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the description property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getDescription().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link DescriptionType }      */
+comment|/**      * Gets the value of the description property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the description property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getDescription().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link DescriptionType }      */
 specifier|public
 name|List
 argument_list|<
@@ -337,9 +337,7 @@ name|description
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DescriptionType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -349,7 +347,7 @@ operator|.
 name|description
 return|;
 block|}
-comment|/**      * Gets the value of the displayName property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the displayName property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getDisplayName().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link DisplayNameType }      */
+comment|/**      * Gets the value of the displayName property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the displayName property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getDisplayName().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link DisplayNameType }      */
 specifier|public
 name|List
 argument_list|<
@@ -369,9 +367,7 @@ name|displayName
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DisplayNameType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -381,7 +377,7 @@ operator|.
 name|displayName
 return|;
 block|}
-comment|/**      * Gets the value of the icon property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the icon property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getIcon().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link IconType }      */
+comment|/**      * Gets the value of the icon property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the icon property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getIcon().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link IconType }      */
 specifier|public
 name|List
 argument_list|<
@@ -401,9 +397,7 @@ name|icon
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|IconType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -413,7 +407,7 @@ operator|.
 name|icon
 return|;
 block|}
-comment|/**      * Gets the value of the handlerName property.      *       * @return possible object is {@link CString }      */
+comment|/**      * Gets the value of the handlerName property.      *      * @return possible object is {@link CString }      */
 specifier|public
 name|CString
 name|getHandlerName
@@ -444,7 +438,7 @@ return|return
 name|handlerName
 return|;
 block|}
-comment|/**      * Sets the value of the handlerName property.      *       * @param value allowed object is {@link CString }      */
+comment|/**      * Sets the value of the handlerName property.      *      * @param value allowed object is {@link CString }      */
 specifier|public
 name|void
 name|setHandlerName
@@ -460,7 +454,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the handlerClass property.      *       * @return possible object is {@link FullyQualifiedClassType }      */
+comment|/**      * Gets the value of the handlerClass property.      *      * @return possible object is {@link FullyQualifiedClassType }      */
 specifier|public
 name|FullyQualifiedClassType
 name|getHandlerClass
@@ -470,7 +464,7 @@ return|return
 name|handlerClass
 return|;
 block|}
-comment|/**      * Sets the value of the handlerClass property.      *       * @param value allowed object is {@link FullyQualifiedClassType }      */
+comment|/**      * Sets the value of the handlerClass property.      *      * @param value allowed object is {@link FullyQualifiedClassType }      */
 specifier|public
 name|void
 name|setHandlerClass
@@ -486,7 +480,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the initParam property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the initParam property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getInitParam().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link ParamValueType }      */
+comment|/**      * Gets the value of the initParam property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the initParam property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getInitParam().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link ParamValueType }      */
 specifier|public
 name|List
 argument_list|<
@@ -506,9 +500,7 @@ name|initParam
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParamValueType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -518,7 +510,7 @@ operator|.
 name|initParam
 return|;
 block|}
-comment|/**      * Gets the value of the soapHeader property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the soapHeader property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getSoapHeader().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link XsdQNameType }      */
+comment|/**      * Gets the value of the soapHeader property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the soapHeader property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getSoapHeader().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link XsdQNameType }      */
 specifier|public
 name|List
 argument_list|<
@@ -538,9 +530,7 @@ name|soapHeader
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XsdQNameType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -550,7 +540,7 @@ operator|.
 name|soapHeader
 return|;
 block|}
-comment|/**      * Gets the value of the soapRole property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the soapRole property.      *<p>      * For example, to add a new item, do as follows:      *       *<pre>      * getSoapRole().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link CString }      */
+comment|/**      * Gets the value of the soapRole property.      *<p>      * This accessor method returns a reference to the live list, not a snapshot. Therefore any modification      * you make to the returned list will be present inside the JAXB object. This is why there is not a      *<CODE>set</CODE> method for the soapRole property.      *<p>      * For example, to add a new item, do as follows:      *      *<pre>      * getSoapRole().add(newItem);      *</pre>      *<p>      * Objects of the following type(s) are allowed in the list {@link CString }      */
 specifier|public
 name|List
 argument_list|<
@@ -570,9 +560,7 @@ name|soapRole
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CString
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -582,7 +570,7 @@ operator|.
 name|soapRole
 return|;
 block|}
-comment|/**      * Gets the value of the id property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the id property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -596,7 +584,7 @@ return|return
 name|id
 return|;
 block|}
-comment|/**      * Sets the value of the id property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the id property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setId

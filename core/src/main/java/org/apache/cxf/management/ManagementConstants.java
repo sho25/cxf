@@ -96,7 +96,7 @@ decl_stmt|;
 specifier|private
 name|ManagementConstants
 parameter_list|()
-block|{              }
+block|{      }
 block|}
 end_class
 

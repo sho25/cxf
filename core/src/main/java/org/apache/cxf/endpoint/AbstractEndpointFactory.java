@@ -778,9 +778,7 @@ name|features
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -883,7 +881,7 @@ operator|=
 name|dataBinding
 expr_stmt|;
 block|}
-comment|/**      * Checks if a given endpoint has been marked as private.      * If yes then its address will be added to a bus list property      * Note that client factories might also check the endpoint, ex,       * if the endpoint if private then it is likely no service contract      * will be available if requested from the remote address hence it has to      * be availbale locally or generated from the local source      * @param ep endpoint      */
+comment|/**      * Checks if a given endpoint has been marked as private.      * If yes then its address will be added to a bus list property      * Note that client factories might also check the endpoint, ex,      * if the endpoint if private then it is likely no service contract      * will be available if requested from the remote address hence it has to      * be availbale locally or generated from the local source      * @param ep endpoint      */
 annotation|@
 name|SuppressWarnings
 argument_list|(

@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The 'read' side of the data binding abstraction of CXF. A DataReader&lt;T&gt; reads objects   * from a source of type T.  * @param<T> The type of the source. Each data binding defines the set of source types that it supports.  */
+comment|/**  * The 'read' side of the data binding abstraction of CXF. A DataReader&lt;T&gt; reads objects  * from a source of type T.  * @param<T> The type of the source. Each data binding defines the set of source types that it supports.  */
 end_comment
 
 begin_interface
@@ -164,7 +164,7 @@ name|T
 name|input
 parameter_list|)
 function_decl|;
-comment|/**      * Read an object from the input. In the current version of CXF, not all binding support      * this API, and those that do ignore the element QName parameter.      * @param elementQName expected element. Generally ignored.      * @param input input source object.      * @param type the type of object required/requested. This is generally used       * when the caller wants to receive a raw source object and avoid any binding processing.      * For example, passing javax.xml.transform.Source. The bindings do not necessarily throw      * if they cannot provide an object of the requested type, and will apply their normal      * mapping processing, instead.      * @return item read.      */
+comment|/**      * Read an object from the input. In the current version of CXF, not all binding support      * this API, and those that do ignore the element QName parameter.      * @param elementQName expected element. Generally ignored.      * @param input input source object.      * @param type the type of object required/requested. This is generally used      * when the caller wants to receive a raw source object and avoid any binding processing.      * For example, passing javax.xml.transform.Source. The bindings do not necessarily throw      * if they cannot provide an object of the requested type, and will apply their normal      * mapping processing, instead.      * @return item read.      */
 name|Object
 name|read
 parameter_list|(

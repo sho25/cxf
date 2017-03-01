@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An implementation that uses a simple set to store received message IDs.  * Note that this implementation does not make any attempt to flush older  * message IDs or to persist the message IDs outside of this instance.   */
+comment|/**  * An implementation that uses a simple set to store received message IDs.  * Note that this implementation does not make any attempt to flush older  * message IDs or to persist the message IDs outside of this instance.  */
 end_comment
 
 begin_class

@@ -10364,9 +10364,7 @@ name|ssclosed
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Identifier
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 annotation|@

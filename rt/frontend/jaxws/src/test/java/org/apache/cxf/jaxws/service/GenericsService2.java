@@ -28,7 +28,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -80,7 +80,7 @@ decl_stmt|;
 specifier|public
 name|Value
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|Value
 parameter_list|(

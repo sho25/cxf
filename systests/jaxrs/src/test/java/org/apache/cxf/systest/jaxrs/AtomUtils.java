@@ -102,7 +102,7 @@ block|{
 specifier|private
 name|AtomUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|Entry

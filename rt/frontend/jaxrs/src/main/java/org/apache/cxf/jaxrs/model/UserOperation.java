@@ -90,7 +90,7 @@ decl_stmt|;
 specifier|public
 name|UserOperation
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|UserOperation
 parameter_list|(

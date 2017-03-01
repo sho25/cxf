@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for addNumbers complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="addNumbers">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;element name="arg1" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for addNumbers complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="addNumbers">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="arg0" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;element name="arg1" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_comment
@@ -129,7 +129,7 @@ specifier|protected
 name|int
 name|arg1
 decl_stmt|;
-comment|/**      * Gets the value of the arg0 property.      *       */
+comment|/**      * Gets the value of the arg0 property.      *      */
 specifier|public
 name|int
 name|getArg0
@@ -139,7 +139,7 @@ return|return
 name|arg0
 return|;
 block|}
-comment|/**      * Sets the value of the arg0 property.      *       */
+comment|/**      * Sets the value of the arg0 property.      *      */
 specifier|public
 name|void
 name|setArg0
@@ -155,7 +155,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the arg1 property.      *       */
+comment|/**      * Gets the value of the arg1 property.      *      */
 specifier|public
 name|int
 name|getArg1
@@ -165,7 +165,7 @@ return|return
 name|arg1
 return|;
 block|}
-comment|/**      * Sets the value of the arg1 property.      *       */
+comment|/**      * Sets the value of the arg1 property.      *      */
 specifier|public
 name|void
 name|setArg1

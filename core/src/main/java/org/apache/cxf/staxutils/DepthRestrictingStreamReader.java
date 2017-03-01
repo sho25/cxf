@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * XMLStreamReader implementation which can be used to enforce a number of  * depth-restricting policies. The following properties are currently supported:  * - total number of elements in the document  * - the maximum depth of the given element; the root element will be checked by default  * - the maximum number of immediate child nodes for individual elements  *   * More sophisticated policies can be supported in the future.        */
+comment|/**  * XMLStreamReader implementation which can be used to enforce a number of  * depth-restricting policies. The following properties are currently supported:  * - total number of elements in the document  * - the maximum depth of the given element; the root element will be checked by default  * - the maximum number of immediate child nodes for individual elements  *  * More sophisticated policies can be supported in the future.  */
 end_comment
 
 begin_class

@@ -30,7 +30,7 @@ block|{
 specifier|private
 name|DnUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

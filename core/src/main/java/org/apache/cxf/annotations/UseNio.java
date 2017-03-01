@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Instructs the runtime to copy the input stream to the output stream using NIO.  * This annotation will have no effect if continuations are not available    */
+comment|/**  * Instructs the runtime to copy the input stream to the output stream using NIO.  * This annotation will have no effect if continuations are not available  */
 end_comment
 
 begin_annotation_defn

@@ -120,7 +120,7 @@ name|HttpsURLConnectionInfo
 extends|extends
 name|HttpURLConnectionInfo
 block|{
-comment|/**      * This field contains the cipherSuite enabled in the       * HTTPS URLconnection.      */
+comment|/**      * This field contains the cipherSuite enabled in the      * HTTPS URLconnection.      */
 specifier|protected
 name|String
 name|enabledCipherSuite
@@ -142,7 +142,7 @@ name|Certificate
 index|[]
 name|serverCertificates
 decl_stmt|;
-comment|/**      * This field contains the Principal that represents the       * authenticated peer.      */
+comment|/**      * This field contains the Principal that represents the      * authenticated peer.      */
 specifier|protected
 name|Principal
 name|peerPrincipal
@@ -202,7 +202,7 @@ operator|=
 name|peer
 expr_stmt|;
 block|}
-comment|/**      * This constructor is used to create the info object      * representing the this HttpsURLConnection. Connection parameter is       * of supertype HttpURLConnection, which allows internal cast to       * potentially divergent subtype (Https) implementations.      */
+comment|/**      * This constructor is used to create the info object      * representing the this HttpsURLConnection. Connection parameter is      * of supertype HttpURLConnection, which allows internal cast to      * potentially divergent subtype (Https) implementations.      */
 specifier|public
 name|HttpsURLConnectionInfo
 parameter_list|(

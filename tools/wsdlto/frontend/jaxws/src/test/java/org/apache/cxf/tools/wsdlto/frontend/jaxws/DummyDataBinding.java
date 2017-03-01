@@ -121,7 +121,7 @@ name|c
 parameter_list|)
 throws|throws
 name|ToolException
-block|{              }
+block|{      }
 specifier|public
 name|String
 name|getType

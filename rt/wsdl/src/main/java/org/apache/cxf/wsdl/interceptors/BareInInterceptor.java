@@ -387,9 +387,7 @@ name|filter
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 static|static
@@ -553,9 +551,7 @@ name|ops
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|ops
@@ -885,12 +881,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|parameters
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|message

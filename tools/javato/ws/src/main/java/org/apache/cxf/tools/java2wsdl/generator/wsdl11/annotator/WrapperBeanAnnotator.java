@@ -243,7 +243,7 @@ decl_stmt|;
 specifier|public
 name|WrapperBeanAnnotator
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|WrapperBeanAnnotator
 parameter_list|(
@@ -603,9 +603,7 @@ name|props
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

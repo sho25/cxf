@@ -358,9 +358,7 @@ name|IS_NIL_OBJ_REF_ATTRS
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|IS_NIL_OBJ_REF_ATTRS
@@ -486,9 +484,7 @@ name|objRefProducers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaTypeEventProducer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String
@@ -1193,9 +1189,7 @@ name|metaDataProducers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaTypeEventProducer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|metaDataProducers
@@ -1246,9 +1240,7 @@ name|metaAttrs
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|metaAttrs
@@ -1387,9 +1379,7 @@ name|attributes
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attribute
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|attributes
@@ -1410,9 +1400,7 @@ name|namespaces
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Namespace
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|namespaces
@@ -1602,9 +1590,7 @@ name|namespaces
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Namespace
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|namespaces

@@ -264,7 +264,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class retrieves the default AlgorithmSuites plus a custom AlgorithmSuite with the RSA SHA-512   * signature  */
+comment|/**  * This class retrieves the default AlgorithmSuites plus a custom AlgorithmSuite with the RSA SHA-512  * signature  */
 end_comment
 
 begin_class

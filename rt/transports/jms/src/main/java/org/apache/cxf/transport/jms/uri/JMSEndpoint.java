@@ -362,6 +362,10 @@ name|concurrentConsumers
 init|=
 literal|1
 decl_stmt|;
+specifier|private
+name|String
+name|messageSelector
+decl_stmt|;
 comment|/**      * @param uri      * @param subject      */
 specifier|public
 name|JMSEndpoint
@@ -378,7 +382,7 @@ name|endpointUri
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object       * @param target       */
+comment|/**      * Get the extensors from the wsdl and/or configuration that will      * then be used to configure the JMSConfiguration object      * @param target      */
 specifier|public
 name|JMSEndpoint
 parameter_list|(
@@ -806,7 +810,7 @@ operator|+
 name|rest
 return|;
 block|}
-comment|/**      * Configure properties form map.      * For each key of the map first a property with the same name in the endpoint is tried.      * If that does not match then the value is either stored in the jndiParameters or the parameters      * depending on the prefix of the key. If it matches JNDI_PARAMETER_NAME_PREFIX it is stored in the       * jndiParameters else in the parameters      *       * @param endpoint      * @param params      */
+comment|/**      * Configure properties form map.      * For each key of the map first a property with the same name in the endpoint is tried.      * If that does not match then the value is either stored in the jndiParameters or the parameters      * depending on the prefix of the key. If it matches JNDI_PARAMETER_NAME_PREFIX it is stored in the      * jndiParameters else in the parameters      *      * @param endpoint      * @param params      */
 specifier|private
 name|void
 name|configureProperties
@@ -1096,6 +1100,7 @@ return|;
 block|}
 comment|/**      * @param key      * @param value      */
 specifier|public
+specifier|final
 name|void
 name|putJndiParameter
 parameter_list|(
@@ -1117,6 +1122,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|putParameter
 parameter_list|(
@@ -1242,6 +1248,7 @@ name|jmsVariant
 return|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setJmsVariant
 parameter_list|(
@@ -2122,6 +2129,30 @@ name|v
 argument_list|)
 throw|;
 block|}
+block|}
+specifier|public
+name|String
+name|getMessageSelector
+parameter_list|()
+block|{
+return|return
+name|messageSelector
+return|;
+block|}
+specifier|public
+name|void
+name|setMessageSelector
+parameter_list|(
+name|String
+name|messageSelector
+parameter_list|)
+block|{
+name|this
+operator|.
+name|messageSelector
+operator|=
+name|messageSelector
+expr_stmt|;
 block|}
 block|}
 end_class

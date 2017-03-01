@@ -1641,9 +1641,7 @@ name|stackTraceList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|StackTraceElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1728,12 +1726,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|stackTraceList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|||
 name|cause
 operator|!=
@@ -2026,9 +2023,7 @@ name|stackTraceList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|StackTraceElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while

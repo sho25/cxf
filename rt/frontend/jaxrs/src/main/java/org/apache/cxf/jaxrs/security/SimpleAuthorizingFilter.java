@@ -147,6 +147,8 @@ specifier|private
 name|AbstractAuthorizingInInterceptor
 name|interceptor
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|void
 name|filter

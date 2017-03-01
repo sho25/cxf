@@ -913,7 +913,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      *       * @param renewRequest      * @return returns org.oasis_open.docs.wsn.b_1.RenewResponse      * @throws UnacceptableTerminationTimeFault      * @throws ResourceUnknownFault      */
+comment|/**      *      * @param renewRequest      * @return returns org.oasis_open.docs.wsn.b_1.RenewResponse      * @throws UnacceptableTerminationTimeFault      * @throws ResourceUnknownFault      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -1012,7 +1012,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      *       * @param unsubscribeRequest      * @return returns org.oasis_open.docs.wsn.b_1.UnsubscribeResponse      * @throws UnableToDestroySubscriptionFault      * @throws ResourceUnknownFault      */
+comment|/**      *      * @param unsubscribeRequest      * @return returns org.oasis_open.docs.wsn.b_1.UnsubscribeResponse      * @throws UnableToDestroySubscriptionFault      * @throws ResourceUnknownFault      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -1076,7 +1076,7 @@ name|UnsubscribeResponse
 argument_list|()
 return|;
 block|}
-comment|/**      *       * @param pauseSubscriptionRequest      * @return returns org.oasis_open.docs.wsn.b_1.PauseSubscriptionResponse      * @throws PauseFailedFault      * @throws ResourceUnknownFault      */
+comment|/**      *      * @param pauseSubscriptionRequest      * @return returns org.oasis_open.docs.wsn.b_1.PauseSubscriptionResponse      * @throws PauseFailedFault      * @throws ResourceUnknownFault      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -1135,7 +1135,7 @@ name|PauseSubscriptionResponse
 argument_list|()
 return|;
 block|}
-comment|/**      *       * @param resumeSubscriptionRequest      * @return returns org.oasis_open.docs.wsn.b_1.ResumeSubscriptionResponse      * @throws ResumeFailedFault      * @throws ResourceUnknownFault      */
+comment|/**      *      * @param resumeSubscriptionRequest      * @return returns org.oasis_open.docs.wsn.b_1.ResumeSubscriptionResponse      * @throws ResumeFailedFault      * @throws ResourceUnknownFault      */
 annotation|@
 name|WebMethod
 argument_list|(

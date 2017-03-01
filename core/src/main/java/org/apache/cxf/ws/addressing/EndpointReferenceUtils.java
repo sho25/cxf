@@ -773,7 +773,7 @@ specifier|final
 class|class
 name|EndpointReferenceUtils
 block|{
-comment|/**      * We want to load the schemas, including references to external schemas, into a SchemaFactory      * to validate. There seem to be bugs in resolving inter-schema references in Xerces, so even when we are       * handing the factory all the schemas, interrelated with&lt;import&gt; elements, we need      * to also hand over extra copies (!) as character images when requested.      *       * To do this, we use the DOM representation kept in the SchemaInfo. This has the bonus      * of benefiting from the use of the catalog resolver in there, which is missing from      * the code in here.      */
+comment|/**      * We want to load the schemas, including references to external schemas, into a SchemaFactory      * to validate. There seem to be bugs in resolving inter-schema references in Xerces, so even when we are      * handing the factory all the schemas, interrelated with&lt;import&gt; elements, we need      * to also hand over extra copies (!) as character images when requested.      *      * To do this, we use the DOM representation kept in the SchemaInfo. This has the bonus      * of benefiting from the use of the catalog resolver in there, which is missing from      * the code in here.      */
 specifier|private
 specifier|static
 specifier|final
@@ -803,9 +803,7 @@ name|done
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1907,7 +1905,7 @@ parameter_list|()
 block|{
 comment|// Utility class - never constructed
 block|}
-comment|/**      * Sets the service and port name of the provided endpoint reference.       * @param ref the endpoint reference.      * @param serviceName the name of service.      * @param portName the port name.      */
+comment|/**      * Sets the service and port name of the provided endpoint reference.      * @param ref the endpoint reference.      * @param serviceName the name of service.      * @param portName the port name.      */
 specifier|public
 specifier|static
 name|void
@@ -2089,7 +2087,7 @@ name|serviceNameType
 argument_list|)
 return|;
 block|}
-comment|/**      * Gets the service name of the provided endpoint reference.       * @param ref the endpoint reference.      * @return the service name.      */
+comment|/**      * Gets the service name of the provided endpoint reference.      * @param ref the endpoint reference.      * @return the service name.      */
 specifier|public
 specifier|static
 name|QName
@@ -4586,7 +4584,7 @@ return|return
 name|reference
 return|;
 block|}
-comment|/**      * Resolve logical endpoint reference via the Bus EndpointResolverRegistry.      *       * @param logical the abstract EPR to resolve      * @return the resolved concrete EPR if appropriate, null otherwise      */
+comment|/**      * Resolve logical endpoint reference via the Bus EndpointResolverRegistry.      *      * @param logical the abstract EPR to resolve      * @return the resolved concrete EPR if appropriate, null otherwise      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -4651,7 +4649,7 @@ else|:
 name|logical
 return|;
 block|}
-comment|/**      * Renew logical endpoint reference via the Bus EndpointResolverRegistry.      *       * @param logical the original abstract EPR (if still available)      * @param physical the concrete EPR to renew      * @return the renewed concrete EPR if appropriate, null otherwise      */
+comment|/**      * Renew logical endpoint reference via the Bus EndpointResolverRegistry.      *      * @param logical the original abstract EPR (if still available)      * @param physical the concrete EPR to renew      * @return the renewed concrete EPR if appropriate, null otherwise      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -4721,7 +4719,7 @@ else|:
 name|physical
 return|;
 block|}
-comment|/**      * Mint logical endpoint reference via the Bus EndpointResolverRegistry.      *       * @param serviceName the given serviceName      * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Mint logical endpoint reference via the Bus EndpointResolverRegistry.      *      * @param serviceName the given serviceName      * @return the newly minted EPR if appropriate, null otherwise      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -4780,7 +4778,7 @@ return|return
 name|logical
 return|;
 block|}
-comment|/**      * Mint logical endpoint reference via the Bus EndpointResolverRegistry.      *       * @param physical the concrete template EPR       * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Mint logical endpoint reference via the Bus EndpointResolverRegistry.      *      * @param physical the concrete template EPR      * @return the newly minted EPR if appropriate, null otherwise      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -4923,7 +4921,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtain a multiplexed endpoint reference for the deployed service that contains the provided id      * @param serviceQName identified the target service      * @param portName identifies a particular port of the service, may be null      * @param id that must be embedded in the returned reference      * @param bus the current bus      * @return a new reference or null if the target destination does not support destination mutiplexing        */
+comment|/**      * Obtain a multiplexed endpoint reference for the deployed service that contains the provided id      * @param serviceQName identified the target service      * @param portName identifies a particular port of the service, may be null      * @param id that must be embedded in the returned reference      * @param bus the current bus      * @return a new reference or null if the target destination does not support destination mutiplexing      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -4980,7 +4978,7 @@ return|return
 name|epr
 return|;
 block|}
-comment|/**      * Obtain the id String from the endpoint reference of the current dispatch.       * @param messageContext the current message context       * @return the id embedded in the current endpoint reference or null if not found      */
+comment|/**      * Obtain the id String from the endpoint reference of the current dispatch.      * @param messageContext the current message context      * @return the id embedded in the current endpoint reference or null if not found      */
 specifier|public
 specifier|static
 name|String

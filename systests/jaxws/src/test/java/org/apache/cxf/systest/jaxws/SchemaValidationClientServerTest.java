@@ -69,7 +69,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingInInterceptor
 import|;
@@ -83,7 +85,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingOutInterceptor
 import|;

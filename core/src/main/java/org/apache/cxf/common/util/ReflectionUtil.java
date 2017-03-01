@@ -1158,9 +1158,7 @@ name|descriptors
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PropertyDescriptor
-argument_list|>
+argument_list|<>
 argument_list|(
 name|propertyDescriptors
 operator|.
@@ -1305,7 +1303,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|/**      * Look for a specified annotation on a method. If there, return it. If not, search it's containing class.      * Assume that the annotation is marked @Inherited.      *       * @param m method to examine      * @param annotationType the annotation type to look for.      */
+comment|/**      * Look for a specified annotation on a method. If there, return it. If not, search it's containing class.      * Assume that the annotation is marked @Inherited.      *      * @param m method to examine      * @param annotationType the annotation type to look for.      */
 specifier|public
 specifier|static
 parameter_list|<

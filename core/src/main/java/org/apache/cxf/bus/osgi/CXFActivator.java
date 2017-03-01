@@ -216,7 +216,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Is called in OSGi on start and stop of the cxf bundle.  * Manages   * - CXFBundleListener  * - Attaching ManagedWorkqueues to config admin service  * - OsgiBusListener  * - Blueprint namespaces  */
+comment|/**  * Is called in OSGi on start and stop of the cxf bundle.  * Manages  * - CXFBundleListener  * - Attaching ManagedWorkqueues to config admin service  * - OsgiBusListener  * - Blueprint namespaces  */
 end_comment
 
 begin_class
@@ -344,9 +344,7 @@ name|extensions
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|extensions

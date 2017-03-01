@@ -694,7 +694,7 @@ name|msg
 operator|.
 name|startsWith
 argument_list|(
-literal|"cvc-type.3.1.2: "
+literal|"cvc-type.3.1.2"
 argument_list|)
 operator|&&
 name|msg

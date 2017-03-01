@@ -163,7 +163,7 @@ name|c14nAlgorithm
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get whether a KeyValue is used to refer to a a certificate used to sign an issued token.       * The default is false.      */
+comment|/**      * Get whether a KeyValue is used to refer to a a certificate used to sign an issued token.      * The default is false.      */
 specifier|public
 name|boolean
 name|isUseKeyValue
@@ -173,7 +173,7 @@ return|return
 name|useKeyValue
 return|;
 block|}
-comment|/**      * Set whether a KeyValue is used to refer to a a certificate used to sign an issued token.       * The default is false.      */
+comment|/**      * Set whether a KeyValue is used to refer to a a certificate used to sign an issued token.      * The default is false.      */
 specifier|public
 name|void
 name|setUseKeyValue
@@ -215,7 +215,7 @@ operator|=
 name|keySize
 expr_stmt|;
 block|}
-comment|/**      * Get the minimum key size to use when generating a symmetric key. The requestor can       * specify a KeySize value to use. The default is 128 bits.      */
+comment|/**      * Get the minimum key size to use when generating a symmetric key. The requestor can      * specify a KeySize value to use. The default is 128 bits.      */
 specifier|public
 name|long
 name|getMinimumKeySize

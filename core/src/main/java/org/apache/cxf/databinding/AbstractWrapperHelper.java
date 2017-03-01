@@ -209,7 +209,7 @@ operator|=
 name|wt
 expr_stmt|;
 block|}
-comment|/**      * WrapperClassOutInterceptor may call this if the wrapper class needs to be validated.      * Implementations may choose to ignore this as the SchemaValidation that occurs later      * may catch the errors, but this allows quicker failures if the databinding       * can support it.      */
+comment|/**      * WrapperClassOutInterceptor may call this if the wrapper class needs to be validated.      * Implementations may choose to ignore this as the SchemaValidation that occurs later      * may catch the errors, but this allows quicker failures if the databinding      * can support it.      */
 specifier|public
 name|void
 name|setValidate
@@ -636,9 +636,7 @@ name|ret
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|getMethods
 operator|.

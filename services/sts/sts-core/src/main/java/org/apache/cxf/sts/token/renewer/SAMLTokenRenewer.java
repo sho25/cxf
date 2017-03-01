@@ -1052,7 +1052,7 @@ operator|=
 name|allowRenewalAfterExpiry
 expr_stmt|;
 block|}
-comment|/**      * Set a new value (in seconds) for how long a token is allowed to be expired for before renewal.       * The default is 30 minutes.      */
+comment|/**      * Set a new value (in seconds) for how long a token is allowed to be expired for before renewal.      * The default is 30 minutes.      */
 specifier|public
 name|void
 name|setMaxExpiry
@@ -1066,7 +1066,7 @@ operator|=
 name|newExpiry
 expr_stmt|;
 block|}
-comment|/**      * Get how long a token is allowed to be expired for before renewal (in seconds). The default is       * 30 minutes.      */
+comment|/**      * Get how long a token is allowed to be expired for before renewal (in seconds). The default is      * 30 minutes.      */
 specifier|public
 name|long
 name|getMaxExpiry
@@ -1998,14 +1998,6 @@ argument_list|(
 name|wssConfig
 argument_list|)
 expr_stmt|;
-name|requestData
-operator|.
-name|setCallbackHandler
-argument_list|(
-name|callbackHandler
-argument_list|)
-expr_stmt|;
-comment|// Parse the HOK subject if it exists
 name|WSDocInfo
 name|docInfo
 init|=
@@ -2026,6 +2018,14 @@ name|getOwnerDocument
 argument_list|()
 argument_list|)
 decl_stmt|;
+name|requestData
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|docInfo
+argument_list|)
+expr_stmt|;
+comment|// Parse the HOK subject if it exists
 name|assertion
 operator|.
 name|parseSubject
@@ -2034,8 +2034,6 @@ operator|new
 name|WSSSAMLKeyInfoProcessor
 argument_list|(
 name|requestData
-argument_list|,
-name|docInfo
 argument_list|)
 argument_list|,
 name|sigCrypto
@@ -3241,12 +3239,11 @@ name|handlerResults
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|handlerResults
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|WSHandlerResult

@@ -1521,7 +1521,7 @@ index|]
 return|;
 block|}
 block|}
-comment|/**      * Try to get certificate locally. First try using the supplied CryptoType. If this      * does not work, and if the supplied CryptoType is a ALIAS, then try again with SUBJECT_DN      * in case the supplied Alias is actually a Certificate's Subject DN      *       * @param cryptoType      * @return if found certificate otherwise null returned      */
+comment|/**      * Try to get certificate locally. First try using the supplied CryptoType. If this      * does not work, and if the supplied CryptoType is a ALIAS, then try again with SUBJECT_DN      * in case the supplied Alias is actually a Certificate's Subject DN      *      * @param cryptoType      * @return if found certificate otherwise null returned      */
 specifier|private
 name|X509Certificate
 index|[]
@@ -1666,7 +1666,7 @@ return|return
 name|localCerts
 return|;
 block|}
-comment|/**      * Service Aliases contain namespace      *       * @param cryptoType      * @return      */
+comment|/**      * Service Aliases contain namespace      *      * @param cryptoType      * @return      */
 specifier|private
 name|boolean
 name|isServiceName

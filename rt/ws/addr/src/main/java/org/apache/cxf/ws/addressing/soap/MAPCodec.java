@@ -676,7 +676,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * SOAP interceptor responsible for {en|de}coding the Message Addressing   * Properties for {outgo|incom}ing messages.  */
+comment|/**  * SOAP interceptor responsible for {en|de}coding the Message Addressing  * Properties for {outgo|incom}ing messages.  */
 end_comment
 
 begin_class
@@ -728,7 +728,7 @@ name|DECOUPLED_FAULT_SUPPORT
 init|=
 literal|"org.apache.cxf.ws.addressing.decoupled_fault_support"
 decl_stmt|;
-comment|/**      * REVISIT: map usage that the *same* interceptor instance       * is used in all chains.      */
+comment|/**      * REVISIT: map usage that the *same* interceptor instance      * is used in all chains.      */
 specifier|protected
 specifier|final
 name|Map
@@ -791,7 +791,7 @@ return|return
 name|uncorrelatedExchanges
 return|;
 block|}
-comment|/**      * @return the set of SOAP headers understood by this handler       */
+comment|/**      * @return the set of SOAP headers understood by this handler      */
 specifier|public
 name|Set
 argument_list|<
@@ -1000,7 +1000,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Mediate message flow, performing MAP {en|de}coding.      *       * @param message the message message      */
+comment|/**      * Mediate message flow, performing MAP {en|de}coding.      *      * @param message the message message      */
 specifier|private
 name|void
 name|mediate
@@ -2412,7 +2412,7 @@ name|isRefParamAttr
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Encode message in exposed version.      *       * @param maps the MAPs, where getNamespceURI() specifies the WS-Addressing      *  version to expose      * @param value the value to encode      * @param name the QName for the header       * @param clz the class      * @param header the SOAP header element      * @param JAXBContext the JAXB context to use      */
+comment|/**      * Encode message in exposed version.      *      * @param maps the MAPs, where getNamespceURI() specifies the WS-Addressing      *  version to expose      * @param value the value to encode      * @param name the QName for the header      * @param clz the class      * @param header the SOAP header element      * @param JAXBContext the JAXB context to use      */
 specifier|private
 parameter_list|<
 name|T
@@ -2517,7 +2517,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Decode the MAPs from protocol-specific headers.      *        * @param message the SOAP message      * @param the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid       */
+comment|/**      * Decode the MAPs from protocol-specific headers.      *      * @param message the SOAP message      * @param the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid      */
 specifier|public
 name|AddressingProperties
 name|unmarshalMAPs
@@ -3060,9 +3060,7 @@ name|referenceParameterHeaders
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -3467,7 +3465,7 @@ return|return
 name|value
 return|;
 block|}
-comment|/**      * Return a text representation of a header value for logging.      *       * @param<T> header type      * @param value header value      * @return      */
+comment|/**      * Return a text representation of a header value for logging.      *      * @param<T> header type      * @param value header value      * @return      */
 specifier|private
 parameter_list|<
 name|T
@@ -3580,7 +3578,7 @@ return|return
 name|text
 return|;
 block|}
-comment|/**      * Decode the MAPs from protocol-specific headers.      *        * @param message the messsage      * @param the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid       */
+comment|/**      * Decode the MAPs from protocol-specific headers.      *      * @param message the messsage      * @param the decoded MAPs      * @exception SOAPFaultException if decoded MAPs are invalid      */
 specifier|private
 name|AddressingProperties
 name|decode
@@ -3598,7 +3596,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Encodes an MAP as a SOAP header.      *      * @param message the message to store the headers on      * @param value the value to encode      * @param qname the QName for the header       * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
+comment|/**      * Encodes an MAP as a SOAP header.      *      * @param message the message to store the headers on      * @param value the value to encode      * @param qname the QName for the header      * @param clz the class      * @param header the SOAP header element      * @param marshaller the JAXB context to use      */
 specifier|protected
 parameter_list|<
 name|T
@@ -4039,7 +4037,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Cache exchange for correlated response      *       * @param message the current message      * @param maps the addressing properties      */
+comment|/**      * Cache exchange for correlated response      *      * @param message the current message      * @param maps the addressing properties      */
 specifier|private
 name|void
 name|cacheExchange
@@ -4090,7 +4088,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Restore exchange for correlated response      *       * @param message the current message      * @param maps the addressing properties      */
+comment|/**      * Restore exchange for correlated response      *      * @param message the current message      * @param maps the addressing properties      */
 specifier|private
 name|void
 name|restoreExchange
@@ -4508,7 +4506,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**       * @param relatesTo the current RelatesTo      * @return true iff the relationship type is reply      */
+comment|/**      * @param relatesTo the current RelatesTo      * @return true iff the relationship type is reply      */
 specifier|private
 name|boolean
 name|isRelationshipReply
@@ -4531,7 +4529,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Marks a message as partial response      *       * @param message the current message      */
+comment|/**      * Marks a message as partial response      *      * @param message the current message      */
 specifier|private
 name|void
 name|markPartialResponse

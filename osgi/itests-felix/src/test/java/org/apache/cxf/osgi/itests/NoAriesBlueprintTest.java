@@ -188,7 +188,7 @@ name|NoAriesBlueprintTest
 extends|extends
 name|OSGiTestSupport
 block|{
-comment|/**      * Make sure cxf bundles start up without aries blueprint      *       * @throws Exception      */
+comment|/**      * Make sure cxf bundles start up without aries blueprint      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

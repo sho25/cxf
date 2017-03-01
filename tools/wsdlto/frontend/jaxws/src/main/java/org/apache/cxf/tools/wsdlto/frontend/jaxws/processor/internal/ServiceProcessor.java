@@ -3286,9 +3286,7 @@ name|inbindings
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ExtensibilityElement
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -3426,9 +3424,7 @@ name|outbindings
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ExtensibilityElement
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

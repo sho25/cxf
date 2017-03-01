@@ -274,6 +274,10 @@ name|JAVA_VERSION
 decl_stmt|;
 specifier|public
 name|JavaDocProvider
+parameter_list|()
+block|{     }
+specifier|public
+name|JavaDocProvider
 parameter_list|(
 name|URL
 modifier|...
@@ -283,18 +287,10 @@ block|{
 if|if
 condition|(
 name|javaDocUrls
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"URL are null"
-argument_list|)
-throw|;
-block|}
 name|javaDocLoader
 operator|=
 operator|new
@@ -303,6 +299,7 @@ argument_list|(
 name|javaDocUrls
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|public
 name|JavaDocProvider
@@ -367,18 +364,10 @@ block|{
 if|if
 condition|(
 name|paths
-operator|==
+operator|!=
 literal|null
 condition|)
 block|{
-throw|throw
-operator|new
-name|IllegalArgumentException
-argument_list|(
-literal|"paths are null"
-argument_list|)
-throw|;
-block|}
 name|URL
 index|[]
 name|javaDocUrls
@@ -434,6 +423,7 @@ argument_list|(
 name|javaDocUrls
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 specifier|private
 specifier|static
@@ -874,10 +864,24 @@ operator|==
 literal|null
 condition|)
 block|{
+name|ClassLoader
+name|loader
+init|=
+name|javaDocLoader
+operator|!=
+literal|null
+condition|?
+name|javaDocLoader
+else|:
+name|annotatedClass
+operator|.
+name|getClassLoader
+argument_list|()
+decl_stmt|;
 name|InputStream
 name|resourceStream
 init|=
-name|javaDocLoader
+name|loader
 operator|.
 name|getResourceAsStream
 argument_list|(

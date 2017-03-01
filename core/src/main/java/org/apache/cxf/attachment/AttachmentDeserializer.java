@@ -380,9 +380,7 @@ name|loaded
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|DelegatingInputStream
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1015,9 +1013,7 @@ name|atts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|(
 name|attachments
 operator|.
@@ -1983,9 +1979,7 @@ name|v
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1
 argument_list|)

@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The display-name type contains a short name that is intended to be displayed by tools. It is used by  * display-name elements. The display name need not be unique. Example: ...<display-name xml:lang="en">  * Employee Self Service</display-name> The value of the xml:lang attribute is "en" (English) by default.  *<p>  * Java class for display-nameType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="display-nameType">  *&lt;simpleContent>  *&lt;extension base="&lt;http://java.sun.com/xml/ns/javaee>string">  *&lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>  *&lt;/extension>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * The display-name type contains a short name that is intended to be displayed by tools. It is used by  * display-name elements. The display name need not be unique. Example: ...<display-name xml:lang="en">  * Employee Self Service</display-name> The value of the xml:lang attribute is "en" (English) by default.  *<p>  * Java class for display-nameType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="display-nameType">  *&lt;simpleContent>  *&lt;extension base="&lt;http://java.sun.com/xml/ns/javaee>string">  *&lt;attribute ref="{http://www.w3.org/XML/1998/namespace}lang"/>  *&lt;/extension>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class
@@ -115,7 +115,7 @@ operator|.
 name|String
 name|lang
 decl_stmt|;
-comment|/**      * Gets the value of the lang property.      *       * @return possible object is {@link java.lang.String }      */
+comment|/**      * Gets the value of the lang property.      *      * @return possible object is {@link java.lang.String }      */
 specifier|public
 name|java
 operator|.
@@ -129,7 +129,7 @@ return|return
 name|lang
 return|;
 block|}
-comment|/**      * Sets the value of the lang property.      *       * @param value allowed object is {@link java.lang.String }      */
+comment|/**      * Sets the value of the lang property.      *      * @param value allowed object is {@link java.lang.String }      */
 specifier|public
 name|void
 name|setLang

@@ -226,9 +226,7 @@ name|jaxbBindingFiles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -240,9 +238,7 @@ name|excludePkgList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -254,9 +250,7 @@ name|excludeFileList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1340,12 +1334,11 @@ name|isExcludeNamespaceEnabled
 parameter_list|()
 block|{
 return|return
+operator|!
 name|excludeNamespacePackageMap
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 return|;
 block|}
 specifier|public
@@ -1555,7 +1548,7 @@ return|return
 name|packageNameChanged
 return|;
 block|}
-comment|/**      * This method attempts to do a deep copy of items which may change in this ToolContext.      * The intent of this is to be able to take a snapshot of the state of the ToolContext      * after it's initialised so we can run a tool multiple times with the same setup      * while not having the state preserved between multiple runs. I didn't want       * to call this clone() as it neither does a deep nor shallow copy. It does a mix      * based on my best guess at what changes and what doesn't.      */
+comment|/**      * This method attempts to do a deep copy of items which may change in this ToolContext.      * The intent of this is to be able to take a snapshot of the state of the ToolContext      * after it's initialised so we can run a tool multiple times with the same setup      * while not having the state preserved between multiple runs. I didn't want      * to call this clone() as it neither does a deep nor shallow copy. It does a mix      * based on my best guess at what changes and what doesn't.      */
 specifier|public
 name|ToolContext
 name|makeCopy
@@ -1637,9 +1630,7 @@ name|jaxbBindingFiles
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|(
 name|jaxbBindingFiles
 argument_list|)
@@ -1650,9 +1641,7 @@ name|excludePkgList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|excludePkgList
 argument_list|)
@@ -1663,9 +1652,7 @@ name|excludeFileList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|excludeFileList
 argument_list|)

@@ -420,7 +420,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * LuceneQueryVisitor implements SearchConditionVisitor and returns corresponding Lucene query. The  * implementations is thread-safe, however if visitor is called multiple times, each call to visit()  * method should be preceded by reset() method call (to properly reset the visitor's internal   * state).   */
+comment|/**  * LuceneQueryVisitor implements SearchConditionVisitor and returns corresponding Lucene query. The  * implementations is thread-safe, however if visitor is called multiple times, each call to visit()  * method should be preceded by reset() method call (to properly reset the visitor's internal  * state).  */
 end_comment
 
 begin_class
@@ -743,7 +743,7 @@ operator|=
 name|map
 expr_stmt|;
 block|}
-comment|/**      * Resets visitor's internal state. If the instance of the visitor is intended to be used many times,       * each call to visit() method should be preceded by reset() method call.      */
+comment|/**      * Resets visitor's internal state. If the instance of the visitor is intended to be used many times,      * each call to visit() method should be preceded by reset() method call.      */
 specifier|public
 name|void
 name|reset
@@ -773,9 +773,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Query
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -872,9 +870,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Query
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

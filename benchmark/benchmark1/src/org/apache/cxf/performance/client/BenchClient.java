@@ -524,9 +524,7 @@ name|locationList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|int
@@ -1069,7 +1067,7 @@ name|td
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*             // test for Base64              td.setMethod('b');             runOneTest(td);             // test for Doubles             td.setMethod('d');             runOneTest(td);             // test for Ints             td.setMethod('i');             runOneTest(td);             // test for Strings             td.setMethod('s');             runOneTest(td);*/
+comment|/*             // test for Base64             td.setMethod('b');             runOneTest(td);             // test for Doubles             td.setMethod('d');             runOneTest(td);             // test for Ints             td.setMethod('i');             runOneTest(td);             // test for Strings             td.setMethod('s');             runOneTest(td);*/
 comment|// test for MeshInterfaceObjects
 name|td
 operator|.
@@ -1958,9 +1956,7 @@ name|da
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Double
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -2237,9 +2233,7 @@ name|ia
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -2525,9 +2519,7 @@ name|sa
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -2843,9 +2835,7 @@ name|ma
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MeshInterfaceObject
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -3167,9 +3157,7 @@ name|ea
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SimpleEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 operator|new
@@ -4071,7 +4059,7 @@ name|serverLocation
 operator|=
 name|location
 expr_stmt|;
-comment|//this.direction =  direction;
+comment|//this.direction = direction;
 comment|//this.method = method;
 name|this
 operator|.
@@ -4914,7 +4902,7 @@ block|{
 specifier|public
 name|Util
 parameter_list|()
-block|{     		     	}
+block|{      	}
 specifier|public
 name|void
 name|copyList

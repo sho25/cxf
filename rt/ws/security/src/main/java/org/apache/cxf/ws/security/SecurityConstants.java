@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Configuration tags used to configure the WS-SecurityPolicy layer. Some of them are also   * used by the non WS-SecurityPolicy approach in the WSS4J(Out|In)Interceptors.  */
+comment|/**  * Configuration tags used to configure the WS-SecurityPolicy layer. Some of them are also  * used by the non WS-SecurityPolicy approach in the WSS4J(Out|In)Interceptors.  */
 end_comment
 
 begin_class
@@ -82,7 +82,7 @@ block|{
 comment|//
 comment|// User properties
 comment|//
-comment|/**      * The actor or role name of the wsse:Security header. If this parameter       * is omitted, the actor name is not set.      */
+comment|/**      * The actor or role name of the wsse:Security header. If this parameter      * is omitted, the actor name is not set.      */
 specifier|public
 specifier|static
 specifier|final
@@ -107,7 +107,7 @@ comment|// WebLogic and WCF always encrypt UsernameTokens whenever possible
 comment|//See:  http://e-docs.bea.com/wls/docs103/webserv_intro/interop.html
 comment|//Be default, we will encrypt as well for interop reasons.  However, this
 comment|//setting can be set to false to turn that off.
-comment|/**      * Whether to always encrypt UsernameTokens that are defined as a SupportingToken. The default       * is true. This should not be set to false in a production environment, as it exposes the       * password (or the digest of the password) on the wire.      */
+comment|/**      * Whether to always encrypt UsernameTokens that are defined as a SupportingToken. The default      * is true. This should not be set to false in a production environment, as it exposes the      * password (or the digest of the password) on the wire.      */
 specifier|public
 specifier|static
 specifier|final
@@ -125,7 +125,7 @@ name|IS_BSP_COMPLIANT
 init|=
 literal|"ws-security.is-bsp-compliant"
 decl_stmt|;
-comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and       * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces. Note that caching only applies when either a UsernameToken      * WS-SecurityPolicy is in effect, or else that a UsernameToken action has been configured      * for the non-security-policy case.      */
+comment|/**      * Whether to cache UsernameToken nonces. The default value is "true" for message recipients, and      * "false" for message initiators. Set it to true to cache for both cases. Set this to "false" to      * not cache UsernameToken nonces. Note that caching only applies when either a UsernameToken      * WS-SecurityPolicy is in effect, or else that a UsernameToken action has been configured      * for the non-security-policy case.      */
 specifier|public
 specifier|static
 specifier|final
@@ -134,7 +134,7 @@ name|ENABLE_NONCE_CACHE
 init|=
 literal|"ws-security.enable.nonce.cache"
 decl_stmt|;
-comment|/**      * Whether to cache Timestamp Created Strings (these are only cached in conjunction with a message       * Signature).The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache Timestamp Created Strings.      * Note that caching only applies when either a "IncludeTimestamp" policy is in effect, or      * else that a Timestamp action has been configured for the non-security-policy case.      */
+comment|/**      * Whether to cache Timestamp Created Strings (these are only cached in conjunction with a message      * Signature).The default value is "true" for message recipients, and "false" for message initiators.      * Set it to true to cache for both cases. Set this to "false" to not cache Timestamp Created Strings.      * Note that caching only applies when either a "IncludeTimestamp" policy is in effect, or      * else that a Timestamp action has been configured for the non-security-policy case.      */
 specifier|public
 specifier|static
 specifier|final
@@ -179,7 +179,7 @@ name|ENABLE_SAML_ONE_TIME_USE_CACHE
 init|=
 literal|"ws-security.enable.saml.cache"
 decl_stmt|;
-comment|/**      * Whether to store bytes (CipherData or BinarySecurityToken) in an attachment. The default is       * true if MTOM is enabled. Set it to false to BASE-64 encode the bytes and "inlined" them in       * the message instead. Setting this to true is more efficient, as it means that the BASE-64       * encoding step can be skipped. This only applies to the DOM WS-Security stack.      */
+comment|/**      * Whether to store bytes (CipherData or BinarySecurityToken) in an attachment. The default is      * true if MTOM is enabled. Set it to false to BASE-64 encode the bytes and "inlined" them in      * the message instead. Setting this to true is more efficient, as it means that the BASE-64      * encoding step can be skipped. This only applies to the DOM WS-Security stack.      */
 specifier|public
 specifier|static
 specifier|final
@@ -188,7 +188,7 @@ name|STORE_BYTES_IN_ATTACHMENT
 init|=
 literal|"ws-security.store.bytes.in.attachment"
 decl_stmt|;
-comment|/**      * This configuration flag allows the user to decide whether the default Attachment-Complete       * transform or the Attachment-Content-Only transform should be used when an Attachment is encrypted       * via a WS-SecurityPolicy expression. The default is "false", meaning that the "complete"       * transformation is used.      */
+comment|/**      * This configuration flag allows the user to decide whether the default Attachment-Complete      * transform or the Attachment-Content-Only transform should be used when an Attachment is encrypted      * via a WS-SecurityPolicy expression. The default is "false", meaning that the "complete"      * transformation is used.      */
 specifier|public
 specifier|static
 specifier|final
@@ -206,7 +206,7 @@ name|USE_STR_TRANSFORM
 init|=
 literal|"ws-security.use.str.transform"
 decl_stmt|;
-comment|/**      * Whether to add an InclusiveNamespaces PrefixList as a CanonicalizationMethod child when generating       * Signatures using WSConstants.C14N_EXCL_OMIT_COMMENTS. Default is "true".      */
+comment|/**      * Whether to add an InclusiveNamespaces PrefixList as a CanonicalizationMethod child when generating      * Signatures using WSConstants.C14N_EXCL_OMIT_COMMENTS. Default is "true".      */
 specifier|public
 specifier|static
 specifier|final
@@ -227,7 +227,7 @@ name|TIMESTAMP_TTL
 init|=
 literal|"ws-security.timestamp.timeToLive"
 decl_stmt|;
-comment|/**      * The time in seconds in the future within which the Created time of an incoming       * Timestamp is valid. The default value is "60", to avoid problems where clocks are       * slightly askew. To reject all future-created Timestamps, set this value to "0".       */
+comment|/**      * The time in seconds in the future within which the Created time of an incoming      * Timestamp is valid. The default value is "60", to avoid problems where clocks are      * slightly askew. To reject all future-created Timestamps, set this value to "0".      */
 specifier|public
 specifier|static
 specifier|final
@@ -245,7 +245,7 @@ name|USERNAMETOKEN_TTL
 init|=
 literal|"ws-security.usernametoken.timeToLive"
 decl_stmt|;
-comment|/**      * The time in seconds in the future within which the Created time of an incoming       * UsernameToken is valid. The default value is "60", to avoid problems where clocks are       * slightly askew. To reject all future-created UsernameTokens, set this value to "0".       */
+comment|/**      * The time in seconds in the future within which the Created time of an incoming      * UsernameToken is valid. The default value is "60", to avoid problems where clocks are      * slightly askew. To reject all future-created UsernameTokens, set this value to "0".      */
 specifier|public
 specifier|static
 specifier|final
@@ -308,7 +308,7 @@ name|TOKEN_STORE_CACHE_INSTANCE
 init|=
 literal|"org.apache.cxf.ws.security.tokenstore.TokenStore"
 decl_stmt|;
-comment|/**      * The Cache Identifier to use with the TokenStore. CXF uses the following key to retrieve a      * token store: "org.apache.cxf.ws.security.tokenstore.TokenStore-<identifier>". This key can be       * used to configure service-specific cache configuration. If the identifier does not match, then it       * falls back to a cache configuration with key "org.apache.cxf.ws.security.tokenstore.TokenStore".      *       * The default "<identifier>" is the QName of the service in question. However to pick up a       * custom cache configuration (for example, if you want to specify a TokenStore per-client proxy),      * it can be configured with this identifier instead.      */
+comment|/**      * The Cache Identifier to use with the TokenStore. CXF uses the following key to retrieve a      * token store: "org.apache.cxf.ws.security.tokenstore.TokenStore-<identifier>". This key can be      * used to configure service-specific cache configuration. If the identifier does not match, then it      * falls back to a cache configuration with key "org.apache.cxf.ws.security.tokenstore.TokenStore".      *      * The default "<identifier>" is the QName of the service in question. However to pick up a      * custom cache configuration (for example, if you want to specify a TokenStore per-client proxy),      * it can be configured with this identifier instead.      */
 specifier|public
 specifier|static
 specifier|final
@@ -335,7 +335,7 @@ name|SUBJECT_ROLE_CLASSIFIER_TYPE
 init|=
 literal|"ws-security.role.classifier.type"
 decl_stmt|;
-comment|/**      * This configuration tag allows the user to override the default Asymmetric Signature       * algorithm (RSA-SHA1) for use in WS-SecurityPolicy, as the WS-SecurityPolicy specification      * does not allow the use of other algorithms at present.      */
+comment|/**      * This configuration tag allows the user to override the default Asymmetric Signature      * algorithm (RSA-SHA1) for use in WS-SecurityPolicy, as the WS-SecurityPolicy specification      * does not allow the use of other algorithms at present.      */
 specifier|public
 specifier|static
 specifier|final
@@ -344,7 +344,7 @@ name|ASYMMETRIC_SIGNATURE_ALGORITHM
 init|=
 literal|"ws-security.asymmetric.signature.algorithm"
 decl_stmt|;
-comment|/**      * This configuration tag allows the user to override the default Symmetric Signature       * algorithm (HMAC-SHA1) for use in WS-SecurityPolicy, as the WS-SecurityPolicy specification      * does not allow the use of other algorithms at present.      */
+comment|/**      * This configuration tag allows the user to override the default Symmetric Signature      * algorithm (HMAC-SHA1) for use in WS-SecurityPolicy, as the WS-SecurityPolicy specification      * does not allow the use of other algorithms at present.      */
 specifier|public
 specifier|static
 specifier|final
@@ -353,7 +353,7 @@ name|SYMMETRIC_SIGNATURE_ALGORITHM
 init|=
 literal|"ws-security.symmetric.signature.algorithm"
 decl_stmt|;
-comment|/**      * This holds a reference to a PasswordEncryptor instance, which is used to encrypt or       * decrypt passwords in the Merlin Crypto implementation (or any custom Crypto implementations).      *       * By default, WSS4J uses the JasyptPasswordEncryptor, which must be instantiated with a       * master password to use to decrypt keystore passwords in the Merlin Crypto properties file.      * This master password is obtained via the CallbackHandler defined via PW_CALLBACK_CLASS      * or PW_CALLBACK_REF.      *       * The encrypted passwords must be stored in the format "ENC(encoded encrypted password)".      */
+comment|/**      * This holds a reference to a PasswordEncryptor instance, which is used to encrypt or      * decrypt passwords in the Merlin Crypto implementation (or any custom Crypto implementations).      *      * By default, WSS4J uses the JasyptPasswordEncryptor, which must be instantiated with a      * master password to use to decrypt keystore passwords in the Merlin Crypto properties file.      * This master password is obtained via the CallbackHandler defined via PW_CALLBACK_CLASS      * or PW_CALLBACK_REF.      *      * The encrypted passwords must be stored in the format "ENC(encoded encrypted password)".      */
 specifier|public
 specifier|static
 specifier|final
@@ -437,7 +437,7 @@ name|SIGNATURE_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.signature.validator"
 decl_stmt|;
-comment|/**      * The WSS4J Validator instance to use to validate BinarySecurityTokens. The default value       * is the NoOpValidator.      */
+comment|/**      * The WSS4J Validator instance to use to validate BinarySecurityTokens. The default value      * is the NoOpValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -446,7 +446,7 @@ name|BST_TOKEN_VALIDATOR
 init|=
 literal|"ws-security.bst.validator"
 decl_stmt|;
-comment|/**      * The WSS4J Validator instance to use to validate SecurityContextTokens. The default value is       * the NoOpValidator.      */
+comment|/**      * The WSS4J Validator instance to use to validate SecurityContextTokens. The default value is      * the NoOpValidator.      */
 specifier|public
 specifier|static
 specifier|final
@@ -476,7 +476,7 @@ name|KERBEROS_REQUEST_CREDENTIAL_DELEGATION
 init|=
 literal|"ws-security.kerberos.request.credential.delegation"
 decl_stmt|;
-comment|/**      * Whether to use credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a GSSCredential Object from the Message Context using the       * DELEGATED_CREDENTIAL configuration tag below, and then use this to obtain a service ticket.      * The default is "false".      */
+comment|/**      * Whether to use credential delegation or not in the KerberosClient. If this is set to "true",      * then it tries to get a GSSCredential Object from the Message Context using the      * DELEGATED_CREDENTIAL configuration tag below, and then use this to obtain a service ticket.      * The default is "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -512,7 +512,7 @@ name|KERBEROS_SPN
 init|=
 literal|"ws-security.kerberos.spn"
 decl_stmt|;
-comment|/**      * A reference to the KerberosClient class used to obtain a service ticket.       */
+comment|/**      * A reference to the KerberosClient class used to obtain a service ticket.      */
 specifier|public
 specifier|static
 specifier|final
@@ -567,9 +567,7 @@ name|s
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.

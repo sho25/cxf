@@ -906,7 +906,7 @@ name|writeEndElement
 argument_list|()
 expr_stmt|;
 comment|// AssertionConsumerService
-comment|/*         if (protocol.getClaimTypesRequested() != null&& !protocol.getClaimTypesRequested().isEmpty()) {             writer.writeStartElement("md", "AttributeConsumingService", SSOConstants.SAML2_METADATA_NS);             writer.writeAttribute("index", "0");                          writer.writeStartElement("md", "ServiceName", SSOConstants.SAML2_METADATA_NS);             writer.writeAttribute("xml:lang", "en");             writer.writeCharacters(config.getName());             writer.writeEndElement(); // ServiceName                          for (Claim claim : protocol.getClaimTypesRequested()) {                 writer.writeStartElement("md", "RequestedAttribute", SSOConstants.SAML2_METADATA_NS);                 writer.writeAttribute("isRequired", Boolean.toString(claim.isOptional()));                 writer.writeAttribute("Name", claim.getType());                 writer.writeAttribute("NameFormat",                                        "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified");                 writer.writeEndElement(); // RequestedAttribute             }                          writer.writeEndElement(); // AttributeConsumingService         }         */
+comment|/*         if (protocol.getClaimTypesRequested() != null&& !protocol.getClaimTypesRequested().isEmpty()) {             writer.writeStartElement("md", "AttributeConsumingService", SSOConstants.SAML2_METADATA_NS);             writer.writeAttribute("index", "0");              writer.writeStartElement("md", "ServiceName", SSOConstants.SAML2_METADATA_NS);             writer.writeAttribute("xml:lang", "en");             writer.writeCharacters(config.getName());             writer.writeEndElement(); // ServiceName              for (Claim claim : protocol.getClaimTypesRequested()) {                 writer.writeStartElement("md", "RequestedAttribute", SSOConstants.SAML2_METADATA_NS);                 writer.writeAttribute("isRequired", Boolean.toString(claim.isOptional()));                 writer.writeAttribute("Name", claim.getType());                 writer.writeAttribute("NameFormat",                                       "urn:oasis:names:tc:SAML:2.0:attrname-format:unspecified");                 writer.writeEndElement(); // RequestedAttribute             }              writer.writeEndElement(); // AttributeConsumingService         }         */
 if|if
 condition|(
 name|signingCert
@@ -1162,9 +1162,7 @@ name|transformList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Transform
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|transformList
@@ -1294,9 +1292,7 @@ name|x509Content
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|x509Content

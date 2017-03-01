@@ -116,7 +116,7 @@ specifier|public
 interface|interface
 name|Client
 block|{
-comment|/**      * Set HTTP Content-Type header      * @param ct JAXRS MediaType representing Content-Type value        * @return the updated Client      */
+comment|/**      * Set HTTP Content-Type header      * @param ct JAXRS MediaType representing Content-Type value      * @return the updated Client      */
 name|Client
 name|type
 parameter_list|(
@@ -124,7 +124,7 @@ name|MediaType
 name|ct
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Content-Type header      * @param type Content-Type value        * @return the updated Client      */
+comment|/**      * Set HTTP Content-Type header      * @param type Content-Type value      * @return the updated Client      */
 name|Client
 name|type
 parameter_list|(
@@ -132,7 +132,7 @@ name|String
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Accept header      * @param types list of JAXRS MediaTypes representing Accept header values        * @return the updated Client      */
+comment|/**      * Set HTTP Accept header      * @param types list of JAXRS MediaTypes representing Accept header values      * @return the updated Client      */
 name|Client
 name|accept
 parameter_list|(
@@ -141,7 +141,7 @@ modifier|...
 name|types
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Accept header      * @param types list of Accept header values        * @return the updated Client      */
+comment|/**      * Set HTTP Accept header      * @param types list of Accept header values      * @return the updated Client      */
 name|Client
 name|accept
 parameter_list|(
@@ -150,7 +150,7 @@ modifier|...
 name|types
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Content-Language header       * @param language Content-Language header value        * @return the updated Client      */
+comment|/**      * Set HTTP Content-Language header      * @param language Content-Language header value      * @return the updated Client      */
 name|Client
 name|language
 parameter_list|(
@@ -158,7 +158,7 @@ name|String
 name|language
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Accept-Language header       * @param languages list of Accept-Language header values        * @return the updated Client      */
+comment|/**      * Set HTTP Accept-Language header      * @param languages list of Accept-Language header values      * @return the updated Client      */
 name|Client
 name|acceptLanguage
 parameter_list|(
@@ -167,7 +167,7 @@ modifier|...
 name|languages
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Content-Encoding header       * @param encoding Content-Encoding header value        * @return the updated Client      */
+comment|/**      * Set HTTP Content-Encoding header      * @param encoding Content-Encoding header value      * @return the updated Client      */
 name|Client
 name|encoding
 parameter_list|(
@@ -175,7 +175,7 @@ name|String
 name|encoding
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Accept-Encoding header       * @param encodings list of Accept-Encoding header value        * @return the updated Client      */
+comment|/**      * Set HTTP Accept-Encoding header      * @param encodings list of Accept-Encoding header value      * @return the updated Client      */
 name|Client
 name|acceptEncoding
 parameter_list|(
@@ -184,7 +184,7 @@ modifier|...
 name|encodings
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP If-Match or If-None-Match header      * @param tag ETag value      * @param ifNot if true then If-None-Match is set, If-Match otherwise        * @return the updated Client      */
+comment|/**      * Set HTTP If-Match or If-None-Match header      * @param tag ETag value      * @param ifNot if true then If-None-Match is set, If-Match otherwise      * @return the updated Client      */
 name|Client
 name|match
 parameter_list|(
@@ -195,7 +195,7 @@ name|boolean
 name|ifNot
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP If-Modified-Since or If-Unmodified-Since header      * @param date Date value, will be formated as "EEE, dd MMM yyyy HH:mm:ss zzz"       * @param ifNot if true then If-Unmodified-Since is set, If-Modified-Since otherwise        * @return the updated Client      */
+comment|/**      * Set HTTP If-Modified-Since or If-Unmodified-Since header      * @param date Date value, will be formated as "EEE, dd MMM yyyy HH:mm:ss zzz"      * @param ifNot if true then If-Unmodified-Since is set, If-Modified-Since otherwise      * @return the updated Client      */
 name|Client
 name|modified
 parameter_list|(
@@ -206,7 +206,7 @@ name|boolean
 name|ifNot
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Cookie header       * @param cookie Cookie value        * @return the updated Client      */
+comment|/**      * Set HTTP Cookie header      * @param cookie Cookie value      * @return the updated Client      */
 name|Client
 name|cookie
 parameter_list|(
@@ -214,7 +214,7 @@ name|Cookie
 name|cookie
 parameter_list|)
 function_decl|;
-comment|/**      * Set HTTP Authorization header       * @param auth Authorization value        * @return the updated Client      */
+comment|/**      * Set HTTP Authorization header      * @param auth Authorization value      * @return the updated Client      */
 name|Client
 name|authorization
 parameter_list|(
@@ -259,7 +259,7 @@ argument_list|>
 name|map
 parameter_list|)
 function_decl|;
-comment|/**      * Reset the headers and response state if any      * @return  the updated Client      */
+comment|/**      * Reset the headers and response state if any      * @return the updated Client      */
 name|Client
 name|reset
 parameter_list|()
@@ -289,7 +289,7 @@ name|Response
 name|getResponse
 parameter_list|()
 function_decl|;
-comment|/**      * Release the internal state and configuration associated with this client       */
+comment|/**      * Release the internal state and configuration associated with this client      */
 name|void
 name|close
 parameter_list|()

@@ -361,7 +361,7 @@ argument_list|)
 specifier|public
 annotation_defn|@interface
 name|UPDATE
-block|{      }
+block|{     }
 specifier|public
 class|class
 name|ResourceClass
@@ -372,7 +372,7 @@ specifier|public
 name|void
 name|update
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 block|}
 end_class

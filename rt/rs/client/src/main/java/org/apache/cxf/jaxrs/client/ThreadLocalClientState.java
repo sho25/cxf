@@ -582,6 +582,9 @@ argument_list|,
 name|currentTime
 argument_list|)
 expr_stmt|;
+name|Thread
+name|clThread
+init|=
 operator|new
 name|CleanupThread
 argument_list|(
@@ -592,6 +595,20 @@ argument_list|()
 argument_list|,
 name|currentTime
 argument_list|)
+decl_stmt|;
+name|clThread
+operator|.
+name|setName
+argument_list|(
+literal|"Client state cleanup thread "
+operator|+
+name|clThread
+operator|.
+name|hashCode
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|clThread
 operator|.
 name|start
 argument_list|()

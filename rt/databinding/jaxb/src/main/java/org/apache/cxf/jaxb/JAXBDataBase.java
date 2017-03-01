@@ -264,7 +264,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -568,9 +568,7 @@ name|annoList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Annotation
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

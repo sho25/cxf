@@ -344,7 +344,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -400,6 +400,21 @@ argument_list|,
 name|registry
 argument_list|,
 name|ei
+argument_list|,
+name|serverEngineFactory
+operator|==
+literal|null
+condition|?
+literal|null
+else|:
+operator|new
+name|URL
+argument_list|(
+name|getNonWSAddress
+argument_list|(
+name|ei
+argument_list|)
+argument_list|)
 argument_list|,
 name|serverEngineFactory
 argument_list|)
@@ -538,11 +553,10 @@ name|resp
 argument_list|)
 expr_stmt|;
 block|}
-annotation|@
-name|Override
-specifier|protected
+specifier|private
+specifier|static
 name|String
-name|getAddress
+name|getNonWSAddress
 parameter_list|(
 name|EndpointInfo
 name|endpointInfo
@@ -580,6 +594,23 @@ expr_stmt|;
 block|}
 return|return
 name|address
+return|;
+block|}
+annotation|@
+name|Override
+specifier|protected
+name|String
+name|getAddress
+parameter_list|(
+name|EndpointInfo
+name|endpointInfo
+parameter_list|)
+block|{
+return|return
+name|getNonWSAddress
+argument_list|(
+name|endpointInfo
+argument_list|)
 return|;
 block|}
 annotation|@

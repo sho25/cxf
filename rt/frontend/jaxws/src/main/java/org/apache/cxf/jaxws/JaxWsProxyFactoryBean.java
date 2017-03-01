@@ -480,7 +480,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Factory for creating JAX-WS proxies, This class provides access to the   * internal properties used to set-up proxies. Using it provides more control   * than the standard JAX-WS APIs.  */
+comment|/**  * Factory for creating JAX-WS proxies, This class provides access to the  * internal properties used to set-up proxies. Using it provides more control  * than the standard JAX-WS APIs.  */
 end_comment
 
 begin_class
@@ -505,9 +505,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|boolean
@@ -587,7 +585,7 @@ operator|+
 literal|".jaxws-client.proxyFactory"
 return|;
 block|}
-comment|/**      * Specifies a list of JAX-WS Handler implementations that are to be       * used by the proxy.      *       * @param h a<code>List</code> of<code>Handler</code> objects      */
+comment|/**      * Specifies a list of JAX-WS Handler implementations that are to be      * used by the proxy.      *      * @param h a<code>List</code> of<code>Handler</code> objects      */
 specifier|public
 name|void
 name|setHandlers
@@ -755,7 +753,7 @@ name|class
 block|}
 return|;
 block|}
-comment|/**      * Creates a JAX-WS proxy that can be used to make remote invocations.      *      * @return the proxy. You must cast the returned object to the approriate class       * before making remote calls      */
+comment|/**      * Creates a JAX-WS proxy that can be used to make remote invocations.      *      * @return the proxy. You must cast the returned object to the approriate class      * before making remote calls      */
 annotation|@
 name|Override
 specifier|public
@@ -1031,9 +1029,7 @@ name|chain
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|(
 name|handlers
 argument_list|)

@@ -113,9 +113,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|helpers
+name|ext
 operator|.
-name|IOUtils
+name|logging
+operator|.
+name|LoggingOutInterceptor
 import|;
 end_import
 
@@ -127,9 +129,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|helpers
 operator|.
-name|LoggingOutInterceptor
+name|IOUtils
 import|;
 end_import
 

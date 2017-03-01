@@ -127,7 +127,7 @@ specifier|protected
 name|void
 name|run
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|void

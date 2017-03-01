@@ -802,7 +802,7 @@ return|return
 name|map
 return|;
 block|}
-comment|/**      * Extracts the authorization realm from the       * "WWW-Authenticate" Http response header.      *       * @param authenticate content of the WWW-Authenticate header      * @return The realm, or null if it is non-existent.      */
+comment|/**      * Extracts the authorization realm from the      * "WWW-Authenticate" Http response header.      *      * @param authenticate content of the WWW-Authenticate header      * @return The realm, or null if it is non-existent.      */
 specifier|public
 name|String
 name|getRealm

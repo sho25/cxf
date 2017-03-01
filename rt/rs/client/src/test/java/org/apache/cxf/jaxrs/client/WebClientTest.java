@@ -2544,7 +2544,7 @@ specifier|private
 specifier|static
 class|class
 name|ComplexObject
-block|{              }
+block|{      }
 block|}
 end_class
 

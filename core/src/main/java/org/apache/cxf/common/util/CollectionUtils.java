@@ -56,7 +56,7 @@ block|{
 specifier|private
 name|CollectionUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 parameter_list|<
@@ -118,9 +118,7 @@ name|difference
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

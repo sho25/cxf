@@ -621,7 +621,7 @@ name|booleanValue
 argument_list|()
 return|;
 block|}
-comment|/**      * Get appropriate property name for message addressing properties.      *      * @param isRequestor true if the current messaging role is that of      * requestor      * @param isProviderContext true if the binding provider request context       * available to the client application as opposed to the message context       * visible to handlers      * @param isOutbound true if the message is outbound      * @return the property name to use when caching the MAPs in the context      */
+comment|/**      * Get appropriate property name for message addressing properties.      *      * @param isRequestor true if the current messaging role is that of      * requestor      * @param isProviderContext true if the binding provider request context      * available to the client application as opposed to the message context      * visible to handlers      * @param isOutbound true if the message is outbound      * @return the property name to use when caching the MAPs in the context      */
 specifier|public
 specifier|static
 name|String
@@ -722,7 +722,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of requestor      * @param isProviderContext true if the binding provider request context       */
+comment|/**      * Store MAPs in the message.      *      * @param maps the MAPs to store      * @param message the current message      * @param isOutbound true if the message is outbound      * @param isRequestor true if the current messaging role is that of requestor      * @param isProviderContext true if the binding provider request context      */
 specifier|public
 specifier|static
 name|void
@@ -1231,7 +1231,7 @@ return|return
 name|empty
 return|;
 block|}
-comment|/**      * Propagate inbound MAPs onto full reponse& fault messages.      *       * @param inMAPs the inbound MAPs      * @param exchange the current Exchange      */
+comment|/**      * Propagate inbound MAPs onto full reponse& fault messages.      *      * @param inMAPs the inbound MAPs      * @param exchange the current Exchange      */
 specifier|public
 specifier|static
 name|void
@@ -1307,7 +1307,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Propogate inbound MAPs onto reponse message if applicable      * (not applicable for oneways).      *       * @param inMAPs the inbound MAPs      * @param responseMessage      */
+comment|/**      * Propogate inbound MAPs onto reponse message if applicable      * (not applicable for oneways).      *      * @param inMAPs the inbound MAPs      * @param responseMessage      */
 specifier|public
 specifier|static
 name|void
@@ -1524,7 +1524,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Retrieve indication that a deferred uncorrelated message abort is      * supported      *      * @param message the current message      * @return the retrieved indication       */
+comment|/**      * Retrieve indication that a deferred uncorrelated message abort is      * supported      *      * @param message the current message      * @return the retrieved indication      */
 specifier|public
 specifier|static
 name|boolean
@@ -1606,7 +1606,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Retrieve indication that a deferred uncorrelated message abort should      * occur.      *      * @param message the current message      * @return the retrieved indication       */
+comment|/**      * Retrieve indication that a deferred uncorrelated message abort should      * occur.      *      * @param message the current message      * @return the retrieved indication      */
 specifier|public
 specifier|static
 name|boolean
@@ -1652,7 +1652,7 @@ name|booleanValue
 argument_list|()
 return|;
 block|}
-comment|/**      * Retrieve indication that an async post-response service invocation      * is required.      *       * @param message the current message      * @return the retrieved indication that an async post-response service      * invocation is required.      */
+comment|/**      * Retrieve indication that an async post-response service invocation      * is required.      *      * @param message the current message      * @return the retrieved indication that an async post-response service      * invocation is required.      */
 specifier|public
 specifier|static
 name|boolean
@@ -1688,7 +1688,7 @@ name|booleanValue
 argument_list|()
 return|;
 block|}
-comment|/**      * Retrieve a JAXBContext for marshalling and unmarshalling JAXB generated      * types.      *      * @return a JAXBContext       */
+comment|/**      * Retrieve a JAXBContext for marshalling and unmarshalling JAXB generated      * types.      *      * @return a JAXBContext      */
 specifier|public
 specifier|static
 name|JAXBContext
@@ -1805,7 +1805,7 @@ return|return
 name|jaxbContext
 return|;
 block|}
-comment|/**      * Set the encapsulated JAXBContext (used by unit tests).      *       * @param ctx JAXBContext       */
+comment|/**      * Set the encapsulated JAXBContext (used by unit tests).      *      * @param ctx JAXBContext      */
 specifier|public
 specifier|static
 name|void
@@ -1858,7 +1858,7 @@ name|randomUUID
 argument_list|()
 return|;
 block|}
-comment|/**      * Retreive Conduit from Exchange if not already available      *       * @param conduit the current value for the Conduit      * @param message the current message      * @return the Conduit if available      */
+comment|/**      * Retreive Conduit from Exchange if not already available      *      * @param conduit the current value for the Conduit      * @param message the current message      * @return the Conduit if available      */
 specifier|public
 specifier|static
 name|Conduit
@@ -1963,7 +1963,7 @@ name|el
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create a Binding specific Message.      *       * @param exchange the current exchange      * @return the Method from the BindingOperationInfo      */
+comment|/**      * Create a Binding specific Message.      *      * @param exchange the current exchange      * @return the Method from the BindingOperationInfo      */
 specifier|public
 specifier|static
 name|Message

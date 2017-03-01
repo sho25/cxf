@@ -688,7 +688,7 @@ name|THREAD_LOCAL_REQUEST_CONTEXT
 init|=
 literal|"thread.local.request.context"
 decl_stmt|;
-comment|/**      * When a synchronous request/response invoke is done using an asynchronous transport mechanism,      * this is the timeout used for waiting for the response.  Default is 60 seconds.       */
+comment|/**      * When a synchronous request/response invoke is done using an asynchronous transport mechanism,      * this is the timeout used for waiting for the response.  Default is 60 seconds.      */
 specifier|public
 specifier|static
 specifier|final
@@ -4567,7 +4567,7 @@ name|LOG
 operator|.
 name|fine
 argument_list|(
-literal|"Interceptors contributed by databinging: "
+literal|"Interceptors contributed by databinding: "
 operator|+
 name|p
 operator|.

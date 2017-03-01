@@ -312,7 +312,7 @@ specifier|final
 name|Detector
 name|detector
 decl_stmt|;
-comment|/**      * Create new Tika-based content extractor using AutoDetectParser.        */
+comment|/**      * Create new Tika-based content extractor using AutoDetectParser.      */
 specifier|public
 name|TikaContentExtractor
 parameter_list|()
@@ -327,7 +327,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instance.        * @param parser parser instance      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance.      * @param parser parser instance      */
 specifier|public
 name|TikaContentExtractor
 parameter_list|(
@@ -344,7 +344,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instances.        * @param parsers parser instances      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instances.      * @param parsers parser instances      */
 specifier|public
 name|TikaContentExtractor
 parameter_list|(
@@ -366,7 +366,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instances.        * @param parsers parser instances      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instances.      * @param parsers parser instances      */
 specifier|public
 name|TikaContentExtractor
 parameter_list|(
@@ -426,7 +426,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the content and metadata from        * @return the extracted content and metadata or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the content and metadata from      * @return the extracted content and metadata or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
@@ -456,7 +456,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream with a media type hint.       * @param in input stream to extract the content and metadata from        * @param mt JAX-RS MediaType of the stream content      * @return the extracted content and metadata or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream with a media type hint.      * @param in input stream to extract the content and metadata from      * @param mt JAX-RS MediaType of the stream content      * @return the extracted content and metadata or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
@@ -490,7 +490,7 @@ name|mt
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the content and metadata from       * @param handler custom ContentHandler       * @return the extracted content and metadata or null if extraction is not possible       *         or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the content and metadata from      * @param handler custom ContentHandler      * @return the extracted content and metadata or null if extraction is not possible      *         or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
@@ -526,7 +526,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream with a media type hint.       * @param in input stream to extract the content and metadata from       * @param handler custom ContentHandler       * @param mt JAX-RS MediaType of the stream content      * @return the extracted content and metadata or null if extraction is not possible       *         or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream with a media type hint.      * @param in input stream to extract the content and metadata from      * @param handler custom ContentHandler      * @param mt JAX-RS MediaType of the stream content      * @return the extracted content and metadata or null if extraction is not possible      *         or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
@@ -567,7 +567,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the content and metadata from       * @param handler custom ContentHandler      * @param context custom context       * @return the extracted content and metadata or null if extraction is not possible       *         or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the content and metadata from      * @param handler custom ContentHandler      * @param context custom context      * @return the extracted content and metadata or null if extraction is not possible      *         or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
@@ -608,7 +608,7 @@ name|context
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream with a media type hint      * type of content.       * @param in input stream to extract the metadata from       * @param handler custom ContentHandler      * @param mt JAX-RS MediaType of the stream content      * @param context custom context       * @return the extracted content and metadata or null if extraction is not possible       *         or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream with a media type hint      * type of content.      * @param in input stream to extract the metadata from      * @param handler custom ContentHandler      * @param mt JAX-RS MediaType of the stream content      * @param context custom context      * @return the extracted content and metadata or null if extraction is not possible      *         or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extract
@@ -992,7 +992,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the metadata from        * @return the extracted content or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the metadata from      * @return the extracted content or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|TikaContent
 name|extractMetadata
@@ -1014,7 +1014,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the metadata from        * @return the extracted metadata converted to SearchBean or null if extraction is not possible       *         or was unsuccessful      */
+comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the metadata from      * @return the extracted metadata converted to SearchBean or null if extraction is not possible      *         or was unsuccessful      */
 specifier|public
 name|SearchBean
 name|extractMetadataToSearchBean
@@ -1150,7 +1150,7 @@ operator|=
 name|mediaType
 expr_stmt|;
 block|}
-comment|/**          * Return the content cached by ContentHandler           * @return the content, may be empty or null if a custom non-caching ContentHandler was used          *         to parse the content            */
+comment|/**          * Return the content cached by ContentHandler          * @return the content, may be empty or null if a custom non-caching ContentHandler was used          *         to parse the content          */
 specifier|public
 name|String
 name|getContent

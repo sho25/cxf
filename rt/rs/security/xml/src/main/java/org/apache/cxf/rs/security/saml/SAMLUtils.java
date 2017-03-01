@@ -423,7 +423,7 @@ decl_stmt|;
 specifier|private
 name|SAMLUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|Subject

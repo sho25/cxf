@@ -239,7 +239,7 @@ operator|=
 name|log
 expr_stmt|;
 block|}
-comment|/**      * Create and set the classloader that is needed for creating the java sources from wsdl      *       * @param project      * @param useCompileClasspath      * @param classesDir      */
+comment|/**      * Create and set the classloader that is needed for creating the java sources from wsdl      *      * @param project      * @param useCompileClasspath      * @param classesDir      */
 specifier|public
 name|Set
 argument_list|<
@@ -265,9 +265,7 @@ name|urlList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URL
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StringBuilder

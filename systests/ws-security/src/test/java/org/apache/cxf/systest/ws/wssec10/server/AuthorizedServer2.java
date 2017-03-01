@@ -108,7 +108,7 @@ name|AuthorizedServer2
 parameter_list|()
 throws|throws
 name|Exception
-block|{              }
+block|{      }
 specifier|protected
 name|void
 name|run

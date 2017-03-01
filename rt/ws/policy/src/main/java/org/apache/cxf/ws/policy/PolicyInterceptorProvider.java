@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -90,7 +90,7 @@ name|PolicyInterceptorProvider
 extends|extends
 name|InterceptorProvider
 block|{
-comment|/**      * Returns a collection of QNames describing the xml schema types of the assertions that      * this interceptor implements.      *       * @return collection of QNames of known assertion types      */
+comment|/**      * Returns a collection of QNames describing the xml schema types of the assertions that      * this interceptor implements.      *      * @return collection of QNames of known assertion types      */
 name|Collection
 argument_list|<
 name|QName
@@ -98,7 +98,7 @@ argument_list|>
 name|getAssertionTypes
 parameter_list|()
 function_decl|;
-comment|/**      * Return false if the message does not contain enough contextual configuration to preemtively       * support the given assertion.  Otherwise, return true.  If false, the PolicyEngine.supportsAlternative      * method will not select this policy and will attempt a different alternative.       *       * Example: If the context does not contain login information, an assertion that requires it       * could return false to allow the Alternative selection algorithms to try a different alternative.       * @param msg The contextual message, may be null if no message is in context at this point       * @param assertion      * @return      */
+comment|/**      * Return false if the message does not contain enough contextual configuration to preemtively      * support the given assertion.  Otherwise, return true.  If false, the PolicyEngine.supportsAlternative      * method will not select this policy and will attempt a different alternative.      *      * Example: If the context does not contain login information, an assertion that requires it      * could return false to allow the Alternative selection algorithms to try a different alternative.      * @param msg The contextual message, may be null if no message is in context at this point      * @param assertion      * @return      */
 name|boolean
 name|configurationPresent
 parameter_list|(

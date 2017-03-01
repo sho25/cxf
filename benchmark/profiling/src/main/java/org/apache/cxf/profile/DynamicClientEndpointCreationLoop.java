@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -183,7 +183,7 @@ name|destroy
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * @param args      * @throws URISyntaxException       */
+comment|/**      * @param args      * @throws URISyntaxException      */
 specifier|public
 specifier|static
 name|void

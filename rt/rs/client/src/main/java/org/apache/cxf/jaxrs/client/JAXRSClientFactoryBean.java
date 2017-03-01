@@ -501,7 +501,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the custom class loader to be used for creating proxies.      * By default the class loader of the given serviceClass will be used.      *       * @param loader      */
+comment|/**      * Sets the custom class loader to be used for creating proxies.      * By default the class loader of the given serviceClass will be used.      *      * @param loader      */
 specifier|public
 name|void
 name|setClassLoader
@@ -515,7 +515,7 @@ operator|=
 name|loader
 expr_stmt|;
 block|}
-comment|/**      * Indicates if a single proxy or WebClient instance can be reused       * by multiple threads.      *         * @param threadSafe if true then multiple threads can invoke on      *        the same proxy or WebClient instance.      */
+comment|/**      * Indicates if a single proxy or WebClient instance can be reused      * by multiple threads.      *      * @param threadSafe if true then multiple threads can invoke on      *        the same proxy or WebClient instance.      */
 specifier|public
 name|void
 name|setThreadSafe
@@ -557,7 +557,7 @@ return|return
 name|username
 return|;
 block|}
-comment|/**      * Sets the username.       * Setting the username and password is a simple way to       * create a Basic Authentication token.      *       * @param username the user name      */
+comment|/**      * Sets the username.      * Setting the username and password is a simple way to      * create a Basic Authentication token.      *      * @param username the user name      */
 specifier|public
 name|void
 name|setUsername
@@ -583,7 +583,7 @@ return|return
 name|password
 return|;
 block|}
-comment|/**      * Sets the password.       * Setting the username and password is a simple way to       * create a Basic Authentication token.      *       * @param password the password      */
+comment|/**      * Sets the password.      * Setting the username and password is a simple way to      * create a Basic Authentication token.      *      * @param password the password      */
 specifier|public
 name|void
 name|setPassword
@@ -599,7 +599,7 @@ operator|=
 name|password
 expr_stmt|;
 block|}
-comment|/**      * Indicates if the headers set by a current proxy will be inherited      * when a subresource proxy is created      * vice versa.      *       * @param ih if set to true then the current headers will be inherited      */
+comment|/**      * Indicates if the headers set by a current proxy will be inherited      * when a subresource proxy is created      * vice versa.      *      * @param ih if set to true then the current headers will be inherited      */
 specifier|public
 name|void
 name|setInheritHeaders
@@ -631,7 +631,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the resource class, may be called from a Spring handler       * @param cls the resource class      */
+comment|/**      * Sets the resource class, may be called from a Spring handler      * @param cls the resource class      */
 specifier|public
 name|void
 name|setServiceClass
@@ -657,7 +657,7 @@ name|cls
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the service class       * @param cls the service class      */
+comment|/**      * Returns the service class      * @param cls the service class      */
 specifier|public
 name|Class
 argument_list|<
@@ -670,7 +670,7 @@ return|return
 name|serviceClass
 return|;
 block|}
-comment|/**      * Sets the headers new proxy or WebClient instances will be      * initialized with.      *       * @param map the headers      */
+comment|/**      * Sets the headers new proxy or WebClient instances will be      * initialized with.      *      * @param map the headers      */
 specifier|public
 name|void
 name|setHeaders
@@ -1136,7 +1136,7 @@ argument_list|()
 return|;
 block|}
 block|}
-comment|/**      * Create a Client instance. Proxies and WebClients are Clients.      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      *              * @return the client      */
+comment|/**      * Create a Client instance. Proxies and WebClients are Clients.      * @param varValues optional list of values which will be used to substitute      *        template variables specified in the class-level JAX-RS Path annotations      *      * @return the client      */
 specifier|public
 name|Client
 name|createWithValues

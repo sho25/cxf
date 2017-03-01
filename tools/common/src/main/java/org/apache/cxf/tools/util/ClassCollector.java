@@ -253,15 +253,13 @@ name|typesPackages
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
 name|ClassCollector
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|reserveClass

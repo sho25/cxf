@@ -1020,7 +1020,7 @@ name|Service
 name|s
 parameter_list|)
 block|{
-comment|/**          * Yes, all this code is EXTREMELY ugly. But it gives about a 60-70% performance          * boost with the JAXB RI, so its worth it.           */
+comment|/**          * Yes, all this code is EXTREMELY ugly. But it gives about a 60-70% performance          * boost with the JAXB RI, so its worth it.          */
 if|if
 condition|(
 name|s
@@ -1179,9 +1179,7 @@ name|atts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|message

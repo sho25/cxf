@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for point complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="point">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="x" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;element name="y" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for point complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="point">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="x" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;element name="y" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -98,7 +98,7 @@ specifier|protected
 name|int
 name|y
 decl_stmt|;
-comment|/**      * Gets the value of the x property.      *       */
+comment|/**      * Gets the value of the x property.      *      */
 specifier|public
 name|int
 name|getX
@@ -108,7 +108,7 @@ return|return
 name|x
 return|;
 block|}
-comment|/**      * Sets the value of the x property.      *       */
+comment|/**      * Sets the value of the x property.      *      */
 specifier|public
 name|void
 name|setX
@@ -124,7 +124,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the y property.      *       */
+comment|/**      * Gets the value of the y property.      *      */
 specifier|public
 name|int
 name|getY
@@ -134,7 +134,7 @@ return|return
 name|y
 return|;
 block|}
-comment|/**      * Sets the value of the y property.      *       */
+comment|/**      * Sets the value of the y property.      *      */
 specifier|public
 name|void
 name|setY

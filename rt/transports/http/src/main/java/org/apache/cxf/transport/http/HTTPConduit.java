@@ -81,6 +81,26 @@ begin_import
 import|import
 name|java
 operator|.
+name|io
+operator|.
+name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
+name|StringWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|net
 operator|.
 name|HttpRetryException
@@ -932,11 +952,11 @@ import|;
 end_import
 
 begin_comment
-comment|/*  * HTTP Conduit implementation.  *<p>  * This implementation is a based on the java.net.URLConnection interface and  * dependent upon installed implementations of that URLConnection,   * HttpURLConnection, and HttpsURLConnection. Currently, this implementation  * has been known to work with the Sun JDK 1.5 default implementations. The  * HttpsURLConnection is part of Sun's implementation of the JSSE.   * Presently, the source code for the Sun JSSE implementation is unavailable  * and therefore we may only lay a guess of whether its HttpsURLConnection  * implementation correctly works as far as security is concerned.  *<p>  * The Trust Decision. If a MessageTrustDecider is configured/set for the   * Conduit, it is called upon the first flush of the headers in the   * WrappedOutputStream. This reason for this approach is two-fold.   * Theoretically, in order to get connection information out of the   * URLConnection, it must be "connected". We assume that its implementation will  * only follow through up to the point at which it will be ready to send  * one byte of data down to the endpoint, but through proxies, and the   * commpletion of a TLS handshake in the case of HttpsURLConnection.   * However, if we force the connect() call right away, the default  * implementations will not allow any calls to add/setRequestProperty,  * throwing an exception that the URLConnection is already connected.   *<p>  * We need to keep the semantic that later CXF interceptors may add to the   * PROTOCOL_HEADERS in the Message. This architectual decision forces us to   * delay the connection until after that point, then pulling the trust decision.  *<p>  * The security caveat is that we don't really know when the connection is   * really established. The call to "connect" is stated to force the   * "connection," but it is a no-op if the connection was already established.   * It is entirely possible that an implementation of an URLConnection may   * indeed connect at will and start sending the headers down the connection   * during calls to add/setRequestProperty!  *<p>  * We know that the JDK 1.5 sun.com.net.www.HttpURLConnection does not send  * this information before the "connect" call, because we can look at the  * source code. However, we can only assume, not verify, that the JSSE 1.5   * HttpsURLConnection does the same, in that it is probable that the   * HttpsURLConnection shares the HttpURLConnection implementation.  *<p>  * Due to these implementations following redirects without trust checks, we  * force the URLConnection implementations not to follow redirects. If   * client side policy dictates that we follow redirects, trust decisions are  * placed before each retransmit. On a redirect, any authorization information  * dynamically acquired by a BasicAuth UserPass supplier is removed before  * being retransmitted, as it may no longer be applicable to the new url to  * which the connection is redirected.  */
+comment|/*  * HTTP Conduit implementation.  *<p>  * This implementation is a based on the java.net.URLConnection interface and  * dependent upon installed implementations of that URLConnection,  * HttpURLConnection, and HttpsURLConnection. Currently, this implementation  * has been known to work with the Sun JDK 1.5 default implementations. The  * HttpsURLConnection is part of Sun's implementation of the JSSE.  * Presently, the source code for the Sun JSSE implementation is unavailable  * and therefore we may only lay a guess of whether its HttpsURLConnection  * implementation correctly works as far as security is concerned.  *<p>  * The Trust Decision. If a MessageTrustDecider is configured/set for the  * Conduit, it is called upon the first flush of the headers in the  * WrappedOutputStream. This reason for this approach is two-fold.  * Theoretically, in order to get connection information out of the  * URLConnection, it must be "connected". We assume that its implementation will  * only follow through up to the point at which it will be ready to send  * one byte of data down to the endpoint, but through proxies, and the  * commpletion of a TLS handshake in the case of HttpsURLConnection.  * However, if we force the connect() call right away, the default  * implementations will not allow any calls to add/setRequestProperty,  * throwing an exception that the URLConnection is already connected.  *<p>  * We need to keep the semantic that later CXF interceptors may add to the  * PROTOCOL_HEADERS in the Message. This architectual decision forces us to  * delay the connection until after that point, then pulling the trust decision.  *<p>  * The security caveat is that we don't really know when the connection is  * really established. The call to "connect" is stated to force the  * "connection," but it is a no-op if the connection was already established.  * It is entirely possible that an implementation of an URLConnection may  * indeed connect at will and start sending the headers down the connection  * during calls to add/setRequestProperty!  *<p>  * We know that the JDK 1.5 sun.com.net.www.HttpURLConnection does not send  * this information before the "connect" call, because we can look at the  * source code. However, we can only assume, not verify, that the JSSE 1.5  * HttpsURLConnection does the same, in that it is probable that the  * HttpsURLConnection shares the HttpURLConnection implementation.  *<p>  * Due to these implementations following redirects without trust checks, we  * force the URLConnection implementations not to follow redirects. If  * client side policy dictates that we follow redirects, trust decisions are  * placed before each retransmit. On a redirect, any authorization information  * dynamically acquired by a BasicAuth UserPass supplier is removed before  * being retransmitted, as it may no longer be applicable to the new url to  * which the connection is redirected.  */
 end_comment
 
 begin_comment
-comment|/**  * This Conduit handles the "http" and "https" transport protocols. An  * instance is governed by policies either explicitly set or by   * configuration.  */
+comment|/**  * This Conduit handles the "http" and "https" transport protocols. An  * instance is governed by policies either explicitly set or by  * configuration.  */
 end_comment
 
 begin_class
@@ -993,7 +1013,7 @@ specifier|static
 name|boolean
 name|hasLoggedAsyncWarning
 decl_stmt|;
-comment|/**      * This constant holds the suffix ".http-conduit" that is appended to the       * Endpoint Qname to give the configuration name of this conduit.      */
+comment|/**      * This constant holds the suffix ".http-conduit" that is appended to the      * Endpoint Qname to give the configuration name of this conduit.      */
 specifier|private
 specifier|static
 specifier|final
@@ -1061,9 +1081,7 @@ name|KNOWN_HTTP_VERBS_WITH_NO_CONTENT
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -1108,7 +1126,7 @@ specifier|final
 name|Bus
 name|bus
 decl_stmt|;
-comment|/**      * This field is used for two reasons. First it provides the base name for      * the conduit for Spring configuration. The other is to hold default       * address information, should it not be supplied in the Message Map, by the       * Message.ENDPOINT_ADDRESS property.      */
+comment|/**      * This field is used for two reasons. First it provides the base name for      * the conduit for Spring configuration. The other is to hold default      * address information, should it not be supplied in the Message Map, by the      * Message.ENDPOINT_ADDRESS property.      */
 specifier|protected
 specifier|final
 name|EndpointInfo
@@ -1134,17 +1152,17 @@ specifier|protected
 name|HTTPClientPolicy
 name|clientSidePolicy
 decl_stmt|;
-comment|/**      * This field holds the password authorization configuration.      * This field is injected via spring configuration based on the conduit       * name.     */
+comment|/**      * This field holds the password authorization configuration.      * This field is injected via spring configuration based on the conduit      * name.     */
 specifier|protected
 name|AuthorizationPolicy
 name|authorizationPolicy
 decl_stmt|;
-comment|/**      * This field holds the password authorization configuration for the       * configured proxy. This field is injected via spring configuration based       * on the conduit name.      */
+comment|/**      * This field holds the password authorization configuration for the      * configured proxy. This field is injected via spring configuration based      * on the conduit name.      */
 specifier|protected
 name|ProxyAuthorizationPolicy
 name|proxyAuthorizationPolicy
 decl_stmt|;
-comment|/**      * This field holds the configuration TLS configuration which      * is programmatically configured.       */
+comment|/**      * This field holds the configuration TLS configuration which      * is programmatically configured.      */
 specifier|protected
 name|TLSClientParameters
 name|tlsClientParameters
@@ -1179,7 +1197,7 @@ specifier|volatile
 name|boolean
 name|clientSidePolicyCalced
 decl_stmt|;
-comment|/**      * Constructor      *       * @param b the associated Bus      * @param ei the endpoint info of the initiator      * @throws IOException      */
+comment|/**      * Constructor      *      * @param b the associated Bus      * @param ei the endpoint info of the initiator      * @throws IOException      */
 specifier|public
 name|HTTPConduit
 parameter_list|(
@@ -1202,7 +1220,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor      *       * @param b the associated Bus.      * @param endpoint the endpoint info of the initiator.      * @param t the endpoint reference of the target.      * @throws IOException      */
+comment|/**      * Constructor      *      * @param b the associated Bus.      * @param endpoint the endpoint info of the initiator.      * @param t the endpoint reference of the target.      * @throws IOException      */
 specifier|public
 name|HTTPConduit
 parameter_list|(
@@ -1263,7 +1281,7 @@ name|Cookies
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * updates the HTTPClientPolicy that is compatible with the assertions      * included in the service, endpoint, operation and message policy subjects      * if a PolicyDataEngine is installed      *       * wsdl extensors are superseded by policies which in       * turn are superseded by injection      */
+comment|/**      * updates the HTTPClientPolicy that is compatible with the assertions      * included in the service, endpoint, operation and message policy subjects      * if a PolicyDataEngine is installed      *      * wsdl extensors are superseded by policies which in      * turn are superseded by injection      */
 specifier|private
 name|void
 name|updateClientPolicy
@@ -1908,7 +1926,7 @@ parameter_list|)
 throws|throws
 name|IOException
 function_decl|;
-comment|/**      * Prepare to send an outbound HTTP message over this http conduit to a       * particular endpoint.      *<P>      * If the Message.PATH_INFO property is set it gets appended      * to the Conduit's endpoint URL. If the Message.QUERY_STRING      * property is set, it gets appended to the resultant URL following      * a "?".      *<P>      * If the Message.HTTP_REQUEST_METHOD property is NOT set, the      * Http request method defaults to "POST".      *<P>      * If the Message.PROTOCOL_HEADERS is not set on the message, it is      * initialized to an empty map.      *<P>      * This call creates the OutputStream for the content of the message.      * It also assigns the created Http(s)URLConnection to the Message      * Map.      *       * @param message The message to be sent.      */
+comment|/**      * Prepare to send an outbound HTTP message over this http conduit to a      * particular endpoint.      *<P>      * If the Message.PATH_INFO property is set it gets appended      * to the Conduit's endpoint URL. If the Message.QUERY_STRING      * property is set, it gets appended to the resultant URL following      * a "?".      *<P>      * If the Message.HTTP_REQUEST_METHOD property is NOT set, the      * Http request method defaults to "POST".      *<P>      * If the Message.PROTOCOL_HEADERS is not set on the message, it is      * initialized to an empty map.      *<P>      * This call creates the OutputStream for the content of the message.      * It also assigns the created Http(s)URLConnection to the Message      * Map.      *      * @param message The message to be sent.      */
 specifier|public
 name|void
 name|prepare
@@ -2331,12 +2349,11 @@ name|objs
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|objs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|Object
@@ -2785,7 +2802,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This function sets up a URL based on ENDPOINT_ADDRESS, PATH_INFO,      * and QUERY_STRING properties in the Message. The QUERY_STRING gets      * added with a "?" after the PATH_INFO. If the ENDPOINT_ADDRESS is not      * set on the Message, the endpoint address is taken from the       * "defaultEndpointURL".      *<p>      * The PATH_INFO is only added to the endpoint address string should       * the PATH_INFO not equal the end of the endpoint address string.      *       * @param message The message holds the addressing information.      *       * @return The full URL specifying the HTTP request to the endpoint.      *       * @throws MalformedURLException      * @throws URISyntaxException       */
+comment|/**      * This function sets up a URL based on ENDPOINT_ADDRESS, PATH_INFO,      * and QUERY_STRING properties in the Message. The QUERY_STRING gets      * added with a "?" after the PATH_INFO. If the ENDPOINT_ADDRESS is not      * set on the Message, the endpoint address is taken from the      * "defaultEndpointURL".      *<p>      * The PATH_INFO is only added to the endpoint address string should      * the PATH_INFO not equal the end of the endpoint address string.      *      * @param message The message holds the addressing information.      *      * @return The full URL specifying the HTTP request to the endpoint.      *      * @throws MalformedURLException      * @throws URISyntaxException      */
 specifier|private
 name|Address
 name|setupAddress
@@ -3229,7 +3246,7 @@ return|return
 name|defaultAddress
 return|;
 block|}
-comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the Authorization policies that are set on this conduit by      * configuration.      *<p>       * An AuthorizationPolicy may also be set on the message. If so, those      * policies are merged. A user name or password set on the messsage       * overrides settings in the AuthorizationPolicy is retrieved from the      * configuration.      *<p>      * The precedence is as follows:      * 1. AuthorizationPolicy that is set on the Message, if exists.      * 2. Authorization from AuthSupplier, if exists.      * 3. AuthorizationPolicy set/configured for conduit.      *       * REVISIT: Since the AuthorizationPolicy is set on the message by class, then      * how does one override the ProxyAuthorizationPolicy which is the same       * type?      *       * @param message      * @param headers      */
+comment|/**      * This call places HTTP Header strings into the headers that are relevant      * to the Authorization policies that are set on this conduit by      * configuration.      *<p>      * An AuthorizationPolicy may also be set on the message. If so, those      * policies are merged. A user name or password set on the messsage      * overrides settings in the AuthorizationPolicy is retrieved from the      * configuration.      *<p>      * The precedence is as follows:      * 1. AuthorizationPolicy that is set on the Message, if exists.      * 2. Authorization from AuthSupplier, if exists.      * 3. AuthorizationPolicy set/configured for conduit.      *      * REVISIT: Since the AuthorizationPolicy is set on the message by class, then      * how does one override the ProxyAuthorizationPolicy which is the same      * type?      *      * @param message      * @param headers      */
 specifier|protected
 name|void
 name|setHeadersByAuthorizationPolicy
@@ -3321,7 +3338,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * This is part of the Configurable interface which retrieves the       * configuration from spring injection.      */
+comment|/**      * This is part of the Configurable interface which retrieves the      * configuration from spring injection.      */
 comment|// REVISIT:What happens when the endpoint/bean name is null?
 specifier|public
 name|String
@@ -3354,7 +3371,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Determines effective auth policy from message, conduit and empty default      * with priority from first to last      *       * @param message      * @return effective AthorizationPolicy      */
+comment|/**      * Determines effective auth policy from message, conduit and empty default      * with priority from first to last      *      * @param message      * @return effective AthorizationPolicy      */
 specifier|public
 name|AuthorizationPolicy
 name|getEffectiveAuthPolicy
@@ -3416,7 +3433,7 @@ return|return
 name|effectivePolicy
 return|;
 block|}
-comment|/**      * This method gets the Authorization Policy that was configured or       * explicitly set for this HTTPConduit.      */
+comment|/**      * This method gets the Authorization Policy that was configured or      * explicitly set for this HTTPConduit.      */
 specifier|public
 name|AuthorizationPolicy
 name|getAuthorization
@@ -3426,7 +3443,7 @@ return|return
 name|authorizationPolicy
 return|;
 block|}
-comment|/**      * This method is used to set the Authorization Policy for this conduit.      * Using this method will override any Authorization Policy set in       * configuration.      */
+comment|/**      * This method is used to set the Authorization Policy for this conduit.      * Using this method will override any Authorization Policy set in      * configuration.      */
 specifier|public
 name|void
 name|setAuthorization
@@ -3627,7 +3644,7 @@ return|return
 name|proxyAuthorizationPolicy
 return|;
 block|}
-comment|/**      * This method sets the Proxy Authorization Policy for a specified proxy.       * Using this method overrides any Authorization Policy for the proxy       * that is set in the configuration.      */
+comment|/**      * This method sets the Proxy Authorization Policy for a specified proxy.      * Using this method overrides any Authorization Policy for the proxy      * that is set in the configuration.      */
 specifier|public
 name|void
 name|setProxyAuthorization
@@ -3796,7 +3813,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * This method gets the Trust Decider that was set/configured for this       * HTTPConduit.      * @return The Message Trust Decider or null.      */
+comment|/**      * This method gets the Trust Decider that was set/configured for this      * HTTPConduit.      * @return The Message Trust Decider or null.      */
 specifier|public
 name|MessageTrustDecider
 name|getTrustDecider
@@ -3824,7 +3841,7 @@ operator|=
 name|decider
 expr_stmt|;
 block|}
-comment|/**      * This method gets the Auth Supplier that was set/configured for this       * HTTPConduit.      * @return The Auth Supplier or null.      */
+comment|/**      * This method gets the Auth Supplier that was set/configured for this      * HTTPConduit.      * @return The Auth Supplier or null.      */
 specifier|public
 name|HttpAuthSupplier
 name|getAuthSupplier
@@ -3875,7 +3892,7 @@ operator|=
 name|proxyAuthSupplier
 expr_stmt|;
 block|}
-comment|/**      * This method extracts the value of the "Location" Http      * Response header.      *       * @param headers The Http response headers.      * @return The value of the "Location" header, null if non-existent.      * @throws MalformedURLException       */
+comment|/**      * This method extracts the value of the "Location" Http      * Response header.      *      * @param headers The Http response headers.      * @return The value of the "Location" header, null if non-existent.      * @throws MalformedURLException      */
 specifier|protected
 name|String
 name|extractLocation
@@ -3945,12 +3962,11 @@ name|locs
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|locs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -3994,7 +4010,7 @@ name|InterposedMessageObserver
 implements|implements
 name|MessageObserver
 block|{
-comment|/**          * Called for an incoming message.          *           * @param inMessage          */
+comment|/**          * Called for an incoming message.          *          * @param inMessage          */
 specifier|public
 name|void
 name|onMessage
@@ -4157,13 +4173,50 @@ name|IOException
 name|e
 parameter_list|)
 block|{
+name|logStackTrace
+argument_list|(
 name|e
-operator|.
-name|printStackTrace
-argument_list|()
+argument_list|)
 expr_stmt|;
 block|}
 block|}
+block|}
+specifier|protected
+name|void
+name|logStackTrace
+parameter_list|(
+name|Throwable
+name|ex
+parameter_list|)
+block|{
+name|StringWriter
+name|sw
+init|=
+operator|new
+name|StringWriter
+argument_list|()
+decl_stmt|;
+name|ex
+operator|.
+name|printStackTrace
+argument_list|(
+operator|new
+name|PrintWriter
+argument_list|(
+name|sw
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|LOG
+operator|.
+name|warning
+argument_list|(
+name|sw
+operator|.
+name|toString
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -5067,6 +5120,10 @@ name|equals
 argument_list|(
 literal|"GET"
 argument_list|)
+operator|||
+name|cachedStream
+operator|==
+literal|null
 condition|)
 block|{
 name|handleNoOutput
@@ -5749,7 +5806,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**          * This function processes any retransmits at the direction of redirections          * or "unauthorized" responses.          *           * @return true if there was a retransmit          * @throws IOException          */
+comment|/**          * This function processes any retransmits at the direction of redirections          * or "unauthorized" responses.          *          * @return true if there was a retransmit          * @throws IOException          */
 specifier|protected
 name|boolean
 name|processRetransmit
@@ -6041,7 +6098,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**          * This method performs a retransmit for authorization information.          *           * @param connection The currently active connection.          * @param message The outbound message.          * @param cachedStream The cached request.          * @return A new connection if retransmitted. If not retransmitted          *         then this method returns the same connection.          * @throws IOException          */
+comment|/**          * This method performs a retransmit for authorization information.          *          * @param connection The currently active connection.          * @param message The outbound message.          * @param cachedStream The cached request.          * @return A new connection if retransmitted. If not retransmitted          *         then this method returns the same connection.          * @throws IOException          */
 specifier|protected
 name|boolean
 name|authorizationRetransmit
@@ -6244,7 +6301,7 @@ name|getMaxRetransmits
 argument_list|()
 return|;
 block|}
-comment|/**          * This procedure is called on the close of the output stream so          * we are ready to handle the response from the connection.           * We may retransmit until we finally get a response.          *           * @throws IOException          */
+comment|/**          * This procedure is called on the close of the output stream so          * we are ready to handle the response from the connection.          * We may retransmit until we finally get a response.          *          * @throws IOException          */
 specifier|protected
 name|void
 name|handleResponse
@@ -6289,7 +6346,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**          * This predicate returns true if the exchange indicates           * a oneway MEP.          *           * @param exchange The exchange in question          */
+comment|/**          * This predicate returns true if the exchange indicates          * a oneway MEP.          *          * @param exchange The exchange in question          */
 specifier|private
 name|boolean
 name|isOneway
@@ -7196,7 +7253,7 @@ name|e
 argument_list|)
 throw|;
 block|}
-comment|/**          * This call must take place before anything is written to the           * URLConnection. The URLConnection.connect() will be called in order           * to get the connection information.           *           * This method is invoked just after setURLRequestHeaders() from the           * WrappedOutputStream before it writes data to the URLConnection.          *           * If trust cannot be established the Trust Decider implemenation          * throws an IOException.          *           * @param message      The message being sent.          * @throws IOException This exception is thrown if trust cannot be          *                     established by the configured MessageTrustDecider.          * @see MessageTrustDecider          */
+comment|/**          * This call must take place before anything is written to the          * URLConnection. The URLConnection.connect() will be called in order          * to get the connection information.          *          * This method is invoked just after setURLRequestHeaders() from the          * WrappedOutputStream before it writes data to the URLConnection.          *          * If trust cannot be established the Trust Decider implemenation          * throws an IOException.          *          * @param message      The message being sent.          * @throws IOException This exception is thrown if trust cannot be          *                     established by the configured MessageTrustDecider.          * @see MessageTrustDecider          */
 specifier|protected
 name|void
 name|makeTrustDecision
@@ -8039,9 +8096,7 @@ name|authURLs
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|message

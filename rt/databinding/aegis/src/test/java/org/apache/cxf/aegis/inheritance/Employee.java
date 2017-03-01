@@ -4,7 +4,7 @@ comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or 
 end_comment
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_package

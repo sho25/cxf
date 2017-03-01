@@ -499,9 +499,7 @@ name|tempFactories
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SpringResourceFactory
-argument_list|>
+argument_list|<>
 argument_list|(
 name|values
 operator|.
@@ -1418,9 +1416,7 @@ name|factories
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ResourceProvider
-argument_list|>
+argument_list|<>
 argument_list|(
 name|tempFactories
 operator|.

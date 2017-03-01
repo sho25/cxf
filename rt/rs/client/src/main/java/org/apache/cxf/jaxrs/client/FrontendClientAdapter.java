@@ -188,7 +188,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The adapter between JAX-RS and CXF Frontend Client, can be used in cases  * when org.apache.cxf.endpoint.Client is expected by the runtime, example when  * bus level features have to applied to a given JAX-RS client instance, etc    */
+comment|/**  * The adapter between JAX-RS and CXF Frontend Client, can be used in cases  * when org.apache.cxf.endpoint.Client is expected by the runtime, example when  * bus level features have to applied to a given JAX-RS client instance, etc  */
 end_comment
 
 begin_class

@@ -397,7 +397,7 @@ decl_stmt|;
 specifier|public
 name|NettyHttpServerEngine
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|NettyHttpServerEngine
 parameter_list|(
@@ -468,7 +468,7 @@ operator|=
 name|params
 expr_stmt|;
 block|}
-comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used       * in SpringConfiguration.      * @return      */
+comment|/**      * This method returns the programmatically set TLSServerParameters, not      * the TLSServerParametersType, which is the JAXB generated type used      * in SpringConfiguration.      * @return      */
 specifier|public
 name|TLSServerParameters
 name|getTlsServerParameters

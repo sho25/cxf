@@ -57,7 +57,7 @@ specifier|protected
 name|File
 name|outputDir
 decl_stmt|;
-comment|/**      * A set of dependent files used to detect the generator must process WSDL, even       * if generator marker files are up to date.      */
+comment|/**      * A set of dependent files used to detect the generator must process WSDL, even      * if generator marker files are up to date.      */
 name|File
 name|dependencies
 index|[]
@@ -76,9 +76,7 @@ name|extraargs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * Specifies JAXB binding files. Use spaces to separate multiple entries.      */
@@ -101,7 +99,7 @@ specifier|private
 name|String
 name|resourcename
 decl_stmt|;
-comment|/**      * Specifies package name of WADL resource elements       */
+comment|/**      * Specifies package name of WADL resource elements      */
 specifier|private
 name|String
 name|packagename
@@ -111,12 +109,12 @@ specifier|private
 name|Boolean
 name|generateImpl
 decl_stmt|;
-comment|/**      * Enables or disables generation of the interface classes. Setting this property      * only makes sense when generateImpl is also set. In other cases it is ignored and      * interfaces are always generated.      *        *       *       */
+comment|/**      * Enables or disables generation of the interface classes. Setting this property      * only makes sense when generateImpl is also set. In other cases it is ignored and      * interfaces are always generated.      *      *      *      */
 specifier|private
 name|Boolean
 name|generateInterface
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|private
 name|List
 argument_list|<
@@ -126,9 +124,7 @@ name|schemaPackagenames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

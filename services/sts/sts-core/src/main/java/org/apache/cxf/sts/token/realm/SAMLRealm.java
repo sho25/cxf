@@ -31,7 +31,7 @@ class|class
 name|SAMLRealm
 extends|extends
 name|RealmProperties
-block|{      }
+block|{  }
 end_class
 
 end_unit

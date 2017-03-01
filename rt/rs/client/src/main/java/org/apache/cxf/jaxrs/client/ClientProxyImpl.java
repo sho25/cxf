@@ -1275,7 +1275,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Updates the current state if Client method is invoked, otherwise       * does the remote invocation or returns a new proxy if subresource       * method is invoked. Can throw an expected exception if ResponseExceptionMapper      * is registered           */
+comment|/**      * Updates the current state if Client method is invoked, otherwise      * does the remote invocation or returns a new proxy if subresource      * method is invoked. Can throw an expected exception if ResponseExceptionMapper      * is registered      */
 specifier|public
 name|Object
 name|invoke
@@ -2916,9 +2916,7 @@ name|types
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3621,11 +3619,6 @@ block|}
 end_function
 
 begin_function
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"unchecked"
-argument_list|)
 specifier|private
 specifier|static
 name|List
@@ -3658,7 +3651,8 @@ literal|null
 condition|?
 name|Collections
 operator|.
-name|EMPTY_LIST
+name|emptyList
+argument_list|()
 else|:
 name|map
 operator|.

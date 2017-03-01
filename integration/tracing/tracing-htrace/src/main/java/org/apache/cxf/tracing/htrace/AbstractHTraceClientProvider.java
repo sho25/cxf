@@ -176,7 +176,7 @@ specifier|final
 name|String
 name|TRACE_SPAN
 init|=
-literal|"org.apache.cxf.tracing.htrace.span"
+literal|"org.apache.cxf.tracing.client.htrace.span"
 decl_stmt|;
 specifier|private
 specifier|final

@@ -66,7 +66,7 @@ specifier|public
 interface|interface
 name|ConduitSelector
 block|{
-comment|/**      * Called prior to the interceptor chain being traversed.      * This is the point at which an eager strategy would retrieve      * a Conduit.      *       * @param message the current Message      */
+comment|/**      * Called prior to the interceptor chain being traversed.      * This is the point at which an eager strategy would retrieve      * a Conduit.      *      * @param message the current Message      */
 name|void
 name|prepare
 parameter_list|(
@@ -74,7 +74,7 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Called when a Conduit is actually required.      * This is the point at which a lazy strategy would retrieve      * a Conduit.      *       * @param message      * @return the Conduit to use for mediation of the message      */
+comment|/**      * Called when a Conduit is actually required.      * This is the point at which a lazy strategy would retrieve      * a Conduit.      *      * @param message      * @return the Conduit to use for mediation of the message      */
 name|Conduit
 name|selectConduit
 parameter_list|(
@@ -82,7 +82,7 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Called on completion of the MEP for which the Conduit was required.      * This is the point at which a one-shot strategy would dispose of      * the Conduit.      *       * @param exchange represents the completed MEP      */
+comment|/**      * Called on completion of the MEP for which the Conduit was required.      * This is the point at which a one-shot strategy would dispose of      * the Conduit.      *      * @param exchange represents the completed MEP      */
 name|void
 name|complete
 parameter_list|(

@@ -823,7 +823,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Insert the given value as the first constructor argument in the given set. To do this, we clear the      * argument set, then re-insert all its generic arguments, then re-insert all its indexed arguments with      * their indices incremented by 1, and finally set the first indexed argument (at index 0) to the given      * value.      *       * @param constructorArgs the argument definition to modify.      * @param valueToInsert the value to insert as the first argument.      */
+comment|/**      * Insert the given value as the first constructor argument in the given set. To do this, we clear the      * argument set, then re-insert all its generic arguments, then re-insert all its indexed arguments with      * their indices incremented by 1, and finally set the first indexed argument (at index 0) to the given      * value.      *      * @param constructorArgs the argument definition to modify.      * @param valueToInsert the value to insert as the first argument.      */
 specifier|private
 name|void
 name|insertConstructorArg
@@ -843,9 +843,7 @@ name|genericArgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ValueHolder
-argument_list|>
+argument_list|<>
 argument_list|(
 name|CastUtils
 operator|.

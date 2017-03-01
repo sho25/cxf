@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The ServiceInfo class has schema in two forms: the XmlSchema, in a SchemaCollection, and the   * DOM trees in the SchemaInfo objects. This class exists in order to allow the WSDL cache to store both.  */
+comment|/**  * The ServiceInfo class has schema in two forms: the XmlSchema, in a SchemaCollection, and the  * DOM trees in the SchemaInfo objects. This class exists in order to allow the WSDL cache to store both.  */
 end_comment
 
 begin_class
@@ -157,9 +157,7 @@ name|schemaInfoList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SchemaInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 name|schemaInfoList
 argument_list|)

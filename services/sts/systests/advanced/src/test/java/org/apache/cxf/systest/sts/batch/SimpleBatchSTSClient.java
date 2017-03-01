@@ -2385,7 +2385,7 @@ operator|=
 name|onBehalfOf
 expr_stmt|;
 block|}
-comment|/**      * Indicate whether to use the signer's public X509 certificate for the subject confirmation key info       * when creating a RequestsSecurityToken message. If the property is set to 'false', only the public key       * value will be provided in the request. If the property is set to 'true' the complete certificate will       * be sent in the request.      *       * Note: this setting is only applicable for assertions that use an asymmetric proof key      */
+comment|/**      * Indicate whether to use the signer's public X509 certificate for the subject confirmation key info      * when creating a RequestsSecurityToken message. If the property is set to 'false', only the public key      * value will be provided in the request. If the property is set to 'true' the complete certificate will      * be sent in the request.      *      * Note: this setting is only applicable for assertions that use an asymmetric proof key      */
 specifier|public
 name|void
 name|setUseCertificateForConfirmationKeyInfo
@@ -3406,9 +3406,7 @@ name|tokens
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SecurityToken
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while
@@ -3699,9 +3697,7 @@ name|tokens
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SecurityToken
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while
@@ -6024,18 +6020,6 @@ operator|new
 name|EncryptedKeyProcessor
 argument_list|()
 decl_stmt|;
-name|WSDocInfo
-name|docInfo
-init|=
-operator|new
-name|WSDocInfo
-argument_list|(
-name|child
-operator|.
-name|getOwnerDocument
-argument_list|()
-argument_list|)
-decl_stmt|;
 name|RequestData
 name|data
 init|=
@@ -6071,6 +6055,25 @@ name|createHandler
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|WSDocInfo
+name|docInfo
+init|=
+operator|new
+name|WSDocInfo
+argument_list|(
+name|child
+operator|.
+name|getOwnerDocument
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|data
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|docInfo
+argument_list|)
+expr_stmt|;
 name|List
 argument_list|<
 name|WSSecurityEngineResult
@@ -6084,8 +6087,6 @@ argument_list|(
 name|child
 argument_list|,
 name|data
-argument_list|,
-name|docInfo
 argument_list|)
 decl_stmt|;
 return|return

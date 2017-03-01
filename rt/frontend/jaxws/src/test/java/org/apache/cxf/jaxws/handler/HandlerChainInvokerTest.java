@@ -475,9 +475,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -598,13 +596,8 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-comment|/*                 payload = new DOMSource();         message.setContent(Source.class, payload);*/
+comment|/*         payload = new DOMSource();         message.setContent(Source.class, payload);*/
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-literal|"rawtypes"
-argument_list|)
 annotation|@
 name|Test
 specifier|public
@@ -619,9 +612,7 @@ name|HandlerChainInvoker
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -4229,7 +4220,7 @@ name|getCloseCount
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/*                          continueProcessing = invoker.invokeLogicalHandlers(false, lmc);          assertFalse(continueProcessing);         assertTrue(invoker.faultRaised());         assertTrue(invoker.isClosed());         assertSame(pe, invoker.getFault());          assertEquals(1, logicalHandlers[0].getHandleMessageCount());         assertEquals(1, logicalHandlers[1].getHandleMessageCount());         assertEquals(1, logicalHandlers[0].getHandleFaultCount());         assertEquals(0, logicalHandlers[1].getHandleFaultCount());*/
+comment|/*          continueProcessing = invoker.invokeLogicalHandlers(false, lmc);          assertFalse(continueProcessing);         assertTrue(invoker.faultRaised());         assertTrue(invoker.isClosed());         assertSame(pe, invoker.getFault());          assertEquals(1, logicalHandlers[0].getHandleMessageCount());         assertEquals(1, logicalHandlers[1].getHandleMessageCount());         assertEquals(1, logicalHandlers[0].getHandleFaultCount());         assertEquals(0, logicalHandlers[1].getHandleFaultCount());*/
 block|}
 comment|//JAX-WS 9.3.2.1:
 comment|//Throw ProtocolException or a subclass This indicates that normal message processing should cease.

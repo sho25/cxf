@@ -767,7 +767,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Based on the Schema Validation configuration, will initialise the      * DataReader with or without the schema set.      *       * Can also be called to override schema validation at operation level, thus the reader.setSchema(null)      * to remove schema validation      */
+comment|/**      * Based on the Schema Validation configuration, will initialise the      * DataReader with or without the schema set.      *      * Can also be called to override schema validation at operation level, thus the reader.setSchema(null)      * to remove schema validation      */
 specifier|protected
 name|void
 name|setDataReaderValidation
@@ -939,7 +939,7 @@ return|return
 name|dr
 return|;
 block|}
-comment|/**      * Find the next possible message part in the message. If an operation in      * the list of operations is no longer a viable match, it will be removed      * from the Collection.      *       * @param exchange      * @param operations      * @param name      * @param client      * @param index      */
+comment|/**      * Find the next possible message part in the message. If an operation in      * the list of operations is no longer a viable match, it will be removed      * from the Collection.      *      * @param exchange      * @param operations      * @param name      * @param client      * @param index      */
 specifier|protected
 name|MessagePartInfo
 name|findMessagePart
@@ -1543,7 +1543,7 @@ return|return
 name|msgInfo
 return|;
 block|}
-comment|/**      * Returns a BindingOperationInfo if the operation is indentified as       * a wrapped method,  return null if it is not a wrapped method       * (i.e., it is a bare method)      *       * @param exchange      * @param name      * @param client      */
+comment|/**      * Returns a BindingOperationInfo if the operation is indentified as      * a wrapped method,  return null if it is not a wrapped method      * (i.e., it is a bare method)      *      * @param exchange      * @param name      * @param client      */
 specifier|protected
 name|BindingOperationInfo
 name|getBindingOperationInfo

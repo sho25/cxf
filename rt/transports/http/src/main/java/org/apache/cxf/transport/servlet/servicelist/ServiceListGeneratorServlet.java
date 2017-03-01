@@ -135,6 +135,18 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|BusFactory
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|common
 operator|.
 name|util
@@ -293,6 +305,27 @@ name|bus
 operator|=
 name|bus
 expr_stmt|;
+if|if
+condition|(
+name|this
+operator|.
+name|bus
+operator|==
+literal|null
+condition|)
+block|{
+name|this
+operator|.
+name|bus
+operator|=
+name|BusFactory
+operator|.
+name|getDefaultBus
+argument_list|(
+literal|false
+argument_list|)
+expr_stmt|;
+block|}
 name|this
 operator|.
 name|title
@@ -522,9 +555,7 @@ name|privateEndpoints
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -844,9 +875,7 @@ name|soapEndpoints
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractDestination
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -940,9 +969,7 @@ name|restfulDests
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractDestination
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1180,7 +1207,7 @@ specifier|public
 name|void
 name|destroy
 parameter_list|()
-block|{      }
+block|{     }
 block|}
 end_class
 

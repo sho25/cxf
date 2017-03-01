@@ -1502,9 +1502,7 @@ name|noExts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ExtensibilityElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -1515,9 +1513,7 @@ name|exts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ExtensibilityElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|exts
@@ -1698,9 +1694,7 @@ name|exts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ExtensibilityElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ExtensibilityElement

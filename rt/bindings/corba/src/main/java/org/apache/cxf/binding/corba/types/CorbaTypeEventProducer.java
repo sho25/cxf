@@ -78,7 +78,7 @@ name|boolean
 name|hasNext
 parameter_list|()
 function_decl|;
-comment|/*       * return the current event      */
+comment|/*      * return the current event      */
 name|int
 name|next
 parameter_list|()

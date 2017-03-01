@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Represents the extended client view of {@link AccessToken}.  * It may contain the actual scope value assigned to the access token,  * the refresh token key, and other properties such as when this token   * will expire, etc.  */
+comment|/**  * Represents the extended client view of {@link AccessToken}.  * It may contain the actual scope value assigned to the access token,  * the refresh token key, and other properties such as when this token  * will expire, etc.  */
 end_comment
 
 begin_class
@@ -67,7 +67,7 @@ decl_stmt|;
 specifier|public
 name|ClientAccessToken
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ClientAccessToken
 parameter_list|(
@@ -86,7 +86,7 @@ name|tokenKey
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Sets the actual scope assigned to the access token.      * For example, it can be down-scoped in which case the client      * may need to adjust the way it works with the end user.       * @param approvedScope the actual scope      */
+comment|/**      * Sets the actual scope assigned to the access token.      * For example, it can be down-scoped in which case the client      * may need to adjust the way it works with the end user.      * @param approvedScope the actual scope      */
 specifier|public
 name|void
 name|setApprovedScope

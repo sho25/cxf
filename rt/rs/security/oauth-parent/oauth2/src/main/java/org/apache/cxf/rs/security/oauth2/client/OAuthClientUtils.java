@@ -390,8 +390,8 @@ block|{
 specifier|private
 name|OAuthClientUtils
 parameter_list|()
-block|{              }
-comment|/**      * Builds a complete URI for redirecting to OAuth Authorization Service      * @param authorizationServiceURI the service endpoint address      * @param clientId client registration id      * @param redirectUri the uri the authorization code will be posted to      * @param state the client state, example the key or the encrypted token       *              representing the info about the current end user's request      * @scope scope the optional scope; if not specified then the authorization      *              service will allocate the default scope                     * @return authorization service URI      */
+block|{      }
+comment|/**      * Builds a complete URI for redirecting to OAuth Authorization Service      * @param authorizationServiceURI the service endpoint address      * @param clientId client registration id      * @param redirectUri the uri the authorization code will be posted to      * @param state the client state, example the key or the encrypted token      *              representing the info about the current end user's request      * @scope scope the optional scope; if not specified then the authorization      *              service will allocate the default scope      * @return authorization service URI      */
 specifier|public
 specifier|static
 name|URI
@@ -549,7 +549,7 @@ return|return
 name|ub
 return|;
 block|}
-comment|/**      * Creates the builder for building OAuth AuthorizationService URIs      * @param authorizationServiceURI the service endpoint address       * @param clientId client registration id      * @param scope the optional scope; if not specified then the authorization      *              service will allocate the default scope      * @return the builder      */
+comment|/**      * Creates the builder for building OAuth AuthorizationService URIs      * @param authorizationServiceURI the service endpoint address      * @param clientId client registration id      * @param scope the optional scope; if not specified then the authorization      *              service will allocate the default scope      * @return the builder      */
 specifier|public
 specifier|static
 name|UriBuilder
@@ -630,7 +630,7 @@ return|return
 name|ub
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client       * @param grant {@link AccessTokenGrant} grant      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client      * @param grant {@link AccessTokenGrant} grant      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -661,7 +661,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * @param accessTokenServiceUri the AccessToken endpoint address      * @param consumer {@link Consumer} representing the registered client       * @param grant {@link AccessTokenGrant} grant      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * @param accessTokenServiceUri the AccessToken endpoint address      * @param consumer {@link Consumer} representing the registered client      * @param grant {@link AccessTokenGrant} grant      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -726,7 +726,7 @@ name|setAuthorizationHeader
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload        * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -760,7 +760,7 @@ name|setAuthorizationHeader
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -790,7 +790,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -828,7 +828,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload        * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -988,7 +988,7 @@ name|setAuthorizationHeader
 argument_list|)
 return|;
 block|}
-comment|/**      * Obtains the access token from OAuth AccessToken Service       * using the initialized web client       * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @param defaultTokenType default expected token type - some early      *        well-known OAuth2 services do not return a required token_type parameter      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload        * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
+comment|/**      * Obtains the access token from OAuth AccessToken Service      * using the initialized web client      * @param accessTokenService the AccessToken client      * @param consumer {@link Consumer} representing the registered client.      * @param grant {@link AccessTokenGrant} grant      * @param extraParams extra parameters      * @param defaultTokenType default expected token type - some early      *        well-known OAuth2 services do not return a required token_type parameter      * @param setAuthorizationHeader if set to true then HTTP Basic scheme      *           will be used to pass client id and secret, otherwise they will      *           be passed in the form payload      * @return {@link ClientAccessToken} access token      * @throws OAuthServiceException      */
 specifier|public
 specifier|static
 name|ClientAccessToken
@@ -1655,7 +1655,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Creates OAuth Authorization header with Bearer scheme      * @param accessToken the access token        * @return the header value      */
+comment|/**      * Creates OAuth Authorization header with Bearer scheme      * @param accessToken the access token      * @return the header value      */
 specifier|public
 specifier|static
 name|String
@@ -1676,7 +1676,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Creates OAuth Authorization header with the scheme that      * may require an access to the current HTTP request properties      * @param accessToken the access token        * @param httpProps http request properties, can be null for Bearer tokens      * @return the header value      */
+comment|/**      * Creates OAuth Authorization header with the scheme that      * may require an access to the current HTTP request properties      * @param accessToken the access token      * @param httpProps http request properties, can be null for Bearer tokens      * @return the header value      */
 specifier|public
 specifier|static
 name|String

@@ -325,9 +325,7 @@ name|bs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|bs
@@ -538,9 +536,7 @@ name|bs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|bs
@@ -1276,9 +1272,7 @@ name|bs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|bs
@@ -2164,9 +2158,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|CustomEntryReader
@@ -2278,7 +2270,7 @@ decl_stmt|;
 specifier|public
 name|Book
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|Book
 parameter_list|(
@@ -2348,7 +2340,7 @@ decl_stmt|;
 specifier|public
 name|Books
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|List
 argument_list|<

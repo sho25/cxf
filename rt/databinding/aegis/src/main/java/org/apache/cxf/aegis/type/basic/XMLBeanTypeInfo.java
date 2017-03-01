@@ -372,15 +372,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
-name|ignore
-operator|!=
-literal|null
-operator|&&
-name|ignore
+literal|"true"
 operator|.
 name|equals
 argument_list|(
-literal|"true"
+name|ignore
 argument_list|)
 condition|)
 block|{
@@ -1123,7 +1119,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * Grab the Property Info for the given property      *       * @param name      * @return the BeanTypePropertyInfo for the property or NULL if none found      */
+comment|/**      * Grab the Property Info for the given property      *      * @param name      * @return the BeanTypePropertyInfo for the property or NULL if none found      */
 specifier|private
 name|BeanTypePropertyInfo
 name|getPropertyInfo
@@ -1141,7 +1137,7 @@ name|name
 argument_list|)
 return|;
 block|}
-comment|/**      * Grab the Property Info for the given property but if not found create one      * and add it to the map      *       * @param name      * @return the BeanTypePropertyInfo for the property      */
+comment|/**      * Grab the Property Info for the given property but if not found create one      * and add it to the map      *      * @param name      * @return the BeanTypePropertyInfo for the property      */
 specifier|private
 name|BeanTypePropertyInfo
 name|ensurePropertyInfo

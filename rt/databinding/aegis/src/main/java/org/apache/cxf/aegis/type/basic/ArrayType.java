@@ -476,9 +476,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}
@@ -2622,9 +2620,7 @@ name|deps
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|AegisType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|deps

@@ -54,7 +54,7 @@ decl_stmt|;
 specifier|private
 name|UIDManager
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|int

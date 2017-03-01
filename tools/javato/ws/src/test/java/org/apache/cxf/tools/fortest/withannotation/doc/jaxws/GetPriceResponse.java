@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for getPriceResponse element declaration.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;element name="getPriceResponse">  *&lt;complexType>  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="responseType" type="{http://www.w3.org/2001/XMLSchema}float"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *&lt;/element>  *</pre>  *   *   */
+comment|/**  *<p>Java class for getPriceResponse element declaration.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;element name="getPriceResponse">  *&lt;complexType>  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="responseType" type="{http://www.w3.org/2001/XMLSchema}float"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *&lt;/element>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -92,7 +92,7 @@ specifier|protected
 name|float
 name|responseType
 decl_stmt|;
-comment|/**      * Gets the value of the responseType property.      *       */
+comment|/**      * Gets the value of the responseType property.      *      */
 specifier|public
 name|float
 name|getResponseType
@@ -102,7 +102,7 @@ return|return
 name|responseType
 return|;
 block|}
-comment|/**      * Sets the value of the responseType property.      *       */
+comment|/**      * Sets the value of the responseType property.      *      */
 specifier|public
 name|void
 name|setResponseType

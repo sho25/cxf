@@ -212,7 +212,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -319,9 +319,7 @@ block|}
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|TestCaseType
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}
@@ -461,7 +459,7 @@ name|getValue
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * @param testcase      * @param session      * @param rtd      * @return      * @throws JMSException       */
+comment|/**      * @param testcase      * @param session      * @param rtd      * @return      * @throws JMSException      */
 specifier|public
 specifier|static
 name|Message

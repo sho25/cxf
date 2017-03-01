@@ -345,7 +345,7 @@ block|}
 specifier|private
 name|SpecExceptions
 parameter_list|()
-block|{             }
+block|{     }
 specifier|public
 specifier|static
 name|Class

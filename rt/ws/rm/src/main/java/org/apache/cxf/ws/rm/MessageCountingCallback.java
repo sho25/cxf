@@ -101,7 +101,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Get the number of messages accepted for sending which have not yet been acknowledged.      *       * @return count      */
+comment|/**      * Get the number of messages accepted for sending which have not yet been acknowledged.      *      * @return count      */
 specifier|public
 name|int
 name|getCountOutstanding
@@ -111,7 +111,7 @@ return|return
 name|countOutstanding
 return|;
 block|}
-comment|/**      * Wait for all accepted messages to be acknowledged.      *       * @param timeout maximum time to wait, in milliseconds (no timeout if 0)      * @return<code>true</code> if all accepted messages acknowledged,<code>false</code> if timed out      */
+comment|/**      * Wait for all accepted messages to be acknowledged.      *      * @param timeout maximum time to wait, in milliseconds (no timeout if 0)      * @return<code>true</code> if all accepted messages acknowledged,<code>false</code> if timed out      */
 specifier|public
 name|boolean
 name|waitComplete

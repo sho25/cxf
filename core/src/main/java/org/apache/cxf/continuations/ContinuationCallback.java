@@ -24,12 +24,12 @@ specifier|public
 interface|interface
 name|ContinuationCallback
 block|{
-comment|/**      * This method is called when the container completes writing the response to the client        */
+comment|/**      * This method is called when the container completes writing the response to the client      */
 name|void
 name|onComplete
 parameter_list|()
 function_decl|;
-comment|/**      * This method is called when the exception gets propagated to the container        * @param error the propagated exception instance      */
+comment|/**      * This method is called when the exception gets propagated to the container      * @param error the propagated exception instance      */
 name|void
 name|onError
 parameter_list|(

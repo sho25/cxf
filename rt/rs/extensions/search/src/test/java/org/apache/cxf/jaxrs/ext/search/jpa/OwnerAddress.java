@@ -49,7 +49,7 @@ decl_stmt|;
 specifier|public
 name|OwnerAddress
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|OwnerAddress
 parameter_list|(

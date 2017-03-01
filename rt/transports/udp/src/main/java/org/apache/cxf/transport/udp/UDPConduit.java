@@ -466,7 +466,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -905,9 +905,7 @@ name|s
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|message
 operator|.
@@ -1144,10 +1142,8 @@ operator|.
 name|getSession
 argument_list|()
 operator|.
-name|close
-argument_list|(
-literal|false
-argument_list|)
+name|closeOnFlush
+argument_list|()
 expr_stmt|;
 block|}
 block|}
@@ -1190,10 +1186,8 @@ operator|.
 name|getSession
 argument_list|()
 operator|.
-name|close
-argument_list|(
-literal|false
-argument_list|)
+name|closeOnFlush
+argument_list|()
 expr_stmt|;
 block|}
 block|}

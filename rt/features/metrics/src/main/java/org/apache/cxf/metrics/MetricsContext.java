@@ -38,7 +38,7 @@ specifier|public
 interface|interface
 name|MetricsContext
 block|{
-comment|/**      * Will be called at the start of invoke (or when added to a started MessageMetrics).  This is      * when the metrics should increment "inFlight" counts and other stats.   There is no need to       * record a "start time" as the invoke time will be passed into the stop method.      */
+comment|/**      * Will be called at the start of invoke (or when added to a started MessageMetrics).  This is      * when the metrics should increment "inFlight" counts and other stats.   There is no need to      * record a "start time" as the invoke time will be passed into the stop method.      */
 name|void
 name|start
 parameter_list|(
@@ -46,7 +46,7 @@ name|Exchange
 name|m
 parameter_list|)
 function_decl|;
-comment|/**      * Called when the invocation is complete.      *       * @param timeInNS      * @param inSize      * @param outSize      * @param fm      */
+comment|/**      * Called when the invocation is complete.      *      * @param timeInNS      * @param inSize      * @param outSize      * @param fm      */
 name|void
 name|stop
 parameter_list|(

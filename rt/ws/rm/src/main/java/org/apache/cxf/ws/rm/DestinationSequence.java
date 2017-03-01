@@ -540,9 +540,7 @@ name|deliveringMessageNumbers
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -709,7 +707,7 @@ return|return
 name|lastMessageNumber
 return|;
 block|}
-comment|/**      * @return the sequence acknowledgement presenting the sequences thus far received by a destination       */
+comment|/**      * @return the sequence acknowledgement presenting the sequences thus far received by a destination      */
 specifier|public
 name|SequenceAcknowledgement
 name|getAcknowledgment
@@ -1444,7 +1442,7 @@ return|return
 name|destination
 return|;
 block|}
-comment|/**      * Returns the monitor for this sequence.      *       * @return the sequence monitor.      */
+comment|/**      * Returns the monitor for this sequence.      *      * @return the sequence monitor.      */
 name|SequenceMonitor
 name|getMonitor
 parameter_list|()
@@ -1493,7 +1491,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Ensures that the delivery assurance is honored.      * If the delivery assurance includes either AtLeastOnce or ExactlyOnce, combined with InOrder, this      * queues out-of-order messages for processing after the missing messages have been received.      *       * @param mn message number      * @return<code>true</code> if message processing to continue,<code>false</code> if to be dropped      */
+comment|/**      * Ensures that the delivery assurance is honored.      * If the delivery assurance includes either AtLeastOnce or ExactlyOnce, combined with InOrder, this      * queues out-of-order messages for processing after the missing messages have been received.      *      * @param mn message number      * @return<code>true</code> if message processing to continue,<code>false</code> if to be dropped      */
 name|boolean
 name|applyDeliveryAssurance
 parameter_list|(
@@ -2469,9 +2467,7 @@ name|deferredAcknowledgments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DeferredAcknowledgment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

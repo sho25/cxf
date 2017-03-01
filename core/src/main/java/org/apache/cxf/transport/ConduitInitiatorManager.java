@@ -55,7 +55,7 @@ name|String
 name|name
 parameter_list|)
 function_decl|;
-comment|/**      * Returns the<code>ConduitInitiator</code> registered with the specified name,       * loading the appropriate plugin if necessary.      *       * @param name      * @return the registered<code>ConduitInitiator</code>      * @throws BusException      */
+comment|/**      * Returns the<code>ConduitInitiator</code> registered with the specified name,      * loading the appropriate plugin if necessary.      *      * @param name      * @return the registered<code>ConduitInitiator</code>      * @throws BusException      */
 name|ConduitInitiator
 name|getConduitInitiator
 parameter_list|(

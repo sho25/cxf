@@ -774,7 +774,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1191,6 +1191,8 @@ name|UsernameTokenPrincipal
 operator|)
 name|principal
 argument_list|,
+name|subject
+argument_list|,
 name|message
 argument_list|)
 expr_stmt|;
@@ -1367,6 +1369,9 @@ parameter_list|(
 name|UsernameTokenPrincipal
 name|principal
 parameter_list|,
+name|Subject
+name|subject
+parameter_list|,
 name|SoapMessage
 name|message
 parameter_list|)
@@ -1406,12 +1411,9 @@ operator|.
 name|UT_NOPASSWORD
 expr_stmt|;
 block|}
-name|v
-operator|.
-name|add
-argument_list|(
-literal|0
-argument_list|,
+name|WSSecurityEngineResult
+name|result
+init|=
 operator|new
 name|WSSecurityEngineResult
 argument_list|(
@@ -1425,6 +1427,33 @@ literal|null
 argument_list|,
 literal|null
 argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|subject
+operator|!=
+literal|null
+condition|)
+block|{
+name|result
+operator|.
+name|put
+argument_list|(
+name|WSSecurityEngineResult
+operator|.
+name|TAG_SUBJECT
+argument_list|,
+name|subject
+argument_list|)
+expr_stmt|;
+block|}
+name|v
+operator|.
+name|add
+argument_list|(
+literal|0
+argument_list|,
+name|result
 argument_list|)
 expr_stmt|;
 name|List
@@ -1564,18 +1593,6 @@ operator|new
 name|UsernameTokenProcessor
 argument_list|()
 decl_stmt|;
-name|WSDocInfo
-name|wsDocInfo
-init|=
-operator|new
-name|WSDocInfo
-argument_list|(
-name|tokenElement
-operator|.
-name|getOwnerDocument
-argument_list|()
-argument_list|)
-decl_stmt|;
 name|RequestData
 name|data
 init|=
@@ -1703,6 +1720,25 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
+name|WSDocInfo
+name|wsDocInfo
+init|=
+operator|new
+name|WSDocInfo
+argument_list|(
+name|tokenElement
+operator|.
+name|getOwnerDocument
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|data
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|List
@@ -1718,8 +1754,6 @@ argument_list|(
 name|tokenElement
 argument_list|,
 name|data
-argument_list|,
-name|wsDocInfo
 argument_list|)
 decl_stmt|;
 return|return
@@ -2051,7 +2085,7 @@ name|subject
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a Subject representing a current user and its roles.       * This Subject is expected to contain at least one Principal representing a user      * and optionally followed by one or more principal Groups this user is a member of.      * @param name username      * @param password password      * @param isDigest true if a password digest is used      * @param nonce optional nonce      * @param created optional timestamp      * @return subject      * @throws SecurityException      */
+comment|/**      * Create a Subject representing a current user and its roles.      * This Subject is expected to contain at least one Principal representing a user      * and optionally followed by one or more principal Groups this user is a member of.      * @param name username      * @param password password      * @param isDigest true if a password digest is used      * @param nonce optional nonce      * @param created optional timestamp      * @return subject      * @throws SecurityException      */
 specifier|protected
 name|Subject
 name|createSubject

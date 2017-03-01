@@ -178,7 +178,7 @@ decl_stmt|;
 specifier|public
 name|SoapBindingConfiguration
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|Override
 specifier|public

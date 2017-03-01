@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -149,7 +149,7 @@ specifier|private
 name|WebSocketUtils
 parameter_list|()
 block|{     }
-comment|/**      * Read header properties from the specified input stream.      *        * Only a restricted syntax is allowed as the syntax is in our control.      * Not allowed are:      * - multiline or line-wrapped headers are not not      * - charset other than utf-8. (although i would have preferred iso-8859-1 ;-)      *       * @param in the input stream      * @param req true if the input stream includes the request line      * @return a map of name value pairs.      * @throws IOException      */
+comment|/**      * Read header properties from the specified input stream.      *      * Only a restricted syntax is allowed as the syntax is in our control.      * Not allowed are:      * - multiline or line-wrapped headers are not not      * - charset other than utf-8. (although i would have preferred iso-8859-1 ;-)      *      * @param in the input stream      * @param req true if the input stream includes the request line      * @return a map of name value pairs.      * @throws IOException      */
 specifier|public
 specifier|static
 name|Map
@@ -391,7 +391,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Read a line terminated by '\n' optionally preceded by '\r' from the       * specified input stream.      * @param in the input stream      * @return      * @throws IOException      */
+comment|/**      * Read a line terminated by '\n' optionally preceded by '\r' from the      * specified input stream.      * @param in the input stream      * @return      * @throws IOException      */
 comment|// this is copied from AttachmentDeserializer with a minor change to restrict the line termination rule.
 specifier|public
 specifier|static
@@ -972,7 +972,7 @@ return|return
 name|hl
 return|;
 block|}
-comment|/**      * Build request bytes with the specified method, url, headers, and content entity.      *       * @param method      * @param url      * @param headers      * @param data      * @param offset      * @param length      * @return      */
+comment|/**      * Build request bytes with the specified method, url, headers, and content entity.      *      * @param method      * @param url      * @param headers      * @param data      * @param offset      * @param length      * @return      */
 specifier|public
 specifier|static
 name|byte

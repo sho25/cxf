@@ -307,7 +307,7 @@ return|return
 name|returnVal
 return|;
 block|}
-comment|/**      *       * @param out      * @param outHeader      * @param in      */
+comment|/**      *      * @param out      * @param outHeader      * @param in      */
 specifier|public
 name|void
 name|testHeader2
@@ -441,7 +441,7 @@ return|return
 name|returnVal
 return|;
 block|}
-comment|/**      *       * @param requestType      */
+comment|/**      *      * @param requestType      */
 specifier|public
 name|void
 name|testHeader4
@@ -449,7 +449,7 @@ parameter_list|(
 name|String
 name|requestType
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|testHeader5

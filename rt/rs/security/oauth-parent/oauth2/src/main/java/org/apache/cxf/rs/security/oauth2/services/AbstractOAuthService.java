@@ -478,7 +478,7 @@ name|getQueryParameters
 argument_list|()
 return|;
 block|}
-comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference       * @throws {@link OAuthServiceExcepption} if no matching Client is found      */
+comment|/**      * Get the {@link Client} reference      * @param clientId the provided client id      * @return Client the client reference      * @throws {@link OAuthServiceExcepption} if no matching Client is found      */
 specifier|protected
 name|Client
 name|getValidClient
@@ -560,7 +560,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * HTTPS is the default transport for OAuth 2.0 services.      * By default this method will issue a warning for open       * endpoints      */
+comment|/**      * HTTPS is the default transport for OAuth 2.0 services.      * By default this method will issue a warning for open      * endpoints      */
 specifier|protected
 name|void
 name|checkTransportSecurity
@@ -582,7 +582,7 @@ name|LOG
 operator|.
 name|warning
 argument_list|(
-literal|"Unsecure HTTP, Transport Layer Security is recommended"
+literal|"Unsecure HTTP, HTTPS is recommended"
 argument_list|)
 expr_stmt|;
 if|if
@@ -726,7 +726,7 @@ argument_list|()
 argument_list|)
 throw|;
 block|}
-comment|/**      * HTTPS is the default transport for OAuth 2.0 services, this property       * can be used to block all the requests issued over HTTP      *       * @param blockUnsecureRequests if set to true then HTTP requests will be blocked      */
+comment|/**      * HTTPS is the default transport for OAuth 2.0 services, this property      * can be used to block all the requests issued over HTTP      *      * @param blockUnsecureRequests if set to true then HTTP requests will be blocked      */
 specifier|public
 name|void
 name|setBlockUnsecureRequests

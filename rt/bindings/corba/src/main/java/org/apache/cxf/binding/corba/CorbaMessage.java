@@ -256,9 +256,7 @@ name|arguments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaStreamable
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -359,9 +357,7 @@ name|arguments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaStreamable
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1
 argument_list|)
@@ -428,9 +424,7 @@ name|arguments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaStreamable
-argument_list|>
+argument_list|<>
 argument_list|(
 name|data
 operator|.

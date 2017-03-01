@@ -76,7 +76,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Wrapper class for Strings. This is necessary when sending/receiving Strings in Web Services.  *   * @author joshua.shannon  */
+comment|/**  * Wrapper class for Strings. This is necessary when sending/receiving Strings in Web Services.  *  * @author joshua.shannon  */
 end_comment
 
 begin_class

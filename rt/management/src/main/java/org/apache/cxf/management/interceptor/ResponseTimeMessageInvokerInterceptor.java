@@ -102,7 +102,7 @@ import|;
 end_import
 
 begin_comment
-comment|/* When the message get from the server side  * The exchange.isOneWay() is workable when the message  * handler by the binging interceptor    * */
+comment|/* When the message get from the server side  * The exchange.isOneWay() is workable when the message  * handler by the binging interceptor  * */
 end_comment
 
 begin_class

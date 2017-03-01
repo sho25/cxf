@@ -2605,9 +2605,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -2618,9 +2616,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -2661,7 +2657,7 @@ name|providerList
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully issue a Saml 1.1 token. The claims information is included as a       * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
+comment|/**      * Test to successfully issue a Saml 1.1 token. The claims information is included as a      * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
 annotation|@
 name|org
 operator|.
@@ -3081,9 +3077,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenProvider
@@ -3108,9 +3102,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -3171,9 +3163,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -3220,9 +3210,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -3857,9 +3845,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenProvider
@@ -3884,9 +3870,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -3947,9 +3931,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -3996,9 +3978,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -5429,9 +5409,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList

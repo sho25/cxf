@@ -456,7 +456,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Returns a collection of all sequences for which have not yet been      * completely acknowledged.      *       * @return the collection of unacknowledged sequences.      */
+comment|/**      * Returns a collection of all sequences for which have not yet been      * completely acknowledged.      *      * @return the collection of unacknowledged sequences.      */
 specifier|public
 name|Collection
 argument_list|<
@@ -473,9 +473,7 @@ name|seqs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -511,7 +509,7 @@ return|return
 name|seqs
 return|;
 block|}
-comment|/**      * Returns the current sequence used by a client side source.      *       * @return the current sequence.      */
+comment|/**      * Returns the current sequence used by a client side source.      *      * @return the current sequence.      */
 name|SourceSequence
 name|getCurrent
 parameter_list|()
@@ -540,7 +538,7 @@ name|s
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Returns the current sequence used by a server side source for responses to a message      * sent as part of the inbound sequence with the specified identifier.      *       * @return the current sequence.      */
+comment|/**      * Returns the current sequence used by a server side source for responses to a message      * sent as part of the inbound sequence with the specified identifier.      *      * @return the current sequence.      */
 name|SourceSequence
 name|getCurrent
 parameter_list|(
@@ -571,7 +569,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Returns the sequence associated with the given identifier.      *       * @param i the corresponding sequence identifier      * @return the associated sequence      * @pre the sequenceCreationLock is already held      */
+comment|/**      * Returns the sequence associated with the given identifier.      *      * @param i the corresponding sequence identifier      * @return the associated sequence      * @pre the sequenceCreationLock is already held      */
 name|SourceSequence
 name|getAssociatedSequence
 parameter_list|(
@@ -597,7 +595,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Await the availability of a sequence corresponding to the given identifier.      *       * @param i the sequence identifier      * @return      */
+comment|/**      * Await the availability of a sequence corresponding to the given identifier.      *      * @param i the sequence identifier      * @return      */
 name|SourceSequence
 name|awaitCurrent
 parameter_list|(

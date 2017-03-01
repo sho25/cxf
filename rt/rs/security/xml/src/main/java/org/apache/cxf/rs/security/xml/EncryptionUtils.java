@@ -212,7 +212,7 @@ block|{
 specifier|private
 name|EncryptionUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|Cipher

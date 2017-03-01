@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Aegis abstraction for a object. Types are responsible for reading and writing the contents   * of objects, but not, almost always, their own outermost XML element.  *   */
+comment|/**  * Aegis abstraction for a object. Types are responsible for reading and writing the contents  * of objects, but not, almost always, their own outermost XML element.  *  */
 end_comment
 
 begin_class
@@ -191,7 +191,7 @@ specifier|public
 name|AegisType
 parameter_list|()
 block|{     }
-comment|/**      * Read in the XML fragment and create an object.      *       * @param reader      * @param context      * @return      * @throws DatabindingException      */
+comment|/**      * Read in the XML fragment and create an object.      *      * @param reader      * @param context      * @return      * @throws DatabindingException      */
 specifier|public
 specifier|abstract
 name|Object
@@ -206,7 +206,7 @@ parameter_list|)
 throws|throws
 name|DatabindingException
 function_decl|;
-comment|/**      * Writes the object to the MessageWriter.      *       * @param object      * @param writer      * @param context      * @throws DatabindingException      */
+comment|/**      * Writes the object to the MessageWriter.      *      * @param object      * @param writer      * @param context      * @throws DatabindingException      */
 specifier|public
 specifier|abstract
 name|void
@@ -233,7 +233,7 @@ name|XmlSchema
 name|root
 parameter_list|)
 block|{     }
-comment|/**      * If the type object merely wants to contribute attributes to the       * xsd:element element, it can implement this.       * @param schemaElement      */
+comment|/**      * If the type object merely wants to contribute attributes to the      * xsd:element element, it can implement this.      * @param schemaElement      */
 specifier|public
 name|void
 name|addToSchemaElement
@@ -268,7 +268,7 @@ operator|=
 name|typeMapping
 expr_stmt|;
 block|}
-comment|/**      * @return Returns the java type as a Class.       * For a generic, return the raw type. For something      * truly exotic, return null.      */
+comment|/**      * @return Returns the java type as a Class.      * For a generic, return the raw type. For something      * truly exotic, return null.      */
 specifier|public
 name|Class
 argument_list|<
@@ -406,7 +406,7 @@ operator|=
 name|nillable
 expr_stmt|;
 block|}
-comment|/**      * Return a set of AegisType dependencies. Returns null if this type has no      * dependencies.      *       * @return Set of<code>AegisType</code> dependencies      */
+comment|/**      * Return a set of AegisType dependencies. Returns null if this type has no      * dependencies.      *      * @return Set of<code>AegisType</code> dependencies      */
 specifier|public
 name|Set
 argument_list|<

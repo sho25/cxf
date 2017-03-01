@@ -53,6 +53,16 @@ name|java
 operator|.
 name|io
 operator|.
+name|PrintWriter
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|io
+operator|.
 name|StringWriter
 import|;
 end_import
@@ -165,9 +175,27 @@ name|ext
 operator|.
 name|logging
 operator|.
+name|event
+operator|.
+name|PrintWriterEventSender
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
 name|slf4j
 operator|.
-name|Slf4jEventSender
+name|Slf4jVerboseEventSender
 import|;
 end_import
 
@@ -270,7 +298,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -289,8 +317,25 @@ block|{
 name|this
 argument_list|(
 operator|new
-name|Slf4jEventSender
+name|Slf4jVerboseEventSender
 argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|LoggingOutInterceptor
+parameter_list|(
+name|PrintWriter
+name|writer
+parameter_list|)
+block|{
+name|this
+argument_list|(
+operator|new
+name|PrintWriterEventSender
+argument_list|(
+name|writer
+argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
@@ -331,6 +376,16 @@ parameter_list|)
 throws|throws
 name|Fault
 block|{
+if|if
+condition|(
+name|isLoggingDisabledNow
+argument_list|(
+name|message
+argument_list|)
+condition|)
+block|{
+return|return;
+block|}
 name|createExchangeId
 argument_list|(
 name|message

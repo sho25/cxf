@@ -306,7 +306,7 @@ specifier|final
 name|TikaContentExtractor
 name|extractor
 decl_stmt|;
-comment|/**      * Create new Tika-based content extractor using the provided parser instance.        * @param parser parser instance      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance.      * @param parser parser instance      */
 specifier|public
 name|TikaLuceneContentExtractor
 parameter_list|(
@@ -323,7 +323,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation       * will try to detect the media type of the input and validate it against media typesthis.contentFieldName      * supported by the parser.      * @param parser parser instance      * @param validateMediaType enabled or disable media type validation      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation      * will try to detect the media type of the input and validate it against media typesthis.contentFieldName      * supported by the parser.      * @param parser parser instance      * @param validateMediaType enabled or disable media type validation      */
 specifier|public
 name|TikaLuceneContentExtractor
 parameter_list|(
@@ -348,7 +348,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation       * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param documentMetadata documentMetadata      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation      * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param documentMetadata documentMetadata      */
 specifier|public
 name|TikaLuceneContentExtractor
 parameter_list|(
@@ -373,7 +373,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation       * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param validateMediaType enabled or disable media type validation      * @param documentMetadata documentMetadata      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation      * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param validateMediaType enabled or disable media type validation      * @param documentMetadata documentMetadata      */
 specifier|public
 name|TikaLuceneContentExtractor
 parameter_list|(
@@ -409,7 +409,7 @@ operator|=
 name|documentMetadata
 expr_stmt|;
 block|}
-comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation       * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param validateMediaType enabled or disable media type validation      * @param documentMetadata documentMetadata      */
+comment|/**      * Create new Tika-based content extractor using the provided parser instance and      * optional media type validation. If validation is enabled, the implementation      * will try to detect the media type of the input and validate it against media types      * supported by the parser.      * @param parser parser instancethis.contentFieldName      * @param validateMediaType enabled or disable media type validation      * @param documentMetadata documentMetadata      */
 specifier|public
 name|TikaLuceneContentExtractor
 parameter_list|(
@@ -442,7 +442,7 @@ operator|=
 name|documentMetadata
 expr_stmt|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the content and metadata from        * @return the extracted document or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the content and metadata from      * @return the extracted document or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|Document
 name|extract
@@ -465,7 +465,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the content and metadata from        * @param documentMetadata documentMetadata      * @return the extracted document or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the content and metadata from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the content and metadata from      * @param documentMetadata documentMetadata      * @return the extracted document or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|Document
 name|extract
@@ -492,7 +492,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the content only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the content from        * @return the extracted document or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the content only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the content from      * @return the extracted document or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|Document
 name|extractContent
@@ -515,7 +515,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the metadata from        * @return the extracted document or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the metadata from      * @return the extracted document or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|Document
 name|extractMetadata
@@ -538,7 +538,7 @@ literal|true
 argument_list|)
 return|;
 block|}
-comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.       * @param in input stream to extract the metadata from      * @param documentMetadata documentMetadata        * @return the extracted document or null if extraction is not possible or was unsuccessful      */
+comment|/**      * Extract the metadata only from the input stream. Depending on media type validation,      * the detector could be run against input stream in order to ensure that parser supports this      * type of content.      * @param in input stream to extract the metadata from      * @param documentMetadata documentMetadata      * @return the extracted document or null if extraction is not possible or was unsuccessful      */
 specifier|public
 name|Document
 name|extractMetadata

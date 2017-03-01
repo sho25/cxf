@@ -1283,7 +1283,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Convert from EndpointReference to CXF internal 2005/08 EndpointReferenceType      *       * @param external the javax.xml.ws.EndpointReference      * @return CXF internal 2005/08 EndpointReferenceType      */
+comment|/**      * Convert from EndpointReference to CXF internal 2005/08 EndpointReferenceType      *      * @param external the javax.xml.ws.EndpointReference      * @return CXF internal 2005/08 EndpointReferenceType      */
 specifier|public
 specifier|static
 name|EndpointReferenceType
@@ -1757,12 +1757,11 @@ name|metadata
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|metadata
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|)
 condition|)
 block|{

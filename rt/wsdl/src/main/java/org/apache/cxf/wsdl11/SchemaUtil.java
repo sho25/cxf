@@ -455,9 +455,7 @@ name|defList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Definition
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|parseImports
@@ -1033,9 +1031,7 @@ name|importList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Import
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection
@@ -1344,12 +1340,11 @@ name|imports
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|imports
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

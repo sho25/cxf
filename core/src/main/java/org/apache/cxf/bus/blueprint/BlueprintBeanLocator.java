@@ -270,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -350,9 +350,7 @@ name|names
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|container
 operator|.
@@ -706,9 +704,7 @@ expr_stmt|;
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|names
 argument_list|)
@@ -742,9 +738,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -944,9 +938,7 @@ name|names
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|boolean

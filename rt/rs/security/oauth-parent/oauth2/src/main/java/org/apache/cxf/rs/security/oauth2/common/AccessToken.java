@@ -175,7 +175,7 @@ decl_stmt|;
 specifier|protected
 name|AccessToken
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 name|AccessToken
 parameter_list|(
@@ -364,7 +364,7 @@ return|return
 name|refreshToken
 return|;
 block|}
-comment|/**      * Gets token parameters       * @return      */
+comment|/**      * Gets token parameters      * @return      */
 annotation|@
 name|ElementCollection
 argument_list|(

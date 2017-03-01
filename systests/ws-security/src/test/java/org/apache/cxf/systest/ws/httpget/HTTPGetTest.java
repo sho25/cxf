@@ -945,7 +945,7 @@ argument_list|,
 literal|"20"
 argument_list|)
 expr_stmt|;
-comment|/*         XMLSource result = client.get(XMLSource.class);         result.setBuffering(true);                  String input = result.getNode("//doubledNumber", String.class);         assertTrue(input.startsWith("<doubledNumber>40"));         */
+comment|/*         XMLSource result = client.get(XMLSource.class);         result.setBuffering(true);          String input = result.getNode("//doubledNumber", String.class);         assertTrue(input.startsWith("<doubledNumber>40"));         */
 try|try
 block|{
 name|client

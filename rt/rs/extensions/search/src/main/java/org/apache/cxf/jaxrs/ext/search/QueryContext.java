@@ -28,12 +28,12 @@ specifier|public
 interface|interface
 name|QueryContext
 block|{
-comment|/**      * Uses {@link SearchBean} and a visitor registered with       * "search.visitor" contextual property to capture and       * convert the original expression      *       * @return converted search expression      */
+comment|/**      * Uses {@link SearchBean} and a visitor registered with      * "search.visitor" contextual property to capture and      * convert the original expression      *      * @return converted search expression      */
 name|String
 name|getConvertedExpression
 parameter_list|()
 function_decl|;
-comment|/**      * Uses a custom bean and a visitor registered with       * "search.visitor" contextual property to capture and       * convert the original expression      *       * @return converted search expression      */
+comment|/**      * Uses a custom bean and a visitor registered with      * "search.visitor" contextual property to capture and      * convert the original expression      *      * @return converted search expression      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -47,7 +47,7 @@ argument_list|>
 name|beanClass
 parameter_list|)
 function_decl|;
-comment|/**      * Uses a custom bean and query classes and a visitor registered with       * "search.visitor" contextual property to capture and       * convert the original expression      *       * @return converted search expression      */
+comment|/**      * Uses a custom bean and query classes and a visitor registered with      * "search.visitor" contextual property to capture and      * convert the original expression      *      * @return converted search expression      */
 parameter_list|<
 name|T
 parameter_list|,
@@ -69,7 +69,7 @@ argument_list|>
 name|queryClass
 parameter_list|)
 function_decl|;
-comment|/**      * Uses {@link SearchBean} and a visitor registered with       * "search.visitor" contextual property to capture and       * convert the original expression      *       * @return converted search expression      */
+comment|/**      * Uses {@link SearchBean} and a visitor registered with      * "search.visitor" contextual property to capture and      * convert the original expression      *      * @return converted search expression      */
 name|String
 name|getConvertedExpression
 parameter_list|(
@@ -77,7 +77,7 @@ name|String
 name|originalExpression
 parameter_list|)
 function_decl|;
-comment|/**      * Uses a custom bean and a visitor registered with       * "search.visitor" contextual property to capture and       * convert the original expression      *       * @return converted search expression      */
+comment|/**      * Uses a custom bean and a visitor registered with      * "search.visitor" contextual property to capture and      * convert the original expression      *      * @return converted search expression      */
 parameter_list|<
 name|T
 parameter_list|>
@@ -94,7 +94,7 @@ argument_list|>
 name|beanClass
 parameter_list|)
 function_decl|;
-comment|/**      * Uses a custom bean and query classes and a visitor registered with       * "search.visitor" contextual property to capture and       * convert the original expression      *       * @return converted search expression      */
+comment|/**      * Uses a custom bean and query classes and a visitor registered with      * "search.visitor" contextual property to capture and      * convert the original expression      *      * @return converted search expression      */
 parameter_list|<
 name|T
 parameter_list|,

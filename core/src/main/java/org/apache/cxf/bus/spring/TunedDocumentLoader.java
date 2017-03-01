@@ -324,7 +324,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Spring DocumentLoader that uses WoodStox when we are not validating to speed up the process.   */
+comment|/**  * A Spring DocumentLoader that uses WoodStox when we are not validating to speed up the process.  */
 end_comment
 
 begin_class

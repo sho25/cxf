@@ -114,7 +114,7 @@ name|UriPrefixPair
 index|[]
 name|packagePrefixes
 decl_stmt|;
-comment|/**      * OASIS catalog file for use when reading the WSDL.       */
+comment|/**      * OASIS catalog file for use when reading the WSDL.      */
 name|File
 name|catalog
 decl_stmt|;
@@ -122,7 +122,7 @@ comment|/**      * Destination directory for the output.      */
 name|File
 name|output
 decl_stmt|;
-comment|/**      * Whether to validate the WSDL.       */
+comment|/**      * Whether to validate the WSDL.      */
 name|String
 name|validate
 decl_stmt|;
@@ -130,7 +130,7 @@ comment|/**      * The wsdl version.      */
 name|String
 name|wsdlVersion
 decl_stmt|;
-comment|/**      * A set of dependent files used to detect that the generator must process WSDL, even       * if generator marker files are up to date.      */
+comment|/**      * A set of dependent files used to detect that the generator must process WSDL, even      * if generator marker files are up to date.      */
 name|File
 name|dependencies
 index|[]
@@ -262,7 +262,7 @@ operator|=
 name|catalog
 expr_stmt|;
 block|}
-comment|/**      * @return output directory. Default is set       * at the plugin level.      */
+comment|/**      * @return output directory. Default is set      * at the plugin level.      */
 specifier|public
 name|File
 name|getOutput

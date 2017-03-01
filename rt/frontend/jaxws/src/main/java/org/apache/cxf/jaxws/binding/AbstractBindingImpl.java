@@ -101,9 +101,7 @@ name|handlerChain
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -140,9 +138,7 @@ comment|//per spec, this should be a copy
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|(
 name|handlerChain
 argument_list|)

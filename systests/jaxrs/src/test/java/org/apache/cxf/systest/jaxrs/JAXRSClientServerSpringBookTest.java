@@ -6865,7 +6865,7 @@ decl_stmt|;
 specifier|public
 name|Book2
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|long
 name|getId

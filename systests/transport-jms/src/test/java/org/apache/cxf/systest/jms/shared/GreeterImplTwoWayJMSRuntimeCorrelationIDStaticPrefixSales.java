@@ -74,7 +74,7 @@ class|class
 name|GreeterImplTwoWayJMSRuntimeCorrelationIDStaticPrefixSales
 extends|extends
 name|TwoWayJMSImplBase
-block|{          }
+block|{  }
 end_class
 
 end_unit

@@ -333,7 +333,7 @@ operator|=
 name|headers
 expr_stmt|;
 block|}
-comment|/**      * Serialize the beginning of the attachment which includes the MIME       * beginning and headers for the root message.      */
+comment|/**      * Serialize the beginning of the attachment which includes the MIME      * beginning and headers for the root message.      */
 specifier|public
 name|void
 name|writeProlog

@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for timezone.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *<p>  *<pre>  *&lt;simpleType name="timezone">  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">  *&lt;enumeration value="Europe/London"/>  *&lt;enumeration value="America/New_York"/>  *&lt;/restriction>  *&lt;/simpleType>  *</pre>  *   */
+comment|/**  *<p>Java class for timezone.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *<p>  *<pre>  *&lt;simpleType name="timezone">  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">  *&lt;enumeration value="Europe/London"/>  *&lt;enumeration value="America/New_York"/>  *&lt;/restriction>  *&lt;/simpleType>  *</pre>  *  */
 end_comment
 
 begin_enum

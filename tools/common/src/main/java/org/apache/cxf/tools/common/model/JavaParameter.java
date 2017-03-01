@@ -399,7 +399,7 @@ name|this
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Get the<code>Callback</code> value.      *       * @return a<code>boolean</code> value      */
+comment|/**      * Get the<code>Callback</code> value.      *      * @return a<code>boolean</code> value      */
 specifier|public
 specifier|final
 name|boolean
@@ -410,7 +410,7 @@ return|return
 name|callback
 return|;
 block|}
-comment|/**      * Set the<code>Callback</code> value.      *       * @param newCallback The new Callback value.      */
+comment|/**      * Set the<code>Callback</code> value.      *      * @param newCallback The new Callback value.      */
 specifier|public
 specifier|final
 name|void

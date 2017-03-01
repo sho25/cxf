@@ -43,7 +43,7 @@ extends|extends
 name|Message
 parameter_list|>
 block|{
-comment|/**      * Intercepts a message.       * Interceptors should NOT invoke handleMessage or handleFault      * on the next interceptor - the interceptor chain will      * take care of this.      *       * @param message      */
+comment|/**      * Intercepts a message.      * Interceptors should NOT invoke handleMessage or handleFault      * on the next interceptor - the interceptor chain will      * take care of this.      *      * @param message      */
 name|void
 name|handleMessage
 parameter_list|(
@@ -53,7 +53,7 @@ parameter_list|)
 throws|throws
 name|Fault
 function_decl|;
-comment|/**      * Called for all interceptors (in reverse order) on which handleMessage      * had been successfully invoked, when normal execution of the chain was      * aborted for some reason.      *       * @param message      */
+comment|/**      * Called for all interceptors (in reverse order) on which handleMessage      * had been successfully invoked, when normal execution of the chain was      * aborted for some reason.      *      * @param message      */
 name|void
 name|handleFault
 parameter_list|(

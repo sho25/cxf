@@ -2037,6 +2037,9 @@ name|ExecutorService
 name|executorService
 parameter_list|)
 block|{
+comment|// TODO: At the moment we still delegate if possible to the async HTTP conduit.
+comment|// Investigate if letting the CompletableFuture thread pool deal with the sync invocation
+comment|// is indeed more effective
 return|return
 name|webClient
 operator|.
@@ -2066,13 +2069,13 @@ name|Class
 argument_list|<
 name|T
 argument_list|>
-name|clazz
+name|rxCls
 parameter_list|)
 block|{
 return|return
 name|rx
 argument_list|(
-name|clazz
+name|rxCls
 argument_list|,
 operator|(
 name|ExecutorService
@@ -2101,7 +2104,7 @@ name|Class
 argument_list|<
 name|T
 argument_list|>
-name|clazz
+name|rxCls
 parameter_list|,
 name|ExecutorService
 name|executorService
@@ -2112,7 +2115,7 @@ name|webClient
 operator|.
 name|rx
 argument_list|(
-name|clazz
+name|rxCls
 argument_list|,
 name|executorService
 argument_list|)

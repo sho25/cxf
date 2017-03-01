@@ -121,9 +121,7 @@ name|includeList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for
@@ -338,12 +336,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|includeList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|pw

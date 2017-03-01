@@ -820,9 +820,7 @@ name|roleNames
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Set
@@ -911,9 +909,7 @@ name|approvedScopesSet
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|OAuthPermission
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

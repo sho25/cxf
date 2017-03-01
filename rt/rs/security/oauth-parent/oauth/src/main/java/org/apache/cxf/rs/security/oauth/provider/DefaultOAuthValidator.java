@@ -112,7 +112,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The utility OAuth validator which is primarily used   * by the runtime to validate that the issued tokens have not expired.  * Note that the runtime does validate OAuth signatures separately.  */
+comment|/**  * The utility OAuth validator which is primarily used  * by the runtime to validate that the issued tokens have not expired.  * Note that the runtime does validate OAuth signatures separately.  */
 end_comment
 
 begin_class

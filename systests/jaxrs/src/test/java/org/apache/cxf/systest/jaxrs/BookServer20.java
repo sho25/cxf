@@ -715,9 +715,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providers
@@ -1593,6 +1591,47 @@ literal|"books/check2"
 argument_list|)
 condition|)
 block|{
+name|replaceStream
+argument_list|(
+name|context
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|path
+operator|.
+name|endsWith
+argument_list|(
+literal|"books/checkNQuery"
+argument_list|)
+condition|)
+block|{
+name|URI
+name|requestURI
+init|=
+name|URI
+operator|.
+name|create
+argument_list|(
+name|path
+operator|.
+name|replace
+argument_list|(
+literal|"NQuery"
+argument_list|,
+literal|"2?a=b"
+argument_list|)
+argument_list|)
+decl_stmt|;
+name|context
+operator|.
+name|setRequestUri
+argument_list|(
+name|requestURI
+argument_list|)
+expr_stmt|;
 name|replaceStream
 argument_list|(
 name|context
@@ -2541,7 +2580,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|CustomHeaderAdded
-block|{               }
+block|{      }
 annotation|@
 name|Target
 argument_list|(
@@ -2569,7 +2608,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|CustomHeaderAddedAsync
-block|{               }
+block|{      }
 annotation|@
 name|Target
 argument_list|(
@@ -2597,7 +2636,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|PostMatchMode
-block|{               }
+block|{      }
 annotation|@
 name|Target
 argument_list|(
@@ -2625,7 +2664,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|Faulty
-block|{               }
+block|{      }
 annotation|@
 name|Priority
 argument_list|(
@@ -2763,11 +2802,11 @@ operator|==
 literal|null
 operator|||
 operator|!
-name|serverRead
+literal|"serverRead"
 operator|.
 name|equals
 argument_list|(
-literal|"serverRead"
+name|serverRead
 argument_list|)
 condition|)
 block|{

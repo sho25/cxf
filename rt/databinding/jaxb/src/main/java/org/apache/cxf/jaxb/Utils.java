@@ -337,9 +337,7 @@ name|fields
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Field
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Class
@@ -492,9 +490,7 @@ name|methods
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Class

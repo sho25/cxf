@@ -104,7 +104,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A convenient class for storing URI and URL representation of an address and avoid useless conversions.  * A proxy for the current address is also lazily resolved and stored; most of the times, that proxy can  * be used to prevent the HttpURLConnection from computing the proxy when the connection is opened.  *   * The class is thread-safe.  */
+comment|/**  * A convenient class for storing URI and URL representation of an address and avoid useless conversions.  * A proxy for the current address is also lazily resolved and stored; most of the times, that proxy can  * be used to prevent the HttpURLConnection from computing the proxy when the connection is opened.  *  * The class is thread-safe.  */
 end_comment
 
 begin_class

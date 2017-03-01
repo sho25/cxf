@@ -443,9 +443,7 @@ name|uris
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|frame
@@ -454,9 +452,7 @@ name|prefixes
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|frame
@@ -465,9 +461,7 @@ name|attributes
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if

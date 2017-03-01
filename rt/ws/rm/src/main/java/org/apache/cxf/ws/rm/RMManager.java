@@ -900,7 +900,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1695,7 +1695,7 @@ operator|=
 name|configuration
 expr_stmt|;
 block|}
-comment|/**      * Get configuration after applying policies.      *       * @param msg      * @return configuration (non-<code>null</code>)      */
+comment|/**      * Get configuration after applying policies.      *      * @param msg      * @return configuration (non-<code>null</code>)      */
 specifier|public
 name|RMConfiguration
 name|getEffectiveConfiguration
@@ -1751,7 +1751,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**       * @return Returns the sourcePolicy.      */
+comment|/**      * @return Returns the sourcePolicy.      */
 specifier|public
 name|SourcePolicyType
 name|getSourcePolicy
@@ -3154,12 +3154,11 @@ block|{
 comment|// shutdown remaining endpoints
 if|if
 condition|(
+operator|!
 name|reliableEndpoints
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|LOG
@@ -4324,7 +4323,7 @@ argument_list|(
 name|message
 argument_list|)
 expr_stmt|;
-comment|// add  acknowledged undelivered message
+comment|// add acknowledged undelivered message
 name|ds
 operator|.
 name|addDeliveringMessageNumber
@@ -4870,7 +4869,7 @@ name|sid
 return|;
 block|}
 block|}
-comment|/**      * Clones and saves the interceptor chain the first time this is called, so that it can be used for retransmission.      * Calls after the first are ignored.      *       * @param msg      */
+comment|/**      * Clones and saves the interceptor chain the first time this is called, so that it can be used for retransmission.      * Calls after the first are ignored.      *      * @param msg      */
 specifier|public
 name|void
 name|initializeInterceptorChain
@@ -4944,7 +4943,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Get interceptor chain for retransmitting a message.      *       * @return chain (<code>null</code> if none set)      */
+comment|/**      * Get interceptor chain for retransmitting a message.      *      * @return chain (<code>null</code> if none set)      */
 specifier|public
 name|PhaseInterceptorChain
 name|getRetransmitChain

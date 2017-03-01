@@ -364,7 +364,7 @@ name|LayoutPolicyValidator
 extends|extends
 name|AbstractSecurityPolicyValidator
 block|{
-comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a       * policy defined by the AssertionInfo parameter      */
+comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a      * policy defined by the AssertionInfo parameter      */
 specifier|public
 name|boolean
 name|canValidatePolicy
@@ -1326,7 +1326,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Find the index of the token corresponding to either the X509Certificate or PublicKey used       * to sign the "signatureResult" argument.      */
+comment|/**      * Find the index of the token corresponding to either the X509Certificate or PublicKey used      * to sign the "signatureResult" argument.      */
 specifier|private
 name|int
 name|findCorrespondingTokenIndex

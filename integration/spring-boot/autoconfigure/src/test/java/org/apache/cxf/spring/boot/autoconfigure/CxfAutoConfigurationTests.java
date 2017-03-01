@@ -83,11 +83,11 @@ name|springframework
 operator|.
 name|boot
 operator|.
-name|context
+name|test
 operator|.
-name|embedded
+name|util
 operator|.
-name|ServletRegistrationBean
+name|EnvironmentTestUtils
 import|;
 end_import
 
@@ -99,9 +99,11 @@ name|springframework
 operator|.
 name|boot
 operator|.
-name|test
+name|web
 operator|.
-name|EnvironmentTestUtils
+name|servlet
+operator|.
+name|ServletRegistrationBean
 import|;
 end_import
 

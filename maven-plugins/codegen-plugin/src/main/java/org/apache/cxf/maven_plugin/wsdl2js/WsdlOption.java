@@ -126,7 +126,7 @@ operator|=
 name|wsdl
 expr_stmt|;
 block|}
-comment|/**      * Maven coordinates       * @return      */
+comment|/**      * Maven coordinates      * @return      */
 specifier|public
 name|WsdlArtifact
 name|getArtifact
@@ -218,9 +218,7 @@ name|options
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

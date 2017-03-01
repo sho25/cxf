@@ -162,7 +162,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Generate JavaScript names for QNames.   * This might belong on the CXF bus.   */
+comment|/**  * Generate JavaScript names for QNames.  * This might belong on the CXF bus.  */
 end_comment
 
 begin_class
@@ -215,7 +215,7 @@ return|return
 name|nameManager
 return|;
 block|}
-comment|/**      *       * @param service      * @param endpoint      * @return      */
+comment|/**      *      * @param service      * @param endpoint      * @return      */
 specifier|public
 specifier|static
 name|BasicNameManager
@@ -315,9 +315,7 @@ name|poorPrefixURIs
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

@@ -483,12 +483,11 @@ condition|(
 operator|!
 name|completed
 operator|||
+operator|!
 name|queue
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 try|try

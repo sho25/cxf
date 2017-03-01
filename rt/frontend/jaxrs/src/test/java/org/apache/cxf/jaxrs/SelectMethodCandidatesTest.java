@@ -5529,7 +5529,7 @@ specifier|public
 name|void
 name|put
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 annotation|@
 name|Path
@@ -5562,7 +5562,7 @@ specifier|public
 name|void
 name|put
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|PUT
 annotation|@
@@ -5574,7 +5574,7 @@ specifier|public
 name|void
 name|put2
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 annotation|@
 name|Path
@@ -5607,7 +5607,7 @@ specifier|public
 name|void
 name|put
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|public
 specifier|static
@@ -5629,7 +5629,7 @@ specifier|public
 name|void
 name|m1
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|POST
 annotation|@
@@ -5645,7 +5645,7 @@ specifier|public
 name|void
 name|m2
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|public
 specifier|static
@@ -5667,7 +5667,7 @@ specifier|public
 name|void
 name|m2
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|POST
 annotation|@
@@ -5683,7 +5683,7 @@ specifier|public
 name|void
 name|m1
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|public
 specifier|static
@@ -5703,7 +5703,7 @@ specifier|public
 name|void
 name|m2
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|POST
 annotation|@
@@ -5717,7 +5717,7 @@ specifier|public
 name|void
 name|m1
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|public
 specifier|static
@@ -5739,7 +5739,7 @@ specifier|public
 name|void
 name|m1
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|POST
 annotation|@
@@ -5755,7 +5755,7 @@ specifier|public
 name|void
 name|m2
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|public
 specifier|static

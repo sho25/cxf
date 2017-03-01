@@ -27,7 +27,7 @@ name|String
 name|getName
 parameter_list|()
 function_decl|;
-comment|/**      * Initiates an orderly shutdown.       * If<code>processRemainingWorkItems</code>      * is true, waits for all active items to finish execution before returning, otherwise returns       * immediately after removing all non active items from the queue.      *       * @param processRemainingWorkItems      */
+comment|/**      * Initiates an orderly shutdown.      * If<code>processRemainingWorkItems</code>      * is true, waits for all active items to finish execution before returning, otherwise returns      * immediately after removing all non active items from the queue.      *      * @param processRemainingWorkItems      */
 name|void
 name|shutdown
 parameter_list|(

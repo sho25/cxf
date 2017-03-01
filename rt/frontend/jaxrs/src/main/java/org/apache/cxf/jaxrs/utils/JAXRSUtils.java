@@ -1960,7 +1960,7 @@ decl_stmt|;
 specifier|private
 name|JAXRSUtils
 parameter_list|()
-block|{             }
+block|{     }
 specifier|public
 specifier|static
 name|boolean
@@ -2047,9 +2047,7 @@ name|theList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2223,12 +2221,11 @@ condition|)
 block|{
 name|values
 operator|=
+operator|!
 name|types
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 name|types
 operator|.
@@ -2402,9 +2399,7 @@ name|supportedMimeTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|values
 operator|.
@@ -4902,9 +4897,7 @@ name|allowedMethods
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -6089,9 +6082,7 @@ name|params
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|parameterTypesLengh
 argument_list|)
@@ -6825,12 +6816,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|segments
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|MultivaluedMap
@@ -10058,9 +10048,7 @@ name|acceptValues
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -10178,7 +10166,7 @@ return|return
 name|acceptValues
 return|;
 block|}
-comment|/**      * intersect two mime types      *       * @param mimeTypesA       * @param mimeTypesB       * @return return a list of intersected mime types      */
+comment|/**      * intersect two mime types      *      * @param mimeTypesA      * @param mimeTypesB      * @return return a list of intersected mime types      */
 specifier|public
 specifier|static
 name|List
@@ -10595,9 +10583,7 @@ block|}
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|MediaType
-argument_list|>
+argument_list|<>
 argument_list|(
 name|supportedMimeTypeList
 argument_list|)
@@ -12337,9 +12323,7 @@ name|values
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|params
 operator|.

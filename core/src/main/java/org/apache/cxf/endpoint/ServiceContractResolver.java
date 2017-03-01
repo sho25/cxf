@@ -46,7 +46,7 @@ specifier|public
 interface|interface
 name|ServiceContractResolver
 block|{
-comment|/**      * Resolves a service's QName to a URI representing the location of a WSDL       * contract. This method is called by the       *<code>ServiceContractResolverRegistry</code> with which the contract       * resolver is registered.      *      * @param qname the QName being mapped to a URI      * @return URI representing the location of a WSDL contract      */
+comment|/**      * Resolves a service's QName to a URI representing the location of a WSDL      * contract. This method is called by the      *<code>ServiceContractResolverRegistry</code> with which the contract      * resolver is registered.      *      * @param qname the QName being mapped to a URI      * @return URI representing the location of a WSDL contract      */
 name|URI
 name|getContractLocation
 parameter_list|(

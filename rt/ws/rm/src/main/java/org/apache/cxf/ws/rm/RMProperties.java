@@ -391,9 +391,7 @@ name|acks
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SequenceAcknowledgement
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -418,7 +416,7 @@ name|acknowledgmentSent
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Get the WS-ReliableMessaging namespace to be used for encoding and decoding messages.      *       * @return      */
+comment|/**      * Get the WS-ReliableMessaging namespace to be used for encoding and decoding messages.      *      * @return      */
 specifier|public
 name|String
 name|getNamespaceURI
@@ -428,7 +426,7 @@ return|return
 name|namespaceURI
 return|;
 block|}
-comment|/**      * Set the WS-ReliableMessaging namespace to be used for encoding and decoding messages.      *       * @return namespace URI      */
+comment|/**      * Set the WS-ReliableMessaging namespace to be used for encoding and decoding messages.      *      * @return namespace URI      */
 specifier|public
 name|void
 name|exposeAs
@@ -452,7 +450,7 @@ return|return
 name|createdTime
 return|;
 block|}
-comment|/**      * Set the initial creation time of this RM properties instance.      *       * @param createdTime The createdTime to set.      */
+comment|/**      * Set the initial creation time of this RM properties instance.      *      * @param createdTime The createdTime to set.      */
 specifier|public
 name|void
 name|setCreatedTime

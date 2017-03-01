@@ -991,7 +991,7 @@ name|Element
 name|encKeyElement
 parameter_list|)
 block|{
-comment|/**          * TODO: the following can be easily supported too<X509SKI>31d97bd7</X509SKI><X509SubjectName>Subject of Certificate B</X509SubjectName>          *           */
+comment|/**          * TODO: the following can be easily supported too<X509SKI>31d97bd7</X509SKI><X509SubjectName>Subject of Certificate B</X509SubjectName>          *          */
 name|String
 name|keyIdentifierType
 init|=

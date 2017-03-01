@@ -474,9 +474,7 @@ name|protectedHeaders
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|sigProviders
 operator|.
@@ -492,9 +490,7 @@ name|signatures
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JwsSignature
-argument_list|>
+argument_list|<>
 argument_list|(
 name|sigProviders
 operator|.

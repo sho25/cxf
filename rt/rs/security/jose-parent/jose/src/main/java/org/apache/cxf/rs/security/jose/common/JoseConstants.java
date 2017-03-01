@@ -245,7 +245,7 @@ name|RSSEC_KEY_STORE_ALIAS
 init|=
 literal|"rs.security.keystore.alias"
 decl_stmt|;
-comment|/**      * The keystore aliases corresponding to the keys to use, when using the JSON serialization form. You can       * append one of the following to this tag to get the alias for more specific operations:      *  - jws.out      *  - jws.in      */
+comment|/**      * The keystore aliases corresponding to the keys to use, when using the JSON serialization form. You can      * append one of the following to this tag to get the alias for more specific operations:      *  - jws.out      *  - jws.in      */
 specifier|public
 specifier|static
 specifier|final
@@ -328,7 +328,7 @@ name|RSSEC_SIGNATURE_ALGORITHM
 init|=
 literal|"rs.security.signature.algorithm"
 decl_stmt|;
-comment|/**      * The EC Curve to use with EC keys loaded from Java Key Store.       * JWK EC Keys are expected to use a standard "crv" property instead.      */
+comment|/**      * The EC Curve to use with EC keys loaded from Java Key Store.      * JWK EC Keys are expected to use a standard "crv" property instead.      */
 specifier|public
 specifier|static
 specifier|final
@@ -337,18 +337,7 @@ name|RSSEC_EC_CURVE
 init|=
 literal|"rs.security.elliptic.curve"
 decl_stmt|;
-comment|/**      * The OLD signature algorithm identifier. Use RSSEC_SIGNATURE_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_SIGNATURE_ALGORITHM
-init|=
-literal|"rs.security.jws.content.signature.algorithm"
-decl_stmt|;
-comment|/**      * The signature properties file for compact signature creation. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
+comment|/**      * The signature properties file for compact signature creation. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -357,7 +346,7 @@ name|RSSEC_SIGNATURE_OUT_PROPS
 init|=
 literal|"rs.security.signature.out.properties"
 decl_stmt|;
-comment|/**      * The signature properties file for compact signature verification. If not specified then it falls back to       * RSSEC_SIGNATURE_PROPS.      */
+comment|/**      * The signature properties file for compact signature verification. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -375,7 +364,7 @@ name|RSSEC_SIGNATURE_PROPS
 init|=
 literal|"rs.security.signature.properties"
 decl_stmt|;
-comment|/**      * Include the JWK public key for signature in the "jwk" header.       */
+comment|/**      * Include the JWK public key for signature in the "jwk" header.      */
 specifier|public
 specifier|static
 specifier|final
@@ -384,7 +373,7 @@ name|RSSEC_SIGNATURE_INCLUDE_PUBLIC_KEY
 init|=
 literal|"rs.security.signature.include.public.key"
 decl_stmt|;
-comment|/**      * Include the X.509 certificate for signature in the "x5c" header.       */
+comment|/**      * Include the X.509 certificate for signature in the "x5c" header.      */
 specifier|public
 specifier|static
 specifier|final
@@ -402,7 +391,7 @@ name|RSSEC_SIGNATURE_INCLUDE_KEY_ID
 init|=
 literal|"rs.security.signature.include.key.id"
 decl_stmt|;
-comment|/**      * Include the X.509 certificate SHA-1 digest for signature in the "x5t" header.       */
+comment|/**      * Include the X.509 certificate SHA-1 digest for signature in the "x5t" header.      */
 specifier|public
 specifier|static
 specifier|final
@@ -432,17 +421,6 @@ name|RSSEC_ENCRYPTION_CONTENT_ALGORITHM
 init|=
 literal|"rs.security.encryption.content.algorithm"
 decl_stmt|;
-comment|/**      * The OLD encryption content algorithm to use. Use RSSEC_ENCRYPTION_CONTENT_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_ENCRYPTION_CONTENT_ALGORITHM
-init|=
-literal|"rs.security.jwe.content.encryption.algorithm"
-decl_stmt|;
 comment|/**      * The encryption key algorithm to use. The default algorithm if not specified is 'RSA-OAEP' if the key is an      * RSA key, and 'A128GCMKW' if it is an octet sequence.      */
 specifier|public
 specifier|static
@@ -451,17 +429,6 @@ name|String
 name|RSSEC_ENCRYPTION_KEY_ALGORITHM
 init|=
 literal|"rs.security.encryption.key.algorithm"
-decl_stmt|;
-comment|/**      * The OLD encryption key algorithm to use. Use RSSEC_ENCRYPTION_KEY_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_ENCRYPTION_KEY_ALGORITHM
-init|=
-literal|"rs.security.jwe.key.encryption.algorithm"
 decl_stmt|;
 comment|/**      * The encryption zip algorithm to use.      */
 specifier|public
@@ -472,18 +439,7 @@ name|RSSEC_ENCRYPTION_ZIP_ALGORITHM
 init|=
 literal|"rs.security.encryption.zip.algorithm"
 decl_stmt|;
-comment|/**      * The OLD encryption zip algorithm to use. Use RSSEC_ENCRYPTION_ZIP_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_ENCRYPTION_ZIP_ALGORITHM
-init|=
-literal|"rs.security.jwe.zip.algorithm"
-decl_stmt|;
-comment|/**      * The encryption properties file for encryption creation. If not specified then it falls back to       * RSSEC_ENCRYPTION_PROPS.      */
+comment|/**      * The encryption properties file for encryption creation. If not specified then it falls back to      * RSSEC_ENCRYPTION_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -492,7 +448,7 @@ name|RSSEC_ENCRYPTION_OUT_PROPS
 init|=
 literal|"rs.security.encryption.out.properties"
 decl_stmt|;
-comment|/**      * The decryption properties file for decryption. If not specified then it falls back to       * RSSEC_ENCRYPTION_PROPS.      */
+comment|/**      * The decryption properties file for decryption. If not specified then it falls back to      * RSSEC_ENCRYPTION_PROPS.      */
 specifier|public
 specifier|static
 specifier|final
@@ -570,7 +526,7 @@ decl_stmt|;
 specifier|private
 name|JoseConstants
 parameter_list|()
-block|{              }
+block|{      }
 block|}
 end_class
 

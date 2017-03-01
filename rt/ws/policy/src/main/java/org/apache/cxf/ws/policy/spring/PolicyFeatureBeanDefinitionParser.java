@@ -160,9 +160,7 @@ name|ps
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -173,9 +171,7 @@ name|prs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Element

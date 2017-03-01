@@ -92,7 +92,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class reads a WSDL and creates a dynamic client from it with JAX-WS  * functionality.  * This provides support for attachments and other useful things that   * come with JAX-WS.  *   * Use {@link #newInstance} to obtain an instance, and then  * {@link #createClient(String)} (or other overloads) to create a client.  *   * This factory uses the JAXB data binding.   **/
+comment|/**  * This class reads a WSDL and creates a dynamic client from it with JAX-WS  * functionality.  * This provides support for attachments and other useful things that  * come with JAX-WS.  *  * Use {@link #newInstance} to obtain an instance, and then  * {@link #createClient(String)} (or other overloads) to create a client.  *  * This factory uses the JAXB data binding.  **/
 end_comment
 
 begin_class
@@ -138,7 +138,7 @@ return|return
 literal|true
 return|;
 block|}
-comment|/**      * Create a new instance using a specific<tt>Bus</tt>.      *       * @param b the<tt>Bus</tt> to use in subsequent operations with the      *            instance      * @return the new instance      */
+comment|/**      * Create a new instance using a specific<tt>Bus</tt>.      *      * @param b the<tt>Bus</tt> to use in subsequent operations with the      *            instance      * @return the new instance      */
 specifier|public
 specifier|static
 name|JaxWsDynamicClientFactory
@@ -156,7 +156,7 @@ name|b
 argument_list|)
 return|;
 block|}
-comment|/**      * Create a new instance using a default<tt>Bus</tt>.      *       * @return the new instance      * @see CXFBusFactory#getDefaultBus()      */
+comment|/**      * Create a new instance using a default<tt>Bus</tt>.      *      * @return the new instance      * @see CXFBusFactory#getDefaultBus()      */
 specifier|public
 specifier|static
 name|JaxWsDynamicClientFactory

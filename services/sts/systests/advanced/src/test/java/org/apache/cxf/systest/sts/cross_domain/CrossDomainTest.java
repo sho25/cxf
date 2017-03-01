@@ -160,7 +160,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Some tests that illustrate how CXF clients can get tokens from different STS instances for   * service invocations.  */
+comment|/**  * Some tests that illustrate how CXF clients can get tokens from different STS instances for  * service invocations.  */
 end_comment
 
 begin_class

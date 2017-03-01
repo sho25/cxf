@@ -437,7 +437,7 @@ decl_stmt|;
 specifier|public
 name|JsonWebKey
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JsonWebKey
 parameter_list|(
@@ -575,9 +575,7 @@ name|ops
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|keyOperation
 operator|.
@@ -661,9 +659,7 @@ name|keyOps
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|KeyOperation
-argument_list|>
+argument_list|<>
 argument_list|(
 name|ops
 operator|.

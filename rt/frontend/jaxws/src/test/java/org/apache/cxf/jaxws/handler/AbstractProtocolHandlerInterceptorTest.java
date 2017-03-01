@@ -313,9 +313,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -595,7 +593,7 @@ interface|interface
 name|IIOPMessageContext
 extends|extends
 name|MessageContext
-block|{              }
+block|{      }
 interface|interface
 name|IIOPHandler
 parameter_list|<
@@ -608,7 +606,7 @@ name|Handler
 argument_list|<
 name|IIOPMessageContext
 argument_list|>
-block|{              }
+block|{      }
 class|class
 name|IIOPHandlerInterceptor
 extends|extends

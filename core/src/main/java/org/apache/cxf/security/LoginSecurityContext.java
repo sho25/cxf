@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * LoginSecurityContext provides additional information about the  * authenticated principal.   *   * {@link SecurityContext} implementations which can get the authenticated  * Subject and/or the list of the user roles may implement this interface.   */
+comment|/**  * LoginSecurityContext provides additional information about the  * authenticated principal.  *  * {@link SecurityContext} implementations which can get the authenticated  * Subject and/or the list of the user roles may implement this interface.  */
 end_comment
 
 begin_interface
@@ -63,7 +63,7 @@ name|Subject
 name|getSubject
 parameter_list|()
 function_decl|;
-comment|/**      * Returns a set of Principals representing the roles       * assigned to the current authenticated user Principal      * @return the roles      */
+comment|/**      * Returns a set of Principals representing the roles      * assigned to the current authenticated user Principal      * @return the roles      */
 name|Set
 argument_list|<
 name|Principal

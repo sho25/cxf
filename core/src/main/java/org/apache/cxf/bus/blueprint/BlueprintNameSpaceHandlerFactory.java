@@ -22,7 +22,7 @@ specifier|public
 interface|interface
 name|BlueprintNameSpaceHandlerFactory
 block|{
-comment|/**      * Creates aries blueprint NamespaceHandler.      * The return type is untyped as aries blueprint is an      * optional import      *        * @return handler      */
+comment|/**      * Creates aries blueprint NamespaceHandler.      * The return type is untyped as aries blueprint is an      * optional import      *      * @return handler      */
 name|Object
 name|createNamespaceHandler
 parameter_list|()

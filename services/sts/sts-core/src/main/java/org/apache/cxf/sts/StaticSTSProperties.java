@@ -736,7 +736,7 @@ name|class
 argument_list|)
 return|;
 block|}
-comment|/**      * Set the CallbackHandler object.       * @param callbackHandler the CallbackHandler object.       */
+comment|/**      * Set the CallbackHandler object.      * @param callbackHandler the CallbackHandler object.      */
 specifier|public
 name|void
 name|setCallbackHandler
@@ -774,7 +774,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Set the String corresponding to the CallbackHandler class.       * @param callbackHandlerClass the String corresponding to the CallbackHandler class.       */
+comment|/**      * Set the String corresponding to the CallbackHandler class.      * @param callbackHandlerClass the String corresponding to the CallbackHandler class.      */
 specifier|public
 name|void
 name|setCallbackHandlerClass
@@ -1364,7 +1364,7 @@ operator|=
 name|bus
 expr_stmt|;
 block|}
-comment|/**      * Get whether to validate a client Public Key or Certificate presented as part of a       * UseKey element. This is true by default.      */
+comment|/**      * Get whether to validate a client Public Key or Certificate presented as part of a      * UseKey element. This is true by default.      */
 specifier|public
 name|boolean
 name|isValidateUseKey
@@ -1374,7 +1374,7 @@ return|return
 name|validateUseKey
 return|;
 block|}
-comment|/**      * Set whether to validate a client Public Key or Certificate presented as part of a       * UseKey element. If this is set to true (the default), the public key must be trusted      * by the Signature Crypto of the STS.      *       * @param validateUseKey whether to validate a client UseKey or not.      */
+comment|/**      * Set whether to validate a client Public Key or Certificate presented as part of a      * UseKey element. If this is set to true (the default), the public key must be trusted      * by the Signature Crypto of the STS.      *      * @param validateUseKey whether to validate a client UseKey or not.      */
 specifier|public
 name|void
 name|setValidateUseKey

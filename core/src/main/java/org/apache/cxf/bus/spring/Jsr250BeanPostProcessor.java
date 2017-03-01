@@ -647,7 +647,7 @@ argument_list|(
 name|bean
 argument_list|)
 expr_stmt|;
-comment|/*             System.out.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);         } else if (bean != null) {             System.out.println("np: " + (++count2)                                 + ": " + bean.getClass().getName() + " " + beanId);                                */
+comment|/*             System.out.println("p :" + (++count) + ": " + bean.getClass().getName() + " " + beanId);         } else if (bean != null) {             System.out.println("np: " + (++count2)                                + ": " + bean.getClass().getName() + " " + beanId);                                */
 block|}
 return|return
 name|bean
@@ -701,6 +701,18 @@ name|bean
 argument_list|)
 expr_stmt|;
 block|}
+block|}
+specifier|public
+name|boolean
+name|requiresDestruction
+parameter_list|(
+name|Object
+name|bean
+parameter_list|)
+block|{
+return|return
+name|isProcessing
+return|;
 block|}
 block|}
 end_class

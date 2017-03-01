@@ -106,7 +106,7 @@ specifier|public
 interface|interface
 name|PolicyBuilder
 block|{
-comment|/**      * Creates a PolicyReference object from a DOM element.      *       * @param element the element      * @return the PolicyReference object constructed from the element      */
+comment|/**      * Creates a PolicyReference object from a DOM element.      *      * @param element the element      * @return the PolicyReference object constructed from the element      */
 name|PolicyReference
 name|getPolicyReference
 parameter_list|(
@@ -114,7 +114,7 @@ name|Object
 name|element
 parameter_list|)
 function_decl|;
-comment|/**      * Creates a Policy object from an DOM element.      *       * @param element the element      * @return the Policy object constructed from the element      */
+comment|/**      * Creates a Policy object from an DOM element.      *      * @param element the element      * @return the Policy object constructed from the element      */
 name|Policy
 name|getPolicy
 parameter_list|(
@@ -122,7 +122,7 @@ name|Object
 name|element
 parameter_list|)
 function_decl|;
-comment|/**      * Creates a Policy object from an InputStream.      *       * @param stream the inputstream      * @return the Policy object constructed from the element      */
+comment|/**      * Creates a Policy object from an InputStream.      *      * @param stream the inputstream      * @return the Policy object constructed from the element      */
 name|Policy
 name|getPolicy
 parameter_list|(

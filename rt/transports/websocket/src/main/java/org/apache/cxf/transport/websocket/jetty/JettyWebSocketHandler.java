@@ -119,7 +119,9 @@ name|jetty
 operator|.
 name|websocket
 operator|.
-name|WebSocketFactory
+name|server
+operator|.
+name|WebSocketServerFactory
 import|;
 end_import
 
@@ -134,7 +136,7 @@ extends|extends
 name|JettyHTTPHandler
 block|{
 specifier|private
-name|WebSocketFactory
+name|WebSocketServerFactory
 name|webSocketFactory
 decl_stmt|;
 empty_stmt|;
@@ -146,7 +148,7 @@ parameter_list|,
 name|boolean
 name|cmExact
 parameter_list|,
-name|WebSocketFactory
+name|WebSocketServerFactory
 name|webSocketFactory
 parameter_list|)
 block|{

@@ -121,9 +121,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TestResult
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -823,7 +821,7 @@ specifier|public
 name|void
 name|tearDown
 parameter_list|()
-block|{             }
+block|{     }
 specifier|protected
 name|void
 name|setUp
@@ -1326,9 +1324,7 @@ name|threadList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Thread
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

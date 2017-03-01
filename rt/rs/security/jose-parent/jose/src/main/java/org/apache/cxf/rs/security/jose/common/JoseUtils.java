@@ -339,7 +339,7 @@ decl_stmt|;
 specifier|private
 name|JoseUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String
@@ -916,9 +916,7 @@ name|inputSet
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|list
 argument_list|)

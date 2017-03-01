@@ -1226,7 +1226,7 @@ class|class
 name|GreeterImplBogus
 extends|extends
 name|GreeterImpl
-block|{          }
+block|{      }
 annotation|@
 name|WebService
 argument_list|(
@@ -1255,7 +1255,7 @@ class|class
 name|GreeterImplMultiPort
 extends|extends
 name|GreeterImpl
-block|{          }
+block|{      }
 annotation|@
 name|WebService
 argument_list|(
@@ -1284,7 +1284,7 @@ class|class
 name|DocLitBareGreeterMultiPort
 extends|extends
 name|DocLitBareGreeterImpl
-block|{          }
+block|{      }
 block|}
 end_class
 

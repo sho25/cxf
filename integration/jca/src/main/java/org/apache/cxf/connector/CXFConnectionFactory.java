@@ -44,7 +44,7 @@ parameter_list|)
 throws|throws
 name|ResourceException
 function_decl|;
-comment|/**      * Returns the underlying {@link Bus} for this connection factory. In some      * J2EE environments, for example Weblogic, the {@link Bus} and dependent      * classes are not available to the J2EE application. In this case the CXF      * runtime jar:      *<code>cxf-install-dir/cxf/lib/cxf-rt-version.jar</code> should      * be added to the classpath of the application server. Once, the      * {@link Bus} class is available on the system classpath, then the returned      * object may be cast to {@link Bus}. In other environments, this cast      * should be safe without having to modify the classpath<code>      *    org.apache.cxf.Bus = (org.apache.cxf.Bus)connectionFactory.getBus();      *</code>      *       * @return the connection factory&amp;s {@link Bus}      */
+comment|/**      * Returns the underlying {@link Bus} for this connection factory. In some      * J2EE environments, for example Weblogic, the {@link Bus} and dependent      * classes are not available to the J2EE application. In this case the CXF      * runtime jar:      *<code>cxf-install-dir/cxf/lib/cxf-rt-version.jar</code> should      * be added to the classpath of the application server. Once, the      * {@link Bus} class is available on the system classpath, then the returned      * object may be cast to {@link Bus}. In other environments, this cast      * should be safe without having to modify the classpath<code>      *    org.apache.cxf.Bus = (org.apache.cxf.Bus)connectionFactory.getBus();      *</code>      *      * @return the connection factory&amp;s {@link Bus}      */
 name|Object
 name|getBus
 parameter_list|()

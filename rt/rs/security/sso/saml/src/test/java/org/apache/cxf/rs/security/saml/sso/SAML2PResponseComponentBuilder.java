@@ -268,7 +268,7 @@ decl_stmt|;
 specifier|private
 name|SAML2PResponseComponentBuilder
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|SuppressWarnings
 argument_list|(

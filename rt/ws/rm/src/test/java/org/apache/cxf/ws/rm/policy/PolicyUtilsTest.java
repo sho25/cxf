@@ -286,7 +286,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -968,9 +968,7 @@ name|ais
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|EasyMock

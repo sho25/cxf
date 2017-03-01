@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Can be applied to methods returning a JAX-RS {@link Response}  *   */
+comment|/**  * Can be applied to methods returning a JAX-RS {@link Response}  *  */
 end_comment
 
 begin_annotation_defn

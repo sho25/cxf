@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for address complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="address">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;element name="street" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="nr" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for address complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="address">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="city" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="zip" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;element name="street" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="nr" type="{http://www.w3.org/2001/XMLSchema}int" minOccurs="0"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -138,7 +138,7 @@ specifier|protected
 name|Integer
 name|nr
 decl_stmt|;
-comment|/**      * Gets the value of the city property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the city property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getCity
@@ -148,7 +148,7 @@ return|return
 name|city
 return|;
 block|}
-comment|/**      * Sets the value of the city property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the city property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setCity
@@ -164,7 +164,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the zip property.      *       */
+comment|/**      * Gets the value of the zip property.      *      */
 specifier|public
 name|int
 name|getZip
@@ -174,7 +174,7 @@ return|return
 name|zip
 return|;
 block|}
-comment|/**      * Sets the value of the zip property.      *       */
+comment|/**      * Sets the value of the zip property.      *      */
 specifier|public
 name|void
 name|setZip
@@ -190,7 +190,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the street property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the street property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getStreet
@@ -200,7 +200,7 @@ return|return
 name|street
 return|;
 block|}
-comment|/**      * Sets the value of the street property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the street property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setStreet
@@ -216,7 +216,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the nr property.      *       * @return      *     possible object is      *     {@link Integer }      *           */
+comment|/**      * Gets the value of the nr property.      *      * @return      *     possible object is      *     {@link Integer }      *      */
 specifier|public
 name|Integer
 name|getNr
@@ -226,7 +226,7 @@ return|return
 name|nr
 return|;
 block|}
-comment|/**      * Sets the value of the nr property.      *       * @param value      *     allowed object is      *     {@link Integer }      *           */
+comment|/**      * Sets the value of the nr property.      *      * @param value      *     allowed object is      *     {@link Integer }      *      */
 specifier|public
 name|void
 name|setNr

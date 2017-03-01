@@ -91,6 +91,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|URL
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|Arrays
@@ -550,7 +560,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -635,6 +645,57 @@ argument_list|)
 expr_stmt|;
 return|return
 name|probe
+return|;
+block|}
+specifier|public
+name|File
+name|getConfigFile
+parameter_list|(
+name|String
+name|path
+parameter_list|)
+block|{
+name|URL
+name|res
+init|=
+name|this
+operator|.
+name|getClass
+argument_list|()
+operator|.
+name|getResource
+argument_list|(
+name|path
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|res
+operator|==
+literal|null
+condition|)
+block|{
+throw|throw
+operator|new
+name|RuntimeException
+argument_list|(
+literal|"Config resource "
+operator|+
+name|path
+operator|+
+literal|" not found"
+argument_list|)
+throw|;
+block|}
+return|return
+operator|new
+name|File
+argument_list|(
+name|res
+operator|.
+name|getFile
+argument_list|()
+argument_list|)
 return|;
 block|}
 specifier|private
@@ -767,7 +828,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *       * @return      */
+comment|/**      * Create an {@link org.ops4j.pax.exam.Option} for using a .      *      * @return      */
 specifier|protected
 name|Option
 name|cxfBaseConfig
@@ -960,7 +1021,7 @@ name|versionAsInProject
 argument_list|()
 return|;
 block|}
-comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *       * @param command      * @return      */
+comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *      * @param command      * @return      */
 specifier|protected
 name|String
 name|executeCommand
@@ -981,7 +1042,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *       * @param command The command to execute.      * @param timeout The amount of time in millis to wait for the command to execute.      * @param silent Specifies if the command should be displayed in the screen.      * @return      */
+comment|/**      * Executes a shell command and returns output as a String. Commands have a default timeout of 10 seconds.      *      * @param command The command to execute.      * @param timeout The amount of time in millis to wait for the command to execute.      * @param silent Specifies if the command should be displayed in the screen.      * @return      */
 specifier|protected
 name|String
 name|executeCommand
@@ -1178,7 +1239,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      * Executes multiple commands inside a Single Session. Commands have a default timeout of 10 seconds.      *       * @param commands      * @return      */
+comment|/**      * Executes multiple commands inside a Single Session. Commands have a default timeout of 10 seconds.      *      * @param commands      * @return      */
 specifier|protected
 name|String
 name|executeCommands
@@ -1587,13 +1648,6 @@ name|SERVICE_TIMEOUT
 argument_list|)
 return|;
 block|}
-annotation|@
-name|SuppressWarnings
-argument_list|(
-block|{
-literal|"unchecked"
-block|}
-argument_list|)
 specifier|protected
 parameter_list|<
 name|T
@@ -1615,6 +1669,11 @@ name|timeout
 parameter_list|)
 block|{
 name|ServiceTracker
+argument_list|<
+name|T
+argument_list|,
+name|?
+argument_list|>
 name|tracker
 init|=
 literal|null
@@ -1722,6 +1781,11 @@ name|tracker
 operator|=
 operator|new
 name|ServiceTracker
+argument_list|<
+name|T
+argument_list|,
+name|Object
+argument_list|>
 argument_list|(
 name|bundleContext
 argument_list|,
@@ -1794,6 +1858,9 @@ expr_stmt|;
 for|for
 control|(
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|ref
 range|:
 name|asCollection
@@ -1824,6 +1891,9 @@ block|}
 for|for
 control|(
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 name|ref
 range|:
 name|asCollection
@@ -1901,7 +1971,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Finds a free port starting from the give port numner.      *       * @return      */
+comment|/**      * Finds a free port starting from the give port numner.      *      * @return      */
 specifier|protected
 name|int
 name|getFreePort
@@ -1927,7 +1997,7 @@ return|return
 name|port
 return|;
 block|}
-comment|/**      * Returns true if port is available for use.      *       * @param port      * @return      */
+comment|/**      * Returns true if port is available for use.      *      * @param port      * @return      */
 specifier|public
 specifier|static
 name|boolean
@@ -2025,10 +2095,16 @@ specifier|static
 name|Collection
 argument_list|<
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 argument_list|>
 name|asCollection
 parameter_list|(
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 index|[]
 name|references
 parameter_list|)
@@ -2049,6 +2125,9 @@ name|Collections
 operator|.
 expr|<
 name|ServiceReference
+argument_list|<
+name|?
+argument_list|>
 operator|>
 name|emptyList
 argument_list|()
@@ -2169,10 +2248,16 @@ name|filter
 argument_list|)
 decl_stmt|;
 name|ServiceTracker
+argument_list|<
+name|?
+argument_list|,
+name|?
+argument_list|>
 name|tracker
 init|=
 operator|new
 name|ServiceTracker
+argument_list|<>
 argument_list|(
 name|bundleContext
 argument_list|,

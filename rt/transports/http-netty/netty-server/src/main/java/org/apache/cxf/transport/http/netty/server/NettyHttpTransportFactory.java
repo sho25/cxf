@@ -276,9 +276,7 @@ name|URI_PREFIXES
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 static|static
@@ -375,9 +373,7 @@ name|setTransportIds
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|ans
 argument_list|)
@@ -396,7 +392,7 @@ return|return
 name|URI_PREFIXES
 return|;
 block|}
-comment|/**      * This call uses the Configurer from the bus to configure      * a bean.      *       * @param bean      */
+comment|/**      * This call uses the Configurer from the bus to configure      * a bean.      *      * @param bean      */
 specifier|protected
 name|void
 name|configure

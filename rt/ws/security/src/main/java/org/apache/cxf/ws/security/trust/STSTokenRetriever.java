@@ -1033,8 +1033,6 @@ name|secToken
 operator|=
 name|getTokenFromSTS
 argument_list|(
-name|message
-argument_list|,
 name|client
 argument_list|,
 name|maps
@@ -2426,9 +2424,6 @@ specifier|static
 name|SecurityToken
 name|getTokenFromSTS
 parameter_list|(
-name|Message
-name|message
-parameter_list|,
 name|STSClient
 name|client
 parameter_list|,

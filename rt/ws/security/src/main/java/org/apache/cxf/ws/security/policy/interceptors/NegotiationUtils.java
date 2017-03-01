@@ -700,7 +700,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a collection of utility methods for use in negotiation exchanges such as WS-SecureConversation   * and WS-Trust for SPNEGO.  */
+comment|/**  * This is a collection of utility methods for use in negotiation exchanges such as WS-SecureConversation  * and WS-Trust for SPNEGO.  */
 end_comment
 
 begin_class

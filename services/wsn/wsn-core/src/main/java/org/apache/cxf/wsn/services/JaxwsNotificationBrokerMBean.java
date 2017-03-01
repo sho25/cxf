@@ -37,7 +37,7 @@ interface|interface
 name|JaxwsNotificationBrokerMBean
 extends|extends
 name|NotificationBrokerMBean
-block|{      }
+block|{  }
 end_interface
 
 end_unit

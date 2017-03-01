@@ -160,9 +160,7 @@ name|value1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|value1
@@ -801,9 +799,7 @@ name|values
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|values
@@ -950,9 +946,7 @@ name|value1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|value1
@@ -1383,9 +1377,7 @@ name|value1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|value1
@@ -1497,9 +1489,7 @@ name|value2
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|value2
@@ -1622,9 +1612,7 @@ name|value1
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|value1

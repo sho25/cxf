@@ -167,8 +167,8 @@ decl_stmt|;
 specifier|private
 name|ServiceDelegateAccessor
 parameter_list|()
-block|{             }
-comment|/**      * Get the delegate reference from the Service private field. This method      * uses Field.setAccessible() which, in the presence of a SecurityManager,      * requires the suppressAccessChecks permission      *       * @param service the taraget service      * @return the implementation delegate      * @throws WebServiceException if access to the field fails for any reason      */
+block|{     }
+comment|/**      * Get the delegate reference from the Service private field. This method      * uses Field.setAccessible() which, in the presence of a SecurityManager,      * requires the suppressAccessChecks permission      *      * @param service the taraget service      * @return the implementation delegate      * @throws WebServiceException if access to the field fails for any reason      */
 specifier|public
 specifier|static
 name|ServiceImpl

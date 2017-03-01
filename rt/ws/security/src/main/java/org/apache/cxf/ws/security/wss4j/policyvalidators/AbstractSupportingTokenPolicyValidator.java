@@ -529,6 +529,22 @@ name|policy
 operator|.
 name|model
 operator|.
+name|AbstractSecuredParts
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|wss4j
+operator|.
+name|policy
+operator|.
+name|model
+operator|.
 name|AbstractSecurityAssertion
 import|;
 end_import
@@ -3038,7 +3054,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Check that a WSSecurityEngineResult corresponding to a signature or encryption uses the same       * signing/encrypting credential as one of the tokens.      * @param signatureResult a WSSecurityEngineResult corresponding to a signature or encryption      * @param tokenResult A list of WSSecurityEngineResults corresponding to tokens      * @return       */
+comment|/**      * Check that a WSSecurityEngineResult corresponding to a signature or encryption uses the same      * signing/encrypting credential as one of the tokens.      * @param signatureResult a WSSecurityEngineResult corresponding to a signature or encryption      * @param tokenResult A list of WSSecurityEngineResults corresponding to tokens      * @return      */
 specifier|private
 name|boolean
 name|checkSignatureOrEncryptionResult
@@ -3438,7 +3454,7 @@ specifier|private
 name|boolean
 name|validateSignedEncryptedParts
 parameter_list|(
-name|SignedParts
+name|AbstractSecuredParts
 name|parts
 parameter_list|,
 name|boolean

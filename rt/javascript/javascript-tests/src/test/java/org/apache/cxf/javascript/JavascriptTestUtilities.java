@@ -1254,7 +1254,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * Evaluate a javascript expression, returning the raw Rhino object.      *       * @param jsExpression the javascript expression.      * @return return value.      */
+comment|/**      * Evaluate a javascript expression, returning the raw Rhino object.      *      * @param jsExpression the javascript expression.      * @return return value.      */
 specifier|public
 name|Object
 name|rhinoEvaluate
@@ -1307,7 +1307,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a method on a Javascript object.      *       * @param that the object.      * @param methodName method name.      * @param args arguments.      * @return      */
+comment|/**      * Call a method on a Javascript object.      *      * @param that the object.      * @param methodName method name.      * @param args arguments.      * @return      */
 specifier|public
 name|Object
 name|rhinoCallMethod
@@ -1338,7 +1338,7 @@ name|args
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a method on a Javascript object and convert result to specified class. Convert to the requested      * class.      *       * @param<T> type      * @param clazz class object.      * @param that Javascript object.      * @param methodName method      * @param args arguments      * @return return value.      */
+comment|/**      * Call a method on a Javascript object and convert result to specified class. Convert to the requested      * class.      *      * @param<T> type      * @param clazz class object.      * @param that Javascript object.      * @param methodName method      * @param args arguments      * @return return value.      */
 specifier|public
 parameter_list|<
 name|T
@@ -1386,7 +1386,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a method on a Javascript object inside context brackets.      *       * @param<T> return type.      * @param clazz class for the return type.      * @param that object      * @param methodName method      * @param args arguments. Caller must run javaToJS as appropriate      * @return return value.      */
+comment|/**      * Call a method on a Javascript object inside context brackets.      *      * @param<T> return type.      * @param clazz class for the return type.      * @param that object      * @param methodName method      * @param args arguments. Caller must run javaToJS as appropriate      * @return return value.      */
 specifier|public
 parameter_list|<
 name|T
@@ -1453,7 +1453,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * Evaluate a Javascript expression, converting the return value to a convenient Java type.      *       * @param<T> The desired type      * @param jsExpression the javascript expression.      * @param clazz the Class object for the desired type.      * @return the result.      */
+comment|/**      * Evaluate a Javascript expression, converting the return value to a convenient Java type.      *      * @param<T> The desired type      * @param jsExpression the javascript expression.      * @param clazz the Class object for the desired type.      * @return the result.      */
 specifier|public
 parameter_list|<
 name|T
@@ -1490,7 +1490,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a JavaScript function within the Context. Optionally, require it to throw an exception equal to a      * supplied object. If the exception is called for, this function will either return null or Assert.      *       * @param expectingException Exception desired, or null.      * @param functionName Function to call.      * @param args args for the function. Be sure to Javascript-ify them as appropriate.      * @return      */
+comment|/**      * Call a JavaScript function within the Context. Optionally, require it to throw an exception equal to a      * supplied object. If the exception is called for, this function will either return null or Assert.      *      * @param expectingException Exception desired, or null.      * @param functionName Function to call.      * @param args args for the function. Be sure to Javascript-ify them as appropriate.      * @return      */
 specifier|public
 name|Object
 name|rhinoCallExpectingExceptionInContext
@@ -1546,7 +1546,7 @@ block|}
 argument_list|)
 return|;
 block|}
-comment|/**      * Call a Javascript function, identified by name, on a set of arguments. Optionally, expect it to throw      * an exception.      *       * @param expectingException      * @param functionName      * @param args      * @return      */
+comment|/**      * Call a Javascript function, identified by name, on a set of arguments. Optionally, expect it to throw      * an exception.      *      * @param expectingException      * @param functionName      * @param args      * @return      */
 specifier|public
 name|Object
 name|rhinoCallExpectingException

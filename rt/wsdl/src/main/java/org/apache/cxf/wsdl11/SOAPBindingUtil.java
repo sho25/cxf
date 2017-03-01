@@ -1131,9 +1131,7 @@ name|headers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SOAPHeader
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1490,9 +1488,7 @@ name|faults
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SOAPFault
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

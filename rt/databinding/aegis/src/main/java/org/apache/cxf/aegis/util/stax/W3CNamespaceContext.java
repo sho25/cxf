@@ -4,7 +4,7 @@ comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or 
 end_comment
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_package
@@ -429,9 +429,7 @@ name|prefixes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String

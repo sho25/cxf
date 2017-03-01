@@ -546,9 +546,7 @@ name|ALLOWED_OAUTH_PARAMETERS
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|ALLOWED_OAUTH_PARAMETERS
@@ -605,7 +603,7 @@ decl_stmt|;
 specifier|protected
 name|AbstractAuthFilter
 parameter_list|()
-block|{              }
+block|{      }
 comment|/**      * Sets {@link OAuthDataProvider} provider.      * @param provider the provider      */
 specifier|public
 name|void
@@ -644,7 +642,7 @@ return|return
 name|useUserSubject
 return|;
 block|}
-comment|/**      * Authenticates the third-party consumer and returns      * {@link OAuthInfo} bean capturing the information about the request.       * @param req http request      * @return OAuth info      * @see OAuthInfo      * @throws Exception      * @throws OAuthProblemException      */
+comment|/**      * Authenticates the third-party consumer and returns      * {@link OAuthInfo} bean capturing the information about the request.      * @param req http request      * @return OAuth info      * @see OAuthInfo      * @throws Exception      * @throws OAuthProblemException      */
 specifier|protected
 name|OAuthInfo
 name|handleOAuthRequest
@@ -1062,9 +1060,7 @@ name|matchingPermissions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OAuthPermission
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1119,12 +1115,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|permissions
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|matchingPermissions
 operator|.

@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -80,7 +80,7 @@ operator|=
 name|child
 expr_stmt|;
 block|}
-comment|/**       * @return Returns the name.      */
+comment|/**      * @return Returns the name.      */
 specifier|public
 name|QName
 name|getName
@@ -90,7 +90,7 @@ return|return
 name|name
 return|;
 block|}
-comment|/**       * @return Returns the text.      */
+comment|/**      * @return Returns the text.      */
 specifier|public
 name|String
 name|getText
@@ -100,7 +100,7 @@ return|return
 name|text
 return|;
 block|}
-comment|/**       * @return Returns the child.      */
+comment|/**      * @return Returns the child.      */
 specifier|public
 name|boolean
 name|isChild

@@ -107,6 +107,38 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingInInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingOutInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|greeter_control
 operator|.
 name|Greeter
@@ -124,34 +156,6 @@ operator|.
 name|greeter_control
 operator|.
 name|GreeterService
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingInInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingOutInterceptor
 import|;
 end_import
 
@@ -266,7 +270,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the WS-RM processing with the cached out message (using temporary files).   */
+comment|/**  * Tests the WS-RM processing with the cached out message (using temporary files).  */
 end_comment
 
 begin_class

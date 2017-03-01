@@ -29,7 +29,7 @@ specifier|final
 class|class
 name|SAMLConstants
 block|{
-comment|/**      * This tag refers to a DOM Element representation of a SAML Token. If a SAML Token      * is stored on the Message Context, then the SamlFormOutInterceptor and       * SamlHeaderOutInterceptor will use this token instead of creating a new SAML Token.      */
+comment|/**      * This tag refers to a DOM Element representation of a SAML Token. If a SAML Token      * is stored on the Message Context, then the SamlFormOutInterceptor and      * SamlHeaderOutInterceptor will use this token instead of creating a new SAML Token.      */
 specifier|public
 specifier|static
 specifier|final

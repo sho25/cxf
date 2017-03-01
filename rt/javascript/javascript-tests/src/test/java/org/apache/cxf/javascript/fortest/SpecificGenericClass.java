@@ -59,7 +59,7 @@ parameter_list|(
 name|String
 name|t
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|String
 name|getValue

@@ -51,7 +51,7 @@ specifier|public
 name|SuspendedInvocationException
 parameter_list|()
 block|{     }
-comment|/**      * Returns a transport-specific runtime exception      * @return RuntimeException the transport-specific runtime exception,       *         can be null for asynchronous transports      */
+comment|/**      * Returns a transport-specific runtime exception      * @return RuntimeException the transport-specific runtime exception,      *         can be null for asynchronous transports      */
 specifier|public
 name|RuntimeException
 name|getRuntimeException

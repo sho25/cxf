@@ -1132,7 +1132,7 @@ name|getTypeClass
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|/*          * revisit, try to use other wsdl operation rewrite test in future          assertTrue(itr.hasNext());         part = itr.next();         assertEquals(Boolean.TRUE, part.getProperty(JaxWsServiceFactoryBean.MODE_INOUT));         assertEquals(byte[].class, part.getTypeClass());                  assertFalse(itr.hasNext());                  // test output setup         itr = op.getOutput().getMessageParts().iterator();          assertTrue(itr.hasNext());         part = itr.next();         assertEquals(Boolean.TRUE, part.getProperty(JaxWsServiceFactoryBean.MODE_INOUT));         */
+comment|/*          * revisit, try to use other wsdl operation rewrite test in future         assertTrue(itr.hasNext());         part = itr.next();         assertEquals(Boolean.TRUE, part.getProperty(JaxWsServiceFactoryBean.MODE_INOUT));         assertEquals(byte[].class, part.getTypeClass());          assertFalse(itr.hasNext());          // test output setup         itr = op.getOutput().getMessageParts().iterator();          assertTrue(itr.hasNext());         part = itr.next();         assertEquals(Boolean.TRUE, part.getProperty(JaxWsServiceFactoryBean.MODE_INOUT));         */
 block|}
 annotation|@
 name|Test

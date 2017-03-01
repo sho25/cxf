@@ -878,6 +878,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|protected
+specifier|final
 name|JweJsonEncryptionEntry
 name|getEncryptionObject
 parameter_list|(

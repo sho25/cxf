@@ -39,7 +39,7 @@ operator|.
 name|spi
 operator|.
 name|ProviderImpl
-block|{      }
+block|{  }
 end_class
 
 end_unit

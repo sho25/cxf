@@ -1562,12 +1562,11 @@ name|methods
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|methods
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|confirmMethod
@@ -1850,12 +1849,11 @@ name|methods
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|methods
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|confirmMethod
@@ -2138,12 +2136,11 @@ name|methods
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|methods
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|confirmMethod
@@ -2426,12 +2423,11 @@ name|methods
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|methods
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|confirmMethod
@@ -2714,12 +2710,11 @@ name|methods
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|methods
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|confirmMethod
@@ -2984,12 +2979,11 @@ name|methods
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|methods
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|confirmMethod
@@ -6995,7 +6989,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          @
+unit|}      @
 name|org
 operator|.
 name|junit
@@ -7442,7 +7436,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          @
+unit|}      @
 name|org
 operator|.
 name|junit
@@ -8324,7 +8318,7 @@ return|;
 end_return
 
 begin_function
-unit|}          private
+unit|}      private
 name|List
 argument_list|<
 name|WSSecurityEngineResult
@@ -8401,6 +8395,20 @@ argument_list|(
 name|crypto
 argument_list|)
 expr_stmt|;
+name|requestData
+operator|.
+name|setWsDocInfo
+argument_list|(
+operator|new
+name|WSDocInfo
+argument_list|(
+name|assertionElement
+operator|.
+name|getOwnerDocument
+argument_list|()
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|Processor
 name|processor
 init|=
@@ -8416,15 +8424,6 @@ argument_list|(
 name|assertionElement
 argument_list|,
 name|requestData
-argument_list|,
-operator|new
-name|WSDocInfo
-argument_list|(
-name|assertionElement
-operator|.
-name|getOwnerDocument
-argument_list|()
-argument_list|)
 argument_list|)
 return|;
 block|}

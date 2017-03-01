@@ -388,7 +388,7 @@ name|name
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *       * @param notify      */
+comment|/**      *      * @param notify      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -446,7 +446,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      *       * @param getMessagesRequest      * @return returns org.oasis_open.docs.wsn.b_1.GetMessagesResponse      * @throws ResourceUnknownFault      * @throws UnableToGetMessagesFault      */
+comment|/**      *      * @param getMessagesRequest      * @return returns org.oasis_open.docs.wsn.b_1.GetMessagesResponse      * @throws ResourceUnknownFault      * @throws UnableToGetMessagesFault      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -552,7 +552,7 @@ return|return
 name|response
 return|;
 block|}
-comment|/**      *       * @param destroyPullPointRequest      * @return returns org.oasis_open.docs.wsn.b_1.DestroyResponse      * @throws ResourceUnknownFault      * @throws UnableToDestroyPullPointFault      */
+comment|/**      *      * @param destroyPullPointRequest      * @return returns org.oasis_open.docs.wsn.b_1.DestroyResponse      * @throws ResourceUnknownFault      * @throws UnableToDestroyPullPointFault      */
 annotation|@
 name|WebMethod
 argument_list|(

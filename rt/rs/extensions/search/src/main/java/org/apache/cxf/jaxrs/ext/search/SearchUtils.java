@@ -283,7 +283,7 @@ decl_stmt|;
 specifier|private
 name|SearchUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|SimpleDateFormat
@@ -858,12 +858,11 @@ name|columns
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|columns
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

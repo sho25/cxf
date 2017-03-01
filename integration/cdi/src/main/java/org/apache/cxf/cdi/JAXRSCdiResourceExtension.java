@@ -406,7 +406,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Apache CXF portable CDI extension to support initialization of JAX-RS resources.    */
+comment|/**  * Apache CXF portable CDI extension to support initialization of JAX-RS resources.  */
 end_comment
 
 begin_class
@@ -770,6 +770,52 @@ name|providerBeans
 operator|.
 name|add
 argument_list|(
+name|event
+operator|.
+name|getBean
+argument_list|()
+argument_list|)
+expr_stmt|;
+block|}
+elseif|else
+if|if
+condition|(
+name|event
+operator|.
+name|getBean
+argument_list|()
+operator|.
+name|getTypes
+argument_list|()
+operator|.
+name|contains
+argument_list|(
+name|javax
+operator|.
+name|ws
+operator|.
+name|rs
+operator|.
+name|core
+operator|.
+name|Feature
+operator|.
+name|class
+argument_list|)
+condition|)
+block|{
+name|providerBeans
+operator|.
+name|add
+argument_list|(
+operator|(
+name|Bean
+argument_list|<
+name|?
+extends|extends
+name|Feature
+argument_list|>
+operator|)
 name|event
 operator|.
 name|getBean
@@ -1175,7 +1221,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Releases created CreationalContext instances       */
+comment|/**      * Releases created CreationalContext instances      */
 specifier|public
 name|void
 name|release
@@ -1253,6 +1299,8 @@ literal|false
 argument_list|,
 literal|false
 argument_list|,
+literal|false
+argument_list|,
 name|bus
 argument_list|)
 decl_stmt|;
@@ -1317,6 +1365,8 @@ operator|.
 name|createApplication
 argument_list|(
 name|application
+argument_list|,
+literal|false
 argument_list|,
 literal|false
 argument_list|,
@@ -1955,7 +2005,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Creates and collects the CreationalContext instances for future releasing.       * @param beanManager bean manager instance      * @param bean bean instance to create CreationalContext for      * @return CreationalContext instance      */
+comment|/**      * Creates and collects the CreationalContext instances for future releasing.      * @param beanManager bean manager instance      * @param bean bean instance to create CreationalContext for      * @return CreationalContext instance      */
 specifier|private
 parameter_list|<
 name|T

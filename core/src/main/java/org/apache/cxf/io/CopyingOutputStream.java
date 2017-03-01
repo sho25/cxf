@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Marker interface for OutputStreams that can directly support   * copying from an input stream.  OutputStreams that maintain their  * own byte buffer or similar may be able to optimize the copy  * instead of using the read/write into a temporary buffer that  * the normal IOUtils.copy method requires.  */
+comment|/**  * Marker interface for OutputStreams that can directly support  * copying from an input stream.  OutputStreams that maintain their  * own byte buffer or similar may be able to optimize the copy  * instead of using the read/write into a temporary buffer that  * the normal IOUtils.copy method requires.  */
 end_comment
 
 begin_interface

@@ -116,7 +116,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An invoker that supports direct Message Driven Bean invocation.    * It get invoked in the context of the Message Driven Bean that   * activates the CXF service endpoint facade.  Applications that put   * service implementation inside the Message Driven Bean that activates   * the inbound endpoint facade should choose this invoker.  It is   * more straightforward and faster than {@link DispatchMBDInvoker} but   * it requires to modify resource adapter's deployment descriptor (ra.xml)  * as the<messaging-type> needs to be set to the Service Endpoint Interface  * (SEI) class.  */
+comment|/**  * An invoker that supports direct Message Driven Bean invocation.  * It get invoked in the context of the Message Driven Bean that  * activates the CXF service endpoint facade.  Applications that put  * service implementation inside the Message Driven Bean that activates  * the inbound endpoint facade should choose this invoker.  It is  * more straightforward and faster than {@link DispatchMBDInvoker} but  * it requires to modify resource adapter's deployment descriptor (ra.xml)  * as the<messaging-type> needs to be set to the Service Endpoint Interface  * (SEI) class.  */
 end_comment
 
 begin_class

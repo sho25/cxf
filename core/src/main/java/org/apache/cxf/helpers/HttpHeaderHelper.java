@@ -378,7 +378,7 @@ block|}
 specifier|private
 name|HttpHeaderHelper
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|List

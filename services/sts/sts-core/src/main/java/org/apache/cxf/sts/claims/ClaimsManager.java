@@ -2093,9 +2093,7 @@ name|collection
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ProcessedClaim
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2312,7 +2310,7 @@ return|return
 name|collection
 return|;
 block|}
-comment|/**      * This method merges the primary claims with the secondary claims (of the same dialect).       * This facilitates handling claims from a service via wst:SecondaryParameters/wst:Claims       * with any client-specific claims sent in wst:RequestSecurityToken/wst:Claims      */
+comment|/**      * This method merges the primary claims with the secondary claims (of the same dialect).      * This facilitates handling claims from a service via wst:SecondaryParameters/wst:Claims      * with any client-specific claims sent in wst:RequestSecurityToken/wst:Claims      */
 specifier|private
 name|ClaimCollection
 name|mergeClaims

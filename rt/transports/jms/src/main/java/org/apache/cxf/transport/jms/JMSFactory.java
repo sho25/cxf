@@ -188,7 +188,7 @@ specifier|private
 name|JMSFactory
 parameter_list|()
 block|{     }
-comment|/**      * Create JmsSender from configuration information. Most settings are taken from jmsConfig. The QoS      * settings in messageProperties override the settings from jmsConfig      *       * @param jmsConfig configuration information      * @param messageProperties context headers override config settings      * @return      */
+comment|/**      * Create JmsSender from configuration information. Most settings are taken from jmsConfig. The QoS      * settings in messageProperties override the settings from jmsConfig      *      * @param jmsConfig configuration information      * @param messageProperties context headers override config settings      * @return      */
 specifier|public
 specifier|static
 name|JMSSender
@@ -448,7 +448,7 @@ return|return
 name|connection
 return|;
 block|}
-comment|/**      * Get workqueue from workqueue manager. Return an executor that will never reject messages and      * instead block when all threads are used.      *       * @param bus      * @param name      * @return      */
+comment|/**      * Get workqueue from workqueue manager. Return an executor that will never reject messages and      * instead block when all threads are used.      *      * @param bus      * @param name      * @return      */
 specifier|public
 specifier|static
 name|Executor

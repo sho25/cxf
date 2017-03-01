@@ -480,7 +480,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Unit test for testing DocLiteralInInterceptor to use Source Data Binding   *   */
+comment|/**  * Unit test for testing DocLiteralInInterceptor to use Source Data Binding  *  */
 end_comment
 
 begin_class
@@ -1200,9 +1200,7 @@ name|operations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|EasyMock
@@ -2087,9 +2085,7 @@ name|operations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|EasyMock

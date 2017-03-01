@@ -263,20 +263,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
-operator|.
-name|LoggingInInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|io
 operator|.
 name|CachedOutputStream
@@ -475,7 +461,7 @@ decl_stmt|;
 specifier|private
 name|FormUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String
@@ -1316,12 +1302,7 @@ name|chain
 operator|.
 name|contains
 argument_list|(
-name|LoggingInInterceptor
-operator|.
-name|class
-operator|.
-name|getSimpleName
-argument_list|()
+literal|"LoggingInInterceptor"
 argument_list|)
 condition|)
 block|{

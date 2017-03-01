@@ -54,7 +54,7 @@ decl_stmt|;
 specifier|public
 name|SuperBook
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|SuperBook
 parameter_list|(

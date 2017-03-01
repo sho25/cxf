@@ -1122,9 +1122,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|validatorList
@@ -1152,9 +1150,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providerList
@@ -1538,7 +1534,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully validate a UsernameToken (which was issued in realm "A") and       * transform it into a SAML Assertion in Realm "B".      */
+comment|/**      * Test to successfully validate a UsernameToken (which was issued in realm "A") and      * transform it into a SAML Assertion in Realm "B".      */
 annotation|@
 name|org
 operator|.
@@ -1568,9 +1564,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|UsernameTokenValidator
@@ -1612,9 +1606,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenProvider
@@ -2183,9 +2175,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenProvider
@@ -2210,9 +2200,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -2254,9 +2242,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -2330,9 +2316,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -2911,9 +2895,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|validatorList
@@ -2941,9 +2923,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -2954,9 +2934,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -3468,9 +3446,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenProvider
@@ -3495,9 +3471,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -3539,9 +3513,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -3615,9 +3587,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -5025,9 +4995,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList

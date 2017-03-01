@@ -184,6 +184,8 @@ operator|new
 name|ClaimsAuthorizingInterceptor
 argument_list|()
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|void
 name|filter

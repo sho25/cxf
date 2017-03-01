@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class

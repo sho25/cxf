@@ -121,7 +121,7 @@ argument_list|<
 name|HTTPServerPolicy
 argument_list|>
 block|{
-comment|/**      * Returns a new HTTPServerPolicy that is compatible with the two specified      * policies or null if no compatible policy can be determined.      *       * @param p1 one policy      * @param p2 another policy      * @return the compatible policy      */
+comment|/**      * Returns a new HTTPServerPolicy that is compatible with the two specified      * policies or null if no compatible policy can be determined.      *      * @param p1 one policy      * @param p2 another policy      * @return the compatible policy      */
 specifier|public
 name|HTTPServerPolicy
 name|intersect
@@ -507,7 +507,7 @@ return|return
 name|p
 return|;
 block|}
-comment|/**      * Checks if two HTTPServerPolicy objects are compatible.      *       * @param p1 one server policy      * @param p2 another server policy      * @return true iff policies are compatible      */
+comment|/**      * Checks if two HTTPServerPolicy objects are compatible.      *      * @param p1 one server policy      * @param p2 another server policy      * @return true iff policies are compatible      */
 specifier|public
 name|boolean
 name|compatible
@@ -771,7 +771,7 @@ return|return
 name|compatible
 return|;
 block|}
-comment|/**      * Determines if two HTTPServerPolicy objects are equal. REVISIT: Check if      * this can be replaced by a generated equals method.      *       * @param p1 one server policy      * @param p2 another server policy      * @return true iff the two policies are equal      */
+comment|/**      * Determines if two HTTPServerPolicy objects are equal. REVISIT: Check if      * this can be replaced by a generated equals method.      *      * @param p1 one server policy      * @param p2 another server policy      * @return true iff the two policies are equal      */
 specifier|public
 name|boolean
 name|equals

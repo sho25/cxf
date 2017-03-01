@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class contains some configuration tags that can be used to configure various security properties. These  * tags are shared between the SOAP stack (WS-SecurityPolicy configuration), as well as the REST stack (JAX-RS  * XML Security).   *   * The configuration tags largely relate to properties for signing, encryption as well as SAML tokens. Most of  * the signing/encryption tags refer to Apache WSS4J "Crypto" objects, which are used by both stacks to control  * how certificates/keys are retrieved, etc.  *   * More specific configuration tags for WS-SecurityPolicy are configured in the SecurityConstants   * class in the cxf-rt-ws-security module, which extends this class.  */
+comment|/**  * This class contains some configuration tags that can be used to configure various security properties. These  * tags are shared between the SOAP stack (WS-SecurityPolicy configuration), as well as the REST stack (JAX-RS  * XML Security).  *  * The configuration tags largely relate to properties for signing, encryption as well as SAML tokens. Most of  * the signing/encryption tags refer to Apache WSS4J "Crypto" objects, which are used by both stacks to control  * how certificates/keys are retrieved, etc.  *  * More specific configuration tags for WS-SecurityPolicy are configured in the SecurityConstants  * class in the cxf-rt-ws-security module, which extends this class.  */
 end_comment
 
 begin_class
@@ -69,7 +69,7 @@ block|{
 comment|//
 comment|// User properties
 comment|//
-comment|/**      * The user's name. It is used as follows:      * a) As the name in the UsernameToken for WS-Security.      * b) As the alias name in the keystore to get the user's cert and private key for signature      *    if {@link SIGNATURE_USERNAME} is not set.      * c) As the alias name in the keystore to get the user's public key for encryption if       *    {@link ENCRYPT_USERNAME} is not set.      */
+comment|/**      * The user's name. It is used as follows:      * a) As the name in the UsernameToken for WS-Security.      * b) As the alias name in the keystore to get the user's cert and private key for signature      *    if {@link SIGNATURE_USERNAME} is not set.      * c) As the alias name in the keystore to get the user's public key for encryption if      *    {@link ENCRYPT_USERNAME} is not set.      */
 specifier|public
 specifier|static
 specifier|final
@@ -87,7 +87,7 @@ name|PASSWORD
 init|=
 literal|"security.password"
 decl_stmt|;
-comment|/**      * The user's name for signature. It is used as the alias name in the keystore to get the user's cert       * and private key for signature. If this is not defined, then {@link USERNAME} is used instead. If       * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link SIGNATURE_PROPERTIES}. If that's also not set, and the keystore only contains a single key,       * that key will be used.       */
+comment|/**      * The user's name for signature. It is used as the alias name in the keystore to get the user's cert      * and private key for signature. If this is not defined, then {@link USERNAME} is used instead. If      * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link SIGNATURE_PROPERTIES}. If that's also not set, and the keystore only contains a single key,      * that key will be used.      */
 specifier|public
 specifier|static
 specifier|final
@@ -96,7 +96,7 @@ name|SIGNATURE_USERNAME
 init|=
 literal|"security.signature.username"
 decl_stmt|;
-comment|/**      * The user's name for encryption. It is used as the alias name in the keystore to get the user's public       * key for encryption. If this is not defined, then {@link USERNAME} is used instead. If       * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link ENCRYPT_PROPERTIES}. If that's also not set, and the keystore only contains a single key,       * that key will be used.      *       * For the WS-Security web service provider, the "useReqSigCert" keyword can be used to accept (encrypt to)       * any client whose public key is in the service's truststore (defined in {@link ENCRYPT_PROPERTIES}).      */
+comment|/**      * The user's name for encryption. It is used as the alias name in the keystore to get the user's public      * key for encryption. If this is not defined, then {@link USERNAME} is used instead. If      * that is also not specified, it uses the the default alias set in the properties file referenced by      * {@link ENCRYPT_PROPERTIES}. If that's also not set, and the keystore only contains a single key,      * that key will be used.      *      * For the WS-Security web service provider, the "useReqSigCert" keyword can be used to accept (encrypt to)      * any client whose public key is in the service's truststore (defined in {@link ENCRYPT_PROPERTIES}).      */
 specifier|public
 specifier|static
 specifier|final
@@ -108,7 +108,7 @@ decl_stmt|;
 comment|//
 comment|// Callback class and Crypto properties
 comment|//
-comment|/**      * The CallbackHandler implementation class used to obtain passwords, for both outbound and inbound       * requests. The value of this tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
+comment|/**      * The CallbackHandler implementation class used to obtain passwords, for both outbound and inbound      * requests. The value of this tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
 specifier|public
 specifier|static
 specifier|final
@@ -117,7 +117,7 @@ name|CALLBACK_HANDLER
 init|=
 literal|"security.callback-handler"
 decl_stmt|;
-comment|/**      * The SAML CallbackHandler implementation class used to construct SAML Assertions. The value of this       * tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
+comment|/**      * The SAML CallbackHandler implementation class used to construct SAML Assertions. The value of this      * tag must be either:      * a) The class name of a {@link javax.security.auth.callback.CallbackHandler} instance, which must      * be accessible via the classpath.      * b) A {@link javax.security.auth.callback.CallbackHandler} instance.      */
 specifier|public
 specifier|static
 specifier|final
@@ -144,7 +144,7 @@ name|ENCRYPT_PROPERTIES
 init|=
 literal|"security.encryption.properties"
 decl_stmt|;
-comment|/**      * A Crypto object to be used for signature. If this is not defined then the       * {@link SIGNATURE_PROPERTIES} is used instead.      */
+comment|/**      * A Crypto object to be used for signature. If this is not defined then the      * {@link SIGNATURE_PROPERTIES} is used instead.      */
 specifier|public
 specifier|static
 specifier|final
@@ -153,7 +153,7 @@ name|SIGNATURE_CRYPTO
 init|=
 literal|"security.signature.crypto"
 decl_stmt|;
-comment|/**      * A Crypto object to be used for encryption. If this is not defined then the       * {@link ENCRYPT_PROPERTIES} is used instead.      */
+comment|/**      * A Crypto object to be used for encryption. If this is not defined then the      * {@link ENCRYPT_PROPERTIES} is used instead.      */
 specifier|public
 specifier|static
 specifier|final
@@ -162,7 +162,7 @@ name|ENCRYPT_CRYPTO
 init|=
 literal|"security.encryption.crypto"
 decl_stmt|;
-comment|/**      * A message property for prepared X509 certificate to be used for encryption.       * If this is not defined, then the certificate will be either loaded from the       * keystore {@link ENCRYPT_PROPERTIES} or extracted from request (when WS-Security is used and      * if {@link ENCRYPT_USERNAME} has value "useReqSigCert").      */
+comment|/**      * A message property for prepared X509 certificate to be used for encryption.      * If this is not defined, then the certificate will be either loaded from the      * keystore {@link ENCRYPT_PROPERTIES} or extracted from request (when WS-Security is used and      * if {@link ENCRYPT_USERNAME} has value "useReqSigCert").      */
 specifier|public
 specifier|static
 specifier|final
@@ -174,7 +174,7 @@ decl_stmt|;
 comment|//
 comment|// Boolean Security configuration tags, e.g. the value should be "true" or "false".
 comment|//
-comment|/**      * Whether to enable Certificate Revocation List (CRL) checking or not when verifying trust       * in a certificate. The default value is "false".      */
+comment|/**      * Whether to enable Certificate Revocation List (CRL) checking or not when verifying trust      * in a certificate. The default value is "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -231,7 +231,7 @@ name|SAML_ROLE_ATTRIBUTENAME
 init|=
 literal|"security.saml-role-attributename"
 decl_stmt|;
-comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of       * the certificate used for signature validation, after trust verification of the certificate       * chain associated with the certificate.      */
+comment|/**      * A comma separated String of regular expressions which will be applied to the subject DN of      * the certificate used for signature validation, after trust verification of the certificate      * chain associated with the certificate.      */
 specifier|public
 specifier|static
 specifier|final
@@ -252,7 +252,7 @@ name|STS_CLIENT
 init|=
 literal|"security.sts.client"
 decl_stmt|;
-comment|/**      * The "AppliesTo" address to send to the STS. The default is the endpoint address of the       * service provider.      */
+comment|/**      * The "AppliesTo" address to send to the STS. The default is the endpoint address of the      * service provider.      */
 specifier|public
 specifier|static
 specifier|final
@@ -288,7 +288,7 @@ name|STS_ISSUE_AFTER_FAILED_RENEW
 init|=
 literal|"security.issue.after.failed.renew"
 decl_stmt|;
-comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the       * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
+comment|/**      * Set this to "false" to not cache a SecurityToken per proxy object in the      * IssuedTokenInterceptorProvider. This should be done if a token is being retrieved      * from an STS in an intermediary. The default value is "true".      */
 specifier|public
 specifier|static
 specifier|final
@@ -306,7 +306,7 @@ name|DISABLE_STS_CLIENT_WSMEX_CALL_USING_EPR_ADDRESS
 init|=
 literal|"security.sts.disable-wsmex-call-using-epr-address"
 decl_stmt|;
-comment|/**      * Whether to prefer to use WS-MEX over a STSClient's location/wsdlLocation properties      * when making an STS RequestSecurityToken call. This can be set to true for the scenario      * of making a WS-MEX call to an initial STS, and using the returned token to make another      * call to an STS (which is configured using the STSClient configuration). Default is       * "false".      */
+comment|/**      * Whether to prefer to use WS-MEX over a STSClient's location/wsdlLocation properties      * when making an STS RequestSecurityToken call. This can be set to true for the scenario      * of making a WS-MEX call to an initial STS, and using the returned token to make another      * call to an STS (which is configured using the STSClient configuration). Default is      * "false".      */
 specifier|public
 specifier|static
 specifier|final
@@ -324,7 +324,7 @@ name|STS_CLIENT_SOAP12_BINDING
 init|=
 literal|"security.sts.client-soap12-binding"
 decl_stmt|;
-comment|/**      *       * A Crypto object to be used for the STS. If this is not defined then the       * {@link STS_TOKEN_PROPERTIES} is used instead.      *       * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response.      *       * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens       * used if the KeyType is "PublicKey"       */
+comment|/**      *      * A Crypto object to be used for the STS. If this is not defined then the      * {@link STS_TOKEN_PROPERTIES} is used instead.      *      * WCF's trust server sometimes will encrypt the token in the response IN ADDITION TO      * the full security on the message. These properties control the way the STS client      * will decrypt the EncryptedData elements in the response.      *      * These are also used by the STSClient to send/process any RSA/DSAKeyValue tokens      * used if the KeyType is "PublicKey"      */
 specifier|public
 specifier|static
 specifier|final
@@ -351,7 +351,7 @@ name|STS_TOKEN_USERNAME
 init|=
 literal|"security.sts.token.username"
 decl_stmt|;
-comment|/**      * The token to be sent to the STS in an "ActAs" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *       * In the case of a CallbackHandler, it must be able to handle a       * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a       * reference to the current Message. The CallbackHandler implementation is required to set       * the token Element to be sent in the request on the Callback.      *       * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
+comment|/**      * The token to be sent to the STS in an "ActAs" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *      * In the case of a CallbackHandler, it must be able to handle a      * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a      * reference to the current Message. The CallbackHandler implementation is required to set      * the token Element to be sent in the request on the Callback.      *      * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
 specifier|public
 specifier|static
 specifier|final
@@ -360,7 +360,7 @@ name|STS_TOKEN_ACT_AS
 init|=
 literal|"security.sts.token.act-as"
 decl_stmt|;
-comment|/**      * The token to be sent to the STS in an "OnBehalfOf" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *       * In the case of a CallbackHandler, it must be able to handle a       * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a       * reference to the current Message. The CallbackHandler implementation is required to set       * the token Element to be sent in the request on the Callback.      *       * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
+comment|/**      * The token to be sent to the STS in an "OnBehalfOf" field. It can be either:      * a) A String (which must be an XML statement like "<wst:OnBehalfOf xmlns:wst=...>...</wst:OnBehalfOf>")      * b) A DOM Element      * c) A CallbackHandler object to use to obtain the token      *      * In the case of a CallbackHandler, it must be able to handle a      * org.apache.cxf.ws.security.trust.delegation.DelegationCallback Object, which contains a      * reference to the current Message. The CallbackHandler implementation is required to set      * the token Element to be sent in the request on the Callback.      *      * Some examples that can be reused are:      * org.apache.cxf.ws.security.trust.delegation.ReceivedTokenCallbackHandler      * org.apache.cxf.ws.security.trust.delegation.WSSUsernameCallbackHandler      */
 specifier|public
 specifier|static
 specifier|final
@@ -369,7 +369,7 @@ name|STS_TOKEN_ON_BEHALF_OF
 init|=
 literal|"security.sts.token.on-behalf-of"
 decl_stmt|;
-comment|/**      * This is the value in seconds within which a token is considered to be expired by the      * client. When a cached token (from a STS) is retrieved by the client, it is considered      * to be expired if it will expire in a time less than the value specified by this tag.      * This prevents token expiry when the message is en route / being processed by the      * service. When the token is found to be expired then it will be renewed via the STS.      *       * The default value is 10 (seconds). Specify 0 to avoid this check.      */
+comment|/**      * This is the value in seconds within which a token is considered to be expired by the      * client. When a cached token (from a STS) is retrieved by the client, it is considered      * to be expired if it will expire in a time less than the value specified by this tag.      * This prevents token expiry when the message is en route / being processed by the      * service. When the token is found to be expired then it will be renewed via the STS.      *      * The default value is 10 (seconds). Specify 0 to avoid this check.      */
 specifier|public
 specifier|static
 specifier|final

@@ -277,9 +277,7 @@ name|synchronizedSet
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -296,9 +294,7 @@ name|synchronizedSet
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 decl_stmt|;
@@ -474,9 +470,7 @@ name|clients
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Client
-argument_list|>
+argument_list|<>
 argument_list|(
 name|clientsMap
 operator|.
@@ -550,9 +544,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ServerAccessToken
-argument_list|>
+argument_list|<>
 argument_list|(
 name|tokens
 operator|.
@@ -625,9 +617,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RefreshToken
-argument_list|>
+argument_list|<>
 argument_list|(
 name|refreshTokens
 operator|.

@@ -432,7 +432,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Get the soap action for an operation. Will never return null.      *       * @param operation      * @return      */
+comment|/**      * Get the soap action for an operation. Will never return null.      *      * @param operation      * @return      */
 specifier|public
 name|String
 name|getSoapAction

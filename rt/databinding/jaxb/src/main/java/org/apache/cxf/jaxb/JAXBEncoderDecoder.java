@@ -2747,9 +2747,7 @@ name|combinedMembers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Member
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -5678,9 +5676,7 @@ block|{
 return|return
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|ret
 argument_list|)
@@ -5723,9 +5719,7 @@ name|c
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -5975,9 +5969,7 @@ block|}
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}

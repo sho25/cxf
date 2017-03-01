@@ -88,7 +88,7 @@ specifier|protected
 name|String
 name|text
 decl_stmt|;
-comment|/**      * Gets the value of the text property.      *       * @return possible object is {@link String }      */
+comment|/**      * Gets the value of the text property.      *      * @return possible object is {@link String }      */
 specifier|public
 name|String
 name|getText
@@ -98,7 +98,7 @@ return|return
 name|text
 return|;
 block|}
-comment|/**      * Sets the value of the text property.      *       * @param value allowed object is {@link String }      */
+comment|/**      * Sets the value of the text property.      *      * @param value allowed object is {@link String }      */
 specifier|public
 name|void
 name|setText

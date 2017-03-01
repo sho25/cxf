@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_interface
@@ -29,7 +29,7 @@ parameter_list|,
 name|T
 parameter_list|>
 block|{
-comment|/**      * Registers an object of type T with this registry.       *        * @param k the key under which rto register the object      * @param t the object to register      */
+comment|/**      * Registers an object of type T with this registry.      *      * @param k the key under which rto register the object      * @param t the object to register      */
 name|void
 name|register
 parameter_list|(
@@ -40,7 +40,7 @@ name|T
 name|t
 parameter_list|)
 function_decl|;
-comment|/**      * Unregisters the object stored under the given key from this registry.      *        * @param k the key       */
+comment|/**      * Unregisters the object stored under the given key from this registry.      *      * @param k the key      */
 name|void
 name|unregister
 parameter_list|(

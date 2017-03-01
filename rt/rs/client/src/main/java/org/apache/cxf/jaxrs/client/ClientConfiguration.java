@@ -538,7 +538,7 @@ else|:
 literal|false
 return|;
 block|}
-comment|/**      * Sets the conduit selector       * @param cs the selector      */
+comment|/**      * Sets the conduit selector      * @param cs the selector      */
 specifier|public
 name|void
 name|setConduitSelector
@@ -554,7 +554,7 @@ operator|=
 name|cs
 expr_stmt|;
 block|}
-comment|/**      * Gets the conduit selector       * @return the conduit the selector      */
+comment|/**      * Gets the conduit selector      * @return the conduit the selector      */
 specifier|public
 name|ConduitSelector
 name|getConduitSelector
@@ -691,7 +691,7 @@ return|return
 name|outInterceptors
 return|;
 block|}
-comment|/**      * Sets the list of in interceptors which pre-process       * the responses from remote services.      *        * @param interceptors in interceptors      */
+comment|/**      * Sets the list of in interceptors which pre-process      * the responses from remote services.      *      * @param interceptors in interceptors      */
 specifier|public
 name|void
 name|setInInterceptors
@@ -713,7 +713,7 @@ operator|=
 name|interceptors
 expr_stmt|;
 block|}
-comment|/**      * Sets the list of out interceptors which post-process       * the requests to the remote services.      *        * @param interceptors out interceptors      */
+comment|/**      * Sets the list of out interceptors which post-process      * the requests to the remote services.      *      * @param interceptors out interceptors      */
 specifier|public
 name|void
 name|setOutInterceptors
@@ -735,7 +735,7 @@ operator|=
 name|interceptors
 expr_stmt|;
 block|}
-comment|/**      * Sets the list of in fault interceptors which will deal with the HTTP      * faults; the client code may choose to catch {@link WebApplicationException}      * exceptions instead.      *        * @param interceptors in fault interceptors      */
+comment|/**      * Sets the list of in fault interceptors which will deal with the HTTP      * faults; the client code may choose to catch {@link WebApplicationException}      * exceptions instead.      *      * @param interceptors in fault interceptors      */
 specifier|public
 name|void
 name|setInFaultInterceptors
@@ -757,7 +757,7 @@ operator|=
 name|interceptors
 expr_stmt|;
 block|}
-comment|/**      * Sets the list of out fault interceptors which will deal with the client-side      * faults; the client code may choose to catch {@link ClientException}      * exceptions instead.      *        * @param interceptors out fault interceptors      */
+comment|/**      * Sets the list of out fault interceptors which will deal with the client-side      * faults; the client code may choose to catch {@link ClientException}      * exceptions instead.      *      * @param interceptors out fault interceptors      */
 specifier|public
 name|void
 name|setOutFaultInterceptors
@@ -779,7 +779,7 @@ operator|=
 name|interceptors
 expr_stmt|;
 block|}
-comment|/**      * Gets the conduit responsible for a transport-level      * communication with the remote service.       * @return the conduit      */
+comment|/**      * Gets the conduit responsible for a transport-level      * communication with the remote service.      * @return the conduit      */
 specifier|public
 name|Conduit
 name|getConduit
@@ -869,7 +869,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Gets the HTTP conduit responsible for a transport-level      * communication with the remote service.       * @return the HTTP conduit      */
+comment|/**      * Gets the HTTP conduit responsible for a transport-level      * communication with the remote service.      * @return the HTTP conduit      */
 specifier|public
 name|HTTPConduit
 name|getHttpConduit
@@ -894,7 +894,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**      * Get the map of properties which affect the responses only.       * These additional properties may be optionally set after a       * proxy or WebClient has been created.      * @return the response context properties      */
+comment|/**      * Get the map of properties which affect the responses only.      * These additional properties may be optionally set after a      * proxy or WebClient has been created.      * @return the response context properties      */
 specifier|public
 name|Map
 argument_list|<
@@ -909,7 +909,7 @@ return|return
 name|responseContext
 return|;
 block|}
-comment|/**      * Get the map of properties which affect the requests only.       * These additional properties may be optionally set after a       * proxy or WebClient has been created.      * @return the request context properties      */
+comment|/**      * Get the map of properties which affect the requests only.      * These additional properties may be optionally set after a      * proxy or WebClient has been created.      * @return the request context properties      */
 specifier|public
 name|Map
 argument_list|<

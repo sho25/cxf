@@ -1024,7 +1024,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A JAX-WS specific implementation of the CXF {@link org.apache.cxf.endpoint.Endpoint} interface.  * Extends the interceptor provider functionality of its base class by adding   * interceptors in which to execute the JAX-WS handlers.  * Creates and owns an implementation of {@link Binding} in addition to the  * CXF {@link org.apache.cxf.binding.Binding}.   *  */
+comment|/**  * A JAX-WS specific implementation of the CXF {@link org.apache.cxf.endpoint.Endpoint} interface.  * Extends the interceptor provider functionality of its base class by adding  * interceptors in which to execute the JAX-WS handlers.  * Creates and owns an implementation of {@link Binding} in addition to the  * CXF {@link org.apache.cxf.binding.Binding}.  *  */
 end_comment
 
 begin_class
@@ -1196,9 +1196,7 @@ name|wf
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|,
 literal|true
@@ -1261,9 +1259,7 @@ name|wsFeatures
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WebServiceFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if
@@ -1289,9 +1285,7 @@ name|features
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Feature
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

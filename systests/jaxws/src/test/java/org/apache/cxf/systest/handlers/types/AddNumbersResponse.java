@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for addNumbersResponse complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="addNumbersResponse">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for addNumbersResponse complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="addNumbersResponse">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="return" type="{http://www.w3.org/2001/XMLSchema}int"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_comment
@@ -144,7 +144,7 @@ specifier|protected
 name|int
 name|_return
 decl_stmt|;
-comment|/**      * Gets the value of the return property.      *       */
+comment|/**      * Gets the value of the return property.      *      */
 specifier|public
 name|int
 name|getReturn
@@ -154,7 +154,7 @@ return|return
 name|_return
 return|;
 block|}
-comment|/**      * Sets the value of the return property.      *       */
+comment|/**      * Sets the value of the return property.      *      */
 specifier|public
 name|void
 name|setReturn

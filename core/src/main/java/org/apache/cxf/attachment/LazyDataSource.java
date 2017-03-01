@@ -100,7 +100,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A DataSource which will search through a Collection of attachments so as to   * lazily load the attachment from the collection. This allows streaming attachments  * with databinding toolkits like JAXB.  */
+comment|/**  * A DataSource which will search through a Collection of attachments so as to  * lazily load the attachment from the collection. This allows streaming attachments  * with databinding toolkits like JAXB.  */
 end_comment
 
 begin_class
@@ -220,9 +220,7 @@ name|ids
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|10
 argument_list|)

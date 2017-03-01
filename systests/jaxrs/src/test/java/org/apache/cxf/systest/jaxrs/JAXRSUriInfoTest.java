@@ -231,7 +231,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * URI          | getBaseUri          | path param -------------+---------------------+----------- /app/v1      | http://host/        | "v1" /app/v1/     | http://host/        | "v1/" /app/v1/test | http://host/app/v1/ | "test" /app/v1/     | http://host/app/v1/ | "" /app/v1      | http://host/app/v1/ | "app/v1"       * @throws Exception      */
+comment|/**      * URI          | getBaseUri          | path param -------------+---------------------+----------- /app/v1      | http://host/        | "v1" /app/v1/     | http://host/        | "v1/" /app/v1/test | http://host/app/v1/ | "test" /app/v1/     | http://host/app/v1/ | "" /app/v1      | http://host/app/v1/ | "app/v1"      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

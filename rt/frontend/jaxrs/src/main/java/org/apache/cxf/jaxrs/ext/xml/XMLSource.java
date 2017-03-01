@@ -476,7 +476,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *       * @param expression XPath expression      * @param cls class of the node      * @return the instance representing the matching node      */
+comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *      * @param expression XPath expression      * @param cls class of the node      * @return the instance representing the matching node      */
 specifier|public
 parameter_list|<
 name|T
@@ -521,7 +521,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *       * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the instance representing the matching node      */
+comment|/**      * Find the matching XML node and convert it into an instance of the provided class.      * The default JAXB MessageBodyReader is currently used in case of non-primitive types.      *      * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the instance representing the matching node      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -648,7 +648,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Find the list of matching XML nodes and convert them into      * an array of instances of the provided class.      * The default JAXB MessageBodyReader is currently used  in case of non-primitive types.      *       * @param expression XPath expression      * @param cls class of the node      * @return the array of instances representing the matching nodes      */
+comment|/**      * Find the list of matching XML nodes and convert them into      * an array of instances of the provided class.      * The default JAXB MessageBodyReader is currently used  in case of non-primitive types.      *      * @param expression XPath expression      * @param cls class of the node      * @return the array of instances representing the matching nodes      */
 specifier|public
 parameter_list|<
 name|T
@@ -694,7 +694,7 @@ name|cls
 argument_list|)
 return|;
 block|}
-comment|/**      * Find the list of matching XML nodes and convert them into      * an array of instances of the provided class.      * The default JAXB MessageBodyReader is currently used  in case of non-primitive types.      *       * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the array of instances representing the matching nodes      */
+comment|/**      * Find the list of matching XML nodes and convert them into      * an array of instances of the provided class.      * The default JAXB MessageBodyReader is currently used  in case of non-primitive types.      *      * @param expression XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls class of the node      * @return the array of instances representing the matching nodes      */
 annotation|@
 name|SuppressWarnings
 argument_list|(
@@ -1020,7 +1020,7 @@ return|return
 name|uris
 return|;
 block|}
-comment|/**      * Returns the value of the xml:base attribute, if any.      * This can be used to calculate an absolute URI provided       * the links in the actual XML instance are relative.       *       * @return the xml:base value      */
+comment|/**      * Returns the value of the xml:base attribute, if any.      * This can be used to calculate an absolute URI provided      * the links in the actual XML instance are relative.      *      * @return the xml:base value      */
 specifier|public
 name|URI
 name|getBaseURI
@@ -1191,7 +1191,7 @@ name|class
 argument_list|)
 return|;
 block|}
-comment|/**      * Find the attribute or simple/text node and convert the string value to the      * instance of the provided class, example, Integer.class.       * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls the class of the response      * @return the value      */
+comment|/**      * Find the attribute or simple/text node and convert the string value to the      * instance of the provided class, example, Integer.class.      * @param expression the XPath expression      * @param namespaces the namespaces map, prefixes which are used in the XPath expression      *        are the keys, namespace URIs are the values; note, the prefixes do not have to match      *        the actual ones used in the XML instance.      * @param cls the class of the response      * @return the value      */
 annotation|@
 name|SuppressWarnings
 argument_list|(

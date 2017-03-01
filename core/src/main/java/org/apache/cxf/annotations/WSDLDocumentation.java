@@ -125,7 +125,7 @@ name|String
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * The place to put the documentation.  The Default depends on the       * location of the annotation.   On the method in the SEI, it would be      * the portType/operation, on the SEI, it would be the portType, on the       * service impl, the service element.      * @return location      */
+comment|/**      * The place to put the documentation.  The Default depends on the      * location of the annotation.   On the method in the SEI, it would be      * the portType/operation, on the SEI, it would be the portType, on the      * service impl, the service element.      * @return location      */
 name|Placement
 name|placement
 parameter_list|()
@@ -134,7 +134,7 @@ name|Placement
 operator|.
 name|DEFAULT
 function_decl|;
-comment|/**      * If Placement is FAULT_MESSAGE, PORT_FAULT, or BINDING_FAULT,      * return the fault class associated with this documentation       * @return the fault class      */
+comment|/**      * If Placement is FAULT_MESSAGE, PORT_FAULT, or BINDING_FAULT,      * return the fault class associated with this documentation      * @return the fault class      */
 name|Class
 argument_list|<
 name|?
@@ -182,7 +182,7 @@ block|,
 name|SERVICE
 block|,
 name|SERVICE_PORT
-block|,              }
+block|,      }
 empty_stmt|;
 specifier|final
 class|class

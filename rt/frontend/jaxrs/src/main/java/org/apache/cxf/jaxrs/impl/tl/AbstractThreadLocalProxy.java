@@ -49,7 +49,7 @@ decl_stmt|;
 specifier|protected
 name|AbstractThreadLocalProxy
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|T
 name|get

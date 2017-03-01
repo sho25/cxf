@@ -222,7 +222,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The default per-request resource provider which creates   * a new resource instance per every request  */
+comment|/**  * The default per-request resource provider which creates  * a new resource instance per every request  */
 end_comment
 
 begin_class

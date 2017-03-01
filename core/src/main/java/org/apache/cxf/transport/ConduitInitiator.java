@@ -98,7 +98,7 @@ specifier|public
 interface|interface
 name|ConduitInitiator
 block|{
-comment|/**      * Initiate an outbound Conduit.      *       * @param targetInfo the endpoint info of the target       * @return a suitable new or pre-existing Conduit      */
+comment|/**      * Initiate an outbound Conduit.      *      * @param targetInfo the endpoint info of the target      * @return a suitable new or pre-existing Conduit      */
 name|Conduit
 name|getConduit
 parameter_list|(
@@ -111,7 +111,7 @@ parameter_list|)
 throws|throws
 name|IOException
 function_decl|;
-comment|/**      * Initiate an outbound Conduit.      *       * @param localInfo the endpoint info for a local endpoint on which the      * the configuration should be based      * @param target the target EPR      * @return a suitable new or pre-existing Conduit      */
+comment|/**      * Initiate an outbound Conduit.      *      * @param localInfo the endpoint info for a local endpoint on which the      * the configuration should be based      * @param target the target EPR      * @return a suitable new or pre-existing Conduit      */
 name|Conduit
 name|getConduit
 parameter_list|(

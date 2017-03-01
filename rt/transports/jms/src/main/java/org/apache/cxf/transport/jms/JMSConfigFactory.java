@@ -808,6 +808,16 @@ argument_list|(
 name|targetService
 argument_list|)
 expr_stmt|;
+name|jmsConfig
+operator|.
+name|setMessageSelector
+argument_list|(
+name|endpoint
+operator|.
+name|getMessageSelector
+argument_list|()
+argument_list|)
+expr_stmt|;
 return|return
 name|jmsConfig
 return|;

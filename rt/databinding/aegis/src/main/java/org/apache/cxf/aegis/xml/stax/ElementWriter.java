@@ -176,7 +176,7 @@ specifier|private
 name|String
 name|prefix
 decl_stmt|;
-comment|/**      * Create an ElementWriter but without writing an element name.      *       * @param writer      */
+comment|/**      * Create an ElementWriter but without writing an element name.      *      * @param writer      */
 specifier|public
 name|ElementWriter
 parameter_list|(

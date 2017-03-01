@@ -936,7 +936,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1573,12 +1573,11 @@ comment|//Sign the message
 comment|//We should use the same key in the case of EncryptBeforeSig
 if|if
 condition|(
+operator|!
 name|sigParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|addSig
@@ -1620,12 +1619,11 @@ operator|.
 name|isEncryptSignature
 argument_list|()
 operator|||
+operator|!
 name|encryptedTokensList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|isRequestor
 argument_list|()
@@ -2573,6 +2571,21 @@ argument_list|(
 name|storeBytesInAttachment
 argument_list|)
 expr_stmt|;
+name|dkEncr
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|dkEncr
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
+argument_list|)
+expr_stmt|;
 if|if
 condition|(
 name|recToken
@@ -3231,12 +3244,11 @@ argument_list|()
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|encrParts
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|AbstractToken
@@ -3349,6 +3361,21 @@ operator|.
 name|setStoreBytesInAttachment
 argument_list|(
 name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
+name|encr
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|encr
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
 argument_list|)
 expr_stmt|;
 name|String
@@ -4103,6 +4130,21 @@ operator|.
 name|setStoreBytesInAttachment
 argument_list|(
 name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
+name|dkSign
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|dkSign
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
 argument_list|)
 expr_stmt|;
 if|if
@@ -4944,6 +4986,21 @@ operator|.
 name|setStoreBytesInAttachment
 argument_list|(
 name|storeBytesInAttachment
+argument_list|)
+expr_stmt|;
+name|sig
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|isExpandXopInclude
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|sig
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
 argument_list|)
 expr_stmt|;
 comment|// If a EncryptedKeyToken is used, set the correct value type to

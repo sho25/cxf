@@ -400,7 +400,7 @@ specifier|public
 name|void
 name|getIt
 parameter_list|()
-block|{                       }
+block|{          }
 block|}
 specifier|static
 class|class
@@ -414,7 +414,7 @@ specifier|public
 name|void
 name|getIt
 parameter_list|()
-block|{                       }
+block|{          }
 block|}
 specifier|static
 class|class
@@ -428,7 +428,7 @@ specifier|public
 name|void
 name|getIt
 parameter_list|()
-block|{                       }
+block|{          }
 annotation|@
 name|Path
 argument_list|(
@@ -477,7 +477,7 @@ specifier|public
 name|void
 name|getIt
 parameter_list|()
-block|{                       }
+block|{          }
 annotation|@
 name|Path
 argument_list|(
@@ -534,14 +534,14 @@ specifier|public
 name|void
 name|getIt
 parameter_list|()
-block|{                       }
+block|{          }
 annotation|@
 name|HEAD
 specifier|public
 name|void
 name|head
 parameter_list|()
-block|{                       }
+block|{          }
 block|}
 annotation|@
 name|After
@@ -1531,6 +1531,10 @@ argument_list|,
 literal|true
 argument_list|,
 literal|true
+argument_list|,
+literal|false
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|ClassResourceInfo
@@ -1605,7 +1609,7 @@ name|NameBinding
 specifier|public
 annotation_defn|@interface
 name|CustomNameBinding
-block|{               }
+block|{      }
 annotation|@
 name|CustomNameBinding
 specifier|public

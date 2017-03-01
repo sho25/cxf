@@ -1180,9 +1180,7 @@ name|features
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WebServiceFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|MTOM
@@ -1455,12 +1453,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|features
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|wsFeatures
@@ -2102,9 +2099,7 @@ name|enames
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

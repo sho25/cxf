@@ -245,7 +245,7 @@ block|}
 specifier|public
 name|BearerAccessToken
 parameter_list|()
-block|{              }
+block|{      }
 block|}
 end_class
 

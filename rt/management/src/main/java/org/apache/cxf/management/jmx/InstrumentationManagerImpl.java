@@ -483,9 +483,7 @@ name|busMBeans
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|ObjectName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -718,7 +716,7 @@ specifier|public
 name|void
 name|register
 parameter_list|()
-block|{         }
+block|{     }
 annotation|@
 name|PostConstruct
 specifier|public
@@ -1568,12 +1566,12 @@ specifier|public
 name|void
 name|initComplete
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|preShutdown
 parameter_list|()
-block|{                      }
+block|{      }
 specifier|public
 name|void
 name|postShutdown

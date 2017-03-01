@@ -109,7 +109,7 @@ decl_stmt|;
 specifier|public
 name|OidcClientTokenContextImpl
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|OidcClientTokenContextImpl
 parameter_list|(

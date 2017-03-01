@@ -1010,7 +1010,7 @@ specifier|private
 name|AtomicInteger
 name|acknowledgementSequence
 decl_stmt|;
-comment|/**      * Constructor.      *       * @param m      * @param ae      * @param pv      */
+comment|/**      * Constructor.      *      * @param m      * @param ae      * @param pv      */
 specifier|public
 name|RMEndpoint
 parameter_list|(
@@ -1379,7 +1379,7 @@ return|return
 name|conduit
 return|;
 block|}
-comment|/**      * Get the RM configuration applied to this endpoint.      *       * @return configuration      */
+comment|/**      * Get the RM configuration applied to this endpoint.      *      * @return configuration      */
 specifier|public
 name|RMConfiguration
 name|getConfiguration
@@ -1389,7 +1389,7 @@ return|return
 name|configuration
 return|;
 block|}
-comment|/**      * Returns the replyTo address of the first application request, i.e. the      * target address to which to send CreateSequence, CreateSequenceResponse      * and TerminateSequence messages originating from the from the server.      *       * @return the replyTo address      */
+comment|/**      * Returns the replyTo address of the first application request, i.e. the      * target address to which to send CreateSequence, CreateSequenceResponse      * and TerminateSequence messages originating from the from the server.      *      * @return the replyTo address      */
 name|EndpointReferenceType
 name|getReplyTo
 parameter_list|()
@@ -1448,7 +1448,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Handle message acknowledgment for source sequence. This generates a notification of the acknowledgment if JMX      * is being used, and also generates a callback if a receiver is set on the message.      *       * @param ssid      * @param number      * @param msg      */
+comment|/**      * Handle message acknowledgment for source sequence. This generates a notification of the acknowledgment if JMX      * is being used, and also generates a callback if a receiver is set on the message.      *      * @param ssid      * @param number      * @param msg      */
 specifier|public
 name|void
 name|handleAcknowledgment

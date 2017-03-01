@@ -307,6 +307,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setSignatureAlgorithm
 parameter_list|(

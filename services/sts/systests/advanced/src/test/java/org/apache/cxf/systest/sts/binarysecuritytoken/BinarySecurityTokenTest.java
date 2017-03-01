@@ -240,7 +240,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client sends a BinarySecurityToken via the Asymmetric message   * binding to a CXF provider. The provider dispatches the BinarySecurityToken to an STS for   * validation (via TLS).   */
+comment|/**  * In this test case, a CXF client sends a BinarySecurityToken via the Asymmetric message  * binding to a CXF provider. The provider dispatches the BinarySecurityToken to an STS for  * validation (via TLS).  */
 end_comment
 
 begin_class

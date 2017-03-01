@@ -98,7 +98,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * delegates invocations to the target object   */
+comment|/**  * delegates invocations to the target object  */
 end_comment
 
 begin_class

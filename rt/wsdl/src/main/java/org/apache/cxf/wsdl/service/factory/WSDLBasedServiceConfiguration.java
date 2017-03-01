@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An AbstractServiceConfiguration that gets the style  * from the BindingInfo obtained parsing the WSDL.  *    */
+comment|/**  * An AbstractServiceConfiguration that gets the style  * from the BindingInfo obtained parsing the WSDL.  *  */
 end_comment
 
 begin_class

@@ -961,12 +961,11 @@ return|;
 block|}
 block|}
 return|return
+operator|!
 name|infos
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|?
 name|infos
 operator|.

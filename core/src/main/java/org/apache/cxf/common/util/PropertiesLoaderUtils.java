@@ -115,8 +115,8 @@ comment|/**      * Prevents instantiation.      */
 specifier|private
 name|PropertiesLoaderUtils
 parameter_list|()
-block|{             }
-comment|/**      * Load all properties from the given class path resource, using the given      * class loader.      *<p>      * Merges properties if more than one resource of the same name found in the      * class path.      *       * @param resourceName the name of the class path resource      * @param classLoader the ClassLoader to use for loading (or      *<code>null</code> to use the default class loader)      * @return the populated Properties instance      * @throws IOException if loading failed      */
+block|{     }
+comment|/**      * Load all properties from the given class path resource, using the given      * class loader.      *<p>      * Merges properties if more than one resource of the same name found in the      * class path.      *      * @param resourceName the name of the class path resource      * @param classLoader the ClassLoader to use for loading (or      *<code>null</code> to use the default class loader)      * @return the populated Properties instance      * @throws IOException if loading failed      */
 specifier|public
 specifier|static
 name|Properties

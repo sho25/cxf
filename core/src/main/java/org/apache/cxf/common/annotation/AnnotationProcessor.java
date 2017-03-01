@@ -200,7 +200,7 @@ operator|=
 name|o
 expr_stmt|;
 block|}
-comment|/**       * Visits each of the annotated elements of the object.      *       * @param visitor a visitor       * @param claz the Class of the targe object      */
+comment|/**      * Visits each of the annotated elements of the object.      *      * @param visitor a visitor      * @param claz the Class of the targe object      */
 specifier|public
 name|void
 name|accept

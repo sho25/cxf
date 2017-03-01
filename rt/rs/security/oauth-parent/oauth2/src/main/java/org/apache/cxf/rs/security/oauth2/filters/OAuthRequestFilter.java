@@ -655,6 +655,8 @@ specifier|private
 name|AuthenticationMethod
 name|am
 decl_stmt|;
+annotation|@
+name|Override
 specifier|public
 name|void
 name|filter
@@ -831,9 +833,7 @@ name|matchingPermissions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OAuthPermission
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|HttpServletRequest

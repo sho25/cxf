@@ -635,7 +635,7 @@ operator|new
 name|DefaultSAMLRoleParser
 argument_list|()
 decl_stmt|;
-comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the       * relevant profile. Default is true.      */
+comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the      * relevant profile. Default is true.      */
 specifier|private
 name|boolean
 name|validateSignatureAgainstProfile
@@ -988,9 +988,10 @@ name|getCompiledSubjectContraints
 argument_list|()
 argument_list|)
 expr_stmt|;
-name|WSDocInfo
-name|docInfo
-init|=
+name|requestData
+operator|.
+name|setWsDocInfo
+argument_list|(
 operator|new
 name|WSDocInfo
 argument_list|(
@@ -999,7 +1000,8 @@ operator|.
 name|getOwnerDocument
 argument_list|()
 argument_list|)
-decl_stmt|;
+argument_list|)
+expr_stmt|;
 comment|// Verify the signature
 name|Signature
 name|sig
@@ -1033,8 +1035,6 @@ operator|new
 name|WSSSAMLKeyInfoProcessor
 argument_list|(
 name|requestData
-argument_list|,
-name|docInfo
 argument_list|)
 argument_list|,
 name|sigCrypto
@@ -1965,7 +1965,7 @@ operator|=
 name|samlRoleParser
 expr_stmt|;
 block|}
-comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the       * relevant profile. Default is true.      */
+comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the      * relevant profile. Default is true.      */
 specifier|public
 name|boolean
 name|isValidateSignatureAgainstProfile
@@ -1975,7 +1975,7 @@ return|return
 name|validateSignatureAgainstProfile
 return|;
 block|}
-comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the       * relevant profile. Default is true.      */
+comment|/**      * Whether to validate the signature of the Assertion (if it exists) against the      * relevant profile. Default is true.      */
 specifier|public
 name|void
 name|setValidateSignatureAgainstProfile

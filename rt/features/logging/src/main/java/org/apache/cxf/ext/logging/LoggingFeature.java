@@ -137,6 +137,24 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|slf4j
+operator|.
+name|Slf4jVerboseEventSender
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|feature
 operator|.
 name|AbstractFeature
@@ -158,7 +176,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is used to control message-on-the-wire logging.   * By attaching this feature to an endpoint, you  * can specify logging. If this feature is present, an endpoint will log input  * and output of ordinary and log messages.  *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.ext.logging.LoggingFeature"/></jaxws:features></jaxws:endpoint>   ]]></pre>  */
+comment|/**  * This class is used to control message-on-the-wire logging.  * By attaching this feature to an endpoint, you  * can specify logging. If this feature is present, an endpoint will log input  * and output of ordinary and log messages.  *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.ext.logging.LoggingFeature"/></jaxws:features></jaxws:endpoint>   ]]></pre>  */
 end_comment
 
 begin_class
@@ -192,10 +210,6 @@ name|LoggingOutInterceptor
 name|out
 decl_stmt|;
 specifier|private
-name|WireTapIn
-name|wireTapIn
-decl_stmt|;
-specifier|private
 name|PrettyLoggingFilter
 name|prettyFilter
 decl_stmt|;
@@ -208,7 +222,7 @@ operator|.
 name|sender
 operator|=
 operator|new
-name|Slf4jEventSender
+name|Slf4jVerboseEventSender
 argument_list|()
 expr_stmt|;
 name|prettyFilter
@@ -218,12 +232,6 @@ name|PrettyLoggingFilter
 argument_list|(
 name|sender
 argument_list|)
-expr_stmt|;
-name|wireTapIn
-operator|=
-operator|new
-name|WireTapIn
-argument_list|()
 expr_stmt|;
 name|in
 operator|=
@@ -255,16 +263,6 @@ name|Bus
 name|bus
 parameter_list|)
 block|{
-name|provider
-operator|.
-name|getInInterceptors
-argument_list|()
-operator|.
-name|add
-argument_list|(
-name|wireTapIn
-argument_list|)
-expr_stmt|;
 name|provider
 operator|.
 name|getInInterceptors
@@ -328,13 +326,6 @@ argument_list|(
 name|limit
 argument_list|)
 expr_stmt|;
-name|wireTapIn
-operator|.
-name|setLimit
-argument_list|(
-name|limit
-argument_list|)
-expr_stmt|;
 block|}
 specifier|public
 name|void
@@ -354,13 +345,6 @@ expr_stmt|;
 name|out
 operator|.
 name|setInMemThreshold
-argument_list|(
-name|inMemThreshold
-argument_list|)
-expr_stmt|;
-name|wireTapIn
-operator|.
-name|setThreshold
 argument_list|(
 name|inMemThreshold
 argument_list|)
@@ -402,7 +386,7 @@ name|prettyLogging
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Log binary content?      * @param logBinary defaults to false       */
+comment|/**      * Log binary content?      * @param logBinary defaults to false      */
 specifier|public
 name|void
 name|setLogBinary
@@ -426,7 +410,7 @@ name|logBinary
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Log multipart content?       * @param logMultipart defaults to true      */
+comment|/**      * Log multipart content?      * @param logMultipart defaults to true      */
 specifier|public
 name|void
 name|setLogMultipart
@@ -447,6 +431,38 @@ operator|.
 name|setLogMultipart
 argument_list|(
 name|logMultipart
+argument_list|)
+expr_stmt|;
+block|}
+specifier|public
+name|void
+name|setVerbose
+parameter_list|(
+name|boolean
+name|verbose
+parameter_list|)
+block|{
+name|this
+operator|.
+name|sender
+operator|=
+name|verbose
+condition|?
+operator|new
+name|Slf4jVerboseEventSender
+argument_list|()
+else|:
+operator|new
+name|Slf4jEventSender
+argument_list|()
+expr_stmt|;
+name|this
+operator|.
+name|prettyFilter
+operator|.
+name|setNext
+argument_list|(
+name|sender
 argument_list|)
 expr_stmt|;
 block|}

@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -186,7 +186,7 @@ operator|=
 name|b
 expr_stmt|;
 block|}
-comment|/**      *       * @return      *     returns int      */
+comment|/**      *      * @return      *     returns int      */
 specifier|public
 name|int
 name|getArg0
@@ -198,7 +198,7 @@ operator|.
 name|arg0
 return|;
 block|}
-comment|/**      *       * @param arg0      *     the value for the arg0 property      */
+comment|/**      *      * @param arg0      *     the value for the arg0 property      */
 specifier|public
 name|void
 name|setArg0
@@ -214,7 +214,7 @@ operator|=
 name|arg0
 expr_stmt|;
 block|}
-comment|/**      *       * @return      *     returns int      */
+comment|/**      *      * @return      *     returns int      */
 specifier|public
 name|int
 name|getArg1
@@ -226,7 +226,7 @@ operator|.
 name|arg1
 return|;
 block|}
-comment|/**      *       * @param arg1      *     the value for the arg1 property      */
+comment|/**      *      * @param arg1      *     the value for the arg1 property      */
 specifier|public
 name|void
 name|setArg1

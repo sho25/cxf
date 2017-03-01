@@ -112,9 +112,7 @@ name|receiveTimes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -250,12 +248,11 @@ parameter_list|()
 block|{
 if|if
 condition|(
+operator|!
 name|receiveTimes
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 return|return

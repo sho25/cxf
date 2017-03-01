@@ -620,7 +620,7 @@ operator|=
 name|supportedGrantType
 expr_stmt|;
 block|}
-comment|/**      * Handles the initial authorization request by preparing       * the authorization challenge data and returning it to the user.      * Typically the data are expected to be presented in the HTML form       * @return the authorization data      */
+comment|/**      * Handles the initial authorization request by preparing      * the authorization challenge data and returning it to the user.      * Typically the data are expected to be presented in the HTML form      * @return the authorization data      */
 annotation|@
 name|GET
 annotation|@
@@ -1424,7 +1424,7 @@ name|scopesRequiringNoConsent
 argument_list|)
 return|;
 block|}
-comment|/**      * Create the authorization challenge data       */
+comment|/**      * Create the authorization challenge data      */
 specifier|protected
 name|OAuthAuthorizationData
 name|createAuthorizationData
@@ -2871,7 +2871,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Get the {@link Client} reference      * @param params request parameters      * @return Client the client reference       * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found,       *         the error is returned directly to the end user without       *         following the redirect URI if any      */
+comment|/**      * Get the {@link Client} reference      * @param params request parameters      * @return Client the client reference      * @throws {@link javax.ws.rs.WebApplicationException} if no matching Client is found,      *         the error is returned directly to the end user without      *         following the redirect URI if any      */
 specifier|protected
 name|Client
 name|getClient

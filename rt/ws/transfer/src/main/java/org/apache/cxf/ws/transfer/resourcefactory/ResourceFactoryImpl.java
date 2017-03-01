@@ -67,34 +67,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
-operator|.
-name|LoggingInInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingOutInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|jaxws
 operator|.
 name|JaxWsProxyFactoryBean
@@ -582,7 +554,7 @@ operator|=
 name|resourceTypeIdentifiers
 expr_stmt|;
 block|}
-comment|/**      * Register Dialect object for URI.      * @param uri      * @param dialect       */
+comment|/**      * Register Dialect object for URI.      * @param uri      * @param dialect      */
 specifier|public
 name|void
 name|registerDialect
@@ -629,7 +601,7 @@ name|dialect
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Unregister dialect URI.      * @param uri       */
+comment|/**      * Unregister dialect URI.      * @param uri      */
 specifier|public
 name|void
 name|unregisterDialect
@@ -790,30 +762,6 @@ operator|new
 name|JaxWsProxyFactoryBean
 argument_list|()
 decl_stmt|;
-name|factory
-operator|.
-name|getInInterceptors
-argument_list|()
-operator|.
-name|add
-argument_list|(
-operator|new
-name|LoggingInInterceptor
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|factory
-operator|.
-name|getOutInterceptors
-argument_list|()
-operator|.
-name|add
-argument_list|(
-operator|new
-name|LoggingOutInterceptor
-argument_list|()
-argument_list|)
-expr_stmt|;
 name|factory
 operator|.
 name|setServiceClass

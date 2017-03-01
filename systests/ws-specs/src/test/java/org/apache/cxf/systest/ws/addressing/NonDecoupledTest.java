@@ -209,7 +209,7 @@ operator|.
 name|addressing
 operator|.
 name|AbstractGreeterImpl
-block|{              }
+block|{      }
 specifier|public
 name|String
 name|getAddress
@@ -225,7 +225,7 @@ specifier|public
 name|void
 name|foo
 parameter_list|()
-block|{              }
+block|{      }
 block|}
 end_class
 

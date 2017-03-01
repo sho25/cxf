@@ -989,9 +989,7 @@ name|operations
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|operations

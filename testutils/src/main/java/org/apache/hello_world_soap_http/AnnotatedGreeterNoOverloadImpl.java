@@ -478,7 +478,7 @@ throws|throws
 name|BadRecordLitFault
 throws|,
 name|NoSuchCodeLitFault
-block|{             }
+block|{     }
 annotation|@
 name|Resource
 specifier|public
@@ -503,7 +503,7 @@ return|return
 name|context
 return|;
 block|}
-comment|/**      * stop eclipse from whinging       */
+comment|/**      * stop eclipse from whinging      */
 specifier|public
 name|int
 name|getFoo

@@ -278,7 +278,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -593,9 +593,7 @@ name|inputs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DOMLSInput
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final

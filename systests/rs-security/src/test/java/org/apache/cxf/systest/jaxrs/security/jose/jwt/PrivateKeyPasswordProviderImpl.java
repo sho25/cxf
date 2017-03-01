@@ -69,7 +69,7 @@ decl_stmt|;
 specifier|public
 name|PrivateKeyPasswordProviderImpl
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|PrivateKeyPasswordProviderImpl
 parameter_list|(

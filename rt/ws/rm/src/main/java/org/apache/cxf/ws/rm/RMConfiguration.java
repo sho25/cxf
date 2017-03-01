@@ -99,7 +99,7 @@ specifier|public
 name|RMConfiguration
 parameter_list|()
 block|{     }
-comment|/**      * Copy constructor.      *       * @param base      */
+comment|/**      * Copy constructor.      *      * @param base      */
 specifier|public
 name|RMConfiguration
 parameter_list|(
@@ -194,7 +194,7 @@ operator|=
 name|inOrder
 expr_stmt|;
 block|}
-comment|/**        * @return Returns the deliveryAssurance.      */
+comment|/**      * @return Returns the deliveryAssurance.      */
 specifier|public
 name|DeliveryAssurance
 name|getDeliveryAssurance
@@ -230,7 +230,7 @@ return|return
 name|inactivityTimeout
 return|;
 block|}
-comment|/**      * Get the number of milliseconds for the inactivity timeout.      *       * @return milliseconds, 0 if not set      */
+comment|/**      * Get the number of milliseconds for the inactivity timeout.      *      * @return milliseconds, 0 if not set      */
 specifier|public
 name|long
 name|getInactivityTimeoutTime
@@ -275,7 +275,7 @@ return|return
 name|acknowledgementInterval
 return|;
 block|}
-comment|/**      * Get the number of milliseconds for the acknowledgment interval.      *       * @return milliseconds, 0 if not set      */
+comment|/**      * Get the number of milliseconds for the acknowledgment interval.      *      * @return milliseconds, 0 if not set      */
 specifier|public
 name|long
 name|getAcknowledgementIntervalTime

@@ -32,7 +32,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Always returns a single instance of the bean.  *   * This is generally the default.  */
+comment|/**  * Always returns a single instance of the bean.  *  * This is generally the default.  */
 end_comment
 
 begin_class

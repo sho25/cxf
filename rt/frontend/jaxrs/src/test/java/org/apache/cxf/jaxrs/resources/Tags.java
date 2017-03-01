@@ -104,15 +104,13 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TagVO
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
 name|Tags
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Tags
 parameter_list|(

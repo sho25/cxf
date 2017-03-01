@@ -361,9 +361,7 @@ name|filteredPolicies
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -547,9 +545,7 @@ name|filteredPolicies
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -643,9 +639,7 @@ name|policies
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AssertionInfoMap

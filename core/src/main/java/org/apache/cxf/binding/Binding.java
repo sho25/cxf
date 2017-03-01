@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A Binding provides interceptors and message creation logic for a   * specific protocol binding.  */
+comment|/**  * A Binding provides interceptors and message creation logic for a  * specific protocol binding.  */
 end_comment
 
 begin_interface
@@ -75,7 +75,7 @@ name|Message
 name|createMessage
 parameter_list|()
 function_decl|;
-comment|/**      * Create a Message form the message.      *       * @param m the message used for creating a binding message      * @return the Binding message      */
+comment|/**      * Create a Message form the message.      *      * @param m the message used for creating a binding message      * @return the Binding message      */
 name|Message
 name|createMessage
 parameter_list|(
@@ -83,7 +83,7 @@ name|Message
 name|m
 parameter_list|)
 function_decl|;
-comment|/**      * Get the BindingInfo for this binding.      *      * @return the BingdingInfo Object           */
+comment|/**      * Get the BindingInfo for this binding.      *      * @return the BingdingInfo Object      */
 name|BindingInfo
 name|getBindingInfo
 parameter_list|()

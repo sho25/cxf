@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * A callback-style provider which can be used to map an object to Atom Feed  * without having to deal directly with types representing Atom feeds  *   * @param<T> Type of objects which will be mapped to feeds or entries  */
+comment|/**  * A callback-style provider which can be used to map an object to Atom Feed  * without having to deal directly with types representing Atom feeds  *  * @param<T> Type of objects which will be mapped to feeds or entries  */
 end_comment
 
 begin_class
@@ -37,7 +37,7 @@ argument_list|<
 name|T
 argument_list|>
 block|{
-comment|/**      *       * @param pojo Object which is being mapped      * @return feed icon uri      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return feed icon uri      */
 specifier|public
 name|String
 name|getIcon
@@ -50,7 +50,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      *       * @param pojo Object which is being mapped      * @return feed logo uri      */
+comment|/**      *      * @param pojo Object which is being mapped      * @return feed logo uri      */
 specifier|public
 name|String
 name|getLogo

@@ -38,7 +38,7 @@ decl_stmt|;
 specifier|public
 name|ObjectWithGenerics
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ObjectWithGenerics
 parameter_list|(

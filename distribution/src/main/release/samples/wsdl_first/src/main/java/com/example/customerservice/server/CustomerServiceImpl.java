@@ -154,7 +154,7 @@ name|CustomerServiceImpl
 implements|implements
 name|CustomerService
 block|{
-comment|/**      * The WebServiceContext can be used to retrieve special attributes like the       * user principal. Normally it is not needed      */
+comment|/**      * The WebServiceContext can be used to retrieve special attributes like the      * user principal. Normally it is not needed      */
 annotation|@
 name|Resource
 name|WebServiceContext
@@ -217,9 +217,7 @@ name|customers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Customer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

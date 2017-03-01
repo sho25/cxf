@@ -83,7 +83,7 @@ decl_stmt|;
 specifier|public
 name|TestUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|TestUtils
 parameter_list|(
@@ -205,7 +205,7 @@ specifier|public
 name|void
 name|init
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|String
 name|getUsage

@@ -546,7 +546,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-specifier|protected
+specifier|private
 name|ManagedEndpoint
 name|createManagedEndpoint
 parameter_list|()

@@ -514,7 +514,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Deduce mapping information from an xml file. The xml file should be in the  * same packages as the class, with the name<code>className.aegis.xml</code>.  * For example, given the following service interface:<p/>  *   *<pre>  * public Collection getResultsForValues(String id, Collection values); //method 1  *   * public Collection getResultsForValues(int id, Collection values); //method 2  *   * public String getResultForValue(String value); //method 3  *</pre>  *   * An example of the type xml is:  *   *<pre>  *&lt;mappings&gt;  *&lt;mapping&gt;  *&lt;method name=&quot;getResultsForValues&quot;&gt;  *&lt;return-type componentType=&quot;com.acme.ResultBean&quot; /&gt;  *&lt;!-- no need to specify index 0, since it's a String --&gt;  *&lt;parameter index=&quot;1&quot; componentType=&quot;java.lang.String&quot; /&gt;  *&lt;/method&gt;  *&lt;/mapping&gt;  *&lt;/mappings&gt;  *</pre>  *   *<p/> Note that for values which can be easily deduced (such as the String  * parameter, or the second service method) no mapping need be specified in the  * xml descriptor, which is why no mapping is specified for method 3.<p/>  * However, if you have overloaded methods with different semantics, then you  * will need to specify enough parameters to disambiguate the method and  * uniquely identify it. So in the example above, the mapping specifies will  * apply to both method 1 and method 2, since the parameter at index 0 is not  * specified.  */
+comment|/**  * Deduce mapping information from an xml file. The xml file should be in the  * same packages as the class, with the name<code>className.aegis.xml</code>.  * For example, given the following service interface:<p/>  *  *<pre>  * public Collection getResultsForValues(String id, Collection values); //method 1  *  * public Collection getResultsForValues(int id, Collection values); //method 2  *  * public String getResultForValue(String value); //method 3  *</pre>  *  * An example of the type xml is:  *  *<pre>  *&lt;mappings&gt;  *&lt;mapping&gt;  *&lt;method name=&quot;getResultsForValues&quot;&gt;  *&lt;return-type componentType=&quot;com.acme.ResultBean&quot; /&gt;  *&lt;!-- no need to specify index 0, since it's a String --&gt;  *&lt;parameter index=&quot;1&quot; componentType=&quot;java.lang.String&quot; /&gt;  *&lt;/method&gt;  *&lt;/mapping&gt;  *&lt;/mappings&gt;  *</pre>  *  *<p/> Note that for values which can be easily deduced (such as the String  * parameter, or the second service method) no mapping need be specified in the  * xml descriptor, which is why no mapping is specified for method 3.<p/>  * However, if you have overloaded methods with different semantics, then you  * will need to specify enough parameters to disambiguate the method and  * uniquely identify it. So in the example above, the mapping specifies will  * apply to both method 1 and method 2, since the parameter at index 0 is not  * specified.  */
 end_comment
 
 begin_class
@@ -1665,9 +1665,7 @@ name|mappings
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1893,12 +1891,11 @@ name|mapping
 operator|!=
 literal|null
 operator|||
+operator|!
 name|mappings
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -4002,9 +3999,7 @@ name|r
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

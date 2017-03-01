@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Basic interface for representing a Instrumented object.  *   */
+comment|/**  * Basic interface for representing a Instrumented object.  *  */
 end_comment
 
 begin_interface

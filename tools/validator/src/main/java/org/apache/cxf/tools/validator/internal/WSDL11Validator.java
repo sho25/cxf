@@ -497,9 +497,7 @@ name|validators
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -1137,9 +1135,7 @@ name|xsdList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|InputSource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|URL

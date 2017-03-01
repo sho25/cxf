@@ -186,7 +186,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -208,9 +208,7 @@ name|events
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XMLEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1000
 argument_list|)
@@ -943,6 +941,17 @@ name|lastStart
 argument_list|,
 name|Collections
 operator|.
+expr|<
+name|javax
+operator|.
+name|xml
+operator|.
+name|stream
+operator|.
+name|events
+operator|.
+name|Namespace
+operator|>
 name|emptyList
 argument_list|()
 operator|.
@@ -1454,9 +1463,7 @@ name|l
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

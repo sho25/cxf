@@ -638,7 +638,7 @@ return|return
 name|deny
 return|;
 block|}
-comment|/**      * Returns a list of expected roles for a given method.       * @param method Method      * @return list, empty if no roles are available      */
+comment|/**      * Returns a list of expected roles for a given method.      * @param method Method      * @return list, empty if no roles are available      */
 specifier|protected
 specifier|abstract
 name|List
@@ -651,7 +651,7 @@ name|Method
 name|method
 parameter_list|)
 function_decl|;
-comment|/**      * Returns a list of roles to be denied for a given method.       * @param method Method      * @return list, empty if no roles are available      */
+comment|/**      * Returns a list of roles to be denied for a given method.      * @param method Method      * @return list, empty if no roles are available      */
 specifier|protected
 name|List
 argument_list|<

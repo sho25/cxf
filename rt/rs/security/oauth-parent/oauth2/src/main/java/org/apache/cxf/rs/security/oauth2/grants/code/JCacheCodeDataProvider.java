@@ -678,6 +678,24 @@ argument_list|()
 operator|)
 return|;
 block|}
+annotation|@
+name|Override
+specifier|public
+name|void
+name|close
+parameter_list|()
+block|{
+name|grantCache
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+name|super
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 end_class
 

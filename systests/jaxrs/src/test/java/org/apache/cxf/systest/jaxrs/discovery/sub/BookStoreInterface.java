@@ -42,7 +42,7 @@ argument_list|)
 specifier|public
 interface|interface
 name|BookStoreInterface
-block|{      }
+block|{  }
 end_interface
 
 end_unit

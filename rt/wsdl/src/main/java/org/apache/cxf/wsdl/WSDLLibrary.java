@@ -83,7 +83,7 @@ block|}
 specifier|private
 name|WSDLLibrary
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|boolean

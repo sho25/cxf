@@ -27,9 +27,7 @@ name|java
 operator|.
 name|security
 operator|.
-name|spec
-operator|.
-name|AlgorithmParameterSpec
+name|MessageDigest
 import|;
 end_import
 
@@ -37,9 +35,11 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|security
 operator|.
-name|Arrays
+name|spec
+operator|.
+name|AlgorithmParameterSpec
 import|;
 end_import
 
@@ -299,9 +299,9 @@ decl_stmt|;
 if|if
 condition|(
 operator|!
-name|Arrays
+name|MessageDigest
 operator|.
-name|equals
+name|isEqual
 argument_list|(
 name|actualAuthTag
 argument_list|,

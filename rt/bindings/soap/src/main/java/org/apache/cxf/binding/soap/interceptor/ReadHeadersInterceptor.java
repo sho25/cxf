@@ -622,7 +622,7 @@ name|BODY_PREFIX
 init|=
 literal|"body.prefix"
 decl_stmt|;
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 specifier|static
 class|class
@@ -2115,9 +2115,7 @@ name|events
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XMLEvent
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|8
 argument_list|)
@@ -2828,9 +2826,7 @@ name|bodyEvents
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XMLEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -2874,9 +2870,7 @@ name|envEvents
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XMLEvent
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

@@ -314,7 +314,7 @@ specifier|volatile
 name|Destination
 name|replyDestinationDest
 decl_stmt|;
-comment|/**      * Destination name to send out as replyTo address in the message       */
+comment|/**      * Destination name to send out as replyTo address in the message      */
 specifier|private
 name|String
 name|replyToDestination
@@ -1220,7 +1220,7 @@ return|return
 name|factory
 return|;
 block|}
-comment|/**      * Retrieve connection factory from JNDI      *       * @param jmsConfig      * @param jndiConfig      * @return      */
+comment|/**      * Retrieve connection factory from JNDI      *      * @param jmsConfig      * @param jndiConfig      * @return      */
 specifier|private
 name|ConnectionFactory
 name|getConnectionFactoryFromJndi
@@ -1639,6 +1639,13 @@ parameter_list|)
 throws|throws
 name|JMSException
 block|{
+if|if
+condition|(
+name|replyToName
+operator|!=
+literal|null
+condition|)
+block|{
 return|return
 name|destinationResolver
 operator|.
@@ -1649,6 +1656,13 @@ argument_list|,
 name|replyToName
 argument_list|,
 name|replyPubSubDomain
+argument_list|)
+return|;
+block|}
+return|return
+name|getReplyDestination
+argument_list|(
+name|session
 argument_list|)
 return|;
 block|}

@@ -379,7 +379,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType in a given realm. The realm is ignored in this       * token provider.      */
+comment|/**      * Return true if this TokenProvider implementation is capable of providing a token      * that corresponds to the given TokenType in a given realm. The realm is ignored in this      * token provider.      */
 specifier|public
 name|boolean
 name|canHandleToken

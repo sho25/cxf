@@ -190,7 +190,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Builds a JDOM {@link org.jdom.Document org.jdom.Document} using a  * {@link javax.xml.stream.XMLStreamReader}.  *   * @author Tatu Saloranta  * @author Bradley S. Huffman  * @author Benson I. Margulies, mods for CXF to allow reading a portion of a stream.  */
+comment|/**  * Builds a JDOM {@link org.jdom.Document org.jdom.Document} using a  * {@link javax.xml.stream.XMLStreamReader}.  *  * @author Tatu Saloranta  * @author Bradley S. Huffman  * @author Benson I. Margulies, mods for CXF to allow reading a portion of a stream.  */
 end_comment
 
 begin_class
@@ -634,7 +634,7 @@ operator|=
 name|state
 expr_stmt|;
 block|}
-comment|/**      * Returns the current {@link org.jdom.JDOMFactory} in use, if one has been      * previously set with {@link #setFactory}, otherwise null.      *       * @return the factory builder will use      */
+comment|/**      * Returns the current {@link org.jdom.JDOMFactory} in use, if one has been      * previously set with {@link #setFactory}, otherwise null.      *      * @return the factory builder will use      */
 specifier|public
 name|JDOMFactory
 name|getFactory
@@ -644,7 +644,7 @@ return|return
 name|factory
 return|;
 block|}
-comment|/**      * This will build a JDOM tree given a StAX stream reader.      * This API explicitly supports building mid-stream.      *       * @param r Stream reader from which input is read.      * @return<code>Document</code> - JDOM document object.      * @throws XMLStreamException If the reader threw such exception (to      *             indicate a parsing or I/O problem)      */
+comment|/**      * This will build a JDOM tree given a StAX stream reader.      * This API explicitly supports building mid-stream.      *      * @param r Stream reader from which input is read.      * @return<code>Document</code> - JDOM document object.      * @throws XMLStreamException If the reader threw such exception (to      *             indicate a parsing or I/O problem)      */
 specifier|public
 name|Document
 name|build
@@ -772,7 +772,7 @@ parameter_list|)
 throws|throws
 name|XMLStreamException
 block|{
-comment|/*          * Should we do sanity checking to see that r is positioned at          * beginning in the non-mid-stream case?           */
+comment|/*          * Should we do sanity checking to see that r is positioned at          * beginning in the non-mid-stream case?          */
 name|JDOMFactory
 name|f
 init|=
@@ -815,7 +815,7 @@ return|return
 name|doc
 return|;
 block|}
-comment|/**      * This takes a<code>XMLStreamReader</code> and builds up a JDOM tree.      * Recursion has been eliminated by using local stack of open elements; this      * improves performance somewhat (classic      * recursion-by-iteration-and-explicit stack transformation)      *       * @param node<code>Code</node> to examine.      * @param doc JDOM<code>Document</code> being built.      */
+comment|/**      * This takes a<code>XMLStreamReader</code> and builds up a JDOM tree.      * Recursion has been eliminated by using local stack of open elements; this      * improves performance somewhat (classic      * recursion-by-iteration-and-explicit stack transformation)      *      * @param node<code>Code</node> to examine.      * @param doc JDOM<code>Document</code> being built.      */
 annotation|@
 name|SuppressWarnings
 argument_list|(

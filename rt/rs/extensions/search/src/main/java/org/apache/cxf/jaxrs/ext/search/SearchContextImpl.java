@@ -935,9 +935,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CompleteCondition
-argument_list|>
+argument_list|<>
 argument_list|(
 name|params
 operator|.
@@ -1126,9 +1124,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CompleteCondition
-argument_list|>
+argument_list|<>
 argument_list|(
 name|entry
 operator|.

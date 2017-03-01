@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This invoker implementation calls a Factory to create the service object.  *   */
+comment|/**  * This invoker implementation calls a Factory to create the service object.  *  */
 end_comment
 
 begin_class
@@ -116,7 +116,7 @@ specifier|protected
 name|Factory
 name|factory
 decl_stmt|;
-comment|/**      * Create a FactoryInvoker object.      *       * @param factory the factory used to create service object.      */
+comment|/**      * Create a FactoryInvoker object.      *      * @param factory the factory used to create service object.      */
 specifier|public
 name|FactoryInvoker
 parameter_list|(

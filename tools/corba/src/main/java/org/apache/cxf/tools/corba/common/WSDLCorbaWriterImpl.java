@@ -234,7 +234,7 @@ import|;
 end_import
 
 begin_comment
-comment|/*   * This class is extending the wsdl4j RI class to print out the    * extensibility elements at the top of a generated wsdl file.   *    */
+comment|/*   * This class is extending the wsdl4j RI class to print out the   * extensibility elements at the top of a generated wsdl file.   *   */
 end_comment
 
 begin_class

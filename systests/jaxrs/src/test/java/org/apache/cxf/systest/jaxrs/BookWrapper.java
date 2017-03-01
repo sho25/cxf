@@ -54,7 +54,7 @@ decl_stmt|;
 specifier|public
 name|BookWrapper
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|setBook

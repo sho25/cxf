@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * MarshalRegistry maintains tracks which object instances have been marshaled   * and which objects still need to be marshaled.  *<p/>  * Note: only the StructType register objects with this class.  */
+comment|/**  * MarshalRegistry maintains tracks which object instances have been marshaled  * and which objects still need to be marshaled.  *<p/>  * Note: only the StructType register objects with this class.  */
 end_comment
 
 begin_class

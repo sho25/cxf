@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -76,7 +76,7 @@ decl_stmt|;
 specifier|public
 name|ThrottleResponse
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ThrottleResponse
 parameter_list|(
@@ -214,7 +214,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Delay processing for specified milliseconds.        * Should be "small" to prevent the client from timing out unless the client request is      * aborted with the HTTP error code.      * @return      */
+comment|/**      * Delay processing for specified milliseconds.      * Should be "small" to prevent the client from timing out unless the client request is      * aborted with the HTTP error code.      * @return      */
 specifier|public
 name|long
 name|getDelay

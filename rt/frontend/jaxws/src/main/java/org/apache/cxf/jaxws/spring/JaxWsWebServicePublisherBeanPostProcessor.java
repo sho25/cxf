@@ -370,7 +370,7 @@ comment|// All tests for this are in systests, since there's no place else to as
 end_comment
 
 begin_comment
-comment|/**  * Bean to scan context for potential web services. This scans the beans for classes that  * are annotated with @WebService. Excepting those already declared via the JAX-WS Spring  * schema, it launches each as an endpoint.  *   * By default, it sets up a default JaxWsServiceFactory and JAX-B data binding,  * and then creates a URL under /services/ based on the service name. Properties of the bean  * permit you to configure this; if you set prototypeServiceFactoryBeanName, the code  * will fetch that bean. It must be a prototype, since service factory object can't be used  * for more than one endpoint. Similarly, prototypeDataBindingBeanName can be used to   * control the data binding.  *   * Note that this class uses {@link org.apache.cxf.transport.servlet#CXFServlet} from the   * cxf-rt-transports-http-jetty library, which is not part of   * the standard dependencies of the JAX-WS front  * end.  *   * If you use this processor in an environment with no servlet, it will still launch the  * endpoints using the embedded CXF server.  *   */
+comment|/**  * Bean to scan context for potential web services. This scans the beans for classes that  * are annotated with @WebService. Excepting those already declared via the JAX-WS Spring  * schema, it launches each as an endpoint.  *  * By default, it sets up a default JaxWsServiceFactory and JAX-B data binding,  * and then creates a URL under /services/ based on the service name. Properties of the bean  * permit you to configure this; if you set prototypeServiceFactoryBeanName, the code  * will fetch that bean. It must be a prototype, since service factory object can't be used  * for more than one endpoint. Similarly, prototypeDataBindingBeanName can be used to  * control the data binding.  *  * Note that this class uses {@link org.apache.cxf.transport.servlet#CXFServlet} from the  * cxf-rt-transports-http-jetty library, which is not part of  * the standard dependencies of the JAX-WS front  * end.  *  * If you use this processor in an environment with no servlet, it will still launch the  * endpoints using the embedded CXF server.  *  */
 end_comment
 
 begin_class
@@ -1082,7 +1082,7 @@ return|return
 name|prototypeServerFactoryBeanName
 return|;
 block|}
-comment|/**      * Set the server factory for all services launched by this bean. This must be the name of a       * scope='prototype' bean that implements       * {@link org.apache.cxf.frontend#ServerFactoryBean}.      * @param prototypeServerFactoryBeanName      */
+comment|/**      * Set the server factory for all services launched by this bean. This must be the name of a      * scope='prototype' bean that implements      * {@link org.apache.cxf.frontend#ServerFactoryBean}.      * @param prototypeServerFactoryBeanName      */
 specifier|public
 name|void
 name|setPrototypeServerFactoryBeanName
@@ -1107,7 +1107,7 @@ return|return
 name|prototypeDataBindingBeanName
 return|;
 block|}
-comment|/**      * Set the data binding for all services launched by this bean. This must be the name of a       * scope='prototype' bean that implements {@link org.apache.cxf.databinding#DataBinding}.      * @param prototypeDataBindingBeanName      */
+comment|/**      * Set the data binding for all services launched by this bean. This must be the name of a      * scope='prototype' bean that implements {@link org.apache.cxf.databinding#DataBinding}.      * @param prototypeDataBindingBeanName      */
 specifier|public
 name|void
 name|setPrototypeDataBindingBeanName

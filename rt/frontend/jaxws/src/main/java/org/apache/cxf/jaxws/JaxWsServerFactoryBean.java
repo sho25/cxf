@@ -430,7 +430,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Bean to help easily create Server endpoints for JAX-WS.  *<pre>  * JaxWsServerFactoryBean sf = new JaxWsServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://acme.com/myService");  * sf.create();  *</pre>  * This will start a server and register it with the ServerManager.   */
+comment|/**  * Bean to help easily create Server endpoints for JAX-WS.  *<pre>  * JaxWsServerFactoryBean sf = new JaxWsServerFactoryBean();  * sf.setServiceClass(MyService.class);  * sf.setAddress("http://acme.com/myService");  * sf.create();  *</pre>  * This will start a server and register it with the ServerManager.  */
 end_comment
 
 begin_class
@@ -458,9 +458,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1310,7 +1308,7 @@ operator|=
 literal|false
 expr_stmt|;
 block|}
-comment|/**      * Obtain handler chain from annotations.      * @param server       *      */
+comment|/**      * Obtain handler chain from annotations.      * @param server      *      */
 specifier|private
 name|void
 name|buildHandlerChain
@@ -1339,9 +1337,7 @@ name|chain
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|(
 name|handlers
 argument_list|)
@@ -1564,7 +1560,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * @param blockPostConstruct @PostConstruct method will not be called       *  if this property is set to true - this may be necessary in cases      *  when the @PostConstruct method needs to be called at a later stage,      *  for example, when a higher level container does its own injection.        */
+comment|/**      * @param blockPostConstruct @PostConstruct method will not be called      *  if this property is set to true - this may be necessary in cases      *  when the @PostConstruct method needs to be called at a later stage,      *  for example, when a higher level container does its own injection.      */
 specifier|public
 name|void
 name|setBlockPostConstruct
@@ -1580,7 +1576,7 @@ operator|=
 name|blockPostConstruct
 expr_stmt|;
 block|}
-comment|/**      * No injection or PostConstruct will be called if this is set to true.      * If the container has already handled the injection, this should       * be set to true.      * @param b      */
+comment|/**      * No injection or PostConstruct will be called if this is set to true.      * If the container has already handled the injection, this should      * be set to true.      * @param b      */
 specifier|public
 name|void
 name|setBlockInjection

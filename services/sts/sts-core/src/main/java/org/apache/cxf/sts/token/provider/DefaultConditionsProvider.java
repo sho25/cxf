@@ -839,7 +839,7 @@ return|return
 name|conditions
 return|;
 block|}
-comment|/**      * Create a list of AudienceRestrictions to be added to the Conditions Element of the      * issued Assertion. The default behaviour is to add a single Audience URI per       * AudienceRestriction Element. The Audience URIs are from an AppliesTo address, and      * the wst:Participants (if either exist).      */
+comment|/**      * Create a list of AudienceRestrictions to be added to the Conditions Element of the      * issued Assertion. The default behaviour is to add a single Audience URI per      * AudienceRestriction Element. The Audience URIs are from an AppliesTo address, and      * the wst:Participants (if either exist).      */
 specifier|protected
 name|List
 argument_list|<

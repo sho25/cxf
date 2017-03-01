@@ -290,7 +290,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *  * MDBActivationWork is a type of {@link Work} that is executed by   * {@link javax.resource.spi.work.WorkManager}.  MDBActivationWork  * starts an CXF service endpoint to accept inbound calls for  * the JCA connector.  *   */
+comment|/**  *  * MDBActivationWork is a type of {@link Work} that is executed by  * {@link javax.resource.spi.work.WorkManager}.  MDBActivationWork  * starts an CXF service endpoint to accept inbound calls for  * the JCA connector.  *  */
 end_comment
 
 begin_class
@@ -502,7 +502,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * @param endpoint      * @param classLoader       */
+comment|/**      * @param endpoint      * @param classLoader      */
 specifier|private
 name|void
 name|activate

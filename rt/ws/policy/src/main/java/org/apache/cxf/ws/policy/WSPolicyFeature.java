@@ -384,7 +384,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Configures a Server, Client, Bus with the specified policies. If a series of   * Policy<code>Element</code>s are supplied, these will be loaded into a Policy  * class using the<code>PolicyBuilder</code> extension on the bus. If the   * PolicyEngine has not been started, this feature will start it.  *  * @see PolicyBuilder  * @see AbstractFeature  */
+comment|/**  * Configures a Server, Client, Bus with the specified policies. If a series of  * Policy<code>Element</code>s are supplied, these will be loaded into a Policy  * class using the<code>PolicyBuilder</code> extension on the bus. If the  * PolicyEngine has not been started, this feature will start it.  *  * @see PolicyBuilder  * @see AbstractFeature  */
 end_comment
 
 begin_class
@@ -469,9 +469,7 @@ name|policies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Collections
@@ -918,9 +916,7 @@ name|loadedPolicies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|PolicyBuilder
@@ -1103,9 +1099,7 @@ name|policies
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1150,9 +1144,7 @@ name|policyElements
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1195,9 +1187,7 @@ name|policyReferenceElements
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Element
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

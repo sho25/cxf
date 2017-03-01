@@ -230,7 +230,7 @@ name|hazelcastInstance
 operator|=
 name|Hazelcast
 operator|.
-name|getDefaultInstance
+name|newHazelcastInstance
 argument_list|()
 expr_stmt|;
 block|}

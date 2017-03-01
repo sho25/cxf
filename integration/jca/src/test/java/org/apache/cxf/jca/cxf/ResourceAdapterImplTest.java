@@ -191,7 +191,7 @@ block|{
 specifier|public
 name|ResourceAdapterImplTest
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|Test
 specifier|public
@@ -757,9 +757,7 @@ name|setBusCache
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|Bus
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -829,9 +827,7 @@ name|setBusCache
 argument_list|(
 operator|new
 name|HashSet
-argument_list|<
-name|Bus
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

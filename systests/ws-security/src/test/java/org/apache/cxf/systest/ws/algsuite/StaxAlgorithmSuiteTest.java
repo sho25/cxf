@@ -140,7 +140,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This is a test for AlgorithmSuites. Essentially it checks that a service endpoint will  * reject a client request that uses a different AlgorithmSuite. It tests both DOM + StAX   * clients against the StAX server.  */
+comment|/**  * This is a test for AlgorithmSuites. Essentially it checks that a service endpoint will  * reject a client request that uses a different AlgorithmSuite. It tests both DOM + StAX  * clients against the StAX server.  */
 end_comment
 
 begin_class

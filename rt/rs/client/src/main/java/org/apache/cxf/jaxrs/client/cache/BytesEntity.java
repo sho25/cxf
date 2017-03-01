@@ -57,7 +57,7 @@ decl_stmt|;
 specifier|public
 name|BytesEntity
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|BytesEntity
 parameter_list|(

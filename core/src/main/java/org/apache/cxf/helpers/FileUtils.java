@@ -261,7 +261,7 @@ decl_stmt|;
 specifier|private
 name|FileUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|boolean
 name|isValidFileName
@@ -1927,9 +1927,7 @@ literal|false
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|File
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 return|;
@@ -1971,9 +1969,7 @@ literal|true
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|File
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 return|;
@@ -2132,9 +2128,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}
@@ -2146,9 +2140,7 @@ name|results
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try

@@ -175,7 +175,16 @@ argument_list|<
 name|Default
 argument_list|>
 argument_list|()
-block|{         }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+block|}
 argument_list|)
 expr_stmt|;
 name|qualifiers
@@ -188,7 +197,16 @@ argument_list|<
 name|Any
 argument_list|>
 argument_list|()
-block|{         }
+block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
+block|}
 argument_list|)
 expr_stmt|;
 return|return

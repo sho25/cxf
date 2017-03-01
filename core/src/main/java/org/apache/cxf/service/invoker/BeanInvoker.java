@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Invoker for externally created service objects.  *   */
+comment|/**  * Invoker for externally created service objects.  *  */
 end_comment
 
 begin_class

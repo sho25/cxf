@@ -240,7 +240,7 @@ block|{
 specifier|private
 name|SAMLUtils
 parameter_list|()
-block|{              }
+block|{      }
 comment|/**      * Extract Claims from a SAML Assertion      */
 specifier|public
 specifier|static

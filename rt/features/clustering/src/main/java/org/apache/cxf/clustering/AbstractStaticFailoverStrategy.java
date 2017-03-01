@@ -239,7 +239,7 @@ operator|=
 name|alternateAddresses
 expr_stmt|;
 block|}
-comment|/**      * Get the alternate addresses for this invocation.      *       * @param exchange the current Exchange      * @return a List of alternate addresses if available      */
+comment|/**      * Get the alternate addresses for this invocation.      *      * @param exchange the current Exchange      * @return a List of alternate addresses if available      */
 specifier|public
 name|List
 argument_list|<
@@ -258,9 +258,7 @@ literal|null
 condition|?
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|alternateAddresses
 argument_list|)
@@ -268,7 +266,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**      * Select one of the alternate addresses for a retried invocation.      *       * @param a List of alternate addresses if available      * @return the selected address      */
+comment|/**      * Select one of the alternate addresses for a retried invocation.      *      * @param a List of alternate addresses if available      * @return the selected address      */
 specifier|public
 name|String
 name|selectAlternateAddress
@@ -291,12 +289,11 @@ name|alternates
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|alternates
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|selected
@@ -349,7 +346,7 @@ return|return
 name|selected
 return|;
 block|}
-comment|/**      * Get the alternate endpoints for this invocation.      *       * @param exchange the current Exchange      * @return a List of alternate endpoints if available      */
+comment|/**      * Get the alternate endpoints for this invocation.      *      * @param exchange the current Exchange      * @return a List of alternate endpoints if available      */
 specifier|public
 name|List
 argument_list|<
@@ -370,7 +367,7 @@ literal|false
 argument_list|)
 return|;
 block|}
-comment|/**      * Select one of the alternate endpoints for a retried invocation.      *       * @param a List of alternate endpoints if available      * @return the selected endpoint      */
+comment|/**      * Select one of the alternate endpoints for a retried invocation.      *      * @param a List of alternate endpoints if available      * @return the selected endpoint      */
 specifier|public
 name|Endpoint
 name|selectAlternateEndpoint
@@ -393,12 +390,11 @@ name|alternates
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|alternates
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|selected
@@ -470,7 +466,7 @@ return|return
 name|selected
 return|;
 block|}
-comment|/**      * Get the endpoints for this invocation.      *       * @param exchange the current Exchange      * @param acceptCandidatesWithSameAddress true to accept candidates with the same address      * @return a List of alternate endpoints if available      */
+comment|/**      * Get the endpoints for this invocation.      *      * @param exchange the current Exchange      * @param acceptCandidatesWithSameAddress true to accept candidates with the same address      * @return a List of alternate endpoints if available      */
 specifier|protected
 name|List
 argument_list|<
@@ -529,9 +525,7 @@ name|alternates
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Endpoint
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -712,7 +706,7 @@ return|return
 name|alternates
 return|;
 block|}
-comment|/**      * Get next alternate endpoint.      *       * @param alternates non-empty List of alternate endpoints       * @return      */
+comment|/**      * Get next alternate endpoint.      *      * @param alternates non-empty List of alternate endpoints      * @return      */
 specifier|protected
 specifier|abstract
 parameter_list|<
@@ -728,7 +722,7 @@ argument_list|>
 name|alternates
 parameter_list|)
 function_decl|;
-comment|/**      * Get the log level for reporting the selection of the new alternative address or endpoint       * @return the log level      */
+comment|/**      * Get the log level for reporting the selection of the new alternative address or endpoint      * @return the log level      */
 specifier|protected
 name|Level
 name|getLogLevel

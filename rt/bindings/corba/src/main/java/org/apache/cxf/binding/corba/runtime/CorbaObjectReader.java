@@ -2392,12 +2392,11 @@ argument_list|()
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|branches
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -3392,9 +3391,7 @@ name|elements
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CorbaObjectHandler
-argument_list|>
+argument_list|<>
 argument_list|(
 name|length
 argument_list|)

@@ -2599,9 +2599,7 @@ name|values
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|values
@@ -2772,9 +2770,7 @@ name|audienceRestrictions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AudienceRestrictionBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AudienceRestrictionBean
@@ -3860,7 +3856,7 @@ name|policyElement
 argument_list|)
 return|;
 block|}
-comment|/**      * Sign a SAML Response      * @throws Exception       */
+comment|/**      * Sign a SAML Response      * @throws Exception      */
 specifier|private
 name|void
 name|signResponse

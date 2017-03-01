@@ -194,7 +194,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class runs the second half of the tests, as having all in   * the one class causes an out of memory problem in eclipse  */
+comment|/**  * This class runs the second half of the tests, as having all in  * the one class causes an out of memory problem in eclipse  */
 end_comment
 
 begin_class

@@ -58,7 +58,7 @@ specifier|private
 name|MessageUtils
 parameter_list|()
 block|{     }
-comment|/**      * Determine if message is outbound.      *       * @param message the current Message      * @return true if the message direction is outbound      */
+comment|/**      * Determine if message is outbound.      *      * @param message the current Message      * @return true if the message direction is outbound      */
 specifier|public
 specifier|static
 name|boolean
@@ -109,7 +109,7 @@ argument_list|()
 operator|)
 return|;
 block|}
-comment|/**      * Determine if message is fault.      *       * @param message the current Message      * @return true if the message is a fault      */
+comment|/**      * Determine if message is fault.      *      * @param message the current Message      * @return true if the message is a fault      */
 specifier|public
 specifier|static
 name|boolean
@@ -154,7 +154,7 @@ argument_list|()
 operator|)
 return|;
 block|}
-comment|/**      * Determine the fault mode for the underlying (fault) message       * (for use on server side only).      *       * @param message the fault message      * @return the FaultMode      */
+comment|/**      * Determine the fault mode for the underlying (fault) message      * (for use on server side only).      *      * @param message the fault message      * @return the FaultMode      */
 specifier|public
 specifier|static
 name|FaultMode
@@ -224,7 +224,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Determine if current messaging role is that of requestor.      *       * @param message the current Message      * @return true if the current messaging role is that of requestor      */
+comment|/**      * Determine if current messaging role is that of requestor.      *      * @param message the current Message      * @return true if the current messaging role is that of requestor      */
 specifier|public
 specifier|static
 name|boolean
@@ -268,7 +268,7 @@ return|return
 literal|false
 return|;
 block|}
-comment|/**      * Determine if the current message is a partial response.      *       * @param message the current message      * @return true if the current messags is a partial response      */
+comment|/**      * Determine if the current message is a partial response.      *      * @param message the current message      * @return true if the current messags is a partial response      */
 specifier|public
 specifier|static
 name|boolean
@@ -300,7 +300,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Determines if the current message is an empty partial response, which      * is a partial response with an empty content.      *       * @param message the current message      * @return true if the current messags is a partial empty response      */
+comment|/**      * Determines if the current message is an empty partial response, which      * is a partial response with an empty content.      *      * @param message the current message      * @return true if the current messags is a partial empty response      */
 specifier|public
 specifier|static
 name|boolean
@@ -493,7 +493,7 @@ argument_list|)
 operator|!=
 literal|null
 return|;
-comment|/*         for (Class c : m.getContentFormats()) {             if (c.equals(Node.class) || c.getName().equals("javax.xml.soap.SOAPMessage")) {                 return true;             }            }         return false;         */
+comment|/*         for (Class c : m.getContentFormats()) {             if (c.equals(Node.class) || c.getName().equals("javax.xml.soap.SOAPMessage")) {                 return true;             }         }         return false;         */
 block|}
 block|}
 end_class

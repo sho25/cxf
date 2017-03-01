@@ -47,7 +47,7 @@ block|{
 specifier|public
 name|LoadDistributorFeature
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|LoadDistributorFeature
 parameter_list|(

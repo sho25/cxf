@@ -44,7 +44,7 @@ comment|//CHECKSTYLE:OFF
 end_comment
 
 begin_comment
-comment|/**  * Can be used to build plain or complex/composite search conditions.  *<p>  * Google Collections<a href="http://google-collections.googlecode.com/svn/trunk/javadoc/com/google/common/base/Predicate.html">Predicate</a>  * might've been used instead, but it is a too generic and its apply method is not quite needed here  *</p>  *    * @param<T> Type of the object which will be checked by SearchCondition instance  *    */
+comment|/**  * Can be used to build plain or complex/composite search conditions.  *<p>  * Google Collections<a href="http://google-collections.googlecode.com/svn/trunk/javadoc/com/google/common/base/Predicate.html">Predicate</a>  * might've been used instead, but it is a too generic and its apply method is not quite needed here  *</p>  *  * @param<T> Type of the object which will be checked by SearchCondition instance  *  */
 end_comment
 
 begin_comment
@@ -59,7 +59,7 @@ parameter_list|<
 name|T
 parameter_list|>
 block|{
-comment|/**      * Checks if the given pojo instance meets this search condition      *       * @param pojo the object which will be checked      * @return true if the pojo meets this search condition, false - otherwise      */
+comment|/**      * Checks if the given pojo instance meets this search condition      *      * @param pojo the object which will be checked      * @return true if the pojo meets this search condition, false - otherwise      */
 name|boolean
 name|isMet
 parameter_list|(
@@ -81,17 +81,17 @@ argument_list|>
 name|pojos
 parameter_list|)
 function_decl|;
-comment|/**      * Some SearchConditions may use instance of T to capture the actual search criteria      * thus making it simpler to implement isMet(T). In some cases, the code which is given      * SearchCondition may find it more efficient to directly deal with the captured state      * for a more efficient lookup of matching data/records as opposed to calling      * SearchCondition.isMet for every instance of T it knows about.      *       *        * @return T the captured search criteria, can be null       */
+comment|/**      * Some SearchConditions may use instance of T to capture the actual search criteria      * thus making it simpler to implement isMet(T). In some cases, the code which is given      * SearchCondition may find it more efficient to directly deal with the captured state      * for a more efficient lookup of matching data/records as opposed to calling      * SearchCondition.isMet for every instance of T it knows about.      *      *      * @return T the captured search criteria, can be null      */
 name|T
 name|getCondition
 parameter_list|()
 function_decl|;
-comment|/**      * Primitive statement such a> b, i< 5, etc      * this condition may represent. Complex conditions will return null.        *        * @return primitive search statement, can be null       */
+comment|/**      * Primitive statement such a> b, i< 5, etc      * this condition may represent. Complex conditions will return null.      *      * @return primitive search statement, can be null      */
 name|PrimitiveStatement
 name|getStatement
 parameter_list|()
 function_decl|;
-comment|/**      * List of conditions this SearchCondition may represent.      * Composite SearchConditions will return a list of conditions they are      * composed from, primitive ones will return null        * @return list of conditions, can be null      */
+comment|/**      * List of conditions this SearchCondition may represent.      * Composite SearchConditions will return a list of conditions they are      * composed from, primitive ones will return null      * @return list of conditions, can be null      */
 name|List
 argument_list|<
 name|SearchCondition
@@ -107,7 +107,7 @@ name|ConditionType
 name|getConditionType
 parameter_list|()
 function_decl|;
-comment|/**      * Provides a visitor which will convert this SearchCondition into      * a custom expression, for example, into the SQL statement, etc       * @param visitor      */
+comment|/**      * Provides a visitor which will convert this SearchCondition into      * a custom expression, for example, into the SQL statement, etc      * @param visitor      */
 name|void
 name|accept
 parameter_list|(

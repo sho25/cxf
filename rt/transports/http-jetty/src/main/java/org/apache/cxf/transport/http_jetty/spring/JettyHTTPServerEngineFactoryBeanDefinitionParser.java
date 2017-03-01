@@ -637,12 +637,11 @@ argument_list|)
 decl_stmt|;
 if|if
 condition|(
+operator|!
 name|list
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|bean
@@ -779,7 +778,7 @@ return|return
 name|list
 return|;
 block|}
-comment|/*      * We do not require an id from the configuration.      *       * (non-Javadoc)      * @see org.springframework.beans.factory.xml.AbstractBeanDefinitionParser#shouldGenerateId()      */
+comment|/*      * We do not require an id from the configuration.      *      * (non-Javadoc)      * @see org.springframework.beans.factory.xml.AbstractBeanDefinitionParser#shouldGenerateId()      */
 annotation|@
 name|Override
 specifier|protected

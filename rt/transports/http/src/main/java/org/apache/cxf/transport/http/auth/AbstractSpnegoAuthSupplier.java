@@ -550,7 +550,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Create and return a service ticket token for a given service principal      * name      *       * @param authPolicy      * @param spn      * @return service ticket token      * @throws GSSException      * @throws LoginException      */
+comment|/**      * Create and return a service ticket token for a given service principal      * name      *      * @param authPolicy      * @param spn      * @return service ticket token      * @throws GSSException      * @throws LoginException      */
 specifier|private
 name|byte
 index|[]

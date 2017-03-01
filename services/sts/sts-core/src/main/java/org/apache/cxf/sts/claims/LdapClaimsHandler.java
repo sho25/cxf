@@ -599,9 +599,7 @@ name|uriList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1157,12 +1155,11 @@ name|ldapAttributes
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|ldapAttributes
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 break|break;

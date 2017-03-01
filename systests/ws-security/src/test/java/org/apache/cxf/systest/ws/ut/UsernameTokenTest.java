@@ -276,7 +276,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for Username Tokens over the Transport Binding.   */
+comment|/**  * A set of tests for Username Tokens over the Transport Binding.  */
 end_comment
 
 begin_class

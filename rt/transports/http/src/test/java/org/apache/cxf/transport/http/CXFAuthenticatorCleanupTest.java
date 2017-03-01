@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -96,7 +96,7 @@ specifier|public
 class|class
 name|CXFAuthenticatorCleanupTest
 block|{
-comment|/**      *       */
+comment|/**      *      */
 specifier|public
 name|CXFAuthenticatorCleanupTest
 parameter_list|()
@@ -119,9 +119,7 @@ name|traceLengths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//create a chain of CXFAuthenticators, strongly referenced to prevent cleanups
@@ -196,9 +194,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|CXFAuthenticator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -500,9 +496,7 @@ name|traceLengths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//create a chain of CXFAuthenticators, strongly referenced to prevent cleanups

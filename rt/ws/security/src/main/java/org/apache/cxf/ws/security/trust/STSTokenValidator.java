@@ -304,7 +304,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A WSS4J-based Validator to validate a received WS-Security credential by dispatching  * it to a STS via WS-Trust. The default binding is "validate", but "issue" is also possible  * by setting the "useIssueBinding" property. In this case, the credentials are sent via  * "OnBehalfOf" unless the "useOnBehalfOf" property is set to "false", in which case the  * credentials are used depending on the security policy of the STS endpoint (e.g. in a   * UsernameToken if this is what the policy requires). Setting "useOnBehalfOf" to "false" +   * "useIssueBinding" to "true" only works for validating UsernameTokens.  */
+comment|/**  * A WSS4J-based Validator to validate a received WS-Security credential by dispatching  * it to a STS via WS-Trust. The default binding is "validate", but "issue" is also possible  * by setting the "useIssueBinding" property. In this case, the credentials are sent via  * "OnBehalfOf" unless the "useOnBehalfOf" property is set to "false", in which case the  * credentials are used depending on the security policy of the STS endpoint (e.g. in a  * UsernameToken if this is what the policy requires). Setting "useOnBehalfOf" to "false" +  * "useIssueBinding" to "true" only works for validating UsernameTokens.  */
 end_comment
 
 begin_class

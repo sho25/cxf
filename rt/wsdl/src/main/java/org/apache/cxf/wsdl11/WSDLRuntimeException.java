@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This exception is thrown for problems processing WSDL  * structures.   */
+comment|/**  * This exception is thrown for problems processing WSDL  * structures.  */
 end_comment
 
 begin_class

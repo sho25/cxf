@@ -54,7 +54,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -146,7 +146,7 @@ name|handler
 argument_list|)
 return|;
 block|}
-comment|/**      * Return a classloader that can see all the given interfaces If the given loader can see all interfaces      * then it is used. If not then a combined classloader of all interface classloaders is returned.      *       * @param loader use supplied class loader      * @param interfaces      * @return classloader that sees all interfaces      */
+comment|/**      * Return a classloader that can see all the given interfaces If the given loader can see all interfaces      * then it is used. If not then a combined classloader of all interface classloaders is returned.      *      * @param loader use supplied class loader      * @param interfaces      * @return classloader that sees all interfaces      */
 specifier|private
 name|ClassLoader
 name|getClassLoaderForInterfaces

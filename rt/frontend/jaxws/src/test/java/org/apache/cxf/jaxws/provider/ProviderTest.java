@@ -252,7 +252,7 @@ class|class
 name|PayloadProvider2
 extends|extends
 name|PayloadProvider
-block|{              }
+block|{      }
 block|}
 end_class
 

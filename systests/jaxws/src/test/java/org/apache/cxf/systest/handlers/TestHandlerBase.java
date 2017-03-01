@@ -536,7 +536,7 @@ name|ctx
 argument_list|)
 condition|)
 block|{
-comment|/*             QName operationName = (QName)ctx.get(MessageContext.WSDL_OPERATION);             if (operationName == null) {                 throw new PingException("WSDL_OPERATION not found");             }             URI wsdlDescription = (URI)ctx.get(MessageContext.WSDL_DESCRIPTION);             if (!wsdlDescription.toString().equals("http://localhost:9005/HandlerTest/SoapPort?wsdl")) {                 throw new PingException("WSDL_DESCRIPTION not found");             }             QName wsdlPort = (QName)ctx.get(MessageContext.WSDL_PORT);             if (!wsdlPort.getLocalPart().equals("SoapPort")) {                 throw new PingException("WSDL_PORT not found");             }                    QName wsdlInterface = (QName)ctx.get(MessageContext.WSDL_INTERFACE);             if (!wsdlInterface.getLocalPart().equals("HandlerTest")) {                 throw new PingException("WSDL_INTERFACE not found");             }                   QName wsdlService = (QName)ctx.get(MessageContext.WSDL_SERVICE);             if (!wsdlService.getLocalPart().equals("HandlerTestService")) {                 throw new PingException("WSDL_SERVICE not found");             }             */
+comment|/*             QName operationName = (QName)ctx.get(MessageContext.WSDL_OPERATION);             if (operationName == null) {                 throw new PingException("WSDL_OPERATION not found");             }             URI wsdlDescription = (URI)ctx.get(MessageContext.WSDL_DESCRIPTION);             if (!wsdlDescription.toString().equals("http://localhost:9005/HandlerTest/SoapPort?wsdl")) {                 throw new PingException("WSDL_DESCRIPTION not found");             }             QName wsdlPort = (QName)ctx.get(MessageContext.WSDL_PORT);             if (!wsdlPort.getLocalPart().equals("SoapPort")) {                 throw new PingException("WSDL_PORT not found");             }             QName wsdlInterface = (QName)ctx.get(MessageContext.WSDL_INTERFACE);             if (!wsdlInterface.getLocalPart().equals("HandlerTest")) {                 throw new PingException("WSDL_INTERFACE not found");             }             QName wsdlService = (QName)ctx.get(MessageContext.WSDL_SERVICE);             if (!wsdlService.getLocalPart().equals("HandlerTestService")) {                 throw new PingException("WSDL_SERVICE not found");             }             */
 block|}
 block|}
 specifier|protected
@@ -644,9 +644,7 @@ name|handlerInfoList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|ctx

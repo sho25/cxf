@@ -290,7 +290,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|/**      * Marker interfaces for Exceptions that have a      * getFaultInfo() method that returns some sort       * of object that the FaultOutInterceptor can      * marshal into a fault detail element      */
+comment|/**      * Marker interfaces for Exceptions that have a      * getFaultInfo() method that returns some sort      * of object that the FaultOutInterceptor can      * marshal into a fault detail element      */
 specifier|public
 interface|interface
 name|FaultInfoException
@@ -889,7 +889,7 @@ return|return
 name|cause
 return|;
 block|}
-comment|/**      * Find the correct Fault part for a particular exception.      *       * @param op      * @param class1      */
+comment|/**      * Find the correct Fault part for a particular exception.      *      * @param op      * @param class1      */
 specifier|public
 name|FaultInfo
 name|getFaultForClass

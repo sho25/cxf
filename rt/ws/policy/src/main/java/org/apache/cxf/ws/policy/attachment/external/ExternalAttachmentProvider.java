@@ -402,7 +402,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -444,7 +444,7 @@ name|attachments
 decl_stmt|;
 name|ExternalAttachmentProvider
 parameter_list|()
-block|{             }
+block|{     }
 name|ExternalAttachmentProvider
 parameter_list|(
 name|Bus
@@ -842,9 +842,7 @@ name|attachments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PolicyAttachment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Document
@@ -1384,9 +1382,7 @@ name|des
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DomainExpression
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

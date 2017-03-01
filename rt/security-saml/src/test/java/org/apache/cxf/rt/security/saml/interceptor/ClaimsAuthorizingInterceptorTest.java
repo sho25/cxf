@@ -1482,7 +1482,7 @@ specifier|public
 name|void
 name|claimWithDefaultNameAndFormat
 parameter_list|()
-block|{                      }
+block|{          }
 comment|// explicit name and format
 annotation|@
 name|Claim
@@ -1507,7 +1507,7 @@ specifier|public
 name|void
 name|claimWithSpecificNameAndFormat
 parameter_list|()
-block|{                      }
+block|{          }
 annotation|@
 name|Claim
 argument_list|(
@@ -1533,7 +1533,7 @@ specifier|public
 name|void
 name|claimLaxMode
 parameter_list|()
-block|{                       }
+block|{          }
 annotation|@
 name|Claims
 argument_list|(
@@ -1595,7 +1595,7 @@ specifier|public
 name|void
 name|multipleClaims
 parameter_list|()
-block|{                       }
+block|{          }
 comment|// user must have both admin and manager roles, default is 'or'
 annotation|@
 name|Claim
@@ -1616,7 +1616,7 @@ specifier|public
 name|void
 name|claimMatchAll
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|public
 specifier|static
@@ -1632,7 +1632,7 @@ specifier|public
 name|void
 name|test
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 annotation|@
 name|Target

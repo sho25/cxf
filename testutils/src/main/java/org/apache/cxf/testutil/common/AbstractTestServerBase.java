@@ -66,7 +66,7 @@ block|{
 name|boolean
 name|inProcess
 decl_stmt|;
-comment|/**       * method implemented by test servers.  Initialise       * servants and publish endpoints etc.      *      */
+comment|/**      * method implemented by test servers.  Initialise      * servants and publish endpoints etc.      *      */
 specifier|protected
 specifier|abstract
 name|void

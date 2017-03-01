@@ -128,7 +128,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Apache CXF servlet with CDI 1.1 integration support   */
+comment|/**  * Apache CXF servlet with CDI 1.1 integration support  */
 end_comment
 
 begin_class

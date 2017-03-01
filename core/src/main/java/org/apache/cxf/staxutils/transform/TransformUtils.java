@@ -162,7 +162,7 @@ block|{
 specifier|private
 name|TransformUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|XMLStreamReader

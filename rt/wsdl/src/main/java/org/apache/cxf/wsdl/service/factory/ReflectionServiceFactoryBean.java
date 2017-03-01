@@ -1597,9 +1597,7 @@ name|serviceConfigurations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractServiceConfiguration
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1623,9 +1621,7 @@ name|ignoredClasses
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1637,9 +1633,7 @@ name|ignoredMethods
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Method
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -4231,9 +4225,7 @@ name|removes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|OperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Method
@@ -4496,9 +4488,7 @@ name|biremoves
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BindingOperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

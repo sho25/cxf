@@ -60,7 +60,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Supplies Authorization information to an HTTPConduit.  *<p>  * A HTTPConduit keeps a reference to this HttpAuthSupplier for the life  * of the HTTPConduit, unless changed out by dynamic configuration.  * Therefore, an implementation of this HttpAuthSupplier may maintain  * state for subsequent calls.   *<p>  * For instance, an implementation may not provide a Authorization preemptively for   * a particular URL and decide to get the realm information from   * a 401 response in which the HTTPConduit will call getAuthorization for  * that URL. Then this implementation may provide the Authorization for this  * particular URL preemptively for subsequent calls to getAuthorization.  */
+comment|/**  * Supplies Authorization information to an HTTPConduit.  *<p>  * A HTTPConduit keeps a reference to this HttpAuthSupplier for the life  * of the HTTPConduit, unless changed out by dynamic configuration.  * Therefore, an implementation of this HttpAuthSupplier may maintain  * state for subsequent calls.  *<p>  * For instance, an implementation may not provide a Authorization preemptively for  * a particular URL and decide to get the realm information from  * a 401 response in which the HTTPConduit will call getAuthorization for  * that URL. Then this implementation may provide the Authorization for this  * particular URL preemptively for subsequent calls to getAuthorization.  */
 end_comment
 
 begin_interface
@@ -73,7 +73,7 @@ name|boolean
 name|requiresRequestCaching
 parameter_list|()
 function_decl|;
-comment|/**      * The HTTPConduit makes a call to this method to obtain      * an Authentication token for http authentication.      *       * @param authPolicy credentials for the authentication      * @param uri  The URI we want to connect to      * @param message     The CXF Message      * @param fullHeader  The full WWW-Authenticate header or null if preemptive auth      * @return token for Authenticate string or null if authentication is not possible      */
+comment|/**      * The HTTPConduit makes a call to this method to obtain      * an Authentication token for http authentication.      *      * @param authPolicy credentials for the authentication      * @param uri  The URI we want to connect to      * @param message     The CXF Message      * @param fullHeader  The full WWW-Authenticate header or null if preemptive auth      * @return token for Authenticate string or null if authentication is not possible      */
 name|String
 name|getAuthorization
 parameter_list|(

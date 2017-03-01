@@ -330,7 +330,7 @@ decl_stmt|;
 specifier|public
 name|SchemaHandler
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|void
 name|setBus
@@ -465,9 +465,7 @@ name|sources
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

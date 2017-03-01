@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "OnBehalfOf" element. This username is obtained  * by parsing the "security.username" property. The client then invokes on the service   * provider using the returned (custom BinarySecurityToken) token from the STS. The service  * provider dispatches the received BinarySecurityToken to the STS for validation, and receives  * a transformed SAML Token in response.  */
+comment|/**  * In this test case, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "OnBehalfOf" element. This username is obtained  * by parsing the "security.username" property. The client then invokes on the service  * provider using the returned (custom BinarySecurityToken) token from the STS. The service  * provider dispatches the received BinarySecurityToken to the STS for validation, and receives  * a transformed SAML Token in response.  */
 end_comment
 
 begin_class

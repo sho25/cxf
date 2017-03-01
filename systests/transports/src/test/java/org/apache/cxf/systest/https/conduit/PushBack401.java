@@ -238,7 +238,7 @@ import|;
 end_import
 
 begin_comment
-comment|/*  * This interceptor will issue 401s  *    No Authorization Header  --> 401 Realm=Cronus  *    Username Mary            --> 401 Realm=Andromeda  *    Username Edward          --> 401 Realm=Zorantius  *    Username George          --> 401 Realm=Cronus  *    If the password is not "password" a 401 is issued without   *    realm.  */
+comment|/*  * This interceptor will issue 401s  *    No Authorization Header  --> 401 Realm=Cronus  *    Username Mary            --> 401 Realm=Andromeda  *    Username Edward          --> 401 Realm=Zorantius  *    Username George          --> 401 Realm=Cronus  *    If the password is not "password" a 401 is issued without  *    realm.  */
 end_comment
 
 begin_class
@@ -262,7 +262,7 @@ name|RECEIVE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This function extracts the user:pass token from       * the Authorization:Basic header. It returns a two element      * String array, the first being the userid, the second      * being the password. It returns null, if it cannot parse.      */
+comment|/**      * This function extracts the user:pass token from      * the Authorization:Basic header. It returns a two element      * String array, the first being the userid, the second      * being the password. It returns null, if it cannot parse.      */
 specifier|private
 name|String
 index|[]
@@ -351,7 +351,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**      * This function returns the realm which depends on       * the user name, as follows:      *<pre>      *    Username Mary            --> Andromeda      *    Username Edward          --> Zorantius      *    Username George          --> Cronus      *</pre>      * However, if the password is not "password" this function       * throws an exception, regardless.      */
+comment|/**      * This function returns the realm which depends on      * the user name, as follows:      *<pre>      *    Username Mary            --> Andromeda      *    Username Edward          --> Zorantius      *    Username George          --> Cronus      *</pre>      * However, if the password is not "password" this function      * throws an exception, regardless.      */
 specifier|private
 name|String
 name|checkUserPass

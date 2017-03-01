@@ -502,9 +502,7 @@ name|paraList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -515,9 +513,7 @@ name|valueList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|valueList
@@ -670,9 +666,7 @@ name|resPara
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 end_decl_stmt
@@ -686,9 +680,7 @@ name|intValueList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 end_decl_stmt
@@ -877,6 +869,6 @@ argument_list|)
 expr_stmt|;
 end_expr_stmt
 
-unit|}    }
+unit|}  }
 end_unit
 

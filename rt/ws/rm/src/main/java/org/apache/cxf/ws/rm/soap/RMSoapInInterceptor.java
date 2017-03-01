@@ -752,7 +752,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Protocol Handler responsible for {en|de}coding the RM   * Properties for {outgo|incom}ing messages.  */
+comment|/**  * Protocol Handler responsible for {en|de}coding the RM  * Properties for {outgo|incom}ing messages.  */
 end_comment
 
 begin_class
@@ -786,9 +786,7 @@ name|set
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|set
@@ -853,7 +851,7 @@ argument_list|)
 expr_stmt|;
 block|}
 comment|// AbstractSoapInterceptor interface
-comment|/**      * @return the set of SOAP headers understood by this handler       */
+comment|/**      * @return the set of SOAP headers understood by this handler      */
 specifier|public
 name|Set
 argument_list|<
@@ -889,7 +887,7 @@ name|message
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Decode the RM properties from protocol-specific headers      * and store them in the message.      *        * @param message the SOAP mesage      */
+comment|/**      * Decode the RM properties from protocol-specific headers      * and store them in the message.      *      * @param message the SOAP mesage      */
 name|void
 name|decode
 parameter_list|(
@@ -918,7 +916,7 @@ argument_list|)
 expr_stmt|;
 comment|// TODO: decode SequenceFault ?
 block|}
-comment|/**      * Decode the RM properties from protocol-specific headers.      *       * @param message the SOAP message      * @return the RM properties      */
+comment|/**      * Decode the RM properties from protocol-specific headers.      *      * @param message the SOAP message      * @return the RM properties      */
 specifier|public
 name|RMProperties
 name|unmarshalRMProperties
@@ -1018,9 +1016,7 @@ name|acks
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SequenceAcknowledgement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collection
@@ -1031,9 +1027,7 @@ name|requested
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AckRequestedType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String
@@ -1402,12 +1396,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|acks
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|rmps
@@ -1420,12 +1413,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|requested
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|rmps
@@ -1458,7 +1450,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * When invoked inbound, check if the action indicates that this is one of the       * RM protocol messages (CreateSequence, CreateSequenceResponse, TerminateSequence)      * and if so, replace references to the application service model with references to      * the RM service model.      * The addressing protocol handler must have extracted the action beforehand.       * @see org.apache.cxf.transport.ChainInitiationObserver      *       * @param message the message      */
+comment|/**      * When invoked inbound, check if the action indicates that this is one of the      * RM protocol messages (CreateSequence, CreateSequenceResponse, TerminateSequence)      * and if so, replace references to the application service model with references to      * the RM service model.      * The addressing protocol handler must have extracted the action beforehand.      * @see org.apache.cxf.transport.ChainInitiationObserver      *      * @param message the message      */
 specifier|private
 name|void
 name|updateServiceModelInfo

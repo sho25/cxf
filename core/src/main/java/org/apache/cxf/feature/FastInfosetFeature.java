@@ -337,7 +337,7 @@ name|out
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Set if FastInfoset is always used without negotiation       * @param b      */
+comment|/**      * Set if FastInfoset is always used without negotiation      * @param b      */
 specifier|public
 name|void
 name|setForce

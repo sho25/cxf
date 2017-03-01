@@ -381,9 +381,7 @@ name|ais
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AssertionInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ais
@@ -416,7 +414,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Simply check that it runs without any exceptions      *       * @param assertionInfoMap      */
+comment|/**      * Simply check that it runs without any exceptions      *      * @param assertionInfoMap      */
 specifier|private
 name|void
 name|checkAssertWithMap

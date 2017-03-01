@@ -367,12 +367,11 @@ name|claims
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|claims
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|ProcessedClaimCollection

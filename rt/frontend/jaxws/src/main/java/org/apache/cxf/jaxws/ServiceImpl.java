@@ -1287,6 +1287,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
+specifier|final
 name|void
 name|initialize
 parameter_list|(
@@ -2011,9 +2012,7 @@ name|f
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|WebServiceFeature
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

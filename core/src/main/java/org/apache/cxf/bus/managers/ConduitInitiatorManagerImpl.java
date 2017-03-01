@@ -359,7 +359,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.bus.ConduitInitiatorManager#registerConduitInitiator(java.lang.String,      *      org.apache.cxf.transports.ConduitInitiator)      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.bus.ConduitInitiatorManager#registerConduitInitiator(java.lang.String,      *      org.apache.cxf.transports.ConduitInitiator)      */
 specifier|public
 name|void
 name|registerConduitInitiator
@@ -381,7 +381,7 @@ name|factory
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.bus.ConduitInitiatorManager#deregisterConduitInitiator(java.lang.String)      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.bus.ConduitInitiatorManager#deregisterConduitInitiator(java.lang.String)      */
 specifier|public
 name|void
 name|deregisterConduitInitiator
@@ -398,8 +398,8 @@ name|namespace
 argument_list|)
 expr_stmt|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.bus.ConduitInitiatorManager#ConduitInitiator(java.lang.String)      */
-comment|/**      * Returns the conduit initiator for the given namespace, constructing it      * (and storing in the cache for future reference) if necessary, using its      * list of factory classname to namespace mappings.      *       * @param namespace the namespace.      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.bus.ConduitInitiatorManager#ConduitInitiator(java.lang.String)      */
+comment|/**      * Returns the conduit initiator for the given namespace, constructing it      * (and storing in the cache for future reference) if necessary, using its      * list of factory classname to namespace mappings.      *      * @param namespace the namespace.      */
 specifier|public
 name|ConduitInitiator
 name|getConduitInitiator

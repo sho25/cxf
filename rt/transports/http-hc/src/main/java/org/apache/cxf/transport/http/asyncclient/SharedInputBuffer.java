@@ -85,20 +85,6 @@ name|apache
 operator|.
 name|http
 operator|.
-name|annotation
-operator|.
-name|ThreadSafe
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|http
-operator|.
 name|nio
 operator|.
 name|ContentDecoder
@@ -152,12 +138,10 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Content buffer that can be shared by multiple threads, usually the I/O dispatch of   * an I/O reactor and a worker thread.  *<p/>  * The I/O dispatch thread is expect to transfer data from {@link ContentDecoder} to the buffer  *   by calling {@link #consumeContent(ContentDecoder)}.  *<p/>  * The worker thread is expected to read the data from the buffer by calling  *   {@link #read()} or {@link #read(byte[], int, int)} methods.  *<p/>  * In case of an abnormal situation or when no longer needed the buffer must be shut down  * using {@link #shutdown()} method.  */
+comment|/**  * Content buffer that can be shared by multiple threads, usually the I/O dispatch of  * an I/O reactor and a worker thread.  *<p/>  * The I/O dispatch thread is expect to transfer data from {@link ContentDecoder} to the buffer  *   by calling {@link #consumeContent(ContentDecoder)}.  *<p/>  * The worker thread is expected to read the data from the buffer by calling  *   {@link #read()} or {@link #read(byte[], int, int)} methods.  *<p/>  * In case of an abnormal situation or when no longer needed the buffer must be shut down  * using {@link #shutdown()} method.  */
 end_comment
 
 begin_class
-annotation|@
-name|ThreadSafe
 specifier|public
 class|class
 name|SharedInputBuffer

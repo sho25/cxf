@@ -102,7 +102,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * It might seem odd to return 'true' if a property == FALSE, but it      * is required sometimes.      *       * @param props      * @param key      * @return false if value is either the String "false" or Boolean.FALSE.  Otherwise returns      * true.      */
+comment|/**      * It might seem odd to return 'true' if a property == FALSE, but it      * is required sometimes.      *      * @param props      * @param key      * @return false if value is either the String "false" or Boolean.FALSE.  Otherwise returns      * true.      */
 specifier|public
 specifier|static
 name|boolean
@@ -192,7 +192,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * It might seem odd to return 'true' if a property == FALSE, but it is required sometimes.      *       * Returns false if a value is either the String "false" (regardless of case)  or Boolean.FALSE.      * @param property      * @return false if value is either the String "false" or Boolean.FALSE.  Otherwise returns      * true.      */
+comment|/**      * It might seem odd to return 'true' if a property == FALSE, but it is required sometimes.      *      * Returns false if a value is either the String "false" (regardless of case)  or Boolean.FALSE.      * @param property      * @return false if value is either the String "false" or Boolean.FALSE.  Otherwise returns      * true.      */
 specifier|public
 specifier|static
 name|boolean

@@ -88,7 +88,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class is a copy of the WSDLFactoryImpl from the wsdl4j implementation  * It overwrites the newWSDLWriter method to return a WSDLCorbaWriter   */
+comment|/**  * This class is a copy of the WSDLFactoryImpl from the wsdl4j implementation  * It overwrites the newWSDLWriter method to return a WSDLCorbaWriter  */
 end_comment
 
 begin_class

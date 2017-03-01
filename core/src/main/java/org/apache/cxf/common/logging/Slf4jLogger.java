@@ -66,7 +66,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>  * java.util.logging.Logger implementation delegating to SLF4J.  *</p>  *<p>  * Methods {@link java.util.logging.Logger#setParent(Logger)}, {@link java.util.logging.Logger#getParent()},  * {@link java.util.logging.Logger#setUseParentHandlers(boolean)} and  * {@link java.util.logging.Logger#getUseParentHandlers()} are not overridden.  *</p>  *<p>  * Level mapping inspired by {@link org.slf4j.bridge.SLF4JBridgeHandler}:  *</p>  *   *<pre>  * FINEST  -&gt; TRACE  * FINER   -&gt; DEBUG  * FINE    -&gt; DEBUG  * CONFIG  -&gt; DEBUG  * INFO    -&gt; INFO  * WARN ING -&gt; WARN  * SEVER   -&gt; ERROR  *</pre>  */
+comment|/**  *<p>  * java.util.logging.Logger implementation delegating to SLF4J.  *</p>  *<p>  * Methods {@link java.util.logging.Logger#setParent(Logger)}, {@link java.util.logging.Logger#getParent()},  * {@link java.util.logging.Logger#setUseParentHandlers(boolean)} and  * {@link java.util.logging.Logger#getUseParentHandlers()} are not overridden.  *</p>  *<p>  * Level mapping inspired by {@link org.slf4j.bridge.SLF4JBridgeHandler}:  *</p>  *  *<pre>  * FINEST  -&gt; TRACE  * FINER   -&gt; DEBUG  * FINE    -&gt; DEBUG  * CONFIG  -&gt; DEBUG  * INFO    -&gt; INFO  * WARN ING -&gt; WARN  * SEVER   -&gt; ERROR  *</pre>  */
 end_comment
 
 begin_class

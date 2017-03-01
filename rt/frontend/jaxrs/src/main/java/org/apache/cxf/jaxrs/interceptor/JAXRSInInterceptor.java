@@ -988,6 +988,12 @@ condition|(
 name|acceptHeaderValues
 operator|!=
 literal|null
+operator|&&
+operator|!
+name|acceptHeaderValues
+operator|.
+name|isEmpty
+argument_list|()
 condition|)
 block|{
 name|acceptTypes

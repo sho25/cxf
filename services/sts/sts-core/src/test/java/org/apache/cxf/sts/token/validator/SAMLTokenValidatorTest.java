@@ -1991,7 +1991,7 @@ name|EXPIRED
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test a SAML 1.1 Assertion using Certificate Constraints       */
+comment|/**      * Test a SAML 1.1 Assertion using Certificate Constraints      */
 annotation|@
 name|org
 operator|.
@@ -2129,9 +2129,7 @@ name|certConstraints
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|certConstraints

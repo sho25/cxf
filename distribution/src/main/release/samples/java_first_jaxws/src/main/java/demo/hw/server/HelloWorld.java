@@ -75,7 +75,7 @@ name|User
 name|user
 parameter_list|)
 function_decl|;
-comment|/* Map passing      * JAXB also does not support Maps.  It handles Lists great, but Maps are      * not supported directly.  They also require use of a XmlAdapter to map      * the maps into beans that JAXB can use.       */
+comment|/* Map passing      * JAXB also does not support Maps.  It handles Lists great, but Maps are      * not supported directly.  They also require use of a XmlAdapter to map      * the maps into beans that JAXB can use.      */
 annotation|@
 name|XmlJavaTypeAdapter
 argument_list|(

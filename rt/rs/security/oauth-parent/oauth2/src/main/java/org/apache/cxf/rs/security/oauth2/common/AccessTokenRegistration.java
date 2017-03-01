@@ -248,7 +248,7 @@ return|return
 name|approvedScope
 return|;
 block|}
-comment|/**      * Sets the {@link UserSubject) instance capturing       * the information about the end user       * @param subject the end user subject      */
+comment|/**      * Sets the {@link UserSubject) instance capturing      * the information about the end user      * @param subject the end user subject      */
 specifier|public
 name|void
 name|setSubject
@@ -264,7 +264,7 @@ operator|=
 name|subject
 expr_stmt|;
 block|}
-comment|/**      * Gets the {@link UserSubject) instance capturing       * the information about the end user      * @return the subject      */
+comment|/**      * Gets the {@link UserSubject) instance capturing      * the information about the end user      * @return the subject      */
 specifier|public
 name|UserSubject
 name|getSubject

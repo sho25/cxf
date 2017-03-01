@@ -100,7 +100,7 @@ block|{
 specifier|private
 name|WSS4JTokenConverter
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|void

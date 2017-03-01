@@ -181,7 +181,7 @@ operator|=
 name|faultCode
 expr_stmt|;
 block|}
-comment|/**      * Set detail content as arbitrary element.      *       * @param d (<code>null</code> if none)      */
+comment|/**      * Set detail content as arbitrary element.      *      * @param d (<code>null</code> if none)      */
 specifier|public
 name|void
 name|setDetail
@@ -195,7 +195,7 @@ operator|=
 name|d
 expr_stmt|;
 block|}
-comment|/**      * Set detail content as Identifier.      *       * @param d (<code>null</code> if none)      */
+comment|/**      * Set detail content as Identifier.      *      * @param d (<code>null</code> if none)      */
 specifier|public
 name|void
 name|setDetail
@@ -209,7 +209,7 @@ operator|=
 name|d
 expr_stmt|;
 block|}
-comment|/**      * Set detail content as SequenceAcknowledgement.      *       * @param d (<code>null</code> if none)      */
+comment|/**      * Set detail content as SequenceAcknowledgement.      *      * @param d (<code>null</code> if none)      */
 specifier|public
 name|void
 name|setDetail
@@ -223,7 +223,7 @@ operator|=
 name|d
 expr_stmt|;
 block|}
-comment|/**      * Get Fault detail object, which may be an {@link Element}, an {@link Identifier}, or a      * {@link SequenceAcknowledgement}.      *       * @return detail object (<code>null</code> if none)      */
+comment|/**      * Get Fault detail object, which may be an {@link Element}, an {@link Identifier}, or a      * {@link SequenceAcknowledgement}.      *      * @return detail object (<code>null</code> if none)      */
 specifier|public
 name|Object
 name|getDetail
@@ -233,7 +233,7 @@ return|return
 name|detail
 return|;
 block|}
-comment|/**      * Get extra element appended to main fault detail.      *       * @return element (<code>null</code> if none)      */
+comment|/**      * Get extra element appended to main fault detail.      *      * @return element (<code>null</code> if none)      */
 specifier|public
 name|Element
 name|getExtraDetail
@@ -243,7 +243,7 @@ return|return
 name|extraDetail
 return|;
 block|}
-comment|/**      * Set extra element appended to main fault detail.      *       * @param ex (<code>null</code> if none)      */
+comment|/**      * Set extra element appended to main fault detail.      *      * @param ex (<code>null</code> if none)      */
 specifier|public
 name|void
 name|setExtraDetail

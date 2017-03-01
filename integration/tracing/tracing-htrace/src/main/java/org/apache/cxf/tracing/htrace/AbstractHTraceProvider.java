@@ -99,11 +99,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|jaxrs
+name|phase
 operator|.
-name|utils
-operator|.
-name|JAXRSUtils
+name|PhaseInterceptorChain
 import|;
 end_import
 
@@ -489,7 +487,7 @@ name|TraceScope
 name|continuationScope
 parameter_list|)
 block|{
-name|JAXRSUtils
+name|PhaseInterceptorChain
 operator|.
 name|getCurrentMessage
 argument_list|()
@@ -511,7 +509,7 @@ parameter_list|()
 block|{
 return|return
 operator|!
-name|JAXRSUtils
+name|PhaseInterceptorChain
 operator|.
 name|getCurrentMessage
 argument_list|()

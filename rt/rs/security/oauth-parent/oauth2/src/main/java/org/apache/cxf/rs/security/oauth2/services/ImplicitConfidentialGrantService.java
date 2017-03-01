@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Redirection-based Implicit Grant Service which returns tokens for the confidential clients  * directly to a human user.   */
+comment|/**  * Redirection-based Implicit Grant Service which returns tokens for the confidential clients  * directly to a human user.  */
 end_comment
 
 begin_class

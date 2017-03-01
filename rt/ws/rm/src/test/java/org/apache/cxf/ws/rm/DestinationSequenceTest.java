@@ -1123,7 +1123,7 @@ name|verify
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*    @Test     public void testAcknowledgeLastMessageNumberExceeded() throws SequenceFault {           Timer timer = control.createMock(Timer.class);         RMEndpoint rme = EasyMock.createMock(RMEndpoint.class);         EasyMock.expect(rme.getEncoderDecoder()).andReturn(EncoderDecoder10Impl.INSTANCE).anyTimes();         setUpDestination(timer, rme);         Message message1 = setUpMessage("1");         Message message2 = setUpMessage("2", true);         control.replay();                  DestinationSequence seq = new DestinationSequence(id, ref, destination);                  seq.acknowledge(message1);         seq.setLastMessageNumber(1);         try {             seq.acknowledge(message2);             fail("Expected SequenceFault not thrown.");         } catch (SequenceFault sf) {             assertEquals("SequenceTerminated", sf.getSequenceFault().getFaultCode().getLocalPart());         }                  control.verify();     }   */
+comment|/*    @Test     public void testAcknowledgeLastMessageNumberExceeded() throws SequenceFault {         Timer timer = control.createMock(Timer.class);         RMEndpoint rme = EasyMock.createMock(RMEndpoint.class);         EasyMock.expect(rme.getEncoderDecoder()).andReturn(EncoderDecoder10Impl.INSTANCE).anyTimes();         setUpDestination(timer, rme);         Message message1 = setUpMessage("1");         Message message2 = setUpMessage("2", true);         control.replay();          DestinationSequence seq = new DestinationSequence(id, ref, destination);          seq.acknowledge(message1);         seq.setLastMessageNumber(1);         try {             seq.acknowledge(message2);             fail("Expected SequenceFault not thrown.");         } catch (SequenceFault sf) {             assertEquals("SequenceTerminated", sf.getSequenceFault().getFaultCode().getLocalPart());         }          control.verify();     }   */
 annotation|@
 name|Test
 specifier|public
@@ -2901,9 +2901,7 @@ name|ranges
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AcknowledgementRange
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AcknowledgementRange
@@ -3185,9 +3183,7 @@ name|ranges
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AcknowledgementRange
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|final

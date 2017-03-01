@@ -142,7 +142,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -155,7 +155,7 @@ argument_list|<
 name|Message
 argument_list|>
 block|{
-specifier|public
+specifier|private
 specifier|static
 specifier|final
 name|Logger

@@ -206,7 +206,7 @@ name|ei
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Builds an new endpoint reference using the current target reference as a template.       * The supplied id is endcoded using a reference parameter.      * This requires the ws-a interceptors to propagate the reference parameters      * on subsequent invokes using the returned reference.      * @param id the id to encode in the new reference      * @return the new reference with the id encoded as a reference parameter      * @see org.apache.cxf.transport.MultiplexDestination#getAddressWithId(java.lang.String)             */
+comment|/**      * Builds an new endpoint reference using the current target reference as a template.      * The supplied id is endcoded using a reference parameter.      * This requires the ws-a interceptors to propagate the reference parameters      * on subsequent invokes using the returned reference.      * @param id the id to encode in the new reference      * @return the new reference with the id encoded as a reference parameter      * @see org.apache.cxf.transport.MultiplexDestination#getAddressWithId(java.lang.String)       */
 specifier|public
 name|EndpointReferenceType
 name|getAddressWithId
@@ -315,7 +315,7 @@ return|return
 name|epr
 return|;
 block|}
-comment|/**      * Obtain id from reference parameters of the ws-a to address      * Requires the existance of ws-a interceptors on dispatch path to provide access       * to the ws-a headers      * @param contextMap the current invocation or message context      * @return the id from the reference parameters of the  ws-a-to address or null if not found      * @see org.apache.cxf.transport.MultiplexDestination#getId(java.util.Map)      */
+comment|/**      * Obtain id from reference parameters of the ws-a to address      * Requires the existance of ws-a interceptors on dispatch path to provide access      * to the ws-a headers      * @param contextMap the current invocation or message context      * @return the id from the reference parameters of the  ws-a-to address or null if not found      * @see org.apache.cxf.transport.MultiplexDestination#getId(java.util.Map)      */
 specifier|public
 name|String
 name|getId

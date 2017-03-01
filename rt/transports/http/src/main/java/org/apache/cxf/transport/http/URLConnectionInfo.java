@@ -109,7 +109,7 @@ operator|=
 name|uri
 expr_stmt|;
 block|}
-comment|/**      * This field returns the URI associated with the connection      * in question.      *       * @return      */
+comment|/**      * This field returns the URI associated with the connection      * in question.      *      * @return      */
 specifier|public
 name|URI
 name|getURI

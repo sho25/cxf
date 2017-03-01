@@ -80,7 +80,7 @@ specifier|public
 interface|interface
 name|TypeCreator
 block|{
-comment|/**      * Get the mapped name of a method parameter.      *       * @param m      * @param index      * @return      */
+comment|/**      * Get the mapped name of a method parameter.      *      * @param m      * @param index      * @return      */
 name|QName
 name|getElementName
 parameter_list|(
@@ -140,7 +140,7 @@ name|TypeMapping
 name|typeMapping
 parameter_list|)
 function_decl|;
-comment|/** Retrieve the classInfo for a method. Needed to get parameters right.       *       * @param m Method object      * @param index index in the parameter list      * @return info      */
+comment|/** Retrieve the classInfo for a method. Needed to get parameters right.      *      * @param m Method object      * @param index index in the parameter list      * @return info      */
 name|TypeClassInfo
 name|createClassInfo
 parameter_list|(

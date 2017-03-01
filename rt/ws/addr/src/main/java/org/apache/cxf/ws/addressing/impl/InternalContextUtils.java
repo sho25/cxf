@@ -967,8 +967,8 @@ specifier|private
 name|InternalContextUtils
 parameter_list|()
 block|{     }
-comment|/**      * Rebase response on replyTo      *       * @param reference the replyTo reference      * @param inMAPs the inbound MAPs      * @param inMessage the current message      */
-comment|//CHECKSTYLE:OFF  Max executable statement count limitation
+comment|/**      * Rebase response on replyTo      *      * @param reference the replyTo reference      * @param inMAPs the inbound MAPs      * @param inMessage the current message      */
+comment|//CHECKSTYLE:OFF Max executable statement count limitation
 specifier|public
 specifier|static
 name|void
@@ -2114,7 +2114,7 @@ name|reference
 argument_list|)
 return|;
 block|}
-comment|/**      * Construct and store MAPs for partial response.      *       * @param partialResponse the partial response message      * @param namespaceURI the current namespace URI      */
+comment|/**      * Construct and store MAPs for partial response.      *      * @param partialResponse the partial response message      * @param namespaceURI the current namespace URI      */
 specifier|private
 specifier|static
 name|void
@@ -2211,7 +2211,7 @@ literal|false
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Construct the Action URI.      *       * @param message the current message      * @return the Action URI      */
+comment|/**      * Construct the Action URI.      *      * @param message the current message      * @return the Action URI      */
 specifier|public
 specifier|static
 name|AttributedURIType

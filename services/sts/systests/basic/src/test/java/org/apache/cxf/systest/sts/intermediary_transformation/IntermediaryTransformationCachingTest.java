@@ -218,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a STS instance, and  * receives a (HOK) SAML 1.1 Assertion. This is then sent via (1-way) TLS to an Intermediary   * service provider. The intermediary service provider validates the token, and then the   * Intermediary client uses delegation to dispatch the received token (via OnBehalfOf) to another   * STS instance. After this point, the STSClient is disabled, meaning that the Intermediary client must rely  * on its cache to get tokens. The retrieved token is sent to the service provider via (2-way) TLS.  */
+comment|/**  * In this test case, a CXF client sends a Username Token via (1-way) TLS to a STS instance, and  * receives a (HOK) SAML 1.1 Assertion. This is then sent via (1-way) TLS to an Intermediary  * service provider. The intermediary service provider validates the token, and then the  * Intermediary client uses delegation to dispatch the received token (via OnBehalfOf) to another  * STS instance. After this point, the STSClient is disabled, meaning that the Intermediary client must rely  * on its cache to get tokens. The retrieved token is sent to the service provider via (2-way) TLS.  */
 end_comment
 
 begin_class

@@ -46,7 +46,7 @@ decl_stmt|;
 specifier|private
 name|StaticClientTokenContext
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|void

@@ -373,7 +373,7 @@ return|return
 name|publisherReference
 return|;
 block|}
-comment|/**      *       * @param destroyRegistrationRequest      * @return returns org.oasis_open.docs.wsn.br_1.DestroyResponse      * @throws ResourceNotDestroyedFault      * @throws ResourceUnknownFault      */
+comment|/**      *      * @param destroyRegistrationRequest      * @return returns org.oasis_open.docs.wsn.br_1.DestroyResponse      * @throws ResourceNotDestroyedFault      * @throws ResourceUnknownFault      */
 annotation|@
 name|WebMethod
 argument_list|(

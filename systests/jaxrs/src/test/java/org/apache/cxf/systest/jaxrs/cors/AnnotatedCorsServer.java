@@ -493,7 +493,7 @@ return|return
 name|echo
 return|;
 block|}
-comment|/**      * A method annotated to test preflight.      *       * @param input      * @return      */
+comment|/**      * A method annotated to test preflight.      *      * @param input      * @return      */
 annotation|@
 name|PUT
 annotation|@

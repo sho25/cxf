@@ -494,7 +494,7 @@ decl_stmt|;
 specifier|protected
 name|AbstractSpringComponentScanServer
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 name|AbstractSpringComponentScanServer
 parameter_list|(
@@ -881,9 +881,7 @@ name|classNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

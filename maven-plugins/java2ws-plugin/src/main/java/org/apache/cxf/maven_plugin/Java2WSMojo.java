@@ -273,7 +273,7 @@ specifier|private
 name|String
 name|className
 decl_stmt|;
-comment|/**      * @parameter  expression="${project.build.outputDirectory}"      * @required      */
+comment|/**      * @parameter expression="${project.build.outputDirectory}"      * @required      */
 specifier|private
 name|String
 name|classpath
@@ -318,7 +318,7 @@ specifier|private
 name|String
 name|classifier
 decl_stmt|;
-comment|/**      * @parameter  expression="${project.compileClasspathElements}"      * @required      */
+comment|/**      * @parameter expression="${project.compileClasspathElements}"      * @required      */
 specifier|private
 name|List
 argument_list|<
@@ -472,9 +472,7 @@ name|artifactsPath
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|pluginArtifacts
 operator|.
@@ -616,9 +614,7 @@ name|args
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -626,13 +622,33 @@ condition|(
 name|fork
 condition|)
 block|{
+name|String
+index|[]
+name|split
+init|=
+name|additionalJvmArgs
+operator|.
+name|split
+argument_list|(
+literal|"\\s+"
+argument_list|)
+decl_stmt|;
+for|for
+control|(
+name|String
+name|each
+range|:
+name|split
+control|)
+block|{
 name|args
 operator|.
 name|add
 argument_list|(
-name|additionalJvmArgs
+name|each
 argument_list|)
 expr_stmt|;
+block|}
 comment|// @see JavaToWS#isExitOnFinish()
 name|args
 operator|.

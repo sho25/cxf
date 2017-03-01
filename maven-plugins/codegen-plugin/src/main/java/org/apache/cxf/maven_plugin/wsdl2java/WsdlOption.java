@@ -201,7 +201,7 @@ operator|=
 name|wsdlArtifact
 expr_stmt|;
 block|}
-comment|/**      * Try to find a file matching the wsdl path (either absolutely, relatively to the current dir or to      * the project base dir)      *       * @return wsdl file      */
+comment|/**      * Try to find a file matching the wsdl path (either absolutely, relatively to the current dir or to      * the project base dir)      *      * @return wsdl file      */
 specifier|public
 name|File
 name|getWsdlFile
@@ -682,9 +682,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|addList

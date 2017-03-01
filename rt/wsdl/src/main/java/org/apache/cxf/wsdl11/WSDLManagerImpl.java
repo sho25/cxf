@@ -442,7 +442,7 @@ name|Definition
 argument_list|>
 name|definitionsMap
 decl_stmt|;
-comment|/**      * The schemaCacheMap is used as a cache of SchemaInfo against the WSDLDefinitions.      * The key is the same key that is used to hold the definition object into the definitionsMap       */
+comment|/**      * The schemaCacheMap is used as a cache of SchemaInfo against the WSDLDefinitions.      * The key is the same key that is used to hold the definition object into the definitionsMap      */
 specifier|final
 name|Map
 argument_list|<
@@ -771,7 +771,7 @@ return|return
 name|bus
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * XXX - getExtensionRegistry()      *       * @see org.apache.cxf.wsdl.WSDLManager#getExtenstionRegistry()      */
+comment|/*      * (non-Javadoc)      *      * XXX - getExtensionRegistry()      *      * @see org.apache.cxf.wsdl.WSDLManager#getExtenstionRegistry()      */
 specifier|public
 name|ExtensionRegistry
 name|getExtensionRegistry
@@ -781,7 +781,7 @@ return|return
 name|registry
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.wsdl.WSDLManager#getDefinition(java.lang.String)      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.wsdl.WSDLManager#getDefinition(java.lang.String)      */
 specifier|public
 name|Definition
 name|getDefinition
@@ -1666,9 +1666,7 @@ name|keys
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

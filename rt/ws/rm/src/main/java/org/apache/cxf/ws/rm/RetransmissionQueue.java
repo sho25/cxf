@@ -84,7 +84,7 @@ name|boolean
 name|isEmpty
 parameter_list|()
 function_decl|;
-comment|/**      * Accepts a new message for possible future retransmission. Implementations must call the      * RMEndpoint.handleAccepted() method for each accepted message.      *       * @param message the message context.      */
+comment|/**      * Accepts a new message for possible future retransmission. Implementations must call the      * RMEndpoint.handleAccepted() method for each accepted message.      *      * @param message the message context.      */
 name|void
 name|addUnacknowledged
 parameter_list|(
@@ -92,7 +92,7 @@ name|Message
 name|message
 parameter_list|)
 function_decl|;
-comment|/**      * Purge all candidates for the given sequence that have been acknowledged. Implementations must call the      * RMEndpoint.handleAcknowledgment() method for each acknowledged message.      *       * @param seq the sequence object.      */
+comment|/**      * Purge all candidates for the given sequence that have been acknowledged. Implementations must call the      * RMEndpoint.handleAcknowledgment() method for each acknowledged message.      *      * @param seq the sequence object.      */
 name|void
 name|purgeAcknowledged
 parameter_list|(
@@ -100,7 +100,7 @@ name|SourceSequence
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Purge all candidates for the given sequence.      *       * @param seq the sequence object      */
+comment|/**      * Purge all candidates for the given sequence.      *      * @param seq the sequence object      */
 name|void
 name|purgeAll
 parameter_list|(
@@ -108,7 +108,7 @@ name|SourceSequence
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      *       * @param seq      * @return      */
+comment|/**      *      * @param seq      * @return      */
 name|List
 argument_list|<
 name|Long

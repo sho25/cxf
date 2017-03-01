@@ -289,7 +289,7 @@ parameter_list|(
 name|String
 name|requestType
 parameter_list|)
-block|{        }
+block|{     }
 specifier|public
 name|String
 name|sayHi

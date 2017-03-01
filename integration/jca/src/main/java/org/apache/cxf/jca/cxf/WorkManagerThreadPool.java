@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The adapter for using Application Server's thread pool.   * Just simply override the dispatch method.  */
+comment|/**  * The adapter for using Application Server's thread pool.  * Just simply override the dispatch method.  */
 end_comment
 
 begin_class

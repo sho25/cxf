@@ -72,7 +72,7 @@ block|{
 specifier|public
 name|AbstractInvocationHandlerTest
 parameter_list|()
-block|{           }
+block|{      }
 comment|// seach for the setNext method
 annotation|@
 name|Test

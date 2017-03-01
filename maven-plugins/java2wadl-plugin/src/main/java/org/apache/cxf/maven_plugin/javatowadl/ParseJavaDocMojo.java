@@ -264,7 +264,7 @@ name|ParseJavaDocMojo
 extends|extends
 name|AbstractMojo
 block|{
-comment|/**      * The source encoding.      *       * @parameter defaultValue = "${project.build.sourceEncoding}"      */
+comment|/**      * The source encoding.      *      * @parameter defaultValue = "${project.build.sourceEncoding}"      */
 specifier|private
 name|String
 name|encoding
@@ -352,12 +352,12 @@ specifier|private
 name|File
 name|dumpFileOutputDirectory
 decl_stmt|;
-comment|/**      * The local maven repository.      *       * @parameter expression="${localRepository}"      * @required      * @readonly      */
+comment|/**      * The local maven repository.      *      * @parameter expression="${localRepository}"      * @required      * @readonly      */
 specifier|private
 name|ArtifactRepository
 name|localRepository
 decl_stmt|;
-comment|/**      * The remote repositories where artifacts are located.      *       * @parameter expression="${project.remoteArtifactRepositories}"      * @required      * @readonly      */
+comment|/**      * The remote repositories where artifacts are located.      *      * @parameter expression="${project.remoteArtifactRepositories}"      * @required      * @readonly      */
 specifier|private
 name|List
 argument_list|<

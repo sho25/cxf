@@ -174,7 +174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -346,12 +346,11 @@ name|contentEncodingList
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|contentEncodingList
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -457,12 +456,11 @@ name|mt
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|mt
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -604,12 +602,11 @@ name|sa
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|sa
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|soapAction
@@ -659,12 +656,11 @@ name|ct
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|ct
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|contentType
@@ -893,12 +889,11 @@ name|ru
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|ru
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -932,12 +927,11 @@ name|mr
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|mr
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|mr
 operator|.
@@ -983,12 +977,11 @@ name|trn
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|trn
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 operator|&&
 name|trn
 operator|.
@@ -1098,12 +1091,11 @@ name|ct
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|ct
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String
@@ -1251,12 +1243,11 @@ name|bv
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|bv
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|String

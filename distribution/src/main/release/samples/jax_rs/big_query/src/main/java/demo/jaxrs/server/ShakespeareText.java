@@ -29,7 +29,7 @@ decl_stmt|;
 specifier|public
 name|ShakespeareText
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|ShakespeareText
 parameter_list|(

@@ -252,7 +252,7 @@ block|{
 specifier|private
 name|JwtTokenUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String
@@ -760,6 +760,33 @@ operator|.
 name|setClientCodeVerifier
 argument_list|(
 name|codeVerifier
+argument_list|)
+expr_stmt|;
+block|}
+name|String
+name|nonce
+init|=
+name|claims
+operator|.
+name|getStringProperty
+argument_list|(
+name|OAuthConstants
+operator|.
+name|NONCE
+argument_list|)
+decl_stmt|;
+if|if
+condition|(
+name|nonce
+operator|!=
+literal|null
+condition|)
+block|{
+name|at
+operator|.
+name|setNonce
+argument_list|(
+name|nonce
 argument_list|)
 expr_stmt|;
 block|}

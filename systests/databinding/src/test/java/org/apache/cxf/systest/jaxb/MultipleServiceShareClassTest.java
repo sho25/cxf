@@ -25,7 +25,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingInInterceptor
 import|;
@@ -39,7 +41,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|interceptor
+name|ext
+operator|.
+name|logging
 operator|.
 name|LoggingOutInterceptor
 import|;
@@ -298,7 +302,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -524,7 +528,7 @@ name|Server
 operator|.
 name|class
 argument_list|,
-literal|false
+literal|true
 argument_list|)
 argument_list|)
 expr_stmt|;

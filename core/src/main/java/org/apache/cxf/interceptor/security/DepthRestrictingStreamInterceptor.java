@@ -432,7 +432,7 @@ name|XML_SUB_TYPE
 argument_list|)
 return|;
 block|}
-comment|/**      * Sets the acceptable total number of elements in the XML payload       * @param elementCountThreshold      */
+comment|/**      * Sets the acceptable total number of elements in the XML payload      * @param elementCountThreshold      */
 specifier|public
 name|void
 name|setElementCountThreshold
@@ -457,7 +457,7 @@ return|return
 name|elementCountThreshold
 return|;
 block|}
-comment|/**      * Sets the acceptable total stack depth in the XML payload       * @param elementLevelThreshold      */
+comment|/**      * Sets the acceptable total stack depth in the XML payload      * @param elementLevelThreshold      */
 specifier|public
 name|void
 name|setInnerElementLevelThreshold
@@ -482,7 +482,7 @@ return|return
 name|innerElementLevelThreshold
 return|;
 block|}
-comment|/**      * Sets the acceptable total number of child elements for the current XML element       * @param innerElementCountThreshold      */
+comment|/**      * Sets the acceptable total number of child elements for the current XML element      * @param innerElementCountThreshold      */
 specifier|public
 name|void
 name|setInnerElementCountThreshold

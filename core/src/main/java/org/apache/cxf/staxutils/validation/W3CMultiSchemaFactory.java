@@ -4,7 +4,7 @@ comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or 
 end_comment
 
 begin_comment
-comment|/*  * Code in this file derives from source code in Woodstox which   * carries a ASL 2.0 license.  */
+comment|/*  * Code in this file derives from source code in Woodstox which  * carries a ASL 2.0 license.  */
 end_comment
 
 begin_package
@@ -290,7 +290,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class

@@ -1081,9 +1081,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|publishers
 operator|.
@@ -1103,9 +1101,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|subscriptions
 operator|.
@@ -1157,7 +1153,7 @@ return|return
 name|anonymousPublisher
 return|;
 block|}
-comment|/**      *       * @param notify      */
+comment|/**      *      * @param notify      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -1314,7 +1310,7 @@ return|return
 name|publisher
 return|;
 block|}
-comment|/**      *       * @param subscribeRequest      * @return returns org.oasis_open.docs.wsn.b_1.SubscribeResponse      * @throws SubscribeCreationFailedFault      * @throws InvalidTopicExpressionFault      * @throws TopicNotSupportedFault      * @throws InvalidFilterFault      * @throws InvalidProducerPropertiesExpressionFault      * @throws ResourceUnknownFault      * @throws InvalidMessageContentExpressionFault      * @throws TopicExpressionDialectUnknownFault      * @throws UnacceptableInitialTerminationTimeFault      */
+comment|/**      *      * @param subscribeRequest      * @return returns org.oasis_open.docs.wsn.b_1.SubscribeResponse      * @throws SubscribeCreationFailedFault      * @throws InvalidTopicExpressionFault      * @throws TopicNotSupportedFault      * @throws InvalidFilterFault      * @throws InvalidProducerPropertiesExpressionFault      * @throws ResourceUnknownFault      * @throws InvalidMessageContentExpressionFault      * @throws TopicExpressionDialectUnknownFault      * @throws UnacceptableInitialTerminationTimeFault      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -1662,7 +1658,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**      *       * @param getCurrentMessageRequest      * @return returns org.oasis_open.docs.wsn.b_1.GetCurrentMessageResponse      * @throws MultipleTopicsSpecifiedFault      * @throws TopicNotSupportedFault      * @throws InvalidTopicExpressionFault      * @throws ResourceUnknownFault      * @throws TopicExpressionDialectUnknownFault      * @throws NoCurrentMessageOnTopicFault      */
+comment|/**      *      * @param getCurrentMessageRequest      * @return returns org.oasis_open.docs.wsn.b_1.GetCurrentMessageResponse      * @throws MultipleTopicsSpecifiedFault      * @throws TopicNotSupportedFault      * @throws InvalidTopicExpressionFault      * @throws ResourceUnknownFault      * @throws TopicExpressionDialectUnknownFault      * @throws NoCurrentMessageOnTopicFault      */
 annotation|@
 name|WebMethod
 argument_list|(
@@ -1746,7 +1742,7 @@ name|fault
 argument_list|)
 throw|;
 block|}
-comment|/**      *       * @param registerPublisherRequest      * @return returns org.oasis_open.docs.wsn.br_1.RegisterPublisherResponse      * @throws PublisherRegistrationRejectedFault      * @throws InvalidTopicExpressionFault      * @throws TopicNotSupportedFault      * @throws ResourceUnknownFault      * @throws PublisherRegistrationFailedFault      */
+comment|/**      *      * @param registerPublisherRequest      * @return returns org.oasis_open.docs.wsn.br_1.RegisterPublisherResponse      * @throws PublisherRegistrationRejectedFault      * @throws InvalidTopicExpressionFault      * @throws TopicNotSupportedFault      * @throws ResourceUnknownFault      * @throws PublisherRegistrationFailedFault      */
 annotation|@
 name|WebMethod
 argument_list|(

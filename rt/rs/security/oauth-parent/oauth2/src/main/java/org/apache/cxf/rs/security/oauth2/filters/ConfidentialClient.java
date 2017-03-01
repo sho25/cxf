@@ -118,7 +118,7 @@ name|RUNTIME
 argument_list|)
 annotation|@
 name|Documented
-comment|/**  * Indicates that only OAuth2 confidential clients can invoke a given resource method.  * Confidential clients are less likely to have their access tokens lost or stolen due  * to them being generally more secure than public clients which can not keep their client   * secrets.  */
+comment|/**  * Indicates that only OAuth2 confidential clients can invoke a given resource method.  * Confidential clients are less likely to have their access tokens lost or stolen due  * to them being generally more secure than public clients which can not keep their client  * secrets.  */
 specifier|public
 annotation_defn|@interface
 name|ConfidentialClient

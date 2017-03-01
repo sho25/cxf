@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility bean for simplifying the way Search expressions can be captured and  * subsequently introspected or converted into different language expressions    */
+comment|/**  * Utility bean for simplifying the way Search expressions can be captured and  * subsequently introspected or converted into different language expressions  */
 end_comment
 
 begin_class

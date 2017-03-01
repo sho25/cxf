@@ -608,7 +608,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Various utility methods   */
+comment|/**  * Various utility methods  */
 end_comment
 
 begin_class
@@ -974,9 +974,7 @@ name|roleNames
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Set

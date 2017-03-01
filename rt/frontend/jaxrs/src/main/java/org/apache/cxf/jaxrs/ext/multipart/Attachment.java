@@ -234,7 +234,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class represents an attachment; generally a multipart part.   * Some constructors in here are intended only for  * internal use in CXF, others are suitable or preparing   * attachments to pass to the {@link org.apache.cxf.jaxrs.client.WebClient} API.   * See the {@link AttachmentBuilder} for a convenient   * way to create attachments for use with {@link org.apache.cxf.jaxrs.client.WebClient}.  */
+comment|/**  * This class represents an attachment; generally a multipart part.  * Some constructors in here are intended only for  * internal use in CXF, others are suitable or preparing  * attachments to pass to the {@link org.apache.cxf.jaxrs.client.WebClient} API.  * See the {@link AttachmentBuilder} for a convenient  * way to create attachments for use with {@link org.apache.cxf.jaxrs.client.WebClient}.  */
 end_comment
 
 begin_class
@@ -861,6 +861,7 @@ name|Exception
 name|ex
 parameter_list|)
 block|{
+throw|throw
 name|ExceptionUtils
 operator|.
 name|toInternalServerErrorException
@@ -869,7 +870,7 @@ name|ex
 argument_list|,
 literal|null
 argument_list|)
-expr_stmt|;
+throw|;
 block|}
 block|}
 block|}

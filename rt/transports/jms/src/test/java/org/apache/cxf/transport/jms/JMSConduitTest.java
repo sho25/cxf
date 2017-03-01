@@ -241,7 +241,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Sends several messages and verifies the results. The service sends the message to itself. So it should      * always receive the result      *       * @throws Exception      */
+comment|/**      * Sends several messages and verifies the results. The service sends the message to itself. So it should      * always receive the result      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

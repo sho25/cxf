@@ -563,9 +563,7 @@ name|validMethods
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|validMethods
@@ -2055,7 +2053,7 @@ operator|.
 name|toByteArray
 argument_list|()
 decl_stmt|;
-comment|/* We need all the text in a string, independent of the              * XML parse.               */
+comment|/* We need all the text in a string, independent of the              * XML parse.              */
 name|Charset
 name|contentCharset
 init|=

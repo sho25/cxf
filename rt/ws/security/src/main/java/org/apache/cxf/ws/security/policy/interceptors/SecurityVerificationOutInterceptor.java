@@ -266,7 +266,7 @@ name|PRE_LOGICAL
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Checks if some security assertions are specified without binding assertion and cannot be fulfilled.      * Throw PolicyException in this case      *       * @param message      * @throws PolicyException if assertions are specified without binding      */
+comment|/**      * Checks if some security assertions are specified without binding assertion and cannot be fulfilled.      * Throw PolicyException in this case      *      * @param message      * @throws PolicyException if assertions are specified without binding      */
 specifier|public
 name|void
 name|handleMessage

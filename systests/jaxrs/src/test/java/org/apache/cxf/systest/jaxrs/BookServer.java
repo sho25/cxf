@@ -419,6 +419,38 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingInInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingOutInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|helpers
 operator|.
 name|CastUtils
@@ -450,20 +482,6 @@ operator|.
 name|interceptor
 operator|.
 name|Interceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingInInterceptor
 import|;
 end_import
 
@@ -887,9 +905,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//default lifecycle is per-request, change it to singleton
@@ -1227,6 +1243,15 @@ name|add
 argument_list|(
 operator|new
 name|CustomOutInterceptor
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|outInts
+operator|.
+name|add
+argument_list|(
+operator|new
+name|LoggingOutInterceptor
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1672,7 +1697,7 @@ class|class
 name|BlockedException
 extends|extends
 name|RuntimeException
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

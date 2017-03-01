@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Counter that throttles a jms listener on a high and low water mark.  *   * When the counter reaches the high watermark the listener will be stopped.  * When the counter reaches the low watermark the listener will be started.  */
+comment|/**  * Counter that throttles a jms listener on a high and low water mark.  *  * When the counter reaches the high watermark the listener will be stopped.  * When the counter reaches the low watermark the listener will be started.  */
 end_comment
 
 begin_class

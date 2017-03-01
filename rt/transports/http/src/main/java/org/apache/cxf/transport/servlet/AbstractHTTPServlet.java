@@ -488,7 +488,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|/**      * List of well-known HTTP 1.1 verbs, with POST and GET being the most used verbs at the top       */
+comment|/**      * List of well-known HTTP 1.1 verbs, with POST and GET being the most used verbs at the top      */
 specifier|private
 specifier|static
 specifier|final
@@ -1562,7 +1562,7 @@ name|response
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * {@inheritDoc}      *       * javax.http.servlet.HttpServlet does not let to override the code which deals with      * unrecognized HTTP verbs such as PATCH (being standardized), WebDav ones, etc.      * Thus we let CXF servlets process unrecognized HTTP verbs directly, otherwise we delegate      * to HttpService        */
+comment|/**      * {@inheritDoc}      *      * javax.http.servlet.HttpServlet does not let to override the code which deals with      * unrecognized HTTP verbs such as PATCH (being standardized), WebDav ones, etc.      * Thus we let CXF servlets process unrecognized HTTP verbs directly, otherwise we delegate      * to HttpService      */
 annotation|@
 name|Override
 specifier|public

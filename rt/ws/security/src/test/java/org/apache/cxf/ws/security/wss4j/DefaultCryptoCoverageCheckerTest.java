@@ -202,7 +202,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test the DefaultCryptoCoverageChecker, which extends the CryptoCoverageChecker to provide  * an easier way to check to see if the SOAP (1.1 + 1.2) Body was signed and/or encrypted, if   * the Timestamp was signed, and if the WS-Addressing ReplyTo and FaultTo headers were signed,  * and if a UsernameToken was encrypted.  */
+comment|/**  * Test the DefaultCryptoCoverageChecker, which extends the CryptoCoverageChecker to provide  * an easier way to check to see if the SOAP (1.1 + 1.2) Body was signed and/or encrypted, if  * the Timestamp was signed, and if the WS-Addressing ReplyTo and FaultTo headers were signed,  * and if a UsernameToken was encrypted.  */
 end_comment
 
 begin_class

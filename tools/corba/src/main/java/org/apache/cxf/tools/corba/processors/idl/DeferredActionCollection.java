@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Class that holds a fully qualified name as the key that represents  * a type that was forward declared.   * Associated with each fully qualified name is a list of actions.  * Each action represents a task that is deferred until   * the type is really declared.   */
+comment|/**  * Class that holds a fully qualified name as the key that represents  * a type that was forward declared.  * Associated with each fully qualified name is a list of actions.  * Each action represents a task that is deferred until  * the type is really declared.  */
 end_comment
 
 begin_class
@@ -132,9 +132,7 @@ name|list
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DeferredAction
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|deferredActions

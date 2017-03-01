@@ -182,18 +182,18 @@ specifier|private
 name|File
 name|testWsdlRoot
 decl_stmt|;
-comment|/**      * Directory in which the "DONE" markers are saved that       * @parameter expression="${cxf.markerDirectory}"       *            default-value="${project.build.directory}/cxf-wsdl-validator-markers"      */
+comment|/**      * Directory in which the "DONE" markers are saved that      * @parameter expression="${cxf.markerDirectory}"      *            default-value="${project.build.directory}/cxf-wsdl-validator-markers"      */
 specifier|private
 name|File
 name|markerDirectory
 decl_stmt|;
-comment|/**      * A list of wsdl files to include. Can contain ant-style wildcards and double wildcards. Defaults to      * *.wsdl      *       * @parameter      */
+comment|/**      * A list of wsdl files to include. Can contain ant-style wildcards and double wildcards. Defaults to      * *.wsdl      *      * @parameter      */
 specifier|private
 name|String
 name|includes
 index|[]
 decl_stmt|;
-comment|/**      * A list of wsdl files to exclude. Can contain ant-style wildcards and double wildcards.      *       * @parameter      */
+comment|/**      * A list of wsdl files to exclude. Can contain ant-style wildcards and double wildcards.      *      * @parameter      */
 specifier|private
 name|String
 name|excludes
@@ -288,9 +288,7 @@ name|exList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -519,9 +517,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// verbose arg
@@ -751,9 +747,7 @@ name|wsdls
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|File
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

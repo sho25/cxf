@@ -156,14 +156,6 @@ name|ClientRequestFilter
 implements|,
 name|ClientResponseFilter
 block|{
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|TRACE_SPAN
-init|=
-literal|"org.apache.cxf.tracing.client.htrace.span"
-decl_stmt|;
 specifier|public
 name|HTraceClientProvider
 parameter_list|(

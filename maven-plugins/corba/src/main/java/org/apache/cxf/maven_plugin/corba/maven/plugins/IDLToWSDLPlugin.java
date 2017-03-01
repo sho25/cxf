@@ -106,7 +106,7 @@ name|IDLToWSDLPlugin
 extends|extends
 name|AbstractMojo
 block|{
-comment|/**      * @parameter  expression="${project.build.directory}/generated/src/main/java"      * @required      */
+comment|/**      * @parameter expression="${project.build.directory}/generated/src/main/java"      * @required      */
 name|String
 name|outputDir
 decl_stmt|;
@@ -260,9 +260,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list

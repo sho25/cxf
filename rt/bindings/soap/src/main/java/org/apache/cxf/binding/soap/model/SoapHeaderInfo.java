@@ -51,7 +51,7 @@ decl_stmt|;
 specifier|public
 name|SoapHeaderInfo
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|MessagePartInfo
 name|getPart

@@ -1067,9 +1067,7 @@ name|claims
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AttributeBean
@@ -1110,9 +1108,7 @@ name|setAttributeValues
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|roles
 argument_list|)
@@ -1200,9 +1196,7 @@ name|setAttributeValues
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|(
 name|authMethods
 argument_list|)

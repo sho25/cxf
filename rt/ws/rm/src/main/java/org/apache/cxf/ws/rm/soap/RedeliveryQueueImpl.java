@@ -630,7 +630,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -833,9 +833,7 @@ name|purged
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 synchronized|synchronized
@@ -962,12 +960,11 @@ expr_stmt|;
 block|}
 if|if
 condition|(
+operator|!
 name|purged
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|RMStore
@@ -1021,9 +1018,7 @@ name|undelivered
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -1721,7 +1716,7 @@ expr_stmt|;
 block|}
 block|}
 block|}
-comment|/**      * Accepts a new resend candidate.      *       * @param ctx the message context.      * @return ResendCandidate      */
+comment|/**      * Accepts a new resend candidate.      *      * @param ctx the message context.      * @return ResendCandidate      */
 specifier|protected
 name|RedeliverCandidate
 name|cacheUndelivered
@@ -1798,9 +1793,7 @@ name|sequenceCandidates
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RedeliverCandidate
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|candidates
@@ -2586,7 +2579,7 @@ argument_list|()
 expr_stmt|;
 block|}
 block|}
-comment|/**          * Initiate redelivery asynchronsly.          *           */
+comment|/**          * Initiate redelivery asynchronsly.          *          */
 specifier|protected
 name|void
 name|initiate
@@ -3427,6 +3420,9 @@ argument_list|)
 expr_stmt|;
 block|}
 name|List
+argument_list|<
+name|?
+argument_list|>
 name|olist
 init|=
 name|message

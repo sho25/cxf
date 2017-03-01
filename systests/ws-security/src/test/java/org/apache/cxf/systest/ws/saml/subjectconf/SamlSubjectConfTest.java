@@ -256,7 +256,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for the validation rules associated with various Subject Confirmation  * methods.   */
+comment|/**  * A set of tests for the validation rules associated with various Subject Confirmation  * methods.  */
 end_comment
 
 begin_class

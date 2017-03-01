@@ -264,7 +264,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Validate a SignedEncryptedSupportingToken policy.   */
+comment|/**  * Validate a SignedEncryptedSupportingToken policy.  */
 end_comment
 
 begin_class
@@ -274,7 +274,7 @@ name|SignedEncryptedTokenPolicyValidator
 extends|extends
 name|AbstractSupportingTokenPolicyValidator
 block|{
-comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a       * policy defined by the AssertionInfo parameter      */
+comment|/**      * Return true if this SecurityPolicyValidator implementation is capable of validating a      * policy defined by the AssertionInfo parameter      */
 specifier|public
 name|boolean
 name|canValidatePolicy
@@ -307,7 +307,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Validate policies.       */
+comment|/**      * Validate policies.      */
 specifier|public
 name|void
 name|validatePolicies

@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Marker interface to mark beans in the config that register  * addition WSDLExtensors so the WSDLManager can load the   * additional extensors on demand  */
+comment|/**  * Marker interface to mark beans in the config that register  * addition WSDLExtensors so the WSDLManager can load the  * additional extensors on demand  */
 end_comment
 
 begin_interface

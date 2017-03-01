@@ -262,9 +262,7 @@ name|jaxbAnnotation
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Annotation
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Annotation
@@ -399,9 +397,7 @@ name|jaxbAnnotation
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Annotation
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Annotation

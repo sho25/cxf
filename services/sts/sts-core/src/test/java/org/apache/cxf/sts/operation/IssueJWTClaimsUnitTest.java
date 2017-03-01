@@ -1127,9 +1127,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providerList
@@ -1691,7 +1689,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Test to successfully issue a JWT token. The claims information is included as a       * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
+comment|/**      * Test to successfully issue a JWT token. The claims information is included as a      * JAXB Element under RequestSecurityToken, rather than as a child of SecondaryParameters.      */
 annotation|@
 name|org
 operator|.
@@ -1721,9 +1719,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|providerList
@@ -2133,9 +2129,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JWTTokenProvider
@@ -2194,9 +2188,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -2243,9 +2235,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -2881,9 +2871,7 @@ name|providerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|JWTTokenProvider
@@ -2942,9 +2930,7 @@ name|validatorList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenValidator
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SAMLTokenValidator
@@ -2991,9 +2977,7 @@ name|relationshipList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Relationship
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Relationship
@@ -4285,9 +4269,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList

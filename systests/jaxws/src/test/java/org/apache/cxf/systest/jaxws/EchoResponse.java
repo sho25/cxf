@@ -117,7 +117,7 @@ specifier|protected
 name|String
 name|result
 decl_stmt|;
-comment|/**      * Gets the value of the result property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the result property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getResult
@@ -127,7 +127,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Sets the value of the result property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the result property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setResult

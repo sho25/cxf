@@ -40,7 +40,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The parameters that are passed through to a JWTClaimsProvider implementation to create a   * JWTClaims Object.  */
+comment|/**  * The parameters that are passed through to a JWTClaimsProvider implementation to create a  * JWTClaims Object.  */
 end_comment
 
 begin_class

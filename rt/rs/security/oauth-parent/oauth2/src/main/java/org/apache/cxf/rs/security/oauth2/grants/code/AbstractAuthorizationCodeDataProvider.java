@@ -94,7 +94,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstract AuthorizationCodeDataProvider implementation   */
+comment|/**  * Abstract AuthorizationCodeDataProvider implementation  */
 end_comment
 
 begin_class

@@ -520,9 +520,7 @@ name|chain
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -676,9 +674,7 @@ name|chain
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Handler
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Node
@@ -1840,7 +1836,7 @@ condition|(
 name|searchSEI
 condition|)
 block|{
-comment|/* HandlerChain annotation can be specified on the SEI                  * but the implementation bean might not implement the SEI.                            */
+comment|/* HandlerChain annotation can be specified on the SEI                  * but the implementation bean might not implement the SEI.                  */
 name|WebService
 name|ws
 init|=

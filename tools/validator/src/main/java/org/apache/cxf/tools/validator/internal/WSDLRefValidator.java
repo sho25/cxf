@@ -814,9 +814,7 @@ name|vNodes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|XNode
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -828,9 +826,7 @@ name|portTypeRefNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -842,9 +838,7 @@ name|messageRefNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -950,9 +944,7 @@ name|importedDefinitions
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Definition
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|parseImports
@@ -1010,9 +1002,7 @@ name|si
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SchemaInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|schemaUtil
@@ -1167,9 +1157,7 @@ name|importList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Import
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -1395,9 +1383,7 @@ name|docs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Document
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 try|try

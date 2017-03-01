@@ -104,7 +104,7 @@ decl_stmt|;
 specifier|private
 name|MessageDigestUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|String

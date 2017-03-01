@@ -1234,7 +1234,7 @@ name|SuperBook
 argument_list|>
 argument_list|>
 argument_list|()
-block|{                 }
+block|{         }
 decl_stmt|;
 name|List
 argument_list|<

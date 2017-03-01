@@ -179,6 +179,26 @@ name|logLevel
 import|;
 end_import
 
+begin_import
+import|import static
+name|org
+operator|.
+name|ops4j
+operator|.
+name|pax
+operator|.
+name|exam
+operator|.
+name|karaf
+operator|.
+name|options
+operator|.
+name|KarafDistributionOption
+operator|.
+name|replaceConfigurationFile
+import|;
+end_import
+
 begin_class
 annotation|@
 name|RunWith
@@ -284,6 +304,16 @@ index|[]
 block|{
 name|cxfBaseConfig
 argument_list|()
+block|,
+name|replaceConfigurationFile
+argument_list|(
+literal|"etc/org.ops4j.pax.logging.cfg"
+argument_list|,
+name|getConfigFile
+argument_list|(
+literal|"/etc/org.ops4j.pax.logging.cfg"
+argument_list|)
+argument_list|)
 block|,
 name|features
 argument_list|(

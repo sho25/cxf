@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstraction of Message Addressing Properties.   */
+comment|/**  * Abstraction of Message Addressing Properties.  */
 end_comment
 
 begin_class
@@ -118,7 +118,7 @@ name|WSA_NAMESPACE_NAME
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Constructor.      *       * @param uri the namespace URI      */
+comment|/**      * Constructor.      *      * @param uri the namespace URI      */
 specifier|public
 name|AddressingProperties
 parameter_list|(
@@ -356,7 +356,7 @@ return|return
 name|namespaceURI
 return|;
 block|}
-comment|/**      * Used to specify a different WS-Addressing namespace URI,       * so as to cause MAPs to be exposed (i.e. encoded in externalized      * message with a different WS-Addressing version).      */
+comment|/**      * Used to specify a different WS-Addressing namespace URI,      * so as to cause MAPs to be exposed (i.e. encoded in externalized      * message with a different WS-Addressing version).      */
 specifier|public
 name|void
 name|exposeAs
@@ -411,9 +411,7 @@ name|mustUnderstand
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

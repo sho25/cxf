@@ -228,7 +228,7 @@ name|WSDLToIDLPlugin
 extends|extends
 name|AbstractMojo
 block|{
-comment|/**      * @parameter  expression="${project.build.directory}/generated/src/main/java"      * @required      */
+comment|/**      * @parameter expression="${project.build.directory}/generated/src/main/java"      * @required      */
 name|File
 name|outputDir
 decl_stmt|;
@@ -310,9 +310,7 @@ name|urlList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URL
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StringBuilder
@@ -672,9 +670,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list

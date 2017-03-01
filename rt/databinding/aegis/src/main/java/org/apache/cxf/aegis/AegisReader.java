@@ -45,7 +45,7 @@ parameter_list|>
 extends|extends
 name|AegisIo
 block|{
-comment|/**      * Read an object.       * @param reader the source.      * @return      * @throws Exception      */
+comment|/**      * Read an object.      * @param reader the source.      * @return      * @throws Exception      */
 name|Object
 name|read
 parameter_list|(

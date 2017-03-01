@@ -150,9 +150,7 @@ name|cars
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Car
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|cars

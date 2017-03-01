@@ -34,7 +34,7 @@ specifier|public
 interface|interface
 name|Connection
 block|{
-comment|/**      * close the connection handle. A caller should not use a closed connection.      *       * @throws ResourceException if an error occurs during close.      */
+comment|/**      * close the connection handle. A caller should not use a closed connection.      *      * @throws ResourceException if an error occurs during close.      */
 name|void
 name|close
 parameter_list|()

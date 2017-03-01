@@ -109,7 +109,7 @@ specifier|protected
 name|SomeFeatureType
 name|request
 decl_stmt|;
-comment|/**      * Gets the value of the request property.      *       * @return possible object is {@link SomeFeatureType }      */
+comment|/**      * Gets the value of the request property.      *      * @return possible object is {@link SomeFeatureType }      */
 specifier|public
 name|SomeFeatureType
 name|getRequest
@@ -119,7 +119,7 @@ return|return
 name|request
 return|;
 block|}
-comment|/**      * Sets the value of the request property.      *       * @param value allowed object is {@link SomeFeatureType }      */
+comment|/**      * Sets the value of the request property.      *      * @param value allowed object is {@link SomeFeatureType }      */
 specifier|public
 name|void
 name|setRequest

@@ -1915,6 +1915,15 @@ specifier|private
 name|ResourceIdGenerator
 name|idGenerator
 decl_stmt|;
+specifier|private
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|jaxbContextProperties
+decl_stmt|;
 specifier|public
 name|WadlGenerator
 parameter_list|()
@@ -2613,7 +2622,7 @@ argument_list|)
 argument_list|,
 literal|null
 argument_list|,
-literal|null
+name|jaxbContextProperties
 argument_list|)
 expr_stmt|;
 if|if
@@ -15676,7 +15685,7 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Set the default WADL response media type.      * For example, a browser may display WADL better if Content-Type       * is set to application/xml which is a default response content type.       * Users may set it to application/vnd.sun.wadl+xml or other type.      * @param mt WADL response media type       */
+comment|/**      * Set the default WADL response media type.      * For example, a browser may display WADL better if Content-Type      * is set to application/xml which is a default response content type.      * Users may set it to application/vnd.sun.wadl+xml or other type.      * @param mt WADL response media type      */
 end_comment
 
 begin_function
@@ -15703,7 +15712,7 @@ block|}
 end_function
 
 begin_comment
-comment|/**      * Set the default representation media type to be used       * if JAX-RS Produces or Consumes annotation is missing.      * Wild-card media type is used by default in such cases.      * @param mt the default representation media type       */
+comment|/**      * Set the default representation media type to be used      * if JAX-RS Produces or Consumes annotation is missing.      * Wild-card media type is used by default in such cases.      * @param mt the default representation media type      */
 end_comment
 
 begin_function
@@ -16079,6 +16088,29 @@ operator|.
 name|incrementNamespacePrefix
 operator|=
 name|incrementNamespacePrefix
+expr_stmt|;
+block|}
+end_function
+
+begin_function
+specifier|public
+name|void
+name|setJaxbContextProperties
+parameter_list|(
+name|Map
+argument_list|<
+name|String
+argument_list|,
+name|Object
+argument_list|>
+name|jaxbContextProperties
+parameter_list|)
+block|{
+name|this
+operator|.
+name|jaxbContextProperties
+operator|=
+name|jaxbContextProperties
 expr_stmt|;
 block|}
 end_function

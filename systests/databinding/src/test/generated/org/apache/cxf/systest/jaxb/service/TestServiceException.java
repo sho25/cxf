@@ -20,7 +20,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Class used to test for unwanted serialization of exception fields.   */
+comment|/**  * Class used to test for unwanted serialization of exception fields.  */
 end_comment
 
 begin_class

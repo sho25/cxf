@@ -813,9 +813,7 @@ name|MULTIPART_SUBTYPES
 operator|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|MULTIPART_SUBTYPES
@@ -1419,7 +1417,7 @@ name|required
 argument_list|()
 condition|)
 block|{
-comment|/*              * Return default value for a missing optional part               */
+comment|/*              * Return default value for a missing optional part              */
 name|Object
 name|defaultValue
 init|=
@@ -1531,9 +1529,7 @@ name|objects
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2095,9 +2091,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|(
 name|objects
 operator|.
@@ -2350,9 +2344,7 @@ name|handlers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Attachment
-argument_list|>
+argument_list|<>
 argument_list|(
 name|objects
 operator|.

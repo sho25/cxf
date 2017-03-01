@@ -167,7 +167,7 @@ decl_stmt|;
 specifier|protected
 name|AbstractJaxrsClassesScanServer
 parameter_list|()
-block|{              }
+block|{      }
 specifier|protected
 name|void
 name|setJaxrsResources

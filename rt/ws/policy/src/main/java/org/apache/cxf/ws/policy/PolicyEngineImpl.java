@@ -428,7 +428,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -2822,9 +2822,7 @@ name|assertions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -2922,9 +2920,7 @@ name|assertions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Assertion
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3161,9 +3157,7 @@ name|vocabulary
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -3311,7 +3305,7 @@ return|return
 name|ep
 return|;
 block|}
-comment|/**      * Check if a given list of assertions can potentially be supported by      * interceptors or by an already installed assertor (a conduit or transport      * that implements the Assertor interface).      *       * @param alternative the policy alternative      * @param Assertor the assertor      * @return true iff the alternative can be supported      */
+comment|/**      * Check if a given list of assertions can potentially be supported by      * interceptors or by an already installed assertor (a conduit or transport      * that implements the Assertor interface).      *      * @param alternative the policy alternative      * @param Assertor the assertor      * @return true iff the alternative can be supported      */
 specifier|public
 name|boolean
 name|supportsAlternative

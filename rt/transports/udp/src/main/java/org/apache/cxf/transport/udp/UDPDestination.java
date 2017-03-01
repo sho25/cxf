@@ -496,7 +496,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1367,9 +1367,7 @@ name|possibles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|NetworkInterface
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while
@@ -1954,10 +1952,11 @@ else|else
 block|{
 name|session
 operator|.
-name|close
-argument_list|(
-literal|true
-argument_list|)
+name|closeOnFlush
+argument_list|()
+operator|.
+name|awaitUninterruptibly
+argument_list|()
 expr_stmt|;
 block|}
 block|}

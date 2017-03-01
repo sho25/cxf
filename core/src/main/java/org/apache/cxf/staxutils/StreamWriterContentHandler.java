@@ -138,7 +138,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -458,7 +458,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Method getPrefix.      * @param namespaceURI       *      * @param qname      * @return Returns String.      */
+comment|/**      * Method getPrefix.      * @param namespaceURI      *      * @param qname      * @return Returns String.      */
 specifier|private
 name|String
 name|getPrefix

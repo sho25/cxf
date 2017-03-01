@@ -23,7 +23,7 @@ begin_class
 specifier|public
 class|class
 name|A
-block|{      }
+block|{  }
 end_class
 
 end_unit

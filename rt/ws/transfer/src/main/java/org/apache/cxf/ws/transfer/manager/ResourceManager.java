@@ -60,7 +60,7 @@ specifier|public
 interface|interface
 name|ResourceManager
 block|{
-comment|/**      * Returns Representation object given by reference parameter.      * @param ref Reference parameter returned by create method.      * @return Representation object containing the XML resource.      * @see ResourceManager#create(org.apache.cxf.ws.transfer.Representation)       */
+comment|/**      * Returns Representation object given by reference parameter.      * @param ref Reference parameter returned by create method.      * @return Representation object containing the XML resource.      * @see ResourceManager#create(org.apache.cxf.ws.transfer.Representation)      */
 name|Representation
 name|get
 parameter_list|(

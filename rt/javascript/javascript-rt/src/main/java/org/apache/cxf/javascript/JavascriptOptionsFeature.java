@@ -82,7 +82,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class provides configuration options to the JavaScript client generator.  * Attach this feature to control namespace mapping and other options.   *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.javascript.JavascriptOptionsFeature"></bean></jaxws:features></jaxws:endpoint>   ]]></pre>   * At this time, there is no corresponding WSDL extension for this information.  */
+comment|/**  * This class provides configuration options to the JavaScript client generator.  * Attach this feature to control namespace mapping and other options.  *<pre>  *<![CDATA[<jaxws:endpoint ...><jaxws:features><bean class="org.apache.cxf.javascript.JavascriptOptionsFeature"></bean></jaxws:features></jaxws:endpoint>   ]]></pre>   * At this time, there is no corresponding WSDL extension for this information.  */
 end_comment
 
 begin_class

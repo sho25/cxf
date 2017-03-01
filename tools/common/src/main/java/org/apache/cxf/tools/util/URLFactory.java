@@ -82,7 +82,7 @@ decl_stmt|;
 specifier|private
 name|URLFactory
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|URL

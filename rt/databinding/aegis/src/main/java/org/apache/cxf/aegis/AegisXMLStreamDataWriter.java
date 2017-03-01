@@ -204,7 +204,7 @@ name|globalContext
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Write an object to the output. This method always writes xsi:type attributes.      * @param obj The object to write.      * @param elementName the QName of the XML Element.      * @param optional set this for minOccurs = 0. It omits null elements.      * @param output the output stream      * @param aegisType the aegis type. This may be null if the object is non-null      * and the type of the object is covered in the mapping. Warning, for collections      * this will not do what you want, you must call the alternative version of       * write that takes a {@link java.lang.reflect.Type}.       * @throws Exception      */
+comment|/**      * Write an object to the output. This method always writes xsi:type attributes.      * @param obj The object to write.      * @param elementName the QName of the XML Element.      * @param optional set this for minOccurs = 0. It omits null elements.      * @param output the output stream      * @param aegisType the aegis type. This may be null if the object is non-null      * and the type of the object is covered in the mapping. Warning, for collections      * this will not do what you want, you must call the alternative version of      * write that takes a {@link java.lang.reflect.Type}.      * @throws Exception      */
 specifier|public
 name|void
 name|write

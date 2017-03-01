@@ -116,7 +116,7 @@ name|WSDLFactory
 name|getWSDLFactory
 parameter_list|()
 function_decl|;
-comment|/**      * Get the WSDL definition for the given URL.  Implementations      * may return a copy from a local cache or load a new copy       * from the URL.      * @param url - the location of the WSDL to load       * @return the wsdl definition      */
+comment|/**      * Get the WSDL definition for the given URL.  Implementations      * may return a copy from a local cache or load a new copy      * from the URL.      * @param url - the location of the WSDL to load      * @return the wsdl definition      */
 name|Definition
 name|getDefinition
 parameter_list|(
@@ -126,7 +126,7 @@ parameter_list|)
 throws|throws
 name|WSDLException
 function_decl|;
-comment|/**      * Get the WSDL definition for the given Element.  Implementations      * may return a copy from a local cache or load a new copy       * from the Element.      * @param element - the root element of the wsdl       * @return the wsdl definition      */
+comment|/**      * Get the WSDL definition for the given Element.  Implementations      * may return a copy from a local cache or load a new copy      * from the Element.      * @param element - the root element of the wsdl      * @return the wsdl definition      */
 name|Definition
 name|getDefinition
 parameter_list|(
@@ -147,7 +147,7 @@ name|Definition
 name|wsdl
 parameter_list|)
 function_decl|;
-comment|/**      *       * @return all Definitions in the map      */
+comment|/**      *      * @return all Definitions in the map      */
 name|Map
 argument_list|<
 name|Object

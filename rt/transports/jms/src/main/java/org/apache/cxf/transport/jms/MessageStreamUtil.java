@@ -118,7 +118,7 @@ specifier|private
 name|MessageStreamUtil
 parameter_list|()
 block|{     }
-comment|/**      * Set Writer or OutputStream in message that calls the sender on close with      * the content of the stream      *       * @param message where to set the content      * @param isTextPayload decides about stream type true:Writer, false: OutputStream      * @param sender will be called on close      */
+comment|/**      * Set Writer or OutputStream in message that calls the sender on close with      * the content of the stream      *      * @param message where to set the content      * @param isTextPayload decides about stream type true:Writer, false: OutputStream      * @param sender will be called on close      */
 specifier|public
 specifier|static
 name|void

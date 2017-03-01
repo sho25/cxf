@@ -176,7 +176,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -223,7 +223,7 @@ name|PRE_INVOKE
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**       * Determines the effective policy, and checks if one of its alternatives        * is supported.      *        * @param message      * @throws PolicyException if none of the alternatives is supported      */
+comment|/**      * Determines the effective policy, and checks if one of its alternatives      * is supported.      *      * @param message      * @throws PolicyException if none of the alternatives is supported      */
 specifier|protected
 name|void
 name|handle

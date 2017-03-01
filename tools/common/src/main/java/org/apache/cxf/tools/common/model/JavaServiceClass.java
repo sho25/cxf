@@ -56,9 +56,7 @@ name|ports
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JavaPort
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

@@ -214,7 +214,7 @@ import|;
 end_import
 
 begin_comment
-comment|/*  * We end up here with a part with isElement == true, a non-array element,   * but a complex type for an array of the element.  */
+comment|/*  * We end up here with a part with isElement == true, a non-array element,  * but a complex type for an array of the element.  */
 end_comment
 
 begin_class

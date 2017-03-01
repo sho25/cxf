@@ -128,7 +128,7 @@ specifier|private
 name|String
 name|documentation
 decl_stmt|;
-comment|/**      * Initializes a new instance of the<code>MessagePartContainer</code>.      * @param operation the operation.      * @param nm       */
+comment|/**      * Initializes a new instance of the<code>MessagePartContainer</code>.      * @param operation the operation.      * @param nm      */
 name|AbstractMessageContainer
 parameter_list|(
 name|OperationInfo
@@ -704,9 +704,7 @@ name|outOfBandParts
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|1
 argument_list|)
@@ -757,9 +755,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 name|messageParts
 operator|.
@@ -776,9 +772,7 @@ name|parts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|MessagePartInfo
-argument_list|>
+argument_list|<>
 argument_list|(
 name|messageParts
 operator|.

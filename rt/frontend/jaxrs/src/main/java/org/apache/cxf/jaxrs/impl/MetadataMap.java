@@ -402,9 +402,7 @@ name|values
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|V
-argument_list|>
+argument_list|<>
 argument_list|(
 name|entry
 operator|.
@@ -561,9 +559,7 @@ name|newList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|V
-argument_list|>
+argument_list|<>
 argument_list|(
 name|data
 argument_list|)
@@ -628,9 +624,7 @@ name|data
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|V
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|m
@@ -716,9 +710,7 @@ name|data
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|V
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|data

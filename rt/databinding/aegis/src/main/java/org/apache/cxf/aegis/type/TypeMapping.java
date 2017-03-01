@@ -42,7 +42,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Abstraction for the map between Java types (represented as   * {@link java.lang.reflect.Type} and Aegis types.  */
+comment|/**  * Abstraction for the map between Java types (represented as  * {@link java.lang.reflect.Type} and Aegis types.  */
 end_comment
 
 begin_interface
@@ -80,7 +80,7 @@ name|AegisType
 name|type
 parameter_list|)
 function_decl|;
-comment|/**      * Register a type that self-describes the schema type and the Java class.      * @param type Aegis type object that       */
+comment|/**      * Register a type that self-describes the schema type and the Java class.      * @param type Aegis type object that      */
 name|void
 name|register
 parameter_list|(

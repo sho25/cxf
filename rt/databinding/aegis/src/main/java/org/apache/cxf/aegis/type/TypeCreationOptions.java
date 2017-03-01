@@ -4,7 +4,7 @@ comment|/**  * Licensed to the Apache Software Foundation (ASF) under one  * or 
 end_comment
 
 begin_comment
-comment|/**  * This class contains a set of flags that control Aegis' process of mapping from Java types to XML Schema.  * These options are respected by the standard Aegis type creation classes. An application that replaces  * these with custom creators will make its own arrangements.  *   * @see AbstractTypeCreator  * @see DefaultTypeCreator  * @see XMLTypeCreator  * @see Java5TypeCreator  *   * @since 2.1  */
+comment|/**  * This class contains a set of flags that control Aegis' process of mapping from Java types to XML Schema.  * These options are respected by the standard Aegis type creation classes. An application that replaces  * these with custom creators will make its own arrangements.  *  * @see AbstractTypeCreator  * @see DefaultTypeCreator  * @see XMLTypeCreator  * @see Java5TypeCreator  *  * @since 2.1  */
 end_comment
 
 begin_package
@@ -162,7 +162,7 @@ operator|=
 name|defaultNillable
 expr_stmt|;
 block|}
-comment|/**       * Whether or not elements are qualified absent any annotations      * or mapping files.       * True by default.      * @return       */
+comment|/**      * Whether or not elements are qualified absent any annotations      * or mapping files.      * True by default.      * @return      */
 specifier|public
 name|boolean
 name|isQualifyElements
@@ -172,7 +172,7 @@ return|return
 name|qualifyElements
 return|;
 block|}
-comment|/**      * Turn on of off element qualification.      * @param qualifyElements       */
+comment|/**      * Turn on of off element qualification.      * @param qualifyElements      */
 specifier|public
 name|void
 name|setQualifyElements
@@ -188,7 +188,7 @@ operator|=
 name|qualifyElements
 expr_stmt|;
 block|}
-comment|/**      * Whether or not attributes are qualified absent any annotations      * or mapping files.      * False by default.       * @return       */
+comment|/**      * Whether or not attributes are qualified absent any annotations      * or mapping files.      * False by default.      * @return      */
 specifier|public
 name|boolean
 name|isQualifyAttributes
@@ -198,7 +198,7 @@ return|return
 name|qualifyAttributes
 return|;
 block|}
-comment|/**      * Turn on or off attribute qualification.       * @param qualifyAttributes       */
+comment|/**      * Turn on or off attribute qualification.      * @param qualifyAttributes      */
 specifier|public
 name|void
 name|setQualifyAttributes

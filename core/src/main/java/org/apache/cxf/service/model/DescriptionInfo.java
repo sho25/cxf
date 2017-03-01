@@ -72,9 +72,7 @@ name|described
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AbstractDescriptionElement
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

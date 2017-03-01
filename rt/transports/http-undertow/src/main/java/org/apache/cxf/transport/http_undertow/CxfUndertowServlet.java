@@ -126,6 +126,14 @@ name|CxfUndertowServlet
 extends|extends
 name|AbstractHTTPServlet
 block|{
+specifier|private
+specifier|static
+specifier|final
+name|long
+name|serialVersionUID
+init|=
+literal|1L
+decl_stmt|;
 annotation|@
 name|Override
 specifier|public
@@ -145,7 +153,7 @@ throws|throws
 name|IOException
 throws|,
 name|ServletException
-block|{        }
+block|{      }
 annotation|@
 name|Override
 specifier|protected

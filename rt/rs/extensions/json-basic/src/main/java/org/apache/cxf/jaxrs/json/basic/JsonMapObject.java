@@ -126,7 +126,7 @@ decl_stmt|;
 specifier|public
 name|JsonMapObject
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JsonMapObject
 parameter_list|(

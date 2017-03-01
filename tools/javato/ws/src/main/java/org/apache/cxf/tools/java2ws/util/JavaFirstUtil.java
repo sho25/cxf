@@ -284,7 +284,7 @@ block|{
 specifier|private
 name|JavaFirstUtil
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|JavaInterface

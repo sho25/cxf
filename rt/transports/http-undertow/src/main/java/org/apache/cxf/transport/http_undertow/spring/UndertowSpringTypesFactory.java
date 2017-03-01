@@ -308,7 +308,7 @@ block|{
 specifier|public
 name|UndertowSpringTypesFactory
 parameter_list|()
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 name|Map
@@ -728,9 +728,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|V
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Node

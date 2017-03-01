@@ -36,7 +36,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A collection of utilities relating to InetAddresses.  *   * Copied from httpclient.  */
+comment|/**  * A collection of utilities relating to InetAddresses.  *  * Copied from httpclient.  */
 end_comment
 
 begin_class

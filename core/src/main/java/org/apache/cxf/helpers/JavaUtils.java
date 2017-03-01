@@ -71,9 +71,7 @@ name|KEYWORDS
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|Arrays
 operator|.
@@ -191,7 +189,7 @@ specifier|private
 name|JavaUtils
 parameter_list|()
 block|{     }
-comment|/**      * checks if the input string is a valid java keyword.      *       * @return boolean true/false      */
+comment|/**      * checks if the input string is a valid java keyword.      *      * @return boolean true/false      */
 specifier|public
 specifier|static
 name|boolean

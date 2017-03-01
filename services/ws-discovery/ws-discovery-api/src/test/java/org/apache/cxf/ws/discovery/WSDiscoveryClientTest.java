@@ -207,20 +207,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|feature
-operator|.
-name|LoggingFeature
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|helpers
 operator|.
 name|IOUtils
@@ -390,7 +376,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -440,9 +426,7 @@ name|possibles
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|NetworkInterface
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while
@@ -1019,15 +1003,6 @@ operator|.
 name|createBus
 argument_list|()
 decl_stmt|;
-operator|new
-name|LoggingFeature
-argument_list|()
-operator|.
-name|initialize
-argument_list|(
-name|bus
-argument_list|)
-expr_stmt|;
 name|WSDiscoveryClient
 name|c
 init|=
@@ -1217,15 +1192,6 @@ argument_list|()
 operator|.
 name|createBus
 argument_list|()
-expr_stmt|;
-operator|new
-name|LoggingFeature
-argument_list|()
-operator|.
-name|initialize
-argument_list|(
-name|bus
-argument_list|)
 expr_stmt|;
 name|WSDiscoveryClient
 name|c

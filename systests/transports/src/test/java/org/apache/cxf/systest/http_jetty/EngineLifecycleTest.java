@@ -1146,7 +1146,7 @@ literal|" accepted a connection."
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      *       * @throws Exception      */
+comment|/**      *      * @throws Exception      */
 annotation|@
 name|Test
 specifier|public

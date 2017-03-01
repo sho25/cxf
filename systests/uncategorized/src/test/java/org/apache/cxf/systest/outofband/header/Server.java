@@ -603,7 +603,7 @@ class|class
 name|OOBHdrPropertyServiceImpl
 extends|extends
 name|OOBHdrServiceImpl
-block|{              }
+block|{      }
 block|}
 end_class
 

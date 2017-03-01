@@ -43,7 +43,7 @@ block|{
 comment|// Note that the accessors in here don't return null pointers for strings.
 comment|// This improves the behavior of web services that return examples of this
 comment|// object.
-comment|/**      *       */
+comment|/**      *      */
 specifier|private
 specifier|static
 specifier|final
@@ -65,11 +65,11 @@ comment|/**      * A flag indicating that this name is the primary name of it's 
 name|boolean
 name|primary
 decl_stmt|;
-comment|/**      * The type of name in the taxonomy of entity types.      *       * @see com.basistech.rlp.RLPNEConstants for constants for this field.      */
+comment|/**      * The type of name in the taxonomy of entity types.      *      * @see com.basistech.rlp.RLPNEConstants for constants for this field.      */
 name|int
 name|entityType
 decl_stmt|;
-comment|/**      * The unique identifier of the entity containing this name, or none.      *       * @see Entity      */
+comment|/**      * The unique identifier of the entity containing this name, or none.      *      * @see Entity      */
 name|String
 name|entityUID
 decl_stmt|;
@@ -77,7 +77,7 @@ comment|/**      * In some environments, names store additional data.      */
 name|String
 name|extra
 decl_stmt|;
-comment|/**      * Any pre-computed inners for the name.      *       * @@uml.property name="inners"      * @@uml.associationEnd multiplicity="(0 -1)"      */
+comment|/**      * Any pre-computed inners for the name.      *      * @@uml.property name="inners"      * @@uml.associationEnd multiplicity="(0 -1)"      */
 name|Inner
 index|[]
 name|inners
@@ -108,7 +108,7 @@ else|:
 name|extra
 return|;
 block|}
-comment|/**      * Set arbitrary data stored with this name.      *       * @param extra the extra to set      */
+comment|/**      * Set arbitrary data stored with this name.      *      * @param extra the extra to set      */
 specifier|public
 name|void
 name|setExtra
@@ -124,7 +124,7 @@ operator|=
 name|extra
 expr_stmt|;
 block|}
-comment|/**      * Set a unique ID for this name. This API does not check or enforce      * uniqueness.      *       * @param uid      */
+comment|/**      * Set a unique ID for this name. This API does not check or enforce      * uniqueness.      *      * @param uid      */
 specifier|public
 name|void
 name|setUID
@@ -150,7 +150,7 @@ return|return
 name|uid
 return|;
 block|}
-comment|/**      * Set the textual content of the name. This call does not automatically set      * any other properties, such as script or language.      *       * @param data the data to set.      */
+comment|/**      * Set the textual content of the name. This call does not automatically set      * any other properties, such as script or language.      *      * @param data the data to set.      */
 specifier|public
 name|void
 name|setData
@@ -176,7 +176,7 @@ return|return
 name|data
 return|;
 block|}
-comment|/**      * Set the 'named entity' type of this name.      * {@link com.basistech.rlp.RLPNEConstants} for possible values. This value      * influences the interpretating and matching of the name. Use the value      * {@link com.basistech.rlp.RLPNEConstants#NE_TYPE_NONE} if there is no type      * available.      *       * @param entityType      */
+comment|/**      * Set the 'named entity' type of this name.      * {@link com.basistech.rlp.RLPNEConstants} for possible values. This value      * influences the interpretating and matching of the name. Use the value      * {@link com.basistech.rlp.RLPNEConstants#NE_TYPE_NONE} if there is no type      * available.      *      * @param entityType      */
 specifier|public
 name|void
 name|setEntityType
@@ -202,7 +202,7 @@ return|return
 name|entityType
 return|;
 block|}
-comment|/**      * Set an entity UID for this name. Entities group multiple names for a      * single real-world item. All the names of a single entity are connected      * via their entity unique ID.      *       * @param entityUID the UID.      */
+comment|/**      * Set an entity UID for this name. Entities group multiple names for a      * single real-world item. All the names of a single entity are connected      * via their entity unique ID.      *      * @param entityUID the UID.      */
 specifier|public
 name|void
 name|setEntityUID
@@ -228,7 +228,7 @@ return|return
 name|entityUID
 return|;
 block|}
-comment|/**      * Set the 'primary' flag for this name. If names are grouped by entities      * {@link #setEntityUID(String)}, one of the names of an entity may be      * marked primary. This API does not check that only one name is marked.      *       * @param primary the primary flag.      */
+comment|/**      * Set the 'primary' flag for this name. If names are grouped by entities      * {@link #setEntityUID(String)}, one of the names of an entity may be      * marked primary. This API does not check that only one name is marked.      *      * @param primary the primary flag.      */
 specifier|public
 name|void
 name|setPrimary
@@ -254,7 +254,7 @@ return|return
 name|primary
 return|;
 block|}
-comment|/**      * Set pre-calculated inners for this name.      *       * @param inners the inners.      */
+comment|/**      * Set pre-calculated inners for this name.      *      * @param inners the inners.      */
 specifier|public
 name|void
 name|setTransliterations

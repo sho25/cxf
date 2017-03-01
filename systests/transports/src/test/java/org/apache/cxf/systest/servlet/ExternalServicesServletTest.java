@@ -270,9 +270,7 @@ name|links2
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -329,7 +327,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 comment|//HTTPUnit do not support require url with ""
-comment|/*         res = client.getResponse(CONTEXT_URL);         links = res.getLinks();         assertEquals("There should get two links for the services", 1, links.length);         assertEquals(CONTEXT_URL + "/greeter?wsdl", links[0].getURLString());         assertEquals(CONTEXT_URL + "/greeter2?wsdl", links[1].getURLString());          assertEquals("text/html", res.getContentType());*/
+comment|/*         res = client.getResponse(CONTEXT_URL);         links = res.getLinks();         assertEquals("There should get two links for the services", 1, links.length);         assertEquals(CONTEXT_URL + "/greeter?wsdl", links[0].getURLString());         assertEquals(CONTEXT_URL + "/greeter2?wsdl", links[1].getURLString());         assertEquals("text/html", res.getContentType());*/
 block|}
 annotation|@
 name|Test

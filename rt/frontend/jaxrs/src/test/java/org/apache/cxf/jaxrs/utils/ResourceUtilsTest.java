@@ -1291,6 +1291,12 @@ name|SuperApplication
 argument_list|()
 argument_list|,
 literal|false
+argument_list|,
+literal|false
+argument_list|,
+literal|false
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1325,6 +1331,12 @@ name|CustomApplication
 argument_list|()
 argument_list|,
 literal|false
+argument_list|,
+literal|false
+argument_list|,
+literal|false
+argument_list|,
+literal|null
 argument_list|)
 decl_stmt|;
 name|assertEquals
@@ -1479,7 +1491,7 @@ specifier|public
 specifier|static
 class|class
 name|OrderItem
-block|{              }
+block|{      }
 annotation|@
 name|XmlRootElement
 specifier|public
@@ -1489,7 +1501,7 @@ name|OrderItemDTO
 parameter_list|<
 name|T
 parameter_list|>
-block|{              }
+block|{      }
 annotation|@
 name|XmlRootElement
 specifier|public
@@ -1499,7 +1511,7 @@ name|OrderItemsDTO
 parameter_list|<
 name|E
 parameter_list|>
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

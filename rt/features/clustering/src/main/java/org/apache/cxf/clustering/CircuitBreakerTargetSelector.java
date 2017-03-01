@@ -290,7 +290,7 @@ operator|.
 name|class
 argument_list|)
 decl_stmt|;
-comment|/**      * Static instance of empty (or noop) circuit breaker to handle use cases      * when alternative addresses or alternative endpoint addresses are nullable       * (or non-valid).      */
+comment|/**      * Static instance of empty (or noop) circuit breaker to handle use cases      * when alternative addresses or alternative endpoint addresses are nullable      * (or non-valid).      */
 specifier|private
 specifier|static
 specifier|final

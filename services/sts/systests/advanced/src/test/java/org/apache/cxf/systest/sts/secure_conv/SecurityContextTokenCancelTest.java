@@ -174,7 +174,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client requests a SecurityContextToken from an STS and then cancels it. When  * cancelling the token, the WSDL of the STS has an EndorsingSupportingToken consisting of the   * SecureConversationToken. The client must use the secret associated with the SecurityContextToken it gets   * back from the STS to sign the Timestamp.  */
+comment|/**  * In this test case, a CXF client requests a SecurityContextToken from an STS and then cancels it. When  * cancelling the token, the WSDL of the STS has an EndorsingSupportingToken consisting of the  * SecureConversationToken. The client must use the secret associated with the SecurityContextToken it gets  * back from the STS to sign the Timestamp.  */
 end_comment
 
 begin_class

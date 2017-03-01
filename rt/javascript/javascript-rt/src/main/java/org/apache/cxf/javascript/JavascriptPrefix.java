@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This annotation specifies the string prefix for names of JavaScript objects derived from a particular  * namespace. It is used with {@link JavascriptPrefixes}.   */
+comment|/**  * This annotation specifies the string prefix for names of JavaScript objects derived from a particular  * namespace. It is used with {@link JavascriptPrefixes}.  */
 end_comment
 
 begin_annotation_defn

@@ -364,7 +364,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Test the Asymmetric binding. The CXF client gets a token from the STS by authenticating via a  * Username Token over the symmetric binding, and then sends it to the CXF endpoint using   * the asymmetric binding.  */
+comment|/**  * Test the Asymmetric binding. The CXF client gets a token from the STS by authenticating via a  * Username Token over the symmetric binding, and then sends it to the CXF endpoint using  * the asymmetric binding.  */
 end_comment
 
 begin_class

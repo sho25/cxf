@@ -138,7 +138,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -534,9 +534,7 @@ name|assertionTypes
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|assertionTypes

@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  *  * DispatchMDBActivationSpec is an {@link javax.resource.spi.ActivationSpec}  * that activates a CXF service endpoint facade to dispatch call to the target   * Stateless Session Bean.  *   */
+comment|/**  *  * DispatchMDBActivationSpec is an {@link javax.resource.spi.ActivationSpec}  * that activates a CXF service endpoint facade to dispatch call to the target  * Stateless Session Bean.  *  */
 end_comment
 
 begin_class
@@ -32,7 +32,7 @@ specifier|private
 name|String
 name|targetBeanJndiName
 decl_stmt|;
-comment|/**      * @param targetBeanJndiName       */
+comment|/**      * @param targetBeanJndiName      */
 specifier|public
 name|void
 name|setTargetBeanJndiName

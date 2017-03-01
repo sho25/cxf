@@ -90,7 +90,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Holds information about the message request and response. Applications should not need to   * work with this class.  */
+comment|/**  * Holds information about the message request and response. Applications should not need to  * work with this class.  */
 end_comment
 
 begin_class

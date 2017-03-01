@@ -196,7 +196,7 @@ import|;
 end_import
 
 begin_comment
-comment|/*   * This class is extending the wsdl4j RI class to print out the    * extensibility elements of the schema into a separate file.   *    */
+comment|/*   * This class is extending the wsdl4j RI class to print out the   * extensibility elements of the schema into a separate file.   *   */
 end_comment
 
 begin_class

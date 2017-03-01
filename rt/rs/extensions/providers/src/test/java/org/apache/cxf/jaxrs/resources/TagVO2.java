@@ -52,7 +52,7 @@ block|{
 specifier|public
 name|TagVO2
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|TagVO2
 parameter_list|(

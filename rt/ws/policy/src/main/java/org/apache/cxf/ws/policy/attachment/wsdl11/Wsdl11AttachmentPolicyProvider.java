@@ -478,7 +478,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * PolicyAttachmentManager provides methods to retrieve element policies and  * calculate effective policies based on the policy subject's scope.  *   */
+comment|/**  * PolicyAttachmentManager provides methods to retrieve element policies and  * calculate effective policies based on the policy subject's scope.  *  */
 end_comment
 
 begin_class
@@ -589,7 +589,7 @@ name|p2
 argument_list|)
 return|;
 block|}
-comment|/**      * The effective policy for a WSDL endpoint policy subject includes the element policy of the       * wsdl11:port element that defines the endpoint merged with the element policy of the      * referenced wsdl11:binding element and the element policy of the referenced wsdl11:portType      * element that defines the interface of the endpoint.       *       * @param ei the EndpointInfo object identifying the endpoint      * @return the effective policy      */
+comment|/**      * The effective policy for a WSDL endpoint policy subject includes the element policy of the      * wsdl11:port element that defines the endpoint merged with the element policy of the      * referenced wsdl11:binding element and the element policy of the referenced wsdl11:portType      * element that defines the interface of the endpoint.      *      * @param ei the EndpointInfo object identifying the endpoint      * @return the effective policy      */
 specifier|public
 name|Policy
 name|getEffectivePolicy
@@ -645,7 +645,7 @@ return|return
 name|p
 return|;
 block|}
-comment|/**      * The effective policy for a WSDL operation policy subject is calculated in relation to a       * specific port, and includes the element policy of the wsdl11:portType/wsdl11:operation       * element that defines the operation merged with that of the corresponding       * wsdl11:binding/wsdl11:operation element.      *       * @param bi the BindingOperationInfo identifying the operation in relation to a port      * @return the effective policy      */
+comment|/**      * The effective policy for a WSDL operation policy subject is calculated in relation to a      * specific port, and includes the element policy of the wsdl11:portType/wsdl11:operation      * element that defines the operation merged with that of the corresponding      * wsdl11:binding/wsdl11:operation element.      *      * @param bi the BindingOperationInfo identifying the operation in relation to a port      * @return the effective policy      */
 specifier|public
 name|Policy
 name|getEffectivePolicy
@@ -703,7 +703,7 @@ return|return
 name|p
 return|;
 block|}
-comment|/**      * The effective policy for a specific WSDL message (input or output) is calculated      * in relation to a specific port, and includes the element policy of the wsdl:message      * element that defines the message's type merged with the element policy of the       * wsdl11:binding and wsdl11:portType message definitions that describe the message.      * For example, the effective policy of a specific input message for a specific port      * would be the (element policies of the) wsdl11:message element defining the message type,      * the wsdl11:portType/wsdl11:operation/wsdl11:input element and the corresponding      * wsdl11:binding/wsdl11:operation/wsdl11:input element for that message.      *       * @param bmi the BindingMessageInfo identifiying the message      * @return the effective policy      */
+comment|/**      * The effective policy for a specific WSDL message (input or output) is calculated      * in relation to a specific port, and includes the element policy of the wsdl:message      * element that defines the message's type merged with the element policy of the      * wsdl11:binding and wsdl11:portType message definitions that describe the message.      * For example, the effective policy of a specific input message for a specific port      * would be the (element policies of the) wsdl11:message element defining the message type,      * the wsdl11:portType/wsdl11:operation/wsdl11:input element and the corresponding      * wsdl11:binding/wsdl11:operation/wsdl11:input element for that message.      *      * @param bmi the BindingMessageInfo identifiying the message      * @return the effective policy      */
 specifier|public
 name|Policy
 name|getEffectivePolicy
@@ -1968,9 +1968,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|(
 name|extensors
 operator|.
@@ -2024,7 +2022,7 @@ parameter_list|,
 name|Object
 name|arg1
 parameter_list|)
-block|{             }
+block|{         }
 specifier|public
 name|void
 name|addExtensor
@@ -2032,7 +2030,7 @@ parameter_list|(
 name|Object
 name|arg0
 parameter_list|)
-block|{            }
+block|{         }
 specifier|public
 name|Object
 name|getExtensionAttribute
@@ -2071,7 +2069,7 @@ name|Object
 argument_list|>
 name|arg0
 parameter_list|)
-block|{           }
+block|{         }
 block|}
 block|}
 end_class

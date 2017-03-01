@@ -216,12 +216,11 @@ name|claims
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|claims
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|ProcessedClaimCollection
@@ -406,9 +405,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|URI
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list

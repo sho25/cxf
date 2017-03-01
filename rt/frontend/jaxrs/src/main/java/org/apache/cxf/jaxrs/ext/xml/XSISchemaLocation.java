@@ -68,7 +68,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This annotation can be used to simplify adding   * xsi:schemaLocation attributes  */
+comment|/**  * This annotation can be used to simplify adding  * xsi:schemaLocation attributes  */
 end_comment
 
 begin_annotation_defn
@@ -92,12 +92,12 @@ specifier|public
 annotation_defn|@interface
 name|XSISchemaLocation
 block|{
-comment|/**      * Schema location       * By default it is assumed to be relative to a base URI of the web application      */
+comment|/**      * Schema location      * By default it is assumed to be relative to a base URI of the web application      */
 name|String
 name|value
 parameter_list|()
 function_decl|;
-comment|/**      * If the location is relative and this property is set to true then       * the location will be resolved against the base URI of the web application      */
+comment|/**      * If the location is relative and this property is set to true then      * the location will be resolved against the base URI of the web application      */
 name|boolean
 name|resolve
 parameter_list|()

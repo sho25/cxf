@@ -662,9 +662,7 @@ name|cancellerList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TokenCanceller
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|TokenCanceller

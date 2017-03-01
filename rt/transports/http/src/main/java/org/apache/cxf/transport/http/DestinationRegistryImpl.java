@@ -869,7 +869,7 @@ argument_list|()
 argument_list|)
 return|;
 block|}
-comment|/**      * Remove the transport protocol from the path and make       * it starts with /      * @param path       * @return trimmed path      */
+comment|/**      * Remove the transport protocol from the path and make      * it starts with /      * @param path      * @return trimmed path      */
 specifier|public
 name|String
 name|getTrimmedPath

@@ -442,7 +442,7 @@ name|message
 argument_list|)
 return|;
 block|}
-comment|/**      * Assert that the following XPath query selects one or more nodes.      *       * @param xpath      * @throws Exception       */
+comment|/**      * Assert that the following XPath query selects one or more nodes.      *      * @param xpath      * @throws Exception      */
 specifier|public
 name|NodeList
 name|assertValid
@@ -467,7 +467,7 @@ name|node
 argument_list|)
 return|;
 block|}
-comment|/**      * Assert that the following XPath query selects a boolean value.      *       * @param xpath      * @throws Exception       */
+comment|/**      * Assert that the following XPath query selects a boolean value.      *      * @param xpath      * @throws Exception      */
 specifier|public
 name|void
 name|assertValidBoolean
@@ -491,7 +491,7 @@ name|node
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Assert that the following XPath query selects no nodes.      *       * @param xpath      */
+comment|/**      * Assert that the following XPath query selects no nodes.      *      * @param xpath      */
 specifier|public
 name|NodeList
 name|assertInvalid
@@ -516,7 +516,7 @@ name|node
 argument_list|)
 return|;
 block|}
-comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
 name|void
 name|assertXPathEquals
@@ -545,7 +545,7 @@ name|node
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *       * @param xpath      * @param value      * @param node      */
+comment|/**      * Assert that the text of the xpath node retrieved is equal to the value      * specified.      *      * @param xpath      * @param value      * @param node      */
 specifier|public
 name|void
 name|assertXPathEquals
@@ -593,7 +593,7 @@ name|node
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Add a namespace that will be used for XPath expressions.      *       * @param ns Namespace name.      * @param uri The namespace uri.      */
+comment|/**      * Add a namespace that will be used for XPath expressions.      *      * @param ns Namespace name.      * @param uri The namespace uri.      */
 specifier|public
 name|void
 name|addNamespace

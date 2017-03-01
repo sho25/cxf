@@ -52,7 +52,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * LSInput implementation that can be used in   * custom LSResourceResolver implementations for getting  * schema import and include references resolved.  */
+comment|/**  * LSInput implementation that can be used in  * custom LSResourceResolver implementations for getting  * schema import and include references resolved.  */
 end_comment
 
 begin_class

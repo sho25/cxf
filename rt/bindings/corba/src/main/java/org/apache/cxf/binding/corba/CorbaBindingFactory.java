@@ -383,9 +383,7 @@ name|transportIds
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|DEFAULT_NAMESPACES
 argument_list|)

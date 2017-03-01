@@ -55,7 +55,7 @@ name|String
 name|name
 parameter_list|)
 function_decl|;
-comment|/**      * Returns the<code>DestinationFactory</code> registered with the specified name,       * loading the appropriate plugin if necessary.      *       * @param name      * @return the registered<code>DestinationFactory</code>      * @throws BusException      */
+comment|/**      * Returns the<code>DestinationFactory</code> registered with the specified name,      * loading the appropriate plugin if necessary.      *      * @param name      * @return the registered<code>DestinationFactory</code>      * @throws BusException      */
 name|DestinationFactory
 name|getDestinationFactory
 parameter_list|(

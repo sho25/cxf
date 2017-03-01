@@ -428,7 +428,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with "jms:". JMSConduit converts CXF Messages to JMS Messages and sends the request  * over a queue or a topic.  * If the Exchange is not one way it then receives the response and converts it to   * a CXF Message. This is then provided in the Exchange and also sent to the IncomingObserver.  */
+comment|/**  * JMSConduit is instantiated by the JMSTransportFactory which is selected by a client if the transport  * protocol starts with "jms:". JMSConduit converts CXF Messages to JMS Messages and sends the request  * over a queue or a topic.  * If the Exchange is not one way it then receives the response and converts it to  * a CXF Message. This is then provided in the Exchange and also sent to the IncomingObserver.  */
 end_comment
 
 begin_class
@@ -702,7 +702,7 @@ return|return
 name|result
 return|;
 block|}
-comment|/**      * Send the JMS message and if the MEP is not oneway receive the response.      *       * @param exchange the Exchange containing the outgoing message      * @param request  the payload of the outgoing JMS message      */
+comment|/**      * Send the JMS message and if the MEP is not oneway receive the response.      *      * @param exchange the Exchange containing the outgoing message      * @param request  the payload of the outgoing JMS message      */
 specifier|public
 name|void
 name|sendExchange
@@ -1146,20 +1146,13 @@ init|(
 name|exchange
 init|)
 block|{
-name|Destination
-name|replyToDestination
+name|String
+name|replyTo
 init|=
-name|jmsConfig
-operator|.
-name|getReplyToDestination
-argument_list|(
-name|session
-argument_list|,
 name|headers
 operator|.
 name|getJMSReplyTo
 argument_list|()
-argument_list|)
 decl_stmt|;
 name|String
 name|jmsMessageID
@@ -1170,13 +1163,32 @@ name|request
 argument_list|,
 name|outMessage
 argument_list|,
-name|replyToDestination
+name|jmsConfig
+operator|.
+name|getReplyToDestination
+argument_list|(
+name|session
+argument_list|,
+name|replyTo
+argument_list|)
 argument_list|,
 name|correlationId
 argument_list|,
 name|closer
 argument_list|,
 name|session
+argument_list|)
+decl_stmt|;
+name|Destination
+name|replyDestination
+init|=
+name|jmsConfig
+operator|.
+name|getReplyDestination
+argument_list|(
+name|session
+argument_list|,
+name|replyTo
 argument_list|)
 decl_stmt|;
 name|boolean
@@ -1200,22 +1212,13 @@ name|isPubSubDomain
 argument_list|()
 operator|)
 operator|||
-operator|(
 operator|!
-name|replyToDestination
+name|replyDestination
 operator|.
 name|equals
 argument_list|(
 name|staticReplyDestination
 argument_list|)
-operator|&&
-name|headers
-operator|.
-name|getJMSReplyTo
-argument_list|()
-operator|!=
-literal|null
-operator|)
 decl_stmt|;
 if|if
 condition|(
@@ -1251,7 +1254,6 @@ condition|(
 name|useSyncReceive
 condition|)
 block|{
-comment|// TODO Not sure if replyToDestination is correct here
 name|javax
 operator|.
 name|jms
@@ -1265,7 +1267,7 @@ name|receive
 argument_list|(
 name|session
 argument_list|,
-name|replyToDestination
+name|replyDestination
 argument_list|,
 name|correlationId
 argument_list|,
@@ -2120,7 +2122,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Process the reply message      * @throws JMSException       */
+comment|/**      * Process the reply message      * @throws JMSException      */
 specifier|protected
 name|void
 name|processReplyMessage

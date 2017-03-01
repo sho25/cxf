@@ -129,6 +129,20 @@ end_import
 
 begin_import
 import|import
+name|javax
+operator|.
+name|xml
+operator|.
+name|ws
+operator|.
+name|soap
+operator|.
+name|SOAPBinding
+import|;
+end_import
+
+begin_import
+import|import
 name|org
 operator|.
 name|apache
@@ -158,7 +172,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -404,6 +418,10 @@ name|Endpoint
 operator|.
 name|create
 argument_list|(
+name|SOAPBinding
+operator|.
+name|SOAP12HTTP_BINDING
+argument_list|,
 name|o
 argument_list|)
 decl_stmt|;
@@ -519,9 +537,7 @@ name|mt
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Source
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|StreamSource

@@ -576,7 +576,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This class tests several issues and Conduit policies based   * on a set up of redirecting servers.  *<pre>  *   * Http Redirection:  *   * Poltim(https:9005)  ----> Mortimer (http:9000)  *   * HttpS redirection/Trust:  *   * Tarpin(https:9003) ----> Gordy(https:9001) ----> Bethal(https:9002)  *   * Hostname Verifier Test  *   * Morpit (https:9008)  *   *</pre>HTTPConduitTest  * The Bethal server issues 401 with differing realms depending on the  * User name given in the authorization header.  *<p>  * The Morpit has a CN that is not equal to "localhost" to kick in  * the Hostname Verifier.  */
+comment|/**  * This class tests several issues and Conduit policies based  * on a set up of redirecting servers.  *<pre>  *  * Http Redirection:  *  * Poltim(https:9005)  ----> Mortimer (http:9000)  *  * HttpS redirection/Trust:  *  * Tarpin(https:9003) ----> Gordy(https:9001) ----> Bethal(https:9002)  *  * Hostname Verifier Test  *  * Morpit (https:9008)  *  *</pre>HTTPConduitTest  * The Bethal server issues 401 with differing realms depending on the  * User name given in the authorization header.  *<p>  * The Morpit has a CN that is not equal to "localhost" to kick in  * the Hostname Verifier.  */
 end_comment
 
 begin_class
@@ -613,9 +613,7 @@ name|servers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -1349,7 +1347,7 @@ name|int
 name|i
 parameter_list|)
 block|{     }
-comment|/**      * We use this class to reset the default bus.      * Note: This may not always work in the future.      * I was lucky in that "defaultBus" is actually a       * protected static.      */
+comment|/**      * We use this class to reset the default bus.      * Note: This may not always work in the future.      * I was lucky in that "defaultBus" is actually a      * protected static.      */
 class|class
 name|DefaultBusFactory
 extends|extends

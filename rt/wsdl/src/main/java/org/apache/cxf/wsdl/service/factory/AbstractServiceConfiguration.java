@@ -370,7 +370,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Creates a name for the operation from the method name. If an operation      * with that name already exists, a name is create by appending an integer      * to the end. I.e. if there is already two methods named      *<code>doSomething</code>, the first one will have an operation name of      * "doSomething" and the second "doSomething1".      *       * @param service      * @param method      */
+comment|/**      * Creates a name for the operation from the method name. If an operation      * with that name already exists, a name is create by appending an integer      * to the end. I.e. if there is already two methods named      *<code>doSomething</code>, the first one will have an operation name of      * "doSomething" and the second "doSomething1".      *      * @param service      * @param method      */
 specifier|public
 name|QName
 name|getOperationName

@@ -532,7 +532,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -884,9 +884,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1697,9 +1695,7 @@ name|list
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 if|if
@@ -2090,9 +2086,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Policy
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

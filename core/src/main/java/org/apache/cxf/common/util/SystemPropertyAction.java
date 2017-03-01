@@ -78,7 +78,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -262,7 +262,7 @@ name|def
 return|;
 block|}
 block|}
-comment|/**      * Get the system property via the AccessController, but if a SecurityException is       * raised, just return null;      * @param name      */
+comment|/**      * Get the system property via the AccessController, but if a SecurityException is      * raised, just return null;      * @param name      */
 specifier|public
 specifier|static
 name|String

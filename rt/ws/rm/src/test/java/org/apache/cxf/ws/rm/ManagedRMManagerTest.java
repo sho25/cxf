@@ -2651,9 +2651,7 @@ name|sss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|sss
@@ -2744,9 +2742,7 @@ name|dss
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DestinationSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|dss
@@ -3304,9 +3300,7 @@ name|suspended
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -3352,9 +3346,7 @@ literal|"seq1"
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -3366,9 +3358,7 @@ literal|"seq2"
 argument_list|,
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -3570,9 +3560,7 @@ name|list
 else|:
 operator|new
 name|ArrayList
-argument_list|<
-name|Long
-argument_list|>
+argument_list|<>
 argument_list|()
 return|;
 block|}

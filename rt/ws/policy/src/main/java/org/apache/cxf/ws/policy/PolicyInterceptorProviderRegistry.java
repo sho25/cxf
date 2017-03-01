@@ -132,7 +132,7 @@ name|PolicyInterceptorProvider
 argument_list|>
 argument_list|>
 block|{
-comment|/**      * Register the builder for all qnames from the provider      * getAssertionTypes call.      * @param provider the provider to register       */
+comment|/**      * Register the builder for all qnames from the provider      * getAssertionTypes call.      * @param provider the provider to register      */
 name|void
 name|register
 parameter_list|(

@@ -74,7 +74,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Strategy for null Conduit retrieval.   * An instance of this class is set on the Exchange to clear  * the current ConduitSelector, as a work-around for broken   * Exchange.remove(ConduitSelector.class) semantics.  */
+comment|/**  * Strategy for null Conduit retrieval.  * An instance of this class is set on the Exchange to clear  * the current ConduitSelector, as a work-around for broken  * Exchange.remove(ConduitSelector.class) semantics.  */
 end_comment
 
 begin_class
@@ -90,7 +90,7 @@ specifier|private
 name|Endpoint
 name|endpoint
 decl_stmt|;
-comment|/**      * Called prior to the interceptor chain being traversed.      *       * @param message the current Message      */
+comment|/**      * Called prior to the interceptor chain being traversed.      *      * @param message the current Message      */
 specifier|public
 name|void
 name|prepare
@@ -101,7 +101,7 @@ parameter_list|)
 block|{
 comment|// nothing to do
 block|}
-comment|/**      * Called when a Conduit is actually required.      *       * @param message      * @return the Conduit to use for mediation of the message      */
+comment|/**      * Called when a Conduit is actually required.      *      * @param message      * @return the Conduit to use for mediation of the message      */
 specifier|public
 name|Conduit
 name|selectConduit
@@ -114,7 +114,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Called on completion of the MEP for which the Conduit was required.      *       * @param exchange represents the completed MEP      */
+comment|/**      * Called on completion of the MEP for which the Conduit was required.      *      * @param exchange represents the completed MEP      */
 specifier|public
 name|void
 name|complete

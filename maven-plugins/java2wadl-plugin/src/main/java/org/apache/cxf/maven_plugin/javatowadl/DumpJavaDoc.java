@@ -140,7 +140,7 @@ block|{
 specifier|private
 name|DumpJavaDoc
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|boolean

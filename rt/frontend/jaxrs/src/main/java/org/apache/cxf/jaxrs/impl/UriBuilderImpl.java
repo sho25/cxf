@@ -318,9 +318,7 @@ name|paths
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -407,7 +405,7 @@ specifier|public
 name|UriBuilderImpl
 parameter_list|()
 block|{     }
-comment|/**      * Creates builder initialized with given URI.      *       * @param uri initial value for builder      * @throws IllegalArgumentException when uri is null      */
+comment|/**      * Creates builder initialized with given URI.      *      * @param uri initial value for builder      * @throws IllegalArgumentException when uri is null      */
 specifier|public
 name|UriBuilderImpl
 parameter_list|(
@@ -1826,9 +1824,7 @@ argument_list|()
 else|:
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2115,9 +2111,7 @@ name|uniqueVars
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|templ
 operator|.
@@ -2199,9 +2193,7 @@ argument_list|()
 else|:
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -2690,9 +2682,7 @@ name|paths
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|(
 name|paths
 argument_list|)
@@ -3478,9 +3468,7 @@ name|segments
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|PathSegment
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|path
@@ -4781,7 +4769,7 @@ return|return
 name|this
 return|;
 block|}
-comment|/**      * Query or matrix params convertion from object values vararg to list of strings. No encoding is      * provided.      *       * @param values entry vararg values      * @return list of strings      * @throws IllegalArgumentException when one of values is null      */
+comment|/**      * Query or matrix params convertion from object values vararg to list of strings. No encoding is      * provided.      *      * @param values entry vararg values      * @return list of strings      * @throws IllegalArgumentException when one of values is null      */
 specifier|private
 name|List
 argument_list|<
@@ -4807,9 +4795,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -4917,7 +4903,7 @@ return|return
 name|list
 return|;
 block|}
-comment|/**      * Builds param string for query part or matrix part of URI.      *       * @param map query or matrix multivalued map      * @param separator params separator, '&' for query ';' for matrix      * @param fromEncoded if true then values will be decoded       * @return stringified params.      */
+comment|/**      * Builds param string for query part or matrix part of URI.      *      * @param map query or matrix multivalued map      * @param separator params separator, '&' for query ';' for matrix      * @param fromEncoded if true then values will be decoded      * @return stringified params.      */
 specifier|private
 name|String
 name|buildParams
@@ -5171,7 +5157,7 @@ else|:
 literal|null
 return|;
 block|}
-comment|/**      * Builds param string for matrix part of URI.      *       * @param sb buffer to add the matrix part to, will get ';' added if map is not empty       * @param map matrix multivalued map      */
+comment|/**      * Builds param string for matrix part of URI.      *      * @param sb buffer to add the matrix part to, will get ';' added if map is not empty      * @param map matrix multivalued map      */
 specifier|private
 name|void
 name|buildMatrix

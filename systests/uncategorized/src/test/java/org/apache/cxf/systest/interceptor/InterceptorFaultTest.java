@@ -233,6 +233,40 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingInInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|event
+operator|.
+name|PrintWriterEventSender
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|frontend
 operator|.
 name|ClientProxy
@@ -350,20 +384,6 @@ operator|.
 name|types
 operator|.
 name|FaultLocation
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingInInterceptor
 import|;
 end_import
 
@@ -546,7 +566,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -630,7 +650,7 @@ specifier|static
 name|String
 name|decoupledEndpoint
 decl_stmt|;
-comment|/**      * Tests that a fault thrown by a server side interceptor is reported back to      * the client in appropriate form (plain Fault in case of one way requests,       * SoapFault in case of two way requests).      * Also demonstrates how an interceptor on the server out fault chain can       * distinguish different fault modes (the capability to do so is crucial to      * QOS interceptors such as the RM, addressing and policy interceptors).      *      */
+comment|/**      * Tests that a fault thrown by a server side interceptor is reported back to      * the client in appropriate form (plain Fault in case of one way requests,      * SoapFault in case of two way requests).      * Also demonstrates how an interceptor on the server out fault chain can      * distinguish different fault modes (the capability to do so is crucial to      * QOS interceptors such as the RM, addressing and policy interceptors).      *      */
 specifier|public
 specifier|static
 class|class
@@ -1158,30 +1178,16 @@ name|add
 argument_list|(
 operator|new
 name|LoggingInInterceptor
-argument_list|()
-argument_list|)
-expr_stmt|;
-operator|(
-operator|(
-name|LoggingInInterceptor
-operator|)
-name|greeterBus
-operator|.
-name|getInInterceptors
-argument_list|()
-operator|.
-name|get
 argument_list|(
-literal|0
-argument_list|)
-operator|)
-operator|.
-name|setPrintWriter
+operator|new
+name|PrintWriterEventSender
 argument_list|(
 operator|new
 name|PrintWriter
 argument_list|(
 name|writer
+argument_list|)
+argument_list|)
 argument_list|)
 argument_list|)
 expr_stmt|;
@@ -1921,9 +1927,7 @@ name|inPhases
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Phase
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|inPhases

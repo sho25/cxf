@@ -196,7 +196,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An in-memory EHCache implementation of the TokenReplayCache interface.   * The default TTL is 60 minutes and the max TTL is 12 hours.  */
+comment|/**  * An in-memory EHCache implementation of the TokenReplayCache interface.  * The default TTL is 60 minutes and the max TTL is 12 hours.  */
 end_comment
 
 begin_class

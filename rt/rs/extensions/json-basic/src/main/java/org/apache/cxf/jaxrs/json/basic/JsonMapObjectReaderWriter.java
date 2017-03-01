@@ -169,7 +169,7 @@ decl_stmt|;
 specifier|public
 name|JsonMapObjectReaderWriter
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|JsonMapObjectReaderWriter
 parameter_list|(

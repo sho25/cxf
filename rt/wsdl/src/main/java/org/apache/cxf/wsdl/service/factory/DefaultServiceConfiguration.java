@@ -227,7 +227,7 @@ block|{
 specifier|public
 name|DefaultServiceConfiguration
 parameter_list|()
-block|{              }
+block|{      }
 annotation|@
 name|Override
 specifier|public

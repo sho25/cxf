@@ -202,6 +202,10 @@ name|String
 name|applicationLogoUri
 decl_stmt|;
 specifier|private
+name|String
+name|applicationLogoutUri
+decl_stmt|;
+specifier|private
 name|List
 argument_list|<
 name|String
@@ -814,7 +818,7 @@ return|return
 name|registeredScopes
 return|;
 block|}
-comment|/**      * Set the list of registered scopes.       * Registering the scopes will allow the clients not to include the scopes      * and delegate to the runtime to enforce that the current request scopes are      * a subset of the pre-registered scopes.      *      * Client Registration service is expected to reject unknown scopes.       * @param registeredScopes the scopes      */
+comment|/**      * Set the list of registered scopes.      * Registering the scopes will allow the clients not to include the scopes      * and delegate to the runtime to enforce that the current request scopes are      * a subset of the pre-registered scopes.      *      * Client Registration service is expected to reject unknown scopes.      * @param registeredScopes the scopes      */
 specifier|public
 name|void
 name|setRegisteredScopes
@@ -898,7 +902,7 @@ return|return
 name|applicationCertificates
 return|;
 block|}
-comment|/*      * Set the Base64 encoded Application Public X509 Certificate      * It can be used in combination with the clientSecret property to support       * Basic or other password-aware authentication on top of 2-way TLS.      */
+comment|/*      * Set the Base64 encoded Application Public X509 Certificate      * It can be used in combination with the clientSecret property to support      * Basic or other password-aware authentication on top of 2-way TLS.      */
 specifier|public
 name|void
 name|setApplicationCertificates
@@ -974,7 +978,7 @@ return|return
 name|homeRealm
 return|;
 block|}
-comment|/**      * Hint to the authentication system how the users      * redirected by this client need to be authenticated         * @param homeRealm user home realm      */
+comment|/**      * Hint to the authentication system how the users      * redirected by this client need to be authenticated      * @param homeRealm user home realm      */
 specifier|public
 name|void
 name|setHomeRealm
@@ -1012,6 +1016,30 @@ operator|.
 name|registeredDynamically
 operator|=
 name|registeredDynamically
+expr_stmt|;
+block|}
+specifier|public
+name|String
+name|getApplicationLogoutUri
+parameter_list|()
+block|{
+return|return
+name|applicationLogoutUri
+return|;
+block|}
+specifier|public
+name|void
+name|setApplicationLogoutUri
+parameter_list|(
+name|String
+name|applicationLogoutUri
+parameter_list|)
+block|{
+name|this
+operator|.
+name|applicationLogoutUri
+operator|=
+name|applicationLogoutUri
 expr_stmt|;
 block|}
 block|}

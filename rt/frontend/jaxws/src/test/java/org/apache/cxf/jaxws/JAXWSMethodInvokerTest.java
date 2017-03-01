@@ -1839,9 +1839,7 @@ name|headers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Header
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|DocumentBuilder

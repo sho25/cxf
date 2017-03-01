@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Convert a "nonProxyHosts" formatted String into a usable regular expression usable in {@code Pattern}.   */
+comment|/**  * Convert a "nonProxyHosts" formatted String into a usable regular expression usable in {@code Pattern}.  */
 end_comment
 
 begin_class

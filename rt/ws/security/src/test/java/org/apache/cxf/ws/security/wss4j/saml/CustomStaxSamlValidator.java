@@ -154,7 +154,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A trivial custom Validator for a SAML Assertion. It makes sure that the issuer is   * "www.example.com", checks the version of the assertion, and checks the subject confirmation  * method.  */
+comment|/**  * A trivial custom Validator for a SAML Assertion. It makes sure that the issuer is  * "www.example.com", checks the version of the assertion, and checks the subject confirmation  * method.  */
 end_comment
 
 begin_class

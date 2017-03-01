@@ -68,7 +68,7 @@ name|EndpointResolver
 name|resolver
 parameter_list|)
 function_decl|;
-comment|/**      * Walk the list of registered EndpointResolvers, so as to      * retrieve a concrete EPR corresponding to the given abstract EPR,      * returning a cached reference if already resolved.      *<p>      * This API is used by any actor that requires a concrete EPR (e.g.      * a transport-level Conduit), and must be called each and every      * time the EPR content is to be accessed (e.g. before each connection      * establishment attempt).       *      * @param logical the abstract EPR to resolve      */
+comment|/**      * Walk the list of registered EndpointResolvers, so as to      * retrieve a concrete EPR corresponding to the given abstract EPR,      * returning a cached reference if already resolved.      *<p>      * This API is used by any actor that requires a concrete EPR (e.g.      * a transport-level Conduit), and must be called each and every      * time the EPR content is to be accessed (e.g. before each connection      * establishment attempt).      *      * @param logical the abstract EPR to resolve      */
 name|EndpointReferenceType
 name|resolve
 parameter_list|(
@@ -76,7 +76,7 @@ name|EndpointReferenceType
 name|logical
 parameter_list|)
 function_decl|;
-comment|/**      * Walk the list of registered EndpointResolvers, so as to force a fresh       * resolution of the given abstract EPR, discarding any previously cached       * reference.      *<p>      * This API may be used by say the transport-level Conduit when it      * detects a non-transient error on the outgoing connection, or      * by any other actor in the dispatch with the ability to infer      * server-side unavailability.      *       * @param logical the previously resolved abstract EPR      * @param physical the concrete EPR to refresh      * @return the renewed concrete EPR if appropriate, null otherwise      */
+comment|/**      * Walk the list of registered EndpointResolvers, so as to force a fresh      * resolution of the given abstract EPR, discarding any previously cached      * reference.      *<p>      * This API may be used by say the transport-level Conduit when it      * detects a non-transient error on the outgoing connection, or      * by any other actor in the dispatch with the ability to infer      * server-side unavailability.      *      * @param logical the previously resolved abstract EPR      * @param physical the concrete EPR to refresh      * @return the renewed concrete EPR if appropriate, null otherwise      */
 name|EndpointReferenceType
 name|renew
 parameter_list|(
@@ -87,7 +87,7 @@ name|EndpointReferenceType
 name|physical
 parameter_list|)
 function_decl|;
-comment|/**      * Walk the list of registered EndpointResolvers, so as to mint a new       * abstract EPR for a given service name.      *       * @param serviceName       * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Walk the list of registered EndpointResolvers, so as to mint a new      * abstract EPR for a given service name.      *      * @param serviceName      * @return the newly minted EPR if appropriate, null otherwise      */
 name|EndpointReferenceType
 name|mint
 parameter_list|(
@@ -95,7 +95,7 @@ name|QName
 name|serviceName
 parameter_list|)
 function_decl|;
-comment|/**      * Walk the list of registered EndpointResolvers, so as to mint a new       * abstract EPR for a gievn physical EPR.      *       * @param physical       * @return the newly minted EPR if appropriate, null otherwise      */
+comment|/**      * Walk the list of registered EndpointResolvers, so as to mint a new      * abstract EPR for a gievn physical EPR.      *      * @param physical      * @return the newly minted EPR if appropriate, null otherwise      */
 name|EndpointReferenceType
 name|mint
 parameter_list|(

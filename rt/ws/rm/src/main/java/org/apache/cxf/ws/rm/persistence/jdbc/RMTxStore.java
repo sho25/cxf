@@ -2772,9 +2772,7 @@ name|seqs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|DestinationSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ResultSet
@@ -3058,9 +3056,7 @@ name|seqs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|SourceSequence
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ResultSet
@@ -3337,9 +3333,7 @@ name|msgs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|RMMessage
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|ResultSet
@@ -4442,7 +4436,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @throws SQLException       */
+comment|/**      * @throws SQLException      */
 specifier|protected
 name|void
 name|updateSourceSequence
@@ -4587,7 +4581,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * @throws IOException       * @throws SQLException      */
+comment|/**      * @throws IOException      * @throws SQLException      */
 specifier|protected
 name|void
 name|updateDestinationSequence
@@ -4946,9 +4940,7 @@ name|dbCols
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -5021,12 +5013,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|newCols
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 comment|// need to add the new columns
@@ -5371,7 +5362,7 @@ block|}
 block|}
 block|}
 block|}
-comment|/**      * Returns either the locally cached statement or the one from the specified connection       * depending on whether the connection is held by this store. If the statement retrieved from      * the local cache, it is locked until it is released. The retrieved statement must be       * released using releaseResources(PreparedStatement stmt, ResultSet rs).      *       * @param con      * @param sql      * @return      * @throws SQLException      */
+comment|/**      * Returns either the locally cached statement or the one from the specified connection      * depending on whether the connection is held by this store. If the statement retrieved from      * the local cache, it is locked until it is released. The retrieved statement must be      * released using releaseResources(PreparedStatement stmt, ResultSet rs).      *      * @param con      * @param sql      * @return      * @throws SQLException      */
 specifier|protected
 name|PreparedStatement
 name|getStatement
@@ -5428,7 +5419,7 @@ argument_list|)
 return|;
 block|}
 block|}
-comment|/**      * Releases the statement and any result set.       *        * @param stmt      * @param rs      */
+comment|/**      * Releases the statement and any result set.      *      * @param stmt      * @param rs      */
 specifier|protected
 name|void
 name|releaseResources

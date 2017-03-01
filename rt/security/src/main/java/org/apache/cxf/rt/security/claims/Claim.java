@@ -173,7 +173,7 @@ specifier|public
 name|Claim
 parameter_list|()
 block|{     }
-comment|/**      * Create a clone of the provided claim.      *       * @param claim Claim to be cloned. Value cannot be null.      */
+comment|/**      * Create a clone of the provided claim.      *      * @param claim Claim to be cloned. Value cannot be null.      */
 specifier|public
 name|Claim
 parameter_list|(

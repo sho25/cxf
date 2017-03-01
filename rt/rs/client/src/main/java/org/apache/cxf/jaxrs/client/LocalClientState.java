@@ -190,7 +190,7 @@ decl_stmt|;
 specifier|public
 name|LocalClientState
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|LocalClientState
 parameter_list|(

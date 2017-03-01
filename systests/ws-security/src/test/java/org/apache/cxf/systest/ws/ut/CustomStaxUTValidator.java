@@ -164,7 +164,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A custom UsernameToken Validator that wraps the default Validator in WSS4J and set a Subject  * on the context as well. It adds a role for "Alice" of "manager", and a role for everyone of  * "worker".   */
+comment|/**  * A custom UsernameToken Validator that wraps the default Validator in WSS4J and set a Subject  * on the context as well. It adds a role for "Alice" of "manager", and a role for everyone of  * "worker".  */
 end_comment
 
 begin_class

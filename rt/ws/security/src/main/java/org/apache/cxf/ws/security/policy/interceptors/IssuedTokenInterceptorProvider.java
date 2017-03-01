@@ -562,7 +562,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1296,12 +1296,11 @@ name|results
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|results
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|parseHandlerResults

@@ -472,7 +472,7 @@ name|bean
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This method specifically maps the "trustDecider" and "basicAuthSupplier"      * elements to properties on the HttpConduit.      *       * @param parent This should represent "conduit".      * @param bean   The bean parser.      */
+comment|/**      * This method specifically maps the "trustDecider" and "basicAuthSupplier"      * elements to properties on the HttpConduit.      *      * @param parent This should represent "conduit".      * @param bean   The bean parser.      */
 specifier|private
 name|void
 name|mapSpecificElements
@@ -1162,7 +1162,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * This method finds the class or bean associated with the named element      * and sets the bean property that is associated with the same name as      * the element.      *<p>      * The element has either a "class" attribute or "bean" attribute, but       * not both.      *       * @param element      The element.      * @param bean         The Bean Definition Parser.      * @param elementClass The Class a bean or class is supposed to be.      */
+comment|/**      * This method finds the class or bean associated with the named element      * and sets the bean property that is associated with the same name as      * the element.      *<p>      * The element has either a "class" attribute or "bean" attribute, but      * not both.      *      * @param element      The element.      * @param bean         The Bean Definition Parser.      * @param elementClass The Class a bean or class is supposed to be.      */
 specifier|protected
 name|void
 name|mapBeanOrClassElement

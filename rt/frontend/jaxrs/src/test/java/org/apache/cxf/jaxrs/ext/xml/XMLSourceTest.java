@@ -1773,7 +1773,7 @@ specifier|private
 specifier|static
 class|class
 name|Bar
-block|{              }
+block|{      }
 annotation|@
 name|XmlRootElement
 argument_list|(
@@ -1789,7 +1789,7 @@ specifier|private
 specifier|static
 class|class
 name|Bar2
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 class|class

@@ -1098,7 +1098,7 @@ specifier|public
 name|void
 name|echo
 parameter_list|()
-block|{                      }
+block|{          }
 block|}
 specifier|private
 specifier|static

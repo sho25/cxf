@@ -2025,6 +2025,35 @@ name|Book
 name|book
 parameter_list|)
 block|{
+if|if
+condition|(
+name|book
+operator|.
+name|getName
+argument_list|()
+operator|.
+name|equals
+argument_list|(
+literal|"Timeout"
+argument_list|)
+condition|)
+block|{
+try|try
+block|{
+name|Thread
+operator|.
+name|sleep
+argument_list|(
+literal|2000
+argument_list|)
+expr_stmt|;
+block|}
+catch|catch
+parameter_list|(
+name|InterruptedException
+name|e
+parameter_list|)
+block|{             }
 return|return
 name|Response
 operator|.
@@ -2036,6 +2065,21 @@ operator|.
 name|build
 argument_list|()
 return|;
+block|}
+else|else
+block|{
+return|return
+name|Response
+operator|.
+name|ok
+argument_list|(
+name|book
+argument_list|)
+operator|.
+name|build
+argument_list|()
+return|;
+block|}
 block|}
 annotation|@
 name|DELETE
@@ -3787,9 +3831,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -4197,9 +4239,7 @@ block|{
 return|return
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|(
 name|books
 operator|.
@@ -7047,9 +7087,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BookInfoInterface
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -7104,9 +7142,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|BookInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -9259,7 +9295,7 @@ name|id
 decl_stmt|;
 name|BookInfo
 parameter_list|()
-block|{                      }
+block|{          }
 name|BookInfo
 parameter_list|(
 name|Book
@@ -9356,7 +9392,7 @@ name|BookInfoInterface
 block|{
 name|BookInfo2
 parameter_list|()
-block|{                      }
+block|{          }
 name|BookInfo2
 parameter_list|(
 name|Book
@@ -9972,7 +10008,7 @@ class|class
 name|BookBeanExtended
 extends|extends
 name|BookBean
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

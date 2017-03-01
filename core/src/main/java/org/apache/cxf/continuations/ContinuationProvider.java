@@ -16,7 +16,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Provides transport-neutral support for creating suspended invocation primitives  * or continuations     */
+comment|/**  * Provides transport-neutral support for creating suspended invocation primitives  * or continuations  */
 end_comment
 
 begin_interface

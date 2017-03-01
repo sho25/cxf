@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Starter that initializes the spring context, fetches our test client and then shuts down spring   */
+comment|/**  * Starter that initializes the spring context, fetches our test client and then shuts down spring  */
 end_comment
 
 begin_class

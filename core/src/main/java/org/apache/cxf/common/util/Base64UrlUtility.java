@@ -18,7 +18,7 @@ package|;
 end_package
 
 begin_comment
-comment|/**  * Base64 URL Encoding/Decoding utility.  *    * Character 62 ('+') is '-', Character 63 ('/') is '_';  * Padding characters are dropped after the encoding.     *                    */
+comment|/**  * Base64 URL Encoding/Decoding utility.  *  * Character 62 ('+') is '-', Character 63 ('/') is '_';  * Padding characters are dropped after the encoding.  *  */
 end_comment
 
 begin_import

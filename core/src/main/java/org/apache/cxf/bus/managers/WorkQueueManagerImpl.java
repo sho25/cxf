@@ -315,7 +315,7 @@ decl_stmt|;
 specifier|public
 name|WorkQueueManagerImpl
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|WorkQueueManagerImpl
 parameter_list|(
@@ -1045,7 +1045,7 @@ specifier|public
 name|void
 name|initComplete
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|void
 name|preShutdown

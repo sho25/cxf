@@ -26,7 +26,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Failover strategy based on a sequential walk through the  * static cluster represented by multiple endpoints associated   * with the same service instance.  */
+comment|/**  * Failover strategy based on a sequential walk through the  * static cluster represented by multiple endpoints associated  * with the same service instance.  */
 end_comment
 
 begin_class
@@ -36,7 +36,7 @@ name|SequentialStrategy
 extends|extends
 name|AbstractStaticFailoverStrategy
 block|{
-comment|/**      * Get next alternate endpoint.      *       * @param alternates non-empty List of alternate endpoints       * @return      */
+comment|/**      * Get next alternate endpoint.      *      * @param alternates non-empty List of alternate endpoints      * @return      */
 specifier|protected
 parameter_list|<
 name|T

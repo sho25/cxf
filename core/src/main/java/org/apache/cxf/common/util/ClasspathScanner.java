@@ -263,7 +263,7 @@ name|ClasspathScanner
 argument_list|()
 return|;
 block|}
-comment|/**      * Scans list of base packages for all classes marked with specific annotations.       * @param basePackage base package       * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too       * @throws IOException class metadata is not readable       * @throws ClassNotFoundException class not found      */
+comment|/**      * Scans list of base packages for all classes marked with specific annotations.      * @param basePackage base package      * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too      * @throws IOException class metadata is not readable      * @throws ClassNotFoundException class not found      */
 annotation|@
 name|SafeVarargs
 specifier|public
@@ -326,7 +326,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Scans list of base packages for all classes marked with specific annotations.       * @param basePackages list of base packages       * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too       * @throws IOException class metadata is not readable       * @throws ClassNotFoundException class not found      */
+comment|/**      * Scans list of base packages for all classes marked with specific annotations.      * @param basePackages list of base packages      * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too      * @throws IOException class metadata is not readable      * @throws ClassNotFoundException class not found      */
 annotation|@
 name|SafeVarargs
 specifier|public
@@ -389,7 +389,7 @@ argument_list|)
 argument_list|)
 return|;
 block|}
-comment|/**      * Scans list of base packages for all classes marked with specific annotations.       * @param basePackages list of base packages       * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too       * @throws IOException class metadata is not readable       * @throws ClassNotFoundException class not found      */
+comment|/**      * Scans list of base packages for all classes marked with specific annotations.      * @param basePackages list of base packages      * @param annotations annotations to discover      * @return all discovered classes grouped by annotations they belong too      * @throws IOException class metadata is not readable      * @throws ClassNotFoundException class not found      */
 specifier|public
 specifier|static
 name|Map
@@ -555,7 +555,7 @@ name|emptyMap
 argument_list|()
 return|;
 block|}
-comment|/**      * Scans list of base packages for all resources with the given extension.       * @param basePackage base package       * @param extension the extension matching resources needs to have      * @return list of all discovered resource URLs       * @throws IOException resource is not accessible      */
+comment|/**      * Scans list of base packages for all resources with the given extension.      * @param basePackage base package      * @param extension the extension matching resources needs to have      * @return list of all discovered resource URLs      * @throws IOException resource is not accessible      */
 specifier|public
 specifier|static
 name|List
@@ -584,7 +584,7 @@ literal|null
 argument_list|)
 return|;
 block|}
-comment|/**      * Scans list of base packages for all resources with the given extension.       * @param basePackage base package       * @param extension the extension matching resources needs to have      * @return list of all discovered resource URLs       * @throws IOException resource is not accessible      */
+comment|/**      * Scans list of base packages for all resources with the given extension.      * @param basePackage base package      * @param extension the extension matching resources needs to have      * @return list of all discovered resource URLs      * @throws IOException resource is not accessible      */
 specifier|public
 specifier|static
 name|List
@@ -621,7 +621,7 @@ name|loader
 argument_list|)
 return|;
 block|}
-comment|/**      * Scans list of base packages for all resources with the given extension.       * @param basePackages list of base packages       * @param extension the extension matching resources needs to have      * @return list of all discovered resource URLs       * @throws IOException resource is not accessible      */
+comment|/**      * Scans list of base packages for all resources with the given extension.      * @param basePackages list of base packages      * @param extension the extension matching resources needs to have      * @return list of all discovered resource URLs      * @throws IOException resource is not accessible      */
 specifier|public
 specifier|static
 name|List
@@ -725,9 +725,7 @@ name|basePackages
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|values
 operator|.

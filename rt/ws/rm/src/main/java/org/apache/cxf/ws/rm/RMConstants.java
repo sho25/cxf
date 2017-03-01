@@ -312,14 +312,14 @@ name|QName
 name|getCreateSequenceRefusedFaultCode
 parameter_list|()
 function_decl|;
-comment|/**      * Get SequenceClosed fault code.      *       * @return code, or<code>null</code> if not supported      */
+comment|/**      * Get SequenceClosed fault code.      *      * @return code, or<code>null</code> if not supported      */
 specifier|public
 specifier|abstract
 name|QName
 name|getSequenceClosedFaultCode
 parameter_list|()
 function_decl|;
-comment|/**      * Get WSRMRequired fault code.      *       * @return code, or<code>null</code> if not supported      */
+comment|/**      * Get WSRMRequired fault code.      *      * @return code, or<code>null</code> if not supported      */
 specifier|public
 specifier|abstract
 name|QName

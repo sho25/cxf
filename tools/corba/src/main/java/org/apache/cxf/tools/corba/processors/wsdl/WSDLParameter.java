@@ -473,9 +473,7 @@ name|inputs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParamType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -486,9 +484,7 @@ name|outputs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParamType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List
@@ -499,9 +495,7 @@ name|returnOutputs
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ArgType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|boolean
@@ -2144,12 +2138,11 @@ parameter_list|)
 block|{
 if|if
 condition|(
+operator|!
 name|outputs
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|ParamType

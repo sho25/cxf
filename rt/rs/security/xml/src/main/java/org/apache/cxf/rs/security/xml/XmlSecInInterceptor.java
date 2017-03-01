@@ -2629,7 +2629,7 @@ return|return
 name|subjectDNPatterns
 return|;
 block|}
-comment|/**      * This interceptor handles parsing the StaX results (events) + checks to see whether the       * required (if any) Actions (signature or encryption) were fulfilled.      */
+comment|/**      * This interceptor handles parsing the StaX results (events) + checks to see whether the      * required (if any) Actions (signature or encryption) were fulfilled.      */
 specifier|private
 specifier|static
 class|class

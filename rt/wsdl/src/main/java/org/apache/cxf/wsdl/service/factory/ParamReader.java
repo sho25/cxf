@@ -153,7 +153,7 @@ argument_list|>
 index|[]
 name|paramTypes
 decl_stmt|;
-comment|/**      * process a class file, given it's class. We'll use the defining      * classloader to locate the bytecode.      *       * @param c      * @throws IOException      */
+comment|/**      * process a class file, given it's class. We'll use the defining      * classloader to locate the bytecode.      *      * @param c      * @throws IOException      */
 name|ParamReader
 parameter_list|(
 name|Class
@@ -174,7 +174,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * process the given class bytes directly.      *       * @param b      * @throws IOException      */
+comment|/**      * process the given class bytes directly.      *      * @param b      * @throws IOException      */
 name|ParamReader
 parameter_list|(
 name|byte
@@ -532,7 +532,7 @@ name|readAttributes
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * return the names of the declared parameters for the given constructor. If      * we cannot determine the names, return null. The returned array will have      * one name per parameter. The length of the array will be the same as the      * length of the Class[] array returned by Constructor.getParameterTypes().      *       * @param ctor      * @return String[] array of names, one per parameter, or null      */
+comment|/**      * return the names of the declared parameters for the given constructor. If      * we cannot determine the names, return null. The returned array will have      * one name per parameter. The length of the array will be the same as the      * length of the Class[] array returned by Constructor.getParameterTypes().      *      * @param ctor      * @return String[] array of names, one per parameter, or null      */
 specifier|public
 name|String
 index|[]
@@ -561,7 +561,7 @@ name|paramTypes
 argument_list|)
 return|;
 block|}
-comment|/**      * return the names of the declared parameters for the given method. If we      * cannot determine the names, return null. The returned array will have one      * name per parameter. The length of the array will be the same as the      * length of the Class[] array returned by Method.getParameterTypes().      *       * @param method      * @return String[] array of names, one per parameter, or null      */
+comment|/**      * return the names of the declared parameters for the given method. If we      * cannot determine the names, return null. The returned array will have one      * name per parameter. The length of the array will be the same as the      * length of the Class[] array returned by Method.getParameterTypes().      *      * @param method      * @return String[] array of names, one per parameter, or null      */
 specifier|public
 name|String
 index|[]
@@ -822,7 +822,7 @@ return|return
 name|info
 return|;
 block|}
-comment|/**      * this is invoked when a LocalVariableTable attribute is encountered.      *       * @throws IOException      */
+comment|/**      * this is invoked when a LocalVariableTable attribute is encountered.      *      * @throws IOException      */
 specifier|public
 name|void
 name|readLocalVariableTable

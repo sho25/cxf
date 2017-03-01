@@ -490,7 +490,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for SAML Tokens.   */
+comment|/**  * A set of tests for SAML Tokens.  */
 end_comment
 
 begin_class
@@ -6321,9 +6321,7 @@ name|audienceRestrictions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AudienceRestrictionBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AudienceRestrictionBean
@@ -6636,9 +6634,7 @@ name|audienceRestrictions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AudienceRestrictionBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AudienceRestrictionBean
@@ -6873,9 +6869,7 @@ name|audienceRestrictions
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AudienceRestrictionBean
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|AudienceRestrictionBean

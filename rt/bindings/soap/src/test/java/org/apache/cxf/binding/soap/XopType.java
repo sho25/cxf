@@ -98,7 +98,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for XopType complex type.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="XopType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="attachinfo" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *   *   */
+comment|/**  *<p>Java class for XopType complex type.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="XopType">  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="name" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;element name="attachinfo" type="{http://www.w3.org/2001/XMLSchema}base64Binary"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -155,7 +155,7 @@ specifier|protected
 name|DataHandler
 name|attachinfo
 decl_stmt|;
-comment|/**      * Gets the value of the name property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the name property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getName
@@ -165,7 +165,7 @@ return|return
 name|name
 return|;
 block|}
-comment|/**      * Sets the value of the name property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the name property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setName
@@ -181,7 +181,7 @@ operator|=
 name|value
 expr_stmt|;
 block|}
-comment|/**      * Gets the value of the attachinfo property.      *       * @return      *     possible object is      *     {@link DataHandler }      *           */
+comment|/**      * Gets the value of the attachinfo property.      *      * @return      *     possible object is      *     {@link DataHandler }      *      */
 specifier|public
 name|DataHandler
 name|getAttachinfo
@@ -191,7 +191,7 @@ return|return
 name|attachinfo
 return|;
 block|}
-comment|/**      * Sets the value of the attachinfo property.      *       * @param value      *     allowed object is      *     {@link DataHandler }      *           */
+comment|/**      * Sets the value of the attachinfo property.      *      * @param value      *     allowed object is      *     {@link DataHandler }      *      */
 specifier|public
 name|void
 name|setAttachinfo

@@ -877,7 +877,7 @@ operator|=
 name|observer
 expr_stmt|;
 block|}
-comment|/**      * Utility method to make it easy to set properties from Spring.      *       * @param properties      */
+comment|/**      * Utility method to make it easy to set properties from Spring.      *      * @param properties      */
 specifier|public
 name|void
 name|setProperties

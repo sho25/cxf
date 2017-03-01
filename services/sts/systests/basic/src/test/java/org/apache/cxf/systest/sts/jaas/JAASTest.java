@@ -214,7 +214,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This tests JAAS authentication to the STS. A Username + Password extracted from either  * a WS-Security UsernameToken for the JAX-WS service, or via HTTP/BA for a JAX-RS service,   * is dispatches to the STS for validation via JAAS.   *   * The service also asks for a SAML Token with roles enabled in it, and these roles   * are stored in the security context for authorization.  */
+comment|/**  * This tests JAAS authentication to the STS. A Username + Password extracted from either  * a WS-Security UsernameToken for the JAX-WS service, or via HTTP/BA for a JAX-RS service,  * is dispatches to the STS for validation via JAAS.  *  * The service also asks for a SAML Token with roles enabled in it, and these roles  * are stored in the security context for authorization.  */
 end_comment
 
 begin_class

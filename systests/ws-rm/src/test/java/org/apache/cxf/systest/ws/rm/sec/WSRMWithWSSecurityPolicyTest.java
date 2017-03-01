@@ -410,6 +410,8 @@ argument_list|(
 literal|"Creating greeter client"
 argument_list|)
 expr_stmt|;
+try|try
+init|(
 name|ClassPathXmlApplicationContext
 name|context
 init|=
@@ -418,7 +420,8 @@ name|ClassPathXmlApplicationContext
 argument_list|(
 literal|"org/apache/cxf/systest/ws/rm/sec/client-policy.xml"
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Bus
 name|bus
 init|=
@@ -527,11 +530,7 @@ argument_list|,
 name|empty
 argument_list|)
 expr_stmt|;
-name|context
-operator|.
-name|close
-argument_list|()
-expr_stmt|;
+block|}
 block|}
 annotation|@
 name|Test
@@ -542,6 +541,8 @@ parameter_list|()
 throws|throws
 name|Exception
 block|{
+try|try
+init|(
 name|ClassPathXmlApplicationContext
 name|context
 init|=
@@ -550,7 +551,8 @@ name|ClassPathXmlApplicationContext
 argument_list|(
 literal|"org/apache/cxf/systest/ws/rm/sec/client-policy.xml"
 argument_list|)
-decl_stmt|;
+init|)
+block|{
 name|Bus
 name|bus
 init|=
@@ -861,6 +863,7 @@ argument_list|,
 name|empty
 argument_list|)
 expr_stmt|;
+block|}
 block|}
 block|}
 end_class

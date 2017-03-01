@@ -58,7 +58,7 @@ specifier|public
 interface|interface
 name|ClaimsPolicyValidator
 block|{
-comment|/**      * Validate a particular Claims policy against a received SAML Assertion.       * Return true if the policy is valid.      */
+comment|/**      * Validate a particular Claims policy against a received SAML Assertion.      * Return true if the policy is valid.      */
 name|boolean
 name|validatePolicy
 parameter_list|(

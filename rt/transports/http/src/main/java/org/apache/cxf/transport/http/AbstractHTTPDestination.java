@@ -81,6 +81,18 @@ begin_import
 import|import
 name|java
 operator|.
+name|nio
+operator|.
+name|charset
+operator|.
+name|StandardCharsets
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|security
 operator|.
 name|Principal
@@ -288,6 +300,22 @@ operator|.
 name|util
 operator|.
 name|Base64Utility
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|common
+operator|.
+name|util
+operator|.
+name|PropertyUtils
 import|;
 end_import
 
@@ -928,6 +956,14 @@ decl_stmt|;
 specifier|private
 specifier|static
 specifier|final
+name|String
+name|DECODE_BASIC_AUTH_WITH_ISO8859
+init|=
+literal|"decode.basicauth.with.iso8859"
+decl_stmt|;
+specifier|private
+specifier|static
+specifier|final
 name|Logger
 name|LOG
 init|=
@@ -983,6 +1019,10 @@ name|boolean
 name|isServlet3
 decl_stmt|;
 specifier|protected
+name|boolean
+name|decodeBasicAuthWithIso8859
+decl_stmt|;
+specifier|protected
 name|ContinuationProviderFactory
 name|cproviderFactory
 decl_stmt|;
@@ -995,7 +1035,7 @@ specifier|volatile
 name|boolean
 name|serverPolicyCalced
 decl_stmt|;
-comment|/**      * Constructor      *       * @param b the associated Bus      * @param ci the associated conduit initiator      * @param ei the endpoint info of the destination       * @param dp true for adding the default port if it is missing      * @throws IOException      */
+comment|/**      * Constructor      *      * @param b the associated Bus      * @param ci the associated conduit initiator      * @param ei the endpoint info of the destination      * @param dp true for adding the default port if it is missing      * @throws IOException      */
 specifier|public
 name|AbstractHTTPDestination
 parameter_list|(
@@ -1078,6 +1118,20 @@ parameter_list|)
 block|{
 comment|//servlet 2.5 or earlier, no async support
 block|}
+name|decodeBasicAuthWithIso8859
+operator|=
+name|PropertyUtils
+operator|.
+name|isTrue
+argument_list|(
+name|bus
+operator|.
+name|getProperty
+argument_list|(
+name|DECODE_BASIC_AUTH_WITH_ISO8859
+argument_list|)
+argument_list|)
+expr_stmt|;
 name|initConfig
 argument_list|()
 expr_stmt|;
@@ -1177,18 +1231,36 @@ argument_list|)
 decl_stmt|;
 try|try
 block|{
-name|String
-name|authDecoded
+name|byte
+index|[]
+name|authBytes
 init|=
-operator|new
-name|String
-argument_list|(
 name|Base64Utility
 operator|.
 name|decode
 argument_list|(
 name|authEncoded
 argument_list|)
+decl_stmt|;
+name|String
+name|authDecoded
+init|=
+name|decodeBasicAuthWithIso8859
+condition|?
+operator|new
+name|String
+argument_list|(
+name|authBytes
+argument_list|,
+name|StandardCharsets
+operator|.
+name|ISO_8859_1
+argument_list|)
+else|:
+operator|new
+name|String
+argument_list|(
+name|authBytes
 argument_list|)
 decl_stmt|;
 name|int
@@ -1443,7 +1515,7 @@ literal|null
 return|;
 block|}
 block|}
-comment|/**       * @param message the message under consideration      * @return true iff the message has been marked as oneway      */
+comment|/**      * @param message the message under consideration      * @return true iff the message has been marked as oneway      */
 specifier|protected
 specifier|final
 name|boolean
@@ -2522,7 +2594,7 @@ argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Propogate in the message a TLSSessionInfo instance representative        * of the TLS-specific information in the HTTP request.      *       * @param request the Jetty request      * @param message the Message      */
+comment|/**      * Propogate in the message a TLSSessionInfo instance representative      * of the TLS-specific information in the HTTP request.      *      * @param request the Jetty request      * @param message the Message      */
 specifier|private
 specifier|static
 name|void
@@ -3312,7 +3384,7 @@ return|return
 name|sp
 return|;
 block|}
-comment|/**      * On first write, we need to make sure any attachments and such that are still on the incoming stream       * are read in.  Otherwise we can get into a deadlock where the client is still trying to send the       * request, but the server is trying to send the response.   Neither side is reading and both blocked       * on full buffers.  Not a good situation.          * @param outMessage      */
+comment|/**      * On first write, we need to make sure any attachments and such that are still on the incoming stream      * are read in.  Otherwise we can get into a deadlock where the client is still trying to send the      * request, but the server is trying to send the response.   Neither side is reading and both blocked      * on full buffers.  Not a good situation.      * @param outMessage      */
 specifier|private
 name|void
 name|cacheInput
@@ -3836,7 +3908,7 @@ name|code
 return|;
 block|}
 block|}
-comment|/**      * Determines if the current message has no response content.      * The message has no response content if either:      *  - the request is oneway and the current message is no partial       *    response or an empty partial response.      *  - the request is not oneway but the current message is an empty partial       *    response.       * @param message      * @return      */
+comment|/**      * Determines if the current message has no response content.      * The message has no response content if either:      *  - the request is oneway and the current message is no partial      *    response or an empty partial response.      *  - the request is not oneway but the current message is an empty partial      *    response.      * @param message      * @return      */
 specifier|private
 name|boolean
 name|hasNoResponseContent
@@ -4091,7 +4163,7 @@ operator|=
 name|resp
 expr_stmt|;
 block|}
-comment|/**          * Send an outbound message, assumed to contain all the name-value          * mappings of the corresponding input message (if any).           *           * @param message the message to be sent.          */
+comment|/**          * Send an outbound message, assumed to contain all the name-value          * mappings of the corresponding input message (if any).          *          * @param message the message to be sent.          */
 specifier|public
 name|void
 name|prepare
@@ -4417,7 +4489,7 @@ name|close
 argument_list|()
 expr_stmt|;
 block|}
-comment|/*             try {                 //make sure the input stream is also closed in this                  //case so that any resources it may have is cleaned up                 Message m = outMessage.getExchange().getInMessage();                 if (m != null) {                     InputStream ins = m.getContent(InputStream.class);                     if (ins != null) {                         ins.close();                     }                 }             } catch (IOException ex) {                 //ignore             }             */
+comment|/*             try {                 //make sure the input stream is also closed in this                 //case so that any resources it may have is cleaned up                 Message m = outMessage.getExchange().getInMessage();                 if (m != null) {                     InputStream ins = m.getContent(InputStream.class);                     if (ins != null) {                         ins.close();                     }                 }             } catch (IOException ex) {                 //ignore             }             */
 block|}
 block|}
 specifier|protected
@@ -4476,7 +4548,7 @@ return|return
 name|beanName
 return|;
 block|}
-comment|/*      * Implement multiplex via the address URL to avoid the need for ws-a.      * Requires contextMatchStrategy of stem.      *       * @see org.apache.cxf.transport.AbstractMultiplexDestination#getAddressWithId(java.lang.String)      */
+comment|/*      * Implement multiplex via the address URL to avoid the need for ws-a.      * Requires contextMatchStrategy of stem.      *      * @see org.apache.cxf.transport.AbstractMultiplexDestination#getAddressWithId(java.lang.String)      */
 specifier|public
 name|EndpointReferenceType
 name|getAddressWithId
@@ -4570,7 +4642,7 @@ return|return
 name|ref
 return|;
 block|}
-comment|/*      * (non-Javadoc)      *       * @see org.apache.cxf.transport.AbstractMultiplexDestination#getId(java.util.Map)      */
+comment|/*      * (non-Javadoc)      *      * @see org.apache.cxf.transport.AbstractMultiplexDestination#getId(java.util.Map)      */
 annotation|@
 name|Override
 specifier|public

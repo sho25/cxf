@@ -363,9 +363,7 @@ name|classResourceInfos
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ClassResourceInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * @parameter      */
@@ -501,7 +499,7 @@ specifier|private
 name|String
 name|namespacePrefix
 decl_stmt|;
-comment|/**      * @parameter       */
+comment|/**      * @parameter      */
 specifier|private
 name|String
 name|outputFileName

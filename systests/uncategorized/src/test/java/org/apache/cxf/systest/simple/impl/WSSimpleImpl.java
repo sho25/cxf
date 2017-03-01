@@ -69,7 +69,7 @@ specifier|public
 name|void
 name|pingMe
 parameter_list|()
-block|{                  }
+block|{      }
 block|}
 end_class
 

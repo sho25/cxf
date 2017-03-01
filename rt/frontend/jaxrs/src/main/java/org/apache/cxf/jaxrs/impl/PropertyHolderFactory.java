@@ -94,7 +94,7 @@ block|{
 specifier|private
 name|PropertyHolderFactory
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 name|PropertyHolder

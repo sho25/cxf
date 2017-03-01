@@ -3466,7 +3466,7 @@ parameter_list|(
 name|Executor
 name|executor
 parameter_list|)
-block|{            }
+block|{         }
 specifier|public
 name|void
 name|setInFaultObserver
@@ -3482,7 +3482,7 @@ parameter_list|(
 name|MessageObserver
 name|observer
 parameter_list|)
-block|{                     }
+block|{         }
 specifier|public
 name|void
 name|addCleanupHook

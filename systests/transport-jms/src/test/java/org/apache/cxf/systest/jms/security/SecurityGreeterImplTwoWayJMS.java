@@ -58,7 +58,7 @@ class|class
 name|SecurityGreeterImplTwoWayJMS
 extends|extends
 name|TwoWayJMSImplBase
-block|{          }
+block|{  }
 end_class
 
 end_unit

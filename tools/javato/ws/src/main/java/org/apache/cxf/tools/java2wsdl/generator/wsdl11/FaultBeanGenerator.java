@@ -339,9 +339,7 @@ name|faultBeanClasses
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|JavaClass
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|String

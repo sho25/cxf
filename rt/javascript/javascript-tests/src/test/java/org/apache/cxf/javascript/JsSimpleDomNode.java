@@ -308,12 +308,11 @@ argument_list|()
 expr_stmt|;
 if|if
 condition|(
+operator|!
 name|children
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 return|return
 name|children
@@ -739,9 +738,7 @@ name|children
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JsSimpleDomNode
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|Node
@@ -847,9 +844,7 @@ name|children
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JsSimpleDomNode
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}

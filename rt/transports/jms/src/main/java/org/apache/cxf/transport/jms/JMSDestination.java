@@ -1157,7 +1157,7 @@ name|deactivate
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Convert JMS message received by ListenerThread to CXF message and inform incomingObserver that a      * message was received. The observer will call the service and then send the response CXF message by      * using the BackChannelConduit      *       * @param message      * @throws IOException      */
+comment|/**      * Convert JMS message received by ListenerThread to CXF message and inform incomingObserver that a      * message was received. The observer will call the service and then send the response CXF message by      * using the BackChannelConduit      *      * @param message      * @throws IOException      */
 specifier|public
 name|void
 name|onMessage

@@ -347,9 +347,7 @@ name|retRoles
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Principal
-argument_list|>
+argument_list|<>
 argument_list|(
 name|roles
 argument_list|)

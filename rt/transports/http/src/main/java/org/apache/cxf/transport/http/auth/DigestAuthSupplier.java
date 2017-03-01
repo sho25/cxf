@@ -122,7 +122,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -1061,7 +1061,7 @@ throw|;
 block|}
 block|}
 block|}
-comment|/**      * Encodes the 128 bit (16 bytes) MD5 digest into a 32 characters long       *<CODE>String</CODE> according to RFC 2617.      *       * @param binaryData array containing the digest      * @return encoded MD5, or<CODE>null</CODE> if encoding failed      */
+comment|/**      * Encodes the 128 bit (16 bytes) MD5 digest into a 32 characters long      *<CODE>String</CODE> according to RFC 2617.      *      * @param binaryData array containing the digest      * @return encoded MD5, or<CODE>null</CODE> if encoding failed      */
 specifier|private
 specifier|static
 name|String

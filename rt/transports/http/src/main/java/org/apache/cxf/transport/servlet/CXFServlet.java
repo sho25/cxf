@@ -534,7 +534,7 @@ block|{
 comment|//ignore.
 block|}
 block|}
-comment|/**      * Try to create a spring application context from the config location.      * Will first try to resolve the location using the servlet context.      * If that does not work then the location is given as is to spring      *       * @param ctx      * @param sc      * @param configLocation      * @return      */
+comment|/**      * Try to create a spring application context from the config location.      * Will first try to resolve the location using the servlet context.      * If that does not work then the location is given as is to spring      *      * @param ctx      * @param sc      * @param configLocation      * @return      */
 specifier|private
 name|ApplicationContext
 name|createSpringContext

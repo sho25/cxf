@@ -62,7 +62,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * The elements that use this type designate the name of a Java class or interface. The name is in the form of  * a "binary name", as defined in the JLS. This is the form of name used in Class.forName(). Tools that need  * the canonical name (the name used in source code) will need to convert this binary name to the canonical  * name.  *<p>  * Java class for fully-qualified-classType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;complexType name="fully-qualified-classType">  *&lt;simpleContent>  *&lt;restriction base="&lt;http://java.sun.com/xml/ns/javaee>string">  *&lt;/restriction>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
+comment|/**  * The elements that use this type designate the name of a Java class or interface. The name is in the form of  * a "binary name", as defined in the JLS. This is the form of name used in Class.forName(). Tools that need  * the canonical name (the name used in source code) will need to convert this binary name to the canonical  * name.  *<p>  * Java class for fully-qualified-classType complex type.  *<p>  * The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;complexType name="fully-qualified-classType">  *&lt;simpleContent>  *&lt;restriction base="&lt;http://java.sun.com/xml/ns/javaee>string">  *&lt;/restriction>  *&lt;/simpleContent>  *&lt;/complexType>  *</pre>  */
 end_comment
 
 begin_class

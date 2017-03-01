@@ -162,9 +162,7 @@ name|methods
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JavaMethod
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -177,9 +175,7 @@ name|annotations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|JAnnotation
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -207,9 +203,7 @@ name|supers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

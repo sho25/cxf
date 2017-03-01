@@ -132,7 +132,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A set of tests for hostname verification, where the hostname in question is "localhost".  *   * Keys created via something like:  * keytool -genkey -validity 3650 -alias subjalt -keyalg RSA -keystore subjalt.jks   * -dname "CN=Colm,OU=WSS4J,O=Apache,L=Dublin,ST=Leinster,C=IE" -ext SAN=DNS:localhost  */
+comment|/**  * A set of tests for hostname verification, where the hostname in question is "localhost".  *  * Keys created via something like:  * keytool -genkey -validity 3650 -alias subjalt -keyalg RSA -keystore subjalt.jks  * -dname "CN=Colm,OU=WSS4J,O=Apache,L=Dublin,ST=Leinster,C=IE" -ext SAN=DNS:localhost  */
 end_comment
 
 begin_class

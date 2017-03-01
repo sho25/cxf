@@ -858,9 +858,7 @@ name|mcSet
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|mcSet
@@ -1011,9 +1009,7 @@ name|mcSet
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|ManagedConnection
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|mcSet

@@ -356,6 +356,8 @@ name|SamlRedirectBindingFilter
 extends|extends
 name|AbstractServiceProviderFilter
 block|{
+annotation|@
+name|Override
 specifier|public
 name|void
 name|filter

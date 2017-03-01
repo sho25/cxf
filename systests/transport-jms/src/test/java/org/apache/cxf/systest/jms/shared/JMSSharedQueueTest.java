@@ -1185,9 +1185,7 @@ name|clients
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ClientRunnable
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1331,9 +1329,7 @@ name|clients
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ClientRunnable
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1461,9 +1457,7 @@ name|clients
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ClientRunnable
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

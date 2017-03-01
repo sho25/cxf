@@ -152,7 +152,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the automatic table updating of RMTxStore that allows compatible changes   * in the database tables.   */
+comment|/**  * Tests the automatic table updating of RMTxStore that allows compatible changes  * in the database tables.  */
 end_comment
 
 begin_class
@@ -517,9 +517,7 @@ name|colNames
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Collections

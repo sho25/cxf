@@ -94,7 +94,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *<p>Java class for getPrice element declaration.  *   *<p>The following schema fragment specifies the expected content contained within this class.  *   *<pre>  *&lt;element name="getPrice">  *&lt;complexType>  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="responseType" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *&lt;/element>  *</pre>  *   *   */
+comment|/**  *<p>Java class for getPrice element declaration.  *  *<p>The following schema fragment specifies the expected content contained within this class.  *  *<pre>  *&lt;element name="getPrice">  *&lt;complexType>  *&lt;complexContent>  *&lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">  *&lt;sequence>  *&lt;element name="responseType" type="{http://www.w3.org/2001/XMLSchema}string"/>  *&lt;/sequence>  *&lt;/restriction>  *&lt;/complexContent>  *&lt;/complexType>  *&lt;/element>  *</pre>  *  *  */
 end_comment
 
 begin_class
@@ -140,7 +140,7 @@ specifier|protected
 name|String
 name|responseType
 decl_stmt|;
-comment|/**      * Gets the value of the responseType property.      *       * @return      *     possible object is      *     {@link String }      *           */
+comment|/**      * Gets the value of the responseType property.      *      * @return      *     possible object is      *     {@link String }      *      */
 specifier|public
 name|String
 name|getResponseType
@@ -150,7 +150,7 @@ return|return
 name|responseType
 return|;
 block|}
-comment|/**      * Sets the value of the responseType property.      *       * @param value      *     allowed object is      *     {@link String }      *           */
+comment|/**      * Sets the value of the responseType property.      *      * @param value      *     allowed object is      *     {@link String }      *      */
 specifier|public
 name|void
 name|setResponseType

@@ -518,7 +518,7 @@ operator|=
 name|resourceTypeIdentifiers
 expr_stmt|;
 block|}
-comment|/**      * Register Dialect object for URI.      * @param iri      * @param dialect       */
+comment|/**      * Register Dialect object for URI.      * @param iri      * @param dialect      */
 specifier|public
 name|void
 name|registerDialect
@@ -565,7 +565,7 @@ name|dialect
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Unregister dialect URI.      * @param iri       */
+comment|/**      * Unregister dialect URI.      * @param iri      */
 specifier|public
 name|void
 name|unregisterDialect

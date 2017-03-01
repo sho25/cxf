@@ -278,7 +278,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * This CallbackHandler implementation obtains the previously received message from a   * DelegationCallback object, and obtains a received token   * (SAML/UsernameToken/BinarySecurityToken) from it to be used as the delegation token.  */
+comment|/**  * This CallbackHandler implementation obtains the previously received message from a  * DelegationCallback object, and obtains a received token  * (SAML/UsernameToken/BinarySecurityToken) from it to be used as the delegation token.  */
 end_comment
 
 begin_class

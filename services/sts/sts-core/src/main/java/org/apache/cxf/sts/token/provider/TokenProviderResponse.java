@@ -259,7 +259,7 @@ return|return
 name|unAttachedReference
 return|;
 block|}
-comment|/**      * Get the Date that this Token was Created       * @return the Date that this Token was Created       */
+comment|/**      * Get the Date that this Token was Created      * @return the Date that this Token was Created      */
 specifier|public
 name|Date
 name|getCreated
@@ -287,7 +287,7 @@ return|return
 literal|null
 return|;
 block|}
-comment|/**      * Set the Date that this Token was Created       * @param created the Date that this Token was Created      */
+comment|/**      * Set the Date that this Token was Created      * @param created the Date that this Token was Created      */
 specifier|public
 name|void
 name|setCreated

@@ -224,17 +224,9 @@ specifier|final
 name|Swagger2Feature
 name|feature
 init|=
-operator|new
-name|Swagger2Feature
+name|createSwagger2Feature
 argument_list|()
 decl_stmt|;
-name|feature
-operator|.
-name|setRunAsFilter
-argument_list|(
-name|runAsFilter
-argument_list|)
-expr_stmt|;
 comment|//FIXME swagger-jaxrs 1.5.3 can't handle a self-recursive subresource like Book
 comment|// so we need to exclude "org.apache.cxf.systest.jaxrs" for now.
 name|feature

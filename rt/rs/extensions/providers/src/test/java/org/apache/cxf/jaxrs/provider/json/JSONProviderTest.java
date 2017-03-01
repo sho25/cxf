@@ -1833,7 +1833,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          @
+unit|}      @
 name|Test
 specifier|public
 name|void
@@ -2020,7 +2020,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}          @
+unit|}      @
 name|Test
 specifier|public
 name|void
@@ -3022,7 +3022,7 @@ expr_stmt|;
 end_expr_stmt
 
 begin_function
-unit|}                     @
+unit|}         @
 name|Test
 specifier|public
 name|void
@@ -5544,9 +5544,7 @@ name|tags
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TagVO2
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|tags
@@ -5803,9 +5801,7 @@ name|books
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|books
@@ -6141,9 +6137,7 @@ name|books
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Book
-argument_list|>
+argument_list|<>
 argument_list|(
 operator|new
 name|TreeSet
@@ -10312,9 +10306,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|TagVO2Holder
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -10638,9 +10630,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -10795,9 +10785,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -11122,9 +11110,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -12982,9 +12968,7 @@ name|comments
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Comment
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -13453,7 +13437,7 @@ decl_stmt|;
 specifier|public
 name|ReportDefinition
 parameter_list|()
-block|{                 }
+block|{          }
 specifier|public
 name|ReportDefinition
 parameter_list|(
@@ -13541,9 +13525,7 @@ name|parameterList
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|ParameterDefinition
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -13763,7 +13745,7 @@ decl_stmt|;
 specifier|public
 name|TestBean
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|String
 name|getName
@@ -13846,7 +13828,7 @@ decl_stmt|;
 specifier|public
 name|BeanA
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|String
 name|getName
@@ -13928,7 +13910,7 @@ decl_stmt|;
 specifier|public
 name|BeanB
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|List
 argument_list|<
@@ -13989,7 +13971,7 @@ decl_stmt|;
 specifier|public
 name|BeanC
 parameter_list|()
-block|{                      }
+block|{          }
 specifier|public
 name|List
 argument_list|<

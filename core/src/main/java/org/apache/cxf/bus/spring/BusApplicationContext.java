@@ -991,9 +991,7 @@ name|resources
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Resource
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if
@@ -1567,7 +1565,7 @@ return|;
 end_return
 
 begin_function
-unit|}          public
+unit|}      public
 specifier|static
 name|Resource
 name|findResource

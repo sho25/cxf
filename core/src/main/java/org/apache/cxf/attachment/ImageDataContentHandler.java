@@ -228,7 +228,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -302,7 +302,7 @@ block|}
 specifier|public
 name|ImageDataContentHandler
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Object
 name|getContent

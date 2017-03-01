@@ -144,7 +144,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -260,9 +260,7 @@ name|entry
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|HashMapEntryType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public
@@ -325,12 +323,11 @@ name|arg0
 operator|!=
 literal|null
 operator|&&
+operator|!
 name|arg0
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 for|for

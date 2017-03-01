@@ -247,6 +247,20 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|attachment
+operator|.
+name|AttachmentUtil
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|binding
 operator|.
 name|soap
@@ -1276,6 +1290,11 @@ expr_stmt|;
 block|}
 block|}
 block|}
+annotation|@
+name|SuppressWarnings
+argument_list|(
+literal|"deprecation"
+argument_list|)
 specifier|private
 name|void
 name|handleMessageInternal
@@ -1618,6 +1637,46 @@ argument_list|,
 name|reqData
 argument_list|)
 expr_stmt|;
+comment|// Only search for and expand (Signed) XOP Elements if MTOM is enabled (and not
+comment|// explicitly specified by the user)
+if|if
+condition|(
+name|getString
+argument_list|(
+name|WSHandlerConstants
+operator|.
+name|EXPAND_XOP_INCLUDE_FOR_SIGNATURE
+argument_list|,
+name|msg
+argument_list|)
+operator|==
+literal|null
+operator|&&
+name|getString
+argument_list|(
+name|WSHandlerConstants
+operator|.
+name|EXPAND_XOP_INCLUDE
+argument_list|,
+name|msg
+argument_list|)
+operator|==
+literal|null
+condition|)
+block|{
+name|reqData
+operator|.
+name|setExpandXopInclude
+argument_list|(
+name|AttachmentUtil
+operator|.
+name|isMtomEnabled
+argument_list|(
+name|msg
+argument_list|)
+argument_list|)
+expr_stmt|;
+block|}
 comment|/*get chance to check msg context enableRevocation setting              *when use policy based ws-security where the WSHandler configuration              *isn't available              */
 name|boolean
 name|enableRevocation
@@ -2334,7 +2393,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Do whatever is necessary to determine the action for the incoming message and       * do whatever other setup work is necessary.      *       * @param msg      * @param reqData      */
+comment|/**      * Do whatever is necessary to determine the action for the incoming message and      * do whatever other setup work is necessary.      *      * @param msg      * @param reqData      */
 specifier|protected
 name|void
 name|computeAction
@@ -2539,7 +2598,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Is a Nonce Cache required, i.e. are we expecting a UsernameToken       */
+comment|/**      * Is a Nonce Cache required, i.e. are we expecting a UsernameToken      */
 specifier|protected
 name|boolean
 name|isNonceCacheRequired
@@ -2574,7 +2633,7 @@ name|UT_NOPASSWORD
 argument_list|)
 return|;
 block|}
-comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp       */
+comment|/**      * Is a Timestamp cache required, i.e. are we expecting a Timestamp      */
 specifier|protected
 name|boolean
 name|isTimestampCacheRequired
@@ -2600,7 +2659,7 @@ name|TS
 argument_list|)
 return|;
 block|}
-comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token       */
+comment|/**      * Is a SAML Cache required, i.e. are we expecting a SAML Token      */
 specifier|protected
 name|boolean
 name|isSamlCacheRequired
@@ -3474,7 +3533,7 @@ return|return
 name|ret
 return|;
 block|}
-comment|/**      * Get a ReplayCache instance. It first checks to see whether caching has been explicitly       * enabled or disabled via the booleanKey argument. If it has been set to false then no      * replay caching is done (for this booleanKey). If it has not been specified, then caching      * is enabled only if we are not the initiator of the exchange. If it has been specified, then      * caching is enabled.      *       * It tries to get an instance of ReplayCache via the instanceKey argument from a       * contextual property, and failing that the message exchange. If it can't find any, then it      * defaults to using an EH-Cache instance and stores that on the message exchange.      */
+comment|/**      * Get a ReplayCache instance. It first checks to see whether caching has been explicitly      * enabled or disabled via the booleanKey argument. If it has been set to false then no      * replay caching is done (for this booleanKey). If it has not been specified, then caching      * is enabled only if we are not the initiator of the exchange. If it has been specified, then      * caching is enabled.      *      * It tries to get an instance of ReplayCache via the instanceKey argument from a      * contextual property, and failing that the message exchange. If it can't find any, then it      * defaults to using an EH-Cache instance and stores that on the message exchange.      */
 specifier|protected
 name|ReplayCache
 name|getReplayCache

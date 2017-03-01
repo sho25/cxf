@@ -153,6 +153,24 @@ begin_import
 import|import
 name|org
 operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|transport
+operator|.
+name|websocket
+operator|.
+name|jetty9
+operator|.
+name|Jetty9WebSocketDestination
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
 name|easymock
 operator|.
 name|EasyMock
@@ -200,7 +218,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  *  */
 end_comment
 
 begin_class
@@ -368,7 +386,7 @@ specifier|static
 class|class
 name|TestJettyWebSocketDestination
 extends|extends
-name|JettyWebSocketDestination
+name|Jetty9WebSocketDestination
 block|{
 name|TestJettyWebSocketDestination
 parameter_list|(

@@ -70,7 +70,7 @@ block|{
 specifier|private
 name|PackageUtils
 parameter_list|()
-block|{              }
+block|{      }
 specifier|static
 name|String
 name|getPackageName
@@ -221,9 +221,7 @@ name|currentParts
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -875,9 +873,7 @@ name|r
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 while|while
@@ -929,9 +925,7 @@ name|r
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|T
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

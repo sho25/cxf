@@ -286,7 +286,7 @@ specifier|public
 name|void
 name|clear
 parameter_list|()
-block|{             }
+block|{     }
 specifier|public
 name|void
 name|setIntoAny

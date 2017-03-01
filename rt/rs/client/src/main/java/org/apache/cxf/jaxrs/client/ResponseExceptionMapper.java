@@ -45,7 +45,7 @@ extends|extends
 name|Throwable
 parameter_list|>
 block|{
-comment|/**      * Converts Response to checked or runtime Exception      * @param r JAXRS Response       * @return mapped exception instance, can be null      */
+comment|/**      * Converts Response to checked or runtime Exception      * @param r JAXRS Response      * @return mapped exception instance, can be null      */
 name|E
 name|fromResponse
 parameter_list|(

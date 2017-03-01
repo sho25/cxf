@@ -54,7 +54,7 @@ class|class
 name|BookApplication
 extends|extends
 name|Application
-block|{     }
+block|{ }
 end_class
 
 end_unit

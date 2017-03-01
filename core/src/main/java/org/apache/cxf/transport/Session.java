@@ -24,7 +24,7 @@ specifier|public
 interface|interface
 name|Session
 block|{
-comment|/**      * Get a variable from the session by the key.      *       * @param key      * @return Value      */
+comment|/**      * Get a variable from the session by the key.      *      * @param key      * @return Value      */
 name|Object
 name|get
 parameter_list|(
@@ -32,7 +32,7 @@ name|Object
 name|key
 parameter_list|)
 function_decl|;
-comment|/**      * Put a variable into the session with a key.      *       * @param key      * @param value      */
+comment|/**      * Put a variable into the session with a key.      *      * @param key      * @param value      */
 name|void
 name|put
 parameter_list|(

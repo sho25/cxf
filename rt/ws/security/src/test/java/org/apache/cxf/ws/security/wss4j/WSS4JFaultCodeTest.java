@@ -302,7 +302,7 @@ specifier|public
 name|WSS4JFaultCodeTest
 parameter_list|()
 block|{     }
-comment|/**      * Test for WSS4JInInterceptor when it receives a message with no security header.       */
+comment|/**      * Test for WSS4JInInterceptor when it receives a message with no security header.      */
 annotation|@
 name|Test
 specifier|public
@@ -594,7 +594,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Test that an invalid Timestamp gets mapped to a proper fault code       */
+comment|/**      * Test that an invalid Timestamp gets mapped to a proper fault code      */
 annotation|@
 name|Test
 specifier|public
@@ -936,7 +936,7 @@ argument_list|)
 expr_stmt|;
 block|}
 block|}
-comment|/**      * Test that an action mismatch gets mapped to a proper fault code       */
+comment|/**      * Test that an action mismatch gets mapped to a proper fault code      */
 annotation|@
 name|Test
 specifier|public

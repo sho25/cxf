@@ -390,7 +390,7 @@ block|}
 specifier|public
 name|AbstractToolContainer
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|AbstractToolContainer
 parameter_list|(

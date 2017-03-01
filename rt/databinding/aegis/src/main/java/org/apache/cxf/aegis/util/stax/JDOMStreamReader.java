@@ -276,9 +276,7 @@ name|namespaces
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Namespace
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -814,12 +812,11 @@ parameter_list|()
 block|{
 if|if
 condition|(
+operator|!
 name|namespaceStack
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|prefix2decNs

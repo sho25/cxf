@@ -50,7 +50,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Returning null from the getSchemaValidationType will be ignored.  This generally  * will mean, it falls back to the service endpoint default, whether configured   * by @SchemaValidation or a endpoint property.  */
+comment|/**  * Returning null from the getSchemaValidationType will be ignored.  This generally  * will mean, it falls back to the service endpoint default, whether configured  * by @SchemaValidation or a endpoint property.  */
 end_comment
 
 begin_interface

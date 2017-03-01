@@ -100,7 +100,7 @@ name|DestinationSequence
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve the source sequence with the specified identifier from persistent store.       * @param seq the sequence      * @return the sequence if present; otherwise null      */
+comment|/**      * Retrieve the source sequence with the specified identifier from persistent store.      * @param seq the sequence      * @return the sequence if present; otherwise null      */
 name|SourceSequence
 name|getSourceSequence
 parameter_list|(
@@ -108,7 +108,7 @@ name|Identifier
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieve the destination sequence with the specified identifier from persistent store.       * @param seq the sequence      * @return the sequence if present; otherwise null      */
+comment|/**      * Retrieve the destination sequence with the specified identifier from persistent store.      * @param seq the sequence      * @return the sequence if present; otherwise null      */
 name|DestinationSequence
 name|getDestinationSequence
 parameter_list|(
@@ -116,7 +116,7 @@ name|Identifier
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Remove the source sequence with the specified identifier from persistent store.       * @param seq the sequence      */
+comment|/**      * Remove the source sequence with the specified identifier from persistent store.      * @param seq the sequence      */
 name|void
 name|removeSourceSequence
 parameter_list|(
@@ -124,7 +124,7 @@ name|Identifier
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Remove the destination sequence with the specified identifier from persistent store.       * @param seq the sequence      */
+comment|/**      * Remove the destination sequence with the specified identifier from persistent store.      * @param seq the sequence      */
 name|void
 name|removeDestinationSequence
 parameter_list|(
@@ -132,7 +132,7 @@ name|Identifier
 name|seq
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieves all sequences managed by the identified RM source endpoint       * from persistent store.      *       * @param endpointIdentifier the identifier for the source      * @return the collection of sequences      */
+comment|/**      * Retrieves all sequences managed by the identified RM source endpoint      * from persistent store.      *      * @param endpointIdentifier the identifier for the source      * @return the collection of sequences      */
 name|Collection
 argument_list|<
 name|SourceSequence
@@ -143,7 +143,7 @@ name|String
 name|endpointIdentifier
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieves all sequences managed by the identified RM destination endpoint       * from persistent store.      *       * @param endpointIdentifier the identifier for the destination      * @return the collection of sequences      */
+comment|/**      * Retrieves all sequences managed by the identified RM destination endpoint      * from persistent store.      *      * @param endpointIdentifier the identifier for the destination      * @return the collection of sequences      */
 name|Collection
 argument_list|<
 name|DestinationSequence
@@ -154,7 +154,7 @@ name|String
 name|endpointIdentifier
 parameter_list|)
 function_decl|;
-comment|/**      * Retrieves the outbound/inbound messages stored for the source/destination sequence with       * the given identifier.      * @param sid the source sequence identifier      * @param outbound true if the message is outbound      * @return the collection of messages      * *       */
+comment|/**      * Retrieves the outbound/inbound messages stored for the source/destination sequence with      * the given identifier.      * @param sid the source sequence identifier      * @param outbound true if the message is outbound      * @return the collection of messages      * *      */
 name|Collection
 argument_list|<
 name|RMMessage
@@ -168,7 +168,7 @@ name|boolean
 name|outbound
 parameter_list|)
 function_decl|;
-comment|/**      * Called by an RM source upon processing an outbound message. The<code>RMMessage</code>      * parameter is null for non application (RM protocol) messages.      *       * @param seq the source sequence       * @param msg the outgoing message      */
+comment|/**      * Called by an RM source upon processing an outbound message. The<code>RMMessage</code>      * parameter is null for non application (RM protocol) messages.      *      * @param seq the source sequence      * @param msg the outgoing message      */
 name|void
 name|persistOutgoing
 parameter_list|(
@@ -179,7 +179,7 @@ name|RMMessage
 name|msg
 parameter_list|)
 function_decl|;
-comment|/**     * Called by an RM source upon processing an outbound message. The<code>RMMessage</code>      * parameter is null for non application (RM protocol) messages.      *      * @param seq the destination sequence     * @param msg the incoming message     */
+comment|/**     * Called by an RM source upon processing an outbound message. The<code>RMMessage</code>      * parameter is null for non application (RM protocol) messages.      *     * @param seq the destination sequence     * @param msg the incoming message     */
 name|void
 name|persistIncoming
 parameter_list|(
@@ -190,7 +190,7 @@ name|RMMessage
 name|msg
 parameter_list|)
 function_decl|;
-comment|/**      * Removes the messages with the given message numbers and identifiers from the store of      * outbound/inbound messages.      *       * @param sid the identifier of the source sequence      * @param messageNrs the collection of message numbers      * @param outbound true if the message is outbound      */
+comment|/**      * Removes the messages with the given message numbers and identifiers from the store of      * outbound/inbound messages.      *      * @param sid the identifier of the source sequence      * @param messageNrs the collection of message numbers      * @param outbound true if the message is outbound      */
 name|void
 name|removeMessages
 parameter_list|(

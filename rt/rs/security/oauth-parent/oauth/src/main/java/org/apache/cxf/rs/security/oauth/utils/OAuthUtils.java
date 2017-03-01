@@ -514,7 +514,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Various utility methods   */
+comment|/**  * Various utility methods  */
 end_comment
 
 begin_class
@@ -1343,9 +1343,7 @@ name|scopeList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 if|if

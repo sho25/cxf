@@ -175,6 +175,7 @@ argument_list|)
 expr_stmt|;
 block|}
 specifier|public
+specifier|final
 name|void
 name|setType
 parameter_list|(
@@ -699,6 +700,7 @@ argument_list|)
 return|;
 block|}
 specifier|public
+specifier|final
 name|JoseHeaders
 name|setHeader
 parameter_list|(

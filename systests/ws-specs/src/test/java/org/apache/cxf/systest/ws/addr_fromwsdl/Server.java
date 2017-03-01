@@ -180,7 +180,7 @@ extends|extends
 name|AddNumberImpl
 implements|implements
 name|AddNumbersPortType
-block|{              }
+block|{      }
 annotation|@
 name|WebService
 argument_list|(
@@ -204,7 +204,7 @@ extends|extends
 name|AddNumberImpl
 implements|implements
 name|AddNumbersPortType
-block|{              }
+block|{      }
 annotation|@
 name|WebService
 argument_list|(
@@ -228,7 +228,7 @@ extends|extends
 name|AddNumberImpl
 implements|implements
 name|AddNumbersPortType
-block|{              }
+block|{      }
 specifier|protected
 name|void
 name|run

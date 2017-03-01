@@ -68,7 +68,7 @@ decl_stmt|;
 specifier|public
 name|DocumentDepthProperties
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|DocumentDepthProperties
 parameter_list|(

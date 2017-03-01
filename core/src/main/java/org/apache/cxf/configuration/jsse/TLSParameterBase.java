@@ -135,9 +135,7 @@ name|ciphersuites
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|protected
@@ -175,7 +173,7 @@ operator|=
 name|prov
 expr_stmt|;
 block|}
-comment|/**      * Return the JSSE provider.        */
+comment|/**      * Return the JSSE provider.      */
 specifier|public
 name|String
 name|getJsseProvider
@@ -277,9 +275,7 @@ name|ciphersuites
 operator|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -287,7 +283,7 @@ return|return
 name|ciphersuites
 return|;
 block|}
-comment|/**      * This parameter sets the filter to include and/or exclude the       * cipher suites to use from the set list or system defaults.      */
+comment|/**      * This parameter sets the filter to include and/or exclude the      * cipher suites to use from the set list or system defaults.      */
 specifier|public
 specifier|final
 name|void
@@ -302,7 +298,7 @@ operator|=
 name|filters
 expr_stmt|;
 block|}
-comment|/**      * Returns the cipher suites filter       */
+comment|/**      * Returns the cipher suites filter      */
 specifier|public
 name|FiltersType
 name|getCipherSuitesFilter

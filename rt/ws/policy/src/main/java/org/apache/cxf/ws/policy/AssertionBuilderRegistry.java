@@ -40,12 +40,12 @@ name|AssertionBuilderRegistry
 extends|extends
 name|AssertionBuilderFactory
 block|{
-comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.      * @return false if unknown assertions will result in an exception       */
+comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.      * @return false if unknown assertions will result in an exception      */
 name|boolean
 name|isIgnoreUnknownAssertions
 parameter_list|()
 function_decl|;
-comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.       * @param ignoreUnknownAssertions if unknown assertions should be ignored      */
+comment|/**      * Indicates if unknown assertions should simply be ignored.      * If set to false, the policy engine will throw an exception upon      * encountering an assertion type for which no AssertionBuilder      * has been registered.      * @param ignoreUnknownAssertions if unknown assertions should be ignored      */
 name|void
 name|setIgnoreUnknownAssertions
 parameter_list|(

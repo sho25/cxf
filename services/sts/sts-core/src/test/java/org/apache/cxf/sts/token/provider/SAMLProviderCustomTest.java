@@ -387,9 +387,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -577,9 +575,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AuthenticationStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -769,9 +765,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AuthenticationStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -961,9 +955,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AuthenticationStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -995,9 +987,7 @@ name|customAttributeProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customAttributeProviderList
@@ -1175,9 +1165,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AttributeStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList
@@ -1374,9 +1362,7 @@ name|customProviderList
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|AuthDecisionStatementProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|customProviderList

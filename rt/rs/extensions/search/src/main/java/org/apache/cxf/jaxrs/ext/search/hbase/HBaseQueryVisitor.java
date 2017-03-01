@@ -374,9 +374,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Filter
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -446,9 +444,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Filter
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -525,9 +521,7 @@ name|push
 argument_list|(
 operator|new
 name|ArrayList
-argument_list|<
-name|Filter
-argument_list|>
+argument_list|<>
 argument_list|()
 argument_list|)
 expr_stmt|;

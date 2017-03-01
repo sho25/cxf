@@ -3339,9 +3339,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|BookReaderWriter
@@ -3529,9 +3527,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|SuperBookReaderWriter2
@@ -5669,9 +5665,7 @@ name|locations
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|locations
@@ -6475,7 +6469,7 @@ name|AbstractTestExceptionMapper
 argument_list|<
 name|RuntimeException
 argument_list|>
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 class|class
@@ -6485,7 +6479,7 @@ name|AbstractTestExceptionMapper
 argument_list|<
 name|WebApplicationException
 argument_list|>
-block|{              }
+block|{      }
 specifier|private
 specifier|static
 class|class
@@ -7313,7 +7307,7 @@ class|class
 name|CustomBooleanReader2
 extends|extends
 name|CustomBooleanReader
-block|{              }
+block|{      }
 specifier|public
 specifier|static
 class|class

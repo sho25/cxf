@@ -25,7 +25,7 @@ block|{
 specifier|public
 name|Customer2
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Customer2
 parameter_list|(

@@ -728,7 +728,7 @@ parameter_list|,
 name|PhaseInterceptorChain
 name|chain
 parameter_list|)
-block|{              }
+block|{      }
 specifier|public
 name|Bus
 name|getBus

@@ -55,7 +55,7 @@ decl_stmt|;
 specifier|public
 name|Name
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|Name
 parameter_list|(

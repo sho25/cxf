@@ -723,7 +723,7 @@ decl_stmt|;
 specifier|public
 name|CXFNonSpringJaxrsServlet
 parameter_list|()
-block|{              }
+block|{      }
 specifier|public
 name|CXFNonSpringJaxrsServlet
 parameter_list|(
@@ -1407,9 +1407,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1449,12 +1447,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|list
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 name|bean
@@ -1718,12 +1715,11 @@ block|}
 block|}
 if|if
 condition|(
+operator|!
 name|list
 operator|.
-name|size
+name|isEmpty
 argument_list|()
-operator|>
-literal|0
 condition|)
 block|{
 if|if
@@ -2347,7 +2343,8 @@ block|{
 return|return
 name|Collections
 operator|.
-name|EMPTY_LIST
+name|emptyList
+argument_list|()
 return|;
 block|}
 name|String
@@ -2371,9 +2368,7 @@ name|providers
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Object
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -2959,6 +2954,33 @@ name|map
 return|;
 block|}
 specifier|protected
+name|boolean
+name|isResourceLifecycleASingleton
+parameter_list|(
+name|ServletConfig
+name|servletConfig
+parameter_list|)
+block|{
+name|String
+name|scope
+init|=
+name|servletConfig
+operator|.
+name|getInitParameter
+argument_list|(
+name|SERVICE_SCOPE_PARAM
+argument_list|)
+decl_stmt|;
+return|return
+name|SERVICE_SCOPE_SINGLETON
+operator|.
+name|equals
+argument_list|(
+name|scope
+argument_list|)
+return|;
+block|}
+specifier|protected
 name|Object
 name|createSingletonInstance
 parameter_list|(
@@ -3507,7 +3529,7 @@ parameter_list|(
 name|Object
 name|instance
 parameter_list|)
-block|{              }
+block|{      }
 specifier|protected
 name|void
 name|createServerFromApplication
@@ -3604,6 +3626,14 @@ name|getStaticSubResolutionValue
 argument_list|(
 name|servletConfig
 argument_list|)
+argument_list|,
+name|isResourceLifecycleASingleton
+argument_list|(
+name|servletConfig
+argument_list|)
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|String
@@ -3733,6 +3763,14 @@ name|getStaticSubResolutionValue
 argument_list|(
 name|servletConfig
 argument_list|)
+argument_list|,
+name|isResourceLifecycleASingleton
+argument_list|(
+name|servletConfig
+argument_list|)
+argument_list|,
+name|getBus
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|bean

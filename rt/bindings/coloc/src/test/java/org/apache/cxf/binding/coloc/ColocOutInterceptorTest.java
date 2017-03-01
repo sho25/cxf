@@ -1017,9 +1017,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -2066,9 +2064,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//Local var
@@ -2198,9 +2194,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -2406,9 +2400,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -2722,9 +2714,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -3118,9 +3108,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list
@@ -3740,9 +3728,7 @@ name|list
 init|=
 operator|new
 name|ArrayList
-argument_list|<
-name|Server
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|list

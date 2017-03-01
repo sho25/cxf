@@ -248,7 +248,7 @@ name|stopAllServers
 argument_list|()
 expr_stmt|;
 block|}
-comment|/**      * Here the key derived from a UsernameToken is used as a protection token for the       * symmetric binding, and used to sign the SOAP Body.      */
+comment|/**      * Here the key derived from a UsernameToken is used as a protection token for the      * symmetric binding, and used to sign the SOAP Body.      */
 annotation|@
 name|org
 operator|.
@@ -393,7 +393,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Here the key derived from a UsernameToken (and derived again) is used as a protection       * token for the symmetric binding, and used to sign the SOAP Body.      */
+comment|/**      * Here the key derived from a UsernameToken (and derived again) is used as a protection      * token for the symmetric binding, and used to sign the SOAP Body.      */
 annotation|@
 name|org
 operator|.
@@ -538,7 +538,7 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Here the key derived from a UsernameToken is used as a protection token for the       * symmetric binding, and used to encrypt the SOAP Body.      */
+comment|/**      * Here the key derived from a UsernameToken is used as a protection token for the      * symmetric binding, and used to encrypt the SOAP Body.      */
 annotation|@
 name|org
 operator|.

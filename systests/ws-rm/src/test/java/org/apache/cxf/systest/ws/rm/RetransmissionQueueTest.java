@@ -107,6 +107,38 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingInInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
+name|ext
+operator|.
+name|logging
+operator|.
+name|LoggingOutInterceptor
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|greeter_control
 operator|.
 name|Greeter
@@ -124,34 +156,6 @@ operator|.
 name|greeter_control
 operator|.
 name|GreeterService
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingInInterceptor
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|LoggingOutInterceptor
 import|;
 end_import
 
@@ -242,7 +246,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the decoupling the soap fault handling if the fault occurs after   * the message is queued and retransmission is scheduled.  */
+comment|/**  * Tests the decoupling the soap fault handling if the fault occurs after  * the message is queued and retransmission is scheduled.  */
 end_comment
 
 begin_class

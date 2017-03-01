@@ -752,11 +752,11 @@ literal|null
 decl_stmt|;
 if|if
 condition|(
-name|protocol
+literal|"https"
 operator|.
 name|equals
 argument_list|(
-literal|"https"
+name|protocol
 argument_list|)
 operator|&&
 name|tlsServerParametersMap

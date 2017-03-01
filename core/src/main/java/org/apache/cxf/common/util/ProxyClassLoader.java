@@ -48,7 +48,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Utility class loader that can be used to create proxies in cases where  * the the client classes are not visible to the loader of the  * service class.      */
+comment|/**  * Utility class loader that can be used to create proxies in cases where  * the the client classes are not visible to the loader of the  * service class.  */
 end_comment
 
 begin_class
@@ -77,9 +77,7 @@ name|loaders
 init|=
 operator|new
 name|HashSet
-argument_list|<
-name|ClassLoader
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

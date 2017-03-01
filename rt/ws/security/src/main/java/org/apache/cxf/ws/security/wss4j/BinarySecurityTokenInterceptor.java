@@ -386,7 +386,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * An interceptor to add a BinarySecurityToken token to the security header of an outbound request, and to  * process a BinarySecurityToken on an inbound request. It takes the BinarySecurityToken from the message   * context on the outbound side.  */
+comment|/**  * An interceptor to add a BinarySecurityToken token to the security header of an outbound request, and to  * process a BinarySecurityToken on an inbound request. It takes the BinarySecurityToken from the message  * context on the outbound side.  */
 end_comment
 
 begin_class
@@ -713,18 +713,6 @@ parameter_list|)
 throws|throws
 name|WSSecurityException
 block|{
-name|WSDocInfo
-name|wsDocInfo
-init|=
-operator|new
-name|WSDocInfo
-argument_list|(
-name|tokenElement
-operator|.
-name|getOwnerDocument
-argument_list|()
-argument_list|)
-decl_stmt|;
 name|RequestData
 name|data
 init|=
@@ -798,6 +786,25 @@ name|getNewInstance
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|WSDocInfo
+name|wsDocInfo
+init|=
+operator|new
+name|WSDocInfo
+argument_list|(
+name|tokenElement
+operator|.
+name|getOwnerDocument
+argument_list|()
+argument_list|)
+decl_stmt|;
+name|data
+operator|.
+name|setWsDocInfo
+argument_list|(
+name|wsDocInfo
+argument_list|)
+expr_stmt|;
 name|BinarySecurityTokenProcessor
 name|p
 init|=
@@ -805,12 +812,7 @@ operator|new
 name|BinarySecurityTokenProcessor
 argument_list|()
 decl_stmt|;
-name|List
-argument_list|<
-name|WSSecurityEngineResult
-argument_list|>
-name|results
-init|=
+return|return
 name|p
 operator|.
 name|handleToken
@@ -818,12 +820,7 @@ argument_list|(
 name|tokenElement
 argument_list|,
 name|data
-argument_list|,
-name|wsDocInfo
 argument_list|)
-decl_stmt|;
-return|return
-name|results
 return|;
 block|}
 specifier|protected

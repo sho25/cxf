@@ -1657,7 +1657,7 @@ argument_list|)
 throw|;
 block|}
 block|}
-comment|/**      * Creates OData parser.      *       * @param conditionClass - class of T used to create condition objects. Class T must have      *            accessible no-arguments constructor and complementary setters to these used in       *            OData $filter expressions.      */
+comment|/**      * Creates OData parser.      *      * @param conditionClass - class of T used to create condition objects. Class T must have      *            accessible no-arguments constructor and complementary setters to these used in      *            OData $filter expressions.      */
 specifier|public
 name|ODataParser
 parameter_list|(
@@ -1685,7 +1685,7 @@ argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates OData parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in       *            OData $filter expressions.      * @param contextProperties                  */
+comment|/**      * Creates OData parser.      *      * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in      *            OData $filter expressions.      * @param contextProperties      */
 specifier|public
 name|ODataParser
 parameter_list|(
@@ -1714,7 +1714,7 @@ literal|null
 argument_list|)
 expr_stmt|;
 block|}
-comment|/**      * Creates OData parser.      *       * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in      *            OData $filter expressions.      * @param contextProperties                  */
+comment|/**      * Creates OData parser.      *      * @param tclass - class of T used to create condition objects in built syntax tree. Class T must have      *            accessible no-arg constructor and complementary setters to these used in      *            OData $filter expressions.      * @param contextProperties      */
 specifier|public
 name|ODataParser
 parameter_list|(

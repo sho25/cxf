@@ -262,9 +262,19 @@ name|location
 init|=
 literal|null
 decl_stmt|;
+comment|// when schema is being resolved for custom namespace elements, "namespace" is real namespace
+comment|// (from xmlns:prefix="<namespace>"
+comment|// but when namespace is<xsd:import>ed, aries/xerces uses systemID (schemaLocation)
 if|if
 condition|(
 literal|"http://cxf.apache.org/configuration/beans"
+operator|.
+name|equals
+argument_list|(
+name|namespace
+argument_list|)
+operator|||
+literal|"http://cxf.apache.org/schemas/configuration/cxf-beans.xsd"
 operator|.
 name|equals
 argument_list|(
@@ -286,6 +296,13 @@ name|equals
 argument_list|(
 name|namespace
 argument_list|)
+operator|||
+literal|"http://cxf.apache.org/schemas/configuration/parameterized-types.xsd"
+operator|.
+name|equals
+argument_list|(
+name|namespace
+argument_list|)
 condition|)
 block|{
 name|location
@@ -297,6 +314,13 @@ elseif|else
 if|if
 condition|(
 literal|"http://cxf.apache.org/configuration/security"
+operator|.
+name|equals
+argument_list|(
+name|namespace
+argument_list|)
+operator|||
+literal|"http://cxf.apache.org/schemas/configuration/security.xsd"
 operator|.
 name|equals
 argument_list|(
@@ -318,6 +342,13 @@ name|equals
 argument_list|(
 name|namespace
 argument_list|)
+operator|||
+literal|"http://schemas.xmlsoap.org/wsdl/2003-02-11.xsd"
+operator|.
+name|equals
+argument_list|(
+name|namespace
+argument_list|)
 condition|)
 block|{
 name|location
@@ -329,6 +360,13 @@ elseif|else
 if|if
 condition|(
 literal|"http://www.w3.org/2005/08/addressing"
+operator|.
+name|equals
+argument_list|(
+name|namespace
+argument_list|)
+operator|||
+literal|"http://www.w3.org/2006/03/addressing/ws-addr.xsd"
 operator|.
 name|equals
 argument_list|(

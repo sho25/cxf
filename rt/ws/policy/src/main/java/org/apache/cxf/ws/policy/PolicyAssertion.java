@@ -30,7 +30,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Interface to mark Assertions that can participate in CXF's   * assertion mechanism to make sure the policies have been  * applied.   */
+comment|/**  * Interface to mark Assertions that can participate in CXF's  * assertion mechanism to make sure the policies have been  * applied.  */
 end_comment
 
 begin_interface
