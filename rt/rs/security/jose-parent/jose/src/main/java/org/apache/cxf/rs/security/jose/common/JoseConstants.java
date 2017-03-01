@@ -337,17 +337,6 @@ name|RSSEC_EC_CURVE
 init|=
 literal|"rs.security.elliptic.curve"
 decl_stmt|;
-comment|/**      * The OLD signature algorithm identifier. Use RSSEC_SIGNATURE_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_SIGNATURE_ALGORITHM
-init|=
-literal|"rs.security.jws.content.signature.algorithm"
-decl_stmt|;
 comment|/**      * The signature properties file for compact signature creation. If not specified then it falls back to      * RSSEC_SIGNATURE_PROPS.      */
 specifier|public
 specifier|static
