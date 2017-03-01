@@ -421,17 +421,6 @@ name|RSSEC_ENCRYPTION_CONTENT_ALGORITHM
 init|=
 literal|"rs.security.encryption.content.algorithm"
 decl_stmt|;
-comment|/**      * The OLD encryption content algorithm to use. Use RSSEC_ENCRYPTION_CONTENT_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_ENCRYPTION_CONTENT_ALGORITHM
-init|=
-literal|"rs.security.jwe.content.encryption.algorithm"
-decl_stmt|;
 comment|/**      * The encryption key algorithm to use. The default algorithm if not specified is 'RSA-OAEP' if the key is an      * RSA key, and 'A128GCMKW' if it is an octet sequence.      */
 specifier|public
 specifier|static
@@ -441,17 +430,6 @@ name|RSSEC_ENCRYPTION_KEY_ALGORITHM
 init|=
 literal|"rs.security.encryption.key.algorithm"
 decl_stmt|;
-comment|/**      * The OLD encryption key algorithm to use. Use RSSEC_ENCRYPTION_KEY_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_ENCRYPTION_KEY_ALGORITHM
-init|=
-literal|"rs.security.jwe.key.encryption.algorithm"
-decl_stmt|;
 comment|/**      * The encryption zip algorithm to use.      */
 specifier|public
 specifier|static
@@ -460,17 +438,6 @@ name|String
 name|RSSEC_ENCRYPTION_ZIP_ALGORITHM
 init|=
 literal|"rs.security.encryption.zip.algorithm"
-decl_stmt|;
-comment|/**      * The OLD encryption zip algorithm to use. Use RSSEC_ENCRYPTION_ZIP_ALGORITHM instead.      */
-annotation|@
-name|Deprecated
-specifier|public
-specifier|static
-specifier|final
-name|String
-name|DEPR_RSSEC_ENCRYPTION_ZIP_ALGORITHM
-init|=
-literal|"rs.security.jwe.zip.algorithm"
 decl_stmt|;
 comment|/**      * The encryption properties file for encryption creation. If not specified then it falls back to      * RSSEC_ENCRYPTION_PROPS.      */
 specifier|public
