@@ -314,6 +314,8 @@ name|loginHandler
 operator|.
 name|createSubject
 argument_list|(
+name|client
+argument_list|,
 name|ownerName
 argument_list|,
 name|ownerPassword
