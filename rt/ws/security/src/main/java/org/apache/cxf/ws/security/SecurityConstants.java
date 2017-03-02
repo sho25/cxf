@@ -215,6 +215,15 @@ name|ADD_INCLUSIVE_PREFIXES
 init|=
 literal|"ws-security.add.inclusive.prefixes"
 decl_stmt|;
+comment|/**      * Whether to disable the enforcement of the WS-SecurityPolicy 'RequireClientCertificate' policy.       * Default is "false". Some servers may not do client certificate verification at the start of the SSL       * handshake, and therefore the client certs may not be available to the WS-Security layer for policy       * verification at that time.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|DISABLE_REQ_CLIENT_CERT_CHECK
+init|=
+literal|"ws-security.disable.require.client.cert.check"
+decl_stmt|;
 comment|//
 comment|// Non-boolean WS-Security Configuration parameters
 comment|//
@@ -666,6 +675,8 @@ block|,
 name|SECURITY_CONTEXT_CREATOR
 block|,
 name|SECURITY_TOKEN_LIFETIME
+block|,
+name|DISABLE_REQ_CLIENT_CERT_CHECK
 block|}
 argument_list|)
 argument_list|)
