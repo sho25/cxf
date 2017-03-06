@@ -303,7 +303,7 @@ annotation|@
 name|Override
 specifier|public
 name|Client
-name|getClient
+name|doGetClient
 parameter_list|(
 specifier|final
 name|String
