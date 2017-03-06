@@ -216,7 +216,7 @@ super|super
 name|OutboundSseEvent
 argument_list|>
 argument_list|,
-name|Exception
+name|Throwable
 argument_list|>
 argument_list|>
 name|exceptioners
@@ -398,7 +398,7 @@ annotation|@
 name|Override
 specifier|public
 name|void
-name|onException
+name|onError
 parameter_list|(
 name|BiConsumer
 argument_list|<
@@ -409,7 +409,7 @@ super|super
 name|OutboundSseEvent
 argument_list|>
 argument_list|,
-name|Exception
+name|Throwable
 argument_list|>
 name|exceptioner
 parameter_list|)
