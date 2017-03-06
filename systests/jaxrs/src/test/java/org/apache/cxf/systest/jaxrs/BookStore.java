@@ -10064,7 +10064,7 @@ literal|"id_2"
 argument_list|)
 specifier|private
 name|long
-name|id2
+name|mId2
 decl_stmt|;
 specifier|private
 name|long
@@ -10105,7 +10105,7 @@ name|getId2
 parameter_list|()
 block|{
 return|return
-name|id2
+name|mId2
 return|;
 block|}
 specifier|public
@@ -10118,7 +10118,7 @@ parameter_list|)
 block|{
 name|this
 operator|.
-name|id2
+name|mId2
 operator|=
 name|id2
 expr_stmt|;
