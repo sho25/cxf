@@ -499,6 +499,16 @@ name|org
 operator|.
 name|junit
 operator|.
+name|Assert
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|junit
+operator|.
 name|Before
 import|;
 end_import
@@ -536,18 +546,6 @@ operator|.
 name|support
 operator|.
 name|ClassPathXmlApplicationContext
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|springframework
-operator|.
-name|util
-operator|.
-name|Assert
 import|;
 end_import
 
@@ -896,7 +894,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -979,18 +977,8 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-name|retrievedClaims
-operator|.
-name|size
-argument_list|()
-operator|==
-name|expectedClaims
-operator|.
-name|size
-argument_list|()
-argument_list|,
 literal|"Retrieved number of claims ["
 operator|+
 name|retrievedClaims
@@ -1006,6 +994,16 @@ name|size
 argument_list|()
 operator|+
 literal|"]"
+argument_list|,
+name|retrievedClaims
+operator|.
+name|size
+argument_list|()
+operator|==
+name|expectedClaims
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 for|for
@@ -1044,10 +1042,8 @@ else|else
 block|{
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-literal|false
-argument_list|,
 literal|"Claim '"
 operator|+
 name|c
@@ -1056,6 +1052,8 @@ name|getClaimType
 argument_list|()
 operator|+
 literal|"' not requested"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1163,18 +1161,8 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-name|retrievedClaims
-operator|.
-name|size
-argument_list|()
-operator|==
-name|expectedClaims
-operator|.
-name|size
-argument_list|()
-argument_list|,
 literal|"Retrieved number of claims ["
 operator|+
 name|retrievedClaims
@@ -1190,6 +1178,16 @@ name|size
 argument_list|()
 operator|+
 literal|"]"
+argument_list|,
+name|retrievedClaims
+operator|.
+name|size
+argument_list|()
+operator|==
+name|expectedClaims
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 for|for
@@ -1228,10 +1226,8 @@ else|else
 block|{
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-literal|false
-argument_list|,
 literal|"Claim '"
 operator|+
 name|c
@@ -1240,6 +1236,8 @@ name|getClaimType
 argument_list|()
 operator|+
 literal|"' not requested"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1283,7 +1281,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -1302,7 +1300,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|otherUser
 argument_list|,
@@ -1386,18 +1384,8 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-name|retrievedClaims
-operator|.
-name|size
-argument_list|()
-operator|==
-name|expectedClaims
-operator|.
-name|size
-argument_list|()
-argument_list|,
 literal|"Retrieved number of claims ["
 operator|+
 name|retrievedClaims
@@ -1413,6 +1401,16 @@ name|size
 argument_list|()
 operator|+
 literal|"]"
+argument_list|,
+name|retrievedClaims
+operator|.
+name|size
+argument_list|()
+operator|==
+name|expectedClaims
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 for|for
@@ -1451,10 +1449,8 @@ else|else
 block|{
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-literal|false
-argument_list|,
 literal|"Claim '"
 operator|+
 name|c
@@ -1463,6 +1459,8 @@ name|getClaimType
 argument_list|()
 operator|+
 literal|"' not requested"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1519,18 +1517,8 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-name|retrievedClaims
-operator|.
-name|size
-argument_list|()
-operator|==
-name|expectedClaims
-operator|.
-name|size
-argument_list|()
-argument_list|,
 literal|"Retrieved number of claims ["
 operator|+
 name|retrievedClaims
@@ -1546,6 +1534,16 @@ name|size
 argument_list|()
 operator|+
 literal|"]"
+argument_list|,
+name|retrievedClaims
+operator|.
+name|size
+argument_list|()
+operator|==
+name|expectedClaims
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 for|for
@@ -1584,10 +1582,8 @@ else|else
 block|{
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-literal|false
-argument_list|,
 literal|"Claim '"
 operator|+
 name|c
@@ -1596,6 +1592,8 @@ name|getClaimType
 argument_list|()
 operator|+
 literal|"' not requested"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -1646,7 +1644,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -1840,7 +1838,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -1955,18 +1953,8 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-name|retrievedClaims
-operator|.
-name|size
-argument_list|()
-operator|==
-name|expectedClaims
-operator|.
-name|size
-argument_list|()
-argument_list|,
 literal|"Retrieved number of claims ["
 operator|+
 name|retrievedClaims
@@ -1982,6 +1970,16 @@ name|size
 argument_list|()
 operator|+
 literal|"]"
+argument_list|,
+name|retrievedClaims
+operator|.
+name|size
+argument_list|()
+operator|==
+name|expectedClaims
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 for|for
@@ -2020,10 +2018,8 @@ else|else
 block|{
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-literal|false
-argument_list|,
 literal|"Claim '"
 operator|+
 name|c
@@ -2032,6 +2028,8 @@ name|getClaimType
 argument_list|()
 operator|+
 literal|"' not requested"
+argument_list|,
+literal|false
 argument_list|)
 expr_stmt|;
 block|}
@@ -2105,8 +2103,10 @@ argument_list|()
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
+literal|"Supported claims and claims/ldap attribute mapping size different"
+argument_list|,
 name|mapping
 operator|.
 name|size
@@ -2116,8 +2116,6 @@ name|supportedClaims
 operator|.
 name|size
 argument_list|()
-argument_list|,
-literal|"Supported claims and claims/ldap attribute mapping size different"
 argument_list|)
 expr_stmt|;
 for|for
@@ -2133,8 +2131,14 @@ control|)
 block|{
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
+literal|"Claim '"
+operator|+
+name|claim
+operator|+
+literal|"' not listed in supported list"
+argument_list|,
 name|supportedClaims
 operator|.
 name|contains
@@ -2145,12 +2149,6 @@ argument_list|(
 name|claim
 argument_list|)
 argument_list|)
-argument_list|,
-literal|"Claim '"
-operator|+
-name|claim
-operator|+
-literal|"' not listed in supported list"
 argument_list|)
 expr_stmt|;
 block|}
@@ -2193,7 +2191,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -2322,18 +2320,8 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
-name|retrievedClaims
-operator|.
-name|size
-argument_list|()
-operator|==
-name|expectedClaims
-operator|.
-name|size
-argument_list|()
-argument_list|,
 literal|"Retrieved number of claims ["
 operator|+
 name|retrievedClaims
@@ -2349,6 +2337,16 @@ name|size
 argument_list|()
 operator|+
 literal|"]"
+argument_list|,
+name|retrievedClaims
+operator|.
+name|size
+argument_list|()
+operator|==
+name|expectedClaims
+operator|.
+name|size
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|boolean
@@ -2388,7 +2386,7 @@ literal|true
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|c
 operator|.
@@ -2450,7 +2448,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|cert
 operator|!=
@@ -2461,7 +2459,7 @@ block|}
 block|}
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|foundCert
 argument_list|)
@@ -2505,7 +2503,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -2582,7 +2580,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2594,7 +2592,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2614,7 +2612,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2729,7 +2727,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2741,7 +2739,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2761,7 +2759,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2818,7 +2816,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -2895,7 +2893,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2907,7 +2905,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2927,7 +2925,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -2984,7 +2982,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|notNull
+name|assertNotNull
 argument_list|(
 name|user
 argument_list|,
@@ -3061,7 +3059,7 @@ argument_list|)
 decl_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -3073,7 +3071,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
@@ -3093,7 +3091,7 @@ argument_list|)
 expr_stmt|;
 name|Assert
 operator|.
-name|isTrue
+name|assertTrue
 argument_list|(
 name|retrievedClaims
 operator|.
