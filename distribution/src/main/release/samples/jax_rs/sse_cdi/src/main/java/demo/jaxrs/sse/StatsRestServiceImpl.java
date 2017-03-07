@@ -17,16 +17,6 @@ begin_import
 import|import
 name|java
 operator|.
-name|io
-operator|.
-name|IOException
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
 name|util
 operator|.
 name|Date
@@ -465,9 +455,7 @@ block|}
 catch|catch
 parameter_list|(
 specifier|final
-name|InterruptedException
-decl||
-name|IOException
+name|Exception
 name|e
 parameter_list|)
 block|{
