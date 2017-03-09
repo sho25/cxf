@@ -2775,12 +2775,7 @@ name|params
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-index|[]
-argument_list|>
+argument_list|<>
 argument_list|(
 name|request
 operator|.

@@ -432,14 +432,10 @@ name|duplicateTypeTrackerMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
-comment|//    private static Map<String, String> duplicateMessageTrackerMap = new HashMap<String, String>();
+comment|//    private static Map<String, String> duplicateMessageTrackerMap = new HashMap<>();
 specifier|private
 specifier|static
 specifier|final

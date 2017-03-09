@@ -161,11 +161,7 @@ name|customers
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Long
-argument_list|,
-name|Customer
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|Map
@@ -178,11 +174,7 @@ name|orders
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Long
-argument_list|,
-name|Order
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|public

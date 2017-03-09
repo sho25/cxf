@@ -466,11 +466,7 @@ name|wrapperMap
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|QName
-argument_list|,
-name|BindingOperationInfo
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 for|for

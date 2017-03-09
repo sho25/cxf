@@ -180,14 +180,7 @@ name|handlerMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|PortInfo
-argument_list|,
-name|List
-argument_list|<
-name|Handler
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|//private QName service;

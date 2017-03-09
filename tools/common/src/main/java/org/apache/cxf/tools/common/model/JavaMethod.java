@@ -290,11 +290,7 @@ name|annotations
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|JAnnotation
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private
@@ -311,11 +307,7 @@ name|PRIMITIVE_MAP
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|PRIMITIVE_MAP

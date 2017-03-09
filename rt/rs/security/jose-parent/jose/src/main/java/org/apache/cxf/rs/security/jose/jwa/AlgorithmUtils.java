@@ -827,11 +827,7 @@ name|JAVA_TO_JWA_NAMES
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|JAVA_TO_JWA_NAMES
@@ -1054,11 +1050,7 @@ name|JWA_TO_JAVA_NAMES
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|JWA_TO_JAVA_NAMES

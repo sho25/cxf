@@ -2053,11 +2053,7 @@ name|exceptions
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|TypeCode
-argument_list|,
-name|RaisesType
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 name|List

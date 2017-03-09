@@ -414,11 +414,7 @@ name|map
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|QName
-argument_list|>
+argument_list|<>
 argument_list|(
 literal|2
 argument_list|)

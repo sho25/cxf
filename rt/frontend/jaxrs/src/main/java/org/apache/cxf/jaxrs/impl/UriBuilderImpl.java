@@ -1718,11 +1718,7 @@ name|varValueMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// vars in set are properly ordered due to linking in hash set
@@ -2438,11 +2434,7 @@ name|decodedMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|(
 name|map
 operator|.

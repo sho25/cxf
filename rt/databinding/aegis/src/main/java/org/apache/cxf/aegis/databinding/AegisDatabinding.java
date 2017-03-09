@@ -804,11 +804,7 @@ name|part2Type
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|MessagePartInfo
-argument_list|,
-name|AegisType
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 block|}
@@ -1245,14 +1241,7 @@ name|implMap
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|// now for a really annoying case, the .implementation objects.
@@ -2409,14 +2398,7 @@ name|tns2Type
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Set
-argument_list|<
-name|AegisType
-argument_list|>
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for

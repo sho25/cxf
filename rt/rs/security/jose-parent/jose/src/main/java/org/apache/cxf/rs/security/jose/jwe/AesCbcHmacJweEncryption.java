@@ -178,11 +178,7 @@ name|AES_HMAC_MAP
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|AES_HMAC_MAP
@@ -237,11 +233,7 @@ name|AES_CEK_SIZE_MAP
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|AES_CEK_SIZE_MAP

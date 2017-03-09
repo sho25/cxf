@@ -133,11 +133,7 @@ name|exts
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Extension
-argument_list|>
+argument_list|<>
 argument_list|(
 name|extensions
 operator|.

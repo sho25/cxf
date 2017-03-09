@@ -510,14 +510,7 @@ name|resourceProviders
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Class
-argument_list|<
-name|?
-argument_list|>
-argument_list|,
-name|ResourceProvider
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 specifier|private

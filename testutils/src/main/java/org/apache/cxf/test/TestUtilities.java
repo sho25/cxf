@@ -522,11 +522,7 @@ name|namespaces
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|String
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 comment|/**      * This class provides utilities to several conflicting inheritance stacks      * of test support. Thus, it can't be a base class, and so can't use      * getClass() to find resources. Users should pass getClass() to this      * constructor instead.      *      * @param classpathReference      */

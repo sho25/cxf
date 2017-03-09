@@ -158,11 +158,7 @@ name|SIGNATURE_LENGTH_MAP
 operator|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Integer
-argument_list|>
+argument_list|<>
 argument_list|()
 expr_stmt|;
 name|SIGNATURE_LENGTH_MAP

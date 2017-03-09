@@ -742,11 +742,7 @@ name|cl
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|String
-argument_list|,
-name|Cookie
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
@@ -1258,11 +1254,7 @@ name|prefs
 init|=
 operator|new
 name|HashMap
-argument_list|<
-name|Locale
-argument_list|,
-name|Float
-argument_list|>
+argument_list|<>
 argument_list|()
 decl_stmt|;
 for|for
