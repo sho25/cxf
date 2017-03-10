@@ -719,6 +719,9 @@ name|paramType
 operator|=
 name|field
 operator|.
+name|getAnnotated
+argument_list|()
+operator|.
 name|getGenericType
 argument_list|()
 expr_stmt|;
@@ -772,6 +775,9 @@ literal|null
 operator|&&
 name|setter
 operator|.
+name|getMember
+argument_list|()
+operator|.
 name|getGenericParameterTypes
 argument_list|()
 operator|!=
@@ -781,6 +787,9 @@ block|{
 name|paramType
 operator|=
 name|setter
+operator|.
+name|getMember
+argument_list|()
 operator|.
 name|getGenericParameterTypes
 argument_list|()
