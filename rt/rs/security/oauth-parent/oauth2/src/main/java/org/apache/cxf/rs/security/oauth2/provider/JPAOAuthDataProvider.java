@@ -1418,16 +1418,6 @@ argument_list|(
 name|perms
 argument_list|)
 expr_stmt|;
-if|if
-condition|(
-name|serverToken
-operator|.
-name|getSubject
-argument_list|()
-operator|!=
-literal|null
-condition|)
-block|{
 name|UserSubject
 name|sub
 init|=
@@ -1470,10 +1460,15 @@ else|else
 block|{
 name|sub
 operator|=
+name|em
+operator|.
+name|merge
+argument_list|(
 name|serverToken
 operator|.
 name|getSubject
 argument_list|()
+argument_list|)
 expr_stmt|;
 name|serverToken
 operator|.
@@ -1482,7 +1477,6 @@ argument_list|(
 name|sub
 argument_list|)
 expr_stmt|;
-block|}
 block|}
 comment|// ensure we have a managed association
 comment|// (needed for OpenJPA : InvalidStateException: Encountered unmanaged object)
