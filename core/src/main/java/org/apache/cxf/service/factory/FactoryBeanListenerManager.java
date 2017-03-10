@@ -136,6 +136,15 @@ name|AnnotationsFactoryBeanListener
 argument_list|()
 argument_list|)
 expr_stmt|;
+name|listeners
+operator|.
+name|add
+argument_list|(
+operator|new
+name|OldLoggingFactoryBeanListener
+argument_list|()
+argument_list|)
+expr_stmt|;
 block|}
 specifier|public
 name|FactoryBeanListenerManager
@@ -219,8 +228,10 @@ control|)
 block|{
 name|listeners
 operator|.
-name|addIfAbsent
+name|add
 argument_list|(
+literal|0
+argument_list|,
 name|f
 argument_list|)
 expr_stmt|;
