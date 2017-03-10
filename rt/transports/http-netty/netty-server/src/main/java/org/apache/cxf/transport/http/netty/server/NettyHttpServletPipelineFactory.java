@@ -802,6 +802,17 @@ name|pipeline
 operator|.
 name|addLast
 argument_list|(
+literal|"encoder"
+argument_list|,
+operator|new
+name|HttpResponseEncoder
+argument_list|()
+argument_list|)
+expr_stmt|;
+name|pipeline
+operator|.
+name|addLast
+argument_list|(
 literal|"aggregator"
 argument_list|,
 operator|new
@@ -809,17 +820,6 @@ name|HttpObjectAggregator
 argument_list|(
 name|maxChunkContentSize
 argument_list|)
-argument_list|)
-expr_stmt|;
-name|pipeline
-operator|.
-name|addLast
-argument_list|(
-literal|"encoder"
-argument_list|,
-operator|new
-name|HttpResponseEncoder
-argument_list|()
 argument_list|)
 expr_stmt|;
 comment|// Remove the following line if you don't want automatic content
