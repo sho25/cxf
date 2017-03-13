@@ -2928,7 +2928,7 @@ decl_stmt|;
 if|if
 condition|(
 name|scope
-operator|!=
+operator|==
 literal|null
 condition|)
 block|{
