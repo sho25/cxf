@@ -11,7 +11,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|annotations
+name|ext
+operator|.
+name|logging
 package|;
 end_package
 
@@ -87,27 +89,11 @@ name|Target
 import|;
 end_import
 
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
-name|interceptor
-operator|.
-name|AbstractLoggingInterceptor
-import|;
-end_import
-
 begin_comment
 comment|/**  * Enables message Logging  */
 end_comment
 
 begin_annotation_defn
-annotation|@
-name|Deprecated
 annotation|@
 name|Documented
 annotation|@
@@ -141,18 +127,14 @@ name|AbstractLoggingInterceptor
 operator|.
 name|DEFAULT_LIMIT
 function_decl|;
-comment|/**      * the locations where the messages are logged.   The default is      *<logger> which means to log to the java.util.logging.Logger,      * but<stdout>,<stderr>, and a "file:/.." URI are acceptable.      */
-name|String
-name|inLocation
+comment|/**      * Size limit when messages are written to disk.      * -1 means do not write to disk.      */
+name|int
+name|inMemThresHold
 parameter_list|()
 default|default
-literal|"<logger>"
-function_decl|;
-name|String
-name|outLocation
-parameter_list|()
-default|default
-literal|"<logger>"
+name|AbstractLoggingInterceptor
+operator|.
+name|DEFAULT_THRESHOLD
 function_decl|;
 comment|/**      * For XML content, turn on pretty printing in the logs      */
 name|boolean
@@ -163,10 +145,17 @@ literal|false
 function_decl|;
 comment|/**      * Ignore binary payloads by default      */
 name|boolean
-name|showBinary
+name|logBinary
 parameter_list|()
 default|default
 literal|false
+function_decl|;
+comment|/**      * Ignore binary payloads by default      */
+name|boolean
+name|logMultiplart
+parameter_list|()
+default|default
+literal|true
 function_decl|;
 block|}
 end_annotation_defn

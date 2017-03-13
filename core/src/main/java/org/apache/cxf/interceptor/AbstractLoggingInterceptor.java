@@ -358,6 +358,8 @@ comment|/**  * A simple logging handler which outputs the bytes of the message t
 end_comment
 
 begin_class
+annotation|@
+name|Deprecated
 specifier|public
 specifier|abstract
 class|class

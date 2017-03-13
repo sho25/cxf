@@ -58,7 +58,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  *   */
+comment|/**  * Add LoggingFeature based on system properties  */
 end_comment
 
 begin_class

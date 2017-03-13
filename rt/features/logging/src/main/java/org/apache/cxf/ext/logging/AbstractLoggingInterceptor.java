@@ -177,6 +177,15 @@ decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
+name|int
+name|DEFAULT_THRESHOLD
+init|=
+operator|-
+literal|1
+decl_stmt|;
+specifier|public
+specifier|static
+specifier|final
 name|String
 name|CONTENT_SUPPRESSED
 init|=
@@ -200,8 +209,7 @@ specifier|protected
 name|long
 name|threshold
 init|=
-operator|-
-literal|1
+name|DEFAULT_THRESHOLD
 decl_stmt|;
 specifier|protected
 name|boolean
