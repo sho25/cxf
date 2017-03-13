@@ -23,9 +23,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Date
+name|ZonedDateTime
 import|;
 end_import
 
@@ -85,16 +85,12 @@ name|TokenReference
 name|unAttachedReference
 decl_stmt|;
 specifier|private
-name|Date
+name|ZonedDateTime
 name|created
 decl_stmt|;
 specifier|private
-name|Date
+name|ZonedDateTime
 name|expires
-decl_stmt|;
-specifier|private
-name|long
-name|lifetime
 decl_stmt|;
 comment|/**      * Set the token      * @param token the token to set      */
 specifier|public
@@ -200,9 +196,9 @@ return|return
 name|unAttachedReference
 return|;
 block|}
-comment|/**      * Get the Date that this Token was Created      * @return the Date that this Token was Created      */
+comment|/**      * Get the ZonedDateTime that this Token was Created      * @return the ZonedDateTime that this Token was Created      */
 specifier|public
-name|Date
+name|ZonedDateTime
 name|getCreated
 parameter_list|()
 block|{
@@ -210,12 +206,12 @@ return|return
 name|created
 return|;
 block|}
-comment|/**      * Set the Date that this Token was Created      * @param created the Date that this Token was Created      */
+comment|/**      * Set the ZonedDateTime that this Token was Created      * @param created the ZonedDateTime that this Token was Created      */
 specifier|public
 name|void
 name|setCreated
 parameter_list|(
-name|Date
+name|ZonedDateTime
 name|created
 parameter_list|)
 block|{
@@ -226,9 +222,9 @@ operator|=
 name|created
 expr_stmt|;
 block|}
-comment|/**      * Get the Date that this Token expires      * @return the Date that this Token expires      */
+comment|/**      * Get the ZonedDateTime that this Token expires      * @return the ZonedDateTime that this Token expires      */
 specifier|public
-name|Date
+name|ZonedDateTime
 name|getExpires
 parameter_list|()
 block|{
@@ -236,12 +232,12 @@ return|return
 name|expires
 return|;
 block|}
-comment|/**      * Set the Date that this Token expires      * @param expires the Date that this Token expires      */
+comment|/**      * Set the ZonedDateTime that this Token expires      * @param expires the ZonedDateTime that this Token expires      */
 specifier|public
 name|void
 name|setExpires
 parameter_list|(
-name|Date
+name|ZonedDateTime
 name|expires
 parameter_list|)
 block|{
@@ -251,32 +247,6 @@ name|expires
 operator|=
 name|expires
 expr_stmt|;
-block|}
-comment|/**      * Set the lifetime of the Token to be returned in seconds.      * @deprecated use setCreated/setExpires instead      * @param lifetime the lifetime of the Token to be returned in seconds      */
-specifier|public
-name|void
-name|setLifetime
-parameter_list|(
-name|long
-name|lifetime
-parameter_list|)
-block|{
-name|this
-operator|.
-name|lifetime
-operator|=
-name|lifetime
-expr_stmt|;
-block|}
-comment|/**      * Get the lifetime of the Token to be returned in seconds      * @deprecated use getCreated/getExpires instead      * @return the lifetime of the Token to be returned in seconds      */
-specifier|public
-name|long
-name|getLifetime
-parameter_list|()
-block|{
-return|return
-name|lifetime
-return|;
 block|}
 block|}
 end_class
