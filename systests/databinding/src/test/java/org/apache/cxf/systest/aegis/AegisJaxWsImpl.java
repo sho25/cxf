@@ -85,20 +85,6 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|annotations
-operator|.
-name|Logging
-import|;
-end_import
-
-begin_import
-import|import
-name|org
-operator|.
-name|apache
-operator|.
-name|cxf
-operator|.
 name|systest
 operator|.
 name|aegis
@@ -110,8 +96,6 @@ import|;
 end_import
 
 begin_class
-annotation|@
-name|Logging
 annotation|@
 name|WebService
 argument_list|(

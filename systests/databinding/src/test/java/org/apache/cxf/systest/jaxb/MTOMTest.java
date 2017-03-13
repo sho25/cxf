@@ -135,7 +135,9 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|annotations
+name|ext
+operator|.
+name|logging
 operator|.
 name|Logging
 import|;
