@@ -80,7 +80,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Logback conversion rule implementation to enrich log records with tracing details like spanId and tracerId.   * For example, here is sample logback.xml configuration snippet:  *   *<conversionRule conversionWord="trace" converterClass="org.apache.cxf.tracing.htrace.ext.LogbackSpanConverter" />  *   *<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">  *<encoder>  *<pattern>[%level] [%trace] %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{36} %msg%n</pattern>  *</encoder>  *</appender>  *   * Which produces the following sample output:  *    *  [INFO] [spanId: -, tracerId: -] 2017-03-11 14:40:13.603 org.eclipse.jetty.server.Server Started @2731ms  *  [INFO] [spanId: 6d3e0d975d4c883cce12aee1fd8f3e7e, tracerId: tracer-server/192.168.0.101] 2017-03-11 14:40:24.013   *     com.example.rs.PeopleRestService Getting all employees  *  [INFO] [spanId: 6d3e0d975d4c883c7592f4c2317dec22, tracerId: tracer-server/192.168.0.101] 2017-03-11 14:40:28.017   *     com.example.rs.PeopleRestService Looking up manager in the DB database  *  */
+comment|/**  * Logback conversion rule implementation to enrich log records with tracing details like spanId and tracerId.   * For example, here is sample logback.xml configuration snippet:  *   *<conversionRule conversionWord="trace" converterClass="org.apache.cxf.tracing.htrace.ext.LogbackSpanConverter" />  *   *<appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">  *<encoder>  *<pattern>[%level] [%trace] %d{yyyy-MM-dd HH:mm:ss.SSS} %logger{36} %msg%n</pattern>  *</encoder>  *</appender>  *   * Which produces the following sample output:  *    *  [INFO] [-, -] 2017-03-11 14:40:13.603 org.eclipse.jetty.server.Server Started @2731ms  *  [INFO] [tracer-server/192.168.0.101, span: 6d3e0d975d4c883cce12aee1fd8f3e7e] 2017-03-11 14:40:24.013   *     com.example.rs.PeopleRestService Getting all employees  *  [INFO] [tracer-server/192.168.0.101, span: 6d3e0d975d4c883c7592f4c2317dec22] 2017-03-11 14:40:28.017   *     com.example.rs.PeopleRestService Looking up manager in the DB database  *  */
 end_comment
 
 begin_class
@@ -94,17 +94,9 @@ specifier|private
 specifier|static
 specifier|final
 name|String
-name|TRACER_ID
+name|SPAN
 init|=
-literal|"tracerId"
-decl_stmt|;
-specifier|private
-specifier|static
-specifier|final
-name|String
-name|SPAN_ID
-init|=
-literal|"spanId"
+literal|"span"
 decl_stmt|;
 specifier|private
 specifier|static
@@ -112,16 +104,7 @@ specifier|final
 name|String
 name|EMPTY_TRACE
 init|=
-name|String
-operator|.
-name|format
-argument_list|(
-literal|"%s: -, %s: -"
-argument_list|,
-name|SPAN_ID
-argument_list|,
-name|TRACER_ID
-argument_list|)
+literal|"-, -"
 decl_stmt|;
 annotation|@
 name|Override
@@ -156,7 +139,20 @@ argument_list|()
 operator|.
 name|append
 argument_list|(
-name|SPAN_ID
+name|currentSpan
+operator|.
+name|getTracerId
+argument_list|()
+argument_list|)
+operator|.
+name|append
+argument_list|(
+literal|", "
+argument_list|)
+operator|.
+name|append
+argument_list|(
+name|SPAN
 argument_list|)
 operator|.
 name|append
@@ -169,29 +165,6 @@ argument_list|(
 name|currentSpan
 operator|.
 name|getSpanId
-argument_list|()
-argument_list|)
-operator|.
-name|append
-argument_list|(
-literal|", "
-argument_list|)
-operator|.
-name|append
-argument_list|(
-name|TRACER_ID
-argument_list|)
-operator|.
-name|append
-argument_list|(
-literal|": "
-argument_list|)
-operator|.
-name|append
-argument_list|(
-name|currentSpan
-operator|.
-name|getTracerId
 argument_list|()
 argument_list|)
 operator|.
