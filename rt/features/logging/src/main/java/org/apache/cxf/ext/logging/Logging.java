@@ -150,9 +150,9 @@ parameter_list|()
 default|default
 literal|false
 function_decl|;
-comment|/**      * Ignore binary payloads by default      */
+comment|/**      * Log multipart payloads by default      */
 name|boolean
-name|logMultiplart
+name|logMultipart
 parameter_list|()
 default|default
 literal|true
