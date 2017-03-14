@@ -337,7 +337,7 @@ name|setLogMultipart
 argument_list|(
 name|annotation
 operator|.
-name|logBinary
+name|logMultipart
 argument_list|()
 argument_list|)
 expr_stmt|;
