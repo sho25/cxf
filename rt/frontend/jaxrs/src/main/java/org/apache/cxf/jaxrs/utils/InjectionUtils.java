@@ -10330,10 +10330,7 @@ operator|=
 operator|new
 name|ParameterizedCollectionType
 argument_list|(
-name|getRawType
-argument_list|(
 name|type
-argument_list|)
 argument_list|)
 expr_stmt|;
 block|}
