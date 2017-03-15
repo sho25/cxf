@@ -453,7 +453,6 @@ name|synchronousTimeout
 init|=
 literal|60000
 decl_stmt|;
-empty_stmt|;
 specifier|private
 name|boolean
 name|shutdownBusOnClose
