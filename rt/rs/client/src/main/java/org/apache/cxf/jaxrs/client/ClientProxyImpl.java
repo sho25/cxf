@@ -1839,6 +1839,8 @@ name|getReturnType
 argument_list|()
 argument_list|)
 expr_stmt|;
+try|try
+block|{
 return|return
 name|doChainedInvocation
 argument_list|(
@@ -1859,6 +1861,13 @@ argument_list|,
 literal|null
 argument_list|)
 return|;
+block|}
+finally|finally
+block|{
+name|resetResponseStateImmediatelyIfNeeded
+argument_list|()
+expr_stmt|;
+block|}
 block|}
 specifier|private
 name|void
