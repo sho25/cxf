@@ -189,7 +189,7 @@ name|cxf
 operator|.
 name|annotations
 operator|.
-name|Logging
+name|SchemaValidation
 import|;
 end_import
 
@@ -201,9 +201,11 @@ name|apache
 operator|.
 name|cxf
 operator|.
-name|annotations
+name|ext
 operator|.
-name|SchemaValidation
+name|logging
+operator|.
+name|Logging
 import|;
 end_import
 
