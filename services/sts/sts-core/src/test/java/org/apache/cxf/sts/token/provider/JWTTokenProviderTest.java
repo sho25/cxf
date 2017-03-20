@@ -817,7 +817,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -839,7 +839,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -1029,7 +1029,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -1051,7 +1051,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -1352,7 +1352,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -1374,7 +1374,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -1665,7 +1665,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -1687,7 +1687,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -2045,7 +2045,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -2067,7 +2067,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -2420,7 +2420,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -2442,7 +2442,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -2754,7 +2754,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt
@@ -2776,7 +2776,7 @@ operator|.
 name|getExpires
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|,
 name|jwt

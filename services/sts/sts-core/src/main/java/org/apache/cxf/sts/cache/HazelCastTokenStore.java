@@ -33,6 +33,16 @@ name|java
 operator|.
 name|time
 operator|.
+name|Instant
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|time
+operator|.
 name|ZoneOffset
 import|;
 end_import
@@ -551,7 +561,7 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|ZonedDateTime
+name|Instant
 name|expires
 init|=
 name|token
@@ -578,6 +588,9 @@ operator|.
 name|isBefore
 argument_list|(
 name|now
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -593,6 +606,9 @@ operator|.
 name|between
 argument_list|(
 name|now
+operator|.
+name|toInstant
+argument_list|()
 argument_list|,
 name|expires
 argument_list|)

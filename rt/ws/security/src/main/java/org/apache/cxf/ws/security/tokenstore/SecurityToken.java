@@ -107,6 +107,16 @@ name|java
 operator|.
 name|time
 operator|.
+name|Instant
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
+name|time
+operator|.
 name|ZoneOffset
 import|;
 end_import
@@ -395,12 +405,12 @@ name|key
 decl_stmt|;
 comment|/**      * Created time      */
 specifier|private
-name|ZonedDateTime
+name|Instant
 name|created
 decl_stmt|;
 comment|/**      * Expiration time      */
 specifier|private
-name|ZonedDateTime
+name|Instant
 name|expires
 decl_stmt|;
 comment|/**      * Issuer end point address      */
@@ -477,10 +487,10 @@ parameter_list|(
 name|String
 name|id
 parameter_list|,
-name|ZonedDateTime
+name|Instant
 name|created
 parameter_list|,
-name|ZonedDateTime
+name|Instant
 name|expires
 parameter_list|)
 block|{
@@ -517,10 +527,10 @@ parameter_list|,
 name|Element
 name|tokenElem
 parameter_list|,
-name|ZonedDateTime
+name|Instant
 name|created
 parameter_list|,
-name|ZonedDateTime
+name|Instant
 name|expires
 parameter_list|)
 block|{
@@ -704,6 +714,9 @@ argument_list|(
 name|createdElem
 argument_list|)
 argument_list|)
+operator|.
+name|toInstant
+argument_list|()
 expr_stmt|;
 name|Element
 name|expiresElem
@@ -738,6 +751,9 @@ argument_list|(
 name|expiresElem
 argument_list|)
 argument_list|)
+operator|.
+name|toInstant
+argument_list|()
 expr_stmt|;
 block|}
 catch|catch
@@ -983,7 +999,7 @@ block|}
 block|}
 comment|/**      * @return Returns the created.      */
 specifier|public
-name|ZonedDateTime
+name|Instant
 name|getCreated
 parameter_list|()
 block|{
@@ -993,7 +1009,7 @@ return|;
 block|}
 comment|/**      * @return Returns the expires.      */
 specifier|public
-name|ZonedDateTime
+name|Instant
 name|getExpires
 parameter_list|()
 block|{
@@ -1033,6 +1049,9 @@ operator|.
 name|isBefore
 argument_list|(
 name|now
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -1089,6 +1108,9 @@ operator|.
 name|isBefore
 argument_list|(
 name|now
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 condition|)
 block|{
@@ -1106,7 +1128,7 @@ specifier|public
 name|void
 name|setExpires
 parameter_list|(
-name|ZonedDateTime
+name|Instant
 name|expires
 parameter_list|)
 block|{

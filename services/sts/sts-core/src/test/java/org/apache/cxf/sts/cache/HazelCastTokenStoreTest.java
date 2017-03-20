@@ -302,6 +302,9 @@ operator|.
 name|setExpires
 argument_list|(
 name|expiry
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|store
@@ -352,6 +355,9 @@ operator|.
 name|setExpires
 argument_list|(
 name|expiry
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|store

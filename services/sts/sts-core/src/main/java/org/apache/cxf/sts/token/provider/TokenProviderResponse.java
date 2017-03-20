@@ -25,7 +25,7 @@ name|java
 operator|.
 name|time
 operator|.
-name|ZonedDateTime
+name|Instant
 import|;
 end_import
 
@@ -68,11 +68,11 @@ name|TokenReference
 name|unAttachedReference
 decl_stmt|;
 specifier|private
-name|ZonedDateTime
+name|Instant
 name|created
 decl_stmt|;
 specifier|private
-name|ZonedDateTime
+name|Instant
 name|expires
 decl_stmt|;
 comment|/**      * Return true if the entropy represents a Computed Key.      */
@@ -259,9 +259,9 @@ return|return
 name|unAttachedReference
 return|;
 block|}
-comment|/**      * Get the ZonedDateTime that this Token was Created      * @return the ZonedDateTime that this Token was Created      */
+comment|/**      * Get the Instant that this Token was Created      * @return the Instant that this Token was Created      */
 specifier|public
-name|ZonedDateTime
+name|Instant
 name|getCreated
 parameter_list|()
 block|{
@@ -269,12 +269,12 @@ return|return
 name|created
 return|;
 block|}
-comment|/**      * Set the ZonedDateTime that this Token was Created      * @param created the ZonedDateTime that this Token was Created      */
+comment|/**      * Set the Instant that this Token was Created      * @param created the Instant that this Token was Created      */
 specifier|public
 name|void
 name|setCreated
 parameter_list|(
-name|ZonedDateTime
+name|Instant
 name|created
 parameter_list|)
 block|{
@@ -285,9 +285,9 @@ operator|=
 name|created
 expr_stmt|;
 block|}
-comment|/**      * Get the ZonedDateTime that this Token expires      * @return the ZonedDateTime that this Token expires      */
+comment|/**      * Get the Instant that this Token expires      * @return the Instant that this Token expires      */
 specifier|public
-name|ZonedDateTime
+name|Instant
 name|getExpires
 parameter_list|()
 block|{
@@ -295,12 +295,12 @@ return|return
 name|expires
 return|;
 block|}
-comment|/**      * Set the ZonedDateTime that this Token expires      * @param expires the ZonedDateTime that this Token expires      */
+comment|/**      * Set the Instant that this Token expires      * @param expires the Instant that this Token expires      */
 specifier|public
 name|void
 name|setExpires
 parameter_list|(
-name|ZonedDateTime
+name|Instant
 name|expires
 parameter_list|)
 block|{

@@ -33,7 +33,7 @@ name|java
 operator|.
 name|time
 operator|.
-name|ZonedDateTime
+name|Instant
 import|;
 end_import
 
@@ -168,7 +168,7 @@ parameter_list|,
 name|String
 name|tokenIdentifier
 parameter_list|,
-name|ZonedDateTime
+name|Instant
 name|expiry
 parameter_list|,
 name|Principal

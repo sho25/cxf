@@ -1167,6 +1167,9 @@ name|plusSeconds
 argument_list|(
 literal|5L
 argument_list|)
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertTrue

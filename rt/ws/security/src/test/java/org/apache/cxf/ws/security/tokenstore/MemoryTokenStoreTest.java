@@ -433,6 +433,9 @@ operator|.
 name|setExpires
 argument_list|(
 name|expires
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|assertFalse

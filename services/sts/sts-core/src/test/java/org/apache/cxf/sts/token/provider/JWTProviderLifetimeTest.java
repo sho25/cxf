@@ -640,7 +640,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -815,7 +815,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1417,7 +1417,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1673,7 +1673,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -1930,7 +1930,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -2153,7 +2153,7 @@ operator|.
 name|getCreated
 argument_list|()
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;

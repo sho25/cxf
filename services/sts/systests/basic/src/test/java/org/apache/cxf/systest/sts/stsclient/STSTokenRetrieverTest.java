@@ -1885,6 +1885,9 @@ name|ZoneOffset
 operator|.
 name|UTC
 argument_list|)
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 argument_list|)
 expr_stmt|;

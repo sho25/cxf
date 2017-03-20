@@ -1084,8 +1084,14 @@ name|getId
 argument_list|()
 argument_list|,
 name|created
+operator|.
+name|toInstant
+argument_list|()
 argument_list|,
 name|expires
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|cachedTok

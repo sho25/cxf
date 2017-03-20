@@ -664,6 +664,9 @@ operator|.
 name|setCreated
 argument_list|(
 name|created
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 expr_stmt|;
 name|ZonedDateTime
@@ -692,6 +695,9 @@ operator|.
 name|setExpires
 argument_list|(
 name|expires
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 expr_stmt|;
 block|}
@@ -707,8 +713,14 @@ name|getIdentifier
 argument_list|()
 argument_list|,
 name|created
+operator|.
+name|toInstant
+argument_list|()
 argument_list|,
 name|expires
+operator|.
+name|toInstant
+argument_list|()
 argument_list|)
 decl_stmt|;
 name|token
