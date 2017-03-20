@@ -1354,6 +1354,10 @@ argument_list|,
 name|sepIndex
 operator|+
 name|j
+argument_list|,
+name|sepIndex
+operator|+
+name|j
 argument_list|)
 decl_stmt|;
 name|Object
@@ -1523,6 +1527,8 @@ init|=
 name|getCommaIndex
 argument_list|(
 name|json
+argument_list|,
+name|i
 argument_list|,
 name|i
 argument_list|)
@@ -1712,6 +1718,9 @@ name|String
 name|json
 parameter_list|,
 name|int
+name|start
+parameter_list|,
+name|int
 name|from
 parameter_list|)
 block|{
@@ -1761,7 +1770,7 @@ name|json
 operator|.
 name|charAt
 argument_list|(
-name|from
+name|start
 argument_list|)
 operator|==
 literal|'\"'
@@ -1804,6 +1813,8 @@ operator|=
 name|getCommaIndex
 argument_list|(
 name|json
+argument_list|,
+name|start
 argument_list|,
 name|commaIndex
 operator|+

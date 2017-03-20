@@ -338,7 +338,9 @@ block|{
 name|String
 name|json
 init|=
-literal|"{\"a\":\"aValue1,aValue2\",\"b\":\"bValue1\"\r\n,\"c\":[\"cValue1, cValue2\"]}"
+literal|"{\"a\":\"aValue1,aValue2\",\"b\":\"bValue1\"\r\n,\"c\":[\"cValue1, cValue2\"],"
+operator|+
+literal|"\"d\":\"dValue1,dValue2,dValue3,dValue4\"}"
 decl_stmt|;
 name|Map
 argument_list|<
@@ -359,7 +361,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|3
+literal|4
 argument_list|,
 name|map
 operator|.
@@ -405,6 +407,18 @@ operator|.
 name|get
 argument_list|(
 literal|"c"
+argument_list|)
+argument_list|)
+expr_stmt|;
+name|assertEquals
+argument_list|(
+literal|"dValue1,dValue2,dValue3,dValue4"
+argument_list|,
+name|map
+operator|.
+name|get
+argument_list|(
+literal|"d"
 argument_list|)
 argument_list|)
 expr_stmt|;
