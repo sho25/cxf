@@ -331,8 +331,6 @@ begin_class
 specifier|public
 class|class
 name|DefaultLogEventMapper
-implements|implements
-name|LogEventMapper
 block|{
 specifier|private
 specifier|static

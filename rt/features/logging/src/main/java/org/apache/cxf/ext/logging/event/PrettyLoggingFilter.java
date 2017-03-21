@@ -123,6 +123,10 @@ name|LoggerFactory
 import|;
 end_import
 
+begin_comment
+comment|/**  * Formats the log message with indents.  * If the log message was truncated then this filter might additionally cut incomplete tags  */
+end_comment
+
 begin_class
 specifier|public
 class|class
