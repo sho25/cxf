@@ -91,15 +91,11 @@ comment|// Has subscription been cancelled or not?
 specifier|private
 name|boolean
 name|cancelled
-init|=
-literal|false
 decl_stmt|;
 comment|// Current demand: what has been requested but not yet delivered
 specifier|private
 name|long
 name|demand
-init|=
-literal|0
 decl_stmt|;
 specifier|private
 specifier|final
@@ -126,7 +122,6 @@ name|OutboundSseEvent
 argument_list|>
 name|subscriber
 decl_stmt|;
-specifier|public
 name|SseUnboundedSubscription
 parameter_list|(
 name|Flow
