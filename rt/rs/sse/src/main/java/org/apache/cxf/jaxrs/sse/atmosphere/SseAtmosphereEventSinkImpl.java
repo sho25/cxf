@@ -573,7 +573,7 @@ comment|// Let us wait at least 200 milliseconds before returning to ensure
 comment|// that SSE had the opportunity to be delivered.
 name|LOG
 operator|.
-name|info
+name|fine
 argument_list|(
 literal|"Waiting 200ms to ensure SSE Atmosphere response is delivered"
 argument_list|)
