@@ -87,9 +87,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Date
+name|Instant
 import|;
 end_import
 
@@ -993,7 +993,7 @@ operator|.
 name|currentTimeMillis
 argument_list|()
 decl_stmt|;
-name|Date
+name|Instant
 name|notOnOrAfter
 init|=
 name|validatorResponse
@@ -1017,7 +1017,7 @@ name|expiresAt
 operator|=
 name|notOnOrAfter
 operator|.
-name|getTime
+name|toEpochMilli
 argument_list|()
 expr_stmt|;
 block|}
@@ -1186,6 +1186,14 @@ expr_stmt|;
 block|}
 block|}
 comment|// Otherwise create a new one for the IdP initiated case
+name|Instant
+name|now
+init|=
+name|Instant
+operator|.
+name|now
+argument_list|()
+decl_stmt|;
 return|return
 operator|new
 name|RequestState
@@ -1209,11 +1217,9 @@ literal|"/"
 argument_list|,
 literal|null
 argument_list|,
-operator|new
-name|Date
-argument_list|()
+name|now
 operator|.
-name|getTime
+name|toEpochMilli
 argument_list|()
 argument_list|)
 return|;

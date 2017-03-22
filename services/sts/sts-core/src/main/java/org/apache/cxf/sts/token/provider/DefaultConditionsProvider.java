@@ -35,7 +35,7 @@ name|java
 operator|.
 name|time
 operator|.
-name|ZoneOffset
+name|Instant
 import|;
 end_import
 
@@ -466,12 +466,12 @@ operator|!=
 literal|null
 condition|)
 block|{
-name|ZonedDateTime
+name|Instant
 name|creationTime
 init|=
 literal|null
 decl_stmt|;
-name|ZonedDateTime
+name|Instant
 name|expirationTime
 init|=
 literal|null
@@ -489,6 +489,9 @@ operator|.
 name|getCreated
 argument_list|()
 argument_list|)
+operator|.
+name|toInstant
+argument_list|()
 expr_stmt|;
 name|expirationTime
 operator|=
@@ -501,6 +504,9 @@ operator|.
 name|getExpires
 argument_list|()
 argument_list|)
+operator|.
+name|toInstant
+argument_list|()
 expr_stmt|;
 block|}
 catch|catch
@@ -529,17 +535,13 @@ argument_list|)
 throw|;
 block|}
 comment|// Check to see if the created time is in the future
-name|ZonedDateTime
+name|Instant
 name|validCreation
 init|=
-name|ZonedDateTime
+name|Instant
 operator|.
 name|now
-argument_list|(
-name|ZoneOffset
-operator|.
-name|UTC
-argument_list|)
+argument_list|()
 decl_stmt|;
 if|if
 condition|(

@@ -25,9 +25,9 @@ begin_import
 import|import
 name|java
 operator|.
-name|util
+name|time
 operator|.
-name|Collections
+name|Instant
 import|;
 end_import
 
@@ -37,7 +37,7 @@ name|java
 operator|.
 name|util
 operator|.
-name|Date
+name|Collections
 import|;
 end_import
 
@@ -509,15 +509,21 @@ expr_stmt|;
 block|}
 else|else
 block|{
+name|Instant
+name|now
+init|=
+name|Instant
+operator|.
+name|now
+argument_list|()
+decl_stmt|;
 name|atv
 operator|.
 name|setTokenIssuedAt
 argument_list|(
-operator|new
-name|Date
-argument_list|()
+name|now
 operator|.
-name|getTime
+name|toEpochMilli
 argument_list|()
 argument_list|)
 expr_stmt|;

@@ -39,17 +39,7 @@ name|java
 operator|.
 name|time
 operator|.
-name|ZoneOffset
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|time
-operator|.
-name|ZonedDateTime
+name|Instant
 import|;
 end_import
 
@@ -4796,17 +4786,13 @@ argument_list|(
 literal|"DoubleItSTSIssuer"
 argument_list|)
 expr_stmt|;
-name|ZonedDateTime
+name|Instant
 name|now
 init|=
-name|ZonedDateTime
+name|Instant
 operator|.
 name|now
-argument_list|(
-name|ZoneOffset
-operator|.
-name|UTC
-argument_list|)
+argument_list|()
 decl_stmt|;
 name|claims
 operator|.
@@ -4814,7 +4800,7 @@ name|setIssuedAt
 argument_list|(
 name|now
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;
@@ -4829,7 +4815,7 @@ argument_list|(
 literal|60L
 argument_list|)
 operator|.
-name|toEpochSecond
+name|getEpochSecond
 argument_list|()
 argument_list|)
 expr_stmt|;

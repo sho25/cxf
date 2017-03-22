@@ -107,17 +107,7 @@ name|java
 operator|.
 name|time
 operator|.
-name|ZoneOffset
-import|;
-end_import
-
-begin_import
-import|import
-name|java
-operator|.
-name|time
-operator|.
-name|ZonedDateTime
+name|Instant
 import|;
 end_import
 
@@ -2167,16 +2157,9 @@ argument_list|()
 operator|.
 name|isAfter
 argument_list|(
-name|ZonedDateTime
+name|Instant
 operator|.
 name|now
-argument_list|(
-name|ZoneOffset
-operator|.
-name|UTC
-argument_list|)
-operator|.
-name|toInstant
 argument_list|()
 argument_list|)
 argument_list|)
