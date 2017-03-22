@@ -1802,7 +1802,7 @@ return|return
 name|keyPass
 return|;
 block|}
-comment|/**      * This method converts the JAXB KeyManagersType into a list of      * JSSE TrustManagers.      */
+comment|/**      * This method converts the JAXB TrustManagersType into a list of      * JSSE TrustManagers.      */
 specifier|public
 specifier|static
 name|TrustManager
