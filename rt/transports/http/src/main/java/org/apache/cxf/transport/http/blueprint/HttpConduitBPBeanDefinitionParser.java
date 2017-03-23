@@ -751,6 +751,13 @@ argument_list|(
 name|aname
 argument_list|)
 operator|||
+literal|"enableRevocation"
+operator|.
+name|equals
+argument_list|(
+name|aname
+argument_list|)
+operator|||
 literal|"jsseProvider"
 operator|.
 name|equals
