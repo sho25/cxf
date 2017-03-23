@@ -962,6 +962,12 @@ init|=
 literal|true
 decl_stmt|;
 specifier|private
+name|int
+name|offset
+init|=
+literal|1
+decl_stmt|;
+specifier|private
 specifier|final
 name|QName
 name|typeQName
@@ -999,13 +1005,7 @@ operator|.
 name|getAttributeCount
 argument_list|()
 operator|+
-operator|(
-name|first
-condition|?
-literal|1
-else|:
-literal|0
-operator|)
+name|offset
 return|;
 block|}
 specifier|public
@@ -1036,7 +1036,7 @@ name|getAttributeLocalName
 argument_list|(
 name|index
 operator|-
-literal|1
+name|offset
 argument_list|)
 return|;
 block|}
@@ -1076,7 +1076,7 @@ name|getAttributeName
 argument_list|(
 name|index
 operator|-
-literal|1
+name|offset
 argument_list|)
 return|;
 block|}
@@ -1110,7 +1110,7 @@ name|getAttributeNamespace
 argument_list|(
 name|index
 operator|-
-literal|1
+name|offset
 argument_list|)
 return|;
 block|}
@@ -1142,7 +1142,7 @@ name|getAttributePrefix
 argument_list|(
 name|index
 operator|-
-literal|1
+name|offset
 argument_list|)
 return|;
 block|}
@@ -1174,7 +1174,7 @@ name|getAttributeType
 argument_list|(
 name|index
 operator|-
-literal|1
+name|offset
 argument_list|)
 return|;
 block|}
@@ -1245,6 +1245,8 @@ operator|.
 name|getAttributeValue
 argument_list|(
 name|index
+operator|-
+name|offset
 argument_list|)
 return|;
 block|}
@@ -1258,6 +1260,10 @@ block|{
 name|first
 operator|=
 literal|false
+expr_stmt|;
+name|offset
+operator|=
+literal|0
 expr_stmt|;
 return|return
 name|super
