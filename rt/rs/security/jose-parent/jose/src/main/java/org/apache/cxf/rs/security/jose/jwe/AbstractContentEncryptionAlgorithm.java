@@ -262,10 +262,16 @@ condition|(
 name|generateCekOnce
 condition|)
 block|{
+synchronized|synchronized
+init|(
+name|this
+init|)
+block|{
 name|cek
 operator|=
 name|theCek
 expr_stmt|;
+block|}
 block|}
 block|}
 else|else
