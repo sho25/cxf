@@ -17,10 +17,6 @@ name|jms
 package|;
 end_package
 
-begin_comment
-comment|//CHECKSTYLE:OFF
-end_comment
-
 begin_class
 specifier|public
 class|class
@@ -31,7 +27,7 @@ name|String
 name|name
 decl_stmt|;
 specifier|protected
-name|String
+name|Object
 name|value
 decl_stmt|;
 specifier|public
@@ -48,14 +44,14 @@ name|void
 name|setName
 parameter_list|(
 name|String
-name|value
+name|name
 parameter_list|)
 block|{
 name|this
 operator|.
 name|name
 operator|=
-name|value
+name|name
 expr_stmt|;
 block|}
 specifier|public
@@ -64,17 +60,15 @@ name|isSetName
 parameter_list|()
 block|{
 return|return
-operator|(
 name|this
 operator|.
 name|name
 operator|!=
 literal|null
-operator|)
 return|;
 block|}
 specifier|public
-name|String
+name|Object
 name|getValue
 parameter_list|()
 block|{
@@ -86,7 +80,7 @@ specifier|public
 name|void
 name|setValue
 parameter_list|(
-name|String
+name|Object
 name|value
 parameter_list|)
 block|{
@@ -103,21 +97,15 @@ name|isSetValue
 parameter_list|()
 block|{
 return|return
-operator|(
 name|this
 operator|.
 name|value
 operator|!=
 literal|null
-operator|)
 return|;
 block|}
 block|}
 end_class
-
-begin_comment
-comment|//CHECKSTYLE:ON
-end_comment
 
 end_unit
 
