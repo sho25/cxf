@@ -2667,7 +2667,6 @@ literal|true
 argument_list|)
 expr_stmt|;
 block|}
-comment|//CHECKSTYLE:OFF
 annotation|@
 name|org
 operator|.
@@ -3230,6 +3229,7 @@ literal|null
 argument_list|)
 return|;
 block|}
+comment|// CHECKSTYLE:OFF
 specifier|private
 name|SecurityToken
 name|requestSecurityToken
@@ -3512,6 +3512,7 @@ name|endpointAddress
 argument_list|)
 return|;
 block|}
+comment|// CHECKSTYLE:ON
 specifier|private
 name|Properties
 name|getEncryptionProperties
