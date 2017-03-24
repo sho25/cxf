@@ -388,11 +388,23 @@ block|}
 block|}
 catch|catch
 parameter_list|(
-name|Throwable
+name|Exception
 name|t
 parameter_list|)
 block|{
-comment|//ignore
+name|LOG
+operator|.
+name|log
+argument_list|(
+name|Level
+operator|.
+name|FINEST
+argument_list|,
+literal|"Could not find NamespaceHandlerResolver"
+argument_list|,
+name|t
+argument_list|)
+expr_stmt|;
 block|}
 return|return
 literal|null
