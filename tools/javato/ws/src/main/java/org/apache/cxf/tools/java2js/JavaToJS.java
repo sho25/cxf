@@ -613,6 +613,15 @@ index|[]
 name|pargs
 parameter_list|)
 block|{
+name|System
+operator|.
+name|setProperty
+argument_list|(
+literal|"org.apache.cxf.JDKBugHacks.defaultUsesCaches"
+argument_list|,
+literal|"true"
+argument_list|)
+expr_stmt|;
 try|try
 block|{
 name|ToolRunner
