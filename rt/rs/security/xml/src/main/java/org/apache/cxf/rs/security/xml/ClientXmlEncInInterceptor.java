@@ -90,7 +90,7 @@ end_import
 begin_class
 specifier|public
 class|class
-name|ClientXmlEncInterceptor
+name|ClientXmlEncInInterceptor
 extends|extends
 name|XmlEncInInterceptor
 implements|implements
