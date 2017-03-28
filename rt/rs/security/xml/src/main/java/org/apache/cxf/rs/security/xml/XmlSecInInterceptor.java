@@ -2326,6 +2326,11 @@ name|WSSecurityException
 name|e
 parameter_list|)
 block|{
+name|String
+name|error
+init|=
+literal|"Signature validation failed"
+decl_stmt|;
 throw|throw
 operator|new
 name|XMLSecurityException
@@ -2336,14 +2341,7 @@ operator|new
 name|Object
 index|[]
 block|{
-literal|"Error during Signature Trust "
-operator|+
-literal|"validation: "
-operator|+
-name|e
-operator|.
-name|getMessage
-argument_list|()
+name|error
 block|}
 argument_list|)
 throw|;
