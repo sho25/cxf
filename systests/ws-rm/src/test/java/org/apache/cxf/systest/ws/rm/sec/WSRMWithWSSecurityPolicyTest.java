@@ -187,6 +187,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|SecurityConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|service
 operator|.
 name|model
@@ -288,7 +304,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Tests the correct interaction of ws-rm calls with ws-security when policy validator verifies the calls.  */
+comment|/**  * Tests the correct interaction of ws-rm calls with security.when policy validator verifies the calls.  */
 end_comment
 
 begin_class
@@ -698,7 +714,9 @@ name|requestContext
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"Alice"
 argument_list|)
@@ -707,7 +725,9 @@ name|requestContext
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.callback-handler"
+name|SecurityConstants
+operator|.
+name|CALLBACK_HANDLER
 argument_list|,
 literal|"org.apache.cxf.systest.ws.rm.sec.UTPasswordCallback"
 argument_list|)
@@ -716,7 +736,9 @@ name|requestContext
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.properties"
+name|SecurityConstants
+operator|.
+name|ENCRYPT_PROPERTIES
 argument_list|,
 literal|"bob.properties"
 argument_list|)
@@ -725,7 +747,9 @@ name|requestContext
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.encryption.username"
+name|SecurityConstants
+operator|.
+name|ENCRYPT_USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -734,7 +758,9 @@ name|requestContext
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.signature.properties"
+name|SecurityConstants
+operator|.
+name|SIGNATURE_PROPERTIES
 argument_list|,
 literal|"alice.properties"
 argument_list|)
@@ -743,7 +769,9 @@ name|requestContext
 operator|.
 name|put
 argument_list|(
-literal|"ws-security.signature.username"
+name|SecurityConstants
+operator|.
+name|SIGNATURE_USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)

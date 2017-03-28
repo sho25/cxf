@@ -2274,7 +2274,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -2283,7 +2285,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"security.callback-handler"
+name|SecurityConstants
+operator|.
+name|CALLBACK_HANDLER
 argument_list|,
 literal|"org.apache.cxf.systest.sts.common.CommonCallbackHandler"
 argument_list|)
@@ -2292,7 +2296,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"security.encryption.username"
+name|SecurityConstants
+operator|.
+name|ENCRYPT_USERNAME
 argument_list|,
 literal|"mystskey"
 argument_list|)
@@ -2301,7 +2307,9 @@ name|properties
 operator|.
 name|put
 argument_list|(
-literal|"security.encryption.properties"
+name|SecurityConstants
+operator|.
+name|ENCRYPT_PROPERTIES
 argument_list|,
 literal|"clientKeystore.properties"
 argument_list|)

@@ -2994,6 +2994,13 @@ name|startsWith
 argument_list|(
 literal|"ws-security"
 argument_list|)
+operator|||
+name|key
+operator|.
+name|startsWith
+argument_list|(
+literal|"security."
+argument_list|)
 condition|)
 block|{
 name|context

@@ -302,7 +302,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "ActAs" element. This username is obtained  * by parsing the "security.username" property. The client then invokes on the service  * provider using the returned token from the STS.  */
+comment|/**  * In this test case, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "ActAs" element. This username is obtained  * by parsing the SecurityConstants.USERNAME property. The client then invokes on the service  * provider using the returned token from the STS.  */
 end_comment
 
 begin_class
@@ -618,7 +618,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -751,7 +753,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1005,7 +1009,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1029,7 +1035,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -1053,7 +1061,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"eve"
 argument_list|)
@@ -1108,7 +1118,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1132,7 +1144,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -1156,7 +1170,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"eve2"
 argument_list|)
@@ -1216,7 +1232,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1427,7 +1445,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1478,7 +1498,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -1527,7 +1549,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1570,7 +1594,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)
@@ -1613,7 +1639,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1842,7 +1870,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
@@ -1942,7 +1972,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"bob"
 argument_list|)

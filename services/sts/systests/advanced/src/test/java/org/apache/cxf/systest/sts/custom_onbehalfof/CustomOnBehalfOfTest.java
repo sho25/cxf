@@ -101,6 +101,22 @@ name|apache
 operator|.
 name|cxf
 operator|.
+name|rt
+operator|.
+name|security
+operator|.
+name|SecurityConstants
+import|;
+end_import
+
+begin_import
+import|import
+name|org
+operator|.
+name|apache
+operator|.
+name|cxf
+operator|.
 name|systest
 operator|.
 name|sts
@@ -152,7 +168,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * In this test case, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "OnBehalfOf" element. This username is obtained  * by parsing the "security.username" property. The client then invokes on the service  * provider using the returned (custom BinarySecurityToken) token from the STS. The service  * provider dispatches the received BinarySecurityToken to the STS for validation, and receives  * a transformed SAML Token in response.  */
+comment|/**  * In this test case, a CXF client requests a Security Token from an STS, passing a username that  * it has obtained from an unknown client as an "OnBehalfOf" element. This username is obtained  * by parsing the SecurityConstants.USERNAME property. The client then invokes on the service  * provider using the returned (custom BinarySecurityToken) token from the STS. The service  * provider dispatches the received BinarySecurityToken to the STS for validation, and receives  * a transformed SAML Token in response.  */
 end_comment
 
 begin_class
@@ -403,7 +419,9 @@ argument_list|()
 operator|.
 name|put
 argument_list|(
-literal|"security.username"
+name|SecurityConstants
+operator|.
+name|USERNAME
 argument_list|,
 literal|"alice"
 argument_list|)
