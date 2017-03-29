@@ -2759,7 +2759,7 @@ name|sigProps
 operator|.
 name|setSignatureKeyName
 argument_list|(
-literal|"alice"
+literal|"alice-kn"
 argument_list|)
 expr_stmt|;
 name|sigProps
