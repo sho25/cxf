@@ -1158,7 +1158,7 @@ argument_list|)
 decl_stmt|;
 name|assertEquals
 argument_list|(
-literal|"Long is not 0"
+literal|"Float is not 0"
 argument_list|,
 name|Float
 operator|.
