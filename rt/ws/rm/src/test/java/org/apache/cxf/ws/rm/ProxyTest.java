@@ -2847,6 +2847,8 @@ specifier|public
 name|void
 name|testRMClientGetConduit
 parameter_list|()
+throws|throws
+name|Exception
 block|{
 name|Proxy
 name|proxy
@@ -2963,6 +2965,11 @@ operator|.
 name|getConduit
 argument_list|()
 argument_list|)
+expr_stmt|;
+name|client
+operator|.
+name|close
+argument_list|()
 expr_stmt|;
 block|}
 annotation|@

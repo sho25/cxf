@@ -2750,27 +2750,9 @@ decl_stmt|;
 comment|// Setup the new classloader!
 name|ClassLoaderUtils
 operator|.
-name|ClassLoaderHolder
-name|holder
-init|=
-name|ClassLoaderUtils
-operator|.
 name|setThreadContextClassloader
 argument_list|(
 name|cl
-argument_list|)
-decl_stmt|;
-name|bus
-operator|.
-name|setExtension
-argument_list|(
-name|holder
-argument_list|,
-name|ClassLoaderUtils
-operator|.
-name|ClassLoaderHolder
-operator|.
-name|class
 argument_list|)
 expr_stmt|;
 name|TypeClassInitializer
@@ -3948,7 +3930,7 @@ name|javaCompiler
 operator|.
 name|setTarget
 argument_list|(
-literal|"1.6"
+literal|"1.8"
 argument_list|)
 expr_stmt|;
 block|}

@@ -1625,6 +1625,11 @@ literal|0
 argument_list|)
 expr_stmt|;
 block|}
+name|client
+operator|.
+name|close
+argument_list|()
+expr_stmt|;
 block|}
 specifier|public
 specifier|static
