@@ -23,6 +23,16 @@ begin_import
 import|import
 name|java
 operator|.
+name|net
+operator|.
+name|URL
+import|;
+end_import
+
+begin_import
+import|import
+name|java
+operator|.
 name|util
 operator|.
 name|ArrayList
@@ -59,7 +69,7 @@ name|cxf
 operator|.
 name|clustering
 operator|.
-name|FailoverFeature
+name|LoadDistributorFeature
 import|;
 end_import
 
@@ -162,13 +172,13 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * A test for failover using a WebClient object  */
+comment|/**  * A test for the load distributor using a WebClient object  */
 end_comment
 
 begin_class
 specifier|public
 class|class
-name|FailoverWebClientTest
+name|LoadDistributorWebClientTest
 extends|extends
 name|AbstractBusClientServerTestBase
 block|{
@@ -179,7 +189,7 @@ name|PORT1
 init|=
 name|allocatePort
 argument_list|(
-name|FailoverBookServer
+name|LoadDistributorServer
 operator|.
 name|class
 argument_list|)
@@ -191,25 +201,11 @@ name|PORT2
 init|=
 name|allocatePort
 argument_list|(
-name|FailoverBookServer
+name|LoadDistributorServer
 operator|.
 name|class
 argument_list|,
 literal|2
-argument_list|)
-decl_stmt|;
-specifier|static
-specifier|final
-name|String
-name|PORT3
-init|=
-name|allocatePort
-argument_list|(
-name|FailoverBookServer
-operator|.
-name|class
-argument_list|,
-literal|3
 argument_list|)
 decl_stmt|;
 annotation|@
@@ -233,7 +229,7 @@ literal|"server did not launch correctly"
 argument_list|,
 name|launchServer
 argument_list|(
-name|FailoverBookServer
+name|LoadDistributorServer
 operator|.
 name|class
 argument_list|,
@@ -249,11 +245,23 @@ annotation|@
 name|Test
 specifier|public
 name|void
-name|testFailover
+name|testLoadDistributor
 parameter_list|()
 throws|throws
 name|Exception
 block|{
+name|URL
+name|busFile
+init|=
+name|LoadDistributorWebClientTest
+operator|.
+name|class
+operator|.
+name|getResource
+argument_list|(
+literal|"cxf-client.xml"
+argument_list|)
+decl_stmt|;
 name|String
 name|address
 init|=
@@ -263,11 +271,11 @@ name|PORT1
 operator|+
 literal|"/bookstore"
 decl_stmt|;
-name|FailoverFeature
-name|failoverFeature
+name|LoadDistributorFeature
+name|feature
 init|=
 operator|new
-name|FailoverFeature
+name|LoadDistributorFeature
 argument_list|()
 decl_stmt|;
 name|SequentialStrategy
@@ -292,11 +300,7 @@ name|addresses
 operator|.
 name|add
 argument_list|(
-literal|"http://localhost:"
-operator|+
-name|PORT2
-operator|+
-literal|"/bookstore"
+name|address
 argument_list|)
 expr_stmt|;
 name|addresses
@@ -305,7 +309,7 @@ name|add
 argument_list|(
 literal|"http://localhost:"
 operator|+
-name|PORT3
+name|PORT2
 operator|+
 literal|"/bookstore"
 argument_list|)
@@ -317,7 +321,7 @@ argument_list|(
 name|addresses
 argument_list|)
 expr_stmt|;
-name|failoverFeature
+name|feature
 operator|.
 name|setStrategy
 argument_list|(
@@ -339,10 +343,13 @@ name|Collections
 operator|.
 name|singletonList
 argument_list|(
-name|failoverFeature
+name|feature
 argument_list|)
 argument_list|,
-literal|null
+name|busFile
+operator|.
+name|toString
+argument_list|()
 argument_list|)
 operator|.
 name|accept
@@ -350,7 +357,6 @@ argument_list|(
 literal|"application/xml"
 argument_list|)
 decl_stmt|;
-comment|// Should hit PORT1
 name|Book
 name|b
 init|=
@@ -383,37 +389,8 @@ name|getName
 argument_list|()
 argument_list|)
 expr_stmt|;
-comment|// Should failover to PORT2
-name|webClient
-operator|.
-name|get
-argument_list|(
-name|Book
-operator|.
-name|class
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|124L
-argument_list|,
 name|b
-operator|.
-name|getId
-argument_list|()
-argument_list|)
-expr_stmt|;
-name|assertEquals
-argument_list|(
-literal|"root"
-argument_list|,
-name|b
-operator|.
-name|getName
-argument_list|()
-argument_list|)
-expr_stmt|;
-comment|// Should failover to PORT3
+operator|=
 name|webClient
 operator|.
 name|get
