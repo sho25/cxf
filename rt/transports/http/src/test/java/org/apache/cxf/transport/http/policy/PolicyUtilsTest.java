@@ -887,14 +887,6 @@ argument_list|)
 expr_stmt|;
 name|assertTrue
 argument_list|(
-name|outbound
-condition|?
-operator|!
-name|icmai
-operator|.
-name|isAsserted
-argument_list|()
-else|:
 name|icmai
 operator|.
 name|isAsserted
