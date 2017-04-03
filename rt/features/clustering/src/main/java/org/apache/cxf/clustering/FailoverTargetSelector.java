@@ -1886,6 +1886,17 @@ argument_list|,
 name|endpointAddress
 argument_list|)
 expr_stmt|;
+name|message
+operator|.
+name|put
+argument_list|(
+name|Message
+operator|.
+name|REQUEST_URI
+argument_list|,
+name|endpointAddress
+argument_list|)
+expr_stmt|;
 name|Exchange
 name|exchange
 init|=
