@@ -2938,11 +2938,11 @@ control|)
 block|{
 name|types
 operator|.
-name|add
+name|addAll
 argument_list|(
 name|JAXRSUtils
 operator|.
-name|toMediaType
+name|parseMediaTypes
 argument_list|(
 name|s
 argument_list|)
