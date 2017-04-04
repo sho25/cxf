@@ -4439,6 +4439,7 @@ argument_list|()
 operator|!=
 literal|null
 operator|&&
+operator|(
 name|Names
 operator|.
 name|WSA_DEFAULT_FAULT_ACTION
@@ -4453,6 +4454,22 @@ operator|.
 name|getValue
 argument_list|()
 argument_list|)
+operator|||
+name|Names
+operator|.
+name|WSA_DEFAULT_SOAP_FAULT_ACTION
+operator|.
+name|equals
+argument_list|(
+name|maps
+operator|.
+name|getAction
+argument_list|()
+operator|.
+name|getValue
+argument_list|()
+argument_list|)
+operator|)
 condition|)
 block|{
 comment|//there is an Action header that points to a fault and no relatesTo.  Use the out map for the ID
