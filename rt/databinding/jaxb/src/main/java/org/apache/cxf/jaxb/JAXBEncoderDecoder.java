@@ -6432,10 +6432,7 @@ name|u
 operator|.
 name|unmarshal
 argument_list|(
-operator|(
-name|XMLStreamReader
-operator|)
-name|source
+name|reader
 argument_list|)
 expr_stmt|;
 block|}
