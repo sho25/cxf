@@ -192,6 +192,15 @@ name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
 init|=
 literal|"security.enable.unsigned-saml-assertion.principal"
 decl_stmt|;
+comment|/**      * Whether to allow UsernameTokens with no password to be used as SecurityContext Principals.      * The default is false.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|ENABLE_UT_NOPASSWORD_PRINCIPAL
+init|=
+literal|"security.enable.ut-no-password.principal"
+decl_stmt|;
 comment|/**      * Whether to validate the SubjectConfirmation requirements of a received SAML Token      * (sender-vouches or holder-of-key). The default is true.      */
 specifier|public
 specifier|static
@@ -434,6 +443,8 @@ block|,
 name|SUBJECT_CERT_CONSTRAINTS
 block|,
 name|ENABLE_UNSIGNED_SAML_ASSERTION_PRINCIPAL
+block|,
+name|ENABLE_UT_NOPASSWORD_PRINCIPAL
 block|,
 name|AUDIENCE_RESTRICTION_VALIDATION
 block|,
