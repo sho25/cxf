@@ -387,6 +387,15 @@ name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
 init|=
 literal|"security.sts.token.imminent-expiry-value"
 decl_stmt|;
+comment|/**      * An implementation of the STSTokenCacher interface, if you want to plug in custom caching behaviour for      * STS clients. The default value is the DefaultSTSTokenCacher.      */
+specifier|public
+specifier|static
+specifier|final
+name|String
+name|STS_TOKEN_CACHER_IMPL
+init|=
+literal|"security.sts.token.cacher.impl"
+decl_stmt|;
 specifier|public
 specifier|static
 specifier|final
@@ -481,6 +490,8 @@ block|,
 name|PREFER_WSMEX_OVER_STS_CLIENT_CONFIG
 block|,
 name|STS_TOKEN_IMMINENT_EXPIRY_VALUE
+block|,
+name|STS_TOKEN_CACHER_IMPL
 block|}
 argument_list|)
 argument_list|)
