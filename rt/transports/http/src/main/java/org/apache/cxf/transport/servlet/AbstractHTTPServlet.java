@@ -891,6 +891,8 @@ parameter_list|(
 name|ServletConfig
 name|servletConfig
 parameter_list|)
+throws|throws
+name|ServletException
 block|{
 name|InputStream
 name|is

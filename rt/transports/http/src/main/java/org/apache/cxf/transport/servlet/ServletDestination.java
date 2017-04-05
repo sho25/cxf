@@ -131,6 +131,8 @@ class|class
 name|ServletDestination
 extends|extends
 name|AbstractHTTPDestination
+implements|implements
+name|ServletConfigAware
 block|{
 specifier|static
 specifier|final
