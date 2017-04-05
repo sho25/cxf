@@ -581,11 +581,6 @@ condition|)
 block|{
 try|try
 block|{
-comment|//                if (!framework.initialized()) {
-comment|//                    framework.addInitParameter(ApplicationConfig.PROPERTY_NATIVE_COMETSUPPORT, "false");
-comment|//                    framework.addInitParameter(ApplicationConfig.WEBSOCKET_SUPPRESS_JSR356, "false");
-comment|//                    framework.init(config);
-comment|//                }
 name|framework
 operator|.
 name|doCometSupport
