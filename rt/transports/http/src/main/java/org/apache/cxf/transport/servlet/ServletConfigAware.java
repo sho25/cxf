@@ -38,7 +38,7 @@ import|;
 end_import
 
 begin_comment
-comment|/**  * Interface to be implemented by any Destination that wishes to be notified of the  * SerlvetConfig availability.   */
+comment|/**  * Interface to be implemented by any Destination that wishes to be notified of the  * ServletConfig availability.   */
 end_comment
 
 begin_interface
